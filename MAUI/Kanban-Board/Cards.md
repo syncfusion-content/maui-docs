@@ -115,9 +115,7 @@ var cardTemplate = new DataTemplate(() =>
 
     root.Children.Add(titleLayout);
     root.Children.Add(contentLayout);
-
     return root;
-
 });
 
 kanban.CardTemplate = cardTemplate;

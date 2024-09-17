@@ -102,7 +102,7 @@ Header shows the category [`Title`](), items count, min and max informations of 
 <kanban:SfKanban.HeaderTemplate >
     <DataTemplate>
         <StackLayout WidthRequest="300" HeightRequest="40"  BackgroundColor="Silver">
-            <Label Margin="10" Text="{Binding Path=Title}" TextColor="Purple" HorizontalOptions="Start" />
+            <Label Margin="10" Text="{Binding Title}" TextColor="Purple" HorizontalOptions="Start" />
         </StackLayout>
     </DataTemplate>
 </kanban:SfKanban.HeaderTemplate>
@@ -111,8 +111,10 @@ Header shows the category [`Title`](), items count, min and max informations of 
 
 {% highlight C# %} 
 
-    var headerTemplate = new DataTemplate(() => {
-    StackLayout root = new StackLayout() { 
+var headerTemplate = new DataTemplate(() => 
+{
+    StackLayout root = new StackLayout()
+    { 
         WidthRequest = 300, 
         HeightRequest = 40, 
         BackgroundColor = Color.Silver 
@@ -124,8 +126,8 @@ Header shows the category [`Title`](), items count, min and max informations of 
     label.HorizontalOptions = LayoutOptions.Start; 
     root.Children.Add(label);
     return root;
-    });
-    kanban.HeaderTemplate = headerTemplate;
+});
+kanban.HeaderTemplate = headerTemplate;
 
 {% endhighlight %}
 
@@ -258,19 +260,19 @@ todoColumn.MaximumLimit = 1;
 
 {% highlight C# %}
 
-     KanbanColumn todoColumn = new KanbanColumn();
-     todoColumn.Title = "To Do";
-     todoColumn.MaximumLimit = 5;
-     todoColumn.MinimumLimit = 3;
-     KanbanErrorBarSettings kanbanErrorBarSettings = new KanbanErrorBarSettings()
-     {
-         Fill = Colors.Green,
-         MaxValidationFill = Colors.Red,
-         MinValidationFill = Colors.Orange,
-         Height = 4,
-     };
-     todoColumn.ErrorBarSettings = kanbanErrorBarSettings;
-     kanban.Columns.Add(todoColumn);
+KanbanColumn todoColumn = new KanbanColumn();
+todoColumn.Title = "To Do";
+todoColumn.MaximumLimit = 5;
+todoColumn.MinimumLimit = 3;
+KanbanErrorBarSettings kanbanErrorBarSettings = new KanbanErrorBarSettings()
+{
+    Fill = Colors.Green,
+    MaxValidationFill = Colors.Red,
+    MinValidationFill = Colors.Orange,
+    Height = 4,
+};
+todoColumn.ErrorBarSettings = kanbanErrorBarSettings;
+kanban.Columns.Add(todoColumn);
 
 {% endhighlight %}
 
