@@ -15,7 +15,7 @@ To quickly get started with the .NET MAUI Carousel, watch this video.
 
 {% youtube "https://www.youtube.com/watch?v=pFEqZKlLsi4" %}
 
-### Prerequisites
+## Prerequisites
 
 Before proceeding, ensure the following are in place:
 
