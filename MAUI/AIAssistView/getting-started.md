@@ -18,28 +18,61 @@ Before proceeding, ensure the following are in place:
  1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
  2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
 
- ## Step 1: Create a .NET MAUI project
+## Step 1: Create a .NET MAUI project
 
-**Visual Studio**
+### Visual Studio
 
  1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
  2. Name the project and choose a location, then click **Next**.
  3. Select the .NET framework version and click **Create**.
 
-** Visual Code**
+### Visual Studio Code
 
  1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
  2. Choose the **.NET MAUI App** template.
  3. Select the project location, type the project name and press enter.
- 4. Then choose **Create project**
-
-## Step 2: Install the Syncfusion MAUI AI AssistView NuGet Package
-
+ 4. Then choose **Create project**.
+ 
+ ## Step 2: Install the Syncfusion MAUI ListView NuGet Package
+ 
  1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
- 2. Search for `Syncfusion.Maui.AIAssistView` on [nuget.org](https://www.nuget.org/) and install the latest version.
- 3. Ensure all dependencies are correctly installed, and restore your project.
+ 2. Search for [Syncfusion.Maui.AIAssistView](https://www.nuget.org/packages/Syncfusion.Maui.AIAssistView) and install the latest version.
+ 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-## Step 3: Add a Basic AI AssistView
+## Step 3: Register the handler
+
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
+
+{% tabs %}
+{% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 20" %}
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Microsoft.Maui.Hosting;
+using Syncfusion.Maui.Core.Hosting;
+
+namespace GettingStarted
+{
+    public class MauiProgram 
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+                .UseMauiApp<App>()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                });
+
+            builder.ConfigureSyncfusionCore();
+            return builder.Build();
+        }
+    }
+}
+{% endhighlight %} 
+{% endtabs %}
+
+## Step 4: Add a Basic AI AssistView
 
  1. To initialize the control, import the `Syncfusion.Maui.AIAssistView` namespace into your code.
  2. Initialize `SfAIAssistView`.
@@ -72,46 +105,11 @@ Before proceeding, ensure the following are in place:
 {% endhighlight %}
 {% endtabs %}
 
-## Step 4: Register the handler
-
-The `Syncfusion.Maui.Core` NuGet is a dependent package for all the Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
-
-{% tabs %}
-{% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 20" %}
-
-    using Microsoft.Maui.Controls.Hosting;
-    using Microsoft.Maui.Controls.Xaml;
-    using Microsoft.Maui.Hosting;
-    using Syncfusion.Maui.Core.Hosting;
-
-    namespace GettingStarted
-    {
-      public class MauiProgram 
-      {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureFonts(fonts =>
-            {
-              fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            builder.ConfigureSyncfusionCore();
-            return builder.Build();
-          }
-        }
-     }
-
-{% endhighlight %} 
-{% endtabs %}
-
 ## Step 5: Define the View Model
 
-The `SfAIAssistView` control is data-bound and displays a collection of items exchanged between users and AI services. Hence, assist items should be created and bound to the control.
+The `SfAIAssistView` control is data-bound and displays a collection of items exchanged between users and AI service. Hence, assist items should be created and bound to the control.
 
-Create a simple assist items collection as shown in the following code example in a new class file. Save it as `ViewModel.cs` file.
+Create a simple `AssistItem` collection as shown in the following code example in a new class file. Save it as `ViewModel.cs` file.
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
@@ -201,9 +199,10 @@ Create a simple assist items collection as shown in the following code example i
 
 N> The `SfAIAssistView.AssistItems` property is of type `IList<IAssistItem>`. To ensure the `AssistItems` property functions correctly, it is recommended to use a collection property in the ViewModel with the same type, such as `ObservableCollection<IAssistItem>`.
 
-## Binding AssistItems to AI AssistView
+### Bind AssistItems
 
-To bind the assist items to `SfAIAssistView`, configure the `AssistItems` property accordingly. You have the option to bind the assistItems collection of the `SfAIAssistView` either through XAML or programmatically in code.
+Set the `ViewModel` as the BindingContext for the AI AssistView or the parent ContentPage. This allows data binding between the UI and the ViewModel properties.
+To populate AI AssistView, bind the assit items in ViewModel to `AssistItems` property of AI AssistView.
 
 {% tabs %} 
 {% highlight xaml hl_lines="14" %}
@@ -226,18 +225,16 @@ To bind the assist items to `SfAIAssistView`, configure the `AssistItems` proper
 
 {% endhighlight %} 
 
-{% highlight c# hl_lines="10" %} 
+{% highlight c# hl_lines="8" %} 
  public partial class MainPage : ContentPage 
  {
-    SfAIAssistView sfAIAssistView; 
-    GettingStartedViewModel viewModel; 
     public MainPage() 
     { 
         InitializeComponent(); 
-        this.sfAIAssistView = new SfAIAssistView();
-        this.viewModel = new GettingStartedViewModel(); 
-        this.sfAIAssistView.AssistItems = viewModel.AssistItems; 
-        this.Content = sfAIAssistView; 
+        SfAIAssistView aiAssistView = new SfAIAssistView();
+        GettingStartedViewModel viewModel = new GettingStartedViewModel(); 
+        this.aiAssistView.AssistItems = viewModel.AssistItems; 
+        this.Content = aiAssistView; 
      } 
   } 
     
