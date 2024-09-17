@@ -34,7 +34,7 @@ Before proceeding, ensure the following are set up:
 
 1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
 2. Choose the **.NET MAUI App** template.
-3. Select the project location, type the project name and press Enter.
+3. Select the project location, type the project name and press **Enter**.
 4. Then choose **Create project.**
 
 ## Step 2: Install the Syncfusion .NET MAUI Scheduler NuGet Package
