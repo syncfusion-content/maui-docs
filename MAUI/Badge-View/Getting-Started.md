@@ -7,21 +7,44 @@ control: Badge View
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI Badge View (SfBadgeView)
+# Getting Started with .NET MAUI Badge View
 
-This section explains the steps required to configure the .NET MAUI Badge View control for .NET MAUI Badge Notifications and customize its elements.
+This section guides you through setting up and configuring a [BadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) in your .NET MAUI application. Follow the steps below to add a basic Badge View to your project.
 
 To get start quickly with our .NET MAUI Badge View, you can check the below video.
 
 {% youtube "https://www.youtube.com/watch?v=wlh2eMPYZY0" %}
 
-## Adding a SfBadgeView reference
+## Prerequisites
 
-The Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and then install it.
+Before proceeding, ensure the following are set up:
+1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later is installed.
+1. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
 
-## Handler registration 
+## Step 1: Create a New MAUI Project
 
- In the MauiProgram.cs file, register the handler for Syncfusion core.
+### Visual Studio
+
+1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
+1. Name the project and choose a location, then click **Next**.
+1. Select the .NET framework version and click **Create**.
+
+### Visual Studio Code
+
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+1. Choose the **.NET MAUI App** template.
+1. Select the project location, type the project name and press enter.
+1. Then choose **Create project.**
+
+## Step 2: Install the Syncfusion MAUI Core NuGet Package
+
+1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+1. Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and install the latest version.
+1. Ensure the necessary dependencies are installed correctly, and the project is restored.
+
+## Step 3: Register the handler
+
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
 {% highlight c# hl_lines="6 17" %}   
 using Microsoft.Maui;
@@ -55,52 +78,47 @@ namespace BadgeViewMauiSample
 
 {% endhighlight %}
 
-## Adding a namespace
+## Step 4:  Add a Basic Badge View
 
-Add the following namespace to add .NET MAUI Badge Notifications.
+1. To initialize the control, import the Core namespace into your code.
+1. Initialize [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1).
 
 {% tabs %}
 
 {% highlight xaml %}
 
-    xmlns:badge="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+   <ContentPage
+    . . .    
+    xmlns:badgeView="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
+    <Grid>
+        <badgeView:SfBadgeView />
+    </Grid>
+</ContentPage>
 	
+{% endhighlight %}
+
 {% endhighlight %}
 
 {% highlight C# %}
 
     using Syncfusion.Maui.Core;
+    namespace BadgeViewGettingStarted
+    {
+        public partial class MainPage : ContentPage
+        {
+            public MainPage()
+            {
+                InitializeComponent();           
+                SfBadgeView badgeView = new SfBadgeView();
+            }
+        }   
+    }
 
 {% endhighlight %}
 
 {% endtabs %}
 
-## Initializing a badge view
-
-Create an instance for the Badge View control, and add it as content.
-
-{% tabs %}
-
-{% highlight xaml %}
-
- <badge:SfBadgeView >        
-</badge:SfBadgeView>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-//Initializing the badge view.
-
-SfBadgeView sfBadgeView = new SfBadgeView();
-
-this.Content = sfBadgeView;
-	
-{% endhighlight %}
-
-{% endtabs %}
-
-## Adding a badge notification text
+## Step 5: Adding a badge notification text
 
 Add text to Badge View using the [BadgeText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_BadgeText) property.
 
@@ -108,54 +126,54 @@ Add text to Badge View using the [BadgeText](https://help.syncfusion.com/cr/maui
 
 {% highlight xaml %}
 
-<badge:SfBadgeView>        
-    <badge:SfBadgeView BadgeText="20" />          
-</badge:SfBadgeView>
+<badgeView:SfBadgeView>        
+    <badgeView:SfBadgeView BadgeText="20" />          
+</badgeView:SfBadgeView>
 
 {% endhighlight %}
 
 {% highlight c# %}
    
-SfBadgeView sfBadgeView = new SfBadgeView();
+SfBadgeView badgeView = new SfBadgeView();
 
 //Adding text to the badge view.
 
-sfBadgeView.BadgeText = "20";
+badgeView.BadgeText = "20";
 
-this.Content = sfBadgeView;
+this.Content = badgeView;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-## Adding a content
+## Step 6: Adding a content
 
-An Image, button, or label or any view can be added to the Badge View using the [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_Content) property.
+An Image, button, or label or any view can be added to the Badge View using the [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_Content) property.If you need to display a custom icon or image in the badge, ensure the image is included correctly in your project resources.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<badge:SfBadgeView HorizontalOptions="Center" VerticalOptions="Center" >
-        <badge:SfBadgeView.Content>
+<badgeView:SfBadgeView HorizontalOptions="Center" VerticalOptions="Center" >
+        <badgeView:SfBadgeView.Content>
             <Button Text="Primary" WidthRequest="120"  HeightRequest="60"/>
-        </badge:SfBadgeView.Content>
-</badge:SfBadgeView>   
+        </badgeView:SfBadgeView.Content>
+</badgeView:SfBadgeView>   
 
 {% endhighlight %}
 
 {% highlight c# %}
 	
-SfBadgeView sfBadgeView = new SfBadgeView();
-sfBadgeView.HorizontalOptions = LayoutOptions.Center;
-sfBadgeView.VerticalOptions = LayoutOptions.Center;
+SfBadgeView badgeView = new SfBadgeView();
+badgeView.HorizontalOptions = LayoutOptions.Center;
+badgeView.VerticalOptions = LayoutOptions.Center;
 //Adding image to the content of the badge view.
 Button button = new Button();
 button.Text = "Primary";
 button.WidthRequest = 120;
 button.HeightRequest = 60;
-sfBadgeView.Content = button;
-Content = sfBadgeView;
+badgeView.Content = button;
+Content = badgeView;
 
 {% endhighlight %}
  
@@ -167,11 +185,11 @@ The following code sample gives you the complete code for Badge View with badge 
 
 {% highlight xaml %}
 
-<badge:SfBadgeView HorizontalOptions="Center" VerticalOptions="Center" BadgeText="20">
-        <badge:SfBadgeView.Content>
+<badgeView:SfBadgeView HorizontalOptions="Center" VerticalOptions="Center" BadgeText="20">
+        <badgeView:SfBadgeView.Content>
             <Button Text="Primary" WidthRequest="120"  HeightRequest="60"/>
-        </badge:SfBadgeView.Content>
-</badge:SfBadgeView>
+        </badgeView:SfBadgeView.Content>
+</badgeView:SfBadgeView>
 
 
 {% endhighlight %}
@@ -181,18 +199,18 @@ The following code sample gives you the complete code for Badge View with badge 
 public MainPage()
 {
     InitializeComponent();
-    SfBadgeView sfBadgeView = new SfBadgeView();
-    sfBadgeView.HorizontalOptions = LayoutOptions.Center;
-    sfBadgeView.VerticalOptions = LayoutOptions.Center;
-    sfBadgeView.BadgeText = "20";
+    SfBadgeView badgeView = new SfBadgeView();
+    badgeView.HorizontalOptions = LayoutOptions.Center;
+    badgeView.VerticalOptions = LayoutOptions.Center;
+    badgeView.BadgeText = "20";
 
     //Adding image to the content of the badge view.
     Button button = new Button();
     button.Text = "Primary";
     button.WidthRequest = 120;
     button.HeightRequest = 60;
-    sfBadgeView.Content = button;
-    Content = sfBadgeView;
+    badgeView.Content = button;
+    Content = badgeView;
 }
 
 {% endhighlight %}
