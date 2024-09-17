@@ -16,36 +16,56 @@ To get start quickly with our .NET MAUI Barcode Generator, you can check the bel
 {% youtube
 "youtube:https://www.youtube.com/watch?v=WwdtIotODpE"%}
 
-## Adding a SfBarcodeGenerator reference
+## Prerequisites
 
-The Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfBarcodeGenerator to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Barcode] and then install it.
+Before proceeding, ensure the following are set up:
+1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later is installed.
+2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
 
-### Register the handler
+## Step 1: Create a New MAUI Project
 
-Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
+### Visual Studio
 
-{% highlight C# hl_lines="17" %}
+1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
+2. Name the project and choose a location, then click **Next**.
+3. Select the .NET framework version and click **Create**.
 
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+### Visual Studio Code
+
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+2. Choose the **.NET MAUI App** template.
+3. Select the project location, type the project name and press enter.
+4. Then choose **Create project.**
+
+## Step 2: Install the Syncfusion MAUI Barcode NuGet Package
+
+1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+2. Search for [Syncfusion.Maui.Barcode](https://www.nuget.org/packages/Syncfusion.Maui.Barcode/) and install the latest version.
+3. Ensure the necessary dependencies are installed correctly, and the project is restored.
+
+## Step 3: Register the handler
+
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
+
+{% tabs %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
+
 using Syncfusion.Maui.Core.Hosting;
-
-namespace GaugeMauiSample
+namespace GettingStarted
 {
     public static class MauiProgram
     {
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
+
+            builder.ConfigureSyncfusionCore();
             builder
             .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                fonts.AddFont("Segoe-mdl2.ttf", "SegoeMDL2");
             });
 
             return builder.Build();
@@ -54,8 +74,9 @@ namespace GaugeMauiSample
 }
 
 {% endhighlight %}
+{% endtabs %}
 
-## Adding a namespace
+## Step 4: Add a Basic BarCode view.
 
 Add the following namespace to add .NET MAUI Barcode Generator.
 
@@ -74,8 +95,6 @@ Add the following namespace to add .NET MAUI Barcode Generator.
 {% endhighlight %}
 
 {% endtabs %}
-
-## Initialize the SfBarcodeGenerator control
 
 {% tabs %}
 
