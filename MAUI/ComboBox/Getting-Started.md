@@ -8,21 +8,45 @@ documentation: ug
 keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobox maui, .net maui dropdown list, .net maui select menu.
 ---
 
-# Getting Started with .NET MAUI ComboBox (SfComboBox)
+# Getting Started with .NET MAUI ComboBox
 
-This section explains the steps required to add the [.NET MAUI ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control and binding data in the ComboBox control. This section covers only the basic features needed to get started with Syncfusion ComboBox control.
+This section guides you through setting up and configuring a [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) in your .NET MAUI application. Follow the steps below to add a basic ComboBox to your project.
 
-To get start quickly with our .NET MAUI ComboBox, you can check the below video.
+To get start quickly with our .NET MAUI Combo Box, you can check the below video.
 
 {% youtube "https://www.youtube.com/watch?v=jcfaI0PFmSo" %}
 
-## Adding a .NET MAUI ComboBox reference
+## Prerequisites
 
-Syncfusion .NET MAUI controls are available in [Nuget.org](https://www.nuget.org/). To add .NET MAUI ComboBox to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) and then install it.
+Before proceeding, ensure the following are in place:
 
-## Handler registration 
+1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
+2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
 
- In the MauiProgram.cs file, register the handler for Syncfusion core.
+## Step 1: Create a New MAUI Project
+
+### Visual Studio
+
+1.  Go to **File > New > Project** and choose the **.NET MAUI App** template.
+2.  Name the project and choose a location, then click **Next**.
+3.  Select the .NET framework version and click **Create**.
+
+### Visual Studio Code
+
+1.  Open the command palette by pressing `Ctrl+Shift+P`` and type **.NET:New Project** and enter.
+2.  Choose the **.NET MAUI App** template.
+3.  Select the project location, type the project name and press enter.
+4.  Then choose **Create project**
+
+## Step 2: Install the Syncfusion MAUI Inputs NuGet Package
+
+1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
+2. Search for [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) and install the latest version.
+Ensure the necessary dependencies are installed correctly, and the project is restored.
+
+## Step 3: Register the handler
+
+ [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
 {% highlight c# hl_lines="6 17" %}
 
@@ -56,7 +80,7 @@ namespace ComboBoxSample
 {% endhighlight %} 
 
 
-## Create a Simple .NET MAUI ComboBox
+## Step 4: Add a Basic ComboBox
 
 The .NET MAUI ComboBox control is configured entirely in C# code or by using XAML markup. The following steps explain how to create a .NET MAUI ComboBox (SfComboBox) and configure its elements:
 
@@ -82,7 +106,7 @@ Step 2: Add the namespace as shown in the following code sample:
 
 {% endtabs %}
 
-Step 3: Set the control to content in `ContentPage.`
+Step 3: Set the control to content in ContentPage.
 
 {% tabs %}
 
@@ -105,7 +129,7 @@ Content = comboBox;
 
 {% endtabs %}
 
-## Populating items using data binding
+## Step 5: Populate items using data binding
 
 The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) can be bound to an external data source using the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemsSource) property. Now, let us create Model and ViewModel classes to populate ComboBox with SocialMedia details.
 
@@ -148,7 +172,7 @@ public class SocialMediaViewModel
 {% endhighlight %}
 {% endtabs %}
 
-**Step 2:** Populate data in `ComboBox`. 
+**Step 2:** Populate data in ComboBox. 
 
 Now, populate this SocialMediaViewModel data in [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control by binding it to the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemsSource) property. 
 
@@ -170,6 +194,7 @@ Now, populate this SocialMediaViewModel data in [ComboBox](https://help.syncfusi
             <!--Setting ItemsSource-->
             <editors:SfComboBox x:Name="comboBox" 
                                 WidthRequest="250"
+                                HeightRequest="50"
                                 ItemsSource="{Binding SocialMedias}" />
         </ContentPage.Content>
 </ContentPage>
@@ -180,27 +205,32 @@ Now, populate this SocialMediaViewModel data in [ComboBox](https://help.syncfusi
 {% highlight C# %}
 
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
-comboBox.BindingContext = socialMediaViewModel;
-comboBox.ItemsSource = SocialMediaViewModel.SocialMedias;
+this.BindingContext = socialMediaViewModel;
+SfComboBox comboBox = new SfComboBox(); 
+comboBox.WidthRequest = 250;
+comboBox.HeightRequest = 50;
+comboBox.ItemsSource = socialMediaViewModel.SocialMedias;
+Content = comboBox;
 
 {% endhighlight %}
 {% endtabs %}
 
-N> Set the SocialMediaViewModel instance as the BindingContext of your control; this is done to bind properties of SocialMediaViewModel to `ComboBox`.
+N> Set the BindingContext of your page to an instance of SocialMediaViewModel. This allows you to bind the properties of SocialMediaViewModel to the ComboBox control.
 
 **Step 3:** Setting TextMemberPath and DisplayMemberPath.
 
 The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control is populated with a list of social media. But the SocialMedia model contains two properties, ID and Name, so it is necessary to intimate by which property it should display the value in the selection box portion of the `[ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control when an item is selected.
 
-[TextMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_TextMemberPath)  - This property path is used to get the value for displaying in the selection box portion of the [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control when an item is selected. The default value is `String.Empty`.
+[TextMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_TextMemberPath)  - This property path is used to get the value for displaying in the selection box portion of the [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control when an item is selected. The default value is **String.Empty**.
 
-[DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DisplayMemberPath) - This property path is used to the name or path of the property displayed for each data item in the drop-down list. The default value is `String.Empty`.
+[DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DisplayMemberPath) - This property path is used to the name or path of the property displayed for each data item in the drop-down list. The default value is **String.Empty**.
 
 {% tabs %}
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox" 
                     WidthRequest="250"
+                    HeightRequest = "50"
                     DisplayMemberPath = "Name"
                     TextMemberPath = "Name"
                     ItemsSource="{Binding SocialMedias}" />
@@ -208,8 +238,12 @@ The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComb
 {% endhighlight %}
 {% highlight C# %}
 
+SfComboBox comboBox = new SfComboBox(); 
+comboBox.WidthRequest = 250;
+comboBox.HeightRequest = 50;
 comboBox.DisplayMemberPath = "Name";
 comboBox.TextMemberPath = "Name";
+comboBox.ItemsSource = socialMediaViewModel.SocialMedias;
 
 {% endhighlight %}
 {% endtabs %}
@@ -227,6 +261,7 @@ The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComb
 
 <editors:SfComboBox x:Name="comboBox"
                     WidthRequest="250"
+                    HeightRequest="50"
                     IsEditable="true"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
@@ -237,7 +272,13 @@ The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComb
 
 {% highlight C# %}
 
+SfComboBox comboBox = new SfComboBox(); 
+comboBox.WidthRequest = 250;
+comboBox.HeightRequest = 50;
 comboBox.IsEditable = true;
+comboBox.ItemsSource = socialMediaViewModel.SocialMedias;
+comboBox.DisplayMemberPath = "Name";
+comboBox.TextMemberPath = "Name";
 
 {% endhighlight %}
 {% endtabs %}
@@ -250,6 +291,6 @@ You can find the complete getting started sample of .NET MAUI ComboBox from this
 
 ## Text
 
-The [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Text) property is used to get the user-submitted text in the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) editable mode. The default value of the `Text` property is `string.Empty`.
+The [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Text) property is used to get the user-submitted text in the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) editable mode. The default value of the **Text** property is **string.Empty**.
 
 N> You can refer to our [.NET MAUI ComboBox](https://www.syncfusion.com/maui-controls/maui-combobox) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI ComboBox Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Inputs/SampleBrowser.Maui.Inputs/Samples/ComboBox) that shows you how to render the ComboBox in .NET MAUI.
