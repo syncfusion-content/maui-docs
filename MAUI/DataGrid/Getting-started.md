@@ -40,9 +40,9 @@ Before proceeding, ensure the following are in place:
 
 ## Step 2: Install the Syncfusion MAUI DataGrid NuGet Package
 
-1.	In Solution Explorer, right-click the project and choose **Manage NuGet Packages**.
-2.	Search for `Syncfusion.Maui.DataGrid` on [nuget.org](https://www.nuget.org/packages/Syncfusion.Maui.DataGrid/) and install the latest version.
-3.	Ensure the necessary dependencies are installed correctly, and the project is restored.
+1. In Solution Explorer, right-click the project and choose **Manage NuGet Packages**.
+2. Search for `Syncfusion.Maui.DataGrid` on [nuget.org](https://www.nuget.org/packages/Syncfusion.Maui.DataGrid/) and install the latest version.
+3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 ## Step 3: Register the handler
 
