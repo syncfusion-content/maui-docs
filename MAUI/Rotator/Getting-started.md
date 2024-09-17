@@ -187,8 +187,6 @@ namespace Rotator
 {% endtabs %}
 
 ![Rotator Items](images/RotatorItems.png)
-
-N> Ensure that the images mentioned in the code snippets are located in the **Resources** folder of your sample project.
  
 ## Setting Navigation Mode
 
