@@ -7,7 +7,8 @@ control: SfCalendar
 documentation: ug
 ---
 
-# Getting started with .NET MAUI Calendar (SfCalendar)
+# Getting Started with the .NET MAUI Calendar
+
 This section explains how to add the [.NET MAUI Calendar](https://www.syncfusion.com/maui-controls/maui-calendar) control. This section covers only the basic features needed to get started with Syncfusion Calendar.
 
 To get start quickly with our .NET MAUI Calendar, you can check the below video.
@@ -15,15 +16,36 @@ To get start quickly with our .NET MAUI Calendar, you can check the below video.
 {% youtube
 "youtube:https://www.youtube.com/watch?v=kfQjKiD9Xas"%}
 
-## Creating an application using the .NET MAUI Calendar
+## Prerequisites
 
-1. Create a new .NET MAUI application in Visual Studio.
+Before proceeding, ensure the following are set up:
+1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later is installed.
+2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
 
-2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add `SfCalendar` to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Calendar](https://www.nuget.org/packages/Syncfusion.Maui.Calendar), and then install it.
+## Step 1: Create a New MAUI Project
 
-3. To initialize the control, import the control namespace `Syncfusion.Maui.Calendar` in XAML or C# code.
+### Visual Studio
 
-4. Initialize `SfCalendar.`
+1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
+2. Name the project and choose a location, then click **Next**.
+3. Select the .NET framework version and click **Create**.
+
+### Visual Studio Code
+
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+2. Choose the **.NET MAUI App** template.
+3. Select the project location, type the project name and press enter.
+4. Then choose **Create project.**
+
+## Step 2: Install the Syncfusion MAUI Calendar NuGet Package
+
+1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+2. Search for [Syncfusion.Maui.Calendar](https://www.nuget.org/packages/Syncfusion.Maui.Calendar/) and install the latest version.
+3. Ensure the necessary dependencies are installed correctly, and the project is restored.
+
+## Step 3: Register the handler
+
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5" %}
@@ -54,38 +76,40 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## Register the handler
+## Step 4: Add a Basic Calendar view.
 
-The `Syncfusion.Maui.Core` NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
+1. To initialize the control, import the Calendar namespace into your code.
+2. Initialize [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html).
 
 {% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
+{% highlight XAML hl_lines="3 5" %}
 
-using Syncfusion.Maui.Core.Hosting;
-namespace GettingStarted
+<ContentPage   
+    . . .
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <scheduler:SfCalendar />
+</ContentPage>
+
+{% endhighlight %}
+{% highlight C# hl_lines="1 9 10" %}
+
+using Syncfusion.Maui.Calendar;
+. . .
+
+public partial class MainPage : ContentPage
 {
-    public static class MauiProgram
+    public MainPage()
     {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-
-            builder.ConfigureSyncfusionCore();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                fonts.AddFont("Segoe-mdl2.ttf", "SegoeMDL2");
-            });
-
-            return builder.Build();
-        }
+        InitializeComponent();
+        SfCalendar calendar = new SfCalendar();
+        this.Content = calendar;
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
+
 
 ## Change different calendar views
 
@@ -94,14 +118,14 @@ The [.NET MAUI Calendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cal
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                         View="Month">
 </calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.View = CalendarView.Month;
+this.calendar.View = CalendarView.Month;
 
 {% endhighlight %}
 {% endtabs %}
@@ -126,7 +150,7 @@ The following code explains how to show the Calendar with `Monday` as the first 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.MonthView.FirstDayOfWeek = DayOfWeek.Monday;
+this.calendar.MonthView.FirstDayOfWeek = DayOfWeek.Monday;
 
 {% endhighlight %}  
 {% endtabs %}
@@ -144,14 +168,14 @@ The following code explains how to show the Calendar with `Multiple` as the Sele
 {% tabs %}  
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                       SelectionMode="Multiple">
 </calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.SelectionMode = CalendarSelectionMode.Multiple;
+this.calendar.SelectionMode = CalendarSelectionMode.Multiple;
 
 {% endhighlight %}  
 {% endtabs %}
@@ -165,7 +189,7 @@ You can customize the corner radius of the calendar using the [CornerRadius](htt
 {% tabs %}  
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
 
-<calendar:SfCalendar x:Name="Calendar" 
+<calendar:SfCalendar x:Name="calendar" 
                      View="Month"
                      CornerRadius="15">
  </calendar:SfCalendar>
@@ -173,7 +197,7 @@ You can customize the corner radius of the calendar using the [CornerRadius](htt
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 
-this.Calendar.CornerRadius = 15;
+this.calendar.CornerRadius = 15;
 
 {% endhighlight %}
 {% endtabs %}
