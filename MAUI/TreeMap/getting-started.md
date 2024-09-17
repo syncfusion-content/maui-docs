@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with the .NET MAUI TreeMap
 
-This section provides a quick overview of how to get started with the [.NET MAUI SfTreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map) for .NET MAUI and a walk-through to configure the .NET MAUI TreeMap in a real-time scenario.
+This section provides a quick overview of how to get started with the [.NET MAUI SfTreeMap](https://www.syncfusion.com/maui-controls/maui-tree-map) for .NET MAUI and a walk-through to configure the .NET MAUI TreeMap in a real-time scenario. Follow the steps below to add a basic treeMap view to your project.
 
 ## Prerequisites
 
@@ -18,6 +18,7 @@ Before proceeding, ensure the following are setup:
 2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
 
 ## Step 1: Create a New MAUI Project
+
 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
 2. Name the project and choose a location, then click **Next**.
 3. Select the .NET framework version and click **Create**.
@@ -100,7 +101,7 @@ public partial class MainPage : ContentPage
 
 {% endtabs %}
 
-## Populate data source
+## Step 5: Add Populate data source
 
 Here are the steps to render treemap items using the .NET MAUI TreeMap control with respective data properties created in a data model class.
 
