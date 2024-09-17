@@ -19,33 +19,34 @@ To get start quickly with .NET MAUI DataGrid, you can check on this video:
 ## Prerequisites
 
 Before proceeding, ensure the following are in place:
+
 1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
 
 ## Step 1: Create a New MAUI Project
 
-**Visual Studio**
+### Visual Studio
 
-1. Go to `File` > `New` > `Project` and choose the `.NET MAUI App` template.
-2. Name the project and choose a location, then click `Next`.
-3. Select the .NET framework version and click `Create`.
+1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
+2. Name the project and choose a location, then click **Next**.
+3. Select the .NET framework version and click **Create**.
 
-**Visual Studio Code**
+### Visual Studio Code
 
-1. Open the command palette by pressing `Ctrl+Shift+P` and type .NET:New Project and enter.
-2. Choose the `.NET MAUI App` template.
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+2. Choose the **.NET MAUI App** template.
 3. Select the project location, type the project name and press enter.
-4. Then choose Create project.
+4. Then choose **Create project**.
 
 ## Step 2: Install the Syncfusion MAUI DataGrid NuGet Package
 
-1.	In Solution Explorer, right-click the project and choose Manage NuGet Packages.
-2.	Search for `Syncfusion.Maui.DataGrid` and install the latest version.
+1.	In Solution Explorer, right-click the project and choose **Manage NuGet Packages**.
+2.	Search for `Syncfusion.Maui.DataGrid` on [nuget.org](https://www.nuget.org/packages/Syncfusion.Maui.DataGrid/) and install the latest version.
 3.	Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 ## Step 3: Register the handler
 
-To use this control inside an application, you must initialize the `SfDataGrid` handler.
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
 
 {% tabs %}
 {% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 20" %}
@@ -115,9 +116,7 @@ public partial class MainPage : ContentPage
 
 ### Data Model
 
-The SfDataGrid is a data-bound control. Hence, a data model should be created to bind it to the control. 
-
-Create a simple data source as shown in the following code example in a new class file, and save it as OrderInfo.cs file:
+Create a simple data model as shown in the following code example, and save it as `OrderInfo.cs` file:
 
 {% tabs %}
 {% highlight c# %}
@@ -175,7 +174,7 @@ N> If you want your data model to respond to property changes, implement the `IN
 
 ### View Model
 
-Create a model repository class with OrderInfo collection property initialized with the required number of data objects in a new class file as shown in the following code example and save it as OrderInfoRepository.cs file:
+Create a model repository class with `OrderInfo` collection property initialized with the required number of data objects in a new class file as shown in the following code example, and save it as `OrderInfoRepository.cs` file:
 
 {% tabs %}
 {% highlight c# %}
@@ -217,7 +216,9 @@ public class OrderInfoRepository
 
 ### Binding the ViewModel
 
-To bind the data source to the SfDataGrid, set the [SfDataGrid.ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSource) property as follows. You can bind the data source of the SfDataGrid either from XAML or in code. 
+Create a `ViewModel` instance and set it as the DataGrid's `BindingContext`. This enables property binding from `ViewModel` class.
+
+To populate the `SfDataGrid`, bind the item collection from its `BindingContext` to [SfDataGrid.ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSource) property. 
 
 The following code example binds the collection created in the previous step to the `SfDataGrid.ItemsSource` property:
 
@@ -258,6 +259,7 @@ dataGrid.ItemsSource = viewModel.OrderInfoCollection;
 {% endtabs %}
 
 ## Step 6: Running the Application
+
 Press **F5** to build and run the application. Once compiled, the datagrid will be displayed with the data provided.
 
 Here is the result of the previous codes,
