@@ -9,7 +9,7 @@ keywords: .net maui, .net maui digital gauge, digital gauge, character segments,
 ---
 # Getting Started with the .NET MAUI DigitalGauge
 
-This section explains how to add the [.NET MAUI DigitalGauge](https://www.syncfusion.com/maui-controls/maui-digital-gauge) control. This section covers only the basic features needed to get started with Syncfusion DigitalGauge. Follow the steps below to add a basic digital gauge view to your project.
+This section explains how to add the [.NET MAUI DigitalGauge](https://www.syncfusion.com/maui-controls/maui-digital-gauge) control. This section covers only the basic features needed to get started with Syncfusion DigitalGauge. Follow the steps below to add .NET MAUI DigitalGauge control to your project.
 
 ## Prerequisites
 
@@ -73,7 +73,7 @@ namespace GaugeMauiSample
 
 {% endhighlight %} 
 
-## Step 4: Add a Basic DigitalGauge view.
+## Step 4: Add .NET MAUI DigitalGauge control
 1. To initialize the control, import the DigitalGauge namespace into your code.
 2. Initialize [SfDigitalGauge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfDigitalGauge.html).
 
@@ -99,8 +99,8 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        SfDigitalGauge sfDigitalGauge = new SfDigitalGauge();
-        this.Content = sfDigitalGauge;
+        SfDigitalGauge digitalGauge = new SfDigitalGauge();
+        this.Content = digitalGauge;
     }
 }
 
@@ -110,7 +110,7 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 
-## Step 3: Display content to the DigitalGauge
+## Step 3: Display a value in .NET MAUI DigitalGauge
 
 In [.NET MAUI DigitalGauge](https://www.syncfusion.com/maui-controls/maui-digital-gauge) user can display value using [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfDigitalGauge.html#Syncfusion_Maui_Gauges_SfDigitalGauge_Text) property.
 
@@ -124,11 +124,11 @@ In [.NET MAUI DigitalGauge](https://www.syncfusion.com/maui-controls/maui-digita
 
 {% highlight c# %}
 
-        SfDigitalGauge sfDigitalGauge = new SfDigitalGauge();
+        SfDigitalGauge digitalGauge = new SfDigitalGauge();
 
         digital.Text = "SYNCFUSION";
 
-        this.Content = sfDigitalGauge;
+        this.Content = digitalGauge;
  
 {% endhighlight %}
 
