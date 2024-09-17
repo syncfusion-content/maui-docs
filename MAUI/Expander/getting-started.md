@@ -346,7 +346,7 @@ There are four built-in events in the SfExpander control namely:
 
 The [Expanding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_Expanding) event will be triggered when the expander control is being expanded.It can cancel expansion with [ExpandingAndCollapsingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.ExpandingAndCollapsingEventArgs.html) that contains the following property:
 
-* `Cancel`: Indicates that the expansion or collapse action should be cancelled.
+* `Cancel`: Indicates that the expansion or collapse action should be canceled.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -382,7 +382,7 @@ private void SfExpander_Expanded(object sender, ExpandedAndCollapsedEventArgs e)
 
 The [Collapsing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_Collapsing) event will be triggered when the expander control is being collapsed.It can cancel collapsing with [ExpandingAndCollapsingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.ExpandingAndCollapsingEventArgs.html) that contains the following property:
 
-* `Cancel`: Indicates that the expansion or collapse action should be cancelled.
+* `Cancel`: Indicates that the expansion or collapse action should be canceled.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
