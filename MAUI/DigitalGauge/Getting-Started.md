@@ -11,6 +11,11 @@ keywords: .net maui, .net maui digital gauge, digital gauge, character segments,
 
 This section explains how to add the [.NET MAUI DigitalGauge](https://www.syncfusion.com/maui-controls/maui-digital-gauge) control. This section covers only the basic features needed to get started with Syncfusion DigitalGauge. Follow the steps below to add .NET MAUI DigitalGauge control to your project.
 
+To get start quickly with our .NET MAUI DigitalGauge, you can check the below video.
+
+{% youtube
+"youtube:https://youtu.be/kYZtmp3Mtkk?si=FUhFxyrNdpzRbxxC"%}
+
 ## Prerequisites
 
 Before proceeding, ensure the following are set up:
@@ -40,7 +45,7 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register the handler
 
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion core.
 
 {% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="17" %}
 
@@ -74,7 +79,7 @@ namespace GaugeMauiSample
 {% endhighlight %} 
 
 ## Step 4: Add .NET MAUI DigitalGauge control
-1. To initialize the control, import the DigitalGauge namespace into your code.
+1. To initialize the control, import the `Syncfusion.Maui.Gauges` namespace into your code.
 2. Initialize [SfDigitalGauge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfDigitalGauge.html).
 
 {% tabs %}
