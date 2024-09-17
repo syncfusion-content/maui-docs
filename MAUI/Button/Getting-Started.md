@@ -24,12 +24,12 @@ Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Co
 
 ## Step 1: Create a New MAUI Project
 
-Visual Studio
+### Visual Studio
 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
 2. Name the project and choose a location, then click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-Visual Studio Code
+### Visual Studio Code
 1. Open the command palette by pressing `Ctrl+Shift+P`` and type **.NET:New Project** and enter.
 2. Choose the **.NET MAUI App** template.
 3. Select the project location, type the project name and press enter.
@@ -45,7 +45,7 @@ Then choose **Create project**
 
 ## Step 3: Register the Handler 
 
-[Syncfusion.Maui.Core nuget](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all Syncfusion controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion core.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion core.
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;
@@ -120,6 +120,8 @@ SfButton button = new SfButton();
 
 The button icon can be defined using the [ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_ImageSource) and [ShowIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_ShowIcon) properties of [SfButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html).
 
+N> Ensure that the images mentioned in the code snippets are located in the **Resources** folder of your sample project.
+
 {% tabs %}
 {% highlight xaml %}
 
@@ -143,7 +145,6 @@ button.ShowIcon = true;
 
 ![SfButton with button icon](images/getting-started/ButtonWithIcon.png)
 
-N> Ensure that the images mentioned in the code snippets are located in the **Resources** folder of your sample project.
 
 ## Button background image
 
