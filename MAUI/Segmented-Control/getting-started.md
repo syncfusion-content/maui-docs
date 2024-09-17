@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with the .NET MAUI Segmented Control
 
-This section provides a quick overview of how to get started with the [.NET MAUI Segmented control (SfSegmentedControl)](https://www.syncfusion.com/maui-controls/maui-segmented-control) for .NET MAUI and a walk-through to configure the .NET MAUI Segmented control in a real-time scenario. Follow the steps below to add a basic segmented control view to your project.
+This section provides a quick overview of how to get started with the [.NET MAUI Segmented control (SfSegmentedControl)](https://www.syncfusion.com/maui-controls/maui-segmented-control) for .NET MAUI and a walk-through to configure the .NET MAUI Segmented control in a real-time scenario. Follow the steps below to add .NET MAUI Segmented Control to your project.
 
 ## Prerequisites
 
@@ -40,7 +40,7 @@ Before proceeding, ensure the following are setup:
 
 ## Step 3: Register the handler
 
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) nuGet is a dependent package for all Syncfusion .NET MAUI controls. In the **MauiProgram.cs** file, register the handler for Syncfusion core.
 
 {% tabs %}
 {% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 8" %}
@@ -68,9 +68,9 @@ The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/)
 {% endhighlight %}
 {% endtabs %}
 
-## Step 4: Add a Basic Segmented Control view.
+## Step 4: Add .NET MAUI Segmented Control
 
-1. To initialize the control, import the Segmented Control namespace into your code.
+1. To initialize the control, import the **Buttons** namespace into your code.
 2. Initialize [SfSegmentedControl](https://www.syncfusion.com/maui-controls/maui-segmented-control).
 
 {% tabs %}
@@ -102,7 +102,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Add Populating segmented items
+## Step 5: Populating segmented items
 
 You can use [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_ItemsSource) property of [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html) to populate the segmented items.
 
