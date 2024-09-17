@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Rating
 
-This section explains how to configure a [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control in a real-time scenario and also provides a walk-through on some of the customization features available in SfRating control.
+This section explains how to configure a [Rating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control in a real-time scenario and also provides a walk-through on some of the customization features available in SfRating control.
 
 To get start quickly with our .NET MAUI Rating, you can check the below video.
 
