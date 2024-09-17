@@ -260,19 +260,19 @@ todoColumn.MaximumLimit = 1;
 
 {% highlight C# %}
 
-     KanbanColumn todoColumn = new KanbanColumn();
-     todoColumn.Title = "To Do";
-     todoColumn.MaximumLimit = 5;
-     todoColumn.MinimumLimit = 3;
-     KanbanErrorBarSettings kanbanErrorBarSettings = new KanbanErrorBarSettings()
-     {
-         Fill = Colors.Green,
-         MaxValidationFill = Colors.Red,
-         MinValidationFill = Colors.Orange,
-         Height = 4,
-     };
-     todoColumn.ErrorBarSettings = kanbanErrorBarSettings;
-     kanban.Columns.Add(todoColumn);
+KanbanColumn todoColumn = new KanbanColumn();
+todoColumn.Title = "To Do";
+todoColumn.MaximumLimit = 5;
+todoColumn.MinimumLimit = 3;
+KanbanErrorBarSettings kanbanErrorBarSettings = new KanbanErrorBarSettings()
+{
+    Fill = Colors.Green,
+    MaxValidationFill = Colors.Red,
+    MinValidationFill = Colors.Orange,
+    Height = 4,
+};
+todoColumn.ErrorBarSettings = kanbanErrorBarSettings;
+kanban.Columns.Add(todoColumn);
 
 {% endhighlight %}
 
