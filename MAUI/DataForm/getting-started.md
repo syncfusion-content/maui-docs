@@ -19,6 +19,8 @@ Before proceeding, ensure the following are setup:
 
 ## Step 1: Create a New MAUI Project
 
+### Visual Studio
+
 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
 2. Name the project and choose a location, then click **Next**.
 3. Select the .NET framework version and click **Create**.
