@@ -287,7 +287,7 @@ Press **F5** to build and run the application. Once compiled, the Expander will 
 
 Here is the result of the previous codes,
 
-![.NET MAUI Expander](Images/maui-expander-with-gettingstarted.gif)
+![.NET MAUI Expander](Images/maui-expander-with-gettingstarted.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-expander).
 

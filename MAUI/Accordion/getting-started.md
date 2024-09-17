@@ -189,7 +189,7 @@ Press **F5** to build and run the application. Once compiled, the Accordion will
 
 Here is the result of the previous codes,
 
-![.NET MAUI Accordion with items](Images/getting-started/maui-accordion-with-defining-accordion-items.gif)
+![.NET MAUI Accordion with items](Images/getting-started/maui-accordion-with-defining-accordion-items.png)
 
 You can download accordion sample for .NET MAUI [here](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-accordion).
 
