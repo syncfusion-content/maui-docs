@@ -9,28 +9,42 @@ documentation: ug
 
 # Getting Started with .NET MAUI DateTime Range Selector
 
-This section explains the steps required to add the DateTime Range Selector control and its elements such as track, ticks, labels and tooltip. This section covers only the basic features needed to know to get started with the Syncfusion DateTime Range Selector.
+This section guides you through setting up and configuring a [DateTime Range Selector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSelector.html) in your .NET MAUI application. Follow the steps below to add a basic DateTime Range Selector to your project.
 
 To get start quickly with MAUI SfDateTimeRangeSelector, you can check on this video:
 
 <style>#MAUIDateTimeRangeSelectorVideoTutorial{width : 90% !important; height: 350px !important }</style>
 <iframe id='MAUIDateTimeRangeSelectorVideoTutorial' src='https://www.youtube.com/embed/QpaNVNcn7xc'></iframe>
 
-## Creating an application with .NET MAUI
+## Prerequisites
 
-Create a new .NET MAUI application in the Visual Studio.
+Before proceeding, ensure the following are in place:
 
- ![Create MAUI Application](images/getting-started/create-project.png)
+1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
+2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
 
-## Adding the SfDateTimeRangeSelector reference
+## Step 1: Create a New MAUI Project
 
-The Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add the SfDateTimeRangeSelector to your project, open the NuGet package manager in the Visual Studio, search for the Syncfusion.Maui.Sliders, and install it.
+### Visual Studio
+1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
+2. Name the project and choose a location, then click **Next**.
+3. Select the .NET framework version and click **Create**.
 
- ![Create MAUI Application](images/getting-started/nuget-installation.png)
+### Visual Studio Code
+1. Open the command palette by pressing `Ctrl+Shift+P`` and type **.NET:New Project** and enter.
+2. Choose the **.NET MAUI App** template.
+3. Select the project location, type the project name and press enter.
+Then choose **Create project**
 
-## Handler registration
+## Step 2: Install the Syncfusion MAUI Sliders NuGet Package
 
-In the MauiProgram.cs file, register the handler for the Syncfusion core.
+1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
+2. Search for [Syncfusion.Maui.Sliders](https://www.nuget.org/packages/Syncfusion.Maui.Sliders) and install the latest version.
+3. Ensure the necessary dependencies are installed correctly, and the project is restored.
+
+## Step 3: Register the Handler
+
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion core.
 
 {% highlight C# %}
 
@@ -63,9 +77,9 @@ namespace RangeSelector
 
 {% endhighlight %}
 
-## Initialize the DateTime Range Selector
+## Step 4: Add a Basic DateTime Range Selector
 
-Import the [`SfDateTimeRangeSelector`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSelector.html) namespace and initialize the DateTime Range Selector as follows.
+Import the [SfDateTimeRangeSelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSelector.html) namespace and initialize the DateTime Range Selector as follows.
 
 {% tabs %}
 
@@ -111,7 +125,7 @@ namespace GettingStarted
 
 ## Adding content to the DateTime Range Selector
 
-The [`Content`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSelectorBase-1.html#Syncfusion_Maui_Sliders_RangeSelectorBase_1_Content) property will add the content to the DateTime Range Selector. Add any control within the DateTime Range Selector with this property. In most cases, the [Charts](https://www.syncfusion.com/maui-controls/maui-cartesian-charts) will be added as a content.
+The [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSelectorBase-1.html#Syncfusion_Maui_Sliders_RangeSelectorBase_1_Content) property will add the content to the DateTime Range Selector. Add any control within the DateTime Range Selector with this property. In most cases, the [Charts](https://www.syncfusion.com/maui-controls/maui-cartesian-charts) will be added as a content.
 
 {% tabs %}
 
@@ -191,7 +205,7 @@ this.Content = rangeSelector;
 
 ## Enable labels
 
-The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property enables the labels which render on a given interval.
+The [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property enables the labels which render on a given interval.
 
 {% tabs %}
 
@@ -238,7 +252,7 @@ rangeSelector.Content = chart;
 
 ## Enable ticks
 
-The [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowTicks) property enables the ticks in the DateTime Range Selector while the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTicksPerInterval) property enables the minor ticks between the major ticks.
+The [ShowTicks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowTicks) property enables the ticks in the DateTime Range Selector while the [MinorTicksPerInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTicksPerInterval) property enables the minor ticks between the major ticks.
 
 {% tabs %}
 
@@ -289,7 +303,7 @@ rangeSelector.Content = chart;
 
 ## Inverse the Range Selector
 
-Invert the DateTime Range Selector using the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property. The default value of the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property is `False`.
+Invert the DateTime Range Selector using the [IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property. The default value of the [IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property is `False`.
 
 {% tabs %}
 
@@ -342,7 +356,7 @@ rangeSelector.Content = chart;
 
 ## Formatting labels
 
-Add prefix or suffix to the labels using the [`DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_DateFormat) property.
+Add prefix or suffix to the labels using the [DateFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_DateFormat) property.
 
 {% tabs %}
 

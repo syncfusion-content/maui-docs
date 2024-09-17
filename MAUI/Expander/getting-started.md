@@ -9,44 +9,41 @@ documentation: ug
 
 # Getting Started with .NET MAUI Expander (SfExpander)
 
-This section provides a quick overview of how to get started with the SfExpander for .NET MAUI. Walk-through the entire process of creating the real world of this control.
+This section guides you through setting up and configuring a [Expander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html) in your .NET MAUI application. Follow the steps below to add a basic Expander to your project.
 
 To get start quickly with .NET MAUI Expander, you can check on this video:
 <style>#MAUIExpanderVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIExpanderVideoTutorial' src='https://www.youtube.com/embed/zTVbps0m8i0'></iframe>
 
-## Creating an application using the .NET MAUI Expander
+## Prerequisites
+Before proceeding, ensure the following are in place:
 
- 1. Create a new .NET MAUI application in Visual Studio.
- 2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfExpander to your project, open the NuGet package manager in Visual Studio, and search for Syncfusion.Maui.Expander and install it.
- 3. Import the control namespace `Syncfusion.Maui.Expander` in XAML or C# code.
- 4. Initialize the `SfExpander` control.
+ 1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
+ 2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
+
+## Step 1: Create a .NET MAUI project
+
+### Visual Studio
+
+ 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
+ 2. Name the project and choose a location, then click **Next**.
+ 3. Select the .NET framework version and click **Create**.
+
+### Visual Studio Code
+
+ 1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+ 2. Choose the **.NET MAUI App** template.
+ 3. Select the project location, type the project name and press enter.
+ 4. Then choose **Create project**.
  
-{% tabs %}
-{% highlight xaml hl_lines="4"%}
-<ContentPage   
-    . . .
-    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Expander;assembly=Syncfusion.Maui.Expander">
-    <syncfusion:SfExpander />
-</ContentPage>
-{% endhighlight %}
+ ## Step 2: Install the Syncfusion MAUI Expander NuGet Package
+ 
+ 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
+ 2. Search for [Syncfusion.Maui.Expander](https://www.nuget.org/packages/Syncfusion.Maui.Expander) and install the latest version.
+ 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-{% highlight c# hl_lines="8"%}
-using Syncfusion.Maui.Expander;
-. . .
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        SfExpander expander = new SfExpander();
-    }
-}
-{% endhighlight %}
-{% endtabs %}
+## Step 3: Register the handler
 
-## Register the handler
-
-The `Syncfusion.Maui.Core` NuGet package is a dependency for all Syncfusion controls in .NET MAUI. In `the MauiProgram.cs` file, register the handler for Syncfusion Core.
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all Syncfusion controls in .NET MAUI. In `the MauiProgram.cs` file, register the handler for Syncfusion Core.
 
 {% tabs %}
 {% highlight c# hl_lines="4 20" %}
@@ -76,8 +73,36 @@ namespace GettingStarted
 }
 {% endhighlight %} 
 {% endtabs %}
+ 
+ ## Step 4: Add a Basic Expander
+ 
+ 1. To initialize the control, import the `Syncfusion.Maui.Expander` namespace into your code.
+ 2. Initialize [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html).
+ 
+{% tabs %}
+{% highlight xaml hl_lines="4"%}
+<ContentPage   
+    . . .
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Expander;assembly=Syncfusion.Maui.Expander">
+    <syncfusion:SfExpander />
+</ContentPage>
+{% endhighlight %}
 
-## Defining expander 
+{% highlight c# hl_lines="8"%}
+using Syncfusion.Maui.Expander;
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfExpander expander = new SfExpander();
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+## Step 5: Define the Header and Content 
 
 The [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html) is a layout control comprised of the Header and Content. Load any View in the [Header](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_Header) and [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_Content). Content visibility of the expander can be set by using the [IsExpanded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_IsExpanded) property of the `Expander`. Users can expand or collapse the Content view by tapping the Header.
 
@@ -256,9 +281,13 @@ N> Loading the `Label` as direct children of the `Header` or `Content` of the Ex
 {% endhighlight %}
 {% endtabs %}
 
-Now, run the application to render the desired output.
+## Step 6: Running the Application
 
-![.NET MAUI Expander](Images/maui-expander-with-gettingstarted.gif)
+Press **F5** to build and run the application. Once compiled, the Expander will be displayed with the data provided.
+
+Here is the result of the previous codes,
+
+![.NET MAUI Expander](Images/maui-expander-with-gettingstarted.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-expander).
 
@@ -317,7 +346,7 @@ There are four built-in events in the SfExpander control namely:
 
 The [Expanding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_Expanding) event will be triggered when the expander control is being expanded.It can cancel expansion with [ExpandingAndCollapsingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.ExpandingAndCollapsingEventArgs.html) that contains the following property:
 
-* `Cancel`: Indicates that the expansion or collapse action should be cancelled.
+* `Cancel`: Indicates that the expansion or collapse action should be canceled.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -353,7 +382,7 @@ private void SfExpander_Expanded(object sender, ExpandedAndCollapsedEventArgs e)
 
 The [Collapsing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_Collapsing) event will be triggered when the expander control is being collapsed.It can cancel collapsing with [ExpandingAndCollapsingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.ExpandingAndCollapsingEventArgs.html) that contains the following property:
 
-* `Cancel`: Indicates that the expansion or collapse action should be cancelled.
+* `Cancel`: Indicates that the expansion or collapse action should be canceled.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
