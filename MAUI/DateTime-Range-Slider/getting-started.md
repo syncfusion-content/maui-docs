@@ -36,7 +36,7 @@ Before proceeding, ensure the following are in place:
 3.Select the project location, type the project name and press enter.
 4.Then choose **Create project.
 
-## Step 2: Install the Syncfusion MAUI DateTime Range Slider NuGet Package
+## Step 2: Install the Syncfusion MAUI Sliders NuGet Package
 
 1.In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2.Search for [Syncfusion.Maui.Sliders](https://www.nuget.org/packages/Syncfusion.Maui.Sliders) and install the latest version.
@@ -77,7 +77,7 @@ namespace Slider
 
 {% endhighlight %}
 
-## Step 4:  Add a Basic DateTime Range Slider
+## Step 4: Add a Basic DateTime Range Slider
 
 Step 1: Add the NuGet to the project as discussed in the above reference section. 
 
