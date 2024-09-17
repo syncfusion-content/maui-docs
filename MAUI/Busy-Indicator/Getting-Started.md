@@ -24,18 +24,27 @@ Before proceeding, ensure the following are in place:
 {% youtube "https://www.youtube.com/watch?v=EY1y5PUBkCw" %}
 
 ## Step 1: Create a New MAUI Project
-1. Open Visual Studio or VS Code.
-2. Go to **File** > **New** > **Project** and choose the .NET MAUI App template.
-3. Name the project and choose a location, then click Create.
 
+### Visual Studio
+
+1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
+1. Name the project and choose a location, then click **Next**.
+1. Select the .NET framework version and click **Create**.
+
+### Visual Studio Code
+
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+1. Choose the **.NET MAUI App** template.
+1. Select the project location, type the project name and press enter.
+1. Then choose **Create project.**
 ## Step 2: Install the Syncfusion MAUI Core NuGet Package
 1.  In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2.  Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and install the latest version.
 3.  Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-## Step 3: Handler registration 
+## Step 3: Register the handler
 
-In the MauiProgram.cs file, register the handler for Syncfusion core.
+Syncfusion.Maui.Core NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;
@@ -114,7 +123,7 @@ Content = busyIndicator;
 
 {% endtabs %}
 
-## Customizing the Busy Indicator
+## Setting Animation Type in .NET MAUI Busy Indicator
 
 [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) provides some predefined animation types like Cupertino, LinearMaterial, and CircularMaterial. Users can select any one of the animation types using the [AnimationType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_AnimationType) property.
 

@@ -21,18 +21,22 @@ Before proceeding, ensure the following are in place:
 {% youtube "https://www.youtube.com/watch?v=IOieyRMCuAo" %}
 
 ## Step 1: Create a New MAUI Project
-1. Open Visual Studio or VS Code.
-2. Go to **File** > **New** > **Project** and choose the .NET MAUI App template.
-3. Name the project and choose a location, then click Create.
+### Visual Studio
 
-## Step 2: Install the Syncfusion MAUI Core NuGet Package
-1.  In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
-2.  Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and install the latest version.
-3.  Ensure the necessary dependencies are installed correctly, and the project is restored.
+1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
+1. Name the project and choose a location, then click **Next**.
+1. Select the .NET framework version and click **Create**.
 
-## Step 3: Handler registration 
+### Visual Studio Code
 
- In the MauiProgram.cs file, register the handler for Syncfusion core.
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+1. Choose the **.NET MAUI App** template.
+1. Select the project location, type the project name and press enter.
+1. Then choose **Create project.**
+
+## Step 3: Register the handler
+
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
 {% highlight C# hl_lines="6 17" %}
 using Microsoft.Maui;
