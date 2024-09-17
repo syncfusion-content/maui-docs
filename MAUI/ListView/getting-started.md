@@ -114,7 +114,7 @@ public partial class MainPage : ContentPage
 
 ### Data Model
 
-Create a simple data model as shown in the following code example, and save it as BookInfo.cs file. 
+Create a simple data model as shown in the following code example, and save it as `BookInfo.cs` file. 
 
 {% tabs %}
 {% highlight c# tabtitle="BookInfo.cs" %}
@@ -160,7 +160,7 @@ N> If you want your data model to respond to property changes, then implement [I
 
 ### View Model
 
-Next, create a model repository class with `BookInfo` collection property initialized with required number of data objects in a new class file as shown in the following code example, and save it as BookInfoRepository.cs file:
+Next, create a model repository class with `BookInfo` collection property initialized with required number of data objects in a new class file as shown in the following code example, and save it as `BookInfoRepository.cs` file:
 
 {% tabs %}
 {% highlight c# tabtitle="BookInfoRepository.cs" %}
