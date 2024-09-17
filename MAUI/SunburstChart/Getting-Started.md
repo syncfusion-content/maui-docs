@@ -41,7 +41,7 @@ Before starting, ensure the following are set up:
 
 ## Step 3: Add a Basic Sunburst Chart
 
-1. To initialize the control, import the Chart namespace into your code.
+1. To initialize the control, import the Sunburst Chart namespace into your code.
 2. Initialize [SfSunburstChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html).
 
 {% tabs %} 
