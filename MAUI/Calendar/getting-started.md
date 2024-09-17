@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with the .NET MAUI Calendar
 
-This section explains how to add the [.NET MAUI Calendar](https://www.syncfusion.com/maui-controls/maui-calendar) control. This section covers only the basic features needed to get started with Syncfusion Calendar.
+This section explains how to add the [.NET MAUI Calendar](https://www.syncfusion.com/maui-controls/maui-calendar) control. This section covers only the basic features needed to get started with Syncfusion Calendar. Follow the steps below to add a basic calendar view to your project.
 
 To get start quickly with our .NET MAUI Calendar, you can check the below video.
 
@@ -45,35 +45,36 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register the handler
 
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
+To use this control inside an application, you must initialize the `SfDataGrid` handler.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 5" %}
+{% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 20" %}
 
-<ContentPage   
-    . . .
-    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Microsoft.Maui.Hosting;
+using Syncfusion.Maui.Core.Hosting;
 
-    <calendar:SfCalendar />
-</ContentPage>
-
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 9 10" %}
-
-using Syncfusion.Maui.Calendar;
-. . .
-
-public partial class MainPage : ContentPage
+namespace GettingStarted
 {
-    public MainPage()
+    public class MauiProgram 
     {
-        InitializeComponent();
-        SfCalendar calendar = new SfCalendar();
-        this.Content = calendar;
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+                .UseMauiApp<App>()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                });
+
+           builder.ConfigureSyncfusionCore();
+           return builder.Build();
+        }
     }
 }
-
-{% endhighlight %}
+{% endhighlight %} 
 {% endtabs %}
 
 ## Step 4: Add a Basic Calendar view.
