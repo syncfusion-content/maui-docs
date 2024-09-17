@@ -42,8 +42,6 @@ Then choose **Create project**
 2. Search for [Syncfusion.Maui.Buttons](https://www.nuget.org/packages/Syncfusion.Maui.Buttons) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-
-
 ## Step 3: Register the Handler 
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion core.
@@ -145,6 +143,7 @@ button.ShowIcon = true;
 {% endtabs %}
 
 ![SfButton with button icon](images/getting-started/ButtonWithIcon.png)
+
 
 ## Button background image
 
