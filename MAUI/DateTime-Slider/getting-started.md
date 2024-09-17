@@ -11,7 +11,7 @@ documentation: ug
 
 This section guides you through setting up and configuring a [DateTime Slider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html?tabs=tabid-2) in your .NET MAUI application. Follow the steps below to add a basic DateTime Slider to your project.
 
-To get start quickly with MAUI DateTime Slider, you can check on this video:
+To quickly get started with the .NET MAUI DateTime Slider, watch this video.
 
 <style>#MAUIDateTimeSliderVideoTutorial{width : 90% !important; height: 350px !important }</style>
 <iframe id='MAUIDateTimeSliderVideoTutorial' src='https://www.youtube.com/embed/MIdD3Np485M'></iframe>
@@ -27,16 +27,16 @@ Before proceeding, ensure the following are in place:
 
 ### Visual Studio
 
-1.  Go to **File > New > Project** and choose the **.NET MAUI App** template.
-2.  Name the project and choose a location. Then, click **Next**.
-3.  Select the .NET framework version and click **Create**.
+1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
+2. Name the project and choose a location. Then, click **Next**.
+3. Select the .NET framework version and click **Create**.
 
 ### Visual Studio Code
 
-1.  Open the Command Palette by pressing **Ctrl+Shift+P** and type **.NET:New Project** and press Enter.
-2.  Choose the **.NET MAUI App** template.
-3.  Select the project location, type the project name and press Enter.
-4.  Then choose **Create project**
+1. Open the Command Palette by pressing **Ctrl+Shift+P** and type **.NET:New Project** and press Enter.
+2. Choose the **.NET MAUI App** template.
+3. Select the project location, type the project name and press Enter.
+4. Then choose **Create project**
 
 ## Step 2: Install the Syncfusion MAUI Sliders NuGet Package
 

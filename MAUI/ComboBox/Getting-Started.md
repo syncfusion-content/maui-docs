@@ -27,21 +27,22 @@ Before proceeding, ensure the following are in place:
 
 ### Visual Studio
 
-1.  Go to **File > New > Project** and choose the **.NET MAUI App** template.
-2.  Name the project and choose a location. Then, click **Next**.
-3.  Select the .NET framework version and click **Create**.
+1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
+2. Name the project and choose a location. Then, click **Next**.
+3. Select the .NET framework version and click **Create**.
 
 ### Visual Studio Code
 
-1.  Open the Command Palette by pressing **Ctrl+Shift+P** and type **.NET:New Project** and press Enter.
-2.  Choose the **.NET MAUI App** template.
-3.  Select the project location, type the project name and press Enter.
-4.  Then choose **Create project**
+1. Open the Command Palette by pressing **Ctrl+Shift+P** and type **.NET:New Project** and press Enter.
+2. Choose the **.NET MAUI App** template.
+3. Select the project location, type the project name and press Enter.
+4. Then choose **Create project**
 
 ## Step 2: Install the Syncfusion MAUI Inputs NuGet Package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
-2. Search for [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) and install the latest version. Ensure the necessary dependencies are installed correctly, and the project is restored.
+2. Search for [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) and install the latest version.
+3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 ## Step 3: Register the handler
 
