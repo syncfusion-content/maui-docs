@@ -173,7 +173,6 @@ This page lists the keys for each control and the element to which it is mapped 
         </td>
     </tr>
 
- <!-- Common -->
 <tr>
     <td> SfAIAssistViewBackground <br/><br/></td>
     <td> Background color of the assist view.<br/><br/></td>
@@ -188,13 +187,12 @@ This page lists the keys for each control and the element to which it is mapped 
 </tr>
 <tr>
     <td> SfAIAssistViewHeaderFontAttributes <br/><br/></td>
-    <td> Font attributes (bold, italic) used for the header.<br/><br/></td>
+    <td> Font attributes used for the header.<br/><br/></td>
 </tr>
 <tr>
     <td> SfAIAssistViewHeaderFontSize <br/><br/></td>
     <td> Font size of the header.<br/><br/></td>
 </tr>
- <!-- request item -->
 <tr>
     <td> SfAIAssistViewRequestItemBackground <br/><br/></td>
     <td> Background color of a request item.<br/><br/></td>
@@ -233,9 +231,8 @@ This page lists the keys for each control and the element to which it is mapped 
 </tr>
 <tr>
     <td> SfAIAssistViewRequestItemEditingBorder <br/><br/></td>
-    <td> Border styling of the request item when editing.<br/><br/></td>
+    <td> Border of the request item when editing.<br/><br/></td>
 </tr>
- <!-- response item -->
 <tr>
     <td> SfAIAssistViewResponseItemBackground <br/><br/></td>
     <td> Background color of a response item.<br/><br/></td>
@@ -272,7 +269,6 @@ This page lists the keys for each control and the element to which it is mapped 
     <td> SfAIAssistViewResponseItemAuthorFontAttributes <br/><br/></td>
     <td> Font attributes of the author name in a response item.<br/><br/></td>
 </tr>
- <!-- Action view -->
 <tr>
     <td> SfAIAssistViewNormalActionViewColor <br/><br/></td>
     <td> Background color of the normal state of an action view.<br/><br/></td>
@@ -297,10 +293,9 @@ This page lists the keys for each control and the element to which it is mapped 
     <td> SfAIAssistViewSelectedDisLikeIconColor <br/><br/></td>
     <td> Icon color of the dislike action when selected.<br/><br/></td>
 </tr>
- <!-- Editor -->
 <tr>
     <td> SfAIAssistViewInputViewBackground <br/><br/></td>
-    <td> Background color of the input editor view.<br/><br/></td>
+    <td> Background color of the input view.<br/><br/></td>
 </tr>
 <tr>
     <td> SfAIAssistViewEditorPlaceholderTextColor <br/><br/></td>
@@ -308,15 +303,15 @@ This page lists the keys for each control and the element to which it is mapped 
 </tr>
 <tr>
     <td> SfAIAssistViewEditorTextColor <br/><br/></td>
-    <td> Text color of the input editor.<br/><br/></td>
+    <td> Text color of the editor.<br/><br/></td>
 </tr>
 <tr>
     <td> SfAIAssistViewEditorBackground <br/><br/></td>
-    <td> Background color of the input editor.<br/><br/></td>
+    <td> Background color of the editor.<br/><br/></td>
 </tr>
 <tr>
     <td> SfAIAssistViewEditorStroke <br/><br/></td>
-    <td> Stroke color of the editor when unfocused.<br/><br/></td>
+    <td> Stroke color of the editor.<br/><br/></td>
 </tr>
 <tr>
     <td> SfAIAssistViewFocusedEditorStroke <br/><br/></td>
@@ -342,24 +337,22 @@ This page lists the keys for each control and the element to which it is mapped 
     <td> SfAIAssistViewDisabledSendButtonIconColor <br/><br/></td>
     <td> Icon color of the disabled state of the send button.<br/><br/></td>
 </tr>
- <!-- hyperlink item -->
 <tr>
     <td> SfAIAssistViewRequestHyperlinkColor <br/><br/></td>
-    <td> Text color of hyperlinks in request items.<br/><br/></td>
+    <td> Text color of hyperlink in request items.<br/><br/></td>
 </tr>
 <tr>
     <td> SfAIAssistViewHyperlinkMetaTitleTextColor <br/><br/></td>
-    <td> Meta title text color for hyperlinks.<br/><br/></td>
+    <td> Meta title text color for hyperlink.<br/><br/></td>
 </tr>
 <tr>
     <td> SfAIAssistViewHyperlinkDescriptionTextColor <br/><br/></td>
-    <td> Description text color for hyperlinks.<br/><br/></td>
+    <td> Description text color for hyperlink.<br/><br/></td>
 </tr>
 <tr>
     <td> SfAIAssistViewHyperlinkDescriptionBackground <br/><br/></td>
     <td> Background color of hyperlink description.<br/><br/></td>
 </tr>
-<!-- Card Message Styles -->
 <tr>
     <td> SfAIAssistViewCardBackground <br/><br/></td>
     <td> Background color of the card item.<br/><br/></td>
@@ -440,11 +433,9 @@ This page lists the keys for each control and the element to which it is mapped 
     <td> SfAIAssistViewCardButtonFontAttributes <br/><br/></td>
     <td> Font attributes used for the card button.<br/><br/></td>
 </tr>
-
-<!-- Suggestions Styles -->
 <tr>
     <td> SfAIAssistViewSuggestionBackground <br/><br/></td>
-    <td> Background color of the suggestion list.<br/><br/></td>
+    <td> Background color of the suggestion.<br/><br/></td>
 </tr>
 <tr>
     <td> SfAIAssistViewSuggestionItemTextColor <br/><br/></td>
