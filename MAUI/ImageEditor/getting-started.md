@@ -247,7 +247,7 @@ public partial class MainPage : ContentPage
 
 ![GettingStarted in .NET Maui ImageEditor](images\getting-started\imageeditor-gettingstarted.png)
 
-N> If you set the Stream source with a local variable, the stream will be closed after the image uses it, and you cannot process the stream again. So, we recommend using stream images by creating a new stream instance inside the Lamba function so that you can process them whenever needed.
+N> If you set the Stream source with a local variable, the stream will be closed after the image uses it, and you cannot process the stream again. So, we recommend using stream images by creating a new stream instance inside the Lambda function so that you can process them whenever needed.
 
 N> imageEditor.Source = ImageSource.FromStream(() => new MemoryStream(imageBytes))
 
