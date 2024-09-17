@@ -73,7 +73,7 @@ Before proceeding, ensure the following are set up:
 l
 ## Step 4:  Add a RadialMenu
 
-1. To initialize the control, import the Radialmenu namespace into your code.
+1. To initialize the control, import the RadialMenu namespace into your code.
 1. Initialize [RadialMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.html)
 
 {% tabs %}
