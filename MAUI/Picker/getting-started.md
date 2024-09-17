@@ -7,18 +7,76 @@ control: SfPicker
 documentation: ug
 ---
 
-# Getting started with .NET MAUI Picker (SfPicker)
-This section explains how to add the Picker control. It covers only the basic features needed to get started with the Syncfusion Picker.
+# Getting started with .NET MAUI Picker
+This section explains how to add the [.NET MAUI Picker](https://www.syncfusion.com/maui-controls/maui-picker) control. It covers only the basic features needed to get started with the Syncfusion Picker. Follow the steps below to add a basic picker to your project.
 
-## Creating an application using the .NET MAUI Picker
+To get start quickly with our .NET MAUI Picker, you can check the below video.
 
-1. Create a new .NET MAUI application in Visual Studio.
+{% youtube "youtube:https://youtu.be/w_pIsZqy5Hs?si=yGY1b9YP5du2vgwy" %}
 
-2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add `SfPicker` to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker), then install it.
+## Prerequisites
 
-3. To initialize the control, import the control namespace `Syncfusion.Maui.Picker` in XAML or C# code.
+Before proceeding, ensure the following are set up:
+1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later is installed.
+2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
 
-4. Initialize `SfPicker.`
+## Step 1: Create a New MAUI Project
+
+### Visual Studio
+
+1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
+2. Name the project and choose a location, then click **Next**.
+3. Select the .NET framework version and click **Create**.
+
+### Visual Studio Code
+
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+2. Choose the **.NET MAUI App** template.
+3. Select the project location, type the project name and press enter.
+4. Then choose **Create project.**
+
+## Step 2: Install the Syncfusion MAUI Picker NuGet Package
+
+1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+2. Search for [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker/) and install the latest version.
+3. Ensure the necessary dependencies are installed correctly, and the project is restored.
+
+## Step 3: Register the handler
+
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
+
+{% tabs %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
+
+using Syncfusion.Maui.Core.Hosting;
+namespace GettingStarted
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+
+            builder.ConfigureSyncfusionCore();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
+
+            return builder.Build();
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Step 4: Add a Basic picker.
+
+1. To initialize the control, import the picker namespace into your code.
+2. Initialize [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
@@ -43,39 +101,6 @@ public partial class MainPage : ContentPage
         InitializeComponent();
         SfPicker picker = new SfPicker();
         this.Content = picker;
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Register the handler
-
-The `Syncfusion.Maui.Core` NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
-
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
-
-using Syncfusion.Maui.Core.Hosting;
-namespace GettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-
-            builder.ConfigureSyncfusionCore();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                fonts.AddFont("Segoe-mdl2.ttf", "SegoeMDL2");
-            });
-
-            return builder.Build();
-        }
     }
 }
 
@@ -198,7 +223,7 @@ In SfPicker control, validation buttons (OK and Cancel) can be customized by set
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
 
-<picker:SfPicker x:Name="Picker">
+<picker:SfPicker x:Name="picker">
     <picker:SfPicker.FooterView>
         <picker:PickerFooterView ShowOkButton="True" Height="40" />
     </picker:SfPicker.FooterView>
@@ -284,7 +309,7 @@ The SfPicker control allows you to change the height and width by using the [Hei
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2 3" %}
 
-<picker:SfPicker x:Name="Picker" 
+<picker:SfPicker x:Name="picker" 
                     HeightRequest="280" 
                     WidthRequest="300">
 </picker:SfPicker>
