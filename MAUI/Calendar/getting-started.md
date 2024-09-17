@@ -45,36 +45,34 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register the handler
 
-To use this control inside an application, you must initialize the `SfDataGrid` handler.
+To use this control inside an application, you must initialize the `SfCalendar` handler.
 
 {% tabs %}
-{% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 20" %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
 
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Microsoft.Maui.Hosting;
 using Syncfusion.Maui.Core.Hosting;
-
 namespace GettingStarted
 {
-    public class MauiProgram 
+    public static class MauiProgram
     {
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                });
 
-           builder.ConfigureSyncfusionCore();
-           return builder.Build();
+            builder.ConfigureSyncfusionCore();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
+
+            return builder.Build();
         }
     }
 }
-{% endhighlight %} 
+
+{% endhighlight %}
 {% endtabs %}
 
 ## Step 4: Add a Basic Calendar view.
