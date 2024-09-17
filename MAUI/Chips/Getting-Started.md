@@ -8,6 +8,7 @@ documentation: ug
 ---
 
 # Getting Started with .NET MAUI Chips
+
 This section guides you through setting up and configuring a [Chips](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html) in your .NET MAUI application. Follow the steps below to add a basic Chips to your project.
 
 To get start quickly with our .NET MAUI Chips, you can check the below video.

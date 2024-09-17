@@ -8,6 +8,7 @@ documentation: ug
 ---
 
 # Getting Started with .NET MAUI Button
+
 This section guides you through setting up and configuring a [Button](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) in your .NET MAUI application. Follow the steps below to add a basic Button to your project.
 
 To get start quickly with our .NET MAUI Button, you can check the below video.

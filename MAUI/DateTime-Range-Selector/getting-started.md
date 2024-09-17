@@ -8,6 +8,7 @@ documentation: ug
 ---
 
 # Getting Started with .NET MAUI DateTime Range Selector
+
 This section guides you through setting up and configuring a [DateTime Range Selector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSelector.html) in your .NET MAUI application. Follow the steps below to add a basic DateTime Range Selector to your project.
 
 To get start quickly with MAUI SfDateTimeRangeSelector, you can check on this video:
