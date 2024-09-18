@@ -12,7 +12,7 @@ keywords : .net maui switch, maui switch, .net maui switch contrl, maui switch c
 
 This section guides you through setting up and configuring a [Switch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html) in your .NET MAUI application. Follow the steps below to add a basic [Switch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html) to your project.
 
-To get start quickly with our .NET MAUI Switch control, you can check the below video.
+To quickly get started with the .NET MAUI Switch, watch this video.
 
 {% youtube "https://www.youtube.com/watch?v=BJDUlLdsQyo" %}
 
@@ -20,21 +20,21 @@ To get start quickly with our .NET MAUI Switch control, you can check the below 
 
 Before proceeding, ensure the following are set up:
 1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later is installed.
-1. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
+1. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or Visual Studio Code. For Visual Studio Code users, ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
 
 ## Step 1: Create a New MAUI Project
 
 ### Visual Studio
 
 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
-1. Name the project and choose a location, then click **Next**.
-1. Select the .NET framework version and click **Create**.
+1. Name the project and choose a location. Then, click **Next.**
+1. Select the .NET framework version and click **Create.**
 
 ### Visual Studio Code
 
 1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
 1. Choose the **.NET MAUI App** template.
-1. Select the project location, type the project name and press enter.
+1. Select the project location, type the project name and press **Enter.**
 1. Then choose **Create project.**
 
 ## Step 2: Install the Syncfusion MAUI Buttons NuGet Package
