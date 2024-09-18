@@ -94,8 +94,6 @@ namespace BadgeViewMauiSample
         <badgeView:SfBadgeView />
     </Grid>
 </ContentPage>
-	
-{% endhighlight %}
 
 {% endhighlight %}
 
