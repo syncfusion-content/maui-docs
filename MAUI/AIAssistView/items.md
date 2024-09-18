@@ -13,27 +13,27 @@ documentation: ug
 
 <table>
 <tr>
-<td>{{`Text`| markdownify }}</td>
+<td>Text</td>
 <td>Displays the content of the assist item in the AI Assist view.</td>
 </tr>
 <tr>
-<td>{{`Profile`| markdownify }}</td>
-<td>Specify the avatar and name of the user using {{`Profile.Avatar``| markdownify }} and {{`Profile.Name`| markdownify }} properties respectively.</td>
+<td>Profile</td>
+<td>Specify the avatar and name of the user using Profile.Avatar and Profile.Name properties respectively.</td>
 </tr>
 <tr>
-<td>{{`DateTime`| markdownify }}</td>
+<td>DateTime</td>
 <td>Displays the time when the item was sent or received.</td>
 </tr>
 <tr>
-<td>{{`RequestItem`| markdownify }}</td>
+<td>RequestItem</td>
 <td>Gets the data associated with the request sent by user for which the response is generated.</td>
 </tr>
 <tr>
-<td>{{`Suggestion`| markdownify }}</td>
-<td>Displays list of `AssistSuggestion` as a response to a request.</td>
+<td>Suggestion</td>
+<td>Displays list of AssistSuggestion as a response to a request.</td>
 </tr>
 <tr>
-<td>{{`ShowAssistItemFooter`| markdownify }}</td>
+<td>ShowAssistItemFooter</td>
 <td>Determines whether the footer, which includes Copy, Retry, Like, Dislike to be displayed for the assist item.</td>
 </tr>
 </table>

@@ -17,11 +17,11 @@ To add an `AssistItem` to the `ViewModel.AssistItems` collection with specific v
 
 2. The Assist item has the following members, which provides information for the request/response items,
 
-* `Profile`: Provides information for the user details.
-* `Text`: Describes the text content of the assist item (e.g., the request text from the user or the response text from the AI).
-* `IsRequested`: When the assist item represents a user request, set the `IsRequested` property to `True`. If it's a response item from the AI service, set `IsRequested` to `False`.
-* `DateTime`: To display item created or received time.
-* `RequestItem`: Used to hold data (request item) associated with response item. Default value is `null`.
+   * `Profile`: Provides information for the user details.
+   * `Text`: Describes the text content of the assist item (e.g., the request text from the user or the response text from the AI).
+   * `IsRequested`: When the assist item represents a user request, set the `IsRequested` property to `True`. If it's a response item from the AI service, set `IsRequested` to `False`.
+   * `DateTime`: To display item created or received time.
+   * `RequestItem`: Used to hold data (request item) associated with response item. Default value is `null`.
 
 3. After setting the properties, add the `AssistItem` instance to the `ViewModel.AssistItems` collection, which binds to the `SfAIAssistView.AssistItems` property.
 
