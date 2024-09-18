@@ -20,6 +20,7 @@ The `SfAIAssistView` control allows you to display a default header by configuri
          <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                                     ShowHeader="True"/>  
 
+{% endhighlight %} 
 {% highlight c# hl_lines="6" %} 
 
     SfAIAssistView sfAIAssistView; 
