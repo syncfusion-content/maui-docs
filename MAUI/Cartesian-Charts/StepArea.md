@@ -12,7 +12,7 @@ keywords: .net maui step area chart, maui step area chart, .net maui chart step 
 
 ## Step Area Chart
 The step area chart displays data that changes over time or across different categories. 
-In a step area chart, the data points are connected by horizontal and vertical lines to create a series of steps. Each step represents a specific time interval or category. The area between the steps is then filled with a color or shading. To render an area chart, create an instance of [StepAreaSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StepAreaSeries.html), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1). 
+In a step area chart, the data points are connected by horizontal and vertical lines to create a series of steps. Each step represents a specific time interval or category. The area between the steps is then filled with a color or shading. To render an area chart, create an instance of [StepAreaSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StepAreaSeries.html), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html). 
 
 N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
 

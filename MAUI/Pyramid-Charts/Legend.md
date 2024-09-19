@@ -87,11 +87,11 @@ this.Content = chart;
 
 The appearance of the legend label can be customized using the [`LabelStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_LabelStyle) property. 
 
-* [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegendLabelStyle.html#Syncfusion_Maui_Charts_ChartLegendLabelStyle_TextColorProperty) – Gets or sets the color of the label.
-* [`FontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegendLabelStyle.html#Syncfusion_Maui_Charts_ChartLegendLabelStyle_FontFamilyProperty) - Gets or sets the font family for the legend label. 
-* [`FontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegendLabelStyle.html#Syncfusion_Maui_Charts_ChartLegendLabelStyle_FontAttributesProperty) - Gets or sets the font style for the legend label. 
-* [`FontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegendLabelStyle.html#Syncfusion_Maui_Charts_ChartLegendLabelStyle_FontSizeProperty) - Gets or sets the font size for the legend label.
-* [`Margin`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegendLabelStyle.html#Syncfusion_Maui_Charts_ChartLegendLabelStyle_MarginProperty) - Gets or sets the margin size of labels.
+* [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegendLabelStyle.html#Syncfusion_Maui_Charts_ChartLegendLabelStyle_TextColor) – Gets or sets the color of the label.
+* [`FontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegendLabelStyle.html#Syncfusion_Maui_Charts_ChartLegendLabelStyle_FontFamily) - Gets or sets the font family for the legend label. 
+* [`FontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegendLabelStyle.html#Syncfusion_Maui_Charts_ChartLegendLabelStyle_FontAttributes) - Gets or sets the font style for the legend label. 
+* [`FontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegendLabelStyle.html#Syncfusion_Maui_Charts_ChartLegendLabelStyle_FontSize) - Gets or sets the font size for the legend label.
+* [`Margin`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegendLabelStyle.html#Syncfusion_Maui_Charts_ChartLegendLabelStyle_Margin) - Gets or sets the margin size of labels.
 
 {% tabs %} 
 
@@ -383,22 +383,22 @@ this.Content = chart;
 
 **LegendItemCreated**
 
-The [`LegendItemCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_LegendItemCreated) event is triggered when the chart legend item is created. The argument contains the [`LegendItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LegendItem.html) object. The following properties are present in [`LegendItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LegendItem.html).
+The [`LegendItemCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_LegendItemCreated) event is triggered when the chart legend item is created. The argument contains the [`LegendItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ILegendItem.html) object. The following properties are present in [`LegendItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ILegendItem.html).
 
-* [`Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LegendItem.html#Syncfusion_Maui_Core_LegendItem_Text) – used to get or set the text of the label.
-* [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LegendItem.html#Syncfusion_Maui_Core_LegendItem_TextColor) – used to get or set the color of the label.
-* [`FontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LegendItem.html#Syncfusion_Maui_Core_LegendItem_FontFamily) - used to get or set the font family for the legend label. 
-* [`FontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LegendItem.html#Syncfusion_Maui_Core_LegendItem_FontAttributes) - used to get or set the font style for the legend label. 
-* [`FontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LegendItem.html#Syncfusion_Maui_Core_LegendItem_FontSize) - used to get or set the font size for the legend label.
-* [`TextMargin`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LegendItem.html#Syncfusion_Maui_Core_LegendItem_TextMargin) - used to get or set the margin size of labels.
-* [`IconBrush`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LegendItem.html#Syncfusion_Maui_Core_LegendItem_IconBrush) - used to change the color of the legend icon.
-* [`IconType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LegendItem.html#Syncfusion_Maui_Core_LegendItem_IconType) - used to get or set the icon type for the legend icon.
-* [`IconHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LegendItem.html#Syncfusion_Maui_Core_LegendItem_IconHeight) - used to get or set the icon height of the legend icon.
-* [`IconWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LegendItem.html#Syncfusion_Maui_Core_LegendItem_IconWidth) - used to get or set the icon width of the legend icon.
-* [`IsToggled`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LegendItem.html#Syncfusion_Maui_Core_LegendItem_IsToggled) - used to get or set the toggle visibility of the legend.
-* [`DisableBrush`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LegendItem.html#Syncfusion_Maui_Core_LegendItem_Syncfusion_Maui_Core_ILegendItem_DisableBrush) - used to get or set the color of the legend when toggled.
-* [`Index`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LegendItem.html#Syncfusion_Maui_Core_LegendItem_Index) - used to get index position of the legend.
-* [`Item`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LegendItem.html#Syncfusion_Maui_Core_LegendItem_Item) - used to get the corresponding series for the legend item.
+* [`Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ILegendItem.html#Syncfusion_Maui_Core_ILegendItem_Item) – used to get or set the text of the label.
+* [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ILegendItem.html#Syncfusion_Maui_Core_ILegendItem_TextColor) – used to get or set the color of the label.
+* [`FontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ILegendItem.html#Syncfusion_Maui_Core_ILegendItem_FontFamily) - used to get or set the font family for the legend label. 
+* [`FontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ILegendItem.html#Syncfusion_Maui_Core_ILegendItem_FontAttributes) - used to get or set the font style for the legend label. 
+* [`FontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ILegendItem.html#Syncfusion_Maui_Core_ILegendItem_FontSize) - used to get or set the font size for the legend label.
+* [`TextMargin`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ILegendItem.html#Syncfusion_Maui_Core_ILegendItem_TextMargin) - used to get or set the margin size of labels.
+* [`IconBrush`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ILegendItem.html#Syncfusion_Maui_Core_ILegendItem_IconBrush) - used to change the color of the legend icon.
+* [`IconType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ILegendItem.html#Syncfusion_Maui_Core_ILegendItem_IconType) - used to get or set the icon type for the legend icon.
+* [`IconHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ILegendItem.html#Syncfusion_Maui_Core_ILegendItem_IconHeight) - used to get or set the icon height of the legend icon.
+* [`IconWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ILegendItem.html#Syncfusion_Maui_Core_ILegendItem_IconWidth) - used to get or set the icon width of the legend icon.
+* [`IsToggled`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ILegendItem.html#Syncfusion_Maui_Core_ILegendItem_IsToggled) - used to get or set the toggle visibility of the legend.
+* [`DisableBrush`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ILegendItem.html#Syncfusion_Maui_Core_ILegendItem_DisableBrush) - used to get or set the color of the legend when toggled.
+* [`Index`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ILegendItem.html#Syncfusion_Maui_Core_ILegendItem_Index) - used to get index position of the legend.
+* [`Item`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ILegendItem.html#Syncfusion_Maui_Core_ILegendItem_Item) - used to get the corresponding series for the legend item.
 
 ## Limitations
 * Do not add items explicitly.
