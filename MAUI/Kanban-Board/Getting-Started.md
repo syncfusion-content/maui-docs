@@ -16,7 +16,7 @@ This section provides a quick overview for working with Essential Kanban for .NE
 Before starting, ensure the following are set up:
 
 1. .NET 8 SDK (https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
-2. A .NET MAUI development environment is ready with either Visual Studio 2022 (v17.7 or later) or VS Code. If using VS Code, make sure the .NET MAUI workload is installed and configured as per the instructions provided [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
+2. A .NET MAUI development environment is ready with either Visual Studio 2022 (v17.7 or later) or `Visual Studio Code`. If using `Visual Studio Code`, make sure the .NET MAUI workload is installed and configured as per the instructions provided [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
 
 ## Step 1: Create a New MAUI Project
 
@@ -28,7 +28,7 @@ Before starting, ensure the following are set up:
 
 ### Visual Studio Code
 
-1. Open the command palette by pressing `Ctrl+Shift+P`` and type .NET:New Project and enter.
+1. Open the command palette by pressing `Ctrl+Shift+P` and type .NET:New Project and enter.
 2. Choose the .NET MAUI App template.
 3. Select the project location, type the project name and press enter.
 4. Then choose Create project
@@ -42,7 +42,7 @@ Before starting, ensure the following are set up:
 ## Step 3: Add the Kanban Board Control
 
 1. To initialize the control, import the Chart namespace into your code.
-2. Initialize [SfKanban]().
+2. Initialize [SfKanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html).
 
 {% tabs %} 
 
@@ -121,7 +121,7 @@ namespace KanbanGettingStarted
 
 ## Step 5: Define the View Model
 
-Create a ViewModel class with a collection property to hold a collection of [`KanbanModel`]() instances as shown below. Each [`KanbanModel`]() instance represent a card in Kanban control.
+Create a ViewModel class with a collection property to hold a collection of [`KanbanModel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html) instances as shown below. Each [`KanbanModel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html) instance represent a card in Kanban control.
 
 {% highlight C# %}
 
@@ -189,7 +189,7 @@ public class ViewModel
 
 ## Step 6: Bind the ViewModel
 
-Set the `ViewModel` instance as the `BindingContext` of your Page; this is done to bind properties of `ViewModel` to [`SfKanban`]().
+Set the `ViewModel` instance as the `BindingContext` of your Page; this is done to bind properties of `ViewModel` to [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html).
 
 N> Add namespace of ViewModel class in your XAML page if you prefer to set BindingContext in XAML.
 
@@ -220,7 +220,7 @@ N> Add namespace of ViewModel class in your XAML page if you prefer to set Bindi
 
 ## Step 7: Bind Data to the Kanban Board
 
-Bind the above data to [`SfKanban`]() using [`ItemsSource`]() property.
+Bind the above data to [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) using [`ItemsSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ItemsSource) property.
 
 {% tabs %}
 
@@ -241,7 +241,7 @@ kanban.SetBinding(SfKanban.ItemsSourceProperty, "Cards");
 
 ## Step 8: Defining columns in the Kanban Board
 
-The columns are generated automatically based on the different values of [`Category`]() in the [`KanbanModel`]() class from [`ItemsSource`](). But, you can also define the columns by setting [`AutoGenerateColumns`]() property to false and adding [`KanbanColumn`]() instance to [`Columns`]() property of [`SfKanban`](). Define the categories of column using [`Categories`]() property of [`KanbanColumn`]() and cards will be added to the respective columns.
+The columns are generated automatically based on the different values of [`Category`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html#Syncfusion_Maui_Kanban_KanbanModel_Category) in the [`KanbanModel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html) class from [`ItemsSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ItemsSource). But, you can also define the columns by setting [`AutoGenerateColumns`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_AutoGenerateColumns) property to false and adding [`KanbanColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html) instance to [`Columns`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_Columns) property of [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html). Define the categories of column using [`Categories`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_Categories) property of [`KanbanColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html) and cards will be added to the respective columns.
 
 
 {% tabs %}

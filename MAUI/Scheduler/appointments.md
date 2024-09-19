@@ -884,7 +884,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-
 
 ## Suspend and resume the appointment UI rendering
 
-Schedule allows you to suspend and resume the appointment UI update while performing collection changes (Add/Remove/Reset) to improve UI rendering when working with large appointment collections. `SuspendAppointmentViewUpdate ` method will suspend appointment UI rendering until you resume it when large number of data added dynamically in schedule `AppointmentSource` to avoid each time updating UI when collection changes. After data added dynamically in schedule, you can call `ResumeAppointmentViewUpdate ` to update the appointment UI rendering. 
+Schedule allows you to suspend and resume the appointment UI update while performing collection changes (Add/Remove/Reset) to improve UI rendering when working with large appointment collections. [SuspendAppointmentViewUpdate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_SuspendAppointmentViewUpdate) method will suspend appointment UI rendering until you resume it when large number of data added dynamically in schedule [AppointmentsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentsSource) to avoid each time updating UI when collection changes. After data added dynamically in schedule, you can call [ResumeAppointmentViewUpdate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ResumeAppointmentViewUpdate) to update the appointment UI rendering. 
 
 {% tabs %}
 {% highlight c# %}

@@ -10,7 +10,7 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 # Row Drag and Drop in MAUI DataGrid (SfDataGrid)
 
-The `SfDataGrid` control allows you to drag and drop rows by setting the `SfDataGrid.AllowDraggingRow` property to `true`. Dragging is enabled by long pressing and dragging a row on mobile platforms and by clicking and dragging on desktop platforms. A row drag view is displayed during the drag operation. You can handle drag-and-drop operations based on your requirements by using the `SfDataGrid.QueryRowDragging` event.
+The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) control allows you to drag and drop rows by setting the [SfDataGrid.AllowDraggingRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowDraggingRow) property to `true`. Dragging is enabled by long pressing and dragging a row on mobile platforms and by clicking and dragging on desktop platforms. A row drag view is displayed during the drag operation. You can handle drag-and-drop operations based on your requirements by using the [SfDataGrid.QueryRowDragging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_QueryRowDragging) event.
 
 To enable row drag and drop functionality, please follow the code example below:
 
@@ -36,11 +36,11 @@ The SfDataGrid supports drag-and-drop operations for both data rows and groups i
 * Group positions can be reordered using drag and drop; however, groups cannot be nested within other groups.
 * Data rows can be reordered within the same group or moved to different groups.
 
-N> Reordering changes are made only in the `SfDataGrid.View`, not in the underlying data. As a result, these changes will be reverted when performing sorting, grouping, or any other operation that refreshes the view. To persist reordering changes in the underlying data, handle the `QueryRowDragging` event as explained below in [Reordering underlying data](#Reordering underlying data).
+N> Reordering changes are made only in the [SfDataGrid.View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_View), not in the underlying data. As a result, these changes will be reverted when performing sorting, grouping, or any other operation that refreshes the view. To persist reordering changes in the underlying data, handle the [QueryRowDragging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_QueryRowDragging) event as explained below in [Reordering underlying data](#Reordering underlying data).
 
 ## Row drag-and-drop template
 
-The SfDataGrid allows you to load specific content during row drag-and-drop operations using the `SfDataGrid.RowDragDropTemplate`. This template can be defined either in code or XAML.
+The SfDataGrid allows you to load specific content during row drag-and-drop operations using the [SfDataGrid.RowDragDropTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_RowDragDropTemplate). This template can be defined either in code or XAML.
 
 ### Default template
 
@@ -50,7 +50,7 @@ The default template will be used for row drag-and-drop operations unless anothe
 
 ### Customizing row drag-and-drop template
 
-Any type of custom view can be loaded inside the `SfDataGrid.RowDragDropTemplate`.
+Any type of custom view can be loaded inside the [SfDataGrid.RowDragDropTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_RowDragDropTemplate).
 
 Please refer to the following code example that demonstrates how to load a view in a template:
 
@@ -77,17 +77,17 @@ Please refer to the following code example that demonstrates how to load a view 
 
 ## Events in row drag-and-drop
 
-The `QueryRowDragging` event is triggered when a row begins to be dragged and continues to fire until the dragging ends. By handling the `SfDataGrid.QueryRowDragging` event, you can also cancel the dragging of a specific row.
+The `QueryRowDragging` event is triggered when a row begins to be dragged and continues to fire until the dragging ends. By handling the [SfDataGrid.QueryRowDragging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_QueryRowDragging) event, you can also cancel the dragging of a specific row.
 
-The `QueryRowDragging` event provides the following properties through the `QueryRowDraggingEventArgs`:
+The `QueryRowDragging` event provides the following properties through the [DataGridQueryRowDraggingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryRowDraggingEventArgs.html):
 
-* `From`: Returns the index of the row that is currently being dragged.
-* `To`: Returns the index of the row where you are attempting to drop the dragged item.
-* `Position`: Returns the current x and y coordinates of the RowDragView.
-* `DraggingAction`: Returns details of the row dragging as a `DataGridDragAction`.
-* `RowData`: Returns the underlying data associated with the dragged row.
-* `CurrentRowData`: Returns the data corresponding to the current position of the `RowDragView`.
-* `CanAutoScroll`: Returns a value indicating whether auto-scrolling should occur when the `RowDragView` reaches the top or bottom of the `SfDataGrid`.
+* [From](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryRowDraggingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridQueryRowDraggingEventArgs_From): Returns the index of the row that is currently being dragged.
+* [To](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryRowDraggingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridQueryRowDraggingEventArgs_To): Returns the index of the row where you are attempting to drop the dragged item.
+* [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryRowDraggingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridQueryRowDraggingEventArgs_Position): Returns the current x and y coordinates of the RowDragView.
+* [DraggingAction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryRowDraggingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridQueryRowDraggingEventArgs_DraggingAction): Returns details of the row dragging as a [DataGridDragAction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDragAction.html).
+* [RowData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryRowDraggingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridQueryRowDraggingEventArgs_RowData): Returns the underlying data associated with the dragged row.
+* [CurrentRowData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryRowDraggingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridQueryRowDraggingEventArgs_CurrentRowData): Returns the data corresponding to the current position of the `RowDragView`.
+* [CanAutoScroll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryRowDraggingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridQueryRowDraggingEventArgs_CanAutoScroll): Returns a value indicating whether auto-scrolling should occur when the `RowDragView` reaches the top or bottom of the `SfDataGrid`.
 * `Cancel`: Returns a Boolean value that indicates whether the event should be canceled.
 
 
@@ -335,7 +335,7 @@ private async void DataGrid_QueryRowDragging(object? sender, Syncfusion.Maui.Dat
 
 ## Customization of row drag view
 
-The row drag view’s background color, text color, and indicator color can be customized using the `RowDragViewBackgroundColor`, `RowDragViewTextColor`, and `RowDraggingIndicatorLineColor` properties.
+The row drag view’s background color, text color, and indicator color can be customized using the [RowDragViewBackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_RowDragViewBackgroundColor), [RowDragViewTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_RowDragViewTextColor), and [RowDraggingIndicatorLineColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_RowDraggingIndicatorLineColor) properties.
 
 {% tabs %}
 {% highlight XAML %}

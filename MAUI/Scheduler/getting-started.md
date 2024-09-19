@@ -576,7 +576,7 @@ N> This property will not be applicable for the `SchedulerView` is `Timeline Mon
 
 ## Show Today button
 
-By Using the `ShowTodayButton` property of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html), you can show or hide the Today button. The default value of the `ShowTodayButton` is true. It allows to quickly navigate to today view.
+By Using the [ShowTodayButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ShowTodayButton) property of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html), you can show or hide the Today button. The default value of the `ShowTodayButton` is `true`. It allows to quickly navigate to today view.
 
 {% tabs %}  
 {% highlight XAML %}

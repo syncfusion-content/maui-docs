@@ -332,4 +332,32 @@ treeView.IsAnimationEnabled = true;
 {% endhighlight %}
 {% endtabs %}
 
+## How to
+
+### Disable ripple effect on item click
+
+To disable the ripple effect when clicking a `TreeViewItem`, set color value `Transparent` to the built-in key `SfTreeViewRippleBackground`.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="12" %}
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+				...
+                xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+				...
+				>
+	<ContentPage.Resources>
+        <syncTheme:SyncfusionThemeDictionary>
+            <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                   <x:String x:Key="SfTreeViewTheme">CustomTheme</x:String>
+                   <Color x:Key="SfTreeViewRippleBackground">Transparent</Color>
+                </ResourceDictionary>
+            </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+        </syncTheme:SyncfusionThemeDictionary>
+    </ContentPage.Resources>
+</ContentPage>				
+{% endhighlight %}
+{% endtabs %}
+
 ![.NET MAUI TreeView with Animation](Images/appearance/maui-treeView-animation.gif)
