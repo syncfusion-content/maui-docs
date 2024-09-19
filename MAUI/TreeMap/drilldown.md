@@ -13,7 +13,7 @@ The drilldown feature provides better visualization of hierarchy. A large set of
 
 ## Enable drilldown
 
-The drilldown feature can be enabled or disabled using the `EnableDrilldown` property in TreeMap. The header with the group path label will be displayed above the leaf item once drilldown is enabled.
+The drilldown feature can be enabled or disabled using the [EnableDrilldown](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_EnableDrillDown) property in TreeMap. The header with the group path label will be displayed above the leaf item once drilldown is enabled.
 
 {% tabs %}
 {% highlight XAML hl_lines="4" %}
@@ -351,13 +351,13 @@ public class DrillDownViewModel
 
 ## Header customization
 
-The drilldown header used for zoom out (i.e., drill up one level) operation can be customized by setting style using the `DrilldownHeaderSettings` property in TreeMap. This property provides similar customization option as of the TreeMap level header.
+The drilldown header used for zoom out (i.e., drill up one level) operation can be customized by setting style using the [DrilldownHeaderSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_DrillDownHeaderSettings) property in TreeMap. This property provides similar customization option as of the TreeMap level header.
 
 The `DrilldownHeaderSettings` include the following properties:
 
-`Background`: Specifies the background brush for the drilldown header in the SfTreeMap.
-`Height`: Specifies the height for the drilldown header in the SfTreeMap.
-`TextStyle`: Specifies the text style for the drilldown header in the SfTreeMap.
+[Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapDrillDownHeaderSettings.html#Syncfusion_Maui_TreeMap_TreeMapDrillDownHeaderSettings_Background): Specifies the background brush for the drilldown header in the SfTreeMap.
+[Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapDrillDownHeaderSettings.html#Syncfusion_Maui_TreeMap_TreeMapDrillDownHeaderSettings_Height): Specifies the height for the drilldown header in the SfTreeMap.
+[TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapDrillDownHeaderSettings.html#Syncfusion_Maui_TreeMap_TreeMapDrillDownHeaderSettings_TextStyle): Specifies the text style for the drilldown header in the SfTreeMap.
 
 The following code snippet demonstrates how to define the drilldown header style.
 
