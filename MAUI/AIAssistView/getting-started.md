@@ -36,7 +36,7 @@ Before proceeding, ensure the following are in place:
 ## Step 2: Install the Syncfusion MAUI AI AssistView NuGet Package
  
  1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
- 2. Search for `Syncfusion.Maui.AIAssistView` and install the latest version.
+ 2. Search for [Syncfusion.Maui.AIAssistView](https://www.nuget.org/packages/Syncfusion.Maui.AIAssistView) and install the latest version.
  3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 ## Step 3: Register the handler
@@ -75,7 +75,7 @@ namespace GettingStarted
 ## Step 4: Add a Basic AI AssistView
 
  1. To initialize the control, import the `Syncfusion.Maui.AIAssistView` namespace into your code.
- 2. Initialize `SfAIAssistView`.
+ 2. Initialize [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html).
 
 {% tabs %}
 {% highlight xaml hl_lines="4" %}
@@ -107,7 +107,7 @@ namespace GettingStarted
 
 ## Step 5: Define the View Model
 
-Next, create a view model class and initialize the collection of `AssistItem` instance as follows
+Next, create a view model class and initialize the collection of [AssistItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html) instance as follows
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
@@ -195,12 +195,12 @@ Next, create a view model class and initialize the collection of `AssistItem` in
 {% endhighlight %}
 {% endtabs %}
 
-N> The `SfAIAssistView.AssistItems` property is of type `IList<IAssistItem>`. To ensure the `AssistItems` property functions correctly, it is recommended to use a collection property in the ViewModel with the same type, such as `ObservableCollection<IAssistItem>`.
+N> The `SfAIAssistView.AssistItems` property is of type `IList<IAssistItem>`. To ensure the [AssistItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_AssistItems) property functions correctly, it is recommended to use a collection property in the ViewModel with the same type, such as `ObservableCollection<IAssistItem>`.
 
 ### Bind AssistItems
 
 Set the `ViewModel` as the BindingContext for the AI AssistView or the parent ContentPage. This allows data binding between the UI and the ViewModel properties.
-To populate AI AssistView, bind the assist items in ViewModel to `AssistItems` property of AI AssistView.
+To populate AI AssistView, bind the assist items in ViewModel to [AssistItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_AssistItems) property of AI AssistView.
 
 {% tabs %} 
 {% highlight xaml hl_lines="14" %}
@@ -249,7 +249,7 @@ Here is the result of the previous codes,
 
 ## Request and Response item
  
-The `IsRequested` property is used to determine whether a item is a Request or a Response. If `IsRequested` property is set to true, the item is a Request item.
+The [IsRequested](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_IsRequested) property is used to determine whether a item is a Request or a Response. If `IsRequested` property is set to `true`, the item is a Request item.
  
 ### Request item
 
