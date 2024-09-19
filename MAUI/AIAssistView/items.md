@@ -13,34 +13,35 @@ documentation: ug
 
 <table>
 <tr>
-<td>Text</td>
+<td>{{'[Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_Text)'| markdownify }}</td>
 <td>Displays the content of the assist item in the AI Assist view.</td>
 </tr>
 <tr>
-<td>Profile</td>
-<td>Specify the avatar and name of the user using Profile.Avatar and Profile.Name properties respectively.</td>
+<td>{{'[Profile](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_Profile)'| markdownify }}</td>
+<td>Specify the avatar and name of the user using {{'[Profile.Avatar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.Profile.html#Syncfusion_Maui_AIAssistView_Profile_Avatar)'| markdownify }} and {{'[Profile.Name](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.Profile.html#Syncfusion_Maui_AIAssistView_Profile_Name)'| markdownify }} properties respectively.</td>
 </tr>
 <tr>
-<td>DateTime</td>
+<td>{{'[DateTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_DateTime)'| markdownify }}</td>
 <td>Displays the time when the item was sent or received.</td>
 </tr>
 <tr>
-<td>RequestItem</td>
-<td>Gets the data associated with the request sent by user for which the response is generated.</td>
+<td>{{'[RequestItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_RequestItem)'| markdownify }}</td>
+<td>Gets the data associated with the request sent by the user for which the response is generated.</td>
 </tr>
 <tr>
-<td>Suggestion</td>
-<td>Displays list of AssistSuggestion as a response to a request.</td>
+<td>{{'[Suggestion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_Suggestion)'| markdownify }}</td>
+<td>Displays list of {{'[AssistSuggestion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistSuggestion.html)'| markdownify }} as a response to a request.</td>
 </tr>
 <tr>
-<td>ShowAssistItemFooter</td>
-<td>Determines whether the footer, which includes Copy, Retry, Like, Dislike to be displayed for the assist item.</td>
+<td>{{'[ShowAssistItemFooter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_ShowAssistItemFooter)'| markdownify }}</td>
+<td>Determines whether the footer, which includes Copy, Retry, Like, Dislike, should be displayed for the assist item.</td>
 </tr>
 </table>
 
+
 ## Text item
 
-The `TextItem` is used to display plain text as a item, which is used to represent text-based content.
+The [AssistItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html) is used to display plain text as a item, which is used to represent text-based content.
 
 {% tabs %}
 {% highlight xaml %}
@@ -131,7 +132,7 @@ The `TextItem` is used to display plain text as a item, which is used to represe
 
 ## Hyperlink item
 
-The `HyperlinkItem` is used to send a URL as a item. Along with the link, the thumbnail, title, and description of the URL are automatically fetched and displayed.
+The [AssistHyperlinkItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistHyperlinkItem.html) is used to send a [URL](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistHyperlinkItem.html#Syncfusion_Maui_AIAssistView_AssistHyperlinkItem_Url) as a item. Along with the link, the thumbnail, title, and description of the URL are automatically fetched and displayed.
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="23" %}
@@ -177,7 +178,7 @@ The `HyperlinkItem` is used to send a URL as a item. Along with the link, the th
 
 ## Image item
 
-The `ImageItem` is used to display an image as a item. Using the `Source`, `Size`, and `Aspect` properties, you can display the desired image in the desired height and width as a item in the AI AssistView control.
+The [AssistImageItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistImageItem.html) is used to display an image as a item. Using the [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistImageItem.html#Syncfusion_Maui_AIAssistView_AssistImageItem_Source), [Size](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistImageItem.html#Syncfusion_Maui_AIAssistView_AssistImageItem_Size), and [Aspect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistImageItem.html#Syncfusion_Maui_AIAssistView_AssistImageItem_Aspect) properties, you can display the desired image in the desired height and width as a item in the AI AssistView control.
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="24" %}
@@ -224,9 +225,9 @@ The `ImageItem` is used to display an image as a item. Using the `Source`, `Size
 
 ## ImageTapped Event and Command
 
-The `SfAIAssistView` control includes a built-in event called `ImageTapped` and a command named `ImageTappedCommand`. These are triggered when an image is tapped. The tapped image item is accessible through the `ImageTappedEventArgs`. The `ImageTappedEventArgs` has the following member:
+The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control includes a built-in event called [ImageTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ImageTapped) and a command named [ImageTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ImageTappedCommand). These are triggered when an image is tapped. The tapped image item is accessible through the [ImageTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ImageTappedEventArgs.html). The `ImageTappedEventArgs` has the following member:
 
- * `ImageItem` : Refers to the tapped image item.
+ * [ImageItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ImageTappedEventArgs.html#Syncfusion_Maui_AIAssistView_ImageTappedEventArgs_ImageItem) : Refers to the tapped image item.
 
 ### ImageTapped Event
 
@@ -288,7 +289,7 @@ The `SfAIAssistView` control includes a built-in event called `ImageTapped` and 
 
 ## Card item
 
-In AI AssistView, to display a list of interactive cards, each card can contain an image, a list of buttons, and text (title, subtitle, and description) that align with the design used in popular bot frameworks. The `Card.Image`, `Card.Title`, `Card.Subtitle`, and `Card.Description` properties are used to define and display the image, title, subtitle, and description within each card.
+In AI AssistView, to display a list of interactive cards, each card can contain an image, a list of buttons, and text (title, subtitle, and description) that align with the design used in popular bot frameworks. The [Card.Image](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.Card.html#Syncfusion_Maui_AIAssistView_Card_Image), [Card.Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.Card.html#Syncfusion_Maui_AIAssistView_Card_Title), [Card.Subtitle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.Card.html#Syncfusion_Maui_AIAssistView_Card_Subtitle), and [Card.Description](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.Card.html#Syncfusion_Maui_AIAssistView_Card_Description) properties are used to define and display the image, title, subtitle, and description within each card.
  
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="57" %}
@@ -362,12 +363,12 @@ In AI AssistView, to display a list of interactive cards, each card can contain 
 
 ## CardTapped Event and Command
 
-The `SfAIAssistView` control includes a built-in event called `CardTapped` and a command named `CardTappedCommand`. These are triggered when a card is tapped. The tapped card item is accessible through the `CardTappedEventArgs`. The `CardTappedEventArgs` has the following members:
+The `SfAIAssistView` control includes a built-in event called [CardTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_CardTapped) and a command named [CardTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_CardTappedCommand). These are triggered when a card is tapped. The tapped card item is accessible through the [CardTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.CardTappedEventArgs.html). The `CardTappedEventArgs` has the following members:
 
- * `Card` : Represents the selected card from the card collection.
- * `Action` : Holds the information about the selected action when a user taps a button on a card.
- * `CardItem`: Refers to the current assist view card item.
- * `Handled`: Indicates whether the event is handled or not.
+ * [Card](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.CardTappedEventArgs.html#Syncfusion_Maui_AIAssistView_CardTappedEventArgs_Card) : Represents the selected card from the card collection.
+ * [Action](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.CardTappedEventArgs.html#Syncfusion_Maui_AIAssistView_CardTappedEventArgs_Action) : Holds the information about the selected action when a user taps a button on a card.
+ * [CardItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.CardTappedEventArgs.html#Syncfusion_Maui_AIAssistView_CardTappedEventArgs_CardItem) : Refers to the current assist view card item.
+ * [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.CardTappedEventArgs.html#Syncfusion_Maui_AIAssistView_CardTappedEventArgs_Handled) : Indicates whether the event is handled or not.
 
 ### CardTapped Event
 

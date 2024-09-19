@@ -9,11 +9,11 @@ documentation: ug
 
 # Header customization in .NET MAUI AI AssistView (SfAIAssistView)
 
-This section explains how to define and customize the header in the `SfAIAssistView`.
+This section explains how to define and customize the header in the [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html).
 
 ## Show/hide header
 
-The `SfAIAssistView` control allows you to display a default header by configuring the `ShowHeader` property. When this property is set to `true`, the default header will be shown at the top of the assist view. The default value of the `ShowHeader` property is `false`.
+The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control allows you to display a default header by configuring the [ShowHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ShowHeader) property. When this property is set to `true`, the default header will be shown at the top of the assist view. The default value of the [ShowHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ShowHeader) property is `false`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -38,7 +38,7 @@ The `SfAIAssistView` control allows you to display a default header by configuri
 
 ## Header text
 
-The `SfAIAssistView` control allows you to customize the header text using the `HeaderText` property.
+The `SfAIAssistView` control allows you to customize the header text using the [HeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_HeaderText) property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -65,7 +65,7 @@ The `SfAIAssistView` control allows you to customize the header text using the `
 
 ## Header customization
 
-The `SfAIAssistView` control allows you to fully customize the header's appearance by using the `HeaderTemplate` property. This property lets you define a custom layout and style for the header.
+The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control allows you to fully customize the header's appearance by using the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_HeaderTemplate) property. This property lets you define a custom layout and style for the header.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="19" %}
