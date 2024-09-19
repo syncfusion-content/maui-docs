@@ -52,7 +52,7 @@ N>
 {% tabs %}
 {% highlight XAML hl_lines="2" %}
 
-<calendar:SfCalendar x:Name="Calendar"
+<calendar:SfCalendar x:Name="calendar"
 					   Identifier="Hijri">
 </calendar:SfCalendar>
 
@@ -74,13 +74,13 @@ All the DateTime properties of the calendar can be given in two ways when the ca
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar x:Name="Calendar" />
+<calendar:SfCalendar x:Name="calendar" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
 
-this.Calendar.Identifier = CalendarIdentifier.Hijri;
-this.Calendar.DisplayDate = new DateTime(1444, 11, 21, 0, 0, 0, new HijriCalendar());
+this.calendar.Identifier = CalendarIdentifier.Hijri;
+this.calendar.DisplayDate = new DateTime(1444, 11, 21, 0, 0, 0, new HijriCalendar());
 
 {% endhighlight %}
 {% endtabs %}
@@ -90,13 +90,13 @@ this.Calendar.DisplayDate = new DateTime(1444, 11, 21, 0, 0, 0, new HijriCalenda
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar x:Name="Calendar" />
+<calendar:SfCalendar x:Name="calendar" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
 
-this.Calendar.Identifier = CalendarIdentifier.Hijri;
-this.Calendar.DisplayDate = new DateTime(2023, 6, 9);
+this.calendar.Identifier = CalendarIdentifier.Hijri;
+this.calendar.DisplayDate = new DateTime(2023, 6, 9);
 
 {% endhighlight %}
 {% endtabs %}

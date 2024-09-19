@@ -192,7 +192,7 @@ The following code example explains how to use the properties in the Xamarin lin
     xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms">
 
     ...     
-<progressBar:SfLinearProgressBar x:Name="LinearProgressBar" 
+<progressBar:SfLinearProgressBar x:Name="linearProgressBar" 
                                  EasingEffect="CubicOut"
                                  GapWidth="5"
                                  SegmentCount="4"
@@ -260,7 +260,7 @@ using Syncfusion.XForms.ProgressBar;
 
 ...
  
- <progressBar:SfLinearProgressBar x:Name="LinearProgressBar" 
+ <progressBar:SfLinearProgressBar x:Name="linearProgressBar" 
                                   AnimationEasing="{x:Static Easing.CubicOut}"
                                   SegmentGapWidth="5"
                                   SegmentCount="4"

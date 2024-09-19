@@ -15,14 +15,14 @@ The [MinimumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.S
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                         View="Month">
 </calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-  this.Calendar.MinimumDate = DateTime.Now.AddDays(-5);
+  this.calendar.MinimumDate = DateTime.Now.AddDays(-5);
 
 {% endhighlight %}
 {% endtabs %}
@@ -35,14 +35,14 @@ The [MaximumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.S
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                         View="Month">
 </calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.MaximumDate = DateTime.Now.AddDays(5);
+this.calendar.MaximumDate = DateTime.Now.AddDays(5);
 
 {% endhighlight %}
 {% endtabs %}
@@ -55,7 +55,7 @@ To enable or disable the dates before today's date using the [EnablePastDates](h
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                         View="Month"
                         EnablePastDates="false">
 </calendar:SfCalendar>
@@ -63,7 +63,7 @@ To enable or disable the dates before today's date using the [EnablePastDates](h
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.EnablePastDates = false;
+this.calendar.EnablePastDates = false;
 
 {% endhighlight %}
 {% endtabs %}
@@ -76,14 +76,14 @@ The [SelectableDayPredicate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                         View="Month">
 </calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.SelectableDayPredicate = (date) =>
+this.calendar.SelectableDayPredicate = (date) =>
 {
   if (date.Date == DateTime.Now.AddDays(-2).Date || date.Date == DateTime.Now.AddDays(-7).Date || date.Date == DateTime.Now.AddDays(-12).Date || date.Date == DateTime.Now.AddDays(1).Date || date.Date == DateTime.Now.AddDays(15).Date)
   {

@@ -27,14 +27,14 @@ The [ViewChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.S
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                       ViewChanged="OnCalendarViewChanged">
 </calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
-this.Calendar.ViewChanged += OnCalendarViewChanged;
+this.calendar.ViewChanged += OnCalendarViewChanged;
 private void OnCalendarViewChanged(object sender, CalendarViewChangedEventArgs e)
 {
     var oldVisibleDates = e.OldVisibleDates;
@@ -63,14 +63,14 @@ The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calen
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                       SelectionChanged="OnCalendarSelectionChanged">
 </calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
-this.Calendar.SelectionChanged += this.OnCalendarSelectionChanged;
+this.calendar.SelectionChanged += this.OnCalendarSelectionChanged;
 
 private void OnCalendarSelectionChanged(object sender,  private void OnCalendarSelectionChanged(object sender, CalendarSelectionChangedEventArgs e)
     {
@@ -94,19 +94,19 @@ A [Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalend
 
     * [Date](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTappedEventArgs.html#Syncfusion_Maui_Calendar_CalendarTappedEventArgs_Date) : Returns the selected date.
     * [Element](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTappedEventArgs.html#Syncfusion_Maui_Calendar_CalendarTappedEventArgs_Element) : Returns the `Calendar` element tapped.
-    * [WeekNumber]() : Returns the tapped `WeekNumber`.
+    * [WeekNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTappedEventArgs.html#Syncfusion_Maui_Calendar_CalendarTappedEventArgs_WeekNumber) : Returns the tapped `WeekNumber`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                       Tapped="OnCalendarTapped">
 </calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
-this.Calendar.Tapped += OnCalendarTapped;
+this.calendar.Tapped += OnCalendarTapped;
 private void OnCalendarTapped(object sender, CalendarTappedEventArgs e)
 {
     var selectedDate = e.Date;
@@ -127,19 +127,19 @@ Whenever the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sc
 
     * [Date](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarDoubleTappedEventArgs.html#Syncfusion_Maui_Calendar_CalendarDoubleTappedEventArgs_Date) : Returns the double-tapped date.
     * [Element](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarDoubleTappedEventArgs.html#Syncfusion_Maui_Calendar_CalendarDoubleTappedEventArgs_Element) : Returns the double-tapped `Calendar` element.
-    * [WeekNumber]() : Returns the double-tapped `WeekNumber`.
+    * [WeekNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTappedEventArgs.html#Syncfusion_Maui_Calendar_CalendarTappedEventArgs_WeekNumber) : Returns the double-tapped `WeekNumber`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                       DoubleTapped="OnCalendarDoubleTapped">
 </calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
-this.Calendar.DoubleTapped += this.OnCalendarDoubleTapped;
+this.calendar.DoubleTapped += this.OnCalendarDoubleTapped;
 
 private void OnCalendarDoubleTapped(object sender, CalendarDoubleTappedEventArgs e)
 {
@@ -161,19 +161,19 @@ Whenever the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sc
 
     * [Date](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarLongPressedEventArgs.html#Syncfusion_Maui_Calendar_CalendarLongPressedEventArgs_Date) : Returns the long-pressed date.
     * [Element](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarLongPressedEventArgs.html#Syncfusion_Maui_Calendar_CalendarLongPressedEventArgs_Element) : Returns the long-pressed `Calendar` element.
-    * [WeekNumber]() : Returns the long-pressed `WeekNumber`.
+    * [WeekNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTappedEventArgs.html#Syncfusion_Maui_Calendar_CalendarTappedEventArgs_WeekNumber) : Returns the long-pressed `WeekNumber`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                       LongPressed="OnCalendarLongPressed">
 </calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
-this.Calendar.LongPressed += this.OnCalendarLongPressed;
+this.calendar.LongPressed += this.OnCalendarLongPressed;
 
 private void OnCalendarLongPressed(object sender, CalendarLongPressedEventArgs e)
 {
@@ -194,7 +194,7 @@ The SfCalendar includes a built-in event called `ViewChanged`, which is triggere
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                       ViewChangedCommand="ViewChangedCommand">
 <ContentPage.BindingContext>
     <local:CalendarViewModel/>
@@ -227,7 +227,7 @@ The SfCalendar includes a built-in event called `SelectionChanged` that is trigg
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                      SelectionChangedCommand="SelectionChangedCommand">
 <ContentPage.BindingContext>
     <local:CalendarViewModel/>
@@ -260,7 +260,7 @@ The SfCalendar includes a built-in event called `Tapped` that is triggered whene
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                      TappedCommand="TappedCommand">
 <ContentPage.BindingContext>
     <local:CalendarViewModel/>
@@ -293,7 +293,7 @@ The SfCalendar includes a built-in event called `DoubleTapped` that is triggered
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3,6,8" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                      DoubleTappedCommand="DoubleTappedCommand">
 <ContentPage.BindingContext>
     <local:CalendarViewModel/>
@@ -326,7 +326,7 @@ The SfCalendar includes a built-in event called `LongPressed`, which is triggere
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                      LongPressedCommand="LongPressedCommand">
 <ContentPage.BindingContext>
     <local:CalendarViewModel/>
@@ -359,7 +359,7 @@ The SfCalendar includes a built-in event called `ActionButtonClicked`, which is 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                      AcceptCommand="AcceptCommand">
 <ContentPage.BindingContext>
     <local:CalendarViewModel/>
@@ -392,7 +392,7 @@ The SfCalendar includes a built-in event called `ActionButtonCanceled`, which is
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                      DeclineCommand="DeclineCommand">
 <ContentPage.BindingContext>
     <local:CalendarViewModel/>
