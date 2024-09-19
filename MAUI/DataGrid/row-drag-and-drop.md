@@ -79,7 +79,7 @@ Please refer to the following code example that demonstrates how to load a view 
 
 The `QueryRowDragging` event is triggered when a row begins to be dragged and continues to fire until the dragging ends. By handling the [SfDataGrid.QueryRowDragging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_QueryRowDragging) event, you can also cancel the dragging of a specific row.
 
-The `QueryRowDragging` event provides the following properties through the [QueryRowDraggingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryRowDraggingEventArgs.html):
+The `QueryRowDragging` event provides the following properties through the [DataGridQueryRowDraggingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryRowDraggingEventArgs.html):
 
 * [From](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryRowDraggingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridQueryRowDraggingEventArgs_From): Returns the index of the row that is currently being dragged.
 * [To](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryRowDraggingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridQueryRowDraggingEventArgs_To): Returns the index of the row where you are attempting to drop the dragged item.
