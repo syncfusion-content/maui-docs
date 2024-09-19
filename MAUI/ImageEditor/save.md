@@ -269,7 +269,7 @@ Please refer to [`here`](https://help.syncfusion.com/maui/imageeditor/save#save-
 
 * HasUnsavedEdits
 
-The `HasUnsavedEdits` property notifies the users whether there are unsaved edits such as Crop, Effects, Shapes, Text and Pen annotations in image editor. 
+The [HasUnsavedEdits](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_HasUnsavedEdits) property notifies the users whether there are unsaved edits such as Crop, Effects, Shapes, Text and Pen annotations in image editor. 
 
 {% tabs %}
 
@@ -298,7 +298,7 @@ private void OnHasUnsavedEditsClicked(object sender, EventArgs e)
 
 * HasUnsavedDrawnAnnotations
 
-The `HasUnsavedDrawnAnnotations` property notifies the users whether there are unsaved pen, polygon and polyline drawn in image editor. 
+The [HasUnsavedDrawnAnnotations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_HasUnsavedDrawnAnnotations) property notifies the users whether there are unsaved pen, polygon and polyline drawn in image editor. 
 
 {% tabs %}
 

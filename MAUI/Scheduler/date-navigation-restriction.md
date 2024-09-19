@@ -156,7 +156,7 @@ N>
 
 ### Show date picker
 
-You can enable the date picker for the scheduler by using the `ShowDatePickerButton` property in the `SfScheduler`, which displays the date picker in the header view. It allows you to quickly switch between, months, years, decades or century where you can directly jump to a specific date by selecting it from a date picker.
+You can enable the date picker for the scheduler by using the [ShowDatePickerButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ShowDatePickerButton) property in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html), which displays the date picker in the header view. It allows you to quickly switch between, months, years, decades or century where you can directly jump to a specific date by selecting it from a date picker.
 
 {% tabs %}
 {% highlight XAML hl_lines="2"%}

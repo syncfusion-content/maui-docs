@@ -620,7 +620,7 @@ N> This property will only be applicable when the [ShowLegend](https://help.sync
 
 ## Customize items layout
 
-The `ItemsLayout` property is used to customize the arrangement and position of each legend item. The default value is null. This property accepts any layout type.
+The [ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_ItemsLayout) property is used to customize the arrangement and position of each legend item. The default value is null. This property accepts any layout type.
 
 {% tabs %}
 {% highlight XAML hl_lines="2"%}
@@ -695,7 +695,7 @@ this.Content = treeMap;
 
 ## Customize items template
 
-The `TreeMapLegend` supports customizing the appearance of legend items using the ItemTemplate property. The default value of ItemTemplate is null.
+The `TreeMapLegend` supports customizing the appearance of legend items using the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_ItemTemplate) property. The default value of `ItemTemplate` is null.
 
 {% tabs %}
 {% highlight XAML hl_lines="2"%}
