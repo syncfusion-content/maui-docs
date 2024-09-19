@@ -11,7 +11,7 @@ documentation: ug
 
 ## Customizing Column Size
 
-By default, columns are sized smartly to arrange the default elements of the cards with better readability. However, you can define the minimum and maximum width for the columns in [`SfKanban`]() using [`MinimumColumnWidth`]() and [`MaximumColumnWidth`]() properties respectively. 
+By default, columns are sized smartly to arrange the default elements of the cards with better readability. However, you can define the minimum and maximum width for the columns in [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) using [`MinimumColumnWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_MinimumColumnWidth) and [`MaximumColumnWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_MaximumColumnWidth) properties respectively. 
 
 {% tabs %}
 
@@ -31,7 +31,7 @@ kanban.MaximumColumnWidth = 340;
 
 {% endtabs %}
 
-You can also define the exact column width using [`ColumnWidth`]() property of [`SfKanban`]().
+You can also define the exact column width using [`ColumnWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ColumnWidth) property of [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html).
 
 {% tabs %}
 
@@ -52,7 +52,7 @@ kanban.ColumnWidth = 250;
 
 ## Categorizing Columns
 
-To categorize columns based on a specific property, you must explicitly define the property path using the [`ColumnMappingPath`]() property. However, only the properties of [`KanbanModel`]() can be assigned to [`ColumnMappingPath`](). By default, [`SfKanban`]() will categorize the items using the Category property of KanbanModel.
+To categorize columns based on a specific property, you must explicitly define the property path using the [`ColumnMappingPath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ColumnMappingPath) property. However, only the properties of [`KanbanModel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html) can be assigned to [`ColumnMappingPath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ColumnMappingPath). By default, [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) will categorize the items using the Category property of KanbanModel.
 
 {% tabs %}
 
@@ -73,7 +73,7 @@ kanban.ColumnMappingPath = "ID";
 
 ### Category for a column
 
-You can assign a specific category to a column by setting the [Categories]() property of the [`KanbanColumn`](). This will display cards with the specified category under the corresponding column. For example, to map the "In Progress" category to the "In Progress" column
+You can assign a specific category to a column by setting the [Categories](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_Categories) property of the [`KanbanColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html). This will display cards with the specified category under the corresponding column. For example, to map the `In Progress` category to the `In Progress` column
 
 {% tabs %}
 
@@ -93,7 +93,7 @@ progressColumn.Categories = new List<object>() { "In Progress" };
 
 ## Headers
 
-Header shows the category [`Title`](), items count, min and max informations of a column. The UI of the header can be replaced entirely using [`HeaderTemplate`]() property of [`SfKanban`](). The following code snippet and screenshot illustrates this.
+Header shows the category `Title`, `items count`, `min and max` informations of a column. The UI of the header can be replaced entirely using [`HeaderTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_HeaderTemplate) property of [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html). The following code snippet and screenshot illustrates this.
 
 {% tabs %}
 
@@ -135,7 +135,7 @@ kanban.HeaderTemplate = headerTemplate;
 
 ## Expand/Collapse Column
 
-Columns can be expanded/collapsed by tapping the toggle button which is placed at top right corner of the Kanban header. [`IsExpanded`]() property of [`KanbanColumn`]() is used to programmatically expand/collapse the Kanban column. The following code example describes the above behavior.   
+Columns can be expanded/collapsed by tapping the toggle button which is placed at top right corner of the Kanban header. [`IsExpanded`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_IsExpanded) property of [`KanbanColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html) is used to programmatically expand/collapse the Kanban column. The following code example describes the above behavior.   
 
 {% tabs %}
 
@@ -164,7 +164,7 @@ kanban.Columns.Add(column2);
 
 ## Enable/Disable Drag & Drop 
 
-You can enable and disable the drag and drop operation of the cards for particular column using [`AllowDrag`]() and [`AllowDrop`]() properties of [`KanbanColumn`]().
+You can enable and disable the drag and drop operation of the cards for particular column using [`AllowDrag`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_AllowDrag) and [`AllowDrop`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_AllowDrop) properties of [`KanbanColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html).
 
 The following code is used to disable the drag operation from progress column.
 
@@ -210,7 +210,7 @@ progressColumn.AllowDrop = false;
 
 ## Items Count
 
-[`ItemsCount`]() property is used to get the total cards count in each column.
+[`ItemsCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_ItemsCount) property is used to get the total cards count in each column.
 
 {% highlight C# %}
 
@@ -221,12 +221,12 @@ int count = todoColumn.ItemsCount;
 
 ## Work In-Progress Limit
 
-[`MinimumLimit`]() and [`MaximumLimit`]() properties are used to define the minimum and maximum number of items in a column. If the actual items count is exceeded or lesser than the specified limits, the error bars are used to indicate this violation. Following properties of [`ErrorBarSettings`]() are used to customize the appearance of error bar.
+[`MinimumLimit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_MinimumLimit) and [`MaximumLimit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_MaximumLimit) properties are used to define the minimum and maximum number of items in a column. If the actual items count is exceeded or lesser than the specified limits, the error bars are used to indicate this violation. Following properties of [`ErrorBarSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_ErrorBarSettings) are used to customize the appearance of error bar.
 
-* `Fill`, of type `Brush`, used to change the default color of the error bar.
-* `MaxValidationFill`, of type `Brush`, used to change the maximum validation color of the error bar.
-* `MinValidationFill`, of type `Brush`, used to change the minimum validation color of the error bar.
-* `Height`,of type `double`, used to change the height of the error bar.
+* [Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanErrorBarSettings.html#Syncfusion_Maui_Kanban_KanbanErrorBarSettings_Fill), of type `Brush`, used to change the default color of the error bar.
+* [MaxValidationFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanErrorBarSettings.html#Syncfusion_Maui_Kanban_KanbanErrorBarSettings_MaxValidationFill), of type `Brush`, used to change the maximum validation color of the error bar.
+* [MinValidationFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanErrorBarSettings.html#Syncfusion_Maui_Kanban_KanbanErrorBarSettings_MinValidationFill), of type `Brush`, used to change the minimum validation color of the error bar.
+* [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanErrorBarSettings.html#Syncfusion_Maui_Kanban_KanbanErrorBarSettings_Height),of type `double`, used to change the height of the error bar.
 
 {% tabs %}
 

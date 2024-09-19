@@ -10,11 +10,11 @@ keywords: migrate from xamarin.Forms SfKanban to .net maui SfKanban, transitioni
 
 # Migrate from Xamarin.Forms SfKanban to .NET MAUI SfKanban
 
-The Kanban Board was created from the scratch using the upgraded APIs and performance of the .NET MAUI graphics library and framework layouts. However, to maintain the consistency of the API naming in MAUI [SfKanban](), we renamed some of the APIs. The APIs changed in MAUI [SfKanban]() from Xamarin [SfKanban]() are detailed as follows:
+The Kanban Board was created from the scratch using the upgraded APIs and performance of the .NET MAUI graphics library and framework layouts. However, to maintain the consistency of the API naming in MAUI [SfKanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html), we renamed some of the APIs. The APIs changed in MAUI [SfKanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) from Xamarin [SfKanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) are detailed as follows:
 
 ## API migration
 
-To initialize the control, import the Kanban namespace and Initialize [SfKanban]() as shown in the following code sample. 
+To initialize the control, import the Kanban namespace and Initialize [SfKanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) as shown in the following code sample. 
 
 <table>
 <tr>
@@ -111,6 +111,11 @@ The following table illustrates the API migration for the kanban.
 </tr>
 </table>
 
+## Known issue
+
+* **Smooth Drag Transition:** Drag transitions will be smoother on mobile devices.
+* **Memory Optimization:** Control loading will be optimized for mobile devices.
+
 ## Upcoming features
 
 * **Keep Card Support:** Retain specific cards in a column regardless of status changes.
@@ -118,11 +123,10 @@ The following table illustrates the API migration for the kanban.
 * **Multiple Category Support:** Assign cards to multiple categories for better organization.
 * **Custom Empty Column Template:** Define a custom template for columns with no cards.
 
+
 ## Upcoming improvements
 
-* **Memory Optimization:** Control loading will be optimized for mobile devices.
 * **Drag UI Enhancements:** The drag UI and invalidation indicator will be improved.
-* **Smooth Drag Transition:** Drag transitions will be smoother on mobile devices.
 
 ## Support and feedback
 
