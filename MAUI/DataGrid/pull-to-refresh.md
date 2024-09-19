@@ -10,13 +10,13 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 # Pull To Refresh in MAUI DataGrid (SfDataGrid)
 
-To enable the `PullToRefresh` option in the data grid, set the [SfDataGrid.AllowPullToRefresh]() property to `true`. This allows the control to refresh the data source at runtime when the pull-to-refresh gesture is performed. 
+To enable the `PullToRefresh` option in the data grid, set the [SfDataGrid.AllowPullToRefresh](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowPullToRefresh) property to `true`. This allows the control to refresh the data source at runtime when the pull-to-refresh gesture is performed. 
 
 ## Pull to refresh command
 
-The data grid can refresh its data during runtime by executing an `ICommand` bound to the [SfDataGrid.PullToRefreshCommand]() property. When a pull-to-refresh gesture is performed and the progress bar reaches 100%, this command is triggered to update the records in view.
+The data grid can refresh its data during runtime by executing an `ICommand` bound to the [SfDataGrid.PullToRefreshCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_PullToRefreshCommand) property. When a pull-to-refresh gesture is performed and the progress bar reaches 100%, this command is triggered to update the records in view.
 
-To indicate that a pull-to-refresh operation is in progress, set the [SfDataGrid.IsBusy]() property to `true` before starting the refresh. Once the refresh is complete, set this property back to `false`. You can also customize the duration of the pull-to-refresh animation by adding a delay in the code.
+To indicate that a pull-to-refresh operation is in progress, set the [SfDataGrid.IsBusy](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_IsBusy) property to `true` before starting the refresh. Once the refresh is complete, set this property back to `false`. You can also customize the duration of the pull-to-refresh animation by adding a delay in the code.
 
 To enable and perform the pull-to-refresh operation, refer to the following code example:
 
@@ -66,11 +66,11 @@ public void ItemsSourceRefresh()
 
 <img alt="Pull To Refresh" src="Images\pull-to-refresh\net-maui-pull-to-refresh-slide-on-top.gif" width="404"/>
 
-### Transition mode
+### Transition Type
 
-To customize the progress view animation, adjust the [SfDataGrid.TransitionMode]() property. By default, the transition mode is set to SlideOnTop.
+To customize the progress view animation, adjust the [SfDataGrid.TransitionType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_TransitionType) property. By default, the transition type is set to SlideOnTop.
 
-The following code snippet demonstrates how to change the transition mode to `Push`. In this mode, only the scrollable view moves, while the header remains fixed:
+The following code snippet demonstrates how to change the transition type to `Push`. In this mode, only the scrollable view moves, while the header remains fixed:
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -83,11 +83,11 @@ The following code snippet demonstrates how to change the transition mode to `Pu
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="TransitionMode Push" src="Images\pull-to-refresh\net-maui-pull-to-refresh-push.gif" width="404"/>
+<img alt="TransitionType Push" src="Images\pull-to-refresh\net-maui-pull-to-refresh-push.gif" width="404"/>
 
 ### Customization
 
-You can customize various properties of [SfPullToRefresh](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html) in the data grid, including `TransitionMode`, `PullingThreshold`, `ProgressBackground`, `ProgressColor`, and more.
+You can customize various properties of [SfPullToRefresh](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html) in the data grid, including `TransitionType`, `PullingThreshold`, `ProgressBackground`, `ProgressColor`, and more.
 
 {% tabs %}
 {% highlight c# %}
