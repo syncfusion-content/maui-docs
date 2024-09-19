@@ -10,7 +10,7 @@ keywords: .net maui Kanban localization, sfKanban localization in .net maui, .ne
 
 # Localization in .NET MAUI Kanban (SfKanban)
 
-Localization is the process of translating the application resources into different language for the specific cultures. The `SfKanban` can be localized by adding `resource` file. 
+Localization is the process of translating the application resources into different language for the specific cultures. The [SfKanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) can be localized by adding `resource` file. 
 
 ## Setting CurrentUICulture to the application
 
