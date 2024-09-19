@@ -24,14 +24,14 @@ The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picke
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<picker:SfDateTimePicker x:Name="Picker"
+<picker:SfDateTimePicker x:Name="picker"
                          SelectionChanged="OnDateTimePickerSelectionChanged">
 </picker:SfDateTimePicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
-this.Picker.SelectionChanged += this.OnDateTimePickerSelectionChanged;
+this.picker.SelectionChanged += this.OnDateTimePickerSelectionChanged;
 
 private void OnDateTimePickerSelectionChanged(object sender, DateTimePickerSelectionChangedEventArgs e)
         {
@@ -61,19 +61,19 @@ The [Opened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBa
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<picker:SfDateTimePicker x:Name="Picker"
+<picker:SfDateTimePicker x:Name="picker"
                          Opened="OnDateTimePickerPopUpOpened">
 </picker:SfDateTimePicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
-this.Picker.Opened += this.OnDateTimePickerPopUpOpened;
+this.picker.Opened += this.OnDateTimePickerPopUpOpened;
 
 private void OnDateTimePickerPopUpOpened(object sender, EventArgs e)
         {
             // If you need to open the picker, set IsOpen property to true.
-            this.Picker.IsOpen = true;
+            this.picker.IsOpen = true;
         }
 
 {% endhighlight %}  
@@ -92,14 +92,14 @@ The [Closing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerB
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<picker:SfDateTimePicker x:Name="Picker"
+<picker:SfDateTimePicker x:Name="picker"
                          Closing="OnDateTimePickerPopUpClosing">
 </picker:SfDateTimePicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
-this.Picker.Closing += this.OnDateTimePickerPopUpClosing;
+this.picker.Closing += this.OnDateTimePickerPopUpClosing;
 
 private void OnDateTimePickerPopUpClosing(object sender, CancelEventArgs e)
         {
@@ -121,19 +121,19 @@ The [Closed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBa
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<picker:SfDateTimePicker x:Name="Picker"
+<picker:SfDateTimePicker x:Name="picker"
                          Closed="OnDateTimePickerPopUpClosed">
 </picker:SfDateTimePicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
-this.Picker.Closed += this.OnDateTimePickerPopUpClosed;
+this.picker.Closed += this.OnDateTimePickerPopUpClosed;
 
 private void OnDateTimePickerPopUpClosed(object sender, EventArgs e)
         {
             // If you need to close the picker, set IsOpen property to false.
-            this.Picker.IsOpen = false;
+            this.picker.IsOpen = false;
         }
 
 {% endhighlight %}  
@@ -157,14 +157,14 @@ The `SfDateTimePicker` footer view provides two events. These events are not app
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<picker:SfDateTimePicker x:Name="Picker"
+<picker:SfDateTimePicker x:Name="picker"
                          OkButtonClicked="OnDateTimePickerOkButtonClicked">
 </picker:SfDateTimePicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
-this.Picker.OkButtonClicked += this.OnDateTimePickerOkButtonClicked;
+this.picker.OkButtonClicked += this.OnDateTimePickerOkButtonClicked;
 
 private void OnDateTimePickerOkButtonClicked(object sender, EventArgs e)
         {
@@ -185,14 +185,14 @@ private void OnDateTimePickerOkButtonClicked(object sender, EventArgs e)
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<picker:SfDateTimePicker x:Name="Picker"
+<picker:SfDateTimePicker x:Name="picker"
                          CancelButtonClicked="OnDateTimePickerCancelButtonClicked">
 </picker:SfDateTimePicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
-this.Picker.CancelButtonClicked += this.OnDateTimePickerCancelButtonClicked;
+this.picker.CancelButtonClicked += this.OnDateTimePickerCancelButtonClicked;
 
 private void OnDateTimePickerCancelButtonClicked(object sender, EventArgs e)
         {

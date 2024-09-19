@@ -25,7 +25,7 @@ The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picke
 
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<picker:SfTimePicker x:Name="Picker"
+<picker:SfTimePicker x:Name="picker"
                      SelectionChanged="OnTimePickerSelectionChanged">
 </picker:SfTimePicker>
 
@@ -33,7 +33,7 @@ The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picke
 
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
-this.Picker.SelectionChanged += this.OnTimePickerSelectionChanged;
+this.picker.SelectionChanged += this.OnTimePickerSelectionChanged;
 
 private void OnTimePickerSelectionChanged(object sender, TimePickerSelectionChangedEventArgs e)
 {
@@ -65,7 +65,7 @@ The [Opened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBa
 
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<picker:SfTimePicker x:Name="Picker"
+<picker:SfTimePicker x:Name="picker"
                      Opened="OnTimePickerPopUpOpened">
 </picker:SfTimePicker>
 
@@ -73,12 +73,12 @@ The [Opened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBa
 
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
-this.Picker.Opened += this.OnTimePickerPopUpOpened;
+this.picker.Opened += this.OnTimePickerPopUpOpened;
 
 private void OnTimePickerPopUpOpened(object sender, EventArgs e)
 {
     // If you need to open the picker, set the IsOpen property to true.
-    this.Picker.IsOpen = true;
+    this.picker.IsOpen = true;
 }
 
 {% endhighlight %}
@@ -99,7 +99,7 @@ The [Closing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerB
 
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<picker:SfTimePicker x:Name="Picker"
+<picker:SfTimePicker x:Name="picker"
                      Closing="OnTimePickerPopUpClosing">
 </picker:SfTimePicker>
 
@@ -107,7 +107,7 @@ The [Closing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerB
 
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
-this.Picker.Closing += this.OnTimePickerPopUpClosing;
+this.picker.Closing += this.OnTimePickerPopUpClosing;
 
 private void OnTimePickerPopUpClosing(object sender, CancelEventArgs e)
 {
@@ -131,7 +131,7 @@ The [Closed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBa
 
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<picker:SfTimePicker x:Name="Picker"
+<picker:SfTimePicker x:Name="picker"
                      Closed="OnTimePickerPopUpClosed">
 </picker:SfTimePicker>
 
@@ -139,12 +139,12 @@ The [Closed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBa
 
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
-this.Picker.Closed += this.OnTimePickerPopUpClosed;
+this.picker.Closed += this.OnTimePickerPopUpClosed;
 
 private void OnTimePickerPopUpClosed(object sender, EventArgs e)
 {
     // If you need to close the picker, set the IsOpen property to false.
-    this.Picker.IsOpen = false;
+    this.picker.IsOpen = false;
 }
 
 {% endhighlight %}
@@ -170,7 +170,7 @@ In the `SfTimePicker` footer view provides two events. These events are not appl
 
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<picker:SfTimePicker x:Name="Picker"
+<picker:SfTimePicker x:Name="picker"
                      OkButtonClicked="OnTimePickerOkButtonClicked">
 </picker:SfTimePicker>
 
@@ -178,7 +178,7 @@ In the `SfTimePicker` footer view provides two events. These events are not appl
 
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
-this.Picker.OkButtonClicked += this.OnTimePickerOkButtonClicked;
+this.picker.OkButtonClicked += this.OnTimePickerOkButtonClicked;
 
 private void OnTimePickerOkButtonClicked(object sender, EventArgs e)
 {
@@ -201,7 +201,7 @@ private void OnTimePickerOkButtonClicked(object sender, EventArgs e)
 
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<picker:SfTimePicker x:Name="Picker"
+<picker:SfTimePicker x:Name="picker"
                      CancelButtonClicked="OnTimePickerCancelButtonClicked">
 </picker:SfTimePicker>
 
@@ -209,7 +209,7 @@ private void OnTimePickerOkButtonClicked(object sender, EventArgs e)
 
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
-this.Picker.CancelButtonClicked += this.OnTimePickerCancelButtonClicked;
+this.picker.CancelButtonClicked += this.OnTimePickerCancelButtonClicked;
 
 private void OnTimePickerCancelButtonClicked(object sender, EventArgs e)
 {

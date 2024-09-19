@@ -18,7 +18,7 @@ The dialog mode is used to display the date time picker in a popup by setting th
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDateTimePicker x:Name="Picker"
+<picker:SfDateTimePicker x:Name="picker"
                          Mode="Dialog">
 </picker:SfDateTimePicker>
 
@@ -40,7 +40,7 @@ Note: This property automatically changes to `false` when you close the dialog b
 {% highlight xaml tabtitle="MainPage.xaml"%}
 
 <Grid>
-    <picker:SfDateTimePicker x:Name="Picker" 
+    <picker:SfDateTimePicker x:Name="picker" 
                              Mode="Dialog">
     </picker:SfDateTimePicker>
     <Button Text="Open Date Time picker" 
@@ -58,7 +58,7 @@ Note: This property automatically changes to `false` when you close the dialog b
 
 private void Button_Clicked(object sender, EventArgs e)
 {
-    this.Picker.IsOpen = true;
+    this.picker.IsOpen = true;
 }
 
 {% endhighlight %}  
@@ -83,7 +83,7 @@ Note: This property is automatically changed to `false` when you close the dialo
 {% highlight xaml tabtitle="MainPage.xaml"%}
 
 <Grid>
-    <picker:SfDateTimePicker x:Name="Picker" 
+    <picker:SfDateTimePicker x:Name="picker" 
                              Mode="RelativeDialog"
                              RelativePosition="AlignTopLeft">
     </picker:SfDateTimePicker>
@@ -102,7 +102,7 @@ Note: This property is automatically changed to `false` when you close the dialo
 
 private void Button_Clicked(object sender, EventArgs e)
 {
-    this.Picker.IsOpen = true;
+    this.picker.IsOpen = true;
 }
 
 {% endhighlight %}  

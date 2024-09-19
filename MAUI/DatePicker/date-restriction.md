@@ -16,7 +16,7 @@ The Date picker provides an option to restrict the selection of date items by us
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDatePicker x:Name="Picker"
+<picker:SfDatePicker x:Name="picker"
                      MinimumDate="2000/05/15">
 </picker:SfDatePicker>
 
@@ -39,7 +39,7 @@ The Date picker provides an option to restrict the selection of date items by us
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDatePicker x:Name="Picker"
+<picker:SfDatePicker x:Name="picker"
                      MaximumDate="2042/10/10">
 </picker:SfDatePicker>
 

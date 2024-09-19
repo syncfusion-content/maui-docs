@@ -44,7 +44,7 @@ The [CancelButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Pi
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-    <sfPicker:SfPicker x:Name="Picker" 
+    <sfPicker:SfPicker x:Name="picker" 
                             Opened="picker_Opened" 
                             Closed="picker_Closed"
                             Closing="picker_Closing"
@@ -56,12 +56,12 @@ The [CancelButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Pi
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    this.Picker.Opened += Picker_Opened;
-    this.Picker.Closing += Picker_Closing;
-    this.Picker.Closed += Picker_Closed;
-    this.Picker.SelectionChanged += Picker_SelectionChanged;
+    this.picker.Opened += Picker_Opened;
+    this.picker.Closing += Picker_Closing;
+    this.picker.Closed += Picker_Closed;
+    this.picker.SelectionChanged += Picker_SelectionChanged;
     this.picker.OkButtonClicked += Picker_OkButtonClicked;
-    this.Picker.CancelButtonClicked += Picker_CancelButtonClicked;
+    this.picker.CancelButtonClicked += Picker_CancelButtonClicked;
 
     private void Picker_Opened(object sender, EventArgs e)
     {

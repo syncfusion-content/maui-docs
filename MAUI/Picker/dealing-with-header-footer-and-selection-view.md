@@ -18,7 +18,7 @@ SfPicker enables or disables the header section by setting the `SfPicker.HeaderV
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
 
-<sfPicker:SfPicker x:Name="Picker">
+<sfPicker:SfPicker x:Name="picker">
     <sfPicker:SfPicker.HeaderView>
         <sfPicker:PickerHeaderView Height="40"/>
     </sfPicker:SfPicker.HeaderView>
@@ -27,7 +27,7 @@ SfPicker enables or disables the header section by setting the `SfPicker.HeaderV
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 
-    this.Picker.HeaderView.Height= 40;
+    this.picker.HeaderView.Height= 40;
 
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +45,7 @@ The Header’s [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
 
-<sfPicker:SfPicker x:Name="Picker">
+<sfPicker:SfPicker x:Name="picker">
     <sfPicker:SfPicker.HeaderView>
         <sfPicker:PickerHeaderView Background="#D3D3D3"/>
     </sfPicker:SfPicker.HeaderView>
@@ -54,7 +54,7 @@ The Header’s [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 
-    this.Picker.HeaderView.Background = Color.FromArgb("#6750A4");
+    this.picker.HeaderView.Background = Color.FromArgb("#6750A4");
 
 {% endhighlight %}
 {% endtabs %}
@@ -68,7 +68,7 @@ The .NET MAUI Picker control and header [TextStyle](https://help.syncfusion.com/
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
 
-<sfPicker:SfPicker x:Name="Picker">
+<sfPicker:SfPicker x:Name="picker">
     <sfPicker:SfPicker.HeaderView>
         <sfPicker:PickerHeaderView>
             <sfPicker:PickerHeaderView.TextStyle>
@@ -83,7 +83,7 @@ The .NET MAUI Picker control and header [TextStyle](https://help.syncfusion.com/
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 
-    this.Picker.HeaderView.TextStyle = new PickerTextStyle()
+    this.picker.HeaderView.TextStyle = new PickerTextStyle()
     {
         TextColor = Colors.Gray,
         FontSize = 18,
@@ -102,7 +102,7 @@ The Header’s [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
 
-<sfPicker:SfPicker x:Name="Picker">
+<sfPicker:SfPicker x:Name="picker">
     <sfPicker:SfPicker.HeaderView>
         <sfPicker:PickerHeaderView DividerColor="Red"/>
     </sfPicker:SfPicker.HeaderView>
@@ -111,7 +111,7 @@ The Header’s [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 
-    this.Picker.HeaderView.DividerColor = Colors.Red;
+    this.picker.HeaderView.DividerColor = Colors.Red;
 
 {% endhighlight %}
 {% endtabs %}
@@ -125,7 +125,7 @@ SfPicker enables or disables the footer section by setting the `SfPicker.FooterV
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
 
-<sfPicker:SfPicker x:Name="Picker">
+<sfPicker:SfPicker x:Name="picker">
     <sfPicker:SfPicker.FooterView>
         <sfPicker:PickerFooterView Height="40"/>
     </sfPicker:SfPicker.FooterView>
@@ -134,7 +134,7 @@ SfPicker enables or disables the footer section by setting the `SfPicker.FooterV
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 
-    this.Picker.FooterView.Height= 40;
+    this.picker.FooterView.Height= 40;
 
 {% endhighlight %}
 {% endtabs %}
@@ -152,7 +152,7 @@ The Header’s [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
 
-<sfPicker:SfPicker x:Name="Picker">
+<sfPicker:SfPicker x:Name="picker">
     <sfPicker:SfPicker.FooterView>
         <sfPicker:PickerFooterView Background="#D3D3D3"/>
     </sfPicker:SfPicker.FooterView>
@@ -161,7 +161,7 @@ The Header’s [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 
-    this.Picker.FooterView.Background = Color.FromArgb("#6750A4");
+    this.picker.FooterView.Background = Color.FromArgb("#6750A4");
 
 {% endhighlight %}
 {% endtabs %}
@@ -175,7 +175,7 @@ SfPicker enables or disables the `ok` button by setting the `SfPicker.FooterView
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
 
-<sfPicker:SfPicker x:Name="Picker">
+<sfPicker:SfPicker x:Name="picker">
     <sfPicker:SfPicker.FooterView>
         <sfPicker:PickerFooterView 
             ShowOkButton="False" 
@@ -187,9 +187,9 @@ SfPicker enables or disables the `ok` button by setting the `SfPicker.FooterView
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 
-    this.Picker.FooterView.OkButtonShow = false;
-    this.Picker.FooterView.OkButtonText= "Done";
-    this.Picker.FooterView.CancelButtonText= "Exit";
+    this.picker.FooterView.OkButtonShow = false;
+    this.picker.FooterView.OkButtonText= "Done";
+    this.picker.FooterView.CancelButtonText= "Exit";
   
 {% endhighlight %}
 {% endtabs %}
@@ -216,7 +216,7 @@ The .NET MAUI Picker control and footer [TextStyle](https://help.syncfusion.com/
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 
-    this.Picker.FooterView.TextStyle = new PickerTextStyle()
+    this.picker.FooterView.TextStyle = new PickerTextStyle()
     {
         TextColor = Colors.Gray,
         FontSize = 18,
@@ -235,7 +235,7 @@ The Footer’s [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
 
-<sfPicker:SfPicker x:Name="Picker">
+<sfPicker:SfPicker x:Name="picker">
     <sfPicker:SfPicker.FooterView>
         <sfPicker:PickerFooterView DividerColor="Red"/>
     </sfPicker:SfPicker.FooterView>
@@ -244,7 +244,7 @@ The Footer’s [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 
-    this.Picker.FooterView.DividerColor = Colors.Red;
+    this.picker.FooterView.DividerColor = Colors.Red;
 
 {% endhighlight %}
 {% endtabs %}
@@ -258,7 +258,7 @@ Picker allows validation based on the OK or Cancel button by hooking into the `S
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-    <sfPicker:SfPicker x:Name="Picker"
+    <sfPicker:SfPicker x:Name="picker"
                        OkButtonClicked="SfPicker_OkButtonClicked"
                        CancelButtonClicked="SfPicker_CancelButtonClicked">
     </sfPicker:SfPicker>
@@ -266,8 +266,8 @@ Picker allows validation based on the OK or Cancel button by hooking into the `S
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    this.Picker.OkButtonClicked += SfPicker_OkButtonClicked;
-    this.Picker.CancelButtonClicked += SfPicker_CancelButtonClicked;
+    this.picker.OkButtonClicked += SfPicker_OkButtonClicked;
+    this.picker.CancelButtonClicked += SfPicker_CancelButtonClicked;
     private void SfPicker_OkButtonClicked(object sender, EventArgs e)
     {
       //// Perform any operation.
