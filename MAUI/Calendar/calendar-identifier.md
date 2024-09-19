@@ -28,13 +28,13 @@ The [.NET MAUI Calendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cal
 </td>
 
 <td>
-* Gezer Calendar<br>
-* Haida Calendar<br>
-* Igbo calendar<br>
-* Islamic calendar<br>
-* Javanese calendar<br>
-* Maramataka (Māori lunar calendar)<br>
-* Nepal Sambat<br>
+* GezerCalendar<br>
+* HaidaCalendar<br>
+* IgboCalendar<br>
+* IslamicCalendar<br>
+* JavaneseCalendar<br>
+* Maramataka (MāoriLunarCalendar)<br>
+* NepalSambat<br>
 * HebrewCalendar<br>
 * JulianCalendar<br>
 * JapaneseCalendar<br>
@@ -47,7 +47,7 @@ N>
 * The Flow Direction will be updated based on the calendar identifier. All the DateTime values, such as DisplayDate, MinimumDate, MaximumDate, SelectedDate, SelectedDates, SelectedDateRange, SelectableDayPredicate, and SpecialDayPredicate, can be given in two ways.
 * The DateTime instance without specifying calendar identifier. The calendar will handle the DateTime value for the specified calendar identifier.
 * When a DateTime instance has a calendar identifier, the calendar handles it directly.
-* View header will show full week day name for all the calendar identifiers except gregorian calendar while the text format is "ddddd".
+* View header will show full week day name for all the calendar identifiers except `Gregorian Calendar` while the text format is "ddddd".
 
 {% tabs %}
 {% highlight XAML hl_lines="2" %}

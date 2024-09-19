@@ -9,7 +9,7 @@ documentation: ug
 
 # Dealing with Header, Footer and Selection in MAUI Picker (SfPicker)
 
-This section explains the header, footer and selction view customization of picker control.
+This section explains the header, footer and selection view customization of picker control.
 
 ## Enable or disable header
 

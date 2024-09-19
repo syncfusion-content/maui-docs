@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Populating with .NET MAUI Picker Control | Syncfusion
-description: Learn here all about populating items with Syncfusion .NET MAUI Picker (SfPicker) control.
+description: Learn here all about populating items with Syncfusion .NET MAUI Picker (SfPicker) control and its basic features.
 platform: maui
 control: SfPicker
 documentation: ug
@@ -53,7 +53,7 @@ The picker populates the items as Multi-column based on the columns value.
 
 Collection of items can be created and assigned to a Collection based on index value, and each index is a column of picker.
 
-The following code example encapsulate how to populate Country and Cityes in each column of picker.
+The following code example encapsulate how to populate Country and Cities in each column of picker.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}

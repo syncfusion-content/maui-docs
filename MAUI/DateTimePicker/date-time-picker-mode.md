@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Date Time picker mode in .NET MAUI Date Time Picker Control | Syncfusion
+title: Mode in .NET MAUI Date Time Picker Control | Syncfusion
 description: Learn about date time picker mode in Syncfusion .NET MAUI Date Time Picker (SfDateTimePicker) control and its basic features.
 platform: maui
 control: SfDateTimePicker
