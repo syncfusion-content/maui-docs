@@ -9,15 +9,15 @@ documentation: ug
 
 # Cards in .NET MAUI Kanban Board (SfKanban)
 
-The default elements of a card can be customized using the below properties of [`KanbanModel`]().
+The default elements of a card can be customized using the below properties of [`KanbanModel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html).
 
-* [`Title`]() - Used to set the title of a card.
-* [`ImageURL`]() - Used to set the image URL of a card. The image will be displayed at right side in default card template.
-* [`Category`]() - Used to set the category of a card. Based on the category the cards will be added to the respective columns. 
-* [`Description`]() - Used to set the description text of a card.
-* [`IndicatorFill`]() - Used to specify the indicator color of a card.
-* [`Tags`]() - Used to specify the tags of a card. The tags will be displayed at bottom in default card template.
-* [`ID`]() - Used to set the ID of a card.
+* [`Title`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html#Syncfusion_Maui_Kanban_KanbanModel_Title) - Used to set the title of a card.
+* [`ImageURL`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html#Syncfusion_Maui_Kanban_KanbanModel_ImageURL) - Used to set the image URL of a card. The image will be displayed at right side in default card template.
+* [`Category`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html#Syncfusion_Maui_Kanban_KanbanModel_Category) - Used to set the category of a card. Based on the category the cards will be added to the respective columns. 
+* [`Description`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html#Syncfusion_Maui_Kanban_KanbanModel_Description) - Used to set the description text of a card.
+* [`IndicatorFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html#Syncfusion_Maui_Kanban_KanbanModel_IndicatorFill) - Used to specify the indicator color of a card.
+* [`Tags`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html#Syncfusion_Maui_Kanban_KanbanModel_Tags) - Used to specify the tags of a card. The tags will be displayed at bottom in default card template.
+* [`ID`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html#Syncfusion_Maui_Kanban_KanbanModel_ID) - Used to set the ID of a card.
 
 N> The image URL can be set in two ways: using an assembly reference or a local assembly. Ensure that the image is stored in the `Resources/Images` folder for assembly references.
 
@@ -38,7 +38,7 @@ new KanbanModel()
 
 ## Template
 
-You can replace the entire card template with your own design using [`CardTemplate`]() property of [`SfKanban`](). The following code snippet and screenshot illustrates this.
+You can replace the entire card template with your own design using [`CardTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_CardTemplate) property of [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html). The following code snippet and screenshot illustrates this.
 
 {% tabs %}
 
@@ -130,7 +130,7 @@ You can customize the appearance of each card with different templates based on 
 
 ### Create a data template selector
 
-Create a custom class by inheriting [`DataTemplateSelector`](), and override the [`OnSelectTemplate`]() method to return the [`DataTemplate`]() for that item. At runtime, the SfKanban invokes the [`OnSelectTemplate`]() method for each item and passes the data object as parameter.
+Create a custom class by inheriting `DataTemplateSelector`, and override the `OnSelectTemplate` method to return the `DataTemplate` for that item. At runtime, the SfKanban invokes the `OnSelectTemplate` method for each item and passes the data object as parameter.
 
 {% tabs %}
 
@@ -171,7 +171,7 @@ public class KanbanTemplateSelector : DataTemplateSelector
 
 ### Applying the data template selector
 
-Assign custom [`DataTemplateSelector`]() to the [`CardTemplate`]() of the SfKanban in either XAML or C#.
+Assign custom `DataTemplateSelector` to the [`CardTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_CardTemplate) of the SfKanban in either XAML or C#.
 
 {% tabs %}
 
