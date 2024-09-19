@@ -33,7 +33,7 @@ The [.NET MAUI Calendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cal
 * Igbo calendar<br>
 * Islamic calendar<br>
 * Javanese calendar<br>
-* Maramataka (Māori lunar calendar)<br>
+* Maramataka (Maori lunar calendar)<br>
 * Nepal Sambat<br>
 * HebrewCalendar<br>
 * JulianCalendar<br>
