@@ -23,7 +23,7 @@ Below is a list of the arguments:
     * [Appointments](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_Appointments): Returns the selected appointments.
     * [Date](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_Date) : Returns the selected date.
     * [Element](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_Element) : Returns the `Scheduler` element tapped.
-    * `WeekNumber` : Returns the tapped week number value.
+    * [WeekNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_WeekNumber) : Returns the tapped week number value.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -63,7 +63,7 @@ Whenever the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.S
     * [Appointments](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_Appointments): Returns the double-tapped appointments.
     * [Date](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_Date) : Returns the double-tapped date.
     * [Element](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_Element) : Returns the double-tapped `Scheduler` element.
-    * `WeekNumber` : Returns the double-tapped week number value.
+    * [WeekNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_WeekNumber) : Returns the double-tapped week number value.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -103,7 +103,7 @@ Whenever the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.S
     * [Appointments](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_Appointments): Returns the long-pressed appointments.
     * [Date](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_Date) : Returns the long-pressed date.
     * [Element](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_Element) : Returns the long-pressed `Scheduler` element.
-    * `WeekNumber` : Returns the long-pressed week number value.
+    * [WeekNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerInteractionEventArgs.html#Syncfusion_Maui_Scheduler_SchedulerInteractionEventArgs_WeekNumber) : Returns the long-pressed week number value.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -212,7 +212,7 @@ Scheduler commands allow to map Tapped event, Double tapped event, Long Pressed 
 
 ### TappedCommand 
 
-The `TappedCommand` will be triggered when you tap the scheduler view and pass the `SchedulerTappedEventArgs` as parameter.
+The [TappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_TappedCommand) will be triggered when you tap the scheduler view and pass the [SchedulerTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTappedEventArgs.html) as parameter.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="18 21 24" %}
@@ -250,7 +250,7 @@ public class SchedulerInteractionViewModel
 
 ### DoubleTappedCommand 
 
-The `DoubleTappedCommand` will be triggered when you double-tap the scheduler view and pass the `SchedulerDoubleTappedEventArgs` as parameter.
+The [DoubleTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_DoubleTappedCommand) will be triggered when you double-tap the scheduler view and pass the [SchedulerDoubleTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDoubleTappedEventArgs.html) as parameter.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="18 21 24" %}
@@ -289,7 +289,7 @@ public class SchedulerInteractionViewModel
 
 ### LongPressedCommand 
 
-The `LongPressedCommand` will be triggered when you long-press the scheduler view and pass the `SchedulerLongPressedEventArgs` as parameter.
+The [LongPressedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_LongPressedCommand) will be triggered when you long-press the scheduler view and pass the [SchedulerLongPressedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerLongPressedEventArgs.html) as parameter.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="18 21 24" %}
@@ -327,7 +327,7 @@ public class SchedulerInteractionViewModel
 
 ### ViewChangedCommand 
 
-The `ViewChangedCommand` will be triggered when you long-press the scheduler view and pass the `SchedulerViewChangedEventArgs` as parameter.
+The [ViewChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ViewChangedCommand) will be triggered when you long-press the scheduler view and pass the [SchedulerViewChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerViewChangedEventArgs.html) as parameter.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="18 21 24" %}
@@ -368,7 +368,7 @@ public class SchedulerInteractionViewModel
 
 •    SelectionChangedCommand 
 
-The `SelectionChangedCommand` will be triggered when the scheduler view changes and pass the `SchedulerSelectionChangedEventArgs` as parameter.
+The [SelectionChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_SelectionChangedCommand) will be triggered when the scheduler view changes and pass the [SchedulerSelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerSelectionChangedEventArgs.html) as parameter.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="18 21 24" %}
