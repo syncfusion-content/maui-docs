@@ -347,7 +347,7 @@ Content = sfBadgeView;
 
 ## Font auto scaling enabled
 
-The `FontAutoScalingEnabled` property is used to automatically scale the badge text's font size based on the operating system's text size. The default value of the `FontAutoScalingEnabled` property is `false.`
+The [FontAutoScalingEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_FontAutoScalingEnabled) property is used to automatically scale the badge text's font size based on the operating system's text size. The default value of the [FontAutoScalingEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_FontAutoScalingEnabled) property is `false.`
 
 {% tabs %}
 
@@ -374,7 +374,7 @@ sfBadgeView.BadgeSettings = badgeSetting;
 
 ## Visibility of badge
 
-You can show or hide the badges in the .NET MAUI BadgeView by setting the `IsVisible` property in the [BadgeSetting](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1#Syncfusion_Maui_Core_SfBadgeView_BadgeSettings). By default, the badge will be visible.
+You can show or hide the badges in the .NET MAUI BadgeView by setting the [IsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_IsVisible) property in the [BadgeSetting](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1#Syncfusion_Maui_Core_SfBadgeView_BadgeSettings). By default, the badge will be visible.
 
 {% tabs %}
 {% highlight xaml %}
