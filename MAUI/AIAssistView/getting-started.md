@@ -33,7 +33,7 @@ Before proceeding, ensure the following are in place:
  3. Select the project location, type the project name and press Enter.
  4. Then choose **Create Project**.
  
- ## Step 2: Install the Syncfusion MAUI ListView NuGet Package
+## Step 2: Install the Syncfusion MAUI AI AssistView NuGet Package
  
  1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
  2. Search for `Syncfusion.Maui.AIAssistView` and install the latest version.
@@ -107,9 +107,7 @@ namespace GettingStarted
 
 ## Step 5: Define the View Model
 
-The `SfAIAssistView` control is data-bound and displays a collection of items exchanged between users and AI service. Hence, assist items should be created and bound to the control.
-
-Create a simple `AssistItem` collection as shown in the following code example in a new class file. Save it as `ViewModel.cs` file.
+Next, create a view model class and initialize the collection of `AssistItem` instance as follows
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
