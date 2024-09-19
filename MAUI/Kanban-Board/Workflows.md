@@ -9,8 +9,7 @@ documentation: ug
 
 # Workflows in .NET MAUI Kanban Board (SfKanban)
 
-This feature is used to define the flow of the card transitions from one state to another state. You need to create an instance of [`KanbanWorkflow`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanWorkflow.html) class and add it to [`Workflows`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_Workflows) property of [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html
-) to define the workflow for each column.  The [`KanbanWorkflow`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanWorkflow.html) contains the following properties to define the source category and target categories.
+This feature is used to define the flow of the card transitions from one state to another state. You need to create an instance of [`KanbanWorkflow`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanWorkflow.html) class and add it to [`Workflows`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_Workflows) property of [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) to define the workflow for each column.  The [`KanbanWorkflow`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanWorkflow.html) contains the following properties to define the source category and target categories.
 
 * [`Category`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanWorkflow.html#Syncfusion_Maui_Kanban_KanbanWorkflow_Category) - Used to define the source category/state.
 * [`AllowedTransitions`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanWorkflow.html#Syncfusion_Maui_Kanban_KanbanWorkflow_AllowedTransitions) - Used to define the list of categories/states, the card with the state specified in KanbanWorkflow. Category is allowed to transit.
