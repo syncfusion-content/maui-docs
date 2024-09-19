@@ -109,14 +109,6 @@ The names of these toolbars and its description are listed in the following sect
 <td>StickyNoteIconsToolbar</td>
 <td>The toolbar for editing sticky note icons appears at the bottom of the mobile PDF viewer.</td>
 </tr>
-<tr>
-<td>SearchToolbar</td>
-<td>The toolbar for text search appears at the top of the mobile PDF viewer.</td>
-</tr>
-<tr>
-<td>MoreOptionToolbar</td>
-<td>The toolbar for more options appears at the top of the mobile PDF viewer.</td>
-</tr>
 </table>
 
 ### Desktop toolbar names 

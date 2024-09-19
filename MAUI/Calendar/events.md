@@ -189,7 +189,7 @@ private void OnCalendarLongPressed(object sender, CalendarLongPressedEventArgs e
 
 ### ViewChangedCommand
 
-The SfCalendar includes a built-in event called `ViewChanged`, which is triggered whenever the calendar view is navigated to either the previous or next view. This event can be invoked through the [ViewChangedCommand](), and it also triggers when switching between different calendar views. The `CalendarViewChangedEventArgs` is provided as a parameter to this event.
+The SfCalendar includes a built-in event called `ViewChanged`, which is triggered whenever the calendar view is navigated to either the previous or next view. This event can be invoked through the [ViewChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_ViewChangedCommand), and it also triggers when switching between different calendar views. The `CalendarViewChangedEventArgs` is provided as a parameter to this event.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -222,7 +222,7 @@ public class CalendarViewModel
 
 ### SelectionChangedCommand
 
-The SfCalendar includes a built-in event called `SelectionChanged` that is triggered whenever the selection in the calendar changes. This event can be invoked through the [SelectionChangedCommand](), which passes the `CalendarSelectionChangedEventArgs` as a parameter.
+The SfCalendar includes a built-in event called `SelectionChanged` that is triggered whenever the selection in the calendar changes. This event can be invoked through the [SelectionChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionChangedCommand), which passes the `CalendarSelectionChangedEventArgs` as a parameter.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -255,7 +255,7 @@ public class CalendarViewModel
 
 ### TappedCommand
 
-The SfCalendar includes a built-in event called `Tapped` that is triggered whenever the calendar view is tapped. This event can be invoked through the [TappedCommand]() which passes the `CalendarTappedEventArgs` as a parameter.
+The SfCalendar includes a built-in event called `Tapped` that is triggered whenever the calendar view is tapped. This event can be invoked through the [TappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_TappedCommand) which passes the `CalendarTappedEventArgs` as a parameter.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -288,7 +288,7 @@ public class CalendarViewModel
 
 ### DoubleTappedCommand
 
-The SfCalendar includes a built-in event called `DoubleTapped` that is triggered whenever the calendar view is double-tapped. This event can be invoked through the [DoubleTappedCommand](), which passes the `CalendarDoubleTappedEventArgs` as a parameter.
+The SfCalendar includes a built-in event called `DoubleTapped` that is triggered whenever the calendar view is double-tapped. This event can be invoked through the [DoubleTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_DoubleTappedCommand), which passes the `CalendarDoubleTappedEventArgs` as a parameter.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3,6,8" %}
@@ -321,7 +321,7 @@ public class CalendarViewModel
 
 ### LongPressedCommand
 
-The SfCalendar includes a built-in event called `LongPressed`, which is triggered when the calendar view is long pressed. This event can be invoked through the [LongPressedCommand](), with the `CalendarLongPressedEventArgs` passed as a parameter.
+The SfCalendar includes a built-in event called `LongPressed`, which is triggered when the calendar view is long pressed. This event can be invoked through the [LongPressedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_LongPressedCommand), with the `CalendarLongPressedEventArgs` passed as a parameter.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}

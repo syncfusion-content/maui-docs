@@ -224,7 +224,7 @@ private void OnTimePickerCancelButtonClicked(object sender, EventArgs e)
 
 ### SelectionChangedCommand
 
-The SfTimePicker includes a built-in event called `SelectionChanged` that is triggered whenever the selection index in the time picker changes. This event can be invoked through the [SelectionChangedCommand](), which passes the `TimePickerSelectionChangedEventArgs` as a parameter.
+The SfTimePicker includes a built-in event called `SelectionChanged` that is triggered whenever the selection index in the time picker changes. This event can be invoked through the [SelectionChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_SelectionChangedCommand), which passes the `TimePickerSelectionChangedEventArgs` as a parameter.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -257,7 +257,7 @@ public class ViewModel
 
 ### AcceptCommand
 
-The SfTimePicker includes a built-in event called `OkButtonClicked`, which is triggered when the confirm button is tapped on the time picker. This event can be invoked through the [AcceptCommand]().
+The SfTimePicker includes a built-in event called `OkButtonClicked`, which is triggered when the confirm button is tapped on the time picker. This event can be invoked through the [AcceptCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_AcceptCommand).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -290,7 +290,7 @@ public class ViewModel
 
 ### DeclineCommand
 
-The SfTimePicker includes a built-in event called `CancelButtonClicked`, which is triggered when the cancel button is tapped on the time picker. This event can be invoked through the [DeclineCommand]().
+The SfTimePicker includes a built-in event called `CancelButtonClicked`, which is triggered when the cancel button is tapped on the time picker. This event can be invoked through the [DeclineCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_DeclineCommand).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
