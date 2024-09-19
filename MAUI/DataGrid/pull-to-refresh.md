@@ -10,9 +10,11 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 # Pull To Refresh in MAUI DataGrid (SfDataGrid)
 
+## Pull-to-refresh
+
 To enable the `PullToRefresh` option in the data grid, set the [SfDataGrid.AllowPullToRefresh](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowPullToRefresh) property to `true`. This allows the control to refresh the data source at runtime when the pull-to-refresh gesture is performed. 
 
-## Pull to refresh command
+### Pull-to-refresh command
 
 The data grid can refresh its data during runtime by executing an `ICommand` bound to the [SfDataGrid.PullToRefreshCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_PullToRefreshCommand) property. When a pull-to-refresh gesture is performed and the progress bar reaches 100%, this command is triggered to update the records in view.
 
