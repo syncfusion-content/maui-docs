@@ -28,13 +28,13 @@ The [.NET MAUI Calendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cal
 </td>
 
 <td>
-* GezerCalendar<br>
-* HaidaCalendar<br>
-* IgboCalendar<br>
-* IslamicCalendar<br>
-* JavaneseCalendar<br>
-* Maramataka (MāoriLunarCalendar)<br>
-* NepalSambat<br>
+* Gezer Calendar<br>
+* Haida Calendar<br>
+* Igbo calendar<br>
+* Islamic calendar<br>
+* Javanese calendar<br>
+* Maramataka (Māori lunar calendar)<br>
+* Nepal Sambat<br>
 * HebrewCalendar<br>
 * JulianCalendar<br>
 * JapaneseCalendar<br>

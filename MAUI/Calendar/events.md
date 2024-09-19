@@ -127,7 +127,7 @@ Whenever the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sc
 
     * [Date](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarDoubleTappedEventArgs.html#Syncfusion_Maui_Calendar_CalendarDoubleTappedEventArgs_Date) : Returns the double-tapped date.
     * [Element](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarDoubleTappedEventArgs.html#Syncfusion_Maui_Calendar_CalendarDoubleTappedEventArgs_Element) : Returns the double-tapped `Calendar` element.
-    * [WeekNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTappedEventArgs.html#Syncfusion_Maui_Calendar_CalendarTappedEventArgs_WeekNumber) : Returns the double-tapped `WeekNumber`.
+    * [WeekNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarDoubleTappedEventArgs.html#Syncfusion_Maui_Calendar_CalendarDoubleTappedEventArgs_WeekNumber) : Returns the double-tapped `WeekNumber`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -161,7 +161,7 @@ Whenever the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sc
 
     * [Date](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarLongPressedEventArgs.html#Syncfusion_Maui_Calendar_CalendarLongPressedEventArgs_Date) : Returns the long-pressed date.
     * [Element](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarLongPressedEventArgs.html#Syncfusion_Maui_Calendar_CalendarLongPressedEventArgs_Element) : Returns the long-pressed `Calendar` element.
-    * [WeekNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarTappedEventArgs.html#Syncfusion_Maui_Calendar_CalendarTappedEventArgs_WeekNumber) : Returns the long-pressed `WeekNumber`.
+    * [WeekNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarLongPressedEventArgs.html#Syncfusion_Maui_Calendar_CalendarLongPressedEventArgs_WeekNumber) : Returns the long-pressed `WeekNumber`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
