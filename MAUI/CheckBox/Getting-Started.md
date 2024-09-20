@@ -9,23 +9,43 @@ documentation: ug
 
 # Getting Started with .NET MAUI CheckBox
 
-This section explains the steps required to work with the [.NET MAUI CheckBox](https://www.syncfusion.com/maui-controls/maui-checkbox) control.
+This section guides you through setting up and configuring a [CheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) in your .NET MAUI application. Follow the steps below to add a basic CheckBox to your project.
 
-## Creating an application with .NET MAUI CheckBox
-
-This section explains the steps required to work with the [CheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control for .NET MAUI.
-
-To get start quickly with our .NET MAUI CheckBox, you can check the below video.
+To quickly get started with the .NET MAUI CheckBox, watch this video.
 
 {% youtube "https://www.youtube.com/watch?v=dgekGX8eYMo" %}
 
-## Adding a .NET MAUI CheckBox reference
+## Prerequisites
 
-Syncfusion .NET MAUI controls are available on [Nuget.org](https://www.nuget.org/). To add the [.NET MAUI CheckBox](https://www.syncfusion.com/maui-controls/maui-checkbox) to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Buttons](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.html), and install it.
+Before proceeding, ensure the following are set up:
+1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later is installed.
+2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or Visual Studio Code. For Visual Studio Code users, ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
 
-## Handler registration 
 
-In the MauiProgram.cs file, register the handler for the Syncfusion core.
+## Step 1: Create a New MAUI Project
+
+### Visual Studio
+
+1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
+1. Name the project and choose a location. Then, click **Next**.
+1. Select the .NET framework version and click **Create**.
+
+### Visual Studio Code
+
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+1. Choose the **.NET MAUI App** template.
+1. Select the project location, type the project name and press **Enter.**
+1. Then choose **Create project.**
+
+## Step 2: Install the Syncfusion MAUI Buttons NuGet Package
+
+1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+1. Search for [Syncfusion.Maui.Buttons](https://www.nuget.org/packages/Syncfusion.Maui.Buttons/) and install the latest version.
+1. Ensure the necessary dependencies are installed correctly, and the project is restored.
+
+## Step 3: Register the handler
+
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
 {% highlight c# hl_lines="6 17" %}
 
@@ -36,7 +56,7 @@ using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace ButtonSample
+namespace CheckBoxGettingStarted
 {
     public static class MauiProgram
     {
@@ -58,74 +78,51 @@ namespace ButtonSample
 
 {% endhighlight %}  
 
-## Create a Simple .NET MAUI SfCheckBox
 
-Step 1: Add the NuGet to the project as discussed in the above reference section. 
+## Step 4: Add a Basic SfCheckBox
 
-Step 2: Add the namespace as shown in the following code sample.
+1. To initialize the control, import the Buttons namespace into your code.
+1. Initialize [SfCheckBox](hhttps://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html).
 
 {% tabs %}
+
 {% highlight xaml %}
 
-    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
+<ContentPage
+    . . .    
+    xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
+   <buttons:SfCheckBox x:Name="checkBox"/>
+</ContentPage>
 
 {% endhighlight %}
+
 {% highlight c# %}
 
     using Syncfusion.Maui.Buttons;
-
-{% endhighlight %}
-{% endtabs %}
-
-Step 3: Set the control to content in `ContentPage`.
-
-{% tabs %}
-{% highlight xaml %}
-
-    <?xml version="1.0" encoding="utf-8" ?>
-    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                 xmlns:local="clr-namespace:GettingStarted"
-	             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"             
-	             x:Class="GettingStarted.MainPage">
-        <ContentPage.Content>
-            <StackLayout>
-                  <syncfusion:SfCheckBox x:Name="checkBox"/>
-            </StackLayout>
-        </ContentPage.Content>
-    </ContentPage>
-
-{% endhighlight %}
-{% highlight c# %}
-
-    using Syncfusion.Maui.Buttons;
-
-    namespace GettingStarted
+    namespace CheckBoxGettingStarted
     {
         public partial class MainPage : ContentPage
         {
             public MainPage()
             {
-                InitializeComponent();
-                StackLayout stackLayout = new StackLayout();
+                InitializeComponent();           
                 SfCheckBox checkBox = new SfCheckBox();
-                stackLayout.Children.Add(checkbox);
-                this.Content = stackLayout;
+                this.Content = checkBox;
             }
-        }
+        }   
     }
 
 {% endhighlight %}
 {% endtabs %}
 
-## Setting caption
+## Step 5: Set the CheckBox caption
 
-The check box caption can be defined using the [`Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_Text) property of [`SfCheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html). This caption typically describes the meaning of the check box and is displayed next to the check box.
+You can set the caption of the CheckBox using the [Text]((https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_Text)) property.This caption typically describes the meaning of the check box and is displayed next to the check box.
 
 {% tabs %}
 {% highlight xaml %}
 
-    <syncfusion:SfCheckBox x:Name="checkBox" IsChecked="True" Text="CheckBox"/>
+    <buttons:SfCheckBox x:Name="checkBox" IsChecked="True" Text="CheckBox"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -206,7 +203,7 @@ The check box can be used as a single or as a group. A single check box mostly u
 {% tabs %}
 {% highlight xaml %}
 
-    <syncfusion:SfCheckBox x:Name="checkBox" Text="I agree to the terms of services for this site" IsChecked="True"/> 
+    <buttons:SfCheckBox x:Name="checkBox" Text="I agree to the terms of services for this site" IsChecked="True"/> 
 
 {% endhighlight %}
 {% highlight c# %}
@@ -221,6 +218,7 @@ The check box can be used as a single or as a group. A single check box mostly u
 
 ![.NET MAUI CheckBox](Images/Getting-Started/termsandconditions.png)
 
+
 Multiple checkboxes can be used as a group for multi-select scenarios in which a user selects one or more items from the choices that are not mutually exclusive.
 
 {% tabs %}
@@ -228,10 +226,10 @@ Multiple checkboxes can be used as a group for multi-select scenarios in which a
 
     <StackLayout Padding="20">
         <Label x:Name="label" Text="Pizza Toppings" Margin="0,10"/>
-        <syncfusion:SfCheckBox x:Name="pepperoni" Text="Pepperoni"/>
-        <syncfusion:SfCheckBox x:Name="beef" Text="Beef" IsChecked="True"/>
-        <syncfusion:SfCheckBox x:Name="mushroom" Text="Mushrooms"/>
-        <syncfusion:SfCheckBox x:Name="onion" Text="Onions" IsChecked="True"/>
+        <buttons:SfCheckBox x:Name="pepperoni" Text="Pepperoni"/>
+        <buttons:SfCheckBox x:Name="beef" Text="Beef" IsChecked="True"/>
+        <buttons:SfCheckBox x:Name="mushroom" Text="Mushrooms"/>
+        <buttons:SfCheckBox x:Name="onion" Text="Onions" IsChecked="True"/>
     </StackLayout>
 
 {% endhighlight %}
@@ -276,11 +274,11 @@ The Intermediate state is used when a group of sub-choices has both checked and 
 
     <StackLayout Padding="20">
         <Label x:Name="label" Margin="10" Text="Pizza Toppings"/>
-        <syncfusion:SfCheckBox x:Name="selectAll" Text="Select All" StateChanged="SelectAll_StateChanged"/>
-        <syncfusion:SfCheckBox x:Name="pepperoni" Text="Pepperoni" StateChanged="CheckBox_StateChanged" Margin="30,0"/>
-        <syncfusion:SfCheckBox x:Name="beef" Text="Beef" IsChecked="True" StateChanged="CheckBox_StateChanged" Margin="30,0"/>
-        <syncfusion:SfCheckBox x:Name="mushroom" Text="Mushrooms" StateChanged="CheckBox_StateChanged" Margin="30,0"/>
-        <syncfusion:SfCheckBox x:Name="onion" Text="Onions" IsChecked="True" StateChanged="CheckBox_StateChanged" Margin="30,0"/>
+        <buttons:SfCheckBox x:Name="selectAll" Text="Select All" StateChanged="SelectAll_StateChanged"/>
+        <buttons:SfCheckBox x:Name="pepperoni" Text="Pepperoni" StateChanged="CheckBox_StateChanged" Margin="30,0"/>
+        <buttons:SfCheckBox x:Name="beef" Text="Beef" IsChecked="True" StateChanged="CheckBox_StateChanged" Margin="30,0"/>
+        <buttons:SfCheckBox x:Name="mushroom" Text="Mushrooms" StateChanged="CheckBox_StateChanged" Margin="30,0"/>
+        <buttons:SfCheckBox x:Name="onion" Text="Onions" IsChecked="True" StateChanged="CheckBox_StateChanged" Margin="30,0"/>
     </StackLayout>
 
 {% endhighlight %}
