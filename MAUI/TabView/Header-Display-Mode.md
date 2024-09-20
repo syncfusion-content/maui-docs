@@ -17,7 +17,7 @@ By default, the [.NET MAUI Tab View](https://help.syncfusion.com/cr/maui/Syncfus
 
 ![Image for HeaderDisplayMode](images/Header-Display-Mode.png)
 
-The Tab View can be changed by setting the `HeaderDisplayMode` property of [.NET MAUI Tab View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.html).
+The Tab View can be changed by setting the [HeaderDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_HeaderDisplayMode) property of [.NET MAUI Tab View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.html).
 
 {% tabs %}
 
@@ -60,5 +60,5 @@ tabView.Items.Add(tabItem3);
 
 {% endtabs %}
 
-N> The `HeaderDisplayMode` will only apply if both a [Header](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_Header) and an [ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_ImageSource) are provided for the Tab Item. If either the [Header](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_Header) or [ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_ImageSource) is missing, the Tab Item will automatically apply the Default mode.
+N> The [HeaderDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_HeaderDisplayMode) will only apply if both a [Header](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_Header) and an [ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_ImageSource) are provided for the Tab Item. If either the [Header](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_Header) or [ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_ImageSource) is missing, the Tab Item will automatically apply the Default mode.
 
