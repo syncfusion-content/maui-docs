@@ -42,7 +42,7 @@ Before proceeding, ensure the following are in place:
  2. Search for [Syncfusion.Maui.Chat](https://www.nuget.org/packages/Syncfusion.Maui.Chat) and install the latest version.
  3. Ensure the necessary dependencies are installed correctly, and the project is restored.
  
- ## Step 3: Register the handler
+## Step 3: Register the handler
 
 The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all the Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
 
