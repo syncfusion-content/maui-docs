@@ -36,7 +36,7 @@ Before proceeding, ensure the following are in place:
  3. Select the project location, type the project name and press Enter.
  4. Then choose **Create Project**.
  
- ## Step 2: Install the Syncfusion MAUI Expander NuGet Package
+## Step 2: Install the Syncfusion MAUI Expander NuGet Package
  
  1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
  2. Search for [Syncfusion.Maui.Expander](https://www.nuget.org/packages/Syncfusion.Maui.Expander) and install the latest version.
@@ -75,7 +75,7 @@ namespace GettingStarted
 {% endhighlight %} 
 {% endtabs %}
  
- ## Step 4: Add a Basic Accordion
+## Step 4: Add a Basic Accordion
  
  1. To initialize the control, import the `Syncfusion.Maui.Accordion` namespace into your code.
  2. Initialize [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html).
