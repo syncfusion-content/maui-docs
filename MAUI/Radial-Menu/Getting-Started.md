@@ -7,23 +7,44 @@ control: RadialMenu (SfRadialMenu)
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI RadialMenu Control (SfRadialMenu)
+# Getting Started with .NET MAUI Radial Menu
 
-This section provides a quick overview of how to get started with the [.NET MAUI RadialMenu control (SfRadialMenu)](https://www.syncfusion.com/maui-controls/maui-radial-menu) for .NET MAUI and a walk-through to configure the .NET MAUI RadialMenu control in a real-time scenario.
+This section guides you through setting up and configuring a [RadialMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.html) in your .NET MAUI application. Follow the steps below to add a basic [RadialMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.html) to your project.
 
-## Creating an Application using the .NET MAUI RadialMenu Control
+To quickly get started with the .NET MAUI Radial Menu, watch this video.
 
-1. Create a new .NET MAUI application in Visual Studio.
+{% youtube "https://www.youtube.com/watch?v=VxufXFzSh0M" %}
 
-2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add the [.NET MAUI RadialMenu]() to your project, open the NuGet package manager in Visual Studio, search for `Syncfusion.Maui.RadialMenu`, and then install it.
+## Prerequisites
 
-3. To initialize the control, import the control namespace `Syncfusion.Maui.RadialMenu` in XAML or C# code.
+Before proceeding, ensure the following are set up:
+1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later is installed.
+1. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or Visual Studio Code. For Visual Studio Code users, ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
 
-4. Initialize [SfRadialMenu](https://www.syncfusion.com/maui-controls/maui-radial-menu).
+## Step 1: Create a New MAUI Project
 
-## Register the handler
+### Visual Studio
 
-The [Syncfusion.Maui.Core](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.html) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
+1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
+1. Name the project and choose a location. Then, click **Next.**
+1. Select the .NET framework version and click **Create**.
+
+### Visual Studio Code
+
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+1. Choose the **.NET MAUI App** template.
+1. Select the project location, type the project name and press **Enter.**
+1. Then choose **Create project.**
+
+## Step 2: Install the Syncfusion MAUI RadialMenu NuGet Package
+
+1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+1. Search for [Syncfusion.Maui.RadialMenu](https://www.nuget.org/packages/Syncfusion.Maui.RadialMenu/) and install the latest version.
+1. Ensure the necessary dependencies are installed correctly, and the project is restored.
+
+## Step 3: Register the handler
+
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
 
 {% tabs %}
 {% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 8" %}
@@ -50,95 +71,71 @@ The [Syncfusion.Maui.Core](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.C
 
 {% endhighlight %}
 {% endtabs %}
+l
+## Step 4:  Add a RadialMenu
 
-## Create a Simple .NET MAUI SfRadialMenu
-
-Step 1: Add the NuGet to the project as discussed in the above reference section. 
-
-Step 2: Add the namespace as shown in the following code sample.
+1. To initialize the control, import the RadialMenu namespace into your code.
+1. Initialize [RadialMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.html)
 
 {% tabs %}
 {% highlight xaml %}
+<ContentPage
+    . . .    
+    xmlns:radialMenu="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu">
+    <StackLayout>
+        <radialMenu:SfRadialMenu />
+    </StackLayout>
+</ContentPage>
 
-    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
+    
 
 {% endhighlight %}
 {% highlight c# %}
 
-    using Syncfusion.Maui.RadialMenu;
-
-{% endhighlight %}
-{% endtabs %}
-
-Step 3: Set the control to content in `ContentPage`.
-
-{% tabs %}
-{% highlight xaml %}
-
-    <?xml version="1.0" encoding="utf-8">
-    <ContentPage    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                    xmlns:local="clr-namespace:GettingStarted"
-	                xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu" 
-	                x:Class="GettingStarted.MainPage">
-        <ContentPage.Content>
-            <StackLayout>
-                <syncfusion:SfRadialMenu x:Name="syncfusion"/>        
-            </StackLayout>
-        </ContentPage.Content>
-     </ContentPage>
-
-{% endhighlight %}
-{% highlight c# %}
-
-    using Syncfusion.Maui.RadialMenu;
-
-    namespace GettingStarted
+using Syncfusion.Maui.RadialMenu;
+namespace RadialMenuGettingStarted
+{
+    public partial class MainPage : ContentPage
     {
-        public partial class MainPage : ContentPage
+        public MainPage()
         {
-            public MainPage()
-            {
-                InitializeComponent();
-                StackLayout stackLayout = new StackLayout();
-                SfRadialMenu radialMenu = new SfRadialMenu();
-                stackLayout.Children.Add(syncfusion);
-                this.Content = radialMenu;
-            }
+            InitializeComponent();           
+            StackLayout stackLayout = new StackLayout();
+            SfRadialMenu radialMenu = new SfRadialMenu();
+            stackLayout.Children.Add(radialMenu);
+            this.Content = stackLayout;
         }
-    }
+    }   
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-### Adding radial menu with items
+## Step 5:  Adding radial menu with items
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:RadialSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu" 
-             x:Class="RadialSample.MainPage">
-    <syncfusion:SfRadialMenu x:Name="radialMenu" 
-                             CenterButtonText="Edit"
-                             CenterButtonFontSize="15">
-        <syncfusion:SfRadialMenu.Items>
-            <syncfusion:SfRadialMenuItem Text="Cut"
-                                         FontSize="15"/>
-            <syncfusion:SfRadialMenuItem Text="Copy"
-                                         FontSize="15"/>
-            <syncfusion:SfRadialMenuItem Text="Paste"
-                                         FontSize="15"/>
-            <syncfusion:SfRadialMenuItem Text="Crop"
-                                         FontSize="15"/>
-            <syncfusion:SfRadialMenuItem Text="Paint"
-                                         FontSize="15"/>
-        </syncfusion:SfRadialMenu.Items>
-    </syncfusion:SfRadialMenu>
+<ContentPage 
+            ...
+             xmlns:radialMenu="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu">
+        <radialMenu:SfRadialMenu x:Name="radialMenu" 
+                                CenterButtonText="Edit"
+                                CenterButtonFontSize="15">
+            <radialMenu:SfRadialMenu.Items>
+                <radialMenu:SfRadialMenuItem Text="Cut"
+                                            FontSize="15"/>
+                <radialMenu:SfRadialMenuItem Text="Copy"
+                                            FontSize="15"/>
+                <radialMenu:SfRadialMenuItem Text="Paste"
+                                            FontSize="15"/>
+                <radialMenu:SfRadialMenuItem Text="Crop"
+                                            FontSize="15"/>
+                <radialMenu:SfRadialMenuItem Text="Paint"
+                                            FontSize="15"/>
+            </radialMenu:SfRadialMenu.Items>
+        </radialMenu:SfRadialMenu>
 </ContentPage>
 
 {% endhighlight %}
@@ -147,7 +144,7 @@ Step 3: Set the control to content in `ContentPage`.
 
 using Syncfusion.Maui.RadialMenu;
 
-namespace RadialSample
+namespace RadialMenuGettingStarted
 {
     public partial class MainPage : ContentPage
     {
