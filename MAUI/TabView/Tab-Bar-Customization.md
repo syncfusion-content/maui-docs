@@ -71,7 +71,7 @@ N> It is recommended to set the TabBarHeight as 72 while displaying the image an
 
 ## Customize the tab header text alignment
 
-The horizontal text alignment of the tab header can be customized by setting the `HeaderHorizontalTextAlignment` property. The default value is Center. This property accepts the following values:
+The horizontal text alignment of the tab header can be customized by setting the [HeaderHorizontalTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_HeaderHorizontalTextAlignment) property. The default value is Center. This property accepts the following values:
 
 *   **Start** - The text will be placed at the starting position in the header tab.
 *   **Center** - The text will be placed at the center of the header tab.
