@@ -36,7 +36,7 @@ Before proceeding, ensure the following are in place:
  3. Select the project location, type the project name and press Enter.
  4. Then choose **Create Project**.
  
- ## Step 2: Install the Syncfusion MAUI ListView NuGet Package
+## Step 2: Install the Syncfusion MAUI ListView NuGet Package
  
  1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
  2. Search for [Syncfusion.Maui.ListView](https://www.nuget.org/packages/Syncfusion.Maui.ListView) and install the latest version.
@@ -76,7 +76,7 @@ namespace GettingStarted
 {% endtabs %}
 
  
- ## Step 4: Add a Basic ListView
+## Step 4: Add a Basic ListView
  
  1. To initialize the control, import the `Syncfusion.Maui.ListView` namespace into your code.
  2. Initialize [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html).

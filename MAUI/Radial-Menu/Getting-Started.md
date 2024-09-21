@@ -49,7 +49,6 @@ Before proceeding, ensure the following are set up:
 {% tabs %}
 {% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 8" %}
 
-    
     using Syncfusion.Maui.Core.Hosting;
     public static class MauiProgram
     {
