@@ -82,7 +82,7 @@ namespace CheckBoxGettingStarted
 ## Step 4: Add a Basic SfCheckBox
 
 1. To initialize the control, import the Buttons namespace into your code.
-1. Initialize [SfCheckBox](hhttps://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html).
+1. Initialize [SfCheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html).
 
 {% tabs %}
 
@@ -117,7 +117,7 @@ namespace CheckBoxGettingStarted
 
 ## Step 5: Set the CheckBox caption
 
-You can set the caption of the CheckBox using the [Text]((https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_Text)) property.This caption typically describes the meaning of the check box and is displayed next to the check box.
+You can set the caption of the CheckBox using the [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_Text) property.This caption typically describes the meaning of the check box and is displayed next to the check box.
 
 {% tabs %}
 {% highlight xaml %}
