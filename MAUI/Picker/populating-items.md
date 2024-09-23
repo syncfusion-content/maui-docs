@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Populating with .NET MAUI Picker Control | Syncfusion
-description: Learn here all about populating items with Syncfusion .NET MAUI Picker (SfPicker) control.
+description: Learn here all about populating items with Syncfusion .NET MAUI Picker (SfPicker) control and its basic features.
 platform: maui
 control: SfPicker
 documentation: ug
@@ -16,7 +16,7 @@ Set the [ItemSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-    <sfPicker:SfPicker x:Name="Picker">
+    <sfPicker:SfPicker x:Name="picker">
     </sfPicker:SfPicker>
 
 {% endhighlight %}
@@ -40,7 +40,7 @@ Set the [ItemSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.
         ItemsSource = cityName,
         SelectedIndex = 1,
     };
-    this.Picker.Columns.Add(pickerColumn);
+    this.picker.Columns.Add(pickerColumn);
 
 {% endhighlight %}
 {% endtabs %}
@@ -53,12 +53,12 @@ The picker populates the items as Multi-column based on the columns value.
 
 Collection of items can be created and assigned to a Collection based on index value, and each index is a column of picker.
 
-The following code example encapsulate how to populate Country and Cityes in each column of picker.
+The following code example encapsulate how to populate Country and Cities in each column of picker.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-    <sfPicker:SfPicker x:Name="Picker">
+    <sfPicker:SfPicker x:Name="picker">
     </sfPicker:SfPicker>
 
 {% endhighlight %}
@@ -99,8 +99,8 @@ The following code example encapsulate how to populate Country and Cityes in eac
         ItemsSource = cityName,
         SelectedIndex = 1,
     };
-    this.Picker.Columns.Add(countryColumn);
-    this.Picker.Columns.Add(cityColumn);
+    this.picker.Columns.Add(countryColumn);
+    this.picker.Columns.Add(cityColumn);
 
 {% endhighlight %}
 {% endtabs %}
@@ -120,7 +120,7 @@ The selected item [SelectedTextStyle](https://help.syncfusion.com/cr/maui/Syncfu
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
 
-    <sfPicker:SfPicker x:Name="Picker">
+    <sfPicker:SfPicker x:Name="picker">
         <sfPicker:SfPicker.SelectedTextStyle>
             <sfPicker:PickerTextStyle FontSize="16" FontAttributes="Bold" TextColor="White">
             </sfPicker:PickerTextStyle>
@@ -130,9 +130,9 @@ The selected item [SelectedTextStyle](https://help.syncfusion.com/cr/maui/Syncfu
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 
-    this.Picker.SelectedTextStyle.FontSize = 16;
-    this.Picker.SelectedTextStyle.FontAttributes = FontAttributes.Bold;
-    this.Picker.SelectedTextStyle.TextColor = Colors.White;
+    this.picker.SelectedTextStyle.FontSize = 16;
+    this.picker.SelectedTextStyle.FontAttributes = FontAttributes.Bold;
+    this.picker.SelectedTextStyle.TextColor = Colors.White;
 
 {% endhighlight %}
 {% endtabs %}
@@ -146,7 +146,7 @@ The unselected item [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.M
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
 
-    <sfPicker:SfPicker x:Name="Picker">
+    <sfPicker:SfPicker x:Name="picker">
         <sfPicker:SfPicker.TextStyle>
             <sfPicker:PickerTextStyle FontSize="16" FontAttributes="Italic" TextColor="Black">
             </sfPicker:PickerTextStyle>
@@ -156,9 +156,9 @@ The unselected item [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.M
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 
-    this.Picker.TextStyle.FontSize = 16;
-    this.Picker.TextStyle.FontAttributes = FontAttributes.Italic;
-    this.Picker.TextStyle.TextColor = Colors.Black;
+    this.picker.TextStyle.FontSize = 16;
+    this.picker.TextStyle.FontAttributes = FontAttributes.Italic;
+    this.picker.TextStyle.TextColor = Colors.Black;
 
 {% endhighlight %}
 {% endtabs %}
@@ -180,7 +180,7 @@ In picker control, the items can be customized with a custom view of all items b
                 </Grid>
             </DataTemplate>
         </Grid.Resources>
-    <sfPicker:SfPicker x:Name="Picker" ItemTemplate="{StaticResource customView}">
+    <sfPicker:SfPicker x:Name="picker" ItemTemplate="{StaticResource customView}">
     </sfPicker:SfPicker>
     </Grid>
 
@@ -208,7 +208,7 @@ In picker control, the items can be customized with a custom view of all items b
         return grid;
     });
     
-    this.Picker.ItemTemplate = customView;
+    this.picker.ItemTemplate = customView;
 
 {% endhighlight %}
 {% endtabs %}

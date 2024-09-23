@@ -11,12 +11,12 @@ documentation: ug
 
 ## Minimum Time
 
-The time picker provides an option to restrict the selection of time items using the [MinimumTime]() property. This ensures that times beyond the specified minimum time range cannot be selected. The `MinimumTime` value must be less than the `MaximumTime` value. When setting the minimum time, only the hour and minute components are considered.
+The time picker provides an option to restrict the selection of time items using the [MinimumTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_MinimumTime) property. This ensures that times beyond the specified minimum time range cannot be selected. The `MinimumTime` value must be less than the `MaximumTime` value. When setting the minimum time, only the hour and minute components are considered.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfTimePicker x:Name="Picker"
+<picker:SfTimePicker x:Name="picker"
                      MinimumTime="7:40:0">
 </picker:SfTimePicker>
 
@@ -34,12 +34,12 @@ this.Content = picker;
 
 ## Maximum Time
 
-The time picker provides an option to restrict the selection of time items using the [MaximumTime]() property. This ensures that times beyond the specified minimum time range cannot be selected. The `MaximumTime` value must be higher than the `MinimumTime` value. When setting the minimum time, only the hour and minute components are considered.
+The time picker provides an option to restrict the selection of time items using the [MaximumTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_MaximumTime) property. This ensures that times beyond the specified minimum time range cannot be selected. The `MaximumTime` value must be higher than the `MinimumTime` value. When setting the minimum time, only the hour and minute components are considered.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfTimePicker x:Name="Picker"
+<picker:SfTimePicker x:Name="picker"
                      MaximumTime="20:15:0">
 </picker:SfTimePicker>
 

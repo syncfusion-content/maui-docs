@@ -18,7 +18,7 @@ The `Single` selection can be performed in the Calendar by setting the `Calendar
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                         View="Month"
                         SelectionMode="Single">
 </calendar:SfCalendar>
@@ -26,7 +26,7 @@ The `Single` selection can be performed in the Calendar by setting the `Calendar
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.SelectionMode = CalendarSelectionMode.Single;
+this.calendar.SelectionMode = CalendarSelectionMode.Single;
 
 {% endhighlight %}
 {% endtabs %}
@@ -48,7 +48,7 @@ The `Multiple` selection can be performed in the Calendar by setting the `Calend
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                         View="Month"
                         SelectionMode="Multiple">
 </calendar:SfCalendar>
@@ -56,7 +56,7 @@ The `Multiple` selection can be performed in the Calendar by setting the `Calend
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.SelectionMode = CalendarSelectionMode.Multiple;
+this.calendar.SelectionMode = CalendarSelectionMode.Multiple;
 
 {% endhighlight %}
 {% endtabs %}
@@ -70,7 +70,7 @@ The `Range` selection can be performed in the Calendar by setting the `CalendarS
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                         View="Month"
                         SelectionMode="Range">
 </calendar:SfCalendar>
@@ -78,7 +78,7 @@ The `Range` selection can be performed in the Calendar by setting the `CalendarS
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.SelectionMode = CalendarSelectionMode.Range;
+this.calendar.SelectionMode = CalendarSelectionMode.Range;
 
 {% endhighlight %}
 {% endtabs %}
@@ -102,7 +102,7 @@ If you set the `RangeSelectionDirection` property to `Forward`, you can select o
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                         View="Month"
                         SelectionMode="Range"
                         RangeSelectionDirection="Forward">
@@ -111,8 +111,8 @@ If you set the `RangeSelectionDirection` property to `Forward`, you can select o
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.SelectionMode = CalendarSelectionMode.Range;
-this.Calendar.RangeSelectionDirection = CalendarRangeSelectionDirection.Forward;
+this.calendar.SelectionMode = CalendarSelectionMode.Range;
+this.calendar.RangeSelectionDirection = CalendarRangeSelectionDirection.Forward;
 
 {% endhighlight %}
 {% endtabs %}
@@ -125,7 +125,7 @@ If you set the `RangeSelectionDirection` property to `Backward`, you can select 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                         View="Month"
                         SelectionMode="Range"
                         RangeSelectionDirection="Backward">
@@ -134,8 +134,8 @@ If you set the `RangeSelectionDirection` property to `Backward`, you can select 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.SelectionMode = CalendarSelectionMode.Range;
-this.Calendar.RangeSelectionDirection = CalendarRangeSelectionDirection.Backward;
+this.calendar.SelectionMode = CalendarSelectionMode.Range;
+this.calendar.RangeSelectionDirection = CalendarRangeSelectionDirection.Backward;
 
 {% endhighlight %}
 {% endtabs %}
@@ -148,7 +148,7 @@ If you set the `RangeSelectionDirection` property to `Both`, you can extend the 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                         View="Month"
                         SelectionMode="Range"
                         RangeSelectionDirection="Both">
@@ -157,8 +157,8 @@ If you set the `RangeSelectionDirection` property to `Both`, you can extend the 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.SelectionMode = CalendarSelectionMode.Range;
-this.Calendar.RangeSelectionDirection = CalendarRangeSelectionDirection.Both;
+this.calendar.SelectionMode = CalendarSelectionMode.Range;
+this.calendar.RangeSelectionDirection = CalendarRangeSelectionDirection.Both;
 
 {% endhighlight %}
 {% endtabs %}
@@ -171,7 +171,7 @@ If you set the `RangeSelectionDirection` property to `None`, you can select only
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                         View="Month"
                         SelectionMode="Range"
                         RangeSelectionDirection="None">
@@ -180,8 +180,8 @@ If you set the `RangeSelectionDirection` property to `None`, you can select only
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.SelectionMode = CalendarSelectionMode.Range;
-this.Calendar.RangeSelectionDirection = CalendarRangeSelectionDirection.None;
+this.calendar.SelectionMode = CalendarSelectionMode.Range;
+this.calendar.RangeSelectionDirection = CalendarRangeSelectionDirection.None;
 
 {% endhighlight %}
 {% endtabs %}
@@ -194,7 +194,7 @@ The `MultiRange` selection can be performed in the Calendar by setting the `Cale
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                         View="Month"
                         SelectionMode="MultiRange">
 </calendar:SfCalendar>
@@ -202,7 +202,7 @@ The `MultiRange` selection can be performed in the Calendar by setting the `Cale
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.SelectionMode = CalendarSelectionMode.MultiRange;
+this.calendar.SelectionMode = CalendarSelectionMode.MultiRange;
 
 {% endhighlight %}
 {% endtabs %}
@@ -215,7 +215,7 @@ The Selected date will render based on the `SelectionShape` property. The defaul
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar"
+<calendar:SfCalendar  x:Name="calendar"
                       View="Month"
                       SelectionShape="Rectangle">
 </calendar:SfCalendar>
@@ -223,7 +223,7 @@ The Selected date will render based on the `SelectionShape` property. The defaul
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.SelectionShape = CalendarSelectionShape.Rectangle;
+this.calendar.SelectionShape = CalendarSelectionShape.Rectangle;
 
 {% endhighlight %}
 {% endtabs %}
@@ -236,7 +236,7 @@ You can select the dates by swiping using the `EnableSwipeSelection` property. B
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar"
+<calendar:SfCalendar  x:Name="calendar"
                       View="Month"
                       EnableSwipeSelection="true">
 </calendar:SfCalendar>
@@ -244,7 +244,7 @@ You can select the dates by swiping using the `EnableSwipeSelection` property. B
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.EnableSwipeSelection = true;
+this.calendar.EnableSwipeSelection = true;
 
 {% endhighlight %}
 {% endtabs %}
@@ -255,7 +255,7 @@ You can deselect the date by using the `CanToggleDaySelection` property. By defa
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar"
+<calendar:SfCalendar  x:Name="calendar"
                       View="Month"
                       CanToggleDaySelection="true">
 </calendar:SfCalendar>
@@ -263,7 +263,7 @@ You can deselect the date by using the `CanToggleDaySelection` property. By defa
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.CanToggleDaySelection = true;
+this.calendar.CanToggleDaySelection = true;
 
 {% endhighlight %}
 {% endtabs %}

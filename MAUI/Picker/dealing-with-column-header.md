@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Column header with .NET MAUI Picker Control | Syncfusion
-description: Learn here all about column header with Syncfusion .NET MAUI Picker (SfPicker) control.
+description: Learn here all about column header with Syncfusion .NET MAUI Picker (SfPicker) control and its basic features.
 platform: maui
 control: SfPicker
 documentation: ug
@@ -18,7 +18,7 @@ The SfPicker enables or disables the column header section by setting the SfPick
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
 
-    <sfPicker:SfPicker x:Name="Picker">
+    <sfPicker:SfPicker x:Name="picker">
         <sfPicker:SfPicker.ColumnHeaderView>
             <sfPicker:PickerColumnHeaderView Height="40"/>
         </sfPicker:SfPicker.ColumnHeaderView>
@@ -27,7 +27,7 @@ The SfPicker enables or disables the column header section by setting the SfPick
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 
-    this.Picker.ColumnHeaderView.Height= 40;
+    this.picker.ColumnHeaderView.Height= 40;
 
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +45,7 @@ The column header [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
 
-    <sfPicker:SfPicker x:Name="Picker">
+    <sfPicker:SfPicker x:Name="picker">
         <sfPicker:SfPicker.ColumnHeaderView>
             <sfPicker:PickerColumnHeaderView Background="#E5E4E2"/>
         </sfPicker:SfPicker.ColumnHeaderView>
@@ -54,7 +54,7 @@ The column header [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 
-    this.Picker.ColumnHeaderView.Background = Color.FromArgb("#E5E4E2"),
+    this.picker.ColumnHeaderView.Background = Color.FromArgb("#E5E4E2"),
 
 {% endhighlight %}
 {% endtabs %}
@@ -68,7 +68,7 @@ The .NET MAUI Picker control and column header [TextStyle](https://help.syncfusi
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
 
-    <sfPicker:SfPicker x:Name="Picker">
+    <sfPicker:SfPicker x:Name="picker">
       <sfPicker:SfPicker.ColumnHeaderView>
           <sfPicker:PickerColumnHeaderView>
               <sfPicker:PickerColumnHeaderView.TextStyle>
@@ -83,7 +83,7 @@ The .NET MAUI Picker control and column header [TextStyle](https://help.syncfusi
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 
-    this.Picker.ColumnHeaderView.TextStyle = new PickerTextStyle()
+    this.picker.ColumnHeaderView.TextStyle = new PickerTextStyle()
     {
         TextColor = Colors.Gray,
         FontSize = 18,
@@ -102,7 +102,7 @@ The .NET MAUI Picker control, Separator line background customized by setting `S
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
 
-    <sfPicker:SfPicker x:Name="Picker">
+    <sfPicker:SfPicker x:Name="picker">
         <sfPicker:SfPicker.ColumnHeaderView>
             <sfPicker:PickerColumnHeaderView DividerColor="Red"/>
         </sfPicker:SfPicker.ColumnHeaderView>
@@ -111,7 +111,7 @@ The .NET MAUI Picker control, Separator line background customized by setting `S
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 
-    this.Picker.ColumnHeaderView.DividerColor = Colors.Red;
+    this.picker.ColumnHeaderView.DividerColor = Colors.Red;
 
 {% endhighlight %}
 {% endtabs %}

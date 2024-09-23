@@ -17,14 +17,14 @@ The Month view displays the current month days, and usually a few days of previo
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                         View="Month">
 </calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.View = CalendarView.Month;
+this.calendar.View = CalendarView.Month;
 
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +39,7 @@ The following code explains how to show the Calendar month view with `NumberOfVi
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar"
+<calendar:SfCalendar  x:Name="calendar"
                       View="Month">
                       <Calendar:SfCalendar.MonthView>
                         <Calendar:CalendarMonthView NumberOfVisibleWeeks = 3/>
@@ -49,7 +49,7 @@ The following code explains how to show the Calendar month view with `NumberOfVi
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.MonthView.NumberOfVisibleWeeks = 3;
+this.calendar.MonthView.NumberOfVisibleWeeks = 3;
 
 {% endhighlight %}
 {% endtabs %}
@@ -62,7 +62,7 @@ By setting the `ShowWeekNumber` property, it displays the week number for the cu
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar" View="Month"> 
+<calendar:SfCalendar  x:Name="calendar" View="Month"> 
                       <Calendar:SfCalendar.MonthView>
                         <Calendar:CalendarMonthView ShowWeekNumber="True"/>
                       </Calendar:SfCalendar.MonthView>>
@@ -71,7 +71,7 @@ By setting the `ShowWeekNumber` property, it displays the week number for the cu
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.MonthView.ShowWeekNumber = true;
+this.calendar.MonthView.ShowWeekNumber = true;
 
 {% endhighlight %}
 {% endtabs %}
@@ -85,7 +85,7 @@ Week number Background and TextStyle can be customized in the month view. Backgr
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar"  View="Month">
+<calendar:SfCalendar  x:Name="calendar"  View="Month">
             <Calendar:SfCalendar.MonthView>
                 <Calendar:CalendarMonthView ShowWeekNumber="True">
                     <Calendar:CalendarMonthView.WeekNumberStyle>
@@ -108,7 +108,7 @@ CalendarTextStyle textStyle = new CalendarTextStyle()
     FontSize = 12,
 };
 
-this.Calendar.MonthView = new CalendarMonthView()
+this.calendar.MonthView = new CalendarMonthView()
 {
     ShowWeekNumber = true,
     WeekNumberStyle = new CalendarWeekNumberStyle()
@@ -130,14 +130,14 @@ The Year view displays the current year's month. A calendar year is a one-year p
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                         View="Year">
 </calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.View = CalendarView.Year;
+this.calendar.View = CalendarView.Year;
 
 {% endhighlight %}
 {% endtabs %}
@@ -150,14 +150,14 @@ The Decade view shows the period of ten years and some years ahead. By default, 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                         View="Decade">
 </calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.View = CalendarView.Deacde;
+this.calendar.View = CalendarView.Deacde;
 
 {% endhighlight %}
 {% endtabs %}
@@ -170,14 +170,14 @@ The Century view displays the period of hundred years and some years ahead. By d
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                         View="Century">
 </calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.View = CalendarView.Century;
+this.calendar.View = CalendarView.Century;
 
 {% endhighlight %}
 {% endtabs %}

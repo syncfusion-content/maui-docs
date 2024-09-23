@@ -27,7 +27,7 @@ The background of the [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="FillAndExpand" Type="CirclePersona"
+<shimmer:SfShimmer x:Name="shimmer" VerticalOptions="FillAndExpand" Type="CirclePersona"
                    Fill="#89CFF0">
    <StackLayout>
       <Label 
@@ -63,7 +63,7 @@ The wave color in the [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="FillAndExpand" Type="CirclePersona"
+<shimmer:SfShimmer x:Name="shimmer" VerticalOptions="FillAndExpand" Type="CirclePersona"
                    WaveColor="#89CFF0">
    <StackLayout>
       <Label 
@@ -99,7 +99,7 @@ The width of the wave in the [SfShimmer](https://help.syncfusion.com/cr/maui/Syn
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
 
-<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="FillAndExpand" Type="CirclePersona"
+<shimmer:SfShimmer x:Name="shimmer" VerticalOptions="FillAndExpand" Type="CirclePersona"
                    WaveColor="#89CFF0"  
                    WaveWidth="50">
    <StackLayout>
@@ -143,7 +143,7 @@ The direction of the wave in the [SfShimmer](https://help.syncfusion.com/cr/maui
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="FillAndExpand" Type="CirclePersona" 
+<shimmer:SfShimmer x:Name="shimmer" VerticalOptions="FillAndExpand" Type="CirclePersona" 
                    WaveDirection="RightToLeft">
    <StackLayout>
       <Label 
@@ -179,7 +179,7 @@ The `RepeatCount` of the shimmer defines the number of the times the shimmer sha
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="FillAndExpand" Type="CirclePersona" 
+<shimmer:SfShimmer x:Name="shimmer" VerticalOptions="FillAndExpand" Type="CirclePersona" 
                    RepeatCount="3">
    <StackLayout>
       <Label 
@@ -215,7 +215,7 @@ The duration of the animation in the [SfShimmer](https://help.syncfusion.com/cr/
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="FillAndExpand" Type="CirclePersona" 
+<shimmer:SfShimmer x:Name="shimmer" VerticalOptions="FillAndExpand" Type="CirclePersona" 
                    AnimationDuration="3000">
    <StackLayout>
       <Label 

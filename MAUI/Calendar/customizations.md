@@ -26,7 +26,7 @@ You can customize the calendar month view cell by using the `MonthView` property
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                         View="Month"
                         Background="PaleGreen">
             <Calendar:SfCalendar.MonthView>
@@ -44,10 +44,10 @@ You can customize the calendar month view cell by using the `MonthView` property
             FontSize = 12,
         };
 
-        this.Calendar.MinimumDate = DateTime.Now.AddDays(-15);
-        this.Calendar.MaximumDate = DateTime.Now.AddDays(20);
-        this.Calendar.EnablePastDates = true;
-        this.Calendar.SelectableDayPredicate = (date) =>
+        this.calendar.MinimumDate = DateTime.Now.AddDays(-15);
+        this.calendar.MaximumDate = DateTime.Now.AddDays(20);
+        this.calendar.EnablePastDates = true;
+        this.calendar.SelectableDayPredicate = (date) =>
         {
             if (date.Date == DateTime.Now.AddDays(3).Date || date.Date == DateTime.Now.AddDays(6).Date || date.Date == DateTime.Now.AddDays(-3).Date || date.Date == DateTime.Now.AddDays(-6).Date)
             {
@@ -58,7 +58,7 @@ You can customize the calendar month view cell by using the `MonthView` property
         };
 
         this.calendar.Background = Colors.PaleGreen.WithAlpha(0.3f);
-        this.Calendar.ShowTrailingAndLeadingDates = true;
+        this.calendar.ShowTrailingAndLeadingDates = true;
         this.calendar.MonthView = new CalendarMonthView()
         {
             WeekendDays = new List<DayOfWeek>
@@ -90,13 +90,13 @@ You can customize the calendar month view cell by using the `MonthView` property
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar"  View="Month">
+<calendar:SfCalendar  x:Name="calendar"  View="Month">
 </calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.MonthView.SpecialDayPredicate = (date) =>
+this.calendar.MonthView.SpecialDayPredicate = (date) =>
 {
     if (date.Date == DateTime.Now.AddDays(2).Date)
     {
@@ -173,7 +173,7 @@ You can customize the calendar `year`, `decade`, and `century` views by using th
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                         View="Decade"
                         Background="PaleGreen">
             <Calendar:SfCalendar.YearView>
@@ -190,10 +190,10 @@ You can customize the calendar `year`, `decade`, and `century` views by using th
             FontSize = 12,
         };
 
-        this.Calendar.View = CalendarView.Decade;
-        this.Calendar.MinimumDate = DateTime.Now.AddYears(-1);
-        this.Calendar.MaximumDate = DateTime.Now.AddYears(8);
-        this.Calendar.EnablePastDates = false;
+        this.calendar.View = CalendarView.Decade;
+        this.calendar.MinimumDate = DateTime.Now.AddYears(-1);
+        this.calendar.MaximumDate = DateTime.Now.AddYears(8);
+        this.calendar.EnablePastDates = false;
         this.calendar.Background = Colors.PaleGreen.WithAlpha(0.3f);
         this.calendar.ShowTrailingAndLeadingDates = true;
         this.calendar.YearView = new CalendarYearView()
@@ -221,7 +221,7 @@ You can customize the month format of the `Calendar` by using the [MonthFormat](
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                       View="Year">
             <Calendar:SfCalendar.YearView>
                 <Calendar:CalendarYearView MonthFormat="MMMM" />
@@ -231,7 +231,7 @@ You can customize the month format of the `Calendar` by using the [MonthFormat](
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.YearView = new CalendarYearView()
+this.calendar.YearView = new CalendarYearView()
 {
     MonthFormat = "MMMM",
 };
@@ -258,7 +258,7 @@ You can customize the selection cell background and text style in Month, Year, D
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                       View="Month"
                       Background="PaleGreen"
                       StartRangeSelectionBackground="Purple" EndRangeSelectionBackground="Purple" SelectionBackground="Pink">
@@ -273,14 +273,14 @@ You can customize the selection cell background and text style in Month, Year, D
             FontSize = 12,
         };
 
-        this.Calendar.SelectedDateRange = new CalendarDateRange(DateTime.Now.AddDays(6).Date, DateTime.Now.AddDays(17).Date);
-        this.Calendar.View = CalendarView.Month;
-        this.Calendar.SelectionMode = CalendarSelectionMode.Range;
-        this.Calendar.StartRangeSelectionBackground = Colors.Purple;
-        this.Calendar.EndRangeSelectionBackground = Colors.Purple;
-        this.Calendar.SelectionBackground = Colors.Pink;
-        this.Calendar.MonthView.SelectionTextStyle = textStyle;
-        this.Calendar.MonthView.RangeTextStyle = textStyle;
+        this.calendar.SelectedDateRange = new CalendarDateRange(DateTime.Now.AddDays(6).Date, DateTime.Now.AddDays(17).Date);
+        this.calendar.View = CalendarView.Month;
+        this.calendar.SelectionMode = CalendarSelectionMode.Range;
+        this.calendar.StartRangeSelectionBackground = Colors.Purple;
+        this.calendar.EndRangeSelectionBackground = Colors.Purple;
+        this.calendar.SelectionBackground = Colors.Pink;
+        this.calendar.MonthView.SelectionTextStyle = textStyle;
+        this.calendar.MonthView.RangeTextStyle = textStyle;
 
 {% endhighlight %}
 {% endtabs %}
@@ -296,7 +296,7 @@ The month cell appearance can be customized using the [CellTemplate](https://hel
 
 <Grid>
     <Frame IsVisible="True" x:Name="frame" Background="White" HasShadow="False" CornerRadius="10"  HorizontalOptions="Center" VerticalOptions="Center" Margin="0" Padding="5">
-        <calendar:SfCalendar x:Name="Calendar"
+        <calendar:SfCalendar x:Name="calendar"
                                 ShowTrailingAndLeadingDates="False"
                                 NavigationDirection="Horizontal"
                                 TodayHighlightBrush="#0A3A74"
@@ -425,7 +425,7 @@ You can customize the month cell appearance using the [CellTemplate](https://hel
                                          NormalDateTemplate="{StaticResource normalDateTemplate}" 
                                          LeadingTrailingDateTemplate="{StaticResource leadingTraililngDateTemplate}"/>
     </Grid.Resources>
-    <calendar:SfCalendar x:Name="Calendar" 
+    <calendar:SfCalendar x:Name="calendar" 
                         View="Month" >
         <calendar:SfCalendar.MonthView>
             <calendar:CalendarMonthView CellTemplate="{StaticResource monthCellTemplateSelector}" />
@@ -460,7 +460,7 @@ public class MonthCellTemplateSelector : DataTemplateSelector
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.View = CalendarView.Month;
+this.calendar.View = CalendarView.Month;
 
 {% endhighlight %}
 {% endtabs %}
@@ -476,7 +476,7 @@ The year cell appearance can be customized using the [CellTemplate](https://help
 
 <Grid>
     <Frame IsVisible="True" x:Name="frame" Background="White" HasShadow="False" CornerRadius="10"  HorizontalOptions="Center" VerticalOptions="Center" Margin="0" Padding="5">
-        <calendar:SfCalendar x:Name="Calendar"
+        <calendar:SfCalendar x:Name="calendar"
                                 View="Decade"
                                 ShowTrailingAndLeadingDates="False"
                                 NavigationDirection="Horizontal"
@@ -603,7 +603,7 @@ You can customize the year cell appearance by using the [CellTemplate](https://h
                                          NormalDateTemplate="{StaticResource normalDateTemplate}" 
                                          LeadingDateTemplate="{StaticResource leadingDateTemplate}"/>
     </Grid.Resources>
-    <calendar:SfCalendar x:Name="Calendar" 
+    <calendar:SfCalendar x:Name="calendar" 
                         View="Decade" >
         <calendar:SfCalendar.YearView>
             <calendar:CalendarYearView CellTemplate="{StaticResource yearCellTemplateSelector}" />
@@ -638,7 +638,7 @@ public class YearCellTemplateSelector : DataTemplateSelector
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.View = CalendarView.Decade;
+this.calendar.View = CalendarView.Decade;
 
 {% endhighlight %}
 {% endtabs %}
