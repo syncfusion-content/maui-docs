@@ -21,7 +21,7 @@ The following code sample demonstrates how to customize the color of a progress 
 
 {% highlight xaml %}
 
-<progressBar:SfCircularProgressBar x:Name="CircularProgressBar" 
+<progressBar:SfCircularProgressBar x:Name="circularProgressBar" 
                                    ProgressChanged="CircularProgressBar_ProgressChanged"
                                    Progress="100" />
 
@@ -33,11 +33,11 @@ private void CircularProgressBar_ProgressChanged(object sender, ProgressValueEve
 {
     if (e.Progress < 50)
     {
-        this.CircularProgressBar.ProgressFill = Colors.Red;
+        this.circularProgressBar.ProgressFill = Colors.Red;
     }
     else
     {
-        this.CircularProgressBar.ProgressFill = Colors.Green;
+        this.circularProgressBar.ProgressFill = Colors.Green;
     }
 }
 

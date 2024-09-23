@@ -15,14 +15,14 @@ It allows you to navigate using the Dates programmatically in the calendar contr
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                         View="Month">
 </calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.DisplayDate = DateTime.Now.AddMonths(2).Date;
+this.calendar.DisplayDate = DateTime.Now.AddMonths(2).Date;
 
 {% endhighlight %}
 {% endtabs %}
@@ -35,14 +35,14 @@ It allows you to navigate using the views programmatically in the calendar contr
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                         View="Month">
 </calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.View = CalendarView.Month;
+this.calendar.View = CalendarView.Month;
 
 {% endhighlight %}
 {% endtabs %}
@@ -57,7 +57,7 @@ The following code shows when the [AllowViewNavigation](https://help.syncfusion.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                         View="Month"
                         AllowViewNavigation="True">
 </calendar:SfCalendar>
@@ -65,20 +65,20 @@ The following code shows when the [AllowViewNavigation](https://help.syncfusion.
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.AllowViewNavigation = true;
+this.calendar.AllowViewNavigation = true;
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Navigating Adjacent Months with Leading and Trailing Dates
-You can navigate to the next or previous month in the Calendar control by tapping on the leading or trailing dates. Tapping on a leading date moves the calendar to the previous month, while tapping on a trailing date moves it to the next month. In `SfCalendar`, this functionality can be enabled or disabled using the [NavigateToAdjacentMonth]() property.
+You can navigate to the next or previous month in the Calendar control by tapping on the leading or trailing dates. Tapping on a leading date moves the calendar to the previous month, while tapping on a trailing date moves it to the next month. In `SfCalendar`, this functionality can be enabled or disabled using the [NavigateToAdjacentMonth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_NavigateToAdjacentMonth) property.
 
 The following code shows the Navigation by using `NavigateToAdjacentMonth` property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                         View="Month"
                         NavigateToAdjacentMonth="true">
 </calendar:SfCalendar>
@@ -86,7 +86,7 @@ The following code shows the Navigation by using `NavigateToAdjacentMonth` prope
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.NavigateToAdjacentMonth = true;
+this.calendar.NavigateToAdjacentMonth = true;
 
 {% endhighlight %}
 {% endtabs %}
@@ -110,7 +110,7 @@ The `Forward` navigation allows you to view the next immediate date of the calen
             <RowDefinition />
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
-        <Calendar:SfCalendar x:Name="Calendar"
+        <Calendar:SfCalendar x:Name="calendar"
                              View="Month" />
         <Button x:Name="button" Grid.Row="1" Text="Forward"
                 Clicked="button_Clicked" />
@@ -121,7 +121,7 @@ The `Forward` navigation allows you to view the next immediate date of the calen
 
 private void button_Clicked(object sender, EventArgs e)
 {
-  this.Calendar.Forward();
+  this.calendar.Forward();
 }
 
 {% endhighlight %}
@@ -138,7 +138,7 @@ The `Backward` navigation allows you to view the immediate previous date of the 
             <RowDefinition />
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
-        <Calendar:SfCalendar x:Name="Calendar"
+        <Calendar:SfCalendar x:Name="calendar"
                              View="Month" />
         <Button x:Name="button" Grid.Row="1" Text="Backward"
                 Clicked="button_Clicked" />
@@ -149,7 +149,7 @@ The `Backward` navigation allows you to view the immediate previous date of the 
 
 private void button_Clicked(object sender, EventArgs e)
 {
-  this.Calendar.Backward();
+  this.calendar.Backward();
 }
 
 {% endhighlight %}
@@ -163,7 +163,7 @@ The following code shows the Navigation in the `Horizontal` direction.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                         View="Month"
                         NavigationDirection="Horizontal">
 </calendar:SfCalendar>
@@ -171,7 +171,7 @@ The following code shows the Navigation in the `Horizontal` direction.
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.NavigationDirection = CalendarNavigationDirection.Horizontal;
+this.calendar.NavigationDirection = CalendarNavigationDirection.Horizontal;
 
 {% endhighlight %}
 {% endtabs %}
@@ -184,7 +184,7 @@ By using the `ShowNavigationArrows` property of the `Calendar`, you can navigate
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar" 
+<calendar:SfCalendar  x:Name="calendar" 
                         View="Month">
                         <Calendar:SfCalendar.HeaderView>
                             <Calendar:CalendarHeaderView ShowNavigationArrows="False" />
@@ -194,7 +194,7 @@ By using the `ShowNavigationArrows` property of the `Calendar`, you can navigate
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.HeaderView.ShowNavigationArrows = false;
+this.calendar.HeaderView.ShowNavigationArrows = false;
 
 {% endhighlight %}
 {% endtabs %}

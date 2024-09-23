@@ -32,7 +32,7 @@ The different types of formats are:
 
 [`hh_tt`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTimeFormat.html#Syncfusion_Maui_Picker_PickerTimeFormat_hh_tt) - Represents the hour meridiem in hh_tt format.
 
-[`Default`]() - Represents the hour minute second meridiem in default culture based format.
+[`Default`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTimeFormat.html#Syncfusion_Maui_Picker_PickerTimeFormat_Default) - Represents the hour minute second meridiem in default culture based format.
 
 The following example demonstrates the Time Picker with the custom format [PickerTimeFormat.hh_mm_ss_tt](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTimeFormat.html#Syncfusion_Maui_Picker_PickerTimeFormat_h_mm_ss_tt)
 
@@ -40,7 +40,7 @@ The following example demonstrates the Time Picker with the custom format [Picke
 
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfTimePicker x:Name="Picker" 
+<picker:SfTimePicker x:Name="timePicker" 
                      Format="hh_mm_ss_tt"/>
 
 {% endhighlight %}

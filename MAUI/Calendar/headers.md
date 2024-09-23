@@ -16,7 +16,7 @@ You can customize the header height `Calendar` by using the `Height` property.
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar"
+<calendar:SfCalendar  x:Name="calendar"
                       View="Month">
             <Calendar:SfCalendar.HeaderView>
                 <Calendar:CalendarHeaderView Height="70" />
@@ -26,7 +26,7 @@ You can customize the header height `Calendar` by using the `Height` property.
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.HeaderView.Height = 70;
+this.calendar.HeaderView.Height = 70;
 
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +39,7 @@ You can customize the header style of the `Calendar` by using the [Background](h
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar"
+<calendar:SfCalendar  x:Name="calendar"
                       View="Month">
             <Calendar:SfCalendar.HeaderView>
                 <Calendar:CalendarHeaderView Background="Grey" TextFormat="MMM yy" ShowNavigationArrows="True">
@@ -59,7 +59,7 @@ CalendarTextStyle textStyle = new CalendarTextStyle()
     FontSize = 14,
 };
 
-this.Calendar.HeaderView = new CalendarHeaderView()
+this.calendar.HeaderView = new CalendarHeaderView()
 {
     Background = Colors.Grey,
     TextFormat = "MMM yy",
@@ -74,12 +74,12 @@ this.Calendar.HeaderView = new CalendarHeaderView()
 
 ## Header appearance using DataTemplate
 
-You can customize the header appearance by using the [HeaderTemplate]() in the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html). 
+You can customize the header appearance by using the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_HeaderTemplate) in the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html). 
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 17" %}
 
-  <Calendar:SfCalendar x:Name="Calendar" 
+  <Calendar:SfCalendar x:Name="calendar" 
                          View="Month">
         <Calendar:SfCalendar.HeaderTemplate>
             <DataTemplate>
@@ -105,7 +105,7 @@ You can customize the header appearance by using the [HeaderTemplate]() in the [
 
 ## Header appearance using DataTemplateSelector
 
-You can customize the header appearance by using the [HeaderTemplate]() in the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html). The `DataTemplateSelector` allows you to choose a `DataTemplate` at runtime based on the value bound to the calendar header. This lets you select a different data template for each header and customize the appearance of a specific header based on certain conditions.
+You can customize the header appearance by using the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_HeaderTemplate) in the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html). The `DataTemplateSelector` allows you to choose a `DataTemplate` at runtime based on the value bound to the calendar header. This lets you select a different data template for each header and customize the appearance of a specific header based on certain conditions.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="33" %}
@@ -140,7 +140,7 @@ You can customize the header appearance by using the [HeaderTemplate]() in the [
         </DataTemplate>
         <local:HeaderTemplateSelector x:Key="headerTemplateSelector" TodayDatesTemplate="{StaticResource todayDatesTemplate}"  NormaldatesTemplate="{StaticResource normaldatesTemplate}" />
     </Grid.Resources>
-    <Calendar:SfCalendar x:Name="Calendar"
+    <Calendar:SfCalendar x:Name="calendar"
                            View="Month"
                            HeaderTemplate ="{StaticResource headerTemplateSelector}">
     </Calendar:SfCalendar>
@@ -183,7 +183,7 @@ You can customize the view Header height `Calendar` by using the `Height` proper
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar"
+<calendar:SfCalendar  x:Name="calendar"
                       View="Month">
             <Calendar:SfCalendar.MonthView>
                 <Calendar:CalendarMonthView>
@@ -197,7 +197,7 @@ You can customize the view Header height `Calendar` by using the `Height` proper
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-this.Calendar.MonthView.HeaderView.Height = 50;
+this.calendar.MonthView.HeaderView.Height = 50;
 
 {% endhighlight %}
 {% endtabs %}
@@ -210,7 +210,7 @@ You can customize the view header style of the `Calendar` by using the [Backgrou
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="Calendar"
+<calendar:SfCalendar  x:Name="calendar"
                       View="Month">
             <Calendar:SfCalendar.MonthView>
                 <Calendar:CalendarMonthView>
@@ -234,7 +234,7 @@ CalendarTextStyle textStyle = new CalendarTextStyle()
     FontSize = 14,
 };
 
-this.Calendar.MonthView.HeaderView = new CalendarMonthHeaderView
+this.calendar.MonthView.HeaderView = new CalendarMonthHeaderView
 {
     Background = Colors.Grey,
     TextFormat = "ddd",
@@ -248,12 +248,12 @@ this.Calendar.MonthView.HeaderView = new CalendarMonthHeaderView
 
 ### View header appearance using DataTemplate
 
-You can customize the view header appearance by using the [MonthViewHeaderTemplate]() in the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html).
+You can customize the view header appearance by using the [MonthViewHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_MonthViewHeaderTemplate) in the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html).
 
 {% tabs %}  
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 9" %}
 
- <Calendar:SfCalendar x:Name="Calendar"
+ <Calendar:SfCalendar x:Name="calendar"
                         View="Month">
         <Calendar:SfCalendar.MonthViewHeaderTemplate>
             <DataTemplate>
@@ -271,7 +271,7 @@ You can customize the view header appearance by using the [MonthViewHeaderTempla
 
 ### View header appearance using DataTemplateSelector
 
-You can customize the view header appearance by using the [MonthViewHeaderTemplate]() in the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html). The `DataTemplateSelector` allows you to choose a `DataTemplate` at runtime based on the value bound to the calendar view header. This lets you select a different data template for each view header and customize the appearance of a specific view header based on certain conditions.
+You can customize the view header appearance by using the [MonthViewHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_MonthViewHeaderTemplate) in the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html). The `DataTemplateSelector` allows you to choose a `DataTemplate` at runtime based on the value bound to the calendar view header. This lets you select a different data template for each view header and customize the appearance of a specific view header based on certain conditions.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="17" %}
@@ -290,7 +290,7 @@ You can customize the view header appearance by using the [MonthViewHeaderTempla
         </DataTemplate>
         <local:MonthViewHeaderTemplateSelector x:Key="monthViewHeaderTemplateSelector"  TodayDatesTemplate="{StaticResource todayDatesTemplate}"  NormaldatesTemplate="{StaticResource normaldatesTemplate}" />
     </Grid.Resources>
-    <Calendar:SfCalendar x:Name="Calendar"
+    <Calendar:SfCalendar x:Name="calendar"
                            View="Month"
                            MonthViewHeaderTemplate ="{StaticResource monthViewHeaderTemplateSelector}">
     </Calendar:SfCalendar>

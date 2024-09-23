@@ -21,7 +21,7 @@ The following code sample demonstrates how to customize the color of a progress 
 
 {% highlight xaml %}
 
-<progressBar:SfLinearProgressBar x:Name="LinearProgressBar" 
+<progressBar:SfLinearProgressBar x:Name="linearProgressBar" 
                                  ProgressChanged="LinearProgressBar_ProgressChanged" 
                                  Progress="100" />
 
@@ -33,11 +33,11 @@ private void LinearProgressBar_ProgressChanged(object sender, ProgressValueEvent
 {
     if (e.Progress < 50)
     {
-        this.LinearProgressBar.ProgressFill = Colors.Red;
+        this.linearProgressBar.ProgressFill = Colors.Red;
     }
     else
     {
-        this.LinearProgressBar.ProgressFill = Colors.Green;
+        this.linearProgressBar.ProgressFill = Colors.Green;
     }
 }
 
@@ -57,7 +57,7 @@ The following code sample demonstrates how to customize the progress bar when th
 
 {% highlight xaml %}
 
-<progressBar:SfLinearProgressBar x:Name="LinearProgressBar" 
+<progressBar:SfLinearProgressBar x:Name="linearProgressBar" 
                                  ProgressCompleted="LinearProgressBar_ProgressCompleted" 
                                  Progress="100" />
 
@@ -67,7 +67,7 @@ The following code sample demonstrates how to customize the progress bar when th
 
 private void LinearProgressBar_ProgressCompleted(object sender, ProgressValueEventArgs e)
 {
-    this.LinearProgressBar.ProgressFill = Colors.Green;
+    this.linearProgressBar.ProgressFill = Colors.Green;
 }
 
 {% endhighlight %}

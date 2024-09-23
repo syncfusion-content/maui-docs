@@ -32,13 +32,13 @@ The different types of formats are:
 
 [`yyyy_MM_dd`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerDateFormat.html#Syncfusion_Maui_Picker_PickerDateFormat_yyyy_MM_dd) - Represents the year month day in yyyy/MM/dd format.
 
-[`Default`]() - Represents the day month year in default culture based format.
+[`Default`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerDateFormat.html#Syncfusion_Maui_Picker_PickerDateFormat_Default) - Represents the day month year in default culture based format.
 
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDateTimePicker x:Name="Picker"
+<picker:SfDateTimePicker x:Name="picker"
                          DateFormat="dd_MMM_yyyy">
 </picker:SfDateTimePicker>
 
@@ -79,12 +79,12 @@ The different types of formats are:
 [`hh_tt`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTimeFormat.html#Syncfusion_Maui_Picker_PickerTimeFormat_hh_tt) - Represents the hour meridiem in hh_tt format.
 
 
-[`Default`]() - Represents the hour minute second meridiem in default culture based format.
+[`Default`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTimeFormat.html#Syncfusion_Maui_Picker_PickerTimeFormat_Default) - Represents the hour minute second meridiem in default culture based format.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDateTimePicker x:Name="Picker"
+<picker:SfDateTimePicker x:Name="picker"
                          TimeFormat="hh_mm_ss_tt">
 </picker:SfDateTimePicker>
 

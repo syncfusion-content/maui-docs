@@ -22,7 +22,7 @@ When you have a collection of objects, and you want to display a specific proper
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<sfPicker:SfPicker x:Name="Picker">
+<sfPicker:SfPicker x:Name="picker">
 </sfPicker:SfPicker>
 
 {% endhighlight %}
@@ -52,7 +52,7 @@ When you have a collection of objects, and you want to display a specific proper
             ItemsSource = countryDetails,
             SelectedIndex = 1,
         };
-        this.Picker.Columns.Add(pickerColumn);
+        this.picker.Columns.Add(pickerColumn);
     }
 {% endhighlight %}
 {% highlight c# tabtitle="CountryInfo.cs" %}
@@ -75,13 +75,13 @@ Customize the [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<sfPicker:SfPicker x:Name="Picker">
+<sfPicker:SfPicker x:Name="picker">
 </sfPicker:SfPicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    this.Picker.Columns[0].Width = 150;
+    this.picker.Columns[0].Width = 150;
     
 {% endhighlight %}
 {% endtabs %}
@@ -93,13 +93,13 @@ Customize the SelectedIndex of every column by setting the `SelectedIndex` prope
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<sfPicker:SfPicker x:Name="Picker">
+<sfPicker:SfPicker x:Name="picker">
 </sfPicker:SfPicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    this.Picker.Columns[0].SelectedIndex = 5;
+    this.picker.Columns[0].SelectedIndex = 5;
 
 {% endhighlight %}
 {% endtabs %}
@@ -111,13 +111,13 @@ Customize the SelectedItem of every column by setting the `SelectedItem` propert
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<sfPicker:SfPicker x:Name="Picker">
+<sfPicker:SfPicker x:Name="picker">
 </sfPicker:SfPicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    this.Picker.Columns[0].SelectedItem = "India";
+    this.picker.Columns[0].SelectedItem = "India";
 
 {% endhighlight %}
 {% endtabs %}
@@ -133,13 +133,13 @@ Customize the Header text of every column by setting the `HeaderText` property i
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<sfPicker:SfPicker x:Name="Picker">
+<sfPicker:SfPicker x:Name="picker">
 </sfPicker:SfPicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    this.Picker.Columns[0].HeaderText = "Languages";
+    this.picker.Columns[0].HeaderText = "Languages";
     
 {% endhighlight %}
 {% endtabs %}
@@ -153,14 +153,14 @@ Customize the ItemSource of every column by setting the `ItemSource` property in
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<sfPicker:SfPicker x:Name="Picker">
+<sfPicker:SfPicker x:Name="picker">
 </sfPicker:SfPicker>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
     ObservableCollection<string> languages = new ObservableCollection<string> { "Spanish", "French", "Tamil", "English", "German", "Chinese", "Telegu", "Japanese", "Arabic", "Russian", "Portuguese", "Italian" };
-    this.Picker.Columns.Add(languages);
+    this.picker.Columns.Add(languages);
 
 {% endhighlight %}
 {% endtabs %}
@@ -174,7 +174,7 @@ Customize the column divider color when the picker consists of more than one col
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
 
-<sfPicker:SfPicker x:Name="Picker"
+<sfPicker:SfPicker x:Name="picker"
                    ColumnDividerColor="Red">
 </sfPicker:SfPicker>
 

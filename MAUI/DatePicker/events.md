@@ -24,7 +24,7 @@ The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picke
 
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<picker:SfDatePicker x:Name="Picker"
+<picker:SfDatePicker x:Name="picker"
                      SelectionChanged="OnDatePickerSelectionChanged">
 </picker:SfDatePicker>
 
@@ -32,7 +32,7 @@ The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picke
 
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
-this.Picker.SelectionChanged += this.OnDatePickerSelectionChanged;
+this.picker.SelectionChanged += this.OnDatePickerSelectionChanged;
 
 private void OnDatePickerSelectionChanged(object sender, DatePickerSelectionChangedEventArgs e)
 {
@@ -63,7 +63,7 @@ The [Opened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBa
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<picker:SfDatePicker x:Name="Picker"
+<picker:SfDatePicker x:Name="picker"
                      Opened="OnDatePickerPopUpOpened">
 </picker:SfDatePicker>
 
@@ -71,12 +71,12 @@ The [Opened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBa
 
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
-this.Picker.Opened += this.OnDatePickerPopUpOpened;
+this.picker.Opened += this.OnDatePickerPopUpOpened;
 
 private void OnDatePickerPopUpOpened(object sender, EventArgs e)
 {
     // If you need to open the picker, set IsOpen property to true.
-    this.Picker.IsOpen = true;
+    this.picker.IsOpen = true;
 }
 
 {% endhighlight %}
@@ -96,7 +96,7 @@ The [Closing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerB
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<picker:SfDatePicker x:Name="Picker"
+<picker:SfDatePicker x:Name="picker"
                      Closing="OnDatePickerPopUpClosing">
 </picker:SfDatePicker>
 
@@ -104,7 +104,7 @@ The [Closing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerB
 
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
-this.Picker.Closing += this.OnDatePickerPopUpClosing;
+this.picker.Closing += this.OnDatePickerPopUpClosing;
 
 private void OnDatePickerPopUpClosing(object sender, CancelEventArgs e)
 {
@@ -128,7 +128,7 @@ The [Closed]https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBas
 
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<picker:SfDatePicker x:Name="Picker"
+<picker:SfDatePicker x:Name="picker"
                      Closed="OnDatePickerPopUpClosed">
 </picker:SfDatePicker>
 
@@ -136,12 +136,12 @@ The [Closed]https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBas
 
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
-this.Picker.Closed += this.OnDatePickerPopUpClosed;
+this.picker.Closed += this.OnDatePickerPopUpClosed;
 
 private void OnDatePickerPopUpClosed(object sender, EventArgs e)
 {
     // If you need to close the picker, set the IsOpen property to false.
-    this.Picker.IsOpen = false;
+    this.picker.IsOpen = false;
 }
 
 {% endhighlight %}
@@ -167,7 +167,7 @@ The `SfDatePicker` footer view provides two events. These events are not applica
 
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<picker:SfDatePicker x:Name="Picker"
+<picker:SfDatePicker x:Name="picker"
                      OkButtonClicked="OnDatePickerOkButtonClicked">
 </picker:SfDatePicker>
 
@@ -175,7 +175,7 @@ The `SfDatePicker` footer view provides two events. These events are not applica
 
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
-this.Picker.OkButtonClicked += this.OnDatePickerOkButtonClicked;
+this.picker.OkButtonClicked += this.OnDatePickerOkButtonClicked;
 
 private void OnDatePickerOkButtonClicked(object sender, EventArgs e)
 {
@@ -198,7 +198,7 @@ private void OnDatePickerOkButtonClicked(object sender, EventArgs e)
 
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<picker:SfDatePicker x:Name="Picker"
+<picker:SfDatePicker x:Name="picker"
                      CancelButtonClicked="OnDatePickerCancelButtonClicked">
 </picker:SfDatePicker>
 
@@ -206,7 +206,7 @@ private void OnDatePickerOkButtonClicked(object sender, EventArgs e)
 
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
-this.Picker.CancelButtonClicked += this.OnDatePickerCancelButtonClicked;
+this.picker.CancelButtonClicked += this.OnDatePickerCancelButtonClicked;
 
 private void OnDatePickerCancelButtonClicked(object sender, EventArgs e)
 {
