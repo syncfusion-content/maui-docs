@@ -2737,11 +2737,6 @@ this.Content = scheduler;
 
 </table> 
 
-## Upcoming Features
-
-* Command support for Tapped, DoubleTapped, LongPressed, and ViewChanged events.
-* Suspend and resume for appointment update.
-
 ## Known issues in .NET MAUI Scheduler 
 
 * [Windows] Scheduler view swiping using the touch screen is not working.
