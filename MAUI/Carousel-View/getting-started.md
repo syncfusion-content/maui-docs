@@ -303,7 +303,7 @@ SfCarousel carousel = new SfCarousel()
 };
 
 carousel.ItemTemplate = itemTemplate;
-carousel.SetBinding(SfCarousel.ItemsSourceProperty, "CarouselItems");
+carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 {% endhighlight %}
 
