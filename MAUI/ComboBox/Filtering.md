@@ -207,7 +207,7 @@ N> Auto appending of the first suggested item text to typed input is not support
 
 ### Custom filtering
 
-The ComboBox control provides support to apply your own custom filter logic to suggest the items based on your filter criteria by using the [FilterBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_FilterBehavior) property. The default value of `FilterBehavior` is `null`.
+The ComboBox control provides support to apply your own custom filter logic to suggest the items based on your filter criteria by using the [FilterBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_FilterBehavior) property. The default value of **FilterBehavior** is **null**.
 
 Now, let us create custom filtering class to apply our own filter logic to ComboBox control by the following steps.
 
@@ -227,7 +227,7 @@ public class CityFilteringBehavior : IComboBoxFilterBehavior
 {% endhighlight %}
 {% endtabs %}
 
-**Step 2:** Then, implement the [GetMatchingIndexes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxFilterBehavior.html#Syncfusion_Maui_Inputs_ComboBoxFilterBehavior_GetMatchingIndexes_Syncfusion_Maui_Inputs_SfComboBox_Syncfusion_Maui_Inputs_ComboBoxFilterInfo_) method of IComboBoxFilterBehavior interface to create your own suggestion list (containing the indices of the filtered items) based on the text entered in the ComboBox control that needs to be shown in drop-down. The `GetMatchingIndexes` method contains following arguments:
+**Step 2:** Then, implement the [GetMatchingIndexes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxFilterBehavior.html#Syncfusion_Maui_Inputs_ComboBoxFilterBehavior_GetMatchingIndexes_Syncfusion_Maui_Inputs_SfComboBox_Syncfusion_Maui_Inputs_ComboBoxFilterInfo_) method of IComboBoxFilterBehavior interface to create your own suggestion list (containing the indices of the filtered items) based on the text entered in the ComboBox control that needs to be shown in drop-down. The **GetMatchingIndexes** method contains following arguments:
 
 * [source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) - The owner of the filter behavior, which holds information about ItemsSource, Items properties, and so on.
 * [filterInfo](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxFilterInfo.html) - Contains details about the text entered in ComboBox control. Using this text, you can prepare a suggestion list, which gets displayed in the drop-down list. 
@@ -245,7 +245,7 @@ public class CityFilteringBehavior : IComboBoxFilterBehavior
     /// <summary>
     /// Returned suggestion list based on the city or country name entered in the ComboBox control.
     /// </summary>
-    public List<int> GetMatchingIndexes(SfComboBox source, ComboBoxFilterInfo filterInfo)
+    public async Task<object?> GetMatchingIndexes(SfComboBox source, ComboBoxFilterInfo filterInfo)
     {
         List<int> filteredlist = new List<int>();
         ObservableCollection<CityInfo> cityItems = (ObservableCollection<CityInfo>)source.ItemsSource;
@@ -262,7 +262,7 @@ public class CityFilteringBehavior : IComboBoxFilterBehavior
 {% endhighlight %}
 {% endtabs %}
 
-**Step3:** Apply custom filtering to the ComboBox control by using the `FilterBehavior` property. 
+**Step3:** Apply custom filtering to the ComboBox control by using the **FilterBehavior** property. 
 
 {% tabs %}
 {% highlight XAML %}
