@@ -217,11 +217,7 @@ namespace CarouselSample
             InitializeComponent();
             CarouselViewModel carouselViewModel = new CarouselViewModel();
 
-            SfCarousel carousel = new SfCarousel()
-            {
-                HeightRequest = 400,
-                WidthRequest = 800
-            };
+            SfCarousel carousel = new SfCarousel();
 
             var itemTemplate = new DataTemplate(() =>
             {
