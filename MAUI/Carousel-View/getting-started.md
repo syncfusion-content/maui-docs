@@ -196,10 +196,8 @@ The following code example illustrates how to add the collection in Carousel,
     </ContentPage.Resources>
     <ContentPage.Content>
         <carousel:SfCarousel x:Name="carousel"  
-                                ItemTemplate="{StaticResource itemTemplate}" 
-                                ItemsSource="{Binding ImageCollection}" 
-                                HeightRequest="400" 
-                                WidthRequest="800" />
+                            ItemTemplate="{StaticResource itemTemplate}" 
+                            ItemsSource="{Binding ImageCollection}" />
     </ContentPage.Content>
     </ContentPage>
 
@@ -256,6 +254,7 @@ namespace CarouselSample
 {% highlight xaml %}
 
 <carousel:SfCarousel x:Name="carousel"
+                     ItemTemplate="{StaticResource itemTemplate}" 
                      ItemsSource="{Binding ImageCollection}"
                      ItemHeight="170"
                      ItemWidth="270"/>
@@ -270,7 +269,8 @@ SfCarousel carousel = new SfCarousel()
     ItemHeight = 250
 };
 
-carousel.SetBinding(SfCarousel.ItemsSourceProperty, "CarouselItems");
+carousel.ItemTemplate = itemTemplate;
+carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 {% endhighlight %}
 
@@ -285,6 +285,7 @@ We can bring particular item to the center of the screen using [SelectedIndex](h
 {% highlight xaml %}
 
 <carousel:SfCarousel x:Name="carousel"
+                     ItemTemplate="{StaticResource itemTemplate}" 
                      ItemsSource="{Binding ImageCollection}"
                      ItemHeight="170"
                      ItemWidth="270"
@@ -301,6 +302,7 @@ SfCarousel carousel = new SfCarousel()
     SelectedIndex = 4,
 };
 
+carousel.ItemTemplate = itemTemplate;
 carousel.SetBinding(SfCarousel.ItemsSourceProperty, "CarouselItems");
 
 {% endhighlight %}
