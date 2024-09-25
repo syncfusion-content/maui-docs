@@ -23,7 +23,7 @@ The SfTimePicker control allows you to add the header text by setting the [Text]
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="Timepicker" >
+<picker:SfTimePicker x:Name="timePicker" >
     <picker:SfTimePicker.HeaderView >
         <picker:PickerHeaderView Height="40" Text="Time Picker"/>
     </picker:SfTimePicker.HeaderView>
@@ -56,7 +56,7 @@ The SfTimePicker control allows you to customize the header divider color by set
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="Timepicker" >
+<picker:SfTimePicker x:Name="timePicker" >
     <picker:SfTimePicker.HeaderView >
         <picker:PickerHeaderView DividerColor="Red" />
     </picker:SfTimePicker.HeaderView>
@@ -88,7 +88,7 @@ Customize the header text style and background color of the `Time picker` using 
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="Timepicker" >
+<picker:SfTimePicker x:Name="timePicker" >
     <picker:SfTimePicker.HeaderView >
         <picker:PickerHeaderView Background="#D3D3D3">
             <picker:PickerHeaderView.TextStyle >
@@ -133,7 +133,7 @@ The [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.Sf
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="Timepicker" >
+<picker:SfTimePicker x:Name="timePicker" >
     <picker:SfTimePicker.ColumnHeaderView >
         <picker:TimePickerColumnHeaderView HourHeaderText="Hour Column"
                                            MinuteHeaderText="Minute Column"
@@ -171,7 +171,7 @@ The SfTimePicker control allows you to customize the column header divider color
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="Timepicker" >
+<picker:SfTimePicker x:Name="timePicker" >
     <picker:SfTimePicker.ColumnHeaderView >
         <picker:TimePickerColumnHeaderView DividerColor="Red" />
     </picker:SfTimePicker.ColumnHeaderView>
@@ -203,7 +203,7 @@ Customize the column header view text style and background color of the `Time Pi
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="Timepicker" >
+<picker:SfTimePicker x:Name="timePicker" >
     <picker:SfTimePicker.ColumnHeaderView >
         <picker:TimePickerColumnHeaderView Background="#D3D3D3">
             <picker:TimePickerColumnHeaderView.TextStyle >
@@ -249,7 +249,7 @@ The Default value of the [OkButtonText](https://help.syncfusion.com/cr/maui/Sync
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="Timepicker" >
+<picker:SfTimePicker x:Name="timePicker" >
     <picker:SfTimePicker.FooterView >
         <picker:PickerFooterView Height="40" OkButtonText="Save"
                                  CancelButtonText="Exit"/>
@@ -284,7 +284,7 @@ The SfTimePicker control allows you to customize the footer divider color by set
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="Timepicker" >
+<picker:SfTimePicker x:Name="timePicker" >
     <picker:SfTimePicker.FooterView >
         <picker:PickerFooterView DividerColor="Red" />
     </picker:SfTimePicker.FooterView>
@@ -316,7 +316,7 @@ Customize the footer text style and background color of the `Time Picker` using 
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="Timepicker" >
+<picker:SfTimePicker x:Name="timePicker" >
     <picker:SfTimePicker.FooterView >
         <picker:PickerFooterView Background="#D3D3D3">
             <picker:PickerFooterView.TextStyle >
@@ -361,7 +361,7 @@ In the SfTimePicker control, the corner radius, stroke, and padding can be custo
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="Timepicker" >
+<picker:SfTimePicker x:Name="timePicker" >
     <picker:SfTimePicker.SelectionView >
         <picker:PickerSelectionView CornerRadius="10" Stroke="#36454F" Padding="10, 5, 10, 5" Background="#808080" />
     </picker:SfTimePicker.SelectionView>
@@ -396,7 +396,7 @@ Customize the selected view text style of the `Time Picker` using the [SelectedT
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="Timepicker" >
+<picker:SfTimePicker x:Name="timePicker" >
     <picker:SfTimePicker.SelectedTextStyle >
         <picker:PickerTextStyle FontSize="15" TextColor="White"/>
     </picker:SfTimePicker.SelectedTextStyle>
@@ -431,7 +431,7 @@ Customize the column divider color using the [ColumnDividerColor](https://help.s
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfTimePicker x:Name="Timepicker"
+<picker:SfTimePicker x:Name="timePicker"
                      ColumnDividerColor="Red">
 </picker:SfTimePicker>
 

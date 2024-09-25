@@ -19,7 +19,7 @@ The fade mode in the picker gradually decreases the visibility of unselected ite
 
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfPicker x:Name="Picker"
+<picker:SfPicker x:Name="picker"
                  TextDisplayMode="Fade"/>
 
 {% endhighlight %}
@@ -47,7 +47,7 @@ The shrink mode is used to display the font size of picker items decreased from 
 
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfPicker x:Name="Picker"
+<picker:SfPicker x:Name="picker"
                  TextDisplayMode="Shrink"/>
 
 {% endhighlight %}
@@ -75,7 +75,7 @@ The fade and shrink mode are used to decrease the opacity and font size of picke
 
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfPicker x:Name="Picker"
+<picker:SfPicker x:Name="picker"
                  TextDisplayMode="FadeAndShrink"/>
 
 {% endhighlight %}

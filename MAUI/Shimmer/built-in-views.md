@@ -20,7 +20,7 @@ The built-in shimmer types can be used by setting the [Type](https://help.syncfu
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<shimmer:SfShimmer x:Name="Shimmer" VerticalOptions="FillAndExpand" 
+<shimmer:SfShimmer x:Name="shimmer" VerticalOptions="FillAndExpand" 
                    Type="CirclePersona">
       <StackLayout>
          <Label 

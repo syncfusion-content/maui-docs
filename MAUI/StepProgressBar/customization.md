@@ -585,7 +585,7 @@ public class ViewModel
 You can customize the appearance of the step descriptions using the [PrimaryTextTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_PrimaryTextTemplate) and [SecondaryTextTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_SecondaryTextTemplate) properties in [SfStepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html). The DataTemplateSelector can be used to choose a different data template for each step description in the step progress bar based on the step’s data. This allows you to customize the appearance of a particular step description based on certain conditions.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="6 7 8 9 10 11 12" %}
+{% highlight xaml tabtitle="XAML" hl_lines="37" %}
 
 <Grid>
     <Grid.Resources>

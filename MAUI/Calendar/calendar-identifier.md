@@ -33,7 +33,7 @@ The [.NET MAUI Calendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cal
 * Igbo calendar<br>
 * Islamic calendar<br>
 * Javanese calendar<br>
-* Maramataka (Māori lunar calendar)<br>
+* Maramataka (Maori lunar calendar)<br>
 * Nepal Sambat<br>
 * HebrewCalendar<br>
 * JulianCalendar<br>
@@ -47,12 +47,12 @@ N>
 * The Flow Direction will be updated based on the calendar identifier. All the DateTime values, such as DisplayDate, MinimumDate, MaximumDate, SelectedDate, SelectedDates, SelectedDateRange, SelectableDayPredicate, and SpecialDayPredicate, can be given in two ways.
 * The DateTime instance without specifying calendar identifier. The calendar will handle the DateTime value for the specified calendar identifier.
 * When a DateTime instance has a calendar identifier, the calendar handles it directly.
-* View header will show full week day name for all the calendar identifiers except gregorian calendar while the text format is "ddddd".
+* View header will show full week day name for all the calendar identifiers except `Gregorian Calendar` while the text format is "ddddd".
 
 {% tabs %}
 {% highlight XAML hl_lines="2" %}
 
-<calendar:SfCalendar x:Name="Calendar"
+<calendar:SfCalendar x:Name="calendar"
 					   Identifier="Hijri">
 </calendar:SfCalendar>
 
@@ -74,13 +74,13 @@ All the DateTime properties of the calendar can be given in two ways when the ca
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar x:Name="Calendar" />
+<calendar:SfCalendar x:Name="calendar" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
 
-this.Calendar.Identifier = CalendarIdentifier.Hijri;
-this.Calendar.DisplayDate = new DateTime(1444, 11, 21, 0, 0, 0, new HijriCalendar());
+this.calendar.Identifier = CalendarIdentifier.Hijri;
+this.calendar.DisplayDate = new DateTime(1444, 11, 21, 0, 0, 0, new HijriCalendar());
 
 {% endhighlight %}
 {% endtabs %}
@@ -90,13 +90,13 @@ this.Calendar.DisplayDate = new DateTime(1444, 11, 21, 0, 0, 0, new HijriCalenda
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar x:Name="Calendar" />
+<calendar:SfCalendar x:Name="calendar" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
 
-this.Calendar.Identifier = CalendarIdentifier.Hijri;
-this.Calendar.DisplayDate = new DateTime(2023, 6, 9);
+this.calendar.Identifier = CalendarIdentifier.Hijri;
+this.calendar.DisplayDate = new DateTime(2023, 6, 9);
 
 {% endhighlight %}
 {% endtabs %}

@@ -19,7 +19,7 @@ The dialog mode is used to display the date picker in a pop-up by setting the [M
 
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDatePicker x:Name="DatePicker"
+<picker:SfDatePicker x:Name="datePicker"
                      Mode="Dialog"/>
 
 {% endhighlight %}

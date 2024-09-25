@@ -217,7 +217,7 @@ The following code example explains how to use the properties in the Xamarin cir
     xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms">
 
     ...     
-<progressBar:SfCircularProgressBar x:Name="CircularProgressBar"
+<progressBar:SfCircularProgressBar x:Name="circularProgressBar"
                                    EasingEffect="CubicOut"
                                    GapWidth="5"
                                    SegmentCount="4"
@@ -295,7 +295,7 @@ private void SfCircularProgressBar_ProgressCompleted(object sender, ProgressValu
     xmlns:progressBar="clr-namespace:Syncfusion.Maui.ProgressBar;assembly=Syncfusion.Maui.ProgressBar">
 
 ...
-<progressBar:SfCircularProgressBar x:Name="CircularProgressBar"
+<progressBar:SfCircularProgressBar x:Name="circularProgressBar"
                                    AnimationEasing="{x:Static Easing.CubicOut}"
                                    SegmentGapWidth="5"
                                    SegmentCount="4"

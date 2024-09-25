@@ -19,7 +19,7 @@ The following code sample demonstrates how to add custom text content.
 
 {% highlight xaml %}
 
-<progressBar:SfCircularProgressBar x:Name="CustomContentCircularProgressBar" 
+<progressBar:SfCircularProgressBar x:Name="customContentCircularProgressBar" 
                                    Progress="23">
     <progressBar:SfCircularProgressBar.Content>
         <Grid>
@@ -28,7 +28,7 @@ The following code sample demonstrates how to add custom text content.
                 <RowDefinition />
             </Grid.RowDefinitions>
             <Label TextColor="#007cee"  
-                   Text="{Binding Source={x:Reference CustomContentCircularProgressBar},Path=Progress,StringFormat='{0}%'}"
+                   Text="{Binding Source={x:Reference customContentCircularProgressBar},Path=Progress,StringFormat='{0}%'}"
                    HorizontalTextAlignment="Center" 
                    VerticalTextAlignment="End">
             </Label>

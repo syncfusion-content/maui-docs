@@ -15,7 +15,7 @@ The Date time picker provides an option to restrict the selection of date and ti
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDateTimePicker x:Name="Picker"
+<picker:SfDateTimePicker x:Name="picker"
                          MinimumDate="2000/5/6 3:34:12 AM">
 </picker:SfDateTimePicker>
 
@@ -37,7 +37,7 @@ The Date time picker provides an option to restrict the selection of date and ti
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDateTimePicker x:Name="Picker"
+<picker:SfDateTimePicker x:Name="picker"
                          MaximumDate="2042/10/10 12:15:03 PM">
 </picker:SfDateTimePicker>
 
