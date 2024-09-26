@@ -313,9 +313,6 @@ public partial class MainPage : ContentPage
 
 ![Displaying a .NET MAUI Popup with the PopupView Background](Images/styles/maui-popup-with-popupview-background.png)
 
-## Popup style dynamic changes
-    Popup 
-
 ## Styling overlay background
 
 The SfPopup allows to customize the background color of overlay using the [OverlayColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupStyle.html#Syncfusion_Maui_Popup_PopupStyle_OverlayColor) property.
@@ -579,4 +576,5 @@ public partial class MainPage : ContentPage
 ![Displaying a .NET MAUI Popup with shadow](Images/styles/maui-popup-with-shadow.png)
 
 ## Limitations
+
 The `SfPopup` control does not support dynamic style changes once it is open. Style properties must be set before opening the popup. If style properties are modified at runtime, the popup must be closed and reopened for the changes to take effect.
