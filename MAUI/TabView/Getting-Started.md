@@ -256,7 +256,7 @@ namespace TabViewMauiSample
 
 {% endtabs %}
 
-![Getting_Started](images/Getting_Started.png)
+![Getting started with .NET MAUI Tab View.](images/net-maui-tab-view-getting-started.png)
 
 N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/TabViewGettingStarted) in GitHub
 
@@ -502,5 +502,7 @@ public partial class MainPage : ContentPage
 
 {% endtabs %}
 
-![Item Template](images/ItemTemplate.png)
+![Item template in .NET MAUI Tab View.](images/net-maui-tab-view-item-template.png)
+
+N> You can refer to our [.NET MAUI Tab View](https://www.syncfusion.com/maui-controls/maui-tab-view) feature tour page for its groundbreaking feature representations. You can also explore our  [.NET MAUI Tab View Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/TabView) that shows you how to render the Tab View in .NET MAUI.
 
