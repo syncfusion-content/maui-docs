@@ -577,4 +577,4 @@ public partial class MainPage : ContentPage
 
 ## Limitations
 
-The `SfPopup` control does not support dynamic style changes once it is open. Style properties must be set before opening the popup. If style properties are modified at runtime, the popup must be closed and reopened for the changes to take effect.
+The SfPopup control does not currently support dynamic style changes while it is open. Any modifications to style properties must be applied before the popup is displayed. If you need to change style properties at runtime, you will need to close the popup, apply the changes, and then reopen it for the updates to take effect.
