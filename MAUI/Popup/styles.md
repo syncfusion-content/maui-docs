@@ -574,3 +574,7 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![Displaying a .NET MAUI Popup with shadow](Images/styles/maui-popup-with-shadow.png)
+
+## Limitations
+
+The `SfPopup` control does not support dynamic style changes while it is open. Any modifications to style properties must be applied before the popup is displayed. If you need to change style properties at runtime, you will need to close the popup, apply the changes, and then reopen it for the updates to take effect.
