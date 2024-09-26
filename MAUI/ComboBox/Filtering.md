@@ -247,15 +247,13 @@ public class CityFilteringBehavior : IComboBoxFilterBehavior
     /// </summary>
     public async Task<object?> GetMatchingIndexes(SfComboBox source, ComboBoxFilterInfo filterInfo)
     {
-        List<int> filteredlist = new List<int>();
-        ObservableCollection<CityInfo> cityItems = (ObservableCollection<CityInfo>)source.ItemsSource;
+        IEnumerable itemssource = source.ItemsSource as IEnumerable;
+        var filteredItems = (from CityInfo item in itemssource
+                     where item.CountryName.StartsWith(filterInfo.Text, StringComparison.CurrentCultureIgnoreCase) ||
+                           item.CityName.StartsWith(filterInfo.Text, StringComparison.CurrentCultureIgnoreCase)
+                     select item);
 
-            filteredlist.AddRange(from CityInfo item in cityItems
-                                  where item.CountryName.StartsWith(filterInfo.Text, StringComparison.CurrentCultureIgnoreCase) ||
-                                        item.CityName.StartsWith(filterInfo.Text, StringComparison.CurrentCultureIgnoreCase)
-                                  select cityItems.IndexOf(item));
-
-            return filteredlist;
+        return await Task.FromResult(filteredItems);
     }
 }
 
