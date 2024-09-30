@@ -110,8 +110,16 @@ The following table contains the default name and value details used in the SfPd
 <td>CLOSE</td>
 </tr>
 <tr>
+<td>CustomStamps</td>
+<td>Custom Stamps</td>
+</tr>
+<tr>
 <td>DocumentLoadFailed</td>
 <td>Failed to load the PDF document.</td>
+</tr>
+<tr>
+<td>Enter</td>
+<td>Enter</td>
 </tr>
 <tr>
 <td>EnterPassword</td>
@@ -500,6 +508,10 @@ The following table contains the default name and value details used in the SfPd
 <tr>
 <td>Stamps</td>
 <td>Stamps</td>
+</tr>
+<tr>
+<td>StandardStamps</td>
+<td>Standard Stamps</td>
 </tr>
 <tr>
 <td>StickyNote</td>
