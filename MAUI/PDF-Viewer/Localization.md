@@ -549,4 +549,16 @@ The following table contains the default name and value details used in the SfPd
 <td>ZoomMode</td>
 <td>Zoom mode</td>
 </tr>
+<tr>
+<td>CustomStamps</td>
+<td>Custom Stamps</td>
+</tr>
+<tr>
+<td>Enter</td>
+<td>Enter</td>
+</tr>
+<tr>
+<td>StandardStamps</td>
+<td>Standard Stamps</td>
+</tr>
 </table>
