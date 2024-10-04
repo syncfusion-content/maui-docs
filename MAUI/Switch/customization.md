@@ -10,7 +10,7 @@ keywords : .net maui switch, maui switch, .net maui switch ccustomize, maui swit
 
 # Customization in .NET MAUI Switch (SfSwitch)
 
-The .NET MAUI Switch control provides options to customize the color based on its states. The following code example demonstrates how to customize the .NET MAUI Switch control.
+The [.NET MAUI Switch](https://www.syncfusion.com/maui-controls/maui-switch) control provides options to customize the color based on its states. The following code example demonstrates how to customize the .NET MAUI Switch control.
 
 ## Colors
 

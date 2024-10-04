@@ -10,7 +10,7 @@ keywords : .net maui switch, maui switch, .net maui switch states, maui switch s
 
 # States in .NET MAUI Switch (SfSwitch)
 
-The .NET MAUI Switch allows you to configure the states as explained in the following sections.
+The [.NET MAUI Switch](https://www.syncfusion.com/maui-controls/maui-switch) allows you to configure the states as explained in the following sections.
 
 ## On State
 
