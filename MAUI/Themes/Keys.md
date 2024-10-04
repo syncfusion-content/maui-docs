@@ -115,6 +115,350 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
 </table>
 
+## SfAIAssistView
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+    <tr>
+        <td rowspan="12">
+            SfAIAssistViewStyles  
+            <br/>
+            <br/>
+        </td>
+        <td>
+           SfAIAssistViewTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, you can customize the appearance of SfAIAssistView without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfAIAssistViewTheme">CommonTheme</x:String>
+                <Color x:Key="SfAIAssistViewRequestItemBackground">Blue</Color>
+                <Color x:Key="SfAIAssistViewResponseItemBackground">LightGreen</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+
+....
+
+</Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+<tr>
+    <td> SfAIAssistViewBackground <br/><br/></td>
+    <td> Background color of the assist view.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewHeaderTextColor <br/><br/></td>
+    <td> Text color of the assist view header.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewHeaderFontFamily <br/><br/></td>
+    <td> Font family used for the header.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewHeaderFontAttributes <br/><br/></td>
+    <td> Font attributes used for the header.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewHeaderFontSize <br/><br/></td>
+    <td> Font size of the header.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewRequestItemBackground <br/><br/></td>
+    <td> Background color of a request item.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewRequestItemTextColor <br/><br/></td>
+    <td> Text color of a request item.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewRequestItemFontFamily <br/><br/></td>
+    <td> Font family used for a request item.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewRequestItemFontSize <br/><br/></td>
+    <td> Font size of a request item.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewRequestItemFontAttributes <br/><br/></td>
+    <td> Font attributes used for a request item.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewRequestItemAuthorTextColor <br/><br/></td>
+    <td> Text color of the author name in a request item.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewRequestItemAuthorFontFamily <br/><br/></td>
+    <td> Font family of the author name in a request item.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewRequestItemAuthorFontSize <br/><br/></td>
+    <td> Font size of the author name in a request item.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewRequestItemAuthorFontAttributes <br/><br/></td>
+    <td> Font attributes of the author name in a request item.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewRequestItemEditingBorder <br/><br/></td>
+    <td> Border of the request item when editing.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewResponseItemBackground <br/><br/></td>
+    <td> Background color of a response item.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewResponseItemTextColor <br/><br/></td>
+    <td> Text color of a response item.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewResponseItemFontFamily <br/><br/></td>
+    <td> Font family used for a response item.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewResponseItemFontSize <br/><br/></td>
+    <td> Font size of a response item.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewResponseItemFontAttributes <br/><br/></td>
+    <td> Font attributes used for a response item.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewResponseItemAuthorTextColor <br/><br/></td>
+    <td> Text color of the author name in a response item.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewResponseItemAuthorFontFamily <br/><br/></td>
+    <td> Font family of the author name in a response item.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewResponseItemAuthorFontSize <br/><br/></td>
+    <td> Font size of the author name in a response item.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewResponseItemAuthorFontAttributes <br/><br/></td>
+    <td> Font attributes of the author name in a response item.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewNormalActionViewColor <br/><br/></td>
+    <td> Background color of the normal state of an action view.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewHoverActionViewColor <br/><br/></td>
+    <td> Background color of the hover state of an action view.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewPressedActionViewColor <br/><br/></td>
+    <td> Background color of the pressed state of an action view.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewNormalActionViewIconColor <br/><br/></td>
+    <td> Icon color of a normal state action view.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewSelectedLikeIconColor <br/><br/></td>
+    <td> Icon color of the like action when selected.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewSelectedDisLikeIconColor <br/><br/></td>
+    <td> Icon color of the dislike action when selected.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewInputViewBackground <br/><br/></td>
+    <td> Background color of the input view.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewEditorPlaceholderTextColor <br/><br/></td>
+    <td> Placeholder text color of the input editor.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewEditorTextColor <br/><br/></td>
+    <td> Text color of the editor.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewEditorBackground <br/><br/></td>
+    <td> Background color of the editor.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewEditorStroke <br/><br/></td>
+    <td> Stroke color of the editor.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewFocusedEditorStroke <br/><br/></td>
+    <td> Stroke color of the editor when focused.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewEditorFontFamily <br/><br/></td>
+    <td> Font family used for the editor.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewEditorFontSize <br/><br/></td>
+    <td> Font size of the editor.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewEditorFontAttributes <br/><br/></td>
+    <td> Font attributes used for the editor.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewDisabledSendButtonColor <br/><br/></td>
+    <td> Background color of the disabled state of the send button.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewDisabledSendButtonIconColor <br/><br/></td>
+    <td> Icon color of the disabled state of the send button.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewRequestHyperlinkColor <br/><br/></td>
+    <td> Text color of hyperlink in request items.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewHyperlinkMetaTitleTextColor <br/><br/></td>
+    <td> Meta title text color for hyperlink.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewHyperlinkDescriptionTextColor <br/><br/></td>
+    <td> Description text color for hyperlink.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewHyperlinkDescriptionBackground <br/><br/></td>
+    <td> Background color of hyperlink description.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewCardBackground <br/><br/></td>
+    <td> Background color of the card item.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewCardStroke <br/><br/></td>
+    <td> Stroke color of the card item.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewCardTitleTextColor <br/><br/></td>
+    <td> Text color of the card title.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewCardTitleFontFamily <br/><br/></td>
+    <td> Font family used for the card title.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewCardTitleFontSize <br/><br/></td>
+    <td> Font size of the card title.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewCardTitleFontAttributes <br/><br/></td>
+    <td> Font attributes used for the card title.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewCardSubtitleTextColor <br/><br/></td>
+    <td> Text color of the card subtitle.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewCardSubtitleFontFamily <br/><br/></td>
+    <td> Font family used for the card subtitle.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewCardSubtitleFontSize <br/><br/></td>
+    <td> Font size of the card subtitle.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewCardSubtitleFontAttributes <br/><br/></td>
+    <td> Font attributes used for the card subtitle.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewCardDescriptionTextColor <br/><br/></td>
+    <td> Text color of the card description.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewCardDescriptionFontFamily <br/><br/></td>
+    <td> Font family used for the card description.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewCardDescriptionFontSize <br/><br/></td>
+    <td> Font size of the card description.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewCardDescriptionFontAttributes <br/><br/></td>
+    <td> Font attributes used for the card description.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewCardButtonBackground <br/><br/></td>
+    <td> Background color of the card button.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewCardButtonStroke <br/><br/></td>
+    <td> Stroke color of the card button.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewCardButtonTextColor <br/><br/></td>
+    <td> Text color of the card button.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewCardButtonFontFamily <br/><br/></td>
+    <td> Font family used for the card button.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewCardButtonFontSize <br/><br/></td>
+    <td> Font size of the card button.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewCardButtonFontAttributes <br/><br/></td>
+    <td> Font attributes used for the card button.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewSuggestionBackground <br/><br/></td>
+    <td> Background color of the suggestion.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewSuggestionItemTextColor <br/><br/></td>
+    <td> Text color of suggestion list items.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewSuggestionItemBackground <br/><br/></td>
+    <td> Background color of suggestion list items.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewSuggestionItemFontFamily <br/><br/></td>
+    <td> Font family used for suggestion list items.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewSuggestionItemFontSize <br/><br/></td>
+    <td> Font size of suggestion list items.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewSuggestionItemFontAttributes <br/><br/></td>
+    <td> Font attributes used for suggestion list items.<br/><br/></td>
+</tr>
+</table>
+
 ## SfAutocomplete
 
 <table>
