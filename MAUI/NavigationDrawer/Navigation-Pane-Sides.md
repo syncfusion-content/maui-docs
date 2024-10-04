@@ -152,3 +152,7 @@ this.Content = navigationDrawer;
 {% endtabs %}
 
 ![Bottom](Images/drawer-sides/navigation_drawer_bottom.png)
+
+## See also 
+
+[How to change the position of .NET MAUI Navigation Drawer?](https://support.syncfusion.com/kb/article/15515/how-to-change-the-position-of-net-maui-navigation-drawer)
