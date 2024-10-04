@@ -281,5 +281,3 @@ N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree
 ## See also 
 
 [How to customize the text color of the header in .NET MAUI TabView?](https://support.syncfusion.com/kb/article/16788/how-to-customize-the-text-color-of-the-header-in-net-maui-tabview)
-  8 changes: 7 additions & 1 deletion8  
-MAUI/Themes/HowTo.md

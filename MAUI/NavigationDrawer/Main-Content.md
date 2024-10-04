@@ -153,4 +153,4 @@ You can find the complete sample from the [`GitHub`](https://github.com/Syncfusi
 
 ## See also 
 
-[How to load content page to .NET MAUI NavigationDrawer contentview?](https://support.syncfusion.com/kb/article/15674/how-to-load-content-page-to-net-maui-navigationdrawer-contentview)
+[How to load content page to .NET MAUI NavigationDrawer content view?](https://support.syncfusion.com/kb/article/15674/how-to-load-content-page-to-net-maui-navigationdrawer-contentview)
