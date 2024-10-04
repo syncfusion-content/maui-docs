@@ -278,3 +278,5 @@ Here is the result of the previous codes,
 ![Chat control in .NET MAUI platform](images/getting-started/maui-chat-getting-started.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-chat)
+
+N> You can refer to our [.NET MAUI Chat](https://www.syncfusion.com/maui-controls/maui-chat) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Chat Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Chat) that shows you how to render the Chat in .NET MAUI.
