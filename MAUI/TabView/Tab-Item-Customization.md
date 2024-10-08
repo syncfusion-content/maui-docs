@@ -370,7 +370,7 @@ By using the [BadgeText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Tab
 
 {% highlight xaml %}
 <tabView:SfTabView>
-    <tabView:SfTabItem BadgeText="Inbox"/>
+    <tabView:SfTabItem BadgeText="20"/>
 </tabView:SfTabView>
 {% endhighlight %}
 
@@ -380,7 +380,7 @@ var tabItems = new TabItemCollection
 {
     new SfTabItem()
     {
-        BadgeText = "Inbox",
+        BadgeText = "20",
     }
 }
 {% endhighlight %}
