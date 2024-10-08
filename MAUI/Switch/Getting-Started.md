@@ -154,3 +154,5 @@ private void SfSwitch_StateChanged(object sender, SwitchStateChangedEventArgs e)
 {% endtabs %}
 
 N> Find the complete getting started sample of the .NET MAUI Switch from this [link.](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-SfSwitch)
+
+N> You can refer to our [.NET MAUI Switch](https://www.syncfusion.com/maui-controls/maui-switch) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Switch Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Buttons/SampleBrowser.Maui.Buttons/Samples/Switch) that shows you how to render the Switch in .NET MAUI.
