@@ -42,3 +42,7 @@ N> The [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Navigation
 The following screenshot illustrates the result of the above code.
 
 ![Duration](Images/animation-duration/navigation_duration.gif)
+
+## See also 
+
+[How to Customize the Animation Duration in .NET MAUI Navigation Drawer?](https://support.syncfusion.com/kb/article/15504/how-to-customize-the-animation-duration-in-net-maui-navigation-drawer)
