@@ -35,3 +35,9 @@ void UpdateTheme(object sender, System.EventArgs e)
 {% endhighlight %}
 
 The complete theme switch sample is available in [this](https://github.com/SyncfusionExamples/Switching-between-light-and-dark-themes-in-.NET-Maui) link.
+
+## See also 
+
+[How to toggle the light and dark themes for Syncfusion controls in .NET MAUI?](https://support.syncfusion.com/kb/article/16582/how-to-toggle-the-light-and-dark-themes-for-syncfusion-controls-in-net-maui)
+
+[How to automatically switch MAUI control theme based on device theme?](https://support.syncfusion.com/kb/article/17196/how-to-automatically-switch-syncfusion-control-themes-based-on-device-selected-theme-in-net-maui?isInternalRefresh=False)

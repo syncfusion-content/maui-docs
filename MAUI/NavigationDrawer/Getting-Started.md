@@ -485,3 +485,9 @@ public partial class NavigationDrawerPage : ContentPage
 ![OverView Image for NavigationDrawer](Images/getting-started/gettingstarted.png)
 
 You can find the getting started sample from the [`GitHub`](https://github.com/SyncfusionExamples/Getting-started-sample-for-.NET-MAUI-NavigationDrawer) link.
+
+## See also 
+
+[How to customize the overlay color of the .NET MAUI Navigation Drawer?](https://support.syncfusion.com/kb/article/16151/how-to-customize-the-overlay-color-of-the-net-maui-navigation-drawer)
+
+[How to create .NET MAUI Navigation Drawer in code behind (SfNavigationDrawer)?](https://support.syncfusion.com/kb/article/15484/how-to-create-net-maui-navigation-drawer-in-code-behind-sfnavigationdrawer)
