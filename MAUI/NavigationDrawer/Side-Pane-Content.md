@@ -231,7 +231,3 @@ this.Content = navigationDrawer;
 {% endtabs %}
 
 ![content](Images/panel-content/navigation_drawer_content.png)
-
-## See also 
-
-[How to Set the Header and Footer View in .NET MAUI Navigation Drawer?](https://support.syncfusion.com/kb/article/15502/how-to-set-the-header-and-footer-view-in-net-maui-navigation-drawer)

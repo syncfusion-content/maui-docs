@@ -265,6 +265,3 @@ var effectsView = new SfEffectsView
 
 ![.NET MAUI Effects View rotation angle customization](Customization_images/EffectsView_Rotation.png)
 
-## See also 
-
-[How to customize the CornerRadius in .NET MAUI EffectsView?](https://support.syncfusion.com/kb/article/16750/how-to-customize-the-cornerradius-in-net-maui-effectsview)

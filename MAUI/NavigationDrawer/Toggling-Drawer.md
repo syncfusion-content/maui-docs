@@ -46,7 +46,3 @@ navigationDrawer.ToggleDrawer();
 {% endhighlight %}
 
 Toggling drawer by swipe gesture is explained in [Swipe Gesture and Sensitivity](https://help.syncfusion.com/maui/navigationdrawer/swipe-gesture) section.
-
-## See also 
-
-[How to toggle the Navigation Drawer in .NET MAUI (SfNavigationDrawer)?](https://support.syncfusion.com/kb/article/15483/how-to-toggle-the-navigation-drawer-in-net-maui-sfnavigationdrawer)
