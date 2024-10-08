@@ -57,7 +57,7 @@ Suggestions are displayed by creating an instance of [AssistSuggestion](https://
 {% endtabs %}
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="31" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="29" %}
 
  public class SuggestionsViewModel : INotifyPropertyChanged
  {
@@ -107,7 +107,7 @@ Suggestions are displayed by creating an instance of [AssistSuggestion](https://
 You can add an image to the suggestion item by setting the [ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistSuggestion.html#Syncfusion_Maui_AIAssistView_AssistSuggestion_ImageSource) property in the [AssistSuggestion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistSuggestion.html) object.
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="20 21" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="19 20" %}
 
  public class SuggestionsViewModel : INotifyPropertyChanged
  {
@@ -151,7 +151,7 @@ You can add an image to the suggestion item by setting the [ImageSource](https:/
 The [AssistItemSuggestion.Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItemSuggestion.html#Syncfusion_Maui_AIAssistView_AssistItemSuggestion_Orientation) property allows you to display suggestions horizontally or vertically. By, default, the orientation is vertical.
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="23" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="22" %}
 
     ...
 	...
@@ -196,7 +196,7 @@ By default, a suggestion is automatically sent as a request item immediately whe
 ### Using SuggestionItemSelected event
 
 {% tabs %}
-{% highlight c# hl_lines="6" %}
+{% highlight c# hl_lines="5" %}
 
     sfAIAssistView.SuggestionItemSelected += OnSuggestionItemSelected;
 	
