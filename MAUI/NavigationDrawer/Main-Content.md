@@ -150,3 +150,7 @@ N> It is mandatory to set [ContentView](https://help.syncfusion.com/cr/maui/Sync
 ![contentview](Images/main-content/getting_main_content.png)
 
 You can find the complete sample from the [`GitHub`](https://github.com/SyncfusionExamples/.NET-MAUI-NavigationDrawer-MainContent) link.
+
+## See also 
+
+[How to load content page to .NET MAUI NavigationDrawer content view?](https://support.syncfusion.com/kb/article/15674/how-to-load-content-page-to-net-maui-navigationdrawer-contentview)

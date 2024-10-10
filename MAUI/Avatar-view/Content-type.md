@@ -434,3 +434,6 @@ You have to set both the image and initials based on what should be added in the
 
 ![GroupView for both image and initials](ContentType_Images/GroupView_InitialAndImage.png)
 
+## See also 
+
+[How to load the online images in .NET MAUI AvatarView?](https://support.syncfusion.com/kb/article/17110/how-to-load-the-online-images-in-net-maui-avatarview)

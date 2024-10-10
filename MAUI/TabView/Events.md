@@ -106,3 +106,7 @@ private void TabView_SelectionChanged(object sender, TabSelectionChangedEventArg
 {% endhighlight %}
 
 {% endtabs %}
+
+## See also 
+
+[How to convert events into commands in .NET MAUI TabView?](https://support.syncfusion.com/kb/article/16790/how-to-convert-events-into-commands-in-net-maui-tabview)
