@@ -274,7 +274,7 @@ The Intermediate state is used when a group of sub-choices has both checked and 
 
     <StackLayout Padding="20">
         <Label x:Name="label" Margin="10" Text="Pizza Toppings"/>
-        <buttons:SfCheckBox x:Name="selectAll" Text="Select All" StateChanged="SelectAll_StateChanged"/>
+        <buttons:SfCheckBox x:Name="selectAll" Text="Select All" IsThreeState="True" StateChanged="SelectAll_StateChanged"/>
         <buttons:SfCheckBox x:Name="pepperoni" Text="Pepperoni" StateChanged="CheckBox_StateChanged" Margin="30,0"/>
         <buttons:SfCheckBox x:Name="beef" Text="Beef" IsChecked="True" StateChanged="CheckBox_StateChanged" Margin="30,0"/>
         <buttons:SfCheckBox x:Name="mushroom" Text="Mushrooms" StateChanged="CheckBox_StateChanged" Margin="30,0"/>
@@ -291,7 +291,8 @@ The Intermediate state is used when a group of sub-choices has both checked and 
     label.Margin = new Thickness(10);
     selectAll = new SfCheckBox();
     selectAll.StateChanged += SelectAll_StateChanged;
-    selectAll.Text = "Select All";
+    selectAll.Text = "Select All";   
+    selectAll.IsThreeState = true;
     pepperoni = new SfCheckBox();
     pepperoni.StateChanged += CheckBox_StateChanged;
     pepperoni.Text = "Pepperoni";
@@ -358,3 +359,9 @@ The Intermediate state is used when a group of sub-choices has both checked and 
 ![.NET MAUI CheckBox](Images/Getting-Started/selectalltoppings.png)
 
 You can find the complete getting started sample of the .NET MAUI CheckBox from this [link.](https://github.com/SyncfusionExamples/maui-checkbox-samples)
+
+## See also 
+
+[How to achieve intermediate state in .NET MAUI CheckBox using MVVM?](https://support.syncfusion.com/kb/article/16162/how-to-achieve-intermediate-state-in-net-maui-checkbox-using-mvvm)
+
+[How to set intermediate state in the .NET MAUI CheckBox?](https://support.syncfusion.com/kb/article/14110/how-to-set-intermediate-state-in-the-net-maui-checkbox)
