@@ -237,3 +237,5 @@ The .NET MAUI DatePicker provides clear selection support, allowing you to clear
 
 {% endhighlight %}  
 {% endtabs %}
+
+N> You can also explore our [.NET MAUI Date Picker Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Picker/SampleBrowser.Maui.Picker/Samples/DatePicker) that shows you how to render the Date Picker in .NET MAUI.
