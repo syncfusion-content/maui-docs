@@ -114,7 +114,7 @@ ErrorBarSeries errorBar = new ErrorBarSeries()
     YBindingPath = "Coal",
     HorizontalErrorValue = 0.5,
     VerticalErrorValue = 50,
-    Mode= Both
+    Mode = ErrorBarMode.Both
 };
 
 chart.Series.Add(errorBar);
@@ -153,7 +153,7 @@ ErrorBarSeries errorBar = new ErrorBarSeries()
     YBindingPath = "Coal",
     HorizontalErrorValue = 0.5,
     VerticalErrorValue = 50,
-    Mode= Horizontal
+    Mode = ErrorBarMode.Horizontal
 };
 
 chart.Series.Add(errorBar);
@@ -191,7 +191,7 @@ ErrorBarSeries errorBar = new ErrorBarSeries()
     YBindingPath = "Coal",
     HorizontalErrorValue = 0.5,
     VerticalErrorValue = 50,
-    Mode= Vertical
+    Mode = ErrorBarMode.Vertical
 };
 
 chart.Series.Add(errorBar);
@@ -227,7 +227,7 @@ The following code illustrates how to set the [HorizontalDirection](https://help
                       VerticalErrorValue="50"
                       HorizontalErrorValue="0.5"
                       HorizontalDirection="Plus"
-                      VerticalDirectyion="Minus">
+                      VerticalDirection="Minus">
 </chart:ErrorBarSeries>
 
 {% endhighlight %}
@@ -241,8 +241,8 @@ ErrorBarSeries errorBar = new ErrorBarSeries()
     YBindingPath = "Coal",
     HorizontalErrorValue = 0.5,
     VerticalErrorValue = 50,
-    HorizontalDirection="Plus",
-    VerticalDirectyion="Minus"
+    HorizontalDirection = ErrorBarDirection.Plus,
+    VerticalDirection = ErrorBarDirection.Minus,
 };
 
 chart.Series.Add(errorBar);
@@ -282,7 +282,7 @@ ErrorBarSeries errorBar = new ErrorBarSeries()
     YBindingPath = "Coal",
     HorizontalErrorValue = 0.5,
     VerticalErrorValue = 50,
-    Type="Fixed"
+    Type = ErrorBarType.Fixed
 };
 
 chart.Series.Add(errorBar);
@@ -318,7 +318,7 @@ ErrorBarSeries errorBar = new ErrorBarSeries()
     YBindingPath = "Coal",
     HorizontalErrorValue = 0.5,
     VerticalErrorValue = 50,
-    Type="Percentage"
+    Type = ErrorBarType.Percentage
 };
 
 chart.Series.Add(errorBar);
@@ -354,7 +354,7 @@ ErrorBarSeries errorBar = new ErrorBarSeries()
     YBindingPath = "Coal",
     HorizontalErrorValue = 0.5,
     VerticalErrorValue = 50,
-    Type="StandardError"
+    Type = ErrorBarType.StandardError
 };
 
 chart.Series.Add(errorBar);
@@ -390,7 +390,7 @@ ErrorBarSeries errorBar = new ErrorBarSeries()
     YBindingPath = "Coal",
     HorizontalErrorValue = 0.5,
     VerticalErrorValue = 50,
-    Type="StandardDeviation"
+    Type = ErrorBarType.StandardDeviation
 };
 
 chart.Series.Add(errorBar);
@@ -430,9 +430,9 @@ ErrorBarSeries errorBar = new ErrorBarSeries()
     YBindingPath = "Coal",
     HorizontalErrorValue = 0.5,
     VerticalErrorValue = 50,
-    Type="Custom",
-    HorizontalErrorPath="HorizontalErrorValue",
-    VerticalErrorPath="VerticalErrorValue"
+    Type =ErrorBarType.Custom,
+    HorizontalErrorPath = "HorizontalErrorValue",
+    VerticalErrorPath = "VerticalErrorValue"
 };
     
 chart.Series.Add(errorBar);

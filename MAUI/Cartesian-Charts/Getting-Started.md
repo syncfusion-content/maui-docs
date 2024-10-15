@@ -313,7 +313,10 @@ The [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 
 <chart:SfCartesianChart>
     . . . 
-    <chart:ColumnSeries ShowDataLabels="True">
+    <chart:ColumnSeries ShowDataLabels="True"
+                        ItemsSource="{Binding Data}"
+                        XBindingPath="Name" 
+                        YBindingPath="Height">
     </chart:ColumnSeries>
 </chart:SfCartesianChart>
 
@@ -325,6 +328,9 @@ SfCartesianChart chart = new SfCartesianChart()
 . . .
 ColumnSeries series = new ColumnSeries();
 series.ShowDataLabels = true;
+series.ItemsSource = (new ViewModel()).Data;
+series.XBindingPath = "Name"; 
+series.YBindingPath = "Height"; 
 chart.Series.Add(series);
 
 {% endhighlight %}
@@ -377,11 +383,14 @@ N> Additionally, set label for each series using the `Label` property of chart s
 
 {% highlight C# %}
 
+SfCartesianChart chart = new SfCartesianChart()
+. . .
 ColumnSeries series = new ColumnSeries (); 
 series.ItemsSource = (new ViewModel()).Data;
 series.XBindingPath = "Name"; 
 series.YBindingPath = "Height"; 
 series.Label = "Height";
+chart.Series.Add(series);
 
 {% endhighlight %}
 
@@ -408,11 +417,14 @@ Tooltips are used to show information about the segment, when a user hovers over
 
 {% highlight C# %}
 
+SfCartesianChart chart = new SfCartesianChart()
+. . .
 ColumnSeries series = new ColumnSeries();
 series.ItemsSource = (new ViewModel()).Data;
 series.XBindingPath = "Name";          
 series.YBindingPath = "Height";
 series.EnableTooltip = true;
+chart.Series.Add(series);
 
 {% endhighlight %}
 
@@ -489,7 +501,10 @@ namespace ChartGettingStarted
     {
         public MainPage()
         {
-            InitializeComponent();            
+            InitializeComponent(); 
+
+            this.BindingContext = new ViewModel();
+
             SfCartesianChart chart = new SfCartesianChart();
 
             chart.Title = new Label

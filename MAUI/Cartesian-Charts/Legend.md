@@ -132,12 +132,18 @@ The [`Label`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Cartesi
 
 {% highlight c# %}
 
-chart.Legend = new ChartLegend();
-chart.Legend.LabelStyle.TextColor = Color.Blue;
-chart.Legend.LabelStyle.FontSize = 18;
-chart.Legend.LabelStyle.FontAttributes = FontAttributes.Bold;
-chart.Legend.LabelStyle.Margin = 5;
-chart.Legend.LabelStyle.FontFamily = "PlaywriteAR-Regular";
+SfCartesianChart chart = new SfCartesianChart();
+chart.Legend = new ChartLegend()
+{
+    LabelStyle = new ChartLegendLabelStyle
+    {
+        TextColor = Color.Blue,
+        FontSize = 18,
+        FontAttributes = FontAttributes.Bold,
+        Margin = 5,
+        FontFamily = "PlaywriteAR-Regular"
+    };
+}
 
 {% endhighlight %}
 

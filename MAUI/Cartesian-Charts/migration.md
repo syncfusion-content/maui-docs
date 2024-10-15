@@ -363,8 +363,6 @@ this.Content = chart;
 SfCartesianChart chart = new SfCartesianChart();
 . . .
 ColumnSeries series = new ColumnSeries();
-series.Label = "Height";
-series.ShowDataLabels = true;
 series.ItemsSource = (new ViewModel()).Data;
 series.XBindingPath = "Name";
 series.YBindingPath = "Height";

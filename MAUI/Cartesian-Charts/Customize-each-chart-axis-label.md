@@ -36,6 +36,7 @@ NumericalAxis primaryAxis = new NumericalAxis();
 primaryAxis.LabelCreated += XAxes_LabelCreated;
 chart.XAxes.Add(primaryAxis);
 . . .
+this.Content = chart;
     
 {% endhighlight %}
 

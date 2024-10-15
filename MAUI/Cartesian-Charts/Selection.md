@@ -50,6 +50,7 @@ ColumnSeries series = new ColumnSeries()
     SelectionBehavior = selection
 };
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -105,6 +106,7 @@ ColumnSeries series3 = new ColumnSeries()
 chart.Series.Add(series1);
 chart.Series.Add(series2);
 chart.Series.Add(series3);
+this.Content = chart;
 
 {% endhighlight %}
 
