@@ -1350,11 +1350,6 @@ The common properties of `Xamarin SfDataForm` list items ( [ DataFormPickerEdito
 </tr>
 </table>
 
-## Upcoming Features
-
-* Support for group header view customization.
-* Support for programmatic scrolling to a specific editor.
-
 ## Known issues in .NET MAUI DataForm
 
 * [MacCatalyst] - TimePicker popup is not working.
