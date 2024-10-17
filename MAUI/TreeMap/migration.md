@@ -1493,9 +1493,3 @@ The [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.Tree
 <td>Occurs when the selection within the tree map item is changed.</td>
 </tr>
 </table>
-
-## Upcoming features
-
-* Legend template support.
-* Drill down support.
-* RTL support.
