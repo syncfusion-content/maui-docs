@@ -443,3 +443,5 @@ The background of the Image Editor can be customized by setting the `Background`
 
 {% endhighlight %}
 {% endtabs %}
+
+N> You can also explore our [.NET MAUI Image Editor Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/ImageEditor) that shows you how to render the Image Editor in .NET MAUI.
