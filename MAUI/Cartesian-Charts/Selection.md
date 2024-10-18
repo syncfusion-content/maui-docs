@@ -58,7 +58,7 @@ this.Content = chart;
 
 ## Enable series selection
 
-To enable the series selection, create an instance of the cartesian chart [SelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_SelectionBehavior) property.
+To enable the series selection, create an instance of the Cartesian chart [SelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_SelectionBehavior) property.
 
 {% tabs %}
 
