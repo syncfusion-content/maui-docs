@@ -39,6 +39,7 @@ primaryAxis.ShowMajorGridLines = false;
 chart.PrimaryAxis = primaryAxis;
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.SecondaryAxis = secondaryAxis;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -92,6 +93,7 @@ primaryAxis.MajorGridLineStyle = axisLineStyle;
 chart.PrimaryAxis = primaryAxis;
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.SecondaryAxis = secondaryAxis;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -129,6 +131,7 @@ chart.SecondaryAxis = new NumericalAxis()
 };
 chart.SecondaryAxis = secondaryAxis;
 . . .
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -184,6 +187,7 @@ axisLineStyle.StrokeWidth = 0.8;
 axisLineStyle.StrokeDashArray = doubleCollection;
 secondaryAxis.MinorGridLineStyle = axisLineStyle;
 chart.SecondaryAxis = secondaryAxis;
+this.Content = chart;
 
 {% endhighlight %}
 

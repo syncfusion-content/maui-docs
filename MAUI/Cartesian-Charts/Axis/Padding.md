@@ -47,6 +47,8 @@ PlotOffsetStart = 30
 };
 chart.YAxes.Add(secondaryAxis);
 
+this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -89,6 +91,8 @@ NumericalAxis secondaryAxis = new NumericalAxis()
 PlotOffsetEnd = 30
 };
 chart.YAxes.Add(secondaryAxis);
+
+this.Content = chart;
 
 {% endhighlight %}
 

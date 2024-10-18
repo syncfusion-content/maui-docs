@@ -46,8 +46,11 @@ namespace ChartGettingStarted
     {
         public MainPage()
         {
-            InitializeComponent();           
+            InitializeComponent(); 
+            Grid grid = new Grid();
             SfCartesianChart chart = new SfCartesianChart(); 
+            grid.Add(chart);
+            this.Content = grid;            
         }
     }   
 }
@@ -193,6 +196,7 @@ CategoryAxis primaryAxis = new CategoryAxis();
 chart.XAxes.Add(primaryAxis);
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -269,6 +273,8 @@ series.YBindingPath = "Height";
 //Adding Series to the Chart Series Collection
 chart.Series.Add(series);
 
+this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %} 
@@ -298,6 +304,7 @@ chart.Title = new Label
 {
     Text = "Height Comparison"
 };
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -332,6 +339,7 @@ series.ItemsSource = (new ViewModel()).Data;
 series.XBindingPath = "Name"; 
 series.YBindingPath = "Height"; 
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -359,6 +367,7 @@ The legend provides information about the data point displayed in the chart. The
 
 SfCartesianChart chart = new SfCartesianChart();
 chart.Legend = new ChartLegend (); 
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -391,6 +400,7 @@ series.XBindingPath = "Name";
 series.YBindingPath = "Height"; 
 series.Label = "Height";
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -425,6 +435,7 @@ series.XBindingPath = "Name";
 series.YBindingPath = "Height";
 series.EnableTooltip = true;
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 

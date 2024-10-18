@@ -42,6 +42,7 @@ axisLineStyle.Stroke = Colors.Red;
 axisLineStyle.StrokeWidth = 2;
 secondaryAxis.AxisLineStyle = axisLineStyle;
 chart.SecondaryAxis = secondaryAxis;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -79,6 +80,7 @@ axisLineStyle.Stroke = Colors.Red;
 axisLineStyle.StrokeWidth = 2;
 secondaryAxis.AxisLineStyle = axisLineStyle;
 chart.SecondaryAxis = secondaryAxis;
+this.Content = chart;
 
 {% endhighlight %}
 

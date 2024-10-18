@@ -31,6 +31,7 @@ To define the legend in the chart, initialize the [ChartLegend](https://help.syn
 
 SfCircularChart chart = new SfCircularChart();
 chart.Legend = new ChartLegend();
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -134,12 +135,18 @@ The appearance of the legend label can be customized using the [`LabelStyle`](ht
 
 {% highlight c# %}
 
+SfCircularChart chart = new SfCircularChart();
 chart.Legend = new ChartLegend();
-chart.Legend.LabelStyle.TextColor = Color.Blue;
-chart.Legend.LabelStyle.FontSize = 18;
-chart.Legend.LabelStyle.FontAttributes = FontAttributes.Bold;
-chart.Legend.LabelStyle.Margin = 5;
-chart.Legend.LabelStyle.FontFamily = "PlaywriteAR-Regular";
+ChartLegendLabelStyle labelStyle = new ChartLegendLabelStyle()
+{
+    TextColor = Colors.Blue,
+    FontSize = 18,
+    FontAttributes = FontAttributes.Bold,
+    Margin = 5,
+    FontFamily = "PlaywriteAR-Regular"
+};
+chart.Legend.LabelStyle = labelStyle;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -277,6 +284,7 @@ public class LegendExt : ChartLegend
 
 SfCircularChart chart = new SfCircularChart();
 chart.Legend = new LegendExt();
+this.Content = chart;
 
 {% endhighlight %}
 

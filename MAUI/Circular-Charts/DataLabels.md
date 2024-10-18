@@ -43,6 +43,7 @@ PieSeries series = new PieSeries();
 series.ShowDataLabels = true;
 . . .
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -212,6 +213,7 @@ series.DataLabelSettings = new CircularDataLabelSettings()
 };
 
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -404,13 +406,13 @@ PieSeries series = new PieSeries()
 var connectorLineStyle = new ConnectorLineStyle
 {
     StrokeDashArray = doubleCollection,
-    ConnectorType = ConnectorType = ConnectorType.Curve,
+    ConnectorType = ConnectorType.Curve,
     Stroke = Colors.Black,
     StrokeWidth = 3
 };
 series.DataLabelSettings = new CircularDataLabelSettings()
 {
-    LabelPosition="Outside"
+    LabelPosition = ChartDataLabelPosition.Outside,
     ConnectorLineSettings = connectorLineStyle
 };
 

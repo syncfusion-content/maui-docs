@@ -42,6 +42,7 @@ axisLineStyle.Stroke = Colors.Red;
 axisLineStyle.StrokeWidth = 2;
 primaryAxis.AxisLineStyle = axisLineStyle;
 chart.XAxes.Add(primaryAxis);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -83,6 +84,7 @@ axisLineStyle.StrokeWidth = 2;
 primaryAxis.AxisLineStyle = axisLineStyle;
 
 chart.XAxes.Add(primaryAxis);
+this.Content = chart;
 
 {% endhighlight %}
 

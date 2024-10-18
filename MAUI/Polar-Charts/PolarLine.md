@@ -115,7 +115,7 @@ PolarLineSeries series = new PolarLineSeries()
     ItemsSource = new ViewModel().PlantDetails,
     XBindingPath = "Direction",
     YBindingPath = "Tree",
-    IsClosed = "False"
+    IsClosed  = false
 };
 
 chart.Series.Add(series);

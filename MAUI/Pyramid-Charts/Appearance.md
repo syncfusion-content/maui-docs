@@ -156,6 +156,7 @@ chart.ItemsSource = viewModel.Data;
 chart.XBindingPath = "XValue";
 chart.YBindingPath = "YValue";
 chart.Mode =  PyramidMode.Surface;
+this.Content = chart;
 
 {% endhighlight %}
 

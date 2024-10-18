@@ -46,6 +46,7 @@ public partial class MainWindow : ContentPage
     {
         this.InitializeComponent();
         SfFunnelChart chart = new SfFunnelChart();
+        this.Content = chart;
     }
 }   
 {% endhighlight %}
@@ -156,6 +157,7 @@ N> Add the namespace of `ViewModel` class to your XAML Page, if you prefer to se
 
 {% highlight C# %} 
 
+SfFunnelChart chart = new SfFunnelChart();
 ChartViewModel viewModel = new ChartViewModel();
 chart.BindingContext = viewModel;
 
@@ -217,6 +219,8 @@ chart.Title = new Label
 {
     Text = "School Admission"
 };
+. . .
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -241,6 +245,7 @@ The [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 SfFunnelChart chart = new SfFunnelChart();
 . . .
 chart.ShowDataLabels = true;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -268,6 +273,7 @@ The legend provides information about the data point displayed in the funnel cha
 SfFunnelChart chart = new SfFunnelChart();
 . . .
 chart.Legend = new ChartLegend();
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -292,6 +298,7 @@ Tooltips are used to show information about the segment, when mouse over on it. 
 SfFunnelChart chart = new SfFunnelChart();
 . . .
 chart.EnableTooltip = true;
+this.Content = chart;
 
 {% endhighlight %}
 

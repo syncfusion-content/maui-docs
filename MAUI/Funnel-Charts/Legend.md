@@ -120,11 +120,16 @@ SfFunnelChart chart = new SfFunnelChart()
 };
 
 chart.Legend = new ChartLegend();
-chart.Legend.LabelStyle.TextColor = Color.Blue;
-chart.Legend.LabelStyle.FontSize = 18;
-chart.Legend.LabelStyle.FontAttributes = FontAttributes.Bold;
-chart.Legend.LabelStyle.Margin = 5;
-chart.Legend.LabelStyle.FontFamily = "PlaywriteAR-Regular";
+ChartLegendLabelStyle labelStyle = new ChartLegendLabelStyle()
+{
+    TextColor = Colors.Blue,
+    FontSize = 18,
+    FontAttributes = FontAttributes.Bold,
+    Margin = 5,
+    FontFamily = "PlaywriteAR-Regular"
+};
+chart.Legend.LabelStyle = labelStyle;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -174,8 +179,8 @@ The legend can be positioned to the left, right, top, or bottom of the chart are
 {% highlight xaml %}
 
 <chart:SfFunnelChart ItemsSource="{Binding Data}" 
-                     XBindingPath="Name"  LegendIcon="Diamond"
-                     YBindingPath="Height" x:Name="chart">
+                     XBindingPath="Name"  
+                     YBindingPath="Height">
     <chart:SfFunnelChart.Legend>
         <chart:ChartLegend Placement="Bottom"/>
     </chart:SfFunnelChart.Legend>
@@ -238,6 +243,8 @@ funnelChart.Legend = new ChartLegend()
     ToggleSeriesVisibility = true
 };
 
+this.Content = funnelChart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -271,6 +278,8 @@ public class LegendExt : ChartLegend
 
 SfFunnelChart chart = new SfFunnelChart();
 chart.Legend = new LegendExt();
+
+this.Content = chart;
 
 {% endhighlight %}
 

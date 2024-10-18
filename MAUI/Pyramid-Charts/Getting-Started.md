@@ -46,6 +46,7 @@ public partial class MainWindow : ContentPage
     {
         this.InitializeComponent();
         SfPyramidChart chart = new SfPyramidChart();
+        this.Content = chart;
     }
 }   
 {% endhighlight %}
@@ -155,6 +156,7 @@ N> Add the namespace of `ViewModel` class to your XAML Page, if you prefer to se
 
 {% highlight C# %} 
 
+SfPyramidChart chart = new SfPyramidChart();
 ChartViewModel viewModel = new ChartViewModel();
 chart.BindingContext = viewModel;
 
@@ -216,6 +218,7 @@ chart.Title = new Label
 {
     Text = "Pyramid Stages"
 };
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -240,6 +243,7 @@ The [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 SfPyramidChart chart = new SfPyramidChart();
 . . .
 chart.ShowDataLabels = true;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -267,6 +271,7 @@ The legend provides information about the data point displayed in the pyramid ch
 SfPyramidChart chart = new SfPyramidChart();
 . . .
 chart.Legend = new ChartLegend();
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -291,6 +296,7 @@ Tooltips are used to show information about the segment, when mouse over on it. 
 SfPyramidChart chart = new SfPyramidChart();
 . . .
 chart.EnableTooltip = true;
+this.Content = chart;
 
 {% endhighlight %}
 
