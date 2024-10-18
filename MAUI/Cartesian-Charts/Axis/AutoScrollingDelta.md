@@ -47,6 +47,8 @@ ChartZoomPanBehavior zooming = new ChartZoomPanBehavior()
 };
 chart.ZoomPanBehavior = zooming;
 
+this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -79,6 +81,8 @@ CategoryAxis primaryAxis = new CategoryAxis()
 };
 chart.XAxes.Add(primaryAxis);
 
+this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -110,6 +114,8 @@ DateTimeAxis primaryAxis = new DateTimeAxis()
     AutoScrollingDeltaType = DateTimeDeltaType.Days,
 };
 chart.XAxes.Add(primaryAxis);
+
+this.Content = chart;
 
 {% endhighlight %}
 

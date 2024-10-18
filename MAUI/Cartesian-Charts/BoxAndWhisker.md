@@ -114,7 +114,7 @@ BoxAndWhiskerSeries series = new BoxAndWhiskerSeries()
     ItemsSource = new ViewModel().BoxWhiskerData,
     XBindingPath = "Department",
     YBindingPath = "Age",
-    BoxPlotMode = "Normal"
+    BoxPlotMode = BoxPlotMode.Normal
 };
 
 chart.Series.Add(series);
@@ -165,7 +165,7 @@ BoxAndWhiskerSeries series = new BoxAndWhiskerSeries()
     ItemsSource = new ViewModel().BoxWhiskerData,
     XBindingPath = "Department",
     YBindingPath = "Age",
-    BoxPlotMode = "Inclusive"
+    BoxPlotMode = BoxPlotMode.Inclusive
 };
 
 chart.Series.Add(series);

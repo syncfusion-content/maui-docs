@@ -45,6 +45,7 @@ NumericalAxis secondaryAxis = new NumericalAxis();
 secondaryAxis.Title = new ChartAxisTitle();
 secondaryAxis.Title.Text = "Values";
 chart.SecondaryAxis = secondaryAxis;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -95,6 +96,7 @@ secondaryAxis.LabelExtent = 60;
 secondaryAxis.Title = new ChartAxisTitle();
 secondaryAxis.Title.Text = "Numeric";
 chart.SecondaryAxis = secondaryAxis;
+this.Content = chart;
 
 {% endhighlight %}
 

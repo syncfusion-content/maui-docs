@@ -45,6 +45,7 @@ NumericalAxis secondaryAxis = new NumericalAxis()
 
 chart.XAxes.Add(primaryAxis);
 chart.YAxes.Add(secondaryAxis);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -78,6 +79,7 @@ CategoryAxis primaryAxis = new CategoryAxis()
     LabelRotation = 90
 };
 chart.XAxes.Add(primaryAxis);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -135,6 +137,7 @@ DateTimeAxis primaryAxis = new DateTimeAxis()
     EdgeLabelsDrawingMode = EdgeLabelsDrawingMode.Center
 };
 chart.XAxes.Add(primaryAxis);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -172,6 +175,7 @@ NumericalAxis primaryAxis = new NumericalAxis()
     EdgeLabelsVisibilityMode = EdgeLabelsVisibilityMode.AlwaysVisible
 };
 chart.XAxes.Add(primaryAxis);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -203,6 +207,7 @@ NumericalAxis primaryAxis = new NumericalAxis()
     EdgeLabelsVisibilityMode = EdgeLabelsVisibilityMode.Visible
 };
 chart.XAxes.Add(primaryAxis);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -234,6 +239,7 @@ CategoryAxis primaryAxis = new CategoryAxis()
     LabelsIntersectAction = AxisLabelsIntersectAction.MultipleRows,
 };
  chart.XAxes.Add(primaryAxis);
+ this.Content = chart;
  
 {% endhighlight %}
 

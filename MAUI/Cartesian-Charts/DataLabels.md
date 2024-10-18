@@ -48,6 +48,7 @@ ColumnSeries series = new ColumnSeries()
 };
 
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -98,6 +99,7 @@ series.DataLabelSettings = new CartesianDataLabelSettings()
 };
 
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -141,6 +143,7 @@ series.DataLabelSettings = new CartesianDataLabelSettings()
 };
 
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 

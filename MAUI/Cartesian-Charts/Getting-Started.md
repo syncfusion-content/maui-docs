@@ -46,8 +46,11 @@ namespace ChartGettingStarted
     {
         public MainPage()
         {
-            InitializeComponent();           
+            InitializeComponent(); 
+            Grid grid = new Grid();
             SfCartesianChart chart = new SfCartesianChart(); 
+            grid.Add(chart);
+            this.Content = grid;            
         }
     }   
 }
@@ -193,6 +196,7 @@ CategoryAxis primaryAxis = new CategoryAxis();
 chart.XAxes.Add(primaryAxis);
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -269,6 +273,8 @@ series.YBindingPath = "Height";
 //Adding Series to the Chart Series Collection
 chart.Series.Add(series);
 
+this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %} 
@@ -298,6 +304,7 @@ chart.Title = new Label
 {
     Text = "Height Comparison"
 };
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -313,7 +320,10 @@ The [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 
 <chart:SfCartesianChart>
     . . . 
-    <chart:ColumnSeries ShowDataLabels="True">
+    <chart:ColumnSeries ShowDataLabels="True"
+                        ItemsSource="{Binding Data}"
+                        XBindingPath="Name" 
+                        YBindingPath="Height">
     </chart:ColumnSeries>
 </chart:SfCartesianChart>
 
@@ -325,7 +335,11 @@ SfCartesianChart chart = new SfCartesianChart()
 . . .
 ColumnSeries series = new ColumnSeries();
 series.ShowDataLabels = true;
+series.ItemsSource = (new ViewModel()).Data;
+series.XBindingPath = "Name"; 
+series.YBindingPath = "Height"; 
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -353,6 +367,7 @@ The legend provides information about the data point displayed in the chart. The
 
 SfCartesianChart chart = new SfCartesianChart();
 chart.Legend = new ChartLegend (); 
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -377,11 +392,15 @@ N> Additionally, set label for each series using the `Label` property of chart s
 
 {% highlight C# %}
 
+SfCartesianChart chart = new SfCartesianChart()
+. . .
 ColumnSeries series = new ColumnSeries (); 
 series.ItemsSource = (new ViewModel()).Data;
 series.XBindingPath = "Name"; 
 series.YBindingPath = "Height"; 
 series.Label = "Height";
+chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -408,11 +427,15 @@ Tooltips are used to show information about the segment, when a user hovers over
 
 {% highlight C# %}
 
+SfCartesianChart chart = new SfCartesianChart()
+. . .
 ColumnSeries series = new ColumnSeries();
 series.ItemsSource = (new ViewModel()).Data;
 series.XBindingPath = "Name";          
 series.YBindingPath = "Height";
 series.EnableTooltip = true;
+chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -489,7 +512,10 @@ namespace ChartGettingStarted
     {
         public MainPage()
         {
-            InitializeComponent();            
+            InitializeComponent(); 
+
+            this.BindingContext = new ViewModel();
+
             SfCartesianChart chart = new SfCartesianChart();
 
             chart.Title = new Label

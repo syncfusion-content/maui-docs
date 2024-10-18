@@ -31,6 +31,7 @@ To define the tooltip in the chart, set the [EnableTooltip](https://help.syncfus
 SfPyramidChart chart = new SfPyramidChart();
 . . .      
 chart.EnableTooltip = true;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -70,7 +71,7 @@ chart.TooltipBehavior = new ChartTooltipBehavior()
 {
     Duration = 4,
 };
-. . .
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -117,6 +118,7 @@ SfPyramidChart chart = new SfPyramidChart();
 chart.EnableTooltip = true;
 chart.TooltipTemplate= grid.Resources["tooltipTemplate"] as DataTemplate;
 . . .     
+this.Content = chart;
 
 {% endhighlight %}
 

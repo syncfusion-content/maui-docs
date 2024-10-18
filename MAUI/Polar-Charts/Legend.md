@@ -63,6 +63,7 @@ chart.Legend = new ChartLegend()
 { 
     IsVisible = true 
 };
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -105,6 +106,7 @@ PolarAreaSeries series1 = new PolarAreaSeries()
     YBindingPath = "Tree",
     ItemsSource = polarViewModel.PlantDetails,
     Label = "Tree",
+    IsVisibleOnLegend = true,
 };
 
 PolarAreaSeries series2 = new PolarAreaSeries()
@@ -113,6 +115,7 @@ PolarAreaSeries series2 = new PolarAreaSeries()
     YBindingPath = "Tree",
     ItemsSource = polarViewModel.PlantDetails,
     Label = "Weed",
+    IsVisibleOnLegend = false,
 };
 
 chart.Series.Add(series1);
@@ -153,11 +156,16 @@ The [`Label`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarSe
 {% highlight c# %}
 
 chart.Legend = new ChartLegend();
-chart.Legend.LabelStyle.TextColor = Color.Blue;
-chart.Legend.LabelStyle.FontSize = 18;
-chart.Legend.LabelStyle.FontAttributes = FontAttributes.Bold;
-chart.Legend.LabelStyle.Margin = 5;
-chart.Legend.LabelStyle.FontFamily = "PlaywriteAR-Regular";
+ChartLegendLabelStyle labelStyle = new ChartLegendLabelStyle()
+{
+    TextColor = Colors.Blue,
+    FontSize = 18,
+    FontAttributes = FontAttributes.Bold,
+    Margin = 5,
+    FontFamily = "PlaywriteAR-Regular"
+};
+chart.Legend.LabelStyle = labelStyle;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -219,7 +227,7 @@ The legend can be positioned to the left, right, top, or bottom of the chart are
 <chart:SfPolarChart>
     ...
     <chart:SfPolarChart.Legend>
-        <chart:ChartLegend IsVisible = "True"/>
+        <chart:ChartLegend Placement="Bottom"/>
     </chart:SfPolarChart.Legend>
     ...
 </chart:SfCartesianChart>
@@ -329,6 +337,7 @@ public class LegendExt : ChartLegend
 
 SfPolarChart chart = new SfPolarChart();
 chart.Legend = new LegendExt();
+this.Content = chart;
 
 {% endhighlight %}
 

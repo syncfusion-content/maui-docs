@@ -45,8 +45,11 @@ namespace ChartGettingStarted
     {
         public MainPage()
         {
-            InitializeComponent();           
-            SfPolarChart chart = new SfPolarChart(); 
+            InitializeComponent();
+            Grid grid = new Grid();
+            SfPolarChart polarChart = new SfPolarChart();
+            grid.Add(polarChart);
+            this.Content = grid;         
         }
     }   
 }
@@ -269,6 +272,8 @@ chart.Series.Add(series1);
 chart.Series.Add(series2);
 chart.Series.Add(series3);
 
+this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %} 
@@ -299,6 +304,7 @@ chart.Title = new Label
     Text = "Plant Analysis",
     HorizontalTextAlignment="Center"
 };
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -327,6 +333,7 @@ SfPolarChart chart = new SfPolarChart()
 PolarLineSeries series1 = new PolarLineSeries();
 series1.ShowDataLabels = true;
 chart.Series.Add(series1);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -354,6 +361,7 @@ The legend provides information about the data point displayed in the chart. The
 
 SfPolarChart chart = new SfPolarChart();
 chart.Legend = new ChartLegend(); 
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -381,6 +389,8 @@ N> Additionally, set a label for each series using the `Label` property of the c
 
 {% highlight C# %}
 
+SfPolarChart chart = new SfPolarChart();
+. . .
 PolarLineSeries series1 = new PolarLineSeries(); 
 series1.ItemsSource = (new ViewModel()).PlantDetails;
 series1.XBindingPath = "Direction"; 
@@ -398,6 +408,8 @@ series3.ItemsSource = (new ViewModel()).PlantDetails;
 series3.XBindingPath = "Direction";
 series3.YBindingPath = "Flower";
 series3.Label = "Flower";
+. . .
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -421,8 +433,12 @@ Tooltips are used to display information about a segment when a user hovers over
 
 {% highlight C# %}
 
+SfPolarChart chart = new SfPolarChart();
+. . .
 PolarLineSeries  series1 = new PolarLineSeries();
 series1.EnableTooltip = true;
+. . .
+this.Content = chart;
 
 {% endhighlight %}
 

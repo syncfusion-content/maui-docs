@@ -41,6 +41,7 @@ NumericalAxis axis = new NumericalAxis()
 };
 
 chart.SecondaryAxis = axis;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -98,6 +99,7 @@ DateTimeAxis secondaryAxis = new DateTimeAxis()
 };
 
 chart.SecondaryAxis = secondaryAxis;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -136,6 +138,7 @@ NumericalAxis secondaryAxis = new NumericalAxis()
 };
 
 chart.SecondaryAxis = secondaryAxis;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -168,6 +171,7 @@ NumericalAxis secondaryAxis = new NumericalAxis()
 };
 
 chart.SecondaryAxis = secondaryAxis;
+this.Content = chart;
 
 {% endhighlight %}
 

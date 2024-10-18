@@ -108,7 +108,7 @@ WaterfallSeries series = new WaterfallSeries()
     YBindingPath = "Value"
 };
 
-WaterfallSeries.ConnectorLineStyle = new ChartLineStyle()
+series.ConnectorLineStyle = new ChartLineStyle()
 {
     Stroke = new SolidColorBrush(Colors.DarkViolet),
     StrokeThickness = 2

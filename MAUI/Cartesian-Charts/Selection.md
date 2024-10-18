@@ -50,6 +50,7 @@ ColumnSeries series = new ColumnSeries()
     SelectionBehavior = selection
 };
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -57,7 +58,7 @@ chart.Series.Add(series);
 
 ## Enable series selection
 
-To enable the series selection, create an instance of the cartesian chart [SelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_SelectionBehavior) property.
+To enable the series selection, create an instance of the Cartesian chart [SelectionBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_SelectionBehavior) property.
 
 {% tabs %}
 
@@ -105,6 +106,7 @@ ColumnSeries series3 = new ColumnSeries()
 chart.Series.Add(series1);
 chart.Series.Add(series2);
 chart.Series.Add(series3);
+this.Content = chart;
 
 {% endhighlight %}
 

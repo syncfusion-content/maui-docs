@@ -22,7 +22,7 @@ To get start quickly with our .NET MAUI Circular Chart, you can check the below 
 3. To initialize the control, import the Chart namespace.
 4. Initialize [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html).
 
-{% tabs %} 
+{% tabs %}
 
 {% highlight xaml %}
 
@@ -46,6 +46,7 @@ public partial class MainWindow : ContentPage
     {
         this.InitializeComponent();
         SfCircularChart chart = new SfCircularChart();
+        this.Content = chart;
     }
 }   
 {% endhighlight %}
@@ -156,6 +157,7 @@ N> Add namespace of `ViewModel` class to your XAML Page, if you prefer to set `B
 
 {% highlight C# %} 
 
+SfCircularChart chart = new SfCircularChart();
 ChartViewModel viewModel = new ChartViewModel();
 chart.BindingContext = viewModel;
 
@@ -194,6 +196,7 @@ series.ItemsSource = viewModel.Data;
 series.XBindingPath = "Product";
 series.YBindingPath = "SalesRate";
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -223,6 +226,7 @@ chart.Title = new Label
 {
     Text = "PRODUCT SALES"
 };
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -250,6 +254,7 @@ SfCircularChart chart = new SfCircularChart();
 PieSeries series = new PieSeries();
 series.ShowDataLabels = true;
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -277,6 +282,7 @@ The legend provides information about the data point displayed in the circular c
 SfCircularChart chart = new SfCircularChart();
 . . .
 chart.Legend = new ChartLegend();
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -304,6 +310,7 @@ SfCircularChart chart = new SfCircularChart();
 PieSeries series = new PieSeries();
 series.EnableTooltip = true;
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
