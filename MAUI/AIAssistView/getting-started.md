@@ -82,7 +82,7 @@ namespace GettingStarted
 
     <ContentPage> 
       . . .
-      xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AssistView">
+      xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView">
       <syncfusion:SfAIAssistView />
     </ContentPage>
 
