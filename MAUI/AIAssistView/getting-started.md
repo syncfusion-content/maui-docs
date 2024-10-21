@@ -220,9 +220,7 @@ To populate AI AssistView, bind the assist items in ViewModel to [AssistItems](h
                                    AssistItems="{Binding AssistItems}"/>
     </ContentPage.Content>	
 </Content>
-
-{% endhighlight %} 
-
+{% endhighlight %}
 {% highlight c# hl_lines="8" %} 
  public partial class MainPage : ContentPage 
  {
@@ -233,7 +231,7 @@ To populate AI AssistView, bind the assist items in ViewModel to [AssistItems](h
         GettingStartedViewModel viewModel = new GettingStartedViewModel(); 
         this.aiAssistView.AssistItems = viewModel.AssistItems; 
         this.Content = aiAssistView; 
-     } 
+    } 
   } 
     
 {% endhighlight %} 
