@@ -218,23 +218,22 @@ To populate AI AssistView, bind the assist items in ViewModel to [AssistItems](h
     <ContentPage.Content>
         <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                                    AssistItems="{Binding AssistItems}"/>
-    </ContentPage.Content>	
-</Content>
+    </ContentPage.Content>
+</ContentPage>
 {% endhighlight %}
-{% highlight c# hl_lines="8" %} 
+{% highlight c# hl_lines="8" %}
  public partial class MainPage : ContentPage 
  {
-    public MainPage() 
-    { 
-        InitializeComponent(); 
+    public MainPage()
+    {
+        InitializeComponent();
         SfAIAssistView aiAssistView = new SfAIAssistView();
-        GettingStartedViewModel viewModel = new GettingStartedViewModel(); 
-        this.aiAssistView.AssistItems = viewModel.AssistItems; 
-        this.Content = aiAssistView; 
-    } 
-  } 
-    
-{% endhighlight %} 
+        GettingStartedViewModel viewModel = new GettingStartedViewModel();
+        this.aiAssistView.AssistItems = viewModel.AssistItems;
+        this.Content = aiAssistView;
+    }
+  }
+{% endhighlight %}
 {% endtabs %}
 
 ## Step 6: Running the Application
