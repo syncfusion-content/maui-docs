@@ -363,8 +363,6 @@ this.Content = chart;
 SfCartesianChart chart = new SfCartesianChart();
 . . .
 ColumnSeries series = new ColumnSeries();
-series.Label = "Height";
-series.ShowDataLabels = true;
 series.ItemsSource = (new ViewModel()).Data;
 series.XBindingPath = "Name";
 series.YBindingPath = "Height";
@@ -465,6 +463,7 @@ The following code example shows how to enable legend in chart.
 SfChart chart = new SfChart();
 . . .
 chart.Legend = new ChartLegend ();
+this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
@@ -491,6 +490,7 @@ chart.Legend = new ChartLegend ();
 SfCartesianChart chart = new SfCartesianChart();
 . . .
 chart.Legend = new ChartLegend ();
+this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
@@ -550,6 +550,7 @@ style.FontSize = 18;
 series.DataMarker.LabelStyle = style;
 
 chart.Series.Add(series);
+this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %} 
@@ -602,6 +603,7 @@ style.FontSize = 18;
 series.CartesianDataLabelSettings.LabelStyle = style;
 
 chart.Series.Add(series);
+this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
@@ -650,6 +652,7 @@ tool.BackgroundColor = Color.Blue;
 tool.TextColor = Color.White;
 tool.Margin = new Thickness(5, 5, 5, 5);
 chart.ChartBehaviors.Add(tool);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -693,6 +696,7 @@ tooltip.BackgroundColor = Color.Blue;
 tooltip.TextColor = Color.White;
 tooltip.Margin = new Thickness(5, 5, 5, 5);
 chart.TooltipBehavior = tooltip;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -730,6 +734,9 @@ Create an instance of the [ChartSelectionBehavior](https://help.syncfusion.com/c
 
 {% endhighlight %} 
 {% highlight C# %}
+
+SfChart chart = new SfChart();
+. . .
 ColumnSeries series = new ColumnSeries();
 . . .
 columnSeries.EnableDataPointSelection = true;
@@ -738,6 +745,7 @@ chart.Series.Add(series);
 ChartSelectionBehavior selectionBehavior = new ChartSelectionBehavior();
 
 chart.ChartBehaviors.Add(selectionBehavior);
+this.Content = chart;
 {% endhighlight %}
 {% endtabs %}
 </td>
@@ -780,6 +788,7 @@ ColumnSeries series = new ColumnSeries()
 };
 
 chart.Series.Add(series);
+this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}

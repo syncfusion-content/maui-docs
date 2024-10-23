@@ -38,6 +38,8 @@ SfCartesianChart chart = new SfCartesianChart();
 .......
 CustomNumericalAxis primaryAxis = new CustomNumericalAxis();
 chart.XAxes.Add(primaryAxis);
+. . .
+this.Content = chart;
     
 {% endhighlight %}
 

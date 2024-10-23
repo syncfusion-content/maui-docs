@@ -50,6 +50,8 @@ secondaryAxis.Title = new ChartAxisTitle();
 secondaryAxis.Title.Text = "Values";
 chart.YAxes.Add(secondaryAxis);
 
+this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -101,6 +103,7 @@ primaryAxis.LabelExtent = 60;
 primaryAxis.Title = new ChartAxisTitle();
 primaryAxis.Title.Text = "Category";
 chart.XAxes.Add(primaryAxis);
+this.Content = chart;
 
 {% endhighlight %}
 

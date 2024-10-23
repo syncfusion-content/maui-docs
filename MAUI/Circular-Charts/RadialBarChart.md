@@ -255,6 +255,7 @@ series.TrackStrokeWidth = 1;
 series.TrackStroke = new SolidColorBrush(Color.FromArgb("#FED7AA"));
 
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 

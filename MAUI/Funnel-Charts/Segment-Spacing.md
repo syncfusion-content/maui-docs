@@ -27,6 +27,7 @@ SfFunnelChart chart = new SfFunnelChart();
 . . .
 chart.GapRatio = 0.2;
 . . .
+this.Content = chart;
 
 {% endhighlight %}
 

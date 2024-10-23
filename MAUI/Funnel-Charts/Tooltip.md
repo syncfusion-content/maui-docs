@@ -31,6 +31,7 @@ To define the tooltip in the chart, set the [EnableTooltip](https://help.syncfus
 SfFunnelChart chart = new SfFunnelChart();
 . . .      
 chart.EnableTooltip = true;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -71,6 +72,7 @@ chart.TooltipBehavior = new ChartTooltipBehavior()
     Duration = 4,
 };
 . . .
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -117,6 +119,7 @@ SfFunnelChart chart = new SfFunnelChart();
 chart.EnableTooltip = true;
 chart.TooltipTemplate= grid.Resources["tooltipTemplate"] as DataTemplate;
 . . .
+this.Content = chart;
 
 {% endhighlight %}
 

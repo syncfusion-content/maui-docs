@@ -44,6 +44,7 @@ NumericalAxis primaryAxis = new NumericalAxis();
 chart.PrimaryAxis = primaryAxis;
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.SecondaryAxis = secondaryAxis;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -84,6 +85,7 @@ NumericalAxis primaryAxis = new NumericalAxis()
 chart.PrimaryAxis = primaryAxis;
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.SecondaryAxis = secondaryAxis;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -211,6 +213,7 @@ SfPolarChart chart = new SfPolarChart();
 . . .
 DateTimeAxis primaryAxis = new DateTimeAxis();
 chart.PrimaryAxis = primaryAxis;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -252,6 +255,7 @@ DateTimeAxis primaryAxis = new DateTimeAxis()
 chart.PrimaryAxis = primaryAxis;
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.SecondaryAxis = secondaryAxis;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -285,6 +289,7 @@ DateTimeAxis primaryAxis = new DateTimeAxis()
 };
 
 chart.PrimaryAxis = primaryAxis;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -314,6 +319,7 @@ SfPolarChart chart = new SfPolarChart();
 NumericalAxis secondaryAxis = new NumericalAxis();
 secondaryAxis.IsInversed = true;
 chart.SecondaryAxis = secondaryAxis;
+this.Content = chart;
 
 {% endhighlight %}
 

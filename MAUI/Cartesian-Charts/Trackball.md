@@ -164,13 +164,15 @@ The [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Char
 
 SfCartesianChart chart = new SfCartesianChart();
 . . .
+ChartTrackballBehavior trackball = new ChartTrackballBehavior();
 ChartLabelStyle labelStyle = new ChartLabelStyle();
 labelStyle.Background = Colors.LightBlue;
 labelStyle.FontSize = 15;
 labelStyle.CornerRadius = 5;
 labelStyle.StrokeWidth = 2;
 labelStyle.Stroke = Colors.Gray;
-
+trackball.LabelStyle = labelStyle;
+. . .
 this.Content = chart;
 
 {% endhighlight %}
@@ -204,10 +206,12 @@ this.Content = chart;
 
 SfCartesianChart chart = new SfCartesianChart();
 . . .
+ChartTrackballBehavior trackball = new ChartTrackballBehavior();
 ChartLineStyle lineStyle = new ChartLineStyle();
 lineStyle.Stroke = Colors.Gray;
 lineStyle.StrokeDashArray = 4;
-
+trackball.LineStyle = lineStyle;
+. . .
 this.Content = chart;
             
 {% endhighlight %}
@@ -246,6 +250,7 @@ The [MarkerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 
 SfCartesianChart chart = new SfCartesianChart();
 . . .
+ChartTrackballBehavior trackball = new ChartTrackballBehavior();
 ChartMarkerSettings markerStyle = new ChartMarkerSettings()
 {
     markerStyle.Type = ShapeType.InvertedTriangle,
@@ -255,7 +260,8 @@ ChartMarkerSettings markerStyle = new ChartMarkerSettings()
     markerStyle.Width = 15,
     markerStyle.Height = 15,
 };
-
+trackball.MarkerSettings = markerStyle;
+. . .
 this.Content = chart;
         
 {% endhighlight %}

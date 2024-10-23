@@ -69,6 +69,7 @@ The [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.C
 SfCircularChart chart = new SfCircularChart();
 . . .
 chart.TooltipBehavior = new ChartTooltipBehavior();
+this.Content = chart;
 
 {% endhighlight %}
 
