@@ -316,6 +316,39 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <td>{{'[AnnotationSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSelected)'| markdownify }}</td>
 <td>Occurs when an annotation is selected.</td>
 </tr>
+<tr>
+<td>
+<div>{{'[PageChanged](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_PageChanged)'| markdownify }},</div>
+
+</td>
+<td>{{'[PropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.bindableobject.propertychanged)'| markdownify }}</td>
+<td> Occurs when a property in the PDF Viewer is modified. It allows you to monitor page changes effectively. The example below demonstrates how to implement this:
+{% tabs %}
+{% highlight c# %}
+
+SfPdfViewer.PropertyChanged += PdfViewer_PropertyChanged;
+
+private void PdfViewer_PropertyChanged(object sender, PropertyChangedEventArgs e)
+
+{
+
+    // Check if the changed property is PageNumber
+
+    if (e.PropertyName == nameof(SfPdfViewer.PageNumber))
+
+    {
+
+        // Get the current page number
+
+        int currentPageNumber = SfPdfViewer.PageNumber;
+
+    }
+
+}
+{% endhighlight %}
+{% endtabs %}
+</td>
+</tr>
 </table>
 
 ## Methods
