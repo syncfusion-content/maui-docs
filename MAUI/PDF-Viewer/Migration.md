@@ -328,17 +328,21 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 
 // Create an instance of the SfPdfViewer control
 SfPdfViewer pdfViewer = new SfPdfViewer();
-
 // Subscribe to the PropertyChanged event
 pdfViewer.PropertyChanged += PdfViewer_PropertyChanged;
 
+// Event handler for the PropertyChanged event
 private void PdfViewer_PropertyChanged(object? sender, PropertyChangedEventArgs e)
 {
-   // Check if the changed property is PageNumber
-   if (e.PropertyName == nameof(SfPdfViewer.PageNumber) && sender is SfPdfViewer)
+   // Typecast the sender to SfPdfViewer
+   if (sender is SfPdfViewer pdfviewer)
    {
-      // Get the current page number
-      int currentPageNumber = ((SfPdfViewer)sender).PageNumber;
+      // Check if the changed property is PageNumber
+      if (e.PropertyName == nameof(pdfviewer.PageNumber))
+      {
+         // Get the current page number
+         int currentPageNumber = pdfviewer.PageNumber;
+      }
    }
 }
 {% endhighlight %}
