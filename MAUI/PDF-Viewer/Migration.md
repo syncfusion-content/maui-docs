@@ -338,7 +338,7 @@ private void PdfViewer_PropertyChanged(object? sender, PropertyChangedEventArgs 
    if (sender is SfPdfViewer pdfViewer)
    {
       // Check if the changed property is PageNumber
-      if (e.PropertyName == nameof(pdfViewer.PageNumber))
+      if (e.PropertyName == nameof(SfPdfViewer.PageNumber))
       {
          // Get the current page number
          int currentPageNumber = pdfViewer.PageNumber;
