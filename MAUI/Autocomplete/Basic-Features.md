@@ -25,8 +25,11 @@ The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 {% endhighlight %}
 {% highlight C# %}
 
+SfAutocomplete autocomplete = new SfAutocomplete(); 
+autocomplete.WidthRequest = 250;
 autocomplete.DisplayMemberPath = "Name";
 autocomplete.TextMemberPath = "Name";
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
 
 {% endhighlight %}
 {% endtabs %}
