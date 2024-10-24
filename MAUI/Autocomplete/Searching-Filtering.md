@@ -272,7 +272,7 @@ Now, create a custom filtering class to apply your filter logic to the **Autocom
 {% highlight C# %}
 
 /// <summary>
-/// Represents a custom filtering behavior for the **Autocomplete** control. 
+/// Represents a custom filtering behavior for the `Autocomplete` control. 
 /// </summary>
 public class CityFilteringBehavior : IAutocompleteFilterBehavior
 {
@@ -342,7 +342,7 @@ When searching, the first item in the drop-down will be highlighted by default. 
 {% highlight C# %}
 
 /// <summary>
-/// Represents a custom searching behavior for **Autocomplete** control. 
+/// Represents a custom searching behavior for `Autocomplete` control. 
 /// </summary>
 
 public class CapitalCitySearchingBehavior : Syncfusion.Maui.Inputs.IAutocompleteSearchBehavior

@@ -217,7 +217,7 @@ Now, let us create custom filtering class to apply our own filter logic to Combo
 {% highlight C# %}
 
 /// <summary>
-/// Represents a custom filtering behavior for **ComboBox** control. 
+/// Represents a custom filtering behavior for `ComboBox` control. 
 /// </summary>
 public class CityFilteringBehavior : IComboBoxFilterBehavior
 {
@@ -238,7 +238,7 @@ The following code demonstrates how to filter the cities based on the city or co
 {% highlight C# %}
 
 /// <summary>
-/// Represents a custom filtering behavior for **ComboBox** control. 
+/// Represents a custom filtering behavior for `ComboBox` control. 
 /// </summary>
 public class CityFilteringBehavior : IComboBoxFilterBehavior
 {
