@@ -69,6 +69,7 @@ public class SocialMediaViewModel
 
 <editors:SfAutoComplete x:Name="autocomplete"
                         WidthRequest="250"
+                        HeightRequest = "50"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name" />
@@ -78,6 +79,7 @@ public class SocialMediaViewModel
 
 SfAutocomplete autocomplete = new SfAutocomplete(); 
 autocomplete.WidthRequest = 250;
+autocomplete.HeightRequest = 50;
 autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
 autocomplete.DisplayMemberPath = "Name";
 autocomplete.TextMemberPath = "Name";
@@ -270,6 +272,7 @@ When an item is selected from the drop-down list, the [SelectionChanged](https:/
 
 <editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="250"
+                        HeightRequest = "50"
                         ItemsSource="{Binding SocialMedias}"
                         TextMemberPath="Name"
                         DisplayMemberPath="Name"
@@ -281,6 +284,7 @@ When an item is selected from the drop-down list, the [SelectionChanged](https:/
 
 SfAutocomplete autocomplete = new SfAutocomplete();
 autocomplete.WidthRequest = 250;
+autocomplete.HeightRequest = 50;
 autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
 autocomplete.TextMemberPath = "Name";
 autocomplete.DisplayMemberPath = "Name";
@@ -319,6 +323,7 @@ In single selection mode, the [SelectedValue](https://help.syncfusion.com/cr/mau
 
 <editors:SfAutocomplete x:Name="autocomplete"
                     WidthRequest="250"
+                    HeightRequest = "50"
                     MaxDropDownHeight="250"
                     TextMemberPath="Name"   
                     DisplayMemberPath="Name"
@@ -335,6 +340,7 @@ In single selection mode, the [SelectedValue](https://help.syncfusion.com/cr/mau
 
 SfAutocomplete autocomplete = new SfAutocomplete();
 autocomplete.WidthRequest = 250;
+autocomplete.HeightRequest = 50;
 autoComplete.MaxDropDownHeight = 250;
 autocomplete.TextMemberPath = "Name";
 autocomplete.DisplayMemberPath = "Name";
@@ -367,6 +373,7 @@ In multi-selection mode, the [SelectedValue](https://help.syncfusion.com/cr/maui
 
 <editors:SfAutocomplete x:Name="autocomplete"
                     WidthRequest="250"
+                    HeightRequest = "50"
                     MaxDropDownHeight="250"
                     TextMemberPath="Name"   
                     DisplayMemberPath="Name"
@@ -384,6 +391,7 @@ In multi-selection mode, the [SelectedValue](https://help.syncfusion.com/cr/maui
 
 SfAutocomplete autocomplete = new SfAutocomplete();
 autocomplete.WidthRequest = 250;
+autocomplete.HeightRequest = 50;
 autoComplete.MaxDropDownHeight = 250;
 autocomplete.TextMemberPath = "Name";
 autocomplete.DisplayMemberPath = "Name";
@@ -426,6 +434,7 @@ By default, the clear button `X` will be displayed in the editor of the [Autocom
 
 <editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="250"
+                        HeightRequest = "50"
                         IsClearButtonVisible="false"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
@@ -437,6 +446,7 @@ By default, the clear button `X` will be displayed in the editor of the [Autocom
 
 SfAutocomplete autocomplete = new SfAutocomplete();
 autocomplete.WidthRequest = 250;
+autocomplete.HeightRequest = 50;
 autocomplete.IsClearButtonVisible = false;
 autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
 autocomplete.DisplayMemberPath = "Name";
@@ -459,6 +469,7 @@ In the Autocomplete control, the drop-down can be opened or closed programmatica
 
 <editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="250"
+                        HeightRequest = "50"
                         ItemsSource="{Binding SocialMedias}"
                         IsDropDownOpen = true;
                         DisplayMemberPath="Name"
@@ -470,6 +481,7 @@ In the Autocomplete control, the drop-down can be opened or closed programmatica
 
 SfAutocomplete autocomplete = new SfAutocomplete();
 autocomplete.WidthRequest = 250;
+autocomplete.HeightRequest = 50;
 autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
 autocomplete.IsDropDownOpen = true;
 autocomplete.DisplayMemberPath = "Name";

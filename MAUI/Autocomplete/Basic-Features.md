@@ -17,7 +17,8 @@ The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 {% highlight xaml %}
 
 <editors:SfAutocomplete x:Name="autocomplete"
-                        WidthRequest="250"
+                        WidthRequest="250" 
+                        HeightRequest = "50"
                         DisplayMemberPath = "Name"
                         TextMemberPath = "Name"
                         ItemsSource="{Binding SocialMedias}" />
@@ -27,6 +28,7 @@ The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 SfAutocomplete autocomplete = new SfAutocomplete(); 
 autocomplete.WidthRequest = 250;
+autocomplete.HeightRequest = 50;
 autocomplete.DisplayMemberPath = "Name";
 autocomplete.TextMemberPath = "Name";
 autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
