@@ -13,7 +13,7 @@ The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComb
 
 ## Enable filtering
 
-To enable filtering functionality in `ComboBox` control, set the [IsFilteringEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_IsFilteringEnabled) and [IsEditable](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_IsEditable) properties as `true`. The default value is `false`. The drop-down will open automatically as soon as you start typing characters in the `ComboBox` control.
+To enable filtering functionality in **ComboBox** control, set the [IsFilteringEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_IsFilteringEnabled) and [IsEditable](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_IsEditable) properties as **true**. The default value is **false**. The drop-down will open automatically as soon as you start typing characters in the **ComboBox** control.
 
 {% tabs %}
 {% highlight c# %}
@@ -110,7 +110,7 @@ N> Filtering will be supported only for editable mode.
 
 ## Filter mode
 
-The string comparison for filtering suggestions can be changed using the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TextSearchMode) property. The default filtering type is `StartsWith`, ignoring accent and it is case insensitive. The available filtering modes are,
+The string comparison for filtering suggestions can be changed using the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_TextSearchMode) property. The default filtering type is **StartsWith**, ignoring accent and it is case insensitive. The available filtering modes are,
 
 * StartsWith
 * Contains
@@ -217,7 +217,7 @@ Now, let us create custom filtering class to apply our own filter logic to Combo
 {% highlight C# %}
 
 /// <summary>
-/// Represents a custom filtering behavior for `ComboBox` control. 
+/// Represents a custom filtering behavior for **ComboBox** control. 
 /// </summary>
 public class CityFilteringBehavior : IComboBoxFilterBehavior
 {
@@ -238,7 +238,7 @@ The following code demonstrates how to filter the cities based on the city or co
 {% highlight C# %}
 
 /// <summary>
-/// Represents a custom filtering behavior for `ComboBox` control. 
+/// Represents a custom filtering behavior for **ComboBox** control. 
 /// </summary>
 public class CityFilteringBehavior : IComboBoxFilterBehavior
 {
