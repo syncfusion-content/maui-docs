@@ -14,15 +14,15 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
 
 Highlight matching characters in a suggestion list to pick an item with more clarity. There are two ways to highlight the matching text:
 
-*   `First Occurrence`
+*   **First Occurrence**
 
-*   `Multiple Occurrence`
+*   **Multiple Occurrence**
 
 The text highlight can be indicated with various customizing styles by enabling the below properties. They are
 
-*   `HighlightedTextColor` - sets the color of the highlighted text for differentiating the highlighted characters.
+*   **HighlightedTextColor** - sets the color of the highlighted text for differentiating the highlighted characters.
 
-*   `HighlightTextFontAttributes` - sets the FontAttributes of the highlighted text.
+*   **HighlightTextFontAttributes** - sets the FontAttributes of the highlighted text.
 
 ## First Occurrence
 It highlights the first position of the matching characters in the suggestion list.
