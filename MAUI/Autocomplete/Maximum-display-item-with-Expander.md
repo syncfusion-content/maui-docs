@@ -25,7 +25,12 @@ Restrict the number of suggestions displayed and have the remaining items loaded
 
 {% highlight C# %}
 
+SfAutocomplete autocomplete = new SfAutocomplete();
+autocomplete.WidthRequest = 250;
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
 autocomplete.MaximumSuggestion = 2;
+autocomplete.DisplayMemberPath = "Name";
+autocomplete.TextMemberPath = "Name";
 
 {% endhighlight %}
 {% endtabs %}
@@ -53,8 +58,13 @@ The LoadMore support provides [LoadMoreText](https://help.syncfusion.com/cr/maui
 
 {% highlight C# %}
 
+SfAutocomplete autocomplete = new SfAutocomplete();
+autocomplete.WidthRequest = 250;
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
 autocomplete.MaximumSuggestion = 2;
 autocomplete.LoadMoreText= "Load more items";
+autocomplete.DisplayMemberPath = "Name";
+autocomplete.TextMemberPath = "Name";
 
 {% endhighlight %}
 {% endtabs %}
@@ -89,7 +99,12 @@ SfAutocomplete allows customizing User Interface(UI) of Load More view. To custo
 
 {% highlight C# %}
 
+SfAutocomplete autocomplete = new SfAutocomplete();
+autocomplete.WidthRequest = 250;
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
 autocomplete.MaximumSuggestion = 2;
+autocomplete.DisplayMemberPath = "Name";
+autocomplete.TextMemberPath = "Name";
 autocomplete.LoadMoreTemplate = new DataTemplate(() =>
 {
     var grid = new Grid();
@@ -131,8 +146,13 @@ The LoadMore support provides [LoadMoreButtonTapped](https://help.syncfusion.com
 
 {% highlight C# %}
 
+SfAutocomplete autocomplete = new SfAutocomplete();
+autocomplete.WidthRequest = 250;
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
 autocomplete.MaximumSuggestion = 2;
 autocomplete.LoadMoreButtonTapped += Autocomplete_LoadMoreButtonTapped;
+autocomplete.DisplayMemberPath = "Name";
+autocomplete.TextMemberPath = "Name";
 
 private void Autocomplete_LoadMoreButtonTapped(object? sender, EventArgs e)
 {

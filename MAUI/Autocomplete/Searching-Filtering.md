@@ -76,6 +76,9 @@ public class SocialMediaViewModel
 
 {% highlight C# %}
 
+SfAutocomplete autocomplete = new SfAutocomplete();
+autocomplete.WidthRequest = 350;
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
 autocomplete.DisplayMemberPath = "Name";
 
 {% endhighlight %}
@@ -105,7 +108,11 @@ Searching will be performed based on the [TextMemberPath](https://help.syncfusio
 
 {% highlight C# %}
 
+SfAutocomplete autocomplete = new SfAutocomplete();
+autocomplete.WidthRequest = 350;
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
 autocomplete.TextMemberPath = "ID";
+autocomplete.DisplayMemberPath = "Name";
 
 {% endhighlight %}
 {% endtabs %}
@@ -139,7 +146,12 @@ Set the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 
 {% highlight C# %}
 
+SfAutocomplete autocomplete = new SfAutocomplete();
+autocomplete.WidthRequest = 250;
 autocomplete.TextSearchMode = AutocompleteTextSearchMode.StartsWith;
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
+autocomplete.DisplayMemberPath = "Name";
+autocomplete.TextMemberPath = "Name";
 
 {% endhighlight %}
 {% endtabs %}
@@ -166,7 +178,12 @@ Set the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 
 {% highlight C# %}
 
+SfAutocomplete autocomplete = new SfAutocomplete();
+autocomplete.WidthRequest = 250;
 autocomplete.TextSearchMode = AutocompleteTextSearchMode.Contains;
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
+autocomplete.DisplayMemberPath = "Name";
+autocomplete.TextMemberPath = "Name";
 
 {% endhighlight %}
 {% endtabs %}
@@ -194,7 +211,13 @@ Instead of displaying suggestion list on every character entry, matches can be f
 
 {% highlight C# %}
 
+SfAutocomplete autocomplete = new SfAutocomplete();
+autocomplete.WidthRequest = 250;
+autocomplete.TextSearchMode = AutocompleteTextSearchMode.StartsWith;
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
 autocomplete.MinimumPrefixCharacters = 3;
+autocomplete.DisplayMemberPath = "Name";
+autocomplete.TextMemberPath = "Name";
 
 {% endhighlight %}
 {% endtabs %}
