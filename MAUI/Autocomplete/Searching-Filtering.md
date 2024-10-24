@@ -15,17 +15,17 @@ The [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Sf
 
 The [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DisplayMemberPath) and [TextMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_TextMemberPath) properties of Autocomplete control specify the property path by which the searching must be done when a custom data is bound to the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemsSource) property.
 
- * `DisplayMemberPath` - Specifies the property path whose value is displayed as text in the drop-down menu. The default value is `string.Empty`.
+ * **DisplayMemberPath** - Specifies the property path whose value is displayed as text in the drop-down menu. The default value is **string.Empty**.
 
- * `TextMemberPath` - Specifies the property path whose value is used to perform searching based on user input received in the selection box portion of the [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control. The default value is `string.Empty`. When `TextMemberPath` is `null` or `string.Empty`, searching will be performed based on `DisplayMemberPath`. 
+ * **TextMemberPath** - Specifies the property path whose value is used to perform searching based on user input received in the selection box portion of the [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control. The default value is **string.Empty**. When **TextMemberPath** is **null** or **string.Empty**, searching will be performed based on **DisplayMemberPath**. 
 
-N> `DisplayMemberPath` and `TextMemberPath` will be effective for the collection item that holds two or more properties in it.
+N> **DisplayMemberPath** and **TextMemberPath** will be effective for the collection item that holds two or more properties in it.
 
-N> When both the `DisplayMemberPath` and `TextMemberPath` properties have a `null` or `string.Empty` value, searching will be performed based on the class name with the namespace of the item.
+N> When both the **DisplayMemberPath** and **TextMemberPath** properties have a **null** or **string.Empty** value, searching will be performed based on the class name with the namespace of the item.
 
 ### Searching based on DisplayMemberPath
 
-Searching will be performed based on the [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DisplayMemberPath) property while entering the text into the selection box when [TextMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_TextMemberPath)  is `null` or `string.Empty`. 
+Searching will be performed based on the [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DisplayMemberPath) property while entering the text into the selection box when [TextMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_TextMemberPath)  is **null** or **string.Empty**. 
 
 {% tabs %}
 {% highlight c# %}
@@ -81,7 +81,7 @@ autocomplete.DisplayMemberPath = "Name";
 {% endhighlight %}
 {% endtabs %}
 
-For e.g. After typing `T` in selection box, social media which have starting letter `T` will be listed in drop-down.
+For e.g. After typing **T** in selection box, social media which have starting letter **T** will be listed in drop-down.
 
 The following image illustrates the result of the above code:
 
@@ -89,7 +89,7 @@ The following image illustrates the result of the above code:
 
 ### Searching based on TextMemberPath
 
-Searching will be performed based on the [TextMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_TextMemberPath) property while entering the text into the selection box. If TextMemberPath is `null` or `string.Empty`, searching will be performed based on [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DisplayMemberPath). 
+Searching will be performed based on the [TextMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_TextMemberPath) property while entering the text into the selection box. If TextMemberPath is **null** or **string.Empty**, searching will be performed based on [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DisplayMemberPath). 
 
 
 {% tabs %}
@@ -116,7 +116,7 @@ The following image illustrates the result of the above code:
 
 ## Filtering mode
 
-The `TextSearchMode` property of the [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) can be used to regulate how the control behaves when it receives user input. The default text filtering type is [StartWith](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTextSearchMode.html#Syncfusion_Maui_Inputs_AutocompleteTextSearchMode_StartsWith), which ignores accent and is case insensitive. The text filter modes that are available are as follows:
+The **TextSearchMode** property of the [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) can be used to regulate how the control behaves when it receives user input. The default text filtering type is [StartWith](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTextSearchMode.html#Syncfusion_Maui_Inputs_AutocompleteTextSearchMode_StartsWith), which ignores accent and is case insensitive. The text filter modes that are available are as follows:
 
 * StartsWith
 * Contains
@@ -205,7 +205,7 @@ The following image illustrates the result of the above code.
 
 ### Custom filtering
 
-The `Autocomplete` control supports applying your custom filter logic to suggest items based on your filter criteria by using the `FilterBehavior` and `SearchBehavior` properties. The default value of `FilterBehavior` and `SearchBehavior` is `null`.
+The **Autocomplete** control supports applying your custom filter logic to suggest items based on your filter criteria by using the **FilterBehavior** and **SearchBehavior** properties. The default value of **FilterBehavior** and **SearchBehavior** is **null**.
 
 {% tabs %}
 {% highlight c# %}
@@ -264,15 +264,15 @@ public class CityViewModel
 
 {% endtabs %}
 
-Now, create a custom filtering class to apply your filter logic to the `Autocomplete` control by following these steps.
+Now, create a custom filtering class to apply your filter logic to the **Autocomplete** control by following these steps.
 
-**Step 1:** Create a class that derives from the `IAutocompleteFilterBehavior` interface.
+**Step 1:** Create a class that derives from the **IAutocompleteFilterBehavior** interface.
 
 {% tabs %}
 {% highlight C# %}
 
 /// <summary>
-/// Represents a custom filtering behavior for the    `Autocomplete` control. 
+/// Represents a custom filtering behavior for the **Autocomplete** control. 
 /// </summary>
 public class CityFilteringBehavior : IAutocompleteFilterBehavior
 {
@@ -282,12 +282,12 @@ public class CityFilteringBehavior : IAutocompleteFilterBehavior
 {% endhighlight %}
 {% endtabs %}
 
-**Step 2:** Then, implement the `GetMatchingIndexes` method of the `IAutocompleteFilterBehavior` interface to create your suggestion list (containing the indices of the filtered items) based on the text entered in the `Autocomplete` control that needs to be shown in the drop-down. The `GetMatchingIndexes` method contains following arguments.
+**Step 2:** Then, implement the **GetMatchingIndexes** method of the **IAutocompleteFilterBehavior** interface to create your suggestion list (containing the indices of the filtered items) based on the text entered in the **Autocomplete** control that needs to be shown in the drop-down. The **GetMatchingIndexes** method contains following arguments.
 
-* `source` - The owner of the filter behavior, which holds information about the `ItemsSource`  property and so on.
-* `filterInfo` - Contains details about the text entered in `Autocomplete` control. Using this text, you can prepare suggestion list, which gets displayed in the drop-down list. 
+* **source** - The owner of the filter behavior, which holds information about the **ItemsSource**  property and so on.
+* **filterInfo** - Contains details about the text entered in **Autocomplete** control. Using this text, you can prepare suggestion list, which gets displayed in the drop-down list. 
 
-The following image shows how to display cities in a drop-down based on the country name entered in the `Autocomplete` control.
+The following image shows how to display cities in a drop-down based on the country name entered in the **Autocomplete** control.
 
 {% tabs %}
 {% highlight C# %}
@@ -309,7 +309,7 @@ public class CityFilteringBehavior : IAutocompleteFilterBehavior
 {% endhighlight %}
 {% endtabs %}
 
-**Step 3:** Applying custom filtering to the `Autocomplete` control by using the `FilterBehavior` property.
+**Step 3:** Applying custom filtering to the **Autocomplete** control by using the **FilterBehavior** property.
 
 {% tabs %}
 {% highlight XAML %}
@@ -328,21 +328,21 @@ public class CityFilteringBehavior : IAutocompleteFilterBehavior
 {% endhighlight %}
 {% endtabs %}
 
-The following image demonstrates how to display cities in the drop-down based on the country name entered in the `Autocomplete` control.
+The following image demonstrates how to display cities in the drop-down based on the country name entered in the **Autocomplete** control.
 
 ![.NET MAUI AutoComplete filter the items based on custom filtering logic.](Images/Searching_Filtering/Custom_filtering.png)
 
 ### Choose default item to select
 
-When searching, the first item in the drop-down will be highlighted by default. Using the `SearchBehavior` property, you can customize the default highlighting behavior by using your custom selection logic to select the items based on your search criteria. The default value of `SearchBehavior` is `null`. 
+When searching, the first item in the drop-down will be highlighted by default. Using the **SearchBehavior** property, you can customize the default highlighting behavior by using your custom selection logic to select the items based on your search criteria. The default value of **SearchBehavior** is **null**. 
 
-**Step 1:** Create a class that derives from the `IAutocompleteSearchBehavior` interface.
+**Step 1:** Create a class that derives from the **IAutocompleteSearchBehavior** interface.
 
 {% tabs %}
 {% highlight C# %}
 
 /// <summary>
-/// Represents a custom searching behavior for `Autocomplete` control. 
+/// Represents a custom searching behavior for **Autocomplete** control. 
 /// </summary>
 
 public class CapitalCitySearchingBehavior : Syncfusion.Maui.Inputs.IAutocompleteSearchBehavior
@@ -354,12 +354,12 @@ public class CapitalCitySearchingBehavior : Syncfusion.Maui.Inputs.IAutocomplete
 {% endhighlight %}
 {% endtabs %}
 
-**Step 2:** Then, implement the `GetHighlightIndex` method of the `IAutocompleteSearchBehavior` interface to initially select any item from the filtered list in the `Autocomplete` control drop-down. The `GetHighlightIndex` method contains the following arguments.
+**Step 2:** Then, implement the **GetHighlightIndex** method of the **IAutocompleteSearchBehavior** interface to initially select any item from the filtered list in the **Autocomplete** control drop-down. The **GetHighlightIndex** method contains the following arguments.
 
-* `source` - The owner of the search behavior, which holds information about the `ItemsSource` and so on.
-* `searchInfo` - Contains information about the filtered items based on the text entered in the `Autocomplete` control. Select an item from the drop-down list using this list. 
+* **source** - The owner of the search behavior, which holds information about the **ItemsSource** and so on.
+* **searchInfo** - Contains information about the filtered items based on the text entered in the **Autocomplete** control. Select an item from the drop-down list using this list. 
 
-The following code initially demonstrates how to select an item from the filtered list of the drop-down in the `Autocomplete` control. When entering the country's name, the capital cities will be selected.
+The following code initially demonstrates how to select an item from the filtered list of the drop-down in the **Autocomplete** control. When entering the country's name, the capital cities will be selected.
 {% tabs %}
 
 {% highlight C# %}
@@ -383,7 +383,7 @@ public class CapitalCitySearchingBehavior : Syncfusion.Maui.Inputs.IAutocomplete
 
 {% endtabs %}
 
-**Step 3:** Apply the custom searching to the `Autocomplete` control by using the `SearchBehavior` property. 
+**Step 3:** Apply the custom searching to the **Autocomplete** control by using the **SearchBehavior** property. 
 
 {% tabs %}
 {% highlight XAML %}
@@ -404,17 +404,17 @@ public class CapitalCitySearchingBehavior : Syncfusion.Maui.Inputs.IAutocomplete
 {% endhighlight %}
 {% endtabs %}
 
-The following image demonstrates how to select the capital city from the drop-down based on the country name entered in the `Autocomplete` control.
+The following image demonstrates how to select the capital city from the drop-down based on the country name entered in the **Autocomplete** control.
 
 ![.NET MAUI AutoComplete filter the items based on custom filtering and searching logic.](Images/Searching_Filtering/Custom_filtering_searching.gif)
 
 ## Load asynchronous items
 
-Load the data dynamically at runtime based on typed input. This dynamic loading can be done while performing custom filtering using the `CustomFilter` property.
+Load the data dynamically at runtime based on typed input. This dynamic loading can be done while performing custom filtering using the **CustomFilter** property.
 
-The `GetMatchingItemsAsync` method of the `IAutocompleteFilterBehavior` helps you perform filtering operations on different threads without blocking the current thread by using `await Task.Run()`.
+The **GetMatchingItemsAsync** method of the **IAutocompleteFilterBehavior** helps you perform filtering operations on different threads without blocking the current thread by using **await Task.Run()**.
 
-**Step 1:** Create a class from the `IAutocompleteFilterBehavior` interface and add your custom filter logic to the `GetMatchingItemsAsync` method to load the runtime items based on typed input.
+**Step 1:** Create a class from the **IAutocompleteFilterBehavior** interface and add your custom filter logic to the **GetMatchingItemsAsync** method to load the runtime items based on typed input.
 
 {% tabs %}
 {% highlight C# %}
@@ -453,7 +453,7 @@ public class CustomAsyncFilter : IAutocompleteFilterBehavior
 {% endhighlight %}
 {% endtabs %}
 
-**Step 2:** Apply the `CustomAsyncFilter` to the `Autocomplete` control by using the `FilterBehavior` property. 
+**Step 2:** Apply the **CustomAsyncFilter** to the **Autocomplete** control by using the **FilterBehavior** property. 
 
 {% tabs %}
 {% highlight XAML %}
