@@ -318,7 +318,7 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 </tr>
 <tr>
 <td>
-<div>{{'[PageChanged](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_PageChanged)'| markdownify }},</div>
+<div>{{'[PageChanged](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_PageChanged)'| markdownify }}</div>
 
 </td>
 <td>{{'[PropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.bindableobject.propertychanged)'| markdownify }}</td>
@@ -326,17 +326,20 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 
 {% highlight c# %}
 
-SfPdfViewer.PropertyChanged += PdfViewer_PropertyChanged;
+// Create an instance of the SfPdfViewer control
+SfPdfViewer pdfViewer = new SfPdfViewer();
 
-private void PdfViewer_PropertyChanged(object sender, PropertyChangedEventArgs e)
+// Subscribe to the PropertyChanged event
+pdfViewer.PropertyChanged += PdfViewer_PropertyChanged;
+
+private void PdfViewer_PropertyChanged(object? sender, PropertyChangedEventArgs e)
 {
-    // Check if the changed property is PageNumber
-    if (e.PropertyName == nameof(SfPdfViewer.PageNumber))
-    {
-        // Get the current page number
-        int currentPageNumber = SfPdfViewer.PageNumber;
-
-    }
+   // Check if the changed property is PageNumber
+   if (e.PropertyName == nameof(SfPdfViewer.PageNumber) && sender is SfPdfViewer)
+   {
+      // Get the current page number
+      int currentPageNumber = ((SfPdfViewer)sender).PageNumber;
+   }
 }
 {% endhighlight %}
 
