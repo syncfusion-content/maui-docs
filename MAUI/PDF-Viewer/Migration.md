@@ -323,7 +323,6 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 </td>
 <td>{{'[PropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.bindableobject.propertychanged)'| markdownify }}</td>
 <td> Occurs when a property in the PDF Viewer is modified. It allows you to monitor page changes effectively. The example below demonstrates how to implement this:
-{% tabs %}
 {% highlight c# %}
 
 SfPdfViewer.PropertyChanged += PdfViewer_PropertyChanged;
@@ -346,7 +345,6 @@ private void PdfViewer_PropertyChanged(object sender, PropertyChangedEventArgs e
 
 }
 {% endhighlight %}
-{% endtabs %}
 </td>
 </tr>
 </table>
