@@ -202,7 +202,7 @@ To hide a particular column, use the `DataGridColumn.Visible` property. The defa
 N> Set the [Visible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_Visible) property to `False` instead of setting column width as `0` to hide a column.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}   
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
                        ItemsSource="{Binding OrderInfoCollection}"
                        AutoGenerateColumnsMode="None"
@@ -236,11 +236,11 @@ dataGrid.Columns.Add(new DataGridTextColumn() { MappingName = "OrderID", Visible
 The SfDataGrid allows users to set padding for the Header and cells in display mode by using the property [DataGridColumn.HeaderPadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_HeaderPadding) and [DataGridColumn.CellPadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_CellPadding). 
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}    
-    <syncfusion:DataGridTextColumn MappingName="OrderID"
-                               CellTextAlignment="Start"
-                               CellPadding="10,0,0,0"
-                               HeaderPadding="10,0,0,0" />
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:DataGridTextColumn MappingName="OrderID"
+                            CellTextAlignment="Start"
+                            CellPadding="10,0,0,0"
+                            HeaderPadding="10,0,0,0" />
 {% endhighlight %}
 
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
