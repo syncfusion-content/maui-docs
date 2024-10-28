@@ -211,8 +211,7 @@ N> Set the [Visible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGri
     <syncfusion:DataGridTextColumn MappingName="OrderID"
                                    Visible="False" />
     </syncfusion:SfDataGrid.Columns >
-</syncfusion:SfDataGrid> 
-    
+</syncfusion:SfDataGrid>     
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 // AutoGenerate Column
@@ -245,13 +244,11 @@ The SfDataGrid allows users to set padding for the Header and cells in display m
 {% endhighlight %}
 
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-
 DataGridTextColumn orderID = new DataGridTextColumn();
 orderID.MappingName = "OrderID";
 orderID.CellTextAlignment = TextAlignment.Start;
 orderID.CellPadding = new Thickness(10, 0, 0, 0);
 orderID.HeaderPadding = new Thickness(10, 0, 0, 0);
-
 {% endhighlight %}
 {% endtabs %}
 
