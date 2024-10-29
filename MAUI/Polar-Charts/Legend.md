@@ -19,7 +19,6 @@ To define the legend in the chart, initialize the [ChartLegend](https://help.syn
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-    . . .
     <chart:SfPolarChart.Legend>
         <chart:ChartLegend/>
     </chart:SfPolarChart.Legend>
@@ -33,6 +32,7 @@ To define the legend in the chart, initialize the [ChartLegend](https://help.syn
 
 SfPolarChart chart = new SfPolarChart();
 chart.Legend = new ChartLegend();
+. . .
 this.Content = chart;
 
 {% endhighlight %}
@@ -47,12 +47,11 @@ The visibility of the chart legend can be controlled using the [IsVisible](https
 {% highlight xaml %}
     
 <chart:SfPolarChart>
-    ...
     <chart:SfPolarChart.Legend>
         <chart:ChartLegend IsVisible = "True"/>
     </chart:SfPolarChart.Legend>
     ...
-</chart:SfCartesianChart>
+</chart:SfPolarChart>
 
 {% endhighlight %}
 
@@ -63,6 +62,7 @@ chart.Legend = new ChartLegend()
 { 
     IsVisible = true 
 };
+. . .
 this.Content = chart;
 
 {% endhighlight %}
@@ -96,8 +96,7 @@ The visibility of individual legend items for specific series can be controlled 
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-this.BindingContext = new ViewModel();
-PolarViewModel polarViewModel = new PolarViewModel();
+. . .
 chart.Legend = new ChartLegend();
 
 PolarAreaSeries series1 = new PolarAreaSeries()
@@ -149,6 +148,7 @@ The [`Label`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolarSe
             </chart:ChartLegend.LabelStyle>
         </chart:ChartLegend>
     </chart:SfPolarChart.Legend>
+    . . .
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -165,6 +165,7 @@ ChartLegendLabelStyle labelStyle = new ChartLegendLabelStyle()
     FontFamily = "PlaywriteAR-Regular"
 };
 chart.Legend.LabelStyle = labelStyle;
+. . .
 this.Content = chart;
 
 {% endhighlight %}
@@ -197,8 +198,7 @@ To specify the legend icon based on the associated series type, use the [LegendI
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-this.BindingContext = new ViewModel();
-PolarViewModel polarViewModel = new PolarViewModel();
+. . .
 chart.Legend = new ChartLegend();
 
 PolarAreaSeries series1 = new PolarAreaSeries()
@@ -225,12 +225,11 @@ The legend can be positioned to the left, right, top, or bottom of the chart are
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-    ...
     <chart:SfPolarChart.Legend>
         <chart:ChartLegend Placement="Bottom"/>
     </chart:SfPolarChart.Legend>
     ...
-</chart:SfCartesianChart>
+</chart:SfPolarChart>
 
 {% endhighlight %}
 
@@ -241,7 +240,7 @@ chart.Legend = new ChartLegend()
 { 
     Placement = LegendPlacement.Bottom
 };
-
+. . .
 this.Content = chart;
 
 {% endhighlight %}
@@ -276,8 +275,7 @@ The visibility of polar series can be controlled by tapping the legend item usin
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-this.BindingContext = new ViewModel();
-PolarViewModel polarViewModel = new PolarViewModel();
+. . .
 chart.Legend = new ChartLegend()
 { 
     ToggleSeriesVisibility = true 
@@ -315,7 +313,6 @@ To set the maximum size request for the legend view, override the [GetMaximumSiz
 {% highlight xaml %}
 
 <chart:SfPolarChart>
-    . . .
     <chart:SfPolarChart.Legend>
         <chart:LegendExt/>
     </chart:SfPolarChart.Legend>
@@ -385,9 +382,7 @@ An [ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Char
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-this.BindingContext = new ViewModel();
-PolarViewModel polarViewModel = new PolarViewModel();
-    
+
 ChartLegend legend = new ChartLegend();
 
 FlexLayout layout = new FlexLayout();
@@ -477,8 +472,6 @@ N> The BindingContext of the template is the corresponding underlying legend ite
 SfCartesianChart chart = new SfCartesianChart();
 ...
 SfPolarChart chart = new SfPolarChart();
-this.BindingContext = new ViewModel();
-PolarViewModel polarViewModel = new PolarViewModel();
     
 ChartLegend legend = new ChartLegend();
 legend.ItemTemplate = chart.Resources["legendTemplate"] as DataTemplate;

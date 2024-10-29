@@ -42,8 +42,10 @@ SfPolarChart chart = new SfPolarChart();
 . . .
 NumericalAxis primaryAxis = new NumericalAxis();
 chart.PrimaryAxis = primaryAxis;
+
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.SecondaryAxis = secondaryAxis;
+
 this.Content = chart;
 
 {% endhighlight %}
@@ -81,10 +83,11 @@ NumericalAxis primaryAxis = new NumericalAxis()
 {
     Interval = 10 
 };
-
 chart.PrimaryAxis = primaryAxis;
+
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.SecondaryAxis = secondaryAxis;
+
 this.Content = chart;
 
 {% endhighlight %}
@@ -101,22 +104,28 @@ N> If  minimum or maximum value is set, the other value is calculated by default
 
 {% highlight xaml %}
 
-<chart:SfPolarChart.SecondaryAxis>
-    <chart:NumericalAxis Maximum="100" Minimum="0" Interval="20"/>
-</chart:SfPolarChart.SecondaryAxis>
+<chart:SfPolarChart>
+    . . .
+    <chart:SfPolarChart.SecondaryAxis>
+        <chart:NumericalAxis Maximum="100" Minimum="0" Interval="20"/>
+    </chart:SfPolarChart.SecondaryAxis>
+</chart:SfPolarChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
+SfPolarChart chart = new SfPolarChart();
+. . .
 NumericalAxis secondaryAxis = new NumericalAxis()
 {
     Maximum = 100,
     Minimum = 0,
     Interval = 20
 };
-
 chart.SecondaryAxis = secondaryAxis;
+
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -145,6 +154,8 @@ SfPolarChart chart = new SfPolarChart();
 . . .
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.PrimaryAxis = primaryAxis;
+
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -181,10 +192,12 @@ CategoryAxis primaryAxis = new CategoryAxis()
 {
     Interval = 2
 };
-
 chart.PrimaryAxis = primaryAxis;
+
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.SecondaryAxis = secondaryAxis;
+
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -213,6 +226,7 @@ SfPolarChart chart = new SfPolarChart();
 . . .
 DateTimeAxis primaryAxis = new DateTimeAxis();
 chart.PrimaryAxis = primaryAxis;
+
 this.Content = chart;
 
 {% endhighlight %}
@@ -251,10 +265,11 @@ DateTimeAxis primaryAxis = new DateTimeAxis()
     Interval = 6, 
     IntervalType = DateTimeIntervalType.Months
 };
-
 chart.PrimaryAxis = primaryAxis;
+
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.SecondaryAxis = secondaryAxis;
+
 this.Content = chart;
 
 {% endhighlight %}
@@ -287,8 +302,8 @@ DateTimeAxis primaryAxis = new DateTimeAxis()
     Minimum = new DateTime(2021,05,10),
     Maximum = new DateTime(2021,11,01)
 };
-
 chart.PrimaryAxis = primaryAxis;
+
 this.Content = chart;
 
 {% endhighlight %}
@@ -316,9 +331,12 @@ Axis can be inverted using the [IsInversed](https://help.syncfusion.com/cr/maui/
 
 SfPolarChart chart = new SfPolarChart();
 . . .
-NumericalAxis secondaryAxis = new NumericalAxis();
-secondaryAxis.IsInversed = true;
+NumericalAxis secondaryAxis = new NumericalAxis()
+{
+    IsInversed = true,
+};
 chart.SecondaryAxis = secondaryAxis;
+
 this.Content = chart;
 
 {% endhighlight %}

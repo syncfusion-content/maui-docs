@@ -63,9 +63,12 @@ The [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.C
 
 {% highlight xaml %}
 
-<chart:SfPolarChart.TooltipBehavior>
-    <chart:ChartTooltipBehavior/>
-</chart:SfPolarChart.TooltipBehavior>
+<chart:SfPolarChart>
+    <chart:SfPolarChart.TooltipBehavior>
+        <chart:ChartTooltipBehavior/>
+    </chart:SfPolarChart.TooltipBehavior>
+    ...
+</chart:SfPolarChart>
 
 {% endhighlight %}
 
@@ -73,6 +76,7 @@ The [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.C
 
 SfPolarChart chart = new SfPolarChart();
 chart.TooltipBehavior = new ChartTooltipBehavior();
+. . .
 this.Content = chart;
 
 {% endhighlight %}

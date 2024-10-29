@@ -37,8 +37,10 @@ SfPolarChart chart = new SfPolarChart();
 NumericalAxis primaryAxis = new NumericalAxis();
 primaryAxis.ShowMajorGridLines = false;
 chart.PrimaryAxis = primaryAxis;
+
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.SecondaryAxis = secondaryAxis;
+
 this.Content = chart;
 
 {% endhighlight %}
@@ -85,14 +87,18 @@ doubleCollection.Add(3);
 doubleCollection.Add(3);
 
 NumericalAxis primaryAxis = new NumericalAxis();
-ChartLineStyle axisLineStyle = new ChartLineStyle();
-axisLineStyle.Stroke = Colors.Black;
-axisLineStyle.StrokeWidth = 2;
-axisLineStyle.StrokeDashArray = doubleCollection;
-primaryAxis.MajorGridLineStyle = axisLineStyle;
+ChartLineStyle gridLineStyle = new ChartLineStyle()
+{
+    Stroke = Colors.Black,
+    StrokeWidth = 2,
+    StrokeDashArray = doubleCollection,
+};
+primaryAxis.MajorGridLineStyle = gridLineStyle;
 chart.PrimaryAxis = primaryAxis;
+
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.SecondaryAxis = secondaryAxis;
+
 this.Content = chart;
 
 {% endhighlight %}
@@ -123,8 +129,10 @@ Minor gridlines will be added automatically when the small tick lines is defined
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
+
 NumericalAxis primaryAxis = new NumericalAxis();
 chart.PrimaryAxis = primaryAxis;
+
 chart.SecondaryAxis = new NumericalAxis()
 {
     MinorTicksPerInterval = 3,
@@ -173,20 +181,24 @@ The [MinorGridLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
-NumericalAxis primaryAxis = new NumericalAxis();
-chart.PrimaryAxis = primaryAxis;
-
+. . .
 DoubleCollection doubleCollection = new DoubleCollection();
 doubleCollection.Add(3);
 doubleCollection.Add(3);
 
+NumericalAxis primaryAxis = new NumericalAxis();
+chart.PrimaryAxis = primaryAxis;
+
 NumericalAxis secondaryAxis = new NumericalAxis() { MinorTicksPerInterval = 2, ShowMinorGridLines = true; };
-ChartLineStyle axisLineStyle = new ChartLineStyle();
-axisLineStyle.Stroke = Colors.Black;
-axisLineStyle.StrokeWidth = 0.8;
-axisLineStyle.StrokeDashArray = doubleCollection;
-secondaryAxis.MinorGridLineStyle = axisLineStyle;
+ChartLineStyle gridLineStyle = new ChartLineStyle()
+{
+    Stroke = Colors.Black,
+    StrokeWidth = 0.8,
+    StrokeDashArray = doubleCollection,
+};
+secondaryAxis.MinorGridLineStyle = gridLineStyle;
 chart.SecondaryAxis = secondaryAxis;
+
 this.Content = chart;
 
 {% endhighlight %}
