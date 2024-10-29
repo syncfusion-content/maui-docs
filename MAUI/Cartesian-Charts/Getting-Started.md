@@ -21,7 +21,7 @@ To get start quickly with our .NET MAUI Cartesian Chart, you can check the below
 1. Create a new .NET MAUI application in Visual Studio.
 2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfCartesianChart to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Charts and then install it.
 3. To initialize the control, import the Chart namespace.
-4. Initialize [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
+4. Initialize [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html).
 
 {% tabs %} 
 
@@ -103,7 +103,7 @@ Now, let us define a simple data model that represents a data point in the chart
 
 {% highlight c# %}
 
-public class Person   
+public class PersonModel      
 {   
     public string Name { get; set; }
     public double Height { get; set; }
@@ -113,25 +113,25 @@ public class Person
 
 {% endtabs %} 
 
-Next, create a view model class and initialize a list of `Person` objects as follows.
+Next, create a `PersonViewModel` class and initialize a list of `PersonModel` objects as follows.
 
 {% tabs %}  
 
 {% highlight c# %}
 
-public class ViewModel  
+public class PersonViewModel  
 {
-    public List<Person> Data { get; set; }      
+    public List<PersonModel> Data { get; set; }      
 
     public ViewModel()       
     {
-        Data = new List<Person>()
+        Data = new List<PersonModel>()
         {
-            new Person { Name = "David", Height = 170 },
-            new Person { Name = "Michael", Height = 96 },
-            new Person { Name = "Steve", Height = 65 },
-            new Person { Name = "Joel", Height = 182 },
-            new Person { Name = "Bob", Height = 134 }
+            new PersonModel { Name = "David", Height = 170 },
+            new PersonModel { Name = "Michael", Height = 96 },
+            new PersonModel { Name = "Steve", Height = 65 },
+            new PersonModel { Name = "Joel", Height = 182 },
+            new PersonModel { Name = "Bob", Height = 134 }
         }; 
     }
  }
@@ -140,9 +140,9 @@ public class ViewModel
 
 {% endtabs %} 
 
-Set the `ViewModel` instance as the `BindingContext` of your page to bind `ViewModel` properties to the chart. 
+Set the `PersonViewModel` instance as the `BindingContext` of your page to bind `PersonViewModel` properties to the chart. 
  
-N> Add namespace of `ViewModel` class to your XAML Page, if you prefer to set `BindingContext` in XAML.
+N> Add namespace of `PersonViewModel` class to your XAML Page, if you prefer to set `BindingContext` in XAML.
 
 {% tabs %} 
 
@@ -156,7 +156,7 @@ N> Add namespace of `ViewModel` class to your XAML Page, if you prefer to set `B
     xmlns:model="clr-namespace:ChartGettingStarted">
 
     <ContentPage.BindingContext>
-        <model:ViewModel></model:ViewModel>
+        <model:PersonViewModel/>
     </ContentPage.BindingContext>
 </ContentPage>
 
@@ -164,7 +164,7 @@ N> Add namespace of `ViewModel` class to your XAML Page, if you prefer to set `B
 
 {% highlight C# %} 
 
-this.BindingContext = new ViewModel();
+this.BindingContext = new PersonViewModel();
 
 {% endhighlight %}
 
@@ -172,7 +172,7 @@ this.BindingContext = new ViewModel();
 
 ## Initialize Chart axis
 
-[ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html) is used to locate the data points inside the chart area. The [XAxes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1#Syncfusion_Maui_Charts_SfCartesianChart_XAxes) and [YAxes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_YAxes) collection of the chart is used to initialize the axis for the chart.
+[ChartAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html) is used to locate the data points inside the chart area. The [XAxes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_XAxes) and [YAxes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_YAxes) collection of the chart is used to initialize the axis for the chart.
 
 {% tabs %} 
 
@@ -192,10 +192,13 @@ this.BindingContext = new ViewModel();
 {% highlight C# %} 
 
 SfCartesianChart chart = new SfCartesianChart();
+
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.XAxes.Add(primaryAxis);
+
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
+
 this.Content = chart;
 
 {% endhighlight %}
@@ -208,7 +211,7 @@ Run the project and check if you get following output to make sure you have conf
 
 ## Populate Chart with data
 
-As we are going to visualize the comparison of heights in the data model, add [ColumnSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSeries.html?tabs=tabid-1) to [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) property of chart, and then bind the `Data` property of the above `ViewModel` to the `ColumnSeries.ItemsSource` as follows.
+As we are going to visualize the comparison of heights in the data model, add [ColumnSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSeries.html) to [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) property of chart, and then bind the `Data` property of the above `PersonViewModel` to the `ColumnSeries.ItemsSource` as follows.
 
 N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
 
@@ -248,7 +251,7 @@ SfCartesianChart chart = new SfCartesianChart();
 
 // Initializing primary axis
 CategoryAxis primaryAxis = new CategoryAxis();
-primaryAxis.Title = new ChartAxisTitle
+primaryAxis.Title = new ChartAxisTitle()
 {
     Text = "Name",
 };
@@ -266,7 +269,7 @@ chart.YAxes.Add(secondaryAxis);
 ColumnSeries series = new ColumnSeries();
 series.Label = "Height";
 series.ShowDataLabels = true;
-series.ItemsSource = (new ViewModel()).Data;
+series.ItemsSource = (new PersonViewModel()).Data;
 series.XBindingPath = "Name";
 series.YBindingPath = "Height";
 
@@ -287,23 +290,22 @@ The title of the chart provide quick information to the user about the data bein
 
 {% highlight xaml %}
 
-<Grid>
     <chart:SfCartesianChart>
         <chart:SfCartesianChart.Title>
             <Label Text="Height Comparison"/>
         </chart:SfCartesianChart.Title> 
     </chart:SfCartesianChart>
-</Grid>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-chart.Title = new Label
+chart.Title = new Label()
 {
     Text = "Height Comparison"
 };
+
 this.Content = chart;
 
 {% endhighlight %}
@@ -320,11 +322,7 @@ The [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 
 <chart:SfCartesianChart>
     . . . 
-    <chart:ColumnSeries ShowDataLabels="True"
-                        ItemsSource="{Binding Data}"
-                        XBindingPath="Name" 
-                        YBindingPath="Height">
-    </chart:ColumnSeries>
+    <chart:ColumnSeries ShowDataLabels="True"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -335,10 +333,8 @@ SfCartesianChart chart = new SfCartesianChart()
 . . .
 ColumnSeries series = new ColumnSeries();
 series.ShowDataLabels = true;
-series.ItemsSource = (new ViewModel()).Data;
-series.XBindingPath = "Name"; 
-series.YBindingPath = "Height"; 
 chart.Series.Add(series);
+
 this.Content = chart;
 
 {% endhighlight %}
@@ -367,6 +363,7 @@ The legend provides information about the data point displayed in the chart. The
 
 SfCartesianChart chart = new SfCartesianChart();
 chart.Legend = new ChartLegend (); 
+
 this.Content = chart;
 
 {% endhighlight %}
@@ -381,11 +378,10 @@ N> Additionally, set label for each series using the `Label` property of chart s
 
 <chart:SfCartesianChart>
     . . .
-    <chart:ColumnSeries Label="Height"
-                        ItemsSource="{Binding Data}"
+    <chart:ColumnSeries ItemsSource="{Binding Data}"
                         XBindingPath="Name" 
-                        YBindingPath="Height">
-    </chart:ColumnSeries>
+                        YBindingPath="Height"
+                        Label="Height"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -395,7 +391,7 @@ N> Additionally, set label for each series using the `Label` property of chart s
 SfCartesianChart chart = new SfCartesianChart()
 . . .
 ColumnSeries series = new ColumnSeries (); 
-series.ItemsSource = (new ViewModel()).Data;
+series.ItemsSource = (new PersonViewModel()).Data;
 series.XBindingPath = "Name"; 
 series.YBindingPath = "Height"; 
 series.Label = "Height";
@@ -416,10 +412,7 @@ Tooltips are used to show information about the segment, when a user hovers over
 
 <chart:SfCartesianChart>
     ...
-    <chart:ColumnSeries EnableTooltip="True"
-			ItemsSource="{Binding Data}"
-			XBindingPath="Name"
-			YBindingPath="Height"/>
+    <chart:ColumnSeries EnableTooltip="True"/>
     ...
 </chart:SfCartesianChart> 
 
@@ -430,11 +423,9 @@ Tooltips are used to show information about the segment, when a user hovers over
 SfCartesianChart chart = new SfCartesianChart()
 . . .
 ColumnSeries series = new ColumnSeries();
-series.ItemsSource = (new ViewModel()).Data;
-series.XBindingPath = "Name";          
-series.YBindingPath = "Height";
 series.EnableTooltip = true;
 chart.Series.Add(series);
+
 this.Content = chart;
 
 {% endhighlight %}
@@ -455,50 +446,48 @@ The following code example gives you the complete code of above configurations.
     xmlns:model="clr-namespace:ChartGettingStarted">
 
     <ContentPage.BindingContext>
-        <model:ViewModel></model:ViewModel>
+        <model:PersonViewModel/>
     </ContentPage.BindingContext>
 
-    <ContentPage.Content>
-        <Grid>
-            <chart:SfCartesianChart>
-                <chart:SfCartesianChart.Title>
-                    <Label Text="Height Comparison"/>
-                </chart:SfCartesianChart.Title>
+    <chart:SfCartesianChart>
 
-                <chart:SfCartesianChart.Legend>
-                    <chart:ChartLegend/>
-                </chart:SfCartesianChart.Legend>
-    
-                <chart:SfCartesianChart.XAxes>
-                    <chart:CategoryAxis>
-                        <chart:CategoryAxis.Title>
-                            <chart:ChartAxisTitle Text="Name"/>
-                        </chart:CategoryAxis.Title>
-                    </chart:CategoryAxis>
-                </chart:SfCartesianChart.XAxes>
+        <chart:SfCartesianChart.Title>
+            <Label Text="Height Comparison"/>
+        </chart:SfCartesianChart.Title>
 
-                <chart:SfCartesianChart.YAxes>
-                    <chart:NumericalAxis>
-                        <chart:NumericalAxis.Title>
-                            <chart:ChartAxisTitle Text="Height(in cm)"/>
-                        </chart:NumericalAxis.Title>
-                    </chart:NumericalAxis>
-                </chart:SfCartesianChart.YAxes>
+        <chart:SfCartesianChart.Legend>
+            <chart:ChartLegend/>
+        </chart:SfCartesianChart.Legend>
 
-                <!--Initialize the series for chart-->
-                <chart:ColumnSeries Label="Height" 
-                                    EnableTooltip="True"
-                                    ShowDataLabels="True"
-                                    ItemsSource="{Binding Data}"
-                                    XBindingPath="Name" 
-                                    YBindingPath="Height">
-                    <chart:ColumnSeries.DataLabelSettings>
-                        <chart:CartesianDataLabelSettings LabelPlacement="Inner"/>
-                    </chart:ColumnSeries.DataLabelSettings>
-                </chart:ColumnSeries>
-            </chart:SfCartesianChart>
-        </Grid>
-    </ContentPage.Content>
+        <chart:SfCartesianChart.XAxes>
+            <chart:CategoryAxis>
+                <chart:CategoryAxis.Title>
+                    <chart:ChartAxisTitle Text="Name"/>
+                </chart:CategoryAxis.Title>
+            </chart:CategoryAxis>
+        </chart:SfCartesianChart.XAxes>
+
+        <chart:SfCartesianChart.YAxes>
+            <chart:NumericalAxis>
+                <chart:NumericalAxis.Title>
+                    <chart:ChartAxisTitle Text="Height(in cm)"/>
+                </chart:NumericalAxis.Title>
+            </chart:NumericalAxis>
+        </chart:SfCartesianChart.YAxes>
+
+        <!--Initialize the series for chart-->
+        <chart:ColumnSeries Label="Height" 
+                            EnableTooltip="True"
+                            ShowDataLabels="True"
+                            ItemsSource="{Binding Data}"
+                            XBindingPath="Name" 
+                            YBindingPath="Height">
+            <chart:ColumnSeries.DataLabelSettings>
+                <chart:CartesianDataLabelSettings LabelPlacement="Inner"/>
+            </chart:ColumnSeries.DataLabelSettings>
+        </chart:ColumnSeries>
+
+    </chart:SfCartesianChart>
 </ContentPage>
  
 {% endhighlight %}
@@ -514,18 +503,20 @@ namespace ChartGettingStarted
         {
             InitializeComponent(); 
 
-            this.BindingContext = new ViewModel();
+            this.BindingContext = new PersonViewModel();   
 
             SfCartesianChart chart = new SfCartesianChart();
 
-            chart.Title = new Label
+            chart.Title = new Label()
             {
                 Text = "Height Comparison"
             };
 
+            chart.Legend = new ChartLegend ();
+
             // Initializing primary axis
             CategoryAxis primaryAxis = new CategoryAxis();
-            primaryAxis.Title = new ChartAxisTitle
+            primaryAxis.Title = new ChartAxisTitle()
             {
                 Text = "Name",
             };
@@ -533,7 +524,7 @@ namespace ChartGettingStarted
 
             //Initializing secondary Axis
             NumericalAxis secondaryAxis = new NumericalAxis();
-            secondaryAxis.Title = new ChartAxisTitle
+            secondaryAxis.Title = new ChartAxisTitle()
             {
                 Text= "Height(in cm)",
             };
@@ -547,7 +538,7 @@ namespace ChartGettingStarted
                 ItemsSource = (new ViewModel()).Data,
                 XBindingPath = "Name",
                 YBindingPath = "Height",
-                DataLabelSettings = new CartesianDataLabelSettings
+                DataLabelSettings = new CartesianDataLabelSettings()
                 {
                     LabelPlacement = DataLabelPlacement.Inner
                 }              

@@ -96,7 +96,7 @@ Now, let us define a simple data model that represents a data point in the chart
 
 {% highlight c# %}
 
-public class Stage
+public class StageModel
 {
     public string Name { get; set; }
     public double Value { get; set; }
@@ -106,24 +106,24 @@ public class Stage
 
 {% endtabs %} 
 
-Next, create a view model class and initialize a list of `Model` objects as follows.
+Next, create a StageViewModel class and initialize a list of `StageModel` objects as follows.
 
 {% tabs %}  
 
 {% highlight c# %}
 
-public class ChartViewModel
+public class StageViewModel
 {
-    public List<Stage> Data { get; set; }
+    public List<StageModel> Data { get; set; }
 
     public ChartViewModel()
     {
-        Data = new List<Stage>()
+        Data = new List<StageModel>()
         {
-            new Stage(){Name = "Stage A", Value = 12},
-            new Stage(){Name = "Stage B", Value = 21},
-            new Stage(){Name = "Stage C", Value = 29},
-            new Stage(){Name = "Stage D", Value = 37},
+            new StageModel(){Name = "Stage A", Value = 12},
+            new StageModel(){Name = "Stage B", Value = 21},
+            new StageModel(){Name = "Stage C", Value = 29},
+            new StageModel(){Name = "Stage D", Value = 37},
         };
     }
 }
@@ -132,9 +132,9 @@ public class ChartViewModel
 
 {% endtabs %} 
 
-Create a `ViewModel` instance and set it as the chart's `BindingContext`. This enables property binding from `ViewModel` class.
+Create a `StageViewModel` instance and set it as the chart's `BindingContext`. This enables property binding from `StageViewModel` class.
 
-N> Add the namespace of `ViewModel` class to your XAML Page, if you prefer to set `BindingContext` in XAML.
+N> Add the namespace of `StageViewModel` class to your XAML Page, if you prefer to set `BindingContext` in XAML.
 
 {% tabs %} 
 
@@ -147,7 +147,7 @@ N> Add the namespace of `ViewModel` class to your XAML Page, if you prefer to se
 
     <chart:SfPyramidChart>
         <chart:SfPyramidChart.BindingContext>
-            <model:ChartViewModel/>
+            <model:StageViewModel/>
         </chart:SfPyramidChart.BindingContext>
     </chart:SfPyramidChart>
 </ContentPage>
@@ -157,8 +157,9 @@ N> Add the namespace of `ViewModel` class to your XAML Page, if you prefer to se
 {% highlight C# %} 
 
 SfPyramidChart chart = new SfPyramidChart();
-ChartViewModel viewModel = new ChartViewModel();
+StageViewModel viewModel = new StageViewModel();
 chart.BindingContext = viewModel;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -183,7 +184,7 @@ chart.BindingContext = viewModel;
 {% highlight C# %}
 
 SfPyramidChart chart = new SfPyramidChart();
-ChartViewModel viewModel = new ChartViewModel();
+StageViewModel viewModel = new StageViewModel();
 chart.BindingContext = viewModel;
 chart.ItemsSource = viewModel.Data;
 chart.XBindingPath = "Name";
@@ -214,7 +215,7 @@ The title of the chart acts as the title to provide quick information to the use
 {% highlight C# %}
 
 SfPyramidChart chart = new SfPyramidChart();
-chart.Title = new Label
+chart.Title = new Label()
 {
     Text = "Pyramid Stages"
 };
@@ -313,15 +314,19 @@ The following code example gives you the complete code of above configurations.
                       EnableTooltip="True"
                       XBindingPath="Name"         
                       YBindingPath="Value">
+
     <chart:SfPyramidChart.Title>
         <Label Text="Pyramid Stages"/>
     </chart:SfPyramidChart.Title>
+
     <chart:SfPyramidChart.BindingContext>
-        <model:ChartViewModel/>
+        <model:StageViewModel/>
     </chart:SfPyramidChart.BindingContext>
+
     <chart:SfPyramidChart.Legend>
         <chart:ChartLegend/>
     </chart:SfPyramidChart.Legend>
+
 </chart:SfPyramidChart>
  
 {% endhighlight %}
@@ -335,12 +340,12 @@ public partial class MainPage : ContentPage
     public MainWindow()
     {
         SfPyramidChart chart = new SfPyramidChart();
-        chart.Title = new Label
+        chart.Title = new Label()
         {
             Text = "Pyramid Stages"
         };
         chart.Legend = new ChartLegend();
-        ChartViewModel viewModel = new ChartViewModel();
+        StageViewModel viewModel = new StageViewModel();
         chart.BindingContext = viewModel;
 
         chart.ItemsSource = viewModel.Data;

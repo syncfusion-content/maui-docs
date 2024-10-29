@@ -23,6 +23,7 @@ To define the legend in the chart, initialize the [ChartLegend](https://help.syn
     <chart:SfCartesianChart.Legend>
         <chart:ChartLegend/>
     </chart:SfCartesianChart.Legend>
+     . . .
 </chart:SfCartesianChart>
 
 
@@ -32,6 +33,8 @@ To define the legend in the chart, initialize the [ChartLegend](https://help.syn
 
 SfCartesianChart chart = new SfCartesianChart();
 chart.Legend = new ChartLegend();
+. . .
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -46,7 +49,7 @@ The visibility of the chart legend can be controlled using the [IsVisible](https
     
 <chart:SfCartesianChart>
     <chart:SfCartesianChart.Legend>
-        <chart:ChartLegend IsVisible = "True"/>
+        <chart:ChartLegend IsVisible="True"/>
     </chart:SfCartesianChart.Legend>
 </chart:SfCartesianChart>
 
@@ -60,6 +63,8 @@ chart.Legend = new ChartLegend()
 { 
     IsVisible = true 
 };
+. . .
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -79,8 +84,8 @@ The visibility of individual legend items for specific series can be controlled 
 
     <chart:LineSeries ItemsSource="{Binding Data}"
                       XBindingPath="XValue"
-                      IsVisibleOnLegend="True"
-                      YBindingPath="YValue"/>
+                      YBindingPath="YValue"
+                      IsVisibleOnLegend="True"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -133,6 +138,7 @@ The [`Label`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Cartesi
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+. . .
 chart.Legend = new ChartLegend()
 {
     LabelStyle = new ChartLegendLabelStyle
@@ -144,6 +150,7 @@ chart.Legend = new ChartLegend()
         FontFamily = "PlaywriteAR-Regular"
     };
 }
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -166,7 +173,7 @@ To specify the legend icon based on the associated series type, use the [LegendI
     <chart:ColumnSeries ItemsSource="{Binding Data}"
                         XBindingPath="XValue"
                         YBindingPath="YValue"
-                        LegendIcon = "Diamond"/>
+                        LegendIcon="Diamond"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -201,8 +208,7 @@ The legend can be positioned to the left, right, top, or bottom of the chart are
 
 <chart:SfCartesianChart>
     <chart:SfCartesianChart.Legend>
-        <chart:ChartLegend Placement="Bottom">
-        </chart:ChartLegend>
+        <chart:ChartLegend Placement="Bottom"/>
     </chart:SfCartesianChart.Legend>
 </chart:SfCartesianChart>
 
@@ -211,10 +217,13 @@ The legend can be positioned to the left, right, top, or bottom of the chart are
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+. . .
 chart.Legend = new ChartLegend()
 { 
     Placement = LegendPlacement.Bottom 
 };
+
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -229,10 +238,9 @@ The visibility of series can be controlled by tapping the legend item using the 
 
 <chart:SfCartesianChart>
     <chart:SfCartesianChart.Legend>
-        <chart:ChartLegend           
-          ToggleSeriesVisibility="True">
-        </chart:ChartLegend>
+        <chart:ChartLegend ToggleSeriesVisibility="True"/>
     </chart:SfCartesianChart.Legend>
+    . . .
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -240,10 +248,13 @@ The visibility of series can be controlled by tapping the legend item using the 
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+. . .
 chart.Legend = new ChartLegend()
 { 
     ToggleSeriesVisibility = true 
 };
+
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -289,15 +300,14 @@ The [ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Cha
 
 {% highlight xaml %}
 
-<chart:SfCartesianChart  x:Name="chart1">
+<chart:SfCartesianChart x:Name="chart">
     <chart:SfCartesianChart.Legend>
         <chart:ChartLegend Placement="Bottom">
             <chart:ChartLegend.ItemsLayout>
                 <FlexLayout HorizontalOptions="Start"
                             Margin="10"
                             WidthRequest="{Binding Width,
-                            Source={x:Reference chart1}}">
-                </FlexLayout>
+                            Source={x:Reference chart}}"/>
             </chart:ChartLegend.ItemsLayout>
         </chart:ChartLegend>
     </chart:SfCartesianChart.Legend>
@@ -329,13 +339,13 @@ this.Content = chart;
 ## Item template
 The [ChartLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html) supports customizing the appearance of legend items using the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_ItemTemplate) property. The default value of ItemsTemplate is `null`.
 
-N> The BindingContext of the template is the corresponding underlying legend item provided in the ChartLegendItem class.
+N> The BindingContext of the template is the corresponding underlying legend item provided in the `ChartLegendItem` class.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<chart:SfCartesianChart>
+<chart:SfCartesianChart x:Name="chart">
     <chart:SfCartesianChart.Resources>
         <DataTemplate x:Key="legendTemplate">
             <StackLayout Orientation="Horizontal">

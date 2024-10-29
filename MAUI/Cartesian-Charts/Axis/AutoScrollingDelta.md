@@ -27,6 +27,7 @@ By adding [ChartZoomPanBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.
     <chart:SfCartesianChart.ZoomPanBehavior>
         <chart:ChartZoomPanBehavior EnablePanning="True"/>
     </chart:SfCartesianChart.ZoomPanBehavior>
+    . . .
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -46,7 +47,7 @@ ChartZoomPanBehavior zooming = new ChartZoomPanBehavior()
     EnablePanning = true,
 };
 chart.ZoomPanBehavior = zooming;
-
+. . .
 this.Content = chart;
 
 {% endhighlight %}
@@ -55,7 +56,7 @@ this.Content = chart;
 
 ## AutoScrollingMode
 
-[AutoScrollingMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_AutoScrollingMode) property can be used to determine whether the axis should be scrolled from start position or end position. The default value of [AutoScrollingMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_AutoScrollingMode) is End.
+[AutoScrollingMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_AutoScrollingMode) property can be used to determine whether the axis should be scrolled from start position or end position. The default value of [AutoScrollingMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_AutoScrollingMode) is `End`.
 
 {% tabs %}
 
@@ -66,6 +67,7 @@ this.Content = chart;
     <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis AutoScrollingDelta="3" AutoScrollingMode="Start"/>
     </chart:SfCartesianChart.XAxes>
+    . . .
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -77,10 +79,10 @@ SfCartesianChart chart = new SfCartesianChart();
 CategoryAxis primaryAxis = new CategoryAxis()
 {
     AutoScrollingDelta = 3,
-    AutoScrollingMode = ChartAutoScrollingMode.start,
+    AutoScrollingMode = ChartAutoScrollingMode.Start,
 };
 chart.XAxes.Add(primaryAxis);
-
+. . .
 this.Content = chart;
 
 {% endhighlight %}
@@ -100,6 +102,7 @@ In [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Dat
     <chart:SfCartesianChart.XAxes>
         <chart:DateTimeAxis AutoScrollingDelta="3" AutoScrollingDeltaType="Days"/>
     </chart:SfCartesianChart.XAxes>
+    . . .
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -114,7 +117,7 @@ DateTimeAxis primaryAxis = new DateTimeAxis()
     AutoScrollingDeltaType = DateTimeDeltaType.Days,
 };
 chart.XAxes.Add(primaryAxis);
-
+. . .
 this.Content = chart;
 
 {% endhighlight %}

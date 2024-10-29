@@ -10,7 +10,7 @@ keywords: .net maui chart customize axis label callback, .net maui chart axis la
 
 # Customize each chart axis label using the callback event
 
-The [`LabelCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_LabelCreated) event is triggered upon label creation in a chart axis, providing the option to customize chart axis labels.
+The [LabelCreated](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_LabelCreated) event is triggered upon label creation in a chart axis, providing the option to customize chart axis labels.
 
 The following code sample demonstrates this:
 

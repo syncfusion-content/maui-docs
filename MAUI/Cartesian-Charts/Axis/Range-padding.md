@@ -53,7 +53,7 @@ By default, the [RangePadding](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-
+. . .
 NumericalAxis primaryAxis = new NumericalAxis()
 {
     RangePadding = NumericalPadding.Additional,
@@ -62,7 +62,7 @@ chart.XAxes.Add(primaryAxis);
 
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
-
+. . .
 this.Content = chart;
 
 {% endhighlight %}
@@ -94,7 +94,7 @@ this.Content = chart;
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-
+. . .
 NumericalAxis primaryAxis = new NumericalAxis()
 {
     RangePadding = NumericalPadding.None,
@@ -103,7 +103,7 @@ chart.XAxes.Add(primaryAxis);
 
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
-
+. . .
 this.Content = chart;
 
 {% endhighlight %}
@@ -135,7 +135,7 @@ this.Content = chart;
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-
+. . .
 NumericalAxis primaryAxis = new NumericalAxis()
 {
     RangePadding = NumericalPadding.Round,
@@ -144,7 +144,7 @@ chart.XAxes.Add(primaryAxis);
 
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
-
+. . .
 this.Content = chart;
 
 {% endhighlight %}
@@ -189,7 +189,7 @@ The [RangePadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Da
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-
+. . .
 DateTimeAxis primaryAxis = new DateTimeAxis()
 {
     RangePadding = DateTimeRangePadding.Additional
@@ -198,7 +198,7 @@ chart.XAxes.Add(primaryAxis);
 
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
-
+. . .
 this.Content = chart;
 
 {% endhighlight %}
@@ -230,7 +230,7 @@ this.Content = chart;
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-
+. . .
 DateTimeAxis primaryAxis = new DateTimeAxis()
 {
     RangePadding = DateTimeRangePadding.None
@@ -239,7 +239,7 @@ chart.XAxes.Add(primaryAxis);
 
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
-
+. . .
 this.Content = chart;
 
 {% endhighlight %}
@@ -271,7 +271,7 @@ this.Content = chart;
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-
+. . .
 DateTimeAxis primaryAxis = new DateTimeAxis()
 {
     RangePadding = DateTimeRangePadding.Round
@@ -280,7 +280,7 @@ chart.XAxes.Add(primaryAxis);
 
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
-
+. . .
 this.Content = chart;
 
 {% endhighlight %}

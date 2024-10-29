@@ -74,7 +74,8 @@ this.Content = chart;
 
 {% highlight c# %}
     
-SfCartesianChart chart = new SfCartesianChart();     
+SfCartesianChart chart = new SfCartesianChart(); 
+. . .    
 var rectangle = new RectangleAnnotation()
 {
     X1 = 0,
@@ -119,14 +120,17 @@ When there are multiple axes, annotations can be added to a particular axis usin
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+. . .    
 NumericalAxis yAxis1 = new NumericalAxis();
 yAxis1.Minimum = 0;
 yAxis1.Maximum = 1;
 chart.YAxes.Add(yAxis1);
+
 NumericalAxis yAxis2 = new NumericalAxis();
 yAxis2.Name = "YAxis";
 yAxis2.CrossesAt = double.MaxValue;
 chart.YAxes.Add(yAxis2);
+
 var ellipse = new EllipseAnnotation()
 {
     X1 = 2,
@@ -166,6 +170,7 @@ The [TextAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+. . .    
 var text = new TextAnnotation()
 {
     X1 = 2,
@@ -236,6 +241,7 @@ The [RectangleAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ch
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+. . . 
 var rectangle = new RectangleAnnotation()
 {
     X1 = 1,
@@ -273,6 +279,7 @@ The [EllipseAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Char
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+. . .
 var ellipse = new EllipseAnnotation()
 {
     X1 = 2,
@@ -314,6 +321,7 @@ The [LineAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+. . . 
 var line = new LineAnnotation()
 {
     X1 = 0.5,
@@ -353,6 +361,7 @@ The [VerticalLineAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+. . .
 var verticalLineAnnotation = new VerticalLineAnnotation()
 {
     X1 = 2,
@@ -394,16 +403,17 @@ The [VerticalLineAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+. . .
 var verticalLineAnnotation = new VerticalLineAnnotation()
 {
     X1 = 2.5,
-    ShowAxisLabel= true
+    ShowAxisLabel = true
 };
 
 var horizontalLineAnnotation = new HorizontalLineAnnotation()
 {
     Y1 = 25,
-    ShowAxisLabel= true
+    ShowAxisLabel = true
 };
 
 chart.Annotations.Add(verticalLineAnnotation);
@@ -448,6 +458,7 @@ To display a single-headed arrow, set the [LineCap](https://help.syncfusion.com/
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+. . .
 var verticalLineAnnotation = new VerticalLineAnnotation()
 {
     X1 = 2.5,
@@ -553,7 +564,7 @@ var viewAnnotation = new ViewAnnotation()
 {
     X1 = 3,
     Y1 = 30,
-    View = new Image { Source = "cloud.png" }
+    View = new Image() { Source = "cloud.png" };
 };
 
 chart.Annotations.Add(viewAnnotation);

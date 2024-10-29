@@ -14,7 +14,7 @@ keywords: .net maui stacked column chart, maui stacked column chart, stacked col
 
 The stacked column chart represents data values in a stacked format, where the columns are stacked on each other to indicate the cumulative value of the data points.
 
-To render a stacked column chart, create an instance of the [StackingColumnSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingColumnSeries.html) and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
+To render a stacked column chart, create an instance of the [StackingColumnSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingColumnSeries.html) and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html).
 
 N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
 
@@ -31,11 +31,11 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
         <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>
 
-    <chart:StackingColumnSeries ItemsSource="{Binding Data}"
+    <chart:StackingColumnSeries ItemsSource="{Binding Data1}"
                                 XBindingPath="Name"
                                 YBindingPath="Value"/>        
 
-    <chart:StackingColumnSeries ItemsSource="{Binding Data1}"
+    <chart:StackingColumnSeries ItemsSource="{Binding Data2}"
                                 XBindingPath="Name"
                                 YBindingPath="Value"/>         
 </chart:SfCartesianChart>
@@ -46,26 +46,28 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.XAxes.Add(primaryAxis);
+
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 
-StackingColumnSeries  series = new  StackingColumnSeries()
+StackingColumnSeries  series1 = new  StackingColumnSeries()
 {
-    XBindingPath = "Name",
-    YBindingPath = "Value",
-    ItemsSource = new ViewModel().Data
-};
-StackingColumnSeries series1 = new StackingColumnSeries()
-{
-    XBindingPath = "Name",
-    YBindingPath = "Value",
     ItemsSource = new ViewModel().Data1
+    XBindingPath = "Name",
+    YBindingPath = "Value",
+};
+StackingColumnSeries series2 = new StackingColumnSeries()
+{
+    ItemsSource = new ViewModel().Data2
+    XBindingPath = "Name",
+    YBindingPath = "Value",
 };
 
-chart.Series.Add(series);
-chart.Series.Add(series1);     
+chart.Series.Add(series1);
+chart.Series.Add(series2);     
 this.Content = chart;
 
 {% endhighlight %}
@@ -86,19 +88,19 @@ N> If the [GroupingLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ch
 
 <chart:SfCartesianChart>
     ....
-    <chart:StackingColumnSeries XBindingPath="Name"
+    <chart:StackingColumnSeries ItemsSource="{Binding Data1}"
+                                XBindingPath="Name"
                                 YBindingPath="Value"
-                                ItemsSource="{Binding Data}"
                                 GroupingLabel="GroupOne"/>
 
-    <chart:StackingColumnSeries XBindingPath="Name"
+    <chart:StackingColumnSeries ItemsSource="{Binding Data2}"
+                                XBindingPath="Name"
                                 YBindingPath="Value"
-                                ItemsSource="{Binding Data1}"
                                 GroupingLabel="GroupTwo"/>
 
-    <chart:StackingColumnSeries XBindingPath="Name"
+    <chart:StackingColumnSeries ItemsSource="{Binding Data3}"
+                                XBindingPath="Name"
                                 YBindingPath="Value"
-                                ItemsSource="{Binding Data2}"
                                 GroupingLabel="GroupOne"/>
 </chart:SfCartesianChart>
 
@@ -108,36 +110,38 @@ N> If the [GroupingLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ch
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.XAxes.Add(primaryAxis);
+
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 
-StackingColumnSeries  series = new  StackingColumnSeries()
+StackingColumnSeries  series1 = new  StackingColumnSeries()
 {
+    ItemsSource = new ViewModel().Data1,
     XBindingPath = "Name",
     YBindingPath = "Value",
-    ItemsSource = new ViewModel().Data,
     GroupingLabel="GroupOne"
 };
-StackingColumnSeries series1 = new StackingColumnSeries()
+StackingColumnSeries series2 = new StackingColumnSeries()
 {
+    ItemsSource = new ViewModel().Data2,
     XBindingPath = "Name",
     YBindingPath = "Value",
-    ItemsSource = new ViewModel().Data1,
     GroupingLabel="GroupTwo"
 };
-StackingColumnSeries series2 = new  StackingColumnSeries()
+StackingColumnSeries series3 = new  StackingColumnSeries()
 {
+    ItemsSource = new ViewModel().Data3,
     XBindingPath = "Name",
     YBindingPath = "Value",
-    ItemsSource = new ViewModel().Data2,
     GroupingLabel="GroupOne"
 };
 
-chart.Series.Add(series);
-chart.Series.Add(series1); 
-chart.Series.Add(series2);      
+chart.Series.Add(series1);
+chart.Series.Add(series2); 
+chart.Series.Add(series3);      
 this.Content = chart;
 
 {% endhighlight %}

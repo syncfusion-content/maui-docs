@@ -85,6 +85,7 @@ NumericalAxis secondaryAxis = new NumericalAxis()
 
 chart.XAxes.Add(primaryAxis);
 chart.YAxes.Add(secondaryAxis);
+
 this.Content = chart;
 
 {% endhighlight %}

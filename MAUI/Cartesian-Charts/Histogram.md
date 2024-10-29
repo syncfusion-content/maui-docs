@@ -10,7 +10,7 @@ keywords: .net maui histogram chart, histogram chart customization .net maui, sy
 
 # Histogram Chart in .NET MAUI Chart
 
-[Histogram chart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.HistogramSeries.html?tabs=tabid-1%2Ctabid-28) is a graphical representation that organizes a group of data points into user-specified ranges. It is similar in appearance to a column chart.
+[Histogram chart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.HistogramSeries.html) is a graphical representation that organizes a group of data points into user-specified ranges. It is similar in appearance to a column chart.
 
 Customize histogram intervals using the [HistogramInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.HistogramSeries.html#Syncfusion_Maui_Charts_HistogramSeries_HistogramInterval) property and normal distribution curve can be collapsed using the [ShowNormalDistributionCurve](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.HistogramSeries.html#Syncfusion_Maui_Charts_HistogramSeries_ShowNormalDistributionCurve) property. 
 
@@ -31,7 +31,7 @@ Customize histogram intervals using the [HistogramInterval](https://help.syncfus
                            XBindingPath="Value" 
                            YBindingPath="Size"
                            HistogramInterval="20" 
-                           ShowNormalDistributionCurve="True">
+                           ShowNormalDistributionCurve="True"/>
     </chart:HistogramSeries>
 </chart:SfCartesianChart>
 

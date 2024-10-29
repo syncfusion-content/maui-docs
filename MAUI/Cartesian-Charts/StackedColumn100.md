@@ -14,7 +14,7 @@ The Stacked column 100 % series chart is a type of Stacked chart that is used to
 
 ## StackedColumn100 Chart
 
-To render the StackedColumn100 chart, create an instance of the [StackingColumn100Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingColumn100Series.html), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
+To render the StackedColumn100 chart, create an instance of the [StackingColumn100Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.StackingColumn100Series.html), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html).
 
 N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
 
@@ -32,15 +32,15 @@ N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
         <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>   
 
-    <chart:StackingColumn100Series ItemsSource="{Binding Data}"
-                                   XBindingPath="Name"
-                                   YBindingPath="Value"/>
-
     <chart:StackingColumn100Series ItemsSource="{Binding Data1}"
                                    XBindingPath="Name"
                                    YBindingPath="Value"/>
 
     <chart:StackingColumn100Series ItemsSource="{Binding Data2}"
+                                   XBindingPath="Name"
+                                   YBindingPath="Value"/>
+
+    <chart:StackingColumn100Series ItemsSource="{Binding Data3}"
                                    XBindingPath="Name"
                                    YBindingPath="Value"/>
 
@@ -51,17 +51,13 @@ N> The cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.XAxes.Add(primaryAxis);
+
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 
-StackingColumn100Series series = new StackingColumn100Series()
-{
-    ItemsSource = new ViewModel().Data,
-    XBindingPath = "Name",
-    YBindingPath = "Value",
-};
 StackingColumn100Series series1 = new StackingColumn100Series()
 {
     ItemsSource = new ViewModel().Data1,
@@ -74,10 +70,16 @@ StackingColumn100Series series2 = new StackingColumn100Series()
     XBindingPath = "Name",
     YBindingPath = "Value",
 };
+StackingColumn100Series series3 = new StackingColumn100Series()
+{
+    ItemsSource = new ViewModel().Data3,
+    XBindingPath = "Name",
+    YBindingPath = "Value",
+};
  
-chart.Series.Add(series);
 chart.Series.Add(series1);
 chart.Series.Add(series2);
+chart.Series.Add(series3);
 this.Content = chart;
 
 {% endhighlight C# %}
@@ -104,11 +106,6 @@ We can group and stack the similar stacked column 100 series type using the [Gro
         <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>   
 
-    <chart:StackingColumn100Series ItemsSource="{Binding Data}"
-                                   XBindingPath="XValue"
-                                   YBindingPath="YValue"
-                                   GroupingLabel="GroupOne"/>
-
     <chart:StackingColumn100Series ItemsSource="{Binding Data1}"
                                    XBindingPath="XValue"
                                    YBindingPath="YValue"
@@ -117,9 +114,14 @@ We can group and stack the similar stacked column 100 series type using the [Gro
     <chart:StackingColumn100Series ItemsSource="{Binding Data2}"
                                    XBindingPath="XValue"
                                    YBindingPath="YValue"
-                                   GroupingLabel="GroupTwo"/>
+                                   GroupingLabel="GroupOne"/>
 
     <chart:StackingColumn100Series ItemsSource="{Binding Data3}"
+                                   XBindingPath="XValue"
+                                   YBindingPath="YValue"
+                                   GroupingLabel="GroupTwo"/>
+
+    <chart:StackingColumn100Series ItemsSource="{Binding Data4}"
                                    XBindingPath="XValue"
                                    YBindingPath="YValue"
                                    GroupingLabel="GroupTwo"/>
@@ -131,44 +133,46 @@ We can group and stack the similar stacked column 100 series type using the [Gro
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.XAxes.Add(primaryAxis);
+
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 
-StackingColumn100Series series = new StackingColumn100Series()
-{
-    ItemsSource = new ViewModel().Data,
-    XBindingPath = "XValue",
-    YBindingPath = "YValue",
-    GroupingLabel="GroupOne"
-};
 StackingColumn100Series series1 = new StackingColumn100Series()
 {
     ItemsSource = new ViewModel().Data1,
     XBindingPath = "XValue",
     YBindingPath = "YValue",
-    GroupingLabel="GroupOne"
+    GroupingLabel = "GroupOne"
 };
 StackingColumn100Series series2 = new StackingColumn100Series()
 {
     ItemsSource = new ViewModel().Data2,
     XBindingPath = "XValue",
     YBindingPath = "YValue",
-    GroupingLabel="GroupTwo"
+    GroupingLabel = "GroupOne"
 };
 StackingColumn100Series series3 = new StackingColumn100Series()
 {
     ItemsSource = new ViewModel().Data3,
     XBindingPath = "XValue",
     YBindingPath = "YValue",
-    GroupingLabel="GroupTwo"
+    GroupingLabel = "GroupTwo"
+};
+StackingColumn100Series series4 = new StackingColumn100Series()
+{
+    ItemsSource = new ViewModel().Data4,
+    XBindingPath = "XValue",
+    YBindingPath = "YValue",
+    GroupingLabel = "GroupTwo"
 };
 
-chart.Series.Add(series);
 chart.Series.Add(series1);
 chart.Series.Add(series2);
 chart.Series.Add(series3);
+chart.Series.Add(series4);
 this.Content = chart;
 
 {% endhighlight C# %}

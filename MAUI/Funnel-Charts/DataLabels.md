@@ -77,16 +77,18 @@ this.Content = chart;
 SfFunnelChart chart = new SfFunnelChart();
 . . .
 chart.ShowDataLabels = true;
+ChartDataLabelStyle labelStyle = new ChartDataLabelStyle()
+{
+    Margin = 2,
+};
 chart.DataLabelSettings = new FunnelDataLabelSettings()
 {
     Context=FunnelDataLabelContext.XValue,
     LabelPlacement=DataLabelPlacement.Outer,
     UseSeriesPalette=true,
+    LabelStyle = labelStyle,
 };
-chart.DataLabelSettings.LabelStyle = new ChartDataLabelStyle()
-{
-    Margin = 2,
-};
+
 this.Content = chart;
 
 {% endhighlight %}

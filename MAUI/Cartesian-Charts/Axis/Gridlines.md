@@ -23,7 +23,7 @@ By default, major gridlines are automatically added to the [ChartAxis](https://h
         <chart:NumericalAxis ShowMajorGridLines="False"/>
     </chart:SfCartesianChart.XAxes>
     <chart:SfCartesianChart.YAxes>
-        <chart:NumericalAxis />
+        <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>
     . . .
 </chart:SfCartesianChart>
@@ -33,14 +33,14 @@ By default, major gridlines are automatically added to the [ChartAxis](https://h
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-. . .
+
 NumericalAxis primaryAxis = new NumericalAxis();
 primaryAxis.ShowMajorGridLines = false;
 chart.XAxes.Add(primaryAxis);
 
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
-
+. . .
 this.Content = chart;
 
 {% endhighlight %}
@@ -91,11 +91,13 @@ doubleCollection.Add(3);
 doubleCollection.Add(3);
 
 NumericalAxis primaryAxis = new NumericalAxis();
-ChartLineStyle axisLineStyle = new ChartLineStyle();
-axisLineStyle.Stroke = Colors.Black;
-axisLineStyle.StrokeWidth = 2;
-axisLineStyle.StrokeDashArray = doubleCollection;
-primaryAxis.MajorGridLineStyle = axisLineStyle;
+ChartLineStyle gridLineStyle = new ChartLineStyle()
+{
+    Stroke = Colors.Black,
+    StrokeWidth = 2,
+    StrokeDashArray = doubleCollection,
+};
+primaryAxis.MajorGridLineStyle = gridLineStyle;
 chart.XAxes.Add(primaryAxis);
 
 NumericalAxis secondaryAxis = new NumericalAxis();
@@ -133,8 +135,10 @@ Minor gridlines will be added automatically when the small tick lines is defined
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+
 NumericalAxis primaryAxis = new NumericalAxis();
 chart.XAxes.Add(primaryAxis);
+
 chart.SecondaryAxis = new NumericalAxis()
 {
     MinorTicksPerInterval = 3,
@@ -185,19 +189,22 @@ The [MinorGridLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-NumericalAxis primaryAxis = new NumericalAxis();
-chart.XAxes.Add(primaryAxis);
-
+...
 DoubleCollection doubleCollection = new DoubleCollection();
 doubleCollection.Add(3);
 doubleCollection.Add(3);
 
+NumericalAxis primaryAxis = new NumericalAxis();
+chart.XAxes.Add(primaryAxis);
+
 NumericalAxis secondaryAxis = new NumericalAxis() { MinorTicksPerInterval = 2 };
-ChartLineStyle axisLineStyle = new ChartLineStyle();
-axisLineStyle.Stroke = Colors.Black;
-axisLineStyle.StrokeWidth = 0.8;
-axisLineStyle.StrokeDashArray = doubleCollection;
-secondaryAxis.MinorGridLineStyle = axisLineStyle;
+ChartLineStyle gridLineStyle = new ChartLineStyle()
+{
+    Stroke = Colors.Black,
+    StrokeWidth = 0.8,
+    StrokeDashArray = doubleCollection,
+};
+secondaryAxis.MinorGridLineStyle = gridLineStyle;
 chart.YAxes.Add(secondaryAxis);
 
 this.Content = chart;

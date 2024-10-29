@@ -31,6 +31,7 @@ To define the legend in the chart, initialize the [ChartLegend](https://help.syn
 
 SfCircularChart chart = new SfCircularChart();
 chart.Legend = new ChartLegend();
+. . .    
 this.Content = chart;
 
 {% endhighlight %}
@@ -46,7 +47,7 @@ The visibility of the chart legend can be controlled using the [IsVisible](https
     
 <chart:SfCircularChart>
     <chart:SfCircularChart.Legend>
-        <chart:ChartLegend IsVisible = "True"/>
+        <chart:ChartLegend IsVisible="True"/>
     </chart:SfCircularChart.Legend>
 </chart:SfCircularChart>
 
@@ -60,6 +61,7 @@ chart.Legend = new ChartLegend()
 { 
     IsVisible = true 
 };
+. . .    
 this.Content = chart;
 
 {% endhighlight %}
@@ -218,8 +220,9 @@ chart.Legend = new ChartLegend()
 { 
     Placement = LegendPlacement.Bottom 
 };
-
+. . .    
 this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -248,7 +251,7 @@ chart.Legend = new ChartLegend()
 { 
     ToggleSeriesVisibility = true 
 };
-
+. . .    
 this.Content = chart;
 
 {% endhighlight %}
@@ -284,6 +287,7 @@ public class LegendExt : ChartLegend
 
 SfCircularChart chart = new SfCircularChart();
 chart.Legend = new LegendExt();
+. . .    
 this.Content = chart;
 
 {% endhighlight %}
@@ -359,6 +363,7 @@ N> The BindingContext of the template is the corresponding underlying legend ite
         <chart:ChartLegend ItemTemplate="{StaticResource legendTemplate}">
         </chart:ChartLegend>
     </chart:SfCircularChart.Legend>
+    . . .    
 </chart:SfCircularChart>
 
 {% endhighlight %}

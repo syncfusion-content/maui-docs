@@ -50,6 +50,7 @@ Keywords: .net maui waterfall chart, .net maui bridge chart, waterfall chart cus
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+
 CategoryAxis xAxis = new CategoryAxis();
 NumericalAxis yAxis = new NumericalAxis();
 chart.XAxes.Add(xAxis);
@@ -59,14 +60,14 @@ ViewModel viewModel = new ViewModel();
 
 WaterfallSeries series = new WaterfallSeries()
 {
-    ItemsSource =new viewModel().Sales,
+    ItemsSource = new viewModel().Sales,
     XBindingPath = "Department",
     YBindingPath = "Value",
-    SummaryBindingPath = "IsSummary",
-    SummaryPointsBrush = new SolidColorBrush(Colors.Blue),
+    AllowAutoSum = true,
     NegativePointsBrush = new SolidColorBrush(Colors.Red),
-    AllowAutoSum = True,
-    ShowConnectorLine = True
+    SummaryBindingPath = "IsSummary",
+    SummaryPointsBrush = new SolidColorBrush(Colors.RoyalBlue),
+    ShowConnectorLine = true,
 };
     
 chart.Series.Add(series);
@@ -78,7 +79,7 @@ this.Content = chart;
 
 ![Waterfall Chart in MAUI Chart](Chart-types-images/maui_waterfall_Basic.png)
 
-### Connector line customization
+## Connector line customization
 
 The connector line can be customized by applying the [ConnectorLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.WaterfallSeries.html#Syncfusion_Maui_Charts_WaterfallSeries_ConnectorLineStyle) property of the series.
 The following code example illustrates how to apply style for connector line.
@@ -101,17 +102,18 @@ The following code example illustrates how to apply style for connector line.
 
 {% highlight c# %}
 
-WaterfallSeries series = new WaterfallSeries()
-{
-    ItemsSource =new viewModel().Sales,
-    XBindingPath = "Department",
-    YBindingPath = "Value"
-};
-
-series.ConnectorLineStyle = new ChartLineStyle()
+ChartLineStyle lineStyle = new ChartLineStyle()
 {
     Stroke = new SolidColorBrush(Colors.DarkViolet),
     StrokeThickness = 2
+};
+
+WaterfallSeries series = new WaterfallSeries()
+{
+    ItemsSource = new viewModel().Sales,
+    XBindingPath = "Department",
+    YBindingPath = "Value",
+    ConnectorLineStyle = lineStyle,
 };
 
 chart.Series.Add(series);

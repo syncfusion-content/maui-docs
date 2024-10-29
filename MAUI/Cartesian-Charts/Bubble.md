@@ -14,7 +14,7 @@ keywords: .net maui bubble chart, maui bubble chart, bubble chart customization 
 
 The bubble chart is represented by closely packed circles, whose areas are proportional to the quantities.
 
-To render a bubble chart, create an instance of [BubbleSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BubbleSeries.html), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1). The bubble chart is similar to a scatter plot, but with the additional dimension of bubble size to represent the third variable. 
+To render a bubble chart, create an instance of [BubbleSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BubbleSeries.html), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html). The bubble chart is similar to a scatter plot, but with the additional dimension of bubble size to represent the third variable. 
 
 The size of the [BubbleSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BubbleSeries.html) is relatively proportional to the value bound with the series using the [SizeValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BubbleSeries.html#Syncfusion_Maui_Charts_BubbleSeries_SizeValuePath) property. You can set the constraints on this size using the [MinimumRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BubbleSeries.html#Syncfusion_Maui_Charts_BubbleSeries_MinimumRadius) and [MaximumRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BubbleSeries.html#Syncfusion_Maui_Charts_BubbleSeries_MaximumRadius). The following code illustrates how to set the value to the property. 
 
@@ -25,7 +25,7 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
 {% highlight xaml %}
 
 <chart:SfCartesianChart>
-    ...
+
     <chart:SfCartesianChart.XAxes>
         <chart:NumericalAxis/>
     </chart:SfCartesianChart.XAxes>
@@ -46,8 +46,10 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+
 NumericalAxis primaryAxis = new NumericalAxis();
 chart.XAxes.Add(primaryAxis);
+
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 
@@ -69,7 +71,7 @@ this.Content = chart;
 ![Bubble chart type in MAUI Chart](Chart-Types-images/BubbleBasisImage.png)
 
 ## Show zero size bubbles
-The zero size bubble segments can be enabled or disabled using the [ShowZeroSizeBubbles](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BubbleSeries.html#Syncfusion_Maui_Charts_BubbleSeries_ShowZeroSizeBubbles) property. By default, the property value is True. The following code illustrates how to set the value to the property.
+The zero size bubble segments can be enabled or disabled using the [ShowZeroSizeBubbles](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BubbleSeries.html#Syncfusion_Maui_Charts_BubbleSeries_ShowZeroSizeBubbles) property. By default, the property value is `True`. The following code illustrates how to set the value to the property.
 
 {% tabs %}
 

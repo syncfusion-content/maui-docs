@@ -77,16 +77,18 @@ this.Content = chart;
 SfPyramidChart chart = new SfPyramidChart();
 . . .
 chart.ShowDataLabels = true;
+ChartDataLabelStyle labelStyle = new ChartDataLabelStyle()
+{
+    Margin = 2,
+};
 chart.DataLabelSettings = new PyramidDataLabelSettings()
 {
     Context=PyramidDataLabelContext.XValue,
     LabelPlacement=DataLabelPlacement.Outer,
     UseSeriesPalette=true,
+    LabelStyle = labelStyle,
 };
-chart.DataLabelSettings.LabelStyle = new ChartDataLabelStyle()
-{
-    Margin = 2,
-};
+
 this.Content = chart;
 
 {% endhighlight %}

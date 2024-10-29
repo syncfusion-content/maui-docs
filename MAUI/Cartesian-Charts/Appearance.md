@@ -24,7 +24,6 @@ By default, chart applies a set of predefined brushes to the series in a predefi
 {% highlight xaml %}
 
 <chart:SfCartesianChart x:Name="chart" PaletteBrushes="{Binding CustomBrushes}">
-. . .
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -32,6 +31,7 @@ By default, chart applies a set of predefined brushes to the series in a predefi
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+. . .
 List<Brush> CustomBrushes = new List<Brush>();
 CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(38, 198, 218)));
 CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(0, 172, 193)));
@@ -40,7 +40,7 @@ CustomBrushes.Add(new SolidColorBrush(Color.FromRgb(0, 131, 143)));
 
 this.chart.PaletteBrushes = CustomBrushes;
 . . .
-this.Content = chart;
+Content = chart;
 
 {% endhighlight %}
 
@@ -175,7 +175,7 @@ public class ViewModel
 
 ## Plotting Area Customization:
 
-[SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1) allows you to add any view to the chart plot area, which is useful for adding any relevant data, a watermark, or a color gradient to the background of the chart.
+[SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) allows you to add any view to the chart plot area, which is useful for adding any relevant data, a watermark, or a color gradient to the background of the chart.
 
 {% tabs %}
 
@@ -184,19 +184,19 @@ public class ViewModel
 <chart:SfCartesianChart>
     <chart:SfCartesianChart.PlotAreaBackgroundView>
         <AbsoluteLayout>
-      	    <Label Text="Copyright @ 2001 - 2022 Syncfusion Inc"
-	           FontSize="18" AbsoluteLayout.LayoutBounds="1,1,-1,-1"
-		   AbsoluteLayout.LayoutFlags="PositionProportional"
-		   Opacity="0.4"/>
-       	    <Label Text="CONFIDENTIAL"
-		   Rotation="340"
-		   FontSize="80"
-		   FontAttributes="Bold,Italic"
-		   TextColor="Gray"
-		   Margin="10,0,0,0"
-		   AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"
-		   AbsoluteLayout.LayoutFlags="PositionProportional"
-		   Opacity="0.3"/>
+            <Label Text="Copyright @ 2001 - 2022 Syncfusion Inc"
+                   FontSize="18" AbsoluteLayout.LayoutBounds="1,1,-1,-1"
+                   AbsoluteLayout.LayoutFlags="PositionProportional"
+                   Opacity="0.4"/>
+            <Label Text="CONFIDENTIAL"
+                   Rotation="340"
+                   FontSize="80"
+                   FontAttributes="Bold,Italic"
+                   TextColor="Gray"
+                   Margin="10,0,0,0"
+                   AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1"
+                   AbsoluteLayout.LayoutFlags="PositionProportional"
+                   Opacity="0.3"/>
         </AbsoluteLayout>
     </chart:SfCartesianChart.PlotAreaBackgroundView>
 </chart:SfCartesianChart>

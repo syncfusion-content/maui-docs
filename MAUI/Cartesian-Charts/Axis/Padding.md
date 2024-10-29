@@ -37,16 +37,16 @@ SfCartesianChart chart = new SfCartesianChart();
 . . .
 CategoryAxis primaryAxis = new CategoryAxis()
 {
-PlotOffsetStart = 30
+    PlotOffsetStart = 30
 };
 chart.XAxes.Add(primaryAxis);
 
 NumericalAxis secondaryAxis = new NumericalAxis()
 {
-PlotOffsetStart = 30
+    PlotOffsetStart = 30
 };
 chart.YAxes.Add(secondaryAxis);
-
+. . .
 this.Content = chart;
 
 {% endhighlight %}
@@ -72,6 +72,7 @@ The [PlotOffsetEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.C
     <chart:SfCartesianChart.YAxes>
         <chart:NumericalAxis PlotOffsetEnd="30"/>
     </chart:SfCartesianChart.YAxes>
+    . . .
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -82,16 +83,16 @@ SfCartesianChart chart = new SfCartesianChart();
 . . .
 CategoryAxis primaryAxis = new CategoryAxis()
 {
-PlotOffsetEnd = 30
+    PlotOffsetEnd = 30
 };
 chart.XAxes.Add(primaryAxis);
 
 NumericalAxis secondaryAxis = new NumericalAxis()
 {
-PlotOffsetEnd = 30
+    PlotOffsetEnd = 30
 };
 chart.YAxes.Add(secondaryAxis);
-
+. . .
 this.Content = chart;
 
 {% endhighlight %}

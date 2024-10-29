@@ -34,9 +34,9 @@ To define the legend in the chart, initialize the [ChartLegend](https://help.syn
 
 SfFunnelChart chart = new SfFunnelChart()
 {
+    ItemsSource = new ViewModel().Data,
     XBindingPath = "Name",
     YBindingPath = "Height",
-    ItemsSource = new ViewModel().Data,
 };
 
 chart.Legend = new ChartLegend();
@@ -57,7 +57,7 @@ The visibility of the chart legend can be controlled using the [IsVisible](https
                      XBindingPath="Name"
                      YBindingPath="Height">
     <chart:SfFunnelChart.Legend>
-        <chart:ChartLegend IsVisible = "True"/>
+        <chart:ChartLegend IsVisible="True"/>
     </chart:SfFunnelChart.Legend>
 </chart:SfFunnelChart>
 
@@ -67,9 +67,9 @@ The visibility of the chart legend can be controlled using the [IsVisible](https
 
 SfFunnelChart chart = new SfFunnelChart()
 {
+    ItemsSource = new ViewModel().Data,
     XBindingPath = "Name",
     YBindingPath = "Height",
-    ItemsSource = new ViewModel().Data,
 };
 
 chart.Legend = new ChartLegend()
@@ -84,7 +84,7 @@ this.Content = chart;
 
 ## Customizing labels
 
-The appearance of the legend label can be customized using the [`LabelStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_LabelStyle) property. 
+The appearance of the legend label can be customized using the [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_LabelStyle) property. 
 
 * [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegendLabelStyle.html#Syncfusion_Maui_Charts_ChartLegendLabelStyle_TextColor) – Gets or sets the color of the label.
 * [`FontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegendLabelStyle.html#Syncfusion_Maui_Charts_ChartLegendLabelStyle_FontFamily) - Gets or sets the font family for the legend label. 
@@ -158,13 +158,13 @@ To specify the legend icon based on the associated series type, use the [LegendI
 
 SfFunnelChart chart = new SfFunnelChart()
 {
+    ItemsSource = new ViewModel().Data,
     XBindingPath = "Name",
     YBindingPath = "Height",
-    ItemsSource = new ViewModel().Data,
+    LegendIcon = ChartLegendIconType.Diamond
 };
-
 chart.Legend = new ChartLegend();
-chart.LegendIcon = ChartLegendIconType.Diamond;
+
 this.Content = chart;
 
 {% endhighlight %}
@@ -209,15 +209,15 @@ this.Content = chart;
 {% endtabs %}
 
 ## Toggle the series visibility
-The visibility of segments in the funnel chart can be controlled by tapping the legend item using the [ToggleSeriesVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html?tabs=tabid-1%2Ctabid-3%2Ctabid-7%2Ctabid-12%2Ctabid-5%2Ctabid-10#Syncfusion_Maui_Charts_ChartLegend_ToggleSeriesVisibility) property. The default value of ToggleSeriesVisibility is `false`.
+The visibility of segments in the funnel chart can be controlled by tapping the legend item using the [ToggleSeriesVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_ToggleSeriesVisibility) property. The default value of ToggleSeriesVisibility is `false`.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <chart:SfFunnelChart ItemsSource="{Binding Data}" 
-                     XBindingPath="Name"         
-                     YBindingPath="Value">
+                     XBindingPath="XValue"         
+                     YBindingPath="YValue">
     . . .
     <chart:SfFunnelChart.Legend>
         <chart:ChartLegend ToggleSeriesVisibility="True"/>
@@ -229,13 +229,13 @@ The visibility of segments in the funnel chart can be controlled by tapping the 
 
 {% highlight c# %}
 
-ChartViewModel viewModel = new();
+AdmissionViewModel viewModel = new AdmissionViewModel();
 
-SfFunnelChart funnelChart = new SfFunnelChart()
+SfFunnelChart chart = new SfFunnelChart()
 {
     ItemsSource = viewModel.Data,
-    XBindingPath = "Name",
-    YBindingPath = "Value"
+    XBindingPath = "XValue",
+    YBindingPath = "YValue"
 };
 
 funnelChart.Legend = new ChartLegend()
@@ -243,7 +243,7 @@ funnelChart.Legend = new ChartLegend()
     ToggleSeriesVisibility = true
 };
 
-this.Content = funnelChart;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -293,8 +293,8 @@ The [ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Cha
 {% highlight xaml %}
 
 <chart:SfFunnelChart ItemsSource="{Binding Data}" 
-                     XBindingPath="Name"  LegendIcon="Diamond"
-                     YBindingPath="Height">
+                     XBindingPath="XValue"  
+                     YBindingPath="YValue">
     <chart:SfFunnelChart.Legend>
         <chart:ChartLegend>
             <chart:ChartLegend.ItemsLayout>
@@ -312,10 +312,9 @@ The [ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Cha
 
 SfFunnelChart chart = new SfFunnelChart()
 {
-    XBindingPath = "Name",
-    YBindingPath = "Height",
     ItemsSource = new ViewModel().Data,
-    LegendIcon = ChartLegendIconType.Diamond,
+    XBindingPath = "XValue",
+    YBindingPath = "YValue",
 };
 . . .
 ChartLegend legend = new ChartLegend();
@@ -342,16 +341,16 @@ N> The BindingContext of the template is the corresponding underlying legend ite
 
 {% highlight xaml %}
 
-<chart:SfFunnelChart ItemsSource="{Binding Data}" 
-                     XBindingPath="Name"  
-                     YBindingPath="Height" x:Name="chart">
+<chart:SfFunnelChart ItemsSource="{Binding Data}" x:Name="chart"
+                     XBindingPath="XValue"  
+                     YBindingPath="YValue">
     <chart:SfFunnelChart.Resources>
         <DataTemplate x:Key="legendTemplate">
             <StackLayout Orientation="Horizontal">
                 <Rectangle HeightRequest="12" 
                            WidthRequest="12" Margin="3"
                            Background="{Binding IconBrush}"/>
-                <Label Text="{Binding Text}" 
+                <Label Text="{Binding XValue}" 
                        Margin="3"/>
             </StackLayout>
         </DataTemplate>
@@ -368,9 +367,9 @@ N> The BindingContext of the template is the corresponding underlying legend ite
 
 SfFunnelChart chart = new SfFunnelChart()
 {
-    XBindingPath = "Name",
-    YBindingPath = "Height",
     ItemsSource = new ViewModel().Data,
+    XBindingPath = "XValue",
+    YBindingPath = "YValue",
 };
      
 ChartLegend legend = new ChartLegend();

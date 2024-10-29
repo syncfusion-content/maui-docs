@@ -48,6 +48,7 @@ The following properties can be used to customize the appearance of the radial b
 SfCircularChart chart = new SfCircularChart();
 
 RadialBarSeries series = new RadialBarSeries();
+series.ItemsSource = new ViewModel().Data,
 series.XBindingPath = "Product";
 series.YBindingPath = "SalesRate";
 
@@ -72,7 +73,7 @@ You can use the [Radius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
     <chart:RadialBarSeries ItemsSource="{Binding Data}" 
                            XBindingPath="Product" 
                            YBindingPath="SalesRate" 
-                           Radius = "0.5"/>
+                           Radius="0.5"/>
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -82,6 +83,7 @@ You can use the [Radius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
 SfCircularChart chart = new SfCircularChart();
 
 RadialBarSeries series = new RadialBarSeries();
+series.ItemsSource = new ViewModel().Data,
 series.XBindingPath = "Product";
 series.YBindingPath = "SalesRate";
 series.Radius = 0.5;
@@ -107,7 +109,7 @@ The [InnerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Rad
     <chart:RadialBarSeries ItemsSource="{Binding Data}" 
                            XBindingPath="Product" 
                            YBindingPath="SalesRate" 
-                           InnerRadius = "0.1"/>
+                           InnerRadius="0.1"/>
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -117,6 +119,7 @@ The [InnerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Rad
 SfCircularChart chart = new SfCircularChart();
 
 RadialBarSeries series = new RadialBarSeries();
+series.ItemsSource = new ViewModel().Data,
 series.XBindingPath = "Product";
 series.YBindingPath = "SalesRate";
 series.InnerRadius = 0.1;
@@ -166,6 +169,7 @@ You can customize the CapStyle property of the radial bar based on its types.
 SfCircularChart chart = new SfCircularChart();
 
 RadialBarSeries series = new RadialBarSeries();
+series.ItemsSource = new ViewModel().Data,
 series.XBindingPath = "Product";
 series.YBindingPath = "SalesRate";
 series.CapStyle = CapStyle.BothCurve;
@@ -191,8 +195,8 @@ The [GapRatio](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Radial
     <chart:RadialBarSeries ItemsSource="{Binding Data}" 
                            XBindingPath="Product" 
                            YBindingPath="SalesRate" 
-                           InnerRadius = "0.2"
-                           GapRatio = "0.4"/>
+                           InnerRadius="0.2"
+                           GapRatio="0.4"/>
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -202,6 +206,7 @@ The [GapRatio](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Radial
 SfCircularChart chart = new SfCircularChart();
 
 RadialBarSeries series = new RadialBarSeries();
+series.ItemsSource = new ViewModel().Data,
 series.XBindingPath = "Product";
 series.YBindingPath = "SalesRate";
 series.InnerRadius = 0.2;
@@ -248,6 +253,7 @@ You can use the following properties to customize the appearance of the circular
 SfCircularChart chart = new SfCircularChart();
 
 RadialBarSeries series = new RadialBarSeries();
+series.ItemsSource = new ViewModel().Data,
 series.XBindingPath = "Product";
 series.YBindingPath = "SalesRate";
 series.TrackFill = new SolidColorBrush(Color.FromArgb("#FFF7ED"));
@@ -297,6 +303,7 @@ The [CenterHoleSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 SfCircularChart chart = new SfCircularChart();
 
 RadialBarSeries series = new RadialBarSeries();
+series.ItemsSource = new ViewModel().Data,
 series.XBindingPath = "Product";
 series.YBindingPath = "SalesRate";
 series.CapStyle = CapStyle.BothCurve;
