@@ -234,9 +234,10 @@ The visibility of segments in the pyramid chart can be controlled by tapping the
 
 {% highlight c# %}
 
+
 SfPyramidChart pyramidChart = new SfPyramidChart()
 {
-    ItemsSource = viewModel.Data,
+    ItemsSource = (new ViewModel()).Data,
     XBindingPath = "Name",
     YBindingPath = "Value"
 };
