@@ -511,7 +511,7 @@ SfCartesianChart chart = new SfCartesianChart();
 LogarithmicAxis secondaryAxis = new LogarithmicAxis()
 {
     Minimum = 100, 
-	Maximum = 10000 
+    Maximum = 10000 
 };
 chart.YAxes.Add(secondaryAxis);
 
