@@ -437,7 +437,7 @@ this.Content = chart;
 
 SfPolarChart chart = new SfPolarChart();
 . . .
-chart.Legend = new ChartLegend ();
+chart.Legend = new ChartLegend();
 this.Content = chart;
 {% endhighlight %}
 
