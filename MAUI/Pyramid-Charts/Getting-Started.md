@@ -116,7 +116,7 @@ public class StageViewModel
 {
     public List<StageModel> Data { get; set; }
 
-    public ChartViewModel()
+    public StageViewModel()
     {
         Data = new List<StageModel>()
         {
