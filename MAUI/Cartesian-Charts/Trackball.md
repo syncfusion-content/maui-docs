@@ -262,16 +262,13 @@ The [MarkerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 SfCartesianChart chart = new SfCartesianChart();
 . . .
 ChartTrackballBehavior trackball = new ChartTrackballBehavior();
-ChartMarkerSettings markerStyle = new ChartMarkerSettings()
+ChartMarkerSettings markerSettings = new ChartMarkerSettings()
 {
     Height = 10, 
     Width = 10,
     Fill = new SolidColorBrush(Colors.Red),
 };
-chart.TrackballBehavior = new ChartTrackballBehavior()
-{
-    MarkerSettings = markerSettings,
-};
+trackball.MarkerSettings = markerSettings;
 . . .
 this.Content = chart;
         

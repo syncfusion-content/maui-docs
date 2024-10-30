@@ -141,9 +141,9 @@ SfCartesianChart chart = new SfCartesianChart();
 . . .
 chart.Legend = new ChartLegend()
 {
-    LabelStyle = new ChartLegendLabelStyle
+    LabelStyle = new ChartLegendLabelStyle()
     {
-        TextColor = Color.Blue,
+        TextColor = Colors.Blue,
         FontSize = 18,
         FontAttributes = FontAttributes.Bold,
         Margin = 5,

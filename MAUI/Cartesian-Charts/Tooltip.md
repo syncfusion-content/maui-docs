@@ -200,12 +200,12 @@ The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
     </chart:SfCartesianChart.TooltipBehavior>
 
     <chart:ColumnSeries ItemsSource="{Binding Data}" TooltipTemplate="{StaticResource tooltipTemplate}"
-                        XBindingPath="Demand"
-                        YBindingPath="Year2010" 
+                        XBindingPath="Category"
+                        YBindingPath="Value" 
                         EnableTooltip="True"/>
     <chart:ColumnSeries ItemsSource="{Binding Data}" TooltipTemplate="{StaticResource tooltipTemplate}"
-                        XBindingPath="Demand"
-                        YBindingPath="Year2011" 
+                        XBindingPath="Category"
+                        YBindingPath="Value" 
                         EnableTooltip="True"/>                    
 </chart:SfCartesianChart>
 
@@ -218,8 +218,8 @@ SfCartesianChart chart = new SfCartesianChart();
 ColumnSeries series1 = new ColumnSeries()
 {
     ItemsSource = new ViewModel().Data,
-    XBindingPath = "Demand",
-    YBindingPath = "Year2010",
+    XBindingPath = "Category",
+    YBindingPath = "Value",
     EnableTooltip = true,
     TooltipTemplate = chart.Resources["tooltipTemplate"] as DataTemplate
 };
@@ -227,8 +227,8 @@ ColumnSeries series1 = new ColumnSeries()
 ColumnSeries series2 = new ColumnSeries()
 {
     ItemsSource = new ViewModel().Data,
-    XBindingPath = "Demand",
-    YBindingPath = "Year2010",
+    XBindingPath = "Category",
+    YBindingPath = "Value",
     EnableTooltip = true,
     TooltipTemplate = chart.Resources["tooltipTemplate"] as DataTemplate
 };

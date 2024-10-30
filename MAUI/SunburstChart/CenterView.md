@@ -51,7 +51,7 @@ SfSunburstChart sunburst = new SfSunburstChart();
 RoundRectangle roundRectangle = new RoundRectangle();
 roundRectangle.SetBinding(RoundRectangle.CornerRadiusProperty, "CenterHoleSize", converter: sunburstChart.Resources["cornerRadius"] as IValueConverter);
 
-Label label = new Label
+Label label = new Label()
 {
     Text = "Behind the Bricks",
     LineBreakMode = LineBreakMode.WordWrap,
@@ -63,19 +63,19 @@ Label label = new Label
     TextColor = Colors.Black
 };
 
-Path path = new Path
+Path path = new Path()
 {
     Data = viewModel.Data,
     Fill = Brush.Black
 };
 
-Grid grid = new Grid
+Grid grid = new Grid()
 {
     HorizontalOptions = LayoutOptions.Center
 };
 grid.Children.Add(path);
 
-VerticalStackLayout views = new VerticalStackLayout
+VerticalStackLayout views = new VerticalStackLayout()
 {
     HorizontalOptions = LayoutOptions.Center,
     VerticalOptions = LayoutOptions.Center
@@ -84,7 +84,7 @@ views.SetBinding(WidthRequestProperty, "CenterHoleSize", converter: sunburstChar
 views.Children.Add(grid);
 views.Children.Add(label);
 
-Border border = new Border
+Border border = new Border()
 {
     BackgroundColor = Colors.GhostWhite,
     StrokeShape = roundRectangle,

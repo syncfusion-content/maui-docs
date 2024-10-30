@@ -30,9 +30,9 @@ To get start quickly with our .NET MAUI Cartesian Chart, you can check the below
 <ContentPage
     . . .    
     xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
-    <Grid>
-        <chart:SfCartesianChart/>
-    </Grid>
+    
+    <chart:SfCartesianChart/>
+
 </ContentPage>
  
 {% endhighlight %}
@@ -47,10 +47,8 @@ namespace ChartGettingStarted
         public MainPage()
         {
             InitializeComponent(); 
-            Grid grid = new Grid();
             SfCartesianChart chart = new SfCartesianChart(); 
-            grid.Add(chart);
-            this.Content = grid;            
+            this.Content = chart;            
         }
     }   
 }

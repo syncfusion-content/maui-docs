@@ -32,7 +32,6 @@ Customize histogram intervals using the [HistogramInterval](https://help.syncfus
                            YBindingPath="Size"
                            HistogramInterval="20" 
                            ShowNormalDistributionCurve="True"/>
-    </chart:HistogramSeries>
 </chart:SfCartesianChart>
 
 
@@ -105,7 +104,7 @@ HistogramSeries histogramSeries = new HistogramSeries
     ShowNormalDistributionCurve = true,
     CurveStyle = new ChartLineStyle()
     {
-        Stroke = Color.Blue,
+        Stroke = Colors.Blue,
         StrokeWidth = 2,
         StrokeDashArray = new double[] { 5, 6, 3 }
     };

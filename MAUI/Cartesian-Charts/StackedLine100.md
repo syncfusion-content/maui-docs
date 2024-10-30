@@ -64,6 +64,8 @@ chart.XAxes.Add(primaryAxis);
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 
+ViewModel viewModel = new ViewModel();
+
 StackingLine100Series series1 = new  StackingLine100Series()
 {
     ItemsSource = viewModel.Data1
@@ -161,6 +163,8 @@ chart.XAxes.Add(primaryAxis);
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 
+ViewModel viewModel = new ViewModel();
+
 DoubleCollection doubleCollection = new DoubleCollection();
 doubleCollection.Add(5);
 doubleCollection.Add(2);
@@ -251,33 +255,33 @@ SfCartesianChart chart = new SfCartesianChart();
 ...
 StackingLine100Series series1 = new  StackingLine100Series()
 {
+    ItemsSource = viewModel.Data1,
     XBindingPath = "Month",
     YBindingPath = "Value",
-    ItemsSource = viewModel.Data1,
     ShowMarkers= true,
 };
 
 StackingLine100Series series2 = new StackingLine100Series()
 {
+    ItemsSource = viewModel.Data2,
     XBindingPath = "Month",
     YBindingPath = "Value",
-    ItemsSource = viewModel.Data2,
     ShowMarkers= true,
 };
 
 StackingLine100Series series3 = new StackingLine100Series()       
 {
+    ItemsSource = viewModel.Data3,
     XBindingPath = "Month",
     YBindingPath = "Value",
-    ItemsSource = viewModel.Data3,
     ShowMarkers= true,
 };
 
 StackingLine100Series series4 = new StackingLine100Series()
 {
+    ItemsSource = viewModel.Data4,
     XBindingPath = "Month",
     YBindingPath = "Value",
-    ItemsSource = viewModel.Data4,
     ShowMarkers= true, 
 };
 
@@ -331,6 +335,7 @@ In order to change the series markers appearance, create an instance of the [Mar
 
 SfCartesianChart chart = new SfCartesianChart();
 
+ViewModel viewModel = new ViewModel();
 ...
 ChartMarkerSettings chartMarker= new ChartMarkerSettings()
 {

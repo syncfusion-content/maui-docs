@@ -330,9 +330,9 @@ The [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 
 SfPolarChart chart = new SfPolarChart()
 . . .
-PolarLineSeries series1 = new PolarLineSeries();
-series1.ShowDataLabels = true;
-chart.Series.Add(series1);
+PolarLineSeries series = new PolarLineSeries();
+series.ShowDataLabels = true;
+chart.Series.Add(series);
 this.Content = chart;
 
 {% endhighlight %}
@@ -439,8 +439,8 @@ Tooltips are used to display information about a segment when a user hovers over
 
 SfPolarChart chart = new SfPolarChart();
 . . .
-PolarLineSeries  series1 = new PolarLineSeries();
-series1.EnableTooltip = true;
+PolarLineSeries  series = new PolarLineSeries();
+series.EnableTooltip = true;
 . . .
 this.Content = chart;
 
@@ -511,7 +511,7 @@ namespace ChartGettingStarted
             chart.Title = new Label()
             {
                 Text = "Plant Analysis",
-                HorizontalTextAlignmen t= "Center"
+                HorizontalTextAlignment= "Center"
             };
 
             CategoryAxis primaryAxis = new CategoryAxis();

@@ -108,8 +108,10 @@ The [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartT
 
 SfPolarChart chart = new SfPolarChart();
 . . .
-chart.TooltipBehavior = new ChartTooltipBehavior();
-chart.TooltipBehavior.Duration = 5000;
+chart.TooltipBehavior = new ChartTooltipBehavior()
+{
+    Duration = 5000
+};
 
 PolarAreaSeries series = new PolarAreaSeries()
 {
@@ -136,7 +138,7 @@ The [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sf
 
 <chart:SfPolarChart >
     <chart:SfPolarChart.Resources>
-        <DataTemplate x:Key="tooltipTemplate1" x:Name="temp">
+        <DataTemplate x:Key="tooltipTemplate" x:Name="temp">
             <StackLayout>
                 <Label Text="{Binding Item.Direction}" HorizontalTextAlignment="Center" HorizontalOptions="Center"  VerticalTextAlignment="Center"                       
                        TextColor="White" FontAttributes="Bold" FontFamily="Helvetica" Margin="0,2,0,2" FontSize="12.5"/>
@@ -158,7 +160,7 @@ The [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sf
     </chart:SfPolarChart.TooltipBehavior>
 
     <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}"  XBindingPath="Direction" YBindingPath="Tree" 
-                           TooltipTemplate="{StaticResource tooltipTemplate1}" EnableTooltip="True"/>
+                           TooltipTemplate="{StaticResource tooltipTemplate}" EnableTooltip="True"/>
 </chart:SfPolarChart>
 
 {% endhighlight %}
@@ -173,7 +175,7 @@ PolarAreaSeries series = new PolarAreaSeries()
     XBindingPath = "Direction",
     YBindingPath = "Tree",
     EnableTooltip = true,
-    TooltipTemplate = chart.Resources["tooltipTemplate1"] as DataTemplate
+    TooltipTemplate = chart.Resources["tooltipTemplate"] as DataTemplate
 };
 
 chart.Series.Add(series);

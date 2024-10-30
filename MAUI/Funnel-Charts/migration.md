@@ -284,7 +284,7 @@ The following code example shows how to enable legend in chart.
 {% highlight C# %}
 SfChart chart = new SfChart();
 . . .
-chart.Legend = new ChartLegend ();
+chart.Legend = new ChartLegend();
 this.Content = chart;
 
 {% endhighlight %}
@@ -470,6 +470,7 @@ ChartTooltipBehavior tool = new ChartTooltipBehavior();
 tool.BackgroundColor = Color.Blue;
 tool.TextColor = Color.White;
 tool.Margin = new Thickness(5, 5, 5, 5);
+tool.FontSize = 15;
 chart.ChartBehaviors.Add(tool);
 this.Content = chart;
 
@@ -508,6 +509,7 @@ ChartTooltipBehavior tooltip = new ChartTooltipBehavior();
 tooltip.Background = Colors.Blue;
 tooltip.TextColor = Colors.White;
 tooltip.Margin = new Thickness(5, 5, 5, 5);
+tooltip.FontSize = 15;
 chart.TooltipBehavior = tooltip;
 this.Content = chart;
 

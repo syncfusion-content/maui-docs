@@ -157,6 +157,8 @@ chart.XAxes.Add(primaryAxis);
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 
+ViewModel viewModel = new ViewModel();
+
 DoubleCollection doubleCollection = new DoubleCollection();
 doubleCollection.Add(5);
 doubleCollection.Add(2);

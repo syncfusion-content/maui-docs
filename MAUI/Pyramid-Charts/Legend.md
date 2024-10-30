@@ -22,7 +22,7 @@ To define the legend in the chart, initialize the [ChartLegend](https://help.syn
 
 <chart:SfPyramidChart ItemsSource="{Binding Data}" 
                       XBindingPath="Name"
-                      YBindingPath="Height">
+                      YBindingPath="Value">
     <chart:SfPyramidChart.Legend>
         <chart:ChartLegend/>
     </chart:SfPyramidChart.Legend>
@@ -36,7 +36,7 @@ SfPyramidChart chart = new SfPyramidChart()
 {
     ItemsSource = new ViewModel().Data,
     XBindingPath = "Name",
-    YBindingPath = "Height",
+    YBindingPath = "Value",
 };
 
 chart.Legend = new ChartLegend();
@@ -55,7 +55,7 @@ The visibility of the chart legend can be controlled using the [IsVisible](https
     
 <chart:SfPyramidChart ItemsSource="{Binding Data}" 
                       XBindingPath="Name"
-                      YBindingPath="Height">
+                      YBindingPath="Value">
     <chart:SfPyramidChart.Legend>
         <chart:ChartLegend IsVisible="True"/>
     </chart:SfPyramidChart.Legend>
@@ -69,7 +69,7 @@ SfPyramidChart chart = new SfPyramidChart()
 {
     ItemsSource = new ViewModel().Data,
     XBindingPath = "Name",
-    YBindingPath = "Height",
+    YBindingPath = "Value",
 };
 
 chart.Legend = new ChartLegend()
@@ -147,7 +147,7 @@ To specify the legend icon based on associate series type using the [LegendIcon]
 
 <chart:SfPyramidChart ItemsSource="{Binding Data}"
                       XBindingPath="Name" 
-                      YBindingPath="Height"
+                      YBindingPath="Value"
                       LegendIcon="Diamond">
     <chart:SfPyramidChart.Legend>
         <chart:ChartLegend/>
@@ -162,7 +162,7 @@ SfPyramidChart chart = new SfPyramidChart()
 {
     ItemsSource = new ViewModel().Data,
     XBindingPath = "Name",
-    YBindingPath = "Height",
+    YBindingPath = "Value",
     LegendIcon = ChartLegendIconType.Diamond
 };
 
@@ -183,7 +183,7 @@ The legend can be positioned to the left, right, top, or bottom of the chart are
 
 <chart:SfPyramidChart ItemsSource="{Binding Data}" 
                       XBindingPath="Name"
-                      YBindingPath="Height">
+                      YBindingPath="Value">
     <chart:SfPyramidChart.Legend>
         <chart:ChartLegend Placement="Bottom">
         </chart:ChartLegend>
@@ -197,7 +197,7 @@ The legend can be positioned to the left, right, top, or bottom of the chart are
 SfPyramidChart chart = new SfPyramidChart()
 {
     XBindingPath = "Name",
-    YBindingPath = "Height",
+    YBindingPath = "Value",
     ItemsSource = new ViewModel().Data,
 
 };
@@ -295,7 +295,7 @@ The [ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Cha
 
 <chart:SfPyramidChart ItemsSource="{Binding Data}" 
                       XBindingPath="Name"  
-                      YBindingPath="Height">
+                      YBindingPath="Value">
     <chart:SfPyramidChart.Legend>
         <chart:ChartLegend >
             <chart:ChartLegend.ItemsLayout>
@@ -314,7 +314,7 @@ The [ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Cha
 SfPyramidChart chart = new SfPyramidChart()
 {
     XBindingPath = "Name",
-    YBindingPath = "Height",
+    YBindingPath = "Value",
     ItemsSource = new ViewModel().Data,
 };
 . . .
@@ -344,7 +344,7 @@ N> The BindingContext of the template is the corresponding underlying legend ite
 
 <chart:SfPyramidChart ItemsSource="{Binding Data}" 
                       XBindingPath="Name"  
-                      YBindingPath="Height" x:Name="chart">
+                      YBindingPath="Value" x:Name="chart">
 
     <chart:SfPyramidChart.Resources>
         <DataTemplate x:Key="legendTemplate">
@@ -371,7 +371,7 @@ N> The BindingContext of the template is the corresponding underlying legend ite
 SfPyramidChart chart = new SfPyramidChart()
 {
     XBindingPath = "Name",
-    YBindingPath = "Height",
+    YBindingPath = "Value",
     ItemsSource = new ViewModel().Data,
 };
      

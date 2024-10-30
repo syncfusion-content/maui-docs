@@ -284,7 +284,7 @@ The following code example shows how to enable legend in chart.
 {% highlight C# %}
 SfChart chart = new SfChart();
 . . .
-chart.Legend = new ChartLegend ();
+chart.Legend = new ChartLegend();
 this.Content = chart;
 
 {% endhighlight %}
@@ -359,6 +359,7 @@ To customize the data label appearance, create an instance of the [ChartDataMark
 
 {% endhighlight %}
 {% highlight C# %}
+SfChart chart = new SfChart();
 PyramidSeries series = new PyramidSeries();
 . . .
 series.DataMarker = new ChartDataMarker();
@@ -399,7 +400,7 @@ this.Content = chart;
             <chart:PyramidDataLabelSettings.LabelStyle>
                 <chart:ChartDataLabelStyle TextColor="Blue" 
                                            Stroke="Red"
-					   StrokeWidth="2" 
+                                           StrokeWidth="2" 
                                            Background="Aqua" 
                                            Margin="10" 
                                            FontSize="16"
@@ -463,6 +464,7 @@ To customize the tooltip appearance, create an instance of the [ChartTooltipBeha
 {% endhighlight %} 
 
 {% highlight C# %}
+SfChart chart = new SfChart();
 PyramidSeries  series = new PyramidSeries ();
 . . .
 series.EnableTooltip = true;
@@ -472,6 +474,7 @@ ChartTooltipBehavior tool = new ChartTooltipBehavior();
 tool.BackgroundColor = Color.Blue;
 tool.TextColor = Color.White;
 tool.Margin = new Thickness(5, 5, 5, 5);
+tool.FontSize = 15;
 chart.ChartBehaviors.Add(tool);
 this.Content = chart;
 
@@ -505,11 +508,12 @@ this.Content = chart;
 {% highlight C# %}
 SfPyramidChart chart = new SfPyramidChart();
 . . .      
-chart.EnableTooltip=true;
+chart.EnableTooltip = true;
 ChartTooltipBehavior tooltip = new ChartTooltipBehavior();
 tooltip.Background = Colors.Blue;
 tooltip.TextColor = Colors.White;
 tooltip.Margin = new Thickness(5, 5, 5, 5);
+tooltip.FontSize = 15;
 chart.TooltipBehavior = tooltip;
 this.Content = chart;
 

@@ -96,6 +96,7 @@ The visibility of individual legend items for specific series can be controlled 
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
+PolarViewModel polarViewModel = new PolarViewModel();
 . . .
 chart.Legend = new ChartLegend();
 
@@ -198,10 +199,11 @@ To specify the legend icon based on the associated series type, use the [LegendI
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
+PolarViewModel polarViewModel = new PolarViewModel();
 . . .
 chart.Legend = new ChartLegend();
 
-PolarAreaSeries series1 = new PolarAreaSeries()
+PolarAreaSeries series = new PolarAreaSeries()
 {
     XBindingPath = "Direction",
     YBindingPath = "Tree",
@@ -210,7 +212,7 @@ PolarAreaSeries series1 = new PolarAreaSeries()
     LegendIcon = ChartLegendIconType.Diamond,
 };
 
-chart.Series.Add(series1);
+chart.Series.Add(series);
 this.Content = chart;
 
 {% endhighlight %}
@@ -275,6 +277,7 @@ The visibility of polar series can be controlled by tapping the legend item usin
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
+PolarViewModel polarViewModel = new PolarViewModel();
 . . .
 chart.Legend = new ChartLegend()
 { 
@@ -382,6 +385,7 @@ An [ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Char
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
+PolarViewModel polarViewModel = new PolarViewModel();
 
 ChartLegend legend = new ChartLegend();
 
@@ -469,9 +473,8 @@ N> The BindingContext of the template is the corresponding underlying legend ite
 
 {% highlight c# %}
 
-SfCartesianChart chart = new SfCartesianChart();
-...
 SfPolarChart chart = new SfPolarChart();
+PolarViewModel polarViewModel = new PolarViewModel();
     
 ChartLegend legend = new ChartLegend();
 legend.ItemTemplate = chart.Resources["legendTemplate"] as DataTemplate;

@@ -331,7 +331,7 @@ this.Content = sunburstChart;
     xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart" >
 
     <sunburst:SfSunburstChart.Legend>
-        <sunburst:SunburstLegend Placement="Top" IsVisible="True" />
+        <sunburst:SunburstLegend Placement="Top" IsVisible="True"/>
     </sunburst:SfSunburstChart.Legend>
 
 </ContentPage>
@@ -345,13 +345,12 @@ SfSunburstChart sunburstChart = new SfSunburstChart();
 
 sunburstChart.Legend = new SunburstLegend()
 {
-Placement = LegendPlacement.Top,
-IsVisible = true
+    Placement = LegendPlacement.Top,
+    IsVisible = true
 };
 
 this.Content = sunburstChart;
                        
-
 {% endhighlight %}
 
 {% endtabs %}
@@ -564,7 +563,6 @@ sunburstChart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Jo
 sunburstChart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobRole" });
 
 this.Content = sunburstChart;
-                       
 
 {% endhighlight %}
 

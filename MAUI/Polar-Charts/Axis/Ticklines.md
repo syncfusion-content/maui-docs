@@ -123,16 +123,16 @@ SfPolarChart chart = new SfPolarChart();
 NumericalAxis primaryAxis = new NumericalAxis();
 chart.PrimaryAxis = primaryAxis;
 
-NumericalAxis secondaryAxis = = new NumericalAxis
+NumericalAxis secondaryAxis = new NumericalAxis
 {
-    MajorTickStyle = new ChartAxisTickStyle
+    MajorTickStyle = new ChartAxisTickStyle()
     {
         StrokeWidth = 1,
         Stroke = Colors.Red,
         TickSize = 10
     },
     MinorTicksPerInterval = 4,
-    MinorTickStyle = new ChartAxisTickStyle
+    MinorTickStyle = new ChartAxisTickStyle()
     {
         StrokeWidth = 1,
         Stroke = Colors.Red

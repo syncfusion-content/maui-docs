@@ -62,6 +62,8 @@ chart.XAxes.Add(primaryAxis);
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 
+ViewModel viewModel = new ViewModel();
+
 StackingAreaSeries series1 = new  StackingAreaSeries()
 {
     ItemsSource = viewModel.Data1
