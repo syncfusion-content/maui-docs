@@ -265,8 +265,7 @@ The visibility of polar series can be controlled by tapping the legend item usin
     <chart:PolarAreaSeries ItemsSource="{Binding  PlantDetails}" 
                            XBindingPath="Direction"
                            YBindingPath="Tree"
-                           IsVisibleOnLegend="True" Label="Tree"
-                           />
+                           IsVisibleOnLegend="True" Label="Tree"/>
 
     <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" 
                            XBindingPath="Direction" 
