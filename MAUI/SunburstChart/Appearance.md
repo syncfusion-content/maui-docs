@@ -31,10 +31,12 @@ The start angle and end angle of the sunburst chart can be adjusted by using the
 {% highlight C# %}
 
 SfSunburstChart sunburst = new SfSunburstChart();
-. . .
+sunburst.ItemsSource = (new SunburstViewModel()).DataSource;
 sunburst.StartAngle = 180;
 sunburst.EndAngle = 360;
+sunburst.ValueMemberPath = "EmployeesCount";
 . . .
+this.Content = sunburst;
 
 {% endhighlight %}
 
@@ -44,7 +46,7 @@ sunburst.EndAngle = 360;
 
 ## Radius
 
-The sunburst chart allows you to customize the radius by using the [Radius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_Radius) property. The default value of this property is 0.9, and the value ranges from 0 to 1.
+The sunburst chart allows you to customize the radius by using the [Radius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_Radius) property. The default value of this property is `0.9`, and the value ranges from `0` to `1`.
 
 {% tabs %} 
 
@@ -61,9 +63,11 @@ The sunburst chart allows you to customize the radius by using the [Radius](http
 {% highlight C# %}
 
 SfSunburstChart sunburst = new SfSunburstChart();
-. . .
+sunburst.ItemsSource = (new SunburstViewModel()).DataSource;
 sunburst.Radius = 0.7;
+sunburst.ValueMemberPath = "EmployeesCount";
 . . .
+this.Content = sunburst;
 
 {% endhighlight %}
 
@@ -90,9 +94,11 @@ The sunburst chart allows you to customize the inner radius using the [InnerRadi
 {% highlight C# %}
 
 SfSunburstChart sunburst = new SfSunburstChart();
-. . .
+sunburst.ItemsSource = (new SunburstViewModel()).DataSource;
 sunburst.InnerRadius = 0.4;
+sunburst.ValueMemberPath = "EmployeesCount";
 . . .
+this.Content = sunburst;
 
 {% endhighlight %}
 
@@ -120,10 +126,12 @@ Stroke color and stroke width of the sunburst chart can be customized using [Str
 {% highlight C# %}
 
 SfSunburstChart sunburst = new SfSunburstChart();
-. . .
+sunburst.ItemsSource = (new SunburstViewModel()).DataSource;
 sunburst.Stroke = Colors.Black;
 sunburst.StrokeWidth = 2;
+sunburst.ValueMemberPath = "EmployeesCount";
 . . .
+this.Content = sunburst;
 
 {% endhighlight %}
 
