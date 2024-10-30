@@ -146,7 +146,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-![Axis edge label positioning support in .NET MAUI Chart.](axis_images/net-maui-chart-axis-edge-labels-drawing.jpg)
+![Axis edge label positioning support in .NET MAUI Chart.](axis_images/maui_chart_axis_edge_labels_drawing.jpg)
 
 ## Edge Labels Visibility
  

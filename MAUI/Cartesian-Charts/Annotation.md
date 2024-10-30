@@ -101,7 +101,7 @@ When there are multiple axes, annotations can be added to a particular axis usin
 
 {% tabs %}
 
- {% highlight xaml %}
+{% highlight xaml %}
 
 <chart:SfCartesianChart>
     ...
@@ -115,7 +115,7 @@ When there are multiple axes, annotations can be added to a particular axis usin
     </chart:SfCartesianChart.Annotations>
 </chart:SfCartesianChart>
 
- {% endhighlight %}
+{% endhighlight %}
 
 {% highlight c# %}
 
@@ -156,7 +156,7 @@ The [TextAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 
 {% tabs %}
 
- {% highlight xaml %}
+{% highlight xaml %}
 
 <chart:SfCartesianChart>
     ...
@@ -165,7 +165,7 @@ The [TextAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
     </chart:SfCartesianChart.Annotations>
 </chart:SfCartesianChart>
 
- {% endhighlight %}
+{% endhighlight %}
 
 {% highlight c# %}
 
@@ -227,7 +227,7 @@ The [RectangleAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ch
 
 {% tabs %}
 
- {% highlight xaml %}
+{% highlight xaml %}
 
 <chart:SfCartesianChart>
     ...
@@ -265,7 +265,7 @@ The [EllipseAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Char
 
 {% tabs %}
 
- {% highlight xaml %}
+{% highlight xaml %}
 
 <chart:SfCartesianChart>
     ...
@@ -307,7 +307,7 @@ The [LineAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 
 {% tabs %}
 
- {% highlight xaml %}
+{% highlight xaml %}
 
 <chart:SfCartesianChart>
     ...
@@ -346,7 +346,7 @@ The [VerticalLineAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 {% tabs %}
 
- {% highlight xaml %}
+{% highlight xaml %}
 
 <chart:SfCartesianChart>
     ...
@@ -388,7 +388,7 @@ The [VerticalLineAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 {% tabs %}
 
- {% highlight xaml %}
+{% highlight xaml %}
 
 <chart:SfCartesianChart>
     ...
@@ -443,7 +443,7 @@ To display a single-headed arrow, set the [LineCap](https://help.syncfusion.com/
 
 {% tabs %}
 
- {% highlight xaml %}
+{% highlight xaml %}
 
 <chart:SfCartesianChart>
     ...
