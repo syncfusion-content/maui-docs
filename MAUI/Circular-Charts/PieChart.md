@@ -30,7 +30,7 @@ N> The circular chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusio
 SfCircularChart chart = new SfCircularChart();
 
 PieSeries series = new PieSeries();
-series.ItemsSource = new ViewModel().Data,
+series.ItemsSource = (new SalesViewModel()).Data;
 series.XBindingPath = "Product";
 series.YBindingPath = "SalesRate";
 
@@ -65,7 +65,7 @@ The rendering size of the [PieSeries](https://help.syncfusion.com/cr/maui/Syncfu
 SfCircularChart chart = new SfCircularChart();
 
 PieSeries series = new PieSeries();
-series.ItemsSource = new ViewModel().Data,
+series.ItemsSource = (new SalesViewModel()).Data;
 series.XBindingPath = "Product";
 series.YBindingPath = "SalesRate";
 series.Radius = 0.9;
@@ -102,7 +102,7 @@ By using the [StartAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ch
 SfCircularChart chart = new SfCircularChart();
 
 PieSeries series = new PieSeries();
-series.ItemsSource = new ViewModel().Data,
+series.ItemsSource = (new SalesViewModel()).Data;
 series.XBindingPath = "Product";
 series.YBindingPath = "SalesRate";
 series.StartAngle = 180;

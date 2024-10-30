@@ -35,7 +35,7 @@ SfCircularChart chart = new SfCircularChart();
 . . .
 PieSeries series = new PieSeries()
 {
-    ItemsSource = new ViewModel().Data,
+    ItemsSource = (new SalesViewModel()).Data;
     XBindingPath="Product", 
     YBindingPath="SalesRate",
     GroupMode=Value,
