@@ -96,7 +96,7 @@ SfCartesianChart chart = new SfCartesianChart();
 chart.Legend = new ChartLegend();
 LineSeries series = new LineSeries()
 {
-    ItemsSource = viewModel.Data,
+    ItemsSource = (new ViewModel()).Data,
     XBindingPath = "XValue",
     IsVisibleOnLegend = true,
     YBindingPath = "YValue",
