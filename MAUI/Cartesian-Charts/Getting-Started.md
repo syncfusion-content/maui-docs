@@ -146,7 +146,7 @@ N> Add namespace of `PersonViewModel` class to your XAML Page, if you prefer to 
 
 {% tabs %} 
 
-{% highlight xaml %} 
+{% highlight xaml %}
 
 <ContentPage
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -162,7 +162,7 @@ N> Add namespace of `PersonViewModel` class to your XAML Page, if you prefer to 
 
 {% endhighlight %}
 
-{% highlight C# %} 
+{% highlight C# %}
 
 this.BindingContext = new PersonViewModel();
 
@@ -176,7 +176,7 @@ this.BindingContext = new PersonViewModel();
 
 {% tabs %} 
 
-{% highlight xaml %} 
+{% highlight xaml %}
 
 <chart:SfCartesianChart>                            
     <chart:SfCartesianChart.XAxes>
@@ -189,7 +189,7 @@ this.BindingContext = new PersonViewModel();
 
 {% endhighlight %}
 
-{% highlight C# %} 
+{% highlight C# %}
 
 SfCartesianChart chart = new SfCartesianChart();
 
