@@ -151,6 +151,8 @@ The [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
 
 SfCartesianChart chart = new SfCartesianChart();
 
+ViewModel viewModel = new ViewModel();
+
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.XAxes.Add(primaryAxis);
 
@@ -244,6 +246,9 @@ A marker, also known as a symbol, is used to determine or highlight the position
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+
+ViewModel viewModel = new ViewModel();
+
 ...
 StackingLineSeries series1 = new  StackingLineSeries()
 {
@@ -326,6 +331,8 @@ In order to change the series markers appearance, create an instance of the [Mar
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+
+ViewModel viewModel = new ViewModel();
 
 ...
 ChartMarkerSettings chartMarker= new ChartMarkerSettings()

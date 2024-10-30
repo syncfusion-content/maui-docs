@@ -359,6 +359,8 @@ To customize the data label appearance, create an instance of the [ChartDataMark
 
 {% endhighlight %}
 {% highlight C# %}
+SfChart chart = new SfChart();
+. . .
 FunnelSeries series = new FunnelSeries();
 . . .
 series.DataMarker = new ChartDataMarker();
@@ -461,6 +463,8 @@ To customize the tooltip appearance, create an instance of the [ChartTooltipBeha
 {% endhighlight %} 
 
 {% highlight C# %}
+SfChart chart = new SfChart();
+. . .
 FunnelSeries series = new FunnelSeries ();
 . . .
 series.EnableTooltip = true;
@@ -588,6 +592,7 @@ DataPointSelectionBehavior selection = new DataPointSelectionBehavior();
 selection.SelectedIndex = 2;
 selection.SelectionBrush = Colors.Red;
 chart.SelectionBehavior = selection;
+this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}

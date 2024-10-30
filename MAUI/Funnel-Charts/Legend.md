@@ -21,8 +21,8 @@ To define the legend in the chart, initialize the [ChartLegend](https://help.syn
 {% highlight xaml %}
 
 <chart:SfFunnelChart ItemsSource="{Binding Data}" 
-                     XBindingPath="Name"
-                     YBindingPath="Height">
+                     XBindingPath="XValue"
+                     YBindingPath="YValue">
     <chart:SfFunnelChart.Legend>
         <chart:ChartLegend/>
     </chart:SfFunnelChart.Legend>
@@ -35,8 +35,8 @@ To define the legend in the chart, initialize the [ChartLegend](https://help.syn
 SfFunnelChart chart = new SfFunnelChart()
 {
     ItemsSource = new ViewModel().Data,
-    XBindingPath = "Name",
-    YBindingPath = "Height",
+    XBindingPath = "XValue",
+    YBindingPath = "YValue",
 };
 
 chart.Legend = new ChartLegend();
@@ -54,8 +54,8 @@ The visibility of the chart legend can be controlled using the [IsVisible](https
 {% highlight xaml %}
     
 <chart:SfFunnelChart ItemsSource="{Binding Data}" 
-                     XBindingPath="Name"
-                     YBindingPath="Height">
+                     XBindingPath="XValue"
+                     YBindingPath="YValue">
     <chart:SfFunnelChart.Legend>
         <chart:ChartLegend IsVisible="True"/>
     </chart:SfFunnelChart.Legend>
@@ -68,8 +68,8 @@ The visibility of the chart legend can be controlled using the [IsVisible](https
 SfFunnelChart chart = new SfFunnelChart()
 {
     ItemsSource = new ViewModel().Data,
-    XBindingPath = "Name",
-    YBindingPath = "Height",
+    XBindingPath = "XValue",
+    YBindingPath = "YValue",
 };
 
 chart.Legend = new ChartLegend()
@@ -97,8 +97,8 @@ The appearance of the legend label can be customized using the [LabelStyle](http
 {% highlight xaml %}
 
 <chart:SfFunnelChart ItemsSource="{Binding Data}" 
-                     XBindingPath="Name"
-                     YBindingPath="Value">
+                     XBindingPath="XValue"
+                     YBindingPath="YValue">
     <chart:SfFunnelChart.Legend>
         <chart:ChartLegend>
             <chart:ChartLegend.LabelStyle>
@@ -114,8 +114,8 @@ The appearance of the legend label can be customized using the [LabelStyle](http
 
 SfFunnelChart chart = new SfFunnelChart()
 {
-    XBindingPath = "Name",
-    YBindingPath = "Value",
+    XBindingPath = "XValue",
+    YBindingPath = "YValue",
     ItemsSource = new ViewModel().Data,
 };
 
@@ -145,8 +145,8 @@ To specify the legend icon based on the associated series type, use the [LegendI
 {% highlight xaml %}
 
 <chart:SfFunnelChart ItemsSource="{Binding Data}" 
-                     XBindingPath="Name"  LegendIcon="Diamond"
-                     YBindingPath="Height">
+                     XBindingPath="XValue"  LegendIcon="Diamond"
+                     YBindingPath="YValue">
     <chart:SfFunnelChart.Legend>
         <chart:ChartLegend/>
     </chart:SfFunnelChart.Legend>
@@ -159,8 +159,8 @@ To specify the legend icon based on the associated series type, use the [LegendI
 SfFunnelChart chart = new SfFunnelChart()
 {
     ItemsSource = new ViewModel().Data,
-    XBindingPath = "Name",
-    YBindingPath = "Height",
+    XBindingPath = "XValue",
+    YBindingPath = "YValue",
     LegendIcon = ChartLegendIconType.Diamond
 };
 chart.Legend = new ChartLegend();
@@ -179,8 +179,8 @@ The legend can be positioned to the left, right, top, or bottom of the chart are
 {% highlight xaml %}
 
 <chart:SfFunnelChart ItemsSource="{Binding Data}" 
-                     XBindingPath="Name"  
-                     YBindingPath="Height">
+                     XBindingPath="XValue"  
+                     YBindingPath="YValue">
     <chart:SfFunnelChart.Legend>
         <chart:ChartLegend Placement="Bottom"/>
     </chart:SfFunnelChart.Legend>
@@ -192,8 +192,8 @@ The legend can be positioned to the left, right, top, or bottom of the chart are
 
 SfFunnelChart chart = new SfFunnelChart()
 {
-    XBindingPath = "Name",
-    YBindingPath = "Height",
+    XBindingPath = "XValue",
+    YBindingPath = "YValue",
     ItemsSource = new ViewModel().Data,
 };
    

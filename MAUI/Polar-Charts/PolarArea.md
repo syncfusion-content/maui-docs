@@ -43,7 +43,7 @@ chart.SecondaryAxis = secondaryAxis;
 
 PolarAreaSeries series = new PolarAreaSeries()
 {
-    ItemsSource = new ViewModel().PlantDetails,
+    ItemsSource = new PlantViewModel().PlantDetails,
     XBindingPath = "Direction",
     YBindingPath = "Tree"
 };
@@ -79,7 +79,7 @@ chart.GridLineType = PolarChartGridLineType.Polygon;
 . . .
 PolarAreaSeries series = new PolarAreaSeries()
 {
-    ItemsSource = new ViewModel().PlantDetails,
+    ItemsSource = new PlantViewModel().PlantDetails,
     XBindingPath = "Direction",
     YBindingPath = "Tree"
 };
@@ -115,7 +115,7 @@ SfPolarChart chart = new SfPolarChart();
 . . .
 PolarAreaSeries series = new PolarAreaSeries()
 {
-    ItemsSource = new ViewModel().PlantDetails,
+    ItemsSource = new PlantViewModel().PlantDetails,
     XBindingPath = "Direction",
     YBindingPath = "Tree",
     IsClosed  = false
@@ -152,7 +152,7 @@ SfPolarChart chart = new SfPolarChart();
 ...
 PolarAreaSeries series = new PolarAreaSeries()
 {
-    ItemsSource = new ViewModel().PlantDetails,
+    ItemsSource = new PlantViewModel().PlantDetails,
     XBindingPath = "Direction",
     YBindingPath = "Tree",
     ShowMarkers= true
@@ -209,7 +209,7 @@ ChartMarkerSettings chartMarker = new ChartMarkerSettings()
 
 PolarAreaSeries series = new PolarAreaSeries()
 {
-    ItemsSource = new ViewModel().PlantDetails,
+    ItemsSource = new PlantViewModel().PlantDetails,
     XBindingPath = "Direction",
     YBindingPath = "Tree",
     ShowMarkers = true,

@@ -118,13 +118,13 @@ Next, create a PlantViewModel class and initialize a list of `PlantModel` object
 
 {% highlight c# %}
 
-public class ViewModel  
+public class PlantViewModel  
 {
     public List<PlantModel> PlantDetails { get; set; }      
 
-    public ViewModel()       
+    public PlantViewModel()       
     {
-        PlantDetails  = new List<PlantModel>()
+        PlantDetails = new List<PlantModel>()
         {
             new PlantModel(){ Direction = "North", Tree = 80, Flower = 42, Weed = 63},
             new PlantModel(){ Direction = "NorthEast", Tree = 85, Flower = 40, Weed = 70},

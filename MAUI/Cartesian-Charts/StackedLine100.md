@@ -252,6 +252,7 @@ A marker, also known as a symbol, is used to determine or highlight the position
 
 SfCartesianChart chart = new SfCartesianChart();
 
+ViewModel viewModel = new ViewModel();
 ...
 StackingLine100Series series1 = new  StackingLine100Series()
 {

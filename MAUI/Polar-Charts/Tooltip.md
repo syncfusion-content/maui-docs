@@ -33,7 +33,7 @@ SfPolarChart chart = new SfPolarChart();
 . . .
 PolarAreaSeries series = new PolarAreaSeries()
 {
-    ItemsSource = new ViewModel().PlantDetails,
+    ItemsSource = new PlantViewModel().PlantDetails,
     XBindingPath = "Direction",
     YBindingPath = "Tree",
     EnableTooltip = true
@@ -115,7 +115,7 @@ chart.TooltipBehavior = new ChartTooltipBehavior()
 
 PolarAreaSeries series = new PolarAreaSeries()
 {
-    ItemsSource = new ViewModel().PlantDetails,
+    ItemsSource = new PlantViewModel().PlantDetails,
     XBindingPath = "Direction",
     YBindingPath = "Tree",
     EnableTooltip = true
@@ -171,7 +171,7 @@ SfPolarChart chart = new SfPolarChart();
 . . .
 PolarAreaSeries series = new PolarAreaSeries()
 {
-    ItemsSource = new ViewModel().PlantDetails,
+    ItemsSource = new PlantViewModel().PlantDetails,
     XBindingPath = "Direction",
     YBindingPath = "Tree",
     EnableTooltip = true,

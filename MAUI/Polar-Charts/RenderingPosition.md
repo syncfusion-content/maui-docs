@@ -44,7 +44,7 @@ chart.SecondaryAxis = secondaryAxis;
 
 PolarAreaSeries series = new PolarAreaSeries()
 {
-    ItemsSource = new ViewModel().PlantDetails,
+    ItemsSource = new PlantViewModel().PlantDetails,
     XBindingPath = "Direction",
     YBindingPath = "Tree"
 };
