@@ -96,7 +96,7 @@ SfCircularChart chart = new SfCircularChart();
 chart.Legend = new ChartLegend();
 PieSeries series = new PieSeries()
 {
-    ItemsSource = viewModel.Data,
+    ItemsSource = (new ViewModel()).Data,
     XBindingPath = "XValue",
     IsVisibleOnLegend = true,
     YBindingPath = "YValue",
@@ -183,7 +183,7 @@ chart.Legend = new ChartLegend();
 
 PieSeries pieSeries = new PieSeries()
 {
-    ItemsSource = viewModel.Data,
+    ItemsSource = (new ViewModel()).Data,
     XBindingPath = "XValue",
     YBindingPath = "YValue",
     LegendIcon = ChartLegendIconType.Diamond,
