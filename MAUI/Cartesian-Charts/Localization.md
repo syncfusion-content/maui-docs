@@ -38,7 +38,6 @@ public partial class App : Application
 	}
 }
 
-
 {% endhighlight %}
 {% endtabs %}
 

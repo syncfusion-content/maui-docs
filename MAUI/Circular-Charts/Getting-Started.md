@@ -22,7 +22,7 @@ To get start quickly with our .NET MAUI Circular Chart, you can check the below 
 3. To initialize the control, import the Chart namespace.
 4. Initialize [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html).
 
-{% tabs %} 
+{% tabs %}
 
 {% highlight xaml %}
 
@@ -46,6 +46,7 @@ public partial class MainWindow : ContentPage
     {
         this.InitializeComponent();
         SfCircularChart chart = new SfCircularChart();
+        this.Content = chart;
     }
 }   
 {% endhighlight %}
@@ -95,7 +96,7 @@ Now, let us define a simple data model that represents a data point in the chart
 
 {% highlight c# %}
 
-public class Sales
+public class SalesModel
 {
     public string Product { get; set; }
     public double SalesRate { get; set; }
@@ -105,25 +106,25 @@ public class Sales
 
 {% endtabs %} 
 
-Next, create a view model class and initialize a list of `Model` objects as follows.
+Next, create a SalesViewModel class and initialize a list of `SalesModel` objects as follows.
 
 {% tabs %}  
 
 {% highlight c# %}
 
-public class ChartViewModel
+public class SalesViewModel
 {
-    public List<Sales> Data { get; set; }
+    public List<SalesModel> Data { get; set; }
 
     public ChartViewModel()
     {
-        Data = new List<Sales>()
+        Data = new List<SalesModel>()
         {
-            new Sales(){Product = "iPad", SalesRate = 25},
-            new Sales(){Product = "iPhone", SalesRate = 35},
-            new Sales(){Product = "MacBook", SalesRate = 15},
-            new Sales(){Product = "Mac", SalesRate = 5},
-            new Sales(){Product = "Others", SalesRate = 10},
+            new SalesModel(){Product = "iPad", SalesRate = 25},
+            new SalesModel(){Product = "iPhone", SalesRate = 35},
+            new SalesModel(){Product = "MacBook", SalesRate = 15},
+            new SalesModel(){Product = "Mac", SalesRate = 5},
+            new SalesModel(){Product = "Others", SalesRate = 10},
         };
     }
 }
@@ -132,9 +133,9 @@ public class ChartViewModel
 
 {% endtabs %} 
 
-Create a `ViewModel` instance and set it as the chart's `BindingContext`. This enables property binding from `ViewModel` class.
+Create a `SalesViewModel` instance and set it as the chart's `BindingContext`. This enables property binding from `SalesViewModel` class.
 
-N> Add namespace of `ViewModel` class to your XAML Page, if you prefer to set `BindingContext` in XAML.
+N> Add namespace of `SalesViewModel` class to your XAML Page, if you prefer to set `BindingContext` in XAML.
 
 {% tabs %} 
 
@@ -147,7 +148,7 @@ N> Add namespace of `ViewModel` class to your XAML Page, if you prefer to set `B
 
     <chart:SfCircularChart>
         <chart:SfCircularChart.BindingContext>
-            <model:ChartViewModel/>
+            <model:SalesViewModel/>
         </chart:SfCircularChart.BindingContext>
     </chart:SfCircularChart>
 </ContentPage>
@@ -156,8 +157,9 @@ N> Add namespace of `ViewModel` class to your XAML Page, if you prefer to set `B
 
 {% highlight C# %} 
 
-ChartViewModel viewModel = new ChartViewModel();
-chart.BindingContext = viewModel;
+SfCircularChart chart = new SfCircularChart();
+this.BindingContext = new SalesViewModel();
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -187,13 +189,14 @@ N> To plot the series, the [XBindingPath](https://help.syncfusion.com/cr/maui/Sy
 {% highlight C# %}
 
 SfCircularChart chart = new SfCircularChart();
-ChartViewModel viewModel = new ChartViewModel();
-chart.BindingContext = viewModel;
+SalesViewModel viewModel = new SalesViewModel();
+. . .
 PieSeries series = new PieSeries();
 series.ItemsSource = viewModel.Data;
 series.XBindingPath = "Product";
 series.YBindingPath = "SalesRate";
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -219,10 +222,12 @@ The title of the chart acts as the title to provide quick information to the use
 {% highlight C# %}
 
 SfCircularChart chart = new SfCircularChart();
-chart.Title = new Label
+chart.Title = new Label()
 {
     Text = "PRODUCT SALES"
 };
+. . .
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -250,6 +255,7 @@ SfCircularChart chart = new SfCircularChart();
 PieSeries series = new PieSeries();
 series.ShowDataLabels = true;
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -277,6 +283,7 @@ The legend provides information about the data point displayed in the circular c
 SfCircularChart chart = new SfCircularChart();
 . . .
 chart.Legend = new ChartLegend();
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -304,6 +311,7 @@ SfCircularChart chart = new SfCircularChart();
 PieSeries series = new PieSeries();
 series.EnableTooltip = true;
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -319,17 +327,20 @@ The following code example gives you the complete code of above configurations.
     <chart:SfCircularChart.Title>
         <Label Text="PRODUCT SALES"/>
     </chart:SfCircularChart.Title>
+
     <chart:SfCircularChart.BindingContext>
-        <model:ChartViewModel/>
+        <model:SalesViewModel/>
     </chart:SfCircularChart.BindingContext>
+
     <chart:SfCircularChart.Legend>
         <chart:ChartLegend/>
     </chart:SfCircularChart.Legend>
+
     <chart:PieSeries ItemsSource="{Binding Data}"
-		     ShowDataLabels="True"
-		     XBindingPath="Product"
-		     EnableTooltip="True"
-		     YBindingPath="SalesRate"/>
+                     XBindingPath="Product" 
+                     YBindingPath="SalesRate"
+                     ShowDataLabels="True"
+                     EnableTooltip="True"/>
 </chart:SfCircularChart>
  
 {% endhighlight %}
@@ -343,12 +354,12 @@ public partial class MainPage : ContentPage
     public MainWindow()
     {
         SfCircularChart chart = new SfCircularChart();
-        chart.Title = new Label
+        chart.Title = new Label()
         {
             Text = "PRODUCT SALES"
         };
         chart.Legend = new ChartLegend();
-        ChartViewModel viewModel = new ChartViewModel();
+        SalesViewModel viewModel = new SalesViewModel();
         chart.BindingContext = viewModel;
 
         PieSeries series = new PieSeries();

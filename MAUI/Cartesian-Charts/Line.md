@@ -29,11 +29,11 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
         <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>  
 
-    <chart:LineSeries XBindingPath="Demand"
-                      ItemsSource="{Binding Data}"
+    <chart:LineSeries ItemsSource="{Binding Data}"
+                      XBindingPath="Demand"
                       YBindingPath="Year2010"/>
-    <chart:LineSeries XBindingPath="Demand"
-                      ItemsSource="{Binding Data}"  
+    <chart:LineSeries ItemsSource="{Binding Data}"
+                      XBindingPath="Demand" 
                       YBindingPath="Year2011"/>
 </chart:SfCartesianChart>
 
@@ -42,8 +42,10 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.XAxes.Add(primaryAxis);
+
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 
@@ -112,15 +114,17 @@ The [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-CategoryAxis primaryAxis = new CategoryAxis();
-chart.XAxes.Add(primaryAxis);
-NumericalAxis secondaryAxis = new NumericalAxis();
-chart.YAxes.Add(secondaryAxis);
-
+. . .
 DoubleCollection doubleCollection = new DoubleCollection();
 doubleCollection.Add(5);
 doubleCollection.Add(2);
-. . .
+
+CategoryAxis primaryAxis = new CategoryAxis();
+chart.XAxes.Add(primaryAxis);
+
+NumericalAxis secondaryAxis = new NumericalAxis();
+chart.YAxes.Add(secondaryAxis);
+
 LineSeries series1 = new LineSeries()
 {
     ItemsSource = new ViewModel().Data,
@@ -179,8 +183,10 @@ The [SplineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sp
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.XAxes.Add(primaryAxis);
+
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 
@@ -293,9 +299,8 @@ A marker, also known as a symbol, is used to determine or highlight the position
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-
 ...
-LineSeries series = new LineSeries()
+LineSeries series1 = new LineSeries()
 {
     XBindingPath = "Demand",
     YBindingPath = "Year2010",
@@ -303,7 +308,7 @@ LineSeries series = new LineSeries()
     ShowMarkers= true,
 };
 
-LineSeries series = new LineSeries()
+LineSeries series2 = new LineSeries()
 {
     XBindingPath = "Demand",
     YBindingPath = "Year2011",
@@ -311,7 +316,9 @@ LineSeries series = new LineSeries()
     ShowMarkers= true,
 };
 
-chart.Series.Add(series);
+chart.Series.Add(series1);
+chart.Series.Add(series2);
+
 this.Content= chart;
 
 {% endhighlight %}
@@ -359,13 +366,15 @@ In order to change the series markers appearance, create an instance of the [Mar
 SfCartesianChart chart = new SfCartesianChart();
 
 ...
-ChartMarkerSettings chartMarker= new ChartMarkerSettings();
-chartMarker.Type = ShapeType.Diamond;
-chartMarker.Fill = Colors.Brown;
-chartMarker.Stroke = Colors.Black;
-chartMarker.StrokeWidth= 1;
-chartMarker.Height = 8;
-chartMarker.Width = 8;
+ChartMarkerSettings chartMarker= new ChartMarkerSettings()
+{
+    Type = ShapeType.Diamond,
+    Fill = Colors.Brown,
+    Stroke = Colors.Black,
+    StrokeWidth = 1,
+    Height = 8,
+    Width = 8
+};
 
 LineSeries series = new LineSeries()
 {

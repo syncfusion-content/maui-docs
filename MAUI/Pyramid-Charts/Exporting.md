@@ -23,9 +23,8 @@ The following code snippet demonstrates the usage of this method:
 
 SfPyramidChart chart = new SfPyramidChart();
 ...
-chart.SaveAsImage("ChartSample.jpeg");
-
 this.Content = chart;
+chart.SaveAsImage("ChartSample.jpeg");
 
 {% endhighlight %}
 
@@ -76,9 +75,8 @@ The following code snippet demonstrates the usage of this method:
 
 SfPyramidChart chart = new SfPyramidChart();
 ...
-await chart.GetStreamAsync(ImageFileFormat.Jpeg);
-
 this.Content = chart;
+await chart.GetStreamAsync(ImageFileFormat.Jpeg);
 
 {% endhighlight %}
 

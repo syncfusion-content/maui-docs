@@ -30,6 +30,7 @@ To define the data label in the chart, set the [ShowDataLabels](https://help.syn
 SfPyramidChart chart = new SfPyramidChart();
 . . .
 chart.ShowDataLabels = true;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -76,16 +77,19 @@ chart.ShowDataLabels = true;
 SfPyramidChart chart = new SfPyramidChart();
 . . .
 chart.ShowDataLabels = true;
+ChartDataLabelStyle labelStyle = new ChartDataLabelStyle()
+{
+    Margin = 2,
+};
 chart.DataLabelSettings = new PyramidDataLabelSettings()
 {
     Context=PyramidDataLabelContext.XValue,
     LabelPlacement=DataLabelPlacement.Outer,
     UseSeriesPalette=true,
+    LabelStyle = labelStyle,
 };
-chart.DataLabelSettings.LabelStyle = new ChartDataLabelStyle()
-{
-    Margin = 2,
-};
+
+this.Content = chart;
 
 {% endhighlight %}
 

@@ -14,13 +14,13 @@ A bar chart uses bars to represent data points and compare values across differe
 
 N> By default, [IsTransposed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_IsTransposedProperty) property of the [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1) is false.
 
-N> The Cartesian chart has Series as its default content.
+N> The Cartesian chart has `Series` as its default content.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<chart:SfCartesianChart x:Name="chart" IsTransposed="True">
+<chart:SfCartesianChart IsTransposed="True">
 
     <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis/>
@@ -42,8 +42,10 @@ N> The Cartesian chart has Series as its default content.
 
 SfCartesianChart chart = new SfCartesianChart();
 chart.IsTransposed = true;
+
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.XAxes.Add(primaryAxis);
+
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 
@@ -73,7 +75,7 @@ The [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSer
 
 {% highlight xaml %}
 
-<chart:SfCartesianChart x:Name="chart" IsTransposed="True">
+<chart:SfCartesianChart IsTransposed="True">
 
     <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis/>
@@ -97,8 +99,10 @@ The [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSer
 
 SfCartesianChart chart = new SfCartesianChart();
 chart.IsTransposed = true;
+
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.XAxes.Add(primaryAxis);
+
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 

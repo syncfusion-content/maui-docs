@@ -410,7 +410,8 @@ The following code example shows how to enable legend in chart.
 {% highlight C# %}
 SfChart chart = new SfChart();
 . . .
-chart.Legend = new ChartLegend ();
+chart.Legend = new ChartLegend();
+this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
@@ -436,7 +437,8 @@ chart.Legend = new ChartLegend ();
 
 SfPolarChart chart = new SfPolarChart();
 . . .
-chart.Legend = new ChartLegend ();
+chart.Legend = new ChartLegend();
+this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
@@ -474,6 +476,8 @@ To customize the data label appearance, create an instance of the [ChartDataMark
 
 {% endhighlight %}
 {% highlight C# %}
+SfChart chart = new SfChart();
+. . .
 PolarAreaSeries series = new PolarAreaSeries();
 . . .
 series.DataMarker = new ChartDataMarker();
@@ -488,6 +492,7 @@ style.Margin = 5;
 style.FontSize = 18;
 series.DataMarker.LabelStyle = style;
 chart.Series.Add(series);
+this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %} 
@@ -519,6 +524,8 @@ chart.Series.Add(series);
 
 {% endhighlight %} 
 {% highlight C# %}
+SfPolarChart chart = new SfPolarChart();
+. . .
 PolarAreaSeries series = new PolarAreaSeries();
 . . .
 series.ShowDataLabels = true;
@@ -533,6 +540,7 @@ style.Margin = 5;
 style.FontSize = 18;
 series.PolarDataLabelSettings.LabelStyle = style;
 chart.Series.Add(series);
+this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
@@ -567,6 +575,8 @@ To customize the tooltip appearance, create an instance of the [ChartTooltipBeha
 {% endhighlight %} 
 
 {% highlight C# %}
+SfChart chart = new SfChart();
+. . .
 PolarAreaSeries series = new PolarAreaSeries();
 . . .
 series.EnableTooltip = true;
@@ -575,8 +585,9 @@ ChartTooltipBehavior tool = new ChartTooltipBehavior();
 tool.BackgroundColor = Color.Blue;
 tool.TextColor = Color.White;
 tool.Margin = new Thickness(5, 5, 5, 5);
+tool.FontSize = 15;
 chart.ChartBehaviors.Add(tool);
-
+this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
@@ -605,6 +616,8 @@ chart.ChartBehaviors.Add(tool);
 
 {% endhighlight %} 
 {% highlight C# %}
+SfPolarChart chart = new SfPolarChart();
+. . .
 PolarAreaSeries series = new PolarAreaSeries();
 . . .
 series.EnableTooltip = true;
@@ -614,7 +627,9 @@ ChartTooltipBehavior tooltip = new ChartTooltipBehavior();
 tooltip.BackgroundColor = Color.Blue;
 tooltip.TextColor = Color.White;
 tooltip.Margin = new Thickness(5, 5, 5, 5);
+tooltip.FontSize = 15;
 chart.TooltipBehavior = tooltip;
+this.Content = chart;
 
 {% endhighlight %}
 

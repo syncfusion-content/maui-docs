@@ -171,7 +171,7 @@ The following code sample demonstrates how to bind the Syncfusion ListView to th
         <Grid>
             <parallax:SfParallaxView Source="{x:Reference Name = listview}" x:Name="parallaxview" >
                 <parallax:SfParallaxView.Content>
-                <Image BackgroundColor="Transparent" Source="{Binding Image}" HorizontalOptions="Fill" VerticalOptions="Fill" Aspect="AspectFill" />
+                    <Image BackgroundColor="Transparent" Source="{Binding Image}" HorizontalOptions="Fill" VerticalOptions="Fill" Aspect="AspectFill" />
                 </parallax:SfParallaxView.Content>
             </parallax:SfParallaxView>
      
@@ -185,9 +185,9 @@ The following code sample demonstrates how to bind the Syncfusion ListView to th
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
                                 <Image BackgroundColor="Transparent" HeightRequest="90" HorizontalOptions="CenterAndExpand" 
-                                    WidthRequest="90" Source="{Binding ItemImage}" Grid.Column="0" VerticalOptions="CenterAndExpand" Aspect="AspectFit" />
+                                       WidthRequest="90" Source="{Binding ItemImage}" Grid.Column="0" VerticalOptions="CenterAndExpand" Aspect="AspectFit" />
                                 <StackLayout BackgroundColor="Transparent" Grid.Column="1" VerticalOptions="CenterAndExpand" 
-                                    HorizontalOptions="FillAndExpand" Orientation="Vertical">
+                                             HorizontalOptions="FillAndExpand" Orientation="Vertical">
                                     <Label HorizontalOptions="FillAndExpand" TextColor="White" Text="{Binding Name}"/>
                                     <Label HorizontalOptions="FillAndExpand" Text="{Binding Author}" TextColor="White"/>
                                 </StackLayout>

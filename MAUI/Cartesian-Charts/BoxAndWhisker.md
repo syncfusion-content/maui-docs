@@ -12,7 +12,7 @@ keywords: .net maui box and whisker chart, maui box and whisker chart, box and w
 
 ## Box and Whisker Chart
 
-Box plot chart is used to show the distribution of data within a population. To render a box plot chart, create an instance of [BoxAndWhiskerSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
+Box plot chart is used to show the distribution of data within a population. To render a box plot chart, create an instance of [BoxAndWhiskerSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.BoxAndWhiskerSeries.html), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html).
 
 Box plots are great for comparing the distribution of multiple datasets side by side. By comparing the median, quartiles, and range of the boxes, you can quickly identify differences in the center, spread, and skewness of the distributions. The following code illustrates how to define the series in chart.
 
@@ -43,8 +43,10 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.XAxes.Add(primaryAxis);
+
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 
@@ -104,8 +106,10 @@ In Normal mode, the whiskers extend to the minimum and maximum data points withi
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.XAxes.Add(primaryAxis);
+
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 
@@ -114,7 +118,7 @@ BoxAndWhiskerSeries series = new BoxAndWhiskerSeries()
     ItemsSource = new ViewModel().BoxWhiskerData,
     XBindingPath = "Department",
     YBindingPath = "Age",
-    BoxPlotMode = "Normal"
+    BoxPlotMode = BoxPlotMode.Normal
 };
 
 chart.Series.Add(series);
@@ -155,8 +159,10 @@ In Inclusive mode, the whiskers extend to the minimum and maximum data points wi
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.XAxes.Add(primaryAxis);
+
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 
@@ -165,7 +171,7 @@ BoxAndWhiskerSeries series = new BoxAndWhiskerSeries()
     ItemsSource = new ViewModel().BoxWhiskerData,
     XBindingPath = "Department",
     YBindingPath = "Age",
-    BoxPlotMode = "Inclusive"
+    BoxPlotMode = BoxPlotMode.Inclusive
 };
 
 chart.Series.Add(series);
@@ -206,8 +212,10 @@ The Median values of given dataset is viewed by enabling the [ShowMedian](https:
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.XAxes.Add(primaryAxis);
+
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 
@@ -228,9 +236,7 @@ this.Content = chart;
 
 ![ShowMedian in MAUI chart](Chart-types-images/ShowMedian.png)
 
-N>
-
- * The middle number of data points is the median for the odd number of data points.
+N> * The middle number of data points is the median for the odd number of data points.
  * The average of the middle two numbers is a median for the even number of data points.
 
 
@@ -255,9 +261,9 @@ The outlier value in the box plot can be viewed by enabling the [ShowOutlier](ht
     </chart:SfCartesianChart.YAxes>  
 
     <chart:BoxAndWhiskerSeries ItemsSource="{Binding BoxWhiskerData}"
-                                XBindingPath="Department"
-                                YBindingPath="Age"
-                                ShowOutlier="False"/>
+                               XBindingPath="Department"
+                               YBindingPath="Age"
+                               ShowOutlier="False"/>
 
 </chart:SfCartesianChart>
 
@@ -276,7 +282,7 @@ BoxAndWhiskerSeries series = new BoxAndWhiskerSeries()
     ItemsSource = new ViewModel().BoxWhiskerData,
     XBindingPath = "Department",
     YBindingPath = "Age",
-    ShowOutlier = "False"
+    ShowOutlier = false
 };
 
 chart.Series.Add(series);
@@ -309,9 +315,9 @@ The following code shows how to set the [OutlierShapeType](https://help.syncfusi
     </chart:SfCartesianChart.YAxes>  
 
     <chart:BoxAndWhiskerSeries ItemsSource="{Binding BoxWhiskerData}"
-                                XBindingPath="Department"
-                                YBindingPath="Age"
-                                OutlierShapeType="Cross"/>
+                               XBindingPath="Department"
+                               YBindingPath="Age"
+                               OutlierShapeType="Cross"/>
 
 </chart:SfCartesianChart>
 

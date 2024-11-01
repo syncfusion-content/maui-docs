@@ -38,12 +38,14 @@ SfPolarChart chart = new SfPolarChart();
 . . .
 NumericalAxis primaryAxis = new NumericalAxis()
 chart.PrimaryAxis = primaryAxis;
+
 NumericalAxis secondaryAxis = new NumericalAxis()
 {
     MinorTicksPerInterval = 4 
 };
-
 chart.SecondaryAxis = secondaryAxis;
+
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -76,8 +78,9 @@ NumericalAxis secondaryAxis = new NumericalAxis()
 {
     TickPosition = AxisElementPosition.Inside
 };
-
 chart.SecondaryAxis = secondaryAxis;
+
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -119,14 +122,25 @@ SfPolarChart chart = new SfPolarChart();
 . . .
 NumericalAxis primaryAxis = new NumericalAxis();
 chart.PrimaryAxis = primaryAxis;
-NumericalAxis secondaryAxis = new NumericalAxis();
-numerical.MajorTickStyle.StrokeWidth = 1;
-numerical.MajorTickStyle.Stroke = Colors.Red;
-numerical.MajorTickStyle.TickSize = 10;
-numerical.MinorTicksPerInterval = 4;
-numerical.MinorTickStyle.StrokeWidth = 1;
-numerical.MinorTickStyle.Stroke = Colors.Red;
+
+NumericalAxis secondaryAxis = new NumericalAxis()
+{
+    MajorTickStyle = new ChartAxisTickStyle()
+    {
+        StrokeWidth = 1,
+        Stroke = Colors.Red,
+        TickSize = 10
+    },
+    MinorTicksPerInterval = 4,
+    MinorTickStyle = new ChartAxisTickStyle()
+    {
+        StrokeWidth = 1,
+        Stroke = Colors.Red
+    }
+};
 chart.SecondaryAxis = secondaryAxis;
+
+this.Content = chart;
 
 {% endhighlight %}
 

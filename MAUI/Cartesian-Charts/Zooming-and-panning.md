@@ -10,13 +10,13 @@ keywords: .net maui chart zooming and panning, .net maui zooming and panning cus
 
 # Zooming and Panning in .NET MAUI Chart
 
-[SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1) allows you to zoom the chart area with the help of the zoom feature. This behavior is mostly used to view the data point in the specific area, when there are large number of data points inside the chart.
+[SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) allows you to zoom the chart area with the help of the zoom feature. This behavior is mostly used to view the data point in the specific area, when there are large number of data points inside the chart.
 
 Zooming and panning provides you to take a close-up look of the data point plotted in the series
 
 ## Enable Zooming
 
-To enable the zooming and panning in the chart, create an instance of [ChartZoomPanBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomPanBehavior.html?tabs=tabid-1) and set it to the [ZoomPanBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_ZoomPanBehavior) property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
+To enable the zooming and panning in the chart, create an instance of [ChartZoomPanBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartZoomPanBehavior.html) and set it to the [ZoomPanBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_ZoomPanBehavior) property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html).
 
 {% tabs %}
 
@@ -38,6 +38,7 @@ SfCartesianChart chart = new SfCartesianChart();
 ChartZoomPanBehavior zooming = new ChartZoomPanBehavior();
 chart.ZoomPanBehavior = zooming;
 ...
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -75,6 +76,7 @@ ChartZoomPanBehavior zooming = new ChartZoomPanBehavior()
 
 chart.ZoomPanBehavior = zooming;
 ...
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -110,6 +112,7 @@ ChartZoomPanBehavior zooming = new ChartZoomPanBehavior()
 };
 
 chart.ZoomPanBehavior = zooming;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -148,6 +151,7 @@ CategoryAxis primaryAxis = new CategoryAxis()
 
 chart.XAxes.Add(primaryAxis);
 ...
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -185,6 +189,7 @@ ChartZoomPanBehavior zooming = new ChartZoomPanBehavior()
 
 chart.ZoomPanBehavior = zooming;
 ...
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -215,6 +220,7 @@ ChartZoomPanBehavior zooming = new ChartZoomPanBehavior()
 
 chart.ZoomPanBehavior = zooming;
 ...
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -230,7 +236,7 @@ The [MaximumZoomLevel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
 
 <chart:SfCartesianChart>
     <chart:SfCartesianChart.ZoomPanBehavior>
-        <chart:ChartZoomPanBehavior MaximumZoomLevel ="2"/>
+        <chart:ChartZoomPanBehavior MaximumZoomLevel="2"/>
     </chart:SfCartesianChart.ZoomPanBehavior>
     ...
 </chart:SfCartesianChart>
@@ -248,6 +254,7 @@ ChartZoomPanBehavior zooming = new ChartZoomPanBehavior()
 
 chart.ZoomPanBehavior = zooming;
 ...
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -280,6 +287,7 @@ ChartZoomPanBehavior zooming = new ChartZoomPanBehavior()
 
 chart.ZoomPanBehavior = zooming;
 ...
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -378,7 +386,8 @@ The following code sample illustrates how enable to axis trackball label while s
                                        Stroke="Gray"/>
             </chart:NumericalAxis.TrackballLabelStyle>
         </chart:NumericalAxis>
-    </chart:SfCartesianChart.YAxes>            
+    </chart:SfCartesianChart.YAxes>  
+     . . .            
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -389,25 +398,31 @@ SfCartesianChart chart = new SfCartesianChart();
 . . .
 NumericalAxis primaryAxis = new NumericalAxis();
 primaryAxis.ShowTrackballLabel = true;
-ChartLabelStyle primaryAxisTrackballLabelStyle = new ChartLabelStyle();
-primaryAxisTrackballLabelStyle.Background = Colors.LightBlue;
-primaryAxisTrackballLabelStyle.FontSize = 15;
-primaryAxisTrackballLabelStyle.CornerRadius = 5;
-primaryAxisTrackballLabelStyle.StrokeWidth = 2;
-primaryAxisTrackballLabelStyle.Stroke = Colors.Gray;
+ChartLabelStyle primaryAxisTrackballLabelStyle = new ChartLabelStyle()
+{
+    Background = Colors.LightBlue,
+    FontSize = 15,
+    CornerRadius = 5,
+    StrokeWidth = 2,
+    Stroke = Colors.Gray
+};
 primaryAxis.TrackballLabelStyle = primaryAxisTrackballLabelStyle;
 chart.XAxes.Add(primaryAxis);
 
 NumericalAxis secondaryAxis = new NumericalAxis();
 secondaryAxis.ShowTrackballLabel = true;
-ChartLabelStyle secondaryAxisTrackballLabelStyle = new ChartLabelStyle();
-secondaryAxisTrackballLabelStyle.Background = Colors.LightBlue;
-secondaryAxisTrackballLabelStyle.FontSize = 15;
-secondaryAxisTrackballLabelStyle.CornerRadius = 5;
-secondaryAxisTrackballLabelStyle.StrokeWidth = 2;
-secondaryAxisTrackballLabelStyle.Stroke = Colors.Gray;
+ChartLabelStyle secondaryAxisTrackballLabelStyle = new ChartLabelStyle()
+{
+    Background = Colors.LightBlue,
+    FontSize = 15,
+    CornerRadius = 5,
+    StrokeWidth = 2,
+    Stroke = Colors.Gray
+};
 secondaryAxis.TrackballLabelStyle = secondaryAxisTrackballLabelStyle;
 chart.YAxes.Add(secondaryAxis);
+. . .
+this.Content = chart;
 
 {% endhighlight %}
 

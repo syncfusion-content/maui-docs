@@ -24,8 +24,8 @@ The following code snippet demonstrates the usage of this method:
 
 SfCartesianChart chart = new SfCartesianChart();
 ...
-chart.SaveAsImage("ChartSample.jpeg");
 this.Content = chart;
+chart.SaveAsImage("ChartSample.jpeg");
 
 {% endhighlight %}
 
@@ -76,8 +76,8 @@ The following code snippet demonstrates the usage of this method:
 
 SfCartesianChart chart = new SfCartesianChart();
 ...
-await chart.GetStreamAsync(ImageFileFormat.Jpeg);
 this.Content = chart;
+await chart.GetStreamAsync(ImageFileFormat.Jpeg);
 
 {% endhighlight %}
 

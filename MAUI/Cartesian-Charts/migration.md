@@ -243,7 +243,7 @@ SfChart chart = new SfChart();
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.PrimaryAxis = primaryAxis;
 
-NumericalAxis secondaryAxis  =  new NumericalAxis  ();
+NumericalAxis secondaryAxis = new NumericalAxis();
 chart.SecondaryAxis = secondaryAxis;
 
 this.Content = chart;
@@ -363,8 +363,6 @@ this.Content = chart;
 SfCartesianChart chart = new SfCartesianChart();
 . . .
 ColumnSeries series = new ColumnSeries();
-series.Label = "Height";
-series.ShowDataLabels = true;
 series.ItemsSource = (new ViewModel()).Data;
 series.XBindingPath = "Name";
 series.YBindingPath = "Height";
@@ -456,7 +454,7 @@ The following code example shows how to enable legend in chart.
 
 <chart:SfChart>
     <chart:SfChart.Legend>
-	<chart:ChartLegend/>
+        <chart:ChartLegend/>
     </chart:SfChart.Legend>
 </chart:SfChart>
 
@@ -464,7 +462,8 @@ The following code example shows how to enable legend in chart.
 {% highlight C# %}
 SfChart chart = new SfChart();
 . . .
-chart.Legend = new ChartLegend ();
+chart.Legend = new ChartLegend();
+this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
@@ -490,7 +489,8 @@ chart.Legend = new ChartLegend ();
 
 SfCartesianChart chart = new SfCartesianChart();
 . . .
-chart.Legend = new ChartLegend ();
+chart.Legend = new ChartLegend();
+this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
@@ -520,12 +520,12 @@ To customize the data label appearance, create an instance of the [ChartDataMark
             <chart:ChartDataMarker ShowLabel="True">
 	        <chart:ChartDataMarker.LabelStyle>
 	    	    <chart:DataMarkerLabelStyle TextColor="Blue" 
-                                                BorderColor="Red" 
-                                                BorderThickness="2" 
-                                                BackgroundColor="Aqua" 
-                                                Angle="315" 
-                                                Margin="5" FontSize="18" 
-                                                FontAttributes="Italic"/>
+                                            BorderColor="Red" 
+                                            BorderThickness="2" 
+                                            BackgroundColor="Aqua" 
+                                            Angle="315" 
+                                            Margin="5" FontSize="18" 
+                                            FontAttributes="Italic"/>
 	        </chart:ChartDataMarker.LabelStyle>
 	    </chart:ChartDataMarker>
 	</chart:ColumnSeries.DataMarker>
@@ -534,22 +534,25 @@ To customize the data label appearance, create an instance of the [ChartDataMark
 
 {% endhighlight %}
 {% highlight C# %}
+SfChart chart = new SfChart();
+. . .
 ColumnSeries series = new ColumnSeries();
 . . .
 series.DataMarker = new ChartDataMarker();
 series.DataMarker.ShowLabel = true;
 
 var style = new DataMarkerLabelStyle();
-style.TextColor = Color.Blue;
-style.BorderColor = Color.Red;
+style.TextColor = Colors.Blue;
+style.BorderColor = Colors.Red;
 style.BorderThickness = 2;
-style.BackgroundColor = Color.Aqua;
+style.BackgroundColor = Colors.Aqua;
 style.Angle = 315;
 style.Margin = 5;
 style.FontSize = 18;
 series.DataMarker.LabelStyle = style;
 
 chart.Series.Add(series);
+this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %} 
@@ -587,21 +590,24 @@ chart.Series.Add(series);
 
 {% endhighlight %} 
 {% highlight C# %}
+SfCartesianChart chart = new SfCartesianChart();
+. . .
 ColumnSeries series = new ColumnSeries();
 . . .
 series.ShowDataLabels = true;
 series.CartesianDataLabelSettings = new CartesianDataLabelSettings();
 var style = new ChartDataLabelStyle();
-style.TextColor = Color.Blue;
-style.Stroke = Color.Red;
+style.TextColor = Colors.Blue;
+style.Stroke = Colors.Red;
 style.StrokeWidth = 2;
-style.Background = Color.Aqua;
+style.Background = Colors.Aqua;
 style.Angle = 315;
 style.Margin = 5;
 style.FontSize = 18;
 series.CartesianDataLabelSettings.LabelStyle = style;
 
 chart.Series.Add(series);
+this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
@@ -625,10 +631,10 @@ To customize the tooltip appearance, create an instance of the [ChartTooltipBeha
 <chart:SfChart>
     . . . 
     <chart:SfChart.ChartBehaviors>
-        <chart:ChartTooltipBehavior  BackgroundColor="Blue" 
-                                     TextColor="White" 
-                                     Margin="5" 
-                                     FontSize="15"/>
+        <chart:ChartTooltipBehavior BackgroundColor="Blue" 
+                                    TextColor="White" 
+                                    Margin="5" 
+                                    FontSize="15"/>
     </chart:SfChart.ChartBehaviors>
     
     <chart:ColumnSeries ItemsSource="{Binding Data}" 
@@ -640,6 +646,8 @@ To customize the tooltip appearance, create an instance of the [ChartTooltipBeha
 {% endhighlight %} 
 
 {% highlight C# %}
+SfChart chart = new SfChart();
+. . .
 ColumnSeries series = new ColumnSeries();
 . . .
 series.EnableTooltip = true;
@@ -649,7 +657,9 @@ ChartTooltipBehavior tool = new ChartTooltipBehavior();
 tool.BackgroundColor = Color.Blue;
 tool.TextColor = Color.White;
 tool.Margin = new Thickness(5, 5, 5, 5);
+tool.FontSize = 15;
 chart.ChartBehaviors.Add(tool);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -683,16 +693,20 @@ chart.ChartBehaviors.Add(tool);
 
 {% endhighlight %} 
 {% highlight C# %}
+SfCartesianChart chart = new SfCartesianChart();
+. . .
 ColumnSeries series = new ColumnSeries();
 . . .
 series.EnableTooltip = true;
 chart.Series.Add(series);
 
 ChartTooltipBehavior tooltip = new ChartTooltipBehavior();
-tooltip.BackgroundColor = Color.Blue;
-tooltip.TextColor = Color.White;
+tooltip.BackgroundColor = Colors.Blue;
+tooltip.TextColor = Colors.White;
 tooltip.Margin = new Thickness(5, 5, 5, 5);
+tool.FontSize = 15;
 chart.TooltipBehavior = tooltip;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -730,6 +744,9 @@ Create an instance of the [ChartSelectionBehavior](https://help.syncfusion.com/c
 
 {% endhighlight %} 
 {% highlight C# %}
+
+SfChart chart = new SfChart();
+. . .
 ColumnSeries series = new ColumnSeries();
 . . .
 columnSeries.EnableDataPointSelection = true;
@@ -738,6 +755,7 @@ chart.Series.Add(series);
 ChartSelectionBehavior selectionBehavior = new ChartSelectionBehavior();
 
 chart.ChartBehaviors.Add(selectionBehavior);
+this.Content = chart;
 {% endhighlight %}
 {% endtabs %}
 </td>
@@ -780,6 +798,7 @@ ColumnSeries series = new ColumnSeries()
 };
 
 chart.Series.Add(series);
+this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
@@ -810,9 +829,12 @@ The zooming and panning are achieved using the [ChartZoomPanBehavior](https://he
 
 {% endhighlight %} 
 {% highlight C# %}
+SfChart chart = new SfChart();
+. . .
 ChartZoomPanBehavior zoomPanBehavior = new ChartZoomPanBehavior();
 
 chart.ChartBehaviors.Add(zoomPanBehavior);
+this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
@@ -834,8 +856,11 @@ chart.ChartBehaviors.Add(zoomPanBehavior);
 
 {% endhighlight %} 
 {% highlight C# %}
+SfCartesianChart chart = new SfCartesianChart();
+. . .
 ChartZoomPanBehavior zooming = new ChartZoomPanBehavior();
 chart.ZoomPanBehavior = zooming;
+this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}

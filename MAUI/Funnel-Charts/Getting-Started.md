@@ -46,6 +46,7 @@ public partial class MainWindow : ContentPage
     {
         this.InitializeComponent();
         SfFunnelChart chart = new SfFunnelChart();
+        this.Content = chart;
     }
 }   
 {% endhighlight %}
@@ -95,7 +96,7 @@ Now, let us define a simple data model that represents a data point in the chart
 
 {% highlight c# %}
 
-public class Admission
+public class AdmissionModel
 {
     public string XValue { get; set; }
     public double YValue { get; set; }
@@ -105,25 +106,25 @@ public class Admission
 
 {% endtabs %} 
 
-Next, create a view model class and initialize a list of `Model` objects as follows.
+Next, create a view AdmissionViewModel class and initialize a list of `AdmissionModel` objects as follows.
 
 {% tabs %}  
 
 {% highlight c# %}
 
-public class ChartViewModel
+public class AdmissionViewModel
 {
-    public List<Admission> Data { get; set; }
+    public List<AdmissionModel> Data { get; set; }
 
     public ChartViewModel()
     {
-        Data = new List<Admission>()
+        Data = new List<AdmissionModel>()
         {
-            new Admission() {XValue = "Enrolled", YValue=175},
-            new Admission() {XValue = "Admits", YValue=190},
-            new Admission() {XValue = "Applicants", YValue=245},
-            new Admission() {XValue = "Inquiries ", YValue=290},
-            new Admission() {XValue = "Prospects ", YValue=320},
+            new AdmissionModel() {XValue = "Enrolled", YValue=175},
+            new AdmissionModel() {XValue = "Admits", YValue=190},
+            new AdmissionModel() {XValue = "Applicants", YValue=245},
+            new AdmissionModel() {XValue = "Inquiries ", YValue=290},
+            new AdmissionModel() {XValue = "Prospects ", YValue=320},
         };
     }
 }
@@ -132,9 +133,9 @@ public class ChartViewModel
 
 {% endtabs %} 
 
-Create a `ViewModel` instance and set it as the chart's `BindingContext`. This enables property binding from `ViewModel` class.
+Create a `AdmissionViewModel` instance and set it as the chart's `BindingContext`. This enables property binding from `AdmissionViewModel` class.
 
-N> Add the namespace of `ViewModel` class to your XAML Page, if you prefer to set `BindingContext` in XAML.
+N> Add the namespace of `AdmissionViewModel` class to your XAML Page, if you prefer to set `BindingContext` in XAML.
 
 {% tabs %} 
 
@@ -147,7 +148,7 @@ N> Add the namespace of `ViewModel` class to your XAML Page, if you prefer to se
 
     <chart:SfFunnelChart>
         <chart:SfFunnelChart.BindingContext>
-            <model:ChartViewModel/>
+            <model:AdmissionViewModel/>
         </chart:SfFunnelChart.BindingContext>
     </chart:SfFunnelChart>
 </ContentPage>
@@ -156,7 +157,8 @@ N> Add the namespace of `ViewModel` class to your XAML Page, if you prefer to se
 
 {% highlight C# %} 
 
-ChartViewModel viewModel = new ChartViewModel();
+SfFunnelChart chart = new SfFunnelChart();
+AdmissionViewModel viewModel = new AdmissionViewModel();
 chart.BindingContext = viewModel;
 
 {% endhighlight %}
@@ -182,8 +184,7 @@ Binding `Data` to the funnel chart [ItemsSource](https://help.syncfusion.com/cr/
 {% highlight C# %}
 
 SfFunnelChart chart = new SfFunnelChart();
-ChartViewModel viewModel = new ChartViewModel();
-chart.BindingContext = viewModel;
+AdmissionViewModel viewModel = new AdmissionViewModel();
 chart.ItemsSource = viewModel.Data;
 chart.XBindingPath = "XValue";
 chart.YBindingPath = "YValue";
@@ -213,10 +214,12 @@ The title of the chart acts as the title to provide quick information to the use
 {% highlight C# %}
 
 SfFunnelChart chart = new SfFunnelChart();
-chart.Title = new Label
+chart.Title = new Label()
 {
     Text = "School Admission"
 };
+. . .
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -241,6 +244,7 @@ The [ShowDataLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 SfFunnelChart chart = new SfFunnelChart();
 . . .
 chart.ShowDataLabels = true;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -268,6 +272,7 @@ The legend provides information about the data point displayed in the funnel cha
 SfFunnelChart chart = new SfFunnelChart();
 . . .
 chart.Legend = new ChartLegend();
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -275,7 +280,7 @@ chart.Legend = new ChartLegend();
 
 ## Enable Tooltip
 
-Tooltips are used to show information about the segment, when mouse over on it. Enable tooltip by setting the chart [EnableTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html#Syncfusion_Maui_Charts_SfFunnelChart_EnableTooltip) property as true.
+Tooltips are used to show information about the segment, when mouse over on it. Enable tooltip by setting the chart [EnableTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html#Syncfusion_Maui_Charts_SfFunnelChart_EnableTooltip) property as `true`.
 
 {% tabs %} 
 
@@ -292,6 +297,7 @@ Tooltips are used to show information about the segment, when mouse over on it. 
 SfFunnelChart chart = new SfFunnelChart();
 . . .
 chart.EnableTooltip = true;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -304,19 +310,23 @@ The following code example gives you the complete code of above configurations.
 {% highlight xaml %}
 
 <chart:SfFunnelChart ItemsSource="{Binding Data}" 
-                     ShowDataLabels="True" 
                      XBindingPath="XValue" 
                      YBindingPath="YValue"
+                     ShowDataLabels="True" 
                      EnableTooltip="True">
+
     <chart:SfFunnelChart.Title>
         <Label Text="School Admission"/>
     </chart:SfFunnelChart.Title>
+
     <chart:SfFunnelChart.BindingContext>
-        <model:ChartViewModel/>
+        <model:AdmissionViewModel/>
     </chart:SfFunnelChart.BindingContext>
+
     <chart:SfFunnelChart.Legend>
         <chart:ChartLegend/>
     </chart:SfFunnelChart.Legend>
+
 </chart:SfFunnelChart>
  
 {% endhighlight %}
@@ -330,12 +340,12 @@ public partial class MainPage : ContentPage
     public MainWindow()
     {
         SfFunnelChart chart = new SfFunnelChart();
-        chart.Title = new Label
+        chart.Title = new Label()
         {
             Text = "School Admission"
         };
         chart.Legend = new ChartLegend();
-        ChartViewModel viewModel = new ChartViewModel();
+        AdmissionViewModel viewModel = new AdmissionViewModel();
         chart.BindingContext = viewModel;
 
         chart.ItemsSource = viewModel.Data;

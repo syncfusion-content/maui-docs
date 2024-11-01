@@ -75,10 +75,13 @@ The [DisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Cha
 
 SfCartesianChart chart = new SfCartesianChart();
 ...
-ChartTrackballBehavior trackball = new ChartTrackballBehavior();
-trackball.ShowLine = true;
-trackball.DisplayMode = LabelDisplayMode.NearestPoint;
+ChartTrackballBehavior trackball = new ChartTrackballBehavior()
+{
+    ShowLine = true,
+    DisplayMode = LabelDisplayMode.NearestPoint
+};
 . . . 
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -101,7 +104,7 @@ The ChartTrackballActivationMode enum contains the following values:
 <chart:SfCartesianChart>
     ...
     <chart:SfCartesianChart.TrackballBehavior>
-        <chart:ChartTrackballBehavior ActivationMode = "LongPress"/>
+        <chart:ChartTrackballBehavior ActivationMode="LongPress"/>
     </chart:SfCartesianChart.TrackballBehavior>
     ...
 </chart:SfCartesianChart>
@@ -112,9 +115,12 @@ The ChartTrackballActivationMode enum contains the following values:
 
 SfCartesianChart chart = new SfCartesianChart();
 ...
-ChartTrackballBehavior trackball = new ChartTrackballBehavior();
-trackball.ActivationMode = ChartTrackballActivationMode.LongPress;
+ChartTrackballBehavior trackball = new ChartTrackballBehavior()
+{
+    ActivationMode = ChartTrackballActivationMode.LongPress
+};
 . . . 
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -164,13 +170,17 @@ The [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Char
 
 SfCartesianChart chart = new SfCartesianChart();
 . . .
-ChartLabelStyle labelStyle = new ChartLabelStyle();
-labelStyle.Background = Colors.LightBlue;
-labelStyle.FontSize = 15;
-labelStyle.CornerRadius = 5;
-labelStyle.StrokeWidth = 2;
-labelStyle.Stroke = Colors.Gray;
-
+ChartTrackballBehavior trackball = new ChartTrackballBehavior();
+ChartLabelStyle labelStyle = new ChartLabelStyle()
+{
+    Background = Colors.LightBlue,
+    FontSize = 15,
+    CornerRadius = 5,
+    StrokeWidth = 2,
+    Stroke = Colors.Gray
+};
+trackball.LabelStyle = labelStyle;
+. . .
 this.Content = chart;
 
 {% endhighlight %}
@@ -193,7 +203,7 @@ this.Content = chart;
     ...
     <chart:ChartTrackballBehavior.LineStyle>
         <chart:ChartLineStyle Stroke="Gray"   
-                              StrokeDashArray="4"/>     
+                              StrokeWidth="4"/>     
     </chart:ChartTrackballBehavior.LineStyle>
     ...
 </chart:SfCartesianChart>
@@ -204,10 +214,14 @@ this.Content = chart;
 
 SfCartesianChart chart = new SfCartesianChart();
 . . .
-ChartLineStyle lineStyle = new ChartLineStyle();
-lineStyle.Stroke = Colors.Gray;
-lineStyle.StrokeDashArray = 4;
-
+ChartTrackballBehavior trackball = new ChartTrackballBehavior();
+ChartLineStyle lineStyle = new ChartLineStyle()
+{
+    Stroke = Colors.Gray,
+    StrokeWidth = 4
+};
+trackball.LineStyle = lineStyle;
+. . .
 this.Content = chart;
             
 {% endhighlight %}
@@ -231,12 +245,13 @@ The [MarkerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 
 <chart:SfCartesianChart>
     ...
-    <chart:ChartMarkerSettings Type="InvertedTriangle"  
-                               Fill="Brown" 
-                               Stroke="Red" 
-                               StrokeWidth="1.5"
-                               Width="15" 
-                               Height="15"/>
+    <chart:SfCartesianChart.TrackballBehavior>
+        <chart:ChartTrackballBehavior>
+                <chart:ChartTrackballBehavior.MarkerSettings>
+                    <chart:ChartMarkerSettings Height="10" Width="10" Fill="Red"/>
+                </chart:ChartTrackballBehavior.MarkerSettings>
+        </chart:ChartTrackballBehavior>
+    </chart:SfCartesianChart.TrackballBehavior>
     ...
 </chart:SfCartesianChart>
 
@@ -246,16 +261,15 @@ The [MarkerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 
 SfCartesianChart chart = new SfCartesianChart();
 . . .
-ChartMarkerSettings markerStyle = new ChartMarkerSettings()
+ChartTrackballBehavior trackball = new ChartTrackballBehavior();
+ChartMarkerSettings markerSettings = new ChartMarkerSettings()
 {
-    markerStyle.Type = ShapeType.InvertedTriangle,
-    markerStyle.Fill = Colors.Brown,
-    markerStyle.Stroke = Colors.Red,
-    markerStyle.StrokeWidth = 1.5,
-    markerStyle.Width = 15,
-    markerStyle.Height = 15,
+    Height = 10, 
+    Width = 10,
+    Fill = new SolidColorBrush(Colors.Red),
 };
-
+trackball.MarkerSettings = markerSettings;
+. . .
 this.Content = chart;
         
 {% endhighlight %}
@@ -288,19 +302,19 @@ T> The `DataItem` can be used to access the data linked to the associated busine
    </chart:SfCartesianChart.TrackballBehavior>
     . . .
     <chart:LineSeries ItemsSource="{Binding Data1}" 
-                      TrackballLabelTemplate ="{StaticResource trackballLabelTemplate}"
+                      TrackballLabelTemplate="{StaticResource trackballLabelTemplate}"
                       XBindingPath="XValues"
                       YBindingPath="YValues"
                       Label="Thomas"/>
 
     <chart:LineSeries ItemsSource="{Binding Data2}" 
-                      TrackballLabelTemplate ="{StaticResource trackballLabelTemplate}"
+                      TrackballLabelTemplate="{StaticResource trackballLabelTemplate}"
                       XBindingPath="XValues"
                       YBindingPath="YValues"
                       Label="Elizabeth"/>
 
     <chart:LineSeries ItemsSource="{Binding Data3}" 
-                      TrackballLabelTemplate ="{StaticResource trackballLabelTemplate}"
+                      TrackballLabelTemplate="{StaticResource trackballLabelTemplate}"
                       XBindingPath="XValues"
                       YBindingPath="YValues"
                       Label="Andrew"/>     
@@ -313,7 +327,7 @@ T> The `DataItem` can be used to access the data linked to the associated busine
 SfCartesianChart chart = new SfCartesianChart();
 
 ChartTrackballBehavior trackball = new ChartTrackballBehavior();
-chart.TrackballBehavior= trackball;
+chart.TrackballBehavior = trackball;
 . . .
 LineSeries series1 = new LineSeries();
 series1.ItemsSource = new ViewModel().Data1;
@@ -337,14 +351,14 @@ DataTemplate trackballLabelTemplate = new DataTemplate(() =>
 {
     HorizontalStackLayout horizontalStackLayout = new HorizontalStackLayout();
 
-    Image image = new Image
+    Image image = new Image()
     {
         Source = "image.png",
         WidthRequest = 20,
         HeightRequest = 20
     };
 
-    Label label1 = new Label
+    Label label1 = new Label()
     {
         FontSize = 15,
         HorizontalOptions = LayoutOptions.Center,
@@ -352,7 +366,7 @@ DataTemplate trackballLabelTemplate = new DataTemplate(() =>
     };
     label1.SetBinding(Label.TextProperty, new Binding("Series.Label", stringFormat: " {0}"));
 
-    Label label2 = new Label
+    Label label2 = new Label()
     {
         FontSize = 15,
         HorizontalOptions = LayoutOptions.Center,
@@ -393,7 +407,7 @@ To customize the appearance of axis labels on the trackball, you can use the [Tr
 <chart:SfCartesianChart>
     <chart:SfCartesianChart.Resources>
         <DataTemplate x:Key="axisLabelTemplate">
-            <Label WidthRequest="50" HeightRequest="20" HorizontalTextAlignment="Center" BackgroundColor="Blue" Text="{Binding ValueX}" TextColor="White" FontSize ="15"/>
+            <Label WidthRequest="50" HeightRequest="20" HorizontalTextAlignment="Center" BackgroundColor="Blue" Text="{Binding Date}" TextColor="White" FontSize ="15"/>
         </DataTemplate>
     </chart:SfCartesianChart.Resources>
 
@@ -406,7 +420,7 @@ To customize the appearance of axis labels on the trackball, you can use the [Tr
     </chart:SfCartesianChart.XAxes>  
 
     <chart:LineSeries ItemsSource="{Binding Data}" 
-                      XBindingPath="Name"
+                      XBindingPath="Date"
                       YBindingPath="Values"/>
 </chart:SfCartesianChart>
 
@@ -417,14 +431,14 @@ To customize the appearance of axis labels on the trackball, you can use the [Tr
 SfCartesianChart chart = new SfCartesianChart();
 
 ChartTrackballBehavior trackball = new ChartTrackballBehavior();
-chart.TrackballBehavior= trackball;
+chart.TrackballBehavior = trackball;
 
 DateTimeAxis primaryAxis = new DateTimeAxis();
 primaryAxis.ShowTrackballLabel = true;
 
 DataTemplate axisLabelTemplate = new DataTemplate(() =>
 {
-    var label = new Label
+    var label = new Label()
     {
         WidthRequest = 50,
         HeightRequest = 20,
@@ -433,7 +447,7 @@ DataTemplate axisLabelTemplate = new DataTemplate(() =>
         TextColor = Colors.White,
         FontSize = 15
     };
-    label.SetBinding(Label.TextProperty, "ValueX");
+    label.SetBinding(Label.TextProperty, "Date");
 
     return label;
 });
@@ -442,7 +456,7 @@ primaryAxis.TrackballLabelTemplate = axisLabelTemplate;
 . . .
 LineSeries series = new LineSeries();
 series.ItemsSource = new ViewModel().Data;
-series.XBindingPath = "Name";
+series.XBindingPath = "Date";
 series.YBindingPath = "Values";
 
 chart.Series.Add(series);
@@ -483,9 +497,9 @@ LineSeries lineSeries = new LineSeries()
   XBindingPath = "Name",
   YBindingPath = "Run",
   ItemsSource = new ViewModel().Data
-
 };
 
+chart.Series.Add(lineSeries);
 this.Content = chart;
         
 {% endhighlight %}
@@ -502,8 +516,7 @@ When the trackball moves across the axis, this feature highlights the related ax
 
 <chart:SfCartesianChart>
     ...
-    <chart:CategoryAxis  IsInversed="False" 
-                         ShowTrackballLabel="False"/> 
+    <chart:CategoryAxis ShowTrackballLabel="False"/> 
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -514,7 +527,6 @@ SfCartesianChart chart = new SfCartesianChart();
 . . .
 CategoryAxis chartAxis = new CategoryAxis()
 {
-  chartAxis.IsInversed= false,
   chartAxis.ShowTrackballLabel = false
 }
 

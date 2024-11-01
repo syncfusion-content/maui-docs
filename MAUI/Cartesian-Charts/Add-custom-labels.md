@@ -35,9 +35,11 @@ Keywords: .net maui chart custom axis labels, .net maui chart axis label customi
 {% highlight C# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-.......
+. . .
 CustomNumericalAxis primaryAxis = new CustomNumericalAxis();
 chart.XAxes.Add(primaryAxis);
+. . .
+this.Content = chart;
     
 {% endhighlight %}
 
@@ -76,4 +78,4 @@ public class CustomNumericalAxis : NumericalAxis
 
 ![Add custom labels to chart axis](How-to_images/MAUI_Add_custom_labels.png)
 
-N> This applies to all types of axes. Labels are rendered only if the label position presents within the visible range. The labels should be created only if users call the base of OnCreateLabels.
+N> This applies to all types of axes. Labels are rendered only if the label position presents within the visible range. The labels should be created only if users call the base of `OnCreateLabels`.

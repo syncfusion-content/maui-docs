@@ -284,7 +284,9 @@ The following code example shows how to enable legend in chart.
 {% highlight C# %}
 SfChart chart = new SfChart();
 . . .
-chart.Legend = new ChartLegend ();
+chart.Legend = new ChartLegend();
+this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -312,6 +314,8 @@ chart.Legend = new ChartLegend ();
 SfFunnelChart chart = new SfFunnelChart();
 . . .
 chart.Legend = new ChartLegend();
+this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -355,6 +359,8 @@ To customize the data label appearance, create an instance of the [ChartDataMark
 
 {% endhighlight %}
 {% highlight C# %}
+SfChart chart = new SfChart();
+. . .
 FunnelSeries series = new FunnelSeries();
 . . .
 series.DataMarker = new ChartDataMarker();
@@ -371,6 +377,7 @@ style.FontSize = 18;
 series.DataMarker.LabelStyle = style;
 
 chart.Series.Add(series);
+this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %} 
@@ -417,6 +424,7 @@ style.Background = Colors.Aqua;
 style.Margin = 5;
 style.FontSize = 18;
 chart.DataLabelSettings.LabelStyle = style;
+this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
@@ -455,6 +463,8 @@ To customize the tooltip appearance, create an instance of the [ChartTooltipBeha
 {% endhighlight %} 
 
 {% highlight C# %}
+SfChart chart = new SfChart();
+. . .
 FunnelSeries series = new FunnelSeries ();
 . . .
 series.EnableTooltip = true;
@@ -464,7 +474,9 @@ ChartTooltipBehavior tool = new ChartTooltipBehavior();
 tool.BackgroundColor = Color.Blue;
 tool.TextColor = Color.White;
 tool.Margin = new Thickness(5, 5, 5, 5);
+tool.FontSize = 15;
 chart.ChartBehaviors.Add(tool);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -501,7 +513,9 @@ ChartTooltipBehavior tooltip = new ChartTooltipBehavior();
 tooltip.Background = Colors.Blue;
 tooltip.TextColor = Colors.White;
 tooltip.Margin = new Thickness(5, 5, 5, 5);
+tooltip.FontSize = 15;
 chart.TooltipBehavior = tooltip;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -548,6 +562,7 @@ series.SelectedDataPointColor = Color.Red;
 ChartSelectionBehavior selectionBehavior = new ChartSelectionBehavior();
 chart.ChartBehaviors.Add(selectionBehavior);
 chart.Series.Add(series);
+this.Content = chart;
 {% endhighlight %}
 {% endtabs %}
 </td>
@@ -574,9 +589,10 @@ chart.Series.Add(series);
 SfFunnelChart chart = new SfFunnelChart();
 . . .    
 DataPointSelectionBehavior selection = new DataPointSelectionBehavior();
-selection.SelectedIndex = 1;
+selection.SelectedIndex = 2;
 selection.SelectionBrush = Colors.Red;
 chart.SelectionBehavior = selection;
+this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
