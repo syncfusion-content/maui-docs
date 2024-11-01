@@ -57,8 +57,8 @@ SplineRangeAreaSeries series = new SplineRangeAreaSeries()
 {
     ItemsSource = new ViewModel().Data,
     XBindingPath = "XValue",
-    High="HighValue",
-    Low="LowValue",
+    High = "HighValue",
+    Low = "LowValue",
 };
 
 chart.Series.Add(series);
@@ -96,10 +96,10 @@ The following types are used in [SplineRangeAreaSeries](https://help.syncfusion.
     </chart:SfCartesianChart.YAxes>  
 
     <chart:SplineRangeAreaSeries ItemsSource="{Binding Data}"
-                                    XBindingPath="XValue"
-                                    High="HighValue"
-                                    Low="LowValue"
-                                    Type="Cardinal"/>
+                                 XBindingPath="XValue"
+                                 High="HighValue"
+                                 Low="LowValue"
+                                 Type="Cardinal"/>
 
 </chart:SfCartesianChart>
 
@@ -119,8 +119,8 @@ SplineRangeAreaSeries series = new SplineRangeAreaSeries()
 {
     ItemsSource = new ViewModel().Data,
     XBindingPath = "XValue",
-    High="HighValue",
-    Low="LowValue",
+    High = "HighValue",
+    Low = "LowValue",
     Type = SplineType.Cardinal
 };
 
@@ -144,10 +144,10 @@ A marker, also known as a symbol, is used to determine or highlight the position
 
 <chart:SfCartesianChart>
     ...
-    <chart:SplineRangeAreaSeries XBindingPath="XValue"
+    <chart:SplineRangeAreaSeries ItemsSource="{Binding Data}"
+                                 XBindingPath="XValue"
                                  High="HighValue"
                                  Low="LowValue"
-                                 ItemsSource="{Binding Data}"
                                  ShowMarkers="True"/>
 </chart:SfCartesianChart>
 
@@ -159,10 +159,10 @@ SfCartesianChart chart = new SfCartesianChart();
 ...
 SplineRangeAreaSeries series = new SplineRangeAreaSeries()
 {
+    ItemsSource = new ViewModel().Data,
     XBindingPath = "XValue",
     High = "HighValue",
     Low = "LowValue",
-    ItemsSource = new ViewModel().Data,
     ShowMarkers= true,
 };
 
@@ -175,7 +175,7 @@ this.Content= chart;
 
 ### Marker Customization
 
-In order to change the series markers’ appearance, create an instance of the [MarkerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SplineRangeAreaSeries.html#Syncfusion_Maui_Charts_SplineRangeAreaSeries_MarkerSettings) property. The following properties are used to customize marker appearance.
+In order to change the series markers appearance, create an instance of the [MarkerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SplineRangeAreaSeries.html#Syncfusion_Maui_Charts_SplineRangeAreaSeries_MarkerSettings) property. The following properties are used to customize marker appearance.
 
 * [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMarkerSettings.html#Syncfusion_Maui_Charts_ChartMarkerSettings_Type), of type `ShapeType`, describes the shape of the series marker. The default value of this property is the [ShapeType.Circle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ShapeType.html#Syncfusion_Maui_Charts_ShapeType_Circle).
 * [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartMarkerSettings.html#Syncfusion_Maui_Charts_ChartMarkerSettings_Stroke), of type `Brush`, indicates the brush used to paint the marker border.
@@ -190,10 +190,10 @@ In order to change the series markers’ appearance, create an instance of the [
 
 <chart:SfCartesianChart>
     ...
-    <chart:SplineRangeAreaSeries XBindingPath="XValue"
+    <chart:SplineRangeAreaSeries ItemsSource="{Binding Data}"
+                                 XBindingPath="XValue"
                                  High="HighValue"
                                  Low="LowValue"
-                                 ItemsSource="{Binding Data}"
                                  ShowMarkers="True">
         <chart:SplineRangeAreaSeries.MarkerSettings>
             <chart:ChartMarkerSettings Type="Diamond"
@@ -212,13 +212,15 @@ In order to change the series markers’ appearance, create an instance of the [
 
 SfCartesianChart chart = new SfCartesianChart();
 ...
-ChartMarkerSettings chartMarker= new ChartMarkerSettings();
-chartMarker.Type = ShapeType.Diamond;
-chartMarker.Fill = Colors.Brown;
-chartMarker.Stroke = Colors.Black;
-chartMarker.StrokeWidth= 1;
-chartMarker.Height = 8;
-chartMarker.Width = 8;
+ChartMarkerSettings chartMarker= new ChartMarkerSettings()
+{
+    Type = ShapeType.Diamond,
+    Fill = Colors.Brown,
+    Stroke = Colors.Black,
+    StrokeWidth = 1,
+    Height = 8,
+    Width = 8
+};
 
 SplineRangeAreaSeries series = new SplineRangeAreaSeries()
 {

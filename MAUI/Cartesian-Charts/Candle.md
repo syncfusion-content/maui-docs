@@ -12,7 +12,7 @@ keywords: .net maui candle chart, candle chart customization .net maui, syncfusi
 
 ## Candle Chart
 
-Candle charts are a type of financial chart used to represent the price movement of an asset over time. The chart is made up of a series of rectangular bars, called candlesticks, that represent a specific time, typically one day. To render a candle chart, create an instance of [CandleSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CandleSeries.html), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
+Candle charts are a type of financial chart used to represent the price movement of an asset over time. The chart is made up of a series of rectangular bars, called candlesticks, that represent a specific time, typically one day. To render a candle chart, create an instance of [CandleSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CandleSeries.html), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html).
 
 N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
 
@@ -63,8 +63,10 @@ StockData.Add(new Model { Year = "2010", High = 50, Low = 40, Open = 40, Close =
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.XAxes.Add(primaryAxis);
+
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 
@@ -121,8 +123,10 @@ In the Candle chart, the [BullishFill](https://help.syncfusion.com/cr/maui/Syncf
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.XAxes.Add(primaryAxis);
+
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 
@@ -149,7 +153,7 @@ this.Content = chart;
 
 ## EnableSolidCandle
 
-In Candle Series, the [EnableSolidCandle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CandleSeries.html#Syncfusion_Maui_Charts_CandleSeries_EnableSolidCandleProperty) property is used to specify whether the candle segment should be filled or hollow. The default value of this property is false.
+In Candle Series, the [EnableSolidCandle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CandleSeries.html#Syncfusion_Maui_Charts_CandleSeries_EnableSolidCandleProperty) property is used to specify whether the candle segment should be filled or hollow. The default value of this property is `false`.
 
 {% tabs %}
 
@@ -180,8 +184,10 @@ In Candle Series, the [EnableSolidCandle](https://help.syncfusion.com/cr/maui/Sy
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.XAxes.Add(primaryAxis);
+
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 
@@ -193,7 +199,7 @@ CandleSeries series = new CandleSeries()
     High = "High",
     Low = "Low",
     Close = "Close",
-    EnableSolidCandle=true,
+    EnableSolidCandle = true,
 };
 
 chart.Series.Add(series);

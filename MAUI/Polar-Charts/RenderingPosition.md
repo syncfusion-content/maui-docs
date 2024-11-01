@@ -35,14 +35,16 @@ Adjust the rendering position of series on polar chart by leveraging the [StartA
 
 SfPolarChart chart = new SfPolarChart();
 chart.StartAngle = ChartPolarAngle.Rotate0;
+
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.PrimaryAxis = primaryAxis;
+
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.SecondaryAxis = secondaryAxis;
 
 PolarAreaSeries series = new PolarAreaSeries()
 {
-    ItemsSource = new ViewModel().PlantDetails,
+    ItemsSource = new PlantViewModel().PlantDetails,
     XBindingPath = "Direction",
     YBindingPath = "Tree"
 };

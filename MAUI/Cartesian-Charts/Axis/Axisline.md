@@ -23,11 +23,12 @@ Cartesian chart axis provides support to customize the style of axis line by def
     <chart:SfCartesianChart.XAxes>
         <chart:NumericalAxis>
             <chart:NumericalAxis.AxisLineStyle>
-                <chart:ChartLineStyle StrokeWidth ="2"
+                <chart:ChartLineStyle StrokeWidth="2"
                                       Stroke="Red"/>
             </chart:NumericalAxis.AxisLineStyle>
         </chart:NumericalAxis>
     </chart:SfCartesianChart.XAxes>
+    . . .
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -37,11 +38,15 @@ Cartesian chart axis provides support to customize the style of axis line by def
 SfCartesianChart chart = new SfCartesianChart();
 . . .
 NumericalAxis primaryAxis = new NumericalAxis();
-ChartLineStyle axisLineStyle = new ChartLineStyle();
-axisLineStyle.Stroke = Colors.Red;
-axisLineStyle.StrokeWidth = 2;
+ChartLineStyle axisLineStyle = new ChartLineStyle()
+{
+    Stroke = Colors.Red,
+    StrokeWidth = 2,
+};
 primaryAxis.AxisLineStyle = axisLineStyle;
 chart.XAxes.Add(primaryAxis);
+. . .
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -62,7 +67,7 @@ The padding to the axis line is defined by using the [AxisLineOffset](https://he
     <chart:SfCartesianChart.XAxes>
         <chart:NumericalAxis AxisLineOffset="25">
             <chart:NumericalAxis.AxisLineStyle>
-                <chart:ChartLineStyle StrokeWidth ="2"
+                <chart:ChartLineStyle StrokeWidth="2"
                                       Stroke="Red"/>
             </chart:NumericalAxis.AxisLineStyle>
         </chart:NumericalAxis>
@@ -77,12 +82,16 @@ SfCartesianChart chart = new SfCartesianChart();
 . . .
 NumericalAxis primaryAxis = new NumericalAxis();
 primaryAxis.AxisLineOffset = 25;
-ChartLineStyle axisLineStyle = new ChartLineStyle();
-axisLineStyle.Stroke = Colors.Red;
-axisLineStyle.StrokeWidth = 2;
+ChartLineStyle axisLineStyle = new ChartLineStyle()
+{
+    Stroke = Colors.Red,
+    StrokeWidth = 2,
+};
 primaryAxis.AxisLineStyle = axisLineStyle;
 
 chart.XAxes.Add(primaryAxis);
+. . .
+this.Content = chart;
 
 {% endhighlight %}
 

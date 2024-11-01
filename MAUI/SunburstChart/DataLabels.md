@@ -28,8 +28,9 @@ The following code explains how to initialize data labels.
 {% highlight c# %}
 
 SfSunburstChart sunburst = new SfSunburstChart();
-    . . .
+. . .
 sunburst.ShowLabels = true;
+this.Content = sunburst;
 
 {% endhighlight %}
 
@@ -63,6 +64,7 @@ sunburst.DataLabelSettings = new SunburstDataLabelSettings()
 {
     OverFlowMode = SunburstLabelOverflowMode.Hide
 };
+this.Content = sunburst;
 
 {% endhighlight %}
 
@@ -98,6 +100,7 @@ sunburst.DataLabelSettings = new SunburstDataLabelSettings()
 {
     RotationMode = SunburstLabelRotationMode.Normal     
 };
+this.Content = sunburst;
 
 {% endhighlight %}
 
@@ -141,6 +144,7 @@ sunburst.DataLabelSettings = new SunburstDataLabelSettings()
     FontSize = 10,
     FontAttributes = FontAttributes.Bold
 };
+this.Content = sunburst;
 
 {% endhighlight %}
 

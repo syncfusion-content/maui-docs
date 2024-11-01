@@ -23,9 +23,8 @@ The following code snippet demonstrates the usage of this method:
 
 SfCircularChart chart = new SfCircularChart();
 ...
-chart.SaveAsImage("ChartSample.jpeg");
-
 this.Content = chart;
+chart.SaveAsImage("ChartSample.jpeg");
 
 {% endhighlight %}
 
@@ -76,9 +75,8 @@ The following code snippet demonstrates the usage of this method:
 
 SfCircularChart chart = new SfCircularChart();
 ...
-await chart.GetStreamAsync(ImageFileFormat.Jpeg);
-
 this.Content = chart;
+await chart.GetStreamAsync(ImageFileFormat.Jpeg);
 
 {% endhighlight %}
 

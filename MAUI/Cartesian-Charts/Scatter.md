@@ -14,7 +14,7 @@ The scatter chart is used to represent the each data point by a dot or circle wi
 
 ## Scatter Chart
 
-To render a scatter chart, create an instance of [ScatterSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ScatterSeries.html?tabs=tabid-1), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1). The segment size can be defined by using the [PointHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ScatterSeries.html#Syncfusion_Maui_Charts_ScatterSeries_PointHeight) and [PointWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ScatterSeries.html#Syncfusion_Maui_Charts_ScatterSeries_PointWidth) properties.
+To render a scatter chart, create an instance of [ScatterSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ScatterSeries.html), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html). The segment size can be defined by using the [PointHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ScatterSeries.html#Syncfusion_Maui_Charts_ScatterSeries_PointHeight) and [PointWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ScatterSeries.html#Syncfusion_Maui_Charts_ScatterSeries_PointWidth) properties.
 
 N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
 
@@ -31,11 +31,11 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
         <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>  
                 
-    <chart:ScatterSeries PointHeight="7"
-                        PointWidth="7"
-                        ItemsSource="{Binding Data}"
-                        XBindingPath="XValue"
-                        YBindingPath="YValue"/>
+    <chart:ScatterSeries ItemsSource="{Binding Data}"
+                         XBindingPath="XValue"
+                         YBindingPath="YValue"
+                         PointHeight="7"
+                         PointWidth="7"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -43,8 +43,10 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+
 NumericalAxis primaryAxis = new NumericalAxis();
 chart.XAxes.Add(primaryAxis);
+
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 

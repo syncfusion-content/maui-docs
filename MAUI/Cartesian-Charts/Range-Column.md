@@ -14,7 +14,7 @@ keywords: .net maui range column chart, maui range column chart, range column ch
 
 Range Column Chart is used to visualize data points with columns, with the height of each column representing the difference between the lowest and highest values of the data point. 
 
-To render a range column chart, create an instance of [RangeColumnSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RangeColumnSeries.html), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
+To render a range column chart, create an instance of [RangeColumnSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RangeColumnSeries.html), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html).
 
 Since the [RangeColumnSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RangeColumnSeries.html) requires two Y values for each point, your data should contain both the high and low values. These high and low values specify the maximum and minimum ranges of the point.
 
@@ -35,9 +35,9 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
     </chart:SfCartesianChart.YAxes>   
 
     <chart:RangeColumnSeries ItemsSource="{Binding Data}"
-			     XBindingPath="XValue"
+                             XBindingPath="XValue"
                              High="HighValue"
-			     Low="LowValue"/>
+                             Low="LowValue"/>
 
 </chart:SfCartesianChart>
 
@@ -46,8 +46,10 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.XAxes.Add(primaryAxis);
+
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 
@@ -55,8 +57,8 @@ RangeColumnSeries series = new RangeColumnSeries()
 {
     ItemsSource = new ViewModel().Data,
     XBindingPath = "XValue",
-    High="HighValue",
-    Low="LowValue",
+    High = "HighValue",
+    Low = "LowValue",
 };
 
 chart.Series.Add(series);
@@ -89,11 +91,11 @@ The [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RangeColu
     </chart:SfCartesianChart.YAxes>  
     
     <chart:RangeColumnSeries ItemsSource="{Binding Data}"
-			     XBindingPath="XValue"
+                             XBindingPath="XValue"
                              High="HighValue"
-			     Low="LowValue"
+                             Low="LowValue"
                              Spacing="0.3"
-		             Width="0.7"/>
+                             Width="0.7"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -101,8 +103,10 @@ The [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.RangeColu
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.XAxes.Add(primaryAxis);
+
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 
@@ -110,8 +114,8 @@ RangeColumnSeries series = new RangeColumnSeries()
 {
     ItemsSource = new ViewModel().Data,
     XBindingPath = "XValue",
-    High="HighValue",
-    Low="LowValue",
+    High = "HighValue",
+    Low = "LowValue",
     Spacing = 0.3,
     Width = 0.7,
 };

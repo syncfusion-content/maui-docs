@@ -12,7 +12,7 @@ keywords: .net maui plot band, maui plot band, .net maui chart plot band type, p
 
 A plot band, also known as a stripline, allows for shading specific regions or ranges in the plot area background at regular or custom intervals. It also provides options to customize the size of these bands. Text can be added to plot band and indicate the significance of each particular region.
 
-Plot bands are classified into [NumericalPlotBand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalPlotBand.html?tabs=tabid-2%2Ctabid-28) and [DateTimePlotBand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimePlotBand.html?tabs=tabid-2%2Ctabid-28). Based on the axis, plot bands are drawn using these classifications. The following properties are used to configure the plot band:
+Plot bands are classified into [NumericalPlotBand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalPlotBand.html) and [DateTimePlotBand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimePlotBand.html). Based on the axis, plot bands are drawn using these classifications. The following properties are used to configure the plot band:
 
 * [`Size`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartPlotBand.html#Syncfusion_Maui_Charts_ChartPlotBand_Size) - changes how long plot band should be expanded. This is applicable only when end is not specified.
 * [`SizeType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimePlotBand.html#Syncfusion_Maui_Charts_DateTimePlotBand_SizeType) - changes the date-time unit of the value specified in the `Size` property. The values can be year, month, day, hour, minute, second, and millisecond.
@@ -26,7 +26,7 @@ Plot bands are classified into [NumericalPlotBand](https://help.syncfusion.com/c
 
 ## Numerical PlotBand 
 
-[NumericalPlotBands](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalPlotBand.html?tabs=tabid-2%2Ctabid-28) are used to draw plot bands for [NumericalAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html?tabs=tabid-1%2Ctabid-13%2Ctabid-11%2Ctabid-3%2Ctabid-7%2Ctabid-5%2Ctabid-9) and [CategoryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CategoryAxis.html?tabs=tabid-1%2Ctabid-5%2Ctabid-3). To add a plot band, create an instance of [NumericalPlotBandCollection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalPlotBandCollection.html) and specify numerical value for the [Start](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalPlotBand.html#Syncfusion_Maui_Charts_NumericalPlotBand_Start) and [End](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalPlotBand.html#Syncfusion_Maui_Charts_NumericalPlotBand_End) parameter. These parameters determine the beginning and end of the plot band.
+[NumericalPlotBands](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalPlotBand.html) are used to draw plot bands for [NumericalAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html) and [CategoryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CategoryAxis.html). To add a plot band, create an instance of [NumericalPlotBandCollection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalPlotBandCollection.html) and specify numerical value for the [Start](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalPlotBand.html#Syncfusion_Maui_Charts_NumericalPlotBand_Start) and [End](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalPlotBand.html#Syncfusion_Maui_Charts_NumericalPlotBand_End) parameter. These parameters determine the beginning and end of the plot band.
 
 {% tabs %}
 
@@ -66,6 +66,7 @@ numericalPlotBandCollection.Add(plotBand);
 numericalAxis.PlotBands = numericalPlotBandCollection;
 chart.YAxes.Add(numericalAxis);
 ...
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -75,7 +76,7 @@ chart.YAxes.Add(numericalAxis);
 
 ## DateTime PlotBand
 
-[DateTimePlotBands](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimePlotBand.html?tabs=tabid-2%2Ctabid-28) are used to draw plot bands for [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html?tabs=tabid-1%2Ctabid-15%2Ctabid-13%2Ctabid-7%2Ctabid-3%2Ctabid-11%2Ctabid-5%2Ctabid-9). To add a plot band, create an instance of [DateTimePlotBandCollection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimePlotBandCollection.html) and specifying the [Start](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimePlotBand.html#Syncfusion_Maui_Charts_DateTimePlotBand_Start) date and [End](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimePlotBand.html#Syncfusion_Maui_Charts_DateTimePlotBand_End) date. These parameters determine the beginning and end of the plot band.
+[DateTimePlotBands](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimePlotBand.html) are used to draw plot bands for [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html). To add a plot band, create an instance of [DateTimePlotBandCollection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimePlotBandCollection.html) and specifying the [Start](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimePlotBand.html#Syncfusion_Maui_Charts_DateTimePlotBand_Start) date and [End](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimePlotBand.html#Syncfusion_Maui_Charts_DateTimePlotBand_End) date. These parameters determine the beginning and end of the plot band.
 
 {% tabs %}
 
@@ -177,7 +178,7 @@ NumericalPlotBand plotBand = new NumericalPlotBand
 {
     Start = 20,
     End = 22,
-    IsRepeatable = True
+    IsRepeatable = true
     RepeatUntil = 32
     RepeatEvery = 4                                  
     Fill = Colors.LightGray
@@ -187,6 +188,7 @@ numericalPlotBandCollection.Add(plotBand);
 numericalAxis.PlotBands = numericalPlotBandCollection;
 chart.YAxes.Add(numericalAxis);
 ...
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -222,7 +224,7 @@ Suppose, you want to draw a plot band that should not stretch along its associat
 
                     <chart:NumericalPlotBand Start="25" 
                                              End="27" 
-                                             AssociatedAxisStart = 4.3,
+                                             AssociatedAxisStart = "4.3",
                                              AssociatedAxisEnd="6.8"
                                              Fill="#B3FCD404"
                                              Text="Average"/>
@@ -284,6 +286,7 @@ numericalPlotBandCollection.Add(plotBand3);
 numericalAxis.PlotBands = numericalPlotBandCollection;
 chart.YAxes.Add(numericalAxis);
 ...
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -292,7 +295,7 @@ chart.YAxes.Add(numericalAxis);
 ![Visualize segmented plot band in .NET MAUI](Plot_band_images/segmented_plotband.png)
 
 ## Plot Line
-When specifying the same value for both start and end, a plot line will be drawn.
+When specifying the same value for both `start` and `end`, a plot line will be drawn.
 
 {% tabs %}
 
@@ -382,6 +385,7 @@ numericalPlotBandCollection.Add(plotBand3);
 numericalAxis.PlotBands = numericalPlotBandCollection;
 chart.YAxes.Add(numericalAxis);
 ...
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -445,13 +449,13 @@ NumericalPlotBand plotBand = new NumericalPlotBand
 {
     Start = 28,
     Width = 10,
-    Fill = Color.Orange,
+    Fill = Colors.Orange,
     Text = "Plot Band"
 };
 
-ChartPlotBandLabelStyle labelStyle = new ChartPlotBandLabelStyle
+ChartPlotBandLabelStyle labelStyle = new ChartPlotBandLabelStyle()
 {
-    TextColor = Color.Blue,
+    TextColor = Colors.Blue,
     FontSize = 12,
     FontAttributes = FontAttributes.Bold
 };
@@ -461,6 +465,7 @@ numericalPlotBandCollection.Add(plotBand);
 numericalAxis.PlotBands= numericalPlotBandCollection;
 chart.YAxes.Add(numericalAxis);
 ...
+this.Content = chart;
 
 {% endhighlight %}
 

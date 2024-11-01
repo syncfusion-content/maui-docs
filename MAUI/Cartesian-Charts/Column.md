@@ -12,7 +12,7 @@ keywords: .net maui column chart, column chart customization .net maui, syncfusi
 
 ## Column Chart
 
-Column chart is used to plot discrete rectangles for the given data point values. To render a column chart, create an instance of [ColumnSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSeries.html?tabs=tabid-1), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1).
+Column chart is used to plot discrete rectangles for the given data point values. To render a column chart, create an instance of [ColumnSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSeries.html), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html).
 
 N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
 
@@ -39,8 +39,10 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.XAxes.Add(primaryAxis);
+
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 
@@ -81,10 +83,10 @@ The [Width](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSer
     </chart:SfCartesianChart.YAxes>  
 
     <chart:ColumnSeries ItemsSource="{Binding Data}"
-						XBindingPath="XValue"
-						YBindingPath="YValue"
-						Spacing="0.5"
-						Width="0.6"/>
+                        XBindingPath="XValue"
+                        YBindingPath="YValue"
+                        Spacing="0.5"
+                        Width="0.6"/>
 
 </chart:SfCartesianChart>
 
@@ -122,7 +124,7 @@ By default, all the column series which have the same x and y axes are placed si
 
 {% tabs %}
 
- {% highlight xaml %}
+{% highlight xaml %}
 
 <chart:SfCartesianChart EnableSideBySideSeriesPlacement="False">
     <chart:SfCartesianChart.XAxes>
@@ -143,7 +145,7 @@ By default, all the column series which have the same x and y axes are placed si
                         Width="0.2"/>                    
 </chart:SfCartesianChart>
 
-  {% endhighlight %}
+{% endhighlight %}
 
 {% highlight c# %}
     

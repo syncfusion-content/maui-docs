@@ -23,8 +23,8 @@ The following code sample demonstrates the usage of this method:
 
 SfPolarChart chart = new SfPolarChart();
 ...
-chart.SaveAsImage("ChartSample.jpeg");
 this.Content = chart;
+chart.SaveAsImage("ChartSample.jpeg");
 
 {% endhighlight %}
 
@@ -75,8 +75,8 @@ The following code sample demonstrates the usage of this method:
 
 SfPolarChart chart = new SfPolarChart();
 ...
-await chart.GetStreamAsync(ImageFileFormat.Jpeg);
 this.Content = chart;
+await chart.GetStreamAsync(ImageFileFormat.Jpeg);
 
 {% endhighlight %}
 

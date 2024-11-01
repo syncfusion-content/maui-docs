@@ -46,6 +46,8 @@ NumericalAxis secondaryAxis = new NumericalAxis()
 chart.XAxes.Add(primaryAxis);
 chart.YAxes.Add(secondaryAxis);
 
+this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -78,6 +80,8 @@ CategoryAxis primaryAxis = new CategoryAxis()
     LabelRotation = 90
 };
 chart.XAxes.Add(primaryAxis);
+
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -136,11 +140,13 @@ DateTimeAxis primaryAxis = new DateTimeAxis()
 };
 chart.XAxes.Add(primaryAxis);
 
+this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
 
-![Axis edge label positioning support in .NET MAUI Chart.](axis_images/net-maui-chart-axis-edge-labels-drawing.jpg)
+![Axis edge label positioning support in .NET MAUI Chart.](axis_images/maui_chart_axis_edge_labels_drawing.jpg)
 
 ## Edge Labels Visibility
  
@@ -173,6 +179,8 @@ NumericalAxis primaryAxis = new NumericalAxis()
 };
 chart.XAxes.Add(primaryAxis);
 
+this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -204,6 +212,8 @@ NumericalAxis primaryAxis = new NumericalAxis()
 };
 chart.XAxes.Add(primaryAxis);
 
+this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -233,7 +243,9 @@ CategoryAxis primaryAxis = new CategoryAxis()
 {
     LabelsIntersectAction = AxisLabelsIntersectAction.MultipleRows,
 };
- chart.XAxes.Add(primaryAxis);
+chart.XAxes.Add(primaryAxis);
+
+this.Content = chart;
  
 {% endhighlight %}
 

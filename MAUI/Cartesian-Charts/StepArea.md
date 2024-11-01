@@ -72,9 +72,9 @@ A marker, also known as a symbol, determines or highlights the data point’s po
 
 <chart:SfCartesianChart>
     ...
-    <chart:StepAreaSeries XBindingPath="Month"
+    <chart:StepAreaSeries ItemsSource="{Binding Data}"
+                          XBindingPath="Month"
                           YBindingPath="Value"
-                          ItemsSource="{Binding Data}"
                           ShowMarkers="True"/>
 
 </chart:SfCartesianChart>
@@ -87,9 +87,9 @@ SfCartesianChart chart = new SfCartesianChart();
 ...
 StepAreaSeries series = new StepAreaSeries()
 {
+    ItemsSource = new ViewModel().Data,
     XBindingPath = "Month",
     YBindingPath = "Value",
-    ItemsSource = new ViewModel().Data,
     ShowMarkers= true,
  };
 
@@ -138,15 +138,17 @@ To change the series markers appearance, create an instance of the [MarkerSettin
 
 SfCartesianChart chart = new SfCartesianChart();
 ...
-ChartMarkerSettings chartMarker= new ChartMarkerSettings();
-chartMarker.Type = ShapeType.Diamond;
-chartMarker.Fill = Colors.Brown;
-chartMarker.Stroke = Colors.Black;
-chartMarker.StrokeWidth= 1;
-chartMarker.Height = 8;
-chartMarker.Width = 8;
+ChartMarkerSettings chartMarker= new ChartMarkerSettings()
+{
+    Type = ShapeType.Diamond,
+    Fill = Colors.Brown,
+    Stroke = Colors.Black,
+    StrokeWidth = 1,
+    Height = 8,
+    Width = 8
+};
 
-StepAreaSeries = new StepAreaSeries()
+StepAreaSeries series = new StepAreaSeries()
 {
    XBindingPath = "Month",
    YBindingPath = "Value",

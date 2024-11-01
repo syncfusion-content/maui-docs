@@ -52,22 +52,22 @@ chart.XAxes.Add(primaryAxis);
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 
-StepLineSeries series = new StepLineSeries()
+StepLineSeries series1 = new StepLineSeries()
 {
     ItemsSource = new ViewModel().Data,
     XBindingPath = "Date",
     YBindingPath = "Value",
 };
 
-StepLineSeries series1 = new StepLineSeries()
+StepLineSeries series2 = new StepLineSeries()
 {
     ItemsSource = new ViewModel().Data1,
     XBindingPath = "Date",
     YBindingPath = "Value",
 };
 
-chart.Series.Add(series);
 chart.Series.Add(series1);
+chart.Series.Add(series2);
 this.Content = chart;
 
 {% endhighlight C# %}
@@ -125,11 +125,11 @@ doubleCollection.Add(2);
 
 StepLineSeries steplineSeries = new StepLineSeries()
 {
-    ItemsSource = new ViewModel().Data;
-    XBindingPath = "Date";
-    YBindingPath = "Value";
-    StrokeDashArray = doubleCollection;
-}
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "Date",
+    YBindingPath = "Value",
+    StrokeDashArray = doubleCollection
+};
 
 chart.Series.Add(steplineSeries);
 this.Content = chart;
@@ -183,16 +183,16 @@ chart.YAxes.Add(secondaryAxis);
 
 StepLineSeries steplineSeries = new StepLineSeries()
 {
-    ItemsSource = new ViewModel().Data;
-    XBindingPath = "Year";
-    YBindingPath = "Value";
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "Year",
+    YBindingPath = "Value"
 };
 
 StepLineSeries steplineSeries1 = new StepLineSeries()
 {
-    ItemsSource = new ViewModel().Data;
-    XBindingPath = "Year";
-    YBindingPath = "Value";
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "Year",
+    YBindingPath = "Value"
 };
 
 chart.Series.Add(steplineSeries);

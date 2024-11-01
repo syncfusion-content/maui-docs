@@ -34,13 +34,16 @@ To display a line series in a polar chart, instantiate the [PolarLineSeries](htt
 {% highlight c# %}
 
 SfPolarChart chart = new SfPolarChart();
+
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.PrimaryAxis = primaryAxis;
+
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.SecondaryAxis = secondaryAxis;
+
 PolarLineSeries series = new PolarLineSeries()
 {
-    ItemsSource = new ViewModel().PlantDetails,
+    ItemsSource = new PlantViewModel().PlantDetails,
     XBindingPath = "Direction",
     YBindingPath = "Tree"
 };
@@ -76,7 +79,7 @@ chart.GridLineType = PolarChartGridLineType.Polygon;
 . . .
 PolarLineSeries series = new PolarLineSeries()
 {
-    ItemsSource = new ViewModel().PlantDetails,
+    ItemsSource = new PlantViewModel().PlantDetails,
     XBindingPath = "Direction",
     YBindingPath = "Tree"
 };
@@ -112,10 +115,10 @@ SfPolarChart chart = new SfPolarChart();
 . . .
 PolarLineSeries series = new PolarLineSeries()
 {
-    ItemsSource = new ViewModel().PlantDetails,
+    ItemsSource = new PlantViewModel().PlantDetails,
     XBindingPath = "Direction",
     YBindingPath = "Tree",
-    IsClosed = "False"
+    IsClosed  = false
 };
 
 chart.Series.Add(series);
@@ -149,7 +152,7 @@ SfPolarChart chart = new SfPolarChart();
 ...
 PolarLineSeries series = new PolarLineSeries()
 {
-    ItemsSource = new ViewModel().PlantDetails,
+    ItemsSource = new PlantViewModel().PlantDetails,
     XBindingPath = "Direction",
     YBindingPath = "Tree",
     ShowMarkers= true
@@ -194,22 +197,24 @@ In order to change the series markers appearance, create an instance of the [Mar
 
 SfPolarChart chart = new SfPolarChart();
 ...
+ChartMarkerSettings chartMarker = new ChartMarkerSettings()
+{
+    Type = ShapeType.Diamond,
+    Fill = Colors.Brown,
+    Stroke = Colors.Black,
+    StrokeWidth = 1,
+    Height = 8,
+    Width = 8
+};
 PolarLineSeries series = new PolarLineSeries()
 {
-    ItemsSource = new ViewModel().PlantDetails,
+    ItemsSource = new PlantViewModel().PlantDetails,
     XBindingPath = "Direction",
     YBindingPath = "Tree",
     ShowMarkers = true,
     MarkerSettings = chartMarker
  };
 
-ChartMarkerSettings chartMarker= new ChartMarkerSettings();
-chartMarker.Type = ShapeType.Diamond;
-chartMarker.Fill = Colors.Brown;
-chartMarker.Stroke = Colors.Black;
-chartMarker.StrokeWidth= 1;
-chartMarker.Height = 8;
-chartMarker.Width = 8;
 chart.Series.Add(series);
 this.Content = chart;
 

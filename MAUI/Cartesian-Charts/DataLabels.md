@@ -48,6 +48,7 @@ ColumnSeries series = new ColumnSeries()
 };
 
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -90,14 +91,18 @@ N> This behavior varies based on the chart series type.
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-ColumnSeries series = new ColumnSeries();
 . . .
+ColumnSeries series = new ColumnSeries()
+{
+    ShowDataLabels = true,
+};
 series.DataLabelSettings = new CartesianDataLabelSettings()
 {
     BarAlignment = DataLabelAlignment.Middle,
 };
 
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -123,7 +128,7 @@ The [LabelPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
     . . .
     <chart:ColumnSeries ShowDataLabels="True">
         <chart:ColumnSeries.DataLabelSettings>
-            <chart:CartesianDataLabelSettings  UseSeriesPalette="False"/>
+            <chart:CartesianDataLabelSettings UseSeriesPalette="False"/>
         </chart:ColumnSeries.DataLabelSettings>
     </chart:ColumnSeries>
 </chart:SfCartesianChart>
@@ -133,14 +138,17 @@ The [LabelPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
-ColumnSeries series = new ColumnSeries();
-. . .
+ColumnSeries series = new ColumnSeries()
+{
+    ShowDataLabels = true,
+};
 series.DataLabelSettings = new CartesianDataLabelSettings()
 {
     UseSeriesPalette = false,
 };
 
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -163,9 +171,9 @@ The content of the label can be customized using the [LabelContext](https://help
 <chart:SfCartesianChart IsTransposed="True">
     . . .
     <chart:ColumnSeries ItemsSource="{Binding Data}" 
+                        XBindingPath="XValue"
+                        YBindingPath="YValue" 
                         ShowDataLabels="True"
-                        XBindingPath="Name"
-                        YBindingPath="Height" 
                         LabelContext="Percentage"/>
 </chart:SfCartesianChart>
 
@@ -179,8 +187,8 @@ chart.IsTransposed = true;
 ColumnSeries series = new ColumnSeries()
 {
     ItemsSource = new ViewModel().Data,
-    XBindingPath = "Name",
-    YBindingPath = "Height",
+    XBindingPath = "XValue",
+    YBindingPath = "YValue",
     ShowDataLabels = true,
     LabelContext = LabelContext.Percentage
 };
@@ -207,15 +215,15 @@ The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
         <DataTemplate x:Key="labelTemplate">
             <HorizontalStackLayout Spacing="5" WidthRequest="100">
                 <Image Source="arrow.png" WidthRequest="15" HeightRequest="15"/>
-                <Label Text="{Binding Item.Values}" VerticalOptions="Center" FontSize = "15"/>               
+                <Label Text="{Binding Item.Values}" VerticalOptions="Center" FontSize="15"/>               
             </HorizontalStackLayout>
         </DataTemplate>
     </chart:SfCartesianChart.Resources>
     . . .
     <chart:ColumnSeries ItemsSource="{Binding Data}" 
-                        LabelTemplate="{StaticResource labelTemplate}"
                         XBindingPath="Name"
                         YBindingPath="Values" 
+                        LabelTemplate="{StaticResource labelTemplate}"
                         ShowDataLabels="True">
 
         <chart:ColumnSeries.DataLabelSettings>
@@ -233,10 +241,10 @@ SfCartesianChart chart = new SfCartesianChart();
 chart.IsTransposed = true;
 . . .
 ColumnSeries series = new ColumnSeries();
-series.ShowDataLabels = true;
 series.ItemsSource = new ViewModel().Data;
 series.XBindingPath = "Name";
 series.YBindingPath = "Values";
+series.ShowDataLabels = true;
 series.DataLabelSettings = new CartesianDataLabelSettings()
 {
     LabelPlacement = DataLabelPlacement.Outer

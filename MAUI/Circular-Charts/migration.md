@@ -287,7 +287,8 @@ The following code example shows how to enable legend in chart.
 {% highlight C# %}
 SfChart chart = new SfChart();
 . . .
-chart.Legend = new ChartLegend ();
+chart.Legend = new ChartLegend();
+this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
@@ -315,6 +316,8 @@ chart.Legend = new ChartLegend ();
 SfCircularChart chart = new SfCircularChart();
 . . .
 chart.Legend = new ChartLegend();
+this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -356,6 +359,8 @@ To customize the data label appearance, create an instance of the [ChartDataMark
 
 {% endhighlight %}
 {% highlight C# %}
+SfChart chart = new SfChart();
+. . .
 PieSeries series = new PieSeries();
 . . .
 series.DataMarker = new ChartDataMarker();
@@ -372,6 +377,8 @@ style.FontSize = 18;
 series.DataMarker.LabelStyle = style;
 
 chart.Series.Add(series);
+this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %} 
@@ -426,6 +433,7 @@ style.Margin = 5;
 style.FontSize = 18;
 series.CircularDataLabelSettings.LabelStyle = style;
 chart.Series.Add(series);
+this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
@@ -450,9 +458,9 @@ To customize the tooltip appearance, create an instance of the [ChartTooltipBeha
     . . . 
     <chart:SfChart.ChartBehaviors>
 	    <chart:ChartTooltipBehavior BackgroundColor="Blue" 
-                                        TextColor="White" 
-                                        Margin="5"
-                                        FontSize="15"/>
+                                    TextColor="White" 
+                                    Margin="5"
+                                    FontSize="15"/>
     </chart:SfChart.ChartBehaviors>
     
     <chart:PieSeries ItemsSource="{Binding Data}" 
@@ -464,6 +472,8 @@ To customize the tooltip appearance, create an instance of the [ChartTooltipBeha
 {% endhighlight %} 
 
 {% highlight C# %}
+SfChart chart = new SfChart();
+. . .
 PieSeries  series = new PieSeries ();
 . . .
 series.EnableTooltip = true;
@@ -473,7 +483,9 @@ ChartTooltipBehavior tool = new ChartTooltipBehavior();
 tool.BackgroundColor = Color.Blue;
 tool.TextColor = Color.White;
 tool.Margin = new Thickness(5, 5, 5, 5);
+tool.FontSize = 15;
 chart.ChartBehaviors.Add(tool);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -506,16 +518,20 @@ chart.ChartBehaviors.Add(tool);
 
 {% endhighlight %} 
 {% highlight C# %}
+SfCircularChart chart = new SfCircularChart();
+. . .
 PieSeries series = new PieSeries();
 . . .
 series.EnableTooltip = true;
 chart.Series.Add(series);
 
 ChartTooltipBehavior tooltip = new ChartTooltipBehavior();
-tooltip.BackgroundColor = Color.Blue;
-tooltip.TextColor = Color.White;
+tooltip.BackgroundColor = Colors.Blue;
+tooltip.TextColor = Colors.White;
 tooltip.Margin = new Thickness(5, 5, 5, 5);
+tooltip.FontSize = 15;
 chart.TooltipBehavior = tooltip;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -553,6 +569,8 @@ Create an instance of the [ChartSelectionBehavior](https://help.syncfusion.com/c
 
 {% endhighlight %} 
 {% highlight C# %}
+SfChart chart = new SfChart();
+. . .
 PieSeries series = new PieSeries();
 . . .
 series.EnableDataPointSelection = true;
@@ -563,6 +581,7 @@ chart.Series.Add(series);
 ChartSelectionBehavior selectionBehavior = new ChartSelectionBehavior();
 
 chart.ChartBehaviors.Add(selectionBehavior);
+this.Content = chart;
 {% endhighlight %}
 {% endtabs %}
 </td>
@@ -595,6 +614,7 @@ selection.SelectionBrush="#314A6E";
 PieSeries series = new PieSeries();
 series.SelectionBehavior = selection;
 chart.Series.Add(series);
+this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}

@@ -31,6 +31,8 @@ To define the legend in the chart, initialize the [ChartLegend](https://help.syn
 
 SfCircularChart chart = new SfCircularChart();
 chart.Legend = new ChartLegend();
+. . .    
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -45,7 +47,7 @@ The visibility of the chart legend can be controlled using the [IsVisible](https
     
 <chart:SfCircularChart>
     <chart:SfCircularChart.Legend>
-        <chart:ChartLegend IsVisible = "True"/>
+        <chart:ChartLegend IsVisible="True"/>
     </chart:SfCircularChart.Legend>
 </chart:SfCircularChart>
 
@@ -59,6 +61,7 @@ chart.Legend = new ChartLegend()
 { 
     IsVisible = true 
 };
+. . .    
 this.Content = chart;
 
 {% endhighlight %}
@@ -93,7 +96,7 @@ SfCircularChart chart = new SfCircularChart();
 chart.Legend = new ChartLegend();
 PieSeries series = new PieSeries()
 {
-    ItemsSource = viewModel.Data,
+    ItemsSource = (new ViewModel()).Data,
     XBindingPath = "XValue",
     IsVisibleOnLegend = true,
     YBindingPath = "YValue",
@@ -134,12 +137,18 @@ The appearance of the legend label can be customized using the [`LabelStyle`](ht
 
 {% highlight c# %}
 
+SfCircularChart chart = new SfCircularChart();
 chart.Legend = new ChartLegend();
-chart.Legend.LabelStyle.TextColor = Color.Blue;
-chart.Legend.LabelStyle.FontSize = 18;
-chart.Legend.LabelStyle.FontAttributes = FontAttributes.Bold;
-chart.Legend.LabelStyle.Margin = 5;
-chart.Legend.LabelStyle.FontFamily = "PlaywriteAR-Regular";
+ChartLegendLabelStyle labelStyle = new ChartLegendLabelStyle()
+{
+    TextColor = Colors.Blue,
+    FontSize = 18,
+    FontAttributes = FontAttributes.Bold,
+    Margin = 5,
+    FontFamily = "PlaywriteAR-Regular"
+};
+chart.Legend.LabelStyle = labelStyle;
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -174,7 +183,7 @@ chart.Legend = new ChartLegend();
 
 PieSeries pieSeries = new PieSeries()
 {
-    ItemsSource = viewModel.Data,
+    ItemsSource = (new ViewModel()).Data,
     XBindingPath = "XValue",
     YBindingPath = "YValue",
     LegendIcon = ChartLegendIconType.Diamond,
@@ -211,8 +220,9 @@ chart.Legend = new ChartLegend()
 { 
     Placement = LegendPlacement.Bottom 
 };
-
+. . .    
 this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -241,7 +251,7 @@ chart.Legend = new ChartLegend()
 { 
     ToggleSeriesVisibility = true 
 };
-
+. . .    
 this.Content = chart;
 
 {% endhighlight %}
@@ -277,6 +287,8 @@ public class LegendExt : ChartLegend
 
 SfCircularChart chart = new SfCircularChart();
 chart.Legend = new LegendExt();
+. . .    
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -351,6 +363,7 @@ N> The BindingContext of the template is the corresponding underlying legend ite
         <chart:ChartLegend ItemTemplate="{StaticResource legendTemplate}">
         </chart:ChartLegend>
     </chart:SfCircularChart.Legend>
+    . . .    
 </chart:SfCircularChart>
 
 {% endhighlight %}

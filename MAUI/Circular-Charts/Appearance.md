@@ -20,11 +20,11 @@ The [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
 {% highlight xaml %}
 
 <chart:SfCircularChart>
-	. . .
-	<chart:PieSeries ItemsSource="{Binding Data}" 
-			 XBindingPath="XValue" 
-			 YBindingPath="YValue"
-			 PaletteBrushes="{Binding CustomBrushes}"/>
+    . . .
+    <chart:PieSeries ItemsSource="{Binding Data}" 
+                     XBindingPath="XValue" 
+                     YBindingPath="YValue"
+                     PaletteBrushes="{Binding CustomBrushes}"/>
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -64,11 +64,11 @@ The gradient for the circular chart can be set by using the [PaletteBrushes](htt
 {% highlight xaml %}
 
 <chart:SfCircularChart>
-	. . .
-	<chart:PieSeries ItemsSource="{Binding Data}" 
-			 XBindingPath="XValue" 
-			 YBindingPath="YValue"
-			 PaletteBrushes="{Binding CustomBrushes}"/>
+    . . .
+    <chart:PieSeries ItemsSource="{Binding Data}" 
+                     XBindingPath="XValue" 
+                     YBindingPath="YValue"
+                     PaletteBrushes="{Binding CustomBrushes}"/>
 </chart:SfCircularChart>
 
 {% endhighlight %}
@@ -174,8 +174,8 @@ SfCircularChart chart = new SfCircularChart();
 AbsoluteLayout absoluteLayout = new AbsoluteLayout();
 var border = new Border() 
 {
-	Stroke = Colors.Red,
-	StrokeThickness = 2
+    Stroke = Colors.Red,
+    StrokeThickness = 2
 };
 
 AbsoluteLayout.SetLayoutBounds(border, new Rect(0, 0, 1, 1));
