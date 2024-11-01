@@ -176,7 +176,7 @@ N> Add the namespace of the `SunburstViewModel` class to your XAML Page, if you 
 
 {% highlight C# %} 
 
-this.BindingContext = new ViewModel();
+this.BindingContext = new SunburstViewModel();
 
 {% endhighlight %}
 
@@ -197,8 +197,8 @@ this.BindingContext = new ViewModel();
     xmlns:model="clr-namespace:SunburstGettingStarted>
 
     <sunburst:SfSunburstChart x:Name="sunburst" 
-        ItemsSource="{Binding DataSource}" 
-        ValueMemberPath="EmployeesCount">
+                              ItemsSource="{Binding DataSource}" 
+                              ValueMemberPath="EmployeesCount">
 
         <sunburst:SfSunburstChart.Levels>
             <sunburst:SunburstHierarchicalLevel GroupMemberPath="Country"/>
@@ -218,7 +218,6 @@ SfSunburstChart sunburst = new SfSunburstChart();
 sunburst.ItemsSource = (new SunburstViewModel()).DataSource;
 sunburst.ValueMemberPath = "EmployeesCount";
 
-sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Country" });
 sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Country" });
 sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobDescription" });
 sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobGroup" });
@@ -248,10 +247,12 @@ The title of the sunburst chart provides quick information to the user about the
 {% highlight C# %}
 
 SfSunburstChart sunburst = new SfSunburstChart();
-sunburst.Title = new Label
+sunburst.Title = new Label()
 {
     Text = "Employees Count"
 };
+
+this.Content = sunburst;
 
 {% endhighlight %}
 
@@ -276,6 +277,7 @@ The [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstCha
 SfSunburstChart sunburst = new SfSunburstChart();
 . . .
 sunburst.ShowLabels = true;
+this.Content = sunburst;
 
 {% endhighlight %}
 
@@ -303,6 +305,7 @@ The legend provides information about the data points displayed in the sunburst 
 SfSunburstChart sunburst = new SfSunburstChart();
 . . .
 sunburst.Legend = new SunburstLegend();
+this.Content = sunburst;
 
 {% endhighlight %}
 
@@ -327,6 +330,7 @@ Tooltips are used to display information about a segment when the mouse hovers o
 SfSunburstChart sunburst = new SfSunburstChart();
 . . .
 sunburst.EnableTooltip = true;
+this.Content = sunburst;
 
 {% endhighlight %}
 
@@ -343,10 +347,10 @@ The following code example gives you the complete code of above configurations.
     xmlns:sunburst="clr-namespace:Syncfusion.Maui.SunburstChart;assembly=Syncfusion.Maui.SunburstChart"
     xmlns:model="clr-namespace:SunburstGettingStarted>
 
-    <sunburst:SfSunburstChart 
-                ItemsSource="{Binding DataSource}" 
-                ShowLabels="True"  EnableTooltip="True"
-                ValueMemberPath="EmployeesCount">
+    <sunburst:SfSunburstChart ItemsSource="{Binding DataSource}" 
+                              ShowLabels="True"  
+                              EnableTooltip="True"
+                              ValueMemberPath="EmployeesCount">
 
         <sunburst:SfSunburstChart.BindingContext>
             <model:SunburstViewModel/>
@@ -391,7 +395,6 @@ public partial class MainPage : ContentPage
 
         sunburst.Legend = new SunburstLegend();
 
-        sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Country" });
         sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Country" });
         sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobDescription" });
         sunburst.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "JobGroup" });

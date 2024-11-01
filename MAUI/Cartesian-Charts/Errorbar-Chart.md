@@ -15,7 +15,7 @@ keywords: .net maui error bar chart, error bar chart customization .net maui, sy
 [ErrorBarSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarSeries.html) indicates the errors or uncertainty in reported values. This will find the possible variations in measurements, and in Chart control these values are displayed as data points.
 The [HorizontalErrorValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarSeries.html#Syncfusion_Maui_Charts_ErrorBarSeries_HorizontalErrorValue) and the [VerticalErrorValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarSeries.html#Syncfusion_Maui_Charts_ErrorBarSeries_VerticalErrorValue) is used to set the error value(variation) to the series.
 
-N> The Error Bar is not an individual Chart, it associate with a main Chart. Here, we use Scatter Series Chart as Main Chart with the Error Bar Series Chart Support
+N> The Error Bar is not an individual Chart, it associate with a main Chart. Here, we use `Scatter Series Chart` as Main Chart with the Error Bar Series Chart Support
 
 The following code examples illustrates how to create error bar series:
 
@@ -51,8 +51,10 @@ The following code examples illustrates how to create error bar series:
 {% highlight c# %}
 
 SfCartesianChart chart = new SfCartesianChart();
+
 NumericalAxis primaryAxis = new NumericalAxis();
 chart.XAxes.Add(primaryAxis);
+
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 
@@ -89,7 +91,7 @@ this.Content = chart;
 The error bar mode specifies whether the error bar should be drawn horizontally, vertically or both. The [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarSeries.html#Syncfusion_Maui_Charts_ErrorBarSeries_Mode) property used to switch the error bar mode. By default, the Mode value is [Both](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ErrorBarMode.html#Syncfusion_Maui_Charts_ErrorBarMode_Both), which will display both horizontal and vertical error values.
 
 ### Both
-To view both the horizontal and vertical error value, you can set the Mode as Both as shown in the following code example.
+To view both the horizontal and vertical error value, you can set the Mode as `Both` as shown in the following code example.
 
 {% tabs %}
 
@@ -114,7 +116,7 @@ ErrorBarSeries errorBar = new ErrorBarSeries()
     YBindingPath = "Coal",
     HorizontalErrorValue = 0.5,
     VerticalErrorValue = 50,
-    Mode= Both
+    Mode = ErrorBarMode.Both
 };
 
 chart.Series.Add(errorBar);
@@ -153,7 +155,7 @@ ErrorBarSeries errorBar = new ErrorBarSeries()
     YBindingPath = "Coal",
     HorizontalErrorValue = 0.5,
     VerticalErrorValue = 50,
-    Mode= Horizontal
+    Mode = ErrorBarMode.Horizontal
 };
 
 chart.Series.Add(errorBar);
@@ -166,7 +168,7 @@ chart.Series.Add(errorBar);
 
 ### Vertical
 
-To view vertical error value, you can set the Mode as Vertical, as shown in the below code example.
+To view vertical error value, you can set the Mode as `Vertical`, as shown in the below code example.
 
 {% tabs %}
 
@@ -191,7 +193,7 @@ ErrorBarSeries errorBar = new ErrorBarSeries()
     YBindingPath = "Coal",
     HorizontalErrorValue = 0.5,
     VerticalErrorValue = 50,
-    Mode= Vertical
+    Mode = ErrorBarMode.Vertical
 };
 
 chart.Series.Add(errorBar);
@@ -227,7 +229,7 @@ The following code illustrates how to set the [HorizontalDirection](https://help
                       VerticalErrorValue="50"
                       HorizontalErrorValue="0.5"
                       HorizontalDirection="Plus"
-                      VerticalDirectyion="Minus">
+                      VerticalDirection="Minus">
 </chart:ErrorBarSeries>
 
 {% endhighlight %}
@@ -241,11 +243,9 @@ ErrorBarSeries errorBar = new ErrorBarSeries()
     YBindingPath = "Coal",
     HorizontalErrorValue = 0.5,
     VerticalErrorValue = 50,
-    HorizontalDirection="Plus",
-    VerticalDirectyion="Minus"
+    HorizontalDirection = ErrorBarDirection.Plus,
+    VerticalDirection = ErrorBarDirection.Minus,
 };
-
-chart.Series.Add(errorBar);
 
 {% endhighlight %}
 
@@ -282,7 +282,7 @@ ErrorBarSeries errorBar = new ErrorBarSeries()
     YBindingPath = "Coal",
     HorizontalErrorValue = 0.5,
     VerticalErrorValue = 50,
-    Type="Fixed"
+    Type = ErrorBarType.Fixed
 };
 
 chart.Series.Add(errorBar);
@@ -318,7 +318,7 @@ ErrorBarSeries errorBar = new ErrorBarSeries()
     YBindingPath = "Coal",
     HorizontalErrorValue = 0.5,
     VerticalErrorValue = 50,
-    Type="Percentage"
+    Type = ErrorBarType.Percentage
 };
 
 chart.Series.Add(errorBar);
@@ -354,7 +354,7 @@ ErrorBarSeries errorBar = new ErrorBarSeries()
     YBindingPath = "Coal",
     HorizontalErrorValue = 0.5,
     VerticalErrorValue = 50,
-    Type="StandardError"
+    Type = ErrorBarType.StandardError
 };
 
 chart.Series.Add(errorBar);
@@ -390,7 +390,7 @@ ErrorBarSeries errorBar = new ErrorBarSeries()
     YBindingPath = "Coal",
     HorizontalErrorValue = 0.5,
     VerticalErrorValue = 50,
-    Type="StandardDeviation"
+    Type = ErrorBarType.StandardDeviation
 };
 
 chart.Series.Add(errorBar);
@@ -430,9 +430,9 @@ ErrorBarSeries errorBar = new ErrorBarSeries()
     YBindingPath = "Coal",
     HorizontalErrorValue = 0.5,
     VerticalErrorValue = 50,
-    Type="Custom",
-    HorizontalErrorPath="HorizontalErrorValue",
-    VerticalErrorPath="VerticalErrorValue"
+    Type =ErrorBarType.Custom,
+    HorizontalErrorPath = "HorizontalErrorValue",
+    VerticalErrorPath = "VerticalErrorValue"
 };
     
 chart.Series.Add(errorBar);
@@ -460,11 +460,11 @@ You can define the LineStyle for the error bar lines using the [HorizontalLineSt
                       HorizontalErrorValue="0.5">    
 
     <chart:ErrorBarSeries.HorizontalLineStyle>
-        <chart:ErrorBarLineStyle Stroke="Black"  StrokeWidth="2"/>
+        <chart:ErrorBarLineStyle Stroke="Red"  StrokeWidth="2"/>
     </chart:ErrorBarSeries.HorizontalLineStyle>  
 
     <chart:ErrorBarSeries.VerticalLineStyle>
-        <chart:ErrorBarLineStyle Stroke="Black"  StrokeWidth="2"/>
+        <chart:ErrorBarLineStyle Stroke="Red"  StrokeWidth="2"/>
     </chart:ErrorBarSeries.VerticalLineStyle>        
 </chart:ErrorBarSeries>
 
@@ -493,8 +493,6 @@ errorBar.VerticalLineStyle = new ErrorBarLineStyle()
     StrokeWidth = 2
 };
 
-chart.Series.Add(errorBar);
-
 {% endhighlight %}
 
 {% endtabs %}
@@ -515,12 +513,12 @@ You can define the CapLineStyle for the error bar lines using the [HorizontalCap
                       VerticalErrorValue="50"
                       HorizontalErrorValue="0.5">
     <chart:ErrorBarSeries.HorizontalCapLineStyle>
-        <chart:ErrorBarCapLineStyle Stroke="Black"  
+        <chart:ErrorBarCapLineStyle Stroke="Red"  
                                     StrokeWidth="2">
         </chart:ErrorBarCapLineStyle>
     </chart:ErrorBarSeries.HorizontalCapLineStyle>  
     <chart:ErrorBarSeries.VerticalCapLineStyle>
-        <chart:ErrorBarCapLineStyle Stroke="Black"  
+        <chart:ErrorBarCapLineStyle Stroke="Red"  
                                     StrokeWidth="2">
         </chart:ErrorBarCapLineStyle>
     </chart:ErrorBarSeries.VerticalCapLineStyle>  
@@ -550,8 +548,6 @@ errorBarSeries.VerticalCapLineStyle = new ErrorBarCapLineStyle()
     Stroke = new SolidColorBrush(Colors.Red),
     StrokeWidth = 2
 };
-
-chart.Series.Add(errorBar);
 
 {% endhighlight %}
 

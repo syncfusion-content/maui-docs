@@ -65,7 +65,7 @@ this.Content = chart;
 
 ![Tooltip support in MAUI chart](Tooltip_images/maui_chart_tooltip.png)
 
-The [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html) is used to customize the tooltip. For customizing the tooltip, create an instance [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html) and set it to the [TooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_TooltipBehavior) property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html?tabs=tabid-1). The following properties are used to customize the tooltip:
+The [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html) is used to customize the tooltip. For customizing the tooltip, create an instance [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html) and set it to the [TooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_TooltipBehavior) property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html). The following properties are used to customize the tooltip:
 
 * [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html#Syncfusion_Maui_Charts_ChartTooltipBehavior_Background) - Gets or sets the background color to the tooltip label.
 * [FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTooltipBehavior.html#Syncfusion_Maui_Charts_ChartTooltipBehavior_FontAttributes) - Gets or sets the font style for the label.
@@ -80,9 +80,12 @@ The [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.C
 
 {% highlight xaml %}
 
-<chart:SfCartesianChart.TooltipBehavior>
-    <chart:ChartTooltipBehavior/>
-</chart:SfCartesianChart.TooltipBehavior>
+<chart:SfCartesianChart>
+    <chart:SfCartesianChart.TooltipBehavior>
+        <chart:ChartTooltipBehavior/>
+    </chart:SfCartesianChart.TooltipBehavior>
+    . . .
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
@@ -90,6 +93,8 @@ The [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.C
 
 SfCartesianChart chart = new SfCartesianChart();
 chart.TooltipBehavior = new ChartTooltipBehavior();
+. . .
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -126,8 +131,10 @@ The [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartT
 
 SfCartesianChart chart = new SfCartesianChart();
 . . .
-chart.TooltipBehavior = new ChartTooltipBehavior();
-chart.TooltipBehavior.Duration = 5000;
+chart.TooltipBehavior = new ChartTooltipBehavior()
+{
+    Duration = 5000
+};
 
 ColumnSeries series1 = new ColumnSeries()
 {
@@ -163,26 +170,26 @@ The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
 
 <chart:SfCartesianChart >
     <chart:SfCartesianChart.Resources>
-        <DataTemplate x:Key="tooltipTemplate1">
+        <DataTemplate x:Key="tooltipTemplate">
             <StackLayout Orientation="Horizontal">
                 <Label Text="{Binding Item.Category}"
-					   TextColor="Black"
-					   FontAttributes="Bold"
-					   FontSize="12"
-					   HorizontalOptions="Center"
-					   VerticalOptions="Center"/>
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       FontSize="12"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
                 <Label Text=" : "
-					   TextColor="Black"
-					   FontAttributes="Bold"
-					   FontSize="12"
-					   HorizontalOptions="Center"
-					   VerticalOptions="Center"/>
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       FontSize="12"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
                 <Label Text="{Binding Item.Value}"
-					   TextColor="Black"
-					   FontAttributes="Bold"
-					   FontSize="12"
-					   HorizontalOptions="Center"
-					   VerticalOptions="Center"/>
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       FontSize="12"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
             </StackLayout>
         </DataTemplate>
         . . .          
@@ -192,10 +199,14 @@ The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
         <chart:ChartTooltipBehavior/>
     </chart:SfCartesianChart.TooltipBehavior>
 
-    <chart:ColumnSeries ItemsSource="{Binding Data}" TooltipTemplate="{StaticResource tooltipTemplate1}"
-                        XBindingPath="Demand"
-                        YBindingPath="Year2010" 
+    <chart:ColumnSeries ItemsSource="{Binding Data}" TooltipTemplate="{StaticResource tooltipTemplate}"
+                        XBindingPath="Category"
+                        YBindingPath="Value" 
                         EnableTooltip="True"/>
+    <chart:ColumnSeries ItemsSource="{Binding Data}" TooltipTemplate="{StaticResource tooltipTemplate}"
+                        XBindingPath="Category"
+                        YBindingPath="Value" 
+                        EnableTooltip="True"/>                    
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -207,13 +218,23 @@ SfCartesianChart chart = new SfCartesianChart();
 ColumnSeries series1 = new ColumnSeries()
 {
     ItemsSource = new ViewModel().Data,
-    XBindingPath = "Demand",
-    YBindingPath = "Year2010",
+    XBindingPath = "Category",
+    YBindingPath = "Value",
     EnableTooltip = true,
-    TooltipTemplate = chart.Resources["tooltipTemplate1"] as DataTemplate
+    TooltipTemplate = chart.Resources["tooltipTemplate"] as DataTemplate
+};
+
+ColumnSeries series2 = new ColumnSeries()
+{
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "Category",
+    YBindingPath = "Value",
+    EnableTooltip = true,
+    TooltipTemplate = chart.Resources["tooltipTemplate"] as DataTemplate
 };
 
 chart.Series.Add(series1);
+chart.Series.Add(series2);
 this.Content = chart;
         
 {% endhighlight %}
@@ -237,12 +258,12 @@ The [Show](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartToolt
 <chart:SfCartesianChart>
     .....
     <chart:SfCartesianChart.TooltipBehavior>
-        <chart:ChartTooltipBehavior x:Name="tooltip"></chart:ChartTooltipBehavior>
+        <chart:ChartTooltipBehavior x:Name="tooltip"/>
     </chart:SfCartesianChart.TooltipBehavior>
     .....
 </chart:SfCartesianChart>
 
-<Button Text="Show tooltip" Clicked="Button_Clicked"></Button>
+<Button Text="Show tooltip" Clicked="Button_Clicked"/>
 
 {% endhighlight %}
 

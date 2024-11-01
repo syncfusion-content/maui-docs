@@ -37,13 +37,14 @@ SfPolarChart chart = new SfPolarChart();
 . . .
 PolarLineSeries series = new PolarLineSeries()
 {
-    ItemsSource = viewModel.PlantDetails,
+    ItemsSource = PlantViewModel.PlantDetails,
     XBindingPath = "Direction",
     YBindingPath = "Tree",
     ShowDataLabels = true
 };
 
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -68,7 +69,7 @@ The [UseSeriesPalette](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
     . . .
     <chart:PolarLineSeries ShowDataLabels="True">
         <chart:PolarLineSeries.DataLabelSettings>
-            <chart:PolarDataLabelSettings  UseSeriesPalette="False"/>
+            <chart:PolarDataLabelSettings UseSeriesPalette="False"/>
         </chart:PolarLineSeries.DataLabelSettings>
     </chart:PolarLineSeries>
 </chart:SfPolarChart>
@@ -86,6 +87,7 @@ series.DataLabelSettings = new PolarDataLabelSettings()
 };
 
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -117,7 +119,7 @@ SfPolarChart chart = new SfPolarChart();
 . . .
 PolarAreaSeries series = new PolarAreaSeries()
 {
-    ItemsSource = new ViewModel().PlantDetails,
+    ItemsSource = new PlantViewModel().PlantDetails,
     XBindingPath = "Direction",
     YBindingPath = "Tree",
     ShowDataLabels = true,
@@ -169,7 +171,7 @@ series.ShowDataLabels = true;
 
 DataTemplate labelTemplate = new DataTemplate(() =>
 {
-    var image = new Image
+    var image = new Image()
     {
         Source = "arrow.png",
         WidthRequest = 15,

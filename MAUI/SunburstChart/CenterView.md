@@ -20,29 +20,24 @@ The [CenterHoleSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sunburs
 {% highlight xaml %}
 
 <chart:SfSunburstChart.CenterView>
-
     <Border x:Name="border" HeightRequest="{Binding CenterHoleSize}" 
-        WidthRequest="{Binding CenterHoleSize}" BackgroundColor="GhostWhite">
+            WidthRequest="{Binding CenterHoleSize}" BackgroundColor="GhostWhite">
         <Border.StrokeShape>
-            <RoundRectangle 
-                CornerRadius="{Binding CenterHoleSize,Converter={StaticResource cornerRadius}}"/>
+            <RoundRectangle CornerRadius="{Binding CenterHoleSize,Converter={StaticResource cornerRadius}}"/>
         </Border.StrokeShape>
         <Border.Shadow>
             <Shadow Brush="Black"  Opacity="0.5" 
                     Radius="50"/>
         </Border.Shadow>
-        <VerticalStackLayout 
-            WidthRequest="{Binding CenterHoleSize,Converter={StaticResource cornerRadius}}"
-            HorizontalOptions="Center" VerticalOptions="Center">
-
+        <VerticalStackLayout WidthRequest="{Binding CenterHoleSize,Converter={StaticResource cornerRadius}}"
+                             HorizontalOptions="Center" VerticalOptions="Center">
             <Grid HorizontalOptions="Center">
                 <Path Data="{StaticResource PathData}" Fill="Black"/>
             </Grid>
-
             <Label LineBreakMode="WordWrap" WidthRequest="{Binding CenterHoleSize,Converter={StaticResource cornerRadius}}" 
-                    Text="Behind the Bricks" TextColor="Black" FontSize="12" Padding="0,5,0,0"
-                    VerticalTextAlignment="Center"  HorizontalTextAlignment="Center" FontFamily="Verdana"
-                    HorizontalOptions="CenterAndExpand"/>
+                   Text="Behind the Bricks" TextColor="Black" FontSize="12" Padding="0,5,0,0"
+                   VerticalTextAlignment="Center"  HorizontalTextAlignment="Center" FontFamily="Verdana"
+                   HorizontalOptions="CenterAndExpand"/> 
         </VerticalStackLayout>
     </Border>
 </sunburst:SfSunburstChart.CenterView>
@@ -56,37 +51,47 @@ SfSunburstChart sunburst = new SfSunburstChart();
 RoundRectangle roundRectangle = new RoundRectangle();
 roundRectangle.SetBinding(RoundRectangle.CornerRadiusProperty, "CenterHoleSize", converter: sunburstChart.Resources["cornerRadius"] as IValueConverter);
 
-Label label = new Label();
-label.Text = "Behind the Bricks";
-label.LineBreakMode = LineBreakMode.WordWrap;
-label.HorizontalTextAlignment = TextAlignment.Center;
-label.VerticalTextAlignment = TextAlignment.Center;
-label.FontSize = 12;
-label.Padding = new Thickness(0, 5, 0, 0);
-label.FontFamily = "Verdana";
-label.TextColor = Colors.Black;
+Label label = new Label()
+{
+    Text = "Behind the Bricks",
+    LineBreakMode = LineBreakMode.WordWrap,
+    HorizontalTextAlignment = TextAlignment.Center,
+    VerticalTextAlignment = TextAlignment.Center,
+    FontSize = 12,
+    Padding = new Thickness(0, 5, 0, 0),
+    FontFamily = "Verdana",
+    TextColor = Colors.Black
+};
 
-Path path = new Path();
-path.Data = viewModel.Data;
-path.Fill = Brush.Black;
+Path path = new Path()
+{
+    Data = viewModel.Data,
+    Fill = Brush.Black
+};
 
-Grid grid = new Grid();
-grid.HorizontalOptions = LayoutOptions.Center;
+Grid grid = new Grid()
+{
+    HorizontalOptions = LayoutOptions.Center
+};
 grid.Children.Add(path);
 
-VerticalStackLayout views = new VerticalStackLayout();
-views.HorizontalOptions = LayoutOptions.Center;
-views.VerticalOptions = LayoutOptions.Center;
+VerticalStackLayout views = new VerticalStackLayout()
+{
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center
+};
 views.SetBinding(WidthRequestProperty, "CenterHoleSize", converter: sunburstChart.Resources["cornerRadius"] as IValueConverter);
 views.Children.Add(grid);
 views.Children.Add(label);
 
-Border border = new Border();
+Border border = new Border()
+{
+    BackgroundColor = Colors.GhostWhite,
+    StrokeShape = roundRectangle,
+    Shadow = new Shadow { Radius = 50, Brush = Brush.Black, Opacity = 0.5f }
+};
 border.SetBinding(HeightRequestProperty, "CenterHoleSize");
 border.SetBinding(WidthRequestProperty, "CenterHoleSize");
-border.BackgroundColor = Colors.GhostWhite;
-border.StrokeShape = roundRectangle;
-border.Shadow = new Shadow() { Radius = 50, Brush = Brush.Black, Opacity = 0.5f };
 
 border.Content = views;
 sunburst.CenterView = border;

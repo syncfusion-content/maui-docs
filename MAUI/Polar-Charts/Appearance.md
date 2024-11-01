@@ -33,14 +33,14 @@ SfPolarChart chart = new SfPolarChart();
 . . .
 PolarLineSeries series1 = new PolarLineSeries()
 {
-    ItemsSource = new ViewModel().PlantDetails,
+    ItemsSource = new PlantViewModel().PlantDetails,
     XBindingPath = "Direction",
     YBindingPath = "Tree"
 };
 
 PolarLineSeries series2 = new PolarLineSeries()
 {
-    ItemsSource = new ViewModel().PlantDetails,
+    ItemsSource = new PlantViewModel().PlantDetails,
     XBindingPath = "Direction",
     YBindingPath = "Weed"
 };

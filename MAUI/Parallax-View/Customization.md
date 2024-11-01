@@ -48,6 +48,7 @@ namespace ParallaxViewGettingStarted
             parallax.Speed = 0.5;
             listview.ItemsSource = view.Items;
             parallax.Source = listview;
+            this.Content = parallax;
         }
     }
 }
@@ -101,6 +102,7 @@ namespace ParallaxViewGettingStarted
             listview.ItemsSource = view.Items;
             listview.Orientation = ItemsLayoutOrientation.Horizontal;
             parallax.Source = listview;
+            this.Content = parallax;
         }
     }
 }

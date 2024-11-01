@@ -46,6 +46,8 @@ chart.XAxes.Add(primaryAxis);
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 
+this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -83,6 +85,8 @@ NumericalAxis secondaryAxis = new NumericalAxis()
 
 chart.XAxes.Add(primaryAxis);
 chart.YAxes.Add(secondaryAxis);
+
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -126,16 +130,27 @@ Both major and minor tick lines can be customized by using the [MajorTickStyle](
 SfCartesianChart chart = new SfCartesianChart();
 . . .
 NumericalAxis numerical = new NumericalAxis();
-numerical.MajorTickStyle.StrokeWidth = 1;
-numerical.MajorTickStyle.Stroke = Colors.Red;
-numerical.MajorTickStyle.TickSize = 10;
 numerical.MinorTicksPerInterval = 4;
-numerical.MinorTickStyle.StrokeWidth = 1;
-numerical.MinorTickStyle.Stroke = Colors.Red;
+
+numerical.MajorTickStyle = new ChartAxisTickStyle()
+{
+    StrokeWidth = 1,
+    Stroke = Colors.Red,
+    TickSize = 10,
+};
+
+numerical.MinorTickStyle = new ChartAxisTickStyle()
+{
+    StrokeWidth = 1,
+    Stroke = Colors.Red,
+};
+
 chart.XAxes.Add(numerical);
 
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
+
+this.Content = chart;
 
 {% endhighlight %}
 

@@ -20,8 +20,7 @@ N> Polar chart supports title for secondary axis only.
 <chart:SfPolarChart>
     . . .
     <chart:SfPolarChart.PrimaryAxis>
-        <chart:CategoryAxis>
-        </chart:CategoryAxis>
+        <chart:CategoryAxis/>
     </chart:SfPolarChart.PrimaryAxis>
 
     <chart:SfPolarChart.SecondaryAxis>
@@ -41,10 +40,15 @@ SfPolarChart chart = new SfPolarChart();
 . . .
 CategoryAxis primaryAxis = new CategoryAxis();
 chart.PrimaryAxis = primaryAxis;
+
 NumericalAxis secondaryAxis = new NumericalAxis();
-secondaryAxis.Title = new ChartAxisTitle();
-secondaryAxis.Title.Text = "Values";
+secondaryAxis.Title = new ChartAxisTitle()
+{
+    Text = "Values"
+};
 chart.SecondaryAxis = secondaryAxis;
+
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -92,9 +96,13 @@ SfPolarChart chart = new SfPolarChart();
 . . .
 NumericalAxis secondaryAxis = new NumericalAxis();
 secondaryAxis.LabelExtent = 60;
-secondaryAxis.Title = new ChartAxisTitle();
-secondaryAxis.Title.Text = "Numeric";
+secondaryAxis.Title = new ChartAxisTitle()
+{
+    Text = "Numeric"
+};
 chart.SecondaryAxis = secondaryAxis;
+
+this.Content = chart;
 
 {% endhighlight %}
 

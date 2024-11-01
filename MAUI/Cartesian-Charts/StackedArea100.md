@@ -33,20 +33,20 @@ N> The Cartesian chart has a [Series](https://help.syncfusion.com/cr/maui/Syncfu
     </chart:SfCartesianChart.YAxes>   
 
     <chart:StackingArea100Series ItemsSource="{Binding Data1}"
-                                XBindingPath="Year"
-                                YBindingPath="Value"/>        
+                                 XBindingPath="Year"
+                                 YBindingPath="Value"/>        
 
     <chart:StackingArea100Series ItemsSource="{Binding Data2}"
-                                XBindingPath="Year"
-                                YBindingPath="Value"/>         
+                                 XBindingPath="Year"
+                                 YBindingPath="Value"/>         
 
     <chart:StackingArea100Series ItemsSource="{Binding Data3}"
-                                XBindingPath="Year"
-                                YBindingPath="Value"/>         
+                                 XBindingPath="Year"
+                                 YBindingPath="Value"/>         
 
     <chart:StackingArea100Series ItemsSource="{Binding Data4}"
-                                XBindingPath="Year"
-                                YBindingPath="Value"/>         
+                                 XBindingPath="Year"
+                                 YBindingPath="Value"/>         
 
 </chart:SfCartesianChart>
 
@@ -64,30 +64,30 @@ ViewModel viewModel = new ViewModel();
 
 StackingArea100Series series1 = new  StackingArea100Series()
 {
+    ItemsSource = viewModel.Data1
     XBindingPath = "Year",
     YBindingPath = "Value",
-    ItemsSource = viewModel.Data1
 };
 
 StackingArea100Series series2 = new StackingArea100Series()
 {
+    ItemsSource = viewModel.Data2
     XBindingPath = "Year",
     YBindingPath = "Value",
-    ItemsSource = viewModel.Data2
 };
 
 StackingArea100Series series3 = new StackingArea100Series()
 {
+    ItemsSource = viewModel.Data3
     XBindingPath = "Year",
     YBindingPath = "Value",
-    ItemsSource = viewModel.Data3
 };
 
 StackingArea100Series series4 = new StackingArea100Series()
 {
+    ItemsSource = viewModel.Data4
     XBindingPath = "Year",
     YBindingPath = "Value",
-    ItemsSource = viewModel.Data4
 };
 
 chart.Series.Add(series1);
@@ -116,7 +116,6 @@ A marker, also known as a symbol, is used to determine or highlight the position
                                  XBindingPath="Year"
                                  YBindingPath="Value"
                                  ShowMarkers="True"/>
-    ...
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -132,7 +131,7 @@ StackingArea100Series series = new StackingArea100Series()
     YBindingPath = "Value",
     ShowMarkers= true
 };
-...
+
 chart.Series.Add(series);
 this.Content= chart;
 
@@ -170,7 +169,6 @@ In order to change the series markers’ appearance, create an instance of the [
                                        Width="8"/>
         </chart:StackingArea100Series.MarkerSettings>
     </chart:StackingArea100Series>
-    ...
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -179,13 +177,15 @@ In order to change the series markers’ appearance, create an instance of the [
 
 SfCartesianChart chart = new SfCartesianChart();
 ...
-ChartMarkerSettings chartMarker= new ChartMarkerSettings();
-chartMarker.Type = ShapeType.Diamond;
-chartMarker.Fill = Colors.LightBlue;
-chartMarker.Stroke = Colors.Blue;
-chartMarker.StrokeWidth= 1;
-chartMarker.Height = 8;
-chartMarker.Width = 8;
+ChartMarkerSettings chartMarker= new ChartMarkerSettings()
+{
+    Type = ShapeType.Diamond,
+    Fill = Colors.Brown,
+    Stroke = Colors.Black,
+    StrokeWidth = 1,
+    Height = 8,
+    Width = 8
+};
 
 StackingArea100Series series = new StackingArea100Series()
 {
@@ -195,7 +195,7 @@ StackingArea100Series series = new StackingArea100Series()
     ShowMarkers= true,
     MarkerSettings = chartMarker
 };
-...
+
 chart.Series.Add(series);
 this.Content= chart;
 

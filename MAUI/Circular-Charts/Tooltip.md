@@ -58,7 +58,7 @@ The [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.C
 <chart:SfCircularChart>
 	. . .
 	<chart:SfCircularChart.TooltipBehavior>
-		<chart:ChartTooltipBehavior/>
+		<chart:ChartTooltipBehavior Duration="2000"/>
 	</chart:SfCircularChart.TooltipBehavior>
 </chart:SfCircularChart>
 
@@ -68,7 +68,12 @@ The [ChartTooltipBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.C
 
 SfCircularChart chart = new SfCircularChart();
 . . .
-chart.TooltipBehavior = new ChartTooltipBehavior();
+chart.TooltipBehavior = new ChartTooltipBehavior()
+{
+	Duration = 2000,
+};
+this.Content = chart;
+this.Content = chart;
 
 {% endhighlight %}
 

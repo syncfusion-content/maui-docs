@@ -30,6 +30,7 @@ To define the tooltip in the chart, set the [EnableTooltip](https://help.syncfus
 SfSunburstChart sunburst = new SfSunburstChart();
 . . .      
 sunburst.EnableTooltip = true;
+this.Content = sunburst;
 
 {% endhighlight %}
 
@@ -71,13 +72,16 @@ The appearance of the tooltip can be customized using the following properties:
 SfSunburstChart sunburst = new SfSunburstChart();
 . . .
 sunburst.EnableTooltip = true;
-SunburstTooltipSettings tooltipSettings = new SunburstTooltipSettings();
-tooltipSettings.TextColor = Colors.Black;
-tooltipSettings.Background = Brush.White;
-tooltipSettings.FontSize = 14;     
-tooltipSettings.Duration = 5;
+SunburstTooltipSettings tooltipSettings = new SunburstTooltipSettings()
+{
+    TextColor = Colors.Black,
+    Background = Brush.White,
+    FontSize = 14,
+    Duration = 5
+};
 sunburst.TooltipSettings = tooltipSettings;
 . . .
+this.Content = sunburst;
 
 {% endhighlight %}
 
@@ -94,7 +98,7 @@ The sunburst chart provides support for customizing the appearance of the toolti
 {% highlight xml %}
 
 <sunburst:SfSunburstChart EnableTooltip="True" 
-            TooltipTemplate="{StaticResource template1}">
+                          TooltipTemplate="{StaticResource template1}">
     . . .
     <sunburst:SfSunburstChart.Resources>
         <ResourceDictionary>
@@ -103,12 +107,12 @@ The sunburst chart provides support for customizing the appearance of the toolti
                     <Rectangle HeightRequest="30" WidthRequest="8" Fill="{Binding Fill}"/>
                     <StackLayout Orientation="Vertical">
                         <Label Text="{Binding Item[0]}" 
-                            TextColor="White" FontFamily="Helvetica" 
-                            FontSize="12.5" Padding="5,0,0,0"
-                            FontAttributes="Bold"/>
+                               TextColor="White" FontFamily="Helvetica" 
+                               FontSize="12.5" Padding="5,0,0,0"
+                               FontAttributes="Bold"/>
                         <Label Text="{Binding Item[1],StringFormat='Count : {0}M'}" 
-                            TextColor="White" FontFamily="Helvetica" 
-                            FontSize="12" Padding="5,0,0,0" Margin="0,2,0,0"/>
+                               TextColor="White" FontFamily="Helvetica" 
+                               FontSize="12" Padding="5,0,0,0" Margin="0,2,0,0"/>
                     </StackLayout>
                 </StackLayout>
             </DataTemplate>
@@ -127,6 +131,7 @@ SfSunburstChart sunburst = new SfSunburstChart();
 sunburst.EnableTooltip = true;
 sunburst.TooltipTemplate = (DataTemplate)sunburstChart.Resources["template1"];
 . . .
+this.Content = sunburst;
 
 {% endhighlight %}
 
