@@ -173,7 +173,8 @@ namespace BusyIndicatorSample
 
 The following gif image illustrates the result of the above code.
 
-![Getting Started](Images/GettingStarted/CircularMaterial.gif)
+![Circular material in .NET MAUI Busy Indicator.](Images/gettingstarted/net-maui-busy-indicator-circular-material.gif)
 
 You can find the complete getting started sample of .NET MAUI Busy Indicator from this [link.](https://github.com/SyncfusionExamples/maui-busyindicator-samples)
 
+N> You can refer to our [.NET MAUI Busy Indicator](https://www.syncfusion.com/maui-controls/maui-busy-indicator) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Busy Indicator Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/BusyIndicator) that shows you how to render the Busy Indicator in .NET MAUI.
