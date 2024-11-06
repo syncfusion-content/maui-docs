@@ -21,6 +21,7 @@ In the editable mode, the [ComboBox](https://help.syncfusion.com/cr/maui/Syncfus
 
 <editors:SfComboBox x:Name="comboBox"
                     WidthRequest="250"
+                    HeightRequest = "50"
                     IsEditable="true"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
@@ -31,6 +32,12 @@ In the editable mode, the [ComboBox](https://help.syncfusion.com/cr/maui/Syncfus
 
 {% highlight C# %}
 
+SfComboBox comboBox = new SfComboBox(); 
+comboBox.WidthRequest = 250;
+comboBox.HeightRequest = 50;
+comboBox.DisplayMemberPath = "Name";
+comboBox.TextMemberPath = "Name";
+comboBox.ItemsSource = socialMediaViewModel.SocialMedias;
 comboBox.IsEditable = true;
 
 {% endhighlight %}
@@ -49,6 +56,7 @@ Non-editable mode prevents users from editing and instead allows them to select 
 
 <editors:SfComboBox x:Name="comboBox"
                     WidthRequest="250"
+                    HeightRequest="50"
                     IsEditable="false"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
@@ -59,6 +67,12 @@ Non-editable mode prevents users from editing and instead allows them to select 
 
 {% highlight C# %}
 
+SfComboBox comboBox = new SfComboBox(); 
+comboBox.WidthRequest = 250;
+comboBox.HeightRequest = 50;
+comboBox.DisplayMemberPath = "Name";
+comboBox.TextMemberPath = "Name";
+comboBox.ItemsSource = socialMediaViewModel.SocialMedias;
 comboBox.IsEditable = false;
 
 {% endhighlight %}
@@ -77,6 +91,7 @@ By default, the clear button `X` will be displayed in the editor of the ComboBox
 
 <editors:SfComboBox x:Name="comboBox"
                     WidthRequest="250"
+                    HeightRequest="50"
                     IsEditable="true"
                     IsClearButtonVisible="false"
                     ItemsSource="{Binding SocialMedias}"
@@ -88,6 +103,13 @@ By default, the clear button `X` will be displayed in the editor of the ComboBox
 
 {% highlight C# %}
 
+SfComboBox comboBox = new SfComboBox(); 
+comboBox.WidthRequest = 250;
+comboBox.HeightRequest = 50;
+comboBox.IsEditable = true;
+comboBox.DisplayMemberPath = "Name";
+comboBox.TextMemberPath = "Name";
+comboBox.ItemsSource = socialMediaViewModel.SocialMedias;
 comboBox.IsClearButtonVisible = false;
 
 {% endhighlight %}

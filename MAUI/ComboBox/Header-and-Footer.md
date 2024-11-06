@@ -21,12 +21,12 @@ You can provide content for header at the top of the ComboBox's dropdown. The [D
 {% highlight xaml %}
 
     <StackLayout VerticalOptions="Start" HorizontalOptions="Start" Padding="30">
-        <combobox:SfComboBox HeightRequest="40" x:Name="comboBox" IsEditableMode="true" DisplayMemberPath="Name" ItemsSource="{Binding SocialMedias}" AllowFiltering="true">
-            <combobox:SfComboBox.DropDownHeaderView>
+        <combobox:SfComboBox HeightRequest="40" x:Name="comboBox" IsEditable="true" DisplayMemberPath="Name" ItemsSource="{Binding SocialMedias}" IsFilteringEnabled="true">
+            <combobox:SfComboBox.DropdownHeaderView>
                 <StackLayout BackgroundColor="#f0f0f0" >
                     <Label  x:Name="label2" FontSize="20" VerticalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" TextColor="#006bcd" />
                 </StackLayout>
-            </combobox:SfComboBox.DropDownHeaderView>        
+            </combobox:SfComboBox.DropdownHeaderView>        
         </combobox:SfComboBox>
     </StackLayout>                  
 
@@ -42,12 +42,15 @@ You can provide content for header at the top of the ComboBox's dropdown. The [D
         Padding = new Thickness(30)
     };
 
-     SfComboBox comboBox = new SfComboBox()
-     {
+    SfComboBox comboBox = new SfComboBox()
+    {
         HeightRequest = 40,
-        ShowDropDownHeaderView = true,
-        ItemsSource = new List<string> { "Facebook", "Twitter", "Instagram", "LinkedIn" },
-        DropDownHeaderViewHeight = 50
+        ShowDropdownHeaderView = true,
+        ItemsSource = socialMediaViewModel.SocialMedias,
+        IsEditable = true,
+        DisplayMemberPath = "Name",
+        IsFilteringEnabled = true,
+        DropdownHeaderViewHeight = 50
     };
 
     Label label2 = new Label()
@@ -60,7 +63,7 @@ You can provide content for header at the top of the ComboBox's dropdown. The [D
         TextColor = Color.FromHex("#006bcd")
     };
 
-    comboBox.DropDownHeaderView = label2;
+    comboBox.DropdownHeaderView = label2;
     layout.Children.Add(comboBox);
     this.Content = layout;
 
