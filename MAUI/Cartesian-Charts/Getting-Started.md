@@ -121,7 +121,7 @@ public class PersonViewModel
 {
     public List<PersonModel> Data { get; set; }      
 
-    public ViewModel()       
+    public PersonViewModel()       
     {
         Data = new List<PersonModel>()
         {
@@ -533,7 +533,7 @@ namespace ChartGettingStarted
             {
                 Label = "Height",
                 ShowDataLabels = true,
-                ItemsSource = (new ViewModel()).Data,
+                ItemsSource = (new PersonViewModel()).Data,
                 XBindingPath = "Name",
                 YBindingPath = "Height",
                 DataLabelSettings = new CartesianDataLabelSettings()

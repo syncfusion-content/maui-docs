@@ -116,7 +116,7 @@ public class AdmissionViewModel
 {
     public List<AdmissionModel> Data { get; set; }
 
-    public ChartViewModel()
+    public AdmissionViewModel()
     {
         Data = new List<AdmissionModel>()
         {
@@ -309,25 +309,34 @@ The following code example gives you the complete code of above configurations.
 
 {% highlight xaml %}
 
-<chart:SfFunnelChart ItemsSource="{Binding Data}" 
-                     XBindingPath="XValue" 
-                     YBindingPath="YValue"
-                     ShowDataLabels="True" 
-                     EnableTooltip="True">
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ChartGettingStarted.MainPage"
+    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+    xmlns:model="clr-namespace:ChartGettingStarted">
 
-    <chart:SfFunnelChart.Title>
-        <Label Text="School Admission"/>
-    </chart:SfFunnelChart.Title>
+    <chart:SfFunnelChart ItemsSource="{Binding Data}" 
+                         XBindingPath="XValue" 
+                         YBindingPath="YValue"
+                         ShowDataLabels="True" 
+                         EnableTooltip="True">
 
-    <chart:SfFunnelChart.BindingContext>
-        <model:AdmissionViewModel/>
-    </chart:SfFunnelChart.BindingContext>
+        <chart:SfFunnelChart.Title>
+            <Label Text="School Admission"/>
+        </chart:SfFunnelChart.Title>
 
-    <chart:SfFunnelChart.Legend>
-        <chart:ChartLegend/>
-    </chart:SfFunnelChart.Legend>
+        <chart:SfFunnelChart.BindingContext>
+            <model:AdmissionViewModel/>
+        </chart:SfFunnelChart.BindingContext>
 
-</chart:SfFunnelChart>
+        <chart:SfFunnelChart.Legend>
+            <chart:ChartLegend/>
+        </chart:SfFunnelChart.Legend>
+
+    </chart:SfFunnelChart>
+
+</ContentPage>
  
 {% endhighlight %}
 

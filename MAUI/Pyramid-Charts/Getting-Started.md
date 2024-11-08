@@ -309,23 +309,32 @@ The following code example gives you the complete code of above configurations.
 
 {% highlight xaml %}
 
-<chart:SfPyramidChart ItemsSource="{Binding Data}" 
-                      ShowDataLabels="True" 
-                      EnableTooltip="True"
-                      XBindingPath="Name"         
-                      YBindingPath="Value">
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ChartGettingStarted.MainPage"
+    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+    xmlns:model="clr-namespace:ChartGettingStarted">
 
-    <chart:SfPyramidChart.Title>
-        <Label Text="Pyramid Stages"/>
-    </chart:SfPyramidChart.Title>
+    <chart:SfPyramidChart ItemsSource="{Binding Data}" 
+                          ShowDataLabels="True" 
+                          EnableTooltip="True"
+                          XBindingPath="Name"         
+                          YBindingPath="Value">
 
-    <chart:SfPyramidChart.BindingContext>
-        <model:StageViewModel/>
-    </chart:SfPyramidChart.BindingContext>
+        <chart:SfPyramidChart.Title>
+            <Label Text="Pyramid Stages"/>
+        </chart:SfPyramidChart.Title>
 
-    <chart:SfPyramidChart.Legend>
-        <chart:ChartLegend/>
-    </chart:SfPyramidChart.Legend>
+        <chart:SfPyramidChart.BindingContext>
+            <model:StageViewModel/>
+        </chart:SfPyramidChart.BindingContext>
+
+        <chart:SfPyramidChart.Legend>
+            <chart:ChartLegend/>
+        </chart:SfPyramidChart.Legend>
+        
+</ContentPage>
 
 </chart:SfPyramidChart>
  
