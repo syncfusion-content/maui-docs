@@ -21,6 +21,7 @@ We can customize the desire text to be displayed for indicating no results found
                     
 <editors:SfComboBox x:Name="comboBox"
                         IsEditable="True"
+                        HeightRequest="40"
                         IsFilteringEnabled="True"
                         NoResultsFoundText="Not Found"
                         ItemsSource="{Binding SocialMedias}"
@@ -32,7 +33,17 @@ We can customize the desire text to be displayed for indicating no results found
 
 {% highlight c# %}
 
-comboBox.NoResultsFoundText = "Not Found";
+SfComboBox comboBox = new SfComboBox() 
+{
+    WidthRequest= 240,
+    HeightRequest = 40,
+    NoResultsFoundText="Not Found",
+    IsFilteringEnabled = true,
+    IsEditable = true,
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name",
+    ItemsSource = socialMediaViewModel.SocialMedias
+};
 
 {% endhighlight %}
 
@@ -54,7 +65,8 @@ We can customize the appearance of the desire text to be displayed for indicatin
                     IsFilteringEnabled="True"
                     TextMemberPath="Name"
                     DisplayMemberPath="Name"
-                    WidthRequest="240">
+                    WidthRequest="240"
+                    HeightRequest="40">
     <editors:SfComboBox.NoResultsFoundTemplate>
         <DataTemplate>
             <Label Text="Not Found"  FontSize="20" FontAttributes="Italic" TextColor="Red" Margin="70,10,0,0"/>
@@ -74,12 +86,13 @@ var noResultsTemplate = new DataTemplate(() =>
                 Text = "Not Found",
                 FontSize = 20,
                 FontAttributes = FontAttributes.Italic,
-                TextColor = Color.Red,
+                TextColor = Colors.Red,
                 Margin = new Thickness(70, 10, 0, 0)
             };
 
             return new ViewCell { View = label };
         });
+
 
 comboBox.NoResultsFoundTemplate = noResultsTemplate;
 
