@@ -11,8 +11,8 @@ documentation: ug
 
 ## Auto generate data editor 
 
-By default, the [SfDataForm.Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_Items) will be generated based on the property type. For example, the [DataFormTextItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormTextItem.html) will be generated based on the property type in [DataObject](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_DataObject).
-The [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html) generation depends on the type and attribute defined for the property.
+By default, the [SfDataForm.Items](html#Syncfusion_Maui_DataForm_SfDataForm_Itemshttps://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.) will be generated based on the property type. For example, the [DataFormTextItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormTextItem.html) will be generated based on the property type in [DataObject](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_DataObject).
+The [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html?tabs=tabid-53%2Ctabid-58%2Ctabid-100%2Ctabid-33%2Ctabid-38%2Ctabid-6%2Ctabid-1%2Ctabid-28%2Ctabid-63%2Ctabid-8%2Ctabid-48%2Ctabid-96%2Ctabid-68%2Ctabid-76%2Ctabid-18%2Ctabid-13%2Ctabid-23%2Ctabid-72%2Ctabid-84%2Ctabid-92%2Ctabid-80%2Ctabid-88%2Ctabid-43) generation depends on the type and attribute defined for the property.
 
 You can customize the auto-generated editor, label, and group settings by using the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event.
 
@@ -27,7 +27,7 @@ You can customize the auto-generated editor, label, and group settings by using 
 {{'[DataFormTextItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormTextItem.html)'| markdownify }}
 </td>
 <td>
-{{'[Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0)'| markdownify }}
+{{'[Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-8.0&viewFallbackFrom=net-maui-7.0)'| markdownify }}
 </td>
 <td>
 Generated for the string type and the properties with [DataType(DataType.Text)] attribute.
@@ -38,7 +38,7 @@ Generated for the string type and the properties with [DataType(DataType.Text)] 
 {{'[DataFormMultilineTextItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormMultilineItem.html)'| markdownify }}
 </td>
 <td>
-{{'[Editor](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor?view=net-maui-7.0)'| markdownify }}
+{{'[Editor](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor?view=net-maui-8.0&viewFallbackFrom=net-maui-7.0)'| markdownify }}
 </td>
 <td>
 Generated for the string type properties with [DataType(DataType.MultilineText)] attribute. 
@@ -49,7 +49,7 @@ Generated for the string type properties with [DataType(DataType.MultilineText)]
 {{'[DataFormPasswordItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormPasswordItem.html)'| markdownify }}
 </td>
 <td>
-{{'[Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-7.0)'| markdownify }}
+{{'[Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry?view=net-maui-8.0&viewFallbackFrom=net-maui-7.0)'| markdownify }}
 </td>
 <td>
 Generated for the string type properties with [DataType(DataType.Password)] attribute. 
@@ -57,10 +57,10 @@ Generated for the string type properties with [DataType(DataType.Password)] attr
 </tr>
 <tr>
 <td>
-{{'[DataFormNumericItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormNumericItem.html)'| markdownify }}
+{{'[DataFormNumericItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormNumericItem.html?tabs=tabid-1)'| markdownify }}
 </td>
 <td>
-{{'[SfNumericEntry](https://help.syncfusion.com/maui/numeric-entry/overview)'| markdownify }}
+{{'[SfNumericEntry](https://help.syncfusion.com/maui/numericentry/overview)'| markdownify }}
 </td>
 <td>
 Generated for int, double, float type property. 
@@ -68,7 +68,7 @@ Generated for int, double, float type property.
 </tr>
 <tr>
 <td>
-{{'[DataFormMaskedTextItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormMaskedTextItem.html)'| markdownify }}
+{{'[DataFormMaskedTextItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormMaskedTextItem.html?tabs=tabid-1)'| markdownify }}
 </td>
 <td>
 {{'[SfMaskedEntry](https://help.syncfusion.com/maui/masked-entry/overview)'| markdownify }}
@@ -79,10 +79,10 @@ Generated for the string type properties with [DataType(DataType.PhoneNumber)] a
 </tr>
 <tr>
 <td>
-{{'[DataFormDateItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormDateItem.html)'| markdownify }}
+{{'[DataFormDateItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.html))'| markdownify }}
 </td>
 <td>
-{{'[DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-7.0)'| markdownify }}
+{{'[DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker?view=net-maui-8.0&viewFallbackFrom=net-maui-7.0)'| markdownify }}
 </td>
 <td>
 Generated for the DateTime, DateTimeOffset, and DateOnly type properties and the properties with [DataType(DataType.Date)] or [DataType(DataType.DateTime)] attributes.
@@ -90,7 +90,7 @@ Generated for the DateTime, DateTimeOffset, and DateOnly type properties and the
 </tr>
 <tr>
 <td>
-{{'[DataFormTimeItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormTimeItem.html)'| markdownify }}
+{{'[DataFormTimeItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormTimeItem.html?tabs=tabid-1)'| markdownify }}
 </td>
 <td>
 {{'[TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/timepicker?view=net-maui-7.0&tabs=windows)'| markdownify }}
@@ -101,21 +101,10 @@ Generated for TimeSpan and TimeOnly type properties and the properties with [Dat
 </tr>
 <tr>
 <td>
-{{'[DataFormCheckBoxItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormCheckBoxItem.html)'| markdownify }}
+{{'[DataFormCheckBoxItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormCheckBoxItem.html?tabs=tabid-1)'| markdownify }}
 </td>
 <td>
-{{'[CheckBox](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/checkbox?view=net-maui-7.0)'| markdownify }}
-</td>
-<td>
-Generated for the Bool type property.
-</td>
-</tr>
-<tr>
-<td>
-{{'[DataFormSwitchItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormSwitchItem.html)'| markdownify }}
-</td>
-<td>
-{{'[Switch](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/switch?view=net-maui-7.0)'| markdownify }}
+{{'[CheckBox](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/checkbox?view=net-maui-8.0&viewFallbackFrom=net-maui-7.0)'| markdownify }}
 </td>
 <td>
 Generated for the Bool type property.
@@ -123,7 +112,18 @@ Generated for the Bool type property.
 </tr>
 <tr>
 <td>
-{{'[DataFormComboBoxItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormComboBoxItem.html)'| markdownify }}
+{{'[DataFormSwitchItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormSwitchItem.html?tabs=tabid-1%2Ctabid-3)'| markdownify }}
+</td>
+<td>
+{{'[Switch](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/switch?view=net-maui-8.0&viewFallbackFrom=net-maui-7.0)'| markdownify }}
+</td>
+<td>
+Generated for the Bool type property.
+</td>
+</tr>
+<tr>
+<td>
+{{'[DataFormComboBoxItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormComboBoxItem.html?tabs=tabid-1%2Ctabid-3)'| markdownify }}
 </td>
 <td>
 {{'[SfComboBox](https://help.syncfusion.com/maui/combobox/overview)'| markdownify }}
@@ -133,7 +133,7 @@ Generated for the enum type property.
 </td>
 </tr><tr>
 <td>
-{{'[DataFormAutoCompleteItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormAutoCompleteItem.html)'| markdownify }}
+{{'[DataFormAutoCompleteItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormAutoCompleteItem.html?tabs=tabid-1)'| markdownify }}
 </td>
 <td>
 {{'[SfAutoComplete](https://help.syncfusion.com/maui/autocomplete/overview)'| markdownify }}
