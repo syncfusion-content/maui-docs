@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in .NET MAUI DataForm Control | Syncfusion
-description: Learn here about Accessibility support with the Syncfusion .NET MAUI DataForm(SfDataForm) control in mobile and desktop applications from a single shared codebase.
+description: Learn here all about accessibility support in Syncfusion .NET MAUI DataForm(SfDataForm) control, it's elements, and more.
 platform: maui
 control: SfDataForm
 documentation: ug
