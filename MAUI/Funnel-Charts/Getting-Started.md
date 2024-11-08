@@ -139,7 +139,7 @@ N> Add the namespace of `AdmissionViewModel` class to your XAML Page, if you pre
 
 {% tabs %} 
 
-{% highlight xaml %} 
+{% highlight xaml %}
 
 <ContentPage
     . . .
@@ -155,7 +155,7 @@ N> Add the namespace of `AdmissionViewModel` class to your XAML Page, if you pre
 
 {% endhighlight %}
 
-{% highlight C# %} 
+{% highlight C# %}
 
 SfFunnelChart chart = new SfFunnelChart();
 AdmissionViewModel viewModel = new AdmissionViewModel();

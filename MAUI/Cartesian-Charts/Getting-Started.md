@@ -474,12 +474,12 @@ The following code example gives you the complete code of above configurations.
         </chart:SfCartesianChart.YAxes>
 
         <!--Initialize the series for chart-->
-        <chart:ColumnSeries Label="Height" 
+        <chart:ColumnSeries ItemsSource="{Binding Data}"
+                            XBindingPath="Name" 
+                            YBindingPath="Height"
                             EnableTooltip="True"
                             ShowDataLabels="True"
-                            ItemsSource="{Binding Data}"
-                            XBindingPath="Name" 
-                            YBindingPath="Height">
+                            Label="Height">
             <chart:ColumnSeries.DataLabelSettings>
                 <chart:CartesianDataLabelSettings LabelPlacement="Inner"/>
             </chart:ColumnSeries.DataLabelSettings>
@@ -531,11 +531,12 @@ namespace ChartGettingStarted
             //Initialize the two series for SfChart
             ColumnSeries series = new ColumnSeries()
             {
-                Label = "Height",
-                ShowDataLabels = true,
                 ItemsSource = (new PersonViewModel()).Data,
                 XBindingPath = "Name",
                 YBindingPath = "Height",
+                ShowDataLabels = true,
+                EnableTooltip = true,
+                Label = "Height",
                 DataLabelSettings = new CartesianDataLabelSettings()
                 {
                     LabelPlacement = DataLabelPlacement.Inner

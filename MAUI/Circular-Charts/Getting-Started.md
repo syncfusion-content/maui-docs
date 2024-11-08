@@ -139,7 +139,7 @@ N> Add namespace of `SalesViewModel` class to your XAML Page, if you prefer to s
 
 {% tabs %} 
 
-{% highlight xaml %} 
+{% highlight xaml %}
 
 <ContentPage
     . . .
@@ -155,7 +155,7 @@ N> Add namespace of `SalesViewModel` class to your XAML Page, if you prefer to s
 
 {% endhighlight %}
 
-{% highlight C# %} 
+{% highlight C# %}
 
 SfCircularChart chart = new SfCircularChart();
 this.BindingContext = new SalesViewModel();
