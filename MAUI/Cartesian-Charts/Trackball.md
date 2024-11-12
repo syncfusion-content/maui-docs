@@ -419,6 +419,10 @@ To customize the appearance of axis labels on the trackball, you can use the [Tr
         <chart:DateTimeAxis TrackballLabelTemplate="{StaticResource axisLabelTemplate}" ShowTrackballLabel="True"/>
     </chart:SfCartesianChart.XAxes>  
 
+    <chart:SfCartesianChart.YAxes>
+        <chart:NumericalAxis>
+    </chart:SfCartesianChart.YAxes>
+
     <chart:LineSeries ItemsSource="{Binding Data}" 
                       XBindingPath="Date"
                       YBindingPath="Values"/>
@@ -453,7 +457,11 @@ DataTemplate axisLabelTemplate = new DataTemplate(() =>
 });
 
 primaryAxis.TrackballLabelTemplate = axisLabelTemplate;
-. . .
+chart.XAxes.Add(primaryAxis);
+
+NumericalAxis secondaryAxis = new NumericalAxis()
+chart.YAxes.Add(secondaryAxis);
+
 LineSeries series = new LineSeries();
 series.ItemsSource = new ViewModel().Data;
 series.XBindingPath = "Date";
