@@ -63,6 +63,8 @@ To customize the [NumericalAxis](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 Axis interval can be customized by using the [Interval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.NumericalAxis.html#Syncfusion_Maui_Charts_NumericalAxis_Interval) property. By default, interval will be calculated based on the minimum and maximum value of the provided data.
 
+N> A negative value cannot be set for the interval. Please ensure the value is positive.
+
 {% tabs %}
 
 {% highlight xaml %}
@@ -349,6 +351,8 @@ To customize the [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 In [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html), intervals can be customized by using the [Interval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html#Syncfusion_Maui_Charts_DateTimeAxis_Interval) and [IntervalType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html#Syncfusion_Maui_Charts_DateTimeAxis_IntervalType) properties. For example, setting [Interval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html#Syncfusion_Maui_Charts_DateTimeAxis_Interval) as 6 and [IntervalType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html#Syncfusion_Maui_Charts_DateTimeAxis_IntervalType) as [Months](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeIntervalType.html#Syncfusion_Maui_Charts_DateTimeIntervalType_Months) will consider 6 months as interval.
 
+N> A negative value cannot be set for the interval. Please ensure the value is positive.
+
 {% tabs %}
 
 {% highlight xaml %}
@@ -456,6 +460,8 @@ To customize the [LogarithmicAxis](https://help.syncfusion.com/cr/maui/Syncfusio
 ### Interval
 
 Axis interval can be customized using the [Interval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html#Syncfusion_Maui_Charts_LogarithmicAxis_Interval) property of the axis. By default, interval will be calculated based on the minimum and maximum value of the provided data. And the default value of the interval is 1. 
+
+N> A negative value cannot be set for the interval. Please ensure the value is positive.
 
 {% tabs %}
 
