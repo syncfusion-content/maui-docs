@@ -123,6 +123,7 @@ chart.XAxes.Add(dateTimeAxis);
 NumericalAxis secondaryAxis = new NumericalAxis();
 chart.YAxes.Add(secondaryAxis);
 ...
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -152,7 +153,7 @@ The Plot band recurrence feature enables plot bands to be drawn repeatedly at re
         <chart:NumericalAxis>
             <chart:NumericalAxis.PlotBands>
                 <chart:NumericalPlotBandCollection>
-                    <chart:NumericalPlotBand Start="20"  End="22"
+                    <chart:NumericalPlotBand Start="20" End="22"
                                              IsRepeatable="True"
                                              RepeatUntil="32"
                                              RepeatEvery="4"

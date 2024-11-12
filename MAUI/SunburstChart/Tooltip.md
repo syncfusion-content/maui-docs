@@ -58,7 +58,7 @@ The appearance of the tooltip can be customized using the following properties:
     . . .
     <sunburst:SfSunburstChart.TooltipSettings>
         <sunburst:SunburstTooltipSettings   
-            Background="White"  TextColor="Black"  
+            Background="White" TextColor="Black"  
             FontSize="14" FontAttributes="Bold" 
             Duration="5"/>
     </sunburst:SfSunburstChart.TooltipSettings>

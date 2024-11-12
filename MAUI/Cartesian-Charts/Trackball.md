@@ -494,9 +494,9 @@ SfCartesianChart chart = new SfCartesianChart();
 LineSeries lineSeries = new LineSeries()
 {
   ShowTrackballLabel = false,
+  ItemsSource = new ViewModel().Data
   XBindingPath = "Name",
   YBindingPath = "Run",
-  ItemsSource = new ViewModel().Data
 };
 
 chart.Series.Add(lineSeries);

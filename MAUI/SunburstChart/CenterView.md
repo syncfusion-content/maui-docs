@@ -26,7 +26,7 @@ The [CenterHoleSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sunburs
             <RoundRectangle CornerRadius="{Binding CenterHoleSize,Converter={StaticResource cornerRadius}}"/>
         </Border.StrokeShape>
         <Border.Shadow>
-            <Shadow Brush="Black"  Opacity="0.5" 
+            <Shadow Brush="Black" Opacity="0.5" 
                     Radius="50"/>
         </Border.Shadow>
         <VerticalStackLayout WidthRequest="{Binding CenterHoleSize,Converter={StaticResource cornerRadius}}"
@@ -36,7 +36,7 @@ The [CenterHoleSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sunburs
             </Grid>
             <Label LineBreakMode="WordWrap" WidthRequest="{Binding CenterHoleSize,Converter={StaticResource cornerRadius}}" 
                    Text="Behind the Bricks" TextColor="Black" FontSize="12" Padding="0,5,0,0"
-                   VerticalTextAlignment="Center"  HorizontalTextAlignment="Center" FontFamily="Verdana"
+                   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontFamily="Verdana"
                    HorizontalOptions="CenterAndExpand"/> 
         </VerticalStackLayout>
     </Border>

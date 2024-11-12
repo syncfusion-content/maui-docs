@@ -45,8 +45,8 @@ selection.SelectionBrush=Color.FromArgb("#314A6E");
 ColumnSeries series = new ColumnSeries()
 {
     ItemsSource = new ViewModel().Data,
-    XBindingPath = "Demand",
-    YBindingPath = "Year2010",
+    XBindingPath = "Time",
+    YBindingPath = "FootStepsCount",
     SelectionBehavior = selection
 };
 chart.Series.Add(series);
