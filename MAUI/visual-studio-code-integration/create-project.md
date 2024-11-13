@@ -45,7 +45,7 @@ The following steps below will assist you to create your **Syncfusion .NET MAUI 
 
     **Project Summary section**
 
-    In the **Project Summary** section, you can customize the **Project Name** to uniquely identify your application and specify the **Project Location**, which is the directory where your project files will be saved. You can also adjust the **Configuration Settings** by removing one or more controls from the **Components Selected** list. Additionally, choose your preferred **Core Version** (.NET 7.0 or .NET 8.0) and **Theme** (Material Light or Material Dark).
+    In the **Project Summary** section, you can customize the **Project Name** to uniquely identify your application and specify the **Project Location**, which is the directory where your project files will be saved. You can also adjust the **Configuration Settings** by removing one or more controls from the **Components Selected** list. Additionally, choose your preferred **Core Version** (.NET 8.0 or .NET 9.0) and **Theme** (Material Light or Material Dark).
 
     ![ProjectSummary](images/MAUIProjectSummary.png)
 

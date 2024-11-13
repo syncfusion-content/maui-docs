@@ -20,7 +20,7 @@ The following software prerequisites must be installed to install the Syncfusion
 
 * [Visual Studio 2022 17.3 or later](https://visualstudio.microsoft.com/downloads/).
 
-* [.NET Core 6.0 or later](https://dotnet.microsoft.com/en-us/download/dotnet).
+* [.NET Core 8.0 or later](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).
 
 
 ## Install through the Visual Studio Manage Extensions
