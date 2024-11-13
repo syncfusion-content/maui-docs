@@ -475,18 +475,7 @@ The FontAutoScalingEnabled property is used to automatically scale the avatar vi
 {% highlight xaml %}
 
 <Grid>
-   <sfavatar:SfAvatarView  FontAutoScalingEnabled = true
-                           ContentType="Initials"
-                           AvatarShape="Circle"
-                           AvatarSize="Large"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center"
-                           AvatarName="Alex"          
-                           Background="Bisque"
-                           AvatarColorMode="Default"
-                           StrokeThickness="1"
-                           Stroke="Black"
-                           InitialsColor="Black">
+   <sfavatar:SfAvatarView  FontAutoScalingEnabled = true>
     </sfavatar:SfAvatarView>
 </Grid>
 
@@ -497,17 +486,6 @@ The FontAutoScalingEnabled property is used to automatically scale the avatar vi
 Grid mainGrid = new Grid();
 SfAvatarView avatarview = new SfAvatarView();
 avatarview.FontAutoScalingEnabled = true;
-avatarview.ContentType = ContentType.Initials;
-avatarview.AvatarShape = AvatarShape.Circle;
-avatarview.AvatarSize = AvatarSize.Large;
-avatarview.VerticalOptions = LayoutOptions.Center;
-avatarview.HorizontalOptions = LayoutOptions.Center;
-avatarview.AvatarName = "Alex";
-avatarview.Stroke = Colors.Black;
-avatarview.StrokeThickness = 1;
-avatarview.InitialsColor = Colors.Black;
-avatarview.AvatarColorMode = AvatarColorMode.Default;
-avatarview.Background = Colors.Bisque;
 mainGrid.Children.Add(avatarview);
 this.Content = mainGrid;
 
