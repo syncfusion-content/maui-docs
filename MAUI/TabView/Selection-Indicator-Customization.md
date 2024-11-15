@@ -21,7 +21,6 @@ The indicator will be placed at the top of the selected tab.
 
 {% highlight xaml %}
     <tabView:SfTabView IndicatorPlacement="Top">
-     </tabView:SfTabView>
 {% endhighlight %}
 
 {% highlight C# %}
@@ -190,6 +189,7 @@ You can customize the stroke thickness of the selection indicator using the `Ind
 
 {% highlight xaml %}
     <tabView:SfTabView IndicatorStrokeThickness ="7">
+     </tabView:SfTabView>
 {% endhighlight %}
 
 {% highlight C# %}

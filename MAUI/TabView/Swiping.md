@@ -40,6 +40,7 @@ The `ScrollButtonBackgroundColor` property of `SfTabView` allows users to custom
 
 {% highlight xaml %}
     <tabView:SfTabView ScrollButtonBackgroundColor="Violet">
+     </tabView:SfTabView>
 {% endhighlight %}
 
 {% highlight C# %}
@@ -58,6 +59,7 @@ The `ScrollButtonForegroundColor` property of `SfTabView` allows users to custom
 
 {% highlight xaml %}
     <tabView:SfTabView ScrollButtonForegroundColor="Red">
+     </tabView:SfTabView>
 {% endhighlight %}
 
 {% highlight C# %}
