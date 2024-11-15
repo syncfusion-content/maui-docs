@@ -20,10 +20,10 @@ N> [GroupTo](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PieSerie
 <chart:SfCircularChart>
 
     <chart:PieSeries ItemsSource="{Binding Data}" 
-                     GroupMode="Value"
-                     GroupTo="15"
                      XBindingPath="Product" 
-                     YBindingPath="SalesRate"/>
+                     YBindingPath="SalesRate"
+                     GroupMode="Value"
+                     GroupTo="15"/>
   
 </chart:SfCircularChart>
 
