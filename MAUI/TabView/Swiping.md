@@ -48,4 +48,4 @@ The `ScrollButtonBackgroundColor` and `ScrollButtonForegroundColor` property of 
 
 {% endtabs %}
 
-![ScrollButtonBackgroundColor](images\ScrollButtonCustomization.png)
+![ScrollButtonCustomization](images\ScrollButtonCustomization.png)
