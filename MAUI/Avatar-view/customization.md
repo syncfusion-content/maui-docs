@@ -468,14 +468,21 @@ this.Content = mainGrid;
 
 ### Font auto scaling enabled
 
-The FontAutoScalingEnabled property is used to automatically scale the avatar view's font size based on the operating system's text size. The default value of the `FontAutoScalingEnabled` property is `false.`
+The `FontAutoScalingEnabled` property is used to automatically scale the avatar view's font size based on the operating system's text size. The default value of the `FontAutoScalingEnabled` property is `false.`
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <Grid>
-   <sfavatar:SfAvatarView  FontAutoScalingEnabled = true>
+    <sfavatar:SfAvatarView ContentType="Initials"
+                   InitialsType="DoubleCharacter"
+                   AvatarName="Alex"
+                   WidthRequest="50"
+                   FontAttributes="Bold"                     
+                   HeightRequest="50"
+                   FontAutoScalingEnabled="True"
+                   CornerRadius="25">
     </sfavatar:SfAvatarView>
 </Grid>
 
@@ -484,9 +491,18 @@ The FontAutoScalingEnabled property is used to automatically scale the avatar vi
 {% highlight c# %}
 
 Grid mainGrid = new Grid();
-SfAvatarView avatarview = new SfAvatarView();
-avatarview.FontAutoScalingEnabled = true;
-mainGrid.Children.Add(avatarview);
+SfAvatarView avatarView = new SfAvatarView();
+avatarView.VerticalOptions = LayoutOptions.Center;
+avatarView.HorizontalOptions = LayoutOptions.Center;
+avatarView.WidthRequest = 50;
+avatarView.HeightRequest = 50;
+avatarView.FontAttributes = FontAttributes.Bold;
+avatarView.CornerRadius = 25;
+avatarView.ContentType = ContentType.Initials;
+avatarView.AvatarName = "Alex";
+avatarView.InitialsType = InitialsType.DoubleCharacter;
+avatarView.FontAutoScalingEnabled = true;
+mainGrid.Children.Add(avatarView);
 this.Content = mainGrid;
 
 {% endhighlight %}

@@ -21,6 +21,7 @@ The indicator will be placed at the top of the selected tab.
 
 {% highlight xaml %}
     <tabView:SfTabView IndicatorPlacement="Top">
+     </tabView:SfTabView>
 {% endhighlight %}
 
 {% highlight C# %}
@@ -183,7 +184,7 @@ You can customize the corner radius of the selection indicator using the [Indica
 ![Selection Indicator Corner Radius.](images/IndicatorCornerRadius.png) 
 
 ## Indicator's Stroke Thickness
-You can customize the stroke thickness of the selection indicator using the [IndicatorStrokeThickness] property in the Tab View.
+You can customize the stroke thickness of the selection indicator using the `IndicatorStrokeThickness` property in the Tab View.
 
 {% tabs %}
 
