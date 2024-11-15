@@ -211,6 +211,8 @@ this.Content = chart;
 
 By default, the [CategoryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CategoryAxis.html) axis labels are display with fixed interval 1. It can customized by using the [Interval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CategoryAxis.html#Syncfusion_Maui_Charts_CategoryAxis_Interval) property of axis.
 
+N> A negative value cannot be set for the interval. Please ensure the value is positive.
+
 {% tabs %}
 
 {% highlight xaml %}
