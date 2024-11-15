@@ -350,7 +350,7 @@ To customize the data label appearance, create an instance of the [ChartDataMark
                                                 Angle="315"
                                                 Margin="5" 
                                                 FontSize="18" 
-                            FontAttributes="Italic"/>
+                                                FontAttributes="Italic"/>
                 </chart:ChartDataMarker.LabelStyle>
             </chart:ChartDataMarker>
 	</chart:PyramidSeries.DataMarker>

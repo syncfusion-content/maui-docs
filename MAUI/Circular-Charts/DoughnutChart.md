@@ -53,9 +53,9 @@ The [InnerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Dou
 
 <chart:SfCircularChart>
     <chart:DoughnutSeries ItemsSource="{Binding Data}"
-                          InnerRadius="0.7"	
                           XBindingPath="Product"
-                          YBindingPath="SalesRate"/>
+                          YBindingPath="SalesRate"
+                          InnerRadius="0.7"/>
 </chart:SfCircularChart>
 
 {% endhighlight %}

@@ -306,6 +306,7 @@ RadialBarSeries series = new RadialBarSeries();
 series.ItemsSource = (new SalesViewModel()).Data;
 series.XBindingPath = "Product";
 series.YBindingPath = "SalesRate";
+series.MaximumValue = 100;
 series.CapStyle = CapStyle.BothCurve;
 
 StackLayout layout = new StackLayout();

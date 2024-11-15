@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in .NET MAUI Sunburst Chart control | Syncfusion
-description: This section explains about how to enable tooltip in Syncfusion .NET MAUI Sunburst Chart control.
+description: This section explains about how to enable tooltip in the Syncfusion .NET MAUI Sunburst Chart control.
 platform: maui
 control: SfSunburstChart
 documentation: ug
@@ -58,7 +58,7 @@ The appearance of the tooltip can be customized using the following properties:
     . . .
     <sunburst:SfSunburstChart.TooltipSettings>
         <sunburst:SunburstTooltipSettings   
-            Background="White"  TextColor="Black"  
+            Background="White" TextColor="Black"  
             FontSize="14" FontAttributes="Bold" 
             Duration="5"/>
     </sunburst:SfSunburstChart.TooltipSettings>
