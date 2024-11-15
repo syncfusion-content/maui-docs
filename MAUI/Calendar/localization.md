@@ -32,3 +32,25 @@ public partial class App : Application
 {% endtabs %}
 
 ![Month view localization in .NET MAUI Calendar.](images/localization/maui-month-view-localization.png)
+
+## Localize application level
+
+To localize the `Calendar` based on `CurrentUICulture` using `resource` files, follow the below steps.
+
+   1. Create new folder, named as `Resources` in the application.
+
+   2. Right-click on the `Resources` folder, select `Add` and then `NewItem.`
+
+   3. In Add New Item wizard, select the Resource File option and name the filename as `SfCalendar.<culture name>.resx.` For example, give the name as `SfCalendar.fr-FR.resx` for French culture.
+
+   4. The culture name indicates the name of the language and country.
+
+        ![shows-the-name-of-resource-file-to-be-added-for-maui-calendar](images/localization/shows-the-name-of-resource-file-to-be-added-for-maui-picker.png)
+
+   5. Now, select `Add` option to add the resource file in **Resources** folder.
+
+        ![shows-the-added-resource-file-for-french-language-in-maui-calendar](images/localization/shows-the-added-resource-file-for-french-language-in-maui-picker.png)
+
+   6. Add the Name/Value pair in Resource Designer of `SfPicker.fr-FR.resx` file and change its corresponding value to corresponding culture.
+
+   ![shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-calendar](images/localization/shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-picker.png)
