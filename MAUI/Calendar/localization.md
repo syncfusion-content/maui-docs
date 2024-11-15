@@ -45,12 +45,12 @@ To localize the `Calendar` based on `CurrentUICulture` using `resource` files, f
 
    4. The culture name indicates the name of the language and country.
 
-        ![shows-the-name-of-resource-file-to-be-added-for-maui-calendar](images/localization/shows-the-name-of-resource-file-to-be-added-for-maui-picker.png)
+        ![shows-the-name-of-resource-file-to-be-added-for-maui-calendar](images/localization/maui-calendar-resxfile-creation.png)
 
    5. Now, select `Add` option to add the resource file in **Resources** folder.
 
-        ![shows-the-added-resource-file-for-french-language-in-maui-calendar](images/localization/shows-the-added-resource-file-for-french-language-in-maui-picker.png)
+        ![shows-the-added-resource-file-for-french-language-in-maui-calendar](images/localization/maui-calendar-resxfile.png)
 
    6. Add the Name/Value pair in Resource Designer of `SfPicker.fr-FR.resx` file and change its corresponding value to corresponding culture.
 
-   ![shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-calendar](images/localization/shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-picker.png)
+   ![shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-calendar](images/localization/maui-calendar-custom texts.png)
