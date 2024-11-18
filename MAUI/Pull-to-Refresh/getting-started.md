@@ -166,3 +166,5 @@ If we run the above sample with [TransitionMode](https://help.syncfusion.com/cr/
 ![.NET MAUI PullToRefresh with slide on top transition mode](Images/getting-started//maui-pull-to-refresh-push-mode.gif).
 
 N> PullToRefresh does not have a view. So, it is mandatory to set size or LayoutOptions when loaded inside any layouts.
+
+N> You can refer to our [.NET MAUI PullToRefresh](https://www.syncfusion.com/maui-controls/maui-pull-to-refresh) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI PullToRefresh Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/PullToRefresh) that shows you how to render the PullToRefresh in .NET MAUI.
