@@ -31,7 +31,7 @@ The `EnableSwiping` property of `SfTabView` allows users to switch between tab c
 
 ### Scroll button customization
 
-The `ScrollButtonBackgroundColor` and `ScrollButtonForegroundColor` property of `SfTabView` allows users to customize the background color and foreground color of scroll button.
+The [ScrollButtonBackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ScrollButtonBackgroundColor) and [ScrollButtonForegroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ScrollButtonForegroundColor) property of [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1) allows users to customize the background color and foreground color of scroll button.
 
 {% tabs %}
 

@@ -468,7 +468,7 @@ this.Content = mainGrid;
 
 ### Font auto scaling enabled
 
-The `FontAutoScalingEnabled` property is used to automatically scale the avatar view's font size based on the operating system's text size. The default value of the `FontAutoScalingEnabled` property is `false.`
+The [FontAutoScalingEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_FontAutoScalingEnabled) property is used to automatically scale the avatar view's font size based on the operating system's text size. The default value of the [FontAutoScalingEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_FontAutoScalingEnabled) property is `false.`
 
 {% tabs %}
 
