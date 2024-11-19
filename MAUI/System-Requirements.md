@@ -34,7 +34,7 @@ Our .NET MAUI components are compatible with the following development environme
 * Visual Studio 2022 17.8.0.
 * Visual Studio Code. (Refer to this [link](https://devblogs.microsoft.com/visualstudio/announcing-the-dotnet-maui-extension-for-visual-studio-code/))
 
-### Supported .NET versions:
+### Supported .NET versions
 
 * .NET 9.0
 * .NET 8.0
