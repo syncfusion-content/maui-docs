@@ -16,36 +16,29 @@ The [PasswordVisibilityToggled](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 * [IsPasswordVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.PasswordVisibilityToggledEventArgs.html#Syncfusion_Maui_Core_PasswordVisibilityToggledEventArgs_IsPasswordVisible): Its value is defined based on the visibility of the password.
 
-{% tabs %} 
-{% highlight xaml %} 
-
-<inputLayout:SfTextInputLayout  Hint="Password" 
-                                PasswordVisibilityToggled="OnPasswordVisibilityToggled">
-    <Entry Text="1234"/>
-</inputLayout:SfTextInputLayout>  
- 
-{% endhighlight %}
-
 {% tabs %}
-{% highlight C# %} 
-
-var inputLayout = new SfTextInputLayout();
-inputLayout.Hint = "Password";
-inputLayout.PasswordVisibilityToggled += OnPasswordVisibilityToggled;
-inputLayout.Content = new Entry() { Text = "1234" }; 
+{% highlight xaml %}
+    
+   <chip:SfChip WidthRequest="100"
+                x:Name="chip"
+                CloseButtonClicked="SfChip_CloseButtonClicked"/>
 
 {% endhighlight %}
-{% endtabs %}
+{% highlight c# %}
 
+   SfChip chip = new SfChip();
+   chip.CloseButtonClicked+=chip_CloseButtonClicked;
+
+{% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
 {% highlight c# %}
     
-    private void OnPasswordVisibilityToggled(object sender, PasswordVisibilityToggledEventArgs e)
-	{
-    	bool passwordVisbility = e.IsPasswordVisible;
-	}
+    private async void SfChip_CloseButtonClicked(object sender, EventArgs e)
+        {
+            await DisplayAlert("Message", "Chip CloseButton Clicked", "close");
+        }
 
 {% endhighlight %}
 {% endtabs %}
