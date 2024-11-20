@@ -189,7 +189,7 @@ You can customize the stroke thickness of the selection indicator using the [Ind
 
 {% highlight xaml %}
     <tabView:SfTabView IndicatorStrokeThickness ="7">
-     </tabView:SfTabView>
+    </tabView:SfTabView>
 {% endhighlight %}
 
 {% highlight C# %}

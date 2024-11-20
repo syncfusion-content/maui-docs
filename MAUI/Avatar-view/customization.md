@@ -476,13 +476,13 @@ The [FontAutoScalingEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 <Grid>
     <sfavatar:SfAvatarView ContentType="Initials"
-                   InitialsType="DoubleCharacter"
-                   AvatarName="Alex"
-                   WidthRequest="50"
-                   FontAttributes="Bold"                     
-                   HeightRequest="50"
-                   FontAutoScalingEnabled="True"
-                   CornerRadius="25">
+                           InitialsType="DoubleCharacter"
+                           AvatarName="Alex"
+                           WidthRequest="50"
+                           FontAttributes="Bold"                     
+                           HeightRequest="50"
+                           FontAutoScalingEnabled="True"
+                           CornerRadius="25">
     </sfavatar:SfAvatarView>
 </Grid>
 
