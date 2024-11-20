@@ -19,15 +19,12 @@ The [PasswordVisibilityToggled](https://help.syncfusion.com/cr/maui/Syncfusion.M
 {% tabs %}
 {% highlight xaml %}
     
-   <chip:SfChip WidthRequest="100"
-                x:Name="chip"
-                CloseButtonClicked="SfChip_CloseButtonClicked"/>
+   <inputLayout:SfTextInputLayout Hint="Password" PasswordVisibilityToggled="OnPasswordVisibilityToggled"> </inputLayout:SfTextInputLayout>
 
 {% endhighlight %}
 {% highlight c# %}
 
-   SfChip chip = new SfChip();
-   chip.CloseButtonClicked+=chip_CloseButtonClicked;
+   var inputLayout = new SfTextInputLayout(); inputLayout.Hint = "Password"; inputLayout.PasswordVisibilityToggled += OnPasswordVisibilityToggled; inputLayout.Content = new Entry() { Text = "1234" };
 
 {% endhighlight %}
 {% endtabs %}
@@ -35,10 +32,10 @@ The [PasswordVisibilityToggled](https://help.syncfusion.com/cr/maui/Syncfusion.M
 {% tabs %}
 {% highlight c# %}
     
-    private async void SfChip_CloseButtonClicked(object sender, EventArgs e)
-        {
-            await DisplayAlert("Message", "Chip CloseButton Clicked", "close");
-        }
+private void OnPasswordVisibilityToggled(object sender, PasswordVisibilityToggledEventArgs e)
+{
+	bool passwordVisbility = e.IsPasswordVisible;
+}
 
 {% endhighlight %}
 {% endtabs %}
