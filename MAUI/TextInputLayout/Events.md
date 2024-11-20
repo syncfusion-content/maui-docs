@@ -20,12 +20,11 @@ The [PasswordVisibilityToggled](https://help.syncfusion.com/cr/maui/Syncfusion.M
 {% highlight xaml %} 
 
 <inputLayout:SfTextInputLayout  Hint="Password" 
-                                PasswordVisibilityToggled="OnPasswordVisibilityToggled">
+				PasswordVisibilityToggled="OnPasswordVisibilityToggled">
     <Entry Text="1234"/>
 </inputLayout:SfTextInputLayout>  
  
 {% endhighlight %}
-
 {% highlight C# %} 
 
 var inputLayout = new SfTextInputLayout();
@@ -34,7 +33,6 @@ inputLayout.PasswordVisibilityToggled += OnPasswordVisibilityToggled;
 inputLayout.Content = new Entry() { Text = "1234" }; 
 
 {% endhighlight %}
-
 {% endtabs %}
 
 {% tabs %}
