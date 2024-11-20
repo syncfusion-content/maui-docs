@@ -1,3 +1,4 @@
+
 ---
 layout: post
 title: Events in MAUI TextInputLayout control | Syncfusion
@@ -16,26 +17,34 @@ The [PasswordVisibilityToggled](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 * [IsPasswordVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.PasswordVisibilityToggledEventArgs.html#Syncfusion_Maui_Core_PasswordVisibilityToggledEventArgs_IsPasswordVisible): Its value is defined based on the visibility of the password.
 
-{% tabs %}
-{% highlight xaml %}
-    
-   <inputLayout:SfTextInputLayout Hint="Password" PasswordVisibilityToggled="OnPasswordVisibilityToggled"> </inputLayout:SfTextInputLayout>
+{% tabs %} 
+{% highlight xaml %} 
+
+<inputLayout:SfTextInputLayout  Hint="Password" 
+                                PasswordVisibilityToggled="OnPasswordVisibilityToggled">
+    <Entry Text="1234"/>
+</inputLayout:SfTextInputLayout>  
+ 
+{% endhighlight %}
+
+{% highlight c# %} 
+
+var inputLayout = new SfTextInputLayout();
+inputLayout.Hint = "Password";
+inputLayout.PasswordVisibilityToggled += OnPasswordVisibilityToggled;
+inputLayout.Content = new Entry() { Text = "1234" }; 
 
 {% endhighlight %}
-{% highlight c# %}
 
-   var inputLayout = new SfTextInputLayout(); inputLayout.Hint = "Password"; inputLayout.PasswordVisibilityToggled += OnPasswordVisibilityToggled; inputLayout.Content = new Entry() { Text = "1234" };
-
-{% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
 {% highlight c# %}
     
-private void OnPasswordVisibilityToggled(object sender, PasswordVisibilityToggledEventArgs e)
-{
-	bool passwordVisbility = e.IsPasswordVisible;
-}
+    private void OnPasswordVisibilityToggled(object sender, PasswordVisibilityToggledEventArgs e)
+	{
+    	bool passwordVisbility = e.IsPasswordVisible;
+	}
 
 {% endhighlight %}
 {% endtabs %}
