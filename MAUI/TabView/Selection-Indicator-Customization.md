@@ -183,13 +183,13 @@ You can customize the corner radius of the selection indicator using the [Indica
 ![Selection Indicator Corner Radius.](images/IndicatorCornerRadius.png) 
 
 ## Indicator's Stroke Thickness
-You can customize the stroke thickness of the selection indicator using the `IndicatorStrokeThickness` property in the Tab View.
+You can customize the stroke thickness of the selection indicator using the [IndicatorStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IndicatorStrokeThickness) property in the Tab View.
 
 {% tabs %}
 
 {% highlight xaml %}
     <tabView:SfTabView IndicatorStrokeThickness ="7">
-     </tabView:SfTabView>
+    </tabView:SfTabView>
 {% endhighlight %}
 
 {% highlight C# %}
