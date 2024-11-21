@@ -29,23 +29,3 @@ The `EnableSwiping` property of `SfTabView` allows users to switch between tab c
 
 * Interference Between Child Controls and TabView Swiping: When a child control within a TabView supports horizontal swiping or interaction (e.g., a horizontal ScrollView, a custom swipe-enabled control, or a carousel), it can interfere with the TabView's touch gesture. This may result in unintended behavior, such as the TabView swiping when the child control is meant to handle the gesture, or vice versa. The overlapping gestures can cause confusion and disrupt the expected user experience, leading to a less intuitive interface.
 
-### Scroll button customization
-
-The `ScrollButtonBackgroundColor` and `ScrollButtonForegroundColor` property of `SfTabView` allows users to customize the background color and foreground color of scroll button.
-
-{% tabs %}
-
-{% highlight xaml %}
-    <tabView:SfTabView ScrollButtonBackgroundColor="Violet"
-                       ScrollButtonForegroundColor="Red">
-     </tabView:SfTabView>
-{% endhighlight %}
-
-{% highlight C# %}
-     tabView.ScrollButtonBackgroundColor = "Violet";
-     tabView.ScrollButtonForegroundColor = "Red";
-{% endhighlight %}
-
-{% endtabs %}
-
-![ScrollButtonCustomization](images\ScrollButtonCustomization.png)
