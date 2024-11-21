@@ -7,7 +7,7 @@ control : Cards
 documentation : ug
 ---
 
-# MAUI Cards Overview
+# MAUI Cards Overview  
 
 The new Cards control empowers you to generate either a dismissible card or a stack of cards, with only one card being visible initially, requires a swipe to reveal the subsequent card.
 
