@@ -479,6 +479,28 @@ tabView.IsScrollButtonEnabled = true;
 {% endtabs %}
 
 ![TabView Scroll Mode](images/TabViewScroll.gif) 
+
+### Scroll button customization
+
+The [ScrollButtonBackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ScrollButtonBackgroundColor) and [ScrollButtonForegroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ScrollButtonForegroundColor) property of [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1) allows users to customize the background color and foreground color of scroll button.
+
+{% tabs %}
+
+{% highlight xaml %}
+    <tabView:SfTabView ScrollButtonBackgroundColor="Violet"
+                       ScrollButtonForegroundColor="Red">
+     </tabView:SfTabView>
+{% endhighlight %}
+
+{% highlight C# %}
+     tabView.ScrollButtonBackgroundColor = "Violet";
+     tabView.ScrollButtonForegroundColor = "Red";
+{% endhighlight %}
+
+{% endtabs %}
+
+![ScrollButtonCustomization](images\ScrollButtonCustomization.png)
+
 ## Font auto scaling enabled
 
 The [FontAutoScalingEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_FontAutoScalingEnabled) property is used to automatically scale the tab header's font size based on the operating system's text size. The default value of the `FontAutoScalingEnabled` property is `false.`
