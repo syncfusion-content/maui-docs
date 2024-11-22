@@ -7,7 +7,7 @@ control : Cards
 documentation : ug
 ---
 
-# MAUI Cards Overview  
+# Overview of .NET MAUI Cards (SfCards)  
 
 The new Cards control empowers you to generate either a dismissible card or a stack of cards, with only one card being visible initially, requires a swipe to reveal the subsequent card.
 
