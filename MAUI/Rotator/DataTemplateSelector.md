@@ -139,3 +139,5 @@ public class DataTemplateViewModel : DataTemplateSelector
 The following screenshot illustrates the output of above code.
 
 ![DataTemplateSelector](images/DataTemplateSelector.png)
+
+Find the complete DataTemplateSelector sample from this [link.](https://github.com/SyncfusionExamples/maui-rotator-samples/tree/master/RotatorTemplateSelectorSample)
