@@ -833,3 +833,278 @@ public class Model
 ![Legend icon customization](images/legend/legend-appearance.png)
 
 N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps Legend example](https://github.com/syncfusion/maui-demos/) that shows how to configure a Maps in .NET MAUI.
+
+## Customize items layout
+
+The `ItemsLayout` property is used to customize the arrangement and position of each legend item. The default value is null. This property accepts any layout type.
+
+{% tabs %}
+{% highlight XAML hl_lines="2"%}
+
+<map:SfMaps x:Name="maps">
+    <map:SfMaps.BindingContext>
+        <local:LegendViewModel />
+    </map:SfMaps.BindingContext>
+            
+    <map:SfMaps.Resources>
+        FlexLayout x:Key="legendLayout" 
+                    HorizontalOptions="Start"
+                    Margin="10"
+                    Background="LightBlue"/>
+    </map:SfMaps.Resources>
+
+    <map:SfMaps.Layer>
+        <map:MapShapeLayer x:Name="mapShapeLayer" ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+               DataSource="{Binding Data}"
+               PrimaryValuePath="State"
+               ShapeDataField="name" ShowShapeTooltip="True"
+               ShapeStroke="DarkGray" ShowDataLabels="True"
+               ShapeColorValuePath="Population">
+            <map:MapShapeLayer.DataLabelSettings>
+                <map:MapDataLabelSettings>
+                    <map:MapDataLabelSettings.DataLabelStyle>
+                        <map:MapLabelStyle FontSize="12" TextColor="Crimson" FontAutoScalingEnabled="True"/>
+                    </map:MapDataLabelSettings.DataLabelStyle>
+                </map:MapDataLabelSettings>
+            </map:MapShapeLayer.DataLabelSettings>
+
+            <map:MapShapeLayer.ColorMappings>
+                <map:RangeColorMapping Color="Red"
+                           From="0"
+                           To="100"
+                           Text="0 - 100/km" />
+                <map:RangeColorMapping Color="LightGreen"
+                           From="101"
+                           To="200"
+                           Text="100 - 200/km" />
+                <map:RangeColorMapping Color="Blue"
+                           From="201"
+                           To="300"
+                           Text="200 - 300/km" />
+                <map:RangeColorMapping Color="Orange"
+                           From="301"
+                           To="400"
+                           Text="300 - 400/km" />
+                <map:RangeColorMapping Color="Teal"
+                           From="401"
+                           To="500"
+                           Text="400 - 500/km" />
+                <map:RangeColorMapping Color="Purple"
+                           From="501"
+                           To="600"
+                           Text="500 - 600/km" />
+            </map:MapShapeLayer.ColorMappings>
+
+            <map:MapShapeLayer.Legend>
+                <map:MapLegend ItemsLayout="{StaticResource legendLayout}">
+                    <map:MapLegend.TextStyle>
+                        <map:MapLabelStyle FontSize="12" TextColor="Crimson" FontAutoScalingEnabled="True" />
+                    </map:MapLegend.TextStyle>
+                </map:MapLegend>
+            </map:MapShapeLayer.Legend>
+            <map:MapShapeLayer.BubbleTooltipSettings>
+                <map:MapTooltipSettings>
+                    <map:MapTooltipSettings.TextStyle>
+                        <map:MapLabelStyle FontSize="12" TextColor="Crimson" FontAutoScalingEnabled="True"/>
+                    </map:MapTooltipSettings.TextStyle>
+                </map:MapTooltipSettings>
+            </map:MapShapeLayer.BubbleTooltipSettings>
+        </map:MapShapeLayer>
+    </map:SfMaps.Layer>
+</map:SfMaps>
+
+{% endhighlight %}
+{% highlight C# hl_lines="2" %}
+
+this.BindingContext = viewModel;
+MapShapeLayer layer = new MapShapeLayer();
+layer.ShapesSource = MapSource.FromUri(new Uri("https://cdn.syncfusion.com/maps/map-data/world-map.json"));
+layer.DataSource = viewModel.Data;
+layer.PrimaryValuePath = "State";
+layer.ShapeDataField = "name";
+layer.ShapeStroke = Colors.DarkGrey;
+layer.ShapeColorValuePath = "Population";
+
+layer.ColorMappings.Add(new RangeColorMapping()
+{
+    Color = Colors.Red,
+    From = 0,
+    To = 100,
+    Text = "< 100/km"
+});
+layer.ColorMappings.Add(new RangeColorMapping()
+{
+    Color = Colors.LightGreen,
+    From = 101,
+    To = 200,
+    Text = "100 - 200/km"
+});
+layer.ColorMappings.Add(new RangeColorMapping()
+{
+    Color = Colors.Blue,
+    From = 201,
+    To = 300,
+    Text = "200 - 300/km"
+});
+layer.ColorMappings.Add(new RangeColorMapping()
+{
+    Color = Colors.Orange,
+    From = 301,
+    To = 400,
+    Text = "300 - 400/km"
+});
+layer.ColorMappings.Add(new RangeColorMapping()
+{
+    Color = Colors.Teal,
+    From = 401,
+    To = 500,
+    Text = "400 - 500/km"
+});
+layer.ColorMappings.Add(new RangeColorMapping()
+{
+    Color = Colors.Purple,
+    From = 501,
+    To = 600,
+    Text = "500 - 600/km"
+});
+
+MapLegend legendSet = new MapLegend();
+legendSet.SourceType = LegendSourceType.Shape;
+legendSet.Placement = Syncfusion.Maui.Core.LegendPlacement.Top;
+legendSet.ItemsLayout = new FlexLayout
+{
+    Margin = new Thickness(10);
+    Background = new SolidColorBrush(Colors.LightBlue),
+};
+
+layer.Legend = legendSet;
+SfMaps maps = new SfMaps();
+maps.Layer = layer;
+this.Content = maps;
+
+public class ViewModel
+{
+    public ObservableCollection<Model> Data { get; set; }
+	
+    public ViewModel()
+    {
+        Data = new ObservableCollection<Model>();
+        Data.Add(new Model("India", 205));
+        Data.Add(new Model("United States", 190));
+        Data.Add(new Model("Kazakhstan", 37));
+        Data.Add(new Model("Italy", 201));
+        Data.Add(new Model("Korea", 512));
+        Data.Add(new Model("Japan", 335));
+        Data.Add(new Model("Cuba", 103));
+        Data.Add(new Model("China", 148));
+    }
+}
+
+public class Model
+{
+    public String State { get; set; }
+    public int Population { get; set; }
+	
+    public Model(string state, int population)
+    {
+        State = state;
+        Population = population;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Legend ItemsLayout](){:width="313" height="480"  loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
+
+## Customize items template
+
+You can customize the appearance of legend items with your template by using `ItemTemplate` property of `MapLegend`.
+
+{% tabs %}
+{% highlight XAML hl_lines="2"%}
+
+ <map:SfMaps x:Name="maps">
+    <map:SfMaps.BindingContext>
+        <local:LegendViewModel />
+    </map:SfMaps.BindingContext>
+        
+    <map:SfMaps.Resources>
+        <DataTemplate x:Key="legendTemplate">
+            <StackLayout Orientation="Horizontal">
+                <Rectangle HeightRequest="12" 
+                           WidthRequest="32" 
+                           Margin="3"
+                           Background="{Binding IconBrush}"/>
+                <Label Text="{Binding Text}" 
+                       Margin="3"/>
+            </StackLayout>
+        </DataTemplate>
+    </map:SfMaps.Resources>
+
+     <map:SfMaps.Layer>
+         <map:MapShapeLayer x:Name="mapShapeLayer" ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                DataSource="{Binding Data}"
+                PrimaryValuePath="State"
+                ShapeDataField="name" ShowShapeTooltip="True"
+                ShapeStroke="DarkGray" ShowDataLabels="True"
+                ShapeColorValuePath="Population">
+             <map:MapShapeLayer.DataLabelSettings>
+                 <map:MapDataLabelSettings>
+                     <map:MapDataLabelSettings.DataLabelStyle>
+                         <map:MapLabelStyle FontSize="12" TextColor="Crimson" FontAutoScalingEnabled="True"/>
+                     </map:MapDataLabelSettings.DataLabelStyle>
+                 </map:MapDataLabelSettings>
+             </map:MapShapeLayer.DataLabelSettings>
+
+             <map:MapShapeLayer.ColorMappings>
+                 <map:RangeColorMapping Color="Red"
+                            From="0"
+                            To="100"
+                            Text="0 - 100/km" />
+                 <map:RangeColorMapping Color="LightGreen"
+                            From="101"
+                            To="200"
+                            Text="100 - 200/km" />
+                 <map:RangeColorMapping Color="Blue"
+                            From="201"
+                            To="300"
+                            Text="200 - 300/km" />
+                 <map:RangeColorMapping Color="Orange"
+                            From="301"
+                            To="400"
+                            Text="300 - 400/km" />
+                 <map:RangeColorMapping Color="Teal"
+                            From="401"
+                            To="500"
+                            Text="400 - 500/km" />
+                 <map:RangeColorMapping Color="Purple"
+                            From="501"
+                            To="600"
+                            Text="500 - 600/km" />
+             </map:MapShapeLayer.ColorMappings>
+
+             <map:MapShapeLayer.Legend>
+                 <map:MapLegend ItemTemplate="{StaticResource legendTemplate}">
+                     <map:MapLegend.TextStyle>
+                         <map:MapLabelStyle FontSize="12" TextColor="Crimson" FontAutoScalingEnabled="True" />
+                     </map:MapLegend.TextStyle>
+                 </map:MapLegend>
+             </map:MapShapeLayer.Legend>
+             <map:MapShapeLayer.BubbleTooltipSettings>
+                 <map:MapTooltipSettings>
+                     <map:MapTooltipSettings.TextStyle>
+                         <map:MapLabelStyle FontSize="12" TextColor="Crimson" FontAutoScalingEnabled="True"/>
+                     </map:MapTooltipSettings.TextStyle>
+                 </map:MapTooltipSettings>
+             </map:MapShapeLayer.BubbleTooltipSettings>
+         </map:MapShapeLayer>
+     </map:SfMaps.Layer>
+ </map:SfMaps>
+
+{% endhighlight %}
+{% endtabs %}
+
+N> The TextColor property of the legend updates as per the luminacity.
+
+![Legend template](){:width="313" height="480"  loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
