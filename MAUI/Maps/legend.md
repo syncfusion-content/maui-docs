@@ -839,7 +839,7 @@ N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-control
 The `ItemsLayout` property is used to customize the arrangement and position of each legend item. The default value is null. This property accepts any layout type.
 
 {% tabs %}
-{% highlight XAML hl_lines="2"%}
+{% highlight xaml %}
 
 <map:SfMaps x:Name="maps">
     <map:SfMaps.BindingContext>
@@ -869,30 +869,25 @@ The `ItemsLayout` property is used to customize the arrangement and position of 
             </map:MapShapeLayer.DataLabelSettings>
 
             <map:MapShapeLayer.ColorMappings>
-                <map:RangeColorMapping Color="Red"
-                           From="0"
-                           To="100"
-                           Text="0 - 100/km" />
-                <map:RangeColorMapping Color="LightGreen"
-                           From="101"
-                           To="200"
-                           Text="100 - 200/km" />
-                <map:RangeColorMapping Color="Blue"
-                           From="201"
-                           To="300"
-                           Text="200 - 300/km" />
-                <map:RangeColorMapping Color="Orange"
-                           From="301"
-                           To="400"
-                           Text="300 - 400/km" />
-                <map:RangeColorMapping Color="Teal"
-                           From="401"
-                           To="500"
-                           Text="400 - 500/km" />
-                <map:RangeColorMapping Color="Purple"
-                           From="501"
-                           To="600"
-                           Text="500 - 600/km" />
+                <map:RangeColorMapping Color="#809fff"
+                                            From="0" To="100"
+                                            Text="0-100"/>
+                    <map:RangeColorMapping Color="#3366ff" 
+                                            From="100" 
+                                            To="500" 
+                                            Text="100-500"/>
+                    <map:RangeColorMapping Color="#0039e6" 
+                                            From="500" 
+                                            To="1000" 
+                                            Text="500-1000"/>
+                    <map:RangeColorMapping Color="#002db3" 
+                                            From="1000" 
+                                            To="5000" 
+                                            Text="1000-5000"/>
+                    <map:RangeColorMapping Color="#001a66"
+                                            From="5000"
+                                            To="50000"
+                                            Text="5000-50000"/>
             </map:MapShapeLayer.ColorMappings>
 
             <map:MapShapeLayer.Legend>
@@ -927,45 +922,38 @@ layer.ShapeColorValuePath = "Population";
 
 layer.ColorMappings.Add(new RangeColorMapping()
 {
-    Color = Colors.Red,
+    Color = Color.FromArgb(#809fff),
     From = 0,
     To = 100,
-    Text = "< 100/km"
+    Text = "0-100"
 });
 layer.ColorMappings.Add(new RangeColorMapping()
 {
-    Color = Colors.LightGreen,
-    From = 101,
-    To = 200,
-    Text = "100 - 200/km"
-});
-layer.ColorMappings.Add(new RangeColorMapping()
-{
-    Color = Colors.Blue,
-    From = 201,
-    To = 300,
-    Text = "200 - 300/km"
-});
-layer.ColorMappings.Add(new RangeColorMapping()
-{
-    Color = Colors.Orange,
-    From = 301,
-    To = 400,
-    Text = "300 - 400/km"
-});
-layer.ColorMappings.Add(new RangeColorMapping()
-{
-    Color = Colors.Teal,
-    From = 401,
+    Color = Color.FromArgb(#3366ff),
+    From = 1000,
     To = 500,
-    Text = "400 - 500/km"
+    Text = "100-500"
 });
 layer.ColorMappings.Add(new RangeColorMapping()
 {
-    Color = Colors.Purple,
-    From = 501,
-    To = 600,
-    Text = "500 - 600/km"
+    Color = Color.FromArgb(#0039e6),
+    From = 500,
+    To = 1000,
+    Text = "500 - 1000"
+});
+layer.ColorMappings.Add(new RangeColorMapping()
+{
+    Color = Color.FromArgb(#002db3),
+    From = 1000,
+    To = 5000,
+    Text = "1000-5000"
+});
+layer.ColorMappings.Add(new RangeColorMapping()
+{
+    Color = Color.FromArgb(#001a66),
+    From = 5000,
+    To = 50000,
+    Text = "5000-50000"
 });
 
 MapLegend legendSet = new MapLegend();
@@ -1015,14 +1003,14 @@ public class Model
 {% endhighlight %}
 {% endtabs %}
 
-![Legend ItemsLayout](){:width="313" height="480"  loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
+![Legend ItemsLayout](images/legend/legend-layout.png){:width="313" height="480"  loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
 
 ## Customize items template
 
 You can customize the appearance of legend items with your template by using `ItemTemplate` property of `MapLegend`.
 
 {% tabs %}
-{% highlight XAML hl_lines="2"%}
+{% highlight xaml %}
 
  <map:SfMaps x:Name="maps">
     <map:SfMaps.BindingContext>
@@ -1030,15 +1018,23 @@ You can customize the appearance of legend items with your template by using `It
     </map:SfMaps.BindingContext>
         
     <map:SfMaps.Resources>
-        <DataTemplate x:Key="legendTemplate">
-            <StackLayout Orientation="Horizontal">
-                <Rectangle HeightRequest="12" 
-                           WidthRequest="32" 
-                           Margin="3"
-                           Background="{Binding IconBrush}"/>
-                <Label Text="{Binding Text}" 
-                       Margin="3"/>
-            </StackLayout>
+        <DataTemplate x:DataType="core:LegendItem" >
+            <Grid ColumnDefinitions="Auto,Auto" Padding="5,0,5,0" Margin="2">
+                <BoxView Grid.Column="0"
+                        Color="{Binding IconBrush}"
+                        HorizontalOptions="Center"  
+                        VerticalOptions="Center"
+                        CornerRadius="4"
+                        HeightRequest="10"
+                        WidthRequest="10" />
+                <Label Grid.Column="1"
+                    FontSize="13"
+                    VerticalTextAlignment="Center"
+                    Text="{Binding Text}"
+                    HorizontalOptions="Start"
+                    HorizontalTextAlignment="Center"
+                    Padding="5" />
+            </Grid>
         </DataTemplate>
     </map:SfMaps.Resources>
 
@@ -1058,30 +1054,25 @@ You can customize the appearance of legend items with your template by using `It
              </map:MapShapeLayer.DataLabelSettings>
 
              <map:MapShapeLayer.ColorMappings>
-                 <map:RangeColorMapping Color="Red"
-                            From="0"
-                            To="100"
-                            Text="0 - 100/km" />
-                 <map:RangeColorMapping Color="LightGreen"
-                            From="101"
-                            To="200"
-                            Text="100 - 200/km" />
-                 <map:RangeColorMapping Color="Blue"
-                            From="201"
-                            To="300"
-                            Text="200 - 300/km" />
-                 <map:RangeColorMapping Color="Orange"
-                            From="301"
-                            To="400"
-                            Text="300 - 400/km" />
-                 <map:RangeColorMapping Color="Teal"
-                            From="401"
-                            To="500"
-                            Text="400 - 500/km" />
-                 <map:RangeColorMapping Color="Purple"
-                            From="501"
-                            To="600"
-                            Text="500 - 600/km" />
+                    <map:RangeColorMapping Color="#809fff"
+                                            From="0" To="100"
+                                            Text="0-100"/>
+                    <map:RangeColorMapping Color="#3366ff" 
+                                            From="100" 
+                                            To="500" 
+                                            Text="100-500"/>
+                    <map:RangeColorMapping Color="#0039e6" 
+                                            From="500" 
+                                            To="1000" 
+                                            Text="500-1000"/>
+                    <map:RangeColorMapping Color="#002db3" 
+                                            From="1000" 
+                                            To="5000" 
+                                            Text="1000-5000"/>
+                    <map:RangeColorMapping Color="#001a66"
+                                            From="5000"
+                                            To="50000"
+                                            Text="5000-50000"/>
              </map:MapShapeLayer.ColorMappings>
 
              <map:MapShapeLayer.Legend>
@@ -1105,6 +1096,6 @@ You can customize the appearance of legend items with your template by using `It
 {% endhighlight %}
 {% endtabs %}
 
-N> The TextColor property of the legend updates as per the luminacity.
+N> The TextColor property of the legend updates as per the luminosity.
 
-![Legend template](){:width="313" height="480"  loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
+![Legend template](images/legend/legend-template.png){:width="313" height="480"  loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
