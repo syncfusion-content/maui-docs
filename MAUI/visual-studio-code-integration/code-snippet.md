@@ -11,7 +11,7 @@ documentation: ug
 
 The Syncfusion .NET MAUI code sample utility for Visual Studio Code provides sample for easily inserting Syncfusion .NET MAUI components with various features into the .NET MAUI Application's XAML code editor.
 
-N> The Syncfusion .NET MAUI code sample is available from Essential Studio 2024 Volume 1 (`v25.1.35`) onwards.
+N> The Syncfusion .NET MAUI code sample is available from Essential Studio® 2024 Volume 1 (`v25.1.35`) onwards.
 
 ## Add a Syncfusion .NET MAUI component
 

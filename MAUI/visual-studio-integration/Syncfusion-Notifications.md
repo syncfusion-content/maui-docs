@@ -9,9 +9,9 @@ documentation: ug
 
 # Syncfusion Notifications
 
-Syncfusion enhances the user experience in .NET MAUI applications through notification messages. These notifications cover various aspects, including alerts for trial applications when utilizing Syncfusion trial assemblies, updates regarding the availability of the latest Syncfusion NuGet package, and notifications regarding newer releases of Essential Studio. By keeping users informed, Syncfusion ensures that developers stay updated with Syncfusion latest features and enhancements.
+Syncfusion enhances the user experience in .NET MAUI applications through notification messages. These notifications cover various aspects, including alerts for trial applications when utilizing Syncfusion trial assemblies, updates regarding the availability of the latest Syncfusion NuGet package, and notifications regarding newer releases of Essential Studio®. By keeping users informed, Syncfusion ensures that developers stay updated with Syncfusion latest features and enhancements.
 
-N> The Syncfusion Notification feature is available from Essential Studio v22.1.34.
+N> The Syncfusion Notification feature is available from Essential Studio® v22.1.34.
 
 ## Notification Configuration
 
@@ -35,9 +35,9 @@ If you have installed lower versions of Syncfusion NuGet packages in your applic
 
    ![NuGet Notification](images/maui_nuget.png)
 
-**3. Newer Essential Studio Build Notification**
+**3. Newer Essential Studio® Build Notification**
 
-If you use older versions of Syncfusion assemblies or NuGet packages from **Essential Studio .NET MAUI,** Syncfusion will notify you about new releases for the latest Essential Studio build. Updating to the newest version ensures access to recent features, enhancements, and important updates, maximizing the capabilities of Syncfusion in your .NET MAUI development projects.
+If you use older versions of Syncfusion assemblies or NuGet packages from **Essential Studio® .NET MAUI,** Syncfusion will notify you about new releases for the latest Essential Studio® build. Updating to the newest version ensures access to recent features, enhancements, and important updates, maximizing the capabilities of Syncfusion in your .NET MAUI development projects.
 
    ![Build Notification](images/maui_build.png)
 
