@@ -15,7 +15,7 @@ N> The Syncfusion Notification feature is available from Essential Studio® v22.
 
 ## Notification Configuration
 
-The Syncfusion Options page allows you to configure notification settings. Customise trial and newer version notifications with a simple true or false toggle.
+The Syncfusion Options page allows you to configure notification settings. Customize trial and newer version notifications with a simple true or false toggle.
 
 It can be accessed by clicking **Tools -> Options -> Syncfusion -> .NET MAUI**
 

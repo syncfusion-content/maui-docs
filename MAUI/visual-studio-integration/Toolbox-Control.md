@@ -2,7 +2,7 @@
 layout: post
 title: Toolbox Control | .NET MAUI | Syncfusion
 description: Syncfusion .NET MAUI Toolbox to add the Syncfusion .NET MAUI (.NET MAUI.Forms) controls in your project without coding in the Visual Studio designer.
-platform: .NET MAUI
+platform: MAUI
 control: Syncfusion Extensions
 documentation: ug
 ---
