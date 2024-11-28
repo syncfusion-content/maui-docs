@@ -296,10 +296,12 @@ public class SchedulerViewModel
 
         for (date = dateFrom; date < dateTo; date = date.AddDays(1))
         {
-            for (int additionalAppointmentIndex = 0; additionalAppointmentIndex < 1; additionalAppointmentIndex++)
+            int appointmentsPerDay = randomTime.Next(1, 4);
+            for (int additionalAppointmentIndex = 0; additionalAppointmentIndex < appointmentsPerDay; additionalAppointmentIndex++)
             {
                 var meeting = new Meeting();
-                int hour = randomTime.Next((int)randomTimeCollection[additionalAppointmentIndex].X, (int)randomTimeCollection[additionalAppointmentIndex].Y);
+                int timeRangeIndex = randomTime.Next(randomTimeCollection.Count);
+                int hour = randomTime.Next((int)randomTimeCollection[timeRangeIndex].X, (int)randomTimeCollection[timeRangeIndex].Y);
                 meeting.From = new DateTime(date.Year, date.Month, date.Day, hour, 0, 0);
                 meeting.To = meeting.From.AddHours(1);
                 meeting.EventName = this.subjectCollection[randomTime.Next(9)];
