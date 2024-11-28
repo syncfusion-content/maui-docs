@@ -16,6 +16,48 @@ To get start quickly with perform selection in .NET MAUI DataGrid, you can check
 
 <style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src="https://www.youtube.com/embed/mN95SPfVcHo"></iframe>
 
+## Selection unit
+
+<table>
+<tr>
+<th> Unit </th>
+<th> Description </th>
+</tr>
+<tr>
+<td>Row</td>
+<td>Allows selection of a specific row or group of rows either programmatically or by touch interactions. Tapping on a cell selects the entire row. This is the default value.  </td>
+</tr>
+<tr>
+<td>Cell</td>
+<td> Allows selection of a specific cell or group of cells either programmatically or by touch interactions. Tapping on a cell selects only that particular cell and not the entire row.</td>
+</tr>
+<tr>
+<td>Any</td>
+<td>Allows selection of both rows and cells. Tapping on the row header selects the entire row. Tapping on a cell selects only that particular cell.  </td>
+</tr>
+</table>
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding OrderInfoCollection}"
+                           NavigationMode="Cell"
+                           SelectionUnit="Cell"
+                           SelectionMode="Multiple">
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+
+{% highlight c# %}
+this.dataGrid.SelectionUnit  = DataGridSelectionUnit.Cell;
+this.dataGrid.NavigationMode = DataGridNavigationMode.Cell;
+this.dataGrid.SelectionMode  = DataGridSelectionMode.Multiple;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="Selection-unit" src="Images\selection\maui-datagrid-selection-unit.png" width="404"/>
+
+>Note : It is not possible to set `NavigationMode.Row` when cell selection is enabled (SelectionUnit is Cell or Any). 
+
 ## Current Cell Navigation
 The Keyboard navigation through the cells and rows is determined based on the [NavigationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_NavigationMode) property. The [NavigationMode.Cell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNavigationMode.html#Syncfusion_Maui_DataGrid_DataGridNavigationMode_Cell) allows you to navigate between the cells in a row as well as between rows. The [NavigationMode.Row](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNavigationMode.html#Syncfusion_Maui_DataGrid_DataGridNavigationMode_Row) allows you to navigate only between rows. 
 
@@ -56,6 +98,24 @@ The `SfDataGrid` provides [SelectedIndex](https://help.syncfusion.com/cr/maui/Sy
 `SfDataGrid.CurrentRow`: Provides the underlying data object of the currently selected row in the DataGrid. Denotes the underlying data object of lastly selected row in multiple selections.
 
 `SfDataGrid.SelectedRows`: Provides all the selected records of the selected items when multiple selection is enabled.
+
+### Cell selection.
+
+When multiple cells are selected, call the `SfDataGrid.GetSelectedCells()` method to get information of all the selected cells.
+
+{% tabs %}
+{% highlight c# %}
+var selectedCells = this.dataGrid.GetSelectedCells();
+{% endhighlight %}
+{% endtabs %}
+
+To get the cell info, call the `SfDataGrid.GetSelectedCellInfo()`method to get cell at the specified row and column index.
+
+{% tabs %}
+{% highlight c# %}
+var selectedCellInfo = this.dataGrid.GetSelectedCellInfo(new RowColumnIndex(1,2));
+{% endhighlight %}
+{% endtabs %}
 
 ## CurrentRow vs SelectedRow 
 Both the `SelectedRow` and `CurrentRow` returns the same data object when the selection mode is single. When multiple selection is enabled, the initially selected record will be maintained in the `SelectedRow`, and the currently selected record will be maintained in the `CurrentRow`.
