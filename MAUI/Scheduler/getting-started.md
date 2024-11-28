@@ -416,7 +416,7 @@ Map those properties of the `Meeting` class with our [.NET MAUI Scheduler](https
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 3 15" %} 
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 3 15"  %}
 
 using Syncfusion.Maui.Scheduler;
 
