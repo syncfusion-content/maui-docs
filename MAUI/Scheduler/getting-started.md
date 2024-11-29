@@ -607,7 +607,7 @@ The Week number text style of the Scheduler can be customized by using the [Week
 <scheduler:SfScheduler x:Name="scheduler" ShowWeekNumber="True"/>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 14" %}  
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 14" %}
 
 SfScheduler scheduler = new SfScheduler();
 scheduler.ShowWeekNumber = true;
