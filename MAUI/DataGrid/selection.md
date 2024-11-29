@@ -165,6 +165,28 @@ public partial class MainPage : ContentPage
 
 ![Multiple Selection in .NET MAUI DataGrid](Images/selection/maui-datagrid-multiple-selection.png)
 
+### Process selection using methods
+
+You can select a particular cell using the `SfDataGrid.SelectCell(rowData, dataGridColumn)` method.
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+this.dataGrid.SelectCell(this.dataGrid.GetRecordAtRowIndex(3), this.dataGrid.Columns[1]);
+
+{% endhighlight %}
+{% endtabs %}
+
+When the selection mode is multiple you can select a range of cells using the `SfDataGrid.SelectCells(startRowData, startColumn, endRowData, endColumn)` method.
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+this.dataGrid.SelectCells(this.dataGrid.GetRecordAtRowIndex(3), this.dataGrid.Columns[1], this.dataGrid.GetRecordAtRowIndex(7), this.dataGrid.Columns[3]);
+
+{% endhighlight %}
+{% endtabs %}
+
 ### Select all the rows
 Select all the rows in the datagrid using the [SfDataGrid.SelectAll()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectAll) method.
 {% tabs %}
