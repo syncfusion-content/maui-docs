@@ -296,10 +296,12 @@ public class SchedulerViewModel
 
         for (date = dateFrom; date < dateTo; date = date.AddDays(1))
         {
-            for (int additionalAppointmentIndex = 0; additionalAppointmentIndex < 1; additionalAppointmentIndex++)
+            int appointmentsPerDay = randomTime.Next(1, 4);
+            for (int additionalAppointmentIndex = 0; additionalAppointmentIndex < appointmentsPerDay; additionalAppointmentIndex++)
             {
                 var meeting = new Meeting();
-                int hour = randomTime.Next((int)randomTimeCollection[additionalAppointmentIndex].X, (int)randomTimeCollection[additionalAppointmentIndex].Y);
+                int timeRangeIndex = randomTime.Next(randomTimeCollection.Count);
+                int hour = randomTime.Next((int)randomTimeCollection[timeRangeIndex].X, (int)randomTimeCollection[timeRangeIndex].Y);
                 meeting.From = new DateTime(date.Year, date.Month, date.Day, hour, 0, 0);
                 meeting.To = meeting.From.AddHours(1);
                 meeting.EventName = this.subjectCollection[randomTime.Next(9)];
@@ -414,7 +416,7 @@ Map those properties of the `Meeting` class with our [.NET MAUI Scheduler](https
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 3 15" %} 
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 3 15"  %}
 
 using Syncfusion.Maui.Scheduler;
 
@@ -605,7 +607,7 @@ The Week number text style of the Scheduler can be customized by using the [Week
 <scheduler:SfScheduler x:Name="scheduler" ShowWeekNumber="True"/>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 14" %}  
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1 14" %}
 
 SfScheduler scheduler = new SfScheduler();
 scheduler.ShowWeekNumber = true;
