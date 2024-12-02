@@ -59,6 +59,17 @@ On an iOS device, the image will be saved to:
 
 `/Photos/Pictures`
 
+For MacCatalyst devices, you should include permission in the Info.plist file as shown in the following code.
+
+{% tabs %}
+{% highlight C# tabtitle="Info.plist" %}
+
+<key>NSPhotoLibraryUsageDescription</key>
+<string>Pick Photos</string>
+
+{% endhighlight %}
+{% endtabs %}
+
 #### Android
 
 **API 29 and above**
