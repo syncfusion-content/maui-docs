@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in MAUI TextInputLayout control | Syncfusion
-description: Learn about Events support in Syncfusion Essential Studio MAUI TextInputLayout control, its elements, and more.
+description: Learn about Events support in Syncfusion Essential Studio® MAUI TextInputLayout control, its elements, and more.
 platform: maui
 control: SfTextInputLayout
 documentation: ug
@@ -16,8 +16,8 @@ The [PasswordVisibilityToggled](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 * [IsPasswordVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.PasswordVisibilityToggledEventArgs.html#Syncfusion_Maui_Core_PasswordVisibilityToggledEventArgs_IsPasswordVisible): Its value is defined based on the visibility of the password.
 
-{% tabs %} 
-{% highlight xaml %} 
+{% tabs %}
+{% highlight xaml %}
 
 <inputLayout:SfTextInputLayout  Hint="Password" 
                                 PasswordVisibilityToggled="OnPasswordVisibilityToggled">
@@ -25,8 +25,7 @@ The [PasswordVisibilityToggled](https://help.syncfusion.com/cr/maui/Syncfusion.M
 </inputLayout:SfTextInputLayout>  
  
 {% endhighlight %}
-
-{% highlight C# %} 
+{% highlight c# %}
 
 var inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Password";
@@ -34,7 +33,6 @@ inputLayout.PasswordVisibilityToggled += OnPasswordVisibilityToggled;
 inputLayout.Content = new Entry() { Text = "1234" }; 
 
 {% endhighlight %}
-
 {% endtabs %}
 
 {% tabs %}

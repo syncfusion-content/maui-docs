@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customization in .NET MAUI Chips control | Syncfusion
-description: Learn about Customization support in Syncfusion Essential Studio .NET MAUI Chips control, its elements and more.
+description: Learn about Customization support in Syncfusion Essential Studio® .NET MAUI Chips control, its elements and more.
 platform: maui
 control: Chips
 documentation: ug
