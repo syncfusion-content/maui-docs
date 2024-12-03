@@ -541,25 +541,29 @@ tabView.ContentTransitionDuration = 300;
 
 ## Image size
 
-You can customize the image size in the .NET MAUI TabView control by setting the ImageSize property.
+You can customize the image size in the .NET MAUI TabView control by setting the `ImageSize` property.
 
 {% tabs %}
 
 {% highlight xaml %}
 <tabView:SfTabView>
-    <tabView:SfTabItem ImageSize="20"/>
+    <tabView:SfTabItem ImageSize="50"/>
 </tabView:SfTabView>
 {% endhighlight %}
 
 {% highlight C# %}
+StackLayout stackLayout = new StackLayout();
 var tabView = new SfTabView();
 var tabItems = new TabItemCollection
 {
     new SfTabItem()
     {
-        ImageSize = "20",
+        ImageSize = 50,
     }
-}
+};
+tabView.Items = tabItems;
+stackLayout.Children.Add(tabView);
+this.Content = stackLayout;
 {% endhighlight %}
 
 {% endtabs %}

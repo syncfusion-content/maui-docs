@@ -220,7 +220,7 @@ SfRadioButton radioButton = new SfRadioButton
 {% endtabs %}
 
 ## Content spacing
-This feature allows users to adjust the content spacing in the [`SfRadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) control. 
+The `ContentSpacing` property is used to adjust the content spacing in the [`SfRadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) control.
 
 {% tabs %}
 {% highlight xaml %}
@@ -230,11 +230,12 @@ This feature allows users to adjust the content spacing in the [`SfRadioButton`]
 {% endhighlight %}
 {% highlight c# %}
 
-SfRadioButton radioButton = new SfRadioButton
-{
-	Text = "Radio Button",
-	ContentSpacing = 25
-};
+StackLayout stackLayout = new StackLayout();
+SfRadioButton radioButton = new SfRadioButton();
+radioButton.Text = "Radio Button";
+radioButton.ContentSpacing = 25;
+stackLayout.Children.Add(radioButton);
+this.Content = stackLayout;
 
 {% endhighlight %}
 {% endtabs %}
