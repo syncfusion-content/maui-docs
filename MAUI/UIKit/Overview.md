@@ -27,11 +27,10 @@ The [Syncfusion Essential UI Kit](https://www.syncfusion.com/essential-ui-kit-fo
 * Social
 * Profile
 * Tracking
-* Dashboard
 * Settings
 * Notification
 
-The screens are developed with MVVM pattern, which separates the UI and business logic results in a clean, professional, and scalable representation of user interface in your Xamarin.Forms applications. You can get the UI Kit application from [Google Play Store](https://play.google.com/store/apps/details?id=com.syncfusion.maui.uikit) and the complete source code is available in [GitHub repository](https://github.com/syncfusion/essential-ui-kit-for-.net-maui)
+The screens are developed with MVVM pattern, which separates the UI and business logic results in a clean, professional, and scalable representation of user interface in your Xamarin.Forms applications. You can get the UI Kit application from [Google Play Store]() and the complete source code is available in [GitHub repository](https://github.com/syncfusion/essential-ui-kit-for-.net-maui)
 
 ## Supported Platforms
 
@@ -40,6 +39,5 @@ The screens are developed with MVVM pattern, which separates the UI and business
 * Mac 15.0 and later versions.
 * Windows Build 17763 and later versions
 
-N> The required minimum version of MAUI is 9.0.0.
 
 To get started with Syncfusion XAML Pages for MAUI, refer to [Getting Started](https://help.syncfusion.com/maui/uikit/gettingstarted)
