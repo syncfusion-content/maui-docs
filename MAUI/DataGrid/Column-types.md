@@ -385,7 +385,7 @@ N> The truncation modes will not work on the Windows platform.
 
 ### UseBindingValue
 
-In DataGridColumn, the `UseBindingValue` is used to enable or disable the automatic binding of values in cells to a data source. We can bind the complex properties.
+In DataGridColumn, the `UseBindingValue` is used to enable or disable the automatic binding of values in cells to a data source. We can bind the complex properties and will do the data operations for complex properties.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
