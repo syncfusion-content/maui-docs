@@ -832,8 +832,6 @@ public class Model
 
 ![Legend icon customization](images/legend/legend-appearance.png)
 
-N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps Legend example](https://github.com/syncfusion/maui-demos/) that shows how to configure a Maps in .NET MAUI.
-
 ## Customize items layout
 
 The `ItemsLayout` property is used to customize the arrangement and position of each legend item. The default value is null. This property accepts any layout type.
@@ -1096,6 +1094,8 @@ You can customize the appearance of legend items with your template by using `It
 {% endhighlight %}
 {% endtabs %}
 
-N> The TextColor property of the legend updates as per the luminosity.
+N> The BindingContext of the ItemTemplate is the corresponding underlying legend item provided in the MapLegned class.
 
 ![Legend template](images/legend/legend-template.png){:width="313" height="480"  loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
+
+N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps Legend example](https://github.com/syncfusion/maui-demos/) that shows how to configure a Maps in .NET MAUI.
