@@ -61,10 +61,10 @@ On an iOS device, the image will be saved to:
 
 **Enable File Access Permission**
 
-For MacCatalyst devices, you should include permission in the Entilements.plist file as shown in the following code.
+For MacCatalyst devices, you should include permission in the Entitlements.plist file as shown in the following code.
 
 {% tabs %}
-{% highlight C# tabtitle="Entilements.plist" %}
+{% highlight C# tabtitle="Entitlements.plist" %}
 
 <key>com.apple.security.files.user-selected.read-write</key>
 <true/>
