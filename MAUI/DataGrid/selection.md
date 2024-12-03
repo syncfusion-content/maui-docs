@@ -122,6 +122,34 @@ public partial class MainPage : ContentPage
 
 ![All the rows selected in .NET MAUI DataGrid](Images/selection/maui-datagrid-selectall.png)
 
+## Column selection
+The SfDataGrid provides the [SfDataGrid.AllowColumnSelection]() property to select columns when the `SelectionMode` is set to Multiple, the `SelectionUnit` is set to Cell, and the `NavigationMode` is set to Cell.
+
+By default, the `SortingGestureType` is set to `Tap` mode, so we select the column by double-clicking the header cell. We can also modify this behavior by changing the `SortingGestureType`.
+
+{% tabs %}
+{% highlight XAML %}
+<syncfusion:SfDataGrid x:Name="sfDataGrid"
+                    SelectionMode="Multiple"
+                    NavigationMode="Cell"
+                    SelectionUnit="Cell"
+                    AllowColumnSelection="True"
+                    ColumnWidthMode="Auto"
+                    ItemsSource="{Binding OrderInfoCollection}" >
+<syncfusion:SfDataGrid.Columns>
+   <syncfusion:DataGridTextColumn MappingName="OrderID"
+                 HeaderText="Order ID" />
+   <syncfusion:DataGridTextColumn MappingName="CustomerID"
+                 HeaderText="Customer ID" />
+   <syncfusion:DataGridTextColumn MappingName="ShipCountry "
+                 HeaderText="Ship Country " />
+</syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="Pull To Refresh" src="Images\selection\maui_datagrid_column_selection.gif" width="404"/>
+
 ## Keyboard behavior
 <table>
 <tr>
