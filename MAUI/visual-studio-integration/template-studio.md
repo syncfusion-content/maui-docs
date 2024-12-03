@@ -21,7 +21,7 @@ N> Before use the Syncfusion .NET MAUI Project Template, check whether the Syncf
 
      **Option 1**
 
-     Choose **Extension -> Syncfusion -> Essential Studio for .NET MAUI -> Create New Syncfusion Project...** from the **Visual Studio menu**.
+     Choose **Extension -> Syncfusion -> Essential Studio® for .NET MAUI -> Create New Syncfusion Project...** from the **Visual Studio menu**.
 
      ![CreateMenu](images/MenuProject.png)
 
@@ -71,4 +71,4 @@ N> Before use the Syncfusion .NET MAUI Project Template, check whether the Syncf
 
 8. The Syncfusion .NET MAUI application configures with most recent Syncfusion .NET MAUI NuGet packages version, namespaces , and component render code for Syncfusion components.
 
-9. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion license key to your application since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx?_ga=2.11237684.1233358434.1587355730-230058891.1567654773) post for understanding the licensing changes introduced in Essential Studio.
+9. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion license key to your application since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio® release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your application. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx?_ga=2.11237684.1233358434.1587355730-230058891.1567654773) post for understanding the licensing changes introduced in Essential Studio®.
