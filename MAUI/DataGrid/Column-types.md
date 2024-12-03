@@ -383,6 +383,24 @@ The text wrapping and truncation of a column's cell values can be customized by 
 
 N> The truncation modes will not work on the Windows platform.
 
+### UseBindingValue
+
+In DataGridColumn, the `UseBindingValue` is used to enable or disable the automatic binding of values in cells to a data source. We can bind the complex properties.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:DataGridTextColumn MappingName ="OrderID" 
+                               UseBindingValue="True" /> 
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+dataGrid.Columns.Add( new DataGridTextColumn()
+{ 
+    MappingName = "OrderID",
+    UseBindingValue = "True"
+});
+{% endhighlight %}
+{% endtabs %}
+
 ## DataGridTextColumn
 
 The DataGridTextColumn inherits all the properties of the DataGridColumn. It is used to host the textual content in the record cells. Each of the record cells displays text based on the  `MappingName` that associates the column with a property in the data source.
