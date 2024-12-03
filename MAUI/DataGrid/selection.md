@@ -54,7 +54,7 @@ this.dataGrid.SelectionMode  = DataGridSelectionMode.Multiple;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Selection-unit" src="Images\selection\maui-datagrid-selection-unit.png" width="404"/>
+<img alt="Selection-unit" src="Images\selection\maui-datagrid-selection-unit.png" width="404" height="392" />
 
 >Note : It is not possible to set `NavigationMode.Row` when cell selection is enabled (SelectionUnit is Cell or Any). 
 
@@ -167,21 +167,23 @@ public partial class MainPage : ContentPage
 
 ### Process selection using methods
 
-You can select a particular cell using the `SfDataGrid.SelectCell(rowData, dataGridColumn)` method.
+You can select a particular cell within the grid by using the `SfDataGrid.SelectCell(rowData, dataGridColumn)` method. 
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
+// Selects the cell at the given row and column.
 this.dataGrid.SelectCell(this.dataGrid.GetRecordAtRowIndex(3), this.dataGrid.Columns[1]);
 
 {% endhighlight %}
 {% endtabs %}
 
-When the selection mode is multiple you can select a range of cells using the `SfDataGrid.SelectCells(startRowData, startColumn, endRowData, endColumn)` method.
+The `SfDataGrid.SelectCells` method  allows you to programmatically select a range of cells in the grid. This is particularly useful when the selection mode is set to `DataGridSelectionMode.Multiple`.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
+// Selects the range of cells that falls between the specified start/end row data and start/end column.
 this.dataGrid.SelectCells(this.dataGrid.GetRecordAtRowIndex(3), this.dataGrid.Columns[1], this.dataGrid.GetRecordAtRowIndex(7), this.dataGrid.Columns[3]);
 
 {% endhighlight %}
