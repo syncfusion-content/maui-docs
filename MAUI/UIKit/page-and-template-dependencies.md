@@ -229,7 +229,7 @@ This page list the dependencies ( converters, rendereres and NuGet packages) of 
 		  Views\Catalog\ArticleListPage.xaml<br/>  Views\Catalog\ArticleListPage.xaml.cs<br/>  ViewModel\ArticleListViewModel.cs<br/>  Models\Story.cs<br/>  Converters\BooleanToColorConverter.cs<br/>  Converters\BooleanToStringConverter.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
         </td>
 	</tr>
-		<tr valign="top">		
+	<tr valign="top">		
 		<td align="center">
 		   5<br/>
 		</td>
@@ -243,8 +243,7 @@ This page list the dependencies ( converters, rendereres and NuGet packages) of 
 		  Views\Catalog\ArticleTilePage.xaml<br/>  Views\Catalog\ArticleTilePage.xaml.cs<br/>  ViewModel\ArticleListViewModel.cs<br/>  Models\Story.cs<br/>  Converters\BooleanToColorConverter.cs<br/>  Converters\BooleanToStringConverter.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
         </td>
 	</tr>
-	</tr>
-		<tr valign="top">		
+	<tr valign="top">		
 		<td align="center">
 		   6<br/>
 		</td>
@@ -258,8 +257,7 @@ This page list the dependencies ( converters, rendereres and NuGet packages) of 
 		  Views\Catalog\ProductHomePage.xaml<br/>  Views\Catalog\ProductHomePage.xaml.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
         </td>
 	</tr>
-	</tr>
-		<tr valign="top">		
+	<tr valign="top">		
 		<td align="center">
 		   7<br/>
 		</td>
@@ -273,8 +271,7 @@ This page list the dependencies ( converters, rendereres and NuGet packages) of 
 		  Views\Catalog\EventListPage.xaml<br/>  Views\Catalog\EventListPage.xaml.cs<br/>  ViewModel\EventListViewModel.cs<br/>  Models\Catalog\EventList.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
         </td>
 	</tr>
-	</tr>
-		<tr valign="top">		
+	<tr valign="top">		
 		<td align="center">
 		   8<br/>
 		</td>
@@ -288,8 +285,7 @@ This page list the dependencies ( converters, rendereres and NuGet packages) of 
 		  Views\Catalog\ArticleCardPage.xaml<br/>  Views\Catalog\ArticleCardPage.xaml.cs<br/>  ViewModel\ArticleCardViewModel.cs<br/>  Models\Story.cs<br/>  Converters\BooleanToColorConverter.cs<br/>  Converters\BooleanToStringConverter.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
         </td>
 	</tr>
-	</tr>
-		<tr valign="top">		
+	<tr valign="top">		
 		<td align="center">
 		   9<br/>
 		</td>
@@ -340,6 +336,34 @@ This page list the dependencies ( converters, rendereres and NuGet packages) of 
 		<th>
 			Required Files<br/>
 		</th>
+	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   1<br/>
+		</td>
+		<td>
+		  Recent Conversation Page<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.Buttons,<br/>  Syncfusion.Maui.Core,<br/>   Syncfusion.Maui.Inputs,<br/>  Syncfusion.Maui.ListView<br/>
+		</td>
+		<td>
+		  Views\Chat\RecentChatPage.xaml<br/>  Views\Chat\RecentChatPage.xaml.cs<br/>  ViewModel\RecentChatViewModel.cs<br/>  Models\Catalog\Travel.cs<br/>  Converters\StringToMessageTypeConverter.cs<br/>  Converters\StringToGlyphConverter.cs<br/>  Converters\StringToBadgeIconConverter.cs.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
+        </td>
+	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   2<br/>
+		</td>
+		<td>
+		  Chat Conversation Page<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.Buttons,<br/>  Syncfusion.Maui.Core,<br/>   Syncfusion.Maui.Inputs,<br/>  Syncfusion.Maui.ListView<br/>
+		</td>
+		<td>
+		  Views\ChatMessagePage.xaml<br/>  Views\ChatMessagePage.xaml.cs<br/>  Views\IncomingImageTemplate.xaml<br/>  Views\IncomingImageTemplate.xaml.cs<br/>  Views\IncomingTextTemplate.xaml<br/>  Views\IncomingTextTemplate.xaml.cs<br/>  Views\OutgoingImageTemplate.xaml<br/>  Views\OutgoingImageTemplate.xaml.cs<br/>  Views\OutgoingTextTemplate.xaml<br/>  Views\OutgoingTextTemplate.xaml.cs<br/>  ViewModel\ChatMessageViewModel.cs<br/>  Converters\DateTimeToStringConverter.cs.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
+        </td>
 	</tr>
 </table>
 
@@ -398,8 +422,7 @@ This page list the dependencies ( converters, rendereres and NuGet packages) of 
 			Required Files<br/>
 		</th>
 	</tr>
-	</tr>
-		<tr valign="top">		
+	<tr valign="top">		
 		<td align="center">
 		   1<br/>
 		</td>
@@ -605,7 +628,7 @@ This page list the dependencies ( converters, rendereres and NuGet packages) of 
 			Required Files<br/>
 		</th>
 	</tr>
-		<tr valign="top">		
+	<tr valign="top">		
 		<td align="center">
 		   1<br/>
 		</td>

@@ -15,13 +15,6 @@ The UI Kit screens can be added in your application by the following two ways:
 
 2. Copying the files from our open source [GitHub repository](https://github.com/syncfusion/essential-ui-kit-for-.net-maui).
 
-## Assembly deployment
-
-After installing [Essential Studio for MAUI](https://www.syncfusion.com/downloads/maui), you can find all the required assemblies in the installation folders, {Syncfusion Essential Studio Installed location} \Essential Studio\\{Version #}\Xamarin\lib.
-
-E.g.: C:\Program Files (x86) \Syncfusion\Essential Studio\19.1.0.54\Xamarin\lib
-
-N> Assemblies can be found in unzipped package location(Documents/Syncfusion/{Version #}/Xamarin/lib) in Mac.
 
 ## Essential UI Kit for MAUI Extension
 
@@ -47,21 +40,36 @@ This is the easiest way to add the pre-defined screens to your application. The 
 
 N> The **Essential UI Kit for MAUI** add-in will be shown when the project have the **MAUI** NuGet package as a reference and also, MAUI project should be a NETStandard project.
 
-7. Select the category and pages you need to add in your application. In the following screenshot, the **Login with Social Icon** screen has been selected from the **Login** category. 
+7. Select the category and pages you need to add in your application. In the following screenshot, the **Login with Social Icon** screen has been selected from the **Forms** category. 
 
    ![Visual Studio UIkit Category](UI-Kit-images/Essential_UIKit_Category.png)
+8. Clicking the 'Next' button will navigate to the following page to add page name : 
 
-8. Clicking the 'Add' button will include the selected page to your project. The necessary class files, resources, and NuGet package references will automatically be added to your project as shown in the following screenshot.
+   ![Visual Studio UIkit Category](UI-Kit-images/Essential_UIKit_PageName.png)
 
-   ![Visual Studio Ui Kit nuget and files](UI-Kit-images/Kit_Nuget_Files.jpg)
+9. Clicking the 'Add' button will include the selected page to your project. The necessary class files, resources, and NuGet package references will automatically be added to your project as shown in the following screenshot.
+
+   ![Visual Studio Ui Kit Resources](UI-Kit-images/Essential_UIKit_Resources.png)
+   ![Visual Studio Ui Kit Resources](UI-Kit-images/Essential_UIKit_Nuget_Packages.png)
+   ![Visual Studio Ui Kit Resources](UI-Kit-images/Essential_UIKit_ClassFiles.png)
 
 ## How to render the added page
 
-In a MAUI demo application, you must make the added page as the start-up page in the App.xaml.cs file. 
-Example: If you added the Login Page, then you must invoke the page as demonstrated in the following code.
+In a MAUI demo application, you must make the added page as the start-up page in the AppShell.xaml file. 
+Example: If you added the Login with Social Icon Page, then you must invoke the page as demonstrated in the following code.
 
-{% highlight c# %}
-MainPage = new SampleFormsApplication.Views.Login.LoginPage();
+1. Add the namespace as shown in the following code:
+{% highlight xaml %}
+<Shell
+    . . . 
+xmlns:local="clr-namespace:SampleFormsApplication.Views.Forms"/>
+{% endhighlight %} 
+2. Set the template as Main Page by using the following code:
+{% highlight xaml %}
+<ShellContent
+   Title="Home"
+   ContentTemplate="{DataTemplate local:LoginWithSocialIcon}"
+   Route="LoginWithSocialIcon" />
 {% endhighlight %} 
 
 In real-world applications, you may need to do the following to use these XAML pages:
