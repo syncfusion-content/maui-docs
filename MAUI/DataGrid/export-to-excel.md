@@ -802,6 +802,10 @@ option.CanApplyGridStyle = true;
 
 <img alt="Export DataGrid to Excel with styling applied" src="Images\export-to-excel\maui-datagrid-can-apply-gridstyle.png" width="689"/>
 
+The SfDataGrid also allows exporting the data with alternate row color by setting [AlternateRowBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_AlternateRowBackground) in `SfDataGrid.DefaultStyle` and [DataGridExcelExportingOption.CanApplyGridStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_CanApplyGridStyle) to `true`.
+
+<img alt="Export DataGrid to Excel with alternate row background applied" src="Images\export-to-excel\maui-datagrid-alternate-row-background.png" width="689"/>
+
 #### TopTableSummaryStyle
 
 The SfDataGrid supports exporting the top table summary with custom style by using the [DataGridExcelExportingOption.TopTableSummaryStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_TopTableSummaryStyle) property.
