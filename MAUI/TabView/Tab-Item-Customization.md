@@ -493,9 +493,9 @@ The [ScrollButtonBackground] and [ScrollButtonColor] property of [SfTabView](htt
 {% endhighlight %}
 
 {% highlight C# %}
-     StackLayout stackLayout = new StackLayout();
+    StackLayout stackLayout = new StackLayout();
     var tabView = new SfTabView();
-    tabView.ScrollButtonBackground = Colors.Violet;
+    tabView.ScrollButtonBackground = SolidColorBrush.Violet;
     tabView.ScrollButtonColor =Colors.Red;
     stackLayout.Children.Add(tabView);
     this.Content = stackLayout;
