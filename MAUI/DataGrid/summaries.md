@@ -65,6 +65,39 @@ The following screenshot shows the outcome of the previous code:
 
 ![DataGrid with formatting in caption summary row](Images\caption-summary\maui-datagrid-formatting-show-summary-in-row.png)
 
+### Display a custom name in place of the column name in the group caption summary text
+
+The column name in the group caption summary text can be customized using the DisplayName property.
+
+If the DisplayName property is set, the specified display name will appear in the group caption summary text. If it is null, the column name will be displayed instead.
+
+{% tabs %}
+{% highlight xaml %}
+    <sfGrid:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       ColumnWidthMode="Fill"
+                       GroupCaptionTextFormat="{}{ColumnName}: {Key}">
+        <sfgrid:SfDataGrid.GroupColumnDescriptions>
+            <sfgrid:GroupColumnDescription ColumnName="Salary" DisplayName="Income" />
+        </sfgrid:SfDataGrid.GroupColumnDescriptions>
+    </sfGrid:SfDataGrid>
+{% endhighlight %}
+
+{% highlight c# %}
+DataGridSummaryRow summaryRow = new DataGridSummaryRow();
+GroupColumnDescription groupColumnDescription = new GroupColumnDescription
+{
+    ColumnName = "Salary",
+    DisplayName = "Income"
+};
+
+dataGrid.GroupColumnDescriptions.Add(groupColumnDescription);
+{% endhighlight %}
+{% endtabs %}
+
+The following screenshot shows the outcome of the previous code:
+
+![DataGrid with DisplayName in group caption summary text](Images\group-summary\maui-datagrid-DisplayName.png)
 
 ### Displaying summary for a row
 
