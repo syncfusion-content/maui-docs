@@ -185,7 +185,7 @@ The `CreateAssistChat` method allows for the customization of the chat view func
 
 The `CustomAssistViewChat `class inherits from `AssistViewChat` and can be used to further customize the chat view.
 
-{% tabs %} 
+{% tabs %}
 {% highlight c# %} 
 
    public class CustomassistViewchat : AssistViewChat
