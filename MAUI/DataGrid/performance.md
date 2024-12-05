@@ -31,12 +31,28 @@ The default value of this property is `true`. If you want to improve loading and
 
 N> Download demo application from [GitHub](https://github.com/SyncfusionExamples/How-to-improve-scrolling-performance-in-.NET-MAUI-DataGrid).
 
+### DataGridImageColumn
+
+If `LoadUIView` is set as `false` for `DataGridImageColumn` the image should be load from `FromResource` method which required to set an image as an embedded resource. 
+
+{% tabs %}
+{% highlight xaml %}
+<sfgrid:SfDataGrid ItemsSource="{Binding OrderInfoCollection}">
+    <sfgrid:SfDataGrid.Columns>
+        <sfgrid:DataGridImageColumn MappingName="DealerImage" HeaderText="Dealer Image" LoadUIView="False"/>
+    </sfgrid:SfDataGrid.Columns>
+</sfgrid:SfDataGrid>
+{% endhighlight %}
+{% endtabs %}
+
+It allows you to set the [Aspect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridImageColumn.html#Syncfusion_Maui_DataGrid_DataGridImageColumn_Aspect) to size the loaded images using the `DataGridImageColumn.Aspect` property. The default value is `AspectFit`.
+
 ### Limitations
 
 * For Android platform, both implicit and explicit padding are not supported. However, left and right padding will be applied based on the padding, while the top and bottom positions will be adjusted based on the content.
 * [DataGridColumn.LineBreakMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_LineBreakMode) is not supported for Android platform.
 * Runtime theme changes will not be applied.
-* This is not supported for [DataGridTemplateColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTemplateColumn.html), [DataGridCheckBoxColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCheckBoxColumn.html) and [DataGridImageColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridImageColumn.html).
+* This is not supported for [DataGridTemplateColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTemplateColumn.html) and [DataGridCheckBoxColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCheckBoxColumn.html).
 
 ## Data virtualization
 
