@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotation Collection in .NET MAUI PDF Viewer control | Syncfusion®
-description: Learn here all about annotation collection in Syncfusion .NET MAUI PDF Viewer (SfPdfViewer) control and its uses.
+description: Learn here all about annotation collection in Syncfusion® .NET MAUI PDF Viewer (SfPdfViewer) control and its uses.
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
