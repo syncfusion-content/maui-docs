@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Working with AssistView in .NET MAUI AssistView | Syncfusion
+title: Working with AI AssistView in .NET MAUI AssistView Control | Syncfusion
 description: Learn here all about Working with AI AssistView support in Syncfusion .NET MAUI  AI AssistView control and more.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
 ---
 
-# Working with AssistView in .NET MAUI AI AssistView (SfAIAssistView)
+# Working with AI AssistView in .NET MAUI AI AssistView (SfAIAssistView)
 
 ## Stop Responding in .NET MAUI AI AssistView (SfAIAssistView)
 
-The Stop Responding feature allows you to cancel an ongoing AI response by clicking the Stop Responding button. This feature ensures that users can stop if a response is no longer needed.
+The `Stop Responding` feature allows you to cancel an ongoing AI response by clicking the Stop Responding button. This feature ensures that users can stop if a response is no longer needed.
 By default, the Stop Responding button is displayed, to disable this set the `EnableStopResponding` property to `false`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-         <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                                    EnableStopResponding="False"/>  
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                               EnableStopResponding="False"/>  
 
 {% endhighlight %} 
 {% highlight c# hl_lines="6" %}
