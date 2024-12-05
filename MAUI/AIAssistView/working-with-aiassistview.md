@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Working with AI AssistView in .NET MAUI AI AssistView control | Syncfusion
+title: Working with AssistView in .NET MAUI AssistView | Syncfusion
 description: Learn here all about Working with AI AssistView support in Syncfusion .NET MAUI  AI AssistView control and more.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
 ---
 
-# Working with AI AssistView  in .NET MAUI AI AssistView (SfAIAssistView)
+# Working with AssistView in .NET MAUI AI AssistView (SfAIAssistView)
 
 ## Stop Responding in .NET MAUI AI AssistView (SfAIAssistView)
 
