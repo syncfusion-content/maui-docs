@@ -167,7 +167,7 @@ public class CustomAssistPage : ContentPage
 The `CreateAssistChat` method allows for the customization of the chat view functionality within the AI AssistView control. By overriding this method, can create their own custom implementation of the chat view, allowing for greater control over the appearance and behavior of chat interactions. It provides the flexibility to modify how chat messages are displayed, how user interactions are handled. Here’s how to override the `CreateAssistChat` method to return a custom instance of `AssistViewChat`.
 
 {% tabs %} 
-{% highlight c# hl_lines="8" %}
+{% highlight c# %}
 
    public class CustomAIAssiststView : SfAIAssistView
    {
@@ -186,7 +186,7 @@ The `CreateAssistChat` method allows for the customization of the chat view func
 The `CustomAssistViewChat `class inherits from `AssistViewChat` and can be used to further customize the chat view.
 
 {% tabs %} 
-{% highlight c# hl_lines="3" %} 
+{% highlight c# %} 
 
    public class CustomassistViewchat : AssistViewChat
    {
