@@ -309,14 +309,14 @@ The `ContentSpacing` property is used to adjust the content spacing in the [`SfC
 {% tabs %}
 {% highlight xaml %}
 
-<syncfusion:SfCheckBox Text="CheckBox" ContentSpacing="25"/>
+<syncfusion:SfCheckBox Text="Check Box" ContentSpacing="25"/>
 
 {% endhighlight %}
 {% highlight c# %}
 
 StackLayout stackLayout = new StackLayout();
 SfCheckBox  sfCheckBox  = new SfCheckBox();
-sfCheckBox.Text = "CheckBox";
+sfCheckBox.Text = "Check Box";
 sfCheckBox.ContentSpacing = 25;
 stackLayout.Children.Add(sfCheckBox);
 this.Content = stackLayout;
