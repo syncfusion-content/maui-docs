@@ -35,11 +35,11 @@ By default, the Stop Responding button is displayed, to disable this set the `En
 {% endhighlight %}
 {% endtabs %}
 
-## Stop Responding Event and Command
+### Stop Responding Event and Command
 
 The `SfAIAssistView` control includes a built-in event called `StopResponding` and a command named `StopRespondingCommand`. These are triggered when the Stop Responding button is clicked.
 
-### StopResponding Event
+#### StopResponding Event
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -60,7 +60,7 @@ The `SfAIAssistView` control includes a built-in event called `StopResponding` a
 {% endhighlight %}
 {% endtabs %}
 
-### StopResponding Command
+#### StopResponding Command
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}   
@@ -89,7 +89,7 @@ The `SfAIAssistView` control includes a built-in event called `StopResponding` a
 {% endhighlight %}
 {% endtabs %}
 
-# Control Template in .NET MAUI AI AssistView (SfAIAssistView)
+## Control Template in .NET MAUI AI AssistView (SfAIAssistView)
 
 The `ControlTemplate` in AI AssistView allows you to define and reuse the visual structure of a control. This flexible structure enables to fully customize the appearance and behavior of the AI AssistView. By using a `ControlTemplate` with the AI AssistView, you can create a highly customized and interactive interface, as demonstrated below.
 
@@ -162,7 +162,7 @@ public class CustomAssistPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## CreateAssistChat Override in AI AssistView
+### CreateAssistChat Override in AI AssistView
 
 The `CreateAssistChat` method allows for the customization of the chat view functionality within the AI AssistView control. By overriding this method, can create their own custom implementation of the chat view, allowing for greater control over the appearance and behavior of chat interactions. It provides the flexibility to modify how chat messages are displayed, how user interactions are handled. Here’s how to override the `CreateAssistChat` method to return a custom instance of `AssistViewChat`.
 
@@ -202,7 +202,7 @@ The `CustomAssistViewChat `class inherits from `AssistViewChat` and can be used 
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/custom-control-template-in-.net-maui-aiassistview)
 
-# EditorView Template in .NET MAUI AI AssistView (SfAIAssistView)
+## EditorView Template in .NET MAUI AI AssistView (SfAIAssistView)
 
 The SfAIAssistView control allows you to fully customize the editor's appearance by using the `EditorViewTemplate` property. This property lets you define a custom layout and style for the editor.
 
