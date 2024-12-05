@@ -91,6 +91,46 @@ sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.InlineVerti
 
 ![UpDown Vertical Placement in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonPlacementVertical.png)
 
+## UpDown button Alignment
+
+You can adjust the alignment of the up-down buttons in the `NumericEntry` controls by setting the UpDownButtonAlignment property. By default, the value of the UpDownButtonAlignment property is **Right**. By setting the UpDownButtonAlignment property to **Left**, where both buttons are positioned on the left and **Both**, where the buttons are positioned at the extreme ends.
+
+{% tabs %}
+{% highlight XAML %}
+
+<editors:SfNumericEntry UpDownPlacementMode="Inline"
+                        UpDownButtonAlignment="Left" />
+                     
+{% endhighlight %}
+{% highlight c# %}
+
+SfNumericEntry sfNumericEntry = new SfNumericEntry();
+sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
+sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Left;
+
+{% endhighlight %}
+{% endtabs %}
+
+![UpDown Alignment is left in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonAlignment.png)
+
+{% tabs %}
+{% highlight XAML %}
+
+<editors:SfNumericEntry UpDownPlacementMode="Inline"
+                        UpDownButtonAlignment="Right" />
+                     
+{% endhighlight %}
+{% highlight c# %}
+
+SfNumericEntry sfNumericEntry = new SfNumericEntry();
+sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
+sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Right;
+
+{% endhighlight %}
+{% endtabs %}
+
+![UpDown Alignment is Right in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonAlignment.png)
+
 ## UpDown button customization
 
 ## UpDown button color
@@ -231,32 +271,6 @@ The `NumericEntry` control supports customization of the UpDownButton's appearan
 {% endtabs %}
 
 ![UpDownButtonTemplate support in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonTemplate.png)
-
-## Up Down Button Alignment
-
-The Up Down Button Alignment feature specifies the alignment of the Up Down button in the NumericEntry controls.  
-•   Left – Both the Spin buttons are positioned at the Left
-•   Right – Both the Spin buttons are positioned at the Right
-•   Both – Spin buttons are positioned at the extreme ends.
-
-N> The default value of this property is `Right`
-{% tabs %}
-{% highlight XAML %}
-
-<editors:SfNumericEntry UpDownPlacementMode="Inline"
-                        UpDownButtonAlignment="Left" />
-                     
-{% endhighlight %}
-{% highlight c# %}
-
-SfNumericEntry sfNumericEntry = new SfNumericEntry();
-sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
-sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Left;
-
-{% endhighlight %}
-{% endtabs %}
-
-![UpDownButtonAlignment support in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonAlignment.png)
 
 ## Auto reverse in SfNumericEntry
 

@@ -358,38 +358,15 @@ comboBox.IsDropDownOpen = true;
 {% endhighlight %}
 {% endtabs %}
 
-## Clear() method support
+### Clear selected items
 
-Clear the selected values in the ComboBox using the Clear() method as shown in the code snippet below:
+You can clear the selected items using the `comboBox.Clear()` method.
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-<editors:SfComboBox x:Name="comboBox"
-            WidthRequest="250"
-            ItemsSource="{Binding SocialMedias}"
-            IsDropDownOpen = true;
-            DisplayMemberPath="Name"
-            TextMemberPath="Name"/>
-            
-<Button Text="Clear()" 
-        Clicked="Button_Clicked">
-</Button>        
+comboBox.Clear();
 
 {% endhighlight %}
-
-{% highlight C# %}
-
-SfComboBox comboBox = new SfComboBox();
-Button clearButton = new Button();
-clearButton.Clicked += OnClearButtonClicked;
-
-private void OnClearButtonClicked(object sender, EventArgs e)
-{
-    comboBox.Clear();
-}
-
-{% endhighlight %}
-
 {% endtabs %}
