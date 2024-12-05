@@ -89,11 +89,11 @@ sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.InlineVerti
 {% endhighlight %}
 {% endtabs %}
 
-![UpDown Vertical Placement in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtnPlacementVertical.png)
+![UpDown Vertical Placement in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonPlacementVertical.png)
 
 ## UpDown button Alignment
 
-You can adjust the alignment of the up-down buttons in the `NumericEntry` controls by setting the UpDownButtonAlignment property. By default, the value of the UpDownButtonAlignment property is **Right**. By setting the UpDownButtonAlignment property to **Left**, where both buttons are positioned on the left and **Both**, where the buttons are positioned at the extreme ends.
+You can adjust the alignment of the up-down buttons in the `NumericEntry` controls by setting the `UpDownButtonAlignment` property. By default, the value of the `UpDownButtonAlignment` property is **Right**. You can set it to **Left**, where both buttons are positioned on the left, or to **Both**, where the buttons are positioned at the extreme ends.
 
 {% tabs %}
 {% highlight XAML %}
