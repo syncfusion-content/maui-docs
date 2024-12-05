@@ -117,19 +117,19 @@ sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Left;
 {% highlight XAML %}
 
 <editors:SfNumericEntry UpDownPlacementMode="Inline"
-                        UpDownButtonAlignment="Right" />
+                        UpDownButtonAlignment="Both" />
                      
 {% endhighlight %}
 {% highlight c# %}
 
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
 sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
-sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Right;
+sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Both;
 
 {% endhighlight %}
 {% endtabs %}
 
-![UpDown Alignment is Right in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonAlignmentBoth.png)
+![UpDown Alignment is Both in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonAlignmentBoth.png)
 
 ## UpDown button customization
 
