@@ -21,7 +21,7 @@ By default, the Stop Responding button is displayed, to disable this set the `En
                                     EnableStopResponding="False"/>  
 
 {% endhighlight %} 
-{% highlight c# hl_lines="2 4" %}
+{% highlight c# hl_lines="6" %}
 
     SfAIAssistView sfAIAssistView; 
     public MainPage() 
