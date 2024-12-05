@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Text Markup Annotations in .NET MAUI PDF Viewer control | Syncfusion
-description: Learn here all about Text Markup Annotations in Syncfusion .NET MAUI PDF Viewer (SfPdfViewer) control and its types.
+title: Text Markup Annotations in .NET MAUI PDF Viewer control | Syncfusion®
+description: Learn here all about Text Markup Annotations in Syncfusion® .NET MAUI PDF Viewer (SfPdfViewer) control and its types.
 platform: MAUI
 control: SfPdfViewer
 documentation: ug

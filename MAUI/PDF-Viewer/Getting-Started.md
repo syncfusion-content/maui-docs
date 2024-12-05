@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI PDF Viewer control | Syncfusion
-description: Learn here about getting started with Syncfusion .NET MAUI PDF Viewer (SfPdfViewer) control, its elements, and more.
+title: Getting Started with .NET MAUI PDF Viewer control | Syncfusion®
+description: Learn here about getting started with Syncfusion® .NET MAUI PDF Viewer (SfPdfViewer) control, its elements, and more.
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
@@ -37,13 +37,13 @@ Before proceeding, ensure the following are in place:
 3.  Select the project location, type the project name and press enter.
 4.  Then choose **Create project**
 
-## Step 2: Install the Syncfusion MAUI PDF Viewer NuGet Package
+## Step 2: Install the Syncfusion® MAUI PDF Viewer NuGet Package
 
 1.  In **Solution Explorer**, right click the project and choose **Manage NuGet Packages** for Visual Studio and **Add NuGet Package** for Visual Studio Code.
 2.  Search for [Syncfusion.Maui.PdfViewer](https://www.nuget.org/packages/Syncfusion.Maui.PdfViewer) and install the latest version.`
 3.  Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-## Step 3: Register the Syncfusion Core Handler
+## Step 3: Register the Syncfusion® Core Handler
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) is a dependency for all MAUI Syncfusion controls. This package will be automatically installed as a dependency when [Syncfusion.Maui.PdfViewer](https://www.nuget.org/packages/Syncfusion.Maui.PdfViewer) NuGet is installed. Register the Syncfusion core handler in the `MauiProgram.cs` file.
 
