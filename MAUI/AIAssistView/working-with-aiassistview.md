@@ -7,7 +7,9 @@ control: SfAIAssistView
 documentation: ug
 ---
 
-# Stop Responding in .NET MAUI AI AssistView (SfAIAssistView)
+# Working with AI AssistView  in .NET MAUI AI AssistView (SfAIAssistView)
+
+## Stop Responding in .NET MAUI AI AssistView (SfAIAssistView)
 
 The Stop Responding feature allows you to cancel an ongoing AI response by clicking the Stop Responding button. This feature ensures that users can stop if a response is no longer needed.
 By default, the Stop Responding button is displayed, to disable this set the `EnableStopResponding` property to `false`.
