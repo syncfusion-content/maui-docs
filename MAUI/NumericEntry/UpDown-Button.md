@@ -89,7 +89,7 @@ sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.InlineVerti
 {% endhighlight %}
 {% endtabs %}
 
-![UpDown Vertical Placement in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonPlacementVertical.png)
+![UpDown Vertical Placement in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtnPlacementVertical.png)
 
 ## UpDown button Alignment
 
@@ -111,7 +111,7 @@ sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Left;
 {% endhighlight %}
 {% endtabs %}
 
-![UpDown Alignment is left in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonAlignment.png)
+![UpDown Alignment is left in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonAlignmentLeft.png)
 
 {% tabs %}
 {% highlight XAML %}
@@ -129,7 +129,7 @@ sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Right;
 {% endhighlight %}
 {% endtabs %}
 
-![UpDown Alignment is Right in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonAlignment.png)
+![UpDown Alignment is Right in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonAlignmentBoth.png)
 
 ## UpDown button customization
 
