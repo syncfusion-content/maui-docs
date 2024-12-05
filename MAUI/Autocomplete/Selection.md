@@ -395,3 +395,40 @@ autocomplete.IsDropDownOpen = true;
 
 {% endhighlight %}
 {% endtabs %}
+
+
+## Clear() method support
+
+Clear the selectioned values in the Autocomplete using the Clear() method as shown in the code snippet below:
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<editors:SfAutocomplete x:Name="autocomplete"
+            WidthRequest="250"
+            ItemsSource="{Binding SocialMedias}"
+            IsDropDownOpen = true;
+            DisplayMemberPath="Name"
+            TextMemberPath="Name"/>
+            
+<Button Text="Clear()" 
+        Clicked="Button_Clicked">
+</Button>        
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfAutocomplete autocomplete = new SfAutocomplete();
+Button clearButton = new Button();
+clearButton.Clicked += OnClearButtonClicked;
+
+private void OnClearButtonClicked(object sender, EventArgs e)
+{
+    autoComplete.Clear();
+}
+
+{% endhighlight %}
+
+{% endtabs %}
