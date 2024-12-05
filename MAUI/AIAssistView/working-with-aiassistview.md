@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Control Template in .NET MAUI AI AssistView control | Syncfusion
-description: Learn here all about Control Template support in Syncfusion .NET MAUI AI AssistView (SfAIAssistView) control, its elements and more.
+title: Working with AI AssistView in .NET MAUI AI AssistView control | Syncfusion
+description: Learn here all about Working with AI AssistView support in Syncfusion .NET MAUI  AI AssistView control and more.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
