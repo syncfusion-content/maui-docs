@@ -9,15 +9,14 @@ documentation: ug
 
 # MAUI Essential UI Kit
 
-Essential UI Kit for MAUI includes predefined XAML templates for MAUI apps. The UI kit allows to build a user interface in a cross-platform application. It clearly separates the View, View Model, and Model classes, making it simple to integrate your business logic and make changes to the existing view.  
+Essential UI Kit for MAUI comes with ready-to-use XAML templates, enabling you to effortlessly design user interfaces for cross-platform applications. With a clear separation of the View, View Model, and Model classes, which makes the integration of your business logic and making changes to existing views simple.
 
 ## Installation of MAUI UI Kit Extension
 
-Install the appropriate MAUI UI Kit Extension in Visual Studio by downloading them from the marketplace. As a result, you can use the Syncfusion Extension from your project's Syncfusion menu.
+To get started with the MAUI UI Kit, first install the appropriate extension in Visual Studio by downloading it from the marketplace. As a result, you’ll be able to access and utilize the Syncfusion Extension directly from the Syncfusion menu within your project
 
-[Visual Studio 2022](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Essential-UI-Kit-MAUI-VS-Extensions)
+[Visual Studio 2022](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Essential-UI-Kit-Xamarin-Forms)
 
-[Visual Studio 2019 or lower](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Essential-UI-Kit-MAUI)
 
 ## Include XAML templates in MAUI apps
 
@@ -29,7 +28,7 @@ Install the appropriate MAUI UI Kit Extension in Visual Studio by downloading th
 
 	N> The Essential UI Kit for MAUI add-in will be shown when the project has the MAUI NuGet package as a reference and also, MAUI project should be a NET Standard project.
 
-3.	The Category dialogue box will then appear, with its pre-defined template.
+3.	The Category dialogue box will then appear, with its pre-defined templates.
 
 	![Add new item dialog box in MAUI Visual studio Intergration](Essential_UI_Kit_images/visual-studio-intergration-item-dialog-box.png)
 
@@ -51,29 +50,18 @@ Install the appropriate MAUI UI Kit Extension in Visual Studio by downloading th
 
 ## Run the UI template item
 
-To set the desired UI Template item as the start page of your application, Open the **AppShell.xaml** of MAUI project and make the following changes.
+To set your preferred UI Template as the start page of your application, simply open the App.xaml.cs file in your MAUI project and make the following changes.
 
+{% highlight xaml %}
 
-1. Add the namespace as shown in the following code:
-{% highlight xaml %}
-xmlns:local="clr-namespace:ItemNameSpace"
-{% endhighlight %} 
-2. Set the template as Main Page by using the following code:
-{% highlight xaml %}
-<ShellContent
-   Title="Home"
-   ContentTemplate="{DataTemplate local:ItemName}"
-   Route="ItemName" />
+MainPage=new SampleFormsApplication.Views.CategoryName.PageName();
+
 {% endhighlight %}
 
 Example: If you added Login With Social Icon Page,
 
 {% highlight xaml %}
-<Shell
-    . . . 
-xmlns:local="clr-namespace:SampleFormsApplication.Views.Forms"/>
-<ShellContent
-   Title="Home"
-   ContentTemplate="{DataTemplate local:LoginWithSocialIcon}"
-   Route="LoginWithSocialIcon" />
+
+MainPage=new SampleFormsApplication.Views.Forms.LoginWithSocialIcon();
+
 {% endhighlight %}

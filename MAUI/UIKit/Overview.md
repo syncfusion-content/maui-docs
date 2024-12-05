@@ -34,10 +34,10 @@ The screens are developed using the MVVM pattern, which effectively separates th
 
 ## Supported Platforms
 
-* Android 5.0 (or API level 21) and later versions.
-* iOS 11.0 and later versions.
-* Mac 15.0 and later versions.
-* Windows Build 17763 and later versions
+* Android 5.0 (API 21) or higher is required.
+* iOS 12.2 or higher is required.
+* macOS 12 or higher, using Mac Catalyst.
+* Windows 11 and Windows 10 version 1809 or higher
 
 
 To get started with Syncfusion XAML Pages for MAUI, refer to [Getting Started](https://help.syncfusion.com/maui/uikit/gettingstarted)
