@@ -399,7 +399,7 @@ autocomplete.IsDropDownOpen = true;
 
 ## Clear() method support
 
-Clear the selectioned values in the Autocomplete using the Clear() method as shown in the code snippet below:
+Clear the selected values in the Autocomplete using the Clear() method as shown in the code snippet below:
 
 {% tabs %}
 
