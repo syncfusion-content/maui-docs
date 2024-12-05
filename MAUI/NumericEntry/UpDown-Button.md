@@ -232,6 +232,32 @@ The `NumericEntry` control supports customization of the UpDownButton's appearan
 
 ![UpDownButtonTemplate support in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonTemplate.png)
 
+## Up Down Button Alignment
+
+The Up Down Button Alignment feature specifies the alignment of the Up Down button in the NumericEntry controls.  
+•   Left – Both the Spin buttons are positioned at the Left
+•   Right – Both the Spin buttons are positioned at the Right
+•   Both – Spin buttons are positioned at the extreme ends.
+
+N> The default value of this property is `Right`
+{% tabs %}
+{% highlight XAML %}
+
+<editors:SfNumericEntry UpDownPlacementMode="Inline"
+                        UpDownButtonAlignment="Left" />
+                     
+{% endhighlight %}
+{% highlight c# %}
+
+SfNumericEntry sfNumericEntry = new SfNumericEntry();
+sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
+sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Left;
+
+{% endhighlight %}
+{% endtabs %}
+
+![UpDownButtonAlignment support in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonAlignment.png)
+
 ## Auto reverse in SfNumericEntry
 
 [Auto-reverse](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_AutoReverse) in NumericEntry allows the control to automatically switch direction when reaching its [Minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Minimum) or [Maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Maximum) value. When incrementing, it starts at the `Minimum` and progresses to the `Maximum`, and conversely.
