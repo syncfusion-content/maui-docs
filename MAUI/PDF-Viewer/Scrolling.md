@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Scrolling in .NET MAUI PDF Viewer Control | Syncfusion
+title: Scrolling in .NET MAUI PDF Viewer Control | Syncfusion®
 description: Learn here all about scrolling functionality in .NET MAUI PDF Viewer including programmatically setting scroll positions and detecting scroll changes.
 platform: MAUI
 control: SfPdfViewer

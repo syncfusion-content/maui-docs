@@ -1,6 +1,6 @@
 ---
 layout: post
-title: About Annotations in .NET MAUI PDF Viewer control | Syncfusion
+title: About Annotations in .NET MAUI PDF Viewer control | Syncfusion®
 description: Learn here all about introduction of Annotations in .NET MAUI PDF Viewer (SfPdfViewer) control, its functionalites and more.
 platform: MAUI
 control: SfPdfViewer

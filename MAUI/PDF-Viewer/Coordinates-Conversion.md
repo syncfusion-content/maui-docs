@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Working with PDF coordinates systems in MAUI PDF Viewer | Syncfusion
-description: Learn here all about coordinates conversion in Syncfusion .NET MAUI PDF Viewer (SfPdfViewer) control. 
+title: Working with PDF coordinates systems in MAUI PDF Viewer | Syncfusion®
+description: Learn here all about coordinates conversion in Syncfusion® .NET MAUI PDF Viewer (SfPdfViewer) control. 
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
