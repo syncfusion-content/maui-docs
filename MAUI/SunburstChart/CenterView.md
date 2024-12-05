@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CenterView in .NET MAUI Sunburst Chart control | Syncfusion
-description: This section explains about how to add center view in Syncfusion .NET MAUI Sunburst Chart control.
+description: This section explains about how to add a center view in the Syncfusion .NET MAUI Sunburst Chart control.
 platform: maui
 control: SfSunburstChart
 documentation: ug
@@ -26,7 +26,7 @@ The [CenterHoleSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sunburs
             <RoundRectangle CornerRadius="{Binding CenterHoleSize,Converter={StaticResource cornerRadius}}"/>
         </Border.StrokeShape>
         <Border.Shadow>
-            <Shadow Brush="Black"  Opacity="0.5" 
+            <Shadow Brush="Black" Opacity="0.5" 
                     Radius="50"/>
         </Border.Shadow>
         <VerticalStackLayout WidthRequest="{Binding CenterHoleSize,Converter={StaticResource cornerRadius}}"
@@ -36,7 +36,7 @@ The [CenterHoleSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sunburs
             </Grid>
             <Label LineBreakMode="WordWrap" WidthRequest="{Binding CenterHoleSize,Converter={StaticResource cornerRadius}}" 
                    Text="Behind the Bricks" TextColor="Black" FontSize="12" Padding="0,5,0,0"
-                   VerticalTextAlignment="Center"  HorizontalTextAlignment="Center" FontFamily="Verdana"
+                   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontFamily="Verdana"
                    HorizontalOptions="CenterAndExpand"/> 
         </VerticalStackLayout>
     </Border>

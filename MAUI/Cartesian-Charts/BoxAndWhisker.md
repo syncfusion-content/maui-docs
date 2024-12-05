@@ -224,7 +224,7 @@ BoxAndWhiskerSeries series = new BoxAndWhiskerSeries()
     ItemsSource = new ViewModel().BoxWhiskerData,
     XBindingPath = "Department",
     YBindingPath = "Age",
-    ShowMedian = "True"
+    ShowMedian = true
 };
 
 chart.Series.Add(series);

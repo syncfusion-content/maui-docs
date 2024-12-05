@@ -137,10 +137,10 @@ There may be some jagged lines at the edges. This can be reduced by using the [E
 
 <chart:SfCartesianChart>
     ...
-    <chart:FastLineSeries EnableAntiAliasing="True"
-                          ItemsSource="{Binding Data}"
+    <chart:FastLineSeries ItemsSource="{Binding Data}"
                           XBindingPath="XValue"
-                          YBindingPath="YValue"/>
+                          YBindingPath="YValue"
+                          EnableAntiAliasing="True"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %}

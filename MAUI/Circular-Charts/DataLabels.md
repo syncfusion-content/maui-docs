@@ -26,10 +26,10 @@ Each data label can be represented by the following:
 
 <chart:SfCircularChart>
     . . .
-    <chart:PieSeries ItemsSource="{Binding Data}"
-                     ShowDataLabels="True"  
+    <chart:PieSeries ItemsSource="{Binding Data}"  
                      XBindingPath="Product" 
-                     YBindingPath="SalesRate"/>
+                     YBindingPath="SalesRate"
+                     ShowDataLabels="True"/>
     . . .
 </chart:SfCircularChart>
 
@@ -72,9 +72,9 @@ The [LabelPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.C
 <chart:SfCircularChart>
 
     <chart:PieSeries ItemsSource="{Binding Data}" 
-                     ShowDataLabels="True"
                      XBindingPath="Product" 
-                     YBindingPath="SalesRate">
+                     YBindingPath="SalesRate"
+                     ShowDataLabels="True">
         <chart:PieSeries.DataLabelSettings>
             <chart:CircularDataLabelSettings LabelPosition="Outside">
             </chart:CircularDataLabelSettings>
@@ -137,10 +137,10 @@ When the [SmartLabelAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
     </chart:SfCircularChart.Resources>
 
     <chart:PieSeries ItemsSource="{Binding Data}"
-                     LabelTemplate="{StaticResource labelTemplate}"
-                     ShowDataLabels="True"
                      XBindingPath="Product" 
-                     YBindingPath="SalesRate">
+                     YBindingPath="SalesRate"
+                     ShowDataLabels="True"
+                     LabelTemplate="{StaticResource labelTemplate}">
         <chart:PieSeries.DataLabelSettings>
             <chart:CircularDataLabelSettings LabelPosition="Outside" SmartLabelAlignment="Shift">
             </chart:CircularDataLabelSettings>
@@ -238,8 +238,8 @@ The content of the label can be customized using the [LabelContext](https://help
     <chart:PieSeries ItemsSource="{Binding Data}" 
                      XBindingPath="Product" 
                      YBindingPath="SalesRate"
-                     LabelContext="Percentage"
-                     ShowDataLabels="True"/>  
+                     ShowDataLabels="True"
+                     LabelContext="Percentage"/>  
 </chart:SfCircularChart>
 
 {% endhighlight %}

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customization in .NET MAUI CheckBox Control | Syncfusion
-description: Learn about Customization support in Syncfusion Essential Studio .NET MAUI CheckBox control, its elements and more.
+description: Learn about Customization support in Syncfusion Essential Studio® .NET MAUI CheckBox control, its elements and more.
 platform: maui
 control: SfCheckBox
 documentation: ug
@@ -302,3 +302,26 @@ SfCheckBox checkBox = new SfCheckBox
 
 {% endhighlight %}
 {% endtabs %}
+
+## Content spacing
+The `ContentSpacing` property is used to adjust the content spacing in the [`SfCheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control.
+
+{% tabs %}
+{% highlight xaml %}
+
+<syncfusion:SfCheckBox Text="CheckBox" ContentSpacing="25"/>
+
+{% endhighlight %}
+{% highlight c# %}
+
+StackLayout stackLayout = new StackLayout();
+SfCheckBox  sfCheckBox  = new SfCheckBox();
+sfCheckBox.Text = "CheckBox";
+sfCheckBox.ContentSpacing = 25;
+stackLayout.Children.Add(sfCheckBox);
+this.Content = stackLayout;
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI CheckBox](Images/Visual-Customization/contentspacing.png)
