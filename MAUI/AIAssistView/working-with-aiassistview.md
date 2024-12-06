@@ -91,6 +91,8 @@ To cancel the response using the StopRespondingCommand or StopResponding event, 
 {% endhighlight %}
 {% endtabs %}
 
+![Stop Responding in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-stopresponding.gif)
+
 ## Control Template in .NET MAUI AI AssistView (SfAIAssistView)
 
 The `ControlTemplate` in AI AssistView allows you to define and reuse the visual structure of a control. This flexible structure enables to fully customize the appearance and behavior of the AI AssistView. By using `ControlTemplate` with the AI AssistView, you can create a highly customized and interactive interface, as demonstrated below.
