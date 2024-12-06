@@ -16,6 +16,8 @@ By default, the [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 If `LoadUIView` is set to `false`, the cell content will be drawn directly in the grid cell to enhance performance. However, when `LoadUIView` is set to `true`, the cell content will be displayed through the `UIElement`.
 
+The `LoadUIView` property also applies to the image column, allowing images to be drawn directly in the `DataGridCell` instead of loading them through the `Image` control. To draw images in the `DataGridCell`, the source must be loaded using the [ImageSource.FromResource()](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.imagesource.fromresource?view=net-maui-9.0) method.
+
 The default value of this property is `true`. If you want to improve loading and scrolling performance, you can simply set the `LoadUIView` property to `false`.
 
 {% tabs %}
@@ -36,7 +38,7 @@ N> Download demo application from [GitHub](https://github.com/SyncfusionExamples
 * For Android platform, both implicit and explicit padding are not supported. However, left and right padding will be applied based on the padding, while the top and bottom positions will be adjusted based on the content.
 * [DataGridColumn.LineBreakMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_LineBreakMode) is not supported for Android platform.
 * Runtime theme changes will not be applied.
-* This is not supported for [DataGridTemplateColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTemplateColumn.html), [DataGridCheckBoxColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCheckBoxColumn.html) and [DataGridImageColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridImageColumn.html).
+* This is not supported for [DataGridTemplateColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTemplateColumn.html) and [DataGridCheckBoxColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCheckBoxColumn.html).
 
 ## Data virtualization
 
