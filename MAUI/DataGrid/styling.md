@@ -499,6 +499,37 @@ public partial class MainPage : ContentPage
 
 ![Both GridLinesVisibility in .NET MAUI DataGrid](Images/styling/maui-datagrid-both-gridlinesvisibility.png)
 
+## Changing the border Color
+You can change the Grid Line Color by using [GridLineColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_HeaderGridLineColorProperty) property in `SfDataGrid.DefaultStyle`.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml"%}
+<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+    <ContentPage.Content>
+        <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}">
+            <syncfusion:SfDataGrid.DefaultStyle>
+                <syncfusion:DataGridStyle GridLineColor="LightBlue"/>
+            </syncfusion:SfDataGrid.DefaultStyle>
+        </syncfusion:SfDataGrid>
+    </ContentPage.Content>
+</ContentPage>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        this.dataGrid.DefaultStyle.GridLineColor = Colors.LightBlue;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="alt_text_of_image" src="Images/styling/maui-datagrid-grid-border-color.png" width="404"/>
+
+
+
 ## Changing the border width
 You can change the border width by using [GridLineStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_GridLineStrokeThicknessProperty) property in `SfDataGrid.DefaultStyle`.
 
@@ -526,4 +557,65 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Changing the border width in .NET MAUI DataGrid](Images/styling/maui-datagrid-border-width.png)
+<img alt="alt_text_of_image" src="Images/styling/maui-datagrid-Border-Width.png" width="404"/>
+
+## Changing the Header border Width
+You can change the Header border width by using [HeaderGridLineStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_HeaderGridLineStrokeThicknessProperty) property in `SfDataGrid.DefaultStyle`.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml"%}
+<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+    <ContentPage.Content>
+        <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}">
+            <syncfusion:SfDataGrid.DefaultStyle>
+                <syncfusion:DataGridStyle HeaderGridLineStrokeThickness="3"/>
+            </syncfusion:SfDataGrid.DefaultStyle>
+        </syncfusion:SfDataGrid>
+    </ContentPage.Content>
+</ContentPage>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        this.dataGrid.DefaultStyle.HeaderGridLineStrokeThickness = 3;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="alt_text_of_image" src="Images/styling/maui-datagrid-header-border-width.png" width="404"/>
+
+## Changing the Header border Color
+You can change the Header Grid Line Color by using [HeaderGridLineColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_HeaderGridLineColorProperty) property in `SfDataGrid.DefaultStyle`.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml"%}
+<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+    <ContentPage.Content>
+        <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}">
+            <syncfusion:SfDataGrid.DefaultStyle>
+                <syncfusion:DataGridStyle HeaderGridLineColor="Blue"/>
+            </syncfusion:SfDataGrid.DefaultStyle>
+        </syncfusion:SfDataGrid>
+    </ContentPage.Content>
+</ContentPage>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        this.dataGrid.DefaultStyle.HeaderGridLineColor = Colors.Blue;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+By setting the HeaderGridLineColor property, you can customize the appearance of the header grid lines in the SfDataGrid to match your application's theme.
+
+<img alt="alt_text_of_image" src="Images/styling/maui-datagrid-header-border-color.png" width="404"/>
+
