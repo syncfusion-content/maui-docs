@@ -16,7 +16,7 @@ By default, the [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 If `LoadUIView` is set to `false`, the cell content will be drawn directly in the grid cell to enhance performance. However, when `LoadUIView` is set to `true`, the cell content will be displayed through the `UIElement`.
 
-The LoadUIView property also applies to the image column, allowing images to be drawn directly in the `DataGridCell` instead of loading them through the `Image` control. To draw images in the `DataGridCell`, the source must be loaded using the [ImageSource.FromResource()](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.imagesource.fromresource?view=net-maui-9.0) method.
+The `LoadUIView` property also applies to the image column, allowing images to be drawn directly in the `DataGridCell` instead of loading them through the `Image` control. To draw images in the `DataGridCell`, the source must be loaded using the [ImageSource.FromResource()](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.imagesource.fromresource?view=net-maui-9.0) method.
 
 The default value of this property is `true`. If you want to improve loading and scrolling performance, you can simply set the `LoadUIView` property to `false`.
 
@@ -32,7 +32,6 @@ The default value of this property is `true`. If you want to improve loading and
 {% endtabs %}
 
 N> Download demo application from [GitHub](https://github.com/SyncfusionExamples/How-to-improve-scrolling-performance-in-.NET-MAUI-DataGrid).
-
 
 ### Limitations
 
