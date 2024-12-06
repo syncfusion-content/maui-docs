@@ -191,7 +191,7 @@ When the [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.In
 
 ## Selection changed notification
 
-When an item is selected from the .NET MAUI drop-down list, the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionChanged) event is triggered. The SelectionChanged event contains the newly selected and previously selected items in the `AddedItems` and `RemovedItems` properties. The SelectionChanged contains the following properties:
+When an item is selected from the .NET MAUI drop-down list, the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionChanged) event is triggered. The SelectionChanged event contains the newly selected and previously selected items in the **AddedItems** and **RemovedItems** properties. The SelectionChanged contains the following properties:
 
  * AddedItems - Contains the item that were currently selected.
  * RemovedItems - Contains the item that were unselected.
@@ -232,7 +232,7 @@ The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox SelectedChangedEvent.](Images/Selection/net-maui-combobox-selection-changed-event.gif)
 
-N> SelectionChanged event arguments `CurrentSelection` and `PreviousSelection` marked as "Obsolete". You can use the `AddedItems` and `RemovedItems` event arguments.
+N> SelectionChanged event arguments **CurrentSelection** and **PreviousSelection** marked as "Obsolete". You can use the **AddedItems** and **RemovedItems** event arguments.
 
 ## Selected value
 
@@ -336,7 +336,7 @@ N> If the [SelectedValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
 ## Open a drop-down programmatically
 
-In the .NET MAUI ComboBox control, the .NET MAUI drop-down list can be opened or closed programmatically by using the [IsDropDownOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_IsDropDownOpen) property. The default value of the IsDropDownOpen property is `false`.
+In the .NET MAUI ComboBox control, the .NET MAUI drop-down list can be opened or closed programmatically by using the [IsDropDownOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_IsDropDownOpen) property. The default value of the IsDropDownOpen property is **false**.
 
 {% tabs %}
 {% highlight XAML %}
