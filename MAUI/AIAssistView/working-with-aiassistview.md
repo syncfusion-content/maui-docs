@@ -209,19 +209,26 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/custom-control-
 The `SfAIAssistView` control allows you to fully customize the editor's appearance by using the `EditorViewTemplate` property. This property lets you define a custom layout and style for the editor.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14" %}
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView" AssistItems="{Binding AssistItems}">
-        <syncfusion:SfAIAssistView.EditorViewTemplate>
-            <DataTemplate>
-                <Grid>
-                    <Editor x:Name="editor"
-                            Placeholder="Message AI..."/>
-                     ....
+ <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="editorViewTemplate">
+                 <Grid>
+                    <Editor x:Name="editor">
+                        ...
                 </Grid>
             </DataTemplate>
-        </syncfusion:SfAIAssistView.EditorViewTemplate>
-    </syncfusion:SfSfAIAssistView>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+<ContentPage.Content>
+      <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                                 AssistItems="{Binding AssistItems}"
+                                 EditorViewTemplate="{StaticResource editorViewTemplate}">
+      </syncfusion:SfSfAIAssistView>
+</ContentPage.Content>
 
 {% endhighlight %}
 {% endtabs %}
+
+![Editor View Template .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-editorviewtemplate.png)
