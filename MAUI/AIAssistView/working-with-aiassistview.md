@@ -38,7 +38,7 @@ By default, the Stop Responding button is displayed, to disable this set the `En
 ### Stop Responding Event and Command
 
 The `SfAIAssistView` control includes a built-in event called `StopResponding` and a command named `StopRespondingCommand`. These are triggered when the Stop Responding button is clicked.
-To cancel the response using the StopRespondingCommand or StopResponding event, you can include logic to stop the ongoing response operation as shown below. 
+To cancel the response using the StopRespondingCommand or StopResponding event, you can include logic to stop the ongoing response as shown below. 
 
 #### StopResponding Event
 
@@ -231,4 +231,4 @@ The `SfAIAssistView` control allows you to fully customize the editor's appearan
 {% endhighlight %}
 {% endtabs %}
 
-![Editor View Template .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-editorviewtemplate.png)
+![EditorView Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-editorviewtemplate.png)
