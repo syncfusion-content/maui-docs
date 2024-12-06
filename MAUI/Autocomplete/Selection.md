@@ -397,9 +397,9 @@ autocomplete.IsDropDownOpen = true;
 {% endtabs %}
 
 
-### Clear selected items
+### Clear Selected Items
 
-You can clear the selected items using the `autocomplete.Clear()` method.
+You can remove all selected items using the `Clear` method.
 
 {% tabs %}
 
