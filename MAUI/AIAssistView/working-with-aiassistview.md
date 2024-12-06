@@ -215,12 +215,12 @@ The `SfAIAssistView` control allows you to fully customize the editor's appearan
         <ResourceDictionary>
             <DataTemplate x:Key="editorViewTemplate">
                  <Grid>
-                    <Editor x:Name="editor">
+                    <Editor x:Name="editor" Placeholder="Type Message...">
                         ...
                 </Grid>
-            </DataTemplate>
-        </ResourceDictionary>
-    </ContentPage.Resources>
+           </DataTemplate>
+       </ResourceDictionary>
+ </ContentPage.Resources>
 <ContentPage.Content>
       <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                                  AssistItems="{Binding AssistItems}"
