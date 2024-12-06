@@ -16,6 +16,8 @@ By default, the [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 If `LoadUIView` is set to `false`, the cell content will be drawn directly in the grid cell to enhance performance. However, when `LoadUIView` is set to `true`, the cell content will be displayed through the `UIElement`.
 
+The LoadUIView property also applies to the image column, allowing images to be drawn directly in the `DataGridCell` instead of loading them through the `Image` control. To draw images in the `DataGridCell`, the source must be loaded using the [ImageSource.FromResource()](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.imagesource.fromresource?view=net-maui-9.0) method.
+
 The default value of this property is `true`. If you want to improve loading and scrolling performance, you can simply set the `LoadUIView` property to `false`.
 
 {% tabs %}
@@ -31,21 +33,6 @@ The default value of this property is `true`. If you want to improve loading and
 
 N> Download demo application from [GitHub](https://github.com/SyncfusionExamples/How-to-improve-scrolling-performance-in-.NET-MAUI-DataGrid).
 
-### DataGridImageColumn
-
-If `LoadUIView` is set as `false` for `DataGridImageColumn` the image should be load from `FromResource` method which required to set an image as an embedded resource. 
-
-{% tabs %}
-{% highlight xaml %}
-<sfgrid:SfDataGrid ItemsSource="{Binding OrderInfoCollection}">
-    <sfgrid:SfDataGrid.Columns>
-        <sfgrid:DataGridImageColumn MappingName="DealerImage" HeaderText="Dealer Image" LoadUIView="False"/>
-    </sfgrid:SfDataGrid.Columns>
-</sfgrid:SfDataGrid>
-{% endhighlight %}
-{% endtabs %}
-
-It allows you to set the [Aspect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridImageColumn.html#Syncfusion_Maui_DataGrid_DataGridImageColumn_Aspect) to size the loaded images using the `DataGridImageColumn.Aspect` property. The default value is `AspectFit`.
 
 ### Limitations
 

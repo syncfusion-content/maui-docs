@@ -368,7 +368,7 @@ private void dataGrid_AutoGeneratingColumn(object sender, DataGridAutoGenerating
 
 ### Header Line break mode
 
-The text wrapping and truncation of a column's header text can be customized by setting the DataGridColumn.HeaderLineBreakMode property.
+The text wrapping and truncation of a column's header text can be customized by setting the `DataGridColumn.HeaderLineBreakMode` property.
  
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -380,6 +380,8 @@ The text wrapping and truncation of a column's header text can be customized by 
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% endtabs %}
+
+N> The truncation modes will not work on the Windows platform.
 
 ### Line break mode
 
