@@ -360,7 +360,7 @@ comboBox.IsDropDownOpen = true;
 
 ### Clear Selected Items
 
-You can remove all selected items using the `Clear` method.
+You can remove all selected items using the **Clear** method.
 
 {% tabs %}
 

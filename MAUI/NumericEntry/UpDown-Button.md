@@ -93,20 +93,23 @@ sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.InlineVerti
 
 ## UpDown button alignment
 
-You can customize the `NumericEntry` control button alignment by using the `UpDownButtonAlignment` property. Set it to **Left** to position both buttons on the left, or **Both** to place them at the extreme ends.  
+You can adjust the alignment of the UpDown buttons in the [NumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control using the **UpDownButtonAlignment** property. Set its value to **Left**, **Right**, or **Both** to position the buttons on the left, right, or both sides of the entry field, respectively.
 
 N> By default, the `UpDownButtonAlignment` property is set to **Right**.  
 
 {% tabs %}
 {% highlight XAML %}
 
-<editors:SfNumericEntry UpDownPlacementMode="Inline"
-                        UpDownButtonAlignment="Left" />
+<editors:SfNumericEntry Value="123" HorizontalTextAlignment="End" 
+                        UpDownPlacementMode="Inline" 
+                        UpDownButtonAlignment="Left"/>
                      
 {% endhighlight %}
 {% highlight c# %}
 
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
+sfNumericEntry.Value = 123;
+sfNumericEntry.HorizontalTextAlignment=TextAlignment.End;
 sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
 sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Left;
 
@@ -118,13 +121,16 @@ sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Left;
 {% tabs %}
 {% highlight XAML %}
 
-<editors:SfNumericEntry UpDownPlacementMode="Inline"
-                        UpDownButtonAlignment="Both" />
+<editors:SfNumericEntry Value="123" HorizontalTextAlignment="Center" 
+                        UpDownPlacementMode="Inline" 
+                        UpDownButtonAlignment="Both"/>
                      
 {% endhighlight %}
 {% highlight c# %}
 
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
+sfNumericEntry.Value = 123;
+sfNumericEntry.HorizontalTextAlignment=TextAlignment.Center;
 sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
 sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Both;
 
