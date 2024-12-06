@@ -11,7 +11,7 @@ documentation: ug
 
 ## Stop Responding in .NET MAUI AI AssistView (SfAIAssistView)
 
-The `Stop Responding` feature allows you to cancel an ongoing AI response by clicking the Stop Responding button. This feature ensures that users can stop if a response is no longer needed.
+The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html) control provides `Stop Responding` feature that allows you to cancel an ongoing AI response by clicking the Stop Responding button. This feature ensures that users can stop if a response is no longer needed.
 By default, the Stop Responding button is displayed, to disable this set the `EnableStopResponding` property to `false`.
 
 {% tabs %}
@@ -93,7 +93,7 @@ To cancel the response using the StopRespondingCommand or StopResponding event, 
 
 ## Control Template in .NET MAUI AI AssistView (SfAIAssistView)
 
-The `ControlTemplate` in AI AssistView allows you to define and reuse the visual structure of a control. This flexible structure enables to fully customize the appearance and behavior of the AI AssistView. By using a `ControlTemplate` with the AI AssistView, you can create a highly customized and interactive interface, as demonstrated below.
+The `ControlTemplate` in AI AssistView allows you to define and reuse the visual structure of a control. This flexible structure enables to fully customize the appearance and behavior of the AI AssistView. By using `ControlTemplate` with the AI AssistView, you can create a highly customized and interactive interface, as demonstrated below.
 
 {% tabs %}
 {% highlight xaml hl_lines="5" %}
@@ -206,7 +206,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/custom-control-
 
 ## EditorView Template in .NET MAUI AI AssistView (SfAIAssistView)
 
-The SfAIAssistView control allows you to fully customize the editor's appearance by using the `EditorViewTemplate` property. This property lets you define a custom layout and style for the editor.
+The `SfAIAssistView` control allows you to fully customize the editor's appearance by using the `EditorViewTemplate` property. This property lets you define a custom layout and style for the editor.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -216,7 +216,7 @@ The SfAIAssistView control allows you to fully customize the editor's appearance
             <DataTemplate>
                 <Grid>
                     <Editor x:Name="editor"
-                            Placeholder="Type Message..."/>
+                            Placeholder="Message AI..."/>
                      ....
                 </Grid>
             </DataTemplate>
