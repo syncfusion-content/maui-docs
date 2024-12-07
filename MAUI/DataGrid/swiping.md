@@ -316,7 +316,7 @@ public partial class MainPage : ContentPage
 
 ## Loading complex template for swiping
 
-When a complex layout is loaded in the GridTemplateColumn, swiping may not occur or may not be smooth at times, since the touches will be intercepted by the views loaded in the template. As a result, the data grid may not recognize the touches that might restrict the swiping operation. To resolve this issue, set the `InputTransparent` property of the views loaded in the `DataTemplate` of the `GridTemplateColumn` to `True`.
+The datagrid allows you to swipe the data rows, even when we have a complex template in `DataGridTemplateColumn`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -431,8 +431,6 @@ private void dataGrid_SwipeEnded(object sender, Syncfusion.Maui.DataGrid.DataGri
 
 {% endhighlight %}
 {% endtabs %}
-
-You can download the source code of swiping sample [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/Swiping-661295078).
 
 ## How to set MaxSwipeOffset based on content size
 
@@ -571,8 +569,6 @@ public class RightTemplateSelector : DataTemplateSelector
 
 {% endhighlight %}
 {% endtabs %}
-
-You can download the sample [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/DataGrid_TemplateSector1402376153.zip) to load custom swipe buttons based on row data
 
 The following screenshot illustrates the custom swipe buttons that are loaded based on the cell value of the "Is Online" switch column.
 
