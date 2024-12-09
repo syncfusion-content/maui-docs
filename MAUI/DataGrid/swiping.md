@@ -384,7 +384,7 @@ The datagrid allows you to swipe the data rows, even when we have a complex temp
 
 <img alt="Loading complex views in swipe template in a DataGrid" src="Images\swiping\maui-datagrid-complex-template-column.png" width="404"/>
 
-## How to cancel the swipe programmatically
+## Cancel the swipe programmatically
 
 The data grid allows you to cancel the swipe programmatically by calling the `SfDataGrid.ResetSwipeOffset` method in the `SfDataGrid.SwipeEnded` event.
 
@@ -432,7 +432,7 @@ private void dataGrid_SwipeEnded(object sender, Syncfusion.Maui.DataGrid.DataGri
 {% endhighlight %}
 {% endtabs %}
 
-## How to set MaxSwipeOffset based on content size
+## Set MaxSwipeOffset based on content size
 
 Users can restrict the max swipe offset of a row to the width of the content loaded inside the swipe template by setting the `SfDataGrid.SwipeOffsetMode` as `SwipeOffsetMode.Auto`. The default value of the `SwipeOffsetMode` is `SwipeOffsetMode.Custom`.
 
@@ -454,10 +454,9 @@ dataGrid.SwipeOffsetMode=SwipeOffsetMode.Auto;
 
 N> The value of the `SfDataGrid.MaxSwipeOffset` property will not be considered when the `SfDataGrid.SwipeOffsetMode` is set to `SwipeOffsetMode.Auto`.
 
-## How to load custom swipe buttons based on row data?
+## Load custom swipe buttons based on row data?
 
 Using a `DataTemplateSelector`, you can load specific views based on row data, such as `SfDataGrid.RightSwipeTemplate` and `SfDataGrid.LeftSwipeTemplate`. Refer to the code example below to load the desired template based on the row data.
-
 
 {% tabs %}
 {% highlight XAML %}
@@ -576,7 +575,7 @@ The following screenshot illustrates the custom swipe buttons that are loaded ba
 
 <img alt="Custom Swipe button for Offline" src="Images\swiping\maui-datagrid-custom-offline-swipe-buttons.png" width="404"/>
 
-## How to swipe Summary and Unbound rows in Xamarin.Forms DataGrid(SfDataGrid).
+## Swipe Summary and Unbound rows in SfDataGrid
 
 To enable swiping of the `UnboundRow`, `CaptionSummaryRow`, `GroupSummaryRow`, and `TableSummaryRow`, set the `Cancel` property of the `SwipeStartedEventArgs` to false in the `SfDataGrid.SwipeStarted` event handler. By default, the `Cancel` property is set to true for all non-data rows.
 
