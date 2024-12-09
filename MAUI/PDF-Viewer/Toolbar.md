@@ -231,10 +231,10 @@ if (pdfViewer?.Toolbars?.Count > 1)
 {
     var firstToolbar = pdfViewer?.Toolbars[0];
     if (firstToolbar != null)
-        firstToolbar.IsVisible = false; //Hide the first toolbar
+        firstToolbar.IsVisible = false; // Hide the first toolbar
     var secondToolbar= pdfViewer?.Toolbars[1];
     if (secondToolbar != null)
-        secondToolbar.IsVisible = false; //Hide the second toolbar 
+        secondToolbar.IsVisible = false; // Hide the second toolbar 
 }
 {% endhighlight %}
 {% endtabs %}
