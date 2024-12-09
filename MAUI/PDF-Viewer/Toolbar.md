@@ -849,14 +849,12 @@ Button fileSaveButton = new Button
      Opacity = 0.5,
      Padding = 10
  };
-//We access the PrimaryToolbar on the desktop using the GetByName method and get the item index using Index property.
-for (int i = 0; i < pdfViewer?.Toolbars.Count; i++)
-{   
-    var index = pdfViewer.Toolbars[i]?.GetByName("PrimaryToolbar")?.Items?.GetByName("Print")?.Index;
-    if (index != null)
-    {   
-        pdfViewer.Toolbars[i]?.GetByName("PrimaryToolbar")?.Items?.Insert((int)index + 1, new Syncfusion.Maui.PdfViewer.ToolbarItem(fileSaveButton, "FileSaveButton"));
-    }
+ 
+// We accessed the PrimaryToolbar on the desktop using the GetByName method and inserted the item after the last item index.
+var item = PdfViewer?.Toolbars?.GetByName("PrimaryToolbar")?.Items?.GetByName("Print");
+if (item != null)
+{
+    PdfViewer?.Toolbars?.GetByName("PrimaryToolbar")?.Items?.Insert(item.Index + 1, new Syncfusion.Maui.PdfViewer.ToolbarItem(fileSaveButton, "FileSaveButton"));
 }
 {% endhighlight %}
 {% endtabs %}
