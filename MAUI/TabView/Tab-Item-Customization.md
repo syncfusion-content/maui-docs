@@ -479,6 +479,31 @@ tabView.IsScrollButtonEnabled = true;
 {% endtabs %}
 
 ![TabView Scroll Mode](images/TabViewScroll.gif) 
+
+### Scroll button customization
+
+The `ScrollButtonBackground` and `ScrollButtonColor` property of [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1) allows users to customize the background color and foreground color of scroll button.
+
+{% tabs %}
+
+{% highlight xaml %}
+<tabView:SfTabView ScrollButtonBackground="Violet" ScrollButtonColor="Red">
+</tabView:SfTabView>
+{% endhighlight %}
+
+{% highlight C# %}
+StackLayout stackLayout = new StackLayout();
+var tabView = new SfTabView();
+tabView.ScrollButtonBackground = SolidColorBrush.Violet;
+tabView.ScrollButtonColor = Colors.Red;
+stackLayout.Children.Add(tabView);
+this.Content = stackLayout;
+{% endhighlight %}
+
+{% endtabs %}
+
+![ScrollButtonCustomization](images\ScrollButtonCustomization.png)
+
 ## Font auto scaling enabled
 
 The [FontAutoScalingEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_FontAutoScalingEnabled) property is used to automatically scale the tab header's font size based on the operating system's text size. The default value of the `FontAutoScalingEnabled` property is `false.`
@@ -513,6 +538,35 @@ You can customize the animation duration when changing the [SelectedIndex](https
 {% highlight C# %}
 var tabView = new SfTabView();
 tabView.ContentTransitionDuration = 300;
+{% endhighlight %}
+
+{% endtabs %}
+
+## Image size
+
+You can customize the image size in the .NET MAUI TabView control by setting the `ImageSize` property.
+
+{% tabs %}
+
+{% highlight xaml %}
+<tabView:SfTabView>
+    <tabView:SfTabItem ImageSize="50"/>
+</tabView:SfTabView>
+{% endhighlight %}
+
+{% highlight C# %}
+StackLayout stackLayout = new StackLayout();
+var tabView = new SfTabView();
+var tabItems = new TabItemCollection
+{
+    new SfTabItem()
+    {
+        ImageSize = 50,
+    }
+};
+tabView.Items = tabItems;
+stackLayout.Children.Add(tabView);
+this.Content = stackLayout;
 {% endhighlight %}
 
 {% endtabs %}

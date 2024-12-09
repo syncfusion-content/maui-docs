@@ -141,3 +141,4 @@ In [.NET MAUI DigitalGauge](https://www.syncfusion.com/maui-controls/maui-digita
 
 ![getting-started](Images\getting-started.png)
 
+N> You can refer to our [.NET MAUI Digital Gauge](https://www.syncfusion.com/maui-controls/maui-digital-gauge) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Digital Gauge Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Gauges/SampleBrowser.Maui.Gauges/Samples/DigitalGauge) that shows you how to render the Digital Gauge in .NET MAUI.

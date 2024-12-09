@@ -91,6 +91,54 @@ sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.InlineVerti
 
 ![UpDown Vertical Placement in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonPlacementVertical.png)
 
+## UpDown button alignment
+
+You can adjust the alignment of the UpDown buttons in the [NumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control using the **UpDownButtonAlignment** property. Set its value to **Left**, **Right**, or **Both** to position the buttons on the left, right, or both sides of the entry field, respectively.
+
+N> By default, the `UpDownButtonAlignment` property is set to **Right**.  
+
+{% tabs %}
+{% highlight XAML %}
+
+<editors:SfNumericEntry Value="123" HorizontalTextAlignment="End" 
+                        UpDownPlacementMode="Inline" 
+                        UpDownButtonAlignment="Left"/>
+                     
+{% endhighlight %}
+{% highlight c# %}
+
+SfNumericEntry sfNumericEntry = new SfNumericEntry();
+sfNumericEntry.Value = 123;
+sfNumericEntry.HorizontalTextAlignment=TextAlignment.End;
+sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
+sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Left;
+
+{% endhighlight %}
+{% endtabs %}
+
+![UpDown Alignment is left in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonAlignmentLeft.png)
+
+{% tabs %}
+{% highlight XAML %}
+
+<editors:SfNumericEntry Value="123" HorizontalTextAlignment="Center" 
+                        UpDownPlacementMode="Inline" 
+                        UpDownButtonAlignment="Both"/>
+                     
+{% endhighlight %}
+{% highlight c# %}
+
+SfNumericEntry sfNumericEntry = new SfNumericEntry();
+sfNumericEntry.Value = 123;
+sfNumericEntry.HorizontalTextAlignment=TextAlignment.Center;
+sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
+sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Both;
+
+{% endhighlight %}
+{% endtabs %}
+
+![UpDown Alignment is Both in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonAlignmentBoth.png)
+
 ## UpDown button customization
 
 ## UpDown button color

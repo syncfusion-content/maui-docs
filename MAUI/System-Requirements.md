@@ -34,15 +34,16 @@ Our .NET MAUI components are compatible with the following development environme
 * Visual Studio 2022 17.8.0.
 * Visual Studio Code. (Refer to this [link](https://devblogs.microsoft.com/visualstudio/announcing-the-dotnet-maui-extension-for-visual-studio-code/))
 
-### .NET 8.0 Support
+### Supported .NET Versions
 
-Our Syncfusion .NET MAUI controls supports in .NET 7.0 and .NET 8.0.
+* .NET 9.0
+* .NET 8.0
 
 ### Supported Platforms
 
 .NET Multi-platform App UI (.NET MAUI) apps can be written for the following platforms:
 
-* Android 5.0 (API 21) or higher.
-* iOS 11 or higher, using the latest release of Xcode.
-* macOS 10.15 or higher, using Mac Catalyst.
+* Android 5.0 (API 21) or higher is required.
+* iOS 12.2 or higher is required.
+* macOS 12 or higher, using Mac Catalyst.
 * Windows 11 and Windows 10 version 1809 or higher, using [Windows UI Library (WinUI) 3](https://learn.microsoft.com/en-us/windows/apps/winui/winui3/).

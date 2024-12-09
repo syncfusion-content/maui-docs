@@ -19,7 +19,7 @@ To quickly get started with the .NET MAUI Busy Indicator, watch this video.
 ## Prerequisites
 Before proceeding, ensure the following are set up:
 
-1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later is installed.
+1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
 2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or Visual Studio Code. For Visual Studio Code users, ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
 
 ## Step 1: Create a New MAUI Project
@@ -173,7 +173,8 @@ namespace BusyIndicatorSample
 
 The following gif image illustrates the result of the above code.
 
-![Getting Started](Images/GettingStarted/CircularMaterial.gif)
+![Circular material in .NET MAUI Busy Indicator.](images/gettingstarted/net-maui-busy-indicator-circular-material.gif){:width="144" height="138" loading="lazy"}
 
 You can find the complete getting started sample of .NET MAUI Busy Indicator from this [link.](https://github.com/SyncfusionExamples/maui-busyindicator-samples)
 
+N> You can refer to our [.NET MAUI Busy Indicator](https://www.syncfusion.com/maui-controls/maui-busy-indicator) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Busy Indicator Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/BusyIndicator) that shows you how to render the Busy Indicator in .NET MAUI.
