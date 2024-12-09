@@ -183,9 +183,9 @@ AbsoluteLayout.SetLayoutFlags(border, Microsoft.Maui.Layouts.AbsoluteLayoutFlags
 absoluteLayout.Children.Add(border);
 var copyRight = new Label() 
 {
-	Text = "Copyright @ 2001 - 2022 Syncfusion Inc",
-	FontSize = 18,
-	Opacity = 0.4
+    Text = "Copyright @ 2001 - 2022 Syncfusion Inc",
+    FontSize = 18,
+    Opacity = 0.4
 };
 
 AbsoluteLayout.SetLayoutBounds(copyRight, new Rect(1, 1, -1, -1));

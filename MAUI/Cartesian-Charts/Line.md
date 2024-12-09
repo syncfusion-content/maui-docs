@@ -99,12 +99,12 @@ The [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts
         <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>  
 
-    <chart:LineSeries XBindingPath="Demand"
-                      ItemsSource="{Binding Data}"
+    <chart:LineSeries ItemsSource="{Binding Data}"
+                      XBindingPath="Demand"
                       YBindingPath="Year2010"
                       StrokeDashArray="{StaticResource dashArray}"/>
-    <chart:LineSeries XBindingPath="Demand"
-                      ItemsSource="{Binding Data}" 
+    <chart:LineSeries ItemsSource="{Binding Data}" 
+                      XBindingPath="Demand"
                       YBindingPath="Year2011"
                       StrokeDashArray="{StaticResource dashArray}"/>
 </chart:SfCartesianChart>
@@ -170,11 +170,11 @@ The [SplineSeries](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Sp
         <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>  
 
-    <chart:SplineSeries XBindingPath="Demand"
-                        ItemsSource="{Binding Data}"
+    <chart:SplineSeries ItemsSource="{Binding Data}"
+                        XBindingPath="Demand"
                         YBindingPath="Year2010"/>
-    <chart:SplineSeries XBindingPath="Demand"
-                        ItemsSource="{Binding Data}"
+    <chart:SplineSeries ItemsSource="{Binding Data}"
+                        XBindingPath="Demand"
                         YBindingPath="Year2011"/>
 </chart:SfCartesianChart>
 
@@ -239,8 +239,8 @@ The following types are used in SplineSeries:
         <chart:NumericalAxis/>
     </chart:SfCartesianChart.YAxes>  
 
-    <chart:SplineSeries XBindingPath="Demand"
-                        ItemsSource="{Binding Data}"
+    <chart:SplineSeries ItemsSource="{Binding Data}"
+                        XBindingPath="Demand"
                         YBindingPath="Year2010"
                         Type="Cardinal"/>
 </chart:SfCartesianChart>
@@ -283,14 +283,14 @@ A marker, also known as a symbol, is used to determine or highlight the position
 
 <chart:SfCartesianChart>
     ...
-    <chart:LineSeries XBindingPath="Demand"
-                      YBindingPath="Year2010"
-                      ItemsSource="{Binding Data}"
+    <chart:LineSeries ItemsSource="{Binding Data}"
+                      XBindingPath="Demand"
+                      YBindingPath="Year2010" 
                       ShowMarkers="True"/>
 
-    <chart:LineSeries XBindingPath="Demand"
+    <chart:LineSeries ItemsSource="{Binding Data}"
+                      XBindingPath="Demand"
                       YBindingPath="Year2011"
-                      ItemsSource="{Binding Data}"
                       ShowMarkers="True"/>                  
 </chart:SfCartesianChart>
 
@@ -302,17 +302,17 @@ SfCartesianChart chart = new SfCartesianChart();
 ...
 LineSeries series1 = new LineSeries()
 {
+    ItemsSource = new ViewModel().Data,
     XBindingPath = "Demand",
     YBindingPath = "Year2010",
-    ItemsSource = new ViewModel().Data,
     ShowMarkers= true,
 };
 
 LineSeries series2 = new LineSeries()
 {
+    ItemsSource = new ViewModel().Data,
     XBindingPath = "Demand",
     YBindingPath = "Year2011",
-    ItemsSource = new ViewModel().Data,
     ShowMarkers= true,
 };
 
@@ -344,9 +344,9 @@ In order to change the series markers appearance, create an instance of the [Mar
 
 <chart:SfCartesianChart>
     ...
-    <chart:LineSeries XBindingPath="Year"
+    <chart:LineSeries ItemsSource="{Binding Data}"
+                      XBindingPath="Year"
                       YBindingPath="Percentage"
-                      ItemsSource="{Binding Data}"
                       ShowMarkers="True">
         <chart:LineSeries.MarkerSettings>
             <chart:ChartMarkerSettings Type="Diamond"
@@ -378,9 +378,9 @@ ChartMarkerSettings chartMarker= new ChartMarkerSettings()
 
 LineSeries series = new LineSeries()
 {
+   ItemsSource = new ViewModel().Data,
    XBindingPath = "Year",
    YBindingPath = "Percentage",
-   ItemsSource = new ViewModel().Data,
    ShowMarkers = true,
    MarkerSettings = chartMarker,
 };
