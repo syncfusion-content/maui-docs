@@ -123,9 +123,9 @@ public partial class MainPage : ContentPage
 ![All the rows selected in .NET MAUI DataGrid](Images/selection/maui-datagrid-selectall.png)
 
 ## Column selection
-The SfDataGrid provides the [SfDataGrid.AllowColumnSelection]() property to select columns when the `SelectionMode` is set to Multiple, the `SelectionUnit` is set to Cell, and the `NavigationMode` is set to Cell.
+The `SfDataGrid` includes the [SfDataGrid.AllowColumnSelection]() property, which allows you to select columns by tapping the column header cell. This feature is enabled only when the `SelectionMode` is set to `Multiple`, the `SelectionUnit` is set to `Cell`, and the `NavigationMode` is set to `Cell`.
 
-By default, the `SortingGestureType` is set to `Tap` mode, so we select the column by double-clicking the header cell. We can also modify this behavior by changing the `SortingGestureType`.
+Note: When the `SortingGestureType` is set to `Tap`, column selection is applied only when double-tapping the column header cell. This ensures both sorting and column selection interactions can occur without conflicts.
 
 {% tabs %}
 {% highlight XAML %}
@@ -134,7 +134,7 @@ By default, the `SortingGestureType` is set to `Tap` mode, so we select the colu
                     NavigationMode="Cell"
                     SelectionUnit="Cell"
                     AllowColumnSelection="True"
-                    ColumnWidthMode="Auto"
+                    AutoGenerateColumnsMode="None"
                     ItemsSource="{Binding OrderInfoCollection}" >
 <syncfusion:SfDataGrid.Columns>
    <syncfusion:DataGridTextColumn MappingName="OrderID"
@@ -148,7 +148,7 @@ By default, the `SortingGestureType` is set to `Tap` mode, so we select the colu
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Pull To Refresh" src="Images\selection\maui_datagrid_column_selection.gif" width="404"/>
+<img alt="Column selection support in .NET MAUI DataGrid" src="Images\selection\maui_datagrid_column_selection.gif" width="404"/>
 
 ## Keyboard behavior
 <table>
