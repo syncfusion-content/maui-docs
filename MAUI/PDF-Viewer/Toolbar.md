@@ -849,12 +849,14 @@ Button fileSaveButton = new Button
      Opacity = 0.5,
      Padding = 10
  };
-var indexItem = pdfViewer?.Toolbars?.GetByName("PrimaryToolbar")?.Items?.GetByName("Print");
 //We access the PrimaryToolbar on the desktop using the GetByName method and get the item index using Index property.
-if (indexItem?.Index.HasValue == true)
-{
-    var index = indexItem.Index.Value;
-    pdfViewer?.Toolbars?.GetByName("PrimaryToolbar")?.Items?.Insert(index + 1, new Syncfusion.Maui.PdfViewer.ToolbarItem(fileSaveButton, "FileSaveButton"));
+for (int i = 0; i < pdfViewer?.Toolbars.Count; i++)
+{   
+    var index = pdfViewer.Toolbars[i]?.GetByName("PrimaryToolbar")?.Items?.GetByName("Print")?.Index;
+    if (index != null)
+    {   
+        pdfViewer.Toolbars[i]?.GetByName("PrimaryToolbar")?.Items?.Insert((int)index + 1, new Syncfusion.Maui.PdfViewer.ToolbarItem(fileSaveButton, "FileSaveButton"));
+    }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -938,7 +940,7 @@ To hide a toolbar item by its index, you can directly access the item in the too
 int indexToHide = 2; // Replace with the actual index of the item you want to hide.
 
 var toolbar = pdfViewer.Toolbars?.GetByName("PrimaryToolbar");
-if (toolbar != null && indexToHide >= 0 && indexToHide < toolbar?.Items?.Count)
+if (toolbar != null && indexToHide >= 0 && indexToHide < toolbar.Items?.Count)
 {
     var item = toolbar.Items[indexToHide];
     item.IsVisible = false; // Hide the item by index
