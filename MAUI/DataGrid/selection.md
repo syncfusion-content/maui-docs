@@ -125,12 +125,11 @@ public partial class MainPage : ContentPage
 ## Column selection
 The `SfDataGrid` includes the [SfDataGrid.AllowColumnSelection]() property, which allows you to select columns by tapping the column header cell. This feature is enabled only when the `SelectionMode` is set to `Multiple`, the `SelectionUnit` is set to `Cell`, and the `NavigationMode` is set to `Cell`.
 
-Note: When the `SortingGestureType` is set to `Tap`, column selection is applied only when double-tapping the column header cell. This ensures both sorting and column selection interactions can occur without conflicts.
+N> When the `SortingGestureType` is set to `Tap`, column selection is applied only when double-tapping the column header cell. This ensures both sorting and column selection interactions can occur without conflicts.
 
 {% tabs %}
 {% highlight XAML %}
-<syncfusion:SfDataGrid x:Name="sfDataGrid"
-                    SelectionMode="Multiple"
+<syncfusion:SfDataGrid SelectionMode="Multiple"
                     NavigationMode="Cell"
                     SelectionUnit="Cell"
                     AllowColumnSelection="True"
