@@ -936,12 +936,14 @@ To hide a toolbar item by its index, you can directly access the item in the too
 {% highlight C# %}
 // Assuming you want to hide the item at a specific index in the PrimaryToolbar.
 int indexToHide = 2; // Replace with the actual index of the item you want to hide.
+
 var toolbar = pdfViewer.Toolbars?.GetByName("PrimaryToolbar");
 if (toolbar != null && indexToHide >= 0 && indexToHide < toolbar?.Items?.Count)
 {
     var item = toolbar.Items[indexToHide];
     item.IsVisible = false; // Hide the item by index
 }
+
 {% endhighlight %}
 {% endtabs %}
 
