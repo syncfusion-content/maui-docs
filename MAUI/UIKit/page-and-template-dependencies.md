@@ -671,6 +671,244 @@ This page list the dependencies ( converters, rendereres and NuGet packages) of 
 			Required Files<br/>
 		</th>
 	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   1<br/>
+		</td>
+		<td>
+		  Navigation List Card<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.Buttons,<br/>  Syncfusion.Maui.ListView,<br/> Syncfusion.Maui.Inputs<br/> 
+		</td>
+		<td>
+		  Views\Navigation\NavigationListCardPage.xaml<br/>  Views\Navigation\NavigationListCardPage.xaml.cs<br/>  ViewModels\NavigationListViewModel.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
+        </td>
+	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   2<br/>
+		</td>
+		<td>
+		  Navigation Tile Card<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.Buttons,<br/>  Syncfusion.Maui.ListView,<br/> Syncfusion.Maui.Inputs<br/> 
+		</td>
+		<td>
+		  Views\Navigation\NavigationTileCardPage.xaml<br/>  Views\Navigation\NavigationTileCardPage.xaml.cs<br/>  ViewModels\NavigationListViewModel.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
+        </td>
+	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   3<br/>
+		</td>
+		<td>
+		  Songs<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.Buttons,<br/>  Syncfusion.Maui.ListView,<br/> Syncfusion.Maui.Inputs<br/> 
+		</td>
+		<td>
+		  Views\Navigation\SongsPage.xaml<br/>  Views\Navigation\SongsPage.xaml.cs<br/>  ViewModels\SongsPageViewModel.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
+        </td>
+	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   4<br/>
+		</td>
+		<td>
+		  FAQs<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.Buttons,<br/>  Syncfusion.Maui.Expander,<br/> Syncfusion.Maui.Inputs<br/> 
+		</td>
+		<td>
+		  Views\Navigation\FAQPage.xaml<br/>  Views\Navigation\FAQPage.xaml.cs<br/>  ViewModels\FAQViewModel.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
+        </td>
+	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   5<br/>
+		</td>
+		<td>
+		  Contacts<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.Buttons,<br/>  Syncfusion.Maui.Core,<br/> Syncfusion.Maui.Inputs<br/> 
+		</td>
+		<td>
+		  Views\Navigation\ContactsPage.xaml<br/>  Views\Navigation\ContactsPage.xaml.cs<br/>  ViewModels\ContactsPageViewModel.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
+        </td>
+	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   6<br/>
+		</td>
+		<td>
+		  Song Play List<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.Buttons,<br/> Syncfusion.Maui.Inputs<br/> 
+		</td>
+		<td>
+		  Views\Navigation\SongsPlayListPage.xaml<br/>  Views\Navigation\SongsPlayListPage.xaml.cs<br/>  ViewModels\SongPageViewModel.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
+        </td>
+	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   7<br/>
+		</td>
+		<td>
+		  Movies List<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.Buttons,<br/> Syncfusion.Maui.Inputs<br/> 
+		</td>
+		<td>
+		  Views\Navigation\MoviesListPage.xaml<br/>  Views\Navigation\MoviesListPage.xaml.cs<br/>  ViewModels\MoviesViewModel.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
+        </td>
+	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   8<br/>
+		</td>
+		<td>
+		  Names List<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.Buttons,<br/> Syncfusion.Maui.Inputs<br/> 
+		</td>
+		<td>
+		  Views\Navigation\NameListPage.xaml<br/>  Views\Navigation\NameListPage.xaml.cs<br/>  ViewModels\NameListViewModel.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
+        </td>
+	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   9<br/>
+		</td>
+		<td>
+		  Restaurant<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.Buttons,<br/> Syncfusion.Maui.Inputs<br/> 
+		</td>
+		<td>
+		  Views\Navigation\Restaurantxaml<br/>  Views\Navigation\RestaurantPage.xaml.cs<br/>  ViewModels\NavigationListViewModel.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
+        </td>
+	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   10<br/>
+		</td>
+		<td>
+		  Icon Names List<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.Buttons,<br/> Syncfusion.Maui.Inputs<br/> 
+		</td>
+		<td>
+		  Views\Navigation\IconNameListPage.xaml<br/>  Views\Navigation\IconNameListPage.xaml.cs<br/>  ViewModels\NameListViewModel.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
+        </td>
+	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   11<br/>
+		</td>
+		<td>
+		  Suggestion<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.Buttons,<br/> Syncfusion.Maui.Inputs<br/> 
+		</td>
+		<td>
+		  Views\Navigation\SuggestionPage.xaml<br/>  Views\Navigation\SuggestionPage.xaml.cs<br/>  ViewModels\SuggestionViewModel.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
+        </td>
+	</tr>
+		<tr valign="top">		
+		<td align="center">
+		   12<br/>
+		</td>
+		<td>
+		  App Usage<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.Buttons,<br/>  Syncfusion.Maui.ListView,<br/>  Syncfusion.Maui.ProgressBar,<br/> Syncfusion.Maui.Inputs<br/> 
+		</td>
+		<td>
+		  Views\Navigation\AppUsagePage.xaml<br/>  Views\Navigation\AppUsagePage.xaml.cs<br/>  ViewModels\AppUsageViewModel.cs<br/>  Models\Navigation\AppUsage.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
+        </td>
+	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   13<br/>
+		</td>
+		<td>
+		  Documents List<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.Buttons,<br/> Syncfusion.Maui.Inputs<br/> 
+		</td>
+		<td>
+		  Views\Navigation\DocumentsListPage.xaml<br/>  Views\Navigation\DocumentsListPage.xaml.cs<br/>  ViewModels\DocumentsViewModel.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
+        </td>
+	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   14<br/>
+		</td>
+		<td>
+		  Selectable Name Page<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.Buttons,<br/> Syncfusion.Maui.Inputs<br/> 
+		</td>
+		<td>
+		  Views\Navigation\SelectableNamePage.xaml<br/>  Views\Navigation\SelectablePage.xaml.cs<br/>  ViewModels\NameListViewModel.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
+        </td>
+	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   15<br/>
+		</td>
+		<td>
+		  Movies Page<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.Buttons,<br/>  Syncfusion.Maui.ListView,<br/>  Syncfusion.Maui.Core,<br/>  Syncfusion.Maui.Rotator,<br/> Syncfusion.Maui.Inputs<br/> 
+		</td>
+		<td>
+		  Views\Navigation\MoviesPage.xaml<br/>  Views\Navigation\MoviesPage.xaml.cs<br/>  ViewModels\MoviesPageViewModel.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
+        </td>
+	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   16<br/>
+		</td>
+		<td>
+		  File Explorer List<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.Buttons,<br/>  Syncfusion.Maui.Inputs<br/> 
+		</td>
+		<td>
+		  Views\Navigation\FileExplorerPage.xaml<br/>  Views\Navigation\FileExplorerPage.xaml.cs<br/>  ViewModels\FileExplorerViewModel.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
+        </td>
+	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   17<br/>
+		</td>
+		<td>
+		  File Explorer Grid<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.Buttons,<br/>  Syncfusion.Maui.Inputs<br/> 
+		</td>
+		<td>
+		  Views\Navigation\FileExplorerGridPage.xaml<br/>  Views\Navigation\FileExplorerGridPage.xaml.cs<br/>  ViewModels\FileExplorerViewModel.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
+        </td>
+	</tr>
 </table>
 
 ## Error and Empty
@@ -749,6 +987,34 @@ This page list the dependencies ( converters, rendereres and NuGet packages) of 
 			Required Files<br/>
 		</th>
 	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   1<br/>
+		</td>
+		<td>
+		  Transaction History<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.Buttons,<br/>  Syncfusion.Maui.ListView,<br/>  Syncfusion.Maui.Core,<br/>  Syncfusion.Maui.Cards,<br/> Syncfusion.Maui.Inputs<br/>
+		</td>
+		<td>
+		  Views\History\TransactionHistoryPage.xaml<br/>  Views\History\TransactionHistoryPage.xaml.cs<br/>  ViewModels\TransactionHistoryViewModel.cs<br/>  Converters\BooleanToColorConverter.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
+        </td>
+	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   2<br/>
+		</td>
+		<td>
+		  My Orders<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.Buttons,<br/>  Syncfusion.Maui.ListView,<br/>  Syncfusion.Maui.Core,<br/>  Syncfusion.Maui.TabView,<br/> Syncfusion.Maui.Inputs<br/>
+		</td>
+		<td>
+		  Views\History\MyOrdersPage.xaml<br/>  Views\History\MyOrdersPage.xaml.cs<br/>  ViewModels\OrdersViewModel.cs<br/>  Converters\StringToColorConverter.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
+        </td>
+	</tr>
 </table>
 
 ## Social
@@ -768,6 +1034,62 @@ This page list the dependencies ( converters, rendereres and NuGet packages) of 
 			Required Files<br/>
 		</th>
 	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   1<br/>
+		</td>
+		<td>
+		  Social Profile With Connections<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.Buttons,<br/>  Syncfusion.Maui.ListView,<br/>  Syncfusion.Maui.Core,<br/> Syncfusion.Maui.Inputs<br/>
+		</td>
+		<td>
+		  Views\Social\SocialProfileWithConnectionsPage.xaml<br/>  Views\Social\SocialProfileWithConnectionsPage.xaml.cs<br/>  ViewModels\ProfileViewModel.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
+        </td>
+	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   2<br/>
+		</td>
+		<td>
+		  Social Profile with Card<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.Buttons,<br/>  Syncfusion.Maui.ListView,<br/>  Syncfusion.Maui.Core,<br/> Syncfusion.Maui.Inputs<br/>
+		</td>
+		<td>
+		  Views\Social\SocialProfileWithCard.xaml<br/>  Views\Social\SocialProfileWithCard.xaml.cs<br/>  ViewModels\ProfileViewModel.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
+        </td>
+	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   3<br/>
+		</td>
+		<td>
+		  Social Profile with Interest<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.Buttons,<br/>  Syncfusion.Maui.ListView,<br/>  Syncfusion.Maui.Core,<br/> Syncfusion.Maui.Inputs<br/>
+		</td>
+		<td>
+		  Views\Social\SocialProfileWithInterest.xaml<br/>  Views\Social\SocialProfileWithInterest.xaml.cs<br/>  ViewModels\ProfileViewModel.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
+        </td>
+	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   4<br/>
+		</td>
+		<td>
+		  Social Profile With Message<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.Buttons,<br/>  Syncfusion.Maui.ListView,<br/>  Syncfusion.Maui.Core,<br/> Syncfusion.Maui.Inputs<br/>
+		</td>
+		<td>
+		  Views\Social\SocialProfileWithMessage.xaml<br/>  Views\Social\SocialProfileWithMessage.xaml.cs<br/>  ViewModels\ProfileViewModel.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
+        </td>
+	</tr>
 </table>
 
 ## Profile
@@ -786,6 +1108,76 @@ This page list the dependencies ( converters, rendereres and NuGet packages) of 
 		<th>
 			Required Files<br/>
 		</th>
+	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   1<br/>
+		</td>
+		<td>
+		  Author Profile<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.Buttons,<br/>  Syncfusion.Maui.ListView,<br/>  Syncfusion.Maui.Core,<br/> Syncfusion.Maui.Inputs<br/>
+		</td>
+		<td>
+		  Views\Profile\AuthorProfilePage.xaml<br/>  Views\Profile\AuthorProfilePage.xaml.cs<br/>  ViewModels\AuthorProfileViewModel.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
+        </td>
+	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   2<br/>
+		</td>
+		<td>
+		  Contacts Page<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.Buttons,<br/>  Syncfusion.Maui.ListView,<br/>  Syncfusion.Maui.Core,<br/> Syncfusion.Maui.Inputs<br/>
+		</td>
+		<td>
+		  Views\Profile\ContactProfilePage.xaml<br/>  Views\Profile\ContactProfilePage.xaml.cs<br/>  ViewModels\ContactProfileViewModel.cs<br/>  Models\UserProfile.cs<br/>  Controls\TapAnimationGrid.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
+        </td>
+	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   3<br/>
+		</td>
+		<td>
+		  Contacts Page<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.Buttons,<br/>  Syncfusion.Maui.ListView,<br/>  Syncfusion.Maui.Core,<br/> Syncfusion.Maui.Inputs<br/>
+		</td>
+		<td>
+		  Views\Profile\ChatProfilePage.xaml<br/>  Views\Profile\ChatProfilePage.xaml.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
+        </td>
+	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   4<br/>
+		</td>
+		<td>
+		  Master Page<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.Buttons,<br/>  Syncfusion.Maui.ListView,<br/>  Syncfusion.Maui.Core,<br/> Syncfusion.Maui.Inputs<br/>
+		</td>
+		<td>
+		  Views\Profile\MasterProfilePage.xaml<br/>  Views\Profile\MasterProfilePage.xaml.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
+        </td>
+	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   5<br/>
+		</td>
+		<td>
+		  Health Profile Page<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.Buttons,<br/>  Syncfusion.Maui.ListView,<br/>  Syncfusion.Maui.Core,<br/> Syncfusion.Maui.Inputs<br/>
+		</td>
+		<td>
+		  Views\Profile\HealthProfilePage.xaml<br/>  Images\waterconsumed.png<br/>  Images\sleepduration.png<br/>  Images\heartrate.png<br/>  Images\calorieseaten.png<br/>  Views\Profile\HealthProfilePage.xaml.cs<br/>  ViewModels\HealthProfileViewModel.cs<br/>  Models\HealthProfile.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
+        </td>
 	</tr>
 </table>
 
