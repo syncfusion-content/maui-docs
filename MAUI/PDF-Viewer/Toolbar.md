@@ -892,11 +892,11 @@ you can access the specific item using the [GetByName](https://help.syncfusion.c
 {% highlight C# %}
 //We access the outline item in the PrimaryToolbar on the desktop using the GetByName method and remove it.
 
-var item = pdfViewer.Toolbars?.GetByName("PrimaryToolbar")?.Items?.GetByName("Outline");
-if (item != null)
-{
-    pdfViewer.Toolbars?.GetByName("PrimaryToolbar")?.Items?.Remove(item); // Remove the outline item
-}
+ var item = pdfViewer.Toolbars?.GetByName("PrimaryToolbar")?.Items?.GetByName("Outline");
+ if (item != null)
+ {
+     pdfViewer.Toolbars?.GetByName("PrimaryToolbar")?.Items?.Remove(item); // Remove the outline item
+ }
 {% endhighlight %}
 {% endtabs %}
 
