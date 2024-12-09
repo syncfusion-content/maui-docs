@@ -80,6 +80,12 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 <td>{{'[DataGridDragAction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDragAction.html)'| markdownify }}</td>
 <td>Defines constants that specify the possible progressing states of resizing operation.</td>
 </tr>
+<tr>
+<td>{{'[SelectionUnit]()'| markdownify }}</td>
+<td>{{'[DataGridSelectionUnit]()'| markdownify }}</td>
+<td>Defines the constants that specifies how the selection is applied. 
+</td>
+</tr>
 </table>
 
 ## Properties
@@ -256,6 +262,14 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 <td>This enables users to change the color of the column drag view text color. 
 </td>
 </tr>
+
+<tr>
+<td>{{'[SelectionUnit]()'| markdownify }}</td>
+<td>{{'[SelectionUnit]()'| markdownify }}</td>
+<td>This enables users to select a cell. 
+</td>
+</tr>
+
 </table>
 
 ## Events

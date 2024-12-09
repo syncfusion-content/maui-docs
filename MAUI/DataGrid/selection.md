@@ -56,7 +56,7 @@ this.dataGrid.SelectionMode  = DataGridSelectionMode.Multiple;
 
 <img alt="Selection-unit" src="Images\selection\maui-datagrid-selection-unit.png" width="404" height="392" />
 
->Note : It is not possible to set `NavigationMode.Row` when cell selection is enabled (SelectionUnit is Cell or Any). 
+N> : It is not possible to set `NavigationMode.Row` when cell selection is enabled (SelectionUnit is Cell or Any). 
 
 ## Current Cell Navigation
 The Keyboard navigation through the cells and rows is determined based on the [NavigationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_NavigationMode) property. The [NavigationMode.Cell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNavigationMode.html#Syncfusion_Maui_DataGrid_DataGridNavigationMode_Cell) allows you to navigate between the cells in a row as well as between rows. The [NavigationMode.Row](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNavigationMode.html#Syncfusion_Maui_DataGrid_DataGridNavigationMode_Row) allows you to navigate only between rows. 
@@ -99,9 +99,11 @@ The `SfDataGrid` provides [SelectedIndex](https://help.syncfusion.com/cr/maui/Sy
 
 `SfDataGrid.SelectedRows`: Provides all the selected records of the selected items when multiple selection is enabled.
 
-### Cell selection.
+### Getting selected cells.
 
-When multiple cells are selected, call the `SfDataGrid.GetSelectedCells()` method to get information of all the selected cells.
+The `SfDataGrid` provides[`SfDataGrid.GetSelectedCells()`] and [`SfDataGrid.GetSelectedCellInfo()`].
+
+`SfDataGrid.GetSelectedCells()` : Provides all the selected cell, when multiple cells are selected.
 
 {% tabs %}
 {% highlight c# %}
@@ -109,7 +111,7 @@ var selectedCells = this.dataGrid.GetSelectedCells();
 {% endhighlight %}
 {% endtabs %}
 
-To get the cell info, call the `SfDataGrid.GetSelectedCellInfo()`method to get cell at the specified row and column index.
+`SfDataGrid.GetSelectedCellInfo()` : Provides the selected cell at the specified row and column index.
 
 {% tabs %}
 {% highlight c# %}
@@ -165,7 +167,7 @@ public partial class MainPage : ContentPage
 
 ![Multiple Selection in .NET MAUI DataGrid](Images/selection/maui-datagrid-multiple-selection.png)
 
-### Process selection using methods
+### Process cell selection using methods
 
 You can select a particular cell within the grid by using the `SfDataGrid.SelectCell(rowData, dataGridColumn)` method. 
 

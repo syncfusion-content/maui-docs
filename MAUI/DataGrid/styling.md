@@ -379,22 +379,6 @@ N> The column styling (explicit styling) takes higher priority than implicit sty
 
 ![Column Styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-column-style.png)
 
-### Cell styling
-You can apply the style for a selected cell. 
-
-{% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-<syncfusion:SfDataGrid.DefaultStyle>
-     <syncfusion:DataGridStyle CurrentCellBorderColor="Black"
-                               CurrentCellBorderWidth="3"
-                               SelectionBackground="BurlyWood"
-                               SelectedRowTextColor="Black" />
-</syncfusion:SfDataGrid.DefaultStyle>
-{% endhighlight %}
-{% endtabs %}
-
-<img alt="Selection-unit" src="Images\styling\maui-datagrid-cell-selection-style.png" width="404" height="392" />
-
 ## Applying alternate row style
 You can apply the alternative row color by using [AlternateRowBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_AlternateRowBackground) in `SfDataGrid.DefaultStyle`.
 
