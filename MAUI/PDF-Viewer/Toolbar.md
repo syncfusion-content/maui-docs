@@ -849,9 +849,8 @@ Button fileSaveButton = new Button
      Opacity = 0.5,
      Padding = 10
  };
-//We access the PrimaryToolbar on the desktop using the GetByName method and get the item index using Index property.
-
 var indexItem = pdfViewer?.Toolbars?.GetByName("PrimaryToolbar")?.Items?.GetByName("Print");
+//We access the PrimaryToolbar on the desktop using the GetByName method and get the item index using Index property.
 if (indexItem?.Index.HasValue == true)
 {
     var index = indexItem.Index.Value;
@@ -916,11 +915,10 @@ for (int i = 0; i < pdfViewer?.Toolbars?.Count; i++)
     var item = pdfViewer.Toolbars?[i]?.Items?.GetByName("Sticky note");
     if (item != null)
     {
-    // Remove the "Sticky note" item
-    pdfViewer?.Toolbars?[i]?.Items?.Remove(item);
+        // Remove the "Sticky note" item
+        pdfViewer?.Toolbars?[i]?.Items?.Remove(item);
+    }
 }
-}
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -944,8 +942,6 @@ if (toolbar != null && indexToHide >= 0 && indexToHide < toolbar?.Items?.Count)
     var item = toolbar.Items[indexToHide];
     item.IsVisible = false; // Hide the item by index
 }
-
-
 {% endhighlight %}
 {% endtabs %}
 
