@@ -454,7 +454,7 @@ dataGrid.SwipeOffsetMode=SwipeOffsetMode.Auto;
 
 N> The value of the `SfDataGrid.MaxSwipeOffset` property will not be considered when the `SfDataGrid.SwipeOffsetMode` is set to `SwipeOffsetMode.Auto`.
 
-## Load custom swipe buttons based on row data?
+## Load custom swipe buttons based on row data
 
 Using a `DataTemplateSelector`, you can load specific views based on row data, such as `SfDataGrid.RightSwipeTemplate` and `SfDataGrid.LeftSwipeTemplate`. Refer to the code example below to load the desired template based on the row data.
 
