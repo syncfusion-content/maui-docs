@@ -89,7 +89,6 @@ GroupColumnDescription groupColumnDescription = new GroupColumnDescription
     ColumnName = "Salary",
     DisplayName = "Income"
 };
-
 dataGrid.GroupColumnDescriptions.Add(groupColumnDescription);
 {% endhighlight %}
 {% endtabs %}
