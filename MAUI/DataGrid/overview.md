@@ -26,6 +26,8 @@ The .NET MAUI DataGrid control is used to display and manipulate data in a tabul
 
 * **Row drag and drop** - Interaction support to drag and drop rows.
 
+* **Swiping** - Interaction support to swipe the rows.
+
 * **Editing** - Interactive support to edit with different column types.
 
 * **Sorting** - Interactively sort one or more columns.
