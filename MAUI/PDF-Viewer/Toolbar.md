@@ -850,10 +850,11 @@ Button fileSaveButton = new Button
      Padding = 10
  };
  
-// We accessed the PrimaryToolbar on the desktop using the GetByName method and inserted the item after the last item index.
+// We access the PrimaryToolbar on the desktop using the GetByName method.
 var item = PdfViewer?.Toolbars?.GetByName("PrimaryToolbar")?.Items?.GetByName("Print");
 if (item != null)
 {
+    // We accessed the PrimaryToolbar on the desktop using the GetByName method and inserted the item after the last item index.
     PdfViewer?.Toolbars?.GetByName("PrimaryToolbar")?.Items?.Insert(item.Index + 1, new Syncfusion.Maui.PdfViewer.ToolbarItem(fileSaveButton, "FileSaveButton"));
 }
 {% endhighlight %}
