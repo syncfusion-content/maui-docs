@@ -295,11 +295,13 @@ public class ColorConverter : IValueConverter
 {% highlight xaml tabtitle="ForeColorConverter.cs"%}
 public class ForeColorConverter : IValueConverter
 {
-    object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo info)
+    public object? Convert(object? value, Type targetType, object? parameter, CultureInfo info)
     {
         var gridCell = (value as DataGridCell);
-        var columnIndex = gridCell.ColumnIndex;
-        var rowIndex = gridCell.RowIndex;
+        if (gridCell == null || gridCell.DataColumn == null || gridCell.DataColumn.DataGridColumn == null)
+            return null;
+        var columnIndex = gridCell.DataColumn.ColumnIndex;
+        var rowIndex = gridCell.DataColumn.RowIndex;
         var mappingName = gridCell.DataColumn.DataGridColumn.MappingName;
         if (columnIndex == 0 && rowIndex % 3 == 1)
             return Colors.Wheat;
@@ -312,7 +314,7 @@ public class ForeColorConverter : IValueConverter
 
         return Colors.Black;
     }
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
     {
         throw new NotImplementedException();
     }
@@ -342,16 +344,26 @@ Styling can be applied to a particular cell based on RowIndex and ColumnIndex pr
 {% highlight xaml tabtitle="ColorConverter.cs"%}
 public class ColorConverter : IValueConverter
 {
-    object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo info)
+    public object? Convert(object? value, Type targetType, object? parameter, CultureInfo info)
     {
         var gridCell = (value as DataGridCell);
-        var columnIndex = gridCell.ColumnIndex;
-        var rowIndex = gridCell.RowIndex;
-        if(columnIndex == 0 && rowIndex == 1)
+        if (gridCell == null || gridCell.DataColumn == null || gridCell.DataColumn.DataGridColumn == null)
+            return null;
+                   
+        var columnIndex = gridCell.DataColumn.ColumnIndex;
+        var rowIndex = gridCell.DataColumn.RowIndex;
+        var mappingName = gridCell.DataColumn.DataGridColumn.MappingName;
+        if (columnIndex == 0 && rowIndex % 3 == 1)
             return Colors.BlueViolet;
+        else if (mappingName == "ShipCountry")
+            return Colors.CornflowerBlue;
+        else if (columnIndex == 1 && rowIndex % 4 == 0)
+            return Colors.YellowGreen;
+        else if (columnIndex == 3 && rowIndex % 6 == 1)
+            return Colors.PaleVioletRed;
         return Colors.White;
     }
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
     {
         throw new NotImplementedException();
     }
@@ -360,16 +372,26 @@ public class ColorConverter : IValueConverter
 {% highlight xaml tabtitle="ForeColorConverter.cs"%}
 public class ForeColorConverter : IValueConverter
 {
-    object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo info)
+    public object? Convert(object? value, Type targetType, object? parameter, CultureInfo info)
     {
         var gridCell = (value as DataGridCell);
+        if (gridCell == null || gridCell.DataColumn == null || gridCell.DataColumn.DataGridColumn == null)
+            return null;
         var columnIndex = gridCell.ColumnIndex;
         var rowIndex = gridCell.RowIndex;
-        if(columnIndex == 0 && rowIndex == 1)
+        var mappingName = gridCell.DataColumn.DataGridColumn.MappingName;
+        if (columnIndex == 0 && rowIndex % 3 == 1)
+            return Colors.Wheat;
+        else if (mappingName == "ShipCountry")
             return Colors.White;
+        else if (columnIndex == 1 && rowIndex % 4 == 0)
+            return Colors.Red;
+        else if (columnIndex == 3 && rowIndex % 6 == 1)
+            return Colors.Yellow;
+
         return Colors.Black;
     }
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
     {
         throw new NotImplementedException();
     }
@@ -398,15 +420,18 @@ Styling can be applied to a particular cell based on CellValue property by writi
 {% highlight xaml tabtitle="ColorConverter.cs"%}
 public class ColorConverter : IValueConverter
 {
-    object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo info)
+    public object? Convert(object? value, Type targetType, object? parameter, CultureInfo info)
     {
         var gridCell = (value as DataGridCell);
-        var cellValue = gridCell.CellValue;
-        if (cellValue.Equals("Thomas Hardy"))
-            return Colors.LightBlue;
+        if (gridCell == null || gridCell.DataColumn == null)
+            return null;
+        var columnIndex = gridCell.DataColumn.ColumnIndex;
+        var rowIndex = gridCell.DataColumn.RowIndex;
+        if (columnIndex == 0 && rowIndex == 1)
+            return Colors.BlueViolet;
         return Colors.White;
     }
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
     {
         throw new NotImplementedException();
     }
@@ -415,15 +440,18 @@ public class ColorConverter : IValueConverter
 {% highlight xaml tabtitle="ForeColorConverter.cs"%}
 public class ForeColorConverter : IValueConverter
 {
-    object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo info)
+    public object? Convert(object? value, Type targetType, object? parameter, CultureInfo info)
     {
         var gridCell = (value as DataGridCell);
-        var cellValue = gridCell.CellValue;
-        if (cellValue.Equals("Thomas Hardy"))
-            return Colors.Red;
+        if (gridCell == null || gridCell.DataColumn == null)
+            return null;
+        var columnIndex = gridCell.DataColumn.ColumnIndex;
+        var rowIndex = gridCell.DataColumn.RowIndex;
+        if (columnIndex == 0 && rowIndex == 1)
+            return Colors.White;
         return Colors.Black;
     }
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
     {
         throw new NotImplementedException();
     }
