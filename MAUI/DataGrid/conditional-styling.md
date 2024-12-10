@@ -303,8 +303,8 @@ public class ForeColorConverter : IValueConverter
         var gridCell = (value as DataGridCell);
         if (gridCell == null || gridCell.DataColumn == null || gridCell.DataColumn.DataGridColumn == null)
             return null;
-        var columnIndex = gridCell.ColumnIndex;
-        var rowIndex = gridCell.RowIndex;
+        var columnIndex = gridCell.DataColumn.ColumnIndex;
+        var rowIndex = gridCell.DataColumn.RowIndex;
         var mappingName = gridCell.DataColumn.DataGridColumn.MappingName;
         if (columnIndex == 0 && rowIndex % 3 == 1)
             return Colors.Wheat;
@@ -351,10 +351,10 @@ public class ColorConverter : IValueConverter
     public object? Convert(object? value, Type targetType, object? parameter, CultureInfo info)
     {
         var gridCell = (value as DataGridCell);
-        if (gridCell == null)
+        if (gridCell == null || gridCell.DataColumn == null)
             return null;
-        var columnIndex = gridCell.ColumnIndex;
-        var rowIndex = gridCell.RowIndex;
+        var columnIndex = gridCell.DataColumn.ColumnIndex;
+        var rowIndex = gridCell.DataColumn.RowIndex;
         if (columnIndex == 0 && rowIndex == 1)
             return Colors.BlueViolet;
         return Colors.White;
@@ -371,10 +371,10 @@ public class ForeColorConverter : IValueConverter
     public object? Convert(object? value, Type targetType, object? parameter, CultureInfo info)
     {
         var gridCell = (value as DataGridCell);
-        if(gridCell == null)
+        if(gridCell == null || gridCell.DataColumn == null)
             return null;
-        var columnIndex = gridCell.ColumnIndex;
-        var rowIndex = gridCell.RowIndex;
+        var columnIndex = gridCell.DataColumn.ColumnIndex;
+        var rowIndex = gridCell.DataColumn.RowIndex;
         if (columnIndex == 0 && rowIndex == 1)
             return Colors.White;
         return Colors.Black;
@@ -414,13 +414,15 @@ public class ColorConverter : IValueConverter
         var gridCell = (value as DataGridCell);
         if (gridCell == null || gridCell.DataColumn == null)
             return null;
-        var columnIndex = gridCell.DataColumn.ColumnIndex;
-        var rowIndex = gridCell.DataColumn.RowIndex;
-        if (columnIndex == 0 && rowIndex == 1)
-            return Colors.BlueViolet;
+        var cellValue = gridCell.DataColumn.CellValue;
+        if (cellValue != null)
+        {
+            if (cellValue.Equals("Thomas Hardy"))
+                return Colors.LightBlue;
+        }
         return Colors.White;
     }
-    public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
+    public object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
     {
         throw new NotImplementedException();
     }
@@ -434,13 +436,15 @@ public class ForeColorConverter : IValueConverter
         var gridCell = (value as DataGridCell);
         if (gridCell == null || gridCell.DataColumn == null)
             return null;
-        var columnIndex = gridCell.DataColumn.ColumnIndex;
-        var rowIndex = gridCell.DataColumn.RowIndex;
-        if (columnIndex == 0 && rowIndex == 1)
-            return Colors.White;
+        var cellValue = gridCell.DataColumn.CellValue;
+        if (cellValue != null)
+        {
+            if (cellValue.Equals("Thomas Hardy"))
+                return Colors.Red;
+        }
         return Colors.Black;
     }
-    public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
+    public object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
     {
         throw new NotImplementedException();
     }
