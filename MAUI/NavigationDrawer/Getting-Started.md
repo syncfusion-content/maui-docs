@@ -131,7 +131,7 @@ N> It is mandatory to set [ContentView](https://help.syncfusion.com/cr/maui/Sync
 
 The default position of the navigation pane is on the left, so change the drawer width to 250 by using the [DrawerWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerWidth) property.
 
-{% tabs %}	
+{% tabs %}
 {% highlight xaml %}
 
 <navigationdrawer:SfNavigationDrawer x:Name="navigationDrawer">
@@ -142,10 +142,10 @@ The default position of the navigation pane is on the left, so change the drawer
         <Grid/>
     </navigationdrawer:SfNavigationDrawer.ContentView>
 </navigationdrawer:SfNavigationDrawer>
-	
+
 {% endhighlight %}
 
-{% highlight c# %} 
+{% highlight c# %}
 
 using Syncfusion.Maui.NavigationDrawer;
 
@@ -176,7 +176,7 @@ N> To change the side of the navigation pane, utilize the [Position](https://hel
 
 Create an ImageButton and set the required image to the `Source` property. To ensure the image appears correctly, place the image in the `Resources/Images` directory. Subscribe Clicked event of the button and invoke the [ToggleDrawer()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ToggleDrawer) method to toggle the drawer. Properly align the layout of [ContentView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ContentView) to position the hamburger icon at the top left, as demonstrated in the following code.
 
-{% tabs %}	
+{% tabs %}
 {% highlight xaml %}
 
 <navigationdrawer:SfNavigationDrawer x:Name="navigationDrawer">
@@ -212,10 +212,10 @@ Create an ImageButton and set the required image to the `Source` property. To en
         </Grid>
     </navigationdrawer:SfNavigationDrawer.ContentView>
 </navigationdrawer:SfNavigationDrawer>
-	
-{% endhighlight %}	
 
-{% highlight c# %} 
+{% endhighlight %}
+
+{% highlight c# %}
 
 namespace NavigationDrawerGettingStarted;
 
@@ -294,7 +294,7 @@ public partial class NavigationDrawerPage : ContentPage
 
 {% tabs %}
 {% highlight c# %}
-    
+
     private void hamburgerButton_Clicked(object sender, EventArgs e)
     {
         navigationDrawer.ToggleDrawer();
@@ -309,7 +309,7 @@ public partial class NavigationDrawerPage : ContentPage
 
 Create a ListView with items and set it as [DrawerContentView.](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerContentView) 
 
-{% tabs %}	
+{% tabs %}
 {% highlight xaml %}
 
 <navigationdrawer:SfNavigationDrawer x:Name="navigationDrawer">
@@ -380,8 +380,8 @@ Create a ListView with items and set it as [DrawerContentView.](https://help.syn
         </Grid>
     </navigationdrawer:SfNavigationDrawer.ContentView>
 </navigationdrawer:SfNavigationDrawer>
-  	
-{% endhighlight %}	
+
+{% endhighlight %}
 {% highlight c# %}
 
 namespace NavigationDrawerGettingStarted;
@@ -452,7 +452,7 @@ public partial class NavigationDrawerPage : ContentPage
 
 {% tabs %}
 {% highlight c# %}
-    
+
     private void hamburgerButton_Clicked(object sender, EventArgs e)
     {
         navigationDrawer.ToggleDrawer();
