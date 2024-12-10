@@ -85,7 +85,15 @@ To cancel the response using the `StopRespondingCommand` or `StopResponding` eve
         {
             // logic to handle the Stop Responding action
             this.CancelResponse = true;
-        }         
+        } 
+        
+        private void GetResult()
+        {
+           if (!CancelResponse)
+           {
+              // Response is generated
+           }  
+        }      
     }
 
 {% endhighlight %}
@@ -187,7 +195,7 @@ The `CreateAssistChat` method allows for the customization of the chat view func
 {% endhighlight %} 
 {% endtabs %}
 
-The `CustomAssistViewChat `class inherits from `AssistViewChat` and can be used to further customize the chat view.
+The `CustomAssistViewChat `class inherits from `AssistViewChat` and can be used to further customize the chat view, here  the input view is removed by setting `ShowMessageInputView` to `false` as shown below.
 
 {% tabs %}
 {% highlight c# %}
@@ -230,11 +238,13 @@ The `SfAIAssistView` control allows you to fully customize the editor's appearan
 </ContentPage.Content>
 
 {% endhighlight %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="8" %}
+{% highlight c# hl_lines="10" %}
+
+using Syncfusion.Maui.AIAssistView;
 
     public partial class MainPage : ContentPage
     {
-        private SfAIAssistView sfAIAssistView;
+        SfAIAssistView sfAIAssistView;
         public MainPage()
         {
             InitializeComponent();
