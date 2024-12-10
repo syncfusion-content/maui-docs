@@ -755,6 +755,10 @@ option.CanApplyGridStyle = true;
 
 <img alt="Export DataGrid to PDF format with style applied" src="Images\export-to-pdf\maui-datagrid-export-with-defaultstyle.png" width="689"/>
 
+The SfDataGrid also allows exporting the data with alternate row color by setting [AlternateRowBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_AlternateRowBackground) in `SfDataGrid.DefaultStyle` and [DataGridPdfExportingOption.CanApplyGridStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_CanApplyGridStyle) property to `true`.
+
+<img alt="Export DataGrid to PDF format with alternate row background applied" src="Images\export-to-pdf\maui-datagrid-alternate-row-background.png" width="689"/>
+
 You can customize the following styles when exporting to PDF as well:
 
 * HeaderStyle

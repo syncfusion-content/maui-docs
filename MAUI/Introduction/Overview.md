@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Overview of Syncfusion Essential Studio .NET MAUI products
+title: Overview of Syncfusion Essential Studio® .NET MAUI products
 description: Basic overview about the list of available features on Syncfusion .NET MAUI components and steps to use the guide.
 platform: maui
 control: Overview
 documentation: ug
 ---
 
-# Welcome to Syncfusion Essential Studio for .NET MAUI
+# Welcome to Syncfusion Essential Studio® for .NET MAUI
 
-Essential Studio for .NET MAUI is a comprehensive collection of .NET MAUI components for building modern Mobile and Desktop applications. It includes our first set of .NET MAUI UI controls such as Charts, Gauge, and Tab View.
+Essential Studio® for .NET MAUI is a comprehensive collection of .NET MAUI components for building modern Mobile and Desktop applications. It includes our first set of .NET MAUI UI controls such as Charts, Gauge, and Tab View.
 
 ## How to read this user guide most effectively
 
@@ -26,6 +26,6 @@ Similar to the Knowledge Base, the Forum section also contains responses to ques
 
 ## Support and feedback
 
-If you are unable to find the information that you are looking for in the self-help resources mentioned above, please contact us by creating a [support ticket](https://support.syncfusion.com/create).
+If you are unable to find the information that you are looking for in the self-help resources mentioned above, please contact us by creating a [support ticket](https://support.syncfusion.com/support/tickets/create).
 
 Do not see what you need? Please request it in our [feedback portal](https://www.syncfusion.com/feedback/maui).

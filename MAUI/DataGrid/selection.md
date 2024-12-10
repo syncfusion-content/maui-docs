@@ -16,6 +16,48 @@ To get start quickly with perform selection in .NET MAUI DataGrid, you can check
 
 <style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src="https://www.youtube.com/embed/mN95SPfVcHo"></iframe>
 
+## Selection unit
+
+<table>
+<tr>
+<th> Unit </th>
+<th> Description </th>
+</tr>
+<tr>
+<td>Row</td>
+<td>Allows selection of a specific row or group of rows either programmatically or by touch interactions. Tapping on a cell selects the entire row. This is the default value.  </td>
+</tr>
+<tr>
+<td>Cell</td>
+<td> Allows selection of a specific cell or group of cells either programmatically or by touch interactions. Tapping on a cell selects only that particular cell and not the entire row.</td>
+</tr>
+<tr>
+<td>Any</td>
+<td>Allows selection of both rows and cells. Tapping on the row header selects the entire row. Tapping on a cell selects only that particular cell.  </td>
+</tr>
+</table>
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding OrderInfoCollection}"
+                           NavigationMode="Cell"
+                           SelectionUnit="Cell"
+                           SelectionMode="Multiple">
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+
+{% highlight c# %}
+this.dataGrid.SelectionUnit  = DataGridSelectionUnit.Cell;
+this.dataGrid.NavigationMode = DataGridNavigationMode.Cell;
+this.dataGrid.SelectionMode  = DataGridSelectionMode.Multiple;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="Selection-unit" src="Images\selection\maui-datagrid-selection-unit.png" width="404" height="392" />
+
+N> : It is not possible to set `NavigationMode.Row` when cell selection is enabled (SelectionUnit is Cell or Any). 
+
 ## Current Cell Navigation
 The Keyboard navigation through the cells and rows is determined based on the [NavigationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_NavigationMode) property. The [NavigationMode.Cell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNavigationMode.html#Syncfusion_Maui_DataGrid_DataGridNavigationMode_Cell) allows you to navigate between the cells in a row as well as between rows. The [NavigationMode.Row](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNavigationMode.html#Syncfusion_Maui_DataGrid_DataGridNavigationMode_Row) allows you to navigate only between rows. 
 
@@ -56,6 +98,26 @@ The `SfDataGrid` provides [SelectedIndex](https://help.syncfusion.com/cr/maui/Sy
 `SfDataGrid.CurrentRow`: Provides the underlying data object of the currently selected row in the DataGrid. Denotes the underlying data object of lastly selected row in multiple selections.
 
 `SfDataGrid.SelectedRows`: Provides all the selected records of the selected items when multiple selection is enabled.
+
+### Getting selected cells.
+
+The `SfDataGrid` provides [SfDataGrid.GetSelectedCells()]() and [SfDataGrid.GetSelectedCellInfo()]() methods to get details of the selected cells when the selection unit is `Cell` or `Any`.
+
+`SfDataGrid.GetSelectedCells()` : Provides details of all selected cells when multiple cells are selected
+
+{% tabs %}
+{% highlight c# %}
+var selectedCells = this.dataGrid.GetSelectedCells();
+{% endhighlight %}
+{% endtabs %}
+
+`SfDataGrid.GetSelectedCellInfo()` : Provides details of the cell at the specified row and column index.
+
+{% tabs %}
+{% highlight c# %}
+var selectedCellInfo = this.dataGrid.GetSelectedCellInfo(new RowColumnIndex(1,2));
+{% endhighlight %}
+{% endtabs %}
 
 ## CurrentRow vs SelectedRow 
 Both the `SelectedRow` and `CurrentRow` returns the same data object when the selection mode is single. When multiple selection is enabled, the initially selected record will be maintained in the `SelectedRow`, and the currently selected record will be maintained in the `CurrentRow`.
@@ -105,6 +167,30 @@ public partial class MainPage : ContentPage
 
 ![Multiple Selection in .NET MAUI DataGrid](Images/selection/maui-datagrid-multiple-selection.png)
 
+### Process cell selection using methods
+
+You can select a particular cell within the grid by using the `SfDataGrid.SelectCell(rowData, dataGridColumn)` method. 
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+// Selects the cell at the given row and column.
+this.dataGrid.SelectCell(this.dataGrid.GetRecordAtRowIndex(3), this.dataGrid.Columns[1]);
+
+{% endhighlight %}
+{% endtabs %}
+
+The `SfDataGrid.SelectCells` method  allows you to programmatically select a range of cells in the grid. This is particularly useful when the selection mode is set to `DataGridSelectionMode.Multiple`.
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+// Selects the range of cells that falls between the specified start/end row data and start/end column.
+this.dataGrid.SelectCells(this.dataGrid.GetRecordAtRowIndex(3), this.dataGrid.Columns[1], this.dataGrid.GetRecordAtRowIndex(7), this.dataGrid.Columns[3]);
+
+{% endhighlight %}
+{% endtabs %}
+
 ### Select all the rows
 Select all the rows in the datagrid using the [SfDataGrid.SelectAll()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectAll) method.
 {% tabs %}
@@ -121,6 +207,33 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![All the rows selected in .NET MAUI DataGrid](Images/selection/maui-datagrid-selectall.png)
+
+## Column selection
+The `SfDataGrid` includes the [SfDataGrid.AllowColumnSelection]() property, which allows you to select columns by tapping the column header cell. This feature is enabled only when the `SelectionMode` is set to `Multiple`, the `SelectionUnit` is set to `Cell`, and the `NavigationMode` is set to `Cell`.
+
+N> When the `SortingGestureType` is set to `Tap`, column selection is applied only when double-tapping the column header cell. This ensures both sorting and column selection interactions can occur without conflicts.
+
+{% tabs %}
+{% highlight XAML %}
+<syncfusion:SfDataGrid SelectionMode="Multiple"
+                    NavigationMode="Cell"
+                    SelectionUnit="Cell"
+                    AllowColumnSelection="True"
+                    AutoGenerateColumnsMode="None"
+                    ItemsSource="{Binding OrderInfoCollection}" >
+<syncfusion:SfDataGrid.Columns>
+   <syncfusion:DataGridTextColumn MappingName="OrderID"
+                 HeaderText="Order ID" />
+   <syncfusion:DataGridTextColumn MappingName="CustomerID"
+                 HeaderText="Customer ID" />
+   <syncfusion:DataGridTextColumn MappingName="ShipCountry "
+                 HeaderText="Ship Country " />
+</syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="Column selection support in .NET MAUI DataGrid" src="Images\selection\maui_datagrid_column_selection.gif" width="404"/>
 
 ## Keyboard behavior
 <table>
@@ -407,7 +520,7 @@ Get the current row in the `SfDataGrid.SelectionChanged` event by setting the `S
 The `SfDataGrid` supports highlighting the current row when the `SelectionMode` is set to `Multiple`, and the `NavigationMode` is set to `Row`. The color of the currently highlighted row can be customized using the [CurrentRowHighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_CurrentRowHighlightColor) property in the `DataGridStyle`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml"%}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Content>
         <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}">
@@ -426,7 +539,7 @@ The `SfDataGrid` supports highlighting the current row when the `SelectionMode` 
 Change the selection back color and text color by using the  [SelectionBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SelectionBackground) and [SelectedRowTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SelectedRowTextColor) in `SfDataGrid.DefaultStyle`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml"%}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Content>
         <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}">
@@ -456,7 +569,7 @@ public partial class MainPage : ContentPage
 Change the current cell border color and width by using the [CurrentCellBorderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_CurrentCellBorderColor) and [CurrentCellBorderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_CurrentCellBorderWidth) in the SfDataGrid.DefaultStyle.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml"%}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Content>
         <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}">
@@ -486,7 +599,7 @@ public partial class MainPage : ContentPage
 The SfDataGrid allows you to bind the selection properties such as `SelectedIndex` and `SelectedRow` to the properties in the ViewModel directly.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml"%}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Content>
         <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}"
