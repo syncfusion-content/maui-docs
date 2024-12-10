@@ -95,7 +95,7 @@ dataGrid.GroupColumnDescriptions.Add(groupColumnDescription);
 
 The following screenshot shows the outcome of the previous code:
 
-<img src="Images\group-summary\maui-datagrid-display-name.png" width="404" height="396" alt="DataGrid with DisplayName in group caption summary text">
+<img src="Images\group-summary\maui-datagrid-display-name.png" width="404" alt="DataGrid with DisplayName in group caption summary text">
 
 ### Displaying summary for a row
 
