@@ -81,6 +81,11 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 <td>Defines constants that specify the possible progressing states of resizing operation.</td>
 </tr>
 <tr>
+<td>{{'[SelectionUnit]()'| markdownify }}</td>
+<td>{{'[DataGridSelectionUnit]()'| markdownify }}</td>
+<td>Defines the constants that specifies how the selection is applied.</td>
+</tr>
+<tr>
 <td>{{'`SwipeOffsetMode`'| markdownify }}</td>
 <td>{{'`DataGridSwipeOffsetMode`'| markdownify }}</td>
 <td>Defines constants that specifies whether the swipe view content should be auto sized or not.</td>
