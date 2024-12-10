@@ -85,6 +85,8 @@ To cancel the response using the `StopRespondingCommand` or `StopResponding` eve
         {
             // logic to handle the Stop Responding action
             this.CancelResponse = true;
+            AssistItem responseItem = new AssistItem() { Text = "You canceled the response" };
+            this.AssistItems.Add(responseItem);
         } 
         
         private void GetResult()
