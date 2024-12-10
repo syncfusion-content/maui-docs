@@ -37,8 +37,8 @@ By default, the Stop Responding button is displayed, to disable this set the `En
 
 ### Stop Responding Event and Command
 
-The `SfAIAssistView` control includes a built-in event called `StopResponding` and a command named `StopRespondingCommand`. These are triggered when the Stop Responding button is clicked.
-To cancel the response using the StopRespondingCommand or StopResponding event, you can include logic to stop the ongoing response as shown below. 
+The `SfAIAssistView` control includes a built-in event called `StopResponding` and a command named `StopRespondingCommand`. These are triggered when the `Stop Responding` button is clicked.
+To cancel the response using the `StopRespondingCommand` or `StopResponding` event, you can include logic to stop the ongoing response as shown below. 
 
 #### StopResponding Event
 
@@ -180,7 +180,7 @@ The `CreateAssistChat` method allows for the customization of the chat view func
        protected override AssistViewChat CreateAssistChat()
        {
            // Returning custom implementation of AssistViewChat
-           return new CustomassistViewchat(this);
+           return new CustomAssistViewChat(this);
        }
    }
 
@@ -192,9 +192,9 @@ The `CustomAssistViewChat `class inherits from `AssistViewChat` and can be used 
 {% tabs %}
 {% highlight c# %}
 
-   public class CustomassistViewchat : AssistViewChat
+   public class CustomAssistViewChat : AssistViewChat
    {
-      public CustomassistViewchat(SfAIAssistView assistView) : base(assistView)
+      public CustomAssistViewChat(SfAIAssistView assistView) : base(assistView)
        {
            //Customize the AssistViewChat
            this.ShowMessageInputView = false;   
@@ -211,7 +211,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/custom-control-
 The `SfAIAssistView` control allows you to fully customize the editor's appearance by using the `EditorViewTemplate` property. This property lets you define a custom layout and style for the editor.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="13" %}
 
  <ContentPage.Resources>
         <ResourceDictionary>
@@ -225,10 +225,43 @@ The `SfAIAssistView` control allows you to fully customize the editor's appearan
  </ContentPage.Resources>
 <ContentPage.Content>
       <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                                 AssistItems="{Binding AssistItems}"
                                  EditorViewTemplate="{StaticResource editorViewTemplate}">
       </syncfusion:SfSfAIAssistView>
 </ContentPage.Content>
+
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="8" %}
+
+    public partial class MainPage : ContentPage
+    {
+        private SfAIAssistView sfAIAssistView;
+        public MainPage()
+        {
+            InitializeComponent();
+            sfAIAssistView = new SfAIAssistView();
+            sfAIAssistView.EditorViewTemplate = CreateEditorViewTemplate();
+            this.Content = sfAIAssistView;
+        }
+
+        private DataTemplate CreateEditorViewTemplate()
+        {
+            return new DataTemplate(() =>
+            {
+                var grid = new Grid { };
+
+                var editor = new Editor
+                {
+                    Placeholder = "Type Message...",
+                };
+
+                .......
+
+                grid.Children.Add(editor);
+
+                return grid;
+            });
+        }
+    }
 
 {% endhighlight %}
 {% endtabs %}
