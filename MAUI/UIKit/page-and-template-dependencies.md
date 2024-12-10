@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  XAML Templates | Page Template Dependencies of .NET MAUI Essential® UI Kit | Syncfusion®
+title:  Page Template Dependencies | .NET MAUI Essential® UI Kit | Syncfusion®
 description: The list of screen-wise resources and NuGet packages required for each Individual .NET MAUI Essential® UI Kit Screens.
 platform: maui
 control: .NET MAUI Essential® UI Kit
