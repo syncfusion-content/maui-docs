@@ -101,7 +101,6 @@ namespace NavigationDrawerGettingStarted
     
 	
 {% endhighlight %}
-
 {% highlight c# %}
 
     using Syncfusion.Maui.NavigationDrawer;
@@ -144,7 +143,6 @@ The default position of the navigation pane is on the left, so change the drawer
 </navigationdrawer:SfNavigationDrawer>
 	
 {% endhighlight %}
-
 {% highlight c# %} 
 
 using Syncfusion.Maui.NavigationDrawer;
@@ -170,7 +168,6 @@ public partial class NavigationDrawerPage : ContentPage
 {% endhighlight %}
 
 {% endtabs %}
-
 
 N> To change the side of the navigation pane, utilize the [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_Position) property. Adjust the drawer height in the Top and Bottom positions using the [DrawerHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerHeight) property.
 
@@ -216,8 +213,7 @@ Create an ImageButton and set the required image to the `Source` property. To en
     </navigationdrawer:SfNavigationDrawer.ContentView>
 </navigationdrawer:SfNavigationDrawer>
 	
-{% endhighlight %}
-	
+{% endhighlight %}	
 {% highlight c# %} 
 
 namespace NavigationDrawerGettingStarted;
