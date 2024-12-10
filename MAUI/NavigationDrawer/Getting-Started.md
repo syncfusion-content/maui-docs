@@ -140,6 +140,7 @@ The default position of the navigation pane is on the left, so change the drawer
 </navigationdrawer:SfNavigationDrawer>
 	
 {% endhighlight %}
+
 {% highlight c# %} 
 
 using Syncfusion.Maui.NavigationDrawer;
@@ -209,6 +210,7 @@ Create an ImageButton and set the required image to the `Source` property. To en
 </navigationdrawer:SfNavigationDrawer>
 	
 {% endhighlight %}	
+
 {% highlight c# %} 
 
 namespace NavigationDrawerGettingStarted;
