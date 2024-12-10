@@ -526,7 +526,7 @@ dataGrid.DefaultStyle = defaultsyle;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="MAUI DataGrid with border color customization" src="Images/styling/maui-datagrid-border-color.png" width="404"/>
+<img alt="MAUI-DataGrid with border color customization" src="Images/styling/maui-datagrid-border-color.png" width="404"/>
 
 ## Changing the border width
 
@@ -555,6 +555,6 @@ dataGrid.DefaultStyle = defaultsyle;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="MAUI DataGrid with border width customization" src="Images/styling/maui-datagrid-border-width.png" width="404"/>
+<img alt="MAUI-DataGrid with border width customization" src="Images/styling/maui-datagrid-border-width.png" width="404"/>
 
 
