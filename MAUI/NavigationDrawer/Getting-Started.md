@@ -7,6 +7,8 @@ control: NavigationDrawer
 documentation: ug
 ---
 
+N> After `Volume 1 2025 (Mid of March 2025)`, updates, bug fixes, and feature enhancements for this control will no longer be available in the Syncfusion package. Please switch to the `Syncfusion Toolkit for .NET MAUI` for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
+
 # Getting Started with .NET MAUI Navigation Drawer
 
 This section guides you through setting up and configuring a [NavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) in your .NET MAUI application. Follow the steps below to add a basic Navigation Drawer to your project.

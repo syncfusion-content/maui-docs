@@ -7,6 +7,8 @@ control: Tab View
 documentation: ug
 ---
 
+N> After `Volume 1 2025 (Mid of March 2025)`, updates, bug fixes, and feature enhancements for this control will no longer be available in the Syncfusion package. Please switch to the `Syncfusion Toolkit for .NET MAUI` for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
+
 # Getting Started with .NET MAUI Tab View
 
 This section guides you through setting up and configuring a [Tab View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1) in your .NET MAUI application. Follow the steps below to add a basic Tab View to your project.
