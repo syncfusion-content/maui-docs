@@ -122,6 +122,33 @@ public partial class MainPage : ContentPage
 
 ![All the rows selected in .NET MAUI DataGrid](Images/selection/maui-datagrid-selectall.png)
 
+## Column selection
+The `SfDataGrid` includes the [SfDataGrid.AllowColumnSelection]() property, which allows you to select columns by tapping the column header cell. This feature is enabled only when the `SelectionMode` is set to `Multiple`, the `SelectionUnit` is set to `Cell`, and the `NavigationMode` is set to `Cell`.
+
+N> When the `SortingGestureType` is set to `Tap`, column selection is applied only when double-tapping the column header cell. This ensures both sorting and column selection interactions can occur without conflicts.
+
+{% tabs %}
+{% highlight XAML %}
+<syncfusion:SfDataGrid SelectionMode="Multiple"
+                    NavigationMode="Cell"
+                    SelectionUnit="Cell"
+                    AllowColumnSelection="True"
+                    AutoGenerateColumnsMode="None"
+                    ItemsSource="{Binding OrderInfoCollection}" >
+<syncfusion:SfDataGrid.Columns>
+   <syncfusion:DataGridTextColumn MappingName="OrderID"
+                 HeaderText="Order ID" />
+   <syncfusion:DataGridTextColumn MappingName="CustomerID"
+                 HeaderText="Customer ID" />
+   <syncfusion:DataGridTextColumn MappingName="ShipCountry "
+                 HeaderText="Ship Country " />
+</syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="Column selection support in .NET MAUI DataGrid" src="Images\selection\maui_datagrid_column_selection.gif" width="404"/>
+
 ## Keyboard behavior
 <table>
 <tr>
@@ -407,7 +434,7 @@ Get the current row in the `SfDataGrid.SelectionChanged` event by setting the `S
 The `SfDataGrid` supports highlighting the current row when the `SelectionMode` is set to `Multiple`, and the `NavigationMode` is set to `Row`. The color of the currently highlighted row can be customized using the [CurrentRowHighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_CurrentRowHighlightColor) property in the `DataGridStyle`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml"%}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Content>
         <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}">
@@ -426,7 +453,7 @@ The `SfDataGrid` supports highlighting the current row when the `SelectionMode` 
 Change the selection back color and text color by using the  [SelectionBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SelectionBackground) and [SelectedRowTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_SelectedRowTextColor) in `SfDataGrid.DefaultStyle`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml"%}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Content>
         <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}">
@@ -456,7 +483,7 @@ public partial class MainPage : ContentPage
 Change the current cell border color and width by using the [CurrentCellBorderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_CurrentCellBorderColor) and [CurrentCellBorderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_CurrentCellBorderWidth) in the SfDataGrid.DefaultStyle.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml"%}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Content>
         <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}">
@@ -486,7 +513,7 @@ public partial class MainPage : ContentPage
 The SfDataGrid allows you to bind the selection properties such as `SelectedIndex` and `SelectedRow` to the properties in the ViewModel directly.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml"%}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Content>
         <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}"
