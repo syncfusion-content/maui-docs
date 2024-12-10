@@ -138,10 +138,10 @@ The default position of the navigation pane is on the left, so change the drawer
         <Grid/>
     </navigationdrawer:SfNavigationDrawer.ContentView>
 </navigationdrawer:SfNavigationDrawer>
-	
+
 {% endhighlight %}
 
-{% highlight c# %} 
+{% highlight c# %}
 
 using Syncfusion.Maui.NavigationDrawer;
 
@@ -208,8 +208,8 @@ Create an ImageButton and set the required image to the `Source` property. To en
         </Grid>
     </navigationdrawer:SfNavigationDrawer.ContentView>
 </navigationdrawer:SfNavigationDrawer>
-	
-{% endhighlight %}	
+
+{% endhighlight %}
 
 {% highlight c# %} 
 
