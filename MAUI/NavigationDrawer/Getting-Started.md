@@ -86,7 +86,6 @@ namespace NavigationDrawerGettingStarted
 2. Initialize [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html)
 
 {% tabs %}
-
 {% highlight xaml %}
 
 <ContentPage
@@ -120,7 +119,6 @@ namespace NavigationDrawerGettingStarted
     }
 
 {% endhighlight %}
-
 {% endtabs %}
 
 N> It is mandatory to set [ContentView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ContentView) for [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) on initializing.
@@ -130,7 +128,6 @@ N> It is mandatory to set [ContentView](https://help.syncfusion.com/cr/maui/Sync
 The default position of the navigation pane is on the left, so change the drawer width to 250 by using the [DrawerWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerWidth) property.
 
 {% tabs %}	
-
 {% highlight xaml %}
 
 <navigationdrawer:SfNavigationDrawer x:Name="navigationDrawer">
@@ -143,7 +140,6 @@ The default position of the navigation pane is on the left, so change the drawer
 </navigationdrawer:SfNavigationDrawer>
 	
 {% endhighlight %}
-
 {% highlight c# %} 
 
 using Syncfusion.Maui.NavigationDrawer;
@@ -167,7 +163,6 @@ public partial class NavigationDrawerPage : ContentPage
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
 N> To change the side of the navigation pane, utilize the [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_Position) property. Adjust the drawer height in the Top and Bottom positions using the [DrawerHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerHeight) property.
@@ -177,7 +172,6 @@ N> To change the side of the navigation pane, utilize the [Position](https://hel
 Create an ImageButton and set the required image to the `Source` property. To ensure the image appears correctly, place the image in the `Resources/Images` directory. Subscribe Clicked event of the button and invoke the [ToggleDrawer()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ToggleDrawer) method to toggle the drawer. Properly align the layout of [ContentView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ContentView) to position the hamburger icon at the top left, as demonstrated in the following code.
 
 {% tabs %}	
-
 {% highlight xaml %}
 
 <navigationdrawer:SfNavigationDrawer x:Name="navigationDrawer">
@@ -215,7 +209,6 @@ Create an ImageButton and set the required image to the `Source` property. To en
 </navigationdrawer:SfNavigationDrawer>
 	
 {% endhighlight %}	
-
 {% highlight c# %} 
 
 namespace NavigationDrawerGettingStarted;
@@ -291,7 +284,6 @@ public partial class NavigationDrawerPage : ContentPage
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
 {% tabs %}
@@ -312,7 +304,6 @@ public partial class NavigationDrawerPage : ContentPage
 Create a ListView with items and set it as [DrawerContentView.](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerContentView) 
 
 {% tabs %}	
-
 {% highlight xaml %}
 
 <navigationdrawer:SfNavigationDrawer x:Name="navigationDrawer">
@@ -385,8 +376,7 @@ Create a ListView with items and set it as [DrawerContentView.](https://help.syn
 </navigationdrawer:SfNavigationDrawer>
 
   	
-{% endhighlight %}
-	
+{% endhighlight %}	
 {% highlight c# %}
 
 namespace NavigationDrawerGettingStarted;
@@ -453,7 +443,6 @@ public partial class NavigationDrawerPage : ContentPage
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
 {% tabs %}
