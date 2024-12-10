@@ -275,83 +275,6 @@ public class ColorConverter : IValueConverter
         var gridCell = (value as DataGridCell);
         if (gridCell == null || gridCell.DataColumn == null || gridCell.DataColumn.DataGridColumn == null)
             return null;
-        var columnIndex = gridCell.DataColumn.ColumnIndex;
-        var rowIndex = gridCell.DataColumn.RowIndex;
-        var mappingName = gridCell.DataColumn.DataGridColumn.MappingName;
-        if (columnIndex == 0 && rowIndex % 3 == 1)
-            return Colors.BlueViolet;
-        else if (mappingName == "ShipCountry")
-            return Colors.CornflowerBlue;
-        else if (columnIndex == 1 && rowIndex % 4 == 0)
-            return Colors.YellowGreen;
-        else if (columnIndex == 3 && rowIndex % 6 == 1)
-            return Colors.PaleVioletRed;
-        return Colors.White;
-
-    }
-    public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
-    {
-        throw new NotImplementedException();
-    }
-}
-{% endhighlight %}
-{% highlight xaml tabtitle="ForeColorConverter.cs" %}
-public class ForeColorConverter : IValueConverter
-{
-    public object? Convert(object? value, Type targetType, object? parameter, CultureInfo info)
-    {
-        var gridCell = (value as DataGridCell);
-        if (gridCell == null || gridCell.DataColumn == null || gridCell.DataColumn.DataGridColumn == null)
-            return null;
-        var columnIndex = gridCell.DataColumn.ColumnIndex;
-        var rowIndex = gridCell.DataColumn.RowIndex;
-        var mappingName = gridCell.DataColumn.DataGridColumn.MappingName;
-        if (columnIndex == 0 && rowIndex % 3 == 1)
-            return Colors.Wheat;
-        else if (mappingName == "ShipCountry")
-            return Colors.White;
-        else if (columnIndex == 1 && rowIndex % 4 == 0)
-            return Colors.Red;
-        else if (columnIndex == 3 && rowIndex % 6 == 1)
-            return Colors.Yellow;
-
-        return Colors.Black;
-    }
-    public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
-    {
-        throw new NotImplementedException();
-    }
-}
-{% endhighlight %}
-{% endtabs %}
-
-![Conditional cell styling based in MappingName RowColumnIndex in .NET MAUI DataGrid](Images/conditional-styling/maui-datagrid-conditional-datagridcelltyle_basedonmappingname_rowcolumnindex.png)
-
-## Style a cell based on RowIndex and ColumnIndex
-Styling can be applied to a particular cell based on RowIndex and ColumnIndex property by writing the style for the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html) TargetType.
-
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
-    <ContentPage.Resources>
-        <local:ColorConverter x:Key="converter"/>
-        <local:ForeColorConverter x:Key="foreColorconverter"/>
-        <Style TargetType="syncfusion:DataGridCell">
-            <Setter Property="Background" Value="{Binding Source={RelativeSource Mode=Self}, Converter={StaticResource Key=converter}}"/>
-            <Setter Property="TextColor" Value="{Binding Source={RelativeSource Mode=Self}, Converter={StaticResource Key=foreColorconverter}}"/>
-        </Style>
-    </ContentPage.Resources>
-</ContentPage>
-{% endhighlight %}
-{% highlight xaml tabtitle="ColorConverter.cs" %}
-public class ColorConverter : IValueConverter
-{
-    public object? Convert(object? value, Type targetType, object? parameter, CultureInfo info)
-    {
-        var gridCell = (value as DataGridCell);
-        if (gridCell == null || gridCell.DataColumn == null || gridCell.DataColumn.DataGridColumn == null)
-            return null;
                    
         var columnIndex = gridCell.DataColumn.ColumnIndex;
         var rowIndex = gridCell.DataColumn.RowIndex;
@@ -394,7 +317,69 @@ public class ForeColorConverter : IValueConverter
 
         return Colors.Black;
     }
-    public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
+    public object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
+    {
+        throw new NotImplementedException();
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Conditional cell styling based in MappingName RowColumnIndex in .NET MAUI DataGrid](Images/conditional-styling/maui-datagrid-conditional-datagridcelltyle_basedonmappingname_rowcolumnindex.png)
+
+## Style a cell based on RowIndex and ColumnIndex
+Styling can be applied to a particular cell based on RowIndex and ColumnIndex property by writing the style for the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html) TargetType.
+
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+    <ContentPage.Resources>
+        <local:ColorConverter x:Key="converter"/>
+        <local:ForeColorConverter x:Key="foreColorconverter"/>
+        <Style TargetType="syncfusion:DataGridCell">
+            <Setter Property="Background" Value="{Binding Source={RelativeSource Mode=Self}, Converter={StaticResource Key=converter}}"/>
+            <Setter Property="TextColor" Value="{Binding Source={RelativeSource Mode=Self}, Converter={StaticResource Key=foreColorconverter}}"/>
+        </Style>
+    </ContentPage.Resources>
+</ContentPage>
+{% endhighlight %}
+{% highlight xaml tabtitle="ColorConverter.cs" %}
+public class ColorConverter : IValueConverter
+{
+    public object? Convert(object? value, Type targetType, object? parameter, CultureInfo info)
+    {
+        var gridCell = (value as DataGridCell);
+        if (gridCell == null)
+            return null;
+        var columnIndex = gridCell.ColumnIndex;
+        var rowIndex = gridCell.RowIndex;
+        if (columnIndex == 0 && rowIndex == 1)
+            return Colors.BlueViolet;
+        return Colors.White;
+    }
+    public object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
+    {
+        throw new NotImplementedException();
+    }
+}
+{% endhighlight %}
+{% highlight xaml tabtitle="ForeColorConverter.cs" %}
+public class ForeColorConverter : IValueConverter
+{
+    public object? Convert(object? value, Type targetType, object? parameter, CultureInfo info)
+    {
+        var gridCell = (value as DataGridCell);
+        if(gridCell == null)
+            return null;
+        var columnIndex = gridCell.ColumnIndex;
+        var rowIndex = gridCell.RowIndex;
+        if (columnIndex == 0 && rowIndex == 1)
+            return Colors.White;
+        return Colors.Black;
+    }
+    public object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
     {
         throw new NotImplementedException();
     }
