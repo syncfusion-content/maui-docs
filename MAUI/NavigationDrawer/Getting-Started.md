@@ -97,7 +97,6 @@ namespace NavigationDrawerGettingStarted
     </navigationDrawer:SfNavigationDrawer.ContentView>
     </navigationDrawer:SfNavigationDrawer>
 </ContentPage>
-    
 	
 {% endhighlight %}
 {% highlight c# %}
@@ -376,7 +375,6 @@ Create a ListView with items and set it as [DrawerContentView.](https://help.syn
         </Grid>
     </navigationdrawer:SfNavigationDrawer.ContentView>
 </navigationdrawer:SfNavigationDrawer>
-
   	
 {% endhighlight %}	
 {% highlight c# %}
