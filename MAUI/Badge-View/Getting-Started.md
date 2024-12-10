@@ -19,7 +19,7 @@ To quickly get started with the .NET MAUI Badge View, watch this video.
 
 Before proceeding, ensure the following are set up:
 1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
-2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or Visual Studio Code. For Visual Studio Code users, ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
+1. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or Visual Studio Code. For Visual Studio Code users, ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
 
 ## Step 1: Create a New MAUI Project
 
@@ -27,16 +27,16 @@ Before proceeding, ensure the following are set up:
 {% tabcontent Visual Studio %}
 
 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
-2. Name the project and choose a location. Then, click **Next.**
-3. Select the .NET framework version and click **Create**.
+1. Name the project and choose a location. Then, click **Next.**
+1. Select the .NET framework version and click **Create**.
 
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
 
 1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
-2. Choose the **.NET MAUI App** template.
-3. Select the project location, type the project name and press **Enter.**
-4. Then choose **Create project.**
+1. Choose the **.NET MAUI App** template.
+1. Select the project location, type the project name and press **Enter.**
+1. Then choose **Create project.**
 
 {% endtabcontent %}
 {% endtabcontents %}
@@ -44,8 +44,8 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion MAUI Core NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored.
+1. Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and install the latest version.
+1. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 ## Step 3: Register the handler
 
@@ -86,7 +86,7 @@ namespace BadgeViewMauiSample
 ## Step 4:  Add a Basic Badge View
 
 1. To initialize the control, import the Core namespace into your code.
-2. Initialize [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1).
+1. Initialize [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1).
 
 {% tabs %}
 

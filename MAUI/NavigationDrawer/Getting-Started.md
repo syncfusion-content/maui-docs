@@ -82,7 +82,7 @@ namespace NavigationDrawerGettingStarted
     }
 }     
 
-{% endhighlight %} 
+{% endhighlight %}
 
 ## Step 4: Add a Basic NavigationDrawer
 
