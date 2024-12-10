@@ -19,7 +19,7 @@ To get start quickly with apply conditional styling in .NET MAUI DataGrid, you c
 The data rows can be customized conditionally by writing the style with a converter for the [DataGridRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRow.html) control. Its BindingContext is the underlying datasource object.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml"%}
+{% highlight xaml tabtitle="MainPage.xaml"% }
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Resources>
         <local:ColorConverter x:Key="converter"/>
@@ -29,7 +29,7 @@ The data rows can be customized conditionally by writing the style with a conver
     </ContentPage.Resources>
 </ContentPage>
 {% endhighlight %}
-{% highlight xaml tabtitle="ColorConverter.cs"%}
+{% highlight xaml tabtitle="ColorConverter.cs"% }
 public class ColorConverter : IValueConverter
 {
     object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo info)
@@ -267,7 +267,7 @@ Styling can be applied to a particular cell based on RowIndex, ColumnIndex and M
     </ContentPage.Resources>
 </ContentPage>
 {% endhighlight %}
-{% highlight xaml tabtitle="ColorConverter.cs"%}
+{% highlight xaml tabtitle="ColorConverter.cs"% }
 public class ColorConverter : IValueConverter
 {
     object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo info)
@@ -292,7 +292,7 @@ public class ColorConverter : IValueConverter
     }
 }
 {% endhighlight %}
-{% highlight xaml tabtitle="ForeColorConverter.cs"%}
+{% highlight xaml tabtitle="ForeColorConverter.cs"% }
 public class ForeColorConverter : IValueConverter
 {
     public object? Convert(object? value, Type targetType, object? parameter, CultureInfo info)
