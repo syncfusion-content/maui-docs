@@ -18,8 +18,8 @@ To get start quickly with apply conditional styling in .NET MAUI DataGrid, you c
 ## Conditional row style
 The data rows can be customized conditionally by writing the style with a converter for the [DataGridRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRow.html) control. Its BindingContext is the underlying datasource object.
 
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml"% }
+{% tabs % }
+{% highlight xaml tabtitle="MainPage.xaml" % }
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Resources>
         <local:ColorConverter x:Key="converter"/>
@@ -28,8 +28,8 @@ The data rows can be customized conditionally by writing the style with a conver
         </Style>
     </ContentPage.Resources>
 </ContentPage>
-{% endhighlight %}
-{% highlight xaml tabtitle="ColorConverter.cs"% }
+{% endhighlight % }
+{% highlight xaml tabtitle="ColorConverter.cs" % }
 public class ColorConverter : IValueConverter
 {
     object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo info)
@@ -47,16 +47,16 @@ public class ColorConverter : IValueConverter
         throw new NotImplementedException();
     }
 }
-{% endhighlight %}
-{% endtabs %}
+{% endhighlight % }
+{% endtabs % }
 
 ![Conditional DataGridRow styling in .NET MAUI DataGrid](Images/conditional-styling/maui-datagrid-conditional-datagridrowstyle.png)
 
 ## Style a particular row based on row index
 Styling can be applied to a particular row based on RowIndex property by writing the style for the [DataGridRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRow.html) TargetType.
 
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml"%}
+{% tabs % }
+{% highlight xaml tabtitle="MainPage.xaml" % }
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Resources>
         <local:ColorConverter x:Key="converter"/>
@@ -65,8 +65,8 @@ Styling can be applied to a particular row based on RowIndex property by writing
         </Style>
     </ContentPage.Resources>
 </ContentPage>
-{% endhighlight %}
-{% highlight xaml tabtitle="ColorConverter.cs"%}
+{% endhighlight % }
+{% highlight xaml tabtitle="ColorConverter.cs" % }
 public class ColorConverter : IValueConverter
 {
     object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo info)
@@ -83,8 +83,8 @@ public class ColorConverter : IValueConverter
         throw new NotImplementedException();
     }
 }
-{% endhighlight %}
-{% endtabs %}
+{% endhighlight % }
+{% endtabs % }
 
 ![Conditional DataGridRow styling Based on RowIndex in .NET MAUI DataGrid](Images/conditional-styling/maui-datagrid-conditional-datagridrowstyle_basedonrowindex.png)
 
@@ -92,7 +92,7 @@ public class ColorConverter : IValueConverter
 Styling can be applied to a particular row based on the RowData property by writing the style for the [DataGridRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRow.html) TargetType.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml"%}
+{% highlight xaml tabtitle="MainPage.xaml" % }
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Resources>
         <local:ColorConverter x:Key="converter"/>
@@ -101,8 +101,8 @@ Styling can be applied to a particular row based on the RowData property by writ
         </Style>
     </ContentPage.Resources>
 </ContentPage>
-{% endhighlight %}
-{% highlight xaml tabtitle="ColorConverter.cs"%}
+{% endhighlight % }
+{% highlight xaml tabtitle="ColorConverter.cs" % }
 public class ColorConverter : IValueConverter
 {
     object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo info)
@@ -119,8 +119,8 @@ public class ColorConverter : IValueConverter
         throw new NotImplementedException();
     }
 }
-{% endhighlight %}
-{% endtabs %}
+{% endhighlight % }
+{% endtabs % }
 
 ![Conditional DataGridRow styling Based on RowData in .NET MAUI DataGrid](Images/conditional-styling/maui-datagrid-conditional-datagridrowstyle_basedonrowdata.png)
 
@@ -128,8 +128,8 @@ public class ColorConverter : IValueConverter
 
 The `SfDataGrid` provides the support to apply the conditional style for specific column by using the [CellStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_CellStyleProperty) property in the [DataGridColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html).
 
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml"%}
+{% tabs % }
+{% highlight xaml tabtitle="MainPage.xaml" % }
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Resources>
         <local:ColorConverter x:Key="converter"/>
@@ -151,8 +151,8 @@ The `SfDataGrid` provides the support to apply the conditional style for specifi
         </syncfusion:SfDataGrid>
     </ContentPage.Content>
 </ContentPage>
-{% endhighlight %}
-{% highlight xaml tabtitle="ColorConverter.cs"%}
+{% endhighlight % }
+{% highlight xaml tabtitle="ColorConverter.cs" % }
 public class ColorConverter : IValueConverter
 {
     object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo info)
@@ -167,8 +167,8 @@ public class ColorConverter : IValueConverter
         throw new NotImplementedException();
     }
 }
-{% endhighlight %}
-{% endtabs %}
+{% endhighlight % }
+{% endtabs % }
 
 ![Conditional column styling in .NET MAUI DataGrid](Images/conditional-styling/maui-datagrid-columnstyle-conditional.png)
 
@@ -176,8 +176,8 @@ public class ColorConverter : IValueConverter
 
 The appearance of row header can be customized conditionally based on properties using `converter`, where converter returns the value based on various properties.
 
-{% tabs %}
-{% highlight xaml %}
+{% tabs % }
+{% highlight xaml % }
  <ContentPage.Resources>
      <local:CustomConverter x:Key="converter"/>
      <Style  TargetType= "syncfusion:DataGridRowHeaderCell">
@@ -195,8 +195,8 @@ The appearance of row header can be customized conditionally based on properties
     </syncfusion:SfDataGrid.RowHeaderTemplate>
 </syncfusion:SfDataGrid>
 
-{% endhighlight %}
-{% highlight c# %}
+{% endhighlight % }
+{% highlight c# % }
  public class CustomConverter : IValueConverter
  {
      public object Convert(object? value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
@@ -212,16 +212,16 @@ The appearance of row header can be customized conditionally based on properties
          return null;
      }
  }
-{% endhighlight %}
-{% endtabs %}
+{% endhighlight % }
+{% endtabs % }
 
 <img alt="Conditional styling for row header using converter" src="Images/conditional-styling/maui-datagrid-conditional-row-header.png" width="404"/>
 
 ## Conditional cell style
 The grid cell can be customized conditionally by writing the style with a converter for the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html) control. Its BindingContext is the underlying datasource object.
 
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml"%}
+{% tabs % }
+{% highlight xaml tabtitle="MainPage.xaml" % }
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Resources>
         <local:ColorConverter x:Key="converter"/>
@@ -230,8 +230,8 @@ The grid cell can be customized conditionally by writing the style with a conver
         </Style>
     </ContentPage.Resources>
 </ContentPage>
-{% endhighlight %}
-{% highlight xaml tabtitle="ColorConverter.cs"%}
+{% endhighlight % }
+{% highlight xaml tabtitle="ColorConverter.cs" % }
 public class ColorConverter : IValueConverter
 {
     object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo info)
@@ -246,16 +246,16 @@ public class ColorConverter : IValueConverter
         throw new NotImplementedException();
     }
 }
-{% endhighlight %}
-{% endtabs %}
+{% endhighlight % }
+{% endtabs % }
 
 ![Conditional cell styling in .NET MAUI DataGrid](Images/conditional-styling/maui-datagrid-conditional-datagridcellstyle.png)
 
 ## Style a cell based on MappingName and RowColumnIndex
 Styling can be applied to a particular cell based on RowIndex, ColumnIndex and MappingName property of the column by writing the style for the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html) TargetType.
 
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml"%}
+{% tabs % }
+{% highlight xaml tabtitle="MainPage.xaml" % }
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Resources>
         <local:ColorConverter x:Key="converter"/>
@@ -266,8 +266,8 @@ Styling can be applied to a particular cell based on RowIndex, ColumnIndex and M
         </Style>
     </ContentPage.Resources>
 </ContentPage>
-{% endhighlight %}
-{% highlight xaml tabtitle="ColorConverter.cs"% }
+{% endhighlight % }
+{% highlight xaml tabtitle="ColorConverter.cs" % }
 public class ColorConverter : IValueConverter
 {
     object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo info)
@@ -291,8 +291,8 @@ public class ColorConverter : IValueConverter
         throw new NotImplementedException();
     }
 }
-{% endhighlight %}
-{% highlight xaml tabtitle="ForeColorConverter.cs"% }
+{% endhighlight % }
+{% highlight xaml tabtitle="ForeColorConverter.cs" % }
 public class ForeColorConverter : IValueConverter
 {
     public object? Convert(object? value, Type targetType, object? parameter, CultureInfo info)
@@ -319,8 +319,8 @@ public class ForeColorConverter : IValueConverter
         throw new NotImplementedException();
     }
 }
-{% endhighlight %}
-{% endtabs %}
+{% endhighlight % }
+{% endtabs % }
 
 ![Conditional cell styling based in MappingName RowColumnIndex in .NET MAUI DataGrid](Images/conditional-styling/maui-datagrid-conditional-datagridcelltyle_basedonmappingname_rowcolumnindex.png)
 
@@ -328,8 +328,8 @@ public class ForeColorConverter : IValueConverter
 Styling can be applied to a particular cell based on RowIndex and ColumnIndex property by writing the style for the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html) TargetType.
 
 
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml"%}
+{% tabs % }
+{% highlight xaml tabtitle="MainPage.xaml" % }
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Resources>
         <local:ColorConverter x:Key="converter"/>
@@ -340,8 +340,8 @@ Styling can be applied to a particular cell based on RowIndex and ColumnIndex pr
         </Style>
     </ContentPage.Resources>
 </ContentPage>
-{% endhighlight %}
-{% highlight xaml tabtitle="ColorConverter.cs"%}
+{% endhighlight % }
+{% highlight xaml tabtitle="ColorConverter.cs" % }
 public class ColorConverter : IValueConverter
 {
     public object? Convert(object? value, Type targetType, object? parameter, CultureInfo info)
@@ -368,8 +368,8 @@ public class ColorConverter : IValueConverter
         throw new NotImplementedException();
     }
 }
-{% endhighlight %}
-{% highlight xaml tabtitle="ForeColorConverter.cs"%}
+{% endhighlight % }
+{% highlight xaml tabtitle="ForeColorConverter.cs" % }
 public class ForeColorConverter : IValueConverter
 {
     public object? Convert(object? value, Type targetType, object? parameter, CultureInfo info)
@@ -396,16 +396,16 @@ public class ForeColorConverter : IValueConverter
         throw new NotImplementedException();
     }
 }
-{% endhighlight %}
-{% endtabs %}
+{% endhighlight % }
+{% endtabs % }
 
 ![Conditional cell styling based on RowIndex and ColumnIndex in .NET MAUI DataGrid](Images/conditional-styling/maui-datagrid-conditional-datagridcelltyle_basedon_rowcolumnindex.png)
 
 ## Style a cell based on cell value
 Styling can be applied to a particular cell based on CellValue property by writing the style for the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html) TargetType.
 
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml"%}
+{% tabs % }
+{% highlight xaml tabtitle="MainPage.xaml" % }
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Resources>
         <local:ColorConverter x:Key="converter"/>
@@ -416,8 +416,8 @@ Styling can be applied to a particular cell based on CellValue property by writi
         </Style>
     </ContentPage.Resources>
 </ContentPage>
-{% endhighlight %}
-{% highlight xaml tabtitle="ColorConverter.cs"%}
+{% endhighlight % }
+{% highlight xaml tabtitle="ColorConverter.cs" % }
 public class ColorConverter : IValueConverter
 {
     public object? Convert(object? value, Type targetType, object? parameter, CultureInfo info)
@@ -436,8 +436,8 @@ public class ColorConverter : IValueConverter
         throw new NotImplementedException();
     }
 }
-{% endhighlight %}
-{% highlight xaml tabtitle="ForeColorConverter.cs"%}
+{% endhighlight % }
+{% highlight xaml tabtitle="ForeColorConverter.cs" % }
 public class ForeColorConverter : IValueConverter
 {
     public object? Convert(object? value, Type targetType, object? parameter, CultureInfo info)
@@ -456,8 +456,8 @@ public class ForeColorConverter : IValueConverter
         throw new NotImplementedException();
     }
 }
-{% endhighlight %}
-{% endtabs %}
+{% endhighlight % }
+{% endtabs % }
 
 ![Conditional cell styling based on CellValue in .NET MAUI DataGrid](Images/conditional-styling/maui-datagrid-conditional-datagridcellstyle_basedon_cellvalue.png)
 
@@ -468,7 +468,7 @@ public class ForeColorConverter : IValueConverter
 The appearance of caption summary cell can be customized conditionally based on [SummaryValues]() by using a `converter`, where converter returns the value based on `SummaryValues`. 
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml % }
     <ContentPage.Resources>
         <local:ColorConverter x:Key="converter" />
         <Style TargetType="syncfusion:DataGridCaptionSummaryCell">
@@ -491,8 +491,8 @@ The appearance of caption summary cell can be customized conditionally based on 
         </syncfusion:DataGridSummaryRow>
         </syncfusion:SfDataGrid.CaptionSummaryRow>
     </syncfusion:SfDataGrid>
-{% endhighlight %}
-{% highlight c# %}
+{% endhighlight % }
+{% highlight c# % }
 public class ColorConverter : IValueConverter
 {
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
@@ -512,8 +512,8 @@ public class ColorConverter : IValueConverter
         return null;
     }
 }
-{% endhighlight %}
-{% endtabs %}
+{% endhighlight % }
+{% endtabs % }
 
 Here, caption summary cells are customized based on `Salary` summary value.
 
@@ -527,8 +527,8 @@ Group summary cells can be customized conditionally by getting particular summar
 
 The appearance of group summary cell can be customized conditionally based on summary value by using `converter`, where converter returns the value based on summary value.
 
-{% tabs %}
-{% highlight xaml %}
+{% tabs % }
+{% highlight xaml % }
     <ContentPage.Resources>
         <local:ColorConverter x:Key="converter" />
         <Style TargetType="syncfusion:DataGridGroupSummaryCell">
@@ -552,8 +552,8 @@ The appearance of group summary cell can be customized conditionally based on su
             </syncfusion:DataGridSummaryRow>
         </syncfusion:SfDataGrid.GroupSummaryRows>
     </syncfusion:SfDataGrid>
-{% endhighlight %}
-{% highlight c# %}
+{% endhighlight % }
+{% highlight c# % }
 public class ColorConverter : IValueConverter
 {
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
@@ -573,8 +573,8 @@ public class ColorConverter : IValueConverter
         return null;
     }
 }
-{% endhighlight %}
-{% endtabs %}
+{% endhighlight % }
+{% endtabs % }
 
 Here, group summary cells are customized based on `Salary` summary value.
 
@@ -588,8 +588,8 @@ Table summary cells can be customized conditionally by getting particular summar
 
 The appearance of table summary cell can be customized conditionally based on summary value using `converter`, where converter returns the value based on summary value. 
 
-{% tabs %}
-{% highlight xaml %}
+{% tabs % }
+{% highlight xaml % }
     <ContentPage.Resources>
         <local:ColorConverter x:Key="converter" />
         <Style TargetType="syncfusion:DataGridTableSummaryCell">
@@ -625,8 +625,8 @@ The appearance of table summary cell can be customized conditionally based on su
             </syncfusion:DataGridTableSummaryRow>
         </syncfusion:SfDataGrid.TableSummaryRows>
     </syncfusion:SfDataGrid>
-{% endhighlight %}
-{% highlight c# %}
+{% endhighlight % }
+{% highlight c# % }
 public class ColorConverter : IValueConverter
 {
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
@@ -646,8 +646,8 @@ public class ColorConverter : IValueConverter
         return null;
     }
 }
-{% endhighlight %}
-{% endtabs %}
+{% endhighlight % }
+{% endtabs % }
 
 Here, table summary cells are customized based on `Salary` summary value.
 
@@ -661,8 +661,8 @@ Unbound row cells can be customized the unbound row cell based on various proper
 
 The appearance of unbound row cell can be customized conditionally based on properties using `converter`, where converter returns the value based on various properties. 
 
-{% tabs %}
-{% highlight xaml %}
+{% tabs % }
+{% highlight xaml % }
 <ContentPage.Resources>
     <local:ColorConverter x:Key="converter" />
     <Style TargetType="syncfusion:DataGridUnboundRowCell">
@@ -677,8 +677,8 @@ The appearance of unbound row cell can be customized conditionally based on prop
                 <syncfusion:DataGridUnboundRow Position="FixedTop" />
             </syncfusion:SfDataGrid.UnboundRows>
 </syncfusion:SfDataGrid>
-{% endhighlight %}
-{% highlight c# %}
+{% endhighlight % }
+{% highlight c# % }
 public class ColorConverter : IValueConverter
 {
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
@@ -695,7 +695,7 @@ public class ColorConverter : IValueConverter
         return null;
     }
 }
-{% endhighlight %}
-{% endtabs %}
+{% endhighlight % }
+{% endtabs % }
 
 <img alt="Conditional styling for unbound row using converter" src="Images/conditional-styling/maui-datagrid-conditional-unbound-row.png" width="404"/>
