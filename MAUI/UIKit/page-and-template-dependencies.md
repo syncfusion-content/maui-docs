@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  XAML Templates | Page Template Dependencies of UI Kit | Syncfusion
-description: The list of screen-wise resources and NuGet packages required for each MAUI Essential UI kit page.
+description: The list of screen-wise resources and NuGet packages required for each Individual MAUI Essential UI kit Screens.
 platform: maui
 control: UI kit
 documentation: ug

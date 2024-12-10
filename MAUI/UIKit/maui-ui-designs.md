@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MAUI UI Design | Syncfusion
+title: MAUI UI Designs | Syncfusion
 description: Essential UI Kit contains elegantly designed XAML templates for MAUI apps. These templates are compatible with Android, iOS, and UWP platforms.
 platform: maui
 control: MAUI UI Kit

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Essential UI Kit | MAUI | Syncfusion
-description: The Syncfusion MAUI Essential UI Kit extension provides the predefined design for the MAUI.
+description: The Syncfusion MAUI Essential UI Kit extension provides the predefined design Screens for the MAUI Apps.
 platform: maui
 control: Syncfusion Extensions
 documentation: ug
