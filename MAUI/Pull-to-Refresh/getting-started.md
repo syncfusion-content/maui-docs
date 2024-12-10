@@ -7,6 +7,8 @@ control: SfPullToRefresh
 documentation: ug
 ---
 
+> After **Volume 1 2025 (Mid of March 2025)**, updates, bug fixes, and feature enhancements for the Syncfusion PullToRefresh control will no longer be available in the Syncfusion package. We recommend that users switch to the **Syncfusion Toolkit for .NET MAUI** for continued support. For a smooth transition, please refer to this migration document.
+
 # Getting Started with .NET MAUI PullToRefresh
 
 This section guides you through setting up and configuring a [PullToRefresh](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PullToRefresh.SfPullToRefresh.html) in your .NET MAUI application. Follow the steps below to add a basic PullToRefresh to your project.

@@ -7,6 +7,8 @@ control: SfPullToRefresh
 documentation: ug
 --- 
 
+> After **Volume 1 2025 (Mid of March 2025)**, updates, bug fixes, and feature enhancements for the Syncfusion PullToRefresh control will no longer be available in the Syncfusion package. We recommend that users switch to the **Syncfusion Toolkit for .NET MAUI** for continued support. For a smooth transition, please refer to this migration document.
+
 # Overview of .NET MAUI PullToRefresh (SfPullToRefresh)
 
 PullToRefresh is a refresh control that allows you to interact and refresh the view loaded in it. The PullToRefresh control allows you to refresh the view upon performing the pull-to-refresh action. A progress indicator will be shown while starting the pulling. The application will be refreshed once you have pulled down a certain distance and released the touch.
