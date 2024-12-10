@@ -131,6 +131,7 @@ N> It is mandatory to set [ContentView](https://help.syncfusion.com/cr/maui/Sync
 The default position of the navigation pane is on the left, so change the drawer width to 250 by using the [DrawerWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerWidth) property.
 
 {% tabs %}	
+
 {% highlight xaml %}
 
 <navigationdrawer:SfNavigationDrawer x:Name="navigationDrawer">
@@ -143,6 +144,7 @@ The default position of the navigation pane is on the left, so change the drawer
 </navigationdrawer:SfNavigationDrawer>
 	
 {% endhighlight %}
+
 {% highlight c# %} 
 
 using Syncfusion.Maui.NavigationDrawer;
