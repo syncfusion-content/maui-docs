@@ -9,7 +9,7 @@ documentation: ug
 
 # MAUI UI Kit Overview
 
-The [Syncfusion Essential UI Kit](https://www.syncfusion.com/essential-ui-kit-for-.net-maui) is a collection of easy-to-use, extendable, and adaptable XAML pages designed to help you quickly build a MAUI application. It provides a set of generic, pre-defined screens that can be easily customized. Currently, the UI Kit includes screens for the following categories:
+The [Syncfusion Essential UI Kit]() is a collection of easy-to-use, extendable, and adaptable XAML pages designed to help you quickly build a MAUI application. It provides a set of generic, pre-defined screens that can be easily customized. Currently, the UI Kit includes screens for the following categories:
 
 * Forms
 * Catalog
@@ -30,7 +30,7 @@ The [Syncfusion Essential UI Kit](https://www.syncfusion.com/essential-ui-kit-fo
 * Settings
 * Notification
 
-The screens are developed using the MVVM pattern, which effectively separates the UI from the business logic, resulting in a clean, professional, and scalable user interface for your MAUI applications. You can download the UI Kit application from the [Google Play Store]() and access the complete source code available in [GitHub repository](https://github.com/syncfusion/essential-ui-kit-for-.net-maui)
+The screens are developed using the MVVM pattern, which effectively separates the UI from the business logic, resulting in a clean, professional, and scalable user interface for your MAUI applications. You can download the UI Kit application from the [Google Play Store]() and access the complete source code available in [GitHub repository]()
 
 ## Supported Platforms
 
@@ -40,4 +40,4 @@ The screens are developed using the MVVM pattern, which effectively separates th
 * Windows 11 and Windows 10 version 1809 or higher
 
 
-To get started with Syncfusion XAML Pages for MAUI, refer to [Getting Started](https://help.syncfusion.com/maui/uikit/gettingstarted)
+To get started with Syncfusion XAML Pages for MAUI, refer to [Getting Started]()

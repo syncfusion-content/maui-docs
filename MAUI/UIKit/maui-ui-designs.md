@@ -13,142 +13,142 @@ The Essential UI Kit offers a collection of 87 screens, organized into 18 versat
 
 ## Forms	
 
-* [Login with Social Icon](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Forms/LoginWithSocialIcon.xaml)
-* [Login Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Forms/LoginPage.xaml)
-* [Sign Up Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Forms/SignupPage.xaml)
-* [Reset Password Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Forms/ResetPasswordPage.xaml)
-* [Forgot Password Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Forms/ForgotPasswordPage.xaml)
-* [Tabbed Login Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Forms/TabbedLogin.xaml)
-* [Card Payment Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Forms/CardPaymentPage.xaml)
-* [Add Profile Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Forms/AddProfilePage.xaml)
-* [Business Registration Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Forms/BusinessRegistrationForm.xaml)
+* [Login with Social Icon]()
+* [Login Page]()
+* [Sign Up Page]()
+* [Reset Password Page]()
+* [Forgot Password Page]()
+* [Tabbed Login Page]()
+* [Card Payment Page]()
+* [Add Profile Page]()
+* [Business Registration Page]()
  
 ## Catalog	
 
-* [Category Tile Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Catalog/CategoryTilePage.xaml)
-* [Catalog Tile Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Catalog/CatalogTilePage.xaml)
-* [Catalog List Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Catalog/CatalogListPage.xaml)
-* [Article List Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Catalog/ArticleListPage.xaml)
-* [Article Tile Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Catalog/ArticleTilePage.xaml)
-* [Product Home Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Catalog/ProductHomePage.xaml)
-* [Event List Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Catalog/EventListPage.xaml)
-* [Article Card Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Catalog/ArticleCardPage.xaml)
-* [Travel Planner Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Catalog/TravelPlannerPage.xaml)
+* [Category Tile Page]()
+* [Catalog Tile Page]()
+* [Catalog List Page]()
+* [Article List Page]()
+* [Article Tile Page]()
+* [Product Home Page]()
+* [Event List Page]()
+* [Article Card Page]()
+* [Travel Planner Page]()
 
 ## Detail	
 
-* [Product Detail Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Detail/DetailPage.xaml)
-* [Article Detail Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Detail/ArticleDetailPage.xaml)
-* [Event Detail Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Detail/EventDetailPage.xaml)
-* [Data Table Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Detail/DataTablePage.xaml)
-* [My Address Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Detail/MyAddressPage.xaml)
-* [Room Booking Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Detail/RoomBookingPage.xaml) 
+* [Product Detail Page]()
+* [Article Detail Page]()
+* [Event Detail Page]()
+* [Data Table Page]()
+* [My Address Page]()
+* [Room Booking Page]() 
  
 ## Chat
 
-* [Recent Chat Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Chat/RecentChatPage.xaml)
-* [Chat Conversation Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Chat/ChatMessagePage.xaml)
+* [Recent Chat Page]()
+* [Chat Conversation Page]()
 
 ## Article	
 
-* [Article Detail with Comments Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Article/ArticleWithCommentsPage.xaml) 
-* [Article Parallax Header Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Article/ArticleParallaxHeaderPage.xaml)
-* [My Article Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Article/MyArticlePage.xaml)
+* [Article Detail with Comments Page]() 
+* [Article Parallax Header Page]()
+* [My Article Page]()
 	
 ## Reviews and Ratings	
 
-* [Feedback Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Feedback/FeedbackPage.xaml)
-* [Review Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Feedback/ReviewPage.xaml)
+* [Feedback Page]()
+* [Review Page]()
 
 ## Contact Us	
 
-* [Contact Us Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/ContactUs/ContactUsPage.xaml)
+* [Contact Us Page]()
 
 ## About Us	
 
-* [Simple About Us Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/AboutUs/AboutUsSimplePage.xaml)
-* [About Us Page with Cards](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/AboutUs/AboutUsPageWithCards.xaml)
-* [About Us Page with Scrolling](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/AboutUs/AboutUsWithScrollPage.xaml)
+* [Simple About Us Page]()
+* [About Us Page with Cards]()
+* [About Us Page with Scrolling]()
 
 ## Navigation	
 
-* [Navigation List Card Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Navigation/NavigationListCardPage.xaml)
-* [Navigation Tile Card Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Navigation/NavigationTileCardPage.xaml)
-* [Songs Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Navigation/SongsPage.xaml)
-* [FAQs Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Navigation/FAQPage.xaml)
-* [Contacts List](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Navigation/ContactsPage.xaml)
-* [Songs Play List](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Navigation/SongsPlayListPage.xaml)
-* [Movies List](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Navigation/MoviesListPage.xaml)
-* [Names List](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Navigation/NameListPage.xaml)
-* [Restaurant Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Navigation/RestaurantPage.xaml)
-* [Icon Names List](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Navigation/IconNameListPage.xaml)
-* [Suggestion Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Navigation/SuggestionPage.xaml)
-* [App Usage Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Navigation/AppUsagePage.xaml)
-* [Documents List Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Navigation/DocumentsListPage.xaml)
-* [Selectable Name Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Navigation/SelectableNamePage.xaml)
-* [MoviesPage](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Navigation/MoviesPage.xaml)
-* [File Explorer List Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Navigation/FileExplorerPage.xaml)
-* [File Explorer Grid Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Navigation/FileExplorerGridPage.xaml)
+* [Navigation List Card Page]()
+* [Navigation Tile Card Page]()
+* [Songs Page]()
+* [FAQs Page]()
+* [Contacts List]()
+* [Songs Play List]()
+* [Movies List]()
+* [Names List]()
+* [Restaurant Page]()
+* [Icon Names List]()
+* [Suggestion Page]()
+* [App Usage Page]()
+* [Documents List Page]()
+* [Selectable Name Page]()
+* [MoviesPage]()
+* [File Explorer List Page]()
+* [File Explorer Grid Page]()
 
 
 ## Error and Empty	
 
-* [Empty Cart Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/ErrorAndEmpty/EmptyCartPage.xaml)
-* [Location Denied Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/ErrorAndEmpty/LocationDeniedPage.xaml)
-* [No Credits Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/ErrorAndEmpty/NoCreditsPage.xaml)
-* [No Internet Connection Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/ErrorAndEmpty/NoInternetConnectionPage.xaml)
-* [No Item Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/ErrorAndEmpty/NoItemsPage.xaml)
-* [No Photos page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/ErrorAndEmpty/NoPhotosPage.xaml)
-* [No Tasks page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/ErrorAndEmpty/NoTasksPage.xaml)
-* [Not Enough Credits Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/ErrorAndEmpty/NotEnoughCreditsPage.xaml)
-* [No Videos Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/ErrorAndEmpty/NoVideosPage.xaml)
-* [Payment Failed Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/ErrorAndEmpty/PaymentFailedPage.xaml)
-* [Something Went Wrong Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/ErrorAndEmpty/SomethingWentWrongPage.xaml)
+* [Empty Cart Page]()
+* [Location Denied Page]()
+* [No Credits Page]()
+* [No Internet Connection Page]()
+* [No Item Page]()
+* [No Photos page]()
+* [No Tasks page]()
+* [Not Enough Credits Page]()
+* [No Videos Page]()
+* [Payment Failed Page]()
+* [Something Went Wrong Page]()
 
 ## Transaction	
 
-* [Checkout Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Transaction/CheckoutPage.xaml)
-* [Payment Success Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Transaction/PaymentSuccessPage.xaml)
-* [Payment Failure Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Transaction/PaymentFailurePage.xaml)
-* [Saved Cards Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Transaction/MyCardsPage.xaml)
+* [Checkout Page]()
+* [Payment Success Page]()
+* [Payment Failure Page]()
+* [Saved Cards Page]()
 
 ## Bookmark
 
-* [Wishlist Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Bookmarks/WishlistPage.xaml)
-* [Cart Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Bookmarks/CartPage.xaml)
-* [Article Bookmarks Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Bookmarks/ArticleBookmarkPage.xaml)
+* [Wishlist Page]()
+* [Cart Page]()
+* [Article Bookmarks Page]()
 
 ## History	
 
-* [Transaction History Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/History/TransactionHistoryPage.xaml)
-* [My Orders Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/History/MyOrdersPage.xaml)
+* [Transaction History Page]()
+* [My Orders Page]()
 
 ## Social
 
-* [Social Profile with Connections Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Social/SocialProfileWithConnectionsPage.xaml)
-* [Social Profile with Card Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Social/SocialProfileWithCardPage.xaml)
-* [Social Profile with Interest Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Social/SocialProfileWithInterestPage.xaml)
-* [Social Profile with Message Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Social/SocialProfileWithMessagePage.xaml)
+* [Social Profile with Connections Page]()
+* [Social Profile with Card Page]()
+* [Social Profile with Interest Page]()
+* [Social Profile with Message Page]()
 
 ## Profile
 
-* [Author Profile Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Profile/AuthorProfilePage.xaml)
-* [Contacts Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Profile/ContactProfilePage.xaml)
-* [Chat Profile Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Profile/ChatProfilePage.xaml)
-* [Master Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Profile/MasterProfilePage.xaml)
-* [Health Profile Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Profile/HealthProfilePage.xaml)
+* [Author Profile Page]()
+* [Contacts Page]()
+* [Chat Profile Page]()
+* [Master Page]()
+* [Health Profile Page]()
 
 ## Tracking
 
-* [Product Delivery Tracking Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Tracking/OrderTracking.xaml)
+* [Product Delivery Tracking Page]()
 
 ## Settings
 
-* [Setting Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Settings/SettingsPage.xaml)
-* [Help Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Settings/HelpPage.xaml)
+* [Setting Page]()
+* [Help Page]()
 
 ## Notification
 
-* [Task Notification Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Notification/TaskNotificationPage.xaml)
-* [Social Notification Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Notification/SocialNotificationPage.xaml)
-* [E-commerce Notification Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Notification/ECommerceNotificationPage.xaml)
+* [Task Notification Page]()
+* [Social Notification Page]()
+* [E-commerce Notification Page]()
