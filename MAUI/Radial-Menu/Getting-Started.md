@@ -19,28 +19,33 @@ To quickly get started with the .NET MAUI Radial Menu, watch this video.
 
 Before proceeding, ensure the following are set up:
 1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
-1. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or Visual Studio Code. For Visual Studio Code users, ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
+2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or Visual Studio Code. For Visual Studio Code users, ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
 
 ## Step 1: Create a New MAUI Project
 
-### Visual Studio
+{% tabcontents %}
+{% tabcontent Visual Studio %}
 
 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
-1. Name the project and choose a location. Then, click **Next.**
-1. Select the .NET framework version and click **Create**.
+2. Name the project and choose a location. Then, click **Next.**
+3. Select the .NET framework version and click **Create.**
 
-### Visual Studio Code
+{% endtabcontent %}
+{% tabcontent Visual Studio Code %}
 
 1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
-1. Choose the **.NET MAUI App** template.
-1. Select the project location, type the project name and press **Enter.**
-1. Then choose **Create project.**
+2. Choose the **.NET MAUI App** template.
+3. Select the project location, type the project name and press **Enter.**
+4. Then choose **Create project.**
+
+{% endtabcontent %}
+{% endtabcontents %}
 
 ## Step 2: Install the Syncfusion MAUI RadialMenu NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-1. Search for [Syncfusion.Maui.RadialMenu](https://www.nuget.org/packages/Syncfusion.Maui.RadialMenu/) and install the latest version.
-1. Ensure the necessary dependencies are installed correctly, and the project is restored.
+2. Search for [Syncfusion.Maui.RadialMenu](https://www.nuget.org/packages/Syncfusion.Maui.RadialMenu/) and install the latest version.
+3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 ## Step 3: Register the handler
 
@@ -70,11 +75,11 @@ Before proceeding, ensure the following are set up:
 
 {% endhighlight %}
 {% endtabs %}
-l
+
 ## Step 4:  Add a RadialMenu
 
 1. To initialize the control, import the RadialMenu namespace into your code.
-1. Initialize [RadialMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.html)
+2. Initialize [RadialMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.html)
 
 {% tabs %}
 {% highlight xaml %}
