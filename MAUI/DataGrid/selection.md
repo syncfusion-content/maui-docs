@@ -101,9 +101,9 @@ The `SfDataGrid` provides [SelectedIndex](https://help.syncfusion.com/cr/maui/Sy
 
 ### Getting selected cells.
 
-The `SfDataGrid` provides[`SfDataGrid.GetSelectedCells()`] and [`SfDataGrid.GetSelectedCellInfo()`].
+The `SfDataGrid` provides [SfDataGrid.GetSelectedCells()]() and [SfDataGrid.GetSelectedCellInfo()]() methods to get details of the selected cells when the selection unit is `Cell` or `Any`.
 
-`SfDataGrid.GetSelectedCells()` : Provides all the selected cell, when multiple cells are selected.
+`SfDataGrid.GetSelectedCells()` : Provides details of all selected cells when multiple cells are selected
 
 {% tabs %}
 {% highlight c# %}
@@ -111,7 +111,7 @@ var selectedCells = this.dataGrid.GetSelectedCells();
 {% endhighlight %}
 {% endtabs %}
 
-`SfDataGrid.GetSelectedCellInfo()` : Provides the selected cell at the specified row and column index.
+`SfDataGrid.GetSelectedCellInfo()` : Provides details of the cell at the specified row and column index.
 
 {% tabs %}
 {% highlight c# %}
