@@ -1,26 +1,24 @@
 ---
 layout: post
-title: Getting Started with MAUI UI Kit control | Syncfusion
-description: Learn here about getting started with Syncfusion Essential Studio MAUI UI Kit control, its elements and more.
+title: Getting Started with .NET MAUI Essential® UI Kit control | Syncfusion®
+description: Learn here about getting started with Syncfusion® .NET MAUI Essential® UI Kit control, its elements and more.
 platform: maui
-control: MAUI UI Kit
+control: .NET MAUI Essential® UI Kit
 documentation: ug
 ---
 
-# Getting Started with MAUI UI Kit
+# Getting Started with .NET MAUI Essential® UI Kit
 
-The UI Kit screens can be added to your application in the following two ways:
+There are two ways for including the UI Kit screens into your application:
 
-1. Using **Essential UI Kit for MAUI** Visual Studio extension.
+1. Using the Visual Studio extension's **.NET MAUI Essential® UI Kit**.
 
-2. Copying the files from our open-source [GitHub repository]().
+2. Copying the files from our [GitHub repository](), which is open source.
 
 
-## Essential UI Kit for MAUI Extension
+## Essential® UI Kit for .NET MAUI Extension
 
-This is the simplest method to integrate pre-defined screens into your application. The following steps outline how to add screens to your app using our extension:
-
-### Steps to Use Essential UI Kit for MAUI Extension
+This is the simplest way to integrate pre-defined screens into your application. Follow these steps to add screens to your app using our extension:
 
 1. Open Visual Studio.
 
@@ -28,7 +26,7 @@ This is the simplest method to integrate pre-defined screens into your applicati
 
    ![Visual Studio Extensions](UI-Kit-images/VS_Extensions.png)
 
-3. Search for **Essential UI Kit for MAUI**, and then install it.
+3. Search for **.NET MAUI Essential® UI Kit**, and then install it.
 
    ![Visual Studio Extensions and Updates](UI-Kit-images/Extension_Update.png)
 
@@ -36,9 +34,9 @@ This is the simplest method to integrate pre-defined screens into your applicati
 
 5. Now, open an existing MAUI application or create a new application as per your requirements.
  
-6. Right-click the MAUI [NETStandard] project, and you can see the **Essential UI Kit for MAUI** option.
+6. Right-click the MAUI [NETStandard] project, and you can see the **.NET MAUI Essential® UI Kit** option.
 
-N> The **Essential UI Kit for MAUI** add-in will be shown when the project have the **MAUI** NuGet package as a reference and also, MAUI project should be a NETStandard project.
+N> The **.NET MAUI Essential® UI Kit** add-in will be shown when the project have the **MAUI** NuGet package as a reference and also, MAUI project should be a NETStandard project.
 
 7. Select the category and pages you need to add in your application. In the following screenshot, the **Login with Social Icon** screen has been selected from the **Forms** category. 
 
@@ -53,14 +51,13 @@ N> The **Essential UI Kit for MAUI** add-in will be shown when the project have 
    ![Visual Studio Ui Kit Resources](UI-Kit-images/Essential_UIKit_Nuget_Packages.png)
    ![Visual Studio Ui Kit Resources](UI-Kit-images/Essential_UIKit_ClassFiles.png)
 
-## How to render the added page
+## How to Render the Added Page?
 
-In a MAUI demo application, to set the added page as the start-up page, you must define it in the App.xaml.cs file.
-For example, if you added the Login with Social Icon Page, you should invoke the page as shown in the following code:
+In a MAUI demo application, to set the added page as the startup page, you need to define it in the **App.xaml.cs** file. For instance, if you’ve added the **Login with Social Icon Page**, you can set it as the startup page using the following code snippet:
 
 {% highlight xaml %}
 
-MainPage=new SampleFormsApplication.Views.Forms.LoginWithSocialIcon();
+MainPage=new LoginWithSocialIcon();
 
 {% endhighlight %}
 
