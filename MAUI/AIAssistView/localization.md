@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Localization in .NET MAUI AI AssistView control | Syncfusion
-description: Learn here all about Localization feature of Syncfusion .NET MAUI AI AssistView (SfAIAssistView) control and its elements, and more.
+title: Localization in .NET MAUI AI AssistView control | Syncfusion®
+description: Learn here all about Localization feature of Syncfusion® .NET MAUI AI AssistView (SfAIAssistView) control and its elements, and more.
 platform: MAUI
 control: SfAIAssistView
 documentation: ug
