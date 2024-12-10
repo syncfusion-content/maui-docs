@@ -102,7 +102,7 @@ namespace NavigationDrawerGettingStarted
     </navigationDrawer:SfNavigationDrawer.ContentView>
     </navigationDrawer:SfNavigationDrawer>
 </ContentPage>
-	
+
 {% endhighlight %}
 {% highlight c# %}
 
