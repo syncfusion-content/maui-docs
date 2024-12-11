@@ -27,7 +27,7 @@ Syncfusion .NET MAUI Calendar (SfCalendar) is a calendar control that allows use
 
 * **Date selection**: Date selection allows you to select a Single date, Multiple dates, Range of dates, or a Multiple range of dates by interaction or programmatic selection.
 
-   ![Selection Modes in .NET MAUI Calendar.](images/overview/maui-selection-modes.jpg)
+   ![Selection Modes in .NET MAUI Calendar.](images/overview/maui-selection-modes.png)
 
 * **Limit date selection**: Restricts interaction and navigation beyond the specified minimum and maximum dates.
 
