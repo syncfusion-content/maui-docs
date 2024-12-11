@@ -155,7 +155,7 @@ Shimmer content is loaded when the [`IsActive`](https://help.syncfusion.com/cr/m
 
 {% tabs %} 
 
-{% highlight xaml %} 
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
         <shimmer:SfShimmer x:Name="shimmer" VerticalOptions="FillAndExpand" IsActive ="false">
                 <shimmer:SfShimmer.Content>
@@ -166,8 +166,7 @@ Shimmer content is loaded when the [`IsActive`](https://help.syncfusion.com/cr/m
         </shimmer:SfShimmer>
 
 {% endhighlight %}
-
-{% highlight C# %} 
+{% highlight c# tabtitle="C#" hl_lines="3" %}
 
             shimmer = new SfShimmer()
             {
