@@ -145,7 +145,7 @@ private void ClickToShowPopup_Clicked(object sender, EventArgs e)
 
 ### Show absolute positioning in MVVM
 
-The [StartX](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_StartX) and [StartY](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_StartY) properties in the SfPopup control specify the starting position of the popup to display.
+The [StartX](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_StartX) and [StartY](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_StartY) properties in the SfPopup control specify the starting position of the popup to display in the view.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="16 17" %}
