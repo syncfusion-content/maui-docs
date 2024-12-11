@@ -15,7 +15,7 @@ To know more, refer to this [Read me]() file.
 
 ## .NET MAUI Essential® UI Kit 1.0.0.0
 
-The .NET MAUI Essential® UI Kit 1.0.0.0 offers a versatile collection of 87 customizable UI pages organized into 18 for various app categories, including:
+The .NET MAUI Essential® UI Kit 1.0.0.0 offers a versatile collection of **87 customizable UI pages** organized into **18 for various app categories**, including:
 
 * Forms
 * Catalog

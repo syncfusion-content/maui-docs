@@ -9,7 +9,7 @@ documentation: ug
 
 # Syncfusion® .NET MAUI UI Designs
 
-The .NET MAUI Essential® UI Kit offers a collection of 87 screens, organized into 18 versatile categories, designed to streamline your design process and elevate your user interface creations. 
+The .NET MAUI Essential® UI Kit offers a collection of **87 screens**, organized into **18 versatile categories**, designed to streamline your design process and elevate your user interface creations. 
 
 ## Forms	
 
