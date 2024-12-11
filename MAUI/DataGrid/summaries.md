@@ -188,7 +188,7 @@ summaryRow.SummaryColumns.Add(new DataGridSummaryColumn()
     SummaryType = SummaryType.DoubleAggregate
 });
 sfGrid.CaptionSummaryRow= summaryRow;
-{% endhighlight c# %}
+{% endhighlight %}
 {% endtabs %}
 
 ![DataGrid with caption summary cells customized](Images\caption-summary\maui-datagrid-show-summary-in-column.png)
@@ -837,7 +837,7 @@ summaryRow.SummaryColumns.Add(new DataGridSummaryColumn()
     SummaryType = SummaryType.DoubleAggregate
 });
 sfGrid.TableSummaryRows.Add(summaryRow);
-{% endhighlight c# %}
+{% endhighlight %}
 {% endtabs %}
 
 The following screenshot shows the table summary row if `ShowSummaryInRow` is `false`.
