@@ -196,7 +196,7 @@ this.Content = chart;
 
 {% endhighlight %}
 
-{% highlight C# %} 
+{% highlight C# %}
 
 SfPolarChart chart = new SfPolarChart();
 CategoryAxis primaryAxis = new CategoryAxis();

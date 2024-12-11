@@ -156,7 +156,7 @@ N> Add the namespace of `StageViewModel` class to your XAML Page, if you prefer 
 
 {% endhighlight %}
 
-{% highlight C# %} 
+{% highlight C# %}
 
 SfPyramidChart chart = new SfPyramidChart();
 StageViewModel viewModel = new StageViewModel();
