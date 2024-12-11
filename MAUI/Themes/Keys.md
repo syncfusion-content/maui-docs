@@ -3226,7 +3226,7 @@ This page lists the keys for each control and the element to which it is mapped 
          <td>    
              By merging this key in application resources, you can customize the appearance of SfCircularChart without merging common theme resource and control style resource dictionaries.
              
- {% highlight xaml %}
+{% highlight xaml %}
  <Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
               ...>
   <Application.Resources>
@@ -11061,7 +11061,7 @@ This page lists the keys for each control and the element to which it is mapped 
           <td>    
               By merging this key in application resources, you can customize the appearance of SfPyramidChart without merging common theme resource and control style resource dictionaries.
               
-  {% highlight xaml %}
+{% highlight xaml %}
   <Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
                ...>
    <Application.Resources>
@@ -12740,7 +12740,7 @@ This page lists the keys for each control and the element to which it is mapped 
          <td>    
              By merging this key in application resources, you can customize the appearance of SfRangeSelector without merging common theme resource and control style resource dictionaries.
              
- {% highlight xaml %}
+{% highlight xaml %}
  <Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
               ...>
   <Application.Resources>
@@ -13763,7 +13763,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <td>    
                 By merging this key in application resources, you can customize the appearance of SfSlider without merging common theme resource and control style resource dictionaries.
                 
- {% highlight xaml %}
+{% highlight xaml %}
     <Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
                  ...>
      <Application.Resources>
@@ -14741,7 +14741,7 @@ This page lists the keys for each control and the element to which it is mapped 
          <td>    
              By merging this key in application resources, you can customize the appearance of SfSunburstChart without merging common theme resource and control style resource dictionaries.
              
- {% highlight xaml %}
+{% highlight xaml %}
  <Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
               ...>
   <Application.Resources>
