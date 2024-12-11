@@ -140,7 +140,7 @@ N> Add the namespace of `StageViewModel` class to your XAML Page, if you prefer 
 
 {% tabs %} 
 
-{% highlight xaml %} 
+{% highlight xaml %}
 
 <ContentPage
     . . .

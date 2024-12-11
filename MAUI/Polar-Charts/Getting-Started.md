@@ -150,7 +150,7 @@ N> Add the namespace of the `PlantViewModel` class to your XAML page, if you pre
 
 {% tabs %} 
 
-{% highlight xaml %} 
+{% highlight xaml %}
 
 <ContentPage
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -166,7 +166,7 @@ N> Add the namespace of the `PlantViewModel` class to your XAML page, if you pre
 
 {% endhighlight %}
 
-{% highlight C# %} 
+{% highlight C# %}
 
 this.BindingContext = new PlantViewModel();
 SfPolarChart chart = new SfPolarChart();
@@ -182,7 +182,7 @@ this.Content = chart;
 
 {% tabs %} 
 
-{% highlight xaml %} 
+{% highlight C# %}
 
 <chart:SfPolarChart>                            
     <chart:SfPolarChart.PrimaryAxis>
