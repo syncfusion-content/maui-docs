@@ -573,7 +573,7 @@ The following screenshot illustrates the custom swipe buttons that are loaded ba
 
 <img alt="Custom Swipe button for Offline" src="Images\swiping\maui-datagrid-custom-offline-swipe-buttons.png" width="404"/>
 
-## Swipe summary and unbound rows in SfDataGrid
+## Enable swiping for summary and unbound rows
 
 To enable swiping of the `UnboundRow`, `CaptionSummaryRow`, `GroupSummaryRow`, and `TableSummaryRow`, set the `Cancel` property of the `SwipeStartedEventArgs` to false in the `SfDataGrid.SwipeStarted` event handler. By default, the `Cancel` property is set to true for all non-data rows.
 
