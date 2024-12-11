@@ -99,7 +99,7 @@ The `SfDataGrid` provides [SelectedIndex](https://help.syncfusion.com/cr/maui/Sy
 
 `SfDataGrid.SelectedRows`: Provides all the selected records of the selected items when multiple selection is enabled.
 
-### Getting selected cells.
+## Getting selected cells
 
 The `SfDataGrid` provides [SfDataGrid.GetSelectedCells()]() and [SfDataGrid.GetSelectedCellInfo()]() methods to get details of the selected cells when the selection unit is `Cell` or `Any`.
 
