@@ -2444,7 +2444,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
     <tr>
         <td> SfChatSendButtonDisabledColor <br/><br/></td>
-        <td> Color of the send button when it is in 'Disabled' state. </td>
+        <td> Color of the send button when it is in 'Disabled' state. <br/><br/></td>
     </tr>
     <tr>
         <td> SfChatDisabledSendButtonBackground <br/><br/></td>
