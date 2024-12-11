@@ -57,7 +57,7 @@ In a MAUI demo application, to set the added page as the startup page, you need 
 
 {% highlight xaml %}
 
-MainPage=new LoginWithSocialIcon();
+MainPage = new LoginWithSocialIcon();
 
 {% endhighlight %}
 
