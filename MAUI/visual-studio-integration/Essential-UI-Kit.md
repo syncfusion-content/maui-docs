@@ -52,16 +52,21 @@ To get started with the .NET MAUI Essential® UI Kit, first install the appropri
 
 To set your preferred UI Template as the start page of your application, simply open the App.xaml.cs file in your MAUI project and make the following changes.
 
-{% highlight xaml %}
-
-MainPage = new PageName();
-
-{% endhighlight %}
-
 Example: If you added Login With Social Icon Page,
 
-{% highlight xaml %}
+{% tabs %}
+{% highlight .NET 8 hl_lines="3" %}
 
 MainPage = new LoginWithSocialIcon();
 
 {% endhighlight %}
+
+{% highlight .NET 9 hl_lines="3" %}
+
+protected override Window CreateWindow(IActivationState? activationState)
+{
+    return new Window(new LoginWithSocialIcon());
+}
+
+{% endhighlight %}
+{% endtabs %}

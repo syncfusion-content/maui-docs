@@ -22,7 +22,7 @@ This is the simplest way to integrate pre-defined screens into your application.
 
 1. Open Visual Studio.
 
-2. Go to Extension, and then click Manage Extensions as shown in the following screenshot.
+2. Go to **Extension**, and then click **Manage Extensions** as shown in the following screenshot.
 
    ![Visual Studio Extensions](UI-Kit-images/VS_Extensions.png)
 
@@ -55,11 +55,22 @@ N> The **.NET MAUI Essential® UI Kit** add-in will be shown when the project ha
 
 In a MAUI demo application, to set the added page as the startup page, you need to define it in the **App.xaml.cs** file. For instance, if you’ve added the **Login with Social Icon Page**, you can set it as the startup page using the following code snippet:
 
-{% highlight xaml %}
+{% tabs %}
+{% highlight .NET 8 hl_lines="3" %}
 
 MainPage = new LoginWithSocialIcon();
 
 {% endhighlight %}
+
+{% highlight .NET 9 hl_lines="3" %}
+
+protected override Window CreateWindow(IActivationState? activationState)
+{
+    return new Window(new LoginWithSocialIcon());
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 In real-world applications, you may need to do the following to use these XAML pages:
 1. Update the services to fetch data from a remote server or local database.
