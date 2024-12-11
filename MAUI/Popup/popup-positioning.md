@@ -171,7 +171,7 @@ The [StartX](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.h
   </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3" %} 
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
 private void ClickToShowPopup_Clicked(object sender, EventArgs e)
 {
   (this.BindingContext as ViewModel).DisplayPopup = true;	
@@ -299,7 +299,7 @@ The [AbsoluteX](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopu
   </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4" %} 
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4" %}
 private void ClickToShowPopup_Clicked(object sender, EventArgs e)
 {
   // Show the SfPopup at the bottom of the label and with absolute relative position.
@@ -470,7 +470,7 @@ The `SfPopup` allows opening it in the [CellTapped](https://help.syncfusion.com/
   </ContentPage.Content> 
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="17" %} 
+{% highlight c# tabtitle="C#" hl_lines="17" %}
 namespace PopupMauiPositioning;
 using Syncfusion.Maui.DataGrid;
 using Syncfusion.Maui.Popup;
@@ -595,7 +595,7 @@ The `SfPopup` allows opening it in the [ItemTapped](https://help.syncfusion.com/
   </ContentPage.Content> 
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="72" %} 
+{% highlight c# tabtitle="C#" hl_lines="72" %}
 namespace PopupMauiPositioning;
 using Syncfusion.Maui.ListView;
 using Syncfusion.Maui.Popup;
