@@ -24,18 +24,23 @@ Before proceeding, ensure the following are set up:
 
 ## Step 1: Create a New MAUI Project
 
-### Visual Studio
+{% tabcontents %}
+{% tabcontent Visual Studio %}
 
 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
-1. Name the project and choose a location. Then, click **Next**.
-1. Select the .NET framework version and click **Create**.
+1. Name the project and choose a location. Then, click **Next.**
+1. Select the .NET framework version and click **Create.**
 
-### Visual Studio Code
+{% endtabcontent %}
+{% tabcontent Visual Studio Code %}
 
 1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
 1. Choose the **.NET MAUI App** template.
 1. Select the project location, type the project name and press **Enter.**
 1. Then choose **Create project.**
+
+{% endtabcontent %}
+{% endtabcontents %}
 
 ## Step 2: Install the Syncfusion MAUI Buttons NuGet Package
 
