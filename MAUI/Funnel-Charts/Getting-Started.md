@@ -7,6 +7,8 @@ control: SfFunnelChart
 documentation: ug
 ---
 
+> **Notice**: After **Volume 1 2025 (Mid of March 2025)**, updates, bug fixes, and feature enhancements for this control will no longer be available in the Syncfusion package. Please switch to the **Syncfusion Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
+
 # Getting Started with .NET MAUI Chart
 
 This section explains how to populate the funnel chart with data, a title, data labels, a legend, and tooltips, as well as the essential aspects for getting started with the funnel chart.
@@ -116,7 +118,7 @@ public class AdmissionViewModel
 {
     public List<AdmissionModel> Data { get; set; }
 
-    public ChartViewModel()
+    public AdmissionViewModel()
     {
         Data = new List<AdmissionModel>()
         {
@@ -139,7 +141,7 @@ N> Add the namespace of `AdmissionViewModel` class to your XAML Page, if you pre
 
 {% tabs %} 
 
-{% highlight xaml %} 
+{% highlight xaml %}
 
 <ContentPage
     . . .
@@ -155,7 +157,7 @@ N> Add the namespace of `AdmissionViewModel` class to your XAML Page, if you pre
 
 {% endhighlight %}
 
-{% highlight C# %} 
+{% highlight C# %}
 
 SfFunnelChart chart = new SfFunnelChart();
 AdmissionViewModel viewModel = new AdmissionViewModel();
@@ -309,25 +311,34 @@ The following code example gives you the complete code of above configurations.
 
 {% highlight xaml %}
 
-<chart:SfFunnelChart ItemsSource="{Binding Data}" 
-                     XBindingPath="XValue" 
-                     YBindingPath="YValue"
-                     ShowDataLabels="True" 
-                     EnableTooltip="True">
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ChartGettingStarted.MainPage"
+    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+    xmlns:model="clr-namespace:ChartGettingStarted">
 
-    <chart:SfFunnelChart.Title>
-        <Label Text="School Admission"/>
-    </chart:SfFunnelChart.Title>
+    <chart:SfFunnelChart ItemsSource="{Binding Data}" 
+                         XBindingPath="XValue" 
+                         YBindingPath="YValue"
+                         ShowDataLabels="True" 
+                         EnableTooltip="True">
 
-    <chart:SfFunnelChart.BindingContext>
-        <model:AdmissionViewModel/>
-    </chart:SfFunnelChart.BindingContext>
+        <chart:SfFunnelChart.Title>
+            <Label Text="School Admission"/>
+        </chart:SfFunnelChart.Title>
 
-    <chart:SfFunnelChart.Legend>
-        <chart:ChartLegend/>
-    </chart:SfFunnelChart.Legend>
+        <chart:SfFunnelChart.BindingContext>
+            <model:AdmissionViewModel/>
+        </chart:SfFunnelChart.BindingContext>
 
-</chart:SfFunnelChart>
+        <chart:SfFunnelChart.Legend>
+            <chart:ChartLegend/>
+        </chart:SfFunnelChart.Legend>
+
+    </chart:SfFunnelChart>
+
+</ContentPage>
  
 {% endhighlight %}
 

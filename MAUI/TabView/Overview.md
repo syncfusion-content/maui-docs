@@ -7,6 +7,8 @@ control: Tab View
 documentation: ug
 ---
 
+>**Notice:** After **Volume 1 2025 (Mid of March 2025),** updates, bug fixes, and feature enhancements for this control will no longer be available in the Syncfusion package. Please switch to the **Syncfusion Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document.](https://help.syncfusion.com/maui-toolkit/migration)
+
 # Overview of .NET MAUI Tab View (SfTabView)
 
 The advanced .NET Multi-platform App UI (MAUI) Tab View is a simple and intuitive interface for tab navigation in mobile and desktop applications, where users can explore and switch between different tabs.

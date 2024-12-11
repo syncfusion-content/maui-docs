@@ -1,13 +1,13 @@
 ---
 layout : post
 title: About MAUI Cards Control | Syncfusion
-description: Learn here all about introduction of Syncfusion Essential Studio MAUI Cards control, its elements and more.
+description: Learn here all about introduction of Syncfusion Essential Studio® MAUI Cards control, its elements and more.
 platform : maui
 control : Cards
 documentation : ug
 ---
 
-# MAUI Cards Overview
+# Overview of .NET MAUI Cards (SfCards)  
 
 The new Cards control empowers you to generate either a dismissible card or a stack of cards, with only one card being visible initially, requires a swipe to reveal the subsequent card.
 

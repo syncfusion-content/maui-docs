@@ -98,8 +98,8 @@ LineSeries series = new LineSeries()
 {
     ItemsSource = (new ViewModel()).Data,
     XBindingPath = "XValue",
-    IsVisibleOnLegend = true,
     YBindingPath = "YValue",
+    IsVisibleOnLegend = true,
 };
 
 chart.Series.Add(series);

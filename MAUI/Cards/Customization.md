@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customization in MAUI Cards control | Syncfusion
-description: Learn about Customization support in Syncfusion Essential Studio MAUI Cards control, its elements and more.
+description: Learn about Customization support in Syncfusion Essential Studio® MAUI Cards control, its elements and more.
 platform: MAUI
 control: Cards
 documentation: ug

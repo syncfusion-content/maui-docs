@@ -44,6 +44,10 @@ namespace ParallaxViewGettingStarted
             Image image = new Image();
             Assembly assembly = typeof(MainPage).GetTypeInfo().Assembly;
             image.Source = ImageSource.FromResource("ParallaxViewGettingStarted.parallax.jpg", assembly);
+            image.BackgroundColor = Colors.Transparent,
+            image.HorizontalOptions = LayoutOptions.Fill,
+            image.VerticalOptions = LayoutOptions.Fill,
+            image.Aspect = Aspect.AspectFill
             parallax.Content = image;
             parallax.Speed = 0.5;
             listview.ItemsSource = view.Items;
@@ -101,6 +105,8 @@ namespace ParallaxViewGettingStarted
             parallax.Orientation = Syncfusion.Maui.ParallaxView.Orientation.Horizontal;
             listview.ItemsSource = view.Items;
             listview.Orientation = ItemsLayoutOrientation.Horizontal;
+            listview.BackgroundColor = Colors.Transparent,
+            listview.ItemSize = 100
             parallax.Source = listview;
             this.Content = parallax;
         }

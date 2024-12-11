@@ -7,6 +7,8 @@ control: Tab View
 documentation: ug
 ---
 
+>**Notice:** After **Volume 1 2025 (Mid of March 2025),** updates, bug fixes, and feature enhancements for this control will no longer be available in the Syncfusion package. Please switch to the **Syncfusion Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document.](https://help.syncfusion.com/maui-toolkit/migration)
+
 # Getting Started with .NET MAUI Tab View
 
 This section guides you through setting up and configuring a [Tab View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1) in your .NET MAUI application. Follow the steps below to add a basic Tab View to your project.
@@ -24,18 +26,23 @@ Before proceeding, ensure the following are set up:
 
 ## Step 1: Create a New MAUI Project
 
-### Visual Studio
+{% tabcontents %}
+{% tabcontent Visual Studio %}
 
 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
 2. Name the project and choose a location. Then, click **Next.**
 3. Select the .NET framework version and click **Create.**
 
-### Visual Studio Code
+{% endtabcontent %}
+{% tabcontent Visual Studio Code %}
 
 1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
 2. Choose the **.NET MAUI App** template.
 3. Select the project location, type the project name and press **Enter.**
 4. Then choose **Create project.**
+
+{% endtabcontent %}
+{% endtabcontents %}
 
 ## Step 2: Install the Syncfusion MAUI TabView NuGet Package
 
