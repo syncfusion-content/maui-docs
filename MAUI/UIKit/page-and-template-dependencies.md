@@ -7,9 +7,9 @@ control: .NET MAUI Essential® UI Kit
 documentation: ug
 ---
 
-This page lists the dependencies (converters, renderers, and NuGet packages) required for each XAML page in the .NET MAUI Essential® UI Kit project  
-
 # Page Template Dependencies of .NET MAUI UI Kit
+
+This page lists the dependencies (converters, renderers, and NuGet packages) required for each XAML page in the .NET MAUI Essential® UI Kit project  
 
 ## Forms
 

@@ -54,7 +54,7 @@ To set your preferred UI Template as the start page of your application, simply 
 
 {% highlight xaml %}
 
-MainPage=new PageName();
+MainPage = new PageName();
 
 {% endhighlight %}
 
@@ -62,6 +62,6 @@ Example: If you added Login With Social Icon Page,
 
 {% highlight xaml %}
 
-MainPage=new LoginWithSocialIcon();
+MainPage = new LoginWithSocialIcon();
 
 {% endhighlight %}
