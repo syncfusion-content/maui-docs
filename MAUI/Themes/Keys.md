@@ -4951,7 +4951,7 @@ This page lists the keys for each control and the element to which it is mapped 
          <td>    
              By merging this key in application resources, you can customize the appearance of SfFunnelChart without merging common theme resource and control style resource dictionaries.
              
- {% highlight xaml %}
+{% highlight xaml %}
  <Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
               ...>
   <Application.Resources>
