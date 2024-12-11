@@ -247,7 +247,7 @@ Please refer to the code example below, where a label is loaded in the `caption 
             </sfgrid:DataGridSummaryRow>
         </sfgrid:SfDataGrid.CaptionSummaryRow>
     </sfgrid:SfDataGrid>
-{% endhighlight%}
+{% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
@@ -340,7 +340,7 @@ Here's an example code snippet that demonstrates how to load a label in the temp
         </sfgrid:SfDataGrid.CaptionSummaryRow>
      </sfgrid:SfDataGrid>
 
-{% endhighlight%}
+{% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
@@ -633,7 +633,7 @@ Please refer to the code example below, which demonstrates how to load a label i
             </sfgrid:DataGridSummaryRow>
         </sfgrid:SfDataGrid.GroupSummaryRows>
     </sfgrid:SfDataGrid>
-{% endhighlight%}
+{% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
@@ -763,7 +763,7 @@ Display summary information in a row by setting the [DataGridTableSummaryRow.Sho
     </sfGrid:SfDataGrid.TableSummaryRows>
 {% endhighlight %}
 
-{% highlight c#%}
+{% highlight c# %}
 DataGridTableSummaryRow summaryRow = new DataGridTableSummaryRow();
 summaryRow.Title = "Total Salary:{TotalSalary} for {ProductCount} members";
 summaryRow.ShowSummaryInRow = true;
@@ -837,7 +837,7 @@ summaryRow.SummaryColumns.Add(new DataGridSummaryColumn()
     SummaryType = SummaryType.DoubleAggregate
 });
 sfGrid.TableSummaryRows.Add(summaryRow);
-{% endhighlight c#%}
+{% endhighlight c# %}
 {% endtabs %}
 
 The following screenshot shows the table summary row if `ShowSummaryInRow` is `false`.
@@ -1078,7 +1078,7 @@ Refer the below code example in which a label is loaded in the template of table
             </sfgrid:SfDataGrid.TableSummaryRows>
         </sfgrid:SfDataGrid>
     </StackLayout>
-{% endhighlight%}
+{% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
