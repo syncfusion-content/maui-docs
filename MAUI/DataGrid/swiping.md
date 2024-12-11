@@ -18,8 +18,7 @@ The data grid allows for loading desired content using the `SfDataGrid.LeftSwipe
 
 {% tabs %}
 {% highlight XAML %}
-//Defining LeftSwipeTemplate
- <?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DataGridMaui.MainPage"
@@ -195,13 +194,12 @@ The swipe templates can be customized by loading any view into the templates and
         </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-
 public partial class MainPage : ContentPage
 {
     private int swipedRowIndex;
     public MainPage()
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
     }
 
     private void TapGestureRecognizer_InsertButtonTapped(object sender, TappedEventArgs e)
@@ -575,7 +573,7 @@ The following screenshot illustrates the custom swipe buttons that are loaded ba
 
 <img alt="Custom Swipe button for Offline" src="Images\swiping\maui-datagrid-custom-offline-swipe-buttons.png" width="404"/>
 
-## Swipe Summary and Unbound rows in SfDataGrid
+## Swipe summary and unbound rows in SfDataGrid
 
 To enable swiping of the `UnboundRow`, `CaptionSummaryRow`, `GroupSummaryRow`, and `TableSummaryRow`, set the `Cancel` property of the `SwipeStartedEventArgs` to false in the `SfDataGrid.SwipeStarted` event handler. By default, the `Cancel` property is set to true for all non-data rows.
 
