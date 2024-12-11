@@ -182,7 +182,7 @@ this.Content = chart;
 
 {% tabs %} 
 
-{% highlight C# %}
+{% highlight xaml %}
 
 <chart:SfPolarChart>                            
     <chart:SfPolarChart.PrimaryAxis>
