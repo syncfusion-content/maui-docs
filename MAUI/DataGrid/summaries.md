@@ -75,8 +75,7 @@ If the `DisplayName` property is set, the specified display name will appear in 
 {% highlight xaml %}
     <sfGrid:SfDataGrid x:Name="dataGrid"
                        ItemsSource="{Binding OrderInfoCollection}"
-                       ColumnWidthMode="Fill"
-                       GroupCaptionTextFormat="{}{ColumnName}: {Key}">
+                       ColumnWidthMode="Fill">
         <sfgrid:SfDataGrid.GroupColumnDescriptions>
             <sfgrid:GroupColumnDescription ColumnName="Salary" DisplayName="Income" />
         </sfgrid:SfDataGrid.GroupColumnDescriptions>

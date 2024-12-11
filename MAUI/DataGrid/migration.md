@@ -279,7 +279,8 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 <tr>
 <th>Xamarin SfDataGrid</th>
 <th>.NET MAUI SfDataGrid</th>
-<th>Description</th></tr>
+<th>Description</th>
+</tr>
 <tr>
 <td>{{'[GridTapped](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_GridTapped)'| markdownify }}</td>
 <td>{{'[CellTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellTapped)'| markdownify }}</td>
@@ -342,7 +343,6 @@ By writing the converter, you can achieve the requirement conditionally. Refer {
 <td>{{'[GridLoaded](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_GridLoaded)'| markdownify}}</td>
 <td>{{'[DataGridLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DataGridLoaded)'| markdownify}}</td>
 <td>Occurs when the components in the SfDataGrid initialized and rendered.</td>
-</tr>
 </tr>
 </table>
 
