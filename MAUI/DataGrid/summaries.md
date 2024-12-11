@@ -674,7 +674,7 @@ The following screenshot illustrates table summary rows in the data grid:
 ![DataGrid with table summary](Images\table-summary\maui-datagrid-table-summary-position.png)
 
 {% tabs %}
-{% highlight xaml%}
+{% highlight xaml %}
     <sfGrid:SfDataGrid.TableSummaryRows>
         <sfGrid:DataGridTableSummaryRow Title="Total Salary :{TotalSalary} for {ProductCount} members"
                                         Position="Top"
@@ -702,7 +702,7 @@ The following screenshot illustrates table summary rows in the data grid:
     </sfGrid:SfDataGrid.TableSummaryRows>
 {% endhighlight %}
 
-{% highlight c#%}
+{% highlight c# %}
 DataGridTableSummaryRow summaryRow1 = new DataGridTableSummaryRow();
 summaryRow1.Title = "Total Salary:{TotalSalary} for {ProductCount} members";
 summaryRow1.ShowSummaryInRow = true;
@@ -745,7 +745,7 @@ sfGrid.TableSummaryRows.Add(summaryRow2);
 Display summary information in a row by setting the [DataGridTableSummaryRow.ShowSummaryInRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html#Syncfusion_Maui_DataGrid_DataGridSummaryRow_ShowSummaryInRow) to `true` and define summary columns. You have to define the [DataGridTableSummaryRow.Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html#Syncfusion_Maui_DataGrid_DataGridSummaryRow_Title) based on the [DataGridSummaryColumn.Name](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html#Syncfusion_Maui_DataGrid_DataGridSummaryRow_Name) property to format summary columns values in a row.
 
 {% tabs %}
-{% highlight xaml%}
+{% highlight xaml %}
     <sfGrid:SfDataGrid.TableSummaryRows>
         <sfGrid:DataGridTableSummaryRow Title="Total Salary :{TotalSalary} for {ProductCount} members"
                                         ShowSummaryInRow="True">
@@ -812,7 +812,7 @@ Refer to the [Formatting Summary](#_Formatting_Summary) section to know more abo
 In the following code snippet, summary is defined for `Salary` column:
 
 {% tabs %}
-{% highlight xaml%}
+{% highlight xaml %}
     <sfGrid:SfDataGrid.TableSummaryRows>
         <sfGrid:DataGridTableSummaryRow Name="TableSummary"
                                         ShowSummaryInRow="False">
@@ -826,7 +826,7 @@ In the following code snippet, summary is defined for `Salary` column:
     </sfGrid:SfDataGrid.TableSummaryRows>
 {% endhighlight %}
 
-{% highlight c#%}
+{% highlight c# %}
 DataGridTableSummaryRow summaryRow = new DataGridTableSummaryRow();
 summaryRow.ShowSummaryInRow = false;
 summaryRow.SummaryColumns.Add(new DataGridSummaryColumn()
@@ -849,7 +849,7 @@ The following screenshot shows the table summary row if `ShowSummaryInRow` is `f
 The data grid add table summary rows either at top or bottom positions using the [DataGridTableSummaryRow.Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTableSummaryRow.html#Syncfusion_Maui_DataGrid_DataGridTableSummaryRow_Position) property.
 
 {% tabs %}
-{% highlight xaml%}
+{% highlight xaml %}
     <sfGrid:SfDataGrid.TableSummaryRows>
         <sfGrid:DataGridTableSummaryRow Position="Top"
                                         ShowSummaryInRow="False">
@@ -877,7 +877,7 @@ The data grid add table summary rows either at top or bottom positions using the
     </sfGrid:SfDataGrid.TableSummaryRows>
 {% endhighlight %}
 
-{% highlight c#%}
+{% highlight c# %}
 DataGridTableSummaryRow topSummaryRow = new DataGridTableSummaryRow();
 topSummaryRow.Position = Position.Top;
 topSummaryRow.ShowSummaryInRow = false;
@@ -1021,7 +1021,7 @@ The template for a table summary column can be set by using `DataGridSummaryColu
 Refer the below code example in which a label is loaded in the template of table summary column.
 
 {% tabs %}
-{% highlight xaml%}
+{% highlight xaml %}
     <ContentPage.Resources>
         <ResourceDictionary>
             <local:TableSummaryConverter x:Key="SummaryConverter" />
@@ -1123,7 +1123,7 @@ Format the summary value by setting the appropriate format after the aggregate f
 In the following code snippet `Salary` column summary is formatted using `C0` format specifier. Refer to [here](https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings?redirectedfrom=MSDN) to know about how to set different formats.
 
 {% tabs %}
-{% highlight xaml%}
+{% highlight xaml %}
     <sfGrid:SfDataGrid.TableSummaryRows>
         <sfGrid:DataGridTableSummaryRow ShowSummaryInRow="False">
             <sfGrid:DataGridTableSummaryRow.SummaryColumns>
@@ -1136,7 +1136,7 @@ In the following code snippet `Salary` column summary is formatted using `C0` fo
     </sfGrid:SfDataGrid.TableSummaryRows>
 {% endhighlight %}
 
-{% highlight c#%}
+{% highlight c# %}
 DataGridTableSummaryRow summaryRow = new DataGridTableSummaryRow();
 summaryRow.ShowSummaryInRow = false;
 summaryRow.SummaryColumns.Add(new DataGridSummaryColumn()
@@ -1160,7 +1160,7 @@ Append additional content with summary value using the `DataGridSummaryColumn.Fo
 In the following code snippet `Total:` text is appended before summary value:
 
 {% tabs %}
-{% highlight xaml%}
+{% highlight xaml %}
     <sfGrid:SfDataGrid.TableSummaryRows>
         <sfGrid:DataGridTableSummaryRow ShowSummaryInRow="False">
             <sfGrid:DataGridTableSummaryRow.SummaryColumns>
@@ -1173,7 +1173,7 @@ In the following code snippet `Total:` text is appended before summary value:
     </sfGrid:SfDataGrid.TableSummaryRows>
 {% endhighlight %}
 
-{% highlight c#%}
+{% highlight c# %}
 DataGridTableSummaryRow summaryRow = new DataGridTableSummaryRow();
 summaryRow.ShowSummaryInRow = false;
 summaryRow.SummaryColumns.Add(new DataGridSummaryColumn()
@@ -1252,7 +1252,7 @@ Summary values can be calculated based on custom logic using the [DataGridSummar
 In the following code snippet, `Standard Deviation` is calculated for quantity of products:
 
 {% tabs %}
-{% highlight c#%}
+{% highlight c# %}
 public class CustomAggregate : ISummaryAggregate
 {
     public double StdDev { get; set; }
@@ -1298,7 +1298,7 @@ public static class LinqExtensions
 Assign the custom aggregate to `DataGridSummaryColumn.CustomAggregate` property and set the `SummaryType` as `Custom`. `DataGridSummaryColumn.Format` property is defined based on property name in custom aggregate `StdDev`.
 
 {% tabs %}
-{% highlight xaml%}
+{% highlight xaml %}
     <sfGrid:SfDataGrid.TableSummaryRows>
         <sfGrid:DataGridTableSummaryRow Title="Standard Deviation:{TableSummary}"
                                         ShowSummaryInRow="True">
@@ -1313,7 +1313,7 @@ Assign the custom aggregate to `DataGridSummaryColumn.CustomAggregate` property 
     </sfGrid:SfDataGrid.TableSummaryRows>
 {% endhighlight %}
 
-{% highlight c#%}
+{% highlight c# %}
 DataGridTableSummaryRow summaryRow = new DataGridTableSummaryRow();
 summaryRow.Title = "Standard Deviation:{TableSummary}";
 summaryRow.ShowSummaryInRow = true;
@@ -1364,7 +1364,7 @@ The data grid allows customizing the table summary by extending the [DataGridTab
 To customize the table summary, follow the code example:
 
 {% tabs %}
-{% highlight c#%}
+{% highlight c# %}
 // To remove default summary and Add custom summary.
 public class Summary : ContentPage
 {
