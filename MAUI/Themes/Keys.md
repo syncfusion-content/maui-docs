@@ -2252,6 +2252,14 @@ This page lists the keys for each control and the element to which it is mapped 
         <td> SfChatDatePickerBackground <br/><br/></td>
         <td> Background color of date picker.<br/><br/></td>
     </tr>
+    <tr>
+        <td> SfChatDateTimeInputMessageIconColor <br/><br/></td>
+        <td> Icon color for datetime input messsge. <br/><br/></td>
+    </tr>
+    <tr>
+       <td> SfChatDateTimeInputMessageIconBackground <br/><br/></td>
+       <td> Icon background color for datetime input messsge. <br/><br/></td>
+    </tr>
     <!--Time picker message-->
     <tr>
         <td> SfChatTimePickerIconColor <br/><br/></td>
@@ -2435,8 +2443,40 @@ This page lists the keys for each control and the element to which it is mapped 
         <td> Background Color of send button.<br/><br/></td>
     </tr>
     <tr>
+        <td> SfChatSendButtonDisabledColor <br/><br/></td>
+        <td> Color of the send button when it is in 'Disabled' state. <br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatDisabledSendButtonBackground <br/><br/></td>
+        <td> Disabled background color of the send button. <br/><br/></td>
+    </tr>
+    <tr>
+       <td> SfChatHoveredSendButtonBackground <br/><br/></td>
+       <td> Hovered background color of the send button. <br/><br/></td>
+    </tr>
+    <tr>
+       <td> SfChatPressedSendButtonBackground <br/><br/></td>
+       <td> Pressed background color of the send button. <br/><br/></td>
+    </tr>
+    <tr>
         <td> SfChatAttachmentButtonColor <br/><br/></td>
         <td> Color for attachment button.<br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatAttachmentBackground <br/><br/></td>
+        <td> Background color of the attachment button. <br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatHoveredAttachmentBackground <br/><br/></td>
+        <td> Hovered background color of the attachment button. <br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatPressedAttachmentBackground <br/><br/></td>
+        <td> Pressed background color of the attachment button. <br/><br/></td>
+    </tr>
+        <tr>
+        <td> SfChatHoveredAttachmentButtonColor <br/><br/></td>
+        <td> Hovered color of the attachment button. <br/><br/></td>
     </tr>
     <!--Time break view-->
     <tr>
@@ -3186,7 +3226,7 @@ This page lists the keys for each control and the element to which it is mapped 
          <td>    
              By merging this key in application resources, you can customize the appearance of SfCircularChart without merging common theme resource and control style resource dictionaries.
              
- {% highlight xaml %}
+{% highlight xaml %}
  <Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
               ...>
   <Application.Resources>
@@ -4911,7 +4951,7 @@ This page lists the keys for each control and the element to which it is mapped 
          <td>    
              By merging this key in application resources, you can customize the appearance of SfFunnelChart without merging common theme resource and control style resource dictionaries.
              
- {% highlight xaml %}
+{% highlight xaml %}
  <Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
               ...>
   <Application.Resources>
@@ -11021,7 +11061,7 @@ This page lists the keys for each control and the element to which it is mapped 
           <td>    
               By merging this key in application resources, you can customize the appearance of SfPyramidChart without merging common theme resource and control style resource dictionaries.
               
-  {% highlight xaml %}
+{% highlight xaml %}
   <Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
                ...>
    <Application.Resources>
@@ -12700,7 +12740,7 @@ This page lists the keys for each control and the element to which it is mapped 
          <td>    
              By merging this key in application resources, you can customize the appearance of SfRangeSelector without merging common theme resource and control style resource dictionaries.
              
- {% highlight xaml %}
+{% highlight xaml %}
  <Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
               ...>
   <Application.Resources>
@@ -13723,7 +13763,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <td>    
                 By merging this key in application resources, you can customize the appearance of SfSlider without merging common theme resource and control style resource dictionaries.
                 
- {% highlight xaml %}
+{% highlight xaml %}
     <Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
                  ...>
      <Application.Resources>
@@ -14701,7 +14741,7 @@ This page lists the keys for each control and the element to which it is mapped 
          <td>    
              By merging this key in application resources, you can customize the appearance of SfSunburstChart without merging common theme resource and control style resource dictionaries.
              
- {% highlight xaml %}
+{% highlight xaml %}
  <Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
               ...>
   <Application.Resources>

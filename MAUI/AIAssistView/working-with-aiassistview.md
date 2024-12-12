@@ -9,7 +9,7 @@ documentation: ug
 
 # Working with AI AssistView in .NET MAUI AI AssistView (SfAIAssistView)
 
-## Stop Responding in .NET MAUI AI AssistView (SfAIAssistView)
+## Stop Responding
 
 The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html) control provides `Stop Responding` feature that allows you to cancel an ongoing AI response by clicking the Stop Responding button. This feature ensures that users can stop if a response is no longer needed.
 By default, the Stop Responding button is displayed, to disable this set the `EnableStopResponding` property to `false`.
@@ -104,7 +104,7 @@ To cancel the response using the `StopRespondingCommand` or `StopResponding` eve
 
 ![Stop Responding in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-stopresponding.gif)
 
-## Control Template in .NET MAUI AI AssistView (SfAIAssistView)
+## Control Template
 
 The `ControlTemplate` in AI AssistView allows you to define and reuse the visual structure of a control. This flexible structure enables to fully customize the appearance and behavior of the AI AssistView. By using `ControlTemplate` with the AI AssistView, you can create a highly customized and interactive interface, as demonstrated below.
 
@@ -217,7 +217,7 @@ The `CustomAssistViewChat `class inherits from `AssistViewChat` and can be used 
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/custom-control-template-in-.net-maui-aiassistview)
 
-## EditorView Template in .NET MAUI AI AssistView (SfAIAssistView)
+## EditorView Template
 
 The `SfAIAssistView` control allows you to fully customize the editor's appearance by using the `EditorViewTemplate` property. This property lets you define a custom layout and style for the editor.
 

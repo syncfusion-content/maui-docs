@@ -570,6 +570,25 @@ You can style the elements of a hyperlink message by setting values to the in-bu
 
 ![Hyperlink message style in .NET MAUI Chat](images/styles/maui-chat-hyperlink-message-style.png)
 
+## Image message styling
+
+You can style the elements of a image message by setting values to the in-built keys of a image message in the resource dictionary.
+
+<table>
+<tr>
+<th> Key </th>
+<th> Description </th>
+</tr>
+<tr>
+<td> SfChatIncomingImageStroke </td>
+<td> Border color of an image in an incoming image message. </td>
+</tr>
+<tr>
+<td> SfChatOutgoingImageStroke </td>
+<td> Border color of an image in an outgoing image message. </td>
+</tr>
+</table>
+
 ## Date picker message styling
 
 You can style the elements of a date picker message by setting values to the in-built keys of a date picker message in the resource dictionary.
@@ -594,6 +613,14 @@ You can style the elements of a date picker message by setting values to the in-
 <tr>
 <td> SfChatDatePickerStroke </td>
 <td> Border color of the date picker. </td>
+</tr>
+<tr>
+<td> SfChatDateTimeInputMessageIconColor </td>
+<td> Icon color for datetime input messsge. </td>
+</tr>
+<tr>
+<td> SfChatDateTimeInputMessageIconBackground </td>
+<td> Icon background color for datetime input messsge. </td>
 </tr>
 </table>
 
@@ -786,6 +813,10 @@ You can style the elements of the editor view by setting values to the in-built 
 <tr>
 <td> SfChatEditorFontSize </td>
 <td> Font size of the text in the editor. </td>
+</tr>
+<tr>
+<td> SfChatFocusedEditorStroke </td>
+<td> Focused border color of editor. </td>
 </tr>
 </table>
 
@@ -1091,6 +1122,14 @@ You can style the send message button based on its state by setting values to th
 <td> SfChatDisabledSendButtonBackground </td>
 <td> Disabled background color of the send button. </td>
 </tr>
+<tr>
+<td> SfChatHoveredSendButtonBackground </td>
+<td> Hovered background color of the send button. </td>
+</tr>
+<tr>
+<td> SfChatPressedSendButtonBackground </td>
+<td> Pressed background color of the send button. </td>
+</tr>
 </table>
 
 {% tabs %}
@@ -1145,6 +1184,22 @@ You can style the attachment button by setting values to the in-built keys of th
 <td> SfChatAttachmentButtonColor </td>
 <td> Color of the attachment button. </td>
 </tr>
+<tr>
+<td> SfChatAttachmentBackground </td>
+<td> Background color of the attachment button. </td>
+</tr>
+<tr>
+<td> SfChatHoveredAttachmentBackground </td>
+<td> Hovered background color of the attachment button. </td>
+</tr>
+<tr>
+<td> SfChatPressedAttachmentBackground </td>
+<td> Pressed background color of the attachment button. </td>
+</tr>
+<tr>
+<td> SfChatHoveredAttachmentButtonColor </td>
+<td> Hovered color of the attachment button. </td>
+</tr>
 </table>
 
 {% tabs %}
@@ -1179,3 +1234,30 @@ You can style the attachment button by setting values to the in-built keys of th
 {% endtabs %}
 
 ![Attachment button style in .NET MAUI Chat](images/styles/maui-chat-attachmentbutton-style.png)
+
+## Load More styling
+
+You can style the load more button by setting values to the in-built keys of the load more button in the resource dictionary.
+
+<table>
+<tr>
+<th> Key </th>
+<th> Description </th>
+</tr>
+<tr>
+<td> SfChatLoadMoreBackground </td>
+<td> Background color of the load more button. </td>
+</tr>
+<tr>
+<td> SfChatLoadMoreTextColor </td>
+<td> Text color of the load more button. </td>
+</tr>
+<tr>
+<td> SfChatLoadMoreStroke </td>
+<td> Stroke color of the load more button. </td>
+</tr>
+<tr>
+<td> SfChatLoadMoreIndicatorColor </td>
+<td> Indicator color of the load more button. </td>
+</tr>
+</table>
