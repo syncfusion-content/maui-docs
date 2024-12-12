@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Form filling in .NET MAUI PDF Viewer control | Syncfusion<sup>&reg;</sup>
-description: Learn here all about PDF form filling feature of Syncfusion<sup>&reg;</sup> .NET MAUI PDF Viewer (SfPdfViewer) control and more.
+title: Form filling in .NET MAUI PDF Viewer control | Syncfusion®
+description: Learn here all about PDF form filling feature of Syncfusion® .NET MAUI PDF Viewer (SfPdfViewer) control and more.
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
@@ -370,7 +370,7 @@ The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.
 
 The required file format can be chosen from the [DataFormat](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.DataFormat.html) enumeration. In the following sections, only the `XFDF` file format is explained for brevity.
 
-N> The XFDF and FDF are the standard file data formats that can be used across global PDF viewers. Whereas, JSON and XML are the custom formats that can only be used across the Syncfusion<sup>&reg;</sup> PDF Viewers supported on other platforms like WPF, Flutter, JavaScript, etc.
+N> The XFDF and FDF are the standard file data formats that can be used across global PDF viewers. Whereas, JSON and XML are the custom formats that can only be used across the Syncfusion® PDF Viewers supported on other platforms like WPF, Flutter, JavaScript, etc.
 
 ### Import form data
 

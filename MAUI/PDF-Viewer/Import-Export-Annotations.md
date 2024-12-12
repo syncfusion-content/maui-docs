@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Import and Export annotations in .NET MAUI PDF Viewer | Syncfusion
-description: Learn here all about importing and exporting annotations using Syncfusion .NET MAUI PDF Viewer (SfPdfViewer) control.
+title: Import and Export annotations in .NET MAUI PDF Viewer | Syncfusion®
+description: Learn here all about importing and exporting annotations using Syncfusion® .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
@@ -20,7 +20,7 @@ The import and export of annotations support the following file data formats:
 
 The required file format can be chosen from the [AnnotationDataFormat](https://help.syncfusion.com/cr/file-formats/Syncfusion.Pdf.Parsing.AnnotationDataFormat.html) enumeration. In the following sections, only the `XFDF` file format is explained for brevity.
 
-N> The XFDF and FDF are the standard file data formats that can be used across global PDF viewers. Whereas, JSON is the custom format that can only be used across the Syncfusion PDF Viewers supported on other platforms like WPF, Flutter, JavaScript, etc.
+N> The XFDF and FDF are the standard file data formats that can be used across global PDF viewers. Whereas, JSON is the custom format that can only be used across the Syncfusion® PDF Viewers supported on other platforms like WPF, Flutter, JavaScript, etc.
 
 ## Import annotations
 

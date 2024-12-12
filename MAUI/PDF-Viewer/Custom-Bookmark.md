@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Custom Bookmark in .NET MAUI PDF Viewer control | Syncfusion<sup>&reg;</sup>
-description: Learn here about the custom bookmark navigation in Syncfusion<sup>&reg;</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
+title: Custom Bookmark in .NET MAUI PDF Viewer control | Syncfusion®
+description: Learn here about the custom bookmark navigation in Syncfusion® .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
