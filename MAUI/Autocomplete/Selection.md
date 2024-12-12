@@ -397,13 +397,13 @@ autocomplete.IsDropDownOpen = true;
 {% endtabs %}
 
 
-### Clear Selected Items
+## Clear Selected Items
 
-You can remove all selected items using the **Clear** method.
+You can use the **Clear** method to remove all selected items in Autocomplete.
 
 {% tabs %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# %}
 
 autocomplete.Clear();
 
