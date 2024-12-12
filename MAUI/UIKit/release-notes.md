@@ -13,9 +13,9 @@ The .NET MAUI Essential® UI Kit offers elegantly designed XAML pages for MAUI a
 
 To know more, refer to this [Read me](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/README.md) file. 
 
-## .NET MAUI Essential® UI Kit 1.0.0.0
+## .NET MAUI Essential® UI Kit 1.0.0
 
-The .NET MAUI Essential® UI Kit 1.0.0.0 offers a versatile collection of **87 customizable UI pages** organized into **18 for various app categories**, including:
+The .NET MAUI Essential® UI Kit 1.0.0 offers a versatile collection of **87 customizable UI pages** organized into **18 for various app categories**, including:
 
 * Forms
 * Catalog
