@@ -7,6 +7,8 @@ control: SfShimmer
 documentation: ug
 ---
 
+**Notice**: After **Volume 1 2025 (Mid of March 2025)**, updates, bug fixes, and feature enhancements for this control will no longer be available in the Syncfusion package. Please switch to the **Syncfusion Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
+
 # Getting started of .NET MAUI Shimmer
 
 This section explains how to add the [.NET MAUI Shimmer](https://www.syncfusion.com/maui-controls/maui-shimmer) control. Follow the steps below to add a .NET MAUI Shimmer control to your project.
@@ -153,7 +155,7 @@ Shimmer content is loaded when the [`IsActive`](https://help.syncfusion.com/cr/m
 
 {% tabs %} 
 
-{% highlight xaml %} 
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
         <shimmer:SfShimmer x:Name="shimmer" VerticalOptions="FillAndExpand" IsActive ="false">
                 <shimmer:SfShimmer.Content>
@@ -164,8 +166,7 @@ Shimmer content is loaded when the [`IsActive`](https://help.syncfusion.com/cr/m
         </shimmer:SfShimmer>
 
 {% endhighlight %}
-
-{% highlight C# %} 
+{% highlight c# tabtitle="C#" hl_lines="3" %}
 
             shimmer = new SfShimmer()
             {

@@ -80,6 +80,21 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 <td>{{'[DataGridDragAction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDragAction.html)'| markdownify }}</td>
 <td>Defines constants that specify the possible progressing states of resizing operation.</td>
 </tr>
+<tr>
+<td>{{'[SelectionUnit]()'| markdownify }}</td>
+<td>{{'[DataGridSelectionUnit]()'| markdownify }}</td>
+<td>Defines the constants that specifies how the selection is applied.</td>
+</tr>
+<tr>
+<td>{{'`SwipeOffsetMode`'| markdownify }}</td>
+<td>{{'`DataGridSwipeOffsetMode`'| markdownify }}</td>
+<td>Defines constants that specifies whether the swipe view content should be auto sized or not.</td>
+</tr>
+<tr>
+<td>{{'`SwipeDirection `'| markdownify }}</td>
+<td>{{'`DataGridSwipeDirection `'| markdownify }}</td>
+<td>Defines constants that specify the swipe directions.</td>
+</tr>
 </table>
 
 ## Properties
@@ -264,7 +279,8 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 <tr>
 <th>Xamarin SfDataGrid</th>
 <th>.NET MAUI SfDataGrid</th>
-<th>Description</th></tr>
+<th>Description</th>
+</tr>
 <tr>
 <td>{{'[GridTapped](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_GridTapped)'| markdownify }}</td>
 <td>{{'[CellTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellTapped)'| markdownify }}</td>
@@ -327,7 +343,6 @@ By writing the converter, you can achieve the requirement conditionally. Refer {
 <td>{{'[GridLoaded](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SfDataGrid.html#Syncfusion_SfDataGrid_XForms_SfDataGrid_GridLoaded)'| markdownify}}</td>
 <td>{{'[DataGridLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DataGridLoaded)'| markdownify}}</td>
 <td>Occurs when the components in the SfDataGrid initialized and rendered.</td>
-</tr>
 </tr>
 </table>
 
@@ -490,13 +505,32 @@ We have passed the optional parameters such as {{'[canIncludeHiddenColumns](http
 <td>{{'[DataGridQueryColumnDraggingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridQueryColumnDraggingEventArgs.html)'| markdownify }}</td>
 <td>Represents a datagrid column drag and drop event args.</td>
 </tr>
+
+<tr>
+<td>{{'`SwipeStartedEventArgs`'| markdownify }}</td>
+<td>{{'`DataGridSwipeStartingEventArgs`'| markdownify }}</td>
+<td>Represents a datagrid swipe starting event args.</td>
+</tr>
+
+<tr>
+<td>{{'`SwipingEventArgs`'| markdownify }}</td>
+<td>{{'`DataGridSwipingEventArgs `'| markdownify }}</td>
+<td>Represents a datagrid swiping event args.</td>
+</tr>
+
+<tr>
+<td>{{'`SwipeEndedEventArgs`'| markdownify }}</td>
+<td>{{'`DataGridSwipeEndedEventArgs`'| markdownify }}</td>
+<td>Represents a datagrid swipe ended event args.</td>
+</tr>
 </table>
 
 ## Known issues 
 
 * [Android] Horizontal scrolling performance is not smooth in the Debug solution configuration when compared to Xamarin.Forms SfDataGrid. However, the scrolling performance is smooth when the solution configuration is Release.
 
+* [Windows] Swiping and Row Drag-and-Drop using the touchscreen are not working.
+
 ## Upcoming Features   
 
 *	Custom selection
-*	Swiping

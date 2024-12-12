@@ -7,6 +7,8 @@ control: SfPolarChart
 documentation: ug
 ---
 
+> **Notice**: After **Volume 1 2025 (Mid of March 2025)**, updates, bug fixes, and feature enhancements for this control will no longer be available in the Syncfusion package. Please switch to the **Syncfusion Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
+
 # Getting Started with .NET MAUI Chart
 
 This section explains how to populate the Polar chart with data, a title, data labels, a legend, tooltips, and markers. It also covers the essential aspects of getting started with the chart.
@@ -148,7 +150,7 @@ N> Add the namespace of the `PlantViewModel` class to your XAML page, if you pre
 
 {% tabs %} 
 
-{% highlight xaml %} 
+{% highlight xaml %}
 
 <ContentPage
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -164,7 +166,7 @@ N> Add the namespace of the `PlantViewModel` class to your XAML page, if you pre
 
 {% endhighlight %}
 
-{% highlight C# %} 
+{% highlight C# %}
 
 this.BindingContext = new PlantViewModel();
 SfPolarChart chart = new SfPolarChart();
@@ -180,7 +182,7 @@ this.Content = chart;
 
 {% tabs %} 
 
-{% highlight xaml %} 
+{% highlight xaml %}
 
 <chart:SfPolarChart>                            
     <chart:SfPolarChart.PrimaryAxis>
@@ -194,7 +196,7 @@ this.Content = chart;
 
 {% endhighlight %}
 
-{% highlight C# %} 
+{% highlight C# %}
 
 SfPolarChart chart = new SfPolarChart();
 CategoryAxis primaryAxis = new CategoryAxis();

@@ -80,6 +80,22 @@ The SfDataGrid control provides support for binding complex properties to its co
 {% endhighlight %}
 {% endtabs %}
 
+
+The SfDataGrid control provides support for binding complex properties such as indexers, dictionaries to its columns. To bind the complex property to [DataGridColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html), set the `UseBindingValue` property to true.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid AutoGenerateColumnsMode="None"
+                       ItemsSource="{Binding OrderInfoCollection}">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridTextColumn MappingName="OrderID" UseBindingValue="True" />
+        <syncfusion:DataGridTextColumn MappingName="CustomerID" UseBindingValue="True" />
+        <syncfusion:DataGridTextColumn MappingName="ShipCity" UseBindingValue="True" />
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% endtabs %}
+
 ### Limitations when binding complex property 
 
 * SfDataGrid doesn’t support [LiveDataUpdateMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_LiveDataUpdateModeProperty) - `AllowDataShaping` and `AllowSummaryUpdate`.
