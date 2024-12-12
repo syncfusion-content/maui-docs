@@ -9,14 +9,14 @@ documentation: ug
 
 # Download and Installation
 
-Syncfusion publishes the Visual Studio extension in the below Visual Studio marketplace link. You can either install it directly from Visual Studio or download and install it from the Visual Studio marketplace.
+Syncfusion® publishes the Visual Studio extension in the below Visual Studio marketplace link. You can either install it directly from Visual Studio or download and install it from the Visual Studio marketplace.
 
 [Visual Studio 2022](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.MAUIVSExtension)
 
 
 ## Prerequisites
 
-The following software prerequisites must be installed to install the Syncfusion .NET MAUI extension, as well as for creating, adding snippet in Syncfusion .NET MAUI applications.
+The following software prerequisites must be installed to install the Syncfusion .NET MAUI extension, as well as for creating, adding snippet in Syncfusion® .NET MAUI applications.
 
 * [Visual Studio 2022 17.3 or later](https://visualstudio.microsoft.com/downloads/).
 
