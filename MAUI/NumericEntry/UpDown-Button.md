@@ -47,7 +47,7 @@ You can increase or decrease the value of the `NumericEntry` control using the u
 
 N> When using the up-down button, the `NumericEntry` control value changes based on the value of the `SmallChange` property.
 
-### UpDown button placement to 'Inline'
+### UpDown button placement: Inline
 
 {% tabs %}
 {% highlight XAML %}
@@ -71,7 +71,7 @@ sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
 
 ![UpDown Placement in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonPlacement.gif)
 
-### UpDown button placement to 'InlineVertical'
+### UpDown button placement: InlineVertical
 
 {% tabs %}
 {% highlight XAML %}
@@ -101,7 +101,7 @@ You can adjust the alignment of the UpDown buttons in the [NumericEntry](https:/
 
 N> By default, the `UpDownButtonAlignment` property is set to **Right**.  
 
-### UpDown button alignment to 'Left'
+### UpDown button alignment: Left
 
 {% tabs %}
 {% highlight XAML %}
@@ -124,7 +124,7 @@ sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Left;
 
 ![UpDown Alignment is left in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonAlignmentLeft.png)
 
-### UpDown button alignment to 'Both'
+### UpDown button alignment: Both
 
 {% tabs %}
 {% highlight XAML %}
