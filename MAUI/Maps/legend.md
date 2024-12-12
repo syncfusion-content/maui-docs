@@ -845,7 +845,7 @@ The `ItemsLayout` property is used to customize the arrangement and position of 
     </map:SfMaps.BindingContext>
             
     <map:SfMaps.Resources>
-        FlexLayout x:Key="legendLayout" 
+        <FlexLayout x:Key="legendLayout" 
                     HorizontalOptions="Start"
                     Margin="10"
                     Background="LightBlue"/>
