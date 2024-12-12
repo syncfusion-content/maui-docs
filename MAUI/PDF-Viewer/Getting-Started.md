@@ -45,7 +45,7 @@ Before proceeding, ensure the following are in place:
 
 ## Step 3: Register the Syncfusion® Core Handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) is a dependency for all MAUI Syncfusion® controls. This package will be automatically installed as a dependency when [Syncfusion.Maui.PdfViewer](https://www.nuget.org/packages/Syncfusion.Maui.PdfViewer) NuGet is installed. Register the Syncfusion. core handler in the `MauiProgram.cs` file.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) is a dependency for all MAUI Syncfusion® controls. This package will be automatically installed as a dependency when [Syncfusion.Maui.PdfViewer](https://www.nuget.org/packages/Syncfusion.Maui.PdfViewer) NuGet is installed. Register the Syncfusion® core handler in the `MauiProgram.cs` file.
 
 {% tabs %}
 {% highlight c# tabtitle="MauiProgram.cs" hl_lines="1 17" %}
