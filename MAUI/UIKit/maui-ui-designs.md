@@ -94,16 +94,16 @@ The Essential® UI Kit for .NET MAUI offers a collection of **87 screens**, orga
 ## Error and Empty	
 
 * [Empty Cart Page]()
-* [Location Denied Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/ErrorAndEmpty/LocationDeniedPage.xaml)
-* [No Credits Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/ErrorAndEmpty/NoCreditsPage.xaml)
-* [No Internet Connection Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/ErrorAndEmpty/NoInternetConnectionPage.xaml)
-* [No Item Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/ErrorAndEmpty/NoItemsPage.xaml)
-* [No Photos page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/ErrorAndEmpty/NoPhotosPage.xaml)
-* [No Tasks page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/ErrorAndEmpty/NoTasksPage.xaml)
-* [Not Enough Credits Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/ErrorAndEmpty/NotEnoughCreditsPage.xaml)
-* [No Videos Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/ErrorAndEmpty/NoVideosPage.xaml)
-* [Payment Failed Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/ErrorAndEmpty/PaymentFailedPage.xaml)
-* [Something Went Wrong Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/ErrorAndEmpty/SomethingWentWrongPage.xaml)
+* [Location Denied Page]()
+* [No Credits Page]()
+* [No Internet Connection Page]()
+* [No Item Page]()
+* [No Photos page]()
+* [No Tasks page]()
+* [Not Enough Credits Page]()
+* [No Videos Page]()
+* [Payment Failed Page]()
+* [Something Went Wrong Page]()
 
 ## Transaction	
 
