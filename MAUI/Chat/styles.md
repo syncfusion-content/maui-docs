@@ -616,7 +616,7 @@ You can style the elements of a date picker message by setting values to the in-
 </tr>
 <tr>
 <td> SfChatDateTimeInputMessageIconColor </td>
-<td> Icon background color for datetime input messsge. </td>
+<td> Icon color for datetime input messsge. </td>
 </tr>
 <tr>
 <td> SfChatDateTimeInputMessageIconBackground </td>
@@ -1193,12 +1193,12 @@ You can style the attachment button by setting values to the in-built keys of th
 <td> Hovered background color of the attachment button. </td>
 </tr>
 <tr>
-<td> SfChatHoveredAttachmentButtonColor </td>
-<td> Hovered color of the attachment button. </td>
-</tr>
-<tr>
 <td> SfChatPressedAttachmentBackground </td>
 <td> Pressed background color of the attachment button. </td>
+</tr>
+<tr>
+<td> SfChatHoveredAttachmentButtonColor </td>
+<td> Hovered color of the attachment button. </td>
 </tr>
 </table>
 
@@ -1253,11 +1253,11 @@ You can style the load more button by setting values to the in-built keys of the
 <td> Text color of the load more button. </td>
 </tr>
 <tr>
-<td> SfChatLoadMoreIndicatorColor </td>
-<td> Indicator color of the load more button. </td>
-</tr>
-<tr>
 <td> SfChatLoadMoreStroke </td>
 <td> Stroke color of the load more button. </td>
+</tr>
+<tr>
+<td> SfChatLoadMoreIndicatorColor </td>
+<td> Indicator color of the load more button. </td>
 </tr>
 </table>

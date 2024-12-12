@@ -2254,7 +2254,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
     <tr>
         <td> SfChatDateTimeInputMessageIconColor <br/><br/></td>
-        <td> Icon background color for datetime input messsge. <br/><br/></td>
+        <td> Icon color for datetime input messsge. <br/><br/></td>
     </tr>
     <tr>
        <td> SfChatDateTimeInputMessageIconBackground <br/><br/></td>
@@ -2471,12 +2471,12 @@ This page lists the keys for each control and the element to which it is mapped 
         <td> Hovered background color of the attachment button. <br/><br/></td>
     </tr>
     <tr>
-        <td> SfChatHoveredAttachmentButtonColor <br/><br/></td>
-        <td> Hovered color of the attachment button. <br/><br/></td>
-    </tr>
-    <tr>
         <td> SfChatPressedAttachmentBackground <br/><br/></td>
         <td> Pressed background color of the attachment button. <br/><br/></td>
+    </tr>
+        <tr>
+        <td> SfChatHoveredAttachmentButtonColor <br/><br/></td>
+        <td> Hovered color of the attachment button. <br/><br/></td>
     </tr>
     <!--Time break view-->
     <tr>
