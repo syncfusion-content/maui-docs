@@ -303,7 +303,7 @@ We can customize the format of a particular column using converter.
 
 {% tabs %}
 {% highlight C# tabtitle="Converter.cs" %}
-Public class SummaryConverter : IValueConverter
+public class SummaryConverter : IValueConverter
 {
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
@@ -484,7 +484,7 @@ The SfDataGrid allows you to set the [Aspect](https://help.syncfusion.com/cr/mau
                        AutoGenerateColumnsMode="None"
                        ItemsSource="{Binding OrderInfoCollection}">
     <syncfusion:SfDataGrid.Columns>
-        <sfGrid:DataGridImageColumn MappingName="DealerImage"
+        <syncfusion:DataGridImageColumn MappingName="DealerImage"
                                     Aspect="AspectFit" />
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
@@ -517,6 +517,7 @@ Underlying records will be the BindingContext for the `CellTemplate`.
 
 The `SfDataGrid` allows you to load any custom view in edit mode using the [EditTemplate]() property.
 
+{% tabs %}
 {% highlight xaml %}
     <ContentPage.Content>
         <syncfusion:SfDataGrid x:Name="dataGrid"
@@ -571,6 +572,7 @@ The `SfDataGrid` allows you to load any custom view in edit mode using the [Edit
         </syncfusion:SfDataGrid>
     </ContentPage.Content>
 {% endhighlight %}
+{% endtabs %}
 
 ### Load view through template selector
 
@@ -718,7 +720,7 @@ To load the `DataGridComboBoxColumn` with a simple string collection, you can re
     <sfGrid:SfDataGrid x:Name="dataGrid"
                        ItemsSource="{Binding OrderInfoCollection}">
         <sfGrid:SfDataGrid.Columns>
-            <sfgrid:DataGridComboBoxColumn BindingContext="{x:Reference viewModel}"
+            <sfGrid:DataGridComboBoxColumn BindingContext="{x:Reference viewModel}"
                                            HeaderText="Name"
                                            ItemsSource="{Binding CustomerNames}"
                                            MappingName="DealerName" />
@@ -858,7 +860,7 @@ The [IsEditableMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGri
     <sfGrid:SfDataGrid x:Name="dataGrid"
                        ItemsSource="{Binding OrderInfoCollection}">
         <sfGrid:SfDataGrid.Columns>
-            <sfgrid:DataGridComboBoxColumn BindingContext="{x:Reference viewModel}"
+            <sfGrid:DataGridComboBoxColumn BindingContext="{x:Reference viewModel}"
                                            HeaderText="Name"
                                            IsEditableMode="True"
                                            ItemsSource="{Binding CustomerNames}"
@@ -897,7 +899,7 @@ By default, the auto-suggestion in the dropdown will display values based on the
     <sfGrid:SfDataGrid x:Name="dataGrid"
                        ItemsSource="{Binding OrderInfoCollection}">
         <sfGrid:SfDataGrid.Columns>
-            <sfgrid:DataGridComboBoxColumn BindingContext="{x:Reference viewModel}"
+            <sfGrid:DataGridComboBoxColumn BindingContext="{x:Reference viewModel}"
                                            HeaderText="Name"
                                            IsEditableMode="True"
                                            SuggestionMode="Contains"
@@ -938,7 +940,7 @@ The ComboBox control includes a clear button that allows users to easily remove 
     <sfGrid:SfDataGrid x:Name="dataGrid"
                        ItemsSource="{Binding OrderInfoCollection}">
         <sfGrid:SfDataGrid.Columns>
-            <sfgrid:DataGridComboBoxColumn BindingContext="{x:Reference viewModel}"
+            <sfGrid:DataGridComboBoxColumn BindingContext="{x:Reference viewModel}"
                                            HeaderText="Name"
                                            IsEditableMode="True"
                                            ShowClearButton="False"

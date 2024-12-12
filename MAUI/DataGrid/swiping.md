@@ -192,6 +192,7 @@ The swipe templates can be customized by loading any view into the templates and
                 </DataTemplate>
             </syncfusion:SfDataGrid.LeftSwipeTemplate>
         </syncfusion:SfDataGrid>
+    </ContentPage.Content>
 {% endhighlight %}
 {% highlight c# %}
 public partial class MainPage : ContentPage
@@ -376,6 +377,8 @@ The datagrid allows you to swipe the data rows, even when we have a complex temp
                     </Grid>
                 </DataTemplate>
             </syncfusion:DataGridTemplateColumn.CellTemplate>
+        </syncfusion:DataGridTemplateColumn>
+    </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% endtabs %}
