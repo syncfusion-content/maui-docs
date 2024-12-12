@@ -334,7 +334,7 @@ this.Content = calendar;
 <tr>
 <td>{{'[Locale](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_Locale)'| markdownify }}</td>
 <td>Nil</td>
-<td>Refer to this {{'[link](https://help.syncfusion.com/maui/calendar/localization)' | }} for using localization in .NET MAUI Calendar</td>
+<td>Refer to this {{'[link](https://help.syncfusion.com/maui/calendar/localization)' | markdownify }} for using localization in .NET MAUI Calendar</td>
 </tr>
 <tr>
 <td>{{'[MaxDate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfCalendar.XForms.SfCalendar.html#Syncfusion_SfCalendar_XForms_SfCalendar_MaxDate)'| markdownify }}</td>
