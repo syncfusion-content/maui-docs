@@ -1,15 +1,15 @@
 ---
 layout: post
-title: .NET MAUI Essential® UI Kit Licensing | Syncfusion®
-description: Learn here about Syncfusion® .NET MAUI Essential® UI Kit license key, how to generate the license key, how to register the license key, and more details.
+title: Essential® UI Kit for .NET MAUI Licensing | Syncfusion®
+description: Learn here about Syncfusion® Essential® UI Kit for .NET MAUI license key, how to generate the license key, how to register the license key, and more details.
 platform: maui
-control: .NET MAUI Essential® UI Kit
+control: Essential® UI Kit for .NET MAUI
 documentation: ug
 ---
 
-# Licensing in .NET MAUI Essential® UI Kit
+# Licensing in Essential® UI Kit for .NET MAUI
 
-.NET MAUI Essential® UI Kit source code published in GitHub with an MIT license. You can use this UI Kit pages in your application for free without any restrictions. You can find the GitHub link as follows.
+Essential® UI Kit for .NET MAUI source code published in GitHub with an MIT license. You can use this UI Kit pages in your application for free without any restrictions. You can find the GitHub link as follows.
 
 [https://github.com/syncfusion/essential-ui-kit-for-.net-maui](https://github.com/syncfusion/essential-ui-kit-for-.net-maui)
 
