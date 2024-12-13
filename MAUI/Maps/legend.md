@@ -834,7 +834,7 @@ public class Model
 
 ## Customize items layout
 
-The `ItemsLayout` property is used to customize the arrangement and position of each legend item. The default value is null. This property accepts any layout type.
+The [`ItemsLayout`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_ItemsLayout) property is used to customize the arrangement and position of each legend item. The default value is null. This property accepts any layout type.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1005,7 +1005,7 @@ public class Model
 
 ## Customize items template
 
-You can customize the appearance of legend items with your template by using `ItemTemplate` property of `MapLegend`.
+You can customize the appearance of legend items with your template by using [`ItemTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_ItemTemplate) property of [`MapLegend`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html).
 
 {% tabs %}
 {% highlight xaml %}
@@ -1094,7 +1094,7 @@ You can customize the appearance of legend items with your template by using `It
 {% endhighlight %}
 {% endtabs %}
 
-N> The BindingContext of the ItemTemplate is the corresponding underlying legend item provided in the MapLegend class.
+N> The BindingContext of the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_ItemTemplate) is the corresponding underlying legend item provided in the [MapLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html) class.
 
 ![Legend template](images/legend/legend-template.png ){:width="313" height="480"  loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
 

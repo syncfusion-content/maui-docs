@@ -1,11 +1,17 @@
 ---
 layout: post
+
 title: .NET MAUI Essential UI Kit | MAUI | Syncfusion
 description: The Syncfusion .NET MAUI Essential UI Kit extension provides the predefined design Screens for the MAUI Apps.
+
+title: Essential® UI Kit for .NET MAUI | MAUI | Syncfusion®
+description: The Syncfusion® Essential® UI Kit for .NET MAUI extension provides the predefined design Screens for the MAUI Apps.
+
 platform: maui
 control: Syncfusion Extensions
 documentation: ug
 ---
+
 
 # .NET MAUI Essential UI Kit
 
@@ -15,16 +21,29 @@ documentation: ug
 
 To get started with the .NET MAUI Essential UI Kit, first install the appropriate extension in Visual Studio by downloading it from the marketplace. As a result, you’ll be able to access and utilize the Syncfusion® Extension directly from the Syncfusion® menu within your project
 
-[Visual Studio 2022](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.MAUI-UI-Kit-VSExtension)
+# Essential® UI Kit for .NET MAUI
+
+Essential® UI Kit for .NET MAUI for MAUI comes with ready-to-use XAML templates, enabling you to effortlessly design user interfaces for cross-platform applications. With a clear separation of the View, View Model, and Model classes, which makes the integration of your business logic and making changes to existing views simple.
+
+## Installation of Essential® UI Kit for .NET MAUI Extension
+
+To get started with the Essential® UI Kit for .NET MAUI, first install the appropriate extension in Visual Studio by downloading it from the marketplace. As a result, you’ll be able to access and utilize the Syncfusion® Extension directly from the Syncfusion® menu within your project
+
+
+[Visual Studio 2022]()
 
 
 ## Include XAML templates in MAUI apps
 
 1.	Launch a new or existing MAUI application.
 
+
 2.	Select the **.NET MAUI Essential UI Kit** from the **Solution Explorer** by right-clicking on your **MAUI** project
 
-	![Syncfusion .NET MAUI Essential UI Kit Context menu in MAUI](Essential_UI_Kit_images/visual-studio-intergration-context-menu.png)
+2.	Select the **Essential® UI Kit for .NET MAUI** from the **Solution Explorer** by right-clicking on your **MAUI** project
+
+
+	![Syncfusion Essential UI Kit for .NET MAUI Context menu in MAUI](Essential_UI_Kit_images/visual-studio-intergration-context-menu.png)
 
 	N> The .NET MAUI Essential UI Kit add-in will be shown when the project has the MAUI NuGet package as a reference and also, MAUI project should be a NET Standard project.
 
@@ -55,13 +74,13 @@ To set your preferred UI Template as the start page of your application, simply 
 Example: If you added Login With Social Icon Page,
 
 {% tabs %}
-{% highlight .NET 8 hl_lines="3" %}
+{% highlight C# hl_lines="4 10" %}
+
+// For NET 8 Use this Below Code Snippet
 
 MainPage = new LoginWithSocialIcon();
 
-{% endhighlight %}
-
-{% highlight .NET 9 hl_lines="3" %}
+// For NET 9 Use this Below Code Snippet
 
 protected override Window CreateWindow(IActivationState? activationState)
 {
