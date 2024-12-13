@@ -696,7 +696,7 @@ public class CustomRowSelectionController : DataGridRowSelectionController
     public CustomRowSelectionController(SfDataGrid dataGrid) : base(dataGrid)
     {
     }
-    protected override void KeyBehaviorChange(KeyEventArgs args, bool isCtrlKeyPressed, bool isShiftKeyPressed)
+    protected override void ProcessKeyDown(KeyEventArgs args, bool isCtrlKeyPressed, bool isShiftKeyPressed)
     {
         if (args.Key == KeyboardKey.Enter)
         {
@@ -733,7 +733,7 @@ public class CustomRowSelectionController : DataGridRowSelectionController
     public CustomRowSelectionController(SfDataGrid dataGrid) : base(dataGrid)
     {
     }
-    protected override void KeyBehaviorChange(KeyEventArgs args, bool isCtrlKeyPressed, bool isShiftKeyPressed)
+    protected override void ProcessKeyDown(KeyEventArgs args, bool isCtrlKeyPressed, bool isShiftKeyPressed)
     {
         if (args.Key == KeyboardKey.Enter)
         {
