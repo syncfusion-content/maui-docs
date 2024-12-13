@@ -20,7 +20,7 @@ Alternatively, you can replace the Syncfusion® controls with the framework cont
 
 For more details about the Essential® UI Kit license, please refer to the following link.
 
-[https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/LICENSE](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/LICENSE)
+[https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/LICENSE.txt](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/LICENSE.txt)
 
 Regarding the Syncfusion® licenses, please refer to the following link.
 
