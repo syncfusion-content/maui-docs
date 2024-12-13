@@ -358,13 +358,13 @@ comboBox.IsDropDownOpen = true;
 {% endhighlight %}
 {% endtabs %}
 
-### Clear Selected Items
+## Clear Selected Items
 
-You can remove all selected items using the **Clear** method.
+Users can remove selected items and input text using the **Clear** method in the ComboBox control.
 
 {% tabs %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# %}
 
 comboBox.Clear();
 
