@@ -47,9 +47,7 @@ N> The **Essential® UI Kit for .NET MAUI** add-in will be shown when the projec
 
 9. Clicking the 'Add' button will include the selected page to your project. The necessary class files, resources, and NuGet package references will automatically be added to your project as shown in the following screenshot.
 
-   ![Visual Studio Ui Kit Resources](UI-Kit-images/Essential_UIKit_Resources.png)
-   ![Visual Studio Ui Kit Resources](UI-Kit-images/Essential_UIKit_Nuget_Packages.png)
-   ![Visual Studio Ui Kit Resources](UI-Kit-images/Essential_UIKit_ClassFiles.png)
+   ![Visual Studio Ui Kit Files](UI-Kit-images/Essential_UIKit_Files.png)
 
 ## How to Render the Added Page?
 
