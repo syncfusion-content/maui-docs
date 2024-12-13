@@ -13,7 +13,7 @@ There are two ways for including the UI Kit screens into your application:
 
 1. Using the Visual Studio extension's **Essential® UI Kit for .NET MAUI**.
 
-2. Copying the files from our [GitHub repository](), which is open source.
+2. Copying the files from our [GitHub repository](https://github.com/syncfusion/essential-ui-kit-for-.net-maui), which is open source.
 
 
 ## Essential® UI Kit for .NET MAUI Extension
@@ -55,6 +55,7 @@ N> The **Essential® UI Kit for .NET MAUI** add-in will be shown when the projec
 
 In a MAUI demo application, to set the added page as the startup page, you need to define it in the **App.xaml.cs** file. For instance, if you’ve added the **Login with Social Icon Page**, you can set it as the startup page using the following code snippet:
 
+{% tabs %}
 {% highlight C# hl_lines="4 10" %}
 
 // For NET 8 Use this Below Code Snippet
@@ -69,6 +70,7 @@ protected override Window CreateWindow(IActivationState? activationState)
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 In real-world applications, you may need to do the following to use these XAML pages:
 1. Update the services to fetch data from a remote server or local database.

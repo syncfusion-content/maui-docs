@@ -638,7 +638,6 @@ N> For more information about selection check [here](https://help.syncfusion.com
 * Support to enable or disable the legend icon visibility.
 * Legend floating support.
 * Event or method to notify when a legend item is clicked.
-* The ability to show/hide corresponding data points by legend item toggle.
 
 ## Known issue 
 
