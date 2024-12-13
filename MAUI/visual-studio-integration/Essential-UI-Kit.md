@@ -55,13 +55,17 @@ To set your preferred UI Template as the start page of your application, simply 
 Example: If you added Login With Social Icon Page,
 
 {% tabs %}
-{% highlight NET 8 hl_lines="3" %}
+{% highlight C# hl_lines="3" %}
+
+// For NET 8 Use this Below Code Snippet:
 
 MainPage = new LoginWithSocialIcon();
 
 {% endhighlight %}
 
-{% highlight NET 9 hl_lines="3" %}
+{% highlight hl_lines="3" %}
+
+// For NET 9 Use this Below Code Snippet:
 
 protected override Window CreateWindow(IActivationState? activationState)
 {
