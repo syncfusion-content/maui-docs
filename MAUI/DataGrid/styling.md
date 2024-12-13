@@ -501,7 +501,7 @@ public partial class MainPage : ContentPage
 
 ## Changing the border color
 
-The grid line color of column header and data row cells can be customized by setting [DataGridStyle.GridLineColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_GridLineColorProperty) and `DataGridStyle.HeaderGridLineColor` properties.
+The grid line color of column header and data row cells can be customized by setting [DataGridStyle.GridLineColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_GridLineColorProperty) and [DataGridStyle.HeaderGridLineColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_HeaderGridLineColor) properties.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -530,7 +530,7 @@ dataGrid.DefaultStyle = defaultsyle;
 
 ## Changing the border width
 
-The grid line stroke thickness of column header and data row cells can be customized by setting [DataGridStyle.GridLineStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_GridLineStrokeThicknessProperty) and `DataGridStyle.HeaderGridLineStrokeThickness` properties. 
+The grid line stroke thickness of column header and data row cells can be customized by setting [DataGridStyle.GridLineStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_GridLineStrokeThicknessProperty) and [DataGridStyle.HeaderGridLineStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_HeaderGridLineStrokeThickness) properties. 
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}

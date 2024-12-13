@@ -10,11 +10,11 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 # Swiping in MAUI DataGrid (SfDataGrid)
 
-The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) enables the swiping option by setting the `SfDataGrid.AllowSwiping` property to `true`. Swipe views are displayed when swiping from `left to right` or `right to left` on a data row. The control provides customizable swipe templates for both the left and right sides. Additionally, the swipe gesture can be restricted to a certain point on the row by setting the `SfDataGrid.MaxSwipeOffset` property.
+The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) enables the swiping option by setting the [SfDataGrid.AllowSwiping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowSwiping) property to `true`. Swipe views are displayed when swiping from `left to right` or `right to left` on a data row. The control provides customizable swipe templates for both the left and right sides. Additionally, the swipe gesture can be restricted to a certain point on the row by setting the [SfDataGrid.MaxSwipeOffset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_MaxSwipeOffset) property.
 
 ## Swipe template
 
-The data grid allows for loading desired content using the `SfDataGrid.LeftSwipeTemplate` when swiping to the right. The template can be defined either in code or XAML. The content within the swipe template is arranged according to the offset values when swiping a data row.
+The data grid allows for loading desired content using the [SfDataGrid.LeftSwipeTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_LeftSwipeTemplate) when swiping to the right. The template can be defined either in code or XAML. The content within the swipe template is arranged according to the offset values when swiping a data row.
 
 {% tabs %}
 {% highlight XAML %}
@@ -115,22 +115,24 @@ The data grid allows for loading desired content using the `SfDataGrid.LeftSwipe
 
 <img alt="DataGrid with swiping" src="Images\swiping\maui-datagrid-swipe-template.png" width="404"/>
 
-N> Similarly, the desired content can be loaded using the `SfDataGrid.RightSwipeTemplate` when swiping to the left.
+N> Similarly, the desired content can be loaded using the [SfDataGrid.RightSwipeTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_RightSwipeTemplate) when swiping to the left.
 
 N> The `DataTemplateSelector` can be directly assigned to both the `SfDataGrid.RightSwipeTemplate` and the `SfDataGrid.LeftSwipeTemplate`. You can load the appropriate template based on the RowData and the row element provided in the event arguments.
 
 ## Swipe events
 
-`SwipeStarting`: Raised when the swipe offset changes from its initial value. The swipe action can be canceled by setting the `Cancel` property of the `DataGridSwipeStartingEventArgs` to `true`.
-`SwipeEnded`: The event is triggered when the swipe offset value reaches `SfDataGrid.MaxSwipeOffset`, indicating that the swipe action is complete. This event is triggered with `DataGridSwipeEndedEventArgs`.
-`Swiping`: The event is raised while a row is being swiped. This event is triggered with `DataGridSwipingEventArgs`.
+[SwipeStarting](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SwipeStarting): Raised when the swipe offset changes from its initial value. The swipe action can be canceled by setting the `Cancel` property of the [DataGridSwipeStartingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSwipeStartingEventArgs.html) to `true`.
+
+[SwipeEnded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SwipeEnded): The event is triggered when the swipe offset value reaches `SfDataGrid.MaxSwipeOffset`, indicating that the swipe action is complete. This event is triggered with [DataGridSwipeEndedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSwipeEndedEventArgs.html).
+
+`Swiping`: The event is raised while a row is being swiped. This event is triggered with [DataGridSwipingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSwipingEventArgs.html#properties).
 
 The swipe events provide the following properties in their arguments:
 
-* `RowIndex`: Defines the index of the swiping row.
-* `RowData`: Defines the underlying data associated with the swiped row as its argument.
-* `SwipeDirection`: Defines the swipe direction of the swiped row.
-* `SwipeOffset`: Defines the current swipe offset of the row that is being swiped.
+* [RowIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSwipingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridSwipingEventArgs_RowIndex): Defines the index of the swiping row.
+* [RowData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSwipingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridSwipingEventArgs_RowData): Defines the underlying data associated with the swiped row as its argument.
+* [SwipeDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSwipingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridSwipingEventArgs_SwipeDirection): Defines the swipe direction of the swiped row.
+* [SwipeOffset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSwipingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridSwipingEventArgs_SwipeOffset): Defines the current swipe offset of the row that is being swiped.
 
 By handling the swipe events, you can use the values of these properties from the arguments to perform any desired actions, such as deleting a row or editing the data, etc. 
 
@@ -387,7 +389,7 @@ The datagrid allows you to swipe the data rows, even when we have a complex temp
 
 ## Cancel the swipe programmatically
 
-The data grid allows you to cancel the swipe programmatically by calling the `SfDataGrid.ResetSwipeOffset` method in the `SfDataGrid.SwipeEnded` event.
+The data grid allows you to cancel the swipe programmatically by calling the [SfDataGrid.ResetSwipeOffset()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ResetSwipeOffset) method in the [SfDataGrid.SwipeEnded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SwipeOffsetMode) event.
 
 {% tabs %}
 {% highlight XAML %}
@@ -435,7 +437,7 @@ private void dataGrid_SwipeEnded(object sender, Syncfusion.Maui.DataGrid.DataGri
 
 ## Set MaxSwipeOffset based on content size
 
-Users can restrict the max swipe offset of a row to the width of the content loaded inside the swipe template by setting the `SfDataGrid.SwipeOffsetMode` as `SwipeOffsetMode.Auto`. The default value of the `SwipeOffsetMode` is `SwipeOffsetMode.Custom`.
+Users can restrict the max swipe offset of a row to the width of the content loaded inside the swipe template by setting the [SfDataGrid.SwipeOffsetMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SwipeOffsetMode) as [SwipeOffsetMode.Auto](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSwipeOffsetMode.html#Syncfusion_Maui_DataGrid_DataGridSwipeOffsetMode_Auto). The default value of the `SwipeOffsetMode` is [SwipeOffsetMode.Custom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSwipeOffsetMode.html#Syncfusion_Maui_DataGrid_DataGridSwipeOffsetMode_Custom).
 
 {% tabs %}
 {% highlight XAML %}
