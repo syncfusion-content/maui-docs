@@ -37,7 +37,7 @@ The Essential® UI Kit for .NET MAUI offers a collection of **87 screens**, orga
 
 ## Detail	
 
-* [Product Detail Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Detail/DetailPage.xaml)
+* [Product Detail Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Detail/ProductDetailPage.xaml)
 * [Article Detail Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Detail/ArticleDetailPage.xaml)
 * [Event Detail Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Detail/EventDetailPage.xaml)
 * [Data Table Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Detail/DataTablePage.xaml)
@@ -114,9 +114,9 @@ The Essential® UI Kit for .NET MAUI offers a collection of **87 screens**, orga
 
 ## Bookmark
 
-* [Wishlist Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Bookmarks/WishlistPage.xaml)
-* [Cart Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Bookmarks/CartPage.xaml)
-* [Article Bookmarks Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Bookmarks/ArticleBookmarkPage.xaml)
+* [Wishlist Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Bookmark/WishlistPage.xaml)
+* [Cart Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Bookmark/CartPage.xaml)
+* [Article Bookmarks Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Bookmark/ArticleBookmarkPage.xaml)
 
 ## History	
 
@@ -126,9 +126,9 @@ The Essential® UI Kit for .NET MAUI offers a collection of **87 screens**, orga
 ## Social
 
 * [Social Profile with Connections Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Social/SocialProfileWithConnectionsPage.xaml)
-* [Social Profile with Card Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Social/SocialProfileWithCardPage.xaml)
-* [Social Profile with Interest Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Social/SocialProfileWithInterestPage.xaml)
-* [Social Profile with Message Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Social/SocialProfileWithMessagePage.xaml)
+* [Social Profile with Card Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Social/SocialProfileWithCard.xaml)
+* [Social Profile with Interest Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Social/SocialProfileWithInterest.xaml)
+* [Social Profile with Message Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Social/SocialProfileWithMessage.xaml)
 
 ## Profile
 
