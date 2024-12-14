@@ -304,7 +304,7 @@ SfCheckBox checkBox = new SfCheckBox
 {% endtabs %}
 
 ## Content spacing
-The `ContentSpacing` property is used to adjust the content spacing in the [`SfCheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control.
+The [ContentSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_ContentSpacing) property is used to adjust the content spacing in the [`SfCheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control.
 
 {% tabs %}
 {% highlight xaml %}
