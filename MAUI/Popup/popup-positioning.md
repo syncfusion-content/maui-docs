@@ -162,7 +162,7 @@ The [StartX](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.h
   </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 private void ClickToShowPopup_Clicked(object sender, EventArgs e)
 {
   sfPopup.IsOpen = true;	
