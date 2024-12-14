@@ -40,7 +40,7 @@ To get started with the Essential® UI Kit for .NET MAUI, first install the appr
 
 6.	The selected pages will be added along with View, View Model, Model classes, resource files and Syncfusion NuGet package reference,
 
-	![MVVM files in MAUI Visual Studio Intergration](Essential_UI_Kit_images/visual-studio-intergration-mvvm-files.png)
+	![Added MVVM files in MAUI Visual Studio Intergration](Essential_UI_Kit_images/visual-studio-intergration-mvvm-files.png)
 
 	![Added NuGet in MAUI Visual Studio Intergration](Essential_UI_Kit_images/visual-studio-intergration-nuget.png)
 
@@ -55,7 +55,7 @@ To set your preferred UI Template as the start page of your application, simply 
 Example: If you added Login With Social Icon Page,
 
 {% tabs %}
-{% highlight C# hl_lines="4 10" %}
+{% highlight C# hl_lines="3 9" %}
 
 // For NET 8 Use this Below Code Snippet
 
