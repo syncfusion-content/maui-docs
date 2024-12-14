@@ -54,7 +54,7 @@ N> The **Essential® UI Kit for .NET MAUI** add-in will be shown when the projec
 In a MAUI demo application, to set the added page as the startup page, you need to define it in the **App.xaml.cs** file. For instance, if you’ve added the **Login with Social Icon Page**, you can set it as the startup page using the following code snippet:
 
 {% tabs %}
-{% highlight C# hl_lines="4 10" %}
+{% highlight C# hl_lines="3 9" %}
 
 // For NET 8 Use this Below Code Snippet
 
