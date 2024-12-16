@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Save a Document in .NET MAUI PDF Viewer control | Syncfusion
-description: Learn here all about saving a PDF document in Syncfusion .NET MAUI PDF Viewer (SfPdfViewer) control to prevent the work from being lost.
+description: Learn here all about saving a PDF document in Syncfusion® .NET MAUI PDF Viewer (SfPdfViewer) control to prevent the work from being lost.
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
