@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Shape Annotations in .NET MAUI PDF Viewer control | Syncfusion®
+title: Shape Annotations in .NET MAUI PDF Viewer control | Syncfusion
 description: Learn here all about Shape Annotations in Syncfusion® .NET MAUI PDF Viewer (SfPdfViewer) control and its types.
 platform: MAUI
 control: SfPdfViewer

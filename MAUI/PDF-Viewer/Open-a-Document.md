@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open a Document in .NET MAUI PDF Viewer control | Syncfusion®
+title: Open a Document in .NET MAUI PDF Viewer control | Syncfusion
 description: Learn here all about opening a PDF document in Syncfusion® .NET MAUI PDF Viewer (SfPdfViewer) control and more.
 platform: MAUI
 control: SfPdfViewer

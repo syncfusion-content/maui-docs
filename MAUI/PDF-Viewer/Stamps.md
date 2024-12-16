@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Stamp Annotations in .NET MAUI PDF Viewer control | Syncfusion®
+title: Stamp Annotations in .NET MAUI PDF Viewer control | Syncfusion
 description: Learn here all about Stamp Annotations in Syncfusion® .NET MAUI PDF Viewer (SfPdfViewer) control and its types.
 platform: MAUI
 control: SfPdfViewer

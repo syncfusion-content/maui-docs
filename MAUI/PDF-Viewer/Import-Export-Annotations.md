@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Import and Export annotations in .NET MAUI PDF Viewer | Syncfusion®
+title: Import and Export annotations in .NET MAUI PDF Viewer | Syncfusion
 description: Learn here all about importing and exporting annotations using Syncfusion® .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: MAUI
 control: SfPdfViewer

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Document link navigation in .NET MAUI PDF Viewer control | Syncfusion®
+title: Document link navigation in .NET MAUI PDF Viewer control | Syncfusion
 description: Learn here about document link navigation in Syncfusion® .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: MAUI
 control: SfPdfViewer
