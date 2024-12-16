@@ -482,19 +482,22 @@ tabView.IsScrollButtonEnabled = true;
 
 ### Scroll button customization
 
-The [ScrollButtonBackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ScrollButtonBackgroundColor) and [ScrollButtonForegroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ScrollButtonForegroundColor) property of [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1) allows users to customize the background color and foreground color of scroll button.
+The [ScrollButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ScrollButtonBackground) and [ScrollButtonColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ScrollButtonColor) property of [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1) allows users to customize the background color and foreground color of scroll button.
 
 {% tabs %}
 
 {% highlight xaml %}
-    <tabView:SfTabView ScrollButtonBackgroundColor="Violet"
-                       ScrollButtonForegroundColor="Red">
-     </tabView:SfTabView>
+<tabView:SfTabView ScrollButtonBackground="Violet" ScrollButtonColor="Red">
+</tabView:SfTabView>
 {% endhighlight %}
 
 {% highlight C# %}
-     tabView.ScrollButtonBackgroundColor = "Violet";
-     tabView.ScrollButtonForegroundColor = "Red";
+StackLayout stackLayout = new StackLayout();
+var tabView = new SfTabView();
+tabView.ScrollButtonBackground = SolidColorBrush.Violet;
+tabView.ScrollButtonColor = Colors.Red;
+stackLayout.Children.Add(tabView);
+this.Content = stackLayout;
 {% endhighlight %}
 
 {% endtabs %}
@@ -535,6 +538,35 @@ You can customize the animation duration when changing the [SelectedIndex](https
 {% highlight C# %}
 var tabView = new SfTabView();
 tabView.ContentTransitionDuration = 300;
+{% endhighlight %}
+
+{% endtabs %}
+
+## Image size
+
+You can customize the image size in the .NET MAUI TabView control by setting the [ImageSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_ImageSize) property.
+
+{% tabs %}
+
+{% highlight xaml %}
+<tabView:SfTabView>
+    <tabView:SfTabItem ImageSize="50"/>
+</tabView:SfTabView>
+{% endhighlight %}
+
+{% highlight C# %}
+StackLayout stackLayout = new StackLayout();
+var tabView = new SfTabView();
+var tabItems = new TabItemCollection
+{
+    new SfTabItem()
+    {
+        ImageSize = 50,
+    }
+};
+tabView.Items = tabItems;
+stackLayout.Children.Add(tabView);
+this.Content = stackLayout;
 {% endhighlight %}
 
 {% endtabs %}

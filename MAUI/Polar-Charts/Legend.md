@@ -357,15 +357,15 @@ An [ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Char
     <chart:SfPolarChart.Legend>
         <chart:ChartLegend>
             <chart:ChartLegend.ItemsLayout>
-                    <FlexLayout  HorizontalOptions="Start" 
-                                 Margin="10"
-                                 WidthRequest="{Binding Width, Source={x:Reference Chart1}}">
+                    <FlexLayout HorizontalOptions="Start" 
+                                Margin="10"
+                                WidthRequest="{Binding Width, Source={x:Reference Chart1}}">
                     </FlexLayout>
             </chart:ChartLegend.ItemsLayout>
         </chart:ChartLegend>
     </chart:SfPolarChart.Legend>
 
-    <chart:PolarAreaSeries ItemsSource="{Binding  PlantDetails}" 
+    <chart:PolarAreaSeries ItemsSource="{Binding PlantDetails}" 
                            XBindingPath="Direction"
                            YBindingPath="Tree"
                            Label="Tree"/>

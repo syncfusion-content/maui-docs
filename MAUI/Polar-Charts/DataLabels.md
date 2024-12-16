@@ -80,6 +80,7 @@ The [UseSeriesPalette](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chart
 
 SfPolarChart chart = new SfPolarChart();
 PolarLineSeries series = new PolarLineSeries();
+series.ShowDataLabels = true;
 . . .
 series.DataLabelSettings = new PolarDataLabelSettings()
 {

@@ -395,3 +395,17 @@ autocomplete.IsDropDownOpen = true;
 
 {% endhighlight %}
 {% endtabs %}
+
+
+## Clear Selected Items
+
+Users can remove selected items and input text using the **Clear** method in the Autocomplete control.
+
+{% tabs %}
+
+{% highlight C# %}
+
+autocomplete.Clear();
+
+{% endhighlight %}
+{% endtabs %}

@@ -47,6 +47,8 @@ You can increase or decrease the value of the `NumericEntry` control using the u
 
 N> When using the up-down button, the `NumericEntry` control value changes based on the value of the `SmallChange` property.
 
+### UpDown button placement: Inline
+
 {% tabs %}
 {% highlight XAML %}
 
@@ -69,6 +71,8 @@ sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
 
 ![UpDown Placement in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonPlacement.gif)
 
+### UpDown button placement: InlineVertical
+
 {% tabs %}
 {% highlight XAML %}
 
@@ -90,6 +94,58 @@ sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.InlineVerti
 {% endtabs %}
 
 ![UpDown Vertical Placement in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonPlacementVertical.png)
+
+## UpDown button alignment
+
+You can adjust the alignment of the UpDown buttons in the [NumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control using the **UpDownButtonAlignment** property. Set its value to **Left**, **Right**, or **Both** to position the buttons on the left, right, or both sides of the entry field, respectively.
+
+N> By default, the `UpDownButtonAlignment` property is set to **Right**.  
+
+### UpDown button alignment: Left
+
+{% tabs %}
+{% highlight XAML %}
+
+<editors:SfNumericEntry Value="123" HorizontalTextAlignment="End" 
+                        UpDownPlacementMode="Inline" 
+                        UpDownButtonAlignment="Left"/>
+                     
+{% endhighlight %}
+{% highlight c# %}
+
+SfNumericEntry sfNumericEntry = new SfNumericEntry();
+sfNumericEntry.Value = 123;
+sfNumericEntry.HorizontalTextAlignment=TextAlignment.End;
+sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
+sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Left;
+
+{% endhighlight %}
+{% endtabs %}
+
+![UpDown Alignment is left in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonAlignmentLeft.png)
+
+### UpDown button alignment: Both
+
+{% tabs %}
+{% highlight XAML %}
+
+<editors:SfNumericEntry Value="123" HorizontalTextAlignment="Center" 
+                        UpDownPlacementMode="Inline" 
+                        UpDownButtonAlignment="Both"/>
+                     
+{% endhighlight %}
+{% highlight c# %}
+
+SfNumericEntry sfNumericEntry = new SfNumericEntry();
+sfNumericEntry.Value = 123;
+sfNumericEntry.HorizontalTextAlignment=TextAlignment.Center;
+sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
+sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Both;
+
+{% endhighlight %}
+{% endtabs %}
+
+![UpDown Alignment is Both in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonAlignmentBoth.png)
 
 ## UpDown button customization
 

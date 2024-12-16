@@ -350,7 +350,7 @@ To customize the data label appearance, create an instance of the [ChartDataMark
                                                 Angle="315"
                                                 Margin="5" 
                                                 FontSize="18" 
-                            FontAttributes="Italic"/>
+                                                FontAttributes="Italic"/>
                 </chart:ChartDataMarker.LabelStyle>
             </chart:ChartDataMarker>
 	</chart:PyramidSeries.DataMarker>
@@ -616,7 +616,6 @@ this.Content = chart;
 * Support to enable or disable the legend icon visibility.
 * Legend floating support.
 * Event or method to notify when a legend item is clicked.
-* The ability to show/hide corresponding data points by legend item toggle.
 
 **Data label**
 

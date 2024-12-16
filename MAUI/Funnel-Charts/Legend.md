@@ -145,8 +145,9 @@ To specify the legend icon based on the associated series type, use the [LegendI
 {% highlight xaml %}
 
 <chart:SfFunnelChart ItemsSource="{Binding Data}" 
-                     XBindingPath="XValue"  LegendIcon="Diamond"
-                     YBindingPath="YValue">
+                     XBindingPath="XValue"
+                     YBindingPath="YValue"
+                     LegendIcon="Diamond">
     <chart:SfFunnelChart.Legend>
         <chart:ChartLegend/>
     </chart:SfFunnelChart.Legend>

@@ -7,6 +7,8 @@ control: SfPyramidChart
 documentation: ug
 ---
 
+> **Notice**: After **Volume 1 2025 (Mid of March 2025)**, updates, bug fixes, and feature enhancements for this control will no longer be available in the Syncfusion package. Please switch to the **Syncfusion Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
+
 # Getting Started with .NET MAUI Chart(SfPyramidChart)
 
 This section explains how to populate the pyramid chart with data, a title, data labels, a legend, and tooltips, as well as the essential aspects for getting started with the pyramid chart.
@@ -138,7 +140,7 @@ N> Add the namespace of `StageViewModel` class to your XAML Page, if you prefer 
 
 {% tabs %} 
 
-{% highlight xaml %} 
+{% highlight xaml %}
 
 <ContentPage
     . . .
@@ -154,7 +156,7 @@ N> Add the namespace of `StageViewModel` class to your XAML Page, if you prefer 
 
 {% endhighlight %}
 
-{% highlight C# %} 
+{% highlight C# %}
 
 SfPyramidChart chart = new SfPyramidChart();
 StageViewModel viewModel = new StageViewModel();
@@ -309,23 +311,32 @@ The following code example gives you the complete code of above configurations.
 
 {% highlight xaml %}
 
-<chart:SfPyramidChart ItemsSource="{Binding Data}" 
-                      ShowDataLabels="True" 
-                      EnableTooltip="True"
-                      XBindingPath="Name"         
-                      YBindingPath="Value">
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ChartGettingStarted.MainPage"
+    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+    xmlns:model="clr-namespace:ChartGettingStarted">
 
-    <chart:SfPyramidChart.Title>
-        <Label Text="Pyramid Stages"/>
-    </chart:SfPyramidChart.Title>
+    <chart:SfPyramidChart ItemsSource="{Binding Data}" 
+                          ShowDataLabels="True" 
+                          EnableTooltip="True"
+                          XBindingPath="Name"         
+                          YBindingPath="Value">
 
-    <chart:SfPyramidChart.BindingContext>
-        <model:StageViewModel/>
-    </chart:SfPyramidChart.BindingContext>
+        <chart:SfPyramidChart.Title>
+            <Label Text="Pyramid Stages"/>
+        </chart:SfPyramidChart.Title>
 
-    <chart:SfPyramidChart.Legend>
-        <chart:ChartLegend/>
-    </chart:SfPyramidChart.Legend>
+        <chart:SfPyramidChart.BindingContext>
+            <model:StageViewModel/>
+        </chart:SfPyramidChart.BindingContext>
+
+        <chart:SfPyramidChart.Legend>
+            <chart:ChartLegend/>
+        </chart:SfPyramidChart.Legend>
+        
+</ContentPage>
 
 </chart:SfPyramidChart>
  

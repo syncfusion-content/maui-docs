@@ -366,6 +366,23 @@ private void dataGrid_AutoGeneratingColumn(object sender, DataGridAutoGenerating
 {% endhighlight %}
 {% endtabs %}
 
+### Header Line break mode
+
+The text wrapping and truncation of a column's header text can be customized by setting the `DataGridColumn.HeaderLineBreakMode` property.
+ 
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid AutoGenerateColumnsMode="None"
+                       ItemsSource="{Binding OrderInfo}">
+    <syncfusion:SfDataGrid.Columns >
+        <syncfusion:DataGridTextColumn MappingName="Name" HeaderLineBreakMode="NoWrap" />
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% endtabs %}
+
+N> The truncation modes will not work on the Windows platform.
+
 ### Line break mode
 
 The text wrapping and truncation of a column's cell values can be customized by setting the [DataGridColumn.LineBreakMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_LineBreakMode) property.

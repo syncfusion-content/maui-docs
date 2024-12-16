@@ -7,6 +7,8 @@ control: SfCircularChart
 documentation: ug
 ---
 
+> **Notice**: After **Volume 1 2025 (Mid of March 2025)**, updates, bug fixes, and feature enhancements for this control will no longer be available in the Syncfusion package. Please switch to the **Syncfusion Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
+
 # Getting Started with .NET MAUI Chart
 
 This section explains how to populate the circular chart with data, a title, data labels, a legend, and tooltips, as well as the essential aspects for getting started with the circular chart.
@@ -116,7 +118,7 @@ public class SalesViewModel
 {
     public List<SalesModel> Data { get; set; }
 
-    public ChartViewModel()
+    public SalesViewModel()
     {
         Data = new List<SalesModel>()
         {
@@ -139,7 +141,7 @@ N> Add namespace of `SalesViewModel` class to your XAML Page, if you prefer to s
 
 {% tabs %} 
 
-{% highlight xaml %} 
+{% highlight xaml %}
 
 <ContentPage
     . . .
@@ -155,7 +157,7 @@ N> Add namespace of `SalesViewModel` class to your XAML Page, if you prefer to s
 
 {% endhighlight %}
 
-{% highlight C# %} 
+{% highlight C# %}
 
 SfCircularChart chart = new SfCircularChart();
 this.BindingContext = new SalesViewModel();
@@ -323,26 +325,35 @@ The following code example gives you the complete code of above configurations.
 
 {% highlight xaml %}
 
-<chart:SfCircularChart>
-    <chart:SfCircularChart.Title>
-        <Label Text="PRODUCT SALES"/>
-    </chart:SfCircularChart.Title>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="ChartGettingStarted.MainPage"
+    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+    xmlns:model="clr-namespace:ChartGettingStarted">
 
-    <chart:SfCircularChart.BindingContext>
-        <model:SalesViewModel/>
-    </chart:SfCircularChart.BindingContext>
+    <chart:SfCircularChart>
+        <chart:SfCircularChart.Title>
+            <Label Text="PRODUCT SALES"/>
+        </chart:SfCircularChart.Title>
 
-    <chart:SfCircularChart.Legend>
-        <chart:ChartLegend/>
-    </chart:SfCircularChart.Legend>
+        <chart:SfCircularChart.BindingContext>
+            <model:SalesViewModel/>
+        </chart:SfCircularChart.BindingContext>
 
-    <chart:PieSeries ItemsSource="{Binding Data}"
-                     XBindingPath="Product" 
-                     YBindingPath="SalesRate"
-                     ShowDataLabels="True"
-                     EnableTooltip="True"/>
-</chart:SfCircularChart>
- 
+        <chart:SfCircularChart.Legend>
+            <chart:ChartLegend/>
+        </chart:SfCircularChart.Legend>
+
+        <chart:PieSeries ItemsSource="{Binding Data}"
+                         XBindingPath="Product" 
+                         YBindingPath="SalesRate"
+                         ShowDataLabels="True"
+                         EnableTooltip="True"/>
+    </chart:SfCircularChart>
+    
+</ContentPage>
+
 {% endhighlight %}
 
 {% highlight C# %}

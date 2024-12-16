@@ -8,6 +8,8 @@ documentation: ug
 keywords: .net maui cartesian chart, .net maui charting, cartesian chart maui, syncfusion cartesian chart maui, maui chart control, .net maui data visualization, cartesian chart example maui.
 ---
 
+> **Notice**: After **Volume 1 2025 (Mid of March 2025)**, updates, bug fixes, and feature enhancements for this control will no longer be available in the Syncfusion package. Please switch to the **Syncfusion Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
+
 # Getting Started with .NET MAUI Chart
 
 This section explains how to populate the Cartesian chart with data, a title, data labels, a legend, and tooltips, as well as the essential aspects for getting started with the chart.
@@ -121,7 +123,7 @@ public class PersonViewModel
 {
     public List<PersonModel> Data { get; set; }      
 
-    public ViewModel()       
+    public PersonViewModel()       
     {
         Data = new List<PersonModel>()
         {
@@ -474,12 +476,12 @@ The following code example gives you the complete code of above configurations.
         </chart:SfCartesianChart.YAxes>
 
         <!--Initialize the series for chart-->
-        <chart:ColumnSeries Label="Height" 
+        <chart:ColumnSeries ItemsSource="{Binding Data}"
+                            XBindingPath="Name" 
+                            YBindingPath="Height"
                             EnableTooltip="True"
                             ShowDataLabels="True"
-                            ItemsSource="{Binding Data}"
-                            XBindingPath="Name" 
-                            YBindingPath="Height">
+                            Label="Height">
             <chart:ColumnSeries.DataLabelSettings>
                 <chart:CartesianDataLabelSettings LabelPlacement="Inner"/>
             </chart:ColumnSeries.DataLabelSettings>
@@ -531,11 +533,12 @@ namespace ChartGettingStarted
             //Initialize the two series for SfChart
             ColumnSeries series = new ColumnSeries()
             {
-                Label = "Height",
-                ShowDataLabels = true,
-                ItemsSource = (new ViewModel()).Data,
+                ItemsSource = (new PersonViewModel()).Data,
                 XBindingPath = "Name",
                 YBindingPath = "Height",
+                ShowDataLabels = true,
+                EnableTooltip = true,
+                Label = "Height",
                 DataLabelSettings = new CartesianDataLabelSettings()
                 {
                     LabelPlacement = DataLabelPlacement.Inner
