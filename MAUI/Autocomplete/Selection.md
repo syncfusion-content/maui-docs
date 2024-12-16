@@ -399,7 +399,7 @@ autocomplete.IsDropDownOpen = true;
 
 ## Clear Selected Items
 
-Users can remove selected items and input text using the **Clear** method in the Autocomplete control.
+Users can remove selected items and input text using the [Clear](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Clear) method in the Autocomplete control.
 
 {% tabs %}
 
