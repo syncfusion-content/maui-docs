@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Page Navigation in .NET MAUI PDF Viewer control | Syncfusion®
+title: Page Navigation in .NET MAUI PDF Viewer control | Syncfusion
 description: Learn here all about page navigation feature in Syncfusion® .NET MAUI PDF Viewer (SfPdfViewer) control and more.
 platform: MAUI
 control: SfPdfViewer

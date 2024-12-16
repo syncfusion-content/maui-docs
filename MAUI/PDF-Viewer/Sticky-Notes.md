@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sticky Note Annotations in .NET MAUI PDF Viewer control | Syncfusion®
+title: Sticky Note Annotations in .NET MAUI PDF Viewer control | Syncfusion
 description: Learn here all about Sticky Note Annotations in Syncfusion® .NET MAUI PDF Viewer (SfPdfViewer) control and its functionalities.
 platform: MAUI
 control: SfPdfViewer

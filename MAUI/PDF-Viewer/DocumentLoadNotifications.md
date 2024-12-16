@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Document Load Events in .NET MAUI PDF Viewer control | Syncfusion®
+title: Document Load Events in .NET MAUI PDF Viewer control | Syncfusion
 description: Learn here all about events that notifies whether the document has been opened or not opened in the Syncfusion® .NET MAUI PDF Viewer (SfPdfViewer).
 platform: MAUI
 control: SfPdfViewer

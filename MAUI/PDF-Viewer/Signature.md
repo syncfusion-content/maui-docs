@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Electronic Signature in .NET MAUI PDF Viewer control | Syncfusion®
+title: Electronic Signature in .NET MAUI PDF Viewer control | Syncfusion
 description: Learn here all about Electronic Signature in Syncfusion® .NET MAUI PDF Viewer (SfPdfViewer) control and its types.
 platform: MAUI
 control: SfPdfViewer
