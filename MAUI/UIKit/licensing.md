@@ -1,17 +1,17 @@
 ---
 layout: post
-title: .NET MAUI Essential® UI Kit Licensing | Syncfusion®
-description: Learn here about Syncfusion® .NET MAUI Essential® UI Kit license key, how to generate the license key, how to register the license key, and more details.
+title: Essential® UI Kit for .NET MAUI Licensing | Syncfusion®
+description: Learn here about Syncfusion® Essential® UI Kit for .NET MAUI license key, how to generate the license key, how to register the license key, and more details.
 platform: maui
-control: .NET MAUI Essential® UI Kit
+control: Essential® UI Kit for .NET MAUI
 documentation: ug
 ---
 
-# Licensing in .NET MAUI Essential® UI Kit
+# Licensing in Essential® UI Kit for .NET MAUI
 
-.NET MAUI Essential® UI Kit source code published in GitHub with an MIT license. You can use this UI Kit pages in your application for free without any restrictions. You can find the GitHub link as follows.
+Essential® UI Kit for .NET MAUI source code published in GitHub with an MIT license. You can use this UI Kit pages in your application for free without any restrictions. You can find the GitHub link as follows.
 
-[https://github.com/syncfusion/essential-ui-kit-for-.net-maui]()
+[https://github.com/syncfusion/essential-ui-kit-for-.net-maui](https://github.com/syncfusion/essential-ui-kit-for-.net-maui)
 
 But for the pages that use Syncfusion® controls, you must get the licenses to use those controls in your application to avoid the license validation pop-ups. The Syncfusion® provides free community licenses that provide access to all the Syncfusion® products for individual developers and small businesses. 
 (updated links are below to know more about the Syncfusion® free community licenses).
@@ -20,7 +20,7 @@ Alternatively, you can replace the Syncfusion® controls with the framework cont
 
 For more details about the Essential® UI Kit license, please refer to the following link.
 
-[https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/LICENSE]()
+[https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/LICENSE.txt](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/LICENSE.txt)
 
 Regarding the Syncfusion® licenses, please refer to the following link.
 

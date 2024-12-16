@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Overview | .NET MAUI Essential® UI Kit | Syncfusion®
-description: Learn here all about introduction of Syncfusion® Essential Studio® .NET MAUI Essential® UI Kit, its elements and more.
+title: Overview | Essential® UI Kit for .NET MAUI | Syncfusion®
+description: Learn here all about introduction of Syncfusion® Essential Studio® Essential® UI Kit for .NET MAUI, its elements and more.
 platform: maui
-control: .NET MAUI Essential® UI Kit
+control: Essential® UI Kit for .NET MAUI
 documentation: ug
 ---
 
-# .NET MAUI Essential® UI Kit Overview
+# Essential® UI Kit for .NET MAUI Overview
 
-The [Syncfusion® .NET MAUI Essential® UI Kit]() is a comprehensive collection of user-friendly, extendable, and adaptable XAML pages designed to accelerate the development of MAUI applications. It offers a range of pre-defined, generic screens that can be easily customized to meet your requirements. Currently, the UI Kit includes screens categorized under the following sections:
+The [Syncfusion® Essential® UI Kit for .NET MAUI](https://github.com/syncfusion/essential-ui-kit-for-.net-maui) is a comprehensive collection of user-friendly, extendable, and adaptable XAML pages designed to accelerate the development of MAUI applications. It offers a range of pre-defined, generic screens that can be easily customized to meet your requirements. Currently, the UI Kit includes screens categorized under the following sections:
 
 * Forms
 * Catalog
@@ -30,7 +30,7 @@ The [Syncfusion® .NET MAUI Essential® UI Kit]() is a comprehensive collection 
 * Settings
 * Notification
 
-The screens are developed using the MVVM pattern, which effectively separates the UI from the business logic, resulting in a clean, professional, and scalable user interface for your MAUI applications. You can download the UI Kit application from the [Google Play Store]() and access the complete source code available in [GitHub repository]()
+The screens are developed using the MVVM pattern, which effectively separates the UI from the business logic, resulting in a clean, professional, and scalable user interface for your MAUI applications. You can download the UI Kit application from the [Google Play Store]() and access the complete source code available in [GitHub repository](https://github.com/syncfusion/essential-ui-kit-for-.net-maui)
 
 ## Supported Platforms
 
