@@ -115,11 +115,12 @@ The following code snippet shows how to apply a background color to the indent c
         </ResourceDictionary>
     </ContentPage.Resources>
     <syncfusion:SfDataGrid  x:Name="dataGrid"
-                            ItemsSource="{Binding Orders}" />
+                        ItemsSource="{Binding Orders}">
     <syncfusion:SfDataGrid.GroupColumnDescriptions>
         <syncfusion:GroupColumnDescription ColumnName="Name" />
         <syncfusion:GroupColumnDescription ColumnName="ShipCity" />
-    </syncfusion:SfDataGrid.GroupColumnDescriptions>    
+    </syncfusion:SfDataGrid.GroupColumnDescriptions>
+</syncfusion:SfDataGrid>   
 {% endhighlight %}
 
 {% highlight c# %}
@@ -286,14 +287,14 @@ In custom grouping, you can sort all the inner records of each group by setting 
 
     <syncfusion:SfDataGrid x:Name="dataGrid"
                             ItemsSource="{Binding OrderInfoCollection}">
-        <Syncfusion:SfDataGrid.GroupColumnDescriptions>
-            <Syncfusion:GroupColumnDescription ColumnName="OrderID"
+        <syncfusion:SfDataGrid.GroupColumnDescriptions>
+            <syncfusion:GroupColumnDescription ColumnName="OrderID"
                                                 Converter="{StaticResource groupOrderNoConverter}"
                                                 SortGroupRecords="false" />
-            <Syncfusion:GroupColumnDescription ColumnName="Price"
+            <syncfusion:GroupColumnDescription ColumnName="Price"
                                                 Converter="{StaticResource priceConverter}"
                                                 SortGroupRecords="True" />
-        </Syncfusion:SfDataGrid.GroupColumnDescriptions>
+        </syncfusion:SfDataGrid.GroupColumnDescriptions>
     </syncfusion:SfDataGrid>
 </ContentPage>
 
