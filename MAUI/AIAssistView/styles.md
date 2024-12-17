@@ -954,3 +954,85 @@ To style the send item button based on its state, set values to the in-built key
 
 {% endhighlight %}
 {% endtabs %}
+
+## Stop responding view styling
+
+To style the stop responding view based on its appearance, set values to the in-built keys in the resource dictionary.
+
+<table> 
+<tr> 
+<th> Key </th>
+<th> Description </th> 
+</tr> 
+<tr> 
+<td> SfAIAssistViewStopRespondingIconColor </td>
+<td> Icon color for the stop responding action. </td> 
+</tr> 
+<tr> 
+<td> SfAIAssistViewStopRespondingTextColor </td> 
+<td> Text color for the stop responding action. </td> 
+</tr> 
+<tr> 
+<td> SfAIAssistViewStopRespondingFontFamily </td> 
+<td> Font family used for the stop responding text. </td> 
+</tr> 
+<tr> 
+<td> SfAIAssistViewStopRespondingFontSize </td> 
+<td> Font size of the stop responding text. </td> 
+</tr> 
+<tr> 
+<td> SfAIAssistViewStopRespondingFontAttributes </td> 
+<td> Font attributes used for the stop responding text. </td>
+</tr>
+<tr> 
+<td> SfAIAssistViewStopRespondingStroke </td> 
+<td> Stroke color for the stop responding action. </td> 
+</tr> 
+<tr> 
+<td> SfAIAssistViewStopRespondingStrokeThickness </td> 
+<td> Stroke thickness for the stop responding action. </td> 
+</tr> 
+</table>
+
+{% tabs %}
+{% highlight xaml %}
+
+<ContentPage.Resources>
+    <syncTheme:SyncfusionThemeDictionary>
+        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
+                <Color x:Key="SfAIAssistViewStopRespondingIconColor">Red</Color>
+                <Color x:Key="SfAIAssistViewStopRespondingTextColor">DarkBlue</Color>
+                <x:String x:Key="SfAIAssistViewStopRespondingFontFamily">Arial</x:String>
+                <x:Double x:Key="SfAIAssistViewStopRespondingFontSize">16</x:Double>
+                <x:String x:Key="SfAIAssistViewStopRespondingFontAttributes">Bold</x:String>
+                <SolidColorBrush x:Key="SfAIAssistViewStopRespondingStroke">Gray</SolidColorBrush>
+                <x:Double x:Key="SfAIAssistViewStopRespondingStrokeThickness">2</x:Double>
+            </ResourceDictionary>
+        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+    </syncTheme:SyncfusionThemeDictionary>
+</ContentPage.Resources>
+
+{% endhighlight %}
+{% highlight c# %}
+
+public MainPage()
+{
+    ....
+    InitializeComponent();
+    ResourceDictionary dictionary = new ResourceDictionary();
+    dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
+    dictionary.Add("SfAIAssistViewStopRespondingIconColor", Colors.Red);
+    dictionary.Add("SfAIAssistViewStopRespondingTextColor", Colors.DarkBlue);
+    dictionary.Add("SfAIAssistViewStopRespondingFontFamily", "Arial");
+    dictionary.Add("SfAIAssistViewStopRespondingFontSize", 16.0);
+    dictionary.Add("SfAIAssistViewStopRespondingFontAttributes", FontAttributes.Bold);
+    dictionary.Add("SfAIAssistViewStopRespondingStroke", new SolidColorBrush(Colors.Gray));
+    dictionary.Add("SfAIAssistViewStopRespondingStrokeThickness", 2.0);
+    this.Resources.Add(dictionary);
+    ....
+}
+
+{% endhighlight %}
+{% endtabs %}
