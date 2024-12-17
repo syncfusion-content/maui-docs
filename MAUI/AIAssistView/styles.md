@@ -1037,4 +1037,4 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-![Stop responding style in .NET MAUI AI AssistView](images/styles/maui-chat-attachmentbutton-style.png)
+![Stop responding style in .NET MAUI AI AssistView](images/styles/maui-aiassistview-styles-stopresponding.png)
