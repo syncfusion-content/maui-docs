@@ -966,11 +966,11 @@ To style the stop responding view based on its appearance, set values to the in-
 </tr> 
 <tr> 
 <td> SfAIAssistViewStopRespondingIconColor </td>
-<td> Icon color for the stop responding action. </td> 
+<td> Icon color for the stop responding view. </td> 
 </tr> 
 <tr> 
 <td> SfAIAssistViewStopRespondingTextColor </td> 
-<td> Text color for the stop responding action. </td> 
+<td> Text color for the stop responding view. </td> 
 </tr> 
 <tr> 
 <td> SfAIAssistViewStopRespondingFontFamily </td> 
@@ -986,11 +986,11 @@ To style the stop responding view based on its appearance, set values to the in-
 </tr>
 <tr> 
 <td> SfAIAssistViewStopRespondingStroke </td> 
-<td> Stroke color for the stop responding action. </td> 
+<td> Stroke color for the stop responding view. </td> 
 </tr> 
 <tr> 
 <td> SfAIAssistViewStopRespondingStrokeThickness </td> 
-<td> Stroke thickness for the stop responding action. </td> 
+<td> Stroke thickness for the stop responding view. </td> 
 </tr> 
 </table>
 
