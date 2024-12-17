@@ -37,7 +37,7 @@ Before proceeding, ensure the following are in place:
 3. Select the project location, type the project name and press Enter.
 4. Then choose **Create project**
 
-## Step 2: Install the Syncfusion MAUI Inputs NuGet Package
+## Step 2: Install the Syncfusion® MAUI Inputs NuGet Package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) and install the latest version.
@@ -45,7 +45,7 @@ Before proceeding, ensure the following are in place:
 
 ## Step 3: Register the handler
 
- [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
+ [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion® controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion® core.
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;
