@@ -1007,7 +1007,7 @@ To style the stop responding view based on its appearance, set values to the in-
                 <x:String x:Key="SfAIAssistViewStopRespondingFontFamily">Segoe UI</x:String>
                 <x:Double x:Key="SfAIAssistViewStopRespondingFontSize">14</x:Double>
                 <x:String x:Key="SfAIAssistViewStopRespondingFontAttributes">Italic</x:String>
-                <SolidColorBrush x:Key="SfAIAssistViewStopRespondingStroke">LightBlue</SolidColorBrush>
+                <SolidColorBrush x:Key="SfAIAssistViewStopRespondingStroke">Violet</SolidColorBrush>
                 <x:Double x:Key="SfAIAssistViewStopRespondingStrokeThickness">2</x:Double>
             </ResourceDictionary>
         </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
@@ -1028,7 +1028,7 @@ public MainPage()
     dictionary.Add("SfAIAssistViewStopRespondingFontFamily", "Segoe UI");
     dictionary.Add("SfAIAssistViewStopRespondingFontSize", 14.0);
     dictionary.Add("SfAIAssistViewStopRespondingFontAttributes", FontAttributes.Italic);
-    dictionary.Add("SfAIAssistViewStopRespondingStroke", new SolidColorBrush(Colors.LightBlue));
+    dictionary.Add("SfAIAssistViewStopRespondingStroke", new SolidColorBrush(Colors.Violet));
     dictionary.Add("SfAIAssistViewStopRespondingStrokeThickness", 2.0);
     this.Resources.Add(dictionary);
     ....
