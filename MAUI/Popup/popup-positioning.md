@@ -143,6 +143,67 @@ private void ClickToShowPopup_Clicked(object sender, EventArgs e)
 
 ![Displaying a .NET MAUI Popup at Absolute position.](Images/popup-positioning/maui-popup-absolute-positioning.png)
 
+### Show absolute positioning in MVVM
+
+The [StartX](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_StartX) and [StartY](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_StartY) properties of the `SfPopup` control define the initial coordinates for the popup to display.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="16 17" %}
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
+             xmlns:local="clr-namespace:PopupMauiPositioning"
+             x:Class="PopupMauiPositioning.MainPage">
+  <ContentPage.BindingContext>
+    <local:ViewModel/>
+  </ContentPage.BindingContext>
+  <ContentPage.Content>       
+    <StackLayout>
+      <Button x:Name="clickToShowPopup" Text="ClickToShowPopup" Margin="0,30,0,30"
+              HorizontalOptions="Center"
+              Clicked="ClickToShowPopup_Clicked" />
+      <sfPopup:SfPopup x:Name="sfPopup" 
+                       StartX="0" 
+                       StartY="100"
+                       IsOpen="{Binding DisplayPopup}">
+      </sfPopup:SfPopup>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
+private void ClickToShowPopup_Clicked(object sender, EventArgs e)
+{
+  (this.BindingContext as ViewModel).DisplayPopup = true;	
+}
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# tabtitle="ViewModel.cs" %}
+public class ViewModel : INotifyPropertyChanged
+{
+  private bool displayPopup;
+  public bool DisplayPopup
+  {
+      get { return displayPopup; }
+      set { displayPopup = value; RaisePropertyChanged("DisplayPopup"); }
+  }
+  public ViewModel()
+  {
+      this.DisplayPopup = false;
+  }
+  public void RaisePropertyChanged(string propName)
+  {
+      if (this.PropertyChanged != null)
+          this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
+  }
+  public event PropertyChangedEventHandler PropertyChanged;
+}
+{% endhighlight %}
+{% endtabs %}
+
+
 ## Relative positioning
 
 `SfPopup` can be shown at the relative position by using the following method.
@@ -208,6 +269,7 @@ You can pass both negative and positive values as parameters to the `SfPopup.Sho
 ### Show relative to view in MVVM
 
 To open the SfPopup relative to a view in MVVM assign values to the [SfPopup.RelativeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_RelativeView) and [SfPopup.RelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_RelativePosition) properties and use the `SfPopup.IsOpen` property to open or close the popup using binding.
+The [AbsoluteX](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_AbsoluteX) and [AbsoluteY](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_AbsoluteY) are used to display popup at the specified coordinates when positioning it relatively to the specified `RelativeView` based on the `RelativePosition`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="19" %}
@@ -237,7 +299,7 @@ To open the SfPopup relative to a view in MVVM assign values to the [SfPopup.Rel
   </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4" %} 
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4" %}
 private void ClickToShowPopup_Clicked(object sender, EventArgs e)
 {
   // Show the SfPopup at the bottom of the label and with absolute relative position.
@@ -408,7 +470,7 @@ The `SfPopup` allows opening it in the [CellTapped](https://help.syncfusion.com/
   </ContentPage.Content> 
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="17" %} 
+{% highlight c# tabtitle="C#" hl_lines="17" %}
 namespace PopupMauiPositioning;
 using Syncfusion.Maui.DataGrid;
 using Syncfusion.Maui.Popup;
@@ -533,7 +595,7 @@ The `SfPopup` allows opening it in the [ItemTapped](https://help.syncfusion.com/
   </ContentPage.Content> 
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="72" %} 
+{% highlight c# tabtitle="C#" hl_lines="72" %}
 namespace PopupMauiPositioning;
 using Syncfusion.Maui.ListView;
 using Syncfusion.Maui.Popup;
