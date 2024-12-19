@@ -55,7 +55,7 @@ public class SocialMediaViewModel
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfAutoComplete x:Name="autocomplete"
+<editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="250"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
@@ -64,7 +64,7 @@ public class SocialMediaViewModel
 {% endhighlight %}
 {% highlight c# %}
 
-SfAutocomplete autocomplete = new SfAutoComplete();
+SfAutocomplete autocomplete = new SfAutocomplete();
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 autocomplete.BindingContext = socialMediaViewModel;
 autocomplete.ItemsSource = SocialMediaViewModel.SocialMedias;
@@ -152,13 +152,13 @@ Multi-selection token mode has two different layouts to display the selected ite
 
 #### Wrap mode
 
-When the [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html#Syncfusion_Maui_Inputs_SfAutocomplete_TokensWrapMode) is set to [Wrap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTokensWrapMode.html#Syncfusion_Maui_Inputs_AutocompleteTokensWrapMode_Wrap), the selected items will be wrapped to the next line of the SfAutoComplete.
+When the [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html#Syncfusion_Maui_Inputs_SfAutocomplete_TokensWrapMode) is set to [Wrap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTokensWrapMode.html#Syncfusion_Maui_Inputs_AutocompleteTokensWrapMode_Wrap), the selected items will be wrapped to the next line of the SfAutocomplete.
 
 {% tabs %}
 
 {% highlight xaml %}
 
- <editors:SfAutoComplete x:Name="autoComplete" 
+ <editors:SfAutocomplete x:Name="autoComplete" 
              HeightRequest="50"
              WidthRequest="350"
              ItemsSource="{Binding SocialMedias}"
@@ -183,7 +183,7 @@ When the [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.In
 
 {% highlight xaml %}
 
- <editors:SfAutoComplete x:Name="autoComplete" 
+ <editors:SfAutocomplete x:Name="autoComplete" 
              HeightRequest="50"
              WidthRequest="350"
              ItemsSource="{Binding SocialMedias}"
@@ -210,7 +210,7 @@ When an item is selected from the drop-down list, the [SelectionChanged](https:/
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfAutoComplete x:Name="autocomplete"
+<editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="250"
                         ItemsSource="{Binding SocialMedias}"
                         TextMemberPath="Name"
@@ -254,7 +254,7 @@ In single selection mode, the [SelectedValue](https://help.syncfusion.com/cr/mau
 {% tabs %}
 {% highlight XAML %}
 
-<editors:SfAutoComplete x:Name="autocomplete"
+<editors:SfAutocomplete x:Name="autocomplete"
                     WidthRequest="250"
                     MaxDropDownHeight="250"
                     TextMemberPath="Name"   

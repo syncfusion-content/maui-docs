@@ -399,7 +399,7 @@ public class CapitalCitySearchingBehavior : Syncfusion.Maui.Inputs.IAutocomplete
 <editors:SfAutocomplete.SearchBehavior>
                 <local:CapitalCitySearchingBehavior></local:CapitalCitySearchingBehavior>
             </editors:SfAutocomplete.SearchBehavior>
-</editors:SfAutoComplete>
+</editors:SfAutocomplete>
 
 {% endhighlight %}
 {% endtabs %}
