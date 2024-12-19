@@ -70,6 +70,7 @@ autocomplete.BindingContext = socialMediaViewModel;
 autocomplete.ItemsSource = SocialMediaViewModel.SocialMedias;
 autocomplete.DisplayMemberPath = "Name";
 autocomplete.TextMemberPath = "Name";
+Content = autocomplete;
 
 {% endhighlight %}
 {% endtabs %}
@@ -383,7 +384,7 @@ In the Autocomplete control, the drop-down can be opened or closed programmatica
 <editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="250"
                         ItemsSource="{Binding SocialMedias}"
-                        IsDropDownOpen = true;
+                        IsDropDownOpen = "true";
                         DisplayMemberPath="Name"
                         TextMemberPath="Name">
 </editors:SfAutocomplete>
