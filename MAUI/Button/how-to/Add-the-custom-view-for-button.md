@@ -3,7 +3,7 @@ layout: post
 title: How to Add the Custom View for Syncfusion SfButton
 description: How to add the custom view for SfButton.
 platform: maui
-control: Sfbutton
+control: SfButton
 documentation: ug
 ---
 
@@ -29,7 +29,7 @@ xmlns:busy="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
         </ResourceDictionary>
 </ContentPage.Resources>
 <ContentPage.Content>
-    <button:SfButton  CornerRadius="20"  WidthRequest="300"   Content="{x:StaticResource happyTemplate}" Text="SfButton"   />
+    <buttons:SfButton  CornerRadius="20"  WidthRequest="300"   Content="{x:StaticResource happyTemplate}" Text="SfButton"   />
 </ContentPage.Content>
 
 {% endhighlight %}
