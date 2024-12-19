@@ -650,13 +650,6 @@ The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Dr
             });
             Employees.Add(new Employee
             {
-                Name = "Andrew Fuller",
-                ProfilePicture ="people_circle8.png",
-                Designation = "Team Lead",
-                ID = "E002",
-            });
-            Employees.Add(new Employee
-            {
                 Name = "Emilio Alvaro",
                 ProfilePicture = "people_circle7.png",
                 Designation = "Product Manager",
@@ -789,6 +782,8 @@ The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Dr
                                 SelectedItem="{Binding SelectedEmployee,Mode=TwoWay}"
                                 WidthRequest="280"
                                 HeightRequest="34"
+                                TextSearchMode="Contains"
+                                DropDownItemHeight="50"
                                 x:Name="autoComplete"
                                 ItemTemplate="{StaticResource employeeTemplateSelector}">
             <editors:SfAutocomplete.BindingContext>
