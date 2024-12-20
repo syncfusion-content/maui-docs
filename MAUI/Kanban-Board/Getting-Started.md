@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Kanban Board control | Syncfusion
-description: Learn here about getting started with Syncfusion .NET MAUI Kanban Board (SfKanban) control, its elements and more.
+title: Getting Started with .NET MAUI Kanban Board control | Syncfusion®
+description: Learn here about getting started with Syncfusion® .NET MAUI Kanban Board (SfKanban) control, its elements and more.
 platform: maui
 control: Kanban
 documentation: ug
@@ -33,7 +33,7 @@ Before starting, ensure the following are set up:
 3. Select the project location, type the project name and press enter.
 4. Then choose Create project
 
-## Step 2: Install the Syncfusion MAUI Kanban Board NuGet Package
+## Step 2: Install the Syncfusion® MAUI Kanban Board NuGet Package
 
 1. In Solution Explorer, right-click the project and choose Manage NuGet Packages.
 2. Search for Syncfusion.Maui.Kanban on [nuget.org](https://www.nuget.org/) and install the latest version.
@@ -86,7 +86,7 @@ namespace KanbanGettingStarted
 
 ## Step 4: Register the handler
 
-[Syncfusion.Maui.Core nuget](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
+[Syncfusion.Maui.Core nuget](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all Syncfusion® controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion® core.
 
 {% highlight C# %}
 

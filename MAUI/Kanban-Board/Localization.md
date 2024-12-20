@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Localization in .NET MAUI Kanban control | Syncfusion
-description: Learn here all about Localization support in Syncfusion .NET MAUI Kanban (SfKanban) control and more.
+title: Localization in .NET MAUI Kanban control | Syncfusion®
+description: Learn here all about Localization support in Syncfusion® .NET MAUI Kanban (SfKanban) control and more.
 platform: maui
 control: Kanban
 documentation: ug

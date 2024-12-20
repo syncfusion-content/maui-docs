@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Workflows in .NET MAUI Kanban Board control | Syncfusion
-description: Learn here all about Workflows support in Syncfusion .NET MAUI Kanban Board (SfKanban) control and more.
+title: Workflows in .NET MAUI Kanban Board control | Syncfusion®
+description: Learn here all about Workflows support in Syncfusion® .NET MAUI Kanban Board (SfKanban) control and more.
 platform: maui
 control: Kanban
 documentation: ug

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migration from Xamarin to .NET MAUI Parallax View control | Syncfusion
+title: Migration from Xamarin to .NET MAUI Parallax View control | Syncfusion®
 description: This section explains the features available in the .NET MAUI Parallax View control over Xamarin Parallax View.
 platform: MAUI
 control: SfParallaxView
