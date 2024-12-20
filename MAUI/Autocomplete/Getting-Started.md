@@ -232,8 +232,6 @@ The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 {% endhighlight %}
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
-this.BindingContext = socialMediaViewModel;
 SfAutocomplete autocomplete = new SfAutocomplete(); 
 autocomplete.WidthRequest = 250;
 autocomplete.HeightRequest = 50;
