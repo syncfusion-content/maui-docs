@@ -357,16 +357,3 @@ comboBox.IsDropDownOpen = true;
 
 {% endhighlight %}
 {% endtabs %}
-
-## Clear Selected Items
-
-Users can remove selected items and input text using the [Clear](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Clear) method in the ComboBox control.
-
-{% tabs %}
-
-{% highlight C# %}
-
-comboBox.Clear();
-
-{% endhighlight %}
-{% endtabs %}
