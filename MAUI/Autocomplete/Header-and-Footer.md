@@ -38,7 +38,7 @@ We can provide Header Content at the top of the Autocomplete's dropdown.[DropDow
                                      ItemsSource="{Binding SocialMedias}"
                                      DisplayMemberPath="Name"
                                      DropdownHeaderViewHeight="50">
-            <autocomplete:SfAutocomplete.DropDownHeaderView>
+            <autocomplete:SfAutocomplete.DropdownHeaderView>
                 <StackLayout BackgroundColor="#f0f0f0" >
                     <Label  x:Name="SearchLabel" 
                             FontSize="20" 
@@ -47,7 +47,7 @@ We can provide Header Content at the top of the Autocomplete's dropdown.[DropDow
                             VerticalOptions="Center" 
                             TextColor="#006bcd"   />
                 </StackLayout>
-            </autocomplete:SfAutocomplete.DropDownHeaderView>
+            </autocomplete:SfAutocomplete.DropdownHeaderView>
         </autocomplete:SfAutocomplete>
     </StackLayout>
 </ContentPage>
@@ -96,7 +96,7 @@ namespace AutocompleteSample
                 TextColor = Color.FromHex("#006bcd")
             };
             dropDownHeaderView.Children.Add(searchLabel);
-            autoComplete.DropDownHeaderView = dropDownHeaderView;
+            autoComplete.DropdownHeaderView = dropDownHeaderView;
             stackLayout.Children.Add(autoComplete);
             Content = stackLayout;
         }
@@ -138,7 +138,7 @@ The following code example illustrate how to set Footer content in [SfAutocomple
                                      ItemsSource = "{Binding SocialMedias}"
                                      DisplayMemberPath="Name"
                                      DropdownFooterViewHeight="50">
-            <autocomplete:SfAutocomplete.DropDownFooterView>
+            <autocomplete:SfAutocomplete.DropdownFooterView>
                 <StackLayout BackgroundColor="#f0f0f0" >
                     <Label  Text="Add New"
                             FontSize="20" 
@@ -147,7 +147,7 @@ The following code example illustrate how to set Footer content in [SfAutocomple
                             VerticalOptions="Center" 
                             TextColor="#006bcd" />
                 </StackLayout>
-            </autocomplete:SfAutocomplete.DropDownFooterView>
+            </autocomplete:SfAutocomplete.DropdownFooterView>
         </autocomplete:SfAutocomplete>
     </StackLayout>
 </ContentPage>
@@ -197,7 +197,7 @@ namespace AutocompleteSample
             };
 
             layout.Children.Add(SearchLabel);
-            autoComplete.DropDownFooterView = layout;
+            autoComplete.DropdownFooterView = layout;
             stackLayout.Children.Add(autoComplete);
             this.Content = stackLayout;
         }
