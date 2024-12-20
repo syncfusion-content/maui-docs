@@ -17,18 +17,29 @@ Restrict the number of suggestions displayed and have the remaining items loaded
 
 <editors:SfComboBox x:Name="comboBox" 
                     WidthRequest="300"
+                    HeightRequest="40"
                     IsFilteringEnabled="True"
                     IsEditable="True" 
                     ItemsSource="{Binding SocialMedias}"          
                     MaximumSuggestion="2"
                     DisplayMemberPath="Name"                                    
-                    TextMemberPath="Name">
+                    TextMemberPath="Name"/>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-comboBox.MaximumSuggestion = 2;
+SfComboBox comboBox = new SfComboBox() 
+{
+    WidthRequest= 250,
+    HeightRequest = 40,
+    MaximumSuggestion = 2,
+    IsEditable = true,
+    IsFilteringEnabled = true,
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name",
+    ItemsSource = socialMediaViewModel.SocialMedias
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -46,6 +57,7 @@ The LoadMore support provides [LoadMoreText](https://help.syncfusion.com/cr/maui
 
 <editors:SfComboBox x:Name="comboBox" 
                     WidthRequest="300"
+                    HeightRequest="40"
                     IsFilteringEnabled="True"
                     IsEditable="True" 
                     ItemsSource="{Binding SocialMedias}"          
@@ -59,8 +71,18 @@ The LoadMore support provides [LoadMoreText](https://help.syncfusion.com/cr/maui
 
 {% highlight C# %}
 
-autocomplete.MaximumSuggestion = 2;
-autocomplete.LoadMoreText= "Load more items";
+SfComboBox comboBox = new SfComboBox() 
+{
+    WidthRequest= 250,
+    HeightRequest = 40,
+    MaximumSuggestion = 2,
+    LoadMoreText= "Load more items",
+    IsEditable = true,
+    IsFilteringEnabled = true,
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name",
+    ItemsSource = socialMediaViewModel.SocialMedias
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -78,6 +100,7 @@ SfComboBox allows customizing User Interface(UI) of Load More view. To customize
 
 <editors:SfComboBox x:Name="comboBox" 
                     WidthRequest="300"
+                    HeightRequest="40"
                     IsFilteringEnabled="True"
                     IsEditable="True" 
                     ItemsSource="{Binding SocialMedias}"          
