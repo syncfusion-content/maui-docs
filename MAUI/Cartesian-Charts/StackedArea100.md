@@ -1,7 +1,7 @@
 ---
 layout: post
-title: StackedArea100 Chart in .NET MAUI Chart control | Syncfusion
-description: Learn here all about StackedArea100 chart support in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
+title: StackedArea100 Chart in .NET MAUI Chart control | Syncfusion®
+description: Learn here all about StackedArea100 chart support in Syncfusion® .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
