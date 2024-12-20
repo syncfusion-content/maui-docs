@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migration from Xamarin to .NET MAUI Kanban Board control | Syncfusion
+title: Migration from Xamarin to .NET MAUI Kanban Board control | Syncfusion®
 description: This section explains the features available in the NET MAUI Kanban Board (SfKanban) control over Xamarin SfKanban.
 platform: maui
 control: SfKanban
