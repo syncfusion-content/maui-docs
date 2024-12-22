@@ -47,6 +47,7 @@ rating.Value = 3;
 RatingSettings ratingSettings = new RatingSettings();
 ratingSettings.RatedFill = Colors.Red;
 rating.RatingSettings = ratingSettings;
+Content = rating;
            
 {% endhighlight %}
 
@@ -77,6 +78,7 @@ rating.Value = 3;
 RatingSettings ratingSettings = new RatingSettings();
 ratingSettings.UnratedFill = Colors.Gray;
 rating.RatingSettings = ratingSettings;
+Content = rating;
 
 {% endhighlight %}
 
@@ -111,6 +113,7 @@ rating.Value = 3;
 RatingSettings ratingSettings = new RatingSettings();
 ratingSettings.RatedStroke = Colors.Black;
 rating.RatingSettings = ratingSettings;	
+Content = rating;
 
 {% endhighlight %}
 
@@ -141,6 +144,7 @@ rating.Value = 3;
 RatingSettings ratingSettings = new RatingSettings();
 ratingSettings.UnratedStroke = Colors.Black;
 rating.RatingSettings = ratingSettings;
+Content = rating;
 
 {% endhighlight %}
 
@@ -175,6 +179,7 @@ rating.Value = 3;
 RatingSettings ratingSettings = new RatingSettings();
 ratingSettings.RatedStrokeThickness=3;
 rating.RatingSettings = ratingSettings;
+Content = rating;
 
 {% endhighlight %}
 
@@ -205,6 +210,7 @@ rating.Value = 3;
 RatingSettings ratingSettings = new RatingSettings();
 ratingSettings.UnratedStrokeThickness=3;
 rating.RatingSettings = ratingSettings;
+Content = rating;
 
 {% endhighlight %}
 
