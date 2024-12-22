@@ -18,7 +18,6 @@ The [EnableAutoSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 
 <editors:SfAutocomplete x:Name="autocomplete"
              WidthRequest="350"
-             HeightRequest="50"
              ItemsSource="{Binding SocialMedias}"
              SelectionMode="Multiple"
              MaxDropDownHeight="250"
@@ -29,24 +28,6 @@ The [EnableAutoSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
              EnableAutoSize="True" />
 
 {% endhighlight %}
-
-{% highlight C# %}
-
-SfAutocomplete autocomplete = new SfAutocomplete();
-autocomplete.WidthRequest = 350;
-autocomplete.HeightRequest = 50;
-autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
-autoComplete.SelectionMode = AutocompleteSelectionMode.Multiple;
-autoComplete.MaxDropDownHeight = 250;
-autocomplete.DisplayMemberPath = "Name";
-autocomplete.TextMemberPath = "Name";
-autoComplete.Placeholder = "Enter Media";
-autoComplete.TokensWrapMode = AutocompleteTokensWrapMode.Wrap;
-autoComplete.EnableAutoSize = true;
-Content = autocomplete;
-
-{% endhighlight %}
-
 {% endtabs %}
 
 ![.NET MAUI Autocomplete AutoSize.](Images/AutoSizing/net-maui-autocomplete-autosize.png)

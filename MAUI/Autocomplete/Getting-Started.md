@@ -238,7 +238,6 @@ autocomplete.HeightRequest = 50;
 autocomplete.DisplayMemberPath = "Name";
 autocomplete.TextMemberPath = "Name";
 autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
-Content = autocomplete;
 
 {% endhighlight %}
 {% endtabs %}
