@@ -103,8 +103,10 @@ namespace SignaturePadGettingStarted
         {
             InitializeComponent();
             // Creating a SignaturePad control.
+            Grid grid = new Grid();
             SfSignaturePad signaturePad = new SfSignaturePad();
-            this.content = signaturePad;
+            grid.Children.Add(signaturePad);
+            this.Content = grid;
         }
     }
 }
@@ -129,10 +131,9 @@ Customize the stroke color of the SignaturePad control by using the [StrokeColor
 
 {% highlight C# %}
 
-SfSignaturePad signaturePad = new SfSignaturePad()
-{
-    StrokeColor = Colors.Red,
-};
+SfSignaturePad signaturePad = new SfSignaturePad();
+signaturePad.StrokeColor = Colors.Red;
+Content = signaturePad;
 
 {% endhighlight %}
 
@@ -160,7 +161,7 @@ SfSignaturePad signaturePad = new SfSignaturePad()
     MinimumStrokeThickness = 1,
     MaximumStrokeThickness = 6,
 };
-
+Content = signaturePad;
 {% endhighlight %}
 
 {% endtabs %}
@@ -185,7 +186,13 @@ Save the signature drawn in the SignaturePad as an [ImageSource](https://learn.m
 
 SfSignaturePad signaturePad = new SfSignaturePad();
 Button saveButton = new Button();
-saveButton.Clicked += OnSaveButtonClicked;
+public MainPage()
+{
+    InitializeComponent();
+    saveButton.Text="Save";
+    saveButton.Clicked += OnSaveButtonClicked;
+    Content = new StackLayout { Children = {signaturePad, saveButton} };
+}
 
 private void OnSaveButtonClicked(object? sender, EventArgs e)
 {
@@ -214,11 +221,17 @@ Clear the signature drawn in the SignaturePad using the [Clear()](https://help.s
 
 SfSignaturePad signaturePad = new SfSignaturePad();
 Button clearButton = new Button();
-clearButton.Clicked += OnClearButtonClicked;
+public MainPage()
+{
+    InitializeComponent();
+    clearButton.Text = "Clear";
+    clearButton.Clicked += OnClearButtonClicked;
+    Content = new StackLayout { Children = { signaturePad, clearButton } };
+}
 
 private void OnClearButtonClicked(object? sender, EventArgs e)
 {
-    ImageSource? source = signaturePad.Clear();
+    signaturePad.Clear();
 }
 
 {% endhighlight %}
@@ -245,6 +258,8 @@ SfSignaturePad signaturePad = new SfSignaturePad()
 { 
     DrawStarted += OnDrawStarted
 };
+Content = signaturePad;
+
 private void OnDrawStarted(object? sender, CancelEventArgs e)
 {
     e.Cancel = false;
@@ -272,6 +287,8 @@ SfSignaturePad signaturePad = new SfSignaturePad()
 {
     DrawCompleted += OnDrawCompleted
 };
+Content = signaturePad;
+
 private void OnDrawCompleted(object? sender, EventArgs e)
 {
 }
@@ -303,6 +320,7 @@ SfSignaturePad signaturePad = new SfSignaturePad()
     MaximumStrokeThickness = 6, 
     DrawCompleted += OnDrawCompleted
 };
+Content = signaturePad;
 
 private void OnDrawCompleted(object? sender, EventArgs e)
 {
