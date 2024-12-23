@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Get the touch position in Syncfusion SfCartesianChart
-description: Learn here all about getting the touch position in SfCartesianChart in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
+title: Get the touch position in Syncfusion® SfCartesianChart
+description: Learn here all about getting the touch position in SfCartesianChart in Syncfusion® .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug

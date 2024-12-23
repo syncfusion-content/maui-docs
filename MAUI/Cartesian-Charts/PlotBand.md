@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Plot Band in .NET MAUI Chart Control | Syncfusion
-description: Learn here all about plot band and its features in Syncfusion .NET MAUI Chart (SfCartesianChart) control and more.
+title: Plot Band in .NET MAUI Chart Control | Syncfusion®
+description: Learn here all about plot band and its features in Syncfusion® .NET MAUI Chart (SfCartesianChart) control and more.
 platform: maui
 control: SfCartesianChart
 documentation: ug

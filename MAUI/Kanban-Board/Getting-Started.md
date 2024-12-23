@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Kanban Board control | Syncfusion
-description: Learn here about getting started with Syncfusion .NET MAUI Kanban Board (SfKanban) control, its elements and more.
+title: Getting Started with .NET MAUI Kanban Board control | Syncfusion®
+description: Learn here about getting started with Syncfusion® .NET MAUI Kanban Board (SfKanban) control, its elements and more.
 platform: maui
 control: Kanban
 documentation: ug
@@ -41,7 +41,7 @@ Before starting, ensure the following are set up:
 
 ## Step 3: Add the Kanban Board Control
 
-1. To initialize the control, import the Chart namespace into your code.
+1. To initialize the control, import the Kanban namespace into your code.
 2. Initialize [SfKanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html).
 
 {% tabs %} 
@@ -200,7 +200,7 @@ N> Add namespace of ViewModel class in your XAML page if you prefer to set Bindi
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="KanbanGettingStarted.MainPage"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Kanban;assembly=Syncfusion.Maui.Kanban"
+             xmlns:kanban="clr-namespace:Syncfusion.Maui.Kanban;assembly=Syncfusion.Maui.Kanban"
              xmlns:local="clr-namespace:KanbanGettingStarted"> 
 
     <ContentPage.BindingContext>

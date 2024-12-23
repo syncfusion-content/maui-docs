@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About .NET MAUI Chart Control | Syncfusion
-description: Learn here all about introduction of Syncfusion .NET MAUI Chart(SfPyramidChart) control with key features and more.
+title: About .NET MAUI Chart Control | Syncfusion®
+description: Learn here all about introduction of Syncfusion® .NET MAUI Chart(SfPyramidChart) control with key features and more.
 platform: maui
 control: SfPyramidChart
 documentation: ug
