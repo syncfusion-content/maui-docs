@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Area Chart in .NET MAUI Chart control | Syncfusion®
-description: Learn here all about the area chart types and its features in Syncfusion® .NET MAUI Chart (SfCartesianChart) control.
+title: Area Chart in .NET MAUI Chart control | Syncfusion
+description: Learn here all about the area chart types and its features in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug

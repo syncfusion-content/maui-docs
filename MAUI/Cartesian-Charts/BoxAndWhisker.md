@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Box and whisker Chart in .NET MAUI Chart control | Syncfusion®
-description: Learn here all about box and whisker chart support in Syncfusion® .NET MAUI Chart (SfCartesianChart) control.
+title: Box and whisker Chart in .NET MAUI Chart control | Syncfusion
+description: Learn here all about box and whisker chart support in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
