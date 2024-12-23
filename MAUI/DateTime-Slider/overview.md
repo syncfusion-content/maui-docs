@@ -9,7 +9,7 @@ documentation: ug
 
 # .NET MAUI DateTime Slider Overview
 
-The Syncfusion .NET MAUI DateTime Slider ([SfDateTimeSlider](https://www.syncfusion.com/maui-controls/maui-slider)) is a highly interactive UI control, allowing users to select a single value from a range of values.
+The Syncfusion® .NET MAUI DateTime Slider ([SfDateTimeSlider](https://www.syncfusion.com/maui-controls/maui-slider)) is a highly interactive UI control, allowing users to select a single value from a range of values.
 
 ## Key features
 

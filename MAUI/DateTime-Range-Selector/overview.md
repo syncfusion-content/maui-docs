@@ -9,7 +9,7 @@ documentation: ug
 
 # .NET MAUI DateTime Range Selector Overview
 
-The Syncfusion .NET MAUI DateTime Range Selector ([SfDateTimeRangeSelector](https://www.syncfusion.com/maui-controls/maui-range-selector)) is a highly interactive UI control, allowing users to select a range of values within a minimum and maximum limit.
+The Syncfusion® .NET MAUI DateTime Range Selector ([SfDateTimeRangeSelector](https://www.syncfusion.com/maui-controls/maui-range-selector)) is a highly interactive UI control, allowing users to select a range of values within a minimum and maximum limit.
 
 ## Key features
 
