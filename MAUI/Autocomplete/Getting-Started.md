@@ -13,7 +13,7 @@ This section guides you through setting up and configuring a [Autocomplete](http
 
 To quickly get started with the .NET MAUI Autocomplete, watch this video.
 
-{% youtube "https://www.youtube.com/watch?v=ontSh2NZvE4" %}
+{% youtube "https://www.youtube.com/watch?v=Hh5pfXvax9o" %}
 
 ## Prerequisites
 
