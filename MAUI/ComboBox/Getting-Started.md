@@ -14,7 +14,7 @@ This section guides you through setting up and configuring a [ComboBox](https://
 
 To quickly get started with the .NET MAUI ComboBox, watch this video.
 
-{% youtube "https://www.youtube.com/watch?v=pFEqZKlLsi4" %}
+{% youtube "https://www.youtube.com/watch?v=jcfaI0PFmSo" %}
 
 ## Prerequisites
 
