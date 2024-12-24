@@ -12,7 +12,7 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
 
 This section explains different UI customizations available in [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html).
 
-Watch this video to quickly customize the .NET MAUI ComboBox.
+Watch this video for a quick guide on customizing the .NET MAUI ComboBox.
 
 {% youtube "https://www.youtube.com/watch?v=_yk7El0Seu8" %}
 
