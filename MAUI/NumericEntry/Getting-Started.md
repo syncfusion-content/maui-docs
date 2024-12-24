@@ -109,7 +109,6 @@ Step 3: Add the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.
 {% highlight C# %}
 
     SfNumericEntry sfNumericEntry = new SfNumericEntry();   
-    Content=sfNumericEntry;
 
 {% endhighlight %}
 {% endtabs %}

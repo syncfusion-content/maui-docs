@@ -26,11 +26,9 @@ You can prompt the user with any information using the [Placeholder](https://hel
 
 SfNumericEntry sfNumericEntry= new SfNumericEntry();
 sfNumericEntry.WidthRequest=200;
-sfNumericEntry.HeightRequest = 50; 
 sfNumericEntry.Placeholder = "Enter input here...";
 sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
 sfNumericEntry.VerticalOptions = LayoutOptions.Center;
-Content=sfNumericEntry;
 
 {% endhighlight %}
 {% endtabs %}
@@ -56,11 +54,10 @@ N> The clear button appears only when the text box is focused and the `IsEditabl
 
 SfNumericEntry sfNumericEntry= new SfNumericEntry();
 sfNumericEntry.WidthRequest=200;
-sfNumericEntry.HeightRequest = 50; 
 sfNumericEntry.Value=10;
 sfNumericEntry.ShowClearButton = true;
 sfNumericEntry.IsEditable = true; 
-Content=sfNumericEntry;
+
 
 {% endhighlight %}
 {% endtabs %}
@@ -94,11 +91,9 @@ The [ValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Sf
 
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
 sfNumericEntry.WidthRequest=200;
-sfNumericEntry.HeightRequest = 50; 
 sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
 sfNumericEntry.VerticalOptions = LayoutOptions.Center;
 sfNumericEntry.ValueChanged += sfNumericEntry_ValueChanged;
-Content=sfNumericEntry;
 
 {% endhighlight %}
 {% endtabs %}
@@ -218,11 +213,9 @@ The NumericEntry border color can be changed by using the [Stroke](https://help.
 
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
 sfNumericEntry.WidthRequest=200;
-sfNumericEntry.HeightRequest = 50; 
 sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
 sfNumericEntry.VerticalOptions = LayoutOptions.Center;
 sfNumericEntry.Stroke = Colors.Red;
-Content=sfNumericEntry;
 
 {% endhighlight %}
 {% endtabs %}
@@ -247,7 +240,6 @@ SfNumericEntry sfNumericEntry= new SfNumericEntry();
 sfNumericEntry.WidthRequest = 200;
 sfNumericEntry.HeightRequest = 40;
 sfNumericEntry.ShowBorder = false;
-Content=sfNumericEntry;
 
 {% endhighlight %}
 {% endtabs %}
@@ -278,7 +270,6 @@ sfNumericEntry.WidthRequest = 200;
 sfNumericEntry.HeightRequest = 50;
 sfNumericEntry.HorizontalTextAlignment = TextAlignment.Center;
 sfNumericEntry.VerticalTextAlignment = TextAlignment.Start;
-Content=sfNumericEntry;
 
 {% endhighlight %}
 {% endtabs %}

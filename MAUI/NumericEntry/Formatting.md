@@ -151,7 +151,6 @@ var hoursWorked = new SfNumericEntry
 {% endhighlight %}
 {% endtabs %}
 
-
 ![.NET MAUI NumericEntry customize fractional digits](Formatting_images/maui-numeric-entry-change-fractional-digits.png)
 
 ## Apply custom format
