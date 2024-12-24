@@ -26,6 +26,7 @@ You can prompt the user with any information using the [Placeholder](https://hel
 
 SfNumericEntry sfNumericEntry= new SfNumericEntry();
 sfNumericEntry.WidthRequest=200;
+sfNumericEntry.HeightRequest = 50; 
 sfNumericEntry.Placeholder = "Enter input here...";
 sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
 sfNumericEntry.VerticalOptions = LayoutOptions.Center;
@@ -53,9 +54,10 @@ N> The clear button appears only when the text box is focused and the `IsEditabl
 {% endhighlight %}
 {% highlight C# %}
 
-SfNumericEntry sfNumricEntry= new SfNumericEntry();
+SfNumericEntry sfNumericEntry= new SfNumericEntry();
 sfNumericEntry.WidthRequest=200;
-sfNumricEntry.Value=10;
+sfNumericEntry.HeightRequest = 50; 
+sfNumericEntry.Value=10;
 sfNumericEntry.ShowClearButton = true;
 sfNumericEntry.IsEditable = true; 
 Content=sfNumericEntry;
@@ -92,6 +94,7 @@ The [ValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Sf
 
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
 sfNumericEntry.WidthRequest=200;
+sfNumericEntry.HeightRequest = 50; 
 sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
 sfNumericEntry.VerticalOptions = LayoutOptions.Center;
 sfNumericEntry.ValueChanged += sfNumericEntry_ValueChanged;
@@ -215,6 +218,7 @@ The NumericEntry border color can be changed by using the [Stroke](https://help.
 
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
 sfNumericEntry.WidthRequest=200;
+sfNumericEntry.HeightRequest = 50; 
 sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
 sfNumericEntry.VerticalOptions = LayoutOptions.Center;
 sfNumericEntry.Stroke = Colors.Red;
@@ -381,8 +385,10 @@ The following image illustrates the result of the above code:
 var viewModel = new CommandDemoViewModel();
 SfNumericEntry numericEntry = new SfNumericEntry();
 numericEntry.WidthRequest=200;
+numericEntry.HeightRequest= 50;
 numericEntry.ReturnCommand = viewModel.AlertCommand;
 numericEntry.ReturnCommandParameter = "Return key is pressed";
+Content = numericEntry;
 
 {% endhighlight %}
 {% endtabs %}
