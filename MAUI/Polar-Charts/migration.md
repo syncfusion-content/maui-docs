@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migration from Xamarin to .NET MAUI Chart control | Syncfusion
+title: Migration from Xamarin to .NET MAUI Chart control | Syncfusion®
 description: Learn here all about the features available in the .NET MAUI Chart (SfPolarChart) control over Xamarin SfChart.
 platform: MAUI
 control: SfPolarChart

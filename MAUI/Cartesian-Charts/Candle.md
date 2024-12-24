@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Candle Chart in .NET MAUI Chart control | Syncfusion
-description: Learn here all about candle chart and its features in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
+title: Candle Chart in .NET MAUI Chart control | Syncfusion®
+description: Learn here all about candle chart and its features in Syncfusion® .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
