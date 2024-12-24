@@ -41,37 +41,22 @@ N> You can apply various custom formats available in  [this page](https://docs.m
 var stockPrice = new SfNumericEntry
 {
     CustomFormat = "C2",
-    WidthRequest = 200,
-    HeightRequest = 50,
+    WidthRequest = 200
 };
 
 // Format product discount in percent.
 var productDiscount = new SfNumericEntry
 {
     CustomFormat = "P2",
-    WidthRequest = 200,
-    HeightRequest = 50,
+    WidthRequest = 200
 };
 
 // Format worked hours in decimal.
 var hoursWorked = new SfNumericEntry
 {
     CustomFormat = "N2",
-    WidthRequest = 200,
-    HeightRequest = 50,
+    WidthRequest = 200
 };
-
-
-var layout = new VerticalStackLayout
-{
-    Children =
-    {
-        stockPriceEntry,
-        discountEntry,
-        workedHoursEntry
-    }
-};
-Content = layout;
 
 {% endhighlight %}
 {% endtabs %}
@@ -105,36 +90,22 @@ N> **0** (Zero placeholder) replaces the zero with the corresponding digit prese
 var stockPrice = new SfNumericEntry
 {
     CustomFormat = "$00000.00",
-    WidthRequest = 200,
-    HeightRequest = 50
+    WidthRequest = 200
 };
 
 // Format product discount in percentage.
 var productDiscount = new SfNumericEntry
 {
     CustomFormat = "00000.00%",
-    WidthRequest = 200,
-    HeightRequest = 50
+    WidthRequest = 200
 };
 
 // Format worked hours in decimal.
 var hoursWorked = new SfNumericEntry
 {
     CustomFormat = "00000.00",
-    WidthRequest = 200,
-    HeightRequest = 50
+    WidthRequest = 200
 };
-
-var layout = new VerticalStackLayout
-{
-    Children =
-    {
-        stockPrice,
-        productDiscount,
-        hoursWorked
-    }
-};
-Content = layout;
 
 {% endhighlight %}
 {% endtabs %}
@@ -162,38 +133,23 @@ N> **0** (Zero placeholder) replaces the zero with the corresponding digit in th
 var stockPrice = new SfNumericEntry
 {
     CustomFormat = "$000.000",
-    WidthRequest = 200,
-    HeightRequest = 50
+    WidthRequest = 200
 };
 
 var productDiscount = new SfNumericEntry
 {
     CustomFormat = "00.000%",
-    WidthRequest = 200,
-    HeightRequest = 50
+    WidthRequest = 200
 };
 
 var hoursWorked = new SfNumericEntry
 {
     CustomFormat = "00.000",
-    WidthRequest = 200,
-    HeightRequest = 50
+    WidthRequest = 200
 };
-
-var layout = new VerticalStackLayout
-{
-    Children =
-    {
-        stockPrice,
-        productDiscount,
-        hoursWorked
-    }
-};
-Content = layout;
 
 {% endhighlight %}
 {% endtabs %}
-
 
 ![.NET MAUI NumericEntry customize fractional digits](Formatting_images/maui-numeric-entry-change-fractional-digits.png)
 
@@ -220,35 +176,20 @@ In the following example, the value of the `CustomFormat` property is **#.00##**
 var stockPrice = new SfNumericEntry
 {
     CustomFormat = "$00.00##",
-    WidthRequest = 200,
-    HeightRequest = 50
+    WidthRequest = 200
 };
 
 var productDiscount = new SfNumericEntry
 {
     CustomFormat = "00.00##%",
-    WidthRequest = 200,
-    HeightRequest = 50
+    WidthRequest = 200
 };
 
 var hoursWorked = new SfNumericEntry
 {
     CustomFormat = "00.00##",
-    WidthRequest = 200,
-    HeightRequest = 50
+    WidthRequest = 200
 };
-
-var layout = new VerticalStackLayout
-{
-    Children =
-    {
-        stockPrice,
-        productDiscount,
-        hoursWorked
-    }
-};
-
-Content = layout;
 
 {% endhighlight %}
 {% endtabs %}
@@ -295,8 +236,6 @@ sfNumericEntry.CustomFormat = "p";
 sfNumericEntry.Value = 1000;
 sfNumericEntry.PercentDisplayMode = PercentDisplayMode.Value;
 sfNumericEntry.WidthRequest = 200;
-sfNumericEntry.HeightRequest = 50; 
-Content = sfNumericEntry;
 
 {% endhighlight %}
 {% endtabs %}
@@ -322,8 +261,6 @@ sfNumericEntry.Value = 1000;
 sfNumericEntry.CustomFormat = "p";
 sfNumericEntry.PercentDisplayMode = PercentDisplayMode.Value;
 sfNumericEntry.WidthRequest = 200;
-sfNumericEntry.HeightRequest = 50; 
-Content = sfNumericEntry;
 
 {% endhighlight %}
 {% endtabs %}
@@ -351,10 +288,8 @@ N> The `MaximumNumberDecimalDigits` property can only be set to a positive value
 
 SfNumericEntry sfNumericEntry= new SfNumericEntry();
 sfNumericEntry.WidthRequest = 200;
-sfNumericEntry.HeightRequest = 50; 
 sfNumericEntry.Value = 1000.23232;
 sfNumericEntry.MaximumNumberDecimalDigits = 3;
-Content = sfNumericEntry;
 
 {% endhighlight %}
 {% endtabs %}

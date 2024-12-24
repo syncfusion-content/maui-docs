@@ -109,7 +109,6 @@ Step 3: Add the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.
 {% highlight C# %}
 
     SfNumericEntry sfNumericEntry = new SfNumericEntry();   
-    Content=sfNumericEntry;
 
 {% endhighlight %}
 {% endtabs %}
@@ -133,11 +132,9 @@ By default, the [NumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 
 SfNumericEntry numericEntry = new SfNumericEntry();
 numericEntry.WidthRequest=200;
-numericEntry.HeightRequest=50;
 numericEntry.HorizontalOptions = LayoutOptions.Center;
 numericEntry.VerticalOptions = LayoutOptions.Center;
 numericEntry.CustomFormat = "0.000";
-Content=numericEntry;
 
 {% endhighlight %}
 {% endtabs %}
@@ -162,12 +159,10 @@ You can change the format in which the value should be displayed using the [Cust
 
 SfNumericEntry numericEntry = new SfNumericEntry();
 numericEntry.WidthRequest=200;
-numericEntry.HeightRequest=50;
 numericEntry.HorizontalOptions = LayoutOptions.Center;
 numericEntry.VerticalOptions = LayoutOptions.Center;
 numericEntry.Value = 12.5;
 numericEntry.CustomFormat = "C2";
-Content=numericEntry;
 
 {% endhighlight %}
 {% endtabs %}
@@ -190,14 +185,12 @@ By default, the [NumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 {% endhighlight %}
 {% highlight C# %}
 
-SfNumericEntry numericEntry = new SfNumericEntry();
-numericEntry.WidthRequest=200;
-numericEntry.HeightRequest=50;
-numericEntry.Value=12315;
-numericEntry.HorizontalOptions = LayoutOptions.Center;
-numericEntry.VerticalOptions = LayoutOptions.Center;
-numericEntry.AllowNull = false;
-Content=numericEntry;
+SfNumericEntry sfNumericEntry = new SfNumericEntry();
+sfNumericEntry.WidthRequest=200;
+sfNumericEntry.Value=12315;
+sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
+sfNumericEntry.VerticalOptions = LayoutOptions.Center;
+sfNumericEntry.AllowNull = false;
 
 {% endhighlight %}
 {% endtabs %}

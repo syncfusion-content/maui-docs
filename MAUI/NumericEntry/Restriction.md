@@ -32,13 +32,11 @@ N> When the value of the Minimum property is **15**, and the `AllowNull` propert
 {% highlight C# %}
 
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
-sfNumericEntry.HeightRequest= 50;
 sfNumericEntry.WidthRequest = 200;
 sfNumeriCEntry.HorizontalOptions = LayoutOptions.Center;
 sfNumericEntry.VerticalOptions = LayoutOptions.Center;
 sfNumericEntry.Value = 10;
 sfNumericEntry.AllowNull = false;
-Content = sfNumericEntry;
 
 {% endhighlight %}
 {% endtabs %}
@@ -63,14 +61,12 @@ You can restrict the users to enter input within a minimum and maximum range in 
 {% highlight C# %}
 
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
-sfNumericEntry.HeightRequest= 50;
 sfNumericEntry.WidthRequest = 200;
 sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
 sfNumericEntry.VerticalOptions = LayoutOptions.Center;
 sfNumericEntry.Minimum = 10;
 sfNumericEntry.Maximum = 30;
 sfNumericEntry.Value = 50;
-Content = sfNumericEntry;
 
 {% endhighlight %}
 {% endtabs %}
@@ -96,12 +92,10 @@ You can prevent users from editing the numerical value in the editor using the [
 {% highlight C# %}
 
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
-sfNumericEntry.HeightRequest= 50;
 sfNumericEntry.WidthRequest = 200;
 sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
 sfNumericEntry.VerticalOptions = LayoutOptions.Center;
 sfNumericEntry.IsEditable = true;
-Content = sfNumericEntry;
 
 {% endhighlight %}
 {% endtabs %}
