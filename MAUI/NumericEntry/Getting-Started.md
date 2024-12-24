@@ -122,7 +122,8 @@ By default, the [NumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfNumericEntry HorizontalOptions="Center" 
+<editors:SfNumericEntry WidthRequest="200"
+                        HorizontalOptions="Center" 
                         VerticalOptions="Center" 
                         CustomFormat="0.000" />
 
@@ -130,9 +131,11 @@ By default, the [NumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 {% highlight C# %}
 
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
+sfNumericEntry.WidthRequest=200;
 sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
 sfNumericEntry.VerticalOptions = LayoutOptions.Center;
 sfNumericEntry.CustomFormat = "0.000";
+Content=sfNumericEntry;
 
 {% endhighlight %}
 {% endtabs %}
@@ -146,7 +149,8 @@ You can change the format in which the value should be displayed using the [Cust
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfNumericEntry HorizontalOptions="Center"
+<editors:SfNumericEntry WidthRequest="200"
+                        HorizontalOptions="Center"
                         VerticalOptions="Center"
                         Value="12.5" 
                         CustomFormat="C2" />
@@ -154,11 +158,13 @@ You can change the format in which the value should be displayed using the [Cust
 {% endhighlight %}
 {% highlight C# %}
 
-SfNumberBox sfNumberBox = new SfNumberBox();
-sfNumberBox.HorizontalOptions = LayoutOptions.Center;
-sfNumberBox.VerticalOptions = LayoutOptions.Center;
-sfNumberBox.Value = 12.5;
-sfNumberBox.CustomFormat = "C2";
+SfNumericEntry numericEntry = new SfNumericEntry();
+sfNumericEntry.WidthRequest=200;
+numericEntry.HorizontalOptions = LayoutOptions.Center;
+numericEntry.VerticalOptions = LayoutOptions.Center;
+numericEntry.Value = 12.5;
+numericEntry.CustomFormat = "C2";
+Content=sfNumericEntry;
 
 {% endhighlight %}
 {% endtabs %}
@@ -172,7 +178,8 @@ By default, the [NumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfNumericEntry HorizontalOptions="Center"
+<editors:SfNumericEntry WidthRequest="200"
+                        HorizontalOptions="Center"
                         VerticalOptions="Center"
                         Value="12315"
                         AllowNull="False" />
@@ -181,10 +188,12 @@ By default, the [NumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 {% highlight C# %}
 
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
+sfNumericEntry.WidthRequest=200;
 sfNumericEntry.Value=12315;
 sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
 sfNumericEntry.VerticalOptions = LayoutOptions.Center;
 sfNumericEntry.AllowNull = false;
+Content=sfNumericEntry;
 
 {% endhighlight %}
 {% endtabs %}
