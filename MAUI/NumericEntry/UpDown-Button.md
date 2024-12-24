@@ -206,8 +206,7 @@ The `NumericEntry` control supports customization of the UpDownButton's appearan
         <editors:SfNumericEntry.UpButtonTemplate>
             <DataTemplate>
                 <Grid>
-                    <Label Padding="0,6.5,0,0" 
-                           Rotation="90"
+                    <Label Padding="10, 3, 15, 10" 
                            FontFamily="FontIcons"
                            HorizontalOptions="Center"
                            Text="&#8593;"
@@ -219,8 +218,8 @@ The `NumericEntry` control supports customization of the UpDownButton's appearan
         <editors:SfNumericEntry.DownButtonTemplate>
             <DataTemplate>
                 <Grid>
-                    <Label Padding="0,5,0,0" 
-                           Rotation="270"
+                    <Label Padding="10, 3, 15, 10" 
+                           Rotation="180"
                            FontFamily="FontIcons"
                            HorizontalOptions="Center"
                            Text="&#8593;"
@@ -258,7 +257,7 @@ The `NumericEntry` control supports customization of the UpDownButton's appearan
              var grid = new Grid();
              var label = new Label
              {
-                 Padding = new Thickness(0, 6.5, 0, 0),
+                 Padding = new Thickness(10, 3, 15, 10),
                  FontFamily = "FontIcons",
                  HorizontalOptions = LayoutOptions.Center,
                  Text = "\u2191", // Use Unicode directly for the icon
@@ -273,7 +272,7 @@ The `NumericEntry` control supports customization of the UpDownButton's appearan
              var grid = new Grid();
              var label = new Label
              {
-                 Padding = new Thickness(0, 5, 0, 0),
+                 Padding = new Thickness(10, 3, 15, 10),
                  Rotation = 180,
                  FontFamily = "FontIcons",
                  HorizontalOptions = LayoutOptions.Center,
