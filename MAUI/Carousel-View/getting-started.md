@@ -15,7 +15,7 @@ This section guides you through setting up and configuring a [Carousel](https://
 
 To quickly get started with the .NET MAUI Carousel, watch this video.
 
-{% youtube "https://www.youtube.com/watch?v=Q3eNppgpQ2Y" %}
+{% youtube "https://www.youtube.com/watch?v=pFEqZKlLsi4" %}
 
 ## Prerequisites
 

@@ -12,6 +12,10 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
 
 This section explains different UI customizations available in [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html).
 
+Watch this video to quickly customize the .NET MAUI ComboBox.
+
+{% youtube "https://www.youtube.com/watch?v=_yk7El0Seu8" %}
+
 ## Placeholder
 
 You can prompt the user with any information by using the [Placeholder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_Placeholder) property. This text will be displayed only if no items are selected or the edit text is empty. The default value of Placeholder property is `string.Empty` (No string will be displayed).

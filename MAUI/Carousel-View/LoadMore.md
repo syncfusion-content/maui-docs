@@ -9,6 +9,10 @@ documentation : ug
 
 # Load More in .NET MAUI Carousel View (SfCarousel)
 
+Watch this video to quickly customize the .NET MAUI Carousel.
+
+{% youtube "https://www.youtube.com/watch?v=Q3eNppgpQ2Y" %}
+
 Virtualization can be achieved by using the Load More concept. This support is used to handle the numerous items in the carousel control. Items are maintained in the viewport based on the [LoadMoreItemsCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_LoadMoreItemsCount) property. The LoadMore view is added after the last item in the collection of the carousel view. When tapping the LoadMore view, the next set of items in the collection can be added to the carousel.
 
 The following properties are used to achieve this support:
