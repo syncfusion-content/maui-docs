@@ -64,11 +64,12 @@ The following example shows how to set the France culture for the currency symbo
 {% tabs %}
 {% highlight C# %}
 
-maskedEntry = new SfMaskedEntry();
-maskedEntry.WidthRequest = "200";
+SfMaskedEntry maskedEntry = new SfMaskedEntry();
+maskedEntry.WidthRequest = 200;
 maskedEntry.MaskType = MaskedEntryMaskType.Simple;
 maskedEntry.Mask = "$ 0,000.00";
 maskedEntry.Culture = new CultureInfo("fr-FR"); 
+Content=maskedEntry;
 
 {% endhighlight %}
 {% endtabs %}
