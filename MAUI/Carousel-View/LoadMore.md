@@ -9,7 +9,7 @@ documentation : ug
 
 # Load More in .NET MAUI Carousel View (SfCarousel)
 
-Watch this video to quickly customize the .NET MAUI Carousel.
+Watch this video for a quick guide on customizing the .NET MAUI Carousel.
 
 {% youtube "https://www.youtube.com/watch?v=Q3eNppgpQ2Y" %}
 
