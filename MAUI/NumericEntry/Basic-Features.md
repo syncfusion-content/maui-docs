@@ -307,7 +307,6 @@ N> Default value of ReturnType is `Default`.
 
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
 sfNumericEntry.WidthRequest=200;
-sfNumericEntry.HeightRequest=50;
 sfNumericEntry.ReturnType = ReturnType.Next;
 
 {% endhighlight %}
@@ -385,10 +384,8 @@ The following image illustrates the result of the above code:
 var viewModel = new CommandDemoViewModel();
 SfNumericEntry numericEntry = new SfNumericEntry();
 numericEntry.WidthRequest=200;
-numericEntry.HeightRequest= 50;
 numericEntry.ReturnCommand = viewModel.AlertCommand;
 numericEntry.ReturnCommandParameter = "Return key is pressed";
-Content = numericEntry;
 
 {% endhighlight %}
 {% endtabs %}

@@ -32,13 +32,11 @@ N> The value in the `NumericEntry` can also be changed by mouse scrolling. The m
 
 SfNumericEntry sfNumericEntry= new SfNumericEntry();
 sfNumericEntry.Value=10;
-sfNumericEntry.HeightRequest= 50;
 sfNumericEntry.WidthRequest = 200;
 sfNumericEntry.SmallChange=5;
 sfNumericEntry.LargeChange=10;
 sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
 sfNumericEntry.VerticalOptions = LayoutOptions.Center;
-Content = sfNumericEntry;
 
 {% endhighlight %}
 {% endtabs %}
@@ -66,13 +64,11 @@ N> When using the up-down button, the `NumericEntry` control value changes based
 {% highlight c# %}
 
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
-sfNumericEntry.HeightRequest= 50;
 sfNumericEntry.WidthRequest = 200;
 sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
 sfNumericEntry.VerticalOptions = LayoutOptions.Center;
 sfNumericEntry.Value=360;
 sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
-Content = sfNumericEntry;
 
 {% endhighlight %}
 {% endtabs %}
@@ -94,13 +90,11 @@ Content = sfNumericEntry;
 {% highlight c# %}
 
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
-sfNumericEntry.HeightRequest= 50;
 sfNumericEntry.WidthRequest = 200;
 sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
 sfNumericEntry.VerticalOptions = LayoutOptions.Center;
 sfNumericEntry.Value=360;
 sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.InlineVertical;
-Content = sfNumericEntry;
 
 {% endhighlight %}
 {% endtabs %}
@@ -127,13 +121,11 @@ N> By default, the `UpDownButtonAlignment` property is set to **Right**.
 {% highlight c# %}
 
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
-sfNumericEntry.HeightRequest= 50;
 sfNumericEntry.WidthRequest = 200;
 sfNumericEntry.Value = 123;
 sfNumericEntry.HorizontalTextAlignment=TextAlignment.End;
 sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
 sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Left;
-Content = sfNumericEntry;
 
 {% endhighlight %}
 {% endtabs %}
@@ -154,13 +146,11 @@ Content = sfNumericEntry;
 {% highlight c# %}
 
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
-sfNumericEntry.HeightRequest= 50;
 sfNumericEntry.WidthRequest = 200;
 sfNumericEntry.Value = 123;
 sfNumericEntry.HorizontalTextAlignment=TextAlignment.Center;
 sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
 sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Both;
-Content = sfNumericEntry;
 
 {% endhighlight %}
 {% endtabs %}
@@ -188,14 +178,12 @@ Customize the `NumericEntry` control button color by using the [UpDownButtonColo
 {% highlight c# %}
 
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
-sfNumericEntry.HeightRequest= 50;
 sfNumericEntry.WidthRequest = 200;
 sfNumericEntry.HorizontalOptions = LayoutOptions.Center
 sfNumericEntry.VerticalOptions = LayoutOptions.Center;
 sfNumericEntry.Value = 360;
 sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
 sfNumericEntry.UpDownButtonColor = Colors.Blue;
-Content = sfNumericEntry;
 
 {% endhighlight %}
 {% endtabs %}
@@ -326,13 +314,11 @@ N> The default value of this property is `false.`
 {% highlight c# %}
 
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
-sfNumericEntry.HeightRequest= 50;
 sfNumericEntry.WidthRequest = 200;
 sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
 sfNumericEntry.AutoReverse = true;
 sfNumericEntry.Minimum=0;
 sfNumericEntry.Maximum=10;
-Content = sfNumericEntry;
 
 {% endhighlight %}
 {% endtabs %}

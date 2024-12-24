@@ -133,7 +133,6 @@ By default, the [NumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 
 SfNumericEntry numericEntry = new SfNumericEntry();
 numericEntry.WidthRequest=200;
-numericEntry.HeightRequest=50;
 numericEntry.HorizontalOptions = LayoutOptions.Center;
 numericEntry.VerticalOptions = LayoutOptions.Center;
 numericEntry.CustomFormat = "0.000";
@@ -162,7 +161,6 @@ You can change the format in which the value should be displayed using the [Cust
 
 SfNumericEntry numericEntry = new SfNumericEntry();
 numericEntry.WidthRequest=200;
-numericEntry.HeightRequest=50;
 numericEntry.HorizontalOptions = LayoutOptions.Center;
 numericEntry.VerticalOptions = LayoutOptions.Center;
 numericEntry.Value = 12.5;
@@ -192,7 +190,6 @@ By default, the [NumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 
 SfNumericEntry numericEntry = new SfNumericEntry();
 numericEntry.WidthRequest=200;
-numericEntry.HeightRequest=50;
 numericEntry.Value=12315;
 numericEntry.HorizontalOptions = LayoutOptions.Center;
 numericEntry.VerticalOptions = LayoutOptions.Center;
