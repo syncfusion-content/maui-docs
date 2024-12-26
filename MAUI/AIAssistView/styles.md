@@ -963,6 +963,10 @@ To style the stop responding view based on its appearance, set values to the in-
 <tr> 
 <th> Key </th>
 <th> Description </th> 
+</tr>
+<tr> 
+<td> SfAIAssistViewStopRespondingBackground </td>
+<td> Background color of the stop responding view. </td> 
 </tr> 
 <tr> 
 <td> SfAIAssistViewStopRespondingIconColor </td>
