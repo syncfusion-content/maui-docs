@@ -458,12 +458,12 @@ This page lists the keys for each control and the element to which it is mapped 
     <td> Font attributes used for suggestion list items.<br/><br/></td>
 </tr>
 <tr>
-    <td> SfAIAssistViewStopRespondingIconColor <br/><br/></td>
-    <td> Icon color for the stop responding view.<br/><br/></td>
-</tr>
-<tr>
     <td> SfAIAssistViewStopRespondingBackground <br/><br/></td>
     <td> Background color of the stop responding view.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewStopRespondingIconColor <br/><br/></td>
+    <td> Icon color for the stop responding view.<br/><br/></td>
 </tr>
 <tr>
     <td> SfAIAssistViewStopRespondingTextColor <br/><br/></td>
