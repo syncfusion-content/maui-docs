@@ -20,7 +20,8 @@ N> The value in the `NumericEntry` can also be changed by mouse scrolling. The m
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfNumericEntry HorizontalOptions="Center"
+<editors:SfNumericEntry WidthRequest="200"
+                        HorizontalOptions="Center"
                         VerticalOptions="Center" 
                         SmallChange="5"
                         Value="10"
@@ -31,6 +32,7 @@ N> The value in the `NumericEntry` can also be changed by mouse scrolling. The m
 
 SfNumericEntry sfNumericEntry= new SfNumericEntry();
 sfNumericEntry.Value=10;
+sfNumericEntry.WidthRequest = 200;
 sfNumericEntry.SmallChange=5;
 sfNumericEntry.LargeChange=10;
 sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
@@ -52,7 +54,8 @@ N> When using the up-down button, the `NumericEntry` control value changes based
 {% tabs %}
 {% highlight XAML %}
 
-<editors:SfNumericEntry HorizontalOptions="Center"
+<editors:SfNumericEntry WidthRequest="200"
+                        HorizontalOptions="Center"
                         VerticalOptions="Center"
                         Value="360";
                         UpDownPlacementMode="Inline" />
@@ -61,6 +64,7 @@ N> When using the up-down button, the `NumericEntry` control value changes based
 {% highlight c# %}
 
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
+sfNumericEntry.WidthRequest = 200;
 sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
 sfNumericEntry.VerticalOptions = LayoutOptions.Center;
 sfNumericEntry.Value=360;
@@ -77,6 +81,7 @@ sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
 {% highlight XAML %}
 
 <editors:SfNumericEntry Value="360"
+                        WidthRequest="200"
                         VerticalOptions="Center"
                         HorizontalOptions="Center"
                         UpDownPlacementMode="InlineVertical"/>
@@ -85,6 +90,7 @@ sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
 {% highlight c# %}
 
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
+sfNumericEntry.WidthRequest = 200;
 sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
 sfNumericEntry.VerticalOptions = LayoutOptions.Center;
 sfNumericEntry.Value=360;
@@ -107,6 +113,7 @@ N> By default, the `UpDownButtonAlignment` property is set to **Right**.
 {% highlight XAML %}
 
 <editors:SfNumericEntry Value="123" HorizontalTextAlignment="End" 
+                        WidthRequest="200"
                         UpDownPlacementMode="Inline" 
                         UpDownButtonAlignment="Left"/>
                      
@@ -114,6 +121,7 @@ N> By default, the `UpDownButtonAlignment` property is set to **Right**.
 {% highlight c# %}
 
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
+sfNumericEntry.WidthRequest = 200;
 sfNumericEntry.Value = 123;
 sfNumericEntry.HorizontalTextAlignment=TextAlignment.End;
 sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
@@ -130,6 +138,7 @@ sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Left;
 {% highlight XAML %}
 
 <editors:SfNumericEntry Value="123" HorizontalTextAlignment="Center" 
+                        WidthRequest="200"
                         UpDownPlacementMode="Inline" 
                         UpDownButtonAlignment="Both"/>
                      
@@ -137,6 +146,7 @@ sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Left;
 {% highlight c# %}
 
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
+sfNumericEntry.WidthRequest = 200;
 sfNumericEntry.Value = 123;
 sfNumericEntry.HorizontalTextAlignment=TextAlignment.Center;
 sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
@@ -168,7 +178,6 @@ Customize the `NumericEntry` control button color by using the [UpDownButtonColo
 {% highlight c# %}
 
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
-sfNumericEntry.HeightRequest= 50;
 sfNumericEntry.WidthRequest = 200;
 sfNumericEntry.HorizontalOptions = LayoutOptions.Center
 sfNumericEntry.VerticalOptions = LayoutOptions.Center;
@@ -197,11 +206,10 @@ The `NumericEntry` control supports customization of the UpDownButton's appearan
         <editors:SfNumericEntry.UpButtonTemplate>
             <DataTemplate>
                 <Grid>
-                    <Label Padding="0,6.5,0,0" 
-                           Rotation="90"
+                    <Label Padding="10, 3, 15, 10" 
                            FontFamily="FontIcons"
                            HorizontalOptions="Center"
-                           Text="&#xe74a;"
+                           Text="&#8593;"
                            TextColor="Green"
                            FontSize="20"/>
                 </Grid>
@@ -210,11 +218,11 @@ The `NumericEntry` control supports customization of the UpDownButton's appearan
         <editors:SfNumericEntry.DownButtonTemplate>
             <DataTemplate>
                 <Grid>
-                    <Label Padding="0,5,0,0" 
-                           Rotation="270"
+                    <Label Padding="10, 3, 15, 10" 
+                           Rotation="180"
                            FontFamily="FontIcons"
                            HorizontalOptions="Center"
-                           Text="&#xe74a;"
+                           Text="&#8593;"
                            TextColor="Red"
                            FontSize="20"/>
                 </Grid>
@@ -249,11 +257,10 @@ The `NumericEntry` control supports customization of the UpDownButton's appearan
              var grid = new Grid();
              var label = new Label
              {
-                 Padding = new Thickness(0, 6.5, 0, 0),
-                 Rotation = 90,
+                 Padding = new Thickness(10, 3, 15, 10),
                  FontFamily = "FontIcons",
                  HorizontalOptions = LayoutOptions.Center,
-                 Text = "\ue74a", // Use Unicode directly for the icon
+                 Text = "\u2191", // Use Unicode directly for the icon
                  TextColor = Colors.Green,
                  FontSize = 20
              };
@@ -265,11 +272,11 @@ The `NumericEntry` control supports customization of the UpDownButton's appearan
              var grid = new Grid();
              var label = new Label
              {
-                 Padding = new Thickness(0, 5, 0, 0),
-                 Rotation = 270,
+                 Padding = new Thickness(10, 3, 15, 10),
+                 Rotation = 180,
                  FontFamily = "FontIcons",
                  HorizontalOptions = LayoutOptions.Center,
-                 Text = "\ue74a",
+                 Text = "\u2191",
                  TextColor = Colors.Red,
                  FontSize = 20
              };
@@ -306,6 +313,7 @@ N> The default value of this property is `false.`
 {% highlight c# %}
 
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
+sfNumericEntry.WidthRequest = 200;
 sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
 sfNumericEntry.AutoReverse = true;
 sfNumericEntry.Minimum=0;
