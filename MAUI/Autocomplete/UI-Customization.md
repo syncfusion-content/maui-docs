@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains different UI customizations available in the [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control.
 
-Watch this video for a quick guide on customizing the .NET MAUI Autocomplete.
+To get start quickly to customize the Appearance of .NET MAUI Autocomplete, you can check on this video:
 
 {% youtube "https://www.youtube.com/watch?v=Hh5pfXvax9o" %}
 
