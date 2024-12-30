@@ -21,6 +21,7 @@ The background of the input view will be filled with container color, and its st
 {% highlight xaml %} 
 
 <inputLayout:SfTextInputLayout Hint="Name"
+                               HelperText="Enter the name"
                                ContainerType="Filled">
     <Entry Text="John" />
 </inputLayout:SfTextInputLayout>  
@@ -49,6 +50,7 @@ When setting the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.
 {% highlight xaml %} 
 
 <inputLayout:SfTextInputLayout Hint="Name"
+                               HelperText="Enter the name"
                                ContainerType="Outlined">
     <Entry Text="John" />
 </inputLayout:SfTextInputLayout>  
@@ -142,7 +144,8 @@ When setting the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 {% highlight xaml %} 
 
-<inputLayout:SfTextInputLayout Hint="Name" 
+<inputLayout:SfTextInputLayout Hint="Name"
+                               HelperText="Enter the name" 
                                ContainerType="None">
     <Entry Text="John" />
 </inputLayout:SfTextInputLayout>  
