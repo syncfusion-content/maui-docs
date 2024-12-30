@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About Axis in .NET MAUI Chart Control | Syncfusion
-description: Learn here all about the chart axis and its key features in the Syncfusion .NET MAUI Chart (SfPolarChart) control.
+title: About Axis in .NET MAUI Chart Control | Syncfusion®
+description: Learn here all about the chart axis and its key features in the Syncfusion® .NET MAUI Chart (SfPolarChart) control.
 platform: maui
 control: SfPolarChart
 documentation: ug

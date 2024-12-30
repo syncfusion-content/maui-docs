@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Axis Labels in .NET MAUI Chart Control | Syncfusion
-description: Learn here all about axis labels and their customization in the Syncfusion .NET MAUI Chart (SfPolarChart) control.
+title: Axis Labels in .NET MAUI Chart Control | Syncfusion®
+description: Learn here all about axis labels and their customization in the Syncfusion® .NET MAUI Chart (SfPolarChart) control.
 platform: maui
 control: SfPolarChart
 documentation: ug
