@@ -10597,6 +10597,30 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
     </tr>   
+     <tr>
+        <td>
+          SfPdfViewerControlBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Background color of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr> 
+     <tr>
+        <td>
+          SfPdfViewerLoadingIndicatorColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Color of the document loading and page loading busy indicator in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr> 
 </table>
 
 ## SfPicker
