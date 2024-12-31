@@ -65,6 +65,6 @@ this.Content = carousel;
 
 {% endtabs %}
 
-![UIVirtualization](images/UIVirtualization.png)
+![UIVirtualization](images/UIVirtualization.png) 
 
 Find the complete UIVirtualization sample from this [link](https://github.com/SyncfusionExamples/maui-carousel-samples/tree/master/UIVirtualization/VirtualizationSample).
