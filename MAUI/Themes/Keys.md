@@ -10636,7 +10636,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td> 
         <td>
-           Background color of the SfPdfViewer control.
+           Background color of the SfPdfViewer.
             <br/>
             <br/>
         </td>
