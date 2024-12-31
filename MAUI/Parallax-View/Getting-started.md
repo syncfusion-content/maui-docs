@@ -152,9 +152,9 @@ The [`Source`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.
 Currently, the [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html) directly supports the following controls. Bind the control to the [`Source`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Source) property.
 
     1. ScrollView
-    2. Syncfusion ListView
+    2. Syncfusion® ListView
 
-The following code sample demonstrates how to bind the Syncfusion ListView to the [`Source`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Source) property.
+The following code sample demonstrates how to bind the Syncfusion® ListView to the [`Source`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Source) property.
 
 {% tabs %}
 
