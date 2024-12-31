@@ -10648,7 +10648,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td> 
         <td>
-            Color of the loading / busy indicator in the SfPdfViewer.
+            Color of the document loading and page loading busy indicator in the SfPdfViewer.
             <br/>
             <br/>
         </td>
