@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Axis line in .NET MAUI Chart control | Syncfusion®
+title: Axis line in .NET MAUI Chart control | Syncfusion
 description: Learn here all about the chart axis line and its customization in Syncfusion® .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart

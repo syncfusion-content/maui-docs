@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Range Area Chart in .NET MAUI Chart control | Syncfusion®
+title: Range Area Chart in .NET MAUI Chart control | Syncfusion
 description: Learn here all about range area chart support in Syncfusion® .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart

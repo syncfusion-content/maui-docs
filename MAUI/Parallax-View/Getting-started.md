@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Parallax View control | Syncfusion®
+title: Getting started with .NET MAUI Parallax View control | Syncfusion
 description: Learn about getting started with Syncfusion® .NET MAUI Parallax View (SfParallaxView) control and more.
 platform: MAUI
 control: SfParallaxView

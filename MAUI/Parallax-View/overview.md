@@ -1,6 +1,6 @@
 ---
 layout: post
-title: About .NET MAUI Parallax View control | Syncfusion®
+title: About .NET MAUI Parallax View control | Syncfusion
 description: Learn about the introduction of Syncfusion® .NET MAUI Parallax View (SfParallaxView) control and more.
 platform: MAUI
 control: SfParallaxView

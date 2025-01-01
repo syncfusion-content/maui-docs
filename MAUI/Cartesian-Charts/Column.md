@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Column Chart in .NET MAUI Chart control | Syncfusion®
+title: Column Chart in .NET MAUI Chart control | Syncfusion
 description: Learn here all about column and bar chart support in Syncfusion® .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart

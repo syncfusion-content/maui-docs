@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Kanban Board control | Syncfusion®
+title: Getting Started with .NET MAUI Kanban Board control | Syncfusion
 description: Learn here about getting started with Syncfusion® .NET MAUI Kanban Board (SfKanban) control, its elements and more.
 platform: maui
 control: Kanban

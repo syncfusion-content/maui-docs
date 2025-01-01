@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Auto scrolling in .NET MAUI Chart control | Syncfusion®
+title: Auto scrolling in .NET MAUI Chart control | Syncfusion
 description: Learn here all about auto scrolling and its features in Syncfusion® .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart

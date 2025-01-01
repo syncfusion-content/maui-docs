@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Zooming and Panning in .NET MAUI Chart control | Syncfusion®
+title: Zooming and Panning in .NET MAUI Chart control | Syncfusion
 description: Learn here all about Zooming and Panning feature of Syncfusion® .NET MAUI Chart(SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart

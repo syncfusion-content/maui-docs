@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bubble chart in .NET MAUI Chart control | Syncfusion®
+title: Bubble chart in .NET MAUI Chart control | Syncfusion
 description: Learn here all about the bubble chart and its features in Syncfusion® .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart

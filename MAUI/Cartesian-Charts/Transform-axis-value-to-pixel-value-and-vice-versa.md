@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Transform axis value to pixel value and vice-versa | Syncfusion®
+title: Transform axis value to pixel value and vice-versa | Syncfusion
 description: Learn here all about to transform axis value to pixel value and vice-versa in SfCartesianChart in Syncfusion® .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Grouping data points in .NET MAUI Chart control | Syncfusion®
+title: Grouping data points in .NET MAUI Chart control | Syncfusion
 description: This section explains about how to group data points in Syncfusion® .NET MAUI Chart (SfCircularChart) control.
 platform: maui
 control: SfCircularChart

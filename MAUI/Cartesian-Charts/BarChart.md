@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bar Chart in .NET MAUI Chart control | Syncfusion®
+title: Bar Chart in .NET MAUI Chart control | Syncfusion
 description: Learn here all about bar chart and its features in Syncfusion® .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart

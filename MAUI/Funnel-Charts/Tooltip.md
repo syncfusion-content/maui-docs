@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tooltip in .NET MAUI Chart control | Syncfusion®
+title: Tooltip in .NET MAUI Chart control | Syncfusion
 description: This section explains about how to enable tooltip and its customization in Syncfusion® .NET MAUI Chart (SfFunnelChart) control
 platform: maui
 control: SfFunnelChart
