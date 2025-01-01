@@ -22,7 +22,8 @@ N> When the value of the Minimum property is **15**, and the `AllowNull` propert
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfNumericEntry HorizontalOptions="Center"
+<editors:SfNumericEntry WidthRequest="200"
+                        HorizontalOptions="Center"
                         VerticalOptions="Center" 
                         Value="10" 
                         AllowNull="False" />
@@ -31,6 +32,7 @@ N> When the value of the Minimum property is **15**, and the `AllowNull` propert
 {% highlight C# %}
 
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
+sfNumericEntry.WidthRequest = 200;
 sfNumeriCEntry.HorizontalOptions = LayoutOptions.Center;
 sfNumericEntry.VerticalOptions = LayoutOptions.Center;
 sfNumericEntry.Value = 10;
@@ -48,7 +50,8 @@ You can restrict the users to enter input within a minimum and maximum range in 
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfNumericEntry HorizontalOptions="Center"
+<editors:SfNumericEntry WidthRequest="200"
+                        HorizontalOptions="Center"
                         VerticalOptions="Center"
                         Value="50"
                         Minimum="10"
@@ -58,6 +61,7 @@ You can restrict the users to enter input within a minimum and maximum range in 
 {% highlight C# %}
 
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
+sfNumericEntry.WidthRequest = 200;
 sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
 sfNumericEntry.VerticalOptions = LayoutOptions.Center;
 sfNumericEntry.Minimum = 10;
@@ -78,7 +82,8 @@ You can prevent users from editing the numerical value in the editor using the [
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfNumericEntry x:Name="sfNumericEntry" 
+<editors:SfNumericEntry x:Name="sfNumericEntry"
+                        WidthRequest="200"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"
                         IsEditable="True" />
@@ -87,6 +92,7 @@ You can prevent users from editing the numerical value in the editor using the [
 {% highlight C# %}
 
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
+sfNumericEntry.WidthRequest = 200;
 sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
 sfNumericEntry.VerticalOptions = LayoutOptions.Center;
 sfNumericEntry.IsEditable = true;
