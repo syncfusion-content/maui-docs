@@ -7,8 +7,6 @@ control: SfDateTimePicker
 documentation: ug
 ---
 
-> **Notice**: After **Volume 1 2025 (Mid of March 2025)**, updates, bug fixes, and feature enhancements for this control will no longer be available in the Syncfusion package. Please switch to the **Syncfusion Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
-
 # Getting Started with the .NET MAUI DateTimePicker
 This section explains how to add the Date Time Picker control. It covers only the basic features needed to get started with Syncfusion Date Time Picker. Follow the steps below to add a .NET MAUI Date time picker to your project.
 
