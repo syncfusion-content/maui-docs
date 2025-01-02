@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migration from Xamarin to .NET MAUI Sunburst Chart control | Syncfusion®
+title: Migration from Xamarin to .NET MAUI Sunburst Chart control | Syncfusion
 description: This section explains the features available in the .NET MAUI Sunburst control over Xamarin SfSunburstChart.
 platform: MAUI
 control: SfSunburstChart

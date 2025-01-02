@@ -1,6 +1,6 @@
 ---
 layout: post
-title: About .NET MAUI Sunburst Chart Control | Syncfusion®
+title: About .NET MAUI Sunburst Chart Control | Syncfusion
 description: Learn here all about introduction of Syncfusion® .NET MAUI SunburstChart control with key features and more
 platform: maui
 control: SfSunburstChart
