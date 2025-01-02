@@ -7,8 +7,6 @@ control: SfBackdropPage
 documentation: ug
 ---
 
-> **Notice**: After **Volume 1 2025 (Mid of March 2025)**, updates, bug fixes, and feature enhancements for this control will no longer be available in the Syncfusion package. Please switch to the **Syncfusion Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
-
 # Getting started with .NET MAUI Backdrop Page
 
 This section explains the steps required to add the Backdrop page and its elements such as BackLayer and FrontLayer in the project. This section covers only the basic features needed to know and gets started with the Syncfusion backdrop page. Follow the steps below to add a .NET MAUI Backdrop page to your project.

@@ -8,8 +8,6 @@ documentation: ug
 keywords: .net maui maps, .net maui maps library.
 ---
 
-> **Notice**: After **Volume 1 2025 (Mid of March 2025)**, updates, bug fixes, and feature enhancements for this control will no longer be available in the Syncfusion package. Please switch to the **Syncfusion Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
-
 # Getting started with MAUI Maps (SfMaps)
 
 This section explains the steps required to add the maps control with the shape layer and its elements such as data labels, tooltip, markers, and legends. This section covers only basic features needed to know to get started with Syncfusion maps. Follow the steps below to add .NET MAUI Maps control to your project.

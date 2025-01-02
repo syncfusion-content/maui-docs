@@ -8,8 +8,6 @@ documentation: ug
 keywords: .net maui imageEditor, .net maui image editing, image view maui.
 ---
 
-> **Notice**: After **Volume 1 2025 (Mid of March 2025)**, updates, bug fixes, and feature enhancements for this control will no longer be available in the Syncfusion package. Please switch to the **Syncfusion Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
-
 # Getting Started with the .NET MAUI ImageEditor
 
 This section explains the steps to create and load an image to the [.Net MAUI ImageEditor(SfImageEditor)](https://www.syncfusion.com/maui-controls/maui-image-editor) control. Follow the steps below to add .NET MAUI ImageEditor control to your project.
