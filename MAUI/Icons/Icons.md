@@ -44,31 +44,31 @@ To start using the icons, first ensure that the font is registered in your appli
 
 3. **Using Icons in XAML**: To use icons in your XAML pages, simply refer to them using the designated font family. Below is an example of how you might integrate an icon into a Label.
 
-{% tabs %}
-{% highlight xaml %}
+    {% tabs %}
+    {% highlight xaml %}
 
-<Label Text="&#xE70F;"
-        FontFamily="MaterialAssets"
-        FontSize="24"
-        TextColor="Black"/>
-        
-{% endhighlight %}
-{% highlight c# %}
+        <Label Text="&#xE70F;"
+                FontFamily="MaterialAssets"
+                FontSize="24"
+                TextColor="Black"/>
+            
+    {% endhighlight %}
+    {% highlight c# %}
 
-Label label = new Label
-{
-    Text = "\ue70f", // Unicode character representation
-    FontFamily = "MaterialAssets",
-    FontSize = 24,
-    TextColor = Colors.Black 
-};
+        Label label = new Label
+        {
+            Text = "\ue70f", // Unicode character representation
+            FontFamily = "MaterialAssets",
+            FontSize = 24,
+            TextColor = Colors.Black 
+        };
 
-{% endhighlight %}
-{% endtabs %}
+    {% endhighlight %}
+    {% endtabs %}
 
-The following image illustrates the result of the above code.
-
-![Delete Icon](images/delete_icon.png)
+    The following image illustrates the result of the above code. 
+    
+    ![Delete Icon](images/delete_icon.png)
 
 ### Icons List
 
