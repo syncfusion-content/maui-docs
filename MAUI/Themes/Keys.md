@@ -457,6 +457,38 @@ This page lists the keys for each control and the element to which it is mapped 
     <td> SfAIAssistViewSuggestionItemFontAttributes <br/><br/></td>
     <td> Font attributes used for suggestion list items.<br/><br/></td>
 </tr>
+<tr>
+    <td> SfAIAssistViewStopRespondingBackground <br/><br/></td>
+    <td> Background color of the stop responding view.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewStopRespondingIconColor <br/><br/></td>
+    <td> Icon color for the stop responding view.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewStopRespondingTextColor <br/><br/></td>
+    <td> Text color for the stop responding view.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewStopRespondingFontFamily <br/><br/></td>
+    <td> Font family used for the stop responding text.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewStopRespondingFontSize <br/><br/></td>
+    <td> Font size of the stop responding text.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewStopRespondingFontAttributes <br/><br/></td>
+    <td> Font attributes used for the stop responding text.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewStopRespondingStroke <br/><br/></td>
+    <td> Stroke color for the stop responding view.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewStopRespondingStrokeThickness <br/><br/></td>
+    <td> Stroke thickness for the stop responding view.<br/><br/></td>
+</tr>
 </table>
 
 ## SfAutocomplete
@@ -10593,6 +10625,30 @@ This page lists the keys for each control and the element to which it is mapped 
         </td> 
         <td>
            Focused color of the bookmark's text input stroke in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>   
+     <tr>
+        <td>
+          SfPdfViewerControlBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+           Background color of the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>   
+     <tr>
+        <td>
+          SfPdfViewerLoadingIndicatorColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the document loading and page loading busy indicator in the SfPdfViewer.
             <br/>
             <br/>
         </td>
