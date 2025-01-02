@@ -11,11 +11,7 @@ documentation: ug
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> .NET MAUI library contains a comprehensive set of icons bundled in the `MauiMaterialAssets.ttf` file. These icons are readily available for use in .NET MAUI applications once the Syncfusion<sup style="font-size:70%">&reg;</sup> MAUI package is installed.
 
-## Icon Integration
-
-To utilize these icons, the font file is automatically added to your application's font folder. You need to register this font in the `MauiProgram.cs` to access the icon set.
-
-### Getting Started with Icon Integration
+## Getting Started with Icon Integration
 
 To start using the icons, first ensure that the font is registered in your application. Here is a walkthrough on setting up the `MauiMaterialAssets.ttf`:
 
@@ -42,7 +38,7 @@ To start using the icons, first ensure that the font is registered in your appli
     }
     ```
 
-3. **Using Icons in XAML**: To use icons in your XAML pages, simply refer to them using the designated font family. Below is an example of how you might integrate an icon into a Label.
+3. **Using Icons in the Project**: To use icons in your MAUI project, simply refer to them using the designated font family. Below is an example of how you might integrate an icon into a Label.
 
     {% tabs %}
     {% highlight xaml %}
@@ -72,7 +68,7 @@ To start using the icons, first ensure that the font is registered in your appli
 
 ### Icons List
 
-The following icons are available in the `MauiMaterialAssets.ttf` file for use across Syncfusion<sup style="font-size:70%">&reg;</sup> MAUI components:
+The following icons are available in the `MauiMaterialAssets.ttf` file:
 
 <div style="overflow-y: scroll; height: 300px; border: 1px solid #ddd; padding: 10px;">
 
