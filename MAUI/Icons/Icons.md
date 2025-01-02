@@ -46,7 +46,7 @@ To start using the icons, first ensure that the font is registered in your appli
 
     ```xml
     <Label Text="&#xE70F;"
-           FontFamily="MaterialAssets" 
+           FontFamily="MaterialAssets"
            FontSize="24" 
            TextColor="Black"/>
     ```
