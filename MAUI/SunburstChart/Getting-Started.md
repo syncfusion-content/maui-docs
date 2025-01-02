@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI Sunburst Chart control | Syncfusion
-description: Learn here all about getting started with Syncfusion .NET MAUI Sunburst Chart control, its elements, and more.
+description: Learn here all about getting started with Syncfusion® .NET MAUI Sunburst Chart control, its elements, and more.
 platform: maui
 control: SfSunburstChart
 documentation: ug
@@ -14,7 +14,7 @@ This section explains how to populate the sunburst chart with data, a title, dat
 ## Creating an Application Using the .NET MAUI Sunburst Chart
 
 1. Create a new .NET MAUI application in Visual Studio.
-2. The Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfSunburstChart to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.SunburstChart and then install it.
+2. The Syncfusion® .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfSunburstChart to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.SunburstChart and then install it.
 3. To initialize the control, import the Sunburst Chart namespace.
 4. Initialize [SfSunburstChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html).
 
@@ -53,7 +53,7 @@ namespace SunburstGettingStarted
 
 ## Register the handler
 
-Syncfusion.Maui.Core NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
+Syncfusion.Maui.Core NuGet is a dependent package for all Syncfusion® controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion® core.
 
 {% highlight C# %}
 
