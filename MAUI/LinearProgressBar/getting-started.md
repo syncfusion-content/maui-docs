@@ -7,6 +7,8 @@ control: SfLinearProgressBar
 documentation: ug
 ---
 
+> **Notice**: After **Volume 1 2025 (Mid of March 2025)**, updates, bug fixes, and feature enhancements for this control will no longer be available in the Syncfusion package. Please switch to the **Syncfusion Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
+
 # Getting started with .NET MAUI Linear ProgressBar
 
 This section explains the steps required to add the linear progress bar control with the progress and its customizable elements such as indeterminate, segment, progress fill, and track fill. This section covers only the basic features needed to know and gets started with the Syncfusion linear progress bar. Follow the steps below to add a .NET MAUI Linear progress bar control to your project.
