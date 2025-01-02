@@ -33,6 +33,7 @@ public MainPage()
     InitializeComponent();
     rating = new SfRating();
     rating.Precision = Precision.Standard;
+    Content = rating;
 }
 
 {% endhighlight %} 
@@ -61,6 +62,7 @@ public MainPage()
     InitializeComponent();
     rating = new SfRating();
     rating.Precision = Precision.Half;
+    Content = rating;
 }
 
 {% endhighlight %} 
@@ -89,6 +91,7 @@ public MainPage()
     InitializeComponent();
     rating = new SfRating();
     rating.Precision = Precision.Exact;
+    Content = rating;
 }
 
 {% endhighlight %} 
