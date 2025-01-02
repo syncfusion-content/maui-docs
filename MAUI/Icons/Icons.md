@@ -44,12 +44,27 @@ To start using the icons, first ensure that the font is registered in your appli
 
 3. **Using Icons in XAML**: To use icons in your XAML pages, simply refer to them using the designated font family. Below is an example of how you might integrate an icon into a Label.
 
-    ```xml
-    <Label Text="&#xE70F;"
+{% tabs %}
+{% highlight xaml %}
+
+	<Label Text="&#xE70F;"
            FontFamily="MaterialAssets"
            FontSize="24"
            TextColor="Black"/>
-    ```
+
+{% endhighlight %}
+{% highlight c# %}
+
+    Label label = new Label
+    {
+        Text = "\ue70f", // Unicode character representation
+        FontFamily = "MaterialAssets",
+        FontSize = 24,
+        TextColor = Colors.Black 
+    };
+
+{% endhighlight %}
+{% endtabs %}
 
 The following image illustrates the result of the above code.
 
@@ -72,7 +87,6 @@ The following icons are available in the `MauiMaterialAssets.ttf` file for use a
     <li><strong>ArrowUp</strong>: `"\ue791"`</li>
     <li><strong>Attachment</strong>: `"\ue785"`</li>
     <li><strong>Audio</strong>: `"\ue7a1"`</li>
-    <li><strong>BackFilure</strong>: `"\ue7a5"`</li>
     <li><strong>Bold</strong>: `"\ue770"`</li>
     <li><strong>Bookmark</strong>: `"\ue728"`</li>
     <li><strong>BookmarkAdd</strong>: `"\ue729"`</li>
@@ -181,7 +195,6 @@ The following icons are available in the `MauiMaterialAssets.ttf` file for use a
     <li><strong>People</strong>: `"\ue71a"`</li>
     <li><strong>PdfFile</strong>: `"\ue780"`</li>
     <li><strong>Phone</strong>: `"\ue718"`</li>
-    <li><strong>Picture</strong>: `"\ue76c"`</li>
     <li><strong>Plus</strong>: `"\ue70d"`</li>
     <li><strong>Polygon</strong>: `"\ue789"`</li>
     <li><strong>Polyline</strong>: `"\ue786"`</li>
@@ -215,6 +228,9 @@ The following icons are available in the `MauiMaterialAssets.ttf` file for use a
     <li><strong>Tint</strong>: `"\ue749"`</li>
     <li><strong>Title</strong>: `"\ue72e"`</li>
     <li><strong>TimeZone</strong>: `"\ue71f"`</li>
+    <li><strong>Trash</strong>: `"\ue70f"`</li>
+    <li><strong>TransformLeft</strong>: `"\ue742"`</li>
+    <li><strong>TransformRight</strong>: `"\ue743"`</li>
     <li><strong>Triangle</strong>: `"\ue779"`</li>
     <li><strong>Undo</strong>: `"\ue744"`</li>
     <li><strong>Underline</strong>: `"\ue762"`</li>
