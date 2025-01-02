@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Carousel View control | Syncfusion
-description: Learn here about getting started with Syncfusion .NET MAUI Carousel View (SfCarousel) control, its elements and more.
+title: Getting Started with .NET MAUI Carousel View control | Syncfusion®
+description: Learn here about getting started with Syncfusion® .NET MAUI Carousel View (SfCarousel) control, its elements and more.
 platform: maui
 control: Carousel
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: .NET MAUI Slider control | Syncfusion
-description: Learn here all about introduction of Syncfusion .NET MAUI Slider (SfDateTimeSlider) control with key features and more.
+title: .NET MAUI Slider control | Syncfusion®
+description: Learn here all about introduction of Syncfusion® .NET MAUI Slider (SfDateTimeSlider) control with key features and more.
 platform: maui
 control: SfDateTimeSlider
 documentation: ug

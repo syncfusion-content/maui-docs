@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Add the Custom View for Syncfusion SfButton
+title: How to Add the Custom View for Syncfusion® SfButton
 description: How to add the custom view for SfButton.
 platform: maui
 control: Sfbutton
