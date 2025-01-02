@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Line Chart in .NET MAUI Chart control | Syncfusion
-description: Learn here all about the line chart and its type in Syncfusion .NET MAUI Chart (SfCartesianChart) control. 
+description: Learn here all about the line chart and its type in Syncfusion® .NET MAUI Chart (SfCartesianChart) control. 
 platform: maui
 control: SfCartesianChart
 documentation: ug
