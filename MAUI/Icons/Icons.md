@@ -47,21 +47,21 @@ To start using the icons, first ensure that the font is registered in your appli
 {% tabs %}
 {% highlight xaml %}
 
-	<Label Text="&#xE70F;"
-           FontFamily="MaterialAssets"
-           FontSize="24"
-           TextColor="Black"/>
-
+<Label Text="&#xE70F;"
+        FontFamily="MaterialAssets"
+        FontSize="24"
+        TextColor="Black"/>
+        
 {% endhighlight %}
 {% highlight c# %}
 
-    Label label = new Label
-    {
-        Text = "\ue70f", // Unicode character representation
-        FontFamily = "MaterialAssets",
-        FontSize = 24,
-        TextColor = Colors.Black 
-    };
+Label label = new Label
+{
+    Text = "\ue70f", // Unicode character representation
+    FontFamily = "MaterialAssets",
+    FontSize = 24,
+    TextColor = Colors.Black 
+};
 
 {% endhighlight %}
 {% endtabs %}
