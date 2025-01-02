@@ -45,7 +45,7 @@ To start using the icons, first ensure that the font is registered in your appli
 3. **Using Icons in XAML**: To use icons in your XAML pages, simply refer to them using the designated font family. Below is an example of how you might integrate an icon into a Label.
 
     ```xml
-    <Label Text="&#xE70F;" 
+    <Label Text="&#xE70F;"
            FontFamily="MaterialAssets" 
            FontSize="24" 
            TextColor="Black"/>
