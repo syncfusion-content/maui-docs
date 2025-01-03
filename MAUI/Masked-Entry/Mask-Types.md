@@ -66,16 +66,19 @@ Shift up. Converts all the characters that follow to uppercase.</td></tr>
 {% highlight XAML %}
 
 <syncfusion:SfMaskedEntry WidthRequest="200"
+                          ClearButtonVisibility="WhileEditing"
                           MaskType="Simple"
                           Mask="(000) 000-0000" />
 
 {% endhighlight %}
 {% highlight C# %}
 
-maskedEntry = new SfMaskedEntry();
-maskedEntry.WidthRequest = "200";
+SfMaskedEntry maskedEntry = new SfMaskedEntry();
+maskedEntry.WidthRequest = 200;
+maskedEntry.ClearButtonVisibility = ClearButtonVisibility.WhileEditing;
 maskedEntry.MaskType = MaskedEntryMaskType.Simple;
 maskedEntry.Mask = "(000) 000-0000";   
+Content=maskedEntry;
 
 {% endhighlight %}
 {% endtabs %}
@@ -178,16 +181,20 @@ Accepts any character. It can be changed based on culture</td></tr>
 {% tabs %}
 {% highlight XAML %}
 
-<syncfusion:SfMaskedEntry MaskType="RegEx"
-                          WidthRequest="200"
+<syncfusion:SfMaskedEntry WidthRequest="200"
+                          ClearButtonVisibility="WhileEditing"
+                          MaskType="RegEx"
                           Mask="[A-Za-z0-9._%-]+@[A-Za-z0-9]+\.[A-Za-z]{2,3}" />
 
 {% endhighlight %}
 {% highlight C# %}
 
-maskedEntry.WidthRequest = "200";
+SfMaskedEntry maskedEntry = new SfMaskedEntry();
+maskedEntry.WidthRequest = 200;
+maskedEntry.ClearButtonVisibility = ClearButtonVisibility.WhileEditing;
 maskedEntry.MaskType = MaskedEntryMaskType.RegEx;
 maskedEntry.Mask = "[A-Za-z0-9._%-]+@[A-Za-z0-9]+\.[A-Za-z]{2,3}";  
+Content=maskedEntry;
 
 {% endhighlight %}
 {% endtabs %}

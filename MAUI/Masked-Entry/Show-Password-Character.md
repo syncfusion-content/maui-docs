@@ -23,7 +23,14 @@ The SfMaskedEntry control supports to work as a password text box when setting a
 {% endhighlight %}
 
 {% highlight c# %}
+
+SfMaskedEntry maskedEntry = new SfMaskedEntry();
+maskedEntry.WidthRequest = 200;
+maskedEntry.Mask = "\w+";
+maskedEntry.MaskType = MaskedEntryMaskType.RegEx;
 maskedEntry.PasswordChar = '*';
+Content=maskedEntry;
+
 {% endhighlight %}
 {% endtabs %}
 
