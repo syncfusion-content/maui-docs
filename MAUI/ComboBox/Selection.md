@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Selection in .NET MAUI ComboBox control | Syncfusion
-description: Learn all about selection modes support in Syncfusion .NET MAUI ComboBox (SfComboBox) control and more here.
+title: Selection in .NET MAUI ComboBox control | Syncfusion®
+description: Learn all about selection modes support in Syncfusion® .NET MAUI ComboBox (SfComboBox) control and more here.
 platform: maui
 control: SfComboBox
 documentation: ug
@@ -360,7 +360,7 @@ comboBox.IsDropDownOpen = true;
 
 ## Clear Selected Items
 
-Users can remove selected items and input text using the [Clear](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Clear) method in the ComboBox control.
+Users can remove selected items and input text using the **Clear** method in the ComboBox control.
 
 {% tabs %}
 

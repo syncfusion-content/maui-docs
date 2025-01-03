@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Selection in .NET MAUI Autocomplete control | Syncfusion
-description: Learn all about Selection support in Syncfusion .NET MAUI Autocomplete (SfAutocomplete) control and more here.
+title: Selection in .NET MAUI Autocomplete control | Syncfusion®
+description: Learn all about Selection support in Syncfusion® .NET MAUI Autocomplete (SfAutocomplete) control and more here.
 platform: maui
 control: SfAutocomplete
 documentation: ug
@@ -399,7 +399,7 @@ autocomplete.IsDropDownOpen = true;
 
 ## Clear Selected Items
 
-Users can remove selected items and input text using the [Clear](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Clear) method in the Autocomplete control.
+Users can remove selected items and input text using the **Clear** method in the Autocomplete control.
 
 {% tabs %}
 

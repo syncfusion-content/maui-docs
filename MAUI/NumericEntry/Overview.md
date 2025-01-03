@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About .NET MAUI NumericEntry Control | Syncfusion
-description: Learn here all about introduction of Syncfusion .NET MAUI NumericEntry (SfNumericEntry) control, its features, and more.
+title: About .NET MAUI NumericEntry Control | Syncfusion®
+description: Learn here all about introduction of Syncfusion® .NET MAUI NumericEntry (SfNumericEntry) control, its features, and more.
 platform: MAUI
 control: SfNumericEntry
 documentation: ug
