@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Searching and Filtering in .NET MAUI Autocomplete control | Syncfusion®
+title: Searching & Filtering in .NET MAUI Autocomplete control | Syncfusion®
 description: Learn how to perform searching and filtering operations in Syncfusion® .NET MAUI Autocomplete control and more.
 platform: maui
 control: SfAutocomplete
