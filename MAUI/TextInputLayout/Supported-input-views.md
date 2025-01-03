@@ -21,7 +21,7 @@ To enter a single line text input, add [`Entry`](https://learn.microsoft.com/en-
 {% highlight xaml %} 
 
 <inputLayout:SfTextInputLayout Hint="Name"
-                               HelperText="Enter the name"
+                               HelperText="Enter your name"
                                ContainerType="Outlined">
    <Entry />
 </inputLayout:SfTextInputLayout>  
@@ -354,7 +354,7 @@ To initialize the [Picker](https://learn.microsoft.com/en-us/dotnet/maui/user-in
 <inputLayout:SfTextInputLayout Hint="Fruit" 
                                HelperText="Select a fruit"
                                ContainerType="Outlined" >
-   <Picker SelectedItem="Apple">
+   <picker:Picker SelectedItem="Apple">
         <Picker.ItemsSource>
             <x:Array Type="{x:Type x:String}">
                 <x:String>Apple</x:String>
@@ -362,7 +362,7 @@ To initialize the [Picker](https://learn.microsoft.com/en-us/dotnet/maui/user-in
                 <x:String>Strawberry</x:String>
             </x:Array>
         </Picker.ItemsSource>
-   </Picker>
+   </picker:Picker>
 </inputLayout:SfTextInputLayout> 
 
 {% endhighlight %}
@@ -396,7 +396,7 @@ To initialize the [TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/use
  <inputLayout:SfTextInputLayout Hint="Time" 
                                HelperText="Select a start time"
                                ContainerType="Outlined" >
-    <TimePicker/>
+    <timepicker:TimePicker/>
  </inputLayout:SfTextInputLayout>
 
 {% endhighlight %}
@@ -426,7 +426,7 @@ To initialize the [DatePicker]( https://learn.microsoft.com/en-us/dotnet/maui/us
 <inputLayout:SfTextInputLayout Hint="Date of Birth" 
                                HelperText="Select birth date"
                                ContainerType="Outlined" >
-    <DatePicker/>
+    <datepicker:DatePicker/>
 </inputLayout:SfTextInputLayout> 
 
 {% endhighlight %}
