@@ -17,7 +17,8 @@ The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 {% highlight xaml %}
 
 <editors:SfAutocomplete x:Name="autocomplete"
-                        WidthRequest="250"
+                        WidthRequest="250" 
+                        HeightRequest = "50"
                         DisplayMemberPath = "Name"
                         TextMemberPath = "Name"
                         ItemsSource="{Binding SocialMedias}" />
@@ -25,8 +26,13 @@ The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 {% endhighlight %}
 {% highlight C# %}
 
+SfAutocomplete autocomplete = new SfAutocomplete(); 
+autocomplete.WidthRequest = 250;
+autocomplete.HeightRequest = 50;
 autocomplete.DisplayMemberPath = "Name";
 autocomplete.TextMemberPath = "Name";
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
+Content = autocomplete;
 
 {% endhighlight %}
 {% endtabs %}
@@ -37,4 +43,4 @@ The following image illustrates the output:
 
 ## Text
 
-The [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Text) property is used to get the user-submitted text in the [SfAutoComplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html). The default value of the `Text` property is `string.Empty`.
+The [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Text) property is used to get the user-submitted text in the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html). The default value of the `Text` property is `string.Empty`.

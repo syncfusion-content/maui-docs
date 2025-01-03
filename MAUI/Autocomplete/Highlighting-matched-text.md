@@ -46,11 +46,12 @@ It highlights the first position of the matching characters in the suggestion li
     SfAutocomplete autoComplete = new SfAutocomplete() 
     {
          HeightRequest = 40,
-         WidthRequest=300,
+         WidthRequest = 300,
          TextHighlightMode = OccurrenceMode.FirstOccurrence,
          HighlightedTextColor = Colors.Red,
          HighlightedTextFontAttributes = FontAttributes.Bold,
     };
+    Content=autocomplete;
 
 {% endhighlight %}
 
@@ -79,7 +80,7 @@ It highlights the matching character that are present everywhere in the suggesti
 
 {% highlight c# %}
 
-    SfAutocomplete autoComplete = new SfAutocomplete() 
+    SfAutocomplete autocomplete = new SfAutocomplete() 
     {
          HeightRequest = 40,
          WidthRequest=300,
@@ -88,6 +89,7 @@ It highlights the matching character that are present everywhere in the suggesti
          HighlightedTextColor = Colors.Red,
          HighlightedTextFontAttributes = FontAttributes.Bold,
     };
+    Content=autocomplete;
 
 {% endhighlight %}
 
