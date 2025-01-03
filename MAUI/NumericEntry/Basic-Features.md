@@ -16,17 +16,19 @@ You can prompt the user with any information using the [Placeholder](https://hel
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfNumberBox HorizontalOptions="Center" 
-                     VerticalOptions="Center" 
-                     Placeholder="Enter input here..." />
+<editors:SfNumericEntry WidthRequest="200"
+                        HorizontalOptions="Center" 
+                        VerticalOptions="Center" 
+                        Placeholder="Enter input here..." />
 
 {% endhighlight %}
 {% highlight C# %}
 
-SfNumberBox SfNumberBox= new SfNumberBox();
-SfNumberBox.Placeholder = "Enter input here...";
-sfNumberBox.HorizontalOptions = LayoutOptions.Center;
-sfNumberBox.VerticalOptions = LayoutOptions.Center;
+SfNumericEntry sfNumericEntry= new SfNumericEntry();
+sfNumericEntry.WidthRequest=200;
+sfNumericEntry.Placeholder = "Enter input here...";
+sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
+sfNumericEntry.VerticalOptions = LayoutOptions.Center;
 
 {% endhighlight %}
 {% endtabs %}
@@ -41,7 +43,8 @@ N> The clear button appears only when the text box is focused and the `IsEditabl
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfNumericEntry ShowClearButton="True" 
+<editors:SfNumericEntry WidthRequest="200"
+                        ShowClearButton="True" 
                         IsEditable="True" 
                         Value="10"/>
 
@@ -49,8 +52,9 @@ N> The clear button appears only when the text box is focused and the `IsEditabl
 {% endhighlight %}
 {% highlight C# %}
 
-SfNumericEntry sfNumericEntry = new SfNumericEntry();
-sfNumricEntry.Value=10;
+SfNumericEntry sfNumericEntry= new SfNumericEntry();
+sfNumericEntry.WidthRequest=200;
+sfNumericEntry.Value=10;
 sfNumericEntry.ShowClearButton = true;
 sfNumericEntry.IsEditable = true; 
 
@@ -77,7 +81,8 @@ The [ValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Sf
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfNumericEntry HorizontalOptions="Center"
+<editors:SfNumericEntry WidthRequest="200"
+                        HorizontalOptions="Center"
                         VerticalOptions="Center"
                         ValueChanged="sfNumericEntry_ValueChanged" />
 
@@ -85,6 +90,7 @@ The [ValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Sf
 {% highlight C# %}
 
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
+sfNumericEntry.WidthRequest=200;
 sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
 sfNumericEntry.VerticalOptions = LayoutOptions.Center;
 sfNumericEntry.ValueChanged += sfNumericEntry_ValueChanged;
@@ -197,7 +203,8 @@ The NumericEntry border color can be changed by using the [Stroke](https://help.
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfNumericEntry HorizontalOptions="Center"
+<editors:SfNumericEntry WidthRequest="200"
+                        HorizontalOptions="Center"
                         VerticalOptions="Center"
                         Stroke="Red" />
 
@@ -205,6 +212,7 @@ The NumericEntry border color can be changed by using the [Stroke](https://help.
 {% highlight C# %}
 
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
+sfNumericEntry.WidthRequest=200;
 sfNumericEntry.HorizontalOptions = LayoutOptions.Center;
 sfNumericEntry.VerticalOptions = LayoutOptions.Center;
 sfNumericEntry.Stroke = Colors.Red;
@@ -289,6 +297,7 @@ N> Default value of ReturnType is `Default`.
 {% highlight C# %}
 
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
+sfNumericEntry.WidthRequest=200;
 sfNumericEntry.ReturnType = ReturnType.Next;
 
 {% endhighlight %}
@@ -304,6 +313,7 @@ The `ClearButtonPath` property allows users to set the path for customizing the 
 {% highlight xaml %}
 
 <editors:SfNumericEntry x:Name="numericEntry"
+                        WidthRequest="200"
                         ShowClearButton="True" 
                         IsEditable="True" 
                         Value="10">
@@ -329,6 +339,7 @@ var path = new Path()
 
 SfNumericEntry numericEntry = new SfNumericEntry();
 numricEntry.Value=10;
+numericEntry.WidthRequest=200;
 numericEntry.ShowClearButton = true;
 numericEntry.IsEditable = true; 
 numericEntry.ClearButtonPath = path;
@@ -353,6 +364,7 @@ The following image illustrates the result of the above code:
 </ContentPage.BindingContext>
 
 <editors:SfNumericEntry x:Name="numericEntry"
+            WidthRequest="200"
             ReturnCommand="{Binding AlertCommand}"
             ReturnCommandParameter="Return key is pressed">
 </editors:SfNumericEntry>
@@ -362,6 +374,7 @@ The following image illustrates the result of the above code:
 
 var viewModel = new CommandDemoViewModel();
 SfNumericEntry numericEntry = new SfNumericEntry();
+numericEntry.WidthRequest=200;
 numericEntry.ReturnCommand = viewModel.AlertCommand;
 numericEntry.ReturnCommandParameter = "Return key is pressed";
 
