@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Searching in .NET MAUI ComboBox control | Syncfusion
-description: Learn how to perform the searching operation in Syncfusion .NET MAUI ComboBox (SfComboBox) control and more.
+title: Searching in .NET MAUI ComboBox control | Syncfusion®
+description: Learn how to perform the searching operation in Syncfusion® .NET MAUI ComboBox (SfComboBox) control and more.
 platform: maui
 control: SfComboBox
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About .NET MAUI MaskedEntry control | Syncfusion
-description: Learn about the introduction of Syncfusion MAUI MaskedEntry (SfMaskedEntry) control with essential features and more.
+title: About .NET MAUI MaskedEntry control | Syncfusion®
+description: Learn about the introduction of Syncfusion® MAUI MaskedEntry (SfMaskedEntry) control with essential features and more.
 platform: maui
 control: SfMaskedEntry
 documentation: ug

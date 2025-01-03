@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migrate from Xamarin to .NET MAUI SfDateTimeRangeSelector | Syncfusion 
-description: Learn here all about Migrating from Syncfusion Xamarin DateTimeRangeNavigator to Syncfusion .NET MAUI DateTimeRangeSelector control and more.
+title: Migrate from Xamarin to .NET MAUI SfDateTimeRangeSelector | Syncfusion® 
+description: Learn here all about Migrating from Syncfusion® Xamarin DateTimeRangeNavigator to Syncfusion® .NET MAUI DateTimeRangeSelector control and more.
 platform: MAUI
 control: SfDateTimeRangeSelector
 documentation: ug

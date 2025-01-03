@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dividers in .NET MAUI Range Selector control | Syncfusion
+title: Dividers in .NET MAUI Range Selector control | Syncfusion®
 description: Learn here all about the Dividers feature of .NET MAUI Range Selector (SfRangeSelector) control and more.
 platform: maui
 control: SfRangeSelector

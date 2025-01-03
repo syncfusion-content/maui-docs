@@ -1,7 +1,7 @@
 ---
 layout: post
-title: LoadMore in .NET MAUI Autocomplete control | Syncfusion
-description: Learn all about LoadMore support in Syncfusion .NET MAUI Autocomplete (SfAutocomplete) control and more here.
+title: LoadMore in .NET MAUI Autocomplete control | Syncfusion®
+description: Learn all about LoadMore support in Syncfusion® .NET MAUI Autocomplete (SfAutocomplete) control and more here.
 platform: maui
 control: SfAutocomplete
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migrating from Xamarin to .NET MAUI SfTextInputLayout | Syncfusion 
-description: Learn all about Migrating from Syncfusion Xamarin TextInputLayout to Syncfusion .NET MAUI TextInputLayout control and more here.
+title: Migrating from Xamarin to .NET MAUI SfTextInputLayout | Syncfusion® 
+description: Learn all about Migrating from Syncfusion® Xamarin TextInputLayout to Syncfusion® .NET MAUI TextInputLayout control and more here.
 platform: maui
 control: SfTextInputLayout
 documentation: ug

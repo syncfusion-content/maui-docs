@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Basic Features in .NET MAUI Autocomplete control | Syncfusion
-description: Learn about Basic Features support in Syncfusion .NET MAUI Autocomplete (SfAutocomplete) control and more.
+title: Basic Features in .NET MAUI Autocomplete control | Syncfusion®
+description: Learn about Basic Features support in Syncfusion® .NET MAUI Autocomplete (SfAutocomplete) control and more.
 platform: maui
 control: SfAutocomplete
 documentation: ug
