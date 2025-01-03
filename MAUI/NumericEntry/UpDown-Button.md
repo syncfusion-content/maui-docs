@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Use UpDown Button in .NET MAUI NumericEntry | Syncfusion
-description: Learn here all about how to use UpDown Button (SpinButton) in Syncfusion .NET MAUI NumericEntry (SfNumericEntry) control and more.
+title: Use UpDown Button in .NET MAUI NumericEntry | Syncfusion®
+description: Learn here all about how to use UpDown Button (SpinButton) in Syncfusion® .NET MAUI NumericEntry (SfNumericEntry) control and more.
 platform: MAUI
 control:  SfNumericEntry
 documentation: ug

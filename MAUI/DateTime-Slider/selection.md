@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Value selection in .NET MAUI Slider control | Syncfusion
-description: Learn here all about value selection of Syncfusion .NET MAUI Slider (SfDateTimeSlider) control and more.
+title: Value selection in .NET MAUI Slider control | Syncfusion®
+description: Learn here all about value selection of Syncfusion® .NET MAUI Slider (SfDateTimeSlider) control and more.
 platform: maui
 control: SfDateTimeSlider
 documentation: ug

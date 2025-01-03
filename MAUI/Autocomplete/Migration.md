@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migrating from Xamarin to .NET MAUI SfAutocomplete | Syncfusion 
-description: Learn all about Migrating from Syncfusion Xamarin Autocomplete to Syncfusion .NET MAUI Autocomplete control and more here.
+title: Migrating from Xamarin to .NET MAUI SfAutocomplete | Syncfusion® 
+description: Learn all about Migrating from Syncfusion® Xamarin Autocomplete to Syncfusion® .NET MAUI Autocomplete control and more here.
 platform: maui
 control: SfAutocomplete
 documentation: ug

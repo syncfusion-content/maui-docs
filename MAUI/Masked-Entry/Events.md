@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Events in .NET MAUI MaskedEntry control | Syncfusion
+title: Events in .NET MAUI MaskedEntry control | Syncfusion®
 description: Explore all about SfMaskedEntry (MaskedEntry) occurrences, uncovering its functionalities and applications for comprehensive understanding.
 platform: maui
 control: SfMaskedEntry

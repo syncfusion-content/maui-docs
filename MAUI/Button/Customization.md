@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customization in .NET MAUI Button control | Syncfusion
-description: Learn here all about Customization support in Syncfusion .NET MAUI Button (SfButton) control and more.
+title: Customization in .NET MAUI Button control | Syncfusion®
+description: Learn here all about Customization support in Syncfusion® .NET MAUI Button (SfButton) control and more.
 platform: maui
 control: Sfbutton
 documentation: ug

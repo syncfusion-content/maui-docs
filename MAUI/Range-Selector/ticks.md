@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tick in .NET MAUI Range Selector control | Syncfusion 
-description: Learn here all about adding the Tick feature of Syncfusion .NET MAUI Range Selector (SfRangeSelector) control and more.
+title: Tick in .NET MAUI Range Selector control | Syncfusion® 
+description: Learn here all about adding the Tick feature of Syncfusion® .NET MAUI Range Selector (SfRangeSelector) control and more.
 platform: maui
 control: SfRangeSelector
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events and Commands in.NET MAUI Range Slider control | Syncfusion 
-description: Learn here all about adding the events and commands of Syncfusion .NET MAUI Range Slider (SfRangeSlider) control and more.
+title: Events and Commands in.NET MAUI Range Slider control | Syncfusion® 
+description: Learn here all about adding the events and commands of Syncfusion® .NET MAUI Range Slider (SfRangeSlider) control and more.
 platform: maui
 control: SfRangeSlider
 documentation: ug

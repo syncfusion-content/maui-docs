@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About .NET MAUI Rotator control | Syncfusion
-description: Learn here all about introduction of Syncfusion .NET MAUI Rotator (SfRotator) control, its elements and more.
+title: About .NET MAUI Rotator control | Syncfusion®
+description: Learn here all about introduction of Syncfusion® .NET MAUI Rotator (SfRotator) control, its elements and more.
 platform: maui 
 control: Rotator 
 documentation: ug
