@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Doughnut chart in .NET MAUI Chart control | Syncfusion
-description: Learn here all about doughnut chart and its features in Syncfusion .NET MAUI Chart Chart (SfCircularChart) control.
+description: Learn here all about doughnut chart and its features in Syncfusion® .NET MAUI Chart Chart (SfCircularChart) control.
 platform: maui
 control: SfCircularChart
 documentation: ug
