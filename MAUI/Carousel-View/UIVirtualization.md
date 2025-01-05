@@ -27,6 +27,7 @@ N> The default value of the [EnableVirtualization](https://help.syncfusion.com/c
 
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
+                     ItemTemplate="{StaticResource itemTemplate}" 
                      ItemHeight="200"
                      ItemWidth="200"
                      ItemSpacing="2"
@@ -38,6 +39,7 @@ N> The default value of the [EnableVirtualization](https://help.syncfusion.com/c
 
 {% highlight c# %}
 
+CarouselViewModel carouselViewModel = new CarouselViewModel();
 SfCarousel carousel = new SfCarousel()
 {
     ItemHeight = 200,
@@ -46,13 +48,23 @@ SfCarousel carousel = new SfCarousel()
     EnableVirtualization = true,
     ViewMode = ViewMode.Linear
 };
-
+var itemTemplate = new DataTemplate(() =>
+{
+    var grid = new Grid();
+    var nameLabel = new Image();
+    nameLabel.SetBinding(Image.SourceProperty, "Image");
+    grid.Children.Add(nameLabel);
+    return grid;
+});
+carousel.BindingContext = carouselViewModel;
+carousel.ItemTemplate = itemTemplate;
 carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
+this.Content = carousel;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![UIVirtualization](images/UIVirtualization.png)
+![UIVirtualization](images/UIVirtualization.png) 
 
 Find the complete UIVirtualization sample from this [link](https://github.com/SyncfusionExamples/maui-carousel-samples/tree/master/UIVirtualization/VirtualizationSample).

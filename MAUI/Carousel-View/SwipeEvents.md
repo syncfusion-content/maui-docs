@@ -27,6 +27,7 @@ The [SwipeEnded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.Sf
     SwipeStarted="carousel_SwipeStarted"
     SwipeEnded="carousel_SwipeEnded"
     ItemsSource="{Binding ImageCollection}"
+    ItemTemplate="{StaticResource itemTemplate}" 
     ItemHeight="200"
     ItemWidth="200"
     ItemSpacing="2"
@@ -52,4 +53,4 @@ private async void carousel_SwipeEnded(object sender, System.EventArgs e)
 
 {% endtabs %}
 
-![Carousel Swiping events](images/CarouselSwiping_GIF.gif)
+![Carousel Swiping events.](images/CarouselSwiping_GIF.gif)
