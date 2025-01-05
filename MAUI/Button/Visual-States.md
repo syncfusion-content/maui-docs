@@ -35,7 +35,7 @@ N> The visual states [Checked](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
         <VisualStateGroup x:Name="CommonStates">
             <VisualState x:Name="Normal">
                 <VisualState.Setters>
-                    <Setter Property="Background" Value="#6A4C9C"/>
+                    <Setter Property="Background" Value="Orange"/>
                 </VisualState.Setters>
             </VisualState>
             <VisualState x:Name="Checked">
@@ -83,7 +83,7 @@ N> The visual states [Checked](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
     {
         Name = "Normal"
     };
-    normalState.Setters.Add(new Setter { Property = SfButton.BackgroundProperty, Value = Color.FromRgba("#6A4C9C") });
+    normalState.Setters.Add(new Setter { Property = SfButton.BackgroundProperty, Value = Colors.Orange });
 
     VisualState checkedState = new VisualState
     {
