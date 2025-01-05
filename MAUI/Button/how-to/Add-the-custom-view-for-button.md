@@ -29,7 +29,7 @@ xmlns:busy="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
         </ResourceDictionary>
 </ContentPage.Resources>
 <ContentPage.Content>
-    <button:SfButton  CornerRadius="20"  WidthRequest="300"   Content="{x:StaticResource happyTemplate}" Text="SfButton"   />
+    <buttons:SfButton  CornerRadius="20"  WidthRequest="300"   Content="{x:StaticResource happyTemplate}" Text="SfButton"   />
 </ContentPage.Content>
 
 {% endhighlight %}
