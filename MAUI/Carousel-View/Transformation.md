@@ -123,6 +123,7 @@ The [ScaleOffset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.S
 
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
+                     ItemTemplate="{StaticResource itemTemplate}" 
                      ItemHeight="200"
                      ItemWidth="200"
                      ScaleOffset="0.5"/>
@@ -156,6 +157,7 @@ Spacing of all the items in Linear mode can be determined by using [ItemSpacing]
 
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
+                     ItemTemplate="{StaticResource itemTemplate}" 
                      ItemHeight="200"
                      ItemWidth="200"
                      ItemSpacing="60"

@@ -100,7 +100,10 @@ namespace CarouselSample
     <ContentPage.Content>
         <carousel:SfCarousel x:Name="carousel"  
                              ItemTemplate="{StaticResource itemTemplate}" 
-                             ItemsSource="{Binding ImageCollection}" 
+                             ItemsSource="{Binding ImageCollection}"
+                             ItemHeight="200"
+                             ItemWidth="200"
+                             ItemSpacing="2" 
                              HeightRequest="400" 
                              WidthRequest="800" />
     </ContentPage.Content>
