@@ -21,6 +21,7 @@ The background of the input view will be filled with container color, and its st
 {% highlight xaml %} 
 
 <inputLayout:SfTextInputLayout Hint="Name"
+                               HelperText="Enter the name"
                                ContainerType="Filled">
     <Entry Text="John" />
 </inputLayout:SfTextInputLayout>  
@@ -31,6 +32,7 @@ The background of the input view will be filled with container color, and its st
 
 var inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Name";
+inputLayout.HelperText = "Enter the name";
 inputLayout.ContainerType = ContainerType.Filled;
 inputLayout.Content = new Entry() { Text = "John" }; 
 
@@ -49,6 +51,7 @@ When setting the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.
 {% highlight xaml %} 
 
 <inputLayout:SfTextInputLayout Hint="Name"
+                               HelperText="Enter the name"
                                ContainerType="Outlined">
     <Entry Text="John" />
 </inputLayout:SfTextInputLayout>  
@@ -60,6 +63,7 @@ When setting the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 var inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Name";
+inputLayout.HelperText = "Enter the name";
 inputLayout.ContainerType = ContainerType.Outlined;
 inputLayout.Content = new Entry() { Text = "John" }; 
 
@@ -142,7 +146,8 @@ When setting the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 {% highlight xaml %} 
 
-<inputLayout:SfTextInputLayout Hint="Name" 
+<inputLayout:SfTextInputLayout Hint="Name"
+                               HelperText="Enter the name" 
                                ContainerType="None">
     <Entry Text="John" />
 </inputLayout:SfTextInputLayout>  
@@ -154,6 +159,7 @@ When setting the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 var inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Name";
+inputLayout.HelperText = "Enter the name";
 inputLayout.ContainerType = ContainerType.None;
 inputLayout.Content = new Entry() { Text = "John" }; 
 
