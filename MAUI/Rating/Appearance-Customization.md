@@ -47,6 +47,7 @@ rating.Value = 3;
 RatingSettings ratingSettings = new RatingSettings();
 ratingSettings.RatedFill = Colors.Red;
 rating.RatingSettings = ratingSettings;
+Content = rating;
            
 {% endhighlight %}
 
@@ -77,6 +78,7 @@ rating.Value = 3;
 RatingSettings ratingSettings = new RatingSettings();
 ratingSettings.UnratedFill = Colors.Gray;
 rating.RatingSettings = ratingSettings;
+Content = rating;
 
 {% endhighlight %}
 
@@ -111,6 +113,7 @@ rating.Value = 3;
 RatingSettings ratingSettings = new RatingSettings();
 ratingSettings.RatedStroke = Colors.Black;
 rating.RatingSettings = ratingSettings;	
+Content = rating;
 
 {% endhighlight %}
 
@@ -141,6 +144,7 @@ rating.Value = 3;
 RatingSettings ratingSettings = new RatingSettings();
 ratingSettings.UnratedStroke = Colors.Black;
 rating.RatingSettings = ratingSettings;
+Content = rating;
 
 {% endhighlight %}
 
@@ -162,7 +166,7 @@ The [`RatedStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 <rating:SfRating Value="3">
     <rating:SfRating.RatingSettings>
-        <rating:RatingSettings RatedStrokeThickness="3"/>
+        <rating:RatingSettings RatedStroke="Black" RatedStrokeThickness="3"/>
     </rating:SfRating.RatingSettings>
 </rating:SfRating>
 
@@ -175,6 +179,7 @@ rating.Value = 3;
 RatingSettings ratingSettings = new RatingSettings();
 ratingSettings.RatedStrokeThickness=3;
 rating.RatingSettings = ratingSettings;
+Content = rating;
 
 {% endhighlight %}
 
@@ -192,7 +197,7 @@ The [`UnratedStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 
 <rating:SfRating Value="3">
     <rating:SfRating.RatingSettings>
-        <rating:RatingSettings UnratedStrokeThickness="3"/>
+        <rating:RatingSettings UnratedStroke="Black" UnratedStrokeThickness="3"/>
     </rating:SfRating.RatingSettings>
 </rating:SfRating>
 	
@@ -205,6 +210,7 @@ rating.Value = 3;
 RatingSettings ratingSettings = new RatingSettings();
 ratingSettings.UnratedStrokeThickness=3;
 rating.RatingSettings = ratingSettings;
+Content = rating;
 
 {% endhighlight %}
 
