@@ -35,6 +35,7 @@ public MainPage()
     InitializeComponent();
     rating = new SfRating();
     rating.ItemSize = 20;
+    Content = rating;
 }
 
 {% endhighlight %}
@@ -65,6 +66,7 @@ public MainPage()
     InitializeComponent();
     rating = new SfRating();
     rating.ItemCount = 4;
+    Content = rating;
 }
 
 {% endhighlight %}
@@ -95,6 +97,7 @@ public MainPage()
     InitializeComponent();
     rating = new SfRating();
     rating.ItemSpacing = 20;
+    Content = rating;
 }
 
 {% endhighlight %}
@@ -135,6 +138,7 @@ public MainPage()
     ratingSettings.RatedStrokeThickness = 2;
     ratingSettings.UnratedStrokeThickness = 2;
     rating.RatingSettings = ratingSettings;
+    Content = rating;
 }
 
 {% endhighlight %}
