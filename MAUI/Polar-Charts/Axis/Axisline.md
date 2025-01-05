@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Axis line in .NET MAUI Chart control | Syncfusion
-description: Learn here all about the chart axis line and its customization in the Syncfusion .NET MAUI Chart (SfPolarChart) control.
+description: Learn here all about the chart axis line and its customization in the Syncfusion® .NET MAUI Chart (SfPolarChart) control.
 platform: maui
 control: SfPolarChart
 documentation: ug
