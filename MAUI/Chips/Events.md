@@ -46,17 +46,12 @@ The `CloseButtonClicked` event is triggered when the closed button is clicked. T
     
    <chip:SfChip WidthRequest="100"
                 x:Name="chip"
-                ShowCloseButton="True"
-                Text="John"
                 CloseButtonClicked="SfChip_CloseButtonClicked"/>
 
 {% endhighlight %}
 {% highlight c# %}
 
    SfChip chip = new SfChip();
-   chip.WidthRequest = 100;
-   chip.Text = "John";
-   chip.ShowCloseButton = true;
    chip.CloseButtonClicked+=chip_CloseButtonClicked;
 
 {% endhighlight %}

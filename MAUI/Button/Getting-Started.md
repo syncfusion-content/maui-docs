@@ -130,8 +130,6 @@ N> Ensure that the images mentioned in the code snippets are located in the **Re
 <buttons:SfButton x:Name="SfButton" 
                     Text="Button"
                     TextColor="White" 
-                    WidthRequest="150"
-                    HorizontalTextAlignment="Justify"
                     ShowIcon="True" 
                     ImageSource="button_Heart.png"/>
 
@@ -141,8 +139,6 @@ N> Ensure that the images mentioned in the code snippets are located in the **Re
 SfButton button = new SfButton();
 button.Text = "Button";
 button.TextColor = Colors.White;
-button.WidthRequest = 150;
-button.HorizontalTextAlignment = TextAlignment.Start,  
 button.ImageSource = "button_Heart.png";
 button.ShowIcon = true;
 
