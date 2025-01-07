@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Notifications | .NET MAUI | Syncfusion<sup>®</sup>
-description: For displaying the notifications about trial and newer version update information for Syncfusion <sup>®</sup>applications.
+description: For displaying the notifications about trial and newer version update information for Syncfusion<sup>®</sup> applications.
 platform: MAUI
 control: Syncfusion<sup>®</sup> Extensions
 documentation: ug
@@ -17,13 +17,13 @@ N> The Syncfusion<sup>®</sup> Notification feature is available from Essential 
 
 The Syncfusion<sup>®</sup> Options page allows you to configure notification settings. Customize trial and newer version notifications with a simple true or false toggle.
 
-It can be accessed by clicking **Tools -> Options -> Syncfusion -> .NET MAUI**
+It can be accessed by clicking **Tools -> Options -> Syncfusion<sup>®</sup> -> .NET MAUI**
 
    ![Option Page](images/maui_optionPage.png)
 
 ## Notification Types
 
-**1. Syncfusion Trial Application Notification**
+**1. Syncfusion<sup>®</sup> Trial Application Notification**
 
 When you utilize Syncfusion<sup>®</sup> trial assemblies in your .NET MAUI application, you will receive a notification stating, **This application uses a trial Syncfusion<sup>®</sup> license.** This notification encourages you to obtain a valid license key, enabling you to fully explore and experience the extensive features and capabilities offered by Syncfusion<sup>®</sup>.
 

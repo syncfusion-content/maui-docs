@@ -34,7 +34,7 @@ The following instructions outline the process of installing the Syncfusion<sup>
 
     ![Reload-Window](images/Reload-Window.png)
 
-6.	You can now create a new Syncfusionv .NET MAUI application using the Syncfusion<sup>®</sup> .NET MAUI extensions from the Visual Studio Code Palette. Find the **Syncfusion<sup>®</sup> .NET MAUI Template Studio: Launch** option among the Visual Studio Code commands to open the Syncfusion<sup>®</sup> .NET MAUI Template Studio wizard.
+6.	You can now create a new Syncfusion<sup>®</sup> .NET MAUI application using the Syncfusion<sup>®</sup> .NET MAUI extensions from the Visual Studio Code Palette. Find the **Syncfusion<sup>®</sup> .NET MAUI Template Studio: Launch** option among the Visual Studio Code commands to open the Syncfusion<sup>®</sup> .NET MAUI Template Studio wizard.
 
     ![CreateProjectPalette](images/CreateProjectPalette.png)
 
@@ -51,7 +51,7 @@ The following instructions outline the process of downloading and installing Syn
 4.	After installation, reload Visual Studio Code by executing the **Reload Window** command from the Visual Studio Code palette. Access the command palette by pressing **Ctrl+Shift+P** and locating the Reload Window command among the Visual Studio Code commands.
 
     ![Reload-Window](images/Reload-Window.png)
-5.	You can now initiate the creation of a new Syncfusion<sup>®</sup> .NET MAUI application using the Syncfusion<sup>®</sup> .NET MAUI extensions from the Visual Studio Code Palette. Locate the **Syncfusion .NET MAUI Template Studio: Launch** option among the Visual Studio Code commands to open the Syncfusion<sup>®</sup> .NET MAUI Template Studio wizard.
+5.	You can now initiate the creation of a new Syncfusion<sup>®</sup> .NET MAUI application using the Syncfusion<sup>®</sup> .NET MAUI extensions from the Visual Studio Code Palette. Locate the **Syncfusion<sup>®</sup> .NET MAUI Template Studio: Launch** option among the Visual Studio Code commands to open the Syncfusion<sup>®</sup> .NET MAUI Template Studio wizard.
 
     ![CreateProjectPalette](images/CreateProjectPalette.png)
 

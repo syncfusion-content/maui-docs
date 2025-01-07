@@ -25,7 +25,7 @@ To launch the Syncfusion<sup>®</sup> .NET MAUI Toolbox from the Syncfusion<sup>
 5. From the **Essential Studio<sup>®</sup> for .NET MAUI** submenu, select **Launch .NET MAUI Toolbox**.
 This toolbox provides a set of tools and features to easily incorporate Syncfusion<sup>®</sup> .NET MAUI components into your .NET MAUI application.
 
-   ![Syncfusion<sup>®</sup> .NET MAUI Custom Toolbox via Syncfusion<sup>®</sup> menu](images/ToolboxSyncfusionMenu.png)
+   ![Syncfusion .NET MAUI Custom Toolbox via Syncfusion<sup>®</sup> menu](images/ToolboxSyncfusionMenu.png)
 
 ## Launching Syncfusion<sup>®</sup> .NET MAUI Toolbox from the View menu
 
@@ -36,12 +36,12 @@ To launch the Syncfusion<sup>®</sup> .NET MAUI Toolbox from the View menu in Vi
 4. In the sub-menu that appears, click on **Syncfusion<sup>®</sup> .NET MAUI Toolbox**.
 This toolbox provides a set of tools and features to easily incorporate Syncfusion<sup>®</sup> .NET MAUI components into your .NET MAUI application.
 
-   ![Syncfusion<sup>®</sup> .NET MAUI Custom Toolbox view menu](images/ToolboxViewMenu.png)
+   ![Syncfusion .NET MAUI Custom Toolbox view menu](images/ToolboxViewMenu.png)
 
 ## Add Syncfusion<sup>®</sup> .NET MAUI Toolbox Components
    
 To incorporate Syncfusion<sup>®</sup>.NET MAUI components into your XAML design file, you can easily add them by dragging and dropping them from the toolbox. This intuitive approach automatically inserts the component's code sample and namespace into your XAML file, while also taking care of installing necessary NuGet packages.
 
-   ![Syncfusion<sup>®</sup> .NET MAUI Toolbox Wizard](images/ToolboxComponents.gif)
+   ![Syncfusion .NET MAUI Toolbox Wizard](images/ToolboxComponents.gif)
 
 Then, Syncfusion<sup>®</sup> licensing registration required message box will be shown if you installed the trial setup or NuGet packages since Syncfusion<sup>®</sup> introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio<sup>®</sup> release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#how-to-generate-syncfusion-license-key), which is shown in the licensing message box to generate and register the Syncfusion<sup>®</sup> license key to your project. Refer to this [blog](https://blog.syncfusion.com/post/Whats-New-in-2018-Volume-2-Licensing-Changes-in-the-1620x-Version-of-Essential-Studio.aspx) post for understanding the licensing changes introduced in Essential Studio<sup>®</sup>.

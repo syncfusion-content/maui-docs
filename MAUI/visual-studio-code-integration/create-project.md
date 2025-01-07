@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# Creating a Syncfusion® .NET MAUI application
+# Creating a Syncfusion<sup>®</sup> .NET MAUI application
 
 Syncfusion<sup>®</sup> offers the .NET MAUI Project Template for building .NET MAUI applications using Syncfusion<sup>®</sup> components in Visual Studio Code. This template includes all the necessary Syncfusion<sup>®</sup> components, NuGet references, namespaces, and code snippets required for developing .NET MAUI applications with Syncfusion<sup>®</sup>. The **.NET MAUI Project Template** comes with a project wizard to streamline the application creation process using Syncfusion<sup>®</sup> components.
 
@@ -15,7 +15,7 @@ N> Syncfusion<sup>®</sup> Visual Studio Code project templates now support .NET
 
 The following steps below will assist you to create your **Syncfusion<sup>®</sup> .NET MAUI Application** through **Visual Studio Code:**
 
-1.	To create a Syncfusion<sup>®</sup> .NET MAUI application in Visual Studio Code, open the command palette by pressing **Ctrl+Shift+P**. Then, search for **Syncfusion** in the Visual Studio Code palette to access the templates provided by Syncfusion<sup>®</sup>.
+1.	To create a Syncfusion<sup>®</sup> .NET MAUI application in Visual Studio Code, open the command palette by pressing **Ctrl+Shift+P**. Then, search for **Syncfusion<sup>®</sup>** in the Visual Studio Code palette to access the templates provided by Syncfusion<sup>®</sup>.
 
     ![CreateProjectPalette](images/CreateProjectPalette.png)
 

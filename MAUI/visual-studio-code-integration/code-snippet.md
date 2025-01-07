@@ -24,7 +24,7 @@ The following instructions outline the process of using the Syncfusion<sup>®</s
 3.	To access Syncfusion<sup>®</sup> .NET MAUI components with various features, type the **sf** word in the specified format.
 
 ```
-sf<Syncfusion<sup>®</sup> component name>-<Syncfusion<sup>®</sup> component feature>
+sf<Syncfusion® component name>-<Syncfusion® component feature>
 For Example, sf-datagrid-grouping
 ```
 
