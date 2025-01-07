@@ -88,7 +88,7 @@ N> This property is automatically changed to `false` when you close the dialog b
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml"%}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <Grid>
     <calendar:SfCalendar x:Name="calendar" 
@@ -107,7 +107,7 @@ N> This property is automatically changed to `false` when you close the dialog b
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs"%}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 private void Button_Clicked(object sender, System.EventArgs e)
 {
