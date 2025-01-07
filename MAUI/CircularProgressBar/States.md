@@ -1,7 +1,7 @@
 ---
 layout: post
-title: States in .NET MAUI Circular ProgressBar control | Syncfusion
-description: Learn here all about States support in Syncfusion .NET MAUI Circular ProgressBar (SfCircularProgressBar) control and more.
+title: States in .NET MAUI Circular ProgressBar control | Syncfusion<sup>&reg;</sup>Syncfusion<sup>&reg;</sup>
+description: Learn here all about States support in Syncfusion<sup>&reg;</sup> .NET MAUI Circular ProgressBar (SfCircularProgressBar) control and more.
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug

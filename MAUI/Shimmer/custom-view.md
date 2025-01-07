@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About .NET MAUI Shimmer control | Syncfusion
-description: Learn here all about the custom view support in Syncfusion .NET MAUI Shimmer (SfShimmer) control and more.
+title: About .NET MAUI Shimmer control | Syncfusion<sup>&reg;</sup>
+description: Learn here all about the custom view support in Syncfusion<sup>&reg;</sup> .NET MAUI Shimmer (SfShimmer) control and more.
 platform: maui
 control: SfShimmer
 documentation: ug

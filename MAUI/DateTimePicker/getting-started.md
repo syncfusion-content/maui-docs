@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Date Time Picker control | Syncfusion
-description: Learn about getting started with Syncfusion .NET MAUI Date Time Picker (SfDateTimePicker) control and its basic features.
+title: Getting started with .NET MAUI Date Time Picker control | Syncfusion<sup>&reg;</sup>
+description: Learn about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Date Time Picker (SfDateTimePicker) control and its basic features.
 platform: maui
 control: SfDateTimePicker
 documentation: ug
 ---
 
 # Getting Started with the .NET MAUI DateTimePicker
-This section explains how to add the Date Time Picker control. It covers only the basic features needed to get started with Syncfusion Date Time Picker. Follow the steps below to add a .NET MAUI Date time picker to your project.
+This section explains how to add the Date Time Picker control. It covers only the basic features needed to get started with Syncfusion<sup>&reg;</sup> Date Time Picker. Follow the steps below to add a .NET MAUI Date time picker to your project.
 
 To get start quickly with our .NET MAUI Date Time Picker, you can check the below video.
 
@@ -44,7 +44,7 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register the handler
 
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion core.
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion® controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion® core.
 
 {% tabs %}
 {% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}

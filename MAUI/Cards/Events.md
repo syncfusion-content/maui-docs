@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events in MAUI Cards control | Syncfusion
-description: Learn about Events support in Syncfusion Essential Studio® MAUI Cards control, its elements, and more.
+title: Events in MAUI Cards control | Syncfusion<sup>&reg;</sup>
+description: Learn about Events support in Syncfusion<sup>&reg;</sup> Essential Studio® MAUI Cards control, its elements, and more.
 platform: MAUI
 control: Cards
 documentation: ug

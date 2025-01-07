@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events in .NET MAUI Circular ProgressBar control | Syncfusion
-description: Learn here all about Events support in Syncfusion .NET MAUI Circular ProgressBar control, its elements and more.
+title: Events in .NET MAUI Circular ProgressBar control | Syncfusion<sup>&reg;</sup>Syncfusion<sup>&reg;</sup>
+description: Learn here all about Events support in Syncfusion<sup>&reg;</sup> .NET MAUI Circular ProgressBar control, its elements and more.
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug

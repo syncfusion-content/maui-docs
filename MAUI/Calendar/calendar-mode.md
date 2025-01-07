@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Calendar Modes in .NET MAUI Calendar Control | Syncfusion
-description: Learn about the calendar modes in Syncfusion Calendar for .NET MAUI (SfCalendar) control and its basic features.
+title: Calendar Modes in .NET MAUI Calendar Control | Syncfusion<sup>&reg;</sup>
+description: Learn about the calendar modes in Syncfusion<sup>&reg;</sup> Calendar for .NET MAUI (SfCalendar) control and its basic features.
 platform: maui
 control: SfCalendar
 documentation: ug
