@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migrating from Xamarin to .NET MAUI CheckBox | Syncfusion 
-description: Learn all about Migrating from Syncfusion Xamarin CheckBox to Syncfusion .NET MAUI CheckBox control and more here.
+title: Migrating from Xamarin to .NET MAUI CheckBox | Syncfusion<sup>®</sup>
+description: Learn all about Migrating from Syncfusion<sup>®</sup> Xamarin CheckBox to Syncfusion<sup>®</sup> .NET MAUI CheckBox control and more here.
 platform: .NET MAUI
 control: SfCheckBox
 documentation: ug
