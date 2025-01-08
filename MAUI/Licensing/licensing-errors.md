@@ -109,15 +109,15 @@ If the application is registered with another version's license key, the followi
 
 ![License key not registered](licensing-images/version-mismatch.png)
 
-### Could not load Syncfusion<sup>®</sup>.Licensing.dll assembly version...?
+### Could not load Syncfusion.Licensing.dll assembly version...?
 
-Please ensure that all Syncfusion<sup>®</sup> NuGet packages including [Syncfusion<sup>®</sup>.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) were installed properly, and assembly references are upgraded to the required version. Also, verify that the csproj and packages.config/web.config files references have been referred with the updated version.
+Please ensure that all Syncfusion<sup>®</sup> NuGet packages including [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) were installed properly, and assembly references are upgraded to the required version. Also, verify that the csproj and packages.config/web.config files references have been referred with the updated version.
 
 To avoid run-time errors, set copy local to true. Copy Local determines whether a reference is copied to the project output path.
 
 ![Set copy local to true](licensing-images/SetCopyLocalTrue.png)
 
-Set “CopyLocal” as True for Syncfusion<sup>®</sup>.Licensing.dll along with all other Syncfusion<sup>®</sup> assemblies and ensure that the Syncfusion<sup>®</sup>.Licensing.dll assembly is also present in the output folder or deployment folder of the application.
+Set “CopyLocal” as True for Syncfusion.Licensing.dll along with all other Syncfusion<sup>®</sup> assemblies and ensure that the Syncfusion.Licensing.dll assembly is also present in the output folder or deployment folder of the application.
 
 ![Output folder](licensing-images/OutputFolder.png)
 
