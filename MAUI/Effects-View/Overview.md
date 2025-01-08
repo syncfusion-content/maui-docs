@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About .NET MAUI Effects View control | Syncfusion
-description: Learn here all about introduction of Syncfusion .NET MAUI Effects View (SfEffectsView) control, its elements and more.
+title: About .NET MAUI Effects View control | Syncfusion<sup>®</sup>
+description: Learn here all about introduction of Syncfusion<sup>®</sup> .NET MAUI Effects View (SfEffectsView) control, its elements and more.
 platform: maui
 control: Effects View
 documentation: ug
 ---
 
->**Notice:** After **Volume 1 2025 (Mid of March 2025),** updates, bug fixes, and feature enhancements for this control will no longer be available in the Syncfusion package. Please switch to the **Syncfusion Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document.](https://help.syncfusion.com/maui-toolkit/migration)
+>**Notice:** After **Volume 1 2025 (Mid of March 2025),** updates, bug fixes, and feature enhancements for this control will no longer be available in the Syncfusion<sup>®</sup> package. Please switch to the **Syncfusion<sup>®</sup> Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document.](https://help.syncfusion.com/maui-toolkit/migration)
 
 # .NET MAUI Effects View (SfEffectsView) Overview
 
