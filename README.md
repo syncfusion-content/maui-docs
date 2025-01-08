@@ -1,6 +1,6 @@
-# Syncfusion® .NET MAUI Documentation
+# Syncfusion<sup>®</sup> .NET MAUI Documentation
 
-This is the GitHub repository for the technical product documentation for Syncfusion® .NET MAUI components. This documentation is published to http://help.syncfusion.com/maui
+This is the GitHub repository for the technical product documentation for Syncfusion<sup>®</sup> .NET MAUI components. This documentation is published to http://help.syncfusion.com/maui
 
 ## Contributions Welcome!
 
