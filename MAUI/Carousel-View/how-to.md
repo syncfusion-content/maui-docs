@@ -1,6 +1,6 @@
 ---
 layout : post
-title: Interaction in Syncfusion® Carousel Control in .NET MAUI.
+title: Interaction in Syncfusion<sup>®</sup> Carousel Control in .NET MAUI.
 description: Learn how to perform an operation while changing the carouselItem or Collection in Carousel for .NET MAUI.
 platform : maui
 control : Carousel

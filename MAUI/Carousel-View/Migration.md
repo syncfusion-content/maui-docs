@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migrating from Xamarin to .NET MAUI Carousel View | Syncfusion® 
-description: Learn here all about Migrating from Syncfusion® Xamarin Carousel View to Syncfusion® .NET MAUI Carousel View control and more.
+title: Migrating from Xamarin to .NET MAUI Carousel View | Syncfusion<sup>®</sup> 
+description: Learn here all about Migrating from Syncfusion<sup>®</sup> Xamarin Carousel View to Syncfusion<sup>®</sup> .NET MAUI Carousel View control and more.
 platform: maui
 control: Carousel
 documentation: ug

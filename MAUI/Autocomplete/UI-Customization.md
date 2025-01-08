@@ -1,7 +1,7 @@
 ---
 layout: post
-title: UI Customization in .NET MAUI Autocomplete control | Syncfusion®
-description: Learn all about UI customization support in Syncfusion® .NET MAUI Autocomplete control into .NET MAUI application and its features here.
+title: UI Customization in .NET MAUI Autocomplete control | Syncfusion<sup>®</sup>
+description: Learn all about UI customization support in Syncfusion<sup>®</sup> .NET MAUI Autocomplete control into .NET MAUI application and its features here.
 platform: maui
 control: SfAutocomplete
 documentation: ug

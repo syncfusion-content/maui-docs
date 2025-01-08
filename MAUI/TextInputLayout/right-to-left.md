@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Right-to-Left in .NET MAUI Text Input Layout control | Syncfusion®
-description: Learn about Right-to-Left support in Syncfusion® .NET MAUI Text Input Layout (SfTextInputLayout) control and more.
+title: Right-to-Left in .NET MAUI Text Input Layout control | Syncfusion<sup>®</sup>
+description: Learn about Right-to-Left support in Syncfusion<sup>®</sup> .NET MAUI Text Input Layout (SfTextInputLayout) control and more.
 platform: maui
 control: SfTextInputLayout
 documentation: ug

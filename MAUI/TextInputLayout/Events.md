@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events in MAUI TextInputLayout control | Syncfusion®
-description: Learn about Events support in Syncfusion® Essential Studio® MAUI TextInputLayout control, its elements, and more.
+title: Events in MAUI TextInputLayout control | Syncfusion<sup>®</sup>
+description: Learn about Events support in Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> MAUI TextInputLayout control, its elements, and more.
 platform: maui
 control: SfTextInputLayout
 documentation: ug

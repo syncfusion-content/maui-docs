@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migrating from Xamarin to .NET MAUI SfNumericEntry | Syncfusion® 
-description: Learn about Migrating from Syncfusion® Xamarin NumericTextBox and NumericUpDown to Syncfusion® .NET MAUI NumericEntry control and more.
+title: Migrating from Xamarin to .NET MAUI SfNumericEntry | Syncfusion<sup>®</sup> 
+description: Learn about Migrating from Syncfusion<sup>®</sup> Xamarin NumericTextBox and NumericUpDown to Syncfusion<sup>®</sup> .NET MAUI NumericEntry control and more.
 platform: maui
 control: SfNumericEntry
 documentation: ug

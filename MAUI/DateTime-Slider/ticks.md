@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tick in .NET MAUI Slider control | Syncfusion® 
-description: Learn here all about adding the Tick feature of Syncfusion® .NET MAUI Slider (SfDateTimeSlider) control and more.
+title: Tick in .NET MAUI Slider control | Syncfusion<sup>®</sup> 
+description: Learn here all about adding the Tick feature of Syncfusion<sup>®</sup> .NET MAUI Slider (SfDateTimeSlider) control and more.
 platform: maui
 control: SfDateTimeSlider
 documentation: ug

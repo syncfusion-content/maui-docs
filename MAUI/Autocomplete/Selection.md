@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Selection in .NET MAUI Autocomplete control | Syncfusion®
-description: Learn all about Selection support in Syncfusion® .NET MAUI Autocomplete (SfAutocomplete) control and more here.
+title: Selection in .NET MAUI Autocomplete control | Syncfusion<sup>®</sup>
+description: Learn all about Selection support in Syncfusion<sup>®</sup> .NET MAUI Autocomplete (SfAutocomplete) control and more here.
 platform: maui
 control: SfAutocomplete
 documentation: ug

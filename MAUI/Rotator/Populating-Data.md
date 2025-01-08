@@ -1,7 +1,7 @@
 ---
 layout : post
-title: Populating Data in .NET MAUI Rotator control | Syncfusion®
-description: Learn about the Populating Data support in Syncfusion® .NET MAUI Rotator (SfRotator) control and more..
+title: Populating Data in .NET MAUI Rotator control | Syncfusion<sup>®</sup>
+description: Learn about the Populating Data support in Syncfusion<sup>®</sup> .NET MAUI Rotator (SfRotator) control and more..
 platform : maui
 control : Rotator 
 documentation : ug

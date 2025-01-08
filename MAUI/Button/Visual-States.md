@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Visual states in .NET MAUI Button Control | Syncfusion®
-description: Learn about visual states support in the Syncfusion® .NET MAUI Button (SfButton) control, its elements, and more.
+title: Visual states in .NET MAUI Button Control | Syncfusion<sup>®</sup>
+description: Learn about visual states support in the Syncfusion<sup>®</sup> .NET MAUI Button (SfButton) control, its elements, and more.
 platform: maui
 control: SfButton
 documentation: ug 

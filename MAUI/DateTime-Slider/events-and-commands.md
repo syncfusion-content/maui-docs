@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events and Commands in.NET MAUI Slider control | Syncfusion® 
-description: Learn here all about adding and customizing through events and commands of Syncfusion® .NET MAUI Slider (SfDateTimeSlider) control and more.
+title: Events and Commands in.NET MAUI Slider control | Syncfusion<sup>®</sup> 
+description: Learn here all about adding and customizing through events and commands of Syncfusion<sup>®</sup> .NET MAUI Slider (SfDateTimeSlider) control and more.
 platform: maui
 control: SfDateTimeSlider
 documentation: ug
