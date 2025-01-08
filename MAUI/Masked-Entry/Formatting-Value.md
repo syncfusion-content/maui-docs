@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mask formats in .NET MAUI MaskedEntry control | Syncfusion®
+title: Mask formats in .NET MAUI MaskedEntry control | Syncfusion<sup>®</sup>
 description: Learn how to set the mask format for the value in the MaskedEntry (SfMaskedEntry) control with prompts and literals.
 platform: maui
 control: SfMaskedEntry

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: .NET MAUI Range Selector control | Syncfusion®
-description: Learn here all about introduction of Syncfusion® .NET MAUI Range Selector (SfRangeSelector) control with key features and more.
+title: .NET MAUI Range Selector control | Syncfusion<sup>®</sup>
+description: Learn here all about introduction of Syncfusion<sup>®</sup> .NET MAUI Range Selector (SfRangeSelector) control with key features and more.
 platform: maui
 control: SfRangeSelector
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # .NET MAUI Range Selector Overview
 
-The Syncfusion® .NET MAUI Range Selector ([SfRangeSelector](https://www.syncfusion.com/maui-controls/maui-range-selector)) is a highly interactive UI control, allowing users to select a range values within a minimum and maximum limit. It provides rich features, such as track, labels, ticks, dividers, and tooltip.
+The Syncfusion<sup>®</sup> .NET MAUI Range Selector ([SfRangeSelector](https://www.syncfusion.com/maui-controls/maui-range-selector)) is a highly interactive UI control, allowing users to select a range values within a minimum and maximum limit. It provides rich features, such as track, labels, ticks, dividers, and tooltip.
 
 ## Key features
 

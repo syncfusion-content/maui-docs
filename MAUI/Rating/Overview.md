@@ -1,8 +1,8 @@
 ---
 
 layout: post
-title: About .NET MAUI Rating control | Syncfusion®
-description: Learn here all about the introduction of Syncfusion® .NET MAUI Rating (SfRating) control, its elements and more.
+title: About .NET MAUI Rating control | Syncfusion<sup>®</sup>
+description: Learn here all about the introduction of Syncfusion<sup>®</sup> .NET MAUI Rating (SfRating) control, its elements and more.
 platform: maui
 control: Rating
 documentation: ug

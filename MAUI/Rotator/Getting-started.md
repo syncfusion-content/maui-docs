@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Rotator control | Syncfusion®
-description: Learn here about getting started with Syncfusion® .NET MAUI Rotator (SfRotator) control, its elements and more.
+title: Getting Started with .NET MAUI Rotator control | Syncfusion<sup>®</sup>
+description: Learn here about getting started with Syncfusion<sup>®</sup> .NET MAUI Rotator (SfRotator) control, its elements and more.
 platform: maui 
 control: Rotator
 documentation: ug
@@ -37,7 +37,7 @@ Before proceeding, ensure the following are in place:
 3. Select the project location, type the project name and press Enter.
 4. Then choose **Create project**
 
-## Step 2: Install the Syncfusion® MAUI Rotator NuGet Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Rotator NuGet Package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.Rotator](https://www.nuget.org/packages/Syncfusion.Maui.Rotator) and install the latest version.
@@ -45,7 +45,7 @@ Before proceeding, ensure the following are in place:
 
 ## Step 3: Register the Handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion® controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion® core.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion<sup>®</sup> core.
 
 {% highlight c# hl_lines="6 17" %}
 

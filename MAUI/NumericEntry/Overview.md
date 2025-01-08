@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About .NET MAUI NumericEntry Control | Syncfusion®
-description: Learn here all about introduction of Syncfusion® .NET MAUI NumericEntry (SfNumericEntry) control, its features, and more.
+title: About .NET MAUI NumericEntry Control | Syncfusion<sup>®</sup>
+description: Learn here all about introduction of Syncfusion<sup>®</sup> .NET MAUI NumericEntry (SfNumericEntry) control, its features, and more.
 platform: MAUI
 control: SfNumericEntry
 documentation: ug
 ---
 
-> **Notice**: After **Volume 1 2025 (Mid of March 2025)**, updates, bug fixes, and feature enhancements for this control will no longer be available in the Syncfusion® package. Please switch to the **Syncfusion® Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
+> **Notice**: After **Volume 1 2025 (Mid of March 2025)**, updates, bug fixes, and feature enhancements for this control will no longer be available in the Syncfusion<sup>®</sup> package. Please switch to the **Syncfusion<sup>®</sup> Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
 
 # .NET MAUI NumericEntry Overview
 

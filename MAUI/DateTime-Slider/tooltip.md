@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tooltip in .NET MAUI Slider control | Syncfusion®
-description: Learn here all about adding the Tooltip feature of Syncfusion® .NET MAUI Slider (SfDateTimeSlider) control and more.
+title: Tooltip in .NET MAUI Slider control | Syncfusion<sup>®</sup>
+description: Learn here all about adding the Tooltip feature of Syncfusion<sup>®</sup> .NET MAUI Slider (SfDateTimeSlider) control and more.
 platform: maui
 control: SfDateTimeSlider
 documentation: ug

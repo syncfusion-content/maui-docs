@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Track in .NET MAUI Range Slider control | Syncfusion®
+title: Track in .NET MAUI Range Slider control | Syncfusion<sup>®</sup>
 description: Learn here all about adding the track feature of .NET MAUI Range Slider (SfRangeSlider) control and more.
 platform: maui
 control: SfRangeSlider

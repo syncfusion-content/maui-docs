@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dividers in .NET MAUI Range Slider control | Syncfusion®
+title: Dividers in .NET MAUI Range Slider control | Syncfusion<sup>®</sup>
 description: Learn here all about the Dividers feature of .NET MAUI Range Slider (SfRangeSlider) control and more.
 platform: maui
 control: SfRangeSlider

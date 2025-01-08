@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to apply the FontIcon for Syncfusion® chip control | .NET MAUI
+title: How to apply the FontIcon for Syncfusion<sup>®</sup> chip control | .NET MAUI
 description: Learn how to apply the font icon to the Sfchip and its customization options with its available basic features in .NET MAUI
 platform: maui
 control: Chips
