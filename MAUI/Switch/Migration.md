@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migrating from Xamarin to .NET MAUI Switch | Syncfusion 
-description: Learn about Migrating from Syncfusion Xamarin Switch to the Syncfusion .NET MAUI Switch control, and more here.
+title: Migrating from Xamarin to .NET MAUI Switch | Syncfusion<sup>®</sup> 
+description: Learn about Migrating from Syncfusion<sup>®</sup> Xamarin Switch to the Syncfusion<sup>®</sup> .NET MAUI Switch control, and more here.
 platform: maui
 control: SfSwitch
 documentation: ug
