@@ -29,14 +29,14 @@ Our 30-day trial can be downloaded in two ways.
 1. You can evaluate our 30-day free trial by visiting the [Download Free Trial](https://www.syncfusion.com/downloads) page and select the .NET MAUI platform.
 2. After completing the required form or logging in with your registered Syncfusion<sup>®</sup> account, you can download the .NET MAUI trial installer from the confirmation page. (as shown in below screenshot.) 
    
-   ![Trial and downloads of Syncfusion<sup>®</sup> Essential Studio<sup>®</sup>](images/trial-confirmation.png)
+   ![Trial and downloads of Syncfusion Essential Studio](images/trial-confirmation.png)
    
 3. With a trial license, only the latest version’s trial installer can be downloaded.
 4. After downloading, the Syncfusion<sup>®</sup> .NET MAUI trial installer can be unlocked using either the trial unlock key or the Syncfusion<sup>®</sup> registered login credential. More information on generating an unlock key can be found in [this](https://support.syncfusion.com/kb/article/7053/how-to-generate-unlock-key-for-essentials-studio-products) article.
 5. Before the trial expires, you can download the trial installer at any time from your registered account’s [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page (as shown in below screenshot.)
 6. Click the Download (element 1 in the screenshot below) button to get the Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> .NET MAUI web installer.
  
-   ![Trial and downloads of Syncfusion<sup>®</sup> Essential Studio<sup>®</sup>](images/trial-download.png)
+   ![Trial and downloads of Syncfusion Essential Studio](images/trial-download.png)
 
    
 ### Start Trials if using components through [NuGet.org](https://www.nuget.org/packages?q=syncfusion)
@@ -45,7 +45,7 @@ You should initiate an evaluation if you have already obtained our components th
 
 1. You can start your 30-day free trial for .NET MAUI from the [Start Trial](https://www.syncfusion.com/account/manage-trials/start-trials) page from your account.
    
-   ![Trial and downloads of Syncfusion<sup>®</sup> Essential Studio<sup>®</sup>](images/start-trial-download.png)
+   ![Trial and downloads of Syncfusion Essential Studio](images/start-trial-download.png)
    
 2. To access this page, you must sign up\log in with your Syncfusion<sup>®</sup> account.
 3. Begin your trial by selecting the .NET MAUI product. 
@@ -54,7 +54,7 @@ You should initiate an evaluation if you have already obtained our components th
 
 4. After you've started the trial, go to the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page to get the latest version trial installer. You can generate the [unlock key](https://support.syncfusion.com/kb/article/7053/how-to-generate-unlock-key-for-essentials-studio-products) and [license key](https://help.syncfusion.com/maui/licensing/how-to-generate) here at any time before the trial period expires. (as shown in below screenshot.)
 
-   ![License and downloads of Syncfusion<sup>®</sup> Essential Studio<sup>®</sup>](images/start-trial-download-installer.png)
+   ![License and downloads of Syncfusion Essential Studio](images/start-trial-download-installer.png)
 
 5. You can find your current active trial products on the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page.
    
@@ -68,11 +68,11 @@ You should initiate an evaluation if you have already obtained our components th
 5. To download older version installers, go to [Downloads Older Versions](https://www.syncfusion.com/account/downloads/studio) (element 2 in the screenshot below).
 6. You can download other platform\add-on installers by going to More Downloads Options (element 3 in the screenshot below).
 
-    ![License and downloads of Syncfusion<sup>®</sup> Essential Studio<sup>®</sup>](images/license-download.png)
+    ![License and downloads of Syncfusion Essential Studio](images/license-download.png)
 
 7. Before the license expires, you can download the installer at any time from your registered account’s [License & Downloads](https://www.syncfusion.com/account/downloads) page (See the screenshot below.)
    
-    ![License and downloads of Syncfusion<sup>®</sup> Essential Studio<sup>®</sup>](images/start-trial-download-web-installer.png)
+    ![License and downloads of Syncfusion Essential Studio](images/start-trial-download-web-installer.png)
 	
    
 8. After downloading, the Syncfusion<sup>®</sup> .NET MAUI web installer can be unlocked using Syncfusion<sup>®</sup> registered login credential.
