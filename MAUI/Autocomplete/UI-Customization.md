@@ -11,6 +11,10 @@ documentation: ug
 
 This section explains different UI customizations available in the [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control.
 
+To get start quickly to customize the Appearance of .NET MAUI Autocomplete, you can check on this video:
+
+{% youtube "https://www.youtube.com/watch?v=Hh5pfXvax9o" %}
+
 ## Placeholder
 
 You can prompt the user with any information by using the [Placeholder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_Placeholder) property. This text will be displayed only if no items are selected or the edit text is empty. The default value of the Placeholder property is `string.Empty` (No string will be displayed).
