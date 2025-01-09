@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI DataGrid control | Syncfusion
-description: Learn about getting started with Syncfusion .NET MAUI DataGrid (SfDataGrid) control, its elements, and more here.
+title: Getting Started with .NET MAUI DataGrid control | Syncfusion®
+description: Learn about getting started with Syncfusion® .NET MAUI DataGrid (SfDataGrid) control, its elements, and more here.
 platform: MAUI
 control: SfDataGrid
 documentation: ug
@@ -38,7 +38,7 @@ Before proceeding, ensure the following are in place:
 3. Select the project location. Then, type the project name and **Press Enter**.
 4. Then choose **Create Project**.
 
-## Step 2: Install the Syncfusion MAUI DataGrid NuGet Package
+## Step 2: Install the Syncfusion® MAUI DataGrid NuGet Package
 
 1. In Solution Explorer, right-click the project and choose **Manage NuGet Packages**.
 2. Search for `Syncfusion.Maui.DataGrid` on [nuget.org](https://www.nuget.org/packages/Syncfusion.Maui.DataGrid/) and install the latest version.
@@ -46,7 +46,7 @@ Before proceeding, ensure the following are in place:
 
 ## Step 3: Register the handler
 
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) is a dependent package for all Syncfusion® controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion® core.
 
 {% tabs %}
 {% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 20" %}

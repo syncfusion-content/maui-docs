@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Column Sizing in .NET MAUI DataGrid control | Syncfusion
-description: Learn all about Column Sizing support in Syncfusion MAUI DataGrid (SfDataGrid) control and more here.
+title: Column Sizing in .NET MAUI DataGrid control | Syncfusion®
+description: Learn all about Column Sizing support in Syncfusion® MAUI DataGrid (SfDataGrid) control and more here.
 platform: maui
 control: SfDataGrid
 documentation: ug

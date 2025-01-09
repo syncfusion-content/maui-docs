@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Column Types in .NET MAUI DataGrid control | Syncfusion
-description: Learn all about Column Types support in Syncfusion .NET MAUI DataGrid (SfDataGrid) control and more here.
+title: Column Types in .NET MAUI DataGrid control | Syncfusion®
+description: Learn all about Column Types support in Syncfusion® .NET MAUI DataGrid (SfDataGrid) control and more here.
 platform: MAUI
 control: SfDataGrid
 documentation: UG

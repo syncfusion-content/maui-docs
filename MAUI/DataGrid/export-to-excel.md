@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Export to Excel in MAUI DataGrid control | Syncfusion
-description: Learn here all about Excel Exporting support in Syncfusion MAUI DataGrid (SfDataGrid) control and more about it.
+title: Export to Excel in MAUI DataGrid control | Syncfusion®
+description: Learn here all about Excel Exporting support in Syncfusion® MAUI DataGrid (SfDataGrid) control and more about it.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
