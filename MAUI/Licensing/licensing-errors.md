@@ -1,9 +1,9 @@
 ---
 layout: post
-title: License Key Errors of Essential Studio | Syncfusion 
-description: Learn here some information about how to fix Syncfusion license key related errors and more details.
+title: License Key Errors of Essential Studio<sup>®</sup> | Syncfusion<sup>®</sup>
+description: Learn here some information about how to fix Syncfusion<sup>®</sup> license key related errors and more details.
 platform: MAUI
-control: Essential Studio
+control: Essential Studio<sup>®</sup>
 documentation: ug
 ---
 
@@ -15,13 +15,13 @@ Licensing error popup is displayed with various messages under different circums
 
 ### License key not registered\Trial Expired 
 
-The following error message will be shown if a Syncfusion license key has not been registered in your application or if the trial key has expired after 30 days. 
+The following error message will be shown if a Syncfusion<sup>®</sup> license key has not been registered in your application or if the trial key has expired after 30 days. 
 
-**Error message :** This application was built using a trial version of Syncfusion Essential Studio. You should include the valid license key to remove the license validation message permanently.
+**Error message :** This application was built using a trial version of Syncfusion<sup>®</sup> Essential Studio<sup>®</sup>. You should include the valid license key to remove the license validation message permanently.
 
 **Solution:**
 
-* Generate a valid license key from here [Licensed users](https://www.syncfusion.com/account/downloads) or [Trial users](https://www.syncfusion.com/account/manage-trials/downloads) for a specific version and platform or License keys can also be generated from the Claim License Key page by clicking the **"Claim License"** button click from Syncfusion licensing warning message. Refer to this [help topic](https://help.syncfusion.com/maui/licensing/how-to-generate#Claim-License-Key) for more details.
+* Generate a valid license key from here [Licensed users](https://www.syncfusion.com/account/downloads) or [Trial users](https://www.syncfusion.com/account/manage-trials/downloads) for a specific version and platform or License keys can also be generated from the Claim License Key page by clicking the **"Claim License"** button click from Syncfusion<sup>®</sup> licensing warning message. Refer to this [help topic](https://help.syncfusion.com/maui/licensing/how-to-generate#Claim-License-Key) for more details.
 
 * In your application, register the generated license key. Please refer to this [help topic](https://help.syncfusion.com/maui/licensing/how-to-register-in-an-application) for information on registering the license key.
 
@@ -31,11 +31,11 @@ The following error message will be shown if a Syncfusion license key has not be
 
 If the application is registered with an invalid key, another version of license key, or another platform's license key, the following error message will pop up when launching the application. 
 
-**Error Message:** The included Syncfusion license key is invalid.
+**Error Message:** The included Syncfusion<sup>®</sup> license key is invalid.
 
 **Solution:**
 
-* Generate a valid license key from here [Licensed users](https://www.syncfusion.com/account/downloads) or [Trial users](https://www.syncfusion.com/account/manage-trials/downloads) for a specific version and platform or License keys can also be generated from the Claim License Key page by clicking the **"Claim License"** button click from Syncfusion licensing warning message. Refer to this [help topic](https://help.syncfusion.com/maui/licensing/how-to-generate#Claim-License-Key) for more details.
+* Generate a valid license key from here [Licensed users](https://www.syncfusion.com/account/downloads) or [Trial users](https://www.syncfusion.com/account/manage-trials/downloads) for a specific version and platform or License keys can also be generated from the Claim License Key page by clicking the **"Claim License"** button click from Syncfusion<sup>®</sup> licensing warning message. Refer to this [help topic](https://help.syncfusion.com/maui/licensing/how-to-generate#Claim-License-Key) for more details.
 
 * In your application, register the generated license key. Please refer to this [help topic](https://help.syncfusion.com/maui/licensing/how-to-register-in-an-application) for information on registering the license key.
 
@@ -45,9 +45,9 @@ If the application is registered with an invalid key, another version of license
 
 ### License key not registered 
 
-The following error message will be shown if a Syncfusion license key has not been registered in your application. 
+The following error message will be shown if a Syncfusion<sup>®</sup> license key has not been registered in your application. 
 
-**Error message:** This application was built using a trial version of Syncfusion Essential Studio. Please include a valid license to permanently remove this license validation message. You can also obtain a free 30 day evaluation license to temporarily remove this message during the evaluation period. Please refer to this [help topic](https://help.syncfusion.com/maui/licensing/licensing-errors#license-key-not-registered) for more information.
+**Error message:** This application was built using a trial version of Syncfusion<sup>®</sup> Essential Studio<sup>®</sup>. Please include a valid license to permanently remove this license validation message. You can also obtain a free 30 day evaluation license to temporarily remove this message during the evaluation period. Please refer to this [help topic](https://help.syncfusion.com/maui/licensing/licensing-errors#license-key-not-registered) for more information.
 
 **Solution:**
 
@@ -61,7 +61,7 @@ The following error message will be shown if a Syncfusion license key has not be
 
 If the application is registered with an invalid key, another version of license key, or another platform's license key, the following error message will pop up when launching the application. 
 
-**Error Message:** The included Syncfusion license is invalid. Please refer to this [help topic](https://help.syncfusion.com/maui/licensing/licensing-errors#invalid-key) for more information.
+**Error Message:** The included Syncfusion<sup>®</sup> license is invalid. Please refer to this [help topic](https://help.syncfusion.com/maui/licensing/licensing-errors#invalid-key) for more information.
 
 **Solution:**
 
@@ -75,9 +75,9 @@ If the application is registered with an invalid key, another version of license
 
 The following error message will be shown if the trial key has expired after 30 days.
 
-**Error Message:** Your Syncfusion trial license has expired. Please refer to this [help topic](https://help.syncfusion.com/maui/licensing/licensing-errors#trial-expired) for more information.
+**Error Message:** Your Syncfusion<sup>®</sup> trial license has expired. Please refer to this [help topic](https://help.syncfusion.com/maui/licensing/licensing-errors#trial-expired) for more information.
 
-**Solution:** Purchase from [here](https://www.syncfusion.com/sales/products) to get a valid Syncfusion license.
+**Solution:** Purchase from [here](https://www.syncfusion.com/sales/products) to get a valid Syncfusion<sup>®</sup> license.
 
 ![License key not registered](licensing-images/trial-expired.png)
 
@@ -85,7 +85,7 @@ The following error message will be shown if the trial key has expired after 30 
 
 If the application is registered with another platform's license key, the following error message will pop up when launching the application.
 
-**Error Message:**The included Syncfusion license is invalid (Platform mismatch). Please refer to this [help topic](https://help.syncfusion.com/maui/licensing/licensing-errors#platform-mismatch) for more information.
+**Error Message:**The included Syncfusion<sup>®</sup> license is invalid (Platform mismatch). Please refer to this [help topic](https://help.syncfusion.com/maui/licensing/licensing-errors#platform-mismatch) for more information.
 
 **Solution:**
 
@@ -99,7 +99,7 @@ If the application is registered with another platform's license key, the follow
 
 If the application is registered with another version's license key, the following error message will pop up when launching the application.
 
-**Error Message:**The included Syncfusion license ({Registered Version}) is invalid for version {Required version}. Please refer to this [help topic](https://help.syncfusion.com/maui/licensing/licensing-errors#version-mismatch) for more information.
+**Error Message:**The included Syncfusion<sup>®</sup> license ({Registered Version}) is invalid for version {Required version}. Please refer to this [help topic](https://help.syncfusion.com/maui/licensing/licensing-errors#version-mismatch) for more information.
 
 **Solution:**
 
@@ -111,13 +111,13 @@ If the application is registered with another version's license key, the followi
 
 ### Could not load Syncfusion.Licensing.dll assembly version...?
 
-Please ensure that all Syncfusion NuGet packages including [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) were installed properly, and assembly references are upgraded to the required version. Also, verify that the csproj and packages.config/web.config files references have been referred with the updated version.
+Please ensure that all Syncfusion<sup>®</sup> NuGet packages including [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing) were installed properly, and assembly references are upgraded to the required version. Also, verify that the csproj and packages.config/web.config files references have been referred with the updated version.
 
 To avoid run-time errors, set copy local to true. Copy Local determines whether a reference is copied to the project output path.
 
 ![Set copy local to true](licensing-images/SetCopyLocalTrue.png)
 
-Set “CopyLocal” as True for Syncfusion.Licensing.dll along with all other Syncfusion assemblies and ensure that the Syncfusion.Licensing.dll assembly is also present in the output folder or deployment folder of the application.
+Set “CopyLocal” as True for Syncfusion.Licensing.dll along with all other Syncfusion<sup>®</sup> assemblies and ensure that the Syncfusion.Licensing.dll assembly is also present in the output folder or deployment folder of the application.
 
 ![Output folder](licensing-images/OutputFolder.png)
 
