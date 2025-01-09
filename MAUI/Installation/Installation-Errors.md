@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Installation Errors of Essential Studio<sup>®</sup> | .NET MAUI |Syncfusion<sup>®</sup>
-description: Learn here some information about the Essential Studio<sup>®</sup> installation errors and steps for resolving it.
+title: Installation Errors of Essential Studio® | .NET MAUI |Syncfusion®
+description: Learn here some information about the Essential Studio® installation errors and steps for resolving it.
 platform: maui
 control: Installation and Deployment
 documentation: ug

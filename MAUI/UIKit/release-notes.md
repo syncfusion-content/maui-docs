@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Release Notes | Essential<sup>®</sup> UI Kit for .NET MAUI | Syncfusion<sup>®</sup>
-description: this page contains details about Essential<sup>®</sup> UI Kit for .NET MAUI Release notes History | Syncfusion<sup>®</sup>
+title: Release Notes | Essential® UI Kit for .NET MAUI | Syncfusion®
+description: this page contains details about Essential® UI Kit for .NET MAUI Release notes History | Syncfusion®
 platform: maui
 control: Essential<sup>®</sup> UI Kit for .NET MAUI
 documentation: ug

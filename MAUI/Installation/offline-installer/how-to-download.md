@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Downloading Syncfusion<sup>®</sup> .NET MAUI installer - Syncfusion<sup>®</sup>
-description: Learn here about the how to download Syncfusion<sup>®</sup> .NET MAUI offline installer from our syncfusion<sup>®</sup> website with license.
+title: Downloading Syncfusion® .NET MAUI installer - Syncfusion®
+description: Learn here about the how to download Syncfusion® .NET MAUI offline installer from our syncfusion® website with license.
 platform: MAUI
 control: Installation and Deployment
 documentation: ug

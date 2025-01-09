@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Installation and Deployment process for Syncfusion<sup>®</sup> .NET MAUI products
-description: Describes about system requirements to install the Syncfusion<sup>®</sup> .NET MAUI Components and list of supported platforms. 
+title: Installation and Deployment process for Syncfusion® .NET MAUI products
+description: Describes about system requirements to install the Syncfusion® .NET MAUI Components and list of supported platforms. 
 platform: maui
 control: Installation and Deployment
 documentation: ug

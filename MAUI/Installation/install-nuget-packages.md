@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Install Syncfusion<sup>®</sup> Maui NuGet packages - Syncfusion<sup>®</sup>
-description: Learn here about the how to install Syncfusion<sup>®</sup> Maui NuGet packages from Package manager and NuGet manager.
+title: Install Syncfusion® Maui NuGet packages - Syncfusion®
+description: Learn here about the how to install Syncfusion® Maui NuGet packages from Package manager and NuGet manager.
 platform: maui
 component: Common
 documentation: ug

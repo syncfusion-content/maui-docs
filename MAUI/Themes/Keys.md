@@ -1,6 +1,6 @@
 ---
 layout: post
-title: About Keys for Syncfusion<sup>®</sup> Controls | Syncfusion<sup>®</sup>
+title: About Keys for Syncfusion® Controls | Syncfusion®
 description: This section contains the details about the keys which are mapped to the UI elements of all the controls
 platform: maui
 control: General

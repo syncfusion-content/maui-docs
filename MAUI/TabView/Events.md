@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events in .NET MAUI Tab View (SfTabView) | Syncfusion<sup>®</sup>
-description: Learn about Event support in the Syncfusion<sup>®</sup> .NET MAUI Tab View (SfTabView) control, its elements, and more.
+title: Events in .NET MAUI Tab View (SfTabView) | Syncfusion®
+description: Learn about Event support in the Syncfusion® .NET MAUI Tab View (SfTabView) control, its elements, and more.
 platform: maui
 control: SfTabView
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Populating Items in MAUI Radial Menu Control | Syncfusion<sup>®</sup>
-description: Learn here all about Populating Items support in Syncfusion<sup>®</sup> MAUI Radial Menu (SfRadialMenu) control and more.
+title: Populating Items in MAUI Radial Menu Control | Syncfusion®
+description: Learn here all about Populating Items support in Syncfusion® MAUI Radial Menu (SfRadialMenu) control and more.
 platform: MAUI
 control: RadialMenu (SfRadialMenu)
 documentation: ug
