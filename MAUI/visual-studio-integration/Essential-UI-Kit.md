@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Essential<sup>®</sup> UI Kit for .NET MAUI | MAUI | Syncfusion<sup>®</sup>
-description: The Syncfusion<sup>®</sup> Essential<sup>®</sup> UI Kit for .NET MAUI extension provides the predefined design Screens for the MAUI Apps.
+title: Essential® UI Kit for .NET MAUI | MAUI | Syncfusion®
+description: The Syncfusion® Essential® UI Kit for .NET MAUI extension provides the predefined design Screens for the MAUI Apps.
 platform: maui
 control: Syncfusion<sup>®</sup> Extensions
 documentation: ug

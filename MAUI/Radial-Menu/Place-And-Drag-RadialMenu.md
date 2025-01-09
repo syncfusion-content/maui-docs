@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Placing and Dragging in MAUI Radial Menu Control | Syncfusion<sup>®</sup>
-description: Learn here all about Placing and Dragging RadialMenu support in Syncfusion<sup>®</sup> MAUI Radial Menu (SfRadialMenu) control and more.
+title: Placing and Dragging in MAUI Radial Menu Control | Syncfusion®
+description: Learn here all about Placing and Dragging RadialMenu support in Syncfusion® MAUI Radial Menu (SfRadialMenu) control and more.
 platform: MAUI
 control: RadialMenu (SfRadialMenu)
 documentation: ug
