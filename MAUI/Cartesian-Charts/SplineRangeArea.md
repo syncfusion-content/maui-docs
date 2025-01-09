@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Spline Range Area Chart in .NET MAUI Chart control | Syncfusion
-description: Learn here all about Spline Range Area chart support in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
+description: Learn here all about Spline Range Area chart support in Syncfusion® .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug

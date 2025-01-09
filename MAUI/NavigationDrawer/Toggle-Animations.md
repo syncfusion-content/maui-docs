@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Setting Toggle Animations in .NET MAUI Navigation Drawer | Syncfusion
-description: Learn here all about Setting Toggle Animations support in Syncfusion .NET MAUI Navigation Drawer (SfNavigationDrawer) control and more.
+title: Setting Toggle Animations in .NET MAUI Navigation Drawer | Syncfusion<sup>®</sup>
+description: Learn here all about Setting Toggle Animations support in Syncfusion<sup>®</sup> .NET MAUI Navigation Drawer (SfNavigationDrawer) control and more.
 platform: maui
 control: NavigationDrawer
 documentation: ug

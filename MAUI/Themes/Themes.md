@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Applying themes for Syncfusion controls
-description: This section explains about theming in Syncfusion controls and how to override the key values for further customization
+title: Applying themes for Syncfusion<sup>®</sup> controls
+description: This section explains about theming in Syncfusion<sup>®</sup> controls and how to override the key values for further customization
 platform: maui
 control: General
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Applying Themes in Maui Controls
 
-Syncfusion themes allow you to apply colors across all the Syncfusion controls with a uniform approach and provide a consistent look and feel to your applications. This section covers the following topics: 
+Syncfusion<sup>®</sup> themes allow you to apply colors across all the Syncfusion<sup>®</sup> controls with a uniform approach and provide a consistent look and feel to your applications. This section covers the following topics: 
 
 * Applying light and dark themes
 * Overriding the default theme
@@ -17,7 +17,7 @@ Syncfusion themes allow you to apply colors across all the Syncfusion controls w
 
 ## Applying light and dark themes
 
-By default, Syncfusion offers support for both light and dark themes through the inclusion of a [SyncfusionThemeResourceDictionary](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Themes.SyncfusionThemeResourceDictionary.html).
+By default, Syncfusio<sup>®</sup> offers support for both light and dark themes through the inclusion of a [SyncfusionThemeResourceDictionary](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Themes.SyncfusionThemeResourceDictionary.html).
 
 To apply themes to your application, merge the [SyncfusionThemeResourceDictionary](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Themes.SyncfusionThemeResourceDictionary.html) item.
 

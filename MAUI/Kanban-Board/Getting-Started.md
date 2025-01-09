@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI Kanban Board control | Syncfusion
-description: Learn here about getting started with Syncfusion .NET MAUI Kanban Board (SfKanban) control, its elements and more.
+description: Learn here about getting started with Syncfusion® .NET MAUI Kanban Board (SfKanban) control, its elements and more.
 platform: maui
 control: Kanban
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Kanban Board (SfKanban)
 
-This section provides a quick overview for working with Essential Kanban for .NET MAUI. It is an efficient way to visualize the workflow at each stage along its path to completion.
+This section provides a quick overview for working with Essential® Kanban for .NET MAUI. It is an efficient way to visualize the workflow at each stage along its path to completion.
 
 ## Prerequisites
 
@@ -33,7 +33,7 @@ Before starting, ensure the following are set up:
 3. Select the project location, type the project name and press enter.
 4. Then choose Create project
 
-## Step 2: Install the Syncfusion MAUI Kanban Board NuGet Package
+## Step 2: Install the Syncfusion® MAUI Kanban Board NuGet Package
 
 1. In Solution Explorer, right-click the project and choose Manage NuGet Packages.
 2. Search for Syncfusion.Maui.Kanban on [nuget.org](https://www.nuget.org/) and install the latest version.
@@ -41,7 +41,7 @@ Before starting, ensure the following are set up:
 
 ## Step 3: Add the Kanban Board Control
 
-1. To initialize the control, import the Chart namespace into your code.
+1. To initialize the control, import the Kanban namespace into your code.
 2. Initialize [SfKanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html).
 
 {% tabs %} 
@@ -86,7 +86,7 @@ namespace KanbanGettingStarted
 
 ## Step 4: Register the handler
 
-[Syncfusion.Maui.Core nuget](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
+[Syncfusion.Maui.Core nuget](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all Syncfusion® controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion® core.
 
 {% highlight C# %}
 
@@ -200,7 +200,7 @@ N> Add namespace of ViewModel class in your XAML page if you prefer to set Bindi
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="KanbanGettingStarted.MainPage"
-             xmlns:chart="clr-namespace:Syncfusion.Maui.Kanban;assembly=Syncfusion.Maui.Kanban"
+             xmlns:kanban="clr-namespace:Syncfusion.Maui.Kanban;assembly=Syncfusion.Maui.Kanban"
              xmlns:local="clr-namespace:KanbanGettingStarted"> 
 
     <ContentPage.BindingContext>

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: StackedColumn100 Chart in .NET MAUI Chart control | Syncfusion
-description: Learn here all about StackedColumn100 chart support in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
+description: Learn here all about StackedColumn100 chart support in Syncfusion® .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug

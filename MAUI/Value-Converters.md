@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Syncfusion .NET MAUI Value Converters
-description: Learn here about Syncfusion .NET MAUI built-in value converters included in the Syncfusion .NET MAUI platform.
+title: Syncfusion<sup>®</sup> .NET MAUI Value Converters
+description: Learn here about Syncfusion<sup>®</sup> .NET MAUI built-in value converters included in the Syncfusion<sup>®</sup> .NET MAUI platform.
 platform: maui
 control: Converters
 documentation: ug
 ---
 
-# Syncfusion .NET MAUI Converters
+# Syncfusion<sup>®</sup> .NET MAUI Converters
 
 Most applications developed using XAML depend on value converters. As you know, .NET MAUI is a cross-platform framework for creating native mobile and desktop apps with C# and XAML, so when you develop a .NET MAUI app, you will need an arsenal of converters at your disposal.
 
-## Adding a Syncfusion Maui Core reference
+## Adding a Syncfusion<sup>®</sup> Maui Core reference
 
-Syncfusion .NET MAUI Converters are available in [Nuget.org](https://www.nuget.org/). To add [Converters](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Converters.html?tabs=tabid-1) to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and then install it.
+Syncfusion<sup>®</sup> .NET MAUI Converters are available in [Nuget.org](https://www.nuget.org/). To add [Converters](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Converters.html?tabs=tabid-1) to your project, open the NuGet package manager in Visual Studio, search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and then install it.
 
 **Adding a namespace**
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: SfRadialMenuItems Customization in MAUI Radial Menu | Syncfusion
-description: Learn here all about SfRadialMenuItems Customization support in Syncfusion MAUI Radial Menu (SfRadialMenu) control and more.
+title: SfRadialMenuItems Customization in MAUI Radial Menu | Syncfusion<sup>®</sup>
+description: Learn here all about SfRadialMenuItems Customization support in Syncfusion<sup>®</sup> MAUI Radial Menu (SfRadialMenu) control and more.
 platform: MAUI
 control: RadialMenu (SfRadialMenu)
 documentation: ug
