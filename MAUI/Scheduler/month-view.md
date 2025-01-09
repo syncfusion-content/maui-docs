@@ -433,7 +433,7 @@ N>
 
 Check out the video below to see how to customize the month cell appearance with a DataTemplate in .NET MAUI SfScheduler
 
-{% youtube "https://www.youtube.com/watch?v=Y5yrIrShwrw%}
+{% youtube "https://www.youtube.com/watch?v=Y5yrIrShwrw" %}
 
 #### Customize month cell appearance using DataTemplateSelector
 
