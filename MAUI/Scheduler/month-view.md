@@ -431,6 +431,10 @@ You can customize the month cell appearance by using the [CellTemplate](https://
 N>
 * The BindingContext of the `CellTemplate` is the `SchedulerMonthCellDetails.`
 
+Check out the video below to see how to customize the month cell appearance with a DataTemplate in .NET MAUI SfScheduler
+
+{% youtube "https://www.youtube.com/watch?v=Y5yrIrShwrw%}
+
 #### Customize month cell appearance using DataTemplateSelector
 
 You can customize the month cell appearance by using the [CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_CellTemplate) property of [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). The `DataTemplateSelector` can choose a `DataTemplate` at runtime based on the value of a data-bound to scheduler month cells by using the `CellTemplate.` It allows you to choose a different data template for each month cell, as well as customize the appearance of a particular month cell based on certain conditions.
