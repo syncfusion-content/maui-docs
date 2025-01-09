@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Essential<sup>®</sup> UI Kit for .NET MAUI Licensing | Syncfusion<sup>®</sup>
-description: Learn here about Syncfusion<sup>®</sup> Essential<sup>®</sup> UI Kit for .NET MAUI license key, how to generate the license key, how to register the license key, and more details.
+title: Essential® UI Kit for .NET MAUI Licensing | Syncfusion®
+description: Learn here about Syncfusion® Essential® UI Kit for .NET MAUI license key, how to generate the license key, how to register the license key, and more details.
 platform: maui
 control: Essential<sup>®</sup> UI Kit for .NET MAUI
 documentation: ug

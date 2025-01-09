@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Code Snippets - .NET MAUI Extension Visual Studio Code | Syncfusion<sup>®</sup>
-description: Learn here all about how to use code snippet utility of Syncfusion<sup>®</sup> .NET MAUI Extension for Visual Studio Code and much more.
+title: Code Snippets - .NET MAUI Extension Visual Studio Code | Syncfusion®
+description: Learn here all about how to use code snippet utility of Syncfusion® .NET MAUI Extension for Visual Studio Code and much more.
 platform: MAUI
 component: Common
 documentation: ug

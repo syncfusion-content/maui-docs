@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Overview | Essential<sup>®</sup> UI Kit for .NET MAUI | Syncfusion<sup>®</sup>
-description: Learn here all about introduction of Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> Essential<sup>®</sup> UI Kit for .NET MAUI, its elements and more.
+title: Overview | Essential® UI Kit for .NET MAUI | Syncfusion®
+description: Learn here all about introduction of Syncfusion® Essential Studio® Essential® UI Kit for .NET MAUI, its elements and more.
 platform: maui
 control: Essential<sup>®</sup> UI Kit for .NET MAUI
 documentation: ug

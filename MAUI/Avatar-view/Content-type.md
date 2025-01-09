@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Various customization in Syncfusion<sup>®</sup> AvatarView control.  
+title: Various customization in Syncfusion® AvatarView control.  
 description: Learn what are the types in AvatarType and how to set value for the Avatartype in .NET MAUI AvatarView.
 platform: maui
 control: SfAvatarView

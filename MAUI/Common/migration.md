@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migrating from Xamarin to .NET MAUI | Syncfusion<sup>®</sup> 
-description: Basic overview about the list of available .NET MAUI components and equal Xamarin components on Syncfusion<sup>®</sup>.
+title: Migrating from Xamarin to .NET MAUI | Syncfusion® 
+description: Basic overview about the list of available .NET MAUI components and equal Xamarin components on Syncfusion®.
 platform: maui
 control: Essential Studio<sup>®</sup>
 documentation: ug

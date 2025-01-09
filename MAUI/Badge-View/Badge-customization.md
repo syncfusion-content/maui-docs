@@ -1,8 +1,8 @@
 ---
 
 layout: post
-title: Customization of Syncfusion<sup>®</sup> Badge View control for .NET MAUI
-description: This section explains how to customize the font, stroke, and text in the Syncfusion<sup>®</sup> SfBadgeView control in MAUI platform
+title: Customization of Syncfusion® Badge View control for .NET MAUI
+description: This section explains how to customize the font, stroke, and text in the Syncfusion® SfBadgeView control in MAUI platform
 platform: maui
 control: Badge View
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About .NET MAUI Busy Indicator control | Syncfusion<sup>®</sup>
-description: Learn here all about introduction of Syncfusion<sup>®</sup> .NET MAUI Busy Indicator (SfBusyIndicator) control, its elements and more.
+title: About .NET MAUI Busy Indicator control | Syncfusion®
+description: Learn here all about introduction of Syncfusion® .NET MAUI Busy Indicator (SfBusyIndicator) control, its elements and more.
 platform: maui
 control: BusyIndicator
 documentation: ug

@@ -1,8 +1,8 @@
 ---
 
 layout: post
-title: Badge animation with Syncfusion<sup>®</sup> Badge View control for .NET MAUI
-description: Learn here all about Animation support in Syncfusion<sup>®</sup> .NET MAUI Badge View (SfBadgeView) control and more.
+title: Badge animation with Syncfusion® Badge View control for .NET MAUI
+description: Learn here all about Animation support in Syncfusion® .NET MAUI Badge View (SfBadgeView) control and more.
 platform: maui
 control: Badge View
 documentation: ug
