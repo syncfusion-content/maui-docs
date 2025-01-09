@@ -45,7 +45,7 @@ this.Scheduler.ResourceView.Resources = Resources;
 Appointments associated with the `ResourceView` [Resources](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources), will be displayed by setting the `SchedulerResourceView` resource Id in the [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) by using the [ResourceIds](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_ResourceIds).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml"%}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <schedule:SfScheduler x:Name="Scheduler" View="TimelineWeek" AppointmentsSource="{Binding Appointments}">
     <schedule:SfScheduler.ResourceView>
         <schedule:SchedulerResourceView Resources="{Binding Resources}" />
@@ -89,7 +89,7 @@ this.Scheduler.AppointmentsSource = appointment;
 Multiple resources can share the same events or appointments by declaring resources ids in [ResourceIds](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_ResourceIds) in [ScheduleAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) class. If the appointment details are edited or updated, then the changes will be reflected on all other shared instances simultaneously.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml"%}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <schedule:SfScheduler x:Name="Scheduler"  View="TimelineWeek">
 </schedule:SfScheduler>
 {% endhighlight %}
@@ -133,7 +133,7 @@ N> Custom resource class should contain a mandatory field for resource `Id`.
 Create a custom class `Employee` with mandatory fields `Name,` `Id,` `ForegroundColor,` and `BackgroundColor`.
 
 {% tabs %}
-{% highlight c# tabtitle="Employee.cs"%}
+{% highlight c# tabtitle="Employee.cs" %}
 public class Employee
 {
    public string Name {get; set;}
@@ -421,7 +421,7 @@ The resource appearance customization can be achieved by using the [HeaderTempla
 {% endhighlight %}
 {% endtabs %}
 {% tabs %}
-{% highlight xaml tabtitle="SfImageSourceConverter.cs"%}
+{% highlight xaml tabtitle="SfImageSourceConverter.cs" %}
 public class SfImageSourceConverter : IValueConverter
 {
     /// <summary>
