@@ -15,7 +15,7 @@ The floating label layout is a powerful feature that enhances the user experienc
 
 Watch the video below to learn how to use and customize the floating label layout in .NET MAUI SfDataForm
 
-{% youtube "https://www.youtube.com/watch?v=XyoRYEDyoHA"%}
+{% youtube "https://www.youtube.com/watch?v=XyoRYEDyoHA" %}
 
 ## Changing the layout type for the data form
 By default, the dataform arranges the editors and their labels corresponding to the fields in the layout. However, to enable the floating label layout for data form, set the [LayoutType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_LayoutType) property of the [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html) or [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html) to `TextInputLayout`.
