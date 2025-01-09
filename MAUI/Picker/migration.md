@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrate from Syncfusion<sup>&reg;</sup>Syncfusion<sup>&reg;</sup> Xamarin SfPicker to .NET MAUI SfPicker
+title: Migrate from Syncfusion<sup>&reg;</sup> Xamarin SfPicker to .NET MAUI SfPicker
 description: Learn here all about Migrating from Syncfusion<sup>&reg;</sup> Xamarin Picker to Syncfusion<sup>&reg;</sup> .NET MAUI Picker control.
 platform: maui
 control: SfPicker

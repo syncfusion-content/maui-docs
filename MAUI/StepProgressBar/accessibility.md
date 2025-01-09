@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Accessibility in .NET MAUI StepProgressBar Control | Syncfusion<sup>&reg;</sup>Syncfusion<sup>&reg;</sup>
+title: Accessibility in .NET MAUI StepProgressBar Control | Syncfusion<sup>&reg;</sup>
 description: Learn here all about the accessibility features of Syncfusion<sup>&reg;</sup> .NET MAUI StepProgressBar (SfStepProgressBar) control.
 platform: maui
 control: SfStepProgressBar

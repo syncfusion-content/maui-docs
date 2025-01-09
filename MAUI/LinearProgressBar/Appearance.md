@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance in .NET MAUI Linear ProgressBar control | Syncfusion<sup>&reg;</sup>Syncfusion<sup>&reg;</sup>
+title: Appearance in .NET MAUI Linear ProgressBar control | Syncfusion<sup>&reg;</sup>
 description: Learn here all about appearance support in Syncfusion<sup>&reg;</sup> .NET MAUI Linear ProgressBar control, its elements and more.
 platform: MAUI
 control: SfLinearProgressBar

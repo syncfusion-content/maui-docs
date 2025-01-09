@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Custom Content in .NET MAUI Circular ProgressBar control | Syncfusion<sup>&reg;</sup>Syncfusion<sup>&reg;</sup>
+title: Custom Content in .NET MAUI Circular ProgressBar control | Syncfusion<sup>&reg;</sup>
 description: Learn here all about customcontent support in Syncfusion<sup>&reg;</sup> .NET MAUI Circular ProgressBar control, its elements and more.
 platform: MAUI
 control: SfCircularProgressBar
