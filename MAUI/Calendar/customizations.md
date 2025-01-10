@@ -9,6 +9,11 @@ documentation: ug
 
 # Customizations in .NET MAUI Calendar (SfCalendar)
 Each cell of the Month, Year, Decade and Century views can be customized in [.NET MAUI Calendar](https://www.syncfusion.com/maui-controls/maui-calendar) (SfCalendar).
+
+To get start quickly with our .NET MAUI Calendar customizations, you can check the below video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=WWpfji2gpw8"%}
     
 ## Month cell customization
 You can customize the calendar month view cell by using the `MonthView` property of `SfCalendar`.
