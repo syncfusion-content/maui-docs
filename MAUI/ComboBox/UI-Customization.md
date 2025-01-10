@@ -205,14 +205,14 @@ The [SelectionTextHighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfComboBox x:Name="comboBox"
-                    WidthRequest="250"
-                    HeightRequest="40"
-                    ItemsSource="{Binding SocialMedias}"
-                    DisplayMemberPath="Name"
-                    TextMemberPath="Name"
-                    Placeholder="Enter Media"
-                    SelectionTextHighlightColor="Green" />
+    <editors:SfComboBox x:Name="comboBox"
+                        WidthRequest="250"
+                        HeightRequest="40"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Enter Media"
+                        SelectionTextHighlightColor="Green" />
 
 {% endhighlight %}
 
@@ -529,14 +529,14 @@ The [DropDownBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfComboBox x:Name="comboBox"
-                        WidthRequest="250"
-                        HeightRequest="40"
-                        ItemsSource="{Binding SocialMedias}"
-                        DisplayMemberPath="Name"
-                        TextMemberPath="Name"
-                        Placeholder="Enter Media"
-                        DropDownBackground="YellowGreen" />
+    <editors:SfComboBox x:Name="comboBox"
+                            WidthRequest="250"
+                            HeightRequest="40"
+                            ItemsSource="{Binding SocialMedias}"
+                            DisplayMemberPath="Name"
+                            TextMemberPath="Name"
+                            Placeholder="Enter Media"
+                            DropDownBackground="YellowGreen" />
 
 {% endhighlight %}
 
@@ -601,14 +601,14 @@ The [DropDownStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfComboBox x:Name="comboBox"
-                        WidthRequest="250"
-                        HeightRequest="40"
-                        ItemsSource="{Binding SocialMedias}"
-                        DisplayMemberPath="Name"
-                        TextMemberPath="Name"
-                        Placeholder="Enter Media"
-                        DropDownStroke="DarkOrange" />
+    <editors:SfComboBox x:Name="comboBox"
+                            WidthRequest="250"
+                            HeightRequest="40"
+                            ItemsSource="{Binding SocialMedias}"
+                            DisplayMemberPath="Name"
+                            TextMemberPath="Name"
+                            Placeholder="Enter Media"
+                            DropDownStroke="DarkOrange" />
 
 {% endhighlight %}
 
@@ -721,9 +721,10 @@ The drop-down that shows the filtered items will be placed automatically based o
 {% highlight xaml %}
 
  <editors:SfComboBox x:Name="comboBox"
-                         WidthRequest="300"
+                         WidthRequest="300"                  
                          HeightRequest="40"
-                         DisplayMemberPath="Name"                  
+                         DisplayMemberPath="Name"
+                         TextMemberPath = "Name"
                          ItemsSource="{Binding SocialMedias}"
                          DropDownPlacement="Top"/>
 
@@ -754,9 +755,9 @@ The comboBox enables the user to provide padding for the items inside dropdown u
 {% highlight xaml %}
 
    <editors:SfComboBox x:Name="comboBox"
-                         WidthRequest="300"  
+                         WidthRequest="300"                          
                          HeightRequest="40"
-                         DisplayMemberPath="Name"                        
+                         DisplayMemberPath="Name"
                          ItemsSource="{Binding SocialMedias}"
                          ItemPadding="10,20,0,0"/>
 
@@ -786,12 +787,12 @@ The `DropdownWidth` property is used to modify the Width of the dropdown.
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfComboBox x:Name="comboBox"
-                        WidthRequest="300"   
-                        HeightRequest="40"
-                        DisplayMemberPath="Name"                         
-                        ItemsSource="{Binding SocialMedias}"                           
-                        DropdownWidth="400"/>
+    <editors:SfComboBox x:Name="comboBox"
+                         WidthRequest="300"                            
+                            HeightRequest="40"
+                            DisplayMemberPath="Name"                         
+                        ItemsSource="{Binding SocialMedias}"
+                            DropdownWidth="400"/>
 
 {% endhighlight %}
 

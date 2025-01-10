@@ -73,17 +73,17 @@ It highlights the matching character that are present everywhere in the suggesti
 
 {% highlight xaml %}
 
-<editors:SfComboBox x:Name="comboBox"
-                    WidthRequest="300"
-                    DisplayMemberPath="Name"
-                    HeightRequest = "40"
-                    ItemsSource="{Binding SocialMedias}"
-                    TextHighlightMode="MultipleOccurrence"
-                    IsEditable="True"
-                    IsFilteringEnabled="True"
-                    HighlightedTextColor="Red"
-                    HighlightedTextFontAttributes="Bold"
-                    TextSearchMode="Contains" />
+    <editors:SfComboBox x:Name="comboBox"
+                        WidthRequest="300"
+                        DisplayMemberPath="Name"
+                        HeightRequest = "40"
+                        ItemsSource="{Binding SocialMedias}"
+                        TextHighlightMode="MultipleOccurrence"
+                        IsEditable="True"
+                        IsFilteringEnabled="True"
+                        HighlightedTextColor="Red"
+                        HighlightedTextFontAttributes="Bold"
+                        TextSearchMode="Contains" />
 
 {% endhighlight %}
 

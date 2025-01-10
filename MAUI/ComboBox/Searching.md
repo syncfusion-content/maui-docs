@@ -31,13 +31,13 @@ In edit mode, searching will be performed based on the [TextMemberPath](https://
 {% tabs %}
 {% highlight xaml %}
 
-    <editors:SfComboBox x:Name="comboBox"
-                        WidthRequest="250"
-                        HeightRequest="40"
-                        IsEditable="true"
-                        ItemsSource="{Binding SocialMedias}"
-                        TextMemberPath="ID"
-                        DisplayMemberPath="Name" />
+<editors:SfComboBox x:Name="comboBox"
+                    WidthRequest="250"
+                    HeightRequest="40"
+                    IsEditable="true"
+                    ItemsSource="{Binding SocialMedias}"
+                    TextMemberPath="ID"
+                    DisplayMemberPath="Name" />
 
 {% endhighlight %}
 

@@ -105,9 +105,9 @@ SfComboBox allows customizing User Interface(UI) of Load More view. To customize
                     HeightRequest="40"
                     IsFilteringEnabled="True"
                     IsEditable="True" 
-                    ItemsSource="{Binding SocialMedias}"
+                    ItemsSource="{Binding SocialMedias}"          
                     MaximumSuggestion="2"
-                    DisplayMemberPath="Name"
+                    DisplayMemberPath="Name"                                    
                     TextMemberPath="Name">
     <editors:SfComboBox.LoadMoreTemplate>
         <DataTemplate>
@@ -204,6 +204,7 @@ private void ComboBox_LoadMoreButtonTapped(object? sender, EventArgs e)
 {
 
 }
+
 {% endhighlight %}
 {% endtabs %}
 

@@ -18,15 +18,15 @@ The [EnableAutoSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-            WidthRequest="350"
-            ItemsSource="{Binding SocialMedias}"
-            SelectionMode="Multiple"
-            MaxDropDownHeight="250"
-            DisplayMemberPath="Name"
-            TextMemberPath="Name"
-            Placeholder="Enter Media"
-            TokensWrapMode="Wrap"
-            EnableAutoSize="True" />
+             WidthRequest="350"
+             ItemsSource="{Binding SocialMedias}"
+             SelectionMode="Multiple"
+             MaxDropDownHeight="250"
+             DisplayMemberPath="Name"
+             TextMemberPath="Name"
+             Placeholder="Enter Media"
+             TokensWrapMode="Wrap"
+             EnableAutoSize="True" />
 
 {% endhighlight %}
 
