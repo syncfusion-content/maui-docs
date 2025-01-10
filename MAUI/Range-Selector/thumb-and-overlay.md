@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Thumb and Overlay in .NET MAUI Range Selector control | Syncfusion
-description: Learn here all about the Thumb and Thumb Overlay features of Syncfusion .NET MAUI Range Selector (SfRangeSelector) control and more.
+title: Thumb and Overlay in .NET MAUI Range Selector control | Syncfusion<sup>®</sup>
+description: Learn here all about the Thumb and Thumb Overlay features of Syncfusion<sup>®</sup> .NET MAUI Range Selector (SfRangeSelector) control and more.
 platform: maui
 control: SfRangeSelector
 documentation: ug
