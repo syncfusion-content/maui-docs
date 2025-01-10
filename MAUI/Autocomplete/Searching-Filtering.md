@@ -69,6 +69,7 @@ public class SocialMediaViewModel
 
 <editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="250" 
+                        HeightRequest = "50"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name" />
 
@@ -76,7 +77,12 @@ public class SocialMediaViewModel
 
 {% highlight C# %}
 
+SfAutocomplete autocomplete = new SfAutocomplete();
+autocomplete.WidthRequest = 350;
+autocomplete.HeightRequest = 50;
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
 autocomplete.DisplayMemberPath = "Name";
+Content = autocomplete;
 
 {% endhighlight %}
 {% endtabs %}
@@ -97,6 +103,7 @@ Searching will be performed based on the [TextMemberPath](https://help.syncfusio
 
 <editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="250"
+                        HeightRequest = "50"
                         ItemsSource="{Binding SocialMedias}"
                         TextMemberPath="ID"
                         DisplayMemberPath="Name" />
@@ -105,7 +112,13 @@ Searching will be performed based on the [TextMemberPath](https://help.syncfusio
 
 {% highlight C# %}
 
+SfAutocomplete autocomplete = new SfAutocomplete();
+autocomplete.WidthRequest = 350;
+autocomplete.HeightRequest = 50;
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
 autocomplete.TextMemberPath = "ID";
+autocomplete.DisplayMemberPath = "Name";
+Content = autocomplete;
 
 {% endhighlight %}
 {% endtabs %}
@@ -130,6 +143,7 @@ Set the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 
 <editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="250"
+                        HeightRequest = "50"
                         TextSearchMode="StartsWith"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
@@ -139,7 +153,14 @@ Set the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 
 {% highlight C# %}
 
+SfAutocomplete autocomplete = new SfAutocomplete();
+autocomplete.WidthRequest = 250;
+autocomplete.HeightRequest = 50;
 autocomplete.TextSearchMode = AutocompleteTextSearchMode.StartsWith;
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
+autocomplete.DisplayMemberPath = "Name";
+autocomplete.TextMemberPath = "Name";
+Content = autocomplete;
 
 {% endhighlight %}
 {% endtabs %}
@@ -157,6 +178,7 @@ Set the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 
 <editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="250"
+                        HeightRequest="50"
                         TextSearchMode="Contains"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
@@ -166,7 +188,14 @@ Set the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 
 {% highlight C# %}
 
+SfAutocomplete autocomplete = new SfAutocomplete();
+autocomplete.WidthRequest = 250;
+autocomplete.HeightRequest = 50;
 autocomplete.TextSearchMode = AutocompleteTextSearchMode.Contains;
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
+autocomplete.DisplayMemberPath = "Name";
+autocomplete.TextMemberPath = "Name";
+Content = autocomplete;
 
 {% endhighlight %}
 {% endtabs %}
@@ -184,6 +213,7 @@ Instead of displaying suggestion list on every character entry, matches can be f
 
 <editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="250"
+                        HeightRequest="50"
                         TextSearchMode="StartsWith"
                         ItemsSource="{Binding SocialMedias}"
                         MinimumPrefixCharacters="3"
@@ -194,7 +224,15 @@ Instead of displaying suggestion list on every character entry, matches can be f
 
 {% highlight C# %}
 
+SfAutocomplete autocomplete = new SfAutocomplete();
+autocomplete.WidthRequest = 250;
+autocomplete.HeightRequest = 50;
+autocomplete.TextSearchMode = AutocompleteTextSearchMode.StartsWith;
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
 autocomplete.MinimumPrefixCharacters = 3;
+autocomplete.DisplayMemberPath = "Name";
+autocomplete.TextMemberPath = "Name";
+Content = autocomplete;
 
 {% endhighlight %}
 {% endtabs %}
@@ -399,7 +437,7 @@ public class CapitalCitySearchingBehavior : Syncfusion.Maui.Inputs.IAutocomplete
 <editors:SfAutocomplete.SearchBehavior>
                 <local:CapitalCitySearchingBehavior></local:CapitalCitySearchingBehavior>
             </editors:SfAutocomplete.SearchBehavior>
-</editors:SfAutoComplete>
+</editors:SfAutocomplete>
 
 {% endhighlight %}
 {% endtabs %}
