@@ -15,7 +15,6 @@ Data labels are used to display values related to a chart segment. Values from d
 Each data label can be represented by the following:
 
 * Label - displays the segment label content at the (X, Y) point.
-* Connector line - used to connect the (X, Y) point and the label element.
 
 To learn how to customize the data labels in .NET MAUI Cartesian Charts quickly, you can check the below video.
 
