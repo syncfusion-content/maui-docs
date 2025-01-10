@@ -11,6 +11,10 @@ documentation: ug
 
 This section provides a quick overview for working with Essential® Kanban for .NET MAUI. It is an efficient way to visualize the workflow at each stage along its path to completion.
 
+To get start quickly with our .NET MAUI Kanban Board, you can check the below video.
+
+{% youtube "https://youtu.be/Mq55vjT7ZEA" %}
+
 ## Prerequisites
 
 Before starting, ensure the following are set up:
