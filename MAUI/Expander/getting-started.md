@@ -43,7 +43,7 @@ Before proceeding, ensure the following are in place:
 
 ## Step 3: Register the handler
 
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all Syncfusion controls in .NET MAUI. In `the MauiProgram.cs` file, register the handler for Syncfusion Core.
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all Syncfusion<sup>®</sup> controls in .NET MAUI. In `the MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> Core.
 
 {% tabs %}
 {% highlight c# hl_lines="4 20" %}
