@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Summaries in MAUI DataGrid control | Syncfusion
-description: Learn here all about Summaries support in Syncfusion MAUI DataGrid (SfDataGrid) control and more about it.
+title: Summaries in MAUI DataGrid control | Syncfusion®
+description: Learn here all about Summaries support in Syncfusion® MAUI DataGrid (SfDataGrid) control and more about it.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
