@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to | SfTextInputLayout |.NET MAUI | Syncfusion
-description: Learn here all about stroke thickness customization in Syncfusion .NET MAUI Text Input Layout (SfTextInputLayout) control and more.
+title: How to | SfTextInputLayout |.NET MAUI | Syncfusion<sup>®</sup>
+description: Learn here all about stroke thickness customization in Syncfusion<sup>®</sup> .NET MAUI Text Input Layout (SfTextInputLayout) control and more.
 platform: maui
 control: SfTextInputLayout
 documentation: ug

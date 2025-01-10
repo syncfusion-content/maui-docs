@@ -1,8 +1,8 @@
 ---
 
 layout: post
-title: Precision Mode in .NET MAUI Rating control | Syncfusion
-description: Learn here all about Precision Mode support in Syncfusion .NET MAUI Rating (SfRating) control and more.
+title: Precision Mode in .NET MAUI Rating control | Syncfusion<sup>®</sup>
+description: Learn here all about Precision Mode support in Syncfusion<sup>®</sup> .NET MAUI Rating (SfRating) control and more.
 platform: maui
 control: Rating
 documentation: ug
