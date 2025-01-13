@@ -1,7 +1,7 @@
 ---
 layout : post
 title: About MAUI Cards Control | Syncfusion<sup>&reg;</sup>
-description: Learn here all about introduction of Syncfusion<sup>&reg;</sup> Essential Studio® MAUI Cards control, its elements and more.
+description: Learn here all about introduction of Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> MAUI Cards control, its elements and more.
 platform : maui
 control : Cards
 documentation : ug
