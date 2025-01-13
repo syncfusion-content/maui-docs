@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in .NET MAUI TreeMap (STreeMap) Control | Syncfusion
-description: Learn here about performing actions using accessibility in Syncfusion .NET MAUI TreeMap (STreeMap) control.
+title: Accessibility in .NET MAUI TreeMap (STreeMap) Control | Syncfusion<sup>&reg;</sup>
+description: Learn here about performing actions using accessibility in Syncfusion<sup>&reg;</sup> .NET MAUI TreeMap (STreeMap) control.
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug

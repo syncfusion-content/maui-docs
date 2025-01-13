@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events in .NET MAUI Time Picker Control | Syncfusion
-description: Learn about events in Syncfusion .NET MAUI Time Picker (SfTimePicker) control and its basic features.
+title: Events in .NET MAUI Time Picker Control | Syncfusion<sup>&reg;</sup>
+description: Learn about events in Syncfusion<sup>&reg;</sup> .NET MAUI Time Picker (SfTimePicker) control and its basic features.
 platform: maui
 control: SfTimePicker
 documentation: ug

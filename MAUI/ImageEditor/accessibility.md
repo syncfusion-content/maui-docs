@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in .NET MAUI Image Editor Control | Syncfusion
-description: Learn here about performing actions using accessibility in Syncfusion .NET MAUI Image Editor (SfImageEditor) control.
+title: Accessibility in .NET MAUI Image Editor Control | Syncfusion<sup>&reg;</sup>
+description: Learn here about performing actions using accessibility in Syncfusion<sup>&reg;</sup> .NET MAUI Image Editor (SfImageEditor) control.
 platform: maui
 control: SfImageEditor
 documentation: ug

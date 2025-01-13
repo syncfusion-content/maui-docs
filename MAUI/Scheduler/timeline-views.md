@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Timeline Views in .NET MAUI Scheduler control | Syncfusion
-description: Learn here all about how to customize the timeline views settings in Syncfusion .NET MAUI Scheduler (SfScheduler) control and more.
+title: Timeline Views in .NET MAUI Scheduler control | Syncfusion<sup>&reg;</sup>
+description: Learn here all about how to customize the timeline views settings in Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler (SfScheduler) control and more.
 platform: maui
 control: SfScheduler
 documentation: ug

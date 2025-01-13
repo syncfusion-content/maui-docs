@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Axis in .NET MAUI Radial Gauge control | Syncfusion
-description: Learn here all about Axis feature of Syncfusion .NET MAUI Radial Gauge(SfRadialGauge) control using the custom support.
+title: Axis in .NET MAUI Radial Gauge control | Syncfusion<sup>&reg;</sup>
+description: Learn here all about Axis feature of Syncfusion<sup>&reg;</sup> .NET MAUI Radial Gauge(SfRadialGauge) control using the custom support.
 platform: maui
 control: SfRadialGauge
 documentation: ug

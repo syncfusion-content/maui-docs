@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility with .NET MAUI Picker Control | Syncfusion
-description: Learn here about accessibility with Syncfusion .NET MAUI Picker (SfPicker) control.
+title: Accessibility with .NET MAUI Picker Control | Syncfusion<sup>&reg;</sup>
+description: Learn here about accessibility with Syncfusion<sup>&reg;</sup> .NET MAUI Picker (SfPicker) control.
 platform: maui
 control: SfPicker
 documentation: ug

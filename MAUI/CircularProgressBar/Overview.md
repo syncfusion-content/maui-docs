@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About .NET MAUI Circular ProgressBar control | Syncfusion 
-description: Learn here all about the introduction of Syncfusion .NET MAUI Circular ProgressBar (SfCircularProgressBar) control, its elements and more.
+title: About .NET MAUI Circular ProgressBar control | Syncfusion<sup>&reg;</sup>
+description: Learn here all about the introduction of Syncfusion<sup>&reg;</sup>.NET MAUI Circular ProgressBar (SfCircularProgressBar) control, its elements and more.
 platform: MAUI
 control: SfCircularProgressBar
 documentation: ug

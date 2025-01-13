@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Localization in .NET MAUI Time Picker Control | Syncfusion
-description: Learn about localization support in Syncfusion .NET MAUI Time Picker (SfTimePicker) control.
+title: Localization in .NET MAUI Time Picker Control | Syncfusion<sup>&reg;</sup>
+description: Learn about localization support in Syncfusion<sup>&reg;</sup> .NET MAUI Time Picker (SfTimePicker) control.
 platform: maui
 control: SfTimePicker
 documentation: ug

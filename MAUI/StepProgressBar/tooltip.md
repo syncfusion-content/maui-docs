@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tooltip in .NET MAUI StepProgressBar Control | Syncfusion
-description: Learn here all about how to customize the appearance of tooltip in Syncfusion .NET MAUI StepProgressBar control and more.
+title: Tooltip in .NET MAUI StepProgressBar Control | Syncfusion<sup>&reg;</sup>
+description: Learn here all about how to customize the appearance of tooltip in Syncfusion<sup>&reg;</sup> .NET MAUI StepProgressBar control and more.
 platform: maui
 control: SfStepProgressBar
 documentation: ug

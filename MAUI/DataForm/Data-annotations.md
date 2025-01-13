@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data annotations in .NET MAUI DataForm control | Syncfusion
-description: Learn here all about Data annotations support in Syncfusion Maui DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
+title: Data annotations in .NET MAUI DataForm control | Syncfusion<sup>&reg;</sup>
+description: Learn here all about Data annotations support in Syncfusion<sup>&reg;</sup> Maui DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
 platform: maui
 control: SfDataForm
 documentation: UG

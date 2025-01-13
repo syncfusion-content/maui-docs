@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Step ProgressBar Control | Syncfusion
-description: Learn here all about getting started with Syncfusion .NET MAUI Step ProgressBar (SfStepProgressBar) control and its basic features.
+title: Getting Started with .NET MAUI Step ProgressBar Control | Syncfusion<sup>&reg;</sup>
+description: Learn here all about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Step ProgressBar (SfStepProgressBar) control and its basic features.
 platform: maui
 control: SfStepProgressBar
 documentation: ug
@@ -35,7 +35,7 @@ Before proceeding, ensure the following are set up:
 3. Select the project location, type the project name and press **Enter**.
 4. Then choose **Create project.**
 
-## Step 2: Install the Syncfusion .NET MAUI ProgressBar NuGet Package
+## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI ProgressBar NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.ProgressBar](https://www.nuget.org/packages/Syncfusion.Maui.ProgressBar/) and install the latest version.
@@ -43,7 +43,7 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register the handler
 
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion core.
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
 
 {% tabs %}
 {% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}

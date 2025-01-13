@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migrate from Xamarin to .NET MAUI SfLinearGauge | Syncfusion 
-description: Learn here all about Migrating from Syncfusion Xamarin SfLinearGauge to Syncfusion .NET MAUI SfLinearGauge control and more.
+title: Migrate from Xamarin to .NET MAUI SfLinearGauge | Syncfusion<sup>&reg;</sup> 
+description: Learn here all about Migrating from Syncfusion<sup>&reg;</sup> Xamarin SfLinearGauge to Syncfusion<sup>&reg;</sup> .NET MAUI SfLinearGauge control and more.
 platform: MAUI
 control: SfLinearGauge
 documentation: ug

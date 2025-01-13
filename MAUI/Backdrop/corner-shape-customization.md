@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Corner shape customization of Syncfusion Backdrop Page | Syncfusion
+title: Corner shape customization of Syncfusion<sup>&reg;</sup> Backdrop Page | Syncfusion<sup>&reg;</sup>
 description: This section explains how to customize the corners of the front layer of the backdrop to flat and curve shapes. 
 platform: MAUI
 control: SfBackdropPage

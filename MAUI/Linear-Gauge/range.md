@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Range in .NET MAUI Linear Gauge control | Syncfusion
-description: Learn here all about adding and customizing Range of Syncfusion Flutter Linear Gauge (SfLinearGauge) control and more.
+title: Range in .NET MAUI Linear Gauge control | Syncfusion<sup>&reg;</sup>
+description: Learn here all about adding and customizing Range of Syncfusion<sup>&reg;</sup> Flutter Linear Gauge (SfLinearGauge) control and more.
 platform: maui
 control: SfLinearGauge
 documentation: ug

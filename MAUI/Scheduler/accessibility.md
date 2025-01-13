@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility in .NET MAUI SfScheduler control | Syncfusion
-description: Learn here about Accessibility support with the Syncfusion .NET MAUI Scheduler (SfScheduler) control, its elements, and more.
+title: Accessibility in .NET MAUI SfScheduler control | Syncfusion<sup>&reg;</sup>
+description: Learn here about Accessibility support with the Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler (SfScheduler) control, its elements, and more.
 platform: maui
 control: SfScheduler
 documentation: ug

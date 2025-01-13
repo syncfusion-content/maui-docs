@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migrate from Xamarin to .NET MAUI StepProgressBar | Syncfusion
-description: Learn here all about Migrating from Syncfusion Xamarin step progressbar to Syncfusion .NET MAUI SfStepProgressBar control.
+title: Migrate from Xamarin to .NET MAUI StepProgressBar | Syncfusion<sup>&reg;</sup>
+description: Learn here all about Migrating from Syncfusion<sup>&reg;</sup> Xamarin step progressbar to Syncfusion<sup>&reg;</sup> .NET MAUI SfStepProgressBar control.
 platform: maui
 control: SfStepProgressBar
 documentation: ug

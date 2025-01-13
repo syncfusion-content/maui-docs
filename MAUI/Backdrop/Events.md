@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Reveal and conceal event of Syncfusion Backdrop Page | Syncfusion
-description: Learn here all about how to hook the event when syncfusion .NET MAUI backdrop page is revealed and concealed.
+title: Reveal and conceal event of Syncfusion<sup>&reg;</sup> Backdrop Page | Syncfusion<sup>&reg;</sup>
+description: Learn here all about how to hook the event when Syncfusion<sup>&reg;</sup> .NET MAUI backdrop page is revealed and concealed.
 platform: MAUI
 control: SfBackdropPage
 documentation: ug

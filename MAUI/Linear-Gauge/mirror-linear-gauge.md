@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Mirror in .NET MAUI Linear Gauge control | Syncfusion
-description: Learn how to use the IsMirrored property to mirror the Syncfusion.NET MAUI Linear Gauge (SfLinearGauge) control.
+title: Mirror in .NET MAUI Linear Gauge control | Syncfusion<sup>&reg;</sup>
+description: Learn how to use the IsMirrored property to mirror the Syncfusion<sup>&reg;</sup>.NET MAUI Linear Gauge (SfLinearGauge) control.
 platform: maui
 control: SfLinearGauge
 documentation: ug

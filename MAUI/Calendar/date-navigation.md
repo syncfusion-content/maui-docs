@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Date Navigations in .NET MAUI Calendar control | Syncfusion
-description: Learn here all about Date navigations feature of Syncfusion .NET MAUI Calendar (SfCalendar) control and more.
+title: Date Navigations in .NET MAUI Calendar control | Syncfusion<sup>&reg;</sup>
+description: Learn here all about Date navigations feature of Syncfusion<sup>&reg;</sup> .NET MAUI Calendar (SfCalendar) control and more.
 platform: maui
 control: SfCalendar
 documentation: ug

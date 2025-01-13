@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Reveal height customization of Syncfusion Backdrop Page | Syncfusion
-description: Learn here all about how to configure and customize the reveal height in the Syncfusion backdrop page control.
+title: Reveal height customization of Syncfusion<sup>&reg;</sup> Backdrop Page | Syncfusion<sup>&reg;</sup>
+description: Learn here all about how to configure and customize the reveal height in the Syncfusion<sup>&reg;</sup> backdrop page control.
 platform: MAUI
 control: SfBackdropPage
 documentation: ug

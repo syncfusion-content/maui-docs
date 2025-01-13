@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Digital Gauge control | Syncfusion
-description: Learn here about getting started with Syncfusion .NET MAUI Digital Gauge (SfDigitalGauge) control, its elements and more.
+title: Getting Started with .NET MAUI Digital Gauge control | Syncfusion<sup>&reg;</sup>
+description: Learn here about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Digital Gauge (SfDigitalGauge) control, its elements and more.
 platform: maui
 control: DigitalGauge
 documentation: ug
@@ -9,7 +9,7 @@ keywords: .net maui, .net maui digital gauge, digital gauge, character segments,
 ---
 # Getting Started with the .NET MAUI DigitalGauge
 
-This section explains how to add the [.NET MAUI DigitalGauge](https://www.syncfusion.com/maui-controls/maui-digital-gauge) control. This section covers only the basic features needed to get started with Syncfusion DigitalGauge. Follow the steps below to add .NET MAUI DigitalGauge control to your project.
+This section explains how to add the [.NET MAUI DigitalGauge](https://www.syncfusion.com/maui-controls/maui-digital-gauge) control. This section covers only the basic features needed to get started with Syncfusion<sup>&reg;</sup> DigitalGauge. Follow the steps below to add .NET MAUI DigitalGauge control to your project.
 
 To get start quickly with our .NET MAUI DigitalGauge, you can check the below video.
 
@@ -37,7 +37,7 @@ Before proceeding, ensure the following are set up:
 3. Select the project location, type the project name and press enter.
 4. Then choose **Create project.**
 
-## Step 2: Install the Syncfusion MAUI DigitalGauge NuGet Package
+## Step 2: Install the Syncfusion<sup>&reg;</sup> MAUI DigitalGauge NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Gauges](https://www.nuget.org/packages/Syncfusion.Maui.Gauges/) and install the latest version.
@@ -45,7 +45,7 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register the handler
 
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion core.
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
 
 {% highlight c# tabtitle="~/MauiProgram.cs" hl_lines="17" %}
 

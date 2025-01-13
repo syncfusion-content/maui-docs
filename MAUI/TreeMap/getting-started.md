@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI TreeMap | Syncfusion
-description: Learn about getting started with Syncfusion .NET MAUI TreeMap (SfTreeMap) in mobile and desktop applications from a single shared codebase.
+title: Getting Started with .NET MAUI TreeMap | Syncfusion<sup>&reg;</sup>
+description: Learn about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI TreeMap (SfTreeMap) in mobile and desktop applications from a single shared codebase.
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug
@@ -37,7 +37,7 @@ Before proceeding, ensure the following are setup:
 3. Select the project location, type the project name and press **Enter**.
 4. Then choose **Create project.**
 
-## Step 2: Install the Syncfusion .NET MAUI TreeMap NuGet Package
+## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI TreeMap NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.TreeMap](https://www.nuget.org/packages/Syncfusion.Maui.TreeMap/) and install the latest version.
@@ -45,7 +45,7 @@ Before proceeding, ensure the following are setup:
 
 ## Step 3: Register the handler
 
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion core.
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
 
 {% tabs %}
 {% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 8" %}

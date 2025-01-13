@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Labels in .NET MAUI Linear Gauge control | Syncfusion
-description: Learn here all about adding and customizing Labels of Syncfusion .NET MAUI Linear Gauge (SfLinearGauge) control and more.
+title: Labels in .NET MAUI Linear Gauge control | Syncfusion<sup>&reg;</sup>
+description: Learn here all about adding and customizing Labels of Syncfusion<sup>&reg;</sup> .NET MAUI Linear Gauge (SfLinearGauge) control and more.
 platform: maui
 control: SfLinearGauge
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data handling in .NET MAUI DataForm control | Syncfusion
-description: Learn about the commit feature in Syncfusion .NET MAUI DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
+title: Data handling in .NET MAUI DataForm control | Syncfusion<sup>&reg;</sup>
+description: Learn about the commit feature in Syncfusion<sup>&reg;</sup> .NET MAUI DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
 platform: maui
 control: SfDataForm
 documentation: ug
