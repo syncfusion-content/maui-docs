@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Text Dispaly Mode in .NET MAUI Date Time Picker Control | Syncfusion<sup>&reg;</sup>Syncfusion<sup>&reg;</sup>
+title: Text Dispaly Mode in .NET MAUI Date Time Picker Control | Syncfusion<sup>&reg;</sup>
 description: Learn about the date time picker text display mode in Syncfusion<sup>&reg;</sup> .NET MAUI Date Time Picker (SfDateTimePicker) control and its basic features.
 platform: maui
 control: SfDateTimePicker
