@@ -34,6 +34,8 @@ It highlights the first position of the matching characters in the suggestion li
      <editors:SfAutocomplete x:Name="autocomplete"
 			     HeightRequest = "40"
 			     WidthRequest="300"
+                    DisplayMemberPath = "Name"
+                    TextMemberPath = "Name"
 			     ItemsSource="{Binding SocialMedias}"
 			     TextHighlightMode="FirstOccurrence"
 			     HighlightedTextColor="Red"
@@ -43,15 +45,18 @@ It highlights the first position of the matching characters in the suggestion li
 
 {% highlight c# %}
 
-    SfAutocomplete autoComplete = new SfAutocomplete() 
-    {
-         HeightRequest = 40,
-         WidthRequest = 300,
-         TextHighlightMode = OccurrenceMode.FirstOccurrence,
-         HighlightedTextColor = Colors.Red,
-         HighlightedTextFontAttributes = FontAttributes.Bold,
-    };
-    Content=autocomplete;
+     SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+     SfAutocomplete autocomplete = new SfAutocomplete() 
+     {
+          HeightRequest = 40,
+          WidthRequest = 300,
+          DisplayMemberPath = "Name",
+          TextMemberPath = "Name",
+          ItemsSource = socialMediaViewModel.SocialMedias,
+          TextHighlightMode = OccurrenceMode.FirstOccurrence,
+          HighlightedTextColor = Colors.Red,
+          HighlightedTextFontAttributes = FontAttributes.Bold,
+     };
 
 {% endhighlight %}
 
@@ -70,6 +75,8 @@ It highlights the matching character that are present everywhere in the suggesti
      <editors:SfAutocomplete x:Name="autocomplete"
 		             HeightRequest = "40"
 		             WidthRequest="300"
+                       DisplayMemberPath = "Name"
+                       TextMemberPath = "Name"
 		             ItemsSource="{Binding SocialMedias}"
 		             TextHighlightMode="MultipleOccurrence"
 		             HighlightedTextColor="Red"
@@ -80,16 +87,19 @@ It highlights the matching character that are present everywhere in the suggesti
 
 {% highlight c# %}
 
-    SfAutocomplete autocomplete = new SfAutocomplete() 
-    {
-         HeightRequest = 40,
-         WidthRequest=300,
-         TextSearchMode = AutocompleteTextSearchMode.Contains,
-         TextHighlightMode = OccurrenceMode.MultipleOccurrence,
-         HighlightedTextColor = Colors.Red,
-         HighlightedTextFontAttributes = FontAttributes.Bold,
-    };
-    Content=autocomplete;
+     SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+     SfAutocomplete autocomplete = new SfAutocomplete() 
+     {
+          HeightRequest = 40,
+          WidthRequest=300,
+          DisplayMemberPath = "Name",
+          TextMemberPath = "Name",
+          ItemsSource = socialMediaViewModel.SocialMedias,
+          TextSearchMode = AutocompleteTextSearchMode.Contains,
+          TextHighlightMode = OccurrenceMode.MultipleOccurrence,
+          HighlightedTextColor = Colors.Red,
+          HighlightedTextFontAttributes = FontAttributes.Bold,
+     };
 
 {% endhighlight %}
 
