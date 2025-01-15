@@ -134,7 +134,6 @@ autocomplete.LoadMoreTemplate = new DataTemplate(() =>
     return grid;
 });
 
-
 {% endhighlight %}
 {% endtabs %}
 

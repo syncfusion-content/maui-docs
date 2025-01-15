@@ -741,7 +741,6 @@ The `DropdownWidth` property is used to modify the Width of the dropdown.
                             TextMemberPath="Name"                           
                             DropdownWidth="400"/>
 
-
 {% endhighlight %}
 
 {% highlight C# %}
@@ -1108,7 +1107,8 @@ The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Dr
         TextMemberPath = "Name", 
         ItemTemplate = employeeTemplateSelector,
     };
-    
+
+    this.Content = autoComplete;
 
 {% endhighlight %}
 {% endtabs %}
@@ -1191,7 +1191,6 @@ Completed event can be subscribed in C# also:
     autocomplete.WidthRequest = 280;
     autoComplete.HeightRequest = 34;
     autoComplete.Completed+=autoComplete_Completed;
-    
 
 {% endhighlight %}
 {% endtabs %}
@@ -1235,7 +1234,6 @@ The [DropDownOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.S
         TextMemberPath = "Name"
     };
     autoComplete.DropdownOpening += Autocomplete_DropdownOpening;
-
 
 {% endhighlight %}
 
@@ -1313,7 +1311,7 @@ The [DropDownClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 {% highlight xaml %}
 
     
-    <autocomplete:SfAutocomplete HeightRequest="40"
+    <editors:SfAutocomplete HeightRequest="40"
                                  WidthRequest="250"
                                  x:Name="autoComplete"
                                  ItemSource="{Binding Employees}"
@@ -1507,7 +1505,6 @@ autocomplete.ItemsSource = viewModel.SocialMedia;
 autocomplete.DisplayMemberPath = "Name";
 autocomplete.TextMemberPath = "Name";
 autocomplete.ClearButtonPath = path;
-
 
 {% endhighlight %}
 {% endtabs %}
