@@ -111,7 +111,6 @@ Step 3: Add the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 {% highlight C# %}
 
 SfCarousel carousel = new SfCarousel();
-this.Content = carousel;
 
 {% endhighlight %}
 
