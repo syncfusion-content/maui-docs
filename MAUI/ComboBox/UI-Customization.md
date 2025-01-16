@@ -1497,7 +1497,7 @@ The [DropDownClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 {% highlight xaml %}
 
     
-    <comboBox:SfComboBox HeightRequest="40"
+    <editors:SfComboBox HeightRequest="40"
                          WidthRequest="350"
                          x:Name="comboBox"
                          ItemSource="{Binding Employees}"
