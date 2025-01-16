@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Calendar Modes in .NET MAUI Calendar Control | Syncfusion
-description: Learn about the calendar modes in Syncfusion Calendar for .NET MAUI (SfCalendar) control and its basic features.
+title: Calendar Modes in .NET MAUI Calendar Control | Syncfusion<sup>&reg;</sup>
+description: Learn about the calendar modes in Syncfusion<sup>&reg;</sup> Calendar for .NET MAUI (SfCalendar) control and its basic features.
 platform: maui
 control: SfCalendar
 documentation: ug
@@ -88,7 +88,7 @@ N> This property is automatically changed to `false` when you close the dialog b
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml"%}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <Grid>
     <calendar:SfCalendar x:Name="calendar" 
@@ -107,7 +107,7 @@ N> This property is automatically changed to `false` when you close the dialog b
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs"%}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 private void Button_Clicked(object sender, System.EventArgs e)
 {
