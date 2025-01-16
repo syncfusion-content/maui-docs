@@ -29,7 +29,6 @@ public MainPage()
 {
     InitializeComponent();
     rating.IsReadOnly=true;
-    Content = rating;
 }
 	
 {% endhighlight %}

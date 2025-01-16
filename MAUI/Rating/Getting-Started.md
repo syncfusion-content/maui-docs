@@ -118,7 +118,6 @@ public MainPage()
 {
     InitializeComponent();
     rating = new SfRating();
-    this.Content = rating;
 } 
 
 {% endhighlight %}
@@ -147,7 +146,6 @@ public MainPage()
     InitializeComponent();
     rating = new SfRating();
     rating.ItemCount = 5;
-    Content = rating;
 }
 
 {% endhighlight %}
@@ -176,7 +174,6 @@ public MainPage()
     InitializeComponent();
     rating = new SfRating();
     rating.Value = 3;
-    Content = rating;
 }
 
 {% endhighlight %}
@@ -203,7 +200,6 @@ public MainPage()
     InitializeComponent();
     rating = new SfRating();
     rating.Precision = Precision.Standard;
-    Content = rating;
 }
 
 {% endhighlight%}
