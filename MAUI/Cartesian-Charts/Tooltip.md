@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in .NET MAUI Chart control | Syncfusion
-description: This section explains about how to enable tooltip and its customization in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
+description: This section explains about how to enable tooltip and its customization in Syncfusion® .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
@@ -11,6 +11,10 @@ keywords: .net maui chart tooltip, maui chart tooltip, .net maui chart tooltip c
 # Tooltip in .NET MAUI Chart
 
 Tooltip is used to display any information or metadata of the tapped segment. The Cartesian chart provides tooltip support for all series. 
+
+To learn how to customize the tooltips in .NET MAUI Cartesian Charts quickly, you can check the below video.
+
+{% youtube "https://youtu.be/tDwQ7h9jwWk" %}
 
 ## Define Tooltip
 

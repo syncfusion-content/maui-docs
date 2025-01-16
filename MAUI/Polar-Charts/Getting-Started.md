@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI Chart Control | Syncfusion
-description: This section explains about the getting started with Syncfusion .NET MAUI Chart (SfPolarChart) control.
+description: This section explains about the getting started with Syncfusion® .NET MAUI Chart (SfPolarChart) control.
 platform: maui
 control: SfPolarChart
 documentation: ug
 ---
 
-> **Notice**: After **Volume 1 2025 (Mid of March 2025)**, updates, bug fixes, and feature enhancements for this control will no longer be available in the Syncfusion package. Please switch to the **Syncfusion Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
+> **Notice**: After **Volume 1 2025 (Mid of March 2025)**, updates, bug fixes, and feature enhancements for this control will no longer be available in the Syncfusion® package. Please switch to the **Syncfusion® Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
 
 # Getting Started with .NET MAUI Chart
 
@@ -15,12 +15,12 @@ This section explains how to populate the Polar chart with data, a title, data l
 
 To get start quickly with our .NET MAUI Polar Chart, you can check the below video.
 
-{% youtube "https://www.youtube.com/watch?v=Ga9mytwCo_s&t=4s" %}
+{% youtube "https://youtu.be/Ga9mytwCo_s" %}
 
 ## Creating an application with .NET MAUI chart
 
 1. Create a new .NET MAUI application in Visual Studio.
-2. Syncfusion .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfPolarChart to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Charts, and then install it.
+2. Syncfusion® .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfPolarChart to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Charts, and then install it.
 3. To initialize the control, import the Chart namespace.
 4. Initialize the [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html).
 
@@ -60,7 +60,7 @@ namespace ChartGettingStarted
 
 ## Register the handler
 
-The Syncfusion.Maui.Core NuGet package is a dependent package for all Syncfusion controls in .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
+The Syncfusion.Maui.Core NuGet package is a dependent package for all Syncfusion® controls in .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion® core.
 
 {% highlight C# %}
 
