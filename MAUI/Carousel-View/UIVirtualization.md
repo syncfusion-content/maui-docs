@@ -48,6 +48,7 @@ SfCarousel carousel = new SfCarousel()
     EnableVirtualization = true,
     ViewMode = ViewMode.Linear
 };
+
 var itemTemplate = new DataTemplate(() =>
 {
     var grid = new Grid();
@@ -64,6 +65,6 @@ carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 {% endtabs %}
 
-![UIVirtualization](images/UIVirtualization.png) 
+![UIVirtualization](images/UIVirtualization.png)
 
 Find the complete UIVirtualization sample from this [link](https://github.com/SyncfusionExamples/maui-carousel-samples/tree/master/UIVirtualization/VirtualizationSample).

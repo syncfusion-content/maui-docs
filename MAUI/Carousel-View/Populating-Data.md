@@ -185,6 +185,7 @@ namespace CarouselSample
 
             carousel.ItemsSource = carouselItems;
 
+            this.Content = carousel;
         }
     }
 }
