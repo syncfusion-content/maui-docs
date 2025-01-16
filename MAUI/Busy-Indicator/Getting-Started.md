@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Busy Indicator control | Syncfusion
-description: Learn here about getting started with Syncfusion .NET MAUI Busy Indicator (SfBusyIndicator) control, its elements, and more.
+title: Getting Started with .NET MAUI Busy Indicator control | Syncfusion®
+description: Learn here about getting started with Syncfusion® .NET MAUI Busy Indicator (SfBusyIndicator) control, its elements, and more.
 platform: maui
 control: BusyIndicator
 documentation: ug
@@ -42,7 +42,7 @@ Before proceeding, ensure the following are set up:
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Step 2: Install the Syncfusion MAUI Core NuGet Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Core NuGet Package
 
 1.  In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2.  Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and install the latest version.
@@ -50,7 +50,7 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register the handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;
