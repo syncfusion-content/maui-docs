@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open a Password-Protected PDF in .NET MAUI PDF Viewer | Syncfusion
-description: Learn here about opening a password-protected document in Syncfusion® .NET MAUI PDF Viewer (SfPdfViewer) control and more.
+description: Learn here about opening a password-protected document in Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control and more.
 platform: MAUI
 control: SfPdfViewer
 documentation: ug

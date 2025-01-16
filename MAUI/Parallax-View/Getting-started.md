@@ -11,6 +11,10 @@ documentation: ug
 
 This section explains the steps required to configure the [`SfParallaxView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html) control and add basic elements to it using various APIs.
 
+To get start quickly with our .NET MAUI Parallax View, you can check the below video.
+
+{% youtube "https://youtu.be/ezzIDWYYrUc" %}
+
 ## Creating an application using .NET MAUI Parallax View
 
 1. Create a new .NET MAUI application in Visual studio.
