@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ink Eraser in .NET MAUI PDF Viewer control | Syncfusion
-description: Learn here all about Ink Eraser in Syncfusion® .NET MAUI PDF Viewer (SfPdfViewer) control and its functionalities.
+description: Learn here all about Ink Eraser in Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control and its functionalities.
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
