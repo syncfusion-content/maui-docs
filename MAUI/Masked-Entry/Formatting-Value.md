@@ -24,7 +24,7 @@ Set up the MaskedEntry to exclude prompt and literal characters, preserving only
 {% highlight XAML %}
 
 <VerticalStackLayout Spacing="10" VerticalOptions="Center">
-    <syncfusion:SfMaskedEntry x:Name="maskedEntry" WidthRequest="200"
+    <editors:SfMaskedEntry x:Name="maskedEntry" WidthRequest="200"
                               MaskType="Simple"
                               ClearButtonVisibility="WhileEditing"
                               Mask=">AAAAA-AAAAA-AAAAA-AAAAA"
@@ -98,7 +98,7 @@ Set up the MaskedEntry to preserve typed and prompt characters, excluding litera
 {% highlight XAML %}
 
 <VerticalStackLayout Spacing="10" VerticalOptions="Center">
-    <syncfusion:SfMaskedEntry x:Name="maskedEntry" WidthRequest="200"
+    <editors:SfMaskedEntry x:Name="maskedEntry" WidthRequest="200"
                               MaskType="Simple"
                               ClearButtonVisibility="WhileEditing"
                               Mask=">AAAAA-AAAAA-AAAAA-AAAAA"
@@ -172,7 +172,7 @@ Keep typed and literal characters in the input but exclude prompt characters.
 {% highlight XAML %}
 
 <VerticalStackLayout Spacing="10" VerticalOptions="Center">
-    <syncfusion:SfMaskedEntry x:Name="maskedEntry" WidthRequest="200"
+    <editors:SfMaskedEntry x:Name="maskedEntry" WidthRequest="200"
                               MaskType="Simple"
                               ClearButtonVisibility="WhileEditing"
                               Mask=">AAAAA-AAAAA-AAAAA-AAAAA"
@@ -246,7 +246,7 @@ Maintain typed, prompt, and literal characters in the input.
 {% highlight XAML %}
 
 <VerticalStackLayout Spacing="10" VerticalOptions="Center">
-    <syncfusion:SfMaskedEntry x:Name="maskedEntry" WidthRequest="200"
+    <editors:SfMaskedEntry x:Name="maskedEntry" WidthRequest="200"
                               MaskType="Simple"
                               ClearButtonVisibility="WhileEditing"
                               Mask=">AAAAA-AAAAA-AAAAA-AAAAA"
