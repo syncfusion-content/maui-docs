@@ -53,4 +53,4 @@ private async void carousel_SwipeEnded(object sender, System.EventArgs e)
 
 {% endtabs %}
 
-![Carousel Swiping events.](images/CarouselSwiping_GIF.gif)
+![Carousel Swiping events](images/CarouselSwiping_GIF.gif)

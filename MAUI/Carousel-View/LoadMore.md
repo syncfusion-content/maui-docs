@@ -183,7 +183,6 @@ To load more items programmatically, the [LoadMore](https://help.syncfusion.com/
 
 {% highlight xaml %}
 
-<StackLayout>
     <carousel:SfCarousel x:Name="carousel"
                          ItemsSource="{Binding ImageCollection}"
                          ItemTemplate="{StaticResource itemTemplate}"
@@ -194,7 +193,6 @@ To load more items programmatically, the [LoadMore](https://help.syncfusion.com/
                          LoadMoreItemsCount="2" />
     <Button Text="LoadMore Method" 
             Clicked="Button_Clicked"/>
-</StackLayout>
 	
 {% endhighlight %}
 

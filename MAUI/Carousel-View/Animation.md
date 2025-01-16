@@ -47,7 +47,7 @@ var itemTemplate = new DataTemplate(() =>
 carousel.BindingContext = carouselViewModel;
 carousel.ItemTemplate = itemTemplate;
 carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
-this.Content = carousel;
+carousel.Duration = 1000;
 
 {% endhighlight %}
 

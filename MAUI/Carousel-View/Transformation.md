@@ -47,7 +47,7 @@ carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 ## Set Gap between Selected Item
 
-Distance between the selected item and other items can be customized by using [SelectedItemOffset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_SelectedItemOffset) property of the  [SfCarouse](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) control in the Default mode.
+Distance between the selected item and other items can be customized by using [SelectedItemOffset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_SelectedItemOffset) property of the  [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) control in the Default mode.
 
 {% tabs %}
 
