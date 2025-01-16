@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Show and Hide annotations in .NET MAUI PDF Viewer | Syncfusion
-description: Learn here about showing and hiding annotations in a document in Syncfusion® .NET MAUI PDF Viewer (SfPdfViewer) control and more.
+description: Learn here about showing and hiding annotations in a document in Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control and more.
 platform: MAUI
 control: SfPdfViewer
 documentation: ug

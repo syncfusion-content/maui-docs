@@ -1,8 +1,8 @@
 ---
 
 layout: post
-title: Predefined symbols of Syncfusion Badge view control for .NET MAUI
-description: Learn how to set Syncfusion badge view predefined symbols and types of badge icons in .NET MAUI platform
+title: Predefined symbols of Syncfusion® Badge view control for .NET MAUI
+description: Learn how to set Syncfusion® badge view predefined symbols and types of badge icons in .NET MAUI platform
 platform: maui
 control: SfBadgeView
 documentation: ug
