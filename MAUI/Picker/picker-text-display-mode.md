@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Picker Text Dispaly Mode in .NET MAUI Picker Control | Syncfusion
-description: Learn about the picker text display mode in Syncfusion .NET MAUI Picker (SfPicker) control and its basic features.
+title: Picker Text Dispaly Mode in .NET MAUI Picker Control | Syncfusion<sup>&reg;</sup>
+description: Learn about the picker text display mode in Syncfusion<sup>&reg;</sup> .NET MAUI Picker (SfPicker) control and its basic features.
 platform: maui
 control: SfPicker
 documentation: ug

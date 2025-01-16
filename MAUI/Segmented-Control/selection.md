@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Segment item selection in .NET MAUI Segmented control | Syncfusion
-description: Learn about the segment item selection in Syncfusion .NET MAUI Segmented Control (SfSegmentedControl).
+title: Segment item selection in .NET MAUI Segmented control | Syncfusion<sup>&reg;</sup>
+description: Learn about the segment item selection in Syncfusion<sup>&reg;</sup> .NET MAUI Segmented Control (SfSegmentedControl).
 platform: maui
 control: SfSegmentedControl
 documentation: ug

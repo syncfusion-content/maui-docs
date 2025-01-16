@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Linear ProgressBar control | Syncfusion
-description: Learn here about getting started with Syncfusion .NET MAUI Linear ProgressBar (SfLinearProgressBar) control, its elements and more.
+title: Getting started with .NET MAUI Linear ProgressBar control | Syncfusion<sup>&reg;</sup>
+description: Learn here about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Linear ProgressBar (SfLinearProgressBar) control, its elements and more.
 platform: MAUI
 control: SfLinearProgressBar
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting started with .NET MAUI Linear ProgressBar
 
-This section explains the steps required to add the linear progress bar control with the progress and its customizable elements such as indeterminate, segment, progress fill, and track fill. This section covers only the basic features needed to know and gets started with the Syncfusion linear progress bar. Follow the steps below to add a .NET MAUI Linear progress bar control to your project.
+This section explains the steps required to add the linear progress bar control with the progress and its customizable elements such as indeterminate, segment, progress fill, and track fill. This section covers only the basic features needed to know and gets started with the Syncfusion<sup>&reg;</sup> linear progress bar. Follow the steps below to add a .NET MAUI Linear progress bar control to your project.
 
 To get start quickly with our .NET MAUI Linear ProgressBar, check the following video.
 
@@ -37,7 +37,7 @@ Before proceeding, ensure the following are set up:
 3. Select the project location, type the project name and press **Enter**.
 4. Then choose **Create project.**
 
-## Step 2: Install the Syncfusion .NET MAUI Linear ProgressBar NuGet Package
+## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI Linear ProgressBar NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.ProgressBar](https://www.nuget.org/packages/Syncfusion.Maui.ProgressBar/) and install the latest version.
