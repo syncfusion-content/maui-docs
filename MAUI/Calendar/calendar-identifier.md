@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Calendar Identifier in .NET MAUI Calendar Control | Syncfusion
-description: Learn here all about the Calendar identifier in the Syncfusion .NET MAUI Calendar (SfCalendar) control and more details.
+title: Calendar Identifier in .NET MAUI Calendar Control | Syncfusion<sup>&reg;</sup>
+description: Learn here all about the Calendar identifier in the Syncfusion<sup>&reg;</sup> .NET MAUI Calendar (SfCalendar) control and more details.
 platform: maui
 control: SfCalendar
 documentation: ug
