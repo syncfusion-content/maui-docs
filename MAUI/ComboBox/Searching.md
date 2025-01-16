@@ -42,6 +42,7 @@ In edit mode, searching will be performed based on the [TextMemberPath](https://
 {% endhighlight %}
 
 {% highlight C# %}
+    SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
     SfComboBox comboBox = new SfComboBox() 
     {
         WidthRequest= 250,
@@ -87,6 +88,7 @@ Set the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 
 {% highlight C# %}
 
+    SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
     SfComboBox comboBox = new SfComboBox() 
     {
         WidthRequest= 250,
@@ -124,6 +126,7 @@ Set the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 
 {% highlight C# %}
 
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox() 
 {
     WidthRequest= 250,
@@ -163,6 +166,7 @@ Instead of displaying suggestion list on every character entry, matches can be f
 
 {% highlight C# %}
 
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox() 
 {
     WidthRequest= 250,

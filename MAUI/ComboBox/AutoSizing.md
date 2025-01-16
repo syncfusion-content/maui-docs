@@ -46,8 +46,6 @@ SfComboBox comboBox = new SfComboBox()
         DisplayMemberPath = "Name",
         TextMemberPath = "Name"
 };
-Content=comboBox;
-}
 
 {% endhighlight %}
 

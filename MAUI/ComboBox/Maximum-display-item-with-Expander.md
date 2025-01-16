@@ -29,6 +29,7 @@ Restrict the number of suggestions displayed and have the remaining items loaded
 
 {% highlight C# %}
 
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox() 
 {
     WidthRequest= 250,
@@ -40,7 +41,6 @@ SfComboBox comboBox = new SfComboBox()
     DisplayMemberPath = "Name",
     ItemsSource = socialMediaViewModel.SocialMedias
 };
-Content = comboBox;
 
 {% endhighlight %}
 {% endtabs %}
@@ -72,6 +72,7 @@ The LoadMore support provides [LoadMoreText](https://help.syncfusion.com/cr/maui
 
 {% highlight C# %}
 
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox() 
 {
     WidthRequest= 250,
@@ -84,7 +85,6 @@ SfComboBox comboBox = new SfComboBox()
     DisplayMemberPath = "Name",
     ItemsSource = socialMediaViewModel.SocialMedias
 };
-Content = comboBox;
 
 {% endhighlight %}
 {% endtabs %}
@@ -122,7 +122,7 @@ SfComboBox allows customizing User Interface(UI) of Load More view. To customize
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+    SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
     SfComboBox comboBox = new SfComboBox
     {
         WidthRequest = 300,
@@ -155,7 +155,6 @@ SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
         return grid;
     });
 
-    Content = comboBox;
 {% endhighlight %}
 {% endtabs %}
 
@@ -198,7 +197,6 @@ SfComboBox comboBox = new SfComboBox
     TextMemberPath = "Name"
 };
 comboBox.LoadMoreButtonTapped += ComboBox_LoadMoreButtonTapped;
-Content = comboBox;
 
 private void ComboBox_LoadMoreButtonTapped(object? sender, EventArgs e)
 {
