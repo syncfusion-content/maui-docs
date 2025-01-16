@@ -33,6 +33,7 @@ We can customize the desire text to be displayed for indicating no results found
 
 {% highlight c# %}
 
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox() 
 {
     WidthRequest= 240,

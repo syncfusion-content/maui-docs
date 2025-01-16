@@ -64,7 +64,7 @@ You can provide content for header at the top of the ComboBox's dropdown. The [D
         HorizontalOptions = LayoutOptions.Center,
         Text = "Header View",
         VerticalOptions = LayoutOptions.Center,
-        TextColor = Color.FromHex("#006bcd")
+        TextColor = Colors.FromHex("#006bcd")
     };
 
     customHeaderView.Children.Add(label2);
@@ -126,8 +126,8 @@ The following code example shows how to set footer content in [SfComboBox](https
     Label label = new Label() 
     { 
         Text = "Footer View", 
-        BackgroundColor = Color.FromHex("#f0f0f0"), 
-        TextColor = Color.FromHex("#006bcd"), 
+        BackgroundColor = Colors.FromHex("#f0f0f0"), 
+        TextColor = Colors.FromHex("#006bcd"), 
         VerticalOptions = LayoutOptions.Center, 
         VerticalTextAlignment = TextAlignment.Center, 
         HorizontalTextAlignment = TextAlignment.Center, 
