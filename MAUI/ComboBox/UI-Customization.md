@@ -1724,7 +1724,7 @@ The following image illustrates the result of the above code:
 var viewModel = new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox
 {
-    ItemsSource = socialMediaViewModel.SocialMedia,
+    ItemsSource = viewModel.SocialMedia,
     DisplayMemberPath = "Name",
     TextMemberPath = "Name",
     ReturnCommand = alertCommand,
