@@ -29,7 +29,6 @@ maskedEntry.WidthRequest = 200;
 maskedEntry.Mask = "\w+";
 maskedEntry.MaskType = MaskedEntryMaskType.RegEx;
 maskedEntry.PasswordChar = '*';
-Content=maskedEntry;
 
 {% endhighlight %}
 {% endtabs %}

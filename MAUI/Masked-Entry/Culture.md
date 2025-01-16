@@ -69,7 +69,6 @@ maskedEntry.WidthRequest = 200;
 maskedEntry.MaskType = MaskedEntryMaskType.Simple;
 maskedEntry.Mask = "$ 0,000.00";
 maskedEntry.Culture = new CultureInfo("fr-FR"); 
-Content=maskedEntry;
 
 {% endhighlight %}
 {% endtabs %}
