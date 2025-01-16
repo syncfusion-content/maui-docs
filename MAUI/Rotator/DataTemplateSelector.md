@@ -140,4 +140,4 @@ The following screenshot illustrates the output of above code.
 
 ![DataTemplateSelector](images/DataTemplateSelector.png)
 
-Find the complete DataTemplateSelector sample from this [link.](https://github.com/SyncfusionExamples/maui-rotator-samples/tree/master/RotatorTemplateSelectorSample)
+Find the complete DataTemplateSelector sample from this [link.](https://github.com/SyncfusionExamples/data-template-selector-rotator/tree/main/DataTemplateSelectorSample)
