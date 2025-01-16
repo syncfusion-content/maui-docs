@@ -29,14 +29,16 @@ We can customize the desire text to be displayed for indicating no results found
 
 {% highlight c# %}
 
-SfAutocomplete autocomplete = new SfAutocomplete();
-autocomplete.NoResultsFoundText = "Not Found";
-autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
-autocomplete.TextMemberPath = "Name";
-autocomplete.DisplayMemberPath = "Name";
-autocomplete.WidthRequest = 240;
-autocomplete.HeightRequest = 50;
-Content = autocomplete;
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel(); 
+SfAutocomplete autocomplete = new SfAutocomplete()
+{
+    NoResultsFoundText = "Not Found",
+    WidthRequest = 250,
+    HeightRequest = 50,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+    ItemsSource = socialMediaViewModel.SocialMedias
+};
 
 {% endhighlight %}
 
@@ -80,7 +82,6 @@ var noResultsTemplate = new DataTemplate(() =>
         });
 
 autocomplete.NoResultsFoundTemplate = noResultsTemplate;
-Content = autocomplete;
 
 {% endhighlight %}
 
