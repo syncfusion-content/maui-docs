@@ -84,9 +84,7 @@ Import the [SfSignaturePad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 <ContentPage
     . . .
     xmlns:signaturePad="clr-namespace:Syncfusion.Maui.SignaturePad;assembly=Syncfusion.Maui.SignaturePad">
-    <Grid>
         <signaturePad:SfSignaturePad />
-    </Grid>
 </ContentPage>
 
 {% endhighlight %}
@@ -103,10 +101,8 @@ namespace SignaturePadGettingStarted
         {
             InitializeComponent();
             // Creating a SignaturePad control.
-            Grid grid = new Grid();
             SfSignaturePad signaturePad = new SfSignaturePad();
-            grid.Children.Add(signaturePad);
-            this.Content = grid;
+            this.Content = signaturePad;
         }
     }
 }
@@ -133,7 +129,6 @@ Customize the stroke color of the SignaturePad control by using the [StrokeColor
 
 SfSignaturePad signaturePad = new SfSignaturePad();
 signaturePad.StrokeColor = Colors.Red;
-Content = signaturePad;
 
 {% endhighlight %}
 
@@ -161,7 +156,7 @@ SfSignaturePad signaturePad = new SfSignaturePad()
     MinimumStrokeThickness = 1,
     MaximumStrokeThickness = 6,
 };
-Content = signaturePad;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -191,7 +186,6 @@ public MainPage()
     InitializeComponent();
     saveButton.Text="Save";
     saveButton.Clicked += OnSaveButtonClicked;
-    Content = new StackLayout { Children = {signaturePad, saveButton} };
 }
 
 private void OnSaveButtonClicked(object? sender, EventArgs e)
@@ -226,7 +220,6 @@ public MainPage()
     InitializeComponent();
     clearButton.Text = "Clear";
     clearButton.Clicked += OnClearButtonClicked;
-    Content = new StackLayout { Children = { signaturePad, clearButton } };
 }
 
 private void OnClearButtonClicked(object? sender, EventArgs e)
@@ -254,11 +247,8 @@ This event will be triggered when we start drawing in the SignaturePad. With thi
 
 {% highlight C# %}
 
-SfSignaturePad signaturePad = new SfSignaturePad()
-{ 
-    DrawStarted += OnDrawStarted
-};
-Content = signaturePad;
+SfSignaturePad signaturePad = new SfSignaturePad();
+signaturePad.DrawStarted += OnDrawStarted;
 
 private void OnDrawStarted(object? sender, CancelEventArgs e)
 {
@@ -283,11 +273,8 @@ This event will be triggered when we complete the drawing in the SignaturePad.
 
 {% highlight C# %}
 
-SfSignaturePad signaturePad = new SfSignaturePad()
-{
-    DrawCompleted += OnDrawCompleted
-};
-Content = signaturePad;
+SfSignaturePad signaturePad = new SfSignaturePad();
+signaturePad.DrawCompleted += OnDrawCompleted;
 
 private void OnDrawCompleted(object? sender, EventArgs e)
 {
@@ -320,7 +307,6 @@ SfSignaturePad signaturePad = new SfSignaturePad()
     MaximumStrokeThickness = 6, 
     DrawCompleted += OnDrawCompleted
 };
-Content = signaturePad;
 
 private void OnDrawCompleted(object? sender, EventArgs e)
 {
