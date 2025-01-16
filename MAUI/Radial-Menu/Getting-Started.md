@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with MAUI Radial Menu Control | Syncfusion
-description: Learn here about getting started with Syncfusion MAUI Radial Menu (SfRadialMenu) control, its elements and more.
+title: Getting Started with MAUI Radial Menu Control | Syncfusion®
+description: Learn here about getting started with Syncfusion® MAUI Radial Menu (SfRadialMenu) control, its elements and more.
 platform: MAUI
 control: RadialMenu (SfRadialMenu)
 documentation: ug
@@ -41,7 +41,7 @@ Before proceeding, ensure the following are set up:
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Step 2: Install the Syncfusion MAUI RadialMenu NuGet Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI RadialMenu NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 1. Search for [Syncfusion.Maui.RadialMenu](https://www.nuget.org/packages/Syncfusion.Maui.RadialMenu/) and install the latest version.
@@ -49,7 +49,7 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register the handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% tabs %}
 {% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 8" %}
