@@ -181,12 +181,8 @@ Save the signature drawn in the SignaturePad as an [ImageSource](https://learn.m
 
 SfSignaturePad signaturePad = new SfSignaturePad();
 Button saveButton = new Button();
-public MainPage()
-{
-    InitializeComponent();
-    saveButton.Text="Save";
-    saveButton.Clicked += OnSaveButtonClicked;
-}
+saveButton.Text="Save";
+saveButton.Clicked += OnSaveButtonClicked;
 
 private void OnSaveButtonClicked(object? sender, EventArgs e)
 {
@@ -215,12 +211,8 @@ Clear the signature drawn in the SignaturePad using the [Clear()](https://help.s
 
 SfSignaturePad signaturePad = new SfSignaturePad();
 Button clearButton = new Button();
-public MainPage()
-{
-    InitializeComponent();
-    clearButton.Text = "Clear";
-    clearButton.Clicked += OnClearButtonClicked;
-}
+clearButton.Text = "Clear";
+clearButton.Clicked += OnClearButtonClicked;
 
 private void OnClearButtonClicked(object? sender, EventArgs e)
 {
