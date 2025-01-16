@@ -12,6 +12,10 @@ keywords: .net maui chart tooltip, maui chart tooltip, .net maui chart tooltip c
 
 Tooltip is used to display any information or metadata of the tapped segment. The Cartesian chart provides tooltip support for all series. 
 
+To learn how to customize the tooltips in .NET MAUI Cartesian Charts quickly, you can check the below video.
+
+{% youtube "https://youtu.be/tDwQ7h9jwWk" %}
+
 ## Define Tooltip
 
 To define the tooltip in the series, set the [EnableTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_EnableTooltip) property to true. The default value of [EnableTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartSeries.html#Syncfusion_Maui_Charts_ChartSeries_EnableTooltip) property is `false`.

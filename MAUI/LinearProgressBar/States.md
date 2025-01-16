@@ -1,7 +1,7 @@
 ---
 layout: post
-title: States in .NET MAUI Linear ProgressBar control | Syncfusion
-description: Learn here all about States support in Syncfusion .NET MAUI Linear ProgressBar (SfLinearProgressBar) control and more.
+title: States in .NET MAUI Linear ProgressBar control | Syncfusion<sup>&reg;</sup>
+description: Learn here all about States support in Syncfusion<sup>&reg;</sup> .NET MAUI Linear ProgressBar (SfLinearProgressBar) control and more.
 platform: MAUI
 control: SfLinearProgressBar
 documentation: ug
