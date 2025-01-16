@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Barcode Generator control | Syncfusion
-description: Learn here all about getting started with Syncfusion .NET MAUI Barcode Generator(SfBarcodeGenerator) control and more.
+title: Getting Started with .NET MAUI Barcode Generator control | Syncfusion<sup>&reg;</sup>
+description: Learn here all about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Barcode Generator(SfBarcodeGenerator) control and more.
 platform: maui
 control: SfBarcodeGenerator
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Barcode Generator
 
-This section explains the steps required to add the [`.NET MAUI Barcode Generator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.html) control. This section explains the steps required to add the barcode and set its symbology. This section covers only basic features needed to get started with Syncfusion barcode generator control. Follow the steps below to add a .NET MAUI Barcode generator to your project.
+This section explains the steps required to add the [`.NET MAUI Barcode Generator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.html) control. This section explains the steps required to add the barcode and set its symbology. This section covers only basic features needed to get started with Syncfusion<sup>&reg;</sup> barcode generator control. Follow the steps below to add a .NET MAUI Barcode generator to your project.
 
 To get start quickly with our .NET MAUI Barcode Generator, you can check the below video.
 
@@ -37,7 +37,7 @@ Before proceeding, ensure the following are set up:
 3. Select the project location, type the project name and press **Enter**.
 4. Then choose **Create project.**
 
-## Step 2: Install the Syncfusion .NET MAUI Barcode NuGet Package
+## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI Barcode NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Barcode](https://www.nuget.org/packages/Syncfusion.Maui.Barcode/) and install the latest version.
