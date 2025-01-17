@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Overview of Syncfusion<sup>®</sup> .NET MAUI Extension | Syncfusion<sup>®</sup>
-description: Learn here all about introduction on Syncfusion<sup>®</sup> .NET MAUI extension for Visual Studio which made integration ease.
+title: Overview of Syncfusion® .NET MAUI Extension | Syncfusion®
+description: Learn here all about introduction on Syncfusion® .NET MAUI extension for Visual Studio which made integration ease.
 platform: MAUI
 component: Syncfusion<sup>®</sup> Extensions
 documentation: ug

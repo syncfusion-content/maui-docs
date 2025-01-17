@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events in .NET MAUI Switch Control | Syncfusion<sup>®</sup>
-description: Learn about Event support in the Syncfusion<sup>®</sup> .NET MAUI Switch control, including its elements, and more.
+title: Events in .NET MAUI Switch Control | Syncfusion®
+description: Learn about Event support in the Syncfusion® .NET MAUI Switch control, including its elements, and more.
 platform: maui
 control: SfSwitch
 documentation: ug

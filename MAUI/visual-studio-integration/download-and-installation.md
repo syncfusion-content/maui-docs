@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Download and Installation of .NET MAUI Extension | Syncfusion<sup>®</sup>
-description: Check out the documentation for download and installation of Syncfusion<sup>®</sup> .NET MAUI Extension for Visual Studio.
+title: Download and Installation of .NET MAUI Extension | Syncfusion®
+description: Check out the documentation for download and installation of Syncfusion® .NET MAUI Extension for Visual Studio.
 platform: MAUI
 component: Syncfusion<sup>®</sup> Extensions
 documentation: ug

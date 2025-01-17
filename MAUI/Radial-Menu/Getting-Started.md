@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with MAUI Radial Menu Control | Syncfusion<sup>®</sup>
-description: Learn here about getting started with Syncfusion<sup>®</sup> MAUI Radial Menu (SfRadialMenu) control, its elements and more.
+title: Getting Started with MAUI Radial Menu Control | Syncfusion®
+description: Learn here about getting started with Syncfusion® MAUI Radial Menu (SfRadialMenu) control, its elements and more.
 platform: MAUI
 control: RadialMenu (SfRadialMenu)
 documentation: ug

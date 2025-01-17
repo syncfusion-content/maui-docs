@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Right To Left in .NET MAUI Switch Control | Syncfusion<sup>®</sup>
-description: Learn here all about Right To Left support in Syncfusion<sup>®</sup> .NET MAUI Switch (SfSwitch) control, and more.
+title: Right To Left in .NET MAUI Switch Control | Syncfusion®
+description: Learn here all about Right To Left support in Syncfusion®.NET MAUI Switch (SfSwitch) control, and more.
 platform: maui
 control: SfSwitch
 documentation: ug

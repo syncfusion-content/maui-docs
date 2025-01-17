@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customization in Syncfusion<sup>®</sup> Avatar View .NET MAUI
+title: Customization in Syncfusion® Avatar View .NET MAUI
 description: This section will explain about how to achieve the customization of default View in .NET MAUI SfAvatarView.
 platform: maui
 control: AvatarView

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Syncfusion<sup>®</sup> Badge View control for .NET MAUI
-description: Learn here all about getting started with Syncfusion<sup>®</sup> .NET MAUI Badge View (SfBadgeView) control its elements and more.
+title: Getting Started with Syncfusion® Badge View control for .NET MAUI
+description: Learn here all about getting started with Syncfusion® .NET MAUI Badge View (SfBadgeView) control its elements and more.
 platform: maui
 control: Badge View
 documentation: ug

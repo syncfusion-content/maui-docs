@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Applying themes for Syncfusion<sup>®</sup> controls
-description: This section explains about theming in Syncfusion<sup>®</sup> controls and how to override the key values for further customization
+title: Applying themes for Syncfusion® controls
+description: This section explains about theming in Syncfusion® controls and how to override the key values for further customization
 platform: maui
 control: General
 documentation: ug

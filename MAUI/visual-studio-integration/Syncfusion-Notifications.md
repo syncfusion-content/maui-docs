@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Notifications | .NET MAUI | Syncfusion<sup>®</sup>
-description: For displaying the notifications about trial and newer version update information for Syncfusion<sup>®</sup> applications.
+title: Notifications | .NET MAUI | Syncfusion®
+description: For displaying the notifications about trial and newer version update information for Syncfusion® applications.
 platform: MAUI
 control: Syncfusion<sup>®</sup> Extensions
 documentation: ug

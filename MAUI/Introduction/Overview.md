@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Overview of Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> .NET MAUI products
-description: Basic overview about the list of available features on Syncfusion<sup>®</sup> .NET MAUI components and steps to use the guide.
+title: Overview of Syncfusion® Essential Studio® .NET MAUI products
+description: Basic overview about the list of available features on Syncfusion® .NET MAUI components and steps to use the guide.
 platform: maui
 control: Overview
 documentation: ug
