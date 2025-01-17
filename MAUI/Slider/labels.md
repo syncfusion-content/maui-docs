@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Labels in .NET MAUI Slider control | Syncfusion<sup>®</sup>
+title: Labels in .NET MAUI Slider control | Syncfusion®
 description: Learn here all about the Labels and its customization feature of .NET MAUI Slider (SfSlider) control and more.
 platform: maui
 control: SfSlider

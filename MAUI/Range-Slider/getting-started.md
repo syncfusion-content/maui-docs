@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Range Slider control | Syncfusion<sup>®</sup>
-description: This section explains about the getting started with Syncfusion<sup>®</sup> MAUI Range Slider (SfRangeSlider) control.
+title: Getting started with .NET MAUI Range Slider control | Syncfusion®
+description: This section explains about the getting started with Syncfusion® MAUI Range Slider (SfRangeSlider) control.
 platform: maui
 control: SfRangeSlider
 documentation: ug

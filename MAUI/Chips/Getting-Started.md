@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Chips control | Syncfusion<sup>®</sup>
-description: Learn here about getting started with Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> .NET MAUI Chips control, its elements and more.
+title: Getting Started with .NET MAUI Chips control | Syncfusion®
+description: Learn here about getting started with Syncfusion® Essential Studio® .NET MAUI Chips control, its elements and more.
 platform: maui
 control: Chips
 documentation: ug

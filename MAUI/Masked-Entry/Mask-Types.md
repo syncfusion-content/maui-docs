@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mask types in .NET MAUI MaskedEntry control | Syncfusion<sup>®</sup>
+title: Mask types in .NET MAUI MaskedEntry control | Syncfusion®
 description:  Learn more about various mask types available in the MaskedEntry (SfMaskedEntry) control, including Simple and RegEx, and how to use them effectively.
 platform: maui
 control: SfMaskedEntry

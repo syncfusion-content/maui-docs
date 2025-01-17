@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Sliding Direction in .NET MAUI Rotator control | Syncfusion<sup>®</sup>
-description: Learn here all about Sliding Direction support in Syncfusion<sup>®</sup> .NET MAUI Rotator (SfRotator) control and more.
+title: Sliding Direction in .NET MAUI Rotator control | Syncfusion®
+description: Learn here all about Sliding Direction support in Syncfusion® .NET MAUI Rotator (SfRotator) control and more.
 platform: maui 
 control: Rotator
 documentation: ug

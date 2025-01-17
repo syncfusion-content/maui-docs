@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Validation in .NET MAUI MaskedEntry control | Syncfusion<sup>®</sup>
-description: Learn here all about Validation support in Syncfusion<sup>®</sup> .NET MAUI Masked Entry (SfMaskedEntry) control and more.
+title: Validation in .NET MAUI MaskedEntry control | Syncfusion®
+description: Learn here all about Validation support in Syncfusion® .NET MAUI Masked Entry (SfMaskedEntry) control and more.
 platform: maui
 control: SfMaskedEntry
 documentation: ug 

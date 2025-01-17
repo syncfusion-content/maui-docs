@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Culture in .NET MAUI MaskedEntry control | Syncfusion<sup>®</sup>
+title: Culture in .NET MAUI MaskedEntry control | Syncfusion®
 description: Learn how to set the different culture support for currency symbols, date, time, decimal, and group separators in the MaskedEntry control.
 platform: maui
 control: SfMaskedEntry

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About .NET MAUI Carousel View control | Syncfusion<sup>®</sup>
-description: Learn here all about introduction of Syncfusion<sup>®</sup> .NET MAUI Carousel View (SfCarousel) control, its elements and more.
+title: About .NET MAUI Carousel View control | Syncfusion®
+description: Learn here all about introduction of Syncfusion® .NET MAUI Carousel View (SfCarousel) control, its elements and more.
 platform: maui
 control: Carousel
 documentation: ug

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with .NET MAUI SignaturePad control | Syncfusion<sup>®</sup>
+title: Getting started with .NET MAUI SignaturePad control | Syncfusion®
 description: Learn here about getting started with .NET MAUI SignaturePad (SfSignaturePad) control, its elements, and more.
 platform: maui
 control: SfSignaturePad

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migrate from Xamarin to .NET MAUI SfSignaturePad | Syncfusion ®
-description: Learn here all about Migrating from Syncfusion<sup>®</sup> Xamarin SignaturePad to Syncfusion<sup>®</sup> .NET MAUI SignaturePad control and more.
+title: Migrate from Xamarin to .NET MAUI SfSignaturePad | Syncfusion®
+description: Learn here all about Migrating from Syncfusion® Xamarin SignaturePad to Syncfusion® .NET MAUI SignaturePad control and more.
 platform: MAUI
 control: SfSignaturePad
 documentation: ug
