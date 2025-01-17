@@ -24,7 +24,6 @@ To define the legend in the chart, initialize the [SunburstLegend](https://help.
     </sunburst:SfSunburstChart.Legend>
 </sunburst:SfSunburstChart>
 
-
 {% endhighlight %}
 
 {% highlight c# %}
