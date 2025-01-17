@@ -99,7 +99,7 @@ namespace GettingStarted
  2. Initialize [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html).
  
 {% tabs %}
-{% highlight xaml hl_lines="4"%}
+{% highlight xaml hl_lines="4" %}
 <ContentPage   
     . . .
     xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Expander;assembly=Syncfusion.Maui.Expander">
@@ -107,7 +107,7 @@ namespace GettingStarted
 </ContentPage>
 {% endhighlight %}
 
-{% highlight c# hl_lines="8"%}
+{% highlight c# hl_lines="8" %}
 using Syncfusion.Maui.Expander;
 . . .
 public partial class MainPage : ContentPage
@@ -130,7 +130,7 @@ Here, the Grid with Labels is loaded in the Header and Content of the expander.
 N> Loading the `Label` as direct children of the `Header` or `Content` of the Expander will lead to an exception. So, load the Label inside the Grid to overcome the crash.
 
 {% tabs %}
-{% highlight xaml hl_lines="11"%}
+{% highlight xaml hl_lines="11" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -329,7 +329,7 @@ The [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.Sf
 The [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html) allows you to customize the rate of change of parameters over time or animation style by using the [AnimationEasing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_AnimationEasing) property. By default, the animation easing is `Linear`.
 
 {% tabs %}
-{% highlight xaml hl_lines="2"%}
+{% highlight xaml hl_lines="2" %}
     <syncfusion:SfExpander x:Name="expander"
                            AnimationEasing="SinOut"/>       
 {% endhighlight %}
@@ -343,7 +343,7 @@ The [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.Sf
 The [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html) allows you to programmatically expand and collapse by using the [IsExpanded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_IsExpanded) property of the SfExpander. The user can control the expand and collapse interactions by handling the `Expanding` and `Collapsing` events.
 
 {% tabs %}
-{% highlight xaml hl_lines="2"%}
+{% highlight xaml hl_lines="2" %}
     <syncfusion:SfExpander x:Name="expander" 
                            IsExpanded="True"/>        
 {% endhighlight %}
