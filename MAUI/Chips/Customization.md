@@ -23,7 +23,6 @@ The [`ShowCloseButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core
     <StackLayout Margin="8,8,8,8" >
         <chip:SfChip     Text="James" 
                         WidthRequest="100"
-                        Background="Blue"
                         HeightRequest="34"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"
@@ -44,7 +43,6 @@ using Syncfusion.Maui.Core;
     SfChip chip = new SfChip();
     chip.Text = "James";
     chip.WidthRequest = 100;
-    chip.Background= Colors.Blue;
     chip.WidthRequest = 34;
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
@@ -70,12 +68,11 @@ The [`ShowSelectionIndicator`](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
   
    <ContentPage.Content>
         <StackLayout Margin="8,8,8,8" >
-           <chip:SfChip     WidthRequest="100"
+           <chip:SfChip     Text="James"
+                            WidthRequest="100"
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
-                            Background="Blue"
-                            ShowSelectionIndicator="true"
-                            >
+                            ShowSelectionIndicator="true">
            </chip:SfChip>  
         </StackLayout>
     </ContentPage.Content>
@@ -88,10 +85,10 @@ using Syncfusion.Maui.Core;
 
    StackLayout stackLayout = new StackLayout();
    SfChip chip = new SfChip();
+   chip.Text = "James";
    chip.WidthRequest = 100;
    chip.HorizontalOptions = LayoutOptions.Center;
    chip.VerticalOptions = LayoutOptions.Center;
-   chip.Background= Colors.Blue;
    chip.ShowSelectionIndicator = true;
    stackLayout.Children.Add(chip);
    this.Content = stackLayout;         
@@ -114,13 +111,12 @@ The [`CloseButtonColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cor
 
 <ContentPage.Content>
     <StackLayout Margin="8,8,8,8" >
-        <chip:SfChip     WidthRequest="100"
+        <chip:SfChip    Text="James" 
+                        WidthRequest="100"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"
-                        Background="Blue"
                         ShowCloseButton="true"
-                        CloseButtonColor="Red"
-                        >
+                        CloseButtonColor="Red">
         </chip:SfChip>  
     </StackLayout>
 </ContentPage.Content>
@@ -133,10 +129,10 @@ using Syncfusion.Maui.Core;
 
     StackLayout stackLayout = new StackLayout();
     SfChip chip = new SfChip();
+    chip.Text = "James";
     chip.WidthRequest = 100;
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
-    chip.Background= Colors.Blue;
     chip.ShowCloseButton = true;
     chip.CloseButtonColor = Colors.Red;
     stackLayout.Children.Add(chip);
@@ -160,13 +156,12 @@ The [`SelectionIndicatorColor`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 <ContentPage.Content>
     <StackLayout Margin="8,8,8,8" >
-        <chip:SfChip     WidthRequest="100"
+        <chip:SfChip    Text="James" 
+                        WidthRequest="100"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"
                         ShowSelectionIndicator="true"
-                        Background="Blue"
-                        SelectionIndicatorColor = "Yellow"
-                        >
+                        SelectionIndicatorColor = "Yellow">
         </chip:SfChip>  
     </StackLayout>
 </ContentPage.Content>
@@ -179,11 +174,11 @@ using Syncfusion.Maui.Core;
 
     StackLayout stackLayout = new StackLayout();
     SfChip chip = new SfChip();
+    chip.Text = "James";
     chip.WidthRequest = 100;
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
     chip.ShowSelectionIndicator = true;
-    chip.Background= Colors.Blue;
     chip.SelectionIndicatorColor = Colors.Yellow;
     stackLayout.Children.Add(chip);
     this.Content = stackLayout;
@@ -206,11 +201,10 @@ The [`Background`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Butt
 
 <ContentPage.Content>
     <StackLayout Margin="8,8,8,8" >
-        <chip:SfChip     WidthRequest="100"
+        <chip:SfChip    Text="James" WidthRequest="100" 
                         HorizontalOptions="Center"
                         VerticalOptions="Center"
-                        Background="LightCoral"
-                        >
+                        Background="LightCoral" >
         </chip:SfChip>  
     </StackLayout>
 </ContentPage.Content>
@@ -223,6 +217,7 @@ using Syncfusion.Maui.Core;
 
     StackLayout stackLayout = new StackLayout();
     SfChip chip = new SfChip();
+    chip.Text = "James";
     chip.WidthRequest = 100;
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
@@ -246,12 +241,10 @@ The [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBa
 
 <ContentPage.Content>
     <StackLayout Margin="8,8,8,8" >
-        <chip:SfChip     WidthRequest="100"
+        <chip:SfChip    ext="James" WidthRequest="100"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"
-                        Background="Blue"
-                        Stroke="Black"
-                        >
+                        Stroke="Black" >
         </chip:SfChip>  
     </StackLayout>
 </ContentPage.Content>
@@ -267,7 +260,6 @@ using Syncfusion.Maui.Core;
     chip.WidthRequest = 100;
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
-    chip.Background= Colors.Blue;
     chip.Stroke = Colors.Black;
     stackLayout.Children.Add(chip);
     this.Content = stackLayout;
@@ -288,13 +280,11 @@ The [`StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core
 
 <ContentPage.Content>
     <StackLayout Margin="8,8,8,8" >
-        <chip:SfChip     WidthRequest="100"
+        <chip:SfChip    ext="James" WidthRequest="100"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"
-                        Background="Blue"
                         StrokeThickness="7"
-                        Stroke = "Black" 
-                        >
+                        Stroke = "Black" >
         </chip:SfChip>  
     </StackLayout>
 </ContentPage.Content>
@@ -310,7 +300,6 @@ using Syncfusion.Maui.Core;
     chip.WidthRequest = 100;
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
-    chip.Background= Colors.Blue;
     chip.StrokeThickness = 7;
     chip.Stroke = Colors.Black;
     stackLayout.Children.Add(chip);
@@ -332,13 +321,11 @@ The [`CornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Bu
 
 <ContentPage.Content>
     <StackLayout Margin="8,8,8,8" >
-        <chip:SfChip     WidthRequest="100"
-                        Background="Blue"
+        <chip:SfChip    ext="James" WidthRequest="100"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"
                         CornerRadius = "25"
-                        Stroke="Black"
-                        >
+                        Stroke="Black" >
         </chip:SfChip>  
     </StackLayout>
 </ContentPage.Content>
@@ -352,7 +339,6 @@ using Syncfusion.Maui.Core;
     StackLayout stackLayout = new StackLayout();
     SfChip chip = new SfChip();
     chip.WidthRequest = 100;
-    chip.Background= Colors.Blue;
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
     chip.CornerRadius = 25;
@@ -378,8 +364,7 @@ The [`FontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.
 
 <ContentPage.Content>
     <StackLayout Margin="8,8,8,8" >
-        <chip:SfChip     WidthRequest="100"
-                        Background="Blue"
+        <chip:SfChip    ext="James" WidthRequest="100"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"
                         FontAttributes="Italic" >
@@ -396,7 +381,6 @@ using Syncfusion.Maui.Core;
     StackLayout stackLayout = new StackLayout();
     SfChip chip = new SfChip();
     chip.WidthRequest = 100;
-    chip.Background= Colors.Blue;
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
     chip.FontAttributes = FontAttributes.Italic;
@@ -419,12 +403,10 @@ The [`FontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Butt
 
 <ContentPage.Content>
     <StackLayout Margin="8,8,8,8" >
-        <chip:SfChip     WidthRequest="100"
-                        Background="Blue"
+        <chip:SfChip    ext="James" WidthRequest="100"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"
-                        FontFamily="times new roman"
-                        >
+                        FontFamily="times new roman" >
         </chip:SfChip>  
     </StackLayout>
 </ContentPage.Content>
@@ -438,7 +420,6 @@ using Syncfusion.Maui.Core;
     StackLayout stackLayout = new StackLayout();
     SfChip chip = new SfChip();
     chip.WidthRequest = 100;
-    chip.Background= Colors.Blue;
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
     chip.FontFamily = "times new roman";
@@ -463,11 +444,9 @@ The [`FontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Button
     <StackLayout Margin="8,8,8,8" >
     <chip:SfChip        Text="James"
                         WidthRequest="100"
-                        Background="Blue"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"
-                        FontSize = "15"
-                        >
+                        FontSize = "15" >
         </chip:SfChip>  
     </StackLayout>
 </ContentPage.Content>
@@ -482,7 +461,6 @@ using Syncfusion.Maui.Core;
     SfChip chip = new SfChip();
     chip.Text = "James";
     chip.WidthRequest = 100;
-    chip.Background= Colors.Blue;
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
     chip.FontSize = 15;
@@ -511,9 +489,7 @@ The [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Butto
                         WidthRequest="100"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"
-                        Background="Blue"
-                        TextColor="Red"
-                        >
+                        TextColor="Red" >
         </chip:SfChip>  
     </StackLayout>
 </ContentPage.Content>
@@ -530,7 +506,6 @@ using Syncfusion.Maui.Core;
     chip.WidthRequest = 100;
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
-    chip.Background= Colors.Blue;
     chip.TextColor = Colors.Red;
     stackLayout.Children.Add(chip);
     this.Content = stackLayout;
@@ -555,7 +530,6 @@ The [`HorizontalTextAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.M
     <StackLayout Margin="8,8,8,8" >
         <chip:SfChip     Text="James"
                         WidthRequest="120"
-                        Background="Blue"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"
                         HorizontalTextAlignment="Start"
@@ -574,7 +548,6 @@ using Syncfusion.Maui.Core;
     StackLayout stackLayout = new StackLayout();
     SfChip chip = new SfChip();
     chip.WidthRequest = 120;
-    chip.Background= Colors.Blue;
     chip.Text = "James";
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
@@ -601,13 +574,11 @@ You can enable the icon image using the [`ShowIcon`](https://help.syncfusion.com
 
 <ContentPage.Content>
     <StackLayout Margin="8,8,8,8" >
-        <chip:SfChip     WidthRequest="100"
+        <chip:SfChip    Text="James" WidthRequest="100"
                         HorizontalOptions="Center"
-                        Background="Blue"
                         VerticalOptions="Center"
                         ImageSource="ChipUserContact.png"
-                        ShowIcon="true"
-                        >
+                        ShowIcon="true" >
         </chip:SfChip>  
     </StackLayout>
 </ContentPage.Content>
@@ -622,7 +593,6 @@ using Syncfusion.Maui.Core;
     SfChip chip = new SfChip();
     chip.WidthRequest = 100;
     chip.HorizontalOptions = LayoutOptions.Center;
-    chip.Background= Colors.Blue;
     chip.VerticalOptions = LayoutOptions.Center;
     chip.ImageSource = "ChipUserContact.png";
     chip.ShowIcon = true;
@@ -686,12 +656,11 @@ The [`ImageSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.But
 
 <ContentPage.Content>
     <StackLayout Margin="8,8,8,8" >
-        <chip:SfChip     WidthRequest="100"
+        <chip:SfChip    Text="James" WidthRequest="100"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"
                         ImageSource="ChipUserContact.png"
-                        ShowIcon="true"
-                        >
+                        ShowIcon="true" >
         </chip:SfChip>  
     </StackLayout>
 </ContentPage.Content>
@@ -730,13 +699,12 @@ The [`ImageSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChi
 
 <ContentPage.Content>
     <StackLayout Margin="8,8,8,8" >
-        <chip:SfChip     WidthRequest="120"
+        <chip:SfChip    Text="James" WidthRequest="120"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"
                         ImageSource="ChipUserContact.png"
                         ImageSize="30"
-                        ShowIcon="true"
-                        >
+                        ShowIcon="true"  >
         </chip:SfChip>  
     </StackLayout>
 </ContentPage.Content>
@@ -776,15 +744,13 @@ The [`ImageAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.
 
 <ContentPage.Content>
     <StackLayout Margin="8,8,8,8" >
-        <chip:SfChip  
+        <chip:SfChip    Text="James"
                         WidthRequest="100"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"
-                        Background="Blue"
                         ImageSource="ChipUserContact.png"
                         ImageAlignment="End"
-                        ShowIcon="true"
-                        >
+                        ShowIcon="true" >
         </chip:SfChip>  
     </StackLayout>
 </ContentPage.Content>
@@ -800,7 +766,6 @@ using Syncfusion.Maui.Core;
     chip.WidthRequest = 100;
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
-    chip.Background= Colors.Blue;
     chip.ImageSource = "ChipUserContact.png";
     chip.ImageAlignment = Alignment.End;
     chip.ShowIcon = true;
@@ -829,10 +794,9 @@ The [`Command`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonB
 
 <ContentPage.Content>
     <StackLayout Margin="8,8,0,0">
-        <chip:SfChip x:Name="Chip" 
+        <chip:SfChip x:Name="Chip" Text="James"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"
-                        Background="Blue"
                         WidthRequest="120"
                         Background="{Binding Background}"
                         Command="{Binding ButtonCommand}">
@@ -914,8 +878,7 @@ The [`InputView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChi
             Placeholder="Enter Name"
             Margin="10,10,0,0" 
             VerticalOptions="Center" 
-            WidthRequest="110"
-            />
+            WidthRequest="110"/>
     </chip:SfChipGroup.InputView>
 </chip:SfChipGroup>
 </ContentPage.Content>
@@ -959,8 +922,7 @@ The [`ChipBackground`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.
             <chip:SfChipGroup
                 ItemsSource="{Binding Employees}"
                 DisplayMemberPath="Name"
-                ChipBackground="#512dcd"
-                >
+                ChipBackground="#512dcd" >
             </chip:SfChipGroup>
         </StackLayout>  
     </ContentPage.Content>
@@ -1147,7 +1109,6 @@ using Syncfusion.Maui.Core;
     this.BindingContext = new ViewModel();
     chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
     chipGroup.DisplayMemberPath = "Name";
-    chipGroup.ChipTextColor = Colors.Blue;
     this.Content = stack;
         
 {% endhighlight %}

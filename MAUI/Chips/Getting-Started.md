@@ -348,67 +348,24 @@ The following code example uses the [Action](https://help.syncfusion.com/cr/maui
 
 {% highlight c# %}
 
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Windows.Input;
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Chips;
 
-namespace Chips
-{
-	public class ViewModel :INotifyPropertyChanged
-	{
-		private ICommand actionCommand;
-
-		private ObservableCollection<Person> employees;
-
-		private string result;
-
-		public ICommand ActionCommand
-    	{
-			get { return actionCommand; }
-			set { actionCommand = value; }
-    	}
-    
-    	public ObservableCollection<Person> Employees
-    	{
-        	get { return employees; }
-        	set { Employees = value; OnPropertyChanged("Employees"); }
-    	}
-
-		public string Result
-		{
-			get { return result; }
-			set { result = value; OnPropertyChanged("Result"); }
-		}
-
-		public ViewModel()
-		{
-			ActionCommand = new Command(HandleAction);
-			employees = new ObservableCollection<Person>();
-			employees.Add(new Person() { Name = "John" });
-			employees.Add(new Person() { Name = "James" });
-			employees.Add(new Person() { Name = "Linda" });
-			employees.Add(new Person() { Name = "Rose" });
-			employees.Add(new Person() { Name = "Mark" });
-		}
-
-		public event PropertyChangedEventHandler PropertyChanged;
-
-		public void OnPropertyChanged(string property)
-		{
-			if (PropertyChanged != null)
-			{
-				PropertyChanged(this, new PropertyChangedEventArgs(property));
-			}
-		}
-
-		private void HandleAction(object obj)
-		{
-			Result = (obj as Person).Name.ToString();
-		}
-	}
-}
+Grid grid = new Grid();
+SfChipGroup chipGroup = new SfChipGroup();
+this.BindingContext = new ViewModel();
+Label nameLabel = new Label { Text = "Name:", FontAttributes = FontAttributes.Bold, FontSize = 14 };
+Label resultLabel = new Label { FontAttributes = FontAttributes.Bold, FontSize = 14 };
+chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
+chipGroup.SetBinding(SfChipGroup.CommandProperty, "ActionCommand");
+chipGroup.DisplayMemberPath = "Name";
+chipGroup.ChipType = ChipType.Action;
+resultLabel.SetBinding(Label.TextProperty, "Result");
+StackLayout resultLayout = new StackLayout { Orientation = StackOrientation.Horizontal, Children = { nameLabel, resultLabel } };
+StackLayout mainLayout = new StackLayout { Children = { chipGroup, resultLayout } };
+grid.Children.Add(mainLayout);
+this.Content = grid;
+	
 
 {% endhighlight %}
 
