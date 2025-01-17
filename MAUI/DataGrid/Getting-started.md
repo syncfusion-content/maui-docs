@@ -37,7 +37,7 @@ Before proceeding, ensure the following are in place:
 
 1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and **Enter**.
 2. Choose the **.NET MAUI App** template.
-3. Select the project location. Then, type the project name and Press **Enter**.
+3. Select the project location. Then, type the project name and press **Enter**.
 4. Then choose **Create Project**.
 
 {% endtabcontent %}
@@ -49,7 +49,7 @@ Before proceeding, ensure the following are in place:
 {% tabcontent Visual Studio %}
 
 1. In Solution Explorer, right-click the project and choose **Manage NuGet Packages**.
-2. Search for `Syncfusion.Maui.DataGrid` and install the latest version.
+2. Search for [Syncfusion.Maui.DataGrid](https://www.nuget.org/packages/Syncfusion.Maui.DataGrid/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 {% endtabcontent %}
