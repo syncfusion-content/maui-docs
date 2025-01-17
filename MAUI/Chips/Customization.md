@@ -241,7 +241,7 @@ The [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBa
 
 <ContentPage.Content>
     <StackLayout Margin="8,8,8,8" >
-        <chip:SfChip    ext="James" WidthRequest="100"
+        <chip:SfChip    Text="James" WidthRequest="100"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"
                         Stroke="Black" >
@@ -280,7 +280,7 @@ The [`StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core
 
 <ContentPage.Content>
     <StackLayout Margin="8,8,8,8" >
-        <chip:SfChip    ext="James" WidthRequest="100"
+        <chip:SfChip    Text="James" WidthRequest="100"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"
                         StrokeThickness="7"
@@ -321,7 +321,7 @@ The [`CornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Bu
 
 <ContentPage.Content>
     <StackLayout Margin="8,8,8,8" >
-        <chip:SfChip    ext="James" WidthRequest="100"
+        <chip:SfChip    Text="James" WidthRequest="100"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"
                         CornerRadius = "25"
@@ -364,7 +364,7 @@ The [`FontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.
 
 <ContentPage.Content>
     <StackLayout Margin="8,8,8,8" >
-        <chip:SfChip    ext="James" WidthRequest="100"
+        <chip:SfChip    Text="James" WidthRequest="100"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"
                         FontAttributes="Italic" >
@@ -403,7 +403,7 @@ The [`FontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Butt
 
 <ContentPage.Content>
     <StackLayout Margin="8,8,8,8" >
-        <chip:SfChip    ext="James" WidthRequest="100"
+        <chip:SfChip    Text="James" WidthRequest="100"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"
                         FontFamily="times new roman" >

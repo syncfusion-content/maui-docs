@@ -324,35 +324,36 @@ The following code illustrates how to get filter typed ChipGroup.
 {% highlight c# %}
 
 using Syncfusion.Maui.Core;
-using Microsoft.Maui.Controls;
-using System.Collections.ObjectModel;
 
-SfChipGroup chipGroup = new SfChipGroup();
-this.BindingContext = new ViewModel();
-chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
-chipGroup.DisplayMemberPath = "Name";
-chipGroup.SelectionIndicatorColor = Colors.White;
-chipGroup.ChipType = SfChipsType.Filter;
+    SfChipGroup chipGroup = new SfChipGroup();
+    this.BindingContext = new ViewModel();
+    chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
+    chipGroup.DisplayMemberPath = "Name";
+    chipGroup.SelectionIndicatorColor = Colors.White;
+    chipGroup.ChipType = SfChipsType.Filter;
 
-VisualStateGroup commonStateGroup = new VisualStateGroup { Name = "CommonStates" };
+    VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
+    VisualState normalState = new VisualState() { Name="Normal"};
 
-VisualState normalState = new VisualState { Name = "Normal" };
-normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipTextColorProperty, Value = Colors.Black });
-normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Colors.White });
+    VisualStateGroup commonStateGroup = new VisualStateGroup();
+    if (sfChipGroup.ChipType == SfChipsType.Filter)
+    {
+        normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipTextColorProperty, Value = Colors.Black });
+        normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Colors.White });
+    }
 
-VisualState selectedState = new VisualState { Name = "Selected" };
-selectedState.Setters.Add(new Setter { Property = SfChipGroup.ChipTextColorProperty, Value = Colors.White });
-selectedState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Colors.FromHex("#512dcd") });
+    VisualState selectedState = new VisualState
+    {
+        Name = "Selected"
+    };
+    selectedState.Setters.Add(new Setter { Property = SfChipGroup.ChipTextColorProperty, Value = Colors.Green });
+    selectedState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Colors.Violet });
 
-commonStateGroup.States.Add(normalState);
-commonStateGroup.States.Add(selectedState);
+    commonStateGroup.States.Add(normalState);
+    commonStateGroup.States.Add(selectedState);
+    visualStateGroupList.Add(commonStateGroup);
 
-VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
-visualStateGroupList.Add(commonStateGroup);
-
-VisualStateManager.SetVisualStateGroups(chipGroup, visualStateGroupList);
-
-this.Content = chipGroup;
+    VisualStateManager.SetVisualStateGroups(sfChipGroup, visualStateGroupList);
 
 {% endhighlight %}
 
