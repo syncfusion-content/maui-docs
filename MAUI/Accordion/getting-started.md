@@ -23,24 +23,43 @@ Before proceeding, ensure the following are in place:
 
 ## Step 1: Create a .NET MAUI project
 
-### Visual Studio
+{% tabcontents %}
+{% tabcontent Visual Studio %}
 
  1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
  2. Name the project and choose a location. Then, click **Next**.
  3. Select the .NET framework version. Then, click **Create**.
 
-### Visual Studio Code
+{% endtabcontent %}
+{% tabcontent Visual Studio Code %}
 
  1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and Enter.
  2. Choose the **.NET MAUI App** template.
  3. Select the project location, type the project name and press Enter.
  4. Then choose **Create Project**.
+
+{% endtabcontent %}
+{% endtabcontents %}
  
 ## Step 2: Install the Syncfusion MAUI Expander NuGet Package
  
+{% tabcontents %}
+{% tabcontent Visual Studio %}
+
  1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
  2. Search for [Syncfusion.Maui.Expander](https://www.nuget.org/packages/Syncfusion.Maui.Expander) and install the latest version.
  3. Ensure the necessary dependencies are installed correctly, and the project is restored.
+
+{% endtabcontent %}
+{% tabcontent Visual Studio Code %}
+
+1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
+2. Ensure you're in the project root directory where your .csproj file is located.
+3. Run the command `dotnet add package Syncfusion.Maui.Expander` to install the Syncfusion .NET MAUI Expander NuGet package.
+4. To ensure all dependencies are installed, run `dotnet restore`.
+
+{% endtabcontent %}
+{% endtabcontents %}
 
 ## Step 3: Register the handler
 
@@ -282,7 +301,7 @@ You can expand single or multiple items using the [ExpandMode](https://help.sync
 The `SfAccordion` allows you to customize the vertical spacing between the accordion items by using the [ItemSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_ItemSpacing) property. 
 
 {% tabs %}
-{% highlight xaml hl_lines="2"%}
+{% highlight xaml hl_lines="2" %}
     <syncfusion:SfAccordion x:Name="accordion" 
                             ItemSpacing="6.0d" />
 {% endhighlight %}
