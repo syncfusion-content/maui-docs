@@ -353,6 +353,7 @@ To initialize the [Picker](https://learn.microsoft.com/en-us/dotnet/maui/user-in
 
 <inputLayout:SfTextInputLayout Hint="Fruit" 
                                HelperText="Select a fruit"
+                               ContainerBackground="Transparent"
                                ContainerType="Outlined" >
    <Picker SelectedItem="Apple">
         <Picker.ItemsSource>
@@ -406,7 +407,6 @@ var inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Time"; 
 inputLayout.HelperText = "Select a start time";
 inputLayout.ContainerType = ContainerType.Outlined;
-inputLayout.ContainerBackground = Colors.Transparent;
 inputLayout.Content = new TimePicker(); 
 
 {% endhighlight %}
@@ -436,7 +436,6 @@ var inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Date of Birth"; 
 inputLayout.HelperText = "Select birth date";
 inputLayout.ContainerType = ContainerType.Outlined;
-inputLayout.ContainerBackground = Colors.Transparent;
 inputLayout.Content = new DatePicker(); 
 
 {% endhighlight %}
