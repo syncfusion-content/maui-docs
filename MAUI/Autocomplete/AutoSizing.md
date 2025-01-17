@@ -1,7 +1,7 @@
 ---
 layout: post
-title: AutoSizing in .NET MAUI Autocomplete control | Syncfusion<sup>®</sup>
-description: Learn about autosizing support in Syncfusion<sup>®</sup> .NET MAUI Autocomplete (SfAutocomplete) control and more.
+title: AutoSizing in .NET MAUI Autocomplete control | Syncfusion®
+description: Learn about autosizing support in Syncfusion® .NET MAUI Autocomplete (SfAutocomplete) control and more.
 platform: maui
 control: SfAutocomplete
 documentation: ug

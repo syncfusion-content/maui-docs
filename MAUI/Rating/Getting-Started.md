@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Rating control | Syncfusion<sup>®</sup>
-description: Learn here about getting started with Syncfusion<sup>®</sup> .NET MAUI Rating (SfRating) control, its elements and more.
+title: Getting Started with .NET MAUI Rating control | Syncfusion®
+description: Learn here about getting started with Syncfusion® .NET MAUI Rating (SfRating) control, its elements and more.
 platform: maui
 control: Rating
 documentation: ug

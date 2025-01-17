@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migrating from Xamarin to .NET MAUI Rotator | Syncfusion<sup>®</sup> 
-description: Learn about Migrating from Syncfusion<sup>®</sup> Xamarin Rotator to Syncfusion<sup>®</sup> .NET MAUI Rotator control and more.
+title: Migrating from Xamarin to .NET MAUI Rotator | Syncfusion® 
+description: Learn about Migrating from Syncfusion® Xamarin Rotator to Syncfusion® .NET MAUI Rotator control and more.
 platform: maui
 control: Rotator
 documentation: ug

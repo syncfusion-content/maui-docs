@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Track in .NET MAUI Slider control | Syncfusion<sup>®</sup>
+title: Track in .NET MAUI Slider control | Syncfusion®
 description: Learn here all about adding and customizing the slider track in .NET MAUI Slider (SfSlider) control and more.
 platform: maui
 control: SfSlider

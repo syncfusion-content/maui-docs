@@ -1,7 +1,7 @@
 ---
 layout: post
-title: LoadMore in .NET MAUI ComboBox control | Syncfusion<sup>®</sup>
-description: Learn all about LoadMore support in Syncfusion<sup>®</sup> .NET MAUI ComboBox (SfComboBox) control and more here.
+title: LoadMore in .NET MAUI ComboBox control | Syncfusion®
+description: Learn all about LoadMore support in Syncfusion® .NET MAUI ComboBox (SfComboBox) control and more here.
 platform: maui
 control: SfComboBox
 documentation: ug

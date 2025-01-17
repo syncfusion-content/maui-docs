@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Slider control | Syncfusion<sup>®</sup>
-description: This section explains about the getting started with Syncfusion<sup>®</sup> MAUI Slider (SfSlider) control and more.
+title: Getting started with .NET MAUI Slider control | Syncfusion®
+description: This section explains about the getting started with Syncfusion® MAUI Slider (SfSlider) control and more.
 platform: maui
 control: SfSlider
 documentation: ug

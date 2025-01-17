@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Change Number Format in .NET MAUI NumericEntry | Syncfusion<sup>®</sup>
-description: Learn here about changing the number format of Syncfusion<sup>®</sup> .NET MAUI NumericEntry (SfNumericEntry) control and more.
+title: Change Number Format in .NET MAUI NumericEntry | Syncfusion®
+description: Learn here about changing the number format of Syncfusion® .NET MAUI NumericEntry (SfNumericEntry) control and more.
 platform: MAUI
 control: SfNumericEntry
 documentation: ug

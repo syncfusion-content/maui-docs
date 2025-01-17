@@ -1,6 +1,6 @@
 ---
 layout: post
-title: No Results Found in .NET MAUI  Autocomplete control | Syncfusion<sup>®</sup>
+title: No Results Found in .NET MAUI  Autocomplete control | Syncfusion®
 description: Learn about No Results Found support in .NET MAUI Autocomplete (SfAutocomplete) control and more details.
 platform: maui
 control: SfAutocomplete

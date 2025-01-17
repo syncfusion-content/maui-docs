@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI ComboBox | Syncfusion<sup>®</sup>
-description: Learn here about getting started with Syncfusion<sup>®</sup> .NET MAUI ComboBox (SfComboBox) control, its elements, and its features.
+title: Getting Started with .NET MAUI ComboBox | Syncfusion®
+description: Learn here about getting started with Syncfusion® .NET MAUI ComboBox (SfComboBox) control, its elements, and its features.
 platform: maui
 control: SfComboBox
 documentation: ug

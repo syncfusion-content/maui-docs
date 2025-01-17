@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Dots Customization in .NET MAUI Rotator control | Syncfusion<sup>®</sup>
-description: Learn about Navigation Customization support in Syncfusion<sup>®</sup> .NET MAUI Rotator (SfRotator) control and more.
+title: Dots Customization in .NET MAUI Rotator control | Syncfusion®
+description: Learn about Navigation Customization support in Syncfusion® .NET MAUI Rotator (SfRotator) control and more.
 platform: maui 
 control: Rotator 
 documentation: ug

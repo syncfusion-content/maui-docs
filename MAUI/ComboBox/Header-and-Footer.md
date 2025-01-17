@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Header and Footer in MAUI ComboBox control | Syncfusion<sup>®</sup>
-description: Learn here all about Header and Footer support in Syncfusion<sup>®</sup> Maui ComboBox (SfComboBox) control and more.
+title: Header and Footer in MAUI ComboBox control | Syncfusion®
+description: Learn here all about Header and Footer support in Syncfusion® Maui ComboBox (SfComboBox) control and more.
 platform: maui
 control: SfComboBox
 documentation: ug

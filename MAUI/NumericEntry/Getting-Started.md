@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI NumericEntry | Syncfusion<sup>®</sup>
-description: Learn how to get started with Syncfusion<sup>®</sup> .NET MAUI NumericEntry (SfNumericEntry) control, its elements, and more in here.
+title: Getting Started with .NET MAUI NumericEntry | Syncfusion®
+description: Learn how to get started with Syncfusion® .NET MAUI NumericEntry (SfNumericEntry) control, its elements, and more in here.
 platform: MAUI
 control: SfNumericEntry
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tooltip in .NET MAUI Range Selector control | Syncfusion<sup>®</sup>
-description: Learn here all about adding the Tooltip feature of Syncfusion<sup>®</sup> .NET MAUI Range Selector (SfDateTimeRangeSelector) control and more.
+title: Tooltip in .NET MAUI Range Selector control | Syncfusion®
+description: Learn here all about adding the Tooltip feature of Syncfusion® .NET MAUI Range Selector (SfDateTimeRangeSelector) control and more.
 platform: maui
 control: SfDateTimeRangeSelector
 documentation: ug
