@@ -24,18 +24,23 @@ Before proceeding, ensure the following are in place:
 
 ## Step 1: Create a New MAUI Project
 
-### Visual Studio
+{% tabcontents %}
+{% tabcontent Visual Studio %}
 
 1.  Go to **File > New > Project** and choose the **.NET MAUI App** template.
 2.  Name the project and choose a location, then click **Next**.
 3.  Select the .NET framework version and click **Create**.
 
-### Visual Studio Code
+{% endtabcontent %}
+{% tabcontent Visual Studio Code %}
 
-1.  Open the command palette by pressing `Ctrl+Shift+P`` and type **.NET:New Project** and enter.
+1.  Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
 2.  Choose the **.NET MAUI App** template.
 3.  Select the project location, type the project name and press enter.
 4.  Then choose **Create project**
+
+{% endtabcontent %}
+{% endtabcontents %}
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI PDF Viewer NuGet Package
 
@@ -101,7 +106,7 @@ Open the `MainPage.xaml` file and follow the steps below.
 
 ## Step 5: Load a PDF Document
 
-1.  From the solution explorer of the project, add a new folder to the project named `Assets` and add the PDF document you need to load in the PDF viewer. Here, a PDF document named `PDF_Succinctly.pdf` is used.`
+1.  From the solution explorer of the project, add a new folder to the project named `Assets` and add the PDF document you need to load in the PDF viewer. Here, a PDF document named `PDF_Succinctly.pdf` is used.
 2.  In Visual Studio, right click the added PDF document and set its `Build Action` as `Embedded Resource`. In VS Code, open the `.csproj` file and add the following code snippet to embed the PDF document as a resource.
 
 {% tabs %}
