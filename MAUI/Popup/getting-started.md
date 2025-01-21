@@ -297,7 +297,7 @@ Any view can be added as popup content by using the [ContentTemplate](https://he
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="23"%}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="23" %}
 using Syncfusion.Maui.Popup;
 
 namespace GettingStarted
