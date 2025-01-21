@@ -17,45 +17,46 @@ To get start quickly with our .NET MAUI Circular Chart, you can check the below 
 
 {% youtube "https://www.youtube.com/watch?v=2WDZfXpMZsE&t=3s" %}
 
-## Creating an application using the .NET MAUI chart
+## Step 1: Create a New .NET MAUI Project
 
-1. Create a new .NET MAUI application in Visual Studio.
-2. Syncfusion® .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfCircularChart to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Charts and then install it.
-3. To initialize the control, import the Chart namespace.
-4. Initialize [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html).
+{% tabcontents %}
+{% tabcontent Visual Studio %}
 
-{% tabs %}
+1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
+2. Name the project and choose a location. Click **Next**.
+3. Select the .NET framework version and click **Create**.
 
-{% highlight xaml %}
+{% endtabcontent %}
+{% tabcontent Visual Studio Code %}
 
-<ContentPage   
-    . . .
-    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET: New Project** and press **Enter**.
+2. Choose the **.NET MAUI App** template.
+3. Select the project location, type the project name, and press **Enter**.
+4. Choose **Create project**.
 
-    <chart:SfCircularChart/>
-</ContentPage>
- 
-{% endhighlight %}
+{% endtabcontent %}
+{% endtabcontents %}
 
-{% highlight C# %}
+## Step 2: Install the Syncfusion® .NET MAUI Charts Package
 
-using Syncfusion.Maui.Charts;
-. . .
+{% tabcontents %}
+{% tabcontent Visual Studio %}
+1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
+2. Search for [Syncfusion.Maui.Charts](https://www.nuget.org/packages/Syncfusion.Maui.Charts/) and install the latest version.
+3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-public partial class MainWindow : ContentPage
-{
-    public MainPage()
-    {
-        this.InitializeComponent();
-        SfCircularChart chart = new SfCircularChart();
-        this.Content = chart;
-    }
-}   
-{% endhighlight %}
+{% endtabcontent %}
+{% tabcontent Visual Studio Code %}
 
-{% endtabs %}
+1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
+2. Ensure you're in the project root directory where your .csproj file is located.
+3. Run the command `dotnet add package Syncfusion.Maui.Charts` to install the Syncfusion<sup>®</sup> .NET MAUI Charts NuGet package.
+4. To ensure all dependencies are installed, run `dotnet restore`.
 
-## Register the handler
+{% endtabcontent %}
+{% endtabcontents %}
+
+## Step 3: Register the handler
 
 Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion® controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion® core.
 
@@ -89,6 +90,42 @@ namespace ChartGettingStarted
 }
 
 {% endhighlight %} 
+
+## Step 4: Add .NET MAUI Circular Chart
+
+1. To initialize the control, import the Chart namespace.
+2. Initialize [SfCircularChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCircularChart.html).
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage   
+    . . .
+    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+
+    <chart:SfCircularChart/>
+</ContentPage>
+ 
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.Charts;
+. . .
+
+public partial class MainWindow : ContentPage
+{
+    public MainPage()
+    {
+        this.InitializeComponent();
+        SfCircularChart chart = new SfCircularChart();
+        this.Content = chart;
+    }
+}   
+{% endhighlight %}
+
+{% endtabs %}
 
 ## Initialize view model
 

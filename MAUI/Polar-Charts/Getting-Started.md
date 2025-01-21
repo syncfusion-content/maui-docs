@@ -17,10 +17,82 @@ To get start quickly with our .NET MAUI Polar Chart, you can check the below vid
 
 {% youtube "https://youtu.be/Ga9mytwCo_s" %}
 
-## Creating an application with .NET MAUI chart
+## Step 1: Create a New .NET MAUI Project
 
-1. Create a new .NET MAUI application in Visual Studio.
-2. Syncfusion® .NET MAUI components are available on [nuget.org](https://www.nuget.org/). To add SfPolarChart to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.Charts, and then install it.
+{% tabcontents %}
+{% tabcontent Visual Studio %}
+
+1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
+2. Name the project and choose a location. Click **Next**.
+3. Select the .NET framework version and click **Create**.
+
+{% endtabcontent %}
+{% tabcontent Visual Studio Code %}
+
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET: New Project** and press **Enter**.
+2. Choose the **.NET MAUI App** template.
+3. Select the project location, type the project name, and press **Enter**.
+4. Choose **Create project**.
+
+{% endtabcontent %}
+{% endtabcontents %}
+
+## Step 2: Install the Syncfusion® .NET MAUI Charts Package
+
+{% tabcontents %}
+{% tabcontent Visual Studio %}
+1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
+2. Search for [Syncfusion.Maui.Charts](https://www.nuget.org/packages/Syncfusion.Maui.Charts/) and install the latest version.
+3. Ensure the necessary dependencies are installed correctly, and the project is restored.
+
+{% endtabcontent %}
+{% tabcontent Visual Studio Code %}
+
+1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
+2. Ensure you're in the project root directory where your .csproj file is located.
+3. Run the command `dotnet add package Syncfusion.Maui.Charts` to install the Syncfusion<sup>®</sup> .NET MAUI Charts NuGet package.
+4. To ensure all dependencies are installed, run `dotnet restore`.
+
+{% endtabcontent %}
+{% endtabcontents %}
+
+## Step 3: Register the handler
+
+The Syncfusion.Maui.Core NuGet package is a dependent package for all Syncfusion® controls in .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion® core.
+
+{% highlight C# %}
+
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Syncfusion.Maui.Core.Hosting;
+
+namespace ChartGettingStarted
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
+
+            return builder.Build();
+        }
+    }
+}
+
+{% endhighlight %} 
+
+## Step 4: Add .NET MAUI Polar Chart
+
 3. To initialize the control, import the Chart namespace.
 4. Initialize the [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html).
 
@@ -57,42 +129,6 @@ namespace ChartGettingStarted
 {% endhighlight %}
 
 {% endtabs %}
-
-## Register the handler
-
-The Syncfusion.Maui.Core NuGet package is a dependent package for all Syncfusion® controls in .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion® core.
-
-{% highlight C# %}
-
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace ChartGettingStarted
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
-
-{% endhighlight %} 
 
 ## Initialize view model
 
