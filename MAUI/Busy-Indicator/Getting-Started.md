@@ -16,31 +16,20 @@ To quickly get started with the .NET MAUI Busy Indicator, watch this video.
 
 {% youtube "https://www.youtube.com/watch?v=EY1y5PUBkCw" %}
 
+{% tabcontents %}
+{% tabcontent Visual Studio %}
+
 ## Prerequisites
 Before proceeding, ensure the following are set up:
 
 1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
-2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or Visual Studio Code. For Visual Studio Code users, ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
+2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later).
 
-## Step 1: Create a New MAUI Project
-
-{% tabcontents %}
-{% tabcontent Visual Studio %}
+## Step 1: Create a new .NET MAUI Project
 
 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
 2. Name the project and choose a location. Then, click **Next.**
 3. Select the .NET framework version and click **Create.**
-
-{% endtabcontent %}
-{% tabcontent Visual Studio Code %}
-
-1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
-2. Choose the **.NET MAUI App** template.
-3. Select the project location, type the project name and press **Enter.**
-4. Then choose **Create project.**
-
-{% endtabcontent %}
-{% endtabcontents %}
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Core NuGet Package
 
@@ -124,7 +113,110 @@ namespace BusyIndicatorSample
 
 {% endtabs %}
 
-## Step 5: Setting Animation Type in .NET MAUI Busy Indicator
+{% endtabcontent %}
+{% tabcontent Visual Studio Code %}
+
+## Prerequisites
+Before proceeding, ensure the following are set up:
+
+1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
+2. Set up a .NET MAUI environment with Visual Studio Code.
+3. Ensure that the .NET MAUI extension is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
+
+## Step 1: Create a new .NET MAUI Project
+
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+2. Choose the **.NET MAUI App** template.
+3. Select the project location, type the project name and press **Enter.**
+4. Then choose **Create project.**
+
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Core NuGet Package
+
+1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
+2. Ensure you're in the project root directory where your .csproj file is located.
+3. Run the command `dotnet add package Syncfusion.Maui.Core` to install the Syncfusion<sup>®</sup> .NET MAUI Core package.
+4. To ensure all dependencies are installed, run `dotnet restore`.
+
+## Step 3: Register the handler
+
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
+
+{% highlight c# hl_lines="6 17" %}
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Syncfusion.Maui.Core.Hosting;
+
+namespace BusyIndicatorSample
+{
+    public static class MauiProgram
+    {
+    public static MauiApp CreateMauiApp()
+    {
+        var builder = MauiApp.CreateBuilder();
+        builder
+        .UseMauiApp<App>()
+        .ConfigureSyncfusionCore() 
+        .ConfigureFonts(fonts =>
+        {
+            fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+        });
+
+        return builder.Build();
+        }      
+    }
+}     
+
+{% endhighlight %} 
+
+## Step 4: Add a Basic Busy Indicator
+
+1. To initialize the control, import the Core namespace into your code.
+
+2. Initialize [SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1)
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage 
+            ...
+            xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
+    <ContentPage.Content> 
+	 	<core:SfBusyIndicator x:Name="busyIndicator"
+                          IsRunning = "True" />
+	</ContentPage.Content> 
+</ContentPage>
+	
+{% endhighlight %}
+
+{% highlight c# %}
+
+using Syncfusion.Maui.Core;
+
+namespace BusyIndicatorSample   
+{  
+	public partial class MainPage : ContentPage                  
+	{ 
+		public MainPage()   
+		{   
+			InitializeComponent();       
+			SfBusyIndicator busyIndicator = new SfBusyIndicator(){IsRunning = true};
+            Content = busyIndicator;   
+		}  
+	}  
+}  
+
+{% endhighlight %}
+
+{% endtabs %}
+
+{% endtabcontent %}
+{% endtabcontents %}
+
+## Setting Animation Type in .NET MAUI Busy Indicator
 
 [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) provides some predefined animation types like Cupertino, LinearMaterial, and CircularMaterial. Users can select any one of the animation types using the [AnimationType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_AnimationType) property.
 
