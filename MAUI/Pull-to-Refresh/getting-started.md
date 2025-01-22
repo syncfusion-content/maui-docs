@@ -190,7 +190,7 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 {% endtabcontent %}
-{% endtabcontent %}
+{% endtabcontents %}
 
 ## Step 5: Define the PullableContent
 

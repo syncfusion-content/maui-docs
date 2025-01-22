@@ -196,7 +196,7 @@ public partial class MainPage : ContentPage
 
 {% endhighlight %}
 {% endtabs %}
-{% endtabcontents %}
+{% endtabcontent %}
 {% endtabcontents %}
 
 ## Step 5: Define the View Model
