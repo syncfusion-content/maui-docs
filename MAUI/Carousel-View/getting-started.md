@@ -22,8 +22,6 @@ To quickly get started with the .NET MAUI Carousel, watch this video.
 
 ## Prerequisites
 
-## Prerequisites
-
 Before proceeding, ensure the following are in place:
 
 1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
@@ -112,8 +110,17 @@ this.Content = carousel;
 {% endhighlight %}
 
 {% endtabs %}
+
 {% endtabcontent %}
-{% tabcontent Visual Studio code %}
+{% tabcontent Visual Studio Code %}
+
+## Prerequisites
+
+Before proceeding, ensure the following are set up:
+
+1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
+2. Set up a .NET MAUI environment with Visual Studio Code.
+3. Ensure that the .NET MAUI extension is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
 
 ## Step 1: Create a New MAUI Project
 

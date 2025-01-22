@@ -124,8 +124,6 @@ Content = comboBox;
 
 {% end %}
 
-## Step 5: Populate items using data binding
-
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
 
