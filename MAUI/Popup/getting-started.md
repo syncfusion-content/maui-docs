@@ -22,18 +22,23 @@ Before proceeding, ensure the following are in place:
 
 ## Step 1: Create a .NET MAUI project
 
-### Visual Studio
+{% tabcontents %}
+{% tabcontent Visual Studio %}
 
- 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
- 2. Name the project and choose a location. Then, click **Next**.
- 3. Select the .NET framework version. Then, click **Create**.
+1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
+2. Name the project and choose a location. Then, click **Next.**
+3. Select the .NET framework version and click **Create.**
 
-### Visual Studio Code
+{% endtabcontent %}
+{% tabcontent Visual Studio Code %}
 
- 1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and Enter.
- 2. Choose the **.NET MAUI App** template.
- 3. Select the project location, type the project name and press Enter.
- 4. Then choose **Create Project**.
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+2. Choose the **.NET MAUI App** template.
+3. Select the project location, type the project name and press **Enter.**
+4. Then choose **Create project.**
+
+{% endtabcontent %}
+{% endtabcontents %}
  
 ## Step 2: Install the Syncfusion MAUI Popup NuGet Package
  
@@ -292,7 +297,7 @@ Any view can be added as popup content by using the [ContentTemplate](https://he
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="23"%}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="23" %}
 using Syncfusion.Maui.Popup;
 
 namespace GettingStarted
