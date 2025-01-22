@@ -20,6 +20,8 @@ To quickly get started with the .NET MAUI Autocomplete, watch this video.
 
 ## Prerequisites
 
+Before proceeding, ensure the following are in place:
+
 1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.8 or later).
 
@@ -222,7 +224,6 @@ Content = autocomplete;
 {% endtabs %}
 
 {% endtabcontent %}
-
 {% endtabcontents %}
 
 ## Step 5: Populate items using data binding
