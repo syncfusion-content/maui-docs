@@ -68,7 +68,6 @@ namespace GettingStarted
     }
 }
 {% endhighlight %} 
-{% endtabs %}
  
 ## Step 4: Add a Basic Accordion
  
@@ -154,7 +153,6 @@ namespace GettingStarted
     }
 }
 {% endhighlight %} 
-{% endtabs %}
  
 ## Step 4: Add a Basic Accordion
  
@@ -365,7 +363,7 @@ You can expand single or multiple items using the [ExpandMode](https://help.sync
 The `SfAccordion` allows you to customize the vertical spacing between the accordion items by using the [ItemSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_ItemSpacing) property. 
 
 {% tabs %}
-{% highlight xaml hl_lines= "2"%}
+{% highlight xaml hl_lines="2" %}
     <syncfusion:SfAccordion x:Name="accordion" 
                             ItemSpacing="6.0d" />
 {% endhighlight %}

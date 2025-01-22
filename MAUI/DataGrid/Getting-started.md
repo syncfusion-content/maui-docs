@@ -69,7 +69,6 @@ namespace GettingStarted
     }
 }
 {% endhighlight %} 
-{% endtabs %}
 
 ## Step 4: Add a Basic DataGrid
 
@@ -161,7 +160,6 @@ namespace GettingStarted
     }
 }
 {% endhighlight %} 
-{% endtabs %}
  
 ## Step 4: Add a Basic DataGrid
 

@@ -66,7 +66,6 @@ namespace GettingStarted
     }
 }
 {% endhighlight %} 
-{% endtabs %}
  
 ## Step 4: Add a Basic PullToRefresh
 
@@ -156,7 +155,6 @@ namespace GettingStarted
     }
 }
 {% endhighlight %} 
-{% endtabs %}
 
 ## Step 4: Add a Basic PullToRefresh
 
