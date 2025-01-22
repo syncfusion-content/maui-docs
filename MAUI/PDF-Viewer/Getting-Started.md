@@ -23,7 +23,7 @@ To get started quickly, you can also check out our video tutorial below.
 Before proceeding, ensure the following are in place:
 
 1.	Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
-2.	Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
+2.	Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later).
 
 ## Step 1: Create a New MAUI Project
 
@@ -33,7 +33,7 @@ Before proceeding, ensure the following are in place:
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI PDF Viewer NuGet Package
 
-1.  In **Solution Explorer**, right click the project and choose **Manage NuGet Packages** for Visual Studio and **Add NuGet Package** for Visual Studio Code.
+1.  In **Solution Explorer**, right click the project and choose **Manage NuGet Packages**.
 2.  Search for [Syncfusion.Maui.PdfViewer](https://www.nuget.org/packages/Syncfusion.Maui.PdfViewer) and install the latest version.`
 3.  Ensure the necessary dependencies are installed correctly, and the project is restored.
 
@@ -96,18 +96,7 @@ Open the `MainPage.xaml` file and follow the steps below.
 ## Step 5: Load a PDF Document
 
 1.  From the solution explorer of the project, add a new folder to the project named `Assets` and add the PDF document you need to load in the PDF viewer. Here, a PDF document named `PDF_Succinctly.pdf` is used.
-2.  In Visual Studio, right click the added PDF document and set its `Build Action` as `Embedded Resource`. In VS Code, open the `.csproj` file and add the following code snippet to embed the PDF document as a resource.
-
-{% tabs %}
-{% highlight xml tabtitle="PdfViewerExample.csproj" %}
-
-<ItemGroup>
-	<EmbeddedResource Include="Assets\PDF_Succinctly.pdf" />
-</ItemGroup>
-
-{% endhighlight %} 
-{% endtabs %}
-
+2.  In Visual Studio, right click the added PDF document and set its `Build Action` as `Embedded Resource`. 
 3.  In this example, we will load the PDF document through MVVM binding. Create a new C# file named `PdfViewerViewModel.cs` and add the following code snippet.
 
 {% tabs %}
@@ -215,7 +204,8 @@ N> You can refer to our [.NET MAUI PDF Viewer](https://www.syncfusion.com/maui-c
 Before proceeding, ensure the following are in place:
 
 1.	Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
-2.	Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
+2.	Set up a .NET MAUI environment with Visual Studio Code. 
+3.  Ensure that the .NET MAUI workload is installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
 
 ## Step 1: Create a New MAUI Project
 
@@ -226,7 +216,7 @@ Before proceeding, ensure the following are in place:
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI PDF Viewer NuGet Package
 
-1.  In **Solution Explorer**, right click the project and choose **Manage NuGet Packages** for Visual Studio and **Add NuGet Package** for Visual Studio Code.
+1.  In **Solution Explorer**, right click the project and choose **Add NuGet Package**.
 2.  Search for [Syncfusion.Maui.PdfViewer](https://www.nuget.org/packages/Syncfusion.Maui.PdfViewer) and install the latest version.`
 3.  Ensure the necessary dependencies are installed correctly, and the project is restored.
 
@@ -289,7 +279,7 @@ Open the `MainPage.xaml` file and follow the steps below.
 ## Step 5: Load a PDF Document
 
 1.  From the solution explorer of the project, add a new folder to the project named `Assets` and add the PDF document you need to load in the PDF viewer. Here, a PDF document named `PDF_Succinctly.pdf` is used.
-2.  In Visual Studio, right click the added PDF document and set its `Build Action` as `Embedded Resource`. In VS Code, open the `.csproj` file and add the following code snippet to embed the PDF document as a resource.
+2.  Open the `.csproj` file and add the following code snippet to embed the PDF document as a resource.
 
 {% tabs %}
 {% highlight xml tabtitle="PdfViewerExample.csproj" %}
