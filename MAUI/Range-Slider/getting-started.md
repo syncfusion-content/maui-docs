@@ -83,7 +83,7 @@ Step 2: Add the namespace, as shown in the following code sample:
 
 {% highlight xaml %}
 
-	<xmlns:rating="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"/>
+	<xmlns:rangeSlider="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"/>
 
 {% endhighlight %}
 
@@ -164,7 +164,7 @@ Step 2: Add the namespace, as shown in the following code sample:
 
 {% highlight xaml %}
 
-	<xmlns:rating="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"/>
+	<xmlns:rangeSlider="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"/>
 
 {% endhighlight %}
 
