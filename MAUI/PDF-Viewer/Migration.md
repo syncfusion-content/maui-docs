@@ -351,13 +351,16 @@ private void PdfViewer_PropertyChanged(object? sender, PropertyChangedEventArgs 
 </tr>
 <tr>
 <td>
-<div>{{'[ExportAsImageAsync](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_ExportAsImageAsync_System_Int32_System_Int32_System_Single_System_Threading_CancellationToken_)'| markdownify }}</div>
-
+<div>{{'[CanUndoModified](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_CanUndoModified)'| markdownify }}</div>
+<div>{{'[CanRedoModified](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_CanRedoModified)'| markdownify }}</div>
 </td>
 <td>API Unavailable</td>
-<td>In .NET MAUI PDF Viewer,  there is no support for exporting PDF as images. However, you can use the Syncfusion PDF to Image Converter library to convert PDF documents into images. 
-For detailed implementation guidance, please refer to the following API documentation:
-{{'[PdfToImageConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfToImageConverter.PdfToImageConverter.html)'| markdownify }}
+<td> In the .NET MAUI PDF Viewer, there is no public API available to track changes to the Undo and Redo buttons, unlike in Xamarin. However, you can detect changes made to the PDF document by using annotation-related events, such as:
+
+{{'[AnnotationAdded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationAdded)'| markdownify }}: Triggered when an annotation is added to a page.
+{{'[AnnotationEdited](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationEdited)'| markdownify }}: Triggered when an annotation is modified.
+{{'[AnnotationRemoved](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationRemoved)'| markdownify }}: Triggered when an annotation is removed from a page.
+By handling these events, you can effectively monitor changes made to the PDF document.
 
 </td>
 </tr>
@@ -463,6 +466,18 @@ For detailed implementation guidance, please refer to the following API document
 <td>{{'[SaveDocument(bool flattenForm)](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_SaveDocument_System_Boolean_)'| markdownify }}</td>
 <td>{{'[FormField.FlattenOnSave](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FormField.html#Syncfusion_Maui_PdfViewer_FormField_FlattenOnSave)'| markdownify }}</td>
 <td>Specifies whether the form fields should be flattened or not on saving</td>
+</tr>
+<tr>
+<td>
+<div>{{'[ExportAsImageAsync](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_ExportAsImageAsync_System_Int32_System_Int32_System_Single_System_Threading_CancellationToken_)'| markdownify }}</div>
+
+</td>
+<td>API Unavailable</td>
+<td>In .NET MAUI PDF Viewer,  there is no support for exporting PDF as images. However, you can use the Syncfusion PDF to Image Converter library to convert PDF documents into images. 
+For detailed implementation guidance, please refer to the following API documentation:
+{{'[PdfToImageConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfToImageConverter.PdfToImageConverter.html)'| markdownify }}
+
+</td>
 </tr>
 </table>
 
