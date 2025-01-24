@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Setting Sliding Panel size in .NET MAUI Navigation Drawer | Syncfusion
-description: Learn here all about Setting Sliding Panel size support in Syncfusion .NET MAUI Navigation Drawer (SfNavigationDrawer) control and more.
+title: Setting Sliding Panel size in .NET MAUI Navigation Drawer | Syncfusion®
+description: Learn here all about Setting Sliding Panel size support in Syncfusion® .NET MAUI Navigation Drawer (SfNavigationDrawer) control and more.
 platform: maui
 control: NavigationDrawer
 documentation: ug

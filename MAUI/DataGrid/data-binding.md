@@ -81,7 +81,7 @@ The SfDataGrid control provides support for binding complex properties to its co
 {% endtabs %}
 
 
-The SfDataGrid control provides support for binding complex properties such as indexers, dictionaries to its columns. To bind the complex property to [DataGridColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html), set the `UseBindingValue` property to true.
+The SfDataGrid control provides support for binding complex properties such as indexers, dictionaries to its columns. To bind the complex property to [DataGridColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html), set the [UseBindingValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_UseBindingValue) property to true.
 
 {% tabs %}
 {% highlight xaml %}

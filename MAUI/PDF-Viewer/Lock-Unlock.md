@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Locking and Unlocking annotations in .NET MAUI PDF Viewer | Syncfusion
-description: Learn here all about locking and unlocking annotations using Syncfusion® .NET MAUI PDF Viewer (SfPdfViewer) control.
+description: Learn here all about locking and unlocking annotations using Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
