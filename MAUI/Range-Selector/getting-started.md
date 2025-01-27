@@ -129,9 +129,10 @@ Before proceeding, ensure the following are set up:
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Sliders NuGet Package
 
-1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
-2. Search for [Syncfusion.Maui.Sliders](https://www.nuget.org/packages/Syncfusion.Maui.Sliders) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored.
+1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
+2. Ensure you're in the project root directory where your .csproj file is located.
+3. Run the command `dotnet add package Syncfusion.Maui.Sliders` to install the Syncfusion<sup>®</sup> .NET MAUI Sliders package.
+4. To ensure all dependencies are installed, run `dotnet restore`.
 
 ## Step 3: Register the Handler
 
