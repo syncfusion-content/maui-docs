@@ -1,7 +1,7 @@
 ---
 layout: post
-title: SwipGesture in .NET MAUI Navigation Drawer | Syncfusion
-description: Learn here all about SwipGesture support in Syncfusion .NET MAUI Navigation Drawer (SfNavigationDrawer) control and more.
+title: SwipGesture in .NET MAUI Navigation Drawer | Syncfusion®
+description: Learn here all about SwipGesture support in Syncfusion® .NET MAUI Navigation Drawer (SfNavigationDrawer) control and more.
 platform: maui
 control: NavigationDrawer
 documentation: ug
