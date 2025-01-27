@@ -44,7 +44,7 @@ Before proceeding, ensure that the following are set up:
 Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="6 17" %}
 
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
@@ -98,7 +98,7 @@ namespace ChartGettingStarted
 using Syncfusion.Maui.Charts;
 . . .
 
-public partial class MainWindow : ContentPage
+public partial class MainPage : ContentPage
 {
     public MainPage()
     {
@@ -141,7 +141,7 @@ Before proceeding, ensure that the following are set up:
 Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="6 17" %}
 
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
@@ -195,7 +195,7 @@ namespace ChartGettingStarted
 using Syncfusion.Maui.Charts;
 . . .
 
-public partial class MainWindow : ContentPage
+public partial class MainPage : ContentPage
 {
     public MainPage()
     {

@@ -44,7 +44,7 @@ Before proceeding, ensure that the following are set up:
 Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="6 17" %}
 
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
@@ -78,8 +78,8 @@ namespace ChartGettingStarted
 
 ## Step 4: Add .NET MAUI Polar Chart
 
-3. To initialize the control, import the `Syncfusion.Maui.Charts` namespace.
-4. Initialize the [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html).
+1. To initialize the control, import the `Syncfusion.Maui.Charts` namespace.
+2. Initialize the [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html).
 
 {% tabs %} 
 {% highlight xaml %}
@@ -144,7 +144,7 @@ Before proceeding, ensure that the following are set up:
 Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="6 17" %}
 
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
@@ -178,8 +178,8 @@ namespace ChartGettingStarted
 
 ## Step 4: Add .NET MAUI Polar Chart
 
-3. To initialize the control, import the `Syncfusion.Maui.Charts` namespace.
-4. Initialize the [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html).
+1. To initialize the control, import the `Syncfusion.Maui.Charts` namespace.
+2. Initialize the [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html).
 
 {% tabs %} 
 {% highlight xaml %}
