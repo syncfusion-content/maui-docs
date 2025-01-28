@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotations in .NET MAUI Chart control | Syncfusion
-description: Learn here all about annotation support and its features in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
+description: Learn here all about annotation support and its features in Syncfusion® .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
@@ -15,6 +15,10 @@ keywords: .net maui chart annotations, .net maui annotations customization, sync
 * Text annotation
 * Shape annotation
 * View annotation
+
+To learn how to add and customize annotations in .NET MAUI Cartesian Charts quickly, you can check the below video.
+
+{% youtube "https://youtu.be/v1u774lp9pQ" %}
 
 ## Adding Annotations
 

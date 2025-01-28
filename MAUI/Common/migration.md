@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Migrating from Xamarin to .NET MAUI | Syncfusion 
-description: Basic overview about the list of available .NET MAUI components and equal Xamarin components on Syncfusion.
+title: Migrating from Xamarin to .NET MAUI | Syncfusion® 
+description: Basic overview about the list of available .NET MAUI components and equal Xamarin components on Syncfusion®.
 platform: maui
-control: Essential Studio®
+control: Essential Studio<sup>®</sup>
 documentation: ug
 ---
 
@@ -531,7 +531,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/diagram/getting-started">SfDiagram</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Obsolete. Use <a href="https://blazor.syncfusion.com/documentation/diagram/overview"> Syncfusion Blazor Diagram.</a> To integrate Blazor Diagram component in .NET MAUI application refer to this <a href="https://support.syncfusion.com/kb/article/11346/how-to-create-diagram-builder-in-maui-platform?isInternalRefresh=False"> KB.</a> <br/>
+			Obsolete. Use <a href="https://blazor.syncfusion.com/documentation/diagram/overview"> Syncfusion<sup>®</sup> Blazor Diagram.</a> To integrate Blazor Diagram component in .NET MAUI application refer to this <a href="https://support.syncfusion.com/kb/article/11346/how-to-create-diagram-builder-in-maui-platform?isInternalRefresh=False"> KB.</a> <br/>
 		</td>
 	</tr>
 	<tr>
@@ -539,7 +539,7 @@ Currently working on delivering brand-new .NET MAUI controls that can be used in
 			<a href="https://help.syncfusion.com/xamarin/rich-text-editor/gettingstarted">SfRichTextEditor</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Obsolete. Use <a href="https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started"> Syncfusion Blazor RichTextEditor.</a> To integrate Blazor RichTextEditor component in .NET MAUI application refer to this <a href="https://support.syncfusion.com/kb/article/13845/how-to-get-started-with-syncfusion-blazor-richtexteditor-with-maui-controls-in-net-maui-application"> KB.</a> <br/>
+			Obsolete. Use <a href="https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started"> Syncfusion<sup>®</sup> Blazor RichTextEditor.</a> To integrate Blazor RichTextEditor component in .NET MAUI application refer to this <a href="https://support.syncfusion.com/kb/article/13845/how-to-get-started-with-syncfusion-blazor-richtexteditor-with-maui-controls-in-net-maui-application"> KB.</a> <br/>
 		</td>
 	</tr>
 </table>

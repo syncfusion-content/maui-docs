@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with .NET MAUI Parallax View control | Syncfusion
-description: Learn about getting started with Syncfusion .NET MAUI Parallax View (SfParallaxView) control and more.
+description: Learn about getting started with Syncfusion® .NET MAUI Parallax View (SfParallaxView) control and more.
 platform: MAUI
 control: SfParallaxView
 documentation: ug
@@ -11,10 +11,14 @@ documentation: ug
 
 This section explains the steps required to configure the [`SfParallaxView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html) control and add basic elements to it using various APIs.
 
+To get start quickly with our .NET MAUI Parallax View, you can check the below video.
+
+{% youtube "https://youtu.be/ezzIDWYYrUc" %}
+
 ## Creating an application using .NET MAUI Parallax View
 
 1. Create a new .NET MAUI application in Visual studio.
-2. Syncfusion .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfParallaxView to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.ParallaxView and then install it.
+2. Syncfusion® .NET MAUI components are available in [nuget.org](https://www.nuget.org/). To add SfParallaxView to your project, open the NuGet package manager in Visual Studio, search for Syncfusion.Maui.ParallaxView and then install it.
 3. To initialize the control, import the Parallax View namespace.
 4. Initialize [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html).
 
@@ -56,7 +60,7 @@ namespace ParallaxViewGettingStarted
 
 ## Register the handler
 
-Syncfusion.Maui.Core Nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
+Syncfusion.Maui.Core Nuget is a dependent package for all Syncfusion® controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion® core.
 
 {% highlight C# %}
 
@@ -152,9 +156,9 @@ The [`Source`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.
 Currently, the [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html) directly supports the following controls. Bind the control to the [`Source`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Source) property.
 
     1. ScrollView
-    2. Syncfusion ListView
+    2. Syncfusion® ListView
 
-The following code sample demonstrates how to bind the Syncfusion ListView to the [`Source`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Source) property.
+The following code sample demonstrates how to bind the Syncfusion® ListView to the [`Source`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Source) property.
 
 {% tabs %}
 
