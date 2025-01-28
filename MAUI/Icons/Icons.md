@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Icons Library in .NET MAUI - Syncfusion
-description: Learn how to use and integrate the icon library from the MauiMaterialAssets.ttf file in Syncfusion .NET MAUI components.
+title: Icons Library in .NET MAUI - Syncfusion<sup style="font-size:70%">&reg;</sup>
+description: Learn how to use and integrate the icon library from the MauiMaterialAssets.ttf file in Syncfusion<sup style="font-size:70%">&reg;</sup> .NET MAUI components.
 platform: maui
 component: Common
 documentation: ug
@@ -47,9 +47,9 @@ To start using the icons, first ensure that the font is registered in your appli
     {% highlight xaml %}
 
         <Label Text="&#xE70F;"
-                FontFamily="MaterialAssets"
-                FontSize="24"
-                TextColor="Black"/>
+               FontFamily="MaterialAssets"
+               FontSize="24"
+               TextColor="Black"/>
             
     {% endhighlight %}
     {% highlight c# %}
@@ -65,9 +65,9 @@ To start using the icons, first ensure that the font is registered in your appli
     {% endhighlight %}
     {% endtabs %}
 
-    The following image illustrates the result of the above code. 
-    
-    ![Delete Icon](images/delete_icon.png)
+The following image illustrates the result of the above code. 
+
+![Delete Icon](images/delete_icon.png)
 
 ## Icons List
 
