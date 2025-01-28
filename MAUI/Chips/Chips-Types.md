@@ -18,18 +18,16 @@ The following code illustrates how to get an input type chip.
 {% tabs %}
 
 {% highlight xaml %}
-<chip:SfChipGroup 
-                     Margin="200,100,0,0"  
-                     ItemsSource="{Binding Employees}" 
-                     DisplayMemberPath="Name" 
-                     ChipType="Input">
+<chip:SfChipGroup Margin="200,100,0,0"  
+                  ItemsSource="{Binding Employees}" 
+                  DisplayMemberPath="Name" 
+                  ChipType="Input">
 <chip:SfChipGroup.InputView>
 <Entry x:Name="entry"
 			VerticalOptions="Center" HeightRequest="40"
 			FontSize="15" 
 			WidthRequest="110" 
-			Completed="Entry_Completed"
-			>
+			Completed="Entry_Completed" >
 </Entry>
 </chip:SfChipGroup.InputView>
 

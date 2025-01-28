@@ -442,11 +442,11 @@ The [`FontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Button
 
 <ContentPage.Content>
     <StackLayout Margin="8,8,8,8" >
-    <chip:SfChip        Text="James"
-                        WidthRequest="100"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center"
-                        FontSize = "15" >
+        <chip:SfChip Text="James"
+                     WidthRequest="100"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     FontSize = "15" >
         </chip:SfChip>  
     </StackLayout>
 </ContentPage.Content>
@@ -485,7 +485,7 @@ The [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Butto
 
 <ContentPage.Content>
     <StackLayout Margin="8,8,8,8" >
-        <chip:SfChip     Text="James"
+        <chip:SfChip    Text="James"
                         WidthRequest="100"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"
@@ -528,13 +528,13 @@ The [`HorizontalTextAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 <ContentPage.Content>
     <StackLayout Margin="8,8,8,8" >
-        <chip:SfChip     Text="James"
+        <chip:SfChip    Text="James"
                         WidthRequest="120"
+                        ShowCloseButton="True"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"
                         HorizontalTextAlignment="Start"
-                        VerticalTextAlignment="Center"
-                        >
+                        VerticalTextAlignment="Center" >
         </chip:SfChip>  
     </StackLayout>
 </ContentPage.Content>
@@ -549,6 +549,7 @@ using Syncfusion.Maui.Core;
     SfChip chip = new SfChip();
     chip.WidthRequest = 120;
     chip.Text = "James";
+    chip.ShowCloseButton = true;
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
     chip.HorizontalTextAlignment = TextAlignment.Start;
@@ -591,6 +592,7 @@ using Syncfusion.Maui.Core;
 
     StackLayout stackLayout = new StackLayout();
     SfChip chip = new SfChip();
+    chip.Text = "James";
     chip.WidthRequest = 100;
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
@@ -673,6 +675,7 @@ using Syncfusion.Maui.Core;
 
     StackLayout stackLayout = new StackLayout();
     SfChip chip = new SfChip();
+    chip.Text = "James";
     chip.WidthRequest = 100;
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
@@ -717,6 +720,7 @@ using Syncfusion.Maui.Core;
 
     StackLayout stackLayout = new StackLayout();
     SfChip chip = new SfChip();
+    chip.Text = "James";
     chip.WidthRequest = 120;
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
@@ -763,6 +767,7 @@ using Syncfusion.Maui.Core;
 
     StackLayout stackLayout = new StackLayout();
     SfChip chip = new SfChip();
+    chip.Text = "James";
     chip.WidthRequest = 100;
     chip.HorizontalOptions = LayoutOptions.Center;
     chip.VerticalOptions = LayoutOptions.Center;
@@ -922,6 +927,8 @@ The [`ChipBackground`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.
             <chip:SfChipGroup
                 ItemsSource="{Binding Employees}"
                 DisplayMemberPath="Name"
+                ChipTextColor="White"
+                CloseButtonColor="White"
                 ChipBackground="#512dcd" >
             </chip:SfChipGroup>
         </StackLayout>  
@@ -939,7 +946,9 @@ using Syncfusion.Maui.Core;
     this.BindingContext = new ViewModel();
     chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
     chipGroup.DisplayMemberPath = "Name";
-    chipGroup.ChipBackground = Colors.Violet;
+    chipGroup.ChipBackground = Color.FromHex("#512dcd");
+    chipGroup.ChipTextColor = Colors.White;
+    chipGroup.CloseButtonColor = Colors.White;
     this.Content = stack;
         
 {% endhighlight %}
@@ -981,7 +990,6 @@ So, Add visual states to enable selected chip background color also set the Chip
                     </VisualState>
                 </VisualStateGroup>
             </VisualStateManager.VisualStateGroups>
-        </chip:SfChipGroup>
         </chip:SfChipGroup>
     </StackLayout>  
 </ContentPage.Content>
