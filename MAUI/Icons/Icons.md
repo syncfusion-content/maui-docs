@@ -21,22 +21,25 @@ To start using the icons, first ensure that the font is registered in your appli
 
 2. **Register the Font**: Modify your `MauiProgram.cs` to register the icon font. Here is an example:
 
-    ```csharp
-    // ... existing code ...
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
+    {% tabs %}
+    {% highlight c# %}
+        // ... existing code ...
+        public static class MauiProgram
         {
-            var builder = MauiApp.CreateBuilder();
-            // ... existing code ...
-            builder.ConfigureFonts(fonts =>
+            public static MauiApp CreateMauiApp()
             {
-                fonts.AddFont("MauiMaterialAssets.ttf", "MaterialAssets");
-            });
-            return builder.Build();
+                var builder = MauiApp.CreateBuilder();
+                // ... existing code ...
+                builder.ConfigureFonts(fonts =>
+                {
+                    // ... existing code ...
+                    fonts.AddFont("MauiMaterialAssets.ttf", "MaterialAssets");
+                });
+                return builder.Build();
+            }
         }
-    }
-    ```
+    {% endhighlight %}
+    {% endtabs %}
 
 3. **Using Icons in the Project**: To use icons in your MAUI project, simply refer to them using the designated font family. Below is an example of how you might integrate an icon into a Label.
 
