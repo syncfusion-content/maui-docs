@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About .NET MAUI Tab View (SfTabView) control | Syncfusion
-description: Learn here all about introduction of Syncfusion .NET MAUI Tab View (SfTabView) control, its elements and more.
+title: About .NET MAUI Tab View (SfTabView) control | Syncfusion®
+description: Learn here all about introduction of Syncfusion® .NET MAUI Tab View (SfTabView) control, its elements and more.
 platform: maui
 control: Tab View
 documentation: ug
 ---
 
->**Notice:** After **Volume 1 2025 (Mid of March 2025),** updates, bug fixes, and feature enhancements for this control will no longer be available in the Syncfusion package. Please switch to the **Syncfusion Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document.](https://help.syncfusion.com/maui-toolkit/migration)
+>**Notice:** After **Volume 1 2025 (Mid of March 2025),** updates, bug fixes, and feature enhancements for this control will no longer be available in the Syncfusion<sup>®</sup> package. Please switch to the **Syncfusion<sup>®</sup> Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document.](https://help.syncfusion.com/maui-toolkit/migration)
 
 # Overview of .NET MAUI Tab View (SfTabView)
 

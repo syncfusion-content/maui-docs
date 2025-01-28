@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Set Sliding Panel Content in .NET MAUI Navigation Drawer | Syncfusion
-description: Learn here all about Setting Sliding Panel Content support in Syncfusion .NET MAUI Navigation Drawer (SfNavigationDrawer) control and more.
+title: Set Sliding Panel Content in .NET MAUI Navigation Drawer | Syncfusion®
+description: Learn here all about Setting Sliding Panel Content support in Syncfusion® .NET MAUI Navigation Drawer (SfNavigationDrawer) control and more.
 platform: maui
 control: NavigationDrawer
 documentation: ug

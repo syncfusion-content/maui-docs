@@ -150,7 +150,6 @@ To load data for the DataPager control dynamically, follow the code example:
       </pager:SfDataPager>      
       <syncfusion:SfDataGrid x:Name="dataGrid"
                          Grid.Row="0"
-                         AutoGenerateColumns="true"
                          SelectionMode="Single"
                          ItemsSource="{Binding Source={x:Reference dataPager}, Path=PagedSource }"  
                          >

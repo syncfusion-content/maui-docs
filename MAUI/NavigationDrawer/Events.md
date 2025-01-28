@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events in .NET MAUI Navigation Drawer control | Syncfusion
-description: Learn about Events support in Syncfusion Essential Studio .NET MAUI Navigation Drawer (SfNavigationDrawer) control, its elements, and more.
+title: Events in .NET MAUI Navigation Drawer control | Syncfusion®
+description: Learn about Events support in Syncfusion® Essential Studio® .NET MAUI Navigation Drawer (SfNavigationDrawer) control, its elements, and more.
 platform: maui
 control: NavigationDrawer
 documentation: ug
