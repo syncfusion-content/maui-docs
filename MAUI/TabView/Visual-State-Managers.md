@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Visual state manager in .NET MAUI Tab View (SfTabView) | Syncfusion
-description: Learn here all about handling of visual state manager in Syncfusion .NET MAUI Tab View (SfTabView) control and more.
+title: Visual state manager in .NET MAUI Tab View (SfTabView) | Syncfusion®
+description: Learn here all about handling of visual state manager in Syncfusion® .NET MAUI Tab View (SfTabView) control and more.
 platform: MAUI
 control: TabView
 documentation: ug
@@ -55,7 +55,7 @@ Use the visual state manager to change the .NET MAUI tab properties based on the
                 <tabView:SfTabItem Header="FAVOURITES">
                     <tabView:SfTabItem.Content>
                         <Grid>
-                            <Grid GridLayout.Row="1" VerticalOptions="End" HeightRequest="20">
+                            <Grid Grid.Row="1" VerticalOptions="End" HeightRequest="20">
                                 <Grid.Background>
                                     <LinearGradientBrush EndPoint="0,1">
                                         <GradientStop Color="Transparent" Offset="0.1" />
@@ -79,28 +79,28 @@ Use the visual state manager to change the .NET MAUI tab properties based on the
                             <DataTemplate>
                                 <ViewCell>
                                     <Grid ColumnDefinitions="48,*,48,48" Margin="10,5">
-                                        <Image GridLayout.Column="0"
+                                        <Image Grid.Column="0"
                                                 WidthRequest="35"
                                                 HeightRequest="35"
                                                 VerticalOptions="Center"
                                                 HorizontalOptions="Center"
                                                 Aspect="AspectFit"
                                                 Source="contact_image"/>
-                                        <Label GridLayout.Column="1"
+                                        <Label Grid.Column="1"
                                                 VerticalOptions="Center"
                                                 HorizontalOptions="Start"
                                                 Margin="5,0"
                                                 TextColor="#666666"
                                                 FontSize="16"
                                                 Text="{Binding}"/>
-                                        <Image GridLayout.Column="2"
+                                        <Image Grid.Column="2"
                                                 WidthRequest="35"
                                                 HeightRequest="35"
                                                 VerticalOptions="Center"
                                                 HorizontalOptions="Center"
                                                 Aspect="AspectFit"
                                                 Source="mail"/>
-                                        <Image GridLayout.Column="3"
+                                        <Image Grid.Column="3"
                                                 WidthRequest="35"
                                                 HeightRequest="35"
                                                 VerticalOptions="Center"

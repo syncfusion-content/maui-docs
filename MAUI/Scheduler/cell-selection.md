@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Cell selection in the .NET MAUI Scheduler | Syncfusion
-description: Learn how to customize the cell selection in Syncfusion .NET MAUI Scheduler (SfScheduler) control here.
+title: Cell selection in the .NET MAUI Scheduler | Syncfusion<sup>&reg;</sup>
+description: Learn how to customize the cell selection in Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler (SfScheduler) control here.
 platform: maui
 control: SfScheduler
 documentation: ug
