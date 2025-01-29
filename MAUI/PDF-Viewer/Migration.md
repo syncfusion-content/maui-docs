@@ -349,6 +349,18 @@ private void PdfViewer_PropertyChanged(object? sender, PropertyChangedEventArgs 
 
 </td>
 </tr>
+<tr>
+<td>
+<div>{{'[ExportAsImageAsync](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_ExportAsImageAsync_System_Int32_System_Int32_System_Single_System_Threading_CancellationToken_)'| markdownify }}</div>
+
+</td>
+<td>API Unavailable</td>
+<td>In .NET MAUI PDF Viewer,  there is no support for exporting PDF as images. However, you can use the Syncfusion PDF to Image Converter library to convert PDF documents into images. 
+For detailed implementation guidance, please refer to the following API documentation:
+{{'[PdfToImageConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfToImageConverter.PdfToImageConverter.html)'| markdownify }}
+
+</td>
+</tr>
 </table>
 
 ## Methods
