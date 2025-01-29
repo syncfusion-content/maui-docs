@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Backdrop Page| Syncfusion
-description: Learn here about getting started with Syncfusion .NET MAUI Backdrop Page(SfBackdropPage) control, its elements and more.
+title: Getting started with .NET MAUI Backdrop Page| Syncfusion<sup>&reg;</sup>
+description: Learn here about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Backdrop Page(SfBackdropPage) control, its elements and more.
 platform: MAUI
 control: SfBackdropPage
 documentation: ug
@@ -9,12 +9,15 @@ documentation: ug
 
 # Getting started with .NET MAUI Backdrop Page
 
-This section explains the steps required to add the Backdrop page and its elements such as BackLayer and FrontLayer in the project. This section covers only the basic features needed to know and gets started with the Syncfusion backdrop page. Follow the steps below to add a .NET MAUI Backdrop page to your project.
+This section explains the steps required to add the Backdrop page and its elements such as BackLayer and FrontLayer in the project. This section covers only the basic features needed to know and gets started with the Syncfusion<sup>&reg;</sup> backdrop page. Follow the steps below to add a .NET MAUI Backdrop page to your project.
 
 To get start quickly with our .NET MAUI Backdrop, you can check the below video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=99VGii8CFmw"%}
+
+{% tabcontents %}
+{% tabcontent Visual Studio %}
 
 ## Prerequisites
 
@@ -24,24 +27,109 @@ Before proceeding, ensure the following are set up:
 
 ## Step 1: Create a New .NET MAUI Project
 
-### Visual Studio
-
 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
 2. Name the project and choose a location. Then click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-### Visual Studio Code
+## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI Backdrop NuGet Package
+
+1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+2. Search for [Syncfusion.Maui.Backdrop](https://www.nuget.org/packages/Syncfusion.Maui.Backdrop/) and install the latest version.
+3. Ensure the necessary dependencies are installed correctly, and the project is restored.
+
+## Step 3: Register the handler
+
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion core.
+
+{% tabs %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
+
+using Syncfusion.Maui.Core.Hosting;
+namespace GettingStarted
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+
+            builder.ConfigureSyncfusionCore();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
+
+            return builder.Build();
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Step 4: Add .NET MAUI Backdrop page control
+
+1. To initialize the control, import the `Syncfusion.Maui.Backdrop` namespace into your code.
+2. Initialize [SfBackdropPage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html).
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<backdrop:SfBackdropPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                         x:Class="BackdropGettingStarted.BackdropSamplePage"
+                         Title="Menu"
+                         xmlns:backdrop="clr-namespace:Syncfusion.Maui.Backdrop;assembly=Syncfusion.Maui.Backdrop"
+                         >
+    
+</backdrop:SfBackdropPage>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+using Syncfusion.Maui.Backdrop;
+namespace BackdropGettingStarted;
+
+public partial class BackdropSamplePage : SfBackdropPage
+{
+    public BackdropSamplePage()
+    {
+        InitializeComponent();
+        this.Title = "Menu";
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+{% endtabcontent %}
+{% tabcontent Visual Studio Code %}
+
+## Prerequisites
+
+Before proceeding, ensure the following are set up:
+1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later is installed.
+2. Set up a .NET MAUI environment with Visual Studio Code. 
+3. Ensure that the .NET MAUI extension is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
+
+## Step 1: Create a New .NET MAUI Project
 
 1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
 2. Choose the **.NET MAUI App** template.
 3. Select the project location, type the project name and press **Enter**.
 4. Then choose **Create project.**
 
-## Step 2: Install the Syncfusion .NET MAUI Backdrop NuGet Package
+## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI Backdrop NuGet Package
 
-1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for [Syncfusion.Maui.Backdrop](https://www.nuget.org/packages/Syncfusion.Maui.Backdrop/) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored.
+1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
+2. Ensure you're in the project root directory where your .csproj file is located.
+3. Run the command `dotnet add package Syncfusion.Maui.Backdrop` to install the Syncfusion<sup>®</sup> .NET MAUI Backdrop NuGet package.
+4. To ensure all dependencies are installed, run `dotnet restore`.
 
 ## Step 3: Register the handler
 
@@ -112,6 +200,9 @@ public partial class BackdropSamplePage : SfBackdropPage
 {% endhighlight %}
 
 {% endtabs %}
+
+{% endtabcontent %}
+{% endtabcontents %}
 
 N> The [`Title`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.page.title?view=net-maui-6.0) and [`ToolBarItems`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.page.toolbaritems?view=net-maui-6.0) properties of the [`Page`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.page?view=net-maui-6.0) can be used to customize the appearance of the header.
 

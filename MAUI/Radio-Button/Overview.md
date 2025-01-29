@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Overview | .NET MAUI Radio Button | Syncfusion
+title: Overview | .NET MAUI Radio Button | Syncfusion®
 platform: .NET MAUI
-description: Learn here about overall key features in Essential Studio for .NET MAUI SfRadioButton Control, its elements, and more.
+description: Learn here about overall key features in Essential Studio® for .NET MAUI SfRadioButton Control, its elements, and more.
 control: SfRadioButton
 ---
 

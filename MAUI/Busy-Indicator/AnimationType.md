@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Animation Type in .NET MAUI Busy Indicator control | Syncfusion
-description: Learn here all about Animation Type support in Syncfusion .NET MAUI Busy Indicator (SfBusyIndicator) control and more.
+title: Animation Type in .NET MAUI Busy Indicator control | Syncfusion®
+description: Learn here all about Animation Type support in Syncfusion® .NET MAUI Busy Indicator (SfBusyIndicator) control and more.
 platform: maui
 control: BusyIndicator
 documentation: ug
