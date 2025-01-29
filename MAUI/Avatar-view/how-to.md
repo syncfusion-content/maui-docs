@@ -1,6 +1,6 @@
 ---
 layout: post
-title: States in Syncfusion Avatar View control for .NET MAUI.
+title: States in SyncfusionSyncfusion® Avatar View control for .NET MAUI.
 description: This section will explain about how to use the different states that exist in .NET MAUI SfAvatarView.
 platform: maui
 control: AvatarView
