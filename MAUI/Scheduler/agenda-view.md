@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Agenda view in .NET MAUI Scheduler control | Syncfusion
-description: Learn here all about the Agenda view feature of Syncfusion .NET MAUI Scheduler (SfScheduler) control and more.
+title: Agenda view in .NET MAUI Scheduler control | Syncfusion<sup>&reg;</sup>
+description: Learn here all about the Agenda view feature of Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler (SfScheduler) control and more.
 platform: maui
 control: SfScheduler
 documentation: ug
