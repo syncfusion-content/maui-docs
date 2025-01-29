@@ -67,7 +67,7 @@ The following screenshot shows the outcome of the previous code:
 
 ### Customize the column name in the group caption summary
 
-The column name in the group caption summary text can be customized using the `DisplayName` property.
+The column name in the group caption summary text can be customized using the [DisplayName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.GroupColumnDescription.html#Syncfusion_Maui_DataGrid_GroupColumnDescription_DisplayName) property.
 
 If the `DisplayName` property is set, the specified display name will appear in the group caption summary text. If it is null, the column name will be displayed instead.
 
@@ -76,9 +76,9 @@ If the `DisplayName` property is set, the specified display name will appear in 
     <sfGrid:SfDataGrid x:Name="dataGrid"
                        ItemsSource="{Binding OrderInfoCollection}"
                        ColumnWidthMode="Fill">
-        <sfgrid:SfDataGrid.GroupColumnDescriptions>
-            <sfgrid:GroupColumnDescription ColumnName="Salary" DisplayName="Income" />
-        </sfgrid:SfDataGrid.GroupColumnDescriptions>
+        <sfGrid:SfDataGrid.GroupColumnDescriptions>
+            <sfGrid:GroupColumnDescription ColumnName="Salary" DisplayName="Income" />
+        </sfGrid:SfDataGrid.GroupColumnDescriptions>
     </sfGrid:SfDataGrid>
 {% endhighlight %}
 
