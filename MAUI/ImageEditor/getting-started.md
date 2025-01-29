@@ -17,26 +17,20 @@ To get start quickly with our .NET MAUI ImageEditor, you can check the below vid
 {% youtube
 "youtube:https://youtu.be/Gkkh52xSehM?si=_WKWcnGgob0DofXe"%}
 
+{% tabcontents %}
+{% tabcontent Visual Studio %}
+
 ## Prerequisites
 
 Before proceeding, ensure the following are setup:
 1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later is installed.
-2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or Visual Studio Code. For Visual Studio Code users, ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
+2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later). 
 
 ## Step 1: Create a New .NET MAUI Project
-
-### Visual Studio
 
 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
 2. Name the project and choose a location. Then click **Next**.
 3. Select the .NET framework version and click **Create**.
-
-### Visual Studio Code
-
-1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
-2. Choose the **.NET MAUI App** template.
-3. Select the project location, type the project name and press **Enter**.
-4. Then choose **Create project.**
 
 ## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI ImageEditor NuGet Package
 
@@ -110,6 +104,100 @@ public partial class MainPage : ContentPage
 
 {% endhighlight %}
 {% endtabs %}
+
+{% endtabcontent %}
+{% tabcontent Visual Studio Code %}
+
+## Prerequisites
+
+Before proceeding, ensure the following are setup:
+1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later is installed.
+2. Set up a .NET MAUI environment with Visual Studio Code.
+3. Ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
+
+## Step 1: Create a New .NET MAUI Project
+
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+2. Choose the **.NET MAUI App** template.
+3. Select the project location, type the project name and press **Enter**.
+4. Then choose **Create project.**
+
+## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI ImageEditor NuGet Package
+
+1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
+2. Ensure you're in the project root directory where your .csproj file is located.
+3. Run the command `dotnet add package Syncfusion.Maui.ImageEditor` to install the Syncfusion<sup>®</sup> .NET MAUI ImageEditor NuGet package.
+4. To ensure all dependencies are installed, run `dotnet restore`.
+
+## Step 3: Register the handler
+
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> .NET MAUI controls. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
+
+{% tabs %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
+
+using Syncfusion.Maui.Core.Hosting;
+namespace GettingStarted
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+
+            builder.ConfigureSyncfusionCore();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                fonts.AddFont("Segoe-mdl2.ttf", "SegoeMDL2");
+            });
+
+            return builder.Build();
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Step 4: Add .NET MAUI ImageEditor control
+
+1. To initialize the control, import the `Syncfusion.Maui.ImageEditor` namespace into your code.
+2. Initialize [SfImageEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html).
+
+{% tabs %}
+{% highlight XAML hl_lines="3 5" %}
+
+<ContentPage   
+    . . .
+    xmlns:imageEditor="clr-namespace:Syncfusion.Maui.ImageEditor;assembly=Syncfusion.Maui.ImageEditor">
+
+    <imageEditor:SfImageEditor />
+</ContentPage>
+
+{% endhighlight %}
+{% highlight C# hl_lines="1 9 10" %}
+
+using Syncfusion.Maui.ImageEditor;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfImageEditor imageEditor = new SfImageEditor();
+        this.Content = imageEditor;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+{% endtabcontents %}
 
 ## Loading an image to image editor
 

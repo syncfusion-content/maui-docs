@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Visual Style in Syncfusion Avatar View .NET MAUI.
+title: Visual Style in Syncfusion® Avatar View .NET MAUI.
 description: This section will explain about the different visual style types that exists in .NET MAUI SfAvatarView.
 platform: maui
 control: AvatarView

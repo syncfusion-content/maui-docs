@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Animation Duration in .NET MAUI Busy Indicator control | Syncfusion
-description: Learn here all about Animation Duration support in Syncfusion .NET MAUI Busy Indicator (SfBusyIndicator) control and more.
+title: Animation Duration in .NET MAUI Busy Indicator control | Syncfusion®
+description: Learn here all about Animation Duration support in Syncfusion® .NET MAUI Busy Indicator (SfBusyIndicator) control and more.
 platform: maui
 control: BusyIndicator
 documentation: ug
