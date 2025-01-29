@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Z-Ordering in .NET MAUI Image Editor control | Syncfusion
-description: Learn here all about Z-Ordering support in Syncfusion .NET MAUI Image Editor(SfImageEditor) control.
+title: Z-Ordering in .NET MAUI Image Editor control | Syncfusion<sup>&reg;</sup>
+description: Learn here all about Z-Ordering support in Syncfusion<sup>&reg;</sup> .NET MAUI Image Editor(SfImageEditor) control.
 platform: maui
 control: ImageEditor
 documentation: ug

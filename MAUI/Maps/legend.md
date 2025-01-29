@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Legend in .NET MAUI Maps control | Syncfusion
-description: Learn all about the Legend feature of Syncfusion .NET MAUI Maps (SfMaps) control to customize its appearance including text, icon and more.
+title: Legend in .NET MAUI Maps control | Syncfusion<sup>&reg;</sup>
+description: Learn all about the Legend feature of Syncfusion<sup>&reg;</sup> .NET MAUI Maps (SfMaps) control to customize its appearance including text, icon and more.
 platform: MAUI
 control: SfMaps
 documentation: ug
@@ -834,7 +834,7 @@ public class Model
 
 ## Customize items layout
 
-The [`ItemsLayout`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_ItemsLayout) property is used to customize the arrangement and position of each legend item. The default value is null. This property accepts any layout type.
+The `ItemsLayout` property is used to customize the arrangement and position of each legend item. The default value is null. This property accepts any layout type.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1005,7 +1005,7 @@ public class Model
 
 ## Customize items template
 
-You can customize the appearance of legend items with your template by using [`ItemTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_ItemTemplate) property of [`MapLegend`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html).
+You can customize the appearance of legend items with your template by using `ItemTemplate` property of `MapLegend`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1094,7 +1094,7 @@ You can customize the appearance of legend items with your template by using [`I
 {% endhighlight %}
 {% endtabs %}
 
-N> The BindingContext of the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html#Syncfusion_Maui_Maps_MapLegend_ItemTemplate) is the corresponding underlying legend item provided in the [MapLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapLegend.html) class.
+N> The BindingContext of the ItemTemplate is the corresponding underlying legend item provided in the MapLegend class.
 
 ![Legend template](images/legend/legend-template.png ){:width="313" height="480"  loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
 

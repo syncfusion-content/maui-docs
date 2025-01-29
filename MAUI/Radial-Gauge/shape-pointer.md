@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Shape Pointer in .NET MAUI Radial Gauge control | Syncfusion
-description: Learn here all about Shape Pointer feature of Syncfusion .NET MAUI Radial Gauge control with in-build shapes.
+title: Shape Pointer in .NET MAUI Radial Gauge control | Syncfusion<sup>&reg;</sup>
+description: Learn here all about Shape Pointer feature of Syncfusion<sup>&reg;</sup> .NET MAUI Radial Gauge control with in-build shapes.
 platform: maui
 control: SfRadialGauge
 documentation: ug
