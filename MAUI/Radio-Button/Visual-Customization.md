@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Visual Customization in .NET MAUI Radio Button Control | Syncfusion
-description: Learn here all about Visual Customization support in Syncfusion .NET MAUI Radio Button (SfRadioButton) control and more.
+title: Visual Customization in .NET MAUI Radio Button Control | Syncfusion®
+description: Learn here all about Visual Customization support in Syncfusion® .NET MAUI Radio Button (SfRadioButton) control and more.
 platform: maui
 control: SfRadioButton
 documentation: ug 

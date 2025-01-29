@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Gesture events in .NET MAUI PDF Viewer control | Syncfusion
-description: This guide discusses about the gesture events provided by Syncfusion® .NET MAUI PDF Viewer (SfPdfViewer) control.
+description: This guide discusses about the gesture events provided by Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: MAUI
 control: SfPdfViewer
 documentation: ug

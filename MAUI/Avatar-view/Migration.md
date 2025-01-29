@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migrating from Xamarin to .NET MAUI SfAvatarView | Syncfusion 
-description: Learn here all about Migrating from Syncfusion Xamarin Avatar View to Syncfusion .NET MAUI Avatar View control and more.
+title: Migrating from Xamarin to .NET MAUI SfAvatarView | Syncfusion® 
+description: Learn here all about Migrating from Syncfusion® Xamarin Avatar View to Syncfusion® .NET MAUI Avatar View control and more.
 platform: maui
 control: SfAvatarView
 documentation: ug
