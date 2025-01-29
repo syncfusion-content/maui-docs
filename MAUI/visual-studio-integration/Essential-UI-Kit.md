@@ -3,17 +3,17 @@ layout: post
 title: Essential® UI Kit for .NET MAUI | MAUI | Syncfusion®
 description: The Syncfusion® Essential® UI Kit for .NET MAUI extension provides the predefined design Screens for the MAUI Apps.
 platform: maui
-control: Syncfusion® Extensions
+control: Syncfusion<sup>®</sup> Extensions
 documentation: ug
 ---
 
-# Essential® UI Kit for .NET MAUI
+# Essential<sup>®</sup> UI Kit for .NET MAUI
 
-Essential® UI Kit for .NET MAUI for MAUI comes with ready-to-use XAML templates, enabling you to effortlessly design user interfaces for cross-platform applications. With a clear separation of the View, View Model, and Model classes, which makes the integration of your business logic and making changes to existing views simple.
+Essential<sup>®</sup> UI Kit for .NET MAUI for MAUI comes with ready-to-use XAML templates, enabling you to effortlessly design user interfaces for cross-platform applications. With a clear separation of the View, View Model, and Model classes, which makes the integration of your business logic and making changes to existing views simple.
 
-## Installation of Essential® UI Kit for .NET MAUI Extension
+## Installation of Essential<sup>®</sup> UI Kit for .NET MAUI Extension
 
-To get started with the Essential® UI Kit for .NET MAUI, first install the appropriate extension in Visual Studio by downloading it from the marketplace. As a result, you’ll be able to access and utilize the Syncfusion® Extension directly from the Syncfusion® menu within your project
+To get started with the Essential<sup>®</sup> UI Kit for .NET MAUI, first install the appropriate extension in Visual Studio by downloading it from the marketplace. As a result, you’ll be able to access and utilize the Syncfusion<sup>®</sup> Extension directly from the Syncfusion<sup>®</sup> menu within your project
 
 [Visual Studio 2022]()
 
@@ -22,11 +22,11 @@ To get started with the Essential® UI Kit for .NET MAUI, first install the appr
 
 1.	Launch a new or existing MAUI application.
 
-2.	Select the **Essential® UI Kit for .NET MAUI** from the **Solution Explorer** by right-clicking on your **MAUI** project
+2.	Select the **Essential<sup>®</sup> UI Kit for .NET MAUI** from the **Solution Explorer** by right-clicking on your **MAUI** project
 
-	![Syncfusion Essential UI Kit for .NET MAUI Context menu in MAUI](Essential_UI_Kit_images/visual-studio-intergration-context-menu.png)
+	![Syncfusion<sup>®</sup> Essential<sup>®</sup> UI Kit for .NET MAUI Context menu in MAUI](Essential_UI_Kit_images/visual-studio-intergration-context-menu.png)
 
-	N> The .NET MAUI Essential® UI Kit add-in will be shown when the project has the MAUI NuGet package as a reference and also, MAUI project should be a NET Standard project.
+	N> The .NET MAUI Essential<sup>®</sup> UI Kit add-in will be shown when the project has the MAUI NuGet package as a reference and also, MAUI project should be a NET Standard project.
 
 3.	The Category dialogue box will then appear, with its pre-defined templates.
 
@@ -38,7 +38,7 @@ To get started with the Essential® UI Kit for .NET MAUI, first install the appr
 
 	![Edit page Name in MAUI Visual studio Intergration](Essential_UI_Kit_images/visual-studio-intergration-page-name.png)
 
-6.	The selected pages will be added along with View, View Model, Model classes, resource files and Syncfusion NuGet package reference,
+6.	The selected pages will be added along with View, View Model, Model classes, resource files and Syncfusion<sup>®</sup> NuGet package reference,
 
 	![Added MVVM files in MAUI Visual Studio Intergration](Essential_UI_Kit_images/visual-studio-intergration-mvvm-files.png)
 
@@ -46,7 +46,7 @@ To get started with the Essential® UI Kit for .NET MAUI, first install the appr
 
 	![Added Resources in MAUI Visual Studio Intergration](Essential_UI_Kit_images/visual-studio-intergration-resources.png)
 
-7.	Then, Syncfusion® licensing registration required message box will be shown if you installed the trial setup or NuGet packages since Syncfusion® introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key), which is shown in the licensing message box to generate and register the Syncfusion® license key to your project. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx) post for understanding the licensing changes introduced in Essential Studio. 
+7.	Then, Syncfusion<sup>®</sup> licensing registration required message box will be shown if you installed the trial setup or NuGet packages since Syncfusion<sup>®</sup> introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio<sup>®</sup> release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key), which is shown in the licensing message box to generate and register the Syncfusion<sup>®</sup> license key to your project. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx) post for understanding the licensing changes introduced in Essential Studio<sup>®</sup>. 
 
 ## Run the UI template item
 
