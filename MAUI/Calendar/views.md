@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Views in .NET MAUI Calendar control | Syncfusion
-description: Learn here all about the Views feature of Syncfusion .NET MAUI Calendar (SfCalendar) control and more.
+title: Views in .NET MAUI Calendar control | Syncfusion<sup>&reg;</sup>
+description: Learn here all about the Views feature of Syncfusion<sup>&reg;</sup> .NET MAUI Calendar (SfCalendar) control and more.
 platform: maui
 control: Calendar
 documentation: ug

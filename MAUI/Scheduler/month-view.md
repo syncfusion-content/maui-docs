@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Month View in .NET MAUI Scheduler control | Syncfusion
-description: Learn here all about how to customize the appearance and change the date format for month view in Syncfusion .NET MAUI Scheduler (SfScheduler) control and more.
+title: Month View in .NET MAUI Scheduler control | Syncfusion<sup>&reg;</sup>
+description: Learn here all about how to customize the appearance and change the date format for month view in Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler (SfScheduler) control and more.
 platform: maui
 control: SfScheduler
 documentation: ug
@@ -430,10 +430,6 @@ You can customize the month cell appearance by using the [CellTemplate](https://
 
 N>
 * The BindingContext of the `CellTemplate` is the `SchedulerMonthCellDetails.`
-
-Check out the video below to see how to customize the month cell appearance with a DataTemplate in .NET MAUI SfScheduler
-
-{% youtube "https://www.youtube.com/watch?v=Y5yrIrShwrw" %}
 
 #### Customize month cell appearance using DataTemplateSelector
 

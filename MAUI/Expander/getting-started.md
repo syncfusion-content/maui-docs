@@ -14,42 +14,37 @@ This section guides you through setting up and configuring a [Expander](https://
 To quickly get started with the .NET MAUI Expander, watch this video:
 <style>#MAUIExpanderVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIExpanderVideoTutorial' src='https://www.youtube.com/embed/zTVbps0m8i0'></iframe>
 
+{% tabcontents %}
+{% tabcontent Visual Studio %}
+
 ## Prerequisites
-Before proceeding, ensure the following are in place:
+Before proceeding, ensure the following are set up:
 
- 1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
- 2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or VS Code. For VS Code users, ensure that the .NET MAUI workload is installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
+1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
+2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later).
 
-## Step 1: Create a .NET MAUI project
+## Step 1: Create a new .NET MAUI Project
 
-### Visual Studio
+1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
+2. Name the project and choose a location. Then, click **Next.**
+3. Select the .NET framework version and click **Create.**
 
- 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
- 2. Name the project and choose a location. Then, click **Next**.
- 3. Select the .NET framework version. Then, click **Create**.
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Core NuGet Package
 
-### Visual Studio Code
-
- 1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and Enter.
- 2. Choose the **.NET MAUI App** template.
- 3. Select the project location, type the project name and press Enter.
- 4. Then choose **Create Project**.
- 
-## Step 2: Install the Syncfusion MAUI Expander NuGet Package
- 
- 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
- 2. Search for [Syncfusion.Maui.Expander](https://www.nuget.org/packages/Syncfusion.Maui.Expander) and install the latest version.
- 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
+1.  In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
+2.  Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and install the latest version.
+3.  Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 ## Step 3: Register the handler
 
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all Syncfusion controls in .NET MAUI. In `the MauiProgram.cs` file, register the handler for Syncfusion Core.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% tabs %}
-{% highlight c# hl_lines="4 20" %}
+{% highlight c# hl_lines="6 17" %}
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
 using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
-using Microsoft.Maui.Hosting;
 using Syncfusion.Maui.Core.Hosting;
 
 namespace GettingStarted
@@ -72,7 +67,6 @@ namespace GettingStarted
     }
 }
 {% endhighlight %} 
-{% endtabs %}
  
 ## Step 4: Add a Basic Expander
  
@@ -80,7 +74,7 @@ namespace GettingStarted
  2. Initialize [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html).
  
 {% tabs %}
-{% highlight xaml hl_lines="4"%}
+{% highlight xaml hl_lines="4" %}
 <ContentPage   
     . . .
     xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Expander;assembly=Syncfusion.Maui.Expander">
@@ -88,7 +82,7 @@ namespace GettingStarted
 </ContentPage>
 {% endhighlight %}
 
-{% highlight c# hl_lines="8"%}
+{% highlight c# hl_lines="8" %}
 using Syncfusion.Maui.Expander;
 . . .
 public partial class MainPage : ContentPage
@@ -101,6 +95,93 @@ public partial class MainPage : ContentPage
 }
 {% endhighlight %}
 {% endtabs %}
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+## Prerequisites
+Before proceeding, ensure the following are set up:
+
+1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
+2. Set up a .NET MAUI environment with Visual Studio Code.
+3. Ensure that the .NET MAUI extension is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
+
+## Step 1: Create a new .NET MAUI Project
+
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+2. Choose the **.NET MAUI App** template.
+3. Select the project location, type the project name and press **Enter.**
+4. Then choose **Create project.**
+
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Core NuGet Package
+
+1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
+2. Ensure you're in the project root directory where your .csproj file is located.
+3. Run the command `dotnet add package Syncfusion.Maui.Core` to install the Syncfusion<sup>®</sup> .NET MAUI Core package.
+4. To ensure all dependencies are installed, run `dotnet restore`.
+
+## Step 3: Register the handler
+
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
+
+{% highlight c# hl_lines="6 17" %}
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Syncfusion.Maui.Core.Hosting;
+
+namespace GettingStarted
+{
+    public class MauiProgram 
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+                .UseMauiApp<App>()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                });
+
+            builder.ConfigureSyncfusionCore();
+            return builder.Build();
+        }
+    }
+}
+{% endhighlight %} 
+
+## Step 4: Add a Basic Expander
+ 
+ 1. To initialize the control, import the `Syncfusion.Maui.Expander` namespace into your code.
+ 2. Initialize [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html).
+ 
+{% tabs %}
+{% highlight xaml hl_lines="4" %}
+<ContentPage   
+    . . .
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Expander;assembly=Syncfusion.Maui.Expander">
+    <syncfusion:SfExpander />
+</ContentPage>
+{% endhighlight %}
+
+{% highlight c# hl_lines="8" %}
+using Syncfusion.Maui.Expander;
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfExpander expander = new SfExpander();
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+{% endtabcontent %}
+{% endtabcontents %}
 
 ## Step 5: Define the Header and Content 
 
@@ -111,7 +192,7 @@ Here, the Grid with Labels is loaded in the Header and Content of the expander.
 N> Loading the `Label` as direct children of the `Header` or `Content` of the Expander will lead to an exception. So, load the Label inside the Grid to overcome the crash.
 
 {% tabs %}
-{% highlight xaml hl_lines="11"%}
+{% highlight xaml hl_lines="11" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -310,7 +391,7 @@ The [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.Sf
 The [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html) allows you to customize the rate of change of parameters over time or animation style by using the [AnimationEasing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_AnimationEasing) property. By default, the animation easing is `Linear`.
 
 {% tabs %}
-{% highlight xaml hl_lines="2"%}
+{% highlight xaml hl_lines="2" %}
     <syncfusion:SfExpander x:Name="expander"
                            AnimationEasing="SinOut"/>       
 {% endhighlight %}
@@ -324,7 +405,7 @@ The [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.Sf
 The [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html) allows you to programmatically expand and collapse by using the [IsExpanded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_IsExpanded) property of the SfExpander. The user can control the expand and collapse interactions by handling the `Expanding` and `Collapsing` events.
 
 {% tabs %}
-{% highlight xaml hl_lines="2"%}
+{% highlight xaml hl_lines="2" %}
     <syncfusion:SfExpander x:Name="expander" 
                            IsExpanded="True"/>        
 {% endhighlight %}
