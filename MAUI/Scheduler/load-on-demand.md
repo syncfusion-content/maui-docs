@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Load appointments on demand in .NET MAUI Scheduler | Syncfusion
-description: Learn here all about how to load appointments on demand from visible dates in Syncfusion .NET MAUI Scheduler (SfScheduler) control, its elements, and more.
+title: Load appointments on demand in .NET MAUI Scheduler | Syncfusion<sup>&reg;</sup>
+description: Learn here all about how to load appointments on demand from visible dates in Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler (SfScheduler) control, its elements, and more.
 platform: maui
 control: SfScheduler
 documentation: ug

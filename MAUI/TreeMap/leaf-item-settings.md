@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Leaf Item Settings in .NET MAUI TreeMap | Syncfusion
-description: Learn about the leaf items within Syncfusion .NET MAUI TreeMap, exploring its fundamental features and functionalities for effective treemap visualization.
+title: Leaf Item Settings in .NET MAUI TreeMap | Syncfusion<sup>&reg;</sup>
+description: Learn about the leaf items within Syncfusion<sup>&reg;</sup> .NET MAUI TreeMap, exploring its fundamental features and functionalities for effective treemap visualization.
 platform: maui
 control: TreeMap (SfTreeMap)
 documentation: ug
