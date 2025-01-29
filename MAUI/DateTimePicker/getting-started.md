@@ -1,40 +1,34 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Date Time Picker control | Syncfusion
-description: Learn about getting started with Syncfusion .NET MAUI Date Time Picker (SfDateTimePicker) control and its basic features.
+title: Getting started with .NET MAUI Date Time Picker control | Syncfusion<sup>&reg;</sup>
+description: Learn about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Date Time Picker (SfDateTimePicker) control and its basic features.
 platform: maui
 control: SfDateTimePicker
 documentation: ug
 ---
 
 # Getting Started with the .NET MAUI DateTimePicker
-This section explains how to add the Date Time Picker control. It covers only the basic features needed to get started with Syncfusion Date Time Picker. Follow the steps below to add a .NET MAUI Date time picker to your project.
+This section explains how to add the Date Time Picker control. It covers only the basic features needed to get started with Syncfusion<sup>&reg;</sup> Date Time Picker. Follow the steps below to add a .NET MAUI Date time picker to your project.
 
 To get start quickly with our .NET MAUI Date Time Picker, you can check the below video.
 
 {% youtube
 "youtube:https://youtu.be/fKuMBHegq7s?si=pDLQy52nILzOQUWC"%}
 
+{% tabcontents %}
+{% tabcontent Visual Studio %}
+
 ## Prerequisites
 
 Before proceeding, ensure the following are set up:
 1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later is installed.
-2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or Visual Studio Code. For Visual Studio Code users, ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
+2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later).
 
 ## Step 1: Create a New .NET MAUI Project
-
-### Visual Studio
 
 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
 2. Name the project and choose a location. Then click **Next**.
 3. Select the .NET framework version and click **Create**.
-
-### Visual Studio Code
-
-1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
-2. Choose the **.NET MAUI App** template.
-3. Select the project location, type the project name and press **Enter**.
-4. Then choose **Create project.**
 
 ## Step 2: Install the Syncfusion .NET MAUI DateTimePicker NuGet Package
 
@@ -44,7 +38,7 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register the handler
 
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion core.
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
 
 {% tabs %}
 {% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
@@ -107,6 +101,100 @@ public partial class MainPage : ContentPage
 
 {% endhighlight %}
 {% endtabs %}
+
+{% endtabcontent %}
+{% tabcontent Visual Studio Code %}
+
+## Prerequisites
+
+Before proceeding, ensure the following are set up:
+
+1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) 
+2. Set up a .NET MAUI environment Visual Studio Code.
+3. Ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
+
+## Step 1: Create a New .NET MAUI Project
+
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+2. Choose the **.NET MAUI App** template.
+3. Select the project location, type the project name and press **Enter**.
+4. Then choose **Create project.**
+
+## Step 2: Install the Syncfusion .NET MAUI DateTimePicker NuGet Package
+
+1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
+2. Ensure you're in the project root directory where your .csproj file is located.
+3. Run the command `dotnet add package Syncfusion.Maui.Picker` to install the Syncfusion<sup>®</sup> .NET MAUI Picker NuGet package.
+4. To ensure all dependencies are installed, run `dotnet restore`.
+
+## Step 3: Register the handler
+
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
+
+{% tabs %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
+
+using Syncfusion.Maui.Core.Hosting;
+namespace GettingStarted
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+
+            builder.ConfigureSyncfusionCore();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
+
+            return builder.Build();
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Step 4: Add .NET MAUI Date time picker control
+
+1. To initialize the control, import the `Syncfusion.Maui.Picker` namespace into your code.
+2. Initialize [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
+
+<ContentPage   
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+
+    <picker:SfDateTimePicker />
+</ContentPage>
+
+{% endhighlight %}
+{% highlight c# tabtitle="C#" hl_lines="1 9 10" %}
+
+using Syncfusion.Maui.Picker;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDateTimePicker picker = new SfDateTimePicker();
+        this.Content = picker;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+{% endtabcontents %}
 
 ## Date Time Picker header
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tile Layer in Maps control | Syncfusion
-description: Learn here all about the Tile Layer feature of the Syncfusion .NET MAUI Maps (SfMaps) control to customize their appearances and more.
+title: Tile Layer in Maps control | Syncfusion<sup>&reg;</sup>
+description: Learn here all about the Tile Layer feature of the Syncfusion<sup>&reg;</sup> .NET MAUI Maps (SfMaps) control to customize their appearances and more.
 platform: MAUI
 control: SfMaps
 documentation: ug
