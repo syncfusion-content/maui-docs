@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Installing Syncfusion .NET MAUI Mac installer - Syncfusion
-description: Learn here about how to install Syncfusion .NET MAUI Mac installer after downloading from our Syncfusion website.
+title: Installing Syncfusion® .NET MAUI Mac installer - Syncfusion®
+description: Learn here about how to install Syncfusion® .NET MAUI Mac installer after downloading from our Syncfusion® website.
 platform: MAUI
 control: Installation and Deployment
 documentation: ug
@@ -42,10 +42,10 @@ The steps below show how to install .NET MAUI Mac installer.
 
    ![License Agree Confirmation](images/Mac_Installer4.png)
    
-   N> The Unlock key is not required to install the Mac installer. The Syncfusion Mac installer can be used for development purposes without registering the Unlock key.
+   N> The Unlock key is not required to install the Mac installer. The Syncfusion<sup>®</sup> Mac installer can be used for development purposes without registering the Unlock key.
 
 
-5. Now you can open the folder to explore the Syncfusion Essential Studio Mac installer.
+5. Now you can open the folder to explore the Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> Mac installer.
 
    ![Destination](images/Mac_Installer5.png)
 
