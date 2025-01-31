@@ -108,6 +108,47 @@ private void Button_Clicked(object sender, EventArgs e)
 {% endhighlight %}  
 {% endtabs %}
 
+### Relative view
+
+The [RelativeView] is used to display the date time picker in a pop-up from the relative position of the specified view by setting setting the [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Mode) property to [RelativeDialog](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerMode.html#Syncfusion_Maui_Picker_PickerMode_RelativeDialog). You can set the position by setting the [RelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_RelativePosition) property in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
+
+
+The Date Time picker can be opened programmatically by setting the [`IsOpen`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_IsOpen) property to `true` of [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html). By default, the `IsOpen` property is `false`.
+
+Note: This property is automatically changed to `false` when you close the dialog by clicking outside of the dialog.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml"% hl_lines="5" }
+
+<Grid>
+    <picker:SfDateTimePicker x:Name="picker" 
+                             Mode="RelativeDialog"
+                             RelativePosition="AlignTopLeft"
+                             RelativeView = "{x:Reference pickerButton}">
+    </picker:SfDateTimePicker>
+    <Button Text="Open Date Time picker" 
+            x:Name="pickerButton"
+            Clicked="Button_Clicked"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            HeightRequest="50" 
+            WidthRequest="150">
+    </Button>
+</Grid>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs"% hl_lines="4" }
+
+private void Button_Clicked(object sender, EventArgs e)
+{
+    this.picker.IsOpen = true;
+    this.picker.RelativeView = pickerButton;
+}
+
+{% endhighlight %}  
+{% endtabs %}
+
+
    ![Relative dialog mode in .NET MAUI Date Time picker.](images/date-time-picker-mode/maui-date-time-picker-relative-dialog-mode1.png)
 
    ![Relative dialog mode in .NET MAUI Date Time picker.](images/date-time-picker-mode/maui-date-time-picker-relative-dialog-mode2.png)
