@@ -151,7 +151,7 @@ this.Content = sunburst;
 {% endtabs %}
 
 ## Legend maximum size request
-To set the maximum size request for the legend view, override the **`GetMaximumSizeCoefficient`** protected method in the [SunburstLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstLegend.html) class. The value should be between 0 and 1, representing the maximum size request, not the desired size of the legend items layout. its default value is 0.25.
+To set the maximum size request for the legend view, override the **`GetMaximumSizeCoefficient`** protected method in the [SunburstLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstLegend.html) class. The value should be between 0 and 1, representing the maximum size request, not the desired size of the legend items layout. Its default value is 0.25.
 
 {% tabs %}
 
