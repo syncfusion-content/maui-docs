@@ -69,13 +69,13 @@ this.Content = sunburst;
 
 ## Customizing labels
 
-The appearance of the legend label can be customized using the [`LabelStyle`]() property. The following properties are available:
+The appearance of the legend label can be customized using the **`LabelStyle`** property. The following properties are available:
 
-* [`TextColor`]() – Gets or sets the color of the label.
-* [`FontFamily`]() - Gets or sets the font family for the legend label. 
-* [`FontAttributes`]() - Gets or sets the font style for the legend label. 
-* [`FontSize`]() - Gets or sets the font size for the legend label.
-* [`Margin`]() - Gets or sets the margin size of labels.
+* **`TextColor`** – Gets or sets the color of the label.
+* **`FontFamily`** - Gets or sets the font family for the legend label. 
+* **`FontAttributes`** - Gets or sets the font style for the legend label. 
+* **`FontSize`** - Gets or sets the font size for the legend label.
+* **`Margin`** - Gets or sets the margin size of labels.
 
 {% tabs %} 
 
@@ -151,7 +151,7 @@ this.Content = sunburst;
 {% endtabs %}
 
 ## Legend maximum size request
-To set the maximum size request for the legend view, override the [GetMaximumSizeCoefficient]() protected method in the [SunburstLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstLegend.html) class. The value should be between 0 and 1, representing the maximum size request, not the desired size of the legend items layout.
+To set the maximum size request for the legend view, override the **`GetMaximumSizeCoefficient`** protected method in the [SunburstLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstLegend.html) class. The value should be between 0 and 1, representing the maximum size request, not the desired size of the legend items layout. its default value is 0.25.
 
 {% tabs %}
 
@@ -187,7 +187,7 @@ this.Content = sunburst;
 
 ## Items layout
 
-The [ItemsLayout]() property is used to customize the arrangement and position of legend items. The default value is `null`. This property accepts any layout type.
+The **`ItemsLayout`** property is used to customize the arrangement and position of legend items. The default value is `null`. This property accepts any layout type.
 
 {% tabs %}
 
@@ -227,9 +227,9 @@ this.Content = sunburst;
 {% endtabs %}
 
 ## Item template
-The [SunburstLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstLegend.html) supports customizing the appearance of legend items using the [ItemTemplate]() property. The default value of ItemsTemplate is `null`.
+The [SunburstLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstLegend.html) supports customizing the appearance of legend items using the **`ItemTemplate`** property. The default value of ItemsTemplate is `null`.
 
-N> The BindingContext of the template is the corresponding underlying legend item provided in the ChartLegendItem class.
+N> The BindingContext of the template is the corresponding underlying legend item.
 
 {% tabs %}
 
@@ -277,7 +277,7 @@ this.Content = sunburst;
 
 **LegendItemCreated**
 
-The [`LegendItemCreated`]() event is triggered when the sunburst legend item is created. The event argument contains a [`LegendItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LegendItemEventArgs.html#Syncfusion_Maui_Core_LegendItemEventArgs_LegendItem) object with the following properties:
+The **`LegendItemCreated`** event is triggered when the sunburst legend item is created. The event argument contains a [`LegendItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LegendItemEventArgs.html#Syncfusion_Maui_Core_LegendItemEventArgs_LegendItem) object with the following properties:
 
 * [`Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ILegendItem.html#Syncfusion_Maui_Core_ILegendItem_Text) – used to get or set the text of the label.
 * [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ILegendItem.html#Syncfusion_Maui_Core_ILegendItem_TextColor) – used to get or set the color of the label.
@@ -289,7 +289,5 @@ The [`LegendItemCreated`]() event is triggered when the sunburst legend item is 
 * [`IconType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ILegendItem.html#Syncfusion_Maui_Core_ILegendItem_IconType) - used to get or set the icon type for the legend icon.
 * [`IconHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ILegendItem.html#Syncfusion_Maui_Core_ILegendItem_IconHeight) - used to get or set the icon height of the legend icon.
 * [`IconWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ILegendItem.html#Syncfusion_Maui_Core_ILegendItem_IconWidth) - used to get or set the icon width of the legend icon.
-* [`IsToggled`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ILegendItem.html#Syncfusion_Maui_Core_ILegendItem_IsToggled) - used to get or set the toggle visibility of the legend.
-* [`DisableBrush`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ILegendItem.html#Syncfusion_Maui_Core_ILegendItem_DisableBrush) - used to get or set the color of the legend when toggled.
 * [`Index`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ILegendItem.html#Syncfusion_Maui_Core_ILegendItem_Index) - used to get index position of the legend.
-* [`Item`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ILegendItem.html#Syncfusion_Maui_Core_ILegendItem_Item) - used to get the corresponding series for the legend item.
+* [`Item`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ILegendItem.html#Syncfusion_Maui_Core_ILegendItem_Item) - used to get the corresponding SunburstItem hierarchical and positional information for the legend item.
