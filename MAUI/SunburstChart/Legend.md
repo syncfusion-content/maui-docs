@@ -199,7 +199,7 @@ The **`ItemsLayout`** property is used to customize the arrangement and position
         <sunburst:SunburstLegend>
             <sunburst:SunburstLegend.ItemsLayout>
                 <FlexLayout Wrap="Wrap"
-                            WidthRequest="400">
+                            WidthRequest="200">
                 </FlexLayout>
             </sunburst:SunburstLegend.ItemsLayout>
          </sunburst:SunburstLegend>
@@ -216,7 +216,7 @@ SunburstLegend legend = new SunburstLegend();
 legend.ItemsLayout = new FlexLayout()
 {
     Wrap = FlexWrap.Wrap,
-    WidthRequest = 400
+    WidthRequest = 200
 };
 
 sunburst.Legend = legend;
@@ -225,6 +225,8 @@ this.Content = sunburst;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Legend items layout for sunburst chart](Legend-images/maui_legend_items_layout.png)
 
 ## Item template
 The [SunburstLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstLegend.html) supports customizing the appearance of legend items using the **`ItemTemplate`** property. The default value of ItemsTemplate is `null`.
@@ -271,7 +273,7 @@ this.Content = sunburst;
 
 {% endtabs %}
 
-![Legend layout for sunburst chart](Legend-images/maui_item_template.png)
+![Legend item template for sunburst chart](Legend-images/maui_item_template.png)
 
 ## Event 
 
