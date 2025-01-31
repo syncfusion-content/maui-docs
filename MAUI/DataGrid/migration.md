@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migrate from Xamarin SfDataGrid to .NET MAUI SfDataGrid | Syncfusion 
-description: Learn here all about Migrating from Syncfusion Xamarin SfDataGrid to Syncfusion .NET MAUI SfDataGrid control and more.
+title: Migrate from Xamarin SfDataGrid to .NET MAUI SfDataGrid | Syncfusion® 
+description: Learn here all about Migrating from Syncfusion® Xamarin SfDataGrid to Syncfusion® .NET MAUI SfDataGrid control and more.
 platform: MAUI
 control: SfDataGrid
 documentation: ug
@@ -81,18 +81,18 @@ To make migration from [Xamarin SfDataGrid](https://www.syncfusion.com/xamarin-u
 <td>Defines constants that specify the possible progressing states of resizing operation.</td>
 </tr>
 <tr>
-<td>{{'[SelectionUnit]()'| markdownify }}</td>
+<td>{{'[SelectionUnit](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SelectionUnit.html)'| markdownify }}</td>
 <td>{{'[DataGridSelectionUnit]()'| markdownify }}</td>
 <td>Defines the constants that specifies how the selection is applied.</td>
 </tr>
 <tr>
-<td>{{'`SwipeOffsetMode`'| markdownify }}</td>
-<td>{{'`DataGridSwipeOffsetMode`'| markdownify }}</td>
+<td>{{'[SwipeOffsetMode](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SwipeOffsetMode.html)'| markdownify }}</td>
+<td>{{'[DataGridSwipeOffsetMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSwipeOffsetMode.html)'| markdownify }}</td>
 <td>Defines constants that specifies whether the swipe view content should be auto sized or not.</td>
 </tr>
 <tr>
-<td>{{'`SwipeDirection `'| markdownify }}</td>
-<td>{{'`DataGridSwipeDirection `'| markdownify }}</td>
+<td>{{'[SwipeDirection](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SwipeDirection.html)'| markdownify }}</td>
+<td>{{'[DataGridSwipeDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSwipeDirection.html)'| markdownify }}</td>
 <td>Defines constants that specify the swipe directions.</td>
 </tr>
 </table>
@@ -507,20 +507,20 @@ We have passed the optional parameters such as {{'[canIncludeHiddenColumns](http
 </tr>
 
 <tr>
-<td>{{'`SwipeStartedEventArgs`'| markdownify }}</td>
-<td>{{'`DataGridSwipeStartingEventArgs`'| markdownify }}</td>
+<td>{{'[SwipeStartedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SwipeStartedEventArgs.html)'| markdownify }}</td>
+<td>{{'[DataGridSwipeStartingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSwipeStartingEventArgs.html)'| markdownify }}</td>
 <td>Represents a datagrid swipe starting event args.</td>
 </tr>
 
 <tr>
-<td>{{'`SwipingEventArgs`'| markdownify }}</td>
-<td>{{'`DataGridSwipingEventArgs `'| markdownify }}</td>
+<td>{{'[SwipingEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SwipingEventArgs.html)'| markdownify }}</td>
+<td>{{'[DataGridSwipingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSwipingEventArgs.html)'| markdownify }}</td>
 <td>Represents a datagrid swiping event args.</td>
 </tr>
 
 <tr>
-<td>{{'`SwipeEndedEventArgs`'| markdownify }}</td>
-<td>{{'`DataGridSwipeEndedEventArgs`'| markdownify }}</td>
+<td>{{'[SwipeEndedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfDataGrid.XForms.SwipeEndedEventArgs.html)'| markdownify }}</td>
+<td>{{'[DataGridSwipeEndedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSwipeEndedEventArgs.html)'| markdownify }}</td>
 <td>Represents a datagrid swipe ended event args.</td>
 </tr>
 </table>

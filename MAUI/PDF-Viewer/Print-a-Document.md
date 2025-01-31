@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print a Document in .NET MAUI PDF Viewer Control | Syncfusion
-description: Learn here all about printing feature in Syncfusion® .NET MAUI PDF Viewer (SfPdfViewer) control and more.
+description: Learn here all about printing feature in Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control and more.
 platform: MAUI
 control: SfPdfViewer
 documentation: ug

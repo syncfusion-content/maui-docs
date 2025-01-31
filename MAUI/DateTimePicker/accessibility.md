@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Accessibility with .NET MAUI Date Time Picker Control | Syncfusion
-description: Learn here about accessibility with Syncfusion .NET MAUI Date Time Picker (SfDateTimePicker) control.
+title: Accessibility with .NET MAUI Date Time Picker Control | Syncfusion<sup>&reg;</sup>
+description: Learn here about accessibility with Syncfusion<sup>&reg;</sup> .NET MAUI Date Time Picker (SfDateTimePicker) control.
 platform: maui
 control: SfDateTimePicker
 documentation: ug

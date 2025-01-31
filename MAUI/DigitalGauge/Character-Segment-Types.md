@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Character Types in .NET MAUI Digital Gauge control | Syncfusion
-description: Learn here all about Character Types support in Syncfusion .NET MAUI Digital Gauge (SfDigitalGauge) control and more.
+title: Character Types in .NET MAUI Digital Gauge control | Syncfusion<sup>&reg;</sup>
+description: Learn here all about Character Types support in Syncfusion<sup>&reg;</sup> .NET MAUI Digital Gauge (SfDigitalGauge) control and more.
 platform: maui
 control: DigitalGauge
 documentation: ug

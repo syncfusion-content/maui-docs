@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migrate from Syncfusion Xamarin SfCards to .NET MAUI SfCards
-description: Learn here about Migrating from Syncfusion Xamarin Card to Syncfusion .NET MAUI Card control.
+title: Migrate from Syncfusion<sup>&reg;</sup> Xamarin SfCards to .NET MAUI SfCards
+description: Learn here about Migrating from Syncfusion<sup>&reg;</sup> Xamarin Card to Syncfusion<sup>&reg;</sup> .NET MAUI Card control.
 platform: maui
 control: SfCards
 documentation: ug
