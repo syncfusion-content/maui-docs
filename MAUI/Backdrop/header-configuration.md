@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Header Configuration with Syncfusion Backdrop Page | Syncfusion
-description: Learn how to configure and customize the header in the Syncfusion backdrop page control in the .NET MAUI platform.
+title: Header Configuration with Syncfusion<sup>&reg;</sup> Backdrop Page | Syncfusion<sup>&reg;</sup>
+description: Learn how to configure and customize the header in the Syncfusion<sup>&reg;</sup> backdrop page control in the .NET MAUI platform.
 platform: MAUI
 control: SfBackdropPage
 documentation: ug
