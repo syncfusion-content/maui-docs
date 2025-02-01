@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Show Password Character in .NET MAUI MaskedEntry control | Syncfusion
-description: Learn here all about Show Password Character support iin Syncfusion .NET MAUI Masked Entry (SfMaskedEntry) control and more.
+title: Show Password Character in .NET MAUI MaskedEntry control | Syncfusion®
+description: Learn here all about Show Password Character support iin Syncfusion® .NET MAUI Masked Entry (SfMaskedEntry) control and more.
 platform: maui
 control: SfMaskedEntry
 documentation: ug 
