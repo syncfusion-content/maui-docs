@@ -16,18 +16,19 @@ The ClearButtonVisibility of type [ClearButtonVisibility](https://help.syncfusio
 {% tabs %}
 {% highlight XAML %}
 
-<syncfusion:SfMaskedEntry WidthRequest="200"
+<editors:SfMaskedEntry WidthRequest="200"
                           MaskType="Simple"
-                          Mask="(000) 000-0000"
+                          Mask="(000) 000-0000" Value="1234"
                           ClearButtonVisibility = "WhileEditing" />
 
 {% endhighlight %}
 {% highlight C# %}
 
-maskedEntry = new SfMaskedEntry();
-maskedEntry.WidthRequest = "200";
+SfMaskedEntry maskedEntry = new SfMaskedEntry();
+maskedEntry.WidthRequest = 200;
 maskedEntry.MaskType = MaskedEntryMaskType.Simple;
-maskedEntry.Mask = "(000) 000-0000";  
+maskedEntry.Mask = "(000) 000-0000";
+maskedEntry.Value = 1234;
 maskedEntry.ClearButtonVisibility = ClearButtonVisibility.WhileEditing;
 
 {% endhighlight %}
@@ -42,16 +43,22 @@ The clear button icon color can be changed by using the [ClearButtonColor](https
 {% tabs %}
 {% highlight xaml %}
 
-<syncfusion:SfMaskedEntry x:Name="maskedEntry"
+<editors:SfMaskedEntry x:Name="maskedEntry"
                           WidthRequest="200"
                           MaskType="Simple"
-                          Mask="(000) 000-0000"
+                          Mask="(000) 000-0000" Value="044"
                           ClearButtonVisibility = "WhileEditing"
                           ClearButtonColor="Red" />
 
 {% endhighlight %}
 {% highlight C# %}
 
+SfMaskedEntry maskedEntry = new SfMaskedEntry();
+maskedEntry.WidthRequest = 200;
+maskedEntry.MaskType = MaskedEntryMaskType.Simple;
+maskedEntry.Mask = "(000) 000-0000";
+maskedEntry.Value = 044;
+maskedEntry.ClearButtonVisibility = ClearButtonVisibility.WhileEditing;
 maskedEntry.ClearButtonColor = Colors.Red;
 
 {% endhighlight %}
@@ -71,7 +78,7 @@ The Masked Entry control allows the user to customize the font size of the text 
 {% tabs %}
 {% highlight XAML %}
 
-<syncfusion:SfMaskedEntry WidthRequest="200"
+<editors:SfMaskedEntry WidthRequest="200"
                           MaskType="Simple"
                           Mask="(000) 000-0000" Value="1234"
                           FontSize="18"/>
@@ -79,8 +86,8 @@ The Masked Entry control allows the user to customize the font size of the text 
 {% endhighlight %}
 {% highlight C# %}
 
-maskedEntry = new SfMaskedEntry();
-maskedEntry.WidthRequest = "200";
+SfMaskedEntry maskedEntry = new SfMaskedEntry();
+maskedEntry.WidthRequest = 200;
 maskedEntry.MaskType = MaskedEntryMaskType.Simple;
 maskedEntry.Mask = "(000) 000-0000";  
 maskedEntry.Value = 1234;
@@ -100,7 +107,7 @@ The Masked Entry control allows the user to customize the font attribute of the 
 {% tabs %}
 {% highlight XAML %}
 
-<syncfusion:SfMaskedEntry WidthRequest="200"
+<editors:SfMaskedEntry WidthRequest="200"
                           MaskType="Simple"
                           Mask="(000) 000-0000" Value="1234"
                           FontAttributes="Bold"/>
@@ -108,8 +115,8 @@ The Masked Entry control allows the user to customize the font attribute of the 
 {% endhighlight %}
 {% highlight C# %}
 
-maskedEntry = new SfMaskedEntry();
-maskedEntry.WidthRequest = "200";
+SfMaskedEntry maskedEntry = new SfMaskedEntry();
+maskedEntry.WidthRequest = 200;
 maskedEntry.MaskType = MaskedEntryMaskType.Simple;
 maskedEntry.Mask = "(000) 000-0000";  
 maskedEntry.Value = 1234;
@@ -127,7 +134,7 @@ The Masked Entry control allows the user to customize the text's font family ins
 {% tabs %}
 {% highlight XAML %}
 
-<syncfusion:SfMaskedEntry WidthRequest="200"
+<editors:SfMaskedEntry WidthRequest="200"
                           MaskType="Simple"
                           Mask="(000) 000-0000" Value="1234"
                           FontFamily="Lobster-Regular"/>
@@ -135,8 +142,8 @@ The Masked Entry control allows the user to customize the text's font family ins
 {% endhighlight %}
 {% highlight C# %}
 
-maskedEntry = new SfMaskedEntry();
-maskedEntry.WidthRequest = "200";
+SfMaskedEntry maskedEntry = new SfMaskedEntry();
+maskedEntry.WidthRequest = 200;
 maskedEntry.MaskType = MaskedEntryMaskType.Simple;
 maskedEntry.Mask = "(000) 000-0000";  
 maskedEntry.Value = 1234;
@@ -159,14 +166,14 @@ The Masked Entry control allows the user to define the text displayed when the M
 {% tabs %}
 {% highlight XAML %}
 
-<syncfusion:SfMaskedEntry WidthRequest="200"                         
+<editors:SfMaskedEntry WidthRequest="200"                         
                           Placeholder="Enter the value"/>
 
 {% endhighlight %}
 {% highlight C# %}
 
-maskedEntry = new SfMaskedEntry();
-maskedEntry.WidthRequest = "200";
+SfMaskedEntry maskedEntry = new SfMaskedEntry();
+maskedEntry.WidthRequest = 200;
 maskedEntry.Placeholder = "Enter the value";   
 
 {% endhighlight %}
@@ -181,17 +188,17 @@ The [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.S
 {% tabs %}
 {% highlight XAML %}
 
-<syncfusion:SfMaskedEntry WidthRequest="200"                         
+<editors:SfMaskedEntry WidthRequest="200"                         
                           Placeholder="Enter the value"
                           PlaceholderColor="Green"/>
 
 {% endhighlight %}
 {% highlight C# %}
 
-maskedEntry = new SfMaskedEntry();
-maskedEntry.WidthRequest = "200";
+SfMaskedEntry maskedEntry = new SfMaskedEntry();
+maskedEntry.WidthRequest = 200;
 maskedEntry.Placeholder = "Enter the value"; 
-maskedEntry.PlaceholderColor =  Colors.Green;   
+maskedEntry.PlaceholderColor =  Colors.Green; 
 
 {% endhighlight %}
 {% endtabs %}
@@ -205,7 +212,7 @@ The [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.S
 {% tabs %}
 {% highlight XAML %}
 
-<syncfusion:SfMaskedEntry WidthRequest="200"
+<editors:SfMaskedEntry WidthRequest="200"
                           MaskType="Simple"
                           Mask="(000) 000-0000" Value="1234"
                           TextColor="Green"/>
@@ -213,12 +220,12 @@ The [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.S
 {% endhighlight %}
 {% highlight C# %}
 
-maskedEntry = new SfMaskedEntry();
-maskedEntry.WidthRequest = "200";
+SfMaskedEntry maskedEntry = new SfMaskedEntry();
+maskedEntry.WidthRequest = 200;
 maskedEntry.MaskType = MaskedEntryMaskType.Simple;
 maskedEntry.Mask = "(000) 000-0000";  
 maskedEntry.Value = 1234;
-maskedEntry.TextColor =  Colors.Green;   
+maskedEntry.TextColor =  Colors.Green; 
 
 {% endhighlight %}
 {% endtabs %}
@@ -232,15 +239,17 @@ The [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.S
 {% tabs %}
 {% highlight XAML %}
 
-<syncfusion:SfMaskedEntry WidthRequest="200"
+<editors:SfMaskedEntry WidthRequest="200"
                           Mask="(000) 000-0000"
+                          ClearButtonVisibility="WhileEditing"
                           Stroke="Red"/>                                           
 {% endhighlight %}
 {% highlight C# %}
 
 SfMaskedEntry maskedEntry = new SfMaskedEntry();
-maskedEntry.WidthRequest = "200";
+maskedEntry.WidthRequest = 200;
 maskedEntry.Mask = "(000) 000-0000";
+maskedEntry.ClearButtonVisibility = ClearButtonVisibility.WhileEditing;
 maskedEntry.Stroke = Colors.Red;
 
 {% endhighlight %}
@@ -257,15 +266,18 @@ The [ShowBorder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMa
 {% tabs %}
 {% highlight XAML %}
 
-<syncfusion:SfMaskedEntry WidthRequest="200"
-                          Mask="(000) 000-0000"
+<editors:SfMaskedEntry WidthRequest="200"
+                          Mask="00/00/0000" Value="15/03/2024"
+                          ClearButtonVisibility="WhileEditing"
                           ShowBorder="False"/>                                           
 {% endhighlight %}
 {% highlight C# %}
 
 SfMaskedEntry maskedEntry = new SfMaskedEntry();
 maskedEntry.WidthRequest = 200;
-maskedEntry.Mask = "(000) 000-0000";
+maskedEntry.Mask = "00/00/0000";
+maskedEntry.Value= "15/03/2024";
+maskedEntry.ClearButtonVisibility = ClearButtonVisibility.WhileEditing;
 maskedEntry.ShowBorder = false;
 
 {% endhighlight %}
@@ -282,8 +294,10 @@ The [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.S
 {% tabs %}
 {% highlight xaml %}
 
-<syncfusion:SfMaskedEntry WidthRequest="200"
+<editors:SfMaskedEntry WidthRequest="200"
                           HeightRequest="50"
+                          Mask="00/00/0000" Value="22/11/2022"
+                          ClearButtonVisibility="WhileEditing"
                           HorizontalTextAlignment="Center" 
                           VerticalTextAlignment="Start"/>
 {% endhighlight %}
@@ -292,6 +306,9 @@ The [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.S
 SfMaskedEntry maskedEntry = new SfMaskedEntry();
 maskedEntry.WidthRequest = 200;
 maskedEntry.HeightRequest = 50;
+maskedEntry.Mask = "00/00/0000";
+maskedEntry.Value= "22/11/2022";
+maskedEntry.ClearButtonVisibility = ClearButtonVisibility.WhileEditing;
 maskedEntry.HorizontalTextAlignment = TextAlignment.Center;
 maskedEntry.VerticalTextAlignment = TextAlignment.Start;
 
@@ -315,13 +332,19 @@ N> Default value of ReturnType is `Default`.
 
 <editors:SfMaskedEntry x:Name="maskedentry" 
                         WidthRequest="200"
+                        Mask="00:00:0000" Value="120319"
+                        ClearButtonVisibility="WhileEditing"
                         ReturnType="Next"/>
 
 {% endhighlight %}
 {% highlight C# %}
 
-SfMaskedEntry sfMaskedEntry = new SfMaskedEntry();
-sfMaskedEntry.ReturnType = ReturnType.Next;
+SfMaskedEntry maskedEntry = new SfMaskedEntry();
+maskedEntry.WidthRequest = 200;
+maskedEntry.Mask = "00:00:0000";
+maskedEntry.Value= 120319;
+maskedEntry.ClearButtonVisibility = ClearButtonVisibility.WhileEditing;
+maskedEntry.ReturnType = ReturnType.Next;
 
 {% endhighlight %}
 {% endtabs %}
@@ -336,6 +359,7 @@ The `ClearButtonPath` property allows users to set the path for customizing the 
 {% highlight xaml %}
 
 <editors:SfMaskedEntry x:Name="maskedEntry"
+                       WidthRequest="250"
                        MaskType="Simple"
                        Mask="(000) 000-0000"
                        ClearButtonVisibility="WhileEditing">
@@ -359,7 +383,8 @@ var path = new Path()
     Stroke = Colors.Red
 };
 
-maskedEntry = new SfMaskedEntry();
+SfMaskedEntry maskedEntry = new SfMaskedEntry();
+maskedEntry.WidthRequest = 250;
 maskedEntry.MaskType = MaskedEntryMaskType.Simple;
 maskedEntry.Mask = "(000) 000-0000"; 
 maskedEntry.ClearButtonVisibility = ClearButtonVisibility.WhileEditing;
