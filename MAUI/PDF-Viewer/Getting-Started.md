@@ -22,7 +22,7 @@ To get started quickly, you can also check out our video tutorial below.
 
 Before proceeding, ensure the following are in place:
 
-1.	Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
+1.	Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 2.	Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later).
 
 ## Step 1: Create a New MAUI Project
@@ -197,7 +197,7 @@ N> 2. And, if you are using multiple pages in your application, then make sure t
 
 Before proceeding, ensure the following are in place:
 
-1.	Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
+1.	Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 2.	Set up a .NET MAUI environment with Visual Studio Code. 
 3.  Ensure that the .NET MAUI workload is installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
 

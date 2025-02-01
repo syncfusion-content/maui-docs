@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Editing in MAUI DataGrid control | Syncfusion
-description: Learn here all about Editing support in Syncfusion MAUI DataGrid (SfDataGrid) control and more about it.
+title: Editing in MAUI DataGrid control | Syncfusion®
+description: Learn here all about Editing support in Syncfusion® MAUI DataGrid (SfDataGrid) control and more about it.
 platform: MAUI
 control: SfDataGrid
 documentation: UG

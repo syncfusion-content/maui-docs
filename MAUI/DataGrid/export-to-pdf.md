@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Export to PDF in MAUI DataGrid control | Syncfusion
-description: Learn here all about PDF Exporting support in Syncfusion MAUI DataGrid (SfDataGrid) control and more about it.
+title: Export to PDF in MAUI DataGrid control | Syncfusion®
+description: Learn here all about PDF Exporting support in Syncfusion® MAUI DataGrid (SfDataGrid) control and more about it.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
