@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Carousel View control | Syncfusion
-description: Learn here about getting started with Syncfusion .NET MAUI Carousel View (SfCarousel) control, its elements and more.
+title: Getting Started with .NET MAUI Carousel View control | Syncfusion®
+description: Learn here about getting started with Syncfusion® .NET MAUI Carousel View (SfCarousel) control, its elements and more.
 platform: maui
 control: Carousel
 documentation: ug
 ---
 
-> **Notice**: After **Volume 1 2025 (Mid of March 2025)**, updates, bug fixes, and feature enhancements for this control will no longer be available in the Syncfusion package. Please switch to the **Syncfusion Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
+> **Notice**: After **Volume 1 2025 (Mid of March 2025)**, updates, bug fixes, and feature enhancements for this control will no longer be available in the Syncfusion<sup>®</sup> package. Please switch to the **Syncfusion<sup>®</sup> Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
 
 # Getting Started with .NET MAUI Carousel
 
@@ -129,8 +129,8 @@ Before proceeding, ensure the following are set up:
 3. Select the project location, type the project name and press Enter.
 4. Then choose **Create project**
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Carousel NuGet Package
 
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Carousel NuGet Package
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you're in the project root directory where your .csproj file is located.
 3. Run the command `dotnet add package Syncfusion.Maui.Carousel` to install the Syncfusion<sup>®</sup> .NET MAUI Carousel package.
