@@ -87,9 +87,7 @@ public class CityViewModel
 using Syncfusion.Maui.Inputs;
 
 CityViewModel cityViewModel = new CityViewModel();
-StackLayout stack = new StackLayout();
-SfComboBox comboBox;
-comboBox = new SfComboBox
+SfComboBox comboBox = new SfComboBox
 {
     WidthRequest = 200,
     HeightRequest = 50,
@@ -100,8 +98,6 @@ comboBox = new SfComboBox
     DisplayMemberPath = "Name",
     BindingContext = cityViewModel
 };
-stack.Children.Add(comboBox);
-this.Content = stack;
 
 {% endhighlight %}
 {% endtabs %}
@@ -133,12 +129,8 @@ Filter the matching items based on the starting text and the first filtered item
 {% endhighlight %}
 {% highlight C# %}
 
-using Syncfusion.Maui.Inputs;
-
 CityViewModel cityViewModel = new CityViewModel();
-StackLayout stack = new StackLayout();
-SfComboBox comboBox;
-comboBox = new SfComboBox
+SfComboBox comboBox = new SfComboBox
 {
     WidthRequest = 200,
     HeightRequest = 50,
@@ -150,8 +142,6 @@ comboBox = new SfComboBox
     DisplayMemberPath = "Name",
     BindingContext = cityViewModel
 };
-stack.Children.Add(comboBox);
-this.Content = stack;
 
 {% endhighlight %}
 {% endtabs %}
@@ -181,9 +171,7 @@ Filter the matching items that contain specific text, and the first filtered ite
 using Syncfusion.Maui.Inputs;
 
 CityViewModel cityViewModel = new CityViewModel();
-StackLayout stack = new StackLayout();
-SfComboBox comboBox;
-comboBox = new SfComboBox
+SfComboBox comboBox = new SfComboBox
 {
     WidthRequest = 200,
     HeightRequest = 50,
@@ -195,8 +183,6 @@ comboBox = new SfComboBox
     DisplayMemberPath = "Name",
     BindingContext = cityViewModel
 };
-stack.Children.Add(comboBox);
-this.Content = stack;
 
 {% endhighlight %}
 {% endtabs %}
@@ -281,9 +267,7 @@ public class CityFilteringBehavior : IComboBoxFilterBehavior
 
 CityViewModel cityViewModel = new CityViewModel();  
 CityFilteringBehavior cityFilteringBehavior = new CityFilteringBehavior();
-StackLayout stack = new StackLayout();
-SfComboBox comboBox;
-comboBox = new SfComboBox
+SfComboBox comboBox = new SfComboBox
 {
     WidthRequest = 200,
     HeightRequest = 50,
@@ -295,8 +279,6 @@ comboBox = new SfComboBox
     DisplayMemberPath = "CityName",
     BindingContext = cityViewModel
 };
-stack.Children.Add(comboBox);
-this.Content = stack;
 
 {% endhighlight %}
 {% endtabs %}
