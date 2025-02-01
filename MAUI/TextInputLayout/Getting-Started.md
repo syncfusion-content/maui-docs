@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Text Input Layout control | Syncfusion
-description: Learn here about getting started with Syncfusion .NET MAUI Text Input Layout (SfTextInputLayout) control, its elements and more.
+title: Getting Started with .NET MAUI Text Input Layout control | Syncfusion®
+description: Learn here about getting started with Syncfusion® .NET MAUI Text Input Layout (SfTextInputLayout) control, its elements and more.
 platform: maui
 control: SfTextInputLayout
 documentation: ug
@@ -120,6 +120,7 @@ Before proceeding, ensure the following are set up:
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Core NuGet Package
 
+
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you're in the project root directory where your .csproj file is located.
 3. Run the command `dotnet add package Syncfusion.Maui.Core` to install the Syncfusion<sup>®</sup> .NET MAUI Core package.
@@ -127,7 +128,7 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register the Handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion core.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion<sup>®</sup> core.
 
 {% highlight c# hl_lines="6 17" %}   
 using Microsoft.Maui;

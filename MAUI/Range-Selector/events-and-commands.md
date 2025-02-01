@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events and Commands in.NET MAUI Range Selector control | Syncfusion 
-description: Learn here all about adding the events and commands of Syncfusion .NET MAUI Range Selector (SfRangeSelector) control and more.
+title: Events and Commands in.NET MAUI Range Selector control | Syncfusion® 
+description: Learn here all about adding the events and commands of Syncfusion® .NET MAUI Range Selector (SfRangeSelector) control and more.
 platform: maui
 control: SfRangeSelector
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migrating from Xamarin to .NET MAUI SfRating | Syncfusion 
-description: Learn all about Migrating from Syncfusion Xamarin Rating to Syncfusion .NET MAUI Rating control and more here.
+title: Migrating from Xamarin to .NET MAUI SfRating | Syncfusion® 
+description: Learn all about Migrating from Syncfusion® Xamarin Rating to Syncfusion® .NET MAUI Rating control and more here.
 platform: maui
 control: SfRating
 documentation: ug
