@@ -243,7 +243,6 @@ When the [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.In
 {% highlight xaml %}
 
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
-
 SfAutocomplete autoComplete = new SfAutocomplete
 {
     HeightRequest = 50,
@@ -261,6 +260,7 @@ SfAutocomplete autoComplete = new SfAutocomplete
 
 {% highlight C# %}
 
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autoComplete = new SfAutocomplete
 {
     HeightRequest = 50,
@@ -302,12 +302,15 @@ When an item is selected from the drop-down list, the [SelectionChanged](https:/
 
 {% highlight C# %}
 
-SfAutocomplete autocomplete = new SfAutocomplete();
-autocomplete.WidthRequest = 250;
-autocomplete.HeightRequest = 50;
-autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
-autocomplete.TextMemberPath = "Name";
-autocomplete.DisplayMemberPath = "Name";
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+SfAutocomplete autocomplete = new SfAutocomplete
+{
+    WidthRequest = 250,
+    HeightRequest = 50,
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name",
+}
 autocomplete.SelectionChanged += OnSelectionChanged;
 
 {% endhighlight %}
