@@ -35,6 +35,10 @@ N>The default value of the [AllowLoadMore](https://help.syncfusion.com/cr/maui/S
 
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
+                     ItemTemplate="{StaticResource itemTemplate}"
+                     ItemHeight="200"
+                     ItemWidth="200"
+                     ItemSpacing="2" 
                      AllowLoadMore="True"
                      ViewMode="Linear">
 </carousel:SfCarousel>
@@ -68,6 +72,9 @@ N>The default value of the [LoadMoreItemsCount](https://help.syncfusion.com/cr/m
 
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
+                     ItemTemplate="{StaticResource itemTemplate}"
+                     ItemHeight="200"
+                     ItemWidth="200"
                      ItemSpacing="2"
                      AllowLoadMore="True"
                      ViewMode="Linear"
@@ -101,9 +108,9 @@ Custom view can be passed instead of the [LoadMore](https://help.syncfusion.com/
 
 {% highlight xaml %}
 
-<ContentPage.Content>
 <carousel:SfCarousel x:Name="carousel"
     ItemsSource="{Binding ImageCollection}"
+    ItemTemplate="{StaticResource itemTemplate}"
     ItemHeight="200"
     ItemWidth="200"
     ItemSpacing="2"
@@ -176,14 +183,16 @@ To load more items programmatically, the [LoadMore](https://help.syncfusion.com/
 
 {% highlight xaml %}
 
-<StackLayout>
     <carousel:SfCarousel x:Name="carousel"
                          ItemsSource="{Binding ImageCollection}"
+                         ItemTemplate="{StaticResource itemTemplate}"
+                         ItemHeight="200"
+                         ItemWidth="200"
+                         ItemSpacing="2" 
                          ViewMode="Default"
                          LoadMoreItemsCount="2" />
     <Button Text="LoadMore Method" 
             Clicked="Button_Clicked"/>
-</StackLayout>
 	
 {% endhighlight %}
 
