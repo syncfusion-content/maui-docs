@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Icons Library in .NET MAUI - Syncfusion<sup style="font-size:70%">&reg;</sup>
-description: Learn how to use and integrate the icon library from the MauiMaterialAssets.ttf file in Syncfusion<sup style="font-size:70%">&reg;</sup> .NET MAUI components.
+title: Icons in .NET MAUI - Syncfusion<sup style="font-size:70%">&reg;</sup>
+description: Learn how to use and integrate the icon from the MauiMaterialAssets.ttf file in Syncfusion<sup style="font-size:70%">&reg;</sup> .NET MAUI components.
 platform: maui
 component: Common
 documentation: ug
 ---
 
-# .NET MAUI Icons Library
+# .NET MAUI Icons
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> .NET MAUI library contains a comprehensive set of icons bundled in the `MauiMaterialAssets.ttf` file. These icons are readily available for use in .NET MAUI applications once the Syncfusion<sup style="font-size:70%">&reg;</sup> MAUI package is installed.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> .NET MAUI contains a comprehensive set of icons bundled in the `MauiMaterialAssets.ttf` file. These icons are readily available for use in .NET MAUI applications once the Syncfusion<sup style="font-size:70%">&reg;</sup> MAUI package is installed.
 
 ## Getting Started with Icon Integration
 
