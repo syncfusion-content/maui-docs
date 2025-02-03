@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Localization in .NET MAUI DataGrid Control | Syncfusion
-description: Learn here all about localization support in Syncfusion .NET MAUI DataGrid (SfDataGrid) control and more.
+title: Localization in .NET MAUI DataGrid Control | Syncfusion®
+description: Learn here all about localization support in Syncfusion® .NET MAUI DataGrid (SfDataGrid) control and more.
 platform: MAUI
 control: SfDataGrid
 documentation: ug
