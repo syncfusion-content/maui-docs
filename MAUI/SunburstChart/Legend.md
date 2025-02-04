@@ -199,7 +199,7 @@ The **`ItemsLayout`** property is used to customize the arrangement and position
         <sunburst:SunburstLegend>
             <sunburst:SunburstLegend.ItemsLayout>
                 <FlexLayout Wrap="Wrap"
-                            WidthRequest="200">
+                            WidthRequest="300">
                 </FlexLayout>
             </sunburst:SunburstLegend.ItemsLayout>
          </sunburst:SunburstLegend>
@@ -216,7 +216,7 @@ SunburstLegend legend = new SunburstLegend();
 legend.ItemsLayout = new FlexLayout()
 {
     Wrap = FlexWrap.Wrap,
-    WidthRequest = 200
+    WidthRequest = 300
 };
 
 sunburst.Legend = legend;
