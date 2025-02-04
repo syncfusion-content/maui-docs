@@ -26,13 +26,13 @@ Chips control also provides support to create and set [`SfChip`](https://help.sy
 
 <ContentPage.Content>
 <Grid>
-	<chip:SfChipGroup ChipBackground="Violet">
+	<chip:SfChipGroup >
 	<chip:SfChipGroup.Items>
-			<chip:SfChip Text="Extra Small"/>
-			<chip:SfChip Text="Small"/>
-			<chip:SfChip Text="Medium"/>
-			<chip:SfChip Text="Large"/>
-			<chip:SfChip Text="Extra Large"/>
+			<chip:SfChip Text="Extra Small" Background="Blue"/>
+			<chip:SfChip Text="Small" Background="Blue"/>
+			<chip:SfChip Text="Medium" Background="Blue"/>
+			<chip:SfChip Text="Large" Background="Blue"/>
+			<chip:SfChip Text="Extra Large" Background="Blue"/>
 		</chip:SfChipGroup.Items>
 	</chip:SfChipGroup>
 </Grid>
@@ -47,11 +47,11 @@ using Syncfusion.Maui.Core;
 	Grid grid = new Grid();
 	var chipGroup = new SfChipGroup(){Type = SfChipsType.Action};
 	grid.Children.Add(chipGroup);
-	chipGroup.Items.Add(new SfChip(){Text="Extra Small"});
-	chipGroup.Items.Add(new SfChip(){Text="Small"});
-	chipGroup.Items.Add(new SfChip(){Text="Medium"});
-	chipGroup.Items.Add(new SfChip(){Text="Large"});
-	chipGroup.Items.Add(new SfChip(){Text="Extra Large"});
+	chipGroup.Items.Add(new SfChip(){Text="Extra Small", Background = Colors.Violet });
+	chipGroup.Items.Add(new SfChip(){Text="Small", Background = Colors.Violet });
+	chipGroup.Items.Add(new SfChip(){Text="Medium", Background = Colors.Violet });
+	chipGroup.Items.Add(new SfChip(){Text="Large", Background = Colors.Violet });
+	chipGroup.Items.Add(new SfChip(){Text="Extra Large", Background = Colors.Violet });
 	chipGroup.ChipBackground = Colors.Violet;
 	this.Content = grid;
 		
