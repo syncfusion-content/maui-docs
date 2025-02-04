@@ -209,10 +209,10 @@ Before proceeding, ensure the following are set up:
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Core NuGet Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI RadialMenu NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and install the latest version.
+2. Search for [Syncfusion.Maui.RadialMenu](https://www.nuget.org/packages/Syncfusion.Maui.RadialMenu/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
 ## Step 3: Register the handler
@@ -254,8 +254,8 @@ namespace RadialMenuSample
 
 ## Step 4: Add a Basic Radial Menu
 
-1. To initialize the control, import the Core namespace into your code.
-2. Initialize [SfRadialMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfRadialMenu.html?tabs=tabid-1).
+1. To initialize the control, import the RadialMenu namespace into your code.
+2. Initialize [SfRadialMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SfRadialMenu.html?tabs=tabid-1).
 
 {% tabs %}
 
@@ -263,7 +263,7 @@ namespace RadialMenuSample
 
 <ContentPage
     . . .    
-    xmlns:sfradial="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
+    xmlns:sfradial="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu">
     <Grid>
         <sfradial:SfRadialMenu />
     </Grid>
@@ -273,7 +273,7 @@ namespace RadialMenuSample
 
 {% highlight c# %}
 
-    using Syncfusion.Maui.Core;
+    using Syncfusion.Maui.RadialMenu;
     namespace RadialMenuGettingStarted
     {
         public partial class MainPage : ContentPage

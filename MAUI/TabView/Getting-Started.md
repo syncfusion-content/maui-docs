@@ -230,10 +230,10 @@ Before proceeding, ensure the following are set up:
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Core NuGet Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI TabView NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and install the latest version.
+2. Search for [Syncfusion.Maui.TabView](https://www.nuget.org/packages/Syncfusion.Maui.TabView/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
 ## Step 3: Register the handler
@@ -248,7 +248,7 @@ using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace EffectsViewSample
+namespace TabViewSample
 {
   public static class MauiProgram
   {
@@ -273,10 +273,10 @@ namespace EffectsViewSample
 {% endhighlight %}
 
 
-## Step 4: Add a Basic Effects View
+## Step 4: Add a Basic Tab View
 
-1. To initialize the control, import the Core namespace into your code.
-2. Initialize [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html?tabs=tabid-1).
+1. To initialize the control, import the TabView namespace into your code.
+2. Initialize [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SfTabView.html?tabs=tabid-1).
 
 {% tabs %}
 
@@ -284,25 +284,25 @@ namespace EffectsViewSample
 
 <ContentPage
     . . .    
-    xmlns:sfeffects="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <Grid>
-        <sfeffects:SfEffectsView />
-    </Grid>
+    xmlns:sftab="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView">
+    <ContentPage.Content> 
+        <tabView:SfTabView /> 
+    </ContentPage.Content>  
 </ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    using Syncfusion.Maui.Core;
-    namespace EffectsViewGettingStarted
+    using Syncfusion.Maui.TabView;
+    namespace TabViewGettingStarted
     {
         public partial class MainPage : ContentPage
         {
             public MainPage()
             {
                 InitializeComponent();           
-                SfEffectsView effectsView = new SfEffectsView();
+                SfTabView tabView = new SfTabView();
             }
         }   
     }

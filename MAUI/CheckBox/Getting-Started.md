@@ -220,10 +220,10 @@ Before proceeding, ensure the following are set up:
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Core NuGet Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Buttons NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and install the latest version.
+2. Search for [Syncfusion.Maui.Buttons](https://www.nuget.org/packages/Syncfusion.Maui.Buttons/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
 ## Step 3: Register the handler
@@ -265,8 +265,8 @@ namespace CheckBoxSample
 
 ## Step 4: Add a Basic Check Box
 
-1. To initialize the control, import the Core namespace into your code.
-2. Initialize [SfCheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfCheckBox.html?tabs=tabid-1).
+1. To initialize the control, import the Buttons namespace into your code.
+2. Initialize [SfCheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html?tabs=tabid-1).
 
 {% tabs %}
 
@@ -274,7 +274,7 @@ namespace CheckBoxSample
 
 <ContentPage
     . . .    
-    xmlns:sfcheck="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
+    xmlns:sfcheck="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
     <Grid>
         <sfcheck:SfCheckBox />
     </Grid>
@@ -284,7 +284,7 @@ namespace CheckBoxSample
 
 {% highlight c# %}
 
-    using Syncfusion.Maui.Core;
+    using Syncfusion.Maui.Buttons;
     namespace CheckBoxGettingStarted
     {
         public partial class MainPage : ContentPage
