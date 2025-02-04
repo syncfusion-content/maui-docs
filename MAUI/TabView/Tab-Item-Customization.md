@@ -393,21 +393,32 @@ The [BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.
 
 [BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_BadgeSettings) contains the sub-elements such as badge types, positions, and colors. You can customize the background color, text color, border color, width, offset, and font attributes.
 
+N> To customize the badge beyond predefined styles, set [BadgeType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeType.html) to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeType.html#Syncfusion_Maui_Core_BadgeType_None) in the `BadgeSettings`
+
 {% tabs %}
 
 {% highlight xaml %}
-<tabView:SfTabView>
-    <tabView:SfTabItem Header="RECENTS" BadgeText="20">
-        <tabView:SfTabItem.BadgeSettings >
-            <core:BadgeSettings FontSize="15" 
-                                FontAttributes="Bold" 
-                                FontFamily="serif"/>
-        </tabView:SfTabItem.BadgeSettings>
-    </tabView:SfTabItem>
-</tabView:SfTabView>
+<ContentPage
+    . . .  
+    xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView  
+    xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
+    <tabView:SfTabView>
+        <tabView:SfTabItem Header="RECENTS" BadgeText="20">
+            <tabView:SfTabItem.BadgeSettings >
+                <core:BadgeSettings FontSize="15" 
+                                    FontAttributes="Bold" 
+                                    FontFamily="serif"/>
+            </tabView:SfTabItem.BadgeSettings>
+        </tabView:SfTabItem>
+    </tabView:SfTabView>    
+</ContentPage>
 {% endhighlight %}
 
 {% highlight C# %}
+
+using Syncfusion.Maui.Core;
+using Syncfusion.Maui.TabView;
+...
 
 var tabView = new SfTabView();
 BadgeSettings badgeSetting = new BadgeSettings();
