@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Syncfusion® MAUI Calendar
+title: Getting started with .NET MAUI Circular ProgressBar | Syncfusion<sup>&reg;</sup>
 description: Learn here all about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Calendar (SfCalendar) control and its basic features.
 platform: maui
 control: SfCalendar
@@ -222,77 +222,68 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register the handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
-
-{% highlight c# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace CalendarSample
-{
-  public static class MauiProgram
-  {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-		builder
-		.UseMauiApp<App>()
-		.ConfigureSyncfusionCore()
-		.ConfigureFonts(fonts =>
-		{
-			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-		});
-
-		return builder.Build();
-	 }
-
-  }
-
-}     
-
-{% endhighlight %}
-
-
-## Step 4: Add a Basic Calendar
-
-1. To initialize the control, import the Core namespace into your code.
-2. Initialize [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.html?tabs=tabid-1).
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion core.
 
 {% tabs %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
 
-{% highlight xaml %}
+using Syncfusion.Maui.Core.Hosting;
+namespace GettingStarted
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
 
-<ContentPage
-    . . .    
-    xmlns:sfcalendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
-    <Grid>
-        <sfcalendar:SfCalendar />
-    </Grid>
+            builder.ConfigureSyncfusionCore();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
+
+            return builder.Build();
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Step 4: Add .NET MAUI Calendar control
+
+1. To initialize the control, import the `Syncfusion.Maui.Calendar` namespace into your code.
+2. Initialize [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html).
+
+{% tabs %}
+{% highlight XAML hl_lines="3 5" %}
+
+<ContentPage   
+    . . .
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar">
+
+    <calendar:SfCalendar />
 </ContentPage>
 
 {% endhighlight %}
+{% highlight C# hl_lines="1 9 10" %}
 
-{% highlight c# %}
+using Syncfusion.Maui.Calendar;
+. . .
 
-    using Syncfusion.Maui.Calendar;
-    namespace CalendarGettingStarted
+public partial class MainPage : ContentPage
+{
+    public MainPage()
     {
-        public partial class MainPage : ContentPage
-        {
-            public MainPage()
-            {
-                InitializeComponent();           
-                SfCalendar calendar = new SfCalendar();
-            }
-        }   
+        InitializeComponent();
+        SfCalendar calendar = new SfCalendar();
+        this.Content = calendar;
     }
+}
 
 {% endhighlight %}
-
 {% endtabs %}
 
 {% endtabcontent %}

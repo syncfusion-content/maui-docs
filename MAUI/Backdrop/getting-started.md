@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Syncfusion® .NET MAUI Backdrop 
+title: Getting started with .NET MAUI Backdrop Page| Syncfusion<sup>&reg;</sup>
 description: Learn here about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Backdrop Page(SfBackdropPage) control, its elements and more.
 platform: MAUI
 control: SfBackdropPage
@@ -225,82 +225,79 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.Backdrop](https://www.nuget.org/packages/Syncfusion.Maui.Backdrop/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
+
 ## Step 3: Register the handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion core.
 
-{% highlight c# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+{% tabs %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
+
 using Syncfusion.Maui.Core.Hosting;
-
-namespace BackdropSample
+namespace GettingStarted
 {
-  public static class MauiProgram
-  {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-		builder
-		.UseMauiApp<App>()
-		.ConfigureSyncfusionCore()
-		.ConfigureFonts(fonts =>
-		{
-			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-		});
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
 
-		return builder.Build();
-	 }
+            builder.ConfigureSyncfusionCore();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-  }
-
-}     
+            return builder.Build();
+        }
+    }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
+## Step 4: Add .NET MAUI Backdrop page control
 
-## Step 4: Add a Basic Backdrop
-
-1. To initialize the control, import the Core namespace into your code.
-2. Initialize [SfBackdrop](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.html?tabs=tabid-1).
+1. To initialize the control, import the `Syncfusion.Maui.Backdrop` namespace into your code.
+2. Initialize [SfBackdropPage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html).
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage
-    . . .    
-    xmlns:sfbackdrop ="clr-namespace:Syncfusion.Maui.Backdrop;assembly=Syncfusion.Maui.Backdrop">
-    <Grid>
-        <sfbackdrop:SfBackdrop />
-    </Grid>
-</ContentPage>
+<backdrop:SfBackdropPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                         x:Class="BackdropGettingStarted.BackdropSamplePage"
+                         Title="Menu"
+                         xmlns:backdrop="clr-namespace:Syncfusion.Maui.Backdrop;assembly=Syncfusion.Maui.Backdrop"
+                         >
+    
+</backdrop:SfBackdropPage>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    using Syncfusion.Maui.Backdrop;
-    namespace BackdropGettingStarted
+using Syncfusion.Maui.Backdrop;
+namespace BackdropGettingStarted;
+
+public partial class BackdropSamplePage : SfBackdropPage
+{
+    public BackdropSamplePage()
     {
-        public partial class MainPage : ContentPage
-        {
-            public MainPage()
-            {
-                InitializeComponent();           
-                SfBackdrop backDrop = new SfBackdrop();
-            }
-        }   
+        InitializeComponent();
+        this.Title = "Menu";
     }
+}
 
 {% endhighlight %}
 
 {% endtabs %}
 
 {% endtabcontent %}
+
 {% endtabcontents %}
 
 N> The [`Title`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.page.title?view=net-maui-6.0) and [`ToolBarItems`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.page.toolbaritems?view=net-maui-6.0) properties of the [`Page`](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.page?view=net-maui-6.0) can be used to customize the appearance of the header.

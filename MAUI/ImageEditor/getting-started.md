@@ -222,77 +222,69 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register the handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
-
-{% highlight c# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace ImageEditorSample
-{
-  public static class MauiProgram
-  {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-		builder
-		.UseMauiApp<App>()
-		.ConfigureSyncfusionCore()
-		.ConfigureFonts(fonts =>
-		{
-			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-		});
-
-		return builder.Build();
-	 }
-
-  }
-
-}     
-
-{% endhighlight %}
-
-
-## Step 4: Add a Basic ImageEditor
-
-1. To initialize the control, import the Core namespace into your code.
-2. Initialize [SfImageEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html?tabs=tabid-1).
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> .NET MAUI controls. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
 
 {% tabs %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
 
-{% highlight xaml %}
+using Syncfusion.Maui.Core.Hosting;
+namespace GettingStarted
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
 
-<ContentPage
-    . . .    
-    xmlns:sfimage="clr-namespace:Syncfusion.Maui.ImageEditor;assembly=Syncfusion.Maui.ImageEditor">
-    <Grid>
-        <sfimage:SfImageEditor />
-    </Grid>
+            builder.ConfigureSyncfusionCore();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                fonts.AddFont("Segoe-mdl2.ttf", "SegoeMDL2");
+            });
+
+            return builder.Build();
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Step 4: Add .NET MAUI ImageEditor control
+
+1. To initialize the control, import the `Syncfusion.Maui.ImageEditor` namespace into your code.
+2. Initialize [SfImageEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html).
+
+{% tabs %}
+{% highlight XAML hl_lines="3 5" %}
+
+<ContentPage   
+    . . .
+    xmlns:imageEditor="clr-namespace:Syncfusion.Maui.ImageEditor;assembly=Syncfusion.Maui.ImageEditor">
+
+    <imageEditor:SfImageEditor />
 </ContentPage>
 
 {% endhighlight %}
+{% highlight C# hl_lines="1 9 10" %}
 
-{% highlight c# %}
+using Syncfusion.Maui.ImageEditor;
+. . .
 
-    using Syncfusion.Maui.ImageEditor;
-    namespace ImageEditorGettingStarted
+public partial class MainPage : ContentPage
+{
+    public MainPage()
     {
-        public partial class MainPage : ContentPage
-        {
-            public MainPage()
-            {
-                InitializeComponent();           
-                SfImageEditor imageEditor = new SfImageEditor();
-            }
-        }   
+        InitializeComponent();
+        SfImageEditor imageEditor = new SfImageEditor();
+        this.Content = imageEditor;
     }
+}
 
 {% endhighlight %}
-
 {% endtabs %}
 
 {% endtabcontent %}

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Syncfusion® .NET MAUI DataForm control
-description: Learn about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI DataForm (SfDataForm) control, its elements and more.
+title: Getting Started with .NET MAUI DataForm control | Syncfusion<sup>&reg;</sup>
+description: Learn about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
 platform: maui
 control: SfDataForm
 documentation: ug
@@ -374,77 +374,66 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register the handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
-
-{% highlight c# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace DataFormSample
-{
-  public static class MauiProgram
-  {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-		builder
-		.UseMauiApp<App>()
-		.ConfigureSyncfusionCore()
-		.ConfigureFonts(fonts =>
-		{
-			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-		});
-
-		return builder.Build();
-	 }
-
-  }
-
-}     
-
-{% endhighlight %}
-
-
-## Step 4: Add a Basic DataForm
-
-1. To initialize the control, import the DataForm namespace into your code.
-2. Initialize [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html?tabs=tabid-1).
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> .NET MAUI controls. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
 
 {% tabs %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 8" %}
 
-{% highlight xaml %}
-
-<ContentPage
-    . . .    
-    xmlns:sfdata="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
-    <Grid>
-        <sfdata:SfDataForm />
-    </Grid>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-    using Syncfusion.Maui.DataForm;
-    namespace DataFormGettingStarted
+    
+    using Syncfusion.Maui.Core.Hosting;
+    public static class MauiProgram
     {
-        public partial class MainPage : ContentPage
-        {
-            public MainPage()
-            {
-                InitializeComponent();           
-                SfDataForm dataForm = new SfDataForm();
-            }
-        }   
+	    public static MauiApp CreateMauiApp()
+	    {
+	        var builder = MauiApp.CreateBuilder();
+		    builder
+			    .ConfigureSyncfusionCore()
+			    .UseMauiApp<App>()
+			    .ConfigureFonts(fonts =>
+			    {
+				    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+				    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+			    });
+
+		    return builder.Build();
+	    }
     }
 
 {% endhighlight %}
+{% endtabs %}
 
+## Step 4: Add .NET MAUI DataForm control
+
+1. To initialize the control, import the `Syncfusion.Maui.DataForm` namespace into your code.
+2. Initialize [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html)
+
+{% tabs %}
+{% highlight XAML %}
+
+<ContentPage   
+            
+        xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
+
+        <dataForm:SfDataForm />
+</ContentPage>
+
+{% endhighlight %}
+{% highlight C# %}
+
+using Syncfusion.Maui.DataForm;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDataForm dataForm = new SfDataForm();
+        this.Content = dataForm;
+    }
+}
+
+{% endhighlight %}
 {% endtabs %}
 
 {% endtabcontent %}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Syncfusion® .NET MAUI Date Picker control
+title: Getting started with .NET MAUI Date Picker control | Syncfusion<sup>&reg;</sup>
 description: Learn about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Date Picker (SfDatePicker) control and its basic features.
 platform: maui
 control: SfDatePicker
@@ -217,77 +217,68 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register the handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
-
-{% highlight c# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace DatePickerSample
-{
-  public static class MauiProgram
-  {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-		builder
-		.UseMauiApp<App>()
-		.ConfigureSyncfusionCore()
-		.ConfigureFonts(fonts =>
-		{
-			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-		});
-
-		return builder.Build();
-	 }
-
-  }
-
-}     
-
-{% endhighlight %}
-
-
-## Step 4: Add a Basic DatePicker
-
-1. To initialize the control, import the Picker namespace into your code.
-2. Initialize [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html?tabs=tabid-1).
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
 
 {% tabs %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
 
-{% highlight xaml %}
+using Syncfusion.Maui.Core.Hosting;
+namespace GettingStarted
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
 
-<ContentPage
-    . . .    
-    xmlns:sfpicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
-    <Grid>
-        <sfpicker:SfDatePicker />
-    </Grid>
+            builder.ConfigureSyncfusionCore();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
+
+            return builder.Build();
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Step 4: Add .NET MAUI Date picker control
+
+1. To initialize the control, import the `Syncfusion.Maui.Picker` namespace into your code.
+2. Initialize [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
+
+<ContentPage   
+    . . .
+    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+
+    <picker:SfDatePicker />
 </ContentPage>
 
 {% endhighlight %}
+{% highlight c# tabtitle="C#" hl_lines="1 9 10" %}
 
-{% highlight c# %}
+using Syncfusion.Maui.Picker;
+. . .
 
-    using Syncfusion.Maui.Picker;
-    namespace DatePickerGettingStarted
+public partial class MainPage : ContentPage
+{
+    public MainPage()
     {
-        public partial class MainPage : ContentPage
-        {
-            public MainPage()
-            {
-                InitializeComponent();           
-                SfDatePicker picker = new SfDatePicker();
-            }
-        }   
+        InitializeComponent();
+        SfDatePicker picker = new SfDatePicker();
+        this.Content = picker;
     }
+}
 
 {% endhighlight %}
-
 {% endtabs %}
 
 {% endtabcontent %}

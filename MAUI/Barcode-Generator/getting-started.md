@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Syncfusion® .NET MAUI Barcode Generator
+title: Getting Started with .NET MAUI Barcode Generator control | Syncfusion<sup>&reg;</sup>
 description: Learn here all about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Barcode Generator(SfBarcodeGenerator) control and more.
 platform: maui
 control: SfBarcodeGenerator
@@ -233,77 +233,72 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register the handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion core.
 
-{% highlight c# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+{% tabs %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
+
 using Syncfusion.Maui.Core.Hosting;
-
-namespace BarcodehGeneratorSample
+namespace GettingStarted
 {
-  public static class MauiProgram
-  {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-		builder
-		.UseMauiApp<App>()
-		.ConfigureSyncfusionCore()
-		.ConfigureFonts(fonts =>
-		{
-			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-		});
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
 
-		return builder.Build();
-	 }
+            builder.ConfigureSyncfusionCore();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-  }
-
-}     
+            return builder.Build();
+        }
+    }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
+## Step 4: Add .NET MAUI Barcode generator 
 
-## Step 4: Add a Basic Barcode Generator
-
-1. To initialize the control, import the Core namespace into your code.
-2. Initialize [SfBarcodeGenerator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.html?tabs=tabid-1).
+1. To initialize the control, import the `Syncfusion.Maui.Barcode` namespace into your code.
+2. Initialize [SfBarcodeGenerator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Barcode.SfBarcodeGenerator.html).
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage
-    . . .    
-    xmlns:sfbarcode="clr-namespace:Syncfusion.Maui.Barcode;assembly=Syncfusion.Maui.Barcode">
-    <Grid>
-       <barcode:SfBarcodeGenerator Value="http://www.syncfusion.com" 
-                            HeightRequest="150"/>
-    </Grid>
-</ContentPage>
+    xmlns:barcode="clr-namespace:Syncfusion.Maui.Barcode;assembly=Syncfusion.Maui.Barcode"
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 
     using Syncfusion.Maui.Barcode;
-    namespace BarcodeGeneratorGettingStarted
-    {
-        public partial class MainPage : ContentPage
-        {
-            public MainPage()
-            {
-                InitializeComponent();           
-                SfBarcodeGenerator barcode = new SfBarcodeGenerator();
-                barcode.HeightRequest = 150;
-                barcode.Value = "http://www.syncfusion.com";
-            }
-        }   
-    }
+
+{% endhighlight %}
+
+{% endtabs %}
+
+{% tabs %}
+
+{% highlight xaml hl_lines="1" %}
+
+<barcode:SfBarcodeGenerator Value="http://www.syncfusion.com" 
+                            HeightRequest="150"/>
+
+{% endhighlight %}
+
+{% highlight c# hl_lines="1" %}
+
+SfBarcodeGenerator barcode = new SfBarcodeGenerator();
+barcode.HeightRequest = 150;
+barcode.Value = "http://www.syncfusion.com";
+this.Content = barcode;
 
 {% endhighlight %}
 

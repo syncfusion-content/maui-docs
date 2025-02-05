@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Syncfusion®.NET MAUI Circular ProgressBar
+title: Getting started with .NET MAUI Circular ProgressBar | Syncfusion<sup>&reg;</sup>
 description: Learn here about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Circular ProgressBar (SfCircularProgressBar) control, its elements and more.
 platform: MAUI
 control: SfCircularProgressBar
@@ -231,74 +231,71 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register the handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion core.
 
-{% highlight c# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+{% tabs %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
+
 using Syncfusion.Maui.Core.Hosting;
-
-namespace CircularProgressBarSample
+namespace GettingStarted
 {
-  public static class MauiProgram
-  {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-		builder
-		.UseMauiApp<App>()
-		.ConfigureSyncfusionCore()
-		.ConfigureFonts(fonts =>
-		{
-			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-		});
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
 
-		return builder.Build();
-	 }
+            builder.ConfigureSyncfusionCore();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-  }
-
-}     
+            return builder.Build();
+        }
+    }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
+## Step 4: Add .NET MAUI Circular ProgressBar control
 
-## Step 4: Add a Basic Circular ProgressBar
-
-1. To initialize the control, import the Core namespace into your code.
-2. Initialize [SfCircularProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar,SfCircularProgressBar.html?tabs=tabid-1).
+1. To initialize the control, import the `Syncfusion.Maui.ProgressBar` namespace into your code.
+2. Initialize [SfCircularProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfCircularProgressBar.html).
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage
-    . . .    
-    xmlns:sfcircular="clr-namespace:Syncfusion.Maui.ProgressBar;assembly=Syncfusion.Maui.ProgressBar">
-    <Grid>
-        <sfcircular:SfCircularProgressBar />
-    </Grid>
-</ContentPage>
+xmlns:progressBar="clr-namespace:Syncfusion.Maui.ProgressBar;assembly=Syncfusion.Maui.ProgressBar"
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    using Syncfusion.Maui.ProgressBar;
-    namespace CircularProgressBarGettingStarted
-    {
-        public partial class MainPage : ContentPage
-        {
-            public MainPage()
-            {
-                InitializeComponent();           
-                SfCircularProgressBar circularProgressBar = new SfCircularProgressBar();
-            }
-        }   
-    }
+using Syncfusion.Maui.ProgressBar;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Create an instance for the circular progress bar control, and add it as content.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<progressBar:SfCircularProgressBar Progress="75"/>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCircularProgressBar circularProgressBar = new SfCircularProgressBar { Progress = 75 };
+this.Content = circularProgressBar;
 
 {% endhighlight %}
 
