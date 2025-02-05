@@ -15,24 +15,26 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> .NET MAUI contains a compre
 
 To start using the icons, first ensure that the font is registered in your application. Here is a walkthrough on setting up the `MauiMaterialAssets.ttf`:
 
-The `MauiMaterialAssets.ttf` font file will automatically be added to your project's font folder upon installation of the Syncfusion<sup style="font-size:70%">&reg;</sup> MAUI package, simplifying initial setup. Make sure to register this font in `MauiProgram.cs` to utilize the whole icon set effectively.
+### Step 1: Install the Syncfusion<sup style="font-size:70%">&reg;</sup> MAUI Package
 
-1. **Install the Syncfusion<sup style="font-size:70%">&reg;</sup> MAUI Package**: Once installed, the `MauiMaterialAssets.ttf` will be added to your project's font folder.
+Once installed, the `MauiMaterialAssets.ttf` will be added to your project's font folder.
 
-2. **Register the Font**: Modify your `MauiProgram.cs` to register the icon font. Here is an example:
+### Step 2: Register the font**
+
+Modify your `MauiProgram.cs` to register the font icon. Here is an example:
 
     {% tabs %}
     {% highlight c# %}
-        // ... existing code ...
+        //...existing code...
         public static class MauiProgram
         {
             public static MauiApp CreateMauiApp()
             {
                 var builder = MauiApp.CreateBuilder();
-                // ... existing code ...
+                //...existing code...
                 builder.ConfigureFonts(fonts =>
                 {
-                    // ... existing code ...
+                    //...existing code...
                     fonts.AddFont("MauiMaterialAssets.ttf", "MaterialAssets");
                 });
                 return builder.Build();
@@ -41,7 +43,9 @@ The `MauiMaterialAssets.ttf` font file will automatically be added to your proje
     {% endhighlight %}
     {% endtabs %}
 
-3. **Using Icons in the Project**: To use icons in your MAUI project, simply refer to them using the designated font family. Below is an example of how you might integrate an icon into a Label.
+### Step 3: Using icons in the project
+
+To use icons in your MAUI project, simply refer to them using the designated font family. Below is an example of how you might integrate an icon into a Label.
 
     {% tabs %}
     {% highlight xaml %}
@@ -65,15 +69,13 @@ The `MauiMaterialAssets.ttf` font file will automatically be added to your proje
     {% endhighlight %}
     {% endtabs %}
 
-The following image illustrates the result of the above code. 
+The following image illustrates the result of the above code.
 
 ![Delete Icon](images/delete_icon.png)
 
 ## Icons List
 
-The following icons are available in the `MauiMaterialAssets.ttf` file:
-
-### Maui Material Assets
+The Maui Material Assets icons are available in the `MauiMaterialAssets.ttf` file:
 
 <iframe src="fonts/demo.html" style="height:1000px;width:100%;"></iframe>
 
