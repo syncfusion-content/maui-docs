@@ -15,7 +15,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> .NET MAUI contains a compre
 
 To start using the icons, first ensure that the font is registered in your application. Here is a walkthrough on setting up the `MauiMaterialAssets.ttf`:
 
-> **Note**: The `MauiMaterialAssets.ttf` font file will automatically be added to your project's font folder upon installation of the Syncfusion<sup style="font-size:70%">&reg;</sup> MAUI package, simplifying initial setup. Make sure to register this font in `MauiProgram.cs` to utilize the whole icon set effectively.
+The `MauiMaterialAssets.ttf` font file will automatically be added to your project's font folder upon installation of the Syncfusion<sup style="font-size:70%">&reg;</sup> MAUI package, simplifying initial setup. Make sure to register this font in `MauiProgram.cs` to utilize the whole icon set effectively.
 
 1. **Install the Syncfusion<sup style="font-size:70%">&reg;</sup> MAUI Package**: Once installed, the `MauiMaterialAssets.ttf` will be added to your project's font folder.
 
