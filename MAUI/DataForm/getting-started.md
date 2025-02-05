@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI DataForm control | Syncfusion<sup>&reg;</sup>
-description: Learn about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
+title: Getting Started with Syncfusion® .NET MAUI DataForm control
+description: Learn about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI DataForm (SfDataForm) control, its elements and more.
 platform: maui
 control: SfDataForm
 documentation: ug
