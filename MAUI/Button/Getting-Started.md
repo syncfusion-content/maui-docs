@@ -195,9 +195,9 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
-## Step 3: Register the handler
+## Step 3: Register the Handler 
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion<sup>®</sup> core.
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;
@@ -207,67 +207,45 @@ using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace ButtonsSample
+namespace ButtonSample
 {
-  public static class MauiProgram
-  {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-		builder
-		.UseMauiApp<App>()
-		.ConfigureSyncfusionCore()
-		.ConfigureFonts(fonts =>
-		{
-			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-		});
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-		return builder.Build();
-	 }
+            return builder.Build();
+        }      
+    }
+}   
 
-  }
+{% endhighlight %} 
 
-}     
+## Step 4: Add a Basic Button control
 
-{% endhighlight %}
+Step 1: Add the NuGet to the project as discussed in the above reference section. 
 
-
-## Step 4: Add a Basic Button
-
-1. To initialize the control, import the Core namespace into your code.
-2. Initialize [SfButtons](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.html?tabs=tabid-1).
+Step 2: Add the namespace as shown in the following code sample.
 
 {% tabs %}
-
 {% highlight xaml %}
 
-<ContentPage
-    . . .    
-    xmlns:sfbutton="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-    <Grid>
-        <sfbutton:SfButtons />
-    </Grid>
-</ContentPage>
+	xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
 
 {% endhighlight %}
-
 {% highlight c# %}
 
-    using Syncfusion.Maui.Core;
-    namespace ButtonsGettingStarted
-    {
-        public partial class MainPage : ContentPage
-        {
-            public MainPage()
-            {
-                InitializeComponent();           
-                SfButtons buttons = new SfButtons();
-            }
-        }   
-    }
+	using Syncfusion.Maui.Buttons;
 
 {% endhighlight %}
-
 {% endtabs %}
 
 {% endtabcontent %}

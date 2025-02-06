@@ -234,7 +234,7 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register the handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
+ [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;
@@ -246,62 +246,59 @@ using Syncfusion.Maui.Core.Hosting;
 
 namespace CarouselSample
 {
-  public static class MauiProgram
-  {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-		builder
-		.UseMauiApp<App>()
-		.ConfigureSyncfusionCore()
-		.ConfigureFonts(fonts =>
-		{
-			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-		});
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-		return builder.Build();
-	 }
+            return builder.Build();
+        }      
+    }
+}   
 
-  }
+{% endhighlight %} 
 
-}     
+## Step 4: Add a Basic Carousel
+
+Step 1: Add the NuGet to the project as discussed in the above reference section. 
+
+Step 2: Add the namespace as shown in the following code sample.
+
+{% tabs %}
+{% highlight xaml %}
+
+	xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel"
 
 {% endhighlight %}
+{% highlight c# %}
 
+	using Syncfusion.Maui.Carousel;
 
-## Step 4: Add a Basic Carousel 
+{% endhighlight %}
+{% endtabs %}
 
-1. To initialize the control, import the Core namespace into your code.
-2. Initialize [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.html?tabs=tabid-1).
+Step 3: Add the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) control with a required optimal name using the included namespace.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage
-    . . .    
-    xmlns:sfcarousel="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel">
-    <Grid>
-        <sfcarousel:SfCarousel/>
-    </Grid>
-</ContentPage>
-
+<syncfusion:SfCarousel />
+	
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 
-    using Syncfusion.Maui.Core;
-    namespace CarouselGettingStarted
-    {
-        public partial class MainPage : ContentPage
-        {
-            public MainPage()
-            {
-                InitializeComponent();           
-                SfCarousel carousel = new SfCarousel();
-            }
-        }   
-    }
+SfCarousel carousel = new SfCarousel();
+this.Content = carousel;
 
 {% endhighlight %}
 

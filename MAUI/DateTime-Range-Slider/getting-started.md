@@ -200,9 +200,9 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.Sliders](https://www.nuget.org/packages/Syncfusion.Maui.Sliders/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
-## Step 3: Register the handler
+## Step 3: Register the Handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion<sup>®</sup> core.
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;
@@ -212,70 +212,45 @@ using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace DateTimeRangeSliderSample
+namespace Slider
 {
-  public static class MauiProgram
-  {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-		builder
-		.UseMauiApp<App>()
-		.ConfigureSyncfusionCore()
-		.ConfigureFonts(fonts =>
-		{
-			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-		});
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-		return builder.Build();
-	 }
-
-  }
-
-}     
+            return builder.Build();
+        }
+    }
+}
 
 {% endhighlight %}
 
+## Step 4: Add a Basic DateTime Range Slider
 
-## Step 4: Add a Basic DateTime RangeSlider
+Step 1: Add the NuGet to the project as discussed in the above reference section. 
 
-1. To initialize the control, import the Sliders namespace into your code.
-2. Initialize [SfDateTimeRangeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider .html?tabs=tabid-1).
+Step 2: Add the namespace, as shown in the following code sample:
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage
-    . . .    
-    xmlns:slider="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders">
-     <sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
-                                   Maximum="2018-01-01" 
-                                   RangeStart="2012-01-01" 
-                                   RangeEnd="2016-01-01" />
-</ContentPage>
+	<xmlns:rating="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"/>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-    using Syncfusion.Maui.Sliders;
-    namespace DateTimeRangeSliderGettingStarted
-    {
-        public partial class MainPage : ContentPage
-        {
-            public MainPage()
-            {
-                InitializeComponent();           
-                SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
-                rangeSlider.Minimum = new DateTime(2010, 01, 01);
-                rangeSlider.Maximum = new DateTime(2018, 01, 01);
-                rangeSlider.RangeStart = new DateTime(2012, 01, 01);
-                rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
-                this.content = rangeSlider;
-            }
-        }   
-    }
+	using Syncfusion.Maui.Sliders;
 
 {% endhighlight %}
 

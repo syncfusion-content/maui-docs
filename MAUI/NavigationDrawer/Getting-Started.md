@@ -248,44 +248,41 @@ using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace NavigationDrawerSample
+namespace NavigationDrawerGettingStarted
 {
-  public static class MauiProgram
-  {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-		builder
-		.UseMauiApp<App>()
-		.ConfigureSyncfusionCore()
-		.ConfigureFonts(fonts =>
-		{
-			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-		});
+    public static class MauiProgram
+    {
+    public static MauiApp CreateMauiApp()
+    {
+        var builder = MauiApp.CreateBuilder();
+        builder
+        .UseMauiApp<App>()
+        .ConfigureSyncfusionCore()
+        .ConfigureFonts(fonts =>
+        {
+            fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+        });
 
-		return builder.Build();
-	 }
-
-  }
-
+        return builder.Build();
+        }      
+    }
 }     
 
 {% endhighlight %}
 
-
-## Step 4: Add a Basic Navigation Drawer
+## Step 4: Add a Basic NavigationDrawer
 
 1. To initialize the control, import the NavigationDrawer namespace into your code.
-2. Initialize [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html?tabs=tabid-1).
+
+2. Initialize [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html)
 
 {% tabs %}
-
 {% highlight xaml %}
 
 <ContentPage
     . . .    
-    xmlns:sfnavigation="clr-namespace:Syncfusion.Maui.NavigationDrawer;assembly=Syncfusion.Maui.NavigationDrawer">
-  <navigationDrawer:SfNavigationDrawer x:Name="navigationDrawer">
+    xmlns:navigationDrawer="clr-namespace:Syncfusion.Maui.NavigationDrawer;assembly=Syncfusion.Maui.NavigationDrawer">
+    <navigationDrawer:SfNavigationDrawer x:Name="navigationDrawer">
     <navigationDrawer:SfNavigationDrawer.ContentView>
         <Grid/>
     </navigationDrawer:SfNavigationDrawer.ContentView>
@@ -293,7 +290,6 @@ namespace NavigationDrawerSample
 </ContentPage>
 
 {% endhighlight %}
-
 {% highlight c# %}
 
     using Syncfusion.Maui.NavigationDrawer;
@@ -313,11 +309,9 @@ namespace NavigationDrawerSample
     }
 
 {% endhighlight %}
-
 {% endtabs %}
 
 {% endtabcontent %}
-
 {% endtabcontents %}
 
 N> It is mandatory to set [ContentView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ContentView) for [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) on initializing.

@@ -240,7 +240,7 @@ Before proceeding, ensure the following are set up:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="6 17" %}
+{% highlight C# hl_lines="6 17" %}
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using Microsoft.Maui.Controls.Compatibility;
@@ -248,64 +248,64 @@ using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace TabViewSample
+namespace TabViewMauiSample
 {
-  public static class MauiProgram
-  {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-		builder
-		.UseMauiApp<App>()
-		.ConfigureSyncfusionCore()
-		.ConfigureFonts(fonts =>
-		{
-			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-		});
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-		return builder.Build();
-	 }
+            return builder.Build();
+        }
+    }
+}
 
-  }
-
-}     
-
-{% endhighlight %}
-
+{% endhighlight %} 
 
 ## Step 4: Add a Basic Tab View
 
 1. To initialize the control, import the TabView namespace into your code.
-2. Initialize [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SfTabView.html?tabs=tabid-1).
+
+2. Initialize [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1)
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage
-    . . .    
-    xmlns:sftab="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView">
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+            ...
+            xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView">
     <ContentPage.Content> 
         <tabView:SfTabView /> 
     </ContentPage.Content>  
 </ContentPage>
-
+	
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 
-    using Syncfusion.Maui.TabView;
-    namespace TabViewGettingStarted
+using Syncfusion.Maui.TabView;
+namespace TabViewGettingStarted
+{
+    public partial class MainPage : ContentPage
     {
-        public partial class MainPage : ContentPage
+        public MainPage()
         {
-            public MainPage()
-            {
-                InitializeComponent();           
-                SfTabView tabView = new SfTabView();
-            }
-        }   
-    }
+            InitializeComponent();           
+            SfTabView tabView = new SfTabView();   
+            this.Content = tabView; 
+        }
+    }   
+}
 
 {% endhighlight %}
 

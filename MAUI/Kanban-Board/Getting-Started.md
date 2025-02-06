@@ -245,9 +245,11 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register the handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
+[Syncfusion.Maui.Core nuget](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="6 17" %}
+{% tabs %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="6 17" %}
+
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using Microsoft.Maui.Controls.Compatibility;
@@ -255,67 +257,68 @@ using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace KanbanSample
+namespace KanbanGettingStarted
 {
-  public static class MauiProgram
-  {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-		builder
-		.UseMauiApp<App>()
-		.ConfigureSyncfusionCore()
-		.ConfigureFonts(fonts =>
-		{
-			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-		});
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-		return builder.Build();
-	 }
-
-  }
-
-}     
+            return builder.Build();
+        }
+    }
+}
 
 {% endhighlight %}
+{% endtabs %}
 
+## Step 4: Add .NET MAUI Kanban Board Control
 
-## Step 4: Add a Basic Kanban
+1. To initialize the control, import the `Syncfusion.Maui.Kanban` namespace into your code.
+2. Initialize [SfKanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html).
 
-1. To initialize the control, import the Core namespace into your code.
-2. Initialize [SfKanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html?tabs=tabid-1).
-
-{% tabs %}
-
+{% tabs %} 
 {% highlight xaml %}
 
 <ContentPage
     . . .    
-    xmlns:sfkanban="clr-namespace:Syncfusion.Maui.Kanban;assembly=Syncfusion.Maui.Kanban">
-    <Grid>
-        <sfkanban:SfKanban />
-    </Grid>
+    xmlns:kanban="clr-namespace:Syncfusion.Maui.Kanban;assembly=Syncfusion.Maui.Kanban">
+    
+    <kanban:SfKanban/>
+    
 </ContentPage>
-
+ 
 {% endhighlight %}
+{% endtabs %}
 
-{% highlight c# %}
+You can also create the kanban board programmatically in the MainPage.xaml.cs file:
 
-    using Syncfusion.Maui.Kanban;
-    namespace KanbanGettingStarted
+{% tabs %} 
+{% highlight C# %}
+
+using Syncfusion.Maui.Kanban;
+namespace KanbanGettingStarted
+{
+    public partial class MainPage : ContentPage
     {
-        public partial class MainPage : ContentPage
+        public MainPage()
         {
-            public MainPage()
-            {
-                InitializeComponent();           
-                SfKanban Kanban = new SfKanban();
-            }
-        }   
-    }
+            InitializeComponent();           
+            SfKanban kanban = new SfKanban(); 
+            this.Content = kanban;
+        }
+    }   
+}
 
 {% endhighlight %}
-
 {% endtabs %}
 
 {% endtabcontent %}

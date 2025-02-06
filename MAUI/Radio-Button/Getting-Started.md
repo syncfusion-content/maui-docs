@@ -232,6 +232,7 @@ Before proceeding, ensure the following are set up:
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% highlight c# hl_lines="6 17" %}
+
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using Microsoft.Maui.Controls.Compatibility;
@@ -239,35 +240,32 @@ using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace RadioButtonSample
+namespace RadioButtonGettingStarted
 {
-  public static class MauiProgram
-  {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-		builder
-		.UseMauiApp<App>()
-		.ConfigureSyncfusionCore()
-		.ConfigureFonts(fonts =>
-		{
-			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-		});
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-		return builder.Build();
-	 }
-
-  }
-
-}     
+            return builder.Build();
+        }      
+    }
+}   
 
 {% endhighlight %}
 
-
-## Step 4: Add a Basic Radio Button
+## Step 4: Add a Basic RadioButton
 
 1. To initialize the control, import the Buttons namespace into your code.
-2. Initialize [SfRadioButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.html?tabs=tabid-1).
+2. Initialize [SfRadioButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html).
 
 {% tabs %}
 
@@ -275,10 +273,8 @@ namespace RadioButtonSample
 
 <ContentPage
     . . .    
-    xmlns:sfavatar="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-    <Grid>
-        <sfavatar:SfRadioButton />
-    </Grid>
+    xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
+        <buttons:SfRadioButton x:Name="radioButton"/>     
 </ContentPage>
 
 {% endhighlight %}
@@ -294,12 +290,12 @@ namespace RadioButtonSample
             {
                 InitializeComponent();           
                 SfRadioButton radioButton = new SfRadioButton();
+                this.Content=radioButton
             }
         }   
     }
 
 {% endhighlight %}
-
 {% endtabs %}
 
 {% endtabcontent %}

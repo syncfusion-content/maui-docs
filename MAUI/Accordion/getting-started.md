@@ -217,71 +217,55 @@ using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace AccordionSample
+namespace GettingStarted
 {
-  public static class MauiProgram
-  {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-		builder
-		.UseMauiApp<App>()
-		.ConfigureSyncfusionCore()
-		.ConfigureFonts(fonts =>
-		{
-			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-		});
-
-		return builder.Build();
-	 }
-
-  }
-
-}     
-
-{% endhighlight %}
-
-
-## Step 4: Add a Basic Accordian
-
-1. To initialize the control, import the Accordion namespace into your code.
-2. Initialize [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.html?tabs=tabid-1).
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<ContentPage
-    . . .    
-    xmlns:sfaccordion="clr-namespace:Syncfusion.Maui.Accordion;assembly=Syncfusion.Maui.Accordion">
-    <Grid>
-        <sfaccordion:SfAccordion />
-    </Grid>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-    using Syncfusion.Maui.Accordion;
-    namespace AccordionGettingStarted
+    public class MauiProgram 
     {
-        public partial class MainPage : ContentPage
+        public static MauiApp CreateMauiApp()
         {
-            public MainPage()
-            {
-                InitializeComponent();           
-                SfAccordion accordion = new SfAccordion();
-            }
-        }   
-    }
+            var builder = MauiApp.CreateBuilder();
+            builder
+                .UseMauiApp<App>()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                });
 
+            builder.ConfigureSyncfusionCore();
+            return builder.Build();
+        }
+    }
+}
+{% endhighlight %} 
+ 
+## Step 4: Add a Basic Accordion
+ 
+ 1. To initialize the control, import the `Syncfusion.Maui.Accordion` namespace into your code.
+ 2. Initialize [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html).
+ 
+{% tabs %}
+{% highlight xaml hl_lines="4" %}
+<ContentPage   
+    . . .
+      xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Accordion;assembly=Syncfusion.Maui.Expander">
+    <syncfusion:SfAccordion />
+</ContentPage>
 {% endhighlight %}
 
+{% highlight c# hl_lines="8" %}
+using Syncfusion.Maui.Accordion;
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfAccordion accordion = new SfAccordion();
+    }
+}
+{% endhighlight %}
 {% endtabs %}
-
 {% endtabcontent %}
-
 {% endtabcontents %}
 
 ## Step 5: Define the accordion items

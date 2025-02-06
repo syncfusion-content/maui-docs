@@ -204,9 +204,9 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
-## Step 3: Register the handler
+## Step 3: Register the Handler 
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion<sup>®</sup> core.
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;
@@ -216,68 +216,51 @@ using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace AvatarViewSample
+namespace AutocompleteSample
 {
-  public static class MauiProgram
-  {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-		builder
-		.UseMauiApp<App>()
-		.ConfigureSyncfusionCore()
-		.ConfigureFonts(fonts =>
-		{
-			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-		});
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-		return builder.Build();
-	 }
+            return builder.Build();
+        }      
+    }
+}   
 
-  }
+{% endhighlight %} 
 
-}     
+## Step 4: Add a Basic Chips control
 
-{% endhighlight %}
+Step 1: Add the NuGet to the project
 
-
-## Step 4: Add a Basic Chips
-
-1. To initialize the control, import the Core namespace into your code.
-2. Initialize [SfChips](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChips.html?tabs=tabid-1).
+Step 2: Add the namespace as shown in the following code snippet
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage
-    . . .    
-    xmlns:sfchips="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <Grid>
-        <sfchips:SfChips />
-    </Grid>
-</ContentPage>
-
+    xmlns:chip="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+	
 {% endhighlight %}
 
 {% highlight c# %}
 
     using Syncfusion.Maui.Core;
-    namespace ChipsGettingStarted
-    {
-        public partial class MainPage : ContentPage
-        {
-            public MainPage()
-            {
-                InitializeComponent();           
-                SfChips chips = new SfChips();
-            }
-        }   
-    }
 
 {% endhighlight %}
 
 {% endtabs %}
+
+Step 3: Set the control to content in `ContentPage.`
 
 {% endtabcontent %}
 {% endtabcontents %}

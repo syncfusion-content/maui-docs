@@ -243,9 +243,9 @@ Before proceeding, ensure the following are set up:
 2. Search for [Syncfusion.Maui.Sliders](https://www.nuget.org/packages/Syncfusion.Maui.Sliders/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
-## Step 3: Register the handler
+## Step 3: Register the Handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion<sup>®</sup> core.
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;
@@ -255,43 +255,39 @@ using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace SliderSample
+namespace RangeSelector
 {
-  public static class MauiProgram
-  {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-		builder
-		.UseMauiApp<App>()
-		.ConfigureSyncfusionCore()
-		.ConfigureFonts(fonts =>
-		{
-			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-		});
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-		return builder.Build();
-	 }
-
-  }
-
-}     
+            return builder.Build();
+        }
+    }
+}
 
 {% endhighlight %}
 
+## Step 4: Add a Basic DateTime Range Selector
 
-## Step 4: Add a Basic DateTime RangeSelector
-
-1. To initialize the control, import the Core namespace into your code.
-2. Initialize [SfDateTimeRangeSelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSelector.html?tabs=tabid-1).
+Import the [SfDateTimeRangeSelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSelector.html) namespace and initialize the DateTime Range Selector as follows.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <ContentPage
-    . . .    
-    xmlns:sfslider="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders">
+    . . .
+    xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders">
     <sliders:SfDateTimeRangeSelector Minimum="2010-01-01" 
                                      Maximum="2018-01-01" 
                                      RangeStart="2012-01-01" 
@@ -300,25 +296,26 @@ namespace SliderSample
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 
-    using Syncfusion.Maui.Sliders;
-    namespace SlidersGettingStarted
+using Syncfusion.Maui.Sliders;
+
+namespace GettingStarted
+{
+    public partial class MainPage : ContentPage
     {
-        public partial class MainPage : ContentPage
+        public MainPage()
         {
-            public MainPage()
-            {
-                InitializeComponent();
-                SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
-                rangeSelector.Minimum = new DateTime(2010, 01, 01);
-                rangeSelector.Maximum = new DateTime(2018, 01, 01);
-                rangeSelector.RangeStart = new DateTime(2012, 01, 01);
-                rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
-                content = rangeSelector;
-            }
-        }   
+            InitializeComponent();
+            SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector();
+            rangeSelector.Minimum = new DateTime(2010, 01, 01);
+            rangeSelector.Maximum = new DateTime(2018, 01, 01);
+            rangeSelector.RangeStart = new DateTime(2012, 01, 01);
+            rangeSelector.RangeEnd = new DateTime(2016, 01, 01);
+            content = rangeSelector;
+        }
     }
+}
 
 {% endhighlight %}
 

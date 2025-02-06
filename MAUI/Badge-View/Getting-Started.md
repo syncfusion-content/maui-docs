@@ -244,7 +244,7 @@ using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace BadgeViewSample
+namespace BadgeViewMauiSample
 {
   public static class MauiProgram
   {
@@ -261,15 +261,14 @@ namespace BadgeViewSample
 
 		return builder.Build();
 	 }
-
+   
   }
 
 }     
 
 {% endhighlight %}
 
-
-## Step 4: Add a Basic Badge View
+## Step 4:  Add a Basic Badge View
 
 1. To initialize the control, import the Core namespace into your code.
 2. Initialize [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1).
@@ -278,17 +277,17 @@ namespace BadgeViewSample
 
 {% highlight xaml %}
 
-<ContentPage
+   <ContentPage
     . . .    
-    xmlns:sfbadge="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
+    xmlns:badgeView="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
     <Grid>
-        <sfbadge:SfBadgeView />
+        <badgeView:SfBadgeView />
     </Grid>
 </ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %}
 
     using Syncfusion.Maui.Core;
     namespace BadgeViewGettingStarted
@@ -298,7 +297,7 @@ namespace BadgeViewSample
             public MainPage()
             {
                 InitializeComponent();           
-                SfBadgeView BadgeView = new SfBadgeView();
+                SfBadgeView badgeView = new SfBadgeView();
             }
         }   
     }

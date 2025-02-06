@@ -228,9 +228,10 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register the handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% highlight c# hl_lines="6 17" %}
+
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using Microsoft.Maui.Controls.Compatibility;
@@ -238,35 +239,32 @@ using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace CheckBoxSample
+namespace CheckBoxGettingStarted
 {
-  public static class MauiProgram
-  {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-		builder
-		.UseMauiApp<App>()
-		.ConfigureSyncfusionCore()
-		.ConfigureFonts(fonts =>
-		{
-			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-		});
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-		return builder.Build();
-	 }
+            return builder.Build();
+        }      
+    }
+}   
 
-  }
+{% endhighlight %}  
 
-}     
-
-{% endhighlight %}
-
-
-## Step 4: Add a Basic Check Box
+## Step 4: Add a Basic SfCheckBox
 
 1. To initialize the control, import the Buttons namespace into your code.
-2. Initialize [SfCheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html?tabs=tabid-1).
+1. Initialize [SfCheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html).
 
 {% tabs %}
 
@@ -274,10 +272,8 @@ namespace CheckBoxSample
 
 <ContentPage
     . . .    
-    xmlns:sfcheck="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-    <Grid>
-        <sfcheck:SfCheckBox />
-    </Grid>
+    xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
+   <buttons:SfCheckBox x:Name="checkBox"/>
 </ContentPage>
 
 {% endhighlight %}
@@ -293,12 +289,12 @@ namespace CheckBoxSample
             {
                 InitializeComponent();           
                 SfCheckBox checkBox = new SfCheckBox();
+                this.Content = checkBox;
             }
         }   
     }
 
 {% endhighlight %}
-
 {% endtabs %}
 
 {% endtabcontent %}

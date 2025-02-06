@@ -230,71 +230,61 @@ using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace DataGridSample
+namespace GettingStarted
 {
-  public static class MauiProgram
-  {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-		builder
-		.UseMauiApp<App>()
-		.ConfigureSyncfusionCore()
-		.ConfigureFonts(fonts =>
-		{
-			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-		});
+    public class MauiProgram 
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+                .UseMauiApp<App>()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                });
 
-		return builder.Build();
-	 }
-
-  }
-
-}     
-
-{% endhighlight %}
-
+            builder.ConfigureSyncfusionCore();
+            return builder.Build();
+        }
+    }
+}
+{% endhighlight %} 
 
 ## Step 4: Add a Basic DataGrid
 
-1. To initialize the control, import the DataGrid namespace into your code.
-2. Initialize [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html?tabs=tabid-1).
+1. Import the control namespace `Syncfusion.Maui.DataGrid` in XAML or C# code.
+2. Initialize the [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) control.
 
 {% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
-{% highlight xaml %}
+<ContentPage   
+    . . .
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
 
-<ContentPage
-    . . .    
-    xmlns:sfdatagrid="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
-    <Grid>
-        <sfdatagrid:SfDataGrid />
-    </Grid>
+    <syncfusion:SfDataGrid />
 </ContentPage>
 
 {% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-{% highlight c# %}
+using Syncfusion.Maui.DataGrid;
+. . .
 
-    using Syncfusion.Maui.DataGrid;
-    namespace DataGridGettingStarted
+public partial class MainPage : ContentPage
+{
+    public MainPage()
     {
-        public partial class MainPage : ContentPage
-        {
-            public MainPage()
-            {
-                InitializeComponent();           
-                SfDataGrid DataGrid = new SfDataGrid();
-            }
-        }   
+        InitializeComponent();
+        SfDataGrid dataGrid = new SfDataGrid();
+        this.Content = dataGrid;
     }
+}
 
 {% endhighlight %}
-
 {% endtabs %}
-
 {% endtabcontent %}
-
 {% endtabcontents %}
 
 ## Step 5: Define the View Model

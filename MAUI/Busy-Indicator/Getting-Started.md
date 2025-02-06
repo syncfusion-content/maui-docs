@@ -251,70 +251,69 @@ using Syncfusion.Maui.Core.Hosting;
 
 namespace BusyIndicatorSample
 {
-  public static class MauiProgram
-  {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-		builder
-		.UseMauiApp<App>()
-		.ConfigureSyncfusionCore()
-		.ConfigureFonts(fonts =>
-		{
-			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-		});
+    public static class MauiProgram
+    {
+    public static MauiApp CreateMauiApp()
+    {
+        var builder = MauiApp.CreateBuilder();
+        builder
+        .UseMauiApp<App>()
+        .ConfigureSyncfusionCore() 
+        .ConfigureFonts(fonts =>
+        {
+            fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+        });
 
-		return builder.Build();
-	 }
-
-  }
-
+        return builder.Build();
+        }      
+    }
 }     
 
-{% endhighlight %}
-
+{% endhighlight %} 
 
 ## Step 4: Add a Basic Busy Indicator
 
 1. To initialize the control, import the Core namespace into your code.
-2. Initialize [SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1).
+
+2. Initialize [SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1)
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage
-    . . .    
-    xmlns:sfbusy="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
-    <Grid>
-        <sfbusy:SfBusyIndicator IsRunning="True"/>
-    </Grid>
+<ContentPage 
+            ...
+            xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
+    <ContentPage.Content> 
+	 	<core:SfBusyIndicator x:Name="busyIndicator"
+                          IsRunning = "True" />
+	</ContentPage.Content> 
 </ContentPage>
-
+	
 {% endhighlight %}
 
 {% highlight c# %}
 
-    using Syncfusion.Maui.Core;
-    namespace AvatarViewGettingStarted
-    {
-        public partial class MainPage : ContentPage
-        {
-            public MainPage()
-            {
-                InitializeComponent();           
-                SfBusyIndicator busyIndicator = new SfBusyIndicator(){IsRunning = true};
-                Content = busyIndicator;   
-            }
-        }   
-    }
+using Syncfusion.Maui.Core;
+
+namespace BusyIndicatorSample   
+{  
+	public partial class MainPage : ContentPage                  
+	{ 
+		public MainPage()   
+		{   
+			InitializeComponent();       
+			SfBusyIndicator busyIndicator = new SfBusyIndicator(){IsRunning = true};
+            Content = busyIndicator;   
+		}  
+	}  
+}  
 
 {% endhighlight %}
 
 {% endtabs %}
 
 {% endtabcontent %}
-
 {% endtabcontents %}
 
 ## Setting Animation Type in .NET MAUI Busy Indicator

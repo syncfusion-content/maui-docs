@@ -261,9 +261,10 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register the handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
+ [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% highlight c# hl_lines="6 17" %}
+
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using Microsoft.Maui.Controls.Compatibility;
@@ -273,66 +274,77 @@ using Syncfusion.Maui.Core.Hosting;
 
 namespace ComboBoxSample
 {
-  public static class MauiProgram
-  {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-		builder
-		.UseMauiApp<App>()
-		.ConfigureSyncfusionCore()
-		.ConfigureFonts(fonts =>
-		{
-			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-		});
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-		return builder.Build();
-	 }
+            return builder.Build();
+        }      
+    }
+}    
 
-  }
-
-}     
-
-{% endhighlight %}
+{% endhighlight %} 
 
 
 ## Step 4: Add a Basic ComboBox
 
-1. To initialize the control, import the Inputs namespace into your code.
-2. Initialize [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html?tabs=tabid-1).
+The .NET MAUI ComboBox control is configured entirely in C# code or by using XAML markup. The following steps explain how to create a .NET MAUI ComboBox (SfComboBox) and configure its elements:
+
+### Adding the .NET MAUI ComboBox control
+
+Step 1: Add the NuGet to the project as discussed in the above reference section. 
+
+Step 2: Add the namespace as shown in the following code sample:
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<ContentPage
-    . . .    
-    xmlns:sfcombo="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs">
-    <Grid>
-        <sfcombo:SfComboBox />
-    </Grid>
-</ContentPage>
-
+    xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
+	
 {% endhighlight %}
 
 {% highlight c# %}
 
     using Syncfusion.Maui.Inputs;
-    namespace ComboBoxGettingStarted
-    {
-        public partial class MainPage : ContentPage
-        {
-            public MainPage()
-            {
-                InitializeComponent();           
-                SfComboBox comboBox = new SfComboBox();
-            }
-        }   
-    }
 
 {% endhighlight %}
 
 {% endtabs %}
+
+Step 3: Set the control to content in ContentPage.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+
+<ContentPage.Content>    
+    <editors:SfComboBox x:Name="comboBox" />
+</ContentPage.Content>
+
+
+{% endhighlight %}
+
+{% highlight c# %}
+          
+SfComboBox comboBox = new SfComboBox(); 
+Content = comboBox;  
+
+{% endhighlight %}
+
+{% endtabs %}
+
+{% end %}
 
 {% endtabcontent %}
 {% endtabcontents %}

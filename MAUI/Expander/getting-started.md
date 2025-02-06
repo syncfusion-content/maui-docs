@@ -216,69 +216,54 @@ using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace ExpanderSample
+namespace GettingStarted
 {
-  public static class MauiProgram
-  {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-		builder
-		.UseMauiApp<App>()
-		.ConfigureSyncfusionCore()
-		.ConfigureFonts(fonts =>
-		{
-			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-		});
-
-		return builder.Build();
-	 }
-
-  }
-
-}     
-
-{% endhighlight %}
-
-
-## Step 4: Add a Basic Expander
-
-1. To initialize the control, import the Core namespace into your code.
-2. Initialize [ SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfExpander.html?tabs=tabid-1).
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<ContentPage
-    . . .    
-    xmlns:sfexpander="clr-namespace:Syncfusion.Maui.Expander;assembly=Syncfusion.Maui.Expander">
-    <Grid>
-        <sfexpander: SfExpander />
-    </Grid>
-</ContentPage>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-    using Syncfusion.Maui.Expander;
-    namespace ExpanderGettingStarted
+    public class MauiProgram 
     {
-        public partial class MainPage : ContentPage
+        public static MauiApp CreateMauiApp()
         {
-            public MainPage()
-            {
-                InitializeComponent();           
-                SfExpander expander = new  SfExpander();
-            }
-        }   
-    }
+            var builder = MauiApp.CreateBuilder();
+            builder
+                .UseMauiApp<App>()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                });
 
+            builder.ConfigureSyncfusionCore();
+            return builder.Build();
+        }
+    }
+}
+{% endhighlight %} 
+ 
+## Step 4: Add a Basic Expander
+ 
+ 1. To initialize the control, import the `Syncfusion.Maui.Expander` namespace into your code.
+ 2. Initialize [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html).
+ 
+{% tabs %}
+{% highlight xaml hl_lines="4" %}
+<ContentPage   
+    . . .
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Expander;assembly=Syncfusion.Maui.Expander">
+    <syncfusion:SfExpander />
+</ContentPage>
 {% endhighlight %}
 
+{% highlight c# hl_lines="8" %}
+using Syncfusion.Maui.Expander;
+. . .
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfExpander expander = new SfExpander();
+    }
+}
+{% endhighlight %}
 {% endtabs %}
-
 {% endtabcontent %}
 {% endtabcontents %}
 

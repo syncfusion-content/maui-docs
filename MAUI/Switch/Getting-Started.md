@@ -242,35 +242,32 @@ using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace SwitchSample
+namespace SwitchGettingStarted
 {
-  public static class MauiProgram
-  {
-	public static MauiApp CreateMauiApp()
-	{
-		var builder = MauiApp.CreateBuilder();
-		builder
-		.UseMauiApp<App>()
-		.ConfigureSyncfusionCore()
-		.ConfigureFonts(fonts =>
-		{
-			fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-		});
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-		return builder.Build();
-	 }
+            return builder.Build();
+        }      
+    }
+}   
 
-  }
+{% endhighlight %} 
 
-}     
+## Step 4: Adding the .NET MAUI Switch 
 
-{% endhighlight %}
-
-
-## Step 4: Add a Basic Switch
-
-1. To initialize the control, import the Core namespace into your code.
-2. Initialize [SfSwitch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.html?tabs=tabid-1).
+1. To initialize the control, import the Buttons namespace into your code.
+2. Initialize [SfSwitch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html).
 
 {% tabs %}
 
@@ -278,10 +275,8 @@ namespace SwitchSample
 
 <ContentPage
     . . .    
-    xmlns:sfswitch="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
-    <Grid>
-        <sfswitch:SfSwitch />
-    </Grid>
+    xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
+    <buttons:SfSwitch x:Name="sfSwitch" />
 </ContentPage>
 
 {% endhighlight %}
@@ -296,7 +291,8 @@ namespace SwitchSample
             public MainPage()
             {
                 InitializeComponent();           
-                SfSwitch switch = new SfSwitch();
+                SfSwitch sfSwitch = new SfSwitch();
+                this.Content= sfSwitch;
             }
         }   
     }
@@ -304,6 +300,8 @@ namespace SwitchSample
 {% endhighlight %}
 
 {% endtabs %}
+
+![SfSwitch](images/getting-started/SfSwitch.png)
 
 {% endtabcontent %}
 {% endtabcontents %}
