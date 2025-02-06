@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Icons in .NET MAUI - Syncfusion<sup style="font-size:70%">&reg;</sup>
-description: Learn how to use and integrate the icon from the MauiMaterialAssets.ttf file in Syncfusion<sup style="font-size:70%">&reg;</sup> .NET MAUI components.
+title: Icons in .NET MAUI - Syncfusion®
+description: Learn how to use and integrate the icon from the MauiMaterialAssets.ttf file in Syncfusion® .NET MAUI components.
 platform: maui
 component: Common
 documentation: ug
