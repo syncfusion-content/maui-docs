@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Linear Gauge control | Syncfusion<sup>&reg;</sup>
+title: Getting started with .NET MAUI Linear Gauge control | Syncfusion
 description: Learn here about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Linear Gauge (SfLinearGauge) control, its elements, and more. 
 platform: maui
 control: SfLinearGauge
