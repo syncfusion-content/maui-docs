@@ -129,8 +129,8 @@ Before proceeding, ensure the following are set up:
 3. Select the project location, type the project name and press Enter.
 4. Then choose **Create project**
 
-
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Carousel NuGet Package
+
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you're in the project root directory where your .csproj file is located.
 3. Run the command `dotnet add package Syncfusion.Maui.Carousel` to install the Syncfusion<sup>®</sup> .NET MAUI Carousel package.
