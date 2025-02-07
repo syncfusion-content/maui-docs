@@ -91,6 +91,27 @@ Step 2: Add the namespace as shown in the following code sample.
 	using Syncfusion.Maui.Buttons;
 
 {% endhighlight %}
+
+## Initialize Button
+
+Now, add the [SfButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) control with a required optimal name using the included namespace.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<buttons:SfButton x:Name="button" />
+	
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfButton button = new SfButton();
+
+{% endhighlight %}
+
+{% endtabs %}
+
 {% endtabs %}
 
 {% endtabcontent %}
@@ -171,8 +192,27 @@ Step 2: Add the namespace as shown in the following code sample.
 {% endhighlight %}
 {% endtabs %}
 
-{% endtabcontent %}
+## Initialize Button
 
+Now, add the [SfButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) control with a required optimal name using the included namespace.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<buttons:SfButton x:Name="button" />
+	
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfButton button = new SfButton();
+
+{% endhighlight %}
+
+{% endtabs %}
+
+{% endtabcontent %}
 {% tabcontent JetBrains Rider %}
 
 ## Prerequisites
@@ -189,10 +229,10 @@ Before proceeding, ensure the following are set up:
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Buttons NuGet Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Core NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for [Syncfusion.Maui.Buttons](https://www.nuget.org/packages/Syncfusion.Maui.Buttons/) and install the latest version.
+2. Search for [Syncfusion.Maui.Buttons](https://www.nuget.org/packages/Syncfusion.Maui.Buttons) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
 ## Step 3: Register the Handler 
@@ -246,10 +286,6 @@ Step 2: Add the namespace as shown in the following code sample.
 	using Syncfusion.Maui.Buttons;
 
 {% endhighlight %}
-{% endtabs %}
-
-{% endtabcontent %}
-{% endtabcontents %}
 
 ## Initialize Button
 
@@ -270,6 +306,11 @@ SfButton button = new SfButton();
 {% endhighlight %}
 
 {% endtabs %}
+
+{% endtabs %}
+
+{% endtabcontent %}
+{% endtabcontents %}
 
 ## Button icon
 

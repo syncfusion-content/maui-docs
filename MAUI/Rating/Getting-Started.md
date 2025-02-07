@@ -93,6 +93,32 @@ Step 2: Add the namespace, as shown in the following code sample:
 
 {% endtabs %}
 
+## Initialize Rating
+
+Now, add the [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control with a required optimal name using the included namespace.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+	<rating:SfRating x:Name="rating" />
+	
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfRating rating;
+public MainPage()
+{
+    InitializeComponent();
+    rating = new SfRating();
+    this.Content = rating;
+} 
+
+{% endhighlight %}
+
+{% endtabs %}
+
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
 
@@ -174,8 +200,33 @@ Step 2: Add the namespace, as shown in the following code sample:
 
 {% endtabs %}
 
-{% endtabcontent %}
+## Initialize Rating
 
+Now, add the [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control with a required optimal name using the included namespace.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+	<rating:SfRating x:Name="rating" />
+	
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfRating rating;
+public MainPage()
+{
+    InitializeComponent();
+    rating = new SfRating();
+    this.Content = rating;
+} 
+
+{% endhighlight %}
+
+{% endtabs %}
+
+{% endtabcontent %}
 {% tabcontent JetBrains Rider %}
 
 ## Prerequisites
@@ -192,10 +243,10 @@ Before proceeding, ensure the following are set up:
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Inputs NuGet Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Core NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs/) and install the latest version.
+2. Search for [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
 ## Step 3: Register the Handler
@@ -254,8 +305,6 @@ Step 2: Add the namespace, as shown in the following code sample:
 
 {% endtabs %}
 
-{% endtabcontent %}
-{% endtabcontents %}
 ## Initialize Rating
 
 Now, add the [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control with a required optimal name using the included namespace.
@@ -281,6 +330,9 @@ public MainPage()
 {% endhighlight %}
 
 {% endtabs %}
+
+{% endtabcontent %}
+{% endtabcontents %}
 
 ## Set Number of Rating Items
 
