@@ -467,6 +467,95 @@ Here is the result of the previous codes,
 ![AI AssistView control in .NET MAUI platform](images/maui-aiassistview-getting-started.png)
 
 {% endtabcontent %}
+
+{% tabcontent JetBrains Rider %}
+
+## Prerequisites
+
+Before proceeding, ensure the following are set up:
+
+1. Ensure you have the latest version of JetBrains Rider.
+2. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
+3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
+
+## Step 1: Create a new .NET MAUI Project
+
+1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
+2. Enter the Project Name, Solution Name, and Location.
+3. Select the .NET framework version and click Create.
+
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI  AI AssistView NuGet Package
+
+1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+2. Search for [Syncfusion.Maui. AIAssistView](https://www.nuget.org/packages/Syncfusion.Maui. AIAssistView/) and install the latest version.
+3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
+
+## Step 3: Register the handler
+
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all Syncfusion controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
+
+{% tabs %}
+{% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 20" %}
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Microsoft.Maui.Hosting;
+using Syncfusion.Maui.Core.Hosting;
+
+namespace GettingStarted
+{
+    public class MauiProgram 
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+                .UseMauiApp<App>()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                });
+
+            builder.ConfigureSyncfusionCore();
+            return builder.Build();
+        }
+    }
+}
+{% endhighlight %} 
+{% endtabs %}
+
+## Step 4: Add a Basic AI AssistView
+
+ 1. To initialize the control, import the `Syncfusion.Maui.AIAssistView` namespace into your code.
+ 2. Initialize [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html).
+
+{% tabs %}
+{% highlight xaml hl_lines="4" %}
+
+    <ContentPage> 
+      . . .
+      xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView">
+      <syncfusion:SfAIAssistView />
+    </ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# hl_lines="9" %}
+    using Syncfusion.Maui.AIAssistView;
+    . . .
+
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+          InitializeComponent();
+          SfAIAssistView sfAIAssistView = new SfAIAssistView();
+          this.Content = sfAIAssistView;
+        }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+{% endtabcontent %}
 {% endtabcontents %}
 
 ## Request and Response item
