@@ -19,7 +19,7 @@ To start using the icons, first ensure that the font is registered in your appli
 
 Once installed, the `MauiMaterialAssets.ttf` will be added to your project's font folder.
 
-### Step 2: Register the font**
+### Step 2: Register the font
 
 Modify your `MauiProgram.cs` to register the font icon. Here is an example:
 
