@@ -117,33 +117,6 @@ inputLayout.Content = new Entry();
 
 {% endtabs %}
 
-**Adding hint**
-Floating label for the text input layout can be added by setting the [Hint](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_Hint) property. Visibility of the hint can be collapsed by setting the [ShowHint](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ShowHint) property to `false.` By default, this property is set to `true.`
-
-{% tabs %} 
-
-{% highlight xaml %} 
-
-<inputLayout:SfTextInputLayout Hint="Name">
-   <Entry />
-</inputLayout:SfTextInputLayout>  
-
-{% endhighlight %}
-
-{% highlight C# %} 
-
-var inputLayout = new SfTextInputLayout();
-inputLayout.Hint = "Name"; 
-inputLayout.Content = new Entry(); 
-
-{% endhighlight %}
-
-{% endtabs %}
-
-When focusing on the input view, the hint label will be moved to the top position; it will be returned to the original position when proceeding further (on unfocused) without entering any value.
-
-Run the project, and check if you get the following output to ensure that the project has been appropriately configured to add the text input layout control.
-
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
 
@@ -249,34 +222,6 @@ inputLayout.Content = new Entry();
 
 {% endtabs %}
 
-**Adding hint**
-Floating label for the text input layout can be added by setting the [Hint](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_Hint) property. Visibility of the hint can be collapsed by setting the [ShowHint](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ShowHint) property to `false.` By default, this property is set to `true.`
-
-{% tabs %} 
-
-{% highlight xaml %} 
-
-<inputLayout:SfTextInputLayout Hint="Name">
-   <Entry />
-</inputLayout:SfTextInputLayout>  
-
-{% endhighlight %}
-
-{% highlight C# %} 
-
-var inputLayout = new SfTextInputLayout();
-inputLayout.Hint = "Name"; 
-inputLayout.Content = new Entry(); 
-
-{% endhighlight %}
-
-{% endtabs %}
-
-When focusing on the input view, the hint label will be moved to the top position; it will be returned to the original position when proceeding further (on unfocused) without entering any value.
-
-Run the project, and check if you get the following output to ensure that the project has been appropriately configured to add the text input layout control.
-
-
 {% endtabcontent %}
 
 {% tabcontent JetBrains Rider %}
@@ -380,7 +325,11 @@ inputLayout.Content = new Entry();
 
 {% endtabs %}
 
-**Adding hint**
+{% endtabcontent %}
+{% endtabcontents %}
+
+## Adding hint
+
 Floating label for the text input layout can be added by setting the [Hint](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_Hint) property. Visibility of the hint can be collapsed by setting the [ShowHint](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ShowHint) property to `false.` By default, this property is set to `true.`
 
 {% tabs %} 
@@ -406,9 +355,6 @@ inputLayout.Content = new Entry();
 When focusing on the input view, the hint label will be moved to the top position; it will be returned to the original position when proceeding further (on unfocused) without entering any value.
 
 Run the project, and check if you get the following output to ensure that the project has been appropriately configured to add the text input layout control.
-
-{% endtabcontent %}
-{% endtabcontents %}
 
 ![Adding hint](images/GettingStarted/GettingStarted.png)
 
