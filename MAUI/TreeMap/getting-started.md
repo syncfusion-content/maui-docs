@@ -102,14 +102,6 @@ public partial class MainPage : ContentPage
 
 {% endtabs %}
 
-## Step 5: Populate .NET MAUI TreeMap data source
-
-Here are the steps to render treemap items using the .NET MAUI TreeMap control with respective data properties created in a data model class.
-
-* Create a data model for treemap.
-* Create view model.
-* Bind data source for TreeMap.
-
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
 
@@ -197,14 +189,6 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 
 {% endtabs %}
-
-## Step 5: Populate .NET MAUI TreeMap data source
-
-Here are the steps to render treemap items using the .NET MAUI TreeMap control with respective data properties created in a data model class.
-
-* Create a data model for treemap.
-* Create view model.
-* Bind data source for TreeMap.
 
 {% endtabcontent %}
 
@@ -295,7 +279,11 @@ public partial class MainPage : ContentPage
 
 {% endtabs %}
 
-## Step 5: Populate .NET MAUI TreeMap data source
+{% endtabcontent %}
+
+{% endtabcontents %}
+
+## Populate .NET MAUI TreeMap data source
 
 Here are the steps to render treemap items using the .NET MAUI TreeMap control with respective data properties created in a data model class.
 
@@ -303,9 +291,6 @@ Here are the steps to render treemap items using the .NET MAUI TreeMap control w
 * Create view model.
 * Bind data source for TreeMap.
 
-{% endtabcontent %}
-
-{% endtabcontents %}
 
 #### Create a data model for treemap 
 
