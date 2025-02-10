@@ -97,7 +97,7 @@ Step 2: Add the namespace as shown in the following code snippet
 
 Step 3: Set the control to content in `ContentPage.`
 
-## For SfChip
+**For SfChip**
 
 {% tabs %}
 
@@ -118,7 +118,7 @@ Content = chips;
 
 {% endtabs %}
 
-## For SfChipGroup
+**For SfChipGroup**
 
 Initialize an empty [`SfChipGroup`] as shown in the following code snippet
 
@@ -231,7 +231,7 @@ Step 2: Add the namespace as shown in the following code snippet
 
 Step 3: Set the control to content in `ContentPage.`
 
-## For SfChip
+**For SfChip**
 
 {% tabs %}
 
@@ -252,7 +252,7 @@ Content = chips;
 
 {% endtabs %}
 
-## For SfChipGroup
+**For SfChipGroup**
 
 Initialize an empty [`SfChipGroup`] as shown in the following code snippet
 
@@ -363,7 +363,7 @@ Step 2: Add the namespace as shown in the following code snippet
 
 Step 3: Set the control to content in `ContentPage.`
 
-## For SfChip
+**For SfChip**
 
 {% tabs %}
 
@@ -384,7 +384,7 @@ Content = chips;
 
 {% endtabs %}
 
-## For SfChipGroup
+**For SfChipGroup**
 
 Initialize an empty [`SfChipGroup`] as shown in the following code snippet
 

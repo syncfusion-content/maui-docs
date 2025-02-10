@@ -95,9 +95,7 @@ Step 2: Add the namespace, as shown in the following code sample:
 
 {% endtabs %}
 
-## Initialize the DateTime Range Slider
-
-Import the [SfDateTimeRangeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html) namespace and initialize the DateTime Range Slider as shown below.
+Step 3: Add the [SfDateTimeRangeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html) control with a required optimal name using the included namespace.
 
 {% tabs %}
 
@@ -220,9 +218,7 @@ Step 2: Add the namespace, as shown in the following code sample:
 
 {% endtabs %}
 
-## Initialize the DateTime Range Slider
-
-Import the [SfDateTimeRangeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html) namespace and initialize the DateTime Range Slider as shown below.
+Step 3: Add the [SfDateTimeRangeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html) control with a required optimal name using the included namespace.
 
 {% tabs %}
 
@@ -343,9 +339,7 @@ Step 2: Add the namespace, as shown in the following code sample:
 
 {% endtabs %}
 
-## Initialize the DateTime Range Slider
-
-Import the [SfDateTimeRangeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html) namespace and initialize the DateTime Range Slider as shown below.
+Step 3: Add the [SfDateTimeRangeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html) control with a required optimal name using the included namespace.
 
 {% tabs %}
 

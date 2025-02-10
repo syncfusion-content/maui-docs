@@ -93,9 +93,7 @@ Step 2: Add the namespace, as shown in the following code sample:
 
 {% endtabs %}
 
-## Initialize Rating
-
-Now, add the [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control with a required optimal name using the included namespace.
+Step 3: Add the [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control with a required optimal name using the included namespace.
 
 {% tabs %}
 
@@ -200,9 +198,7 @@ Step 2: Add the namespace, as shown in the following code sample:
 
 {% endtabs %}
 
-## Initialize Rating
-
-Now, add the [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control with a required optimal name using the included namespace.
+Step 3: Add the [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control with a required optimal name using the included namespace.
 
 {% tabs %}
 
@@ -305,9 +301,7 @@ Step 2: Add the namespace, as shown in the following code sample:
 
 {% endtabs %}
 
-## Initialize Rating
-
-Now, add the [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control with a required optimal name using the included namespace.
+Step 3: Add the [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control with a required optimal name using the included namespace.
 
 {% tabs %}
 
