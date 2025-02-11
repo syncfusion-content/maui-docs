@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Maps control | Syncfusion<sup>&reg;</sup>
+title: Getting started with .NET MAUI Maps control | Syncfusion
 description: Learn here about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Maps (SfMaps) control, its elements, and more. 
 platform: MAUI
 control: SfMaps

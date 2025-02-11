@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Picker control | Syncfusion<sup>&reg;</sup>
+title: Getting started with .NET MAUI Picker control | Syncfusion
 description: Learn about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Picker (SfPicker) control and its basic features.
 platform: maui
 control: SfPicker

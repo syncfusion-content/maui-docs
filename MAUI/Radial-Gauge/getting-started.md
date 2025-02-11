@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Radial Gauge control | Syncfusion<sup>&reg;</sup>
+title: Getting Started with .NET MAUI Radial Gauge control | Syncfusion
 description: Learn here all about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Radial Gauge(SfRadialGauge) control and more.
 platform: maui
 control: SfRadialGauge
