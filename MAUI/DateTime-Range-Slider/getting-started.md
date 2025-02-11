@@ -83,13 +83,55 @@ Step 2: Add the namespace, as shown in the following code sample:
 
 {% highlight xaml %}
 
-	<xmlns:rating="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"/>
+    <xmlns:rating="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"/>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-	using Syncfusion.Maui.Sliders;
+    using Syncfusion.Maui.Sliders;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Step 3: Add the [SfDateTimeRangeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html) control with a required optimal name using the included namespace.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage
+    . . .
+    xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders">
+    <sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
+                                   Maximum="2018-01-01" 
+                                   RangeStart="2012-01-01" 
+                                   RangeEnd="2016-01-01" />
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.Sliders;
+
+namespace RangeSlider
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
+            rangeSlider.Minimum = new DateTime(2010, 01, 01);
+            rangeSlider.Maximum = new DateTime(2018, 01, 01);
+            rangeSlider.RangeStart = new DateTime(2012, 01, 01);
+            rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
+            this.content = rangeSlider;
+        }
+    }
+}
 
 {% endhighlight %}
 
@@ -164,104 +206,19 @@ Step 2: Add the namespace, as shown in the following code sample:
 
 {% highlight xaml %}
 
-	<xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"/>
+    <xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"/>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-	using Syncfusion.Maui.Sliders;
+    using Syncfusion.Maui.Sliders;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-{% endtabcontent %}
-
-{% tabcontent JetBrains Rider %}
-
-## Prerequisites
-
-Before proceeding, ensure the following are set up:
-
-1. Ensure you have the latest version of JetBrains Rider.
-2. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
-3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
-
-## Step 1: Create a new .NET MAUI Project
-
-1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
-2. Enter the Project Name, Solution Name, and Location.
-3. Select the .NET framework version and click Create.
-
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Sliders NuGet Package
-
-1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for [Syncfusion.Maui.Sliders](https://www.nuget.org/packages/Syncfusion.Maui.Sliders/) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
-
-## Step 3: Register the Handler
-
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion<sup>®</sup> core.
-
-{% highlight c# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace Slider
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }
-    }
-}
-
-{% endhighlight %}
-
-## Step 4: Add a Basic DateTime Range Slider
-
-Step 1: Add the NuGet to the project as discussed in the above reference section. 
-
-Step 2: Add the namespace, as shown in the following code sample:
-
-{% tabs %}
-
-{% highlight xaml %}
-
-	<xmlns:rating="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"/>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-	using Syncfusion.Maui.Sliders;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-{% endtabcontent %}
-{% endtabcontents %}
-
-## Initialize the DateTime Range Slider
-
-Import the [SfDateTimeRangeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html) namespace and initialize the DateTime Range Slider as shown below.
+Step 3: Add the [SfDateTimeRangeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html) control with a required optimal name using the included namespace.
 
 {% tabs %}
 
@@ -302,6 +259,9 @@ namespace RangeSlider
 {% endhighlight %}
 
 {% endtabs %}
+
+{% endtabcontent %}
+{% endtabcontents %}
 
 ![Initialize DateTimeRangeSlider](images/getting-started/initialize-slider.png)
 
