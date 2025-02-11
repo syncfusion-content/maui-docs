@@ -30,7 +30,7 @@ Before proceeding, ensure the following are set up:
 2. Name the project and choose a location. Then click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion .NET MAUI DateTimePicker NuGet Package
+## Step 2: Install the Syncfusion .NET MAUI Picker NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker/) and install the latest version.

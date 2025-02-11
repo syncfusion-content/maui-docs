@@ -93,6 +93,30 @@ Step 2: Add the namespace, as shown in the following code sample:
 
 {% endtabs %}
 
+Step 3: Add the [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control with a required optimal name using the included namespace.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+	<rating:SfRating x:Name="rating" />
+	
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfRating rating;
+public MainPage()
+{
+    InitializeComponent();
+    rating = new SfRating();
+    this.Content = rating;
+} 
+
+{% endhighlight %}
+
+{% endtabs %}
+
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
 
@@ -174,8 +198,31 @@ Step 2: Add the namespace, as shown in the following code sample:
 
 {% endtabs %}
 
-{% endtabcontent %}
+Step 3: Add the [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control with a required optimal name using the included namespace.
 
+{% tabs %}
+
+{% highlight xaml %}
+
+	<rating:SfRating x:Name="rating" />
+	
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfRating rating;
+public MainPage()
+{
+    InitializeComponent();
+    rating = new SfRating();
+    this.Content = rating;
+} 
+
+{% endhighlight %}
+
+{% endtabs %}
+
+{% endtabcontent %}
 {% tabcontent JetBrains Rider %}
 
 ## Prerequisites
@@ -254,11 +301,7 @@ Step 2: Add the namespace, as shown in the following code sample:
 
 {% endtabs %}
 
-{% endtabcontent %}
-{% endtabcontents %}
-## Initialize Rating
-
-Now, add the [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control with a required optimal name using the included namespace.
+Step 3: Add the [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control with a required optimal name using the included namespace.
 
 {% tabs %}
 
@@ -281,6 +324,9 @@ public MainPage()
 {% endhighlight %}
 
 {% endtabs %}
+
+{% endtabcontent %}
+{% endtabcontents %}
 
 ## Set Number of Rating Items
 

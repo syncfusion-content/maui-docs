@@ -329,6 +329,7 @@ Content = autocomplete;
 {% endtabs %}
 
 {% endtabcontent %}
+
 {% endtabcontents %}
 
 ## Step 5: Populate items using data binding

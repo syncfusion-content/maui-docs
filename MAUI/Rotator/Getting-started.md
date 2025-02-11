@@ -91,9 +91,7 @@ Step 2: Add the namespace as shown in the following code sample.
 {% endhighlight %}
 {% endtabs %}
 
-## Create a Simple SfRotator 
-
-The [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1) control is configured entirely in C# code or by using XAML markup.
+Step 3: Add the [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control with a required optimal name using the included namespace.
 
 {% tabs %}
 
@@ -213,10 +211,7 @@ Step 2: Add the namespace as shown in the following code sample.
 {% endtabs %}
 
 
-
-## Create a Simple SfRotator 
-
-The [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1) control is configured entirely in C# code or by using XAML markup.
+Step 3: Add the [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control with a required optimal name using the included namespace.
 
 {% tabs %}
 
@@ -334,9 +329,7 @@ Step 2: Add the namespace as shown in the following code sample.
 {% endhighlight %}
 {% endtabs %}
 
-## Create a Simple SfRotator 
-
-The [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1) control is configured entirely in C# code or by using XAML markup.
+Step 3: Add the [SfRotator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html) control with a required optimal name using the included namespace.
 
 {% tabs %}
 
