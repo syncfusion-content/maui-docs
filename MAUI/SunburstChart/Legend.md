@@ -293,3 +293,10 @@ The **`LegendItemCreated`** event is triggered when the sunburst legend item is 
 * [`IconWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ILegendItem.html#Syncfusion_Maui_Core_ILegendItem_IconWidth) - used to get or set the icon width of the legend icon.
 * [`Index`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ILegendItem.html#Syncfusion_Maui_Core_ILegendItem_Index) - used to get index position of the legend.
 * [`Item`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ILegendItem.html#Syncfusion_Maui_Core_ILegendItem_Item) - used to get the corresponding SunburstItem hierarchical and positional information for the legend item.
+
+## Limitations
+* Do not add items explicitly.
+* When using BindableLayouts, do not bind ItemsSource explicitly.
+* For better UX, arrange items vertically for left and right dock positions, and vice versa for top and bottom dock positions.
+* If the layout's measured size is larger than the MaximumHeightRequest, scrolling will be enabled.
+* If MaximumHeightRequest is set to 1 and the chart's available size is smaller than the layout's measured size, the series may not have enough space to draw properly.
