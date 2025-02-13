@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Unbound Row in .NET MAUI DataGrid control | Syncfusion
-description: Learn here all about Unbound Row support in Syncfusion .NET MAUI DataGrid (SfDataGrid) control and more.
+title: Unbound Row in .NET MAUI DataGrid control | Syncfusion®
+description: Learn here all about Unbound Row support in Syncfusion® .NET MAUI DataGrid (SfDataGrid) control and more.
 platform: MAUI
 control: SfDataGrid
 documentation: ug
