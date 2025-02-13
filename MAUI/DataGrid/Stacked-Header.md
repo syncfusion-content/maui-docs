@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Stacked Headers in .NET MAUI DataGrid control | Syncfusion
-description: Learn here all about how to Stacked Headers in Syncfusion .NET MAUI DataGrid (SfDataGrid) control and more.
+title: Stacked Headers in .NET MAUI DataGrid control | Syncfusion®
+description: Learn here all about how to Stacked Headers in Syncfusion® .NET MAUI DataGrid (SfDataGrid) control and more.
 platform: MAUI
 control: SfDataGrid
 documentation: UG

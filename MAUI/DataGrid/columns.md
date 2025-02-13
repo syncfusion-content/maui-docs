@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Columns in .NET MAUI DataGrid control | Syncfusion
-description: Learn all about Columns support in Syncfusion .NET MAUI DataGrid (SfDataGrid) control, its elements, and more here.
+title: Columns in .NET MAUI DataGrid control | Syncfusion®
+description: Learn all about Columns support in Syncfusion® .NET MAUI DataGrid (SfDataGrid) control, its elements, and more here.
 platform: MAUI
 control: SfDataGrid
 documentation: UG

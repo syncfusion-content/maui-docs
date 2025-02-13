@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Thumb and Thumb Overlay in .NET MAUI Range Slider control | Syncfusion
-description: Learn here all about the Thumb and Thumb Overlay features of Syncfusion .NET MAUI Range Slider (SfRangeSlider) control and more.
+title: Thumb and Thumb Overlay in .NET MAUI Range Slider control | Syncfusion®
+description: Learn here all about the Thumb and Thumb Overlay features of Syncfusion® .NET MAUI Range Slider (SfRangeSlider) control and more.
 platform: maui
 control: SfRangeSlider
 documentation: ug

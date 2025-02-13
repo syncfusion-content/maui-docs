@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Grouping in MAUI DataGrid control | Syncfusion
-description: Learn here all about Grouping support in Syncfusion MAUI DataGrid (SfDataGrid) control and more about it.
+title: Grouping in MAUI DataGrid control | Syncfusion®
+description: Learn here all about Grouping support in Syncfusion® MAUI DataGrid (SfDataGrid) control and more about it.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
