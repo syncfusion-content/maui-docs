@@ -342,8 +342,6 @@ Content = comboBox;
 
 {% endtabs %}
 
-{% end %}
-
 {% endtabcontent %}
 {% endtabcontents %}
 
