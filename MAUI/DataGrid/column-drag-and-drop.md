@@ -12,6 +12,12 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 The SfDataGrid allows you to drag and drop a column header by setting the [SfDataGrid.AllowDraggingColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowDraggingColumn) property to `true.` A drag view is displayed while dragging a column header. You can handle drag and drop operations based on your requirements by using the [SfDataGrid.QueryColumnDragging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_QueryColumnDragging) event.
 
+To quickly get started with column drag and drop in .NET MAUI DataGrid, watch this video:
+
+<style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src='https://www.youtube.com/embed/qwkDwCgo_jo'></iframe>
+
+To enable column drag and drop functionality, please follow the code example below:
+
 {% tabs %}
 {% highlight xaml %}
     <syncfusion:SfDataGrid x:Name="dataGrid"
