@@ -1,8 +1,8 @@
 ---
 
 layout: post
-title: Rating Shape in .NET MAUI Rating control | Syncfusion
-description: Learn here all about Rating Shape support in Syncfusion .NET MAUI Rating (SfRating) control and more.
+title: Rating Shape in .NET MAUI Rating control | Syncfusion®
+description: Learn here all about Rating Shape support in Syncfusion® .NET MAUI Rating (SfRating) control and more.
 platform: maui
 control: Rating
 documentation: ug

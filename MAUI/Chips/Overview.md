@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Overview | .NET MAUI Chips | Syncfusion
+title: Overview | .NET MAUI Chips | Syncfusion®
 platform: maui
 description: Learn here about overall key features in Essential Studio® for .NET MAUI SfChip Control, its elements, and more.
 control: SfChip
 ---
 
-> **Notice**: After **Volume 1 2025 (Mid of March 2025)**, updates, bug fixes, and feature enhancements for this control will no longer be available in the Syncfusion package. Please switch to the **Syncfusion Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
+> **Notice**: After **Volume 1 2025 (Mid of March 2025)**, updates, bug fixes, and feature enhancements for this control will no longer be available in the Syncfusion<sup>®</sup> package. Please switch to the **Syncfusion<sup>®</sup> Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
 
 # Overview in .NET MAUI Chips
 

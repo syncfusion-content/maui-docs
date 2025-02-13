@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Autocomplete | Syncfusion
-description: Learn how to get started with Syncfusion<sup>®</sup>.NET MAUI Autocomplete control and its suggestion list, as well as other topics in this section.
+title: Getting Started with .NET MAUI Autocomplete | Syncfusion®
+description: Learn how to get started with Syncfusion® .NET MAUI Autocomplete control and its suggestion list, as well as other topics in this section.
 platform: maui
 control: SfAutocomplete
 documentation: ug
