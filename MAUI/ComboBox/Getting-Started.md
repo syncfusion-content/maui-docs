@@ -123,8 +123,6 @@ Content = comboBox;
 
 {% endtabs %}
 
-{% end %}
-
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
 

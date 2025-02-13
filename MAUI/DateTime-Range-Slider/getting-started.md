@@ -95,6 +95,48 @@ Step 2: Add the namespace, as shown in the following code sample:
 
 {% endtabs %}
 
+Step 3: Add the [SfDateTimeRangeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html) control with a required optimal name using the included namespace.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage
+    . . .
+    xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders">
+    <sliders:SfDateTimeRangeSlider Minimum="2010-01-01" 
+                                   Maximum="2018-01-01" 
+                                   RangeStart="2012-01-01" 
+                                   RangeEnd="2016-01-01" />
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.Sliders;
+
+namespace RangeSlider
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfDateTimeRangeSlider rangeSlider = new SfDateTimeRangeSlider();
+            rangeSlider.Minimum = new DateTime(2010, 01, 01);
+            rangeSlider.Maximum = new DateTime(2018, 01, 01);
+            rangeSlider.RangeStart = new DateTime(2012, 01, 01);
+            rangeSlider.RangeEnd = new DateTime(2016, 01, 01);
+            this.content = rangeSlider;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
 
@@ -176,12 +218,7 @@ Step 2: Add the namespace, as shown in the following code sample:
 
 {% endtabs %}
 
-{% endtabcontent %}
-{% endtabcontents %}
-
-## Initialize the DateTime Range Slider
-
-Import the [SfDateTimeRangeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html) namespace and initialize the DateTime Range Slider as shown below.
+Step 3: Add the [SfDateTimeRangeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html) control with a required optimal name using the included namespace.
 
 {% tabs %}
 
@@ -222,6 +259,9 @@ namespace RangeSlider
 {% endhighlight %}
 
 {% endtabs %}
+
+{% endtabcontent %}
+{% endtabcontents %}
 
 ![Initialize DateTimeRangeSlider](images/getting-started/initialize-slider.png)
 
