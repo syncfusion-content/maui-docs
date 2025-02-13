@@ -24,7 +24,7 @@ Once installed, the `MauiMaterialAssets.ttf` will be added to your project's fon
 Modify your `MauiProgram.cs` to register the font icon. Here is an example:
 
 {% tabs %}
-{% highlight MauiProgram.cs %}
+{% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 20" %}
 
 //...existing code...
 public static class MauiProgram
