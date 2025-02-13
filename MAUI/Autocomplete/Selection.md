@@ -68,7 +68,7 @@ public class SocialMediaViewModel
 {% highlight xaml %}
 
 <editors:SfAutocomplete x:Name="autocomplete"
-                        WidthRequest="250"
+                        WidthRequest="350"
                         HeightRequest = "50"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
@@ -80,7 +80,7 @@ public class SocialMediaViewModel
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel(); 
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
-    WidthRequest = 250,
+    WidthRequest = 350,
     HeightRequest = 50,
     DisplayMemberPath = "Name",
     TextMemberPath = "Name",
@@ -113,7 +113,7 @@ Also there are two ways to display multi-selection items in the AutoComplete con
 
   <editors:SfAutocomplete x:Name="autoComplete"
                 SelectionMode="Multiple"
-                WidthRequest="250"
+                WidthRequest="350"
                 HeightRequest="50"
                 ItemsSource="{Binding SocialMedias}"
                 SelectedItems="{Binding SelectedItemsList}"
@@ -127,7 +127,7 @@ Also there are two ways to display multi-selection items in the AutoComplete con
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel(); 
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
-    WidthRequest = 250,
+    WidthRequest = 350,
     HeightRequest = 50,
     SelectionMode = AutocompleteSelectionMode.Multiple,
     ItemsSource = socialMediaViewModel.SocialMedias
@@ -150,12 +150,12 @@ When setting [MultiSelectionDisplayMode](https://help.syncfusion.com/cr/maui/Syn
 
  <editors:SfAutocomplete x:Name="autoComplete" 
                          HeightRequest="50"
-                         WidthRequest="250"
+                         WidthRequest="350"
                          ItemsSource="{Binding SocialMedias}"
                          SelectionMode="Multiple"
                          MultiSelectionDisplayMode="Delimiter"
                          DelimiterText="/"
-                         MaxDropDownHeight="250"
+                         MaxDropDownHeight="350"
                          DisplayMemberPath="Name"
                          TextMemberPath="Name"
                          Placeholder="Enter Media" />
@@ -167,13 +167,13 @@ When setting [MultiSelectionDisplayMode](https://help.syncfusion.com/cr/maui/Syn
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
-    WidthRequest = 250,
+    WidthRequest = 350,
     HeightRequest = 50,
     ItemsSource = socialMediaViewModel.SocialMedias,
     SelectionMode = AutocompleteSelectionMode.Multiple,
     MultiSelectionDisplayMode = AutocompleteMultiSelectionDisplayMode.Delimiter,
     DelimiterText = "/",
-    MaxDropDownHeight = 250,
+    MaxDropDownHeight = 350,
     DisplayMemberPath = "Name",
     TextMemberPath = "Name",
     Placeholder = "Enter Media"
@@ -201,10 +201,10 @@ When the [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.In
 
  <editors:SfAutocomplete x:Name="autoComplete" 
              HeightRequest="50"
-             WidthRequest="250"
+             WidthRequest="350"
              ItemsSource="{Binding SocialMedias}"
              SelectionMode="Multiple"
-             MaxDropDownHeight="250"
+             MaxDropDownHeight="350"
              DisplayMemberPath="Name"
              Placeholder="Enter Media"
              TextMemberPath="Name"
@@ -218,13 +218,13 @@ SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autoComplete = new SfAutocomplete
 {
     HeightRequest = 50,
-    WidthRequest = 250,
+    WidthRequest = 350,
     ItemsSource = socialMediaViewModel.SocialMedias,
     DisplayMemberPath = "Name",
     TextMemberPath = "Name",
     Placeholder = "Enter Media",
     SelectionMode = AutocompleteSelectionMode.Multiple,
-    MaxDropDownHeight = 250,
+    MaxDropDownHeight = 350,
     TokensWrapMode = AutoCompleteTokensWrapMode.Wrap
 };
 
@@ -246,13 +246,13 @@ SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autoComplete = new SfAutocomplete
 {
     HeightRequest = 50,
-    WidthRequest = 250,
+    WidthRequest = 350,
     ItemsSource = socialMediaViewModel.SocialMedias,
     DisplayMemberPath = "Name",
     TextMemberPath = "Name",
     Placeholder = "Enter Media",
     SelectionMode = AutocompleteSelectionMode.Multiple,
-    MaxDropDownHeight = 250,
+    MaxDropDownHeight = 350,
     TokensWrapMode = AutoCompleteTokensWrapMode.None
 };
 
@@ -264,10 +264,10 @@ SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autoComplete = new SfAutocomplete
 {
     HeightRequest = 50,
-    WidthRequest = 250,
+    WidthRequest = 350,
     ItemsSource = socialMediaViewModel.SocialMedias,
     SelectionMode = AutocompleteSelectionMode.Multiple,
-    MaxDropDownHeight = 250,
+    MaxDropDownHeight = 350,
     DisplayMemberPath = "Name",
     Placeholder = "Enter Media",
     TextMemberPath = "Name",
@@ -291,7 +291,7 @@ When an item is selected from the drop-down list, the [SelectionChanged](https:/
 {% highlight xaml %}
 
 <editors:SfAutocomplete x:Name="autocomplete"
-                        WidthRequest="250"
+                        WidthRequest="350"
                         HeightRequest = "50"
                         ItemsSource="{Binding SocialMedias}"
                         TextMemberPath="Name"
@@ -305,7 +305,7 @@ When an item is selected from the drop-down list, the [SelectionChanged](https:/
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete
 {
-    WidthRequest = 250,
+    WidthRequest = 350,
     HeightRequest = 50,
     ItemsSource = socialMediaViewModel.SocialMedias,
     TextMemberPath = "Name",
@@ -345,9 +345,9 @@ In single selection mode, the [SelectedValue](https://help.syncfusion.com/cr/mau
 {% highlight XAML %}
 
 <editors:SfAutocomplete x:Name="autocomplete"
-                    WidthRequest="250"
+                    WidthRequest="350"
                     HeightRequest = "50"
-                    MaxDropDownHeight="250"
+                    MaxDropDownHeight="350"
                     TextMemberPath="Name"   
                     DisplayMemberPath="Name"
                     ItemsSource="{Binding SocialMedias}"
@@ -364,9 +364,9 @@ In single selection mode, the [SelectedValue](https://help.syncfusion.com/cr/mau
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete
 {
-    WidthRequest = 250,
+    WidthRequest = 350,
     HeightRequest = 50,
-    MaxDropDownHeight = 250,
+    MaxDropDownHeight = 350,
     TextMemberPath = "Name",
     DisplayMemberPath = "Name",
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -407,9 +407,9 @@ In multi-selection mode, the [SelectedValue](https://help.syncfusion.com/cr/maui
 {% highlight XAML %}
 
 <editors:SfAutocomplete x:Name="autocomplete"
-                    WidthRequest="250"
+                    WidthRequest="350"
                     HeightRequest = "50"
-                    MaxDropDownHeight="250"
+                    MaxDropDownHeight="350"
                     TextMemberPath="Name"   
                     DisplayMemberPath="Name"
                     ItemsSource="{Binding SocialMedias}"
@@ -427,9 +427,9 @@ In multi-selection mode, the [SelectedValue](https://help.syncfusion.com/cr/maui
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete
 {
-    WidthRequest = 250,
+    WidthRequest = 350,
     HeightRequest = 50,
-    MaxDropDownHeight = 250,
+    MaxDropDownHeight = 350,
     TextMemberPath = "Name",
     DisplayMemberPath = "Name",
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -479,7 +479,7 @@ By default, the clear button `X` will be displayed in the editor of the [Autocom
 {% highlight XAML %}
 
 <editors:SfAutocomplete x:Name="autocomplete"
-                        WidthRequest="250"
+                        WidthRequest="350"
                         HeightRequest = "50"
                         IsClearButtonVisible="false"
                         ItemsSource="{Binding SocialMedias}"
@@ -493,7 +493,7 @@ By default, the clear button `X` will be displayed in the editor of the [Autocom
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete
 {
-    WidthRequest = 250,
+    WidthRequest = 350,
     HeightRequest = 50,
     IsClearButtonVisible = false,
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -517,7 +517,7 @@ In the Autocomplete control, the drop-down can be opened or closed programmatica
 {% highlight XAML %}
 
 <editors:SfAutocomplete x:Name="autocomplete"
-                        WidthRequest="250"
+                        WidthRequest="350"
                         HeightRequest = "50"
                         ItemsSource="{Binding SocialMedias}"
                         IsDropDownOpen = "true";
@@ -531,7 +531,7 @@ In the Autocomplete control, the drop-down can be opened or closed programmatica
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete
 {
-    WidthRequest = 250,
+    WidthRequest = 350,
     HeightRequest = 50,
     ItemsSource = socialMediaViewModel.SocialMedias,
     IsDropDownOpen = true,

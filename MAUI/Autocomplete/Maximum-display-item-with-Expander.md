@@ -15,7 +15,7 @@ Restrict the number of suggestions displayed and have the remaining items loaded
 {% highlight xaml %}
 
  <editors:SfAutocomplete x:Name="autocomplete"
-                         WidthRequest="250"
+                         WidthRequest="350"
                          HeightRequest="50"
                          ItemsSource="{Binding SocialMedias}"
                          MaximumSuggestion="2"
@@ -29,7 +29,7 @@ Restrict the number of suggestions displayed and have the remaining items loaded
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
-    WidthRequest = 250,
+    WidthRequest = 350,
     HeightRequest = 50,
     ItemsSource = socialMediaViewModel.SocialMedias,
     MaximumSuggestion = 2,
@@ -52,7 +52,7 @@ The LoadMore support provides [LoadMoreText](https://help.syncfusion.com/cr/maui
 {% highlight xaml %}
 
  <editors:SfAutocomplete x:Name="autocomplete"
-                         WidthRequest="250"
+                         WidthRequest="350"
                          HeightRequest="50"
                          ItemsSource="{Binding SocialMedias}"
                          MaximumSuggestion="2"
@@ -67,7 +67,7 @@ The LoadMore support provides [LoadMoreText](https://help.syncfusion.com/cr/maui
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
-    WidthRequest = 250,
+    WidthRequest = 350,
     HeightRequest = 50,
     ItemsSource = socialMediaViewModel.SocialMedias,
     MaximumSuggestion = 2,
@@ -91,7 +91,7 @@ SfAutocomplete allows customizing User Interface(UI) of Load More view. To custo
 {% highlight xaml %}
 
  <editors:SfAutocomplete x:Name="autocomplete"
-                         WidthRequest="250"
+                         WidthRequest="350"
                          HeightRequest="50"
                          ItemsSource="{Binding SocialMedias}"
                          MaximumSuggestion="2"
@@ -113,7 +113,7 @@ SfAutocomplete allows customizing User Interface(UI) of Load More view. To custo
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel(); 
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
-    WidthRequest = 250,
+    WidthRequest = 350,
     HeightRequest = 50,
     DisplayMemberPath = "Name",
     TextMemberPath = "Name",
@@ -149,7 +149,7 @@ The LoadMore support provides [LoadMoreButtonTapped](https://help.syncfusion.com
 {% highlight xaml %}
 
  <editors:SfAutocomplete x:Name="autocomplete"
-                         WidthRequest="250"
+                         WidthRequest="350"
                          HeightRequest="50"
                          ItemsSource="{Binding SocialMedias}"
                          MaximumSuggestion="2"
@@ -165,7 +165,7 @@ The LoadMore support provides [LoadMoreButtonTapped](https://help.syncfusion.com
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel(); 
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
-    WidthRequest = 250,
+    WidthRequest = 350,
     HeightRequest = 50,
     DisplayMemberPath = "Name",
     TextMemberPath = "Name",

@@ -22,7 +22,7 @@ We can customize the desire text to be displayed for indicating no results found
                         ItemsSource="{Binding SocialMedias}"
                         TextMemberPath="Name"
                         DisplayMemberPath="Name"
-                        WidthRequest="240" 
+                        WidthRequest="350" 
                         HeightRequest="50"/> 
 
 {% endhighlight %}
@@ -33,7 +33,7 @@ SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
     NoResultsFoundText = "Not Found",
-    WidthRequest = 250,
+    WidthRequest = 350,
     HeightRequest = 50,
     DisplayMemberPath = "Name",
     TextMemberPath = "Name",
@@ -57,7 +57,7 @@ We can customize the appearance of the desire text to be displayed for indicatin
                ItemsSource="{Binding SocialMedias}"
               TextMemberPath="Name"
              DisplayMemberPath="Name"
-             WidthRequest="240">
+             WidthRequest="350">
       <editors:SfAutocomplete.NoResultsFoundTemplate>
           <DataTemplate>
               <Label Text="Not Found"  FontSize="20" FontAttributes="Italic" TextColor="Red" Margin="70,10,0,0"/>

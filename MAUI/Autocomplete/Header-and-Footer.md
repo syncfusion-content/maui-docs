@@ -33,7 +33,7 @@ We can provide Header Content at the top of the Autocomplete's dropdown.[DropDow
     <StackLayout VerticalOptions="Start" 
                  HorizontalOptions="Start" 
                  Padding="30">
-        <editors:SfAutocomplete HeightRequest="40"
+        <editors:SfAutocomplete HeightRequest="40" 
                                      ShowDropdownHeaderView ="True"
                                      ItemsSource="{Binding SocialMedias}"
                                      DisplayMemberPath="Name"
@@ -76,7 +76,7 @@ namespace AutocompleteSample
 
             SfAutocomplete autoComplete = new SfAutocomplete
             {
-                HeightRequest = 40,
+                HeightRequest = 50,
                 ShowDropdownHeaderView = true,
                 ItemsSource = new List<string> { "Facebook", "Twitter", "Instagram", "LinkedIn" },
                 DropdownHeaderViewHeight = 50
@@ -175,7 +175,7 @@ namespace AutocompleteSample
 
             SfAutocomplete autoComplete = new SfAutocomplete()
             {
-                HeightRequest = 40,
+                HeightRequest = 50,
                 ShowDropdownFooterView = true,
                 ItemsSource = new List<string> { "Facebook", "Twitter", "Instagram", "LinkedIn" },
                 DropdownFooterViewHeight = 50,
