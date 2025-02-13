@@ -276,7 +276,7 @@ public class ViewModel
  ![Height request support for each step in .NET MAUI SfStepProgressBar.](images/customization/maui-stepprogressbar-height-request-support-for-each-step.png)
 
  N> 
-* If [ProgressTrackSize] property value of the `StepProgressBarItem` is less than 1, the height of the progress bar will be rendered using default value.
+* If the [ProgressTrackSize] property value of the StepProgressBarItem is less than 1, the height of the progress bar will be rendered using the default value.
 * Providing the [ProgressTrackSize] property value for the last step will have no effect because the last step doesn't have a progress bar.
  
 
