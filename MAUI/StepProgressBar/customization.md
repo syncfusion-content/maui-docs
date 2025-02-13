@@ -194,8 +194,8 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-## Height request support for each step
-The `SfStepProgressBar` control provides height request support for each step. You can customize the height of each step progress bar using [ProgressTrackSize] property in the `StepProgressBarItem`.
+## Customize Progress Track Size for each step
+The `SfStepProgressBar` control provides customization of progress track size for each step. You can customize the height of each step progress bar using [ProgressTrackSize] property in the `StepProgressBarItem`.
 
 *The default value of the `ProgressTrackSize` property is 50.
 
@@ -276,8 +276,8 @@ public class ViewModel
  ![Height request support for each step in .NET MAUI SfStepProgressBar.](images/customization/maui-stepprogressbar-height-request-support-for-each-step.png)
 
  N> 
-* If [ProgressTrackSize] property value of the `StepProgressBarItem` is less than 1, the height of the progress bar will be rendered with the default value.
-* Providing the [ProgressTrackSize] property value to the last step will not be rendered. because the last step doesn't have a progress bar.
+* If [ProgressTrackSize] property value of the `StepProgressBarItem` is less than 1, the height of the progress bar will be rendered using default value.
+* Providing the [ProgressTrackSize] property value for the last step will have no effect because the last step doesn't have a progress bar.
  
 
 ## Customize step appearance
