@@ -58,7 +58,17 @@ The selected item can be changed programmatically by using the [SelectedItem](ht
 
 {% highlight c# %}
 
-comboBox.SelectedIndex = 2;
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+SfComboBox comboBox = new SfComboBox
+{
+    WidthRequest = 250,
+    MaxDropDownHeight = 250,
+    IsEditable = true,
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+    SelectedIndex = 2
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -210,6 +220,14 @@ When an item is selected from the .NET MAUI drop-down list, the [SelectionChange
 
 {% highlight C# %}
 
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+SfComboBox comboBox = new SfComboBox
+{
+    WidthRequest = 250,
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name"
+};
 comboBox.SelectionChanged += OnSelectionChanged;
 
 {% endhighlight %}
@@ -258,8 +276,26 @@ In single selection mode, the [SelectedValue](https://help.syncfusion.com/cr/mau
 {% endhighlight %}
 {% highlight C# %}
 
-comboBox.SelectedValuePath = "ID";
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+SfComboBox comboBox = new SfComboBox
+{
+    WidthRequest = 250,
+    MaxDropDownHeight = 250,
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+    SelectedValuePath = "ID"
+};
 comboBox.SelectionChanged += OnSelectionChanged;
+Label selectedValueLabel = new Label
+{
+    Text = "SelectedValue:"
+};
+
+Label selectedValue = new Label
+{
+    Text = string.Empty
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -353,7 +389,16 @@ In the .NET MAUI ComboBox control, the .NET MAUI drop-down list can be opened or
 {% endhighlight %}
 {% highlight C# %}
 
-comboBox.IsDropDownOpen = true;
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+SfComboBox comboBox = new SfComboBox
+{
+    WidthRequest = 250,
+    IsEditable = true,
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    IsDropDownOpen = true,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name"
+};
 
 {% endhighlight %}
 {% endtabs %}

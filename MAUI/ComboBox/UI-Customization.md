@@ -25,6 +25,7 @@ You can prompt the user with any information by using the [Placeholder](https://
 
 <editors:SfComboBox x:Name="comboBox"
                     WidthRequest="250"
+                    HeightRequest="40"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
                     TextMemberPath="Name"
@@ -33,7 +34,16 @@ You can prompt the user with any information by using the [Placeholder](https://
 {% endhighlight %}
 {% highlight C# %}
 
-comboBox.Placeholder = "Select a social media";
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+SfComboBox comboBox = new SfComboBox() 
+{
+    WidthRequest= 240,
+    HeightRequest = 40,
+    Placeholder = "Select a social media",
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name",
+    ItemsSource = socialMediaViewModel.SocialMedias
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -52,6 +62,7 @@ The placeholder text color can be changed by using the [PlaceholderColor](https:
 
 <editors:SfComboBox x:Name="comboBox"
                     WidthRequest="250"
+                    HeightRequest="40"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
                     TextMemberPath="Name"
@@ -61,7 +72,17 @@ The placeholder text color can be changed by using the [PlaceholderColor](https:
 {% endhighlight %}
 {% highlight C# %}
 
-comboBox.PlaceholderColor = Colors.Red;
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+SfComboBox comboBox = new SfComboBox() 
+{
+    WidthRequest= 250,
+    HeightRequest = 40,
+    PlaceholderColor = Colors.Red,
+    Placeholder = "Select a social media",
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name",
+    ItemsSource = socialMediaViewModel.SocialMedias
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -79,6 +100,7 @@ The clear button icon color can be changed by using the [ClearButtonIconColor](h
 
 <editors:SfComboBox x:Name="combobox"
                     WidthRequest="250"
+                    HeightRequest="40"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
                     TextMemberPath="Name"
@@ -87,7 +109,16 @@ The clear button icon color can be changed by using the [ClearButtonIconColor](h
 {% endhighlight %}
 {% highlight C# %}
 
-combobox.ClearButtonIconColor = Colors.Red;
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+SfComboBox comboBox = new SfComboBox() 
+{
+    WidthRequest= 250,
+    HeightRequest = 40,
+    ClearButtonIconColor = Colors.Red,
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name",
+    ItemsSource = socialMediaViewModel.SocialMedias
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -105,6 +136,7 @@ The DropDown icon color can be changed by using the [DropDownIconColor](https://
 
 <editors:SfComboBox x:Name="combobox"
                     WidthRequest="250"
+                    HeightRequest="40"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
                     TextMemberPath="Name"
@@ -113,7 +145,16 @@ The DropDown icon color can be changed by using the [DropDownIconColor](https://
 {% endhighlight %}
 {% highlight C# %}
 
-combobox.DropDownIconColor = Colors.Red;
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+SfComboBox comboBox = new SfComboBox() 
+{
+    WidthRequest= 250,
+    HeightRequest = 40,
+    DropDownIconColor = Colors.Red,
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name",
+    ItemsSource = socialMediaViewModel.SocialMedias
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -132,6 +173,7 @@ The ComboBox border color can be changed by using the [`Stroke`](https://help.sy
 
 <editors:SfComboBox x:Name="combobox"
                     WidthRequest="250"
+                    HeightRequest="40"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
                     TextMemberPath="Name"
@@ -141,7 +183,17 @@ The ComboBox border color can be changed by using the [`Stroke`](https://help.sy
 {% endhighlight %}
 {% highlight C# %}
 
-combobox.Stroke = Colors.Red;
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+SfComboBox comboBox = new SfComboBox() 
+{
+    WidthRequest= 250,
+    HeightRequest = 40,
+    DropDownIconColor = Colors.Red,
+    Stroke = Colors.Red,
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name",
+    ItemsSource = socialMediaViewModel.SocialMedias
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -159,6 +211,7 @@ The [SelectionTextHighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion
 
     <editors:SfComboBox x:Name="comboBox"
                         WidthRequest="250"
+                        HeightRequest="40"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
@@ -169,7 +222,17 @@ The [SelectionTextHighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion
 
 {% highlight C# %}
 
-    comboBox.SelectionTextHighlightColor = Colors.Green;
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+SfComboBox comboBox = new SfComboBox() 
+{
+    WidthRequest= 250,
+    HeightRequest = 40,
+    Placeholder = "Enter Media",
+    SelectionTextHighlightColor = Colors.Green,
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name",
+    ItemsSource = socialMediaViewModel.SocialMedias
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -199,13 +262,19 @@ The [SelectionTextHighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion
 
 {% highlight c# %}
 
-var customLabel = new Label();
-customLabel.TextColor = Colors.Red;
-customLabel.VerticalTextAlignment = TextAlignment.Center;
-customLabel.HorizontalOptions = LayoutOptions.Center;
-customLabel.Text = "Custom View";
-
-comboBox.CustomView = customLabel; 
+SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
+SfComboBox comboBox = new SfComboBox
+{
+    HeightRequest = 40,
+    WidthRequest = 240,
+    CustomView = new Label
+    {
+        Text = "Custom View",
+        TextColor = Colors.Red,
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalTextAlignment = TextAlignment.Center
+    }
+};
 
 {% endhighlight %}
 
@@ -226,6 +295,7 @@ The maximum height of the drop-down can be changed by using the [MaxDropDownHeig
 
     <editors:SfComboBox x:Name="comboBox"
                         WidthRequest="250"
+                        HeightRequest="40"
                         IsEditable="true"
                         MaxDropDownHeight="150"
                         ItemsSource="{Binding SocialMedias}"
@@ -235,7 +305,17 @@ The maximum height of the drop-down can be changed by using the [MaxDropDownHeig
 {% endhighlight %}
 {% highlight C# %}
 
-    comboBox.MaxDropDownHeight = 150;
+SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
+SfComboBox comboBox = new SfComboBox() 
+{
+    WidthRequest= 250,
+    HeightRequest = 40,
+    IsEditable = true,
+    comboBox.MaxDropDownHeight = 150,
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name",
+    ItemsSource = socialMediaViewModel.SocialMedias
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -421,6 +501,7 @@ DropDown items can be customized using the [DropDownItemFontAttributes](https://
 
 <editors:SfComboBox x:Name="comboBox"
                     WidthRequest="250"
+                    HeightRequest="40"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
                     TextMemberPath="Name"
@@ -434,10 +515,20 @@ DropDown items can be customized using the [DropDownItemFontAttributes](https://
 
 {% highlight C# %}
 
-    comboBox.DropDownItemFontAttributes = FontAttributes.Italic;
-    comboBox.DropDownItemFontFamily = "OpenSansSemibold";
-    comboBox.DropDownItemFontSize = 16;
-    comboBox.DropDownItemTextColor = Colors.DarkViolet;
+SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
+SfComboBox comboBox = new SfComboBox() 
+{
+    WidthRequest= 250,
+    HeightRequest = 40,
+    Placeholder="Enter Media",
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name",
+    DropDownItemFontAttributes = FontAttributes.Italic,
+    DropDownItemFontFamily = "OpenSansSemibold",
+    DropDownItemTextColor = Colors.DarkViolet,
+    DropDownItemFontSize = 16,
+    ItemsSource = socialMediaViewModel.SocialMedias
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -453,6 +544,7 @@ The [DropDownBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 
     <editors:SfComboBox x:Name="comboBox"
                             WidthRequest="250"
+                            HeightRequest="40"
                             ItemsSource="{Binding SocialMedias}"
                             DisplayMemberPath="Name"
                             TextMemberPath="Name"
@@ -463,7 +555,17 @@ The [DropDownBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 
 {% highlight C# %}
 
-    comboBox.DropDownBackground = Colors.YellowGreen;
+SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
+SfComboBox comboBox = new SfComboBox() 
+{
+    WidthRequest = 250,
+    HeightRequest = 40,
+    Placeholder="Enter Media",
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name",
+    DropDownBackground = Colors.YellowGreen,
+    ItemsSource = socialMediaViewModel.SocialMedias
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -479,6 +581,7 @@ The [SelectedDropDownItemBackground](https://help.syncfusion.com/cr/maui/Syncfus
 
 <editors:SfComboBox x:Name="comboBox"
                         WidthRequest="250"
+                        HeightRequest="40"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
@@ -489,7 +592,17 @@ The [SelectedDropDownItemBackground](https://help.syncfusion.com/cr/maui/Syncfus
 
 {% highlight C# %}
 
-    comboBox.SelectedDropDownItemBackground = Colors.LightSeaGreen;
+SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
+SfComboBox comboBox = new SfComboBox() 
+{
+    WidthRequest = 250,
+    HeightRequest = 40,
+    Placeholder="Enter Media",
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name",
+    SelectedDropDownItemBackground = Colors.LightSeaGreen,
+    ItemsSource = socialMediaViewModel.SocialMedias
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -505,6 +618,7 @@ The [DropDownStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 
     <editors:SfComboBox x:Name="comboBox"
                             WidthRequest="250"
+                            HeightRequest="40"
                             ItemsSource="{Binding SocialMedias}"
                             DisplayMemberPath="Name"
                             TextMemberPath="Name"
@@ -515,7 +629,17 @@ The [DropDownStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 
 {% highlight C# %}
 
-    comboBox.DropDownStroke = Colors.DarkOrange;
+SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
+SfComboBox comboBox = new SfComboBox() 
+{
+    WidthRequest = 250,
+    HeightRequest = 40,
+    Placeholder="Enter Media",
+    DropDownStroke = Colors.DarkOrange,
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name",
+    ItemsSource = socialMediaViewModel.SocialMedias
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -531,6 +655,7 @@ The [DropDownStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
 <editors:SfComboBox x:Name="comboBox"
                         WidthRequest="250"
+                        HeightRequest="40"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
@@ -542,7 +667,17 @@ The [DropDownStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
 {% highlight C# %}
 
-    comboBox.DropDownStrokeThickness = 5;
+SfComboBox comboBox = new SfComboBox() 
+{
+    WidthRequest = 250,
+    HeightRequest = 40,
+    Placeholder="Enter Media",
+    DropDownStroke = Colors.DarkOrange,
+    DropDownStrokeThickness = 5,
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name",
+    ItemsSource = socialMediaViewModel.SocialMedias
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -558,6 +693,7 @@ The [DropDownItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 
 <editors:SfComboBox x:Name="comboBox"
                         WidthRequest="250"
+                        HeightRequest="40"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
@@ -568,7 +704,17 @@ The [DropDownItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 
 {% highlight C# %}
 
-    comboBox.DropDownItemHeight = 25;
+SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
+SfComboBox comboBox = new SfComboBox() 
+{
+    WidthRequest = 250,
+    HeightRequest = 40,
+    Placeholder="Enter Media",
+    DropDownItemHeight = 25,
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name",
+    ItemsSource = socialMediaViewModel.SocialMedias
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -593,6 +739,9 @@ The drop-down that shows the filtered items will be placed automatically based o
 
  <editors:SfComboBox x:Name="comboBox"
                          WidthRequest="300"                  
+                         HeightRequest="40"
+                         DisplayMemberPath="Name"
+                         TextMemberPath = "Name"
                          ItemsSource="{Binding SocialMedias}"
                          DropDownPlacement="Top"/>
 
@@ -600,7 +749,15 @@ The drop-down that shows the filtered items will be placed automatically based o
 
 {% highlight C# %}
 
-comboBox.DropDownPlacement = DropDownPlacement.Top;
+SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
+SfComboBox comboBox = new SfComboBox() 
+{
+    WidthRequest = 250,
+    HeightRequest = 40,
+    DropDownPlacement = DropDownPlacement.Top,
+    DisplayMemberPath = "Name",
+    ItemsSource = socialMediaViewModel.SocialMedias
+};
 
 {% endhighlight %}
 
@@ -617,6 +774,8 @@ The comboBox enables the user to provide padding for the items inside dropdown u
 
    <editors:SfComboBox x:Name="comboBox"
                          WidthRequest="300"                          
+                         HeightRequest="40"
+                         DisplayMemberPath="Name"
                          ItemsSource="{Binding SocialMedias}"
                          ItemPadding="10,20,0,0"/>
 
@@ -624,7 +783,15 @@ The comboBox enables the user to provide padding for the items inside dropdown u
 
 {% highlight C# %}
 
-comboBox.ItemPadding = new Thickness(10,20,0,0);
+SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
+SfComboBox comboBox = new SfComboBox() 
+{
+    WidthRequest = 250,
+    HeightRequest = 40,
+    ItemPadding = new Thickness(10,20,0,0),
+    DisplayMemberPath = "Name",
+    ItemsSource = socialMediaViewModel.SocialMedias
+};
 
 {% endhighlight %}
 
@@ -641,14 +808,24 @@ The `DropdownWidth` property is used to modify the Width of the dropdown.
 
     <editors:SfComboBox x:Name="comboBox"
                          WidthRequest="300"                            
-                         ItemsSource="{Binding SocialMedias}"                           
-                         DropdownWidth="400"/>
+                            HeightRequest="40"
+                            DisplayMemberPath="Name"                         
+                        ItemsSource="{Binding SocialMedias}"
+                            DropdownWidth="400"/>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-comboBox.DropdownWidth = 400;
+SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
+SfComboBox comboBox = new SfComboBox() 
+{
+    WidthRequest = 300,
+    HeightRequest = 40,
+    DropdownWidth = 400,
+    DisplayMemberPath = "Name",
+    ItemsSource = socialMediaViewModel.SocialMedias
+};
 
 {% endhighlight %}
 
@@ -664,17 +841,27 @@ Suggestion box can be shown whenever the control receives focus using the `ShowS
 {% tabs %}
 {% highlight xaml %}
 
-      <editors:SfComboBox x:Name="comboBox"
-                          WidthRequest="300"                            
-                          ItemsSource="{Binding SocialMedias}"                           
-                          ShowSuggestionsOnFocus="True"/>
+<editors:SfComboBox x:Name="comboBox"
+                    WidthRequest="300"
+                    HeightRequest="40"  
+                    DisplayMemberPath="Name"                          
+                    ItemsSource="{Binding SocialMedias}"                           
+                    ShowSuggestionsOnFocus="True"/>
 
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-comboBox.ShowSuggestionsOnFocus = true;
+SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
+SfComboBox comboBox = new SfComboBox() 
+{
+    WidthRequest = 300,
+    HeightRequest = 40,
+    DisplayMemberPath = "Name",
+    ShowSuggestionsOnFocus = true,
+    ItemsSource = socialMediaViewModel.SocialMedias
+};
 
 {% endhighlight %}
 
@@ -1026,10 +1213,21 @@ We can customize the size of the drop down button in [SfComboBox](https://help.s
 
 {% highlight c# %}
 
-var dropDownButtonSettings = new DropDownButtonSettings();
-dropDownButtonSettings.Width = 50;
-dropDownButtonSettings.Height = 50;
-comboBox.DropDownButtonSettings = dropDownButtonSettings;
+SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
+SfComboBox comboBox = new SfComboBox
+{
+    Placeholder = "Enter Social Media",
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name",
+    HeightRequest = 40,
+    WidthRequest = 240,
+    DropDownButtonSettings = new DropDownButtonSettings
+    {
+        Width = 50,
+        Height = 50
+    }
+};
 
 {% endhighlight %}
 
@@ -1070,24 +1268,36 @@ We can set view to the drop down button in [SfComboBox](https://help.syncfusion.
 
 {% highlight c# %}
 
-var dropDownButtonSettings = new DropDownButtonSettings();
-var label = new Label
+SfComboBox comboBox = new SfComboBox
 {
-    Text = "Click",
-    FontSize = 12,
-    TextColor = Colors.Blue,
-    HorizontalTextAlignment = TextAlignment.Center,
-    VerticalTextAlignment = TextAlignment.Center,
+    Placeholder = "Enter Social Media",
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name",
+    HeightRequest = 40,
+    WidthRequest = 240,
+    DropDownButtonSettings = new DropDownButtonSettings
+    {
+        Width = 80,
+        Height = 40,
+        View = new Grid
+        {
+            BackgroundColor = Color.GreenYellow,
+            Children =
+            {
+                new Label
+                {
+                    Text = "Click",
+                    FontSize = 12,
+                    TextColor = Color.Blue,
+                    HorizontalTextAlignment = TextAlignment.Center,
+                    VerticalOptions = LayoutOptions.Center
+                }
+            }
+        }
+    }
 };
-var grid = new Grid
-{
-    BackgroundColor = Colors.YellowGreen,
-};
-grid.Children.Add(label);
-dropDownButtonSettings.View = grid;
-dropDownButtonSettings.Width = 80;
-dropDownButtonSettings.Height = 40;
-comboBox.DropDownButtonSettings = dropDownButtonSettings;
+
 
 {% endhighlight %}
 
@@ -1202,8 +1412,16 @@ The [DropDownOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.S
 
 {% highlight c# %}
 
-      SfComboBox comboBox = new SfComboBox();
-      comboBox.DropdownOpening += comboBox_DropdownOpening;
+    SfComboBox comboBox = new SfComboBox
+    {
+        WidthRequest = 350,
+        HeightRequest = 50,
+        ItemsSource = socialMediaViewModel.SocialMedias,
+        DisplayMemberPath = "Name",
+        TextMemberPath = "Name"
+    };
+comboBox.DropdownOpening += comboBox_DropdownOpening;
+
 
 {% endhighlight %}
 
@@ -1243,8 +1461,16 @@ The [DropDownOpened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Sf
 
 {% highlight c# %}
 
-      SfComboBox comboBox = new SfComboBox();
-      comboBox.DropdownOpened += comboBox_DropdownOpened;
+    SfComboBox comboBox = new SfComboBox
+    {
+        WidthRequest = 350,
+        HeightRequest = 50,
+        ItemsSource = socialMediaViewModel.SocialMedias,
+        DisplayMemberPath = "Name",
+        TextMemberPath = "Name"
+    };
+comboBox.DropdownOpened += comboBox_DropdownOpened;
+
 
 {% endhighlight %}
 
@@ -1271,15 +1497,21 @@ The [DropDownClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 {% highlight xaml %}
 
     
-    <comboBox:SfComboBox HeightRequest="40"
+    <editors:SfComboBox HeightRequest="40"
+                         WidthRequest="350"
                          x:Name="comboBox"
                          ItemSource="{Binding Employees}"
                          DropDownClosed="SfComboBox_DropDownClosed"/>
 {% endhighlight %}
 {% highlight c# %}
 
-    SfComboBox comboBox = new SfComboBox();
-    comboBox.DropDownClosed+=comboBox_DropDownClosed;
+    SfComboBox comboBox = new SfComboBox
+    {
+        HeightRequest = 40,
+        WidthRequest = 350,
+        ItemsSource = employeeViewModel.Employees
+    };
+    comboBox.DropDownClosed += SfComboBox_DropDownClosed;
 
 {% endhighlight %}
 {% endtabs %}
@@ -1312,9 +1544,13 @@ The cursor position in the input view can be obtained or updated using the [Curs
 
 using Syncfusion.Maui.Inputs;
 
-    SfComboBox comboBox = new SfComboBox();
-    comboBox.IsEditable = true;
-    comboBox.CursorPosition = 4;
+    SfComboBox comboBox = new SfComboBox
+    {
+        WidthRequest = 250,
+        HeightRequest = 35,
+        IsEditable = true,
+        CursorPosition = 4
+    };
 
 {% endhighlight %}
 {% endtabs %}
@@ -1337,10 +1573,12 @@ The [ShowBorder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfCo
 
 using Syncfusion.Maui.Inputs;
 
-    SfComboBox comboBox = new SfComboBox();
-    comboBox.WidthRequest = 200;
-    comboBox.HeightRequest = 35;
-    comboBox.ShowBorder = false;
+    SfComboBox comboBox = new SfComboBox
+    {
+        WidthRequest = 200,
+        HeightRequest = 35,
+        ShowBorder = false
+    };
 
 {% endhighlight %}
 {% endtabs %}
@@ -1366,11 +1604,14 @@ N> Dynamic changes to the `HorizontalTextAlignment` property may not be function
 {% endhighlight %}
 {% highlight c# %}
 
-    SfComboBox comboBox = new SfComboBox();
-    comboBox.WidthRequest = 250;
-    comboBox.HeightRequest = 50;
-    comboBox.HorizontalTextAlignment = TextAlignment.Center;
-    comboBox.VerticalTextAlignment = TextAlignment.Start;
+    SfComboBox comboBox = new SfComboBox
+    {
+        WidthRequest = 250,
+        HeightRequest = 50,
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Start
+    };
+
 
 {% endhighlight %}
 {% endtabs %}
@@ -1392,6 +1633,8 @@ N> Default value of ReturnType is `Default`.
 
 <editors:SfComboBox x:Name="comboBox"
             ItemsSource="{Binding SocialMedias}"
+            WidthRequest="300"
+            HeightRequest="40"
             DisplayMemberPath="Name"
             TextMemberPath="Name" 
             ReturnType="Next"/>
@@ -1399,8 +1642,15 @@ N> Default value of ReturnType is `Default`.
 {% endhighlight %}
 {% highlight C# %}
 
-SfComboBox sfComboBox = new SfComboBox();
-sfComboBox.ReturnType = ReturnType.Next;
+SfComboBox comboBox = new SfComboBox() 
+{
+    WidthRequest = 300,
+    HeightRequest = 40,
+    DisplayMemberPath = "Name",
+    TextMemberPath="Name"
+    ReturnType = ReturnType.Next,
+    ItemsSource = socialMediaViewModel.SocialMedias
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -1472,14 +1722,14 @@ The following image illustrates the result of the above code:
 {% highlight c# %}
 
 var viewModel = new SocialMediaViewModel();
-
-SfComboBox comboBox = new SfComboBox();
-comboBox.ItemsSource = viewModel.SocialMedia;
-comboBox.DisplayMemberPath = "Name";
-comboBox.TextMemberPath = "Name";
-comboBox.ReturnCommand = viewModel.AlertCommand;
-comboBox.ReturnCommandParameter = "Return key is pressed";
-
+SfComboBox comboBox = new SfComboBox
+{
+    ItemsSource = viewModel.SocialMedia,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+    ReturnCommand = alertCommand,
+    ReturnCommandParameter = "Return key is pressed"
+};
 
 {% endhighlight %}
 {% endtabs %}
