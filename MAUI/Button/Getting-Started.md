@@ -91,6 +91,25 @@ Step 2: Add the namespace as shown in the following code sample.
 	using Syncfusion.Maui.Buttons;
 
 {% endhighlight %}
+
+Step 3: Add the [SfButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) control with a required optimal name using the included namespace.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<buttons:SfButton x:Name="button" />
+	
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfButton button = new SfButton();
+
+{% endhighlight %}
+
+{% endtabs %}
+
 {% endtabs %}
 
 {% endtabcontent %}
@@ -171,12 +190,7 @@ Step 2: Add the namespace as shown in the following code sample.
 {% endhighlight %}
 {% endtabs %}
 
-{% endtabcontent %}
-{% endtabcontents %}
-
-## Initialize Button
-
-Now, add the [SfButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) control with a required optimal name using the included namespace.
+Step 3: Add the [SfButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) control with a required optimal name using the included namespace.
 
 {% tabs %}
 
@@ -193,6 +207,9 @@ SfButton button = new SfButton();
 {% endhighlight %}
 
 {% endtabs %}
+
+{% endtabcontent %}
+{% endtabcontents %}
 
 ## Button icon
 
