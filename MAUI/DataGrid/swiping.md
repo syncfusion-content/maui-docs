@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Swiping in .NET MAUI DataGrid control | Syncfusion
-description: Learn here all about Swiping support in Syncfusion MAUI DataGrid (SfDataGrid) control and more here.
+title: Swiping in .NET MAUI DataGrid control | Syncfusion®
+description: Learn here all about Swiping support in Syncfusion® MAUI DataGrid (SfDataGrid) control and more here.
 platform: MAUI
 control: SfDataGrid
 documentation: ug
