@@ -230,9 +230,13 @@ N> When loading Label as direct children of `Header` or `Content` of `AccordionI
                                     <ColumnDefinition Width="100"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
-                                <Frame  Grid.RowSpan="4" BorderColor="Transparent" Grid.Row="0" Grid.Column="0"  Padding="0" Margin="0,0,0,7">
-                                    <Image  Source="emp_01.png"/>
-                                </Frame>
+                                <Border Grid.RowSpan="4"
+                                        Grid.Row="0"
+                                        Grid.Column="0"
+                                        Padding="0"
+                                        Margin="0,0,0,7">
+                                    <Image  Source="emp_01.png" />
+                                </Border>
                                 <Label Text="Position" Grid.Column="1" Grid.Row="0" Margin="6,0,0,0"/>
                                 <Label Text="Chairman" Grid.Row="0" Grid.Column="2"/>
                                 <Label Text="Organization " Grid.Row="1" Grid.Column="1" Margin="6,0,0,0"/>
@@ -274,7 +278,7 @@ Here is the result of the previous codes,
 
 You can download accordion sample for .NET MAUI [here](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-accordion).
 
-N> When adding the template control inside the `StackLayout` or `Grid` with a height set to `Auto`, the child element will not receive the height changes at runtime. Since the `SfAccordion` is a template-based control, the default height value cannot be determined. Therefore, it is recommended to provide the `HorizontalOptions` and `VerticalOptions` as `FillAndExpand` options for the control.
+N> When adding the template control inside the `Grid` with a height set to `Auto`, the child element will not receive the height changes at runtime. Since the `SfAccordion` is a template-based control, the default height value cannot be determined. Therefore, it is recommended to provide the `HorizontalOptions` and `VerticalOptions` as `FillAndExpand` options for the control.
 
 ## Animation duration
 
