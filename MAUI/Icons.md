@@ -17,7 +17,7 @@ To start using the icons, first ensure that the font is registered in your appli
 
 ### Step 1: Install the Syncfusion<sup style="font-size:70%">&reg;</sup> MAUI Package
 
-Once installed, the `MauiMaterialAssets.ttf` will be added to your project's font folder.
+Once the [Syncfusion MAUI packages](https://www.nuget.org/packages?q=Syncfusion.Maui), which rely on the [Syncfusion.MAUI.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) package, are installed, the `MauiMaterialAssets.ttf` file is automatically added to your project's font folder.
 
 ### Step 2: Register the font
 
@@ -73,10 +73,10 @@ Label label = new Label
 
 The following image illustrates the result of the above code.
 
-![Delete Icon](images/delete_icon.png)
+![Delete Icon](Material-Icons/images/delete_icon.png)
 
 ## Icons List
 
 The below list represents the wide variety of icons available in the `MauiMaterialAssets.ttf` file. These icons can be adapted to suit the UI needs of any application, providing consistent and visually pleasing interface elements.
 
-<iframe src="fonts/demo.html" style="height:1000px;width:100%;"></iframe>
+<iframe src="Material-Icons/fonts/demo.html" style="height:1000px;width:100%;"></iframe>
