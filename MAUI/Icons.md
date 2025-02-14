@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Icons in .NET MAUI - Syncfusion®
+title: Material Icons in .NET MAUI - Syncfusion®
 description: Learn how to use and integrate the icon from the MauiMaterialAssets.ttf file in Syncfusion® .NET MAUI components.
 platform: maui
 component: Common
 documentation: ug
 ---
 
-# .NET MAUI Icons
+# Material Icons
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> .NET MAUI contains a comprehensive set of icons bundled in the `MauiMaterialAssets.ttf` file. These icons are readily available for use in .NET MAUI applications once the Syncfusion<sup style="font-size:70%">&reg;</sup> MAUI package is installed.
 
@@ -17,7 +17,7 @@ To start using the icons, first ensure that the font is registered in your appli
 
 ### Step 1: Install the Syncfusion<sup style="font-size:70%">&reg;</sup> MAUI Package
 
-Once the [Syncfusion MAUI packages](https://www.nuget.org/packages?q=Syncfusion.Maui), which rely on the [Syncfusion.MAUI.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) package, are installed, the `MauiMaterialAssets.ttf` file is automatically added to your project's font folder.
+When you install [Syncfusion MAUI packages](https://www.nuget.org/packages?q=Syncfusion.Maui), which depend on the [Syncfusion.MAUI.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) package, the `MauiMaterialAssets.ttf` file is automatically added to your project's font folder.
 
 ### Step 2: Register the font
 
@@ -75,7 +75,7 @@ The following image illustrates the result of the above code.
 
 ![Delete Icon](Material-Icons/images/delete_icon.png)
 
-## Icons List
+## Material Icons List
 
 The below list represents the wide variety of icons available in the `MauiMaterialAssets.ttf` file. These icons can be adapted to suit the UI needs of any application, providing consistent and visually pleasing interface elements.
 
