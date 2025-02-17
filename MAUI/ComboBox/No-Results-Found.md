@@ -1,6 +1,6 @@
 ---
 layout: post
-title: No Results Found in  ComboBox control | Syncfusion®
+title: No Results Found in  ComboBox control | Syncfusion
 description: Learn all about No Results Found support in .NET MAUI ComboBox (SfComboBox) control and more details.
 platform: maui
 control: SfComboBox
@@ -21,18 +21,30 @@ We can customize the desire text to be displayed for indicating no results found
                     
 <editors:SfComboBox x:Name="comboBox"
                         IsEditable="True"
+                        HeightRequest="50"
                         IsFilteringEnabled="True"
                         NoResultsFoundText="Not Found"
                         ItemsSource="{Binding SocialMedias}"
                         TextMemberPath="Name"
                         DisplayMemberPath="Name"
-                        WidthRequest="240" /> 
+                        WidthRequest="350" /> 
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-comboBox.NoResultsFoundText = "Not Found";
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+SfComboBox comboBox = new SfComboBox() 
+{
+    WidthRequest= 350,
+    HeightRequest = 50,
+    NoResultsFoundText="Not Found",
+    IsFilteringEnabled = true,
+    IsEditable = true,
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name",
+    ItemsSource = socialMediaViewModel.SocialMedias
+};
 
 {% endhighlight %}
 
@@ -54,7 +66,8 @@ We can customize the appearance of the desire text to be displayed for indicatin
                     IsFilteringEnabled="True"
                     TextMemberPath="Name"
                     DisplayMemberPath="Name"
-                    WidthRequest="240">
+                    WidthRequest="350"
+                    HeightRequest="50">
     <editors:SfComboBox.NoResultsFoundTemplate>
         <DataTemplate>
             <Label Text="Not Found"  FontSize="20" FontAttributes="Italic" TextColor="Red" Margin="70,10,0,0"/>
@@ -67,19 +80,31 @@ We can customize the appearance of the desire text to be displayed for indicatin
 
 {% highlight c# %}
 
-var noResultsTemplate = new DataTemplate(() =>
+    SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+    SfComboBox comboBox = new SfComboBox() 
+    {
+        ItemsSource = socialMediaViewModel.SocialMedias,
+        IsEditable=True,
+        IsFilteringEnabled=True,
+        TextMemberPath=Name,
+        DisplayMemberPath=Name,
+        WidthRequest=350,
+        HeightRequest=50
+    };
+    var noResultsTemplate = new DataTemplate(() =>
+    {
+        var label = new Label
         {
-            var label = new Label
-            {
-                Text = "Not Found",
-                FontSize = 20,
-                FontAttributes = FontAttributes.Italic,
-                TextColor = Color.Red,
-                Margin = new Thickness(70, 10, 0, 0)
-            };
+            Text = "Not Found",
+            FontSize = 20,
+            FontAttributes = FontAttributes.Italic,
+            TextColor = Colors.Red,
+            Margin = new Thickness(70, 10, 0, 0)
+        };
 
-            return new ViewCell { View = label };
-        });
+        return new ViewCell { View = label };
+    });
+
 
 comboBox.NoResultsFoundTemplate = noResultsTemplate;
 

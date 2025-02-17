@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Header and Footer in MAUI ComboBox control | SyncfusionÂ®
-description: Learn here all about Header and Footer support in SyncfusionÂ® Maui ComboBox (SfComboBox) control and more.
+title: Header and Footer in MAUI ComboBox control | Syncfusion®
+description: Learn here all about Header and Footer support in Syncfusion® Maui ComboBox (SfComboBox) control and more.
 platform: maui
 control: SfComboBox
 documentation: ug
@@ -21,13 +21,13 @@ You can provide content for header at the top of the ComboBox's dropdown. The [D
 {% highlight xaml %}
 
     <StackLayout VerticalOptions="Start" HorizontalOptions="Start" Padding="30">
-        <combobox:SfComboBox HeightRequest="40" x:Name="comboBox" IsEditableMode="true" DisplayMemberPath="Name" ItemsSource="{Binding SocialMedias}" AllowFiltering="true">
-            <combobox:SfComboBox.DropDownHeaderView>
+        <editors:SfComboBox HeightRequest="50" WidthRequest="350" x:Name="comboBox" IsEditable="true" DisplayMemberPath="Name" ItemsSource="{Binding SocialMedias}" IsFilteringEnabled="true" TextMemberPath="Name" ShowDropdownHeaderView="True">
+            <editors:SfComboBox.DropdownHeaderView>
                 <StackLayout BackgroundColor="#f0f0f0" >
-                    <Label  x:Name="label2" FontSize="20" VerticalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" TextColor="#006bcd" />
+                    <Label  x:Name="label2" Text="Header View" FontSize="20" VerticalTextAlignment="Center" HorizontalOptions="Center" VerticalOptions="Center" TextColor="#006bcd" />
                 </StackLayout>
-            </combobox:SfComboBox.DropDownHeaderView>        
-        </combobox:SfComboBox>
+            </editors:SfComboBox.DropdownHeaderView>        
+        </editors:SfComboBox>
     </StackLayout>                  
 
 
@@ -44,23 +44,31 @@ You can provide content for header at the top of the ComboBox's dropdown. The [D
 
      SfComboBox comboBox = new SfComboBox()
      {
-        HeightRequest = 40,
-        ShowDropDownHeaderView = true,
-        ItemsSource = new List<string> { "Facebook", "Twitter", "Instagram", "LinkedIn" },
-        DropDownHeaderViewHeight = 50
+        HeightRequest = 50,
+        WidthRequest = 350,
+        ShowDropdownHeaderView = true,
+        ItemsSource = socialMediaViewModel.SocialMedias,
+        IsEditable = true,
+        DisplayMemberPath = "Name",
+        TextMemberPath = "Name",
+        IsFilteringEnabled = true,
+        DropdownHeaderViewHeight = 50
     };
 
+    StackLayout customHeaderView = new StackLayout();
     Label label2 = new Label()
     {
         FontSize = 20,
         VerticalTextAlignment = TextAlignment.Center,
         HorizontalTextAlignment = TextAlignment.Center,
         HorizontalOptions = LayoutOptions.Center,
+        Text = "Header View",
         VerticalOptions = LayoutOptions.Center,
-        TextColor = Color.FromHex("#006bcd")
+        TextColor = Colors.FromHex("#006bcd")
     };
 
-    comboBox.DropDownHeaderView = label2;
+    customHeaderView.Children.Add(label2);
+    comboBox.DropdownHeaderView = customHeaderView;
     layout.Children.Add(comboBox);
     this.Content = layout;
 
@@ -81,13 +89,13 @@ The following code example shows how to set footer content in [SfComboBox](https
 {% highlight xaml %}
 
     <StackLayout VerticalOptions="Start" HorizontalOptions="Start" Padding="30">
-        <combobox:SfComboBox HeightRequest="40" ItemsSource="{Binding SocialMedias}" DisplayMemberPath="Name" x:Name="comboBox" IsEditableMode="true" AllowFiltering="true">
-            <combobox:SfComboBox.DropDownFooterView>
+        <editors:SfComboBox HeightRequest="50" ItemsSource="{Binding SocialMedias}" DisplayMemberPath="Name" x:Name="comboBox" IsEditableMode="true" AllowFiltering="true">
+            <editors:SfComboBox.DropDownFooterView>
                 <StackLayout BackgroundColor="#f0f0f0" >
                     <Label Text="Add New" BackgroundColor="#f0f0f0" TextColor="#006bcd" VerticalTextAlignment="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" FontSize="20"/>
                 </StackLayout>
-            </combobox:SfComboBox.DropDownFooterView>
-        </combobox:SfComboBox>
+            </editors:SfComboBox.DropDownFooterView>
+        </editors:SfComboBox>
     </StackLayout>                  
 
 {% endhighlight %}
@@ -103,18 +111,23 @@ The following code example shows how to set footer content in [SfComboBox](https
 
     SfComboBox comboBox = new SfComboBox()
      {
-        HeightRequest = 40,
-        ShowDropDownFooterView = true,
-        ItemsSource = new List<string> { "Facebook", "Twitter", "Instagram", "LinkedIn" },
+        HeightRequest = 50,
+        ShowDropdownFooterView = true,
+        WidthRequest = 350,
+        ItemsSource = socialMediaViewModel.SocialMedias,
+        IsEditable = true,
+        DisplayMemberPath = "Name",
+        TextMemberPath = "Name",
+        IsFilteringEnabled = true,
         DropDownFooterViewHeight = 50
     };
 
     StackLayout customFooterView = new StackLayout();
     Label label = new Label() 
     { 
-        Text = "Add New", 
-        BackgroundColor = Color.FromHex("#f0f0f0"), 
-        TextColor = Color.FromHex("#006bcd"), 
+        Text = "Footer View", 
+        BackgroundColor = Colors.FromHex("#f0f0f0"), 
+        TextColor = Colors.FromHex("#006bcd"), 
         VerticalOptions = LayoutOptions.Center, 
         VerticalTextAlignment = TextAlignment.Center, 
         HorizontalTextAlignment = TextAlignment.Center, 

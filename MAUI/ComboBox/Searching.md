@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Searching in .NET MAUI ComboBox control | SyncfusionÂ®
-description: Learn how to perform the searching operation in SyncfusionÂ® .NET MAUI ComboBox (SfComboBox) control and more.
+title: Searching in .NET MAUI ComboBox control | Syncfusion®
+description: Learn how to perform the searching operation in Syncfusion® .NET MAUI ComboBox (SfComboBox) control and more.
 platform: maui
 control: SfComboBox
 documentation: ug
@@ -32,7 +32,8 @@ In edit mode, searching will be performed based on the [TextMemberPath](https://
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    WidthRequest="250"
+                    WidthRequest="350"
+                    HeightRequest="50"
                     IsEditable="true"
                     ItemsSource="{Binding SocialMedias}"
                     TextMemberPath="ID"
@@ -41,8 +42,16 @@ In edit mode, searching will be performed based on the [TextMemberPath](https://
 {% endhighlight %}
 
 {% highlight C# %}
-
-comboBox.TextMemberPath = "ID";
+    SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+    SfComboBox comboBox = new SfComboBox() 
+    {
+        WidthRequest= 350,
+        HeightRequest = 50,
+        TextMemberPath = "ID",
+        IsEditable = true,
+        ItemsSource = socialMediaViewModel.SocialMedias,
+        TextMemberPath = "Name"
+    };
 
 {% endhighlight %}
 {% endtabs %}
@@ -68,7 +77,8 @@ Set the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 {% highlight XAML %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    WidthRequest="250"
+                    WidthRequest="350"
+                    HeightRequest="50"
                     TextSearchMode="StartsWith"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
@@ -78,7 +88,16 @@ Set the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 
 {% highlight C# %}
 
-comboBox.TextSearchMode = ComboBoxTextSearchMode.StartsWith;
+    SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+    SfComboBox comboBox = new SfComboBox() 
+    {
+        WidthRequest= 350,
+        HeightRequest = 50,
+        TextSearchMode = ComboBoxTextSearchMode.StartsWith,
+        TextMemberPath = "Name",
+        DisplayMemberPath = "Name",
+        ItemsSource = socialMediaViewModel.SocialMedias
+    };
 
 {% endhighlight %}
 {% endtabs %}
@@ -95,7 +114,8 @@ Set the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    WidthRequest="250"
+                    WidthRequest="350"
+                    HeightRequest="50"
                     IsEditable="True"
                     TextSearchMode="Contains"
                     ItemsSource="{Binding SocialMedias}"
@@ -106,7 +126,17 @@ Set the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 
 {% highlight C# %}
 
-comboBox.TextSearchMode = ComboBoxTextSearchMode.Contains;
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+SfComboBox comboBox = new SfComboBox() 
+{
+    WidthRequest= 350,
+    HeightRequest = 50,
+    IsEditable = true,
+    TextSearchMode = ComboBoxTextSearchMode.Contains,
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name",
+    ItemsSource = socialMediaViewModel.SocialMedias
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -123,7 +153,8 @@ Instead of displaying suggestion list on every character entry, matches can be f
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox" 
-                    WidthRequest="300"
+                    WidthRequest="350"
+                    HeightRequest="50"
                     IsFilteringEnabled="True"
                     IsEditable="True" 
                     ItemsSource="{Binding SocialMedias}"
@@ -135,7 +166,18 @@ Instead of displaying suggestion list on every character entry, matches can be f
 
 {% highlight C# %}
 
-comboBox.MinimumPrefixCharacters = 3;
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+SfComboBox comboBox = new SfComboBox() 
+{
+    WidthRequest= 350,
+    HeightRequest = 50,
+    MinimumPrefixCharacters = 3,
+    IsFilteringEnabled = true,
+    IsEditable = true,
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name",
+    ItemsSource = socialMediaViewModel.SocialMedias
+};
 
 {% endhighlight %}
 {% endtabs %}

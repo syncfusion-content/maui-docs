@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filtering in .NET MAUI ComboBox control | Syncfusion®
-description: Learn here all about ComboBox filtering options in Syncfusion® .NET MAUI ComboBox (multi-select ComboBox) control and more.
+title: Filtering in .NET MAUI ComboBox control | Syncfusion
+description: Learn here all about ComboBox filtering options in Syncfusion .NET MAUI ComboBox (multi-select ComboBox) control and more.
 platform: maui
 control: SfComboBox
 documentation: ug
@@ -87,11 +87,9 @@ public class CityViewModel
 using Syncfusion.Maui.Inputs;
 
 CityViewModel cityViewModel = new CityViewModel();
-StackLayout stack = new StackLayout();
-SfComboBox comboBox;
-comboBox = new SfComboBox
+SfComboBox comboBox = new SfComboBox
 {
-    WidthRequest = 200,
+    WidthRequest = 350,
     HeightRequest = 50,
     IsEditable = true,
     IsFilteringEnabled = true,
@@ -100,8 +98,6 @@ comboBox = new SfComboBox
     DisplayMemberPath = "Name",
     BindingContext = cityViewModel
 };
-stack.Children.Add(comboBox);
-this.Content = stack;
 
 {% endhighlight %}
 {% endtabs %}
@@ -133,14 +129,10 @@ Filter the matching items based on the starting text and the first filtered item
 {% endhighlight %}
 {% highlight C# %}
 
-using Syncfusion.Maui.Inputs;
-
 CityViewModel cityViewModel = new CityViewModel();
-StackLayout stack = new StackLayout();
-SfComboBox comboBox;
-comboBox = new SfComboBox
+SfComboBox comboBox = new SfComboBox
 {
-    WidthRequest = 200,
+    WidthRequest = 350,
     HeightRequest = 50,
     TextSearchMode = ComboBoxTextSearchMode.StartsWith,
     IsEditable = true,
@@ -150,8 +142,6 @@ comboBox = new SfComboBox
     DisplayMemberPath = "Name",
     BindingContext = cityViewModel
 };
-stack.Children.Add(comboBox);
-this.Content = stack;
 
 {% endhighlight %}
 {% endtabs %}
@@ -181,11 +171,9 @@ Filter the matching items that contain specific text, and the first filtered ite
 using Syncfusion.Maui.Inputs;
 
 CityViewModel cityViewModel = new CityViewModel();
-StackLayout stack = new StackLayout();
-SfComboBox comboBox;
-comboBox = new SfComboBox
+SfComboBox comboBox = new SfComboBox
 {
-    WidthRequest = 200,
+    WidthRequest = 350,
     HeightRequest = 50,
     TextSearchMode = ComboBoxTextSearchMode.Contains,
     IsEditable = true,
@@ -195,8 +183,6 @@ comboBox = new SfComboBox
     DisplayMemberPath = "Name",
     BindingContext = cityViewModel
 };
-stack.Children.Add(comboBox);
-this.Content = stack;
 
 {% endhighlight %}
 {% endtabs %}
@@ -281,11 +267,9 @@ public class CityFilteringBehavior : IComboBoxFilterBehavior
 
 CityViewModel cityViewModel = new CityViewModel();  
 CityFilteringBehavior cityFilteringBehavior = new CityFilteringBehavior();
-StackLayout stack = new StackLayout();
-SfComboBox comboBox;
-comboBox = new SfComboBox
+SfComboBox comboBox = new SfComboBox
 {
-    WidthRequest = 200,
+    WidthRequest = 350,
     HeightRequest = 50,
     IsEditable = true,
     FilterBehavior = cityFilteringBehavior,
@@ -295,8 +279,6 @@ comboBox = new SfComboBox
     DisplayMemberPath = "CityName",
     BindingContext = cityViewModel
 };
-stack.Children.Add(comboBox);
-this.Content = stack;
 
 {% endhighlight %}
 {% endtabs %}
