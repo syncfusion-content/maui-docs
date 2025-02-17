@@ -25,9 +25,9 @@ I> Cursor color of the input view will be same as the `Accent` color of the appl
 
 {% highlight xaml %} 
 
-<inputLayout:SfTextInputLayout Hint="User name" 
+<inputLayout:SfTextInputLayout Hint="Name" 
                                Stroke="#00AFA0"
-                               HelperText="Enter your name"
+                               HelperText="Enter the name">
     <VisualStateManager.VisualStateGroups>
         <VisualStateGroupList>
             <VisualStateGroup x:Name="CommonStates">
@@ -176,7 +176,7 @@ The color of the container is customized when the [ContainerType](https://help.s
 <inputLayout:SfTextInputLayout Hint="Name" 
                                Stroke="#0450C2"
                                ContainerType="Outlined"
-                               ContainerBackground="#E6EEF9">`
+                               ContainerBackground="#E6EEF9">
     <Entry  />
 </inputLayout:SfTextInputLayout>  
  
@@ -208,6 +208,7 @@ You can customize the text color of the `hint` label, `helper` label, and `error
 
 <inputLayout:SfTextInputLayout Hint="Name" 
                                ContainerType="Outlined"
+                               Stroke="Red"
                                HelperText="Enter your name"
                                ErrorText="Invalid text">
         
@@ -232,6 +233,7 @@ You can customize the text color of the `hint` label, `helper` label, and `error
 SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Name";
 inputLayout.ContainerType = ContainerType.Outlined;
+inputLayout.Stroke = Colors.Red;
 inputLayout.HelperText = "Enter your name";
 inputLayout.ErrorText = "Invalid text";
 inputLayout.Content = new Entry();
