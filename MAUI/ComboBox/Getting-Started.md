@@ -301,7 +301,7 @@ Now, populate this SocialMediaViewModel data in [ComboBox](https://help.syncfusi
        <ContentPage.Content>
             <!--Setting ItemsSource-->
             <editors:SfComboBox x:Name="comboBox" 
-                                WidthRequest="250"
+                                WidthRequest="350"
                                 HeightRequest="50"
                                 ItemsSource="{Binding SocialMedias}" />
         </ContentPage.Content>
@@ -314,10 +314,12 @@ Now, populate this SocialMediaViewModel data in [ComboBox](https://help.syncfusi
 
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 this.BindingContext = socialMediaViewModel;
-SfComboBox comboBox = new SfComboBox(); 
-comboBox.WidthRequest = 250;
-comboBox.HeightRequest = 50;
-comboBox.ItemsSource = socialMediaViewModel.SocialMedias;
+SfComboBox comboBox = new SfComboBox
+{
+    WidthRequest = 350,
+    HeightRequest = 50,
+    ItemsSource = socialMediaViewModel.SocialMedias,
+};
 Content = comboBox;
 
 {% endhighlight %}
@@ -337,7 +339,7 @@ The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComb
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox" 
-                    WidthRequest="250"
+                    WidthRequest="350"
                     HeightRequest = "50"
                     DisplayMemberPath = "Name"
                     TextMemberPath = "Name"
@@ -346,12 +348,15 @@ The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComb
 {% endhighlight %}
 {% highlight C# %}
 
-SfComboBox comboBox = new SfComboBox(); 
-comboBox.WidthRequest = 250;
-comboBox.HeightRequest = 50;
-comboBox.DisplayMemberPath = "Name";
-comboBox.TextMemberPath = "Name";
-comboBox.ItemsSource = socialMediaViewModel.SocialMedias;
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+SfComboBox comboBox = new SfComboBox
+{
+    WidthRequest = 350,
+    HeightRequest = 50,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+    ItemsSource = socialMediaViewModel.SocialMedias,
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -368,7 +373,7 @@ The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComb
 {% highlight XAML %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    WidthRequest="250"
+                    WidthRequest="350"
                     HeightRequest="50"
                     IsEditable="true"
                     ItemsSource="{Binding SocialMedias}"
@@ -380,13 +385,16 @@ The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComb
 
 {% highlight C# %}
 
-SfComboBox comboBox = new SfComboBox(); 
-comboBox.WidthRequest = 250;
-comboBox.HeightRequest = 50;
-comboBox.IsEditable = true;
-comboBox.ItemsSource = socialMediaViewModel.SocialMedias;
-comboBox.DisplayMemberPath = "Name";
-comboBox.TextMemberPath = "Name";
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
+SfComboBox comboBox = new SfComboBox
+{
+    WidthRequest = 350,
+    HeightRequest = 50,
+    IsEditable = true,
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+};
 
 {% endhighlight %}
 {% endtabs %}
