@@ -162,7 +162,7 @@ The [`RatedStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 <rating:SfRating Value="3">
     <rating:SfRating.RatingSettings>
-        <rating:RatingSettings RatedStrokeThickness="3"/>
+        <rating:RatingSettings RatedStroke="Black" RatedStrokeThickness="3"/>
     </rating:SfRating.RatingSettings>
 </rating:SfRating>
 
@@ -192,7 +192,7 @@ The [`UnratedStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 
 <rating:SfRating Value="3">
     <rating:SfRating.RatingSettings>
-        <rating:RatingSettings UnratedStrokeThickness="3"/>
+        <rating:RatingSettings UnratedStroke="Black" UnratedStrokeThickness="3"/>
     </rating:SfRating.RatingSettings>
 </rating:SfRating>
 	

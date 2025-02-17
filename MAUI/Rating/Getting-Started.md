@@ -110,7 +110,6 @@ public MainPage()
 {
     InitializeComponent();
     rating = new SfRating();
-    this.Content = rating;
 } 
 
 {% endhighlight %}
@@ -215,7 +214,6 @@ public MainPage()
 {
     InitializeComponent();
     rating = new SfRating();
-    this.Content = rating;
 } 
 
 {% endhighlight %}
@@ -318,7 +316,6 @@ public MainPage()
 {
     InitializeComponent();
     rating = new SfRating();
-    this.Content = rating;
 } 
 
 {% endhighlight %}

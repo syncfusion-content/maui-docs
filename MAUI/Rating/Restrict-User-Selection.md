@@ -23,7 +23,13 @@ documentation: ug
 
 {% highlight C# %}
 
-rating.IsReadOnly=true;
+
+SfRating rating;
+public MainPage()
+{
+    InitializeComponent();
+    rating.IsReadOnly=true;
+}
 	
 {% endhighlight %}
 

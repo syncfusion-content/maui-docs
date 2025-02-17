@@ -77,9 +77,7 @@ Import the [SfSignaturePad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 <ContentPage
     . . .
     xmlns:signaturePad="clr-namespace:Syncfusion.Maui.SignaturePad;assembly=Syncfusion.Maui.SignaturePad">
-    <Grid>
         <signaturePad:SfSignaturePad />
-    </Grid>
 </ContentPage>
 
 {% endhighlight %}
@@ -96,7 +94,7 @@ namespace SignaturePadGettingStarted
             InitializeComponent();
             // Creating a SignaturePad control.
             SfSignaturePad signaturePad = new SfSignaturePad();
-            this.content = signaturePad;
+            this.Content = signaturePad;
         }
     }
 }
@@ -170,9 +168,7 @@ Import the [SfSignaturePad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 <ContentPage
     . . .
     xmlns:signaturePad="clr-namespace:Syncfusion.Maui.SignaturePad;assembly=Syncfusion.Maui.SignaturePad">
-    <Grid>
         <signaturePad:SfSignaturePad />
-    </Grid>
 </ContentPage>
 
 {% endhighlight %}
@@ -190,7 +186,7 @@ namespace SignaturePadGettingStarted
             InitializeComponent();
             // Creating a SignaturePad control.
             SfSignaturePad signaturePad = new SfSignaturePad();
-            this.content = signaturePad;
+            this.Content = signaturePad;
         }
     }
 }
@@ -263,9 +259,7 @@ Import the [SfSignaturePad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 <ContentPage
     . . .
     xmlns:signaturePad="clr-namespace:Syncfusion.Maui.SignaturePad;assembly=Syncfusion.Maui.SignaturePad">
-    <Grid>
         <signaturePad:SfSignaturePad />
-    </Grid>
 </ContentPage>
 
 {% endhighlight %}
@@ -283,7 +277,7 @@ namespace SignaturePadGettingStarted
             InitializeComponent();
             // Creating a SignaturePad control.
             SfSignaturePad signaturePad = new SfSignaturePad();
-            this.content = signaturePad;
+            this.Content = signaturePad;
         }
     }
 }
@@ -311,10 +305,8 @@ Customize the stroke color of the SignaturePad control by using the [StrokeColor
 
 {% highlight C# %}
 
-SfSignaturePad signaturePad = new SfSignaturePad()
-{
-    StrokeColor = Colors.Red,
-};
+SfSignaturePad signaturePad = new SfSignaturePad();
+signaturePad.StrokeColor = Colors.Red;
 
 {% endhighlight %}
 
@@ -367,6 +359,7 @@ Save the signature drawn in the SignaturePad as an [ImageSource](https://learn.m
 
 SfSignaturePad signaturePad = new SfSignaturePad();
 Button saveButton = new Button();
+saveButton.Text="Save";
 saveButton.Clicked += OnSaveButtonClicked;
 
 private void OnSaveButtonClicked(object? sender, EventArgs e)
@@ -396,11 +389,12 @@ Clear the signature drawn in the SignaturePad using the [Clear()](https://help.s
 
 SfSignaturePad signaturePad = new SfSignaturePad();
 Button clearButton = new Button();
+clearButton.Text = "Clear";
 clearButton.Clicked += OnClearButtonClicked;
 
 private void OnClearButtonClicked(object? sender, EventArgs e)
 {
-    ImageSource? source = signaturePad.Clear();
+    signaturePad.Clear();
 }
 
 {% endhighlight %}
@@ -423,10 +417,9 @@ This event will be triggered when we start drawing in the SignaturePad. With thi
 
 {% highlight C# %}
 
-SfSignaturePad signaturePad = new SfSignaturePad()
-{ 
-    DrawStarted += OnDrawStarted
-};
+SfSignaturePad signaturePad = new SfSignaturePad();
+signaturePad.DrawStarted += OnDrawStarted;
+
 private void OnDrawStarted(object? sender, CancelEventArgs e)
 {
     e.Cancel = false;
@@ -450,10 +443,9 @@ This event will be triggered when we complete the drawing in the SignaturePad.
 
 {% highlight C# %}
 
-SfSignaturePad signaturePad = new SfSignaturePad()
-{
-    DrawCompleted += OnDrawCompleted
-};
+SfSignaturePad signaturePad = new SfSignaturePad();
+signaturePad.DrawCompleted += OnDrawCompleted;
+
 private void OnDrawCompleted(object? sender, EventArgs e)
 {
 }
