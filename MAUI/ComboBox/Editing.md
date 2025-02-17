@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Editing in .NET MAUI ComboBox control | Syncfusion
-description: Learn all about Editable modes support in Syncfusion .NET MAUI ComboBox (SfComboBox) control and more here.
+title: Editing in .NET MAUI ComboBox control | Syncfusion®
+description: Learn all about Editable modes support in Syncfusion® .NET MAUI ComboBox (SfComboBox) control and more here.
 platform: maui
 control: SfComboBox
 documentation: ug

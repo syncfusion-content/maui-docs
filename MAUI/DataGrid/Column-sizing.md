@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Column Sizing in .NET MAUI DataGrid control | Syncfusion
-description: Learn all about Column Sizing support in Syncfusion MAUI DataGrid (SfDataGrid) control and more here.
+title: Column Sizing in .NET MAUI DataGrid control | Syncfusion®
+description: Learn all about Column Sizing support in Syncfusion® MAUI DataGrid (SfDataGrid) control and more here.
 platform: maui
 control: SfDataGrid
 documentation: ug
@@ -96,7 +96,7 @@ The code below applies the [ColumnWidthMode.Fill](https://help.syncfusion.com/cr
 If you want to set the common width for all the columns, you can use the [DefaultColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DefaultColumnWidth) property.
 
 {% tabs %}
-{% highlight xaml tabtile="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfDataGrid  x:Name="dataGrid"
                         DefaultColumnWidth="120"
                         ItemsSource="{Binding OrderInfoCollection}" />
@@ -108,7 +108,7 @@ If you want to set the common width for all the columns, you can use the [Defaul
 You can retrieve the width of the columns when it is auto-calculated based on the `ColumnWidthMode`  property using the [ActualWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_ActualWidth) property .
 
 {% tabs %}
-{% highlight xaml tabtile="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <StackLayout>
     <syncfusion:SfDataGrid x:Name="dataGrid"
                        ItemsSource="{Binding OrderInfoCollection}"

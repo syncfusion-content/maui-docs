@@ -1,7 +1,7 @@
 ---
 layout: post
-title: DataTemplateSelector in .NET MAUI Rotator control | Syncfusion
-description: Learn about DataTemplateSelector support in Syncfusion .NET MAUI Rotator (SfRotator) control and more.
+title: DataTemplateSelector in .NET MAUI Rotator control | Syncfusion®
+description: Learn about DataTemplateSelector support in Syncfusion® .NET MAUI Rotator (SfRotator) control and more.
 platform: maui 
 control: Rotator 
 documentation: ug
@@ -24,8 +24,8 @@ The [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.Sf
         </DataTemplate>
         <DataTemplate x:Key="SpecificTemplate">
             <Grid>
-            <Label Text="Not Available" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Italic" FontFamily="Calibri"/>
-            <Image Source="{Binding Image}" Opacity="0.5" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Label Text="Not Available" FontSize="50" HorizontalOptions="Center" VerticalOptions="Center"/> 
+            <Image Source="{Binding Image}" Opacity="0.5" >
             </Grid>
         </DataTemplate>
     </ResourceDictionary>
@@ -111,57 +111,24 @@ The OnSelectTemplate is an overridden method to return a particular DataTemplate
 
 {% highlight C# %}
 	
-public partial class Rotator : ContentPage
+public class DataTemplateViewModel : DataTemplateSelector
 {
-    DataTemplate defaultTemplate;
-    DataTemplate specifictempalte;
+    public DataTemplate DefaultTemplate { get; set; }
+    public DataTemplate SpecificTemplate { get; set; }
 
-    public Rotator()
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
     {
-        InitializeComponent();
-        this.BindingContext = new DataTemplateViewModel();
-        SfRotator rotator = new SfRotator();
+        var rotatorModel = item as RotatorModel;
+        if (rotatorModel == null)
+            return DefaultTemplate;
 
-        defaultTemplate = new DataTemplate(() =>
+        // Apply the SpecificTemplate for a specific condition, e.g., check the image name or any other property
+        if (rotatorModel.Image == "image2.png")
         {
-            Grid grid = new Grid();
-            Image image = new Image();
-            image.SetBinding(Image.SourceProperty, "Image");
-            grid.Children.Add(image);
-            return grid;
-        });
+            return SpecificTemplate;
+        }
 
-        specifictempalte = new DataTemplate(() =>
-        {
-            Grid grid = new Grid();
-            Image image = new Image();
-            Label label = new Label();
-            image.SetBinding(Image.SourceProperty, "Image");
-            image.Opacity = 0.5;
-            label.Text = "Not Available";
-            label.FontSize = 50;
-            label.HorizontalOptions = LayoutOptions.Center;
-            label.VerticalOptions = LayoutOptions.Center;
-            grid.Children.Add(image);
-            grid.Children.Add(label);
-            return grid;
-        });
-
-        var ImageCollection = new List<RotatorModel> {
-            new RotatorModel ("image1.png"),
-            new RotatorModel ("image2.png"),
-            new RotatorModel ("image3.png"),
-            new RotatorModel ("image4.png"),
-            new RotatorModel ("image5.png")
-            };
-        rotator.HeightRequest = 550;
-        rotator.WidthRequest = 550;
-        rotator.NavigationDirection = NavigationDirection.Horizontal;
-        rotator.NavigationStripMode = NavigationStripMode.Thumbnail;
-        rotator.BackgroundColor = Colors.White;
-        rotator.ItemsSource = ImageCollection;
-        rotator.ItemTemplate = new DataTemplateViewModel { DefaultTemplate = defaultTemplate, SpecificTemplate = specifictempalte };
-        this.Content = rotator;
+        return DefaultTemplate;
     }
 }
 
@@ -172,3 +139,5 @@ public partial class Rotator : ContentPage
 The following screenshot illustrates the output of above code.
 
 ![DataTemplateSelector](images/DataTemplateSelector.png)
+
+Find the complete DataTemplateSelector sample from this [link.](https://github.com/SyncfusionExamples/data-template-selector-rotator/tree/main/DataTemplateSelectorSample)

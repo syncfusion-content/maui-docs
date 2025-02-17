@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Chips control | Syncfusion
-description: Learn here about getting started with Syncfusion Essential Studio® .NET MAUI Chips control, its elements and more.
+title: Getting Started with .NET MAUI Chips control | Syncfusion®
+description: Learn here about getting started with Syncfusion® Essential Studio® .NET MAUI Chips control, its elements and more.
 platform: maui
 control: Chips
 documentation: ug
@@ -97,6 +97,57 @@ Step 2: Add the namespace as shown in the following code snippet
 
 Step 3: Set the control to content in `ContentPage.`
 
+**For SfChip**
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage.Content>    
+    <chip:SfChip x:Name="chips" />
+</ContentPage.Content>
+
+{% endhighlight %}
+
+{% highlight c# %}
+          
+SfChip chips = new SfChip(); 
+Content = chips;  
+
+{% endhighlight %}
+
+{% endtabs %}
+
+**For SfChipGroup**
+
+Initialize an empty [`SfChipGroup`] as shown in the following code snippet
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage.Content>
+	<Grid>
+		<chip:SfChipGroup/>
+	</Grid>
+</ContentPage.Content>
+
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+using Syncfusion.Maui.Core;
+
+	Grid grid = new Grid();
+	SfChipGroup chipGroup = new SfChipGroup();
+	grid.Children.Add(chipGroup);
+	this.Content = grid;
+		
+{% endhighlight %}
+
+{% endtabs %}
+
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
 
@@ -180,10 +231,7 @@ Step 2: Add the namespace as shown in the following code snippet
 
 Step 3: Set the control to content in `ContentPage.`
 
-{% endtabcontent %}
-{% endtabcontents %}
-
-## For SfChip
+**For SfChip**
 
 {% tabs %}
 
@@ -204,7 +252,7 @@ Content = chips;
 
 {% endtabs %}
 
-## For SfChipGroup
+**For SfChipGroup**
 
 Initialize an empty [`SfChipGroup`] as shown in the following code snippet
 
@@ -233,6 +281,9 @@ using Syncfusion.Maui.Core;
 {% endhighlight %}
 
 {% endtabs %}
+
+{% endtabcontent %}
+{% endtabcontents %}
 
 ## Set layout for the control
 
