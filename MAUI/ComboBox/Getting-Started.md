@@ -303,7 +303,7 @@ Now, populate this SocialMediaViewModel data in [ComboBox](https://help.syncfusi
        <ContentPage.Content>
             <!--Setting ItemsSource-->
             <editors:SfComboBox x:Name="comboBox" 
-                                WidthRequest="250"
+                                WidthRequest="350"
                                 HeightRequest="50"
                                 ItemsSource="{Binding SocialMedias}" />
         </ContentPage.Content>
@@ -318,7 +318,7 @@ SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 this.BindingContext = socialMediaViewModel;
 SfComboBox comboBox = new SfComboBox
 {
-    WidthRequest = 250,
+    WidthRequest = 350,
     HeightRequest = 50,
     ItemsSource = socialMediaViewModel.SocialMedias,
 };
@@ -341,7 +341,7 @@ The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComb
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox" 
-                    WidthRequest="250"
+                    WidthRequest="350"
                     HeightRequest = "50"
                     DisplayMemberPath = "Name"
                     TextMemberPath = "Name"
@@ -353,7 +353,7 @@ The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComb
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox
 {
-    WidthRequest = 250,
+    WidthRequest = 350,
     HeightRequest = 50,
     DisplayMemberPath = "Name",
     TextMemberPath = "Name",
@@ -375,7 +375,7 @@ The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComb
 {% highlight XAML %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    WidthRequest="250"
+                    WidthRequest="350"
                     HeightRequest="50"
                     IsEditable="true"
                     ItemsSource="{Binding SocialMedias}"
@@ -390,7 +390,7 @@ The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComb
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox
 {
-    WidthRequest = 250,
+    WidthRequest = 350,
     HeightRequest = 50,
     IsEditable = true,
     ItemsSource = socialMediaViewModel.SocialMedias,

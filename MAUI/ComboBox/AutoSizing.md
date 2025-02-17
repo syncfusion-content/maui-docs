@@ -19,6 +19,7 @@ The [EnableAutoSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 
 <editors:SfComboBox x:Name="comboBox"
              WidthRequest="350"
+             HeightRequest="50"
              ItemsSource="{Binding SocialMedias}"
              SelectionMode="Multiple"
              MaxDropDownHeight="250"

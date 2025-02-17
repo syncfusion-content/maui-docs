@@ -89,7 +89,7 @@ using Syncfusion.Maui.Inputs;
 CityViewModel cityViewModel = new CityViewModel();
 SfComboBox comboBox = new SfComboBox
 {
-    WidthRequest = 200,
+    WidthRequest = 350,
     HeightRequest = 50,
     IsEditable = true,
     IsFilteringEnabled = true,
@@ -132,7 +132,7 @@ Filter the matching items based on the starting text and the first filtered item
 CityViewModel cityViewModel = new CityViewModel();
 SfComboBox comboBox = new SfComboBox
 {
-    WidthRequest = 200,
+    WidthRequest = 350,
     HeightRequest = 50,
     TextSearchMode = ComboBoxTextSearchMode.StartsWith,
     IsEditable = true,
@@ -173,7 +173,7 @@ using Syncfusion.Maui.Inputs;
 CityViewModel cityViewModel = new CityViewModel();
 SfComboBox comboBox = new SfComboBox
 {
-    WidthRequest = 200,
+    WidthRequest = 350,
     HeightRequest = 50,
     TextSearchMode = ComboBoxTextSearchMode.Contains,
     IsEditable = true,
@@ -269,7 +269,7 @@ CityViewModel cityViewModel = new CityViewModel();
 CityFilteringBehavior cityFilteringBehavior = new CityFilteringBehavior();
 SfComboBox comboBox = new SfComboBox
 {
-    WidthRequest = 200,
+    WidthRequest = 350,
     HeightRequest = 50,
     IsEditable = true,
     FilterBehavior = cityFilteringBehavior,

@@ -32,8 +32,8 @@ It highlights the first position of the matching characters in the suggestion li
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    WidthRequest="300"
-                    HeightRequest = "40"
+                    WidthRequest="350"
+                    HeightRequest = "50"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
                     TextHighlightMode="FirstOccurrence"
@@ -49,8 +49,8 @@ It highlights the first position of the matching characters in the suggestion li
     SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
     SfComboBox comboBox = new SfComboBox() 
     {
-         HeightRequest = 40,
-         WidthRequest= 300,
+         HeightRequest = 50,
+         WidthRequest= 350,
          TextHighlightMode = OccurrenceMode.FirstOccurrence,
          ItemsSource = socialMediaViewModel.SocialMedias,
          IsEditable =true,
@@ -75,9 +75,9 @@ It highlights the matching character that are present everywhere in the suggesti
 {% highlight xaml %}
 
     <editors:SfComboBox x:Name="comboBox"
-                        WidthRequest="300"
+                        WidthRequest="350"
                         DisplayMemberPath="Name"
-                        HeightRequest = "40"
+                        HeightRequest = "50"
                         ItemsSource="{Binding SocialMedias}"
                         TextHighlightMode="MultipleOccurrence"
                         IsEditable="True"
@@ -93,8 +93,8 @@ It highlights the matching character that are present everywhere in the suggesti
     SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
     SfComboBox comboBox = new SfComboBox() 
     {
-         HeightRequest = 40,
-         WidthRequest= 300,
+         HeightRequest = 50,
+         WidthRequest= 350,
          TextSearchMode = ComboBoxTextSearchMode.Contains,
          ItemsSource = socialMediaViewModel.SocialMedias,
          TextHighlightMode = OccurrenceMode.MultipleOccurrence,

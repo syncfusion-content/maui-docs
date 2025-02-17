@@ -20,7 +20,7 @@ In the editable mode, the [ComboBox](https://help.syncfusion.com/cr/maui/Syncfus
 {% highlight XAML %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    WidthRequest="250"
+                    WidthRequest="350"
                     HeightRequest = "50"
                     IsEditable="true"
                     ItemsSource="{Binding SocialMedias}"
@@ -35,7 +35,7 @@ In the editable mode, the [ComboBox](https://help.syncfusion.com/cr/maui/Syncfus
 SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox
 {
-    WidthRequest = 250,
+    WidthRequest = 350,
     HeightRequest = 50,
     IsEditable = true,
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -58,7 +58,7 @@ Non-editable mode prevents users from editing and instead allows them to select 
 {% highlight XAML %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    WidthRequest="250"
+                    WidthRequest="350"
                     HeightRequest="50"
                     IsEditable="false"
                     ItemsSource="{Binding SocialMedias}"
@@ -73,7 +73,7 @@ Non-editable mode prevents users from editing and instead allows them to select 
 SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox
 {
-    WidthRequest = 250,
+    WidthRequest = 350,
     HeightRequest = 50,
     IsEditable = false,
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -96,7 +96,7 @@ By default, the clear button `X` will be displayed in the editor of the ComboBox
 {% highlight XAML %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    WidthRequest="250"
+                    WidthRequest="350"
                     HeightRequest="50"
                     IsEditable="true"
                     IsClearButtonVisible="false"
@@ -112,7 +112,7 @@ By default, the clear button `X` will be displayed in the editor of the ComboBox
 SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel(); 
 SfComboBox comboBox = new SfComboBox
 {
-    WidthRequest = 250,
+    WidthRequest = 350,
     HeightRequest = 50,
     IsEditable = true,
     IsClearButtonVisible = false,

@@ -32,8 +32,8 @@ In edit mode, searching will be performed based on the [TextMemberPath](https://
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    WidthRequest="250"
-                    HeightRequest="40"
+                    WidthRequest="350"
+                    HeightRequest="50"
                     IsEditable="true"
                     ItemsSource="{Binding SocialMedias}"
                     TextMemberPath="ID"
@@ -45,8 +45,8 @@ In edit mode, searching will be performed based on the [TextMemberPath](https://
     SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
     SfComboBox comboBox = new SfComboBox() 
     {
-        WidthRequest= 250,
-        HeightRequest = 40,
+        WidthRequest= 350,
+        HeightRequest = 50,
         TextMemberPath = "ID",
         IsEditable = true,
         ItemsSource = socialMediaViewModel.SocialMedias,
@@ -77,8 +77,8 @@ Set the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 {% highlight XAML %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    WidthRequest="250"
-                    HeightRequest="40"
+                    WidthRequest="350"
+                    HeightRequest="50"
                     TextSearchMode="StartsWith"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
@@ -91,8 +91,8 @@ Set the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
     SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
     SfComboBox comboBox = new SfComboBox() 
     {
-        WidthRequest= 250,
-        HeightRequest = 40,
+        WidthRequest= 350,
+        HeightRequest = 50,
         TextSearchMode = ComboBoxTextSearchMode.StartsWith,
         TextMemberPath = "Name",
         DisplayMemberPath = "Name",
@@ -114,8 +114,8 @@ Set the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    WidthRequest="250"
-                    HeightRequest="40"
+                    WidthRequest="350"
+                    HeightRequest="50"
                     IsEditable="True"
                     TextSearchMode="Contains"
                     ItemsSource="{Binding SocialMedias}"
@@ -129,8 +129,8 @@ Set the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox() 
 {
-    WidthRequest= 250,
-    HeightRequest = 40,
+    WidthRequest= 350,
+    HeightRequest = 50,
     IsEditable = true,
     TextSearchMode = ComboBoxTextSearchMode.Contains,
     TextMemberPath = "Name",
@@ -153,8 +153,8 @@ Instead of displaying suggestion list on every character entry, matches can be f
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox" 
-                    WidthRequest="300"
-                    HeightRequest="40"
+                    WidthRequest="350"
+                    HeightRequest="50"
                     IsFilteringEnabled="True"
                     IsEditable="True" 
                     ItemsSource="{Binding SocialMedias}"
@@ -169,8 +169,8 @@ Instead of displaying suggestion list on every character entry, matches can be f
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox() 
 {
-    WidthRequest= 250,
-    HeightRequest = 40,
+    WidthRequest= 350,
+    HeightRequest = 50,
     MinimumPrefixCharacters = 3,
     IsFilteringEnabled = true,
     IsEditable = true,

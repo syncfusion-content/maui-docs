@@ -25,7 +25,7 @@ The selected item can be changed interactively by selecting from the .NET MAUI d
 
 <editors:SfComboBox x:Name="comboBox"
                     IsEditable="True"
-                    WidthRequest="250"
+                    WidthRequest="350"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
                     TextMemberPath="Name" />
@@ -46,7 +46,7 @@ The selected item can be changed programmatically by using the [SelectedItem](ht
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    WidthRequest="250"
+                    WidthRequest="350"
                     MaxDropDownHeight="250"
                     IsEditable="True"
                     ItemsSource="{Binding SocialMedias}"
@@ -61,7 +61,7 @@ The selected item can be changed programmatically by using the [SelectedItem](ht
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox
 {
-    WidthRequest = 250,
+    WidthRequest = 350,
     MaxDropDownHeight = 250,
     IsEditable = true,
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -210,7 +210,7 @@ When an item is selected from the .NET MAUI drop-down list, the [SelectionChange
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox" 
-                    WidthRequest="250"
+                    WidthRequest="350"
                     TextMemberPath="Name"
                     DisplayMemberPath="Name"
                     ItemsSource="{Binding SocialMedias}"
@@ -223,7 +223,7 @@ When an item is selected from the .NET MAUI drop-down list, the [SelectionChange
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox
 {
-    WidthRequest = 250,
+    WidthRequest = 350,
     ItemsSource = socialMediaViewModel.SocialMedias,
     DisplayMemberPath = "Name",
     TextMemberPath = "Name"
@@ -265,7 +265,7 @@ In single selection mode, the [SelectedValue](https://help.syncfusion.com/cr/mau
 <Label x:Name="selectedValue" />
 
 <editors:SfComboBox x:Name="comboBox"
-                    WidthRequest="250"
+                    WidthRequest="350"
                     MaxDropDownHeight="250"
                     TextMemberPath="Name"   
                     DisplayMemberPath="Name"
@@ -279,7 +279,7 @@ In single selection mode, the [SelectedValue](https://help.syncfusion.com/cr/mau
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox
 {
-    WidthRequest = 250,
+    WidthRequest = 350,
     MaxDropDownHeight = 250,
     ItemsSource = socialMediaViewModel.SocialMedias,
     DisplayMemberPath = "Name",
@@ -324,7 +324,7 @@ In multi-selection mode, the [SelectedValue](https://help.syncfusion.com/cr/maui
 <Label x:Name="selectedValue" />
 
 <editors:SfComboBox x:Name="comboBox"
-                    WidthRequest="250"
+                    WidthRequest="350"
                     MaxDropDownHeight="250"
                     TextMemberPath="Name"   
                     DisplayMemberPath="Name"
@@ -378,7 +378,7 @@ In the .NET MAUI ComboBox control, the .NET MAUI drop-down list can be opened or
 {% highlight XAML %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    WidthRequest="250"
+                    WidthRequest="350"
                     IsEditable="true"
                     ItemsSource="{Binding SocialMedias}"
                     IsDropDownOpen = true;
@@ -392,7 +392,7 @@ In the .NET MAUI ComboBox control, the .NET MAUI drop-down list can be opened or
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox
 {
-    WidthRequest = 250,
+    WidthRequest = 350,
     IsEditable = true,
     ItemsSource = socialMediaViewModel.SocialMedias,
     IsDropDownOpen = true,
