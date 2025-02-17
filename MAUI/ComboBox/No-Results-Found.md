@@ -1,6 +1,6 @@
 ---
 layout: post
-title: No Results Found in  ComboBox control | Syncfusion
+title: No Results Found in  ComboBox control | Syncfusion®
 description: Learn all about No Results Found support in .NET MAUI ComboBox (SfComboBox) control and more details.
 platform: maui
 control: SfComboBox
