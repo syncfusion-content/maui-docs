@@ -27,8 +27,8 @@ The [ValueChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.S
 private void MaskedEntry_ValueChanging(object sender, MaskedEntryValueChangingEventArgs e)
 {
     // Access the new and old values
-    string newValue = e.NewValue;
-    string oldValue = e.OldValue;
+    string newValue = e.NewValue?.ToString();
+    string oldValue = e.OldValue?.ToString();
 
     // Check the validity of the input
     bool isValid = e.IsValid;
@@ -55,7 +55,7 @@ The [ValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Sf
 {% tabs %}
 {% highlight C# %}
 
-private void MaskedEntry_ValueChanged(object sender, MaskedEntryValueChangedEventArgs e)
+private async void MaskedEntry_ValueChanged(object sender, MaskedEntryValueChangedEventArgs e)
 {
     // Access the new and old values
     string maskNewValue = e.NewValue?.ToString();
