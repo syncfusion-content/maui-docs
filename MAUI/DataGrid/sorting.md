@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Sorting in .NET MAUI DataGrid control | Syncfusion
-description: Learn here all about Sorting support in Syncfusion .NET MAUI DataGrid (SfDataGrid) control and more.
+title: Sorting in .NET MAUI DataGrid control | Syncfusion®
+description: Learn here all about Sorting support in Syncfusion® .NET MAUI DataGrid (SfDataGrid) control and more.
 platform: MAUI
 control: SfDataGrid
 documentation: UG

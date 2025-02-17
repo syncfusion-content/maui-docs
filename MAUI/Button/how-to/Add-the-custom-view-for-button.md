@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to Add the Custom View for Syncfusion SfButton
-description: Learn how to add and customize a custom view for the SfButton in .NET MAUI to enhance the user interface and functionality.
+title: How to Add the Custom View for Syncfusion® SfButton
+description: Learn here about how to add the custom view for the Syncfusion® .NET MAUI Button (SfButton) control.
 platform: maui
 control: Sfbutton
 documentation: ug
