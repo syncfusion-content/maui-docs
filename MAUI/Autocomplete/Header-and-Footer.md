@@ -33,12 +33,12 @@ We can provide Header Content at the top of the Autocomplete's dropdown.[DropDow
     <StackLayout VerticalOptions="Start" 
                  HorizontalOptions="Start" 
                  Padding="30">
-        <autocomplete:SfAutocomplete HeightRequest="40"
+        <editors:SfAutocomplete HeightRequest="40" 
                                      ShowDropdownHeaderView ="True"
                                      ItemsSource="{Binding SocialMedias}"
                                      DisplayMemberPath="Name"
                                      DropdownHeaderViewHeight="50">
-            <autocomplete:SfAutocomplete.DropDownHeaderView>
+            <editors:SfAutocomplete.DropdownHeaderView>
                 <StackLayout BackgroundColor="#f0f0f0" >
                     <Label  x:Name="SearchLabel" 
                             FontSize="20" 
@@ -47,8 +47,8 @@ We can provide Header Content at the top of the Autocomplete's dropdown.[DropDow
                             VerticalOptions="Center" 
                             TextColor="#006bcd"   />
                 </StackLayout>
-            </autocomplete:SfAutocomplete.DropDownHeaderView>
-        </autocomplete:SfAutocomplete>
+            </editors:SfAutocomplete.DropdownHeaderView>
+        </editors:SfAutocomplete>
     </StackLayout>
 </ContentPage>
 
@@ -76,7 +76,7 @@ namespace AutocompleteSample
 
             SfAutocomplete autoComplete = new SfAutocomplete
             {
-                HeightRequest = 40,
+                HeightRequest = 50,
                 ShowDropdownHeaderView = true,
                 ItemsSource = new List<string> { "Facebook", "Twitter", "Instagram", "LinkedIn" },
                 DropdownHeaderViewHeight = 50
@@ -96,7 +96,7 @@ namespace AutocompleteSample
                 TextColor = Color.FromHex("#006bcd")
             };
             dropDownHeaderView.Children.Add(searchLabel);
-            autoComplete.DropDownHeaderView = dropDownHeaderView;
+            autoComplete.DropdownHeaderView = dropDownHeaderView;
             stackLayout.Children.Add(autoComplete);
             Content = stackLayout;
         }
@@ -133,12 +133,12 @@ The following code example illustrate how to set Footer content in [SfAutocomple
     <StackLayout VerticalOptions="Start" 
                  HorizontalOptions="Start" 
                  Padding="30">
-        <autocomplete:SfAutocomplete HeightRequest="40"
+        <editors:SfAutocomplete HeightRequest="40"
                                      ShowDropdownFooterView ="True"
                                      ItemsSource = "{Binding SocialMedias}"
                                      DisplayMemberPath="Name"
                                      DropdownFooterViewHeight="50">
-            <autocomplete:SfAutocomplete.DropDownFooterView>
+            <editors:SfAutocomplete.DropdownFooterView>
                 <StackLayout BackgroundColor="#f0f0f0" >
                     <Label  Text="Add New"
                             FontSize="20" 
@@ -147,8 +147,8 @@ The following code example illustrate how to set Footer content in [SfAutocomple
                             VerticalOptions="Center" 
                             TextColor="#006bcd" />
                 </StackLayout>
-            </autocomplete:SfAutocomplete.DropDownFooterView>
-        </autocomplete:SfAutocomplete>
+            </editors:SfAutocomplete.DropdownFooterView>
+        </editors:SfAutocomplete>
     </StackLayout>
 </ContentPage>
 
@@ -175,7 +175,7 @@ namespace AutocompleteSample
 
             SfAutocomplete autoComplete = new SfAutocomplete()
             {
-                HeightRequest = 40,
+                HeightRequest = 50,
                 ShowDropdownFooterView = true,
                 ItemsSource = new List<string> { "Facebook", "Twitter", "Instagram", "LinkedIn" },
                 DropdownFooterViewHeight = 50,
@@ -197,7 +197,7 @@ namespace AutocompleteSample
             };
 
             layout.Children.Add(SearchLabel);
-            autoComplete.DropDownFooterView = layout;
+            autoComplete.DropdownFooterView = layout;
             stackLayout.Children.Add(autoComplete);
             this.Content = stackLayout;
         }
