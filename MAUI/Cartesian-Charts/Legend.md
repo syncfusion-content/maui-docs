@@ -12,6 +12,10 @@ keywords: .net maui cartesian chart, chart legend, legend-wrap, legend view, leg
 
 The [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Legend) provides a list of series or data points, helping to identify the corresponding data series in the chart. Here's a detailed guide on how to define and customize the legend in the chart.
 
+To learn how to add and customize the legend in .NET MAUI Cartesian Charts quickly, you can check the video below.
+
+{% youtube "https://youtu.be/5YG_kwZu6is" %}
+
 ## Defining the legend
 To define the legend in the chart, initialize the [ChartLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html) class and assign it to the [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Legend) property.
 
