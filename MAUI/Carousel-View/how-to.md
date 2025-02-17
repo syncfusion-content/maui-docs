@@ -17,6 +17,7 @@ We can perform the operation while changing the CarouselItem using the [Selectio
 
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
+                     ItemTemplate="{StaticResource itemTemplate}" 
                      ItemHeight="200"
                      ItemWidth="200"
                      SelectionChanged="Carousel_SelectionChanged"/>

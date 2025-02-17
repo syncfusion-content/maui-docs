@@ -1,7 +1,7 @@
 ---
 layout : post
-title: Animation in .NET MAUI Carousel View control | SyncfusionÂ®
-description: Learn here all about Animation support in SyncfusionÂ® .NET MAUI Carousel View (SfCarousel) control and more.
+title: Animation in .NET MAUI Carousel View control | Syncfusion®
+description: Learn here all about Animation support in Syncfusion® .NET MAUI Carousel View (SfCarousel) control and more.
 platform : maui
 control : Carousel
 documentation : ug
@@ -17,13 +17,35 @@ The [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCa
 
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
+                     ItemTemplate="{StaticResource itemTemplate}" 
+                     ItemHeight="200"
+                     ItemWidth="200"
+                     ItemSpacing="2"
                      Duration="1000"/>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfCarousel carousel = new SfCarousel();
+CarouselViewModel carouselViewModel = new CarouselViewModel();
+SfCarousel carousel = new SfCarousel()
+{
+    ItemHeight = 200,
+    ItemWidth = 200,
+    ItemSpacing = 2,
+    EnableVirtualization = true,
+    ViewMode = ViewMode.Linear
+};
+var itemTemplate = new DataTemplate(() =>
+{
+    var grid = new Grid();
+    var nameLabel = new Image();
+    nameLabel.SetBinding(Image.SourceProperty, "Image");
+    grid.Children.Add(nameLabel);
+    return grid;
+});
+carousel.BindingContext = carouselViewModel;
+carousel.ItemTemplate = itemTemplate;
 carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 carousel.Duration = 1000;
 
