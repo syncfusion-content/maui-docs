@@ -31,7 +31,7 @@ Before proceeding, ensure the following are in place:
 2. Name the project and choose a location. Then, click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Inputs NuGet Package
+## Step 2: Install the Syncfusion® MAUI Inputs NuGet Package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) and install the latest version.
@@ -39,7 +39,7 @@ Before proceeding, ensure the following are in place:
 
 ## Step 3: Register the handler
 
- [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
+ [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion® controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion® core.
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;
@@ -136,16 +136,16 @@ Before proceeding, ensure the following are set up:
 3. Select the project location, type the project name and press Enter.
 4. Then choose **Create project**
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Inputs NuGet Package
+## Step 2: Install the Syncfusion® MAUI Inputs NuGet Package
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you're in the project root directory where your .csproj file is located.
-3. Run the command `dotnet add package Syncfusion.Maui.Inputs` to install the Syncfusion<sup>®</sup> .NET MAUI Inputs package.
+3. Run the command `dotnet add package Syncfusion.Maui.Inputs` to install the Syncfusion® .NET MAUI Inputs package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
 ## Step 3: Register the handler
 
- [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
+ [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion® controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion® core.
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;
@@ -291,8 +291,8 @@ Now, populate this 'SocialMediaViewModel' data in the [Autocomplete](https://hel
        <ContentPage.Content>
             <!--Setting ItemsSource-->
             <editors:SfAutocomplete x:Name="autocomplete" 
-                                    WidthRequest="250"
-                                    HeightRequest = "50"
+                                    WidthRequest="350"
+                                    HeightRequest = "40"
                                     ItemsSource="{Binding SocialMedias}" />
         </ContentPage.Content>
 </ContentPage>
@@ -303,11 +303,12 @@ Now, populate this 'SocialMediaViewModel' data in the [Autocomplete](https://hel
 
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 this.BindingContext = socialMediaViewModel;
-SfAutocomplete autocomplete = new SfAutocomplete(); 
-autocomplete.WidthRequest = 250;
-autocomplete.HeightRequest = 50;
-autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
-Content = autocomplete;
+SfAutocomplete autocomplete = new SfAutocomplete()
+{
+    WidthRequest = 350,
+    HeightRequest = 40,
+    ItemsSource = socialMediaViewModel.SocialMedias,
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -326,8 +327,8 @@ The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 {% highlight xaml %}
 
 <editors:SfAutocomplete x:Name="autocomplete"
-                        WidthRequest="250" 
-                        HeightRequest = "50"
+                        WidthRequest="350" 
+                        HeightRequest = "40"
                         DisplayMemberPath = "Name"
                         TextMemberPath = "Name"
                         ItemsSource="{Binding SocialMedias}" />
@@ -335,12 +336,15 @@ The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 {% endhighlight %}
 {% highlight C# %}
 
-SfAutocomplete autocomplete = new SfAutocomplete(); 
-autocomplete.WidthRequest = 250;
-autocomplete.HeightRequest = 50;
-autocomplete.DisplayMemberPath = "Name";
-autocomplete.TextMemberPath = "Name";
-autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel(); 
+SfAutocomplete autocomplete = new SfAutocomplete()
+{
+    WidthRequest = 350,
+    HeightRequest = 40,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+    ItemsSource = socialMediaViewModel.SocialMedias,
+};
 
 {% endhighlight %}
 {% endtabs %}
