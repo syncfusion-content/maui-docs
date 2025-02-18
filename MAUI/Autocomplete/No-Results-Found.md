@@ -23,7 +23,7 @@ We can customize the desire text to be displayed for indicating no results found
                         TextMemberPath="Name"
                         DisplayMemberPath="Name"
                         WidthRequest="350" 
-                        HeightRequest="50"/> 
+                        HeightRequest="40"/> 
 
 {% endhighlight %}
 
@@ -34,7 +34,7 @@ SfAutocomplete autocomplete = new SfAutocomplete()
 {
     NoResultsFoundText = "Not Found",
     WidthRequest = 350,
-    HeightRequest = 50,
+    HeightRequest = 40,
     DisplayMemberPath = "Name",
     TextMemberPath = "Name",
     ItemsSource = socialMediaViewModel.SocialMedias

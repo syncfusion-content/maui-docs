@@ -76,7 +76,7 @@ namespace AutocompleteSample
 
             SfAutocomplete autoComplete = new SfAutocomplete
             {
-                HeightRequest = 50,
+                HeightRequest = 40,
                 ShowDropdownHeaderView = true,
                 ItemsSource = new List<string> { "Facebook", "Twitter", "Instagram", "LinkedIn" },
                 DropdownHeaderViewHeight = 50
@@ -175,7 +175,7 @@ namespace AutocompleteSample
 
             SfAutocomplete autoComplete = new SfAutocomplete()
             {
-                HeightRequest = 50,
+                HeightRequest = 40,
                 ShowDropdownFooterView = true,
                 ItemsSource = new List<string> { "Facebook", "Twitter", "Instagram", "LinkedIn" },
                 DropdownFooterViewHeight = 50,

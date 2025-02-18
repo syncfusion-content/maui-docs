@@ -140,12 +140,12 @@ Before proceeding, ensure the following are set up:
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you're in the project root directory where your .csproj file is located.
-3. Run the command `dotnet add package Syncfusion.Maui.Inputs` to install the Syncfusion<sup>®</sup> .NET MAUI Inputs package.
+3. Run the command `dotnet add package Syncfusion.Maui.Inputs` to install the Syncfusion® .NET MAUI Inputs package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
 ## Step 3: Register the handler
 
- [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
+ [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion® controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion® core.
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;
@@ -398,7 +398,7 @@ Now, populate this 'SocialMediaViewModel' data in the [Autocomplete](https://hel
             <!--Setting ItemsSource-->
             <editors:SfAutocomplete x:Name="autocomplete" 
                                     WidthRequest="350"
-                                    HeightRequest = "50"
+                                    HeightRequest = "40"
                                     ItemsSource="{Binding SocialMedias}" />
         </ContentPage.Content>
 </ContentPage>
@@ -412,7 +412,7 @@ this.BindingContext = socialMediaViewModel;
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
     WidthRequest = 350,
-    HeightRequest = 50,
+    HeightRequest = 40,
     ItemsSource = socialMediaViewModel.SocialMedias,
 };
 
@@ -434,7 +434,7 @@ The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 <editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="350" 
-                        HeightRequest = "50"
+                        HeightRequest = "40"
                         DisplayMemberPath = "Name"
                         TextMemberPath = "Name"
                         ItemsSource="{Binding SocialMedias}" />
@@ -446,7 +446,7 @@ SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
     WidthRequest = 350,
-    HeightRequest = 50,
+    HeightRequest = 40,
     DisplayMemberPath = "Name",
     TextMemberPath = "Name",
     ItemsSource = socialMediaViewModel.SocialMedias,

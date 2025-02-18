@@ -32,7 +32,7 @@ It highlights the first position of the matching characters in the suggestion li
 {% highlight xaml %}
 
      <editors:SfAutocomplete x:Name="autocomplete"
-			     HeightRequest = "50"
+			     HeightRequest = "40"
 			     WidthRequest="350"
                     DisplayMemberPath = "Name"
                     TextMemberPath = "Name"
@@ -48,7 +48,7 @@ It highlights the first position of the matching characters in the suggestion li
      SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
      SfAutocomplete autocomplete = new SfAutocomplete() 
      {
-          HeightRequest = 50,
+          HeightRequest = 40,
           WidthRequest = 350,
           DisplayMemberPath = "Name",
           TextMemberPath = "Name",
@@ -73,7 +73,7 @@ It highlights the matching character that are present everywhere in the suggesti
 {% highlight xaml %}
 
      <editors:SfAutocomplete x:Name="autocomplete"
-		             HeightRequest = "50"
+		             HeightRequest = "40"
 		             WidthRequest="350"
                        DisplayMemberPath = "Name"
                        TextMemberPath = "Name"
@@ -90,7 +90,7 @@ It highlights the matching character that are present everywhere in the suggesti
      SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
      SfAutocomplete autocomplete = new SfAutocomplete() 
      {
-          HeightRequest = 50,
+          HeightRequest = 40,
           WidthRequest = 350,
           DisplayMemberPath = "Name",
           TextMemberPath = "Name",
