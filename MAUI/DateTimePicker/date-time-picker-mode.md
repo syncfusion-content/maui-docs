@@ -108,6 +108,46 @@ private void Button_Clicked(object sender, EventArgs e)
 {% endhighlight %}  
 {% endtabs %}
 
+### Relative view
+
+The [RelativeView] is specified in the picker's property enumeration and is used to display the picker dialog relative to a view by setting setting the [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Mode) property to [RelativeDialog](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerMode.html#Syncfusion_Maui_Picker_PickerMode_RelativeDialog). You can set the position by setting the [RelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_RelativePosition) property in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
+
+N>
+It is only applicable in `RelativeDialog mode`. If `no` relative view is specified, the picker base will be set as the `default` relative view.
+
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml"% hl_lines="5" }
+
+<Grid>
+    <picker:SfDateTimePicker x:Name="picker" 
+                             Mode="RelativeDialog"
+                             RelativePosition="AlignTopLeft"
+                             RelativeView = "{x:Reference pickerButton}">
+    </picker:SfDateTimePicker>
+    <Button Text="Open Date Time picker" 
+            x:Name="pickerButton"
+            Clicked="Button_Clicked"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            HeightRequest="50" 
+            WidthRequest="150">
+    </Button>
+</Grid>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs"% hl_lines="4" }
+
+private void Button_Clicked(object sender, EventArgs e)
+{
+    this.picker.IsOpen = true;
+    this.picker.RelativeView = pickerButton;
+}
+
+{% endhighlight %}  
+{% endtabs %}
+
+
    ![Relative dialog mode in .NET MAUI Date Time picker.](images/date-time-picker-mode/maui-date-time-picker-relative-dialog-mode1.png)
 
    ![Relative dialog mode in .NET MAUI Date Time picker.](images/date-time-picker-mode/maui-date-time-picker-relative-dialog-mode2.png)
