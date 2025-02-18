@@ -69,7 +69,7 @@ public class SocialMediaViewModel
 
 <editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="350" 
-                        HeightRequest = "50"
+                        HeightRequest = "40"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name" />
 
@@ -81,7 +81,7 @@ SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
     WidthRequest = 350,
-    HeightRequest = 50,
+    HeightRequest = 40,
     DisplayMemberPath = "Name",
     ItemsSource = socialMediaViewModel.SocialMedias
 };
@@ -105,7 +105,7 @@ Searching will be performed based on the [TextMemberPath](https://help.syncfusio
 
 <editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="350"
-                        HeightRequest = "50"
+                        HeightRequest = "40"
                         ItemsSource="{Binding SocialMedias}"
                         TextMemberPath="ID"
                         DisplayMemberPath="Name" />
@@ -118,7 +118,7 @@ SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
     WidthRequest = 350,
-    HeightRequest = 50,
+    HeightRequest = 40,
     DisplayMemberPath = "Name",
     TextMemberPath = "ID",
     ItemsSource = socialMediaViewModel.SocialMedias
@@ -147,7 +147,7 @@ Set the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 
 <editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="350"
-                        HeightRequest = "50"
+                        HeightRequest = "40"
                         TextSearchMode="StartsWith"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
@@ -161,7 +161,7 @@ SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
     WidthRequest = 350,
-    HeightRequest = 50,
+    HeightRequest = 40,
     DisplayMemberPath = "Name",
     TextMemberPath = "Name",
     TextSearchMode = AutocompleteTextSearchMode.StartsWith,
@@ -184,7 +184,7 @@ Set the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 
 <editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="350"
-                        HeightRequest="50"
+                        HeightRequest="40"
                         TextSearchMode="Contains"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
@@ -198,7 +198,7 @@ SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
     WidthRequest = 350,
-    HeightRequest = 50,
+    HeightRequest = 40,
     DisplayMemberPath = "Name",
     TextMemberPath = "Name",
     TextSearchMode = AutocompleteTextSearchMode.Contains,
@@ -221,7 +221,7 @@ Instead of displaying suggestion list on every character entry, matches can be f
 
 <editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="350"
-                        HeightRequest="50"
+                        HeightRequest="40"
                         TextSearchMode="StartsWith"
                         ItemsSource="{Binding SocialMedias}"
                         MinimumPrefixCharacters="3"
@@ -236,7 +236,7 @@ SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
     WidthRequest = 350,
-    HeightRequest = 50,
+    HeightRequest = 40,
     DisplayMemberPath = "Name",
     TextMemberPath = "Name",
     MinimumPrefixCharacters = 3,
