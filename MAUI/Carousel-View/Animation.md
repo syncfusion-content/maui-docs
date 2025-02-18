@@ -1,7 +1,7 @@
 ---
 layout : post
-title: Animation in .NET MAUI Carousel View control | Syncfusion®
-description: Learn here all about Animation support in Syncfusion® .NET MAUI Carousel View (SfCarousel) control and more.
+title: Animation in .NET MAUI Carousel View control | SyncfusionÂ®
+description: Learn here all about Animation support in SyncfusionÂ® .NET MAUI Carousel View (SfCarousel) control and more.
 platform : maui
 control : Carousel
 documentation : ug
