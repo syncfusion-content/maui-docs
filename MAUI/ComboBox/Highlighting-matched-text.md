@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Highlighting matched text in .NET MAUI SfComboBox control | Syncfusion®
+title: Highlighting matched text in .NET MAUI SfComboBox | SyncfusionÂ®
 description: Learn about Highlighting matched text in .NET MAUI SfComboBox (SfComboBox) control and more details.
 platform: maui
 control: SfComboBox
@@ -33,7 +33,7 @@ It highlights the first position of the matching characters in the suggestion li
 
 <editors:SfComboBox x:Name="comboBox"
                     WidthRequest="350"
-                    HeightRequest = "50"
+                    HeightRequest = "40"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
                     TextHighlightMode="FirstOccurrence"
@@ -49,7 +49,7 @@ It highlights the first position of the matching characters in the suggestion li
     SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
     SfComboBox comboBox = new SfComboBox() 
     {
-         HeightRequest = 50,
+         HeightRequest = 40,
          WidthRequest= 350,
          TextHighlightMode = OccurrenceMode.FirstOccurrence,
          ItemsSource = socialMediaViewModel.SocialMedias,
@@ -77,7 +77,7 @@ It highlights the matching character that are present everywhere in the suggesti
     <editors:SfComboBox x:Name="comboBox"
                         WidthRequest="350"
                         DisplayMemberPath="Name"
-                        HeightRequest = "50"
+                        HeightRequest = "40"
                         ItemsSource="{Binding SocialMedias}"
                         TextHighlightMode="MultipleOccurrence"
                         IsEditable="True"
@@ -93,7 +93,7 @@ It highlights the matching character that are present everywhere in the suggesti
     SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
     SfComboBox comboBox = new SfComboBox() 
     {
-         HeightRequest = 50,
+         HeightRequest = 40,
          WidthRequest= 350,
          TextSearchMode = ComboBoxTextSearchMode.Contains,
          ItemsSource = socialMediaViewModel.SocialMedias,

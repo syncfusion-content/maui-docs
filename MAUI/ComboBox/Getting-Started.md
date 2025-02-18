@@ -411,7 +411,7 @@ Now, populate this SocialMediaViewModel data in [ComboBox](https://help.syncfusi
             <!--Setting ItemsSource-->
             <editors:SfComboBox x:Name="comboBox" 
                                 WidthRequest="350"
-                                HeightRequest="50"
+                                HeightRequest="40"
                                 ItemsSource="{Binding SocialMedias}" />
         </ContentPage.Content>
 </ContentPage>
@@ -426,7 +426,7 @@ this.BindingContext = socialMediaViewModel;
 SfComboBox comboBox = new SfComboBox
 {
     WidthRequest = 350,
-    HeightRequest = 50,
+    HeightRequest = 40,
     ItemsSource = socialMediaViewModel.SocialMedias,
 };
 Content = comboBox;
@@ -449,7 +449,7 @@ The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComb
 
 <editors:SfComboBox x:Name="comboBox" 
                     WidthRequest="350"
-                    HeightRequest = "50"
+                    HeightRequest = "40"
                     DisplayMemberPath = "Name"
                     TextMemberPath = "Name"
                     ItemsSource="{Binding SocialMedias}" />
@@ -461,7 +461,7 @@ SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox
 {
     WidthRequest = 350,
-    HeightRequest = 50,
+    HeightRequest = 40,
     DisplayMemberPath = "Name",
     TextMemberPath = "Name",
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -483,7 +483,7 @@ The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComb
 
 <editors:SfComboBox x:Name="comboBox"
                     WidthRequest="350"
-                    HeightRequest="50"
+                    HeightRequest="40"
                     IsEditable="true"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
@@ -498,7 +498,7 @@ SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox
 {
     WidthRequest = 350,
-    HeightRequest = 50,
+    HeightRequest = 40,
     IsEditable = true,
     ItemsSource = socialMediaViewModel.SocialMedias,
     DisplayMemberPath = "Name",

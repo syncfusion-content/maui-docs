@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Editing in .NET MAUI ComboBox control | Syncfusion®
-description: Learn all about Editable modes support in Syncfusion® .NET MAUI ComboBox (SfComboBox) control and more here.
+title: Editing in .NET MAUI ComboBox control | SyncfusionÂ®
+description: Learn all about Editable modes support in SyncfusionÂ® .NET MAUI ComboBox (SfComboBox) control and more here.
 platform: maui
 control: SfComboBox
 documentation: ug
@@ -21,7 +21,7 @@ In the editable mode, the [ComboBox](https://help.syncfusion.com/cr/maui/Syncfus
 
 <editors:SfComboBox x:Name="comboBox"
                     WidthRequest="350"
-                    HeightRequest = "50"
+                    HeightRequest = "40"
                     IsEditable="true"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
@@ -36,7 +36,7 @@ SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox
 {
     WidthRequest = 350,
-    HeightRequest = 50,
+    HeightRequest = 40,
     IsEditable = true,
     ItemsSource = socialMediaViewModel.SocialMedias,
     DisplayMemberPath = "Name",
@@ -59,7 +59,7 @@ Non-editable mode prevents users from editing and instead allows them to select 
 
 <editors:SfComboBox x:Name="comboBox"
                     WidthRequest="350"
-                    HeightRequest="50"
+                    HeightRequest="40"
                     IsEditable="false"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
@@ -74,7 +74,7 @@ SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox
 {
     WidthRequest = 350,
-    HeightRequest = 50,
+    HeightRequest = 40,
     IsEditable = false,
     ItemsSource = socialMediaViewModel.SocialMedias,
     DisplayMemberPath = "Name",
@@ -97,7 +97,7 @@ By default, the clear button `X` will be displayed in the editor of the ComboBox
 
 <editors:SfComboBox x:Name="comboBox"
                     WidthRequest="350"
-                    HeightRequest="50"
+                    HeightRequest="40"
                     IsEditable="true"
                     IsClearButtonVisible="false"
                     ItemsSource="{Binding SocialMedias}"
@@ -113,7 +113,7 @@ SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox
 {
     WidthRequest = 350,
-    HeightRequest = 50,
+    HeightRequest = 40,
     IsEditable = true,
     IsClearButtonVisible = false,
     ItemsSource = socialMediaViewModel.SocialMedias,
