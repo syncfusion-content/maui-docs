@@ -181,7 +181,7 @@ Step 2: Add the namespace as shown in the following code sample.
 
 {% highlight xaml %}
 
-	<xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"/>
+	<xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"/>
 
 {% endhighlight %}
 
@@ -199,7 +199,7 @@ Step 3: Add the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 {% highlight xaml %}
 
-	<syncfusion:SfMaskedEntry x:Name="maskedentry" />
+	<editors:SfMaskedEntry x:Name="maskedentry" />
 	
 {% endhighlight %}
 
