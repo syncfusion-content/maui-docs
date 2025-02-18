@@ -1,6 +1,6 @@
 ---
 layout: post
-title: No Results Found in  ComboBox control | Syncfusion
+title: No Results Found in  ComboBox control | Syncfusion®
 description: Learn all about No Results Found support in .NET MAUI ComboBox (SfComboBox) control and more details.
 platform: maui
 control: SfComboBox
@@ -21,7 +21,7 @@ We can customize the desire text to be displayed for indicating no results found
                     
 <editors:SfComboBox x:Name="comboBox"
                         IsEditable="True"
-                        HeightRequest="50"
+                        HeightRequest="40"
                         IsFilteringEnabled="True"
                         NoResultsFoundText="Not Found"
                         ItemsSource="{Binding SocialMedias}"
@@ -37,7 +37,7 @@ SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox() 
 {
     WidthRequest= 350,
-    HeightRequest = 50,
+    HeightRequest = 40,
     NoResultsFoundText="Not Found",
     IsFilteringEnabled = true,
     IsEditable = true,
@@ -67,7 +67,7 @@ We can customize the appearance of the desire text to be displayed for indicatin
                     TextMemberPath="Name"
                     DisplayMemberPath="Name"
                     WidthRequest="350"
-                    HeightRequest="50">
+                    HeightRequest="40">
     <editors:SfComboBox.NoResultsFoundTemplate>
         <DataTemplate>
             <Label Text="Not Found"  FontSize="20" FontAttributes="Italic" TextColor="Red" Margin="70,10,0,0"/>
@@ -89,7 +89,7 @@ We can customize the appearance of the desire text to be displayed for indicatin
         TextMemberPath=Name,
         DisplayMemberPath=Name,
         WidthRequest=350,
-        HeightRequest=50
+        HeightRequest=40
     };
     var noResultsTemplate = new DataTemplate(() =>
     {

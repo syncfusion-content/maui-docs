@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filtering in .NET MAUI ComboBox control | Syncfusion
-description: Learn here all about ComboBox filtering options in Syncfusion .NET MAUI ComboBox (multi-select ComboBox) control and more.
+title: Filtering in .NET MAUI ComboBox control | Syncfusion®
+description: Learn here all about ComboBox filtering options in Syncfusion® .NET MAUI ComboBox (multi-select ComboBox) control and more.
 platform: maui
 control: SfComboBox
 documentation: ug
@@ -90,7 +90,7 @@ CityViewModel cityViewModel = new CityViewModel();
 SfComboBox comboBox = new SfComboBox
 {
     WidthRequest = 350,
-    HeightRequest = 50,
+    HeightRequest = 40,
     IsEditable = true,
     IsFilteringEnabled = true,
     ItemsSource = cityViewModel.Cities,
@@ -133,7 +133,7 @@ CityViewModel cityViewModel = new CityViewModel();
 SfComboBox comboBox = new SfComboBox
 {
     WidthRequest = 350,
-    HeightRequest = 50,
+    HeightRequest = 40,
     TextSearchMode = ComboBoxTextSearchMode.StartsWith,
     IsEditable = true,
     IsFilteringEnabled = true,
@@ -174,7 +174,7 @@ CityViewModel cityViewModel = new CityViewModel();
 SfComboBox comboBox = new SfComboBox
 {
     WidthRequest = 350,
-    HeightRequest = 50,
+    HeightRequest = 40,
     TextSearchMode = ComboBoxTextSearchMode.Contains,
     IsEditable = true,
     IsFilteringEnabled = true,
@@ -270,7 +270,7 @@ CityFilteringBehavior cityFilteringBehavior = new CityFilteringBehavior();
 SfComboBox comboBox = new SfComboBox
 {
     WidthRequest = 350,
-    HeightRequest = 50,
+    HeightRequest = 40,
     IsEditable = true,
     FilterBehavior = cityFilteringBehavior,
     IsFilteringEnabled = true,
