@@ -91,7 +91,7 @@ The [`FontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Butt
 {% tabs %}
 {% highlight xaml %}
 
-<buttons:SfButton x:Name="button" WidthRequest="200" Text="Button" FontFamily = "Samantha-Demo">
+<buttons:SfButton x:Name="button" WidthRequest="200" Text="Button" FontFamily = "Lobster">
 </buttons:SfButton>
 
 {% endhighlight %}
@@ -100,7 +100,7 @@ The [`FontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Butt
 SfButton button = new SfButton();
 button.WidthRequest = 200;
 button.Text = "Button";
-button.FontFamily = "Samantha-Demo";
+button.FontFamily = "Lobster";
 
 {% endhighlight %}
 {% endtabs %}
