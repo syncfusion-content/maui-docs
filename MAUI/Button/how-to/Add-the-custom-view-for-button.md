@@ -63,8 +63,7 @@ var customTemplate = new DataTemplate(() =>
 SfButton button = new SfButton
 {
     Text = "SfButton",
-    WidthRequest = 250,
-    HeightRequest = 50,
+    WidthRequest = 200,
     Background = Color.FromArgb("#4125BC"),
     CornerRadius= 10,
     Content = customTemplate
