@@ -1295,6 +1295,39 @@ The [DropDownClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 {% endhighlight %}
 {% endtabs %}
 
+N> When `WindowSoftInputModeAdjust.Resize` is set in the sample and `SfComboBox` is placed inside a `ScrollView`, the dropdown may close unexpectedly due to layout resizing. To prevent this, override `OnSizeAllocated` and handle the `DropDownClosing` event as shown below: 
+
+<details>
+  <summary>Click to expand code</summary>
+
+{% tabs %}
+{% highlight c# %}
+    
+    private bool isResizing; // Flag to track resizing
+
+    protected override void OnSizeAllocated(double width, double height)
+    {
+        base.OnSizeAllocated(width, height);
+        isResizing = true;
+    }
+
+    private async void SfComboBox_DropDownClosing(object sender, Syncfusion.Maui.Core.DropDownCancelEventArgs e)
+    {
+        if (isResizing)
+        {
+            e.Cancel = true; // Prevent closing during resizing
+        }
+
+        await Task.Delay(400); // Short delay to update UI after resizing
+        isResizing = false;
+    }
+
+{% endhighlight %}
+{% endtabs %}
+  
+</details> 
+
+
 ## CursorPosition
 
 The cursor position in the input view can be obtained or updated using the [CursorPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_CursorPosition) property in the SfComboBox.
