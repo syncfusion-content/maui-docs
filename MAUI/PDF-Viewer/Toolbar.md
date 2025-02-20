@@ -610,7 +610,7 @@ The names of these toolbar items, along with their descriptions and availability
 <td>PrimaryToolbar</td>
 </tr>
 <tr>
-<td>Magnification</td>
+<td>Zoom level</td>
 <td>The button that appears in the primary toolbar allows you to adjust the magnification level of the PDF viewer content. </td>
 <td>PrimaryToolbar</td>
 </tr>
