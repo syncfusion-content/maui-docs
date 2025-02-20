@@ -50,7 +50,7 @@ When the text input is not accepted, an error message will display instructions 
 
 {% highlight xaml %} 
 
-<inputLayout:SfTextInputLayout Hint="Email" 
+<inputLayout:SfTextInputLayout Hint="Email" ContainerType="Outlined"
                                HelperText="Enter your email address"
                                ErrorText="Invalid email"
                                HasError="true">
@@ -64,6 +64,7 @@ When the text input is not accepted, an error message will display instructions 
 
 var inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Email";
+inputLayout.ContainerType= ContainerType.Outlined;
 inputLayout.HelperText = "Enter your email address";
 inputLayout.ErrorText = "Invalid email";
 inputLayout.HasError = true; 
@@ -87,6 +88,7 @@ Character counter is used when you need to limit the characters. Character limit
 
 <inputLayout:SfTextInputLayout Hint="Password" 
                                CharMaxLength="8"
+                               ContainerType="Outlined"
                                HelperText="Enter 5 to 8 characters">
     <Entry />
 </inputLayout:SfTextInputLayout> 
@@ -99,6 +101,7 @@ Character counter is used when you need to limit the characters. Character limit
 var inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Password";
 inputLayout.CharMaxLength = 8;
+inputLayout.ContainerType= ContainerType.Outlined;
 inputLayout.HelperText = "Enter 5 to 8 characters";
 inputLayout.Content = new Entry(); 
 
