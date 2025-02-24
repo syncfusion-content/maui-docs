@@ -711,7 +711,7 @@ popup.Show(0,0);
 
 ![Positioning the popup without considering action bar](Images/popup-positioning/maui-popup-popsitioning-without-actionbar-consideration.png)
 
-If IgnoreActionBar is set to false, the popup positioning will take the action bar into account, ensuring it does not overlap.
+If `IgnoreActionBar` is set to false, the popup positioning will take the action bar into account, ensuring it does not overlap.
 
 This feature is useful when you want to display the popup freely across the screen, including over the action bar.
 
