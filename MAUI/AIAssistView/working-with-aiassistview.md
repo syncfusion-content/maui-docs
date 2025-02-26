@@ -112,6 +112,90 @@ public class ViewModel : INotifyPropertyChanged
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-aiassistview)
 
+### StopResponding Text
+
+The `SfAIAssistView` control allows you to customize the StopResponding text using the [StopRespondingText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_StopRespondingText) property.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
+         <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                                    EnableStopResponding="True"
+                                    StopRespondingText="Close Response"/>  
+
+{% endhighlight %} 
+
+{% highlight c# hl_lines="6" %} 
+
+    SfAIAssistView sfAIAssistView; 
+    public MainPage() 
+    { 
+        InitializeComponent(); 
+        this.sfAIAssistView = new SfAIAssistView();
+        this.sfAIAssistView.StopRespondingText = "Terminate Response";
+        this.sfAIAssistView.EnableStopResponding = true;
+        this.Content = sfAIAssistView; 
+     } 
+
+{% endhighlight %}
+{% endtabs %}
+
+![Stop Responding Text in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-stopresondingtext.png)
+
+### StopResponding Customization
+
+The `SfAIAssistView` control allows you to fully customize the StopRespoding appearance by using the [StopRespondingTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_StopRespondingTemplate) property. This property lets you define a custom layout and style for the StopResponding.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="13" %}
+
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <DataTemplate x:Key="stopRespondingTemplate">
+            <Grid>
+                ...
+            </Grid>
+        </DataTemplate>
+    </ResourceDictionary>
+</ContentPage.Resources>
+<ContentPage.Content>
+      <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                                 EnableStopResponding ="True"
+                                 StopRespondingTemplate="{StaticResource stopRespondingTemplate}">
+      </syncfusion:SfSfAIAssistView>
+</ContentPage.Content>
+
+{% endhighlight %}
+{% highlight c# hl_lines="11" %}
+
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    SfAIAssistView sfAIAssistView;
+    public MainPage()
+    {
+        InitializeComponent();
+        sfAIAssistView = new SfAIAssistView();
+        sfAIAssistView.EnableStopResponding = true;
+        sfAIAssistView.StopRespondingTemplate = CreateStopRespondingViewTemplate();
+        this.Content = sfAIAssistView;
+    }
+
+    private DataTemplate CreateStopRespondingViewTemplate()
+    {
+        return new DataTemplate(() =>
+        {
+            ...
+        });
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Stop Responding Text in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-stoprespondingtemplate.png)
+
+
 ## Control Template
 
 The `ControlTemplate` in AI AssistView allows you to define and reuse the visual structure of a control. This flexible structure enables to fully customize the appearance and behavior of the AI AssistView. By using `ControlTemplate` with the AI AssistView, you can create a highly customized and interactive interface, as demonstrated below.
