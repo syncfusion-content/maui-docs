@@ -143,7 +143,7 @@ The `SfAIAssistView` control allows you to customize the StopResponding text usi
 
 ### StopResponding Customization
 
-The `SfAIAssistView` control allows you to fully customize the StopRespoding appearance by using the [StopRespondingTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_StopRespondingTemplate) property. This property lets you define a custom layout and style for the StopResponding.
+The `SfAIAssistView` control allows you to fully customize the Stop Responding appearance by using the [StopRespondingTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_StopRespondingTemplate) property. This property lets you define a custom layout and style for the StopResponding.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="13" %}
