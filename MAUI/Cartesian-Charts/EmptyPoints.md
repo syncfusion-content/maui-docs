@@ -9,7 +9,7 @@ keywords: .net maui chart empty points, .net maui empty points customization, sy
 ---
 
 # Empty Points in .NET MAUI Chart
-Empty Points are used to indicate missing or null data in a series. These empty points can occur when data is unavailable, improperly formatted, or explicitly set as null or Double.NaN. The chart provides options to handle and customize these empty points to enhance visualization and maintain the integrity of data representation.
+Empty Points are used to indicate missing or null data in a series. These empty points can occur when data is unavailable, improperly formatted, or explicitly set as null or double.NaN. The chart provides options to handle and customize these empty points to enhance visualization and maintain the integrity of data representation.
 
 [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) provides support for empty points, allowing users to handle missing data effectively.
 
@@ -27,14 +27,20 @@ The data collection that is passed to the chart can have NaN or Null values that
 
 {% endhighlight %}
 
-By default, the [ShowEmptyPoints]() property is false. So the empty points will not be rendered as shown in the below.
+By default, the [EmptyPointMode]() property is None. So the empty points will not be rendered as shown in the below.
 
 ![Empty Points in MAUI Chart](EmptyPoints_images/EmptyPoints_Default.png)
 
-## Enable Empty Points
-The [ShowEmptyPoints]() property of series determines whether empty points should be displayed on the chart.
+## EmptyPointMode
+The [EmptyPointMode]() property of series specifies how empty points should be handled. 
 
-N> The default value of the EmptyPointMode property is Zero.
+This property is an enumeration with the following options:
+
+* None - Empty points are not rendered. This is the default behavior.
+* Zero - Empty points will be replaced with zero.
+* Average - Empty points will be replaced with the average value of the surrounding data points.
+
+The following code example shows the [EmptyPointMode]() as Zero.
 
 {% tabs %}
 
@@ -44,13 +50,15 @@ N> The default value of the EmptyPointMode property is Zero.
 
         .....
 
-        <chart:ColumnSeries ItemsSource="{Binding MovieSales}"
-                        XBindingPath="Day"
-                        YBindingPath="TicketsSold"
-                        Fill="#3068F7"
-                        ShowDataLabels="True"
-                        ShowEmptyPoints="True">
-        </chart:ColumnSeries>
+        <chart:LineSeries ItemsSource="{Binding MovieSales}"
+                  XBindingPath="Day"
+                  YBindingPath="TicketsSold"
+                  Fill="#3068F7"
+                  StrokeWidth="2"
+                  ShowMarkers="True"
+                  ShowDataLabels="True"
+                  EmptyPointMode="Zero">
+        </chart:LineSeries>
     </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -61,14 +69,15 @@ N> The default value of the EmptyPointMode property is Zero.
 
     .....
 
-    ColumnSeries series = new ColumnSeries()
+    LineSeries series = new LineSeries()
     {
         ItemsSource = new ViewModel().MovieSales,
         XBindingPath = "Day",
         YBindingPath = "TicketsSold",
         Fill = Color.FromArgb("#3068F7"),
         ShowDataLabels = true,
-        ShowEmptyPoints = true,
+        ShowMarkers = true,
+        EmptyPointMode = EmptyPointMode.Zero
     };
 
     chart.Series.Add(series);
@@ -78,15 +87,9 @@ N> The default value of the EmptyPointMode property is Zero.
 
 {% endtabs %}
 
-![ShowEmptyPoints in MAUI Chart](EmptyPoints_images/Enable_EmptyPoints.png)
+![EmptyPoint Mode Zero in MAUI Chart](EmptyPoints_images/EmptyPoints_Mode_Zero.png)
 
-## EmptyPointMode
-The [EmptyPointMode]() property of series determines how empty points are handled when [ShowEmptyPoints]() is enabled.
-
-This is an enum property with the following options:
-
-* Zero - Empty points will be replaced with zero (0). This is the default behavior.
-* Average - Empty points will be replaced with the average value of the surrounding data points.
+The following code example shows the [EmptyPointMode]() as Average.
 
 {% tabs %}
 
@@ -101,7 +104,6 @@ This is an enum property with the following options:
                   YBindingPath="TicketsSold"
                   Fill="#3068F7"
                   ShowDataLabels="True"
-                  ShowEmptyPoints="True"
                   EmptyPointMode="Average">
         </chart:ColumnSeries>
     </chart:SfCartesianChart>
@@ -121,7 +123,6 @@ This is an enum property with the following options:
         YBindingPath = "TicketsSold",
         Fill = Color.FromArgb("#3068F7"),
         ShowDataLabels = true,
-        ShowEmptyPoints = true,
         EmptyPointMode = EmptyPointMode.Average
     };
 
@@ -138,11 +139,8 @@ This is an enum property with the following options:
 The [EmptyPointSettings]() property allows you to customize the appearance of empty points in a chart. This enables you to adjust various visual aspects of empty points, making them more distinct from the other data points. You can modify the following properties within [EmptyPointSettings]().
 
 * [Fill]() - Gets or sets the fill color for the empty points.
-* [Type]() - Gets or sets the shape of the marker for empty points.
 * [Stroke]() - Gets or sets the stroke color for empty points.
 * [StrokeWidth]() - Gets or sets the stroke thickness for empty points.
-
-N> The Type property is not supported for Area, WaterFall and FastLine series.
 
 {% tabs %}
 
@@ -153,17 +151,16 @@ N> The Type property is not supported for Area, WaterFall and FastLine series.
         .....
 
         <chart:LineSeries ItemsSource="{Binding MovieSales}"
-                    XBindingPath="Day"
-                    YBindingPath="TicketsSold"
-                    Fill="#3068F7"
-                    StrokeWidth="2"
-                    ShowEmptyPoints="True"
-                    EmptyPointMode="Average">
+                  XBindingPath="Day"
+                  YBindingPath="TicketsSold"
+                  Fill="#3068F7"
+                  StrokeWidth="2"
+                  ShowMarkers="True"
+                  ShowDataLabels="True"
+                  EmptyPointMode="Average">
             <chart:LineSeries.EmptyPointSettings>
-                <chart:EmptyPointSettings Fill="Orange" 
-                                    Type="Rectangle" 
-                                    Stroke="Green" 
-                                    StrokeWidth="3"/>
+                <chart:EmptyPointSettings Fill="DarkOrange" 
+                                        StrokeWidth="3"/>
             </chart:LineSeries.EmptyPointSettings>
         </chart:LineSeries>
     </chart:SfCartesianChart>
@@ -183,15 +180,14 @@ N> The Type property is not supported for Area, WaterFall and FastLine series.
         YBindingPath = "TicketsSold",
         Fill = Color.FromArgb("#3068F7"),
         StrokeWidth = 2,
-        ShowEmptyPoints = true,
+        ShowDataLabels = true,
+        ShowMarkers = true,
         EmptyPointMode = EmptyPointMode.Average
     };
 
     EmptyPointSettings emptypointSettings = new EmptyPointSettings()
     {
         Fill = Colors.Orange,
-        Type = EmptyPointType.Rectangle,
-        Stroke = Colors.Green,
         StrokeWidth = 3
     };
 
@@ -204,6 +200,6 @@ N> The Type property is not supported for Area, WaterFall and FastLine series.
 
 {% endtabs %}
 
-![Customize EmptyPoints in MAUI Chart](EmptyPoints_images/Customize_EmptyPoints.png)
+![Customize EmptyPoints in MAUI Chart](EmptyPoints_images\Customize_EmptyPoints.png)
 
 N> The EmptyPoints feature is not supported for Histogram and BoxAnd series.
