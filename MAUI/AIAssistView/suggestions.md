@@ -269,3 +269,54 @@ By default, a suggestion is automatically sent as a request item immediately whe
 
 {% endhighlight %}
 {% endtabs %}
+
+## Suggestion Customization
+The `SfAIAssistView` control allows you to fully customize the appearance of the suggestions using the `ResponseSuggestionTemplate` property. This property lets you define a custom layout and style for the suggestions.
+
+{% tabs %}
+{% highlight xaml hl_lines="11"%}
+
+  <ContentPage.Resources>
+    <ResourceDictionary>
+        <DataTemplate x:Key="suggestionTemplate">
+                ...
+        </DataTemplate>
+    </ResourceDictionary>
+</ContentPage.Resources>
+<ContentPage.Content>
+      <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                                 AssistItem = "{Binding AssistItems}"
+                                 ResponseSuggestionTemplate="{StaticResource suggestionTemplate}">
+      </syncfusion:SfSfAIAssistView>
+</ContentPage.Content>
+
+{% endhighlight %}
+
+{% highlight c# hl_lines="10" %}
+
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    SfAIAssistView sfAIAssistView;
+    public MainPage()
+    {
+        InitializeComponent();
+        sfAIAssistView = new SfAIAssistView();
+        sfAIAssistView.ResponseSuggestionTemplate = this.CreateSuggestionTemplate();
+        this.Content = sfAIAssistView;
+    }
+
+    private DataTemplate CreateSuggestionTemplate()
+    {
+        return new DataTemplate(() =>
+        {
+            ...
+        });
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Suggestion Template in .NET MAUI AI AssistView](Images/suggestions/maui-aiassistview-suggestiontemplate.png)
