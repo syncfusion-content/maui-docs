@@ -17,13 +17,14 @@ The data collection that is passed to the chart can have NaN or Null values that
 
 {% highlight C# %}
 
-    MovieSales.Add(new Model() { Day = "Monday", TicketsSold = 60 });
-    MovieSales.Add(new Model() { Day = "Tuesday", TicketsSold = 55 });
-    MovieSales.Add(new Model() { Day = "Wednesday", TicketsSold = double.NaN });
-    MovieSales.Add(new Model() { Day = "Thursday", TicketsSold = 62 });
-    MovieSales.Add(new Model() { Day = "Friday", TicketsSold = 58 });
-    MovieSales.Add(new Model() { Day = "Saturday", TicketsSold = double.NaN });
-    MovieSales.Add(new Model() { Day = "Sunday", TicketsSold = 65 });
+    ProductSales = new ObservableCollection<Model>();
+    ProductSales.Add(new Model() { Product = "Electronics", Sales = 60 });
+    ProductSales.Add(new Model() { Product = "Clothing", Sales = 40 });
+    ProductSales.Add(new Model() { Product = "Groceries", Sales = double.NaN });
+    ProductSales.Add(new Model() { Product = "Furniture", Sales = 70 });
+    ProductSales.Add(new Model() { Product = "Toys", Sales = 30 });
+    ProductSales.Add(new Model() { Product = "Sports", Sales = double.NaN });
+    ProductSales.Add(new Model() { Product = "Books", Sales = 50 });
 
 {% endhighlight %}
 
@@ -50,9 +51,9 @@ The following code example shows the [EmptyPointMode]() as Zero.
 
         .....
 
-        <chart:LineSeries ItemsSource="{Binding MovieSales}"
-                  XBindingPath="Day"
-                  YBindingPath="TicketsSold"
+        <chart:LineSeries ItemsSource="{Binding ProductSales}"
+                  XBindingPath="Product"
+                  YBindingPath="Sales"
                   Fill="#3068F7"
                   StrokeWidth="2"
                   ShowMarkers="True"
@@ -71,12 +72,13 @@ The following code example shows the [EmptyPointMode]() as Zero.
 
     LineSeries series = new LineSeries()
     {
-        ItemsSource = new ViewModel().MovieSales,
-        XBindingPath = "Day",
-        YBindingPath = "TicketsSold",
+        ItemsSource = new ViewModel().ProductSales,
+        XBindingPath = "Product",
+        YBindingPath = "Sales",
         Fill = Color.FromArgb("#3068F7"),
-        ShowDataLabels = true,
+        StrokeWidth = 2,
         ShowMarkers = true,
+        ShowDataLabels = true,
         EmptyPointMode = EmptyPointMode.Zero
     };
 
@@ -99,9 +101,9 @@ The following code example shows the [EmptyPointMode]() as Average.
 
         .....
 
-        <chart:ColumnSeries ItemsSource="{Binding MovieSales}"
-                  XBindingPath="Day"
-                  YBindingPath="TicketsSold"
+        <chart:ColumnSeries ItemsSource="{Binding ProductSales}"
+                  XBindingPath="Product"
+                  YBindingPath="Sales"
                   Fill="#3068F7"
                   ShowDataLabels="True"
                   EmptyPointMode="Average">
@@ -118,9 +120,9 @@ The following code example shows the [EmptyPointMode]() as Average.
 
     ColumnSeries series = new ColumnSeries()
     {
-        ItemsSource = new ViewModel().MovieSales,
-        XBindingPath = "Day",
-        YBindingPath = "TicketsSold",
+        ItemsSource = new ViewModel().ProductSales,
+        XBindingPath = "Product",
+        YBindingPath = "Sales",
         Fill = Color.FromArgb("#3068F7"),
         ShowDataLabels = true,
         EmptyPointMode = EmptyPointMode.Average
@@ -150,17 +152,16 @@ The [EmptyPointSettings]() property allows you to customize the appearance of em
 
         .....
 
-        <chart:LineSeries ItemsSource="{Binding MovieSales}"
-                  XBindingPath="Day"
-                  YBindingPath="TicketsSold"
+        <chart:LineSeries ItemsSource="{Binding ProductSales}"
+                  XBindingPath="Product"
+                  YBindingPath="Sales"
                   Fill="#3068F7"
                   StrokeWidth="2"
                   ShowMarkers="True"
                   ShowDataLabels="True"
                   EmptyPointMode="Average">
             <chart:LineSeries.EmptyPointSettings>
-                <chart:EmptyPointSettings Fill="DarkOrange" 
-                                        StrokeWidth="3"/>
+                <chart:EmptyPointSettings Fill="Orange" StrokeWidth="2"/>
             </chart:LineSeries.EmptyPointSettings>
         </chart:LineSeries>
     </chart:SfCartesianChart>
@@ -175,20 +176,20 @@ The [EmptyPointSettings]() property allows you to customize the appearance of em
 
     LineSeries series = new LineSeries()
     {
-        ItemsSource = new ViewModel().MovieSales,
-        XBindingPath = "Day",
-        YBindingPath = "TicketsSold",
+        ItemsSource = new ViewModel().ProductSales,
+        XBindingPath = "Product",
+        YBindingPath = "Sales",
         Fill = Color.FromArgb("#3068F7"),
         StrokeWidth = 2,
-        ShowDataLabels = true,
         ShowMarkers = true,
+        ShowDataLabels = true,
         EmptyPointMode = EmptyPointMode.Average
     };
 
     EmptyPointSettings emptypointSettings = new EmptyPointSettings()
     {
         Fill = Colors.Orange,
-        StrokeWidth = 3
+        StrokeWidth = 2
     };
 
     series.EmptyPointSettings = emptypointSettings;
@@ -202,4 +203,4 @@ The [EmptyPointSettings]() property allows you to customize the appearance of em
 
 ![Customize EmptyPoints in MAUI Chart](EmptyPoints_images\Customize_EmptyPoints.png)
 
-N> The EmptyPoints feature is not supported for Histogram and BoxAnd series.
+N> The EmptyPoints feature is not supported for Histogram and BoxAndWhisker series.
