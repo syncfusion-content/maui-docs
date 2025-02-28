@@ -12,9 +12,9 @@ Keywords: .net maui fast scatter chart, .net maui performance scatter chart, fas
 
 ## Fast Scatter Chart
 
-The [FastScatterSeries]() is a specialized scatter series designed to efficiently render a large number of data points. To render a fast scatter chart, create an instance of [FastScatterSeries](), and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html).
+The **FastScatterSeries** is a specialized scatter series designed to efficiently render a large number of data points. To render a fast scatter chart, create an instance of **FastScatterSeries**, and add it to the [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) collection property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html).
 
-The [ScatterHeight]() and [ScatterWidth]() properties in the FastScatterSeries control the height and width of scatter segments. The [ScatterShapeType]() property allows you to change the rendering shape of the [FastScatterSeries]().
+The **ScatterHeight** and **PointWidth** properties in the FastScatterSeries control the height and width of scatter segments. The **ScatterShapeType** property allows you to change the rendering shape of the **FastScatterSeries**.
 
 N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_Series) as its default content.
 
@@ -34,8 +34,8 @@ N> The Cartesian chart has [Series](https://help.syncfusion.com/cr/maui/Syncfusi
     <chart:FastScatterSeries ItemsSource="{Binding Data}"
                              XBindingPath="XValue"
                              YBindingPath="YValue" 
-                             ScatterHeight="8"
-                             ScatterWidth="8"/>
+                             PointHeight="8"
+                             PointWidth="8"/>
 </chart:SfCartesianChart>
 
 {% endhighlight %}
@@ -55,8 +55,8 @@ FastScatterSeries series = new FastScatterSeries()
     ItemsSource = new ViewModel().Data,
     XBindingPath = "XValue",
     YBindingPath = "YValue",
-    ScatterHeight = 8,
-    ScatterWidth = 8,
+    PointHeight = 8,
+    PointWidth = 8,
 };
 
 chart.Series.Add(series);
