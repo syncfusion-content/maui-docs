@@ -107,7 +107,7 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 
 ### Suggestion Customization
 
-The `SfAIAssistView` control allows you to fully customize the suggestions appearance by using the `Suggestiontemplate` property. This property lets you define a custom layout and style for the suggestions.
+The `SfAIAssistView` control allows you to fully customize the suggestions appearance by using the `SuggestionTemplate` property. This property lets you define a custom layout and style for the suggestions.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="13" %}
