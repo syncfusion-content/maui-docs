@@ -1042,3 +1042,51 @@ public MainPage()
 {% endtabs %}
 
 ![Stop responding style in .NET MAUI AI AssistView](images/styles/maui-aiassistview-styles-stopresponding.png)
+
+## Text Selection styling
+
+To apply styles to highlight text for the Text Selection feature, set values to the built-in keys of the response item in the resource dictionary.
+
+<table>
+<tr>
+<th> Key </th>
+<th> Description </th>
+</tr>
+<tr>
+<td> SfAIAssistViewSelectionTextHighLightColor </td>
+<td> Color for Highlighting the text. </td>
+</tr>
+</table>
+
+{% tabs %}
+{% highlight xaml %}
+
+ <ContentPage.Resources>
+     <core:SyncfusionThemeDictionary>
+         <core:SyncfusionThemeDictionary.MergedDictionaries>
+             <ResourceDictionary>
+                 <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
+                 <Color x:Key="SfAIAssistViewSelectionTextHighLightColor">Orange</Color>
+             </ResourceDictionary>
+         </core:SyncfusionThemeDictionary.MergedDictionaries>
+     </core:SyncfusionThemeDictionary>
+ </ContentPage.Resources>
+
+{% endhighlight %}
+{% highlight c# %}
+
+public MainPage()
+{
+    ...
+    InitializeComponent();
+    ResourceDictionary dictionary = new ResourceDictionary();
+    dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
+    dictionary.Add("SfAIAssistViewSelectionTextHighLightColor", Colors.Orange);
+    this.Resources.Add(dictionary);
+    ...    
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Text Selection style in .NET MAUI AI AssistView](images/styles/maui-aiassistview-styles-textselection.png)
