@@ -40,5 +40,5 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI 1.0.0 offers a versatile collect
 
 The Essential<sup>®</sup> UI Kit for .NET MAUI 2.0.0 offers a collection of all new **8 customizable UI pages** organized into **2 app categories**, including:
 
-* Dasboard
+* Dashboard
 * Onboarding
