@@ -95,3 +95,5 @@ this.Content = picker;
 {% endtabs %}
 
 ![Blackout dates in .NET MAUI Date picker.](images/date-restrictions/maui-date-picker-blackout-dates.png)
+
+N> The `TextDisplayMode` and `Selection View` will not be applicable when setting `Blackout datetimes`.

@@ -93,3 +93,5 @@ this.Content = picker;
 {% endtabs %}
 
 ![Blackout times in .NET MAUI Time picker.](images/time-restriction/maui-timepicker-timerestriction-blackouttimes.png)
+
+N> The `TextDisplayMode` and `Selection View` will not be applicable when setting `Blackout times`.
