@@ -245,3 +245,41 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![EditorView Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-editorviewtemplate.png)
+
+## Send Button Customization
+
+The Send Button Template Customization feature in `SfAIAssistView` provides the ability to personalize the appearance of the send button within the application. This feature allows to replace the default send icon with a custom image, label, or any other element of choice.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="13" %}
+
+<ContentPage.Resources>
+        <ResourceDictionary>
+            <!-- Define the RequestButtonTemplate as a static resource -->
+            <DataTemplate x:Key="RequestButtonTemplate">
+                <Grid>
+                    <Label x:Name="label"
+                           Text="&#xe791;"
+                           FontFamily="MauiMaterialAssets"
+                           FontSize="24"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                </Grid>
+            </DataTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+<ContentPage.Content>
+       <StackLayout>
+        <syncfusion:SfAIAssistView x:Name="assist"
+                                   AssistItems="{Binding AssistItems}"
+                                   Request="assist_Request"
+                                   RequestButtonTemplate="{StaticResource RequestButtonTemplate}" />
+    </StackLayout>
+</ContentPage.Content>
+
+{% endhighlight %}
+{% endtabs %}
+
+![SendButton Customization in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-SendButtonCustomization.png)
+
