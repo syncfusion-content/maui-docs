@@ -502,9 +502,9 @@ public partial class MainPage : ContentPage
 
 ![MAUI ListView Drop shadow effect on items](Images/appearance/maui-listview-drop-shadow-effects-on-items.jpg)
 
-## Change mouse hover item background
+## Customizing ListViewItem Background with Visual States
 
-The `SfListView` allows customizing the mouse hover background of the `ListViewItem` using the visual state manager based on the visual states set from the code. The applicable visual states are `Normal` and `PointerOver`.
+The `SfListView` allows customizing the background of the `ListViewItem` using the visual state manager based on the visual states set from the code, which include  `Normal`, `PointerOver`, `Pressed` and `Selected`, the background can be adjusted to suit different interactions and improve user experience. An example is provided to demonstrate these background changes according to each state.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml" %}
@@ -521,13 +521,25 @@ The `SfListView` allows customizing the mouse hover background of the `ListViewI
                         <VisualState x:Name="Normal">
                             <VisualState.Setters>
                                 <Setter Property="Background"
-                                        Value="Transparent" />
+                                        Value="Transparent"/>
                             </VisualState.Setters>
                         </VisualState>
                         <VisualState x:Name="PointerOver">
                             <VisualState.Setters>
                                 <Setter Property="Background"
-                                        Value= "LightSkyBlue" />
+                                        Value= "Gray"/>
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Pressed">
+                            <VisualState.Setters>
+                                <Setter Property="Background"
+                                        Value="DarkGrey"/>
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="Background"
+                                        Value="LightBlue"/>
                             </VisualState.Setters>
                         </VisualState>
                     </VisualStateGroup>
