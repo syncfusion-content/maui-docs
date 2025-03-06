@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filtering in .NET MAUI DataGrid control | Syncfusion
-description: Learn here all about Filtering support in Syncfusion .NET MAUI DataGrid (SfDataGrid) control and more.
+title: Filtering in .NET MAUI DataGrid control | Syncfusion®
+description: Learn here all about Filtering support in Syncfusion® .NET MAUI DataGrid (SfDataGrid) control and more.
 platform: MAUI
 control: SfDataGrid
 documentation: UG

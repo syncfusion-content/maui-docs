@@ -31,7 +31,7 @@ Before proceeding, ensure the following are set up:
 2. Name the project and choose a location, then click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>&reg;</sup> MAUI DigitalGauge NuGet Package
+## Step 2: Install the Syncfusion<sup>&reg;</sup> MAUI Gauges NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Gauges](https://www.nuget.org/packages/Syncfusion.Maui.Gauges/) and install the latest version.

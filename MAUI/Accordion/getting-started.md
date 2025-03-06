@@ -199,10 +199,10 @@ Before proceeding, ensure the following are set up:
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Core NuGet Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Expander NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) and install the latest version.
+2. Search for [Syncfusion.Maui.Expander](https://www.nuget.org/packages/Syncfusion.Maui.Expander/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
 ## Step 3: Register the handler
@@ -314,9 +314,13 @@ N> When loading Label as direct children of `Header` or `Content` of `AccordionI
                                     <ColumnDefinition Width="100"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
-                                <Frame  Grid.RowSpan="4" BorderColor="Transparent" Grid.Row="0" Grid.Column="0"  Padding="0" Margin="0,0,0,7">
-                                    <Image  Source="emp_01.png"/>
-                                </Frame>
+                                <Border Grid.RowSpan="4"
+                                        Grid.Row="0"
+                                        Grid.Column="0"
+                                        Padding="0"
+                                        Margin="0,0,0,7">
+                                    <Image  Source="emp_01.png" />
+                                </Border>
                                 <Label Text="Position" Grid.Column="1" Grid.Row="0" Margin="6,0,0,0"/>
                                 <Label Text="Chairman" Grid.Row="0" Grid.Column="2"/>
                                 <Label Text="Organization " Grid.Row="1" Grid.Column="1" Margin="6,0,0,0"/>
@@ -358,7 +362,7 @@ Here is the result of the previous codes,
 
 You can download accordion sample for .NET MAUI [here](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-accordion).
 
-N> When adding the template control inside the `StackLayout` or `Grid` with a height set to `Auto`, the child element will not receive the height changes at runtime. Since the `SfAccordion` is a template-based control, the default height value cannot be determined. Therefore, it is recommended to provide the `HorizontalOptions` and `VerticalOptions` as `FillAndExpand` options for the control.
+N> When adding the template control inside the `Grid` with a height set to `Auto`, the child element will not receive the height changes at runtime. Since the `SfAccordion` is a template-based control, the default height value cannot be determined. Therefore, it is recommended to provide the `HorizontalOptions` and `VerticalOptions` as `FillAndExpand` options for the control.
 
 ## Animation duration
 
