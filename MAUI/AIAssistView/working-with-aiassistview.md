@@ -256,27 +256,14 @@ By utilizing the `Template Selector`, distinct templates can be assigned to indi
 
 The `RequestItemTemplate` API in the `SfAIAssistView` allows to define different data templates for request message, based on specific conditions.
 
+#### Define the View Model
+
+A ViewModel is a class that holds the data for a page, typically implementing INotifyPropertyChanged to notify the View of data changes.
+
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="13" %}
-
-    <ContentPage.BindingContext>
-        <local:GettingStartedViewModel/>
-    </ContentPage.BindingContext>
-
-    <ContentPage.Resources>
-        <local:CustomRequestTemplateSelector x:Key="requestSelector"/>
-    </ContentPage.Resources>
-
-    <ContentPage.Content>
-        <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               AssistItems="{Binding AssistItems}"
-                               RequestItemTemplate="{StaticResource requestSelector}"/>
-    </ContentPage.Content>
-
-{% endhighlight %}
 {% highlight c# tabtitle="ViewModel.cs" %}
 
-public class GettingStartedViewModel
+public class GettingStartedViewModel : INotifyPropertyChanged
 {
     private ObservableCollection<IAssistItem> assistItems;
 
@@ -348,6 +335,13 @@ public class GettingStartedViewModel
 }
 
 {% endhighlight %}
+{% tabs %}
+
+#### Define Template Selector
+
+Create a custom class that inherits from `RequestItemTemplateSelector`, and override the `OnSelectTemplate` method to return the `DataTemplate` for that item. At runtime, the SfAIAssistView invokes the `OnSelectTemplate` method for each item and passes the data object as parameter.
+
+{% tabs %}
 {% highlight c# tabtitle="TemplateSelector.cs" %}
 
 public class CustomRequestTemplateSelector : RequestItemTemplateSelector
@@ -386,8 +380,7 @@ public class CustomRequestTemplateSelector : RequestItemTemplateSelector
 {% endhighlight %}
 {% tabs %}
 
-### Response Item Template
-The `ReponseItemTemplate` API in the `SfAIAssistView` allows to define different data templates for reponse message, based on specific conditions.
+#### Content Page
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="13" %}
@@ -397,16 +390,78 @@ The `ReponseItemTemplate` API in the `SfAIAssistView` allows to define different
     </ContentPage.BindingContext>
 
     <ContentPage.Resources>
-        <local:CustomResponseTemplateSelector x:Key="responseSelector"/>
+        <local:CustomRequestTemplateSelector x:Key="requestSelector"/>
     </ContentPage.Resources>
 
     <ContentPage.Content>
         <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                                   AssistItems="{Binding AssistItems}"
-                                   ResponseItemTemplate="{StaticResource responseSelector}"/>
+                               AssistItems="{Binding AssistItems}"
+                               RequestItemTemplate="{StaticResource requestSelector}"/>
     </ContentPage.Content>
 
 {% endhighlight %}
+{% tabs %}
+
+![RequestItem Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-RequestTemplate.png)
+
+### Response Item Template
+The `ReponseItemTemplate` API in the `SfAIAssistView` allows to define different data templates for reponse message, based on specific conditions.
+
+#### Data Model
+
+Create a simple data model as shown in the following code example, and save it as File.cs file.
+
+{% tabs %}
+{% highlight c# tabtitle="File.cs" %}
+
+public class File : AssistItem, INotifyPropertyChanged
+{
+    private string fileName;
+
+    private string fileType;
+
+    public string FileName
+    { 
+        get
+        {
+            return fileName;
+        }
+        set
+        {
+            fileName = value;
+            OnPropertyChanged("FileName");
+        }
+    }
+    public string FileType
+    {
+        get
+        {
+            return fileType;
+        }
+        set
+        {
+            fileType = value;
+            OnPropertyChanged("FileType");
+        }
+    }
+
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    public void OnPropertyChanged(string name)
+    {
+        if (this.PropertyChanged != null)
+            this.PropertyChanged(this, new PropertyChangedEventArgs(name));
+    }
+}
+
+{% endhighlight %}
+{% tabs %}
+
+#### Define the View Model
+
+A ViewModel is a class that holds the data for a page, typically implementing INotifyPropertyChanged to notify the View of data changes.
+
+{% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
 
 public class GettingStartedViewModel : INotifyPropertyChanged
@@ -504,6 +559,13 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 }
 
 {% endhighlight %}
+{% tabs %}
+
+#### Define Template Selector
+
+Create a custom class that inherits from `ResponseItemTemplateSelector`, and override the `OnSelectTemplate` method to return the `DataTemplate` for that item. At runtime, the SfAIAssistView invokes the `OnSelectTemplate` method for each item and passes the data object as parameter.
+
+{% tabs %}
 {% highlight c# tabtitle="TemplateSelector.cs" %}
 
 public class CustomResponseTemplateSelector : ResponseItemTemplateSelector
@@ -542,6 +604,28 @@ public class CustomResponseTemplateSelector : ResponseItemTemplateSelector
 
     }
 }
+
+{% endhighlight %}
+{% tabs %}
+
+#### Content Page
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="13" %}
+
+    <ContentPage.BindingContext>
+        <local:GettingStartedViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <local:CustomResponseTemplateSelector x:Key="responseSelector"/>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                                   AssistItems="{Binding AssistItems}"
+                                   ResponseItemTemplate="{StaticResource responseSelector}"/>
+    </ContentPage.Content>
 
 {% endhighlight %}
 {% tabs %}
