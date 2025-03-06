@@ -245,3 +245,40 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![EditorView Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-editorviewtemplate.png)
+
+## Show ResponseLoader View
+
+By Default, the response loader view will be enabled and the default shimmer will be present. To disable set the ShowResponseLoader Property to false.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="13" %}
+
+<ContentPage.BindingContext>
+    <local:GettingStartedViewModel/>
+</ContentPage.BindingContext>
+
+<ContentPage.Content>
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                               AssistItems="{Binding AssistItems}"
+                               ShowResponseLoader="False"/>
+</ContentPage.Content>
+
+{% endhighlight %}
+{% highlight c# hl_lines="10" %}
+
+public partial class MainPage : ContentPage
+{
+    SfAIAssistView sfAIAssistView;
+    public MainPage()
+    {
+        InitializeComponent();
+        this.sfAIAssistView = new SfAIAssistView();
+        GettingStartedViewModel viewModel = new GettingStartedViewModel();
+        this.sfAIAssistView.AssistItems = viewModel.AssistItems;
+        this.sfAIAssistView.ShowResponseLoader = false;
+        this.Content = sfAIAssistView;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
