@@ -502,9 +502,9 @@ public partial class MainPage : ContentPage
 
 ![MAUI ListView Drop shadow effect on items](Images/appearance/maui-listview-drop-shadow-effects-on-items.jpg)
 
-## Visual State Manager
+## Customizing ListViewItem Background with Visual States
 
-The `SfListView` allows customizing the background of the `ListViewItem` using the visual state manager based on the visual states set from the code. The applicable visual states are `Normal`, `PointerOver`, `Pressed` and `Selected`.
+The `SfListView` allows customizing the background of the `ListViewItem` using the visual state manager based on the visual states set from the code, which include  `Normal`, `PointerOver`, `Pressed` and `Selected`. The background can be adjusted to suit different interactions and improve user experience. An example is provided to demonstrate these background changes according to each state.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml" %}
@@ -533,13 +533,13 @@ The `SfListView` allows customizing the background of the `ListViewItem` using t
                         <VisualState x:Name="Pressed">
                             <VisualState.Setters>
                                 <Setter Property="Background"
-                                        Value="LightYellow"/>
+                                        Value="DarkGrey"/>
                             </VisualState.Setters>
                         </VisualState>
                         <VisualState x:Name="Selected">
                             <VisualState.Setters>
                                 <Setter Property="Background"
-                                        Value="Green"/>
+                                        Value="LightBlue"/>
                             </VisualState.Setters>
                         </VisualState>
                     </VisualStateGroup>
