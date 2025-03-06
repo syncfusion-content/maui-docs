@@ -405,7 +405,7 @@ public class CustomRequestTemplateSelector : RequestItemTemplateSelector
 ![RequestItem Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-RequestTemplate.png)
 
 ### Response Item Template
-The `ReponseItemTemplate` API in the `SfAIAssistView` allows to define different data templates for reponse message, based on specific conditions.
+The `ResponseItemTemplate` API in the `SfAIAssistView` allows to define different data templates for response message, based on specific conditions.
 
 #### Data Model
 
@@ -577,10 +577,7 @@ public class CustomResponseTemplateSelector : ResponseItemTemplateSelector
     public SfAIAssistView? AssistView { get; set; }
     public CustomResponseTemplateSelector()
     {
-
         this.reponsecustomtemplate = new DataTemplate(typeof(TimePickerTemplate));
-
-
     }
 
 
@@ -592,7 +589,6 @@ public class CustomResponseTemplateSelector : ResponseItemTemplateSelector
         {
             return null;
         }
-
         if (item.GetType() == typeof(DatePickerItem))
         {
             return reponsecustomtemplate;
@@ -601,7 +597,6 @@ public class CustomResponseTemplateSelector : ResponseItemTemplateSelector
         {
             return base.OnSelectTemplate(item, container);
         }
-
     }
 }
 
