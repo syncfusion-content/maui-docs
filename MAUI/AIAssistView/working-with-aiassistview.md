@@ -245,3 +245,305 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![EditorView Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-editorviewtemplate.png)
+
+## Template Customization
+
+The `Template Selector` facilitates the customization of both request and response item templates according to specific requirements. This feature enhances flexibility and provides a higher degree of control over the display of items within the `SfAIAssistView`.
+
+By utilizing the `Template Selector`, distinct templates can be assigned to individual items, allowing for the customization of both request and response items independently. This capability is particularly beneficial when varying item types necessitate different visual representations, offering precise control over the layout and presentation within the assist view.
+
+### Request Item Template
+
+The `RequestItemTemplate` API in the `SfAIAssistView` allows to define different data templates for request message, based on specific conditions.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="13" %}
+
+    <ContentPage.BindingContext>
+        <local:GettingStartedViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <local:CustomRequestTemplateSelector x:Key="requestSelector"/>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                               AssistItems="{Binding AssistItems}"
+                               RequestItemTemplate="{StaticResource requestSelector}"/>
+    </ContentPage.Content>
+
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel.cs" %}
+
+public class GettingStartedViewModel
+{
+    private ObservableCollection<IAssistItem> assistItems;
+
+
+    public GettingStartedViewModel()
+    {
+        this.assistItems = new ObservableCollection<IAssistItem>();
+        this.GenerateAssistItems();
+    }
+
+    /// <summary>
+    /// Gets or sets the collection of AssistItem of a conversation.
+    /// </summary>
+    public ObservableCollection<IAssistItem> AssistItems
+    {
+        get
+        {
+            return this.assistItems;
+        }
+
+        set
+        {
+            this.assistItems = value;
+        }
+    }
+
+    private async void GenerateAssistItems()
+    {
+            
+
+        File requestItem2 = new File()
+        {
+            FileName = ".NET MAUI",
+            FileType = "Document",
+            IsRequested = true
+        };
+
+        this.AssistItems.Add(requestItem2);
+
+
+        await Task.Delay(1000).ConfigureAwait(true);
+
+        AssistItem responseItem2 = new AssistItem()
+        {
+            Text = "you've uploaded a file containing information about .NET MAUI.If you have any specific questions or would like to dive deeper into any part of the file, feel free to let me know!",
+            IsRequested = false
+        };
+
+        this.AssistItems.Add(responseItem2);
+
+    }
+
+    /// <summary>
+    /// Property changed handler.
+    /// </summary>
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    /// <summary>
+    /// Occurs when property is changed.
+    /// </summary>
+    /// <param name="propName">changed property name</param>
+    public void RaisePropertyChanged(string propName)
+    {
+        if (this.PropertyChanged != null)
+        {
+            this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
+        }
+    }
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="TemplateSelector.cs" %}
+
+public class CustomRequestTemplateSelector : RequestItemTemplateSelector
+{
+    private readonly DataTemplate? requestcustomtemplate;
+
+    public SfAIAssistView? AssistView { get; set; }
+    public CustomRequestTemplateSelector()
+    {
+        //AssistView = sfAssistView;
+        this.requestcustomtemplate = new DataTemplate(typeof(FileTemplate));
+    }
+
+
+    protected override DataTemplate? OnSelectTemplate(object item, BindableObject container)
+    {
+        var assistitem = item as IAssistItem;
+
+        if (assistitem == null)
+        {
+            return null;
+        }
+
+        if (item.GetType() == typeof(File))
+        {
+            return requestcustomtemplate;
+        }
+        else
+        {
+            return base.OnSelectTemplate(item, container);
+        }
+
+    }
+}
+
+{% endhighlight %}
+{% tabs %}
+
+### Response Item Template
+The `ReponseItemTemplate` API in the `SfAIAssistView` allows to define different data templates for reponse message, based on specific conditions.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="13" %}
+
+    <ContentPage.BindingContext>
+        <local:GettingStartedViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <local:CustomResponseTemplateSelector x:Key="responseSelector"/>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                                   AssistItems="{Binding AssistItems}"
+                                   ResponseItemTemplate="{StaticResource responseSelector}"/>
+    </ContentPage.Content>
+
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel.cs" %}
+
+public class GettingStartedViewModel : INotifyPropertyChanged
+{
+    /// <summary>
+    /// Collection of assistItem in a conversation.
+    /// </summary>
+    private ObservableCollection<IAssistItem> assistItems;
+
+    public GettingStartedViewModel()
+    {
+        this.assistItems = new ObservableCollection<IAssistItem>();
+        this.GenerateAssistItems();
+    }
+
+    /// <summary>
+    /// Gets or sets the collection of AssistItem of a conversation.
+    /// </summary>
+    public ObservableCollection<IAssistItem> AssistItems
+    {
+        get
+        {
+            return this.assistItems;
+        }
+
+        set
+        {
+            this.assistItems = value;
+        }
+    }
+
+    private async void GenerateAssistItems()
+    {
+        AssistItem requestItem = new AssistItem()
+        {
+            Text = "Hi, I think I caught a cold.",
+            IsRequested = true
+        };
+
+        // Add the request item to the collection
+        this.AssistItems.Add(requestItem);
+
+
+        await Task.Delay(1000).ConfigureAwait(true);
+
+        AssistItem responseItem = new AssistItem()
+        {
+            Text = "Do you want me to schedule a consultation with a doctor?",
+            IsRequested = false,
+        };
+
+        // Add the response item to the collection
+        this.AssistItems.Add(responseItem);
+
+        // Adding a request item
+        AssistItem requestItem1 = new AssistItem()
+        {
+            Text = "Yes, Consultation with Dr.Harry tomorrow",
+            IsRequested = true
+        };
+
+        // Add the request item to the collection
+        this.AssistItems.Add(requestItem1);
+
+        await Task.Delay(1000).ConfigureAwait(true);
+
+        DatePickerItem responseItem1 = new DatePickerItem()
+        {
+            Text = "Choose a date for Consultation",
+            IsRequested = false,
+            SelectedDate = DateTime.Today,
+        };
+
+        // Add the response item to the collection
+        this.AssistItems.Add(responseItem1);
+        // Generating response item
+    }
+
+    /// <summary>
+    /// Property changed handler.
+    /// </summary>
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    /// <summary>
+    /// Occurs when property is changed.
+    /// </summary>
+    /// <param name="propName">changed property name</param>
+    public void RaisePropertyChanged(string propName)
+    {
+        if (this.PropertyChanged != null)
+        {
+            this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
+        }
+    }
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="TemplateSelector.cs" %}
+
+public class CustomResponseTemplateSelector : ResponseItemTemplateSelector
+{
+
+    private readonly DataTemplate? reponsecustomtemplate;
+
+
+    public SfAIAssistView? AssistView { get; set; }
+    public CustomResponseTemplateSelector()
+    {
+
+        this.reponsecustomtemplate = new DataTemplate(typeof(TimePickerTemplate));
+
+
+    }
+
+
+    protected override DataTemplate? OnSelectTemplate(object item, BindableObject container)
+    {
+        var assistitem = item as IAssistItem;
+
+        if (assistitem == null)
+        {
+            return null;
+        }
+
+        if (item.GetType() == typeof(DatePickerItem))
+        {
+            return reponsecustomtemplate;
+        }
+        else
+        {
+            return base.OnSelectTemplate(item, container);
+        }
+
+    }
+}
+
+{% endhighlight %}
+{% tabs %}
+
+![ResponseItem Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-ResponseTemplate.png)
