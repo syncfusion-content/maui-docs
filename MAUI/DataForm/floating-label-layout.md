@@ -13,6 +13,10 @@ documentation: ug
 
 The floating label layout is a powerful feature that enhances the user experience and makes it easier for users to interact with forms. The data form supports a floating label layout which includes assistive labels, leading and trailing icons, and a password toggle icon to show or hide a password. It offers three different containers, including filled, outlined, and none. Setting [LayoutType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormLayoutType.html) to [TextInputLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormLayoutType.html#Syncfusion_Maui_DataForm_DataFormLayoutType_TextInputLayout) enables a floating label layout.
 
+Watch the video below to learn how to use and customize the floating label layout in .NET MAUI SfDataForm
+
+{% youtube "https://www.youtube.com/watch?v=XyoRYEDyoHA"%}
+
 ## Changing the layout type for the data form
 By default, the dataform arranges the editors and their labels corresponding to the fields in the layout. However, to enable the floating label layout for data form, set the [LayoutType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_LayoutType) property of the [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html) or [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html) to `TextInputLayout`.
 

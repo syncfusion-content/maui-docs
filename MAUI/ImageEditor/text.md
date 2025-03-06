@@ -9,6 +9,10 @@ documentation: ug
 
 # Text Annotation in .NET MAUI Image Editor (SfImageEditor)
 
+Watch the video below for a step-by-step guide on adding and customizing annotations in .NET MAUI SfImageEditor
+
+{% youtube "https://www.youtube.com/watch?v=o2LxBrkwoRg%}
+
 The ImageEditor control in .NET MAUI allows you to add text using the [`AddText`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditorhtml#Syncfusion_Maui_ImageEditor_SfImageEditor_AddText_System_String_Syncfusion_Maui_ImageEditor_ImageEditorTextSettings_) method with customizable settings.
 
 {% tabs %}
