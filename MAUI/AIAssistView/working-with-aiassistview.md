@@ -335,7 +335,7 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 }
 
 {% endhighlight %}
-{% tabs %}
+{% endtabs %}
 
 #### Define Template Selector
 
@@ -378,7 +378,7 @@ public class CustomRequestTemplateSelector : RequestItemTemplateSelector
 }
 
 {% endhighlight %}
-{% tabs %}
+{% endtabs %}
 
 #### Content Page
 
@@ -400,7 +400,7 @@ public class CustomRequestTemplateSelector : RequestItemTemplateSelector
     </ContentPage.Content>
 
 {% endhighlight %}
-{% tabs %}
+{% endtabs %}
 
 ![RequestItem Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-RequestTemplate.png)
 
@@ -455,7 +455,7 @@ public class File : AssistItem, INotifyPropertyChanged
 }
 
 {% endhighlight %}
-{% tabs %}
+{% endtabs %}
 
 #### Define the View Model
 
@@ -559,7 +559,7 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 }
 
 {% endhighlight %}
-{% tabs %}
+{% endtabs %}
 
 #### Define Template Selector
 
@@ -606,7 +606,7 @@ public class CustomResponseTemplateSelector : ResponseItemTemplateSelector
 }
 
 {% endhighlight %}
-{% tabs %}
+{% endtabs %}
 
 #### Content Page
 
@@ -628,6 +628,6 @@ public class CustomResponseTemplateSelector : ResponseItemTemplateSelector
     </ContentPage.Content>
 
 {% endhighlight %}
-{% tabs %}
+{% endtabs %}
 
 ![ResponseItem Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-ResponseTemplate.png)
