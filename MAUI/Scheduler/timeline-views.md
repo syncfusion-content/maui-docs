@@ -183,7 +183,7 @@ The user interaction such as selection and highlights specific regions of timeli
 
 Watch the video below for a step-by-step guide on adding and customizing TimeRegions in .NET MAUI SfScheduler
 
-{% youtube "https://www.youtube.com/watch?v=ru06fr9jo5Q"%}
+{% youtube "https://www.youtube.com/watch?v=ru06fr9jo5Q" %}
 
 ### Selection restriction in timeslots
 
