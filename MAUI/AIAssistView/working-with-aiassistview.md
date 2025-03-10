@@ -247,7 +247,7 @@ public partial class MainPage : ContentPage
 ![EditorView Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-editorviewtemplate.png)
 
 ## Text Selection
-The `SfAIAssistView` control introduces a Text Selection feature, enabling users to select text from a response. This feature allows for selecting specific phrases or the entire response or request.
+The SfAIAssistView allows for selecting specific phrases or the entire response or request text. It enables the platform specific selection functionalities.
 By default, text selection is disabled. To enable it, set the `AllowTextSelection` property to `true`.
 
 {% tabs %}
