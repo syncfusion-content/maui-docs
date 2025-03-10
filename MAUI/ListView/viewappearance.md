@@ -504,7 +504,7 @@ public partial class MainPage : ContentPage
 
 ## Visual State Manager
 
-The appearance of the [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.html) can be customized using the following `VisualStates`:
+The appearance of the `ListViewItem` can be customized using the following `VisualStates`:
 
 * Normal
 * PointerOver
