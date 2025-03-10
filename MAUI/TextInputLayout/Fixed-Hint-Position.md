@@ -55,8 +55,7 @@ The hint label position of the input view will be set always at the top for the 
 
 <inputLayout:SfTextInputLayout Hint="Name"
                                IsHintAlwaysFloated="true" 
-                               ContainerType="Outlined"
-                               HelperText="Enter your name">
+                               ContainerType="Outlined">
         <Entry />
 </inputLayout:SfTextInputLayout>
  
@@ -86,8 +85,7 @@ The hint label position of the input view will be set always at the top for the 
 
 <inputLayout:SfTextInputLayout Hint="Name"
                                IsHintAlwaysFloated="true" 
-                               ContainerType="None"
-                               HelperText="Enter your name">
+                               ContainerType="None">
         <Entry />
 </inputLayout:SfTextInputLayout> 
  
