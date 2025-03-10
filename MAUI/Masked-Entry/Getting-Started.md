@@ -82,7 +82,7 @@ Step 2: Add the namespace as shown in the following code sample.
 
 {% highlight xaml %}
 
-	<xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"/>
+	<xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"/>
 
 {% endhighlight %}
 
@@ -100,13 +100,13 @@ Step 3: Add the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 {% highlight xaml %}
 
-	<syncfusion:SfMaskedEntry x:Name="maskedentry" />
+	<editors:SfMaskedEntry x:Name="maskedentry" />
 	
 {% endhighlight %}
 
 {% highlight C# %}
 
-        maskedEntry = new SfMaskedEntry();
+SfMaskedEntry maskedEntry = new SfMaskedEntry();
 
 {% endhighlight %}
 
@@ -221,15 +221,17 @@ Step 3: Add the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.M
 {% tabs %}
 {% highlight xaml %}
 
-<syncfusion:SfMaskedEntry WidthRequest="200"
+<editors:SfMaskedEntry WidthRequest="2"
+                          ClearButtonVisibility="WhileEditing"
                           MaskType="Simple"
                           Mask="00/00/0000" />
 
 {% endhighlight %}
 {% highlight C# %}
 
-maskedEntry = new SfMaskedEntry();
-maskedEntry.WidthRequest = "200";
+SfMaskedEntry maskedEntry = new SfMaskedEntry();
+maskedEntry.WidthRequest = 200;
+maskedEntry.ClearButtonVisibility = ClearButtonVisibility.WhileEditing;
 maskedEntry.MaskType = MaskedEntryMaskType.Simple;
 maskedEntry.Mask = "00/00/0000";
 
@@ -243,18 +245,19 @@ maskedEntry.Mask = "00/00/0000";
 {% tabs %}
 {% highlight xaml %}
 
-<syncfusion:SfMaskedEntry WidthRequest="200"
+<editors:SfMaskedEntry WidthRequest="200"
+                          ClearButtonVisibility="WhileEditing"
                           MaskType="RegEx"
                           Mask="[A-Za-z0-9._%-]+@[A-Za-z0-9]+.[A-Za-z]{2,3}" />
 
 {% endhighlight %}
 {% highlight C# %}
 
-maskedEntry = new SfMaskedEntry();
-maskedEntry.WidthRequest = "200";
+SfMaskedEntry maskedEntry = new SfMaskedEntry();
+maskedEntry.WidthRequest = 200;
+maskedEntry.ClearButtonVisibility = ClearButtonVisibility.WhileEditing;
 maskedEntry.MaskType = MaskedEntryMaskType.RegEx;
 maskedEntry.Mask = "[A-Za-z0-9._%-]+@[A-Za-z0-9]+.[A-Za-z]{2,3}";
-
 
 {% endhighlight %}
 {% endtabs %}
@@ -268,7 +271,8 @@ Every single mask displays a prompt character ('_') in the absence of your input
 {% tabs %}
 {% highlight XAML %}
 
-<syncfusion:SfMaskedEntry WidthRequest="200"
+<editors:SfMaskedEntry WidthRequest="200"
+                          ClearButtonVisibility="WhileEditing"
                           MaskType="Simple"
                           Mask="00/00/0000"
                           PromptChar="#" />
@@ -276,12 +280,12 @@ Every single mask displays a prompt character ('_') in the absence of your input
 {% endhighlight %}
 {% highlight C# %}
 
-maskedEntry = new SfMaskedEntry();
-maskedEntry.WidthRequest = "200";
+SfMaskedEntry maskedEntry = new SfMaskedEntry();
+maskedEntry.WidthRequest = 200;
+maskedEntry.ClearButtonVisibility = ClearButtonVisibility.WhileEditing;
 maskedEntry.MaskType = MaskedEntryMaskType.Simple;
 maskedEntry.Mask = "00/00/0000";
 maskedEntry.PromptChar = '#';
-
 
 {% endhighlight %}
 {% endtabs %}
@@ -295,7 +299,8 @@ The [Value](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedE
 {% tabs %}
 {% highlight XAML %}
 
-<syncfusion:SfMaskedEntry WidthRequest="200"
+<editors:SfMaskedEntry WidthRequest="200"
+                          ClearButtonVisibility="WhileEditing"
                           MaskType="Simple"
                           Mask="00/00/0000"
                           Value="12/02/2022" />
@@ -303,12 +308,12 @@ The [Value](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedE
 {% endhighlight %}
 {% highlight C# %}
 
-maskedEntry = new SfMaskedEntry();
-maskedEntry.WidthRequest = "200";
+SfMaskedEntry maskedEntry = new SfMaskedEntry();
+maskedEntry.WidthRequest = 200;
+maskedEntry.ClearButtonVisibility = ClearButtonVisibility.WhileEditing;
 maskedEntry.MaskType = MaskedEntryMaskType.Simple;
 maskedEntry.Mask = "00/00/0000";
 maskedEntry.Value = "12/02/2022";
-
 
 {% endhighlight %}
 {% endtabs %}
