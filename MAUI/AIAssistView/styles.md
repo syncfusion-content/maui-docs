@@ -1054,7 +1054,7 @@ To apply styles to highlight text for the Text Selection feature, set values to 
 </tr>
 <tr>
 <td> SfAIAssistViewSelectionTextHighLightColor </td>
-<td> Color for Highlighting the text. </td>
+<td> Color for highlighting the text. </td>
 </tr>
 </table>
 
