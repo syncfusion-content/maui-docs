@@ -271,7 +271,7 @@ By default, a suggestion is automatically sent as a request item immediately whe
 {% endtabs %}
 
 ## Response Suggestion Customization
-The `SfAIAssistView` control allows you to fully customize the appearance of the suggestions using the `ResponseSuggestionTemplate` property.
+The `SfAIAssistView` control allows you to fully customize the appearance of the response suggestion items using the `ResponseSuggestionTemplate` property. This property lets you define a custom layout and style for the suggestions.
 
 {% tabs %}
 {% highlight xaml hl_lines="11" %}
