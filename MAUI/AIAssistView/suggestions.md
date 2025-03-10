@@ -17,9 +17,50 @@ By providing assistance and encouraging the exploration of new ideas, the common
 
 ### Displaying Common Suggestions
 
-Common Suggestions are displayed by creating instance of AssistSuggestion and assigning it to `Suggestions` API in `SfAIAssistView.
+Common Suggestions can be populated by creating list of AssistSuggestion and assigning it to SfAIAssistView.Suggestions API. It will be displayed under the header as part of header view.
 
-It display under the header as part of header view. To view `Suggestion`, it is mandatory to set `ShowHeader` API to `true`. 
+#### View Modal
+Create a simple view model as shown in the following code example, and save it as `GettingStartedViewModel.cs` file.
+
+{% tabs %}
+{% highlight c# tabtitle="ViewModel.cs" %}
+
+using Syncfusion.Maui.AIAssistView;
+public class GettingStartedViewModel : INotifyPropertyChanged
+{
+	private ObservableCollection<ISuggestion> _suggestions;
+	public GettingStartedViewModal()
+	{
+    
+		...
+		this._suggestions = new ObservableCollection<ISuggestion>()
+		{
+			new AssistSuggestion() {Text = "Ownership", ImageSource="ownership.png"},
+			new AssistSuggestion() {Text = "Brainstroming", ImageSource = "brainstorming.png"},
+			new AssistSuggestion() { Text = "Listening", ImageSource="listening.png"},
+			new AssistSuggestion() { Text = "Resilience", ImageSource="resilience.png"},
+		};
+		...
+    
+	}
+	
+	public ObservableCollection<ISuggestion> Suggestions
+	{
+		get { return this._suggestions; }
+		set
+		{
+			this._suggestions = value;
+			RaisePropertyChanged("Suggestions");
+		}
+	}
+	...
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Binding Suggestions to SfAIAssistView
+To populate the Suggestions, bind the item collection from its BindingContext to `SfAIAssistView.Suggestions` property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="15" %}
@@ -66,48 +107,13 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-{% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" %}
-
-using Syncfusion.Maui.AIAssistView;
-public class GettingStartedViewModel : INotifyPropertyChanged
-{
-	private ObservableCollection<ISuggestion> _suggestions;
-	public GettingStartedViewModal()
-	{
-    
-		...
-		this._suggestions = new ObservableCollection<ISuggestion>()
-		{
-			new AssistSuggestion() {Text = "Ownership", ImageSource="ownership.png"},
-			new AssistSuggestion() {Text = "Brainstroming", ImageSource = "brainstorming.png"},
-			new AssistSuggestion() { Text = "Listening", ImageSource="listening.png"},
-			new AssistSuggestion() { Text = "Resilience", ImageSource="resilience.png"},
-		};
-		...
-    
-	}
-	
-	public ObservableCollection<ISuggestion> Suggestions
-	{
-		get { return this._suggestions; }
-		set
-		{
-			this._suggestions = value;
-			RaisePropertyChanged("Suggestions");
-		}
-	}
-	...
-}
-
-{% endhighlight %}
-{% endtabs %}
-
 ![Suggestions in .NET MAUI AI AssistView](Images/suggestions/maui-aiassistview-suggestions-commonsuggestion.png)
+
+N> To view `Suggestion`, it is mandatory to set `ShowHeader` API to `true`.
 
 ### Suggestion Customization
 
-The `SfAIAssistView` control allows you to fully customize the suggestions appearance by using the `SuggestionTemplate` property. This property lets you define a custom layout and style for the suggestions.
+The `SfAIAssistView` control allows you to fully customize the suggestions appearance by using the `SuggestionTemplate` property. This property lets you define a custom layout and style for the suggestion items.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="13" %}
