@@ -22,13 +22,23 @@ We can customize the desire text to be displayed for indicating no results found
                         ItemsSource="{Binding SocialMedias}"
                         TextMemberPath="Name"
                         DisplayMemberPath="Name"
-                        WidthRequest="240" /> 
+                        WidthRequest="240" 
+                        HeightRequest="50"/> 
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-autocomplete.NoResultsFoundText = "Not Found";
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel(); 
+SfAutocomplete autocomplete = new SfAutocomplete()
+{
+    NoResultsFoundText = "Not Found",
+    WidthRequest = 250,
+    HeightRequest = 50,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+    ItemsSource = socialMediaViewModel.SocialMedias
+};
 
 {% endhighlight %}
 
