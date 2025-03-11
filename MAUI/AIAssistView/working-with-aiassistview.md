@@ -248,7 +248,7 @@ public partial class MainPage : ContentPage
 
 ## Show ResponseLoader View
 
-By Default, the response loader view will be enabled and the default shimmer view will be present. To disable set the ShowResponseLoader Property to false.
+By Default, the response loader view will be enabled and the default shimmer view will be present. To disable set the `ShowResponseLoader` Property to `false`.
 
 {% tabs %}
 {% highlight xaml hl_lines="9" %}
