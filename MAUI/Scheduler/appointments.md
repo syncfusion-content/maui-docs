@@ -12,7 +12,7 @@ keywords : .net maui scheduler, .net maui appointments planning, .net maui appoi
 
 The [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) control has the capability to deal with appointment arrangements internally by using [AppointmentsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentsSource). In the scheduler, you can create normal, all-day appointments, spanned appointments, recurring appointments, and recurrence exception dates appointments.
 
-The [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) is a class that corresponds to a specific scheduled appointment. It has some basic properties such as [StartTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_StartTime), [EndTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_EndTime), and [Subject](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_Subject). Additional information like [Notes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_Notes), [Location](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_Location), and [IsAllDay](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_IsAllDay) can be added.
+The [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) is a class that corresponds to a specific scheduled appointment. It has some basic properties such as [StartTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_StartTime), [EndTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_EndTime), and [Subject](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_Subject). Additional information like [Notes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_Notes), [Location](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_Location), [IsAllDay](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_IsAllDay) and `Stroke` can be added.
 
 {%tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -32,6 +32,7 @@ appointment.Add(new SchedulerAppointment()
     EndTime = DateTime.Today.AddHours(11),
     Subject = "Client Meeting",
     Location = "Hutchison road",
+    Stroke = Colors.Red,
 });
 
 //Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
@@ -84,6 +85,8 @@ The .NET MAUI Scheduler supports collection that implements the object interface
 <td>This property maps the property name of a business object class to the property name of IsReadOnly in SchedulerAppointment.</td></tr>
 <tr><td>{{'[TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_TextColor)'| markdownify}}</td>
 <td>This property maps the property name of a business object class to the property name of TextColor in SchedulerAppointment.</td></tr>
+<tr><td>{{`Stroke`| markdownify}}</td>
+<td>This property maps the property name of a business object class to the property name of Stroke in SchedulerAppointment.</td></tr>
 </table>
 
 N> The business object class should contain two date time fields as mandatory.
@@ -108,6 +111,7 @@ public class Meeting
     public TimeZoneInfo EndTimeZone { get; set; }
     public Brush Background { get; set; }
     public Color TextColor { get; set; }
+    public Color Stroke {get; set;}
 }
 
 {% endhighlight %}
@@ -131,7 +135,8 @@ The [AppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sch
                 IsAllDay="IsAllDay"
                 StartTimeZone="StartTimeZone"
                 EndTimeZone="EndTimeZone"
-                TextColorMapping="TextColor"/>
+                TextColorMapping="TextColor"
+                StrokeMapping="Stroke"/>
     </scheduler:SfScheduler.AppointmentMapping>
 </scheduler:SfScheduler>
 
@@ -149,6 +154,7 @@ appointmentMapping.IsAllDay = "IsAllDay";
 appointmentMapping.StartTimeZone = "StartTimeZone";
 appointmentMapping.EndTimeZone = "EndTimeZone";
 appointmentMapping.TextColorMapping = "TextColor";
+appointmentMapping.StrokeMapping = "Stroke";
 scheduler.AppointmentMapping = appointmentMapping;
 this.Content = scheduler;
 
@@ -172,6 +178,8 @@ meeting.EventName = "Meeting";
 meeting.Background = Brush.Orange;
 // Setting the text color for an event.
 meeting.TextColor = Colors.White;
+// Setting the border color for an event.
+meeting.Stroke = Colors.Red;
 // Creating an instance for the collection of business objects.
 var Meetings = new ObservableCollection<Meeting>();
 // Adding a business object to the business object Collection.
@@ -1121,6 +1129,37 @@ this.Scheduler.SelectedAppointmentBackground = Brush.Orange;
 {% endtabs %}
 
 ![appointment-selection-background-in-maui-scheduler](images/appointments/appointment-selection-background-in-maui-scheduler.png)
+
+## Customize Appointment border style
+
+The appointment border style can be customized using the property `AppointmentBorderStyle` and it allows to customize the `Stroke`, `CornerRadius` and `StrokeThickness` for the appointment in the Scheduler.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+{% include_relative code-snippet/weekview.xaml %}
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="8 14" %}
+
+var appointments = new ObservableCollection<SchedulerAppointment>();
+appointments.Add(new SchedulerAppointment()
+{
+    Subject = "meeting",
+    StartTime = DateTime.Now,
+    EndTime = DateTime.Now.AddHours(1),
+});
+this.Scheduler.AppointmentsSource = appointments;
+var appointmentBorderStyle = new SchedulerAppointmentBorderStyle ()
+{
+    Stroke = Colors.Red,
+    CornerRadius = 5,
+    StrokeThickness = 2
+};
+this.Scheduler.AppointmentBorderStyle  = appointmentBorderStyle;
+
+{% endhighlight %}  
+{% endtabs %}
 
 N>
 * [View scheduler appointment sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)

@@ -201,6 +201,29 @@ this.Content = scheduler;
 {% endhighlight %}
 {% endtabs %}
 
+### Show Allowed views
+
+The [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) allows users to toggle the visibility of the allowed views by setting value to the `ShowAllowedViews`. By setting this property to false, users can simplify the interface, making it cleaner and more focused, especially in scenarios where view switching is unnecessary. The default value for the property ShowAllowedViews is `true`.
+
+{% tabs %}
+{% highlight XAML hl_lines="2" %}
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       AllowedViews="Day,Week,WorkWeek,Month,TimelineDay,TimelineWeek,TimelineWorkWeek,TimelineMonth" 
+                       ShowAllowedViews="false">
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight C# hl_lines="2 3" %}
+
+SfScheduler scheduler = new SfScheduler();
+scheduler.AllowedViews = SchedulerViews.Day | SchedulerViews.Week | SchedulerViews.WorkWeek | SchedulerViews.Month | SchedulerViews.TimelineDay | SchedulerViews.TimelineWeek | SchedulerViews.TimelineWorkWeek | SchedulerViews.TimelineMonth;
+scheduler.ShowAllowedViews = false;
+this.Content = scheduler;
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Date restriction
 
 In [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html), you can restrict the available dates to a range of dates using the properties [MinimumDateTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_MinimumDateTime), [MaximumDateTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_MaximumDateTime) and [SelectableDayPredicate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_SelectableDayPredicate). It is applicable to all the Scheduler views.
