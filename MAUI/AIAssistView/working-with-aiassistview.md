@@ -254,7 +254,7 @@ By utilizing the template selector, distinct templates can be assigned to all `A
 
 ### Request Item Template
 
-A template can be used to present the data in a way that makes sense for the application by using different controls. `SfAIAssistView` allows customizing the appearance of the view by setting the RequestItemTemplate property.
+A template can be used to present the data in a way that makes sense for the application by using different controls. `SfAIAssistView` allows customizing the appearance of the Request view by setting the `RequestItemTemplate` property.
 
 #### Define a Custom Data Model
 
@@ -453,11 +453,9 @@ public partial class MainPage : ContentPage
 
 ### Response Item Template
 
-A template can be used to present the data in a way that makes sense for the application by using different controls. `SfAIAssistView` allows customizing the appearance of the view by setting the ResponseItemTemplate property.
+A template can be used to present the data in a way that makes sense for the application by using different controls. `SfAIAssistView` allows customizing the appearance of the Response view by setting the `ResponseItemTemplate` property.
 
 #### Data population in View Model
-
-A ViewModel is a class that holds the data for a page, typically implementing INotifyPropertyChanged to notify the View of data changes.
 
 {% tabs %}
 {% highlight c# %}
@@ -544,7 +542,7 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 
 #### Data Template Selector
 
-Create a custom class that inherits from `ResponseItemTemplateSelector`, and override the `OnSelectTemplate` method to return the `DataTemplate` for that item. At runtime, the SfAIAssistView invokes the `OnSelectTemplate` method for each item and passes the data object as parameter.
+Create a custom class that inherits from `ResponseItemTemplateSelector`, and override the `OnSelectTemplate` method to return the `DataTemplate` for that item. At runtime, the `SfAIAssistView` invokes the `OnSelectTemplate` method for each item and passes the data object as parameter.
 
 {% tabs %}
 {% highlight c# tabtitle="TemplateSelector.cs" %}
