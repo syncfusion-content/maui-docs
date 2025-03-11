@@ -413,7 +413,7 @@ public class CustomRequestTemplateSelector : RequestItemTemplateSelector
 #### Applying the data template selector
 
 {% tabs %}
-{% highlight xaml hl_lines="13" %}
+{% highlight xaml hl_lines="12" %}
 
     <ContentPage.BindingContext>
         <local:GettingStartedViewModel/>
