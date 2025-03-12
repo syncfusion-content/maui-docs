@@ -1519,7 +1519,7 @@ This page lists the dependencies (converters, renderers, and NuGet packages) req
 		 Syncfusion.Maui.ListView,<br/>  Syncfusion.Maui.Toolkit<br/>  Syncfusion.Maui.Core,<br/>  Syncfusion.Maui.Inputs<br/>  Syncfusion.Maui.Buttons,<br/>  Syncfusion.Maui.Charts<br/>
 		</td>
 		<td>
-		  Views\Dashboard\DailyCaloriesReportPage.xaml<br/>  Views\Dashboard\DailyCaloriesReportPage.xaml.cs<br/>  Model\DailyHealthcare.cs<br/>  ViewModel\DailyCaloriesReportViewModel.cs<br/>  ViewModel\BaseViewModel.cs<br/> Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\Righteous-Regular.ttf<br/>  Resources\Fonts\DashboardFontIcons.ttf<br/>
+		  Views\Dashboard\DailyCaloriesReportPage.xaml<br/>  Views\Dashboard\DailyCaloriesReportPage.xaml.cs<br/>  Model\DailyHealthCare.cs<br/>  ViewModel\DailyCaloriesReportViewModel.cs<br/>  ViewModel\BaseViewModel.cs<br/> Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\Righteous-Regular.ttf<br/>  Resources\Fonts\DashboardFontIcons.ttf<br/>
         </td>
 	</tr>
 	<tr valign="top">		
