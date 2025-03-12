@@ -7,11 +7,15 @@ component: Common
 documentation: ug
 ---
 
-## [Project Template Extension Download and Installation](https://help.syncfusion.com/maui/visual-studio-integration/download-and-installation#project-template-extension-download-and-installation)
+# Download and Installation
 
-## [Essential UI Kit Extension Download and Installation](https://help.syncfusion.com/maui/visual-studio-integration/download-and-installation#essential-ui-kitextension-download-and-iInstallation)
 
-## Project Template Extension Download and Installation
+
+## [Essential MAUI](https://help.syncfusion.com/maui/visual-studio-integration/download-and-installation#essential-maui)
+
+## [Essential UI Kit](https://help.syncfusion.com/maui/visual-studio-integration/download-and-installation#essential-ui-kit)
+
+## Essential MAUI
 Syncfusion<sup>®</sup> publishes the Visual Studio Code extension on the [Visual Studio Code marketplace](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.MAUI-VSCode-Extensions). You can install it directly from Visual Studio Code or download and install it from the Visual Studio Code marketplace.
 
 **Prerequisites**
@@ -78,7 +82,7 @@ The following instructions detail the manual installation process of the Syncfus
     ![DownloadVsix](images/DownloadVsix.png)
     
 
-## Essential UI Kit Extension Download and Installation
+## Essential UI Kit
 Syncfusion<sup>®</sup> publishes the Visual Studio Code extension on the [Visual Studio Code marketplace](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.MAUI-UI-Kit-VSCode-Extensions). You can install it directly from Visual Studio Code or download and install it from the Visual Studio Code marketplace.
 
 ## Install through the Visual Studio Code Extensions
