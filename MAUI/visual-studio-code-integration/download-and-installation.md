@@ -11,9 +11,9 @@ documentation: ug
 
 
 
-## [Essential MAUI](https://help.syncfusion.com/maui/visual-studio-integration/download-and-installation#essential-maui)
+[Essential MAUI](#essential-maui)
 
-## [Essential UI Kit](https://help.syncfusion.com/maui/visual-studio-integration/download-and-installation#essential-ui-kit)
+[Essential UI Kit](#essential-ui-kit)
 
 ## Essential MAUI
 Syncfusion<sup>®</sup> publishes the Visual Studio Code extension on the [Visual Studio Code marketplace](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.MAUI-VSCode-Extensions). You can install it directly from Visual Studio Code or download and install it from the Visual Studio Code marketplace.
