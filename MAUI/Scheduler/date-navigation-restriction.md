@@ -132,7 +132,7 @@ private void OnButtonClicked(object sender, EventArgs e)
 By using the [AllowViewNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AllowViewNavigation) property of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html), you can quickly navigate to the respective day or timeline day view by tapping on the month cell or view header of the following scheduler views: week, work week, month, agenda, timeline week, timeline work week, and timeline month views.
 
 {% tabs %}
-{% highlight XAML hl_lines="2"%}
+{% highlight XAML hl_lines="2" %}
 
  <scheduler:SfScheduler x:Name="Scheduler" 
                         AllowViewNavigation="True">
@@ -159,7 +159,7 @@ N>
 You can enable the date picker for the scheduler by using the [ShowDatePickerButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ShowDatePickerButton) property in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html), which displays the date picker in the header view. It allows you to quickly switch between, months, years, decades or century where you can directly jump to a specific date by selecting it from a date picker.
 
 {% tabs %}
-{% highlight XAML hl_lines="2"%}
+{% highlight XAML hl_lines="2" %}
 
  <scheduler:SfScheduler x:Name="Scheduler" 
                        ShowDatePickerButton="True">
