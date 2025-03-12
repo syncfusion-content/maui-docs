@@ -17,7 +17,7 @@ By providing assistance and encouraging the exploration of new ideas, the common
 
 ### Displaying Common Suggestions
 
-Common Suggestions can be populated by creating list of AssistSuggestion and assigning it to SfAIAssistView.Suggestions API. It will be displayed under the header as part of header view.
+Common Suggestions can be populated by creating list of AssistSuggestion and assigning it to `SfAIAssistView.Suggestions` API. It will be displayed under the header as part of header view.
 
 #### View Modal
 Create a simple view model as shown in the following code example, and save it as `GettingStartedViewModel.cs` file.
