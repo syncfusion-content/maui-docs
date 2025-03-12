@@ -9,7 +9,7 @@ documentation: ug
 
 # Essential<sup>®</sup> UI Kit for .NET MAUI
 
-The Essential<sup>®</sup> UI Kit for .NET MAUI provides prebuilt XAML templates, allowing you to easily create user interfaces for cross-platform applications. It follows a well-structured separation of View, ViewModel, and Model classes, simplifying the integration of business logic and modifications to existing views.
+The Essential<sup>®</sup> UI Kit for .NET MAUI provides pre built XAML templates, allowing you to easily create user interfaces for cross-platform applications. It follows a well-structured separation of View, ViewModel, and Model classes, simplifying the integration of business logic and modifications to existing views.
 
 ## Installation of Essential<sup>®</sup> UI Kit for .NET MAUI Extension
 
