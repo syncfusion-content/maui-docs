@@ -17,7 +17,7 @@ N> Before using the **Essential<sup>®</sup> UI Kit for .NET MAUI - Syncfusion<s
 
 1.	Open a new or existing MAUI application.
 
-2.	In File Explorer, right-click on your MAUI project's **.csproj** file and select **Essential<sup>®</sup>  UI Kit for .NET MAUI - Syncfusion<sup>®</sup>**. Before launching the UI, ensure that the project is fully loaded, as this option will only be available if the project is fully loaded.
+2.	In File Explorer, right-click on your MAUI project's **.csproj** file and select **Essential<sup>®</sup>  UI Kit for .NET MAUI - Syncfusion<sup>®</sup>**. Alternatively, in **Solution Explorer**, right-click on your MAUI project's file, then select the same option for your MAUI project. Before launching the UI, ensure that the project is fully loaded, as this option will only be available if the project is fully loaded.
 
 3.	Choose the pages you want to add, enter a name for the page, and then click **Add**.
 
