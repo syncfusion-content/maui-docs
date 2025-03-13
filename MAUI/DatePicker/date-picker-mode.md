@@ -88,7 +88,7 @@ Note: This property is automatically changed to `false` when you close the dialo
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml"%}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <Grid>
     <picker:SfDatePicker x:Name="datePicker" 
@@ -107,7 +107,7 @@ Note: This property is automatically changed to `false` when you close the dialo
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs"%}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 private void Button_Clicked(object sender, System.EventArgs e)
 {
@@ -127,7 +127,7 @@ N> It is only applicable in `RelativeDialog mode`. If `no` relative view is spec
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
 <Grid>
     <picker:SfDatePicker x:Name="datePicker" 
@@ -147,7 +147,7 @@ N> It is only applicable in `RelativeDialog mode`. If `no` relative view is spec
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4" % }
+{% highlight c# tabtitle="C#" hl_lines="4" %}
 
 private void Button_Clicked(object sender, System.EventArgs e)
 {
@@ -155,7 +155,7 @@ private void Button_Clicked(object sender, System.EventArgs e)
     this.datepicker.RelativeView = pickerButton;
 }
 
-{% endhighlight %} 
+{% endhighlight %}
 
 {% endtabs %}
 
