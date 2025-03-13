@@ -17,17 +17,15 @@ N> Before using the **Essential<sup>®</sup> UI Kit for .NET MAUI - Syncfusion<s
 
 1.	Open a new or existing MAUI application.
 
-2.	In File Explorer, right-click on your MAUI project's **.csproj** file and select **Essential<sup>®</sup>  UI Kit for .NET MAUI - Syncfusion<sup>®</sup>**. Before launching the UI, ensure that the project is fully loaded. This will launch the UI.
+2.	In File Explorer, right-click on your MAUI project's **.csproj** file and select **Essential<sup>®</sup>  UI Kit for .NET MAUI - Syncfusion<sup>®</sup>**. Before launching the UI, ensure that the project is fully loaded, as this option will only be available if the project is fully loaded.
 
-3.	Choose the required pages from the categories and click **Next**.
+3.	Choose the pages you want to add, enter a name for the page, and then click **Add**.
 
-4.	Enter a name for the page, then click **Add** to include it in your project along with the necessary class files, resources, and NuGet package references.
-
-5.	The selected pages will be added, including **View, ViewModel, Model** classes, resource files, and the **Syncfusion® NuGet package** reference.
+4.	The selected pages will be added, including **View, ViewModel, Model** classes, resource files, and the **Syncfusion® NuGet package** reference.
 
 	![MAUI UI Kit Visual Studio Code](Essential_UI_Kit_images/visual-studio-code-maui-ui-kit.gif)
 
-6.	Then, Syncfusion<sup>®</sup> licensing registration required message box will be shown if you installed the trial setup or NuGet packages since Syncfusion<sup>®</sup> introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio<sup>®</sup> release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key), which is shown in the licensing message box to generate and register the Syncfusion<sup>®</sup> license key to your project. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx) post for understanding the licensing changes introduced in Essential Studio<sup>®</sup>. 
+5.	Then, Syncfusion<sup>®</sup> licensing registration required message box will be shown if you installed the trial setup or NuGet packages since Syncfusion<sup>®</sup> introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio<sup>®</sup> release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key), which is shown in the licensing message box to generate and register the Syncfusion<sup>®</sup> license key to your project. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx) post for understanding the licensing changes introduced in Essential Studio<sup>®</sup>. 
 
 ## Run the UI template item
 
