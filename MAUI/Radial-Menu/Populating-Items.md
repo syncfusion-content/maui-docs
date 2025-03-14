@@ -743,10 +743,6 @@ namespace RadialSample
 
 The [SfRadialMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.html) allows you to change the selection color for the selected radial menu item by using the `SelectionColor` property.
 
-MainPage.xaml
- 
-MainPage.xaml.cs
-
 {% tabs %}
 
 {% highlight xaml %}
