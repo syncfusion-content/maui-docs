@@ -182,6 +182,10 @@ The user interaction such as selection and highlights specific regions of day, w
 
 ![special-time-region-in-timeslots-views-in-maui-scheduler](images/day-week-views/special-time-region-in-timeslots-views-in-maui-scheduler.png)
 
+Watch the video below for a step-by-step guide on adding and customizing TimeRegions in .NET MAUI SfScheduler
+
+{% youtube "https://www.youtube.com/watch?v=ru06fr9jo5Q" %}
+
 ### Selection restriction in timeslots
 
 Enable or disable the touch interaction of TimeRegion using the [EnablePointerInteraction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeRegion.html#Syncfusion_Maui_Scheduler_SchedulerTimeRegion_EnablePointerInteraction) property of [TimeRegion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeRegion.html). By default, its value is `true.`
