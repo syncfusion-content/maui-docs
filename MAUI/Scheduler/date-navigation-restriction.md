@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Date Navigations in .NET MAUI Scheduler Control | Syncfusion<sup>&reg;</sup>
+title: Date Navigation in .NET MAUI Scheduler | Syncfusion<sup>&reg;</sup>
 description: Learn here all about date navigations and restriction feature of Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler (SfScheduler) control and more.
 platform: maui
 control: SfScheduler
@@ -132,7 +132,7 @@ private void OnButtonClicked(object sender, EventArgs e)
 By using the [AllowViewNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AllowViewNavigation) property of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html), you can quickly navigate to the respective day or timeline day view by tapping on the month cell or view header of the following scheduler views: week, work week, month, agenda, timeline week, timeline work week, and timeline month views.
 
 {% tabs %}
-{% highlight XAML hl_lines="2"%}
+{% highlight XAML hl_lines="2" %}
 
  <scheduler:SfScheduler x:Name="Scheduler" 
                         AllowViewNavigation="True">
@@ -159,7 +159,7 @@ N>
 You can enable the date picker for the scheduler by using the [ShowDatePickerButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_ShowDatePickerButton) property in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html), which displays the date picker in the header view. It allows you to quickly switch between, months, years, decades or century where you can directly jump to a specific date by selecting it from a date picker.
 
 {% tabs %}
-{% highlight XAML hl_lines="2"%}
+{% highlight XAML hl_lines="2" %}
 
  <scheduler:SfScheduler x:Name="Scheduler" 
                        ShowDatePickerButton="True">
@@ -196,6 +196,29 @@ The default value of [AllowedViews](https://help.syncfusion.com/cr/maui/Syncfusi
 
 SfScheduler scheduler = new SfScheduler();
 scheduler.AllowedViews = SchedulerViews.Day | SchedulerViews.Week | SchedulerViews.WorkWeek | SchedulerViews.Month | SchedulerViews.TimelineDay | SchedulerViews.TimelineWeek | SchedulerViews.TimelineWorkWeek | SchedulerViews.TimelineMonth;
+this.Content = scheduler;
+
+{% endhighlight %}
+{% endtabs %}
+
+### Show Allowed views
+
+The [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) allows users to toggle the visibility of the allowed views by setting value to the `ShowAllowedViews`. By setting this property to false, users can simplify the interface, making it cleaner and more focused, especially in scenarios where view switching is unnecessary. The default value for the property ShowAllowedViews is `true`.
+
+{% tabs %}
+{% highlight XAML hl_lines="2" %}
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       AllowedViews="Day,Week,WorkWeek,Month,TimelineDay,TimelineWeek,TimelineWorkWeek,TimelineMonth" 
+                       ShowAllowedViews="false">
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight C# hl_lines="2 3" %}
+
+SfScheduler scheduler = new SfScheduler();
+scheduler.AllowedViews = SchedulerViews.Day | SchedulerViews.Week | SchedulerViews.WorkWeek | SchedulerViews.Month | SchedulerViews.TimelineDay | SchedulerViews.TimelineWeek | SchedulerViews.TimelineWorkWeek | SchedulerViews.TimelineMonth;
+scheduler.ShowAllowedViews = false;
 this.Content = scheduler;
 
 {% endhighlight %}
