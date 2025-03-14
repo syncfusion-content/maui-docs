@@ -9,11 +9,11 @@ documentation: ug
  
 # Overview of .NET MAUI Toolbar (SfToolbar)
 
-The Syncfusion<sup>&reg;</sup> `.NET MAUI Toolbar` control is a customizable UI element that provides quick access to actions or commands through buttons, icons, or menus, enhancing usability and efficiency. It offers a structured, customizable, and user-friendly layout that supports multiple orientations, item alignments, and overflow handling.
+The Syncfusion<sup>&reg;</sup> `.NET MAUI Toolbar` control is a customizable UI control that provides quick access to actions or commands through buttons, icons, or menus, enhancing usability and efficiency. It offers a structured, customizable, and user-friendly layout that supports multiple orientations, item alignments, and overflow handling.
 
 ## Key features 
  
-* **Items Rendering** : Supports displaying toolbar items with icons, labels, a combination of both, or custom views, ensuring flexible and intuitive visual representation.
+* **Toolbar Items** : Supports displaying toolbar items with icons, labels, a combination of both, or custom views, ensuring flexible and intuitive visual representation.
 * **Toolbar Orientation** : Allows both horizontal and vertical layouts, enabling flexible arrangement based on application needs.
 * **Items Alignment** : Aligns toolbar items to the Start, Center, or End within the available space.
 * **OverFlow Mode** : Manages overflowing items with three options:

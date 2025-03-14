@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Getting Started with MAUI Toolbar Control | Syncfusion®
-description: Learn here about getting started with Syncfusion® MAUI Toolbar (SfToolbar) control, its elements and more.
-platform: MAUI
+title: Getting Started with .NET MAUI Toolbar Control | Syncfusion®
+description: Learn here about getting started with Syncfusion® .NET MAUI Toolbar (SfToolbar) control, its elements and more.
+platform: maui
 control: Toolbar (SfToolbar)
 documentation: ug
 ---
@@ -278,7 +278,7 @@ public partial class MainPage : ContentPage
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
 
-## Adding Toolbar with items
+## Adding Toolbar items
 
 You can use `Items` property of `SfToolbar` to populate the toolbar items.
  
@@ -414,3 +414,5 @@ namespace ToolbarGettingStarted
 {% endhighlight %}
 
 {% endtabs %}
+
+N> The Icons can be referred from this [link](https://help.syncfusion.com/maui/icons)
