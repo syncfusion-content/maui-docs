@@ -32,7 +32,6 @@ appointment.Add(new SchedulerAppointment()
     EndTime = DateTime.Today.AddHours(11),
     Subject = "Client Meeting",
     Location = "Hutchison road",
-    Stroke = Colors.Red,
 });
 
 //Adding the scheduler appointment collection to the AppointmentsSource of .NET MAUI Scheduler.
@@ -1149,6 +1148,46 @@ appointments.Add(new SchedulerAppointment()
     StartTime = DateTime.Now,
     EndTime = DateTime.Now.AddHours(1),
 });
+
+this.Scheduler.AppointmentsSource = appointments;
+var appointmentBorderStyle = new SchedulerAppointmentBorderStyle ()
+{
+    Stroke = Colors.Red,
+    CornerRadius = 5,
+    StrokeThickness = 2
+};
+this.Scheduler.AppointmentBorderStyle  = appointmentBorderStyle;
+
+{% endhighlight %}  
+{% endtabs %}
+
+### Customize appointment border using SchedulerAppointment
+
+The appointment border stroke can be customized using the property `Stroke` in the `SchedulerAppointment`. The border stroke will be set even though `AppointmentBorderStyle` is given.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+{% include_relative code-snippet/weekview.xaml %}
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="8 14" %}
+
+var appointments = new ObservableCollection<SchedulerAppointment>();
+appointments.Add(new SchedulerAppointment()
+{
+    Subject = "meeting",
+    StartTime = DateTime.Now,
+    EndTime = DateTime.Now.AddHours(1),
+});
+appointments.Add(new SchedulerAppointment()
+{
+    Subject = "meeting1",
+    StartTime = DateTime.Now,
+    EndTime = DateTime.Now.AddHours(1),
+    Stroke = Colors.Blue,
+});
+
 this.Scheduler.AppointmentsSource = appointments;
 var appointmentBorderStyle = new SchedulerAppointmentBorderStyle ()
 {
