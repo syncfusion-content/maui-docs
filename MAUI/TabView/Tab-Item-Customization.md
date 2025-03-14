@@ -553,6 +553,8 @@ tabView.ContentTransitionDuration = 300;
 
 {% endtabs %}
 
+![ContentTransitionDuration](images/ContentTransition.gif)
+
 ## Image size
 
 You can customize the image size in the .NET MAUI TabView control by setting the [ImageSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_ImageSize) property.
