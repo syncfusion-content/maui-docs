@@ -364,3 +364,75 @@ namespace RadialSample
 {% endhighlight %}
 
 {% endtabs %}
+
+## Perform an action while Presssing and Releasing the radial menu item
+
+You can perform an action when pressing and releasing the radial menu item of the radial menu. The `TouchDown` event occurs when pressing the radial menu and the `TouchUp`event occurs When releasing the radial menu.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RadialSample"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
+             x:Class="RadialSample.MainPage">    
+    <syncfusion:SfRadialMenu>
+        <syncfusion:SfRadialMenu.Items>
+            <syncfusion:SfRadialMenuItem Text="Bold" FontSize="12" TouchDown="SfRadialMenuItemTouchDown" TouchUP="SfRadialMenuItemTouchUP" />
+            <syncfusion:SfRadialMenuItem Text="Copy" FontSize="12"/>
+            <syncfusion:SfRadialMenuItem Text="Undo" FontSize="12"/>
+            <syncfusion:SfRadialMenuItem Text="Paste" FontSize="12"/>
+            <syncfusion:SfRadialMenuItem Text="Color" FontSize="12"/>
+        </syncfusion:SfRadialMenu.Items>
+    </syncfusion:SfRadialMenu>
+
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.RadialMenu;
+
+namespace RadialSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            SfRadialMenu radialMenu = new SfRadialMenu();
+
+            RadialMenuItemsCollection itemCollection = RadialMenuItemsCollection()
+            {
+                new SfRadialMenuItem() { Text = "Bold", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Copy", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Paste", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Undo", FontSize = 12 },
+                new SfRadialMenuItem() { Text = "Color", FontSize = 12 },
+            };
+            
+            radialMenu.Items = itemCollection;
+            radialMenu.Items[0].TouchDown += SfRadialMenuItemTouchDown;
+            radialMenu.Items[0].TouchUP += SfRadialMenuItemTouchUP;
+            this.Content = radialMenu;
+        }
+
+        private async void SfRadialMenuItemTouchDown(object? sender, RadialMenuItemEventArgs e)
+        {
+            await DisplayAlert("Alert", "The RadialMenuItem is pressed.", "Ok");
+        }
+
+        private async void SfRadialMenuItemTouchUP(object? sender, RadialMenuItemEventArgs e)
+        {
+            await DisplayAlert("Alert", "The RadialMenuItem is released.", "Ok");
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
