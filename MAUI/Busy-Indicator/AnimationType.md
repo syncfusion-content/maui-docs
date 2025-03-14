@@ -217,4 +217,4 @@ The horizontal pulsing box animation is one of the built-in animations in [.NET 
 
 The following gif image illustrates the result of the above code.
 
-![Horizontal Pulsing Box](Images/AnimationType/Globe.gif)
+![Horizontal Pulsing Box](Images/AnimationType/HorizontalPulsingBox.gif)
