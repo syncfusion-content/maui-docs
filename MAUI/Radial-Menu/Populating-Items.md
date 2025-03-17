@@ -747,56 +747,17 @@ The [SfRadialMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMen
 
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:RadialSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
-             x:Class="RadialSample.MainPage">
-    <syncfusion:SfRadialMenu  SelectionColor="#FF1493">
-        <syncfusion:SfRadialMenu.Items>
-            <syncfusion:SfRadialMenuItem Text="Bold" FontSize="12"/>
-            <syncfusion:SfRadialMenuItem Text="Copy" FontSize="12"/>
-            <syncfusion:SfRadialMenuItem Text="Undo" FontSize="12"/>
-            <syncfusion:SfRadialMenuItem Text="Paste" FontSize="12"/>
-            <syncfusion:SfRadialMenuItem Text="Color" FontSize="12"/>
-        </syncfusion:SfRadialMenu.Items>
-    </syncfusion:SfRadialMenu>
-</ContentPage>
+    <syncfusion:SfRadialMenu  SelectionColor="#FF1493" />
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-using Syncfusion.Maui.RadialMenu;
 
-namespace RadialSample
+SfRadialMenu radialMenu = new SfRadialMenu()
 {
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-
-            SfRadialMenu radialMenu = new SfRadialMenu()
-            {
-                SelectionColor = Color.FromHex("#FF1493")
-            };
-
-            RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()
-            {
-                new SfRadialMenuItem() { Text = "Bold", FontSize = 12 },
-                new SfRadialMenuItem() { Text = "Copy", FontSize = 12 },
-                new SfRadialMenuItem() { Text = "Paste", FontSize = 12 },
-                new SfRadialMenuItem() { Text = "Undo", FontSize = 12 },
-                new SfRadialMenuItem() { Text = "Color", FontSize = 12 },
-            };
-            
-            radialMenu.Items = itemCollection;
-            this.Content = radialMenu;
-        }
-    }
-}
+    SelectionColor = Color.FromHex("#FF1493")
+};
 
 {% endhighlight %}
 {% endtabs %}
