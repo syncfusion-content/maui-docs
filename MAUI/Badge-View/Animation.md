@@ -60,7 +60,7 @@ Content = sfBadgeView;
 
 ## Animation duration
 
-The `AnimationDuration` property of the [.NET MAUI Badge View](https://www.syncfusion.com/maui-controls/maui-badge-view) can be used to set the animation speed based on given value. Setting smaller duration value accelerates animation speed. Its default value is 250.
+The `AnimationDuration` property of the [Badge Settings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_BadgeSettings) in the [Badge View](https://www.syncfusion.com/maui-controls/maui-badge-view) can be used to set the animation speed based on the given value. Setting a smaller duration value accelerates the animation speed. Its default value is 250.
 
 {% tabs %}
 
@@ -71,7 +71,7 @@ The `AnimationDuration` property of the [.NET MAUI Badge View](https://www.syncf
             <Image Source="BadgeFacebook.png" HeightRequest="70" WidthRequest="70"  />
         </badge:SfBadgeView.Content>
         <badge:SfBadgeView.BadgeSettings>
-            <badge:BadgeSettings Type="Error" AnimationDuration="600" Animation="Scale"/>
+            <badge:BadgeSettings AnimationDuration="600" Animation="Scale"/>
         </badge:SfBadgeView.BadgeSettings>
 </badge:SfBadgeView>
 
@@ -87,7 +87,6 @@ image.HeightRequest = 70;
 image.WidthRequest = 70;
 sfBadgeView.Content = image;
 BadgeSettings badgeSetting = new BadgeSettings();
-badgeSetting.Type = BadgeType.Error;
 badgeSetting.Animation = BadgeAnimation.Scale;
 badgeSetting.AnimationDuration = 600;
 sfBadgeView.BadgeSettings = badgeSetting;

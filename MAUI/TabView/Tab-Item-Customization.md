@@ -530,14 +530,14 @@ You can customize the animation duration when changing the [SelectedIndex](https
 {% tabs %}
 
 {% highlight xaml %}
-<tabView:SfTabView  ContentTransitionDuration ="300">
+<tabView:SfTabView  ContentTransitionDuration ="1000">
     <tabView:SfTabItem/>
 </tabView:SfTabView>
 {% endhighlight %}
 
 {% highlight C# %}
 var tabView = new SfTabView();
-tabView.ContentTransitionDuration = 300;
+tabView.ContentTransitionDuration = 1000;
 {% endhighlight %}
 
 {% endtabs %}
