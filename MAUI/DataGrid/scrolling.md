@@ -53,7 +53,7 @@ this.dataGrid.ScrollToColumnIndex(4, ScrollToPosition.MakeVisible, true);
 
 ## Diagonal scrolling
 
-By default, SfDataGrid allows both vertical and horizontal scrolling at the same time(Diagonal scrolling). Setting [SfDataGrid.AllowDiagonalScrolling]() to false ensures that scrolling happens in only one direction at a time, either horizontally or vertically.
+By default, the `SfDataGrid` allows both vertical and horizontal scrolling simultaneously (diagonal scrolling). By setting [SfDataGrid.AllowDiagonalScrolling]() to false, you ensure that scrolling happens in only one direction at a time, either horizontally or vertically.
 
 The following code snippets demonstrate how to disable diagonal scrolling:
 
