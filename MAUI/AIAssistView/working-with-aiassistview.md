@@ -327,6 +327,80 @@ public partial class MainPage : ContentPage
 
 ![EditorView Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-editorviewtemplate.png)
 
+## Send Button Customization
+
+The `SfAIAssistView` control allows you to fully customize the send button's appearance using the `RequestButtonTemplate` property. This property lets you define a custom layout and style for the send button.
+
+{% tabs %}
+{% highlight xaml hl_lines="22" %}
+
+<ContentPage.Resources>
+        <ResourceDictionary>
+            <!-- Define the RequestButtonTemplate as a static resource -->
+            <DataTemplate x:Key="RequestButtonTemplate">
+                <Grid>
+                    <Label x:Name="label"
+                           Text="&#xe791;"
+                           FontFamily="MauiMaterialAssets"
+                           FontSize="24"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                </Grid>
+            </DataTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+<ContentPage.Content>
+       <StackLayout>
+        <syncfusion:SfAIAssistView x:Name="assist"
+                                   AssistItems="{Binding AssistItems}"
+                                   Request="assist_Request"
+                                   RequestButtonTemplate="{StaticResource RequestButtonTemplate}" />
+    </StackLayout>
+</ContentPage.Content>
+
+{% endhighlight %}
+{% highlight c# hl_lines="10" %}
+
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    SfAIAssistView sfAIAssistView;
+    public MainPage()
+    {
+            InitializeComponent();
+            sfAIAssistView = new SfAIAssistView();
+            sfAIAssistView.RequestButtonTemplate = RequestButtonTemplate();
+            this.Content = sfAIAssistView;
+    }
+
+    private DataTemplate RequestButtonTemplate()
+    {
+        return new DataTemplate(() =>
+        {
+            var grid = new Grid();
+
+            var label = new Label
+            {
+                Text = "&#xe791;", // Unicode for the icon
+                FontFamily = "MauiMaterialAssets",
+                FontSize = 24,
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center
+            };
+
+            grid.Children.Add(label);
+            return grid;
+        });
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![SendButton Customization in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-SendButtonCustomization.png)
+
 ## Show ResponseLoader View
 
 By Default, the response loader view will be enabled and the default shimmer view will be present. To disable set the `ShowResponseLoader` Property to `false`.
