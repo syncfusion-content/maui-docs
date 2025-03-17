@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in MAUI Toolbar Control | Syncfusion®
-description: Learn here all about Events support in Syncfusion® MAUI Toolbar (SfToolbar) control and more.
+description: Learn here about Events support in Syncfusion® MAUI Toolbar (SfToolbar) and more.
 platform: MAUI
 control: Toolbar (SfToolbar)
 documentation: ug

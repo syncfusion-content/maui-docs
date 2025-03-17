@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in MAUI Toolbar Control | Syncfusion®
-description: Learn here all about Tooltip support in Syncfusion® MAUI Toolbar (SfToolbar) and more.
+description: Learn here about Tooltip support in Syncfusion® MAUI Toolbar (SfToolbar) and more.
 platform: MAUI
 control: Toolbar (SfToolbar)
 documentation: ug
@@ -19,7 +19,7 @@ The following code sample demonstrates how to Create a Toolbar control with tool
 
 {% tabs %}
 
-{% highlight xaml % }
+{% highlight xaml %}
 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
