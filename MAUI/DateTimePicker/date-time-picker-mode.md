@@ -37,7 +37,7 @@ The Date Time picker can be opened programmatically by setting the [`IsOpen`](ht
 Note: This property automatically changes to `false` when you close the dialog by clicking outside of it.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml"%}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <Grid>
     <picker:SfDateTimePicker x:Name="picker" 
@@ -54,7 +54,7 @@ Note: This property automatically changes to `false` when you close the dialog b
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs"%}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 private void Button_Clicked(object sender, EventArgs e)
 {
@@ -80,7 +80,7 @@ The Date Time picker can be opened programmatically by setting the [`IsOpen`](ht
 Note: This property is automatically changed to `false` when you close the dialog by clicking outside of the dialog.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml"%}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <Grid>
     <picker:SfDateTimePicker x:Name="picker" 
@@ -98,7 +98,7 @@ Note: This property is automatically changed to `false` when you close the dialo
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs"%}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 private void Button_Clicked(object sender, EventArgs e)
 {
@@ -115,9 +115,9 @@ The [RelativeView] is specified in the picker's property enumeration and is used
 N>
 It is only applicable in `RelativeDialog mode`. If `no` relative view is specified, the picker base will be set as the `default` relative view.
 
-
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml"% hl_lines="5" }
+
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
 <Grid>
     <picker:SfDateTimePicker x:Name="picker" 
@@ -136,7 +136,8 @@ It is only applicable in `RelativeDialog mode`. If `no` relative view is specifi
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs"% hl_lines="4" }
+
+{% highlight c# tabtitle="C#" hl_lines="4" %}
 
 private void Button_Clicked(object sender, EventArgs e)
 {
@@ -144,9 +145,9 @@ private void Button_Clicked(object sender, EventArgs e)
     this.picker.RelativeView = pickerButton;
 }
 
-{% endhighlight %}  
-{% endtabs %}
+{% endhighlight %}
 
+{% endtabs %}
 
    ![Relative dialog mode in .NET MAUI Date Time picker.](images/date-time-picker-mode/maui-date-time-picker-relative-dialog-mode1.png)
 
