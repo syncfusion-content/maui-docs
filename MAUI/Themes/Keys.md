@@ -491,7 +491,7 @@ This page lists the keys for each control and the element to which it is mapped 
 </tr>
 <tr>
 <td> SfAIAssistViewSelectionTextHighLightColor<br/><br/></td>
-<td> Color for highlighting the text..<br/><br/></td>
+<td> Color to highlight the selected text. <br/><br/></td>
 </tr>
 </table>
 

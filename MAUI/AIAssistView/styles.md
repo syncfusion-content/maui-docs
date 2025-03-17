@@ -1054,7 +1054,7 @@ To modify the highlight color of selected text, you need to update the value ass
 </tr>
 <tr>
 <td> SfAIAssistViewSelectionTextHighLightColor </td>
-<td> Color for highlighting the text. </td>
+<td> Color to highlight the selected text. </td>
 </tr>
 </table>
 
