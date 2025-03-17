@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in MAUI Toolbar Control | Syncfusion®
-description: Learn here all about Tooltip support in Syncfusion® MAUI Toolbar (SfToolbar) control and more.
+description: Learn here all about Tooltip support in Syncfusion® MAUI Toolbar (SfToolbar) and more.
 platform: MAUI
 control: Toolbar (SfToolbar)
 documentation: ug
@@ -17,7 +17,9 @@ You can set the tooltip text by setting the `ToolTipText` property.
 
 The following code sample demonstrates how to Create a Toolbar control with tooltip.
 
-{% highlight xaml %}
+{% tabs %}
+
+{% highlight xaml % }
 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
