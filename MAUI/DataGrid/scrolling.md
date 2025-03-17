@@ -87,3 +87,56 @@ namespace DataGridSample
 {% endtabs %}
 
 N> These properties do not have any effect when the datagrid has no scrollable content in its respective direction. In such cases, the scroll bar will not be displayed.
+
+## Vertical Over Scroll Mode
+
+The [SfDataGrid.VerticalOverScrollMode]() property customizes the vertical scrolling behavior in the data grid, specifically controlling the bouncing effect when the user scrolls beyond the grid boundaries. This property helps to define whether users should experience a smooth, elastic pull effect or a strict stop when reaching the start or end of the scrollable content.
+
+The `VerticalOverScrollMode` property is of type `DataGridVerticalScrollMode` and provides the following two modes:
+
+## Bounce
+
+In Bounce mode, the data grid exhibits a bouncing effect when scrolled past the content boundaries. This effect creates a spring-back animation, giving users feedback that they've reached the edge of the data grid.
+
+* `Android`: The default value is None, meaning bounce is disabled unless explicitly set.
+
+* `IOS`: The default value is Bounce, allowing a natural iOS-style bounce effect.
+
+This behavior is useful for improving user experience by making interactions more dynamic and responsive.
+
+To customize the bouncing effect in the data grid, follow the code example:
+{% tabs %}
+{% highlight xaml %}
+    <sfgrid:SfDataGrid x:Name="dataGrid"                                       
+                       ItemsSource="{Binding OrderInfoCollection}"         
+                        VerticalOverScrollMode="Bounce">   
+    </sfgrid:SfDataGrid> 
+{% endhighlight %}
+
+{% highlight C# %}  
+dataGrid.VerticalOverScrollMode = DataGridVerticalOverScrollMode.Bounce;
+{% endhighlight %}
+{% endtabs %}
+
+## None
+In None mode, the bouncing effect is completely disabled, and the data grid stops scrolling as soon as it reaches the content boundaries. This mode is useful when we want to provide a more rigid scrolling experience, especially in scenarios where bouncing might seem unnecessary or distracting.
+
+To customize the bouncing effect in the data grid, follow the code example:
+{% tabs %}
+{% highlight xaml %}
+    <sfgrid:SfDataGrid x:Name="dataGrid"                                       
+                       ItemsSource="{Binding OrderInfoCollection}"         
+                        VerticalOverScrollMode="None">   
+    </sfgrid:SfDataGrid> 
+{% endhighlight %}
+
+{% highlight C# %}  
+dataGrid.VerticalOverScrollMode = DataGridVerticalOverScrollMode.None;
+{% endhighlight %}
+{% endtabs %}
+
+With this configuration, the grid halts scrolling precisely at the content edges, without any additional movement or visual feedback.
+
+By configuring the `VerticalOverScrollMode`, we can tailor the scrolling behavior to match your application's design requirements, providing either a fluid, dynamic experience or a more rigid, controlled interaction. This flexibility ensures that your data grid feels natural and responsive, enhancing the overall user experience.
+
+ <img alt="Vertical-OverScroll-Mode" src="Images\scrolling\Vertical-OverScroll-Mode.png" width="404" height="396"/>
