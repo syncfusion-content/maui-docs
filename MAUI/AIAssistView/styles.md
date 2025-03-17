@@ -1045,7 +1045,7 @@ public MainPage()
 
 ## Text Selection styling
 
-To apply styles to highlight text for the Text Selection feature, set values to the built-in keys of the response item in the resource dictionary.
+To modify the highlight color of selected text, you need to update the value associated with the built-in key `SfAIAssistViewSelectionTextHighLightColor` in the resource dictionary.
 
 <table>
 <tr>

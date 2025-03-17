@@ -489,6 +489,10 @@ This page lists the keys for each control and the element to which it is mapped 
     <td> SfAIAssistViewStopRespondingStrokeThickness <br/><br/></td>
     <td> Stroke thickness for the stop responding view.<br/><br/></td>
 </tr>
+<tr>
+<td> SfAIAssistViewSelectionTextHighLightColor<br/><br/></td>
+<td> Color for highlighting the text..<br/><br/></td>
+</tr>
 </table>
 
 ## SfAutocomplete
