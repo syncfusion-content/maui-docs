@@ -63,6 +63,44 @@ this.sfDataGrid1.ItemsSource = table;
 * [SfDataGrid.View.Filter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html#Syncfusion_Maui_Data_ICollectionViewAdv_Filter) is not supported.
 * [SfDataGrid.View.LiveDataUpdateMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html#Syncfusion_Maui_Data_ICollectionViewAdv_LiveDataUpdateMode) is not supported.
 
+## Binding with dynamic data object
+
+The `SfDataGrid` control supports to bind [dynamic data object](). Below are the limitations when you are binding dynamic data object,
+
+1. SfDataGrid doesn’t support [LiveDataUpdateMode]() - `AllowDataShaping` and `AllowSummaryUpdate`.
+
+The below codes demonstrate how to bind a dynamic data object to the `SfDataGrid` in both manual and AutoGenerateColumn.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="sfDataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       AutoGenerateColumnsMode="None" />
+<syncfusion:SfDataGrid.Columns>
+    <syncfusion:DataGridNumericColumn MappingName="[OrderID]"
+                                      HeaderText="Order ID" />
+    <syncfusion:DataGridTextColumn MappingName="[CustomerID]"
+                                   HeaderText="Customer ID" />
+    <syncfusion:DataGridTextColumn MappingName="[ShipCountry]"
+                                   HeaderText="Ship Country" />
+</syncfusion:SfDataGrid.Columns>
+{% endhighlight %}
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="sfDataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       AutoGeneratingColumn="datagrid_AutoGeneratingColumn" />
+{% endhighlight %}
+
+{% highlight c# %}
+private void datagrid_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
+{
+     
+}
+{% endhighlight %}
+{% endtabs %}
+
 ## Binding complex properties
 
 The SfDataGrid control provides support for binding complex properties to its columns. To bind the complex property to [DataGridColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html), set the complex property path to [MappingName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_MappingName).

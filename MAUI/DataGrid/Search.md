@@ -19,7 +19,7 @@ this.dataGrid.SearchController.Search(TextBox.Text);
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with Search Panel]()
+<img alt="DataGrid with Search Panel" src="Images\search\maui-datagrid-search.png" width="404"/>
 
 
 ### Filtering
@@ -35,7 +35,7 @@ this.dataGrid.SearchController.Search(TextBox.Text);
 {% endhighlight %}
 {% endtabs %}
 
-![Enabling Filter based on Search in DataGrid]()
+<img alt="Enabling Filter based on Search in DataGrid" src="Images\search\maui-datagrid-search-filtering.png" width="404"/>
 
 
 You can search the data with the case-sensitivity by setting [SearchController.AllowCaseSensitiveSearch]() property.
@@ -61,7 +61,7 @@ this.dataGrid.SearchController.FindPrevious("SearchText");
 {% endhighlight %}
 {% endtabs %}
 
-![Navigated Search Text in DataGrid]()
+<img alt="Navigated Search Text in DataGrid" src="Images\search\maui-datagrid-searchtext-navigate.png" width="404"/>
 
 ## Clear Search
 
@@ -122,25 +122,3 @@ public class SearchHelperExt : DataGridSearchController
 {% endtabs %}
 
 ![DataGrid displays Search Text only in Selected Column]()
-
-
-### Select the record based on the SearchText
-
-You can select the records which contains the search text by using `GetSearchedRecord` method. 
-
-{% tabs %}
-{% highlight c# %}
-
-this.dataGrid.SelectedItems.Clear();
-this.dataGrid.SearchHelper.Search("SearchText"); 
-var list = this.dataGrid.SearchHelper.GetSearchRecords();
-int recordIndex = this.dataGrid.ResolveToRecordIndex(this.dataGrid.ResolveToRowIndex(list[0].Record));
-this.dataGrid.SelectedIndex = recordIndex;
-
-{% endhighlight %}
-{% endtabs %}
-
-![Select Record based on SearchText in DataGrid]()
-
-## See Also
-
