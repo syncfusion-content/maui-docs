@@ -110,7 +110,6 @@ public class Meeting
     public TimeZoneInfo EndTimeZone { get; set; }
     public Brush Background { get; set; }
     public Color TextColor { get; set; }
-    public Color Stroke {get; set;}
 }
 
 {% endhighlight %}
@@ -134,8 +133,7 @@ The [AppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sch
                 IsAllDay="IsAllDay"
                 StartTimeZone="StartTimeZone"
                 EndTimeZone="EndTimeZone"
-                TextColorMapping="TextColor"
-                StrokeMapping="Stroke"/>
+                TextColorMapping="TextColor"/>
     </scheduler:SfScheduler.AppointmentMapping>
 </scheduler:SfScheduler>
 
@@ -153,7 +151,6 @@ appointmentMapping.IsAllDay = "IsAllDay";
 appointmentMapping.StartTimeZone = "StartTimeZone";
 appointmentMapping.EndTimeZone = "EndTimeZone";
 appointmentMapping.TextColorMapping = "TextColor";
-appointmentMapping.StrokeMapping = "Stroke";
 scheduler.AppointmentMapping = appointmentMapping;
 this.Content = scheduler;
 
@@ -177,8 +174,6 @@ meeting.EventName = "Meeting";
 meeting.Background = Brush.Orange;
 // Setting the text color for an event.
 meeting.TextColor = Colors.White;
-// Setting the border color for an event.
-meeting.Stroke = Colors.Red;
 // Creating an instance for the collection of business objects.
 var Meetings = new ObservableCollection<Meeting>();
 // Adding a business object to the business object Collection.
