@@ -17,9 +17,9 @@ By providing assistance and encouraging the exploration of new ideas, the common
 
 ### Displaying Common Suggestions
 
-Common Suggestions can be populated by creating list of AssistSuggestion and assigning it to `SfAIAssistView.Suggestions` API. It will be displayed under the header as part of header view.
+Common Suggestions can be populated by creating list of `AssistSuggestion` and assigning it to `SfAIAssistView.Suggestions` API. It will be displayed under the header as part of header view.
 
-#### View Modal
+#### View Model
 Create a simple view model as shown in the following code example, and save it as `GettingStartedViewModel.cs` file.
 
 {% tabs %}
@@ -168,7 +168,7 @@ public partial class MainPage : ContentPage
 
 ![Suggestion Template in .NET MAUI AI AssistView](Images/suggestions/maui-aiassistview-suggestions-commonsuggestiontemplate.png)
 
-## Response Suggestions
+## ResponseItem Suggestions
 
 The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html) control enables the display of a list of suggestions for users to select from. Suggestions are supported for all response item types in `SfAIAssistView`.
 
@@ -345,7 +345,7 @@ The [AssistItemSuggestion.Orientation](https://help.syncfusion.com/cr/maui/Syncf
 {% endhighlight %}
 {% endtabs %}
 
-## Event and Commands for Common Suggestions and Response Suggestions
+## Event and Commands
 
 When a user selects a suggestion, the [SuggestionItemSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_SuggestionItemSelected) event and [SuggestionItemSelectedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_SuggestionItemSelectedCommand) are triggered, providing [SuggestionItemSelectedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SuggestionItemSelectedEventArgs.html) as arguments. This arguments contains the following details about the selected suggestion item.
 
