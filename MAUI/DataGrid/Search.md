@@ -85,7 +85,6 @@ DataGrid (SfDataGrid) process the search operations in [DataGridSearchController
 this.datagrid.SearchController = new SearchHelperExt(this.datagrid);
 public class SearchHelperExt : DataGridSearchController
 {
-
     public SearchHelperExt(SfDataGrid datagrid)
         : base(datagrid)
     {
@@ -106,12 +105,10 @@ In the below code, except `CustomerID` column other columns are gets excluded fr
 
 public class SearchHelperExt : DataGridSearchController
 {
-
     public SearchHelperExt(SfDataGrid datagrid)
         : base(datagrid)
     {
     }
-
     protected override bool SearchCell(DataColumnBase column, object record, bool ApplySearchHighlightBrush)
     {
 
@@ -124,7 +121,7 @@ public class SearchHelperExt : DataGridSearchController
 {% endhighlight %}
 {% endtabs %}
 
-![WPF DataGrid displays Search Text only in Selected Column](Search_images/wpf-datagrid-search-text-in-column.png)
+![DataGrid displays Search Text only in Selected Column]()
 
 
 ### Select the record based on the SearchText
@@ -143,7 +140,7 @@ this.dataGrid.SelectedIndex = recordIndex;
 {% endhighlight %}
 {% endtabs %}
 
-![Select Record based on SearchText in WPF DataGrid]()
+![Select Record based on SearchText in DataGrid]()
 
 ## See Also
 
