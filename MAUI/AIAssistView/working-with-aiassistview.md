@@ -120,7 +120,7 @@ The `SfAIAssistView` control allows you to set custom text for the StopRespondin
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
     <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               StopRespondingText="Close Response"/>  
+                               StopRespondingText="Cancel Response"/>  
 
 {% endhighlight %} 
 
@@ -131,7 +131,7 @@ The `SfAIAssistView` control allows you to set custom text for the StopRespondin
     { 
         InitializeComponent(); 
         this.sfAIAssistView = new SfAIAssistView();
-        this.sfAIAssistView.StopRespondingText = "Close Response";
+        this.sfAIAssistView.StopRespondingText = "Cancel Response";
         this.Content = sfAIAssistView; 
     } 
 
@@ -140,7 +140,7 @@ The `SfAIAssistView` control allows you to set custom text for the StopRespondin
 
 ![Stop Responding Text in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-stopresondingtext.png)
 
-### StopResponding Customization
+### StopResponding UI Customization
 
 The `SfAIAssistView` control allows you to fully customize the Stop Responding view appearance by using the [StopRespondingTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_StopRespondingTemplate) property. This property lets you define a custom layout and style for the StopResponding UI.
 
