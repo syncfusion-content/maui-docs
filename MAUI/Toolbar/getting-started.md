@@ -251,7 +251,9 @@ Before proceeding, ensure the following are set up:
     ...        
     xmlns:toolbar="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar">
 
-    <toolbar:SfToolbar />
+    <StackLayout>
+        <toolbar:SfToolbar />
+    </StackLayout>
 </ContentPage>
 
 {% endhighlight %}
@@ -265,9 +267,11 @@ public partial class MainPage : ContentPage
 {
     public MainPage()
     {
-        InitializeComponent();
+        InitializeComponent();           
+        StackLayout stackLayout = new StackLayout();
         SfToolbar toolbar = new SfToolbar();
-        this.Content = toolbar;
+        stackLayout.Children.Add(toolbar);
+        this.Content = stackLayout;
     }
 }
 
