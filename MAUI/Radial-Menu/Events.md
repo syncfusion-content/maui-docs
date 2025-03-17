@@ -365,9 +365,9 @@ namespace RadialSample
 
 {% endtabs %}
 
-## Perform an action while Presssing and Releasing the radial menu item
+## Perform an action while Presssing and Releasing the Radial menu item
 
-You can perform an action when pressing and releasing the radial menu item of the radial menu. The `TouchDown` event occurs when pressing the radial menu item and the `TouchUp`event occurs When releasing the radial menu item.
+You can perform an action when pressing and releasing the Radial menu item of the Radial menu. The `TouchDown` event occurs when pressing the Radial menu item and the `TouchUp`event occurs When releasing the Radial menu item.
 
 {% tabs %}
 
