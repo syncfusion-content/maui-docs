@@ -112,6 +112,87 @@ public class ViewModel : INotifyPropertyChanged
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-aiassistview)
 
+### StopResponding Text
+
+The `SfAIAssistView` control allows you to set custom text for the StopResponding view using the [StopRespondingText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_StopRespondingText) property.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                               StopRespondingText="Cancel Response"/>  
+
+{% endhighlight %} 
+
+{% highlight c# hl_lines="5" %} 
+
+    SfAIAssistView sfAIAssistView; 
+    public MainPage() 
+    { 
+        InitializeComponent(); 
+        this.sfAIAssistView = new SfAIAssistView();
+        this.sfAIAssistView.StopRespondingText = "Cancel Response";
+        this.Content = sfAIAssistView; 
+    } 
+
+{% endhighlight %}
+{% endtabs %}
+
+![Stop Responding Text in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-stopresondingtext.png)
+
+### StopResponding UI Customization
+
+The `SfAIAssistView` control allows you to fully customize the Stop Responding view appearance by using the [StopRespondingTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_StopRespondingTemplate) property. This property lets you define a custom layout and style for the StopResponding UI.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="12" %}
+
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <DataTemplate x:Key="stopRespondingTemplate">
+            <Grid>
+                ...
+            </Grid>
+        </DataTemplate>
+    </ResourceDictionary>
+</ContentPage.Resources>
+<ContentPage.Content>
+      <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                                 StopRespondingTemplate="{StaticResource stopRespondingTemplate}">
+      </syncfusion:SfSfAIAssistView>
+</ContentPage.Content>
+
+{% endhighlight %}
+{% highlight c# hl_lines="10" %}
+
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    SfAIAssistView sfAIAssistView;
+    public MainPage()
+    {
+        InitializeComponent();
+        sfAIAssistView = new SfAIAssistView();
+        sfAIAssistView.StopRespondingTemplate = CreateStopRespondingViewTemplate();
+        this.Content = sfAIAssistView;
+    }
+
+    private DataTemplate CreateStopRespondingViewTemplate()
+    {
+        return new DataTemplate(() =>
+        {
+            ...
+        });
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Stop Responding Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassitview-stoprespondingtemplate.gif)
+
+
 ## Control Template
 
 The `ControlTemplate` in AI AssistView allows you to define and reuse the visual structure of a control. This flexible structure enables to fully customize the appearance and behavior of the AI AssistView. By using `ControlTemplate` with the AI AssistView, you can create a highly customized and interactive interface, as demonstrated below.
@@ -282,3 +363,35 @@ public partial class MainPage : ContentPage
 
 {% endhighlight %}
 {% endtabs %}
+
+## Text Selection
+The `SfAIAssistView` allows for selecting specific phrases or the entire response or request text. It enables the platform specific selection functionalities.
+By default, text selection is disabled. To enable it, set the `AllowTextSelection` property to `true`.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           AllowTextSelection="True"/>
+
+{% endhighlight %}
+{% highlight c# hl_lines="10" %}
+
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    SfAIAssistView sfAIAssistView;
+    public MainPage()
+    {
+            InitializeComponent();
+            sfAIAssistView = new SfAIAssistView();
+            sfAIAssistView.AllowTextSelection = true;
+            this.Content = sfAIAssistView;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Text Selection in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-textselection.gif)
