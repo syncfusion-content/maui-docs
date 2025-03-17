@@ -65,9 +65,7 @@ this.sfDataGrid1.ItemsSource = table;
 
 ## Binding with dynamic data object
 
-The `SfDataGrid` control supports to bind [dynamic data object](). Below are the limitations when you are binding dynamic data object,
-
-1. SfDataGrid doesn’t support [LiveDataUpdateMode]() - `AllowDataShaping` and `AllowSummaryUpdate`.
+The `SfDataGrid` control supports to bind [dynamic data object]().
 
 The below codes demonstrate how to bind a dynamic data object to the `SfDataGrid` in both manual and AutoGenerateColumn.
 
@@ -96,10 +94,14 @@ The below codes demonstrate how to bind a dynamic data object to the `SfDataGrid
 {% highlight c# %}
 private void datagrid_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
 {
-     
+     e.Column.MappingName = "[" + e.Column.MappingName + "]";
 }
 {% endhighlight %}
 {% endtabs %}
+
+### Limitations
+
+* SfDataGrid doesn’t support [LiveDataUpdateMode]() - `AllowDataShaping` and `AllowSummaryUpdate`.
 
 ## Binding complex properties
 
