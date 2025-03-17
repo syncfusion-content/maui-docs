@@ -188,7 +188,7 @@ The [AssistItemSuggestion.Orientation](https://help.syncfusion.com/cr/maui/Syncf
 {% endhighlight %}
 {% endtabs %}
 
-## Response Suggestion Customization
+## ResponseItem Suggestion Customization
 The `SfAIAssistView` control allows you to fully customize the appearance of the response suggestion items using the `ResponseSuggestionTemplate` property. This property lets you define a custom layout and style for the suggestion item UI.
 
 {% tabs %}
