@@ -1129,9 +1129,9 @@ this.Scheduler.SelectedAppointmentBackground = Brush.Orange;
 
 ![appointment-selection-background-in-maui-scheduler](images/appointments/appointment-selection-background-in-maui-scheduler.png)
 
-## Customize Appointment border style
+## Customize Appointment Border Style
 
-The appointment border style can be customized using the property `AppointmentBorderStyle` and it allows to customize the `Stroke`, `CornerRadius` and `StrokeThickness` for the appointment in the Scheduler.
+The appointment border style can be customized using the `AppointmentBorderStyle` property, which allows you to modify the `Stroke`, `CornerRadius`, and `StrokeThickness` of appointments in the Scheduler.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -1161,9 +1161,9 @@ this.Scheduler.AppointmentBorderStyle  = appointmentBorderStyle;
 {% endhighlight %}  
 {% endtabs %}
 
-### Customize appointment border using SchedulerAppointment
+### Customize the Appointment Border for an Individual Appointment
 
-The appointment border stroke can be customized using the property `Stroke` in the `SchedulerAppointment`. The border stroke will be set even though `AppointmentBorderStyle` is given.
+The appointment border stroke can be customized using the `Stroke` property in `SchedulerAppointment`. Additionally, it can be customized using `StrokeMapping` for custom-mapped appointments.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
