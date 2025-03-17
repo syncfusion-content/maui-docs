@@ -172,7 +172,7 @@ public partial class MainPage : ContentPage
 
 The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html) control enables the display of a list of suggestions for users to select from. Suggestions are supported for all response item types in `SfAIAssistView`.
 
-### Displaying Response Suggestions
+### Displaying ResponseItem Suggestions
 
 Suggestions are displayed by creating an instance of [AssistSuggestion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistSuggestion.html) and assigning it to the item's [Suggestion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_Suggestion) property.
 
@@ -344,6 +344,58 @@ The [AssistItemSuggestion.Orientation](https://help.syncfusion.com/cr/maui/Syncf
  
 {% endhighlight %}
 {% endtabs %}
+
+### ResponseItem Suggestion Customization
+The `SfAIAssistView` control allows you to fully customize the appearance of the response suggestion items using the `ResponseSuggestionTemplate` property. This property lets you define a custom layout and style for the suggestion item UI.
+
+{% tabs %}
+{% highlight xaml hl_lines="11" %}
+
+  <ContentPage.Resources>
+    <ResourceDictionary>
+        <DataTemplate x:Key="suggestionTemplate">
+                ...
+        </DataTemplate>
+    </ResourceDictionary>
+</ContentPage.Resources>
+<ContentPage.Content>
+      <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                                 AssistItem = "{Binding AssistItems}"
+                                 ResponseSuggestionTemplate="{StaticResource suggestionTemplate}">
+      </syncfusion:SfSfAIAssistView>
+</ContentPage.Content>
+
+{% endhighlight %}
+
+{% highlight c# hl_lines="10" %}
+
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    SfAIAssistView sfAIAssistView;
+    public MainPage()
+    {
+        InitializeComponent();
+        sfAIAssistView = new SfAIAssistView();
+        sfAIAssistView.ResponseSuggestionTemplate = this.CreateSuggestionTemplate();
+        this.Content = sfAIAssistView;
+    }
+
+    private DataTemplate CreateSuggestionTemplate()
+    {
+        return new DataTemplate(() =>
+        {
+            ...
+        });
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Suggestion Template in .NET MAUI AI AssistView](Images/suggestions/maui-aiassistview-suggestiontemplate.png)
+
 
 ## Event and Commands
 
