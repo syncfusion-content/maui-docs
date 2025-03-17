@@ -37,7 +37,7 @@ The Date Time picker can be opened programmatically by setting the [`IsOpen`](ht
 Note: This property automatically changes to `false` when you close the dialog by clicking outside of it.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml"%}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <Grid>
     <picker:SfDateTimePicker x:Name="picker" 
@@ -54,7 +54,7 @@ Note: This property automatically changes to `false` when you close the dialog b
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs"%}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 private void Button_Clicked(object sender, EventArgs e)
 {
@@ -80,7 +80,7 @@ The Date Time picker can be opened programmatically by setting the [`IsOpen`](ht
 Note: This property is automatically changed to `false` when you close the dialog by clicking outside of the dialog.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml"%}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <Grid>
     <picker:SfDateTimePicker x:Name="picker" 
@@ -98,7 +98,7 @@ Note: This property is automatically changed to `false` when you close the dialo
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs"%}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 private void Button_Clicked(object sender, EventArgs e)
 {

@@ -88,7 +88,7 @@ Note: This property is automatically changed to `false` when you close the dialo
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml"%}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <Grid>
     <picker:SfTimePicker x:Name="timePicker" 
@@ -107,7 +107,7 @@ Note: This property is automatically changed to `false` when you close the dialo
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs"%}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 private void Button_Clicked(object sender, System.EventArgs e)
 {
