@@ -318,9 +318,32 @@ SfPopup popup = new SfPopup();
 popup.AutoCloseDuration = 3000;
 popup.IsOpen = true;
 {% endhighlight %}
-{% endtabs %}
+{% endtabs %}  
 
 ![Dismiss the popup automatically after a specified delay in the .NET MAUI Popup.](Images/popup-positioning/maui-popup-autocloseduration.gif)
+
+## Position the popup over the action bar
+
+The SfPopup can be positioned without considering the action bar by using the `SfPopup.IgnoreActionBar` property. When set to true, this allows the popup to be positioned over the action bar without any constraints.
+
+{% tabs %}
+{% highlight xaml hl_lines="2" %}
+<syncfusion:SfPopup x:Name="popup"
+                    IgnoreActionBar="True"> 
+</syncfusion:SfPopup>
+{% endhighlight %}
+{% highlight c# hl_lines="2" %}
+SfPopup popup = new SfPopup();
+popup.IgnoreActionBar = True;
+popup.Show(0,0);
+{% endhighlight %}
+{% endtabs %}
+
+![Positioning the popup without considering action bar](Images/popup-positioning/maui-popup-popsitioning-without-actionbar-consideration.png)
+
+If `IgnoreActionBar` is set to false, the popup positioning will take the action bar into account, ensuring it does not overlap.
+
+This feature is useful when you want to display the popup freely across the screen, including over the action bar.
 
 ## How to
 
@@ -691,3 +714,4 @@ Download the entire source code from GitHub [here](https://github.com/Syncfusion
 </ContentPage>
 {% endhighlight %}
 {% endtabs %}
+
