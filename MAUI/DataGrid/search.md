@@ -121,4 +121,4 @@ public class SearchHelperExt : DataGridSearchController
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid displays Search Text only in Selected Column]()
+<img alt="DataGrid displays Search Text only in Selected Column" src="Images\search\maui-datagrid-search-selected-column.png" width="404"/>
