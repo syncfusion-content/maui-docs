@@ -379,3 +379,41 @@ public class SortIconTemplate : DataTemplateSelector
 {% endtabs %}
 
 ![DataGrid with sort template selector](Images\sorting\maui-datagrid-sort-template-selector.png)
+
+## Customize the size of sort icon
+
+The size of the sort icon can be customised when the icon is loaded through `SortIconTemplate`. To implement this, please refer the following code snippet:
+
+{% tabs %}
+
+{% highlight xaml %}
+<syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}"
+                            x:Name="dataGrid"
+                            SortingMode="Multiple"
+                            >
+        <syncfusion:SfDataGrid.SortIconTemplate>
+                <DataTemplate>
+                    <Image Source="sort_down.png" HeightRequest="20" WidthRequest="20"/>
+                </DataTemplate>
+        </syncfusion:SfDataGrid.SortIconTemplate>
+</syncfusion:SfDataGrid>                           
+{% endhighlight %}
+
+{% highlight c# %}
+this.dataGrid.SortingMode = DataGridSortingMode.Multiple;
+dataGrid.SortIconTemplate = new DataTemplate(() =>
+        {
+            var imageView1 = new Image()
+            {
+                Source = "sort_down.png",
+                Aspect = Aspect.AspectFit,
+                HeightRequest = 20,
+                WidthRequest = 20,
+            };
+            return imageView1;
+        });
+{% endhighlight %}
+{% endtabs %}
+
+
+<img alt="DataGrid with sort icon size" src="Images\sorting\maui-datagrid-sort-icon-size.png" width="404">
