@@ -13,7 +13,7 @@ This section explains the ways about how overflowing items are managed - Scroll 
 
 ## Scroll Mode
 
-The Toolbar control provides support for scrolling toolbar items continuously. This can be achieved by setting the `OverflowMode` property to `Scroll`.
+The Toolbar control enables scrolling when its items extend beyond the view. By default, the `OverflowMode` property is set to `Scroll`.
 
 {% tabs %}
 
@@ -304,7 +304,7 @@ namespace ToolbarSample
 
 ## More Item Menu
 
-The Toolbar control provides support for displaying more items by setting the OverflowMode property to `MoreButton`.
+The Toolbar control displays additional items in a dropdown menu when they extend beyond the view. This can be enabled by setting the `OverflowMode` property to `MoreButton`.
 
 The following code sample demonstrates how to display more items in the overflow menu.
 
