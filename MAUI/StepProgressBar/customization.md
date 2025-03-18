@@ -195,7 +195,7 @@ public MainPage()
 {% endtabs %}
 
 ## Customize Progress Track Size for each step
-The `SfStepProgressBar` control provides customization of progress track size for each step. You can customize the height of each step progress bar using [ProgressTrackSize] property in the `StepProgressBarItem`.
+The `SfStepProgressBar` control provides customization of progress track size for each step. You can customize the height of each step progress bar using [ProgressTrackSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_ProgressTrackSize) property in the `StepProgressBarItem`.
 
 *The default value of the `ProgressTrackSize` property is 50.
 
@@ -276,8 +276,8 @@ public class ViewModel
  ![Height request support for each step in .NET MAUI SfStepProgressBar.](images/customization/maui-stepprogressbar-height-request-support-for-each-step.png)
 
  N> 
-* If the [ProgressTrackSize] property value of the StepProgressBarItem is less than 1, the height of the progress bar will be rendered using the default value.
-* Providing the [ProgressTrackSize] property value for the last step will have no effect because the last step doesn't have a progress bar.
+* If the [ProgressTrackSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_ProgressTrackSize) property value of the StepProgressBarItem is less than 1, the height of the progress bar will be rendered using the default value.
+* Providing the [ProgressTrackSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_ProgressTrackSize) property value for the last step will have no effect because the last step doesn't have a progress bar.
  
 
 ## Customize step appearance
