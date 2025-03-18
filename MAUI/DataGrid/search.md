@@ -9,7 +9,7 @@ documentation: UG
 
 # Search in MAUI DataGrid (SfDataGrid)
 
-[SfDataGrid]() control allows you to search the data displayed in the SfDataGrid. You can search the data by using [SearchController.Search]() method.
+The [SfDataGrid]() control allows you to search the data displayed within it. You can search the data using the [SearchController.Search]() method.
 
 {% tabs %}
 {% highlight c# %}
@@ -24,7 +24,7 @@ this.dataGrid.SearchController.Search(TextBox.Text);
 
 ### Filtering
 
-You can enable filter based on search by setting [SearchController.AllowFiltering]() property to true.
+The filtering can be enabled for the search results by setting the [SearchController.AllowFiltering]() property to true.
 
 {% tabs %}
 {% highlight c# %}
@@ -77,15 +77,15 @@ this.dataGrid.SearchController.ClearSearch();
 
 ## Search customization
 
-DataGrid (SfDataGrid) process the search operations in [DataGridSearchController]() class. You can change the default search behaviors by overriding `DataGridSearchController` class and set to `SfDataGrid.SearchController`.
+The `SfDataGrid` processes search operations in the [DataGridSearchController]() class. You can change the default search behaviors by creating a custom class that overrides the `DataGridSearchController` class and setting it to the `SfDataGrid.SearchController` property.
 
 {% tabs %}
 {% highlight c# %}
 
-this.datagrid.SearchController = new SearchHelperExt(this.datagrid);
-public class SearchHelperExt : DataGridSearchController
+this.datagrid.SearchController = new CustomDataGridSearchController (this.datagrid);
+public class CustomDataGridSearchController  : DataGridSearchController
 {
-    public SearchHelperExt(SfDataGrid datagrid)
+    public CustomDataGridSearchController(SfDataGrid datagrid)
         : base(datagrid)
     {
     }
@@ -94,18 +94,18 @@ public class SearchHelperExt : DataGridSearchController
 {% endhighlight %}
 {% endtabs %}
 
-### Search only selected columns
+### Search only a specific column
 
-You can search only selected columns by overriding `SearchCell` method of `DataGridSearchController`. In the `SearchCell` method, based on `MappingName` you can skip the columns that you don’t want to search. 
+You can search only a specific column by overriding the `SearchCell` method of the `DataGridSearchController`. In the `SearchCell` method, you can perform a search for the column you want to apply based on the `MappingName`.
 
-In the below code, except `CustomerID` column other columns are gets excluded from search. 
+In the code below, all columns except the `CustomerID` column are excluded from the search.
 
 {% tabs %}
 {% highlight c# %}
 
-public class SearchHelperExt : DataGridSearchController
+public class CustomDataGridSearchController : DataGridSearchController
 {
-    public SearchHelperExt(SfDataGrid datagrid)
+    public CustomDataGridSearchController(SfDataGrid datagrid)
         : base(datagrid)
     {
     }

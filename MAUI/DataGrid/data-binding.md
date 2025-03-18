@@ -65,9 +65,74 @@ this.sfDataGrid1.ItemsSource = table;
 
 ## Binding with dynamic data object
 
-The `SfDataGrid` control supports to bind [dynamic data object]().
+The `SfDataGrid` control supports binding to a [dynamic data object]().
 
-The below codes demonstrate how to bind a dynamic data object to the `SfDataGrid` in both manual and AutoGenerateColumn.
+The code examples below demonstrate how to bind a dynamic data object to the `SfDataGrid` using both manually and automatically generated columns.
+
+{% tabs %}
+{% highlight ViewModel %}
+
+public class EmployeeCollection
+{
+       
+    Random random = new Random();
+        
+    public EmployeeCollection()
+    {
+        EmployeeDetails = GetEmployeesDetails_Dynamic(200);
+    }
+    
+    #region ItemsSource
+    
+    private ObservableCollection<dynamic> _employeeDetails;
+    public ObservableCollection<dynamic> EmployeeDetails
+    {
+        get
+        {
+            return _employeeDetails;
+        }
+        set
+        {
+            _employeeDetails = value;
+            RaisePropertyChanged("EmployeeDetails");
+        }
+    }
+    
+    #endregion
+    
+    // Dynamic DataSource
+    
+    public ObservableCollection<dynamic> GetEmployeesDetails_Dynamic(int count)
+    {
+        var employees = new ObservableCollection<dynamic>();
+        for (int i = 1; i < count; i++)
+        {
+            employees.Add(GetDynamicEmployee(i));
+        }
+        return employees;
+    }
+    
+    // Dynamic Property
+    public dynamic GetDynamicEmployee(int i)
+    {
+        dynamic employee = new ExpandoObject();
+        employee.EmployeeName = employeeName[random.Next(4)];
+        employee.EmployeeID = i;
+        employee.ContactID = i + 100;
+        return employee;
+    }
+    
+    string[] employeeName = new string[]
+    {
+        "Sean Jacobson",
+        "Phyllis Allen",
+        "Marvin Allen",
+        "Michael Allen",
+    };
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 {% tabs %}
 {% highlight xaml %}
@@ -83,6 +148,7 @@ The below codes demonstrate how to bind a dynamic data object to the `SfDataGrid
                                    HeaderText="Ship Country" />
 </syncfusion:SfDataGrid.Columns>
 {% endhighlight %}
+{% endtabs %}
 
 {% tabs %}
 {% highlight xaml %}
