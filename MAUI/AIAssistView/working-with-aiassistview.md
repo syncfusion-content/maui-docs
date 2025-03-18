@@ -411,7 +411,7 @@ By utilizing the template selector, distinct templates can be assigned to all `A
 
 A template can be used to present the data in a way that makes sense for the application by using different controls. `SfAIAssistView` allows customizing the appearance of the Request view by setting the `RequestItemTemplate` property.
 
-#### Define a Custom Data Model
+#### Data Model
 
 {% tabs %}
 {% highlight c# tabtitle="FileAssistItem.cs" %}
@@ -459,7 +459,7 @@ public class FileAssistItem : AssistItem, INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-#### Data population in View Model
+#### View Model
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
@@ -531,10 +531,8 @@ public class CustomRequestTemplateSelector : RequestItemTemplateSelector
 {
     private readonly DataTemplate? requestcustomtemplate;
 
-    public SfAIAssistView? AssistView { get; set; }
     public CustomRequestTemplateSelector()
     {
-        //AssistView = sfAssistView;
         this.requestcustomtemplate = new DataTemplate(typeof(FileTemplate));
     }
 
@@ -610,7 +608,7 @@ public partial class MainPage : ContentPage
 
 A template can be used to present the data in a way that makes sense for the application by using different controls. `SfAIAssistView` allows customizing the appearance of the Response view by setting the `ResponseItemTemplate` property.
 
-#### Data population in View Model
+#### View Model
 
 {% tabs %}
 {% highlight c# %}
@@ -704,11 +702,8 @@ Create a custom class that inherits from `ResponseItemTemplateSelector`, and ove
 
 public class CustomResponseTemplateSelector : ResponseItemTemplateSelector
 {
-
     private readonly DataTemplate? reponsecustomtemplate;
 
-
-    public SfAIAssistView? AssistView { get; set; }
     public CustomResponseTemplateSelector()
     {
         this.reponsecustomtemplate = new DataTemplate(typeof(TimePickerTemplate));
