@@ -24,28 +24,75 @@ The following code sample demonstrates how to Create a Toolbar control with tool
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:ToolbarSample"
              xmlns:toolbar="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar"
              x:Class="ToolbarSample.MainPage">
-    <ContentPage.BindingContext>
-        <local:ToolbarViewModel/>
-    </ContentPage.BindingContext>
-    <StackLayout>
-        <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56" Items="{Binding ToolbarItems}">
+    <VerticalStackLayout>
+        <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56">
+            <toolbar:SfToolbar.Items>
+                <toolbar:SfToolbarItem Name="Bold"
+                            ToolTipText="Bold">
+                    <toolbar:SfToolbarItem.Icon>
+                        <FontImageSource Glyph="&#xE770;"
+                        FontFamily="MauiMaterialAssets" />
+                    </toolbar:SfToolbarItem.Icon>
+                </toolbar:SfToolbarItem>
+                <toolbar:SfToolbarItem Name="Underline"
+                            ToolTipText="Underline">
+                    <toolbar:SfToolbarItem.Icon>
+                        <FontImageSource Glyph="&#xE762;"
+                        FontFamily="MauiMaterialAssets" />
+                    </toolbar:SfToolbarItem.Icon>
+                </toolbar:SfToolbarItem>
+                <toolbar:SfToolbarItem Name="Italic"
+                            ToolTipText="Italic">
+                    <toolbar:SfToolbarItem.Icon>
+                        <FontImageSource Glyph="&#xE771;"
+                        FontFamily="MauiMaterialAssets" />
+                    </toolbar:SfToolbarItem.Icon>
+                </toolbar:SfToolbarItem>
+                <toolbar:SfToolbarItem Name="AlignLeft"
+                                    ToolTipText="Align-Left">
+                    <toolbar:SfToolbarItem.Icon>
+                        <FontImageSource Glyph="&#xE751;"
+                        FontFamily="MauiMaterialAssets" />
+                    </toolbar:SfToolbarItem.Icon>
+                </toolbar:SfToolbarItem>
+                <toolbar:SfToolbarItem Name="AlignRight"
+                                    ToolTipText="Align-Right">
+                    <toolbar:SfToolbarItem.Icon>
+                        <FontImageSource Glyph="&#xE753;"
+                        FontFamily="MauiMaterialAssets" />
+                    </toolbar:SfToolbarItem.Icon>
+                </toolbar:SfToolbarItem>
+                <toolbar:SfToolbarItem Name="AlignCenter"
+                                    ToolTipText="Align-Center">
+                    <toolbar:SfToolbarItem.Icon>
+                        <FontImageSource Glyph="&#xE752;"
+                        FontFamily="MauiMaterialAssets" />
+                    </toolbar:SfToolbarItem.Icon>
+                </toolbar:SfToolbarItem>
+                <toolbar:SfToolbarItem Name="AlignJustify"
+                                    ToolTipText="Align-Justify">
+                    <toolbar:SfToolbarItem.Icon>
+                        <FontImageSource Glyph="&#xE74F;"
+                        FontFamily="MauiMaterialAssets" />
+                    </toolbar:SfToolbarItem.Icon>
+                </toolbar:SfToolbarItem>
+            </toolbar:SfToolbar.Items>
             <toolbar:SfToolbar.ToolTipSettings>
                 <toolbar:ToolbarToolTipSettings Background="Red">
                     <toolbar:ToolbarToolTipSettings.TextStyle>
                         <toolbar:ToolbarTextStyle TextColor="Yellow"
-                                                  FontSize="18"
-                                                  FontAttributes="Italic"
-                                                  FontAutoScalingEnabled="True"
-                                                  FontFamily="OpenSansSemibold"/>
+                                    FontSize="18"
+                                    FontAttributes="Italic"
+                                    FontAutoScalingEnabled="True"
+                                    FontFamily="OpenSansSemibold"/>
                     </toolbar:ToolbarToolTipSettings.TextStyle>
                     <toolbar:ToolbarToolTipSettings.ToolTipPosition>Top</toolbar:ToolbarToolTipSettings.ToolTipPosition>
                 </toolbar:ToolbarToolTipSettings>
             </toolbar:SfToolbar.ToolTipSettings>
         </toolbar:SfToolbar>
-    </StackLayout>
+    </VerticalStackLayout>
 </ContentPage>
 
 {% endhighlight %}
@@ -61,13 +108,15 @@ namespace ToolbarSample
         public MainPage()
         {
             InitializeComponent();
+            SfToolbar toolbar = new SfToolbar();
+            toolbar.HeightRequest = 56;
+            toolbar.Items = itemCollection;
+            toolbar.ToolTipSettings = toolTipSettings;
+            this.Content = toolbar;
+        }
 
-            SfToolbar toolbar = new SfToolbar
-            {
-                HeightRequest = 56
-            };
 
-            ObservableCollection<BaseToolbarItem> itemCollection = new ObservableCollection<BaseToolbarItem>
+        ObservableCollection<BaseToolbarItem> itemCollection = new ObservableCollection<BaseToolbarItem>
             {
                 new SfToolbarItem { Name = "Bold", ToolTipText = "Bold", Icon = new FontImageSource { Glyph = "\uE770", FontFamily = "MauiMaterialAssets" } },
                 new SfToolbarItem { Name = "Underline", ToolTipText = "Underline", Icon = new FontImageSource { Glyph = "\uE762", FontFamily = "MauiMaterialAssets" } },
@@ -78,24 +127,19 @@ namespace ToolbarSample
                 new SfToolbarItem { Name = "AlignJustify", ToolTipText = "Align-Justify", Icon = new FontImageSource { Glyph = "\uE74F", FontFamily = "MauiMaterialAssets" } }
             };
 
-            toolbar.Items = itemCollection;
-            ToolbarToolTipSettings toolTipSettings = new ToolbarToolTipSettings
+        ToolbarToolTipSettings toolTipSettings = new ToolbarToolTipSettings
+        {
+            Background = Colors.Red,
+            TextStyle = new ToolbarTextStyle
             {
-                Background = Colors.Red,
-                TextStyle = new ToolbarTextStyle
-                {
-                    TextColor = Colors.Yellow,
-                    FontSize = 18,
-                    FontAttributes = FontAttributes.Italic,
-                    FontAutoScalingEnabled = true,
-                    FontFamily = "OpenSansSemibold"
-                },
-                ToolTipPosition = ToolbarRelativePosition.Top
-            };
-
-            toolbar.ToolTipSettings = toolTipSettings;
-            this.Content = toolbar;
-        }
+                TextColor = Colors.Yellow,
+                FontSize = 18,
+                FontAttributes = FontAttributes.Italic,
+                FontAutoScalingEnabled = true,
+                FontFamily = "OpenSansSemibold"
+            },
+            ToolTipPosition = ToolbarRelativePosition.Top
+        };
     }
 }
 
