@@ -112,6 +112,87 @@ public class ViewModel : INotifyPropertyChanged
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-aiassistview)
 
+### StopResponding Text
+
+The `SfAIAssistView` control allows you to set custom text for the StopResponding view using the [StopRespondingText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_StopRespondingText) property.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                               StopRespondingText="Cancel Response"/>  
+
+{% endhighlight %} 
+
+{% highlight c# hl_lines="5" %} 
+
+    SfAIAssistView sfAIAssistView; 
+    public MainPage() 
+    { 
+        InitializeComponent(); 
+        this.sfAIAssistView = new SfAIAssistView();
+        this.sfAIAssistView.StopRespondingText = "Cancel Response";
+        this.Content = sfAIAssistView; 
+    } 
+
+{% endhighlight %}
+{% endtabs %}
+
+![Stop Responding Text in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-stopresondingtext.png)
+
+### StopResponding UI Customization
+
+The `SfAIAssistView` control allows you to fully customize the Stop Responding view appearance by using the [StopRespondingTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_StopRespondingTemplate) property. This property lets you define a custom layout and style for the StopResponding UI.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="12" %}
+
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <DataTemplate x:Key="stopRespondingTemplate">
+            <Grid>
+                ...
+            </Grid>
+        </DataTemplate>
+    </ResourceDictionary>
+</ContentPage.Resources>
+<ContentPage.Content>
+      <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                                 StopRespondingTemplate="{StaticResource stopRespondingTemplate}">
+      </syncfusion:SfSfAIAssistView>
+</ContentPage.Content>
+
+{% endhighlight %}
+{% highlight c# hl_lines="10" %}
+
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    SfAIAssistView sfAIAssistView;
+    public MainPage()
+    {
+        InitializeComponent();
+        sfAIAssistView = new SfAIAssistView();
+        sfAIAssistView.StopRespondingTemplate = CreateStopRespondingViewTemplate();
+        this.Content = sfAIAssistView;
+    }
+
+    private DataTemplate CreateStopRespondingViewTemplate()
+    {
+        return new DataTemplate(() =>
+        {
+            ...
+        });
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Stop Responding Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassitview-stoprespondingtemplate.gif)
+
+
 ## Control Template
 
 The `ControlTemplate` in AI AssistView allows you to define and reuse the visual structure of a control. This flexible structure enables to fully customize the appearance and behavior of the AI AssistView. By using `ControlTemplate` with the AI AssistView, you can create a highly customized and interactive interface, as demonstrated below.
@@ -245,3 +326,485 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![EditorView Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-editorviewtemplate.png)
+
+## Send Button Customization
+
+The `SfAIAssistView` control allows you to fully customize the send button's appearance using the `RequestButtonTemplate` property. This property lets you define a custom layout and style for the send button.
+
+{% tabs %}
+{% highlight xaml hl_lines="22" %}
+
+<ContentPage.Resources>
+        <ResourceDictionary>
+            <!-- Define the RequestButtonTemplate as a static resource -->
+            <DataTemplate x:Key="RequestButtonTemplate">
+                <Grid>
+                    <Label x:Name="label"
+                           Text="&#xe791;"
+                           FontFamily="MauiMaterialAssets"
+                           FontSize="24"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                </Grid>
+            </DataTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+<ContentPage.Content>
+       <StackLayout>
+        <syncfusion:SfAIAssistView x:Name="assist"
+                                   AssistItems="{Binding AssistItems}"
+                                   Request="assist_Request"
+                                   RequestButtonTemplate="{StaticResource RequestButtonTemplate}" />
+    </StackLayout>
+</ContentPage.Content>
+
+{% endhighlight %}
+{% highlight c# hl_lines="10" %}
+
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    SfAIAssistView sfAIAssistView;
+    public MainPage()
+    {
+            InitializeComponent();
+            sfAIAssistView = new SfAIAssistView();
+            sfAIAssistView.RequestButtonTemplate = RequestButtonTemplate();
+            this.Content = sfAIAssistView;
+    }
+
+    private DataTemplate RequestButtonTemplate()
+    {
+        return new DataTemplate(() =>
+        {
+            var grid = new Grid();
+
+            var label = new Label
+            {
+                Text = "&#xe791;", // Unicode for the icon
+                FontFamily = "MauiMaterialAssets",
+                FontSize = 24,
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center
+            };
+
+            grid.Children.Add(label);
+            return grid;
+        });
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![SendButton Customization in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-SendButtonCustomization.png)
+
+## Template Customization
+
+The `SfAIAssistView` facilitates the customization of both request and response item templates according to specific requirements. This feature enhances flexibility and provides a higher degree of control over the display of items.
+
+By utilizing the template selector, distinct templates can be assigned to all `AssistItems` or to a particular item, allowing for the independent customization of both request and response items. This capability is particularly beneficial when custom item types require different visual representations, offering precise control over the layout and presentation within the assist view.
+
+### Request Item Template
+
+A template can be used to present the data in a way that makes sense for the application by using different controls. `SfAIAssistView` allows customizing the appearance of the Request view by setting the `RequestItemTemplate` property.
+
+#### Data Model
+
+{% tabs %}
+{% highlight c# tabtitle="FileAssistItem.cs" %}
+
+public class FileAssistItem : AssistItem, INotifyPropertyChanged
+{
+    private string fileName;
+
+    private string fileType;
+
+    public string FileName
+    { 
+        get
+        {
+            return fileName;
+        }
+        set
+        {
+            fileName = value;
+            OnPropertyChanged("FileName");
+        }
+    }
+    public string FileType
+    {
+        get
+        {
+            return fileType;
+        }
+        set
+        {
+            fileType = value;
+            OnPropertyChanged("FileType");
+        }
+    }
+
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    public void OnPropertyChanged(string name)
+    {
+        if (this.PropertyChanged != null)
+            this.PropertyChanged(this, new PropertyChangedEventArgs(name));
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+#### View Model
+
+{% tabs %}
+{% highlight c# tabtitle="ViewModel.cs" %}
+
+public class GettingStartedViewModel : INotifyPropertyChanged
+{
+    private ObservableCollection<IAssistItem> assistItems;
+
+
+    public GettingStartedViewModel()
+    {
+        this.assistItems = new ObservableCollection<IAssistItem>();
+        this.GenerateAssistItems();
+    }
+
+    /// <summary>
+    /// Gets or sets the collection of AssistItem of a conversation.
+    /// </summary>
+    public ObservableCollection<IAssistItem> AssistItems
+    {
+        get
+        {
+            return this.assistItems;
+        }
+
+        set
+        {
+            this.assistItems = value;
+        }
+    }
+
+    private async void GenerateAssistItems()
+    {
+            
+
+        FileAssistItem FileItem = new FileAssistItem()
+        {
+            FileName = ".NET MAUI",
+            FileType = "Document",
+            IsRequested = true
+        };
+
+        this.AssistItems.Add(FileItem);
+
+
+        await Task.Delay(1000).ConfigureAwait(true);
+
+        AssistItem responseItem2 = new AssistItem()
+        {
+            Text = "you've uploaded a file containing information about .NET MAUI.If you have any specific questions or would like to dive deeper into any part of the file, feel free to let me know!",
+            IsRequested = false
+        };
+
+        this.AssistItems.Add(responseItem2);
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Data Template Selector
+
+Create a custom class that inherits from `RequestItemTemplateSelector`, and override the `OnSelectTemplate` method to return the `DataTemplate` for that item. At runtime, the `SfAIAssistView` invokes the `OnSelectTemplate` method for each item and passes the data object as parameter.
+
+{% tabs %}
+{% highlight c# tabtitle="TemplateSelector.cs" %}
+
+public class CustomRequestTemplateSelector : RequestItemTemplateSelector
+{
+    private readonly DataTemplate? requestcustomtemplate;
+
+    public CustomRequestTemplateSelector()
+    {
+        this.requestcustomtemplate = new DataTemplate(typeof(FileTemplate));
+    }
+
+
+    protected override DataTemplate? OnSelectTemplate(object item, BindableObject container)
+    {
+        var assistitem = item as IAssistItem;
+
+        if (assistitem == null)
+        {
+            return null;
+        }
+
+        // Returns the custom data template for the file item.
+        if (item.GetType() == typeof(FileAssistItem))
+        {
+            return requestcustomtemplate;
+        }
+
+        // Returns the inbuilt data templates for the other request AssistItems.
+        else
+        {
+            return base.OnSelectTemplate(item, container);
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Applying the data template selector
+
+{% tabs %}
+{% highlight xaml hl_lines="12" %}
+
+    <ContentPage.BindingContext>
+        <local:GettingStartedViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <local:CustomRequestTemplateSelector x:Key="requestSelector"/>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                               AssistItems="{Binding AssistItems}"
+                               RequestItemTemplate="{StaticResource requestSelector}"/>
+    </ContentPage.Content>
+
+{% endhighlight %}
+{% highlight c# hl_lines="10" %}
+
+public partial class MainPage : ContentPage
+{
+    SfAIAssistView sfAIAssistView;
+    public MainPage()
+    {
+        InitializeComponent();
+        this.sfAIAssistView = new SfAIAssistView();
+        GettingStartedViewModel viewModel = new GettingStartedViewModel();
+        this.sfAIAssistView.AssistItems = viewModel.AssistItems;
+        this.sfAIAssistView.RequestItemTemplate = new CustomRequestTemplateSelector();
+        this.Content = sfAIAssistView;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![RequestItem Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-RequestTemplate.png)
+
+### Response Item Template
+
+A template can be used to present the data in a way that makes sense for the application by using different controls. `SfAIAssistView` allows customizing the appearance of the Response view by setting the `ResponseItemTemplate` property.
+
+#### View Model
+
+{% tabs %}
+{% highlight c# %}
+
+public class GettingStartedViewModel : INotifyPropertyChanged
+{
+    /// <summary>
+    /// Collection of assistItem in a conversation.
+    /// </summary>
+    private ObservableCollection<IAssistItem> assistItems;
+
+    public GettingStartedViewModel()
+    {
+        this.assistItems = new ObservableCollection<IAssistItem>();
+        this.GenerateAssistItems();
+    }
+
+    /// <summary>
+    /// Gets or sets the collection of AssistItem of a conversation.
+    /// </summary>
+    public ObservableCollection<IAssistItem> AssistItems
+    {
+        get
+        {
+            return this.assistItems;
+        }
+
+        set
+        {
+            this.assistItems = value;
+        }
+    }
+
+    private async void GenerateAssistItems()
+    {
+        AssistItem requestItem = new AssistItem()
+        {
+            Text = "Hi, I think I caught a cold.",
+            IsRequested = true
+        };
+
+        // Add the request item to the collection
+        this.AssistItems.Add(requestItem);
+
+
+        await Task.Delay(1000).ConfigureAwait(true);
+
+        AssistItem responseItem = new AssistItem()
+        {
+            Text = "Do you want me to schedule a consultation with a doctor?",
+            IsRequested = false,
+        };
+
+        // Add the response item to the collection
+        this.AssistItems.Add(responseItem);
+
+        // Adding a request item
+        AssistItem requestItem1 = new AssistItem()
+        {
+            Text = "Yes, Consultation with Dr.Harry tomorrow",
+            IsRequested = true
+        };
+
+        // Add the request item to the collection
+        this.AssistItems.Add(requestItem1);
+
+        await Task.Delay(1000).ConfigureAwait(true);
+
+        DatePickerItem datepickerItem = new DatePickerItem()
+        {
+            Text = "Choose a date for Consultation",
+            IsRequested = false,
+            SelectedDate = DateTime.Today,
+        };
+
+        // Add the response item to the collection
+        this.AssistItems.Add(datepickerItem);
+        // Generating response item
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Data Template Selector
+
+Create a custom class that inherits from `ResponseItemTemplateSelector`, and override the `OnSelectTemplate` method to return the `DataTemplate` for that item. At runtime, the `SfAIAssistView` invokes the `OnSelectTemplate` method for each item and passes the data object as parameter.
+
+{% tabs %}
+{% highlight c# tabtitle="TemplateSelector.cs" %}
+
+public class CustomResponseTemplateSelector : ResponseItemTemplateSelector
+{
+    private readonly DataTemplate? reponsecustomtemplate;
+
+    public CustomResponseTemplateSelector()
+    {
+        this.reponsecustomtemplate = new DataTemplate(typeof(TimePickerTemplate));
+    }
+
+
+    protected override DataTemplate? OnSelectTemplate(object item, BindableObject container)
+    {
+        var assistitem = item as IAssistItem;
+
+        if (assistitem == null)
+        {
+            return null;
+        }
+
+        // Returns the custom data template for the DatePickerItem item.
+        if (item.GetType() == typeof(DatePickerItem))
+        {
+            return reponsecustomtemplate;
+        }
+
+        // Returns the inbuilt data templates for the other request AssistItems.
+        else
+        {
+            return base.OnSelectTemplate(item, container);
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Applying the data template selector
+
+{% tabs %}
+{% highlight xaml hl_lines="12" %}
+
+    <ContentPage.BindingContext>
+        <local:GettingStartedViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <local:CustomResponseTemplateSelector x:Key="responseSelector"/>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                                   AssistItems="{Binding AssistItems}"
+                                   ResponseItemTemplate="{StaticResource responseSelector}"/>
+    </ContentPage.Content>
+
+{% endhighlight %}
+{% highlight c# hl_lines="10" %}
+
+public partial class MainPage : ContentPage
+{
+    SfAIAssistView sfAIAssistView;
+    public MainPage()
+    {
+        InitializeComponent();
+        this.sfAIAssistView = new SfAIAssistView();
+        GettingStartedViewModel viewModel = new GettingStartedViewModel();
+        this.sfAIAssistView.AssistItems = viewModel.AssistItems;
+        this.sfAIAssistView.ResponseItemTemplate = new CustomResponseTemplateSelector();
+        this.Content = sfAIAssistView;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![ResponseItem Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-ResponseTemplate.png)
+
+## Text Selection
+The `SfAIAssistView` allows for selecting specific phrases or the entire response or request text. It enables the platform specific selection functionalities.
+By default, text selection is disabled. To enable it, set the `AllowTextSelection` property to `true`.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           AllowTextSelection="True"/>
+
+{% endhighlight %}
+{% highlight c# hl_lines="10" %}
+
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    SfAIAssistView sfAIAssistView;
+    public MainPage()
+    {
+            InitializeComponent();
+            sfAIAssistView = new SfAIAssistView();
+            sfAIAssistView.AllowTextSelection = true;
+            this.Content = sfAIAssistView;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Text Selection in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-textselection.gif)

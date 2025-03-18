@@ -88,7 +88,7 @@ Note: This property is automatically changed to `false` when you close the dialo
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml"%}
+{% highlight xaml tabtitle="XAML" %}
 
 <Grid>
     <picker:SfPicker x:Name="picker" 
@@ -107,7 +107,7 @@ Note: This property is automatically changed to `false` when you close the dialo
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs"%}
+{% highlight c# tabtitle="C#" %}
 
 private void Button_Clicked(object sender, System.EventArgs e)
 {
@@ -120,15 +120,14 @@ private void Button_Clicked(object sender, System.EventArgs e)
 
 ### Relative view
 
-The [RelativeView] is specified in the picker's property enumeration and is used to display the picker dialog relative to a view by setting the [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Mode) property to [`RelativeDialog`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerMode.html#Syncfusion_Maui_Picker_PickerMode_RelativeDialog). You can set the position by setting the [RelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_RelativePosition) property in the [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html).
+The [RelativeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_RelativeView) is specified in the picker's property enumeration and is used to display the picker dialog relative to a view by setting the [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Mode) property to [`RelativeDialog`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerMode.html#Syncfusion_Maui_Picker_PickerMode_RelativeDialog). You can set the position by setting the [RelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_RelativePosition) property in the [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html).
 
 
-N>
-It is only applicable in `RelativeDialog mode`. If `no` relative view is specified, the picker base will be set as the `default` relative view.
+N> It is only applicable in `RelativeDialog` mode. If `no relative view` is specified, the picker base will be set as the `default` relative view.
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml"% hl_lines="5" }
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 
 <Grid>
     <picker:SfPicker x:Name="picker" 
@@ -148,7 +147,7 @@ It is only applicable in `RelativeDialog mode`. If `no` relative view is specifi
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs"% hl_lines="4" }
+{% highlight c# tabtitle="C#"% hl_lines="4" %}
 
 private void Button_Clicked(object sender, System.EventArgs e)
 {
