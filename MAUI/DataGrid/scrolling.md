@@ -106,3 +106,28 @@ namespace DataGridSample
 {% endtabs %}
 
 N> These properties do not have any effect when the datagrid has no scrollable content in its respective direction. In such cases, the scroll bar will not be displayed.
+
+## Vertical Over Scroll Mode
+
+The [SfDataGrid.VerticalOverScrollMode]() property customizes the vertical scrolling behavior in the data grid by controlling the bouncing effect when the user scrolls beyond the grid's boundaries. This property defines whether users experience a smooth, elastic pull effect or a strict stop when reaching the start or end of the scrollable content.
+
+The `VerticalOverScrollMode` property is of the type `DataGridVerticalScrollMode` and offers the following two modes:
+
+- **Bounce**: This mode enables the grid to apply a bounce effect when the user scrolls beyond the boundaries. It is the default value for the iOS platform.
+- **None**: This mode prevents the grid from applying the bounce effect. It is the default value for the Android platform.
+
+To customize the bouncing effect in the data grid, follow the code example:
+{% tabs %}
+{% highlight xaml %}
+    <sfgrid:SfDataGrid x:Name="dataGrid"                                       
+                       ItemsSource="{Binding OrderInfoCollection}"         
+                       VerticalOverScrollMode="Bounce">   
+    </sfgrid:SfDataGrid> 
+{% endhighlight %}
+
+{% highlight C# %}  
+dataGrid.VerticalOverScrollMode = DataGridVerticalOverScrollMode.Bounce;
+{% endhighlight %}
+{% endtabs %}
+
+ <img alt="Vertical-OverScroll-Mode" src="Images\scrolling\maui-datagrid-verticaloverscrollMode.gif" width="404" height="396"/>
