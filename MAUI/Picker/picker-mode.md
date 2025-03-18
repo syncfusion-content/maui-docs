@@ -88,7 +88,7 @@ Note: This property is automatically changed to `false` when you close the dialo
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml"%}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <Grid>
     <picker:SfPicker x:Name="picker" 
@@ -107,7 +107,7 @@ Note: This property is automatically changed to `false` when you close the dialo
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs"%}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 private void Button_Clicked(object sender, System.EventArgs e)
 {
@@ -128,7 +128,7 @@ It is only applicable in `RelativeDialog mode`. If `no` relative view is specifi
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml"% hl_lines="5" }
+{% highlight xaml tabtitle="MainPage.xaml"% hl_lines="5" %}
 
 <Grid>
     <picker:SfPicker x:Name="picker" 
@@ -148,7 +148,7 @@ It is only applicable in `RelativeDialog mode`. If `no` relative view is specifi
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs"% hl_lines="4" }
+{% highlight c# tabtitle="MainPage.xaml.cs"% hl_lines="4" %}
 
 private void Button_Clicked(object sender, System.EventArgs e)
 {
