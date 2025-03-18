@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in MAUI Toolbar (SfToolbar)
 
-The Toolbar supports the `Tapped`, `ItemTouchInteraction`, `ItemLongPressed`, `MoreItemsChanged`, and `MoreButtonTapped` events to interact with .NET MAUI Scheduler.
+The Toolbar supports the `Tapped`, `ItemTouchInteraction`, `ItemLongPressed`, `MoreItemsChanged`, and `MoreButtonTapped` events to interact with .NET MAUI Toolbar.
 
 ## Tapped
 
