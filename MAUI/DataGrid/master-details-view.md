@@ -7,7 +7,7 @@ The DataGrid supports displaying hierarchical data using the Master-Details View
    - Expand or collapse [DetailsViewDataGrid]() using an expander in a row or programmatically.
    - Support for unlimited nesting levels with relational data.
 
-   <img alt="DetailsView" src="Images\master-details-view\Master-Details-View1.png" width="404" height="392" />    
+   <img alt="DetailsView" src="Images\master-details-view\maui-datagrid-detailsview-main.png" width="404" height="392" />    
 
 ## Generating Master-Details View from IEnumerable
 The Master-Details View can be generated using properties of type [IEnumerable](https://learn.microsoft.com/en-us/dotnet/api/system.collections.ienumerable?view=net-7.0) in the underlying data model.
@@ -129,7 +129,7 @@ When relations are auto-generated, you can handle the [SfDataGrid.AutoGenerating
 
 Here, two relations are created from `Sales` and `Orders` collection property.
 
-  <img alt="auto-relation" src="Images\master-details-view\Master-Details-View2.png" width="404" height="392" />  
+  <img alt="auto-relation" src="Images\master-details-view\maui-datagrid-auto-generate-relation.png" width="404" height="392" />  
 
  ## Manually Defining Relations
 we can manually define the Master-Details View relation in SfDataGrid using `DetailsViewDefinition` when `AutoGenerateRelations` is set to false.
@@ -144,21 +144,21 @@ This approach provides greater control over the Master-Details structure in the 
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                        AutoGenerateRelations="False"
-                        ItemsSource="{Binding Employees}">
+                AutoGenerateRelations="False"
+                ItemsSource="{Binding Employees}">
     <syncfusion:SfDataGrid.DetailsViewDefinition>
         <!--  FirstLevelNestedGrid1 is created here  -->
         <syncfusion:DataGridViewDefinition RelationalColumn="Sales">
             <syncfusion:DataGridViewDefinition.DataGrid>
                 <syncfusion:SfDataGrid x:Name="FirstLevelNestedGrid1" />
-            </syncfusion:GridViewDefinition.DataGrid>
-        </syncfusion:GridViewDefinition>
-        <!--  FirstLevelNestedGrid2 is created here  -->
-        <syncfusion:DataGridViewDefinition RelationalColumn="Orders">
-            <syncfusion:DataGridViewDefinition.DataGrid>
-                <syncfusion:SfDataGrid x:Name="FirstLevelNestedGrid2" />
-            </syncfusion:GridViewDefinition.DataGrid>
-        </syncfusion:GridViewDefinition>
+                </syncfusion:DataGridViewDefinition.DataGrid>
+                </syncfusion:DataGridViewDefinition>
+                <!--  FirstLevelNestedGrid2 is created here  -->
+                <syncfusion:DataGridViewDefinition RelationalColumn="Products">
+                    <syncfusion:DataGridViewDefinition.DataGrid>
+                        <syncfusion:SfDataGrid x:Name="FirstLevelNestedGrid2" />
+                        </syncfusion:DataGridViewDefinition.DataGrid>
+                        </syncfusion:DataGridViewDefinition>
     </syncfusion:SfDataGrid.DetailsViewDefinition>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
@@ -168,18 +168,18 @@ dataGrid.AutoGenerateRelations = false;
 
 var gridViewDefinition1 = new DataGridViewDefinition();
 gridViewDefinition1.RelationalColumn = "Sales";
-gridViewDefinition1.DataGrid = new SfDataGrid() { Name = "FirstLevelNestedGrid1", AutoGenerateColumns = true };
+gridViewDefinition1.DataGrid = new SfDataGrid() { Name = "FirstLevelNestedGrid1"};
 
 var gridViewDefinition2 = new DataGridViewDefinition();
-gridViewDefinition2.RelationalColumn = "Orders";
-gridViewDefinition2.DataGrid = new SfDataGrid() { Name = "FirstLevelNestedGrid2", AutoGenerateColumns = true };
+gridViewDefinition2.RelationalColumn = "Products";
+gridViewDefinition2.DataGrid = new SfDataGrid() { Name = "FirstLevelNestedGrid2"};
 
 dataGrid.DetailsViewDefinition.Add(gridViewDefinition1);
 dataGrid.DetailsViewDefinition.Add(gridViewDefinition2);
 {% endhighlight %}
 {% endtabs %}
 
- <img alt="auto-relation" src="Images\master-details-view\Master-Details-View3.png" width="404" height="392" /> 
+ <img alt="auto-relation" src="Images\master-details-view\maui-datagrid-manually-generate-relation.png" width="404" height="392" /> 
 
  In the same way, we can define relations for first level nested grids by defining relations to the ViewDefinition.DataGrid of first level nested grid.
 
@@ -229,7 +229,7 @@ dataGrid.DetailsViewDefinition.Add(gridViewDefinition1);
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="auto-relation" src="Images\master-details-view\Master-Details-View4.png" width="404" height="392" /> 
+<img alt="auto-relation" src="Images\master-details-view\maui-datagrid-manual-generate-relation2.png" width="404" height="392" /> 
 
 ## Generating Master-Details View from DataTable
 A Master-Details View can be created using [DataTable](https://learn.microsoft.com/en-us/dotnet/api/system.data.datatable?view=net-6.0) when a [DataRelation](https://learn.microsoft.com/en-us/dotnet/api/system.data.datarelation?view=net-7.0) is established between two tables in the underlying [DataSet](https://learn.microsoft.com/en-us/dotnet/api/system.data.dataset?view=net-7.0).
@@ -623,7 +623,7 @@ this.dataGrid.AutoGeneratingRelations += DataGrid_AutoGeneratingRelations;
  {% endhighlight %}
 {% endtabs %}
 
-<img alt="auto-relation-DataTable" src="Images\master-details-view\Header-Style.png" width="404" height="392" /> 
+<img alt="auto-relation-DataTable" src="Images\master-details-view\maui-datagrid-header-color.png" width="404" height="392" /> 
 
 ### Hiding header row of Master-Details View
 
@@ -650,7 +650,7 @@ FirstLevelNestedGrid.HeaderRowHeight = 0;
  {% endhighlight %}
 {% endtabs %}
 
-<img alt="auto-relation-DataTable" src="Images\master-details-view\Header-RowHeight.png" width="404" height="392" /> 
+<img alt="auto-relation-DataTable" src="Images\master-details-view\maui-datagrid-header-rowheight.png" width="404" height="392" /> 
 
 
 ### Customizing padding of the DetailsViewDataGrid
@@ -669,7 +669,7 @@ this.dataGrid.DetailsViewPadding = new Thickness(15);
  {% endhighlight %}
 {% endtabs %}
 
-<img alt="auto-relation-DataTable" src="Images\master-details-view\DetailsViewPadding.png" width="404" height="392" /> 
+<img alt="auto-relation-DataTable" src="Images\master-details-view\maui-datagrid-detailsview-padding.png" width="404" height="392" /> 
 
 ### Customize ExpanderColumn width
 You can customize the width of ExpanderColumn in SfDataGrid by using [ExpanderColumnWidth]() property as like below.
@@ -686,7 +686,7 @@ this.dataGrid.ExpanderColumnWidth = 50;
  {% endhighlight %}
 {% endtabs %}
 
-<img alt="auto-relation-DataTable" src="Images\master-details-view\ExpanderColumnWidth.png" width="404" height="392" /> 
+<img alt="auto-relation-DataTable" src="Images\master-details-view\maui-datagrid-expander-column-width.png" width="404" height="392" /> 
 
 ## Expanding and collapsing the DetailsViewDataGrid programmatically
 SfDataGrid allows you to expand or collapse the [DetailsViewDataGrid]() programmatically in different ways.
