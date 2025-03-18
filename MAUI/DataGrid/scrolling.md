@@ -51,6 +51,25 @@ this.dataGrid.ScrollToColumnIndex(4, ScrollToPosition.MakeVisible, true);
 {% endhighlight %}
 {% endtabs %}
 
+## Diagonal scrolling
+
+By default, the `SfDataGrid` allows both vertical and horizontal scrolling simultaneously (diagonal scrolling). By setting [SfDataGrid.AllowDiagonalScrolling]() to false, you ensure that scrolling happens in only one direction at a time, either horizontally or vertically.
+
+The following code snippets demonstrate how to disable diagonal scrolling:
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding OrderInfoCollection}"
+                           AllowDiagonalScrolling="False">
+  </syncfusion:SfDataGrid>
+{% endhighlight %}
+
+{% highlight C# %}  
+this.dataGrid.AllowDiagonalScrolling = false;
+{% endhighlight %}
+{% endtabs %}
+
 ## Scrollbar Visibility
 
 The visibility of the horizontal and vertical scrollbars can be customized using the [SfDataGrid.HorizontalScrollBarVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_HorizontalScrollBarVisibilityProperty) and [SfDataGrid.VerticalScrollBarVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_VerticalScrollBarVisibilityProperty) properties. By default, the visibility of both the horizontal and vertical scrollbars is set to `ScrollBarVisibility.Default`.
