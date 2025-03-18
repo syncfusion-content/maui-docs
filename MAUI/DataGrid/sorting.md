@@ -382,7 +382,7 @@ public class SortIconTemplate : DataTemplateSelector
 
 ## Customize the size of sort icon
 
-The size of the sort icon can be customised when the icon is loaded through `SortIconTemplate`. To implement this, please refer the following code snippet:
+The size of the sort icon can be customized when the icon is loaded through `SortIconTemplate` by setting the `HeightRequest` and `WidthRequest`. To implement this, please refer the following code snippet:
 
 {% tabs %}
 

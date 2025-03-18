@@ -652,7 +652,7 @@ public class ExpandCollapseTemplate : DataTemplateSelector
 
 ## Customize the size of group icon
 
-The size of the group icon can be customised when the icon is loaded through `GroupExpandCollapseTemplate`. To implement this, please refer the following code snippet:
+The size of the group icon can be customized when the icon is loaded through `GroupExpandCollapseTemplate` by setting the `HeightRequest` and `WidthRequest`. To implement this, please refer the following code snippet:
 
 {% tabs %}
 
