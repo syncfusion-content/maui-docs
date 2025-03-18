@@ -48,9 +48,42 @@ this.dataGrid.SearchController.AllowCaseSensitiveSearch = true;
 {% endhighlight %}
 {% endtabs %}
 
+## Search with pattern matching
+
+You can customize the type of search for the `SearchController` by using the [SearchType]() property. The available search types are: `StartsWith`, `Contains` and `EndsWith`. The below code snippet demonstrates how to set the search type as `StartsWith`.
+
+{% tabs %}
+{% highlight c# %}
+
+this.datagrid.SearchController.SearchType = DataGridSearchType.StartsWith;
+
+{% endhighlight %}
+{% endtabs %}
+
+## Customize the appearance of highlight text
+
+You can apply the style for a searched text color, background color and search highlighted text color, background color by using [SearchTextColor](), [SearchTextBackground](), [SearchHighlightTextColor](), [SearchHighlightTextBackground]() in `SfDataGrid.DefaultStyle`.
+
+{% tabs %}
+{% highlight Xaml %}
+
+<ContentPage.Content>
+    <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}">
+        <syncfusion:SfDataGrid.DefaultStyle>
+            <syncfusion:DataGridStyle SearchTextColor="Black" 
+                                    SearchTextBackground="LightBlue" 
+                                    SearchHighlightTextColor="Black" 
+                                    SearchHighlightTextBackground="LightGreen" />
+        </syncfusion:SfDataGrid.DefaultStyle>
+    </syncfusion:SfDataGrid>
+</ContentPage.Content>
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Navigating cells based on search text
 
-The SfDataGrid allows navigation between the search results programmatically using the S[SearchController.FindNext]() and [SearchController.FindPrevious]() methods.
+The SfDataGrid allows navigation between the search results programmatically using the [SearchController.FindNext]() and [SearchController.FindPrevious]() methods.
 
 {% tabs %}
 {% highlight c# %}
@@ -122,3 +155,15 @@ public class CustomDataGridSearchController : DataGridSearchController
 {% endtabs %}
 
 <img alt="DataGrid displays Search Text only in Selected Column" src="Images\search\maui-datagrid-search-selected-column.png" width="404"/>
+
+## Obtain the search records
+
+You can get the records by using the [GetSearchRecords]() method of the `DataGridSearchController`. This method returns a list of search records. The below code snippet demonstrates how to get the search records.
+
+{% tabs %}
+{% highlight c# %}
+
+var records = this.datagrid.SearchController.GetSearchRecords();
+
+{% endhighlight %}
+{% endtabs %}
