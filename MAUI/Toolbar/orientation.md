@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Orientation in MAUI Toolbar Control | Syncfusion®
-description: Learn here about Orientation support in Syncfusion® MAUI Toolbar (SfToolbar) and more.
+description: Learn about Orientation support in Syncfusion® MAUI Toolbar (SfToolbar) to arrange toolbar items in a row or column.
 platform: MAUI
 control: Toolbar (SfToolbar)
 documentation: ug
