@@ -60,7 +60,7 @@ this.Content = picker;
 The [BlackoutTimes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_BlackoutTimes) property in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html) component enables you to limit the selection of certain times. You can specify a set of times to disable, preventing users from choosing those times. This feature is helpful for managing availability, such as excluding specific hours of the day.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <picker:SfTimePicker x:Name="picker">
     <picker:SfTimePicker.BlackoutTimes>
@@ -76,7 +76,7 @@ The [BlackoutTimes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.S
 </picker:SfTimePicker>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="2" %}
+{% highlight c# tabtitle="C#" %}
 
 SfTimePicker picker = new SfTimePicker();
 picker.BlackoutTimes.Add(new TimeSpan(12, 28, 0));
