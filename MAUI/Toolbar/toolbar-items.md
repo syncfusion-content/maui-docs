@@ -574,7 +574,7 @@ namespace ToolbarSample
 
 The control provides an option to place the text in the toolbar items using the `TextPosition` property. The text can be placed on the left, right, top, and bottom of the toolbar items.
 
-The following code sample demonstrates how to Display Toolbar items with seperator item of the control.
+The following code sample demonstrates how to Display Toolbar items with separator item of the control.
 
 {% tabs %}
 
@@ -691,11 +691,11 @@ namespace ToolbarSample
 
 {% endtabs %}
 
-## Seperator View
+## Separator View
 
 The control provides an option to add a separator view between the toolbar items using the `SeparatorView` property.
 
-The following code sample demonstrates how to Display Toolbar items with seperator item of the control.
+The following code sample demonstrates how to Display Toolbar items with separator item of the control.
 
 {% tabs %}
 
