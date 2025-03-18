@@ -1,3 +1,13 @@
+---
+layout: post
+title: Master Details View in .NET MAUI DataGrid control | Syncfusion®
+description: Learn all about Master Details View support in Syncfusion® .NET MAUI DataGrid (SfDataGrid) control, its elements, and more here.
+platform: MAUI
+control: SfDataGrid
+documentation: UG
+keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui DetailsViewDataGrid, maui AutoGenerateRelations
+---
+
 # Master Details View in Maui DataGrid (SfDataGrid)
 
 The DataGrid supports displaying hierarchical data using the Master-Details View, allowing you to represent parent-child relationships in a structured format. This feature enables the nesting of multiple levels of related data within the grid.
