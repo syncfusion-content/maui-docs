@@ -280,7 +280,6 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 {% endtabcontent %}
-{% tabcontent Visual Studio Code %}
 
 ## Adding Toolbar items
 
