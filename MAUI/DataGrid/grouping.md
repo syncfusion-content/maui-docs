@@ -649,3 +649,50 @@ public class ExpandCollapseTemplate : DataTemplateSelector
 {% endtabs %}
 
 ![DataGrid with template selector](Images\Grouping\maui-datagrid-template-selector.gif)
+
+## Customize the size of group icon
+
+The size of the group icon can be customized when the icon is loaded through `GroupExpandCollapseTemplate` by setting the `HeightRequest` and `WidthRequest`. To implement this, please refer the following code snippet:
+
+{% tabs %}
+
+{% highlight xaml %}
+<syncfusion:SfDataGrid VerticalOptions="FillAndExpand"
+                            HorizontalOptions="FillAndExpand"
+                            ItemsSource="{Binding OrderInfoCollection}"
+                            x:Name="dataGrid"
+                            GroupingMode="Multiple"
+                            AllowGroupExpandCollapse="True"
+                            AutoGenerateColumnsMode="None"
+                            >
+        <syncfusion:SfDataGrid.GroupExpandCollapseTemplate>
+            <DataTemplate>
+                <Image Source="downward_icon.png" HeightRequest="20" WidthRequest="20"/>
+            </DataTemplate>
+        </syncfusion:SfDataGrid.GroupExpandCollapseTemplate>
+        
+        <syncfusion:SfDataGrid.GroupColumnDescriptions>
+            <syncfusion:GroupColumnDescription ColumnName="ShipCountry" />
+            <syncfusion:GroupColumnDescription ColumnName="CustomerID" />
+        </syncfusion:SfDataGrid.GroupColumnDescriptions>
+</syncfusion:SfDataGrid>                           
+{% endhighlight %}
+
+{% highlight c# %}
+this.dataGrid.GroupingMode = GroupingMode.Multiple;
+this.dataGrid.AllowGroupExpandCollapse = true;
+dataGrid.GroupExpandCollapseTemplate = new DataTemplate(() =>
+        {
+            var imageView1 = new Image()
+            {
+                Source = "downward_icon.png",
+                Aspect = Aspect.AspectFit,
+                HeightRequest = 20,
+                WidthRequest = 20,
+            };
+            return imageView1;
+        });
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="DataGrid with group icon size" src="Images\grouping\maui-datagrid-group-icon-size.png" width="404">
