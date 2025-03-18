@@ -1091,7 +1091,7 @@ public MainPage()
 
 ![Text Selection style in .NET MAUI AI AssistView](images/styles/maui-aiassistview-styles-textselection.png)
 
-## Common Suggestions
+## Common Suggestions styling
 
 To style the common suggestion view based on its appearance, set values to the in-built keys in the resource dictionary.
 
