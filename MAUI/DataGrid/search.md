@@ -14,7 +14,7 @@ The [SfDataGrid]() control allows you to search the data displayed within it. Yo
 {% tabs %}
 {% highlight c# %}
 
-this.dataGrid.SearchController.Search(TextBox.Text);
+this.dataGrid.SearchController.Search(entry.Text);
 
 {% endhighlight %}
 {% endtabs %}
@@ -30,7 +30,7 @@ The filtering can be enabled for the search results by setting the [SearchContro
 {% highlight c# %}
 
 this.dataGrid.SearchController.AllowFiltering = true;
-this.dataGrid.SearchController.Search(TextBox.Text);
+this.dataGrid.SearchController.Search(entry.Text);
 
 {% endhighlight %}
 {% endtabs %}
@@ -50,7 +50,7 @@ this.dataGrid.SearchController.AllowCaseSensitiveSearch = true;
 
 ## Navigating cells based on search text
 
-You can navigate to the cells contains the SearchText using [SearchController.FindNext]() and [SearchController.FindPrevious]() methods.
+The SfDataGrid allows navigation between the search results programmatically using the S[SearchController.FindNext]() and [SearchController.FindPrevious]() methods.
 
 {% tabs %}
 {% highlight c# %}
@@ -65,7 +65,7 @@ this.dataGrid.SearchController.FindPrevious("SearchText");
 
 ## Clear Search
 
-You can clear the search by calling the [SearchController.ClearSearch]() method. 
+The search can be cleared by using the [SearchController.ClearSearch]() method.
 
 {% tabs %}
 {% highlight c# %}
