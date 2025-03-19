@@ -1089,7 +1089,7 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-![Text Selection style in .NET MAUI AI AssistView](images/styles/maui-aiassistview-styles-textselection.png)
+![Text Selection style in .NET MAUI AI AssistView](Images/styles/maui-aiassistview-styles-textselection.png)
 
 ## Common Suggestions styling
 
@@ -1131,6 +1131,7 @@ To style the common suggestion view based on its appearance, set values to the i
 <tr>
 <td> SfAIAssistViewHeaderSuggestionItemFontAttribute </td>
 <td> Font attributes of an item in the common suggestions. </td>
+</tr>
 </table>
 
 {% tabs %}
@@ -1179,4 +1180,4 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-![Common suggestion style in .NET MAUI AI AssistView](images/styles/maui-aiassistview-styles-commonsuggestion.png)
+![Common suggestion style in .NET MAUI AI AssistView](Images/styles/maui-aiassistview-styles-commonsuggestion.png)

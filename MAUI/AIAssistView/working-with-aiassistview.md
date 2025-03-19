@@ -117,7 +117,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/getting-started
 The `SfAIAssistView` control allows you to set custom text for the StopResponding view using the [StopRespondingText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_StopRespondingText) property.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml hl_lines="2" %}
 
     <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                                StopRespondingText="Cancel Response"/>  
@@ -145,7 +145,7 @@ public MainPage()
 The `SfAIAssistView` control allows you to fully customize the Stop Responding view appearance by using the [StopRespondingTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_StopRespondingTemplate) property. This property lets you define a custom layout and style for the StopResponding UI.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="12" %}
+{% highlight xaml hl_lines="12" %}
 
 <ContentPage.Resources>
     <ResourceDictionary>
@@ -819,7 +819,7 @@ The `SfAIAssistView` allows for selecting specific phrases or the entire respons
 By default, text selection is disabled. To enable it, set the `AllowTextSelection` property to `true`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml hl_lines="2" %}
 
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                            AllowTextSelection="True"/>
