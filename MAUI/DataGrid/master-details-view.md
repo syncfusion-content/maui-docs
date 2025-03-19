@@ -607,7 +607,7 @@ this.dataGrid.CollapseDetailsViewAt(0);
 
 ### DetailsViewLoading
 
-The [DetailsViewLoading]() event is triggered when the `DetailsViewDataGrid` is loaded into the view. This can happen during `expanding` a record. 
+The [DetailsViewLoading]() event is triggered when the `DetailsViewDataGrid` is loaded into the view.
 
 {% tabs %}
 {% highlight c# %}
@@ -622,7 +622,7 @@ private void DataGrid_DetailsViewLoading(object? sender, DataGridDetailsViewLoad
 
 
 ### DetailsViewUnloading
-The [DetailsViewUnLoading]() event occurs when the `DetailsViewDataGrid` is removed from the view. This can happen when `collapsing` a record.
+The [DetailsViewUnLoading]() event occurs when the `DetailsViewDataGrid` is removed from the view. 
 
 {% tabs %}
 {% highlight c# %}
