@@ -381,3 +381,5 @@ namespace Rotator
 ![NavigationStripPosition](images/NavigationStripPosition.png)
 
 N> You can find the getting started sample of .NET MAUI SfRotator from this [link.](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-Rotator)
+
+N> You can refer to our [.NET MAUI Rotator](https://www.syncfusion.com/maui-controls/maui-rotator) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Rotator Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Rotator) that shows you how to render and configure the Rotator in .NET MAUI.
