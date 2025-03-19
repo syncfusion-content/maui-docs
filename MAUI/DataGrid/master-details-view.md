@@ -724,7 +724,7 @@ private void DataGrid_DetailsViewCollapsing(object? sender, DataGridDetailsViewC
 ## Master-Details View Limitations
 The `Master-Details View` in [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.html) has certain limitations that should be considered while using this feature:
 
-1. The `AutoGenerateColumnsMode.ResetAll` is not supported in `DetailsViewDataGrid`. Instead, it works based on `Reset`.
-2. `Data Virtualization` is not supported in the Master-Details View for `Android, IOS, Mac platform`.
-3. `Freeze Pane` are not available for the Master-Details View.
-4. Properties such as `SelectionMode, NavigationMode, and DetailsViewPadding` are inherited from the parent grid. This means both the parent `SfDataGrid` and the `DetailsViewDataGrid` must share the same values for these properties.
+ - The Master-Details View is released with basic functionalities. Currently, both the `SfDataGrid` and `DetailsViewDataGrid` do not support all existing features of `SfDataGrid` when the Master-Details View is enabled. Full support is planned for the 2025 Volume 2 Main Release.
+ - Virtualization is not supported for `DetailsViewDataGrid` on Android, iOS, and Mac platforms. As a result, there may be delays in loading the details view data grid due to the initial loading of all rows and columns.
+ - The `Freeze Panes` feature is not applicable to the Master-Details View.
+ - Properties such as `SelectionMode`, `NavigationMode`, and `DetailsViewPadding` must have identical values in both `SfDataGrid` and `DetailsViewDataGrid`.
