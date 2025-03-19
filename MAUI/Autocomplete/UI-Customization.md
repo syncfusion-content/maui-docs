@@ -24,6 +24,7 @@ You can prompt the user with any information by using the [Placeholder](https://
 
 <editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="250"
+                        HeightRequest="50"
                         Placeholder="Select a social media"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
@@ -32,7 +33,13 @@ You can prompt the user with any information by using the [Placeholder](https://
 {% endhighlight %}
 {% highlight C# %}
 
+SfAutocomplete autocomplete = new SfAutocomplete();
+autocomplete.WidthRequest = 250;
+autocomplete.HeightRequest = 50;
 autocomplete.Placeholder = "Select a social media";
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
+autocomplete.DisplayMemberPath = "Name";
+autocomplete.TextMemberPath = "Name";
 
 {% endhighlight %}
 {% endtabs %}
@@ -50,6 +57,7 @@ The placeholder text color can be changed by using the [PlaceholderColor](https:
 
 <editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="250"
+                        HeightRequest="50"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
@@ -59,6 +67,13 @@ The placeholder text color can be changed by using the [PlaceholderColor](https:
 {% endhighlight %}
 {% highlight C# %}
 
+SfAutocomplete autocomplete = new SfAutocomplete();
+autocomplete.WidthRequest = 250;
+autocomplete.HeightRequest = 50;
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
+autocomplete.DisplayMemberPath = "Name";
+autocomplete.TextMemberPath = "Name";
+autocomplete.Placeholder = "Select a social media";
 autocomplete.PlaceholderColor = Colors.Red;
 
 {% endhighlight %}
@@ -77,6 +92,7 @@ The clear button icon color can be changed by using the [ClearButtonIconColor](h
 
 <editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="250"
+                        HeightRequest="50"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
@@ -87,6 +103,14 @@ The clear button icon color can be changed by using the [ClearButtonIconColor](h
 {% endhighlight %}
 {% highlight C# %}
 
+SfAutocomplete autocomplete = new SfAutocomplete();
+autocomplete.WidthRequest = 250;
+autocomplete.HeightRequest = 50;
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
+autocomplete.DisplayMemberPath = "Name";
+autocomplete.TextMemberPath = "Name";
+autocomplete.Placeholder = "Select a social media";
+autocomplete.PlaceholderColor = Colors.Red;
 autocomplete.ClearButtonIconColor = Colors.Red;
 
 {% endhighlight %}
@@ -105,6 +129,7 @@ The Autocomplete border color can be changed by using the [`Stroke`](https://hel
 
 <editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="250"
+                        HeightRequest="50"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
@@ -115,6 +140,14 @@ The Autocomplete border color can be changed by using the [`Stroke`](https://hel
 {% endhighlight %}
 {% highlight C# %}
 
+SfAutocomplete autocomplete = new SfAutocomplete();
+autocomplete.WidthRequest = 250;
+autocomplete.HeightRequest = 50;
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
+autocomplete.DisplayMemberPath = "Name";
+autocomplete.TextMemberPath = "Name";
+autocomplete.Placeholder = "Select a social media";
+autocomplete.PlaceholderColor = Colors.Red;
 autocomplete.Stroke = Colors.Red;
 
 {% endhighlight %}
@@ -133,6 +166,7 @@ The [SelectionTextHighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion
 
 <editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="250"
+                        HeightRequest="50"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
@@ -143,6 +177,13 @@ The [SelectionTextHighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion
 
 {% highlight C# %}
 
+SfAutocomplete autocomplete = new SfAutocomplete();
+autocomplete.WidthRequest = 250;
+autocomplete.HeightRequest = 50;
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
+autocomplete.DisplayMemberPath = "Name";
+autocomplete.TextMemberPath = "Name";
+autocomplete.Placeholder = "Enter Media";
 autocomplete.SelectionTextHighlightColor = Colors.Green;
 
 {% endhighlight %}
@@ -161,6 +202,7 @@ N> If the `MaxDropDownHeight` is too small compared to the populated items, the 
 
 <editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="250"
+                        HeightRequest="50"
                         MaxDropDownHeight = "100"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
@@ -169,7 +211,13 @@ N> If the `MaxDropDownHeight` is too small compared to the populated items, the 
 {% endhighlight %}
 {% highlight C# %}
 
+SfAutocomplete autocomplete = new SfAutocomplete();
+autocomplete.WidthRequest = 250;
+autocomplete.HeightRequest = 50;
 autocomplete.MaxDropDownHeight = 100;
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
+autocomplete.DisplayMemberPath = "Name";
+autocomplete.TextMemberPath = "Name";
 
 {% endhighlight %}
 {% endtabs %}
@@ -354,6 +402,7 @@ DropDown items can be customized using the [DropDownItemFontAttributes](https://
 
 <editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="250"
+                        HeightRequest="50"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
@@ -367,6 +416,13 @@ DropDown items can be customized using the [DropDownItemFontAttributes](https://
 
 {% highlight C# %}
 
+SfAutocomplete autocomplete = new SfAutocomplete();
+autocomplete.WidthRequest = 250;
+autocomplete.HeightRequest = 50;
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
+autocomplete.DisplayMemberPath = "Name";
+autocomplete.TextMemberPath = "Name";
+autoComplete.Placeholder = "Enter Media";
 autocomplete.DropDownItemFontAttributes = FontAttributes.Italic;
 autocomplete.DropDownItemFontFamily = "OpenSansSemibold";
 autocomplete.DropDownItemFontSize = 16;
@@ -386,6 +442,7 @@ The [DropDownBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 
 <editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="250"
+                        HeightRequest="50"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
@@ -396,6 +453,13 @@ The [DropDownBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 
 {% highlight C# %}
 
+SfAutocomplete autocomplete = new SfAutocomplete();
+autocomplete.WidthRequest = 250;
+autocomplete.HeightRequest = 50;
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
+autocomplete.DisplayMemberPath = "Name";
+autocomplete.TextMemberPath = "Name";
+autoComplete.Placeholder = "Enter Media";
 autocomplete.DropDownBackground = Colors.YellowGreen;
 
 {% endhighlight %}
@@ -412,6 +476,7 @@ The [SelectedDropDownItemBackground](https://help.syncfusion.com/cr/maui/Syncfus
 
 <editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="250"
+                        HeightRequest="50"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
@@ -422,7 +487,14 @@ The [SelectedDropDownItemBackground](https://help.syncfusion.com/cr/maui/Syncfus
 
 {% highlight C# %}
 
-autocomplete.SelectedDropDownItemBackground = Colors.YellowGreen;
+SfAutocomplete autocomplete = new SfAutocomplete();
+autocomplete.WidthRequest = 250;
+autocomplete.HeightRequest = 50;
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
+autocomplete.DisplayMemberPath = "Name";
+autocomplete.TextMemberPath = "Name";
+autoComplete.Placeholder = "Enter Media";
+autocomplete.SelectedDropDownItemBackground = Colors.LightSeaGreen;
 
 {% endhighlight %}
 {% endtabs %}
@@ -438,6 +510,7 @@ The [DropDownStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 
 <editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="250"
+                        HeightRequest="50"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
@@ -448,6 +521,13 @@ The [DropDownStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 
 {% highlight C# %}
 
+SfAutocomplete autocomplete = new SfAutocomplete();
+autocomplete.WidthRequest = 250;
+autocomplete.HeightRequest = 50;
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
+autocomplete.DisplayMemberPath = "Name";
+autocomplete.TextMemberPath = "Name";
+autoComplete.Placeholder = "Enter Media";
 autocomplete.DropDownStroke = Colors.DarkOrange;
 
 {% endhighlight %}
@@ -464,6 +544,7 @@ The [DropDownStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
 <editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="250"
+                        HeightRequest="50"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
@@ -475,6 +556,14 @@ The [DropDownStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
 {% highlight C# %}
 
+SfAutocomplete autocomplete = new SfAutocomplete();
+autocomplete.WidthRequest = 250;
+autocomplete.HeightRequest = 50;
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
+autocomplete.DisplayMemberPath = "Name";
+autocomplete.TextMemberPath = "Name";
+autoComplete.Placeholder = "Enter Media";
+autoComplete.DropDownStroke = Colors.DarkOrange;
 autocomplete.DropDownStrokeThickness = 5;
 
 {% endhighlight %}
@@ -491,6 +580,7 @@ The [DropDownItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 
 <editors:SfAutocomplete x:Name="autocomplete"
                         WidthRequest="250"
+                        HeightRequest="50"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name"
@@ -501,6 +591,13 @@ The [DropDownItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 
 {% highlight C# %}
 
+SfAutocomplete autocomplete = new SfAutocomplete();
+autocomplete.WidthRequest = 250;
+autocomplete.HeightRequest = 50;
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
+autocomplete.DisplayMemberPath = "Name";
+autocomplete.TextMemberPath = "Name";
+autoComplete.Placeholder = "Enter Media";
 autocomplete.DropDownItemHeight = 80;
 
 {% endhighlight %}
@@ -525,14 +622,23 @@ The drop-down that shows the filtered items will be placed automatically based o
 {% highlight xaml %}
 
  <editors:SfAutocomplete x:Name="autocomplete"
-                         WidthRequest="300"                  
+                         WidthRequest="300"
+                         HeightRequest="50"                  
                          ItemsSource="{Binding SocialMedias}"
+                         DisplayMemberPath="Name"
+                         TextMemberPath="Name"
                          DropDownPlacement="Top"/>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
+SfAutocomplete autocomplete = new SfAutocomplete();
+autocomplete.WidthRequest = 300;
+autocomplete.HeightRequest = 50;
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
+autocomplete.DisplayMemberPath = "Name";
+autocomplete.TextMemberPath = "Name";
 autocomplete.DropDownPlacement = DropDownPlacement.Top;
 
 {% endhighlight %}
@@ -549,14 +655,23 @@ The autocomplete enables the user to provide padding for the items inside dropdo
 {% highlight xaml %}
 
    <editors:SfAutocomplete x:Name="autocomplete"
-                           WidthRequest="300"                          
+                           WidthRequest="300"
+                           HeightRequest="50"                          
                            ItemsSource="{Binding SocialMedias}"
+                           DisplayMemberPath="Name"
+                           TextMemberPath="Name"
                            ItemPadding="10,20,0,0"/>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
+SfAutocomplete autocomplete = new SfAutocomplete();
+autocomplete.WidthRequest = 300;
+autocomplete.HeightRequest = 50;
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
+autocomplete.DisplayMemberPath = "Name";
+autocomplete.TextMemberPath = "Name";
 autocomplete.ItemPadding = new Thickness(10,20,0,0);
 
 {% endhighlight %}
@@ -573,14 +688,23 @@ The `DropdownWidth` property is used to modify the Width of the dropdown.
 {% highlight xaml %}
 
     <editors:SfAutocomplete x:Name="autocomplete"
-                            WidthRequest="300"                            
-                            ItemsSource="{Binding SocialMedias}"                           
+                            WidthRequest="300"
+                            HeightRequest="50"                            
+                            ItemsSource="{Binding SocialMedias}"
+                            DisplayMemberPath="Name"
+                            TextMemberPath="Name"                           
                             DropdownWidth="400"/>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
+SfAutocomplete autocomplete = new SfAutocomplete();
+autocomplete.WidthRequest = 300;
+autocomplete.HeightRequest = 50;
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
+autocomplete.DisplayMemberPath = "Name";
+autocomplete.TextMemberPath = "Name";
 autocomplete.DropdownWidth = 400;
 
 {% endhighlight %}
@@ -599,14 +723,23 @@ Suggestion box can be shown whenever the control receives focus using the `ShowS
 {% highlight xaml %}
 
       <editors:SfAutocomplete x:Name="autocomplete"
-                              WidthRequest="300"                            
-                              ItemsSource="{Binding SocialMedias}"                           
+                              WidthRequest="300"
+                              HeightRequest="50"                            
+                              ItemsSource="{Binding SocialMedias}"
+                              DisplayMemberPath="Name"
+                              TextMemberPath="Name"                           
                               ShowSuggestionsOnFocus="True"/>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
+SfAutocomplete autocomplete = new SfAutocomplete();
+autocomplete.WidthRequest = 300;
+autocomplete.HeightRequest = 50;
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
+autocomplete.DisplayMemberPath = "Name";
+autocomplete.TextMemberPath = "Name";
 autocomplete.ShowSuggestionsOnFocus = true;
 
 {% endhighlight %}
@@ -1005,6 +1138,9 @@ Completed event can be subscribed in C# also:
 {% tabs %}
 {% highlight C# %}
 
+    SfAutocomplete autocomplete = new SfAutocomplete();
+    autocomplete.WidthRequest = 280;
+    autoComplete.HeightRequest = 34;
     autoComplete.Completed+=autoComplete_Completed;
 
 {% endhighlight %}
@@ -1039,7 +1175,12 @@ The [DropDownOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.S
 
 {% highlight c# %}
 
-    SfAutocomplete autoComplete = new SfAutocomplete();
+    SfAutocomplete autocomplete = new SfAutocomplete();
+    autocomplete.WidthRequest = 350;
+    autoComplete.HeightRequest = 50;
+    autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
+    autocomplete.DisplayMemberPath = "Name";
+    autocomplete.TextMemberPath = "Name";
     autoComplete.DropdownOpening += Autocomplete_DropdownOpening;
 
 {% endhighlight %}
@@ -1081,9 +1222,13 @@ The [DropDownOpened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Sf
 
 {% highlight c# %}
 
-  SfAutocomplete autoComplete = new SfAutocomplete();
-
-  autoComplete.DropdownOpened += autoComplete_DropdownOpened;
+    SfAutocomplete autocomplete = new SfAutocomplete();
+    autocomplete.WidthRequest = 350;
+    autoComplete.HeightRequest = 50;
+    autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
+    autocomplete.DisplayMemberPath = "Name";
+    autocomplete.TextMemberPath = "Name";
+    autoComplete.DropdownOpened += autoComplete_DropdownOpened;
 
 
 {% endhighlight %}
@@ -1112,13 +1257,17 @@ The [DropDownClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 
     
     <autocomplete:SfAutocomplete HeightRequest="40"
+                                 WidthRequest="350"
                                  x:Name="autoComplete"
                                  ItemSource="{Binding Employees}"
                                  DropDownClosed="SfAutocomplete_DropDownClosed"/>
 {% endhighlight %}
 {% highlight c# %}
 
-    SfAutocomplete autoComplete = new SfAutocomplete();
+    SfAutocomplete autocomplete = new SfAutocomplete();
+    autocomplete.WidthRequest = 350;
+    autoComplete.HeightRequest = 40;
+    autocomplete.ItemsSource = employeeViewModel.Employees;
     autoComplete.DropDownClosed+=autoComplete_DropDownClosed;
 
 {% endhighlight %}
@@ -1152,6 +1301,8 @@ The cursor position in the input view can be obtained or updated using the [Curs
     using Syncfusion.Maui.Inputs;
 
     SfAutocomplete autocomplete = new SfAutocomplete();
+    autocomplete.WidthRequest = 250;
+    autoComplete.HeightRequest = 35;
     autocomplete.CursorPosition = 4;
 
 {% endhighlight %}
@@ -1237,7 +1388,10 @@ N> Default value of ReturnType is `Default`.
 {% endhighlight %}
 {% highlight C# %}
 
-SfAutocomplete sfAutocomplete = new SfAutocomplete();
+SfAutocomplete autocomplete = new SfAutocomplete();
+autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
+autocomplete.DisplayMemberPath = "Name";
+autocomplete.TextMemberPath = "Name";
 sfAutocomplete.ReturnType = ReturnType.Next;
 
 {% endhighlight %}
