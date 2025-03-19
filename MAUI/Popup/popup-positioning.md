@@ -324,7 +324,7 @@ popup.IsOpen = true;
 
 ## Position the popup over the action bar
 
-The SfPopup can be positioned without considering the action bar by using the `SfPopup.IgnoreActionBar` property. When set to true, this allows the popup to be positioned over the action bar without any constraints.
+The SfPopup can be positioned without considering the action bar by using the [SfPopup.IgnoreActionBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_IgnoreActionBar) property. When set to true, this allows the popup to be positioned over the action bar without any constraints.
 
 {% tabs %}
 {% highlight xaml hl_lines="2" %}

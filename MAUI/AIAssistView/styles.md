@@ -1091,7 +1091,7 @@ public MainPage()
 
 ![Text Selection style in .NET MAUI AI AssistView](images/styles/maui-aiassistview-styles-textselection.png)
 
-## Common Suggestions
+## Common Suggestions styling
 
 To style the common suggestion view based on its appearance, set values to the in-built keys in the resource dictionary.
 
@@ -1141,14 +1141,14 @@ To style the common suggestion view based on its appearance, set values to the i
         <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
             <ResourceDictionary>
                 <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
-				<Color x:Key="SfAIAssistViewHeaderSuggestionBackground">LightSkyBlue</Color>
-				<Color x:Key="SfAIAssistViewHeaderSuggestionItemStroke">BlueViolet</Color>
-				<x:Double x:Key="SfAIAssistViewHeaderSuggestionItemStrokeThickness">2</x:Double>
-				<Color x:Key="SfAIAssistViewHeaderSuggestionItemBackground">White</Color>
-				<Color x:Key="SfAIAssistViewHeaderSuggestionItemTextColor">Blue</Color>
-				<x:Double x:Key="SfAIAssistViewHeaderSuggestionItemFontSize">16</x:Double>
-				<FontAttributes x:Key="SfAIAssistViewHeaderSuggestionItemFontAttribute">Italic</FontAttributes>
-				<x:String x:Key="SfAIAssistViewEditorFontFamily">Roboto-Medium</x:String>
+		<Color x:Key="SfAIAssistViewHeaderSuggestionBackground">LightSkyBlue</Color>
+		<Color x:Key="SfAIAssistViewHeaderSuggestionItemStroke">BlueViolet</Color>
+		<x:Double x:Key="SfAIAssistViewHeaderSuggestionItemStrokeThickness">2</x:Double>
+		<Color x:Key="SfAIAssistViewHeaderSuggestionItemBackground">White</Color>
+		<Color x:Key="SfAIAssistViewHeaderSuggestionItemTextColor">Blue</Color>
+		<x:Double x:Key="SfAIAssistViewHeaderSuggestionItemFontSize">16</x:Double>
+		<FontAttributes x:Key="SfAIAssistViewHeaderSuggestionItemFontAttribute">Italic</FontAttributes>
+		<x:String x:Key="SfAIAssistViewEditorFontFamily">Roboto-Medium</x:String>
             </ResourceDictionary>
         </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
     </syncTheme:SyncfusionThemeDictionary>
