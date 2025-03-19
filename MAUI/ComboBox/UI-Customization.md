@@ -18,7 +18,7 @@ To get start quickly to customize the Appearance of .NET MAUI ComboBox, you can 
 
 ## Placeholder
 
-You can prompt the user with any information by using the [Placeholder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_Placeholder) property. This text will be displayed only if no items are selected or the edit text is empty. The default value of Placeholder property is `string.Empty` (No string will be displayed).
+You can prompt the user with any information by using the [Placeholder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_Placeholder) property. This text will be displayed only if no items are selected or the edit text is empty. The default value of Placeholder property is **string.Empty** (No string will be displayed).
 
 {% tabs %}
 {% highlight xaml %}
@@ -45,7 +45,7 @@ The following image illustrates the result of the above code:
 
 ## Placeholder color
 
-The placeholder text color can be changed by using the [PlaceholderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_PlaceholderColorProperty) property. The default value of PlaceholderColor property is `Colors.Gray`.
+The placeholder text color can be changed by using the [PlaceholderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_PlaceholderColorProperty) property. The default value of PlaceholderColor property is **Colors.Gray**.
 
 {% tabs %}
 {% highlight xaml %}
@@ -72,7 +72,7 @@ The following image illustrates the result of the above code:
 
 ## Clear Button Icon Color
 
-The clear button icon color can be changed by using the [ClearButtonIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_ClearButtonIconColorProperty) property. The default value of the ClearButtonIconColor property is `Colors.Black`.
+The clear button icon color can be changed by using the [ClearButtonIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_ClearButtonIconColorProperty) property. The default value of the ClearButtonIconColor property is **Colors.Black**.
 
 {% tabs %}
 {% highlight xaml %}
@@ -98,7 +98,7 @@ The following gif image illustrates the result of the above code:
 
 ## DropDown Icon Color
 
-The DropDown icon color can be changed by using the [DropDownIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_DropDownIconColor) property. The default value of the DropDownIconColor property is `Colors.Black`.
+The DropDown icon color can be changed by using the [DropDownIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_DropDownIconColor) property. The default value of the DropDownIconColor property is **Colors.Black**.
 
 {% tabs %}
 {% highlight xaml %}
@@ -213,13 +213,13 @@ comboBox.CustomView = customLabel;
 
 ![CustomView](images/UICustomization/CustomView.png)
 
-N> `SfComboBox` ClearButton will not be supported when using Custom View.
+N> **SfComboBox** ClearButton will not be supported when using Custom View.
 
 ## Maximum DropDown Height
 
-The maximum height of the drop-down can be changed by using the [MaxDropDownHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_MaxDropDownHeight) property of the ComboBox control. The default value of MaxDropDownHeight property is `400d`.
+The maximum height of the drop-down can be changed by using the [MaxDropDownHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_MaxDropDownHeight) property of the ComboBox control. The default value of MaxDropDownHeight property is **400d**.
 
- N> If the `MaxDropDownHeight` is too small compared to the populated items, the scroll viewer will be automatically shown to navigate the hidden items.
+ N> If the **MaxDropDownHeight** is too small compared to the populated items, the scroll viewer will be automatically shown to navigate the hidden items.
 
 {% tabs %}
 {% highlight xaml %}
@@ -246,7 +246,7 @@ The following image illustrates the result of the above code:
 
 ## Customize the DropDown (suggestion) item 
 
-The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemTemplate) property helps you to decorate drop-down items using the custom templates. The default value of the `ItemTemplate` is `null`. The following example shows how to customize drop-down items using templates.
+The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemTemplate) property helps you to decorate drop-down items using the custom templates. The default value of the **ItemTemplate** is **null**. The following example shows how to customize drop-down items using templates.
 
 {% tabs %}
 {% highlight C# %}
@@ -577,15 +577,15 @@ The [DropDownItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 
 ### Customize the DropDownPlacement
 
-The drop-down that shows the filtered items will be placed automatically based on the available space and can also be customized using the `DropDownPlacement` property.
+The drop-down that shows the filtered items will be placed automatically based on the available space and can also be customized using the **DropDownPlacement** property.
 
-*   `Top` - Drop-down will be placed above the text box.
+*   **Top** - Drop-down will be placed above the text box.
 
-*   `Bottom` - Drop-down will be placed below the text box.
+*   **Bottom** - Drop-down will be placed below the text box.
 
-*   `Auto` - Drop-down will be placed based on the available space either top or bottom of the text box.
+*   **Auto** - Drop-down will be placed based on the available space either top or bottom of the text box.
 
-*   `None` - Drop-down will not be shown with the filtered items.
+*   **None** - Drop-down will not be shown with the filtered items.
 
 
 {% tabs %}
@@ -610,7 +610,7 @@ comboBox.DropDownPlacement = DropDownPlacement.Top;
 
 ### Customize the DropDown ItemPadding
 
-The comboBox enables the user to provide padding for the items inside dropdown using `ItemPadding` property.
+The comboBox enables the user to provide padding for the items inside dropdown using **ItemPadding** property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -634,7 +634,7 @@ comboBox.ItemPadding = new Thickness(10,20,0,0);
 
 ### Customize the DropDown Width
 
-The `DropdownWidth` property is used to modify the Width of the dropdown.
+The **DropdownWidth** property is used to modify the Width of the dropdown.
 
 {% tabs %}
 {% highlight xaml %}
@@ -659,7 +659,7 @@ comboBox.DropdownWidth = 400;
 
 ### Show suggestion box on focus
 
-Suggestion box can be shown whenever the control receives focus using the `ShowSuggestionsOnFocus` property. At this time, suggestion list is the complete list of data source.
+Suggestion box can be shown whenever the control receives focus using the **ShowSuggestionsOnFocus** property. At this time, suggestion list is the complete list of data source.
 
 {% tabs %}
 {% highlight xaml %}
@@ -684,7 +684,7 @@ comboBox.ShowSuggestionsOnFocus = true;
 
 ## Customize the DropDown (suggestion) item based on condition
 
-The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemTemplate) property helps you to decorate drop-down items conditionally based on their content using the custom templates. The default value of the `ItemTemplate` is `null`.
+The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemTemplate) property helps you to decorate drop-down items conditionally based on their content using the custom templates. The default value of the **ItemTemplate** is **null**.
 
 {% tabs %}
 {% highlight C# %}
@@ -1003,7 +1003,7 @@ The following image illustrates the result of the above code:
 
 ## DropDown button customization
 
-We can customize the size of the drop down button in [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) by using the `Width` and `Height` properties in [DropDownButtonSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_DropDownButtonSettings).
+We can customize the size of the drop down button in [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) by using the **Width** and **Height** properties in [DropDownButtonSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_DropDownButtonSettings).
 
 {% tabs %}
 
@@ -1097,7 +1097,7 @@ comboBox.DropDownButtonSettings = dropDownButtonSettings;
 
 ## Styling token items
 
-The ComboBox control allows you to customize the style of TokenItem generated in the selection area by using the `TokenItemStyle` property. 
+The ComboBox control allows you to customize the style of TokenItem generated in the selection area by using the **TokenItemStyle** property. 
 
 {% tabs %}
 
@@ -1141,7 +1141,7 @@ The following image illustrates the result of the above code.
 
 ## Completed Event
 
-The [Completed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Completed) event is raised when the user finalizes the text in the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) editable mode by pressing return key on the keyboard.The handler for the event is a generic event handler, taking the `sender` and `EventArgs`(the `EventArgs` value is `string.Empty`):
+The [Completed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Completed) event is raised when the user finalizes the text in the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) editable mode by pressing return key on the keyboard.The handler for the event is a generic event handler, taking the **sender** and **EventArgs**(the **EventArgs** value is **string.Empty**):
 
 {% tabs %}
 {% highlight xaml %}
@@ -1177,7 +1177,7 @@ The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox completed event](Images/UICustomization/CompletedEvent.png)
 
-N> The `Completed` event is not supported in the Android platform.
+N> The **Completed** event is not supported in the Android platform.
 
 ## DropDownOpening Event
 
@@ -1353,7 +1353,7 @@ The following image illustrates the result of the above code:
 
 The [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) provides support to customize the text alignment by using the [HorizontalTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_HorizontalTextAlignment) and [VerticalTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_VerticalTextAlignment) properties.
 
-N> Dynamic changes to the `HorizontalTextAlignment` property may not be functioning as expected on Android platform.
+N> Dynamic changes to the **HorizontalTextAlignment** property may not be functioning as expected on Android platform.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1381,11 +1381,11 @@ The following image illustrates the result of the above code:
 
 ## ReturnType
 
-The `ReturnType` property specifies the return button (e.g., Next, Done, Go) of the keyboard. It helps manage the flow between multiple input fields by defining what happens when the action button is pressed.
+The **ReturnType** property specifies the return button (e.g., Next, Done, Go) of the keyboard. It helps manage the flow between multiple input fields by defining what happens when the action button is pressed.
 
 You can define the return key type of [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) by using the ReturnType property.
 
-N> Default value of ReturnType is `Default`.
+N> Default value of ReturnType is **Default**.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1409,7 +1409,7 @@ sfComboBox.ReturnType = ReturnType.Next;
 
 ## Clear button customization
 
-The `ClearButtonPath` property allows users to set the path for customizing the appearance of the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) clear button.
+The **ClearButtonPath** property allows users to set the path for customizing the appearance of the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) clear button.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1455,8 +1455,8 @@ The following image illustrates the result of the above code:
 
 ## Return Command and Return Command Parameter
 
-- `ReturnCommand`, of type ICommand, defines the command to be executed when the return key is pressed.
-- `ReturnCommandParameter`, of type object, specifies the parameter for the `ReturnCommand`.
+- **ReturnCommand**, of type ICommand, defines the command to be executed when the return key is pressed.
+- **ReturnCommandParameter**, of type object, specifies the parameter for the **ReturnCommand**.
 
 {% tabs %}
 {% highlight xaml %}
