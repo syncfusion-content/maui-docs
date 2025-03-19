@@ -124,16 +124,16 @@ The `SfAIAssistView` control allows you to set custom text for the StopRespondin
 
 {% endhighlight %} 
 
-{% highlight c# hl_lines="5" %} 
+{% highlight c# hl_lines="6" %} 
 
-    SfAIAssistView sfAIAssistView; 
-    public MainPage() 
-    { 
-        InitializeComponent(); 
-        this.sfAIAssistView = new SfAIAssistView();
-        this.sfAIAssistView.StopRespondingText = "Cancel Response";
-        this.Content = sfAIAssistView; 
-    } 
+SfAIAssistView sfAIAssistView; 
+public MainPage() 
+{ 
+    InitializeComponent(); 
+    this.sfAIAssistView = new SfAIAssistView();
+    this.sfAIAssistView.StopRespondingText = "Cancel Response";
+    this.Content = sfAIAssistView; 
+} 
 
 {% endhighlight %}
 {% endtabs %}
