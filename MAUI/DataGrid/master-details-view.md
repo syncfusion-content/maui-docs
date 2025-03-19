@@ -10,7 +10,7 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 # Master Details View in Maui DataGrid (SfDataGrid)
 
-The DataGrid supports displaying hierarchical data using the Master-Details View, allowing you to represent parent-child relationships in a structured format. This feature enables the nesting of multiple levels of related data within the grid.
+The `DataGrid` supports displaying hierarchical data using the `Master-Details View`, allowing you to represent parent-child relationships in a structured format. This feature enables the nesting of multiple levels of related data within the grid.
 
 ## Key Features
    - Display hierarchical data in a structured format using nested tables.
@@ -20,17 +20,17 @@ The DataGrid supports displaying hierarchical data using the Master-Details View
    <img alt="DetailsView" src="Images\master-details-view\maui-datagrid-detailsview-main.png" width="404" height="392" />    
 
 ## Generating Master-Details View from IEnumerable
-The Master-Details View can be generated using properties of type [IEnumerable](https://learn.microsoft.com/en-us/dotnet/api/system.collections.ienumerable?view=net-7.0) in the underlying data model.
+The `Master-Details View` can be generated using properties of type [IEnumerable](https://learn.microsoft.com/en-us/dotnet/api/system.collections.ienumerable?view=net-7.0) in the underlying data model.
 
 ### Steps to Generate Master-Details View for IEnumerable Properties
 1. Create a Data Model with Relations
-   - Define properties of type IEnumerable (such as ObservableCollection<T>) to establish hierarchical relationships.
-2. Define Relations in the DataGrid
-   - Auto-Generating Relations: The DataGrid automatically detects relationships based on IEnumerable properties.
-   - Manually Defining Relations: Explicitly specify the relationships to customize the hierarchy.
+   - Define properties of type `IEnumerable` (such as ObservableCollection<T>) to establish hierarchical relationships.
+2. Define Relations in the `DataGrid`
+   - **Auto-Generating Relations:** The `DataGrid` automatically detects relationships based on IEnumerable properties.
+   - **Manually Defining Relations:** Explicitly specify the relationships to customize the hierarchy.
 
 ### 1. Creating a Data Model with Relations
-Define an `Employee` class with `Sales` and `Orders` properties, which use [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-7.0) to establish relations. These properties allow nesting of related data within the DataGrid.
+Define an `Employee` class with `Sales` and `Orders` properties, which use [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-7.0) to establish relations. These properties allow nesting of related data within the `DataGrid`.
 
 {% tabs %}
 {% highlight c# %}
@@ -121,10 +121,10 @@ public class ViewModel
 
 ## Defining Relations in SfDataGrid
 ### Auto-Generating Relations
-SfDataGrid automatically generates master-details relationships for properties of type `IEnumerable` in the underlying data object. This can be enabled by setting the [SfDataGrid.AutoGenerateRelations]() property to `true`.
+[SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) automatically generates master-details relationships for properties of type `IEnumerable` in the underlying data object. This can be enabled by setting the [SfDataGrid.AutoGenerateRelations]() property to `true`.
 
 ## Binding Data to SfDataGrid
-To display hierarchical data, bind the Employees collection to [SfDataGrid.ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSourceProperty) and enable automatic relation generation.
+To display hierarchical data, bind the `Employees` collection to [SfDataGrid.ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSourceProperty) and enable automatic relation generation.
 
 {% tabs %}
 {% highlight xaml %}
@@ -142,7 +142,7 @@ Here, two relations are created from `Sales` and `Orders` collection property.
   <img alt="auto-relation" src="Images\master-details-view\maui-datagrid-auto-generate-relation.png" width="404" height="392" />  
 
  ## Manually Defining Relations
-we can manually define the Master-Details View relation in SfDataGrid using `DetailsViewDefinition` when `AutoGenerateRelations` is set to false.
+we can manually define the `Master-Details View` relation in SfDataGrid using `DetailsViewDefinition` when `AutoGenerateRelations` is set to false.
 
 To establish the relation:
 
@@ -174,18 +174,18 @@ This approach provides greater control over the Master-Details structure in the 
 {% endhighlight %}
 
 {% highlight c# %}
-dataGrid.AutoGenerateRelations = false;
+ dataGrid.AutoGenerateRelations = false;
 
-var gridViewDefinition1 = new DataGridViewDefinition();
-gridViewDefinition1.RelationalColumn = "Sales";
-gridViewDefinition1.DataGrid = new SfDataGrid() { Name = "FirstLevelNestedGrid1"};
+ var gridViewDefinition1 = new DataGridViewDefinition();
+ gridViewDefinition1.RelationalColumn = "Sales";
+ gridViewDefinition1.DataGrid = new SfDataGrid();
 
-var gridViewDefinition2 = new DataGridViewDefinition();
-gridViewDefinition2.RelationalColumn = "Products";
-gridViewDefinition2.DataGrid = new SfDataGrid() { Name = "FirstLevelNestedGrid2"};
+ var gridViewDefinition2 = new DataGridViewDefinition();
+ gridViewDefinition2.RelationalColumn = "Products";
+ gridViewDefinition2.DataGrid = new SfDataGrid();
 
-dataGrid.DetailsViewDefinition.Add(gridViewDefinition1);
-dataGrid.DetailsViewDefinition.Add(gridViewDefinition2);
+ dataGrid.DetailsViewDefinition.Add(gridViewDefinition1);
+ dataGrid.DetailsViewDefinition.Add(gridViewDefinition2);
 {% endhighlight %}
 {% endtabs %}
 
@@ -225,13 +225,13 @@ dataGrid.AutoGenerateRelations = false;
 // DataGridViewDefinition for parent DataGrid
 var gridViewDefinition1 = new DataGridViewDefinition();
 gridViewDefinition1.RelationalColumn = "Sales";
-var firstLevelNestedGrid = new SfDataGrid() { Name = "FirstLevelNestedGrid" };
+var firstLevelNestedGrid = new SfDataGrid();
 firstLevelNestedGrid.AutoGenerateRelations = false;
 
 // DataGridViewDefinition for FirstLevelNestedGrid
 var gridViewDefinition = new DataGridViewDefinition();
 gridViewDefinition.RelationalColumn = "Products";
-gridViewDefinition.DataGrid = new SfDataGrid() { Name = "SecondLevelNestedGrid"};
+gridViewDefinition.DataGrid = new SfDataGrid();
 firstLevelNestedGrid.DetailsViewDefinition.Add(gridViewDefinition);
 gridViewDefinition1.DataGrid = firstLevelNestedGrid;
 
@@ -242,27 +242,27 @@ dataGrid.DetailsViewDefinition.Add(gridViewDefinition1);
 <img alt="auto-relation" src="Images\master-details-view\maui-datagrid-manual-generate-relation2.png" width="404" height="392" /> 
 
 ## Generating Master-Details View from DataTable
-A Master-Details View can be created using [DataTable](https://learn.microsoft.com/en-us/dotnet/api/system.data.datatable?view=net-6.0) when a [DataRelation](https://learn.microsoft.com/en-us/dotnet/api/system.data.datarelation?view=net-7.0) is established between two tables in the underlying [DataSet](https://learn.microsoft.com/en-us/dotnet/api/system.data.dataset?view=net-7.0).
+A `Master-Details View` can be created using [DataTable](https://learn.microsoft.com/en-us/dotnet/api/system.data.datatable?view=net-6.0) when a [DataRelation](https://learn.microsoft.com/en-us/dotnet/api/system.data.datarelation?view=net-7.0) is established between two tables in the underlying [DataSet](https://learn.microsoft.com/en-us/dotnet/api/system.data.dataset?view=net-7.0).
 
 ### Steps to Generate Master-Details Relations for DataTable
 1. **Create DataTables with Relations**
-Define multiple DataTable objects inside a DataSet and establish relationships between them using DataRelation.
+Define multiple `DataTable` objects inside a DataSet and establish relationships between them using `DataRelation`.
 
 2. **Defining Relations**
 There are two ways to define relations between DataTable objects in SfDataGrid:
  - Auto-Generating Relations
  - Manually Defining Relations
 
-Each method allows SfDataGrid to create hierarchical views, where the child table's data is displayed based on the parent table's selection.
+Each method allows [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) to create hierarchical views, where the child table's data is displayed based on the parent table's selection.
 
 ### Creating a DataTable with Relations in SfDataGrid
-To establish a Master-Details relationship in `SfDataGrid`, define a `DataTable` with a `DataRelation` in a `DataSet`. The parent table represents the main data, and the child table contains related details linked through a common key.
+To establish a `Master-Details` relationship in [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html), define a `DataTable` with a `DataRelation` in a `DataSet`. The parent table represents the main data, and the child table contains related details linked through a common key.
 
 ### Steps to Implement the DataTable with Relations
-1. Create a ViewModel class with an Orders property of type DataTable.
-2. Define two DataTable objects (parent and child).
-3. Add them to a DataSet and establish a relation using the Order ID column.
-4. Bind the parent table to SfDataGrid.ItemsSource, and enable AutoGenerateRelations.
+1. Create a `ViewModel` class with an Orders property of type `DataTable`.
+2. Define two `DataTable` objects (parent and child).
+3. Add them to a `DataSet` and establish a relation using the Order ID column.
+4. Bind the parent table to `SfDataGrid.ItemsSource`, and enable `AutoGenerateRelations`.
 
 {% tabs %}
 {% highlight c# %}
@@ -343,7 +343,7 @@ public class DataViewModel
 {% endtabs %}
 
 ## Auto-Generating Relations in SfDataGrid
-In `SfDataGrid`, we can automatically generate Master-Details relationships using `AutoGenerateRelations`. This allows `SfDataGrid` to detect and create hierarchical views based on `DataSet` relationships.
+In `SfDataGrid`, we can automatically generate `Master-Details` relationships using `AutoGenerateRelations`. This allows `SfDataGrid` to detect and create hierarchical views based on `DataSet` relationships.
 
 {% tabs %}
 {% highlight xaml %}
@@ -357,7 +357,7 @@ dataGrid.AutoGenerateRelations = true;
 {% endhighlight %}
 {% endtabs %}
 
-Here, Master-Details View relation is auto generated based on the `Orders` relation.
+Here, `Master-Details View` relation is auto generated based on the `Orders` relation.
 
 <img alt="auto-relation-DataTable" src="Images\master-details-view\Master-Details-View-DataTable.png" width="404" height="392" /> 
 
@@ -416,7 +416,7 @@ In the below code snippet, `AutoGenerateRelations` set to false and also relatio
 Now the `ItemsSource` for [DetailsViewDataGrid]() can be supplied through [DetailsViewExpanding]() event as mentioned above.
 
 ### Loading DetailsViewItemsSource Asynchronously
-When populating the Master-Details view through events, loading data from an external source or file may cause a delay. In such cases, the `DetailsViewExpanding` event may execute before the I/O process completes.
+When populating the `Master-Details view` through events, loading data from an external source or file may cause a delay. In such cases, the `DetailsViewExpanding` event may execute before the I/O process completes.
 
 To handle this, use [async](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/async) and [await](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/async) to load data with a time delay, ensuring the event waits until the external data loading is complete before execution.
 
@@ -462,7 +462,7 @@ The declaration of `await` with `GetItemSource` method hold the further process 
 The `DetailsViewExpanding` method runs synchronously until it reaches its first await expression. After await is reached, it is suspended until the awaited task is complete.
 
 ## Defining columns for DetailsViewDataGrid
-The [ViewDefinition.DataGrid’s]() columns can be generated either automatically or manually like parent DataGrid. You can refer here to know more about columns.
+The [ViewDefinition.DataGrid’s]() columns can be generated either automatically or manually like parent `DataGrid`. You can refer here to know more about columns.
 
 ### Auto-generating columns
 You can auto-generate the [ViewDefinition.DataGrid’s]() columns by setting the [DataGridViewDefinition.DataGrid.AutoGenerateColumns]() to `true`. We can `cancel` or `customize` the column being created for [ViewDefinition.DataGrid]() by handling [DataGridViewDefinition.DataGrid.AutoGeneratingColumn]() event.
@@ -498,7 +498,8 @@ We can directly define the columns to [ViewDefinition.DataGrid]() when [AutoGene
     <syncfusion:SfDataGrid.DetailsViewDefinition>
         <syncfusion:DataGridViewDefinition RelationalColumn="ProductDetails">
             <syncfusion:DataGridViewDefinition.DataGrid>
-                <syncfusion:SfDataGrid x:Name="FirstLevelNestedGrid">
+                <syncfusion:SfDataGrid x:Name="FirstLevelNestedGrid"
+                                        AutoGenerateColumnsMode="None">
                     <syncfusion:SfDataGrid.Columns>
                         <syncfusion:DataGridTextColumn MappingName="OrderID" />
                         <syncfusion:DataGridTextColumn MappingName="ProductName" />
@@ -518,7 +519,7 @@ this.dataGrid.AutoGeneratingRelations += DataGrid_AutoGeneratingRelations;
 
 void DataGrid_AutoGeneratingRelations(object? sender, DataGridAutoGeneratingRelationsArgs e)
  {
-     e.DataGridViewDefinition.DataGrid.ColumnWidthMode = ColumnWidthMode.None;
+     e.DataGridViewDefinition.DataGrid.AutoGenerateColumnsMode = AutoGenerateColumnsMode.None;
      e.DataGridViewDefinition.DataGrid.Columns.Add(new DataGridTextColumn() { MappingName = "OrderID" });
      e.DataGridViewDefinition.DataGrid.Columns.Add(new DataGridTextColumn() { MappingName = "ProductName" });
  }
@@ -549,13 +550,6 @@ var detailsViewDataGrid = this.dataGrid.SelectedDetailsViewDataGrid.SelectedDeta
 {% endhighlight %}
 {% endtabs %}
 
-We can also get the selected `DetailsViewDataGrid` using `GetDataGrid` helper method which returns the DataGrid that contains the current cell.
-{% tabs %}
-{% highlight c# %}
-var detailsViewDataGrid = this.dataGrid.GetDataGrid();
-{% endhighlight %}
-{% endtabs %}
-
 ### Getting the DetailsViewDataGrid
 We can get the [DetailsViewDataGrid]() based on row index through [GetDetailsViewDataGrid]() helper method.
 
@@ -573,11 +567,21 @@ var detailsViewDataGrid = this.dataGrid.GetDetailsViewGrid(0, "ProductDetails");
 {% endhighlight %}
 {% endtabs %}
 
-## Programmatic Selection in DetailsViewDataGrid
-In [DetailsViewDataGrid](), you can add or remove the selection programmatically like parent DataGrid. You can get particular `DetailsViewDataGrid` by using [DetailsViewLoading]() event or [GetDetailsViewGrid]() method to process the selection operations.
+### Getting the SelectedIndex of DetailsViewDataGrid
+We can access the selected record index of `DetailsViewDataGrid` by using [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectedIndex) properties directly.
+
+{% tabs %}
+{% highlight c# %}
+var detailsViewDataGrid = this.dataGrid.GetDetailsViewGrid(2);
+int selectedIndex = detailsViewDataGrid.SelectedIndex;
+{% endhighlight %}
+{% endtabs %}
+
+### Programmatic Selection in DetailsViewDataGrid
+In [DetailsViewDataGrid](), we can add or remove the selection programmatically like parent `DataGrid`. You can get particular `DetailsViewDataGrid` by using [DetailsViewLoading]() event or [GetDetailsViewGrid]() method to process the selection operations.
 
 ### Selecting records
-We can select the particular record by using SelectedIndex property.
+We can select the particular record by using [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectedIndex) property.
 
 {% tabs %}
 {% highlight c# %}
@@ -628,7 +632,7 @@ this.dataGrid.AutoGeneratingRelations += DataGrid_AutoGeneratingRelations;
 
  private void DataGrid_AutoGeneratingRelations(object? sender, DataGridAutoGeneratingRelationsArgs e)
  {
-     e.DataGridViewDefinition.DataGrid.DefaultStyle.HeaderRowBackground = Color.FromArgb("#2596be");
+     e.DataGridViewDefinition.DataGrid.DetailsViewDefaultStyle.HeaderRowBackground = Color.FromArgb("#2596be");
  }
  {% endhighlight %}
 {% endtabs %}
@@ -637,7 +641,7 @@ this.dataGrid.AutoGeneratingRelations += DataGrid_AutoGeneratingRelations;
 
 ### Hiding header row of Master-Details View
 
-You can hide the header row of `DetailsViewDataGrid` by setting [HeaderRowHeight]() property.
+We can hide the header row of `DetailsViewDataGrid` by setting [HeaderRowHeight]() property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -664,7 +668,7 @@ FirstLevelNestedGrid.HeaderRowHeight = 0;
 
 
 ### Customizing padding of the DetailsViewDataGrid
-The padding of `DetailsViewDataGrid` can be customized through the [DetailsViewPadding]() property and it will be set to its corresponding parent DataGrid.
+The padding of `DetailsViewDataGrid` can be customized through the [DetailsViewPadding]() property and it will be set to its corresponding parent `DataGrid`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -682,7 +686,7 @@ this.dataGrid.DetailsViewPadding = new Thickness(15);
 <img alt="auto-relation-DataTable" src="Images\master-details-view\maui-datagrid-detailsview-padding.png" width="404" height="392" /> 
 
 ### Customize ExpanderColumn width
-You can customize the width of ExpanderColumn in SfDataGrid by using [ExpanderColumnWidth]() property as like below.
+You can customize the width of ExpanderColumn in [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.html) by using [ExpanderColumnWidth]() property as like below.
 
 {% tabs %}
 {% highlight xaml %}
@@ -699,10 +703,10 @@ this.dataGrid.ExpanderColumnWidth = 50;
 <img alt="auto-relation-DataTable" src="Images\master-details-view\maui-datagrid-expander-column-width.png" width="404" height="392" /> 
 
 ## Expanding and collapsing the DetailsViewDataGrid programmatically
-SfDataGrid allows you to expand or collapse the [DetailsViewDataGrid]() programmatically in different ways.
+[SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.html) allows you to expand or collapse the [DetailsViewDataGrid]() programmatically in different ways.
 
 Expand or collapse all the DetailsViewDataGrid
-You can expand or collapse all the `DetailsViewDataGrid` programmatically by using [ExpandAllDetailsView]() and [CollapseAllDetailsView]() methods.
+We can expand or collapse all the `DetailsViewDataGrid` programmatically by using [ExpandAllDetailsView]() and [CollapseAllDetailsView]() methods.
 
 {% tabs %}
 {% highlight c# %}
@@ -712,7 +716,7 @@ this.dataGrid.CollapseAllDetailsView();
 {% endtabs %}
 
 ### Expand DetailsViewDataGrid based on level
-You can expand all the `DetailsViewDataGrid` programmatically based on level using [ExpandAllDetailsView]() method.
+We can expand all the `DetailsViewDataGrid` programmatically based on level using [ExpandAllDetailsView]() method.
 
 {% tabs %}
 {% highlight c# %}
@@ -723,7 +727,7 @@ this.dataGrid.ExpandAllDetailsView(2);
 Here, all the DetailsViewDataGrids up to second level will be expanded.
 
 ### Expand or collapse Details View based on record index
-You can expand or collapse `DetailsViewDataGrid` based on the record index by using [ExpandDetailsViewAt]() and [CollapseDetailsViewAt]() methods.
+We can expand or collapse `DetailsViewDataGrid` based on the record index by using [ExpandDetailsViewAt]() and [CollapseDetailsViewAt]() methods.
 
 {% tabs %}
 {% highlight c# %}
@@ -736,7 +740,7 @@ this.dataGrid.CollapseDetailsViewAt(0);
 
 ### DetailsViewLoading
 
-The [DetailsViewLoading]() event is triggered when the `DetailsViewDataGrid` is loaded into the view. This can happen during scrolling, window resizing, or when expanding a record. The event provides [DataGridDetailsViewLoadingEventArgs](), which contains the `DetailsViewDataGrid` property. This allows customization of renderers, selection controllers, resizing controllers, and other components. However, modifying public properties like AllowFiltering, AllowSorting, and SelectionUnit within this event is not recommended.
+The [DetailsViewLoading]() event is triggered when the `DetailsViewDataGrid` is loaded into the view. This can happen during scrolling, window resizing, or when expanding a record. The event provides [DataGridDetailsViewLoadingEventArgs](), which contains the `DetailsViewDataGrid` property. This allows customization of renderers, selection controllers, resizing controllers, and other components. However, modifying public properties like `AllowFiltering, AllowSorting, and SelectionUnit` within this event is not recommended.
 
 {% tabs %}
 {% highlight c# %}
@@ -751,7 +755,7 @@ private void DataGrid_DetailsViewLoading(object? sender, DataGridDetailsViewLoad
 
 
 ### DetailsViewUnLoading
-The [DetailsViewUnLoading]() event occurs when the `DetailsViewDataGrid` is removed from the view. This can happen when scrolling, resizing the window, sorting, filtering, or collapsing a record. The event provides [DataGridDetailsViewUnloadingEventArgs](), which contains the `DetailsViewDataGrid` property. This allows performing any necessary cleanup or additional customization before the details view is unloaded.
+The [DetailsViewUnLoading]() event occurs when the `DetailsViewDataGrid` is removed from the view. This can happen when `scrolling`, `resizing` the window, `sorting`, `filtering`, or `collapsing` a record. The event provides [DataGridDetailsViewUnloadingEventArgs](), which contains the `DetailsViewDataGrid` property. This allows performing any necessary cleanup or additional customization before the details view is unloaded.
 
 {% tabs %}
 {% highlight c# %}
@@ -822,7 +826,7 @@ private void DataGrid_DetailsViewCollapsed(object? sender, DataGridDetailsViewCo
 {% endtabs %}
 
 ### Cancel expanding or collapsing operations through events
-You can cancel expanding operation while expanding the `DetailsViewDataGrid` by using [GridDetailsViewExpandingEventArgs.Cancel]() property in the [DetailsViewExpanding]() event handler.
+We can cancel expanding operation while expanding the `DetailsViewDataGrid` by using [GridDetailsViewExpandingEventArgs.Cancel]() property in the [DetailsViewExpanding]() event handler.
 
 {% tabs %}
 {% highlight c# %}
@@ -851,9 +855,9 @@ private void DataGrid_DetailsViewCollapsing(object? sender, DataGridDetailsViewC
 {% endtabs %}
 
 ## Master-Details View Limitations
-The Master-Details View in SfDataGrid has certain limitations that should be considered while using this feature:
+The `Master-Details View` in [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.html) has certain limitations that should be considered while using this feature:
 
-1. The `AutoGenerateColumnsMode.ResetAll` is not supported in DetailsViewDataGrid. Instead, it works based on `Reset`.
-2. Data Virtualization is not supported in the Master-Details View for `Android, IOS, Mac platform`.
+1. The `AutoGenerateColumnsMode.ResetAll` is not supported in `DetailsViewDataGrid`. Instead, it works based on `Reset`.
+2. `Data Virtualization` is not supported in the Master-Details View for `Android, IOS, Mac platform`.
 3. `Freeze Pane` are not available for the Master-Details View.
 4. Properties such as `SelectionMode, NavigationMode, and DetailsViewPadding` are inherited from the parent grid. This means both the parent `DataGrid` and the `DetailsViewDataGrid` must share the same values for these properties.
