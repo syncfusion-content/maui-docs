@@ -401,6 +401,43 @@ public partial class MainPage : ContentPage
 
 ![SendButton Customization in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-SendButtonCustomization.png)
 
+## Show ResponseLoader View
+
+By Default, the response loader view will be enabled, and the default shimmer view will be displayed when the request is added. To disable it, set the `ShowResponseLoader` property to `false`.
+
+{% tabs %}
+{% highlight xaml hl_lines="8" %}
+
+<ContentPage.BindingContext>
+    <local:GettingStartedViewModel/>
+</ContentPage.BindingContext>
+
+<ContentPage.Content>
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                               AssistItems="{Binding AssistItems}"
+                               ShowResponseLoader="False"/>
+</ContentPage.Content>
+
+{% endhighlight %}
+{% highlight c# hl_lines="10" %}
+
+public partial class MainPage : ContentPage
+{
+    SfAIAssistView sfAIAssistView;
+    public MainPage()
+    {
+        InitializeComponent();
+        this.sfAIAssistView = new SfAIAssistView();
+        GettingStartedViewModel viewModel = new GettingStartedViewModel();
+        this.sfAIAssistView.AssistItems = viewModel.AssistItems;
+        this.sfAIAssistView.ShowResponseLoader = false;
+        this.Content = sfAIAssistView;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Template Customization
 
 The `SfAIAssistView` facilitates the customization of both request and response item templates according to specific requirements. This feature enhances flexibility and provides a higher degree of control over the display of items.
