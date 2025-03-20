@@ -582,7 +582,7 @@ namespace ToolbarSample
 
 The control provides an option to place the text in the toolbar items using the `TextPosition` property. The text can be placed on the left, right, top, and bottom of the toolbar items.
 
-The following code sample demonstrates how to display toolbar items with separator item of the control.
+The following code sample demonstrates how to display toolbar items with text position of the control.
 
 {% tabs %}
 
@@ -687,6 +687,208 @@ namespace ToolbarSample
                     Text = "Align-Justify",
                     TextPosition = ToolbarItemTextPosition.Right,
                     Size = new Size(100, 40),
+                    Icon = new FontImageSource { Glyph = "\uE74F", FontFamily = "MauiMaterialAssets" }
+                }
+            };
+
+            toolbar.Items = toolbarItems;
+            this.Content = toolbar;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Default View Item Size
+
+The control provides support to set the size for the toolbar items using the `Size` property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ToolbarSample"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
+             x:Class="ToolbarSample.MainPage">
+    <Grid>
+        <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56">
+            <toolbar:SfToolbar.Items>
+                <toolbar:SfToolbarItem Name="AlignLeft"
+                            Size="90,40">
+                    <toolbar:SfToolbarItem.Icon>
+                        <FontImageSource Glyph="&#xE751;"
+                                FontFamily="MauiMaterialAssets" />
+                    </toolbar:SfToolbarItem.Icon>
+                </toolbar:SfToolbarItem>
+                <toolbar:SfToolbarItem Name="AlignRight"
+                            Size="100,40">
+                    <toolbar:SfToolbarItem.Icon>
+                        <FontImageSource Glyph="&#xE753;"
+                    FontFamily="MauiMaterialAssets" />
+                    </toolbar:SfToolbarItem.Icon>
+                </toolbar:SfToolbarItem>
+                <toolbar:SfToolbarItem Name="AlignCenter"
+                            Size="100,40">
+                    <toolbar:SfToolbarItem.Icon>
+                        <FontImageSource Glyph="&#xE752;"
+                    FontFamily="MauiMaterialAssets" />
+                    </toolbar:SfToolbarItem.Icon>
+                </toolbar:SfToolbarItem>
+                <toolbar:SfToolbarItem Name="AlignJustify"
+                            Size="100,40">
+                    <toolbar:SfToolbarItem.Icon>
+                        <FontImageSource Glyph="&#xE74F;"
+                    FontFamily="MauiMaterialAssets" />
+                    </toolbar:SfToolbarItem.Icon>
+                </toolbar:SfToolbarItem>
+            </toolbar:SfToolbar.Items>
+        </toolbar:SfToolbar>
+    </Grid>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+using Syncfusion.Maui.Toolbar;
+
+namespace ToolbarSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+
+            SfToolbar toolbar = new SfToolbar();
+            toolbar.HeightRequest = 56;
+
+            ObservableCollection<BaseToolbarItem> toolbarItems = new ObservableCollection<BaseToolbarItem>
+            {
+                new SfToolbarItem
+                {
+                    Name = "AlignLeft",
+                    Size = new Size(90, 40),
+                    Icon = new FontImageSource { Glyph = "\uE751", FontFamily = "MauiMaterialAssets" }
+                },
+                new SfToolbarItem
+                {
+                    Name = "AlignRight",
+                    Size = new Size(100, 40),
+                    Icon = new FontImageSource { Glyph = "\uE753", FontFamily = "MauiMaterialAssets" }
+                },
+                new SfToolbarItem
+                {
+                    Name = "AlignCenter",
+                    Size = new Size(100, 40),
+                    Icon = new FontImageSource { Glyph = "\uE752", FontFamily = "MauiMaterialAssets" }
+                },
+                new SfToolbarItem
+                {
+                    Name = "AlignJustify",
+                    Size = new Size(100, 40),
+                    Icon = new FontImageSource { Glyph = "\uE74F", FontFamily = "MauiMaterialAssets" }
+                }
+            };
+
+            toolbar.Items = toolbarItems;
+            this.Content = toolbar;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Add name for the toolbar item
+
+The control provides support to set the name for the toolbar items using the `Name` property, which helps to uniquely identifies the toolbar item.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ToolbarSample"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
+             x:Class="ToolbarSample.MainPage">
+    <Grid>
+        <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56">
+            <toolbar:SfToolbar.Items>
+                <toolbar:SfToolbarItem Name="AlignLeft">
+                    <toolbar:SfToolbarItem.Icon>
+                        <FontImageSource Glyph="&#xE751;"
+                                FontFamily="MauiMaterialAssets" />
+                    </toolbar:SfToolbarItem.Icon>
+                </toolbar:SfToolbarItem>
+                <toolbar:SfToolbarItem Name="AlignRight">
+                    <toolbar:SfToolbarItem.Icon>
+                        <FontImageSource Glyph="&#xE753;"
+                    FontFamily="MauiMaterialAssets" />
+                    </toolbar:SfToolbarItem.Icon>
+                </toolbar:SfToolbarItem>
+                <toolbar:SfToolbarItem Name="AlignCenter">
+                    <toolbar:SfToolbarItem.Icon>
+                        <FontImageSource Glyph="&#xE752;"
+                    FontFamily="MauiMaterialAssets" />
+                    </toolbar:SfToolbarItem.Icon>
+                </toolbar:SfToolbarItem>
+                <toolbar:SfToolbarItem Name="AlignJustify">
+                    <toolbar:SfToolbarItem.Icon>
+                        <FontImageSource Glyph="&#xE74F;"
+                    FontFamily="MauiMaterialAssets" />
+                    </toolbar:SfToolbarItem.Icon>
+                </toolbar:SfToolbarItem>
+            </toolbar:SfToolbar.Items>
+        </toolbar:SfToolbar>
+    </Grid>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+using Syncfusion.Maui.Toolbar;
+
+namespace ToolbarSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+
+            SfToolbar toolbar = new SfToolbar();
+            toolbar.HeightRequest = 56;
+
+            ObservableCollection<BaseToolbarItem> toolbarItems = new ObservableCollection<BaseToolbarItem>
+            {
+                new SfToolbarItem
+                {
+                    Name = "AlignLeft",
+                    Icon = new FontImageSource { Glyph = "\uE751", FontFamily = "MauiMaterialAssets" }
+                },
+                new SfToolbarItem
+                {
+                    Name = "AlignRight",
+                    Icon = new FontImageSource { Glyph = "\uE753", FontFamily = "MauiMaterialAssets" }
+                },
+                new SfToolbarItem
+                {
+                    Name = "AlignCenter",
+                    Icon = new FontImageSource { Glyph = "\uE752", FontFamily = "MauiMaterialAssets" }
+                },
+                new SfToolbarItem
+                {
+                    Name = "AlignJustify",
                     Icon = new FontImageSource { Glyph = "\uE74F", FontFamily = "MauiMaterialAssets" }
                 }
             };
@@ -1164,70 +1366,49 @@ public class ToolbarViewModel
         ToolbarItems.Add(new SfToolbarItem
         {
             Name = "Bold",
-            Text = "Bold",
-            TextPosition = ToolbarItemTextPosition.Right,
             ToolTipText = "Bold",
-            Size = new Size(60, 40),
             Icon = new FontImageSource { Glyph = "\uE770", FontFamily = "MauiMaterialAssets" }
         });
 
         ToolbarItems.Add(new SfToolbarItem
         {
             Name = "Underline",
-            Text = "Underline",
-            TextPosition = ToolbarItemTextPosition.Right,
             ToolTipText = "Underline",
-            Size = new Size(90, 40),
             Icon = new FontImageSource { Glyph = "\uE762", FontFamily = "MauiMaterialAssets" }
         });
 
         ToolbarItems.Add(new SfToolbarItem
         {
             Name = "Italic",
-            Text = "Italic",
-            TextPosition = ToolbarItemTextPosition.Right,
             ToolTipText = "Italic",
-            Size = new Size(60, 40),
             Icon = new FontImageSource { Glyph = "\uE771", FontFamily = "MauiMaterialAssets" }
         });
 
         ToolbarItems.Add(new SfToolbarItem
         {
             Name = "AlignLeft",
-            Text = "Align-Left",
-            TextPosition = ToolbarItemTextPosition.Right,
             ToolTipText = "Align-Left",
-            Size = new Size(90, 40),
             Icon = new FontImageSource { Glyph = "\uE751", FontFamily = "MauiMaterialAssets" }
         });
 
         ToolbarItems.Add(new SfToolbarItem
         {
             Name = "AlignRight",
-            Text = "Align-Right",
-            TextPosition = ToolbarItemTextPosition.Right,
             ToolTipText = "Align-Right",
-            Size = new Size(100, 40),
             Icon = new FontImageSource { Glyph = "\uE753", FontFamily = "MauiMaterialAssets" }
         });
 
         ToolbarItems.Add(new SfToolbarItem
         {
             Name = "AlignCenter",
-            Text = "Align-Center",
-            TextPosition = ToolbarItemTextPosition.Right,
             ToolTipText = "Align-Center",
-            Size = new Size(100, 40),
             Icon = new FontImageSource { Glyph = "\uE752", FontFamily = "MauiMaterialAssets" }
         });
 
         ToolbarItems.Add(new SfToolbarItem
         {
             Name = "AlignJustify",
-            Text = "Align-Justify",
-            TextPosition = ToolbarItemTextPosition.Right,
             ToolTipText = "Align-Justify",
-            Size = new Size(100, 40),
             Icon = new FontImageSource { Glyph = "\uE74F", FontFamily = "MauiMaterialAssets" }
         });
     }
@@ -1239,17 +1420,12 @@ public class ToolbarViewModel
 
 ### Equal spacing 
 
-The spacing between the toolbar items is equalized when the `ItemSpacing` property is set to -1.
- 
-## Item Alignment
+The spacing between toolbar items is equalized when the `ItemSpacing` property is set to -1.
 
-The Toolbar control provides support for customizing the alignment of the toolbar items using the `ItemAlignment` property. This property allows you to set the alignment of the toolbar items to `Start`, `Center`, or `End`.
-
-The following code sample demonstrates how to create a toolbar control with item alignment.
+N> Equal spacing is applied only when the toolbar is not in scrollable mode and does not have leading or trailing items.
 
 {% tabs %}
-
-{% highlight xaml %}
+{% highlight XAML hl_lines="7 8 9" %}
 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -1257,20 +1433,20 @@ The following code sample demonstrates how to create a toolbar control with item
              xmlns:local="clr-namespace:ToolbarSample"
              xmlns:toolbar="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar"
              x:Class="ToolbarSample.MainPage">
-        <ContentPage.BindingContext>
-            <local:ToolbarViewModel/>
-        </ContentPage.BindingContext>
-        <Grid>
-            <toolbar:SfToolbar x:Name="Toolbar"
-                            HeightRequest="56"
-                            Items="{Binding ToolbarItems}">
-            </toolbar:SfToolbar>
-        <Grid>
+    <ContentPage.BindingContext>
+        <local:ToolbarViewModel/>
+    </ContentPage.BindingContext>
+
+    <Grid>
+        <toolbar:SfToolbar x:Name="Toolbar"
+                        Items="{Binding ToolbarItems}"
+                        ItemSpacing="-1"
+                        HeightRequest="56"/>
+    </Grid>
 </ContentPage>
 
 {% endhighlight %}
-
-{% highlight c# %}
+{% highlight C# hl_lines="5"  %}
 
 using Syncfusion.Maui.Toolbar;
 
@@ -1281,25 +1457,81 @@ namespace ToolbarSample
         public MainPage()
         {
             InitializeComponent();
+            SfToolbar toolbar = new SfToolbar();
+            ToolbarViewModel viewModel = new ToolbarViewModel();
+            toolbar.HeightRequest = 56;
+            toolbar.Items = viewModel.ToolbarItems;
+            toolbar.Orientation = ToolbarOrientation.Horizontal;
+            toolbar.ItemSpacing = -1;
+            this.Content = toolbar;
         }
     }
+}
 
-    public class ToolbarViewModel
+{% endhighlight %}
+
+{% highlight C# tabtitle="ToolbarViewModel.cs" %}
+
+public class ToolbarViewModel
+{
+    private ObservableCollection<BaseToolbarItem> toolbarItems = new ObservableCollection<BaseToolbarItem>();
+
+    public ObservableCollection<BaseToolbarItem> ToolbarItems
     {
-        public ObservableCollection<BaseToolbarItem> ToolbarItems { get; set; }
-        
-        public ToolbarViewModel()
+        get { return toolbarItems; }
+        set { toolbarItems = value; }
+    }
+
+    public ToolbarViewModel()
+    {
+        ToolbarItems.Add(new SfToolbarItem
         {
-            ToolbarItems = new ObservableCollection<BaseToolbarItem>()
-            {
-                new SfToolbarItem() { Alignment = ToolbarItemAlignment.Start, Icon = new FontImageSource() { Glyph = "\uE713", FontFamily = "MaterialAssets" }, Text = "Start Item" },
-                new SeparatorToolbarItem() { Alignment = ToolbarItemAlignment.Start },
-                new SfToolbarItem() { Alignment = ToolbarItemAlignment.Center, Icon = new FontImageSource() { Glyph = "\uE714", FontFamily = "MaterialAssets" }, Text = "Center Item" },
-                new SeparatorToolbarItem() { Alignment = ToolbarItemAlignment.Center },
-                new SfToolbarItem() { Alignment = ToolbarItemAlignment.End, Icon = new FontImageSource() { Glyph = "\uE715", FontFamily = "MaterialAssets" }, Text = "End Item" },
-                new SeparatorToolbarItem() { Alignment = ToolbarItemAlignment.End },
-            };
-        }
+            Name = "Bold",
+            ToolTipText = "Bold",
+            Icon = new FontImageSource { Glyph = "\uE770", FontFamily = "MauiMaterialAssets" }
+        });
+
+        ToolbarItems.Add(new SfToolbarItem
+        {
+            Name = "Underline",
+            ToolTipText = "Underline",
+            Icon = new FontImageSource { Glyph = "\uE762", FontFamily = "MauiMaterialAssets" }
+        });
+
+        ToolbarItems.Add(new SfToolbarItem
+        {
+            Name = "Italic",
+            ToolTipText = "Italic",
+            Icon = new FontImageSource { Glyph = "\uE771", FontFamily = "MauiMaterialAssets" }
+        });
+
+        ToolbarItems.Add(new SfToolbarItem
+        {
+            Name = "AlignLeft",
+            ToolTipText = "Align-Left",
+            Icon = new FontImageSource { Glyph = "\uE751", FontFamily = "MauiMaterialAssets" }
+        });
+
+        ToolbarItems.Add(new SfToolbarItem
+        {
+            Name = "AlignRight",
+            ToolTipText = "Align-Right",
+            Icon = new FontImageSource { Glyph = "\uE753", FontFamily = "MauiMaterialAssets" }
+        });
+
+        ToolbarItems.Add(new SfToolbarItem
+        {
+            Name = "AlignCenter",
+            ToolTipText = "Align-Center",
+            Icon = new FontImageSource { Glyph = "\uE752", FontFamily = "MauiMaterialAssets" }
+        });
+
+        ToolbarItems.Add(new SfToolbarItem
+        {
+            Name = "AlignJustify",
+            ToolTipText = "Align-Justify",
+            Icon = new FontImageSource { Glyph = "\uE74F", FontFamily = "MauiMaterialAssets" }
+        });
     }
 }
 
@@ -1310,6 +1542,8 @@ namespace ToolbarSample
 ## Leading and Trailing Item
 
 The Toolbar control provides support for setting leading and trailing items using the `ItemAlignment` property. The items set with `ItemAlignment` as `Start` will be displayed at the leading position, and the items set with `ItemAlignment` as `End` will be displayed at the trailing position. By default, the items will be displayed in the center position.
+
+N> The leading and trailing is applicable when the toolbar is not scrollable mode.
 
 The following code sample demonstrates how to create a toolbar control with leading and trailing items.
 

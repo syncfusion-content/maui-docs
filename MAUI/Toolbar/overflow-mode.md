@@ -593,3 +593,33 @@ namespace ToolbarSample
 {% endhighlight %}
 
 {% endtabs %}
+
+### Cancel the default item dropdown view
+
+The In-build more items drop down menu view can be cancelled with the help of `Cancel` parameter in the `MoreButtonTapped` event.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+
+<toolbar:SfToolbar x:Name="Toolbar" 
+                    HeightRequest="56" 
+                    WidthRequest="220"
+                    MoreButtonTapped="OnMoreButtonTapped" 
+                    OverflowMode="MoreButton">
+</toolbar:SfToolbar>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+
+this.toolbar.MoreButtonTapped += this.OnMoreButtonTapped;
+private void OnMoreButtonTapped(object? sender, ToolbarMoreButtonTappedEventArgs e)
+{
+    e.Cancel = true;
+    var moreItems = e.ToolbarItems;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
