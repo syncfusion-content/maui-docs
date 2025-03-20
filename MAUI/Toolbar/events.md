@@ -153,7 +153,7 @@ private void OnMoreItemsChanged(object? sender, ToolbarMoreItemsChangedEventArgs
 
 ## MoreButtonTapped 
 
-An `MoreButtonTapped` event invokes on more option button tapped.
+An `MoreButtonTapped` event invokes on `MoreButton` tapped.
 
 Below is a list of the arguments:
 
