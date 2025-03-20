@@ -1126,9 +1126,9 @@ this.Scheduler.SelectedAppointmentBackground = Brush.Orange;
 
 ## Add border for all scheduler appointments
 
-The appointment border style can be customized using the `AppointmentBorderStyle` property, which allows you to modify the `Stroke`, `CornerRadius`, and `StrokeThickness` of appointments in the Scheduler. `StrokeThickness` is not set by default.
+You can add a border to all scheduler appointments by setting the `StrokeThickness` and `Stroke` properties in the `AppointmentBorderStyle` property. Additionally, you can customize the corner radius of the border using the `CornerRadius` property. By default, the `StrokeThickness` is not set.
 
-N> For MonthView appointment display mode, border is not applicable for the template.
+N> Appointment border styles are not applicable for the month view indicator mode and the `AppointmentTemplate`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -1160,7 +1160,7 @@ this.Scheduler.AppointmentBorderStyle  = appointmentBorderStyle;
 
 ### Apply a stroke to the border of a specific appointments
 
-The appointment border stroke can be customized using the `Stroke` property in `SchedulerAppointment`. Additionally, it can be customized using `StrokeMapping` for custom-mapped appointments.
+The appointment border stroke can be customized using the `Stroke` property in SchedulerAppointment. Alternatively, for custom-mapped appointments, you can use the `StrokeMapping` property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
