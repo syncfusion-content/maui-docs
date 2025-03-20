@@ -1176,6 +1176,7 @@ appointments.Add(new SchedulerAppointment()
     Subject = "meeting",
     StartTime = DateTime.Now,
     EndTime = DateTime.Now.AddHours(1),
+    Stroke = Colors.Red,
 });
 appointments.Add(new SchedulerAppointment()
 {
