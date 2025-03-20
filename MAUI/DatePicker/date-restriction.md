@@ -57,10 +57,10 @@ this.Content = picker;
 
 ## Blackout Dates
 
-The [BlackoutDates]() property in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) component lets you restrict the selection of specific dates. You can specify a list of dates to disable, preventing their selection. This feature helps enforce availability limits, such as blocking certain days in a month.
+The [BlackoutDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_BlackoutDates) property in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) component lets you restrict the selection of specific dates. You can specify a list of dates to disable, preventing their selection. This feature helps enforce availability limits, such as blocking certain days in a month.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <picker:SfDatePicker x:Name="picker">
     <picker:SfDatePicker.BlackoutDates>
@@ -77,7 +77,7 @@ The [BlackoutDates]() property in the [SfDatePicker](https://help.syncfusion.com
 </picker:SfDatePicker>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="2" %}
+{% highlight c# tabtitle="C#" %}
 
 SfDatePicker picker = new SfDatePicker();
 picker.BlackoutDates.Add(new DateTime(2001, 8, 10));
