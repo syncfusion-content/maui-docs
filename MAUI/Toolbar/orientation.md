@@ -166,9 +166,10 @@ The following code sample demonstrates how to Create a Toolbar control with Hori
     </ContentPage.BindingContext>
 
 <toolbar:SfToolbar x:Name="Toolbar"
-                   Items="{Binding ToolbarItems}"
-                   Orientation="Vertical"
-                   HeightRequest="56"/>
+                    Items="{Binding ToolbarItems}"
+                    Orientation="Vertical"
+                    WidthRequest="100"
+                    HeightRequest="400"/>
 </ContentPage>
 
 {% endhighlight %}
@@ -185,7 +186,8 @@ namespace ToolbarSample
         {
             InitializeComponent();
             SfToolbar toolbar = new SfToolbar();
-            toolbar.HeightRequest = 56;
+            toolbar.HeightRequest = 400;
+            toolbar.WidthRequest = 100;
             toolbar.Orientation = ToolbarOrientation.Vertical;
             this.Content = toolbar;
         }
