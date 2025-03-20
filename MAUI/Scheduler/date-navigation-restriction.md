@@ -177,7 +177,7 @@ this.Content = scheduler;
 
 ![Date picker in Scheduler](images/date-navigation-restriction/scheduler-date-navigation.jpeg){:width="325" height="600" loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
 
-### Allowed views
+### Add allowed views
 
 The [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) allows to quickly switch between the different scheduler views using the [AllowedViews](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AllowedViews) property. These views will display as a button in the scheduler header.
 There will be more icons available for all platforms as this UI will be responsive.
@@ -201,7 +201,7 @@ this.Content = scheduler;
 {% endhighlight %}
 {% endtabs %}
 
-### Show allowed views
+### Change the visibility of allowed views
 
 The [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) allows users to toggle the visibility of the allowed views by setting value to the `ShowAllowedViews`. By setting this property to false, users can simplify the interface, making it cleaner and more focused, especially in scenarios where view switching is unnecessary. The default value for the property `ShowAllowedViews` is `true`.
 
