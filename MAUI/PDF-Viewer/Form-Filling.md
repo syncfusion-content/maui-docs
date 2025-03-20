@@ -264,25 +264,13 @@ To hide form fields in the document, set the `IsHidden` property of the form fie
 While reviewing and presenting documents, all form fields can be hidden to improve the focus on the content and to avoid distraction caused by cluttered form fields. The following example explains how to hide all form fields in a PDF document. 
 
 {% tabs %}
-{% highlight xaml %}
-<Grid> 
-    <Grid.RowDefinitions> 
-        <RowDefinition Height="Auto" /> 
-        <RowDefinition Height="*" /> 
-    </Grid.RowDefinitions> 
-    <Button Text="HideAllFormFields" Clicked="HideAllFormFieldsButton_Clicked" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="0"/> 
-    <syncfusion:SfPdfViewer x:Name="PdfViewer" DocumentSource="{Binding PdfDocumentStream}" Grid.Row="1" /> 
-</Grid> 
-{% endhighlight %}
+{% highlight C# %} 
 
-{% highlight C# %}
-private void HideAllFormFieldsButton_Clicked(object sender, EventArgs e) 
+foreach(FormFields  formfield in PdfViewer.FormFields) 
 { 
-    foreach(FormFields  formfield in PdfViewer.FormFields) 
-    { 
-       formfield.IsHidden = true; 
-    } 
-} 
+    formfield.IsHidden = true;  
+}
+ 
 {% endhighlight %}
 {% endtabs %}
 
@@ -290,32 +278,21 @@ private void HideAllFormFieldsButton_Clicked(object sender, EventArgs e)
 
 ### Hide specific form fields 
 
-While collaborating, the `IsHidden` property of form fields can be used to show and hide form fields from specific authors. The following example illustrates how to hide form fields from a specific author by accessing the form field’s `IsHidden` property. 
+While collaborating, the `IsHidden` property of form fields can be used to show and hide form fields from specific authors. The following example illustrates how to hide form fields for a TextFormField by accessing the text form field’s `IsHidden` property. 
 
 {% tabs %}
-{% highlight xaml %}
-<Grid> 
-    <Grid.RowDefinitions> 
-        <RowDefinition Height="Auto" /> 
-        <RowDefinition Height="*" /> 
-    </Grid.RowDefinitions> 
-    <Button Text="HideFormField" Clicked="HideFormFieldButton_Clicked" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="0"/> 
-    <syncfusion:SfPdfViewer x:Name="PdfViewer" DocumentSource="{Binding PdfDocumentStream}" Grid.Row="1" /> 
-</Grid> 
-{% endhighlight %}
-
 {% highlight C# %}
-private void HideFormFieldButton_Clicked(object sender, EventArgs e) 
-{ 
-   //The code searches for a form field named "name" in the PDF.
-   FormField formField = pdfViewer.FormFields.Where(x => x.Name == "name").FirstOrDefault();
-   //If the form field is a TextFormField (like a text box), it hides that form field by setting its IsHidden property to true.
-   if (formField is TextFormField nameTextBox)
-   {
-      // Hide  the Text Box field.
-      nameTextBox.IsHidden = true;
-   }
+
+//The code searches for a form field named "name" in the PDF.
+FormField formField = PdfViewer.FormFields.Where(x => x.Name == "name").FirstOrDefault();
+
+//If the form field is a TextFormField, it hides that form field by setting its IsHidden property to true.
+if (formField is TextFormField nameTextBox)
+{
+    // Hide  the Text Box field.
+    nameTextBox.IsHidden = true;
 }
+
 {% endhighlight %}
 {% endtabs %}
 
