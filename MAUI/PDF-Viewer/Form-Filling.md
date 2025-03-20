@@ -251,6 +251,53 @@ private void PdfViewer_FormFieldValueChanged(object sender, FormFieldValueChange
 {% endhighlight %}
 {% endtabs %}
 
+## Show and Hide form fields 
+ 
+You can manage the visibility of form fields using the `IsHidden` property. It helps you to hide form fields containing confidential data when sharing documents externally or presenting documents, ensuring data privacy and security. Also, it makes it easier to read the documents which are cluttered with more form fields. Like other form fields properties, you can undo and redo the hiding or showing actions. Additionally, when an form field is locked, it cannot be hidden. Form fields that are hidden will remain hidden during import, export, printing and saving.
+
+### Hide form fields
+
+To hide form fields in the document, set the `IsHidden` property of the form fields to `true`.
+
+#### Hide all form fields
+
+While reviewing and presenting documents, all form fields can be hidden to improve the focus on the content and to avoid distraction caused by cluttered form fields. The following example explains how to hide all form fields in a PDF document. 
+
+{% tabs %}
+{% highlight C# %} 
+
+foreach(FormFields  formfield in PdfViewer.FormFields) 
+{ 
+    formfield.IsHidden = true;  
+}
+ 
+{% endhighlight %}
+{% endtabs %}
+
+* Similarly, to show all the form fields, set the `IsHidden` property value to `false`.
+
+### Hide specific form fields 
+
+While collaborating, the `IsHidden` property of form fields can be used to show and hide form fields from specific authors. The following example illustrates how to hide form fields for a TextFormField by accessing the text form field’s `IsHidden` property. 
+
+{% tabs %}
+{% highlight C# %}
+
+//The code searches for a form field named "name" in the PDF.
+FormField formField = PdfViewer.FormFields.Where(x => x.Name == "name").FirstOrDefault();
+
+//If the form field is a TextFormField, it hides that form field by setting its IsHidden property to true.
+if (formField is TextFormField nameTextBox)
+{
+    // Hide  the Text Box field.
+    nameTextBox.IsHidden = true;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+* Similarly, to show the form fields, set the `IsHidden` property value to `false`. 
+
 ## Restrict form field editing
 
 The form fields can be prevented from being modified by setting the [ReadOnly](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FormField.html#Syncfusion_Maui_PdfViewer_FormField_ReadOnly) property. The following example illustrates how to make all form fields read-only.
