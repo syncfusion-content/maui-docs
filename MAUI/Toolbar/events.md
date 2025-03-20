@@ -187,7 +187,7 @@ private void OnMoreButtonTapped(object? sender, ToolbarMoreButtonTappedEventArgs
 
 ## Commands
 
-Toolbar commands allow to map `Tapped` event, `ItemTouchInteraction` event, `ItemLongPressed` event, `MoreItemsChanged` event and `MoreButtonTapped` event to `Commands` which supports the MVVM (Model-View-ViewModel) pattern.
+Toolbar commands allows to map `Tapped` event, `ItemTouchInteraction` event, `ItemLongPressed` event, `MoreItemsChanged` event and `MoreButtonTapped` event to `Commands` which supports the MVVM (Model-View-ViewModel) pattern.
 
 ### TappedCommand
 
