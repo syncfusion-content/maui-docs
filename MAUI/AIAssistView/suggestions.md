@@ -346,7 +346,7 @@ The [AssistItemSuggestion.Orientation](https://help.syncfusion.com/cr/maui/Syncf
 
 #### Changing the Item spacing of suggestions
 
-The `AssistItemSuggestion.ItemSpacing` property allows you to display suggestions with Spacing. By, default, the spacing is 8.
+The [AssistItemSuggestion.ItemSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItemSuggestion.html#Syncfusion_Maui_AIAssistView_AssistItemSuggestion_Orientation) property allows you to display suggestions with Spacing. By, default, the spacing is 8.
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="21" %}
@@ -371,7 +371,7 @@ The `AssistItemSuggestion.ItemSpacing` property allows you to display suggestion
 
         assistSuggestions.Items = suggestions;
 		
-		assistSuggestions.ItemSpacing = 50;
+		assistSuggestions.ItemSpacing = 10;
 		
 		// Assign suggestions to response item.
 		responseItem.Suggestion = assistSuggestions;
