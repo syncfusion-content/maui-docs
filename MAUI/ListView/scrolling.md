@@ -5,6 +5,7 @@ description: Learn here all about Scrolling support in Syncfusion .NET MAUI List
 platform: MAUI
 control: SfListView
 documentation: ug
+keywords : .net maui listview, .net maui list, .net maui scrolling listview, .net maui listview scrollbar visibility, .net maui listview disable scrolling,.net maui listview scroll to item.
 ---
 
 # Scrolling in .NET MAUI ListView (SfListView)

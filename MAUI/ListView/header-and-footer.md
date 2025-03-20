@@ -5,6 +5,7 @@ description: Learn here all about Header and Footer support in Syncfusion .NET M
 platform: MAUI
 control: SfListView
 documentation: ug
+keywords : .net maui listview, maui listview, .net maui vertical list, .net maui listview header, .net maui listview footer, .net maui listview headerview, .net maui list with header, .net maui list with footer.
 ---
 
 # Header and Footer in .NET MAUI ListView (SfListView)

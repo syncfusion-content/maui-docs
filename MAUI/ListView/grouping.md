@@ -5,6 +5,7 @@ description: Learn here all about Grouping support in Syncfusion .NET MAUI ListV
 platform: MAUI
 control: SfListView
 documentation: ug
+keywords : .net maui listview, .net maui listview grouping, .net maui grouped list, .net maui grouped listview, .net maui listview item grouping. .net maui listview group header, .net maui hierarchical list.
 ---
 
 # Grouping in .NET MAUI ListView (SfListView)

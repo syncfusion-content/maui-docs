@@ -5,6 +5,7 @@ description: Learn here all about Item Reordering support in the Syncfusion .NET
 platform: MAUI
 control: SfListView
 documentation: ug
+keywords : .net maui listview, .net maui list, .net maui drag drop listview, .net maui listview item reordering, .net maui listview item reorder, .net maui reorder items list, .net maui listview drag and drop.
 ---
 
 # Item Reordering in .NET MAUI ListView (SfListView)

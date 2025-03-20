@@ -5,6 +5,7 @@ description: Learn here all about swiping support in Syncfusion .NET MAUI ListVi
 platform: MAUI
 control: SfListView
 documentation: ug
+keywords : .net maui listview, .net maui list, .net maui listview item swipe, .net maui listview swipe, .net maui listview interaction, .net maui listview swiping.
 ---
 
 # Swiping in .NET MAUI ListView (SfListView)
