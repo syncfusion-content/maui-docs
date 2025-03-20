@@ -83,13 +83,12 @@ The following code sample demonstrates how to create a toolbar control with hori
     <ContentPage.BindingContext>
         <local:TextFormattingViewModel/>
     </ContentPage.BindingContext>
-
     <Grid>
         <toolbar:SfToolbar x:Name="Toolbar"
                     Items="{Binding ToolbarItems}"
                     Orientation="Vertical"
-                    WidthRequest="100"
-                    HeightRequest="400"/>
+                    WidthRequest="56"
+        />
     </Grid>
 </ContentPage>
 
@@ -109,8 +108,7 @@ namespace ToolbarSample
             SfToolbar toolbar = new SfToolbar();
             TextFormattingViewModel viewModel = new TextFormattingViewModel();
             toolbar.Items = viewModel.ToolbarItems;
-            toolbar.HeightRequest = 400;
-            toolbar.WidthRequest = 100;
+            toolbar.WidthRequest = 56;
             toolbar.Orientation = ToolbarOrientation.Vertical;
             this.Content = toolbar;
         }
@@ -144,70 +142,49 @@ public class TextFormattingViewModel
         ToolbarItems.Add(new SfToolbarItem
         {
             Name = "Bold",
-            Text = "Bold",
-            TextPosition = ToolbarItemTextPosition.Right,
             ToolTipText = "Bold",
-            Size = new Size(60, 40),
             Icon = new FontImageSource { Glyph = "\uE770", FontFamily = "MauiMaterialAssets" }
         });
 
         ToolbarItems.Add(new SfToolbarItem
         {
             Name = "Underline",
-            Text = "Underline",
-            TextPosition = ToolbarItemTextPosition.Right,
             ToolTipText = "Underline",
-            Size = new Size(90, 40),
             Icon = new FontImageSource { Glyph = "\uE762", FontFamily = "MauiMaterialAssets" }
         });
 
         ToolbarItems.Add(new SfToolbarItem
         {
             Name = "Italic",
-            Text = "Italic",
-            TextPosition = ToolbarItemTextPosition.Right,
             ToolTipText = "Italic",
-            Size = new Size(60, 40),
             Icon = new FontImageSource { Glyph = "\uE771", FontFamily = "MauiMaterialAssets" }
         });
 
         ToolbarItems.Add(new SfToolbarItem
         {
             Name = "AlignLeft",
-            Text = "Align-Left",
-            TextPosition = ToolbarItemTextPosition.Right,
             ToolTipText = "Align-Left",
-            Size = new Size(90, 40),
             Icon = new FontImageSource { Glyph = "\uE751", FontFamily = "MauiMaterialAssets" }
         });
 
         ToolbarItems.Add(new SfToolbarItem
         {
             Name = "AlignRight",
-            Text = "Align-Right",
-            TextPosition = ToolbarItemTextPosition.Right,
             ToolTipText = "Align-Right",
-            Size = new Size(100, 40),
             Icon = new FontImageSource { Glyph = "\uE753", FontFamily = "MauiMaterialAssets" }
         });
 
         ToolbarItems.Add(new SfToolbarItem
         {
             Name = "AlignCenter",
-            Text = "Align-Center",
-            TextPosition = ToolbarItemTextPosition.Right,
             ToolTipText = "Align-Center",
-            Size = new Size(100, 40),
             Icon = new FontImageSource { Glyph = "\uE752", FontFamily = "MauiMaterialAssets" }
         });
 
         ToolbarItems.Add(new SfToolbarItem
         {
             Name = "AlignJustify",
-            Text = "Align-Justify",
-            TextPosition = ToolbarItemTextPosition.Right,
             ToolTipText = "Align-Justify",
-            Size = new Size(100, 40),
             Icon = new FontImageSource { Glyph = "\uE74F", FontFamily = "MauiMaterialAssets" }
         });
     }
