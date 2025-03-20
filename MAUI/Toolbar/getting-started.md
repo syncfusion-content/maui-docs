@@ -50,6 +50,7 @@ Before proceeding, ensure the following are set up:
                 .UseMauiApp<App>()
                 .ConfigureFonts(fonts =>
                 {
+                    fonts.AddFont("MauiMaterialAssets.ttf", "MaterialAssets");
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
@@ -140,6 +141,7 @@ Before proceeding, ensure the following are set up:
                 .UseMauiApp<App>()
                 .ConfigureFonts(fonts =>
                 {
+                    fonts.AddFont("MauiMaterialAssets.ttf", "MaterialAssets");
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
@@ -229,6 +231,7 @@ Before proceeding, ensure the following are set up:
                 .UseMauiApp<App>()
                 .ConfigureFonts(fonts =>
                 {
+                    fonts.AddFont("MauiMaterialAssets.ttf", "MaterialAssets");
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
@@ -251,7 +254,9 @@ Before proceeding, ensure the following are set up:
     ...        
     xmlns:toolbar="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar">
 
-    <toolbar:SfToolbar />
+    <StackLayout>
+        <toolbar:SfToolbar />
+    </StackLayout>
 </ContentPage>
 
 {% endhighlight %}
@@ -265,9 +270,11 @@ public partial class MainPage : ContentPage
 {
     public MainPage()
     {
-        InitializeComponent();
+        InitializeComponent();           
+        StackLayout stackLayout = new StackLayout();
         SfToolbar toolbar = new SfToolbar();
-        this.Content = toolbar;
+        stackLayout.Children.Add(toolbar);
+        this.Content = stackLayout;
     }
 }
 
@@ -414,4 +421,4 @@ namespace ToolbarGettingStarted
 
 {% endtabs %}
 
-N> The Icons can be referred from this [link](https://help.syncfusion.com/maui/icons)
+N> The Icons can be referred from this [link](https://help.syncfusion.com/maui/icons) and You can find the getting started sample of .NET MAUI SfToolbar from this [GettingStarted](https://github.com/SyncfusionExamples/maui-toolbar/tree/Gettingstarted/GettingStarted).
