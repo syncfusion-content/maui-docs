@@ -25,7 +25,7 @@ The Toolbar control enables scrolling when its items extend beyond the view. By 
              xmlns:local="clr-namespace:ToolbarSample"
              xmlns:toolbar="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar"
              x:Class="ToolbarSample.MainPage">
-    <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56" OverflowMode="Scroll">
+    <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56" WidthRequest="220" OverflowMode="Scroll">
         <toolbar:SfToolbar.Items>
             <toolbar:SfToolbarItem Name="Bold"
                     ToolTipText="Bold">
@@ -96,6 +96,7 @@ namespace ToolbarSample
 
             SfToolbar toolbar = new SfToolbar();
             toolbar.HeightRequest = 56;
+            toolbar.WidthRequest = 220;
             toolbar.OverflowMode = ToolbarItemOverflowMode.Scroll;
             ObservableCollection<BaseToolbarItem> itemCollection = new ObservableCollection<BaseToolbarItem>
             {
@@ -166,7 +167,7 @@ The Toolbar control provides support for navigating buttons to display the overf
              xmlns:local="clr-namespace:ToolbarSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar"
              x:Class="ToolbarSample.MainPage">
-    <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56" OverflowMode="NavigationButtons">
+    <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56" WidthRequest="220" OverflowMode="NavigationButtons">
         <toolbar:SfToolbar.Items>
             <toolbar:SfToolbarItem Name="Bold"
                 Text="Bold"
@@ -230,6 +231,7 @@ namespace ToolbarSample
 
             SfToolbar toolbar = new SfToolbar();
             toolbar.HeightRequest = 56;
+            toolbar.WidthRequest = 220;
             toolbar.OverflowMode = ToolbarItemOverflowMode.NavigationButtons;
             
             ObservableCollection<BaseToolbarItem> itemCollection = new ObservableCollection<BaseToolbarItem>
@@ -318,7 +320,7 @@ The following code sample demonstrates how to display more items in the overflow
              xmlns:local="clr-namespace:ToolbarSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar"
              x:Class="ToolbarSample.MainPage">
-    <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56" OverflowMode="MoreButton" MoreItemsRelativePosition="Right">
+    <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56" WidthRequest="220" OverflowMode="MoreButton">
         <toolbar:SfToolbar.Items>
             <toolbar:SfToolbarItem Name="Bold"
                 Text="Bold"
@@ -410,8 +412,8 @@ namespace ToolbarSample
 
             SfToolbar toolbar = new SfToolbar();
             toolbar.HeightRequest = 56;
+            toolbar.WidthRequest = 220;
             toolbar.OverflowMode = ToolbarItemOverflowMode.MoreButton;
-            toolbar.MoreItemsRelativePosition = ToolbarRelativePosition.Right;
 
             ObservableCollection<BaseToolbarItem> itemCollection = new ObservableCollection<BaseToolbarItem>
             {
@@ -504,7 +506,7 @@ The Toolbar control provides support for customizing the position of the More bu
              xmlns:local="clr-namespace:ToolbarSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar"
              x:Class="ToolbarSample.MainPage">
-    <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56" OverflowMode="MoreButton">
+    <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56" WidthRequest="220" OverflowMode="MoreButton" MoreItemsRelativePosition="Right">
         <toolbar:SfToolbar.Items>
             <toolbar:SfToolbarItem Name="Bold"
                 Text="Bold"
@@ -596,7 +598,9 @@ namespace ToolbarSample
 
             SfToolbar toolbar = new SfToolbar();
             toolbar.HeightRequest = 56;
+            toolbar.WidthRequest = 220;
             toolbar.OverflowMode = ToolbarItemOverflowMode.MoreButton;
+            toolbar.MoreItemsRelativePosition = ToolbarRelativePosition.Right;
 
             ObservableCollection<BaseToolbarItem> itemCollection = new ObservableCollection<BaseToolbarItem>
             {

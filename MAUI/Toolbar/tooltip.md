@@ -230,7 +230,7 @@ The following code sample demonstrates how to Create a Toolbar control with tool
                 </toolbar:SfToolbarItem>
             </toolbar:SfToolbar.Items>
             <toolbar:SfToolbar.ToolTipSettings>
-                <toolbar:ToolbarToolTipSettings Background="Red" ToolTipPosition="Top">
+                <toolbar:ToolbarToolTipSettings Background="Red" ToolTipPosition="Bottom">
                     <toolbar:ToolbarToolTipSettings.TextStyle>
                         <toolbar:ToolbarTextStyle TextColor="Yellow"
                                     FontSize="18"
@@ -287,7 +287,7 @@ namespace ToolbarSample
                 FontAutoScalingEnabled = true,
                 FontFamily = "OpenSansSemibold"
             },
-            ToolTipPosition = ToolbarRelativePosition.Top,
+            ToolTipPosition = ToolbarRelativePosition.Bottom,
         };
     }
 }
