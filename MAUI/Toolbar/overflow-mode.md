@@ -2,7 +2,7 @@
 layout: post
 title: Overflow Mode in .NET MAUI Toolbar Control | Syncfusion®
 description: Learn here all about Overflow mode support in Syncfusion® .NET MAUI Toolbar (SfToolbar) control and more.
-platform: MAUI
+platform: maui
 control: Toolbar (SfToolbar)
 documentation: ug
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Events in .NET MAUI Toolbar Control | Syncfusion®
 description: Learn about Events and Commands support in Syncfusion® .NET MAUI Toolbar (SfToolbar) for seamless interactions.
-platform: MAUI
+platform: maui
 control: Toolbar (SfToolbar)
 documentation: ug
 ---
@@ -13,7 +13,7 @@ The Toolbar supports the `Tapped`, `ItemTouchInteraction`, `ItemLongPressed`, `M
 
 ## Tapped
 
-A Tapped event occurs, each time a toolbar item is tapped.
+A `Tapped` event occurs, each time a toolbar item is tapped.
 
 Below is a list of the arguments:
 
@@ -28,7 +28,7 @@ Below is a list of the arguments:
 
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<toolbar:SfToolbar x:Name="Toolbar" 
+<toolbar:SfToolbar x:Name="toolbar" 
                        Tapped="OnToolbarTapped" >
 </toolbar:SfToolbar>
 
@@ -49,7 +49,7 @@ private void OnToolbarTapped(object? sender, ToolbarTappedEventArgs e)
 
 ## Item Touch Interaction
 
-An ItemTouchInteraction event occurs when the toolbar item is touch or pointer action.
+An `ItemTouchInteraction` event occurs when the toolbar item is touch or pointer action.
 
 Below is a list of the arguments:
 
@@ -64,7 +64,7 @@ Below is a list of the arguments:
 
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<toolbar:SfToolbar x:Name="Toolbar" 
+<toolbar:SfToolbar x:Name="toolbar" 
                        ItemTouchInteraction="OnToolbarItemTouchInteraction" >
 </toolbar:SfToolbar>
 
@@ -85,7 +85,7 @@ private void OnToolbarItemTouchInteraction(object? sender, ToolbarItemTouchInter
 
 ## ItemLongPressed 
 
-An ItemLongPressed event occurs when the toolbar item is long pressed.
+An `ItemLongPressed` event occurs when the toolbar item is long pressed.
 
 Below is a list of the arguments:
 
@@ -99,7 +99,7 @@ Below is a list of the arguments:
 
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<toolbar:SfToolbar x:Name="Toolbar" 
+<toolbar:SfToolbar x:Name="toolbar" 
                        ItemLongPressed="OnToolbarItemLongPressed" >
 </toolbar:SfToolbar>
 
@@ -119,7 +119,7 @@ private void OnToolbarItemLongPressed(object? sender, ToolbarItemLongPressedEven
 
 ## MoreItemsChanged 
 
-An MoreItemsChanged event invokes on more items changed.
+An `MoreItemsChanged` event invokes on more items changed.
 
 Below is a list of the arguments:
 
@@ -133,7 +133,7 @@ Below is a list of the arguments:
 
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<toolbar:SfToolbar x:Name="Toolbar" 
+<toolbar:SfToolbar x:Name="toolbar" 
                        MoreItemsChanged="OnMoreItemsChanged" >
 </toolbar:SfToolbar>
 
@@ -153,7 +153,7 @@ private void OnMoreItemsChanged(object? sender, ToolbarMoreItemsChangedEventArgs
 
 ## MoreButtonTapped 
 
-An MoreButtonTapped event invokes on more option button tapped.
+An `MoreButtonTapped` event invokes on more option button tapped.
 
 Below is a list of the arguments:
 
@@ -167,7 +167,7 @@ Below is a list of the arguments:
 
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<toolbar:SfToolbar x:Name="Toolbar" 
+<toolbar:SfToolbar x:Name="toolbar" 
                        MoreButtonTapped="OnMoreButtonTapped" >
 </toolbar:SfToolbar>
 
@@ -191,7 +191,7 @@ Toolbar commands allow to map Tapped event, ItemTouchInteraction event, ItemLong
 
 ### TappedCommand
 
-The TappedCommand will be triggered when you tap the toolbar item and pass the ToolbarItemTappedEventArgs as parameter.
+The `TappedCommand` will be triggered when you tap the toolbar item and pass the ToolbarItemTappedEventArgs as parameter.
 
 {% tabs %}
 
@@ -201,7 +201,7 @@ The TappedCommand will be triggered when you tap the toolbar item and pass the T
     <Grid.BindingContext>
         <local:ToolbarInteractionViewModel />
     </Grid.BindingContext>
-    <toolbar:SfToolbar x:Name="Toolbar"
+    <toolbar:SfToolbar x:Name="toolbar"
                     TappedCommand="{Binding ToolbarTappedCommand}"
                     HeightRequest="56"
                     Orientation="Horizontal">
@@ -243,7 +243,7 @@ public class ToolbarInteractionViewModel
 
 ### ItemTouchInteractionCommand
 
-The ItemTouchInteractionCommand will be triggered when you touch the toolbar item and pass the ToolbarItemTouchInteractionEventArgs as parameter.
+The `ItemTouchInteractionCommand` will be triggered when you touch the toolbar item and pass the ToolbarItemTouchInteractionEventArgs as parameter.
 
 {% tabs %}
 
@@ -294,7 +294,7 @@ public class ToolbarInteractionViewModel
 
 ### ItemLongPressedCommand
 
-The ItemLongPressedCommand will be triggered when you long press the toolbar item and pass the ToolbarItemLongPressedEventArgs as parameter.
+The `ItemLongPressedCommand` will be triggered when you long press the toolbar item and pass the ToolbarItemLongPressedEventArgs as parameter.
 
 {% tabs %}
 
@@ -344,7 +344,7 @@ public class ToolbarInteractionViewModel
 
 ### MoreButtonTappedCommand
 
-The MoreButtonTappedCommand will be triggered when you tap the more button and pass the ToolbarMoreButtonTappedEventArgs as parameter.
+The `MoreButtonTappedCommand` will be triggered when you tap the more button and pass the ToolbarMoreButtonTappedEventArgs as parameter.
 
 {% tabs %}
 
@@ -406,7 +406,7 @@ public class ToolbarInteractionViewModel
 
 ### MoreItemsChangedCommand
 
-The MoreItemsChangedCommand will be triggered when the more items are changed and pass the ToolbarMoreItemsChangedEventArgs as parameter.
+The `MoreItemsChangedCommand` will be triggered when the more items are changed and pass the ToolbarMoreItemsChangedEventArgs as parameter.
 
 {% tabs %}
 
@@ -416,7 +416,7 @@ The MoreItemsChangedCommand will be triggered when the more items are changed an
 <Grid.BindingContext>
     <local:ToolbarInteractionViewModel />
 </Grid.BindingContext>
-<toolbar:SfToolbar x:Name="Toolbar" MoreItemsChangedCommand="{Binding MoreItemsChangedCommand}"
+<toolbar:SfToolbar x:Name="toolbar" MoreItemsChangedCommand="{Binding MoreItemsChangedCommand}"
                 HeightRequest="56"
                 WidthRequest="150"
                 Orientation="Horizontal"
