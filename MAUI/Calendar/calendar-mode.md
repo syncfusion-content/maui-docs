@@ -117,3 +117,5 @@ private void Button_Clicked(object sender, System.EventArgs e)
 {% endhighlight %} 
  
 {% endtabs %}
+
+N> [View different calendar modes sample in GitHub](https://github.com/SyncfusionExamples/How-to-show-the-calendar-in-dialog-mode-in-maui-calendar)
