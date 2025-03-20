@@ -292,7 +292,7 @@ The following code sample demonstrates how to Create a Toolbar control with tool
 
 ## Customizing Separator Item
 
-The toolbar control supports customization of separator item using properties `Stroke`, `StrokeThickness` and `Size`.
+The toolbar control supports customization of separator item using properties `Stroke` and `StrokeThickness`.
 
 
 * **Stroke** : This property is used to customize the stroke color of the separator item.
