@@ -290,7 +290,7 @@ private void HideAllFormFieldsButton_Clicked(object sender, EventArgs e)
 
 ### Hide specific form fields 
 
-While collaborating, the `IsHidden` property of form fields can be used to show and hide form fields from specific authors. The following example illustrates how to hide form fields from a specific author by accessing the form field’s`IsHidden` property. 
+While collaborating, the `IsHidden` property of form fields can be used to show and hide form fields from specific authors. The following example illustrates how to hide form fields from a specific author by accessing the form field’s `IsHidden` property. 
 
 {% tabs %}
 {% highlight xaml %}
@@ -307,13 +307,14 @@ While collaborating, the `IsHidden` property of form fields can be used to show 
 {% highlight C# %}
 private void HideFormFieldButton_Clicked(object sender, EventArgs e) 
 { 
-FormField formField = pdfViewer.FormFields.Where(x => x.Name == "name").FirstOrDefault();
-
-if (formField is TextFormField nameTextBox)
-{
-    // Hide  the Text Box field.
-    nameTextBox.IsHidden = true;
-}
+   //The code searches for a form field named "name" in the PDF.
+   FormField formField = pdfViewer.FormFields.Where(x => x.Name == "name").FirstOrDefault();
+   //If the form field is a TextFormField (like a text box), it hides that form field by setting its IsHidden property to true.
+   if (formField is TextFormField nameTextBox)
+   {
+      // Hide  the Text Box field.
+      nameTextBox.IsHidden = true;
+   }
 }
 {% endhighlight %}
 {% endtabs %}
