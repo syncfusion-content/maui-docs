@@ -79,7 +79,7 @@ The Toolbar control enables scrolling when its items extend beyond the view. By 
             </toolbar:SfToolbarItem>
         </toolbar:SfToolbar.Items>
     </toolbar:SfToolbar>
-    <Grid>
+    </Grid>
 </ContentPage>
 
 {% endhighlight %}
@@ -587,7 +587,7 @@ The Toolbar control provides support for changing the position of the More butto
             </toolbar:SfToolbarItem>
         </toolbar:SfToolbar.Items>
     </toolbar:SfToolbar>    
-    <Grid>
+    </Grid>
 </ContentPage>
 
 {% endhighlight %}
