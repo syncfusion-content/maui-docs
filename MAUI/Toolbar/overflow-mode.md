@@ -173,46 +173,25 @@ The Toolbar control provides support for navigating buttons to display the overf
     <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56" WidthRequest="220" OverflowMode="NavigationButtons">
         <toolbar:SfToolbar.Items>
             <toolbar:SfToolbarItem Name="Bold"
-                Text="Bold"
-                TextPosition="Right"
-                ToolTipText="Bold"
-                Size="60,40">
+                ToolTipText="Bold">
             </toolbar:SfToolbarItem>
             <toolbar:SfToolbarItem Name="Underline"
-                Text="Underline"
-                TextPosition="Right"
-                ToolTipText="Underline"
-                Size="90,40">
+                ToolTipText="Underline">
             </toolbar:SfToolbarItem>
             <toolbar:SfToolbarItem Name="Italic"
-                Text="Italic"
-                TextPosition="Right"
-                ToolTipText="Italic"
-                Size="60,40">
+                ToolTipText="Italic">
             </toolbar:SfToolbarItem>
             <toolbar:SfToolbarItem Name="AlignLeft"
-                        Text="Align-Left"
-                        TextPosition="Right"
-                        ToolTipText="Align-Left"
-                        Size="100,40">
+                        ToolTipText="Align-Left">
             </toolbar:SfToolbarItem>
             <toolbar:SfToolbarItem Name="AlignRight"
-                        ToolTipText="Align-Right"
-                        Text="Align-Right"
-                        TextPosition="Right"
-                        Size="100,40">
+                        ToolTipText="Align-Right">
             </toolbar:SfToolbarItem>
             <toolbar:SfToolbarItem Name="AlignCenter"
-                        ToolTipText="Align-Center"
-                        Text="Align-Center"
-                        TextPosition="Right"
-                        Size="100,40">
+                        ToolTipText="Align-Center">
             </toolbar:SfToolbarItem>
             <toolbar:SfToolbarItem Name="AlignJustify"
-                        ToolTipText="Align-Justify"
-                        Text="Align-Justify"
-                        TextPosition="Right"
-                        Size="100,40">
+                        ToolTipText="Align-Justify">
             </toolbar:SfToolbarItem>
         </toolbar:SfToolbar.Items>
     </toolbar:SfToolbar>
@@ -243,58 +222,37 @@ namespace ToolbarSample
                 new SfToolbarItem
                 {
                     Name = "Bold",
-                    Text = "Bold",
-                    TextPosition = ToolbarItemTextPosition.Right,
                     ToolTipText = "Bold",
-                    Size = new Size(60, 40),
                 },
                 new SfToolbarItem
                 {
                     Name = "Underline",
-                    Text = "Underline",
-                    TextPosition = ToolbarItemTextPosition.Right,
                     ToolTipText = "Underline",
-                    Size = new Size(90, 40),
                 },
                 new SfToolbarItem
                 {
                     Name = "Italic",
-                    Text = "Italic",
-                    TextPosition = ToolbarItemTextPosition.Right,
                     ToolTipText = "Italic",
-                    Size = new Size(60, 40),
                 },
                 new SfToolbarItem
                 {
                     Name = "AlignLeft",
-                    Text = "Align-Left",
-                    TextPosition = ToolbarItemTextPosition.Right,
                     ToolTipText = "Align-Left",
-                    Size = new Size(90, 40),
                 },
                 new SfToolbarItem
                 {
                     Name = "AlignRight",
-                    Text = "Align-Right",
-                    TextPosition = ToolbarItemTextPosition.Right,
                     ToolTipText = "Align-Right",
-                    Size = new Size(100, 40),
                 },
                 new SfToolbarItem
                 {
                     Name = "AlignCenter",
-                    Text = "Align-Center",
-                    TextPosition = ToolbarItemTextPosition.Right,
                     ToolTipText = "Align-Center",
-                    Size = new Size(100, 40),
                 },
                 new SfToolbarItem
                 {
                     Name = "AlignJustify",
-                    Text = "Align-Justify",
-                    TextPosition = ToolbarItemTextPosition.Right,
                     ToolTipText = "Align-Justify",
-                    Size = new Size(100, 40),
                 }
             };
 
@@ -328,70 +286,49 @@ The following code sample demonstrates how to display more items in the overflow
         <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56" WidthRequest="220" OverflowMode="MoreButton">
         <toolbar:SfToolbar.Items>
             <toolbar:SfToolbarItem Name="Bold"
-                Text="Bold"
-                TextPosition="Right"
-                ToolTipText="Bold"
-                Size="60,40">
+                ToolTipText="Bold">
                 <toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE770;"
                             FontFamily="MauiMaterialAssets" />
                 </toolbar:SfToolbarItem.Icon>
             </toolbar:SfToolbarItem>
             <toolbar:SfToolbarItem Name="Underline"
-                Text="Underline"
-                TextPosition="Right"
-                ToolTipText="Underline"
-                Size="90,40">
+                ToolTipText="Underline">
                 <toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE762;"
                             FontFamily="MauiMaterialAssets" />
                 </toolbar:SfToolbarItem.Icon>
             </toolbar:SfToolbarItem>
             <toolbar:SfToolbarItem Name="Italic"
-                Text="Italic"
-                TextPosition="Right"
-                ToolTipText="Italic"
-                Size="60,40">
+                ToolTipText="Italic">
                 <toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE771;"
                             FontFamily="MauiMaterialAssets" />
                 </toolbar:SfToolbarItem.Icon>
             </toolbar:SfToolbarItem>
             <toolbar:SfToolbarItem Name="AlignLeft"
-                        Text="Align-Left"
-                        TextPosition="Right"
-                        ToolTipText="Align-Left"
-                        Size="90,40">
+                        ToolTipText="Align-Left">
                 <toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE751;"
                             FontFamily="MauiMaterialAssets" />
                 </toolbar:SfToolbarItem.Icon>
             </toolbar:SfToolbarItem>
             <toolbar:SfToolbarItem Name="AlignRight"
-                        ToolTipText="Align-Right"
-                        Text="Align-Right"
-                        TextPosition="Right"
-                        Size="100,40">
+                        ToolTipText="Align-Right">
                 <toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE753;"
                 FontFamily="MauiMaterialAssets" />
                 </toolbar:SfToolbarItem.Icon>
             </toolbar:SfToolbarItem>
             <toolbar:SfToolbarItem Name="AlignCenter"
-                        ToolTipText="Align-Center"
-                        Text="Align-Center"
-                        TextPosition="Right"
-                        Size="100,40">
+                        ToolTipText="Align-Center">
                 <toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE752;"
                 FontFamily="MauiMaterialAssets" />
                 </toolbar:SfToolbarItem.Icon>
             </toolbar:SfToolbarItem>
             <toolbar:SfToolbarItem Name="AlignJustify"
-                        ToolTipText="Align-Justify"
-                        Text="Align-Justify"
-                        TextPosition="Right"
-                        Size="100,40">
+                        ToolTipText="Align-Justify">
                 <toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE74F;"
                 FontFamily="MauiMaterialAssets" />
@@ -426,64 +363,43 @@ namespace ToolbarSample
                 new SfToolbarItem
                 {
                     Name = "Bold",
-                    Text = "Bold",
-                    TextPosition = ToolbarItemTextPosition.Right,
                     ToolTipText = "Bold",
-                    Size = new Size(60, 40),
                     Icon = new FontImageSource { Glyph = "\uE770", FontFamily = "MauiMaterialAssets" }
                 },
                 new SfToolbarItem
                 {
                     Name = "Underline",
-                    Text = "Underline",
-                    TextPosition = ToolbarItemTextPosition.Right,
                     ToolTipText = "Underline",
-                    Size = new Size(90, 40),
                     Icon = new FontImageSource { Glyph = "\uE762", FontFamily = "MauiMaterialAssets" }
                 },
                 new SfToolbarItem
                 {
                     Name = "Italic",
-                    Text = "Italic",
-                    TextPosition = ToolbarItemTextPosition.Right,
                     ToolTipText = "Italic",
-                    Size = new Size(60, 40),
                     Icon = new FontImageSource { Glyph = "\uE771", FontFamily = "MauiMaterialAssets" }
                 },
                 new SfToolbarItem
                 {
                     Name = "AlignLeft",
-                    Text = "Align-Left",
-                    TextPosition = ToolbarItemTextPosition.Right,
                     ToolTipText = "Align-Left",
-                    Size = new Size(90, 40),
                     Icon = new FontImageSource { Glyph = "\uE751", FontFamily = "MauiMaterialAssets" }
                 },
                 new SfToolbarItem
                 {
                     Name = "AlignRight",
-                    Text = "Align-Right",
-                    TextPosition = ToolbarItemTextPosition.Right,
                     ToolTipText = "Align-Right",
-                    Size = new Size(100, 40),
                     Icon = new FontImageSource { Glyph = "\uE753", FontFamily = "MauiMaterialAssets" }
                 },
                 new SfToolbarItem
                 {
                     Name = "AlignCenter",
-                    Text = "Align-Center",
-                    TextPosition = ToolbarItemTextPosition.Right,
                     ToolTipText = "Align-Center",
-                    Size = new Size(100, 40),
                     Icon = new FontImageSource { Glyph = "\uE752", FontFamily = "MauiMaterialAssets" }
                 },
                 new SfToolbarItem
                 {
                     Name = "AlignJustify",
-                    Text = "Align-Justify",
-                    TextPosition = ToolbarItemTextPosition.Right,
                     ToolTipText = "Align-Justify",
-                    Size = new Size(100, 40),
                     Icon = new FontImageSource { Glyph = "\uE74F", FontFamily = "MauiMaterialAssets" }
                 }
             };
@@ -516,70 +432,49 @@ The Toolbar control provides support for changing the position of the More butto
         <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56" WidthRequest="220" OverflowMode="MoreButton" MoreItemsRelativePosition="Right">
         <toolbar:SfToolbar.Items>
             <toolbar:SfToolbarItem Name="Bold"
-                Text="Bold"
-                TextPosition="Right"
-                ToolTipText="Bold"
-                Size="60,40">
+                ToolTipText="Bold">
                 <toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE770;"
                             FontFamily="MauiMaterialAssets" />
                 </toolbar:SfToolbarItem.Icon>
             </toolbar:SfToolbarItem>
             <toolbar:SfToolbarItem Name="Underline"
-                Text="Underline"
-                TextPosition="Right"
-                ToolTipText="Underline"
-                Size="90,40">
+                ToolTipText="Underline">
                 <toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE762;"
                             FontFamily="MauiMaterialAssets" />
                 </toolbar:SfToolbarItem.Icon>
             </toolbar:SfToolbarItem>
             <toolbar:SfToolbarItem Name="Italic"
-                Text="Italic"
-                TextPosition="Right"
-                ToolTipText="Italic"
-                Size="60,40">
+                ToolTipText="Italic">
                 <toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE771;"
                             FontFamily="MauiMaterialAssets" />
                 </toolbar:SfToolbarItem.Icon>
             </toolbar:SfToolbarItem>
             <toolbar:SfToolbarItem Name="AlignLeft"
-                        Text="Align-Left"
-                        TextPosition="Right"
-                        ToolTipText="Align-Left"
-                        Size="90,40">
+                        ToolTipText="Align-Left">
                 <toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE751;"
                             FontFamily="MauiMaterialAssets" />
                 </toolbar:SfToolbarItem.Icon>
             </toolbar:SfToolbarItem>
             <toolbar:SfToolbarItem Name="AlignRight"
-                        ToolTipText="Align-Right"
-                        Text="Align-Right"
-                        TextPosition="Right"
-                        Size="100,40">
+                        ToolTipText="Align-Right">
                 <toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE753;"
                 FontFamily="MauiMaterialAssets" />
                 </toolbar:SfToolbarItem.Icon>
             </toolbar:SfToolbarItem>
             <toolbar:SfToolbarItem Name="AlignCenter"
-                        ToolTipText="Align-Center"
-                        Text="Align-Center"
-                        TextPosition="Right"
-                        Size="100,40">
+                        ToolTipText="Align-Center">
                 <toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE752;"
                 FontFamily="MauiMaterialAssets" />
                 </toolbar:SfToolbarItem.Icon>
             </toolbar:SfToolbarItem>
             <toolbar:SfToolbarItem Name="AlignJustify"
-                        ToolTipText="Align-Justify"
-                        Text="Align-Justify"
-                        TextPosition="Right"
-                        Size="100,40">
+                        ToolTipText="Align-Justify">
                 <toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE74F;"
                 FontFamily="MauiMaterialAssets" />
@@ -615,64 +510,43 @@ namespace ToolbarSample
                 new SfToolbarItem
                 {
                     Name = "Bold",
-                    Text = "Bold",
-                    TextPosition = ToolbarItemTextPosition.Right,
                     ToolTipText = "Bold",
-                    Size = new Size(60, 40),
                     Icon = new FontImageSource { Glyph = "\uE770", FontFamily = "MauiMaterialAssets" }
                 },
                 new SfToolbarItem
                 {
                     Name = "Underline",
-                    Text = "Underline",
-                    TextPosition = ToolbarItemTextPosition.Right,
                     ToolTipText = "Underline",
-                    Size = new Size(90, 40),
                     Icon = new FontImageSource { Glyph = "\uE762", FontFamily = "MauiMaterialAssets" }
                 },
                 new SfToolbarItem
                 {
                     Name = "Italic",
-                    Text = "Italic",
-                    TextPosition = ToolbarItemTextPosition.Right,
                     ToolTipText = "Italic",
-                    Size = new Size(60, 40),
                     Icon = new FontImageSource { Glyph = "\uE771", FontFamily = "MauiMaterialAssets" }
                 },
                 new SfToolbarItem
                 {
                     Name = "AlignLeft",
-                    Text = "Align-Left",
-                    TextPosition = ToolbarItemTextPosition.Right,
                     ToolTipText = "Align-Left",
-                    Size = new Size(90, 40),
                     Icon = new FontImageSource { Glyph = "\uE751", FontFamily = "MauiMaterialAssets" }
                 },
                 new SfToolbarItem
                 {
                     Name = "AlignRight",
-                    Text = "Align-Right",
-                    TextPosition = ToolbarItemTextPosition.Right,
                     ToolTipText = "Align-Right",
-                    Size = new Size(100, 40),
                     Icon = new FontImageSource { Glyph = "\uE753", FontFamily = "MauiMaterialAssets" }
                 },
                 new SfToolbarItem
                 {
                     Name = "AlignCenter",
-                    Text = "Align-Center",
-                    TextPosition = ToolbarItemTextPosition.Right,
                     ToolTipText = "Align-Center",
-                    Size = new Size(100, 40),
                     Icon = new FontImageSource { Glyph = "\uE752", FontFamily = "MauiMaterialAssets" }
                 },
                 new SfToolbarItem
                 {
                     Name = "AlignJustify",
-                    Text = "Align-Justify",
-                    TextPosition = ToolbarItemTextPosition.Right,
                     ToolTipText = "Align-Justify",
-                    Size = new Size(100, 40),
                     Icon = new FontImageSource { Glyph = "\uE74F", FontFamily = "MauiMaterialAssets" }
                 }
             };
