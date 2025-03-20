@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tooltip in MAUI Toolbar Control | Syncfusion®
-description: Learn about Tooltip support in Syncfusion® MAUI Toolbar (SfToolbar) to view additional details of toolbar items.
+title: Tooltip in .NET MAUI Toolbar Control | Syncfusion®
+description: Learn about Tooltip support in Syncfusion® .NET MAUI Toolbar (SfToolbar) to view additional details of toolbar items.
 platform: MAUI
 control: Toolbar (SfToolbar)
 documentation: ug

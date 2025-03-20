@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overflow Mode in MAUI Toolbar Control | Syncfusion®
-description: Learn here all about Overflow mode support in Syncfusion® MAUI Toolbar (SfToolbar) control and more.
+title: Overflow Mode in .NET MAUI Toolbar Control | Syncfusion®
+description: Learn here all about Overflow mode support in Syncfusion® .NET MAUI Toolbar (SfToolbar) control and more.
 platform: MAUI
 control: Toolbar (SfToolbar)
 documentation: ug
 ---
 
-# Overflow Mode in MAUI Toolbar (SfToolbar)
+# Overflow Mode in .NET MAUI Toolbar (SfToolbar)
 
 This section explains the ways about how overflowing items are managed - Scroll for continuous navigation, Navigation Buttons for stepping through items, and More Button to display excess items in a dropdown.
 
