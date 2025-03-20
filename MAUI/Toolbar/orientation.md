@@ -15,7 +15,7 @@ This section explains the ways about support for both horizontal and vertical la
 
 To set up a horizontal toolbar using the SfToolbar component in .NET MAUI, you can specify the orientation by setting the `Orientation` property to `Horizontal`. This configuration arranges the toolbar’s items from left to right across the screen.
 
-The following code sample demonstrates how to Create a Toolbar control with Horinzontal layout.
+The following code sample demonstrates how to Create a Toolbar control with Horizontal layout.
 
 {% tabs %}
 
@@ -150,7 +150,7 @@ namespace ToolbarSample
 
 To set up a Vertical toolbar using the SfToolbar component in .NET MAUI, you can specify the orientation by setting the `Orientation` property to `Vertical`. This configuration arranges the toolbar’s items from top to bottom across the screen.
 
-The following code sample demonstrates how to Create a Toolbar control with Horinzontal layout.
+The following code sample demonstrates how to Create a Toolbar control with Horizontal layout.
 {% tabs %}
 
 {% highlight xaml %}
