@@ -15,7 +15,7 @@ The tooltip is enabled in the view when the `TooltipText` or `Text` property is 
 
 You can set the tooltip text by setting the `ToolTipText` property.
 
-The following code sample demonstrates how to Create a Toolbar control with tooltip.
+The following code sample demonstrates how to create a toolbar control with tooltip.
 
 {% tabs %}
 
@@ -165,7 +165,7 @@ The properties of ToolTipSettings are:
 * **TextStyle** : Set text style for the tooltip text.
 * **ToolTipPosition** : Set the `ToolbarRelativePosition` for the tooltip. The options are `Auto`, `Top`, `Bottom`, `Left`and `Right`. The default value is `Auto`.
 
-The following code sample demonstrates how to Create a Toolbar control with tooltip settings.
+The following code sample demonstrates how to create a toolbar control with tooltip settings.
 
 {% tabs %}
 

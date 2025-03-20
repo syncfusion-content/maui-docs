@@ -9,7 +9,7 @@ documentation: ug
 
 # Overflow Mode in .NET MAUI Toolbar (SfToolbar)
 
-This section explains the ways about how overflowing items are managed - Scroll for continuous navigation, Navigation Buttons for stepping through items, and More Button to display excess items in a dropdown.
+This section explains the ways about how overflowing items are managed - `Scroll` for continuous navigation, `NavigationButtons` for stepping through items, and `MoreButton` to display excess items in a dropdown.
 
 ## Scroll Mode
 
@@ -155,7 +155,7 @@ namespace ToolbarSample
 
 ### Navigation Buttons
 
-The Toolbar control provides support for navigating buttons to display the overflow items by setting the OverflowMode property to `NavigationButtons`.
+The Toolbar control provides support for navigating buttons to display the overflow items by setting the `OverflowMode` property to `NavigationButtons`.
 
 {% tabs %}
 
@@ -304,7 +304,7 @@ namespace ToolbarSample
 
 {% endtabs %}
 
-## More Item Menu
+## More Items Menu
 
 The Toolbar control displays additional items in a dropdown menu when they extend beyond the view. This can be enabled by setting the `OverflowMode` property to `MoreButton`.
 
@@ -492,9 +492,9 @@ namespace ToolbarSample
 
 {% endtabs %}
 
-### MoreItemPosition
+### More Items Menu Position
 
-The Toolbar control provides support for customizing the position of the More button using the `MoreItemsRelativePosition` property. The default value of this property is `Auto`. You can change the position of the More button by setting the `MoreItemsRelativePosition` property to `Left`, `Right`, `Top`, or `Bottom`.
+The Toolbar control provides support for changing the position of the More button using the `MoreItemsRelativePosition` property. The default value of this property is `Auto`. You can change the position of the More button by setting the `MoreItemsRelativePosition` property to `Left`, `Right`, `Top`, or `Bottom`.
 
 {% tabs %}
 

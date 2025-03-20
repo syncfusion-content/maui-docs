@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Events in .NET MAUI Toolbar Control | Syncfusion®
+title: Events and Commands support in .NET MAUI Toolbar Control | Syncfusion®
 description: Learn about Events and Commands support in Syncfusion® .NET MAUI Toolbar (SfToolbar) for seamless interactions.
 platform: maui
 control: Toolbar (SfToolbar)
@@ -187,11 +187,11 @@ private void OnMoreButtonTapped(object? sender, ToolbarMoreButtonTappedEventArgs
 
 ## Commands
 
-Toolbar commands allow to map Tapped event, ItemTouchInteraction event, ItemLongPressed event, MoreItemsChanged event and MoreButtonTapped event to Commands which supports the MVVM (Model-View-ViewModel) pattern.
+Toolbar commands allow to map `Tapped` event, `ItemTouchInteraction` event, `ItemLongPressed` event, `MoreItemsChanged` event and `MoreButtonTapped` event to `Commands` which supports the MVVM (Model-View-ViewModel) pattern.
 
 ### TappedCommand
 
-The `TappedCommand` will be triggered when you tap the toolbar item and pass the ToolbarItemTappedEventArgs as parameter.
+The `TappedCommand` will be triggered when you tap the toolbar item and pass the `ToolbarItemTappedEventArgs` as parameter.
 
 {% tabs %}
 
@@ -219,6 +219,32 @@ The `TappedCommand` will be triggered when you tap the toolbar item and pass the
 
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfToolbar toolbar = new SfToolbar();
+        ToolbarInteractionViewModel viewModel = new ToolbarInteractionViewModel();
+        toolbar.TappedCommand = viewModel.ToolbarTappedCommand;
+        ObservableCollection<BaseToolbarItem> itemCollection = new ObservableCollection<BaseToolbarItem>
+        {
+            new SfToolbarItem
+            {
+                Name = "Zoom-in",
+                ToolTipText = "Zoom-in",
+                Icon = new FontImageSource { Glyph = "&#xE713;", FontFamily = "MauiMaterialAssets" }
+            },
+        };
+        toolbar.Items = itemCollection;
+        this.Content = toolbar;
+    }   
+}
+
+{% endhighlight %}
+
+{% highlight C# tabtitle="ToolbarInteractionViewModel.cs" %}
+
 public class ToolbarInteractionViewModel
 {
     public ICommand ToolbarTappedCommand { get; set; }
@@ -243,7 +269,7 @@ public class ToolbarInteractionViewModel
 
 ### ItemTouchInteractionCommand
 
-The `ItemTouchInteractionCommand` will be triggered when you touch the toolbar item and pass the ToolbarItemTouchInteractionEventArgs as parameter.
+The `ItemTouchInteractionCommand` will be triggered when you touch the toolbar item and pass the `ToolbarItemTouchInteractionEventArgs` as parameter.
 
 {% tabs %}
 
@@ -270,6 +296,32 @@ The `ItemTouchInteractionCommand` will be triggered when you touch the toolbar i
 
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfToolbar toolbar = new SfToolbar();
+        ToolbarInteractionViewModel viewModel = new ToolbarInteractionViewModel();
+        toolbar.ItemTouchInteractionCommand = viewModel.ToolbarItemTouchInteractedCommand;
+        ObservableCollection<BaseToolbarItem> itemCollection = new ObservableCollection<BaseToolbarItem>
+        {
+            new SfToolbarItem
+            {
+                Name = "Zoom-in",
+                ToolTipText = "Zoom-in",
+                Icon = new FontImageSource { Glyph = "&#xE713;", FontFamily = "MauiMaterialAssets" }
+            },
+        };
+        toolbar.Items = itemCollection;
+        this.Content = toolbar;
+    }   
+}
+
+{% endhighlight %}
+
+{% highlight C# tabtitle="ToolbarInteractionViewModel.cs" %}
+
 public class ToolbarInteractionViewModel
 {
     public ICommand ToolbarItemTouchInteractedCommand { get; set; }
@@ -288,13 +340,14 @@ public class ToolbarInteractionViewModel
     }
 }
 
+
 {% endhighlight %}
 
 {% endtabs %}
 
 ### ItemLongPressedCommand
 
-The `ItemLongPressedCommand` will be triggered when you long press the toolbar item and pass the ToolbarItemLongPressedEventArgs as parameter.
+The `ItemLongPressedCommand` will be triggered when you long press the toolbar item and pass the `ToolbarItemLongPressedEventArgs` as parameter.
 
 {% tabs %}
 
@@ -321,6 +374,32 @@ The `ItemLongPressedCommand` will be triggered when you long press the toolbar i
 
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfToolbar toolbar = new SfToolbar();
+        ToolbarInteractionViewModel viewModel = new ToolbarInteractionViewModel();
+        toolbar.ItemLongPressedCommand = viewModel.ToolbarItemLongPressedCommand;
+        ObservableCollection<BaseToolbarItem> itemCollection = new ObservableCollection<BaseToolbarItem>
+        {
+            new SfToolbarItem
+            {
+                Name = "Zoom-in",
+                ToolTipText = "Zoom-in",
+                Icon = new FontImageSource { Glyph = "&#xE713;", FontFamily = "MauiMaterialAssets" }
+            },
+        };
+        toolbar.Items = itemCollection;
+        this.Content = toolbar;
+    }   
+}
+
+{% endhighlight %}
+
+{% highlight C# tabtitle="ToolbarInteractionViewModel.cs" %}
+
 public class ToolbarInteractionViewModel
 {
     public ICommand ToolbarItemLongPressedCommand { get; set; }
@@ -344,7 +423,7 @@ public class ToolbarInteractionViewModel
 
 ### MoreButtonTappedCommand
 
-The `MoreButtonTappedCommand` will be triggered when you tap the more button and pass the ToolbarMoreButtonTappedEventArgs as parameter.
+The `MoreButtonTappedCommand` will be triggered when you tap the more button and pass the `ToolbarMoreButtonTappedEventArgs` as parameter.
 
 {% tabs %}
 
@@ -383,6 +462,44 @@ The `MoreButtonTappedCommand` will be triggered when you tap the more button and
 
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfToolbar toolbar = new SfToolbar();
+        ToolbarInteractionViewModel viewModel = new ToolbarInteractionViewModel();
+        toolbar.MoreButtonTappedCommand = viewModel.MoreButtonTappedCommand;
+        ObservableCollection<BaseToolbarItem> itemCollection = new ObservableCollection<BaseToolbarItem>
+        {
+            new SfToolbarItem
+            {
+                Name = "Zoom-in",
+                ToolTipText = "Zoom-in",
+                Icon = new FontImageSource { Glyph = "&#xE713;", FontFamily = "MauiMaterialAssets" }
+            },
+            new SfToolbarItem
+            {
+                Name = "Zoom-out",
+                ToolTipText = "Zoom-out",
+                Icon = new FontImageSource { Glyph = "&#xE714;", FontFamily = "MauiMaterialAssets" }
+            },
+            new SfToolbarItem
+            {
+                Name = "Search",
+                ToolTipText = "Search",
+                Icon = new FontImageSource { Glyph = "&#xE715;", FontFamily = "MauiMaterialAssets" }
+            },
+        };
+        toolbar.Items = itemCollection;
+        this.Content = toolbar;
+    }   
+}
+
+{% endhighlight %}
+
+{% highlight C# tabtitle="ToolbarInteractionViewModel.cs" %}
+
 public class ToolbarInteractionViewModel
 {
     public ICommand MoreButtonTappedCommand { get; set; }
@@ -406,7 +523,7 @@ public class ToolbarInteractionViewModel
 
 ### MoreItemsChangedCommand
 
-The `MoreItemsChangedCommand` will be triggered when the more items are changed and pass the ToolbarMoreItemsChangedEventArgs as parameter.
+The `MoreItemsChangedCommand` will be triggered when the more items are changed and pass the `ToolbarMoreItemsChangedEventArgs` as parameter.
 
 {% tabs %}
 
@@ -444,6 +561,44 @@ The `MoreItemsChangedCommand` will be triggered when the more items are changed 
 {% endhighlight %}
 
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfToolbar toolbar = new SfToolbar();
+        ToolbarInteractionViewModel viewModel = new ToolbarInteractionViewModel();
+        toolbar.MoreItemsChangedCommand = viewModel.MoreItemsChangedCommand;
+        ObservableCollection<BaseToolbarItem> itemCollection = new ObservableCollection<BaseToolbarItem>
+        {
+            new SfToolbarItem
+            {
+                Name = "Zoom-in",
+                ToolTipText = "Zoom-in",
+                Icon = new FontImageSource { Glyph = "&#xE713;", FontFamily = "MauiMaterialAssets" }
+            },
+            new SfToolbarItem
+            {
+                Name = "Zoom-out",
+                ToolTipText = "Zoom-out",
+                Icon = new FontImageSource { Glyph = "&#xE714;", FontFamily = "MauiMaterialAssets" }
+            },
+            new SfToolbarItem
+            {
+                Name = "Search",
+                ToolTipText = "Search",
+                Icon = new FontImageSource { Glyph = "&#xE715;", FontFamily = "MauiMaterialAssets" }
+            },
+        };
+        toolbar.Items = itemCollection;
+        this.Content = toolbar;
+    }   
+}
+
+{% endhighlight %}
+
+{% highlight C# tabtitle="ToolbarInteractionViewModel.cs" %}
 
 public class ToolbarInteractionViewModel
 {
