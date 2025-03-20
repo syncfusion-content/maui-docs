@@ -205,7 +205,7 @@ this.Content = scheduler;
 
 The [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) allows users to toggle the visibility of the allowed views by setting value to the `ShowAllowedViews`. By setting this property to false, users can simplify the interface, making it cleaner and more focused, especially in scenarios where view switching is unnecessary. The default value for the property `ShowAllowedViews` is `true`.
 
-N> When `ShowAllowedViews` is set to false, you can restrict view navigation by configuring the `AllowedViews` property.
+N> When `ShowAllowedViews` is `false` the view navigation buttons in the scheduler header are hidden, but `AllowViewNavigation` still works for views added in the `AllowedViews` property. For `AllowedViews` is set to `Default`, no scheduler view navigation buttons are added, so `AllowViewNavigation` does not work.
 
 {% tabs %}
 {% highlight XAML hl_lines="2" %}
