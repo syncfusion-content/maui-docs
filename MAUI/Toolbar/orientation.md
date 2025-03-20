@@ -63,6 +63,73 @@ namespace ToolbarSample
 
 {% endhighlight %}
 
+{% highlight C# tabtitle="TextFormattingViewModel.cs" %}
+
+public class TextFormattingViewModel
+{
+    private ObservableCollection<BaseToolbarItem> toolbarItems = new ObservableCollection<BaseToolbarItem>();
+
+    public ObservableCollection<BaseToolbarItem> ToolbarItems
+    {
+        get { return toolbarItems; }
+        set { toolbarItems = value; }
+    }
+
+    public TextFormattingViewModel()
+    {
+        ToolbarItems.Add(new SfToolbarItem
+        {
+            Name = "Bold",
+            ToolTipText = "Bold",
+            Icon = new FontImageSource { Glyph = "\uE770", FontFamily = "MauiMaterialAssets" }
+        });
+
+        ToolbarItems.Add(new SfToolbarItem
+        {
+            Name = "Underline",
+            ToolTipText = "Underline",
+            Icon = new FontImageSource { Glyph = "\uE762", FontFamily = "MauiMaterialAssets" }
+        });
+
+        ToolbarItems.Add(new SfToolbarItem
+        {
+            Name = "Italic",
+            ToolTipText = "Italic",
+            Icon = new FontImageSource { Glyph = "\uE771", FontFamily = "MauiMaterialAssets" }
+        });
+
+        ToolbarItems.Add(new SfToolbarItem
+        {
+            Name = "AlignLeft",
+            ToolTipText = "Align-Left",
+            Icon = new FontImageSource { Glyph = "\uE751", FontFamily = "MauiMaterialAssets" }
+        });
+
+        ToolbarItems.Add(new SfToolbarItem
+        {
+            Name = "AlignRight",
+            ToolTipText = "Align-Right",
+            Icon = new FontImageSource { Glyph = "\uE753", FontFamily = "MauiMaterialAssets" }
+        });
+
+        ToolbarItems.Add(new SfToolbarItem
+        {
+            Name = "AlignCenter",
+            ToolTipText = "Align-Center",
+            Icon = new FontImageSource { Glyph = "\uE752", FontFamily = "MauiMaterialAssets" }
+        });
+
+        ToolbarItems.Add(new SfToolbarItem
+        {
+            Name = "AlignJustify",
+            ToolTipText = "Align-Justify",
+            Icon = new FontImageSource { Glyph = "\uE74F", FontFamily = "MauiMaterialAssets" }
+        });
+    }
+}
+
+{% endhighlight %}
+
 {% endtabs %}
 
 ## Vertical Toolbar
@@ -116,14 +183,6 @@ namespace ToolbarSample
 }
 
 {% endhighlight %}
-
-{% endtabs %}
-
-### Create view model
-
-Create a view model class to set values for the toolbar items as shown in the following example code.
-
-{% tabs %}
 
 {% highlight C# tabtitle="TextFormattingViewModel.cs" %}
 
