@@ -25,6 +25,7 @@ The Toolbar control enables scrolling when its items extend beyond the view. By 
              xmlns:local="clr-namespace:ToolbarSample"
              xmlns:toolbar="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar"
              x:Class="ToolbarSample.MainPage">
+    <Grid>
     <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56" WidthRequest="220" OverflowMode="Scroll">
         <toolbar:SfToolbar.Items>
             <toolbar:SfToolbarItem Name="Bold"
@@ -78,6 +79,7 @@ The Toolbar control enables scrolling when its items extend beyond the view. By 
             </toolbar:SfToolbarItem>
         </toolbar:SfToolbar.Items>
     </toolbar:SfToolbar>
+    <Grid>
 </ContentPage>
 
 {% endhighlight %}
@@ -167,6 +169,7 @@ The Toolbar control provides support for navigating buttons to display the overf
              xmlns:local="clr-namespace:ToolbarSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar"
              x:Class="ToolbarSample.MainPage">
+<Grid>
     <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56" WidthRequest="220" OverflowMode="NavigationButtons">
         <toolbar:SfToolbar.Items>
             <toolbar:SfToolbarItem Name="Bold"
@@ -213,6 +216,7 @@ The Toolbar control provides support for navigating buttons to display the overf
             </toolbar:SfToolbarItem>
         </toolbar:SfToolbar.Items>
     </toolbar:SfToolbar>
+</Grid>
 </ContentPage>
 
 {% endhighlight %}
@@ -320,7 +324,8 @@ The following code sample demonstrates how to display more items in the overflow
              xmlns:local="clr-namespace:ToolbarSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar"
              x:Class="ToolbarSample.MainPage">
-    <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56" WidthRequest="220" OverflowMode="MoreButton">
+    <Grid>
+        <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56" WidthRequest="220" OverflowMode="MoreButton">
         <toolbar:SfToolbar.Items>
             <toolbar:SfToolbarItem Name="Bold"
                 Text="Bold"
@@ -394,6 +399,7 @@ The following code sample demonstrates how to display more items in the overflow
             </toolbar:SfToolbarItem>
         </toolbar:SfToolbar.Items>
     </toolbar:SfToolbar>
+    </Grid>
 </ContentPage>
 
 {% endhighlight %}
@@ -506,7 +512,8 @@ The Toolbar control provides support for changing the position of the More butto
              xmlns:local="clr-namespace:ToolbarSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar"
              x:Class="ToolbarSample.MainPage">
-    <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56" WidthRequest="220" OverflowMode="MoreButton" MoreItemsRelativePosition="Right">
+        <Grid>
+        <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56" WidthRequest="220" OverflowMode="MoreButton" MoreItemsRelativePosition="Right">
         <toolbar:SfToolbar.Items>
             <toolbar:SfToolbarItem Name="Bold"
                 Text="Bold"
@@ -579,7 +586,8 @@ The Toolbar control provides support for changing the position of the More butto
                 </toolbar:SfToolbarItem.Icon>
             </toolbar:SfToolbarItem>
         </toolbar:SfToolbar.Items>
-    </toolbar:SfToolbar>
+    </toolbar:SfToolbar>    
+    <Grid>
 </ContentPage>
 
 {% endhighlight %}
