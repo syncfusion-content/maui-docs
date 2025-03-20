@@ -185,6 +185,33 @@ private void OnMoreButtonTapped(object? sender, ToolbarMoreButtonTappedEventArgs
 
 {% endtabs %}
 
+### Cancel the default item dropdown view
+
+The In-build more items drop down menu view can be cancelled with the help of `Cancel` parameter in the `MoreButtonTapped` event
+
+{% tabs %}
+
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+
+<toolbar:SfToolbar x:Name="toolbar" 
+                       MoreButtonTapped="OnMoreButtonTapped" >
+</toolbar:SfToolbar>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+
+this.toolbar.MoreButtonTapped += this.OnMoreButtonTapped;
+private void OnMoreButtonTapped(object? sender, ToolbarMoreButtonTappedEventArgs e)
+{
+    e.Cancel = true;
+    var moreItems = e.ToolbarItems;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ## Commands
 
 Toolbar commands allows to map `Tapped` event, `ItemTouchInteraction` event, `ItemLongPressed` event, `MoreItemsChanged` event and `MoreButtonTapped` event to `Commands` which supports the MVVM (Model-View-ViewModel) pattern.
