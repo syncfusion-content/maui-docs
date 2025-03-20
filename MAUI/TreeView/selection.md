@@ -58,6 +58,8 @@ treeView.SelectedItems.Add(viewModel.CountriesInfo[3]);
 
 W> If an item is selected programmatically when `SelectionMode` is `None` and if multiple items are programmatically selected when `SelectionMode` is `Single` or `SingleDeselect`, then exception will be thrown internally.
 
+N> The `SfTreeView.SelectedItems` property is of type `ObservableCollection<Object>`. Therefore, it is recommended to utilize a ViewModel collection property with the same type, `ObservableCollection<Object>`, to ensure proper functioning of the `SelectedItems` property.
+
 ## Selected items 
 
 ### Gets selected Items
