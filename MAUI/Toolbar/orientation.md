@@ -63,8 +63,6 @@ namespace ToolbarSample
 
 {% endhighlight %}
 
-{% highlight  %}
-
 {% endtabs %}
 
 ## Vertical Toolbar
