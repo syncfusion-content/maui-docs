@@ -284,6 +284,8 @@ public partial class MainPage : ContentPage
 
 {% endtabcontent %}
 
+{% endtabcontents %}
+
 ## Adding Toolbar items
 
 You can use `Items` property of `SfToolbar` to populate the toolbar items.
