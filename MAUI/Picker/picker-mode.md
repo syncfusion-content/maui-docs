@@ -147,7 +147,7 @@ N> It is only applicable in `RelativeDialog` mode. If `no relative view` is spec
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="C#"% hl_lines="4" %}
+{% highlight c# tabtitle="C#" hl_lines="4" %}
 
 private void Button_Clicked(object sender, System.EventArgs e)
 {
