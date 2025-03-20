@@ -251,6 +251,133 @@ private void PdfViewer_FormFieldValueChanged(object sender, FormFieldValueChange
 {% endhighlight %}
 {% endtabs %}
 
+## Customize the form fields programmatically
+
+Customizing form fields is crucial for controlling their appearance and behavior. By modifying properties like BackgroundColor, BorderColor, BorderWidth, and ForegroundColor, you can tailor how each form field (such as TextFormField, CheckboxFormField, RadioButtonFormField, etc.) looks within the PDF viewer. Like other form fields properties, you can undo and redo the hiding or showing actions. Additionally, when an form field is locked, it cannot be hidden. Form fields that are hidden will remain hidden during import, export, printing and saving.
+
+### Customize the backgroundcolor of the form fields
+
+The BackgroundColor property sets the color of the background within a form field. This allows you to customize the background color, which can be useful for creating forms with specific branding or visual styles in a PDF document. The following code explains how to enable the BackgroundColor for text form fields. Similarly, you can do the same for other form fields like checkboxes, radio buttons, and other form fields by modifying their respective properties. The following example illustrates how to add a background color for a TextFormField by accessing the text form field’s `BackgroundColor` property. 
+
+
+{% tabs %}
+{% highlight C# %}
+foreach (FormField formField in PdfViewer.FormFields) 
+{
+    // Check if the current form field is a TextFormField (text input box)
+    if (formField is TextFormField textBoxField)
+    {
+        // Loop through all the widgets associated with the text box field
+        foreach (var widget in textBoxField.Widgets)
+        {
+            // Set the background color of each widget to yellow
+            widget.BackgroundColor = Colors.Yellow;
+        }
+    }
+}
+ 
+{% endhighlight %}
+{% endtabs %}
+
+### Customize the foregroundcolor for form fields
+
+The ForegroundColor property sets the color of the text within a form field. This allows you to customize the text color, which can be useful for creating forms with specific branding or visual styles in a PDF document. The following code explains how to enable the ForegroundColor for text form fields. Similarly, you can do the same for other form fields like checkboxes, radio buttons, and other form fields by modifying their respective properties.The following example illustrates how to add a foreground color for a TextFormField by accessing the text form field’s `ForegroundColor` property. 
+
+
+{% tabs %}
+{% highlight C# %} 
+foreach (FormField formField in PdfViewer.FormFields)
+{
+    // Check if the current form field is a TextFormField (text input box)
+    if (formField is TextFormField textBoxField)
+    {
+        // Loop through all the widgets associated with the text box field
+        foreach (var widget in textBoxField.Widgets)
+        {
+            // Set the foreground color of each widget to Aquamarine
+            widget. ForegroundColor = Colors.Aquamarine;
+        }
+    }
+} 
+{% endhighlight %}
+{% endtabs %}
+
+
+
+### Customize BorderColor for Form fields
+The BorderColor property sets the color of the border around  the form field. This allows you to customize the border color, which can be useful for creating forms with specific branding or visual styles in a PDF document. The following code explains how to enable the BorderColor for text form fields. Similarly, you can do the same for other form fields like checkboxes, radio buttons, and other form fields by modifying their respective properties.The following example illustrates how to add a  border color for a TextFormField by accessing the text form field’s `BorderColor` property. 
+ 
+
+{% tabs %}
+{% highlight C# %} 
+foreach (FormField formField in PdfViewer.FormFields)
+{
+     // Check if the current form field is a TextFormField (text input box)
+    if (formField is TextFormField textBoxField)
+    {
+         // Loop through all the widgets associated with the text box field
+        foreach (var widget in textBoxField.Widgets)
+        {
+            // Set the border color of each widget to blue
+            widget. BorderColor = Colors.Blue;
+        }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Customize BorderWidth for Form fields
+The BorderWidth property sets the thickness of the border around a form field. This allows you to customize the border width, which can be useful for creating forms with specific branding or visual styles in a PDF document. The following code explains how to enable the BorderWidth for text form fields. Similarly, you can do the same for other form fields like checkboxes, radio buttons, and other form fields by modifying their respective properties.The following example illustrates how to add a border width for a TextFormField by accessing the text form field’s `BorderWidth` property. 
+ 
+
+{% tabs %}
+{% highlight C# %}
+foreach (FormField formField in PdfViewer.FormFields)
+{
+     // Check if the current form field is a TextFormField (text input box)
+    if (formField is TextFormField textBoxField)
+    {
+        // Loop through all the widgets associated with the text box field
+        foreach (var widget in textBoxField.Widgets)
+        {
+            // Set the border color of each widget to 2.0f
+            widget. BorderWidth = 2.0f;
+        }
+    }
+} 
+{% endhighlight %}
+{% endtabs %}
+
+### PropertyChanged Event for Form field
+
+The PropertyChanged event occurs when an property is changed in the PDF document. The following example explains how to wire and handle the event.
+
+{% tabs %}
+{% highlight C# %}
+void FormFieldPropertyChangedEvent()
+{
+    // Wire the propertychanged event of the form field
+    pdfViewer.PropertyChanged += PdfViewer_PropertyChanged; 
+}
+private void PdfViewer_PropertyChanged(object? sender, System.ComponentModel.PropertyChangedEventArgs e)
+{
+    foreach (FormField formfield in PdfViewer.FormFields)
+    {
+        // Check if the current form field is a TextFormField (text input box)
+        if (formfield is TextFormField textBoxField)
+        {
+            // Loop through all the widgets associated with the text box field
+            foreach (var widget in textBoxField.Widgets)
+            {
+                widget.BackgroundColor = Colors.Black;
+            }
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Restrict form field editing
 
 The form fields can be prevented from being modified by setting the [ReadOnly](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FormField.html#Syncfusion_Maui_PdfViewer_FormField_ReadOnly) property. The following example illustrates how to make all form fields read-only.
