@@ -1,25 +1,25 @@
 ---
 layout: post
-title: Toolbar Items in MAUI Toolbar Control | Syncfusion®
-description: Learn here all about Toolbar Items support in Syncfusion® MAUI Toolbar (SfToolbar) control and more.
-platform: MAUI
+title: Toolbar Items in .NET MAUI Toolbar Control | Syncfusion®
+description: Learn here all about Toolbar Items support in Syncfusion® .NET MAUI Toolbar (SfToolbar) control and more.
+platform: maui
 control: Toolbar (SfToolbar)
 documentation: ug
 ---
 
-# Toolbar Items in MAUI Toolbar (SfToolbar)
+# Toolbar Items in .NET MAUI Toolbar (SfToolbar)
 
-This section explains the ways about populating items through BaseToolbarItem and item source.
+This section explains the ways about populating items through `BaseToolbarItem` and `ItemSource` properties in `SfToolbar`.
 
 ## Default View
 
-By passing a collection of `SfToolbarItem`, you can get the view of `SfToolbar` control. The SfToolbarItem class provides various options to customize the items by giving custom views, font icons, and images.
+By passing a collection of `SfToolbarItem`, you can get the view of `SfToolbar` control. The `SfToolbarItem` class provides various options to customize the items by giving custom views, font icons, and images.
 
 ### Icons
 
 The control provides support to add icons to the toolbar items. You can add icons to the toolbar items by using the `Icon` property of `SfToolbarItem`.
 
-The following code sample demonstrates how to Create a Toolbar control with Items having the icons.
+The following code sample demonstrates how to create a toolbar control with items having the icons.
 
 {% tabs %}
 
@@ -31,6 +31,7 @@ The following code sample demonstrates how to Create a Toolbar control with Item
              xmlns:local="clr-namespace:ToolbarSample"
              xmlns:toolbar="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar"
              x:Class="ToolbarSample.MainPage">
+    <Grid>
     <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56">
         <toolbar:SfToolbar.Items>
             <toolbar:SfToolbarItem Name="Bold">
@@ -77,6 +78,7 @@ The following code sample demonstrates how to Create a Toolbar control with Item
             </toolbar:SfToolbarItem>
         </toolbar:SfToolbar.Items>
     </toolbar:SfToolbar>
+    </Grid>
 </ContentPage>
 
 {% endhighlight %}
@@ -157,6 +159,7 @@ The control provides an option to set the icon size for the toolbar items. You c
              xmlns:local="clr-namespace:ToolbarSample"
              xmlns:toolbar="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar"
              x:Class="ToolbarSample.MainPage">
+    <Grid>
     <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56">
         <toolbar:SfToolbar.Items>
             <toolbar:SfToolbarItem Name="Bold" IconSize="20">
@@ -203,6 +206,7 @@ The control provides an option to set the icon size for the toolbar items. You c
             </toolbar:SfToolbarItem>
         </toolbar:SfToolbar.Items>
     </toolbar:SfToolbar>
+    </Grid>
 </ContentPage>
 
 {% endhighlight %}
@@ -280,7 +284,7 @@ namespace ToolbarSample
 
 The control allows you to display text in the toolbar items. You can set the text for the toolbar items using the `Text` property.
 
-The following code sample demonstrates how to Display Text in the Toolbar items of the control.
+The following code sample demonstrates how to display text in the toolbar items of the control.
 
 {% tabs %}
 
@@ -292,6 +296,7 @@ The following code sample demonstrates how to Display Text in the Toolbar items 
              xmlns:local="clr-namespace:ToolbarSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar"
              x:Class="ToolbarSample.MainPage">
+    <Grid>
     <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56">
         <toolbar:SfToolbar.Items>
             <toolbar:SfToolbarItem Name="Bold"
@@ -324,6 +329,7 @@ The following code sample demonstrates how to Display Text in the Toolbar items 
             </toolbar:SfToolbarItem>
         </toolbar:SfToolbar.Items>
     </toolbar:SfToolbar>
+    </Grid>
 </ContentPage>
 
 {% endhighlight %}
@@ -403,7 +409,7 @@ namespace ToolbarSample
 
 The control provides support to add icons and text to the toolbar items.
 
-The following code sample demonstrates how to Display Icons and text in the Toolbar items of the control.
+The following code sample demonstrates how to display icons and text in the toolbar items of the control.
 
 {% tabs %}
 
@@ -415,6 +421,7 @@ The following code sample demonstrates how to Display Icons and text in the Tool
              xmlns:local="clr-namespace:ToolbarSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar"
              x:Class="ToolbarSample.MainPage">
+    <Grid>
     <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56">
         <toolbar:SfToolbar.Items>
             <toolbar:SfToolbarItem Name="Bold"
@@ -482,6 +489,7 @@ The following code sample demonstrates how to Display Icons and text in the Tool
             </toolbar:SfToolbarItem>
         </toolbar:SfToolbar.Items>
     </toolbar:SfToolbar>
+    </Grid>
 </ContentPage>
 
 {% endhighlight %}
@@ -574,7 +582,7 @@ namespace ToolbarSample
 
 The control provides an option to place the text in the toolbar items using the `TextPosition` property. The text can be placed on the left, right, top, and bottom of the toolbar items.
 
-The following code sample demonstrates how to Display Toolbar items with separator item of the control.
+The following code sample demonstrates how to display toolbar items with separator item of the control.
 
 {% tabs %}
 
@@ -586,6 +594,7 @@ The following code sample demonstrates how to Display Toolbar items with separat
              xmlns:local="clr-namespace:ToolbarSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
              x:Class="ToolbarSample.MainPage">
+    <Grid>
         <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56">
             <toolbar:SfToolbar.Items>
                 <toolbar:SfToolbarItem Name="AlignLeft"
@@ -626,6 +635,7 @@ The following code sample demonstrates how to Display Toolbar items with separat
                 </toolbar:SfToolbarItem>
             </toolbar:SfToolbar.Items>
         </toolbar:SfToolbar>
+    </Grid>
 </ContentPage>
 
 {% endhighlight %}
@@ -695,7 +705,7 @@ namespace ToolbarSample
 
 The control provides an option to add a separator view between the toolbar items using the `SeparatorView` property.
 
-The following code sample demonstrates how to Display Toolbar items with separator item of the control.
+The following code sample demonstrates how to display toolbar items with separator item of the control.
 
 {% tabs %}
 
@@ -707,6 +717,7 @@ The following code sample demonstrates how to Display Toolbar items with separat
              xmlns:local="clr-namespace:ToolbarSample"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
              x:Class="ToolbarSample.MainPage">
+    <Grid>
         <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56">
             <toolbar:SfToolbar.Items>
                 <toolbar:SfToolbarItem Name="Bold"
@@ -761,6 +772,7 @@ The following code sample demonstrates how to Display Toolbar items with separat
                 </toolbar:SfToolbarItem>
             </toolbar:SfToolbar.Items>
         </toolbar:SfToolbar>
+    </Grid>    
 </ContentPage>
 
 {% endhighlight %}
@@ -845,7 +857,7 @@ namespace ToolbarSample
 
 The Toolbar control provides support to customize the items of the toolbar with any type of views. You can add the views to the toolbar using the `View` property.
 
-The following code sample demonstrates how to Create a Toolbar control with Custom view.
+The following code sample demonstrates how to create a toolbar control with custom view.
 
 {% tabs %}
 
@@ -857,6 +869,7 @@ The following code sample demonstrates how to Create a Toolbar control with Cust
              xmlns:local="clr-namespace:ToolbarSample"
              xmlns:toolbar="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar"
              x:Class="ToolbarSample.MainPage">
+    <Grid>
     <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56">
         <toolbar:SfToolbar.Items>
             <toolbar:SfToolbarItem Name="Bold"
@@ -904,7 +917,8 @@ The following code sample demonstrates how to Create a Toolbar control with Cust
                 </toolbar:SfToolbarItem.View>
             </toolbar:SfToolbarItem>
         </toolbar:SfToolbar.Items>
-    </toolbar:SfToolbar>
+    </toolbar:SfToolbar>    
+    <Grid>
 </ContentPage>
 
 {% endhighlight %}
@@ -954,7 +968,7 @@ namespace ToolbarSample
 The Toolbar control provides support for nested tool bars. You can add the toolbar as a child of another toolbar using the `OverlayToolbar` property. When overlay toolbar is set, the back button will be displayed in the overlay toolbar.
 
 
-The following code sample demonstrates how to Create a Toolbar control with Overlay Toolbar.
+The following code sample demonstrates how to create a toolbar control with overlay toolbar.
 
 {% tabs %}
 
@@ -1085,7 +1099,7 @@ namespace ToolbarSample
 
 The Toolbar control provides support for customizing the space between the toolbar items using the `ItemSpacing` property. 
 
-The following code sample demonstrates how to Create a Toolbar control with Item Spacing.
+The following code sample demonstrates how to create a toolbar control with item spacing.
 
 {% tabs %}
 {% highlight XAML hl_lines="7 8 9" %}
@@ -1100,10 +1114,12 @@ The following code sample demonstrates how to Create a Toolbar control with Item
         <local:ToolbarViewModel/>
     </ContentPage.BindingContext>
 
-<toolbar:SfToolbar x:Name="Toolbar"
-                   Items="{Binding ToolbarItems}"
-                   ItemSpacing="10"
-                   HeightRequest="56"/>
+    <Grid>
+        <toolbar:SfToolbar x:Name="Toolbar"
+                        Items="{Binding ToolbarItems}"
+                        ItemSpacing="10"
+                        HeightRequest="56"/>
+    </Grid>
 </ContentPage>
 
 {% endhighlight %}
@@ -1229,7 +1245,7 @@ The spacing between the toolbar items is equalized when the `ItemSpacing` proper
 
 The Toolbar control provides support for customizing the alignment of the toolbar items using the `ItemAlignment` property. This property allows you to set the alignment of the toolbar items to `Start`, `Center`, or `End`.
 
-The following code sample demonstrates how to Create a Toolbar control with Item Alignment.
+The following code sample demonstrates how to create a toolbar control with item alignment.
 
 {% tabs %}
 
@@ -1244,10 +1260,12 @@ The following code sample demonstrates how to Create a Toolbar control with Item
         <ContentPage.BindingContext>
             <local:ToolbarViewModel/>
         </ContentPage.BindingContext>
-         <toolbar:SfToolbar x:Name="Toolbar"
-                        HeightRequest="56"
-                        Items="{Binding ToolbarItems}">
-         </toolbar:SfToolbar>
+        <Grid>
+            <toolbar:SfToolbar x:Name="Toolbar"
+                            HeightRequest="56"
+                            Items="{Binding ToolbarItems}">
+            </toolbar:SfToolbar>
+        <Grid>
 </ContentPage>
 
 {% endhighlight %}
@@ -1293,7 +1311,7 @@ namespace ToolbarSample
 
 The Toolbar control provides support for setting leading and trailing items using the `ItemAlignment` property. The items set with `ItemAlignment` as `Start` will be displayed at the leading position, and the items set with `ItemAlignment` as `End` will be displayed at the trailing position. By default, the items will be displayed in the center position.
 
-The following code sample demonstrates how to Create a Toolbar control with Leading and Trailing Item.
+The following code sample demonstrates how to create a toolbar control with leading and trailing items.
 
 {% tabs %}
 
@@ -1305,6 +1323,7 @@ The following code sample demonstrates how to Create a Toolbar control with Lead
              xmlns:local="clr-namespace:ToolbarSample"
              xmlns:toolbar="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar"
              x:Class="ToolbarSample.MainPage">
+    <Grid>    
         <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56">
             <toolbar:SfToolbar.Items>
             <toolbar:SfToolbarItem  Name="Bold"
@@ -1410,6 +1429,7 @@ The following code sample demonstrates how to Create a Toolbar control with Lead
             </toolbar:SfToolbarItem>
         </toolbar:SfToolbar.Items>
     </toolbar:SfToolbar>
+    <Grid>
 </ContentPage>
 
 {% endhighlight %}

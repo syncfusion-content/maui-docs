@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Customization in MAUI Toolbar Control | Syncfusion®
-description: Learn here all about Customization support in Syncfusion® MAUI Toolbar (SfToolbar) control and more.
-platform: MAUI
+title: Customization in .NET MAUI Toolbar Control | Syncfusion®
+description: Learn here all about Customization support in Syncfusion® .NET MAUI Toolbar (SfToolbar) control and more.
+platform: maui
 control: Toolbar (SfToolbar)
 documentation: ug
 ---
 
-# Customization in MAUI Toolbar (SfToolbar)
+# Customization in .NET MAUI Toolbar (SfToolbar)
 
-This section explains the ways about support for customization in Syncfusion MAUI Toolbar (SfToolbar) control.
+This section explains the ways about support for customization in syncfusion .NET MAUI Toolbar (SfToolbar) control.
 
 ## Customization Toolbar Items
 
@@ -18,7 +18,7 @@ The Toolbar control supports customization of toolbar items using properties `Is
 * **IsEnabled** : This property is used to enable or disable the toolbar item.
 * **TextStyle** : This property is used to customize the text style of the toolbar item.
 
-The following code sample demonstrates how to Create a Toolbar control with toolbar Items customization.
+The following code sample demonstrates how to create a toolbar control with toolbar Items customization.
 
 {% tabs %}
 
@@ -298,7 +298,7 @@ The toolbar control supports customization of separator item using properties `S
 * **Stroke** : This property is used to customize the stroke color of the separator item.
 * **StrokeThickness** : This property is used to customize the stroke thickness of the separator item.
 
-The following code sample demonstrates how to Create a Toolbar control with toolbar Items customization.
+The following code sample demonstrates how to create a toolbar control with separator item customization.
 
 {% tabs %}
 
@@ -437,13 +437,12 @@ public partial class MainPage : ContentPage
 
 The toolbar control supports customization of navigation buttons using properties `ForwardButtonIconColor`, `BackwardButtonIconColor`, `ForwardButtonBackground`, `BackwardButtonBackground`.
 
-
 * **ForwardButtonIconColor** : This property is used to customize the icon color of the forward button.
 * **BackwardButtonIconColor** : This property is used to customize the icon color of the backward button.
 * **ForwardButtonBackground** : This property is used to customize the background color of the forward button.
 * **BackwardButtonBackground** : This property is used to customize the background color of the backward button.
 
-The following code sample demonstrates how to Create a Toolbar control with toolbar Items customization.
+The following code sample demonstrates how to create a toolbar control with navigation button customization.
 
 {% tabs %}
 
@@ -591,7 +590,7 @@ The toolbar control supports customization of more button using properties `More
 * **MoreButtonIconColor** : This property is used to customize the icon color of the more button.
 * **MoreButtonBackground** : This property is used to customize the background color of the more button.
 
-The following code sample demonstrates how to Create a Toolbar control with toolbar Items customization.
+The following code sample demonstrates how to create a toolbar control with more button customization.
 
 {% tabs %}
 
