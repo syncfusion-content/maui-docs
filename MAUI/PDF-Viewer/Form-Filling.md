@@ -255,7 +255,7 @@ private void PdfViewer_FormFieldValueChanged(object sender, FormFieldValueChange
 
 Customizing form fields is crucial for controlling their appearance and behavior. By modifying properties like background color, border color, border width, and foreground color, you can tailor how each form field (such as text form field, checkbox form field, radio button form field, etc.) looks within the PDF Viewer. Like other form field properties, you can undo and redo the customization of the color of the form fields. Additionally, when a form field is locked, its color cannot be modified. The customized color of form fields will be preserved during import, export, printing, and saving, ensuring the color customization remains intact across different document operations.
 
-### Customize the background color of the form fields
+### Customize the background color for the form fields
 
 The `BackgroundColor` property sets the color of the background within a form field. This allows you to customize the background color, which can be useful for changing the forms with specific branding or visual styles in a PDF document. The following code explains how to enable the background color for text form fields. Similarly, you can do the same for other form fields like checkboxes, radio buttons, and other form fields by modifying their respective properties. The following example illustrates how to add a background color for a text form field by accessing the text form field’s `BackgroundColor` property. 
 
@@ -279,7 +279,7 @@ foreach (FormField formField in PdfViewer.FormFields)
 {% endhighlight %}
 {% endtabs %}
 
-### Customize the foreground color for form fields
+### Customize the text color for the form fields
 
 The `ForegroundColor` property sets the color of the text within a form field. This allows you to customize the text color, Text color can be used to highlight important fields or messages in forms. For example, you can set a field's text color to red to draw attention to a mandatory field or a validation error. The following code explains how to enable the ForegroundColor for text form fields. Similarly, you can do the same for other form fields like checkboxes, radio buttons, and other form fields by modifying their respective properties.The following example illustrates how to add a foreground color for a text form field by accessing the text form field’s `ForegroundColor` property. 
 
@@ -304,7 +304,7 @@ foreach (FormField formField in PdfViewer.FormFields)
 
 
 
-### Customize BorderColor for Form fields
+### Customize the border color for the form fields
 
 The `BorderColor` property sets the color of the border around  the form field. For users with color blindness, using high-contrast border colors can improve the visibility of the form fields. Additionally, changing the border color to red for an error state can be more noticeable for those with difficulty distinguishing certain colors. The following code explains how to enable the border color for text form fields. Similarly, you can do the same for other form fields like checkboxes, radio buttons, and other form fields by modifying their respective properties.The following example illustrates how to add a  border color for a text form field by accessing the text form field’s `BorderColor` property. 
  
@@ -327,7 +327,7 @@ foreach (FormField formField in PdfViewer.FormFields)
 {% endhighlight %}
 {% endtabs %}
 
-### Customize BorderWidth for Form fields
+### Customize the border width for the form fields
 
 The `BorderWidth` property sets the thickness of the border around a form field.  Adjusting the border width of form fields can enhance accessibility by making it easier for users with visual impairments to identify and focus on fields. Thicker borders can create a more pronounced visual hierarchy, making the form easier to navigate. The following code explains how to enable the border width for text form fields. Similarly, you can do the same for other form fields like checkboxes, radio buttons, and other form fields by modifying their respective properties.The following example illustrates how to add a border width for a text form field by accessing the text form field’s `BorderWidth` property. 
  
