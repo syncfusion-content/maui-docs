@@ -9,8 +9,7 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 ---
 
 # Master Details View in Maui DataGrid (SfDataGrid)
-
-The `SfDataGrid` supports displaying hierarchical data using the `Master-Details View`, allowing you to represent parent-child relationships in a structured format. This feature enables the nesting of multiple levels of related data within the grid.
+The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) supports displaying hierarchical data using the `Master-Details View`, allowing you to represent parent-child relationships in a structured format. This feature enables the nesting of multiple levels of related data within the grid.
 
 ## Key Features
    - Display hierarchical data in a structured format using nested tables.
@@ -25,12 +24,12 @@ The `Master-Details View` can be generated using properties of type [IEnumerable
 ### Steps to Generate Master-Details View for IEnumerable Properties
 1. Create a Data Model with Relations
    - Define properties of type `IEnumerable` (such as ObservableCollection<T>) to establish hierarchical relationships.
-2. Define Relations in the `DataGrid`
-   - **Auto-Generating Relations:** The `DataGrid` automatically detects relationships based on IEnumerable properties.
+2. Define Relations in the `SfDataGrid`
+   - **Auto-Generating Relations:** The `SfDataGrid` automatically detects relationships based on IEnumerable properties.
    - **Manually Defining Relations:** Explicitly specify the relationships to customize the hierarchy.
 
 ### 1. Creating a Data Model with Relations
-Define an `Employee` class with `Sales` and `Orders` properties, which use [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-7.0) to establish relations. These properties allow nesting of related data within the `DataGrid`.
+Define an `Employee` class with `Sales` and `Orders` properties, which use [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-7.0) to establish relations. These properties allow nesting of related data within the `SfDataGrid`.
 
 {% tabs %}
 {% highlight c# %}
@@ -130,6 +129,9 @@ Bind the collection created in the previous step to [SfDataGrid.ItemsSource](htt
 <syncfusion:SfDataGrid x:Name="dataGrid"
                         AutoGenerateRelations="True"
                         ItemsSource="{Binding Employees}" />
+{% endhighlight %}
+{% highlight c# %}
+dataGrid.AutoGenerateRelations = True;
 {% endhighlight %}
 {% endtabs %}
 
@@ -344,7 +346,7 @@ public class DataViewModel
 
 ### 2. Defining Relations
 #### Auto-Generating Relations
-In `SfDataGrid`, we can automatically generate `Master-Details` relationships using `AutoGenerateRelations`. This allows `SfDataGrid` to detect and create hierarchical views based on `DataSet` relationships.
+In [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html), we can automatically generate `Master-Details` relationships using `AutoGenerateRelations`. This allows `SfDataGrid` to detect and create hierarchical views based on `DataSet` relationships.
 
 {% tabs %}
 {% highlight xaml %}
@@ -507,7 +509,6 @@ We can customize the header appearance of `DetailsViewDataGrid` , through `Heade
 <img alt="auto-relation-headerstyle" src="Images\master-details-view\maui-datagrid-header-color.png" width="604" /> 
 
 ### Hiding header row of Master-Details View
-
 We can hide the header row of `DetailsViewDataGrid` by setting [HeaderRowHeight]() property.
 
 {% tabs %}
@@ -606,7 +607,6 @@ this.dataGrid.CollapseDetailsViewAt(0);
 ## Handling Events
 
 ### DetailsViewLoading
-
 The [DetailsViewLoading]() event is triggered when the `DetailsViewDataGrid` is loaded into the view.
 
 {% tabs %}
