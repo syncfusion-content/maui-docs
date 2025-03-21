@@ -9,7 +9,7 @@ documentation: ug
 
 # Toolbar Items in .NET MAUI Toolbar (SfToolbar)
 
-This section explains how to populate items for both default views and custom views using the `ItemSource` properties in `SfToolbar`.
+This section explains how to populate items for both default views and custom views using the `Items` properties in `SfToolbar`.
 
 ## Default View
 
@@ -701,9 +701,9 @@ namespace ToolbarSample
 
 {% endtabs %}
 
-### Default View Item Size
+### Default view item size
 
-The control provides support to set the size for the toolbar items using the `Size` property.
+The control provides support to set the size for the toolbar item using the `Size` property.
 
 {% tabs %}
 
@@ -1010,7 +1010,7 @@ namespace ToolbarSample
 
 ## Separator View
 
-The control provides an option to add a separator view between the toolbar items using the `SeparatorView` property.
+The control allows you to add a separator view using the `SeparatorToolbarItem` in the `Items` property of SfToolbar.
 
 The following code sample demonstrates how to display toolbar items with separator item of the control.
 
@@ -1186,7 +1186,7 @@ namespace ToolbarSample
 
 ## Custom View
 
-The Toolbar control provides support to customize the items of the toolbar with any type of views. You can add the views to the toolbar using the `View` property.
+You can add custom views, such as buttons, checkboxes, entries, etc., to the toolbar using the `View` property.
 
 The following code sample demonstrates how to create a toolbar control with custom view.
 
@@ -1296,10 +1296,11 @@ namespace ToolbarSample
 
 ## Overlay Toolbar
 
-The Toolbar control provides support for nested tool bars. You can add the toolbar as a child of another toolbar using the `OverlayToolbar` property. When overlay toolbar is set, the back button will be displayed in the overlay toolbar.
+The toolbar control supports displaying an overlay toolbar in the view. You can add the `SfOverlayToolbar` to the `OverlayToolbar` property of `SfToolbarItem`. The `SfOverlayToolbar` includes a built-in back button, which can be used to close the overlay toolbar.
 
+### How to display the overlay toolbar
 
-The following code sample demonstrates how to create a toolbar control with overlay toolbar.
+You can retrieve the overlay toolbar of a toolbar item and add it to the view using the `Tapped` event in the `SfToolbar` control. The following code sample demonstrates how to add an overlay toolbar to the view.
 
 {% tabs %}
 
@@ -1428,7 +1429,7 @@ namespace ToolbarSample
 
 ## Item Spacing
 
-The Toolbar control provides support for customizing the space between the toolbar items using the `ItemSpacing` property. 
+The control provides support for customizing the space between the toolbar items using the `ItemSpacing` property. 
 
 The following code sample demonstrates how to create a toolbar control with item spacing.
 
@@ -1670,7 +1671,7 @@ public class ToolbarViewModel
  
 ## Leading and Trailing Item
 
-The Toolbar control provides support for setting leading and trailing items using the `ItemAlignment` property. The items set with `ItemAlignment` as `Start` will be displayed at the leading position, and the items set with `ItemAlignment` as `End` will be displayed at the trailing position. By default, the items will be displayed in the center position.
+The control provides support for setting leading and trailing items using the `ItemAlignment` property. The items set with `ItemAlignment` as `Start` will be displayed at the leading position, and the items set with `ItemAlignment` as `End` will be displayed at the trailing position. By default, the items will be displayed in the center position.
 
 N> The leading and trailing is applicable when the toolbar is not scrollable mode.
 

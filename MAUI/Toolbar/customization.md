@@ -13,7 +13,7 @@ This section explains the ways about support for customization in syncfusion .NE
 
 ## Customization Toolbar Items
 
-The Toolbar control supports customization of toolbar items using properties `IsEnabled`,`TextStyle` and `Color`.
+The toolbar control supports customization of toolbar items using properties `IsEnabled`,`TextStyle` and `Color`.
 
 * **IsEnabled** : This property is used to enable or disable the toolbar item.
 * **TextStyle** : This property is used to customize the text style of the toolbar item.
