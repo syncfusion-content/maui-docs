@@ -155,7 +155,7 @@ namespace ToolbarSample
 
 {% endtabs %}
 
-### Navigation Buttons
+## Navigation Buttons
 
 The Toolbar control provides support for navigating buttons to display the overflow items by setting the `OverflowMode` property to `NavigationButtons`.
 

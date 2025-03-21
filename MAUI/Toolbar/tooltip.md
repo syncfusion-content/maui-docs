@@ -163,7 +163,7 @@ The properties of ToolTipSettings are:
 
 * **Background** : Set background color for the tooltip.
 * **TextStyle** : Set text style for the tooltip text.
-* **ToolTipPosition** : Set the `ToolbarRelativePosition` for the tooltip. The options are `Auto`, `Top`, `Bottom`, `Left`and `Right`. The default value is `Auto`.
+* **ToolTipPosition** : Set the `ToolbarRelativePosition` for the tooltip. The options are `Auto`, `Top`, `Bottom`, `Left` and `Right`. The default value is `Auto`.
 
 The following code sample demonstrates how to create a toolbar control with tooltip settings.
 
