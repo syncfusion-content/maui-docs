@@ -13,11 +13,11 @@ This section explains how to populate items for both default views and custom vi
 
 ## Default View
 
-By passing a collection of `SfToolbarItem`, you can get the view of `SfToolbar` control. The `SfToolbarItem` class provides various options to customize the items by giving custom views, font icons, and images.
+The toolbar control supports displaying a default view for toolbar items when the `View` property of `SfToolbarItem` is not defined. To render the default view, you need to define either the `Icon` or `Text` property of `SfToolbarItem`.
 
-### Icons
+### Icon
 
-The control provides support to add icons to the toolbar items. You can add icons to the toolbar items by using the `Icon` property of `SfToolbarItem`.
+The control provides support to add icon to the toolbar items. You can add icon to the toolbar items by using the `Icon` property of `SfToolbarItem`.
 
 The following code sample demonstrates how to create a toolbar control with items having the icons.
 
@@ -405,9 +405,9 @@ namespace ToolbarSample
 
 {% endtabs %}
 
-### Icons With Text
+### Icon With Text
 
-The control provides support to add icons and text to the toolbar items.
+The control provides support to add icon with text to the toolbar items.
 
 The following code sample demonstrates how to display icons and text in the toolbar items of the control.
 
