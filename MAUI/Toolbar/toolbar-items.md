@@ -1225,7 +1225,7 @@ The following code sample demonstrates how to create a toolbar control with cust
             </toolbar:SfToolbarItem>
         </toolbar:SfToolbar.Items>
     </toolbar:SfToolbar>    
-    <Grid>
+    </Grid>
 </ContentPage>
 
 {% endhighlight %}
