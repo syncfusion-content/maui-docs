@@ -9,7 +9,7 @@ documentation: ug
 
 # Toolbar Items in .NET MAUI Toolbar (SfToolbar)
 
-This section explains the ways about populating items through `BaseToolbarItem` and `ItemSource` properties in `SfToolbar`.
+This section explains how to populate items for both default views and custom views using the `ItemSource` properties in `SfToolbar`.
 
 ## Default View
 
