@@ -312,7 +312,7 @@ The following code sample demonstrates how to display text in the toolbar items 
                 Size="60,40">
             </toolbar:SfToolbarItem>
             <toolbar:SfToolbarItem Name="AlignLeft"
-                        TextPosition="Right"
+                        Text="Align-Left"
                         Size="100,40">
             </toolbar:SfToolbarItem>
             <toolbar:SfToolbarItem Name="AlignRight"
@@ -701,7 +701,7 @@ namespace ToolbarSample
 
 {% endtabs %}
 
-## Default View Item Size
+### Default View Item Size
 
 The control provides support to set the size for the toolbar items using the `Size` property.
 
@@ -798,6 +798,111 @@ namespace ToolbarSample
 
             toolbar.Items = toolbarItems;
             this.Content = toolbar;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Programmatically clear selection toolbar items
+
+The control provides support to clear the selection of toolbar items using the `ClearSelection` method.
+
+The following code sample demonstrates how to clear the selection of toolbar items of the control.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ToolbarSample"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
+             x:Class="ToolbarSample.MainPage">
+    <Grid>
+        <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56">
+            <toolbar:SfToolbar.Items>
+                <toolbar:SfToolbarItem Name="Bold"
+                            ToolTipText="Bold">
+                <toolbar:SfToolbarItem.Icon>
+                <FontImageSource Glyph="&#xE770;"
+                                        FontFamily="MauiMaterialAssets" />
+                </toolbar:SfToolbarItem.Icon>
+                </toolbar:SfToolbarItem>
+                <toolbar:SfToolbarItem Name="Underline"
+                            ToolTipText="Underline">
+                <toolbar:SfToolbarItem.Icon>
+                <FontImageSource Glyph="&#xE762;"
+                                        FontFamily="MauiMaterialAssets" />
+                </toolbar:SfToolbarItem.Icon>
+                </toolbar:SfToolbarItem>
+                <toolbar:SfToolbarItem Name="Italic"
+                            ToolTipText="Italic">
+                <toolbar:SfToolbarItem.Icon>
+                <FontImageSource Glyph="&#xE771;"
+                                        FontFamily="MauiMaterialAssets" />
+                </toolbar:SfToolbarItem.Icon>
+                </toolbar:SfToolbarItem>
+                <toolbar:SfToolbarItem Name="AlignLeft"
+                                        ToolTipText="Align-Left">
+                <toolbar:SfToolbarItem.Icon>
+                <FontImageSource Glyph="&#xE751;"
+                                        FontFamily="MauiMaterialAssets" />
+                </toolbar:SfToolbarItem.Icon>
+                </toolbar:SfToolbarItem>
+                <toolbar:SfToolbarItem Name="AlignRight"
+                                        ToolTipText="Align-Right">
+                <toolbar:SfToolbarItem.Icon>
+                <FontImageSource Glyph="&#xE753;"
+                            FontFamily="MauiMaterialAssets" />
+                </toolbar:SfToolbarItem.Icon>
+                </toolbar:SfToolbarItem>
+                <toolbar:SfToolbarItem Name="AlignCenter"
+                                        ToolTipText="Align-Center">
+                <toolbar:SfToolbarItem.Icon>
+                <FontImageSource Glyph="&#xE752;"
+                            FontFamily="MauiMaterialAssets" />
+                </toolbar:SfToolbarItem.Icon>
+                </toolbar:SfToolbarItem>
+                <toolbar:SfToolbarItem Name="AlignJustify"
+                                        ToolTipText="Align-Justify">
+                <toolbar:SfToolbarItem.Icon>
+                <FontImageSource Glyph="&#xE74F;"
+                            FontFamily="MauiMaterialAssets" />
+                </toolbar:SfToolbarItem.Icon>
+                </toolbar:SfToolbarItem>
+                <toolbar:SfToolbarItem Name="ClearSelection"
+                                            ToolTipText="Button to clear selection">
+                <toolbar:SfToolbarItem.View>
+                <Button Text="Clear toolbar selection" Clicked="Button_Clicked"/>
+                </toolbar:SfToolbarItem.View>
+                </toolbar:SfToolbarItem>
+            </toolbar:SfToolbar.Items>
+        </toolbar:SfToolbar>
+    </Grid>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+using Syncfusion.Maui.Toolbar;
+
+namespace ToolbarSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            Toolbar.ClearSelection();
         }
     }
 }
