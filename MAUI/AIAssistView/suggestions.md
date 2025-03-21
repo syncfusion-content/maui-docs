@@ -63,7 +63,7 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 To populate the Suggestions, bind the item collection from its BindingContext to `SfAIAssistView.Suggestions` property.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="15" %}
+{% highlight xaml hl_lines="15" %}
 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -116,7 +116,7 @@ N> To view `Suggestion`, it is mandatory to set `ShowHeader` API to `true`.
 The `SfAIAssistView` control allows you to fully customize the suggestions appearance by using the `SuggestionTemplate` property. This property lets you define a custom layout and style for the suggestion items.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="13" %}
+{% highlight xaml hl_lines="13" %}
 
 <ContentPage.Resources>
     <DataTemplate x:Key="suggestionTemplate">
@@ -308,9 +308,8 @@ You can add an image to the suggestion item by setting the [ImageSource](https:/
 The [AssistItemSuggestion.Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItemSuggestion.html#Syncfusion_Maui_AIAssistView_AssistItemSuggestion_Orientation) property allows you to display suggestions horizontally or vertically. By, default, the orientation is vertical.
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="22" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="21" %}
 
-    ...
 	...
 	private async Task GetResult(AssistItem requestItem)
     {
@@ -340,7 +339,47 @@ The [AssistItemSuggestion.Orientation](https://help.syncfusion.com/cr/maui/Syncf
         this.AssistItems.Add(responseItem);
     }
     ...
+
+ 
+{% endhighlight %}
+{% endtabs %}
+
+#### Changing the Item spacing of suggestions
+
+The [AssistItemSuggestion.ItemSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItemSuggestion.html#Syncfusion_Maui_AIAssistView_AssistItemSuggestion_ItemSpacing) property allows you to display suggestions with Spacing. By, default, the spacing is 8.
+
+{% tabs %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="21" %}
+
 	...
+	private async Task GetResult(AssistItem requestItem)
+    {
+        await Task.Delay(1000).ConfigureAwait(true);
+
+        AssistItem responseItem = new AssistItem()
+        {
+           // response from AI service
+           Text = "MAUI stands for .NET Multi-platform App UI. It's a .NET framework for building cross-platform apps with a single C# codebase for iOS, Android, macOS, and Windows. Sure! Here's a link to learn more about .NET MAUI",
+        };
+		
+		// Generate suggestions.
+		var assistSuggestions = new AssistItemSuggestion();
+
+        suggestions = new ObservableCollection<ISuggestion>();
+        suggestions.Add(new AssistSuggestion() { Text = "Get started with .NET MAUI" });
+        suggestions.Add(new AssistSuggestion() { Text = "Build your first MAUI app" });
+
+        assistSuggestions.Items = suggestions;
+		
+		assistSuggestions.ItemSpacing = 10;
+		
+		// Assign suggestions to response item.
+		responseItem.Suggestion = assistSuggestions;
+
+        // Add the response item to the collection
+        this.AssistItems.Add(responseItem);
+    }
+    ...
  
 {% endhighlight %}
 {% endtabs %}
