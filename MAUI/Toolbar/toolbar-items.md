@@ -1025,61 +1025,76 @@ The following code sample demonstrates how to display toolbar items with separat
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
              x:Class="ToolbarSample.MainPage">
     <Grid>
-        <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56">
-            <toolbar:SfToolbar.Items>
-                <toolbar:SfToolbarItem Name="Bold"
-                    Size="60,40">
-                    <toolbar:SfToolbarItem.Icon>
-                        <FontImageSource Glyph="&#xE770;"
-                                FontFamily="MauiMaterialAssets" />
-                    </toolbar:SfToolbarItem.Icon>
-                </toolbar:SfToolbarItem>
-                <toolbar:SfToolbarItem Name="Underline"
-                    Size="90,40">
-                    <toolbar:SfToolbarItem.Icon>
-                        <FontImageSource Glyph="&#xE762;"
-                                FontFamily="MauiMaterialAssets" />
-                    </toolbar:SfToolbarItem.Icon>
-                </toolbar:SfToolbarItem>
-                <toolbar:SfToolbarItem Name="Italic"
-                    Size="60,40">
-                    <toolbar:SfToolbarItem.Icon>
-                        <FontImageSource Glyph="&#xE771;"
-                                FontFamily="MauiMaterialAssets" />
-                    </toolbar:SfToolbarItem.Icon>
-                </toolbar:SfToolbarItem>
-                <toolbar:SeparatorToolbarItem Stroke="Black" StrokeThickness="5"/>
-                <toolbar:SfToolbarItem Name="AlignLeft"
-                            Size="90,40">
-                    <toolbar:SfToolbarItem.Icon>
-                        <FontImageSource Glyph="&#xE751;"
-                                FontFamily="MauiMaterialAssets" />
-                    </toolbar:SfToolbarItem.Icon>
-                </toolbar:SfToolbarItem>
-                <toolbar:SfToolbarItem Name="AlignRight"
-                            Size="100,40">
-                    <toolbar:SfToolbarItem.Icon>
-                        <FontImageSource Glyph="&#xE753;"
-                    FontFamily="MauiMaterialAssets" />
-                    </toolbar:SfToolbarItem.Icon>
-                </toolbar:SfToolbarItem>
-                <toolbar:SfToolbarItem Name="AlignCenter"
-                            Size="100,40">
-                    <toolbar:SfToolbarItem.Icon>
-                        <FontImageSource Glyph="&#xE752;"
-                    FontFamily="MauiMaterialAssets" />
-                    </toolbar:SfToolbarItem.Icon>
-                </toolbar:SfToolbarItem>
-                <toolbar:SfToolbarItem Name="AlignJustify"
-                            Size="100,40">
-                    <toolbar:SfToolbarItem.Icon>
-                        <FontImageSource Glyph="&#xE74F;"
-                    FontFamily="MauiMaterialAssets" />
-                    </toolbar:SfToolbarItem.Icon>
-                </toolbar:SfToolbarItem>
-            </toolbar:SfToolbar.Items>
-        </toolbar:SfToolbar>
-    </Grid>    
+    <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56">
+        <toolbar:SfToolbar.Items>
+            <toolbar:SfToolbarItem Name="Bold"
+                Size="60,40">
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE770;"
+                            FontFamily="MauiMaterialAssets" />
+                </toolbar:SfToolbarItem.Icon>
+            </toolbar:SfToolbarItem>
+            <toolbar:SfToolbarItem Name="Underline"
+                Size="90,40">
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE762;"
+                            FontFamily="MauiMaterialAssets" />
+                </toolbar:SfToolbarItem.Icon>
+            </toolbar:SfToolbarItem>
+            <toolbar:SfToolbarItem Name="Italic"
+                Size="60,40">
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE771;"
+                            FontFamily="MauiMaterialAssets" />
+                </toolbar:SfToolbarItem.Icon>
+            </toolbar:SfToolbarItem>
+            <toolbar:SeparatorToolbarItem/>
+            <toolbar:SfToolbarItem Name="AlignLeft"
+                        Size="90,40">
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE751;"
+                            FontFamily="MauiMaterialAssets" />
+                </toolbar:SfToolbarItem.Icon>
+            </toolbar:SfToolbarItem>
+            <toolbar:SfToolbarItem Name="AlignRight"
+                        Size="100,40">
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE753;"
+                FontFamily="MauiMaterialAssets" />
+                </toolbar:SfToolbarItem.Icon>
+            </toolbar:SfToolbarItem>
+            <toolbar:SfToolbarItem Name="AlignCenter"
+                        Size="100,40">
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE752;"
+                FontFamily="MauiMaterialAssets" />
+                </toolbar:SfToolbarItem.Icon>
+            </toolbar:SfToolbarItem>
+            <toolbar:SfToolbarItem Name="AlignJustify"
+                        Size="100,40">
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE74F;"
+                FontFamily="MauiMaterialAssets" />
+                </toolbar:SfToolbarItem.Icon>
+            </toolbar:SfToolbarItem>
+            <toolbar:SeparatorToolbarItem/>
+            <toolbar:SfToolbarItem Size="100,40"
+                                >
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE744;"
+                                        FontFamily="MauiMaterialAssets" />
+                </toolbar:SfToolbarItem.Icon>
+            </toolbar:SfToolbarItem>
+            <toolbar:SfToolbarItem 
+                                Size="100,40">
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE745;"
+                                        FontFamily="MauiMaterialAssets" />
+                </toolbar:SfToolbarItem.Icon>
+            </toolbar:SfToolbarItem>
+        </toolbar:SfToolbar.Items>
+    </toolbar:SfToolbar>
+</Grid>
 </ContentPage>
 
 {% endhighlight %}
@@ -1119,11 +1134,7 @@ namespace ToolbarSample
                     Size = new Size(60, 40),
                     Icon = new FontImageSource { Glyph = "\uE771", FontFamily = "MauiMaterialAssets" }
                 },
-                new SeparatorToolbarItem
-                {
-                    Stroke = Colors.Black,
-                    StrokeThickness = 5
-                },
+                new SeparatorToolbarItem {},
                 new SfToolbarItem
                 {
                     Name = "AlignLeft",
@@ -1147,6 +1158,19 @@ namespace ToolbarSample
                     Name = "AlignJustify",
                     Size = new Size(100, 40),
                     Icon = new FontImageSource { Glyph = "\uE74F", FontFamily = "MauiMaterialAssets" }
+                },
+                new SeparatorToolbarItem {},
+                new SfToolbarItem
+                {
+                    Name = "Undo",
+                    Size = new Size(100, 40),
+                    Icon = new FontImageSource { Glyph = "\uE744", FontFamily = "MauiMaterialAssets" }
+                },
+                new SfToolbarItem
+                {
+                    Name = "Redo",
+                    Size = new Size(100, 40),
+                    Icon = new FontImageSource { Glyph = "\uE745", FontFamily = "MauiMaterialAssets" }
                 }
             };
 
@@ -1662,113 +1686,102 @@ The following code sample demonstrates how to create a toolbar control with lead
              xmlns:local="clr-namespace:ToolbarSample"
              xmlns:toolbar="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar"
              x:Class="ToolbarSample.MainPage">
-    <Grid>    
-        <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56">
-            <toolbar:SfToolbar.Items>
+    <Grid>
+    <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56">
+        <toolbar:SfToolbar.Items>
             <toolbar:SfToolbarItem  Name="Bold"
-                                            Alignment="Start"
-                                            Text="Bold"
-                                            TextPosition="Right"
-                                            ToolTipText="Bold"
-                                            Size="60,40">
+                                        Alignment="Start"
+                                        Text="Bold"
+                                        TextPosition="Right"
+                                        ToolTipText="Bold"
+                                        Size="60,40">
                 <toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE770;"
-                                                FontFamily="MauiMaterialAssets" />
+                                            FontFamily="MauiMaterialAssets" />
                 </toolbar:SfToolbarItem.Icon>
             </toolbar:SfToolbarItem>
             <toolbar:SfToolbarItem  Name="Underline"
-                                            Alignment="Start"
-                                            Text="Underline"
-                                            TextPosition="Right"
-                                            ToolTipText="Underline"
-                                            Size="90,40">               
+                                        Alignment="Start"
+                                        Text="Underline"
+                                        TextPosition="Right"
+                                        ToolTipText="Underline"
+                                        Size="90,40">
                 <toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE762;"
-                                                FontFamily="MauiMaterialAssets" />
+                                            FontFamily="MauiMaterialAssets" />
                 </toolbar:SfToolbarItem.Icon>
             </toolbar:SfToolbarItem>
             <toolbar:SfToolbarItem  Name="Italic"
-                                            Alignment="Start"
-                                            Text="Italic"
-                                            TextPosition="Right"
-                                            ToolTipText="Italic"
-                                            Size="60,40">
+                                        Alignment="Start"
+                                        Text="Italic"
+                                        TextPosition="Right"
+                                        ToolTipText="Italic"
+                                        Size="60,40">
                 <toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE771;"
-                                                FontFamily="MauiMaterialAssets" />
+                                            FontFamily="MauiMaterialAssets" />
                 </toolbar:SfToolbarItem.Icon>
             </toolbar:SfToolbarItem>
             <toolbar:SeparatorToolbarItem Alignment="Start"/>
+            <toolbar:SeparatorToolbarItem Alignment="End"/>
             <toolbar:SfToolbarItem Name="AlignLeft"
-                                        Alignment="Center"
-                                        Text="Align-Left"
-                                        TextPosition="Right"
-                                        ToolTipText="Align-Left"
-                                        Size="90,40">
+                                    Alignment="End"
+                                    Text="Align-Left"
+                                    TextPosition="Right"
+                                    ToolTipText="Align-Left"
+                                    Size="90,40">
                 <toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE751;"
-                                                FontFamily="MauiMaterialAssets" />
+                                            FontFamily="MauiMaterialAssets" />
                 </toolbar:SfToolbarItem.Icon>
             </toolbar:SfToolbarItem>
             <toolbar:SfToolbarItem Name="AlignRight"
-                                        Alignment="Center"
-                                        ToolTipText="Align-Right"
-                                        Text="Align-Right"
-                                        TextPosition="Right"
-                                        Size="100,40">
+                                    Alignment="End"
+                                    ToolTipText="Align-Right"
+                                    Text="Align-Right"
+                                    TextPosition="Right"
+                                    Size="100,40">
                 <toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE753;"
-                                                FontFamily="MauiMaterialAssets" />
+                                            FontFamily="MauiMaterialAssets" />
                 </toolbar:SfToolbarItem.Icon>
             </toolbar:SfToolbarItem>
             <toolbar:SfToolbarItem Name="AlignCenter"
-                                        Alignment="Center"
-                                        ToolTipText="Align-Center"
-                                        Text="Align-Center"
-                                        TextPosition="Right"
-                                        Size="100,40">
+                                    Alignment="End"
+                                    ToolTipText="Align-Center"
+                                    Text="Align-Center"
+                                    TextPosition="Right"
+                                    Size="100,40">
                 <toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE752;"
-                                                FontFamily="MauiMaterialAssets" />
+                                            FontFamily="MauiMaterialAssets" />
                 </toolbar:SfToolbarItem.Icon>
             </toolbar:SfToolbarItem>
-            <toolbar:SfToolbarItem Name="AlignJustify"
-                                        Alignment="Center"
-                                        ToolTipText="Align-Justify"
-                                        Text="Align-Justify"
-                                        TextPosition="Right"
-                                        Size="100,40">
-                <toolbar:SfToolbarItem.Icon>
-                    <FontImageSource Glyph="&#xE74F;"
-                                                FontFamily="MauiMaterialAssets" />
-                </toolbar:SfToolbarItem.Icon>
-            </toolbar:SfToolbarItem>
-            <toolbar:SeparatorToolbarItem Alignment="Center"/>
             <toolbar:SfToolbarItem Name="Undo"
-                                        Alignment="End"
-                                        Text="Undo"
-                                        TextPosition="Right"
-                                        ToolTipText="Undo"
-                                        Size="70,40">
+                                    Alignment="Center"
+                                    Text="Undo"
+                                    TextPosition="Right"
+                                    ToolTipText="Undo"
+                                    Size="70,40">
                 <toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE744;"
-                                                FontFamily="MauiMaterialAssets" />
+                                            FontFamily="MauiMaterialAssets" />
                 </toolbar:SfToolbarItem.Icon>
             </toolbar:SfToolbarItem>
             <toolbar:SfToolbarItem Name="Redo"
-                                        Alignment="End"
-                                        Text="Redo"
-                                        TextPosition="Right"
-                                        ToolTipText="Redo"
-                                        Size="70,40">
+                                    Alignment="Center"
+                                    Text="Redo"
+                                    TextPosition="Right"
+                                    ToolTipText="Redo"
+                                    Size="70,40">
                 <toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE745;"
-                                                FontFamily="MauiMaterialAssets" />
+                                            FontFamily="MauiMaterialAssets" />
                 </toolbar:SfToolbarItem.Icon>
             </toolbar:SfToolbarItem>
         </toolbar:SfToolbar.Items>
     </toolbar:SfToolbar>
-    </Grid>
+</Grid>
 </ContentPage>
 
 {% endhighlight %}
@@ -1823,20 +1836,14 @@ namespace ToolbarSample
                 {
                     Alignment = ToolbarItemAlignment.Start
                 },
-                new SfToolbarItem
+                new SeparatorToolbarItem
                 {
-                    Name = "AlignLeft",
-                    Alignment = ToolbarItemAlignment.Center,
-                    Text = "Align-Left",
-                    TextPosition = ToolbarItemTextPosition.Right,
-                    ToolTipText = "Align-Left",
-                    Size = new Size(90, 40),
-                    Icon = new FontImageSource { Glyph = "\uE751", FontFamily = "MauiMaterialAssets" }
+                    Alignment = ToolbarItemAlignment.End
                 },
                 new SfToolbarItem
                 {
                     Name = "AlignRight",
-                    Alignment = ToolbarItemAlignment.Center,
+                    Alignment = ToolbarItemAlignment.End,
                     Text = "Align-Right",
                     TextPosition = ToolbarItemTextPosition.Right,
                     ToolTipText = "Align-Right",
@@ -1846,7 +1853,7 @@ namespace ToolbarSample
                 new SfToolbarItem
                 {
                     Name = "AlignCenter",
-                    Alignment = ToolbarItemAlignment.Center,
+                    Alignment = ToolbarItemAlignment.End,
                     Text = "Align-Center",
                     TextPosition = ToolbarItemTextPosition.Right,
                     ToolTipText = "Align-Center",
@@ -1856,21 +1863,17 @@ namespace ToolbarSample
                 new SfToolbarItem
                 {
                     Name = "AlignJustify",
-                    Alignment = ToolbarItemAlignment.Center,
+                    Alignment = ToolbarItemAlignment.End,
                     Text = "Align-Justify",
                     TextPosition = ToolbarItemTextPosition.Right,
                     ToolTipText = "Align-Justify",
                     Size = new Size(100, 40),
                     Icon = new FontImageSource { Glyph = "\uE74F", FontFamily = "MauiMaterialAssets" }
                 },
-                new SeparatorToolbarItem
-                {
-                    Alignment = ToolbarItemAlignment.Center
-                },
                 new SfToolbarItem
                 {
                     Name = "Undo",
-                    Alignment = ToolbarItemAlignment.End,
+                    Alignment = ToolbarItemAlignment.Center,
                     Text = "Undo",
                     TextPosition = ToolbarItemTextPosition.Right,
                     ToolTipText = "Undo",
@@ -1880,7 +1883,7 @@ namespace ToolbarSample
                 new SfToolbarItem
                 {
                     Name = "Redo",
-                    Alignment = ToolbarItemAlignment.End,
+                    Alignment = ToolbarItemAlignment.Center,
                     Text = "Redo",
                     TextPosition = ToolbarItemTextPosition.Right,
                     ToolTipText = "Redo",
