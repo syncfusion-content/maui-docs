@@ -253,7 +253,7 @@ private void PdfViewer_FormFieldValueChanged(object sender, FormFieldValueChange
 
 ## Customize the form fields programmatically
 
-Customizing form fields is crucial for controlling their appearance and behavior. By modifying properties like background color, border color, border width, and foreground color, you can tailor how each form field (such as text form field, checkbox form field, radio button form field, etc.) looks within the PDF Viewer. Like other form field properties, you can undo and redo the customization of the background color, border color, foreground color and border width of the form fields. Additionally, when a form field is locked, its color cannot be modified. The customized background color, border color, foreground color and border width of form fields will be preserved during import, export, printing, and saving, ensuring the background color, border color, foreground color and border width customization remains intact across different document operations.
+Customizing form fields allows you to control their appearance and behavior. You can modify properties like background color, border color, border width, and foreground color to adjust how fields such as text boxes, checkboxes, and radio buttons look in the PDF Viewer. These customizations can be undo and redo, but they cannot be changed when a field is locked. The customized colors and border width are preserved during import, export, printing, and saving, ensuring consistency across document operations.
 
 ### Customize the background color of the form fields
 
@@ -319,8 +319,8 @@ foreach (FormField formField in PdfViewer.FormFields)
          // Loop through all the widgets associated with the text box field
         foreach (var widget in textBoxField.Widgets)
         {
-            // Set the border color of each widget to blue
-            widget. BorderColor = Colors.Blue;
+            // Set the border color of each widget to Red
+            widget. BorderColor = Colors.Red;
         }
     }
 }
@@ -350,35 +350,37 @@ foreach (FormField formField in PdfViewer.FormFields)
 {% endhighlight %}
 {% endtabs %}
 
-## Property changed event for Form fields
+## Property changed event for Form fields Widgets
 
 The `PropertyChanged` event occurs when a property is changed in the PDF document. It is common for properties such as border color, background color, border width, and foreground color to trigger this event as well. The following example explains how to wire and handle the event.
 
 {% tabs %}
 {% highlight C# %}
 
-void FormFieldPropertyChangedEvent()
+void FormFieldWidgetPropertyChangedEvent()
 {
-    // Wire the propertychanged event of the form field
-    pdfViewer.PropertyChanged += PdfViewer_PropertyChanged; 
-}
- //Event Handler for PropertyChanged Event
-private void PdfViewer_PropertyChanged(object? sender, System.ComponentModel.PropertyChangedEventArgs e)
-{
-    foreach (FormField formfield in PdfViewer.FormFields)
+    // Loop through each FormField in the PdfViewer
+    foreach (FormField formField in pdfViewer.FormFields)
     {
-        // Check if the current form field is a text form field 
-        if (formfield is TextFormField textBoxField)
+        // Loop through each widget within the form field (e.g., text fields, checkboxes, etc.)
+        foreach (var widget in formField.Widgets)
         {
-            // Loop through all the widgets associated with the text box field
-            foreach (var widget in textBoxField.Widgets)
-            {
-                //check if the property changed is BackgroundColor
-                if(e.PropertyName==nameof(widget.BackgroundColor))
-                {
-                    Color currentBackgroundColor = widget.BackgroundColor;
-                }
-            }
+            // Subscribe to the PropertyChanged event for each widget
+            widget.PropertyChanged += Widget_PropertyChanged;
+        }
+    }
+}
+// This event handler is called whenever a property of a widget changes
+private void Widget_PropertyChanged(object? sender, System.ComponentModel.PropertyChangedEventArgs e)
+{
+    // Ensure that the sender is of type Widget
+    if (sender is Widget widget)
+    {
+        // Check if the property that changed is the BorderWidth property of the widget
+        if (e.PropertyName == nameof(widget.BorderWidth))
+        {
+            // Retrieve the current border width of the widget
+            double width=widget.BorderWidth;
         }
     }
 }
