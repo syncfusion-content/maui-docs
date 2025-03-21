@@ -405,7 +405,7 @@ namespace ToolbarSample
 
 {% endtabs %}
 
-### Icon With Text
+### Icon with text
 
 The control provides support to add icon with text to the toolbar items.
 
