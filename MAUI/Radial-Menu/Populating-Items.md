@@ -78,7 +78,7 @@ N> Instead of using ObservableCollection, use [`RadialMenuItemsCollection`](http
 
 ![Display text in .NET MAUI RadialMenu](images/populating-items/maui-radialmenu-populating-only-text.png)
 
-### ImageWithText
+### Image with text
 
 The following code sample demonstrates how to Display images and text in the RadialMenu items of the control.
 
@@ -139,7 +139,7 @@ namespace RadialSample
 
 ![Display image with text in .NET MAUI RadialMenu.](images/populating-items/maui-radialmenu-populating-text-with-images.png)
 
-## Custom Font with Text
+## Custom font with text
 
 The following code sample demonstrates how to Display custom font with text in the RadialMenu items of the control.
 
@@ -224,7 +224,7 @@ namespace RadialSample
 
 ![Display font with text in .NET MAUI RadialMenu.](images/populating-items/maui-radialmenu-populating-text-icons.png)
 
-### Adding nested items of radial menu
+### Adding nested items of Radial menu
 
 You can populate the nested levels of items within a menu to group similar actions based on their result. For example, you can group the clipboard operations by adding a clipboard as a main menu and cut, copy, and paste as its children.
 
@@ -537,7 +537,7 @@ namespace RadialSample
 {% endhighlight %}
 {% endtabs %}
 
-## Separator thickness and color in radial menu
+## Separator thickness and color in Radial menu
 
 Thickness of strip between the two items can be changed using the [`SeparatorThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_SeparatorThickness) property and the color of strip can be changed using the [`SeparatorColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_SeparatorColor) property.
 
@@ -600,7 +600,7 @@ namespace RadialSample
 {% endhighlight %}
 {% endtabs %}
 
-## Rim color and rim radius in radial menu
+## Rim color and rim radius in Radial menu
 
 The radius of rim can be changed using the [`RimRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_RimRadius) property and the color of rim can be changed using the [`RimColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_RimColor) property.
 
@@ -663,7 +663,7 @@ namespace RadialSample
 {% endhighlight %}
 {% endtabs %}
 
-## DisplayMemberPath
+## Display member path
 
 The control is populated with a list of employees, and the employee model contains two properties: ID and EmployeeName. So, it is necessary to intimate by which property it should display to the items. The [`DisplayMemberPath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_DisplayMemberPath) property specifies the property path.
 
@@ -735,6 +735,29 @@ namespace RadialSample
         }
     }
 }
+
+{% endhighlight %}
+{% endtabs %}
+
+## Selection Color
+
+The [SfRadialMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.html) allows you to change the selection color for the selected Radial menu item by using the `SelectionColor` property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+    <syncfusion:SfRadialMenu  SelectionColor="#FF1493" />
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+
+SfRadialMenu radialMenu = new SfRadialMenu()
+{
+    SelectionColor = Color.FromHex("#FF1493")
+};
 
 {% endhighlight %}
 {% endtabs %}

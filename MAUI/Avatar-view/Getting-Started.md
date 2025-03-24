@@ -263,7 +263,7 @@ namespace AvatarViewSample
 
 		return builder.Build();
 	 }
-
+   
   }
 
 }     
