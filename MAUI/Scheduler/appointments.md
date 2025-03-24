@@ -1158,6 +1158,8 @@ this.Scheduler.AppointmentBorderStyle  = appointmentBorderStyle;
 {% endhighlight %}  
 {% endtabs %}
 
+![border-scheduler-appointment](images/appointments/appointment-border.png)
+
 ### Apply a stroke to the border of a specific appointments
 
 The appointment border stroke can be customized using the `Stroke` property in SchedulerAppointment. Alternatively, for custom-mapped appointments, you can use the `StrokeMapping` property.
@@ -1196,6 +1198,8 @@ this.Scheduler.AppointmentBorderStyle  = appointmentBorderStyle;
 
 {% endhighlight %}  
 {% endtabs %}
+
+![individual-border-scheduler-appointment](images/appointments/individual-appointment-border.png)
 
 N>
 * [View scheduler appointment sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
