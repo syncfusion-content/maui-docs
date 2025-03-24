@@ -80,9 +80,7 @@ The .NET MAUI ComboBox control is configured entirely in C# code or by using XAM
 
 ### Adding the .NET MAUI ComboBox control
 
-Step 1: Add the NuGet to the project as discussed in the above reference section. 
-
-Step 2: Add the namespace as shown in the following code sample:
+Step 1: Add the namespace as shown in the following code sample:
 
 {% tabs %}
 
@@ -100,7 +98,7 @@ Step 2: Add the namespace as shown in the following code sample:
 
 {% endtabs %}
 
-Step 3: Set the control to content in ContentPage.
+Step 2: Set the control to content in ContentPage.
 
 {% tabs %}
 
