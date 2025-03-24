@@ -155,6 +155,8 @@ namespace ToolbarGettingStarted
 
 {% endtabs %}
 
+![toolbar-tooltip](images/toolbar-tooltip.png)
+
 ## Tooltip Settings
 
 The Toolbar control supports customizing tooltip using `ToolTipSettings` property. You can set `Background`, `TextStyle` and `ToolTipPosition`.
@@ -295,3 +297,5 @@ namespace ToolbarSample
 {% endhighlight %}
 
 {% endtabs %}
+
+![toolbar-tooltip-settings](images/toolbar-tooltip-settings.png)

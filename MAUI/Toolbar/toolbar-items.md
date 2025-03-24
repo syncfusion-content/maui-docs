@@ -145,6 +145,8 @@ namespace ToolbarSample
 
 {% endtabs %}
 
+![icons-toolbar-items](images/Icons.png)
+
 #### Icon Size
 
 The control provides an option to set the icon size for the toolbar items. You can set the icon size for the toolbar items using the `IconSize` property.
@@ -280,6 +282,8 @@ namespace ToolbarSample
 
 {% endtabs %}
 
+![icons-size-toolbar-items](images/icon-size.png)
+
 ### Text
 
 The control allows you to display text in the toolbar items. You can set the text for the toolbar items using the `Text` property.
@@ -404,6 +408,8 @@ namespace ToolbarSample
 {% endhighlight %}
 
 {% endtabs %}
+
+![text-toolbar-items](images/text-items.png)
 
 ### Icon with text
 
@@ -701,6 +707,8 @@ namespace ToolbarSample
 
 {% endtabs %}
 
+![icon-text-toolbar-items](images/icon-text-items.png)
+
 ### Default view item size
 
 The control provides support to set the size for the toolbar item using the `Size` property.
@@ -805,6 +813,8 @@ namespace ToolbarSample
 {% endhighlight %}
 
 {% endtabs %}
+
+![size-toolbar-items](images/item-size.png)
 
 ### Programmatically clear selection toolbar items
 
@@ -1179,6 +1189,8 @@ namespace ToolbarSample
 
 {% endtabs %}
 
+![separator-toolbar-items](images/separator-items.png)
+
 ## Custom View
 
 You can add custom views, such as buttons, checkboxes, entries, etc., to the toolbar using the `View` property.
@@ -1288,6 +1300,8 @@ namespace ToolbarSample
 {% endhighlight %}
 
 {% endtabs %}
+
+![custom-view-toolbar-items](images/custom-view.png)
 
 ## Overlay Toolbar
 
@@ -1543,6 +1557,8 @@ public class ToolbarViewModel
 
 {% endtabs %}
 
+![item-spacing-toolbar-items](images/item-spacing.png)
+
 ### Equal spacing 
 
 The spacing between toolbar items is equalized when the `ItemSpacing` property is set to -1.
@@ -1663,6 +1679,8 @@ public class ToolbarViewModel
 {% endhighlight %}
 
 {% endtabs %}
+
+![equal-spacing-toolbar-items](images/equal-spacing.png)
  
 ## Leading and Trailing Item
 
@@ -1897,3 +1915,5 @@ namespace ToolbarSample
 {% endhighlight %}
 
 {% endtabs %}
+
+![leading-trailing-toolbar-items](images/leading-trailing-items.png)

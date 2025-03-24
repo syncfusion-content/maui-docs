@@ -132,6 +132,8 @@ public class TextFormattingViewModel
 
 {% endtabs %}
 
+![toolbar-horizontal](images/horizontal-toolbar.png)
+
 ## Vertical Toolbar
 
 To set up a Vertical toolbar using the SfToolbar component in .NET MAUI, you can specify the orientation by setting the `Orientation` property to `Vertical`. This configuration arranges the toolbar’s items from top to bottom across the screen.
@@ -252,3 +254,5 @@ public class TextFormattingViewModel
 {% endhighlight %}
 
 {% endtabs %}
+
+![toolbar-vertical](images/vertical-toolbar.png){:width="240" height="480"  loading="lazy" .lazy .shadow-effect .section-padding .img-padding}

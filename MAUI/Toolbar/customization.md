@@ -208,6 +208,8 @@ The following code sample demonstrates how to create a toolbar control with tool
 
 {% endtabs %}
 
+![toolbar-items-customization](images/toolbaritem-customization.png)
+
 ## Customizing Separator Item
 
 The toolbar control supports customization of separator item using properties `Stroke` and `StrokeThickness`.
@@ -350,6 +352,8 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 
 {% endtabs %}
+
+![separator-item-customization](images/separator-customization.png)
 
 ## Customizing Navigation Buttons
 
@@ -501,6 +505,8 @@ The following code sample demonstrates how to create a toolbar control with navi
 
 {% endtabs %}
 
+![navigation-button-customization](images/navigation-button-customization.png)
+
 ## Customizing More Button
 
 The toolbar control supports customization of more button using properties `MoreButtonIconColor`, `MoreButtonBackground`.
@@ -646,3 +652,5 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 
 {% endtabs %}
+
+![more-button-customization](images/more-button-customization.png)

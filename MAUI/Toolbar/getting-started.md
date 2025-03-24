@@ -423,4 +423,6 @@ namespace ToolbarGettingStarted
 
 {% endtabs %}
 
+![getting-started](images/Icons.png)
+
 N> Please refer to the [link](https://help.syncfusion.com/maui/icons) to add the `MauiMaterialAssets` custom font. You can find the getting started sample of .NET MAUI SfToolbar from this [GettingStarted](https://github.com/SyncfusionExamples/maui-toolbar/tree/Gettingstarted/GettingStarted).
