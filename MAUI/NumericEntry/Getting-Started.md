@@ -75,9 +75,7 @@ namespace MaskedEntrySample
 
 ## Step 4: Add a Basic Numeric Entry
 
-Step 1: Add the NuGet to the project as discussed in the above reference section. 
-
-Step 2: Add the namespace as shown in the following code sample.
+Step 1: Add the namespace as shown in the following code sample.
 
 {% tabs %}
 {% highlight xaml %}
@@ -92,7 +90,7 @@ Step 2: Add the namespace as shown in the following code sample.
 {% endhighlight %}
 {% endtabs %}
 
-Step 3: Add the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control with a required optimal name using the included namespace.
+Step 2: Add the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control with a required optimal name using the included namespace.
 
 {% tabs %}
 {% highlight xaml %}
