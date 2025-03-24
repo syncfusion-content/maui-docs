@@ -133,7 +133,7 @@ This page lists the keys for each control and the element to which it is mapped 
         </th>
     </tr>
     <tr>
-        <td rowspan="12">
+        <td rowspan="90">
             SfAIAssistViewStyles  
             <br/>
             <br/>
@@ -488,6 +488,42 @@ This page lists the keys for each control and the element to which it is mapped 
 <tr>
     <td> SfAIAssistViewStopRespondingStrokeThickness <br/><br/></td>
     <td> Stroke thickness for the stop responding view.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewSelectionTextHighLightColor<br/><br/></td>
+<td> Color to highlight the selected text. <br/><br/></td>
+</tr>
+<tr> 
+<td> SfAIAssistViewHeaderSuggestionBackground<br/><br/></td>
+<td> Background color of the common suggestions view.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewHeaderSuggestionItemStroke<br/><br/></td>
+<td> Stroke color for the common suggestion item.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewHeaderSuggestionItemStrokeThickness<br/><br/></td>
+<td> Stroke thickness for the common suggestion item.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewHeaderSuggestionItemBackground<br/><br/></td>
+<td> Background color of an item in the common suggestions.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewHeaderSuggestionItemTextColor<br/><br/></td>
+<td> Text color of an item in the common suggestions.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewHeaderSuggestionItemFontSize<br/><br/></td>
+<td> Font size of an item in the common suggestions.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewHeaderSuggestionItemFontFamily<br/><br/></td>
+<td> Font family of an item in the common suggestions.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewHeaderSuggestionItemFontAttribute<br/><br/></td>
+<td> Font attributes of an item in the common suggestions.<br/><br/></td>
 </tr>
 </table>
 
@@ -15910,6 +15946,507 @@ This page lists the keys for each control and the element to which it is mapped 
             Normal text color of the time picker.
         <br/>
         <br/>
+        </td>
+    </tr>
+</table>
+
+## SfToolbar
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="16">
+            SfToolbarStyles
+            <br/>
+            <br/>
+        </td>
+		<td>
+           SfToolbarTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key in application resources, you can customize the appearance of SfToolbar without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfToolbarTheme">CommonTheme</x:String>
+                <Color x:Key="SfToolbarNormalBackground">LightBlue</Color>
+                <Color x:Key="SfToolbarItemNormalIconColor">Red</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+
+....
+
+</Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>    
+    </tr>
+    <tr>
+    <td>
+            SfToolbarNormalBackground    
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of toolbar.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+    <tr>
+    <td>
+            SfToolbarItemNormalBackground     
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of toolbaritem in toolbar.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfToolbarItemHoverBackground      
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Hover background color of toolbaritem in toolbar.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfToolbarItemSelectionBackground       
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Selected background color of toolbaritem in toolbar. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfToolbarItemNormalTextColor        
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of text in toolbaritem.  
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfToolbarItemHoverTextColor         
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of text in toolbaritem when hovered.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfToolbarItemSelectionTextColor          
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of text in toolbaritem when selected.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfToolbarItemDisabledTextColor           
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of text in toolbaritem when disabled. 
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfToolbarItemNormalIconColor            
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of icon in toolbaritem.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfToolbarItemHoverIconColor             
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of icon in toolbaritem when hovered.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfToolbarItemSelectionIconColor              
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of icon in toolbaritem when selected.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfToolbarItemDisabledIconColor               
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of icon in toolbaritem when disabled.     
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfToolbarForwardButtonIconColor                
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of forward icon button in toolbar.      
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfToolbarForwardButtonHoverIconColor                 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of forward icon button in toolbar when hovered.  
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+	<tr>
+    <td>
+            SfToolbarForwardButtonSelectionIconColor                 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of forward icon button in toolbar when selected.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+    <tr>
+    <td>
+            SfToolbarForwardButtonBackground                 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of forward icon button in toolbar.  
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+    <tr>
+    <td>
+            SfToolbarForwardButtonHoverBackground                 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of forward icon button in toolbar when hovered.  
+            <br/>
+            <br/>
+        </td>
+    </tr>   
+
+    <tr>
+    <td>
+            SfToolbarForwardButtonSelectionBackground                 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of forward icon button in toolbar when selected.  
+            <br/>
+            <br/>
+        </td>
+    </tr>   
+
+    <tr>
+    <td>
+            SfToolbarBackwardButtonIconColor                 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of backward icon button in toolbar.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+    <tr>
+    <td>
+            SfToolbarBackwardButtonHoverIconColor                 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of backward icon button in toolbar when hovered.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+    <tr>
+    <td>
+            SfToolbarBackwardButtonSelectionIconColor                 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of backward icon button in toolbar when selected.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+    <tr>
+    <td>
+            SfToolbarBackwardButtonBackground                 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of backward icon button in toolbar.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+    <tr>
+    <td>
+            SfToolbarBackwardButtonHoverBackground                 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of backward icon button in toolbar when hovered.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+    <tr>
+    <td>
+            SfToolbarBackwardButtonSelectionBackground                 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of backward icon button in toolbar when selected.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+    <tr>
+    <td>
+            SfToolbarMoreButtonIconColor                 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of more items button in toolbar.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+    <tr>
+    <td>
+            SfToolbarMoreButtonHoverIconColor                 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of more items button in toolbar when hovered.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+    <tr>
+    <td>
+            SfToolbarMoreButtonSelectionIconColor                 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of more items button in toolbar when selected.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+    <tr>
+    <td>
+            SfToolbarMoreButtonBackground                 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of more items button in toolbar.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+    <tr>
+    <td>
+            SfToolbarMoreButtonHoverBackground                 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of more items button in toolbar when hovered.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+    <tr>
+    <td>
+            SfToolbarMoreButtonSelectionBackground                 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of more items button in toolbar when selected.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+    <tr>
+    <td>
+            SfToolbarBackIconColor                 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of back icon in toolbar.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+    <tr>
+    <td>
+            SfToolbarSeparatorStroke                 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of separator item in toolbar.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+    <tr>
+    <td>
+            SfToolbarToolTipBackground                 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Background color of tooltip in toolbar.   
+            <br/>
+            <br/>
+        </td>
+    </tr>
+
+    <tr>
+    <td>
+            SfToolbarToolTipTextColor                 
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Color of tooltip text in toolbar.   
+            <br/>
+            <br/>
         </td>
     </tr>
 </table>

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrating from Xamarin to .NET MAUI SfMaskedEntry | Syncfusion®
+title: Migrating from Xamarin to .NET MAUI SfMaskedEntry | Syncfusion® 
 description: Learn about Migrating from Syncfusion® Xamarin MaskedEdit to Syncfusion® .NET MAUI MaskedEntry control and more.
 platform: maui
 control: SfMaskedEntry

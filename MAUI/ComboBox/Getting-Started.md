@@ -80,9 +80,7 @@ The .NET MAUI ComboBox control is configured entirely in C# code or by using XAM
 
 ### Adding the .NET MAUI ComboBox control
 
-Step 1: Add the NuGet to the project as discussed in the above reference section. 
-
-Step 2: Add the namespace as shown in the following code sample:
+Step 1: Add the namespace as shown in the following code sample:
 
 {% tabs %}
 
@@ -100,7 +98,7 @@ Step 2: Add the namespace as shown in the following code sample:
 
 {% endtabs %}
 
-Step 3: Set the control to content in ContentPage.
+Step 2: Set the control to content in ContentPage.
 
 {% tabs %}
 
@@ -147,115 +145,6 @@ Before proceeding, ensure the following are set up:
 2. Ensure you're in the project root directory where your .csproj file is located.
 3. Run the command `dotnet add package Syncfusion.Maui.Inputs` to install the Syncfusion<sup>®</sup> .NET MAUI Inputs package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
-
-## Step 3: Register the handler
-
- [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
-
-{% highlight c# hl_lines="6 17" %}
-
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Syncfusion.Maui.Core.Hosting;
-
-namespace ComboBoxSample
-{
-    public static class MauiProgram
-    {
-        public static MauiApp CreateMauiApp()
-        {
-            var builder = MauiApp.CreateBuilder();
-            builder
-            .UseMauiApp<App>()
-            .ConfigureSyncfusionCore()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
-
-            return builder.Build();
-        }      
-    }
-}    
-
-{% endhighlight %} 
-
-
-## Step 4: Add a Basic ComboBox
-
-The .NET MAUI ComboBox control is configured entirely in C# code or by using XAML markup. The following steps explain how to create a .NET MAUI ComboBox (SfComboBox) and configure its elements:
-
-### Adding the .NET MAUI ComboBox control
-
-Step 1: Add the NuGet to the project as discussed in the above reference section. 
-
-Step 2: Add the namespace as shown in the following code sample:
-
-{% tabs %}
-
-{% highlight xaml %}
-
-    xmlns:editors="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
-	
-{% endhighlight %}
-
-{% highlight c# %}
-
-    using Syncfusion.Maui.Inputs;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-Step 3: Set the control to content in ContentPage.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-
-<ContentPage.Content>    
-    <editors:SfComboBox x:Name="comboBox" />
-</ContentPage.Content>
-
-
-{% endhighlight %}
-
-{% highlight c# %}
-          
-SfComboBox comboBox = new SfComboBox(); 
-Content = comboBox;  
-
-{% endhighlight %}
-
-{% endtabs %}
-
-{% endtabcontent %}
-
-{% tabcontent JetBrains Rider %}
-
-## Prerequisites
-
-Before proceeding, ensure the following are set up:
-
-1. Ensure you have the latest version of JetBrains Rider.
-2. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
-3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
-
-## Step 1: Create a new .NET MAUI Project
-
-1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
-2. Enter the Project Name, Solution Name, and Location.
-3. Select the .NET framework version and click Create.
-
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Inputs NuGet Package
-
-1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs/) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
 ## Step 3: Register the handler
 
