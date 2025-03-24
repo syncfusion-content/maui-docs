@@ -133,7 +133,7 @@ This page lists the keys for each control and the element to which it is mapped 
         </th>
     </tr>
     <tr>
-        <td rowspan="12">
+        <td rowspan="90">
             SfAIAssistViewStyles  
             <br/>
             <br/>
@@ -492,6 +492,38 @@ This page lists the keys for each control and the element to which it is mapped 
 <tr>
 <td> SfAIAssistViewSelectionTextHighLightColor<br/><br/></td>
 <td> Color to highlight the selected text. <br/><br/></td>
+</tr>
+<tr> 
+<td> SfAIAssistViewHeaderSuggestionBackground<br/><br/></td>
+<td> Background color of the common suggestions view.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewHeaderSuggestionItemStroke<br/><br/></td>
+<td> Stroke color for the common suggestion item.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewHeaderSuggestionItemStrokeThickness<br/><br/></td>
+<td> Stroke thickness for the common suggestion item.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewHeaderSuggestionItemBackground<br/><br/></td>
+<td> Background color of an item in the common suggestions.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewHeaderSuggestionItemTextColor<br/><br/></td>
+<td> Text color of an item in the common suggestions.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewHeaderSuggestionItemFontSize<br/><br/></td>
+<td> Font size of an item in the common suggestions.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewHeaderSuggestionItemFontFamily<br/><br/></td>
+<td> Font family of an item in the common suggestions.<br/><br/></td>
+</tr>
+<tr>
+<td> SfAIAssistViewHeaderSuggestionItemFontAttribute<br/><br/></td>
+<td> Font attributes of an item in the common suggestions.<br/><br/></td>
 </tr>
 </table>
 
