@@ -240,7 +240,7 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> This property will only be applicable when the [ShowLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_ShowLegend) is enabled.
+>Note: This property will only be applicable when the [ShowLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_ShowLegend) is enabled.
 
  ![legend-placement-in-maui-tree-map](images/legend/legend-placement-in-maui-tree-map.png)
 
@@ -358,7 +358,7 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> This property will only be applicable when the [ShowLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_ShowLegend) is enabled.
+>Note: This property will only be applicable when the [ShowLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_ShowLegend) is enabled.
 
  ![legend-icon-size-in-maui-tree-map](images/legend/legend-icon-size-in-maui-tree-map.png)
 
@@ -490,7 +490,7 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> This property will only be applicable when the [ShowLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_ShowLegend) is enabled.
+>Note: This property will only be applicable when the [ShowLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_ShowLegend) is enabled.
 
  ![legend-icon-type-in-maui-tree-map](images/legend/legend-icon-type-in-maui-tree-map.png)
 
@@ -613,7 +613,7 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> This property will only be applicable when the [ShowLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_ShowLegend) is enabled.
+>Note: This property will only be applicable when the [ShowLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_ShowLegend) is enabled.
 
  ![legend-size-in-maui-tree-map](images/legend/legend-size-in-maui-tree-map.png)
 
@@ -756,7 +756,7 @@ The `TreeMapLegend` supports customizing the appearance of legend items using th
 
 ![Legend template](images\legend\treemap-legend-template.png){:width="313" height="480"  loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
 
-N> The BindingContext of the ItemTemplate is the corresponding underlying legend item provided in the TreeMapLegendSettings class.
+>Note: The BindingContext of the ItemTemplate is the corresponding underlying legend item provided in the TreeMapLegendSettings class.
 
 ## Brush settings
 
@@ -873,7 +873,7 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> This property will be applicable to only when the [ShowLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_ShowLegend) is enabled.
+>Note: This property will be applicable to only when the [ShowLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_ShowLegend) is enabled.
 
  ![range-brush-settings-in-maui-tree-map](images/legend/range-brush-settings-in-maui-tree-map.png)
 
@@ -996,6 +996,6 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> This property will only be applicable when the [ShowLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_ShowLegend) is enabled.
+>Note: This property will only be applicable when the [ShowLegend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLegendSettings.html#Syncfusion_Maui_TreeMap_TreeMapLegendSettings_ShowLegend) is enabled.
 
 ![legend-text-style-in-maui-tree-map](images/legend/legend-text-style-in-maui-tree-map.png)

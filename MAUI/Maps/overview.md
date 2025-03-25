@@ -31,4 +31,4 @@ The [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) control
 
 ![.NET MAUI Maps layer overview.](images/overview/net-maui-maps-overview.png)
 
-N> You can get the samples in the [GitHub](https://github.com/syncfusion/maui-demos) link
+>Note: You can get the samples in the [GitHub](https://github.com/syncfusion/maui-demos) link

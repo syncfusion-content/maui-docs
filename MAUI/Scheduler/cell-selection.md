@@ -37,7 +37,7 @@ this.Scheduler.CellSelectionView.Stroke = Brush.Green;
 The cell selection background color can be customized by using the [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerCellSelectionView.html#Syncfusion_Maui_Scheduler_SchedulerCellSelectionView_Background) property in the [Cellselectionview](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerCellSelectionView.html).
 The default value is `Brush.Transparent`.
 
-N> As default, [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerCellSelectionView.html#Syncfusion_Maui_Scheduler_SchedulerCellSelectionView_Stroke) will have value; if [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerCellSelectionView.html#Syncfusion_Maui_Scheduler_SchedulerCellSelectionView_Background) alone is required, you can set the  [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerCellSelectionView.html#Syncfusion_Maui_Scheduler_SchedulerCellSelectionView_Stroke) property to `Brush.Transparent`.
+>Note: As default, [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerCellSelectionView.html#Syncfusion_Maui_Scheduler_SchedulerCellSelectionView_Stroke) will have value; if [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerCellSelectionView.html#Syncfusion_Maui_Scheduler_SchedulerCellSelectionView_Background) alone is required, you can set the  [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerCellSelectionView.html#Syncfusion_Maui_Scheduler_SchedulerCellSelectionView_Stroke) property to `Brush.Transparent`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
@@ -82,7 +82,7 @@ this.Scheduler.CellSelectionView.CornerRadius = 2;
 
 The thickness of the selection view [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerCellSelectionView.html#Syncfusion_Maui_Scheduler_SchedulerCellSelectionView_Stroke) can be customized by using the [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerCellSelectionView.html#Syncfusion_Maui_Scheduler_SchedulerCellSelectionView_StrokeWidth) property in the [Cellselectionview](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerCellSelectionView.html).
 
-N> The [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerCellSelectionView.html#Syncfusion_Maui_Scheduler_SchedulerCellSelectionView_StrokeWidth) is only applicable for the [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerCellSelectionView.html#Syncfusion_Maui_Scheduler_SchedulerCellSelectionView_Stroke) property.
+>Note: The [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerCellSelectionView.html#Syncfusion_Maui_Scheduler_SchedulerCellSelectionView_StrokeWidth) is only applicable for the [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerCellSelectionView.html#Syncfusion_Maui_Scheduler_SchedulerCellSelectionView_Stroke) property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}

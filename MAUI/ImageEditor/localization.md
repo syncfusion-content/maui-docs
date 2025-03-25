@@ -61,4 +61,4 @@ To localize the [`ImageEditor`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
    ![shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-ImageEditor](images/localization/shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-ImageEditor.png)
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/ImageEditorLocalization)
+>Note: [View sample in GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/ImageEditorLocalization)

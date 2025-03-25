@@ -201,7 +201,7 @@ Delete the selected text using either the toolbar or the [`DeleteAnnotation`](ht
 
 Remove all the text annotations using the [`ClearAnnotations`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ClearAnnotations) method.
 
-N> This removes shape, pen and custom view annotations as well.
+>Note: This removes shape, pen and custom view annotations as well.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -229,7 +229,7 @@ N> This removes shape, pen and custom view annotations as well.
 
 This [`AnnotationSelected`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AnnotationSelected) event occurs when the annotation is selected.
 
-N> This is common for Shape, Text and CustomView annotations.
+>Note: This is common for Shape, Text and CustomView annotations.
 
 {% tabs %}
 
@@ -257,7 +257,7 @@ N> This is common for Shape, Text and CustomView annotations.
 
 This [AnnotationUnselected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AnnotationUnselected) event occurs when the annotation is unselected.
 
-N> This is common for Shape, Text and CustomView annotations.
+>Note: This is common for Shape, Text and CustomView annotations.
 
 {% tabs %}
 
@@ -305,7 +305,7 @@ Add a text on image loading using the [`ImageLoaded`](https://help.syncfusion.co
 
 {% endtabs %}
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/ImageLoadedSample)
+>Note: [View sample in GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/ImageLoadedSample)
 
 ## Add text with manual bounds
 
@@ -329,4 +329,4 @@ The text can be added with user-defined view bounds. The [`Bounds`](https://help
 {% endhighlight %}
 {% endtabs %}
 
-N> To edit text annotation you have to double tap inside the text view.
+>Note: To edit text annotation you have to double tap inside the text view.

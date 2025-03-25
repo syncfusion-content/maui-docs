@@ -165,7 +165,7 @@ Delete the selected custom view using the [`DeleteAnnotation`](https://help.sync
 
 Remove all the custom view annotations using the [`ClearAnnotations`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ClearAnnotations) method.
 
-N> This is common for Shape, Text and CustomView annotations.
+>Note: This is common for Shape, Text and CustomView annotations.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -193,7 +193,7 @@ N> This is common for Shape, Text and CustomView annotations.
 
 This [`AnnotationSelected`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AnnotationSelected) event occurs when the annotation is selected.
 
-N> This is common for Shape, Text and CustomView annotations.
+>Note: This is common for Shape, Text and CustomView annotations.
 
 {% tabs %}
 
@@ -221,7 +221,7 @@ N> This is common for Shape, Text and CustomView annotations.
 
 This [AnnotationUnselected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AnnotationUnselected) event occurs when the annotation is unselected.
 
-N> This is common for Shape, Text and CustomView annotations.
+>Note: This is common for Shape, Text and CustomView annotations.
 
 {% tabs %}
 

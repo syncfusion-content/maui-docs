@@ -26,13 +26,13 @@ The [`UrlTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.Map
 
 We will replace the {z}, {x}, and {y} internally based on the current [`Center`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_Center) and the zoom level.
 
-N> Some of the providers may need a subscription key. Please include them in the [`UrlTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_UrlTemplate) itself, as mentioned in the above example. Please note that the format may vary between each map provider. You can check the exact URL format needed for the providers on their official websites.
+>Note: Some of the providers may need a subscription key. Please include them in the [`UrlTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapTileLayer.html#Syncfusion_Maui_Maps_MapTileLayer_UrlTemplate) itself, as mentioned in the above example. Please note that the format may vary between each map provider. You can check the exact URL format needed for the providers on their official websites.
 
 ## Adding OSM/OpenStreetMap
 
 The OpenStreetMap is one of the tile/image providers which can be used free of cost. It returns map tiles for the requested coordinates for every request. The URL format of the OSM map provider is shown in the below code sample.
 
-N> Though the OpenStreetMap is free of cost, we recommend you check the licensing terms and conditions once before using it.
+>Note: Though the OpenStreetMap is free of cost, we recommend you check the licensing terms and conditions once before using it.
 
 {% tabs %}
 
@@ -213,7 +213,7 @@ tileLayer.DeleteTilesFromCache();
 
 You can add markers in the tile layer. The procedure is very similar to the shape layer. Kindly refer to the [markers](https://help.syncfusion.com/maui/maps/markers) section.
 
-N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [`.NET MAUI Maps Tile layer example`](https://github.com/syncfusion/maui-demos/) which shows how to configure a Maps in .NET MAUI.
+>Note: You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [`.NET MAUI Maps Tile layer example`](https://github.com/syncfusion/maui-demos/) which shows how to configure a Maps in .NET MAUI.
 
 ##  Event
 

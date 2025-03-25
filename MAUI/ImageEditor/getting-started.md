@@ -294,7 +294,7 @@ public partial class MainPage : ContentPage
 
 The [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Source) property is used to load images from different sources:
 
-N> You can load image formats such as JPEG, PNG, and BMP to the image editor.
+>Note: You can load image formats such as JPEG, PNG, and BMP to the image editor.
 
 ### Loading a local file
 
@@ -431,11 +431,11 @@ public partial class MainPage : ContentPage
 
 ![GettingStarted in .NET Maui ImageEditor](images\getting-started\imageeditor-gettingstarted.png)
 
-N> If you set the Stream source with a local variable, the stream will be closed after the image uses it, and you cannot process the stream again. So, we recommend using stream images by creating a new stream instance inside the Lambda function so that you can process them whenever needed.
+>Note: If you set the Stream source with a local variable, the stream will be closed after the image uses it, and you cannot process the stream again. So, we recommend using stream images by creating a new stream instance inside the Lambda function so that you can process them whenever needed.
 
-N> imageEditor.Source = ImageSource.FromStream(() => new MemoryStream(imageBytes))
+>Note: imageEditor.Source = ImageSource.FromStream(() => new MemoryStream(imageBytes))
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/GettingStarted)
+>Note: [View sample in GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/GettingStarted)
 
 ## Get the image stream
 The [`GetImageStream`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_GetImageStream) method is used to get the edited image in form of a image stream.
@@ -487,7 +487,7 @@ The [`OriginalImageSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Im
 {% endhighlight %}
 {% endtabs %}
 
-N> The size value will only be available after the image has been loaded into view.
+>Note: The size value will only be available after the image has been loaded into view.
 
 ## Get the Image Rendered Size
 The image editor utilizes the `AspectFit` image scaling of Image control to fit the entire image into the display area, with blank space added to the top or bottom sides depending on whether the image is wide or tall. The [`ImageRenderedSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ImageRenderedSize) property is used to get the current rendered size of the image inside the display area.
@@ -514,7 +514,7 @@ The image editor utilizes the `AspectFit` image scaling of Image control to fit 
 {% endhighlight %}
 {% endtabs %}
 
-N> The size value will only be available after the image has been loaded into view.
+>Note: The size value will only be available after the image has been loaded into view.
 
 ## Check image edited status
 
@@ -623,4 +623,4 @@ The background of the Image Editor can be customized by setting the `Background`
 {% endhighlight %}
 {% endtabs %}
 
-N> You can also explore our [.NET MAUI Image Editor Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/ImageEditor) that shows you how to render the Image Editor in .NET MAUI.
+>Note: You can also explore our [.NET MAUI Image Editor Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/ImageEditor) that shows you how to render the Image Editor in .NET MAUI.

@@ -206,7 +206,7 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> This property will only be applicable when the [ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_ShowToolTip) is enabled.
+>Note: This property will only be applicable when the [ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_ShowToolTip) is enabled.
 
 ![customize-tooltip-appearance-in-maui-tree-map](images/tooltip/customize-tooltip-appearance-in-maui-tree-map.png)
 
@@ -335,6 +335,6 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> This property will only be applicable when the [ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_ShowToolTip) is enabled.
+>Note: This property will only be applicable when the [ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_ShowToolTip) is enabled.
 
 ![tooltip-template-in-maui-tree-map](images/tooltip/tooltip-template-in-maui-tree-map.png)

@@ -131,7 +131,7 @@ If the data form or property is valid, `true` will be returned. Or else `false` 
 
 ![Error message in .NET MAUI DataForm.](images/validation/error-message.png)
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/ManualValidation)
+>Note: [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/ManualValidation)
 
 ## Valid message
 
@@ -154,7 +154,7 @@ public string Password { get; set; }
 
 Get the validation details of all the editors of the data form using the [ValidateForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ValidateForm) event of the data form.
 
-N> This event will be raised once after the manual validation call using the [SfDataForm.Validate()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_Validate) method.
+>Note: This event will be raised once after the manual validation call using the [SfDataForm.Validate()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_Validate) method.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}

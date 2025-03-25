@@ -402,7 +402,7 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> To customize the same background color for both header and leaf items at each level, utilize the [GroupItemBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_GroupItemBrushSettings) property.
+>Note: To customize the same background color for both header and leaf items at each level, utilize the [GroupItemBrushSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.SfTreeMap.html#Syncfusion_Maui_TreeMap_SfTreeMap_GroupItemBrushSettings) property.
 
  ![level-background-in-maui-tree-map](images/levels/level-background-in-maui-tree-map.png)
 

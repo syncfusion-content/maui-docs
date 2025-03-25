@@ -26,7 +26,7 @@ this.scheduler.AllowAppointmentDrag = false;
 
 Refer [here](https://help.syncfusion.com/maui/scheduler/appointments#creating-business-objects) to create a business object class.
 
-N> Inherit the business object class from the `INotifyPropertyChanged` for dynamic changes in custom data.
+>Note: Inherit the business object class from the `INotifyPropertyChanged` for dynamic changes in custom data.
 
 ## Handle appointment drag starting
 You can get the appointment details and handle whether the appointment can be draggable or not by using the [AppointmentDragStarting](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentDragStarting) event. This event will be triggered when the appointment is started dragging. The [AppointmentDragStartingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentDragStartingEventArgs.html) argument contains the following properties.
@@ -189,7 +189,7 @@ this.Scheduler.DragDropSettings.AllowScroll = false;
 {% endhighlight %}
 {% endtabs %}
 
-N> This is not applicable for MonthView.
+>Note: This is not applicable for MonthView.
 
 #### Show or hide drag time indicator
 You can handle whether the drag and drop indicator should be displayed within the scheduler during appointment dragging by using the [ShowTimeIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.DragDropSettings.html#Syncfusion_Maui_Scheduler_DragDropSettings_ShowTimeIndicator) property which shows the dragged appointment's current position time. The default value of the `ShowTimeIndicator` property is `true`.
@@ -210,7 +210,7 @@ this.Scheduler.DragDropSettings.ShowTimeIndicator = false;
 {% endhighlight %}
 {% endtabs %}
 
-N>
+>Note:
 * The drag time indicator is applicable only when the [TimeRulerWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysView.html#Syncfusion_Maui_Scheduler_SchedulerDaysView_TimeRulerWidth) property is greater than zero in Day, Week, and WorkWeek views and the [TimeRulerHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html#Syncfusion_Maui_Scheduler_SchedulerTimelineView_TimeRulerHeight) property is is greater than zero in TimeLineDay, TimeLineWeek, TimeLineWorkWeek views.
 * The drag time indicator is not applicable for Month and Timeline Month views.
  
@@ -249,4 +249,4 @@ this.Scheduler.DragDropSettings.TimeIndicatorTextFormat = "hh:mm";
 {% endhighlight %}
 {% endtabs %}
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/DragAndDropSample)
+>Note: [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/DragAndDropSample)

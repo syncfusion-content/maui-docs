@@ -119,7 +119,7 @@ private ObservableCollection<SchedulerAppointment> GenerateSchedulerAppointments
 {% endhighlight %}
 {% endtabs %}
 
-N> The QueryAppointments event will be triggered, if any one of the following actions is performed.,
+>Note: The QueryAppointments event will be triggered, if any one of the following actions is performed.,
 * Once the `ViewChanged` event is triggered, the `QueryAppointments` will be triggered.
 * If an appointment has been added or removed in the current visible dates, then the `QueryAppointments` event will not be triggered. Because the appointments for that visible date are already loaded.
 * In the scheduler agenda view, the `QueryAppointments` event is used to load more appointments when the new month is loaded on view, whereas the new month appointments are added in scheduler `AppointmentsSource.`
@@ -255,7 +255,7 @@ public class LoadOnDemandViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-N> The `QueryAppointmentsCommand` will be raised if any one of the following action is performed,
+>Note: The `QueryAppointmentsCommand` will be raised if any one of the following action is performed,
 * Once the `ViewChanged` event is raised, the `QueryAppointmentsCommand` will be raised.
 * If an appointment has been added or removed in the current time visible date, then the `QueryAppointments` command will not be triggered. Because the appointments for that visible date are already loaded.
 * In the scheduler agenda view, the `QueryAppointments` event is used to load more appointments when the new month is loaded on view, whereas the new month appointments are added in scheduler `AppointmentsSource.`
@@ -284,7 +284,7 @@ this.Content = scheduler;
 {% endhighlight %}
 {% endtabs %}
 
-N>  
+>Note:  
 * When using the `QueryAppointments` or `QueryAppointmentsCommand,` you can start and stop the animation before and after the appointments load.
 * When `QueryAppointments` or `QueryAppointmentsCommand` are not used, and show busy indicator is enabled, the busy indicator will be stopped once the appointment is rendered.
 
@@ -310,6 +310,6 @@ You can customize the busy indicator appearance by using the [BusyIndicatorTempl
 {% endhighlight %}
 {% endtabs %}
 
-N>
+>Note:
 * The `BusyIndicatorTemplate` is applicable to only, when `ShowBusyIndicator` property is enabled.
 * The `BusyIndicatorTemplate` is also applicable for `QueryAppointments` and `QueryAppointmentsCommand` properties of the `SfScheduler.`

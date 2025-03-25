@@ -575,6 +575,6 @@ public class PopulationViewModel
 {% endhighlight %}
 {% endtabs %}
 
-N> This property is applicable to only when the [LabelPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Maui_TreeMap_TreeMapLeafItemSettings_LabelPath) property is specified.
+>Note: This property is applicable to only when the [LabelPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Maui_TreeMap_TreeMapLeafItemSettings_LabelPath) property is specified.
 
  ![leaf-item-text-style-in-maui-tree-map](images/leaf-item-settings/leaf-item-text-style.png)

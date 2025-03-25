@@ -439,7 +439,7 @@ public partial class MainPage : ContentPage
 {% endtabcontent %}
 {% endtabcontents %}
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/GettingStarted)
+>Note: [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/GettingStarted)
 
 ## DataForm inside stack layout
 

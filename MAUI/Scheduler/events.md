@@ -48,7 +48,7 @@ private void OnSchedulerTapped(object sender, SchedulerTappedEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-N>
+>Note:
 * [View scheduler appointment sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
 * [View business object sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)
 
@@ -88,7 +88,7 @@ private void OnSchedulerDoubleTapped(object sender, SchedulerDoubleTappedEventAr
 {% endhighlight %}
 {% endtabs %}
 
-N>
+>Note:
 * [View scheduler appointment sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
 * [View business object sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)
 
@@ -128,7 +128,7 @@ private void OnSchedulerLongPressed(object sender, SchedulerLongPressedEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-N>
+>Note:
 * [View scheduler appointment sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
 * [View business object sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)
 
@@ -164,7 +164,7 @@ private void OnSchedulerSelectionChanged(object sender, SchedulerSelectionChange
 {% endhighlight %}
 {% endtabs %}
 
-N>
+>Note:
 The `Tapped` event is triggered first, followed by 'selection-changed' event will be performed.
 
 ## ViewChanged
@@ -203,7 +203,7 @@ private void OnSchedulerViewChanged(object sender, SchedulerViewChangedEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-N>
+>Note:
 Whenever a scheduler view is changed, the `SelectableDayPredicate` function must be called to decide whether the cell is selectable or not in the `SfScheduler.`
 
 ## Commands

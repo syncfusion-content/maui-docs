@@ -76,7 +76,7 @@ this.Content = scheduler;
 
 ![change-time-interval-in-maui-scheduler](images/timeline-views/change-time-interval-in-maui-scheduler.png)
 
-N> To modify the `TimeInterval` value (in minutes), change the time labels format by setting the `TimeRulerFormat` value to `hh:mm.`
+>Note To modify the `TimeInterval` value (in minutes), change the time labels format by setting the `TimeRulerFormat` value to `hh:mm.`
 
 ## Change time interval width
 
@@ -134,7 +134,7 @@ this.Content = scheduler;
 {% endhighlight %}
 {% endtabs %}
 
-N> The `Timeline workweek` view displays exactly the defined working days on Scheduler control, whereas other views displays all the days.
+>Note The `Timeline workweek` view displays exactly the defined working days on Scheduler control, whereas other views displays all the days.
 
 ## Flexible working hours
 
@@ -166,14 +166,14 @@ this.Content = scheduler;
 
 ![flexible-working-hours-in-maui-scheduler](images/timeline-views/flexible-working-hours-in-maui-scheduler.png)
 
-N>
+>Note
 * The `NonWorkingDays` property will be applicable only for `workWeek` and `TimelineWorkWeek` views only, and not be applicable for the remaining views.
 * No need to specify the decimal point values for `StartHour` and `EndHour`, if you do not want to set the minutes.
 * The number of time slots will be calculated based on total minutes of a day and time interval (total minutes of a day ((start hour - end hour) * 60) / time interval).
 * If a custom timeInterval is given, then the number of time slots calculated based on the given `TimeInterval` should result in an integer value (total minutes % timeInterval = 0), otherwise the next immediate time interval that results in integer value when dividing total minutes of a day will be considered. For example, if TimeInterval=2 Hours 15 minutes and total minutes = 1440 (24 Hours per day), then the `TimeInterval` will be changed to ‘144’ (1440%144=0) by considering (total minutes % TimeInterval = 0), it will return integer value for time slots rendering.
 * If the custom `StartHour` and `EndHour` are given, then the number of time slots calculated based on the given `StartHour` and `EndHour` should result in integer value, otherwise the next immediate `TimeInterval` will be considered until the result is integer value. For example, if the `StartHour` is 9 (09:00AM), `EndHour` is 18.25 (06:15 PM), `TimeInterval` is 30 minutes, and total minutes = 555 ((18.25-9)*60), then the `TimeInterval` will be changed to ’37 minutes’ (555%37=0) by considering (total minutes % timeInterval = 0) it will return the integer value for time slots rendering.
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/HighlightWorkingHour)
+>Note [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/HighlightWorkingHour)
 
 ## Special time regions
 
@@ -218,7 +218,7 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 {% endhighlight %}
 {% endtabs %}
 
-N> This property only restricts the interaction on region and it does not restrict the following:
+>Note: This property only restricts the interaction on region and it does not restrict the following:
 * The Programmatic selection (if the user updates the selected date value dynamically).
 * It does not clear the selection when the user selects the region and dynamically change the `EnablePointerInteraction` property to false.
 * It does not restrict appointment interaction when the appointment placed in the region.
@@ -258,7 +258,7 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 {% endhighlight %}
 {% endtabs %}
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/HighlightNonWorkingHour)
+>Note: [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/HighlightNonWorkingHour)
 
 ### Recurrence exception dates
 
@@ -477,7 +477,7 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 {% endhighlight %} 
 {% endtabs %}
 
-N>
+>Note:
 * The BindingContext of the `TimeRegionTemplate` is the `SchedulerTimeRegion.`
 * When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
@@ -563,7 +563,7 @@ this.Content = scheduler;
 
 ![customize-current-time-indicator-appearance-in-timeline-views-in-maui-scheduler](images/timeline-views/customize-current-time-indicator-appearance-in-timeline-views-in-maui-scheduler.png)
 
-N>
+>Note:
 The current time indicator color is applied only when the`ShowCurrentTimeIndicator` property is enabled.
 
 ## Change time ruler height
@@ -622,13 +622,13 @@ this.Content = scheduler;
 
 ![minimum-appointment-duration-in-maui-scheduler](images/timeline-views/minimum-appointment-duration-in-maui-scheduler.png)
 
-N>
+>Note:
 * The `MinimumAppointmentDuration` value will be set when an appointment duration value is lesser than `MinimumAppointmentDuration.`
 * Appointment duration value will be set when the appointment duration value is greater than `MinimumAppointmentDuration`.
 * The `TimeInterval` value will be set when the `MinimumAppointmentDuration` is greater than `TimeInterval` with lesser appointment duration.
 * The all-day appointment does not support `MinimumAppointmentDuration.`
 
-N>
+>Note:
 * [View scheduler appointment sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
 * [View business object sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)
 
@@ -791,7 +791,7 @@ You can customize the view header appearance by using the [ViewHeaderTemplate](h
 
 ![customize-view-header-appearance-using-template-in-timeslot-view-in-maui-scheduler](images/timeline-views/customize-view-header-appearance-using-template-in-timeslot-view-in-maui-scheduler.png)
 
-N>
+>Note:
 * The BindingContext of the `ViewHeaderTemplate` is the`DateTime.` The `SelectableDayPredicate,` `MinimumDateTime,` and `MaximumDateTime` properties of date and time values can be used directly in the data template selector.
 
 #### Customize view header appearance using DataTemplateSelector
@@ -865,7 +865,7 @@ this.Scheduler.View = SchedulerView.TimelineWeek;
 {% endhighlight %} 
 {% endtabs %}
 
-N>
+>Note:
 * The BindingContext of the `ViewHeaderTemplate` is the`DateTime.` The `SelectableDayPredicate,` `MinimumDateTime,` and `MaximumDateTime` properties of date and time values can be used directly in the data template selector.
 * When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
@@ -897,7 +897,7 @@ this.Content = scheduler;
 
 ![change-time-ruler-text-formatting-in-.net-maui-scheduler](images/timeline-views/change-time-ruler-text-formatting-in-.net-maui-scheduler.png)
 
-N>
+>Note:
 * By default, the scheduler time text format is `hh:mm tt.`
 
 #### Customize time ruler text style

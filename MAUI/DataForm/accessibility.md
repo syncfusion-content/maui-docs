@@ -27,5 +27,5 @@ Shift + Tab<br/><br/></td><td>
 Moves to the previous editor in DataForm<br/><br/></td></tr>
 </table>
 
-N>In the DataForm multiline editor, the Enter key is not functioning to move to the next editor.
+>Note:In the DataForm multiline editor, the Enter key is not functioning to move to the next editor.
 

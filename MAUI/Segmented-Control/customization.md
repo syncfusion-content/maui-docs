@@ -141,7 +141,7 @@ public partial class MainPage : ContentPage
 
 ![Corner radius customization in .NET MAUI Segmented control.](images/customization/corner-radius.png)
 
-N> The `CornerRadius` property will be applicable only for the first and last segment items. To set corner radius for all segments, use `SegmentCornerRadius`.
+>Note: The `CornerRadius` property will be applicable only for the first and last segment items. To set corner radius for all segments, use `SegmentCornerRadius`.
 
 ## Customize the segment corner radius
 

@@ -13,7 +13,7 @@ documentation: ug
 
 The [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) control allows to navigate through dates either programmatically or by using the [forward](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_Forward) and [backward](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_Backward) buttons, and it is applicable to all the Scheduler views.
 
-N> 
+>Note: 
 Touch gesture is not working, as framework is facing an [issue](https://github.com/dotnet/maui/issues/3561) 
 
 ### Programmatic date navigation
@@ -36,7 +36,7 @@ this.Content = scheduler;
 {% endhighlight %}
 {% endtabs %}
 
-N> 
+>Note: 
 When navigating before a minimum date, the date will be reset to the scheduler minimum date, and when navigating beyond a maximum date, the date will be reset to the scheduler maximum date.
 
 ### Programmatic date selection
@@ -59,7 +59,7 @@ this.Content = scheduler;
 {% endhighlight %}
 {% endtabs %}
 
-N> It is not possible to use the `SelectedDate` to select before minimum display date time and beyond maximum display date time.
+>Note: It is not possible to use the `SelectedDate` to select before minimum display date time and beyond maximum display date time.
 
 ### Programmatically change to adjacent dates
 
@@ -150,7 +150,7 @@ this.Content = scheduler;
 
 ![Allow view navigation in .NET MAUI Scheduler.](images/date-navigation-restriction/allow-view-navigation-in-net-maui-scheduler.gif)
 
-N>
+>Note:
 * The default value of `AllowViewNavigation` is `false.`
 * The `AllowViewNavigation` is not applicable for the `day` and `timeline day` views.
 
@@ -205,7 +205,7 @@ this.Content = scheduler;
 
 The [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) allows users to toggle the visibility of the allowed views by setting value to the `ShowAllowedViews`. By setting this property to false, users can simplify the interface, making it cleaner and more focused, especially in scenarios where view switching is unnecessary. The default value for the property `ShowAllowedViews` is `true`.
 
-N> When `ShowAllowedViews` is `false` the view navigation buttons in the scheduler header are hidden, but `AllowViewNavigation` still works for views added in the `AllowedViews` property. For `AllowedViews` is set to `Default`, no scheduler view navigation buttons are added, so `AllowViewNavigation` does not work.
+>Note: When `ShowAllowedViews` is `false` the view navigation buttons in the scheduler header are hidden, but `AllowViewNavigation` still works for views added in the `AllowedViews` property. For `AllowedViews` is set to `Default`, no scheduler view navigation buttons are added, so `AllowViewNavigation` does not work.
 
 {% tabs %}
 {% highlight XAML hl_lines="2" %}
@@ -317,6 +317,6 @@ this.Scheduler.DisabledDateBackground = Brush.LightSkyBlue;
 {% endhighlight %}
 {% endtabs %}
 
-N>
+>Note:
 * The `DisabledDateTextStyle` and `DisabledDateBackground` properties will be applicable for the following properties such as `MinimumDateTime,` `MaximumDateTime,` and `SelectableDayPredicate` of the `SfScheduler.`
 * The `DisabledDateBackground` property is not applicable for month cells and view header cells.

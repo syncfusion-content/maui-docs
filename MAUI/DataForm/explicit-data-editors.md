@@ -13,7 +13,7 @@ documentation: UG
 
 The data form auto-generates the editors based on the data type. You can explicitly add the data editors by adding [SfDataForm.Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_Items) manually, and you need to change the [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) property to false.
 
-N> Use the [FieldName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_FieldName) property to bind the editor to the data object property.
+>Note: Use the [FieldName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html#Syncfusion_Maui_DataForm_DataFormItem_FieldName) property to bind the editor to the data object property.
 [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event will not be triggered when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is false.
 
 {% tabs %}
@@ -215,7 +215,7 @@ You can add custom editor manually by adding the custom view as an [EditorView](
 {% endhighlight %}
 {% endtabs %}
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/ExplicitDataFormItems)
+>Note: [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/ExplicitDataFormItems)
 
 ## Explicitly create data editors from custom data dictionary
 
@@ -288,4 +288,4 @@ public class DataFormItemManagerExt : DataFormItemManager
 {% endhighlight %}
 {% endtabs %}
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/CustomDataDictionarySample)
+>Note: [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/CustomDataDictionarySample)
