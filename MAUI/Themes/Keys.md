@@ -15969,7 +15969,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
 
     <tr>
-        <td rowspan="16">
+        <td rowspan="35">
             SfToolbarStyles
             <br/>
             <br/>
