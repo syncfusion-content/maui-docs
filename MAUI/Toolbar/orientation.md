@@ -255,4 +255,4 @@ public class TextFormattingViewModel
 
 {% endtabs %}
 
-![toolbar-vertical](images/vertical-toolbar.png){:width="240" height="480"  loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
+![toolbar-vertical](images/vertical-toolbar.png)

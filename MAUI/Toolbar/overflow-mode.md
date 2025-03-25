@@ -155,6 +155,8 @@ namespace ToolbarSample
 
 {% endtabs %}
 
+![scroll-toolbar-items](images/scroll-toolbar-items.gif)
+
 ## Navigation Buttons
 
 The Toolbar control provides support for navigating buttons to display the overflow items by setting the `OverflowMode` property to `NavigationButtons`.
@@ -298,6 +300,8 @@ namespace ToolbarSample
 {% endhighlight %}
 
 {% endtabs %}
+
+![navigate-toolbar-items](images/navigation-button-toolbar-items.gif)
 
 ## More Items Menu
 
@@ -593,6 +597,8 @@ namespace ToolbarSample
 {% endhighlight %}
 
 {% endtabs %}
+
+![navigate-toolbar-items](images/more-button-toolbar-items.gif)
 
 ### Cancel the default item dropdown view
 

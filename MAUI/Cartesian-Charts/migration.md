@@ -903,7 +903,6 @@ this.Content = chart;
 
 ## Known issue 
 
-* [iOS] [#9135](https://github.com/dotnet/maui/issues/9135) - The chart legend was taking up a huge amount of vertical space or becoming hidden. 
 * The trackball behavior is currently not supported with stacked column charts.
 
 ## Unsupported features from Xamarin.Forms
