@@ -45,7 +45,6 @@ public class OrderInfo
 {
     public int OrderID { get; set; }      
     public int Quantity { get; set; }
-    
 }
 
 public class Employee
