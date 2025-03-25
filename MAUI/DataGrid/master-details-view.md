@@ -642,7 +642,7 @@ The [DetailsViewUnLoading]() event occurs when the `DetailsViewDataGrid` is remo
 {% highlight c# %}
  this.dataGrid.DetailsViewUnloading += DataGrid_DetailsViewUnloading;
 
- private void DataGrid_DetailsViewUnloading1(object? sender, DataGridDetailsViewUnloadingEventArgs e)
+ private void DataGrid_DetailsViewUnloading(object? sender, DataGridDetailsViewUnloadingEventArgs e)
  {
      
  }
