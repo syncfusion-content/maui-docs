@@ -262,7 +262,7 @@ public MarkerTool()
 
 ![tile layer default marker](images/markers/tile_layer_default_marker.png)
 
-N>
+>Note:
 * Refer to the [`MapMarkerCollection`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarkerCollection.html), for collection of [`MapMarker`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html).
 
 ## Appearance customization
@@ -272,7 +272,7 @@ You can customize the built-in markers appearance using the [`IconType`](https:/
 * **Alignment** - You can change the position of the marker from the given coordinate using the [`HorizontalAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_HorizontalAlignment) and [`VerticalAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_VerticalAlignment) properties. The default value is [`MapAlignment.Center`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapAlignment.html#Syncfusion_Maui_Maps_MapAlignment_Center). The available alignment options are [`Center`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapAlignment.html#Syncfusion_Maui_Maps_MapAlignment_Center), [`Start`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapAlignment.html#Syncfusion_Maui_Maps_MapAlignment_Start), [`End`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapAlignment.html#Syncfusion_Maui_Maps_MapAlignment_End).
 * **Offset** - You can adjust the marker position from the given coordinate using the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_Offset) property. The default value of the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_Offset) property is `Offset.zero`.
 
-N>
+>Note:
 * The default value of the [`IconType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconType) is [`MapIconType.circle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapIconType.html#Syncfusion_Maui_Maps_MapIconType_Circle).
 * The default value of the [`IconStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconStrokeThickness) is `1.0`.
 * The default value of the [`IconFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.MapMarker.html#Syncfusion_Maui_Maps_MapMarker_IconFill) is `Color.FromRgb(138, 69, 175)`.
@@ -871,4 +871,4 @@ public class CustomMarker1 : MapMarker
 
 ![Maps marker appearance customization](images/markers/marker_selector.png)
 
-N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps Markers example](https://github.com/syncfusion/maui-demos/) that shows how to configure a Maps in .NET MAUI.
+>Note: You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps Markers example](https://github.com/syncfusion/maui-demos/) that shows how to configure a Maps in .NET MAUI.

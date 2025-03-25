@@ -212,5 +212,5 @@ public class HeaderTemplateSelector : DataTemplateSelector
 {% endhighlight %}  
 {% endtabs %}
 
-N>
+>Note:
 * When using data template selector, performance issues occur as the conversion template views take time within the framework.

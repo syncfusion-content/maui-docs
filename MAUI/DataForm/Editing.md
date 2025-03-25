@@ -101,9 +101,9 @@ this.dataForm.Commit();
 {% endhighlight %}
 {% endtabs %}
 
-N> On manual commit, manual validation will be called to validate the properties before the commit.
+>Note: On manual commit, manual validation will be called to validate the properties before the commit.
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/ManualCommit)
+>Note: [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/ManualCommit)
 
 ## Value converter attribute
 
@@ -144,7 +144,7 @@ public class StringToDateTimeConverter : IValueConverter
 
 Here, the editor will display the original value as `DateTime`. While committing, it is converted to a `string` and stored in the data object.
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/ConvertersSample)
+>Note: [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/ConvertersSample)
 
 ## Read only mode
 

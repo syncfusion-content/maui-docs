@@ -107,7 +107,7 @@ On an Android device, the image will be saved to:
 
 `\Internal storage\Pictures`
 
-N> For android, you should include permission in AndroidManifest.xml file. Please refer to the [App Model Permissions](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/appmodel/permissions?tabs=android) documentation for more details.
+>Note: For android, you should include permission in AndroidManifest.xml file. Please refer to the [App Model Permissions](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/appmodel/permissions?tabs=android) documentation for more details.
 
 {% tabs %}
 {% highlight C# tabtitle="AndroidManifest.xml" %}
@@ -354,4 +354,4 @@ private void OnHasUnsavedDrawnAnnotationsClicked(object sender, EventArgs e)
 
 {% endtabs %}
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/ImageSavingSample)
+>Note: [View sample in GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/ImageSavingSample)

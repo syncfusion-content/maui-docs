@@ -14,7 +14,7 @@ By default, the Month view displays the entire days of a particular month and cu
 
 By default, when an appointment is tried to create through Month view, it is considered to be created for an entire day.
 
-N> The appointment views for each month cells will be updated depends on the month cells height. While resizing the layout, the following actions would be performed,
+>Note: The appointment views for each month cells will be updated depends on the month cells height. While resizing the layout, the following actions would be performed,
 * If the appointment views overlaps with month cell dates or do not fit into the month cell height then the appointment view is changed from [AppointmentDisplayMode.Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthAppointmentDisplayMode.html#Syncfusion_Maui_Scheduler_SchedulerMonthAppointmentDisplayMode_Text) to [AppointmentDisplayMode.Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthAppointmentDisplayMode.html#Syncfusion_Maui_Scheduler_SchedulerMonthAppointmentDisplayMode_Indicator) view.
 * If the indicator views overlaps with month cell dates, then the indicator view is changed from [(AppointmentDisplayMode.Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthAppointmentDisplayMode.html#Syncfusion_Maui_Scheduler_SchedulerMonthAppointmentDisplayMode_Indicator) to [AppointmentDisplayMode.None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthAppointmentDisplayMode.html#Syncfusion_Maui_Scheduler_SchedulerMonthAppointmentDisplayMode_None).
 
@@ -52,7 +52,7 @@ this.Content = scheduler;
 
 ![change-appointment-display-mode-in-maui-scheduler](images/month-view/change-appointment-display-mode-in-maui-scheduler.png)
 
-N>
+>Note:
 * [View scheduler appointment sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
 * [View business object sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)
 
@@ -320,7 +320,7 @@ public class MonthViewHeaderTemplateSelector : DataTemplateSelector
 {% endhighlight %}  
 {% endtabs %}
 
-N>
+>Note:
 * When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
 ## Month Navigation direction
@@ -428,7 +428,7 @@ You can customize the month cell appearance by using the [CellTemplate](https://
 
 ![customize-month-cell-appearance-using-template-in-month-view-in-maui-scheduler](images/month-view/customize-month-cell-appearance-using-template-in-month-view-in-maui-scheduler.png)
 
-N>
+>Note:
 * The BindingContext of the `CellTemplate` is the `SchedulerMonthCellDetails.`
 
 #### Customize month cell appearance using DataTemplateSelector
@@ -488,6 +488,6 @@ this.Scheduler.View = SchedulerView.Month;
 {% endhighlight %} 
 {% endtabs %}
 
-N>
+>Note:
 * The BindingContext of the `CellTemplate` is the `SchedulerMonthCellDetails.`
 * When using data template selector, performance issues occur as the conversion template views take time within the framework.

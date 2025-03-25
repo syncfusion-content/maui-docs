@@ -15,7 +15,7 @@ The Image Editor is designed to work effectively with the icons and sliders on i
 
 The [Syncfusion .NET MAUI Image Editor](https://www.syncfusion.com/maui-controls/maui-image-editor) supports keyboard shortcuts for user interaction. The table provided outlines various shortcuts and their associated functions.
 
-N> [ToolbarItemSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ToolbarItemSelected) event triggers for toolbar item tapped.
+>Note: [ToolbarItemSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ToolbarItemSelected) event triggers for toolbar item tapped.
 
 #### Toolbar
 
@@ -59,4 +59,4 @@ Opens the image browser to import the new image inside ImageEditor.
 <br/><br/></td></tr>
 </table>
 
-N> Use the `Command` key instead of the `Ctrl` key in macOS.
+>Note: Use the `Command` key instead of the `Ctrl` key in macOS.

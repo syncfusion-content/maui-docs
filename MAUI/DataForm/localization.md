@@ -36,7 +36,7 @@ public partial class App : Application
 {% endhighlight %}
 {% endtabs %}
 
-N> The required `resx` files with `Build Action` as `EmbeddedResource` (File name should contain culture code) into the `Resources` folder.
+>Note: The required `resx` files with `Build Action` as `EmbeddedResource` (File name should contain culture code) into the `Resources` folder.
 
 ## Add Localization resx file in sample level
 
@@ -186,4 +186,4 @@ Here, the radio group items source gets localized based on culture from Localiza
 
 ![Localization in .NET MAUI DataForm.](images/localization/localization.jpg)
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/Localization)
+>Note: [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/Localization)

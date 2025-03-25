@@ -38,7 +38,7 @@ public partial class App : Application
 {% endhighlight %}
 {% endtabs %}
 
-N>
+>Note:
 The required `resx` files with `Build Action` as `EmbeddedResource` (File name should contain culture code) into the `Resources` folder.
 
 ## Localize application level

@@ -343,7 +343,7 @@ this.scheduler.AppointmentsSource = appointment;
 {% endhighlight %}
 {% endtabs %}
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
+>Note: [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
 
 ![adding-scheduler-appointments-in-maui-scheduler](images/getting-started/adding-scheduler-appointments-in-maui-scheduler.png)
 
@@ -351,7 +351,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-
 
 Map the custom appointments data to our scheduler.
 
-N> The CustomAppointment class should contain two DateTime fields and a string field as mandatory.
+>Note: The CustomAppointment class should contain two DateTime fields and a string field as mandatory.
 
 Here are the steps to render meetings using the [.NET MAUI Scheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) control with respective custom data properties created in a class `Meeting.`
 
@@ -390,7 +390,7 @@ public class Meeting
 {% endhighlight %}
 {% endtabs %}
 
-N> Inherit this class from the `INotifyPropertyChanged` for dynamic changes in custom data.
+>Note: Inherit this class from the `INotifyPropertyChanged` for dynamic changes in custom data.
 
 #### Create view model
 
@@ -644,7 +644,7 @@ this.Content = scheduler;
 {% endhighlight %}
 {% endtabs %}
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)
+>Note: [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)
 
 ## Change first day of week
 
@@ -771,7 +771,7 @@ this.Content = scheduler;
 {% endhighlight %}  
 {% endtabs %}
 
-N> This property will not be applicable for the `SchedulerView` is `Timeline Month.`
+>Note: This property will not be applicable for the `SchedulerView` is `Timeline Month.`
 
 ![show-week-number-in-maui-scheduler](images/getting-started/show-week-number-in-maui-scheduler.png)
 
@@ -808,8 +808,8 @@ this.Content = scheduler;
 {% endhighlight %}
 {% endtabs %}
 
-N> It is not applicable if the `View` is `Timeline Month` and it is applied only when the `ShowWeekNumber` property is `enabled.`
+>Note: It is not applicable if the `View` is `Timeline Month` and it is applied only when the `ShowWeekNumber` property is `enabled.`
 
 ![customize-the-week-number-text-style-in-maui-scheduler](images/getting-started/customize-the-week-number-text-style-in-maui-scheduler.png)
 
-N> You can refer to our [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Scheduler Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Scheduler) that shows you how to render the Scheduler in .NET MAUI.
+>Note: You can refer to our [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Scheduler Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Scheduler) that shows you how to render the Scheduler in .NET MAUI.

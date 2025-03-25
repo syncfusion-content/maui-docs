@@ -260,7 +260,7 @@ Delete the selected shape using either the toolbar or the [`DeleteAnnotation`](h
 
 Remove all the annotations using the [`ClearAnnotations`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_ClearAnnotations) method.
 
-N> It will remove text, pen and custom view annotations as well.
+>Note: It will remove text, pen and custom view annotations as well.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -288,7 +288,7 @@ N> It will remove text, pen and custom view annotations as well.
 
 The [`AnnotationSelected`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AnnotationSelected) event occurs when an annotation is selected.
 
-N> The event is common for text and shape annotations.
+>Note: The event is common for text and shape annotations.
 
 {% tabs %}
 
@@ -316,7 +316,7 @@ N> The event is common for text and shape annotations.
 
 This [AnnotationUnselected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AnnotationUnselected) event occurs when the annotation is unselected.
 
-N> This is common for Shape, Text and CustomView annotations.
+>Note: This is common for Shape, Text and CustomView annotations.
 
 {% tabs %}
 
@@ -364,7 +364,7 @@ Annotate a shape on image loading using the [`ImageLoaded`](https://help.syncfus
 
 {% endtabs %}
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/ImageLoadedSample)
+>Note: [View sample in GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/ImageLoadedSample)
 
 ## Add shape with manual bounds
 
@@ -446,7 +446,7 @@ The image editor control allows you to create freehand drawings such as signatur
 *  [`StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorShapeSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorShapeSettings_StrokeThickness) - Specifies the stroke width of the drawing pen.
 *  [`Color`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorShapeSettings.html#Syncfusion_Maui_ImageEditor_ImageEditorShapeSettings_Color) - Specifies the stroke color of the drawing pen.
 
-N> The other shape settings are not applicable for freehand draw.
+>Note: The other shape settings are not applicable for freehand draw.
 
 In the following example, the [`AddShape`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AddShape_Syncfusion_Maui_ImageEditor_AnnotationShape_Syncfusion_Maui_ImageEditor_ImageEditorShapeSettings_) method is used to toggle the freehand drawings.
 

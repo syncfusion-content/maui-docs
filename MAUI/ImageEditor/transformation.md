@@ -15,7 +15,7 @@ The Image Editor in .NET MAUI provides options for rotating and flipping images,
 
 The [Rotate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Rotate) method is used to rotate images with annotations. Each rotation will rotate the image 90 degrees clockwise. You can rotate the image using either the toolbar or the [Rotate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Rotate) method.
 
-N> Angle cannot be specified in the code to alter the rotation angle of the image.
+>Note: Angle cannot be specified in the code to alter the rotation angle of the image.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}

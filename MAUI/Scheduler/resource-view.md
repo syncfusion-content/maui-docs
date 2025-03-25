@@ -122,7 +122,7 @@ The Schedule supports full data binding to [Resources](https://help.syncfusion.c
 | Background | Maps the property name of custom class, which is equivalent to Background in SchedulerResource. |
 | Foreground | Maps the property name of custom class, which is equivalent to Foreground in SchedulerResource. |
 
-N> Custom resource class should contain a mandatory field for resource `Id`.
+>Note: Custom resource class should contain a mandatory field for resource `Id`.
 
 ## Mapping resource business object or custom field
 
@@ -294,7 +294,7 @@ this.Content = scheduler;
 {% endhighlight %}
 {% endtabs %} 
 
-N>
+>Note:
 * By default, if the viewport height is greater than 400 then each resource height will be calculated by viewport size divided by the minimum value of scheduler resources count and 4 (default resource count). 
 * If the viewport height is lesser than 400 then each resource height will be calculated by default viewport size(4 (default resource*100)) divided by the minimum value of scheduler resources count and 4 (default resource count).
 * If the MinimumRowHeight is less than the default row height then the default row height will be used.

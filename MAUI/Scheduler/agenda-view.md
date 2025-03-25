@@ -13,7 +13,7 @@ The agenda view displays the events or appointments (normal appointments, all-da
 
 A agenda view displays different UI for mobile and desktop, for mobile it displays the month header, the week header, and the date header, whereas for desktop, it displays the appointment only.
 
-N> When the desktop view width is less than 600, the scheduler will display the mobile agenda UI on the desktop.
+>Note: When the desktop view width is less than 600, the scheduler will display the mobile agenda UI on the desktop.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -113,7 +113,7 @@ You can customize the month header appearance of scheduler by using the [MonthHe
 
 ![month-header-appearence-template-customization-in-maui-scheduler](images/agenda-view/month-header-appearence-template-customization-in-maui-scheduler.png)
 
-N> 
+>Note: 
 * The default values for `DateFormat` and `Height` are `MMMM yyyy` and `150,` respectively.
 * For desktop UI, The agenda view displays the appointment only.
 
@@ -174,7 +174,7 @@ this.Scheduler.View = SchedulerView.Agenda;
 {% endhighlight %} 
 {% endtabs %}
 
-N>
+>Note:
 * The default value for `DateFormat` and `Height` are `MMMM yyyy` and `150,` respectively.
 * For desktop UI, The agenda view displays the appointment only.
 * When using data template selector, performance issues occur as the conversion template views take time within the framework.
@@ -221,7 +221,7 @@ this.Scheduler.AgendaView.WeekHeaderSettings.Background = Brush.LightGreen;
 
 ![week-header-appearence-text-style-customization-in-maui-scheduler](images/agenda-view/week-header-appearence-text-style-customization-in-maui-scheduler.png)
 
-N> 
+>Note: 
 * The default value for `DateFormat,` and `Height` are `MMM dd,` and `30` respectively.
 * For desktop UI, The agenda view displays the appointment only.
 
@@ -266,7 +266,7 @@ this.Scheduler.AgendaView.DayHeaderSettings.Background = Brush.LightGreen;
 
 ![day-header-appearence-text-style-customization-in-maui-scheduler](images/agenda-view/day-header-appearence-text-style-customization-in-maui-scheduler.png)
 
-N> The default value of `DayFormat` is `MMM, ddd.`
+>Note: The default value of `DayFormat` is `MMM, ddd.`
 
 ## Appointment text appearance customization
 
@@ -373,6 +373,6 @@ The Syncfusion .NET MAUI Scheduler allows users to customize the visual represen
 {% endhighlight %}
 {% endtabs %}
 
-N>
+>Note:
 * By default, the [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) is set as the `BindingContext` for [AppointmentTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAgendaView.html#Syncfusion_Maui_Scheduler_SchedulerAgendaView_AppointmentTemplate) for both [SchedulerAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) and custom data object in `AppointmentsSource.`
 * The Custom data object can be bound in [AppointmentTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAgendaView.html#Syncfusion_Maui_Scheduler_SchedulerAgendaView_AppointmentTemplate) by using `SchedulerAppointment.DataItem.`

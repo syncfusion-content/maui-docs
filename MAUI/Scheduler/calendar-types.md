@@ -42,7 +42,7 @@ The Scheduler control supports different types of calendars such as Gregorian, K
 </tr>
 </table>
 
-N>
+>Note:
 * The FlowDirection will be updated based on the CalendarType. If you want to override this behavior, set the FlowDirection after CalendarTypeIf calendar is specified other than the Gregorian. All the DateTime values such as Appointment Start and End time, SpecialTimeRegion Start and End time, SelectableDayPredicate, SelectedDate, and DisplayDate can be given in two ways.
 * The DateTime instance without specifying calendar type. The scheduler will handle the DateTime value for the specified calendar type.
 * When a DateTime instance has a calendar type, the Scheduler handles it directly.

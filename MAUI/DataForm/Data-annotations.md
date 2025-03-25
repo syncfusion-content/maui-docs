@@ -224,7 +224,7 @@ public string Name { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
-N> The `ReadOnlyAttribute` takes higher priority than `EditableAttribute`
+>Note: The `ReadOnlyAttribute` takes higher priority than `EditableAttribute`
 
 ## DataType attribute
 
@@ -373,4 +373,4 @@ public DateTime EventDate { get; set; }
 {% endhighlight %}
 {% endtabs %}
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/DataFormAnnotations)
+>Note: [View sample in GitHub](https://github.com/SyncfusionExamples/maui-dataform/tree/master/DataFormAnnotations)

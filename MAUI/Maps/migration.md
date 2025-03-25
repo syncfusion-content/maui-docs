@@ -101,7 +101,7 @@ SfMaps map = new SfMaps();
 </tr>
 </table>
 
-N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
+>Note: All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
 ## Adding layer
 
@@ -266,7 +266,7 @@ N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consi
 </tr>
 </table>
 
-N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
+>Note: All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
 The following code example explains how to intialize the layer and customize the layer in Xamarin SfMaps and .NET MAUI SfMaps.
 
@@ -458,7 +458,7 @@ The following code example explains how to intialize the layer and customize the
 </tr>
 </table>
 
-N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
+>Note: All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
 The following code example explains how to intialize the tile layer and it's customization in Xamarin SfMaps and .NET MAUI SfMaps.
 
@@ -697,7 +697,7 @@ private async Task GenerateBing(MapTileLayer tileLayer)
 </tr>
 </table>
 
-N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
+>Note: All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
 The following code example explains how to customize the bubble in the Xamarin SfMaps and .NET MAUI SfMaps.
 
@@ -842,7 +842,7 @@ public MainPage()
 </tr>
 </table>
 
-N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
+>Note: All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
 The following code example explains how to customize the data label in the Xamarin SfMaps and .NET MAUI SfMaps.
 
@@ -1044,7 +1044,7 @@ public MainPage()
 </tr>
 </table>
 
-N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
+>Note: All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
 The following code example explains how to customize the shape color in the Xamarin SfMaps and .NET MAUI SfMaps.
 
@@ -1248,7 +1248,7 @@ public MainPage()
 </tr>
 </table>
 
-N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
+>Note: All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
 The following code example explains how to customize marker in the Xamarin SfMaps and .NET MAUI SfMaps.
 
@@ -1394,7 +1394,7 @@ public MainPage()
 </tr>
 </table>
 
-N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
+>Note: All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
 The following code example explains how to customize legend in the Xamarin SfMaps and .NET MAUI SfMaps.
 
@@ -1634,7 +1634,7 @@ public MainPage()
 </tr>
 </table>
 
-N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
+>Note: All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
 The following code example explains how to customize tooltip in the Xamarin SfMaps and .NET MAUI SfMaps.
 
@@ -1859,7 +1859,7 @@ The following code example explains how to customize tooltip in the Xamarin SfMa
 </tr>
 </table>
 
-N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
+>Note: All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
 The following code example explains how to initialize the shape sublayer and it's customization in the Xamarin SfMaps and .NET MAUI SfMaps.
 
@@ -2030,7 +2030,7 @@ public MainPage()
 </tr>
 </table>
 
-N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
+>Note: All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
 The following code example explains how to customize the bubble in the Xamarin SfMaps and .NET MAUI SfMaps.
 
@@ -2186,7 +2186,7 @@ public MainPage()
 </tr>
 </table>
 
-N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
+>Note: All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
 The following code example explains how to customize the data label in the Xamarin SfMaps and .NET MAUI SfMaps.
 
@@ -2605,7 +2605,7 @@ public MainPage()
 </tr>
 </table>
 
-N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
+>Note: All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
 The following code example explains how to intialize the polygon layer and it's customization in Xamarin SfMaps and .NET MAUI SfMaps.
 
@@ -2803,7 +2803,7 @@ public MainPage()
 </tr>
 </table>
 
-N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
+>Note: All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
 The following code example explains how to intialize the polyline layer and it's customization in Xamarin SfMaps and .NET MAUI SfMaps.
 
@@ -3444,7 +3444,7 @@ public MainPage()
 </tr>
 </table>
 
-N> All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
+>Note: All the (*) marked APIs are renamed from Xamarin SfMaps to maintain the consistency of API naming in the .NET MAUI SfMaps.
 
 The following code example explains how to intialize the zooming and it's customization in Xamarin SfMaps and .NET MAUI SfMaps.
 

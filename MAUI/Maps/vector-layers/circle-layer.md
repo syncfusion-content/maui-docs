@@ -540,7 +540,7 @@ You can apply animation for the [`MapCircle`](https://help.syncfusion.com/cr/mau
 
 By default, there will be no animation.
 
-N> Animation is only applicable for the load time.
+>Note: Animation is only applicable for the load time.
 
 {% tabs %}
 

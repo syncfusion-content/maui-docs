@@ -42,11 +42,11 @@ this.Scheduler.AppointmentsSource = appointment;
 
 ![scheduler-appointment-in-maui-scheduler](images/appointments/scheduler-appointment-in-maui-scheduler.png)
 
-N> 
+>Note: 
 * In the Scheduler, every appointment can be arranged based on its start time and duration for normal appointments in a day, week, and workweek view.
 *  Whenever a timeline is viewed, the appointments (all day, span, and normal) are ordered and rendered based on the appointment start time and time duration of the appointment. This is followed by `IsSpanned,` `IsAllDay,` and normal appointments.
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
+>Note: [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
 
 ## Scheduler appointment source mapping
 
@@ -88,7 +88,7 @@ The .NET MAUI Scheduler supports collection that implements the object interface
 <td>This property maps the property name of a business object class to the property name of Stroke in SchedulerAppointment.</td></tr>
 </table>
 
-N> The business object class should contain two date time fields as mandatory.
+>Note: The business object class should contain two date time fields as mandatory.
 
 ## Creating business objects
 
@@ -115,7 +115,7 @@ public class Meeting
 {% endhighlight %}
 {% endtabs %}
 
-N> Inherit this class from the `INotifyPropertyChanged` for dynamic changes in custom data.
+>Note: Inherit this class from the `INotifyPropertyChanged` for dynamic changes in custom data.
 
 The [AppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html) property of the `Meeting` class maps those properties to the `.NET MAUI Scheduler` control.
 
@@ -186,7 +186,7 @@ this.Scheduler.AppointmentsSource = Meetings;
 
 ![business-appointment-event-in-maui-scheduler](images/appointments/business-appointment-event-in-maui-scheduler.png)
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)
+>Note: [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)
 
 ## Spanned appointments
 
@@ -270,7 +270,7 @@ this.Scheduler.AppointmentsSource = appointment;
 
 ![all-day-appointment-in-maui-scheduler](images/appointments/all-day-appointment-in-maui-scheduler.png)
 
-N> 
+>Note: 
 For example: From 12/13/2021 12:00AM to 12/14/2021 12:00AM.
 
 ## Read only appointment
@@ -373,7 +373,7 @@ this.Scheduler.AppointmentsSource = appointment;
 
 ![recurrence-scheduler-appointment-in-maui-scheduler](images/appointments/recurrence-scheduler-appointment-in-maui-scheduler.png)
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecurringAppointment/SchedulerAppointment)
+>Note: [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecurringAppointment/SchedulerAppointment)
 
 ### Creating the business object recurrence appointment
 
@@ -404,7 +404,7 @@ public class Meeting
 {% endhighlight %}
 {% endtabs %}
 
-N> 
+>Note: 
 Inherit this class from the `INotifyPropertyChanged` for dynamic changes in custom data.
 
 The [AppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html) property of the `Meeting` class maps those properties to the  scheduler appointment of the `.NET MAUI Scheduler` control.
@@ -485,7 +485,7 @@ this.Scheduler.AppointmentsSource = Meetings;
 
 ![business-object-recurring-appointment-in-maui-scheduler](images/appointments/business-object-recurring-appointment-in-maui-scheduler.png)
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecurringAppointment/BusinessObject)
+>Note: [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecurringAppointment/BusinessObject)
 
 #### How to get the recurrence editor field values from RRULE?
 
@@ -629,7 +629,7 @@ this.Scheduler.AppointmentsSource = appointment;
 
 ![adding-exception-dates-to-recurrence-pattern-scheduler-appointment-in-maui-scheduler](images/appointments/adding-exception-dates-to-recurrence-pattern-scheduler-appointment-in-maui-scheduler.png)
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecursiveExceptionAppointment/SchedulerAppointment)
+>Note: [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecursiveExceptionAppointment/SchedulerAppointment)
 
 #### Add exception appointment to the recurrence pattern for scheduler appointment
 
@@ -690,14 +690,14 @@ this.Scheduler.AppointmentsSource = appointment;
 
 ![adding-exception-to-the-recurrence-pattern-scheduler-appointment-in-maui-scheduler](images/appointments/adding-exception-to-the-recurrence-pattern-scheduler-appointment-in-maui-scheduler.png)
 
-N>
+>Note:
 * The `RecurrenceId` of an exception appointment and the `Id` of its pattern appointment should have the same value.
 * The Exception recurrence appointment does not have the `RecurrenceRule,` so for an exception appointment, it will be reset to `empty.`
 * The exception appointment should have a different `Id` with original pattern appointment `Id.`
 * The exception appointment should be a normal appointment and should not be created as a recurring appointment, since its occurrence is from a recurrence pattern.
 * The `RecurrenceExceptionDates` should be in a Universal Time Coordinates (UTC) time zone.
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecursiveExceptionAppointment/SchedulerAppointment)
+>Note: [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecursiveExceptionAppointment/SchedulerAppointment)
 
 ### Create the recurrence exceptions for business object
 
@@ -734,7 +734,7 @@ public class Meeting
 {% endhighlight %}
 {% endtabs %}
 
-N> Inherit this class from the `INotifyPropertyChanged` for dynamic changes in custom data.
+>Note: Inherit this class from the `INotifyPropertyChanged` for dynamic changes in custom data.
 
 The property `RecurrenceExceptionDates` should map with the business object class of `AppointmentMapping` class to map the exception dates to the scheduled appointment.
 
@@ -798,9 +798,9 @@ this.Scheduler.AppointmentsSource = Meetings;
 
 ![adding-exception-dates-to-recurrence-pattern-custom-appointment-in-maui-scheduler](images/appointments/adding-exception-dates-to-recurrence-pattern-custom-appointment-in-maui-scheduler.png)
 
-N> Exception dates should be Universal Time Coordinates (UTC) time zone.
+>Note: Exception dates should be Universal Time Coordinates (UTC) time zone.
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecursiveExceptionAppointment/BusinessObject)
+>Note: [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecursiveExceptionAppointment/BusinessObject)
 
 #### Add an exception appointment to the recurrence pattern for business object
 
@@ -875,14 +875,14 @@ this.Scheduler.AppointmentsSource = recursiveAppointmentCollection;
 {% endhighlight %}
 {% endtabs %}
 
-N>
+>Note:
 * The `RecurrenceId` of exception appointment and the `Id` of its pattern appointment should have same value.
 * The Exception recurrence appointment does not have the `RecurrenceRule`, so for an exception appointment, it will be reset to empty.
 * The exception appointment should have different `Id` with original pattern appointment `Id.`
 * The exception appointment should be a normal appointment and should not be created as recurring appointment, since its occurrence from the recurrence pattern.
 * The recurrenceExceptions should be in a Universal Time Coordinates (UTC) time zone.
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecursiveExceptionAppointment/BusinessObject)
+>Note: [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecursiveExceptionAppointment/BusinessObject)
 
 ## Suspend and resume the appointment UI rendering
 
@@ -1018,7 +1018,7 @@ this.Scheduler.AppointmentsSource = appointments;
 
 ![customize-appointment-template-appearance-in-maui-scheduler](images/appointments/customize-appointment-template-appearance-in-maui-scheduler.png)
 
-N>
+>Note:
 * By default, the `SchedulerAppointment` is set as the `BindingContext` for `AppointmentTemplate` for both `SchedulerAppointment` and custom data object in `AppointmentsSource.`
 * The Custom data object can be bound in `AppointmentTemplate` by using `SchedulerAppointment.DataItem.`
 
@@ -1099,7 +1099,7 @@ this.Scheduler.AppointmentsSource = appointments;
 {% endhighlight %} 
 {% endtabs %}
 
-N>
+>Note:
 * The `BindingContext` for `AppointmentTemplate` for both `SchedulerAppointment` and `SchedulerAppointment.DataItem` in `AppointmentsSource.`
 * When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
@@ -1128,7 +1128,7 @@ this.Scheduler.SelectedAppointmentBackground = Brush.Orange;
 
 You can add a border to all scheduler appointments by setting the `StrokeThickness` and `Stroke` properties in the `AppointmentBorderStyle` property. Additionally, you can customize the corner radius of the border using the `CornerRadius` property. By default, the `StrokeThickness` is not set.
 
-N> Appointment border styles are not applicable for the month view indicator mode and the `AppointmentTemplate`.
+>Note: Appointment border styles are not applicable for the month view indicator mode and the `AppointmentTemplate`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -1201,6 +1201,6 @@ this.Scheduler.AppointmentBorderStyle  = appointmentBorderStyle;
 
 ![individual-border-scheduler-appointment](images/appointments/individual-appointment-border.png)
 
-N>
+>Note:
 * [View scheduler appointment sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)
 * [View business object sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)

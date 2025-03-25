@@ -1094,8 +1094,8 @@ You can customize the appearance of legend items with your template by using `It
 {% endhighlight %}
 {% endtabs %}
 
-N> The BindingContext of the ItemTemplate is the corresponding underlying legend item provided in the MapLegend class.
+>Note: The BindingContext of the ItemTemplate is the corresponding underlying legend item provided in the MapLegend class.
 
 ![Legend template](images/legend/legend-template.png ){:width="313" height="480"  loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
 
-N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps Legend example](https://github.com/syncfusion/maui-demos/) that shows how to configure a Maps in .NET MAUI.
+>Note: You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps Legend example](https://github.com/syncfusion/maui-demos/) that shows how to configure a Maps in .NET MAUI.

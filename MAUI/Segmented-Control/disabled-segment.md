@@ -151,7 +151,7 @@ public partial class MainPage : ContentPage
 ![Disabled segment text color customization in .NET MAUI Segmented control.](images/disabled-segment/disabled-segment-text-color.png)
 
 
-N> The `DisabledSegmentTextColor` will be applicable only when the `IsEnabled` property of `SfSegmentItem`, or `SfSegmentedControl` is set to `false`.
+>Note: The `DisabledSegmentTextColor` will be applicable only when the `IsEnabled` property of `SfSegmentItem`, or `SfSegmentedControl` is set to `false`.
 
 ### Customizing the disabled segment background
 
@@ -189,4 +189,4 @@ public partial class MainPage : ContentPage
 
 ![Disabled segment background customization in .NET MAUI Segmented control.](images/disabled-segment/disabled-segment-background.png)
 
-N> The `DisabledSegmentBackground` will be applicable only when the `IsEnabled` property of `SfSegmentItem`, or `SfSegmentedControl` is set to `false`.
+>Note: The `DisabledSegmentBackground` will be applicable only when the `IsEnabled` property of `SfSegmentItem`, or `SfSegmentedControl` is set to `false`.
