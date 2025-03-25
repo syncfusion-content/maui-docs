@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains how to populate items for both default views and custom views using the `Items` properties in `SfToolbar`.
 
-## Default View
+## Toolbar Item Display Options
 
 The toolbar control supports displaying a default view for toolbar items when the `View` property of `SfToolbarItem` is not defined. To render the default view, you need to define either the `Icon` or `Text` property of `SfToolbarItem`.
 
@@ -709,7 +709,7 @@ namespace ToolbarSample
 
 ![icon-text-toolbar-items](images/icon-text-items.png)
 
-### Default view item size
+### Change item size
 
 The control provides support to set the size for the toolbar item using the `Size` property.
 
@@ -816,7 +816,7 @@ namespace ToolbarSample
 
 ![size-toolbar-items](images/item-size.png)
 
-### Programmatically clear selection toolbar items
+### Clear toolbar selection programmatically
 
 The control provides support to clear the selection of toolbar items using the `ClearSelection` method.
 
@@ -916,7 +916,7 @@ namespace ToolbarSample
 
 {% endtabs %}
 
-## Add name for the toolbar item
+##  Set Toolbar Item Name
 
 The control provides support to set the name for the toolbar items using the `Name` property, which helps to uniquely identifies the toolbar item.
 
@@ -1013,7 +1013,7 @@ namespace ToolbarSample
 
 {% endtabs %}
 
-## Separator View
+## Separator Item View
 
 The control allows you to add a separator view using the `SeparatorToolbarItem` in the `Items` property of SfToolbar.
 
@@ -1191,7 +1191,7 @@ namespace ToolbarSample
 
 ![separator-toolbar-items](images/separator-items.png)
 
-## Custom View
+## Custom Item View
 
 You can add custom views, such as buttons, checkboxes, entries, etc., to the toolbar using the `View` property.
 
@@ -1549,7 +1549,7 @@ public class ToolbarViewModel
 
 ![equal-spacing-toolbar-items](images/equal-spacing.png)
  
-## Leading and Trailing Item
+## Toolbar Item Alignment Options
 
 The control provides support for setting leading and trailing items using the `ItemAlignment` property. The items set with `ItemAlignment` as `Start` will be displayed at the leading position, and the items set with `ItemAlignment` as `End` will be displayed at the trailing position. By default, the items will be displayed in the center position.
 

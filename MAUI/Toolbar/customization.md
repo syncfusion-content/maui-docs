@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains the ways about support for customization in syncfusion .NET MAUI Toolbar (SfToolbar) control.
 
-## Customization Toolbar Items
+## Toolbar Item Customization
 
 The toolbar control supports customization of toolbar items using properties `IsEnabled`,`TextStyle` and `Color`.
 
@@ -210,7 +210,7 @@ The following code sample demonstrates how to create a toolbar control with tool
 
 ![toolbar-items-customization](images/toolbaritem-customization.png)
 
-## Customizing Separator Item
+## Separator Item Customization
 
 The toolbar control supports customization of separator item using properties `Stroke` and `StrokeThickness`.
 
@@ -355,7 +355,7 @@ public partial class MainPage : ContentPage
 
 ![separator-item-customization](images/separator-customization.png)
 
-## Customizing Navigation Buttons
+## Navigation Button Customization
 
 The toolbar control supports customization of navigation buttons using properties `ForwardButtonIconColor`, `BackwardButtonIconColor`, `ForwardButtonBackground`, `BackwardButtonBackground`.
 
@@ -507,7 +507,7 @@ The following code sample demonstrates how to create a toolbar control with navi
 
 ![navigation-button-customization](images/navigation-button-customization.png)
 
-## Customizing More Button
+## More Button Customization
 
 The toolbar control supports customization of more button using properties `MoreButtonIconColor`, `MoreButtonBackground`.
 
