@@ -74,9 +74,7 @@ namespace TextInputLayoutSample
 
 ## Step 4: Add a Basic TextInputLayout
 
-Step 1: Add the NuGet to the project as discussed in the above reference section.
-
-Step 2: Add the namespace as shown in the following code sample.
+Step 1: Add the namespace as shown in the following code sample.
 
 Add the following namespace to add [.NET MAUI Text Input Layout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html).
 
@@ -96,7 +94,7 @@ Add the following namespace to add [.NET MAUI Text Input Layout](https://help.sy
 
 {% endtabs %}
 
-Step 3: Add any input view control such as [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) and [Editor](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor), [SfAutocomplete](https://help.syncfusion.com/maui/autocomplete/overview), [SfComboBox](https://help.syncfusion.com/maui/combobox/overview) controls and add hint label (floating label).
+Step 2: Add any input view control such as [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) and [Editor](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor), [SfAutocomplete](https://help.syncfusion.com/maui/autocomplete/overview), [SfComboBox](https://help.syncfusion.com/maui/combobox/overview) controls and add hint label (floating label).
 
 {% tabs %} 
 

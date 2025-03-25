@@ -84,7 +84,7 @@ The .NET MAUI Scheduler supports collection that implements the object interface
 <td>This property maps the property name of a business object class to the property name of IsReadOnly in SchedulerAppointment.</td></tr>
 <tr><td>{{'[TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_TextColor)'| markdownify}}</td>
 <td>This property maps the property name of a business object class to the property name of TextColor in SchedulerAppointment.</td></tr>
-<tr><td>{{`Stroke`| markdownify}}</td>
+<tr><td>Stroke</td>
 <td>This property maps the property name of a business object class to the property name of Stroke in SchedulerAppointment.</td></tr>
 </table>
 
@@ -1158,6 +1158,8 @@ this.Scheduler.AppointmentBorderStyle  = appointmentBorderStyle;
 {% endhighlight %}  
 {% endtabs %}
 
+![border-scheduler-appointment](images/appointments/appointment-border.png)
+
 ### Apply a stroke to the border of a specific appointments
 
 The appointment border stroke can be customized using the `Stroke` property in SchedulerAppointment. Alternatively, for custom-mapped appointments, you can use the `StrokeMapping` property.
@@ -1196,6 +1198,8 @@ this.Scheduler.AppointmentBorderStyle  = appointmentBorderStyle;
 
 {% endhighlight %}  
 {% endtabs %}
+
+![individual-border-scheduler-appointment](images/appointments/individual-appointment-border.png)
 
 N>
 * [View scheduler appointment sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/GettingStarted)

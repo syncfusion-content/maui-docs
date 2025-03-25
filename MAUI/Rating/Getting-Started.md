@@ -73,9 +73,7 @@ namespace RatingSample
 
 ## Step 4: Add a Basic Rating
 
-Step 1: Add the NuGet to the project as discussed in the above reference section. 
-
-Step 2: Add the namespace, as shown in the following code sample:
+Step 1: Add the namespace, as shown in the following code sample:
 
 {% tabs %}
 
@@ -93,7 +91,7 @@ Step 2: Add the namespace, as shown in the following code sample:
 
 {% endtabs %}
 
-Step 3: Add the [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control with a required optimal name using the included namespace.
+Step 2: Add the [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control with a required optimal name using the included namespace.
 
 {% tabs %}
 
