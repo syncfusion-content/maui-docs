@@ -70,7 +70,7 @@ The `SfDataGrid` control supports binding to a [dynamic data object]().
 The code examples below demonstrate how to bind a dynamic data object to the `SfDataGrid` using both manually and automatically generated columns.
 
 {% tabs %}
-{% highlight ViewModel %}
+{% highlight c# %}
 
 public class EmployeeCollection
 {
