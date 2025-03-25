@@ -34,6 +34,19 @@ Define an `Employee` class with `Sales` and `Orders` properties, which use [Obse
 {% tabs %}
 {% highlight c# %}
 
+public class SalesInfo 
+{
+    public int OrderID { get; set; }      
+    public string SalesID { get; set; }         
+    public string ProductName { get; set; }
+}
+
+public class OrderInfo 
+{
+    public int OrderID { get; set; }      
+    public int Quantity { get; set; }
+}
+
 public class Employee
 {
     public string EmployeeID { get; set; }
@@ -628,7 +641,7 @@ The [DetailsViewUnLoading]() event occurs when the `DetailsViewDataGrid` is remo
 {% highlight c# %}
  this.dataGrid.DetailsViewUnloading += DataGrid_DetailsViewUnloading;
 
- private void DataGrid_DetailsViewUnloading1(object? sender, DataGridDetailsViewUnloadingEventArgs e)
+ private void DataGrid_DetailsViewUnloading(object? sender, DataGridDetailsViewUnloadingEventArgs e)
  {
      
  }
