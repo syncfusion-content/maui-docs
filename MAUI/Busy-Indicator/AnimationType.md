@@ -190,3 +190,31 @@ The Globe animation is one of the built-in animations in [.NET MAUI BusyIndicato
 The following gif image illustrates the result of the above code.
 
 ![Global](Images/AnimationType/Globe.gif)
+
+### Horizontal Pulsing Box
+
+The horizontal pulsing box animation is one of the built-in animations in [.NET MAUI BusyIndicator.](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) Refer to the following code example. Here, we’ll set the [AnimationType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_AnimationType) as `HorizontalPulsingBox.`
+
+{% tabs %}
+
+{% highlight xaml %}
+
+    <core:SfBusyIndicator AnimationType="HorizontalPulsingBox" IsRunning="True"/>                        
+                          
+{% endhighlight %}
+
+{% highlight C# %}
+
+    SfBusyIndicator busyIndicator = new SfBusyIndicator()
+    {
+        AnimationType = AnimationType.HorizontalPulsingBox,
+        IsRunning = true
+    };
+
+{% endhighlight %}
+
+{% endtabs %}
+
+The following gif image illustrates the result of the above code.
+
+![Horizontal Pulsing Box](Images/AnimationType/HorizontalPulsingBox.gif)

@@ -9,7 +9,7 @@ documentation: ug
 
 # Syncfusion<sup>®</sup> Essential<sup>®</sup> UI Kit for .NET MAUI Designs
 
-The Essential<sup>®</sup> UI Kit for .NET MAUI offers a collection of **87 screens**, organized into **18 versatile categories**, designed to streamline your design process and elevate your user interface creations. 
+The Essential<sup>®</sup> UI Kit for .NET MAUI offers a collection of **96 screens**, organized into **20 versatile categories**, designed to streamline your design process and elevate your user interface creations. 
 
 ## Forms	
 
@@ -142,6 +142,16 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI offers a collection of **87 scre
 
 * [Product Delivery Tracking Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Tracking/OrderTracking.xaml)
 
+## Dashboard
+
+* [Stock Overview]()
+* [Health Care]()
+* [Daily Calories Report]()
+* [Daily Timeline]()
+* [Company History]()
+* [My Wallet]()
+* [Restaurant Dashboard]()
+
 ## Settings
 
 * [Setting Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Settings/SettingsPage.xaml)
@@ -152,3 +162,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI offers a collection of **87 scre
 * [Task Notification Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Notification/TaskNotificationPage.xaml)
 * [Social Notification Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Notification/SocialNotificationPage.xaml)
 * [E-commerce Notification Page](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Notification/ECommerceNotificationPage.xaml)
+
+## Onboarding
+
+* [Walk-through]()

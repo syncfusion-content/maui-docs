@@ -54,3 +54,44 @@ this.Content = picker;
 {% endtabs %}
 
 ![Maximum time in .NET MAUI Time picker.](images/time-restriction/maui-timepicker-timerestriction-maximumtime.png)
+
+## Blackout Times
+
+The [BlackoutTimes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_BlackoutTimes) property in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html) component enables you to limit the selection of certain times. You can specify a set of times to disable, preventing users from choosing those times. This feature is helpful for managing availability, such as excluding specific hours of the day.
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfTimePicker x:Name="picker">
+    <picker:SfTimePicker.BlackoutTimes>
+        <x:TimeSpan>12:28:00</x:TimeSpan>
+        <x:TimeSpan>12:26:00</x:TimeSpan>
+        <x:TimeSpan>12:24:00</x:TimeSpan>
+        <x:TimeSpan>12:22:00</x:TimeSpan>
+        <x:TimeSpan>12:37:00</x:TimeSpan>
+        <x:TimeSpan>12:35:00</x:TimeSpan>
+        <x:TimeSpan>12:33:00</x:TimeSpan>
+        <x:TimeSpan>12:32:00</x:TimeSpan>
+    </picker:SfTimePicker.BlackoutTimes>
+</picker:SfTimePicker>
+
+{% endhighlight %}
+{% highlight c# tabtitle="C#" %}
+
+SfTimePicker picker = new SfTimePicker();
+picker.BlackoutTimes.Add(new TimeSpan(12, 28, 0));
+picker.BlackoutTimes.Add(new TimeSpan(12, 26, 0));
+picker.BlackoutTimes.Add(new TimeSpan(12, 24, 0));
+picker.BlackoutTimes.Add(new TimeSpan(12, 22, 0));
+picker.BlackoutTimes.Add(new TimeSpan(12, 37, 0));
+picker.BlackoutTimes.Add(new TimeSpan(12, 35, 0));
+picker.BlackoutTimes.Add(new TimeSpan(12, 33, 0));
+picker.BlackoutTimes.Add(new TimeSpan(12, 32, 0));
+this.Content = picker;
+
+{% endhighlight %}  
+{% endtabs %}
+
+![Blackout times in .NET MAUI Time picker.](images/time-restriction/maui-timepicker-timerestriction-blackouttimes.png)
+
+N> The `Selection View` will not be applicable when setting `Blackout times`.
