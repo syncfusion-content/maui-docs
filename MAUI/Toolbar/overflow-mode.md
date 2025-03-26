@@ -9,11 +9,11 @@ documentation: ug
 
 # Overflow Mode in .NET MAUI Toolbar (SfToolbar)
 
-This section explains the ways about how overflowing items are managed - `Scroll` for continuous navigation, `NavigationButtons` for stepping through items, and `MoreButton` to display excess items in a dropdown.
+This section explains the ways about how overflowing items are managed - [Scroll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarItemOverflowMode.html#Syncfusion_Maui_Toolbar_ToolbarItemOverflowMode_Scroll) for continuous navigation, [NavigationButtons](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarItemOverflowMode.html#Syncfusion_Maui_Toolbar_ToolbarItemOverflowMode_NavigationButtons) for stepping through items, and [MoreButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarItemOverflowMode.html#Syncfusion_Maui_Toolbar_ToolbarItemOverflowMode_MoreButton) to display excess items in a dropdown.
 
 ## Scroll Mode
 
-The Toolbar control enables scrolling when its items extend beyond the view. By default, the `OverflowMode` property is set to `Scroll`.
+The Toolbar control enables scrolling when its items extend beyond the view. By default, the [OverflowMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_OverflowMode) property is set to [Scroll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarItemOverflowMode.html#Syncfusion_Maui_Toolbar_ToolbarItemOverflowMode_Scroll).
 
 {% tabs %}
 
@@ -159,7 +159,7 @@ namespace ToolbarSample
 
 ## Navigation Buttons
 
-The Toolbar control provides support for navigating buttons to display the overflow items by setting the `OverflowMode` property to `NavigationButtons`.
+The Toolbar control provides support for navigating buttons to display the overflow items by setting the [OverflowMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_OverflowMode) property to [NavigationButtons](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarItemOverflowMode.html#Syncfusion_Maui_Toolbar_ToolbarItemOverflowMode_NavigationButtons).
 
 {% tabs %}
 
@@ -305,7 +305,7 @@ namespace ToolbarSample
 
 ## More Items Menu
 
-The Toolbar control displays additional items in a dropdown menu when they extend beyond the view. This can be enabled by setting the `OverflowMode` property to `MoreButton`.
+The Toolbar control displays additional items in a dropdown menu when they extend beyond the view. This can be enabled by setting the [OverflowMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_OverflowMode) property to [MoreButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarItemOverflowMode.html#Syncfusion_Maui_Toolbar_ToolbarItemOverflowMode_MoreButton).
 
 The following code sample demonstrates how to display more items in the overflow menu.
 
@@ -453,7 +453,7 @@ namespace ToolbarSample
 
 ### More Items Menu Position
 
-The Toolbar control provides support for changing the position of the More button using the `MoreItemsRelativePosition` property. The default value of this property is `Auto`. You can change the position of the More button by setting the `MoreItemsRelativePosition` property to `Left`, `Right`, `Top`, or `Bottom`.
+The Toolbar control provides support for changing the position of the More button using the [MoreItemsRelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreItemsRelativePosition) property. The default value of this property is [Auto](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarRelativePosition.html#Syncfusion_Maui_Toolbar_ToolbarRelativePosition_Auto). You can change the position of the More button by setting the [MoreItemsRelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreItemsRelativePosition) property to [Left](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarRelativePosition.html#Syncfusion_Maui_Toolbar_ToolbarRelativePosition_Left), [Right](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarRelativePosition.html#Syncfusion_Maui_Toolbar_ToolbarRelativePosition_Right), [Top](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarRelativePosition.html#Syncfusion_Maui_Toolbar_ToolbarRelativePosition_Top), or [Bottom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarRelativePosition.html#Syncfusion_Maui_Toolbar_ToolbarRelativePosition_Bottom).
 
 {% tabs %}
 
@@ -602,7 +602,7 @@ namespace ToolbarSample
 
 ### Cancel the default item dropdown view
 
-The In-build more items drop down menu view can be cancelled with the help of `Cancel` parameter in the `MoreButtonTapped` event.
+The In-build more items drop down menu view can be cancelled with the help of `Cancel` parameter in the [MoreButtonTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarMoreButtonTappedEventArgs.html) event.
 
 {% tabs %}
 
