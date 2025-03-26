@@ -1126,7 +1126,7 @@ this.Scheduler.SelectedAppointmentBackground = Brush.Orange;
 
 ## Add border for all scheduler appointments
 
-You can add a border to all scheduler appointments by setting the `StrokeThickness` and `Stroke` properties in the `AppointmentBorderStyle` property. Additionally, you can customize the corner radius of the border using the `CornerRadius` property. By default, the `StrokeThickness` is not set.
+You can add a border to all scheduler appointments by setting the [StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentBorderStyle.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentBorderStyle_StrokeThickness) and [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentBorderStyle.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentBorderStyle_Stroke) properties in the [AppointmentBorderStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentBorderStyle.html) property. Additionally, you can customize the corner radius of the border using the [CornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentBorderStyle.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentBorderStyle_CornerRadius) property. By default, the [StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentBorderStyle.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentBorderStyle_StrokeThickness) is not set.
 
 N> Appointment border styles are not applicable for the month view indicator mode and the `AppointmentTemplate`.
 
@@ -1162,7 +1162,7 @@ this.Scheduler.AppointmentBorderStyle  = appointmentBorderStyle;
 
 ### Apply a stroke to the border of a specific appointments
 
-The appointment border stroke can be customized using the `Stroke` property in SchedulerAppointment. Alternatively, for custom-mapped appointments, you can use the `StrokeMapping` property.
+The appointment border stroke can be customized using the [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html#Syncfusion_Maui_Scheduler_SchedulerAppointment_Stroke) property in SchedulerAppointment. Alternatively, for custom-mapped appointments, you can use the [StrokeMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html#Syncfusion_Maui_Scheduler_SchedulerAppointmentMapping_StrokeMapping) property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}

@@ -13,7 +13,7 @@ This section explains the ways about support for customization in syncfusion .NE
 
 ## Toolbar Item Customization
 
-The toolbar control supports customization of toolbar items using properties `IsEnabled`,`TextStyle` and `Color`.
+The toolbar control supports customization of toolbar items using properties [IsEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_IsEnabled),[TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_TextStyle) and `Color`.
 
 * **IsEnabled** : This property is used to enable or disable the toolbar item.
 * **TextStyle** : This property is used to customize the text style of the toolbar item.
@@ -212,7 +212,7 @@ The following code sample demonstrates how to create a toolbar control with tool
 
 ## Separator Item Customization
 
-The toolbar control supports customization of separator item using properties `Stroke` and `StrokeThickness`.
+The toolbar control supports customization of separator item using properties [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SeparatorToolbarItem.html#Syncfusion_Maui_Toolbar_SeparatorToolbarItem_Stroke) and [StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SeparatorToolbarItem.html#Syncfusion_Maui_Toolbar_SeparatorToolbarItem_StrokeThickness).
 
 
 * **Stroke** : This property is used to customize the stroke color of the separator item.
@@ -357,7 +357,7 @@ public partial class MainPage : ContentPage
 
 ## Navigation Button Customization
 
-The toolbar control supports customization of navigation buttons using properties `ForwardButtonIconColor`, `BackwardButtonIconColor`, `ForwardButtonBackground`, `BackwardButtonBackground`.
+The toolbar control supports customization of navigation buttons using properties [ForwardButtonIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ForwardButtonIconColor), [BackwardButtonIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_BackwardButtonIconColor), [ForwardButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ForwardButtonBackground), [BackwardButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_BackwardButtonBackground).
 
 * **ForwardButtonIconColor** : This property is used to customize the icon color of the forward button.
 * **BackwardButtonIconColor** : This property is used to customize the icon color of the backward button.
@@ -509,7 +509,7 @@ The following code sample demonstrates how to create a toolbar control with navi
 
 ## More Button Customization
 
-The toolbar control supports customization of more button using properties `MoreButtonIconColor`, `MoreButtonBackground`.
+The toolbar control supports customization of more button using properties [MoreButtonIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreButtonIconColor), [MoreButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreButtonBackground).
 
 * **MoreButtonIconColor** : This property is used to customize the icon color of the more button.
 * **MoreButtonBackground** : This property is used to customize the background color of the more button.
