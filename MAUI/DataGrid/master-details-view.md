@@ -13,7 +13,7 @@ The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Sf
 
 ## Key Features
    - Display hierarchical data in a structured format using nested tables.
-   - Expand or collapse [DetailsViewDataGrid]() using an expander in a row or programmatically.
+   - Expand or collapse [DetailsViewDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DetailsViewDataGrid.html) using an expander in a row or programmatically.
    - Support for unlimited nesting levels with relational data.
 
 <img alt="Master-Details-View" src="Images\master-details-view\maui-datagrid-detailsview-main.png" width="604"/>    
@@ -133,7 +133,7 @@ public class ViewModel
 
 ### 2. Defining Relations
 #### Auto-Generating Relations
-[SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) automatically generates master-details relationships for properties of type `IEnumerable` in the underlying data object. This can be enabled by setting the [SfDataGrid.AutoGenerateRelations]() property to `true`.
+[SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) automatically generates master-details relationships for properties of type `IEnumerable` in the underlying data object. This can be enabled by setting the [SfDataGrid.AutoGenerateRelations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGenerateRelations) property to `true`.
 
 Bind the collection created in the previous step to [SfDataGrid.ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSourceProperty) and set the SfDataGrid.AutoGenerateRelations to true.
 
@@ -148,19 +148,19 @@ dataGrid.AutoGenerateRelations = True;
 {% endhighlight %}
 {% endtabs %}
 
-When relations are auto-generated, you can handle the [SfDataGrid.AutoGeneratingRelations]() event to modify or cancel [DataGridViewDefinition]() before adding it to [SfDataGrid.DetailsViewDefinition]().
+When relations are auto-generated, you can handle the [SfDataGrid.AutoGeneratingRelations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGenerateRelations) event to modify or cancel [DataGridViewDefinition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridViewDefinition.html) before adding it to [SfDataGrid.DetailsViewDefinition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DetailsViewDefinition.html).
 
 Here, two relations are created from `Sales` and `Orders` collection property.
 
 <img alt="auto-relation" src="Images\master-details-view\maui-datagrid-auto-generate-relation.png" width="604"/>  
 
 #### Manually Defining Relations
-we can manually define the `Master-Details View` relation in `SfDataGrid` using `DetailsViewDefinition` when `AutoGenerateRelations` is set to false.
+we can manually define the `Master-Details View` relation in `SfDataGrid` using [DetailsViewDefinition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DetailsViewDefinition.html) when [AutoGenerateRelations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGenerateRelations) is set to false.
 
  **To establish the relation:**
-1. Create a [DataGridViewDefinition]().
-2. Set the [RelationalColumn]() property to the name of the `IEnumerable` type property in the data object.
-3. Add the `DataGridViewDefinition` to SfDataGrid.DetailsViewDefinition.
+1. Create a [DataGridViewDefinition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridViewDefinition.html).
+2. Set the [RelationalColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ViewDefinition.html#Syncfusion_Maui_DataGrid_ViewDefinition_RelationalColumn) property to the name of the `IEnumerable` type property in the data object.
+3. Add the [DataGridViewDefinition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridViewDefinition.html) to SfDataGrid.DetailsViewDefinition.
 This approach provides greater control over the Master-Details structure in the data grid.
 
 {% tabs %}
@@ -277,7 +277,7 @@ To establish a `Master-Details` relationship in [SfDataGrid](https://help.syncfu
 1. Create a `ViewModel` class with an Orders property of type `DataTable`.
 2. Define two `DataTable` objects (parent and child).
 3. Add them to a `DataSet` and establish a relation using the Order ID column.
-4. Bind the parent table to `SfDataGrid.ItemsSource`, and enable `AutoGenerateRelations`.
+4. Bind the parent table to `SfDataGrid.ItemsSource`, and enable [AutoGenerateRelations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGenerateRelations).
 
 {% tabs %}
 {% highlight c# %}
@@ -359,7 +359,7 @@ public class DataViewModel
 
 ### 2. Defining Relations
 #### Auto-Generating Relations
-In [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html), we can automatically generate `Master-Details` relationships using `AutoGenerateRelations`. This allows `SfDataGrid` to detect and create hierarchical views based on `DataSet` relationships.
+In [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html), we can automatically generate `Master-Details` relationships using [AutoGenerateRelations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGenerateRelations). This allows `SfDataGrid` to detect and create hierarchical views based on `DataSet` relationships.
 
 {% tabs %}
 {% highlight xaml %}
@@ -378,10 +378,10 @@ Here, `Master-Details View` relation is auto generated based on the `Orders` rel
 <img alt="auto-relation-DataTable" src="Images\master-details-view\Master-Details-View-DataTable.png" width="604" /> 
 
 ## Defining columns for DetailsViewDataGrid
-The [ViewDefinition.DataGrid’s]() columns can be generated either automatically or manually like parent `SfDataGrid`. You can refer here to know more about columns.
+The [ViewDefinition.DataGrid’s](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ViewDefinition.html) columns can be generated either automatically or manually like parent `SfDataGrid`. You can refer here to know more about columns.
 
 ### Auto-generating columns
-We can automatically generate columns for [ViewDefinition.DataGrid]() by setting the AutoGenerateColumnsMode to any value other than None.
+We can automatically generate columns for [ViewDefinition.DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ViewDefinition.html) by setting the AutoGenerateColumnsMode to any value other than None.
 
 {% tabs %}
 {% highlight xaml %}
@@ -401,7 +401,7 @@ We can automatically generate columns for [ViewDefinition.DataGrid]() by setting
 {% endtabs %}
 
 ### Manually defining columns
-We can directly define the columns to [ViewDefinition.DataGrid]() when [SfDataGrid.AutoGenerateColumnsMode]() property to `None`. When relation is manually defined, you can define the columns directly to `ViewDefinition.DataGrid` in XAML or C#, by adding desired column to the [SfDataGrid.Columns]() collection.
+We can directly define the columns to [ViewDefinition.DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ViewDefinition.html) when [SfDataGrid.AutoGenerateColumnsMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.AutoGenerateColumnsMode.html) property to `None`. When relation is manually defined, you can define the columns directly to `ViewDefinition.DataGrid` in XAML or C#, by adding desired column to the [SfDataGrid.Columns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ColumnCollection.html) collection.
 
 {% tabs %}
 {% highlight xaml %}
@@ -425,7 +425,7 @@ We can directly define the columns to [ViewDefinition.DataGrid]() when [SfDataGr
 {% endhighlight %}
 {% endtabs %}
 
-When relation is auto generated, you can define the [ViewDefinition.DataGrid’s]() columns manually through the [SfDataGrid.AutoGeneratingRelations]() event handler.
+When relation is auto generated, you can define the [ViewDefinition.DataGrid’s](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ViewDefinition.html) columns manually through the [SfDataGrid.AutoGeneratingRelations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGenerateRelations) event handler.
 {% tabs %}
 {% highlight c# %}
 this.dataGrid.AutoGeneratingRelations += DataGrid_AutoGeneratingRelations; 
@@ -440,17 +440,17 @@ void DataGrid_AutoGeneratingRelations(object? sender, DataGridAutoGeneratingRela
 {% endtabs %}
 
 ## Selection
-[DetailsViewDataGrid]() allows you to select rows or cells based on the [SelectionUnit]() property in its parent DataGrid.
+[DetailsViewDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DetailsViewDataGrid.html) allows you to select rows or cells based on the [SelectionUnit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionUnit.html) property in its parent DataGrid.
 
 ### Getting the selected DetailsViewDataGrid
-We can get the currently selected [DetailsViewDataGrid]() by using the [SelectedDetailsViewDataGrid]() property of parent DataGrid.
+We can get the currently selected [DetailsViewDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DetailsViewDataGrid.html) by using the [SelectedDetailsViewDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectedDetailsViewDataGrid) property of parent DataGrid.
 {% tabs %}
 {% highlight c# %}
 var detailsViewDataGrid = this.dataGrid.SelectedDetailsViewDataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-For accessing nested level [SelectedDetailsViewGrid](),
+For accessing nested level [SelectedDetailsViewGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectedDetailsViewDataGrid),
 
 {% tabs %}
 {% highlight c# %}
@@ -459,7 +459,7 @@ var detailsViewDataGrid = this.dataGrid.SelectedDetailsViewDataGrid.SelectedDeta
 {% endtabs %}
 
 ### Getting the DetailsViewDataGrid
-We can get the [DetailsViewDataGrid]() based on row index through [GetDetailsViewDataGrid]() helper method.
+We can get the [DetailsViewDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DetailsViewDataGrid.html) based on row index through `GetDetailsViewDataGrid` helper method.
 
 {% tabs %}
 {% highlight c# %}
@@ -468,7 +468,7 @@ var detailsViewDataGrid = this.dataGrid.GetDetailsViewGrid(2);
 {% endtabs %}
 
 ### Getting the SelectedRow, SelectedRows and SelectedIndex of DetailsViewDataGrid
-We can access the selected record or records and selected record index of `DetailsViewDataGrid` by using [SelectedRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectedRow), [SelectedRows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectedRows), [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectedIndex) properties directly.
+We can access the selected record or records and selected record index of [DetailsViewDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DetailsViewDataGrid.html) by using [SelectedRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectedRow), [SelectedRows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectedRows), [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectedIndex) properties directly.
 
 {% tabs %}
 {% highlight c# %}
@@ -479,7 +479,7 @@ var selectedRows = detailsViewDataGrid.SelectedRows;
 {% endhighlight %}
 {% endtabs %}
 
-We can access `DetailsViewDataGrid's` [SelectedRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectedRow), [SelectedRows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectedRows), [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectedIndex) properties by using parent dataGrid’s `SelectedDetailsViewDataGrid` property also.
+We can access `DetailsViewDataGrid's` [SelectedRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectedRow), [SelectedRows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectedRows), [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectedIndex) properties by using parent dataGrid’s [SelectedDetailsViewDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectedDetailsViewDataGrid) property also.
 
 {% tabs %}
 {% highlight c# %}
@@ -491,9 +491,9 @@ var selectedRows = this.dataGrid.SelectedDetailsViewDataGrid.SelectedRows;
 
 
 ## Appearance customization
-The visual appearance of `DetailsViewDataGrid` can be customized like parent DataGrid through [DetailsViewDefaultStyle]() in `SfDataGrid`.
+The visual appearance of [DetailsViewDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DetailsViewDataGrid.html) can be customized like parent DataGrid through [DetailsViewDefaultStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DetailsViewDefaultStyle) in `SfDataGrid`.
 
-We can customize the header appearance of `DetailsViewDataGrid` , through `HeaderRowBackground` property of [DetailsViewDefaultStyle]().
+We can customize the header appearance of `DetailsViewDataGrid` , through `HeaderRowBackground` property of [DetailsViewDefaultStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DetailsViewDefaultStyle).
 
 {% tabs %}
 {% highlight xaml %}
@@ -522,7 +522,7 @@ We can customize the header appearance of `DetailsViewDataGrid` , through `Heade
 <img alt="auto-relation-headerstyle" src="Images\master-details-view\maui-datagrid-header-color.png" width="604" /> 
 
 ### Hiding header row of Master-Details View
-We can hide the header row of `DetailsViewDataGrid` by setting [HeaderRowHeight]() property.
+We can hide the header row of `DetailsViewDataGrid` by setting [HeaderRowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_HeaderRowHeight) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -549,7 +549,7 @@ FirstLevelNestedGrid.HeaderRowHeight = 0;
 
 
 ### Customizing padding of the DetailsViewDataGrid
-The padding of `DetailsViewDataGrid` can be customized through the [DetailsViewPadding]() property and it will be set to its corresponding parent `SfDataGrid`.
+The padding of `DetailsViewDataGrid` can be customized through the [DetailsViewPadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DetailsViewPadding) property and it will be set to its corresponding parent `SfDataGrid`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -567,7 +567,7 @@ this.dataGrid.DetailsViewPadding = new Thickness(15);
 <img alt="auto-relation-padding" src="Images\master-details-view\maui-datagrid-detailsview-padding.png" width="604" /> 
 
 ### Customize ExpanderColumn width
-We can customize the width of ExpanderColumn in [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.html) by using [ExpanderColumnWidth]() property as like below.
+We can customize the width of ExpanderColumn in [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.html) by using [ExpanderColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ExpanderColumnWidth) property as like below.
 
 {% tabs %}
 {% highlight xaml %}
@@ -584,10 +584,10 @@ this.dataGrid.ExpanderColumnWidth = 50;
 <img alt="auto-relation-Expander-column-Wdith" src="Images\master-details-view\maui-datagrid-expander-column-width.png" width="604"/> 
 
 ## Expanding and collapsing the DetailsViewDataGrid programmatically
-[SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.html) allows you to expand or collapse the [DetailsViewDataGrid]() programmatically in different ways.
+[SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.html) allows you to expand or collapse the [DetailsViewDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DetailsViewDataGrid.html) programmatically in different ways.
 
 Expand or collapse all the DetailsViewDataGrid
-We can expand or collapse all the `DetailsViewDataGrid` programmatically by using [ExpandAllDetailsView]() and [CollapseAllDetailsView]() methods.
+We can expand or collapse all the `DetailsViewDataGrid` programmatically by using [ExpandAllDetailsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ExpandAllDetailsView) and [CollapseAllDetailsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CollapseAllDetailsView) methods.
 
 {% tabs %}
 {% highlight c# %}
@@ -597,7 +597,7 @@ this.dataGrid.CollapseAllDetailsView();
 {% endtabs %}
 
 ### Expand DetailsViewDataGrid based on level
-We can expand all the `DetailsViewDataGrid` programmatically based on level using [ExpandAllDetailsView]() method.
+We can expand all the `DetailsViewDataGrid` programmatically based on level using [ExpandAllDetailsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ExpandAllDetailsView_System_Int32_) method.
 
 {% tabs %}
 {% highlight c# %}
@@ -608,7 +608,7 @@ this.dataGrid.ExpandAllDetailsView(2);
 Here, all the DetailsViewDataGrids up to second level will be expanded.
 
 ### Expand or collapse Details View based on record index
-We can expand or collapse `DetailsViewDataGrid` based on the record index by using [ExpandDetailsViewAt]() and [CollapseDetailsViewAt]() methods.
+We can expand or collapse `DetailsViewDataGrid` based on the record index by using [ExpandDetailsViewAt](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ExpandDetailsViewAt_System_Int32_) and [CollapseDetailsViewAt](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CollapseDetailsViewAt_System_Int32_) methods.
 
 {% tabs %}
 {% highlight c# %}
@@ -620,7 +620,7 @@ this.dataGrid.CollapseDetailsViewAt(0);
 ## Handling Events
 
 ### DetailsViewLoading
-The [DetailsViewLoading]() event is triggered when the `DetailsViewDataGrid` is loaded into the view.
+The [DetailsViewLoading](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDetailsViewLoadingEventArgs.html) event is triggered when the `DetailsViewDataGrid` is loaded into the view.
 
 {% tabs %}
 {% highlight c# %}
@@ -635,7 +635,7 @@ private void DataGrid_DetailsViewLoading(object? sender, DataGridDetailsViewLoad
 
 
 ### DetailsViewUnloading
-The [DetailsViewUnLoading]() event occurs when the `DetailsViewDataGrid` is removed from the view. 
+The [DetailsViewUnLoading](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDetailsViewUnloadingEventArgs.html) event occurs when the `DetailsViewDataGrid` is removed from the view. 
 
 {% tabs %}
 {% highlight c# %}
@@ -649,7 +649,7 @@ The [DetailsViewUnLoading]() event occurs when the `DetailsViewDataGrid` is remo
 {% endtabs %}
 
 ### DetailsViewExpanding
-The [DetailsViewExpanding]() event is raised when the `DetailsViewDataGrid` is being expanded by using an expander.
+The [DetailsViewExpanding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDetailsViewExpandingEventArgs.html) event is raised when the `DetailsViewDataGrid` is being expanded by using an expander.
 
 {% tabs %}
 {% highlight c# %}
@@ -664,7 +664,7 @@ private void DataGrid_DetailsViewExpanding(object? sender, DataGridDetailsViewEx
 
 
 ### DetailsViewExpanded
-The [DetailsViewExpanded]() event is raised after the `DetailsViewDataGrid` is expanded by using an expander.
+The [DetailsViewExpanded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDetailsViewExpandedEventArgs.html) event is raised after the `DetailsViewDataGrid` is expanded by using an expander.
 
 {% tabs %}
 {% highlight c# %}
@@ -678,7 +678,7 @@ private void DataGrid_DetailsViewExpanded(object? sender, DataGridDetailsViewExp
 {% endtabs %}
 
 ### DetailsViewCollapsing
-The [DetailsViewCollapsing]() event is raised when the `DetailsViewDataGrid` is being collapsed from the view by using an expander.
+The [DetailsViewCollapsing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDetailsViewCollapsingEventArgs.html) event is raised when the `DetailsViewDataGrid` is being collapsed from the view by using an expander.
 
 {% tabs %}
 {% highlight c# %}
@@ -692,7 +692,7 @@ this.dataGrid.DetailsViewCollapsing += DataGrid_DetailsViewCollapsing;
 {% endtabs %}
 
 ### DetailsViewCollapsed
-The [DetailsViewCollapsed]() event is raised after the `DetailsViewDataGrid` is collapsed by using an expander.
+The [DetailsViewCollapsed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDetailsViewCollapsedEventArgs.html) event is raised after the `DetailsViewDataGrid` is collapsed by using an expander.
 
 {% tabs %}
 {% highlight c# %}
@@ -706,7 +706,7 @@ private void DataGrid_DetailsViewCollapsed(object? sender, DataGridDetailsViewCo
 {% endtabs %}
 
 ### Cancel expanding or collapsing operations through events
-We can cancel expanding operation while expanding the `DetailsViewDataGrid` by using [GridDetailsViewExpandingEventArgs.Cancel]() property in the [DetailsViewExpanding]() event handler.
+We can cancel expanding operation while expanding the `DetailsViewDataGrid` by using [GridDetailsViewExpandingEventArgs.Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDetailsViewExpandingEventArgs.html) property in the [DetailsViewExpanding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDetailsViewExpandingEventArgs.html) event handler.
 
 {% tabs %}
 {% highlight c# %}
@@ -720,7 +720,7 @@ private void DataGrid_DetailsViewExpanding(object? sender, DataGridDetailsViewEx
 {% endhighlight %}
 {% endtabs %}
 
-Similarly, the collapsing operation can be canceled through the [DataGridDetailsViewCollapsingEventArgs.Cancel]() property in the [DetailsViewCollapsing]() event handler.
+Similarly, the collapsing operation can be canceled through the [DataGridDetailsViewCollapsingEventArgs.Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDetailsViewCollapsingEventArgs.html) property in the [DetailsViewCollapsing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDetailsViewCollapsingEventArgs.html) event handler.
 
 {% tabs %}
 {% highlight c# %}
@@ -737,7 +737,7 @@ private void DataGrid_DetailsViewCollapsing(object? sender, DataGridDetailsViewC
 ## Master-Details View Limitations
 The `Master-Details View` in [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.html) has certain limitations that should be considered while using this feature:
 
- - The Master-Details View is released with basic functionalities. Currently, both the `SfDataGrid` and `DetailsViewDataGrid` do not support all existing features of `SfDataGrid` when the Master-Details View is enabled. Full support is planned for the 2025 Volume 2 Main Release.
+ - The Master-Details View is released with basic functionalities. Currently, both the `SfDataGrid` and [DetailsViewDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DetailsViewDataGrid.html) do not support all existing features of `SfDataGrid` when the Master-Details View is enabled. Full support is planned for the 2025 Volume 2 Main Release.
  - Virtualization is not supported for `DetailsViewDataGrid` on Android, iOS, and Mac platforms. As a result, there may be delays in loading the details view data grid due to the initial loading of all rows and columns.
  - The `Freeze Panes` feature is not applicable to the Master-Details View.
  - Properties such as `SelectionMode`, `NavigationMode`, and `DetailsViewPadding` must have identical values in both `SfDataGrid` and `DetailsViewDataGrid`.
