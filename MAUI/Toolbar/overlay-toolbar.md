@@ -9,11 +9,11 @@ documentation: ug
 
 # Overlay Toolbar in .NET MAUI Toolbar (SfToolbar)
 
-The toolbar control supports displaying an overlay toolbar in the view. You can add the `SfOverlayToolbar` to the `OverlayToolbar` property of `SfToolbarItem`. The `SfOverlayToolbar` includes a built-in back button, which can be used to close the overlay toolbar.
+The toolbar control supports displaying an overlay toolbar in the view. You can add the [SfOverlayToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html) to the [OverlayToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_OverlayToolbar) property of [SfToolbarItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html). The [SfOverlayToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html) includes a built-in back button, which can be used to close the overlay toolbar.
 
 ## How to display the overlay toolbar
 
-You can retrieve the overlay toolbar of a toolbar item and add it to the view using the `Tapped` event in the `SfToolbar` control. The following code sample demonstrates how to add an overlay toolbar to the view.
+You can retrieve the overlay toolbar of a toolbar item and add it to the view using the [Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarTappedEventArgs.html) event in the [SfToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html) control. The following code sample demonstrates how to add an overlay toolbar to the view.
 
 {% tabs %}
 

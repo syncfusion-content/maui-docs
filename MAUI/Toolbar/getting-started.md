@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Toolbar
 
-This section provides a quick overview of how to get started with the `.NET MAUI SfToolbar` for .NET MAUI and a walk-through to configure the .NET MAUI Toolbar in a real-time scenario. Follow the steps below to add .NET MAUI Toolbar control to your project.
+This section provides a quick overview of how to get started with the [.NET MAUI SfToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html) for .NET MAUI and a walk-through to configure the .NET MAUI Toolbar in a real-time scenario. Follow the steps below to add .NET MAUI Toolbar control to your project.
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -29,7 +29,7 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Toolbar NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for `Syncfusion.Maui.Toolbar` and install the latest version.
+2. Search for [Syncfusion.Maui.Toolbar](https://www.nuget.org/packages/Syncfusion.Maui.Toolbar/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 ## Step 3: Register the handler
@@ -65,7 +65,7 @@ Before proceeding, ensure the following are set up:
 ## Step 4: Add a Toolbar
 
 1. To initialize the control, import the Toolbar namespace into your code.
-2. Initialize `Toolbar`
+2. Initialize [Toolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html)
 
 {% tabs %}
 {% highlight xaml %}
@@ -120,7 +120,7 @@ Before proceeding, ensure the following are set up:
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you're in the project root directory where your .csproj file is located.
-3. Run the command `dotnet add package Syncfusion.Maui.Toolbar` to install the Syncfusion<sup>®</sup> .NET MAUI Toolbar package.
+3. Run the command dotnet add package [Syncfusion.Maui.Toolbar](https://www.nuget.org/packages/Syncfusion.Maui.Toolbar/) to install the Syncfusion<sup>®</sup> .NET MAUI Toolbar package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
 ## Step 3: Register the handler
@@ -210,7 +210,7 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Toolbar NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for `Syncfusion.Maui.Toolbar` and install the latest version.
+2. Search for [Syncfusion.Maui.Toolbar]((https://www.nuget.org/packages/Syncfusion.Maui.Toolbar/)) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
 ## Step 3: Register the handler
@@ -246,7 +246,7 @@ Before proceeding, ensure the following are set up:
 ## Step 4: Add .NET MAUI Toolbar control
 
 1. To initialize the control, import the `Syncfusion.Maui.Toolbar` namespace into your code.
-2. Initialize `SfToolbar`
+2. Initialize [SfToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html)
 {% tabs %}
 {% highlight XAML hl_lines="3 5" %}
 
@@ -288,7 +288,7 @@ public partial class MainPage : ContentPage
 
 ## Adding Toolbar items
 
-You can use `Items` property of `SfToolbar` to populate the toolbar items.
+You can use [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Items) property of [SfToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html) to populate the toolbar items.
  
 {% tabs %}
 
