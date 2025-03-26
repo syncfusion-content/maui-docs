@@ -83,7 +83,7 @@ private void OnToolbarItemTouchInteraction(object? sender, ToolbarItemTouchInter
 
 {% endtabs %}
 
-## ItemLongPressed 
+## Item Long Pressed 
 
 An `ItemLongPressed` event occurs when the toolbar item is long pressed.
 
@@ -117,7 +117,7 @@ private void OnToolbarItemLongPressed(object? sender, ToolbarItemLongPressedEven
 
 {% endtabs %}
 
-## MoreItemsChanged 
+## More Items Changed 
 
 An `MoreItemsChanged` event invokes on more items changed.
 
@@ -151,7 +151,7 @@ private void OnMoreItemsChanged(object? sender, ToolbarMoreItemsChangedEventArgs
 
 {% endtabs %}
 
-## MoreButtonTapped 
+## More Button Tapped 
 
 An `MoreButtonTapped` event invokes on `MoreButton` tapped.
 
@@ -189,7 +189,7 @@ private void OnMoreButtonTapped(object? sender, ToolbarMoreButtonTappedEventArgs
 
 Toolbar commands allows to map `Tapped` event, `ItemTouchInteraction` event, `ItemLongPressed` event, `MoreItemsChanged` event and `MoreButtonTapped` event to `Commands` which supports the MVVM (Model-View-ViewModel) pattern.
 
-### TappedCommand
+### Tapped Command
 
 The `TappedCommand` will be triggered when you tap the toolbar item and pass the `ToolbarItemTappedEventArgs` as parameter.
 
@@ -267,7 +267,7 @@ public class ToolbarInteractionViewModel
 
 {% endtabs %}
 
-### ItemTouchInteractionCommand
+### Item Touch Interaction Command
 
 The `ItemTouchInteractionCommand` will be triggered when you touch the toolbar item and pass the `ToolbarItemTouchInteractionEventArgs` as parameter.
 
@@ -345,7 +345,7 @@ public class ToolbarInteractionViewModel
 
 {% endtabs %}
 
-### ItemLongPressedCommand
+### Item Long Pressed Command
 
 The `ItemLongPressedCommand` will be triggered when you long press the toolbar item and pass the `ToolbarItemLongPressedEventArgs` as parameter.
 
@@ -421,7 +421,7 @@ public class ToolbarInteractionViewModel
 
 {% endtabs %}
 
-### MoreButtonTappedCommand
+### More Button Tapped Command
 
 The `MoreButtonTappedCommand` will be triggered when you tap the more button and pass the `ToolbarMoreButtonTappedEventArgs` as parameter.
 
@@ -521,7 +521,7 @@ public class ToolbarInteractionViewModel
 
 {% endtabs %}
 
-### MoreItemsChangedCommand
+### More Items Changed Command
 
 The `MoreItemsChangedCommand` will be triggered when the more items are changed and pass the `ToolbarMoreItemsChangedEventArgs` as parameter.
 
