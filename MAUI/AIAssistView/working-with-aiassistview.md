@@ -329,7 +329,7 @@ public partial class MainPage : ContentPage
 
 ## Send Button Customization
 
-The `SfAIAssistView` control allows you to fully customize the send button's appearance using the `RequestButtonTemplate` property. This property lets you define a custom layout and style for the send button.
+The `SfAIAssistView` control allows you to fully customize the send button's appearance using the [RequestButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestButtonTemplate) property. This property lets you define a custom layout and style for the send button.
 
 {% tabs %}
 {% highlight xaml hl_lines="22" %}
@@ -403,7 +403,7 @@ public partial class MainPage : ContentPage
 
 ## Show ResponseLoader View
 
-By Default, the response loader view will be enabled, and the default shimmer view will be displayed when the request is added. To disable it, set the `ShowResponseLoader` property to `false`.
+By Default, the response loader view will be enabled, and the default shimmer view will be displayed when the request is added. To disable it, set the [ShowResponseLoader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ShowResponseLoader) property to `false`.
 
 {% tabs %}
 {% highlight xaml hl_lines="8" %}
@@ -442,11 +442,11 @@ public partial class MainPage : ContentPage
 
 The `SfAIAssistView` facilitates the customization of both request and response item templates according to specific requirements. This feature enhances flexibility and provides a higher degree of control over the display of items.
 
-By utilizing the template selector, distinct templates can be assigned to all `AssistItems` or to a particular item, allowing for the independent customization of both request and response items. This capability is particularly beneficial when custom item types require different visual representations, offering precise control over the layout and presentation within the assist view.
+By utilizing the template selector, distinct templates can be assigned to all [AssistItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html) or to a particular item, allowing for the independent customization of both request and response items. This capability is particularly beneficial when custom item types require different visual representations, offering precise control over the layout and presentation within the assist view.
 
 ### Request Item Template
 
-A template can be used to present the data in a way that makes sense for the application by using different controls. `SfAIAssistView` allows customizing the appearance of the Request view by setting the `RequestItemTemplate` property.
+A template can be used to present the data in a way that makes sense for the application by using different controls. `SfAIAssistView` allows customizing the appearance of the Request view by setting the [RequestItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestItemTemplate) property.
 
 #### Data Model
 
@@ -559,7 +559,7 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 
 #### Data Template Selector
 
-Create a custom class that inherits from `RequestItemTemplateSelector`, and override the `OnSelectTemplate` method to return the `DataTemplate` for that item. At runtime, the `SfAIAssistView` invokes the `OnSelectTemplate` method for each item and passes the data object as parameter.
+Create a custom class that inherits from [RequestItemTemplateSelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.RequestItemTemplateSelector.html), and override the [OnSelectTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.RequestItemTemplateSelector.html#Syncfusion_Maui_AIAssistView_RequestItemTemplateSelector_OnSelectTemplate_System_Object_Microsoft_Maui_Controls_BindableObject_) method to return the `DataTemplate` for that item. At runtime, the `SfAIAssistView` invokes the [OnSelectTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.RequestItemTemplateSelector.html#Syncfusion_Maui_AIAssistView_RequestItemTemplateSelector_OnSelectTemplate_System_Object_Microsoft_Maui_Controls_BindableObject_) method for each item and passes the data object as parameter.
 
 {% tabs %}
 {% highlight c# tabtitle="TemplateSelector.cs" %}
@@ -643,7 +643,7 @@ public partial class MainPage : ContentPage
 
 ### Response Item Template
 
-A template can be used to present the data in a way that makes sense for the application by using different controls. `SfAIAssistView` allows customizing the appearance of the Response view by setting the `ResponseItemTemplate` property.
+A template can be used to present the data in a way that makes sense for the application by using different controls. `SfAIAssistView` allows customizing the appearance of the Response view by setting the [ResponseItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ResponseItemTemplate) property.
 
 #### View Model
 
@@ -732,7 +732,7 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 
 #### Data Template Selector
 
-Create a custom class that inherits from `ResponseItemTemplateSelector`, and override the `OnSelectTemplate` method to return the `DataTemplate` for that item. At runtime, the `SfAIAssistView` invokes the `OnSelectTemplate` method for each item and passes the data object as parameter.
+Create a custom class that inherits from [ResponseItemTemplateSelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ResponseItemTemplateSelector.html), and override the [OnSelectTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ResponseItemTemplateSelector.html#Syncfusion_Maui_AIAssistView_ResponseItemTemplateSelector_OnSelectTemplate_System_Object_Microsoft_Maui_Controls_BindableObject_) method to return the `DataTemplate` for that item. At runtime, the `SfAIAssistView` invokes the [OnSelectTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ResponseItemTemplateSelector.html#Syncfusion_Maui_AIAssistView_ResponseItemTemplateSelector_OnSelectTemplate_System_Object_Microsoft_Maui_Controls_BindableObject_) method for each item and passes the data object as parameter.
 
 {% tabs %}
 {% highlight c# tabtitle="TemplateSelector.cs" %}
@@ -816,7 +816,7 @@ public partial class MainPage : ContentPage
 
 ## Text Selection
 The `SfAIAssistView` allows for selecting specific phrases or the entire response or request text. It enables the platform specific selection functionalities.
-By default, text selection is disabled. To enable it, set the `AllowTextSelection` property to `true`.
+By default, text selection is disabled. To enable it, set the [AllowTextSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_AllowTextSelection) property to `true`.
 
 {% tabs %}
 {% highlight xaml hl_lines="2" %}
