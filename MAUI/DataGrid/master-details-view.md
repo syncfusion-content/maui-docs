@@ -739,5 +739,4 @@ The `Master-Details View` in [SfDataGrid](https://help.syncfusion.com/cr/maui/Sy
 
  - The Master-Details View is released with basic functionalities. Currently, both the `SfDataGrid` and [DetailsViewDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DetailsViewDataGrid.html) do not support all existing features of `SfDataGrid` when the Master-Details View is enabled. Full support is planned for the 2025 Volume 2 Main Release.
  - Virtualization is not supported for `DetailsViewDataGrid` on Android, iOS, and Mac platforms. As a result, there may be delays in loading the details view data grid due to the initial loading of all rows and columns.
- - The `Freeze Panes` feature is not applicable to the Master-Details View.
- - Properties such as `SelectionMode`, `NavigationMode`, and `DetailsViewPadding` must have identical values in both `SfDataGrid` and `DetailsViewDataGrid`.
+ - `DetailsViewPadding` property must have identical values in both `SfDataGrid` and `DetailsViewDataGrid`.
