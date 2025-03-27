@@ -17,7 +17,7 @@ By providing assistance and encouraging the exploration of new ideas, the common
 
 ### Displaying Common Suggestions
 
-Common Suggestions can be populated by creating list of `AssistSuggestion` and assigning it to `SfAIAssistView.Suggestions` API. It will be displayed under the header as part of header view.
+Common Suggestions can be populated by creating list of [AssistSuggestion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistSuggestion.html) and assigning it to [Suggestions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_Suggestions) API. It will be displayed under the header as part of header view.
 
 #### View Model
 Create a simple view model as shown in the following code example, and save it as `GettingStartedViewModel.cs` file.
@@ -109,11 +109,11 @@ public partial class MainPage : ContentPage
 
 ![Suggestions in .NET MAUI AI AssistView](Images/suggestions/maui-aiassistview-suggestions-commonsuggestion.png)
 
-N> To view `Suggestion`, it is mandatory to set `ShowHeader` API to `true`.
+N> To view [Suggestions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_Suggestions), it is mandatory to set [ShowHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ShowHeader) API to `true`.
 
 ### Suggestion Customization
 
-The `SfAIAssistView` control allows you to fully customize the suggestions appearance by using the `SuggestionTemplate` property. This property lets you define a custom layout and style for the suggestion items.
+The `SfAIAssistView` control allows you to fully customize the suggestions appearance by using the [SuggestionTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_SuggestionTemplate) property. This property lets you define a custom layout and style for the suggestion items.
 
 {% tabs %}
 {% highlight xaml hl_lines="13" %}
@@ -385,7 +385,7 @@ The [AssistItemSuggestion.ItemSpacing](https://help.syncfusion.com/cr/maui/Syncf
 {% endtabs %}
 
 ### ResponseItem Suggestion Customization
-The `SfAIAssistView` control allows you to fully customize the appearance of the response suggestion items using the `ResponseSuggestionTemplate` property. This property lets you define a custom layout and style for the suggestion item UI.
+The `SfAIAssistView` control allows you to fully customize the appearance of the response suggestion items using the [ResponseSuggestionTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ResponseSuggestionTemplate) property. This property lets you define a custom layout and style for the suggestion item UI.
 
 {% tabs %}
 {% highlight xaml hl_lines="11" %}
