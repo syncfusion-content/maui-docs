@@ -56,7 +56,7 @@ N> The **Essential<sup>®</sup> UI Kit for .NET MAUI** add-in will be shown when
 
 {% tabcontent Visual Studio Code %}
 
-1.	Open Visual Studio Code.
+1. Open Visual Studio Code.
 
 2.	Navigate to **View > Extensions**, and the Manage Extensions option will appear on the left side of the window. Alternatively, you can access the extensions by pressing **Ctrl+Shift+X**
 
