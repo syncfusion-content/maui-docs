@@ -26,7 +26,7 @@ To add an [AssistItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAss
 3. After setting the properties, add the `AssistItem` instance to the `ViewModel.AssistItems` collection, which binds to the `SfAIAssistView.AssistItems` property.
 
 N> The [IsRequested](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_IsRequested) property is automatically set to `True`, indicating it is a request from the user. If you want to manually add a request item through code, ensure you explicitly set the `IsRequested` property to `True`.
-The [CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_CurrentUser) helps differentiate between the request and response of the `SfAIAssistView`. In any given AI AssistView window, the `CurrentUser` is meant to be the sender (request of the SfAIAssistView).
+Additionally, use the [CurrentUser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_CurrentUser) property to specify the requester in the `SfAIAssistView`.
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
