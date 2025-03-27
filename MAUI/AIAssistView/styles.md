@@ -1077,7 +1077,7 @@ To modify the highlight color of selected text, you need to update the value ass
 
 public MainPage()
 {
-   ...
+    ...
     InitializeComponent();
     ResourceDictionary dictionary = new ResourceDictionary();
     dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
@@ -1162,17 +1162,17 @@ public MainPage()
 {
     ....
     InitializeComponent();
-	ResourceDictionary dictionary = new ResourceDictionary();
-	dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
-	dictionary.Add("SfAIAssistViewHeaderSuggestionBackground", Colors.LightSkyBlue);
-	dictionary.Add("SfAIAssistViewHeaderSuggestionItemStroke", Colors.BlueViolet);
-	dictionary.Add("SfAIAssistViewHeaderSuggestionItemStrokeThickness", 2.0);
-	dictionary.Add("SfAIAssistViewHeaderSuggestionItemTextColor", Colors.Blue);
-	dictionary.Add("SfAIAssistViewHeaderSuggestionItemFontSize", 16.0);
-	dictionary.Add("SfAIAssistViewHeaderSuggestionItemFontAttribute", FontAttributes.Italic);
-	dictionary.Add("SfAIAssistViewEditorFontFamily", "Roboto-Medium");
-	dictionary.Add("SfAIAssistViewHeaderSuggestionItemBackground", Colors.White);
-	this.Resources.Add(dictionary);
+    ResourceDictionary dictionary = new ResourceDictionary();
+    dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
+    dictionary.Add("SfAIAssistViewHeaderSuggestionBackground", Colors.LightSkyBlue);
+    dictionary.Add("SfAIAssistViewHeaderSuggestionItemStroke", Colors.BlueViolet);
+    dictionary.Add("SfAIAssistViewHeaderSuggestionItemStrokeThickness", 2.0);
+    dictionary.Add("SfAIAssistViewHeaderSuggestionItemTextColor", Colors.Blue);
+    dictionary.Add("SfAIAssistViewHeaderSuggestionItemFontSize", 16.0);
+    dictionary.Add("SfAIAssistViewHeaderSuggestionItemFontAttribute", FontAttributes.Italic);
+    dictionary.Add("SfAIAssistViewEditorFontFamily", "Roboto-Medium");
+    dictionary.Add("SfAIAssistViewHeaderSuggestionItemBackground", Colors.White);
+    this.Resources.Add(dictionary);
     .... 
 
 }
