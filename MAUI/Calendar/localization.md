@@ -16,8 +16,9 @@ By default, the calendar control supports US English localizations. You can chan
 The application culture can be changed by setting `CurrentUICulture`. in the `App.xaml.cs` file.
 
 {% tabs %}
-{% highlight c# tabtitle="App.xaml.cs" hl_lines="2 9" %}
+{% highlight c# tabtitle="App.xaml.cs" hl_lines="1 2 13 14" %}
 
+using System.Resources;
 using Syncfusion.Maui.Calendar;
 using System.Globalization;
 
@@ -27,10 +28,11 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-      //// ResXPath => Full path of the resx file; For example : // SfPickerResources.ResourceManager = new ResourceManager("MauiTestCalendarLocalization.Resources.SfCalendar", Application.Current.GetType().Assembly);
+		//// ResXPath => Full path of the resx file; 
+		//// For example : SfPickerResources.ResourceManager = new ResourceManager("MauiTestCalendarLocalization.Resources.SfCalendar", Application.Current.GetType().Assembly);
 		CultureInfo.CurrentUICulture = CultureInfo.CreateSpecificCulture("ja-JP");
-      SfCalendarResources.ResourceManager = new ResourceManager("ResxPath", Application.Current.GetType().Assembly);
-      MainPage = new AppShell();
+		SfCalendarResources.ResourceManager = new ResourceManager("ResxPath", Application.Current.GetType().Assembly);
+		MainPage = new AppShell();
 	}
 }
 
