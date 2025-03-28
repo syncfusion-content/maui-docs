@@ -741,7 +741,7 @@ namespace RadialSample
 
 ## Selection Color
 
-The [SfRadialMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.html) allows you to change the selection color for the selected Radial menu item by using the `SelectionColor` property.
+The [SfRadialMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.html) allows you to change the selection color for the selected Radial menu item by using the [SelectionColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_SelectionColor) property.
 
 {% tabs %}
 
