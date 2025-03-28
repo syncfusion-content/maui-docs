@@ -60,7 +60,7 @@ Content = sfBadgeView;
 
 ## Animation duration
 
-The `AnimationDuration` property of the [Badge Settings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_BadgeSettings) in the [Badge View](https://www.syncfusion.com/maui-controls/maui-badge-view) can be used to set the animation speed based on the given value. Setting a smaller duration value accelerates the animation speed. Its default value is 250.
+The [AnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_AnimationDuration) property of the [Badge Settings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_BadgeSettings) in the [Badge View](https://www.syncfusion.com/maui-controls/maui-badge-view) can be used to set the animation speed based on the given value. Setting a smaller duration value accelerates the animation speed. Its default value is 250.
 
 {% tabs %}
 

@@ -40,6 +40,10 @@ The .NET MAUI DataGrid control is used to display and manipulate data in a tabul
 
 * **Selection** - Select one or more rows. Keyboard navigation is supported in Windows platform.
 
+* **Search** - Supports highlighting cell content and provides navigation functionalities.
+
+* **Master-Details View** – Supports displaying relational data using hierarchies
+
 * **Column Sizing** - Set the width of columns with various sizing options. Columns can also be sized based on their content.
 
 * **Auto row height** - Set the height for rows based on the content of their cells.
