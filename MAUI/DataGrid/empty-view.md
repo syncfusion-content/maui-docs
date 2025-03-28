@@ -11,8 +11,8 @@ documentation: UG
 
 The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) provides options to display and customize an empty view when no data is available to display using the following properties,
 
- * [EmptyView]() object can be set to a string or view when `SfDataGrid` has no items. The default value is null.
- * [EmptyViewTemplate]() is used to customize the appearance of `EmptyView`. The default value is null.
+ * [EmptyView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_EmptyView) object can be set to a string or view when `SfDataGrid` has no items. The default value is null.
+ * [EmptyViewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_EmptyViewTemplate) is used to customize the appearance of `EmptyView`. The default value is null.
 
 ## Display a string when DataGrid has no items
 
