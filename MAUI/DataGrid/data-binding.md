@@ -65,7 +65,7 @@ this.sfDataGrid1.ItemsSource = table;
 
 ## Binding with dynamic data object
 
-The `SfDataGrid` control supports binding to a [dynamic data object]().
+The `SfDataGrid` control supports binding to a [dynamic data object](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-9.0).
 
 The code examples below demonstrate how to bind a dynamic data object to the `SfDataGrid` using both manually and automatically generated columns.
 
