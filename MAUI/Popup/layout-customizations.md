@@ -317,6 +317,9 @@ public partial class MainPage : ContentPage
 
 ### Popup header height
 
+N>
+When the HeaderTemplate is set, the HeaderHeight property customizes the header height.
+
 Customize the popup header height using [HeaderHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_HeaderHeight) property. Find the code example of the same as follows.
 
 {% tabs %}
