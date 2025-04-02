@@ -380,6 +380,9 @@ public class SortIconTemplate : DataTemplateSelector
 
 ![DataGrid with sort template selector](Images\sorting\maui-datagrid-sort-template-selector.png)
 
+N>
+* When using data template selector, performance issues occur as the conversion template views take time within the framework.
+
 ## Customize the size of sort icon
 
 The size of the sort icon can be customized when the icon is loaded through `SortIconTemplate` by setting the `HeightRequest` and `WidthRequest`. To implement this, please refer the following code snippet:

@@ -644,6 +644,9 @@ public class FreightTemplateSelector : DataTemplateSelector
 
 ![DataGrid with Template column contain cell Template selector](Images\column-types\maui-datagrid-templatecolumn-celltemplate-celltemplateselector.png)
 
+N>
+* When using data template selector, performance issues occur as the conversion template views take time within the framework.
+
 ### Loading DatePicker
 You can load the `DatePicker` control in cells using the `DataGridTemplateColumn`.
 
