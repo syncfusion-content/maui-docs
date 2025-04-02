@@ -650,6 +650,9 @@ public class ExpandCollapseTemplate : DataTemplateSelector
 
 ![DataGrid with template selector](Images\Grouping\maui-datagrid-template-selector.gif)
 
+N>
+* When using data template selector, performance issues occur as the conversion template views take time within the framework.
+
 ## Customize the size of group icon
 
 The size of the group icon can be customized when the icon is loaded through `GroupExpandCollapseTemplate` by setting the `HeightRequest` and `WidthRequest`. To implement this, please refer the following code snippet:
