@@ -117,7 +117,10 @@ The data grid allows for loading desired content using the [SfDataGrid.LeftSwipe
 
 N> Similarly, the desired content can be loaded using the [SfDataGrid.RightSwipeTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_RightSwipeTemplate) when swiping to the left.
 
-N> The `DataTemplateSelector` can be directly assigned to both the `SfDataGrid.RightSwipeTemplate` and the `SfDataGrid.LeftSwipeTemplate`. You can load the appropriate template based on the RowData and the row element provided in the event arguments.
+N> 
+* The `DataTemplateSelector` can be directly assigned to both the `SfDataGrid.RightSwipeTemplate` and the `SfDataGrid.LeftSwipeTemplate`. You can load the appropriate template based on the RowData and the row element provided in the event arguments.
+
+* When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
 ## Swipe events
 
