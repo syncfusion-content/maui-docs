@@ -131,3 +131,6 @@ dataGrid.VerticalOverScrollMode = DataGridVerticalOverScrollMode.Bounce;
 {% endtabs %}
 
  <img alt="Vertical-OverScroll-Mode" src="Images\scrolling\maui-datagrid-verticaloverscrollMode.gif" width="404" height="396"/>
+
+N>
+If both PullToRefresh and VerticalOverScrollMode are enabled simultaneously, the priority is given to PullToRefresh, and VerticalOverScrollMode will not be active.
