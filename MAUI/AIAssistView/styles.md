@@ -954,3 +954,230 @@ To style the send item button based on its state, set values to the in-built key
 
 {% endhighlight %}
 {% endtabs %}
+
+## Stop responding view styling
+
+To style the stop responding view based on its appearance, set values to the in-built keys in the resource dictionary.
+
+<table> 
+<tr> 
+<th> Key </th>
+<th> Description </th> 
+</tr>
+<tr> 
+<td> SfAIAssistViewStopRespondingBackground </td>
+<td> Background color of the stop responding view. </td> 
+</tr> 
+<tr> 
+<td> SfAIAssistViewStopRespondingIconColor </td>
+<td> Icon color for the stop responding view. </td> 
+</tr> 
+<tr> 
+<td> SfAIAssistViewStopRespondingTextColor </td> 
+<td> Text color for the stop responding view. </td> 
+</tr> 
+<tr> 
+<td> SfAIAssistViewStopRespondingFontFamily </td> 
+<td> Font family used for the stop responding text. </td> 
+</tr> 
+<tr> 
+<td> SfAIAssistViewStopRespondingFontSize </td> 
+<td> Font size of the stop responding text. </td> 
+</tr> 
+<tr> 
+<td> SfAIAssistViewStopRespondingFontAttributes </td> 
+<td> Font attributes used for the stop responding text. </td>
+</tr>
+<tr> 
+<td> SfAIAssistViewStopRespondingStroke </td> 
+<td> Stroke color for the stop responding view. </td> 
+</tr> 
+<tr> 
+<td> SfAIAssistViewStopRespondingStrokeThickness </td> 
+<td> Stroke thickness for the stop responding view. </td> 
+</tr> 
+</table>
+
+{% tabs %}
+{% highlight xaml %}
+
+<ContentPage.Resources>
+    <syncTheme:SyncfusionThemeDictionary>
+        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
+                <Color x:Key="SfAIAssistViewStopRespondingIconColor">Red</Color>
+                <Color x:Key="SfAIAssistViewStopRespondingTextColor">DarkBlue</Color>
+                <x:String x:Key="SfAIAssistViewStopRespondingFontFamily">Segoe UI</x:String>
+                <x:Double x:Key="SfAIAssistViewStopRespondingFontSize">14</x:Double>
+                <x:String x:Key="SfAIAssistViewStopRespondingFontAttributes">Italic</x:String>
+                <SolidColorBrush x:Key="SfAIAssistViewStopRespondingStroke">Violet</SolidColorBrush>
+                <x:Double x:Key="SfAIAssistViewStopRespondingStrokeThickness">2</x:Double>
+            </ResourceDictionary>
+        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+    </syncTheme:SyncfusionThemeDictionary>
+</ContentPage.Resources>
+
+{% endhighlight %}
+{% highlight c# %}
+
+public MainPage()
+{
+    ....
+    InitializeComponent();
+    ResourceDictionary dictionary = new ResourceDictionary();
+    dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
+    dictionary.Add("SfAIAssistViewStopRespondingIconColor", Colors.Red);
+    dictionary.Add("SfAIAssistViewStopRespondingTextColor", Colors.DarkBlue);
+    dictionary.Add("SfAIAssistViewStopRespondingFontFamily", "Segoe UI");
+    dictionary.Add("SfAIAssistViewStopRespondingFontSize", 14.0);
+    dictionary.Add("SfAIAssistViewStopRespondingFontAttributes", FontAttributes.Italic);
+    dictionary.Add("SfAIAssistViewStopRespondingStroke", new SolidColorBrush(Colors.Violet));
+    dictionary.Add("SfAIAssistViewStopRespondingStrokeThickness", 2.0);
+    this.Resources.Add(dictionary);
+    ....
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Stop responding style in .NET MAUI AI AssistView](images/styles/maui-aiassistview-styles-stopresponding.png)
+
+## Text Selection styling
+
+To modify the highlight color of selected text, you need to update the value associated with the built-in key `SfAIAssistViewSelectionTextHighLightColor` in the resource dictionary.
+
+<table>
+<tr>
+<th> Key </th>
+<th> Description </th>
+</tr>
+<tr>
+<td> SfAIAssistViewSelectionTextHighLightColor </td>
+<td> Color to highlight the selected text. </td>
+</tr>
+</table>
+
+{% tabs %}
+{% highlight xaml %}
+
+ <ContentPage.Resources>
+     <core:SyncfusionThemeDictionary>
+         <core:SyncfusionThemeDictionary.MergedDictionaries>
+             <ResourceDictionary>
+                 <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
+                 <Color x:Key="SfAIAssistViewSelectionTextHighLightColor">Orange</Color>
+             </ResourceDictionary>
+         </core:SyncfusionThemeDictionary.MergedDictionaries>
+     </core:SyncfusionThemeDictionary>
+ </ContentPage.Resources>
+
+{% endhighlight %}
+{% highlight c# %}
+
+public MainPage()
+{
+    ...
+    InitializeComponent();
+    ResourceDictionary dictionary = new ResourceDictionary();
+    dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
+    dictionary.Add("SfAIAssistViewSelectionTextHighLightColor", Colors.Orange);
+    this.Resources.Add(dictionary);
+    ...
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Text Selection style in .NET MAUI AI AssistView](Images/styles/maui-aiassistview-styles-textselection.png)
+
+## Common Suggestions styling
+
+To style the common suggestion view based on its appearance, set values to the in-built keys in the resource dictionary.
+
+<table>
+<tr>
+<th> Key </th>
+<th> Description </th>
+</tr>
+<tr> 
+<td> SfAIAssistViewHeaderSuggestionBackground </td>
+<td> Background color of the common suggestions view. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewHeaderSuggestionItemStroke </td>
+<td> Stroke color for the common suggestion item. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewHeaderSuggestionItemStrokeThickness </td>
+<td> Stroke thickness for the common suggestion item. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewHeaderSuggestionItemBackground </td>
+<td> Background color of an item in the common suggestions. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewHeaderSuggestionItemTextColor </td>
+<td> Text color of an item in the common suggestions. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewHeaderSuggestionItemFontSize </td>
+<td> Font size of an item in the common suggestions. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewHeaderSuggestionItemFontFamily </td>
+<td> Font family of an item in the common suggestions. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewHeaderSuggestionItemFontAttribute </td>
+<td> Font attributes of an item in the common suggestions. </td>
+</tr>
+</table>
+
+{% tabs %}
+{% highlight xaml %}
+
+<ContentPage.Resources>
+    <syncTheme:SyncfusionThemeDictionary>
+        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
+		<Color x:Key="SfAIAssistViewHeaderSuggestionBackground">LightSkyBlue</Color>
+		<Color x:Key="SfAIAssistViewHeaderSuggestionItemStroke">BlueViolet</Color>
+		<x:Double x:Key="SfAIAssistViewHeaderSuggestionItemStrokeThickness">2</x:Double>
+		<Color x:Key="SfAIAssistViewHeaderSuggestionItemBackground">White</Color>
+		<Color x:Key="SfAIAssistViewHeaderSuggestionItemTextColor">Blue</Color>
+		<x:Double x:Key="SfAIAssistViewHeaderSuggestionItemFontSize">16</x:Double>
+		<FontAttributes x:Key="SfAIAssistViewHeaderSuggestionItemFontAttribute">Italic</FontAttributes>
+		<x:String x:Key="SfAIAssistViewEditorFontFamily">Roboto-Medium</x:String>
+            </ResourceDictionary>
+        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+    </syncTheme:SyncfusionThemeDictionary>
+</ContentPage.Resources>
+
+{% endhighlight %}
+{% highlight c# %}
+
+public MainPage()
+{
+    ....
+    InitializeComponent();
+    ResourceDictionary dictionary = new ResourceDictionary();
+    dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
+    dictionary.Add("SfAIAssistViewHeaderSuggestionBackground", Colors.LightSkyBlue);
+    dictionary.Add("SfAIAssistViewHeaderSuggestionItemStroke", Colors.BlueViolet);
+    dictionary.Add("SfAIAssistViewHeaderSuggestionItemStrokeThickness", 2.0);
+    dictionary.Add("SfAIAssistViewHeaderSuggestionItemTextColor", Colors.Blue);
+    dictionary.Add("SfAIAssistViewHeaderSuggestionItemFontSize", 16.0);
+    dictionary.Add("SfAIAssistViewHeaderSuggestionItemFontAttribute", FontAttributes.Italic);
+    dictionary.Add("SfAIAssistViewEditorFontFamily", "Roboto-Medium");
+    dictionary.Add("SfAIAssistViewHeaderSuggestionItemBackground", Colors.White);
+    this.Resources.Add(dictionary);
+    .... 
+
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Common suggestion style in .NET MAUI AI AssistView](Images/styles/maui-aiassistview-styles-commonsuggestion.png)

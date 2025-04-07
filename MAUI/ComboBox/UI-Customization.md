@@ -1,7 +1,7 @@
 ---
 layout: post
-title: UI Customization in .NET MAUI ComboBox control | Syncfusion
-description: Learn all about UI customization support in Syncfusion .NET MAUI ComboBox control into .NET MAUI application and its basic features here.
+title: UI Customization in .NET MAUI ComboBox control | Syncfusion®
+description: Learn all about UI customization support in Syncfusion® .NET MAUI ComboBox control into .NET MAUI application and its basic features here.
 platform: maui
 control: SfComboBox
 documentation: ug
@@ -1294,6 +1294,8 @@ The [DropDownClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 
 {% endhighlight %}
 {% endtabs %}
+
+N> When `WindowSoftInputModeAdjust.Resize` is set in the sample and `SfComboBox` is placed inside a `ScrollView`, the dropdown may close unexpectedly due to layout resizing. To prevent this, override `OnSizeAllocated` and handle the `DropDownClosing`. For more details, refer to the [KB article](https://support.syncfusion.com/agent/kb/19349).
 
 ## CursorPosition
 

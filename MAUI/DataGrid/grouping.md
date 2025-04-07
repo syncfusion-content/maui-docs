@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Grouping in MAUI DataGrid control | Syncfusion
-description: Learn here all about Grouping support in Syncfusion MAUI DataGrid (SfDataGrid) control and more about it.
+title: Grouping in MAUI DataGrid control | Syncfusion®
+description: Learn here all about Grouping support in Syncfusion® MAUI DataGrid (SfDataGrid) control and more about it.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
@@ -117,11 +117,12 @@ The following code snippet shows how to apply a background color to the indent c
         </ResourceDictionary>
     </ContentPage.Resources>
     <syncfusion:SfDataGrid  x:Name="dataGrid"
-                            ItemsSource="{Binding Orders}" />
+                        ItemsSource="{Binding Orders}">
     <syncfusion:SfDataGrid.GroupColumnDescriptions>
         <syncfusion:GroupColumnDescription ColumnName="Name" />
         <syncfusion:GroupColumnDescription ColumnName="ShipCity" />
-    </syncfusion:SfDataGrid.GroupColumnDescriptions>    
+    </syncfusion:SfDataGrid.GroupColumnDescriptions>
+</syncfusion:SfDataGrid>   
 {% endhighlight %}
 
 {% highlight c# %}
@@ -288,14 +289,14 @@ In custom grouping, you can sort all the inner records of each group by setting 
 
     <syncfusion:SfDataGrid x:Name="dataGrid"
                             ItemsSource="{Binding OrderInfoCollection}">
-        <Syncfusion:SfDataGrid.GroupColumnDescriptions>
-            <Syncfusion:GroupColumnDescription ColumnName="OrderID"
+        <syncfusion:SfDataGrid.GroupColumnDescriptions>
+            <syncfusion:GroupColumnDescription ColumnName="OrderID"
                                                 Converter="{StaticResource groupOrderNoConverter}"
                                                 SortGroupRecords="false" />
-            <Syncfusion:GroupColumnDescription ColumnName="Price"
+            <syncfusion:GroupColumnDescription ColumnName="Price"
                                                 Converter="{StaticResource priceConverter}"
                                                 SortGroupRecords="True" />
-        </Syncfusion:SfDataGrid.GroupColumnDescriptions>
+        </syncfusion:SfDataGrid.GroupColumnDescriptions>
     </syncfusion:SfDataGrid>
 </ContentPage>
 
@@ -648,3 +649,53 @@ public class ExpandCollapseTemplate : DataTemplateSelector
 {% endtabs %}
 
 ![DataGrid with template selector](Images\Grouping\maui-datagrid-template-selector.gif)
+
+N>
+* When using data template selector, performance issues occur as the conversion template views take time within the framework.
+
+## Customize the size of group icon
+
+The size of the group icon can be customized when the icon is loaded through `GroupExpandCollapseTemplate` by setting the `HeightRequest` and `WidthRequest`. To implement this, please refer the following code snippet:
+
+{% tabs %}
+
+{% highlight xaml %}
+<syncfusion:SfDataGrid VerticalOptions="FillAndExpand"
+                            HorizontalOptions="FillAndExpand"
+                            ItemsSource="{Binding OrderInfoCollection}"
+                            x:Name="dataGrid"
+                            GroupingMode="Multiple"
+                            AllowGroupExpandCollapse="True"
+                            AutoGenerateColumnsMode="None"
+                            >
+        <syncfusion:SfDataGrid.GroupExpandCollapseTemplate>
+            <DataTemplate>
+                <Image Source="downward_icon.png" HeightRequest="20" WidthRequest="20"/>
+            </DataTemplate>
+        </syncfusion:SfDataGrid.GroupExpandCollapseTemplate>
+        
+        <syncfusion:SfDataGrid.GroupColumnDescriptions>
+            <syncfusion:GroupColumnDescription ColumnName="ShipCountry" />
+            <syncfusion:GroupColumnDescription ColumnName="CustomerID" />
+        </syncfusion:SfDataGrid.GroupColumnDescriptions>
+</syncfusion:SfDataGrid>                           
+{% endhighlight %}
+
+{% highlight c# %}
+this.dataGrid.GroupingMode = GroupingMode.Multiple;
+this.dataGrid.AllowGroupExpandCollapse = true;
+dataGrid.GroupExpandCollapseTemplate = new DataTemplate(() =>
+        {
+            var imageView1 = new Image()
+            {
+                Source = "downward_icon.png",
+                Aspect = Aspect.AspectFit,
+                HeightRequest = 20,
+                WidthRequest = 20,
+            };
+            return imageView1;
+        });
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="DataGrid with group icon size" src="Images\grouping\maui-datagrid-group-icon-size.png" width="404">

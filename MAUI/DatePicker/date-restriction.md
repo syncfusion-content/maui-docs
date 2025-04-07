@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Date Restriction in .NET MAUI Date Picker Control | Syncfusion
-description: Learn about date restriction support in Syncfusion .NET MAUI Date Picker (SfDatePicker) control and its basic features.
+title: Date Restriction in .NET MAUI Date Picker Control | Syncfusion<sup>&reg;</sup>
+description: Learn about date restriction support in Syncfusion<sup>&reg;</sup> .NET MAUI Date Picker (SfDatePicker) control and its basic features.
 platform: maui
 control: SfDatePicker
 documentation: ug
@@ -54,3 +54,46 @@ this.Content = picker;
 {% endtabs %}
 
 ![Maximum date in .NET MAUI Date picker.](images/date-restrictions/maui-date-picker-maximum-date.png)
+
+## Blackout Dates
+
+The [BlackoutDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_BlackoutDates) property in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) component lets you restrict the selection of specific dates. You can specify a list of dates to disable, preventing their selection. This feature helps enforce availability limits, such as blocking certain days in a month.
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfDatePicker x:Name="picker">
+    <picker:SfDatePicker.BlackoutDates>
+        <date:DateTime>2001-08-10</date:DateTime>
+        <date:DateTime>2001-08-12</date:DateTime>
+        <date:DateTime>2001-08-14</date:DateTime>
+        <date:DateTime>2001-08-17</date:DateTime>
+        <date:DateTime>2001-08-18</date:DateTime>
+        <date:DateTime>2001-08-20</date:DateTime>
+        <date:DateTime>2001-08-23</date:DateTime>
+        <date:DateTime>2001-08-27</date:DateTime>
+        <date:DateTime>2001-08-03</date:DateTime>
+    </picker:SfDatePicker.BlackoutDates>
+</picker:SfDatePicker>
+
+{% endhighlight %}
+{% highlight c# tabtitle="C#" %}
+
+SfDatePicker picker = new SfDatePicker();
+picker.BlackoutDates.Add(new DateTime(2001, 8, 10));
+picker.BlackoutDates.Add(new DateTime(2001, 8, 12));
+picker.BlackoutDates.Add(new DateTime(2001, 8, 14));
+picker.BlackoutDates.Add(new DateTime(2001, 8, 17));
+picker.BlackoutDates.Add(new DateTime(2001, 8, 18));
+picker.BlackoutDates.Add(new DateTime(2001, 8, 20));
+picker.BlackoutDates.Add(new DateTime(2001, 8, 23));
+picker.BlackoutDates.Add(new DateTime(2001, 8, 27));
+picker.BlackoutDates.Add(new DateTime(2001, 8, 3));
+this.Content = picker;
+
+{% endhighlight %}  
+{% endtabs %}
+
+![Blackout dates in .NET MAUI Date picker.](images/date-restrictions/maui-date-picker-blackout-dates.png)
+
+N> The `Selection View` will not be applicable when setting `Blackout dates`.

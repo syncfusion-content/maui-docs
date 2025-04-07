@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Day and Week views in .NET MAUI Scheduler Control | Syncfusion
-description: Learn here all about customizing the Day, Week and Workweek views settings and its appearance in Syncfusion .NET MAUI Scheduler (SfScheduler) control and more.
+title: Day and Week views in .NET MAUI Scheduler Control | Syncfusion®
+description: Learn here all about customizing the Day, Week and Workweek views settings and its appearance in Syncfusion® .NET MAUI Scheduler (SfScheduler) control and more.
 platform: maui
 control: SfScheduler
 documentation: ug
@@ -181,6 +181,10 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-
 The user interaction such as selection and highlights specific regions of day, week, and workweek views can be restricted by adding the [TimeRegions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_TimeRegions) property of the [DaysView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerDaysView.html) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). Set the [StartTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_StartTime) and [EndTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_EndTime) properties of `TimeRegions` to create a specialTimeRegion. Use the [TimeZone](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeRegion.html#Syncfusion_Maui_Scheduler_SchedulerTimeRegion_TimeZone) property to set the specific timezone for start and end time of `TimeRegions.`
 
 ![special-time-region-in-timeslots-views-in-maui-scheduler](images/day-week-views/special-time-region-in-timeslots-views-in-maui-scheduler.png)
+
+Watch the video below for a step-by-step guide on adding and customizing TimeRegions in .NET MAUI SfScheduler
+
+{% youtube "https://www.youtube.com/watch?v=ru06fr9jo5Q" %}
 
 ### Selection restriction in timeslots
 

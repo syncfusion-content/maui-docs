@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI CheckBox | Syncfusion
-description: Learn here about getting started with Syncfusion .NET MAUI CheckBox (SfCheckBox) control, its elements and more.
+title: Getting Started with .NET MAUI CheckBox | Syncfusion®
+description: Learn here about getting started with Syncfusion® .NET MAUI CheckBox (SfCheckBox) control, its elements and more.
 platform: maui
 control: CheckBox
 documentation: ug
@@ -15,42 +15,30 @@ To quickly get started with the .NET MAUI CheckBox, watch this video.
 
 {% youtube "https://www.youtube.com/watch?v=dgekGX8eYMo" %}
 
+{% tabcontents %}
+{% tabcontent Visual Studio %}
+
 ## Prerequisites
 
 Before proceeding, ensure the following are set up:
 1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
-2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or Visual Studio Code. For Visual Studio Code users, ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
+2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later).
 
-
-## Step 1: Create a New MAUI Project
-
-{% tabcontents %}
-{% tabcontent Visual Studio %}
+## Step 1: Create a new .NET MAUI Project
 
 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
-1. Name the project and choose a location. Then, click **Next.**
-1. Select the .NET framework version and click **Create.**
+2. Name the project and choose a location. Then, click **Next.**
+3. Select the .NET framework version and click **Create.**
 
-{% endtabcontent %}
-{% tabcontent Visual Studio Code %}
-
-1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
-1. Choose the **.NET MAUI App** template.
-1. Select the project location, type the project name and press **Enter.**
-1. Then choose **Create project.**
-
-{% endtabcontent %}
-{% endtabcontents %}
-
-## Step 2: Install the Syncfusion MAUI Buttons NuGet Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Buttons NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-1. Search for [Syncfusion.Maui.Buttons](https://www.nuget.org/packages/Syncfusion.Maui.Buttons/) and install the latest version.
-1. Ensure the necessary dependencies are installed correctly, and the project is restored.
+2. Search for [Syncfusion.Maui.Buttons](https://www.nuget.org/packages/Syncfusion.Maui.Buttons/) and install the latest version.
+3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 ## Step 3: Register the handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) is a dependent package for all Syncfusion controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion core.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% highlight c# hl_lines="6 17" %}
 
@@ -82,7 +70,6 @@ namespace CheckBoxGettingStarted
 }   
 
 {% endhighlight %}  
-
 
 ## Step 4: Add a Basic SfCheckBox
 
@@ -120,7 +107,200 @@ namespace CheckBoxGettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Set the CheckBox caption
+{% endtabcontent %}
+{% tabcontent Visual Studio Code %}
+
+## Prerequisites
+
+Before proceeding, ensure the following are set up:
+1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
+2. Set up a .NET MAUI environment with Visual Studio Code.
+3. Ensure that the .NET MAUI extension is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
+
+## Step 1: Create a new .NET MAUI Project
+
+1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
+2. Choose the **.NET MAUI App** template.
+3. Select the project location, type the project name and press **Enter.**
+4. Then choose **Create project.**
+
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Buttons NuGet Package
+
+1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
+2. Ensure you're in the project root directory where your .csproj file is located.
+3. Run the command `dotnet add package Syncfusion.Maui.Buttons` to install the Syncfusion<sup>®</sup> .NET MAUI Buttons package.
+4. To ensure all dependencies are installed, run `dotnet restore`.
+
+## Step 3: Register the handler
+
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
+
+{% highlight c# hl_lines="6 17" %}
+
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Syncfusion.Maui.Core.Hosting;
+
+namespace CheckBoxGettingStarted
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
+
+            return builder.Build();
+        }      
+    }
+}   
+
+{% endhighlight %}  
+
+## Step 4: Add a Basic SfCheckBox
+
+1. To initialize the control, import the Buttons namespace into your code.
+1. Initialize [SfCheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html).
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage
+    . . .    
+    xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
+   <buttons:SfCheckBox x:Name="checkBox"/>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+    using Syncfusion.Maui.Buttons;
+    namespace CheckBoxGettingStarted
+    {
+        public partial class MainPage : ContentPage
+        {
+            public MainPage()
+            {
+                InitializeComponent();           
+                SfCheckBox checkBox = new SfCheckBox();
+                this.Content = checkBox;
+            }
+        }   
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% tabcontent JetBrains Rider %}
+
+## Prerequisites
+
+Before proceeding, ensure the following are set up:
+
+1. Ensure you have the latest version of JetBrains Rider.
+2. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
+3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
+
+## Step 1: Create a new .NET MAUI Project
+
+1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
+2. Enter the Project Name, Solution Name, and Location.
+3. Select the .NET framework version and click Create.
+
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Buttons NuGet Package
+
+1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+2. Search for [Syncfusion.Maui.Buttons](https://www.nuget.org/packages/Syncfusion.Maui.Buttons/) and install the latest version.
+3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
+
+## Step 3: Register the handler
+
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
+
+{% highlight c# hl_lines="6 17" %}
+
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Syncfusion.Maui.Core.Hosting;
+
+namespace CheckBoxGettingStarted
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
+
+            return builder.Build();
+        }      
+    }
+}   
+
+{% endhighlight %}  
+
+## Step 4: Add a Basic SfCheckBox
+
+1. To initialize the control, import the Buttons namespace into your code.
+1. Initialize [SfCheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html).
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage
+    . . .    
+    xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
+   <buttons:SfCheckBox x:Name="checkBox"/>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+    using Syncfusion.Maui.Buttons;
+    namespace CheckBoxGettingStarted
+    {
+        public partial class MainPage : ContentPage
+        {
+            public MainPage()
+            {
+                InitializeComponent();           
+                SfCheckBox checkBox = new SfCheckBox();
+                this.Content = checkBox;
+            }
+        }   
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+{% endtabcontents %}
+
+## Set the CheckBox caption
 
 You can set the caption of the CheckBox using the [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_Text) property.This caption typically describes the meaning of the check box and is displayed next to the check box.
 
@@ -279,7 +459,7 @@ The Intermediate state is used when a group of sub-choices has both checked and 
 
     <StackLayout Padding="20">
         <Label x:Name="label" Margin="10" Text="Pizza Toppings"/>
-        <buttons:SfCheckBox x:Name="selectAll" Text="Select All" IsThreeState="True" StateChanged="SelectAll_StateChanged"/>
+        <buttons:SfCheckBox x:Name="selectAll" Text="Select All" IsThreeState="True" IsChecked="{x:Null}" StateChanged="SelectAll_StateChanged"/>
         <buttons:SfCheckBox x:Name="pepperoni" Text="Pepperoni" StateChanged="CheckBox_StateChanged" Margin="30,0"/>
         <buttons:SfCheckBox x:Name="beef" Text="Beef" IsChecked="True" StateChanged="CheckBox_StateChanged" Margin="30,0"/>
         <buttons:SfCheckBox x:Name="mushroom" Text="Mushrooms" StateChanged="CheckBox_StateChanged" Margin="30,0"/>
@@ -298,6 +478,7 @@ The Intermediate state is used when a group of sub-choices has both checked and 
     selectAll.StateChanged += SelectAll_StateChanged;
     selectAll.Text = "Select All";   
     selectAll.IsThreeState = true;
+    selectAll.IsChecked = null;
     pepperoni = new SfCheckBox();
     pepperoni.StateChanged += CheckBox_StateChanged;
     pepperoni.Text = "Pepperoni";

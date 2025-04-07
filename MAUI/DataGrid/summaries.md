@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Summaries in MAUI DataGrid control | Syncfusion
-description: Learn here all about Summaries support in Syncfusion MAUI DataGrid (SfDataGrid) control and more about it.
+title: Summaries in MAUI DataGrid control | Syncfusion®
+description: Learn here all about Summaries support in Syncfusion® MAUI DataGrid (SfDataGrid) control and more about it.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
@@ -67,7 +67,7 @@ The following screenshot shows the outcome of the previous code:
 
 ### Customize the column name in the group caption summary
 
-The column name in the group caption summary text can be customized using the `DisplayName` property.
+The column name in the group caption summary text can be customized using the [DisplayName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.GroupColumnDescription.html#Syncfusion_Maui_DataGrid_GroupColumnDescription_DisplayName) property.
 
 If the `DisplayName` property is set, the specified display name will appear in the group caption summary text. If it is null, the column name will be displayed instead.
 
@@ -76,9 +76,9 @@ If the `DisplayName` property is set, the specified display name will appear in 
     <sfGrid:SfDataGrid x:Name="dataGrid"
                        ItemsSource="{Binding OrderInfoCollection}"
                        ColumnWidthMode="Fill">
-        <sfgrid:SfDataGrid.GroupColumnDescriptions>
-            <sfgrid:GroupColumnDescription ColumnName="Salary" DisplayName="Income" />
-        </sfgrid:SfDataGrid.GroupColumnDescriptions>
+        <sfGrid:SfDataGrid.GroupColumnDescriptions>
+            <sfGrid:GroupColumnDescription ColumnName="Salary" DisplayName="Income" />
+        </sfGrid:SfDataGrid.GroupColumnDescriptions>
     </sfGrid:SfDataGrid>
 {% endhighlight %}
 
@@ -277,7 +277,7 @@ public class GroupCaptionConverter : IValueConverter
 
 ![DataGrid with template loaded for entire caption summary row](Images\caption-summary\maui-datagrid-template-row.png)
 
-N> The `DataTemplateSelector` can also be directly assigned to the `CaptionSummaryTemplate`.
+N> The `DataTemplateSelector` can also be directly assigned to the `CaptionSummaryTemplate`. When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
 
 ### Displaying template for a column
@@ -574,7 +574,7 @@ public class GroupSummaryConverter : IValueConverter
 
 ![DataGrid with template loaded for entire group summary row](Images\group-summary\maui-datagrid-row-template.png)
 
-N> The `DataTemplateSelector` can also be directly assigned to the `SfDataGrid.GroupSummaryTemplate`.
+N> The `DataTemplateSelector` can also be directly assigned to the `SfDataGrid.GroupSummaryTemplate`. When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
 ### Displaying template for a column
 
@@ -1110,7 +1110,7 @@ public class TableSummaryConverter : IValueConverter
 
 ![Table summary template in a column](Images\table-summary\maui-datagrid-template-column.png)
 
-N> The `DataTemplateSelector` can also be directly assigned to the `SfDataGrid.TableSummaryTemplate`.
+N> The `DataTemplateSelector` can also be directly assigned to the `SfDataGrid.TableSummaryTemplate`. When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
 ## Formatting summary
 

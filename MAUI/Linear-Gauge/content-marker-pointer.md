@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Content Marker Pointer in .NET MAUI Linear Gauge control | Syncfusion
-description: Learn here all about Content Pointer feature of the Syncfusion .NET MAUI Linear Gauge control, including image, text pointer support and more.
+title: Content Marker Pointer in .NET MAUI Linear Gauge control | Syncfusion<sup>&reg;</sup>
+description: Learn here all about Content Pointer feature of the Syncfusion<sup>&reg;</sup> .NET MAUI Linear Gauge control, including image, text pointer support and more.
 platform: maui
 control: SfLinearGauge
 documentation: ug

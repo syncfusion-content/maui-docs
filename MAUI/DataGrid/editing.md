@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Editing in MAUI DataGrid control | Syncfusion
-description: Learn here all about Editing support in Syncfusion MAUI DataGrid (SfDataGrid) control and more about it.
+title: Editing in MAUI DataGrid control | Syncfusion®
+description: Learn here all about Editing support in Syncfusion® MAUI DataGrid (SfDataGrid) control and more about it.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
@@ -42,10 +42,11 @@ To enable or disable editing for a specific column, you can simply set the [Data
                            SelectionMode="Multiple"    
                            NavigationMode="Cell" 
                            ItemsSource="{Binding OrderInfoCollection}">
-
+<syncfusion:SfDataGrid.Columns>
     <syncfusion:DataGridTextColumn AllowEditing="True"
-                                   MappingName="OrderID" />
-    </syncfusion:SfDataGrid>
+                               MappingName="OrderID" />
+</syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
 dataGrid.SelectionMode = SelectionMode.Multiple;

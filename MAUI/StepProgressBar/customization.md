@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customization with .NET MAUI Step ProgressBar control | Syncfusion
-description: Learn here all about Customization support with Syncfusion .NET MAUI Step ProgressBar (SfStepProgressBar).
+title: Customization with .NET MAUI Step ProgressBar control | Syncfusion<sup>&reg;</sup>
+description: Learn here all about Customization support with Syncfusion<sup>&reg;</sup> .NET MAUI Step ProgressBar (SfStepProgressBar).
 platform: maui
 control: SfStepProgressBar
 documentation: ug
@@ -193,6 +193,92 @@ public MainPage()
 
 {% endhighlight %}
 {% endtabs %}
+
+## Customize Progress Track Size for each step
+The `SfStepProgressBar` control provides customization of progress track size for each step. You can customize the height of each step progress bar using [ProgressTrackSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_ProgressTrackSize) property in the `StepProgressBarItem`.
+
+*The default value of the `ProgressTrackSize` property is 50.
+
+{% tabs %}
+{% highlight XAML hl_lines="9" %}
+
+<stepProgressBar:SfStepProgressBar
+                    x:Name="stepProgress"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"                                        
+                    Orientation="Vertical"                                                                                       
+                    LabelSpacing="12"
+                    ActiveStepIndex="3"
+                    ActiveStepProgressValue="50"
+                    ItemsSource="{Binding StepProgressItem}">
+</stepProgressBar:SfStepProgressBar>
+
+<ContentPage.BindingContext>
+    <local:ViewModel />
+</ContentPage.BindingContext>
+
+{% endhighlight %}
+{% highlight C# hl_lines="10" %}
+
+ViewModel viewModel = new ViewModel();
+SfStepProgressBar stepProgressBar = new SfStepProgressBar()
+{
+    VerticalOptions = LayoutOptions.Center,
+    HorizontalOptions = LayoutOptions.Center,
+    Orientation = StepProgressBarOrientation.Vertical,
+    LabelSpacing = 12,
+    ActiveStepIndex = 3,
+    ActiveStepProgressValue = 50,
+    ItemsSource = viewModel.StepProgressItem,
+};
+
+this.Content = stepProgressBar;
+
+{% endhighlight %}
+{% highlight C# tabtitle="ViewModel.cs" hl_lines="26 27 28 29" %}
+
+public class ViewModel
+{
+    /// <summary>
+    /// The Step progress bar item collection.
+    /// </summary>
+    private ObservableCollection<StepProgressBarItem> stepProgressItem;
+
+    /// <summary>
+    /// The Step progress bar item collection.
+    /// </summary>
+    public ObservableCollection<StepProgressBarItem> StepProgressItem
+    {
+        get
+        {
+            return stepProgressItem;
+        }
+        set
+        {
+            stepProgressItem = value;
+        }
+    }
+
+    public ViewModel()
+    {
+        stepProgressItem = new ObservableCollection<StepProgressBarItem>();
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Requirement Gathering", ProgressTrackSize = 150 });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Design", ProgressTrackSize = 30 });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Development", ProgressTrackSize = 80 });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Testing", ProgressTrackSize = 50 });
+        stepProgressItem.Add(new StepProgressBarItem() { PrimaryText = "Deployment"});
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+ ![Height request support for each step in .NET MAUI SfStepProgressBar.](images/customization/maui-stepprogressbar-height-request-support-for-each-step.png)
+
+ N> 
+* If the [ProgressTrackSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_ProgressTrackSize) property value of the StepProgressBarItem is less than 1, the height of the progress bar will be rendered using the default value.
+* Providing the [ProgressTrackSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepProgressBarItem.html#Syncfusion_Maui_ProgressBar_StepProgressBarItem_ProgressTrackSize) property value for the last step will have no effect because the last step doesn't have a progress bar.
+ 
 
 ## Customize step appearance
 You can customize the appearance of the steps by using the [ShapeType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepSettings.html#Syncfusion_Maui_ProgressBar_StepSettings_ShapeType), [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepSettings.html#Syncfusion_Maui_ProgressBar_StepSettings_Background), [ContentType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepSettings.html#Syncfusion_Maui_ProgressBar_StepSettings_ContentType), [ContentFillColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepSettings.html#Syncfusion_Maui_ProgressBar_StepSettings_ContentFillColor), [ProgressColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepSettings.html#Syncfusion_Maui_ProgressBar_StepSettings_ProgressColor), [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepSettings.html#Syncfusion_Maui_ProgressBar_StepSettings_Stroke), and [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.StepSettings.html#Syncfusion_Maui_ProgressBar_StepSettings_TextStyle) properties from the [InProgressStepSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_InProgressStepSettings) for the in-progress state, [CompletedStepSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_CompletedStepSettings) for the completed state, and [NotStartedStepSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html#Syncfusion_Maui_ProgressBar_SfStepProgressBar_NotStartedStepSettings) for the not-started state. 

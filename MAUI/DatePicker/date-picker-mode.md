@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Date Picker Mode in .NET MAUI Date Picker Control | Syncfusion
-description: Learn about the date picker mode in Syncfusion .NET MAUI Date Picker (SfDatePicker) control and its basic features.
+title: Date Picker Mode in .NET MAUI Date Picker Control | Syncfusion<sup>&reg;</sup>
+description: Learn about the date picker mode in Syncfusion<sup>&reg;</sup> .NET MAUI Date Picker (SfDatePicker) control and its basic features.
 platform: maui
 control: SfDatePicker
 documentation: ug
@@ -88,7 +88,7 @@ Note: This property is automatically changed to `false` when you close the dialo
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml"%}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <Grid>
     <picker:SfDatePicker x:Name="datePicker" 
@@ -107,7 +107,7 @@ Note: This property is automatically changed to `false` when you close the dialo
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs"%}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 private void Button_Clicked(object sender, System.EventArgs e)
 {
@@ -115,6 +115,47 @@ private void Button_Clicked(object sender, System.EventArgs e)
 }
 
 {% endhighlight %} 
+
+{% endtabs %}
+
+### Relative view
+
+The [RelativeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_RelativeView) is specified in the picker's property enumeration and is used to display the picker dialog relative to a view by setting the [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Mode) property to [`RelativeDialog`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerMode.html#Syncfusion_Maui_Picker_PickerMode_RelativeDialog). You can set the position by setting the [RelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_RelativePosition) property in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
+
+
+N> It is only applicable in `RelativeDialog` mode. If `no relative view` is specified, the picker base will be set as the `default` relative view.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
+
+<Grid>
+    <picker:SfDatePicker x:Name="datePicker" 
+                         Mode="RelativeDialog"
+                         RelativePosition="AlignTopLeft"
+                         RelativeView = "{x:Reference pickerButton}">
+    </picker:SfDatePicker>
+    <Button Text="Open picker" 
+            x:Name="pickerButton"
+            Clicked="Button_Clicked"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            HeightRequest="50" 
+            WidthRequest="150">
+    </Button>
+</Grid>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" hl_lines="4" %}
+
+private void Button_Clicked(object sender, System.EventArgs e)
+{
+    this.datepicker.IsOpen = true;
+    this.datepicker.RelativeView = pickerButton;
+}
+
+{% endhighlight %}
 
 {% endtabs %}
 

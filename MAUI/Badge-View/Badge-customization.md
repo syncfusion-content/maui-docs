@@ -1,8 +1,8 @@
 ---
 
 layout: post
-title: Customization of Syncfusion Badge View control for .NET MAUI
-description: This section explains how to customize the font, stroke, and text in the Syncfusion SfBadgeView control in MAUI platform
+title: Customization of Syncfusion® Badge View control for .NET MAUI
+description: This section explains how to customize the font, stroke, and text in the Syncfusion® SfBadgeView control in MAUI platform
 platform: maui
 control: Badge View
 documentation: ug
@@ -158,7 +158,7 @@ Content = sfBadgeView;
 
 ## Predefined styles
 
-The colors of the badge can be customized using the [BadgeType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeType.html) property. The badge supports the following eight different essential colors for various situations:
+The colors of the badge can be customized using the [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Type) property of the [BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#properties). The badge supports the following eight different essential colors for various situations:
 
  * Dark
  * Error
@@ -210,7 +210,7 @@ The colors of the badge can be customized using the [BadgeType](https://help.syn
 
 ## Badge background customization
 
-Other than the predefined styles, the color of the badge can be customized using the [BadgeType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeType.html) property which has to be set as [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeType.html#Syncfusion_Maui_Core_BadgeType_None). Then the color of the badge view can be set using the [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Background) property.
+Other than the predefined styles, the color of the badge can be customized using the [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Type) property of the[BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#properties) which has to be set as [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeType.html#Syncfusion_Maui_Core_BadgeType_None). Then the color of the badge view can be set using the [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Background) property.
 
 {% tabs %}
 

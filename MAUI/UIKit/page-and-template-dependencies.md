@@ -3,13 +3,13 @@ layout: post
 title:  Page Template Dependencies | Essential® UI Kit .NET MAUI | Syncfusion®
 description: The list of screen-wise resources and NuGet packages required for each Individual Essential® UI Kit for .NET MAUI Screens.
 platform: maui
-control: Essential® UI Kit for .NET MAUI
+control: Essential<sup>®</sup> UI Kit for .NET MAUI
 documentation: ug
 ---
 
-# Page Template Dependencies of Essential® UI Kit for .NET MAUI
+# Page Template Dependencies of Essential<sup>®</sup> UI Kit for .NET MAUI
 
-This page lists the dependencies (converters, renderers, and NuGet packages) required for each XAML page in the Essential® UI Kit for .NET MAUI project  
+This page lists the dependencies (converters, renderers, and NuGet packages) required for each XAML page in the Essential<sup>®</sup> UI Kit for .NET MAUI project  
 
 ## Forms
 
@@ -1461,7 +1461,124 @@ This page lists the dependencies (converters, renderers, and NuGet packages) req
 		  Views\Tracking\OrderTracking.xaml<br/>  Views\Tracking\OrderTracking.xaml.cs<br/>  ViewModel\OrderTrackingViewModel.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
         </td>
 	</tr>
-</table>	
+</table>
+
+## Dashboard
+
+<table>
+	<tr>
+		<th>
+			S.No<br/>
+		</th>
+		<th>
+			Pages<br/>
+		</th>
+		<th>
+			Packages<br/>
+		</th>
+		<th>
+			Required Files<br/>
+		</th>
+	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   1<br/>
+		</td>
+		<td>
+		  Stock Overview Page<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.Picker,<br/>  Syncfusion.Maui.Toolkit<br/>  Syncfusion.Maui.Core,<br/>  Syncfusion.Maui.Popup,<br/>  Syncfusion.Maui.Buttons,<br/>  Syncfusion.Maui.ListView,<br/>  Syncfusion.Maui.Inputs,<br/> Syncfusion.Maui.Charts,<br/> Syncfusion.Maui.Expander<br/> 
+		</td>
+		<td>
+		  Views\Dashboard\StockOverviewPage.xaml<br/>  Views\Dashboard\StockOverviewPage.xaml.cs<br/>  ViewModel\StockOverviewViewModel.cs<br/> ViewModel\BaseViewModel.cs<br/> Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Images\profileavatar.png<br/>  Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\Righteous-Regular.ttf<br/>  Resources\Fonts\DashboardFontIcons.ttf<br/>
+        </td>
+	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   2<br/>
+		</td>
+		<td>
+		  Health Care Page<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.ListView,<br/>  Syncfusion.Maui.Toolkit<br/>  Syncfusion.Maui.Core,<br/>  Syncfusion.Maui.Buttons,<br/>  Syncfusion.Maui.Inputs,<br/>  Syncfusion.Maui.Charts<br/>
+		</td>
+		<td>
+		  Views\Dashboard\HealthCarePage.xaml<br/>  Views\Dashboard\HealthCarePage.xaml.cs<br/>  ViewModel\HealthCareViewModel.cs<br/>  Model\ChartModel.cs<br/>  ViewModel\BaseViewModel.cs<br/> Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Images\profileavatar.png<br/>  Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\Righteous-Regular.ttf<br/>  Resources\Fonts\DashboardFontIcons.ttf<br/>
+        </td>
+	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   3<br/>
+		</td>
+		<td>
+		  Daily Calories Report Page<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.ListView,<br/>  Syncfusion.Maui.Toolkit<br/>  Syncfusion.Maui.Core,<br/>  Syncfusion.Maui.Inputs<br/>  Syncfusion.Maui.Buttons,<br/>  Syncfusion.Maui.Charts<br/>
+		</td>
+		<td>
+		  Views\Dashboard\DailyCaloriesReportPage.xaml<br/>  Views\Dashboard\DailyCaloriesReportPage.xaml.cs<br/>  Model\DailyHealthCare.cs<br/>  ViewModel\DailyCaloriesReportViewModel.cs<br/>  ViewModel\BaseViewModel.cs<br/> Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\Righteous-Regular.ttf<br/>  Resources\Fonts\DashboardFontIcons.ttf<br/>
+        </td>
+	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   4<br/>
+		</td>
+		<td>
+		  Daily Timeline Page<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.ListView,<br/>  Syncfusion.Maui.Toolkit<br/>  Syncfusion.Maui.Core,<br/>  Syncfusion.Maui.Inputs<br/>  Syncfusion.Maui.Buttons<br/>
+		</td>
+		<td>
+		  Views\Dashboard\DailyTimelinePage.xaml<br/>  Views\Dashboard\DailyTimelinePage.xaml.cs<br/>  ViewModel\DailyTimelineViewModel.cs<br/>  ViewModel\BaseViewModel.cs<br/> Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\DashboardFontIcons.ttf<br/>
+        </td>
+	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   5<br/>
+		</td>
+		<td>
+		  Company History Page<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.ListView,<br/>  Syncfusion.Maui.Toolkit<br/>  Syncfusion.Maui.Core,<br/>  Syncfusion.Maui.Inputs<br/>  Syncfusion.Maui.Buttons<br/>
+		</td>
+		<td>
+		  Views\Dashboard\CompanyHistoryPage.xaml<br/>  Views\Dashboard\CompanyHistoryPage.xaml.cs<br/>  ViewModel\CompanyHistoryViewModel.cs<br/>  ViewModel\BaseViewModel.cs<br/> Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Images\profileavatar.png<br/>  Images\companylogo.png<br/>  Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\Righteous-Regular.ttf<br/>  Resources\Fonts\DashboardFontIcons.ttf<br/>
+        </td>
+	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   6<br/>
+		</td>
+		<td>
+		  My Wallet Page<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.Charts,<br/>  Syncfusion.Maui.Toolkit<br/>  Syncfusion.Maui.Core,<br/>  Syncfusion.Maui.ListView,<br/>  Syncfusion.Maui.Rotator,<br/> Syncfusion.Maui.Buttons<br/> Syncfusion.Maui.Inputs<br/>
+		</td>
+		<td>
+		  Views\Dashboard\MyWalletPage.xaml<br/>  Views\Dashboard\MyWalletPage.xaml.cs<br/>  ViewModel\MyWalletViewModel.cs<br/> Themes\DarkTheme.xaml<br/>  Converters\BooleanToColorConverter.cs<br/>  Converters\BooleanToStringConverter.cs<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Images\profileavatar.png<br/>  Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\Righteous-Regular.ttf<br/>  Resources\Fonts\DashboardFontIcons.ttf<br/>
+        </td>
+	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   7<br/>
+		</td>
+		<td>
+		  Restaurant Dashboard Page<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.ListView,<br/>  Syncfusion.Maui.Toolkit<br/>  Syncfusion.Maui.Core,<br/>  Syncfusion.Maui.Inputs<br/>  Syncfusion.Maui.Buttons<br/>
+		</td>
+		<td>
+		  Views\Dashboard\RestaurantDashboardPage.xaml<br/>  Views\Dashboard\RestaurantDashboardPage.xaml.cs<br/>  ViewModel\RestaurantDashboardViewModel.cs<br/>  ViewModel\BaseViewModel.cs<br/> Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Images\profileavatar.png<br/>  Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\Righteous-Regular.ttf<br/>  Resources\Fonts\DashboardFontIcons.ttf<br/>
+        </td>
+	</tr>
+</table>
 
 ## Settings
 
@@ -1571,3 +1688,35 @@ This page lists the dependencies (converters, renderers, and NuGet packages) req
 	</tr>
 </table>
 
+## Onboarding
+
+<table>
+	<tr>
+		<th>
+			S.No<br/>
+		</th>
+		<th>
+			Pages<br/>
+		</th>
+		<th>
+			Packages<br/>
+		</th>
+		<th>
+			Required Files<br/>
+		</th>
+	</tr>
+	<tr valign="top">		
+		<td align="center">
+		   1<br/>
+		</td>
+		<td>
+		  Walk-Through Page<br/>
+		</td>
+		<td>
+		 Syncfusion.Maui.Rotator,<br/>  Syncfusion.Maui.Toolkit<br/>  Syncfusion.Maui.Core,<br/>  Syncfusion.Maui.Buttons<br/>  Syncfusion.Maui.DataForm,<br/>  Syncfusion.Maui.ListView<br/>
+		</td>
+		<td>
+		  Views\OnBoarding\OnboardingPage.xaml<br/>  Views\OnBoarding\OnboardingPage.xaml.cs<br/>  ViewModel\OnboardingViewModel.cs<br/> Images\onboardingimage1.png<br/> Images\onboardingimage2.png<br/> Images\onboardingimage3.png<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
+        </td>
+	</tr>
+</table>

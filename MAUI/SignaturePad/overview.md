@@ -1,7 +1,7 @@
 ---
 layout: post
-title: .NET MAUI SignaturePad control | Syncfusion
-description: Learn here all about introduction of Syncfusion .NET MAUI SignaturePad (SfSignaturePad) widget, its features, and more.
+title: .NET MAUI SignaturePad control | Syncfusion®
+description: Learn here all about introduction of Syncfusion® .NET MAUI SignaturePad (SfSignaturePad) widget, its features, and more.
 platform: maui
 control: SfSignaturePad
 documentation: ug

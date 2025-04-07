@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Interval in.NET MAUI Slider control | Syncfusion 
-description: Learn here all about adding the Interval feature of Syncfusion .NET MAUI Slider (SfDateTimeSlider) control and more.
+title: Interval in.NET MAUI Slider control | Syncfusion® 
+description: Learn here all about adding the Interval feature of Syncfusion® .NET MAUI Slider (SfDateTimeSlider) control and more.
 platform: maui
 control: SfDateTimeSlider
 documentation: ug

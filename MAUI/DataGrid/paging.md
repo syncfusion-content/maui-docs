@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Paging in MAUI DataGrid control | Syncfusion
-description: Learn here all about Paging support in Syncfusion MAUI DataGrid (SfDataGrid) control, its elements and more.
+title: Paging in MAUI DataGrid control | Syncfusion®
+description: Learn here all about Paging support in Syncfusion® MAUI DataGrid (SfDataGrid) control, its elements and more.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
@@ -150,7 +150,6 @@ To load data for the DataPager control dynamically, follow the code example:
       </pager:SfDataPager>      
       <syncfusion:SfDataGrid x:Name="dataGrid"
                          Grid.Row="0"
-                         AutoGenerateColumns="true"
                          SelectionMode="Single"
                          ItemsSource="{Binding Source={x:Reference dataPager}, Path=PagedSource }"  
                          >

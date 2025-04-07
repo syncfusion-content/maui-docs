@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migrate from Xamarin SfMaps to .NET MAUI SfMaps | Syncfusion 
-description: Learn here all about Migrating from Syncfusion Xamarin SfMaps to Syncfusion .NET MAUI SfMaps control and more.
+title: Migrate from Xamarin SfMaps to .NET MAUI SfMaps | Syncfusion<sup>&reg;</sup> 
+description: Learn here all about Migrating from Syncfusion<sup>&reg;</sup> Xamarin SfMaps to Syncfusion<sup>&reg;</sup> .NET MAUI SfMaps control and more.
 platform: MAUI
 control: SfMaps
 documentation: ug
