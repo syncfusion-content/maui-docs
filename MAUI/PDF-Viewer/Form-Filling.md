@@ -23,6 +23,8 @@ You can load and fill in the following form fields in a PDF document using the P
 * List box
 * Button
 
+N> The selectable highlight color will be applied to a form field only if its background color is transparent. Otherwise, the specified background color will be displayed in the form field.
+
 ### Loading PDFs with XFA forms
 
 The PDF viewer supports only Acroforms. PDF documents that contain XFA form cannot be viewed in the PDF Viewer. When a PDF with XFA form is attempted to be loaded, the PDF will not be loaded and the [DocumentLoadFailed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoadFailed) event will be raised. Refer this [page](https://help.syncfusion.com/maui/pdf-viewer/documentloadnotifications#handling-document-load-failures) to know more about handling document load failure.
