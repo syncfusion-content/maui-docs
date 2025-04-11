@@ -23,7 +23,7 @@ You can load and fill in the following form fields in a PDF document using the P
 * List box
 * Button
 
-N> The selectable highlight color will be applied to a form field only if its background color is transparent. Otherwise, the specified background color will be displayed in the form field.
+N> In versions prior to v29.1.33, the PDF Viewer rendered all form fields with a default light blue background, without considering the background color defined in the PDF document. Starting from v29.1.33, the PDF Viewer now renders form fields based on the background color specified in their appearance settings, ensuring they are displayed as intended by the document author.
 
 ### Loading PDFs with XFA forms
 
