@@ -23,8 +23,6 @@ You can load and fill in the following form fields in a PDF document using the P
 * List box
 * Button
 
-N> In versions prior to v29.1.33, the PDF Viewer rendered all form fields with a default light blue background, without considering the background color defined in the PDF document. Starting from v29.1.33, the PDF Viewer now renders form fields based on the background color specified in their appearance settings, ensuring they are displayed as intended by the document author.
-
 ### Loading PDFs with XFA forms
 
 The PDF viewer supports only Acroforms. PDF documents that contain XFA form cannot be viewed in the PDF Viewer. When a PDF with XFA form is attempted to be loaded, the PDF will not be loaded and the [DocumentLoadFailed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoadFailed) event will be raised. Refer this [page](https://help.syncfusion.com/maui/pdf-viewer/documentloadnotifications#handling-document-load-failures) to know more about handling document load failure.
@@ -397,6 +395,26 @@ foreach (FormField formField in PdfViewer.FormFields)
         }
     }
 } 
+{% endhighlight %}
+{% endtabs %}
+
+N> In versions prior to v29.1.33, the PDF Viewer rendered all form fields with a default light blue background, without considering the background color defined within the PDF document.
+
+Starting with v29.1.33, the PDF Viewer now renders form fields using the background color specified in their appearance settings, ensuring the fields are displayed as intended by the document author.
+
+To maintain backward compatibility, support has been added to customize the background color of form fields programmatically. This allows you to restore the previous behavior or apply custom styling based on your application requirements.
+
+If you prefer to retain the original light blue background used in earlier versions, you can apply it manually using the following code:
+
+{% tabs %}
+{% highlight C# %}
+foreach (FormField field in PdfViewer.FormFields)
+{
+    foreach (Widget widget in field.Widgets)
+    {
+        widget.BackgroundColor = Color.FromRgba(204, 215, 255, 200); // Light blue background
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
