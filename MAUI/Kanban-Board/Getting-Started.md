@@ -509,3 +509,5 @@ doneColumn.Categories = new List<object>() { "Done" };
 Press **F5** to build and run the application. Once compiled, the Kanban board will display with the data provided.
 
 You can find the complete getting started sample from this [link](https://github.com/SyncfusionExamples/GettingStarted_Kanban_MAUI).
+
+N> You can refer to our [.NET MAUI Kanban Board](https://www.syncfusion.com/maui-controls/maui-kanban) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Kanban Board example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Kanban/SampleBrowser.Maui.Kanban) that shows you how to render and configure the Kanban Board.
