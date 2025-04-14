@@ -399,24 +399,20 @@ foreach (FormField formField in PdfViewer.FormFields)
 {% endtabs %}
 
 N> In versions prior to v29.1.33, the PDF Viewer rendered all form fields with a default light blue background, without considering the background color defined within the PDF document.
-
-Starting with v29.1.33, the PDF Viewer now renders form fields using the background color specified in their appearance settings, ensuring the fields are displayed as intended by the document author.
-
-To maintain backward compatibility, support has been added to customize the background color of form fields programmatically. This allows you to restore the previous behavior or apply custom styling based on your application requirements.
-
-If you prefer to retain the original light blue background used in earlier versions, you can apply it manually using the following code:
-
-{% tabs %}
-{% highlight C# %}
-foreach (FormField field in PdfViewer.FormFields)
-{
-    foreach (Widget widget in field.Widgets)
-    {
-        widget.BackgroundColor = Color.FromRgba(204, 215, 255, 200); // Light blue background
-    }
-}
-{% endhighlight %}
-{% endtabs %}
+N> Starting with v29.1.33, the PDF Viewer now renders form fields using the background color specified in their appearance settings, ensuring the fields are displayed as intended by the document author.
+N> To maintain backward compatibility, support has been added to customize the background color of form fields programmatically. This allows you to restore the previous behavior or apply custom styling based on your application requirements.
+N> If you prefer to retain the original light blue background used in earlier versions, you can apply it manually using the following code:
+N> {% tabs %}
+N> {% highlight csharp %}
+N> foreach (FormField field in PdfViewer.FormFields)
+N> {
+N>     foreach (Widget widget in field.Widgets)
+N>     {
+N>         widget.BackgroundColor = Color.FromRgba(204, 215, 255, 200); // Light blue background
+N>     }
+N> }
+N> {% endhighlight %}
+N> {% endtabs %}
 
 ## Property changed event for Form fields Widgets
 
