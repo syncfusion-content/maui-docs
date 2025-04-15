@@ -101,7 +101,7 @@ The `SfDataGrid` provides [SelectedIndex](https://help.syncfusion.com/cr/maui/Sy
 
 ## Getting selected cells
 
-The `SfDataGrid` provides [SfDataGrid.GetSelectedCells()]((https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_GetSelectedCells)) and [SfDataGrid.GetSelectedCellInfo()]() methods to get details of the selected cells when the selection unit is [Cell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionUnit.html#Syncfusion_Maui_DataGrid_DataGridSelectionUnit_Cell) or [Any](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionUnit.html#Syncfusion_Maui_DataGrid_DataGridSelectionUnit_Any).
+The `SfDataGrid` provides [SfDataGrid.GetSelectedCells()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_GetSelectedCells) and [SfDataGrid.GetSelectedCellInfo()]() methods to get details of the selected cells when the selection unit is [Cell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionUnit.html#Syncfusion_Maui_DataGrid_DataGridSelectionUnit_Cell) or [Any](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionUnit.html#Syncfusion_Maui_DataGrid_DataGridSelectionUnit_Any).
 
 `SfDataGrid.GetSelectedCells()` : Provides details of all selected cells when multiple cells are selected
 
