@@ -35,6 +35,7 @@ It highlights the first position of the matching characters in the suggestion li
                     WidthRequest="300"
                     HeightRequest = "40"
                     ItemsSource="{Binding SocialMedias}"
+                    DisplayMemberPath="Name"
                     TextHighlightMode="FirstOccurrence"
                     IsEditable="True"
                     IsFilteringEnabled="True"
@@ -50,10 +51,12 @@ It highlights the first position of the matching characters in the suggestion li
          HeightRequest = 40,
          WidthRequest= 300,
          TextHighlightMode = OccurrenceMode.FirstOccurrence,
+         ItemsSource = socialMediaViewModel.SocialMedias,
          IsEditable =true,
+         DisplayMemberPath = "Name",
          IsFilteringEnabled = true,
          HighlightedTextColor = Colors.Red,
-         HighlightedTextFontAttributes = FontAttributes.Bold,
+         HighlightedTextFontAttributes = FontAttributes.Bold
     };
 
 {% endhighlight %}
@@ -69,16 +72,17 @@ It highlights the matching character that are present everywhere in the suggesti
 
 {% highlight xaml %}
 
-    <editors:SfComboBox x:Name="comboBox"
-                        WidthRequest="300"
-                        HeightRequest = "40"
-                        ItemsSource="{Binding SocialMedias}"
-                        TextHighlightMode="MultipleOccurrence"
-                        IsEditable="True"
-                        IsFilteringEnabled="True"
-                        HighlightedTextColor="Red"
-                        HighlightedTextFontAttributes="Bold"
-                        TextSearchMode="Contains" />
+<editors:SfComboBox x:Name="comboBox"
+                    WidthRequest="300"
+                    DisplayMemberPath="Name"
+                    HeightRequest = "40"
+                    ItemsSource="{Binding SocialMedias}"
+                    TextHighlightMode="MultipleOccurrence"
+                    IsEditable="True"
+                    IsFilteringEnabled="True"
+                    HighlightedTextColor="Red"
+                    HighlightedTextFontAttributes="Bold"
+                    TextSearchMode="Contains" />
 
 {% endhighlight %}
 
@@ -89,11 +93,13 @@ It highlights the matching character that are present everywhere in the suggesti
          HeightRequest = 40,
          WidthRequest= 300,
          TextSearchMode = ComboBoxTextSearchMode.Contains,
+         ItemsSource = socialMediaViewModel.SocialMedias,
          TextHighlightMode = OccurrenceMode.MultipleOccurrence,
+         DisplayMemberPath = "Name",
          IsEditable = true,
          IsFilteringEnabled = true,
          HighlightedTextColor = Colors.Red,
-         HighlightedTextFontAttributes = FontAttributes.Bold,
+         HighlightedTextFontAttributes = FontAttributes.Bold
     };
 
 {% endhighlight %}
