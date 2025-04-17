@@ -394,7 +394,6 @@ N> In versions prior to v29.1.33, the PDF Viewer rendered all form fields with a
 N> To maintain backward compatibility, support has been added to customize the background color of form fields programmatically. This allows you to restore the previous behavior or apply custom styling based on your application requirements.
 N> If you prefer to retain the original semi transparent blue background used in earlier versions, you can apply by setting the background color to `Color.FromRgba(204, 215, 255, 200)`. For example please refer to the section [Customize the background color of the form fields](https://help.syncfusion.com/maui/pdf-viewer/form-filling#customize-the-background-color-of-the-form-fields).
 
-
 ## Property changed event for Form fields Widgets
 
 The `PropertyChanged` event occurs when a property is changed in the PDF document. It is common for properties such as border color, background color, border width, and foreground color to trigger this event as well. The following example explains how to wire and handle the event.
