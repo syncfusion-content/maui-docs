@@ -304,26 +304,18 @@ Customizing form fields allows you to control their appearance and behavior. You
 
 ### Customize the background color of the form fields
 
-The BackgroundColor property sets the background color of a form field, letting you customize its appearance. Here's an example of how to use it for a text form field, and it can also be applied to checkboxes and radio buttons by adjusting their properties.
-
+The BackgroundColor property allows you to customize the appearance of form fields by setting their background color. The example below demonstrates how to apply a uniform background color to all form fields in the PDF document, regardless of their type.This approach can also be applied to specific form field types, such as checkboxes and radio buttons, by adjusting their respective properties individually.
 
 {% tabs %}
 {% highlight C# %}
-foreach (FormField formField in PdfViewer.FormFields) 
+foreach (FormField formField in PdfViewer.FormFields)
 {
-    // Check if the current form field is a text form field 
-    if (formField is TextFormField textBoxField)
+    foreach (Widget widget in formField.Widgets)
     {
-        // Loop through all the widgets associated with the text box field
-        foreach (var widget in textBoxField.Widgets)
-        {
-            // Set the background color of each widget to yellow
-            widget.BackgroundColor = Colors.Yellow;
-        }
+        //Set the background color of the widget to a semi transparent blue background with Rgba value of (204, 215, 255, 200)
+        widget.BackgroundColor = Color.FromRgba(204, 215, 255, 200);
     }
-}
- 
- 
+} 
 {% endhighlight %}
 {% endtabs %}
 
@@ -398,21 +390,10 @@ foreach (FormField formField in PdfViewer.FormFields)
 {% endhighlight %}
 {% endtabs %}
 
-N> In versions prior to v29.1.33, the PDF Viewer rendered all form fields with a default light blue background, without considering the background color defined within the PDF document.
-N> Starting with v29.1.33, the PDF Viewer now renders form fields using the background color specified in their appearance settings, ensuring the fields are displayed as intended by the document author.
+N> In versions prior to v29.1.33, the PDF Viewer rendered all form fields with a default semi transparent blue background, without considering the background color defined within the PDF document.Starting with v29.1.33, the PDF Viewer now renders form fields using the background color specified in their appearance settings, ensuring the fields are displayed as intended by the document author.
 N> To maintain backward compatibility, support has been added to customize the background color of form fields programmatically. This allows you to restore the previous behavior or apply custom styling based on your application requirements.
-N> If you prefer to retain the original light blue background used in earlier versions, you can apply it manually using the following code:
-N> {% tabs %}
-N> {% highlight csharp %}
-N> foreach (FormField field in PdfViewer.FormFields)
-N> {
-N>     foreach (Widget widget in field.Widgets)
-N>     {
-N>         widget.BackgroundColor = Color.FromRgba(204, 215, 255, 200); // Light blue background
-N>     }
-N> }
-N> {% endhighlight %}
-N> {% endtabs %}
+N> If you prefer to retain the original semi transparent blue background used in earlier versions, you can apply by setting the background color to `Color.FromRgba(204, 215, 255, 200)`. For example please refer to the section [Customize the background color of the form fields](https://help.syncfusion.com/maui/pdf-viewer/form-filling#customize-the-background-color-of-the-form-fields).
+
 
 ## Property changed event for Form fields Widgets
 
