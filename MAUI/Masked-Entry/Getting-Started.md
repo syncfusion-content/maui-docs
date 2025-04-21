@@ -219,7 +219,7 @@ Step 3: Add the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.M
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfMaskedEntry WidthRequest="2"
+<editors:SfMaskedEntry WidthRequest="200"
                           ClearButtonVisibility="WhileEditing"
                           MaskType="Simple"
                           Mask="00/00/0000" />

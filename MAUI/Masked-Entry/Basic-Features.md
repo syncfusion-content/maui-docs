@@ -327,8 +327,7 @@ N> Default value of ReturnType is `Default`.
 {% highlight xaml %}
 
 <editors:SfMaskedEntry x:Name="maskedentry" 
-                        WidthRequest="200"
-                        Mask="00:00:0000" Value="120319"
+                        Mask="00:00:0000"
                         ClearButtonVisibility="WhileEditing"
                         ReturnType="Next"/>
 
@@ -336,7 +335,6 @@ N> Default value of ReturnType is `Default`.
 {% highlight C# %}
 
 SfMaskedEntry maskedEntry = new SfMaskedEntry();
-maskedEntry.WidthRequest = 200;
 maskedEntry.Mask = "00:00:0000";
 maskedEntry.ClearButtonVisibility = ClearButtonVisibility.WhileEditing;
 maskedEntry.ReturnType = ReturnType.Next;
@@ -354,7 +352,6 @@ The `ClearButtonPath` property allows users to set the path for customizing the 
 {% highlight xaml %}
 
 <editors:SfMaskedEntry x:Name="maskedEntry"
-                       WidthRequest="250"
                        MaskType="Simple"
                        Mask="(000) 000-0000"
                        ClearButtonVisibility="WhileEditing">
@@ -379,7 +376,6 @@ var path = new Path()
 };
 
 SfMaskedEntry maskedEntry = new SfMaskedEntry();
-maskedEntry.WidthRequest = 250;
 maskedEntry.MaskType = MaskedEntryMaskType.Simple;
 maskedEntry.Mask = "(000) 000-0000"; 
 maskedEntry.ClearButtonVisibility = ClearButtonVisibility.WhileEditing;

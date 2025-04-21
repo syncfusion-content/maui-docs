@@ -16,7 +16,6 @@ When the HidePromptOnLeave property is set to true, prompt characters are ignore
 {% highlight XAML %}
 
 <editors:SfMaskedEntry x:Name="maskedEntry" 
-                       WidthRequest="200";
                        Placeholder="Enter here"
                        MaskType="Simple"
                        Mask="00/00/0000" 
@@ -28,7 +27,6 @@ When the HidePromptOnLeave property is set to true, prompt characters are ignore
 {% highlight C# %}
 
 SfMaskedEntry maskedEntry = new SfMaskedEntry();
-maskedEntry.WidthRequest = 200;
 maskedEntry.Placeholder="Enter here";
 maskedEntry.MaskType = MaskedEntryMaskType.Simple;
 maskedEntry.Mask = "00/00/0000";
