@@ -277,7 +277,7 @@ public class GroupCaptionConverter : IValueConverter
 
 ![DataGrid with template loaded for entire caption summary row](Images\caption-summary\maui-datagrid-template-row.png)
 
-N> The `DataTemplateSelector` can also be directly assigned to the `CaptionSummaryTemplate`.
+N> The `DataTemplateSelector` can also be directly assigned to the `CaptionSummaryTemplate`. When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
 
 ### Displaying template for a column
@@ -574,7 +574,7 @@ public class GroupSummaryConverter : IValueConverter
 
 ![DataGrid with template loaded for entire group summary row](Images\group-summary\maui-datagrid-row-template.png)
 
-N> The `DataTemplateSelector` can also be directly assigned to the `SfDataGrid.GroupSummaryTemplate`.
+N> The `DataTemplateSelector` can also be directly assigned to the `SfDataGrid.GroupSummaryTemplate`. When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
 ### Displaying template for a column
 
@@ -1110,7 +1110,7 @@ public class TableSummaryConverter : IValueConverter
 
 ![Table summary template in a column](Images\table-summary\maui-datagrid-template-column.png)
 
-N> The `DataTemplateSelector` can also be directly assigned to the `SfDataGrid.TableSummaryTemplate`.
+N> The `DataTemplateSelector` can also be directly assigned to the `SfDataGrid.TableSummaryTemplate`. When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
 ## Formatting summary
 

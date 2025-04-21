@@ -63,6 +63,112 @@ this.sfDataGrid1.ItemsSource = table;
 * [SfDataGrid.View.Filter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html#Syncfusion_Maui_Data_ICollectionViewAdv_Filter) is not supported.
 * [SfDataGrid.View.LiveDataUpdateMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.ICollectionViewAdv.html#Syncfusion_Maui_Data_ICollectionViewAdv_LiveDataUpdateMode) is not supported.
 
+## Binding with dynamic data object
+
+The `SfDataGrid` control supports binding to a [dynamic data object](https://learn.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-9.0).
+
+The code examples below demonstrate how to bind a dynamic data object to the `SfDataGrid` using both manually and automatically generated columns.
+
+{% tabs %}
+{% highlight c# %}
+
+public class EmployeeCollection
+{
+       
+    Random random = new Random();
+        
+    public EmployeeCollection()
+    {
+        EmployeeDetails = GetEmployeesDetails_Dynamic(200);
+    }
+    
+    #region ItemsSource
+    
+    private ObservableCollection<dynamic> _employeeDetails;
+    public ObservableCollection<dynamic> EmployeeDetails
+    {
+        get
+        {
+            return _employeeDetails;
+        }
+        set
+        {
+            _employeeDetails = value;
+            RaisePropertyChanged("EmployeeDetails");
+        }
+    }
+    
+    #endregion
+    
+    // Dynamic DataSource
+    
+    public ObservableCollection<dynamic> GetEmployeesDetails_Dynamic(int count)
+    {
+        var employees = new ObservableCollection<dynamic>();
+        for (int i = 1; i < count; i++)
+        {
+            employees.Add(GetDynamicEmployee(i));
+        }
+        return employees;
+    }
+    
+    // Dynamic Property
+    public dynamic GetDynamicEmployee(int i)
+    {
+        dynamic employee = new ExpandoObject();
+        employee.EmployeeName = employeeName[random.Next(4)];
+        employee.EmployeeID = i;
+        employee.ContactID = i + 100;
+        return employee;
+    }
+    
+    string[] employeeName = new string[]
+    {
+        "Sean Jacobson",
+        "Phyllis Allen",
+        "Marvin Allen",
+        "Michael Allen",
+    };
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="sfDataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       AutoGenerateColumnsMode="None" />
+<syncfusion:SfDataGrid.Columns>
+    <syncfusion:DataGridNumericColumn MappingName="[OrderID]"
+                                      HeaderText="Order ID" />
+    <syncfusion:DataGridTextColumn MappingName="[CustomerID]"
+                                   HeaderText="Customer ID" />
+    <syncfusion:DataGridTextColumn MappingName="[ShipCountry]"
+                                   HeaderText="Ship Country" />
+</syncfusion:SfDataGrid.Columns>
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="sfDataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       AutoGeneratingColumn="datagrid_AutoGeneratingColumn" />
+{% endhighlight %}
+
+{% highlight c# %}
+private void datagrid_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
+{
+     e.Column.MappingName = "[" + e.Column.MappingName + "]";
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Limitations
+
+* SfDataGrid doesn’t support [LiveDataUpdateMode]() - `AllowDataShaping` and `AllowSummaryUpdate`.
+
 ## Binding complex properties
 
 The SfDataGrid control provides support for binding complex properties to its columns. To bind the complex property to [DataGridColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html), set the complex property path to [MappingName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_MappingName).
