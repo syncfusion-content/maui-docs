@@ -28,11 +28,11 @@ The [SwipeEnded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.Sf
     SwipeEnded="carousel_SwipeEnded"
     ItemsSource="{Binding ImageCollection}"
     ItemTemplate="{StaticResource itemTemplate}" 
-    ItemHeight="170"
-    ItemWidth="270"
+    ItemHeight="200"
+    ItemWidth="200"
     ItemSpacing="2"
     AllowLoadMore="True"
-    ViewMode="Linear">
+    ViewMode="Default">
 </carousel:SfCarousel>
 	
 {% endhighlight %}
@@ -41,11 +41,11 @@ The [SwipeEnded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.Sf
 
 SfCarousel carousel = new SfCarousel()
 {
-    ItemHeight= 170,
-    ItemWidth = 270,
+    ItemHeight= 200,
+    ItemWidth = 200,
     ItemSpacing = 2,
     AllowLoadMore = true,
-    ViewMode = ViewMode.Linear
+    ViewMode = ViewMode.Default
 };
 carousel.ItemTemplate = itemTemplate;
 carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");

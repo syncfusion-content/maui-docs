@@ -168,8 +168,8 @@ Spacing of all the items in Linear mode can be determined by using [ItemSpacing]
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
                      ItemTemplate="{StaticResource itemTemplate}" 
-                     ItemHeight="170"
-                     ItemWidth="270"
+                     ItemHeight="200"
+                     ItemWidth="200"
                      ItemSpacing="60"
                      ViewMode="Linear"/>
 	
@@ -179,8 +179,8 @@ Spacing of all the items in Linear mode can be determined by using [ItemSpacing]
 
 SfCarousel carousel = new SfCarousel()
 {
-    ItemHeight= 170,
-    ItemWidth = 270,
+    ItemHeight= 200,
+    ItemWidth = 200,
     ItemSpacing = 60,
     ViewMode = ViewMode.Linear
 };
