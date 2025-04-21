@@ -28,8 +28,8 @@ The [SwipeEnded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.Sf
     SwipeEnded="carousel_SwipeEnded"
     ItemsSource="{Binding ImageCollection}"
     ItemTemplate="{StaticResource itemTemplate}" 
-    ItemHeight="200"
-    ItemWidth="200"
+    ItemHeight="170"
+    ItemWidth="270"
     ItemSpacing="2"
     AllowLoadMore="True"
     ViewMode="Linear">
@@ -38,6 +38,19 @@ The [SwipeEnded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.Sf
 {% endhighlight %}
 
 {% highlight c# %}
+
+SfCarousel carousel = new SfCarousel()
+{
+    ItemHeight= 170,
+    ItemWidth = 270,
+    ItemSpacing = 2,
+    AllowLoadMore = True,
+    ViewMode = ViewMode.Linear
+};
+carousel.ItemTemplate = itemTemplate;
+carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
+carousel.SwipeStarted += carousel_SwipeStarted;
+carousel.SwipeEnded += carousel_SwipeEnded;
 
 private async void carousel_SwipeStarted(object sender, Syncfusion.Maui.Core.Carousel.SwipeStartedEventArgs e)
 {

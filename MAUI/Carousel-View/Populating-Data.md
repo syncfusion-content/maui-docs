@@ -101,8 +101,8 @@ namespace CarouselSample
         <carousel:SfCarousel x:Name="carousel"  
                              ItemTemplate="{StaticResource itemTemplate}" 
                              ItemsSource="{Binding ImageCollection}"
-                             ItemHeight="200"
-                             ItemWidth="200"
+                             ItemHeight="170"
+                             ItemWidth="270"
                              ItemSpacing="2" 
                              HeightRequest="400" 
                              WidthRequest="800" />
@@ -171,8 +171,8 @@ namespace CarouselSample
             InitializeComponent();
             SfCarousel carousel = new SfCarousel()
             {
-                ItemWidth = 170,
-                ItemHeight = 250
+                ItemWidth = 270,
+                ItemHeight = 170
             };
 
             ObservableCollection<SfCarouselItem> carouselItems = new ObservableCollection<SfCarouselItem>();
@@ -208,8 +208,8 @@ namespace CarouselSample
             InitializeComponent();
             SfCarousel carousel = new SfCarousel()
             {
-                ItemWidth = 170,
-                ItemHeight = 250
+                ItemWidth = 270,
+                ItemHeight = 170
             };
 
             ObservableCollection<SfCarouselItem> carouselItems = new ObservableCollection<SfCarouselItem>();

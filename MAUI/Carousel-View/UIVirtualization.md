@@ -28,8 +28,8 @@ N> The default value of the [EnableVirtualization](https://help.syncfusion.com/c
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
                      ItemTemplate="{StaticResource itemTemplate}" 
-                     ItemHeight="200"
-                     ItemWidth="200"
+                     ItemHeight="170"
+                     ItemWidth="270"
                      ItemSpacing="2"
                      ViewMode="Linear"
                      EnableVirtualization="true">
@@ -42,8 +42,8 @@ N> The default value of the [EnableVirtualization](https://help.syncfusion.com/c
 CarouselViewModel carouselViewModel = new CarouselViewModel();
 SfCarousel carousel = new SfCarousel()
 {
-    ItemHeight = 200,
-    ItemWidth = 200,
+    ItemHeight= 170,
+    ItemWidth = 270,
     ItemSpacing = 2,
     EnableVirtualization = true,
     ViewMode = ViewMode.Linear

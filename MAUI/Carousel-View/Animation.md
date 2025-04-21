@@ -18,8 +18,8 @@ The [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCa
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
                      ItemTemplate="{StaticResource itemTemplate}" 
-                     ItemHeight="200"
-                     ItemWidth="200"
+                     ItemHeight="170"
+                     ItemWidth="270"
                      Duration="1000"/>
 
 {% endhighlight %}
@@ -28,8 +28,8 @@ The [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCa
 
 SfCarousel carousel = new SfCarousel()
 {
-    ItemHeight = 200,
-    ItemWidth = 200,
+    ItemHeight = 170,
+    ItemWidth = 270,
 };
 carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 carousel.ItemTemplate = itemTemplate;

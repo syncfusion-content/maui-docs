@@ -18,14 +18,26 @@ We can perform the operation while changing the CarouselItem using the [Selectio
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
                      ItemTemplate="{StaticResource itemTemplate}" 
-                     ItemHeight="200"
-                     ItemWidth="200"
+                     ItemHeight="170"
+                     ItemWidth="270"
                      SelectionChanged="Carousel_SelectionChanged"/>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
+
+SfCarousel carousel = new SfCarousel()
+{
+    ItemHeight = 170,
+    ItemWidth = 270,
+};
+
+carousel.ItemTemplate = itemTemplate;
+carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
+carousel.SelectionChanged += Carousel_SelectionChanged;
+
+// Trigger when selection changed in the carousel item.
 private void Carousel_SelectionChanged(object sender, Syncfusion.Maui.Core.Carousel.SelectionChangedEventArgs e)
 {
     int count = (sender as SfCarousel).SelectedIndex + 1;

@@ -36,8 +36,8 @@ N>The default value of the [AllowLoadMore](https://help.syncfusion.com/cr/maui/S
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
                      ItemTemplate="{StaticResource itemTemplate}"
-                     ItemHeight="200"
-                     ItemWidth="200"
+                     ItemHeight="170"
+                     ItemWidth="270"
                      ItemSpacing="2" 
                      AllowLoadMore="True"
                      ViewMode="Linear">
@@ -49,11 +49,13 @@ N>The default value of the [AllowLoadMore](https://help.syncfusion.com/cr/maui/S
 
 SfCarousel carousel = new SfCarousel()
 {
+    ItemHeight= 170,
+    ItemWidth = 270,
     ItemSpacing = 2,
-    AllowLoadMore = true,
+    AllowLoadMore = True,
     ViewMode = ViewMode.Linear
 };
-
+carousel.ItemTemplate = itemTemplate;
 carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 {% endhighlight %}
@@ -73,12 +75,12 @@ N>The default value of the [LoadMoreItemsCount](https://help.syncfusion.com/cr/m
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
                      ItemTemplate="{StaticResource itemTemplate}"
-                     ItemHeight="200"
-                     ItemWidth="200"
+                     ItemHeight="170"
+                     ItemWidth="270"
                      ItemSpacing="2"
                      AllowLoadMore="True"
-                     ViewMode="Linear"
-                     LoadMoreItemsCount="2" />
+                     LoadMoreItemsCount="2" 
+                     ViewMode="Linear"/>
 
 {% endhighlight %}
 
@@ -86,14 +88,15 @@ N>The default value of the [LoadMoreItemsCount](https://help.syncfusion.com/cr/m
 
 SfCarousel carousel = new SfCarousel()
 {
-    ItemHeight = 200,
-    ItemWidth = 200,
+    ItemHeight= 170,
+    ItemWidth = 270,
     ItemSpacing = 2,
-    AllowLoadMore = true,
+    AllowLoadMore = True,
     LoadMoreItemsCount = 2,
     ViewMode = ViewMode.Linear
 };
 
+carousel.ItemTemplate = itemTemplate;
 carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 {% endhighlight %}
@@ -111,8 +114,8 @@ Custom view can be passed instead of the [LoadMore](https://help.syncfusion.com/
 <carousel:SfCarousel x:Name="carousel"
     ItemsSource="{Binding ImageCollection}"
     ItemTemplate="{StaticResource itemTemplate}"
-    ItemHeight="200"
-    ItemWidth="200"
+    ItemHeight="170"
+    ItemWidth="270"
     ItemSpacing="2"
     AllowLoadMore="True"
     ViewMode="Linear"
@@ -138,8 +141,8 @@ Custom view can be passed instead of the [LoadMore](https://help.syncfusion.com/
 
 SfCarousel carousel = new SfCarousel()
 {
-    ItemHeight = 200,
-    ItemWidth = 200,
+    IItemHeight= 170,
+    ItemWidth = 270,
     ItemSpacing = 2,
     AllowLoadMore = true,
     LoadMoreItemsCount = 2,
@@ -186,9 +189,10 @@ To load more items programmatically, the [LoadMore](https://help.syncfusion.com/
     <carousel:SfCarousel x:Name="carousel"
                          ItemsSource="{Binding ImageCollection}"
                          ItemTemplate="{StaticResource itemTemplate}"
-                         ItemHeight="200"
-                         ItemWidth="200"
+                         ItemHeight="170"
+                         ItemWidth="270"
                          ItemSpacing="2" 
+                         AllowLoadMore="True"
                          ViewMode="Default"
                          LoadMoreItemsCount="2" />
     <Button Text="LoadMore Method" 
@@ -197,6 +201,25 @@ To load more items programmatically, the [LoadMore](https://help.syncfusion.com/
 {% endhighlight %}
 
 {% highlight c# %}
+
+
+SfCarousel carousel = new SfCarousel()
+{
+    ItemHeight = 170,
+    ItemWidth = 270,
+    ItemSpacing = 2, 
+    AllowLoadMore = True,
+    ViewMode = ViewMode.Default,
+    LoadMoreItemsCount = 2,
+};
+
+carousel.ItemTemplate = itemTemplate;
+carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
+
+Button button = new Button();
+button.Text = "LoadMore Method";
+button.Clicked += Button_Clicked;
+
 
 private void Button_Clicked(object sender, EventArgs e)
 {
