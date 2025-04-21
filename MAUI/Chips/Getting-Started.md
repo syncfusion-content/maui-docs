@@ -75,9 +75,7 @@ namespace AutocompleteSample
 
 ## Step 4: Add a Basic Chips control
 
-Step 1: Add the NuGet to the project
-
-Step 2: Add the namespace as shown in the following code snippet
+Step 1: Add the namespace as shown in the following code snippet
 
 {% tabs %}
 
@@ -95,7 +93,7 @@ Step 2: Add the namespace as shown in the following code snippet
 
 {% endtabs %}
 
-Step 3: Set the control to content in `ContentPage.`
+Step 2: Set the control to content in `ContentPage.`
 
 **For SfChip**
 

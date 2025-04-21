@@ -51,6 +51,25 @@ this.dataGrid.ScrollToColumnIndex(4, ScrollToPosition.MakeVisible, true);
 {% endhighlight %}
 {% endtabs %}
 
+## Diagonal scrolling
+
+By default, the `SfDataGrid` allows both vertical and horizontal scrolling simultaneously (diagonal scrolling). By setting [SfDataGrid.AllowDiagonalScrolling](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowDiagonalScrolling) to false, you ensure that scrolling happens in only one direction at a time, either horizontally or vertically.
+
+The following code snippets demonstrate how to disable diagonal scrolling:
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding OrderInfoCollection}"
+                           AllowDiagonalScrolling="False">
+  </syncfusion:SfDataGrid>
+{% endhighlight %}
+
+{% highlight C# %}  
+this.dataGrid.AllowDiagonalScrolling = false;
+{% endhighlight %}
+{% endtabs %}
+
 ## Scrollbar Visibility
 
 The visibility of the horizontal and vertical scrollbars can be customized using the [SfDataGrid.HorizontalScrollBarVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_HorizontalScrollBarVisibilityProperty) and [SfDataGrid.VerticalScrollBarVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_VerticalScrollBarVisibilityProperty) properties. By default, the visibility of both the horizontal and vertical scrollbars is set to `ScrollBarVisibility.Default`.
@@ -87,3 +106,28 @@ namespace DataGridSample
 {% endtabs %}
 
 N> These properties do not have any effect when the datagrid has no scrollable content in its respective direction. In such cases, the scroll bar will not be displayed.
+
+## Vertical Over Scroll Mode
+
+The [SfDataGrid.VerticalOverScrollMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_VerticalOverScrollMode) property customizes the vertical scrolling behavior in the data grid by controlling the bouncing effect when the user scrolls beyond the grid's boundaries. This property defines whether users experience a smooth, elastic pull effect or a strict stop when reaching the start or end of the scrollable content.
+
+The [VerticalOverScrollMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_VerticalOverScrollMode) property is of the type `DataGridVerticalScrollMode` and offers the following two modes:
+
+- **Bounce**: This mode enables the grid to apply a bounce effect when the user scrolls beyond the boundaries. It is the default value for the iOS platform.
+- **None**: This mode prevents the grid from applying the bounce effect. It is the default value for the Android platform.
+
+To customize the bouncing effect in the data grid, follow the code example:
+{% tabs %}
+{% highlight xaml %}
+    <sfgrid:SfDataGrid x:Name="dataGrid"                                       
+                       ItemsSource="{Binding OrderInfoCollection}"         
+                       VerticalOverScrollMode="Bounce">   
+    </sfgrid:SfDataGrid> 
+{% endhighlight %}
+
+{% highlight C# %}  
+dataGrid.VerticalOverScrollMode = DataGridVerticalOverScrollMode.Bounce;
+{% endhighlight %}
+{% endtabs %}
+
+ <img alt="Vertical-OverScroll-Mode" src="Images\scrolling\maui-datagrid-verticaloverscrollMode.gif" width="404" height="396"/>
