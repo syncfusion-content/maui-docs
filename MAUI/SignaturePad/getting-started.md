@@ -448,7 +448,7 @@ signaturePad.DrawCompleted += OnDrawCompleted;
 
 private void OnDrawCompleted(object? sender, EventArgs e)
 {
-    // Trigger for the drawing completed
+    // Trigger when the drawing is completed
 }
 
 {% endhighlight %}
