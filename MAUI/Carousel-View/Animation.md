@@ -26,25 +26,13 @@ The [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCa
 
 {% highlight C# %}
 
-CarouselViewModel carouselViewModel = new CarouselViewModel();
 SfCarousel carousel = new SfCarousel()
 {
     ItemHeight = 200,
     ItemWidth = 200,
-    EnableVirtualization = true,
-    ViewMode = ViewMode.Linear
 };
-var itemTemplate = new DataTemplate(() =>
-{
-    var grid = new Grid();
-    var nameLabel = new Image();
-    nameLabel.SetBinding(Image.SourceProperty, "Image");
-    grid.Children.Add(nameLabel);
-    return grid;
-});
-carousel.BindingContext = carouselViewModel;
-carousel.ItemTemplate = itemTemplate;
 carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
+carousel.ItemTemplate = itemTemplate;
 carousel.Duration = 1000;
 
 {% endhighlight %}
