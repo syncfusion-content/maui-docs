@@ -89,7 +89,7 @@ The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssis
                                  AssistItems="{Binding AssistItems}"
                                  ShowHeader="True"
                                  HeaderTemplate="{StaticResource headerTemplate}">
-      </syncfusion:SfSfAIAssistView>
+      </syncfusion:SfAIAssistView>
 </ContentPage.Content>
 
 {% endhighlight %}
