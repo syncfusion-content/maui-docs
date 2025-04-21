@@ -20,7 +20,6 @@ The [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCa
                      ItemTemplate="{StaticResource itemTemplate}" 
                      ItemHeight="200"
                      ItemWidth="200"
-                     ItemSpacing="2"
                      Duration="1000"/>
 
 {% endhighlight %}
@@ -32,7 +31,6 @@ SfCarousel carousel = new SfCarousel()
 {
     ItemHeight = 200,
     ItemWidth = 200,
-    ItemSpacing = 2,
     EnableVirtualization = true,
     ViewMode = ViewMode.Linear
 };
