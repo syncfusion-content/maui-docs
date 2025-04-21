@@ -23,67 +23,25 @@ Set up the MaskedEntry to exclude prompt and literal characters, preserving only
 {% tabs %}
 {% highlight XAML %}
 
-<VerticalStackLayout Spacing="10" VerticalOptions="Center">
-    <editors:SfMaskedEntry x:Name="maskedEntry" WidthRequest="200"
-                              MaskType="Simple"
-                              ClearButtonVisibility="WhileEditing"
-                              Mask=">AAAAA-AAAAA-AAAAA-AAAAA"
-                              Value="DF321SD1A"
-                              ValueMaskFormat="ExcludePromptAndLiterals"/>
-    <HorizontalStackLayout Spacing="2" HeightRequest="40" WidthRequest="200">
-        <Label Text="Value :"/>
-        <Label x:Name="valueDisplay" 
-               Text="{Binding Path=Value, Source={x:Reference maskedEntry}}" 
-               HeightRequest="40" />
-    </HorizontalStackLayout>
-</VerticalStackLayout>
+<editors:SfMaskedEntry x:Name="maskedEntry" WidthRequest="200"
+                            MaskType="Simple"
+                            ClearButtonVisibility="WhileEditing"
+                            Mask=">AAAAA-AAAAA-AAAAA-AAAAA"
+                            Value="DF321SD1A"
+                            ValueMaskFormat="ExcludePromptAndLiterals"/>
 
 {% endhighlight %}
 {% highlight C# %}
 
-public partial class MainPage : ContentPage
+SfMaskedEntry maskedEntry = new SfMaskedEntry
 {
-    public MainPage()
-    {
-        InitializeComponent();
-        SfMaskedEntry maskedEntry = new SfMaskedEntry
-        {
-            WidthRequest = 200,
-            MaskType = MaskedEntryMaskType.Simple,
-            ClearButtonVisibility = ClearButtonVisibility.WhileEditing,
-            Mask = ">AAAAA-AAAAA-AAAAA-AAAAA",
-            Value = "DF321SD1A",
-            ValueMaskFormat = MaskedEntryMaskFormat.ExcludePromptAndLiterals
-        };
-        Label valueLabel = new Label
-        {
-            Text = "Value :"
-        };
-        Label valueDisplay = new Label
-        {
-            HeightRequest = 40
-        };
-        valueDisplay.SetBinding(Label.TextProperty, new Binding
-        {
-            Path = "Value",
-            Source = maskedEntry
-        });
-        HorizontalStackLayout valueLayout = new HorizontalStackLayout
-        {
-            Spacing = 2,
-            HeightRequest = 40,
-            WidthRequest = 200,
-            Children = { valueLabel, valueDisplay }
-        };
-        VerticalStackLayout mainLayout = new VerticalStackLayout
-        {
-            Spacing = 10,
-            VerticalOptions = LayoutOptions.Center,
-            Children = { maskedEntry, valueLayout }
-        };
-        Content = mainLayout;
-    }
-}
+    WidthRequest = 200,
+    MaskType = MaskedEntryMaskType.Simple,
+    ClearButtonVisibility = ClearButtonVisibility.WhileEditing,
+    Mask = ">AAAAA-AAAAA-AAAAA-AAAAA",
+    Value = "DF321SD1A",
+    ValueMaskFormat = MaskedEntryMaskFormat.ExcludePromptAndLiterals
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -97,67 +55,25 @@ Set up the MaskedEntry to preserve typed and prompt characters, excluding litera
 {% tabs %}
 {% highlight XAML %}
 
-<VerticalStackLayout Spacing="10" VerticalOptions="Center">
-    <editors:SfMaskedEntry x:Name="maskedEntry" WidthRequest="200"
-                              MaskType="Simple"
-                              ClearButtonVisibility="WhileEditing"
-                              Mask=">AAAAA-AAAAA-AAAAA-AAAAA"
-                              Value="DF321SD1A"
-                              ValueMaskFormat="IncludePrompt"/>
-    <HorizontalStackLayout Spacing="2" HeightRequest="40" WidthRequest="200">
-        <Label Text="Value :"/>
-        <Label x:Name="valueDisplay" 
-               Text="{Binding Path=Value, Source={x:Reference maskedEntry}}" 
-               HeightRequest="40" />
-    </HorizontalStackLayout>
-</VerticalStackLayout>
+<editors:SfMaskedEntry x:Name="maskedEntry" WidthRequest="200"
+                            MaskType="Simple"
+                            ClearButtonVisibility="WhileEditing"
+                            Mask=">AAAAA-AAAAA-AAAAA-AAAAA"
+                            Value="DF321SD1A"
+                            ValueMaskFormat="IncludePrompt"/>
 
 {% endhighlight %}
 {% highlight C# %}
 
-public partial class MainPage : ContentPage
+SfMaskedEntry maskedEntry = new SfMaskedEntry
 {
-    public MainPage()
-    {
-        InitializeComponent();
-        SfMaskedEntry maskedEntry = new SfMaskedEntry
-        {
-            WidthRequest = 200,
-            MaskType = MaskedEntryMaskType.Simple,
-            ClearButtonVisibility = ClearButtonVisibility.WhileEditing,
-            Mask = ">AAAAA-AAAAA-AAAAA-AAAAA",
-            Value = "DF321SD1A",
-            ValueMaskFormat = MaskedEntryMaskFormat.IncludePrompt
-        };
-        Label valueLabel = new Label
-        {
-            Text = "Value :"
-        };
-        Label valueDisplay = new Label
-        {
-            HeightRequest = 40
-        };
-        valueDisplay.SetBinding(Label.TextProperty, new Binding
-        {
-            Path = "Value",
-            Source = maskedEntry
-        });
-        HorizontalStackLayout valueLayout = new HorizontalStackLayout
-        {
-            Spacing = 2,
-            HeightRequest = 40,
-            WidthRequest = 200,
-            Children = { valueLabel, valueDisplay }
-        };
-        VerticalStackLayout mainLayout = new VerticalStackLayout
-        {
-            Spacing = 10,
-            VerticalOptions = LayoutOptions.Center,
-            Children = { maskedEntry, valueLayout }
-        };
-        Content = mainLayout;
-    }
-}
+    WidthRequest = 200,
+    MaskType = MaskedEntryMaskType.Simple,
+    ClearButtonVisibility = ClearButtonVisibility.WhileEditing,
+    Mask = ">AAAAA-AAAAA-AAAAA-AAAAA",
+    Value = "DF321SD1A",
+    ValueMaskFormat = MaskedEntryMaskFormat.IncludePrompt
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -171,67 +87,25 @@ Keep typed and literal characters in the input but exclude prompt characters.
 {% tabs %}
 {% highlight XAML %}
 
-<VerticalStackLayout Spacing="10" VerticalOptions="Center">
-    <editors:SfMaskedEntry x:Name="maskedEntry" WidthRequest="200"
-                              MaskType="Simple"
-                              ClearButtonVisibility="WhileEditing"
-                              Mask=">AAAAA-AAAAA-AAAAA-AAAAA"
-                              Value="DF321SD1A"
-                              ValueMaskFormat="IncludeLiterals"/>
-    <HorizontalStackLayout Spacing="2" HeightRequest="40" WidthRequest="200">
-        <Label Text="Value :"/>
-        <Label x:Name="valueDisplay" 
-               Text="{Binding Path=Value, Source={x:Reference maskedEntry}}" 
-               HeightRequest="40" />
-    </HorizontalStackLayout>
-</VerticalStackLayout>
+<editors:SfMaskedEntry x:Name="maskedEntry" WidthRequest="200"
+                            MaskType="Simple"
+                            ClearButtonVisibility="WhileEditing"
+                            Mask=">AAAAA-AAAAA-AAAAA-AAAAA"
+                            Value="DF321SD1A"
+                            ValueMaskFormat="IncludeLiterals"/>
 
 {% endhighlight %}
 {% highlight C# %}
 
-public partial class MainPage : ContentPage
+SfMaskedEntry maskedEntry = new SfMaskedEntry
 {
-    public MainPage()
-    {
-        InitializeComponent();
-        SfMaskedEntry maskedEntry = new SfMaskedEntry
-        {
-            WidthRequest = 200,
-            MaskType = MaskedEntryMaskType.Simple,
-            ClearButtonVisibility = ClearButtonVisibility.WhileEditing,
-            Mask = ">AAAAA-AAAAA-AAAAA-AAAAA",
-            Value = "DF321SD1A",
-            ValueMaskFormat = MaskedEntryMaskFormat.IncludeLiterals
-        };
-        Label valueLabel = new Label
-        {
-            Text = "Value :"
-        };
-        Label valueDisplay = new Label
-        {
-            HeightRequest = 40
-        };
-        valueDisplay.SetBinding(Label.TextProperty, new Binding
-        {
-            Path = "Value",
-            Source = maskedEntry
-        });
-        HorizontalStackLayout valueLayout = new HorizontalStackLayout
-        {
-            Spacing = 2,
-            HeightRequest = 40,
-            WidthRequest = 200,
-            Children = { valueLabel, valueDisplay }
-        };
-        VerticalStackLayout mainLayout = new VerticalStackLayout
-        {
-            Spacing = 10,
-            VerticalOptions = LayoutOptions.Center,
-            Children = { maskedEntry, valueLayout }
-        };
-        Content = mainLayout;
-    }
-}
+    WidthRequest = 200,
+    MaskType = MaskedEntryMaskType.Simple,
+    ClearButtonVisibility = ClearButtonVisibility.WhileEditing,
+    Mask = ">AAAAA-AAAAA-AAAAA-AAAAA",
+    Value = "DF321SD1A",
+    ValueMaskFormat = MaskedEntryMaskFormat.IncludeLiterals
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -245,68 +119,26 @@ Maintain typed, prompt, and literal characters in the input.
 {% tabs %}
 {% highlight XAML %}
 
-<VerticalStackLayout Spacing="10" VerticalOptions="Center">
-    <editors:SfMaskedEntry x:Name="maskedEntry" WidthRequest="200"
-                              MaskType="Simple"
-                              ClearButtonVisibility="WhileEditing"
-                              Mask=">AAAAA-AAAAA-AAAAA-AAAAA"
-                              Value="DF321SD1A"
-                              ValueMaskFormat="IncludePromptAndLiterals"/>
-    <HorizontalStackLayout Spacing="2" HeightRequest="40" WidthRequest="200">
-        <Label Text="Value :"/>
-        <Label x:Name="valueDisplay" 
-               Text="{Binding Path=Value, Source={x:Reference maskedEntry}}" 
-               HeightRequest="40" />
-    </HorizontalStackLayout>
-</VerticalStackLayout>
+<editors:SfMaskedEntry x:Name="maskedEntry" WidthRequest="200"
+                            MaskType="Simple"
+                            ClearButtonVisibility="WhileEditing"
+                            Mask=">AAAAA-AAAAA-AAAAA-AAAAA"
+                            Value="DF321SD1A"
+                            ValueMaskFormat="IncludePromptAndLiterals"/>
 
 {% endhighlight %}
 {% highlight C# %}
 
-public partial class MainPage : ContentPage
+SfMaskedEntry maskedEntry = new SfMaskedEntry
 {
-    public MainPage()
-    {
-        InitializeComponent();
-        SfMaskedEntry maskedEntry = new SfMaskedEntry
-        {
-            WidthRequest = 200,
-            MaskType = MaskedEntryMaskType.Simple,
-            ClearButtonVisibility = ClearButtonVisibility.WhileEditing,
-            Mask = ">AAAAA-AAAAA-AAAAA-AAAAA",
-            Value = "DF321SD1A",
-            ValueMaskFormat = MaskedEntryMaskFormat.IncludePromptAndLiterals
-        };
-        Label valueLabel = new Label
-        {
-            Text = "Value :"
-        };
-        Label valueDisplay = new Label
-        {
-            HeightRequest = 40
-        };
-        valueDisplay.SetBinding(Label.TextProperty, new Binding
-        {
-            Path = "Value",
-            Source = maskedEntry
-        });
-        HorizontalStackLayout valueLayout = new HorizontalStackLayout
-        {
-            Spacing = 2,
-            HeightRequest = 40,
-            WidthRequest = 200,
-            Children = { valueLabel, valueDisplay }
-        };
-        VerticalStackLayout mainLayout = new VerticalStackLayout
-        {
-            Spacing = 10,
-            VerticalOptions = LayoutOptions.Center,
-            Children = { maskedEntry, valueLayout }
-        };
-        Content = mainLayout;
-    }
-}
-
+    WidthRequest = 200,
+    MaskType = MaskedEntryMaskType.Simple,
+    ClearButtonVisibility = ClearButtonVisibility.WhileEditing,
+    Mask = ">AAAAA-AAAAA-AAAAA-AAAAA",
+    Value = "DF321SD1A",
+    ValueMaskFormat = MaskedEntryMaskFormat.IncludePromptAndLiterals
+};
+       
 {% endhighlight %}
 {% endtabs %}
 
