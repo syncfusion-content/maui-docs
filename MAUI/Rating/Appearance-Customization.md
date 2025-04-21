@@ -173,6 +173,7 @@ The [`RatedStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 SfRating rating= new SfRating();
 rating.Value = 3;
 RatingSettings ratingSettings = new RatingSettings();
+ratingSettings.RatedStroke = Colors.Black;
 ratingSettings.RatedStrokeThickness=3;
 rating.RatingSettings = ratingSettings;
 

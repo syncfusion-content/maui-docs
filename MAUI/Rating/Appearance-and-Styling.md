@@ -109,12 +109,14 @@ This section explains about various rating settings available in the [`SfRating`
 
 
 SfRating rating = new SfRating();
-RatingSettings ratingSettings = new RatingSettings();
-ratingSettings.RatedFill = Colors.Red;
-ratingSettings.UnratedFill = Colors.Gray;
-ratingSettings.UnratedStroke = Colors.Blue;
-ratingSettings.RatedStrokeThickness = 2;
-ratingSettings.UnratedStrokeThickness = 2;
+RatingSettings ratingSettings = new RatingSettings()
+{
+    RatedFill = Colors.Red,
+    UnratedFill = Colors.Gray,
+    UnratedStroke = Colors.Blue,
+    RatedStrokeThickness = 2,
+    UnratedStrokeThickness = 2
+};
 rating.RatingSettings = ratingSettings;
 
 {% endhighlight %}

@@ -186,7 +186,7 @@ namespace SignaturePadGettingStarted
             InitializeComponent();
             // Creating a SignaturePad control.
             SfSignaturePad signaturePad = new SfSignaturePad();
-            this.content = signaturePad;
+            this.Content = signaturePad;
         }
     }
 }
@@ -259,9 +259,7 @@ Import the [SfSignaturePad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 <ContentPage
     . . .
     xmlns:signaturePad="clr-namespace:Syncfusion.Maui.SignaturePad;assembly=Syncfusion.Maui.SignaturePad">
-    <Grid>
         <signaturePad:SfSignaturePad />
-    </Grid>
 </ContentPage>
 
 {% endhighlight %}
@@ -279,7 +277,7 @@ namespace SignaturePadGettingStarted
             InitializeComponent();
             // Creating a SignaturePad control.
             SfSignaturePad signaturePad = new SfSignaturePad();
-            this.content = signaturePad;
+            this.Content = signaturePad;
         }
     }
 }
