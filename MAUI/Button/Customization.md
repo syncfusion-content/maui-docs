@@ -132,8 +132,7 @@ Users can now customize the [`SfButton`](https://help.syncfusion.com/cr/maui/Syn
 {% highlight xaml %}
 
 <buttons:SfButton x:Name="button" 
-                 Text="Submit" 
-                
+                 Text="Submit"                 
                  TextTransform="Uppercase" 
                  HorizontalTextAlignment="Center" 
                  VerticalTextAlignment="Center">
@@ -375,7 +374,6 @@ N> Enable the `ShowIcon` property to enable the `ImageAlignment` property.
 <buttons:SfButton x:Name="button" 
                 Text="Shopping"
                 TextColor="Black"
-            
                 HorizontalOptions="Center"
                 ImageSource="add_to_card.png"
                 ShowIcon="True" 
@@ -412,7 +410,6 @@ SfButton button = new SfButton()
 
 <buttons:SfButton  x:Name="button"
                     Text="Shopping"
-                
                     TextColor="Black"
                     HorizontalOptions="Center"
                     ImageSource="add_to_card.png"
@@ -451,7 +448,6 @@ SfButton button = new SfButton()
 
 <buttons:SfButton x:Name="button" 
                 Text="Shopping"
-            
                 TextColor="Black"
                 HorizontalOptions="Center"
                 ImageSource="add_to_card.png"
@@ -490,7 +486,6 @@ SfButton button = new SfButton()
 
 <buttons:SfButton x:Name="button" 
                 Text="Shopping"
-            
                 TextColor="Black"
                 HorizontalOptions="Center"
                 ImageSource="add_to_card.png"
@@ -530,7 +525,6 @@ SfButton button = new SfButton()
 <buttons:SfButton x:Name="button" 
                 Text="Shopping"
                 TextColor="Black"
-            
                 HorizontalOptions="Center"
                 ImageSource="add_to_card.png"
                 ShowIcon="True" 
@@ -571,7 +565,6 @@ In RTL flow direction, image alignment with [`Start`](https://help.syncfusion.co
 <buttons:SfButton x:Name="button" 
                 Text="Shopping"
                 TextColor="Black"
-            
                 HorizontalOptions="Center"
                 ImageSource="add_to_card.png"
                 ShowIcon="True" 
@@ -612,7 +605,6 @@ In RTL flow direction, image alignment with [`End`](https://help.syncfusion.com/
 <buttons:SfButton x:Name="button"
                 Text="Shopping"
                 TextColor="Black"
-            
                 HorizontalOptions="Center"
                 ImageSource="add_to_card.png"
                 ShowIcon="True" 
@@ -706,7 +698,6 @@ Refer to this [`documentation`](https://learn.microsoft.com/en-us/dotnet/maui/us
 . . .
 
 SfButton linearButton = new SfButton();
-linea
 linearButton.Text = "Linear Gradient";
 linearButton.CornerRadius = 20;
 LinearGradientBrush linearGradientBrush = new LinearGradientBrush();
@@ -748,7 +739,6 @@ N> Default value is [`null`].
 
 <buttons:SfButton x:Name="button" 
                 Text="Button" 
-            
                 Background="{Binding Background}" 
                 Command="{Binding ButtonCommand}">
 </buttons:SfButton>

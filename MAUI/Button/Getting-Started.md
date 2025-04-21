@@ -221,7 +221,6 @@ N> Ensure that the images mentioned in the code snippets are located in the **Re
 <buttons:SfButton x:Name="SfButton" 
                     Text="Button"
                     TextColor="White" 
-                    HorizontalTextAlignment="Justify"
                     ShowIcon="True" 
                     ImageSource="button_Heart.png"/>
 
@@ -231,7 +230,6 @@ N> Ensure that the images mentioned in the code snippets are located in the **Re
 SfButton button = new SfButton();
 button.Text = "Button";
 button.TextColor = Colors.White;
-button.HorizontalTextAlignment = TextAlignment.Start,  
 button.ImageSource = "button_Heart.png";
 button.ShowIcon = true;
 
@@ -252,7 +250,8 @@ The button background image can be defined using the [BackgroundImageSource](htt
                     Text="Nature"
                     FontAttributes="Bold" 
                     BackgroundImageSource="button_background.png" 
-                    CornerRadius="10"/>
+                    CornerRadius="10" 
+                    WidthRequest="150"/>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -262,6 +261,7 @@ button.Text = "Nature";
 button.FontAttributes = FontAttributes.Bold;
 button.BackgroundImageSource = "button_background.png";
 button.CornerRadius = 10;
+button.WidthRequest = 150;
 
 {% endhighlight %}
 {% endtabs %}
