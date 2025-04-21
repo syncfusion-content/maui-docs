@@ -19,7 +19,7 @@ xmlns:busy="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
 . . .
 
 <ContentPage.Content>
-    <buttons:SfButton  CornerRadius="10"  WidthRequest="200" Text="SfButton" Background="#4125BC">
+    <buttons:SfButton  CornerRadius="10" Text="SfButton" Background="#4125BC">
         <buttons:SfButton.Content>
             <DataTemplate>
                 <HorizontalStackLayout Spacing = "8" Padding="5">
@@ -63,7 +63,6 @@ var customTemplate = new DataTemplate(() =>
 SfButton button = new SfButton
 {
     Text = "SfButton",
-    WidthRequest = 200,
     Background = Color.FromArgb("#4125BC"),
     CornerRadius= 10,
     Content = customTemplate

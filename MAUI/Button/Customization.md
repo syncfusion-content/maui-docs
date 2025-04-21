@@ -22,14 +22,13 @@ The [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Butto
 {% tabs %}
 {% highlight xaml %}
 
-<buttons:SfButton x:Name="button"  WidthRequest="200" Text="Button" TextColor = "White">
+<buttons:SfButton x:Name="button"  Text="Button" TextColor = "White">
 </buttons:SfButton>
 
 {% endhighlight %}
 {% highlight c# %}
 
 SfButton button = new SfButton();
-button.WidthRequest=200;
 button.Text = "Button";
 button.TextColor = Colors.White;
 
@@ -45,14 +44,13 @@ The [`FontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Button
 {% tabs %}
 {% highlight xaml %}
 
-<buttons:SfButton x:Name="button"  WidthRequest="200" Text="Button" FontSize = "18">
+<buttons:SfButton x:Name="button"  Text="Button" FontSize = "18">
 </buttons:SfButton>
 
 {% endhighlight %}
 {% highlight c# %}
 
 SfButton button = new SfButton();
-button.WidthRequest=200;
 button.Text = "Button";
 button.FontSize = 18;
 
@@ -68,14 +66,13 @@ The [`FontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.
 {% tabs %}
 {% highlight xaml %}
 
-<buttons:SfButton x:Name="button"  WidthRequest="200" Text="Button" FontAttributes = "Italic">
+<buttons:SfButton x:Name="button"  Text="Button" FontAttributes = "Italic">
 </buttons:SfButton>
 
 {% endhighlight %}
 {% highlight c# %}
 
 SfButton button = new SfButton();
-button.WidthRequest=200;
 button.Text = "Button";
 button.FontAttributes = FontAttributes.Italic;
 
@@ -91,14 +88,13 @@ The [`FontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Butt
 {% tabs %}
 {% highlight xaml %}
 
-<buttons:SfButton x:Name="button" WidthRequest="200" Text="Button" FontFamily = "Lobster">
+<buttons:SfButton x:Name="button" Text="Button" FontFamily = "Lobster">
 </buttons:SfButton>
 
 {% endhighlight %}
 {% highlight c# %}
 
 SfButton button = new SfButton();
-button.WidthRequest = 200;
 button.Text = "Button";
 button.FontFamily = "Lobster";
 
@@ -114,14 +110,13 @@ The [`HorizontalTextAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 {% tabs %}
 {% highlight xaml %}
 
-<buttons:SfButton x:Name="button" Text="Button" WidthRequest="200" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+<buttons:SfButton x:Name="button" Text="Button" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
 </buttons:SfButton>
 
 {% endhighlight %}
 {% highlight c# %}
 
 SfButton button = new SfButton();
-button.WidthRequest = 200;
 button.Text = "Button";
 button.HorizontalTextAlignment = TextAlignment.Center;
 button.VerticalTextAlignment = TextAlignment.Center;
@@ -138,7 +133,7 @@ Users can now customize the [`SfButton`](https://help.syncfusion.com/cr/maui/Syn
 
 <buttons:SfButton x:Name="button" 
                  Text="Submit" 
-                 WidthRequest="200"
+                
                  TextTransform="Uppercase" 
                  HorizontalTextAlignment="Center" 
                  VerticalTextAlignment="Center">
@@ -149,7 +144,6 @@ Users can now customize the [`SfButton`](https://help.syncfusion.com/cr/maui/Syn
 
 SfButton button = new SfButton();
 button.Text = "Submit";
-button.WidthRequest = 200;
 button.TextTransform = "Uppercase";
 button.HorizontalTextAlignment = TextAlignment.Center;
 button.VerticalTextAlignment = TextAlignment.Center;
@@ -172,14 +166,13 @@ The [`LineBreakMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Button
  {% tabs %}
 {% highlight xaml %}
 
-<buttons:SfButton x:Name="button" Text="Add Items To Cart"  WidthRequest="200" LineBreakMode="MiddleTruncation" ImageSource="Cart.png">
+<buttons:SfButton x:Name="button" Text="Add Items To Cart"  LineBreakMode="MiddleTruncation" ImageSource="Cart.png">
 </buttons:SfButton>
 
 {% endhighlight %}
 {% highlight c# %}
 
 SfButton button = new SfButton();
-button.WidthRequest = 200;
 button.Text = "Add Items To Cart";
 button.LineBreakMode = LineBreakMode.MiddleTruncation;
 button.ImageSource="Cart.png";
@@ -200,14 +193,13 @@ The [`Background`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.S
 {% tabs %}
 {% highlight xaml %}
 
-<buttons:SfButton x:Name="button" Text="Button" WidthRequest="200" Background = "DeepSkyBlue">
+<buttons:SfButton x:Name="button" Text="Button" Background = "DeepSkyBlue">
 </buttons:SfButton>
 
 {% endhighlight %}
 {% highlight c# %}
 
 SfButton button = new SfButton();
-button.WidthRequest = 200;
 button.Text = "Button";
 button.Background = Colors.DeepSkyBlue;
 
@@ -225,14 +217,13 @@ The [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBa
 {% tabs %}
 {% highlight xaml %}
 
-<buttons:SfButton x:Name="button" WidthRequest="200" Text="Button" Stroke="Red" StrokeThickness="2">
+<buttons:SfButton x:Name="button" Text="Button" Stroke="Red" StrokeThickness="2">
 </buttons:SfButton>
 
 {% endhighlight %}
 {% highlight c# %}
 
 SfButton button = new SfButton();
-button.WidthRequest = 200;
 button.Text = "Button";
 button.Stroke = Colors.Red;
 
@@ -250,14 +241,13 @@ The [`StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core
 {% tabs %}
 {% highlight xaml %}
 
-<buttons:SfButton x:Name="button" WidthRequest="200" Text="Button" Stroke="Red" StrokeThickness="6">
+<buttons:SfButton x:Name="button" Text="Button" Stroke="Red" StrokeThickness="6">
 </buttons:SfButton>
 
 {% endhighlight %}
 {% highlight c# %}
 
 SfButton button = new SfButton();
-button.WidthRequest = 200;
 button.Text = "Button";
 button.StrokeThickness = 6;
 button.Stroke = Colors.Red;
@@ -274,14 +264,13 @@ The [`CornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Bu
 {% tabs %}
 {% highlight xaml %}
 
-<buttons:SfButton x:Name="button" WidthRequest="200" Text="Button" CornerRadius="20">
+<buttons:SfButton x:Name="button" Text="Button" CornerRadius="20">
 </buttons:SfButton>
 
 {% endhighlight %}
 {% highlight c# %}
 
 SfButton button = new SfButton();
-button.WidthRequest = 200;
 button.Text = "Button";
 button.CornerRadius = 20;
 
@@ -301,14 +290,13 @@ You can enable the Icon image using the [`ShowIcon`](https://help.syncfusion.com
 {% tabs %}
 {% highlight xaml %}
 
-<buttons:SfButton x:Name="button" WidthRequest="200" Text="Button" ImageSource="Heart.png" ShowIcon="True">
+<buttons:SfButton x:Name="button" Text="Button" ImageSource="Heart.png" ShowIcon="True">
 </buttons:SfButton>
 
 {% endhighlight %}
 {% highlight c# %}
 
 SfButton button = new SfButton();
-button.WidthRequest = 200;
 button.Text = "Button";
 button.ImageSource = "Heart.png";
 button.ShowIcon = True;
@@ -325,14 +313,13 @@ N> Enable the [`ShowIcon`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.C
 {% tabs %}
 {% highlight xaml %}
 
-<buttons:SfButton x:Name="button" WidthRequest="200" Text="Button" ImageSource="Heart.png" ShowIcon="True">
+<buttons:SfButton x:Name="button" Text="Button" ImageSource="Heart.png" ShowIcon="True">
 </buttons:SfButton>
 
 {% endhighlight %}
 {% highlight c# %}
 
 SfButton button = new SfButton();
-button.WidthRequest = 200;
 button.Text = "Button";
 button.ImageSource = "Heart.png";
 button.ShowIcon = True;
@@ -351,14 +338,13 @@ N> Enable the `ShowIcon` property to enable the `ImageSize` property.
 {% tabs %}
 {% highlight xaml %}
 
-<buttons:SfButton x:Name="button" WidthRequest="200" Text="Button" ImageSource="Heart.png" ShowIcon="True" ImageSize="50">
+<buttons:SfButton x:Name="button" Text="Button" ImageSource="Heart.png" ShowIcon="True" ImageSize="50">
 </buttons:SfButton>
 
 {% endhighlight %}
 {% highlight c# %}
 
 SfButton button = new SfButton();
-button.WidthRequest = 200;
 button.Text = "Button";
 button.ImageSource = "Heart.png";
 button.ShowIcon = true;
@@ -389,7 +375,7 @@ N> Enable the `ShowIcon` property to enable the `ImageAlignment` property.
 <buttons:SfButton x:Name="button" 
                 Text="Shopping"
                 TextColor="Black"
-                WidthRequest="200"
+            
                 HorizontalOptions="Center"
                 ImageSource="add_to_card.png"
                 ShowIcon="True" 
@@ -405,7 +391,6 @@ SfButton button = new SfButton()
 {
     Text = "Shopping",
     TextColor = Colors.Black,
-    WidthRequest = 200,
     HorizontalOptions = LayoutOptions.Center,
     ImageSource = "add_to_card.png",
     ShowIcon = true,
@@ -427,7 +412,7 @@ SfButton button = new SfButton()
 
 <buttons:SfButton  x:Name="button"
                     Text="Shopping"
-                    WidthRequest="200"
+                
                     TextColor="Black"
                     HorizontalOptions="Center"
                     ImageSource="add_to_card.png"
@@ -443,7 +428,6 @@ SfButton button = new SfButton()
 SfButton button = new SfButton()
 {
     Text = "Shopping",
-    WidthRequest = 200,
     TextColor = Colors.Black,
     HorizontalOptions = LayoutOptions.Center,
     ImageSource = "add_to_card.png",
@@ -467,7 +451,7 @@ SfButton button = new SfButton()
 
 <buttons:SfButton x:Name="button" 
                 Text="Shopping"
-                WidthRequest="200"
+            
                 TextColor="Black"
                 HorizontalOptions="Center"
                 ImageSource="add_to_card.png"
@@ -483,7 +467,6 @@ SfButton button = new SfButton()
 SfButton button = new SfButton()
 {
     Text = "Shopping",
-    WidthRequest = 200,
     TextColor = Colors.Black,
     HorizontalOptions = LayoutOptions.Center,
     ImageSource = "add_to_card.png",
@@ -507,7 +490,7 @@ SfButton button = new SfButton()
 
 <buttons:SfButton x:Name="button" 
                 Text="Shopping"
-                WidthRequest="200"
+            
                 TextColor="Black"
                 HorizontalOptions="Center"
                 ImageSource="add_to_card.png"
@@ -523,7 +506,6 @@ SfButton button = new SfButton()
 SfButton button = new SfButton()
 {
     Text = "Shopping",
-    WidthRequest = 200,
     TextColor = Colors.Black,
     HorizontalOptions = LayoutOptions.Center,
     ImageSource = "add_to_card.png",
@@ -548,7 +530,7 @@ SfButton button = new SfButton()
 <buttons:SfButton x:Name="button" 
                 Text="Shopping"
                 TextColor="Black"
-                WidthRequest="200"
+            
                 HorizontalOptions="Center"
                 ImageSource="add_to_card.png"
                 ShowIcon="True" 
@@ -564,7 +546,6 @@ SfButton button = new SfButton()
 {
     Text = "Shopping",
     TextColor = Colors.Black,
-    WidthRequest = 200,
     HorizontalOptions = LayoutOptions.Center,
     ImageSource = "add_to_card.png",
     ShowIcon = true,
@@ -590,7 +571,7 @@ In RTL flow direction, image alignment with [`Start`](https://help.syncfusion.co
 <buttons:SfButton x:Name="button" 
                 Text="Shopping"
                 TextColor="Black"
-                WidthRequest="200"
+            
                 HorizontalOptions="Center"
                 ImageSource="add_to_card.png"
                 ShowIcon="True" 
@@ -607,7 +588,6 @@ SfButton button = new SfButton()
 {
     Text = "Shopping",
     TextColor = Colors.Black,
-    WidthRequest = 200,
     HorizontalOptions = LayoutOptions.Center,
     ImageSource = "add_to_card.png",
     ShowIcon = true,
@@ -632,7 +612,7 @@ In RTL flow direction, image alignment with [`End`](https://help.syncfusion.com/
 <buttons:SfButton x:Name="button"
                 Text="Shopping"
                 TextColor="Black"
-                WidthRequest="200"
+            
                 HorizontalOptions="Center"
                 ImageSource="add_to_card.png"
                 ShowIcon="True" 
@@ -648,7 +628,6 @@ SfButton button = new SfButton()
 {
     Text = "Shopping",
     TextColor = Colors.Black,
-    WidthRequest = 200,
     HorizontalOptions = LayoutOptions.Center,
     ImageSource = "add_to_card.png",
     ShowIcon = true,
@@ -699,7 +678,7 @@ Refer to this [`documentation`](https://learn.microsoft.com/en-us/dotnet/maui/us
 
 . . . 
 
-<buttons:SfButton Text="Linear Gradient" CornerRadius="20" WidthRequest="200">
+<buttons:SfButton Text="Linear Gradient" CornerRadius="20">
     <buttons:SfButton.Background>
         <LinearGradientBrush>
             <LinearGradientBrush.GradientStops>
@@ -727,7 +706,7 @@ Refer to this [`documentation`](https://learn.microsoft.com/en-us/dotnet/maui/us
 . . .
 
 SfButton linearButton = new SfButton();
-linearButton.WidthRequest = 200;
+linea
 linearButton.Text = "Linear Gradient";
 linearButton.CornerRadius = 20;
 LinearGradientBrush linearGradientBrush = new LinearGradientBrush();
@@ -769,7 +748,7 @@ N> Default value is [`null`].
 
 <buttons:SfButton x:Name="button" 
                 Text="Button" 
-                WidthRequest="200"
+            
                 Background="{Binding Background}" 
                 Command="{Binding ButtonCommand}">
 </buttons:SfButton>
