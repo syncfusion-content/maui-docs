@@ -18,7 +18,7 @@ The ClearButtonVisibility of type [ClearButtonVisibility](https://help.syncfusio
 
 <editors:SfMaskedEntry WidthRequest="200"
                           MaskType="Simple"
-                          Mask="(000) 000-0000" Value="1234"
+                          Mask="(000) 000-0000"
                           ClearButtonVisibility = "WhileEditing" />
 
 {% endhighlight %}
@@ -28,7 +28,6 @@ SfMaskedEntry maskedEntry = new SfMaskedEntry();
 maskedEntry.WidthRequest = 200;
 maskedEntry.MaskType = MaskedEntryMaskType.Simple;
 maskedEntry.Mask = "(000) 000-0000";
-maskedEntry.Value = 1234;
 maskedEntry.ClearButtonVisibility = ClearButtonVisibility.WhileEditing;
 
 {% endhighlight %}
@@ -46,7 +45,7 @@ The clear button icon color can be changed by using the [ClearButtonColor](https
 <editors:SfMaskedEntry x:Name="maskedEntry"
                           WidthRequest="200"
                           MaskType="Simple"
-                          Mask="(000) 000-0000" Value="044"
+                          Mask="(000) 000-0000"
                           ClearButtonVisibility = "WhileEditing"
                           ClearButtonColor="Red" />
 
@@ -57,7 +56,6 @@ SfMaskedEntry maskedEntry = new SfMaskedEntry();
 maskedEntry.WidthRequest = 200;
 maskedEntry.MaskType = MaskedEntryMaskType.Simple;
 maskedEntry.Mask = "(000) 000-0000";
-maskedEntry.Value = 044;
 maskedEntry.ClearButtonVisibility = ClearButtonVisibility.WhileEditing;
 maskedEntry.ClearButtonColor = Colors.Red;
 
@@ -267,7 +265,7 @@ The [ShowBorder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMa
 {% highlight XAML %}
 
 <editors:SfMaskedEntry WidthRequest="200"
-                          Mask="00/00/0000" Value="15/03/2024"
+                          Mask="00/00/0000" 
                           ClearButtonVisibility="WhileEditing"
                           ShowBorder="False"/>                                           
 {% endhighlight %}
@@ -276,7 +274,6 @@ The [ShowBorder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMa
 SfMaskedEntry maskedEntry = new SfMaskedEntry();
 maskedEntry.WidthRequest = 200;
 maskedEntry.Mask = "00/00/0000";
-maskedEntry.Value= "15/03/2024";
 maskedEntry.ClearButtonVisibility = ClearButtonVisibility.WhileEditing;
 maskedEntry.ShowBorder = false;
 
@@ -296,7 +293,7 @@ The [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.S
 
 <editors:SfMaskedEntry WidthRequest="200"
                           HeightRequest="50"
-                          Mask="00/00/0000" Value="22/11/2022"
+                          Mask="00/00/0000"
                           ClearButtonVisibility="WhileEditing"
                           HorizontalTextAlignment="Center" 
                           VerticalTextAlignment="Start"/>
@@ -307,7 +304,6 @@ SfMaskedEntry maskedEntry = new SfMaskedEntry();
 maskedEntry.WidthRequest = 200;
 maskedEntry.HeightRequest = 50;
 maskedEntry.Mask = "00/00/0000";
-maskedEntry.Value= "22/11/2022";
 maskedEntry.ClearButtonVisibility = ClearButtonVisibility.WhileEditing;
 maskedEntry.HorizontalTextAlignment = TextAlignment.Center;
 maskedEntry.VerticalTextAlignment = TextAlignment.Start;
@@ -342,7 +338,6 @@ N> Default value of ReturnType is `Default`.
 SfMaskedEntry maskedEntry = new SfMaskedEntry();
 maskedEntry.WidthRequest = 200;
 maskedEntry.Mask = "00:00:0000";
-maskedEntry.Value= 120319;
 maskedEntry.ClearButtonVisibility = ClearButtonVisibility.WhileEditing;
 maskedEntry.ReturnType = ReturnType.Next;
 
