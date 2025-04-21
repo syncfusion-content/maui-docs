@@ -76,9 +76,7 @@ namespace ButtonSample
 
 ## Step 4: Add a Basic Button control
 
-Step 1: Add the NuGet to the project as discussed in the above reference section. 
-
-Step 2: Add the namespace as shown in the following code sample.
+Step 1: Add the namespace as shown in the following code sample.
 
 {% tabs %}
 {% highlight xaml %}
@@ -92,7 +90,7 @@ Step 2: Add the namespace as shown in the following code sample.
 
 {% endhighlight %}
 
-Step 3: Add the [SfButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) control with a required optimal name using the included namespace.
+Step 2: Add the [SfButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) control with a required optimal name using the included namespace.
 
 {% tabs %}
 
