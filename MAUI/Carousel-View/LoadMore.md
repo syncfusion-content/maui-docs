@@ -36,8 +36,8 @@ N>The default value of the [AllowLoadMore](https://help.syncfusion.com/cr/maui/S
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
                      ItemTemplate="{StaticResource itemTemplate}"
-                     ItemHeight="170"
-                     ItemWidth="270"
+                     ItemHeight="200"
+                     ItemWidth="200"
                      ItemSpacing="2" 
                      AllowLoadMore="True"
                      ViewMode="Linear">
@@ -49,8 +49,8 @@ N>The default value of the [AllowLoadMore](https://help.syncfusion.com/cr/maui/S
 
 SfCarousel carousel = new SfCarousel()
 {
-    ItemHeight= 170,
-    ItemWidth = 270,
+    ItemHeight= 200,
+    ItemWidth = 200,
     ItemSpacing = 2,
     AllowLoadMore = true,
     ViewMode = ViewMode.Linear
@@ -75,8 +75,8 @@ N>The default value of the [LoadMoreItemsCount](https://help.syncfusion.com/cr/m
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
                      ItemTemplate="{StaticResource itemTemplate}"
-                     ItemHeight="170"
-                     ItemWidth="270"
+                     ItemHeight="200"
+                     ItemWidth="200"
                      ItemSpacing="2"
                      AllowLoadMore="True"
                      LoadMoreItemsCount="2" 
@@ -88,8 +88,8 @@ N>The default value of the [LoadMoreItemsCount](https://help.syncfusion.com/cr/m
 
 SfCarousel carousel = new SfCarousel()
 {
-    ItemHeight= 170,
-    ItemWidth = 270,
+    ItemHeight= 200,
+    ItemWidth = 200,
     ItemSpacing = 2,
     AllowLoadMore = true,
     LoadMoreItemsCount = 2,
@@ -114,8 +114,8 @@ Custom view can be passed instead of the [LoadMore](https://help.syncfusion.com/
 <carousel:SfCarousel x:Name="carousel"
     ItemsSource="{Binding ImageCollection}"
     ItemTemplate="{StaticResource itemTemplate}"
-    ItemHeight="170"
-    ItemWidth="270"
+    ItemHeight="200"
+    ItemWidth="200"
     ItemSpacing="2"
     AllowLoadMore="True"
     ViewMode="Linear"
@@ -141,8 +141,8 @@ Custom view can be passed instead of the [LoadMore](https://help.syncfusion.com/
 
 SfCarousel carousel = new SfCarousel()
 {
-    IItemHeight= 170,
-    ItemWidth = 270,
+    ItemHeight = 200,
+    ItemWidth = 200,
     ItemSpacing = 2,
     AllowLoadMore = true,
     LoadMoreItemsCount = 2,
@@ -189,8 +189,8 @@ To load more items programmatically, the [LoadMore](https://help.syncfusion.com/
     <carousel:SfCarousel x:Name="carousel"
                          ItemsSource="{Binding ImageCollection}"
                          ItemTemplate="{StaticResource itemTemplate}"
-                         ItemHeight="170"
-                         ItemWidth="270"
+                         ItemHeight="200"
+                         ItemWidth="200"
                          ItemSpacing="2" 
                          AllowLoadMore="True"
                          ViewMode="Default"
@@ -205,8 +205,8 @@ To load more items programmatically, the [LoadMore](https://help.syncfusion.com/
 
 SfCarousel carousel = new SfCarousel()
 {
-    ItemHeight = 170,
-    ItemWidth = 270,
+    ItemHeight = 200,
+    ItemWidth = 200,
     ItemSpacing = 2, 
     AllowLoadMore = true,
     ViewMode = ViewMode.Default,
