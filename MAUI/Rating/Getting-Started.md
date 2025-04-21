@@ -103,12 +103,8 @@ Step 2: Add the [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.I
 
 {% highlight C# %}
 
-SfRating rating;
-public MainPage()
-{
-    InitializeComponent();
-    rating = new SfRating();
-} 
+SfRating rating = new SfRating();
+this.Content = rating;
 
 {% endhighlight %}
 
@@ -207,12 +203,8 @@ Step 3: Add the [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.I
 
 {% highlight C# %}
 
-SfRating rating;
-public MainPage()
-{
-    InitializeComponent();
-    rating = new SfRating();
-} 
+SfRating rating = new SfRating();
+this.Content = rating; 
 
 {% endhighlight %}
 
@@ -237,13 +229,8 @@ N> The default value of [ItemCount](https://help.syncfusion.com/cr/maui/Syncfusi
 
 {% highlight C# %}
 
-SfRating rating;
-public MainPage()
-{
-    InitializeComponent();
-    rating = new SfRating();
-    rating.ItemCount = 5;
-}
+SfRating rating = new SfRating();
+rating.ItemCount = 5;
 
 {% endhighlight %}
 
@@ -265,13 +252,8 @@ N> The default value of this property is 0.
 
 {% highlight C# %}
 
-SfRating rating;
-public MainPage()
-{
-    InitializeComponent();
-    rating = new SfRating();
-    rating.Value = 3;
-}
+SfRating rating = new SfRating();
+rating.Value = 3;
 
 {% endhighlight %}
 
@@ -291,13 +273,8 @@ The [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRati
 
 {% highlight C# %}
 
-SfRating rating;
-public MainPage()
-{
-    InitializeComponent();
-    rating = new SfRating();
-    rating.Precision = Precision.Standard;
-}
+SfRating rating = new SfRating();
+rating.Precision = Precision.Standard;
 
 {% endhighlight%}
 

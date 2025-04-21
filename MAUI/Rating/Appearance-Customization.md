@@ -203,6 +203,7 @@ The [`UnratedStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 SfRating rating= new SfRating();
 rating.Value = 3;
 RatingSettings ratingSettings = new RatingSettings();
+ratingSettings.UnratedStroke = Colors.Black;
 ratingSettings.UnratedStrokeThickness=3;
 rating.RatingSettings = ratingSettings;
 

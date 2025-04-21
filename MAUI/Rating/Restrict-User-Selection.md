@@ -24,12 +24,9 @@ documentation: ug
 {% highlight C# %}
 
 
-SfRating rating;
-public MainPage()
-{
-    InitializeComponent();
-    rating.IsReadOnly=true;
-}
+SfRating rating = new SfRating();
+rating.IsReadOnly = true;
+
 	
 {% endhighlight %}
 

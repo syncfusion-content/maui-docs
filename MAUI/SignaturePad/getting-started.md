@@ -186,7 +186,7 @@ namespace SignaturePadGettingStarted
             InitializeComponent();
             // Creating a SignaturePad control.
             SfSignaturePad signaturePad = new SfSignaturePad();
-            this.Content = signaturePad;
+            this.content = signaturePad;
         }
     }
 }
@@ -450,6 +450,7 @@ signaturePad.DrawCompleted += OnDrawCompleted;
 
 private void OnDrawCompleted(object? sender, EventArgs e)
 {
+    // Trigger for the drawing completed
 }
 
 {% endhighlight %}
@@ -476,9 +477,9 @@ SfSignaturePad signaturePad = new SfSignaturePad()
 {
     StrokeColor = Colors.Red,
     MinimumStrokeThickness = 1,
-    MaximumStrokeThickness = 6, 
-    DrawCompleted += OnDrawCompleted
+    MaximumStrokeThickness = 6,
 };
+signaturePad.DrawCompleted += OnDrawCompleted;
 
 private void OnDrawCompleted(object? sender, EventArgs e)
 {
