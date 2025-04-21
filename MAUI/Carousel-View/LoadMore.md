@@ -52,7 +52,7 @@ SfCarousel carousel = new SfCarousel()
     ItemHeight= 170,
     ItemWidth = 270,
     ItemSpacing = 2,
-    AllowLoadMore = True,
+    AllowLoadMore = true,
     ViewMode = ViewMode.Linear
 };
 carousel.ItemTemplate = itemTemplate;
@@ -91,7 +91,7 @@ SfCarousel carousel = new SfCarousel()
     ItemHeight= 170,
     ItemWidth = 270,
     ItemSpacing = 2,
-    AllowLoadMore = True,
+    AllowLoadMore = true,
     LoadMoreItemsCount = 2,
     ViewMode = ViewMode.Linear
 };
@@ -208,7 +208,7 @@ SfCarousel carousel = new SfCarousel()
     ItemHeight = 170,
     ItemWidth = 270,
     ItemSpacing = 2, 
-    AllowLoadMore = True,
+    AllowLoadMore = true,
     ViewMode = ViewMode.Default,
     LoadMoreItemsCount = 2,
 };
