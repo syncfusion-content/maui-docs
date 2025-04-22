@@ -1,7 +1,7 @@
 ---
 layout : post
-title: Populating Data in .NET MAUI Rotator control | Syncfusion
-description: Learn about the Populating Data support in Syncfusion .NET MAUI Rotator (SfRotator) control and more..
+title: Populating Data in .NET MAUI Rotator control | Syncfusion®
+description: Learn about the Populating Data support in Syncfusion® .NET MAUI Rotator (SfRotator) control and more..
 platform : maui
 control : Rotator 
 documentation : ug
@@ -25,16 +25,19 @@ The [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.Sf
 	
 // Model Class for Rotator.
 
-public RotatorModel(string imageString)
+public class RotatorModel
 {
-    Image = imageString;
-}
-private String _image;
-public String Image
-{
-    get { return _image; }
-    set { _image = value; }
-}      
+    public RotatorModel(string imageString)
+    {
+        Image = imageString;
+    }
+    private string _image;
+    public string Image
+    {
+        get { return _image; }
+        set { _image = value; }
+    }
+}  
 
 {% endhighlight %}
 
@@ -48,19 +51,26 @@ Create and populate the [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfu
 
 // ViewModel class for Rotator.
 
-public RotatorViewModel()
+public class RotatorViewModel
 {
-    ImageCollection.Add(new RotatorModel("image1.png"));
-    ImageCollection.Add(new RotatorModel("image2.png"));
-    ImageCollection.Add(new RotatorModel("image3.png"));
-    ImageCollection.Add(new RotatorModel("image4.png"));
-    ImageCollection.Add(new RotatorModel("image5.png"));
-}
-private List<RotatorModel> imageCollection = new List<RotatorModel>();
-public List<RotatorModel> ImageCollection
-{
-    get { return imageCollection; }
-    set { imageCollection = value; }
+    public RotatorViewModel()
+    {
+        imageCollection = new List<RotatorModel>
+        {
+            new RotatorModel("image1.png"),
+            new RotatorModel("image2.png"),
+            new RotatorModel("image3.png"),
+            new RotatorModel("image4.png"),
+            new RotatorModel("image5.png")
+        };
+    }
+
+    private List<RotatorModel> imageCollection;
+    public List<RotatorModel> ImageCollection
+    {
+        get { return imageCollection; }
+        set { imageCollection = value; }
+    }
 }
 
 {% endhighlight %}

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Rating control | Syncfusion
-description: Learn here about getting started with Syncfusion .NET MAUI Rating (SfRating) control, its elements and more.
+title: Getting Started with .NET MAUI Rating control | Syncfusion®
+description: Learn here about getting started with Syncfusion® .NET MAUI Rating (SfRating) control, its elements and more.
 platform: maui
 control: Rating
 documentation: ug
@@ -73,9 +73,7 @@ namespace RatingSample
 
 ## Step 4: Add a Basic Rating
 
-Step 1: Add the NuGet to the project as discussed in the above reference section. 
-
-Step 2: Add the namespace, as shown in the following code sample:
+Step 1: Add the namespace, as shown in the following code sample:
 
 {% tabs %}
 
@@ -88,6 +86,30 @@ Step 2: Add the namespace, as shown in the following code sample:
 {% highlight c# %}
 
 	using Syncfusion.Maui.Inputs;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Step 2: Add the [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control with a required optimal name using the included namespace.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+	<rating:SfRating x:Name="rating" />
+	
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfRating rating;
+public MainPage()
+{
+    InitializeComponent();
+    rating = new SfRating();
+    this.Content = rating;
+} 
 
 {% endhighlight %}
 
@@ -174,11 +196,7 @@ Step 2: Add the namespace, as shown in the following code sample:
 
 {% endtabs %}
 
-{% endtabcontent %}
-{% endtabcontents %}
-## Initialize Rating
-
-Now, add the [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control with a required optimal name using the included namespace.
+Step 3: Add the [SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control with a required optimal name using the included namespace.
 
 {% tabs %}
 
@@ -201,6 +219,9 @@ public MainPage()
 {% endhighlight %}
 
 {% endtabs %}
+
+{% endtabcontent %}
+{% endtabcontents %}
 
 ## Set Number of Rating Items
 

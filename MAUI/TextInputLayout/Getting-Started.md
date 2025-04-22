@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Text Input Layout control | Syncfusion
-description: Learn here about getting started with Syncfusion .NET MAUI Text Input Layout (SfTextInputLayout) control, its elements and more.
+title: Getting Started with .NET MAUI Text Input Layout control | Syncfusion®
+description: Learn here about getting started with Syncfusion® .NET MAUI Text Input Layout (SfTextInputLayout) control, its elements and more.
 platform: maui
 control: SfTextInputLayout
 documentation: ug
@@ -74,9 +74,7 @@ namespace TextInputLayoutSample
 
 ## Step 4: Add a Basic TextInputLayout
 
-Step 1: Add the NuGet to the project as discussed in the above reference section.
-
-Step 2: Add the namespace as shown in the following code sample.
+Step 1: Add the namespace as shown in the following code sample.
 
 Add the following namespace to add [.NET MAUI Text Input Layout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html).
 
@@ -96,9 +94,26 @@ Add the following namespace to add [.NET MAUI Text Input Layout](https://help.sy
 
 {% endtabs %}
 
-### Adding the .NET MAUI Text Input Layout control
+Step 2: Add any input view control such as [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) and [Editor](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor), [SfAutocomplete](https://help.syncfusion.com/maui/autocomplete/overview), [SfComboBox](https://help.syncfusion.com/maui/combobox/overview) controls and add hint label (floating label).
 
-Add any input view control such as [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) and [Editor](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor), [SfAutocomplete](https://help.syncfusion.com/maui/autocomplete/overview), [SfComboBox](https://help.syncfusion.com/maui/combobox/overview) controls and add hint label (floating label).
+{% tabs %} 
+
+{% highlight xaml %} 
+
+<inputLayout:SfTextInputLayout>
+   <Entry />
+</inputLayout:SfTextInputLayout>  
+
+{% endhighlight %}
+
+{% highlight C# %} 
+
+var inputLayout = new SfTextInputLayout();
+inputLayout.Content = new Entry(); 
+
+{% endhighlight %}
+
+{% endtabs %}
 
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
@@ -118,6 +133,7 @@ Before proceeding, ensure the following are set up:
 3. Select the project location, type the project name and press Enter.
 4. Then choose **Create project**
 
+
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Core NuGet Package
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
@@ -127,7 +143,7 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register the Handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion core.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion<sup>®</sup> core.
 
 {% highlight c# hl_lines="6 17" %}   
 using Microsoft.Maui;
@@ -183,14 +199,7 @@ Add the following namespace to add [.NET MAUI Text Input Layout](https://help.sy
 
 {% endtabs %}
 
-### Adding the .NET MAUI Text Input Layout control
-
-Add any input view control such as [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) and [Editor](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor), [SfAutocomplete](https://help.syncfusion.com/maui/autocomplete/overview), [SfComboBox](https://help.syncfusion.com/maui/combobox/overview) controls and add hint label (floating label).
-
-{% endtabcontent %}
-{% endtabcontents %}
-
-## Initialize TextInputLayout
+Step 3: Add any input view control such as [Entry](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) and [Editor](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor), [SfAutocomplete](https://help.syncfusion.com/maui/autocomplete/overview), [SfComboBox](https://help.syncfusion.com/maui/combobox/overview) controls and add hint label (floating label).
 
 {% tabs %} 
 
@@ -211,7 +220,11 @@ inputLayout.Content = new Entry();
 
 {% endtabs %}
 
-### Adding hint
+{% endtabcontent %}
+{% endtabcontents %}
+
+## Adding hint
+
 Floating label for the text input layout can be added by setting the [Hint](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_Hint) property. Visibility of the hint can be collapsed by setting the [ShowHint](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ShowHint) property to `false.` By default, this property is set to `true.`
 
 {% tabs %} 

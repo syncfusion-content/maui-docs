@@ -306,7 +306,7 @@ picker.SelectionView = new PickerSelectionView()
 {
     CornerRadius = 10,
     Stroke = Color.FromArgb("#36454F"),
-    Pading = new Thickness(10, 5, 10, 5),
+    Padding = new Thickness(10, 5, 10, 5),
     Background = Color.FromArgb("#808080"),
 };
 

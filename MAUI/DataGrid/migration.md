@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migrate from Xamarin SfDataGrid to .NET MAUI SfDataGrid | Syncfusion 
-description: Learn here all about Migrating from Syncfusion Xamarin SfDataGrid to Syncfusion .NET MAUI SfDataGrid control and more.
+title: Migrate from Xamarin SfDataGrid to .NET MAUI SfDataGrid | Syncfusion® 
+description: Learn here all about Migrating from Syncfusion® Xamarin SfDataGrid to Syncfusion® .NET MAUI SfDataGrid control and more.
 platform: MAUI
 control: SfDataGrid
 documentation: ug
@@ -528,8 +528,6 @@ We have passed the optional parameters such as {{'[canIncludeHiddenColumns](http
 ## Known issues 
 
 * [Android] Horizontal scrolling performance is not smooth in the Debug solution configuration when compared to Xamarin.Forms SfDataGrid. However, the scrolling performance is smooth when the solution configuration is Release.
-
-* [Windows] Swiping and Row Drag-and-Drop using the touchscreen are not working.
 
 ## Upcoming Features   
 

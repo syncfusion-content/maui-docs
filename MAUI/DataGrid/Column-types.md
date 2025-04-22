@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Column Types in .NET MAUI DataGrid control | Syncfusion
-description: Learn all about Column Types support in Syncfusion .NET MAUI DataGrid (SfDataGrid) control and more here.
+title: Column Types in .NET MAUI DataGrid control | Syncfusion®
+description: Learn all about Column Types support in Syncfusion® .NET MAUI DataGrid (SfDataGrid) control and more here.
 platform: MAUI
 control: SfDataGrid
 documentation: UG
@@ -643,6 +643,9 @@ public class FreightTemplateSelector : DataTemplateSelector
 {% endtabs %}
 
 ![DataGrid with Template column contain cell Template selector](Images\column-types\maui-datagrid-templatecolumn-celltemplate-celltemplateselector.png)
+
+N>
+* When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
 ### Loading DatePicker
 You can load the `DatePicker` control in cells using the `DataGridTemplateColumn`.

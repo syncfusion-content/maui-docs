@@ -22,7 +22,7 @@ To get started quickly, you can also check out our video tutorial below.
 
 Before proceeding, ensure the following are in place:
 
-1.	Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
+1.	Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 2.	Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later).
 
 ## Step 1: Create a New MAUI Project
@@ -197,7 +197,7 @@ N> 2. And, if you are using multiple pages in your application, then make sure t
 
 Before proceeding, ensure the following are in place:
 
-1.	Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later.
+1.	Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 2.	Set up a .NET MAUI environment with Visual Studio Code. 
 3.  Ensure that the .NET MAUI workload is installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
 
@@ -378,6 +378,85 @@ N> 2. And, if you are using multiple pages in your application, then make sure t
 2.  Press `F5` to run the application.
 3.  The PDF document will be loaded in the PDF viewer control as shown in the following screenshot.
 
+{% endtabcontent %}
+
+{% tabcontent JetBrains Rider %}
+
+## Prerequisites
+
+Before proceeding, ensure the following are set up:
+
+1. Ensure you have the latest version of JetBrains Rider.
+2. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
+3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
+
+## Step 1: Create a new .NET MAUI Project
+
+1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
+2. Enter the Project Name, Solution Name, and Location.
+3. Select the .NET framework version and click Create.
+
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Pdf Viewer NuGet Package
+
+1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+2. Search for [Syncfusion.Maui.PdfViewer](https://www.nuget.org/packages/Syncfusion.Maui.PdfViewer/) and install the latest version.
+3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
+
+## Step 3: Register the Syncfusion<sup>®</sup> Core Handler
+
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) is a dependency for all MAUI Syncfusion controls. This package will be automatically installed as a dependency when [Syncfusion.Maui.PdfViewer](https://www.nuget.org/packages/Syncfusion.Maui.PdfViewer) NuGet is installed. Register the Syncfusion<sup>®</sup> core handler in the `MauiProgram.cs` file.
+
+{% tabs %}
+{% highlight c# tabtitle="MauiProgram.cs" hl_lines="1 17" %}
+
+using Syncfusion.Maui.Core.Hosting;
+
+namespace PdfViewerExample
+{
+    public class MauiProgram 
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+                .UseMauiApp<App>()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                });
+
+           builder.ConfigureSyncfusionCore();
+           return builder.Build();
+        }
+    }
+}
+{% endhighlight %} 
+{% endtabs %}
+
+## Step 4: Add PDF Viewer to the Project
+
+Open the `MainPage.xaml` file and follow the steps below. 
+
+1.  Import the control namespace `Syncfusion.Maui.PdfViewer`, and then add the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) control inside the `<ContentPage.Content>` tag as follows.
+2.  Name the PDF viewer control as `pdfViewer`.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.PdfViewer;assembly=Syncfusion.Maui.PdfViewer"
+             x:Class="PdfViewerExample.MainPage">
+
+    <ContentPage.Content>
+        <syncfusion:SfPdfViewer x:Name="pdfViewer">
+        </syncfusion:SfPdfViewer>
+    </ContentPage.Content>
+</ContentPage>
+
+{% endhighlight %} 
+{% endtabs %}
 {% endtabcontent %}
 {% endtabcontents %}
 ![Getting started with .NET MAUI PDF Viewer](Images\Getting-Started\maui-pdf-viewer-getting-started.png)

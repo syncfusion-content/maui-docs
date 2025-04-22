@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About .NET MAUI DataGrid control | Syncfusion
-description: Learn here all about introduction of Syncfusion .NET MAUI DataGrid (SfDataGrid) control, its elements and more.
+title: About .NET MAUI DataGrid control | Syncfusion®
+description: Learn here all about introduction of Syncfusion® .NET MAUI DataGrid (SfDataGrid) control, its elements and more.
 platform: MAUI
 control: SfDataGrid
 documentation: ug
@@ -39,6 +39,10 @@ The .NET MAUI DataGrid control is used to display and manipulate data in a tabul
 * **Filtering** - Programmatically filter data based on the criteria.
 
 * **Selection** - Select one or more rows. Keyboard navigation is supported in Windows platform.
+
+* **Search** - Supports highlighting cell content and provides navigation functionalities.
+
+* **Master-Details View** – Supports displaying relational data using hierarchies
 
 * **Column Sizing** - Set the width of columns with various sizing options. Columns can also be sized based on their content.
 

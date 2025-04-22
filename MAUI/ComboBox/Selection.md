@@ -199,6 +199,62 @@ When the [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.In
 
 ![.NET MAUI ComboBox None mode.](Images/Selection/net-maui-combobox-nonemode.png)
 
+## Selection changing notification
+
+When a user attempts to select an item from the drop-down list, the [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionChanging) event is triggered. This event allows developers to intercept the selection process, providing an opportunity to cancel or modify the selection based on predefined criteria.
+
+The SelectionChangingEventArgs provides essential data related to the selection-changing event:
+
+* [CurrentSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SelectionChangingEventArgs.html#Syncfusion_Maui_Inputs_SelectionChangingEventArgs_CurrentSelection) - Contains the item that are about to be selected.
+* [PreviousSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SelectionChangingEventArgs.html#Syncfusion_Maui_Inputs_SelectionChangingEventArgs_PreviousSelection) - Contains the item that were previously selected.
+* **Cancel** - Allows preventing the selection change when set to true.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfComboBox x:Name="comboBox"
+                        WidthRequest="250"
+                        HeightRequest="40"
+                        ItemsSource="{Binding SocialMedias}"
+                        TextMemberPath="Name"
+                        DisplayMemberPath="Name"
+                        SelectionChanging="OnSelectionChanging"/>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
+SfComboBox comboBox = new SfComboBox
+{
+    WidthRequest = 250,
+    HeightRequest= 40,
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name"
+};
+comboBox.SelectionChanging += OnSelectionChanging;
+
+{% endhighlight %}
+{% endtabs %}
+
+The `SelectionChanging` event can be handled as follows:
+
+{% tabs %}
+{% highlight C# %}
+
+private async void OnSelectionChanging(object sender, Syncfusion.Maui.Inputs.SelectionChangingEventArgs e)
+{
+    await DisplayAlert("Alert", "Selecting Item has changing", "Ok");
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+The following gif image illustrates the result of the above code:
+
+![.NET MAUI ComboBox selection changing event notification.](Images/Selection/net-maui-combobox-selection-changing-notification.gif)
+
 ## Selection changed notification
 
 When an item is selected from the .NET MAUI drop-down list, the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionChanged) event is triggered. The SelectionChanged event contains the newly selected and previously selected items in the `AddedItems` and `RemovedItems` properties. The SelectionChanged contains the following properties:

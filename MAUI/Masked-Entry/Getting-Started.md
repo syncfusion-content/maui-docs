@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Masked Entry control | Syncfusion
-description: Learn about getting started with Syncfusion .NET MAUI Masked Entry (SfMaskedEntry) control, its elements, and more.
+title: Getting Started with .NET MAUI Masked Entry control | Syncfusion®
+description: Learn about getting started with Syncfusion® .NET MAUI Masked Entry (SfMaskedEntry) control, its elements, and more.
 platform: maui
 control: MaskedEntry
 documentation: ug 
@@ -74,9 +74,7 @@ namespace MaskedEntrySample
 
 ## Step 4: Add a Basic Masked Entry
 
-Step 1: Add the NuGet to the project as discussed in the above reference section. 
-
-Step 2: Add the namespace as shown in the following code sample.
+Step 1: Add the namespace as shown in the following code sample.
 
 {% tabs %}
 
@@ -94,7 +92,7 @@ Step 2: Add the namespace as shown in the following code sample.
 
 {% endtabs %}
 
-Step 3: Add the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) control with a required optimal name using the included namespace.
+Step 2: Add the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) control with a required optimal name using the included namespace.
 
 {% tabs %}
 
