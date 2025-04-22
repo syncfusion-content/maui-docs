@@ -393,21 +393,32 @@ The [BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.
 
 [BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_BadgeSettings) contains the sub-elements such as badge types, positions, and colors. You can customize the background color, text color, border color, width, offset, and font attributes.
 
+N> To customize the badge beyond predefined styles, set [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Type) property to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeType.html#Syncfusion_Maui_Core_BadgeType_None) in the [BadgeSettings.](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#properties)
+
 {% tabs %}
 
 {% highlight xaml %}
-<tabView:SfTabView>
-    <tabView:SfTabItem Header="RECENTS" BadgeText="20">
-        <tabView:SfTabItem.BadgeSettings >
-            <core:BadgeSettings FontSize="15" 
-                                FontAttributes="Bold" 
-                                FontFamily="serif"/>
-        </tabView:SfTabItem.BadgeSettings>
-    </tabView:SfTabItem>
-</tabView:SfTabView>
+<ContentPage
+    . . .  
+    xmlns:tabView="clr-namespace:Syncfusion.Maui.TabView;assembly=Syncfusion.Maui.TabView  
+    xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
+    <tabView:SfTabView>
+        <tabView:SfTabItem Header="RECENTS" BadgeText="20">
+            <tabView:SfTabItem.BadgeSettings >
+                <core:BadgeSettings FontSize="15" 
+                                    FontAttributes="Bold" 
+                                    FontFamily="serif"/>
+            </tabView:SfTabItem.BadgeSettings>
+        </tabView:SfTabItem>
+    </tabView:SfTabView>    
+</ContentPage>
 {% endhighlight %}
 
 {% highlight C# %}
+
+using Syncfusion.Maui.Core;
+using Syncfusion.Maui.TabView;
+...
 
 var tabView = new SfTabView();
 BadgeSettings badgeSetting = new BadgeSettings();
@@ -530,17 +541,19 @@ You can customize the animation duration when changing the [SelectedIndex](https
 {% tabs %}
 
 {% highlight xaml %}
-<tabView:SfTabView  ContentTransitionDuration ="300">
+<tabView:SfTabView  ContentTransitionDuration ="1000">
     <tabView:SfTabItem/>
 </tabView:SfTabView>
 {% endhighlight %}
 
 {% highlight C# %}
 var tabView = new SfTabView();
-tabView.ContentTransitionDuration = 300;
+tabView.ContentTransitionDuration = 1000;
 {% endhighlight %}
 
 {% endtabs %}
+
+![ContentTransitionDuration](images/ContentTransition.gif)
 
 ## Image size
 
