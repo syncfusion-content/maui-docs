@@ -24,7 +24,13 @@ The default value for validation mode is [KeyPress](https://help.syncfusion.com/
                         MaskType="Simple" Mask="00/00/0000" ValidationMode="KeyPress"/>
 {% endhighlight %}
 {% highlight c# %}
+
+SfMaskedEntry maskedEntry = new SfMaskedEntry();
+maskedEntry.WidthRequest = 200;
+maskedEntry.MaskType = MaskedEntryMaskType.Simple;
+maskedEntry.Mask = "00/00/0000";
 maskedEntry.ValidationMode = InputValidationMode.KeyPress;
+
 {% endhighlight %}
 {% endtabs %}
 
