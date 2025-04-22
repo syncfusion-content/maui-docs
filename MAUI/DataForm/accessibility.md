@@ -7,7 +7,7 @@ control: SfDataForm
 documentation: ug
 ---
 
-## Accessibility in .NET MAUI DataForm (SfDataForm)
+# Accessibility in .NET MAUI DataForm (SfDataForm)
 
 Accessibility support in `DataForm` is designed to provide voice descriptions of their field name, editor text, and validation text.
 

@@ -116,5 +116,3 @@ To migrate easier from Xamarin SfTabView to .NET MAUI SfTabView, we kept most of
   * Center button support.
   * Drop-down mode.
   * Visible header count.
-  * Scroll button background color.
-  * Scroll button foreground color.
