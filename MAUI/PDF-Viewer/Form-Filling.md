@@ -304,7 +304,7 @@ Customizing form fields allows you to control their appearance and behavior. You
 
 ### Customize the background color of the form fields
 
-The BackgroundColor property allows you to customize the appearance of form fields by setting their background color. The example below demonstrates how to apply a uniform background color to all form fields in the PDF document, regardless of their type.This approach can also be applied to specific form field types, such as checkboxes and radio buttons, by adjusting their respective properties individually.
+The [BackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Widget.html#Syncfusion_Maui_PdfViewer_Widget_BackgroundColor) property allows you to customize the appearance of form fields by setting their background color. The example below demonstrates how to apply a uniform background color to all form fields in the PDF document, regardless of their type. This approach can also be applied to specific form field types, such as checkboxes and radio buttons, by adjusting their respective properties individually.
 
 {% tabs %}
 {% highlight C# %}
