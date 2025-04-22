@@ -180,9 +180,13 @@ The appearance of the [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusi
                                     <ColumnDefinition Width="100"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
-                                <Frame  Grid.RowSpan="4" BorderColor="Transparent" Grid.Row="0" Grid.Column="0"  Padding="0" Margin="0,0,0,7">
-                                    <Image  Source="emp_01.png"/>
-                                </Frame>
+                                <Border Grid.RowSpan="4"
+                                        Grid.Row="0"
+                                        Grid.Column="0"
+                                        Padding="0"
+                                        Margin="0,0,0,7">
+                                    <Image  Source="emp_01.png" />
+                                </Border>
                                 <Label Text="Position" Grid.Column="1" Grid.Row="0" Margin="6,0,0,0"/>
                                 <Label Text="Chairman" Grid.Row="0" Grid.Column="2"/>
                                 <Label Text="Organization " Grid.Row="1" Grid.Column="1" Margin="6,0,0,0"/>
