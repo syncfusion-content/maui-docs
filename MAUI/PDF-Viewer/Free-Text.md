@@ -124,6 +124,22 @@ void CustomizeDefaultFreeTextSettings()
 {% endhighlight %}
 {% endtabs %}
 
+### Hide the Border of a Free Text Annotation
+
+The PDF Viewer allows customization of annotation properties through the [AnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationSettings.html). By default, free text annotations are added with a visible border. You can hide this border by setting the [BorderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FreeTextAnnotationSettings.html#Syncfusion_Maui_PdfViewer_FreeTextAnnotationSettings_BorderWidth) property to 0 using the [FreeTextAnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FreeTextAnnotationSettings.html#properties).
+
+{% tabs %}
+{% highlight C# %}
+// Access the default free text annotation settings
+FreeTextAnnotationSettings freeTextSettings = pdfViewer.AnnotationSettings.FreeText;
+
+// Set the border width to zero to hide the border
+freeTextSettings.BorderWidth = 0;
+{% endhighlight %}
+{% endtabs %}
+
+N> You should set this property in the code-behind of your `MainPage.xaml.cs` file, immediately after calling `InitializeComponent()`. This ensures that any new free text annotations added through the toolbar will appear without a visible border.
+
 ## Edit the selected free text annotation
 
 ### Edit the text with UI interaction
