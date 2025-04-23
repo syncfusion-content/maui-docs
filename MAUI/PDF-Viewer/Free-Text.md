@@ -124,18 +124,18 @@ void CustomizeDefaultFreeTextSettings()
 {% endhighlight %}
 {% endtabs %}
 
-### How to create borderless free text annotation?
+### How to create a border less free text annotation?
 
-The PDF Viewer allows customization of annotation properties through the [AnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationSettings.html) property. By default, free text annotations are added with a visible border. You can create new borderless free text annotation by setting the [BorderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FreeTextAnnotationSettings.html#Syncfusion_Maui_PdfViewer_FreeTextAnnotationSettings_BorderWidth) property to 0 using the [FreeTextAnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FreeTextAnnotationSettings.html#properties).
+The PDF Viewer allows you to customize annotation properties using the [AnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationSettings.html) property. By default, free text annotations include a visible border. To create a border less free text annotation, set the [BorderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FreeTextAnnotationSettings.html#Syncfusion_Maui_PdfViewer_FreeTextAnnotationSettings_BorderWidth) property to 0 using the [FreeTextAnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FreeTextAnnotationSettings.html#properties).
 
-The following example demonstrates how to create borderless free text annotations:
+The following example demonstrates how to create a border less free text annotation:
 
 {% tabs %}
 {% highlight C# %}
 // Access the default free text annotation settings
 FreeTextAnnotationSettings freeTextSettings = pdfViewer.AnnotationSettings.FreeText;
 
-// Set the border width to zero to hide the border
+// Set the border width to zero to remove the border
 freeTextSettings.BorderWidth = 0;
 {% endhighlight %}
 {% endtabs %}
