@@ -18,8 +18,7 @@ The following code illustrates how to get an input type chip.
 {% tabs %}
 
 {% highlight xaml %}
-<chip:SfChipGroup Margin="200,100,0,0"  
-                  ItemsSource="{Binding Employees}" 
+<chip:SfChipGroup ItemsSource="{Binding Employees}" 
                   DisplayMemberPath="Name" 
                   ChipType="Input">
 <chip:SfChipGroup.InputView>
@@ -37,19 +36,23 @@ The following code illustrates how to get an input type chip.
 
 {% highlight c# %}
 
-[MainPage.cs]
+//MainPage.cs
 
-using Syncfusion.Maui.Core;
-
-    SfChipGroup chipGroup = new SfChipGroup();
-    var entry= new Entry { Margin = new Thickness(10, 10, 0, 0), WidthRequest = 110, HeightRequest = 40 };
-    chipGroup.InputView = entry;
-    entry.Completed += Entry_Completed;
-    this.BindingContext = new ViewModel();
-    chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
-    chipGroup.DisplayMemberPath = "Name";
-    chipGroup.ChipType = SfChipsType.Input;
-   
+var entry= new Entry 
+{
+    VerticalOptions = LayoutOptions.Center,
+    FontSize = 15,
+    WidthRequest = 110, 
+    HeightRequest = 40 
+};
+SfChipGroup chipGroup = new SfChipGroup()
+{
+    InputView = entry,
+    DisplayMemberPath = "Name",
+    ChipType = SfChipsType.Input,
+};
+chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
+entry.Completed += Entry_Completed;
 
 private void Entry_Completed(object sender, EventArgs e)
 {
@@ -123,7 +126,6 @@ The following code illustrates how to get choice typed ChipGroup.
 
 {% highlight xaml %}
 <chip:SfChipGroup    x:Name="sfChipGroup"
-                     Margin="200,100,0,0"  
                      ItemsSource="{Binding Employees}" 
                      DisplayMemberPath="Name" 
                      ChipType="Choice">
@@ -150,37 +152,35 @@ The following code illustrates how to get choice typed ChipGroup.
 
 {% highlight c# %}
 
-using Syncfusion.Maui.Core;
+SfChipGroup chipGroup = new SfChipGroup();
+this.BindingContext = new ViewModel();
+chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
+chipGroup.DisplayMemberPath = "Name";
+chipGroup.ChipType = SfChipsType.Choice;
 
-    SfChipGroup chipGroup = new SfChipGroup();
-    this.BindingContext = new ViewModel();
-    chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
-    chipGroup.DisplayMemberPath = "Name";
-    chipGroup.ChipType = SfChipsType.Choice;
+VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
+VisualState normalState = new VisualState() { Name="Normal"};
 
-    VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
-    VisualState normalState = new VisualState() { Name="Normal"};
+VisualStateGroup commonStateGroup = new VisualStateGroup();
+if (sfChipGroup.ChipType == SfChipsType.Choice)
+{
+    
+    normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipTextColorProperty, Value = Colors.Black });
+    normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Colors.White });
+}
 
-    VisualStateGroup commonStateGroup = new VisualStateGroup();
-    if (sfChipGroup.ChipType == SfChipsType.Choice)
-    {
-        
-        normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipTextColorProperty, Value = Colors.Black });
-        normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Colors.White });
-    }
+VisualState selectedState = new VisualState
+{
+    Name = "Selected"
+};
+selectedState.Setters.Add(new Setter { Property = SfChipGroup.ChipTextColorProperty, Value = Colors.Green });
+selectedState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Colors.Violet });
 
-    VisualState selectedState = new VisualState
-    {
-        Name = "Selected"
-    };
-    selectedState.Setters.Add(new Setter { Property = SfChipGroup.ChipTextColorProperty, Value = Colors.Green });
-    selectedState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Colors.Violet });
+commonStateGroup.States.Add(normalState);
+commonStateGroup.States.Add(selectedState);
+visualStateGroupList.Add(commonStateGroup);
 
-    commonStateGroup.States.Add(normalState);
-    commonStateGroup.States.Add(selectedState);
-    visualStateGroupList.Add(commonStateGroup);
-
-    VisualStateManager.SetVisualStateGroups(sfChipGroup, visualStateGroupList);
+VisualStateManager.SetVisualStateGroups(sfChipGroup, visualStateGroupList);
 
 {% endhighlight %}
 
@@ -242,37 +242,30 @@ public class EmployeeViewModel : INotifyPropertyChanged
 
 {% highlight xaml %}
 
-<ContentPage.Content>
-    <Grid>
-    <chip:SfChipGroup ChipType="Choice" ChoiceMode="SingleOrNone">
-        <chip.SfChipGroup.Items>
-            <chip:SfChip Text="Extra Small"/>
-            <chip:SfChip Text="Small"/>
-            <chip:SfChip Text="Medium"/>
-            <chip:SfChip Text="Large"/>
-            <chip:SfChip Text="Extra Large"/>
-        </chip:SfChipGroup.Items>
-    </chip:SfChipGroup>
-    </Grid>
-</ContentPage.Content>
-
+<chip:SfChipGroup >
+    <chip:SfChipGroup.Items ChipType="Choice" ChoiceMode="SingleOrNone">
+        <chip:SfChip Text="Extra Small"/>
+        <chip:SfChip Text="Small"/>
+        <chip:SfChip Text="Medium"/>
+        <chip:SfChip Text="Large"/>
+        <chip:SfChip Text="Extra Large"/>
+   </chip:SfChipGroup.Items>
+</chip:SfChipGroup>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-using Syncfusion.Maui.Core;
-
-    Grid grid = new Grid();
-    var chipGroup = new SfChipGroup(){ChipType = SfChipsType.Choice, ChoiceMode = ChoiceMode.SingleOrNone};
-    grid.Children.Add(chipGroup);
-    chipGroup.HeightRequest = 40;
-    chipGroup.Items.Add(new SfChip(){Text="Extra Small"});
-    chipGroup.Items.Add(new SfChip(){Text="Small"});
-    chipGroup.Items.Add(new SfChip(){Text="Medium"});
-    chipGroup.Items.Add(new SfChip(){Text="Large"});
-    chipGroup.Items.Add(new SfChip(){Text="Extra Large"});
-    this.Content = grid;
+SfChipGroup chipGroup = new SfChipGroup()
+{
+    ChipType = SfChipsType.Choice, 
+    ChoiceMode = ChoiceMode.SingleOrNone
+};
+chipGroup.Items.Add(new SfChip(){Text="Extra Small"});
+chipGroup.Items.Add(new SfChip(){Text="Small"});
+chipGroup.Items.Add(new SfChip(){Text="Medium"});
+chipGroup.Items.Add(new SfChip(){Text="Large"});
+chipGroup.Items.Add(new SfChip(){Text="Extra Large"});
 		
 {% endhighlight %}
 
@@ -292,12 +285,11 @@ The following code illustrates how to get filter typed ChipGroup.
 
 {% highlight xaml %}
 
-<chip:SfChipGroup    x:Name="sfChipGroup"
-                     Margin="200,100,0,0"  
-                     ItemsSource="{Binding Employees}"
-                     SelectionIndicatorColor="White" 
-                     ChipType="Filter" 
-                     DisplayMemberPath="Name" >
+<chip:SfChipGroup x:Name="sfChipGroup"
+                ItemsSource="{Binding Employees}"
+                SelectionIndicatorColor="White" 
+                ChipType="Filter" 
+                DisplayMemberPath="Name" >
 					 
 <VisualStateManager.VisualStateGroups>
     <VisualStateGroup x:Name="CommonStates">
@@ -321,37 +313,35 @@ The following code illustrates how to get filter typed ChipGroup.
 
 {% highlight c# %}
 
-using Syncfusion.Maui.Core;
+SfChipGroup chipGroup = new SfChipGroup();
+this.BindingContext = new ViewModel();
+chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
+chipGroup.DisplayMemberPath = "Name";
+chipGroup.SelectionIndicatorColor = Colors.White;
+chipGroup.ChipType = SfChipsType.Filter;
 
-    SfChipGroup chipGroup = new SfChipGroup();
-    this.BindingContext = new ViewModel();
-    chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
-    chipGroup.DisplayMemberPath = "Name";
-    chipGroup.SelectionIndicatorColor = Colors.White;
-    chipGroup.ChipType = SfChipsType.Filter;
+VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
+VisualState normalState = new VisualState() { Name="Normal"};
 
-    VisualStateGroupList visualStateGroupList = new VisualStateGroupList();
-    VisualState normalState = new VisualState() { Name="Normal"};
+VisualStateGroup commonStateGroup = new VisualStateGroup();
+if (sfChipGroup.ChipType == SfChipsType.Filter)
+{
+    normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipTextColorProperty, Value = Colors.Black });
+    normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Colors.White });
+}
 
-    VisualStateGroup commonStateGroup = new VisualStateGroup();
-    if (sfChipGroup.ChipType == SfChipsType.Filter)
-    {
-        normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipTextColorProperty, Value = Colors.Black });
-        normalState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Colors.White });
-    }
+VisualState selectedState = new VisualState
+{
+    Name = "Selected"
+};
+selectedState.Setters.Add(new Setter { Property = SfChipGroup.ChipTextColorProperty, Value = Colors.Green });
+selectedState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Colors.Violet });
 
-    VisualState selectedState = new VisualState
-    {
-        Name = "Selected"
-    };
-    selectedState.Setters.Add(new Setter { Property = SfChipGroup.ChipTextColorProperty, Value = Colors.Green });
-    selectedState.Setters.Add(new Setter { Property = SfChipGroup.ChipBackgroundProperty, Value = Colors.Violet });
+commonStateGroup.States.Add(normalState);
+commonStateGroup.States.Add(selectedState);
+visualStateGroupList.Add(commonStateGroup);
 
-    commonStateGroup.States.Add(normalState);
-    commonStateGroup.States.Add(selectedState);
-    visualStateGroupList.Add(commonStateGroup);
-
-    VisualStateManager.SetVisualStateGroups(sfChipGroup, visualStateGroupList);
+VisualStateManager.SetVisualStateGroups(sfChipGroup, visualStateGroupList);
 
 {% endhighlight %}
 
@@ -445,44 +435,42 @@ The following code illustrates how to get action typed ChipGroup.
 
 {% highlight c# %}
 
-using Syncfusion.Maui.Core;
-
-        ViewModel viewModel = new ViewModel();
-        SfChipGroup chipGroup = new SfChipGroup()
-        {
-            ItemsSource = viewModel.Employees,
-            DisplayMemberPath = "Name",
-            CloseButtonColor = Colors.Black,
-            ChipType = SfChipsType.Action,
-            
-        };
-        StackLayout stackLayout = new StackLayout()
-        {
-            Orientation = StackOrientation.Horizontal
-        };
-        Label nameLabel = new Label()
-        {
-            Margin = new Thickness(10, 60, 0, 0),
-            Text = "Name:",
-            FontAttributes = FontAttributes.Bold,
-            FontSize = 14
-        };
-        Label resultLabel = new Label()
-        {
-            Margin = new Thickness(10, 60, 0, 0),
-            FontAttributes = FontAttributes.Bold,
-            FontSize = 14,
-            
-        };
-        this.BindingContext = viewModel;
-        chipGroup.SetBinding(SfChipGroup.CommandProperty,new Binding( "ActionCommand"));
-        resultLabel.SetBinding(Label.TextProperty, new Binding("Result"));
-        StackLayout stackLayout2 = new StackLayout();
-        stackLayout.Children.Add(nameLabel);
-        stackLayout.Children.Add(resultLabel);
-        stackLayout2.Children.Add(chipGroup);
-        stackLayout2.Children.Add(stackLayout);
-        this.Content = stackLayout2;
+ViewModel viewModel = new ViewModel();
+SfChipGroup chipGroup = new SfChipGroup()
+{
+    ItemsSource = viewModel.Employees,
+    DisplayMemberPath = "Name",
+    CloseButtonColor = Colors.Black,
+    ChipType = SfChipsType.Action,
+    
+};
+StackLayout stackLayout = new StackLayout()
+{
+    Orientation = StackOrientation.Horizontal
+};
+Label nameLabel = new Label()
+{
+    Margin = new Thickness(10, 60, 0, 0),
+    Text = "Name:",
+    FontAttributes = FontAttributes.Bold,
+    FontSize = 14
+};
+Label resultLabel = new Label()
+{
+    Margin = new Thickness(10, 60, 0, 0),
+    FontAttributes = FontAttributes.Bold,
+    FontSize = 14,
+    
+};
+this.BindingContext = viewModel;
+chipGroup.SetBinding(SfChipGroup.CommandProperty,new Binding( "ActionCommand"));
+resultLabel.SetBinding(Label.TextProperty, new Binding("Result"));
+StackLayout stackLayout2 = new StackLayout();
+stackLayout.Children.Add(nameLabel);
+stackLayout.Children.Add(resultLabel);
+stackLayout2.Children.Add(chipGroup);
+stackLayout2.Children.Add(stackLayout);
+this.Content = stackLayout2;
 
 [Model]
 

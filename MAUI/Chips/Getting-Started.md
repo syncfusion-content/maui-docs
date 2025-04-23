@@ -297,8 +297,7 @@ The chips control creates chip for each object and arranges chips in a StackLayo
 			<chip:SfChipGroup.ChipLayout>
 				<FlexLayout 
 					HorizontalOptions="Start" 
-					VerticalOptions="Center" 
-					/> 
+					VerticalOptions="Center" /> 
 			</chip:SfChipGroup.ChipLayout>
 		</chip:SfChipGroup> 
 	</Grid>
@@ -418,18 +417,20 @@ using Syncfusion.Maui.Core;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 
-	Grid grid = new Grid();
-	SfChipGroup chipGroup = new SfChipGroup();
-	grid.Children.Add(chipGroup);
-	this.BindingContext = new ViewModel();
-	chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
-	chipGroup.DisplayMemberPath = "Name";
-	chipGroup.HorizontalOptions = LayoutOptions.Start;
-	chipGroup.VerticalOptions = LayoutOptions.Center;
-	chipGroup.ChipTextColor = Colors.Black;
-	chipGroup.ChiBackground = Colors.White;
-	chipGroup.ChipPadding = new Thickness(8, 8, 0, 0);
-	this.Content = grid;
+this.BindingContext = new ViewModel();
+Grid grid = new Grid();
+SfChipGroup chipGroup = new SfChipGroup()
+{
+	DisplayMemberPath = "Name",
+	HorizontalOptions = LayoutOptions.Start,
+	VerticalOptions = LayoutOptions.Center,
+	ChipTextColor = Colors.Black,
+	ChipBackground = Colors.White,
+	ChipPadding = new Thickness(8, 8, 0, 0),
+};
+chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
+grid.Children.Add(chipGroup);
+this.Content = grid;
 		
 {% endhighlight %}
 
@@ -480,18 +481,36 @@ The following code example uses the [Action](https://help.syncfusion.com/cr/maui
 using Microsoft.Maui.Controls;
 using Syncfusion.Maui.Chips;
 
-Grid grid = new Grid();
-SfChipGroup chipGroup = new SfChipGroup();
 this.BindingContext = new ViewModel();
-Label nameLabel = new Label { Text = "Name:", FontAttributes = FontAttributes.Bold, FontSize = 14 };
-Label resultLabel = new Label { FontAttributes = FontAttributes.Bold, FontSize = 14 };
-chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
-chipGroup.SetBinding(SfChipGroup.CommandProperty, "ActionCommand");
-chipGroup.DisplayMemberPath = "Name";
-chipGroup.ChipType = ChipType.Action;
-resultLabel.SetBinding(Label.TextProperty, "Result");
-StackLayout resultLayout = new StackLayout { Orientation = StackOrientation.Horizontal, Children = { nameLabel, resultLabel } };
-StackLayout mainLayout = new StackLayout { Children = { chipGroup, resultLayout } };
+Grid grid = new Grid();
+Label nameLabel = new Label
+{
+    Text = "Name:",
+    FontAttributes = FontAttributes.Bold,
+    FontSize = 14
+};
+Label resultLabel = new Label
+{
+    FontAttributes = FontAttributes.Bold,
+    FontSize = 14
+};
+SfChipGroup chipGroup = new SfChipGroup
+{
+    DisplayMemberPath = "Name",
+    ChipType = SfChipType.Action
+};
+chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, new Binding("Employees"));
+chipGroup.SetBinding(SfChipGroup.CommandProperty, new Binding("ActionCommand"));
+resultLabel.SetBinding(Label.TextProperty, new Binding("Result"));
+StackLayout resultLayout = new StackLayout
+{
+    Orientation = StackOrientation.Horizontal,
+    Children = { nameLabel, resultLabel }
+};
+StackLayout mainLayout = new StackLayout
+{
+    Children = { chipGroup, resultLayout }
+};
 grid.Children.Add(mainLayout);
 this.Content = grid;
 	
