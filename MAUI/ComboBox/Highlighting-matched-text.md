@@ -32,10 +32,9 @@ It highlights the first position of the matching characters in the suggestion li
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    WidthRequest="350"
-                    HeightRequest = "40"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
+                    TextMemberPath="Name"
                     TextHighlightMode="FirstOccurrence"
                     IsEditable="True"
                     IsFilteringEnabled="True"
@@ -49,17 +48,15 @@ It highlights the first position of the matching characters in the suggestion li
     SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
     SfComboBox comboBox = new SfComboBox() 
     {
-         HeightRequest = 40,
-         WidthRequest= 350,
-         TextHighlightMode = OccurrenceMode.FirstOccurrence,
          ItemsSource = socialMediaViewModel.SocialMedias,
-         IsEditable =true,
          DisplayMemberPath = "Name",
+         TextMemberPath = "Name",
+         TextHighlightMode = OccurrenceMode.FirstOccurrence,
+         IsEditable =true,
          IsFilteringEnabled = true,
          HighlightedTextColor = Colors.Red,
          HighlightedTextFontAttributes = FontAttributes.Bold
     };
-Content = comboBox;
 
 {% endhighlight %}
 {% endtabs %}
@@ -75,10 +72,9 @@ It highlights the matching character that are present everywhere in the suggesti
 {% highlight xaml %}
 
     <editors:SfComboBox x:Name="comboBox"
-                        WidthRequest="350"
-                        DisplayMemberPath="Name"
-                        HeightRequest = "40"
                         ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
                         TextHighlightMode="MultipleOccurrence"
                         IsEditable="True"
                         IsFilteringEnabled="True"
@@ -93,18 +89,16 @@ It highlights the matching character that are present everywhere in the suggesti
     SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
     SfComboBox comboBox = new SfComboBox() 
     {
-         HeightRequest = 40,
-         WidthRequest= 350,
-         TextSearchMode = ComboBoxTextSearchMode.Contains,
          ItemsSource = socialMediaViewModel.SocialMedias,
-         TextHighlightMode = OccurrenceMode.MultipleOccurrence,
          DisplayMemberPath = "Name",
-         IsEditable = true,
+         TextMemberPath = "Name",
+         TextHighlightMode = OccurrenceMode.MultipleOccurrence,
+         IsEditable =true,
          IsFilteringEnabled = true,
          HighlightedTextColor = Colors.Red,
-         HighlightedTextFontAttributes = FontAttributes.Bold
+         HighlightedTextFontAttributes = FontAttributes.Bold,
+         TextSearchMode = ComboBoxTextSearchMode.Contains
     };
-Content = comboBox;
 
 {% endhighlight %}
 {% endtabs %}

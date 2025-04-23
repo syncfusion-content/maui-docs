@@ -16,8 +16,6 @@ Restrict the number of suggestions displayed and have the remaining items loaded
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox" 
-                    WidthRequest="350"
-                    HeightRequest="40"
                     IsFilteringEnabled="True"
                     IsEditable="True" 
                     ItemsSource="{Binding SocialMedias}"          
@@ -32,8 +30,6 @@ Restrict the number of suggestions displayed and have the remaining items loaded
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox() 
 {
-    WidthRequest= 350,
-    HeightRequest = 40,
     MaximumSuggestion = 2,
     IsEditable = true,
     IsFilteringEnabled = true,
@@ -57,8 +53,6 @@ The LoadMore support provides [LoadMoreText](https://help.syncfusion.com/cr/maui
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox" 
-                    WidthRequest="350"
-                    HeightRequest="40"
                     IsFilteringEnabled="True"
                     IsEditable="True" 
                     ItemsSource="{Binding SocialMedias}"          
@@ -75,8 +69,6 @@ The LoadMore support provides [LoadMoreText](https://help.syncfusion.com/cr/maui
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox() 
 {
-    WidthRequest= 350,
-    HeightRequest = 40,
     MaximumSuggestion = 2,
     LoadMoreText= "Load more items",
     IsEditable = true,
@@ -101,8 +93,6 @@ SfComboBox allows customizing User Interface(UI) of Load More view. To customize
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox" 
-                    WidthRequest="350"
-                    HeightRequest="40"
                     IsFilteringEnabled="True"
                     IsEditable="True" 
                     ItemsSource="{Binding SocialMedias}"          
@@ -125,10 +115,8 @@ SfComboBox allows customizing User Interface(UI) of Load More view. To customize
     SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
     SfComboBox comboBox = new SfComboBox
     {
-        WidthRequest = 350,
-        HeightRequest = 40,
         IsFilteringEnabled = true,
-        IsEditable = false, 
+        IsEditable = true, 
         ItemsSource = socialMediaViewModel.SocialMedias,
         MaximumSuggestion = 2,
         DisplayMemberPath = "Name",
@@ -170,8 +158,6 @@ The LoadMore support provides [LoadMoreButtonTapped](https://help.syncfusion.com
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox" 
-                    WidthRequest="350"
-                    HeightRequest="40"
                     IsFilteringEnabled="True"
                     IsEditable="True" 
                     MaximumSuggestion="2"
@@ -188,8 +174,6 @@ The LoadMore support provides [LoadMoreButtonTapped](https://help.syncfusion.com
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox
 {
-    WidthRequest = 350,
-    HeightRequest=40,
     IsFilteringEnabled = true,
     IsEditable = true,
     MaximumSuggestion = 2,
@@ -201,7 +185,7 @@ comboBox.LoadMoreButtonTapped += ComboBox_LoadMoreButtonTapped;
 
 private void ComboBox_LoadMoreButtonTapped(object? sender, EventArgs e)
 {
-
+    // Triggered when the load more button is tapped.
 }
 
 {% endhighlight %}

@@ -21,13 +21,11 @@ We can customize the desire text to be displayed for indicating no results found
                     
 <editors:SfComboBox x:Name="comboBox"
                         IsEditable="True"
-                        HeightRequest="40"
                         IsFilteringEnabled="True"
                         NoResultsFoundText="Not Found"
                         ItemsSource="{Binding SocialMedias}"
                         TextMemberPath="Name"
-                        DisplayMemberPath="Name"
-                        WidthRequest="350" /> 
+                        DisplayMemberPath="Name" /> 
 
 {% endhighlight %}
 
@@ -36,14 +34,12 @@ We can customize the desire text to be displayed for indicating no results found
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox() 
 {
-    WidthRequest= 350,
-    HeightRequest = 40,
-    NoResultsFoundText="Not Found",
     IsFilteringEnabled = true,
     IsEditable = true,
+    NoResultsFoundText = "Not Found",
+    ItemsSource = socialMediaViewModel.SocialMedias,
     TextMemberPath = "Name",
     DisplayMemberPath = "Name",
-    ItemsSource = socialMediaViewModel.SocialMedias
 };
 
 {% endhighlight %}
@@ -65,9 +61,7 @@ We can customize the appearance of the desire text to be displayed for indicatin
                     IsEditable="True"
                     IsFilteringEnabled="True"
                     TextMemberPath="Name"
-                    DisplayMemberPath="Name"
-                    WidthRequest="350"
-                    HeightRequest="40">
+                    DisplayMemberPath="Name">
     <editors:SfComboBox.NoResultsFoundTemplate>
         <DataTemplate>
             <Label Text="Not Found"  FontSize="20" FontAttributes="Italic" TextColor="Red" Margin="70,10,0,0"/>
@@ -83,30 +77,21 @@ We can customize the appearance of the desire text to be displayed for indicatin
     SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
     SfComboBox comboBox = new SfComboBox() 
     {
-        ItemsSource = socialMediaViewModel.SocialMedias,
-        IsEditable=True,
-        IsFilteringEnabled=True,
-        TextMemberPath=Name,
-        DisplayMemberPath=Name,
-        WidthRequest=350,
-        HeightRequest=40
-    };
-    var noResultsTemplate = new DataTemplate(() =>
-    {
-        var label = new Label
+        ItemsSource = socialMediaViewModel.SocialMedias
+        TextMemberPath = "Name",
+        DisplayMemberPath = "Name",
+        NoResultsFoundTemplate = new DataTemplate(() =>
         {
-            Text = "Not Found",
-            FontSize = 20,
-            FontAttributes = FontAttributes.Italic,
-            TextColor = Colors.Red,
-            Margin = new Thickness(70, 10, 0, 0)
-        };
-
-        return new ViewCell { View = label };
-    });
-
-
-comboBox.NoResultsFoundTemplate = noResultsTemplate;
+            return new Label
+            {
+                Text = "Not Found",
+                FontSize = 20,
+                FontAttributes = FontAttributes.Italic,
+                TextColor = Colors.Red,
+                Margin = new Thickness(70, 10, 0, 0)
+            };
+        })
+    };
 
 {% endhighlight %}
 

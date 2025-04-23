@@ -89,13 +89,11 @@ using Syncfusion.Maui.Inputs;
 CityViewModel cityViewModel = new CityViewModel();
 SfComboBox comboBox = new SfComboBox
 {
-    WidthRequest = 350,
-    HeightRequest = 40,
     IsEditable = true,
     IsFilteringEnabled = true,
     ItemsSource = cityViewModel.Cities,
-    TextMemberPath = "Name",
-    DisplayMemberPath = "Name",
+    TextMemberPath = "CityName",
+    DisplayMemberPath = "CityName",
     BindingContext = cityViewModel
 };
 
@@ -132,15 +130,12 @@ Filter the matching items based on the starting text and the first filtered item
 CityViewModel cityViewModel = new CityViewModel();
 SfComboBox comboBox = new SfComboBox
 {
-    WidthRequest = 350,
-    HeightRequest = 40,
     TextSearchMode = ComboBoxTextSearchMode.StartsWith,
     IsEditable = true,
     IsFilteringEnabled = true,
     ItemsSource = cityViewModel.Cities,
-    TextMemberPath = "Name",
-    DisplayMemberPath = "Name",
-    BindingContext = cityViewModel
+    TextMemberPath = "CityName",
+    DisplayMemberPath = "CityName"
 };
 
 {% endhighlight %}
@@ -173,8 +168,6 @@ using Syncfusion.Maui.Inputs;
 CityViewModel cityViewModel = new CityViewModel();
 SfComboBox comboBox = new SfComboBox
 {
-    WidthRequest = 350,
-    HeightRequest = 40,
     TextSearchMode = ComboBoxTextSearchMode.Contains,
     IsEditable = true,
     IsFilteringEnabled = true,
@@ -269,15 +262,12 @@ CityViewModel cityViewModel = new CityViewModel();
 CityFilteringBehavior cityFilteringBehavior = new CityFilteringBehavior();
 SfComboBox comboBox = new SfComboBox
 {
-    WidthRequest = 350,
-    HeightRequest = 40,
-    IsEditable = true,
-    FilterBehavior = cityFilteringBehavior,
-    IsFilteringEnabled = true,
-    ItemsSource = cityViewModel.Cities,
     TextMemberPath = "CityName",
     DisplayMemberPath = "CityName",
-    BindingContext = cityViewModel
+    IsEditable = true,
+    IsFilteringEnabled = true,
+    FilterBehavior = cityFilteringBehavior,
+    ItemsSource = cityViewModel.Cities,
 };
 
 {% endhighlight %}
