@@ -18,6 +18,7 @@ The following code illustrates how to get an input type chip.
 {% tabs %}
 
 {% highlight xaml %}
+
 <chip:SfChipGroup ItemsSource="{Binding Employees}" 
                   DisplayMemberPath="Name" 
                   ChipType="Input">
@@ -36,7 +37,7 @@ The following code illustrates how to get an input type chip.
 
 {% highlight c# %}
 
-//MainPage.cs
+[MainPage.cs]
 
 var entry= new Entry 
 {
