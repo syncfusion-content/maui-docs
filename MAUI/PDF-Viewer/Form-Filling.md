@@ -312,7 +312,7 @@ foreach (FormField formField in PdfViewer.FormFields)
 {
     foreach (Widget widget in formField.Widgets)
     {
-        //Set the background color of the widget to a semi transparent blue background with Rgba value of (204, 215, 255, 200)
+        //Set the background color of the widget to a semitransparent blue background with Rgba value of (204, 215, 255, 200)
         widget.BackgroundColor = Color.FromRgba(204, 215, 255, 200);
     }
 } 
@@ -390,9 +390,10 @@ foreach (FormField formField in PdfViewer.FormFields)
 {% endhighlight %}
 {% endtabs %}
 
-N> In versions prior to v29.1.33, the PDF Viewer rendered all form fields with a default semi transparent blue background, without considering the background color defined within the PDF document.Starting with v29.1.33, the PDF Viewer now renders form fields using the background color specified in their appearance settings, ensuring the fields are displayed as intended by the document author.
+N> In versions prior to v29.1.33, the PDF Viewer rendered all form fields with a default semitransparent blue background, without considering the background color defined within the PDF document.
+N> Starting with v29.1.33, the PDF Viewer now renders form fields using the background color specified in their appearance settings, ensuring the fields are displayed as intended by the document author.
 N> To maintain backward compatibility, support has been added to customize the background color of form fields programmatically. This allows you to restore the previous behavior or apply custom styling based on your application requirements.
-N> If you prefer to retain the original semi transparent blue background used in earlier versions, you can apply by setting the background color to `Color.FromRgba(204, 215, 255, 200)`. For example please refer to the section [Customize the background color of the form fields](https://help.syncfusion.com/maui/pdf-viewer/form-filling#customize-the-background-color-of-the-form-fields).
+N> If you prefer to retain the original semitransparent blue background used in earlier versions, you can apply by setting the background color to `Color.FromRgba(204, 215, 255, 200)`. For example please refer to the section [Customize the background color of the form fields](https://help.syncfusion.com/maui/pdf-viewer/form-filling#customize-the-background-color-of-the-form-fields).
 
 ## Property changed event for Form fields Widgets
 
