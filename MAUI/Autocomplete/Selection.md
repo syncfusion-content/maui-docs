@@ -226,17 +226,14 @@ When the [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.In
 
 {% highlight xaml %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
-SfAutocomplete autoComplete = new SfAutocomplete
-{
-    ItemsSource = socialMediaViewModel.SocialMedias,
-    DisplayMemberPath = "Name",
-    TextMemberPath = "Name",
-    Placeholder = "Enter Media",
-    SelectionMode = AutocompleteSelectionMode.Multiple,
-    MaxDropDownHeight = 250,
-    TokensWrapMode = AutoCompleteTokensWrapMode.None
-};
+<editors:SfAutoComplete x:Name="autoComplete" 
+             ItemsSource="{Binding SocialMedias}"
+             DisplayMemberPath="Name"
+             TextMemberPath="Name"
+             Placeholder="Enter Media"
+             SelectionMode="Multiple"
+             MaxDropDownHeight="250"
+             TokensWrapMode="None" />
 
 {% endhighlight %}
 
