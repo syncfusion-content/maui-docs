@@ -1637,7 +1637,7 @@ SfComboBox comboBox = new SfComboBox
     ItemsSource = viewModel.SocialMedia,
     DisplayMemberPath = "Name",
     TextMemberPath = "Name",
-    ReturnCommand = socialMediaViewModel.AlertCommand,
+    ReturnCommand = viewModel.AlertCommand,
     ReturnCommandParameter = "Return key is pressed"
 };
 
