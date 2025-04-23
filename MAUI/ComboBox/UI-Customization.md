@@ -258,7 +258,7 @@ N> `SfComboBox` ClearButton will not be supported when using Custom View.
 
 ## Maximum DropDown Height
 
-The maximum height of the drop-down can be changed by using the [MaxDropDownHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_MaxDropDownHeight) property of the ComboBox control. The default value of MaxDropDownHeight property is `500d`.
+The maximum height of the drop-down can be changed by using the [MaxDropDownHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_MaxDropDownHeight) property of the ComboBox control. The default value of MaxDropDownHeight property is `400d`.
 
  N> If the `MaxDropDownHeight` is too small compared to the populated items, the scroll viewer will be automatically shown to navigate the hidden items.
 
@@ -1637,7 +1637,7 @@ SfComboBox comboBox = new SfComboBox
     ItemsSource = viewModel.SocialMedia,
     DisplayMemberPath = "Name",
     TextMemberPath = "Name",
-    ReturnCommand = alertCommand,
+    ReturnCommand = socialMediaViewModel.AlertCommand,
     ReturnCommandParameter = "Return key is pressed"
 };
 

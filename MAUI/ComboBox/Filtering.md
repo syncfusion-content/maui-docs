@@ -172,8 +172,8 @@ SfComboBox comboBox = new SfComboBox
     IsEditable = true,
     IsFilteringEnabled = true,
     ItemsSource = cityViewModel.Cities,
-    TextMemberPath = "Name",
-    DisplayMemberPath = "Name",
+    TextMemberPath = "CityName",
+    DisplayMemberPath = "CityName",
     BindingContext = cityViewModel
 };
 

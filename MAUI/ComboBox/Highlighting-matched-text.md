@@ -93,7 +93,7 @@ It highlights the matching character that are present everywhere in the suggesti
          DisplayMemberPath = "Name",
          TextMemberPath = "Name",
          TextHighlightMode = OccurrenceMode.MultipleOccurrence,
-         IsEditable =true,
+         IsEditable = true,
          IsFilteringEnabled = true,
          HighlightedTextColor = Colors.Red,
          HighlightedTextFontAttributes = FontAttributes.Bold,
