@@ -33,11 +33,10 @@ We can provide Header Content at the top of the Autocomplete's dropdown.[DropDow
     <StackLayout VerticalOptions="Start" 
                  HorizontalOptions="Start" 
                  Padding="30">
-        <editors:SfAutocomplete HeightRequest="40" 
-                                     ShowDropdownHeaderView ="True"
-                                     ItemsSource="{Binding SocialMedias}"
-                                     DisplayMemberPath="Name"
-                                     DropdownHeaderViewHeight="50">
+        <editors:SfAutocomplete ShowDropdownHeaderView ="True"
+                                ItemsSource="{Binding SocialMedias}"
+                                DisplayMemberPath="Name"
+                                DropdownHeaderViewHeight="50">
             <editors:SfAutocomplete.DropdownHeaderView>
                 <StackLayout BackgroundColor="#f0f0f0" >
                     <Label  x:Name="SearchLabel" 
@@ -76,7 +75,6 @@ namespace AutocompleteSample
 
             SfAutocomplete autoComplete = new SfAutocomplete
             {
-                HeightRequest = 40,
                 ShowDropdownHeaderView = true,
                 ItemsSource = new List<string> { "Facebook", "Twitter", "Instagram", "LinkedIn" },
                 DropdownHeaderViewHeight = 50
@@ -133,11 +131,10 @@ The following code example illustrate how to set Footer content in [SfAutocomple
     <StackLayout VerticalOptions="Start" 
                  HorizontalOptions="Start" 
                  Padding="30">
-        <editors:SfAutocomplete HeightRequest="40"
-                                     ShowDropdownFooterView ="True"
-                                     ItemsSource = "{Binding SocialMedias}"
-                                     DisplayMemberPath="Name"
-                                     DropdownFooterViewHeight="50">
+        <editors:SfAutocomplete ShowDropdownFooterView ="True"
+                                ItemsSource = "{Binding SocialMedias}"
+                                DisplayMemberPath="Name"
+                                DropdownFooterViewHeight="50">
             <editors:SfAutocomplete.DropdownFooterView>
                 <StackLayout BackgroundColor="#f0f0f0" >
                     <Label  Text="Add New"
@@ -175,7 +172,6 @@ namespace AutocompleteSample
 
             SfAutocomplete autoComplete = new SfAutocomplete()
             {
-                HeightRequest = 40,
                 ShowDropdownFooterView = true,
                 ItemsSource = new List<string> { "Facebook", "Twitter", "Instagram", "LinkedIn" },
                 DropdownFooterViewHeight = 50,

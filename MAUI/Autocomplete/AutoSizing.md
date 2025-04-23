@@ -17,11 +17,9 @@ The [EnableAutoSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 {% highlight xaml %}
 
 <editors:SfAutocomplete x:Name="autocomplete"
-             WidthRequest="350"
-             HeightRequest="40"
              ItemsSource="{Binding SocialMedias}"
              SelectionMode="Multiple"
-             MaxDropDownHeight="350"
+             MaxDropDownHeight="250"
              DisplayMemberPath="Name"
              TextMemberPath="Name"
              Placeholder="Enter Media"
@@ -35,11 +33,9 @@ The [EnableAutoSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
-    WidthRequest = 350,
-    HeightRequest = 40,
     ItemsSource = socialMediaViewModel.SocialMedias,
     SelectionMode = AutocompleteSelectionMode.Multiple,
-    MaxDropDownHeight = 350,
+    MaxDropDownHeight = 250,
     DisplayMemberPath = "Name",
     TextMemberPath = "Name",
     Placeholder = "Enter Media",
