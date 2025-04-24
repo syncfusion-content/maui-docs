@@ -32,7 +32,6 @@ You can prompt the user with any information by using the [Placeholder](https://
 {% endhighlight %}
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox() 
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -66,7 +65,6 @@ The placeholder text color can be changed by using the [PlaceholderColor](https:
 {% endhighlight %}
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox() 
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -99,7 +97,6 @@ The clear button icon color can be changed by using the [ClearButtonIconColor](h
 {% endhighlight %}
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox() 
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -131,7 +128,6 @@ The DropDown icon color can be changed by using the [DropDownIconColor](https://
 {% endhighlight %}
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox() 
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -165,7 +161,6 @@ The ComboBox border color can be changed by using the [`Stroke`](https://help.sy
 {% endhighlight %}
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox() 
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -200,7 +195,6 @@ The [SelectionTextHighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox() 
 {
     ItemsSource = socialMediaViewModel.SocialMedias
@@ -236,7 +230,6 @@ SfComboBox comboBox = new SfComboBox()
 
 {% highlight c# %}
 
-SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox
 {
     CustomView = new Label
@@ -275,7 +268,6 @@ The maximum height of the drop-down can be changed by using the [MaxDropDownHeig
 {% endhighlight %}
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox() 
 {
     IsEditable = true,
@@ -477,7 +469,6 @@ DropDown items can be customized using the [DropDownItemFontAttributes](https://
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox() 
 {
     Placeholder="Enter Media",
@@ -513,7 +504,6 @@ The [DropDownBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox() 
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -546,7 +536,6 @@ The [SelectedDropDownItemBackground](https://help.syncfusion.com/cr/maui/Syncfus
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox() 
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -579,7 +568,6 @@ The [DropDownStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox() 
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -646,7 +634,6 @@ The [DropDownItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox() 
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -687,7 +674,6 @@ The drop-down that shows the filtered items will be placed automatically based o
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox() 
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -719,7 +705,6 @@ The comboBox enables the user to provide padding for the items inside dropdown u
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox() 
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -751,7 +736,6 @@ The `DropdownWidth` property is used to modify the Width of the dropdown.
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox() 
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -785,7 +769,6 @@ Suggestion box can be shown whenever the control receives focus using the `ShowS
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox() 
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -1138,7 +1121,6 @@ We can customize the size of the drop down button in [SfComboBox](https://help.s
 
 {% highlight c# %}
 
-SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox
 {
     Placeholder = "Enter Social Media",
@@ -1189,7 +1171,6 @@ We can set view to the drop down button in [SfComboBox](https://help.syncfusion.
 
 {% highlight c# %}
 
-SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox
 {
     Placeholder = "Enter Social Media",
@@ -1297,7 +1278,6 @@ Completed event can be subscribed in C# also:
 {% tabs %}
 {% highlight C# %}
     
-SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
 SfComboBox combobox = new SfComboBox()
 {
     IsEditable = true,
@@ -1338,7 +1318,6 @@ The [DropDownOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.S
 
 {% highlight c# %}
 
-    SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
     SfComboBox comboBox = new SfComboBox
     {
         ItemsSource = socialMediaViewModel.SocialMedias,
@@ -1384,7 +1363,6 @@ The [DropDownOpened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Sf
 
 {% highlight c# %}
 
-    SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
     SfComboBox comboBox = new SfComboBox
     {
         ItemsSource = socialMediaViewModel.SocialMedias,
@@ -1427,7 +1405,6 @@ The [DropDownClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 {% endhighlight %}
 {% highlight c# %}
 
-    SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
     SfComboBox comboBox = new SfComboBox
     {
         ItemsSource = socialMediaViewModel.SocialMedias,
@@ -1553,7 +1530,6 @@ N> Default value of ReturnType is `Default`.
 {% endhighlight %}
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox() 
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -1598,7 +1574,6 @@ var path = new Path()
     Stroke = Colors.Red
 };
 
-var viewModel = new SocialMediaViewModel();
 
 SfComboBox comboBox = new SfComboBox();
 comboBox.ItemsSource = viewModel.SocialMedia;
@@ -1631,7 +1606,6 @@ The following image illustrates the result of the above code:
 {% endhighlight %}
 {% highlight c# %}
 
-var viewModel = new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox
 {
     ItemsSource = viewModel.SocialMedia,

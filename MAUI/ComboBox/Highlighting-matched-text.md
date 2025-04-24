@@ -45,7 +45,6 @@ It highlights the first position of the matching characters in the suggestion li
 
 {% highlight c# %}
 
-    SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
     SfComboBox comboBox = new SfComboBox() 
     {
          ItemsSource = socialMediaViewModel.SocialMedias,
@@ -86,7 +85,6 @@ It highlights the matching character that are present everywhere in the suggesti
 
 {% highlight c# %}
 
-    SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
     SfComboBox comboBox = new SfComboBox() 
     {
          ItemsSource = socialMediaViewModel.SocialMedias,

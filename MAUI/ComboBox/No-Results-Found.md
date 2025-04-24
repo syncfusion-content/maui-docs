@@ -31,7 +31,6 @@ We can customize the desire text to be displayed for indicating no results found
 
 {% highlight c# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox() 
 {
     IsFilteringEnabled = true,
@@ -74,7 +73,6 @@ We can customize the appearance of the desire text to be displayed for indicatin
 
 {% highlight c# %}
 
-    SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
     SfComboBox comboBox = new SfComboBox() 
     {
         ItemsSource = socialMediaViewModel.SocialMedias

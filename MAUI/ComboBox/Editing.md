@@ -30,7 +30,6 @@ In the editable mode, the [ComboBox](https://help.syncfusion.com/cr/maui/Syncfus
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox
 {
     IsEditable = true,
@@ -64,7 +63,6 @@ Non-editable mode prevents users from editing and instead allows them to select 
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox
 {
     IsEditable = false,
@@ -99,7 +97,6 @@ By default, the clear button `X` will be displayed in the editor of the ComboBox
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel(); 
 SfComboBox comboBox = new SfComboBox
 {
     IsEditable = true,

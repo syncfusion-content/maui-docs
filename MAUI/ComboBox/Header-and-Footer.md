@@ -41,9 +41,8 @@ You can provide content for header at the top of the ComboBox's dropdown. The [D
         HorizontalOptions = LayoutOptions.Start,
         Padding = new Thickness(30)
     };
-
-     SfComboBox comboBox = new SfComboBox()
-     {
+    SfComboBox comboBox = new SfComboBox()
+    {
         ShowDropdownHeaderView = true,
         ItemsSource = socialMediaViewModel.SocialMedias,
         IsEditable = true,
@@ -106,7 +105,6 @@ The following code example shows how to set footer content in [SfComboBox](https
         HorizontalOptions = LayoutOptions.Start,
         Padding = new Thickness(30)
     };
-    SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
     SfComboBox comboBox = new SfComboBox()
      {
         ShowDropdownFooterView = true,

@@ -31,7 +31,6 @@ The [EnableAutoSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 
 {% highlight c# %}
 
-SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox() 
 {
         ItemsSource = socialMediaViewModel.SocialMedias,

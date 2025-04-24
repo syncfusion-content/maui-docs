@@ -27,7 +27,6 @@ Restrict the number of suggestions displayed and have the remaining items loaded
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox() 
 {
     MaximumSuggestion = 2,
@@ -66,7 +65,6 @@ The LoadMore support provides [LoadMoreText](https://help.syncfusion.com/cr/maui
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox() 
 {
     MaximumSuggestion = 2,
@@ -112,7 +110,6 @@ SfComboBox allows customizing User Interface(UI) of Load More view. To customize
 
 {% highlight C# %}
 
-    SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
     SfComboBox comboBox = new SfComboBox
     {
         IsFilteringEnabled = true,
@@ -171,7 +168,6 @@ The LoadMore support provides [LoadMoreButtonTapped](https://help.syncfusion.com
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox
 {
     IsFilteringEnabled = true,
