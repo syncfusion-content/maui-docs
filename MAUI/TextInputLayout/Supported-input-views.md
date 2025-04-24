@@ -290,8 +290,7 @@ To initialize the [MaskedEntry](https://help.syncfusion.com/maui/masked-entry/ov
 
 <inputLayout:SfTextInputLayout Hint="Card number" 
                                HelperText="Required *"
-                               ContainerType="Outlined"
-                               ContainerBackground="Transparent" >
+                               ContainerType="Outlined">
    <maskedEntry:SfMaskedEntry MaskType="Simple"
                               Mask="0000 0000 0000 0000" />
 </inputLayout:SfTextInputLayout> 
@@ -303,7 +302,6 @@ SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Card number"; 
 inputLayout.HelperText = "Required *";
 inputLayout.ContainerType = ContainerType.Outlined;
-inputLayout.ContainerBackground = Colors.Transparent;
 inputLayout.Content = new SfMaskedEntry() { MaskType = MaskedEntryMaskType.Simple, Mask = "0000 0000 0000 0000" }; 
 
 {% endhighlight %}
@@ -320,8 +318,7 @@ To initialize the `NumericEntry` control and launch it in each platform, refer t
 
 <inputLayout:SfTextInputLayout Hint="Amount" 
                                HelperText="Enter the amount"
-                               ContainerType="Outlined"
-                               ContainerBackground="Transparent" >
+                               ContainerType="Outlined">
    <numericEntry:SfNumericEntry Value="100" 
                                 ShowClearButton="True" 
                                 UpDownPlacementMode="Inline"/>
@@ -334,7 +331,6 @@ SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Amount"; 
 inputLayout.HelperText = "Enter the amount";
 inputLayout.ContainerType = ContainerType.Outlined;
-inputLayout.ContainerBackground = Colors.Transparent;
 inputLayout.Content = new SfNumericEntry() { Value=100, 
                                              ShowClearButton=True, 
                                              UpDownPlacementMode=NumericEntryUpDownPlacementMode.Inline}; 
@@ -353,7 +349,6 @@ To initialize the [Picker](https://learn.microsoft.com/en-us/dotnet/maui/user-in
 
 <inputLayout:SfTextInputLayout Hint="Fruit" 
                                HelperText="Select a fruit"
-                               ContainerBackground="Transparent"
                                ContainerType="Outlined" >
    <Picker SelectedItem="Apple">
         <Picker.ItemsSource>
@@ -373,7 +368,6 @@ SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Fruit"; 
 inputLayout.HelperText = "Select a fruit";
 inputLayout.ContainerType = ContainerType.Outlined;
-inputLayout.ContainerBackground = Colors.Transparent;
 var picker = new Picker();
 picker.Items.Add("Apple");
 picker.Items.Add("Orange");
