@@ -29,7 +29,7 @@ Helper text conveys additional guidance about the input field, such as how it wi
 
 {% highlight C# %} 
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Name";
 inputLayout.HelperText = "Enter your name";
 inputLayout.Content = new Entry(); 
@@ -62,7 +62,7 @@ When the text input is not accepted, an error message will display instructions 
 
 {% highlight C# %} 
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Email";
 inputLayout.ContainerType= ContainerType.Outlined;
 inputLayout.HelperText = "Enter your email address";
@@ -98,7 +98,7 @@ Character counter is used when you need to limit the characters. Character limit
 
 {% highlight C# %} 
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Password";
 inputLayout.CharMaxLength = 8;
 inputLayout.ContainerType= ContainerType.Outlined;
@@ -131,7 +131,7 @@ The reserved spaces for assistive labels can be removed by setting the [ReserveS
 
 {% highlight c# %}
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Name";
 inputLayout.ContainerType = ContainerType.Outlined;
 inputLayout.ReserveSpaceForAssistiveLabels = false;

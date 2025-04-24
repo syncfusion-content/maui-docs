@@ -56,7 +56,7 @@ I> Cursor color of the input view will be same as the `Accent` color of the appl
 
 {% highlight C# %} 
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "User name";
 inputLayout.ErrorText = "User name available";
 inputLayout.Content = new Entry(); 
@@ -118,7 +118,7 @@ The text input layout is disabled by setting the [IsEnabled](https://help.syncfu
 
 {% highlight C# %} 
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Name";
 inputLayout.IsEnabled = false;
 inputLayout.Content = new Entry(); 
@@ -152,7 +152,7 @@ The color of the container is customized when the [ContainerType](https://help.s
 
 {% highlight C# %} 
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Name";
 inputLayout.Stroke = Color.FromHex("#0450C2");
 inputLayout.ContainerBackground = Color.FromHex("#E6EEF9");
@@ -184,7 +184,7 @@ The color of the container is customized when the [ContainerType](https://help.s
 
 {% highlight C# %} 
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Name";
 inputLayout.ContainerType = ContainerType.Outlined;
 inputLayout.Stroke = Color.FromHex("#0450C2");
