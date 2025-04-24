@@ -154,7 +154,6 @@ The following code illustrates how to get choice typed ChipGroup.
 {% highlight c# %}
 
 SfChipGroup chipGroup = new SfChipGroup();
-this.BindingContext = new ViewModel();
 chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
 chipGroup.DisplayMemberPath = "Name";
 chipGroup.ChipType = SfChipsType.Choice;
@@ -315,7 +314,6 @@ The following code illustrates how to get filter typed ChipGroup.
 {% highlight c# %}
 
 SfChipGroup chipGroup = new SfChipGroup();
-this.BindingContext = new ViewModel();
 chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
 chipGroup.DisplayMemberPath = "Name";
 chipGroup.SelectionIndicatorColor = Colors.White;
@@ -412,9 +410,7 @@ The following code illustrates how to get action typed ChipGroup.
 {% tabs %}
 
 {% highlight xaml %}
-<ContentPage.BindingContext>
-        <local:ViewModel/>
-</ContentPage.BindingContext>
+
 <chip:SfChipGroup
     Command="{Binding ActionCommand}" 
     ItemsSource="{Binding Employees}"
@@ -463,7 +459,6 @@ Label resultLabel = new Label()
     FontSize = 14,
     
 };
-this.BindingContext = viewModel;
 chipGroup.SetBinding(SfChipGroup.CommandProperty,new Binding( "ActionCommand"));
 resultLabel.SetBinding(Label.TextProperty, new Binding("Result"));
 StackLayout stackLayout2 = new StackLayout();
