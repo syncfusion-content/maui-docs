@@ -43,7 +43,6 @@ It highlights the first position of the matching characters in the suggestion li
 
 {% highlight c# %}
 
-     SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
      SfAutocomplete autocomplete = new SfAutocomplete() 
      {
           DisplayMemberPath = "Name",
@@ -81,7 +80,6 @@ It highlights the matching character that are present everywhere in the suggesti
 
 {% highlight c# %}
 
-     SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
      SfAutocomplete autocomplete = new SfAutocomplete() 
      {
           DisplayMemberPath = "Name",

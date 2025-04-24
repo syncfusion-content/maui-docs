@@ -24,7 +24,6 @@ Restrict the number of suggestions displayed and have the remaining items loaded
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -58,7 +57,6 @@ The LoadMore support provides [LoadMoreText](https://help.syncfusion.com/cr/maui
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -100,7 +98,6 @@ SfAutocomplete allows customizing User Interface(UI) of Load More view. To custo
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel(); 
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
     DisplayMemberPath = "Name",
@@ -148,7 +145,6 @@ The LoadMore support provides [LoadMoreButtonTapped](https://help.syncfusion.com
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel(); 
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
     DisplayMemberPath = "Name",

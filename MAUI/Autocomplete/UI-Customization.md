@@ -31,7 +31,6 @@ You can prompt the user with any information by using the [Placeholder](https://
 {% endhighlight %}
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete
 {
     Placeholder = "Select a social media",
@@ -64,7 +63,6 @@ The placeholder text color can be changed by using the [PlaceholderColor](https:
 {% endhighlight %}
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -99,7 +97,6 @@ The clear button icon color can be changed by using the [ClearButtonIconColor](h
 {% endhighlight %}
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -135,7 +132,6 @@ The Autocomplete border color can be changed by using the [`Stroke`](https://hel
 {% endhighlight %}
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -171,7 +167,6 @@ The [SelectionTextHighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -204,7 +199,6 @@ N> If the `MaxDropDownHeight` is too small compared to the populated items, the 
 {% endhighlight %}
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete
 {
     MaxDropDownHeight = 100,
@@ -403,7 +397,6 @@ DropDown items can be customized using the [DropDownItemFontAttributes](https://
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -440,7 +433,6 @@ The [DropDownBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -474,7 +466,6 @@ The [SelectedDropDownItemBackground](https://help.syncfusion.com/cr/maui/Syncfus
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
     ItemsSource = socialMediaViewModel.SocialMedias;
@@ -506,7 +497,6 @@ The [DropDownStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -541,7 +531,6 @@ The [DropDownStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -576,7 +565,6 @@ The [DropDownItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -618,7 +606,6 @@ The drop-down that shows the filtered items will be placed automatically based o
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -651,7 +638,6 @@ The autocomplete enables the user to provide padding for the items inside dropdo
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -684,7 +670,6 @@ The `DropdownWidth` property is used to modify the Width of the dropdown.
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -719,7 +704,6 @@ Suggestion box can be shown whenever the control receives focus using the `ShowS
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -904,8 +888,6 @@ The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.Dr
                                 DisplayMemberPath="Name"
                                 ItemsSource="{Binding Employees}"
                                 SelectedItem="{Binding SelectedEmployee,Mode=TwoWay}"
-                                TextSearchMode="Contains"
-                                DropDownItemHeight="50"
                                 x:Name="autoComplete"
                                 ItemTemplate="{StaticResource employeeTemplateSelector}">
             <editors:SfAutocomplete.BindingContext>
@@ -1114,7 +1096,6 @@ Completed event can be subscribed in C# also:
 {% tabs %}
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -1153,7 +1134,6 @@ The [DropDownOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.S
 
 {% highlight c# %}
 
-    SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
     SfAutocomplete autoComplete = new SfAutocomplete
     {
         ItemsSource = socialMediaViewModel.SocialMedias,
@@ -1199,7 +1179,6 @@ The [DropDownOpened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Sf
 
 {% highlight c# %}
 
-    SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
     SfAutocomplete autoComplete = new SfAutocomplete
     {
         ItemsSource = socialMediaViewModel.SocialMedias,
@@ -1243,7 +1222,6 @@ The [DropDownClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 {% endhighlight %}
 {% highlight c# %}
 
-    SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
     SfAutocomplete autoComplete = new SfAutocomplete
     {
         ItemsSource = socialMediaViewModel.SocialMedias,
@@ -1364,7 +1342,6 @@ N> Default value of ReturnType is `Default`.
 {% endhighlight %}
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -1410,8 +1387,6 @@ var path = new Path()
     Stroke = Colors.Red
 };
 
-var viewModel = new SocialMediaViewModel();
-
 SfAutocomplte autocomplete = new SfAutocomplte();
 autocomplete.ItemsSource = viewModel.SocialMedia;
 autocomplete.DisplayMemberPath = "Name";
@@ -1443,7 +1418,6 @@ The following image illustrates the result of the above code:
 {% endhighlight %}
 {% highlight c# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete
 {
     ItemsSource = socialMediaViewModel.SocialMedias,

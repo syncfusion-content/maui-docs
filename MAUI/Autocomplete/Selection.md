@@ -75,7 +75,6 @@ public class SocialMediaViewModel
 {% endhighlight %}
 {% highlight c# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel(); 
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
     DisplayMemberPath = "Name",
@@ -118,7 +117,6 @@ Also there are two ways to display multi-selection items in the AutoComplete con
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel(); 
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
     SelectionMode = AutocompleteSelectionMode.Multiple,
@@ -154,7 +152,6 @@ When setting [MultiSelectionDisplayMode](https://help.syncfusion.com/cr/maui/Syn
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -200,7 +197,6 @@ When the [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.In
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autoComplete = new SfAutocomplete
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -239,7 +235,6 @@ When the [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.In
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autoComplete = new SfAutocomplete
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -280,7 +275,6 @@ The SelectionChangingEventArgs provides essential data related to the selection-
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
 SfAutoComplete autocomplete = new SfAutoComplete
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -330,7 +324,6 @@ When an item is selected from the drop-down list, the [SelectionChanged](https:/
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
     ItemsSource = socialMediaViewModel.SocialMedias,
@@ -385,7 +378,6 @@ In single selection mode, the [SelectedValue](https://help.syncfusion.com/cr/mau
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete
 {
     MaxDropDownHeight = 250,
@@ -400,10 +392,7 @@ Label labelTitle = new Label
 {
     Text = "SelectedValue :"
 };
-Label selectedValue = new Label
-{
-    Text = ""
-};
+Label selectedValue = new Label();
 
 {% endhighlight %}
 {% endtabs %}
@@ -444,7 +433,6 @@ In multi-selection mode, the [SelectedValue](https://help.syncfusion.com/cr/maui
 {% endhighlight %}
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete
 {
     MaxDropDownHeight = 250,
@@ -506,7 +494,6 @@ By default, the clear button `X` will be displayed in the editor of the [Autocom
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete
 {
     IsClearButtonVisible = false,
@@ -540,7 +527,6 @@ In the Autocomplete control, the drop-down can be opened or closed programmatica
 {% endhighlight %}
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 SfAutocomplete autocomplete = new SfAutocomplete
 {
     ItemsSource = socialMediaViewModel.SocialMedias,

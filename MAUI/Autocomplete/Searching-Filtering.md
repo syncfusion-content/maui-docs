@@ -75,7 +75,6 @@ public class SocialMediaViewModel
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel(); 
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
     DisplayMemberPath = "Name",
@@ -108,7 +107,6 @@ Searching will be performed based on the [TextMemberPath](https://help.syncfusio
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel(); 
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
     DisplayMemberPath = "Name",
@@ -147,7 +145,6 @@ Set the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel(); 
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
     DisplayMemberPath = "Name",
@@ -180,7 +177,6 @@ Set the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel(); 
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
     DisplayMemberPath = "Name",
@@ -214,7 +210,6 @@ Instead of displaying suggestion list on every character entry, matches can be f
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel(); 
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
     DisplayMemberPath = "Name",

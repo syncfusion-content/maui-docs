@@ -27,7 +27,6 @@ We can customize the desire text to be displayed for indicating no results found
 
 {% highlight c# %}
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel(); 
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
     NoResultsFoundText = "Not Found",
@@ -64,7 +63,6 @@ We can customize the appearance of the desire text to be displayed for indicatin
 {% highlight c# %}
 
 
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel(); 
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
     ItemsSource = socialMediaViewModel.SocialMedias
