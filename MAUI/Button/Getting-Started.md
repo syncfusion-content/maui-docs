@@ -89,6 +89,7 @@ Step 1: Add the namespace as shown in the following code sample.
 	using Syncfusion.Maui.Buttons;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 2: Add the [SfButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) control with a required optimal name using the included namespace.
 
@@ -108,7 +109,6 @@ SfButton button = new SfButton();
 
 {% endtabs %}
 
-{% endtabs %}
 
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}
