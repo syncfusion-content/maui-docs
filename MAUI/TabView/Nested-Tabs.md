@@ -192,3 +192,21 @@ public partial class MainPage : ContentPage
 ![NestedTab](images/Nested_Tab.png)
 
 N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/NestedTabViewSample) in GitHub
+
+## Enable virtualization
+
+Enabling virtualization improves the initial loading performance of [SfTabView.](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html) To activate this feature, set the `EnableVirtualization` property to `true.`
+
+{% tabs %}
+{% highlight xaml %}
+
+<tabView:SfTabView EnableVirtualization="True" />
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfTabView tabView = new SfTabView();
+tabView.EnableVirtualization = true;
+
+{% endhighlight %}
+{% endtabs %}
