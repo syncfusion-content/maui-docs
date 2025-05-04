@@ -101,7 +101,7 @@ Assign the already defined `DataTemplateSelector` to the [`ItemTemplate`](https:
     <local:ChipViewModel/>
 </ContentPage.BindingContext>
 
-<chip: SfChipGroup x:Name="chipgroup"                                                           ChipBackground="Transparent"                                    
+<chip:SfChipGroup x:Name="chipgroup"                                                           ChipBackground="Transparent"                                    
 ItemsSource="{Binding Data}" 
 ItemTemplate="{StaticResource selector}">
     

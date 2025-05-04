@@ -44,14 +44,17 @@ The `CloseButtonClicked` event is triggered when the closed button is clicked. T
 {% tabs %}
 {% highlight xaml %}
     
-   <chip:SfChip WidthRequest="100"
-                x:Name="chip"
+   <chip:SfChip x:Name="chip"
+                ShowCloseButton="True"
+                Text="John"
                 CloseButtonClicked="SfChip_CloseButtonClicked"/>
 
 {% endhighlight %}
 {% highlight c# %}
 
    SfChip chip = new SfChip();
+   chip.Text = "John";
+   chip.ShowCloseButton = true;
    chip.CloseButtonClicked+=chip_CloseButtonClicked;
 
 {% endhighlight %}
@@ -60,10 +63,10 @@ The `CloseButtonClicked` event is triggered when the closed button is clicked. T
 {% tabs %}
 {% highlight c# %}
     
-    private async void SfChip_CloseButtonClicked(object sender, EventArgs e)
-        {
-            await DisplayAlert("Message", "Chip CloseButton Clicked", "close");
-        }
+private async void SfChip_CloseButtonClicked(object sender, EventArgs e)
+{
+    await DisplayAlert("Message", "Chip CloseButton Clicked", "close");
+}
 
 {% endhighlight %}
 {% endtabs %}
