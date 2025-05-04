@@ -23,20 +23,25 @@ Set up the MaskedEntry to exclude prompt and literal characters, preserving only
 {% tabs %}
 {% highlight XAML %}
 
-<syncfusion:SfMaskedEntry WidthRequest="200"
-                          MaskType="Simple"
-                          Mask=">AAAAA-AAAAA-AAAAA-AAAAA"
-                          Value="DF321SD1A"
-                          ValueMaskFormat="ExcludePromptAndLiterals"/>
+<editors:SfMaskedEntry x:Name="maskedEntry" WidthRequest="200"
+                            MaskType="Simple"
+                            ClearButtonVisibility="WhileEditing"
+                            Mask=">AAAAA-AAAAA-AAAAA-AAAAA"
+                            Value="DF321SD1A"
+                            ValueMaskFormat="ExcludePromptAndLiterals"/>
 
 {% endhighlight %}
 {% highlight C# %}
 
-maskedEntry.WidthRequest = "200";
-maskedEntry.MaskType = MaskedEntryMaskType.Simple;
-maskedEntry.Mask = ">AAAAA-AAAAA-AAAAA-AAAAA";
-maskedEntry.Value = "DF321SD1A";
-maskedEntry.ValueMaskFormat = MaskedEntryMaskFormat.ExcludePromptAndLiterals;
+SfMaskedEntry maskedEntry = new SfMaskedEntry
+{
+    WidthRequest = 200,
+    MaskType = MaskedEntryMaskType.Simple,
+    ClearButtonVisibility = ClearButtonVisibility.WhileEditing,
+    Mask = ">AAAAA-AAAAA-AAAAA-AAAAA",
+    Value = "DF321SD1A",
+    ValueMaskFormat = MaskedEntryMaskFormat.ExcludePromptAndLiterals
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -50,20 +55,25 @@ Set up the MaskedEntry to preserve typed and prompt characters, excluding litera
 {% tabs %}
 {% highlight XAML %}
 
-<syncfusion:SfMaskedEntry WidthRequest="200"
-                          MaskType="Simple"
-                          Mask=">AAAAA-AAAAA-AAAAA-AAAAA"
-                          Value="DF321SD1A"
-                          ValueMaskFormat="IncludePrompt"/>
+<editors:SfMaskedEntry x:Name="maskedEntry" WidthRequest="200"
+                            MaskType="Simple"
+                            ClearButtonVisibility="WhileEditing"
+                            Mask=">AAAAA-AAAAA-AAAAA-AAAAA"
+                            Value="DF321SD1A"
+                            ValueMaskFormat="IncludePrompt"/>
 
 {% endhighlight %}
 {% highlight C# %}
 
-maskedEntry.WidthRequest = "200";
-maskedEntry.MaskType = MaskedEntryMaskType.Simple;
-maskedEntry.Mask = ">AAAAA-AAAAA-AAAAA-AAAAA";
-maskedEntry.Value = "DF321SD1A";
-maskedEntry.ValueMaskFormat = MaskedEntryMaskFormat.IncludePrompt;
+SfMaskedEntry maskedEntry = new SfMaskedEntry
+{
+    WidthRequest = 200,
+    MaskType = MaskedEntryMaskType.Simple,
+    ClearButtonVisibility = ClearButtonVisibility.WhileEditing,
+    Mask = ">AAAAA-AAAAA-AAAAA-AAAAA",
+    Value = "DF321SD1A",
+    ValueMaskFormat = MaskedEntryMaskFormat.IncludePrompt
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -77,20 +87,25 @@ Keep typed and literal characters in the input but exclude prompt characters.
 {% tabs %}
 {% highlight XAML %}
 
-<syncfusion:SfMaskedEntry WidthRequest="200"
-                          MaskType="Simple"
-                          Mask=">AAAAA-AAAAA-AAAAA-AAAAA"
-                          Value="DF321SD1A"
-                          ValueMaskFormat="IncludeLiterals"/>
+<editors:SfMaskedEntry x:Name="maskedEntry" WidthRequest="200"
+                            MaskType="Simple"
+                            ClearButtonVisibility="WhileEditing"
+                            Mask=">AAAAA-AAAAA-AAAAA-AAAAA"
+                            Value="DF321SD1A"
+                            ValueMaskFormat="IncludeLiterals"/>
 
 {% endhighlight %}
 {% highlight C# %}
 
-maskedEntry.WidthRequest = "200";
-maskedEntry.MaskType = MaskedEntryMaskType.Simple;
-maskedEntry.Mask = ">AAAAA-AAAAA-AAAAA-AAAAA";
-maskedEntry.Value = "DF321SD1A";
-maskedEntry.ValueMaskFormat = MaskedEntryMaskFormat.IncludeLiterals;
+SfMaskedEntry maskedEntry = new SfMaskedEntry
+{
+    WidthRequest = 200,
+    MaskType = MaskedEntryMaskType.Simple,
+    ClearButtonVisibility = ClearButtonVisibility.WhileEditing,
+    Mask = ">AAAAA-AAAAA-AAAAA-AAAAA",
+    Value = "DF321SD1A",
+    ValueMaskFormat = MaskedEntryMaskFormat.IncludeLiterals
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -104,21 +119,26 @@ Maintain typed, prompt, and literal characters in the input.
 {% tabs %}
 {% highlight XAML %}
 
-<syncfusion:SfMaskedEntry WidthRequest="200"
-                          MaskType="Simple"
-                          Mask=">AAAAA-AAAAA-AAAAA-AAAAA"
-                          Value="DF321SD1A"
-                          ValueMaskFormat="IncludePromptAndLiterals"/>
+<editors:SfMaskedEntry x:Name="maskedEntry" WidthRequest="200"
+                            MaskType="Simple"
+                            ClearButtonVisibility="WhileEditing"
+                            Mask=">AAAAA-AAAAA-AAAAA-AAAAA"
+                            Value="DF321SD1A"
+                            ValueMaskFormat="IncludePromptAndLiterals"/>
 
 {% endhighlight %}
 {% highlight C# %}
 
-maskedEntry.WidthRequest = "200";
-maskedEntry.MaskType = MaskedEntryMaskType.Simple;
-maskedEntry.Mask = ">AAAAA-AAAAA-AAAAA-AAAAA";
-maskedEntry.Value = "DF321SD1A";
-maskedEntry.ValueMaskFormat = MaskedEntryMaskFormat.IncludePromptAndLiterals;
-
+SfMaskedEntry maskedEntry = new SfMaskedEntry
+{
+    WidthRequest = 200,
+    MaskType = MaskedEntryMaskType.Simple,
+    ClearButtonVisibility = ClearButtonVisibility.WhileEditing,
+    Mask = ">AAAAA-AAAAA-AAAAA-AAAAA",
+    Value = "DF321SD1A",
+    ValueMaskFormat = MaskedEntryMaskFormat.IncludePromptAndLiterals
+};
+       
 {% endhighlight %}
 {% endtabs %}
 

@@ -80,7 +80,7 @@ Step 1: Add the namespace as shown in the following code sample.
 {% tabs %}
 {% highlight xaml %}
 
-	xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel"
+	xmlns:carousel="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel"
 
 {% endhighlight %}
 {% highlight c# %}
@@ -96,7 +96,7 @@ Step 2: Add the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 {% highlight xaml %}
 
-<syncfusion:SfCarousel />
+<carousel:SfCarousel />
 	
 {% endhighlight %}
 
@@ -177,7 +177,7 @@ Step 2: Add the namespace as shown in the following code sample.
 {% tabs %}
 {% highlight xaml %}
 
-	xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel"
+	xmlns:carousel="clr-namespace:Syncfusion.Maui.Carousel;assembly=Syncfusion.Maui.Carousel"
 
 {% endhighlight %}
 {% highlight c# %}
@@ -193,7 +193,7 @@ Step 3: Add the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 {% highlight xaml %}
 
-<syncfusion:SfCarousel />
+<carousel:SfCarousel />
 	
 {% endhighlight %}
 
@@ -355,8 +355,8 @@ namespace CarouselSample
 
 SfCarousel carousel = new SfCarousel()
 {
-    ItemWidth = 170,
-    ItemHeight = 250
+    ItemHeight = 170,
+    ItemWidth = 270
 };
 
 carousel.ItemTemplate = itemTemplate;
@@ -387,9 +387,9 @@ We can bring particular item to the center of the screen using [SelectedIndex](h
 
 SfCarousel carousel = new SfCarousel()
 {
-    ItemWidth = 170,
-    ItemHeight = 250,
-    SelectedIndex = 4,
+    ItemHeight = 170,
+    ItemWidth = 270,
+    SelectedIndex = 4
 };
 
 carousel.ItemTemplate = itemTemplate;

@@ -27,13 +27,8 @@ When the precision mode of [`SfRating`](https://help.syncfusion.com/cr/maui/Sync
 
 {% highlight C# %}
 
-SfRating rating;
-public MainPage()
-{
-    InitializeComponent();
-    rating = new SfRating();
-    rating.Precision = Precision.Standard;
-}
+SfRating rating = new SfRating();
+rating.Precision = Precision.Standard;
 
 {% endhighlight %} 
 
@@ -55,13 +50,8 @@ When the precision mode of [`SfRating`](https://help.syncfusion.com/cr/maui/Sync
 
 {% highlight C# %}
 
-SfRating rating;
-public MainPage()
-{
-    InitializeComponent();
-    rating = new SfRating();
-    rating.Precision = Precision.Half;
-}
+SfRating rating = new SfRating();
+rating.Precision = Precision.Half;
 
 {% endhighlight %} 
 
@@ -83,13 +73,8 @@ When the precision mode of [`SfRating`](https://help.syncfusion.com/cr/maui/Sync
 
 {% highlight c# %}
 
-SfRating rating;
-public MainPage()
-{
-    InitializeComponent();
-    rating = new SfRating();
-    rating.Precision = Precision.Exact;
-}
+SfRating rating = new SfRating();
+rating.Precision = Precision.Exact;
 
 {% endhighlight %} 
 
