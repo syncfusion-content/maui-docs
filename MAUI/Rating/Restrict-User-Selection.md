@@ -23,7 +23,10 @@ documentation: ug
 
 {% highlight C# %}
 
-rating.IsReadOnly=true;
+
+SfRating rating = new SfRating();
+rating.IsReadOnly = true;
+
 	
 {% endhighlight %}
 
