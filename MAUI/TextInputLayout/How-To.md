@@ -28,12 +28,12 @@ The stroke width (for [Outlined](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 {% highlight c# %}
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Name";
 inputLayout.ContainerType = ContainerType.Outlined;
 inputLayout.FocusedStrokeThickness = 4;
 inputLayout.UnfocusedStrokeThickness = 2;
-inputLayout.InputView = new Entry(); 
+inputLayout.Content = new Entry(); 
 
 {% endhighlight %}
 

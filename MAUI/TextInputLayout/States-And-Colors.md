@@ -1,6 +1,6 @@
 ---
 layout: post
-title: States and Colors the .NET MAUI Text Input Layout control | Syncfusion®
+title: States and Colors the .NET MAUI Text Input Layout | Syncfusion®
 description: Learn here all about States and Colors support in the Syncfusion® .NET MAUI Text Input Layout (SfTextInputLayout) control and more.
 platform: maui
 control: SfTextInputLayout
@@ -25,9 +25,9 @@ I> Cursor color of the input view will be same as the `Accent` color of the appl
 
 {% highlight xaml %} 
 
-<inputLayout:SfTextInputLayout Hint="User name" 
+<inputLayout:SfTextInputLayout Hint="Name" 
                                Stroke="#00AFA0"
-                               HelperText="Enter your name"
+                               HelperText="Enter the name">
     <VisualStateManager.VisualStateGroups>
         <VisualStateGroupList>
             <VisualStateGroup x:Name="CommonStates">
@@ -56,7 +56,7 @@ I> Cursor color of the input view will be same as the `Accent` color of the appl
 
 {% highlight C# %} 
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "User name";
 inputLayout.ErrorText = "User name available";
 inputLayout.Content = new Entry(); 
@@ -118,7 +118,7 @@ The text input layout is disabled by setting the [IsEnabled](https://help.syncfu
 
 {% highlight C# %} 
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Name";
 inputLayout.IsEnabled = false;
 inputLayout.Content = new Entry(); 
@@ -152,7 +152,7 @@ The color of the container is customized when the [ContainerType](https://help.s
 
 {% highlight C# %} 
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Name";
 inputLayout.Stroke = Color.FromHex("#0450C2");
 inputLayout.ContainerBackground = Color.FromHex("#E6EEF9");
@@ -176,7 +176,7 @@ The color of the container is customized when the [ContainerType](https://help.s
 <inputLayout:SfTextInputLayout Hint="Name" 
                                Stroke="#0450C2"
                                ContainerType="Outlined"
-                               ContainerBackground="#E6EEF9">`
+                               ContainerBackground="#E6EEF9">
     <Entry  />
 </inputLayout:SfTextInputLayout>  
  
@@ -184,7 +184,7 @@ The color of the container is customized when the [ContainerType](https://help.s
 
 {% highlight C# %} 
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Name";
 inputLayout.ContainerType = ContainerType.Outlined;
 inputLayout.Stroke = Color.FromHex("#0450C2");
@@ -208,6 +208,7 @@ You can customize the text color of the `hint` label, `helper` label, and `error
 
 <inputLayout:SfTextInputLayout Hint="Name" 
                                ContainerType="Outlined"
+                               Stroke="Red"
                                HelperText="Enter your name"
                                ErrorText="Invalid text">
         
@@ -232,6 +233,7 @@ You can customize the text color of the `hint` label, `helper` label, and `error
 SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Name";
 inputLayout.ContainerType = ContainerType.Outlined;
+inputLayout.Stroke = Colors.Red;
 inputLayout.HelperText = "Enter your name";
 inputLayout.ErrorText = "Invalid text";
 inputLayout.Content = new Entry();
