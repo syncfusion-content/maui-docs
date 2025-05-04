@@ -86,22 +86,15 @@ public class CityViewModel
 
 using Syncfusion.Maui.Inputs;
 
-CityViewModel cityViewModel = new CityViewModel();
-StackLayout stack = new StackLayout();
-SfComboBox comboBox;
-comboBox = new SfComboBox
+SfComboBox comboBox = new SfComboBox
 {
-    WidthRequest = 200,
-    HeightRequest = 50,
     IsEditable = true,
     IsFilteringEnabled = true,
     ItemsSource = cityViewModel.Cities,
-    TextMemberPath = "Name",
-    DisplayMemberPath = "Name",
+    TextMemberPath = "CityName",
+    DisplayMemberPath = "CityName",
     BindingContext = cityViewModel
 };
-stack.Children.Add(comboBox);
-this.Content = stack;
 
 {% endhighlight %}
 {% endtabs %}
@@ -133,25 +126,15 @@ Filter the matching items based on the starting text and the first filtered item
 {% endhighlight %}
 {% highlight C# %}
 
-using Syncfusion.Maui.Inputs;
-
-CityViewModel cityViewModel = new CityViewModel();
-StackLayout stack = new StackLayout();
-SfComboBox comboBox;
-comboBox = new SfComboBox
+SfComboBox comboBox = new SfComboBox
 {
-    WidthRequest = 200,
-    HeightRequest = 50,
     TextSearchMode = ComboBoxTextSearchMode.StartsWith,
     IsEditable = true,
     IsFilteringEnabled = true,
     ItemsSource = cityViewModel.Cities,
-    TextMemberPath = "Name",
-    DisplayMemberPath = "Name",
-    BindingContext = cityViewModel
+    TextMemberPath = "CityName",
+    DisplayMemberPath = "CityName"
 };
-stack.Children.Add(comboBox);
-this.Content = stack;
 
 {% endhighlight %}
 {% endtabs %}
@@ -180,23 +163,16 @@ Filter the matching items that contain specific text, and the first filtered ite
 
 using Syncfusion.Maui.Inputs;
 
-CityViewModel cityViewModel = new CityViewModel();
-StackLayout stack = new StackLayout();
-SfComboBox comboBox;
-comboBox = new SfComboBox
+SfComboBox comboBox = new SfComboBox
 {
-    WidthRequest = 200,
-    HeightRequest = 50,
     TextSearchMode = ComboBoxTextSearchMode.Contains,
     IsEditable = true,
     IsFilteringEnabled = true,
     ItemsSource = cityViewModel.Cities,
-    TextMemberPath = "Name",
-    DisplayMemberPath = "Name",
+    TextMemberPath = "CityName",
+    DisplayMemberPath = "CityName",
     BindingContext = cityViewModel
 };
-stack.Children.Add(comboBox);
-this.Content = stack;
 
 {% endhighlight %}
 {% endtabs %}
@@ -279,24 +255,16 @@ public class CityFilteringBehavior : IComboBoxFilterBehavior
 
 {% highlight C# %}
 
-CityViewModel cityViewModel = new CityViewModel();  
 CityFilteringBehavior cityFilteringBehavior = new CityFilteringBehavior();
-StackLayout stack = new StackLayout();
-SfComboBox comboBox;
-comboBox = new SfComboBox
+SfComboBox comboBox = new SfComboBox
 {
-    WidthRequest = 200,
-    HeightRequest = 50,
-    IsEditable = true,
-    FilterBehavior = cityFilteringBehavior,
-    IsFilteringEnabled = true,
-    ItemsSource = cityViewModel.Cities,
     TextMemberPath = "CityName",
     DisplayMemberPath = "CityName",
-    BindingContext = cityViewModel
+    IsEditable = true,
+    IsFilteringEnabled = true,
+    FilterBehavior = cityFilteringBehavior,
+    ItemsSource = cityViewModel.Cities,
 };
-stack.Children.Add(comboBox);
-this.Content = stack;
 
 {% endhighlight %}
 {% endtabs %}

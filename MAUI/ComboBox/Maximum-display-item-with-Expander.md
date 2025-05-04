@@ -16,19 +16,26 @@ Restrict the number of suggestions displayed and have the remaining items loaded
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox" 
-                    WidthRequest="300"
                     IsFilteringEnabled="True"
                     IsEditable="True" 
                     ItemsSource="{Binding SocialMedias}"          
                     MaximumSuggestion="2"
                     DisplayMemberPath="Name"                                    
-                    TextMemberPath="Name">
+                    TextMemberPath="Name"/>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-comboBox.MaximumSuggestion = 2;
+SfComboBox comboBox = new SfComboBox() 
+{
+    MaximumSuggestion = 2,
+    IsEditable = true,
+    IsFilteringEnabled = true,
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name",
+    ItemsSource = socialMediaViewModel.SocialMedias
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +52,6 @@ The LoadMore support provides [LoadMoreText](https://help.syncfusion.com/cr/maui
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox" 
-                    WidthRequest="300"
                     IsFilteringEnabled="True"
                     IsEditable="True" 
                     ItemsSource="{Binding SocialMedias}"          
@@ -59,8 +65,16 @@ The LoadMore support provides [LoadMoreText](https://help.syncfusion.com/cr/maui
 
 {% highlight C# %}
 
-autocomplete.MaximumSuggestion = 2;
-autocomplete.LoadMoreText= "Load more items";
+SfComboBox comboBox = new SfComboBox() 
+{
+    MaximumSuggestion = 2,
+    LoadMoreText= "Load more items",
+    IsEditable = true,
+    IsFilteringEnabled = true,
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name",
+    ItemsSource = socialMediaViewModel.SocialMedias
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -77,7 +91,6 @@ SfComboBox allows customizing User Interface(UI) of Load More view. To customize
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox" 
-                    WidthRequest="300"
                     IsFilteringEnabled="True"
                     IsEditable="True" 
                     ItemsSource="{Binding SocialMedias}"          
@@ -97,20 +110,35 @@ SfComboBox allows customizing User Interface(UI) of Load More view. To customize
 
 {% highlight C# %}
 
-comboBox.MaximumSuggestion = 2;
-comboBox.LoadMoreTemplate = new DataTemplate(() =>
-{
-    var grid = new Grid();
-    Label label = new Label();
-    label.Text = "Load more items...";
-    label.TextColor = Colors.Red;
-    grid.Background = Colors.LightGreen;
-    label.HorizontalOptions = LayoutOptions.Center;
-    label.VerticalOptions = LayoutOptions.Center;
-    label.FontAttributes = FontAttributes.Bold;
-    grid.Children.Add(label);
-    return grid;
-});
+    SfComboBox comboBox = new SfComboBox
+    {
+        IsFilteringEnabled = true,
+        IsEditable = true, 
+        ItemsSource = socialMediaViewModel.SocialMedias,
+        MaximumSuggestion = 2,
+        DisplayMemberPath = "Name",
+        TextMemberPath = "Name"
+    };
+
+    comboBox.LoadMoreTemplate = new DataTemplate(() =>
+    {
+        var grid = new Grid
+        {
+            BackgroundColor = Colors.LightGreen
+        };
+
+        var label = new Label
+        {
+            Text = "Load more items...",
+            TextColor = Colors.Red,
+            HorizontalOptions = LayoutOptions.Center,
+            VerticalOptions = LayoutOptions.Center,
+            FontAttributes = FontAttributes.Bold
+        };
+
+        grid.Children.Add(label);
+        return grid;
+    });
 
 {% endhighlight %}
 {% endtabs %}
@@ -127,12 +155,11 @@ The LoadMore support provides [LoadMoreButtonTapped](https://help.syncfusion.com
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox" 
-                    WidthRequest="300"
                     IsFilteringEnabled="True"
                     IsEditable="True" 
                     MaximumSuggestion="2"
                     ItemsSource="{Binding SocialMedias}"
-                    LoadMoreButtonTapped="comboBox_LoadMoreButtonTapped"
+                    LoadMoreButtonTapped="ComboBox_LoadMoreButtonTapped"
                     DisplayMemberPath="Name"                                    
                     TextMemberPath="Name">
 </editors:SfComboBox>
@@ -141,12 +168,20 @@ The LoadMore support provides [LoadMoreButtonTapped](https://help.syncfusion.com
 
 {% highlight C# %}
 
-comboBox.MaximumSuggestion = 2;
+SfComboBox comboBox = new SfComboBox
+{
+    IsFilteringEnabled = true,
+    IsEditable = true,
+    MaximumSuggestion = 2,
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name"
+};
 comboBox.LoadMoreButtonTapped += ComboBox_LoadMoreButtonTapped;
 
 private void ComboBox_LoadMoreButtonTapped(object? sender, EventArgs e)
 {
-
+    // Triggered when the load more button is tapped.
 }
 
 {% endhighlight %}

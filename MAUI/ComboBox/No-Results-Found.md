@@ -25,14 +25,21 @@ We can customize the desire text to be displayed for indicating no results found
                         NoResultsFoundText="Not Found"
                         ItemsSource="{Binding SocialMedias}"
                         TextMemberPath="Name"
-                        DisplayMemberPath="Name"
-                        WidthRequest="240" /> 
+                        DisplayMemberPath="Name" /> 
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-comboBox.NoResultsFoundText = "Not Found";
+SfComboBox comboBox = new SfComboBox() 
+{
+    IsFilteringEnabled = true,
+    IsEditable = true,
+    NoResultsFoundText = "Not Found",
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name",
+};
 
 {% endhighlight %}
 
@@ -53,8 +60,7 @@ We can customize the appearance of the desire text to be displayed for indicatin
                     IsEditable="True"
                     IsFilteringEnabled="True"
                     TextMemberPath="Name"
-                    DisplayMemberPath="Name"
-                    WidthRequest="240">
+                    DisplayMemberPath="Name">
     <editors:SfComboBox.NoResultsFoundTemplate>
         <DataTemplate>
             <Label Text="Not Found"  FontSize="20" FontAttributes="Italic" TextColor="Red" Margin="70,10,0,0"/>
@@ -67,21 +73,23 @@ We can customize the appearance of the desire text to be displayed for indicatin
 
 {% highlight c# %}
 
-var noResultsTemplate = new DataTemplate(() =>
+    SfComboBox comboBox = new SfComboBox() 
+    {
+        ItemsSource = socialMediaViewModel.SocialMedias
+        TextMemberPath = "Name",
+        DisplayMemberPath = "Name",
+        NoResultsFoundTemplate = new DataTemplate(() =>
         {
-            var label = new Label
+            return new Label
             {
                 Text = "Not Found",
                 FontSize = 20,
                 FontAttributes = FontAttributes.Italic,
-                TextColor = Color.Red,
+                TextColor = Colors.Red,
                 Margin = new Thickness(70, 10, 0, 0)
             };
-
-            return new ViewCell { View = label };
-        });
-
-comboBox.NoResultsFoundTemplate = noResultsTemplate;
+        })
+    };
 
 {% endhighlight %}
 
