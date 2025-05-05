@@ -259,10 +259,10 @@ The following gif image illustrates the result of the above code:
 
 ## Selection changed notification
 
-When an item is selected from the drop-down list, the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionChanged) event is triggered. The SelectionChanged event contains the newly selected and removed items in the `AddedItems` and `RemovedItems` properties. The SelectionChanged Event contains the following properties:
+When an item is selected from the drop-down list, the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionChanged) event is triggered. The SelectionChanged event contains the newly selected and removed items in the **AddedItems** and **RemovedItems** properties. The SelectionChanged Event contains the following properties:
 
- * `AddedItems` - Contains the item that were currently selected.
- * `RemovedItems` - Contains the item that were unselected.
+ * **AddedItems** - Contains the item that were currently selected.
+ * **RemovedItems** - Contains the item that were unselected.
 
 {% tabs %}
 {% highlight xaml %}
@@ -283,7 +283,7 @@ autocomplete.SelectionChanged += OnSelectionChanged;
 {% endhighlight %}
 {% endtabs %}
 
-The `SelectionChanged` event can be handled as follows:
+The **SelectionChanged** event can be handled as follows:
 
 {% tabs %}
 {% highlight C# %}
@@ -300,7 +300,7 @@ The following gif image illustrates the result of the above code:
 
 ![.NET MAUI Autocomplete selection changed event notification.](Images/Selection/net-maui-autocomplete-selection-changed-notification.gif)
 
-N> SelectionChanged event arguments `CurrentSelection` and `PreviousSelection` marked as "Obsolete". You can use the `AddedItems` and `RemovedItems` event arguments.
+N> SelectionChanged event arguments **CurrentSelection** and **PreviousSelection** marked as "Obsolete". You can use the **AddedItems** and **RemovedItems** event arguments.
 
 ## Selected value
 
@@ -404,7 +404,7 @@ N> If the [SelectedValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
 ## Hide clear button in the Autocomplete
 
-By default, the clear button `X` will be displayed in the editor of the [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control, which can be used to clear the entered input. Hide the clear button in Autocomplete control using the [IsClearButtonVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_IsClearButtonVisibleProperty) property. The default value of IsClearButtonVisible property value is `true`.
+By default, the clear button **X** will be displayed in the editor of the [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control, which can be used to clear the entered input. Hide the clear button in Autocomplete control using the [IsClearButtonVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_IsClearButtonVisibleProperty) property. The default value of IsClearButtonVisible property value is **true**.
 
 {% tabs %}
 {% highlight XAML %}
@@ -431,7 +431,7 @@ The following image illustrates the result of the above code:
 
 ## Is Drop-Down Open
 
-In the Autocomplete control, the drop-down can be opened or closed programmatically by using the [IsDropDownOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_IsDropDownOpen) property. The default value of the IsDropDownOpen property is `false`.
+In the Autocomplete control, the drop-down can be opened or closed programmatically by using the [IsDropDownOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_IsDropDownOpen) property. The default value of the IsDropDownOpen property is **false**.
 
 
 {% tabs %}
