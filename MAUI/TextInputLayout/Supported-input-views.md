@@ -21,7 +21,7 @@ To enter a single line text input, add [`Entry`](https://learn.microsoft.com/en-
 {% highlight xaml %} 
 
 <inputLayout:SfTextInputLayout Hint="Name"
-                               HelperText="Enter your name"
+                               HelperText="Enter the name"
                                ContainerType="Outlined">
    <Entry />
 </inputLayout:SfTextInputLayout>  
@@ -30,7 +30,7 @@ To enter a single line text input, add [`Entry`](https://learn.microsoft.com/en-
 
 {% highlight C# %} 
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Name"; 
 inputLayout.HelperText = "Enter your name"
 inputLayout.Content = new Entry(); 
@@ -61,7 +61,7 @@ To enter multi-line text input, add [`Editor`](https://learn.microsoft.com/en-us
 
 {% highlight C# %} 
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Notes"; 
 inputLayout.Content = new Editor(); 
 
@@ -106,7 +106,7 @@ N> For more information regarding Autocomplete selection modes, refer to the [Si
 {% highlight C# %} 
 
 var autocomplete = new SfAutocomplete();
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Country"; 
 inputLayout.ContainerType = ContainerType.Outlined;
 string[] countryNames = new string[4];
@@ -211,7 +211,7 @@ N> For more information regarding ComboBox selection modes, refer to the [Single
 {% highlight C# %} 
 
 var combobox = new SfComboBox();
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Country"; 
 inputLayout.ContainerType = ContainerType.Outlined;
 string[] countryNames = new string[4];
@@ -290,8 +290,7 @@ To initialize the [MaskedEntry](https://help.syncfusion.com/maui/masked-entry/ov
 
 <inputLayout:SfTextInputLayout Hint="Card number" 
                                HelperText="Required *"
-                               ContainerType="Outlined"
-                               ContainerBackground="Transparent" >
+                               ContainerType="Outlined">
    <maskedEntry:SfMaskedEntry MaskType="Simple"
                               Mask="0000 0000 0000 0000" />
 </inputLayout:SfTextInputLayout> 
@@ -299,11 +298,10 @@ To initialize the [MaskedEntry](https://help.syncfusion.com/maui/masked-entry/ov
 {% endhighlight %}
 {% highlight C# %}
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Card number"; 
 inputLayout.HelperText = "Required *";
 inputLayout.ContainerType = ContainerType.Outlined;
-inputLayout.ContainerBackground = Colors.Transparent;
 inputLayout.Content = new SfMaskedEntry() { MaskType = MaskedEntryMaskType.Simple, Mask = "0000 0000 0000 0000" }; 
 
 {% endhighlight %}
@@ -320,8 +318,7 @@ To initialize the `NumericEntry` control and launch it in each platform, refer t
 
 <inputLayout:SfTextInputLayout Hint="Amount" 
                                HelperText="Enter the amount"
-                               ContainerType="Outlined"
-                               ContainerBackground="Transparent" >
+                               ContainerType="Outlined">
    <numericEntry:SfNumericEntry Value="100" 
                                 ShowClearButton="True" 
                                 UpDownPlacementMode="Inline"/>
@@ -330,11 +327,10 @@ To initialize the `NumericEntry` control and launch it in each platform, refer t
 {% endhighlight %}
 {% highlight C# %}
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Amount"; 
 inputLayout.HelperText = "Enter the amount";
 inputLayout.ContainerType = ContainerType.Outlined;
-inputLayout.ContainerBackground = Colors.Transparent;
 inputLayout.Content = new SfNumericEntry() { Value=100, 
                                              ShowClearButton=True, 
                                              UpDownPlacementMode=NumericEntryUpDownPlacementMode.Inline}; 
@@ -354,7 +350,7 @@ To initialize the [Picker](https://learn.microsoft.com/en-us/dotnet/maui/user-in
 <inputLayout:SfTextInputLayout Hint="Fruit" 
                                HelperText="Select a fruit"
                                ContainerType="Outlined" >
-   <picker:Picker SelectedItem="Apple">
+   <Picker SelectedItem="Apple">
         <Picker.ItemsSource>
             <x:Array Type="{x:Type x:String}">
                 <x:String>Apple</x:String>
@@ -362,17 +358,16 @@ To initialize the [Picker](https://learn.microsoft.com/en-us/dotnet/maui/user-in
                 <x:String>Strawberry</x:String>
             </x:Array>
         </Picker.ItemsSource>
-   </picker:Picker>
+   </Picker>
 </inputLayout:SfTextInputLayout> 
 
 {% endhighlight %}
 {% highlight C# %}
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Fruit"; 
 inputLayout.HelperText = "Select a fruit";
 inputLayout.ContainerType = ContainerType.Outlined;
-inputLayout.ContainerBackground = Colors.Transparent;
 var picker = new Picker();
 picker.Items.Add("Apple");
 picker.Items.Add("Orange");
@@ -396,17 +391,16 @@ To initialize the [TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/use
  <inputLayout:SfTextInputLayout Hint="Time" 
                                HelperText="Select a start time"
                                ContainerType="Outlined" >
-    <timepicker:TimePicker/>
+    <TimePicker/>
  </inputLayout:SfTextInputLayout>
 
 {% endhighlight %}
 {% highlight C# %}
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Time"; 
 inputLayout.HelperText = "Select a start time";
 inputLayout.ContainerType = ContainerType.Outlined;
-inputLayout.ContainerBackground = Colors.Transparent;
 inputLayout.Content = new TimePicker(); 
 
 {% endhighlight %}
@@ -426,17 +420,16 @@ To initialize the [DatePicker]( https://learn.microsoft.com/en-us/dotnet/maui/us
 <inputLayout:SfTextInputLayout Hint="Date of Birth" 
                                HelperText="Select birth date"
                                ContainerType="Outlined" >
-    <datepicker:DatePicker/>
+    <DatePicker/>
 </inputLayout:SfTextInputLayout> 
 
 {% endhighlight %}
 {% highlight C# %}
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Date of Birth"; 
 inputLayout.HelperText = "Select birth date";
 inputLayout.ContainerType = ContainerType.Outlined;
-inputLayout.ContainerBackground = Colors.Transparent;
 inputLayout.Content = new DatePicker(); 
 
 {% endhighlight %}
