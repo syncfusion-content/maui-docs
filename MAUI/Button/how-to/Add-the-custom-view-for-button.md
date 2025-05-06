@@ -70,7 +70,7 @@ SfButton button = new SfButton
 
 Content = new VerticalStackLayout
 {
-    Children = { button },
+    Children = { button }
 };
 
 
