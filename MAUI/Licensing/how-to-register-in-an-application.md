@@ -25,6 +25,8 @@ I> Syncfusion<sup>®</sup> license keys can be validated during the Continuous I
 
 ### .NET MAUI
 
+### 1.) Registering License Key in App.xaml.cs
+
 You can register the license key in **App.xaml.cs** constructor before InitializeComponent(). If App constructor not available in **App.xaml.cs**, create the "App()" constructor in **App.xaml.cs** and register the license key inside the constructor.
 
 {% tabs %}
@@ -43,5 +45,34 @@ public App()
 {% endtabs %}
 
 
+### 2.) Registering License Key in MauiProgram.cs
+
+You can register the license key in **MauiProgram.cs** when initializing or registering any Syncfusion controls within this file. This ensures that all controls are fully licensed and functional from the moment the application starts. Add the license registration code inside the **CreateMauiApp** method in **MauiProgram.cs**.
+
+{% tabs %}
+{% highlight c# %}
+
+public static class MauiProgram
+{
+    public static MauiApp CreateMauiApp()
+    {
+        // Register the Syncfusion license key
+        Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+ 
+        var builder = MauiApp.CreateBuilder();
+        builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
+
+        return builder.Build();
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 N> Refer to this [link](https://help.syncfusion.com/maui/licensing/licensing-errors) for common licensing errors
