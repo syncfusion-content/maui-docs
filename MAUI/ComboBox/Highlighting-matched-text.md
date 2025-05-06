@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Highlighting matched text in .NET MAUI SfComboBox control | Syncfusion®
+title: Highlighting matched text in .NET MAUI SfComboBox | Syncfusion®
 description: Learn about Highlighting matched text in .NET MAUI SfComboBox (SfComboBox) control and more details.
 platform: maui
 control: SfComboBox
@@ -32,9 +32,9 @@ It highlights the first position of the matching characters in the suggestion li
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    WidthRequest="300"
-                    HeightRequest = "40"
                     ItemsSource="{Binding SocialMedias}"
+                    DisplayMemberPath="Name"
+                    TextMemberPath="Name"
                     TextHighlightMode="FirstOccurrence"
                     IsEditable="True"
                     IsFilteringEnabled="True"
@@ -47,13 +47,14 @@ It highlights the first position of the matching characters in the suggestion li
 
     SfComboBox comboBox = new SfComboBox() 
     {
-         HeightRequest = 40,
-         WidthRequest= 300,
+         ItemsSource = socialMediaViewModel.SocialMedias,
+         DisplayMemberPath = "Name",
+         TextMemberPath = "Name",
          TextHighlightMode = OccurrenceMode.FirstOccurrence,
          IsEditable =true,
          IsFilteringEnabled = true,
          HighlightedTextColor = Colors.Red,
-         HighlightedTextFontAttributes = FontAttributes.Bold,
+         HighlightedTextFontAttributes = FontAttributes.Bold
     };
 
 {% endhighlight %}
@@ -70,9 +71,9 @@ It highlights the matching character that are present everywhere in the suggesti
 {% highlight xaml %}
 
     <editors:SfComboBox x:Name="comboBox"
-                        WidthRequest="300"
-                        HeightRequest = "40"
                         ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
                         TextHighlightMode="MultipleOccurrence"
                         IsEditable="True"
                         IsFilteringEnabled="True"
@@ -86,14 +87,15 @@ It highlights the matching character that are present everywhere in the suggesti
 
     SfComboBox comboBox = new SfComboBox() 
     {
-         HeightRequest = 40,
-         WidthRequest= 300,
-         TextSearchMode = ComboBoxTextSearchMode.Contains,
+         ItemsSource = socialMediaViewModel.SocialMedias,
+         DisplayMemberPath = "Name",
+         TextMemberPath = "Name",
          TextHighlightMode = OccurrenceMode.MultipleOccurrence,
          IsEditable = true,
          IsFilteringEnabled = true,
          HighlightedTextColor = Colors.Red,
          HighlightedTextFontAttributes = FontAttributes.Bold,
+         TextSearchMode = ComboBoxTextSearchMode.Contains
     };
 
 {% endhighlight %}

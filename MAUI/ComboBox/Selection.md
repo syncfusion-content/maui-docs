@@ -25,10 +25,21 @@ The selected item can be changed interactively by selecting from the .NET MAUI d
 
 <editors:SfComboBox x:Name="comboBox"
                     IsEditable="True"
-                    WidthRequest="250"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
                     TextMemberPath="Name" />
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfComboBox comboBox = new SfComboBox
+{
+    IsEditable = true,
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -46,7 +57,6 @@ The selected item can be changed programmatically by using the [SelectedItem](ht
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    WidthRequest="250"
                     MaxDropDownHeight="250"
                     IsEditable="True"
                     ItemsSource="{Binding SocialMedias}"
@@ -58,7 +68,15 @@ The selected item can be changed programmatically by using the [SelectedItem](ht
 
 {% highlight c# %}
 
-comboBox.SelectedIndex = 2;
+SfComboBox comboBox = new SfComboBox
+{
+    MaxDropDownHeight = 250,
+    IsEditable = true,
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+    SelectedIndex = 2
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -82,8 +100,6 @@ Also there are two ways to display multi-selection items in the .NET MAUI ComboB
 {% highlight xaml %}
 
  <editors:SfComboBox x:Name="comboBox" 
-             HeightRequest="50"
-             WidthRequest="350"
              ItemsSource="{Binding SocialMedias}"
              SelectedItems="{Binding SelectedItemsList}"
              SelectionMode="Multiple"
@@ -96,7 +112,6 @@ Also there are two ways to display multi-selection items in the .NET MAUI ComboB
 {% highlight C# %}
 
   public ObservableCollection<SocialMedia> SelectedItemsList { get; set; }
-  SocialMediaViewModel socialMediaViewModel = (this.comboBox.BindingContext as SocialMediaViewModel);
   ObservableCollection<SocialMedia> socialMediasList = socialMediaViewModel.SocialMedias;
   SelectedItemsList = new ObservableCollection<SocialMedia>();
   SelectedItemsList.Add(socialMediasList[0]);
@@ -119,8 +134,6 @@ When setting [MultiSelectionDisplayMode](https://help.syncfusion.com/cr/maui/Syn
 {% highlight xaml %}
 
  <editors:SfComboBox x:Name="combobox" 
-                         HeightRequest="50"
-                         WidthRequest="350"
                          ItemsSource="{Binding SocialMedias}"
                          SelectionMode="Multiple"
                          MultiSelectionDisplayMode="Delimiter"
@@ -128,6 +141,21 @@ When setting [MultiSelectionDisplayMode](https://help.syncfusion.com/cr/maui/Syn
                          DisplayMemberPath="Name"
                          TextMemberPath="Name"
                          Placeholder="Enter Media" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfComboBox comboBox = new SfComboBox()
+{
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    SelectionMode = ComboBoxSelectionMode.Multiple,
+    MultiSelectionDisplayMode = ComboBoxMultiSelectionDisplayMode.Delimiter,
+    DelimiterText = "/",
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+    Placeholder = "Enter Media"
+};
 
 {% endhighlight %}
 
@@ -150,14 +178,26 @@ When the [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.In
 {% highlight xaml %}
 
  <editors:SfComboBox x:Name="comboBox" 
-             HeightRequest="50"
-             WidthRequest="350"
              ItemsSource="{Binding SocialMedias}"
              SelectionMode="Multiple"
              Placeholder="Enter Media"
              DisplayMemberPath="Name"
              TextMemberPath="Name"
              TokensWrapMode="Wrap" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfComboBox comboBox = new SfComboBox
+{
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    SelectionMode = ComboBoxSelectionMode.Multiple,
+    Placeholder = "Enter Media",
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+    TokensWrapMode = ComboBoxTokensWrapMode.Wrap
+};
 
 {% endhighlight %}
 
@@ -174,14 +214,26 @@ When the [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.In
 {% highlight xaml %}
 
  <editors:SfComboBox x:Name="comboBox" 
-             HeightRequest="50"
-             WidthRequest="350"
              ItemsSource="{Binding SocialMedias}"
              SelectionMode="Multiple"
              Placeholder="Enter Media"
              DisplayMemberPath="Name"
              TextMemberPath="Name"
              TokensWrapMode="None" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfComboBox comboBox = new SfComboBox
+{
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    SelectionMode = ComboBoxSelectionMode.Multiple,
+    Placeholder = "Enter Media",
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+    TokensWrapMode = ComboBoxTokensWrapMode.None
+};
 
 {% endhighlight %}
 
@@ -214,7 +266,6 @@ The SelectionChangingEventArgs provides essential data related to the selection-
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
 SfComboBox comboBox = new SfComboBox
 {
     WidthRequest = 250,
@@ -256,7 +307,6 @@ When an item is selected from the .NET MAUI drop-down list, the [SelectionChange
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox" 
-                    WidthRequest="250"
                     TextMemberPath="Name"
                     DisplayMemberPath="Name"
                     ItemsSource="{Binding SocialMedias}"
@@ -266,6 +316,12 @@ When an item is selected from the .NET MAUI drop-down list, the [SelectionChange
 
 {% highlight C# %}
 
+SfComboBox comboBox = new SfComboBox
+{
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name"
+};
 comboBox.SelectionChanged += OnSelectionChanged;
 
 {% endhighlight %}
@@ -303,7 +359,6 @@ In single selection mode, the [SelectedValue](https://help.syncfusion.com/cr/mau
 <Label x:Name="selectedValue" />
 
 <editors:SfComboBox x:Name="comboBox"
-                    WidthRequest="250"
                     MaxDropDownHeight="250"
                     TextMemberPath="Name"   
                     DisplayMemberPath="Name"
@@ -314,8 +369,24 @@ In single selection mode, the [SelectedValue](https://help.syncfusion.com/cr/mau
 {% endhighlight %}
 {% highlight C# %}
 
-comboBox.SelectedValuePath = "ID";
+SfComboBox comboBox = new SfComboBox
+{
+    MaxDropDownHeight = 250,
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+    SelectedValuePath = "ID"
+};
 comboBox.SelectionChanged += OnSelectionChanged;
+Label selectedValueLabel = new Label
+{
+    Text = "SelectedValue:"
+};
+
+Label selectedValue = new Label
+{
+    Text = string.Empty
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -344,8 +415,6 @@ In multi-selection mode, the [SelectedValue](https://help.syncfusion.com/cr/maui
 <Label x:Name="selectedValue" />
 
 <editors:SfComboBox x:Name="comboBox"
-                    WidthRequest="250"
-                    MaxDropDownHeight="250"
                     TextMemberPath="Name"   
                     DisplayMemberPath="Name"
                     ItemsSource="{Binding SocialMedias}"
@@ -358,7 +427,6 @@ In multi-selection mode, the [SelectedValue](https://help.syncfusion.com/cr/maui
 {% highlight C# %}
 
 public ObservableCollection<object> SelectedValueList { get; set; }
-SocialMediaViewModel socialMediaViewModel = (this.comboBox.BindingContext as SocialMediaViewModel);
 ObservableCollection<SocialMedia> socialMediasList = socialMediaViewModel.SocialMedias;
 SelectedValueList = new ObservableCollection<object>();
 SelectedValueList.Add(socialMediasList[4].ID);
@@ -398,7 +466,6 @@ In the .NET MAUI ComboBox control, the .NET MAUI drop-down list can be opened or
 {% highlight XAML %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    WidthRequest="250"
                     IsEditable="true"
                     ItemsSource="{Binding SocialMedias}"
                     IsDropDownOpen = true;
@@ -409,7 +476,14 @@ In the .NET MAUI ComboBox control, the .NET MAUI drop-down list can be opened or
 {% endhighlight %}
 {% highlight C# %}
 
-comboBox.IsDropDownOpen = true;
+SfComboBox comboBox = new SfComboBox
+{
+    IsEditable = true,
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    IsDropDownOpen = true,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name"
+};
 
 {% endhighlight %}
 {% endtabs %}
