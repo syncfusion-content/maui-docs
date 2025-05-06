@@ -417,18 +417,21 @@ In multi-selection mode, the [SelectedValue](https://help.syncfusion.com/cr/maui
 {% tabs %}
 {% highlight XAML %}
 
-<editors:SfAutocomplete x:Name="autocomplete"
-                    MaxDropDownHeight="250"
-                    TextMemberPath="Name"   
-                    DisplayMemberPath="Name"
-                    ItemsSource="{Binding SocialMedias}"
-                    SelectionMode="Multiple"
-                    SelectedValuePath="ID"
-                    SelectedValue="{Binding SelectedValueList}"
-                    SelectionChanged="OnSelectionChanged"/>
-
-<Label Text="SelectedValue count :" />
-<Label x:Name="selectedValue" />
+<StackLayout>
+    <editors:SfAutocomplete x:Name="autocomplete"
+                            MaxDropDownHeight="250"
+                            TextMemberPath="Name"
+                            DisplayMemberPath="Name"
+                            ItemsSource="{Binding SocialMedias}"
+                            SelectionMode="Multiple"
+                            SelectedValuePath="ID"
+                            SelectedValue="{Binding SelectedValueList}"
+                            SelectionChanged="OnSelectionChanged"/>
+    <HorizontalStackLayout>
+        <Label x:Name="labelTitle" Text="SelectedValue count :"/>
+        <Label x:Name="selectedValue"/>
+    </HorizontalStackLayout>
+</StackLayout>
 
 {% endhighlight %}
 {% highlight C# %}
@@ -445,13 +448,17 @@ SfAutocomplete autocomplete = new SfAutocomplete
 };
 autocomplete.SelectionChanged += OnSelectionChanged;
 
-Label labelTitle = new Label
+Label labelTitle = new Label { Text = "SelectedValue count :" };
+Label selectedValue = new Label();
+
+HorizontalStackLayout horizontalLayout = new HorizontalStackLayout()
 {
-    Text = "SelectedValue count :"
+    Children = { labelTitle, selectedValue }
 };
-Label selectedValue = new Label
+
+var mainLayout = new StackLayout
 {
-    Text = ""
+    Children = { autocomplete, horizontalLayout }
 };
 
 {% endhighlight %}
