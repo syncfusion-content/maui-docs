@@ -29,7 +29,7 @@ Helper text conveys additional guidance about the input field, such as how it wi
 
 {% highlight C# %} 
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Name";
 inputLayout.HelperText = "Enter your name";
 inputLayout.Content = new Entry(); 
@@ -50,7 +50,7 @@ When the text input is not accepted, an error message will display instructions 
 
 {% highlight xaml %} 
 
-<inputLayout:SfTextInputLayout Hint="Email" 
+<inputLayout:SfTextInputLayout Hint="Email" ContainerType="Outlined"
                                HelperText="Enter your email address"
                                ErrorText="Invalid email"
                                HasError="true">
@@ -62,8 +62,9 @@ When the text input is not accepted, an error message will display instructions 
 
 {% highlight C# %} 
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Email";
+inputLayout.ContainerType= ContainerType.Outlined;
 inputLayout.HelperText = "Enter your email address";
 inputLayout.ErrorText = "Invalid email";
 inputLayout.HasError = true; 
@@ -87,6 +88,7 @@ Character counter is used when you need to limit the characters. Character limit
 
 <inputLayout:SfTextInputLayout Hint="Password" 
                                CharMaxLength="8"
+                               ContainerType="Outlined"
                                HelperText="Enter 5 to 8 characters">
     <Entry />
 </inputLayout:SfTextInputLayout> 
@@ -96,9 +98,10 @@ Character counter is used when you need to limit the characters. Character limit
 
 {% highlight C# %} 
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Password";
 inputLayout.CharMaxLength = 8;
+inputLayout.ContainerType= ContainerType.Outlined;
 inputLayout.HelperText = "Enter 5 to 8 characters";
 inputLayout.Content = new Entry(); 
 
@@ -128,7 +131,7 @@ The reserved spaces for assistive labels can be removed by setting the [ReserveS
 
 {% highlight c# %}
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Name";
 inputLayout.ContainerType = ContainerType.Outlined;
 inputLayout.ReserveSpaceForAssistiveLabels = false;

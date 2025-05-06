@@ -26,7 +26,7 @@ The TextInputLayout supports to changing the flow of text to the right-to-left d
 {% endhighlight %}
 {% highlight c# %}
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.FlowDirection = FlowDirection.RightToLeft;
 inputLayout.ContainerType = ContainerType.Outlined;
 inputLayout.Hint = "نام";

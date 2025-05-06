@@ -27,7 +27,7 @@ The [PasswordVisibilityToggled](https://help.syncfusion.com/cr/maui/Syncfusion.M
 {% endhighlight %}
 {% highlight c# %}
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Password";
 inputLayout.PasswordVisibilityToggled += OnPasswordVisibilityToggled;
 inputLayout.Content = new Entry() { Text = "1234" }; 

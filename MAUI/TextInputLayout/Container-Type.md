@@ -21,6 +21,7 @@ The background of the input view will be filled with container color, and its st
 {% highlight xaml %} 
 
 <inputLayout:SfTextInputLayout Hint="Name"
+                               HelperText="Enter the name"
                                ContainerType="Filled">
     <Entry Text="John" />
 </inputLayout:SfTextInputLayout>  
@@ -29,8 +30,9 @@ The background of the input view will be filled with container color, and its st
 
 {% highlight C# %} 
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Name";
+inputLayout.HelperText = "Enter the name";
 inputLayout.ContainerType = ContainerType.Filled;
 inputLayout.Content = new Entry() { Text = "John" }; 
 
@@ -49,6 +51,7 @@ When setting the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.
 {% highlight xaml %} 
 
 <inputLayout:SfTextInputLayout Hint="Name"
+                               HelperText="Enter the name"
                                ContainerType="Outlined">
     <Entry Text="John" />
 </inputLayout:SfTextInputLayout>  
@@ -58,8 +61,9 @@ When setting the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 {% highlight C# %} 
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Name";
+inputLayout.HelperText = "Enter the name";
 inputLayout.ContainerType = ContainerType.Outlined;
 inputLayout.Content = new Entry() { Text = "John" }; 
 
@@ -87,7 +91,7 @@ When setting the [OutlineCornerRadius](https://help.syncfusion.com/cr/maui/Syncf
 
 {% highlight c# %}
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Name";
 inputLayout.ContainerType = ContainerType.Outlined;
 inputLayout.OutlineCornerRadius = 8;
@@ -121,7 +125,7 @@ Spaces around the input view can be customized by setting the InputViewPadding p
 
 {% highlight C# %} 
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Padding";
 inputLayout.InputViewPadding = new Thickness(0,5,0,5);
 inputLayout.ContainerType = ContainerType.Outlined;
@@ -142,7 +146,8 @@ When setting the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 {% highlight xaml %} 
 
-<inputLayout:SfTextInputLayout Hint="Name" 
+<inputLayout:SfTextInputLayout Hint="Name"
+                               HelperText="Enter the name" 
                                ContainerType="None">
     <Entry Text="John" />
 </inputLayout:SfTextInputLayout>  
@@ -152,8 +157,9 @@ When setting the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 {% highlight C# %} 
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Name";
+inputLayout.HelperText = "Enter the name";
 inputLayout.ContainerType = ContainerType.None;
 inputLayout.Content = new Entry() { Text = "John" }; 
 
