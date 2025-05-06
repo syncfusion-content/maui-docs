@@ -456,7 +456,7 @@ HorizontalStackLayout horizontalLayout = new HorizontalStackLayout()
     Children = { labelTitle, selectedValue }
 };
 
-var mainLayout = new StackLayout
+StackLayout mainLayout = new StackLayout
 {
     Children = { autocomplete, horizontalLayout }
 };
