@@ -20,7 +20,6 @@ In the editable mode, the [ComboBox](https://help.syncfusion.com/cr/maui/Syncfus
 {% highlight XAML %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    WidthRequest="250"
                     IsEditable="true"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
@@ -31,7 +30,13 @@ In the editable mode, the [ComboBox](https://help.syncfusion.com/cr/maui/Syncfus
 
 {% highlight C# %}
 
-comboBox.IsEditable = true;
+SfComboBox comboBox = new SfComboBox
+{
+    IsEditable = true,
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -48,7 +53,6 @@ Non-editable mode prevents users from editing and instead allows them to select 
 {% highlight XAML %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    WidthRequest="250"
                     IsEditable="false"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
@@ -59,7 +63,13 @@ Non-editable mode prevents users from editing and instead allows them to select 
 
 {% highlight C# %}
 
-comboBox.IsEditable = false;
+SfComboBox comboBox = new SfComboBox
+{
+    IsEditable = false,
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -76,7 +86,6 @@ By default, the clear button `X` will be displayed in the editor of the ComboBox
 {% highlight XAML %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    WidthRequest="250"
                     IsEditable="true"
                     IsClearButtonVisible="false"
                     ItemsSource="{Binding SocialMedias}"
@@ -88,7 +97,14 @@ By default, the clear button `X` will be displayed in the editor of the ComboBox
 
 {% highlight C# %}
 
-comboBox.IsClearButtonVisible = false;
+SfComboBox comboBox = new SfComboBox
+{
+    IsEditable = true,
+    IsClearButtonVisible = false,
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+};
 
 {% endhighlight %}
 {% endtabs %}
