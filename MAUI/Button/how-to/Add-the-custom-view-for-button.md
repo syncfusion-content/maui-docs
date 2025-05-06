@@ -19,16 +19,18 @@ xmlns:busy="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
 . . .
 
 <ContentPage.Content>
-    <buttons:SfButton  CornerRadius="10" Text="SfButton" Background="#4125BC">
-        <buttons:SfButton.Content>
-            <DataTemplate>
-                <HorizontalStackLayout Spacing = "8" Padding="5">
-                    <ActivityIndicator Color = "White" IsRunning="True"/>
-                    <Label Text = "Loading..." VerticalOptions="Center" TextColor="White"/>
-                </HorizontalStackLayout>
-            </DataTemplate>
-        </buttons:SfButton.Content>
-    </buttons:SfButton>
+    <VerticalStackLayout>
+        <buttons:SfButton  CornerRadius="10" Text="SfButton" Background="#4125BC">
+            <buttons:SfButton.Content>
+                <DataTemplate>
+                    <HorizontalStackLayout Spacing = "8" Padding="5">
+                        <ActivityIndicator Color = "White" IsRunning="True"/>
+                        <Label Text = "Loading..." VerticalOptions="Center" TextColor="White"/>
+                    </HorizontalStackLayout>
+                </DataTemplate>
+            </buttons:SfButton.Content>
+        </buttons:SfButton>
+    </VerticalStackLayout>
 </ContentPage.Content>
 
 {% endhighlight %}
@@ -43,7 +45,7 @@ var customTemplate = new DataTemplate(() =>
     var activityIndicator = new ActivityIndicator
     {
         Color = Colors.White,
-        IsRunning = true,
+        IsRunning = true
     };
     var label = new Label
     {
@@ -70,7 +72,7 @@ SfButton button = new SfButton
 
 Content = new VerticalStackLayout
 {
-    Children = { button },
+    Children = { button }
 };
 
 
