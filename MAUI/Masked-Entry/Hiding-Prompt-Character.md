@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Hiding prompt characters in .NET MAUI Masked Entry control | Syncfusion®
-Description: Learn about hiding prompt characters support in Syncfusion® .NET MAUI Masked Entry (SfMaskedEntry) control and more.
+title: Hiding prompt characters in .NET MAUI Masked Entry | Syncfusion®
+description: Learn about hiding prompt characters support in Syncfusion® .NET MAUI Masked Entry (SfMaskedEntry) control and more.
 platform: maui
 control: SfMaskedEntry
 documentation: ug
@@ -15,19 +15,23 @@ When the HidePromptOnLeave property is set to true, prompt characters are ignore
 
 {% highlight XAML %}
 
-<syncmaskededit:SfMaskedEdit x:Name="maskedEdit" 
-                             MaskType="Text" 
-                             Mask="00/00/0000" 
-                             HidePromptOnLeave="True" />
+<editors:SfMaskedEntry x:Name="maskedEntry" 
+                       Placeholder="Enter here"
+                       MaskType="Simple"
+                       Mask="00/00/0000" 
+                       PromptChar="#"
+                       HidePromptOnLeave="True" />
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-SfMaskedEdit maskedEdit = new SfMaskedEdit();
-maskedEdit.MaskType = MaskType.Text;
-maskedEdit.Mask = "00/00/0000";
-maskedEdit.HidePromptOnLeave = true;
+SfMaskedEntry maskedEntry = new SfMaskedEntry();
+maskedEntry.Placeholder="Enter here";
+maskedEntry.MaskType = MaskedEntryMaskType.Simple;
+maskedEntry.Mask = "00/00/0000";
+maskedEntry.PromptChar = '#';
+maskedEntry.HidePromptOnLeave = true;
 
 {% endhighlight %}
 
