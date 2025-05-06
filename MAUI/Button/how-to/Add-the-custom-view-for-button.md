@@ -18,18 +18,17 @@ xmlns:busy="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
 
 . . .
 
-<ContentPage.Resources>
-        <ResourceDictionary>
-            <DataTemplate x:Key="happyTemplate">
-                <HorizontalStackLayout>
-                    <busy:SfBusyIndicator AnimationType="SingleCircle" IsRunning="True" TextColor="White" WidthRequest="80" HeightRequest="60" IndicatorColor="White" VerticalOptions="Center" HorizontalOptions="End"/>
-                    <Label Text="Loading..." FontSize="20" HorizontalOptions="Start" VerticalOptions="Center" TextColor="White" />
+<ContentPage.Content>
+    <buttons:SfButton  CornerRadius="10" Text="SfButton" Background="#4125BC">
+        <buttons:SfButton.Content>
+            <DataTemplate>
+                <HorizontalStackLayout Spacing = "8" Padding="5">
+                    <ActivityIndicator Color = "White" IsRunning="True"/>
+                    <Label Text = "Loading..." VerticalOptions="Center" TextColor="White"/>
                 </HorizontalStackLayout>
             </DataTemplate>
-        </ResourceDictionary>
-</ContentPage.Resources>
-<ContentPage.Content>
-    <button:SfButton  CornerRadius="20"  WidthRequest="300"   Content="{x:StaticResource happyTemplate}" Text="SfButton"   />
+        </buttons:SfButton.Content>
+    </buttons:SfButton>
 </ContentPage.Content>
 
 {% endhighlight %}
@@ -39,48 +38,42 @@ using Syncfusion.Maui.Core;
 
 . . . 
 
-SfButton button = new SfButton();
-var happyTemplate = new DataTemplate(() =>
+var customTemplate = new DataTemplate(() =>
 {
-// Create the HorizontalStackLayout.
-var stackLayout = new Microsoft.Maui.Controls.StackLayout()
-{
-    Orientation = StackOrientation.Horizontal,
-    VerticalOptions = LayoutOptions.Center
-};
-
-// Create the SfBusyIndicator.
-var busyIndicator = new SfBusyIndicator()
-{
-    AnimationType = AnimationType.SingleCircle,
-    IsRunning = true,
-    TextColor = Colors.White,
-    WidthRequest = 80,
-    HeightRequest = 60,
-    IndicatorColor = Colors.Yellow,
-    VerticalOptions = LayoutOptions.Center,
-    HorizontalOptions = LayoutOptions.End
-};
-
-// Create the Label.
-var label = new Label
-{
-    Text = "Loading...",
-    FontSize = 20,
-    HorizontalOptions = LayoutOptions.Start,
-    VerticalOptions = LayoutOptions.Center,
-    TextColor = Colors.White
-};
-
-// Add the busyIndicator and label to the stackLayout.
-stackLayout.Children.Add(busyIndicator);
-stackLayout.Children.Add(label);
-
-// Return the constructed stackLayout as the root of the DataTemplate.
-return stackLayout;
-
+    var activityIndicator = new ActivityIndicator
+    {
+        Color = Colors.White,
+        IsRunning = true,
+    };
+    var label = new Label
+    {
+        Text = "Loading...",
+        TextColor = Colors.White,
+        VerticalOptions = LayoutOptions.Center
+    };
+    var stackLayout = new HorizontalStackLayout
+    {
+        Spacing = 8,
+        Padding = new Thickness(5)
+    };
+    stackLayout.Children.Add(activityIndicator);
+    stackLayout.Children.Add(label);
+    return stackLayout;
 });
-button.Content = happyTemplate;
+SfButton button = new SfButton
+{
+    Text = "SfButton",
+    Background = Color.FromArgb("#4125BC"),
+    CornerRadius= 10,
+    Content = customTemplate
+};
+
+Content = new VerticalStackLayout
+{
+    Children = { button },
+};
+
+
 {% endhighlight %}
 {% endtabs %}
 
