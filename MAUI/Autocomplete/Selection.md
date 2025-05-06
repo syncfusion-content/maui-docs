@@ -363,16 +363,19 @@ In single selection mode, the [SelectedValue](https://help.syncfusion.com/cr/mau
 {% tabs %}
 {% highlight XAML %}
 
-<editors:SfAutocomplete x:Name="autocomplete"
-                    MaxDropDownHeight="250"
-                    TextMemberPath="Name"   
-                    DisplayMemberPath="Name"
-                    ItemsSource="{Binding SocialMedias}"
-                    SelectedValuePath="ID"
-                    SelectionChanged="OnSelectionChanged"/>
-
-<Label Text="SelectedValue :" />
-<Label x:Name="selectedValue" />
+<StackLayout>
+    <editors:SfAutocomplete x:Name="autocomplete"
+                            MaxDropDownHeight="250"
+                            TextMemberPath="Name"
+                            DisplayMemberPath="Name"
+                            ItemsSource="{Binding SocialMedias}"
+                            SelectedValuePath="ID"
+                            SelectionChanged="OnSelectionChanged"/>
+    <HorizontalStackLayout>
+        <Label x:Name="labelTitle" Text="SelectedValue :" />
+        <Label x:Name="selectedValue" />
+    </HorizontalStackLayout>
+</StackLayout>
 
 {% endhighlight %}
 
@@ -388,11 +391,18 @@ SfAutocomplete autocomplete = new SfAutocomplete
 };
 autocomplete.SelectionChanged += OnSelectionChanged;
 
-Label labelTitle = new Label
-{
-    Text = "SelectedValue :"
-};
+Label labelTitle = new Label { Text = "SelectedValue :" };
 Label selectedValue = new Label();
+
+HorizontalStackLayout horizontalLayout = new HorizontalStackLayout()
+{
+    Children = { labelTitle, selectedValue }
+};
+
+StackLayout mainLayout = new StackLayout
+{
+    Children = { autocomplete, horizontalLayout }
+};
 
 {% endhighlight %}
 {% endtabs %}
