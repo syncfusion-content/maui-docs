@@ -17,6 +17,7 @@ The [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCa
 
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
+                     ItemTemplate="{StaticResource itemTemplate}" 
                      Duration="1000"/>
 
 {% endhighlight %}
@@ -25,6 +26,7 @@ The [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCa
 
 SfCarousel carousel = new SfCarousel();
 carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
+carousel.ItemTemplate = itemTemplate;
 carousel.Duration = 1000;
 
 {% endhighlight %}

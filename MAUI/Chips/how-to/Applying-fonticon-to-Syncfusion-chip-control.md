@@ -22,7 +22,7 @@ Create the instance for `FontImageSource` and set to `ImageSource` property of S
                 ShowIcon="True"
                 FontSize="17"
                 TextColor="White"
-                BackgroundColor="#512dcd"
+                Background="#512dcd"
                 WidthRequest="120"
                 HeightRequest="40"
                 ImageSize="15"
@@ -31,8 +31,7 @@ Create the instance for `FontImageSource` and set to `ImageSource` property of S
             <FontImageSource Glyph="&#xEB52;" 
                              Size="12"
                              Color="White"
-                             FontFamily="Segoe MDL2 Assets"
-                             >
+                             FontFamily="Segoe MDL2 Assets">
             </FontImageSource>
         </chip:SfChip.ImageSource>
     </chip:SfChip>
@@ -41,26 +40,26 @@ Create the instance for `FontImageSource` and set to `ImageSource` property of S
 
 {% highlight c# %}
 
- Grid grid = new Grid();
- SfChip chip = new SfChip();
- grid.Children.Add(chip);
- chip.ShowIcon = true;
- chip.Text = "Syncfusion"; 
- chip.FontSize = 17;
- chip.TextColor = Colors.White;
- chip.BackgroundColor = Colors.Violet;
- chip.WidthRequest = 120;
- chip.HeightRequest = 40;
- chip.ImageSize = 15;
- chip.Padding = new Thickness(0,0,0,2);
-
- var fontImageSource = new FontImageSource();
- fontImageSource.Glyph = "\uEB52";
- fontImageSource.Size = 12;
- fontImageSource.Color = Colors.White;
- fontImageSource.FontFamily = "Segoe MDL2 Assets";           
- chip.ImageSource = fontImageSource;
- this.Content = chip;
+var fontImageSource = new FontImageSource
+{
+    Glyph = "\uEB52",
+    Size = 12,
+    Color = Colors.White,
+    FontFamily = "Segoe MDL2 Assets"
+};
+SfChip chip = new SfChip
+{
+    ShowIcon = true,
+    Text = "Syncfusion",
+    FontSize = 17,
+    TextColor = Colors.White,
+    Background = Color.FromArgb("#512dcd"), 
+    WidthRequest = 120,
+    HeightRequest = 40,
+    ImageSize = 15,
+    Padding = new Thickness(0, 0, 0, 2),
+    ImageSource = fontImageSource
+};
  
 {% endhighlight %}
 

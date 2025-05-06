@@ -40,7 +40,7 @@ A label can be added as a leading icon for the input view by setting the [Leadin
 
 {% highlight C# %} 
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Birth date";
 inputLayout.LeadingViewPosition = ViewPosition.Inside;
 inputLayout.LeadingView = new Label() { Text = "\U0001F5D3" };
@@ -74,7 +74,7 @@ A label can be added as a trailing icon for the input view by setting the [Trail
 
 {% highlight C# %} 
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Birth date";
 inputLayout.TrailingViewPosition = ViewPosition.Outside; 
 inputLayout. TrailingView = new Label() { Text = "\U0001F5D3" };
@@ -116,7 +116,7 @@ The [ShowLeadingView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.S
 
 {% highlight C# %} 
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Birth date";
 inputLayout.LeadingView = new Label() { Text = "\U0001F5D3" };
 inputLayout.TrailingView = new Label() { Text = "\U0001F5D3" };

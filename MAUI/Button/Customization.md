@@ -3,7 +3,7 @@ layout: post
 title: Customization in .NET MAUI Button control | Syncfusion®
 description: Learn here all about Customization support in Syncfusion® .NET MAUI Button (SfButton) control and more.
 platform: maui
-control: Sfbutton
+control: SfButton
 documentation: ug
 ---
 
@@ -22,8 +22,8 @@ The [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Butto
 {% tabs %}
 {% highlight xaml %}
 
-<button:SfButton x:Name="button" Text="Button" TextColor = "White">
-</button:SfButton>
+<buttons:SfButton x:Name="button"  Text="Button" TextColor = "White">
+</buttons:SfButton>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -44,8 +44,8 @@ The [`FontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Button
 {% tabs %}
 {% highlight xaml %}
 
-<button:SfButton x:Name="button" Text="Button" FontSize = "18">
-</button:SfButton>
+<buttons:SfButton x:Name="button"  Text="Button" FontSize = "18">
+</buttons:SfButton>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -66,8 +66,8 @@ The [`FontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.
 {% tabs %}
 {% highlight xaml %}
 
-<button:SfButton x:Name="button" Text="Button" FontAttributes = "Italic">
-</button:SfButton>
+<buttons:SfButton x:Name="button"  Text="Button" FontAttributes = "Italic">
+</buttons:SfButton>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -88,15 +88,15 @@ The [`FontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Butt
 {% tabs %}
 {% highlight xaml %}
 
-<button:SfButton x:Name="button" Text="Button" FontFamily = "Samantha-Demo">
-</button:SfButton>
+<buttons:SfButton x:Name="button" Text="Button" FontFamily = "Lobster">
+</buttons:SfButton>
 
 {% endhighlight %}
 {% highlight c# %}
 
 SfButton button = new SfButton();
 button.Text = "Button";
-button.FontFamily = "Samantha-Demo";
+button.FontFamily = "Lobster";
 
 {% endhighlight %}
 {% endtabs %}
@@ -110,8 +110,8 @@ The [`HorizontalTextAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.M
 {% tabs %}
 {% highlight xaml %}
 
-<button:SfButton x:Name="button" Text="Button" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
-</button:SfButton>
+<buttons:SfButton x:Name="button" Text="Button" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+</buttons:SfButton>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -131,12 +131,12 @@ Users can now customize the [`SfButton`](https://help.syncfusion.com/cr/maui/Syn
 {% tabs %}
 {% highlight xaml %}
 
-<button:SfButton x:Name="button" 
-                 Text="Submit" 
+<buttons:SfButton x:Name="button" 
+                 Text="Submit"                 
                  TextTransform="Uppercase" 
                  HorizontalTextAlignment="Center" 
                  VerticalTextAlignment="Center">
-</button:SfButton>
+</buttons:SfButton>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -165,8 +165,8 @@ The [`LineBreakMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Button
  {% tabs %}
 {% highlight xaml %}
 
-<button:SfButton x:Name="button" Text="Add Items To Cart" LineBreakMode="MiddleTruncation" ImageSource="Cart.png">
-</button:SfButton>
+<buttons:SfButton x:Name="button" Text="Add Items To Cart"  LineBreakMode="MiddleTruncation" ImageSource="Cart.png">
+</buttons:SfButton>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -192,8 +192,8 @@ The [`Background`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.S
 {% tabs %}
 {% highlight xaml %}
 
-<button:SfButton x:Name="button" Text="Button" Background = "DeepSkyBlue">
-</button:SfButton>
+<buttons:SfButton x:Name="button" Text="Button" Background = "DeepSkyBlue">
+</buttons:SfButton>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -216,8 +216,8 @@ The [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBa
 {% tabs %}
 {% highlight xaml %}
 
-<button:SfButton x:Name="button" Text="Button" Stroke="Red">
-</button:SfButton>
+<buttons:SfButton x:Name="button" Text="Button" Stroke="Red" StrokeThickness="2">
+</buttons:SfButton>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -229,6 +229,8 @@ button.Stroke = Colors.Red;
 {% endhighlight %}
 {% endtabs %}
 
+N> To display the `Stroke` color, we should define the `StrokeThickness` property. 
+
 ![SfButton with stroke](images/customization-images/Button_border.png)
 
 ### StrokeThickness
@@ -238,8 +240,8 @@ The [`StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core
 {% tabs %}
 {% highlight xaml %}
 
-<button:SfButton x:Name="button" Text="Button" Stroke="Red" StrokeThickness="6">
-</button:SfButton>
+<buttons:SfButton x:Name="button" Text="Button" Stroke="Red" StrokeThickness="6">
+</buttons:SfButton>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -261,8 +263,8 @@ The [`CornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Bu
 {% tabs %}
 {% highlight xaml %}
 
-<button:SfButton x:Name="button" Text="Button" CornerRadius="20">
-</button:SfButton>
+<buttons:SfButton x:Name="button" Text="Button" CornerRadius="20">
+</buttons:SfButton>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -287,8 +289,8 @@ You can enable the Icon image using the [`ShowIcon`](https://help.syncfusion.com
 {% tabs %}
 {% highlight xaml %}
 
-<button:SfButton x:Name="button" Text="Button" ImageSource="Heart.png" ShowIcon="True">
-</button:SfButton>
+<buttons:SfButton x:Name="button" Text="Button" ImageSource="Heart.png" ShowIcon="True">
+</buttons:SfButton>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -310,8 +312,8 @@ N> Enable the [`ShowIcon`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.C
 {% tabs %}
 {% highlight xaml %}
 
-<button:SfButton x:Name="button" Text="Button" ImageSource="Heart.png" ShowIcon="True">
-</button:SfButton>
+<buttons:SfButton x:Name="button" Text="Button" ImageSource="Heart.png" ShowIcon="True">
+</buttons:SfButton>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -335,8 +337,8 @@ N> Enable the `ShowIcon` property to enable the `ImageSize` property.
 {% tabs %}
 {% highlight xaml %}
 
-<button:SfButton x:Name="button" Text="Button" ImageSource="Heart.png" ShowIcon="True" ImageSize="50">
-</button:SfButton>
+<buttons:SfButton x:Name="button" Text="Button" ImageSource="Heart.png" ShowIcon="True" ImageSize="50">
+</buttons:SfButton>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -640,7 +642,7 @@ The [EnableRippleEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cor
 {% tabs %}
 {% highlight xaml %}
 
-<button:SfButton x:Name="button" Text="Button" EnableRippleEffect="True" />
+<buttons:SfButton x:Name="button" Text="Button" EnableRippleEffect="True" />
 
 {% endhighlight %}
 {% highlight c# %}
@@ -668,27 +670,27 @@ Refer to this [`documentation`](https://learn.microsoft.com/en-us/dotnet/maui/us
 
 . . . 
 
-<button:SfButton Text="Linear Gradient" CornerRadius="20">
-    <button:SfButton.Background>
+<buttons:SfButton Text="Linear Gradient" CornerRadius="20">
+    <buttons:SfButton.Background>
         <LinearGradientBrush>
             <LinearGradientBrush.GradientStops>
                 <GradientStop Color="#0D62D4" Offset="0"/>
                 <GradientStop Color="#9F3CDC" Offset="1"/>
             </LinearGradientBrush.GradientStops>
         </LinearGradientBrush>
-    </button:SfButton.Background>
-</button:SfButton>
+    </buttons:SfButton.Background>
+</buttons:SfButton>
 
-<button:SfButton Text="Radial Gradient" CornerRadius="20">
-    <button:SfButton.Background>
+<buttons:SfButton Text="Radial Gradient" CornerRadius="20">
+    <buttons:SfButton.Background>
         <RadialGradientBrush Radius="1.5">
             <RadialGradientBrush.GradientStops>
                 <GradientStop Color="#0D62D4" Offset="0"/>
                 <GradientStop Color="#9F3CDC" Offset="1"/>
             </RadialGradientBrush.GradientStops>
         </RadialGradientBrush>
-    </button:SfButton.Background>
-</button:SfButton>
+    </buttons:SfButton.Background>
+</buttons:SfButton>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -735,11 +737,11 @@ N> Default value is [`null`].
     <local:CommandDemoViewModel />
  </ContentPage.BindingContext>
 
-<button:SfButton x:Name="button" 
+<buttons:SfButton x:Name="button" 
                 Text="Button" 
                 Background="{Binding Background}" 
                 Command="{Binding ButtonCommand}">
-</button:SfButton>
+</buttons:SfButton>
 
 {% endhighlight %}
 {% highlight c# %}

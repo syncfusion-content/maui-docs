@@ -33,7 +33,7 @@ The hint label position of the input view will be set always at the top for the 
 
 {% highlight C# %} 
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Name";
 inputLayout.IsHintAlwaysFloated = true;
 inputLayout.ContainerType = ContainerType.Filled;
@@ -55,8 +55,7 @@ The hint label position of the input view will be set always at the top for the 
 
 <inputLayout:SfTextInputLayout Hint="Name"
                                IsHintAlwaysFloated="true" 
-                               ContainerType="Outlined"
-                               HelperText="Enter your name">
+                               ContainerType="Outlined">
         <Entry />
 </inputLayout:SfTextInputLayout>
  
@@ -64,7 +63,7 @@ The hint label position of the input view will be set always at the top for the 
 
 {% highlight C# %} 
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Name";
 inputLayout.IsHintAlwaysFloated = true;
 inputLayout.ContainerType = ContainerType.Outlined;
@@ -86,8 +85,7 @@ The hint label position of the input view will be set always at the top for the 
 
 <inputLayout:SfTextInputLayout Hint="Name"
                                IsHintAlwaysFloated="true" 
-                               ContainerType="None"
-                               HelperText="Enter your name">
+                               ContainerType="None">
         <Entry />
 </inputLayout:SfTextInputLayout> 
  
@@ -95,7 +93,7 @@ The hint label position of the input view will be set always at the top for the 
 
 {% highlight C# %} 
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Name";
 inputLayout.IsHintAlwaysFloated = true;
 inputLayout.ContainerType = ContainerType.None;
