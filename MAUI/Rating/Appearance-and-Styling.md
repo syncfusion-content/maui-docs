@@ -29,13 +29,8 @@ N> By default, property value is 50.
 
 {% highlight C# %}
 
-SfRating rating;
-public MainPage()
-{
-    InitializeComponent();
-    rating = new SfRating();
-    rating.ItemSize = 20;
-}
+SfRating rating = new SfRating();
+rating.ItemSize = 20;
 
 {% endhighlight %}
 
@@ -59,13 +54,8 @@ N> The default property value is 5.
 
 {% highlight C# %}
 
-SfRating rating;
-public MainPage()
-{
-    InitializeComponent();
-    rating = new SfRating();
-    rating.ItemCount = 4;
-}
+SfRating rating = new SfRating();
+rating.ItemCount = 4;
 
 {% endhighlight %}
 
@@ -89,13 +79,8 @@ N> By default, property value is 5.
 
 {% highlight C# %}
 
-SfRating rating;
-public MainPage()
-{
-    InitializeComponent();
-    rating = new SfRating();
-    rating.ItemSpacing = 20;
-}
+SfRating rating = new SfRating();
+rating.ItemSpacing = 20;
 
 {% endhighlight %}
 
@@ -122,20 +107,17 @@ This section explains about various rating settings available in the [`SfRating`
 
 {% highlight c# %}
 
-SfRating rating;
-RatingSettings ratingSettings;
-public MainPage()
+
+SfRating rating = new SfRating();
+RatingSettings ratingSettings = new RatingSettings()
 {
-    InitializeComponent();
-    rating = new SfRating();
-    ratingSettings = new RatingSettings();
-    ratingSettings.RatedFill = Colors.Red;
-    ratingSettings.UnratedFill = Colors.Gray;
-    ratingSettings.UnratedStroke = Colors.Blue;
-    ratingSettings.RatedStrokeThickness = 2;
-    ratingSettings.UnratedStrokeThickness = 2;
-    rating.RatingSettings = ratingSettings;
-}
+    RatedFill = Colors.Red,
+    UnratedFill = Colors.Gray,
+    UnratedStroke = Colors.Blue,
+    RatedStrokeThickness = 2,
+    UnratedStrokeThickness = 2
+};
+rating.RatingSettings = ratingSettings;
 
 {% endhighlight %}
 
