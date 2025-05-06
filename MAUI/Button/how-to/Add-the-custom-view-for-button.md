@@ -45,7 +45,7 @@ var customTemplate = new DataTemplate(() =>
     var activityIndicator = new ActivityIndicator
     {
         Color = Colors.White,
-        IsRunning = true,
+        IsRunning = true
     };
     var label = new Label
     {
