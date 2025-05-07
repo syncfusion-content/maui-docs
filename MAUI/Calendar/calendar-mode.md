@@ -117,3 +117,27 @@ private void Button_Clicked(object sender, System.EventArgs e)
 {% endhighlight %} 
  
 {% endtabs %}
+
+### PopupSize
+
+SfCalendar allows the display of the Popup at any desired size by setting the [PopupSize] property.
+
+The default value of the `PopupSize` height is calculated based on the `SfCalendar.HeaderView.Height`, `SfCalendar.MonthView.HeaderView.height`, `SfCalendar.FooterView.Height`.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<calendar:SfCalendar x:Name="calendar" 
+                         Mode="Dialog"
+                         PopupSize="200,400" />
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+this.calendar.PopupSize = new Size(200,400);
+
+{% endhighlight %} 
+
+{% endtabs %}
