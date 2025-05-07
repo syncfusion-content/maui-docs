@@ -162,3 +162,31 @@ private void Button_Clicked(object sender, System.EventArgs e)
    ![Relative dialog mode in .NET MAUI Date picker.](images/date-picker-mode/maui-date-picker-relative-dialog-mode1.png)
 
    ![Relative dialog mode in .NET MAUI Date picker.](images/date-picker-mode/maui-date-picker-relative-dialog-mode2.png)
+
+### PopupSize
+
+SfDatePicker allows the display of the Popup at any desired size by setting the [PopupSize] property.
+
+The default value of the `PopupSize` height is calculated based on the number of items available in the [ItemSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_ItemsSource) property and the default value of the `SfDatePicker.HeaderView.Height`, `SfDatePicker.ColumnHeaderView.Height` and `SfDatePicker.FooterView.Height`.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfdatePicker x:Name="datePicker" 
+                         Mode="Dialog"
+                         PopupSize="200,400" />
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+this.datePicker.PopupSize = new Size(200,400);
+
+{% endhighlight %} 
+
+{% endtabs %}
+
+N>
+* SfDatePicker in the popup will not be rendered properly if the `PopupSize` property is less than the combined height of the `SfDatePicker.HeaderView.Height`, `SfDatePicker.ColumnHeaderView.Height` and `SfDatePicker.FooterView.Height`.
+* If the `PopupSize` property is greater than the combined height of the `SfDatePicker.HeaderView.Height`, `SfDatePicker.ColumnHeaderView.Height` and `SfDatePicker.FooterView.Height`, the remaining height will be allocated to the datepicker container.

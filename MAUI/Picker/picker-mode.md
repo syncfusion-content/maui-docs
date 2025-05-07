@@ -162,3 +162,31 @@ private void Button_Clicked(object sender, System.EventArgs e)
    ![Relative dialog mode in .NET MAUI Picker.](images/picker-mode/maui-picker-relative-dialog-mode1.png)
 
    ![Relative dialog mode in .NET MAUI Picker.](images/picker-mode/maui-picker-relative-dialog-mode2.png)
+
+### PopupSize
+
+SfPicker allows the display of the Popup at any desired size by setting the [PopupSize] property.
+
+The default value of the `PopupSize` height is calculated based on the number of items available in the [ItemSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_ItemsSource) property and the default value of the `SfPicker.HeaderView.Height`, `SfPicker.ColumnHeaderView.Height` and `SfPicker.FooterView.Height`.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfPicker x:Name="picker" 
+                         Mode="Dialog"
+                         PopupSize = "200,400"/>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+this.picker.PopupSize = new Size(200,400);
+
+{% endhighlight %} 
+
+{% endtabs %}
+
+N>
+* SfPicker in the popup will not be rendered properly if the `PopupSize` property is less than the combined height of the `SfPicker.HeaderView.Height`, `SfPicker.ColumnHeaderView.Height`, `SfPicker.FooterView.Height` and Picker items.
+* If the `PopupSize` property is greater than the combined height of the `SfPicker.HeaderView.Height`, `SfPicker.ColumnHeaderView.Height`, `SfPicker.FooterView.Height` and Picker items, the remaining height will be allocated to the picker container.
