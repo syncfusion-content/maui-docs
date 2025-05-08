@@ -130,13 +130,13 @@ The default value of the `PopupSize` height is calculated based on the `SfCalend
 
 <calendar:SfCalendar x:Name="calendar" 
                          Mode="Dialog"
-                         PopupSize="200,400" />
+                         PopupSize="300,400" />
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
 
-this.calendar.PopupSize = new Size(200,400);
+this.calendar.PopupSize = new Size(300,400);
 
 {% endhighlight %} 
 

@@ -173,15 +173,44 @@ The default value of the `PopupSize` height is calculated based on the number of
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfPicker x:Name="picker" 
-                         Mode="Dialog"
-                         PopupSize = "200,400"/>
+<Grid>
+    <picker:SfPicker 
+            x:Name="picker"
+            Mode="Dialog"
+            RelativePosition="AlignToRightOf"
+            PopupSize="200,440">
+        <picker:SfPicker.HeaderView >
+            <picker:PickerHeaderView Height="40" Text="Select a color" />
+        </picker:SfPicker.HeaderView>
+        <picker:SfPicker.Columns>
+            <picker:PickerColumn HeaderText="Colors" ItemsSource="{Binding DataSource}"/>
+        </picker:SfPicker.Columns>
+        <picker:SfPicker.ColumnHeaderView >
+            <picker:PickerColumnHeaderView Height="40"/>
+        </picker:SfPicker.ColumnHeaderView>
+        <picker:SfPicker.FooterView>
+            <picker:PickerFooterView  Height="40"/>
+        </picker:SfPicker.FooterView>
+    </picker:SfPicker>
+    <Button Text="Open Text"
+            x:Name="pickerButton"
+            Clicked="pickerButton_Clicked"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            HeightRequest="40"
+            WidthRequest="150">
+    </Button>
+</Grid>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
 
-this.picker.PopupSize = new Size(200,400);
+private void pickerButton_Clicked(object sender, System.EventArgs e)
+{
+    this.picker.IsOpen = true;
+    this.picker.PopupSize = new Size(200,440);
+}
 
 {% endhighlight %} 
 

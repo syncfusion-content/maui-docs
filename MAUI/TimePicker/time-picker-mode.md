@@ -175,13 +175,13 @@ The default value of the `PopupSize` height is calculated based on the number of
 
 <picker:SfdatePicker x:Name="timePicker" 
                          Mode="Dialog"
-                         PopupSize="200,400" />
+                         PopupSize="300,400" />
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
 
-this.timePicker.PopupSize = new Size(200,400);
+this.timePicker.PopupSize = new Size(300,400);
 
 {% endhighlight %} 
 
