@@ -162,3 +162,60 @@ private void Button_Clicked(object sender, System.EventArgs e)
    ![Relative dialog mode in .NET MAUI Picker.](images/picker-mode/maui-picker-relative-dialog-mode1.png)
 
    ![Relative dialog mode in .NET MAUI Picker.](images/picker-mode/maui-picker-relative-dialog-mode2.png)
+
+### PopupSize
+
+SfPicker allows the display of the Popup at any desired size by setting the [PopupSize] property.
+
+The default value of the `PopupSize` height is calculated based on the number of items available in the [ItemSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_ItemsSource) property and the default value of the `SfPicker.HeaderView.Height`, `SfPicker.ColumnHeaderView.Height` and `SfPicker.FooterView.Height`.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<Grid>
+    <picker:SfPicker 
+            x:Name="picker"
+            Mode="Dialog"
+            RelativePosition="AlignToRightOf"
+            PopupSize="200,440">
+        <picker:SfPicker.HeaderView >
+            <picker:PickerHeaderView Height="40" Text="Select a color" />
+        </picker:SfPicker.HeaderView>
+        <picker:SfPicker.Columns>
+            <picker:PickerColumn HeaderText="Colors" ItemsSource="{Binding DataSource}"/>
+        </picker:SfPicker.Columns>
+        <picker:SfPicker.ColumnHeaderView >
+            <picker:PickerColumnHeaderView Height="40"/>
+        </picker:SfPicker.ColumnHeaderView>
+        <picker:SfPicker.FooterView>
+            <picker:PickerFooterView  Height="40"/>
+        </picker:SfPicker.FooterView>
+    </picker:SfPicker>
+    <Button Text="Open Text"
+            x:Name="pickerButton"
+            Clicked="pickerButton_Clicked"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            HeightRequest="40"
+            WidthRequest="150">
+    </Button>
+</Grid>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+private void pickerButton_Clicked(object sender, System.EventArgs e)
+{
+    this.picker.IsOpen = true;
+    this.picker.PopupSize = new Size(200,440);
+}
+
+{% endhighlight %} 
+
+{% endtabs %}
+
+N>
+* SfPicker in the popup will not be rendered properly if the `PopupSize` property is less than the combined height of the `SfPicker.HeaderView.Height`, `SfPicker.ColumnHeaderView.Height`, `SfPicker.FooterView.Height` and Picker items.
+* If the `PopupSize` property is greater than the combined height of the `SfPicker.HeaderView.Height`, `SfPicker.ColumnHeaderView.Height`, `SfPicker.FooterView.Height` and Picker items, the remaining height will be allocated to the picker container.
