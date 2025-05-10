@@ -29,6 +29,9 @@ public class SocialMedia
 public class SocialMediaViewModel
 {
     public ObservableCollection<SocialMedia> SocialMedias { get; set; }
+    public ObservableCollection<SocialMedia> SelectedItemsList { get; set; }
+    public ObservableCollection<object> SelectedValueList { get; set; }
+
     public SocialMediaViewModel()
     {
         this.SocialMedias = new ObservableCollection<SocialMedia>();
@@ -46,6 +49,15 @@ public class SocialMediaViewModel
         this.SocialMedias.Add(new SocialMedia() { Name = "Vimeo", ID = 11 });
         this.SocialMedias.Add(new SocialMedia() { Name = "WhatsApp", ID = 12 });
         this.SocialMedias.Add(new SocialMedia() { Name = "YouTube", ID = 13 });
+
+        SelectedItemsList = new ObservableCollection<SocialMedia>();
+        this.SelectedItemsList.Add(SocialMedias[0]);
+        this.SelectedItemsList.Add(SocialMedias[2]);
+        this.SelectedItemsList.Add(SocialMedias[4]);
+
+        this.SelectedValueList = new ObservableCollection<object>();
+        this.SelectedValueList.Add(SocialMedias[0].ID); 
+        this.SelectedValueList.Add(SocialMedias[4].ID);
     }
 }
 
@@ -55,8 +67,7 @@ public class SocialMediaViewModel
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfAutoComplete x:Name="autocomplete"
-                        WidthRequest="250"
+<editors:SfAutocomplete x:Name="autocomplete"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
                         TextMemberPath="Name" />
@@ -64,12 +75,14 @@ public class SocialMediaViewModel
 {% endhighlight %}
 {% highlight c# %}
 
-SfAutocomplete autocomplete = new SfAutoComplete();
-SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
-autocomplete.BindingContext = socialMediaViewModel;
-autocomplete.ItemsSource = SocialMediaViewModel.SocialMedias;
-autocomplete.DisplayMemberPath = "Name";
-autocomplete.TextMemberPath = "Name";
+SfAutocomplete autocomplete = new SfAutocomplete()
+{
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+    MinimumPrefixCharacters = 3,
+    TextSearchMode = AutocompleteTextSearchMode.StartsWith,
+    ItemsSource = socialMediaViewModel.SocialMedias
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -95,8 +108,6 @@ Also there are two ways to display multi-selection items in the AutoComplete con
 
   <editors:SfAutocomplete x:Name="autoComplete"
                 SelectionMode="Multiple"
-                WidthRequest="350"
-                HeightRequest="50"
                 ItemsSource="{Binding SocialMedias}"
                 SelectedItems="{Binding SelectedItemsList}"
                 DisplayMemberPath="Name"
@@ -106,13 +117,14 @@ Also there are two ways to display multi-selection items in the AutoComplete con
 
 {% highlight C# %}
 
-  public ObservableCollection<SocialMedia> SelectedItemsList { get; set; }
-  SocialMediaViewModel socialMediaViewModel = (this.autoComplete.BindingContext as SocialMediaViewModel);
-  ObservableCollection<SocialMedia> socialMediasList = socialMediaViewModel.SocialMedias;
-  SelectedItemsList = new ObservableCollection<SocialMedia>();
-  SelectedItemsList.Add(socialMediasList[0]);
-  SelectedItemsList.Add(socialMediasList[2]);
-  SelectedItemsList.Add(socialMediasList[4]);
+SfAutocomplete autocomplete = new SfAutocomplete()
+{
+    SelectionMode = AutocompleteSelectionMode.Multiple,
+    ItemsSource = socialMediaViewModel.SocialMedias
+    SelectedItems = socialMediaViewModel.SelectedItemsList,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name"
+};
 
 {% endhighlight %}
 
@@ -127,8 +139,6 @@ When setting [MultiSelectionDisplayMode](https://help.syncfusion.com/cr/maui/Syn
 {% highlight xaml %}
 
  <editors:SfAutocomplete x:Name="autoComplete" 
-                         HeightRequest="50"
-                         WidthRequest="350"
                          ItemsSource="{Binding SocialMedias}"
                          SelectionMode="Multiple"
                          MultiSelectionDisplayMode="Delimiter"
@@ -137,6 +147,22 @@ When setting [MultiSelectionDisplayMode](https://help.syncfusion.com/cr/maui/Syn
                          DisplayMemberPath="Name"
                          TextMemberPath="Name"
                          Placeholder="Enter Media" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfAutocomplete autocomplete = new SfAutocomplete()
+{
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    SelectionMode = AutocompleteSelectionMode.Multiple,
+    MultiSelectionDisplayMode = AutocompleteMultiSelectionDisplayMode.Delimiter,
+    DelimiterText = "/",
+    MaxDropDownHeight = 250,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+    Placeholder = "Enter Media"
+};
 
 {% endhighlight %}
 
@@ -152,15 +178,13 @@ Multi-selection token mode has two different layouts to display the selected ite
 
 #### Wrap mode
 
-When the [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html#Syncfusion_Maui_Inputs_SfAutocomplete_TokensWrapMode) is set to [Wrap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTokensWrapMode.html#Syncfusion_Maui_Inputs_AutocompleteTokensWrapMode_Wrap), the selected items will be wrapped to the next line of the SfAutoComplete.
+When the [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html#Syncfusion_Maui_Inputs_SfAutocomplete_TokensWrapMode) is set to [Wrap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTokensWrapMode.html#Syncfusion_Maui_Inputs_AutocompleteTokensWrapMode_Wrap), the selected items will be wrapped to the next line of the SfAutocomplete.
 
 {% tabs %}
 
 {% highlight xaml %}
 
- <editors:SfAutoComplete x:Name="autoComplete" 
-             HeightRequest="50"
-             WidthRequest="350"
+ <editors:SfAutocomplete x:Name="autoComplete" 
              ItemsSource="{Binding SocialMedias}"
              SelectionMode="Multiple"
              MaxDropDownHeight="250"
@@ -168,6 +192,21 @@ When the [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.In
              Placeholder="Enter Media"
              TextMemberPath="Name"
              TokensWrapMode="Wrap" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfAutocomplete autoComplete = new SfAutocomplete
+{
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+    Placeholder = "Enter Media",
+    SelectionMode = AutocompleteSelectionMode.Multiple,
+    MaxDropDownHeight = 250,
+    TokensWrapMode = AutoCompleteTokensWrapMode.Wrap
+};
 
 {% endhighlight %}
 
@@ -183,16 +222,29 @@ When the [TokensWrapMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.In
 
 {% highlight xaml %}
 
- <editors:SfAutoComplete x:Name="autoComplete" 
-             HeightRequest="50"
-             WidthRequest="350"
+<editors:SfAutoComplete x:Name="autoComplete" 
              ItemsSource="{Binding SocialMedias}"
+             DisplayMemberPath="Name"
+             TextMemberPath="Name"
+             Placeholder="Enter Media"
              SelectionMode="Multiple"
              MaxDropDownHeight="250"
-             DisplayMemberPath="Name"
-             Placeholder="Enter Media"
-             TextMemberPath="Name"
              TokensWrapMode="None" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfAutocomplete autoComplete = new SfAutocomplete
+{
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    SelectionMode = AutocompleteSelectionMode.Multiple,
+    MaxDropDownHeight = 250,
+    DisplayMemberPath = "Name",
+    Placeholder = "Enter Media",
+    TextMemberPath = "Name",
+    TokensWrapMode = AutoCompleteTokensWrapMode.None
+};
 
 {% endhighlight %}
 
@@ -214,8 +266,6 @@ The SelectionChangingEventArgs provides essential data related to the selection-
 {% highlight xaml %}
 
 <editors:SfAutocomplete x:Name="autocomplete"
-                        WidthRequest="250"
-                        HeightRequest="40"
                         ItemsSource="{Binding SocialMedias}"
                         TextMemberPath="Name"
                         DisplayMemberPath="Name"
@@ -225,11 +275,8 @@ The SelectionChangingEventArgs provides essential data related to the selection-
 
 {% highlight C# %}
 
-SocialMediaViewModel socialMediaViewModel= new SocialMediaViewModel();
 SfAutoComplete autocomplete = new SfAutoComplete
 {
-    WidthRequest = 250,
-    HeightRequest= 40,
     ItemsSource = socialMediaViewModel.SocialMedias,
     TextMemberPath = "Name",
     DisplayMemberPath = "Name"
@@ -267,8 +314,7 @@ When an item is selected from the drop-down list, the [SelectionChanged](https:/
 {% tabs %}
 {% highlight xaml %}
 
-<editors:SfAutoComplete x:Name="autocomplete"
-                        WidthRequest="250"
+<editors:SfAutocomplete x:Name="autocomplete"
                         ItemsSource="{Binding SocialMedias}"
                         TextMemberPath="Name"
                         DisplayMemberPath="Name"
@@ -278,6 +324,12 @@ When an item is selected from the drop-down list, the [SelectionChanged](https:/
 
 {% highlight C# %}
 
+SfAutocomplete autocomplete = new SfAutocomplete()
+{
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name",
+};
 autocomplete.SelectionChanged += OnSelectionChanged;
 
 {% endhighlight %}
@@ -311,23 +363,46 @@ In single selection mode, the [SelectedValue](https://help.syncfusion.com/cr/mau
 {% tabs %}
 {% highlight XAML %}
 
-<editors:SfAutoComplete x:Name="autocomplete"
-                    WidthRequest="250"
-                    MaxDropDownHeight="250"
-                    TextMemberPath="Name"   
-                    DisplayMemberPath="Name"
-                    ItemsSource="{Binding SocialMedias}"
-                    SelectedValuePath="ID"
-                    SelectionChanged="OnSelectionChanged"/>
-
-<Label Text="SelectedValue :" />
-<Label x:Name="selectedValue" />
+<StackLayout>
+    <editors:SfAutocomplete x:Name="autocomplete"
+                            MaxDropDownHeight="250"
+                            TextMemberPath="Name"
+                            DisplayMemberPath="Name"
+                            ItemsSource="{Binding SocialMedias}"
+                            SelectedValuePath="ID"
+                            SelectionChanged="OnSelectionChanged"/>
+    <HorizontalStackLayout>
+        <Label x:Name="labelTitle" Text="SelectedValue :" />
+        <Label x:Name="selectedValue" />
+    </HorizontalStackLayout>
+</StackLayout>
 
 {% endhighlight %}
+
 {% highlight C# %}
 
-autocomplete.SelectedValuePath = "ID";
+SfAutocomplete autocomplete = new SfAutocomplete
+{
+    MaxDropDownHeight = 250,
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name",
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    SelectedValuePath = "ID"
+};
 autocomplete.SelectionChanged += OnSelectionChanged;
+
+Label labelTitle = new Label { Text = "SelectedValue :" };
+Label selectedValue = new Label();
+
+HorizontalStackLayout horizontalLayout = new HorizontalStackLayout()
+{
+    Children = { labelTitle, selectedValue }
+};
+
+StackLayout mainLayout = new StackLayout
+{
+    Children = { autocomplete, horizontalLayout }
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -352,32 +427,49 @@ In multi-selection mode, the [SelectedValue](https://help.syncfusion.com/cr/maui
 {% tabs %}
 {% highlight XAML %}
 
-<editors:SfAutocomplete x:Name="autocomplete"
-                    WidthRequest="250"
-                    MaxDropDownHeight="250"
-                    TextMemberPath="Name"   
-                    DisplayMemberPath="Name"
-                    ItemsSource="{Binding SocialMedias}"
-                    SelectionMode="Multiple"
-                    SelectedValuePath="ID"
-                    SelectedValue="{Binding SelectedValueList}"
-                    SelectionChanged="OnSelectionChanged"/>
-
-<Label Text="SelectedValue count :" />
-<Label x:Name="selectedValue" />
+<StackLayout>
+    <editors:SfAutocomplete x:Name="autocomplete"
+                            MaxDropDownHeight="250"
+                            TextMemberPath="Name"
+                            DisplayMemberPath="Name"
+                            ItemsSource="{Binding SocialMedias}"
+                            SelectionMode="Multiple"
+                            SelectedValuePath="ID"
+                            SelectedValue="{Binding SelectedValueList}"
+                            SelectionChanged="OnSelectionChanged"/>
+    <HorizontalStackLayout>
+        <Label x:Name="labelTitle" Text="SelectedValue count :"/>
+        <Label x:Name="selectedValue"/>
+    </HorizontalStackLayout>
+</StackLayout>
 
 {% endhighlight %}
 {% highlight C# %}
 
-public ObservableCollection<object> SelectedValueList { get; set; }
-SocialMediaViewModel socialMediaViewModel = (this.autocomplete.BindingContext as SocialMediaViewModel);
-ObservableCollection<SocialMedia> socialMediasList = socialMediaViewModel.SocialMedias;
-SelectedValueList = new ObservableCollection<object>();
-SelectedValueList.Add(socialMediasList[0].ID);
-SelectedValueList.Add(socialMediasList[4].ID);
-autocomplete.SelectedValuePath = "ID";
+SfAutocomplete autocomplete = new SfAutocomplete
+{
+    MaxDropDownHeight = 250,
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name",
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    SelectionMode = AutocompleteSelectionMode.Multiple,
+    SelectedValuePath = "ID",
+    SelectedValue = socialMediaViewModel.SelectedValueList
+};
 autocomplete.SelectionChanged += OnSelectionChanged;
-  
+
+Label labelTitle = new Label { Text = "SelectedValue count :" };
+Label selectedValue = new Label();
+
+HorizontalStackLayout horizontalLayout = new HorizontalStackLayout()
+{
+    Children = { labelTitle, selectedValue }
+};
+
+StackLayout mainLayout = new StackLayout
+{
+    Children = { autocomplete, horizontalLayout }
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -410,7 +502,6 @@ By default, the clear button `X` will be displayed in the editor of the [Autocom
 {% highlight XAML %}
 
 <editors:SfAutocomplete x:Name="autocomplete"
-                        WidthRequest="250"
                         IsClearButtonVisible="false"
                         ItemsSource="{Binding SocialMedias}"
                         DisplayMemberPath="Name"
@@ -420,7 +511,13 @@ By default, the clear button `X` will be displayed in the editor of the [Autocom
 
 {% highlight C# %}
 
-autocomplete.IsClearButtonVisible = false;
+SfAutocomplete autocomplete = new SfAutocomplete
+{
+    IsClearButtonVisible = false,
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name"
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -438,9 +535,8 @@ In the Autocomplete control, the drop-down can be opened or closed programmatica
 {% highlight XAML %}
 
 <editors:SfAutocomplete x:Name="autocomplete"
-                        WidthRequest="250"
                         ItemsSource="{Binding SocialMedias}"
-                        IsDropDownOpen = true;
+                        IsDropDownOpen = "true";
                         DisplayMemberPath="Name"
                         TextMemberPath="Name">
 </editors:SfAutocomplete>
@@ -448,7 +544,13 @@ In the Autocomplete control, the drop-down can be opened or closed programmatica
 {% endhighlight %}
 {% highlight C# %}
 
-autocomplete.IsDropDownOpen = true;
+SfAutocomplete autocomplete = new SfAutocomplete
+{
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    IsDropDownOpen = true,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name"
+};
 
 {% endhighlight %}
 {% endtabs %}
