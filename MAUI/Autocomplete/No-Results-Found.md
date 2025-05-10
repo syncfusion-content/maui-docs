@@ -21,14 +21,19 @@ We can customize the desire text to be displayed for indicating no results found
                         NoResultsFoundText="Not Found"
                         ItemsSource="{Binding SocialMedias}"
                         TextMemberPath="Name"
-                        DisplayMemberPath="Name"
-                        WidthRequest="240" /> 
+                        DisplayMemberPath="Name"/> 
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-autocomplete.NoResultsFoundText = "Not Found";
+SfAutocomplete autocomplete = new SfAutocomplete()
+{
+    NoResultsFoundText = "Not Found",
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+    ItemsSource = socialMediaViewModel.SocialMedias
+};
 
 {% endhighlight %}
 
@@ -46,8 +51,7 @@ We can customize the appearance of the desire text to be displayed for indicatin
   <editors:SfAutocomplete x:Name="autocomplete"
                ItemsSource="{Binding SocialMedias}"
               TextMemberPath="Name"
-             DisplayMemberPath="Name"
-             WidthRequest="240">
+             DisplayMemberPath="Name" >
       <editors:SfAutocomplete.NoResultsFoundTemplate>
           <DataTemplate>
               <Label Text="Not Found"  FontSize="20" FontAttributes="Italic" TextColor="Red" Margin="70,10,0,0"/>
@@ -57,21 +61,26 @@ We can customize the appearance of the desire text to be displayed for indicatin
 {% endhighlight %}
 
 {% highlight c# %}
-var noResultsTemplate = new DataTemplate(() =>
+
+
+SfAutocomplete autocomplete = new SfAutocomplete()
+{
+    ItemsSource = socialMediaViewModel.SocialMedias
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name",
+    NoResultsFoundTemplate = new DataTemplate(() =>
+    {
+        return new Label
         {
-            var label = new Label
-            {
-                Text = "Not Found",
-                FontSize = 20,
-                FontAttributes = FontAttributes.Italic,
-                TextColor = Color.Red,
-                Margin = new Thickness(70, 10, 0, 0)
-            };
+            Text = "Not Found",
+            FontSize = 20,
+            FontAttributes = FontAttributes.Italic,
+            TextColor = Colors.Red,
+            Margin = new Thickness(70, 10, 0, 0)
+        };
+    })
+};
 
-            return new ViewCell { View = label };
-        });
-
-autocomplete.NoResultsFoundTemplate = noResultsTemplate;
 
 {% endhighlight %}
 
