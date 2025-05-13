@@ -65,7 +65,7 @@ public class KanbanViewModel
     public KanbanViewModel()
     {
         this.Cards = new ObservableCollection<KanbanModel>();
-        Cards.Add(
+        this.Cards.Add(
             new KanbanModel()
             {
                 ID = 1,
@@ -78,7 +78,7 @@ public class KanbanViewModel
             }
         );
 
-        Cards.Add(
+        this.Cards.Add(
             new KanbanModel()
             {
                 ID = 6,
@@ -91,7 +91,7 @@ public class KanbanViewModel
             }
         );
 
-        Cards.Add(
+        this.Cards.Add(
             new KanbanModel()
             {
                 ID = 24,
@@ -104,7 +104,7 @@ public class KanbanViewModel
             }
         );
 
-        Cards.Add(
+        this.Cards.Add(
             new KanbanModel()
             {
                 ID = 21,
