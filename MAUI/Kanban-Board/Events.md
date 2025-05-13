@@ -9,6 +9,122 @@ documentation: ug
 
 # Events in .NET MAUI Kanban Board (SfKanban)
 
+## CardTapped
+
+The `CardTapped` event occurs when the card is tapped. We can get the following details from the `CardTapped` event.
+
+* `Column` - Returns the instance of the column containing the tapped card.
+* `Index` - Returns the index position of the tapped card within its column.
+* `Data` - Returns the data of the card that was tapped.
+
+{% tabs %}
+{% highlight XAML hl_lines="3" %}
+
+<kanban:SfKanban x:Name="kanban"
+                 ItemsSource="{Binding Cards}"
+                 CardTapped="OnKanbanCardTapped">
+    <kanban:SfKanban.BindingContext>
+        <local:KanbanViewModel/>
+    </kanban:SfKanban.BindingContext>
+</kanban:SfKanban>
+
+{% endhighlight %}
+
+{% highlight C# hl_lines="2" %}
+
+this.kanban.ItemsSource = new KanbanViewModel().Cards;
+this.kanban.CardTapped += this.OnKanbanCardTapped;
+
+private void OnKanbanCardTapped(object sender, Syncfusion.Maui.Kanban.KanbanCardTappedEventArgs e)
+{
+    var selectedColumn = e.Column;
+    var selectedCardIndex = e.Index;
+    var selectedCardDetails = e.Data;
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="ViewModel.cs" %}
+
+public class KanbanViewModel
+{
+    #region Properties
+
+    /// <summary>
+    /// Gets or sets the collection of <see cref="KanbanModel"/> objects.
+    /// </summary>
+    public ObservableCollection<KanbanModel> Cards { get; set; }
+
+    #endregion
+
+    #region Constructor
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="KanbanViewModel"/> class.
+    /// </summary>
+    public KanbanViewModel()
+    {
+        this.Cards = new ObservableCollection<KanbanModel>();
+        Cards.Add(
+            new KanbanModel()
+            {
+                ID = 1,
+                Title = "iOS - 1",
+                ImageURL = "People_circle1.png",
+                Category = "Open",
+                Description = "Analyze customer requirements",
+                IndicatorFill = SolidColorBrush.Red,
+                Tags = new List<string> { "Bug", "Customer", "Release Bug" }
+            }
+        );
+
+        Cards.Add(
+            new KanbanModel()
+            {
+                ID = 6,
+                Title = "Xamarin - 6",
+                ImageURL = "People_Circle2.png",
+                Category = "Open",
+                Description = "Show the retrived data from the server in grid control",
+                IndicatorFill = SolidColorBrush.Red,
+                Tags = new List<string> { "Bug", "Customer", "Breaking Issue" }
+            }
+        );
+
+        Cards.Add(
+            new KanbanModel()
+            {
+                ID = 24,
+                Title = "UWP - 24",
+                ImageURL = "People_Circle14.png",
+                Category = "In Progress",
+                Description = "Test editing functionality",
+                IndicatorFill = SolidColorBrush.Orange,
+                Tags = new List<string> { "Feature", "Customer", "Release" }
+            }
+        );
+
+        Cards.Add(
+            new KanbanModel()
+            {
+                ID = 21,
+                Title = "Android - 21",
+                Category = "Closed",
+                ImageURL = "People_Circle23.png",
+                Description = "Arrange web meeting with customer to get editing requirements",
+                IndicatorFill = SolidColorBrush.Orange,
+                Tags = new List<string> { "Story", "Improvement" }
+            }
+        );
+    }
+
+    #endregion
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ## DragStart
 
 [`DragStart`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_DragStart) event is triggered when you start to drag a card. The argument contains the following information.
