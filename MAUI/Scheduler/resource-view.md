@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Resource View in MAUI Scheduler Control | Syncfusion<sup>&reg;</sup>
+title: Resource View in MAUI Scheduler Control | Syncfusion
 description: Learn here all about resource view feature of Syncfusion<sup>&reg;</sup> .NET MAUI SfSchedler(SfScheduler) in day, week and workweek of timeline views and more.
 platform: maui
 control: SfScheduler

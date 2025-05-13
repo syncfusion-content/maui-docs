@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Header, footer and selection in .NET MAUI Picker Control | Syncfusion<sup>&reg;</sup>
+title: Header, footer and selection in .NET MAUI Picker Control | Syncfusion
 description: Learn here all about header, footer and selection view with Syncfusion<sup>&reg;</sup> .NET MAUI Picker (SfPicker) control.
 platform: maui
 control: SfPicker
