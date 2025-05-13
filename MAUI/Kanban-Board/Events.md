@@ -11,11 +11,11 @@ documentation: ug
 
 ## CardTapped
 
-The `CardTapped` event occurs when the card is tapped. We can get the following details from the `CardTapped` event.
+The [CardTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_CardTapped) event occurs when the card is tapped. We can get the following details from the `CardTapped` event.
 
-* `Column` - Returns the instance of the column containing the tapped card.
-* `Index` - Returns the index position of the tapped card within its column.
-* `Data` - Returns the data of the card that was tapped.
+* [Column](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanCardTappedEventArgs.html#Syncfusion_Maui_Kanban_KanbanCardTappedEventArgs_Column) - Returns the instance of the column containing the tapped card.
+* [Index](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanCardTappedEventArgs.html#Syncfusion_Maui_Kanban_KanbanCardTappedEventArgs_Index) - Returns the index position of the tapped card within its column.
+* [Data](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanCardTappedEventArgs.html#Syncfusion_Maui_Kanban_KanbanCardTappedEventArgs_Data) - Returns the data of the card that was tapped.
 
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
@@ -35,7 +35,7 @@ The `CardTapped` event occurs when the card is tapped. We can get the following 
 this.kanban.ItemsSource = new KanbanViewModel().Cards;
 this.kanban.CardTapped += this.OnKanbanCardTapped;
 
-private void OnKanbanCardTapped(object sender, Syncfusion.Maui.Kanban.KanbanCardTappedEventArgs e)
+private void OnKanbanCardTapped(object sender, KanbanCardTappedEventArgs e)
 {
     var selectedColumn = e.Column;
     var selectedCardIndex = e.Index;
@@ -64,8 +64,21 @@ public class KanbanViewModel
     /// </summary>
     public KanbanViewModel()
     {
-        this.Cards = new ObservableCollection<KanbanModel>();
-        this.Cards.Add(
+        this.Cards = this.GetCardDetails();
+    }
+
+    #endregion
+
+    #region Private methods
+
+    /// <summary>
+    /// Method to get the kanban model collections.
+    /// </summary>
+    /// <returns>The kanban model collections.</returns>
+    private ObservableCollection<KanbanModel> GetCardDetails()
+    {
+        var cards = new ObservableCollection<KanbanModel>();
+        cards.Add(
             new KanbanModel()
             {
                 ID = 1,
@@ -78,7 +91,7 @@ public class KanbanViewModel
             }
         );
 
-        this.Cards.Add(
+        cards.Add(
             new KanbanModel()
             {
                 ID = 6,
@@ -91,7 +104,7 @@ public class KanbanViewModel
             }
         );
 
-        this.Cards.Add(
+        cards.Add(
             new KanbanModel()
             {
                 ID = 24,
@@ -104,7 +117,7 @@ public class KanbanViewModel
             }
         );
 
-        this.Cards.Add(
+        cards.Add(
             new KanbanModel()
             {
                 ID = 21,
@@ -116,13 +129,14 @@ public class KanbanViewModel
                 Tags = new List<string> { "Story", "Improvement" }
             }
         );
+
+        return cards;
     }
 
     #endregion
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
 ## DragStart
