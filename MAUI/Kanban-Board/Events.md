@@ -44,7 +44,7 @@ private void OnKanbanCardTapped(object sender, Syncfusion.Maui.Kanban.KanbanCard
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="ViewModel.cs" %}
+{% highlight c# tabtitle="KanbanViewModel.cs" %}
 
 public class KanbanViewModel
 {
