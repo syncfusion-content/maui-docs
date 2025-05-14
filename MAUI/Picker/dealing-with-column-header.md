@@ -117,3 +117,87 @@ The .NET MAUI Picker control, Separator line background customized by setting `S
 {% endtabs %}
 
    ![Column header divider color in .NET MAUI Picker.](images/dealing-with-column-header/maui-picker-column-header-divider-color.png)
+
+### Picker Column Header Appearance using Datatemplate
+
+You can customize the picker column header appearance by using the [Template]() property of the [PickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumnHeaderView.html).
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<Picker:SfPicker x:Name="picker" >
+    <Picker:SfPicker.ColumnHeaderView>
+        <Picker:PickerColumnHeaderView>
+            <Picker:PickerColumnHeaderView.Template>
+                <DataTemplate>
+                    <Grid BackgroundColor="#BB9AB1">
+                        <Label HorizontalOptions="Center" VerticalOptions="Center" x:DataType="Picker:PickerColumn" Text="{Binding SelectedItem}" TextColor="White" Padding="10"/>
+                    </Grid>
+                </DataTemplate>
+            </Picker:PickerColumnHeaderView.Template>
+        </Picker:PickerColumnHeaderView>
+    </Picker:SfPicker.ColumnHeaderView>
+</Picker:SfPicker>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+N> If a template is applied to the column header in the [PickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumnHeaderView.html), the remaining column header properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumnHeaderView.html#Syncfusion_Maui_Picker_PickerColumnHeaderView_DividerColor) Property.
+
+### Picker Column Header appearance using DataTemplateSelector
+
+You can customize the picker column header appearance by using the [Template]() property of the [PickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumnHeaderView.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the picker column header. This lets you select a different data template for each column header and customize the appearance of a specific column header based on certain conditions.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<Grid.Resources>
+    <DataTemplate x:Key="selectedItemTemplate">
+    <Grid Background="LightBlue">
+        <Label x:DataType="Picker:PickerColumn" Text="{Binding SelectedItem}"  HorizontalOptions="Center" VerticalOptions="Center"/>
+    </Grid>
+    </DataTemplate>
+    <DataTemplate x:Key="nonSelectedItemTemplate">
+        <Grid Background="LightGreen">
+            <Label x:DataType="Picker:PickerColumn" Text="{Binding SelectedItem}"  HorizontalOptions="Center" VerticalOptions="Center"/>
+        </Grid>
+    </DataTemplate>
+    <local:PickerTemplateSelector x:Key="pickerTemplateSelector" SelectedItemTemplate="{StaticResource selectedItemTemplate}"  NonSelectedItemTemplate="{StaticResource nonSelectedItemTemplate}"/>
+    <picker:SfPicker x:Name="picker">
+        <picker:SfPicker.ColumnHeaderView>
+            <picker:PickerColumnHeaderView Template="{StaticResource pickerTemplateSelector}">
+            </picker:PickerColumnHeaderView>
+        </picker:SfPicker.ColumnHeaderView>
+    </picker:SfPicker>
+</Grid.Resources>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+public class PickerTemplateSelector : DataTemplateSelector
+{
+    public PickerTemplateSelector()
+    {
+    }
+    public DataTemplate SelectedItemTemplate { get; set; }
+    public DataTemplate NonSelectedItemTemplate { get; set; }
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {  
+        var Details = item as PickerColumn;
+        if (Details != null)
+        {
+            if (Details.SelectedIndex <= 4)
+                return SelectedItemTemplate;
+        }
+        return NonSelectedItemTemplate;
+    }
+}
+
+{% endtabs %}
+
+N> 
+* When using data template selector, performance issues occur as the conversion template views take time within the framework.

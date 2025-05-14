@@ -121,6 +121,90 @@ this.Content = timePicker;
 
 ![Custom header in .NET MAUI Time picker.](images/customizations/maui-time-picker-custom-header.png)
 
+### Time Header Appearance using Datatemplate
+
+You can customize the time header appearance by using the [Template]() property of the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html).
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfTimePicker x:Name="timePicker" >
+    <picker:SfTimePicker.HeaderView>
+        <picker:PickerHeaderView>
+            <picker:PickerHeaderView.Template>
+                <DataTemplate>
+                    <Grid BackgroundColor="#BB9AB1">
+                        <Label HorizontalOptions="Center" VerticalOptions="Center" Text="{Binding Path=SelectedTime, StringFormat='{0:hh:mm:ss}'}" TextColor="White" Padding="10"/>
+                    </Grid>
+                </DataTemplate>
+            </picker:PickerHeaderView.Template>
+        </picker:PickerHeaderView>
+    </picker:SfTimePicker.HeaderView>
+</picker:SfTimePicker>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+N> If a template is applied to the header in the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html), the remaining header properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_DividerColor) Property.
+
+### Time Header appearance using DataTemplateSelector
+
+You can customize the time header appearance by using the [Template]() property of the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the timepicker header. This lets you apply a custom data template to the header and customize its appearance based on specific conditions.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<Grid.Resources>
+    <DataTemplate x:Key="currentTimeTemplate">
+        <Grid Background="LightBlue">
+            <Label HorizontalOptions="Center" Text="{Binding Path=SelectedTime, StringFormat='{0:hh:mm:ss}'}"/>
+        </Grid>
+    </DataTemplate>
+    <DataTemplate x:Key="futureTimeTemplate">
+        <Grid Background="LightGreen">
+            <Label HorizontalOptions="Center" Text="{Binding Path=SelectedTime, StringFormat='{0:hh:mm:ss}'}"/>
+        </Grid>
+    </DataTemplate>
+    <local:TimeTemplateSelector x:Key="timeTemplateSelector" CurrentTimeTemplate="{StaticResource currentTimeTemplate}"  FutureTimeTemplate="{StaticResource futureTimeTemplate}"/>
+    <picker:SfTimePicker x:Name="timePicker">
+        <picker:SfTimePicker.HeaderView>
+            <picker:PickerHeaderView Template="{StaticResource timeTemplateSelector}">
+            </picker:PickerHeaderView>
+        </picker:SfTimePicker.HeaderView>
+    </picker:SfTimePicker>
+</Grid.Resources>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+public class TimeTemplateSelector : DataTemplateSelector
+{
+    public TimeTemplateSelector()
+    {
+    }
+    public DataTemplate CurrentTimeTemplate { get; set; }
+    public DataTemplate FutureTimeTemplate { get; set; }
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        var Details = item as SfTimePicker;
+        if (Details != null)
+        {
+            if (Details.SelectedTime <= DateTime.Now.TimeOfDay)
+                return CurrentTimeTemplate;
+        }
+        return FutureTimeTemplate;
+    }
+}
+
+{% endtabs %}
+
+N> 
+* When using data template selector, performance issues occur as the conversion template views take time within the framework.
+
 ## Column Header Customization
 
 Customize the time picker column header by using the `ColumnHeaderView` property of the `SfTimePicker`.
@@ -236,6 +320,90 @@ this.Content = timePicker;
 
 ![Custom column header in .NET MAUI Time picker.](images/customizations/maui-time-picker-custom-column-header.png)
 
+### Time Column Header Appearance using Datatemplate
+
+You can customize the time column header appearance by using the [Template]() property of the [TimePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html).
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfTimePicker x:Name="timePicker" >
+    <picker:SfTimePicker.ColumnHeaderView>
+        <picker:TimePickerColumnHeaderView>
+            <picker:TimePickerColumnHeaderView.Template>
+                <DataTemplate>
+                    <Grid BackgroundColor="#BB9AB1">
+                        <Label HorizontalOptions="Center" VerticalOptions="Center" Text="{Binding Path=SelectedTime, StringFormat='{0:hh:mm:ss}'}" TextColor="White" Padding="10"/>
+                    </Grid>
+                </DataTemplate>
+            </picker:TimePickerColumnHeaderView.Template>
+        </picker:TimePickerColumnHeaderView>
+    </picker:SfTimePicker.ColumnHeaderView>
+</picker:SfTimePicker>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+N> If a template is applied to the column header in the [TimePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html), the remaining colummn header properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_DividerColor).
+
+### Time Column Header appearance using DataTemplateSelector
+
+You can customize the time column header appearance by using the [Template]() property of the [TimePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the timepicker column header. This lets you select a different data template for each header and customize the appearance of a specific header based on certain conditions.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<Grid.Resources>
+    <DataTemplate x:Key="currentTimeTemplate">
+        <Grid Background="LightBlue">
+            <Label HorizontalOptions="Center" Text="{Binding Path=SelectedTime, StringFormat='{0:hh:mm:ss}'}"/>
+        </Grid>
+    </DataTemplate>
+    <DataTemplate x:Key="futureTimeTemplate">
+        <Grid Background="LightGreen">
+            <Label HorizontalOptions="Center" Text="{Binding Path=SelectedTime, StringFormat='{0:hh:mm:ss}'}"/>
+        </Grid>
+    </DataTemplate>
+    <local:TimeTemplateSelector x:Key="timeTemplateSelector" CurrentTimeTemplate="{StaticResource currentTimeTemplate}"  FutureTimeTemplate="{StaticResource futureTimeTemplate}"/>
+    <picker:SfTimePicker x:Name="timePicker">
+        <picker:SfTimePicker.ColumnHeaderView>
+            <picker:TimePickerColumnHeaderView Template="{StaticResource timeTemplateSelector}">
+            </picker:TimePickerColumnHeaderView>
+        </picker:SfTimePicker.ColumnHeaderView>
+    </picker:SfTimePicker>
+</Grid.Resources>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+public class TimeTemplateSelector : DataTemplateSelector
+{
+    public TimeTemplateSelector()
+    {
+    }
+    public DataTemplate CurrentTimeTemplate { get; set; }
+    public DataTemplate FutureTimeTemplate { get; set; }
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        var Details = item as SfTimePicker;
+        if (Details != null)
+        {
+            if (Details.SelectedTime <= DateTime.Now.TimeOfDay)
+                return CurrentTimeTemplate;
+        }
+        return FutureTimeTemplate;
+    }
+}
+
+{% endtabs %}
+
+N> 
+* When using data template selector, performance issues occur as the conversion template views take time within the framework.
+
 ## Footer Customization
 
 Customize the time picker footer view by using the `FooterView` property of the`SfTimePicker`.
@@ -348,6 +516,90 @@ this.Content = timePicker;
 {% endtabs %}
 
 ![Custom footer .NET MAUI Time picker.](images/customizations/maui-time-picker-custom-footer.png)
+
+### Time Footer Appearance using Datatemplate
+
+You can customize the time footer appearance by using the [Template]() property of the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html).
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfTimePicker x:Name="timePicker">
+   <picker:SfTimePicker.FooterView>
+       <picker:PickerFooterView>
+           <picker:PickerFooterView.Template>
+               <DataTemplate>
+                   <Grid BackgroundColor="#BB9AB1">
+                       <Label HorizontalOptions="Center" VerticalOptions="Center" Text="{Binding Path=SelectedTime, StringFormat='{0:hh:mm:ss}'}" TextColor="White"/>
+                   </Grid>
+               </DataTemplate>
+           </picker:PickerFooterView.Template>
+       </picker:PickerFooterView>
+   </picker:SfTimePicker.FooterView>
+</picker:SfTimePicker>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+N> If a template is applied to the footer in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html), the remaining footer properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_DividerColor) Property.
+
+### Time Footer appearance using DataTemplateSelector
+
+You can customize the time footer appearance by using the [Template]() property of the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the timepicker footer. This lets you apply a custom data template to the footer and customize its appearance based on specific conditions.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<Grid.Resources>
+    <DataTemplate x:Key="currentTimeTemplate">
+        <Grid Background="LightBlue">
+            <Label HorizontalOptions="Center" Text="{Binding Path=SelectedTime, StringFormat='{0:hh:mm:ss}'}"/>
+        </Grid>
+    </DataTemplate>
+    <DataTemplate x:Key="futureTimeTemplate">
+        <Grid Background="LightGreen">
+            <Label HorizontalOptions="Center" Text="{Binding Path=SelectedTime, StringFormat='{0:hh:mm:ss}'}"/>
+        </Grid>
+    </DataTemplate>
+    <local:TimeTemplateSelector x:Key="timeTemplateSelector" CurrentTimeTemplate="{StaticResource currentTimeTemplate}"  FutureTimeTemplate="{StaticResource futureTimeTemplate}"/>
+    <picker:SfTimePicker x:Name="timePicker">
+        <picker:SfTimePicker.FooterView>
+            <picker:PickerFooterView Template="{StaticResource timeTemplateSelector}">
+            </picker:PickerFooterView>
+        </picker:SfTimePicker.FooterView>
+    </picker:SfTimePicker>
+</Grid.Resources>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+public class TimeTemplateSelector : DataTemplateSelector
+{
+    public TimeTemplateSelector()
+    {
+    }
+    public DataTemplate CurrentTimeTemplate { get; set; }
+    public DataTemplate FutureTimeTemplate { get; set; }
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        var Details = item as SfTimePicker;
+        if (Details != null)
+        {
+            if (Details.SelectedTime <= DateTime.Now.TimeOfDay)
+                return CurrentTimeTemplate;
+        }
+        return FutureTimeTemplate;
+    }
+}
+
+{% endtabs %}
+
+N> 
+* When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
 ## Selection View Customization
 
