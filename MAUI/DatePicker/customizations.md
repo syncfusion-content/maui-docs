@@ -121,6 +121,90 @@ this.Content = datePicker;
 
 ![Custom Header in .NET MAUI Date picker.](images/customizations/maui-date-picker-custom-header.png)
 
+### Date Header Appearance using Datatemplate
+
+You can customize the date header appearance by using the [Template]() property of the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html).
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfDatePicker x:Name="datepicker">
+    <picker:SfDatePicker.HeaderView>
+        <picker:PickerHeaderView>
+            <picker:PickerHeaderView.Template>
+                <DataTemplate>
+                    <Grid BackgroundColor="#BB9AB1">
+                        <Label HorizontalOptions="Center" VerticalOptions="Center" Text="{Binding Path=SelectedDate, StringFormat='{0:MMMM yyyy dd}'}" TextColor="White" Padding="10"/>
+                    </Grid>
+                </DataTemplate>
+            </picker:PickerHeaderView.Template>
+        </picker:PickerHeaderView>
+    </picker:SfDatePicker.HeaderView>
+</picker:SfDatePicker>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+N> If a template is applied to the header in the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html), the remaining header properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_DividerColor) Property.
+
+### Date Header appearance using DataTemplateSelector
+
+You can customize the date header appearance by using the [Template]() property of the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the datepicker header. This lets you apply a custom data template to the header and customize its appearance based on specific conditions.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<Grid.Resources>
+    <DataTemplate x:Key="todayDatesTemplate">
+        <Grid Background="LightBlue">
+            <Label HorizontalOptions="Center" Text="{Binding Path=SelectedDate, StringFormat='{0:MMMM yyyy dd}'}"/>
+        </Grid>
+    </DataTemplate>
+    <DataTemplate x:Key="normalDatesTemplate">
+        <Grid Background="LightGreen">
+            <Label HorizontalOptions="Center" Text="{Binding Path=SelectedDate, StringFormat='{0:MMMM yyyy dd}'}"/>
+        </Grid>
+    </DataTemplate>
+    <local:DateTemplateSelector x:Key="dateTemplateSelector" TodayDatesTemplate="{StaticResource todayDatesTemplate}"  NormaldatesTemplate="{StaticResource normalDatesTemplate}"/>
+    <picker:SfDatePicker x:Name="datepicker" >
+        <picker:SfDatePicker.HeaderView>
+            <picker:PickerHeaderView Template="{StaticResource dateTemplateSelector}">
+            </picker:PickerHeaderView>
+        </picker:SfDatePicker.HeaderView>
+    </picker:SfDatePicker>
+</Grid.Resources>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+public class DateTemplateSelector : DataTemplateSelector
+{
+    public DateTemplateSelector()
+    {
+    }
+    public DataTemplate TodayDatesTemplate { get; set; }
+    public DataTemplate NormaldatesTemplate { get; set; }
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        var Details = item as SfDatePicker;
+        if (Details != null)
+        {
+            if (Details.SelectedDate.HasValue && Details.SelectedDate.Value < DateTime.Now.Date)
+                return TodayDatesTemplate;
+        }
+        return NormaldatesTemplate;
+    }
+}
+
+{% endtabs %}
+
+N> 
+* When using data template selector, performance issues occur as the conversion template views take time within the framework.
+
 ## Column Header Customization
 
 Customize the date picker column header by using the `ColumnHeaderView` property of the `SfDatePicker`.
@@ -234,6 +318,90 @@ this.Content = datePicker;
 
 ![Custom Column header text in .NET MAUI Date picker.](images/customizations/maui-date-picker-custom-column-header.png)
 
+### Date Column Header Appearance using Datatemplate
+
+You can customize the date column header appearance by using the [Template]() property of the [DatePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DatePickerColumnHeaderView.html).
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfDatePicker x:Name="datepicker" >
+    <picker:SfDatePicker.ColumnHeaderView>
+        <picker:DatePickerColumnHeaderView>
+            <picker:DatePickerColumnHeaderView.Template>
+                <DataTemplate>
+                    <Grid BackgroundColor="#BB9AB1">
+                        <Label HorizontalOptions="Center" VerticalOptions="Center" Text="{Binding Path=SelectedDate, StringFormat='{0:MMMM yyyy dd}'}" TextColor="White" Padding="10"/>
+                    </Grid>
+                </DataTemplate>
+                </picker:DatePickerColumnHeaderView.Template>
+        </picker:DatePickerColumnHeaderView>
+    </picker:SfDatePicker.ColumnHeaderView>
+</picker:SfDatePicker>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+N> If a template is applied to the column header in the [DatePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DatePickerColumnHeaderView.html), the remaining column header properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DatePickerColumnHeaderView.html#Syncfusion_Maui_Picker_DatePickerColumnHeaderView_DividerColor) property.
+
+### Date Column Header appearance using DataTemplateSelector
+
+You can customize the date column header appearance by using the [Template]() property of the [DatePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DatePickerColumnHeaderView.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the date picker column header. This lets you select a different data template for each column header and customize the appearance of a specific column header based on certain conditions.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<Grid.Resources>
+    <DataTemplate x:Key="todayDatesTemplate">
+        <Grid Background="LightBlue">
+            <Label HorizontalOptions="Center" Text="{Binding Path=SelectedDate, StringFormat='{0:MMMM yyyy dd}'}"/>
+        </Grid>
+    </DataTemplate>
+    <DataTemplate x:Key="normalDatesTemplate">
+        <Grid Background="LightGreen">
+            <Label HorizontalOptions="Center" Text="{Binding Path=SelectedDate, StringFormat='{0:MMMM yyyy dd}'}"/>
+        </Grid>
+    </DataTemplate>
+    <local:DateTemplateSelector x:Key="dateTemplateSelector" TodayDatesTemplate="{StaticResource todayDatesTemplate}"  NormaldatesTemplate="{StaticResource normalDatesTemplate}"/>
+    <picker:SfDatePicker x:Name="datepicker">
+        <picker:SfDatePicker.ColumnHeaderView>
+            <picker:DatePickerColumnHeaderView Template="{StaticResource dateTemplateSelector}">
+            </picker:DatePickerColumnHeaderView>
+        </picker:SfDatePicker.ColumnHeaderView>
+    </picker:SfDatePicker>
+</Grid.Resources>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+public class DateTemplateSelector : DataTemplateSelector
+{
+    public DateTemplateSelector()
+    {
+    }
+    public DataTemplate TodayDatesTemplate { get; set; }
+    public DataTemplate NormaldatesTemplate { get; set; }
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        var Details = item as SfDatePicker;
+        if (Details != null)
+        {
+            if (Details.SelectedDate.HasValue && Details.SelectedDate.Value < DateTime.Now.Date)
+                return TodayDatesTemplate;
+        }
+        return NormaldatesTemplate;
+    }
+}
+
+{% endtabs %}
+
+N> 
+* When using data template selector, performance issues occur as the conversion template views take time within the framework.
+
 ## Footer Customization
 
 Customize the date picker footer view by using the FooterView property of the SfDatePicker.
@@ -346,6 +514,90 @@ this.Content = datePicker;
 {% endtabs %}
 
 ![Custom Footer in .NET MAUI Date picker.](images/customizations/maui-date-picker-custom-footer.png)
+
+### Date Footer Appearance using Datatemplate
+
+You can customize the date footer appearance by using the [Template]() property of the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html).
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfDatePicker x:Name="datepicker">
+    <picker:SfDatePicker.FooterView>
+        <picker:PickerFooterView>
+            <picker:PickerFooterView.Template>
+                <DataTemplate>
+                    <Grid BackgroundColor="#BB9AB1">
+                        <Label HorizontalOptions="Center" VerticalOptions="Center" Text="{Binding Path=SelectedDate, StringFormat='{0:MMMM yyyy dd}'}" TextColor="White" Padding="10"/>
+                    </Grid>
+                </DataTemplate>
+            </picker:PickerFooterView.Template>
+        </picker:PickerFooterView>
+    </picker:SfDatePicker.FooterView>
+</picker:SfDatePicker>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+N> If a template is applied to the footer in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html), the remaining footer properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_DividerColor) Property.
+
+### Date Footer appearance using DataTemplateSelector
+
+You can customize the date footer appearance by using the [Template]() property of the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the datepicker footer. This lets you apply a custom data template to the footer and customize its appearance based on specific conditions.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<Grid.Resources>
+    <DataTemplate x:Key="todayDatesTemplate">
+        <Grid Background="LightBlue">
+            <Label HorizontalOptions="Center" Text="{Binding Path=SelectedDate, StringFormat='{0:MMMM yyyy dd}'}"/>
+        </Grid>
+    </DataTemplate>
+    <DataTemplate x:Key="normalDatesTemplate">
+        <Grid Background="LightGreen">
+            <Label HorizontalOptions="Center" Text="{Binding Path=SelectedDate, StringFormat='{0:MMMM yyyy dd}'}"/>
+        </Grid>
+    </DataTemplate>
+    <local:DateTemplateSelector x:Key="dateTemplateSelector" TodayDatesTemplate="{StaticResource todayDatesTemplate}"  NormaldatesTemplate="{StaticResource normalDatesTemplate}"/>
+    <picker:SfDatePicker x:Name="datepicker">
+        <picker:SfDatePicker.FooterView>
+            <picker:PickerFooterView Template="{StaticResource dateTemplateSelector}">
+            </picker:PickerFooterView>
+        </picker:SfDatePicker.FooterView>
+    </picker:SfDatePicker>
+</Grid.Resources>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+public class DateTemplateSelector : DataTemplateSelector
+{
+    public DateTemplateSelector()
+    {
+    }
+    public DataTemplate TodayDatesTemplate { get; set; }
+    public DataTemplate NormaldatesTemplate { get; set; }
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        var Details = item as SfDatePicker;
+        if (Details != null)
+        {
+            if (Details.SelectedDate.HasValue && Details.SelectedDate.Value < DateTime.Now.Date)
+                return TodayDatesTemplate;
+        }
+        return NormaldatesTemplate;
+    }
+}
+
+{% endtabs %}
+
+N> 
+* When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
 ## Selection View Customization
 
