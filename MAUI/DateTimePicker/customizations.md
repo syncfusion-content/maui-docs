@@ -74,7 +74,7 @@ You can customize the datetime picker header appearance by using the [Template](
 
 {% endtabs %}
 
-![Set header template in .NET MAUI Date Time picker.](maui-date-time-picker-set-header-template.png)
+![Set header template in .NET MAUI Date Time picker.](maui-date-time-time-picker-set-header-template.png)
 
 N> 
 * If a template is applied to the header in the [DateTimePickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerHeaderView.html) will not work except [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_DividerColor) Property.
@@ -308,7 +308,7 @@ You can customize the datetime picker column header appearance by using the [Tem
 
 {% endtabs %}
 
-![Set column header template in .NET MAUI Date Time picker.](maui-date-picker-column-header-template.png)
+![Set column header template in .NET MAUI Date Time picker.](maui-date-time-picker-column-header-template.png)
 
 N> If a template is applied to the column header in the [DateTimePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerColumnHeaderView.html), the remaining column header properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_DateTimePickerColumnHeaderView_DividerColor) Property.
 
@@ -494,7 +494,7 @@ You can customize the datetime picker footer appearance by using the [Template](
 
 {% endtabs %}
 
-![Footer template in .NET MAUI Date Time picker.](maui-date-picker-footer-template.png)
+![Footer template in .NET MAUI Date Time picker.](maui-date-time-picker-footer-template.png)
 
 N> If a template is applied to the footer in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html), the remaining footer properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_DividerColor) Property.
 
