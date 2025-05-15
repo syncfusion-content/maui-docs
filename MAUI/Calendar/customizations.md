@@ -654,8 +654,6 @@ this.calendar.View = CalendarView.Decade;
 
 The `SfCalendar` provides the [SelectionCellTemplate]() property to customize the appearance of selected date cells in the MonthView. This property is of type DataTemplate and allows you to define a custom layout specifically for the selected cell.
 
-N>
-The `SelectionCellTemplate` is applicable only when the SelectionMode is set to Single. It is not applied in Multiple or Range selection modes. It's applicable or Month cell template also.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -700,9 +698,12 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+N>
+The `SelectionCellTemplate` is applicable only when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html?tabs=tabid-6%2Ctabid-12%2Ctabid-18%2Ctabid-50%2Ctabid-10%2Ctabid-8%2Ctabid-14%2Ctabid-4%2Ctabid-22%2Ctabid-26%2Ctabid-24%2Ctabid-16%2Ctabid-2%2Ctabid-20#Syncfusion_Maui_Calendar_SfCalendar_SelectionMode) is set to Single. It is not applied in Multiple or Range selection modes. It's applicable or Month cell template also.
+
 ## Selection cell appearance on month view using DataTemplateSelector
 
-You can customize the appearance of selected date cells in the SfCalendar's `MonthView` by using the [SelectionCellTemplate] property within the `SfCalendar`. By combining it with a DataTemplateSelector, you can apply different styles for selected cells based on specific conditions.
+You can customize the appearance of selected date cells in the SfCalendar's `MonthView` by using the [SelectionCellTemplate]() property within the `SfCalendar`. By combining it with a DataTemplateSelector, you can apply different styles for selected cells based on specific conditions.
 
 The DataTemplateSelector lets you define how selected cells should appear, depending on factors like the day of the week, the month, or other custom logic. This approach provides more flexibility in styling selected dates in the MonthView.
 
@@ -772,8 +773,6 @@ this.calendar.View = CalendarView.Month;
 
 The `SfCalendar` provides the [SelectionCellTemplate] property to customize the appearance of selected date cells in the YearView. This property is of type DataTemplate and allows you to define a custom layout for the selected cells in the YearView.
 
-N>
-The `SelectionCellTemplate` is applicable only when the Selection [Mode] is set to Single and [AllowViewNavigation] is false. It is not applied in Multiple or Range selection modes. It's applicable or Month cell template also.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -816,6 +815,9 @@ public partial class MainPage : ContentPage
 
 {% endhighlight %}
 {% endtabs %}
+
+N>
+The `SelectionCellTemplate` is applicable only when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html?tabs=tabid-6%2Ctabid-12%2Ctabid-18%2Ctabid-50%2Ctabid-10%2Ctabid-8%2Ctabid-14%2Ctabid-4%2Ctabid-22%2Ctabid-26%2Ctabid-24%2Ctabid-16%2Ctabid-2%2Ctabid-20#Syncfusion_Maui_Calendar_SfCalendar_SelectionMode) is set to Single and [AllowViewNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html?tabs=tabid-6%2Ctabid-12%2Ctabid-18%2Ctabid-50%2Ctabid-10%2Ctabid-8%2Ctabid-14%2Ctabid-4%2Ctabid-22%2Ctabid-26%2Ctabid-24%2Ctabid-16%2Ctabid-2%2Ctabid-20#Syncfusion_Maui_Calendar_SfCalendar_AllowViewNavigation) is false. It is not applied in Multiple or Range selection modes. It's applicable or Month cell template also.
 
 ## Selection cell appearance on year view using DataTemplateSelector
 
