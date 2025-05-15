@@ -118,7 +118,7 @@ The .NET MAUI Picker control, Separator line background customized by setting `S
 
    ![Column header divider color in .NET MAUI Picker.](images/dealing-with-column-header/maui-picker-column-header-divider-color.png)
 
-### Picker Column Header Appearance using Datatemplate
+### Custom Column Header Appearance using Datatemplate
 
 You can customize the picker column header appearance by using the [Template]() property of the [PickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumnHeaderView.html).
 
@@ -144,9 +144,11 @@ You can customize the picker column header appearance by using the [Template]() 
 
 {% endtabs %}
 
+![Column header template in .NET MAUI Picker.](maui-picker-column-header-template.png)
+
 N> If a template is applied to the column header in the [PickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumnHeaderView.html), the remaining column header properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumnHeaderView.html#Syncfusion_Maui_Picker_PickerColumnHeaderView_DividerColor) Property.
 
-### Picker Column Header appearance using DataTemplateSelector
+### Custom Column Header appearance using DataTemplateSelector
 
 You can customize the picker column header appearance by using the [Template]() property of the [PickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumnHeaderView.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the picker column header. This lets you select a different data template for each column header and customize the appearance of a specific column header based on certain conditions.
 
@@ -198,6 +200,3 @@ public class PickerTemplateSelector : DataTemplateSelector
 }
 
 {% endtabs %}
-
-N> 
-* When using data template selector, performance issues occur as the conversion template views take time within the framework.

@@ -48,9 +48,9 @@ this.Content = picker;
 
    ![Set header divider color in .NET MAUI Date Time picker.](images/customizations/maui-date-time-picker-set-header-divider-color.png)
 
-### DateTime Header Appearance using Datatemplate
+### Custom Header Appearance using Datatemplate
 
-You can customize the datetime header appearance by using the [Template]() property of the [DateTimePickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerHeaderView.html).
+You can customize the datetime picker header appearance by using the [Template]() property of the [DateTimePickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerHeaderView.html).
 
 {% tabs %}
 
@@ -74,14 +74,16 @@ You can customize the datetime header appearance by using the [Template]() prope
 
 {% endtabs %}
 
+![Set header template in .NET MAUI Date Time picker.](maui-date-time-picker-set-header-template.png)
+
 N> 
 * If a template is applied to the header in the [DateTimePickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerHeaderView.html) will not work except [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_DividerColor) Property.
 
 * When a template is applied to the DateTimePicker Header, the built-in time selection switch becomes non-functional.
 
-### DateTime Header appearance using DataTemplateSelector
+### Custom Header appearance using DataTemplateSelector
 
-You can customize the datetime header appearance by using the [Template]() property of the [DateTimePickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerHeaderView.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the datetimepicker header. This lets you apply a custom data template to the header and customize its appearance based on specific conditions.
+You can customize the datetime picker header appearance by using the [Template]() property of the [DateTimePickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerHeaderView.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the datetime picker header. This lets you apply a custom data template to the header and customize its appearance based on specific conditions.
 
 {% tabs %}
 
@@ -130,9 +132,6 @@ public class DateTimeTemplateSelector : DataTemplateSelector
 }
 
 {% endtabs %}
-
-N> 
-* When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
 ### Customization of the header
 
@@ -283,9 +282,9 @@ this.Content = picker;
 
    ![Column header customization in .NET MAUI Date Time picker.](images/customizations/maui-date-time-picker-column-header-customization.png)
 
-### DateTime Column Header Appearance using Datatemplate
+### Custom Column Header Appearance using Datatemplate
 
-You can customize the datetime column header appearance by using the [Template]() property of the [DateTimePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerColumnHeaderView.html).
+You can customize the datetime picker column header appearance by using the [Template]() property of the [DateTimePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerColumnHeaderView.html).
 
 {% tabs %}
 
@@ -309,11 +308,13 @@ You can customize the datetime column header appearance by using the [Template](
 
 {% endtabs %}
 
+![Set column header template in .NET MAUI Date Time picker.](maui-date-picker-column-header-template.png)
+
 N> If a template is applied to the column header in the [DateTimePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerColumnHeaderView.html), the remaining column header properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_DateTimePickerColumnHeaderView_DividerColor) Property.
 
-### DateTime Column Header appearance using DataTemplateSelector
+### Custom Column Header appearance using DataTemplateSelector
 
-You can customize the datetime column header appearance by using the [Template]() property of the [DateTimePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerColumnHeaderView.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the datetimepicker column header. This lets you select a different data template for each column header and customize the appearance of a specific column header based on certain conditions.
+You can customize the datetime picker column header appearance by using the [Template]() property of the [DateTimePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerColumnHeaderView.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the datetime picker column header. This lets you select a different data template for each column header and customize the appearance of a specific column header based on certain conditions.
 
 {% tabs %}
 
@@ -363,9 +364,6 @@ public class DateTimeTemplateSelector : DataTemplateSelector
 }
 
 {% endtabs %}
-
-N> 
-* When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
 ## Footer Customization
 
@@ -470,9 +468,9 @@ this.Content = picker;
 
    ![Footer customization in .NET MAUI Date Time picker.](images/customizations/maui-date-time-picker-footer-customization.png)
 
-### DateTime Footer Header Appearance using Datatemplate
+### Custom Footer Header Appearance using Datatemplate
 
-You can customize the datetime footer appearance by using the [Template]() property of the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html).
+You can customize the datetime picker footer appearance by using the [Template]() property of the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html).
 
 {% tabs %}
 
@@ -496,11 +494,13 @@ You can customize the datetime footer appearance by using the [Template]() prope
 
 {% endtabs %}
 
+![Footer template in .NET MAUI Date Time picker.](maui-date-picker-footer-template.png)
+
 N> If a template is applied to the footer in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html), the remaining footer properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_DividerColor) Property.
 
-### DateTime Footer appearance using DataTemplateSelector
+### Custom Footer appearance using DataTemplateSelector
 
-You can customize the datetime footer appearance by using the [Template]() property of the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the datetimepicker footer. This lets you apply a custom data template to the footer and customize its appearance based on specific conditions.
+You can customize the datetime picker footer appearance by using the [Template]() property of the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the datetime picker footer. This lets you apply a custom data template to the footer and customize its appearance based on specific conditions.
 
 {% tabs %}
 
@@ -550,9 +550,6 @@ public class DateTimeTemplateSelector : DataTemplateSelector
 }
 
 {% endtabs %}
-
-N> 
-* When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
 ## Selection View Customization
 
