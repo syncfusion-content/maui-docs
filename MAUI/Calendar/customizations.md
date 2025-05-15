@@ -727,21 +727,21 @@ The DataTemplateSelector lets you define how selected cells should appear, depen
                 <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" Text="{Binding Date.Day}"/>
             </Grid>
         </DataTemplate>
-        <local:MonthCellTemplateSelector x:Key="monthCellTemplateSelector"
+        <local:MonthSelectionCellTemplateSelector x:Key="monthSelectionCellTemplateSelector"
                                         TodayDateTemplate="{StaticResource todayDateTemplate}" 
                                         NormalDateTemplate="{StaticResource normalDateTemplate}" 
                                         LeadingTrailingDateTemplate="{StaticResource leadingTraililngDateTemplate}"/>
     </Grid.Resources>
-    <calendar:SfCalendar x:Name="calendar" SelectionCellTemplate="{StaticResource monthCellTemplateSelector}">
+    <calendar:SfCalendar x:Name="calendar" SelectionCellTemplate="{StaticResource monthSelectionCellTemplateSelector}">
     </calendar:SfCalendar>
 </Grid>
 
 {% endhighlight %}
 {% highlight c# tabtitle="TemplateSelector.cs" %}
 
-public class MonthCellTemplateSelector : DataTemplateSelector
+public class MonthSelectionCellTemplateSelector : DataTemplateSelector
 {
-    public MonthCellTemplateSelector()
+    public MonthSelectionCellTemplateSelector()
     {
     }
     public DataTemplate? NormalDateTemplate { get; set; }
@@ -840,20 +840,20 @@ The DataTemplateSelector lets you define how selected cells should appear, depen
                 <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" Text="Selection"/>
             </Grid>
         </DataTemplate>
-        <local:MonthCellTemplateSelector x:Key="monthCellTemplateSelector"
+        <local:YearSelectionCellTemplateSelector x:Key="yearSelectionCellTemplateSelector"
                                         TodayDateTemplate="{StaticResource todayDateTemplate}" 
                                         NormalDateTemplate="{StaticResource normalDateTemplate}"/>
     </Grid.Resources>
-    <calendar:SfCalendar x:Name="calendar" View="Year" AllowViewNavigation="False" SelectionCellTemplate="{StaticResource monthCellTemplateSelector}">
+    <calendar:SfCalendar x:Name="calendar" View="Year" AllowViewNavigation="False" SelectionCellTemplate="{StaticResource yearSelectionCellTemplateSelector}">
     </calendar:SfCalendar>
 </Grid>
 
 {% endhighlight %}
 {% highlight c# tabtitle="TemplateSelector.cs" %}
 
-public class MonthCellTemplateSelector : DataTemplateSelector
+public class YearSelectionCellTemplateSelector : DataTemplateSelector
 {
-    public MonthCellTemplateSelector()
+    public YearSelectionCellTemplateSelector()
     {
     }
     public DataTemplate? NormalDateTemplate { get; set; }
