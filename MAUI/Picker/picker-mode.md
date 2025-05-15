@@ -165,9 +165,9 @@ private void Button_Clicked(object sender, System.EventArgs e)
 
 ### PopupSize
 
-SfPicker allows the display of the Popup at any desired size by setting the [PopupSize] property.
+SfPicker allows the display of the Popup to render at any desired size by setting the [PopupWidth] and [PopupWidth] properties.
 
-The default value of the `PopupSize` height is calculated based on the number of items available in the [ItemSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_ItemsSource) property and the default value of the `SfPicker.HeaderView.Height`, `SfPicker.ColumnHeaderView.Height` and `SfPicker.FooterView.Height`.
+The default value of `PopupWidth` and `PopupHeight` is set to 200.
 
 {% tabs %}
 
@@ -178,7 +178,8 @@ The default value of the `PopupSize` height is calculated based on the number of
             x:Name="picker"
             Mode="Dialog"
             RelativePosition="AlignToRightOf"
-            PopupSize="200,440">
+            PopupWidth="200"
+            PopupHeight="440">
         <picker:SfPicker.HeaderView >
             <picker:PickerHeaderView Height="40" Text="Select a color" />
         </picker:SfPicker.HeaderView>
@@ -209,13 +210,12 @@ The default value of the `PopupSize` height is calculated based on the number of
 private void pickerButton_Clicked(object sender, System.EventArgs e)
 {
     this.picker.IsOpen = true;
-    this.picker.PopupSize = new Size(200,440);
+    this.picker.PopupWidth = 300;
+    this.picker.PopupHeight = 440;
 }
 
 {% endhighlight %} 
 
 {% endtabs %}
 
-N>
-* SfPicker in the popup will not be rendered properly if the `PopupSize` property is less than the combined height of the `SfPicker.HeaderView.Height`, `SfPicker.ColumnHeaderView.Height`, `SfPicker.FooterView.Height` and Picker items.
-* If the `PopupSize` property is greater than the combined height of the `SfPicker.HeaderView.Height`, `SfPicker.ColumnHeaderView.Height`, `SfPicker.FooterView.Height` and Picker items, the remaining height will be allocated to the picker container.
+    ![PopupSize in .Net Maui Picker.](maui-picker-popupsize.png)

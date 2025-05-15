@@ -154,9 +154,9 @@ private void Button_Clicked(object sender, EventArgs e)
 
 ### PopupSize
 
-SfDateTimePicker allows the display of the Popup at any desired size by setting the [PopupSize] property.
+SfDateTimePicker allows the display of the Popup to render at any desired size by setting the [PopupWidth] and [PopupWidth] properties.
 
-The default value of the `PopupSize` height is calculated based on the number of items available in the [ItemSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_ItemsSource) property and the default value of the `SfDateTimePicker.HeaderView.Height`, `SfDateTimePicker.ColumnHeaderView.Height` and `SfDateTimePicker.FooterView.Height`.
+The default value of `PopupWidth` and `PopupHeight` is set to 200.
 
 {% tabs %}
 
@@ -164,18 +164,18 @@ The default value of the `PopupSize` height is calculated based on the number of
 
 <picker:SfdatePicker x:Name="picker" 
                          Mode="Dialog"
-                         PopupSize="300,400" />
+                         PopupWidth="300"
+                         PopupHeight="400"/>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
 
-this.picker.PopupSize = new Size(300,400);
+this.picker.PopupWidth = 300;
+this.picker.PopupHeight = 400;
 
 {% endhighlight %} 
 
 {% endtabs %}
 
-N>
-* SfDateTimePicker in the popup will not be rendered properly if the `PopupSize` property is less than the combined height of the `SfDateTimePicker.HeaderView.Height`, `SfDateTimePicker.ColumnHeaderView.Height` and `SfDateTimePicker.FooterView.Height`.
-* If the `PopupSize` property is greater than the combined height of the `SfDateTimePicker.HeaderView.Height`, `SfDateTimePicker.ColumnHeaderView.Height` and `SfDateTimePicker.FooterView.Height`, the remaining height will be allocated to the datetimepicker container.
+    ![PopupSize in .NET MAUI Date Time Picker](maui-date-time-picker-popupsize.png)

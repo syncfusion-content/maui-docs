@@ -120,9 +120,9 @@ private void Button_Clicked(object sender, System.EventArgs e)
 
 ### PopupSize
 
-SfCalendar allows the display of the Popup at any desired size by setting the [PopupSize] property.
+SfCalendar allows the display of the Popup to render at any desired size by setting the [PopupWidth] and [PopupWidth] properties.
 
-The default value of the `PopupSize` height is calculated based on the `SfCalendar.HeaderView.Height`, `SfCalendar.MonthView.HeaderView.height`, `SfCalendar.FooterView.Height`.
+The default value of `PopupWidth` and `PopupHeight` is set to 200.
 
 {% tabs %}
 
@@ -130,14 +130,18 @@ The default value of the `PopupSize` height is calculated based on the `SfCalend
 
 <calendar:SfCalendar x:Name="calendar" 
                          Mode="Dialog"
-                         PopupSize="300,400" />
+                         PopupWidth="300"
+                         PopupHeight=400/>
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C#" %}
 
-this.calendar.PopupSize = new Size(300,400);
+this.calendar.PopupWidth = 300;
+this.calendar.PopupHeight = 400;
 
 {% endhighlight %} 
 
 {% endtabs %}
+
+    ![PopupSize in .NET MAUI Calendar](calendar_PopupSize_support.png)
