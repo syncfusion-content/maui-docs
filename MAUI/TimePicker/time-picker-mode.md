@@ -163,11 +163,9 @@ private void Button_Clicked(object sender, System.EventArgs e)
 
    ![Relative dialog mode in .NET MAUI Time picker.](images/time-picker-mode/maui-time-picker-relative-dialog-mode2.png)
 
-### PopupSize
+### Custom Popup Size
 
-SfTimePicker allows the display of the Popup to render at any desired size by setting the [PopupWidth] and [PopupWidth] properties.
-
-The default value of `PopupWidth` and `PopupHeight` is set to 200.
+SfTimePicker allows the display of the Popup to render at any desired size by setting the [PopupWidth] and [PopupHeight] properties.
 
 {% tabs %}
 

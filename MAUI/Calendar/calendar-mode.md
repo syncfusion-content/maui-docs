@@ -118,11 +118,9 @@ private void Button_Clicked(object sender, System.EventArgs e)
  
 {% endtabs %}
 
-### PopupSize
+### Custom Popup Size
 
-SfCalendar allows the display of the Popup to render at any desired size by setting the [PopupWidth] and [PopupWidth] properties.
-
-The default value of `PopupWidth` and `PopupHeight` is set to 200.
+SfCalendar allows the display of the Popup to render at any desired size by setting the [PopupWidth] and [PopupHeight] properties.
 
 {% tabs %}
 

@@ -163,11 +163,9 @@ private void Button_Clicked(object sender, System.EventArgs e)
 
    ![Relative dialog mode in .NET MAUI Date picker.](images/date-picker-mode/maui-date-picker-relative-dialog-mode2.png)
 
-### PopupSize
+### Custom Popup Size
 
-SfDatePicker allows the display of the Popup to render at any desired size by setting the [PopupWidth] and [PopupWidth] properties.
-
-The default value of `PopupWidth` and `PopupHeight` is set to 200.
+SfDatePicker allows the display of the Popup to render at any desired size by setting the [PopupWidth] and [PopupHeight] properties.
 
 {% tabs %}
 
