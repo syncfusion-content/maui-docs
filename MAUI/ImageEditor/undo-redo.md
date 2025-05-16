@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Undo Redo editing in .NET MAUI Image Editor Control | Syncfusion<sup>&reg;</sup>
+title: Undo Redo editing in .NET MAUI Image Editor Control | Syncfusion
+
 description: Learn about Undo Redo support in the Syncfusion<sup>&reg;</sup> .NET MAUI ImageEditor(SfImageEditor) control and more.
 platform: maui
 control: SfImageEditor
