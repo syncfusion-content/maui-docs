@@ -2,20 +2,20 @@
 layout: post
 title: Set Header in .NET MAUI Busy Indicator control | Syncfusion®
 description: Learn here all about Set Header support in Syncfusion® .NET MAUI Busy Indicator (SfBusyIndicator) control and more.
-platform: maui
-control: BusyIndicator
-documentation: ug
-keywords : .net maui busy indicator title, maui busy indicator title, maui busy indicator header, maui busy indicator title placement.
+platform: MAUI
+control: Busy Indicator
+documentation: UG
+keywords : .NET MAUI Busy Indicator Title, MAUI Busy Indicator Title, MAUI Busy Indicator Header, MAUI Busy Indicator Title Placement
 ---
 # Set Header in .NET MAUI Busy Indicator (SfBusyIndicator)
 
-## Set Header in .NET MAUI Busy Indicator
+## Overview
 
-The Syncfusion<sup>®</sup> .NET MAUI Busy Indicator provides a feature to display a title with font customizations.
+The Syncfusion<sup>®</sup> .NET MAUI Busy Indicator provides a feature to display a title with customizable fonts.
 
 ## Title
 
-[.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) provides option to set the text that indicates the information related to loading. This can be done using [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_Title) property.
+The [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) allows you to set text that indicates loading-related information using the [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_Title) property.
 
 {% tabs %}
 
@@ -47,7 +47,7 @@ The following screenshot illustrates the result of the above code.
 
 ## Text Color
 
-[.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) provides options to change the color of the text. The color of the text can be changed using the [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_TextColor) property.
+The [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) allows you to change the color of the title text using the [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_TextColor) property.
 
 {% tabs %}
 
@@ -82,7 +82,7 @@ The following screenshot illustrates the result of the above code.
 
 ## Title Placement
 
-[.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1)   provides options to set the [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_Title) at the top or bottom of the Busy Indicator. The [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_Title) can be set using the [TitlePlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_TitlePlacement)  property. When the [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_Title) is not needed, set the [TitlePlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_TitlePlacement)  property of SfBusyIndicator to None.
+The [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) provides options to set the [Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_Title) at the top or bottom of the Busy Indicator using the [TitlePlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_TitlePlacement) property. To omit the title, set the [TitlePlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_TitlePlacement) property to `None`.
 
 {% tabs %}
 
@@ -119,7 +119,7 @@ The following screenshot illustrates the result of the above code.
 
 ## Title Spacing
 
-[.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) provides options to set the space between the indicator and the title. The space can be set using the [TitleSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_TitleSpacing) property.
+You can set the space between the indicator and the title using the [TitleSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_TitleSpacing) property.
 
 {% tabs %}
 
@@ -157,10 +157,9 @@ The following screenshot illustrates the result of the above code.
 ![Title Spacing](Images/SetHeader/Spacing.png)
 
 
+## Font Customization
 
-## Font customization
-
-[.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html) provides options to customize the title text. The title text can be customized using the [FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_FontSize), [FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_FontAttributes), and [FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_FontFamily) properties.
+The [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html) allows customization of the title text using properties such as [FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_FontSize), [FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_FontAttributes), and [FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_FontFamily) properties.
 
 
 {% tabs %}
@@ -199,9 +198,9 @@ The following screenshot illustrates the result of the above code.
 
 ![Font Customization](Images/SetHeader/Fontattributes.png)
 
-## Font auto scaling enabled
+## Font Auto Scaling Enabled
 
-The `FontAutoScalingEnabled` property is used to automatically scale the Busy Indicator's title font size based on the operating system's text size. The default value of the `FontAutoScalingEnabled` property is `false.`
+The `FontAutoScalingEnabled` property automatically scales the Busy Indicator's title font size based on the operating system's text size. The default value of the `FontAutoScalingEnabled` property is `false`.
 
 {% tabs %}
 
@@ -216,7 +215,7 @@ The `FontAutoScalingEnabled` property is used to automatically scale the Busy In
     
 SfBusyIndicator busyIndicator = new SfBusyIndicator()
 {
-    FontAutoScalingEnabled = true,
+    FontAutoScalingEnabled = true
 };
 
 {% endhighlight %}

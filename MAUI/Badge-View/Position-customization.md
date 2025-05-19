@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Position customization of Syncfusion® Badge view for .NET MAUI
+title: Position Customization of Syncfusion® Badge View for .NET MAUI
 description: Learn here all about position customization in Syncfusion® .NET MAUI Badge View (SfBadgeView) control and more.
-platform: maui
+platform: MAUI
 control: Badge View
-documentation: ug
+documentation: UG
 ---
 
 # Position customization
@@ -52,9 +52,9 @@ Content = sfBadgeView;
 
 ![.NET MAUI Badge View Badge Position](badge-position_images/net_maui_badge_view_position.png)
 
-## Setting a badge offset
+## Setting a Badge Offset
 
-The badge view x,y position can be adjusted using the [Offset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Offset) property.
+The x,y position of the badge view can be adjusted using the [Offset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Offset) property to achieve precise placement.
 
 {% tabs %}
 

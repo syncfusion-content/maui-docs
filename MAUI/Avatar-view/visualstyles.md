@@ -1,15 +1,14 @@
 ---
 layout: post
 title: Visual Style in Syncfusion® Avatar View .NET MAUI.
-description: This section will explain about the different visual style types that exists in .NET MAUI SfAvatarView.
-platform: maui
-control: AvatarView
-documentation: ug
+description: This section explains the different visual style types available in .NET MAUI SfAvatarView.
+platform: MAUI
+control: SfAvatarView
+documentation: UG
 ---
 
 # Visual Style in .NET MAUI Avatar View(SfAvatarView) 
 
-## Visual styles in .NET MAUI Avatar View(SfAvatarView)
 The [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) control supports customization using the following built-in visual styles:
 
 * Custom
@@ -18,13 +17,13 @@ The [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAv
 
 ## Custom
 
-Custom type allows you to customize the control, where you can handle the size, colors, images, etc. of the control. Refer to this Customization documentation in [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1)
+The Custom style allows you to customize the control by adjusting size, colors, images, etc. For detailed customization options, refer to the Customization documentation in [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1).
 
-N> The default visual type is custom.
+N> The default visual type is Custom.
 
 ## Circle
 
-You can directly set value to the circle in the [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) using the following styles:
+You can directly apply circular styling to the [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) using the following styles:
 
 * ExtraLargeCircle
 * LargeCircle
@@ -32,7 +31,7 @@ You can directly set value to the circle in the [SfAvatarView](https://help.sync
 * SmallCircle
 * ExtraSmallCircle
 
-The following code sample demonstrates how to define visual style of circle AvatarView.
+The following code sample demonstrates how to define the visual style of a circle AvatarView.
 
 {% tabs %}
 
@@ -245,7 +244,7 @@ this.Content = stack;
 
 ## Square
 
-You can directly set value to the square in the [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) using the following styles:
+You can directly apply square styling to the [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) using the following styles:
 
 * ExtraLargeSquare
 * LargeSquare
@@ -253,7 +252,7 @@ You can directly set value to the square in the [SfAvatarView](https://help.sync
 * SmallSquare
 * ExtraSmallSquare
 
-The following code sample demonstrates how to define visual style of square AvatarView.
+The following code sample demonstrates how to define visual style of a square AvatarView.
 
 {% tabs %}
 

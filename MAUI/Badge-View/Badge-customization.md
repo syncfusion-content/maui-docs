@@ -2,10 +2,10 @@
 
 layout: post
 title: Customization of Syncfusion® Badge View control for .NET MAUI
-description: This section explains how to customize the font, stroke, and text in the Syncfusion® SfBadgeView control in MAUI platform
-platform: maui
+description: This section explains how to customize the font, stroke, and text in the Syncfusion® SfBadgeView control on the MAUI platform.
+platform: MAUI
 control: Badge View
-documentation: ug
+documentation: UG
 
 ---
 
@@ -13,11 +13,11 @@ documentation: ug
 
 The [BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_BadgeSettings) property helps you to customize the basic look and feel of the badge view. 
 
-[BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html) contains the sub-elements such as badge types, positions and colors. You can customize the background color, text color, stroke, width, offset, and font attributes.
+The [BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html) contains the sub-elements such as badge types, positions and colors. You can customize various aspects, including background color, text color, stroke, width, offset, and font attributes.
 
-## Font customization
+## Font Customization
 
-The font can be customized using the [FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_FontSizeProperty), [FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_FontAttributesProperty), and [FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_FontFamilyProperty) properties.
+Customize the font using the [FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_FontSizeProperty), [FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_FontAttributesProperty), and [FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_FontFamilyProperty) properties.
 
 {% tabs %}
 
@@ -112,7 +112,7 @@ Content = sfBadgeView;
 
 ## Text customization
 
-The text color and margin of badge view can be changed using the [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_TextColorProperty) and [TextPadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_TextPaddingProperty) properties, respectively.
+The text color and margin of the badge view can be changed using the [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_TextColorProperty) and [TextPadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_TextPaddingProperty) properties, respectively.
 
 {% tabs %}
 
@@ -156,9 +156,9 @@ Content = sfBadgeView;
 
 ![.NET MAUI Badge View Text Customization](badge-customization_images/net_maui_badge_notifications_text_customization.png)
 
-## Predefined styles
+## Predefined Styles
 
-The colors of the badge can be customized using the [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Type) property of the [BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#properties). The badge supports the following eight different essential colors for various situations:
+The colors of the badge can be customized using the [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Type) property of the [BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#properties). The badge supports the following essential colors for different scenarios:
 
  * Dark
  * Error
@@ -208,7 +208,7 @@ The colors of the badge can be customized using the [Type](https://help.syncfusi
 
 ![.NET MAUI Badge View Types](badge-customization_images/net_maui_badge_notifications_badge_type.png)
 
-## Badge background customization
+## Badge Background Customization
 
 Other than the predefined styles, the color of the badge can be customized using the [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Type) property of the[BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#properties) which has to be set as [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeType.html#Syncfusion_Maui_Core_BadgeType_None). Then the color of the badge view can be set using the [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Background) property.
 
@@ -253,9 +253,9 @@ Content = sfBadgeView;
 
 ![.NET MAUI Badge View Background](badge-customization_images/net_maui_badge_notifications_background_customization.png)
 
-## Setting corner radius of the badge
+## Setting Corner Radius of the Badge
 
-The [CornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_CornerRadius) property is used to reduce the radius of the corners.
+The [CornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_CornerRadius) property reduces the corners' radius.
 
 {% tabs %}
 
@@ -298,9 +298,9 @@ Content = sfBadgeView;
 
 ![.NET MAUI Badge View Corner Radius](badge-customization_images/net_maui_badge_notifications_corner_radius.png)
 
-## Alignment of badge
+## Alignment of Badge
 
-Align the badge view using the Center, Start, and End properties of [BadgeAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_BadgeAlignment) property.
+Align the badge view using the Center, Start, and End properties of the  [BadgeAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_BadgeAlignment) property.
 
 {% tabs %}
 
@@ -345,9 +345,9 @@ Content = sfBadgeView;
 
 ![BadgeView Alignment](badge-customization_images/badge_alignment.png)
 
-## Font auto scaling enabled
+## Font Auto Scaling Enabled
 
-The [FontAutoScalingEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_FontAutoScalingEnabled) property is used to automatically scale the badge text's font size based on the operating system's text size. The default value of the `FontAutoScalingEnabled` property is `false.`
+The [FontAutoScalingEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_FontAutoScalingEnabled) property automatically scales the badge text's font size based on the operating system's text size. The default value is `false`.
 
 {% tabs %}
 
@@ -372,9 +372,9 @@ sfBadgeView.BadgeSettings = badgeSetting;
 
 {% endtabs %}
 
-## Visibility of badge
+## Visibility of Badge
 
-You can show or hide the badges in the .NET MAUI BadgeView by setting the [IsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_IsVisible) property in the [BadgeSetting](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1#Syncfusion_Maui_Core_SfBadgeView_BadgeSettings). By default, the badge will be visible.
+Show or hide the badges in the .NET MAUI Badge View by setting the [IsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_IsVisible) property in the [BadgeSetting](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1#Syncfusion_Maui_Core_SfBadgeView_BadgeSettings). By default, the badge will be visible.
 
 {% tabs %}
 {% highlight xaml %}

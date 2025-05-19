@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Migrating from Xamarin to .NET MAUI SfBadgeView | Syncfusion® 
-description: Learn here all about Migrating from Syncfusion® Xamarin BadgeView to Syncfusion® .NET MAUI BadgeView control and more.
+description: Learn how to migrate from Syncfusion® Xamarin BadgeView to Syncfusion® .NET MAUI BadgeView control and more.
 platform: MAUI
 control: SfBadgeView
-documentation: ug
+documentation: UG
 ---  
 
 # Migrating from Xamarin SfBadgeView to .NET MAUI SfBadgeView 
 
-To migrate easier from Xamarin SfBadgeView to .NET MAUI SfBadgeView, we kept most of the APIs from Xamarin SfBadgeView in MAUI SfBadgeView. However, to maintain the consistency of API naming in MAUI SfBadgeView, we renamed some of the APIs. The APIs that have been changed in MAUI SfBadgeView from Xamarin SfBadgeView are detailed as follows.
+To migrate easier from Xamarin SfBadgeView to .NET MAUI SfBadgeView, we kept most of the APIs from Xamarin SfBadgeView in MAUI SfBadgeView. However, some APIs have been renamed to ensure consistency with MAUI naming conventions. Below are the details of the changes from Xamarin SfBadgeView to .NET MAUI SfBadgeView.
 
 ## Namespaces 
 
