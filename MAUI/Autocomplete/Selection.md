@@ -404,6 +404,7 @@ StackLayout mainLayout = new StackLayout
     Children = { autocomplete, horizontalLayout }
 };
 
+
 {% endhighlight %}
 {% endtabs %}
 
