@@ -2,9 +2,9 @@
 layout: post
 title: Features in .NET MAUI Effects View control | Syncfusion®
 description: Learn here all about Features support in Syncfusion® .NET MAUI Effects View (SfEffectsView) control and more.
-platform: maui
+platform: MAUI
 control: Effects View
-documentation: ug
+documentation: UG
 ---
 
 # Features in .NET MAUI Effects View (SfEffectsView)
@@ -13,7 +13,7 @@ The [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfE
 
 ## FadeOutRipple
 
-By enabling the [FadeOutRipple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_FadeOutRipple) property of [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html), the expandable circle will lose its opacity to 0 on growing.
+By enabling the [FadeOutRipple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_FadeOutRipple) property of [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html), the expandable circle will lose its opacity to 0 as it grows.
 
 {% tabs %} 
 

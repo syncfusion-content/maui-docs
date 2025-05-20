@@ -1,16 +1,16 @@
 ---
 layout: post
 title: Customization in .NET MAUI Switch Control | Syncfusion®
-description: Learn here all about Customization support in Syncfusion® .NET MAUI Switch (SfSwitch) control, and more.
-platform: maui
+description: Learn about the customization support in the Syncfusion® .NET MAUI Switch (SfSwitch) control, and more.
+platform: MAUI
 control: SfSwitch
-documentation: ug
-keywords : .net maui switch, maui switch, .net maui switch ccustomize, maui switch customize, maui switch color, maui switch size, maui switch icon.
+documentation: UG
+keywords : .NET MAUI Switch, MAUI Switch, .NET MAUI Switch Customize, MAUI Switch Customize, MAUI Switch Color, MAUI Switch Size, MAUI Switch Icon.  
 ---
 
 # Customization in .NET MAUI Switch (SfSwitch)
 
-The .NET MAUI Switch control provides options to customize the color based on its states. The following code example demonstrates how to customize the .NET MAUI Switch control.
+The .NET MAUI Switch control provides options to customize its color based on different states. The following code example demonstrates how to customize the .NET MAUI Switch control.
 
 ## Colors
 
@@ -118,17 +118,17 @@ this.Content = sfSwitch;
 
 {% endtabs %}
 
-![switch conrol with visual state customization](images/customization/Colors.png)
+![switch control with visual state customization](images/customization/Colors.png)
 
 ## Sizing
 
-In the .NET MAUI Switch control, sizing of the thumb and the track can be controlled by using the following properties:
+In the .NET MAUI Switch control, the sizing of the thumb and track can be controlled using the following properties:
 
-* [TrackCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_TrackCornerRadius): Represents a CornerRadius value to create curved corner of the track.
+* [TrackCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_TrackCornerRadius): Represents a CornerRadius value to create curved corners for the track.
 * [TrackStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_TrackStrokeThickness): Represents a double value for defining the track border width.
 * [TrackWidthRequest](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_TrackWidthRequest): Represents a double value for defining the track width.
 * [TrackHeightRequest](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_TrackHeightRequest): Represents double value for defining the track height.
-* [ThumbCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_ThumbCornerRadius): Represents a CornerRadius value to create curved corner of the thumb.
+* [ThumbCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_ThumbCornerRadius): Represents a CornerRadius value to create curved corners for the thumb.
 * [ThumbStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_ThumbStrokeThickness): Represents a double value for defining the thumb border width.
 * [ThumbWidthRequest](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_ThumbWidthRequest): Represents double value for defining the thumb width.
 * [ThumbHeightRequest](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_ThumbHeightRequest): Represents double value for defining the thumb height.
@@ -229,7 +229,7 @@ this.Content = sfSwitch;
 
 ## Custom Path
 
-In the .NET MAUI Switch control, customize the thumb's icon by using the following properties:
+In the .NET MAUI Switch control, customize the thumb's icon using the following properties:
 
 * [CustomPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_CustomPath): Represents a Path value for defining the thumb's icon.
 * [IconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_IconColor): Represents the color for the thumb's icon.
@@ -343,7 +343,7 @@ this.Content = sfSwitch;
 
 {% endtabs %}
 
-![switch conrol with custom path](images/Path/Path.gif)
+![Switch control with custom path](images/Path/Path.gif)
 
 N> Keep the size of the [`CustomPath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_CustomPath) within the dimensions of the thumb.
 

@@ -1,17 +1,17 @@
 ---
 layout: post
 title: Customization in .NET MAUI CheckBox Control | Syncfusion®
-description: Learn about Customization support in Syncfusion® Essential Studio® .NET MAUI CheckBox control, its elements and more.
-platform: maui
+description: Learn about Customization support in Syncfusion® Essential Studio® .NET MAUI CheckBox control, its elements, and more.
+platform: MAUI
 control: SfCheckBox
-documentation: ug
+documentation: UG
 ---
 
 # Visual Customization in .NET MAUI CheckBox (SfCheckBox)
 
 ## Customizing a shape
 
-The check box shape can be customized using the [CornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_CornerRadius) property. This property specifies a uniform radius value for every corner of the check box.
+The shape of the checkbox can be customized using the [CornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_CornerRadius) property. This property specifies a uniform radius value for every corner of the checkbox.
 
 {% tabs %}
 {% highlight xaml %}
@@ -32,9 +32,9 @@ The check box shape can be customized using the [CornerRadius](https://help.sync
 
 ![.NET MAUI CheckBox](Images/Visual-Customization/checkboxradii.png)
 
-## Customizing a state color
+## Customizing State Colors
 
-The default state colors can be customized using the [`CheckedColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_CheckedColor) and [`UncheckedColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_UncheckedColor) properties. The checked or indeterminate state color is updated to the value of the [`CheckedColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_CheckedColor) property when the state is changed to checked or indeterminate. The unchecked state color is updated to the value of the [`UncheckedColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_UncheckedColor) property when the state is changed to unchecked.
+You can customize the state colors using the [`CheckedColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_CheckedColor) and [`UncheckedColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_UncheckedColor) properties. The checked or indeterminate state color is updated based on the [`CheckedColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_CheckedColor) property, while the color for the unchecked state is based on the [`UncheckedColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_UncheckedColor) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -71,9 +71,9 @@ The default state colors can be customized using the [`CheckedColor`](https://he
 
 ![.NET MAUI CheckBox](Images/Visual-Customization/statecolor.png)
 
-## StrokeThickness
+## Stroke Thickness
 
-The tick box stroke thickness of the checkbox control can be customized using the [`StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_StrokeThickness) property.  
+The stroke thickness of the checkbox can be customized using the [`StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_StrokeThickness) property.  
 
 {% tabs %}
 {% highlight xaml %}
@@ -113,9 +113,9 @@ The tick box stroke thickness of the checkbox control can be customized using th
 
 ![.NET MAUI CheckBox](Images/Visual-Customization/strokethickness.png)
 
-## Setting a caption text appearance
+## Setting a Caption Text Appearance
 
-You can customize the display text appearance of the [`SfCheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control using the following properties:
+You can customize the appearance of the text in the [`SfCheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control using the following properties:
 
 * [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_TextColor) : Changes the color of the text.
 * [`HorizontalTextAlignment`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_HorizontalTextAlignment) : Changes the horizontal alignment of the caption text.
@@ -204,7 +204,7 @@ The [`TickColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.Sf
 
 ## LineBreakMode
 
-The [`LineBreakMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_LineBreakMode) allows you to wrap or truncate the text. The default value of this property is NoWrap. The following other options are available in [`LineBreakMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_LineBreakMode):
+The [`LineBreakMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_LineBreakMode) property allows you to wrap or truncate the text. The default value is NoWrap, with other options available such as:
 
 *   `NoWrap` - Avoids the text wrap.
 *   `WordWrap` - Wraps the text by words.
@@ -242,7 +242,7 @@ This demo can be downloaded from [GitHub link](https://github.com/SyncfusionExam
 
 ## Size Customization
 
-The [`ControlSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_ControlSize) property is used to customize the [`CheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control size.
+The [`ControlSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_ControlSize) property is used to customize the size of the [`CheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control.
 
 {% tabs %}
 {% highlight xaml %}
@@ -264,9 +264,9 @@ The [`ControlSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.
 {% endhighlight %}
 {% endtabs %}
 
-## Font auto scaling enabled
+## Font Auto Scaling Enabled
 
-The [FontAutoScalingEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_FontAutoScalingEnabled) property is used to automatically scale the Check box's font size based on the operating system's text size. The default value of the `FontAutoScalingEnabled` property is `false.`
+The [FontAutoScalingEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_FontAutoScalingEnabled) property automatically scales the Checkbox's font size based on the operating system's text size. The default value is `false`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -283,8 +283,8 @@ sfCheckBox.FontAutoScalingEnabled = true;
 {% endhighlight %}
 {% endtabs %}
 
-## Enable animation
-The [EnabledAnimation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_EnabledAnimation) property is used to enable or disable the animation for the [.NET MAUI CheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control. By default, this property is set to `true`, which means animations are enabled.
+## Enable Animation
+The [EnabledAnimation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_EnabledAnimation) property enables or disables the animation for the [.NET MAUI CheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control. By default, animations are enabled (`true`).
 
 {% tabs %}
 {% highlight xaml %}
@@ -303,8 +303,8 @@ SfCheckBox checkBox = new SfCheckBox
 {% endhighlight %}
 {% endtabs %}
 
-## Content spacing
-The [ContentSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_ContentSpacing) property is used to adjust the content spacing in the [`SfCheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control.
+## Content Spacing
+The [ContentSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_ContentSpacing) property adjusts the content spacing in the [`SfCheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) control.
 
 {% tabs %}
 {% highlight xaml %}

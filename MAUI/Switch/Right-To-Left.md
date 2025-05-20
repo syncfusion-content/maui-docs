@@ -1,16 +1,16 @@
 ---
 layout: post
 title: Right To Left in .NET MAUI Switch Control | Syncfusion®
-description: Learn here all about Right To Left support in Syncfusion®.NET MAUI Switch (SfSwitch) control, and more.
-platform: maui
+description: Learn all about Right To Left support in the Syncfusion®.NET MAUI Switch (SfSwitch) control, and more.
+platform: MAUI
 control: SfSwitch
-documentation: ug
-keywords : .net maui switch, maui switch, .net maui switch rtl, maui switch flow direction.
+documentation: UG
+keywords : .NET MAUI Switch, MAUI Switch, .NET MAUI Switch RTL, MAUI Switch Flow Direction.
 ---
 
 # Right To Left in .NET MAUI Switch (SfSwitch)
 
-The .NET MAUI Switch supports changing the layout direction of the control in the right-to-left direction by setting the `FlowDirection` to RightToLeft or by changing the device language.
+The .NET MAUI Switch supports changing the layout direction to a right-to-left (RTL) orientation. This can be achieved by setting the `FlowDirection` property to `RightToLeft`, or by changing the device's language to one that uses an RTL script.
 
 {% tabs %}
 
@@ -30,4 +30,4 @@ this.Content = sfSwitch;
 
 {% endtabs %}
 
-![SfSwitch with RTL flowdirection](images/RTL/RTL_Switch.png)
+![SfSwitch with RTL flow direction](images/RTL/RTL_Switch.png)

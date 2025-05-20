@@ -9,9 +9,9 @@ documentation: ug
 
 # Visual Customization in .NET MAUI Radio Button (SfRadioButton)
 
-## Customizing a state color
+## Customizing a State Color
 
-The default state colors can be customized using the CheckedColor and UncheckedColor properties. The checked state color is updated to the value of the CheckedColor property when the state changes to check. The unchecked state color is updated to the value of the UncheckedColor property when the state changes to unchecked.
+The default state colors can be customized using the `CheckedColor` and `UncheckedColor` properties. The checked state color is updated to the specified `CheckedColor` value when the state changes to checked. Similarly, the unchecked state color is updated to the specified  `UncheckedColor` value when the state changes to unchecked.
 
 {% tabs %}
 {% highlight xaml %}
@@ -41,7 +41,7 @@ The default state colors can be customized using the CheckedColor and UncheckedC
 
 ![CheckedColor and UncheckedColor in Radio Button](Images/VisualCustomization/statecolor.png)
 
-## StrokeThickness
+## Stroke Thickness
 
 The stroke thickness of the circle in the Radio Button control can be customized using the [`StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_StrokeThickness) property.  
 
@@ -75,7 +75,7 @@ The stroke thickness of the circle in the Radio Button control can be customized
 
 N> StrokeThickness support has not been provided for Android Platform.
 
-## Setting a caption text appearance 
+## Setting a Caption Text Appearance 
 
 You can customize the display text appearance of the [`SfRadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) control using the following properties:
 
@@ -118,7 +118,7 @@ You can customize the display text appearance of the [`SfRadioButton`](https://h
 
 ## LineBreakMode
 
-The [`LineBreakMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_LineBreakMode) allows you to wrap or truncate the text. The default value of this property is NoWrap. The following other options are available in [`LineBreakMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_LineBreakMode):
+The [`LineBreakMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_LineBreakMode) allows you to wrap or truncate the text. The default value of this property is `NoWrap`. The following options are available in [`LineBreakMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_LineBreakMode):
 
 *   `NoWrap` - Avoids the text wrap.
 *   `WordWrap` - Wraps the text by words.
@@ -154,12 +154,12 @@ The [`LineBreakMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Button
 ![.NET MAUI Radio Button LineBreakmode](Images/VisualCustomization/linebreakmode.png)
 
 
-This demo can be downloaded from [GitHub link](https://github.com/SyncfusionExamples/How-to-wrap-text-in-DOTNET-MAUI-RadiButton)
+This demo can be downloaded from [GitHub link](https://github.com/SyncfusionExamples/How-to-wrap-text-in-DOTNET-MAUI-RadiButton).
 
 
-## Size customization
+## Size Customization
 
-The [`ControlSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_ControlSize) property is used to customize the [`RadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) control size. 
+The [`ControlSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_ControlSize) property is used to customize the size of the [`RadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) control. 
 
 {% tabs %}
 {% highlight xaml %}
@@ -181,8 +181,9 @@ The [`ControlSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.
 {% endhighlight %}
 {% endtabs %}
 
-## Font auto scaling enabled
-The [FontAutoScalingEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_FontAutoScalingEnabled) property is used to automatically scale the Radio button's font size based on the operating system's text size. The default value of the `FontAutoScalingEnabled` property is `false.`
+## Font Auto Scaling Enabled
+
+The [FontAutoScalingEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_FontAutoScalingEnabled) property is used to automatically scale the font size of the Radio Button based on the operating system's text size. The default value of the `FontAutoScalingEnabled` property is `false`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -199,8 +200,9 @@ radioButton.FontAutoScalingEnabled = true;
 {% endhighlight %}
 {% endtabs %}
 
-## Enable animation
-The [EnabledAnimation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_EnabledAnimation) property is used to enable or disable the animation for the [.NET MAUI RadioButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) control. By default, this property is set to `true`, which means animations are enabled.
+## Enable Animation
+
+The [EnabledAnimation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_EnabledAnimation) property is used to enable or disable the animation for the [.NET MAUI RadioButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) control. By default, this property is set to `true`, indicating that animations are enabled.
 
 {% tabs %}
 {% highlight xaml %}
@@ -219,8 +221,9 @@ SfRadioButton radioButton = new SfRadioButton
 {% endhighlight %}
 {% endtabs %}
 
-## Content spacing
-The [ContentSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_ContentSpacing) property is used to adjust the content spacing in the [`SfRadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) control.
+## Content Spacing
+
+The [ContentSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_ContentSpacing) property is used to adjust the content spacing within the [`SfRadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) control.
 
 {% tabs %}
 {% highlight xaml %}

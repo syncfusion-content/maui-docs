@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Events in .NET MAUI Switch Control | Syncfusion®
-description: Learn about Event support in the Syncfusion® .NET MAUI Switch control, including its elements, and more.
-platform: maui
+description: Learn about event support in the Syncfusion® .NET MAUI Switch control, including its elements, and more.
+platform: MAUI
 control: SfSwitch
-documentation: ug
-keywords : .net maui switch, maui switch, .net maui switch events, maui switch event.
+documentation: UG
+keywords : .NET MAUI Switch, MAUI Switch, .NET MAUI Switch Events, MAUI Switch Event.
 ---
 
 # Events in .NET MAUI Switch
@@ -14,7 +14,7 @@ This section provides information about the events available in the .NET MAUI Sw
 
 ## StateChanged event
 
-The StateChanged event occurs when the value or state of [IsOn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_IsOn) property is changed by tapping the .NET MAUI Switch button or setting a value to `IsOn` property. The [SwitchStateChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchStateChangedEventArgs.html) provides the following properties:
+The `StateChanged` event occurs when the value or state of the [IsOn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_IsOn) property changes by tapping the .NET MAUI Switch button or setting a value to the `IsOn` property. The [SwitchStateChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchStateChangedEventArgs.html) provides the following properties:
 
 * [NewValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchStateChangedEventArgs.html#Syncfusion_Maui_Buttons_SwitchStateChangedEventArgs_NewValue) : Gets the current value of the .NET MAUI Switch control.
 * [OldValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchStateChangedEventArgs.html#Syncfusion_Maui_Buttons_SwitchStateChangedEventArgs_OldValue) : Gets the previous value of the .NET MAUI Switch control.
@@ -58,7 +58,7 @@ private async void SfSwitch_StateChanged(object sender, SwitchStateChangedEventA
 
 ## StateChanging event
 
-The StateChanging event occurs when the state of [IsOn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_IsOn) property is about to change in the .NET MAUI Switch control. The [SwitchStateChangingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchStateChangingEventArgs.html) provides the following properties:
+The `StateChanging` event occurs when the state of the [IsOn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html#Syncfusion_Maui_Buttons_SfSwitch_IsOn) property is about to change in the .NET MAUI Switch control. The [SwitchStateChangingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchStateChangingEventArgs.html) provides the following properties:
 
 * [NewValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchStateChangingEventArgs.html#Syncfusion_Maui_Buttons_SwitchStateChangingEventArgs_NewValue) : Gets the current value of the .NET MAUI Switch control.
 * [OldValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchStateChangingEventArgs.html#Syncfusion_Maui_Buttons_SwitchStateChangingEventArgs_OldValue) : Gets the previous value of the .NET MAUI Switch control.

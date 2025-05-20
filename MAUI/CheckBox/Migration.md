@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Migrating from Xamarin to .NET MAUI CheckBox | Syncfusion®
-description: Learn all about Migrating from Syncfusion® Xamarin CheckBox to Syncfusion® .NET MAUI CheckBox control and more here.
-platform: maui
+description: Learn all about Migrating from Syncfusion® Xamarin CheckBox to Syncfusion® .NET MAUI CheckBox control and more.
+platform: MAUI
 control: SfCheckBox
-documentation: ug
+documentation: UG
 ---  
 
 # Migrating from Xamarin SfCheckBox to .NET MAUI SfCheckBox 
 
-To migrate easier from Xamarin CheckBox to [.NET MAUI CheckBox](https://www.syncfusion.com/maui-controls/maui-checkbox), we kept most of the APIs from Xamarin SfCheckBox in MAUI SfCheckBox. However, to maintain the consistency of API naming in MAUI SfCheckBox, we renamed some of the APIs. The APIs changed in MAUI SfCheckBox from Xamarin SfCheckBox are detailed as follows:
+To facilitate the migration from Xamarin CheckBox to [.NET MAUI CheckBox](https://www.syncfusion.com/maui-controls/maui-checkbox), we have retained most of the APIs from Xamarin SfCheckBox in the MAUI SfCheckBox. However, to ensure consistency in API naming, some APIs have been renamed. The changes in the MAUI SfCheckBox from Xamarin SfCheckBox are detailed below:
 
 ## Namespaces 
 
