@@ -1,14 +1,15 @@
 ---
 layout: post
-title: SwipGesture in .NET MAUI Navigation Drawer | Syncfusion®
-description: Learn here all about SwipGesture support in Syncfusion® .NET MAUI Navigation Drawer (SfNavigationDrawer) control and more.
-platform: maui
-control: NavigationDrawer
-documentation: ug
+title: Swipe Gesture in .NET MAUI Navigation Drawer | Syncfusion®
+description: Learn about SwipGesture support in the Syncfusion® .NET MAUI Navigation Drawer (SfNavigationDrawer) control and more.
+platform: MAUI
+control: SfNavigationDrawer
+documentation: UG
 ---
+
 # Swipe Gesture in .NET MAUI Navigation Drawer (SfNavigationDrawer)
 
-The NavigationDrawer supports the swipe gesture for both opening and closing the drawer. 
+The NavigationDrawer supports swipe gesture for both opening and closing the drawer. 
 
 ## Enabling Swipe Gesture
 

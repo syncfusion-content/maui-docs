@@ -4,14 +4,14 @@ title: Events in MAUI Radial Menu Control | Syncfusion®
 description: Learn about Events in Syncfusion® Essential Studio® .NET MAUI Radio Menu control, its elements and more.
 platform: MAUI
 control: RadialMenu (SfRadialMenu)
-documentation: ug
+documentation: UG
 ---
 
 # Events in MAUI Radial Menu (SfRadialMenu)
 
-## Perform an action while navigating to next level
+## Perform an Action While Navigating to the Next Level
 
-In radial menu, you can perform an action while navigating from one level to another level. The [`Navigating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Navigating) event occurs when navigating from one level to another level and the [`Navigated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Navigated) event occurs after navigating to another level.
+In the radial menu, you can perform an action while navigating between levels. The [`Navigating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Navigating) event occurs when moving from one level to another, and the [`Navigated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Navigated) event triggers after reaching the new level.
 
 {% tabs %}
 
@@ -85,9 +85,9 @@ namespace RadialSample
 
 N> You can cancel navigation using the `Cancel` event argument.
 
-## Perform an action while opening the radial menu
+## Perform an Action While Opening the Radial Menu
 
-You can perform an action while opening the radial menu. The [`Opening`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Opening) event occurs when opening the radial menu and the [`Opened`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Opened) event occurs after opening the radial menu.
+You can perform an action while opening the radial menu. The [`Opening`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Opening) event occurs when the radial menu begins to open, and the [`Opened`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Opened) event occurs once it is fully open.
 
 {% tabs %}
 
@@ -159,9 +159,9 @@ namespace RadialSample
 
 {% endtabs %}
 
-## Perform an action while closing the radial menu
+## Perform an Action While Closing the Radial Menu
 
-You can perform an action when closing the radial menu. The [`Closing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Closing) event occurs when closing the radial menu and the [`Closed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Closed) event occurs after closing the radial menu.
+You can perform an action when closing the radial menu. The [`Closing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Closing) event event occurs when the radial menu begins to close, and the [`Closed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_Closed) event occurs once it is completely closed.
 
 {% tabs %}
 
@@ -233,9 +233,9 @@ namespace RadialSample
 
 {% endtabs %}
 
-## Perform an action while tapping the center back button
+## Perform an Action While Tapping the Center Back Button
 
-You can perform an action when tapping the center back button of the radial menu. The [`CenterButtonBackTapped`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonBackTapped) event occurs when tapping the center button of the radial menu.
+You can perform an action when tapping the center back button of the radial menu. The [`CenterButtonBackTapped`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonBackTapped) event occurs when the center button of the radial menu is tapped.
 
 {% tabs %}
 
@@ -299,9 +299,9 @@ namespace RadialSample
 
 {% endtabs %}
 
-## Perform an action while tapping the radial menu item
+## Perform an Action While Tapping the Radial Menu Item
 
-You can perform an action when tapping the radial menu item of the radial menu. The [`ItemTapped`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_ItemTapped) event occurs when tapping the items of the radial menu.
+You can perform an action when tapping the radial menu item of the radial menu. The [`ItemTapped`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_ItemTapped) event is triggered when any item in the radial menu is tapped.
 
 {% tabs %}
 
@@ -365,9 +365,9 @@ namespace RadialSample
 
 {% endtabs %}
 
-## Perform an action while Pressing and Releasing the Radial menu item
+## Perform an Action While Pressing and Releasing the Radial Menu Item
 
-You can perform an action when pressing and releasing the Radial menu item of the Radial menu. The [TouchDown](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html?tabs=tabid-1#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_TouchDown) event occurs when pressing the Radial menu item and the [TouchUp](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html?tabs=tabid-1#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_TouchUP) event occurs When releasing the Radial menu item.
+You can perform an action when pressing and releasing the Radial menu item of the Radial menu. The [TouchDown](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html?tabs=tabid-1#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_TouchDown) event occurs when pressing the Radial menu item, and the [TouchUp](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html?tabs=tabid-1#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_TouchUP) event occurs on releasing.
 
 {% tabs %}
 

@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Migrating from Xamarin SfTabView to .NET MAUI SfTabView | Syncfusion®
-description: Learn here all about Migrating from Syncfusion® Xamarin TabView to Syncfusion® .NET MAUI TabView control and more.
+description: Learn all about migrating from Syncfusion® Xamarin TabView to Syncfusion® .NET MAUI TabView control and more.
 platform: MAUI
 control: SfTabView
-documentation: ug
+documentation: UG
 ---  
 
 # Migrating from Xamarin SfTabView to .NET MAUI SfTabView 
 
-To migrate easier from Xamarin SfTabView to .NET MAUI SfTabView, we kept most of the APIs from Xamarin SfTabView in MAUI SfTabView. However, to maintain the consistency of API naming in MAUI SfTabView, we renamed some of the APIs. The APIs that have been changed in MAUI SfTabView from Xamarin SfTabView are detailed as follows.
+To facilitate easier migration from Xamarin SfTabView to .NET MAUI SfTabView, we have retained most of the APIs from Xamarin SfTabView in MAUI SfTabView. However, to maintain API naming consistency, some APIs have been renamed. The following details the changes in APIs from Xamarin SfTabView to MAUI SfTabView.
 
 ## Namespaces 
 

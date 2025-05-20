@@ -1,19 +1,19 @@
 ---
 layout: post
 title: Placing and Dragging in MAUI Radial Menu Control | Syncfusion®
-description: Learn here all about Placing and Dragging RadialMenu support in Syncfusion® MAUI Radial Menu (SfRadialMenu) control and more.
+description: Learn all about placing and dragging RadialMenu support in Syncfusion® MAUI Radial Menu (SfRadialMenu) control and more.
 platform: MAUI
 control: RadialMenu (SfRadialMenu)
-documentation: ug
+documentation: UG
 ---
 
 # Placing and Dragging RadialMenu in MAUI Radial Menu (SfRadialMenu)
 
-You can place radial menu anywhere on its parent layout, and drag it with in the parent layout. 
+You can place radial menu anywhere on its parent layout and drag it within the parent layout. 
 
 ## Dragging RadialMenu
 
-You can enable/disable dragging by using the [`IsDragEnabled`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_IsDragEnabled) property.
+You can enable or disable dragging by using the [`IsDragEnabled`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_IsDragEnabled) property.
 
 {% tabs %}
 
@@ -73,17 +73,17 @@ namespace RadialSample
 
 ## DragEvents
 
-[`SfRadialMenu`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html) provides for event for [`DragBegin`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_DragBegin) in which the event get hooked when the RadialMenu is get dragged.
+[`SfRadialMenu`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html) provides an event for [`DragBegin`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_DragBegin) that is triggered when the RadialMenu begins to be dragged.
 
 ### DragBegin event
 
-This event get triggered when RadialMenu is start to drag with [`DragBeginEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.DragBeginEventArgs.html).
+This event is triggered when the RadialMenu starts to drag, using [`DragBeginEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.DragBeginEventArgs.html).
 
-* [`Position`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.DragBeginEventArgs.html#Syncfusion_Maui_RadialMenu_DragBeginEventArgs_Position) - Gets the Start position of the RadialMenu.
+* [`Position`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.DragBeginEventArgs.html#Syncfusion_Maui_RadialMenu_DragBeginEventArgs_Position) - Gets the starting position of the RadialMenu.
 
-* [`Handled`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.DragBeginEventArgs.html#Syncfusion_Maui_RadialMenu_DragBeginEventArgs_Handled) - Gets and Sets the boolean value for enabling and disabling the dragging of RadialMenu.
+* [`Handled`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.DragBeginEventArgs.html#Syncfusion_Maui_RadialMenu_DragBeginEventArgs_Handled) - Gets and sets a boolean value for enabling or disabling the dragging of the RadialMenu.
 
-To hook the [`DragBegin`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_DragBegin) event, and to get the start position and restricts the dragging, follow the code example:
+To hook the [`DragBegin`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_DragBegin) event to obtain the start position and restrict dragging, follow the code example:
 
 {% tabs %}
 
@@ -143,17 +143,17 @@ namespace RadialSample
 {% endhighlight %}
 {% endtabs %}
 
-### Drag End
+### DragEnd event
 
-This event get triggered when dragging is ended in RadialMenu with [`DragEndEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.DragEndEventArgs.html).
+This event is triggered when dragging ends in the RadialMenu, using [`DragEndEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.DragEndEventArgs.html).
 
-* [`OldValue`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.DragEndEventArgs.html#Syncfusion_Maui_RadialMenu_DragEndEventArgs_OldValue) - Gets the Start position of the RadialMenu.
+* [`OldValue`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.DragEndEventArgs.html#Syncfusion_Maui_RadialMenu_DragEndEventArgs_OldValue) - Gets the start position of the RadialMenu.
 
 * [`NewValue`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.DragEndEventArgs.html#Syncfusion_Maui_RadialMenu_DragEndEventArgs_NewValue) - Gets the end position of the RadialMenu.
 
-* [`Handled`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.DragEndEventArgs.html#Syncfusion_Maui_RadialMenu_DragEndEventArgs_Handled) - Gets and Sets the boolean value for restricting the RadialMenu to move another position.
+* [`Handled`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.DragEndEventArgs.html#Syncfusion_Maui_RadialMenu_DragEndEventArgs_Handled) - Gets and sets a boolean value to restrict the RadialMenu from moving to another position.
 
-To hook the [`DragEnd`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_DragEnd) event, and to get the start position, end position and restricts the movement of the RadialMenu, follow the code example:
+To hook the [`DragEnd`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_DragEnd) event and obtain start position, end position, and restrict movement, follow the code example:
 
 {% tabs %}
 
@@ -217,7 +217,7 @@ namespace RadialSample
 
 ## Placing RadialMenu
 
-You can place radial menu anywhere on its parent layout. Radial Menu's position is calculated based on parent layout's center point.
+You can place the radial menu anywhere on its parent layout. The position of the RadialMenu is calculated based on the parent layout's center point.
 
 {% tabs %}
 

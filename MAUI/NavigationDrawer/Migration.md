@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Migrating from Xamarin to .NET MAUI SfNavigationDrawer | Syncfusion® 
-description: Learn here all about Migrating from Syncfusion® Xamarin NavigationDrawer to Syncfusion® .NET MAUI NavigationDrawer control and more.
-platform: maui
+description: Learn all about migrating from Syncfusion® Xamarin NavigationDrawer to Syncfusion® .NET MAUI NavigationDrawer control and more.
+platform: MAUI
 control: SfNavigationDrawer
-documentation: ug
+documentation: UG
 ---  
 
 # Migrate from Xamarin NavigationDrawer to .NET MAUI NavigationDrawer 
 
-To migrate easier from Xamarin SfNavigationDrawer to .NET MAUI SfNavigationDrawer, keep most of the APIs from Xamarin SfNavigationDrawer in MAUI SfNavigationDrawer. However, to maintain the consistency of API naming in MAUI SfNavigationDrawer, rename some of the APIs. The APIs changed in MAUI SfNavigationDrawer from Xamarin SfNavigationDrawer are detailed as follows.
+To simplify the migration process from Xamarin SfNavigationDrawer to .NET MAUI SfNavigationDrawer, most of the APIs from Xamarin SfNavigationDrawer have been retained in MAUI SfNavigationDrawer. However, some APIs have been renamed to ensure consistency in API naming within MAUI SfNavigationDrawer. The changes to APIs between Xamarin SfNavigationDrawer and .NET MAUI SfNavigationDrawer are as follows:
 
 ## Namespaces 
 
@@ -35,7 +35,7 @@ To migrate easier from Xamarin SfNavigationDrawer to .NET MAUI SfNavigationDrawe
 <td>Gets or sets the DrawerSettings, which is a container for various customization options, allowing the appearance of the navigation drawer to be customized.</td></tr>
 </table>
 
-N> In the Xamarin Forms SfNavigationDrawer, the obsolete properties are removed in the .NET MAUI. You can exclusively set it using the [DrawerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerSettings) properties.
+N> In Xamarin Forms SfNavigationDrawer, the obsolete properties have been removed in .NET MAUI, and can be exclusively set using the [DrawerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerSettings) properties.
 
 ## Events
 

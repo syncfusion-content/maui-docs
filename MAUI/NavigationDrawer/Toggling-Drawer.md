@@ -1,20 +1,22 @@
 ---
 layout: post
-title: Toggle methods in .NET MAUI Navigation Drawer | Syncfusion®
-description: Learn here all about Toggle methods support in Syncfusion® .NET MAUI Navigation Drawer (SfNavigationDrawer) control and more.
-platform: maui
-control: NavigationDrawer
-documentation: ug
+title: Toggle Methods in .NET MAUI Navigation Drawer | Syncfusion®
+description: Learn about toggle methods support in the Syncfusion® .NET MAUI Navigation Drawer (SfNavigationDrawer) control and more.
+platform: MAUI
+control: SfNavigationDrawer
+documentation: UG
 ---
-# Toggle methods in .NET MAUI Navigation Drawer (SfNavigationDrawer)
 
-Drawer can be toggled using
+# Toggle Methods in .NET MAUI Navigation Drawer (SfNavigationDrawer)
 
-* IsOpen property
-* ToggleDrawer method
-* Swipe gesture
+The drawer in the SfNavigationDrawer can be toggled using the following methods:
+
+* IsOpen Property
+* ToggleDrawer Method
+* Swipe Gesture
 
 ## Opening Drawer Programmatically
+
 The [IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_IsOpen) property and [ToggleDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ToggleDrawer) method enable programmatically opening or closing the drawer.
 
 {% tabs %}
@@ -37,7 +39,7 @@ SfNavigationDrawer navigationDrawer = new SfNavigationDrawer()
 
 {% endtabs %}
 
-Using [ToggleDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ToggleDrawer) method,
+Using [ToggleDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ToggleDrawer) method:
 
 {% highlight c# %} 
 
@@ -45,4 +47,4 @@ navigationDrawer.ToggleDrawer();
 
 {% endhighlight %}
 
-Toggling drawer by swipe gesture is explained in [Swipe Gesture and Sensitivity](https://help.syncfusion.com/maui/navigationdrawer/swipe-gesture) section.
+Toggling drawer by swipe gesture is explained in the [Swipe Gesture and Sensitivity](https://help.syncfusion.com/maui/navigationdrawer/swipe-gesture) section.

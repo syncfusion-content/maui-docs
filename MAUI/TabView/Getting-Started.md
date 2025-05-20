@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Getting started with .NET MAUI Tab View (SfTabView) | Syncfusion®
-description: Learn here all about getting started with Syncfusion® .NET MAUI Tab View (SfTabView) control, its elements and more.
-platform: maui
+description: Learn all about getting started with the Syncfusion® .NET MAUI Tab View (SfTabView) control, its elements, and more.
+platform: MAUI
 control: Tab View
-documentation: ug
+documentation: UG
 ---
 
->**Notice:** After **Volume 1 2025 (Mid of March 2025),** updates, bug fixes, and feature enhancements for this control will no longer be available in the Syncfusion<sup>®</sup> package. Please switch to the **Syncfusion<sup>®</sup> Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document.](https://help.syncfusion.com/maui-toolkit/migration)
+>**Notice:** After **Volume 1 2025 (Mid of March 2025)**, updates, bug fixes, and feature enhancements for this control will no longer be available in the Syncfusion<sup>®</sup> package. Please switch to the **Syncfusion<sup>®</sup> Toolkit for .NET MAUI** for continued support. For a smooth transition, refer to this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
 
 # Getting Started with .NET MAUI Tab View
 
@@ -21,26 +21,27 @@ To quickly get started with the .NET MAUI Tab View, watch this video.
 {% tabcontent Visual Studio %}
 
 ## Prerequisites
+
 Before proceeding, ensure the following are set up:
 
-1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
+1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later).
 
 ## Step 1: Create a new .NET MAUI Project
 
-1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
-2. Name the project and choose a location. Then, click **Next.**
-3. Select the .NET framework version and click **Create.**
+1. Go to **File > New > Project** and select the **.NET MAUI App** template.
+2. Name the project and choose a location. Then, click **Next**.
+3. Select the .NET framework version and click **Create**.
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI TabView NuGet Package
 
-1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+1. In **Solution Explorer**, right-click the project and select **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.TabView](https://www.nuget.org/packages/Syncfusion.Maui.TabView/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-## Step 3: Register the handler
+## Step 3: Register the Handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% highlight C# hl_lines="6 17" %}
 using Microsoft.Maui;
@@ -76,7 +77,7 @@ namespace TabViewMauiSample
 
 1. To initialize the control, import the TabView namespace into your code.
 
-2. Initialize [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1)
+2. Initialize [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1).
 
 {% tabs %}
 
@@ -117,18 +118,19 @@ namespace TabViewGettingStarted
 {% tabcontent Visual Studio Code %}
 
 ## Prerequisites
+
 Before proceeding, ensure the following are set up:
 
-1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
+1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio Code.
-3. Ensure that the .NET MAUI extension is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
+3. Ensure that the .NET MAUI extension is installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
 
 ## Step 1: Create a new .NET MAUI Project
 
 1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
 2. Choose the **.NET MAUI App** template.
-3. Select the project location, type the project name and press **Enter.**
-4. Then choose **Create project.**
+3. Select the project location, type the project name and press **Enter**.
+4. Then choose **Create project**.
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI TabView NuGet Package
 
@@ -137,9 +139,9 @@ Before proceeding, ensure the following are set up:
 3. Run the command `dotnet add package Syncfusion.Maui.TabView` to install the Syncfusion<sup>®</sup> .NET MAUI TabView package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
-## Step 3: Register the handler
+## Step 3: Register the Handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% highlight C# hl_lines="6 17" %}
 using Microsoft.Maui;
@@ -175,7 +177,7 @@ namespace TabViewMauiSample
 
 1. To initialize the control, import the TabView namespace into your code.
 
-2. Initialize [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1)
+2. Initialize [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1).
 
 {% tabs %}
 
@@ -221,24 +223,24 @@ namespace TabViewGettingStarted
 Before proceeding, ensure the following are set up:
 
 1. Ensure you have the latest version of JetBrains Rider.
-2. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
-3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
+2. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
+3. Make sure the MAUI workloads are installed and configured as described [here](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start).
 
 ## Step 1: Create a new .NET MAUI Project
 
-1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
+1. Go to **File > New Solution**, Select .NET (C#) and choose the **.NET MAUI App** template.
 2. Enter the Project Name, Solution Name, and Location.
-3. Select the .NET framework version and click Create.
+3. Select the .NET framework version and click **Create**.
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI TabView NuGet Package
 
-1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.TabView](https://www.nuget.org/packages/Syncfusion.Maui.TabView/) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
+3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, open the terminal in Rider and manually run: `dotnet restore`.
 
-## Step 3: Register the handler
+## Step 3: Register the Handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% highlight C# hl_lines="6 17" %}
 using Microsoft.Maui;
@@ -274,7 +276,7 @@ namespace TabViewMauiSample
 
 1. To initialize the control, import the TabView namespace into your code.
 
-2. Initialize [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1)
+2. Initialize [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1).
 
 {% tabs %}
 
@@ -454,15 +456,15 @@ namespace TabViewMauiSample
 
 ![Getting started with .NET MAUI Tab View.](images/net-maui-tab-view-getting-started.png)
 
-N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/TabViewGettingStarted) in GitHub
+N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/TabViewGettingStarted) in GitHub.
 
 ## Populate ItemsSource
 
 Items can be added to the control using the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ItemsSource) property of [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html).
 
-Objects of any class can be given as items for `SfTabView` by using `ItemsSource`. The views corresponding to the objects can be set using the [HeaderItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_HeaderItemTemplate) for the header items and [ContentItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ContentItemTemplate) for the content.
+Objects of any class can be provided as items for `SfTabView` using `ItemsSource`. The views corresponding to the objects can be set using the [HeaderItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_HeaderItemTemplate) for the header items and [ContentItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ContentItemTemplate) for the content.
 
-Create a model class using the TabItems collection property that is initialized with the required number of data objects, as shown in the following code example.
+Create a model class using the TabItems collection property, initialized with the required number of data objects, as shown in the following code examples.
 
 {% tabs %}
 
@@ -589,7 +591,7 @@ public partial class MainPage : ContentPage
 
 {% endtabs %}
 
-### Header item template
+### Header Item Template
 
 By defining the `HeaderItemTemplate` of the `SfTabView`, a custom user interface(UI) can be achieved to display the tab header data items.
 
@@ -638,7 +640,7 @@ public partial class MainPage : ContentPage
 
 {% endtabs %}
 
-### Content item template
+### Content Item Template
 
 By defining the `ContentItemTemplate` of the `SfTabView`, a custom user interface(UI) can be achieved to display the tab content data items.
 

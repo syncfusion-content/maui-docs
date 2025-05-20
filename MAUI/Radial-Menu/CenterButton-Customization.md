@@ -1,19 +1,19 @@
 ---
 layout: post
 title: CenterButton Customization in MAUI Radial Menu Control | Syncfusion®
-description: Learn here all about CenterButton Customization support in Syncfusion® Maui Radial Menu(SfRadialMenu) control and more.
+description: Learn about CenterButton Customization support in Syncfusion® MAUI Radial Menu(SfRadialMenu) control and more.
 platform: MAUI
 control: RadialMenu (SfRadialMenu)
-documentation: ug
+documentation: UG
 ---
 
 # CenterButton Customization in MAUI Radial Menu (SfRadialMenu)
 
-The CenterButton or BackButton in radial menu is a view in the center of the radial menu. It performs the operations such as opening and closing the rim and navigating to the next level items. The radial menu allows you customize the CenterButton/BackButton with `FontIcon`, `Custom View`, and `Caption`.
+The CenterButton or BackButton in the radial menu is a view in the center of the radial menu. It performs operations such as opening and closing the rim and navigating to the next-level items. You can customize the CenterButton/BackButton with `FontIcon`, `Custom View`, and `Caption`.
 
 ## CenterButtonText and CenterButtonBackText
 
-The [`CenterButtonText`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonText) changes the text of the center button in [`SfRadialMenu`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html), and the [`CenterButtonBackText`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonBackText) changes the text of the center back button in [`SfRadialMenu`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html).
+The [`CenterButtonText`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonText) changes the text of the center button in [`SfRadialMenu`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html), and the [`CenterButtonBackText`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonBackText) changes the text of the center back button.
 
 {% tabs %}
 
@@ -106,7 +106,7 @@ namespace RadialSample
 
 ## CenterButtonTextColor and CenterButtonBackTextColor
 
-The [`CenterButtonTextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonTextColor) changes the text color of the center button in [`SfRadialMenu`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html), and the [`CenterButtonBackTextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonBackTextColor) changes the text color of the center back button in [`SfRadialMenu`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html).
+The [`CenterButtonTextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonTextColor) changes the text color of the center button, and the [`CenterButtonBackTextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonBackTextColor) changes the text color of the center back button.
 
 {% tabs %}
 
@@ -202,7 +202,7 @@ namespace RadialSample
 
 ## CenterButtonBackgroundColor
 
-The [`CenterButtonBackgroundColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonBackgroundColor) changes the background color of the center button in [`SfRadialMenu`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html).
+The [`CenterButtonBackgroundColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonBackgroundColor) changes the background color of the center button.
 
 {% tabs %}
 
@@ -270,7 +270,7 @@ namespace RadialSample
 
 ## CenterButtonRadius
 
-The [`CenterButtonRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonRadius) changes the radius of the center button in [`SfRadialMenu`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html).
+The [`CenterButtonRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonRadius) changes the radius of the center button.
 
 {% tabs %}
 
@@ -332,7 +332,7 @@ namespace RadialSample
 
 ## CenterButtonFontFamily and CenterButtonBackFontFamily
 
-The [`CenterButtonFontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonFontFamily) changes the font family of the center button in [`SfRadialMenu`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html), and the [`CenterButtonBackFontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonBackFontFamily) changes the font family of the center back button in [`SfRadialMenu`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html).
+The [`CenterButtonFontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonFontFamily) changes the font family of the center button, and the [`CenterButtonBackFontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonBackFontFamily) changes the font family of the center back button.
 
 {% tabs %}
 
@@ -425,7 +425,7 @@ namespace RadialSample
 
 ## CenterButtonFontSize and CenterButtonBackFontSize
 
-The [`CenterButtonFontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonFontSize) changes the font size of the center button in [`SfRadialMenu`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html), and the [`CenterButtonBackFontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html?tabs=tabid-1%2Ctabid-3%2Ctabid-36#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonBackFontSize) changes the font size of the center back button in [`SfRadialMenu`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html).
+The [`CenterButtonFontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonFontSize) changes the font size of the center button, and the [`CenterButtonBackFontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html?tabs=tabid-1%2Ctabid-3%2Ctabid-36#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonBackFontSize) changes the font size of the center back button.
 
 {% tabs %}
 
@@ -522,7 +522,7 @@ namespace RadialSample
 
 ## CenterButtonFontAttributes and CenterButtonBackFontAttributes
 
-The [`CenterButtonFontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonFontAttributes) changes the font attributes of the center button in [`SfRadialMenu`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html).
+The [`CenterButtonFontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonFontAttributes) changes the font attributes of the center button in [`SfRadialMenu`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html), while the [CenterButtonBackFontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonBackFontAttributes) applies similar changes to the center back button.
 
 {% tabs %}
 
@@ -615,7 +615,7 @@ namespace RadialSample
 
 ## CenterButtonStroke
 
-The [`CenterButtonStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonStroke) changes the stroke color of the center button in [`SfRadialMenu`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html).
+The [`CenterButtonStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonStroke) property changes the stroke color of the center button in the [`SfRadialMenu`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html).
 
 {% tabs %}
 
@@ -742,7 +742,7 @@ namespace RadialSample
 
 ## CenterButtonView and CenterButtonBackView
 
-You can customize the center button using [`CenterButtonView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonView) and center back button using [`CenterButtonBackView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonBackView) in  [`SfRadialMenu`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html).
+You can customize the center button using [`CenterButtonView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonView) and the center back button using [`CenterButtonBackView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonBackView) in  [`SfRadialMenu`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html).
 
 {% tabs %}
 
@@ -862,7 +862,7 @@ namespace RadialSample
 
 ## EnableCenterButtonAnimation
 
-The [`EnableCenterButtonAnimation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_EnableCenterButtonAnimation) is used to either enable or disable animation of the center button in [`SfRadialMenu`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html).
+The [`EnableCenterButtonAnimation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_EnableCenterButtonAnimation) property allows you to enable or disable animation of the center button in the [`SfRadialMenu`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html).
 
 {% tabs %}
 

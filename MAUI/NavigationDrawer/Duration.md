@@ -1,16 +1,16 @@
 ---
 layout: post
 title: Animation Duration in .NET MAUI Navigation Drawer control | Syncfusion®
-description: Learn about Animation Duration support in Syncfusion® .NET MAUI Navigation Drawer (SfNavigationDrawer) control and more.
-platform: maui
+description: Learn about Animation Duration support in the Syncfusion® .NET MAUI Navigation Drawer (SfNavigationDrawer) control and more.
+platform: MAUI
 control: SfNavigationDrawer
-documentation: ug
+documentation: UG
 ---
 # Animation Duration in .NET MAUI Navigation Drawer (SfNavigationDrawer)
 
-## Animation Duration in SfNavigationDrawer
+## Overview
 
-The [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_Duration) property of the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) indicates the timeline for completing one animation cycle. Setting a smaller duration value accelerates animation speed.
+The [Duration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_Duration) property of the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) specifies the timeline for completing one animation cycle. Setting a smaller duration value accelerates animation speed.
 
 {% tabs %}
 

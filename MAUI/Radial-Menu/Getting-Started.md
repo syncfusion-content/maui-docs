@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Getting Started with MAUI Radial Menu Control | Syncfusion®
-description: Learn here about getting started with Syncfusion® MAUI Radial Menu (SfRadialMenu) control, its elements and more.
+description: Learn about getting started with the Syncfusion® MAUI Radial Menu (SfRadialMenu) control, its elements, and more.
 platform: MAUI
 control: RadialMenu (SfRadialMenu)
-documentation: ug
+documentation: UG
 ---
 
 # Getting Started with .NET MAUI Radial Menu
@@ -19,26 +19,27 @@ To quickly get started with the .NET MAUI Radial Menu, watch this video.
 {% tabcontent Visual Studio %}
 
 ## Prerequisites
+
 Before proceeding, ensure the following are set up:
 
-1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
+1. Install the [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later).
 
 ## Step 1: Create a new .NET MAUI Project
 
 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
-2. Name the project and choose a location. Then, click **Next.**
-3. Select the .NET framework version and click **Create.**
+2. Name the project and choose a location. Then, click **Next**.
+3. Select the .NET framework version and click **Create**.
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI RadialMenu NuGet Package
 
-1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.RadialMenu](https://www.nuget.org/packages/Syncfusion.Maui.RadialMenu/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-## Step 3: Register the handler
+## Step 3: Register the Handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% tabs %}
 {% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 8" %}
@@ -68,7 +69,7 @@ Before proceeding, ensure the following are set up:
 ## Step 4: Add a RadialMenu
 
 1. To initialize the control, import the RadialMenu namespace into your code.
-2. Initialize [RadialMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.html)
+2. Initialize [RadialMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.html).
 
 {% tabs %}
 {% highlight xaml %}
@@ -106,18 +107,19 @@ namespace RadialMenuGettingStarted
 {% tabcontent Visual Studio Code %}
 
 ## Prerequisites
+
 Before proceeding, ensure the following are set up:
 
-1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
+1. Install the [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio Code.
-3. Ensure that the .NET MAUI extension is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
+3. Ensure that the .NET MAUI extension is installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
 
 ## Step 1: Create a new .NET MAUI Project
 
 1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
 2. Choose the **.NET MAUI App** template.
-3. Select the project location, type the project name and press **Enter.**
-4. Then choose **Create project.**
+3. Select the project location, type the project name and press **Enter**.
+4. Then choose **Create project**.
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI RadialMenu NuGet Package
 
@@ -126,9 +128,9 @@ Before proceeding, ensure the following are set up:
 3. Run the command `dotnet add package Syncfusion.Maui.RadialMenu` to install the Syncfusion<sup>®</sup> .NET MAUI RadialMenu package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
-## Step 3: Register the handler
+## Step 3: Register the Handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% tabs %}
 {% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 8" %}
@@ -158,7 +160,7 @@ Before proceeding, ensure the following are set up:
 ## Step 4: Add a RadialMenu
 
 1. To initialize the control, import the RadialMenu namespace into your code.
-2. Initialize [RadialMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.html)
+2. Initialize [RadialMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.html).
 
 {% tabs %}
 {% highlight xaml %}
@@ -200,24 +202,24 @@ namespace RadialMenuGettingStarted
 Before proceeding, ensure the following are set up:
 
 1. Ensure you have the latest version of JetBrains Rider.
-2. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
-3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
+2. Install the [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
+3. Make sure the MAUI workloads are installed and configured as described [here](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start).
 
 ## Step 1: Create a new .NET MAUI Project
 
-1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
+1. Go to **File > New Solution,** Select .NET (C#) and choose the **.NET MAUI App** template.
 2. Enter the Project Name, Solution Name, and Location.
-3. Select the .NET framework version and click Create.
+3. Select the .NET framework version and click **Create**.
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI RadialMenu NuGet Package
 
-1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.RadialMenu](https://www.nuget.org/packages/Syncfusion.Maui.RadialMenu/) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
+3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, open the Terminal in Rider and manually run: `dotnet restore`.
 
-## Step 3: Register the handler
+## Step 3: Register the Handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% tabs %}
 {% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 8" %}
@@ -247,7 +249,7 @@ Before proceeding, ensure the following are set up:
 ## Step 4: Add a RadialMenu
 
 1. To initialize the control, import the RadialMenu namespace into your code.
-2. Initialize [RadialMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.html)
+2. Initialize [RadialMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.html).
 
 {% tabs %}
 {% highlight xaml %}
@@ -284,7 +286,7 @@ namespace RadialMenuGettingStarted
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Adding radial menu with items
+## Adding Radial Menu with Items
 
 {% tabs %}
 
@@ -370,7 +372,7 @@ namespace RadialMenuGettingStarted
 
 ![Getting started in .NET MAUI RadialMenu control.](images/getting-started/maui-radialmenu-getting-started.png)
 
-N> You can find the getting started sample of .NET MAUI SfRadialMenu from this [link.](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-Radial-Menu)
+N> You can find the getting started sample of .NET MAUI SfRadialMenu from this [link](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-Radial-Menu).
 
 
 
