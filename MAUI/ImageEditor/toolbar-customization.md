@@ -478,7 +478,7 @@ SfImageEditor imageEditor = new SfImageEditor();
 imageEditor.Source = ImageSource.FromFile("image.png");
 imageEditor.AutoGenerateToolbarItems = false;
 ImageEditorToolbar editorToolbar = new ();
-editorToolbar.Orientaion = ToolbarOrientation.Vertical;
+editorToolbar.Orientation = ToolbarOrientation.Vertical;
 editorToolbar.Position = ToolbarPosition.End;
 editorToolbar.ToolbarItems = new List<IImageEditorToolbarItem>()
 {
@@ -539,7 +539,7 @@ For example, set the toolbar to a vertical orientation:
 SfImageEditor imageEditor = new SfImageEditor();
 imageEditor.Source = ImageSource.FromFile("image.png");
 ImageEditorToolbar footerToolbar = imageEditor.Toolbars[1];
-footerToolbar.Orientaion = ToolbarOrientation.Vertical;
+footerToolbar.Orientation = ToolbarOrientation.Vertical;
     
 {% endhighlight %}
 
