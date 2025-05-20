@@ -449,7 +449,7 @@ Create [`SubToolbars`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Image
 <imageEditor:SfImageEditor Source="image.png"
                            AutoGenerateToolbarItems="False">
     <imageEditor:SfImageEditor.Toolbars>
-        <imageEditor:ImageEditorToolbar Orientaion="Vertical"
+        <imageEditor:ImageEditorToolbar Orientation="Vertical"
                                         Position="End">
             <imageEditor:ImageEditorToolbar.ToolbarItems>
                 <imageEditor:ImageEditorToolbarItem Name="Text">
@@ -528,7 +528,7 @@ N> Customize an icon by specifying its [`Name`](https://help.syncfusion.com/cr/m
 
 ## Toolbar Orientation
 
-The toolbar orientation can be changed to achieve the desired design by using the [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbar.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbar_Orientaion) property in the [`ImageEditorToolbar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbar.html) class. The default value is [`ToolbarOrientation.Horizontal`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ToolbarOrientation.html#Syncfusion_Maui_ImageEditor_ToolbarOrientation_Horizontal).
+The toolbar orientation can be changed to achieve the desired design by using the [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbar.html#Syncfusion_Maui_ImageEditor_ImageEditorToolbar_Orientation) property in the [`ImageEditorToolbar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageEditorToolbar.html) class. The default value is [`ToolbarOrientation.Horizontal`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ToolbarOrientation.html#Syncfusion_Maui_ImageEditor_ToolbarOrientation_Horizontal).
 
 For example, set the toolbar to a vertical orientation:
 
