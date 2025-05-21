@@ -19,7 +19,7 @@ The following code explains how to initialize data labels.
 
 {% highlight xaml %}
 
-<sunburst:SfSunburstChart ShowLabels="True"/>
+<sunburst:SfSunburstChart ShowLabels="True">
     . . .
 </sunburst:SfSunburstChart>
 
@@ -38,7 +38,7 @@ this.Content = sunburst;
 
 ## Overflow Mode
 
-When the data labels are large in text size, they will overlap each other. To avoid overlapping, trim or hide the data labels using the OverflowMode property. By default, the OverFlow mode is `Trim`.
+When the data labels are large in text size, they will overlap each other. To avoid overlapping, trim or hide the data labels using the [OverflowMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstDataLabelSettings.html#Syncfusion_Maui_SunburstChart_SunburstDataLabelSettings_OverflowMode) property. By default, the OverflowMode is `Trim`.
 
 The following code shows how to hide the data labels.
 
@@ -49,7 +49,7 @@ The following code shows how to hide the data labels.
 <sunburst:SfSunburstChart ShowLabels="True">
     . . .
     <sunburst:SfSunburstChart.DataLabelSettings>
-        <sunburst:SunburstDataLabelSettings OverFlowMode="Hide"/>
+        <sunburst:SunburstDataLabelSettings OverflowMode="Hide"/>
     </sunburst:SfSunburstChart.DataLabelSettings>
 </sunburst:SfSunburstChart>
 
@@ -62,7 +62,7 @@ SfSunburstChart sunburst = new SfSunburstChart();
 sunburst.ShowLabels = true;
 sunburst.DataLabelSettings = new SunburstDataLabelSettings()
 {
-    OverFlowMode = SunburstLabelOverflowMode.Hide
+    OverflowMode = SunburstLabelOverflowMode.Hide
 };
 this.Content = sunburst;
 
@@ -110,9 +110,9 @@ this.Content = sunburst;
 
 ## Customization
 
- Data labels can be customized using the [DataLabelSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_DataLabelSettings) property of the chart. For customizing, you need to create an instance of [SunburstDataLabelSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstDataLabelSettings.html) and set it to the [DataLabelSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_DataLabelSettings) property.The following properties, available in [SunburstDataLabelSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstDataLabelSettings.html), are used to customize the data labels: 
+Data labels can be customized using the [DataLabelSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_DataLabelSettings) property of the chart. For customizing, you need to create an instance of [SunburstDataLabelSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstDataLabelSettings.html) and set it to the [DataLabelSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_DataLabelSettings) property. The following properties, available in [SunburstDataLabelSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstDataLabelSettings.html), are used to customize the data labels: 
 
-* [FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstDataLabelSettings.html#Syncfusion_Maui_SunburstChart_SunburstDataLabelSettings_FontAttributes) of type `FontAttributes`, indicates the font style of * the label.
+* [FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstDataLabelSettings.html#Syncfusion_Maui_SunburstChart_SunburstDataLabelSettings_FontAttributes) of type `FontAttributes`, indicates the font style of the label.
 * [FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstDataLabelSettings.html#Syncfusion_Maui_SunburstChart_SunburstDataLabelSettings_FontFamily) of type `string`, indicates the font family for the label.
 * [FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstDataLabelSettings.html#Syncfusion_Maui_SunburstChart_SunburstDataLabelSettings_FontSize) of type `float`, indicates the font size.
 * [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstDataLabelSettings.html#Syncfusion_Maui_SunburstChart_SunburstDataLabelSettings_TextColor) of type `Color`, indicates the color of the displayed text.
@@ -121,7 +121,7 @@ this.Content = sunburst;
 
 {% highlight xaml %}
 
-<sunburst:SfSunburstChart ShowDataLabels="True">
+<sunburst:SfSunburstChart ShowLabels="True">
     . . .
     <sunburst:SfSunburstChart.DataLabelSettings>
         <sunburst:SunburstDataLabelSettings     
