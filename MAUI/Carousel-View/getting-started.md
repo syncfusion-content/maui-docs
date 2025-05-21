@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Carousel View control | Syncfusion®
-description: Learn here about getting started with Syncfusion® .NET MAUI Carousel View (SfCarousel) control, its elements and more.
+title: "Getting Started with .NET MAUI Carousel View Control | Syncfusion®"
+description: "Learn about getting started with Syncfusion® .NET MAUI Carousel View (SfCarousel) control, its elements, and more."
 platform: maui
 control: Carousel
 documentation: ug
 ---
 
-> **Notice**: After **Volume 1 2025 (Mid of March 2025)**, updates, bug fixes, and feature enhancements for this control will no longer be available in the Syncfusion<sup>®</sup> package. Please switch to the **Syncfusion<sup>®</sup> Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
+> **Notice**: After **Volume 1 2025 (Mid-March 2025)**, updates, bug fixes, and feature enhancements for this control will no longer be available in the Syncfusion<sup>®</sup> package. Please switch to the **Syncfusion<sup>®</sup> Toolkit for .NET MAUI** for continued support. For a smooth transition, refer to this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
 
 # Getting Started with .NET MAUI Carousel
 
-This section guides you through setting up and configuring a [Carousel](https://www.syncfusion.com/maui-controls/maui-carousel) in your .NET MAUI application. Follow the steps below to add a basic Carousel to your project.
+This section guides you through setting up and configuring the [Carousel](https://www.syncfusion.com/maui-controls/maui-carousel) in your .NET MAUI application. Follow the steps below to add a basic Carousel to your project.
 
 To quickly get started with the .NET MAUI Carousel, watch this video.
 
@@ -24,7 +24,7 @@ To quickly get started with the .NET MAUI Carousel, watch this video.
 
 Before proceeding, ensure the following are in place:
 
-1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
+1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or a later version.
 2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.8 or later).
 
 ## Step 1: Create a New MAUI Project
@@ -39,9 +39,9 @@ Before proceeding, ensure the following are in place:
 2. Search for [Syncfusion.Maui.Carousel](https://www.nuget.org/packages/Syncfusion.Maui.Carousel) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-## Step 3: Register the handler
+## Step 3: Register the Handler
 
- [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: DataTemplateSelector in .NET MAUI Chips control | Syncfusion®
-description: Learn about DataTemplateSelector support in Syncfusion® .NET MAUI Chips control, its elements and more.
+title: DataTemplateSelector in .NET MAUI Chips Control | Syncfusion®
+description: Learn about DataTemplateSelector support in Syncfusion® .NET MAUI Chips control, its elements, and more.
 platform: maui
 control: Chips
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # DataTemplateSelector in .NET MAUI Chips
 
-You can customize the appearance of each chip with different templates based on specific constraints using the `DataTemplateSelector`.
+The `DataTemplateSelector` allows you to customize the appearance of each chip with different templates based on specific criteria.
 
 ## Create and initialize business models 
 
@@ -51,9 +51,9 @@ Define a simple model class ChipModel with fields Text, CanSelect, ImageSource, 
 
 {% endtabs %}
 
-### Create a data template selector
+### Create a DataTemplateSelector
 
-Create a custom class by inheriting `DataTemplateSelector`, and override the `OnSelectTemplate` method to return the `DataTemplate` for that item. At runtime, the SfChipGroup invokes the `OnSelectTemplate` method for each item and passes the data object as parameter.
+Create a custom class by inheriting `DataTemplateSelector`, and override the `OnSelectTemplate` method to return the appropriate `DataTemplate` for each item. At runtime, the `SfChipGroup` invokes the `OnSelectTemplate` method for each item and passes the data object as a parameter.
 
 {% tabs %}
 {% highlight c# %}
@@ -72,9 +72,9 @@ public class ChipDataTemplateSelector : DataTemplateSelector
 {% endhighlight %}
 {% endtabs %}
 
-### Applying the data template selector
+### Applying the DataTemplateSelector
 
-Assign the already defined `DataTemplateSelector` to the [`ItemTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ItemTemplate) of the SfChipGroup in either XAML or C#.
+Assign the created `DataTemplateSelector` to the [`ItemTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ItemTemplate) property of `SfChipGroup` in either XAML or C#.
 
 {% tabs %}
 {% highlight xaml %}
@@ -119,4 +119,4 @@ this.Content = chipGroup;
 {% endhighlight %}
 {% endtabs %}
 
-![DataTemplateSelector support for SfChipGroup in .NET MAUI](images\customization-images/datatemplateselector.png)
+![DataTemplateSelector support for SfChipGroup in .NET MAUI](images/customization-images/datatemplateselector.png)

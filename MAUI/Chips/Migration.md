@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migrating from Xamarin to .NET MAUI Chips | Syncfusion®
-description: Learn all about Migrating from Syncfusion® Xamarin Chips to Syncfusion® .NET MAUI Chips control and more here.
+description: Learn how to migrate from Syncfusion® Xamarin Chips to Syncfusion® .NET MAUI Chips control and more here.
 platform: maui
 control: SfChips
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrating from Xamarin SfChips to .NET MAUI SfChips 
 
-To migrate easier from Xamarin SfChips to [.NET MAUI SfChips](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html), we kept most of the APIs from Xamarin SfChips in MAUI SfChips. However, to maintain the consistency of API naming in MAUI SfChips, we renamed some of the APIs. The APIs changed in MAUI SfChips from Xamarin SfChips are detailed as follows:
+To facilitate an easier migration from Xamarin SfChips to [.NET MAUI SfChips](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html), most of the APIs from Xamarin SfChips have been retained in MAUI SfChips. However, for consistency in API naming within MAUI SfChips, some APIs have been renamed. Below are the API changes in MAUI SfChips from Xamarin SfChips:
 
 ## Namespaces 
 
@@ -92,5 +92,6 @@ To migrate easier from Xamarin SfChips to [.NET MAUI SfChips](https://help.syncf
 <td>{{'[SelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Chips.SelectionChangedEventArgs.html)'| markdownify }}<br/> <ul> <li> {{'[AddedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Chips.SelectionChangedEventArgs.html#Syncfusion_Maui_Core_Chips_SelectionChangedEventArgs_AddedItem)'| markdownify }} </li> <li>  {{'[RemovedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Chips.SelectionChangedEventArgs.html#Syncfusion_Maui_Core_Chips_SelectionChangedEventArgs_RemovedItem)'| markdownify }}</li> </ul></td>
 <td>Raises when an item is removed from chipgroup. Returns the currently removed item.</td></tr>
 </table> 
+
 
 

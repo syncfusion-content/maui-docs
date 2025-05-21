@@ -1,15 +1,19 @@
 ---
-layout : post
-title: Interaction in Syncfusion® Carousel Control in .NET MAUI.
-description: Learn how to perform an operation while changing the carouselItem or Collection in Carousel for .NET MAUI.
-platform : maui
-control : Carousel
-documentation : ug
+layout: post
+title: "Interaction in Syncfusion® Carousel Control in .NET MAUI"
+description: "Learn how to perform operations when changing the CarouselItem or collection in Carousel for .NET MAUI."
+platform: maui
+control: Carousel
+documentation: ug
 ---
 
-# How to perform an operation while changing the CarouselItem?
+# How to Perform an Operation While Changing the CarouselItem?
 
-We can perform the operation while changing the CarouselItem using the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_SelectionChanged) event. The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_SelectionChanged) event returns the OldItem and selected NewItem.
+You can perform operations while changing the CarouselItem using the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_SelectionChanged) event. This event returns both the OldItem and the newly selected NewItem.
+
+## Example
+
+Here is an example of how to handle the SelectionChanged event in a Carousel:
 
 {% tabs %}
 
@@ -37,7 +41,7 @@ carousel.ItemTemplate = itemTemplate;
 carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 carousel.SelectionChanged += Carousel_SelectionChanged;
 
-// Trigger when selection changed in the carousel item.
+// Event handler triggered when the carousel item's selection changes.
 private void Carousel_SelectionChanged(object sender, Syncfusion.Maui.Core.Carousel.SelectionChangedEventArgs e)
 {
     int count = (sender as SfCarousel).SelectedIndex + 1;

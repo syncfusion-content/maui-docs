@@ -9,14 +9,14 @@ documentation: ug
 
 # Sliding Direction in .NET MAUI Rotator (SfRotator)
 
-There are Six available positions,
+There are six available positions:
 
-* [`Horizontal`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationDirection.html#Syncfusion_Maui_Core_Rotator_NavigationDirection_Horizontal) - Rotator Items can be navigated in horizontal direction.
-* [`Vertical`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationDirection.html#Syncfusion_Maui_Core_Rotator_NavigationDirection_Vertical) - Rotator Items can be navigated in vertical direction.
-* [`LeftToRight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationDirection.html#Syncfusion_Maui_Core_Rotator_NavigationDirection_LeftToRight) - Rotator items can be navigate from Left to Right only.
-* [`RightToLeft`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationDirection.html#Syncfusion_Maui_Core_Rotator_NavigationDirection_RightToLeft) - Rotator items can be navigate from Right to Left only.
-* [`TopToBottom`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationDirection.html#Syncfusion_Maui_Core_Rotator_NavigationDirection_TopToBottom) - Rotator items can be navigate from Top to Bottom only.
-* [`BottomToTop`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationDirection.html#Syncfusion_Maui_Core_Rotator_NavigationDirection_BottomToTop) - Rotator items can be navigate from Bottom to Top only.
+* [`Horizontal`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationDirection.html#Syncfusion_Maui_Core_Rotator_NavigationDirection_Horizontal) - Navigate rotator items in the horizontal direction.
+* [`Vertical`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationDirection.html#Syncfusion_Maui_Core_Rotator_NavigationDirection_Vertical) - Navigate rotator items in the vertical direction.
+* [`LeftToRight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationDirection.html#Syncfusion_Maui_Core_Rotator_NavigationDirection_LeftToRight) - Navigate rotator items from left to right only.
+* [`RightToLeft`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationDirection.html#Syncfusion_Maui_Core_Rotator_NavigationDirection_RightToLeft) - Navigate rotator items from right to left only.
+* [`TopToBottom`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationDirection.html#Syncfusion_Maui_Core_Rotator_NavigationDirection_TopToBottom) - Navigate rotator items from top to bottom only.
+* [`BottomToTop`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationDirection.html#Syncfusion_Maui_Core_Rotator_NavigationDirection_BottomToTop) - Navigate rotator items from bottom to top only.
 
 {% tabs %}
 

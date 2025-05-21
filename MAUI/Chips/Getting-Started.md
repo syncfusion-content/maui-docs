@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Chips control | Syncfusion®
-description: Learn here about getting started with Syncfusion® Essential Studio® .NET MAUI Chips control, its elements and more.
+title: Getting Started with .NET MAUI Chips Control | Syncfusion®
+description: Learn how to get started with Syncfusion® Essential Studio® .NET MAUI Chips control, its elements, and more.
 platform: maui
 control: Chips
 documentation: ug
@@ -11,10 +11,9 @@ documentation: ug
 
 # Getting Started with .NET MAUI Chips
 
-This section guides you through setting up and configuring a [Chips](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html) in your .NET MAUI application. Follow the steps below to add a basic Chips to your project.
+This section guides you through setting up and configuring a [Chips](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html) control in your .NET MAUI application. Follow these steps to add a basic Chips control to your project.
 
-To quickly get started with the .NET MAUI Chips, watch this video.
-
+Watch the video below to quickly get started with the .NET MAUI Chips.
 {% youtube "https://www.youtube.com/watch?v=hr4GmmvS9EE" %}
 
 {% tabcontents %}
@@ -22,26 +21,26 @@ To quickly get started with the .NET MAUI Chips, watch this video.
 
 ## Prerequisites
 
-Before proceeding, ensure the following are in place:
+Before proceeding, ensure the following requirements are met:
 
 1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.8 or later).
 
 ## Step 1: Create a New MAUI Project
 
-1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
-2. Name the project and choose a location. Then, click **Next**.
+1. Go to **File > New > Project** and select the **.NET MAUI App** template.
+2. Name the project, choose a location, and click **Next**.
 3. Select the .NET framework version and click **Create**.
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Core NuGet Package
 
-1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
+1. In **Solution Explorer**, right-click the project and select **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored.
+3. Ensure all necessary dependencies are installed correctly and the project is restored.
 
 ## Step 3: Register the Handler 
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion<sup>®</sup> core.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) is a dependent package for all Syncfusion<sup>®</sup> .NET MAUI controls. Register the handler for the Syncfusion<sup>®</sup> core in the **MauiProgram.cs** file.
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;

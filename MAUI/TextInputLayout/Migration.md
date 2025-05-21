@@ -1,17 +1,16 @@
 ---
 layout: post
 title: Migrating from Xamarin to .NET MAUI SfTextInputLayout | Syncfusion® 
-description: Learn all about Migrating from Syncfusion® Xamarin TextInputLayout to Syncfusion® .NET MAUI TextInputLayout control and more here.
+description: Learn about migrating from Syncfusion® Xamarin TextInputLayout to Syncfusion® .NET MAUI TextInputLayout control and more.
 platform: maui
 control: SfTextInputLayout
 documentation: ug
-keywords: .net maui text input layout, syncfusion text input layout, text input layout maui.
+keywords: .net maui text input layout, syncfusion text input layout, text input layout maui
 ---  
 
-# Migrating from Xamarin TextInputLayout to .NET MAUI TextInputLayout.
+# Migrating from Xamarin TextInputLayout to .NET MAUI TextInputLayout
 
-To migrate easier from Xamarin SfTextInputLayout to .NET MAUI SfTextInputLayout, we kept most of the APIs from Xamarin SfTextInputLayout in MAUI SfTextInputLayout. However, to maintain the consistency of API naming in MAUI SfTextInputLayout, we renamed some of the APIs. The APIs changed in MAUI SfTextInputLayout from Xamarin SfTextInputLayout as detailed in the following:
-
+Migrating from Xamarin SfTextInputLayout to .NET MAUI SfTextInputLayout is facilitated by retaining most of the APIs from Xamarin. However, to maintain consistency in API naming conventions in .NET MAUI, some APIs have been renamed. The following sections detail the changes:
 ## Namespaces 
 
 <table>
@@ -66,4 +65,4 @@ To migrate easier from Xamarin SfTextInputLayout to .NET MAUI SfTextInputLayout,
 
 ## Known Issues
 
-Manually input values don't update the Stroke Value due to an issue at the framework level in .NET 8.0. This problem arises because the manual value doesn't override an implicit style. However, you can resolve this by setting the Stroke Value using the Visual State Manager (VSM) through Style. Refer to this [link](https://github.com/dotnet/maui/issues/18103) for more details.
+There is a known issue in .NET 8.0 where manually input values do not update the stroke value due to an implicit style not being overridden. You can resolve this by setting the stroke value using the Visual State Manager (VSM) through style. For more details, refer to this [link](https://github.com/dotnet/maui/issues/18103).

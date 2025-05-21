@@ -1,23 +1,23 @@
 ---
-layout : post
+layout: post
 title: Populating Data in .NET MAUI Rotator control | Syncfusion®
-description: Learn about the Populating Data support in Syncfusion® .NET MAUI Rotator (SfRotator) control and more..
-platform : maui
-control : Rotator 
-documentation : ug
+description: Learn about data population support in Syncfusion® .NET MAUI Rotator (SfRotator) control and more.
+platform: maui
+control: Rotator
+documentation: ug
 ---
 
 # Populating Data in .NET MAUI Rotator (SfRotator)
 
-The [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1) control supports binding to different data sources such as IList Data Source and Observable Collection Data Source.
+The [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1) control supports binding to different data sources such as `IList` and `ObservableCollection`.
 
 ## Through Binding
 
-This section explains about setting Item Source and applying custom template to the data.
+This section explains setting the `ItemSource` and applying a custom template to the data in the rotator.
 
 ### Create a Model with Data
 
-The [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1)items can be populated with a collection of image data. Assign a collection to it. Collections include arrays, Lists, and DataTables. For example, you may want to create a Rotator model with an Image as follows.
+The [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1) items can be populated with a collection of image data. Assign a collection to it, which can include arrays, lists, and DataTables.
 
 {% tabs %}
 

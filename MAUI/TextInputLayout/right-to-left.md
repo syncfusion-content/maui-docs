@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Right-to-Left in .NET MAUI Text Input Layout control | Syncfusion®
+title: Right-to-Left in .NET MAUI Text Input Layout Control | Syncfusion®
 description: Learn about Right-to-Left support in Syncfusion® .NET MAUI Text Input Layout (SfTextInputLayout) control and more.
 platform: maui
 control: SfTextInputLayout
 documentation: ug
-keywords: .net maui text input layout, syncfusion text input layout, text input layout maui.
+keywords: .net maui text input layout, syncfusion text input layout, text input layout maui
 ---
 
 # Right-to-Left in .NET MAUI Text Input Layout (SfTextInputLayout)
 
-The TextInputLayout supports to changing the flow of text to the right-to-left direction by setting the [FlowDirection](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.device.flowdirection?view=net-maui-7.0) to `RightToLeft.`
+The TextInputLayout supports changing the flow of text to the right-to-left direction by setting the [FlowDirection](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.device.flowdirection?view=net-maui-7.0) property to `RightToLeft`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -37,4 +37,5 @@ inputLayout.Content = new Entry();
 {% endtabs %}
 
 ![.NET MAUI TextInputLayout with right to left](images/RightToLeft/RTL.png)
+
 

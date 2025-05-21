@@ -9,15 +9,15 @@ documentation: ug
 
 # Placement Modes in .NET MAUI Rotator (SfRotator)
 
-By default, the rotator control displays the dots of each rotator item. It can be changed to any of the following types:
+By default, the rotator control displays navigation dots for each item. This can be customized to any of the following types:
 
-* [`Default`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.DotsPlacement.html#Syncfusion_Maui_Core_Rotator_DotsPlacement_Default) - Shows dots for each item in the .NET MAUI Rotator (SfRotator) by default.
-* [`None`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.DotsPlacement.html#Syncfusion_Maui_Core_Rotator_DotsPlacement_None)- Hides the dots, creating a clean appearance with no navigation indicators.
-* [`Outside`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.DotsPlacement.html#Syncfusion_Maui_Core_Rotator_DotsPlacement_OutSide) - Puts the dots around the rotator, offering a different style for navigation.
+- [`Default`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.DotsPlacement.html#Syncfusion_Maui_Core_Rotator_DotsPlacement_Default): Displays dots for each item in the .NET MAUI Rotator (SfRotator) by default.
+- [`None`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.DotsPlacement.html#Syncfusion_Maui_Core_Rotator_DotsPlacement_None): Hides the dots to create a clean appearance without navigation indicators.
+- [`Outside`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.DotsPlacement.html#Syncfusion_Maui_Core_Rotator_DotsPlacement_Outside): Positions dots around the rotator, offering a different navigation style.
  
 ## DotsPlacement
 
-The Display Type of Rotator can be modified using the `DotsPlacement` Mode. The `“None”` type can be used when the dots are not needed for the rotator control.
+The display type of the Rotator control can be modified using the `DotsPlacement` property. You can use the `None` type when navigation dots are not needed for the rotator control.
 
 {% tabs %}
 

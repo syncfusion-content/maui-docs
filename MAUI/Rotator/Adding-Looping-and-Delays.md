@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Adding Looping and Delays in .NET MAUI Rotator control | Syncfusion®
-description: Learn about Adding Looping and Delay support in Syncfusion® .NET MAUI Rotator (SfRotator) control and more.
+description: Learn how to add Looping and Delay support in the Syncfusion® .NET MAUI Rotator (SfRotator) control.
 platform: maui 
 control: Rotator
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Adding Looping and Delays in .NET MAUI Rotator (SfRotator)
 
-Looping and delay can be enabled in the [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1) control in .NET MAUI.
+Enable looping and delays in the [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1) control for .NET MAUI.
 
 ## Enable AutoPlay
 
-The [`EnableAutoPlay`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_EnableAutoPlay) property specifies whether the items should navigate automatically based on the [`NavigationDelay`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationDelay) property when the property value is set to true.
+The [`EnableAutoPlay`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_EnableAutoPlay) property determines if items should automatically navigate based on the [`NavigationDelay`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationDelay) property. By default, this property is set to `false`.
 
 N> By default, the property value is set to false.
 
@@ -374,3 +374,4 @@ namespace Rotator
 {% endhighlight %}
 
 {% endtabs %}
+

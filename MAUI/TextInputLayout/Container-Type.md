@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Container Type in .NET MAUI Text Input Layout control | Syncfusion®
-description: Learn here all about Container Type support in Syncfusion® .NET MAUI Text Input Layout (SfTextInputLayout) control and more.
+title: Container Type in .NET MAUI Text Input Layout Control | Syncfusion®
+description: Learn all about Container Type support in Syncfusion® .NET MAUI Text Input Layout (SfTextInputLayout) control and more.
 platform: maui
 control: SfTextInputLayout
 documentation: ug
-keywords: .net maui text input layout, syncfusion text input layout, text input layout maui.
+keywords: .net maui text input layout, syncfusion text input layout, text input layout maui
 ---
 
 # Container Type in .NET MAUI Text Input Layout (SfTextInputLayout)
 
-Containers improve the discoverability of input view by creating a contrast between the input view and assistive elements.
+Containers enhance the discoverability of input views by creating a visual contrast between the input field and assistive elements.
 
 ## Filled
 
-The background of the input view will be filled with container color, and its stroke (at the bottom edge) color and thickness will be changed based on its states. It can be enabled by setting the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ContainerType) property to [Filled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ContainerType.html#Syncfusion_Maui_Core_ContainerType_Filled).
+When the background of the input view is filled with container color, the stroke color and thickness at the bottom edge change based on the state. Enable this by setting the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ContainerType) property to [Filled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ContainerType.html#Syncfusion_Maui_Core_ContainerType_Filled).
 
 {% tabs %} 
 
@@ -44,7 +44,7 @@ inputLayout.Content = new Entry() { Text = "John" };
 
 ## Outlined
 
-When setting the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ContainerType) property to [Outlined](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ContainerType.html#Syncfusion_Maui_Core_ContainerType_Outlined), the container will be covered with a rounded-corner border.
+Set the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ContainerType) property to [Outlined](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ContainerType.html#Syncfusion_Maui_Core_ContainerType_Outlined) to surround the container with an outlined rounded-corner border.
 
 {% tabs %} 
 
@@ -73,9 +73,9 @@ inputLayout.Content = new Entry() { Text = "John" };
 
 ![Outlined type](images/ContainerType/Outlined.png)
 
-### Customize the corner radius of the outline border 
+### Customize the Corner Radius of the Outline Border
 
-When setting the [OutlineCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_OutlineCornerRadius) property to double value, the corner radius of the container will be changed.
+Customize the corner radius by setting the [OutlineCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_OutlineCornerRadius) property.
 
 {% tabs %}
 
@@ -103,12 +103,11 @@ inputLayout.Content = new Entry();
 
 ![OutlineCornerRadius img](images/ContainerType/CornerRadius.png)
 
->**NOTE**
-It is applicable for the outline border when setting the container type to outlined.
+> **NOTE**: This is applicable for the outline border when the container type is set to outlined.
 
 ### Custom Padding
 
-Spaces around the input view can be customized by setting the InputViewPadding property to [thickness](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.thickness?view=net-maui-7.0) value.
+Customize spaces around the input view by setting the `InputViewPadding` property to a [Thickness](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.thickness?view=net-maui-7.0) value.
 
 {% tabs %} 
 
@@ -140,7 +139,7 @@ inputLayout.Content = new Entry();
 
 ## None
 
-When setting the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ContainerType) property to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ContainerType.html#Syncfusion_Maui_Core_ContainerType_None), the container will have an empty background and enough spacing.
+For an unstyled container with a plain background and ample spacing, set the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ContainerType) property to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ContainerType.html#Syncfusion_Maui_Core_ContainerType_None).
 
 {% tabs %} 
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Visual states in .NET MAUI Button Control | Syncfusion®
-description: Learn about visual states support in the Syncfusion® .NET MAUI Button (SfButton) control, its elements, and more.
+title: "Visual States in .NET MAUI Button Control | Syncfusion®"
+description: "Learn about visual states support in the Syncfusion® .NET MAUI Button (SfButton) control, its elements, and more."
 platform: maui
 control: SfButton
 documentation: ug 
@@ -10,7 +10,7 @@ documentation: ug
 
 # Visual States in .NET MAUI Button (SfButton)
 
-The visual of the Button can be customized using `VisualStates`. The [SfButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) control contains the following five visual states:
+The visual appearance of the SfButton can be customized using `VisualStates`. The [SfButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) control supports the following five visual states:
 
 * Normal
 * Hovered
@@ -18,7 +18,11 @@ The visual of the Button can be customized using `VisualStates`. The [SfButton](
 * Checked
 * Disabled
 
-N> The visual states [Checked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_IsChecked) and Unchecked are only updated when enabling the [IsCheckable](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_IsCheckable) property in the SfButton.
+> **Note:** The visual states [Checked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_IsChecked) and Unchecked are only activated when the [IsCheckable](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_IsCheckable) property is enabled in the SfButton.
+
+## Example
+
+The following example demonstrates how to define visual states for the SfButton:
 
 {% tabs %}
 {% highlight xaml %}

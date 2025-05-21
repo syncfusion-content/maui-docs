@@ -1,25 +1,25 @@
 ---
 layout: post
-title: States and Colors the .NET MAUI Text Input Layout | Syncfusion®
-description: Learn here all about States and Colors support in the Syncfusion® .NET MAUI Text Input Layout (SfTextInputLayout) control and more.
+title: States and Colors in .NET MAUI Text Input Layout | Syncfusion®
+description: Learn about States and Colors support in the Syncfusion® .NET MAUI Text Input Layout (SfTextInputLayout) control and more.
 platform: maui
 control: SfTextInputLayout
 documentation: ug
-keywords: .net maui text input layout, syncfusion text input layout, text input layout maui.
+keywords: .net maui text input layout, syncfusion text input layout, text input layout maui
 ---
 
 # States and Colors in .NET MAUI Text Input Layout (SfTextInputLayout)
 
-Use the visual state manager to change the [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_Stroke) properties based on the visual states set from the code. The applicable visual states are normal, focused, and error.
+Utilize the Visual State Manager to change the [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_Stroke) properties based on visual states set in code. Applicable visual states include normal, focused, and error.
 
-Based on the states, the colors will be applied to the floated hint label and borders. So, when the input view is in a focused state, the focused state [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_Stroke) will be applied; it is similar to other states also. The current stroke can be obtained from the [CurrentActiveColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_CurrentActiveColor) property.
+Depending on the state, colors are applied to the floating hint label and borders. For instance, when the input view is focused, the focused state [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_Stroke) will be applied; the other states follow suit. You can obtain the current stroke color via the [CurrentActiveColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_CurrentActiveColor) property.
 
-N> The error color will not be set to `CurrentActiveColor` when the `HasError` property is set to `true.`
+N> The error color will not be set to `CurrentActiveColor` when the `HasError` property is set to `true`.
 
 ## Stroke
-The [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_Stroke) property value will be applied to the hint label and border of the SfTextInputLayout.
+The [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_Stroke) property value applies to the hint label and border of the `SfTextInputLayout`.
 
-I> Cursor color of the input view will be same as the `Accent` color of the application in each platform.
+I> The cursor color of the input view will match the `Accent` color of the application on each platform.
 
 {% tabs %} 
 
@@ -101,9 +101,9 @@ inputLayout.Style = style;
 
 ![States](images/StatesAndColors/States.png)
 
-## Disabled state
+## Disabled State
 
-The text input layout is disabled by setting the [IsEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_IsEnabled) property to `false.` The color of the container and other UI elements will also be changed to the disabled state, but its color cannot be customized.
+The text input layout can be disabled by setting the [IsEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_IsEnabled) property to `false`. The color of the container and other UI elements will change to the disabled state, though this color cannot be customized.
 
 {% tabs %} 
 
@@ -129,13 +129,12 @@ inputLayout.Content = new Entry();
 
 ![Disabled state](images/StatesAndColors/Disabled.jpg)
 
-
-## Container color
-The color of the container can be customized by setting the [ContainerBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ContainerBackground) property. It is applicable when the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ContainerType) property is set to [Filled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ContainerType.html#Syncfusion_Maui_Core_ContainerType_Filled) and [Outlined](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ContainerType.html#Syncfusion_Maui_Core_ContainerType_Outlined).
+## Container Color
+Customize the color of the container using the [ContainerBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ContainerBackground) property. This applies when the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ContainerType) property is set to [Filled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ContainerType.html#Syncfusion_Maui_Core_ContainerType_Filled) or [Outlined](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ContainerType.html#Syncfusion_Maui_Core_ContainerType_Outlined).
 
 ### Filled
 
-The color of the container is customized when the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ContainerType) is [Filled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ContainerType.html#Syncfusion_Maui_Core_ContainerType_Filled).
+Customize the container color when the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ContainerType) is [Filled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ContainerType.html#Syncfusion_Maui_Core_ContainerType_Filled).
 
 {% tabs %} 
 
@@ -167,7 +166,7 @@ inputLayout.Content = new Entry() { Text = "John" };
 
 ### Outlined
 
-The color of the container is customized when the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ContainerType) is [Outlined](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ContainerType.html#Syncfusion_Maui_Core_ContainerType_Outlined).
+Customize the container color when the [ContainerType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ContainerType) is [Outlined](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ContainerType.html#Syncfusion_Maui_Core_ContainerType_Outlined).
 
 {% tabs %} 
 
@@ -197,10 +196,9 @@ inputLayout.Content = new Entry();
 
 ![outlined](images/StatesAndColors/OutlinedContainerBackground.png)
 
+## Customizing the Text Color of Label
 
-## Customizing the text color of label
-
-You can customize the text color of the `hint` label, `helper` label, and `error` label using the [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LabelStyle.html#Syncfusion_Maui_Core_LabelStyle_TextColor) property of the [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LabelStyle.html).
+Customize the text color of the `hint`, `helper`, and `error` labels using the [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LabelStyle.html#Syncfusion_Maui_Core_LabelStyle_TextColor) property of [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LabelStyle.html).
 
 {% tabs %} 
 

@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Supported Input Views in .NET MAUI Text Input Layout | Syncfusion®
-description: Learn here all about Supported Input Views support in the Syncfusion® .NET MAUI Text Input Layout (SfTextInputLayout) control and more.
+description: Learn about supported input views in the Syncfusion® .NET MAUI Text Input Layout (SfTextInputLayout) control and more.
 platform: maui
 control: SfTextInputLayout
 documentation: ug
-keywords: .net maui text input layout, syncfusion text input layout, text input layout maui.
+keywords: .net maui text input layout, syncfusion text input layout, text input layout maui
 ---
 
 # Supported Input Views in .NET MAUI TextInputLayout (SfTextInputLayout)
@@ -14,7 +14,7 @@ Input views can be added to the text input layout control by setting the [Conten
 
 ## Entry
 
-To enter a single line text input, add [`Entry`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry).
+For single-line text input, use the [`Entry`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/entry) control.
 
 {% tabs %} 
 
@@ -43,9 +43,7 @@ inputLayout.Content = new Entry();
 
 ## Editor
 
-
-To enter multi-line text input, add [`Editor`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor), then set the [AutoSize](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.editor.autosize?view=net-maui-7.0#microsoft-maui-controls-editor-autosize) property to `TextChanges`.
-
+For multi-line text input, use the [`Editor`](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/editor) control, and set the [AutoSize](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.editor.autosize?view=net-maui-7.0#microsoft-maui-controls-editor-autosize) property to `TextChanges`.
 
 {% tabs %} 
 
@@ -73,14 +71,13 @@ inputLayout.Content = new Editor();
 
 ## Autocomplete
 
-To initialize the [Autocomplete](https://help.syncfusion.com/maui/autocomplete/overview) control and launch it in each platform, refer to the [getting started with autocomplete](https://help.syncfusion.com/maui/autocomplete/getting-started) documentation.
+To use the [Autocomplete](https://help.syncfusion.com/maui/autocomplete/overview) control across platforms, refer to the [getting started with autocomplete](https://help.syncfusion.com/maui/autocomplete/getting-started) guide.
 
 
 ### Selection Mode
 
-There are two different selection modes in [Autocomplete](https://help.syncfusion.com/maui/autocomplete/selection) control.
-
-N> For more information regarding Autocomplete selection modes, refer to the [Single Selection](https://help.syncfusion.com/maui/autocomplete/selection#single-selection) and [Multiple Selection](https://help.syncfusion.com/maui/autocomplete/selection#multiple-selection) documentation.
+The [Autocomplete](https://help.syncfusion.com/maui/autocomplete/selection) control supports two selection modes: Single and Multiple.
+N> For more details on Autocomplete selection modes, refer to the [Single Selection](https://help.syncfusion.com/maui/autocomplete/selection#single-selection) and [Multiple Selection](https://help.syncfusion.com/maui/autocomplete/selection#multiple-selection) documentation.
 
 #### Single Selection
 
@@ -176,16 +173,14 @@ inputLayout.Content = autocomplete;
 
 ![Autocomplete Multi Selection](images/SupportedInputViews/Autocomplete-Multi.jpg)
 
-## Combo box
+## ComboBox
 
-To initialize the [ComboBox](https://help.syncfusion.com/maui/combobox/overview) control and launch it in each platform, refer to the [getting started with combo box](https://help.syncfusion.com/maui/combobox/getting-started) documentation.
+To initialize and launch the [ComboBox](https://help.syncfusion.com/maui/combobox/overview) control across platforms, refer to the [getting started with combo box](https://help.syncfusion.com/maui/combobox/getting-started) guide.
 
 ### Selection Mode
 
-There are two different selection modes in [ComboBox](https://help.syncfusion.com/maui/combobox/selection) control.
-
-
-N> For more information regarding ComboBox selection modes, refer to the [Single Selection](https://help.syncfusion.com/maui/combobox/selection#single-selection) and [Multiple Selection](https://help.syncfusion.com/maui/combobox/selection#multiple-selection) documentation.
+The [ComboBox](https://help.syncfusion.com/maui/combobox/selection) control supports two selection modes: Single and Multiple.
+N> For more information on ComboBox selection modes, see the [Single Selection](https://help.syncfusion.com/maui/combobox/selection#single-selection) and [Multiple Selection](https://help.syncfusion.com/maui/combobox/selection#multiple-selection) documentation.
 
 #### Single Selection
 
@@ -226,7 +221,7 @@ inputLayout.Content = combobox;
 
 {% endtabs %}
 
-![Combobox Single Selection](images/SupportedInputViews/ComboBox.jpg)
+![ComboBox Single Selection](images/SupportedInputViews/ComboBox.jpg)
 
 #### Multiple Selection
 
@@ -283,7 +278,7 @@ inputLayout.Content = combobox;
 
 ## Masked Entry
 
-To initialize the [MaskedEntry](https://help.syncfusion.com/maui/masked-entry/overview) control and launch it in each platform, refer to the [getting started with masked entry](https://help.syncfusion.com/maui/masked-entry/getting-started) documentation.
+To initialize and launch the [MaskedEntry](https://help.syncfusion.com/maui/masked-entry/overview) control across platforms, refer to the [getting started with masked entry](https://help.syncfusion.com/maui/masked-entry/getting-started) guide.
 
 {% tabs %}
 {% highlight XAML %}
@@ -311,7 +306,7 @@ inputLayout.Content = new SfMaskedEntry() { MaskType = MaskedEntryMaskType.Simpl
 
 ## NumericEntry
 
-To initialize the `NumericEntry` control and launch it in each platform, refer to the `getting started with numeric entry` documentation.
+To initialize and launch the `NumericEntry` control across platforms, refer to the `getting started with numeric entry` guide.
 
 {% tabs %}
 {% highlight XAML %}
@@ -342,7 +337,7 @@ inputLayout.Content = new SfNumericEntry() { Value=100,
 
 ## Picker
 
-To initialize the [Picker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/picker) control and launch it in each platform, refer to the `getting started with picker` documentation.
+To initialize and launch the [Picker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/picker) control across platforms, refer to the `getting started with picker` guide.
 
 {% tabs %}
 {% highlight XAML %}
@@ -380,10 +375,11 @@ inputLayout.Content = picker;
 
 ![Picker](images/SupportedInputViews/Picker.jpg)
 
-N> Windows platform will not support `.NET MAUI Picker` as input view of the text input layout.
+N> The Windows platform does not support `.NET MAUI Picker` as an input view for the text input layout.
+
 ## TimePicker
 
-To initialize the [TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/timepicker) control and launch it in each platform, refer to the `getting started with time picker` documentation.
+To initialize and launch the [TimePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/timepicker) control across platforms, refer to the `getting started with time picker` guide.
 
 {% tabs %}
 {% highlight XAML %}
@@ -408,11 +404,11 @@ inputLayout.Content = new TimePicker();
 
 ![TimePicker](images/SupportedInputViews/TimePicker.jpg)
 
-N> Windows platform will not support `.NET MAUI TimePicker` as input view of the text input layout.
+N> The Windows platform does not support `.NET MAUI TimePicker` as an input view for the text input layout.
 
 ## DatePicker
 
-To initialize the [DatePicker]( https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/DatePicker) control and launch it in each platform, refer to the `getting started with date picker` documentation.
+To initialize and launch the [DatePicker](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/datepicker) control across platforms, refer to the `getting started with date picker` guide.
 
 {% tabs %}
 {% highlight XAML %}
@@ -437,5 +433,4 @@ inputLayout.Content = new DatePicker();
 
 ![DatePicker](images/SupportedInputViews/DatePicker.jpg)
 
-N> Windows platform will not support `.NET MAUI DatePicker` as input view of the text input layout.
-
+N> The Windows platform does not support `.NET MAUI DatePicker` as an input view for the text input layout.
