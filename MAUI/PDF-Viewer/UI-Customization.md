@@ -40,3 +40,5 @@ You can customize the loading indicator’s properties by applying a style with 
 
 {% endhighlight %} 
 {% endtabs %}
+
+N> For complete customization of the PDF Viewer, themes can be applied. Refer to the [theme user guide](https://help.syncfusion.com/maui/themes/themes) for detailed instructions. You can also explore the [sample project](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples/tree/master/Styles/PDFViewerThemes), which demonstrates the custom theme implementation for the PDF Viewer in .NET MAUI applications.
