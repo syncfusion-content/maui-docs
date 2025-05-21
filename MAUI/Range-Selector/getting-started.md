@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Range Selector control | Syncfusion®
-description: This section explains about the getting started with Syncfusion® MAUI Range Selector (SfRangeSelector) control.
+title: Getting Started with .NET MAUI Range Selector control | Syncfusion®
+description: Learn how to get started with the Syncfusion® MAUI Range Selector (SfRangeSelector) control in your .NET MAUI application.
 platform: maui
 control: SfRangeSelector
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 This section guides you through setting up and configuring a [Range Selector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSelector.html) in your .NET MAUI application. Follow the steps below to add a basic Range Selector to your project.
 
-To quickly get started with the .NET MAUI Range Selector, watch this video.
+To get started quickly with the .NET MAUI Range Selector, watch this video.
 
 {% youtube "https://www.youtube.com/watch?v=LrnvOOjQ7jE" %}
 
@@ -31,7 +31,7 @@ Before proceeding, ensure the following are in place:
 2. Name the project and choose a location. Then, click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Sliders NuGet Package
+## Step 2: Install the Syncfusion® MAUI Sliders NuGet Package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.Sliders](https://www.nuget.org/packages/Syncfusion.Maui.Sliders) and install the latest version.
@@ -39,7 +39,7 @@ Before proceeding, ensure the following are in place:
 
 ## Step 3: Register the Handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion<sup>®</sup> core.
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) NuGet package is a dependency for all Syncfusion® controls for .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion® core.
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;
