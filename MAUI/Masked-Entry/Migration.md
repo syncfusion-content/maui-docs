@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrating from Xamarin SfMaskedEdit to .NET MAUI SfMaskedEntry
 
-To migrate easier from the Xamarin SfMaskedEdit to [.NET MAUI SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html), most of the APIs are kept from the Xamarin SfMaskedEdit in MAUI SfMaskedEntry. However, to maintain the consistency of API naming in MAUI SfMaskedEntry, rename some of the APIs. The APIs changed in MAUI SfMaskedEntry from Xamarin SfMaskedEdit are detailed as follows.
+To facilitate easier migration from Xamarin SfMaskedEdit to [.NET MAUI SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html), most APIs have been preserved from Xamarin SfMaskedEdit in the MAUI SfMaskedEntry. However, some APIs have been renamed to maintain naming consistency within the MAUI environment. The API changes from Xamarin SfMaskedEdit to MAUI SfMaskedEntry are detailed below.
 
 ## Namespaces 
 
@@ -40,9 +40,7 @@ To migrate easier from the Xamarin SfMaskedEdit to [.NET MAUI SfMaskedEntry](htt
 
 ## Upcoming features
 
-  * Border customization
-  * HasError and Validation mode
-  * MaskFormat for clipboard operations
-  * Password character and password delay duration.
-
-  
+- Border customization
+- HasError and Validation mode
+- MaskFormat for clipboard operations
+- Password character and password delay duration.

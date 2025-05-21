@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Validation in .NET MAUI MaskedEntry control | Syncfusion®
-description: Learn here all about Validation support in Syncfusion® .NET MAUI Masked Entry (SfMaskedEntry) control and more.
+description: Learn all about validation support in Syncfusion® .NET MAUI Masked Entry (SfMaskedEntry) control and more.
 platform: maui
 control: SfMaskedEntry
 documentation: ug 
@@ -10,7 +10,7 @@ documentation: ug
 
 ## Validation Mode
 
-Input validation happens based on the value of the [ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_ValidationMode) property. The enum values of this property are:
+Input validation is determined by the [ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_ValidationMode) property. The possible enum values are:
 
 * KeyPress
 * LostFocus
@@ -34,11 +34,11 @@ maskedEntry.ValidationMode = InputValidationMode.KeyPress;
 {% endhighlight %}
 {% endtabs %}
 
-When the ValidationMode is [LostFocus](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.InputValidationMode.html#Syncfusion_Maui_Inputs_InputValidationMode_LostFocus), the validation takes place when the control lost its focus. For  [KeyPress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.InputValidationMode.html#Syncfusion_Maui_Inputs_InputValidationMode_KeyPress), the validation triggers for each key press.
+When `ValidationMode` is set to [LostFocus](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.InputValidationMode.html#Syncfusion_Maui_Inputs_InputValidationMode_LostFocus), validation occurs when the control loses focus. With [KeyPress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.InputValidationMode.html#Syncfusion_Maui_Inputs_InputValidationMode_KeyPress), validation triggers on each key press.
 
 ## HasError
 
-This read only property is used to check whether the validation succeeds or not. It returns true once validation succeeds or else returns false. The following code example shows the usage of [HasError](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_HasError) property.
+The `HasError` property is read-only and used to verify if validation is successful. It returns `true` if validation succeeds; otherwise, it returns `false`. The following code demonstrates the usage of the [HasError](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_HasError) property.
 
 {% tabs %}
 {% highlight c# %}

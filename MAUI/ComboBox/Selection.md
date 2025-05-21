@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Selection in .NET MAUI ComboBox control | Syncfusion®
-description: Learn all about selection modes support in Syncfusion® .NET MAUI ComboBox (SfComboBox) control and more here.
+title: Selection in .NET MAUI ComboBox Control | Syncfusion®
+description: Learn about selection mode support in the Syncfusion® .NET MAUI ComboBox (SfComboBox) control and more here.
 platform: maui
 control: SfComboBox
 documentation: ug
@@ -10,15 +10,15 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
 
 # Selection in .NET MAUI ComboBox (SfComboBox)
 
-The .NET MAUI ComboBox allows user to select single or multiple items from the .NET MAUI drop-down list. The selection mode can be set by using the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_SelectionMode) property. There are two different selection modes: [Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxSelectionMode.html#Syncfusion_Maui_Inputs_ComboBoxSelectionMode_Single), and [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxSelectionMode.html#Syncfusion_Maui_Inputs_ComboBoxSelectionMode_Multiple).
+The .NET MAUI ComboBox allows users to select single or multiple items from the drop-down list. The selection mode can be set using the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_SelectionMode) property. There are two selection modes available: [Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxSelectionMode.html#Syncfusion_Maui_Inputs_ComboBoxSelectionMode_Single) and [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ComboBoxSelectionMode.html#Syncfusion_Maui_Inputs_ComboBoxSelectionMode_Multiple).
 
-## Single selection
+## Single Selection
 
-The [.NET MAUI ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) allows users to select an single item from the .NET MAUI drop-down list.
+The [.NET MAUI ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) allows users to select a single item from the drop-down list.
 
 ### UI Selection 
 
-The selected item can be changed interactively by selecting from the .NET MAUI drop-down list or entering the value.
+The selected item can be changed interactively by selecting from the drop-down list or entering the value.
 
 {% tabs %}
 {% highlight xaml %}

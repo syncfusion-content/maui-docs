@@ -1,8 +1,8 @@
 ---
 
 layout: post
-title: Appearance and Styling in .NET MAUI Rating control | Syncfusion®
-description: Learn here all about Appearance and Styling support in Syncfusion® .NET MAUI Rating (SfRating) control and more.
+title: Appearance and Styling in .NET MAUI Rating Control | Syncfusion®
+description: Learn about the Appearance and Styling support in Syncfusion® .NET MAUI Rating (SfRating) control.
 platform: maui
 control: Rating
 documentation: ug
@@ -11,13 +11,13 @@ documentation: ug
 
 # Appearance and Styling in .NET MAUI Rating (SfRating)
 
-When the default view is not needed, you can customize the view of [.NET MAUI SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control. The [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control provides support to customize the item size, item count, and space between rating items.
+When the default view is not desired, you can customize the view of the [.NET MAUI SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control. The [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control provides options to customize item size, item count, and spacing between rating items.
 
 ## Set Size
 
-The [`ItemSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ItemSize) property sets the size of the rating items. 
+Use the [`ItemSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ItemSize) property to set the size of the rating items.
 
-N> By default, property value is 50.
+> Note: The default property value is 50.
 
 {% tabs %}
 
@@ -40,9 +40,9 @@ rating.ItemSize = 20;
 
 ## Set Number of Items
 
-The [`ItemCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ItemCount) property sets the number of rating items to be displayed. 
+Use the [`ItemCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ItemCount) property to set the number of rating items to be displayed.
 
-N> The default property value is 5.
+> Note: The default property value is 5.
 
 {% tabs %}
 
@@ -63,11 +63,11 @@ rating.ItemCount = 4;
 
 ![Set number of rating items](images/item-count.png)
  
-## Set Space between Items
+## Set Space Between Items
 
-The [`ItemSpacing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ItemSpacing) property sets the spacing between the rating items. 
+Use the [`ItemSpacing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ItemSpacing) property to set the spacing between rating items.
 
-N> By default, property value is 5.
+> Note: The default property value is 5.
 
 {% tabs %}
 
@@ -90,7 +90,7 @@ rating.ItemSpacing = 20;
 
 ## Rating Settings
 
-This section explains about various rating settings available in the [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control.
+This section explains various rating settings available in the [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control.
 
 {% tabs %}
 

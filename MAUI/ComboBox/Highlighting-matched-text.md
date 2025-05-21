@@ -1,31 +1,29 @@
 ---
 layout: post
-title: Highlighting matched text in .NET MAUI SfComboBox | Syncfusion®
-description: Learn about Highlighting matched text in .NET MAUI SfComboBox (SfComboBox) control and more details.
+title: Highlighting Matched Text in .NET MAUI SfComboBox | Syncfusion®
+description: Learn about highlighting matched text in the .NET MAUI SfComboBox (SfComboBox) control and more details.
 platform: maui
 control: SfComboBox
 documentation: ug
 keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobox maui, .net maui dropdown list, .net maui select menu.
 ---
 
-# Highlighting matched text
+# Highlighting Matched Text
 
-## Highlighting matched text in .NET MAUI SfComboBox
+## Highlighting Matched Text in .NET MAUI SfComboBox
 
 Highlight matching characters in a suggestion list to pick an item with more clarity. There are two ways to highlight the matching text:
 
-*   `First Occurrence`
+- `First Occurrence`
+- `Multiple Occurrence`
 
-*   `Multiple Occurrence`
+The text highlight can be indicated with various customizable styles by enabling the following properties:
 
-The text highlight can be indicated with various customizing styles by enabling the below properties. They are
-
-*   `HighlightedTextColor` - sets the color of the highlighted text for differentiating the highlighted characters.
-
-*   `HighlightTextFontAttributes` - sets the FontAttributes of the highlighted text.
+- `HighlightedTextColor` - Sets the color of the highlighted text for differentiating the highlighted characters.
+- `HighlightTextFontAttributes` - Sets the font attributes of the highlighted text.
 
 ## First Occurrence
-It highlights the first position of the matching characters in the suggestion list.
+This option highlights the first position of the matching characters in the suggestion list.
 
 {% tabs %}
 

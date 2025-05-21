@@ -9,7 +9,7 @@ documentation: ug
 
 # Hiding Prompt Characters in .NET MAUI Masked Entry (SfMaskedEntry)
 
-When the HidePromptOnLeave property is set to true, prompt characters are ignored when the control loses focus. Again, the prompt characters are restored when the control is focused.
+The `HidePromptOnLeave` property allows prompt characters to be hidden when the control loses focus. The prompt characters are restored when the control regains focus.
 
 {% tabs %}
 

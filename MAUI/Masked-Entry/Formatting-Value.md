@@ -7,18 +7,18 @@ control: SfMaskedEntry
 documentation: ug
 ---
 
-# Formatting value in .NET MAUI MaskedEntry
+# Formatting Value in .NET MAUI MaskedEntry
 
-The [MaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) control allows you to format input values with prompt and literal characters defined in the mask expression by setting the [ValueMaskFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.MaskedEntryMaskFormat.html) property. By default, the [Value](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_Value) property of the control includes the characters typed by the user and any prompt or literal characters in the input. The control provides several formatting options, which are listed as follows.
+The [MaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) control enables you to format input values using prompt and literal characters defined in the mask expression. This is done by setting the [ValueMaskFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.MaskedEntryMaskFormat.html) property. By default, the [Value](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_Value) property includes characters typed by the user, as well as any prompt or literal characters. The control offers several formatting options as listed below:
 
 1. ExcludePromptAndLiterals
 2. IncludePrompt
 3. IncludeLiterals
 4. IncludePromptAndLiterals
 
-## Exclude prompts and literals
+## Exclude Prompts and Literals
 
-Set up the MaskedEntry to exclude prompt and literal characters, preserving only the typed characters.
+Configure the MaskedEntry to exclude prompt and literal characters, maintaining only the characters typed by the user.
 
 {% tabs %}
 {% highlight XAML %}
@@ -48,9 +48,9 @@ SfMaskedEntry maskedEntry = new SfMaskedEntry
 
 ![MAUI MaskedEntry excludes prompts and literals](MaskedEntry_Images/maui_masked_entry_exclude_prompts_and_literals.png)
 
-## Include prompts
+## Include Prompts
 
-Set up the MaskedEntry to preserve typed and prompt characters, excluding literals.
+Set up the MaskedEntry to retain typed and prompt characters while excluding literals.
 
 {% tabs %}
 {% highlight XAML %}
@@ -80,9 +80,9 @@ SfMaskedEntry maskedEntry = new SfMaskedEntry
 
 ![MAUI MaskedEntry includes prompts](MaskedEntry_Images/maui_masked_entry_include_prompts.png)
 
-## Include literals
+## Include Literals
 
-Keep typed and literal characters in the input but exclude prompt characters.
+Preserve typed and literal characters in the input while excluding prompt characters.
 
 {% tabs %}
 {% highlight XAML %}
@@ -112,10 +112,9 @@ SfMaskedEntry maskedEntry = new SfMaskedEntry
 
 ![MAUI MaskedEntry includes literals](MaskedEntry_Images/maui_masked_entry_include_literals.png)
 
-## Include prompts and literals
+## Include Prompts and Literals
 
-Maintain typed, prompt, and literal characters in the input.
-
+Maintain the input inclusive of typed, prompt, and literal characters.
 {% tabs %}
 {% highlight XAML %}
 

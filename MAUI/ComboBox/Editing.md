@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Editing in .NET MAUI ComboBox control | Syncfusion®
-description: Learn all about Editable modes support in Syncfusion® .NET MAUI ComboBox (SfComboBox) control and more here.
+title: Editing in .NET MAUI ComboBox Control | Syncfusion®
+description: Learn all about editable modes support in the Syncfusion® .NET MAUI ComboBox (SfComboBox) control and more here.
 platform: maui
 control: SfComboBox
 documentation: ug
@@ -10,11 +10,11 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
 
 # Editing in .NET MAUI ComboBox (SfComboBox)
 
-The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control supports both editable and non-editable text boxes for selecting an item from a data source. To enable editing functionality, set [IsEditable](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_IsEditable) property as `true`. The default value is `false`.
+The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control supports both editable and non-editable text boxes for selecting an item from a data source. To enable editing functionality, set the [IsEditable](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_IsEditable) property to `true`. The default value is `false`.
 
 ## Editable ComboBox
 
-In the editable mode, the [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) allows users to edit in the text box and it automatically appends the remaining letters to the entered text when it is valid.
+In editable mode, the [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) allows users to edit in the text box and automatically appends the remaining letters to the entered text when it is valid.
 
 {% tabs %}
 {% highlight XAML %}

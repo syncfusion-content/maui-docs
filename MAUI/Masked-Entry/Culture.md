@@ -9,7 +9,7 @@ documentation: ug
 
 # Culture in .NET MAUI MaskedEntry
 
-The MaskedEntry allows you to set any [Culture](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_Culture) support for currency symbols, date separators, time separators, group separators, and decimal separators by using the following special symbols.
+The MaskedEntry control allows you to set any [Culture](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_Culture) for currency symbols, date separators, time separators, group separators, and decimal separators by using the following special symbols:
 
 <table>
 <tr>
@@ -59,7 +59,7 @@ Currency symbol determined by current culture.
 </tr>
 </table>
 
-The following example shows how to set the France culture for the currency symbol, group separator, and decimal separator.
+The example below demonstrates setting the France culture for the currency symbol, group separator, and decimal separator:
 
 {% tabs %}
 {% highlight C# %}
@@ -73,6 +73,6 @@ maskedEntry.Culture = new CultureInfo("fr-FR");
 {% endhighlight %}
 {% endtabs %}
 
-Based on the France Culture, the ‘$’ will be localized to ‘€’; ‘.’ will be localized to ‘,’ and ‘,’ will be localized to ‘ ‘(single white space).
+In the context of the France culture, the ‘$’ symbol localizes to ‘€’; the decimal point ‘.’ changes to ‘,’ and the group separator ‘,’ becomes a ‘ ‘ (single white space).
 
 ![MAUI MaskedEntry culture](MaskedEntry_Images/maui_masked_entry_culture.gif)

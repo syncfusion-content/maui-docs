@@ -1,21 +1,21 @@
 ---
 layout: post
 title: Use UpDown Button in .NET MAUI NumericEntry | Syncfusion®
-description: Learn here all about how to use UpDown Button (SpinButton) in Syncfusion® .NET MAUI NumericEntry (SfNumericEntry) control and more.
+description: Learn how to use the UpDown Button (SpinButton) in the Syncfusion® .NET MAUI NumericEntry (SfNumericEntry) control and more.
 platform: MAUI
-control:  SfNumericEntry
+control: SfNumericEntry
 documentation: ug
 ---
 
 # UpDown Button in .NET MAUI NumericEntry
 
-This section describes how to change the value in the [NumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control using keys, mouse scrolling, and the up-down button
+This section describes how to change the value in the [NumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control using keys, mouse scrolling, and the UpDown button.
 
-## Increase or decrease value
+## Increase or Decrease Value
 
 You can increment or decrement the value in the `NumericEntry` control using the **UpArrow**, **DownArrow**, **PageUp**, and **PageDown** keys. You can change the increment or decrement value when the Arrow keys are pressed using the [SmallChange](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_SmallChange) property and Page keys using the [LargeChange](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_LargeChange) property. By default, the value of the `SmallChange` property is **1**, and the `LargeChange` property is **10**. 
 
-N> The value in the `NumericEntry` can also be changed by mouse scrolling. The mouse scrolling increases or decreases the value based on the `SmallChange` property.
+> Note: The value in the `NumericEntry` can also be changed by mouse scrolling. The mouse scrolling increases or decreases the value based on the `SmallChange` property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -43,13 +43,13 @@ sfNumericEntry.VerticalOptions = LayoutOptions.Center;
 
 ![.NET MAUI NumericEntry Placeholder Text](GettingStarted_images/valuechange-bykeys.gif)
 
-## UpDown button placement
+## UpDown Button Placement
 
-You can increase or decrease the value of the `NumericEntry` control using the up-down button. By default, the value of the [UpDownPlacementMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_UpDownPlacementMode) property is **Hidden**. You can adjust the position of the up-down buttons by setting the `UpDownPlacementMode` property to **Inline** for horizontal orientation and **InlineVertical** for vertical orientation.
+You can increase or decrease the value of the `NumericEntry` control using the UpDown button. By default, the value of the [UpDownPlacementMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_UpDownPlacementMode) property is **Hidden**. You can adjust the position of the UpDown buttons by setting the `UpDownPlacementMode` property to **Inline** for horizontal orientation and **InlineVertical** for vertical orientation.
 
-N> When using the up-down button, the `NumericEntry` control value changes based on the value of the `SmallChange` property.
+> Note: When using the UpDown button, the `NumericEntry` control value changes based on the value of the `SmallChange` property.
 
-### UpDown button placement: Inline
+### UpDown Button Placement: Inline
 
 {% tabs %}
 {% highlight XAML %}
@@ -75,7 +75,7 @@ sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
 
 ![UpDown Placement in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonPlacement.gif)
 
-### UpDown button placement: InlineVertical
+### UpDown Button Placement: InlineVertical
 
 {% tabs %}
 {% highlight XAML %}
@@ -101,13 +101,13 @@ sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.InlineVerti
 
 ![UpDown Vertical Placement in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonPlacementVertical.png)
 
-## UpDown button alignment
+## UpDown Button Alignment
 
 You can adjust the alignment of the UpDown buttons in the [NumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control using the [UpDownButtonAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_UpDownButtonAlignment) property. Set its value to **Left**, **Right**, or **Both** to position the buttons on the left, right, or both sides of the entry field, respectively.
 
-N> By default, the `UpDownButtonAlignment` property is set to **Right**.  
+> Note: By default, the `UpDownButtonAlignment` property is set to **Right**.
 
-### UpDown button alignment: Left
+### UpDown Button Alignment: Left
 
 {% tabs %}
 {% highlight XAML %}
@@ -130,9 +130,9 @@ sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Left;
 {% endhighlight %}
 {% endtabs %}
 
-![UpDown Alignment is left in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonAlignmentLeft.png)
+![UpDown Alignment is Left in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonAlignmentLeft.png)
 
-### UpDown button alignment: Both
+### UpDown Button Alignment: Both
 
 {% tabs %}
 {% highlight XAML %}
@@ -157,9 +157,9 @@ sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Both;
 
 ![UpDown Alignment is Both in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonAlignmentBoth.png)
 
-## UpDown button customization
+## UpDown Button Customization
 
-## UpDown button color
+### UpDown Button Color
 
 Customize the `NumericEntry` control button color by using the [UpDownButtonColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_UpDownButtonColor) property.
 
@@ -190,7 +190,7 @@ sfNumericEntry.UpDownButtonColor = Colors.Blue;
 
 ![UpDownButtonColor support in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonColor.png)
 
-## UpDown button template
+### UpDown Button Template
 
 The `NumericEntry` control supports customization of the UpDownButton's appearance through the use of the [UpButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_UpButtonTemplate) and [DownButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_DownButtonTemplate) properties.
 {% tabs %}
@@ -295,11 +295,12 @@ The `NumericEntry` control supports customization of the UpDownButton's appearan
 
 ![UpDownButtonTemplate support in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonTemplate.png)
 
-## Auto reverse in SfNumericEntry
+## Auto Reverse in SfNumericEntry
 
 [Auto-reverse](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_AutoReverse) in NumericEntry allows the control to automatically switch direction when reaching its [Minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Minimum) or [Maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Maximum) value. When incrementing, it starts at the `Minimum` and progresses to the `Maximum`, and conversely.
 
-N> The default value of this property is `false.`
+> Note: The default value of this property is `false`.
+
 {% tabs %}
 {% highlight XAML %}
 

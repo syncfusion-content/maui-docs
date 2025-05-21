@@ -1,18 +1,18 @@
 ---
 layout: post
-title: No Results Found in .NET MAUI  Autocomplete control | Syncfusion®
-description: Learn about No Results Found support in .NET MAUI Autocomplete (SfAutocomplete) control and more details.
+title: "No Results Found in .NET MAUI Autocomplete Control | Syncfusion®"
+description: "Learn about the 'No Results Found' feature in the .NET MAUI Autocomplete (SfAutocomplete) control and understand its functionalities."
 platform: maui
 control: SfAutocomplete
 documentation: ug
 ---
 # No Results Found in .NET MAUI Autocomplete (SfAutocomplete)
 
-When the entered item is not in the suggestion list, [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) displays a text indicating there is no search results found. We can set the desire text to be displayed for indicating no results found with the [NoResultsFoundText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundText) and [NoResultsFoundTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundTemplate) properties.
+When the entered item is not found in the suggestion list, the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control displays a message indicating that no search results were found. You can set the desired text to be displayed for this message using the [NoResultsFoundText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundText) and [NoResultsFoundTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundTemplate) properties.
 
 ## NoResultsFoundText
-We can customize the desire text to be displayed for indicating no results found by using the [NoResultsFoundText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundText) property.
 
+The [NoResultsFoundText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundText) property allows you to customize the message text that indicates no results were found.
 {% tabs %}
 
 {% highlight xaml %}
@@ -43,8 +43,7 @@ SfAutocomplete autocomplete = new SfAutocomplete()
 
 ## NoResultsFoundTemplate
 
-We can customize the appearance of the desire text to be displayed for indicating no results found by using the [NoResultsFoundTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundTemplate) property.
-
+The [NoResultsFoundTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_NoResultsFoundTemplate) property allows you to customize the appearance of the message text that indicates no results were found.
 {% tabs %}
 {% highlight xaml %}
 
