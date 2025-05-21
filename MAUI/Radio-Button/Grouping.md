@@ -5,14 +5,14 @@ description: Learn about grouping support in Syncfusion® .NET MAUI Radio Button
 platform: MAUI
 control: SfRadioButton
 documentation: UG
-keywords : .NET MAUI Radio Button, MAUI Radio Button, MAUI Radio Button Group, MAUI Radio Button Grouping, MAUI Radio Group.
+keywords : .net maui radio button, maui radio button, maui radio button group, maui radio button grouping, maui radio group.
 ---
 
 # Grouping in .NET MAUI Radio Button (SfRadioButton)
 
-## Group Key
+## GroupKey
 
-The [GroupKey](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_GroupKey) in [.NET MAUI Radio Button](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) allows you to group a set of radio buttons present inside any layout. By grouping this way, you can select only one radio button per [GroupKey](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_GroupKey) at a time.
+The [GroupKey](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_GroupKey) in [.NET MAUI Radio Button](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) allows you to group a set of Radio Buttons present inside any layout. By grouping this way, you can select only one Radio Button per [GroupKey](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_GroupKey) at a time.
 
 * [CheckedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html#Syncfusion_Maui_Buttons_SfRadioGroup_CheckedItem) - Gets the current checked item from the .NET MAUI Radio Button group.
 
@@ -55,18 +55,18 @@ The [GroupKey](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRad
 {% endhighlight %}
 {% endtabs %}
 
-![GroupKey support for SfRadioButton](Images/Grouping/groupkey.png)
+![GroupKey](Images/Grouping/groupkey.png)
 
 ### CheckedChanged event
 
 The [CheckedChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html#Syncfusion_Maui_Buttons_SfRadioGroup_CheckedChanged) event of [SfRadioGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html) occurs when a checked item is changed. The argument contains the following information:
 
-* [PreviousItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.CheckedChangedEventArgs.html#Syncfusion_Maui_Buttons_CheckedChangedEventArgs_PreviousItem) - Gets the previously checked radio button from the group.
-* [CurrentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.CheckedChangedEventArgs.html#Syncfusion_Maui_Buttons_CheckedChangedEventArgs_CurrentItem) - Gets the currently checked radio button from the group.
+* [PreviousItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.CheckedChangedEventArgs.html#Syncfusion_Maui_Buttons_CheckedChangedEventArgs_PreviousItem) - Gets the previously checked Radio Button from the group.
+* [CurrentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.CheckedChangedEventArgs.html#Syncfusion_Maui_Buttons_CheckedChangedEventArgs_CurrentItem) - Gets the currently checked Radio Button from the group.
 
 ## .NET MAUI Radio Group
 
-[SfRadioGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html) is a container that contains a set of radio buttons. When you select a radio button in a .NET MAUI Radio Button group, all other items will be automatically deselected. At any given time, you can only select one radio button from the same .NET MAUI Radio Button group. It also includes the [CheckedChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html#Syncfusion_Maui_Buttons_SfRadioGroup_CheckedChanged) event and the [CheckedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html#Syncfusion_Maui_Buttons_SfRadioGroup_CheckedItem) property.
+[SfRadioGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html) is a container that contains a set of Radio Buttons. When you select a Radio Button in a .NET MAUI Radio Button group, all other items will be automatically deselected. At any given time, you can only select one Radio Button from the same .NET MAUI Radio Button group. It also includes the [CheckedChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html#Syncfusion_Maui_Buttons_SfRadioGroup_CheckedChanged) event and the [CheckedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html#Syncfusion_Maui_Buttons_SfRadioGroup_CheckedItem) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -93,7 +93,7 @@ The [CheckedChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI RadioGroup Image](Images/Grouping/radiogroup.png)
+![.NET MAUI Radio Group](Images/Grouping/radiogroup.png)
 
 ### Orientation in .NET MAUI Radio Group
 
@@ -124,13 +124,13 @@ The [CheckedChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI RadioGroup horizontal orientation](Images/Grouping/radiogrouporientation.png)
+![.NET MAUI Radio Group horizontal orientation](Images/Grouping/radiogrouporientation.png)
 
-## Selected Value
+## SelectedValue
 
-The [.NET MAUI RadioGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html) class defines a [SelectedValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html#Syncfusion_Maui_Buttons_SfRadioGroup_SelectedValue) property, of type `object`. This property represents the [Value](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_Value) of the checked [.NET MAUI RadioButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) within a defined group.
+The [.NET MAUI Radio Group](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html) class defines a [SelectedValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html#Syncfusion_Maui_Buttons_SfRadioGroup_SelectedValue) property, of type `object`. This property represents the [Value](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_Value) of the checked [.NET MAUI Radio Button](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) within a defined group.
 
-When any [.NET MAUI RadioButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) within a  [.NET MAUI RadioGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html) is checked, the [Value](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_Value) of that RadioButton is assigned to the [SelectedValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html#Syncfusion_Maui_Buttons_SfRadioGroup_SelectedValue) property of the RadioGroup. The `SelectedValue` is dynamically updated whenever a different RadioButton within the RadioGroup is checked.
+When any [.NET MAUI Radio Button](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) within a  [.NET MAUI Radio Group](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html) is checked, the [Value](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_Value) of that Radio Button is assigned to the [SelectedValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioGroup.html#Syncfusion_Maui_Buttons_SfRadioGroup_SelectedValue) property of the Radio Group. The `SelectedValue` is dynamically updated whenever a different Radio Button within the Radio Group is checked.
 
 {% tabs %}
 {% highlight xaml %}
@@ -170,4 +170,4 @@ radioGroup.Children.Add(creditCardRadioButton);
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Radio Button SelectedValue](Images/Grouping/selectedvalue.png)
+![SelectedValue](Images/Grouping/selectedvalue.png)

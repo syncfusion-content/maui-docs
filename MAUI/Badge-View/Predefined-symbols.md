@@ -1,10 +1,10 @@
 ---
 
 layout: post
-title: Predefined Symbols of Syncfusion® Badge view control for .NET MAUI
-description: Learn how to set Syncfusion® badge view predefined symbols and types of badge icons on the .NET MAUI platform.
+title: Predefined Symbols of Syncfusion® .NET MAUI Badge View
+description: Learn how to set predefined symbols and types of badge icons in Syncfusion® .NET MAUI Badge View.
 platform: MAUI
-control: Badge View
+control: SfBadgeView
 documentation: UG
 
 ---
@@ -23,7 +23,7 @@ The [.NET MAUI Badge View](https://www.syncfusion.com/maui-controls/maui-badge-v
 * Prohibit1
 * Prohibit2
 
-N> When both the `Icon` and `BadgeText` are set for the badge view, the badge text has higher priority and will be rendered in output.
+N> When both the `Icon` and `BadgeText` are set for the Badge View, the badge text has higher priority and will be rendered in output.
 
 {% tabs %}
 
@@ -62,5 +62,5 @@ N> When both the `Icon` and `BadgeText` are set for the badge view, the badge te
 
 {% endtabs %}
 
-![BadgeView Badge Icon](predefined-symbols_images/predefinedsymbols.png)
+![Badge icon](predefined-symbols_images/predefinedsymbols.png)
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Header display Mode in .NET MAUI Tab View control | Syncfusion®
+title: Header Display Mode in .NET MAUI Tab View control | Syncfusion®
 description: Learn all about header display mode support in the Syncfusion® .NET MAUI Tab View (SfTabView) control and more.
 platform: MAUI
 control: SfTabView
@@ -15,7 +15,7 @@ By default, the [.NET MAUI Tab View](https://help.syncfusion.com/cr/maui/Syncfus
 * Image
 * Text
 
-![Image for HeaderDisplayMode](images/Header-Display-Mode.png)
+![HeaderDisplayMode](images/Header-Display-Mode.png)
 
 The Tab View can be modified by setting the [HeaderDisplayMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_HeaderDisplayMode) property of the [.NET MAUI Tab View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.html).
 

@@ -1,9 +1,9 @@
 ---
 layout: post
-title: The .NET MAUI Scale Animation | Effects View control | Syncfusion<sup>®</sup>
-description: Learn all about scale effect support in Syncfusion<sup>®</sup> .NET MAUI Effects View (SfEffectsView) control and more.
+title: The .NET MAUI Scale Animation | Effects View Control | Syncfusion®
+description: Learn all about scale effect support in Syncfusion® .NET MAUI Effects View (SfEffectsView) control and more.
 platform: MAUI
-control: Effects View
+control: SfEffectsView
 documentation: UG
 ---
 
@@ -38,4 +38,4 @@ var effectsView = new SfEffectsView
 
 {% endtabs %}
 
-![.net maui scale animation](Effects_images/net_maui_scale_animation.png)
+![Scale animation](Effects_images/net_maui_scale_animation.png)

@@ -3,7 +3,7 @@ layout: post
 title: Configuring the Drawer in .NET MAUI Navigation Drawer | Syncfusion®
 description: Learn all about configuring the drawer in different sides support in the Syncfusion® .NET MAUI Navigation Drawer (SfNavigationDrawer) control and more.
 platform: MAUI
-control: SfNavigationDrawer
+control: SfNavigationDrawer 
 documentation: UG
 ---
 # Configure the Drawer in Different Sides in .NET MAUI Navigation Drawer

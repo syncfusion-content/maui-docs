@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Migrating from Xamarin to .NET MAUI SfEffectsView | Syncfusion® 
-description: Learn here all about Migrating from Syncfusion® Xamarin Effects View to Syncfusion® .NET MAUI Effects View control and more.
+description: Learn here all about migrating from Syncfusion® Xamarin Effects View to Syncfusion® .NET MAUI Effects View control and more.
 platform: MAUI
-control: Effects View
+control: SfEffectsView
 documentation: UG
 ---  
 
@@ -36,7 +36,7 @@ To ease the migration from Xamarin SfEffectsView to .NET MAUI SfEffectsView, mos
 <tr>
 <td>{{'[HighlightColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html#Syncfusion_XForms_EffectsView_SfEffectsView_HighlightColor)'| markdownify }}</td>
 <td>{{'[HighlightBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_HighlightBackground)'| markdownify }}</td>
-<td>Gets or sets the brush to highlight the effects view.</td></tr>
+<td>Gets or sets the brush to highlight the Effects View.</td></tr>
 <tr>
 <td>{{'[RippleColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.EffectsView.SfEffectsView.html#Syncfusion_XForms_EffectsView_SfEffectsView_RippleColor)' | markdownify }}</td>
 <td>{{'[RippleBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_RippleBackground)'| markdownify }}</td>

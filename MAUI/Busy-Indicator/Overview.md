@@ -1,23 +1,23 @@
 ---
 layout: post
-title: About .NET MAUI Busy Indicator control | Syncfusion®
+title: About .NET MAUI Busy Indicator Control | Syncfusion®
 description: Learn here all about introduction of the Syncfusion® .NET MAUI Busy Indicator (SfBusyIndicator) control, its elements and more.
 platform: MAUI
-control: Busy Indicator
+control: SfBusyIndicator
 documentation: UG
-keywords : .NET MAUI Busy Indicator, MAUI Busy Indicator, MAUI Loading Indicator
+keywords : .net maui busy indicator, maui busy indicator, maui loading indicator
 ---
 
 # .NET MAUI Busy Indicator (SfBusyIndicator) Overview
 
-The Busy Indicator control for .NET MAUI provides an indication of app loading, data processing, and more. It can be customized in terms of indicator size, color, speed and additional options.
+The .NET MAUI Busy Indicator control provides an indication of app loading, data processing, and more. It can be customized in terms of indicator size, color, speed and additional options.
 
 ## Key features
 
-* Offers three different animation types : Circular Material, Linear Material and Cupertino.
+* Offers seven different animation types : Circular Material, Linear Material, Cupertino, Single Circle, Double Circle, Globe and Horizontal Pulsing Box.
 * Supports customization of the indicator color and overlay background.
 * Allows customization of the animation duration.
 * Indicator size can be tailored to your needs.
 * Displays a title with customizable font options.
 
-![Overview Image](Images/Overview/Overview.gif)
+![.NET MAUI Busy Indicator](Images/Overview/Overview.gif)

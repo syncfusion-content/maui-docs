@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migrating from Xamarin to .NET MAUI SfBadgeView | Syncfusion® 
-description: Learn how to migrate from Syncfusion® Xamarin BadgeView to Syncfusion® .NET MAUI BadgeView control and more.
+title: Migrating from Xamarin to .NET MAUI Badge View | Syncfusion® 
+description: Learn how to migrate from Syncfusion® Xamarin Badge View to Syncfusion® .NET MAUI Badge View control and more.
 platform: MAUI
 control: SfBadgeView
 documentation: UG
@@ -67,7 +67,7 @@ To migrate easier from Xamarin SfBadgeView to .NET MAUI SfBadgeView, we kept mos
 <td>BadgePosition</td>
 <td>BottomLeft,<br/>BottomRight,<br/>TopLeft,<br/>TopRight</td>
 <td>Bottom,<br/>BottomLeft,<br/>BottomRight,<br/>Left,<br/>Right,<br/>Top,<br/>TopLeft,<br/>TopRight</td>
-<td>Defines the position of the badge over the badge view control.</td></tr>
+<td>Defines the position of the badge over the Badge View control.</td></tr>
 </table>
 
 ## Classes 

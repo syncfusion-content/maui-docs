@@ -5,7 +5,7 @@ description: Learn about the customization support in the Syncfusion® .NET MAUI
 platform: MAUI
 control: SfSwitch
 documentation: UG
-keywords : .NET MAUI Switch, MAUI Switch, .NET MAUI Switch Customize, MAUI Switch Customize, MAUI Switch Color, MAUI Switch Size, MAUI Switch Icon.  
+keywords : .net maui switch, maui switch, .net maui switch customize, maui switch customize, maui switch color, maui switch size, maui switch icon.  
 ---
 
 # Customization in .NET MAUI Switch (SfSwitch)
@@ -118,7 +118,7 @@ this.Content = sfSwitch;
 
 {% endtabs %}
 
-![switch control with visual state customization](images/customization/Colors.png)
+![Visual state customization](images/customization/Colors.png)
 
 ## Sizing
 
@@ -225,9 +225,9 @@ this.Content = sfSwitch;
 
 {% endtabs %}
 
-![switch conrol with sizing](images/customization/Sizing.png)
+![Sizing](images/customization/Sizing.png)
 
-## Custom Path
+## CustomPath
 
 In the .NET MAUI Switch control, customize the thumb's icon using the following properties:
 
@@ -343,7 +343,7 @@ this.Content = sfSwitch;
 
 {% endtabs %}
 
-![Switch control with custom path](images/Path/Path.gif)
+![CustomPath](images/Path/Path.gif)
 
 N> Keep the size of the [`CustomPath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SwitchSettings.html#Syncfusion_Maui_Buttons_SwitchSettings_CustomPath) within the dimensions of the thumb.
 

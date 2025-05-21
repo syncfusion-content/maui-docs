@@ -15,7 +15,7 @@ The drawer in the SfNavigationDrawer can be toggled using the following methods:
 * ToggleDrawer Method
 * Swipe Gesture
 
-## Opening Drawer Programmatically
+## Opening drawer programmatically
 
 The [IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_IsOpen) property and [ToggleDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ToggleDrawer) method enable programmatically opening or closing the drawer.
 

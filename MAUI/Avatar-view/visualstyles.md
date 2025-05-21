@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Visual Style in Syncfusion® Avatar View .NET MAUI.
-description: This section explains the different visual style types available in .NET MAUI SfAvatarView.
+title: Visual Style in Syncfusion® .NET MAUI Avatar View.
+description: This section explains the different visual style types available in .NET MAUI Avatar View.
 platform: MAUI
 control: SfAvatarView
 documentation: UG
@@ -19,7 +19,7 @@ The [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAv
 
 The Custom style allows you to customize the control by adjusting size, colors, images, etc. For detailed customization options, refer to the Customization documentation in [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1).
 
-N> The default visual type is Custom.
+N> The default visual type is `Custom`.
 
 ## Circle
 
@@ -31,7 +31,7 @@ You can directly apply circular styling to the [SfAvatarView](https://help.syncf
 * SmallCircle
 * ExtraSmallCircle
 
-The following code sample demonstrates how to define the visual style of a circle AvatarView.
+The following code sample demonstrates how to define the visual style of a circle Avatar View.
 
 {% tabs %}
 
@@ -240,7 +240,7 @@ this.Content = stack;
 
 {% endtabs %}
 
-![SfAvatarView control with circle visual style](VisualStyles_Images/VisualCircle_AvatarView.png)
+![Circle visual style](VisualStyles_Images/VisualCircle_AvatarView.png)
 
 ## Square
 
@@ -252,7 +252,7 @@ You can directly apply square styling to the [SfAvatarView](https://help.syncfus
 * SmallSquare
 * ExtraSmallSquare
 
-The following code sample demonstrates how to define visual style of a square AvatarView.
+The following code sample demonstrates how to define visual style of a square Avatar View.
 
 {% tabs %}
 
@@ -461,5 +461,4 @@ this.Content = stack;
 {% endhighlight %}
 {% endtabs %}
 
-![SfAvatarView control with square visual style](VisualStyles_Images/VisualSquare_AvatarView.png)
-
+![Square visual style](VisualStyles_Images/VisualSquare_AvatarView.png)

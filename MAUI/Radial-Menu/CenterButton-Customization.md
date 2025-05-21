@@ -1,15 +1,15 @@
 ---
 layout: post
-title: CenterButton Customization in MAUI Radial Menu Control | Syncfusion®
-description: Learn about CenterButton Customization support in Syncfusion® MAUI Radial Menu(SfRadialMenu) control and more.
+title: CenterButton Customization in .NET MAUI Radial Menu Control | Syncfusion®
+description: Learn about center button customization support in Syncfusion® .NET MAUI Radial Menu (SfRadialMenu) control and more.
 platform: MAUI
-control: RadialMenu (SfRadialMenu)
+control: SfRadialMenu
 documentation: UG
 ---
 
 # CenterButton Customization in MAUI Radial Menu (SfRadialMenu)
 
-The CenterButton or BackButton in the radial menu is a view in the center of the radial menu. It performs operations such as opening and closing the rim and navigating to the next-level items. You can customize the CenterButton/BackButton with `FontIcon`, `Custom View`, and `Caption`.
+The center button or back button in the Radial Menu is a view in the center of the Radial Menu. It performs operations such as opening and closing the rim and navigating to the next-level items. You can customize the CenterButton/BackButton with `FontIcon`, `Custom View`, and `Caption`.
 
 ## CenterButtonText and CenterButtonBackText
 
@@ -102,7 +102,7 @@ namespace RadialSample
 
 {% endtabs %}
 
-![Display RadialMenu with CenterButtonText and CenterButtonBackText.](images/centerbutton-customization/maui-radialmenu-centerbutton-customization-text.png)
+![CenterButtonText and CenterButtonBackText.](images/centerbutton-customization/maui-radialmenu-centerbutton-customization-text.png)
 
 ## CenterButtonTextColor and CenterButtonBackTextColor
 
@@ -266,7 +266,7 @@ namespace RadialSample
 
 {% endtabs %}
 
-![Display RadialMenu with BackgroundColor.](images/centerbutton-customization/maui-radialmenu-centerbutton-customization-backgroundcolor.png)
+![CenterButtonBackgroundColor](images/centerbutton-customization/maui-radialmenu-centerbutton-customization-backgroundcolor.png)
 
 ## CenterButtonRadius
 
@@ -328,7 +328,7 @@ namespace RadialSample
 
 {% endtabs %}
 
-![Display RadialMenu with CenterButtonRadius.](images/centerbutton-customization/maui-radialmenu-centerbutton-customization-radius.png)
+![CenterButtonRadius](images/centerbutton-customization/maui-radialmenu-centerbutton-customization-radius.png)
 
 ## CenterButtonFontFamily and CenterButtonBackFontFamily
 
@@ -673,7 +673,7 @@ namespace RadialSample
 
 {% endtabs %}
 
-![Display RadialMenu with Stroke.](images/centerbutton-customization/maui-radialmenu-centerbutton-customization-stroke.png)
+![CenterButtonStroke](images/centerbutton-customization/maui-radialmenu-centerbutton-customization-stroke.png)
 
 ## CenterButtonStrokeThickness
 
@@ -738,7 +738,7 @@ namespace RadialSample
 
 {% endtabs %}
 
-![Display RadialMenu with StrokeThickness.](images/centerbutton-customization/maui-radialmenu-centerbutton-customization-strokethickness.png)
+![CenterButtonStrokeThickness](images/centerbutton-customization/maui-radialmenu-centerbutton-customization-strokethickness.png)
 
 ## CenterButtonView and CenterButtonBackView
 
@@ -858,7 +858,7 @@ namespace RadialSample
 
 {% endtabs %}
 
-![Display RadialMenu with CenterButtonView and CenterButtonBackView.](images/centerbutton-customization/maui-radialmenu-centerbutton-customization-frontview-and-backview.png)
+![CenterButtonView and CenterButtonBackView](images/centerbutton-customization/maui-radialmenu-centerbutton-customization-frontview-and-backview.png)
 
 ## EnableCenterButtonAnimation
 
@@ -921,7 +921,7 @@ namespace RadialSample
 
 ## CenterButtonFontAutoScalingEnabled
 
-The [CenterButtonFontAutoScalingEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonFontAutoScalingEnabled) property is used to automatically scale the Radial menu's center button font size based on the operating system's text size. The default value of the `CenterButtonFontAutoScalingEnabled` property is `false.` This property applies to both the  [`CenterButtonText`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonText) and the [`CenterButtonBackText`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonBackText).
+The [CenterButtonFontAutoScalingEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonFontAutoScalingEnabled) property is used to automatically scale the Radial Menu's center button font size based on the operating system's text size. The default value of the `CenterButtonFontAutoScalingEnabled` property is `false.` This property applies to both the  [`CenterButtonText`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonText) and the [`CenterButtonBackText`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonBackText).
 
 {% tabs %}
 

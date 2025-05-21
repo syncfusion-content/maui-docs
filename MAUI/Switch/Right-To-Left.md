@@ -5,7 +5,7 @@ description: Learn all about Right To Left support in the Syncfusion®.NET MAUI 
 platform: MAUI
 control: SfSwitch
 documentation: UG
-keywords : .NET MAUI Switch, MAUI Switch, .NET MAUI Switch RTL, MAUI Switch Flow Direction.
+keywords : .net maui switch, maui switch, .net mauu switch rtl, maui switch flow direction.
 ---
 
 # Right To Left in .NET MAUI Switch (SfSwitch)
@@ -30,4 +30,4 @@ this.Content = sfSwitch;
 
 {% endtabs %}
 
-![SfSwitch with RTL flow direction](images/RTL/RTL_Switch.png)
+![RTL flow direction](images/RTL/RTL_Switch.png)

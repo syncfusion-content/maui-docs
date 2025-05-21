@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Methods in .NET MAUI Effects View control | Syncfusion®
+title: Methods in .NET MAUI Effects View Control | Syncfusion®
 description: Learn here all about methods support in Syncfusion® .NET MAUI Effects View (SfEffectsView) control and more.
 platform: MAUI
-control: Effects View
+control: SfEffectsView
 documentation: UG
 ---
 

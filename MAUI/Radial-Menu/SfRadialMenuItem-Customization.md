@@ -1,15 +1,15 @@
 ---
 layout: post
-title: SfRadialMenuItems Customization in MAUI Radial Menu | Syncfusion®
-description: Learn about SfRadialMenuItems customization support in the Syncfusion® MAUI Radial Menu (SfRadialMenu) control and more.
+title: SfRadialMenuItems Customization in .NET MAUI Radial Menu | Syncfusion®
+description: Learn about SfRadialMenuItem's customization support in the Syncfusion® .NET MAUI Radial Menu (SfRadialMenu) control and more.
 platform: MAUI
-control: RadialMenu (SfRadialMenu)
+control: SfRadialMenu
 documentation: UG
 ---
 
-# SfRadialMenuItems Customization in MAUI Radial Menu (SfRadialMenu)
+# SfRadialMenuItem's Customization in MAUI Radial Menu (SfRadialMenu)
 
-The [`SfRadialMenuItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html) class provides various options to customize items with `Custom Views`, `FontIcons`, and `Images`. You can add radial menu items by hierarchy. To add a [`SfRadialMenuItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html) to a [`SfRadialMenu`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html), create an instance of [`SfRadialMenuItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html), and add it to the [`Items`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_Items) property.
+The [`SfRadialMenuItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html) class provides various options to customize items with `Custom Views`, `FontIcons`, and `Images`. You can add Radial Menu items by hierarchy. To add a [`SfRadialMenuItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html) to a [`SfRadialMenu`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html), create an instance of [`SfRadialMenuItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html), and add it to the [`Items`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_Items) property.
 
 ## Items
 
@@ -221,7 +221,7 @@ namespace RadialSample
 
 {% endtabs %}
 
-![Display RadialMenuItem with ItemHeight and ItemWidth.](images/radialmenuitem-customization/maui-radialmenu-radialmenuitem-itemheight-and-itemwidth.png)
+![RadialMenuItem with ItemHeight and ItemWidth.](images/radialmenuitem-customization/maui-radialmenu-radialmenuitem-itemheight-and-itemwidth.png)
 
 ## BackgroundColor
 
@@ -288,7 +288,7 @@ namespace RadialSample
 
 {% endtabs %}
 
-![Display RadialMenuItem with BackgroundColor.](images/radialmenuitem-customization/maui-radialmenu-radialmenuitem-backgroundcolor.png)
+![RadialMenuItem with BackgroundColor.](images/radialmenuitem-customization/maui-radialmenu-radialmenuitem-backgroundcolor.png)
 
 ## FontFamily
 
@@ -730,9 +730,9 @@ namespace RadialMenuCommandSample
 
 {% endhighlight %}
 
-## Font Auto Scaling Enabled
+## FontAutoScalingEnabled
 
-The [FontAutoScalingEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_FontAutoScalingEnabled) property is used to automatically scale the Radial menu item's font size based on the operating system's text size. The default value of the `FontAutoScalingEnabled` property is `false`.
+The [FontAutoScalingEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_FontAutoScalingEnabled) property is used to automatically scale the Radial Menu item's font size based on the operating system's text size. The default value of the `FontAutoScalingEnabled` property is `false`.
 
 {% tabs %}
 

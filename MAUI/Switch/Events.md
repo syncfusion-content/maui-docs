@@ -5,7 +5,7 @@ description: Learn about event support in the Syncfusion® .NET MAUI Switch cont
 platform: MAUI
 control: SfSwitch
 documentation: UG
-keywords : .NET MAUI Switch, MAUI Switch, .NET MAUI Switch Events, MAUI Switch Event.
+keywords : .net maui switch, maui switch, .net maui switch events, maui switch event.
 ---
 
 # Events in .NET MAUI Switch
@@ -54,7 +54,7 @@ private async void SfSwitch_StateChanged(object sender, SwitchStateChangedEventA
 
 {% endtabs %}
 
-![SwitchStateChangedEventArgs](images/Events/Events.gif)
+![StateChanged event](images/Events/Events.gif)
 
 ## StateChanging event
 

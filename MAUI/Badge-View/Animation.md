@@ -1,10 +1,10 @@
 ---
 
 layout: post
-title: Badge Animation with Syncfusion® Badge View control for .NET MAUI
+title: Badge Animation with Syncfusion® .NET MAUI Badge View
 description: Learn all about Animation support in the Syncfusion® .NET MAUI Badge View (SfBadgeView) control and more.
 platform: MAUI
-control: Badge View
+control: SfBadgeView
 documentation: UG
 
 ---
@@ -56,11 +56,11 @@ Content = sfBadgeView;
 
 {% endtabs %}
 
-![.NET Maui Badge View Animation](animation_images/net_maui_badge_view_animation.gif)
+![Animation](animation_images/net_maui_badge_view_animation.gif)
 
-## Animation Duration
+## AnimationDuration
 
-The [AnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_AnimationDuration) property in the [Badge Settings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_BadgeSettings) of the [Badge View](https://www.syncfusion.com/maui-controls/maui-badge-view) can be used to set the animation speed based on your specified value. A smaller duration value accelerates the animation speed. The default value is 250.
+The [AnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_AnimationDuration) property in the [BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_BadgeSettings) of the [Badge View](https://www.syncfusion.com/maui-controls/maui-badge-view) can be used to set the animation speed based on your specified value. A smaller duration value accelerates the animation speed. The default value is `250`.
 
 {% tabs %}
 

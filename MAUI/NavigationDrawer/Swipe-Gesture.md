@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Swipe Gesture in .NET MAUI Navigation Drawer | Syncfusion®
-description: Learn about SwipGesture support in the Syncfusion® .NET MAUI Navigation Drawer (SfNavigationDrawer) control and more.
+description: Learn about Swipe Gesture support in the Syncfusion® .NET MAUI Navigation Drawer (SfNavigationDrawer) control and more.
 platform: MAUI
 control: SfNavigationDrawer
 documentation: UG
@@ -9,9 +9,9 @@ documentation: UG
 
 # Swipe Gesture in .NET MAUI Navigation Drawer (SfNavigationDrawer)
 
-The NavigationDrawer supports swipe gesture for both opening and closing the drawer. 
+The Navigation Drawer supports swipe gesture for both opening and closing the drawer. 
 
-## Enabling Swipe Gesture
+## Enabling swipe gesture
 
 The [EnableSwipeGesture](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_EnableSwipeGesture) property can activate or deactivate the swipe functionality in the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.html).
 
@@ -42,7 +42,7 @@ this.Content = navigationDrawer;
 
 {% endtabs %}
 
-## Swipe Sensitivity
+## Swipe sensitivity
 
 The [TouchThreshold](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_TouchThreshold) property in the [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.html) can expand the swipe region. The default value of TouchThreshold is `120`.
 

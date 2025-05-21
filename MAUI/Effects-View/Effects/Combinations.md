@@ -1,13 +1,13 @@
 ---
 layout: post
-title: The .NET MAUI Combination Effects | Effects View control | Syncfusion<sup>®</sup>
-description: Learn all about the combination of effects support in Syncfusion<sup>®</sup> .NET MAUI Effects View (SfEffectsView) control and more.
+title: The .NET MAUI Combination Effects | Effects View Control | Syncfusion®
+description: Learn all about the combination of effects support in Syncfusion® .NET MAUI Effects View (SfEffectsView) control and more.
 platform: MAUI
-control: Effects View
+control: SfEffectsView
 documentation: UG
 ---
 
-# Combination of Effects 
+# Combination of effects 
 
 The [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) control supports applying multiple [SfEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html) in combination. Below are some valid combinations of [SfEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html):
 

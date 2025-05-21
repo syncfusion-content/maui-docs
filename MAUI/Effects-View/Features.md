@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Features in .NET MAUI Effects View control | Syncfusion®
+title: Features in .NET MAUI Effects View Control | Syncfusion®
 description: Learn here all about Features support in Syncfusion® .NET MAUI Effects View (SfEffectsView) control and more.
 platform: MAUI
-control: Effects View
+control: SfEffectsView
 documentation: UG
 ---
 
@@ -38,7 +38,7 @@ By enabling the [FadeOutRipple](https://help.syncfusion.com/cr/maui/Syncfusion.M
 
 {% endtabs %}
 
-![.NET MAUI Effects View FadeOutRipple](Features_images/EffectsView_Fadeout_Ripple.gif)
+![FadeOutRipple](Features_images/EffectsView_Fadeout_Ripple.gif)
 
 ## IsSelected
 

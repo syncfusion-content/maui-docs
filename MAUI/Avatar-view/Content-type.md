@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Various customizations in Syncfusion® AvatarView control.  
-description: Learn about the types in AvatarType and how to set values for AvatarType in .NET MAUI AvatarView.
+title: Various Customizations in Syncfusion® Avatar View control.  
+description: Learn about avatar types and how to set values for avatar types in .NET MAUI Avatar View.
 platform: MAUI
 control: SfAvatarView
 documentation: UG
@@ -9,7 +9,7 @@ documentation: UG
 
 # Content Types in SfAvatarView
 
-## Avatar Types
+## Avatar types
 
 The [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) control allows you to display the view in five different ways:
 
@@ -26,7 +26,7 @@ The [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAv
 
 ## Default
 
-The default type avatar view is used to display the default vector image when initializing without specifying initials, custom, or group view types.
+The default type Avatar View is used to display the default vector image when initializing without specifying initials, custom, or group view types.
 
 {% tabs %}
 
@@ -82,11 +82,11 @@ The [InitialsType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAv
 * SingleCharacter
 * DoubleCharacter
 
-Set the [AvatarName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_AvatarName) property to display initials in the AvatarView.
+Set the [AvatarName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_AvatarName) property to display initials in the Avatar View. This property accepts a `string` value.
 
 #### SingleCharacter
 
-The `SingleCharacter` type displays the first character of the string specified in the [InitialsType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_InitialsType) property.
+The `SingleCharacter` type displays the first character of the [AvatarName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_AvatarName) specified in the [InitialsType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_InitialsType) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -174,15 +174,15 @@ this.Content = mainGrid;
 {% endhighlight %}
 {% endtabs %}
 
-![Double Character](ContentType_Images/Initial_Double_AvatarView.png)
+![DoubleCharacter](ContentType_Images/Initial_Double_AvatarView.png)
 
 ## Custom image
 
-You can add a custom user image by setting the [ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_ImageSource) property. Refer to the Getting Started Documentation in [SfAvatarView.](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html)
+You can add a custom user image by setting the [ImageSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_ImageSource) property. Refer to the Getting Started Documentation in [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html).
 
 ## Avatar characters
 
-The pre-set vector images in avatar view can be utilized by setting the [AvatarCharacter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_AvatarCharacter) property.
+The preset vector images in Avatar View can be utilized by setting the [AvatarCharacter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_AvatarCharacter) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -222,9 +222,9 @@ this.Content = mainGrid;
 
 ![AvatarCharacter](ContentType_Images/AvatarCharacter.jpg)
 
-## GroupView 
+## Group view 
 
-Add up to three images or initials in the same view using the GroupView type.
+Add up to three images or initials in the same view using the group view type.
 
 Use [InitialsMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_InitialsMemberPath) for initials and [ImageSourceMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_ImageSourceMemberPath) for images. The following code sample demonstrates how to add images using the [GroupSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_GroupSource) property.
 
@@ -346,9 +346,9 @@ Use [InitialsMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cor
 {% endhighlight %}
 {% endtabs %}
 
-![GroupViewImage](ContentType_Images/GroupView_SfAvatarView.png)
+![Group view](ContentType_Images/GroupView_SfAvatarView.png)
 
-## Add initials only in GroupView
+## Add initials only in group view
 
 Set the initials only in the group view by using the [InitialsMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_InitialsMemberPath) alone. The following example shows how this is done.
 
@@ -406,9 +406,9 @@ public partial class MainPage : ContentPage, INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-![GroupView in Initials Only](ContentType_Images/GroupView_InitialsAlone.png)
+![Group view in initials only](ContentType_Images/GroupView_InitialsAlone.png)
 
-## Add both image and initials in a GroupView
+## Add both image and initials in a group view
 
 Set both the image and initials as necessary for the collection. If the image needs to be displayed, set [ImageSourceMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_ImageSourceMemberPath); if initials need to be displayed, set [InitialsMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_InitialsMemberPath). This is illustrated in the following code:
 
@@ -430,8 +430,8 @@ public class EmployeeViewModel : INotifyPropertyChanged
 {% endtabs %}
 
 
-![GroupView for both image and initials](ContentType_Images/GroupView_InitialAndImage.png)
+![Group view for both image and initials](ContentType_Images/GroupView_InitialAndImage.png)
 
 ## See also 
 
-[How to load the online images in .NET MAUI AvatarView?](https://support.syncfusion.com/kb/article/17110/how-to-load-the-online-images-in-net-maui-avatarview)
+[How to load the online images in .NET MAUI Avatar View?](https://support.syncfusion.com/kb/article/17110/how-to-load-the-online-images-in-net-maui-avatarview)

@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Migrating from Xamarin to .NET MAUI SfNavigationDrawer | Syncfusion® 
-description: Learn all about migrating from Syncfusion® Xamarin NavigationDrawer to Syncfusion® .NET MAUI NavigationDrawer control and more.
+description: Learn all about migrating from Syncfusion® Xamarin Navigation Drawer to Syncfusion® .NET MAUI Navigation Drawer control and more.
 platform: MAUI
 control: SfNavigationDrawer
 documentation: UG
 ---  
 
-# Migrate from Xamarin NavigationDrawer to .NET MAUI NavigationDrawer 
+# Migrate from Xamarin Navigation Drawer to .NET MAUI Navigation Drawer 
 
 To simplify the migration process from Xamarin SfNavigationDrawer to .NET MAUI SfNavigationDrawer, most of the APIs from Xamarin SfNavigationDrawer have been retained in MAUI SfNavigationDrawer. However, some APIs have been renamed to ensure consistency in API naming within MAUI SfNavigationDrawer. The changes to APIs between Xamarin SfNavigationDrawer and .NET MAUI SfNavigationDrawer are as follows:
 
@@ -32,7 +32,7 @@ To simplify the migration process from Xamarin SfNavigationDrawer to .NET MAUI S
 <tr>
 <td>{{'[DefaultDrawerSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfNavigationDrawer.XForms.SfNavigationDrawer.html#Syncfusion_SfNavigationDrawer_XForms_SfNavigationDrawer_DefaultDrawerSettings)'| markdownify }}</td>
 <td>{{'[DrawerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerSettings)'| markdownify}}</td>
-<td>Gets or sets the DrawerSettings, which is a container for various customization options, allowing the appearance of the navigation drawer to be customized.</td></tr>
+<td>Gets or sets the DrawerSettings, which is a container for various customization options, allowing the appearance of the Navigation Drawer to be customized.</td></tr>
 </table>
 
 N> In Xamarin Forms SfNavigationDrawer, the obsolete properties have been removed in .NET MAUI, and can be exclusively set using the [DrawerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerSettings) properties.

@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Segmenting and Placing Items in .NET MAUI Radial Menu | Syncfusion®
-description: Learn about segmenting and placing items in the .NET MAUI Radio Menu control, its elements, and more.
+description: Learn about segmenting and placing items in the .NET MAUI Radial Menu control, its elements, and more.
 platform: MAUI
-control: RadialMenu (SfRadialMenu)
+control: SfRadialMenu
 documentation: UG
 ---
 
 # Segmenting and Placing Items in .NET MAUI Radial Menu
 
-There are two layout types available for the radial menu:
+There are two layout types available for the Radial Menu:
 
 *  [`Default`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.LayoutType.html#Syncfusion_Maui_RadialMenu_LayoutType_Default)
 *  [`Custom`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.LayoutType.html#Syncfusion_Maui_RadialMenu_LayoutType_Custom)
@@ -18,7 +18,7 @@ Both the layout types divide the available space equally among all the children 
 
 ## Default
 
-The number of segments in the panel is determined by the count of children in each level. As the segment count differs in each hierarchical level, radial menu items are arranged in the sequential order they are added.
+The number of segments in the panel is determined by the count of children in each level. As the segment count differs in each hierarchical level, Radial Menu items are arranged in the sequential order they are added.
 
 {% tabs %}
 
@@ -84,9 +84,9 @@ The [`VisibleSegmentsCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 ### SegmentIndex
 
-The [`SegmentIndex`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_SegmentIndex) property specifies the index of a radial menu item in the circular panel. Based on the index, items are inserted into segment. If the `SegmentIndex` is not specified for a `RadialMenuItem`, the item is arranged in the next available free segment.
+The [`SegmentIndex`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html#Syncfusion_Maui_RadialMenu_SfRadialMenuItem_SegmentIndex) property specifies the index of a Radial Menu item in the circular panel. Based on the index, items are inserted into segment. If the `SegmentIndex` is not specified for a `RadialMenuItem`, the item is arranged in the next available free segment.
 
-## Code Snippet for VisibleSegmentCount and SegmentIndex
+## Code snippet for VisibleSegmentCount and SegmentIndex
 
 {% tabs %}
 
@@ -227,6 +227,6 @@ namespace RadialSample
 
 {% endtabs %}
 
-![VisibleSegment.](images/segmentation/maui-radialmenu-segmentation-segmentIndex.png)
+![VisibleSegment](images/segmentation/maui-radialmenu-segmentation-segmentIndex.png)
 
 N> The [`VisibleSegmentsCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_VisibleSegmentsCount) property applies only to the [`Custom`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.LayoutType.html#Syncfusion_Maui_RadialMenu_LayoutType_Custom) layout.

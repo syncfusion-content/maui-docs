@@ -24,19 +24,19 @@ Before proceeding, ensure the following are set up:
 1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later).
 
-## Step 1: Create a new .NET MAUI Project
+## Step 1: Create a new .NET MAUI project
 
 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
 2. Name the project and choose a location. Then, click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Buttons NuGet Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Buttons NuGet package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.Buttons](https://www.nuget.org/packages/Syncfusion.Maui.Buttons/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-## Step 3: Register the Handler
+## Step 3: Register the handler
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
@@ -71,7 +71,7 @@ namespace CheckBoxGettingStarted
 
 {% endhighlight %}  
 
-## Step 4: Add a Basic SfCheckBox
+## Step 4: Add a basic SfCheckBox
 
 1. To initialize the control, import the Buttons namespace into your code.
 1. Initialize [SfCheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html).
@@ -117,14 +117,14 @@ Before proceeding, ensure the following are set up:
 2. Set up a .NET MAUI environment with Visual Studio Code.
 3. Ensure that the .NET MAUI extension is installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
 
-## Step 1: Create a new .NET MAUI Project
+## Step 1: Create a new .NET MAUI project
 
 1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
 2. Choose the **.NET MAUI App** template.
 3. Select the project location, type the project name, and press **Enter**.
 4. Then choose **Create project**.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Buttons NuGet Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Buttons NuGet package
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you're in the project root directory where your .csproj file is located.
@@ -166,7 +166,7 @@ namespace CheckBoxGettingStarted
 
 {% endhighlight %}  
 
-## Step 4: Add a Basic SfCheckBox
+## Step 4: Add a basic SfCheckBox
 
 1. To initialize the control, import the Buttons namespace into your code.
 1. Initialize [SfCheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html).
@@ -214,19 +214,19 @@ Before proceeding, ensure the following are set up:
 2. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 3. Make sure the MAUI workloads are installed and configured as described [here](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start).
 
-## Step 1: Create a new .NET MAUI Project
+## Step 1: Create a new .NET MAUI project
 
 1. Go to **File > New Solution,** Select .NET (C#) and choose the **.NET MAUI App** template.
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Buttons NuGet Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Buttons NuGet package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.Buttons](https://www.nuget.org/packages/Syncfusion.Maui.Buttons/) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, open the terminal in Rider and manually run: `dotnet restore`.
 
-## Step 3: Register the Handler
+## Step 3: Register the handler
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
@@ -261,7 +261,7 @@ namespace CheckBoxGettingStarted
 
 {% endhighlight %}  
 
-## Step 4: Add a Basic SfCheckBox
+## Step 4: Add a basic SfCheckBox
 
 1. To initialize the control, import the Buttons namespace into your code.
 1. Initialize [SfCheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html).
@@ -302,7 +302,7 @@ namespace CheckBoxGettingStarted
 
 ## Set the CheckBox caption
 
-You can set the caption of the CheckBox using the [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_Text) property. This caption typically describes the meaning of the check box and is displayed next to it.
+You can set the caption of the CheckBox using the [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_Text) property. This caption typically describes the meaning of the CheckBox and is displayed next to it.
 
 {% tabs %}
 {% highlight xaml %}
@@ -322,7 +322,7 @@ You can set the caption of the CheckBox using the [Text](https://help.syncfusion
 
 ![.NET MAUI CheckBox](Images/Getting-Started/simplecheckbox.png) 
 
-## Change the CheckBox State
+## Change the CheckBox state
 
 The three visual states of [`SfCheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) are: 
 
@@ -332,7 +332,7 @@ The three visual states of [`SfCheckBox`](https://help.syncfusion.com/cr/maui/Sy
 
 ![.NET MAUI CheckBox](Images/Getting-Started/tristate.png) 
 
-You can change the state of the checkbox using the [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsChecked) property of the [`SfCheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html). In the checked state, a tick mark is added to the visualization of the checkbox.
+You can change the state of the CheckBox using the [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsChecked) property of the [`SfCheckBox`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html). In the checked state, a tick mark is added to the visualization of the CheckBox.
 
 <table>
 <tr>
@@ -381,9 +381,9 @@ null
 </tr>
 </table>
 
-N> To report the indeterminate state for the checkbox, set the [`IsThreeState`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsThreeState) property to true.
+N> To report the indeterminate state for the CheckBox, set the [`IsThreeState`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsThreeState) property to true.
 
-The checkbox can be used as a single or as a group. A single check box is mostly used for a binary yes/no choice, such as "Remember me?", login scenario, or a terms of service agreement.
+The CheckBox can be used as a single or as a group. A single CheckBox is mostly used for a binary yes/no choice, such as "Remember me?", login scenario, or a terms of service agreement.
 
 {% tabs %}
 {% highlight xaml %}
@@ -404,7 +404,7 @@ The checkbox can be used as a single or as a group. A single check box is mostly
 ![.NET MAUI CheckBox](Images/Getting-Started/termsandconditions.png)
 
 
-Multiple checkboxes can be used as a group for multi-select scenarios where a user selects one or more items from the choices that are not mutually exclusive.
+Multiple CheckBoxes can be used as a group for multi-select scenarios where a user selects one or more items from the choices that are not mutually exclusive.
 
 {% tabs %}
 {% highlight xaml %}
@@ -450,9 +450,9 @@ Multiple checkboxes can be used as a group for multi-select scenarios where a us
 
 The [SfCheckBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html) allows an Intermediate state in addition to the checked and unchecked state. The Intermediate state is enabled by setting the [IsThreeState](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsThreeState) property of the control to `True`.
 
-N> When the [IsThreeState](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsThreeState) property is set to `False` and [IsChecked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsChecked) property is set to `null`, the checkbox will be in unchecked state.
+N> When the [IsThreeState](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsThreeState) property is set to `False` and [IsChecked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsChecked) property is set to `null`, the CheckBox will be in unchecked state.
 
-The Intermediate state is used when a group of sub-choices has both checked and unchecked states. In the following example, the "Select all" checkbox has the [IsThreeState](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsThreeState) property set to `true`. The "Select all" checkbox is checked if all child elements are checked, unchecked if all the child elements are unchecked, and Intermediate otherwise.
+The Intermediate state is used when a group of sub-choices has both checked and unchecked states. In the following example, the "Select all" CheckBox has the [IsThreeState](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsThreeState) property set to `true`. The "Select all" CheckBox is checked if all child elements are checked, unchecked if all the child elements are unchecked, and Intermediate otherwise.
 
 {% tabs %}
 {% highlight xaml %}

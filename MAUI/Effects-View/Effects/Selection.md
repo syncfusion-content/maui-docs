@@ -1,9 +1,9 @@
 ---
 layout: post
-title: The .NET MAUI Selection Effects | Effects View control | Syncfusion<sup>®</sup>
-description: Learn all about selection effect support in Syncfusion<sup>®</sup> .NET MAUI Effects View (SfEffectsView) control and more.
+title: The .NET MAUI Selection Effects | Effects View Control | Syncfusion®
+description: Learn all about selection effect support in Syncfusion® .NET MAUI Effects View (SfEffectsView) control and more.
 platform: MAUI
-control: Effects View
+control: SfEffectsView
 documentation: UG
 ---
 
@@ -34,4 +34,4 @@ var effectsView = new SfEffectsView
 
 {% endtabs %}
 
-![.net maui selection effect](Effects_images/net_maui_selection_effect.png)
+![Selection effect](Effects_images/net_maui_selection_effect.png)

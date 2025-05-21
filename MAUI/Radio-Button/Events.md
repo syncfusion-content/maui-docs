@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in .NET MAUI Radio Button Control | Syncfusion®
-description: Learn about event support in Syncfusion® Essential Studio® .NET MAUI Radio Button control, its elements, and more.
+description: Learn about event support in Syncfusion® .NET MAUI Radio Button (SfRadioButton) control, its elements, and more.
 platform: MAUI
 control: SfRadioButton
 documentation: UG
@@ -64,7 +64,7 @@ private void RadioButton_StateChanged(object sender, Syncfusion.Maui.Buttons.Sta
 
 ## StateChanging event
 
-The [StateChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.StateChangingEventArgs.html) event is triggered when the state of the [IsChecked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_IsChecked) property is about to change, typically by tapping the RadioButton control. The event arguments are of type `StateChangingEventArgs` and provide the following properties:
+The [StateChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.StateChangingEventArgs.html) event is triggered when the state of the [IsChecked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_IsChecked) property is about to change, typically by tapping the Radio Button control. The event arguments are of type `StateChangingEventArgs` and provide the following properties:
 
 * [`IsChecked`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html#Syncfusion_Maui_Buttons_SfRadioButton_IsChecked) : The new value(state) of the `IsChecked` property.
 * `Cancel` : Gets or sets a value indicating whether the event should be canceled.

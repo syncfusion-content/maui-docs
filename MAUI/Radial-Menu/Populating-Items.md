@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Populating Items in MAUI Radial Menu Control | Syncfusion®
-description: Learn about item population support in the Syncfusion® MAUI Radial Menu (SfRadialMenu) control and more.
+title: Populating Items in .NET MAUI Radial Menu Control | Syncfusion®
+description: Learn about item population support in the Syncfusion® .NET MAUI Radial Menu (SfRadialMenu) control and more.
 platform: MAUI
-control: RadialMenu (SfRadialMenu)
+control: SfRadialMenu
 documentation: UG
 ---
 
 # Populating Items in MAUI Radial Menu (SfRadialMenu)
 
-This section explains how to populate items through radial menu items and item sources with item templates.
+This section explains how to populate items through Radial Menu items and item sources with item templates.
 
-## Through Radial Menu Items
+## Through Radial Menu items
 
-By passing a collection of [`SfRadialMenuItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html), you can view the [`SfRadialMenu`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html) control. The radial menu item class provides various options to customize items by providing custom views, font icons, and images. You can add radial menu items hierarchically.
+By passing a collection of [`SfRadialMenuItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenuItem.html), you can view the [`SfRadialMenu`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html) control. The Radial Menu item class provides various options to customize items by providing custom views, font icons, and images. You can add Radial Menu items hierarchically.
 
 ### Text
 
-The following code sample demonstrates how to create a RadialMenu control with items having the given text.
+The following code sample demonstrates how to create a Radial Menu control with items having the given text.
 
 {% tabs %}
 
@@ -74,13 +74,13 @@ namespace RadialSample
 
 {% endtabs %}
 
-N> Instead of using ObservableCollection, use [`RadialMenuItemsCollection`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.RadialMenuItemsCollection.html) for the RadialMenu Items list and [`SubMenuItemsCollection`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SubMenuItemsCollection.html) for the list of items within each RadialMenuItem.
+N> Instead of using ObservableCollection, use [`RadialMenuItemsCollection`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.RadialMenuItemsCollection.html) for the Radial Menu Items list and [`SubMenuItemsCollection`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SubMenuItemsCollection.html) for the list of items within each Radial Menu item.
 
-![Display text in .NET MAUI RadialMenu](images/populating-items/maui-radialmenu-populating-only-text.png)
+![Text](images/populating-items/maui-radialmenu-populating-only-text.png)
 
-### Image with Text
+### Image with text
 
-The following code sample demonstrates how to display images and text in the RadialMenu items of the control.
+The following code sample demonstrates how to display images and text in the Radial Menu items of the control.
 
 {% tabs %}
 
@@ -137,11 +137,11 @@ namespace RadialSample
 
 {% endtabs %}
 
-![Display image with text in .NET MAUI RadialMenu.](images/populating-items/maui-radialmenu-populating-text-with-images.png)
+![Image with text](images/populating-items/maui-radialmenu-populating-text-with-images.png)
 
-## Custom Font with Text
+## Custom font with text
 
-The following code sample demonstrates how to display custom font with text in the RadialMenu items of the control.
+The following code sample demonstrates how to display custom font with text in the Radial Menu items of the control.
 
 {% tabs %}
 
@@ -222,13 +222,13 @@ namespace RadialSample
 
 {% endtabs %}
 
-![Display font with text in .NET MAUI RadialMenu.](images/populating-items/maui-radialmenu-populating-text-icons.png)
+![Font with text](images/populating-items/maui-radialmenu-populating-text-icons.png)
 
-### Adding Nested Items of Radial Menu
+### Adding nested items of Radial Menu
 
 You can populate nested levels of items within a menu to group similar actions. For example, you can group clipboard operations by adding a clipboard as a main menu and cut, copy, and paste as its children.
 
-The following code sample demonstrates how to add the nested items of radial menu.
+The following code sample demonstrates how to add the nested items of Radial Menu.
 
 {% tabs %}
 
@@ -320,7 +320,7 @@ namespace RadialSample
 
 {% endtabs %}
 
-![Display RadialMenu with Items.](images/populating-items/maui-radialmenu-populating-nested-items.png)
+![Nested items](images/populating-items/maui-radialmenu-populating-nested-items.png)
 
 ## Through ItemsSource and ItemTemplate
 
@@ -415,11 +415,11 @@ namespace RadialSample
 
 {% endtabs %}
 
-![Display RadialMenu with ItemsSource and ItemTemplate.](images/populating-items/maui-radialmenu-populating-itemssource-with-itemtemplate.png)
+![ItemsSource and ItemTemplate](images/populating-items/maui-radialmenu-populating-itemssource-with-itemtemplate.png)
 
-## Animation Duration
+## AnimationDuration
 
-The animation duration in a radial menu can be changed using the [`AnimationDuration`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_AnimationDuration) property. It is used to change the speed of opening and closing of the radial menu.
+The animation duration in a Radial Menu can be changed using the [`AnimationDuration`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_AnimationDuration) property. It is used to change the speed of opening and closing of the Radial Menu.
 
 {% tabs %}
 
@@ -479,7 +479,7 @@ namespace RadialSample
 
 ## IsOpen
 
-The [`IsOpen`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_IsOpen) property indicates whether the radial menu is in an open or closed state.
+The [`IsOpen`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_IsOpen) property indicates whether the Radial Menu is in an open or closed state.
 
 {% tabs %}
 
@@ -537,7 +537,7 @@ namespace RadialSample
 {% endhighlight %}
 {% endtabs %}
 
-## Separator Thickness and Color in Radial menu
+## Separator thickness and color in Radial Menu
 
 The thickness of the strip between items can be changed using the [`SeparatorThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_SeparatorThickness) property, and the color of the strip can be changed using the [`SeparatorColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_SeparatorColor) property.
 
@@ -600,7 +600,7 @@ namespace RadialSample
 {% endhighlight %}
 {% endtabs %}
 
-## Rim Color and Rim Radius in Radial menu
+## RimColor and RimRadius in Radial Menu
 
 The radius of the rim can be changed using the [`RimRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_RimRadius) property, and the color of the rim can be changed using the [`RimColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_RimColor) property.
 
@@ -663,7 +663,7 @@ namespace RadialSample
 {% endhighlight %}
 {% endtabs %}
 
-## Display Member Path
+## DisplayMemberPath
 
 The control is populated with a list of employees, and the employee model contains two properties: ID and EmployeeName. So, it is necessary to intimate by which property it should display to the items. The [`DisplayMemberPath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_DisplayMemberPath) property specifies the property path.
 
@@ -739,9 +739,9 @@ namespace RadialSample
 {% endhighlight %}
 {% endtabs %}
 
-## Selection Color
+## SelectionColor
 
-The [SfRadialMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.html) allows you to change the selection color for the selected Radial menu item by using the [SelectionColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_SelectionColor) property.
+The [SfRadialMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.html) allows you to change the selection color for the selected Radial Menu item by using the [SelectionColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_SelectionColor) property.
 
 {% tabs %}
 

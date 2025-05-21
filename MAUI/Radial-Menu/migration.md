@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Migrate from Xamarin to .NET MAUI SfRadialMenu | Syncfusion®
-description: Learn about migrating from the Syncfusion® Xamarin.Forms RadialMenu control to the .NET MAUI RadialMenu control.
+description: Learn about migrating from the Syncfusion® Xamarin.Forms Radial Menu control to the .NET MAUI Radial Menu control.
 platform: MAUI
-control: RadialMenu (SfRadialMenu) control
+control: SfRadialMenu
 documentation: UG
 ---
  
-# Migrate from Xamarin.Forms RadialMenu to .NET MAUI RadialMenu Control
+# Migrate from Xamarin.Forms Radial Menu to .NET MAUI Radial Menu Control
 
 To simplify the migration from the [Xamarin SfRadialMenu Control](https://www.syncfusion.com/xamarin-ui-controls/xamarin-radial-menu) to the [.NET MAUI SfRadialMenu Control](https://www.syncfusion.com/maui-controls/maui-radial-menu), most of the APIs from the `Xamarin SfRadialMenu Control` have been retained in the `.NET MAUI SfRadialMenu Control`. However, to maintain the consistency in API naming within the `.NET MAUI SfRadialMenu Control`, some APIs have been renamed. The following sections outline the differences.
 
@@ -22,9 +22,9 @@ To simplify the migration from the [Xamarin SfRadialMenu Control](https://www.sy
 <td>Syncfusion.Maui.RadialMenu</td></tr>
 </table>
 
-## Initialize Control
+## Initialize control
 
-To initialize the control, import the radial menu control namespace and initialize the [SfRadialMenu](https://www.syncfusion.com/maui-controls/maui-radial-menu) as shown in the following code sample.
+To initialize the control, import the Radial Menu control namespace and initialize the [SfRadialMenu](https://www.syncfusion.com/maui-controls/maui-radial-menu) as shown in the following code sample.
 
 <table>
 <tr>
@@ -87,7 +87,7 @@ this.Content = radialMenu;
 
 ## Properties
 
-### SfRadialMenu Control
+### SfRadialMenu control
 
 <table> 
 <tr>
@@ -109,7 +109,7 @@ this.Content = radialMenu;
 
 </table> 
 
-## Upcoming features in .NET MAUI RadialMenu
+## Upcoming features in .NET MAUI Radial Menu
 
 * **LayoutType:** Determines the arrangement of items on the rim, either automatic or user-defined.
 * **VisibleSegmentCount:** Determines the number of segments visible at a time on the menu.

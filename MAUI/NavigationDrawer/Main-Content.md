@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Set Main Content in .NET MAUI Navigation Drawer control | Syncfusion®
+title: Set Main Content in .NET MAUI Navigation Drawer Control | Syncfusion®
 description: Learn all about setting Main Content support in the Syncfusion® .NET MAUI Navigation Drawer (SfNavigationDrawer) control and more.
 platform: MAUI
 control: SfNavigationDrawer
@@ -10,7 +10,7 @@ documentation: UG
 
 # Setting Main Content in .NET MAUI Navigation Drawer
 
-The main content of the NavigationDrawer is always visible and can be configured using the [ContentView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ContentView) property. In the following code example, the [ContentView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ContentView) is updated when the selection changes in the ListView, allowing for easy navigation and content switching.
+The main content of the Navigation Drawer is always visible and can be configured using the [ContentView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ContentView) property. In the following code example, the [ContentView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ContentView) is updated when the selection changes in the ListView, allowing for easy navigation and content switching.
 
 {% tabs %}
 
@@ -147,10 +147,10 @@ public partial class NavigationDrawerPage : ContentPage
 
 N> It is mandatory to set the [ContentView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ContentView) for [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) when initializing.
 
-![contentview](Images/main-content/getting_main_content.png)
+![ContentView](Images/main-content/getting_main_content.png)
 
 You can find the complete sample on [`GitHub`](https://github.com/SyncfusionExamples/.NET-MAUI-NavigationDrawer-MainContent).
 
 ## See also 
 
-[How to load content page to .NET MAUI NavigationDrawer content view?](https://support.syncfusion.com/kb/article/15674/how-to-load-content-page-to-net-maui-navigationdrawer-contentview)
+[How to load content page to .NET MAUI Navigation Drawer content view?](https://support.syncfusion.com/kb/article/15674/how-to-load-content-page-to-net-maui-navigationdrawer-contentview)

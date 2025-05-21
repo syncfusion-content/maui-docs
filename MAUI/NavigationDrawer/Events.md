@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events in .NET MAUI Navigation Drawer control | Syncfusion®
-description: Learn about event support in the Syncfusion® Essential Studio® .NET MAUI Navigation Drawer (SfNavigationDrawer) control, its elements, and more.
+title: Events in .NET MAUI Navigation Drawer Control | Syncfusion®
+description: Learn about event support in the Syncfusion® .NET MAUI Navigation Drawer (SfNavigationDrawer) control, its elements, and more.
 platform: MAUI
 control: SfNavigationDrawer
 documentation: UG
@@ -17,7 +17,7 @@ There are five built-in events in the [SfNavigationDrawer](https://help.syncfusi
 * [DrawerClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerClosed)
 * [DrawerToggled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerToggled)
 
-## DrawerOpening Event
+## DrawerOpening event
 
 The [DrawerOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerOpening) event is triggered before the drawer pane opens. Restrict the drawer from opening by canceling this event by setting the `Cancel` property in the event argument to `true`. The event arguments are of type `CancelEventArgs`. It exposes the following property:
 
@@ -46,7 +46,7 @@ private void navigationDrawer_DrawerOpening(object sender, System.ComponentModel
 {% endhighlight %}
 {% endtabs %}
 
-## DrawerOpened Event
+## DrawerOpened event
 
 The [DrawerOpened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerOpened) event triggered after a drawer is opened.
 
@@ -76,7 +76,7 @@ private void navigationDrawer_DrawerOpened(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-## DrawerClosing Event
+## DrawerClosing event
 
 The [DrawerClosing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerClosing) event is triggered before the drawer pane closes. Restrict the drawer from closing by canceling this event by setting the `Cancel` property in the event argument to `true`. The event arguments are of type `CancelEventArgs`. It exposes the following property:
 
@@ -105,7 +105,7 @@ private void navigationDrawer_DrawerClosing(object sender, System.ComponentModel
 {% endhighlight %}
 {% endtabs %}
 
-## DrawerClosed Event
+## DrawerClosed event
 
 The [DrawerClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerClosed) event triggered after a drawer is closed.
 
@@ -135,7 +135,7 @@ private void navigationDrawer_DrawerClosed(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-## DrawerToggled Event
+## DrawerToggled event
 
 The [DrawerToggled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerToggled) event is triggered after a drawer is opened or closed. The event arguments are of type [ToggledEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.ToggledEventArgs.html). It exposes the following property:
 

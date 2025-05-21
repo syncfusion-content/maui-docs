@@ -3,14 +3,14 @@ layout: post
 title: Indicator Color and Background in .NET MAUI Busy Indicator | Syncfusion®
 description: Learn here about color support in Syncfusion® .NET MAUI Busy Indicator control (SfBusyIndicator) and more.
 platform: MAUI
-control: Busy Indicator
+control: SfBusyIndicator
 documentation: UG
-keywords : .NET MAUI Busy Indicator Color, MAUI Busy Indicator Color, MAUI Busy Indicator Customize.
+keywords : .net maui busy indicator color, maui busy indicator color, maui busy indicator customize.
 ---
 
 # Indicator Color and Background in .NET MAUI Busy Indicator
 
-## Indicator Color
+## IndicatorColor
 
 The [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) allows customization of the indicator's color using the [IndicatorColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_IndicatorColor) property.
 
@@ -43,9 +43,9 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
 
 The following gif image illustrates the result of the above code.
 
-![Indicator Color](Images/IndicatorColor/IndicatorColor.gif)
+![IndicatorColor](Images/IndicatorColor/IndicatorColor.gif)
 
-## Overlay Background
+## Overlay background
 
 The [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html) also provides an option to customize the overlay background using the [OverlayFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_OverlayFill) property.
 
@@ -81,7 +81,7 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
 
 The following gif image illustrates the result of the above code.
 
-![Overlay Fill](Images/IndicatorColor/OverlayFillColor.gif)
+![OverlayFill](Images/IndicatorColor/OverlayFillColor.gif)
 
 The [OverlayFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_OverlayFill) property type is `Brush`, which allows setting gradients as the background.
 
@@ -130,5 +130,5 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
 
 The following gif image illustrates the result of the above code.
 
-![Overlay Fill](Images/IndicatorColor/OverlayFillBrush.gif)
+![OverlayFill](Images/IndicatorColor/OverlayFillBrush.gif)
 

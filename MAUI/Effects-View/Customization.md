@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Customization in .NET MAUI Effects View control | Syncfusion®
+title: Customization in .NET MAUI Effects View Control | Syncfusion®
 description: Learn here all about Customization support in Syncfusion® .NET MAUI Effects View (SfEffectsView) control and more.
 platform: MAUI
-control: Effects View
+control: SfEffectsView
 documentation: UG
 ---
 
 # Customization in .NET MAUI Effects View (SfEffectsView)
 
-The [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html) control provides support to customize animation duration, color, and more. This section explains how to customize the effects view control.
+The [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html) control provides support to customize animation duration, color, and more. This section explains how to customize the Effects View control.
 
 ## RippleAnimationDuration
 
@@ -117,7 +117,7 @@ var effectsView = new SfEffectsView
 
 {% endtabs %}
 
-![.NET MAUI Effects View InitialRippleFactor customization](Customization_images/EffectsView_InitialRippleFactor.gif)
+![InitialRippleFactor customization](Customization_images/EffectsView_InitialRippleFactor.gif)
 
 ## ScaleFactor
 
@@ -150,7 +150,7 @@ var effectsView = new SfEffectsView
 
 {% endtabs %}
 
-![.NET MAUI Effects View ScaleFactor customization](Customization_images/EffectsView_Scale.gif)
+![ScaleFactor customization](Customization_images/EffectsView_Scale.gif)
 
 ## HighlightBackground
 
@@ -179,7 +179,7 @@ var effectsView = new SfEffectsView
 
 {% endtabs %}
 
-![.NET MAUI Effects View highlight background customization](Customization_images/EffectsView_Highlight.png)
+![Highlight background customization](Customization_images/EffectsView_Highlight.png)
 
 ## RippleBackground
 
@@ -205,7 +205,7 @@ var effectsView = new SfEffectsView
 
 {% endtabs %}
 
-![.NET MAUI Effects View ripple background customization](Customization_images/EffectsView_RippleColor.gif)
+![Ripple background customization](Customization_images/EffectsView_RippleColor.gif)
 
 ## SelectionBackground
 
@@ -234,7 +234,7 @@ var effectsView = new SfEffectsView
 
 {% endtabs %}
 
-![.NET MAUI Effects View selection background customization](Customization_images/EffectsView_Selection.png)
+![Selection background customization](Customization_images/EffectsView_Selection.png)
 
 ## Angle
 
@@ -263,5 +263,5 @@ var effectsView = new SfEffectsView
 
 {% endtabs %}
 
-![.NET MAUI Effects View rotation angle customization](Customization_images/EffectsView_Rotation.png)
+![Rotation angle customization](Customization_images/EffectsView_Rotation.png)
 

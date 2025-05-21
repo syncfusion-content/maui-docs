@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize the indicator in .NET MAUI Tab View (SfTabView) | Syncfusion®
+title: Customize the Indicator in .NET MAUI Tab View (SfTabView) | Syncfusion®
 description: Learn all about selection indicator customization support in the Syncfusion® .NET MAUI Tab View (SfTabView) control and more.
 platform: MAUI
 control: SfTabView
@@ -9,7 +9,7 @@ documentation: UG
 
 # Customize the Selection Indicator in .NET MAUI Tab View (SfTabView)
 
-## Placement Options
+## Placement options
 
 The .NET MAUI Tab View provides three options for determining how the selection indicator aligns relative to the tab header item. These options are top, bottom, and fill. This can be configured by setting the [IndicatorPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IndicatorPlacement) property of SfTabView.
 
@@ -29,7 +29,7 @@ The indicator will be placed at the top of the selected tab.
 
 {% endtabs %}
 
-![Tab Image Position Top.](images/Selection-Indicator-placement-Top.png) 
+![Top](images/Selection-Indicator-placement-Top.png) 
 
 ### Bottom
 
@@ -47,7 +47,7 @@ The indicator will be placed at the bottom of the selected tab.
 
 {% endtabs %}
 
-![Tab Image Position Bottom.](images/Selection-Indicator-placement-Bottom.png) 
+![Bottom](images/Selection-Indicator-placement-Bottom.png) 
 
 ### Fill
 
@@ -65,13 +65,13 @@ The indicator will fill the selected tab.
 
 {% endtabs %}
 
-![Tab Image Position Fill.](images/Selection-Indicator-placement-Fill.png) 
+![Fill](images/Selection-Indicator-placement-Fill.png) 
 
-## Background Customization
+## Background customization
 
 The background of the indicator can be customized using the [IndicatorBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IndicatorBackground) property of SfTabView.
 
-### Solid Color 
+### Solid color 
 
 The SolidColorBrush class defines the color property of [IndicatorBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IndicatorBackground), representing the selection indicator background's color.
 
@@ -87,9 +87,9 @@ The SolidColorBrush class defines the color property of [IndicatorBackground](ht
 
 {% endtabs %}
 
-![Selection Indicator Background.](images/Selection-Indicator-background.png) 
+![IndicatorBackground.](images/Selection-Indicator-background.png) 
 
-### Gradient Color 
+### Gradient color 
 
 The background can be customized with a linear gradient and radial gradient as like below example.
 
@@ -129,11 +129,11 @@ tabView.IndicatorBackground = graBrush;
 {% endhighlight %}
 {% endtabs %}
 
-![Selection Indicator Gradient](images/Selection-Indicator-gradient-background.png) 
+![Gradient](images/Selection-Indicator-gradient-background.png) 
 
 N> View the complete [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/TabBarCustomization) on GitHub.
 
-## Indicator Width Mode
+## IndicatorWidthMode
 
 The [IndicatorWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IndicatorWidthMode) property allows customization of the width of the indicator. By default, the `IndicatorWidthMode` property is set to [Fit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.IndicatorWidthMode.html#Syncfusion_Maui_TabView_IndicatorWidthMode_Fit), which adjusts the indicator width to fit the content of the header item. You can change the width size based on the header item by setting the `IndicatorWidthMode` property to [Stretch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.IndicatorWidthMode.html#Syncfusion_Maui_TabView_IndicatorWidthMode_Stretch).
 
@@ -149,7 +149,7 @@ The [IndicatorWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Tab
 
 {% endtabs %}
 
-![Selection Indicator Background.](images/IndicatorWidthMode_Fit.png) 
+![IndicatorWidthMode fit](images/IndicatorWidthMode_Fit.png) 
 
 {% tabs %}
 
@@ -163,9 +163,9 @@ The [IndicatorWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Tab
 
 {% endtabs %}
 
-![Selection Indicator Background.](images/IndicatorWidthMode_Stretch.png) 
+![IndicatorWidthMode stretch](images/IndicatorWidthMode_Stretch.png) 
 
-## Indicator's Corner Radius
+## IndicatorCornerRadius
 
 You can customize the corner radius of the selection indicator using the [IndicatorCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IndicatorCornerRadius) property in the Tab View.
 
@@ -181,9 +181,9 @@ You can customize the corner radius of the selection indicator using the [Indica
 
 {% endtabs %} 
 
-![Selection Indicator Corner Radius.](images/IndicatorCornerRadius.png) 
+![IndicatorCornerRadius](images/IndicatorCornerRadius.png) 
 
-## Indicator's Stroke Thickness
+## IndicatorStrokeThickness
 
 You can customize the stroke thickness of the selection indicator using the [IndicatorStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IndicatorStrokeThickness) property in the Tab View.
 
@@ -200,4 +200,4 @@ You can customize the stroke thickness of the selection indicator using the [Ind
 
 {% endtabs %} 
 
-![Selection Indicator Stroke Thickness](images\IndicatorStrokeThickness.png) 
+![IndicatorStrokeThickness](images\IndicatorStrokeThickness.png) 

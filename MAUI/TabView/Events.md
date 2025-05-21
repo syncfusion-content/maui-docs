@@ -7,7 +7,7 @@ control: SfTabView
 documentation: UG
 ---
 
-# Events in .NET MAUI Tab  View
+# Events in .NET MAUI Tab View
 
 This section provides information about the events available in the .NET MAUI Tab View control.
 
@@ -109,4 +109,4 @@ private void TabView_SelectionChanged(object sender, TabSelectionChangedEventArg
 
 ## See also 
 
-[How to convert events into commands in .NET MAUI TabView?](https://support.syncfusion.com/kb/article/16790/how-to-convert-events-into-commands-in-net-maui-tabview)
+[How to convert events into commands in .NET MAUI Tab View?](https://support.syncfusion.com/kb/article/16790/how-to-convert-events-into-commands-in-net-maui-tabview)

@@ -9,7 +9,7 @@ documentation: UG
 
 # Customize the Tab Bar in .NET MAUI Tab View (SfTabView)
 
-## Tab Width Options
+## Tab width options
 
 The .NET MAUI Tab View provides two modes that determines how the width of the tab is calculated on the tab bar while it gets populated. The options are [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabWidthMode.html#Syncfusion_Maui_TabView_TabWidthMode_Default) and [SizeToContent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabWidthMode.html#Syncfusion_Maui_TabView_TabWidthMode_SizeToContent). These can be achieved using the [TabWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabWidthMode.html) property.
 
@@ -31,9 +31,9 @@ N> This mode is recommended when the tab count is not more than four. More tabs 
 
 {% endtabs %}
 
-![Tab Width Mode Default](images/Tab-Width-Mode-Default.png)
+![TabWidthMode default](images/Tab-Width-Mode-Default.png)
 
-### Based on the Text Size
+### Based on the text size
 
 The width of a tab is set to fit the text or image that it contains by setting the `TabWidthMode` as `SizeToContent`. Scroll is enabled in this mode to access the items outside the visible area.
 
@@ -49,9 +49,9 @@ The width of a tab is set to fit the text or image that it contains by setting t
 
 {% endtabs %}
 
-![Tab Width Mode Size to Fit](images/Tab-Width-Mode-SizeToFit.png) 
+![TabWidthMode size to fit](images/Tab-Width-Mode-SizeToFit.png) 
 
-## Customize the Tab Bar Height
+## Customize the TabBarHeight
 
 The height of the tab bar can be customized by setting the [TabBarHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarHeight) property. The default height is 48.
 
@@ -69,7 +69,7 @@ N> It is recommended to set the `TabBarHeight` to 72 while displaying both the i
 
 {% endtabs %}
 
-## Customize the Tab Header Text Alignment
+## Customize the tab header text alignment
 
 The horizontal text alignment of the tab header can be customized by setting the [HeaderHorizontalTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_HeaderHorizontalTextAlignment) property. The default value is `Center`. This property accepts the following values:
 
@@ -88,10 +88,10 @@ tabView.HeaderHorizontalTextAlignment = TextAlignment.Center; {% endhighlight %}
 
 {% endtabs %}
 
-![Tab Header Text Alignment](images/HorizontalTextAlignmentCenter.png) 
+![Tab header text alignment](images/HorizontalTextAlignmentCenter.png) 
 
 
-## Tab Bar Placement Options 
+## TabBarPlacement options
 
 The .NET MAUI Tab View provides two options for determining how the tab bar aligns relative to the tab content. The options are top and bottom. This can be achieved using the [TabBarPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarPlacement) property.
 
@@ -111,7 +111,7 @@ The tab bar will be placed above the content region of the Tab View control.
 
 {% endtabs %}
 
-![Tab Bar Placement Top](images/Tab-bar-Placement-Top.png) 
+![TabBarPlacement top](images/Tab-bar-Placement-Top.png) 
 
 ### Bottom
 
@@ -129,13 +129,13 @@ The tab bar will be placed below the content region of the Tab View control.
 
 {% endtabs %}
 
-![Tab Bar Placement Bottom](images/Tab-bar-Placement-Bottom.png) 
+![TabBarPlacement bottom](images/Tab-bar-Placement-Bottom.png) 
 
-## Tab Bar Background Customization
+## TabBarBackground customization
 
 The tab bar background can be customized using the [TabBarBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarBackground) property, which is of type `Brush`.
 
-### Solid Color 
+### Solid color 
 
 A solid color can be achieved by assigning the `SolidColorBrush` to the [TabBarBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarBackground), which represents the color of the tab bar background.
 
@@ -151,9 +151,9 @@ A solid color can be achieved by assigning the `SolidColorBrush` to the [TabBarB
 
 {% endtabs %}
 
-![Tab Bar Solid Color Bottom](images/TabBarSolidColor.png) 
+![Solid color](images/TabBarSolidColor.png) 
 
-### Gradient Color 
+### Gradient color 
 
 The background can be customized with a linear gradient and radial gradient as like below example.
 
@@ -194,6 +194,6 @@ tabView.TabBarBackground = graBrush;
 {% endhighlight %}
 {% endtabs %}
 
-![Tab Bar Gradient Color Bottom](images/TabBarGradientColor.png) 
+![Gradient color](images/TabBarGradientColor.png) 
 
 N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/TabBarCustomization) in GitHub.

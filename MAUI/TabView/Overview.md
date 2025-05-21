@@ -1,9 +1,9 @@
 ---
 layout: post
-title: About .NET MAUI Tab View (SfTabView) control | Syncfusion®
+title: About .NET MAUI Tab View (SfTabView) Control | Syncfusion®
 description: Learn about the introduction of the Syncfusion® .NET MAUI Tab View (SfTabView) control, its elements, and more.
 platform: MAUI
-control: Tab View
+control: SfTabView
 documentation: UG
 ---
 
@@ -23,10 +23,10 @@ The advanced .NET Multi-platform App UI (MAUI) Tab View provides a simple and in
 
 ## Usage
 
-* The .NET MAUI TabView can be used to optimize screen space usage when the application requires complex and extensive layouts.
+* The .NET MAUI Tab View can be used to optimize screen space usage when the application requires complex and extensive layouts.
 
-* The .NET MAUI TabView contains a set of tab items that share the same space.
+* The .NET MAUI Tab View contains a set of tab items that share the same space.
 
 * At any given time, only one .NET MAUI tab item will be visible and accessible to users. Users must tap the tab of the hidden tab item to make it visible on the screen.
 
-![TabViewImage MAUI](images/TabView.png)
+![.NET MAUI Tab View](images/TabView.png)

@@ -1,10 +1,10 @@
 ---
 
 layout: post
-title: Overview of Syncfusion® Badge View control for .NET MAUI
-description: This section provides a quick overview and explains the key features of the Syncfusion® Badge View control for .NET MAUI.
+title: Overview of Syncfusion® .NET MAUI Badge View
+description: This section provides a quick overview and explains the key features of the Syncfusion® .NET MAUI Badge View control.
 platform: MAUI
-control: Badge View
+control: SfBadgeView
 documentation: UG
 
 ---
@@ -21,4 +21,4 @@ The .NET MAUI Badge View (SfBadgeView) is used to notify users of new or unread 
 
 * **Animation** : Enables animations for badge text, adding dynamic visuals to your application's user interface.
 
-![.NET MAUI Badge View Overview](overview_images/net_maui_badge_view_overview.png)
+![.NET MAUI Badge View](overview_images/net_maui_badge_view_overview.png)

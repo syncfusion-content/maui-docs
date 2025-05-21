@@ -19,7 +19,7 @@ The drawer pane content is only viewable when the drawer is in the open state. C
 
 N> Header and Footer content is optional, but the Drawer content is mandatory to allocate space for the drawer.
 		
-## Header Content
+## Header content
 
 The header is displayed at the top of the drawer. Use the [DrawerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerHeaderView) property to set the header content:
 
@@ -61,7 +61,7 @@ this.Content = navigationDrawer;
 
 ![Header](Images/panel-content/navigation_drawer_header.png)
 
-## Header Height
+## Header height
 
 Adjust the height of the drawer header content using the [DrawerHeaderHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerHeaderHeight) property.
 
@@ -105,7 +105,7 @@ this.Content = navigationDrawer;
 
 ![Header height](Images/panel-content/navigation_drawer_header_height.png)
 
-## Footer Content
+## Footer content
 
 The footer is displayed at the bottom of the drawer. Use the [DrawerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerFooterView) property to set the footer content:
 
@@ -146,7 +146,7 @@ this.Content = navigationDrawer;
 
 ![Footer](Images/panel-content/navigation_drawer_footer.png)
 
-## Footer Height
+## Footer height
 
 Adjust the height of the drawer footer content using the [DrawerFooterHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerFooterHeight) property.
 
@@ -190,7 +190,7 @@ this.Content = navigationDrawer;
 
 ![Footer height](Images/panel-content/navigation_drawer_footer_height.png)
 
-## Drawer Content
+## Drawer content
 
 The main content of the drawer is displayed between the header and footer content. It can be set using the [DrawerContentView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerContentView) property. The content view occupies the space left by the header and footer content.
 
@@ -229,4 +229,4 @@ this.Content = navigationDrawer;
 
 {% endtabs %}
 
-![content](Images/panel-content/navigation_drawer_content.png)
+![Content](Images/panel-content/navigation_drawer_content.png)
