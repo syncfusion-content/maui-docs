@@ -9,9 +9,9 @@ documentation: ug
 
 # Tick in .NET MAUI Range Slider (SfRangeSlider)
 
-This section helps to learn about how to add major and minor ticks in the range slider.
+This section explains how to add major and minor ticks in the range slider.
 
-## Show major ticks
+## Show Major Ticks
 
 Enable the major ticks on the track. It is a shape used to represent the major interval points of the track. The default value of the [`ShowTicks`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowTicks) property is `False`.
 
@@ -38,7 +38,7 @@ rangeSlider.ShowTicks = true;
 
 ![RangeSlider ticks](images/ticks/show-ticks-without-interval.png)
 
-### With interval
+### With Interval
 
 {% tabs %}
 
@@ -61,7 +61,7 @@ rangeSlider.ShowTicks = true;
 
 ![RangeSlider ticks](images/ticks/show-ticks.png)
 
-## Show minor ticks
+## Show Minor Ticks
 
 It is used to represent the number of smaller ticks between two major ticks. For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum) is 0.0, the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum) is 10.0, and [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Interval) is 2.0, the range slider will render the major ticks at 0.0, 2.0, 4.0 and so on. If the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTicksPerInterval) is 1, then smaller ticks will be rendered on 1.0 and 3.0 and so on. The default value of the [`MinorTicksPerInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTicksPerInterval) property is 0.
 
@@ -88,7 +88,8 @@ rangeSlider.ShowTicks = true;
 
 ![RangeSlider minor ticks](images/ticks/show-minorticks-without-interval.png)
 
-### With interval
+### With Interval
+
 {% tabs %}
 
 {% highlight xaml %}
@@ -112,7 +113,7 @@ rangeSlider.ShowTicks = true;
 
 ![RangeSlider minor ticks](images/ticks/show-minor-ticks.png)
 
-## Major ticks color
+## Major Ticks Color
 
 Change the active and inactive major ticks color of the range slider using the [`ActiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_ActiveFill) and [`InactiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_InactiveFill) properties of the [`MajorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MajorTickStyle) class.
 
@@ -150,7 +151,7 @@ rangeSlider.MajorTickStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F
 
 ![RangeSlider major ticks color](images/ticks/major-ticks-color.png)
 
-## Minor ticks color
+## Minor Ticks Color
 
 Change the active and inactive minor ticks color of the range slider using the [`ActiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_ActiveFill) and [`InactiveFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_InactiveFill) properties of the [`MinorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTickStyle) class.
 
@@ -190,7 +191,7 @@ rangeSlider.MinorTickStyle.InactiveFill = new SolidColorBrush(Color.FromArgb("#F
 
 ![RangeSlider minor ticks color](images/ticks/minor-ticks-color.png)
 
-## Ticks size
+## Ticks Size
 
 Change the major and minor ticks size of the range slider using the [`ActiveSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_ActiveSize) and [`InactiveSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_InactiveSize) property of the [`MajorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MajorTickStyle) and [`MinorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTickStyle)  classes. The default value is `Size(2.0, 8.0)`.
 
@@ -233,7 +234,7 @@ rangeSlider.MajorTickStyle.InactiveSize = new Size(2, 15);
 
 ![RangeSlider tick size](images/ticks/tick-size.png)
 
-## Ticks offset
+## Ticks Offset
 
 Adjust the space between track and ticks of the range slider using the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_Offset) property of the [`MajorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MajorTickStyle) and [`MinorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTickStyle) . The default value of the [`Offset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTickStyle.html#Syncfusion_Maui_Sliders_SliderTickStyle_Offset) property is `3.0`.
 
@@ -272,9 +273,9 @@ rangeSlider.MajorTickStyle.Offset = 5;
 
 ![RangeSlider tick offset](images/ticks/tick-offset.png)
 
-## Disabled ticks
+## Disabled Ticks
 
-Change the state of the range slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), customize the range slider’s major and minor tick properties based on the visual states. The applicable visual states are enabled(default) and disabled.
+Disable the range slider by setting the `IsEnabled` property to `false`. Use the Visual State Manager (VSM) to customize major and minor tick properties based on visual states. The applicable visual states are enabled (default) and disabled.
 
 {% tabs %}
 

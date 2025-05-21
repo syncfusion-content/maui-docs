@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tooltip in .NET MAUI Slider control | Syncfusion®
-description: Learn here all about adding the Tooltip feature of Syncfusion® .NET MAUI Slider (SfSlider) control and more.
+title: Tooltip in .NET MAUI Slider Control | Syncfusion®
+description: Learn about adding the Tooltip feature to the Syncfusion® .NET MAUI Slider (SfSlider) control.
 platform: maui
 control: SfSlider
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Tooltip in .NET MAUI Slider (SfSlider)
 
-This section helps to learn about how to add tooltip in the slider.
+This section explains how to add a tooltip to the slider.
 
-## Enable tooltip
+## Enable Tooltip
 
 Enable tooltip for the thumb by setting the [`Tooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Tooltip) property to [`SliderTooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html). It is used to clearly indicate the current selection of the value during interaction. By default, tooltip text is formatted with either numberFormat. The default value of the [`Tooltip`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Tooltip) property is `null`. 
 
@@ -40,7 +40,7 @@ SfSlider slider = new SfSlider()
 
 ![Slider tooltip](images/tooltip/tooltip.png)
 
-## Show always
+## Show Always
 
 Always shows a tooltip with and without the thumb interaction by setting the [`SliderTooltip.ShowAlways`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_ShowAlways) property. The default value of the [`SliderTooltip.ShowAlways`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_ShowAlways) property is `False`.
 

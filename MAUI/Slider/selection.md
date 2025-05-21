@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Value selection in .NET MAUI Slider control | Syncfusion®
-description: Learn here all about the value selection of Syncfusion® .NET MAUI Slider (SfSlider) control and more.
+title: Value Selection in .NET MAUI Slider Control | Syncfusion®
+description: Learn about the value selection feature of the Syncfusion® .NET MAUI Slider (SfSlider) control.
 platform: maui
 control: SfSlider
 documentation: ug
 ---
 
-# Value selection in .NET MAUI Slider (SfSlider)
+# Value Selection in .NET MAUI Slider (SfSlider)
 
-This section helps to learn about the value selection in the Slider.
+This section explains how value selection works in the Slider control.
 
-## Discrete selection
+## Discrete Selection
 
-Move the thumb in discrete manner for numeric values using the [`StepSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_StepSize) property in the slider.
+The thumb can be moved in a discrete manner for numeric values using the [`StepSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_StepSize) property of the slider.
 
 {% tabs %}
 
@@ -50,11 +50,10 @@ SfSlider slider = new SfSlider()
 
 ![Slider numeric discrete mode](images/selection/step-size.gif)
 
-## Deferred update
+## Deferred Update
 
-You can control when the dependent components are updated while thumbs are being dragged continuously. It can be achieved by setting the `EnableDeferredUpdate` property and the delay in the update can be achieved by setting the `DeferredUpdateDelay` property. The default value of the `DeferredUpdateDelay` property is `500` milliseconds.
-
-It invokes the `ValueChanging` event when the thumb is dragged and held for the duration specified in the `DeferredUpdateDelay`. However, the values are immediately updated in touch-up action.
+Control when the dependent components are updated while thumbs are being dragged continuously by setting the `EnableDeferredUpdate` property. The delay in the update can be configured using the `DeferredUpdateDelay` property. By default, the delay is set to `500` milliseconds.
+The `ValueChanging` event is invoked when the thumb is dragged and held for the duration specified in the `DeferredUpdateDelay`; however, values are immediately updated upon touch-up action.
 
 {% tabs %}
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Slider control | Syncfusion®
-description: This section explains about the getting started with Syncfusion® MAUI Slider (SfSlider) control and more.
+title: Getting Started with .NET MAUI Slider Control | Syncfusion®
+description: This section explains how to get started with Syncfusion® MAUI Slider (SfSlider) control and more.
 platform: maui
 control: SfSlider
 documentation: ug
@@ -28,19 +28,19 @@ Before proceeding, ensure the following are in place:
 
 ## Step 1: Create a New .NET MAUI Project
 
-1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
-2. Name the project and choose a location. Then, click **Next**.
+1. Go to **File > New > Project** and select the **.NET MAUI App** template.
+2. Name the project and choose a location, then click **Next**.
 3. Select the .NET framework version and click **Create**.
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Sliders NuGet Package
 
-1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
+1. In **Solution Explorer**, right-click the project and select **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.Sliders](https://www.nuget.org/packages/Syncfusion.Maui.Sliders) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored.
+3. Ensure all necessary dependencies are installed correctly, and the project is restored.
 
 ## Step 3: Register the Handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion<sup>®</sup> core.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nugget is a dependent package for all Syncfusion<sup>®</sup> controls in .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;
@@ -73,7 +73,7 @@ namespace SliderGettingStarted
 
 {% endhighlight %}
 
-## Step 4: Add a Basic Slider control
+## Step 4: Add a Basic Slider Control
 
 Import the [SfSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html) namespace and initialize the slider as shown below.
 
@@ -119,21 +119,21 @@ namespace SliderGettingStarted
 
 Before proceeding, ensure the following are set up:
 
-1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
+1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio Code.
-3. Ensure that the .NET MAUI extension is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
+3. Ensure the .NET MAUI extension is installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
 
 ## Step 1: Create a New .NET MAUI Project
 
-1. Open the Command Palette by pressing **Ctrl+Shift+P** and type **.NET:New Project** and press Enter.
+1. Open the Command Palette by pressing **Ctrl+Shift+P**, type **.NET: New Project** and press **Enter**.
 2. Choose the **.NET MAUI App** template.
-3. Select the project location, type the project name and press Enter.
-4. Then choose **Create project**
+3. Select the project location, type the project name, and press **Enter**.
+4. Click **Create Project**.
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Sliders NuGet Package
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
-2. Ensure you're in the project root directory where your .csproj file is located.
+2. Ensure you're in the project root directory where your `.csproj` file is located.
 3. Run the command `dotnet add package Syncfusion.Maui.Sliders` to install the Syncfusion<sup>®</sup> .NET MAUI Sliders package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
@@ -172,7 +172,7 @@ namespace SliderGettingStarted
 
 {% endhighlight %}
 
-## Step 4: Add a Basic Slider control
+## Step 4: Add a Basic Slider Control
 
 Import the [SfSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html) namespace and initialize the slider as shown below.
 
@@ -220,20 +220,20 @@ namespace SliderGettingStarted
 Before proceeding, ensure the following are set up:
 
 1. Ensure you have the latest version of JetBrains Rider.
-2. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
-3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
+2. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
+3. Ensure the MAUI workloads are installed and configured as described [here](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start).
 
-## Step 1: Create a new .NET MAUI Project
+## Step 1: Create a New .NET MAUI Project
 
-1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
-2. Enter the Project Name, Solution Name, and Location.
-3. Select the .NET framework version and click Create.
+1. Go to **File > New Solution** and select .NET (C#), then choose the .NET MAUI App template.
+2. Enter the project name, solution name, and location.
+3. Select the .NET framework version and click **Create**.
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Sliders NuGet Package
 
-1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.Sliders](https://www.nuget.org/packages/Syncfusion.Maui.Sliders/) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
+3. Ensure all necessary dependencies are installed correctly, and if needed, open the terminal in Rider and manually run `dotnet restore`.
 
 ## Step 3: Register the Handler
 
@@ -270,7 +270,7 @@ namespace SliderGettingStarted
 
 {% endhighlight %}
 
-## Step 4: Add a Basic Slider control
+## Step 4: Add a Basic Slider Control
 
 Import the [SfSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html) namespace and initialize the slider as shown below.
 
@@ -316,9 +316,9 @@ namespace SliderGettingStarted
 
 ![Initialize slider](images/getting-started/initialize-slider.png)
 
-## Enable labels
+## Enable Labels
 
-The [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property enables the labels which renders on given interval.
+The [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowLabels) property enables labels that render at a given interval.
 
 {% tabs %}
 
@@ -349,9 +349,9 @@ SfSlider slider = new SfSlider()
 
 ![Slider labels](images/getting-started/labels.png)
 
-## Enable ticks
+## Enable Ticks
 
-The [ShowTicks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowTicks) property enables the ticks in the range selector, while the [MinorTicksPerInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTicksPerInterval) property enables the minor ticks between the major ticks.
+The [ShowTicks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ShowTicks) property enables ticks in the range selector, while the [MinorTicksPerInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_MinorTicksPerInterval) property enables minor ticks between the major ticks.
 
 {% tabs %}
 
@@ -388,7 +388,7 @@ SfSlider slider = new SfSlider()
 
 ## Orientation
 
-The [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase-1.html#Syncfusion_Maui_Sliders_SliderBase_1_Orientation) property allows you to show the slider in both horizontal and vertical directions. The default value of the [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase-1.html#Syncfusion_Maui_Sliders_SliderBase_1_Orientation) property is `Horizontal`.
+The [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase-1.html#Syncfusion_Maui_Sliders_SliderBase_1_Orientation) property allows you to display the slider in both horizontal and vertical directions. The default value of [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderBase-1.html#Syncfusion_Maui_Sliders_SliderBase_1_Orientation) is `Horizontal`.
 
 {% tabs %}
 
@@ -425,9 +425,9 @@ SfSlider slider = new SfSlider()
 
 ![Slider orientation](images/getting-started/orientation.png)
 
-## Inverse the slider
+## Inverse the Slider
 
-Invert the slider using the [IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property. The default value of the [IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property is `False`.
+Invert the slider using the [IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) property. The default value of [IsInversed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_IsInversed) is `False`.
 
 {% tabs %}
 
@@ -464,9 +464,9 @@ SfSlider slider = new SfSlider()
 
 ![Inverse slider](images/getting-started/slider-inverse.png)
 
-## Formatting labels
+## Formatting Labels
 
-Add prefix or suffix to the labels using the [NumberFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_NumberFormat) property.
+Add a prefix or suffix to the labels using the [NumberFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html#Syncfusion_Maui_Sliders_SfSlider_NumberFormat) property.
 
 
 {% tabs %}
@@ -504,4 +504,4 @@ SfSlider slider = new SfSlider()
 
 ![Slider label format](images/getting-started/label-format.png)
 
-N> You can refer to our [.NET MAUI Slider](https://www.syncfusion.com/maui-controls/maui-slider) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Slider Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Sliders) that shows you how to render the Slider in .NET MAUI.
+N> You can refer to our [.NET MAUI Slider](https://www.syncfusion.com/maui-controls/maui-slider) feature tour page for groundbreaking representations. You can also explore our [.NET MAUI Slider Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Sliders) that shows you how to render the Slider in .NET MAUI.
