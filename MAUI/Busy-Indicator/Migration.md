@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Migrating from Xamarin to .NET MAUI SfBusyIndicator | Syncfusion® 
-description: Learn here all about Migrating from Syncfusion® Xamarin BusyIndicator to Syncfusion® .NET MAUI BusyIndicator control and more.
-platform: maui
+description: Learn here all about migrating from Syncfusion® Xamarin Busy Indicator to Syncfusion® .NET MAUI Busy Indicator control and more.
+platform: MAUI
 control: SfBusyIndicator
-documentation: ug
+documentation: UG
 ---  
 
 # Migrating from Xamarin SfBusyIndicator to .NET MAUI SfBusyIndicator 
 
-To migrate easier from Xamarin SfBusyIndicator to .NET MAUI [SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html), we kept most of the APIs from Xamarin SfBusyIndicator in MAUI SfBusyIndicator. However, to maintain the consistency of API naming in MAUI SfBusyIndicator, we renamed some of the APIs. The APIs that have been changed in MAUI SfBusyIndicator from Xamarin SfBusyIndicator are detailed as follows.
+To facilitate an easier migration from Xamarin SfBusyIndicator to .NET MAUI [SfBusyIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html), we have retained most of the APIs from Xamarin SfBusyIndicator in the MAUI SfBusyIndicator. However, to maintain the consistency of API naming in the MAUI SfBusyIndicator, some APIs have been renamed. The changes in the MAUI SfBusyIndicator from the Xamarin SfBusyIndicator are detailed as follows.
 
 ## Namespaces 
 
@@ -32,11 +32,11 @@ To migrate easier from Xamarin SfBusyIndicator to .NET MAUI [SfBusyIndicator](ht
 <tr>
 <td> {{'[IsBusy](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfBusyIndicator.XForms.SfBusyIndicator.html#Syncfusion_SfBusyIndicator_XForms_SfBusyIndicator_IsBusy)'| markdownify}} </td>
 <td>{{'[IsRunning](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_IsRunning)'| markdownify}} </td>
-<td>Gets or sets a value of the IsRunning property in busy indicator. It determines whether the animation of indicator to be shown or not.</td></tr>
+<td>Gets or sets the IsRunning property value in the Busy Indicator. It determines whether the animation of indicator to be shown or not.</td></tr>
 <tr>
 <td>{{'[Duration](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfBusyIndicator.XForms.SfBusyIndicator.html#Syncfusion_SfBusyIndicator_XForms_SfBusyIndicator_Duration)'| markdownify}} </td>
 <td>{{'[DurationFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_DurationFactor)'| markdownify}} </td>
-<td>Gets or sets the value of the duration property. It is used to change the speed of animation to finish a cycle.</td></tr>
+<td>Gets or sets the duration property value. It is used to change the speed of animation to complete a cycle.</td></tr>
 <tr>
 <td>{{'[ViewBoxWidth](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfBusyIndicator.XForms.SfBusyIndicator.html#Syncfusion_SfBusyIndicator_XForms_SfBusyIndicator_ViewBoxWidth) [ViewBoxHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfBusyIndicator.XForms.SfBusyIndicator.html#Syncfusion_SfBusyIndicator_XForms_SfBusyIndicator_ViewBoxHeight)'| markdownify}}</td>
 <td>{{'[SizeFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_SizeFactor)'| markdownify}}</td>

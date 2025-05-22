@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Visual state manager in .NET MAUI Tab View (SfTabView) | Syncfusion®
-description: Learn here all about handling of visual state manager in Syncfusion® .NET MAUI Tab View (SfTabView) control and more.
+title: Visual State Manager in .NET MAUI Tab View (SfTabView) | Syncfusion®
+description: Learn all about handling of visual state manager in the Syncfusion® .NET MAUI Tab View (SfTabView) control and more.
 platform: MAUI
-control: TabView
-documentation: ug
+control: SfTabView
+documentation: UG
 ---
 
 # Visual State Manager in .NET MAUI Tab View (SfTabView)
 
-Use the visual state manager to change the .NET MAUI tab properties based on the visual states set from code. The applicable visual states are selected, normal, and disable.
+Use the visual state manager to change the .NET MAUI tab properties based on the visual states set from code. The applicable visual states are `Selected`, `Normal`, and `Disable`.
 
 {% tabs %}
 
@@ -276,8 +276,8 @@ Use the visual state manager to change the .NET MAUI tab properties based on the
 
 ![Visual state manager](images/Visual-state-manager.png) 
 
-N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/VisualStateManagerTabView) in GitHub.
+N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/VisualStateManagerTabView) on GitHub.
 
 ## See also 
 
-[How to customize the text color of the header in .NET MAUI TabView?](https://support.syncfusion.com/kb/article/16788/how-to-customize-the-text-color-of-the-header-in-net-maui-tabview)
+[How to customize the text color of the header in .NET MAUI Tab View?](https://support.syncfusion.com/kb/article/16788/how-to-customize-the-text-color-of-the-header-in-net-maui-tabview)

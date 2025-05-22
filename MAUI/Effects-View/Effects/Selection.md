@@ -1,15 +1,15 @@
 ---
 layout: post
-title: The .NET MAUI Selection Effects | Effects View control | Syncfusion<sup>®</sup>
-description: Learn here all about selection effect support in Syncfusion<sup>®</sup> .NET MAUI Effects View (SfEffectsView) control and more.
-platform: maui
-control: Effects View
-documentation: ug
+title: The .NET MAUI Selection Effects | Effects View Control | Syncfusion®
+description: Learn all about selection effect support in Syncfusion® .NET MAUI Effects View (SfEffectsView) control and more.
+platform: MAUI
+control: SfEffectsView
+documentation: UG
 ---
 
 # Selection Effect in .NET MAUI Effects View (SfEffectsView)
 
-[SfEffects.Selection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html#Syncfusion_Maui_Core_SfEffects_Selection) is a smooth color transition to indicate whether the [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) state is selected or not.
+The [SfEffects.Selection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html#Syncfusion_Maui_Core_SfEffects_Selection) provides a smooth color transition to indicate whether the [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) state is selected or not.
 
 {% tabs %} 
 
@@ -34,4 +34,4 @@ var effectsView = new SfEffectsView
 
 {% endtabs %}
 
-![.net maui selection effect](Effects_images/net_maui_selection_effect.png)
+![Selection effect](Effects_images/net_maui_selection_effect.png)
