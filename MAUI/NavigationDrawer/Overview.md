@@ -15,8 +15,8 @@ The .NET MAUI Navigation Drawer is a simpler component for creating a navigation
 
 ![.NET MAUI Navigation Drawer.](Images/overview/net-maui-navigationdrawer.png)
 
-## Key Features
+## Key features
 
-* **Pane Positions** – Supports positioning the pane in all four directions: Left, Right, Top, and Bottom.
+* **Pane positions** – Supports positioning the pane in all four directions: Left, Right, Top, and Bottom.
 
-* **Animated Transitions** – Offers animated transitions such as SlideOnTop, Push, and Reveal for opening and closing the pane.
+* **Animated transitions** – Offers animated transitions such as SlideOnTop, Push, and Reveal for opening and closing the pane.

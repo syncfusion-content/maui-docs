@@ -11,9 +11,9 @@ documentation: UG
 
 The drawer in the SfNavigationDrawer can be toggled using the following methods:
 
-* IsOpen Property
-* ToggleDrawer Method
-* Swipe Gesture
+* IsOpen property
+* ToggleDrawer method
+* Swipe gesture
 
 ## Opening drawer programmatically
 
