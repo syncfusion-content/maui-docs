@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About .NET MAUI Sunburst Chart Control | Syncfusion
-description: Learn here all about introduction of Syncfusion .NET MAUI SunburstChart control with key features and more
+description: Learn here all about introduction of Syncfusion® .NET MAUI SunburstChart control with key features and more
 platform: maui
 control: SfSunburstChart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # .NET MAUI Sunburst Chart Overview
 
-The Syncfusion .NET MAUI Sunburst Chart is used to visualize hierarchical data structures. The chart organizes data in multiple levels, where each level represents a different category or subcategory. This visualization helps users understand relationships and dependencies within the data in an intuitive and user-friendly way.
+The Syncfusion® .NET MAUI Sunburst Chart is used to visualize hierarchical data structures. The chart organizes data in multiple levels, where each level represents a different category or subcategory. This visualization helps users understand relationships and dependencies within the data in an intuitive and user-friendly way.
 
 ![Overview of MAUI Sunburst Chart.](Overview_image/Overview_Image.png)
 

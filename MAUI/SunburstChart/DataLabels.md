@@ -36,9 +36,9 @@ this.Content = sunburst;
 
 {% endtabs %} 
 
-## Overflow Mode
+## OverFlowMode
 
-When the data labels are large in text size, they will overlap each other. To avoid overlapping, trim or hide the data labels using the [OverflowMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstDataLabelSettings.html#Syncfusion_Maui_SunburstChart_SunburstDataLabelSettings_OverflowMode) property. By default, the OverflowMode is `Trim`.
+When the data labels are large in text size, they will overlap each other. To avoid overlapping, trim or hide the data labels using the [OverFlowMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstDataLabelSettings.html#Syncfusion_Maui_SunburstChart_SunburstDataLabelSettings_OverFlowMode) property. By default, the OverFlowMode is `Trim`.
 
 The following code shows how to hide the data labels.
 
@@ -49,7 +49,7 @@ The following code shows how to hide the data labels.
 <sunburst:SfSunburstChart ShowLabels="True">
     . . .
     <sunburst:SfSunburstChart.DataLabelSettings>
-        <sunburst:SunburstDataLabelSettings OverflowMode="Hide"/>
+        <sunburst:SunburstDataLabelSettings OverFlowMode="Hide"/>
     </sunburst:SfSunburstChart.DataLabelSettings>
 </sunburst:SfSunburstChart>
 
@@ -62,7 +62,7 @@ SfSunburstChart sunburst = new SfSunburstChart();
 sunburst.ShowLabels = true;
 sunburst.DataLabelSettings = new SunburstDataLabelSettings()
 {
-    OverflowMode = SunburstLabelOverflowMode.Hide
+    OverFlowMode = SunburstLabelOverflowMode.Hide
 };
 this.Content = sunburst;
 
@@ -70,7 +70,7 @@ this.Content = sunburst;
 
 {% endtabs %} 
 
-![Overflow mode as hide in MAUI Sunburst Chart.](Data_label_images/maui_overflow_mode_hide.png)
+![OverFlowMode as hide in MAUI Sunburst Chart.](Data_label_images/maui_overflow_mode_hide.png)
 
 ## Rotation Mode
 
