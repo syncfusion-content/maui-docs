@@ -1,17 +1,17 @@
 ---
 layout: post
-title: States in SyncfusionSyncfusion® Avatar View control for .NET MAUI.
-description: This section will explain about how to use the different states that exist in .NET MAUI SfAvatarView.
-platform: maui
-control: AvatarView
-documentation: ug
+title: States in Syncfusion® .NET MAUI Avatar View
+description: Learn how to use the different states available in .NET MAUI Avatar View.
+platform: MAUI
+control: SfAvatarView
+documentation: UG
 ---
 
-# How to use different states
+# How to Use Different States
 
-## Set badge view to avatar
+## Set Badge View to Avatar View
 
-The [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html) control provides support for [BadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) to notify users of new or unread messages, notifications, or the status of something.
+The .NET MAUI [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html) control supports integrating a [BadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) to notify users of new or unread messages, notifications, or any updates. Below is a demonstration of how to accomplish this setup within your application.
 
 {% tabs %}
 
@@ -20,28 +20,28 @@ The [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAv
 xmlns:badge="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
 .......
 
-         <badge:SfBadgeView VerticalOptions="Center"
-                            HorizontalOptions="Center">
-			<badge:SfBadgeView.Content>
-				<sfavatar:SfAvatarView  HorizontalOptions="Center"
-                                        ContentType="Custom"
-                                        ImageSource="alex.png"
-                                        VerticalOptions="Center"
-                                        WidthRequest="60"
-                                        HeightRequest="60"
-                                        CornerRadius="30"
-                                        Stroke="Black"
-                                        StrokeThickness="1">
-                </sfavatar:SfAvatarView>
-			</badge:SfBadgeView.Content>
-			<badge:SfBadgeView.BadgeSettings>
-            <badge:BadgeSettings 	Offset="-10,-10"
-                                    Animation="Scale"
-                                    Position="BottomRight" 
-                                    Type="Success"
-                                    Icon="Away"/>
-			</badge:SfBadgeView.BadgeSettings>
-		</badge:SfBadgeView>
+<badge:SfBadgeView VerticalOptions="Center"
+                   HorizontalOptions="Center">
+    <badge:SfBadgeView.Content>
+        <sfavatar:SfAvatarView HorizontalOptions="Center"
+                               ContentType="Custom"
+                               ImageSource="alex.png"
+                               VerticalOptions="Center"
+                               WidthRequest="60"
+                               HeightRequest="60"
+                               CornerRadius="30"
+                               Stroke="Black"
+                               StrokeThickness="1">
+        </sfavatar:SfAvatarView>
+    </badge:SfBadgeView.Content>
+    <badge:SfBadgeView.BadgeSettings>
+        <badge:BadgeSettings Offset="-10,-10"
+                             Animation="Scale"
+                             Position="BottomRight" 
+                             Type="Success"
+                             Icon="Away"/>
+    </badge:SfBadgeView.BadgeSettings>
+</badge:SfBadgeView>
 
 {% endhighlight %}
 
@@ -81,4 +81,4 @@ this.Content = mainGrid;
 
 ![BadgeView support](HowTo_Images/BadgeView_AvatarView.jpg)
 
-To know more about [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) view, refer to this [documentation](https://help.syncfusion.com/maui/badge-view/getting-started).
+To learn more about the [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1), refer to this [documentation](https://help.syncfusion.com/maui/badge-view/getting-started).
