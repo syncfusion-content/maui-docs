@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains the steps required to configure the [`SfParallaxView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html) control and add basic elements to it using various APIs.
 
-To get start quickly with our .NET MAUI Parallax View, you can check the below video.
+To get started quickly with our .NET MAUI Parallax View, you can check the below video.
 
 {% youtube "https://youtu.be/ezzIDWYYrUc" %}
 
@@ -22,7 +22,7 @@ To get start quickly with our .NET MAUI Parallax View, you can check the below v
 
 Before proceeding, ensure that the following are set up:
 
-1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
+1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.8 or later).
 
 ## Step 1: Create a new .NET MAUI project
@@ -31,7 +31,7 @@ Before proceeding, ensure that the following are set up:
 2. Name the project and choose a location. Click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI Parallax View Package
+## Step 2: Install the Syncfusion® .NET MAUI Parallax View Package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.ParallaxView](https://www.nuget.org/packages/Syncfusion.Maui.ParallaxView/) and install the latest version.
@@ -39,7 +39,7 @@ Before proceeding, ensure that the following are set up:
 
 ## Step 3: Register the handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion® controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion® core.
 
 {% tabs %}
 {% highlight C# tabtitle="MauiProgram.cs" hl_lines="2 13" %}
@@ -72,7 +72,7 @@ namespace ParallaxViewGettingStarted
 
 ## Step 4: Add .NET MAUI Parallax View
 
-1. To initialize the control, import the `Synfusion.Maui.ParallaxView` namespace.
+1. To initialize the control, import the `Syncfusion.Maui.ParallaxView` namespace.
 2. Initialize [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html).
 
 {% tabs %} 
@@ -117,7 +117,7 @@ namespace ParallaxViewGettingStarted
 
 Before proceeding, ensure that the following are set up:
 
-1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
+1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio Code.
 3. Ensure that the .NET MAUI extension is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
 
@@ -128,16 +128,16 @@ Before proceeding, ensure that the following are set up:
 3. Select the project location, type the project name and press **Enter.**
 4. Then choose **Create project.**
 
-## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI Parallax View Package
+## Step 2: Install the Syncfusion® .NET MAUI Parallax View Package
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you're in the project root directory where your .csproj file is located.
-3. Run the command `dotnet add package Syncfusion.Maui.ParallaxView` to install the Syncfusion<sup>®</sup> .NET MAUI ParallaxView NuGet package.
+3. Run the command `dotnet add package Syncfusion.Maui.ParallaxView` to install the Syncfusion® .NET MAUI ParallaxView NuGet package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
 ## Step 3: Register the handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion® controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion® core.
 
 {% tabs %}
 {% highlight C# tabtitle="MauiProgram.cs" hl_lines="2 13" %}
@@ -170,7 +170,7 @@ namespace ParallaxViewGettingStarted
 
 ## Step 4: Add .NET MAUI Parallax View
 
-1. To initialize the control, import the `Synfusion.Maui.ParallaxView` namespace.
+1. To initialize the control, import the `Syncfusion.Maui.ParallaxView` namespace.
 2. Initialize [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html).
 
 {% tabs %} 
@@ -353,20 +353,20 @@ public class ParallaxViewModel
             new Contacts() { Name = "Like a Prayer", Author = "Madonna" },
             new Contacts() { Name = "When Doves Cry", Author = "Prince" },
             new Contacts() { Name = "I Wanna Dance", Author = "Whitney Houston" },
-            new Contacts() { Name = "It’s Gonna Be Me", Author = "N Sync"},
+            new Contacts() { Name = "It's Gonna Be Me", Author = "N Sync"},
             new Contacts() { Name = "Everybody", Author = "Backstreet Boys"},
             new Contacts() { Name = "Rolling in the Deep", Author = "Adele" },
-            new Contacts() { Name = "Don’t Stop Believing", Author = "Journey" },
+            new Contacts() { Name = "Don't Stop Believing", Author = "Journey" },
             new Contacts() { Name = "Billie Jean", Author = "Michael Jackson" },             
             new Contacts() { Name = "Firework", Author = "Katy Perry"},               
             new Contacts() { Name = "Thriller", Author = "Michael Jackson" },
             new Contacts() { Name = "Like a Prayer", Author = "Madonna" },
             new Contacts() { Name = "When Doves Cry", Author = "Prince" },
             new Contacts() { Name = "I Wanna Dance", Author = "Whitney Houston" },
-            new Contacts() { Name = "It’s Gonna Be Me", Author = "N Sync" },
+            new Contacts() { Name = "It's Gonna Be Me", Author = "N Sync" },
             new Contacts() { Name = "Everybody", Author = "Backstreet Boys" },
             new Contacts() { Name = "Rolling in the Deep", Author = "Adele" },
-            new Contacts() { Name = "Don’t Stop Believing", Author = "Journey"},
+            new Contacts() { Name = "Don't Stop Believing", Author = "Journey"},
         };
 
         for (int i = 0; i < Items.Count; i++)
