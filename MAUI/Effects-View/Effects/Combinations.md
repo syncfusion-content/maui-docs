@@ -7,7 +7,7 @@ control: SfEffectsView
 documentation: UG
 ---
 
-# Combination of effects 
+# Combination of Effects 
 
 The [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) control supports applying multiple [SfEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html) in combination. Below are some valid combinations of [SfEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html):
 
