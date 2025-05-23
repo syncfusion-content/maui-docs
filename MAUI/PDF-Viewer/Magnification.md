@@ -51,12 +51,12 @@ The example project with the zoom or magnification functionalities can be downlo
 
 ## Zoom modes 
 
-The .NET MAUI PDF Viewer supports the below zoom modes: 
+The .NET MAUI PDF Viewer supports the following zoom modes: 
 1. Fit to Page
 2. Fit to Width
 
 Fit-to-page ensures that users can see the entire page content to get a quick overview without having to scroll. Fit-to-width is helpful when reading documents with narrow columns, such as newspaper articles or other multicolumn layouts.
-You can change the zoom mode using the [SfPdfViewer.ZoomMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ZoomMode.html#fields) property of the PDF Viewer, default value for [SfPdfViewer.ZoomMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ZoomMode.html#fields) is [ZoomMode.Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ZoomMode.html#Syncfusion_Maui_PdfViewer_ZoomMode_Default).
+You can change the zoom mode using the [SfPdfViewer.ZoomMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ZoomMode.html#fields) property of the PDF Viewer, the default value for [SfPdfViewer.ZoomMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ZoomMode.html#fields) is [ZoomMode.Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ZoomMode.html#Syncfusion_Maui_PdfViewer_ZoomMode_Default).
 
 ### Change zoom mode from the toolbar
 

@@ -36,7 +36,7 @@ void EnableContinuousPageLayoutMode()
 {% endhighlight %}
 {% endtabs %}
 
-### Singe page layout mode
+### Single page layout mode
 
 In single page layout mode, the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) shows one page at a time and allows users to swipe or scroll horizontally through the document. It provides a focused view, allowing readers to concentrate on a single page at a time without being distracted. 
 To enable the single page layout mode, you can call the following code in a button click.
@@ -56,7 +56,7 @@ void EnableSinglePageLayoutMode()
 
 N> You can download the **Custom Toolbar** sample project for the .NET MAUI PDF Viewer [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples) , which demonstrates fuctionality related to the [PageLayoutMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.PageLayoutMode.html) feature.
 
-## Obtain total page count and current page number
+## Obtain the total page count and the current page number
 
 The [PageCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_PageCount) property returns the total number of pages in a PDF document. And the [PageNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_PageNumber) property returns the current page number displayed in the PDF Viewer.
 
@@ -75,12 +75,12 @@ The [GoToPage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfP
 
 {% tabs %}
 {% highlight c# %}
-// Navigate to the page number 4.
+// Navigate to page number 4.
 PdfViewer.GoToPage(4);
 {% endhighlight %}
 {% endtabs %}
 
-## Navigate to the next and previous page programmatically
+## Navigate to the next and previous pages programmatically
 
 The [GoToNextPage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_GoToNextPage) and [GoToPreviousPage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_GoToPreviousPage) methods help you navigate to the next and previous pages of a PDF document. Refer to the following code example:
 

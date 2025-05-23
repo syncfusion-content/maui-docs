@@ -10,7 +10,7 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 # Undo and Redo in .NET MAUI PDF Viewer (SfPdfViewer)
 
-If you performed any undesired actions when on adding, removing, moving, resizing or editing annotations, you can undo and redo the action to restore the previous state. This section will go through how to perform the undo and redo the changes made on the annotations.
+If you performed any undesired actions when adding, removing, moving, resizing or editing annotations, you can undo and redo the action to restore the previous state. This section will go through how to perform the undo and redo the changes made on the annotations.
 
 For desktop platforms such as Windows and macOS, you can also use the following shortcut keys to perform the actions.
 
@@ -34,7 +34,7 @@ For desktop platforms such as Windows and macOS, you can also use the following 
 
 ## Undo
 
-You can perform undo to reverse the most recent action performed on the annotations using the [UndoCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_UndoCommand) of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). The following code examples explains how to bind the command to a button in XAML to perform the action on button click and also executing the command programmatically as well.
+You can perform undo to reverse the most recent action performed on the annotations using the [UndoCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_UndoCommand) of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). The following code examples explain how to bind the command to a button in XAML to perform the action on button click, and also execute the command programmatically as well.
 
 {% tabs %}
 {% highlight XAML %}
