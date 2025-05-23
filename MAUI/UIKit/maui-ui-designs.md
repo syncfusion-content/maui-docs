@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Essential® UI Kit for .NET MAUI Designs | Syncfusion®
-description: Essential® UI Kit for .NET MAUI contains elegantly designed XAML templates for MAUI apps. These templates are compatible with Android, iOS, and UWP platforms.
+description: Essential® UI Kit for .NET MAUI contains elegantly designed XAML templates for .NET MAUI apps. These templates are compatible with Android, iOS, and UWP platforms.
 platform: maui
-control: Essential<sup>®</sup> UI Kit for .NET MAUI
+control: Essential UI Kit for .NET MAUI
 documentation: ug
 ---
 
-# Syncfusion<sup>®</sup> Essential<sup>®</sup> UI Kit for .NET MAUI Designs
+# Syncfusion Essential UI Kit for .NET MAUI Designs
 
-The Essential<sup>®</sup> UI Kit for .NET MAUI offers a collection of **96 screens**, organized into **20 versatile categories**, designed to streamline your design process and elevate your user interface creations. 
+The Essential UI Kit for .NET MAUI offers a collection of **96 screens**, organized into **20 versatile categories**, designed to streamline your design process and elevate your user interface creations. 
 
 ## Forms	
 
@@ -144,13 +144,13 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI offers a collection of **96 scre
 
 ## Dashboard
 
-* [Stock Overview]()
-* [Health Care]()
-* [Daily Calories Report]()
-* [Daily Timeline]()
-* [Company History]()
-* [My Wallet]()
-* [Restaurant Dashboard]()
+* [Stock Overview](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Dashboard/StockOverview.xaml)
+* [Health Care](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Dashboard/HealthCare.xaml)
+* [Daily Calories Report](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Dashboard/DailyCaloriesReport.xaml)
+* [Daily Timeline](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Dashboard/DailyTimeline.xaml)
+* [Company History](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Dashboard/CompanyHistory.xaml)
+* [My Wallet](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Dashboard/MyWallet.xaml)
+* [Restaurant Dashboard](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Dashboard/RestaurantDashboard.xaml)
 
 ## Settings
 
@@ -165,4 +165,4 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI offers a collection of **96 scre
 
 ## Onboarding
 
-* [Walk-through]()
+* [Walk-through](https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Onboarding/Walkthrough.xaml)
