@@ -40,7 +40,7 @@ You can add sticky note annotations to a PDF document by tapping with a touch (o
 1. Set the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) property of the SfPdfViewer to [StickyNote](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_StickyNote). This activates the sticky note mode on the control.
 2. Tap (or mouse down) on a PDF page, where you want to add the sticky note annotation. This will add a sticky note with a default style and a popup will be displayed to write and submit the text.
 3. Once the sticky note is added, [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) is automatically changed to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_None).
-4. You can later select and edit the annotations, if required.
+4. You can later select and edit the annotations if required.
 5. If you need to disable the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) of [StickyNote](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_StickyNote), you need to change the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_None). 
 
 The following code explains how to enable the sticky note mode
@@ -153,7 +153,7 @@ void EditSelectedStickyNoteAnnotation(Annotation selectedAnnotation)
 
 ## Sticky note modal view
 
-The sticky note modal view appears when text needs to be input by the user for creating and editing sticky note annotations in Android and iOS platforms. The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) notifies when the modal view is appearing and disappearing through events. The events help you in hiding and showing elements that are part of the app UI that are not necessary as long as the modal view is visible. 
+The sticky note modal view appears when text needs to be input by the user for creating and editing sticky note annotations on Android and iOS platforms. The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) notifies when the modal view is appearing and disappearing through events. The events help you hide and show elements that are part of the app UI that are not necessary as long as the modal view is visible. 
 
 ![Sticky note modal view](Images/Annotations/sticky-note-modal-view.png)
 
@@ -166,7 +166,7 @@ pdfviewer.StickyNoteModalViewAppearing += PdfViewer_StickyNoteModalViewAppearing
 
 private void PdfViewer_StickyNoteModalViewAppearing(object? Sender, AnnotationModalViewAppearingEventArgs e)
 {
-    // Implement the logic to hide unwanted UI elements such as toolbar items add in the app UI. 
+    // Implement the logic to hide unwanted UI elements such as toolbar items added to the app UI. 
 }
 
 {% endhighlight %}
@@ -203,7 +203,7 @@ private void PdfViewer_StickyNoteModalViewAppearing(object? Sender, AnnotationMo
 {
     e.Cancel = true;
     editedAnnotation = e.Annotation;
-    // Implement your own UI for sticky note editor and show it.
+    // Implement your own UI for the sticky note editor and show it.
     ShowCustomDialog();
 }
 
@@ -220,4 +220,4 @@ Private void customDialogOkButton_Clicked(object sender, EventArgs e)
 {% endhighlight %} 
 {% endtabs %}
 
-N> For WinUI and MacCatalyst platforms, there is no separate modal view to receive text input from the users. As a result, the `StickyNoteModalViewAppearing` and `StickyNoteModalViewDisappearing` events are not applicable for these platforms. 
+N> For WinUI and MacCatalyst platforms, there is no separate modal view to receive text input from the users. As a result, the `StickyNoteModalViewAppearing` and `StickyNoteModalViewDisappearing` events are not applicable to these platforms. 

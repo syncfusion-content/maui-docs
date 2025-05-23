@@ -23,7 +23,7 @@ The following stamp annotation types are now available in the PDF Viewer.
 
 This section will go through how to add stamp annotations to a PDF page using toolbar as well as programmatically.
 
-### Add standard stamps using toolbar
+### Add standard stamps using the toolbar
 
 On the built-in toolbar, a tool for standard stamps is available that contains 18 standard stamps, which are most commonly used in documents. Using that, you can choose your standard stamp and add it to the tapped position.
 
@@ -31,7 +31,7 @@ The following example explains how to choose a standard stamp and add it to the 
 
 ![Mobile Standard Stamp](Images/MobileStamp.gif)
 
-### Add custom stamps using toolbar
+### Add custom stamps using the toolbar
 
 On the built-in toolbar, you can create your own custom stamp using the built-in dialog box and add it to a PDF document.
 
@@ -43,11 +43,11 @@ The following example explains how to create a custom stamp using the built-in d
 
 ![Mobile Custom Stamp](Images/MobileCustomStamp.gif)
 
-### Add standard stamps without using toolbar
+### Add standard stamps without using the toolbar
 
-There are 18 standard stamp types are available in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) that are most commonly used in documents. The appropriate standard stamp type can be selected from the [StampType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.StampType.html) enumeration. 
+There are 18 standard stamp types available in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) that are most commonly used in documents. The appropriate standard stamp type can be selected from the [StampType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.StampType.html) enumeration. 
 
-The following example explains how to create a [Approved](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.StampType.html#Syncfusion_Maui_PdfViewer_StampType_Approved) standard stamp and add it to the first page of a PDF document using the [AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
+The following example explains how to create an [Approved](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.StampType.html#Syncfusion_Maui_PdfViewer_StampType_Approved) standard stamp and add it to the first page of a PDF document using the [AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
 
 {% tabs %}
 {% highlight C# %}
@@ -69,7 +69,7 @@ void AddStampAnnotation()
 {
     StampAnnotation stampAnnotation = CreateApprovedStandardStamp();
 
-    // Add the stamp to the PDF document using `SfPdfViewer` instance.
+    // Add the stamp to the PDF document using the `SfPdfViewer` instance.
     PdfViewer.AddAnnotation(stampAnnotation);
 }
 {% endhighlight %}
@@ -81,7 +81,7 @@ The following image represents the approved standard stamp appearance in the PDF
 
 ### Add custom stamps without using toolbar
 
-You can create a custom stamp from any images and add it to a PDF document. The following example explains how to create a custom stamp from an image in the application and add it to a PDF document using the [AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
+You can create a custom stamp from any image and add it to a PDF document. The following example explains how to create a custom stamp from an image in the application and add it to a PDF document using the [AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
 
 {% tabs %}
 {% highlight C# %}
@@ -89,13 +89,13 @@ StampAnnotation CreateCustomStamp()
 {
     int pageNumber = 1;
 
-    // Define the position and size for the stamp to be placed in the PDF page.
+    // Define the position and size for the stamp to be placed on the PDF page.
     RectF bounds = new RectF(50, 50, 200, 100);
 
-    // Create image stream from the image to be used as stamp.
+    // Create an image stream from the image to be used as a stamp.
     Stream imageStream = this.GetType().Assembly.GetManifestResourceStream("Annotations.Assets." + "Logo.png");
 
-    // Create a custom stamp annotation using the image steeam.
+    // Create a custom stamp annotation using the image stream.
     StampAnnotation customStamp = new StampAnnotation(imageStream,pageNumber,bounds);
 
     // Return the stamp annotation.
@@ -106,7 +106,7 @@ void AddCustomStampAnnotation()
 {
     StampAnnotation stampAnnotation = CreateCustomStamp();
 
-    // Add the stamp to the PDF document using `SfPdfViewer` instance.
+    // Add the stamp to the PDF document using the `SfPdfViewer` instance.
     PdfViewer.AddAnnotation(stampAnnotation);
 }
 {% endhighlight %}
@@ -126,7 +126,7 @@ The following example shows how to edit some of the properties of the selected s
 /// <param name="selectedAnnotation">The selected annotation instance that may be obtained from the annotation selected event</param>
 void EditSelectedStampAnnotation(Annotation selectedAnnotation)
 {
-    // Type cast the selected annotation as stamp annotation.
+    // Typecast the selected annotation as stamp annotation.
     if (selectedAnnotation is StampAnnotation stampAnnotation)
     {
         // Change the opacity to 75%.
@@ -157,7 +157,7 @@ PdfViewer.CustomStampModalViewAppearing += PdfViewer_CustomStampModalViewAppeari
 
 private void PdfViewer_CustomStampModalViewAppearing(object? sender, AnnotationModalViewAppearingEventArgs e)
 {
-    // Implement the logic to hide unwanted UI elements such as toolbar items add in the app UI. 
+    // Implement the logic to hide unwanted UI elements such as toolbar items added to the app UI. 
 }
 
 {% endhighlight %} 
@@ -178,9 +178,9 @@ private void PdfViewer_CustomStampModalViewDisappearing(object? sender, EventArg
 {% endhighlight %} 
 {% endtabs %}
 
-### Supressing the custom stamp modal view and implement your own UI
+### Suppressing the custom stamp modal view and implementing your own UI
 
-The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to supress the custom stamp modal view and use your own UI in its place. This can be achieved by setting the `AnnotationModalViewAppearingEventArgs.Cancel` property to `true` in the `CustomStampModalViewAppearing` event handler. 
+The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to suppress the custom stamp modal view and use your own UI in its place. This can be achieved by setting the `AnnotationModalViewAppearingEventArgs.Cancel` property to `true` in the `CustomStampModalViewAppearing` event handler. 
 
 The below code snippet illustrates supressing the custom stamp modal view and using a UI implemented in the app in its place. In this illustration, when the user types a text in your own dialog and clicks the ok button, the text is converted into an image stream and a StampAnnotation instance is created. When the PDF viewer is tapped, the stamp annotation is added in the tapped position. 
 
@@ -194,7 +194,7 @@ pdfViewer.Tapped += PdfViewer_Tapped;
 private void PdfViewer_CustomStampModalViewAppearing(object? Sender, AnnotationModalViewAppearingEventArgs e)
 {
     e.Cancel = true;
-    // Implement your own UI for sticky note editor and show it.
+    // Implement your own UI for the sticky note editor and show it.
     ShowCustomDialog();
 }
 

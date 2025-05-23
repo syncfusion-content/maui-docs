@@ -10,7 +10,7 @@ keywords : .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .n
 
 # Localization in .NET MAUI PDF Viewer (SfPdfViewer)
 
-Localization is the process of translating the application resources into a different language for the specific cultures. [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) is set up by default with the language code `en-US`. However, by including a resource file (.resx) in the application with the language code, the static text used in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) can be localized to a different language. 
+Localization is the process of translating the application resources into a different language for specific cultures. [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) is set up by default with the language code `en-US`. However, by including a resource file (.resx) in the application with the language code, the static text used in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) can be localized to a different language. 
 
 Follow the instructions given to apply localization to the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
 
@@ -56,11 +56,11 @@ Follow the given steps to create and add the resource file to the application.
 
 4. Click the `Add` option to add the resource file in the Resources folder.
 
-5. Change the `Build Action` of the resource file as `Embedded resource`.
+5. Change the `Build Action` of the resource file to `Embedded resource`.
 
     ![Build action of resource file](Images/Localization/BuildAction.png)
 
-6. Double tap on the resource file to add the name and value details in the Resource Designer.
+6. Double tap on the resource file to add the name and value details to the Resource Designer.
 	
 7. Set the `ResourceManager` as shown in the following code example, that looks up the resource file with the specified root name.
  
