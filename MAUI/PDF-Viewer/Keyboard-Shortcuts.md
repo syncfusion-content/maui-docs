@@ -19,11 +19,11 @@ The [.NET MAUI PDF viewer](https://www.syncfusion.com/maui-controls/maui-pdf-vie
 </tr>
 <tr>
 <td>Mouse wheel scroll up</td>
-<td>Vertically scrolls towards top</td>
+<td>Vertically scrolls towards the top</td>
 </tr>
 <tr>
 <td>Mouse wheel scroll down</td>
-<td>Vertically scrolls towards bottom</td>
+<td>Vertically scrolls towards the bottom</td>
 </tr>
 <tr>
 <td>Mouse left button down + drag</td>
@@ -31,11 +31,11 @@ The [.NET MAUI PDF viewer](https://www.syncfusion.com/maui-controls/maui-pdf-vie
 </tr>
 <tr>
 <td><code>Shift</code> + Mouse wheel scroll up</td>
-<td>Horizontally scrolls towards left</td>
+<td>Horizontally scrolls towards the left</td>
 </tr>
 <tr>
 <td><code>Shift</code> + Mouse wheel scroll down</td>
-<td>Horizontally scrolls towards right</td>
+<td>Horizontally scrolls towards the right</td>
 </tr>
 <tr>
 <td><code>Ctrl</code> + Mouse wheel scroll up</td>
@@ -99,19 +99,19 @@ The [.NET MAUI PDF viewer](https://www.syncfusion.com/maui-controls/maui-pdf-vie
 </tr>
 <tr>
 <td><code>Ctrl</code> + <code>Page down</code></td>
-<td>Goes to next page</td>
+<td>Goes to the next page</td>
 </tr>
 <tr>
 <td><code>Ctrl</code> + <code>Page up</code></td>
-<td>Goes to previous page</td>
+<td>Goes to the previous page</td>
 </tr>
 <tr>
 <td><code>Ctrl</code> + <code>Home</code></td>
-<td>Goes to first page</td>
+<td>Goes to the first page</td>
 </tr>
 <tr>
 <td><code>Ctrl</code> + <code>End</code></td>
-<td>Goes to last page</td>
+<td>Goes to the last page</td>
 </tr>
 <tr>
 <td><code>Ctrl</code> + <code>C</code></td>

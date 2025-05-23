@@ -30,19 +30,19 @@ The following image represents how to add the free text annotation using the too
  
 ### Add free text annotation without using the toolbar
 
-You can add free text annotation to a PDF document by tapping with touch (or mouse down) on a PDF page. The following steps explains how to add free text annotation in a PDF.
+You can add free text annotation to a PDF document by tapping with a touch (or mouse down) on a PDF page. The following steps explain how to add free text annotation in a PDF.
 
 1.	Set the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html) property of the SfPdfViewer to [FreeText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_FreeText). It activates the free text annotation mode.
-2.	Tap (or mouse down) on a PDF page, where you want to add the free text annotation. This will add a text box with a default style and allows you to write your text inline in the Desktop platforms. In mobile, a popup will be displayed to write and submit the text.
+2.	Tap (or mouse down) on a PDF page, where you want to add the free text annotation. This will add a text box with a default style and allow you to write your text inline on the Desktop platforms. In mobile, a popup will be displayed to write and submit the text.
 3.	You can add multiple free text annotations in this mode in a similar manner.
-4.	Once you have done, set the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html) to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_None). It will disable the annotation mode. 
+4.	Once you have done this, set the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html) to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_None). It will disable the annotation mode. 
 5.	You can later select and edit the annotations if required.
 
 The following code explains how to enable the free text annotation mode.
 
 {% tabs %}
 {% highlight C# %}
-// Enable or activate the freetext mode.
+// Enable or activate the free text mode.
 void EnableFreetextMode()
 {
     // Set the annotation mode to FreeText using the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance.
@@ -55,7 +55,7 @@ Similarly, refer to the following code to disable the free text annotation mode.
 
 {% tabs %}
 {% highlight C# %}
-// Disable or deactivate the freetext mode.
+// Disable or deactivate the free text mode.
 void DisableFreetextMode()
 {
     // Set the annotation mode to none using the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance.
@@ -94,7 +94,7 @@ void AddFreeTextAnnotation()
 { 
     Annotation freeTextAnnotation = CreateFreeTextAnnotation (); 
  
-    // Add the freetext annotation to the PDF document using `AddAnnotation` method of the `SfPdfViewer` instance. 
+    // Add the free text annotation to the PDF document using the `AddAnnotation` method of the `SfPdfViewer` instance. 
     PdfViewer.AddAnnotation(freeTextAnnotation); 
 } 
 {% endhighlight %}
@@ -116,19 +116,19 @@ void CustomizeDefaultFreeTextSettings()
    // Modify the default appearance properties. 
    freeTextSettings.Color = Colors.White; // Text color 
    freeTextSettings.BorderWidth = 2; // Border thickness 
-   freeTextSettings.FillColor = Colors.Black; // Fillcolor
-   freeTextSettings.BorderColor = Colors.Yellow; // BorderColor
+   freeTextSettings.FillColor = Colors.Black; // Fill color
+   freeTextSettings.BorderColor = Colors.Yellow; // Border Color
    freeTextSettings.FontSize = 16; // Font size
    freeTextSettings.Opacity = 0.75f; // 75% opacity 
 }
 {% endhighlight %}
 {% endtabs %}
 
-### How to create a border less free text annotation?
+### How to create a borderless free text annotation?
 
-The PDF Viewer allows you to customize annotation properties using the [AnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationSettings.html) property. By default, free text annotations include a visible border. To create a border less free text annotation, set the [BorderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FreeTextAnnotationSettings.html#Syncfusion_Maui_PdfViewer_FreeTextAnnotationSettings_BorderWidth) property to 0 using the [FreeTextAnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FreeTextAnnotationSettings.html#properties).
+The PDF Viewer allows you to customize annotation properties using the [AnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationSettings.html) property. By default, free text annotations include a visible border. To create a borderless free text annotation, set the [BorderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FreeTextAnnotationSettings.html#Syncfusion_Maui_PdfViewer_FreeTextAnnotationSettings_BorderWidth) property to 0 using the [FreeTextAnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FreeTextAnnotationSettings.html#properties).
 
-The following example demonstrates how to create a border less free text annotation:
+The following example demonstrates how to create a borderless free text annotation:
 
 {% tabs %}
 {% highlight C# %}
@@ -144,7 +144,7 @@ freeTextSettings.BorderWidth = 0;
 
 ### Edit the text with UI interaction
 
-Double tapping the selected free text annotation will allow you to edit its text content.
+Double-tapping the selected free text annotation will allow you to edit its text content.
 
 * In the desktop platforms (Windows and macOS), double tapping the selected annotation will activate editing mode, which lets you type text directly into the annotation.
 * In the mobile platforms (Android and iOS), double tapping the selected annotation will open a text editor where you can make changes to the text and save it.
@@ -161,7 +161,7 @@ You can also edit the properties of the selected free text annotation programmat
 /// <param name="selectedAnnotation">The selected annotation instance that may be obtained from the annotation selected event</param>
 void EditSelectedFreeTextAnnotation(Annotation selectedAnnotation) 
 { 
-    // Type cast the selected annotation as a free text annotation. 
+    // Typecast the selected annotation as a free text annotation. 
     if (selectedAnnotation is FreeTextAnnotation freeTextAnnotation) 
     { 
        freeTextAnnotation.Color = Colors.White;    
@@ -191,7 +191,7 @@ pdfviewer.FreeTextModalViewAppearing += PdfViewer_FreeTextModalViewAppearing;
 
 private void PdfViewer_FreeTextModalViewAppearing(object? Sender, AnnotationModalViewAppearingEventArgs e)
 {
-    // Implement the logic to hide unwanted UI elements such as toolbar items add in the app UI. 
+    // Implement the logic to hide unwanted UI elements such as toolbar items added to the app UI. 
 }
 
 {% endhighlight %}
@@ -212,7 +212,7 @@ Private void PdfViewer_FreeTextModalViewDisappearing(object? Sender, EventArgs e
 {% endhighlight %} 
 {% endtabs %}
 
-### Suppressing the free text modal view and implement your own UI
+### Suppressing the free text modal view and implementing your own UI
 
 The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to suppress the free text modal view and use your own UI in its place. This can be achieved by setting the [AnnotationModalViewAppearingEventArgs.Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ModalViewAppearingEventArgs.html#Syncfusion_Maui_PdfViewer_ModalViewAppearingEventArgs_Cancel) property to `true` in the [FreeTextModalViewAppearing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FreeTextModalViewAppearing) event handler. 
 

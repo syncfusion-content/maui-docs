@@ -9,7 +9,7 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 ---
 # Show and Hide annotations in .NET MAUI PDF Viewer (SfPdfViewer)
  
-You can manage the visibility of annotations using the `Hidden` property. It helps you to hide annotations containing confidential data when sharing documents externally or presenting documents, ensuring data privacy and security. Also, it makes it easier to read the documents which are cluttered with more annotations. Like other annotation properties, you can undo and redo the hiding or showing actions. Additionally, when an annotation is locked, it cannot be hidden. Annotations that are hidden will remain hidden during import, export, printing and saving.
+You can manage the visibility of annotations using the `Hidden` property. It helps you to hide annotations containing confidential data when sharing documents externally or presenting documents, ensuring data privacy and security. Also, it makes it easier to read the documents that are cluttered with more annotations. Like other annotation properties, you can undo and redo the hiding or showing actions. Additionally, when an annotation is locked, it cannot be hidden. Annotations that are hidden will remain hidden during import, export, printing, and saving.
 
 ## Hide annotations
 
@@ -79,4 +79,4 @@ private void HideAnnotationButton_Clicked(object sender, EventArgs e)
 * Similarly, to show the annotation, set the `Hidden` property value to `false`. 
 
 N> * On iOS and Mac, while printing a document containing hidden annotations, the hidden annotations will be visible in the print preview or the printed document. 
-N> * When a document containing hidden annotations is loaded, it will not only disappear in the UI but will not be added to the [SfPdfViewer.Annotations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_Annotations) collection as well. 
+N> * When a document containing hidden annotations is loaded, it will not only disappear in the UI but also will not be added to the [SfPdfViewer.Annotations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_Annotations) collection as well. 
