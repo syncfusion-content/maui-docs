@@ -18,7 +18,7 @@ The `Single` selection can be performed in the Calendar by setting the `Calendar
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<calendar:SfCalendar x:Name="calendar" 
                         View="Month"
                         SelectionMode="Single">
 </calendar:SfCalendar>
@@ -36,7 +36,7 @@ this.calendar.SelectionMode = CalendarSelectionMode.Single;
 >**NOTE**
 * In the Year, Decade, and Century views, you can select the cells, only when the `AllowViewNavigation` property is set to false.
 * In this scenario, the `selection changed` event will return the first date of the month, year, decade or century of the selected cell.
-Eg: 
+E.g.: 
 * In the year view, when the Dec month cell is selected then the selected date value will be 01-12-2022.
 * In the decade view, when the (2022) year cell is selected then the selected date value will be 01-01-2022.
 * In the century view, when the (2020-2029) decade cell is selected then the selected date value will be 01-01-2020.
@@ -48,7 +48,7 @@ The `Multiple` selection can be performed in the Calendar by setting the `Calend
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<calendar:SfCalendar x:Name="calendar" 
                         View="Month"
                         SelectionMode="Multiple">
 </calendar:SfCalendar>
@@ -65,12 +65,12 @@ this.calendar.SelectionMode = CalendarSelectionMode.Multiple;
 
 
 ## Range selection
-The `Range` selection can be performed in the Calendar by setting the `CalendarSelectionMode` property to `Range`. In this Selection, you can able to select a range of dates from the calendar by interacting the cell either tap or swipe action. Swipe action can only performed by setting the [EnableSwipeSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_EnableSwipeSelection) property to `true` in the calendar.
+The `Range` selection can be performed in the Calendar by setting the `CalendarSelectionMode` property to `Range`. In this Selection, you can select a range of dates from the calendar by interacting the cell either tap or swipe action. Swipe action can only performed by setting the [EnableSwipeSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_EnableSwipeSelection) property to `true` in the calendar.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<calendar:SfCalendar x:Name="calendar" 
                         View="Month"
                         SelectionMode="Range">
 </calendar:SfCalendar>
@@ -86,9 +86,9 @@ this.calendar.SelectionMode = CalendarSelectionMode.Range;
 ![Range selection in .NET MAUI Calendar.](images/selection/maui-range-selection.png)
 
 >**NOTE**
-* In the Year, Decade and Century views can able to select the cells, only when the `allowViewNavigation` property is set to false.
+* In the Year, Decade and Century views can select the cells, only when the `allowViewNavigation` property is set to false.
 * In this scenario, the `selection changed` event will return the first and last date of the month, year, decade or century of the selected cell when the selection mode is set to `range `.
-Eg: 
+E.g.: 
 * In the year view, when the range is selected as Sep - Dec, then the range value will be 01-09-2022 to 31-12-2022.
 * In the decade view, when the range is selected as 2022 - 2025, then the range value will be 01-01-2022 to 31-12-2025.
 * In the century view, when the range is selected as 2020-2029 to 2030-2039, then the range value will be 01-01-2020 to 31-12-2039.
@@ -102,7 +102,7 @@ If you set the `RangeSelectionDirection` property to `Forward`, you can select o
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<calendar:SfCalendar x:Name="calendar" 
                         View="Month"
                         SelectionMode="Range"
                         RangeSelectionDirection="Forward">
@@ -125,7 +125,7 @@ If you set the `RangeSelectionDirection` property to `Backward`, you can select 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<calendar:SfCalendar x:Name="calendar" 
                         View="Month"
                         SelectionMode="Range"
                         RangeSelectionDirection="Backward">
@@ -148,7 +148,7 @@ If you set the `RangeSelectionDirection` property to `Both`, you can extend the 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<calendar:SfCalendar x:Name="calendar" 
                         View="Month"
                         SelectionMode="Range"
                         RangeSelectionDirection="Both">
@@ -171,7 +171,7 @@ If you set the `RangeSelectionDirection` property to `None`, you can select only
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<calendar:SfCalendar x:Name="calendar" 
                         View="Month"
                         SelectionMode="Range"
                         RangeSelectionDirection="None">
@@ -194,7 +194,7 @@ The `MultiRange` selection can be performed in the Calendar by setting the `Cale
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar" 
+<calendar:SfCalendar x:Name="calendar" 
                         View="Month"
                         SelectionMode="MultiRange">
 </calendar:SfCalendar>
@@ -215,7 +215,7 @@ The Selected date will render based on the `SelectionShape` property. The defaul
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar"
+<calendar:SfCalendar x:Name="calendar"
                       View="Month"
                       SelectionShape="Rectangle">
 </calendar:SfCalendar>
@@ -236,7 +236,7 @@ You can select the dates by swiping using the `EnableSwipeSelection` property. B
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar"
+<calendar:SfCalendar x:Name="calendar"
                       View="Month"
                       EnableSwipeSelection="true">
 </calendar:SfCalendar>
@@ -255,7 +255,7 @@ You can deselect the date by using the `CanToggleDaySelection` property. By defa
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar  x:Name="calendar"
+<calendar:SfCalendar x:Name="calendar"
                       View="Month"
                       CanToggleDaySelection="true">
 </calendar:SfCalendar>

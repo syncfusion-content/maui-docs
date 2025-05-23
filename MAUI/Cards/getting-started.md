@@ -7,10 +7,10 @@ control: SfCard
 documentation: ug
 ---
 
-# Getting started with .NET MAUI Card
-This section details the process of integrating the [.NET MAUI Cards](https://www.syncfusion.com/maui-controls/maui-cards) control and focuses solely on the fundamental features required for initiating your exploration of Syncfusion<sup>&reg;</sup> Card. Follow the steps below to add a .NET MAUI Cards control to your project.
+# Getting started with .NET MAUI Cards
+This section outlines how to integrate the [.NET MAUI Cards](https://www.syncfusion.com/maui-controls/maui-cards) control and introduces the core features to help you get started with Syncfusion<sup>&reg;</sup> Cards. Follow the steps below to add a .NET MAUI Cards control to your project.
 
-To get start quickly with our .NET MAUI Cards, you can check the below video.
+To get started quickly with our .NET MAUI Cards, you can check the below video.
 
 {% youtube "youtube:https://youtu.be/hveapZxnOFY?si=DVJgc_jN-CKNSDg8" %}
 
@@ -133,7 +133,7 @@ Before proceeding, ensure the following are set up:
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you're in the project root directory where your .csproj file is located.
-3. Run the command `dotnet add package Syncfusion.Maui.Cards` to install the Syncfusion<sup>®</sup> .NET MAUI Cards NuGet package.
+3. Run the command `dotnet add package Syncfusion.Maui.Cards` to install the Syncfusion<sup>&reg;</sup> .NET MAUI Cards NuGet package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
 ## Step 3: Register the handler
@@ -231,7 +231,7 @@ Before proceeding, ensure the following are set up:
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Cards NuGet Package
+## Step 2: Install the Syncfusion<sup>&reg;</sup> MAUI Cards NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Cards](https://www.nuget.org/packages/Syncfusion.Maui.Cards/) and install the latest version.
@@ -425,24 +425,24 @@ using Syncfusion.Maui.Cards;
 
 public partial class MainPage : ContentPage
 {
-	public MainPage()
-	{
-		InitializeComponent();
-		SfCardLayout cardLayout = new SfCardLayout();
+    public MainPage()
+    {
+        InitializeComponent();
+        SfCardLayout cardLayout = new SfCardLayout();
 
-		//Add children for card layout 
-		cardLayout.Children.Add(new SfCardView() { Content = new Label() { Text = "Peach", BackgroundColor = Colors.PeachPuff, HorizontalTextAlignment = TextAlignment.Center, VerticalTextAlignment = TextAlignment.Center }, CornerRadius = 15 });
+        //Add children for card layout 
+        cardLayout.Children.Add(new SfCardView() { Content = new Label() { Text = "Peach", BackgroundColor = Colors.PeachPuff, HorizontalTextAlignment = TextAlignment.Center, VerticalTextAlignment = TextAlignment.Center }, CornerRadius = 15 });
 
-		cardLayout.Children.Add(new SfCardView() { Content = new Label() { Text = "MediumPurple", BackgroundColor = Colors.MediumPurple, HorizontalTextAlignment = TextAlignment.Center, VerticalTextAlignment = TextAlignment.Center },CornerRadius = 15 });
+        cardLayout.Children.Add(new SfCardView() { Content = new Label() { Text = "MediumPurple", BackgroundColor = Colors.MediumPurple, HorizontalTextAlignment = TextAlignment.Center, VerticalTextAlignment = TextAlignment.Center },CornerRadius = 15 });
 
-		cardLayout.Children.Add(new SfCardView() { Content = new Label() { Text = "LightPink", BackgroundColor = Colors.LightPink, HorizontalTextAlignment = TextAlignment.Center, VerticalTextAlignment = TextAlignment.Center },CornerRadius = 15 });
+        cardLayout.Children.Add(new SfCardView() { Content = new Label() { Text = "LightPink", BackgroundColor = Colors.LightPink, HorizontalTextAlignment = TextAlignment.Center, VerticalTextAlignment = TextAlignment.Center },CornerRadius = 15 });
 
-		this.Content = cardLayout;
-	}
+        this.Content = cardLayout;
+    }
 }
 
 {% endhighlight %}
-{% endtabs %}	
+{% endtabs %}
 
 ![MAUI SfCardView image](images/maui-card-cardlayout.gif)
 

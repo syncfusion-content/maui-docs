@@ -9,9 +9,9 @@ documentation: ug
 
 # BindableLayout in MAUI Cards
 
-Layout&lt;T&gt; introduces a feature called `BindableLayout`, which works with all layouts derived from Layout&lt;T&gt;. By simply setting the ItemTemplate and ItemsSource, BindableLayout automatically generates a group of UI elements (based on the provided ItemTemplate) for each data item in the ItemsSource and adds them as children.
+Layout<T> introduces a feature called `BindableLayout`, which works with all layouts derived from Layout<T>. By simply setting the ItemTemplate and ItemsSource, BindableLayout automatically generates a group of UI elements (based on the provided ItemTemplate) for each data item in the ItemsSource and adds them as children.
 
-Since [`SfCardLayout`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html) is an extended class of Layout&lt;T&gt;, this approach is also possible for `SfCardLayout`.
+Since [`SfCardLayout`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html) is an extended class of Layout<T>, this approach is also possible for `SfCardLayout`.
 
 ## Initialize view model
 
@@ -50,7 +50,7 @@ public class ViewModel
 
 Set the ViewModel instance as BindingContext of your page to bind properties of ViewModel to [`SfCardLayout`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html). 
 
-N> Add namespace of ViewModel class in your XAML page if you prefer to set BindingContext in XAML. 
+N> Add the namespace of the ViewModel class in your XAML page if you prefer to set the BindingContext in XAML. 
 
 {% tabs %} 
 
@@ -74,7 +74,7 @@ this.BindingContext = new ViewModel();
 
 ## Populate CardLayout with data
 
-[`SfCardLayout`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html) can be populated with data by setting the ItemSource property of BindableLayout to a collection of items that can be used in [`SfCardView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardView.html).
+[`SfCardLayout`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html) can be populated with data by setting the ItemsSource property of BindableLayout to a collection of items that can be used in [`SfCardView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardView.html).
 
 {% tabs %} 
 

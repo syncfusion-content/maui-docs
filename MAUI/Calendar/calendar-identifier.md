@@ -13,7 +13,7 @@ The [.NET MAUI Calendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cal
 <table>
 <tr>
 <th>Supported Calendars</th>
-<th>UnSupported Calendars</th>
+<th>Unsupported Calendars</th>
 </tr>
 <tr>
 
@@ -43,7 +43,7 @@ The [.NET MAUI Calendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cal
 </tr>
 </table>
 
-N>
+Note:
 * The Flow Direction will be updated based on the calendar identifier. All the DateTime values, such as DisplayDate, MinimumDate, MaximumDate, SelectedDate, SelectedDates, SelectedDateRange, SelectableDayPredicate, and SpecialDayPredicate, can be given in two ways.
 * The DateTime instance without specifying calendar identifier. The calendar will handle the DateTime value for the specified calendar identifier.
 * When a DateTime instance has a calendar identifier, the calendar handles it directly.
@@ -69,7 +69,7 @@ this.Content = calendar;
 ### DateTime values in Calendar identifiers
 All the DateTime properties of the calendar can be given in two ways when the calendar identifier is specified other than the [GregorianCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarIdentifier.html#Syncfusion_Maui_Calendar_CalendarIdentifier_Gregorian).
 
-* Create an display date value by declaring the calendar identifier and respective calendar identifier date.
+* Create a display date value by declaring the calendar identifier and respective calendar identifier date.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -85,7 +85,7 @@ this.calendar.DisplayDate = new DateTime(1444, 11, 21, 0, 0, 0, new HijriCalenda
 {% endhighlight %}
 {% endtabs %}
 
-* Create an display date value by declaring the local system date. In this case, the system date will be converted to the respective calendar identifier date.
+* Create a display date value by declaring the local system date. In this case, the system date will be converted to the respective calendar identifier date.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}

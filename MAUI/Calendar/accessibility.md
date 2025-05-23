@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Accessibility in .NET MAUI Calendar Control | Syncfusion<sup>&reg;</sup>
-description: Learn here all about the accessibility features of Syncfusion<sup>&reg;</sup> .NET MAUI Calendar (SfCalendar) control.
-platform: maui
+title: Accessibility in .NET MAUI Calendar Control | Syncfusion®
+description: Learn here all about the accessibility features of Syncfusion® .NET MAUI Calendar (`SfCalendar`) control.
+platform: MAUI
 control: SfCalendar
 documentation: ug
 ---
@@ -25,19 +25,19 @@ Enhance .NET MAUI Calendar's accessibility with a user-friendly design, ensuring
 <td>May 2023</td>
 </tr>
 <tr>
-<td>Header – More than one month in view while number week lesser than 6</td>
+<td>Header – More than one month in view with fewer than 6 weeks</td>
 <td>MMMM – MMMM yyyy</td>
 <td>November – December 2023</td>
 </tr>
 <tr>
 <td>Left arrow</td>
 <td>string</td>
-<td>Backward</td>
+<td>Back</td>
 </tr>
 <tr>
 <td>Right arrow</td>
 <td>string</td>
-<td>Forward</td>
+<td>Next</td>
 </tr>
 <tr>
 <td>Today button</td>
@@ -45,9 +45,9 @@ Enhance .NET MAUI Calendar's accessibility with a user-friendly design, ensuring
 <td>Today</td>
 </tr>
 <tr>
-<td>Ok button</td>
+<td>OK button</td>
 <td>string</td>
-<td>Ok</td>
+<td>OK</td>
 </tr>
 <tr>
 <td>Cancel button</td>
@@ -86,7 +86,7 @@ Enhance .NET MAUI Calendar's accessibility with a user-friendly design, ensuring
 </tr>
 </table>
 
-![Month view accessibility in .NET MAUI Calendar.](images/accessibility/maui-month-view-accessibility.png)
+![Month view accessibility in .NET MAUI Calendar.](images/accessibility/MAUI-month-view-accessibility.png)
 
 ## Year View
 
@@ -113,7 +113,7 @@ Enhance .NET MAUI Calendar's accessibility with a user-friendly design, ensuring
 </tr>
 </table>
 
-![Year view accessibility in .NET MAUI Calendar.](images/accessibility/maui-year-view-accessibility.png)
+![Year view accessibility in .NET MAUI Calendar.](images/accessibility/MAUI-year-view-accessibility.png)
 
 ## Decade View
 
@@ -140,7 +140,7 @@ Enhance .NET MAUI Calendar's accessibility with a user-friendly design, ensuring
 </tr>
 </table>
 
-![Decade view accessibility in .NET MAUI Calendar.](images/accessibility/maui-decade-view-accessibility.png)
+![Decade view accessibility in .NET MAUI Calendar.](images/accessibility/MAUI-decade-view-accessibility.png)
 
 ## Century View
 
@@ -167,10 +167,10 @@ Enhance .NET MAUI Calendar's accessibility with a user-friendly design, ensuring
 </tr>
 </table>
 
-![Century view accessibility in .NET MAUI Calendar.](images/accessibility/maui-century-view-accessibility.png)
+![Century view accessibility in .NET MAUI Calendar.](images/accessibility/MAUI-century-view-accessibility.png)
 
 ## Keyboard
-`SfCalendar` supports selection using keyboard interactions.
+``SfCalendar`` supports selection using keyboard interactions.
 
 ### Selection
 <table>
@@ -187,7 +187,7 @@ Description
 DownArrow
 </td>
 <td>
-Moves selection to the date directly below the currently selected date on next row.
+Moves selection to the date directly below the currently selected date in the next row.
 </td>
 </tr>
 <tr>
@@ -195,7 +195,7 @@ Moves selection to the date directly below the currently selected date on next r
 UpArrow
 </td>
 <td>
-Moves selection to the date directly above the currently selected date on previous row.
+Moves selection to the date directly above the currently selected date in the previous row.
 </td>
 </tr>
 <tr>
@@ -203,7 +203,7 @@ Moves selection to the date directly above the currently selected date on previo
 RightArrow
 </td>
 <td>
-Moves the selection to the next date of the date currently selected.
+Moves the selection to the next date from the currently selected date.
 </td>
 </tr>
 <tr>
@@ -211,7 +211,7 @@ Moves the selection to the next date of the date currently selected.
 LeftArrow
 </td>
 <td>
-Moves the selection to the previous date of the date currently selected.
+Moves the selection to the previous date from the currently selected date.
 </td>
 </tr>
 </table>
@@ -295,7 +295,7 @@ View mode changes in the order of Month, Century, Decade, and Year.
 Ctrl + LeftArrow
 </td>
 <td>
-Navigate to the prev view.
+Navigate to the previous view.
 </td>
 </tr>
 <tr>
