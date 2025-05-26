@@ -296,7 +296,6 @@ Operations such as deleting a row by swiping a data row from one extent to anoth
 
 public partial class MainPage : ContentPage
 {
-    private int swipedRowIndex;
     public MainPage()
     {
         InitializeComponent();
@@ -304,13 +303,15 @@ public partial class MainPage : ContentPage
 
     private void dataGrid_SwipeEnded(object sender, Syncfusion.Maui.DataGrid.DataGridSwipeEndedEventArgs e)
     {
-        swipedRowIndex = e.RowIndex;
-        doDeleting();
+        PerformRowDelete(e.RowData);
     }
 
-    private void doDeleting()
+    private void PerformRowDelete(object? rowData)
     {
-        viewModel.OrdersInfo.RemoveAt(swipedRowIndex - 1);
+        if (rowData is OrdersInfo orderInfo && viewModel.OrdersInfo.Contains(orderInfo))
+        {
+            viewModel.OrdersInfo.Remove(orderInfo);
+        }
     }
 }
 {% endhighlight %}
