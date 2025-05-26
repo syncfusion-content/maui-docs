@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migrating from Xamarin to .NET MAUI SfAutocomplete | Syncfusion® 
-description: Learn all about Migrating from Syncfusion® Xamarin Autocomplete to Syncfusion® .NET MAUI Autocomplete control and more here.
+description: Learn how to migrate from Syncfusion® Xamarin Autocomplete to Syncfusion® .NET MAUI Autocomplete control, along with additional details.
 platform: maui
 control: SfAutocomplete
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrating from Xamarin SfAutoComplete to .NET MAUI SfAutocomplete 
 
-To migrate easier from Xamarin SfAutoComplete to [.NET MAUI SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html), we kept most of the APIs from Xamarin SfAutoComplete in MAUI SfAutocomplete. However, to maintain the consistency of API naming in MAUI SfAutocomplete, we renamed some of the APIs. The APIs changed in MAUI SfAutocomplete from Xamarin SfAutoComplete are detailed as follows:
+To facilitate an easier migration from Xamarin SfAutoComplete to [.NET MAUI SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html), we have retained most of the APIs from Xamarin SfAutoComplete in MAUI SfAutocomplete. However, some APIs have been renamed in MAUI SfAutocomplete to ensure consistency in naming conventions. Below are the details of API changes made in MAUI SfAutocomplete from Xamarin SfAutoComplete:
 
 ## Namespaces 
 

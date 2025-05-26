@@ -1,32 +1,30 @@
 ---
 layout: post
-title: Highlighting matched text in Autocomplete control | Syncfusion®
-description: Learn about Highlighting matched text in .NET MAUI SfAutocomplete (SfAutocomplete) control and more details.
+title: Highlighting Matched Text in Autocomplete Control | Syncfusion®
+description: Learn about highlighting matched text in the .NET MAUI SfAutocomplete (SfAutocomplete) control for enhanced clarity and usability.
 platform: maui
 control: SfAutocomplete
 documentation: ug
 ---
 
-# Highlighting matched text
+# Highlighting Matched Text
 
-## Highlighting matched text in .NET MAUI SfAutocomplete
+## Highlighting Matched Text in .NET MAUI SfAutocomplete
 
-Highlight matching characters in a suggestion list to pick an item with more clarity. There are two ways to highlight the matching text:
+In the [.NET MAUI SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control, you can highlight matching characters in a suggestion list to provide clarity when selecting items. There are two methods for highlighting matched text:
 
-*   `First Occurrence`
+- **First Occurrence**: Highlights the first instance of matching characters.
 
-*   `Multiple Occurrence`
+- **Multiple Occurrence**: Highlights all instances of matching characters.
 
-The text highlight can be indicated with various customizing styles by enabling the below properties. They are
+The text highlight can be customized using the properties below:
 
-*   `HighlightedTextColor` - sets the color of the highlighted text for differentiating the highlighted characters.
+- **HighlightedTextColor**: Sets the color of the highlighted text to differentiate the highlighted characters.
 
-*   `HighlightTextFontAttributes` - sets the FontAttributes of the highlighted text.
-
+- **HighlightTextFontAttributes**: Sets the `FontAttributes` of the highlighted text.
 ## First Occurrence
 
-It highlights the first position of the matching characters in the suggestion list.
-
+This mode highlights the first instance of matching characters in the suggestion list.
 {% tabs %}
 
 {% highlight xaml %}
@@ -57,11 +55,11 @@ It highlights the first position of the matching characters in the suggestion li
 
 {% endtabs %}
 
-![HighlightText Image](images/HighlightingText/firstoccurrence.png)
+![Highlight Text](images/HighlightingText/firstoccurrence.png)
 
 ## Multiple Occurrence
 
-It highlights the matching character that are present everywhere in the suggestion list for [Contains](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTextSearchMode.html#Syncfusion_Maui_Inputs_AutocompleteTextSearchMode_Contains) case in [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html#Syncfusion_Maui_Inputs_SfAutocomplete_TextSearchMode).
+This mode highlights all matching characters present in the suggestion list for the [Contains](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.AutocompleteTextSearchMode.html#Syncfusion_Maui_Inputs_AutocompleteTextSearchMode_Contains) case in [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html#Syncfusion_Maui_Inputs_SfAutocomplete_TextSearchMode).
 
 {% tabs %}
 
@@ -95,4 +93,4 @@ It highlights the matching character that are present everywhere in the suggesti
 
 {% endtabs %}
 
-![HighlightText Image](images/HighlightingText/multipleoccurrence.png)
+![Highlight Text](images/HighlightingText/multipleoccurrence.png)

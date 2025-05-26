@@ -1,7 +1,7 @@
 ---
 layout: post
-title: LoadMore in .NET MAUI Autocomplete control | Syncfusion®
-description: Learn all about LoadMore support in Syncfusion® .NET MAUI Autocomplete (SfAutocomplete) control and more here.
+title: LoadMore in .NET MAUI Autocomplete Control | Syncfusion®
+description: Discover LoadMore support in the Syncfusion® .NET MAUI Autocomplete (SfAutocomplete) control and learn how to implement it.
 platform: maui
 control: SfAutocomplete
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # LoadMore in .NET MAUI Autocomplete (SfAutocomplete)
 
-Restrict the number of suggestions displayed and have the remaining items loaded by selecting LoadMore. We can restrict maximum suggestion to be displayed with the [MaximumSuggestion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_MaximumSuggestion) property.
+You can limit the number of suggestions displayed by using the LoadMore functionality, which allows additional items to be loaded upon request. This is achieved by setting the [MaximumSuggestion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_MaximumSuggestion) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -35,13 +35,13 @@ SfAutocomplete autocomplete = new SfAutocomplete()
 {% endhighlight %}
 {% endtabs %}
 
-The following gif image illustrates the result of the above code:
+The following GIF illustrates the result of the above code:
 
 ![.NET MAUI Autocomplete LoadMore support](Images/Maximum-display-item-with-Expander/LoadMore.gif)
 
-## LoadMore text customization
+## LoadMore Text Customization
 
-The LoadMore support provides [LoadMoreText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_LoadMoreText). We can set the desire text for the displaying the Load more text with the property LoadMoreText.
+The LoadMore feature allows you to customize the display text using the [LoadMoreText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_LoadMoreText) property. This property lets you set custom text for the Load More button.
 
 {% tabs %}
 {% highlight xaml %}
@@ -69,13 +69,13 @@ SfAutocomplete autocomplete = new SfAutocomplete()
 {% endhighlight %}
 {% endtabs %}
 
-The following gif image illustrates the result of the above code:
+The following GIF illustrates the result of the above code:
 
 ![.NET MAUI Autocomplete LoadMoreText](Images/Maximum-display-item-with-Expander/LoadMoreText.png)
 
-## LoadMore view customization
+## LoadMore View Customization
 
-SfAutocomplete allows customizing User Interface(UI) of Load More view. To customize the load more text, add the custom UI in the [LoadMoreTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_LoadMoreTemplate) API in SfAutocomplete, as shown in the following code snippet.
+SfAutocomplete allows customization of the Load More view's User Interface (UI). You can add a custom UI using the [LoadMoreTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_LoadMoreTemplate) property.
 
 {% tabs %}
 {% highlight xaml %}

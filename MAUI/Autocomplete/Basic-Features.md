@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Basic Features in .NET MAUI Autocomplete control | Syncfusion®
-description: Learn about Basic Features support in Syncfusion® .NET MAUI Autocomplete (SfAutocomplete) control and more.
+title: Basic Features in .NET MAUI Autocomplete Control | Syncfusion®
+description: Discover the basic features supported by the Syncfusion® .NET MAUI Autocomplete (SfAutocomplete) control and more.
 platform: maui
 control: SfAutocomplete
 documentation: ug
 ---
 
-# Basic Features with .NET MAUI Autocomplete (SfAutocomplete)
+# Basic Features of .NET MAUI Autocomplete (SfAutocomplete)
 
 ## Selection
 
-The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) allows the user to select an item from the drop-down list by clicking the `Enter` key or losing focus from the text box.
+The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control enables users to select an item from the drop-down list by pressing the `Enter` key or by moving the focus away from the text box.
 
 {% tabs %}
 {% highlight xaml %}
@@ -40,4 +40,4 @@ The following image illustrates the output:
 
 ## Text
 
-The [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Text) property is used to get the user-submitted text in the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html). The default value of the `Text` property is `string.Empty`.
+The [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Text) property retrieves the user-submitted text within the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control. The default value for the `Text` property is `string.Empty`.

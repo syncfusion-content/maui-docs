@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migrating from Xamarin to .NET MAUI SfRating | Syncfusion® 
-description: Learn all about Migrating from Syncfusion® Xamarin Rating to Syncfusion® .NET MAUI Rating control and more here.
+description: Learn about migrating from Syncfusion® Xamarin Rating to Syncfusion® .NET MAUI Rating control and related changes.
 platform: maui
 control: SfRating
 documentation: ug
@@ -9,8 +9,7 @@ documentation: ug
 
 # Migrating from Xamarin SfRating to .NET MAUI SfRating 
 
-To migrate easier from Xamarin SfRating to [.NET MAUI SfRating], most of the APIs were kept from Xamarin SfRating in MAUI SfRating. However, to maintain the consistency of API naming in MAUI SfRating, we renamed some of the APIs. The APIs changed in MAUI SfRating from Xamarin SfRating are detailed as follows:
-
+To ease the migration from Xamarin SfRating to [.NET MAUI SfRating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html), most APIs from Xamarin SfRating have been retained in MAUI SfRating. However, to maintain consistency in API naming within MAUI SfRating, some APIs have been renamed. Below are details of the changes made from Xamarin SfRating to MAUI SfRating:
 ## Namespaces 
 
 <table>

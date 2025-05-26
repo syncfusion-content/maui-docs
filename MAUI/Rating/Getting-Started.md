@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Rating control | Syncfusion®
-description: Learn here about getting started with Syncfusion® .NET MAUI Rating (SfRating) control, its elements and more.
+title: Getting Started with .NET MAUI Rating Control | Syncfusion®
+description: Learn about getting started with the Syncfusion® .NET MAUI Rating (SfRating) control, its elements, and more.
 platform: maui
 control: Rating
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI Rating
 
-This section explains how to configure a [Rating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control in a real-time scenario and also provides a walk-through on some of the customization features available in SfRating control.
+This section explains how to configure the [Rating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control in a real-time scenario and provides a walk-through on some of the customization features available in the SfRating control.
 
 To quickly get started with the .NET MAUI Rating, watch this video.
 
@@ -39,7 +39,7 @@ Before proceeding, ensure the following are in place:
 
 ## Step 3: Register the Handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion<sup>®</sup> core.
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) NuGet package is a dependency for all Syncfusion<sup>®</sup> controls for .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% highlight c# hl_lines="6 17" %}
 using Microsoft.Maui;

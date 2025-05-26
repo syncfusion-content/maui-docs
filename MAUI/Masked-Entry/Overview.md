@@ -9,14 +9,14 @@ documentation: ug
 
 # .NET MAUI MaskedEntry Overview
 
-The [.NET MAUI MaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) is an advanced version of the input control that restricts input of certain characters, text, and numbers by using a mask pattern. This control creates a template for providing information such as telephone numbers, email IDs, IP addresses, product keys, and more.
+The [.NET MAUI MaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) is an advanced input control that restricts the input of certain characters, text, and numbers through a mask pattern. This control facilitates templates for input types such as telephone numbers, email IDs, IP addresses, product keys, and more.
 
 ![MaskedEntry control overview in MAUI](MaskedEntry_Images/maui_maskedentry_overview.png)
 
-## Key features
+## Key Features
 
-* **MaskTypes** : The input can be masked with a fixed or variable length by setting the mask type to simple or regex.
-* **PromptChar** : Customize the prompt characters used to set the default characters as input in the absence of input.
-* **Value** : Enter values and clipboard operations in the control based on the ValueMaskFormat property.
-* **ValueMaskFormat** : Setting formatted values in the control using mask format values such as prompt, literals, and both.
-* **Customization** : Customize the UI of the masked text box.
+* **MaskTypes**: The input can be masked with fixed or variable lengths by setting the mask type to simple or regex.
+* **PromptChar**: Customize the prompt characters used as default input characters in the absence of user input.
+* **Value**: Enter values and perform clipboard operations in the control based on the ValueMaskFormat property.
+* **ValueMaskFormat**: Set formatted values in the control using mask format values, including prompt, literals, or both.
+* **Customization**: Customize the UI of the masked text box to fit specific design requirements.

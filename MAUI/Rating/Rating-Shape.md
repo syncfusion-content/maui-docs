@@ -1,8 +1,8 @@
 ---
 
 layout: post
-title: Rating Shape in .NET MAUI Rating control | Syncfusion®
-description: Learn here all about Rating Shape support in Syncfusion® .NET MAUI Rating (SfRating) control and more.
+title: Rating Shape in .NET MAUI Rating Control | Syncfusion®
+description: Learn about Rating Shape support in the Syncfusion® .NET MAUI Rating (SfRating) control.
 platform: maui
 control: Rating
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 # Rating Shape in .NET MAUI Rating (SfRating)
 
-The [`RatingShape`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingShape.html) property allows you to display the rating in five different rating shapes:
+The [`RatingShape`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingShape.html) property allows you to display ratings in five different shapes:
 
 * [`Star`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingShape.html#Syncfusion_Maui_Inputs_RatingShape_Star)
 * [`Heart`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingShape.html#Syncfusion_Maui_Inputs_RatingShape_Heart)
@@ -25,7 +25,7 @@ The default rating shape of the [`SfRating`](https://help.syncfusion.com/cr/maui
 
 ## Custom
 
-When [`RatingShape`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingShape.html) is set to [`Custom`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingShape.html#Syncfusion_Maui_Inputs_RatingShape_Star), the custom path should be given to the [`Path`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_Path) property
+When the [`RatingShape`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingShape.html) is set to [`Custom`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingShape.html#Syncfusion_Maui_Inputs_RatingShape_Custom), a custom path must be assigned to the [`Path`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_Path) property.
 
 {% tabs %}
 
@@ -47,5 +47,4 @@ rating.Path = "M17.5 35.5C19.9063 35.5 21.875 33.8846 21.875 31.9103H13.125C13.1
 
 {% endtabs %}
 
-N> The Item size should be the same as the path size for Custom Rating Shape
-
+> Note: The item size should match the path size when using a Custom Rating Shape.

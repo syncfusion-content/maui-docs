@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migrating from Xamarin to .NET MAUI SfNumericEntry | Syncfusion® 
-description: Learn about Migrating from Syncfusion® Xamarin NumericTextBox and NumericUpDown to Syncfusion® .NET MAUI NumericEntry control and more.
+description: Learn about migrating from Syncfusion® Xamarin NumericTextBox and NumericUpDown to Syncfusion® .NET MAUI NumericEntry control and more.
 platform: maui
 control: SfNumericEntry
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrating from Xamarin SfNumericTextBox and SfNumericUpDown to .NET MAUI SfNumericEntry
 
-To migrate easier from the Xamarin SfNumericTextBox and SfNumericUpDown to [.NET MAUI SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html), most of the APIs are kept from the Xamarin SfNumericTextBox and SfNumericUpDown  in MAUI SfNumericEntry. However, to maintain the consistency of API naming in MAUI SfNumericEntry, rename some of the APIs. The APIs changed in MAUI SfNumericEntry from Xamarin SfNumericTextBox and SfNumericUpDown are detailed as follows.
+To facilitate migration from Xamarin SfNumericTextBox and SfNumericUpDown to [.NET MAUI SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html), most of the APIs have been retained for compatibility. However, some APIs have been renamed in .NET MAUI SfNumericEntry to ensure consistent API naming. Below are the API changes when migrating from Xamarin SfNumericTextBox and SfNumericUpDown to MAUI SfNumericEntry.
 
 ## Namespaces 
 
@@ -32,27 +32,27 @@ To migrate easier from the Xamarin SfNumericTextBox and SfNumericUpDown to [.NET
 <tr>
 <td>{{'[BorderColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfNumericTextBox.XForms.SfNumericTextBox.html#Syncfusion_SfNumericTextBox_XForms_SfNumericTextBox_BorderColor)'| markdownify }}</td>
 <td>{{'[Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Stroke)'| markdownify }}</td>
-<td>Get or set a color that describes the stroke.</td></tr>
+<td>Gets or sets the stroke color of the control.</td></tr>
 <tr>
 <td>{{'[ClearButtonVisibility](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfNumericTextBox.XForms.SfNumericTextBox.html#Syncfusion_SfNumericTextBox_XForms_SfNumericTextBox_ClearButtonVisibility)'| markdownify }}</td>
 <td>{{'[ShowClearButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_ShowClearButton)'| markdownify }}</td>
-<td>Get or set a value indicating whether to show or hide the clear button in the SfNumericEntry.</td></tr>
+<td>Gets or sets a value to indicate whether to show or hide the clear button in the SfNumericEntry.</td></tr>
 <tr>
 <td>{{'[FormatString](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfNumericTextBox.XForms.SfNumericTextBox.html#Syncfusion_SfNumericTextBox_XForms_SfNumericTextBox_FormatString)'| markdownify }}</td>
 <td>{{'[CustomFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_CustomFormat)'| markdownify }}</td>
-<td>Get or set the format used to specify the formatting of Value.</td></tr>
+<td>Gets or sets the format used to specify the value's formatting.</td></tr>
 <tr>
 <td>{{'[IsReadOnly](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfNumericTextBox.XForms.SfNumericTextBox.html#Syncfusion_SfNumericTextBox_XForms_SfNumericTextBox_IsReadOnly)'| markdownify }}</td>
 <td>{{'[IsEditable](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_IsEditable)'| markdownify }}</td>
-<td>Get or set a value indicating whether the SfNumericEntry allows editing the value or not.</td></tr>
+<td>Gets or sets a value to indicate whether editing the value in the SfNumericEntry is allowed.</td></tr>
 <tr>
 <td>{{'[Watermark](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfNumericTextBox.XForms.SfNumericTextBox.html#Syncfusion_SfNumericTextBox_XForms_SfNumericTextBox_Watermark)'| markdownify }}</td>
 <td>{{'[Placeholder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Placeholder)'| markdownify }}</td>
-<td>Get or set the text that is displayed in the control until the value is changed by a user action or some other operation.</td></tr>
+<td>Gets or sets the text displayed in the control until the value changes by user action or other operations.</td></tr>
 <tr>
 <td>{{'[WatermarkColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfNumericTextBox.XForms.SfNumericTextBox.html#Syncfusion_SfNumericTextBox_XForms_SfNumericTextBox_WatermarkColor)'| markdownify }}</td>
 <td>{{'[PlaceholderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_PlaceholderColor)'| markdownify }}</td>
-<td>Get or set the text that is displayed in the control until the value is changed by a user action or some other operation.</td></tr>
+<td>Gets or sets the color of the placeholder text in the control.</td></tr>
 </table>
 
 ## Events
@@ -70,8 +70,8 @@ To migrate easier from the Xamarin SfNumericTextBox and SfNumericUpDown to [.NET
 <td>Occurs after the user triggers evaluation of new input by pressing the Enter key, clicking a spin button, or by changing focus.</td></tr>
 </table> 
 
-## Upcoming features
+## Upcoming Features
 
-  * ReturnCommand and ReturnCommandParameter support
-  * SelectAllOnFocus boolean support
-  * GroupSeparatorMode support
+- ReturnCommand and ReturnCommandParameter support
+- SelectAllOnFocus boolean support
+- GroupSeparatorMode support

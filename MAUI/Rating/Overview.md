@@ -1,24 +1,24 @@
 ---
 
 layout: post
-title: About .NET MAUI Rating control | Syncfusion®
-description: Learn here all about the introduction of Syncfusion® .NET MAUI Rating (SfRating) control, its elements and more.
+title: About .NET MAUI Rating Control | Syncfusion®
+description: Discover the introduction, features, and elements of the Syncfusion® .NET MAUI Rating (SfRating) control.
 platform: maui
 control: Rating
 documentation: ug
 
 ---
+
 # .NET MAUI Rating (SfRating) Overview
 
-The Essential .NET MAUI Rating control provides the number of stars that represents a rating. Also used to configure the item size, item spacing and the number of displayed items in the [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control. Essential .NET MAUI Rating control can be used in various scenarios like movie rating, rating the application etc.
+The Essential .NET MAUI Rating control provides a star-based rating system. It enables configuration of item size, spacing, and the number of displayed items within the [`SfRating`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html) control. This control can be used in various scenarios such as movie ratings, application ratings, etc.
 
-![Rating OverView](images/overview.png)
+![Rating Overview](images/overview.png)
 
 ## Key Features
 
-* [`Precision`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_Precision): Options to decide the accuracy level of rating.
+* **[`Precision`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_Precision):** Options to define the level of accuracy for ratings.
 
-* [`ItemCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ItemCount): Support to determine the number of Rating items to be displayed.
+* **[`ItemCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfRating.html#Syncfusion_Maui_Inputs_SfRating_ItemCount):** Determines how many rating items will be displayed.
 
-* [`RatingShape`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingShape.html): Predefined shapes for the rating item.
-
+* **[`RatingShape`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.RatingShape.html):** Provides predefined shapes for rating items.

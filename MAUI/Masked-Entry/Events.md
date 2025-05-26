@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in .NET MAUI MaskedEntry control | Syncfusion®
-description: Explore all about SfMaskedEntry (MaskedEntry) occurrences, uncovering its functionalities and applications for comprehensive understanding.
+description: Discover the events available for the SfMaskedEntry (MaskedEntry) control, exploring its functionalities and applications for a comprehensive understanding.
 platform: maui
 control: SfMaskedEntry
 documentation: ug
@@ -13,7 +13,7 @@ This section provides information about the events available in the .NET MAUI Ma
 
 ## ValueChanging Event
 
-The [ValueChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_ValueChanging) event occurs when the `Value` property is about to change in the MaskedEntry control. The `MaskedEntryValueChangingEventArgs` provides the following properties:
+The [ValueChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_ValueChanging) event is triggered when the `Value` property is about to change in the MaskedEntry control. The `MaskedEntryValueChangingEventArgs` offers the following properties:
 
 * `NewValue`: Gets the current value of the MaskedEntry control.
 * `OldValue`: Gets the previous value of the MaskedEntry control.
@@ -46,9 +46,9 @@ private void MaskedEntry_ValueChanging(object sender, MaskedEntryValueChangingEv
 
 ## ValueChanged Event
 
-The [ValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_ValueChanged) event occurs when the `Value` property is changed in the MaskedEntry control. The `MaskedEntryValueChangedEventArgs`provides the following properties:
+The [ValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_ValueChanged) event occurs when the `Value` property has changed in the MaskedEntry control. The `MaskedEntryValueChangedEventArgs` provides the following properties:
 
-* `IsMaskCompleted`: Gets a boolean value indicating whether all the required inputs for the mask are completed.
+* `IsMaskCompleted`: Gets a boolean value indicating whether all required inputs for the mask are completed.
 * `NewValue`: Gets the current value of the MaskedEntry control.
 * `OldValue`: Gets the previous value of the MaskedEntry control.
 

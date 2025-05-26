@@ -1,7 +1,7 @@
 ---
 layout: post
-title: UI Customization in .NET MAUI ComboBox control | Syncfusion®
-description: Learn all about UI customization support in Syncfusion® .NET MAUI ComboBox control into .NET MAUI application and its basic features here.
+title: UI Customization in .NET MAUI ComboBox Control | Syncfusion®
+description: Learn about UI customization support in the Syncfusion® .NET MAUI ComboBox control within a .NET MAUI application, along with its basic features here.
 platform: maui
 control: SfComboBox
 documentation: ug
@@ -10,15 +10,15 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
 
 # UI Customization in .NET MAUI ComboBox (SfComboBox)
 
-This section explains different UI customizations available in [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html).
+This section explains the different UI customizations available in [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html).
 
-To get start quickly to customize the Appearance of .NET MAUI ComboBox, you can check on this video:
+To quickly understand how to customize the appearance of the .NET MAUI ComboBox, you can check out this video:
 
 {% youtube "https://www.youtube.com/watch?v=_yk7El0Seu8" %}
 
 ## Placeholder
 
-You can prompt the user with any information by using the [Placeholder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_Placeholder) property. This text will be displayed only if no items are selected or the edit text is empty. The default value of Placeholder property is `string.Empty` (No string will be displayed).
+You can prompt the user with any information by using the [Placeholder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_Placeholder) property. This text will be displayed only if no items are selected or the edit text is empty. The default value of the Placeholder property is `string.Empty` (No string will be displayed).
 
 {% tabs %}
 {% highlight xaml %}

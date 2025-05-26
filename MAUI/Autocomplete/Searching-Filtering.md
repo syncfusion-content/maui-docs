@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Searching & Filtering in .NET MAUI Autocomplete control | Syncfusion®
-description: Learn how to perform searching and filtering operations in Syncfusion® .NET MAUI Autocomplete control and more.
+title: "Searching & Filtering in .NET MAUI Autocomplete Control | Syncfusion®"
+description: "Learn how to perform searching and filtering operations in the Syncfusion® .NET MAUI Autocomplete control."
 platform: maui
 control: SfAutocomplete
 documentation: ug
@@ -9,23 +9,19 @@ documentation: ug
 
 # Searching and Filtering in .NET MAUI Autocomplete (SfAutocomplete)
 
-The [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control allows for rich text searching and filtering functionality.
+The [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control provides advanced text searching and filtering functionalities.
 
-## Searching based on member path
+## Searching Based on Member Path
 
-The [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DisplayMemberPath) and [TextMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_TextMemberPath) properties of Autocomplete control specify the property path by which the searching must be done when a custom data is bound to the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemsSource) property.
+The [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DisplayMemberPath) and [TextMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_TextMemberPath) properties of the Autocomplete control specify the property paths for searching when custom data is bound to the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemsSource) property.
 
- * `DisplayMemberPath` - Specifies the property path whose value is displayed as text in the drop-down menu. The default value is `string.Empty`.
+- `DisplayMemberPath` - Defines the property path whose value is displayed as text in the drop-down menu. The default value is `string.Empty`.
+- `TextMemberPath` - Specifies the property path used to perform searching based on user input in the selection box of the [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control. The default value is `string.Empty`. If `TextMemberPath` is `null` or `string.Empty`, searching is conducted based on `DisplayMemberPath`.
 
- * `TextMemberPath` - Specifies the property path whose value is used to perform searching based on user input received in the selection box portion of the [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control. The default value is `string.Empty`. When `TextMemberPath` is `null` or `string.Empty`, searching will be performed based on `DisplayMemberPath`. 
+> **Note:** `DisplayMemberPath` and `TextMemberPath` are effective when the collection item holds two or more properties. If both properties have `null` or `string.Empty`, searching is based on the class name with the namespace of the item.
+### Searching Based on DisplayMemberPath
 
-N> `DisplayMemberPath` and `TextMemberPath` will be effective for the collection item that holds two or more properties in it.
-
-N> When both the `DisplayMemberPath` and `TextMemberPath` properties have a `null` or `string.Empty` value, searching will be performed based on the class name with the namespace of the item.
-
-### Searching based on DisplayMemberPath
-
-Searching will be performed based on the [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DisplayMemberPath) property while entering the text into the selection box when [TextMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_TextMemberPath)  is `null` or `string.Empty`. 
+Searching is performed based on the [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DisplayMemberPath) property when [TextMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_TextMemberPath) is `null` or `string.Empty`.
 
 {% tabs %}
 {% highlight c# %}
@@ -84,17 +80,12 @@ SfAutocomplete autocomplete = new SfAutocomplete()
 {% endhighlight %}
 {% endtabs %}
 
-For e.g. After typing `T` in selection box, social media which have starting letter `T` will be listed in drop-down.
-
-The following image illustrates the result of the above code:
-
+For example, typing `T` in the selection box will list social media platforms that start with `T`.
 ![.NET MAUI Autocomplete search based on display member path](Images/Searching_Filtering/SearchBasedDisplayMemberPath.png)
 
-### Searching based on TextMemberPath
+### Searching Based on TextMemberPath
 
-Searching will be performed based on the [TextMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_TextMemberPath) property while entering the text into the selection box. If TextMemberPath is `null` or `string.Empty`, searching will be performed based on [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DisplayMemberPath). 
-
-
+Searching is performed based on the [TextMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_TextMemberPath) property while entering text into the selection box. If `TextMemberPath` is `null` or `string.Empty`, searching is based on [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DisplayMemberPath).
 {% tabs %}
 {% highlight xaml %}
 
@@ -110,6 +101,7 @@ Searching will be performed based on the [TextMemberPath](https://help.syncfusio
 SfAutocomplete autocomplete = new SfAutocomplete()
 {
     DisplayMemberPath = "Name",
+    TextMemberPath = "ID",
     TextMemberPath = "ID",
     ItemsSource = socialMediaViewModel.SocialMedias
 };

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filtering in .NET MAUI ComboBox control | Syncfusion®
-description: Learn here all about ComboBox filtering options in Syncfusion® .NET MAUI ComboBox (multi-select ComboBox) control and more.
+title: Filtering in .NET MAUI ComboBox Control | Syncfusion®
+description: Learn all about ComboBox filtering options in the Syncfusion® .NET MAUI ComboBox (multi-select ComboBox) control and more.
 platform: maui
 control: SfComboBox
 documentation: ug
@@ -9,11 +9,11 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
 ---
 # Filtering in .NET MAUI ComboBox (SfComboBox)
 
-The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) has built-in support to filter data items depending on the text entered in the editing text box. The filter operation starts as soon as you start typing characters in the component.
+The [ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) has built-in support to filter data items based on the text entered in the editing text box. The filter operation begins as soon as characters are typed in the component.
 
-## Enable filtering
+## Enable Filtering
 
-To enable filtering functionality in `ComboBox` control, set the [IsFilteringEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_IsFilteringEnabled) and [IsEditable](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_IsEditable) properties as `true`. The default value is `false`. The drop-down will open automatically as soon as you start typing characters in the `ComboBox` control.
+To enable filtering functionality in the `ComboBox` control, set the [IsFilteringEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_IsFilteringEnabled) and [IsEditable](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_IsEditable) properties to `true`. The default value is `false`. The drop-down will open automatically as soon as you start typing characters in the `ComboBox` control.
 
 {% tabs %}
 {% highlight c# %}

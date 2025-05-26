@@ -1,7 +1,7 @@
 ---
 layout: post
-title: LoadMore in .NET MAUI ComboBox control | Syncfusion®
-description: Learn all about LoadMore support in Syncfusion® .NET MAUI ComboBox (SfComboBox) control and more here.
+title: LoadMore in .NET MAUI ComboBox Control | Syncfusion®
+description: Learn all about LoadMore support in the Syncfusion® .NET MAUI ComboBox (SfComboBox) control and more here.
 platform: maui
 control: SfComboBox
 documentation: ug
@@ -10,7 +10,7 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
 
 # LoadMore in .NET MAUI ComboBox (SfComboBox)
 
-Restrict the number of suggestions displayed and have the remaining items loaded by selecting LoadMore. We can restrict maximum suggestion to be displayed with the [MaximumSuggestion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_MaximumSuggestion) property.
+Control the number of suggestions displayed and have the remaining items loaded by selecting LoadMore. You can restrict the maximum number of suggestions using the [MaximumSuggestion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_MaximumSuggestion) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -186,5 +186,6 @@ private void ComboBox_LoadMoreButtonTapped(object? sender, EventArgs e)
 
 {% endhighlight %}
 {% endtabs %}
+
 
 

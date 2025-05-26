@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI ComboBox | Syncfusion®
-description: Learn here about getting started with Syncfusion® .NET MAUI ComboBox (SfComboBox) control, its elements, and its features.
+description: Learn how to get started with the Syncfusion® .NET MAUI ComboBox (SfComboBox) control, including its elements and features.
 platform: maui
 control: SfComboBox
 documentation: ug
@@ -32,15 +32,15 @@ Before proceeding, ensure the following are in place:
 2. Name the project and choose a location. Then, click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Inputs NuGet Package
+## Step 2: Install the Syncfusion MAUI Inputs NuGet Package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.Inputs](https://www.nuget.org/packages/Syncfusion.Maui.Inputs) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
-## Step 3: Register the handler
+## Step 3: Register the Handler
 
- [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) NuGet package is a dependent package for all Syncfusion controls in .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion core.
 
 {% highlight c# hl_lines="6 17" %}
 

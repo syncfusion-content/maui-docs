@@ -1,7 +1,7 @@
 ---
 layout: post
-title: UI Customization in .NET MAUI Autocomplete control | Syncfusion®
-description: Learn all about UI customization support in Syncfusion® .NET MAUI Autocomplete control into .NET MAUI application and its features here.
+title: "UI Customization in .NET MAUI Autocomplete Control | Syncfusion®"
+description: "Learn about UI customization support in the Syncfusion® .NET MAUI Autocomplete control for .NET MAUI applications."
 platform: maui
 control: SfAutocomplete
 documentation: ug
@@ -9,15 +9,15 @@ documentation: ug
 
 # UI Customization in .NET MAUI Autocomplete (SfAutocomplete)
 
-This section explains different UI customizations available in the [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control.
+This section explains the various UI customizations available in the [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control.
 
-To get start quickly to customize the Appearance of .NET MAUI Autocomplete, you can check on this video:
+To quickly start customizing the appearance of .NET MAUI Autocomplete, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=Hh5pfXvax9o" %}
 
 ## Placeholder
 
-You can prompt the user with any information by using the [Placeholder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_Placeholder) property. This text will be displayed only if no items are selected or the edit text is empty. The default value of the Placeholder property is `string.Empty` (No string will be displayed).
+You can prompt the user with information using the [Placeholder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_Placeholder) property. This text appears only if no items are selected or the edit text is empty. The default value is `string.Empty`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -48,7 +48,7 @@ The following image illustrates the result of the above code:
 
 ## Placeholder Color
 
-The placeholder text color can be changed by using the [PlaceholderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_PlaceholderColor) property. The default value of the PlaceholderColor property is `Colors.Gray`.
+Change the placeholder text color with the [PlaceholderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_PlaceholderColor) property. Default value is `Colors.Gray`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -81,7 +81,7 @@ The following gif image illustrates the result of the above code:
 
 ## Clear Button Icon Color
 
-The clear button icon color can be changed by using the [ClearButtonIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_ClearButtonIconColor) property. The default value of the ClearButtonIconColor property is `Colors.Black`.
+Use the [ClearButtonIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_ClearButtonIconColor) property to change the clear button's icon color. Default value is `Colors.Black`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -116,7 +116,7 @@ The following gif image illustrates the result of the above code:
 
 ## Stroke
 
-The Autocomplete border color can be changed by using the [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_Stroke) property.
+Change the Autocomplete border color using the [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_Stroke) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -149,9 +149,9 @@ The following gif image illustrates the result of the above code.
 
 ![.NET MAUI Autocomplete border color](Images/UICustomization/BorderColor.png)
 
-## Customize the selection text highlightColor 
+## Customize the Selection Text Highlight Color
 
-The [SelectionTextHighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionTextHighlightColor) property is used to modify the background color of the selected item text in the autocomplete control.
+Modify the selected item text background color with the [SelectionTextHighlightColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionTextHighlightColor) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -183,9 +183,9 @@ SfAutocomplete autocomplete = new SfAutocomplete
 
 ## Maximum DropDown Height
 
-The maximum height of the drop-down can be changed by using the [MaxDropDownHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_MaxDropDownHeight) property of the `Autocomplete` control. The default value of the MaxDropDownHeight property is `400d`. 
+Adjust the max height of the drop-down using the [MaxDropDownHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_MaxDropDownHeight) property. Default is `400d`.
 
-N> If the `MaxDropDownHeight` is too small compared to the populated items, the scroll viewer will be automatically shown to navigate the hidden items.
+> **Note:** If `MaxDropDownHeight` is too small for the populated items, a scroll viewer will be shown automatically.
 
 {% tabs %}
 {% highlight xaml %}
@@ -214,10 +214,13 @@ The following gif image illustrates the result of the above code:
 
 ![.NET MAUI Autocomplete maximum drop-down height](Images/UICustomization/MaxDropDownHeight.png)
 
-## Customize the DropDown (suggestion) item
+## Customize the DropDown (Suggestion) Item
 
-The [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemTemplate) property helps you to decorate drop-down items using the custom templates. The default value of the `ItemTemplate` is `null`. The following example shows how to customize drop-down items using templates.
+Decorate drop-down items with the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ItemTemplate) property. The default value is `null`.
 
+### Example
+
+Here is an example to customize drop-down items using templates.
 {% tabs %}
 {% highlight C# %}
 
