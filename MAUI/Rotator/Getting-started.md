@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI Rotator control | Syncfusion®
-description: Learn here about getting started with Syncfusion® .NET MAUI Rotator (SfRotator) control, its elements and more.
+description: Learn about getting started with the Syncfusion® .NET MAUI Rotator (SfRotator) control, its elements, and more.
 platform: maui 
 control: Rotator
 documentation: ug
@@ -20,26 +20,25 @@ To quickly get started with the .NET MAUI Rotator, watch this video.
 
 ## Prerequisites
 
-Before proceeding, ensure the following are in place:
-
-1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
+Ensure the following prerequisites are in place before proceeding:
+1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or a later version.
 2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.8 or later).
 
 ## Step 1: Create a New MAUI Project
 
 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
-2. Name the project and choose a location. Then, click **Next**.
-3. Select the .NET framework version and click **Create**.
+2. Name the project, choose a location, and click **Next**.
+3. Select the desired .NET framework version and click **Create**.
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Rotator NuGet Package
 
-1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
+1. In **Solution Explorer**, right-click the project and select **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.Rotator](https://www.nuget.org/packages/Syncfusion.Maui.Rotator) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored.
+3. Ensure all dependencies are properly installed, and the project is restored successfully.
 
 ## Step 3: Register the Handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs file**, register the handler for Syncfusion<sup>®</sup> core.
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) package is required for all Syncfusion<sup>®</sup> .NET MAUI controls. In **MauiProgram.cs**, register the handler for Syncfusion<sup>®</sup> Core.
 
 {% highlight c# hl_lines="6 17" %}
 

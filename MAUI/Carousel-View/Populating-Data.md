@@ -1,23 +1,23 @@
 ---
-layout : post
-title: Populating Data in .NET MAUI Carousel View control | Syncfusion®
-description: Learn here all about Populating Data support in Syncfusion® .NET MAUI Carousel View (SfCarousel) control and more.
-platform : maui
-control : Carousel
-documentation : ug
+layout: post
+title: Populating Data in .NET MAUI Carousel View Control | Syncfusion®
+description: Learn all about Populating Data support in Syncfusion® .NET MAUI Carousel View (SfCarousel) control and more.
+platform: maui
+control: Carousel
+documentation: ug
 ---
 
 # Populating Data in .NET MAUI Carousel View (SfCarousel)
 
-[SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) control supports binding to different items sources such as IList and ObservableCollection type of  items sources.
+The [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) control supports binding to different item sources, such as `IList` and `ObservableCollection` types.
 
 ## Through Binding
 
-Items can be populated in the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) control through item source and applying a custom template, as explained in the following.
+Items can be populated in the [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) control through item source and applying a custom template, as explained below.
 
 ### Create a Model with Data
 
-[SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) items can be populated with a collection of image data. For example, a user may want to create a [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) control, which will display a list of images.
+[SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) items can be populated with a collection of image data. For instance, you may want to create a `SfCarousel` control to display a list of images.
 
 The [SfCarousel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html) model looks as follows.
 
@@ -239,5 +239,6 @@ namespace CarouselSample
 
 
 Similarly, every item can be created and customized in case a different carousel item view is needed.
+
 
 

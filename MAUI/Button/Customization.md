@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customization in .NET MAUI Button control | Syncfusion®
-description: Learn here all about Customization support in Syncfusion® .NET MAUI Button (SfButton) control and more.
+title: "Customization in .NET MAUI Button Control | Syncfusion®"
+description: "Learn about customization support in the Syncfusion® .NET MAUI Button (SfButton) control."
 platform: maui
 control: SfButton
 documentation: ug
@@ -9,15 +9,15 @@ documentation: ug
 
 # Customization in .NET MAUI Button (SfButton)
 
-The [.NET MAUI Button](https://www.syncfusion.com/maui-controls/maui-button) control supports to customize the border color, image width, corner radius, background color, and more. The button control can be customized using the following properties:
+The [.NET MAUI Button](https://www.syncfusion.com/maui-controls/maui-button) control allows you to customize aspects such as border color, image width, corner radius, background color, and more. The following properties are available for button customization:
 
 ## Text Customization
 
-The text inside the button can be customized by its text color, font size, font attributes, font family and text alignment.
+Customize the text inside the button using properties for text color, font size, font attributes, font family, and text alignment.
 
 ### TextColor
 
-The [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_TextColor) property is used to customize the color of text in [`SfButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html).
+Use the [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_TextColor) property to customize the text color in [`SfButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html).
 
 {% tabs %}
 {% highlight xaml %}

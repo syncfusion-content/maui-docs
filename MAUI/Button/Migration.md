@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migrating from Xamarin to .NET MAUI Button | Syncfusion® 
-description: Learn about Migrating from Syncfusion® Xamarin Button to the Syncfusion® .NET MAUI Button control and more here.
+title: "Migrating from Xamarin to .NET MAUI Button | Syncfusion®"
+description: "Learn about migrating from the Syncfusion® Xamarin Button to the Syncfusion® .NET MAUI Button control."
 platform: maui
 control: SfButton
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrating from Xamarin SfButton to .NET MAUI SfButton 
 
-To migrate easier from Xamarin SfButton to [.NET MAUI SfButton](https://www.syncfusion.com/maui-controls/maui-button), we kept most of the APIs from Xamarin SfButton in MAUI SfButton. However, to maintain the consistency of the API naming in MAUI SfButton, we renamed some of the APIs. The APIs changed in MAUI SfButton from Xamarin SfButton are detailed as follows:
+To facilitate an easier migration from Xamarin SfButton to the [.NET MAUI SfButton](https://www.syncfusion.com/maui-controls/maui-button), most APIs from the Xamarin SfButton have been retained in the MAUI version. However, some APIs have been renamed to maintain consistency in naming within the MAUI SfButton. The changes in API names between MAUI and Xamarin SfButton are detailed below:
 
 ## Namespaces 
 
@@ -50,3 +50,4 @@ To migrate easier from Xamarin SfButton to [.NET MAUI SfButton](https://www.sync
 ## Known Issues
 
 The gradient colors used as a background are not functioning as expected because of a framework-level issue. This issue is specifically related to the incorrect rendering of gradient color on iOS and macOS when clipping a view. Refer to this [link](https://github.com/dotnet/maui/issues/18671) for more details.
+

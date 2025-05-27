@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with .NET MAUI SignaturePad control | Syncfusion®
+title: Getting Started with .NET MAUI SignaturePad Control | Syncfusion®
 description: Learn here about getting started with .NET MAUI SignaturePad (SfSignaturePad) control, its elements, and more.
 platform: maui
 control: SfSignaturePad
@@ -20,26 +20,26 @@ To quickly get started with the .NET MAUI SignaturePad, watch this video.
 
 ## Prerequisites
 
-Before proceeding, ensure the following are in place:
+Before proceeding, ensure the following are set up:
 
 1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.8 or later).
 
 ## Step 1: Create a New .NET MAUI Project
 
-1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
-2. Name the project and choose a location. Then, click **Next**.
-3. Select the .NET framework version and click **Create**.
+1. Navigate to **File > New > Project** and select the **.NET MAUI App** template.
+2. Name your project, choose a location, and click **Next**.
+3. Select the desired .NET framework version and click **Create**.
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI SignaturePad NuGet Package
 
-1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
+1. In **Solution Explorer**, right-click your project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.SignaturePad](https://www.nuget.org/packages/Syncfusion.Maui.SignaturePad) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored.
+3. Ensure all necessary dependencies are installed correctly, and restore the project if needed.
 
-## Step 3: Register the handler
+## Step 3: Register the Handler
 
- [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) package is a dependency for all Syncfusion<sup>®</sup> controls in .NET MAUI. Register the core handler in your `MauiProgram.cs`.
 
 {% highlight c# hl_lines="1 12" %} 
 using Syncfusion.Maui.Core.Hosting;
@@ -108,31 +108,30 @@ namespace SignaturePadGettingStarted
 
 ## Prerequisites
 
-Before proceeding, ensure the following are set up:
+Ensure the following are set up:
 
-1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
+1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio Code.
-3. Ensure that the .NET MAUI extension is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
+3. Ensure that the .NET MAUI extension is installed and configured [as described here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
 
 ## Step 1: Create a New .NET MAUI Project
 
-1. Open the Command Palette by pressing **Ctrl+Shift+P** and type **.NET:New Project** and press Enter.
+1. Open the Command Palette (`Ctrl+Shift+P`), type **.NET: New Project**, and press **Enter**.
 2. Choose the **.NET MAUI App** template.
-3. Select the project location, type the project name and press Enter.
-4. Then choose **Create project**
+3. Select the project location, name your project, and press **Enter**.
+4. Click **Create Project**.
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI SignaturePad NuGet Package
 
-1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
-2. Ensure you're in the project root directory where your .csproj file is located.
-3. Run the command `dotnet add package Syncfusion.Maui.SignaturePad` to install the Syncfusion<sup>®</sup> .NET MAUI SignaturePad package.
-4. To ensure all dependencies are installed, run `dotnet restore`.
+1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> to open the terminal in Visual Studio Code.
+2. Ensure you're in the project root directory where your `.csproj` file is located.
+3. Run `dotnet add package Syncfusion.Maui.SignaturePad` to install the package.
+4. Run `dotnet restore` to verify all dependencies are installed.
 
-## Step 3: Register the handler
+## Step 3: Register the Handler
 
- [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
-
-{% highlight c# hl_lines="1 12" %} 
+Register the Syncfusion core handler in `MauiProgram.cs`.
+{% highlight csharp hl_lines="1 12" %}
 using Syncfusion.Maui.Core.Hosting;
 
 namespace SignaturePadGettingStarted
@@ -159,7 +158,7 @@ namespace SignaturePadGettingStarted
 
 ## Step 4: Add a Basic SignaturePad
 
-Import the [SfSignaturePad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html) namespace and initialize the SignaturePad as shown below.
+Import the [SfSignaturePad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html) namespace.
 
 {% tabs %}
 
@@ -201,29 +200,28 @@ namespace SignaturePadGettingStarted
 
 ## Prerequisites
 
-Before proceeding, ensure the following are set up:
+Ensure the following are set up:
 
-1. Ensure you have the latest version of JetBrains Rider.
-2. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
-3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
+1. Latest version of JetBrains Rider.
+2. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).
+3. Ensure MAUI workloads are installed as described [here](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start).
 
-## Step 1: Create a new .NET MAUI Project
+## Step 1: Create a New .NET MAUI Project
 
-1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
-2. Enter the Project Name, Solution Name, and Location.
-3. Select the .NET framework version and click Create.
+1. Go to **File > New Solution**, select .NET (C#), and choose the .NET MAUI App template.
+2. Define the project name, solution name, and location.
+3. Select the .NET framework version and click **Create**.
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI SignaturePad NuGet Package
 
-1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+1. Right-click the project in **Solution Explorer** and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.SignaturePad](https://www.nuget.org/packages/Syncfusion.Maui.SignaturePad/) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
+3. Ensure all necessary dependencies are installed and restore the project if needed.
 
-## Step 3: Register the handler
+## Step 3: Register the Handler
 
- [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the MauiProgram.cs file, register the handler for Syncfusion<sup>®</sup> core.
-
-{% highlight c# hl_lines="1 12" %} 
+Register the Syncfusion core handler as outlined earlier.
+{% highlight csharp hl_lines="1 12" %}
 using Syncfusion.Maui.Core.Hosting;
 
 namespace SignaturePadGettingStarted
@@ -250,7 +248,7 @@ namespace SignaturePadGettingStarted
 
 ## Step 4: Add a Basic SignaturePad
 
-Import the [SfSignaturePad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html) namespace and initialize the SignaturePad as shown below.
+Import the [SfSignaturePad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html) namespace and initialize the SignaturePad.
 
 {% tabs %}
 
@@ -291,9 +289,9 @@ namespace SignaturePadGettingStarted
 
 ![SignaturePad default](images/getting-started/default.png)
 
-## Customize signature stroke color
+## Customize Signature Stroke Color
 
-Customize the stroke color of the SignaturePad control by using the [StrokeColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_StrokeColor) property. The default stroke color is **Colors.Black**.
+You can customize the stroke color of the SignaturePad using the [StrokeColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_StrokeColor) property. By default, the stroke color is **Colors.Black**.
 
 {% tabs %}
 
@@ -314,10 +312,9 @@ signaturePad.StrokeColor = Colors.Red;
 
 ![SignaturePad stroke color](images/getting-started/stroke-color.png)
 
-## Customize signature stroke thickness
+## Customize Signature Stroke Thickness
 
-The thickness of the stroke drawn can be customized by setting the [MinimumStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_MinimumStrokeThickness) and [MaximumStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_MaximumStrokeThickness) properties. The [MinimumStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_MinimumStrokeThickness) defines the minimum thickness of the stroke and the [MaximumStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_MaximumStrokeThickness) defines the maximum thickness of the stroke that can be drawn based on the speed and impression we provide through gesture within its minimum and maximum stroke thickness ranges. So that the signature will be more realistic.
-
+The stroke thickness can be customized with the [MinimumStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_MinimumStrokeThickness) and [MaximumStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_MaximumStrokeThickness) properties.
 {% tabs %}
 
 {% highlight xaml %}
@@ -341,9 +338,9 @@ SfSignaturePad signaturePad = new SfSignaturePad()
 
 ![SignaturePad stroke thickness](images/getting-started/stroke-thickness.png)
 
-## Saving the signature as an image
+## Saving the Signature as an Image
 
-Save the signature drawn in the SignaturePad as an [ImageSource](https://learn.microsoft.com/en-us/dotnet/api/xamarin.forms.imagesource?view=xamarin-forms) using the [ToImageSource()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_ToImageSource) method which can further be synchronized with your devices and documents that need your signature.
+Save the signature drawn in the SignaturePad as an [ImageSource](https://learn.microsoft.com/en-us/dotnet/api/xamarin.forms.imagesource?view=xamarin-forms) using the [ToImageSource()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_ToImageSource) method.
 
 {% tabs %}
 
@@ -371,9 +368,9 @@ private void OnSaveButtonClicked(object? sender, EventArgs e)
 
 {% endtabs %}
 
-## Clear the existing signature in SignaturePad
+## Clear the Existing Signature in SignaturePad
 
-Clear the signature drawn in the SignaturePad using the [Clear()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_Clear) method as shown in the code snippet below:
+Clear the drawn signature using the [Clear()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html#Syncfusion_Maui_SignaturePad_SfSignaturePad_Clear) method.
 
 {% tabs %}
 
@@ -431,7 +428,7 @@ private void OnDrawStarted(object? sender, CancelEventArgs e)
 
 ### DrawCompleted
 
-This event will be triggered when we complete the drawing in the SignaturePad.
+This event is triggered when drawing is completed.
 
 {% tabs %}
 

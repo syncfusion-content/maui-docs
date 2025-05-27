@@ -2,7 +2,7 @@
 
 layout: post
 title: Navigation Modes in .NET MAUI Rotator control | Syncfusion®
-description: Learn about the Navigation Modes support in Syncfusion® .NET MAUI Rotator (SfRotator) control and more
+description: Learn about the support for Navigation Modes in Syncfusion® .NET MAUI Rotator (SfRotator) control and more
 platform: maui 
 control: Rotator
 documentation: ug
@@ -11,11 +11,11 @@ documentation: ug
 
 # Navigation Modes in .NET MAUI Rotator (SfRotator)
 
-The [`NavigationStripMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationStripMode) property specifies the appearance of navigation bar items. The image data can be selected either by [`Thumbnail`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationStripMode.html#Syncfusion_Maui_Core_Rotator_NavigationStripMode_Thumbnail) or by [`Dots`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationStripMode.html#Syncfusion_Maui_Core_Rotator_NavigationStripMode_Dots) navigation modes.
+The [`NavigationStripMode`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_NavigationStripMode) property specifies the appearance of navigation bar items. Image data can be selected using either [`Thumbnail`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationStripMode.html#Syncfusion_Maui_Core_Rotator.NavigationStripMode_Thumbnail) or [`Dots`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.Rotator.NavigationStripMode.html#Syncfusion_Maui_Core_Rotator.NavigationStripMode_Dots) navigation modes.
 
 ## Thumbnail
 
-The slider items will also be loaded in the thumbnail view. When a thumbnail item is clicked, the slider will switch to the corresponding image data.
+Slider items are loaded in the thumbnail view. Clicking on a thumbnail item will switch the slider to the corresponding image data.
 
 {% tabs %}
 

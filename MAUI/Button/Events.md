@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Event in .NET MAUI Button Control | Syncfusion®
-description: Learn here about Event support in the Syncfusion® .NET MAUI Button (SfButton) control, its elements and more.
+title: "Event in .NET MAUI Button Control | Syncfusion®"
+description: "Learn about event support in the Syncfusion® .NET MAUI Button (SfButton) control, its elements, and more."
 platform: maui
 control: SfButton
 documentation: ug 
@@ -10,9 +10,9 @@ documentation: ug
 
 # Event in .NET MAUI Button (SfButton)
 
-## Clicked event
+## Clicked Event
 
-The click event occurs when the [`SfButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) is clicked. The event argument is of type `EventArgs`.
+The Clicked event is triggered when the [`SfButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) is clicked. The event argument is of type `EventArgs`.
 
 {% tabs %}
 {% highlight xaml %}

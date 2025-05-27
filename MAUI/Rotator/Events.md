@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in .NET MAUI Rotator control | Syncfusion®
-description: Learn about Events support in Syncfusion® .NET MAUI Rotator (SfRotator) control, its elements, and more.
+description: Learn about Events support in the Syncfusion® .NET MAUI Rotator (SfRotator) control, its elements, and more.
 platform: maui 
 control: Rotator 
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Selected Index Changed Event
 
-The SelectedIndexChanged event is used to notify when the selection is changed by swiping or dynamically setting the [`SelectedIndex`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_SelectedIndex) property of the [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1).
+The `SelectedIndexChanged` event notifies you when the selection changes, either by swiping or dynamically setting the [`SelectedIndex`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_SelectedIndex) property of the [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1).
 
 {% tabs %}
 
@@ -125,11 +125,11 @@ namespace Rotator
 
 {% endtabs %}
 
-![Rotator_SelectedIndexChanged](images/SelectedIndexChanged.png)
+![Rotator_SelectedIndexChanged event](images/SelectedIndexChanged.png)
 
 ## Item Tapped Event
 
-The [`ItemTapped`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_ItemTapped) event will be triggered whenever tapping the item.
+The [`ItemTapped`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html#Syncfusion_Maui_Rotator_SfRotator_ItemTapped) event is triggered when an item is tapped.
 
 {% tabs %}
 

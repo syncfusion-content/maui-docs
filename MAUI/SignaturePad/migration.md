@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfSignaturePad to .NET MAUI SfSignaturePad 
 
-To migrate from the [Xamarin SignaturePad](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.SignaturePad.SfSignaturePad.html) to [.NET MAUI  SignaturePad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html) easier, most of the APIs from the Xamarin SfSignaturePad were kept in the .NET MAUI SfSignaturePad. However, to maintain the consistency of API naming in the.NET MAUI SfSignaturePad, some of the APIs have been renamed. Please find the difference in the following topics.
+This guide helps you migrate from the [Xamarin SignaturePad](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.SignaturePad.SfSignaturePad.html) to the [.NET MAUI SignaturePad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html). To ease this transition, most APIs from Xamarin SfSignaturePad are retained in the .NET MAUI SfSignaturePad. However, to maintain consistency in API naming for .NET MAUI SfSignaturePad, some APIs have been renamed. The differences are highlighted in the sections below.
 
 ## Namespaces 
 

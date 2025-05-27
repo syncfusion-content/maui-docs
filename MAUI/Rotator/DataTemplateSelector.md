@@ -1,7 +1,7 @@
 ---
 layout: post
 title: DataTemplateSelector in .NET MAUI Rotator control | Syncfusion®
-description: Learn about DataTemplateSelector support in Syncfusion® .NET MAUI Rotator (SfRotator) control and more.
+description: Learn about DataTemplateSelector support in the Syncfusion® .NET MAUI Rotator (SfRotator) control and more.
 platform: maui 
 control: Rotator 
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # DataTemplateSelector in .NET MAUI Rotator (SfRotator)
 
-The [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1) supports DataTemplateSelector, from which you can choose a DataTemplate based on the data object.
+The [`SfRotator`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rotator.SfRotator.html?tabs=tabid-1) supports `DataTemplateSelector`, allowing you to choose a `DataTemplate` based on the data object.
 
 {% tabs %}
 
