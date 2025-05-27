@@ -602,7 +602,7 @@ namespace ToolbarSample
 
 ### Cancel the default item dropdown view
 
-The In-build more items drop down menu view can be cancelled with the help of `Cancel` parameter in the [MoreButtonTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarMoreButtonTappedEventArgs.html) event.
+The In-built more items dropdown menu view can be canceled with the help of `Cancel` parameter in the [MoreButtonTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarMoreButtonTappedEventArgs.html) event.
 
 {% tabs %}
 

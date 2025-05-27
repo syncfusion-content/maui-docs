@@ -5,12 +5,12 @@ description: Learn here all about Migrating from Syncfusion<sup>&reg;</sup> Xama
 platform: maui
 control: DigitalGauge
 documentation: ug
-keywords: .net maui, .net maui digital gauge, digital gauge, character segments, digital character, character types, character display types
+keywords: .NET MAUI, .NET MAUI digital gauge, digital gauge, character segments, digital character, character types, character display types
 ---  
 
 # Migrate from Xamarin.Forms SfDigitalGauge to .NET MAUI SfDigitalGauge
 
-To make the migration from the [Xamarin SfDigitalGauge](https://www.nuget.org/packages/Syncfusion.Xamarin.SfGauge) to the [.NET MAUI SfDigitalGauge](https://www.syncfusion.com/maui-controls/maui-digital-gauge) easier, most of the similar APIs from the [Xamarin SfDigitalGauge](https://www.nuget.org/packages/Syncfusion.Xamarin.SfGauge) were kept in the [.NET MAUI SfDigitalGauge](https://www.syncfusion.com/maui-controls/maui-digital-gauge). Also, the APIs has been restructured by considering various use cases and maintaining API consistency. Please find the difference in the following topics.
+To make the migration from the [Xamarin SfDigitalGauge](https://www.nuget.org/packages/Syncfusion.Xamarin.SfGauge) to the [.NET MAUI SfDigitalGauge](https://www.syncfusion.com/maui-controls/maui-digital-gauge) easier, most of the similar APIs from the [Xamarin SfDigitalGauge](https://www.nuget.org/packages/Syncfusion.Xamarin.SfGauge) were kept in the [.NET MAUI SfDigitalGauge](https://www.syncfusion.com/maui-controls/maui-digital-gauge). Also, the APIs have been restructured by considering various use cases and maintaining API consistency. Please find the difference in the following topics.
 
 ## Initialize control
 
@@ -83,7 +83,7 @@ The following code example, explains how to initialize the properties of the `Xa
 <table>
 <tr>
 <th>Xamarin SfDigitalGauge</th>
-<th>.NET MAUI SfDigitalGauge</th>
+<th>.NET .NET MAUI SfDigitalGauge</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[Value](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SfDigitalGauge.html#Syncfusion_SfGauge_XForms_SfDigitalGauge_Value)'| markdownify }}</td>
@@ -132,7 +132,7 @@ The following code example explains how to initialize the segments in Xamarin Sf
 <table>
 <tr>
 <th>Xamarin SfDigitalGauge</th>
-<th>.NET MAUI SfDigitalGauge</th></tr>
+<th>.NET .NET MAUI SfDigitalGauge</th></tr>
 <tr>
 <td>
 {% tabs %}
@@ -275,7 +275,7 @@ SfDigitalGauge digital = new SfDigitalGauge();
 </tr>
 </table>
 
-The following code example explains how to initialize the character type in Xamarin SfDigitalGauge and .NET MAUI SfDigitalGauge.
+The following code example explains how to initialize the character type in Xamarin SfDigitalGauge and.NET MAUI SfDigitalGauge.
 
 <table>
 <tr>

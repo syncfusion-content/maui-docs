@@ -5,21 +5,21 @@ description: Learn here all about Character Types support in Syncfusion<sup>&reg
 platform: maui
 control: DigitalGauge
 documentation: ug
-keywords: .net maui, .net maui digital gauge, digital gauge, character segments, digital character, character types, character display types
+keywords: .net maui, .net maui digital gauge, digital gauge, character segments, digital character, character types, character displayed types
 ---
 
 # Character Types in .NET MAUI Digital Gauge (SfDigitalGauge)
 
-The digital characters can be display in the following four different segments:
+The digital characters can be displayed in the following four different segments:
 
 •	SevenSegment
 •	FourteenSegment
 •	SixteenSegment
 •	EightCrossEightDotMatrix
 
-## Seven segment
+## Seven-Segment
 
-The seven-segment type is capable of displaying numbers and a few uppercase letters efficiently.
+The seven-segment type is capable of displayeding numbers and a few uppercase letters effectively.
 
 {% tabs %}
 
@@ -45,9 +45,9 @@ The seven-segment type is capable of displaying numbers and a few uppercase lett
 
 ![seven-segment](Images\seven-segment.png)
 
-## Fourteen segment
+## Fourteen-Segment
 
-The fourteen-segment type is capable of displaying numbers and the alphabet efficiently.
+The fourteen-segment type is capable of displayeding numbers and the alphabet effectively.
 
 {% tabs %}
 
@@ -73,9 +73,9 @@ The fourteen-segment type is capable of displaying numbers and the alphabet effi
 
 ![fourteen-segment](Images\fourteen-segment.png)
 
-## Sixteen segment
+## Sixteen-Segment
 
-The sixteen-segment type is capable of displaying numbers and the alphabet clearly.
+The sixteen-segment type is capable of displayeding numbers and the alphabet clearly.
 
 {% tabs %}
 
@@ -101,9 +101,9 @@ The sixteen-segment type is capable of displaying numbers and the alphabet clear
 
 ![sixteen-segment](Images\sixteen-segment.png)
 
-## EightCrossEightDotMatrix segment
+## Eight-Cross-Eight-Dot-Matrix Segment
 
-The dot matrix segment type is capable of displaying numbers, the alphabet, and special characters efficiently.
+The dot matrix segment type is capable of displayeding numbers, the alphabet, and special characters effectively.
 
 {% tabs %}
 

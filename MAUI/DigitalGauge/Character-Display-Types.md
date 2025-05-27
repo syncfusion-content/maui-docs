@@ -12,7 +12,7 @@ keywords: .net maui, .net maui digital gauge, digital gauge, character segments,
 
 The digital gauge displays numbers, the alphabet, and special characters, which are given in the [text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfDigitalGauge.html#Syncfusion_Maui_Gauges_SfDigitalGauge_Text) property.
 
-## Setting value to Display number Character
+## Setting Value to Display Number Characters
 
 Numbers can be displayed in a digital gauge in different formats using the [CharacterType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfDigitalGauge.html#Syncfusion_Maui_Gauges_SfDigitalGauge_CharacterType) property.
 
@@ -34,12 +34,12 @@ Numbers can be displayed in a digital gauge in different formats using the [Char
 
 {% endtabs %}
 
-![display-number](Images\display-number.png)
+![display-number](Images/display-number.png)
 
 
 ## Setting value to Display alphabets
 
-Alphabet can be displayed in a digital gauge using any one of the character format types.
+Alphabets can be displayed in a digital gauge using any one of the character format types.
 
 {% tabs %}
 
@@ -62,11 +62,11 @@ Alphabet can be displayed in a digital gauge using any one of the character form
 
 {% endtabs %}
 
-![display-character](Images\display-character.png)
+![display-character](Images/display-character.png)
 
 ## Setting value to display special characters
 
-Special characters can also be displayed in digital gauge using the [EightCrossEightDotMatrix](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.DigitalGaugeCharacterType.html#Syncfusion_Maui_Gauges_DigitalGaugeCharacterType_EightCrossEightDotMatrix) character format type.
+Special characters can also be displayed in the digital gauge using the [EightCrossEightDotMatrix](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.DigitalGaugeCharacterType.html#Syncfusion_Maui_Gauges_DigitalGaugeCharacterType_EightCrossEightDotMatrix) character format type.
 
 {% tabs %}
 
@@ -89,4 +89,4 @@ Special characters can also be displayed in digital gauge using the [EightCrossE
 
 {% endtabs %}
 
-![display-special-character](Images\display-special-character.png)
+![display-special-character](Images/display-special-character.png)

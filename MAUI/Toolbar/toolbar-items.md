@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Toolbar Items in .NET MAUI Toolbar Control | Syncfusion®
-description: Learn here all about Toolbar Items support in Syncfusion® .NET MAUI Toolbar (SfToolbar) control and more.
+description: Learn all about the Toolbar Items support in Syncfusion® .NET MAUI Toolbar (SfToolbar) control and more.
 platform: maui
 control: Toolbar (SfToolbar)
 documentation: ug
@@ -17,7 +17,7 @@ The toolbar control supports displaying a default view for toolbar items when th
 
 ### Icon
 
-The control provides support to add icon to the toolbar items. You can add icon to the toolbar items by using the [Icon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_Icon) property of [SfToolbarItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html).
+The control provides support for adding an icon to the toolbar items. You can add icon to the toolbar items by using the [Icon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_Icon) property of [SfToolbarItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html).
 
 The following code sample demonstrates how to create a toolbar control with items having the icons.
 
@@ -149,7 +149,7 @@ namespace ToolbarSample
 
 #### Icon Size
 
-The control provides an option to set the icon size for the toolbar items. You can set the icon size for the toolbar items using the [IconSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_IconSize) property.
+The control provides an option for setting the icon size for the toolbar items. You can set the icon size for the toolbar items using the [IconSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_IconSize) property.
 
 {% tabs %}
 
@@ -413,7 +413,7 @@ namespace ToolbarSample
 
 ### Icon with text
 
-The control provides support to add icon with text to the toolbar items.
+The control provides support for adding an icon with text to the toolbar items.
 
 The following code sample demonstrates how to display icons and text in the toolbar items of the control.
 
@@ -711,7 +711,7 @@ namespace ToolbarSample
 
 ### Change item size
 
-The control provides support to set the size for the toolbar item using the [Size](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_Size) property.
+The control provides support for setting the size for the toolbar item using the [Size](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_Size) property.
 
 {% tabs %}
 
@@ -818,7 +818,7 @@ namespace ToolbarSample
 
 ### Clear toolbar selection programmatically
 
-The control provides support to clear the selection of toolbar items using the [ClearSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ClearSelection) method.
+The control provides support for clearing the selection of toolbar items using the [ClearSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ClearSelection) method.
 
 The following code sample demonstrates how to clear the selection of toolbar items of the control.
 
@@ -918,7 +918,7 @@ namespace ToolbarSample
 
 ##  Set Toolbar Item Name
 
-The control provides support to set the name for the toolbar items using the [Name](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_Name) property, which helps to uniquely identifies the toolbar item.
+The control provides support for setting the name for the toolbar items using the [Name](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_Name) property, which helps to uniquely identify the toolbar item.
 
 {% tabs %}
 
@@ -1305,7 +1305,7 @@ namespace ToolbarSample
 
 ## Item Spacing
 
-The control provides support for customizing the space between the toolbar items using the [ItemSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ItemSpacing) property. 
+The control provides support for customizing the spacing between the toolbar items using the [ItemSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ItemSpacing) property. 
 
 The following code sample demonstrates how to create a toolbar control with item spacing.
 
@@ -1553,7 +1553,7 @@ public class ToolbarViewModel
 
 The control provides support for setting leading and trailing items using the [ItemAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarItemAlignment.html) property. The items set with `ItemAlignment` as [Start](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarItemAlignment.html#Syncfusion_Maui_Toolbar_ToolbarItemAlignment_Start) will be displayed at the leading position, and the items set with `ItemAlignment` as [End](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarItemAlignment.html#Syncfusion_Maui_Toolbar_ToolbarItemAlignment_End) will be displayed at the trailing position. By default, the items will be displayed in the center position.
 
->Note: The leading and trailing is applicable when the toolbar is not scrollable mode.
+>Note: The leading and trailing alignment is applicable when the toolbar is not scrollable mode.
 
 The following code sample demonstrates how to create a toolbar control with leading and trailing items.
 
