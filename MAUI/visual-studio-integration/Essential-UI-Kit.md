@@ -15,7 +15,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI offers ready-to-use XAML templat
 
 To begin with the Essential<sup>®</sup> UI Kit for .NET MAUI, install the appropriate extension in Visual Studio by downloading it from the marketplace. As a result, you’ll be able to access and utilize the Syncfusion<sup>®</sup> Extension directly from the Syncfusion<sup>®</sup> menu within your project.
 
-[Visual Studio 2022](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.MAUIVSExtension)
+[Visual Studio 2022](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Essential-UI-Kit-MAUI)
 
 
 ## Include XAML templates in MAUI apps
