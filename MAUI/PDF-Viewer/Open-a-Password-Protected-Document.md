@@ -23,7 +23,7 @@ In the above code snippet, `pdfDocumentStream` is the `Stream` instance read fro
 
 ## Detecting a password-protected document
 
-You can identify whether a PDF document to be opened is a password protected or not by using the [PasswordRequested](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_PasswordRequested) event. This event triggers when the document to be loaded in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) requires a password. In this event handler method, you can set the [password](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.PasswordRequestedEventArgs.html#Syncfusion_Maui_PdfViewer_PasswordRequestedEventArgs_Password) property from the [PasswordRequestedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.PasswordRequestedEventArgs.html) with the correct password to load the document. Refer to the following code example.
+You can identify whether a PDF document to be opened is a password-protected or not by using the [PasswordRequested](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_PasswordRequested) event. This event triggers when the document to be loaded in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) requires a password. In this event handler method, you can set the [password](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.PasswordRequestedEventArgs.html#Syncfusion_Maui_PdfViewer_PasswordRequestedEventArgs_Password) property from the [PasswordRequestedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.PasswordRequestedEventArgs.html) with the correct password to load the document. Refer to the following code example.
 
 {% tabs %}
 {% highlight xaml %}
@@ -50,7 +50,7 @@ private void PdfViewer_PasswordRequested(object sender, PasswordRequestedEventAr
 
 ## Handling password request
 
-When attempting to open a password protected document, the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) will display a default password prompt to obtain the user password to load the document. However, if you want to suppress the default password prompt and to implement your own UI to obtain the user password by using the [PasswordRequested](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_PasswordRequested) event. Set the [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.DocumentLoadFailedEventArgs.html#Syncfusion_Maui_PdfViewer_DocumentLoadFailedEventArgs_Handled) property of the [PasswordRequestedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.PasswordRequestedEventArgs.html) to `true` to disable the control’s default password prompt and handle your own logic to supply the password to open the document.
+When attempting to open a password-protected document, the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) will display a default password prompt to obtain the user password to load the document. However, if you want to suppress the default password prompt and to can implement your own UI to obtain the user password by using the [PasswordRequested](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_PasswordRequested) event. Set the [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.DocumentLoadFailedEventArgs.html#Syncfusion_Maui_PdfViewer_DocumentLoadFailedEventArgs_Handled) property of the [PasswordRequestedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.PasswordRequestedEventArgs.html) to `true` to disable the control’s default password prompt and handle your own logic to supply the password to open the document.
 
 {% tabs %}
 {% highlight xaml %}
@@ -80,7 +80,7 @@ When attempting to open a password protected document, the [SfPdfViewer](https:/
 
 ### Creating a password request view
 
-This is an example of how to create a custom password request dialog to ask for user password and use the same to view the password-protected PDF document in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). The following code snippets illustrate the creation of a custom password request dialog and viewing the documents, with a few code additions to the **Getting Started** example.
+This is an example of how to create a custom password request dialog to ask for the user password and use the same to view the password-protected PDF document in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). The following code snippets illustrate the creation of a custom password request dialog and viewing the documents, with a few code additions to the **Getting Started** example.
 
 **Step 1:** Create a custom password dialog view named `PasswordDialogBox` and add the functionalities to accept and validate the password, as shown below.
 
@@ -349,7 +349,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-### Handling invalid password
+### Handling an invalid password
 
 The [DocumentLoadFailed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoadFailed) event triggers when any password-protected document is loaded with a wrong or invalid password. You can handle the functionality based on your needs within this event handler method.
 
@@ -383,7 +383,7 @@ private void PdfViewer_DocumentLoadFailed(object sender, Syncfusion.Maui.PdfView
 {% endhighlight %}
 {% endtabs %}
 
-### Handling correct password
+### Handling the correct password
 If the entered password is correct, the document will be loaded into the PDF Viewer. At this moment, the [DocumentLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoaded) event will be triggered. You can handle this event to show a message indicating that the password is correct or to close the custom dialog. Refer to this [link](https://help.syncfusion.com/maui/pdf-viewer/documentloadnotifications#document-loaded-event) for more details.
 
 ## GitHub example

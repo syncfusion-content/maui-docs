@@ -7,13 +7,13 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Open a PDF From Local Storage in .NET MAUI PDF Viewer (SfPdfViewer)
+# Open a PDF from Local Storage in .NET MAUI PDF Viewer (SfPdfViewer)
 
-A PDF document can be opened in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) from the local storage by reading the file as `Stream` and assigning the obtained `Stream` to the [DocumentSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) property.
+A PDF document can be opened in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) from the local storage by reading the file as a `Stream` and assigning the obtained `Stream` to the [DocumentSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) property.
 
 Just by making a few changes to the `MainPage.xaml` and `PdfViewerViewModel.cs` shared in the getting started example, you can easily open a document from the local storage with the help of [File Picker](https://learn.microsoft.com/en-us/dotnet/maui/platform-integration/storage/file-picker?view=net-maui-7.0&tabs=ios) as one of the options. 
 
-In `MainPage.xaml`, add a new button to open a PDF document from the local storage using `File Picker` when pressed. Refer to the following code:
+In `MainPage.xaml`, add a new button to open a PDF document from the local storage using the `File Picker` when pressed. Refer to the following code:
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -71,7 +71,7 @@ namespace OpenLocalFile
         public event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
-        /// Command to open document using a file picker.
+        /// Command to open the document using a file picker.
         /// </summary>
         public ICommand OpenDocumentCommand
         {
@@ -104,7 +104,7 @@ namespace OpenLocalFile
         /// </summary>
         public PdfViewerViewModel()
         {
-            //Accessing the PDF document that is added as embedded resource as stream.
+            //Accessing the PDF document that is added as an embedded resource as a stream.
             m_pdfDocumentStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("OpenLocalFile.Assets.PDF_Succinctly.pdf");
         }
 
@@ -114,11 +114,11 @@ namespace OpenLocalFile
         }
 
         /// <summary>
-        /// Opens a document using file picker.
+        /// Opens a document using the file picker.
         /// </summary>
         async void OpenDocument(object commandParameter)
         {
-            //Create file picker with file type as PDF.
+            //Create a file picker with file type as PDF.
             FilePickerFileType pdfFileType = new FilePickerFileType(new Dictionary<DevicePlatform, IEnumerable<string>>{
                         { DevicePlatform.iOS, new[] { "public.pdf" } },
                         { DevicePlatform.Android, new[] { "application/pdf" } },
@@ -136,7 +136,7 @@ namespace OpenLocalFile
         }
 
         /// <summary>
-        /// Picks the file from local storage and store as stream.
+        /// Picks the file from local storage and stores it as a stream.
         /// </summary>
         public async Task PickAndShow(PickOptions options)
         {
@@ -146,13 +146,13 @@ namespace OpenLocalFile
                 var result = await FilePicker.Default.PickAsync(options);
                 if (result != null)
                 {
-                    //Store the resultant PDF as stream.
+                    //Store the resultant PDF as a stream.
                     PdfDocumentStream = await result.OpenReadAsync();
                 }
             }
             catch (Exception ex)
             {
-                //Display error when file picker failed to open files.
+                //Display error when the file picker fails to open files.
                 string message;
                 if (ex != null && string.IsNullOrEmpty(ex.Message) == false)
                     message = ex.Message;

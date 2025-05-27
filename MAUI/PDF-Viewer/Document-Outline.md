@@ -9,7 +9,7 @@ documentation: ug
 
 # Document outline in .NET MAUI PDF Viewer
 
-A PDF document may optionally have a document outline (also called as bookmarks) which allows the user to navigate from one part of the document to another. The PDF viewer control displays the document outline in a tree-structured hierarchy of outline elements.
+A PDF document may optionally have a document outline (also called bookmarks) which allows the user to navigate from one part of the document to another. The PDF viewer control displays the document outline in a tree-structured hierarchy of outline elements.
 
 ## Showing/hiding the outline view
 
