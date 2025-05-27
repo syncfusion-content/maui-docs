@@ -112,6 +112,53 @@ void AddCustomStampAnnotation()
 {% endhighlight %}
 {% endtabs %}
 
+### Add view as a custom stamp without using toolbar
+
+You can create a custom stamp from view and add it to a PDF document.  Adding a view (UI) to PDF pages programmatically in a .NET MAUI PDF Viewer as a custom stamp. It allows programmers to add interactive UI elements directly into PDF pages. The following example explains how to create a custom stamp from a button view in the application and add it to a PDF document using the [AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
+
+{% tabs %}
+{% highlight C# %}
+StampAnnotation CreateCustomStamp()
+{
+    int pageNumber = 1;
+
+    // Define the position for the stamp to be placed in the PDF page.
+    PointF position= new PointF(50, 50);
+
+    // Create view from the button to be used as stamp.
+    var button = new Button
+   {
+    Text = "Click Me",
+    BackgroundColor = Colors.Blue,
+   };
+
+    // Create a custom stamp annotation using the view.
+    StampAnnotation customStamp = new StampAnnotation(button,pageNumber,position);
+
+    // Return the stamp annotation.
+    return customStamp;
+}
+
+void AddCustomStampAnnotation()
+{
+    StampAnnotation stampAnnotation = CreateCustomStamp();
+
+    // Add the stamp to the PDF document using `SfPdfViewer` instance.
+    PdfViewer.AddAnnotation(stampAnnotation);
+}
+{% endhighlight %}
+{% endtabs %}
+
+N> The following capabilities are supported when adding a view as a custom stamp in a .NET MAUI PDF Viewer using the StampAnnotation API:
+N>Any kind of view can be added as a custom stamp Standard MAUI control such as Grid, ComboBox, Label, Button, 
+N>Full interactive control of the view - Stamps can be moved, resized, and deleted by the user or programmatically.
+N>Opacity customization- You can adjust the transparency using the Opacity property.
+
+### Limitations
+
+ The view will be converted as an image in the saved PDF document. The view becomes read only once saved, and its contents cannot be edited after saving the document.
+
+
 ## Edit the selected stamp
 
 You can edit the properties of the selected stamp annotation programmatically by accessing the selected annotation instance. The selected annotation instance may be obtained from the [AnnotationSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSelected) event. 
