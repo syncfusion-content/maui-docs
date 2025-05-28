@@ -11,7 +11,7 @@ documentation: UG
 
 # Getting Started with .NET MAUI Tab View
 
-This section guides you through setting up and configuring a [Tab View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1) in your .NET MAUI application. Follow the steps below to add a basic Tab View to your project.
+This section guides you through setting up and configuring a [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1) in your .NET MAUI application. Follow the steps below to add a basic Tab View to your project.
 
 To quickly get started with the .NET MAUI Tab View, watch this video.
 
@@ -464,7 +464,7 @@ Items can be added to the control using the [ItemsSource](https://help.syncfusio
 
 Objects of any class can be provided as items for `SfTabView` using `ItemsSource`. The views corresponding to the objects can be set using the [HeaderItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_HeaderItemTemplate) for the header items and [ContentItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ContentItemTemplate) for the content.
 
-Create a model class using the TabItems collection property, initialized with the required number of data objects, as shown in the following code examples.
+Create a **Model** class using the TabItems collection property, initialized with the required number of data objects, as shown in the following code examples.
 
 {% tabs %}
 

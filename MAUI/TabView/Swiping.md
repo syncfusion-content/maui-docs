@@ -1,6 +1,6 @@
 ---
 layout: post
-title: About .NET MAUI Tab View (SfTabView) control | Syncfusion®
+title: Swiping in .NET MAUI Tab View (SfTabView) control | Syncfusion®
 description: Learn all about the swiping support in Syncfusion® .NET MAUI Tab View (SfTabView) control and more.
 platform: MAUI
 control: SfTabView
