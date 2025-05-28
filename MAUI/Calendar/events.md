@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Events in .NET MAUI Calendar control | Syncfusion<sup>&reg;</sup>
+title: Events in .NET MAUI Calendar control | Syncfusion
 description: Learn here all about the Events support in Syncfusion<sup>&reg;</sup> .NET MAUI Calendar (SfCalendar) control and more details.
 platform: maui
 control: SfCalendar
