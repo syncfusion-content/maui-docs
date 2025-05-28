@@ -1,19 +1,20 @@
 ---
 layout: post
-title: Accessibility with .NET MAUI Date Time Picker Control | Syncfusion<sup>&reg;</sup>
-description: Learn here about accessibility with Syncfusion<sup>&reg;</sup> .NET MAUI Date Time Picker (SfDateTimePicker) control.
+title: Accessibility with .NET MAUI DateTimePicker Control | Syncfusion<sup>&reg;</sup>
+description: Learn here about accessibility with Syncfusion<sup>&reg;</sup> .NET MAUI DateTimePicker (SfDateTimePicker) control.
 platform: maui
 control: SfDateTimePicker
 documentation: ug
 ---
 
-# Accessibility in .NET MAUI Date Time Picker (SfDateTimePicker)
+# Accessibility in .NET MAUI DateTimePicker (SfDateTimePicker)
 
-The [.NET MAUI Date Time Picker](https://www.syncfusion.com/maui-controls/maui-datetimepicker) control has interact with the `Header`, `Column Header`, `Footer`, and `Picker Items`.
+The [.NET MAUI DateTimePicker](https://www.syncfusion.com/maui-controls/maui-datetimepicker) control interacts with the `Header`, `Column Header`, `Footer`, and `Picker Items`.
 
 ## Header Layout
 
-The SfDateTimePicker control has interact header text with localization of header layout. It contains [DateFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_DateFormat) and [TimeFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_TimeFormat) property of the [DateTimePickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerHeaderView.html). For example,
+The SfDateTimePicker control interacts header text with localization of header layout. It contains [DateFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_DateFormat) and [TimeFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_TimeFormat) property of the [DateTimePickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerHeaderView.html). For example,
+
 
 <table>
 <tr>
@@ -30,23 +31,25 @@ The SfDateTimePicker control has interact header text with localization of heade
 </tr>
 </table>
 
-![Header Layout in .NET MAUI Date Time Picker.](images/accessibility/maui-accessibility-datetimepicker-header.png)
+
+![Header Layout in .NET MAUI DateTimePicker.](images/accessibility/maui-accessibility-datetimepicker-header.png)
 
 ## Column Header Layout
 
-The SfDateTimePicker control has interact column header text with localization of column header layout. It contains [DayHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_DateTimePickerColumnHeaderView_DayHeaderText), [MonthHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_DateTimePickerColumnHeaderView_MonthHeaderText), [YearHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_DateTimePickerColumnHeaderView_YearHeaderText), [HourHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_DateTimePickerColumnHeaderView_HourHeaderText), [MinuteHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_DateTimePickerColumnHeaderView_MinuteHeaderText), [SecondHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_DateTimePickerColumnHeaderView_SecondHeaderText), and [MeridiemHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_DateTimePickerColumnHeaderView_MeridiemHeaderText) properties in the [DateTimePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerColumnHeaderView.html). The default value of `DayHeaderText` is "Day", `MonthHeaderText` is "Month", `YearHeaderText` is "Year", `HourHeaderText` is "Hour", `MinuteHeaderText` is "Minute", `SecondHeaderText` is "Second", and `MeridiemHeaderText` is "string.Empty".
+The SfDateTimePicker control interacts column header text with localization of column header layout. It contains [DayHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_DateTimePickerColumnHeaderView_DayHeaderText), [MonthHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_DateTimePickerColumnHeaderView_MonthHeaderText), [YearHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_DateTimePickerColumnHeaderView_YearHeaderText), [HourHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_DateTimePickerColumnHeaderView_HourHeaderText), [MinuteHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_DateTimePickerColumnHeaderView_MinuteHeaderText), [SecondHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_DateTimePickerColumnHeaderView_SecondHeaderText), and [MeridiemHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_DateTimePickerColumnHeaderView_MeridiemHeaderText) properties in the [DateTimePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerColumnHeaderView.html). The default value of `DayHeaderText` is "Day", `MonthHeaderText` is "Month", `YearHeaderText` is "Year", `HourHeaderText` is "Hour", `MinuteHeaderText` is "Minute", `SecondHeaderText` is "Second", and `MeridiemHeaderText` is "string.Empty".
 
-![Column Header Layout in .NET MAUI Date Time Picker.](images/accessibility/maui-accessibility-datetimepicker-columnheader.png)
+![Column Header Layout in .NET MAUI DateTimePicker.](images/accessibility/maui-accessibility-datetimepicker-columnheader.png)
 
 ## Footer Layout
 
-The SfDateTimePicker control has interact validation buttons (OK and Cancel) with localization of footer layout. The Default value of the [OkButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_OkButtonText) property is "OK", and [CancelButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_CancelButtonText) is "Cancel".
+The SfDateTimePicker control interacts validation buttons (Ok and Cancel) with localization of footer layout. The default value of the [OkButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_OkButtonText) property is "Ok", and [CancelButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_CancelButtonText) is "Cancel".
 
-![Footer Layout in .NET MAUI Date Time Picker.](images/accessibility/maui-accessibility-datetimepicker-footer.png)
+![Footer Layout in .NET MAUI DateTimePicker.](images/accessibility/maui-accessibility-datetimepicker-footer.png)
 
 ## Picker Items
 
-The SfDateTimePicker control has interact with the item source in picker items. The item source contains based on the [Date Format](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerDateFormat.html) and [Time Format](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTimeFormat.html). For example, 
+The SfDateTimePicker control interacts with the item source in picker items. The item source is based on the [Date Format](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerDateFormat.html) and [Time Format](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTimeFormat.html). For example, 
+
 
 <table>
 <tr>
@@ -74,10 +77,12 @@ The SfDateTimePicker control has interact with the item source in picker items. 
 </tr>
 </table>
 
-![Picker Items in .NET MAUI Date Time Picker.](images/accessibility/maui-accessibility-datetimepicker-items.png)
+
+![Picker Items in .NET MAUI DateTimePicker.](images/accessibility/maui-accessibility-datetimepicker-items.png)
 
 ## Keyboard
 `SfDateTimePicker` supports selection using keyboard interactions.
+
 
 <table>
 <tr>
@@ -93,7 +98,7 @@ Description
 Tab
 </td>
 <td>
-Focus the picker.
+Focuses the picker.
 </td>
 </tr>
 <tr>
@@ -101,7 +106,7 @@ Focus the picker.
 Enter
 </td>
 <td>
-Opens the selected picker.
+Opens the picker.
 </td>
 </tr>
 <tr>
@@ -145,4 +150,3 @@ Exit and commit selection.
 </td>
 </tr>
 </table>
-

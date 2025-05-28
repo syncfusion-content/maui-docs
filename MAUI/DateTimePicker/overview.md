@@ -9,7 +9,7 @@ documentation: ug
 
 # Overview of .NET MAUI Date Time Picker (SfDateTimePicker)
 
-The Syncfusion<sup>&reg;</sup> [.NET MAUI Date Time Picker](https://www.syncfusion.com/maui-controls/maui-datetimepicker) provides a way to pick a date, time, or date and time. The Date Time Picker also enables you to set date ranges and date and time formats and to customize its dialog appearance by configuring its header, footer, and more.
+The Syncfusion<sup>&reg;</sup> [.NET MAUI Date Time Picker](https://www.syncfusion.com/maui-controls/maui-datetimepicker) allows users to pick a date, time, or date and time. The Date Time Picker also enables you to set date ranges and date and time formats and to customize its dialog appearance by configuring its header, footer, and more.
 
 ## Key features
 
@@ -21,7 +21,7 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI Date Time Picker](https://www.syncfusi
 
    ![Column header view in .NET MAUI Date Time picker.](images/overview/maui-date-time-picker-column-header-view.png)
 
-* **Footer view**: Provides validation buttons (OK and Cancel) in the footer view. The footer text and background color can be customized.
+* **Footer view**: Provides validation buttons (OK and Cancel) (OK and Cancel) in the footer view. The footer text and background color can be customized.
 
    ![Footer view in .NET MAUI Date Time picker.](images/overview/maui-date-time-picker-footer-view.png)
 
@@ -45,7 +45,7 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI Date Time Picker](https://www.syncfusi
 
    ![Minimum date in .NET MAUI Date Time picker.](images/overview/maui-date-time-picker-minimum-date.png)
 
-   ![MAximum date in .NET MAUI Date Time picker.](images/overview/maui-date-time-picker-maximum-date.png)
+   ![Maximum date in .NET MAUI Date Time picker.](images/overview/maui-date-time-picker-maximum-date.png)
 
 * **Date intervals**: The date values can be populated individually with intervals for days, months, and years.
 

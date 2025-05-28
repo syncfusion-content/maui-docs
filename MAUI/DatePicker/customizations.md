@@ -9,7 +9,7 @@ documentation: ug
 
 # Customizations in .NET MAUI Date Picker (SfDatePicker)
 
-The [.NET MAUI Date Picker](https://www.syncfusion.com/maui-controls/maui-datepicker) header, column header, footer, and selection views can be customized.
+The [.NET MAUI Date Picker](https://www.syncfusion.com/maui-controls/maui-date picker) header, column header, footer, and selection views can be customized.
 
 ## Header Customization
 
@@ -23,7 +23,7 @@ The SfDatePicker control allows you to add the header text by setting the [Text]
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfDatePicker x:Name="datepicker" >
+<picker:SfDatePicker x:Name="date picker" >
     <picker:SfDatePicker.HeaderView >
         <picker:PickerHeaderView Height="40" Text="Date Picker"/>
     </picker:SfDatePicker.HeaderView>
@@ -34,7 +34,7 @@ The SfDatePicker control allows you to add the header text by setting the [Text]
 {% highlight c# tabtitle="C#" %}
 
 SfDatePicker datePicker = new SfDatePicker();
-datepicker.HeaderView = new PickerHeaderView()
+date picker.HeaderView = new PickerHeaderView()
 {
     Height = 40,
     Text = "Date Picker"
@@ -46,7 +46,7 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-![Header text in .NET MAUI Date picker.](images/customizations/maui-date-picker-header-text.png)
+![Header text in .NET MAUI Date Picker.](images/customizations/maui-date-picker-header-text.png)
 
 ### Set the divider color
 
@@ -56,7 +56,7 @@ The SfDatePicker control allows you to customize the header divider color by set
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfDatePicker x:Name="datepicker" >
+<picker:SfDatePicker x:Name="date picker" >
     <picker:SfDatePicker.HeaderView >
         <picker:PickerHeaderView DividerColor="Red" />
     </picker:SfDatePicker.HeaderView>
@@ -67,7 +67,7 @@ The SfDatePicker control allows you to customize the header divider color by set
 {% highlight c# tabtitle="C#" %}
 
 SfDatePicker datePicker = new SfDatePicker();
-datepicker.HeaderView = new PickerHeaderView()
+date picker.HeaderView = new PickerHeaderView()
 {
     DividerColor = Colors.Red,
 };
@@ -78,17 +78,17 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-![Header divider color in .NET MAUI Date picker.](images/customizations/maui-date-picker-header-divider-color.png)
+![Header divider color in .NET MAUI Date Picker.](images/customizations/maui-date-picker-header-divider-color.png)
 
 ### Customization of the header
 
-Customize the header text style and background color of the `Date picker` using the [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_TextStyle) and [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_Background) properties of the [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_HeaderView) in the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html).
+Customize the header text style and background color of the `Date Picker` using the [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_TextStyle) and [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_Background) properties of the [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_HeaderView) in the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html).
 
 {% tabs %}
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfDatePicker x:Name="datepicker" >
+<picker:SfDatePicker x:Name="date picker" >
     <picker:SfDatePicker.HeaderView >
         <picker:PickerHeaderView Background="#D3D3D3">
             <picker:PickerHeaderView.TextStyle >
@@ -119,7 +119,7 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-![Custom Header in .NET MAUI Date picker.](images/customizations/maui-date-picker-custom-header.png)
+![Custom Header in .NET MAUI Date Picker.](images/customizations/maui-date-picker-custom-header.png)
 
 ## Column Header Customization
 
@@ -133,7 +133,7 @@ The [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.Sf
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfDatePicker x:Name="datepicker" >
+<picker:SfDatePicker x:Name="date picker" >
     <picker:SfDatePicker.ColumnHeaderView >
         <picker:DatePickerColumnHeaderView DayHeaderText="Day Column"
                                            MonthHeaderText="Month Column"
@@ -159,7 +159,7 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-![Set Column header text in .NET MAUI Date picker.](images/customizations/maui-date-picker-column-header-text.png)
+![Set Column header text in .NET MAUI Date Picker.](images/customizations/maui-date-picker-column-header-text.png)
 
 ### Set the divider color
 
@@ -169,7 +169,7 @@ The SfDatePicker control allows you to customize the column header divider color
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfDatePicker x:Name="datepicker" >
+<picker:SfDatePicker x:Name="date picker" >
     <picker:SfDatePicker.ColumnHeaderView >
         <picker:DatePickerColumnHeaderView DividerColor="Red" />
     </picker:SfDatePicker.ColumnHeaderView>
@@ -180,7 +180,7 @@ The SfDatePicker control allows you to customize the column header divider color
 {% highlight c# tabtitle="C#" %}
 
 SfDatePicker datePicker = new SfDatePicker();
-datepicker.ColumnHeaderView = new DatePickerColumnHeaderView()
+date picker.ColumnHeaderView = new DatePickerColumnHeaderView()
 {
     DividerColor = Colors.Red,
 };
@@ -191,7 +191,7 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-![Column header divider color in .NET MAUI Date picker.](images/customizations/maui-date-picker-column-header-divider-color.png)
+![Column header divider color in .NET MAUI Date Picker.](images/customizations/maui-date-picker-column-header-divider-color.png)
 
 ### Customization of the column header
 
@@ -201,7 +201,7 @@ Customize the column header view text style and background color of the Date Pic
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfDatePicker x:Name="datepicker" >
+<picker:SfDatePicker x:Name="date picker" >
     <picker:SfDatePicker.ColumnHeaderView >
         <picker:DatePickerColumnHeaderView Background="#D3D3D3">
             <picker:DatePickerColumnHeaderView.TextStyle >
@@ -232,7 +232,7 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-![Custom Column header text in .NET MAUI Date picker.](images/customizations/maui-date-picker-custom-column-header.png)
+![Custom Column header text in .NET MAUI Date Picker.](images/customizations/maui-date-picker-custom-column-header.png)
 
 ## Footer Customization
 
@@ -240,17 +240,17 @@ Customize the date picker footer view by using the FooterView property of the Sf
 
 ### Set the footer with OK and Cancel button customizations
 
-In the SfDatePicker control, validation buttons (OK and Cancel) can be customized by setting the [OkButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_OkButtonText) and [CancelButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_CancelButtonText) properties of the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html). It allows you to confirm or cancel the selected date. The OkButtonText can be enabled using the [ShowOkButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_ShowOkButton) property in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html).
-The Default value of the [OkButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_OkButtonText) property is "OK", and [CancelButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_CancelButtonText) is "Cancel". To enable the footer view, set the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_Height) property of the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html) to a value greater than 0. The default value of the Height property is 0.
+In the SfDatePicker control, validation buttons (OK and Cancel) can be customized by setting the [OK Button Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_OkButtonText) and [Cancel Button Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_CancelButtonText) properties of the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html). It allows you to confirm or cancel the selected date. The OK Button Text can be enabled using the [ShowOkButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_ShowOkButton) property in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html).
+The Default value of the [OK Button Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_OkButtonText) property is "OK", and [Cancel Button Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_CancelButtonText) is "Cancel". To enable the footer view, set the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_Height) property of the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html) to a value greater than 0. The default value of the Height property is 0.
 
 {% tabs %}
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfDatePicker x:Name="datepicker" >
+<picker:SfDatePicker x:Name="date picker" >
     <picker:SfDatePicker.FooterView >
-        <picker:PickerFooterView Height="40" OkButtonText="Save"
-                                 CancelButtonText="Exit"/>
+        <picker:PickerFooterView Height="40" OK Button Text="Save"
+                                 Cancel Button Text="Exit"/>
     </picker:SfDatePicker.FooterView>
 </picker:SfDatePicker>
 
@@ -262,8 +262,8 @@ SfDatePicker datePicker = new SfDatePicker();
 datePicker.FooterView = new PickerFooterView()
 {
     Height = 40,
-    OkButtonText = "Save",
-    CancelButtonText = "Exit",
+    OK Button Text = "Save",
+    Cancel Button Text = "Exit",
 };
 
 this.Content = datePicker;
@@ -272,7 +272,7 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-![Set Footer text in .NET MAUI Date picker.](images/customizations/maui-date-picker-footer-text.png)
+![Set Footer text in .NET MAUI Date Picker.](images/customizations/maui-date-picker-footer-text.png)
 
 ### Set the divider color
 
@@ -282,7 +282,7 @@ The SfDatePicker control allows you to customize the footer divider color by set
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfDatePicker x:Name="datepicker" >
+<picker:SfDatePicker x:Name="date picker" >
     <picker:SfDatePicker.FooterView >
         <picker:PickerFooterView DividerColor="Red" />
     </picker:SfDatePicker.FooterView>
@@ -293,7 +293,7 @@ The SfDatePicker control allows you to customize the footer divider color by set
 {% highlight c# tabtitle="C#" %}
 
 SfDatePicker datePicker = new SfDatePicker();
-datepicker.FooterView = new PickerFooterView()
+date picker.FooterView = new PickerFooterView()
 {
     DividerColor = Colors.Red,
 };
@@ -304,7 +304,7 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-![Footer divider color in .NET MAUI Date picker.](images/customizations/maui-date-picker-footer-divider-color.png)
+![Footer divider color in .NET MAUI Date Picker.](images/customizations/maui-date-picker-footer-divider-color.png)
 
 ### Customization of the footer
 
@@ -314,7 +314,7 @@ Customize the footer text style and background color of the Date Picker using th
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfDatePicker x:Name="datepicker" >
+<picker:SfDatePicker x:Name="date picker" >
     <picker:SfDatePicker.FooterView >
         <picker:PickerFooterView Background="#D3D3D3">
             <picker:PickerFooterView.TextStyle >
@@ -345,7 +345,7 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-![Custom Footer in .NET MAUI Date picker.](images/customizations/maui-date-picker-custom-footer.png)
+![Custom Footer in .NET MAUI Date Picker.](images/customizations/maui-date-picker-custom-footer.png)
 
 ## Selection View Customization
 
@@ -359,7 +359,7 @@ In the SfDatePicker control, the corner radius, stroke, and padding can be custo
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfDatePicker x:Name="datepicker" >
+<picker:SfDatePicker x:Name="date picker" >
     <picker:SfDatePicker.SelectionView >
         <picker:PickerSelectionView CornerRadius="10" Stroke="#36454F" Padding="10, 5, 10, 5" Background="#808080" />
     </picker:SfDatePicker.SelectionView>
@@ -374,7 +374,7 @@ datePicker.SelectionView = new PickerSelectionView()
 {
     CornerRadius = 10,
     Stroke = Color.FromArgb("#36454F"),
-    Pading = new Thickness(10, 5, 10, 5),
+    Padding = new Thickness(10, 5, 10, 5),
     Background = Color.FromArgb("#808080"),
 };
 
@@ -384,7 +384,7 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-![Custom selection shape in .NET MAUI Date picker.](images/customizations/maui-date-picker-selection-shape.png)
+![Custom selection shape in .NET MAUI Date Picker.](images/customizations/maui-date-picker-selection-shape.png)
 
 ### Customization of the selected item
 
@@ -394,7 +394,7 @@ Customize the selected view text style of the Date Picker using the [SelectedTex
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfDatePicker x:Name="datepicker" >
+<picker:SfDatePicker x:Name="date picker" >
     <picker:SfDatePicker.SelectedTextStyle >
         <picker:PickerTextStyle FontSize="15" TextColor="White"/>
     </picker:SfDatePicker.SelectedTextStyle>
@@ -420,7 +420,7 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-![Custom Selection view in .NET MAUI Date picker.](images/customizations/maui-date-picker-custom-selection-view.png)
+![Custom Selection view in .NET MAUI Date Picker.](images/customizations/maui-date-picker-custom-selection-view.png)
 
 ## Column divider color
 
@@ -429,7 +429,7 @@ Customize the column divider color using the [ColumnDividerColor](https://help.s
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfDatePicker x:Name="datepicker"
+<picker:SfDatePicker x:Name="date picker"
                      ColumnDividerColor="Red">
 
 </picker:SfDatePicker>
@@ -437,11 +437,11 @@ Customize the column divider color using the [ColumnDividerColor](https://help.s
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 
-SfDatePicker datepicker = new SfDatePicker();
-datepicker.ColumnDividerColor = Colors.Red;
-this.Content = datepicker;
+SfDatePicker date picker = new SfDatePicker();
+date picker.ColumnDividerColor = Colors.Red;
+this.Content = date picker;
 
 {% endhighlight %}
 {% endtabs %}
 
-![Date picker coloumn divider color in .NET MAUI Date picker.](images/customizations/maui-date-picker-column-divider-color.png)
+![Date Picker column divider color in .NET MAUI Date Picker.](images/customizations/maui-date-picker-column-divider-color.png)
