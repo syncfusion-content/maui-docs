@@ -304,13 +304,13 @@ In custom grouping, you can sort all the inner records of each group by setting 
 
 {% highlight c# %}
 
-datagrid.GroupColumnDescriptions.Add(new GroupColumnDescription()
+dataGrid.GroupColumnDescriptions.Add(new GroupColumnDescription()
 {
     ColumnName = "OrderID",
     Converter = new GroupOrderNoConverter(),
     SortGroupRecords = false
 });
-datagrid.GroupColumnDescriptions.Add(new GroupColumnDescription()
+dataGrid.GroupColumnDescriptions.Add(new GroupColumnDescription()
 {
     ColumnName = "Price",
     Converter = new PriceConverter(),

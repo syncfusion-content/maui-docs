@@ -152,7 +152,8 @@ DataGridTextColumn textColumn = new DataGridTextColumn();
 textColumn.MappingName = "CustomerID";
 textColumn.HeaderText = "Customer";
 textColumn.ColumnWidthMode = ColumnWidthMode.Auto;
-this.sfGrid.Columns.Add(textColumn);  
+
+dataGrid.Columns.Add(textColumn);  
 {% endhighlight %}
 {% endtabs %}
 

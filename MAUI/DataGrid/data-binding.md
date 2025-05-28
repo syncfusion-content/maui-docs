@@ -27,14 +27,14 @@ The codes below codes demonstrate how to bind a data source to the `SfDataGrid`.
         <local:ViewModel/>
     </ContentPage.BindingContext>
 
-    <syncfusion:SfDataGrid x:Name="sfDataGrid"
+    <syncfusion:SfDataGrid x:Name="dataGrid"
                        ItemsSource="{Binding OrderInfoCollection}" />
 </ContentPage>
 {% endhighlight %}
 
 {% highlight c# %}
 OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
-this.sfDataGrid.ItemsSource = orderInfoViewModel.OrderInfoCollection;
+this.dataGrid.ItemsSource = orderInfoViewModel.OrderInfoCollection;
 {% endhighlight %}
 {% endtabs %}
 
@@ -136,7 +136,7 @@ public class EmployeeCollection
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="sfDataGrid"
+<syncfusion:SfDataGrid x:Name="dataGrid"
                        ItemsSource="{Binding OrderInfoCollection}"
                        AutoGenerateColumnsMode="None" />
 <syncfusion:SfDataGrid.Columns>
@@ -152,7 +152,7 @@ public class EmployeeCollection
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="sfDataGrid"
+<syncfusion:SfDataGrid x:Name="dataGrid"
                        ItemsSource="{Binding OrderInfoCollection}"
                        AutoGeneratingColumn="datagrid_AutoGeneratingColumn" />
 {% endhighlight %}
@@ -240,11 +240,11 @@ During data manipulation operations and property changes, the `SfDataGrid` suppo
 
 {% tabs %}
 {% highlight c# %}
-this.sfDataGrid.Loaded += SfDataGrid_Loaded;
+this.dataGrid.Loaded += SfDataGrid_Loaded;
 
 private void SfDataGrid_Loaded(object sender, EventArgs e)
 {
-    this.sfDataGrid.View.LiveDataUpdateMode = LiveDataUpdateMode.Default;
+    this.dataGrid.View.LiveDataUpdateMode = LiveDataUpdateMode.Default;
 }
 {% endhighlight %}
 {% endtabs %}

@@ -676,7 +676,7 @@ The `DataGridDateColumn` inherits all the properties of the `DataGridColumn`.It 
     <local:ViewModel x:Name ="viewModel"/>
 </ContentPage.BindingContext>
 
-<syncfusion:SfDataGrid x:Name="DataGrid"
+<syncfusion:SfDataGrid x:Name="dataGrid"
                        ItemsSource="{Binding OrderInfoCollection}"
                        AutoGenerateColumnsMode="None">
     <syncfusion:SfDataGrid.Columns>
@@ -1037,7 +1037,6 @@ The `DataGridNumericColumn` inherits all the properties of the `DataGridColumn`.
 
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 dataGrid = new SfDataGrid();
-            
 DataGridNumericColumn numericColumn = new DataGridNumericColumn()
 {
     MappingName = "OrderID",
@@ -1069,7 +1068,6 @@ The [DataGridNumericColumn.AllowNullValue](https://help.syncfusion.com/cr/maui/S
 {% endhighlight %}
 
 {% highlight c# %}
-dataGrid = new SfDataGrid();
 dataGrid.AllowEditing = true;
 dataGrid.SelectionMode = DataGridSelectionMode.Single;
 dataGrid.NavigationMode = DataGridNavigationMode.Cell;

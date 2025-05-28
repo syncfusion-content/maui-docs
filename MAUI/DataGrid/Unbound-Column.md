@@ -16,7 +16,7 @@ The data grid allows adding additional columns that are not bound with data obje
 {% highlight xaml %}
 
 <syncfusion:SfDataGrid 
-            x:Name="datagrid"    
+            x:Name="dataGrid"    
             ColumnWidthMode="Fill"
             AutoGenerateColumnsMode="None"
             ItemsSource="{Binding OrderInfoCollection}">
@@ -136,7 +136,7 @@ List of supported arithmetic and logical operations are as follows:
 {% tabs %}
 {% highlight xaml %}
 
-<syncfusion:SfDataGrid x:Name="datagrid"    
+<syncfusion:SfDataGrid x:Name="dataGrid"    
         ColumnWidthMode="Fill"
         AutoGenerateColumnsMode="None"
         ItemsSource="{Binding OrderInfoCollection1}">

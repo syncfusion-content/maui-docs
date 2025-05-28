@@ -107,28 +107,28 @@ For example, now unbound row populated based on selected items in SfDataGrid.
 
 {% tabs %}
 {% highlight c# %}
-datagrid.SelectedIndex = 2;
-datagrid.QueryUnboundRow += Datagrid_QueryUnboundRow;
-datagrid.SelectionChanged += Datagrid_SelectionChanged;
+dataGrid.SelectedIndex = 2;
+dataGrid.QueryUnboundRow += Datagrid_QueryUnboundRow;
+dataGrid.SelectionChanged += Datagrid_SelectionChanged;
 
 private void Datagrid_SelectionChanged(object? sender, DataGridSelectionChangedEventArgs e)
 {
-    datagrid!.InvalidateUnboundRow(datagrid!.UnboundRows[0]);
+    dataGrid!.InvalidateUnboundRow(dataGrid!.UnboundRows[0]);
 }
 
 private void Datagrid_QueryUnboundRow(object? sender, DataGridUnboundRowEventArgs e)
 {
     if (e.RowColumnIndex.ColumnIndex == 0)
     {
-        e.Value = (datagrid.CurrentRow as OrderInfo).OrderID;
+        e.Value = (dataGrid.CurrentRow as OrderInfo).OrderID;
     }
     else if (e.RowColumnIndex.ColumnIndex == 1)
     {
-        e.Value = (datagrid.CurrentRow as OrderInfo).CustomerID;
+        e.Value = (dataGrid.CurrentRow as OrderInfo).CustomerID;
     }
     else if (e.RowColumnIndex.ColumnIndex == 2)
     {
-        e.Value = (datagrid.CurrentRow as OrderInfo).ShipCountry;
+        e.Value = (dataGrid.CurrentRow as OrderInfo).ShipCountry;
     }
     e.Handled = true;
 }
