@@ -118,7 +118,7 @@ You can skip generating a column by handling the `SfDataGrid.AutoGeneratingColum
 
 {% tabs %}
 {% highlight c# %}
-this.sfDataGrid.AutoGeneratingColumn += SfDataGrid_AutoGeneratingColumn;
+this.dataGrid.AutoGeneratingColumn += SfDataGrid_AutoGeneratingColumn;
 
 private void SfDataGrid_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
 {

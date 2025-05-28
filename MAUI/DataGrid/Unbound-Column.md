@@ -45,7 +45,7 @@ DataGridUnboundColumn DiscountColumn = new DataGridUnboundColumn()
     Format = "C"
 };
 
-this.datagrid.Columns.Add(DiscountColumn);
+this.dataGrid.Columns.Add(DiscountColumn);
   
 {% endhighlight %}
 {% endtabs %}
@@ -169,7 +169,7 @@ Refer to the following code example in which data for the unbound column is popu
 {% tabs %}
 {% highlight C# %}
 
-datagrid.QueryUnboundColumnValue += DataGrid_QueryUnboundColumnValue;
+dataGrid.QueryUnboundColumnValue += DataGrid_QueryUnboundColumnValue;
 
 private void DataGrid_QueryUnboundColumnValue(object? sender, DataGridUnboundColumnEventArgs e)
 {

@@ -152,11 +152,11 @@ Here in the below code example, we have invalidated the unbound rows whenever se
 
 {% tabs %}
 {% highlight c# %}
-datagrid.SelectionChanged += Datagrid_SelectionChanged;
+dataGrid.SelectionChanged += Datagrid_SelectionChanged;
 
 private void Datagrid_SelectionChanged(object? sender, DataGridSelectionChangedEventArgs e)
 {
-    datagrid!.InvalidateUnboundRow(datagrid!.UnboundRows[0]);
+    dataGrid.InvalidateUnboundRow(dataGrid.UnboundRows[0]);
 }
 {% endhighlight %}
 {% endtabs %}

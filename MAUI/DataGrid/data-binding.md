@@ -53,7 +53,7 @@ The `SfDataGrid` control supports binding the [DataTable](https://learn.microsof
 {% tabs %}
 {% highlight c# %}
 DataTable table = this.GetDataTable();
-this.sfDataGrid1.ItemsSource = table;
+this.dataGrid.ItemsSource = table;
 {% endhighlight %}
 {% endtabs %}
 
