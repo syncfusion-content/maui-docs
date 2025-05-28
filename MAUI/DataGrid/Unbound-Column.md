@@ -16,7 +16,7 @@ The data grid allows adding additional columns that are not bound with data obje
 {% highlight xaml %}
 
 <syncfusion:SfDataGrid 
-            x:Name="datagrid"    
+            x:Name="dataGrid"    
             ColumnWidthMode="Fill"
             AutoGenerateColumnsMode="None"
             ItemsSource="{Binding OrderInfoCollection}">
@@ -45,7 +45,7 @@ DataGridUnboundColumn DiscountColumn = new DataGridUnboundColumn()
     Format = "C"
 };
 
-this.datagrid.Columns.Add(DiscountColumn);
+this.dataGrid.Columns.Add(DiscountColumn);
   
 {% endhighlight %}
 {% endtabs %}
@@ -136,7 +136,7 @@ List of supported arithmetic and logical operations are as follows:
 {% tabs %}
 {% highlight xaml %}
 
-<syncfusion:SfDataGrid x:Name="datagrid"    
+<syncfusion:SfDataGrid x:Name="dataGrid"    
         ColumnWidthMode="Fill"
         AutoGenerateColumnsMode="None"
         ItemsSource="{Binding OrderInfoCollection1}">
@@ -169,7 +169,7 @@ Refer to the following code example in which data for the unbound column is popu
 {% tabs %}
 {% highlight C# %}
 
-datagrid.QueryUnboundColumnValue += DataGrid_QueryUnboundColumnValue;
+dataGrid.QueryUnboundColumnValue += DataGrid_QueryUnboundColumnValue;
 
 private void DataGrid_QueryUnboundColumnValue(object? sender, DataGridUnboundColumnEventArgs e)
 {
