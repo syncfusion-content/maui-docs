@@ -1,31 +1,34 @@
 ---
 layout: post
-title: Overview of Syncfusion® Essential Studio® .NET MAUI products
-description: Basic overview about the list of available features on Syncfusion® .NET MAUI components and steps to use the guide.
-platform: maui
+title: Overview of Syncfusion® Essential Studio® .NET MAUI Products
+description: Basic overview of the list of available features on Syncfusion® .NET MAUI components and steps to use the guide.
+platform: MAUI
 control: Overview
-documentation: ug
+documentation: UG
 ---
 
 # Welcome to Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> for .NET MAUI
 
-Essential Studio<sup>®</sup> for .NET MAUI is a comprehensive collection of .NET MAUI components for building modern Mobile and Desktop applications. It includes our first set of .NET MAUI UI controls such as Charts, Gauge, and Tab View.
+Essential Studio<sup>®</sup> for .NET MAUI is a comprehensive collection of .NET MAUI components designed for building modern Mobile and Desktop applications. This suite includes our first set of .NET MAUI UI controls such as Charts, Gauge, and Tab View.
 
 ## How to read this user guide most effectively
 
-* The best way to read the User Guide is to start with the Getting Started section of the documentation for the component that you need. The Getting Started guide provides information needed to know before writing the code. This is the only section recommended for end-to-end reading before writing the code. All the other information can be referred to as and when needed.
-* Now, that you are familiar with the fundamentals of using the component, the next step is to begin integrating it into your application. A good starting point would be to refer to the code examples in the sample browser. You would likely find a code example that resembles your intended usage scenario.
-* After you have integrated the component into your application, you would likely need additional information on specific features and API. Search the specific topic by using the search box available at the top of the user guide.
-* Another valuable resource is the API reference that provides detailed information on the classes and their members.
+* **Start with Getting Started**: Begin with the Getting Started section of the documentation for the component that you need. This section provides the critical information needed before writing the code. It is the only section recommended for end-to-end reading prior to coding. Other sections can be read as needed.
+
+* **Integration and Examples**: Once you're familiar with the fundamentals, start integrating the component into your application. Refer to the code examples in the sample browser, where you'll likely find a code example that matches your intended usage scenario.
+
+* **Search for Specific Features and APIs**: After integrating the component, you may need more detailed information on specific features and APIs. Use the search box at the top of the user guide to find relevant topics.
+
+* **API Reference**: Utilize the API reference section for detailed information on classes and their members. This is a valuable resource for in-depth technical details.
 
 ## Additional help resources
 
-The Knowledge Base section contains responses to some of the most frequently asked questions by customers in the past. You can search for topics that are not covered in the user guide.
+* **Knowledge Base**: The Knowledge Base contains responses to frequently asked questions by customers. You can search here for topics not covered in the user guide.
 
-Similar to the Knowledge Base, the Forum section also contains responses to questions of other customers asked in the past.
+* **Forum**: Similar to the Knowledge Base, the Forum contains responses to questions asked by other customers in the past.
 
 ## Support and feedback
 
-If you are unable to find the information that you are looking for in the self-help resources mentioned above, please contact us by creating a [support ticket](https://support.syncfusion.com/support/tickets/create).
+f you cannot find the information you are looking for in the self-help resources mentioned above, please contact us by creating a [support ticket](https://support.syncfusion.com/support/tickets/create).
 
-Do not see what you need? Please request it in our [feedback portal](https://www.syncfusion.com/feedback/maui).
+If you do not find what you need, please make a request in our [feedback portal](https://www.syncfusion.com/feedback/maui).
