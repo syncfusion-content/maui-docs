@@ -1,21 +1,21 @@
 ---
 layout: post
 title: Material Icons in .NET MAUI - Syncfusion®
-description: Learn how to use and integrate the icon from the MauiMaterialAssets.ttf file in Syncfusion® .NET MAUI components.
-platform: maui
+description: Learn how to use and integrate icon from the MauiMaterialAssets.ttf file in Syncfusion® .NET MAUI components.
+platform: MAUI
 component: Common
-documentation: ug
+documentation: UG
 ---
 
 # Material Icons
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> .NET MAUI contains a comprehensive set of icons bundled in the `MauiMaterialAssets.ttf` file. These icons are readily available for use in .NET MAUI applications once the Syncfusion<sup style="font-size:70%">&reg;</sup> MAUI package is installed.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> .NET MAUI provides a comprehensive set of icons bundled in the `MauiMaterialAssets.ttf` file. These icons are readily available for use in .NET MAUI applications once the Syncfusion<sup style="font-size:70%">&reg;</sup> MAUI package is installed.
 
-## Getting Started with Icon Integration
+## Getting started with icon integration
 
 To start using the icons, first ensure that the font is registered in your application. Here is a walkthrough on setting up the `MauiMaterialAssets.ttf:`
 
-### Step 1: Install the Syncfusion<sup style="font-size:70%">&reg;</sup> MAUI Package
+### Step 1: Install the Syncfusion<sup style="font-size:70%">&reg;</sup> MAUI package
 
 When you install [Syncfusion MAUI packages](https://www.nuget.org/packages?q=Syncfusion.Maui), which depend on the [Syncfusion.MAUI.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) package, the `MauiMaterialAssets.ttf` file is automatically added to your project's font folder.
 
@@ -73,9 +73,9 @@ Label label = new Label
 
 The following image illustrates the result of the above code.
 
-![Delete Icon](Material-Icons/images/delete_icon.png)
+![Delete icon](Material-Icons/images/delete_icon.png)
 
-## Material Icons List
+## Material icons list
 
 The below list represents the wide variety of icons available in the `MauiMaterialAssets.ttf` file. These icons can be adapted to suit the UI needs of any application, providing consistent and visually pleasing interface elements.
 

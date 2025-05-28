@@ -1,16 +1,16 @@
 ---
 layout: post
 title: Installation Errors of Essential Studio® | .NET MAUI |Syncfusion®
-description: Learn here some information about the Essential Studio® installation errors and steps for resolving it.
-platform: maui
+description: Learn about common installation errors for Essential Studio® and steps for their resolution.
+platform: MAUI
 control: Installation and Deployment
-documentation: ug
+documentation: UG
 
 ---
 
 # Common Installation Errors
 
-This article describes the most common installation errors, as well as the causes and solutions to those errors.
+This article describes the most common installation errors, their causes, and solutions.
 
 * [Unlocking the license installer using the trial key](https://help.syncfusion.com/maui/installation/installation-errors#unlocking-the-license-installer-using-the-trial-key)
 * [License has expired](https://help.syncfusion.com/maui/installation/installation-errors#license-has-expired)
@@ -22,17 +22,17 @@ This article describes the most common installation errors, as well as the cause
 
 ### Problem
 
-**Error Message:** Sorry, the provided unlock key is a trial unlock key and cannot be used to unlock the licensed version of our Essential Studio<sup>®</sup> for .NET MAUI installer.
+**Error message:** Sorry, the provided unlock key is a trial unlock key and cannot be used to unlock the licensed version of our Essential Studio<sup>®</sup> for .NET MAUI installer.
 
-![Alert Message](Errors/Installation_Errors_img1.png)
+![Alert message](Errors/Installation_Errors_img1.png)
 
 ### Reason
 
-You are attempting to use a Trial unlock key to unlock the licensed installer.
+You are attempting to use a trial unlock key to unlock the licensed installer.
 
 ### Suggested solution
 
-Only a licensed unlock key can unlock a licensed installer. So, to unlock the Licensed installer, use the Licensed unlock key. To generate the licensed unlock key, refer to [this](https://support.syncfusion.com/kb/article/2757/how-to-generate-syncfusion-setup-unlock-key-from-syncfusion-support-account) article.
+Only a licensed unlock key can unlock a licensed installer. So, to unlock the Licensed installer, use the Licensed unlock key. To generate the licensed unlock key, refer to this [article](https://support.syncfusion.com/kb/article/2757/how-to-generate-syncfusion-setup-unlock-key-from-syncfusion-support-account).
 
 
 ## License has expired
@@ -41,9 +41,9 @@ Only a licensed unlock key can unlock a licensed installer. So, to unlock the Li
 
 **Error Message:** Your license for Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> for .NET MAUI has been expired since {date}. Please renew your subscription and try again.
 
-**Online Installer**
+**Online installer**
 
-![Warning Message](Errors/Installation_Errors_img2.png)
+![Warning message](Errors/Installation_Errors_img2.png)
 
 ### Reason
 
@@ -53,25 +53,25 @@ This error message will appear if your license has expired.
 
 You can choose from the options listed below. 
 
-1. You can renew your subscription [here](https://www.syncfusion.com/account/my-renewals). 
-2. You can get a new license [here](https://www.syncfusion.com/sales/products). 
-3. You can reach out to our sales team by emailing <sales@syncfusion.com>. 
-4. You can also extend the 30-day trial period after your trial license has expired.
+1. Renew your subscription [here](https://www.syncfusion.com/account/my-renewals). 
+2. Get a new license [here](https://www.syncfusion.com/sales/products). 
+3. Reach out to our sales team by emailing <sales@syncfusion.com>. 
+4. Extend the 30-day trial period after your trial license has expired.
 
 
 ## Unable to find a valid license or trial
 
 ### Problem
 
-**Error Message:** Sorry, we are unable to find a valid license or trial for Essential Studio<sup>®</sup> for .NET MAUI under your account.
+**Error message:** Sorry, we are unable to find a valid license or trial for Essential Studio<sup>®</sup> for .NET MAUI under your account.
 
 <em>**Offline installer**</em>
 
-![Alert Message](Errors/Installation_Errors_img3.PNG)
+![Alert message](Errors/Installation_Errors_img3.PNG)
 
 <em>**Online installer**</em>
 
-![Warning Message](Errors/Installation_Errors_img6.PNG)
+![Warning message](Errors/Installation_Errors_img6.PNG)
 
 ### Reason
 
@@ -95,17 +95,17 @@ You can choose from the options listed below.
 
 ### Problem
 
-**Error Message:** Another installation is in progress. You cannot start this installation without completing all other currently active installations. Click cancel to end this installer or retry to attempt after currently active installation completed to install again.
+**Error message:** Another installation is in progress. You cannot start this installation without completing all other currently active installations. Click cancel to end this installer or retry after currently active installation have completed.
 
-![Warning Message](Errors/Installation_Errors_img4.png)
+![Warning message](Errors/Installation_Errors_img4.png)
 
 ### Reason
 
-You are trying to install when another installation is already running in your machine.
+You are trying to install while another installation is running on your machine.
 
 ### Suggested solution
 
-Open and kill the msiexec process in the task manager and then continue to install Syncfusion<sup>®</sup>. If the problem is still present, restart the computer and try Syncfusion<sup>®</sup> installer. 
+Open and kill the msiexec process in the Task Manager and then continue to install Syncfusion<sup>®</sup>. If the problem is still present, restart the computer and try the Syncfusion<sup>®</sup> installer. 
 
 1. Open the Windows Task Manager.
 
@@ -121,15 +121,15 @@ Open and kill the msiexec process in the task manager and then continue to insta
 
 #### Offline:
 
-**Error Message:** Controlled folder access seems to be enabled in your machine. The provided install or samples location (e.g., Public Documents) is protected by the controlled folder access settings.
+**Error message:** Controlled folder access is enabled on your machine. The provided install or samples location (e.g., Public Documents) is protected by the controlled folder access settings.
 
-![Warning Message](Errors/Installation_Errors_img7.png)
+![Warning message](Errors/Installation_Errors_img7.png)
 
 #### Online:
 
-**Error Message:** Controlled folder access seems to be enabled in your machine. The provided install, samples, or download location (e.g., Public Documents) is protected by the controlled folder access settings.
+**Error message:** Controlled folder access is enabled on your machine. The provided install, samples, or download location (e.g., Public Documents) is protected by the controlled folder access settings.
 
-![Warning Message](Errors/Installation_Errors_img8.png)
+![Warning message](Errors/Installation_Errors_img8.png)
 
 ### Reason
 
@@ -145,4 +145,4 @@ You have enabled controlled folder access settings on your computer.
 
 **Suggestion 2:**
 
-1.	If you do not want to disable controlled folder access, you can install our demos in another directory.
+1.	If you do not want to disable controlled folder access, install our demos in another directory.
