@@ -676,7 +676,7 @@ The `DataGridDateColumn` inherits all the properties of the `DataGridColumn`.It 
     <local:ViewModel x:Name ="viewModel"/>
 </ContentPage.BindingContext>
 
-<syncfusion:SfDataGrid x:Name="DataGrid"
+<syncfusion:SfDataGrid x:Name="dataGrid"
                        ItemsSource="{Binding OrderInfoCollection}"
                        AutoGenerateColumnsMode="None">
     <syncfusion:SfDataGrid.Columns>
@@ -873,7 +873,6 @@ The [IsEditableMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGri
 {% endhighlight %}
 
 {% highlight c# %}
-dataGrid = new SfDataGrid();
 DataGridComboBoxColumn comboBoxColumn = new DataGridComboBoxColumn()
 {
     BindingContext = viewModel,
@@ -913,7 +912,6 @@ By default, the auto-suggestion in the dropdown will display values based on the
 {% endhighlight %}
 
 {% highlight c# %}
-dataGrid = new SfDataGrid();
 DataGridComboBoxColumn comboBoxColumn = new DataGridComboBoxColumn()
 {
     BindingContext = viewModel,
@@ -953,7 +951,6 @@ The ComboBox control includes a clear button that allows users to easily remove 
     </sfGrid:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-dataGrid = new SfDataGrid();
 DataGridComboBoxColumn comboBoxColumn = new DataGridComboBoxColumn()
 {
     BindingContext = viewModel,
@@ -1036,8 +1033,6 @@ The `DataGridNumericColumn` inherits all the properties of the `DataGridColumn`.
 {% endhighlight %}
 
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-dataGrid = new SfDataGrid();
-            
 DataGridNumericColumn numericColumn = new DataGridNumericColumn()
 {
     MappingName = "OrderID",
@@ -1069,7 +1064,6 @@ The [DataGridNumericColumn.AllowNullValue](https://help.syncfusion.com/cr/maui/S
 {% endhighlight %}
 
 {% highlight c# %}
-dataGrid = new SfDataGrid();
 dataGrid.AllowEditing = true;
 dataGrid.SelectionMode = DataGridSelectionMode.Single;
 dataGrid.NavigationMode = DataGridNavigationMode.Cell;

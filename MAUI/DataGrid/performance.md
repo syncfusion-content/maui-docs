@@ -54,7 +54,7 @@ To set [SfDataGrid.EnableDataVirtualization](https://help.syncfusion.com/cr/maui
 {% endhighlight %}
 
 {% highlight c# %}
-datagrid.EnableDataVirtualization = true;
+dataGrid.EnableDataVirtualization = true;
 {% endhighlight %}
 {% endtabs %}
 
