@@ -654,123 +654,71 @@ this.calendar.View = CalendarView.Decade;
 
 The `SfCalendar` provides the [SelectionCellTemplate]() property to customize the appearance of selected date cells in the MonthView. This property is of type DataTemplate and allows you to define a custom layout specifically for the selected cell.
 
-
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar x:Name="calendar">
-    <calendar:SfCalendar.SelectionCellTemplate>
-        <DataTemplate>
-            <Grid BackgroundColor="Green">
-                <Label Text="{Binding Date.Day}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Padding="2"/>
-            </Grid>
-        </DataTemplate>
-    </calendar:SfCalendar.SelectionCellTemplate>
+<calendar:SfCalendar WidthRequest="350" HeightRequest="350" SelectionCellTemplate="{Binding Template}">
+    <calendar:SfCalendar.BindingContext>
+        <local:SelectionCellTemplate/>
+    </calendar:SfCalendar.BindingContext>
 </calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-public partial class MainPage : ContentPage
+internal class SelectionCellTemplate
 {
     private DataTemplate template;
-    public MainPage()
+
+    public DataTemplate Template
     {
-        InitializeComponent();
-        template = new DataTemplate(() =>
+        get
+        {
+            return template;
+        }
+        set
+        {
+            template = value;
+        }
+    }
+
+    public SelectionCellTemplate()
+    {
+        this.template = new DataTemplate(() =>
         {
             Grid grid = new Grid();
-            grid.BackgroundColor = Colors.Green;
+            Border border = new Border();
+            border.BackgroundColor = Color.FromRgba("#FFA500");
+            border.StrokeShape = new RoundRectangle()
+            {
+                CornerRadius = new CornerRadius(25)
+            };
+
+            border.Stroke = Color.FromArgb("#FFFFFF");
 
             Label label = new Label();
             label.SetBinding(Label.TextProperty, "Date.Day");
             label.HorizontalOptions = LayoutOptions.Center;
             label.VerticalOptions = LayoutOptions.Center;
             label.Padding = new Thickness(2);
-            grid.Children.Add(label);
+            border.Content = label;
+
+            grid.Add(border);
+            grid.Padding = new Thickness(1);
 
             return grid;
         });
-        calendar.SelectionCellTemplate = template;
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-![Month View Selection Cell Template in .NET MAUI Calendar.](resize-1747304780803030777Screenshot20250512120551.png)
+![Month View Selection Cell Template in .NET MAUI Calendar.](net-maui-month-view-selection-cell-template-1.png)
 
 N>
-The `SelectionCellTemplate` is applicable only when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html?tabs=tabid-6%2Ctabid-12%2Ctabid-18%2Ctabid-50%2Ctabid-10%2Ctabid-8%2Ctabid-14%2Ctabid-4%2Ctabid-22%2Ctabid-26%2Ctabid-24%2Ctabid-16%2Ctabid-2%2Ctabid-20#Syncfusion_Maui_Calendar_SfCalendar_SelectionMode) is set to Single. It is not applied in Multiple or Range selection modes.
+The `SelectionCellTemplate` is applicable only when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html?tabs=tabid-6%2Ctabid-12%2Ctabid-18%2Ctabid-50%2Ctabid-10%2Ctabid-8%2Ctabid-14%2Ctabid-4%2Ctabid-22%2Ctabid-26%2Ctabid-24%2Ctabid-16%2Ctabid-2%2Ctabid-20#Syncfusion_Maui_Calendar_SfCalendar_SelectionMode) is set to Single. It is not applied in Multiple or Range selection modes. You can customize the selection cell appearance using `DataTemplateSelector`.
 
-## Selection cell appearance on month view using DataTemplateSelector
-
-You can customize the appearance of selected date cells in the SfCalendar's `MonthView` by using the [SelectionCellTemplate]() property within the `SfCalendar`. By combining it with a DataTemplateSelector, you can apply different styles for selected cells based on specific conditions.
-
-The DataTemplateSelector lets you define how selected cells should appear, depending on factors like the day of the week, the month, or other custom logic. This approach provides more flexibility in styling selected dates in the MonthView.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
-<Grid>
-    <Grid.Resources>
-        <DataTemplate x:Key="normalDateTemplate">
-            <Grid Background = "Pink" >
-                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" Text="{Binding Date.Day}"/>
-            </Grid>
-        </DataTemplate>
-        <DataTemplate x:Key="todayDateTemplate">
-            <Grid Background = "PaleGreen">
-                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" Text="Selection"/>
-            </Grid>
-        </DataTemplate>
-        <DataTemplate x:Key="leadingTraililngDateTemplate">
-            <Grid Background = "Purple">
-                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" Text="{Binding Date.Day}"/>
-            </Grid>
-        </DataTemplate>
-        <local:SelectionCellTemplateSelector x:Key="selectionCellTemplateSelector"
-                                        TodayDateTemplate="{StaticResource todayDateTemplate}" 
-                                        NormalDateTemplate="{StaticResource normalDateTemplate}" 
-                                        LeadingTrailingDateTemplate="{StaticResource leadingTraililngDateTemplate}"/>
-    </Grid.Resources>
-    <calendar:SfCalendar x:Name="calendar" SelectionCellTemplate="{StaticResource selectionCellTemplateSelector}">
-    </calendar:SfCalendar>
-</Grid>
-
-{% endhighlight %}
-{% highlight c# tabtitle="TemplateSelector.cs" %}
-
-public class SelectionCellTemplateSelector : DataTemplateSelector
-{
-    public SelectionCellTemplateSelector()
-    {
-    }
-    public DataTemplate? NormalDateTemplate { get; set; }
-    public DataTemplate? TodayDateTemplate { get; set; }
-    public DataTemplate? LeadingTrailingDateTemplate { get; set; }
-
-    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
-    {
-        var monthCellDetails = item as CalendarCellDetails;
-        if (monthCellDetails.Date == DateTime.Today.Date)
-            return TodayDateTemplate;
-        else if (monthCellDetails.Date.Month != DateTime.Today.Month && (monthCellDetails.Date.Month <= 12 || monthCellDetails.Date.Month >= 1))
-            return LeadingTrailingDateTemplate;
-        else
-            return NormalDateTemplate;
-    }
-}
-
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-
-this.calendar.View = CalendarView.Month;
-
-{% endhighlight %}
-{% endtabs %}
-
-![Month View Selection cell Template Selector in .NET MAUI Calendar.](resize-17473048601284115899Screenshot20250512123710.png)
 
 ## Selection cell appearance on year view using DataTemplate
 
@@ -780,110 +728,64 @@ The `SfCalendar` provides the [SelectionCellTemplate] property to customize the 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar x:Name="calendar" View="Year" AllowViewNavigation="False">
-    <calendar:SfCalendar.SelectionCellTemplate>
-        <DataTemplate>
-            <Grid BackgroundColor="Green">
-                <Label Text="Selection" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Padding="2"/>
-            </Grid>
-        </DataTemplate>
-    </calendar:SfCalendar.SelectionCellTemplate>
+<calendar:SfCalendar WidthRequest="350" HeightRequest="350" View="Decade" AllowViewNavigation="False" SelectionCellTemplate="{Binding Template}">
+    <calendar:SfCalendar.BindingContext>
+        <local:SelectionCellTemplate/>
+    </calendar:SfCalendar.BindingContext>
 </calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-public partial class MainPage : ContentPage
+internal class SelectionCellTemplate
 {
     private DataTemplate template;
-    public MainPage()
+
+    public DataTemplate Template
     {
-        InitializeComponent();
-        template = new DataTemplate(() =>
+        get
+        {
+            return template;
+        }
+        set
+        {
+            template = value;
+        }
+    }
+
+    public SelectionCellTemplate()
+    {
+        this.template = new DataTemplate(() =>
         {
             Grid grid = new Grid();
-            grid.BackgroundColor = Colors.Green;
+            Border border = new Border();
+            border.BackgroundColor = Color.FromRgba("#FFA500");
+            border.StrokeShape = new RoundRectangle()
+            {
+                CornerRadius = new CornerRadius(25)
+            };
+
+            border.Stroke = Color.FromArgb("#FFFFFF");
 
             Label label = new Label();
+            label.SetBinding(Label.TextProperty, "Date.Year");
             label.HorizontalOptions = LayoutOptions.Center;
             label.VerticalOptions = LayoutOptions.Center;
             label.Padding = new Thickness(2);
-            grid.Children.Add(label);
+            border.Content = label;
+
+            grid.Add(border);
+            grid.Padding = new Thickness(1);
 
             return grid;
         });
-        calendar.SelectionCellTemplate = template;
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-![Year View Selection Cell Template in .NET MAUI Calendar.](resize-1747304901648021295Screenshot20250512123540.png)
+![Decade View Selection Cell Template in .NET MAUI Calendar.](net-maui-decade-view-selection-cell-template-1.png)
 
 N>
-The `SelectionCellTemplate` is applicable only when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html?tabs=tabid-6%2Ctabid-12%2Ctabid-18%2Ctabid-50%2Ctabid-10%2Ctabid-8%2Ctabid-14%2Ctabid-4%2Ctabid-22%2Ctabid-26%2Ctabid-24%2Ctabid-16%2Ctabid-2%2Ctabid-20#Syncfusion_Maui_Calendar_SfCalendar_SelectionMode) is set to Single and [AllowViewNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html?tabs=tabid-6%2Ctabid-12%2Ctabid-18%2Ctabid-50%2Ctabid-10%2Ctabid-8%2Ctabid-14%2Ctabid-4%2Ctabid-22%2Ctabid-26%2Ctabid-24%2Ctabid-16%2Ctabid-2%2Ctabid-20#Syncfusion_Maui_Calendar_SfCalendar_AllowViewNavigation) is false. It is not applied in Multiple or Range selection modes.
-
-## Selection cell appearance on year view using DataTemplateSelector
-
-You can customize the appearance of selected date cells in the SfCalendar's YearView by using the [SelectionCellTemplate] property within the `SfCalendar`. By combining it with a DataTemplateSelector, you can apply different styles for selected cells based on specific conditions.
-
-The DataTemplateSelector lets you define how selected cells should appear, depending on factors like the month, the year, or other custom logic. This approach provides more flexibility in styling selected dates in the YearView.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
-<Grid>
-    <Grid.Resources>
-        <DataTemplate x:Key="normalDateTemplate">
-            <Grid Background = "Pink" >
-                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" Text="{Binding Date.Day}"/>
-            </Grid>
-        </DataTemplate>
-        <DataTemplate x:Key="todayDateTemplate">
-            <Grid Background = "PaleGreen">
-                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" Text="Selection"/>
-            </Grid>
-        </DataTemplate>
-        <local:SelectionCellTemplateSelector x:Key="selectionCellTemplateSelector"
-                                        TodayDateTemplate="{StaticResource todayDateTemplate}" 
-                                        NormalDateTemplate="{StaticResource normalDateTemplate}"/>
-    </Grid.Resources>
-    <calendar:SfCalendar x:Name="calendar" View="Year" AllowViewNavigation="False" SelectionCellTemplate="{StaticResource selectionCellTemplateSelector}">
-    </calendar:SfCalendar>
-</Grid>
-
-{% endhighlight %}
-{% highlight c# tabtitle="TemplateSelector.cs" %}
-
-public class SelectionCellTemplateSelector : DataTemplateSelector
-{
-    public SelectionCellTemplateSelector()
-    {
-    }
-    public DataTemplate? NormalDateTemplate { get; set; }
-    public DataTemplate? TodayDateTemplate { get; set; }
-
-    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
-    {
-        var yearcellDetails = item as CalendarCellDetails;
-        if (yearcellDetails.Date.Month == DateTime.Today.Date.Month)
-        {
-            return TodayDateTemplate;
-        }
-        else
-        {
-            return NormalDateTemplate;
-        }
-    }
-}
-
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-
-this.calendar.View = CalendarView.Year;
-
-{% endhighlight %}
-{% endtabs %}
-
-![Year View Selection Cell Template Selector in .NET MAUI Calendar.](resize-174730495244168334Screenshot20250512123923.png)
+The `SelectionCellTemplate` is applicable only when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html?tabs=tabid-6%2Ctabid-12%2Ctabid-18%2Ctabid-50%2Ctabid-10%2Ctabid-8%2Ctabid-14%2Ctabid-4%2Ctabid-22%2Ctabid-26%2Ctabid-24%2Ctabid-16%2Ctabid-2%2Ctabid-20#Syncfusion_Maui_Calendar_SfCalendar_SelectionMode) is set to Single and [AllowViewNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html?tabs=tabid-6%2Ctabid-12%2Ctabid-18%2Ctabid-50%2Ctabid-10%2Ctabid-8%2Ctabid-14%2Ctabid-4%2Ctabid-22%2Ctabid-26%2Ctabid-24%2Ctabid-16%2Ctabid-2%2Ctabid-20#Syncfusion_Maui_Calendar_SfCalendar_AllowViewNavigation) is false. It is not applied in Multiple or Range selection modes. You can customize the selection cell appearance using `DataTemplateSelector`.
