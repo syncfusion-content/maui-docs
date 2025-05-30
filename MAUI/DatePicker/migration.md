@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migrate from Syncfusion<sup>&reg;</sup> Xamarin SfDatePicker to .NET MAUI SfDatePicker
-description: Learn about migrating from Syncfusion<sup>&reg;</sup> Xamarin DatePicker to Syncfusion<sup>&reg;</sup> .NET MAUI DatePicker control.
+title: Migrate from Syncfusion® Xamarin SfDatePicker to .NET MAUI SfDatePicker
+description: Learn about migrating from Syncfusion® Xamarin DatePicker to Syncfusion® .NET MAUI DatePicker control.
 platform: maui
 control: SfDatePicker
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfDatePicker to .NET MAUI SfDatePicker 
 
-To make the migration from the [Xamarin SfDatePicker](https://www.syncfusion.com/xamarin-ui-controls/xamarin-datepicker) to [.NET MAUI SfDatePicker](https://www.syncfusion.com/maui-controls/maui-datepicker) easier, most of the APIs from the Xamarin SfDatePicker are kept in the .NET MAUI SfDatePicker. However, to maintain the consistency of API naming in the .NET MAUI SfDatePicker, some of the APIs have been renamed. Please find the difference in the following topics.
+To make the migration from the [Xamarin SfDatePicker](https://www.syncfusion.com/xamarin-ui-controls/xamarin-datepicker) to [.NET MAUI SfDatePicker](https://www.syncfusion.com/maui-controls/maui-datepicker) easier, most of the APIs from the Xamarin SfDatePicker are kept in the .NET MAUI SfDatePicker. However, to maintain consistency in API naming within the .NET MAUI SfDatePicker, some APIs have been renamed. Please find the differences in the following sections.
 
 ## Namespaces 
 
@@ -231,7 +231,7 @@ this.Content = datePicker;
 </tr>
 <tr>
 <td>{{'[OkCommand](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfDatePicker.html#Syncfusion_XForms_Pickers_SfDatePicker_OkCommandProperty)'| markdownify }}</td>
-<td>{{'[AcceptCOmmand]()'| markdownify }}</td>
+<td>{{'[AcceptCommand]()'| markdownify }}</td>
 <td>Gets or sets a command to accept a selected date of SfDatePicker.</td>
 </tr>
 <tr>

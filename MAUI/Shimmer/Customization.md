@@ -9,14 +9,14 @@ documentation: ug
 
 # Customization of .NET MAUI Shimmer (SfShimmer)
 
-The [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html) control provides the following properties to customize the shimmer,
+The [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html) control provides the following properties to customize the shimmer:
 
-* `Fill` - To customize the background color of Shimmer view. 
-* `WaveColor` - To customize the Shimmer wave color.
-* `WaveWidth` - To customize the Shimmer wave width.
-* `WaveDirection` - To customize the Shimmer wave direction.
-* `RepeatCount` - To customize the repeat count for the Shimmer.
-* `AnimationDuration` - To customize the animation duration of the wave.
+* `Fill` - To customize the background color of the shimmer view. 
+* `WaveColor` - To customize the shimmer wave color.
+* `WaveWidth` - To customize the shimmer wave width.
+* `WaveDirection` - To customize the shimmer wave direction.
+* `RepeatCount` - To customize the repeat count of the shimmer.
+* `AnimationDuration` - To customize the duration of the shimmer animation.
 
 This section explains how to customize the Shimmer control.
 
@@ -31,7 +31,7 @@ The background of the [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion
                    Fill="#89CFF0">
    <StackLayout>
       <Label 
-         Text="Content is loaded!!">
+         Text="Content is loaded!">
       </Label>
    </StackLayout>
 </shimmer:SfShimmer>
@@ -58,7 +58,7 @@ this.Content = Shimmer;
 
 ## WaveColor
 
-The wave color in the [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html) view can be customized using the [WaveColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html#Syncfusion_Maui_Shimmer_SfShimmer_WaveColor) property. The default value of `WaveColor` is the `#FFFBFE` Color.
+The wave color in the [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html) view can be customized using the [WaveColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html#Syncfusion_Maui_Shimmer_SfShimmer_WaveColor) property. The default value of `WaveColor` is the `#FFFBFE`.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
@@ -67,7 +67,7 @@ The wave color in the [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion
                    WaveColor="#89CFF0">
    <StackLayout>
       <Label 
-         Text="Content is loaded!!">
+         Text="Content is loaded!">
       </Label>
    </StackLayout>
 </shimmer:SfShimmer>
@@ -104,7 +104,7 @@ The width of the wave in the [SfShimmer](https://help.syncfusion.com/cr/maui/Syn
                    WaveWidth="50">
    <StackLayout>
       <Label 
-         Text="Content is loaded!!">
+         Text="Content is loaded!">
       </Label>
    </StackLayout>
 </shimmer:SfShimmer>
@@ -132,13 +132,13 @@ this.Content = Shimmer;
 
 ## WaveDirection
 
-The direction of the wave in the [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html) view can be customized by using the [WaveDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html#Syncfusion_Maui_Shimmer_SfShimmer_WaveDirection) property. By default, wave direction is rendered by the [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.ShimmerWaveDirection.html#Syncfusion_Maui_Shimmer_ShimmerWaveDirection_Default) wave. The following wave directions are available in SfShimmer:
+The direction of the wave in the [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html) view can be customized by using the [WaveDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html#Syncfusion_Maui_Shimmer_SfShimmer_WaveDirection) property. By default, the wave direction is set to `Default`, which animates from top-left to bottom-right. The following wave directions are available in SfShimmer:
 
-* `Default` - Default enum of the animation direction allows the animation from left top to right bottom.
-* `LeftToRight` - LeftToRight enum of the animation direction allows the animation from left to right.
-* `RightToLeft` - RightToLeft enum of the animation direction allows the animation from right to left.
-* `TopToBottom` - TopToBottom enum of the animation direction allows the animation from top to bottom.
-* `BottomToTop` - BottomToTop enum of the animation direction allows the animation from bottom to top.
+* `Default` - Animates from top-left to bottom-right.
+* `LeftToRight` - Animates from left to right.
+* `RightToLeft` - Animates from right to left.
+* `TopToBottom` - Animates from top to bottom.
+* `BottomToTop` - Animates from bottom to top.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
@@ -147,7 +147,7 @@ The direction of the wave in the [SfShimmer](https://help.syncfusion.com/cr/maui
                    WaveDirection="RightToLeft">
    <StackLayout>
       <Label 
-         Text="Content is loaded!!">
+         Text="Content is loaded!">
       </Label>
    </StackLayout>
 </shimmer:SfShimmer>
@@ -174,7 +174,7 @@ this.Content = Shimmer;
 
 ## RepeatCount
 
-The `RepeatCount` of the shimmer defines the number of the times the shimmer shape needed to render in the [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html) view. The default value of [RepeatCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html#Syncfusion_Maui_Shimmer_SfShimmer_RepeatCount) is `1`.
+The `RepeatCount` of the shimmer defines the number of times the shimmer shape needed to render in the [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html) view. The default value of [RepeatCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html#Syncfusion_Maui_Shimmer_SfShimmer_RepeatCount) is `1`.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
@@ -183,7 +183,7 @@ The `RepeatCount` of the shimmer defines the number of the times the shimmer sha
                    RepeatCount="3">
    <StackLayout>
       <Label 
-         Text="Content is loaded!!">
+         Text="Content is loaded!">
       </Label>
    </StackLayout>
 </shimmer:SfShimmer>
@@ -210,7 +210,7 @@ this.Content = Shimmer;
 
 ## AnimationDuration
 
-The duration of the animation in the [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html) view can be customized using the [AnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html#Syncfusion_Maui_Shimmer_SfShimmer_AnimationDuration) property. The default value of `AnimationDuration` is `1000 ms`.
+The duration of the animation in the [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html) view can be customized using the [AnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html#Syncfusion_Maui_Shimmer_SfShimmer_AnimationDuration) property. The default value of `AnimationDuration` is `1000ms`.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
@@ -219,7 +219,7 @@ The duration of the animation in the [SfShimmer](https://help.syncfusion.com/cr/
                    AnimationDuration="3000">
    <StackLayout>
       <Label 
-         Text="Content is loaded!!">
+         Text="Content is loaded!">
       </Label>
    </StackLayout>
 </shimmer:SfShimmer>

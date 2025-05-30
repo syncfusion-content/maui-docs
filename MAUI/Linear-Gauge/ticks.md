@@ -16,27 +16,27 @@ The default style of scale ticks is as follows.
 ## Customize tick style
 
 There are two types of ticks in the .NET MAUI Linear Gauge namely major and minor ticks. In the above image, the larger ticks are major ticks and the ticks between the major ticks are minor ticks. The major and minor tick of a [`SfLinearGauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html?tabs=tabid-1) can be customized using the [`MajorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_MajorTickStyle) and [`MinorTickStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_MinorTickStyle) properties. The following properties can be customized for both the major and the minor ticks:
-* [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeTickStyle.html#Syncfusion_Maui_Gauges_GaugeTickStyle_StrokeProperty) – Allows to customize the tick color.
-* [`StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeTickStyle.html#Syncfusion_Maui_Gauges_GaugeTickStyle_StrokeThicknessProperty) – Allows to customize the thickness of ticks.
-* [`Length`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeTickStyle.html#Syncfusion_Maui_Gauges_GaugeTickStyle_LengthProperty) – Specifics the length of ticks.
-* [`StrokeDashArray`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeTickStyle.html#Syncfusion_Maui_Gauges_GaugeTickStyle_StrokeDashArrayProperty) – Specifics the dash array of ticks.
+* [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeTickStyle.html#Syncfusion_Maui_Gauges_GaugeTickStyle_StrokeProperty) – Allows you to customize the tick color.
+* [`StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeTickStyle.html#Syncfusion_Maui_Gauges_GaugeTickStyle_StrokeThicknessProperty) – Allows you to customize the thickness of ticks.
+* [`Length`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeTickStyle.html#Syncfusion_Maui_Gauges_GaugeTickStyle_LengthProperty) – Specifies the length of ticks.
+* [`StrokeDashArray`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeTickStyle.html#Syncfusion_Maui_Gauges_GaugeTickStyle_StrokeDashArrayProperty) – Specifies the dash array of ticks.
 
 {% tabs %}
 
 {% highlight xaml %}
 
  <gauge:SfLinearGauge>
-                <gauge:SfLinearGauge.MajorTickStyle>
-                    <gauge:LinearTickStyle Length="25" Stroke="Red" 
-                                           StrokeThickness="2" 
-                                           StrokeDashArray="2,3"/>
-                </gauge:SfLinearGauge.MajorTickStyle>
-                <gauge:SfLinearGauge.MinorTickStyle>
-                    <gauge:LinearTickStyle Length="15" Stroke="Blue" 
-                                           StrokeThickness="1" 
-                                           StrokeDashArray="2,2"/>
-                </gauge:SfLinearGauge.MinorTickStyle>
-            </gauge:SfLinearGauge>
+				<gauge:SfLinearGauge.MajorTickStyle>
+					<gauge:LinearTickStyle Length="25" Stroke="Red" 
+										   StrokeThickness="2" 
+										   StrokeDashArray="2,3"/>
+				</gauge:SfLinearGauge.MajorTickStyle>
+				<gauge:SfLinearGauge.MinorTickStyle>
+					<gauge:LinearTickStyle Length="15" Stroke="Blue" 
+										   StrokeThickness="1" 
+										   StrokeDashArray="2,2"/>
+				</gauge:SfLinearGauge.MinorTickStyle>
+			</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
@@ -132,7 +132,7 @@ The linear scale allows to position the ticks either inside or outside the scale
 {% highlight xaml %}
 
   <gauge:SfLinearGauge  TickPosition="Outside" LabelPosition="Outside">
-                
+				
   </gauge:SfLinearGauge>
 
 {% endhighlight %}
@@ -153,7 +153,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize tick offset
 
-The ticks can be moved near or far to the scale line using the [`TickOffset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_TickOffset) property. The default value of tick offset is double.NaN. While setting offset for the ticks, the scale labels are also moved along with the ticks.
+The ticks can be moved near or far from the scale line using the [`TickOffset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_TickOffset) property. The default value of tick offset is Double.NaN. While setting offset for the ticks, the scale labels are also moved along with the ticks.
 
 {% tabs %}
 

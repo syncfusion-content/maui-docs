@@ -1,7 +1,7 @@
 ---
 layout: post
-title: DataTemplateSelector with .NET MAUI Picker Control | Syncfusion<sup>&reg;</sup>
-description: Learn here all about data template selector with Syncfusion<sup>&reg;</sup> .NET MAUI Picker (SfPicker) control.
+title: DataTemplateSelector with .NET MAUI Picker Control | Syncfusion®
+description: Learn all about data template selector with Syncfusion® .NET MAUI Picker (SfPicker) control.
 platform: maui
 control: SfPicker
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # DataTemplateSelector in .NET MAUI Picker (SfPicker)
 
-The DataTemplateSelector feature of `SfPicker` allows you to select a DataTemplate based on the data object.
+The DataTemplateSelector feature of `SfPicker` allows selecting a DataTemplate based on the data object provided.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -37,7 +37,7 @@ The DataTemplateSelector feature of `SfPicker` allows you to select a DataTempla
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    ObservableCollection<string> languages = new ObservableCollection<string> { "Spanish", "French", "Tamil", "English", "German", "Chinese", "Telegu", "Japanese", "Arabic", "Russian", "Portuguese", "Italian" };
+    ObservableCollection<string> languages = new ObservableCollection<string> { "Spanish", "French", "Tamil", "English", "German", "Chinese", "Telugu", "Japanese", "Arabic", "Russian", "Portuguese", "Italian" };
     PickerColumn pickerColumn = new PickerColumn()
     {
         HeaderText = "Select Languages",
@@ -57,7 +57,7 @@ The DataTemplateSelector feature of `SfPicker` allows you to select a DataTempla
         {
             PickerItemDetails pickerItemDetails = item as PickerItemDetails;
             string language = pickerItemDetails.Data.ToString();
-            if (language == "Tamil" || language == "Telegu")
+            if (language == "Tamil" || language == "Telugu")
             {
                 return this.IndianLanguages;
             }

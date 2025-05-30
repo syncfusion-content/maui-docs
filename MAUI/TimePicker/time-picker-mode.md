@@ -9,11 +9,11 @@ documentation: ug
 
 # Time Picker mode in .NET MAUI Time Picker (SfTimePicker)
 
-The Time picker mode is specified in the picker property enumeration, which is used to display the time picker based on the modes. It offers three modes: `Default`, `Dialog`, and `RelativeDialog`. The default picker mode is `Default` in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
+The Time picker mode is specified in the picker property enumeration, which is used to display the Time Picker based on the modes. It offers three modes: `Default`, `Dialog`, and `RelativeDialog`. The default picker mode is `Default` in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
 
 ## Dialog Mode
 
-The dialog mode is used to display the time picker in a pop-up by setting the [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Mode) property to [`Dialog`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerMode.html#Syncfusion_Maui_Picker_PickerMode_Dialog) in [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
+The dialog mode is used to display the time picker in a popup by setting the [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Mode) property to [`Dialog`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerMode.html#Syncfusion_Maui_Picker_PickerMode_Dialog) in [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
 
 {% tabs %}
 
@@ -49,7 +49,7 @@ Note: This property is automatically changed to `false` when you close the dialo
     <picker:SfTimePicker x:Name="timepicker"
                          Mode="Dialog"/>
     <Button Text="Open Picker" 
-            x:Name="pickerButton"
+            x:Name="PickerButton"
             Clicked="Button_Clicked"
             HorizontalOptions="Center"
             VerticalOptions="Center"
@@ -64,18 +64,18 @@ Note: This property is automatically changed to `false` when you close the dialo
 
 private void Button_Clicked(object sender, System.EventArgs e)
 {
-    this.timepicker.IsOpen = true;
+    this.timePicker.IsOpen = true;
 }
 
 {% endhighlight %}
 
 {% endtabs %}
 
-   ![Dialog mode in .NET MAUI Time picker.](images/time-picker-mode/maui-time-picker-dialog-mode.gif)
+   ![Dialog mode in .NET MAUI Time Picker.](images/time-Picker-mode/maui-time-Picker-dialog-mode.gif)
 
 ## Relative Dialog Mode
 
-The relative dialog mode displays the time picker in a pop-up by setting the [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Mode) property to [RelativeDialog](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerMode.html#Syncfusion_Maui_Picker_PickerMode_RelativeDialog). It is used to align the picker in a specific position. You can set the position by setting the [RelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_RelativePosition) property in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
+The relative dialog mode displays the time picker in a popup by setting the [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Mode) property to [RelativeDialog](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerMode.html#Syncfusion_Maui_Picker_PickerMode_RelativeDialog). It is used to align the picker in a specific position. You can set the position by setting the [RelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_RelativePosition) property in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
 
 ### Relative position
 
@@ -95,8 +95,8 @@ Note: This property is automatically changed to `false` when you close the dialo
                          Mode="RelativeDialog"
                          RelativePosition="AlignTopLeft">
     </picker:SfTimePicker>
-    <Button Text="Open picker" 
-            x:Name="pickerButton"
+    <Button Text="Open Picker" 
+            x:Name="PickerButton"
             Clicked="Button_Clicked"
             HorizontalOptions="Center"
             VerticalOptions="Center"
@@ -111,7 +111,7 @@ Note: This property is automatically changed to `false` when you close the dialo
 
 private void Button_Clicked(object sender, System.EventArgs e)
 {
-    this.timepicker.IsOpen = true;
+    this.timePicker.IsOpen = true;
 }
 
 {% endhighlight %} 
@@ -123,7 +123,7 @@ private void Button_Clicked(object sender, System.EventArgs e)
 The [RelativeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_RelativeView) is specified in the picker's property enumeration and is used to display the picker dialog relative to a view by setting the [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Mode) property to [RelativeDialog](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerMode.html#Syncfusion_Maui_Picker_PickerMode_RelativeDialog). You can set the position by setting the [RelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_RelativePosition) property in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
 
 
-N> It is only applicable in `RelativeDialog` mode. If `no relative view` is specified, the picker base will be set as the `default` relative view.
+N> It is only applicable in `RelativeDialog` mode. If `no relative View` is specified, the picker base will be set as the `default` relative view.
 
 {% tabs %}
 
@@ -133,10 +133,10 @@ N> It is only applicable in `RelativeDialog` mode. If `no relative view` is spec
     <picker:SfTimePicker x:Name="timePicker" 
                          Mode="RelativeDialog"
                          RelativePosition="AlignTopLeft"
-                         RelativeView = "{x:Reference pickerButton}">
+                         RelativeView = "{x:Reference PickerButton}">
     </picker:SfTimePicker>
-    <Button Text="Open picker" 
-            x:Name="pickerButton"
+    <Button Text="Open Picker" 
+            x:Name="PickerButton"
             Clicked="Button_Clicked"
             HorizontalOptions="Center"
             VerticalOptions="Center"
@@ -151,14 +151,14 @@ N> It is only applicable in `RelativeDialog` mode. If `no relative view` is spec
 
 private void Button_Clicked(object sender, System.EventArgs e)
 {
-    this.timepicker.IsOpen = true;
-    this.timepicker.RelativeView = pickerButton;
+    this.timePicker.IsOpen = true;
+    this.timePicker.RelativeView = PickerButton;
 }
 
 {% endhighlight %}
 
 {% endtabs %}
 
-   ![Relative dialog mode in .NET MAUI Time picker.](images/time-picker-mode/maui-time-picker-relative-dialog-mode1.png)
+   ![Relative dialog mode in .NET MAUI Time Picker.](images/time-Picker-mode/maui-time-Picker-relative-dialog-mode1.png)
 
-   ![Relative dialog mode in .NET MAUI Time picker.](images/time-picker-mode/maui-time-picker-relative-dialog-mode2.png)
+   ![Relative dialog mode in .NET MAUI Time Picker.](images/time-Picker-mode/maui-time-Picker-relative-dialog-mode2.png)

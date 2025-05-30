@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About .NET MAUI Linear Gauge control | Syncfusion<sup>&reg;</sup>
-description: Learn here all about introduction of Syncfusion<sup>&reg;</sup> .NET MAUI Linear Gauge (SfLinearGauge) control, its features, and more.
+title: About .NET MAUI Linear Gauge Control – Syncfusion<sup>&reg;</sup>
+description: Learn about the introduction to the Syncfusion<sup>&reg;</sup> .NET MAUI Linear Gauge (SfLinearGauge) control, its features, and more.
 platform: maui
 control: SfLinearGauge
 documentation: ug
@@ -25,4 +25,4 @@ Syncfusion<sup>&reg;</sup> .NET MAUI Linear Gauge is a data visualization contro
 * **Interaction** - The shape and content marker pointers in the Linear Gauge can be moved from one value to another by swiping or drag gestures.
 
 
-N> You can get the samples in the [GitHub](https://github.com/syncfusion/maui-demos) link.
+N> You can find sample projects on [GitHub](https://github.com/syncfusion/maui-demos).

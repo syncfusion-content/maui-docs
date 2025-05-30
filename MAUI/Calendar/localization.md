@@ -50,9 +50,9 @@ To localize the `Calendar` based on `CurrentUICulture` using `resource` files, f
 
    1. Create new folder, named as `Resources` in the application.
 
-   2. Right-click on the `Resources` folder, select `Add` and then `NewItem.`
+   2. Right-click on the `Resources` folder, select `Add` and then `New Item.`
 
-   3. In Add New Item wizard, select the Resource File option and name the filename as `SfCalendar.<culture name>.resx.` For example, give the name as `SfCalendar.ja-JP.resx` for French culture.
+   3. In Add New Item wizard, select the Resource File option and name the filename as `SfCalendar.<culture name>.resx.` For example, give the name as `SfCalendar.ja-JP.resx` for Japanese culture.
 
    4. The culture name indicates the name of the language and country.
 

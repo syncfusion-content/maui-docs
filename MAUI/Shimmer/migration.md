@@ -7,9 +7,9 @@ control: SfShimmer
 documentation: ug
 ---  
 
-# Migrate from Xamarin.Forms SfShimmer to .NET MAUI SfShimmer 
+# Migrate from Xamarin.Forms SfShimmer to .NET MAUI SfShimmer
 
-To make the migration from the [Xamarin SfShimmer](https://www.syncfusion.com/xamarin-ui-controls/xamarin-shimmer) to [.NET MAUI SfShimmer](https://www.syncfusion.com/maui-controls/maui-shimmer) easier, most of the APIs from the Xamarin SfShimmer were kept in the .NET MAUI SfShimmer. However, to maintain the consistency of API naming in the .NET MAUI SfShimmer, some of the APIs have been renamed. Please find the difference in the following topics.
+To simplify the migration from [Xamarin SfShimmer](https://www.syncfusion.com/xamarin-ui-controls/xamarin-shimmer) to [.NET MAUI SfShimmer](https://www.syncfusion.com/maui-controls/maui-shimmer), most of the APIs from Xamarin SfShimmer have been retained in the .NET MAUI version. However, to ensure consistent API naming in .NET MAUI SfShimmer, some APIs have been renamed. The differences are outlined in the following sections.
 
 ## Namespaces 
 
@@ -22,9 +22,9 @@ To make the migration from the [Xamarin SfShimmer](https://www.syncfusion.com/xa
 <td>Syncfusion.Maui.Shimmer</td></tr>
 </table>
 
-## Initialize control
+## Initialize the control
 
-To initialize the control, import the shimmer namespace and initialize `SfShimmer` as shown in the following code sample.
+To initialize the control, import the Shimmer namespace and create an instance of `SfShimmer` as shown in the following code sample.
 
 <table>
 <tr>

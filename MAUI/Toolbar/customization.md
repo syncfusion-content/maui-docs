@@ -1,105 +1,105 @@
 ---
 layout: post
-title: Customization in .NET MAUI Toolbar Control | Syncfusion®
-description: Learn here all about Customization support in Syncfusion® .NET MAUI Toolbar (SfToolbar) control and more.
-platform: maui
-control: Toolbar (SfToolbar)
+title: Customization in .NET .NET MAUI Toolbar Control | Syncfusion®
+description: Learn here all about Customization support in Syncfusion® .NET .NET MAUI Toolbar (SfToolbar) Control and more.
+platform: .NET MAUI
+Control: Toolbar (SfToolbar)
 documentation: ug
 ---
 
 # Customization in .NET MAUI Toolbar (SfToolbar)
 
-This section explains the ways about support for customization in syncfusion .NET MAUI Toolbar (SfToolbar) control.
+This section explains the ways about support for customization in Syncfusion .NET .NET MAUI Toolbar (SfToolbar) Control.
 
 ## Toolbar Item Customization
 
-The toolbar control supports customization of toolbar items using properties [IsEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_IsEnabled),[TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_TextStyle) and `Color`.
+The Toolbar Control supports customization of Toolbar Items using Properties [IsEnabled](https://help.Syncfusion.com/cr/.NET MAUI/Syncfusion..NET MAUI.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_IsEnabled),[TextStyle](https://help.Syncfusion.com/cr/.NET MAUI/Syncfusion..NET MAUI.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_TextStyle) and `Color`.
 
-* **IsEnabled** : This property is used to enable or disable the toolbar item.
-* **TextStyle** : This property is used to customize the text style of the toolbar item.
-* **Color** : This property is used to set color for the icon in the toolbar.
+* **IsEnabled** : This Property is used to enable or disable the Toolbar Item.
+* **TextStyle** : This Property is used to customize the text style of the Toolbar Item.
+* **Color** : This Property is used to set Color for the Icon in the Toolbar.
 
-The following code sample demonstrates how to create a toolbar control with toolbar Items customization.
+The following code sample demonstrates how to create a Toolbar Control with Toolbar Items customization.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <VerticalStackLayout  VerticalOptions="Center">
-    <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56" WidthRequest="850">
-        <toolbar:SfToolbar.Items>
-            <toolbar:SfToolbarItem Name="Bold"
+    <Toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56" WidthRequest="850">
+        <Toolbar:SfToolbar.Items>
+            <Toolbar:SfToolbarItem Name="Bold"
                         Text="Bold"
                         TextPosition="Right"
                         ToolTipText="Bold"
                         Size="60,56">
-                <toolbar:SfToolbarItem.Icon>
+                <Toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE770;"
  FontFamily="MauiMaterialAssets" />
-                </toolbar:SfToolbarItem.Icon>
-                <toolbar:SfToolbarItem.TextStyle>
-                    <toolbar:ToolbarTextStyle TextColor="Red"
+                </Toolbar:SfToolbarItem.Icon>
+                <Toolbar:SfToolbarItem.TextStyle>
+                    <Toolbar:ToolbarTextStyle TextColor="Red"
                   FontSize="14"
                   FontAttributes="Bold"
                   FontFamily="OpenSansSemibold"
                   FontAutoScalingEnabled="True"/>
-                </toolbar:SfToolbarItem.TextStyle>
-            </toolbar:SfToolbarItem>
-            <toolbar:SfToolbarItem Name="Italic"
+                </Toolbar:SfToolbarItem.TextStyle>
+            </Toolbar:SfToolbarItem>
+            <Toolbar:SfToolbarItem Name="Italic"
                        Text="Italic"
                        TextPosition="Right"
                        ToolTipText="Italic"
                        Size="60,56">
-                <toolbar:SfToolbarItem.Icon>
+                <Toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE771;"
  FontFamily="MauiMaterialAssets" />
-                </toolbar:SfToolbarItem.Icon>
-                <toolbar:SfToolbarItem.TextStyle>
-                    <toolbar:ToolbarTextStyle TextColor="Green"
+                </Toolbar:SfToolbarItem.Icon>
+                <Toolbar:SfToolbarItem.TextStyle>
+                    <Toolbar:ToolbarTextStyle TextColor="Green"
                   FontSize="16"
                   FontAttributes="Italic"
                   FontFamily="OpenSansRegular"
                   FontAutoScalingEnabled="False"/>
-                </toolbar:SfToolbarItem.TextStyle>
-            </toolbar:SfToolbarItem>
-            <toolbar:SfToolbarItem Text="Underline" 
+                </Toolbar:SfToolbarItem.TextStyle>
+            </Toolbar:SfToolbarItem>
+            <Toolbar:SfToolbarItem Text="Underline" 
         TextPosition="Right" Size="100,56" IsEnabled="False"
                 ToolTipText="Underline">
-                <toolbar:SfToolbarItem.Icon>
+                <Toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE762;"
             FontFamily="MauiMaterialAssets" />
-                </toolbar:SfToolbarItem.Icon>
-            </toolbar:SfToolbarItem>
-            <toolbar:SfToolbarItem Text="AlignLeft" TextPosition="Right" Size="100,56" IsEnabled="False"
+                </Toolbar:SfToolbarItem.Icon>
+            </Toolbar:SfToolbarItem>
+            <Toolbar:SfToolbarItem Text="AlignLeft" TextPosition="Right" Size="100,56" IsEnabled="False"
                         ToolTipText="Align-Left">
-                <toolbar:SfToolbarItem.Icon>
+                <Toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE751;"
             FontFamily="MauiMaterialAssets" />
-                </toolbar:SfToolbarItem.Icon>
-            </toolbar:SfToolbarItem>
-            <toolbar:SfToolbarItem Text="AlignRight" TextPosition="Right" Size="100,56"
+                </Toolbar:SfToolbarItem.Icon>
+            </Toolbar:SfToolbarItem>
+            <Toolbar:SfToolbarItem Text="AlignRight" TextPosition="Right" Size="100,56"
                         ToolTipText="Align-Right">
-                <toolbar:SfToolbarItem.Icon>
+                <Toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE753;" Color="Black"
             FontFamily="MauiMaterialAssets" />
-                </toolbar:SfToolbarItem.Icon>
-            </toolbar:SfToolbarItem>
-            <toolbar:SfToolbarItem Text="AlignCenter" TextPosition="Right" Size="120,56"
+                </Toolbar:SfToolbarItem.Icon>
+            </Toolbar:SfToolbarItem>
+            <Toolbar:SfToolbarItem Text="AlignCenter" TextPosition="Right" Size="120,56"
                         ToolTipText="Align-Center">
-                <toolbar:SfToolbarItem.Icon>
+                <Toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE752;" Color="Blue"
             FontFamily="MauiMaterialAssets" />
-                </toolbar:SfToolbarItem.Icon>
-            </toolbar:SfToolbarItem>
-            <toolbar:SfToolbarItem Text="AlignJustify" TextPosition="Right" Size="110,56"
+                </Toolbar:SfToolbarItem.Icon>
+            </Toolbar:SfToolbarItem>
+            <Toolbar:SfToolbarItem Text="AlignJustify" TextPosition="Right" Size="110,56"
                         ToolTipText="Align-Justify">
-                <toolbar:SfToolbarItem.Icon>
+                <Toolbar:SfToolbarItem.Icon>
                     <FontImageSource Color="Red" Glyph="&#xE74F;"
             FontFamily="MauiMaterialAssets" />
-                </toolbar:SfToolbarItem.Icon>
-            </toolbar:SfToolbarItem>
-        </toolbar:SfToolbar.Items>
-    </toolbar:SfToolbar>
+                </Toolbar:SfToolbarItem.Icon>
+            </Toolbar:SfToolbarItem>
+        </Toolbar:SfToolbar.Items>
+    </Toolbar:SfToolbar>
 </VerticalStackLayout> 
 
 {% endhighlight %}
@@ -111,8 +111,8 @@ The following code sample demonstrates how to create a toolbar control with tool
      public MainPage()
      {
          InitializeComponent();
-         SfToolbar toolbar = new SfToolbar();
-         toolbar.HeightRequest = 56;
+         SfToolbar Toolbar = new SfToolbar();
+         Toolbar.HeightRequest = 56;
          ObservableCollection<BaseToolbarItem> itemCollection = new ObservableCollection<BaseToolbarItem>
          {
              new SfToolbarItem
@@ -199,8 +199,8 @@ The following code sample demonstrates how to create a toolbar control with tool
              }
          };
 
-         toolbar.Items = itemCollection;
-         this.Content = toolbar;
+         Toolbar.Items = itemCollection;
+         this.Content = Toolbar;
      }
  }
 
@@ -208,77 +208,77 @@ The following code sample demonstrates how to create a toolbar control with tool
 
 {% endtabs %}
 
-![toolbar-items-customization](images/toolbaritem-customization.png)
+![Toolbar-Items-customization](Images/toolbaritem-customization.png)
 
 ## Separator Item Customization
 
-The toolbar control supports customization of separator item using properties [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SeparatorToolbarItem.html#Syncfusion_Maui_Toolbar_SeparatorToolbarItem_Stroke) and [StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SeparatorToolbarItem.html#Syncfusion_Maui_Toolbar_SeparatorToolbarItem_StrokeThickness).
+The Toolbar Control supports customization of separator Item using Properties [Stroke](https://help.Syncfusion.com/cr/.NET MAUI/Syncfusion..NET MAUI.Toolbar.SeparatorToolbarItem.html#Syncfusion_Maui_Toolbar_SeparatorToolbarItem_Stroke) and [StrokeThickness](https://help.Syncfusion.com/cr/.NET MAUI/Syncfusion..NET MAUI.Toolbar.SeparatorToolbarItem.html#Syncfusion_Maui_Toolbar_SeparatorToolbarItem_StrokeThickness).
 
 
-* **Stroke** : This property is used to customize the stroke color of the separator item.
-* **StrokeThickness** : This property is used to customize the stroke thickness of the separator item.
+* **Stroke** : This Property is used to customize the Stroke Color of the separator Item.
+* **StrokeThickness** : This Property is used to customize the Stroke thickness of the separator Item.
 
-The following code sample demonstrates how to create a toolbar control with separator item customization.
+The following code sample demonstrates how to create a Toolbar Control with separator Item customization.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <VerticalStackLayout>
-    <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56" WidthRequest="450">
-        <toolbar:SfToolbar.Items>
-            <toolbar:SfToolbarItem Name="Bold"
+    <Toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56" WidthRequest="450">
+        <Toolbar:SfToolbar.Items>
+            <Toolbar:SfToolbarItem Name="Bold"
             ToolTipText="Bold">
-                <toolbar:SfToolbarItem.Icon>
+                <Toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE770;"
                          FontFamily="MauiMaterialAssets" />
-                </toolbar:SfToolbarItem.Icon>
-            </toolbar:SfToolbarItem>
-            <toolbar:SfToolbarItem Name="Underline"
+                </Toolbar:SfToolbarItem.Icon>
+            </Toolbar:SfToolbarItem>
+            <Toolbar:SfToolbarItem Name="Underline"
             ToolTipText="Underline">
-                <toolbar:SfToolbarItem.Icon>
+                <Toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE762;"
                          FontFamily="MauiMaterialAssets" />
-                </toolbar:SfToolbarItem.Icon>
-            </toolbar:SfToolbarItem>
-            <toolbar:SfToolbarItem Name="Italic"
+                </Toolbar:SfToolbarItem.Icon>
+            </Toolbar:SfToolbarItem>
+            <Toolbar:SfToolbarItem Name="Italic"
             ToolTipText="Italic">
-                <toolbar:SfToolbarItem.Icon>
+                <Toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE771;"
                          FontFamily="MauiMaterialAssets" />
-                </toolbar:SfToolbarItem.Icon>
-            </toolbar:SfToolbarItem>
-            <toolbar:SeparatorToolbarItem Stroke="Red" StrokeThickness="3"/>
-            <toolbar:SfToolbarItem Name="AlignLeft"
+                </Toolbar:SfToolbarItem.Icon>
+            </Toolbar:SfToolbarItem>
+            <Toolbar:SeparatorToolbarItem Stroke="Red" StrokeThickness="3"/>
+            <Toolbar:SfToolbarItem Name="AlignLeft"
                        ToolTipText="Align-Left">
-                <toolbar:SfToolbarItem.Icon>
+                <Toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE751;"
                          FontFamily="MauiMaterialAssets" />
-                </toolbar:SfToolbarItem.Icon>
-            </toolbar:SfToolbarItem>
-            <toolbar:SfToolbarItem Name="AlignRight"
+                </Toolbar:SfToolbarItem.Icon>
+            </Toolbar:SfToolbarItem>
+            <Toolbar:SfToolbarItem Name="AlignRight"
                        ToolTipText="Align-Right">
-                <toolbar:SfToolbarItem.Icon>
+                <Toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE753;"
              FontFamily="MauiMaterialAssets" />
-                </toolbar:SfToolbarItem.Icon>
-            </toolbar:SfToolbarItem>
-            <toolbar:SfToolbarItem Name="AlignCenter"
+                </Toolbar:SfToolbarItem.Icon>
+            </Toolbar:SfToolbarItem>
+            <Toolbar:SfToolbarItem Name="AlignCenter"
                        ToolTipText="Align-Center">
-                <toolbar:SfToolbarItem.Icon>
+                <Toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE752;"
              FontFamily="MauiMaterialAssets" />
-                </toolbar:SfToolbarItem.Icon>
-            </toolbar:SfToolbarItem>
-            <toolbar:SfToolbarItem Name="AlignJustify"
+                </Toolbar:SfToolbarItem.Icon>
+            </Toolbar:SfToolbarItem>
+            <Toolbar:SfToolbarItem Name="AlignJustify"
                        ToolTipText="Align-Justify">
-                <toolbar:SfToolbarItem.Icon>
+                <Toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE74F;"
              FontFamily="MauiMaterialAssets" />
-                </toolbar:SfToolbarItem.Icon>
-            </toolbar:SfToolbarItem>
-        </toolbar:SfToolbar.Items>
-    </toolbar:SfToolbar>
+                </Toolbar:SfToolbarItem.Icon>
+            </Toolbar:SfToolbarItem>
+        </Toolbar:SfToolbar.Items>
+    </Toolbar:SfToolbar>
 </VerticalStackLayout>
 
 {% endhighlight %}
@@ -290,8 +290,8 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        SfToolbar toolbar = new SfToolbar();
-        toolbar.HeightRequest = 56;
+        SfToolbar Toolbar = new SfToolbar();
+        Toolbar.HeightRequest = 56;
 
         ObservableCollection<BaseToolbarItem> itemCollection = new ObservableCollection<BaseToolbarItem>
         {
@@ -344,8 +344,8 @@ public partial class MainPage : ContentPage
             }
         };
 
-        toolbar.Items = itemCollection;
-        this.Content = toolbar;
+        Toolbar.Items = itemCollection;
+        this.Content = Toolbar;
     }
 }
 
@@ -353,77 +353,77 @@ public partial class MainPage : ContentPage
 
 {% endtabs %}
 
-![separator-item-customization](images/separator-customization.png)
+![separator-Item-customization](Images/separator-customization.png)
 
 ## Navigation Button Customization
 
-The toolbar control supports customization of navigation buttons using properties [ForwardButtonIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ForwardButtonIconColor), [BackwardButtonIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_BackwardButtonIconColor), [ForwardButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ForwardButtonBackground), [BackwardButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_BackwardButtonBackground).
+The Toolbar Control supports customization of navigation buttons using Properties [ForwardButtonIconColor](https://help.Syncfusion.com/cr/.NET MAUI/Syncfusion..NET MAUI.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ForwardButtonIconColor), [BackwardButtonIconColor](https://help.Syncfusion.com/cr/.NET MAUI/Syncfusion..NET MAUI.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_BackwardButtonIconColor), [ForwardButtonBackground](https://help.Syncfusion.com/cr/.NET MAUI/Syncfusion..NET MAUI.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ForwardButtonBackground), [BackwardButtonBackground](https://help.Syncfusion.com/cr/.NET MAUI/Syncfusion..NET MAUI.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_BackwardButtonBackground).
 
-* **ForwardButtonIconColor** : This property is used to customize the icon color of the forward button.
-* **BackwardButtonIconColor** : This property is used to customize the icon color of the backward button.
-* **ForwardButtonBackground** : This property is used to customize the background color of the forward button.
-* **BackwardButtonBackground** : This property is used to customize the background color of the backward button.
+* **ForwardButtonIconColor** : This Property is used to customize the Icon Color of the forward button.
+* **BackwardButtonIconColor** : This Property is used to customize the Icon Color of the backward button.
+* **ForwardButtonBackground** : This Property is used to customize the Background Color of the forward button.
+* **BackwardButtonBackground** : This Property is used to customize the Background Color of the backward button.
 
-The following code sample demonstrates how to create a toolbar control with navigation button customization.
+The following code sample demonstrates how to create a Toolbar Control with navigation button customization.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <VerticalStackLayout>
-     <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56" WidthRequest="270" OverflowMode="NavigationButtons" ForwardButtonIconColor="Red" BackwardButtonIconColor="Red" ForwardButtonBackground="Aqua" BackwardButtonBackground="Aqua">
-         <toolbar:SfToolbar.Items>
-             <toolbar:SfToolbarItem Name="Bold"
+     <Toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56" WidthRequest="270" OverflowMode="NavigationButtons" ForwardButtonIconColor="Red" BackwardButtonIconColor="Red" ForwardButtonBackground="Aqua" BackwardButtonBackground="Aqua">
+         <Toolbar:SfToolbar.Items>
+             <Toolbar:SfToolbarItem Name="Bold"
              ToolTipText="Bold">
-                 <toolbar:SfToolbarItem.Icon>
+                 <Toolbar:SfToolbarItem.Icon>
                      <FontImageSource Glyph="&#xE770;"
                           FontFamily="MauiMaterialAssets" />
-                 </toolbar:SfToolbarItem.Icon>
-             </toolbar:SfToolbarItem>
-             <toolbar:SfToolbarItem Name="Underline"
+                 </Toolbar:SfToolbarItem.Icon>
+             </Toolbar:SfToolbarItem>
+             <Toolbar:SfToolbarItem Name="Underline"
              ToolTipText="Underline">
-                 <toolbar:SfToolbarItem.Icon>
+                 <Toolbar:SfToolbarItem.Icon>
                      <FontImageSource Glyph="&#xE762;"
                           FontFamily="MauiMaterialAssets" />
-                 </toolbar:SfToolbarItem.Icon>
-             </toolbar:SfToolbarItem>
-             <toolbar:SfToolbarItem Name="Italic"
+                 </Toolbar:SfToolbarItem.Icon>
+             </Toolbar:SfToolbarItem>
+             <Toolbar:SfToolbarItem Name="Italic"
              ToolTipText="Italic">
-                 <toolbar:SfToolbarItem.Icon>
+                 <Toolbar:SfToolbarItem.Icon>
                      <FontImageSource Glyph="&#xE771;"
                           FontFamily="MauiMaterialAssets" />
-                 </toolbar:SfToolbarItem.Icon>
-             </toolbar:SfToolbarItem>
-             <toolbar:SfToolbarItem Name="AlignLeft"
+                 </Toolbar:SfToolbarItem.Icon>
+             </Toolbar:SfToolbarItem>
+             <Toolbar:SfToolbarItem Name="AlignLeft"
                         ToolTipText="Align-Left">
-                 <toolbar:SfToolbarItem.Icon>
+                 <Toolbar:SfToolbarItem.Icon>
                      <FontImageSource Glyph="&#xE751;"
                           FontFamily="MauiMaterialAssets" />
-                 </toolbar:SfToolbarItem.Icon>
-             </toolbar:SfToolbarItem>
-             <toolbar:SfToolbarItem Name="AlignRight"
+                 </Toolbar:SfToolbarItem.Icon>
+             </Toolbar:SfToolbarItem>
+             <Toolbar:SfToolbarItem Name="AlignRight"
                         ToolTipText="Align-Right">
-                 <toolbar:SfToolbarItem.Icon>
+                 <Toolbar:SfToolbarItem.Icon>
                      <FontImageSource Glyph="&#xE753;"
               FontFamily="MauiMaterialAssets" />
-                 </toolbar:SfToolbarItem.Icon>
-             </toolbar:SfToolbarItem>
-             <toolbar:SfToolbarItem Name="AlignCenter"
+                 </Toolbar:SfToolbarItem.Icon>
+             </Toolbar:SfToolbarItem>
+             <Toolbar:SfToolbarItem Name="AlignCenter"
                         ToolTipText="Align-Center">
-                 <toolbar:SfToolbarItem.Icon>
+                 <Toolbar:SfToolbarItem.Icon>
                      <FontImageSource Glyph="&#xE752;"
               FontFamily="MauiMaterialAssets" />
-                 </toolbar:SfToolbarItem.Icon>
-             </toolbar:SfToolbarItem>
-             <toolbar:SfToolbarItem Name="AlignJustify"
+                 </Toolbar:SfToolbarItem.Icon>
+             </Toolbar:SfToolbarItem>
+             <Toolbar:SfToolbarItem Name="AlignJustify"
                         ToolTipText="Align-Justify">
-                 <toolbar:SfToolbarItem.Icon>
+                 <Toolbar:SfToolbarItem.Icon>
                      <FontImageSource Glyph="&#xE74F;"
               FontFamily="MauiMaterialAssets" />
-                 </toolbar:SfToolbarItem.Icon>
-             </toolbar:SfToolbarItem>
-         </toolbar:SfToolbar.Items>
-     </toolbar:SfToolbar>
+                 </Toolbar:SfToolbarItem.Icon>
+             </Toolbar:SfToolbarItem>
+         </Toolbar:SfToolbar.Items>
+     </Toolbar:SfToolbar>
  </VerticalStackLayout>
 
 {% endhighlight %}
@@ -435,14 +435,14 @@ The following code sample demonstrates how to create a toolbar control with navi
      public MainPage()
      {
          InitializeComponent();
-         SfToolbar toolbar = new SfToolbar();
-         toolbar.HeightRequest = 56;
-         toolbar.WidthRequest = 270;
-         toolbar.OverflowMode = ToolbarItemOverflowMode.NavigationButtons;
-         toolbar.ForwardButtonIconColor = Colors.Red;
-         toolbar.BackwardButtonIconColor = Colors.Red;
-         toolbar.ForwardButtonBackground = Colors.Aqua;
-         toolbar.BackwardButtonBackground = Colors.Aqua;
+         SfToolbar Toolbar = new SfToolbar();
+         Toolbar.HeightRequest = 56;
+         Toolbar.WidthRequest = 270;
+         Toolbar.OverflowMode = ToolbarItemOverflowMode.NavigationButtons;
+         Toolbar.ForwardButtonIconColor = Colors.Red;
+         Toolbar.BackwardButtonIconColor = Colors.Red;
+         Toolbar.ForwardButtonBackground = Colors.Aqua;
+         Toolbar.BackwardButtonBackground = Colors.Aqua;
 
          ObservableCollection<BaseToolbarItem> itemCollection = new ObservableCollection<BaseToolbarItem>();
 
@@ -495,8 +495,8 @@ The following code sample demonstrates how to create a toolbar control with navi
              Icon = new FontImageSource { Glyph = "\uE74F", FontFamily = "MauiMaterialAssets" }
          });
 
-         toolbar.Items = itemCollection;
-         this.Content = toolbar;
+         Toolbar.Items = itemCollection;
+         this.Content = Toolbar;
      }
  }
 
@@ -505,75 +505,75 @@ The following code sample demonstrates how to create a toolbar control with navi
 
 {% endtabs %}
 
-![navigation-button-customization](images/navigation-button-customization.png)
+![navigation-button-customization](Images/navigation-button-customization.png)
 
 ## More Button Customization
 
-The toolbar control supports customization of more button using properties [MoreButtonIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreButtonIconColor), [MoreButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreButtonBackground).
+The Toolbar Control supports customization of more button using Properties [MoreButtonIconColor](https://help.Syncfusion.com/cr/.NET MAUI/Syncfusion..NET MAUI.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreButtonIconColor), [MoreButtonBackground](https://help.Syncfusion.com/cr/.NET MAUI/Syncfusion..NET MAUI.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreButtonBackground).
 
-* **MoreButtonIconColor** : This property is used to customize the icon color of the more button.
-* **MoreButtonBackground** : This property is used to customize the background color of the more button.
+* **MoreButtonIconColor** : This Property is used to customize the Icon Color of the more button.
+* **MoreButtonBackground** : This Property is used to customize the Background Color of the more button.
 
-The following code sample demonstrates how to create a toolbar control with more button customization.
+The following code sample demonstrates how to create a Toolbar Control with more button customization.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <VerticalStackLayout>
-    <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56" WidthRequest="270" OverflowMode="MoreButton" MoreButtonIconColor="Red" MoreButtonBackground="Yellow">
-        <toolbar:SfToolbar.Items>
-            <toolbar:SfToolbarItem Name="Bold"
+    <Toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56" WidthRequest="270" OverflowMode="MoreButton" MoreButtonIconColor="Red" MoreButtonBackground="Yellow">
+        <Toolbar:SfToolbar.Items>
+            <Toolbar:SfToolbarItem Name="Bold"
          ToolTipText="Bold">
-                <toolbar:SfToolbarItem.Icon>
+                <Toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE770;"
                       FontFamily="MauiMaterialAssets" />
-                </toolbar:SfToolbarItem.Icon>
-            </toolbar:SfToolbarItem>
-            <toolbar:SfToolbarItem Name="Underline"
+                </Toolbar:SfToolbarItem.Icon>
+            </Toolbar:SfToolbarItem>
+            <Toolbar:SfToolbarItem Name="Underline"
          ToolTipText="Underline">
-                <toolbar:SfToolbarItem.Icon>
+                <Toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE762;"
                       FontFamily="MauiMaterialAssets" />
-                </toolbar:SfToolbarItem.Icon>
-            </toolbar:SfToolbarItem>
-            <toolbar:SfToolbarItem Name="Italic"
+                </Toolbar:SfToolbarItem.Icon>
+            </Toolbar:SfToolbarItem>
+            <Toolbar:SfToolbarItem Name="Italic"
          ToolTipText="Italic">
-                <toolbar:SfToolbarItem.Icon>
+                <Toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE771;"
                       FontFamily="MauiMaterialAssets" />
-                </toolbar:SfToolbarItem.Icon>
-            </toolbar:SfToolbarItem>
-            <toolbar:SfToolbarItem Name="AlignLeft"
+                </Toolbar:SfToolbarItem.Icon>
+            </Toolbar:SfToolbarItem>
+            <Toolbar:SfToolbarItem Name="AlignLeft"
                     ToolTipText="Align-Left">
-                <toolbar:SfToolbarItem.Icon>
+                <Toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE751;"
                       FontFamily="MauiMaterialAssets" />
-                </toolbar:SfToolbarItem.Icon>
-            </toolbar:SfToolbarItem>
-            <toolbar:SfToolbarItem Name="AlignRight"
+                </Toolbar:SfToolbarItem.Icon>
+            </Toolbar:SfToolbarItem>
+            <Toolbar:SfToolbarItem Name="AlignRight"
                     ToolTipText="Align-Right">
-                <toolbar:SfToolbarItem.Icon>
+                <Toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE753;"
           FontFamily="MauiMaterialAssets" />
-                </toolbar:SfToolbarItem.Icon>
-            </toolbar:SfToolbarItem>
-            <toolbar:SfToolbarItem Name="AlignCenter"
+                </Toolbar:SfToolbarItem.Icon>
+            </Toolbar:SfToolbarItem>
+            <Toolbar:SfToolbarItem Name="AlignCenter"
                     ToolTipText="Align-Center">
-                <toolbar:SfToolbarItem.Icon>
+                <Toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE752;"
           FontFamily="MauiMaterialAssets" />
-                </toolbar:SfToolbarItem.Icon>
-            </toolbar:SfToolbarItem>
-            <toolbar:SfToolbarItem Name="AlignJustify"
+                </Toolbar:SfToolbarItem.Icon>
+            </Toolbar:SfToolbarItem>
+            <Toolbar:SfToolbarItem Name="AlignJustify"
                     ToolTipText="Align-Justify">
-                <toolbar:SfToolbarItem.Icon>
+                <Toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE74F;"
           FontFamily="MauiMaterialAssets" />
-                </toolbar:SfToolbarItem.Icon>
-            </toolbar:SfToolbarItem>
-        </toolbar:SfToolbar.Items>
-    </toolbar:SfToolbar>
+                </Toolbar:SfToolbarItem.Icon>
+            </Toolbar:SfToolbarItem>
+        </Toolbar:SfToolbar.Items>
+    </Toolbar:SfToolbar>
  </VerticalStackLayout>
 
 {% endhighlight %}
@@ -585,12 +585,12 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        SfToolbar toolbar = new SfToolbar();
-        toolbar.HeightRequest = 56;
-        toolbar.WidthRequest = 270;
-        toolbar.OverflowMode = ToolbarItemOverflowMode.MoreButton;
-        toolbar.MoreButtonIconColor = Colors.Red;
-        toolbar.MoreButtonBackground = Colors.Red;
+        SfToolbar Toolbar = new SfToolbar();
+        Toolbar.HeightRequest = 56;
+        Toolbar.WidthRequest = 270;
+        Toolbar.OverflowMode = ToolbarItemOverflowMode.MoreButton;
+        Toolbar.MoreButtonIconColor = Colors.Red;
+        Toolbar.MoreButtonBackground = Colors.Red;
         
 
         ObservableCollection<BaseToolbarItem> itemCollection = new ObservableCollection<BaseToolbarItem>();
@@ -644,8 +644,8 @@ public partial class MainPage : ContentPage
             Icon = new FontImageSource { Glyph = "\uE74F", FontFamily = "MauiMaterialAssets" }
         });
 
-        toolbar.Items = itemCollection;
-        this.Content = toolbar;
+        Toolbar.Items = itemCollection;
+        this.Content = Toolbar;
     }
 }
 
@@ -653,4 +653,4 @@ public partial class MainPage : ContentPage
 
 {% endtabs %}
 
-![more-button-customization](images/more-button-customization.png)
+![more-button-customization](Images/more-button-customization.png)

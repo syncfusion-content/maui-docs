@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overlay Toolbar in .NET MAUI Toolbar Control | Syncfusion®
-description: Learn here all about Overlay toolbar support in Syncfusion® .NET MAUI Toolbar (SfToolbar) control and more.
+description: Learn all about Overlay toolbar support in Syncfusion® .NET MAUI Toolbar (SfToolbar) control and more.
 platform: maui
 control: Toolbar (SfToolbar)
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Overlay Toolbar in .NET MAUI Toolbar (SfToolbar)
 
-The toolbar control supports displaying an overlay toolbar in the view. You can add the [SfOverlayToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html) to the [OverlayToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_OverlayToolbar) property of [SfToolbarItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html). The [SfOverlayToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html) includes a built-in back button, which can be used to close the overlay toolbar.
+The toolbar control supports displaying an overlay toolbar in the view. You can add the [`SfOverlayToolbar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html) to the [`OverlayToolbar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_OverlayToolbar) property of [`SfToolbarItem`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html). The [`SfOverlayToolbar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html) includes a built-in back button that can be used to close the overlay toolbar.
 
 ## How to display the overlay toolbar
 
-You can retrieve the overlay toolbar of a toolbar item and add it to the view using the [Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarTappedEventArgs.html) event in the [SfToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html) control. The following code sample demonstrates how to add an overlay toolbar to the view.
+You can retrieve the overlay toolbar of a toolbar item and add it to the view using the [`Tapped`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarTappedEventArgs.html) event in the [`SfToolbar`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html) control. The following code sample demonstrates how to add an overlay toolbar to the view.
 
 {% tabs %}
 
@@ -32,21 +32,21 @@ You can retrieve the overlay toolbar of a toolbar item and add it to the view us
                                 Tapped="Toolbar_Tapped">
             <toolbar:SfToolbar.Items>
                 <toolbar:SfToolbarItem Name="Bold"
-                            ToolTipText="Bold">
+                            Tooltip Text="Bold">
                     <toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE770;"
                                             FontFamily="MauiMaterialAssets" />
                     </toolbar:SfToolbarItem.Icon>
                 </toolbar:SfToolbarItem>
                 <toolbar:SfToolbarItem Name="Underline"
-                            ToolTipText="Underline">
+                            Tooltip Text="Underline">
                     <toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE762;"
                                             FontFamily="MauiMaterialAssets" />
                     </toolbar:SfToolbarItem.Icon>
                 </toolbar:SfToolbarItem>
                 <toolbar:SfToolbarItem Name="Italic"
-                            ToolTipText="Italic">
+                            Tooltip Text="Italic">
                     <toolbar:SfToolbarItem.Icon>
                     <FontImageSource Glyph="&#xE771;"
                                             FontFamily="MauiMaterialAssets" />
@@ -54,7 +54,7 @@ You can retrieve the overlay toolbar of a toolbar item and add it to the view us
                 </toolbar:SfToolbarItem>
                 <toolbar:SfToolbarItem Name="Alignment"
                                     Text="Alignment"
-                                    ToolTipText="Tap to view the overlay toolbar"
+                                    Tooltip Text="Tap to view the overlay toolbar"
                                     Size="70,40">
                 <toolbar:SfToolbarItem.OverlayToolbar>
                     <toolbar:SfOverlayToolbar x:Name="overlaytoolbar"
@@ -64,28 +64,28 @@ You can retrieve the overlay toolbar of a toolbar item and add it to the view us
                                                     OverflowMode="Scroll">
                         <toolbar:SfOverlayToolbar.Items>
                             <toolbar:SfToolbarItem Name="AlignLeft"
-                                                ToolTipText="Align-Left">
+                                                Tooltip Text="Align Left">
                                 <toolbar:SfToolbarItem.Icon>
                                 <FontImageSource Glyph="&#xE751;"
                                                         FontFamily="MauiMaterialAssets" />
                                 </toolbar:SfToolbarItem.Icon>
                             </toolbar:SfToolbarItem>
                             <toolbar:SfToolbarItem Name="AlignRight"
-                                                ToolTipText="Align-Right">
+                                                Tooltip Text="Align Right">
                                 <toolbar:SfToolbarItem.Icon>
                                 <FontImageSource Glyph="&#xE753;"
                                             FontFamily="MauiMaterialAssets" />
                                 </toolbar:SfToolbarItem.Icon>
                             </toolbar:SfToolbarItem>
                             <toolbar:SfToolbarItem Name="AlignCenter"
-                                                ToolTipText="Align-Center">
+                                                Tooltip Text="Align Center">
                                 <toolbar:SfToolbarItem.Icon>
                                 <FontImageSource Glyph="&#xE752;"
                                             FontFamily="MauiMaterialAssets" />
                                 </toolbar:SfToolbarItem.Icon>
                             </toolbar:SfToolbarItem>
                             <toolbar:SfToolbarItem Name="AlignJustify"
-                                                ToolTipText="Align-Justify">
+                                                Tooltip Text="Align Justify">
                                 <toolbar:SfToolbarItem.Icon>
                                 <FontImageSource Glyph="&#xE74F;"
                                             FontFamily="MauiMaterialAssets" />

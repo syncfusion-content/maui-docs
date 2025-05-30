@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Migrate from Xamarin to .NET MAUI  Backdrop page | Syncfusion<sup>&reg;</sup>
-description: Learn about Migrating from the Syncfusion<sup>&reg;</sup> Xamarin backdrop page to Syncfusion<sup>&reg;</sup> .NET MAUI backdrop page control and more.
+title: Migrate from Xamarin to .NET MAUI  Backdrop Page | Syncfusion®
+description: Learn about migrating from the Syncfusion® Xamarin Backdrop Page to Syncfusion® .NET MAUI Backdrop Page Control and more.
 platform: MAUI
 control: SfBackdropPage
-documentation: ug
+documentation: UG
 ---  
 
 # Migrate from Xamarin.Forms SfBackdropPage to .NET MAUI SfBackdropPage
@@ -13,24 +13,45 @@ To migrate from the [Xamarin SfBackdropPage](https://www.syncfusion.com/xamarin-
 
 ## Namespaces 
 
+
 <table>
+
 <tr>
+
 <th>Xamarin SfBackdropPage</th>
-<th>.NET MAUI SfBackdropPage</th></tr>
+
+
+<th>.NET MAUI SfBackdropPage</th>
+</tr>
+
+
 <tr>
+
 <td>Syncfusion.XForms.Backdrop</td>
-<td>Syncfusion.Maui.Backdrop</td></tr>
+
+
+<td>Syncfusion.Maui.Backdrop</td>
+</tr>
+
 </table>
 
-## Initialize control
 
-To initialize the control, import the Backdrop namespace and initialize the SfBackdropPage as shown in the following code sample.
+## Initialize Control
+
+To Initialize the Control, import the Backdrop Namespace and Initialize the SfBackdropPage as shown in the following code sample.
+
 
 <table>
+
 <tr>
-<th>Xamarin Backdrop page</th>
+
+<th>Xamarin Backdrop Page</th>
+
 </tr>
+
+
 <tr>
+
 <td>
 {% tabs %}
 
@@ -66,11 +87,19 @@ namespace BackdropGettingStarted
 {% endtabs %}
 
 </td>
+
 </tr>
+
+
 <tr>
-<th>.NET MAUI Backdrop page</th>
+
+<th>.NET MAUI Backdrop Page</th>
+
 </tr>
+
+
 <tr>
+
 <td>
 {% tabs %} 
 
@@ -80,7 +109,7 @@ namespace BackdropGettingStarted
                          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                          x:Class="BackdropGettingStarted.BackdropSamplePage"
                          Title="Menu"
-                         xmlns:backdrop="clr-namespace:Syncfusion.Maui.Backdrop;assembly=Syncfusion.Maui.Backdrop"
+                         xmlns:backdrop="clr-bamespace:Syncfusion.Maui.Backdrop;assembly=Syncfusion.Maui.Backdrop"
                          >
     
 </backdrop:SfBackdropPage>
@@ -90,7 +119,7 @@ namespace BackdropGettingStarted
 {% highlight C# %}
 
 using Syncfusion.Maui.Backdrop;
-namespace BackdropGettingStarted;
+Namespace BackdropGettingStarted;
 
 public partial class BackdropSamplePage : SfBackdropPage
 {
@@ -105,8 +134,11 @@ public partial class BackdropSamplePage : SfBackdropPage
 
 {% endtabs %}
 </td>
+
 </tr>
+
 </table>
+
 
 ## Unsupported features from Xamarin.Forms
 
