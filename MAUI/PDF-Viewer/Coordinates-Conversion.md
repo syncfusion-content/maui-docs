@@ -8,13 +8,13 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Working with PDF coordinates systems in .NET MAUI PDF Viewer
+# Working with PDF coordinate systems in .NET MAUI PDF Viewer
 
 PDF Viewer allows users to obtain the PDF page coordinates relative to the PDF Viewer’s client coordinates and vice versa. It also allows you to obtain the scroll point relative to the PDF page coordinates and bring the given region into view.
 
 ## Client rectangle
 
-The [ClientRectangle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ClientRectangle) in MAUI PdfViewer control is  a rectangular area that represents the dimensions of the client area or viewport. The client area denotes the visible portion of the PDF document within the control. In the MAUI PDF Viewer, this client rectangle is illustrated by the red rectangle in the following figure.
+The [ClientRectangle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ClientRectangle) in the MAUI PdfViewer control is  a rectangular area that represents the dimensions of the client area or viewport. The client area denotes the visible portion of the PDF document within the control. In the MAUI PDF Viewer, this client rectangle is illustrated by the red rectangle in the following figure.
 
 ![Client rectangle in .NET MAUI PDF Viewer](Images\Coordinates-Conversion\Client-Rectangle.png)
 
@@ -29,17 +29,17 @@ Rect clientRectangle = PdfViewer.ClientRectangle;
 
 ## Client coordinates
 
-The MAUI PDF Viewer specifies the position of points in the client area(viewport) using client coordinates. The upper-left corner of the client area (viewport) of the control is the origin for client coordinates. The client coordinates in the MAUI PDF Viewer is shown in the following figure.
+The MAUI PDF Viewer specifies the position of points in the client area(viewport) using client coordinates. The upper-left corner of the client area (viewport) of the control is the origin for client coordinates. The client coordinates in the MAUI PDF Viewer are shown in the following figure.
 
 ![Client coordinates in .NET MAUI PDF Viewer](Images\Coordinates-Conversion\Client-Coordinates.png)
 
-### Get page number from client point
+### Get the page number from a client point
 
-You can obtain the page number of the client point using the [GetPageNumberFromClientPoint(Point clientPoint)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_GetPageNumberFromClientPoint_Microsoft_Maui_Graphics_Point_) method by passing the client point as input parameter. The following code sample explains how to get the page number from the client point.
+You can obtain the page number of the client point using the [GetPageNumberFromClientPoint(Point clientPoint)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_GetPageNumberFromClientPoint_Microsoft_Maui_Graphics_Point_) method by passing the client point as an input parameter. The following code sample explains how to get the page number from the client point.
 
 {% tabs %}
 {% highlight c# %}
-//Subscribe the Tapped event of PDF Viewer
+//Subscribe to the Tapped event of the PDF Viewer
 PdfViewer.Tapped += PdfViewer_Tapped;  
  
 // Handle the tapped event.
@@ -55,7 +55,7 @@ private void PdfViewer_Tapped(object sender, GestureEventArgs e)
 
 ## PDF page coordinates
 
-PDF page coordinates are represented in terms of device-independent coordinates system called user space, which is independent of the output device that will be used for printing or display. The user space coordinates system is initialized to a default state for each page of a PDF document. The length of a unit is 1/72 inch, which is approximately the same as a unit of point(pt). As an example, the dimensions of a letter-sized paper in PDF page coordinates are shown in the diagram below.
+PDF page coordinates are represented in terms of a device-independent coordinate system called user space, which is independent of the output device that will be used for printing or display. The user space coordinates system is initialized to a default state for each page of a PDF document. The length of a unit is 1/72 inch, which is approximately the same as a unit of point(pt). As an example, the dimensions of a letter-sized paper in PDF page coordinates are shown in the diagram below.
 
 ![Page coordinates in .NET MAUI PDF Viewer](Images\Coordinates-Conversion\Page-Coordinates.png)
 
@@ -69,7 +69,7 @@ You can obtain the PDF page coordinates using the [ConvertClientPointToPagePoint
 
 {% tabs %}
 {% highlight c# %}
-//Subscribe the Tapped event of PDF Viewer
+//Subscribe to the Tapped event of the PDF Viewer
 PdfViewer.Tapped += PdfViewer_Tapped;
  
 // Handle the tapped event.
@@ -97,7 +97,7 @@ ReadOnlyObservableCollection<Annotation> annotations = PdfViewer.Annotations;
 // Obtain the first annotation in the annotation collection.
 Annotation annotation = annotations[0];
 
-// Type cast to the specific annotation type. Here the first annotation is a square annotation.
+// Type cast to the specific annotation type. Here, the first annotation is a square annotation.
 if (annotation is SquareAnnotation squareAnnotation)
 {
     //Get the annotation’s page number.
@@ -124,7 +124,7 @@ ReadOnlyObservableCollection<Annotation> annotations = PdfViewer.Annotations;
 // Obtain the first annotation in the annotation collection.
 Annotation annotation = annotations[0];
 
-// Type cast to the specific annotation type. Here the first annotation is a square annotation.
+// Type cast to the specific annotation type. Here, the first annotation is a square annotation.
 if (annotation is SquareAnnotation squareAnnotation)
 {
     //Get the annotation bounds.

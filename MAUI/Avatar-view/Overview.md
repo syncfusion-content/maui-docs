@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Overview of Syncfusion® Avatar View control for .NET MAUI
-description: A quick go through to learn about the .NET MAUI SfAvatarView control and the key features available in it. 
-platform: maui
+title: Overview of Syncfusion® Avatar View Control for .NET MAUI
+description: Quickly learn about the .NET MAUI Avatar View control and its key features. 
+platform: MAUI
 control: SfAvatarView
-documentation: ug
+documentation: UG
 ---
 
 # .NET MAUI Avatar View (SfAvatarView) Overview
 
-The [.NET MAUI Avatar View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) control provides a graphical representation of user image that allows you to customize the view by adding image, background color, icon, text, etc.
+The [.NET MAUI Avatar View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) control provides a graphical representation of a user's image. It allows customization of the view by adding an image, background color, icon, and text.
 
-![.NET MAUI SfAvatarview overview.](Overview_Images/overview.png)
+![.NET MAUI Avatar View](Overview_Images/overview.png)
 
 ## Key features
 
-* Supports for adding image and initials.
-* Customizes the height, width, Stroke, BackgroundColor, and CornerRadius of the view.
-* `GroupView`: Supports to add maximum three custom images or initials in a single view.
-* Supports different types of visual styles. 
-* Supports [BadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html).
+* **Image and initials support:** Facilitates adding both images and initials.
+* **View customization:** Allows customization of the height, width, stroke, background color, and corner radius of the view.
+* **Group view:** Supports adding a maximum of three custom images or initials in a single view.
+* **Visual styles:** Offers support for different types of visual styles.
+* **BadgeView integration:** Compatible with [BadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html).
