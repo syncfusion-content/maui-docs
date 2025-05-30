@@ -130,24 +130,20 @@ You can customize the time picker header appearance by using the [Template]() pr
 {% highlight xaml tabtitle="XAML" %}
 
 <picker:SfTimePicker x:Name="timePicker" >
-    <picker:SfTimePicker.HeaderView>
-        <picker:PickerHeaderView>
-            <picker:PickerHeaderView.Template>
-                <DataTemplate>
-                    <Grid BackgroundColor="#BB9AB1">
-                        <Label HorizontalOptions="Center" VerticalOptions="Center" Text="{Binding Path=SelectedTime, StringFormat='{0:hh:mm:ss}'}" TextColor="White" Padding="10"/>
-                    </Grid>
-                </DataTemplate>
-            </picker:PickerHeaderView.Template>
-        </picker:PickerHeaderView>
-    </picker:SfTimePicker.HeaderView>
+    <picker:SfTimePicker.HeaderTemplate>
+        <DataTemplate>
+            <Grid BackgroundColor="#BB9AB1">
+                <Label HorizontalOptions="Center" VerticalOptions="Center" Text="Select a Time" TextColor="White"/>
+            </Grid>
+        </DataTemplate>
+    </picker:SfTimePicker.HeaderTemplate>
 </picker:SfTimePicker>
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Set header template in .NET MAUI Time picker.](maui-time-picker-custom-header-template.png)
+![Set header template in .NET MAUI Time picker.](maui-time-picker-set-header-template.png)
 
 N> If a template is applied to the header in the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html), the remaining header properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_DividerColor) Property.
 
@@ -161,21 +157,17 @@ You can customize the time picker header appearance by using the [Template]() pr
 
 <Grid.Resources>
     <DataTemplate x:Key="currentTimeTemplate">
-        <Grid Background="LightBlue">
-            <Label HorizontalOptions="Center" Text="{Binding Path=SelectedTime, StringFormat='{0:hh:mm:ss}'}"/>
+        <Grid Background = "#987D9A" >
+            <Label HorizontalOptions="Center" VerticalOptions="Center" Text="Select a Time" TextColor="Red"/>
         </Grid>
     </DataTemplate>
     <DataTemplate x:Key="futureTimeTemplate">
-        <Grid Background="LightGreen">
-            <Label HorizontalOptions="Center" Text="{Binding Path=SelectedTime, StringFormat='{0:hh:mm:ss}'}"/>
+        <Grid Background = "LightGreen" >
+            <Label HorizontalOptions="Center" VerticalOptions="Center" Text="Select a Time" TextColor="Orange"/>
         </Grid>
     </DataTemplate>
-    <local:TimeTemplateSelector x:Key="timeTemplateSelector" CurrentTimeTemplate="{StaticResource currentTimeTemplate}"  FutureTimeTemplate="{StaticResource futureTimeTemplate}"/>
-    <picker:SfTimePicker x:Name="timePicker">
-        <picker:SfTimePicker.HeaderView>
-            <picker:PickerHeaderView Template="{StaticResource timeTemplateSelector}">
-            </picker:PickerHeaderView>
-        </picker:SfTimePicker.HeaderView>
+    <local:TimeTemplateSelector x:Key="headerTemplateSelector" CurrentTimeTemplate="{StaticResource currentTimeTemplate}"  FutureTimeTemplate="{StaticResource futureTimeTemplate}"/>
+    <picker:SfTimePicker x:Name="timePicker" HeaderTemplate="{StaticResource headerTemplateSelector}">
     </picker:SfTimePicker>
 </Grid.Resources>
 
@@ -328,24 +320,27 @@ You can customize the time picker column header appearance by using the [Templat
 {% highlight xaml tabtitle="XAML" %}
 
 <picker:SfTimePicker x:Name="timePicker" >
-    <picker:SfTimePicker.ColumnHeaderView>
-        <picker:TimePickerColumnHeaderView>
-            <picker:TimePickerColumnHeaderView.Template>
-                <DataTemplate>
-                    <Grid BackgroundColor="#BB9AB1">
-                        <Label HorizontalOptions="Center" VerticalOptions="Center" Text="{Binding Path=SelectedTime, StringFormat='{0:hh:mm:ss}'}" TextColor="White" Padding="10"/>
-                    </Grid>
-                </DataTemplate>
-            </picker:TimePickerColumnHeaderView.Template>
-        </picker:TimePickerColumnHeaderView>
-    </picker:SfTimePicker.ColumnHeaderView>
+    <picker:SfTimePicker.ColumnHeaderTemplate>
+        <DataTemplate>
+            <Grid BackgroundColor="#BB9AB1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Hour" Grid.Column="0" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Text="Minute" Grid.Column="1" TextColor="White"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Text="Second" Grid.Column="2" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            </Grid>
+        </DataTemplate>
+    </picker:SfTimePicker.ColumnHeaderTemplate>
 </picker:SfTimePicker>
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Set column header template in .NET MAUI Time picker.](maui-time-picker-custom-column-header-template.png)
+![Set column header template in .NET MAUI Time picker.](maui-time-picker-column-header-template.png)
 
 N> If a template is applied to the column header in the [TimePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html), the remaining colummn header properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_DividerColor).
 
@@ -360,20 +355,30 @@ You can customize the time picker column header appearance by using the [Templat
 <Grid.Resources>
     <DataTemplate x:Key="currentTimeTemplate">
         <Grid Background="LightBlue">
-            <Label HorizontalOptions="Center" Text="{Binding Path=SelectedTime, StringFormat='{0:hh:mm:ss}'}"/>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Hour" Grid.Column="0" TextColor="Red" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            <Label Text="Minute" Grid.Column="1" TextColor="Red"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            <Label Text="Second" Grid.Column="2" TextColor="Red" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
         </Grid>
     </DataTemplate>
     <DataTemplate x:Key="futureTimeTemplate">
         <Grid Background="LightGreen">
-            <Label HorizontalOptions="Center" Text="{Binding Path=SelectedTime, StringFormat='{0:hh:mm:ss}'}"/>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Hour" Grid.Column="0" TextColor="Orange" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            <Label Text="Minute" Grid.Column="1" TextColor="Orange"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            <Label Text="Second" Grid.Column="2" TextColor="Orange" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
         </Grid>
     </DataTemplate>
-    <local:TimeTemplateSelector x:Key="timeTemplateSelector" CurrentTimeTemplate="{StaticResource currentTimeTemplate}"  FutureTimeTemplate="{StaticResource futureTimeTemplate}"/>
-    <picker:SfTimePicker x:Name="timePicker">
-        <picker:SfTimePicker.ColumnHeaderView>
-            <picker:TimePickerColumnHeaderView Template="{StaticResource timeTemplateSelector}">
-            </picker:TimePickerColumnHeaderView>
-        </picker:SfTimePicker.ColumnHeaderView>
+    <local:TimeTemplateSelector x:Key="columnHeaderTemplateSelector" CurrentTimeTemplate="{StaticResource currentTimeTemplate}"  FutureTimeTemplate="{StaticResource futureTimeTemplate}"/>
+    <picker:SfTimePicker x:Name="timePicker" ColumnHeaderTemplate="{StaticResource columnHeaderTemplateSelector}">
     </picker:SfTimePicker>
 </Grid.Resources>
 
@@ -524,24 +529,25 @@ You can customize the time picker footer appearance by using the [Template]() pr
 {% highlight xaml tabtitle="XAML" %}
 
 <picker:SfTimePicker x:Name="timePicker">
-   <picker:SfTimePicker.FooterView>
-       <picker:PickerFooterView>
-           <picker:PickerFooterView.Template>
-               <DataTemplate>
-                   <Grid BackgroundColor="#BB9AB1">
-                       <Label HorizontalOptions="Center" VerticalOptions="Center" Text="{Binding Path=SelectedTime, StringFormat='{0:hh:mm:ss}'}" TextColor="White"/>
-                   </Grid>
-               </DataTemplate>
-           </picker:PickerFooterView.Template>
-       </picker:PickerFooterView>
-   </picker:SfTimePicker.FooterView>
+    <picker:SfTimePicker.FooterTemplate>
+        <DataTemplate>
+            <Grid BackgroundColor="#BB9AB1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Text="Decline" TextColor="White" Background="Transparent"/>
+                <Button Grid.Column="1" Text="Accept" TextColor="White" Background="Transparent"/>
+            </Grid>
+        </DataTemplate>
+    </picker:SfTimePicker.FooterTemplate>
 </picker:SfTimePicker>
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Set footer template in .NET MAUI Time picker.](maui-time-picker-custom-footer-template.png)
+![Set footer template in .NET MAUI Time picker.](maui-time-picker-set-footer-template.png)
 
 N> If a template is applied to the footer in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html), the remaining footer properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_DividerColor) Property.
 
@@ -556,20 +562,26 @@ You can customize the time picker footer appearance by using the [Template]() pr
 <Grid.Resources>
     <DataTemplate x:Key="currentTimeTemplate">
         <Grid Background="LightBlue">
-            <Label HorizontalOptions="Center" Text="{Binding Path=SelectedTime, StringFormat='{0:hh:mm:ss}'}"/>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Text="Decline" TextColor="Red" Background="Transparent"/>
+            <Button Grid.Column="1" Text="Accept" TextColor="Red" Background="Transparent"/>
         </Grid>
     </DataTemplate>
     <DataTemplate x:Key="futureTimeTemplate">
         <Grid Background="LightGreen">
-            <Label HorizontalOptions="Center" Text="{Binding Path=SelectedTime, StringFormat='{0:hh:mm:ss}'}"/>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Text="Decline" TextColor="Orange" Background="Transparent"/>
+            <Button Grid.Column="1" Text="Accept" TextColor="Orange" Background="Transparent"/>
         </Grid>
     </DataTemplate>
-    <local:TimeTemplateSelector x:Key="timeTemplateSelector" CurrentTimeTemplate="{StaticResource currentTimeTemplate}"  FutureTimeTemplate="{StaticResource futureTimeTemplate}"/>
-    <picker:SfTimePicker x:Name="timePicker">
-        <picker:SfTimePicker.FooterView>
-            <picker:PickerFooterView Template="{StaticResource timeTemplateSelector}">
-            </picker:PickerFooterView>
-        </picker:SfTimePicker.FooterView>
+    <local:TimeTemplateSelector x:Key="footerTemplateSelector" CurrentTimeTemplate="{StaticResource currentTimeTemplate}"  FutureTimeTemplate="{StaticResource futureTimeTemplate}"/>
+    <picker:SfTimePicker x:Name="timePicker" FooterTemplate="{StaticResource footerTemplateSelector}">
     </picker:SfTimePicker>
 </Grid.Resources>
 

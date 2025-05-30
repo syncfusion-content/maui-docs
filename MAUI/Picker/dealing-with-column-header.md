@@ -126,19 +126,15 @@ You can customize the picker column header appearance by using the [Template]() 
 
 {% highlight xaml tabtitle="XAML" %}
 
-<Picker:SfPicker x:Name="picker" >
-    <Picker:SfPicker.ColumnHeaderView>
-        <Picker:PickerColumnHeaderView>
-            <Picker:PickerColumnHeaderView.Template>
-                <DataTemplate>
-                    <Grid BackgroundColor="#BB9AB1">
-                        <Label HorizontalOptions="Center" VerticalOptions="Center" x:DataType="Picker:PickerColumn" Text="{Binding SelectedItem}" TextColor="White" Padding="10"/>
-                    </Grid>
-                </DataTemplate>
-            </Picker:PickerColumnHeaderView.Template>
-        </Picker:PickerColumnHeaderView>
-    </Picker:SfPicker.ColumnHeaderView>
-</Picker:SfPicker>
+<picker:SfPicker x:Name="picker" >
+    <picker:SfPicker.ColumnHeaderTemplate>
+    <DataTemplate>
+        <Grid BackgroundColor="#BB9AB1">
+            <Label Text="Colors" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        </Grid>
+    </DataTemplate>
+</picker:SfPicker.ColumnHeaderTemplate>
+</picker:SfPicker>
 
 {% endhighlight %}
 
@@ -158,21 +154,17 @@ You can customize the picker column header appearance by using the [Template]() 
 
 <Grid.Resources>
     <DataTemplate x:Key="selectedItemTemplate">
-    <Grid Background="LightBlue">
-        <Label x:DataType="Picker:PickerColumn" Text="{Binding SelectedItem}"  HorizontalOptions="Center" VerticalOptions="Center"/>
-    </Grid>
-    </DataTemplate>
-    <DataTemplate x:Key="nonSelectedItemTemplate">
-        <Grid Background="LightGreen">
-            <Label x:DataType="Picker:PickerColumn" Text="{Binding SelectedItem}"  HorizontalOptions="Center" VerticalOptions="Center"/>
+        <Grid Background = "LightBlue" >
+            <Label Text="Colors"  HorizontalOptions="Center" VerticalOptions="Center" TextColor="Red"/>
         </Grid>
     </DataTemplate>
-    <local:PickerTemplateSelector x:Key="pickerTemplateSelector" SelectedItemTemplate="{StaticResource selectedItemTemplate}"  NonSelectedItemTemplate="{StaticResource nonSelectedItemTemplate}"/>
-    <picker:SfPicker x:Name="picker">
-        <picker:SfPicker.ColumnHeaderView>
-            <picker:PickerColumnHeaderView Template="{StaticResource pickerTemplateSelector}">
-            </picker:PickerColumnHeaderView>
-        </picker:SfPicker.ColumnHeaderView>
+    <DataTemplate x:Key="nonSelectedItemTemplate">
+        <Grid Background="LightGreen" >
+            <Label Text="Colors"  HorizontalOptions="Center" VerticalOptions="Center" TextColor="Orange"/>
+        </Grid>
+    </DataTemplate>
+    <local:PickerTemplateSelector x:Key="columnHeaderTemplateSelector" SelectedItemTemplate="{StaticResource selectedItemTemplate}"  NonSelectedItemTemplate="{StaticResource nonSelectedItemTemplate}"/>
+    <picker:SfPicker x:Name="picker" ColumnHeaderTemplate="{StaticResource columnHeaderTemplateSelector}">
     </picker:SfPicker>
 </Grid.Resources>
 
