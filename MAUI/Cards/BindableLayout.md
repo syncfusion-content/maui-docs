@@ -9,9 +9,9 @@ documentation: ug
 
 # BindableLayout in MAUI Cards
 
-Layout<T> introduces a feature called `BindableLayout`, which works with all layouts derived from Layout<T>. By simply setting the ItemTemplate and ItemsSource, BindableLayout automatically generates a group of UI elements (based on the provided ItemTemplate) for each data item in the ItemsSource and adds them as children.
+Layout&lt;T&gt; introduces a feature called `BindableLayout`, which works with all layouts derived from Layout&lt;T&gt;. By simply setting the ItemTemplate and ItemsSource, BindableLayout automatically generates a group of UI elements (based on the provided ItemTemplate) for each data item in the ItemsSource and adds them as children.
 
-Since [`SfCardLayout`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html) is an extended class of Layout<T>, this approach is also possible for `SfCardLayout`.
+Since [`SfCardLayout`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html) is an extended class of Layout&lt;T&gt;, this approach is also possible for `SfCardLayout`.
 
 ## Initialize view model
 

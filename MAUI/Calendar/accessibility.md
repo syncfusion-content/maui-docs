@@ -86,7 +86,7 @@ Enhance .NET MAUI Calendar's accessibility with a user-friendly design, ensuring
 </tr>
 </table>
 
-![Month view accessibility in .NET MAUI Calendar.](images/accessibility/MAUI-month-view-accessibility.png)
+![Month view accessibility in .NET MAUI Calendar.](images/accessibility/maui-month-view-accessibility.png)
 
 ## Year View
 
@@ -113,7 +113,7 @@ Enhance .NET MAUI Calendar's accessibility with a user-friendly design, ensuring
 </tr>
 </table>
 
-![Year view accessibility in .NET MAUI Calendar.](images/accessibility/MAUI-year-view-accessibility.png)
+![Year view accessibility in .NET MAUI Calendar.](images/accessibility/maui-year-view-accessibility.png)
 
 ## Decade View
 
@@ -140,7 +140,7 @@ Enhance .NET MAUI Calendar's accessibility with a user-friendly design, ensuring
 </tr>
 </table>
 
-![Decade view accessibility in .NET MAUI Calendar.](images/accessibility/MAUI-decade-view-accessibility.png)
+![Decade view accessibility in .NET MAUI Calendar.](images/accessibility/maui-decade-view-accessibility.png)
 
 ## Century View
 
@@ -167,10 +167,10 @@ Enhance .NET MAUI Calendar's accessibility with a user-friendly design, ensuring
 </tr>
 </table>
 
-![Century view accessibility in .NET MAUI Calendar.](images/accessibility/MAUI-century-view-accessibility.png)
+![Century view accessibility in .NET MAUI Calendar.](images/accessibility/maui-century-view-accessibility.png)
 
 ## Keyboard
-``SfCalendar`` supports selection using keyboard interactions.
+`SfCalendar` supports selection using keyboard interactions.
 
 ### Selection
 <table>

@@ -24,9 +24,9 @@ Both sides of the corner radius can be customized separately by setting the [`Le
 {% highlight xaml %} 
 
 <backdrop:SfBackdropPage.FrontLayer>
-		<backdrop:BackdropFrontLayer LeftCornerRadius="30" RightCornerRadius="0" EdgeShape="Flat">
-			<Grid />
-		</backdrop:BackdropFrontLayer>
+	<backdrop:BackdropFrontLayer LeftCornerRadius="30" RightCornerRadius="0" EdgeShape="Flat">
+		<Grid />
+	</backdrop:BackdropFrontLayer>
 </backdrop:SfBackdropPage.FrontLayer> 
 
 {% endhighlight %}

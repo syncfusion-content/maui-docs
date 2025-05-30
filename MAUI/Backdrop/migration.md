@@ -3,13 +3,13 @@ layout: post
 title: Migrate from Xamarin to .NET MAUI  Backdrop Page | Syncfusion®
 description: Learn about migrating from the Syncfusion® Xamarin Backdrop Page to Syncfusion® .NET MAUI Backdrop Page Control and more.
 platform: MAUI
-Control: SfBackdropPage
+control: SfBackdropPage
 documentation: UG
 ---  
 
 # Migrate from Xamarin.Forms SfBackdropPage to .NET MAUI SfBackdropPage
 
-To migrate from the [Xamarin SfBackdropPage](https://www.syncfusion.com/xamarin-ui-controls/xamarin-Backdrop) to [.NET MAUI SfBackdropPage](https://www.syncfusion.com/maui-controls/maui-Backdrop) easier, most of the APIs from the Xamarin SfBackdropPage were kept in the .NET MAUI SfBackdropPage.
+To migrate from the [Xamarin SfBackdropPage](https://www.syncfusion.com/xamarin-ui-controls/xamarin-backdrop) to [.NET MAUI SfBackdropPage](https://www.syncfusion.com/maui-controls/maui-backdrop) easier, most of the APIs from the Xamarin SfBackdropPage were kept in the .NET MAUI SfBackdropPage.
 
 ## Namespaces 
 
@@ -57,20 +57,20 @@ To Initialize the Control, import the Backdrop Namespace and Initialize the SfBa
 
 {% highlight xaml %}
 
-<Backdrop:SfBackdropPage xmlns="http://xamarin.com/schemas/2014/forms"
+<backdrop:SfBackdropPage xmlns="http://xamarin.com/schemas/2014/forms"
                          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                         xmlns:Backdrop="clr-Namespace:Syncfusion.XForms.Backdrop;assembly=Syncfusion.SfBackdrop.XForms"
+                         xmlns:backdrop="clr-namespace:Syncfusion.XForms.Backdrop;assembly=Syncfusion.SfBackdrop.XForms"
                          x:Class="BackdropGettingStarted.BackdropSamplePage"
                          Title="Menu">
 
-</Backdrop:SfBackdropPage>
+</backdrop:SfBackdropPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
 using Syncfusion.XForms.Backdrop;	
-Namespace BackdropGettingStarted
+namespace BackdropGettingStarted
 {
     public partial class BackdropSamplePage : SfBackdropPage
     {
@@ -105,14 +105,14 @@ Namespace BackdropGettingStarted
 
 {% highlight xaml %}
 
-<Backdrop:SfBackdropPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<backdrop:SfBackdropPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                          x:Class="BackdropGettingStarted.BackdropSamplePage"
                          Title="Menu"
-                         xmlns:Backdrop="clr-Namespace:Syncfusion.Maui.Backdrop;assembly=Syncfusion.Maui.Backdrop"
+                         xmlns:backdrop="clr-bamespace:Syncfusion.Maui.Backdrop;assembly=Syncfusion.Maui.Backdrop"
                          >
     
-</Backdrop:SfBackdropPage>
+</backdrop:SfBackdropPage>
 
 {% endhighlight %}
 

@@ -83,7 +83,7 @@ The following code example, explains how to initialize the properties of the `Xa
 <table>
 <tr>
 <th>Xamarin SfDigitalGauge</th>
-<th>.NET .NET MAUI SfDigitalGauge</th>
+<th>.NET MAUI SfDigitalGauge</th>
 <th>Description</th></tr>
 <tr>
 <td>{{'[Value](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfGauge.XForms.SfDigitalGauge.html#Syncfusion_SfGauge_XForms_SfDigitalGauge_Value)'| markdownify }}</td>
@@ -132,7 +132,7 @@ The following code example explains how to initialize the segments in Xamarin Sf
 <table>
 <tr>
 <th>Xamarin SfDigitalGauge</th>
-<th>.NET .NET MAUI SfDigitalGauge</th></tr>
+<th>.NET MAUI SfDigitalGauge</th></tr>
 <tr>
 <td>
 {% tabs %}
@@ -275,7 +275,7 @@ SfDigitalGauge digital = new SfDigitalGauge();
 </tr>
 </table>
 
-The following code example explains how to initialize the character type in Xamarin SfDigitalGauge and.NET MAUI SfDigitalGauge.
+The following code example explains how to initialize the character type in Xamarin SfDigitalGauge and .NET MAUI SfDigitalGauge.
 
 <table>
 <tr>

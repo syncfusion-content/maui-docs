@@ -43,7 +43,7 @@ The [.NET MAUI Calendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cal
 </tr>
 </table>
 
-Note:
+N>
 * The Flow Direction will be updated based on the calendar identifier. All the DateTime values, such as DisplayDate, MinimumDate, MaximumDate, SelectedDate, SelectedDates, SelectedDateRange, SelectableDayPredicate, and SpecialDayPredicate, can be given in two ways.
 * The DateTime instance without specifying calendar identifier. The calendar will handle the DateTime value for the specified calendar identifier.
 * When a DateTime instance has a calendar identifier, the calendar handles it directly.

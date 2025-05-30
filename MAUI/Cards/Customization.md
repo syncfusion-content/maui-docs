@@ -63,7 +63,7 @@ SfCardLayout cardLayout = new SfCardLayout()
 
 ## SwipeDirection
 
-The [SwipeDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html#Syncfusion_Maui_Cards_SfCardLayout_SwipeDirection) property specifies the direction of swiping, which can be `Left`, `Right`, `Top`, or `Bottom`. The default value of `SwipeDirection` is `"Right"`.
+The [SwipeDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html#Syncfusion_Maui_Cards_SfCardLayout_SwipeDirection) property specifies the direction of swiping, which can be `Left`, `Right`, `Top`, or `Bottom`. The default value of `SwipeDirection` is `Right`.
 
 {% tabs %} 
 

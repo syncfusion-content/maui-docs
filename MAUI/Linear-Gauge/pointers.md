@@ -28,11 +28,11 @@ The following code sample demonstrates how to update a simple marker Pointer val
 {% highlight xaml %}
 
 <gauge:SfLinearGauge >
-				<gauge:SfLinearGauge.MarkerPointers>
-					<gauge:LinearShapePointer Value="70" IsInteractive="True" 
-											  Fill="Blue"/>
-				</gauge:SfLinearGauge.MarkerPointers>
-			</gauge:SfLinearGauge>
+	<gauge:SfLinearGauge.MarkerPointers>
+		<gauge:LinearShapePointer Value="70" IsInteractive="True" 
+									Fill="Blue"/>
+	</gauge:SfLinearGauge.MarkerPointers>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
@@ -66,11 +66,11 @@ N> To work with the [`StepFrequency`](https://help.syncfusion.com/cr/maui/Syncfu
 {% highlight xaml %}
 
 <gauge:SfLinearGauge>
-				<gauge:SfLinearGauge.MarkerPointers>
-					<gauge:LinearShapePointer Value="70" IsInteractive="True" 
-											  StepFrequency="5" Fill="Blue"/>
-				</gauge:SfLinearGauge.MarkerPointers>
-			</gauge:SfLinearGauge>
+	<gauge:SfLinearGauge.MarkerPointers>
+		<gauge:LinearShapePointer Value="70" IsInteractive="True" 
+									StepFrequency="5" Fill="Blue"/>
+	</gauge:SfLinearGauge.MarkerPointers>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
@@ -105,11 +105,11 @@ N> To work with the [`DragOffset`](https://help.syncfusion.com/cr/maui/Syncfusio
 {% highlight xaml %}
 
 <gauge:SfLinearGauge>
-				<gauge:SfLinearGauge.MarkerPointers>
-					<gauge:LinearShapePointer Value="70" IsInteractive="True" 
-											  DragOffset="5" Fill="Blue"/>
-				</gauge:SfLinearGauge.MarkerPointers>
-			</gauge:SfLinearGauge>
+	<gauge:SfLinearGauge.MarkerPointers>
+		<gauge:LinearShapePointer Value="70" IsInteractive="True" 
+									DragOffset="5" Fill="Blue"/>
+	</gauge:SfLinearGauge.MarkerPointers>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
@@ -147,9 +147,9 @@ SfLinearGauge gauge = new SfLinearGauge();
 <gauge:SfLinearGauge >
    <gauge:SfLinearGauge.MarkerPointers>
 	  <gauge:LinearShapePointer Value="70" IsInteractive="True" 
-								ValueChanging="LinearShapePointer_ValueChanging"
-								ValueChanged="LinearShapePointer_ValueChanged"
-								Fill="Blue"/>
+			ValueChanging="LinearShapePointer_ValueChanging"
+			ValueChanged="LinearShapePointer_ValueChanged"
+			Fill="Blue"/>
    </gauge:SfLinearGauge.MarkerPointers>
 </gauge:SfLinearGauge>
 

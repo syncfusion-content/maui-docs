@@ -189,7 +189,7 @@ private void OnCalendarLongPressed(object sender, CalendarLongPressedEventArgs e
 
 ### ViewChangedCommand
 
-The SfCalendar includes a built-in event called `ViewChanged`, which is triggered whenever the calendar view is navigated to the previous or next view. This event can be invoked through the [ViewChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_ViewChangedCommand), and it also triggers when switching between different calendar views. The `CalendarViewChangedEventArgs` is provided as a parameter to this command.
+The SfCalendar includes a built-in event called `ViewChanged`, which is triggered whenever the calendar view is navigated to the previous or next view. This event can be invoked through the [ViewChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_ViewChangedCommand), and it also triggers when switching between different calendar views. The `CalendarViewChangedEventArgs` is provided as a parameter to this event.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}

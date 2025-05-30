@@ -36,7 +36,7 @@ this.calendar.SelectionMode = CalendarSelectionMode.Single;
 >**NOTE**
 * In the Year, Decade, and Century views, you can select the cells, only when the `AllowViewNavigation` property is set to false.
 * In this scenario, the `selection changed` event will return the first date of the month, year, decade or century of the selected cell.
-E.g.: 
+Eg:
 * In the year view, when the Dec month cell is selected then the selected date value will be 01-12-2022.
 * In the decade view, when the (2022) year cell is selected then the selected date value will be 01-01-2022.
 * In the century view, when the (2020-2029) decade cell is selected then the selected date value will be 01-01-2020.
@@ -88,7 +88,7 @@ this.calendar.SelectionMode = CalendarSelectionMode.Range;
 >**NOTE**
 * In the Year, Decade and Century views can select the cells, only when the `allowViewNavigation` property is set to false.
 * In this scenario, the `selection changed` event will return the first and last date of the month, year, decade or century of the selected cell when the selection mode is set to `range `.
-E.g.: 
+Eg: 
 * In the year view, when the range is selected as Sep - Dec, then the range value will be 01-09-2022 to 31-12-2022.
 * In the decade view, when the range is selected as 2022 - 2025, then the range value will be 01-01-2022 to 31-12-2025.
 * In the century view, when the range is selected as 2020-2029 to 2030-2039, then the range value will be 01-01-2020 to 31-12-2039.

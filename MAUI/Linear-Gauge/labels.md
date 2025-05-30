@@ -9,7 +9,7 @@ documentation: ug
 
 # Labels in .NET MAUI Linear Gauge (SfLinearGauge)
 
-The default style of gauge labels is as follows:.
+The default style of gauge labels is as follows.
 
 ![Initialize linear gauge for axis](images/getting-started/default_linear_gauge.PNG)
 
@@ -27,12 +27,12 @@ Scale labels can be customized using the [`LabelStyle`](https://help.syncfusion.
 {% highlight xaml %}
 
  <gauge:SfLinearGauge>
-				<gauge:SfLinearGauge.LabelStyle>
-					<gauge:GaugeLabelStyle FontAttributes="Bold" FontSize="15" 
-										   TextColor="Red" 
-										   FontFamily="TimesNewRoman"/>
-				</gauge:SfLinearGauge.LabelStyle>
-			</gauge:SfLinearGauge>
+	<gauge:SfLinearGauge.LabelStyle>
+		<gauge:GaugeLabelStyle FontAttributes="Bold" FontSize="15" 
+								TextColor="Red" 
+								FontFamily="TimesNewRoman"/>
+	</gauge:SfLinearGauge.LabelStyle>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
@@ -59,9 +59,8 @@ The [`ShowLabels`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.Sf
 
 {% highlight xaml %}
 
- <gauge:SfLinearGauge ShowLabels="False">
-				
-			</gauge:SfLinearGauge>
+ <gauge:SfLinearGauge ShowLabels="False">				
+ </gauge:SfLinearGauge>
 
 {% endhighlight %}
 
@@ -85,8 +84,7 @@ The [`Interval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLi
 
 {% highlight xaml %}
 
-<gauge:SfLinearGauge Interval="20">
-				
+<gauge:SfLinearGauge Interval="20">				
 </gauge:SfLinearGauge>
 
 {% endhighlight %}
@@ -111,8 +109,7 @@ The linear gauge allows you to position the labels either [`Inside`](https://hel
 
 {% highlight xaml %}
 
-  <gauge:SfLinearGauge  TickPosition="Outside" LabelPosition="Outside">
-				
+  <gauge:SfLinearGauge  TickPosition="Outside" LabelPosition="Outside">		
   </gauge:SfLinearGauge>
 
 {% endhighlight %}
@@ -193,8 +190,8 @@ You can format or change the entire numeric label text using the [`LabelCreated`
 {% highlight c# %}
 
 SfLinearGauge gauge = new SfLinearGauge();
-		gauge.LabelCreated += Gauge_LabelCreated;
-		this.Content = gauge;
+gauge.LabelCreated += Gauge_LabelCreated;
+this.Content = gauge;
 
 ...
 

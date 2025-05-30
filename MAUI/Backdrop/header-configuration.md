@@ -57,14 +57,14 @@ Customize the default icons in the navigation header by setting the [`OpenIconIm
 
 {% highlight xaml %} 
 
-<Backdrop:SfBackdropPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<backdrop:SfBackdropPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                          x:Class="BackdropGettingStarted.BackdropSamplePage"
-                         xmlns:Backdrop="clr-namespace:Syncfusion.Maui.Backdrop;assembly=Syncfusion.Maui.Backdrop"
+                         xmlns:backdrop="clr-namespace:Syncfusion.Maui.Backdrop;assembly=Syncfusion.Maui.Backdrop"
                          OpenIconImageSource="open.png"
                          CloseIconImageSource="close.png">
 
-</Backdrop:SfBackdropPage>
+</backdrop:SfBackdropPage>
 
 {% endhighlight %}
 
@@ -98,14 +98,14 @@ Customize the icon text in the navigation header by setting the [`OpenText`](htt
 
 {% highlight xaml %} 
 
-<Backdrop:SfBackdropPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<backdrop:SfBackdropPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                          x:Class="BackdropGettingStarted.BackdropSamplePage"
-                         xmlns:Backdrop="clr-namespace:Syncfusion.Maui.Backdrop;assembly=Syncfusion.Maui.Backdrop"
+                         xmlns:backdrop="clr-namespace:Syncfusion.Maui.Backdrop;assembly=Syncfusion.Maui.Backdrop"
                          OpenText="Show Menu"
                          CloseText="Hide Menu">
 
-</Backdrop:SfBackdropPage>
+</backdrop:SfBackdropPage>
 
 {% endhighlight %}
 

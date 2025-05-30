@@ -16,10 +16,10 @@ A range is a visual element that helps you quickly visualize where a range falls
 {% highlight xaml %}
 
  <gauge:SfLinearGauge>
-				<gauge:SfLinearGauge.Ranges>
-					<gauge:LinearRange StartValue="20" EndValue="80"/>
-				</gauge:SfLinearGauge.Ranges>
-			</gauge:SfLinearGauge>
+	<gauge:SfLinearGauge.Ranges>
+		<gauge:LinearRange StartValue="20" EndValue="80"/>
+	</gauge:SfLinearGauge.Ranges>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
@@ -47,12 +47,12 @@ A Linear Gauge range has two values to draw a range - [`StartValue`](https://hel
 
 {% highlight xaml %}
 
-		  <gauge:SfLinearGauge>
-				<gauge:SfLinearGauge.Ranges>
-					<gauge:LinearRange StartWidth="70" MidWidth="20" 
-									   EndWidth="70"/>
-				</gauge:SfLinearGauge.Ranges>
-			</gauge:SfLinearGauge>
+<gauge:SfLinearGauge>
+	<gauge:SfLinearGauge.Ranges>
+		<gauge:LinearRange StartWidth="70" MidWidth="20" 
+							EndWidth="70"/>
+	</gauge:SfLinearGauge.Ranges>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
@@ -80,11 +80,11 @@ For concave shape, override [`UpdateMidRangePath`](https://help.syncfusion.com/c
 {% highlight xaml %}
 
 <gauge:SfLinearGauge x:Name="gauge">
-				<gauge:SfLinearGauge.Ranges>
-					<local:LinearRangeExt StartWidth="70" MidWidth="-20" 
-										  EndWidth="70"/>
-				</gauge:SfLinearGauge.Ranges>
-			</gauge:SfLinearGauge>
+	<gauge:SfLinearGauge.Ranges>
+		<local:LinearRangeExt StartWidth="70" MidWidth="-20" 
+								EndWidth="70"/>
+	</gauge:SfLinearGauge.Ranges>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
@@ -124,10 +124,10 @@ The color of a range can be changed by setting the [`Fill`](https://help.syncfus
 {% highlight xaml %}
 
  <gauge:SfLinearGauge>
-				<gauge:SfLinearGauge.Ranges>
-					<gauge:LinearRange Fill="BlueViolet"/>
-				</gauge:SfLinearGauge.Ranges>
-			</gauge:SfLinearGauge>
+	<gauge:SfLinearGauge.Ranges>
+		<gauge:LinearRange Fill="BlueViolet"/>
+	</gauge:SfLinearGauge.Ranges>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
@@ -155,15 +155,15 @@ A gradient can be applied using the [`GradientStops`](https://help.syncfusion.co
 {% highlight xaml %}
 
 <gauge:SfLinearGauge>
-				<gauge:SfLinearGauge.Ranges>
-					<gauge:LinearRange StartWidth="50">
-						<gauge:LinearRange.GradientStops>
-							<gauge:GaugeGradientStop Value="0" Color="Red"/>
-							<gauge:GaugeGradientStop Value="100" Color="Blue"/>
-						</gauge:LinearRange.GradientStops>
-					</gauge:LinearRange>
-				</gauge:SfLinearGauge.Ranges>
-			</gauge:SfLinearGauge>
+	<gauge:SfLinearGauge.Ranges>
+		<gauge:LinearRange StartWidth="50">
+			<gauge:LinearRange.GradientStops>
+				<gauge:GaugeGradientStop Value="0" Color="Red"/>
+				<gauge:GaugeGradientStop Value="100" Color="Blue"/>
+			</gauge:LinearRange.GradientStops>
+		</gauge:LinearRange>
+	</gauge:SfLinearGauge.Ranges>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
@@ -196,10 +196,10 @@ It is possible to position the ranges [`Inside`](https://help.syncfusion.com/cr/
 {% highlight xaml %}
 
 <gauge:SfLinearGauge>
-				<gauge:SfLinearGauge.Ranges>
-					<gauge:LinearRange Position="Inside"/>
-				</gauge:SfLinearGauge.Ranges>
-			</gauge:SfLinearGauge>
+	<gauge:SfLinearGauge.Ranges>
+		<gauge:LinearRange Position="Inside"/>
+	</gauge:SfLinearGauge.Ranges>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
@@ -227,15 +227,15 @@ You can set range color to axis elements using the [`UseRangeColorForAxis`](http
 {% highlight xaml %}
 
  <gauge:SfLinearGauge x:Name="gauge" UseRangeColorForAxis="True">
-				<gauge:SfLinearGauge.Ranges>
-					<gauge:LinearRange StartValue="0" EndValue="33" 
-									   Fill="#ffF45656" Position="Cross"/>
-					<gauge:LinearRange StartValue="33" EndValue="66" 
-									   Fill="#ffFFC93E" Position="Cross"/>
-					<gauge:LinearRange StartValue="66" EndValue="100" 
-									   Fill="#ff0DC9AB" Position="Cross"/>
-				</gauge:SfLinearGauge.Ranges>
-			</gauge:SfLinearGauge>
+	<gauge:SfLinearGauge.Ranges>
+		<gauge:LinearRange StartValue="0" EndValue="33" 
+							Fill="#ffF45656" Position="Cross"/>
+		<gauge:LinearRange StartValue="33" EndValue="66" 
+							Fill="#ffFFC93E" Position="Cross"/>
+		<gauge:LinearRange StartValue="66" EndValue="100" 
+							Fill="#ff0DC9AB" Position="Cross"/>
+	</gauge:SfLinearGauge.Ranges>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
@@ -281,15 +281,15 @@ You can add multiple ranges for an axis. The following code example demonstrates
 {% highlight xaml %}
 
  <gauge:SfLinearGauge>
-				<gauge:SfLinearGauge.Ranges>
-					<gauge:LinearRange StartValue="0" EndValue="50" 
-									   Fill="#ffF45656"/>
-					<gauge:LinearRange StartValue="50" EndValue="70" 
-									   Fill="#ffFFC93E"/>
-					<gauge:LinearRange StartValue="70" EndValue="100" 
-									   Fill="#ff0DC9AB"/>
-				</gauge:SfLinearGauge.Ranges>
-			</gauge:SfLinearGauge>
+	<gauge:SfLinearGauge.Ranges>
+		<gauge:LinearRange StartValue="0" EndValue="50" 
+							Fill="#ffF45656"/>
+		<gauge:LinearRange StartValue="50" EndValue="70" 
+							Fill="#ffFFC93E"/>
+		<gauge:LinearRange StartValue="70" EndValue="100" 
+							Fill="#ff0DC9AB"/>
+	</gauge:SfLinearGauge.Ranges>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
@@ -331,33 +331,33 @@ Range allows you to add any content as its child using the [`Child`](https://hel
 {% highlight xaml %}
 
 <gauge:SfLinearGauge x:Name="gauge">
-				<gauge:SfLinearGauge.Ranges>
-					<gauge:LinearRange StartWidth="40" EndWidth="40" 
-									   StartValue="0"
-									   EndValue="30" Fill="#fb7d55">
-						<gauge:LinearRange.Child>
-							<Label Text="Bad" HorizontalOptions="Center"
-								   VerticalOptions="Center" TextColor="Black"/>
-						</gauge:LinearRange.Child>
-					</gauge:LinearRange>
-					<gauge:LinearRange StartWidth="40" EndWidth="40" 
-									   StartValue="30"
-									   EndValue="70" Fill="#e8da5d">
-						<gauge:LinearRange.Child>
-							<Label Text="Good" HorizontalOptions="Center"
-								   VerticalOptions="Center" TextColor="Black"/>
-						</gauge:LinearRange.Child>
-					</gauge:LinearRange>
-					<gauge:LinearRange StartWidth="40" EndWidth="40" 
-									   StartValue="70"
-									   EndValue="100" Fill="#42c09a">
-						<gauge:LinearRange.Child>
-							<Label Text="Excellent"  HorizontalOptions="Center"
-								   VerticalOptions="Center" TextColor="Black"/>
-						</gauge:LinearRange.Child>
-					</gauge:LinearRange>
-				</gauge:SfLinearGauge.Ranges>
-			</gauge:SfLinearGauge>
+	<gauge:SfLinearGauge.Ranges>
+		<gauge:LinearRange StartWidth="40" EndWidth="40" 
+							StartValue="0"
+							EndValue="30" Fill="#fb7d55">
+			<gauge:LinearRange.Child>
+				<Label Text="Bad" HorizontalOptions="Center"
+						VerticalOptions="Center" TextColor="Black"/>
+			</gauge:LinearRange.Child>
+		</gauge:LinearRange>
+		<gauge:LinearRange StartWidth="40" EndWidth="40" 
+							StartValue="30"
+							EndValue="70" Fill="#e8da5d">
+			<gauge:LinearRange.Child>
+				<Label Text="Good" HorizontalOptions="Center"
+						VerticalOptions="Center" TextColor="Black"/>
+			</gauge:LinearRange.Child>
+		</gauge:LinearRange>
+		<gauge:LinearRange StartWidth="40" EndWidth="40" 
+							StartValue="70"
+							EndValue="100" Fill="#42c09a">
+			<gauge:LinearRange.Child>
+				<Label Text="Excellent"  HorizontalOptions="Center"
+						VerticalOptions="Center" TextColor="Black"/>
+			</gauge:LinearRange.Child>
+		</gauge:LinearRange>
+	</gauge:SfLinearGauge.Ranges>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 

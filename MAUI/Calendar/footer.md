@@ -16,12 +16,12 @@ You can customize the Footer Height [Calendar](https://help.syncfusion.com/cr/ma
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<Calendar:SfCalendar  x:Name="Calendar"
+<calendar:SfCalendar  x:Name="Calendar"
                       View="Month">
-            <Calendar:SfCalendar.FooterView>
-                <Calendar:CalendarFooterView Height="70" ShowActionButtons="True" ShowTodayButton="True" />
-            </Calendar:SfCalendar.FooterView>
-</Calendar:SfCalendar>
+            <calendar:SfCalendar.FooterView>
+                <calendar:CalendarFooterView Height="70" ShowActionButtons="True" ShowTodayButton="True" />
+            </calendar:SfCalendar.FooterView>
+</calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -31,7 +31,7 @@ this.Calendar.FooterView.Height = 70;
 {% endhighlight %}
 {% endtabs %}
 
-![Customize the header Height in .NET MAUI Calendar.](images/Footer/Calendar-Footer-Height.png)
+![Customize the header Height in .NET MAUI Calendar.](images/footer/calendar-footer-height.png)
 
 ## Action buttons
 
@@ -40,12 +40,12 @@ You can display action buttons at the Footer of the Calendar by using the [ShowA
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<Calendar:SfCalendar  x:Name="Calendar"
+<calendar:SfCalendar  x:Name="Calendar"
                       View="Month">
-            <Calendar:SfCalendar.FooterView>
-                <Calendar:CalendarFooterView ShowActionButtons="true" />
-            </Calendar:SfCalendar.FooterView>
-</Calendar:SfCalendar>
+            <calendar:SfCalendar.FooterView>
+                <calendar:CalendarFooterView ShowActionButtons="true" />
+            </calendar:SfCalendar.FooterView>
+</calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -55,7 +55,7 @@ this.Calendar.FooterView.ShowActionButtons = true;
 {% endhighlight %}
 {% endtabs %}
 
-![Show Action button in .NET MAUI Calendar.](images/Footer/Calendar-action-button.png)
+![Show Action button in .NET MAUI Calendar.](images/footer/calendar-action-button.png)
 
 ## Today button
 
@@ -64,12 +64,12 @@ The today button can be displayed at the Footer of the Calendar using the [ShowT
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<Calendar:SfCalendar  x:Name="Calendar"
+<calendar:SfCalendar  x:Name="Calendar"
                       View="Month">
-            <Calendar:SfCalendar.FooterView>
-                <Calendar:CalendarFooterView ShowTodayButton="True" />
-            </Calendar:SfCalendar.FooterView>
-</Calendar:SfCalendar>
+            <calendar:SfCalendar.FooterView>
+                <calendar:CalendarFooterView ShowTodayButton="True" />
+            </calendar:SfCalendar.FooterView>
+</calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -79,7 +79,7 @@ this.Calendar.FooterView.ShowTodayButton = true;
 {% endhighlight %}
 {% endtabs %}
 
-![Show Today button in .NET MAUI Calendar.](images/Footer/Calendar-today-button.png)
+![Show Today button in .NET MAUI Calendar.](images/footer/calendar-today-button.png)
 
 ## Set the Divider color
 
@@ -88,12 +88,12 @@ You can customize the Footer divider color by setting the [DividerColor](https:/
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<Calendar:SfCalendar  x:Name="Calendar"
+<calendar:SfCalendar  x:Name="Calendar"
                       View="Month">
-            <Calendar:SfCalendar.FooterView>
-                <Calendar:CalendarFooterView DividerColor="Red" ShowActionButtons="True" ShowTodayButton="True" />
-            </Calendar:SfCalendar.FooterView>
-</Calendar:SfCalendar>
+            <calendar:SfCalendar.FooterView>
+                <calendar:CalendarFooterView DividerColor="Red" ShowActionButtons="True" ShowTodayButton="True" />
+            </calendar:SfCalendar.FooterView>
+</calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -103,7 +103,7 @@ this.Calendar.FooterView.Height = 70;
 {% endhighlight %}
 {% endtabs %}
 
-![Set Divider Color in .NET MAUI Calendar.](images/Footer/Calendar-divider-color.png)
+![Set Divider Color in .NET MAUI Calendar.](images/footer/calendar-divider-color.png)
 
 ## Customization of the Footer 
 
@@ -112,21 +112,21 @@ You can customize the Footer text style and Background color of the Calendar Foo
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<Calendar:SfCalendar x:Name="Calendar" >
-    <Calendar:SfCalendar.FooterView >
-        <Calendar:CalendarFooterView Background="#D3D3D3" ShowActionButtons="True" ShowTodayButton="True" >
-            <Calendar:CalendarFooterView.TextStyle >
-                <Calendar:CalendarTextStyle FontSize="15" TextColor="Black" />
-            </Calendar:CalendarFooterView.TextStyle>
-        </Calendar:CalendarFooterView>
-    </Calendar:SfCalendar.FooterView>
-</Calendar:SfCalendar>
+<calendar:SfCalendar x:Name="Calendar" >
+    <calendar:SfCalendar.FooterView >
+        <calendar:CalendarFooterView Background="#D3D3D3" ShowActionButtons="True" ShowTodayButton="True" >
+            <calendar:CalendarFooterView.TextStyle >
+                <calendar:CalendarTextStyle FontSize="15" TextColor="Black" />
+            </calendar:CalendarFooterView.TextStyle>
+        </calendar:CalendarFooterView>
+    </calendar:SfCalendar.FooterView>
+</calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-SfCalendar Calendar = new SfCalendar();
-Calendar.FooterView = new CalendarFooterView()
+SfCalendar calendar = new SfCalendar();
+calendar.FooterView = new CalendarFooterView()
 {
     Background = Color.FromArgb("#D3D3D3"),
     TextStyle = new CalendarTextStyle()
@@ -136,9 +136,9 @@ Calendar.FooterView = new CalendarFooterView()
     }
 };
 
-this.Content = Calendar;
+this.Content = calendar;
 
 {% endhighlight %}
 {% endtabs %}
 
-![Footer Text Style in .NET MAUI Calendar.](images/Footer/Calendar-Footer-TextStyle.png)
+![Footer Text Style in .NET MAUI Calendar.](images/footer/calendar-footer-TextStyle.png)

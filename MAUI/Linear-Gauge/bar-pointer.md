@@ -2,7 +2,7 @@
 layout: post
 title: Bar Pointer in .NET MAUI Linear Gauge control | Syncfusion<sup>&reg;</sup>
 description: Learn all about adding and customizing Bar Pointer of Syncfusion<sup>&reg;</sup> .NET MAUI Linear Gauge (SfLinearGauge) control and more.
-platform: .NET MAUI
+platform: maui
 control: SfLinearGauge
 documentation: ug
 ---
@@ -20,10 +20,10 @@ The following code sample demonstrates a default Bar Pointer with the value 50.
 {% highlight xaml %}
 
 <gauge:SfLinearGauge>
-				<gauge:SfLinearGauge.BarPointers>
-					<gauge:BarPointer Value="50"/>
-				</gauge:SfLinearGauge.BarPointers>
-			</gauge:SfLinearGauge>
+	<gauge:SfLinearGauge.BarPointers>
+		<gauge:BarPointer Value="50"/>
+	</gauge:SfLinearGauge.BarPointers>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
@@ -44,17 +44,17 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize Bar Pointer thickness
 
-The thickness can be changed using the [`PointerSize`](https://help.syncfusion.com/cr/.NET MAUI/Syncfusion.Maui.Gauges.BarPointer.html#Syncfusion_Maui_Gauges_BarPointer_PointerSize) property of the Bar Pointer. The following code sample demonstrates this. 
+The thickness can be changed using the [`PointerSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.BarPointer.html#Syncfusion_Maui_Gauges_BarPointer_PointerSize) property of the Bar Pointer. The following code sample demonstrates this. 
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <gauge:SfLinearGauge>
-				<gauge:SfLinearGauge.BarPointers>
-					<gauge:BarPointer Value="50" PointerSize="10"/>
-				</gauge:SfLinearGauge.BarPointers>
-			</gauge:SfLinearGauge>
+	<gauge:SfLinearGauge.BarPointers>
+		<gauge:BarPointer Value="50" PointerSize="10"/>
+	</gauge:SfLinearGauge.BarPointers>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
@@ -76,20 +76,20 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Customize edge style
 
-The edge style can be changed using the [`CornerStyle`](https://help.syncfusion.com/cr/.NET MAUI/Syncfusion.Maui.Gauges.BarPointer.html#Syncfusion_Maui_Gauges_BarPointer_CornerStyle) property of the Bar Pointer. The edge style can be any of the [`StartCurve`](https://help.syncfusion.com/cr/.NET MAUI/Syncfusion.Maui.Gauges.CornerStyle.html#Syncfusion_Maui_Gauges_CornerStyle_StartCurve), [`EndCurve`](https://help.syncfusion.com/cr/.NET MAUI/Syncfusion.Maui.Gauges.CornerStyle.html#Syncfusion_Maui_Gauges_CornerStyle_EndCurve), [`BothCurve`](https://help.syncfusion.com/cr/.NET MAUI/Syncfusion.Maui.Gauges.CornerStyle.html#Syncfusion_Maui_Gauges_CornerStyle_BothCurve), and [`BothFlat`](https://help.syncfusion.com/cr/.NET MAUI/Syncfusion.Maui.Gauges.CornerStyle.html#Syncfusion_Maui_Gauges_CornerStyle_BothFlat) options. The default value is [`BothFlat`](https://help.syncfusion.com/cr/.NET MAUI/Syncfusion.Maui.Gauges.CornerStyle.html#Syncfusion_Maui_Gauges_CornerStyle_BothFlat).
+The edge style can be changed using the [`CornerStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.BarPointer.html#Syncfusion_Maui_Gauges_BarPointer_CornerStyle) property of the Bar Pointer. The edge style can be any of the [`StartCurve`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.CornerStyle.html#Syncfusion_Maui_Gauges_CornerStyle_StartCurve), [`EndCurve`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.CornerStyle.html#Syncfusion_Maui_Gauges_CornerStyle_EndCurve), [`BothCurve`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.CornerStyle.html#Syncfusion_Maui_Gauges_CornerStyle_BothCurve), and [`BothFlat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.CornerStyle.html#Syncfusion_Maui_Gauges_CornerStyle_BothFlat) options. The default value is [`BothFlat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.CornerStyle.html#Syncfusion_Maui_Gauges_CornerStyle_BothFlat).
 
 {% tabs %}
 
 {% highlight xaml %}
 
  <gauge:SfLinearGauge>
-				<gauge:SfLinearGauge.BarPointers>
-					<gauge:BarPointer Value="50" PointerSize="10" 
-									  Offset="5"
-									  Position="Outside" 
-									  CornerStyle="BothCurve"/>
-				</gauge:SfLinearGauge.BarPointers>
-			</gauge:SfLinearGauge>
+	<gauge:SfLinearGauge.BarPointers>
+		<gauge:BarPointer Value="50" PointerSize="10" 
+							Offset="5"
+							Position="Outside" 
+							CornerStyle="BothCurve"/>
+	</gauge:SfLinearGauge.BarPointers>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
@@ -121,10 +121,10 @@ By default, the Bar Pointer is positioned across the scale. This position can be
 {% highlight xaml %}
 
  <gauge:SfLinearGauge>
-				<gauge:SfLinearGauge.BarPointers>
-					<gauge:BarPointer Value="50" Position="Inside"/>
-				</gauge:SfLinearGauge.BarPointers>
-			</gauge:SfLinearGauge>
+	<gauge:SfLinearGauge.BarPointers>
+		<gauge:BarPointer Value="50" Position="Inside"/>
+	</gauge:SfLinearGauge.BarPointers>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
@@ -153,10 +153,10 @@ In addition to positioning the Bar Pointer, it is also possible to change the of
 {% highlight xaml %}
 
 <gauge:SfLinearGauge>
-				<gauge:SfLinearGauge.BarPointers>
-					<gauge:BarPointer Value="50" Position="Outside" Offset="5"/>
-				</gauge:SfLinearGauge.BarPointers>
-			</gauge:SfLinearGauge>
+	<gauge:SfLinearGauge.BarPointers>
+		<gauge:BarPointer Value="50" Position="Outside" Offset="5"/>
+	</gauge:SfLinearGauge.BarPointers>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
@@ -179,17 +179,17 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Change the color of Bar Pointer 
 
-The color of the Bar Pointer can be changed by the [`Fill`](https://help.syncfusion.com/cr/.NET MAUI/Syncfusion.Maui.Gauges.BarPointer.html#Syncfusion_Maui_Gauges_BarPointer_Fill) property. The following code sample demonstrates this. 
+The color of the Bar Pointer can be changed by the [`Fill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.BarPointer.html#Syncfusion_Maui_Gauges_BarPointer_Fill) property. The following code sample demonstrates this. 
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <gauge:SfLinearGauge>
-				<gauge:SfLinearGauge.BarPointers>
-					<gauge:BarPointer Value="50" Fill="Red"/>
-				</gauge:SfLinearGauge.BarPointers>
-			</gauge:SfLinearGauge>
+	<gauge:SfLinearGauge.BarPointers>
+		<gauge:BarPointer Value="50" Fill="Red"/>
+	</gauge:SfLinearGauge.BarPointers>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
@@ -211,24 +211,24 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Apply gradient
 
-The gradient can be applied by using the [`GradientStops`](https://help.syncfusion.com/cr/.NET MAUI/Syncfusion.Maui.Gauges.BarPointer.html#Syncfusion_Maui_Gauges_BarPointer_GradientStops) property of Bar Pointer. The following code sample demonstrates applying a gradient to the Bar Pointer.
+The gradient can be applied by using the [`GradientStops`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.BarPointer.html#Syncfusion_Maui_Gauges_BarPointer_GradientStops) property of Bar Pointer. The following code sample demonstrates applying a gradient to the Bar Pointer.
 
 {% tabs %}
 
 {% highlight xaml %}
 
  <gauge:SfLinearGauge>
-				<gauge:SfLinearGauge.BarPointers>
-					<gauge:BarPointer Position="Outside" Offset="5" 
-									  CornerStyle="BothCurve" Value="70">
-						<gauge:BarPointer.GradientStops>
-							<gauge:GaugeGradientStop Value="0" Color="Green"/>
-							<gauge:GaugeGradientStop Value="35" 
-													 Color="#ff0074E3"/>
-						</gauge:BarPointer.GradientStops>
-					</gauge:BarPointer>
-				</gauge:SfLinearGauge.BarPointers>
-			</gauge:SfLinearGauge>
+	<gauge:SfLinearGauge.BarPointers>
+		<gauge:BarPointer Position="Outside" Offset="5" 
+							CornerStyle="BothCurve" Value="70">
+			<gauge:BarPointer.GradientStops>
+				<gauge:GaugeGradientStop Value="0" Color="Green"/>
+				<gauge:GaugeGradientStop Value="35" 
+											Color="#ff0074E3"/>
+			</gauge:BarPointer.GradientStops>
+		</gauge:BarPointer>
+	</gauge:SfLinearGauge.BarPointers>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
@@ -256,28 +256,28 @@ this.Content = gauge;
 
 ## Child support
 
-The child content allows adding any UI content, such as text or images, inside the Bar Pointer. The following code sample demonstrates how to add child content to the Bar Pointer.
+By using the [`Child`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.BarPointer.html#Syncfusion_Maui_Gauges_BarPointer_Child) property of bar pointer, you can provide a child for the bar pointer. To improve readability, the child content is used to add any UI content, such as text or images, inside the bar pointer.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <gauge:SfLinearGauge ShowLabels="False" ShowTicks="False">
-				<gauge:SfLinearGauge.LineStyle>
-					<gauge:LinearLineStyle CornerStyle="BothCurve" 
-										   Thickness="30"/>
-				</gauge:SfLinearGauge.LineStyle>
-				<gauge:SfLinearGauge.BarPointers>
-					<gauge:BarPointer CornerStyle="BothCurve" Value="50" 
-									  PointerSize="30">
-						<gauge:BarPointer.Child>
-							<Label Text="50%" Margin="0,0,10,0" 
-								   HorizontalOptions="End"
-								   TextColor="White" VerticalOptions="Center"/>
-						</gauge:BarPointer.Child>
-					</gauge:BarPointer>
-				</gauge:SfLinearGauge.BarPointers>
-			</gauge:SfLinearGauge>
+	<gauge:SfLinearGauge.LineStyle>
+		<gauge:LinearLineStyle CornerStyle="BothCurve" 
+								Thickness="30"/>
+	</gauge:SfLinearGauge.LineStyle>
+	<gauge:SfLinearGauge.BarPointers>
+		<gauge:BarPointer CornerStyle="BothCurve" Value="50" 
+							PointerSize="30">
+			<gauge:BarPointer.Child>
+				<Label Text="50%" Margin="0,0,10,0" 
+						HorizontalOptions="End"
+						TextColor="White" VerticalOptions="Center"/>
+			</gauge:BarPointer.Child>
+		</gauge:BarPointer>
+	</gauge:SfLinearGauge.BarPointers>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
