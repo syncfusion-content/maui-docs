@@ -28,7 +28,7 @@ pdfViewer.IsOutlineViewVisible = true;
 {% endhighlight %}
 {% endtabs %}
 
-## Accessing custom bookmarks collection
+## Accessing the custom bookmarks collection
 
 To access the custom bookmarks, you can use the [CustomBookmarks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_CustomBookmarks) collection. This property provides the list of custom bookmarks in the PDF. 
 
@@ -40,7 +40,7 @@ var customBookmarks = pdfViewer.CustomBookmarks;
 {% endhighlight %}
 {% endtabs %}
 
-## Add , Edit and Remove custom bookmark
+## Add, edit, and remove custom bookmarks
 
 To add, edit, or remove custom bookmarks in a PDF viewer, you can use the [CustomBookmarks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_CustomBookmarks) collection. This property provides access to the collection of custom bookmarks that can be manipulated to modify the bookmarks displayed in the viewer's bookmark view.
 
@@ -60,7 +60,7 @@ To add a custom bookmark, you can create a new instance of Bookmark and add it t
 Bookmark newBookmark = new Bookmark()
 {
     Name = "New Bookmark",
-    PageNumber = 1, // Page number where the bookmark should to navigate
+    PageNumber = 1, // Page number where the bookmark should navigate
 };
 
 pdfViewer.CustomBookmarks.Add(newBookmark);
@@ -113,7 +113,7 @@ if (bookmarkToRemove != null)
 {% endhighlight %}
 {% endtabs %}
 
-## Navigating to custom bookmark
+## Navigating to a custom bookmark
 
 ### Navigating using UI
 

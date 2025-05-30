@@ -14,13 +14,13 @@ The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.
 
 ## Toolbars structure 
 
-The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) features a built-in toolbar that utilizes multiple or multilevel toolbars. This design ensures that the user interface remains clean and accessible. We have incorporated multiple toolbars, such as top, bottom, and sub-toolbars for editing and choosing types, to ensure comprehensive functionality across various platforms. These toolbars are strategically organized based on the available screen space, adapting to different screen sizes on both mobile and desktop platforms. This approach ensures that tools are easily accessible, preventing the interface from becoming cluttered.
+The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) features a built-in toolbar that utilizes multiple or multilevel toolbars. This design ensures that the user interface remains clean and accessible. We have incorporated multiple toolbars, such as top, bottom, and sub-toolbars for editing and choosing types, to ensure comprehensive functionality across various platforms. These toolbars are strategically organized based on the available screen space, adapting to different screen sizes on both mobile and desktop platforms. This approach ensures that tools are easily accessible, preventing the interface from cluttering.
 
 ### Need for using multiple toolbars
 
 Depending on the available screen space, the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) organizes its tools into multiple or multilevel toolbars on mobile and desktop platforms. The use of multiple toolbars in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) is essential to maintain a user-friendly interface. By separating tools into different toolbars, users can quickly find and use the tools they need without the interface becoming cluttered.
 
-The names of these toolbars and its description are listed in the following sections. 
+The names of these toolbars and their description are listed in the following sections. 
 
 ### Mobile toolbar names
 
@@ -103,7 +103,7 @@ The names of these toolbars and its description are listed in the following sect
 </tr>
 <tr>
 <td>ShapeAnnotationsToolbar</td>
-<td>The toolbar for editing shapes annotations appears at the bottom of the mobile PDF viewer.</td>
+<td>The toolbar for editing shape annotations appears at the bottom of the mobile PDF viewer.</td>
 </tr>
 <tr>
 <td>StickyNoteIconsToolbar</td>
@@ -124,7 +124,7 @@ The names of these toolbars and its description are listed in the following sect
 </tr>
 <tr>
 <td>AnnotationsToolbar</td>
-<td>The annotation toolbar, appears at the below PrimaryToolbar of the desktop PDF viewer.</td>
+<td>The annotation toolbar, appears below the PrimaryToolbar of the desktop PDF viewer.</td>
 </tr>
 <tr>
 <td>RectangleAnnotationEditToolbar</td>
@@ -257,7 +257,7 @@ By using the [GetByName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Pdf
 
 ## Toolbar items
 
-In [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html), user  can also manage the items within each toolbar of the PDF Viewer. This allows you to control which tools are available and how they are arranged, providing a tailored user experience that aligns with your application’s requirements.
+In [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html), the user  can also manage the items within each toolbar of the PDF Viewer. This allows you to control which tools are available and how they are arranged, providing a tailored user experience that aligns with your application’s requirements.
 
 The names of these toolbar items, along with their descriptions and availability in the toolbars, are listed in the following sections.
 
@@ -336,7 +336,7 @@ The names of these toolbar items, along with their descriptions and availability
 </tr>
 <tr>
 <td>StickyNote</td>
-<td>The button that appears in the bottom toolbar allows you to add the sticky note to the document.</td>
+<td>The button that appears in the bottom toolbar allows you to add a sticky note to the document.</td>
 <td>BottomToolbar</td>
 </tr>
 <tr>
@@ -356,7 +356,7 @@ The names of these toolbar items, along with their descriptions and availability
 </tr>
 <tr>
 <td>StrikeOut</td>
-<td>The button that appears in the text markup toolbar allows you to strikeout the text in the document.</td>
+<td>The button that appears in the text markup toolbar allows you to strike out the text in the document.</td>
 <td>TextMarkupToolbar</td>
 </tr>
 <tr>
@@ -407,12 +407,12 @@ The names of these toolbar items, along with their descriptions and availability
 <tr>
 <td>SecondaryAnnotationBackIcon</td>
 <td>The button that appears in the annotation edit toolbars allows you to navigate back from the annotation edit toolbar.</td>
-<td>HighlightAnnotationEditToolbar, UnderlineAnnotationEditToolbar, StrikeOutAnnotationEditToolbar, SquigglyAnnotationEditToolbar, LineAnnotationEditToolbar, ArrowAnnotationEditToolbar, RectangleAnnotationEditToolbar, CircleAnnotationEditToolbar, PolygonAnnotationEditToolbar, PolylineAnnotationEditToolbar, FreeTextAnnotationEditToolbar, InkAnnotationEditToolbar, EraserEditToolbar, StickyNoteAnnotationEditToolbar,StampAnnotationEditToolbar</td>
+<td>HighlightAnnotationEditToolbar, UnderlineAnnotationEditToolbar, StrikeOutAnnotationEditToolbar, SquigglyAnnotationEditToolbar, LineAnnotationEditToolbar, ArrowAnnotationEditToolbar, RectangleAnnotationEditToolbar, CircleAnnotationEditToolbar, PolygonAnnotationEditToolbar, PolylineAnnotationEditToolbar, FreeTextAnnotationEditToolbar, InkAnnotationEditToolbar, EraserEditToolbar, StickyNoteAnnotationEditToolbar, StampAnnotationEditToolbar</td>
 </tr>
 <tr>
 <td>BackIconSeparator</td>
 <td>The separator that appears in the annotation edit toolbar is positioned after the back button.</td>
-<td> HighlightAnnotationEditToolbar, UnderlineAnnotationEditToolbar, StrikeOutAnnotationEditToolbar, SquigglyAnnotationEditToolbar, LineAnnotationEditToolbar, ArrowAnnotationEditToolbar, RectangleAnnotationEditToolbar, CircleAnnotationEditToolbar, PolygonAnnotationEditToolbar, PolylineAnnotationEditToolbar, FreeTextAnnotationEditToolbar, InkAnnotationEditToolbar, EraserEditToolbar, StickyNoteAnnotationEditToolbar,StampAnnotationEditToolbar</td>
+<td> HighlightAnnotationEditToolbar, UnderlineAnnotationEditToolbar, StrikeOutAnnotationEditToolbar, SquigglyAnnotationEditToolbar, LineAnnotationEditToolbar, ArrowAnnotationEditToolbar, RectangleAnnotationEditToolbar, CircleAnnotationEditToolbar, PolygonAnnotationEditToolbar, PolylineAnnotationEditToolbar, FreeTextAnnotationEditToolbar, InkAnnotationEditToolbar, EraserEditToolbar, StickyNoteAnnotationEditToolbar, StampAnnotationEditToolbar</td>
 </tr>
 <tr>
 <td>AnnotationType</td>
@@ -486,42 +486,42 @@ The names of these toolbar items, along with their descriptions and availability
 </tr>
 <tr>
 <td>Note</td>
-<td>The button that appears in the sticky note icons toolbar allows you to add note type of the sticky note.</td>
+<td>The button that appears in the sticky note icons toolbar allows you to add a note type of the sticky note.</td>
 <td>StickyNoteIconsToolbarView</td>
 </tr>
 <tr>
 <td>Insert</td>
-<td>The button that appears in the sticky note icons toolbar allows you to add insert type of the sticky note.</td>
+<td>The button that appears in the sticky note icons toolbar allows you to add an insert type of the sticky note.</td>
 <td>StickyNoteIconsToolbarView</td>
 </tr>
 <tr>
 <td>Comment</td>
-<td>The button that appears in the sticky note icons toolbar allows you to add comment type of the sticky note.</td>
+<td>The button that appears in the sticky note icons toolbar allows you to add a comment type of the sticky note.</td>
 <td>StickyNoteIconsToolbarView</td>
 </tr>
 <tr>
 <td>Key</td>
-<td>The button that appears in the sticky note icons toolbar allows you to add key type of the sticky note.</td>
+<td>The button that appears in the sticky note icons toolbar allows you to add the key type of the sticky note.</td>
 <td>StickyNoteIconsToolbarView</td>
 </tr>
 <tr>
 <td>Help</td>
-<td>The button that appears in the sticky note icons toolbar allows you to add help type of the sticky note.</td>
+<td>The button that appears in the sticky note icons toolbar allows you to add a help type of the sticky note.</td>
 <td>StickyNoteIconsToolbarView</td>
 </tr>
 <tr>
 <td>Paragraph</td>
-<td>The button that appears in the sticky note icons toolbar allows you to add paragraph type of the sticky note.</td>
+<td>The button that appears in the sticky note icons toolbar allows you to add a paragraph type of the sticky note.</td>
 <td>StickyNoteIconsToolbarView</td>
 </tr>
 <tr>
 <td>New Paragraph</td>
-<td>The button that appears in the sticky note icons toolbar allows you to add new paragraph type of the sticky note.</td>
+<td>The button that appears in the sticky note icons toolbar allows you to add a new paragraph type of the sticky note.</td>
 <td>StickyNoteIconsToolbarView</td>
 </tr>
 <tr>
 <td>Outline</td>
-<td>The button that appears in the more option toolbar allows you to see the outline view of document.</td>
+<td>The button that appears in the more option toolbar allows you to see the outline view of the document.</td>
 <td>MoreOptionToolbar</td>
 </tr>
 <tr>
@@ -656,7 +656,7 @@ The names of these toolbar items, along with their descriptions and availability
 </tr>
 <tr>
 <td>Strikeout</td>
-<td>The button that appears in the annotation toolbar allows you to strikeout the text in the document.</td>
+<td>The button that appears in the annotation toolbar allows you to strike out the text in the document.</td>
 <td>AnnotationsToolbar, LineAnnotationEditToolbar, ArrowAnnotationEditToolbar, RectangleAnnotationEditToolbar, CircleAnnotationEditToolbar, PolygonAnnotationEditToolbar, PolylineAnnotationEditToolbar, FreeTextAnnotationEditToolbar, InkAnnotationEditToolbar, EraserEditToolbar, StickyNoteAnnotationEditToolbar, StampAnnotationEditToolbar, HighlightAnnotationEditToolbar, UnderlineAnnotationEditToolbar, StrikeOutAnnotationEditToolbar, and SquigglyAnnotationEditToolbar.</td>
 </tr>
 <tr>
@@ -726,7 +726,7 @@ The names of these toolbar items, along with their descriptions and availability
 </tr>
 <tr>
 <td>Sticky note</td>
-<td>The button that appears in the annotation toolbar allows you to add the sticky note to the document in the PDF Viewer.</td>
+<td>The button that appears in the annotation toolbar allows you to add a sticky note to the document in the PDF Viewer.</td>
 <td>AnnotationsToolbar, LineAnnotationEditToolbar, ArrowAnnotationEditToolbar, RectangleAnnotationEditToolbar, CircleAnnotationEditToolbar, PolygonAnnotationEditToolbar, PolylineAnnotationEditToolbar, FreeTextAnnotationEditToolbar, InkAnnotationEditToolbar, EraserEditToolbar, StickyNoteAnnotationEditToolbar, StampAnnotationEditToolbar, HighlightAnnotationEditToolbar, UnderlineAnnotationEditToolbar, StrikeOutAnnotationEditToolbar, and SquigglyAnnotationEditToolbar.</td>
 </tr>
 <tr>
@@ -751,7 +751,7 @@ The names of these toolbar items, along with their descriptions and availability
 </tr>
 <tr>
 <td>Sticky note icons</td>
-<td>The button that appears in the annotation toolbar allows you to select the types of sticky note.</td>
+<td>The button that appears in the annotation toolbar allows you to select the types of sticky notes.</td>
 <td>AnnotationsToolbar, LineAnnotationEditToolbar, ArrowAnnotationEditToolbar, RectangleAnnotationEditToolbar, CircleAnnotationEditToolbar, PolygonAnnotationEditToolbar, PolylineAnnotationEditToolbar, FreeTextAnnotationEditToolbar, InkAnnotationEditToolbar, EraserEditToolbar, StickyNoteAnnotationEditToolbar, StampAnnotationEditToolbar, HighlightAnnotationEditToolbar, UnderlineAnnotationEditToolbar, StrikeOutAnnotationEditToolbar, and SquigglyAnnotationEditToolbar.</td>
 </tr>
 <tr>
@@ -822,7 +822,7 @@ Button fileOpenButton = new Button
      Margin = new Thickness(5, 0, 0, 0),
      Opacity = 0.5 
  };
-//We access the PrimaryToolbar on the desktop using the GetByName method and add the item you created in it.
+//We access the PrimaryToolbar on the desktop using the GetByName method and add the item you created to it.
 
 pdfViewer.Toolbars?.GetByName("PrimaryToolbar")?.Items?.Add(new Syncfusion.Maui.PdfViewer.ToolbarItem(fileOpenButton, "FileOpenButton"));
 {% endhighlight %}
@@ -887,7 +887,7 @@ if (topToolbar != null)
 
 ##### Remove Item by Name
 
-you can access the specific item using the [GetByName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ToolbarItemCollection.html#Syncfusion_Maui_PdfViewer_ToolbarItemCollection_GetByName_System_String) method and then remove it from the toolbar's item collection using the [Remove](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ToolbarItemCollection.html#Syncfusion_Maui_PdfViewer_ToolbarItemCollection_Remove_Syncfusion_Maui_PdfViewer_ToolbarItem) method. Here we retrieve the "Outline" item from the "PrimaryToolbar" using the GetByName method. If the item is found, it is removed from the toolbar.
+You can access the specific item using the [GetByName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ToolbarItemCollection.html#Syncfusion_Maui_PdfViewer_ToolbarItemCollection_GetByName_System_String) method and then remove it from the toolbar's item collection using the [Remove](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ToolbarItemCollection.html#Syncfusion_Maui_PdfViewer_ToolbarItemCollection_Remove_Syncfusion_Maui_PdfViewer_ToolbarItem) method. Here we retrieve the "Outline" item from the "PrimaryToolbar" using the GetByName method. If the item is found, it is removed from the toolbar.
 
 {% tabs %}
 {% highlight C# %}
@@ -901,7 +901,7 @@ you can access the specific item using the [GetByName](https://help.syncfusion.c
 {% endhighlight %}
 {% endtabs %}
 
-#### Remove item in all toolbars
+#### Remove the item from all toolbars
 
 In [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html), each toolbar operates independently. Removing an item from one toolbar does not affect others. For example, removing the Sticky note icon from the "AnnotationsToolbar" does not impact other toolbars.
 
@@ -964,9 +964,9 @@ item.IsVisible = false; // Hide the search item
 {% endhighlight %}
 {% endtabs %}
 
-#### Hide item in all toolbars
+#### Hide the item in all toolbars
 
-In [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html), each toolbar operates independently. Hiding an item in one toolbar does not affect others. For example, changing the visibility of the signature icon in the "AnnotationsToolbar" does not impact other toolbars.You can identify an item present in multiple toolbars by referring to the availability toolbar column in the toolbar item availability topic under the table of [Mobile toolbar item names](https://help.syncfusion.com/maui/pdf-viewer/toolbar#mobile-toolbar-item-names) and [Desktop toolbar item names](https://help.syncfusion.com/maui/pdf-viewer/toolbar#desktop-toolbar-item-names).
+In [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html), each toolbar operates independently. Hiding an item in one toolbar does not affect others. For example, changing the visibility of the signature icon in the "AnnotationsToolbar" does not impact other toolbars. You can identify an item present in multiple toolbars by referring to the availability toolbar column in the toolbar item availability topic under the table of [Mobile toolbar item names](https://help.syncfusion.com/maui/pdf-viewer/toolbar#mobile-toolbar-item-names) and [Desktop toolbar item names](https://help.syncfusion.com/maui/pdf-viewer/toolbar#desktop-toolbar-item-names).
 
 To hide an icon from all toolbars, iterate through the toolbar collection and adjust the visibility of the item in each toolbar. Here’s how to hide the "Signature" icon from all toolbars:
 

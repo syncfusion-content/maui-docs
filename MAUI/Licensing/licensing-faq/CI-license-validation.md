@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Overview of Syncfusion<sup>®</sup> license validation in CI services - Syncfusion<sup>®</sup>
-description: Learn here about how to register Syncfusion<sup>®</sup> license key for Syncfusion<sup>®</sup> application for license validation.
+description: Learn how to register Syncfusion<sup>®</sup> license key for Syncfusion<sup>®</sup> application for license validation.
 platform: MAUI
 control: Essential Studio<sup>®</sup>
-documentation: ug
+documentation: UG
 ---
 
 <style>
@@ -45,13 +45,13 @@ Write-Host $result
   
   **Version:**  Change the value for /version: to the required version (e.g., "26.2.4").
   
-  **License Key:** Replace the value for /licensekey: with your actual license key (e.g., "Your License Key"). 
+  **License Key:** Replace the value for /licensekey: with your actual license key (e.g., "Your License Key").
 
 ## Azure Pipelines (YAML)
 
 * Create a new [User-defined Variable](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch#user-defined-variables) named `LICENSE_VALIDATION` in the Azure Pipeline. Use the path of the LicenseKeyValidation.ps1 script file as a value (e.g., D:\LicenseKeyValidator\LicenseKeyValidation.ps1).
 
-* Integrate the PowerShell task in the pipeline and execute the script to validate the license key. 
+* Integrate the PowerShell task in the pipeline and execute the script to validate the license key.
 
 The following example shows the syntax for Windows build agents.
 
@@ -75,7 +75,7 @@ steps:
 
 * Create a new [User-defined Variable](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch#user-defined-variables) named `LICENSE_VALIDATION` in the Azure Pipeline. Use the path of the LicenseKeyValidation.ps1 script file as a value (e.g., D:\LicenseKeyValidator\LicenseKeyValidation.ps1).
 
-* Include the PowerShell task in the pipeline and execute the script to validate the license key. 
+* Include the PowerShell task in the pipeline and execute the script to validate the license key.
 
 ![LicenseKeyValidation script](licensing-images/license-validation-classic.png)
 
@@ -121,7 +121,7 @@ pipeline {
 {% endhighlight %}
 {% endtabs %}
 
-## Validate the License Key By Using the ValidateLicense() Method
+## Validate the license key by using the ValidateLicense() method
 
 * Register the license key properly by calling RegisterLicense("License Key") method with the license key. 
 
@@ -145,11 +145,11 @@ bool isValid = SyncfusionLicenseProvider.ValidateLicense(Platform.MAUI);
 
 * If the ValidateLicense() method returns false, there will be invalid license errors in deployment due to either an invalid license key or an incorrect assembly or package version that is referenced in the project. Please ensure that all the referenced Syncfusion<sup>®</sup> assemblies or NuGet packages are all on the same version as the license key’s version before deployment.
 
-## Validate the License Key By Using the Unit Test Project 
+## Validate the license key by using the Unit Test project
 
 * To create a unit test project in Visual Studio, choose **File -> New -> Project** from the menu. This opens a new dialog for creating a new project. Filtering the project type by Test or typing Test as a keyword in the search option can help you to find available unit test projects. Select the appropriate test framework (such as MSTest, NUnit, or xUnit) that best suits your need.
 
-![Unit Test Projects](licensing-images/unit-test-projects.png)
+![Unit Test projects](licensing-images/unit-test-projects.png)
 
 * For more details on creating unit test projects in Visual Studio, refer to the [Getting Started with Unit Testing guide](https://learn.microsoft.com/en-us/visualstudio/test/getting-started-with-unit-testing?view=vs-2022&tabs=dotnet%2Cmstest#create-unit-tests).
 
@@ -159,7 +159,7 @@ N> * Place the license key between double quotes. Also, ensure that Syncfusion.L
 
 * Once the license key is registered, it can be validated by using the ValidateLicense("Platform.MAUI", out var validationMessage) method. This ensures that the license key is valid for the platform and version you are using.
 
-* For reference, please check the following example that demonstrates how to register and validate the license key in the unit test project.
+* For reference, please check the following example that demonstrates how to register and validate the license key in a unit test project.
 
 {% tabs %}
 {% highlight c# %}
@@ -183,10 +183,10 @@ public void TestSyncfusionMAUILicense()
 
 * Once the unit test is executed, if the license key validation passes for the specified platform, the output similar to the following will be displayed in the Test Explorer window.
 
-![License Validation Success Message](licensing-images/unit-test-success-message.png)
+![License validation success message](licensing-images/unit-test-success-message.png)
 
 * If the license validation fails during unit testing, the following output will be displayed in the Test Explorer window.
 
-![License Validation Failure Message](licensing-images/unit-test-failure-message.png)
+![License validation failure message](licensing-images/unit-test-failure-message.png)
 
 * License validation fails due to either an invalid license key or an incorrect assembly or package version that is referenced in the project. In such cases, verify that you are using the valid license key for the platform, and ensure the assembly or package versions referenced in the project match the version of the license key.

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Licensing FAQ – Net need for ES license validation | Syncfusion<sup>®</sup>
-description: Learn here some information about whether syncfusion<sup>®</sup> Essential Studio<sup>®</sup> license validation needs internet conncetion.
-platform: maui
+title: Licensing FAQ – Net need for ES License Validation | Syncfusion<sup>®</sup>
+description: Learn if internet connection is required for Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> license validation.
+platform: MAUI
 control: Essential Studio<sup>®</sup>
-documentation: ug
+documentation: UG
 ---
 
-# Is an internet required for Essential Studio<sup>®</sup> license validation?
+# Is Internet Required for Essential Studio<sup>®</sup> License Validation?
 
-* Syncfusion<sup>®</sup> license validation is done offline during application execution and does not require internet access. 
+* Syncfusion<sup>®</sup> license validation is performed offline during the application's execution and does not require internet access. 
 
-* Apps registered with a Syncfusion<sup>®</sup> license key can be deployed on any system that does not have an internet connection.
+* Apps registered with a Syncfusion<sup>®</sup> license key can be deployed on systems without internet connectivity.

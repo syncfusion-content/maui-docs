@@ -444,7 +444,7 @@ Users can restrict the max swipe offset of a row to the width of the content loa
 
 {% tabs %}
 {% highlight XAML %}
-<syncfusion:SfDataGrid x:Name="datagrid"
+<syncfusion:SfDataGrid x:Name="dataGrid"
                        AllowSwiping="True"
                        SwipeOffsetMode="Auto"
                        ItemsSource="{Binding OrdersInfo}"

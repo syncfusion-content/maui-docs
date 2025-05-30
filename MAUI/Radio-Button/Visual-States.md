@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Visual States in .NET MAUI Radio Button Control | Syncfusion®
-description: Learn here all about Visual States support in Syncfusion® .NET MAUI Radio Button (SfRadioButton) control and more.
-platform: .NET MAUI
+description: Learn about Visual States support in Syncfusion® .NET MAUI Radio Button (SfRadioButton) control.
+platform: MAUI
 control: SfRadioButton
-documentation: ug
+documentation: UG
 ---
 
 # Visual States in .NET MAUI Radio Button (SfRadioButton)
 
-The visual of the Radio Button can be customized using VisualStates. The [`SfRadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) control contains the following two visual states:
+The visual appearance of the Radio Button can be customized using `VisualStates`. The [`SfRadioButton`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfRadioButton.html) control provides the following two visual states:
 
 * Checked
 * Unchecked
@@ -75,8 +75,8 @@ The visual of the Radio Button can be customized using VisualStates. The [`SfRad
 
 **Checked visual state:**
 
-![SfRadioButton with visual state of checked state](Images/VisualState/checkedvisualstate.png)
+![Visual state of checked state](Images/VisualState/checkedvisualstate.png)
 
 **Unchecked visual state:**
 
-![SfRadioButton with visual state of unchecked state](Images/VisualState/uncheckedvisualstate.png)
+![Visual state of unchecked state](Images/VisualState/uncheckedvisualstate.png)
