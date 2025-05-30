@@ -1,14 +1,15 @@
 ---
 layout: post
 title: Setting Toggle Animations in .NET MAUI Navigation Drawer | Syncfusion®
-description: Learn here all about Setting Toggle Animations support in Syncfusion® .NET MAUI Navigation Drawer (SfNavigationDrawer) control and more.
-platform: maui
-control: NavigationDrawer
-documentation: ug
+description: Learn about setting toggle animations support in the Syncfusion® .NET MAUI Navigation Drawer (SfNavigationDrawer) control and more.
+platform: MAUI
+control: SfNavigationDrawer
+documentation: UG
 ---
+
 # Setting Toggle Animations in .NET MAUI Navigation Drawer
 
-The drawer toggling animation can be changed using the [Transition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_Transition) property, and it can be set to three different values. Which are:
+The drawer toggling animation can be changed using the [Transition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_Transition) property. It can be set to three different values.
 
 * [SlideOnTop](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.Transition.html#Syncfusion_Maui_NavigationDrawer_Transition_SlideOnTop)
 

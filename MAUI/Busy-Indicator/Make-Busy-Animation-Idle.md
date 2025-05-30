@@ -2,16 +2,14 @@
 layout: post
 title: Make Busy Animation Idle in .NET MAUI Busy Indicator | Syncfusion®
 description: Learn here all about Make Busy Animation Idle support in Syncfusion® .NET MAUI Busy Indicator (SfBusyIndicator) control and more.
-platform: maui
-control: BusyIndicator
-documentation: ug
+platform: MAUI
+control: SfBusyIndicator
+documentation: UG
 keywords : .net maui busy indicator idle, maui busy indicator idle, maui busy indicator load, maui busy indicator running.
 ---
 # Make Busy Animation Idle in .NET MAUI Busy Indicator (SfBusyIndicator)
 
-## Make Busy Animation Idle in .NET MAUI Busy Indicator
-
-[.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html) control provides support to determine whether an animation needs to be executed or not. Setting the [IsRunning](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_IsRunning) property to false will stop the animation and removes the control from view.
+The [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html) control provides support to determine if an animation needs to be executed. Setting the [IsRunning](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_IsRunning) property to `false` will stop the animation and remove the control from view.
 
 {% tabs %}
 
@@ -35,6 +33,6 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
 
 {% endtabs %}
 
-N>  The default value is false.
+N>  The default value for the [IsRunning](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_IsRunning) property is `false`.
 
 

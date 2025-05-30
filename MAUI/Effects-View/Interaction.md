@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Interaction in .NET MAUI Effects View control | Syncfusion®
-description: Learn here all about Interaction support in Syncfusion® .NET MAUI Effects View (SfEffectsView) control and more.
-platform: maui
-control: Effects View
-documentation: ug
+title: Interaction in .NET MAUI Effects View Control | Syncfusion®
+description: Learn about interaction support in Syncfusion® .NET MAUI Effects View (SfEffectsView) control and more.
+platform: MAUI
+control: SfEffectsView
+documentation: UG
 ---
 
 # Interaction in .NET MAUI Effects View (SfEffectsView)
 
-Effects can be set on different interactions. This section explains how to set effects on different interactions available in effects view.
+The [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) control supports various interactions through its properties. This section explains how to set effects on different interactions available in the Effects View.
 
 ## TouchDownEffects
 
-The [TouchDownEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_TouchDownEffects) property of [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) is used to render the effects in touch-down interaction.
+The [TouchDownEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_TouchDownEffects) property is used to render effects during a touch-down interaction.
 
 {% tabs %} 
 
@@ -37,7 +37,7 @@ var effectsView = new SfEffectsView
 
 ## LongPressEffects
 
-The [LongPressEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_LongPressEffects) property of [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) is used to render the effects in long-press interaction.
+The [LongPressEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_LongPressEffects) property is used to render effects during a long-press interaction.
 
 {% tabs %} 
 
@@ -61,7 +61,7 @@ var effectsView = new SfEffectsView
 
 ## TouchUpEffects
 
-The [TouchUpEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_TouchUpEffects) property of [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) is used to render the effects in touch-up interaction.
+The [TouchUpEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_TouchUpEffects) property is used to render effects during a touch-up interaction.
 
 {% tabs %} 
 

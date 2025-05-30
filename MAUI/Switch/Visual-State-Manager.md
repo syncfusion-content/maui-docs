@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Visual state manager in .NET MAUI Switch (SfSwitch) | Syncfusion®
-description: Learn here all about handling of visual state manager in Syncfusion® .NET MAUI Switch (SfSwitch) control, and more.
-platform: maui
+title: Visual State Manager in .NET MAUI Switch (SfSwitch) | Syncfusion®
+description: Learn about handling the visual state manager in the Syncfusion® .NET MAUI Switch (SfSwitch) control, and more.
+platform: MAUI
 control: SfSwitch
-documentation: ug
+documentation: UG
 keywords : .net maui switch, maui switch, .net maui switch visual states, maui switch visuals.
 ---
 
 # Visual State Manager in .NET MAUI Switch (SfSwitch)
 
-Use the visual state manager to change the .NET MAUI Switch properties based on the visual states, set from code. The applicable visual states are,
+Use the visual state manager to change the .NET MAUI Switch properties based on the visual states, set from code. The applicable visual states are:
 
 * On
 * Off
