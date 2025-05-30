@@ -1,25 +1,25 @@
 ---
 layout: post
-title: Download and Installation of .NET MAUI Extension | Syncfusion®
+title: Download and Installation in .NET MAUI Extension | Syncfusion®
 description: Learn here more about how to download and install in the Syncfusion® .NET MAUI Extension for Visual Studio Code and much more.
 platform: MAUI
 component: Common
-documentation: UG
+documentation: ug
 ---
 
 # Download and Installation
+
+
 
 [Essential MAUI](#essential-maui)
 
 [Essential UI Kit](#essential-ui-kit)
 
 ## Essential MAUI
-
 Syncfusion<sup>®</sup> publishes the Visual Studio Code extension on the [Visual Studio Code marketplace](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.MAUI-VSCode-Extensions). You can install it directly from Visual Studio Code or download and install it from the Visual Studio Code marketplace.
 
 **Prerequisites**
-
-The following software must be installed to use the Syncfusion<sup>®</sup> .NET MAUI extension, as well as for creating and adding snippets in Syncfusion<sup>®</sup> .NET MAUI applications.
+The following software prerequisites must be installed to install the Syncfusion<sup>®</sup> .NET MAUI extension, as well as for creating and adding snippets in Syncfusion<sup>®</sup> .NET MAUI applications.
 
 * [Visual Studio Code 1.87.1 or later](https://code.visualstudio.com/download)
 
@@ -28,7 +28,6 @@ The following software must be installed to use the Syncfusion<sup>®</sup> .NET
 * [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit)
 
 ## Install through the Visual Studio Code Extensions
-
 The following instructions outline the process of installing the Syncfusion<sup>®</sup> .NET MAUI extensions from Visual Studio Code Extensions.
 
 1.	Open Visual Studio Code.
@@ -60,12 +59,11 @@ The following instructions outline the process of downloading and installing Syn
 4.	After installation, reload Visual Studio Code by executing the **Reload Window** command from the Visual Studio Code palette. Access the command palette by pressing **Ctrl+Shift+P** and locating the Reload Window command among the Visual Studio Code commands.
 
     ![Reload-Window](images/Reload-Window.png)
-
 5.	You can now initiate the creation of a new Syncfusion<sup>®</sup> .NET MAUI application using the Syncfusion<sup>®</sup> .NET MAUI extensions from the Visual Studio Code Palette. Locate the **Syncfusion<sup>®</sup> .NET MAUI Template Studio: Launch** option among the Visual Studio Code commands to open the Syncfusion<sup>®</sup> .NET MAUI Template Studio wizard.
 
     ![CreateProjectPalette](images/CreateProjectPalette.png)
 
-## Manually installing an Extension in Visual Studio Code
+## Manually Installing an Extension in Visual Studio Code
 
 The following instructions detail the manual installation process of the Syncfusion<sup>®</sup> .NET MAUI extensions in Visual Studio Code.
 
@@ -85,11 +83,9 @@ The following instructions detail the manual installation process of the Syncfus
     
 
 ## Essential UI Kit
-
-Syncfusion<sup>®</sup> publishes the Visual Studio Code extension on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.MAUI-UI-Kit-VSCode-Extensions). You can install it directly from Visual Studio Code or download and install it from the Visual Studio Code Marketplace.
+Syncfusion<sup>®</sup> publishes the Visual Studio Code extension on the [Visual Studio Code marketplace](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.MAUI-UI-Kit-VSCode-Extensions). You can install it directly from Visual Studio Code or download and install it from the Visual Studio Code marketplace.
 
 ## Install through the Visual Studio Code Extensions
-
 The following instructions outline the process of installing the Essential<sup>®</sup> UI Kit for .NET MAUI - Syncfusion<sup>®</sup> extensions from Visual Studio Code Extensions.
 
 1.	Open Visual Studio Code.
