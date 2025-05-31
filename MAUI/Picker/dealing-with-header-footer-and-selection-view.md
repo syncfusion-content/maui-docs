@@ -118,6 +118,81 @@ The Header’s [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
    ![Header divider color in .NET MAUI Picker.](images/custom-views/maui-picker-header-divider-color.png)
 
+### Custom Header Appearance using Datatemplate
+
+You can customize the picker header appearance by using the [Template]() property of the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html).
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<Picker:SfPicker x:Name="picker" >
+    <picker:SfPicker.HeaderTemplate>
+        <DataTemplate>
+            <Grid BackgroundColor="#BB9AB1">
+                <Label HorizontalOptions="Center" VerticalOptions="Center" Text="Select a Color" TextColor="White"/>
+            </Grid>
+        </DataTemplate>
+    </picker:SfPicker.HeaderTemplate>
+</Picker:SfPicker>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Header template in .NET MAUI Picker.](maui-picker-header-template.png)
+
+N> If a template is applied to the header in the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html), the remaining header properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_DividerColor) Property.
+
+### Custom Header appearance using DataTemplateSelector
+
+You can customize the picker header appearance by using the [Template]() property of the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the picker header. This lets you apply a custom data template to the header and customize its appearance based on specific conditions.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<Grid.Resources>
+    <DataTemplate x:Key="selectedItemTemplate">
+    <Grid Background = "LightBlue" >
+        <Label Text="Select a Color"  HorizontalOptions="Center" VerticalOptions="Center" TextColor="Red"/>
+    </Grid>
+</DataTemplate>
+<DataTemplate x:Key="nonSelectedItemTemplate">
+    <Grid Background="LightGreen" >
+        <Label Text="Select a Color"  HorizontalOptions="Center" VerticalOptions="Center" TextColor="Orange"/>
+    </Grid>
+</DataTemplate>
+    <local:PickerTemplateSelector x:Key="headerTemplateSelector" SelectedItemTemplate="{StaticResource selectedItemTemplate}"  NonSelectedItemTemplate="{StaticResource nonSelectedItemTemplate}"/>
+    <picker:SfPicker x:Name="picker" HeaderTemplate="{StaticResource headerTemplateSelector}">
+    </picker:SfPicker>
+</Grid.Resources>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+public class PickerTemplateSelector : DataTemplateSelector
+{
+    public PickerTemplateSelector()
+    {
+    }
+    public DataTemplate SelectedItemTemplate { get; set; }
+    public DataTemplate NonSelectedItemTemplate { get; set; }
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {      
+        var Details = item as PickerColumn;
+        if (Details != null)
+        {
+            if (Details.SelectedIndex <= 4)
+                return SelectedItemTemplate;
+        }
+        return NonSelectedItemTemplate;
+    }
+}
+
+{% endtabs %}
+
 ## Enable or disable footer
 
 SfPicker enables or disables the footer section by setting the `SfPicker.FooterView.Height` property to a value greater than 0. The default value of the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_Height) property is 0.
@@ -250,6 +325,96 @@ The Footer’s [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 {% endtabs %}
 
    ![Footer divider color in .NET MAUI Picker.](images/custom-views/maui-picker-footer-divider-color.png)
+
+### Custom Footer Appearance using Datatemplate
+
+You can customize the picker footer appearance by using the [Template]() property of the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html).
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<Picker:SfPicker x:Name="picker" >
+    <picker:SfPicker.FooterTemplate>
+        <DataTemplate>
+            <Grid BackgroundColor="#BB9AB1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Text="Decline" TextColor="White" Background="Transparent" />
+                <Button Grid.Column="1" Text="Accept" TextColor="White" Background="Transparent" />
+            </Grid>
+        </DataTemplate>
+    </picker:SfPicker.FooterTemplate>
+</Picker:SfPicker>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Footer template in .NET MAUI Picker.](maui-picker-footer-template.png)
+
+N> If a template is applied to the footer in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html), the remaining footer properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_DividerColor) Property.
+
+### Custom Footer appearance using DataTemplateSelector
+
+You can customize the picker footer appearance by using the [Template]() property of the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the picker footer. This lets you apply a custom data template to the footer and customize its appearance based on specific conditions.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<Grid.Resources>
+    <DataTemplate x:Key="selectedItemTemplate">
+        <Grid Background = "LightBlue" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Text="Decline" TextColor="White" Background="Transparent" />
+                <Button Grid.Column="1" Text="Accept" TextColor="White" Background="Transparent" /> 
+        </Grid>
+    </DataTemplate>
+    <DataTemplate x:Key="nonSelectedItemTemplate">
+        <Grid Background="LightGreen" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Text="Decline" TextColor="White" Background="Transparent" />
+                <Button Grid.Column="1" Text="Accept" TextColor="White" Background="Transparent" />
+            </Grid>
+    </DataTemplate>
+    <local:PickerTemplateSelector x:Key="footerTemplateSelector" SelectedItemTemplate="{StaticResource selectedItemTemplate}"  NonSelectedItemTemplate="{StaticResource nonSelectedItemTemplate}"/>
+    <picker:SfPicker x:Name="picker" FooterTemplate="{StaticResource footerTemplateSelector}">
+    </picker:SfPicker>
+</Grid.Resources>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+public class PickerTemplateSelector : DataTemplateSelector
+{
+    public PickerTemplateSelector()
+    {
+    }
+    public DataTemplate SelectedItemTemplate { get; set; }
+    public DataTemplate NonSelectedItemTemplate { get; set; }
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        var Details = item as PickerColumn;
+        if (Details != null)
+        {
+            if (Details.SelectedIndex <= 4)
+                return SelectedItemTemplate;
+        }
+        return NonSelectedItemTemplate;
+    }
+}
+
+{% endtabs %}
 
 ## Perform validation with default validation button
 
