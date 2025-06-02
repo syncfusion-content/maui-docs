@@ -56,8 +56,7 @@ The content marker pointer alignment can be changed by the [`Alignment`](https:/
 		<gauge:LinearContentPointer Value="50" Alignment="End">
 			<gauge:LinearContentPointer.Content>
 				<Grid HeightRequest="25" WidthRequest="25">
-					<RoundRectangle CornerRadius="5" 
-									Fill="#ff0074E3"/>
+					<RoundRectangle CornerRadius="5" Fill="#ff0074E3"/>
 					<Label Text="50" HorizontalOptions="Center"
 						VerticalOptions="Center" TextColor="White"/>
 				</Grid>
@@ -110,8 +109,7 @@ By default, the shape pointer is positioned [`Outside`](https://help.syncfusion.
 		<gauge:LinearContentPointer Value="50" Position="Cross">
 			<gauge:LinearContentPointer.Content>
 				<Grid HeightRequest="25" WidthRequest="25">
-					<RoundRectangle CornerRadius="5" 
-									Fill="#ff0074E3"/>
+					<RoundRectangle CornerRadius="5" Fill="#ff0074E3"/>
 					<Label Text="50" HorizontalOptions="Center"
 						VerticalOptions="Center" TextColor="White"/>
 				</Grid>
@@ -164,8 +162,7 @@ In addition to position the content marker pointer, it is also possible to chang
 		<gauge:LinearContentPointer Value="50" OffsetY="-5">
 			<gauge:LinearContentPointer.Content>
 				<Grid HeightRequest="25" WidthRequest="25">
-					<RoundRectangle CornerRadius="5" 
-									Fill="#ff0074E3"/>
+					<RoundRectangle CornerRadius="5" Fill="#ff0074E3"/>
 					<Label Text="50" HorizontalOptions="Center"
 						VerticalOptions="Center" TextColor="White"/>
 				</Grid>

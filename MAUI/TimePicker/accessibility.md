@@ -31,7 +31,7 @@ The SfTimePicker control interactss validation buttons (OK and Cancel) with loca
 
 ## Picker Items
 
-The SfTimePicker control interactss with the item source in picker items. The item source is based on the [Time format](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTimeFormat.html). For example, 
+The SfTimePicker control interacts with the item source in picker items. The item source is based on the [Time format](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTimeFormat.html). For example, 
 
 <table>
 <tr>

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events with .NET MAUI Picker Control | Syncfusion<sup>&reg;</sup>
-description: Learn here all about events with Syncfusion Essential .NET MAUI Picker (SfPicker) control, it's elements and more details.
+description: Learn here all about events with Syncfusion<sup>&reg;</sup> Essential .NET MAUI Picker (SfPicker) control, it's elements and more details.
 platform: maui
 control: SfPicker
 documentation: ug
@@ -24,7 +24,7 @@ The [Opened](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBa
 
 ## Closing event
 
-The [Closing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Closing) event is raised when the picker popup is closing. Prevent the picker popup from closing by setting "`e.cancel`" to true.
+The [Closing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Closing) event is raised when the picker popup is closing. Prevent the picker popup from closing by setting `e.cancel` to true.
 
 ## Closed event
 
@@ -70,7 +70,7 @@ The [CancelButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Pi
 
     private void Picker_Closing(object sender, Syncfusion.XForms.Core.CancelEventArgs e)
     {
-        // Stop the close action by setting the ``e.cancel`` to true.
+        // Stop the close action by setting the `e.cancel` to true.
     }
 
     private void Picker_Closed(object sender, EventArgs e)

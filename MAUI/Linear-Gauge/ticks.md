@@ -26,17 +26,17 @@ There are two types of ticks in the .NET MAUI Linear Gauge namely major and mino
 {% highlight xaml %}
 
  <gauge:SfLinearGauge>
-				<gauge:SfLinearGauge.MajorTickStyle>
-					<gauge:LinearTickStyle Length="25" Stroke="Red" 
-										   StrokeThickness="2" 
-										   StrokeDashArray="2,3"/>
-				</gauge:SfLinearGauge.MajorTickStyle>
-				<gauge:SfLinearGauge.MinorTickStyle>
-					<gauge:LinearTickStyle Length="15" Stroke="Blue" 
-										   StrokeThickness="1" 
-										   StrokeDashArray="2,2"/>
-				</gauge:SfLinearGauge.MinorTickStyle>
-			</gauge:SfLinearGauge>
+	<gauge:SfLinearGauge.MajorTickStyle>
+		<gauge:LinearTickStyle Length="25" Stroke="Red" 
+						StrokeThickness="2" 
+						StrokeDashArray="2,3"/>
+	</gauge:SfLinearGauge.MajorTickStyle>
+	<gauge:SfLinearGauge.MinorTickStyle>
+		<gauge:LinearTickStyle Length="15" Stroke="Blue" 
+						StrokeThickness="1" 
+						StrokeDashArray="2,2"/>
+	</gauge:SfLinearGauge.MinorTickStyle>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
@@ -131,8 +131,7 @@ The linear scale allows to position the ticks either inside or outside the scale
 
 {% highlight xaml %}
 
-  <gauge:SfLinearGauge  TickPosition="Outside" LabelPosition="Outside">
-				
+  <gauge:SfLinearGauge  TickPosition="Outside" LabelPosition="Outside">				
   </gauge:SfLinearGauge>
 
 {% endhighlight %}

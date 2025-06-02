@@ -1,10 +1,10 @@
 ---
 layout: post
 title: About .NET MAUI Calendar control | Syncfusion<sup>&reg;</sup>
-Description: Learn here about the Overview of Syncfusion<sup>&reg;</sup> .NET MAUI Calendar (SfCalendar) control, its basic features, and calendar functionalities.
-platform: MAUI
+description: Learn here about the Overview of Syncfusion<sup>&reg;</sup> .NET MAUI Calendar (SfCalendar) control, its basic features, and calendar functionalities.
+platform: maui
 control: SfCalendar
-Documentation: UG
+documentation: UG
 ---
 
 **Notice**: After **Volume 1 2025 (Mid of March 2025)**, Updates, Bug fixes, and Feature enhancements for this control will no longer be available in the Syncfusion<sup>&reg;</sup> Package. Please switch to the **Syncfusion Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).

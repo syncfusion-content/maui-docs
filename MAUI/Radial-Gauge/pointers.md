@@ -121,7 +121,7 @@ The [`StepFrequency`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges
 
 For example, if the value of [`StepFrequency`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialPointer.html#Syncfusion_Maui_Gauges_RadialPointer_StepFrequency) is 20, the pointer will not move continuously while dragging; instead, it will update in terms of 20.
 
-Note: To work with the [`StepFrequency`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialPointer.html#Syncfusion_Maui_Gauges_RadialPointer_StepFrequency) value, enable pointer interaction support.
+N> To work with the [`StepFrequency`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialPointer.html#Syncfusion_Maui_Gauges_RadialPointer_StepFrequency) value, enable pointer interaction support.
 
 {% tabs %}
 

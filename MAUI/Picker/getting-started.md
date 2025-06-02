@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with .NET MAUI Picker control | Syncfusion
-description: Learn about getting started with Syncfusion® .NET MAUI Picker (SfPicker) control and its basic features.
+description: Learn about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Picker (SfPicker) control and its basic features.
 platform: maui
 control: SfPicker
 documentation: ug
@@ -29,7 +29,7 @@ Before proceeding, ensure the following are set up:
 2. Name the project and choose a location. Then click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion® .NET MAUI Picker NuGet Package
+## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI Picker NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker/) and install the latest version.
@@ -37,7 +37,7 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register the handler
 
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion® controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion® core.
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
 
 {% tabs %}
 {% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
@@ -117,16 +117,16 @@ Before proceeding, ensure the following are set up:
 3. Select the project location, type the project name and press **Enter**.
 4. Then choose **Create project.**
 
-## Step 2: Install the Syncfusion® .NET MAUI Picker NuGet Package
+## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI Picker NuGet Package
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you're in the project root directory where your .csproj file is located.
-3. Run the command `dotnet add package Syncfusion.Maui.Maps` to install the Syncfusion® .NET MAUI Maps NuGet package.
+3. Run the command `dotnet add package Syncfusion.Maui.Maps` to install the Syncfusion<sup>&reg;</sup> .NET MAUI Maps NuGet package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
 ## Step 3: Register the handler
 
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion® controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion® core.
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
 
 {% tabs %}
 {% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
@@ -208,7 +208,7 @@ Before proceeding, ensure the following are set up:
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-## Step 2: Install the Syncfusion® MAUI Picker NuGet Package
+## Step 2: Install the Syncfusion<sup>&reg;</sup> MAUI Picker NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker/) and install the latest version.
@@ -216,7 +216,7 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register the handler
 
-The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion® controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion® core.
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>&reg;</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>&reg;</sup> core.
 
 {% tabs %}
 {% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}

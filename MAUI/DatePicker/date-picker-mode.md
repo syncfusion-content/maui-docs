@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Date Picker Mode in .NET MAUI Date Picker Control – Syncfusion®
-description: Learn about the Date Picker mode in Syncfusion® .NET MAUI Date Picker (SfDatePicker) control and its basic features.
+title: Date Picker Mode in .NET MAUI Date Picker Control – Syncfusion<sup>&reg;</sup>
+description: Learn about the Date Picker mode in Syncfusion<sup>&reg;</sup> .NET MAUI Date Picker (SfDatePicker) control and its basic features.
 platform: maui
 control: SfDatePicker
 documentation: ug
@@ -39,7 +39,7 @@ this.Content = datePicker;
 
 The Date Picker can be opened programmatically by setting the [IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_IsOpen) property to `true` of [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html). By default, the `IsOpen` property is `false`.
 
-> **Note:** This property is automatically changed to `false` when you close the dialog by clicking outside of it.
+N> This property is automatically changed to `false` when you close the dialog by clicking outside of it.
 
 {% tabs %}
 
@@ -84,7 +84,7 @@ The [RelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picke
 
 The Date Picker can be opened programmatically by setting the [`IsOpen`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_IsOpen) property to `true` of [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html). By default, the `IsOpen` property is `false`.
 
-> **Note:** This property is automatically changed to `false` when you close the dialog by clicking outside of it.
+N> This property is automatically changed to `false` when you close the dialog by clicking outside of it.
 
 {% tabs %}
 
@@ -123,7 +123,7 @@ private void Button_Clicked(object sender, System.EventArgs e)
 The [RelativeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_RelativeView) is specified in the SfDatePicker's property enumeration and is used to display the picker dialog relative to a view by setting the [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Mode) property to [`RelativeDialog`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerMode.html#Syncfusion_Maui_Picker_PickerMode_RelativeDialog). You can set the position by setting the [RelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_RelativePosition) property in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
 
 
-> **Note:** It is only applicable in `RelativeDialog` mode. If `no relative view` is specified, the picker base will be set as the `default` relative view.
+N> It is only applicable in `RelativeDialog` mode. If `no relative view` is specified, the picker base will be set as the `default` relative view.
 
 {% tabs %}
 

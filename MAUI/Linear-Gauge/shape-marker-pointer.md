@@ -24,10 +24,10 @@ The following is the default appearance of default shape pointer appearance.
 {% highlight xaml %}
 
 <gauge:SfLinearGauge>
-				<gauge:SfLinearGauge.MarkerPointers>
-					<gauge:LinearShapePointer Value="50"/>
-				</gauge:SfLinearGauge.MarkerPointers>
-			</gauge:SfLinearGauge>
+	<gauge:SfLinearGauge.MarkerPointers>
+		<gauge:LinearShapePointer Value="50"/>
+	</gauge:SfLinearGauge.MarkerPointers>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
@@ -55,11 +55,11 @@ You can change the size of the marker pointer using the [`ShapeHeight`](https://
 {% highlight xaml %}
 
 <gauge:SfLinearGauge>
-				<gauge:SfLinearGauge.MarkerPointers>
-					<gauge:LinearShapePointer Value="50" ShapeHeight="25" 
-											  ShapeWidth="25"/>
-				</gauge:SfLinearGauge.MarkerPointers>
-			</gauge:SfLinearGauge>
+	<gauge:SfLinearGauge.MarkerPointers>
+		<gauge:LinearShapePointer Value="50" ShapeHeight="25" 
+									ShapeWidth="25"/>
+	</gauge:SfLinearGauge.MarkerPointers>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
@@ -89,10 +89,10 @@ You can change the color of the shape pointer using the [`Fill`](https://help.sy
 {% highlight xaml %}
 
 <gauge:SfLinearGauge>
-				<gauge:SfLinearGauge.MarkerPointers>
-					<gauge:LinearShapePointer Value="50" Fill="Red"/>
-				</gauge:SfLinearGauge.MarkerPointers>
-			</gauge:SfLinearGauge>
+	<gauge:SfLinearGauge.MarkerPointers>
+		<gauge:LinearShapePointer Value="50" Fill="Red"/>
+	</gauge:SfLinearGauge.MarkerPointers>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
@@ -121,12 +121,12 @@ You can customize the border using the [`Stroke`](https://help.syncfusion.com/cr
 {% highlight xaml %}
 
 <gauge:SfLinearGauge>
-				<gauge:SfLinearGauge.MarkerPointers>
-					<gauge:LinearShapePointer Value="50" 
-											  StrokeThickness="2" 
-											  Stroke="Red"/>
-				</gauge:SfLinearGauge.MarkerPointers>
-			</gauge:SfLinearGauge>
+	<gauge:SfLinearGauge.MarkerPointers>
+		<gauge:LinearShapePointer Value="50" 
+						StrokeThickness="2" 
+						Stroke="Red"/>
+	</gauge:SfLinearGauge.MarkerPointers>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
@@ -156,11 +156,11 @@ You can apply a shadow using the [`HasShadow`](https://help.syncfusion.com/cr/ma
 {% highlight xaml %}
 
 <gauge:SfLinearGauge>
-				<gauge:SfLinearGauge.MarkerPointers>
-					<gauge:LinearShapePointer Value="50" ShapeType="Circle" 
-											  HasShadow="True"/>
-				</gauge:SfLinearGauge.MarkerPointers>
-			</gauge:SfLinearGauge>
+	<gauge:SfLinearGauge.MarkerPointers>
+		<gauge:LinearShapePointer Value="50" ShapeType="Circle" 
+						HasShadow="True"/>
+	</gauge:SfLinearGauge.MarkerPointers>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
@@ -190,11 +190,11 @@ You can change the marker pointer alignment using the [`Alignment`](https://help
 {% highlight xaml %}
 
  <gauge:SfLinearGauge>
-				<gauge:SfLinearGauge.MarkerPointers>
-					<gauge:LinearShapePointer Value="50" ShapeType="Rectangle" 
-											  Alignment="End" OffsetY="-5"/>
-				</gauge:SfLinearGauge.MarkerPointers>
-			</gauge:SfLinearGauge>
+	<gauge:SfLinearGauge.MarkerPointers>
+		<gauge:LinearShapePointer Value="50" ShapeType="Rectangle" 
+						Alignment="End" OffsetY="-5"/>
+	</gauge:SfLinearGauge.MarkerPointers>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
@@ -216,7 +216,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ![Change shape pointer alignment](images/shape-pointer/shape_marker_alignment.PNG)
 
-## Customize position of the
+## Customize position
 
 By default, the shape pointer is positioned [`Outside`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeElementPosition.html#Syncfusion_Maui_Gauges_GaugeElementPosition_Outside) the scale. This position of the can be changed by the [`Position`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearPointer.html#Syncfusion_Maui_Gauges_LinearPointer_Position) property of pointer. It is possible to position of the the shape pointer [`Inside`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeElementPosition.html#Syncfusion_Maui_Gauges_GaugeElementPosition_Inside), [`Cross`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeElementPosition.html#Syncfusion_Maui_Gauges_GaugeElementPosition_Cross), or [`Outside`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeElementPosition.html#Syncfusion_Maui_Gauges_GaugeElementPosition_Outside) the scale. The following code sample demonstrates how to change the the shape pointer position of the to inside the scale.  
 
@@ -225,11 +225,11 @@ By default, the shape pointer is positioned [`Outside`](https://help.syncfusion.
 {% highlight xaml %}
 
 <gauge:SfLinearGauge>
-				<gauge:SfLinearGauge.MarkerPointers>
-					<gauge:LinearShapePointer Value="50" ShapeType="Circle" 
-											  Position="Cross" Fill="Blue"/>
-				</gauge:SfLinearGauge.MarkerPointers>
-			</gauge:SfLinearGauge>
+	<gauge:SfLinearGauge.MarkerPointers>
+		<gauge:LinearShapePointer Value="50" ShapeType="Circle" 
+							Position="Cross" Fill="Blue"/>
+	</gauge:SfLinearGauge.MarkerPointers>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
@@ -249,9 +249,9 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 {% endtabs %}
 
-![Change shape pointer position of the](images/shape-pointer/shape_pointer_position.PNG)
+![Change shape pointer position](images/shape-pointer/shape_pointer_position.PNG)
 
-## Customize offset of the
+## Customize offset
 
 In addition to position of the the shape pointer, it is also possible to change the the offset of the of the shape pointer. The [`OffsetX`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearMarkerPointer.html#Syncfusion_Maui_Gauges_LinearMarkerPointer_OffsetX) and [`OffsetY`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearMarkerPointer.html#Syncfusion_Maui_Gauges_LinearMarkerPointer_OffsetY) are the distance from the scale, and the cross-positioned elements will not be affected by the and the cross positioned elements will not get affected by the [`OffsetX`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearMarkerPointer.html#Syncfusion_Maui_Gauges_LinearMarkerPointer_OffsetX) and [`OffsetY`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearMarkerPointer.html#Syncfusion_Maui_Gauges_LinearMarkerPointer_OffsetY) values.. The following code sample demonstrates how to change the the [`OffsetX`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearMarkerPointer.html#Syncfusion_Maui_Gauges_LinearMarkerPointer_OffsetX) and [`OffsetY`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearMarkerPointer.html#Syncfusion_Maui_Gauges_LinearMarkerPointer_OffsetY) values. of the shape pointer. 
 
@@ -260,25 +260,25 @@ In addition to position of the the shape pointer, it is also possible to change 
 {% highlight xaml %}
 
  <gauge:SfLinearGauge>
-				<gauge:SfLinearGauge.MarkerPointers>
-					<gauge:LinearShapePointer Value="50" ShapeType="Triangle" 
-											  Position="Inside" OffsetY="25"/>
-				</gauge:SfLinearGauge.MarkerPointers>
-			</gauge:SfLinearGauge>
+	<gauge:SfLinearGauge.MarkerPointers>
+		<gauge:LinearShapePointer Value="50" ShapeType="Triangle" 
+						Position="Inside" OffsetY="25"/>
+	</gauge:SfLinearGauge.MarkerPointers>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
  <gauge:SfLinearGauge>
-				<gauge:SfLinearGauge.MarkerPointers>
-					<gauge:LinearShapePointer Value="50" ShapeType="Triangle" Position="Inside" OffsetY="25"/>
-				</gauge:SfLinearGauge.MarkerPointers>
-			</gauge:SfLinearGauge>
+	<gauge:SfLinearGauge.MarkerPointers>
+		<gauge:LinearShapePointer Value="50" ShapeType="Triangle" Position="Inside" OffsetY="25"/>
+	</gauge:SfLinearGauge.MarkerPointers>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Customize linear gauge bar pointer offset of the](images/shape-pointer/shape_pointer_offset.PNG)
+![Customize linear gauge bar pointer offset](images/shape-pointer/shape_pointer_offset.PNG)
 

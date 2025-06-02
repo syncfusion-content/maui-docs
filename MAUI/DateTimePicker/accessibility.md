@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility with .NET MAUI DateTimePicker Control | Syncfusion<sup>&reg;</sup>
-description: Learn here about accessibility with Syncfusion<sup>&reg;</sup> .NET MAUI DateTimePicker (SfDateTimePicker) control.
+description: Learn here about accessibility with Syncfusion<sup>&reg;</sup> .NET MAUI (SfDateTimePicker) control.
 platform: maui
 control: SfDateTimePicker
 documentation: ug
@@ -14,7 +14,6 @@ The [.NET MAUI DateTimePicker](https://www.syncfusion.com/maui-controls/maui-dat
 ## Header Layout
 
 The SfDateTimePicker control interacts header text with localization of header layout. It contains [DateFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_DateFormat) and [TimeFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_TimeFormat) property of the [DateTimePickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerHeaderView.html). For example,
-
 
 <table>
 <tr>
@@ -30,7 +29,6 @@ The SfDateTimePicker control interacts header text with localization of header l
 <td>10:15:30 AM (or) PM</td>
 </tr>
 </table>
-
 
 ![Header Layout in .NET MAUI DateTimePicker.](images/accessibility/maui-accessibility-datetimepicker-header.png)
 
@@ -49,7 +47,6 @@ The SfDateTimePicker control interacts validation buttons (Ok and Cancel) with l
 ## Picker Items
 
 The SfDateTimePicker control interacts with the item source in picker items. The item source is based on the [Date Format](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerDateFormat.html) and [Time Format](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTimeFormat.html). For example, 
-
 
 <table>
 <tr>
@@ -82,7 +79,6 @@ The SfDateTimePicker control interacts with the item source in picker items. The
 
 ## Keyboard
 `SfDateTimePicker` supports selection using keyboard interactions.
-
 
 <table>
 <tr>

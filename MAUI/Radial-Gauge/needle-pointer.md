@@ -328,7 +328,7 @@ this.Content = sfRadialGauge;
 
 ### Tail length in factor
 
-If the [`TailLengthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_TailLengthUnit) is set as a factor, the provided factor value in the tail length will be multiplied by the axis radius.. The factor value ranges from 0 to 1. For example, if the tail length is set to 0.5, half of the radius value of the axis to tail length.. 
+If the [`TailLengthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.NeedlePointer.html#Syncfusion_Maui_Gauges_NeedlePointer_TailLengthUnit) is set as a factor, the provided factor value in the tail length will be multiplied by the axis radius. The factor value ranges from 0 to 1. For example, if the tail length is set to 0.5, half of the radius value of the axis to tail length.
 
 {% tabs %}
 

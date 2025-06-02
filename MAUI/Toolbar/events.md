@@ -13,13 +13,13 @@ The Toolbar supports the [Tapped](https://help.syncfusion.com/cr/maui/Syncfusion
 
 ## Tapped
 
-A [Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Tapped) event occurs, each time a toolbar item is tapped:
+A [Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Tapped) event occurs, each time a toolbar item is tapped.
 
 The arguments are listed below:
 
 * **Sender** : This contains the SfToolbar object.
 
-* **Tapped**: The tapped action performed on a toolbar element can be found in the [ToolbarTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarTappedEventArgs.html), you can see details about the tapped items:
+* **Tapped**: The tapped action performed on a toolbar element can be found in the [ToolbarTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarTappedEventArgs.html), you can see details about the tapped items.
 
     * **NewToolbarItem** : Returns the tapped toolbar item.
     * **PreviousToolbarItem** : Returns the previously tapped toolbar item.
@@ -49,13 +49,13 @@ private void OnToolbarTapped(object? sender, ToolbarTappedEventArgs e)
 
 ## Item Touch Interaction
 
-An [ItemTouchInteraction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ItemTouchInteraction) event occurs when the toolbar item is touch or pointer action:
+An [ItemTouchInteraction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ItemTouchInteraction) event occurs when the toolbar item is touch or pointer action.
 
 The arguments are listed below:
 
 * **Sender** : This contains the SfToolbar object.
 
-* **ItemTouchInteraction**: The touch action performed on a toolbar element can be found in the [ToolbarItemTouchInteractionEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarItemTouchInteractionEventArgs.html), you can see details about the touch items:
+* **ItemTouchInteraction**: The touch action performed on a toolbar element can be found in the [ToolbarItemTouchInteractionEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarItemTouchInteractionEventArgs.html), you can see details about the touch items.
 
     * **ToolbarItem** : Returns the touch SfToolbarItem.
     * **PointerActions** : Returns the ToolbarItemPointerActions.
@@ -91,7 +91,7 @@ The arguments are listed below:
 
 * **Sender** : This contains the SfToolbar object.
 
-* **ItemLongPressed**: The long press action performed on a toolbar element can be found in the [ToolbarItemLongPressedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarItemLongPressedEventArgs.html), you can see details about the pressed items:
+* **ItemLongPressed**: The long press action performed on a toolbar element can be found in the [ToolbarItemLongPressedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarItemLongPressedEventArgs.html), you can see details about the pressed items.
 
     * **ToolbarItem** : Returns the pressed SfToolbarItem.
 
@@ -125,7 +125,7 @@ The arguments are listed below:
 
 * **Sender** : This contains the SfToolbar object.
 
-* **MoreItemsChanged**: The more items changed action: can be found in the [ToolbarMoreItemsChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarMoreItemsChangedEventArgs.html), you can see details about the more items:
+* **MoreItemsChanged**: The more items changed action: can be found in the [ToolbarMoreItemsChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarMoreItemsChangedEventArgs.html), you can see details about the more items.
 
     * **ToolbarItems** : Returns the list of toolbar item in the more options.
 
@@ -159,7 +159,7 @@ The arguments are listed below:
 
 * **Sender** : This contains the SfToolbar object.
 
-* **MoreButtonTapped**: The more button tapped action: can be found in the [ToolbarMoreButtonTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarMoreButtonTappedEventArgs.html), you can see details about the more button:
+* **MoreButtonTapped**: The more button tapped action: can be found in the [ToolbarMoreButtonTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarMoreButtonTappedEventArgs.html), you can see details about the more button.
 
     * **ToolbarItems** : Returns the list of toolbar item in the more options.
 

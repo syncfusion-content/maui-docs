@@ -213,7 +213,7 @@ Before proceeding, ensure the following are set up:
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker/) and install the latest version.
-3. Ensure that the necessary dependencies are installed correctly and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
+3. Ensure the necessary dependencies are installed correctly and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
 ## Step 3: Register the handler
 

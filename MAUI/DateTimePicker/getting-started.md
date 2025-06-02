@@ -45,23 +45,23 @@ The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/)
 using Syncfusion.Maui.Core.Hosting;
 namespace GettingStarted
 {
-public static class MauiProgram
-{
-public static MauiApp CreateMauiApp()
-{
-var builder = MauiApp.CreateBuilder();
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
 
-builder.ConfigureSyncfusionCore();
-builder
-.UseMauiApp<App>()
-.ConfigureFonts(fonts =>
-{
-fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-});
+            builder.ConfigureSyncfusionCore();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-return builder.Build();
-}
-}
+            return builder.Build();
+        }
+    }
 }
 
 {% endhighlight %}
@@ -90,12 +90,12 @@ using Syncfusion.Maui.Picker;
 
 public partial class MainPage : ContentPage
 {
-public MainPage()
-{
-InitializeComponent();
-SfDateTimePicker picker = new SfDateTimePicker();
-this.Content = picker;
-}
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDateTimePicker picker = new SfDateTimePicker();
+        this.Content = picker;
+    }
 }
 
 {% endhighlight %}
@@ -136,23 +136,23 @@ The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/)
 using Syncfusion.Maui.Core.Hosting;
 namespace GettingStarted
 {
-public static class MauiProgram
-{
-public static MauiApp CreateMauiApp()
-{
-var builder = MauiApp.CreateBuilder();
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
 
-builder.ConfigureSyncfusionCore();
-builder
-.UseMauiApp<App>()
-.ConfigureFonts(fonts =>
-{
-fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-});
+            builder.ConfigureSyncfusionCore();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-return builder.Build();
-}
-}
+            return builder.Build();
+        }
+    }
 }
 
 {% endhighlight %}
@@ -181,18 +181,19 @@ using Syncfusion.Maui.Picker;
 
 public partial class MainPage : ContentPage
 {
-public MainPage()
-{
-InitializeComponent();
-SfDateTimePicker picker = new SfDateTimePicker();
-this.Content = picker;
-}
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDateTimePicker picker = new SfDateTimePicker();
+        this.Content = picker;
+    }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
 {% endtabcontent %}
+
 {% tabcontent JetBrains Rider %}
 
 ## Prerequisites
@@ -225,23 +226,23 @@ The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/)
 using Syncfusion.Maui.Core.Hosting;
 namespace GettingStarted
 {
-public static class MauiProgram
-{
-public static MauiApp CreateMauiApp()
-{
-var builder = MauiApp.CreateBuilder();
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
 
-builder.ConfigureSyncfusionCore();
-builder
-.UseMauiApp<App>()
-.ConfigureFonts(fonts =>
-{
-fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-});
+            builder.ConfigureSyncfusionCore();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-return builder.Build();
-}
-}
+            return builder.Build();
+        }
+    }
 }
 
 {% endhighlight %}
@@ -270,12 +271,12 @@ using Syncfusion.Maui.Picker;
 
 public partial class MainPage : ContentPage
 {
-public MainPage()
-{
-InitializeComponent();
-SfDateTimePicker picker = new SfDateTimePicker();
-this.Content = picker;
-}
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDateTimePicker picker = new SfDateTimePicker();
+        this.Content = picker;
+    }
 }
 
 {% endhighlight %}
@@ -296,9 +297,9 @@ In the SfDateTimePicker control, validation buttons (OK and Cancel) can be custo
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
 
 <picker:SfDateTimePicker x:Name="picker">
-<picker:SfDateTimePicker.FooterView>
-<picker:PickerFooterView ShowOkButton="True" Height="40" />
-</picker:SfDateTimePicker.FooterView>
+    <picker:SfDateTimePicker.FooterView>
+        <picker:PickerFooterView ShowOkButton="True" Height="40" />
+    </picker:SfDateTimePicker.FooterView>
 </picker:SfDateTimePicker>
 
 {% endhighlight %}
@@ -307,8 +308,8 @@ In the SfDateTimePicker control, validation buttons (OK and Cancel) can be custo
 SfDateTimePicker picker = new SfDateTimePicker();
 picker.FooterView= new PickerFooterView()
 {
-ShowOkButton = true,
-Height = 40,
+    ShowOkButton = true,
+    Height = 40,
 };
 
 this.Content = picker;
@@ -326,8 +327,8 @@ The SfDateTimePicker control allows you to change the height and width by using 
 {% highlight xaml tabtitle="XAML" hl_lines="2 3" %}
 
 <picker:SfDateTimePicker x:Name="picker"
-HeightRequest="280"
-WidthRequest="300">
+                    HeightRequest="280"
+                    WidthRequest="300">
 </picker:SfDateTimePicker>
 
 {% endhighlight %}
@@ -335,8 +336,8 @@ WidthRequest="300">
 
 SfDateTimePicker picker = new SfDateTimePicker()
 {
-HeightRequest = 280,
-WidthRequest = 300,
+    HeightRequest = 280,
+    WidthRequest = 300,
 };
 
 this.Content = picker;
@@ -354,7 +355,7 @@ The SfDateTimePicker control allows you to select the date and time by using the
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
 <picker:SfDateTimePicker x:Name="picker"
-SelectedDate="9/7/2023 10:15:22">
+                        SelectedDate="9/7/2023 10:15:22">
 </picker:SfDateTimePicker>
 
 {% endhighlight %}
@@ -362,7 +363,7 @@ SelectedDate="9/7/2023 10:15:22">
 
 SfDateTimePicker picker = new SfDateTimePicker()
 {
-SelectedDate = new DateTime(2023, 09, 07, 10, 15, 22),
+    SelectedDate = new DateTime(2023, 09, 07, 10, 15, 22),
 };
 
 this.Content = picker;

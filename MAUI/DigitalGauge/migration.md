@@ -5,7 +5,7 @@ description: Learn here all about Migrating from Syncfusion<sup>&reg;</sup> Xama
 platform: maui
 control: DigitalGauge
 documentation: ug
-keywords: .NET MAUI, .NET MAUI digital gauge, digital gauge, character segments, digital character, character types, character display types
+keywords: .net maui, digital gauge, character segments, digital character, character types, character display types
 ---  
 
 # Migrate from Xamarin.Forms SfDigitalGauge to .NET MAUI SfDigitalGauge

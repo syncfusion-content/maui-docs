@@ -9,10 +9,10 @@ documentation: ug
 
 # Enable the Tooltip
 
-The tooltip is enabled in the view when the [TooltipText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_TooltipText) or [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_Text) property is set for the ToolbarItems. By default, the tooltip is supported only in the default view.
+The tooltip is enabled in the view when the [ToolTipText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_TooltipText) or [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_Text) property is set for the ToolbarItems. By default, the tooltip is supported only in the default view.
 ## Tooltip Text
 
-You can set the tooltip text by setting the [TooltipText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_TooltipText) property.
+You can set the tooltip text by setting the [ToolTipText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_TooltipText) property.
 The following code sample demonstrates how to create a toolbar control with a tooltip.
 {% tabs %}
 
@@ -28,49 +28,49 @@ The following code sample demonstrates how to create a toolbar control with a to
         <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56">
             <toolbar:SfToolbar.Items>
                 <toolbar:SfToolbarItem Name="Bold"
-                                TooltipText="Bold">
+                                ToolTipText="Bold">
                     <toolbar:SfToolbarItem.Icon>
                         <FontImageSource Glyph="&#xE770;"
                             FontFamily="MauiMaterialAssets" />
                     </toolbar:SfToolbarItem.Icon>
                 </toolbar:SfToolbarItem>
                 <toolbar:SfToolbarItem Name="Underline"
-                                TooltipText="Underline">
+                                ToolTipText="Underline">
                     <toolbar:SfToolbarItem.Icon>
                         <FontImageSource Glyph="&#xE762;"
                             FontFamily="MauiMaterialAssets" />
                     </toolbar:SfToolbarItem.Icon>
                 </toolbar:SfToolbarItem>
                 <toolbar:SfToolbarItem Name="Italic"
-                                TooltipText="Italic">
+                                ToolTipText="Italic">
                     <toolbar:SfToolbarItem.Icon>
                         <FontImageSource Glyph="&#xE771;"
                             FontFamily="MauiMaterialAssets" />
                     </toolbar:SfToolbarItem.Icon>
                 </toolbar:SfToolbarItem>
                 <toolbar:SfToolbarItem Name="AlignLeft"
-                                        TooltipText="Align-Left">
+                                        ToolTipText="Align-Left">
                     <toolbar:SfToolbarItem.Icon>
                         <FontImageSource Glyph="&#xE751;"
                             FontFamily="MauiMaterialAssets" />
                     </toolbar:SfToolbarItem.Icon>
                 </toolbar:SfToolbarItem>
                 <toolbar:SfToolbarItem Name="AlignRight"
-                                        TooltipText="Align-Right">
+                                        ToolTipText="Align-Right">
                     <toolbar:SfToolbarItem.Icon>
                         <FontImageSource Glyph="&#xE753;"
                             FontFamily="MauiMaterialAssets" />
                     </toolbar:SfToolbarItem.Icon>
                 </toolbar:SfToolbarItem>
                 <toolbar:SfToolbarItem Name="AlignCenter"
-                                        TooltipText="Align-Center">
+                                        ToolTipText="Align-Center">
                     <toolbar:SfToolbarItem.Icon>
                         <FontImageSource Glyph="&#xE752;"
                             FontFamily="MauiMaterialAssets" />
                     </toolbar:SfToolbarItem.Icon>
                 </toolbar:SfToolbarItem>
                 <toolbar:SfToolbarItem Name="AlignJustify"
-                                        TooltipText="Align-Justify">
+                                        ToolTipText="Align-Justify">
                     <toolbar:SfToolbarItem.Icon>
                         <FontImageSource Glyph="&#xE74F;"
                             FontFamily="MauiMaterialAssets" />
@@ -102,43 +102,43 @@ namespace ToolbarGettingStarted
                 new SfToolbarItem
                 {
                     Name = "Bold",
-                    TooltipText = "Bold",
+                    ToolTipText = "Bold",
                     Icon = new FontImageSource { Glyph = "\uE770", FontFamily = "MauiMaterialAssets" }
                 },
                 new SfToolbarItem
                 {
                     Name = "Underline",
-                    TooltipText = "Underline",
+                    ToolTipText = "Underline",
                     Icon = new FontImageSource { Glyph = "\uE762", FontFamily = "MauiMaterialAssets" }
                 },
                 new SfToolbarItem
                 {
                     Name = "Italic",
-                    TooltipText = "Italic",
+                    ToolTipText = "Italic",
                     Icon = new FontImageSource { Glyph = "\uE771", FontFamily = "MauiMaterialAssets" }
                 },
                 new SfToolbarItem
                 {
                     Name = "AlignLeft",
-                    TooltipText = "Align-Left",
+                    ToolTipText = "Align-Left",
                     Icon = new FontImageSource { Glyph = "\uE751", FontFamily = "MauiMaterialAssets" }
                 },
                 new SfToolbarItem
                 {
                     Name = "AlignRight",
-                    TooltipText = "Align-Right",
+                    ToolTipText = "Align-Right",
                     Icon = new FontImageSource { Glyph = "\uE753", FontFamily = "MauiMaterialAssets" }
                 },
                 new SfToolbarItem
                 {
                     Name = "AlignCenter",
-                    TooltipText = "Align-Center",
+                    ToolTipText = "Align-Center",
                     Icon = new FontImageSource { Glyph = "\uE752", FontFamily = "MauiMaterialAssets" }
                 },
                 new SfToolbarItem
                 {
                     Name = "AlignJustify",
-                    TooltipText = "Align-Justify",
+                    ToolTipText = "Align-Justify",
                     Icon = new FontImageSource { Glyph = "\uE74F", FontFamily = "MauiMaterialAssets" }
                 }
             };
@@ -174,66 +174,66 @@ The following code sample demonstrates how to create a toolbar control with tool
         <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56">
             <toolbar:SfToolbar.Items>
                 <toolbar:SfToolbarItem Name="Bold"
-                            TooltipText="Bold">
+                            ToolTipText="Bold">
                     <toolbar:SfToolbarItem.Icon>
                         <FontImageSource Glyph="&#xE770;"
                         FontFamily="MauiMaterialAssets" />
                     </toolbar:SfToolbarItem.Icon>
                 </toolbar:SfToolbarItem>
                 <toolbar:SfToolbarItem Name="Underline"
-                            TooltipText="Underline">
+                            ToolTipText="Underline">
                     <toolbar:SfToolbarItem.Icon>
                         <FontImageSource Glyph="&#xE762;"
                         FontFamily="MauiMaterialAssets" />
                     </toolbar:SfToolbarItem.Icon>
                 </toolbar:SfToolbarItem>
                 <toolbar:SfToolbarItem Name="Italic"
-                            TooltipText="Italic">
+                            ToolTipText="Italic">
                     <toolbar:SfToolbarItem.Icon>
                         <FontImageSource Glyph="&#xE771;"
                         FontFamily="MauiMaterialAssets" />
                     </toolbar:SfToolbarItem.Icon>
                 </toolbar:SfToolbarItem>
                 <toolbar:SfToolbarItem Name="AlignLeft"
-                                    TooltipText="Align-Left">
+                                    ToolTipText="Align-Left">
                     <toolbar:SfToolbarItem.Icon>
                         <FontImageSource Glyph="&#xE751;"
                         FontFamily="MauiMaterialAssets" />
                     </toolbar:SfToolbarItem.Icon>
                 </toolbar:SfToolbarItem>
                 <toolbar:SfToolbarItem Name="AlignRight"
-                                    TooltipText="Align-Right">
+                                    ToolTipText="Align-Right">
                     <toolbar:SfToolbarItem.Icon>
                         <FontImageSource Glyph="&#xE753;"
                         FontFamily="MauiMaterialAssets" />
                     </toolbar:SfToolbarItem.Icon>
                 </toolbar:SfToolbarItem>
                 <toolbar:SfToolbarItem Name="AlignCenter"
-                                    TooltipText="Align-Center">
+                                    ToolTipText="Align-Center">
                     <toolbar:SfToolbarItem.Icon>
                         <FontImageSource Glyph="&#xE752;"
                         FontFamily="MauiMaterialAssets" />
                     </toolbar:SfToolbarItem.Icon>
                 </toolbar:SfToolbarItem>
                 <toolbar:SfToolbarItem Name="AlignJustify"
-                                    TooltipText="Align-Justify">
+                                    ToolTipText="Align-Justify">
                     <toolbar:SfToolbarItem.Icon>
                         <FontImageSource Glyph="&#xE74F;"
                         FontFamily="MauiMaterialAssets" />
                     </toolbar:SfToolbarItem.Icon>
                 </toolbar:SfToolbarItem>
             </toolbar:SfToolbar.Items>
-            <toolbar:SfToolbar.TooltipSettings>
-                <toolbar:ToolbarTooltipSettings Background="Red" TooltipPosition="Bottom">
-                    <toolbar:ToolbarTooltipSettings.TextStyle>
+            <toolbar:SfToolbar.ToolTipSettings>
+                <toolbar:ToolbarToolTipSettings Background="Red" ToolTipPosition="Bottom">
+                    <toolbar:ToolbarToolTipSettings.TextStyle>
                         <toolbar:ToolbarTextStyle TextColor="Yellow"
                                     FontSize="18"
                                     FontAttributes="Italic"
                                     FontAutoScalingEnabled="True"
                                     FontFamily="OpenSansSemibold"/>
-                    </toolbar:ToolbarTooltipSettings.TextStyle>
-                </toolbar:ToolbarTooltipSettings>
-            </toolbar:SfToolbar.TooltipSettings>
+                    </toolbar:ToolbarToolTipSettings.TextStyle>
+                </toolbar:ToolbarToolTipSettings>
+            </toolbar:SfToolbar.ToolTipSettings>
         </toolbar:SfToolbar>
     </VerticalStackLayout>
 </ContentPage>
@@ -254,23 +254,23 @@ namespace ToolbarSample
             SfToolbar toolbar = new SfToolbar();
             toolbar.HeightRequest = 56;
             toolbar.Items = itemCollection;
-            toolbar.TooltipSettings = toolTipSettings;
+            toolbar.ToolTipSettings = toolTipSettings;
             this.Content = toolbar;
         }
 
 
         ObservableCollection<BaseToolbarItem> itemCollection = new ObservableCollection<BaseToolbarItem>
             {
-                new SfToolbarItem { Name = "Bold", TooltipText = "Bold", Icon = new FontImageSource { Glyph = "\uE770", FontFamily = "MauiMaterialAssets" } },
-                new SfToolbarItem { Name = "Underline", TooltipText = "Underline", Icon = new FontImageSource { Glyph = "\uE762", FontFamily = "MauiMaterialAssets" } },
-                new SfToolbarItem { Name = "Italic", TooltipText = "Italic", Icon = new FontImageSource { Glyph = "\uE771", FontFamily = "MauiMaterialAssets" } },
-                new SfToolbarItem { Name = "AlignLeft", TooltipText = "Align-Left", Icon = new FontImageSource { Glyph = "\uE751", FontFamily = "MauiMaterialAssets" } },
-                new SfToolbarItem { Name = "AlignRight", TooltipText = "Align-Right", Icon = new FontImageSource { Glyph = "\uE753", FontFamily = "MauiMaterialAssets" } },
-                new SfToolbarItem { Name = "AlignCenter", TooltipText = "Align-Center", Icon = new FontImageSource { Glyph = "\uE752", FontFamily = "MauiMaterialAssets" } },
-                new SfToolbarItem { Name = "AlignJustify", TooltipText = "Align-Justify", Icon = new FontImageSource { Glyph = "\uE74F", FontFamily = "MauiMaterialAssets" } }
+                new SfToolbarItem { Name = "Bold", ToolTipText = "Bold", Icon = new FontImageSource { Glyph = "\uE770", FontFamily = "MauiMaterialAssets" } },
+                new SfToolbarItem { Name = "Underline", ToolTipText = "Underline", Icon = new FontImageSource { Glyph = "\uE762", FontFamily = "MauiMaterialAssets" } },
+                new SfToolbarItem { Name = "Italic", ToolTipText = "Italic", Icon = new FontImageSource { Glyph = "\uE771", FontFamily = "MauiMaterialAssets" } },
+                new SfToolbarItem { Name = "AlignLeft", ToolTipText = "Align-Left", Icon = new FontImageSource { Glyph = "\uE751", FontFamily = "MauiMaterialAssets" } },
+                new SfToolbarItem { Name = "AlignRight", ToolTipText = "Align-Right", Icon = new FontImageSource { Glyph = "\uE753", FontFamily = "MauiMaterialAssets" } },
+                new SfToolbarItem { Name = "AlignCenter", ToolTipText = "Align-Center", Icon = new FontImageSource { Glyph = "\uE752", FontFamily = "MauiMaterialAssets" } },
+                new SfToolbarItem { Name = "AlignJustify", ToolTipText = "Align-Justify", Icon = new FontImageSource { Glyph = "\uE74F", FontFamily = "MauiMaterialAssets" } }
             };
 
-        ToolbarTooltipSettings toolTipSettings = new ToolbarTooltipSettings
+        ToolbarToolTipSettings toolTipSettings = new ToolbarToolTipSettings
         {
             Background = Colors.Red,
             TextStyle = new ToolbarTextStyle
@@ -281,7 +281,7 @@ namespace ToolbarSample
                 FontAutoScalingEnabled = true,
                 FontFamily = "OpenSansSemibold"
             },
-            TooltipPosition = ToolbarRelativePosition.Bottom,
+            ToolTipPosition = ToolbarRelativePosition.Bottom,
         };
     }
 }

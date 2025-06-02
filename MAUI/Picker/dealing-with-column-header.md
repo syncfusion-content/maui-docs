@@ -97,7 +97,7 @@ The .NET MAUI Picker control and column header [TextStyle](https://help.syncfusi
 
 ### Divider color
 
-The separator line in the .NET MAUI Picker control can be customized by setting
+The separator line in the .NET MAUI Picker control can be customized by setting `SfPicker.ColumnHeaderView.DividerColor` property.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}

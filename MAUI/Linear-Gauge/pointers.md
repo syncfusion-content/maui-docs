@@ -29,8 +29,7 @@ The following code sample demonstrates how to update a simple marker Pointer val
 
 <gauge:SfLinearGauge >
 	<gauge:SfLinearGauge.MarkerPointers>
-		<gauge:LinearShapePointer Value="70" IsInteractive="True" 
-									Fill="Blue"/>
+		<gauge:LinearShapePointer Value="70" IsInteractive="True" Fill="Blue"/>
 	</gauge:SfLinearGauge.MarkerPointers>
 </gauge:SfLinearGauge>
 
@@ -68,7 +67,7 @@ N> To work with the [`StepFrequency`](https://help.syncfusion.com/cr/maui/Syncfu
 <gauge:SfLinearGauge>
 	<gauge:SfLinearGauge.MarkerPointers>
 		<gauge:LinearShapePointer Value="70" IsInteractive="True" 
-									StepFrequency="5" Fill="Blue"/>
+							StepFrequency="5" Fill="Blue"/>
 	</gauge:SfLinearGauge.MarkerPointers>
 </gauge:SfLinearGauge>
 
@@ -107,7 +106,7 @@ N> To work with the [`DragOffset`](https://help.syncfusion.com/cr/maui/Syncfusio
 <gauge:SfLinearGauge>
 	<gauge:SfLinearGauge.MarkerPointers>
 		<gauge:LinearShapePointer Value="70" IsInteractive="True" 
-									DragOffset="5" Fill="Blue"/>
+						DragOffset="5" Fill="Blue"/>
 	</gauge:SfLinearGauge.MarkerPointers>
 </gauge:SfLinearGauge>
 

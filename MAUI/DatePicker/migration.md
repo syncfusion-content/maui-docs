@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migrate from Syncfusion® Xamarin SfDatePicker to .NET MAUI SfDatePicker
-description: Learn about migrating from Syncfusion® Xamarin DatePicker to Syncfusion® .NET MAUI DatePicker control.
+title: Migrate from Syncfusion<sup>&reg;</sup> Xamarin SfDatePicker to .NET MAUI SfDatePicker
+description: Learn about migrating from Syncfusion<sup>&reg;</sup> Xamarin DatePicker to Syncfusion<sup>&reg;</sup> .NET MAUI DatePicker control.
 platform: maui
 control: SfDatePicker
 documentation: ug

@@ -9,7 +9,7 @@ documentation: ug
 
 # Customizations in .NET MAUI Time Picker (SfTimePicker)
 
-The [.NET MAUI Time Picker](https://www.syncfusion.com/maui-controls/maui-timePicker) header, column header, footer, and selection views can be customized.
+The [.NET MAUI Time Picker](https://www.syncfusion.com/maui-controls/maui-timepicker) header, column header, footer, and selection views can be customized.
 
 ## Header Customization
 

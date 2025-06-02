@@ -98,18 +98,3 @@ this.Content = datePicker;
 {% endtabs %}
 
 ![Year interval in .NET MAUI Date Picker.](images/intervals/maui-date-picker-year-interval.png)
-## Corrections Made
-
-### Grammar & Clarity
-- Changed `title: Date Interval in .NET MAUI Date Picker Control | Syncfusion<sup>&reg;</sup>` to `title: Date Interval in .NET MAUI Date Picker Control – Syncfusion<sup>&reg;</sup>` for clarity and corrected spacing.
-- Changed `The `SfDatePicker` provides three intervals in [.NET MAUI Date Picker](https://www.syncfusion.com/maui-controls/maui-datepicker).` to `The `SfDatePicker` provides three types of intervals in the [.NET MAUI Date Picker](https://www.syncfusion.com/maui-controls/maui-datepicker).` for improved clarity and flow.
-- Changed `Date Picker provides an option to give an interval` to `The Date Picker provides an option to set an interval` for improved phrasing and consistency across sections.
-
-### Consistency
-- Changed `![Day interval in .NET MAUI Date picker.](images/intervals/maui-date-picker-day-interval.png)` to `![Day interval in .NET MAUI Date Picker.](images/intervals/maui-date-picker-day-interval.png)` for consistent capitalization.
-- Changed `![Month interval in .NET MAUI Date picker.](images/intervals/maui-date-picker-month-interval.png)` to `![Month interval in .NET MAUI Date Picker.](images/intervals/maui-date-picker-month-interval.png)` for consistent capitalization.
-- Changed `![Year interval in .NET MAUI Date picker.](images/intervals/maui-date-picker-year-interval.png)` to `![Year interval in .NET MAUI Date Picker.](images/intervals/maui-date-picker-year-interval.png)` for consistent capitalization.
-
-### Tags Added
-- Included relevant tags in the front matter for better categorization:
-  tags: [.NET MAUI, Syncfusion, SfDatePicker, Date Picker, Date Interval]

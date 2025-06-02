@@ -385,7 +385,7 @@ In Xamarin SfCircularGauge and .NET MAUI SfRadialGauge, pointers can be classifi
 </tr>
 </table>
 
-Note: In .NET MAUI SfRadialGauge [MarkerPointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html) have been divided into two types. They are [ShapePointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ShapePointer.html) and [ContentPointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ContentPointer.html).
+N> In .NET MAUI SfRadialGauge [MarkerPointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.MarkerPointer.html) have been divided into two types. They are [ShapePointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ShapePointer.html) and [ContentPointer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.ContentPointer.html).
 
 ### Marker pointer
 

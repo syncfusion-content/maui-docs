@@ -9,11 +9,11 @@ documentation: ug
 
 # Orientation in .NET MAUI Toolbar (SfToolbar)
 
-This section covers support for horizontal and vertical layouts, allowing flexible arrangement via the [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Orientation) property . The default value is [Horizontal](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Orientation).
+This section covers support for horizontal and vertical layouts, allowing flexible arrangement via the [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Orientation) property . The default value is [Horizontal](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarOrientation.html#Syncfusion_Maui_Toolbar_ToolbarOrientation_Horizontal).
 
 ## Horizontal Toolbar
 
-To set up a horizontal toolbar using the [SfToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html) component in .NET MAUI, you can specify the orientation by setting the [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Orientation) property to [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Orientation). This configuration arranges the toolbar items from left to right across the screen.
+To set up a horizontal toolbar using the [SfToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html) component in .NET MAUI, you can specify the orientation by setting the [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Orientation) property to [Horizontal](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarOrientation.html#Syncfusion_Maui_Toolbar_ToolbarOrientation_Horizontal). This configuration arranges the toolbar items from left to right across the screen.
 
 The following code sample demonstrates how to create a toolbar control with horizontal layout.
 

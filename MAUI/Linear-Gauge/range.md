@@ -82,7 +82,7 @@ For concave shape, override [`UpdateMidRangePath`](https://help.syncfusion.com/c
 <gauge:SfLinearGauge x:Name="gauge">
 	<gauge:SfLinearGauge.Ranges>
 		<local:LinearRangeExt StartWidth="70" MidWidth="-20" 
-								EndWidth="70"/>
+					EndWidth="70"/>
 	</gauge:SfLinearGauge.Ranges>
 </gauge:SfLinearGauge>
 
@@ -91,13 +91,13 @@ For concave shape, override [`UpdateMidRangePath`](https://help.syncfusion.com/c
 {% highlight c# %}
 
 SfLinearGauge gauge = new SfLinearGauge();
-		gauge.Ranges.Add(new LinearRangeExt()
-		{
-			StartWidth = 70,
-			MidWidth = -20,
-			EndWidth = 70,
-		});
-		this.Content= gauge;
+gauge.Ranges.Add(new LinearRangeExt()
+{
+	StartWidth = 70,
+	MidWidth = -20,
+	EndWidth = 70,
+});
+this.Content= gauge;
 
 ...
 
@@ -229,11 +229,11 @@ You can set range color to axis elements using the [`UseRangeColorForAxis`](http
  <gauge:SfLinearGauge x:Name="gauge" UseRangeColorForAxis="True">
 	<gauge:SfLinearGauge.Ranges>
 		<gauge:LinearRange StartValue="0" EndValue="33" 
-							Fill="#ffF45656" Position="Cross"/>
+					Fill="#ffF45656" Position="Cross"/>
 		<gauge:LinearRange StartValue="33" EndValue="66" 
-							Fill="#ffFFC93E" Position="Cross"/>
+					Fill="#ffFFC93E" Position="Cross"/>
 		<gauge:LinearRange StartValue="66" EndValue="100" 
-							Fill="#ff0DC9AB" Position="Cross"/>
+					Fill="#ff0DC9AB" Position="Cross"/>
 	</gauge:SfLinearGauge.Ranges>
 </gauge:SfLinearGauge>
 
@@ -283,11 +283,11 @@ You can add multiple ranges for an axis. The following code example demonstrates
  <gauge:SfLinearGauge>
 	<gauge:SfLinearGauge.Ranges>
 		<gauge:LinearRange StartValue="0" EndValue="50" 
-							Fill="#ffF45656"/>
+					Fill="#ffF45656"/>
 		<gauge:LinearRange StartValue="50" EndValue="70" 
-							Fill="#ffFFC93E"/>
+					Fill="#ffFFC93E"/>
 		<gauge:LinearRange StartValue="70" EndValue="100" 
-							Fill="#ff0DC9AB"/>
+					Fill="#ff0DC9AB"/>
 	</gauge:SfLinearGauge.Ranges>
 </gauge:SfLinearGauge>
 
@@ -333,24 +333,24 @@ Range allows you to add any content as its child using the [`Child`](https://hel
 <gauge:SfLinearGauge x:Name="gauge">
 	<gauge:SfLinearGauge.Ranges>
 		<gauge:LinearRange StartWidth="40" EndWidth="40" 
-							StartValue="0"
-							EndValue="30" Fill="#fb7d55">
+					StartValue="0"
+					EndValue="30" Fill="#fb7d55">
 			<gauge:LinearRange.Child>
 				<Label Text="Bad" HorizontalOptions="Center"
-						VerticalOptions="Center" TextColor="Black"/>
+					VerticalOptions="Center" TextColor="Black"/>
 			</gauge:LinearRange.Child>
 		</gauge:LinearRange>
 		<gauge:LinearRange StartWidth="40" EndWidth="40" 
-							StartValue="30"
-							EndValue="70" Fill="#e8da5d">
+					StartValue="30"
+					EndValue="70" Fill="#e8da5d">
 			<gauge:LinearRange.Child>
 				<Label Text="Good" HorizontalOptions="Center"
-						VerticalOptions="Center" TextColor="Black"/>
+					VerticalOptions="Center" TextColor="Black"/>
 			</gauge:LinearRange.Child>
 		</gauge:LinearRange>
 		<gauge:LinearRange StartWidth="40" EndWidth="40" 
-							StartValue="70"
-							EndValue="100" Fill="#42c09a">
+					StartValue="70"
+					EndValue="100" Fill="#42c09a">
 			<gauge:LinearRange.Child>
 				<Label Text="Excellent"  HorizontalOptions="Center"
 						VerticalOptions="Center" TextColor="Black"/>

@@ -93,20 +93,20 @@ The shape pointer can be customized using the following properties:
 
 SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
-        RadialAxis radialAxis = new RadialAxis();
-        sfRadialGauge.Axes.Add(radialAxis);
+RadialAxis radialAxis = new RadialAxis();
+sfRadialGauge.Axes.Add(radialAxis);
 
-        ShapePointer pointer = new ShapePointer();
-        pointer.Value = 60;
-        pointer.ShapeHeight = 30;
-        pointer.ShapeWidth = 30;
-        pointer.Stroke = Colors.Black;
-        pointer.BorderWidth = 3;
-        pointer.ShapeType = ShapeType.Circle;
-        pointer.Fill = new SolidColorBrush(Colors.LightBlue);
-        radialAxis.Pointers.Add(pointer);
+ShapePointer pointer = new ShapePointer();
+pointer.Value = 60;
+pointer.ShapeHeight = 30;
+pointer.ShapeWidth = 30;
+pointer.Stroke = Colors.Black;
+pointer.BorderWidth = 3;
+pointer.ShapeType = ShapeType.Circle;
+pointer.Fill = new SolidColorBrush(Colors.LightBlue);
+radialAxis.Pointers.Add(pointer);
 
-        this.Content = sfRadialGauge;
+this.Content = sfRadialGauge;
 
 {% endhighlight %}
 
@@ -139,16 +139,16 @@ The shadow can be applied by the [`HasShadow`](https://help.syncfusion.com/cr/ma
 
 SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
-        RadialAxis radialAxis = new RadialAxis();
-        sfRadialGauge.Axes.Add(radialAxis);
+RadialAxis radialAxis = new RadialAxis();
+sfRadialGauge.Axes.Add(radialAxis);
 
-        ShapePointer pointer = new ShapePointer();
-        pointer.Value = 60;
-        pointer.ShapeType = ShapeType.Circle;
-        pointer.HasShadow = true;
-        radialAxis.Pointers.Add(pointer);
+ShapePointer pointer = new ShapePointer();
+pointer.Value = 60;
+pointer.ShapeType = ShapeType.Circle;
+pointer.HasShadow = true;
+radialAxis.Pointers.Add(pointer);
 
-        this.Content = sfRadialGauge;
+this.Content = sfRadialGauge;
 
 {% endhighlight %}
 
@@ -187,17 +187,17 @@ The shape pointer overlay can be customized using the following properties:
 
 SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
-        RadialAxis radialAxis = new RadialAxis();
-        sfRadialGauge.Axes.Add(radialAxis);
+RadialAxis radialAxis = new RadialAxis();
+sfRadialGauge.Axes.Add(radialAxis);
 
-        ShapePointer pointer = new ShapePointer();
-        pointer.Value = 60;
-        pointer.ShapeType = ShapeType.Circle;
-        pointer.OverlayRadius = 20;
-        pointer.IsInteractive = true;
-        radialAxis.Pointers.Add(pointer);
+ShapePointer pointer = new ShapePointer();
+pointer.Value = 60;
+pointer.ShapeType = ShapeType.Circle;
+pointer.OverlayRadius = 20;
+pointer.IsInteractive = true;
+radialAxis.Pointers.Add(pointer);
 
-        this.Content = sfRadialGauge;
+this.Content = sfRadialGauge;
 
 {% endhighlight %}
 

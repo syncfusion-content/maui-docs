@@ -21,7 +21,7 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI Date Time Picker](https://www.syncfusi
 
    ![Column header view in .NET MAUI Date Time picker.](images/overview/maui-date-time-picker-column-header-view.png)
 
-* **Footer view**: Provides validation buttons (OK and Cancel) (OK and Cancel) in the footer view. The footer text and background color can be customized.
+* **Footer view**: Provides validation buttons (OK and Cancel) in the footer view. The footer text and background color can be customized.
 
    ![Footer view in .NET MAUI Date Time picker.](images/overview/maui-date-time-picker-footer-view.png)
 

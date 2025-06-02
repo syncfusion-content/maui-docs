@@ -132,7 +132,7 @@ this.Content = Shimmer;
 
 ## WaveDirection
 
-The direction of the wave in the [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html) view can be customized by using the [WaveDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html#Syncfusion_Maui_Shimmer_SfShimmer_WaveDirection) property. By default, the wave direction is set to `Default`, which animates from top-left to bottom-right. The following wave directions are available in SfShimmer:
+The direction of the wave in the [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html) view can be customized by using the [WaveDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html#Syncfusion_Maui_Shimmer_SfShimmer_WaveDirection) property. By default, the wave direction is set to [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.ShimmerWaveDirection.html#Syncfusion_Maui_Shimmer_ShimmerWaveDirection_Default), which animates from top-left to bottom-right. The following wave directions are available in SfShimmer:
 
 * `Default` - Animates from top-left to bottom-right.
 * `LeftToRight` - Animates from left to right.

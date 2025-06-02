@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Overview | Essential® Essential UI Kit for .NET MAUI | Syncfusion®
-description: Learn all about introduction to Syncfusion® Essential Studio® Essential® Essential UI Kit for .NET MAUI, its elements and more.
+title: Overview | Essential® UI Kit for .NET MAUI | Syncfusion®
+description: Learn all about introduction to Syncfusion® Essential Studio® Essential® UI Kit for .NET MAUI, its elements and more.
 platform: maui
-control: Essential<sup>®</sup> Essential UI Kit for .NET MAUI
+control: Essential<sup>®</sup> UI Kit for .NET MAUI
 documentation: ug
 ---
 
-# Essential<sup>®</sup> Essential UI Kit for .NET MAUI Overview
+# Essential<sup>®</sup> UI Kit for .NET MAUI Overview
 
-The [Syncfusion<sup>®</sup> Essential<sup>®</sup> Essential UI Kit for .NET MAUI](https://github.com/syncfusion/essential-ui-kit-for-.net-maui) is a comprehensive collection of user-friendly, extendable, and adaptable XAML pages designed to accelerate the development of .NET MAUI applications. It offers a range of pre-defined, generic screens that can be easily customized to meet your requirements. Currently, the Essential UI Kit includes screens categorized under the following sections:
+The [Syncfusion<sup>®</sup> Essential<sup>®</sup> UI Kit for .NET MAUI](https://github.com/syncfusion/essential-ui-kit-for-.net-maui) is a comprehensive collection of user-friendly, extendable, and adaptable XAML pages designed to accelerate the development of .NET MAUI applications. It offers a range of pre-defined, generic screens that can be easily customized to meet your requirements. Currently, the Essential UI Kit includes screens categorized under the following sections:
 
 * Forms
 * Catalog

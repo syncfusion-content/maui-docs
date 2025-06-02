@@ -111,8 +111,6 @@ The following code example encapsulates how to populate Country and Cities in ea
 
 In the .NET MAUI Picker control, the `TextColor`, `FontSize`, `FontFamily`, and `FontAttributes` of selected and unselected items can be customized as shown in the following code.
 
-In the .NET MAUI Picker control, the `TextColor`, `FontSize`, `FontFamily`, and `FontAttributes` of selected and unselected items can be customized as shown in the following code.
-
 ### Selected item customization
 
 The selected item [SelectedTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_SelectedTextStyle) can be customized by setting the `SfPicker.SelectedTextStyle` property.

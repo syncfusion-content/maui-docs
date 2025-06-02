@@ -39,7 +39,7 @@ Syncfusion<sup>&reg;</sup> .NET MAUI Time Picker (SfTimePicker) control allows y
 
 * **Intervals**: The time values can be populated individually with Intervals for hours, minutes, and seconds.
 
-   ![Intervals in .NET MAUI Time Picker.](images/overview/maui-time-picker-Intervals.gif)
+   ![Intervals in .NET MAUI Time Picker.](images/overview/maui-time-picker-intervals.gif)
 
 * **Picker interactions**: The .NET MAUI Time Picker allows you to select the times through tap and scroll interaction.
 

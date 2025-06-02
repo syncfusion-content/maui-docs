@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Date restriction in .NET MAUI Date Time Picker Control | Syncfusion®
-description: Learn about date restriction in Syncfusion® .NET MAUI Date Time Picker (SfDateTimePicker) control and its basic features.
+title: Date restriction in .NET MAUI Date Time Picker Control | Syncfusion<sup>&reg;</sup>
+description: Learn about date restriction in Syncfusion<sup>&reg;</sup> .NET MAUI Date Time Picker (SfDateTimePicker) control and its basic features.
 platform: maui
 control: SfDateTimePicker
 documentation: ug
@@ -29,7 +29,7 @@ this.Content = picker;
 {% endhighlight %}  
 {% endtabs %}
 
-   ![Minimum date in .NET MAUI Date Time picker.](https://help.syncfusion.com/cr/maui/images/date-restriction/maui-date-time-picker-minimum-date.png)
+![Minimum date in .NET MAUI Date Time picker.](images/date-restriction/maui-date-time-picker-minimum-date.png)
 
 ## Maximum date
 The DateTime Picker provides an option to restrict the selection of date and time using the [MaximumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_MaximumDate) property in [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html), and you cannot select the date and time beyond the maximum date.
@@ -51,7 +51,7 @@ this.Content = picker;
 {% endhighlight %}  
 {% endtabs %}
 
-   ![Maximum date in .NET MAUI Date Time picker.](https://help.syncfusion.com/cr/maui/images/date-restriction/maui-date-time-picker-maximum-date.png)
+![Maximum date in .NET MAUI Date Time picker.](images/date-restriction/maui-date-time-picker-maximum-date.png)
 
 ## Blackout DateTimes
 
@@ -102,8 +102,8 @@ this.Content = picker;
 {% endhighlight %}  
 {% endtabs %}
 
-![Blackout DateTimes day columns in .NET MAUI Date Time picker.](https://help.syncfusion.com/cr/maui/images/date-restriction/maui-date-time-picker-blackout-date-times-day.png)
+![Blackout date times day columns in .NET MAUI Date Time picker.](images/date-restriction/maui-date-time-picker-blackout-date-times-day.png)
 
-![Blackout DateTimes time columns in .NET MAUI Date Time picker.](https://help.syncfusion.com/cr/maui/images/date-restriction/maui-date-time-picker-blackout-date-times-time.png)
+![Blackout date times time columns in .NET MAUI Date Time picker.](images/date-restriction/maui-date-time-picker-blackout-date-times-time.png)
 
-Note: The `Selection View` will not be applicable when setting `Blackout DateTimes`.
+N> The `Selection View` will not be applicable when setting `Blackout DateTimes`.

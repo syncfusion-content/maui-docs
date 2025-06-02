@@ -49,7 +49,7 @@ Note: This property is automatically changed to `false` when you close the dialo
     <picker:SfTimePicker x:Name="timepicker"
                          Mode="Dialog"/>
     <Button Text="Open Picker" 
-            x:Name="PickerButton"
+            x:Name="pickerButton"
             Clicked="Button_Clicked"
             HorizontalOptions="Center"
             VerticalOptions="Center"
@@ -64,14 +64,14 @@ Note: This property is automatically changed to `false` when you close the dialo
 
 private void Button_Clicked(object sender, System.EventArgs e)
 {
-    this.timePicker.IsOpen = true;
+    this.timepicker.IsOpen = true;
 }
 
 {% endhighlight %}
 
 {% endtabs %}
 
-   ![Dialog mode in .NET MAUI Time Picker.](images/time-Picker-mode/maui-time-Picker-dialog-mode.gif)
+   ![Dialog mode in .NET MAUI Time Picker.](images/time-picker-mode/maui-time-picker-dialog-mode.gif)
 
 ## Relative Dialog Mode
 
@@ -95,8 +95,8 @@ Note: This property is automatically changed to `false` when you close the dialo
                          Mode="RelativeDialog"
                          RelativePosition="AlignTopLeft">
     </picker:SfTimePicker>
-    <Button Text="Open Picker" 
-            x:Name="PickerButton"
+    <Button Text="Open picker" 
+            x:Name="pickerButton"
             Clicked="Button_Clicked"
             HorizontalOptions="Center"
             VerticalOptions="Center"
@@ -159,6 +159,6 @@ private void Button_Clicked(object sender, System.EventArgs e)
 
 {% endtabs %}
 
-   ![Relative dialog mode in .NET MAUI Time Picker.](images/time-Picker-mode/maui-time-Picker-relative-dialog-mode1.png)
+   ![Relative dialog mode in .NET MAUI Time Picker.](images/time-picker-mode/maui-time-picker-relative-dialog-mode1.png)
 
-   ![Relative dialog mode in .NET MAUI Time Picker.](images/time-Picker-mode/maui-time-Picker-relative-dialog-mode2.png)
+   ![Relative dialog mode in .NET MAUI Time Picker.](images/time-picker-mode/maui-time-picker-relative-dialog-mode2.png)

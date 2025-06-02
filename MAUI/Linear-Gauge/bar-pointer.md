@@ -223,8 +223,7 @@ The gradient can be applied by using the [`GradientStops`](https://help.syncfusi
 							CornerStyle="BothCurve" Value="70">
 			<gauge:BarPointer.GradientStops>
 				<gauge:GaugeGradientStop Value="0" Color="Green"/>
-				<gauge:GaugeGradientStop Value="35" 
-											Color="#ff0074E3"/>
+				<gauge:GaugeGradientStop Value="35" Color="#ff0074E3"/>
 			</gauge:BarPointer.GradientStops>
 		</gauge:BarPointer>
 	</gauge:SfLinearGauge.BarPointers>
@@ -264,12 +263,10 @@ By using the [`Child`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauge
 
 <gauge:SfLinearGauge ShowLabels="False" ShowTicks="False">
 	<gauge:SfLinearGauge.LineStyle>
-		<gauge:LinearLineStyle CornerStyle="BothCurve" 
-								Thickness="30"/>
+		<gauge:LinearLineStyle CornerStyle="BothCurve" Thickness="30"/>
 	</gauge:SfLinearGauge.LineStyle>
 	<gauge:SfLinearGauge.BarPointers>
-		<gauge:BarPointer CornerStyle="BothCurve" Value="50" 
-							PointerSize="30">
+		<gauge:BarPointer CornerStyle="BothCurve" Value="50" PointerSize="30">
 			<gauge:BarPointer.Child>
 				<Label Text="50%" Margin="0,0,10,0" 
 						HorizontalOptions="End"

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Formatting in .NET MAUI DateTime Picker Control | Syncfusion®
-description: Learn about formatting in Syncfusion® .NET MAUI DateTime Picker (SfDateTimePicker) control and its basic features.
+title: Formatting in .NET MAUI DateTime Picker Control | Syncfusion<sup>&reg;</sup>
+description: Learn about formatting in Syncfusion<sup>&reg;</sup> .NET MAUI DateTime Picker (SfDateTimePicker) control and its basic features.
 platform: maui
 control: SfDateTimePicker
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migrate from Xamarin to .NET MAUI  Backdrop Page | Syncfusion®
-description: Learn about migrating from the Syncfusion® Xamarin Backdrop Page to Syncfusion® .NET MAUI Backdrop Page Control and more.
+title: Migrate from Xamarin to .NET MAUI  Backdrop Page | Syncfusion<sup>&reg;</sup>
+description: Learn about migrating from the Syncfusion<sup>&reg;</sup> Xamarin Backdrop Page to Syncfusion<sup>&reg;</sup> .NET MAUI Backdrop Page Control and more.
 platform: MAUI
 control: SfBackdropPage
 documentation: UG
@@ -109,7 +109,7 @@ namespace BackdropGettingStarted
                          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                          x:Class="BackdropGettingStarted.BackdropSamplePage"
                          Title="Menu"
-                         xmlns:backdrop="clr-bamespace:Syncfusion.Maui.Backdrop;assembly=Syncfusion.Maui.Backdrop"
+                         xmlns:backdrop="clr-namespace:Syncfusion.Maui.Backdrop;assembly=Syncfusion.Maui.Backdrop"
                          >
     
 </backdrop:SfBackdropPage>
@@ -119,7 +119,7 @@ namespace BackdropGettingStarted
 {% highlight C# %}
 
 using Syncfusion.Maui.Backdrop;
-Namespace BackdropGettingStarted;
+namespace BackdropGettingStarted;
 
 public partial class BackdropSamplePage : SfBackdropPage
 {
