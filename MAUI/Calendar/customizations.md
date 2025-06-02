@@ -714,7 +714,7 @@ internal class SelectionCellTemplate
 {% endhighlight %}
 {% endtabs %}
 
-![Month View Selection Cell Template in .NET MAUI Calendar.](net-maui-month-view-selection-cell-template-1.png)
+![Month View Selection Cell Template in .NET MAUI Calendar.](images/customization/net-maui-month-view-selection-cell-template.png)
 
 N>
 The `SelectionCellTemplate` is applicable only when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html?tabs=tabid-6%2Ctabid-12%2Ctabid-18%2Ctabid-50%2Ctabid-10%2Ctabid-8%2Ctabid-14%2Ctabid-4%2Ctabid-22%2Ctabid-26%2Ctabid-24%2Ctabid-16%2Ctabid-2%2Ctabid-20#Syncfusion_Maui_Calendar_SfCalendar_SelectionMode) is set to Single. It is not applied in Multiple or Range selection modes. You can customize the selection cell appearance using `DataTemplateSelector`.
@@ -785,7 +785,7 @@ internal class SelectionCellTemplate
 {% endhighlight %}
 {% endtabs %}
 
-![Decade View Selection Cell Template in .NET MAUI Calendar.](net-maui-decade-view-selection-cell-template-1.png)
+![Decade View Selection Cell Template in .NET MAUI Calendar.](images/customization/net-maui-decade-view-selection-cell-template.png)
 
 N>
 The `SelectionCellTemplate` is applicable only when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html?tabs=tabid-6%2Ctabid-12%2Ctabid-18%2Ctabid-50%2Ctabid-10%2Ctabid-8%2Ctabid-14%2Ctabid-4%2Ctabid-22%2Ctabid-26%2Ctabid-24%2Ctabid-16%2Ctabid-2%2Ctabid-20#Syncfusion_Maui_Calendar_SfCalendar_SelectionMode) is set to Single and [AllowViewNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html?tabs=tabid-6%2Ctabid-12%2Ctabid-18%2Ctabid-50%2Ctabid-10%2Ctabid-8%2Ctabid-14%2Ctabid-4%2Ctabid-22%2Ctabid-26%2Ctabid-24%2Ctabid-16%2Ctabid-2%2Ctabid-20#Syncfusion_Maui_Calendar_SfCalendar_AllowViewNavigation) is false. It is not applied in Multiple or Range selection modes. You can customize the selection cell appearance using `DataTemplateSelector`.
