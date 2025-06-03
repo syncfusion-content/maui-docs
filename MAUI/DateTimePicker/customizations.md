@@ -48,6 +48,84 @@ this.Content = picker;
 
    ![Set header divider color in .NET MAUI Date Time picker.](images/customizations/maui-date-time-picker-set-header-divider-color.png)
 
+### Custom Header Appearance using Datatemplate
+
+You can customize the datetime picker header appearance by using the [Template]() property of the [DateTimePickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerHeaderView.html).
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfDateTimePicker x:Name="datetimepicker" >
+    <picker:SfDateTimePicker.HeaderTemplate>
+        <DataTemplate>
+            <Grid BackgroundColor="#BB9AB1">
+                <Label HorizontalOptions="Center" VerticalOptions="Center" Text="Select a Date and Time" TextColor="White"/>
+            </Grid>
+        </DataTemplate>
+    </picker:SfDateTimePicker.HeaderTemplate>
+</picker:SfDateTimePicker>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Set header template in .NET MAUI Date Time picker.](maui-date-time-picker-header-template.png)
+
+N> 
+* If a template is applied to the header in the [DateTimePickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerHeaderView.html) will not work except [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_DividerColor) Property.
+
+* When a template is applied to the DateTimePicker Header, the built-in time selection switch becomes non-functional.
+
+### Custom Header appearance using DataTemplateSelector
+
+You can customize the datetime picker header appearance by using the [Template]() property of the [DateTimePickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerHeaderView.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the datetime picker header. This lets you apply a custom data template to the header and customize its appearance based on specific conditions.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<Grid.Resources>
+    <DataTemplate x:Key="todayDatesTimeTemplate">
+        <Grid Background="LightBlue">
+            <Label HorizontalOptions="Center" VerticalOptions="Center" Text="Select a Date and Time" TextColor="Red"/>
+        </Grid>
+    </DataTemplate>
+    <DataTemplate x:Key="normalDatesTimeTemplate">
+        <Grid Background="LightGreen">
+            <Label HorizontalOptions="Center" VerticalOptions="Center" Text="Select a Date and Time" TextColor="Orange"/>
+        </Grid>
+    </DataTemplate>
+    <local:DateTimeTemplateSelector x:Key="headerTemplateSelector" TodayDatesTimeTemplate="{StaticResource todayDatesTimeTemplate}"  NormalDatesTimeTemplate="{StaticResource normalDatesTimeTemplate}"/>
+    <picker:SfDateTimePicker x:Name="datetimepicker" HeaderTemplate="{StaticResource headerTemplateSelector}">
+    </picker:SfDateTimePicker>
+</Grid.Resources>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+public class DateTimeTemplateSelector : DataTemplateSelector
+{
+    public DateTimeTemplateSelector()
+    {
+    }
+    public DataTemplate TodayDatesTimeTemplate { get; set; }
+    public DataTemplate NormalDatesTimeTemplate { get; set; }
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        var Details = item as SfDateTimePicker;
+        if (Details != null)
+        {
+            if (Details.SelectedDate < DateTime.Now.Date)
+                return TodayDatesTimeTemplate;
+        }
+        return NormalDatesTimeTemplate;
+    }
+}
+
+{% endtabs %}
+
 ### Customization of the header
 
 Customize the header text style and background color of the `Date Time picker` using the [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerHeaderView.html#Syncfusion_Maui_Picker_DateTimePickerHeaderView_TextStyle) and [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerHeaderView.html#Syncfusion_Maui_Picker_DateTimePickerHeaderView_Background) properties of the [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_HeaderView) in the[DateTimePickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerHeaderView.html).
@@ -197,6 +275,102 @@ this.Content = picker;
 
    ![Column header customization in .NET MAUI Date Time picker.](images/customizations/maui-date-time-picker-column-header-customization.png)
 
+### Custom Column Header Appearance using Datatemplate
+
+You can customize the datetime picker column header appearance by using the [Template]() property of the [DateTimePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerColumnHeaderView.html).
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfDateTimePicker x:Name="datetimepicker" >
+    <picker:SfDateTimePicker.ColumnHeaderTemplate>
+        <DataTemplate>
+            <Grid BackgroundColor="#BB9AB1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Year" Grid.Column="0" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Text="Month" Grid.Column="1" TextColor="White"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Text="Day" Grid.Column="2" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            </Grid>
+        </DataTemplate>
+    </picker:SfDateTimePicker.ColumnHeaderTemplate>
+</picker:SfDateTimePicker>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Set column header template in .NET MAUI Date Time picker.](maui-date-time-picker-column-template.png)
+
+N> If a template is applied to the column header in the [DateTimePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerColumnHeaderView.html), the remaining column header properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_DateTimePickerColumnHeaderView_DividerColor) Property.
+
+### Custom Column Header appearance using DataTemplateSelector
+
+You can customize the datetime picker column header appearance by using the [Template]() property of the [DateTimePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerColumnHeaderView.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the datetime picker column header. This lets you select a different data template for each column header and customize the appearance of a specific column header based on certain conditions.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<Grid.Resources>
+    <DataTemplate x:Key="todayDatesTimeTemplate">
+        <Grid Background="LightBlue">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Year" Grid.Column="0" TextColor="Red" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            <Label Text="Month" Grid.Column="1" TextColor="Red"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            <Label Text="Day" Grid.Column="2" TextColor="Red" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        </Grid>
+    </DataTemplate>
+    <DataTemplate x:Key="normalDatesTimeTemplate">
+        <Grid Background="LightGreen">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Year" Grid.Column="0" TextColor="Orange" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            <Label Text="Month" Grid.Column="1" TextColor="Orange"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            <Label Text="Day" Grid.Column="2" TextColor="Orange" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            </Grid>
+    </DataTemplate>
+    <local:DateTimeTemplateSelector x:Key="columnHeaderTemplateSelector" TodayDatesTimeTemplate="{StaticResource todayDatesTimeTemplate}"  NormalDatesTimeTemplate="{StaticResource normalDatesTimeTemplate}"/>
+    <picker:SfDateTimePicker x:Name="datetimepicker" ColumnHeaderTemplate="{StaticResource columnHeaderTemplateSelector}">
+    </picker:SfDateTimePicker>
+</Grid.Resources>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+public class DateTimeTemplateSelector : DataTemplateSelector
+{
+    public DateTimeTemplateSelector()
+    {
+    }
+    public DataTemplate TodayDatesTimeTemplate { get; set; }
+    public DataTemplate NormalDatesTimeTemplate { get; set; }
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        var Details = item as SfDateTimePicker;
+        if (Details != null)
+        {
+            if (Details.SelectedDate < DateTime.Now.Date)
+                return TodayDatesTimeTemplate;
+        }
+        return NormalDatesTimeTemplate;
+    }
+}
+
+{% endtabs %}
+
 ## Footer Customization
 
 Customize the Date Time Picker footer view by using the `FooterView` property of the `SfDateTimePicker`.
@@ -299,6 +473,96 @@ this.Content = picker;
 {% endtabs %}
 
    ![Footer customization in .NET MAUI Date Time picker.](images/customizations/maui-date-time-picker-footer-customization.png)
+
+### Custom Footer Header Appearance using Datatemplate
+
+You can customize the datetime picker footer appearance by using the [Template]() property of the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html).
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfDateTimePicker x:Name="datetimepicker">
+    <picker:SfDateTimePicker.FooterTemplate>
+        <DataTemplate>
+            <Grid BackgroundColor="#BB9AB1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Text="Decline" TextColor="White" Background="Transparent" />
+                <Button Grid.Column="1" Text="Accept" TextColor="White" Background="Transparent" />
+            </Grid>
+        </DataTemplate>
+    </picker:SfDateTimePicker.FooterTemplate>
+</picker:SfDateTimePicker>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Footer template in .NET MAUI Date Time picker.](maui-date-time-footer-template.png)
+
+N> If a template is applied to the footer in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html), the remaining footer properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_DividerColor) Property.
+
+### Custom Footer appearance using DataTemplateSelector
+
+You can customize the datetime picker footer appearance by using the [Template]() property of the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the datetime picker footer. This lets you apply a custom data template to the footer and customize its appearance based on specific conditions.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<Grid.Resources>
+    <DataTemplate x:Key="todayDatesTimeTemplate">
+        <Grid Background="LightBlue">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Text="Decline" TextColor="Red" Background="Transparent" />
+            <Button Grid.Column="1" Text="Accept" TextColor="Red" Background="Transparent" />
+        </Grid>
+    </DataTemplate>
+    <DataTemplate x:Key="normalDatesTimeTemplate">
+        <Grid Background="LightGreen">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Text="Decline" TextColor="Orange" Background="Transparent" />
+            <Button Grid.Column="1" Text="Accept" TextColor="Orange" Background="Transparent" />
+        </Grid>
+    </DataTemplate>
+    <local:DateTimeTemplateSelector x:Key="footerTemplateSelector" TodayDatesTimeTemplate="{StaticResource todayDatesTimeTemplate}"  NormalDatesTimeTemplate="{StaticResource normalDatesTimeTemplate}"/>
+    <picker:SfDateTimePicker x:Name="datetimepicker" FooterTemplate="{StaticResource footerTemplateSelector}">
+    </picker:SfDateTimePicker>
+</Grid.Resources>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+public class DateTimeTemplateSelector : DataTemplateSelector
+{
+    public DateTimeTemplateSelector()
+    {
+    }
+    public DataTemplate TodayDatesTimeTemplate { get; set; }
+    public DataTemplate NormalDatesTimeTemplate { get; set; }
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        var Details = item as SfDateTimePicker;
+        if (Details != null)
+        {
+            if (Details.SelectedDate < DateTime.Now.Date)
+                return TodayDatesTimeTemplate;
+        }
+        return NormalDatesTimeTemplate;
+    }
+}
+
+{% endtabs %}
 
 ## Selection View Customization
 
