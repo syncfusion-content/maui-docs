@@ -38,6 +38,7 @@ Ensure the following are installed before you begin:
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% tabs %}
+
 {% highlight csharp tabtitle="MauiProgram.cs" hl_lines="2 13" %}
 
 using Microsoft.Extensions.Logging;
@@ -134,6 +135,7 @@ Make sure the following are installed:
 The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% highlight c# hl_lines="6 17" %}
+
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using Microsoft.Maui.Controls.Compatibility;
@@ -210,6 +212,7 @@ Inside the [SfDockLayout]() control, child views can be arranged using the [Dock
 {% tabs %}
 
 {% highlight xaml tabtitle="XAML" %}
+
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:dx="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
@@ -226,6 +229,7 @@ Inside the [SfDockLayout]() control, child views can be arranged using the [Dock
     </ContentPage.Content>
     
 </ContentPage>
+
 {% endhighlight %}
 
 {% highlight C# %}
@@ -256,4 +260,4 @@ namespace DockLayoutGettingStarted
 
 ![Output of DockLayout View](DockLayout-Images/maui-docklayout-getting-started.png)
 
-You can access a complete getting started sample from this [link.]()
+You can access a complete getting started sample from this [link.](https://github.com/SyncfusionExamples/GettingStarted_DockLayout_MAUI)
