@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data validation in .NET MAUI DataForm control | Syncfusion<sup>&reg;</sup>
+title: Data validation in .NET MAUI DataForm control | Syncfusion
 description: Learn about the validation feature in Syncfusion<sup>&reg;</sup> .NET MAUI DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
 platform: maui
 control: SfDataForm

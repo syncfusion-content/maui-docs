@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with MAUI Card Control | Syncfusion<sup>&reg;</sup>
+title: Getting Started with MAUI Card Control | Syncfusion
 description:  Learn here about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Cards (SfCards) control and its basic features.
 platform: maui
 control: SfCard
