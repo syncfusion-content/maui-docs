@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Header, Footer and Selection in .NET MAUI Picker (SfPicker) Control | Syncfusion<sup>&reg;</sup>
-description: Learn here all about Header, Footer and Selection view with Syncfusion<sup>&reg;</sup> .NET MAUI Picker (SfPicker) control.
+title: Header, footer and selection in .NET MAUI Picker Control | Syncfusion<sup>&reg;</sup>
+description: Learn here all about header, footer and selection view with Syncfusion<sup>&reg;</sup> .NET MAUI Picker (SfPicker) control.
 platform: maui
 control: SfPicker
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Dealing with Header, Footer and Selection in MAUI Picker (SfPicker)
 
-This section explains the Header, Footer and Selection view customization of Picker control.
+This section explains the header, footer and selection view customization of picker control.
 
-## Enable or disable Header
+## Enable or disable header
 
-SfPicker can enable or disable the Header section by setting the `SfPicker.HeaderView.Height` property to a value greater than 0. The default value of the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_Height) property is 0.
+SfPicker enables or disables the header section by setting the `SfPicker.HeaderView.Height` property to a value greater than 0. The default value of the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_Height) property is 0.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
@@ -32,15 +32,15 @@ SfPicker can enable or disable the Header section by setting the `SfPicker.Heade
 {% endhighlight %}
 {% endtabs %}
 
-   ![Enable Header in .NET MAUI Picker (SfPicker).](images/custom-views/maui-picker-enable-header.png)
+   ![Enable header in .NET MAUI Picker.](images/custom-views/maui-picker-enable-header.png)
 
 ## Header customization
 
-SfPicker allows customization of Background, text style.
+SfPicker allows customizing background, text style.
 
 ### Background
 
-The Header’s [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_Background) color can be customized by setting the the `SfPicker.HeaderView.Background` property.
+The Header’s [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_Background) color can be customized by setting the `SfPicker.HeaderView.Background` property.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
@@ -59,11 +59,11 @@ The Header’s [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 {% endhighlight %}
 {% endtabs %}
 
-   ![Picker Header Background in .NET MAUI Picker (SfPicker).](images/custom-views/maui-picker-header-background.png)
+   ![Picker header background in .NET MAUI Picker.](images/custom-views/maui-picker-header-background.png)
 
 ### Header text style
 
-The .NET MAUI Picker (SfPicker) control and Header [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_TextStyle) such as the `TextColor`, `FontSize`, `FontFamily`, and `FontAttributes` can be customized as shown in the following code examples.
+The .NET MAUI Picker control and header [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_TextStyle) such as `TextColor`, `FontSize`, `FontFamily`, and `FontAttributes` can be customized as shown in the following code.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
@@ -93,11 +93,11 @@ The .NET MAUI Picker (SfPicker) control and Header [TextStyle](https://help.sync
 {% endhighlight %}
 {% endtabs %}
 
-   ![Header text style in .NET MAUI Picker (SfPicker).](images/custom-views/maui-picker-header-text-style.png)
+   ![Header text style in .NET MAUI Picker.](images/custom-views/maui-picker-header-text-style.png)
 
 ### Divider color
 
-The Header’s [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_DividerColor) color can be customized by setting the the `SfPicker.HeaderView.DividerColor` property.
+The Header’s [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_DividerColor) color can be customized by setting the `SfPicker.HeaderView.DividerColor` property.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
@@ -116,11 +116,86 @@ The Header’s [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 {% endhighlight %}
 {% endtabs %}
 
-   ![Header divider color in .NET MAUI Picker (SfPicker).](images/custom-views/maui-picker-header-divider-color.png)
+   ![Header divider color in .NET MAUI Picker.](images/custom-views/maui-picker-header-divider-color.png)
 
-## Enable or disable Footer
+### Custom Header Appearance using Datatemplate
 
-SfPicker can enable or disable the Footer section by setting the `SfPicker.FooterView.Height` property to a value greater than 0. The default value of the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_Height) property is 0.
+You can customize the picker header appearance by using the [Template]() property of the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html).
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<Picker:SfPicker x:Name="picker" >
+    <picker:SfPicker.HeaderTemplate>
+        <DataTemplate>
+            <Grid BackgroundColor="#BB9AB1">
+                <Label HorizontalOptions="Center" VerticalOptions="Center" Text="Select a Color" TextColor="White"/>
+            </Grid>
+        </DataTemplate>
+    </picker:SfPicker.HeaderTemplate>
+</Picker:SfPicker>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Header template in .NET MAUI Picker.](maui-picker-header-template.png)
+
+N> If a template is applied to the header in the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html), the remaining header properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_DividerColor) Property.
+
+### Custom Header appearance using DataTemplateSelector
+
+You can customize the picker header appearance by using the [Template]() property of the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the picker header. This lets you apply a custom data template to the header and customize its appearance based on specific conditions.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<Grid.Resources>
+    <DataTemplate x:Key="selectedItemTemplate">
+    <Grid Background = "LightBlue" >
+        <Label Text="Select a Color"  HorizontalOptions="Center" VerticalOptions="Center" TextColor="Red"/>
+    </Grid>
+</DataTemplate>
+<DataTemplate x:Key="nonSelectedItemTemplate">
+    <Grid Background="LightGreen" >
+        <Label Text="Select a Color"  HorizontalOptions="Center" VerticalOptions="Center" TextColor="Orange"/>
+    </Grid>
+</DataTemplate>
+    <local:PickerTemplateSelector x:Key="headerTemplateSelector" SelectedItemTemplate="{StaticResource selectedItemTemplate}"  NonSelectedItemTemplate="{StaticResource nonSelectedItemTemplate}"/>
+    <picker:SfPicker x:Name="picker" HeaderTemplate="{StaticResource headerTemplateSelector}">
+    </picker:SfPicker>
+</Grid.Resources>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+public class PickerTemplateSelector : DataTemplateSelector
+{
+    public PickerTemplateSelector()
+    {
+    }
+    public DataTemplate SelectedItemTemplate { get; set; }
+    public DataTemplate NonSelectedItemTemplate { get; set; }
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {      
+        var Details = item as PickerColumn;
+        if (Details != null)
+        {
+            if (Details.SelectedIndex <= 4)
+                return SelectedItemTemplate;
+        }
+        return NonSelectedItemTemplate;
+    }
+}
+
+{% endtabs %}
+
+## Enable or disable footer
+
+SfPicker enables or disables the footer section by setting the `SfPicker.FooterView.Height` property to a value greater than 0. The default value of the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_Height) property is 0.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
@@ -139,15 +214,15 @@ SfPicker can enable or disable the Footer section by setting the `SfPicker.Foote
 {% endhighlight %}
 {% endtabs %}
 
-   ![Enable Footer in .NET MAUI Picker (SfPicker).](images/custom-views/maui-picker-enable-footer.png)
+   ![Enable Footer in .NET MAUI Picker.](images/custom-views/maui-picker-enable-footer.png)
 
 ## Footer view customization
 
-SfPicker allows customization of the Background, text, and text style of the `OK` and `Cancel` buttons and the visibility of the OK button.
+SfPicker allows customizing the background, text, and text style of the `ok` and `cancel` buttons and the visibility of the ok button.
 
 ### Background
 
-The Header’s [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_Background) color can be customized by setting the the `SfPicker.HeaderView.Background` property.
+The Header’s [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_Background) color can be customized by setting the `SfPicker.HeaderView.Background` property.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
@@ -166,11 +241,11 @@ The Header’s [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 {% endhighlight %}
 {% endtabs %}
 
-   ![Footer Background in .NET MAUI Picker (SfPicker).](images/custom-views/maui-picker-footer-background.png)
+   ![Footer background in .NET MAUI Picker.](images/custom-views/maui-picker-footer-background.png)
 
 ### Buttons customization
 
-SfPicker can enable or disable the `OK` button by setting the `SfPicker.FooterView.ShowOkButton` property to true or false. The default value of the [ShowOkButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_ShowOkButton) property is true. Customize the text of the `OK` and `Cancel` buttons using the [OkButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_OkButtonText) and [CancelButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_CancelButtonText) property.
+SfPicker enables or disables the `ok` button by setting the `SfPicker.FooterView.ShowOkButton` property to true or false. The default value of the [ShowOkButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_ShowOkButton) property is true. Customize the text of the `ok` and `cancel` buttons using the [OkButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_OkButtonText) and [CancelButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_CancelButtonText) property.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
@@ -194,11 +269,11 @@ SfPicker can enable or disable the `OK` button by setting the `SfPicker.FooterVi
 {% endhighlight %}
 {% endtabs %}
 
-   ![Footer button customization in .NET MAUI Picker (SfPicker).](images/custom-views/maui-picker-footer-custom-button.png)
+   ![Footer button customization in .NET MAUI Picker.](images/custom-views/maui-picker-footer-custom-button.png)
 
 ### Footer text style
 
-The .NET MAUI Picker (SfPicker) control and Footer [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_TextStyle) such as the `TextColor`, `FontSize`, `FontFamily`, and `FontAttributes` can be customized as shown in the following code examples.
+The .NET MAUI Picker control and footer [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_TextStyle) such as `TextColor`, `FontSize`, `FontFamily`, and `FontAttributes` can be customized as shown in the following code.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
@@ -226,11 +301,11 @@ The .NET MAUI Picker (SfPicker) control and Footer [TextStyle](https://help.sync
 {% endhighlight %}
 {% endtabs %}
 
-   ![Footer text style in .NET MAUI Picker (SfPicker).](images/custom-views/maui-picker-footer-text-style.png)
+   ![Footer text style in .NET MAUI Picker.](images/custom-views/maui-picker-footer-text-style.png)
 
 ### Divider color
 
-The Footer’s [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_DividerColor) color can be customized by setting the the `SfPicker.FooterView.DividerColor` property.
+The Footer’s [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_DividerColor) color can be customized by setting the `SfPicker.FooterView.DividerColor` property.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
@@ -249,11 +324,101 @@ The Footer’s [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 {% endhighlight %}
 {% endtabs %}
 
-   ![Footer divider color in .NET MAUI Picker (SfPicker).](images/custom-views/maui-picker-footer-divider-color.png)
+   ![Footer divider color in .NET MAUI Picker.](images/custom-views/maui-picker-footer-divider-color.png)
+
+### Custom Footer Appearance using Datatemplate
+
+You can customize the picker footer appearance by using the [Template]() property of the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html).
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<Picker:SfPicker x:Name="picker" >
+    <picker:SfPicker.FooterTemplate>
+        <DataTemplate>
+            <Grid BackgroundColor="#BB9AB1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Text="Decline" TextColor="White" Background="Transparent" />
+                <Button Grid.Column="1" Text="Accept" TextColor="White" Background="Transparent" />
+            </Grid>
+        </DataTemplate>
+    </picker:SfPicker.FooterTemplate>
+</Picker:SfPicker>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Footer template in .NET MAUI Picker.](maui-picker-footer-template.png)
+
+N> If a template is applied to the footer in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html), the remaining footer properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_DividerColor) Property.
+
+### Custom Footer appearance using DataTemplateSelector
+
+You can customize the picker footer appearance by using the [Template]() property of the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the picker footer. This lets you apply a custom data template to the footer and customize its appearance based on specific conditions.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<Grid.Resources>
+    <DataTemplate x:Key="selectedItemTemplate">
+        <Grid Background = "LightBlue" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Text="Decline" TextColor="White" Background="Transparent" />
+                <Button Grid.Column="1" Text="Accept" TextColor="White" Background="Transparent" /> 
+        </Grid>
+    </DataTemplate>
+    <DataTemplate x:Key="nonSelectedItemTemplate">
+        <Grid Background="LightGreen" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Text="Decline" TextColor="White" Background="Transparent" />
+                <Button Grid.Column="1" Text="Accept" TextColor="White" Background="Transparent" />
+            </Grid>
+    </DataTemplate>
+    <local:PickerTemplateSelector x:Key="footerTemplateSelector" SelectedItemTemplate="{StaticResource selectedItemTemplate}"  NonSelectedItemTemplate="{StaticResource nonSelectedItemTemplate}"/>
+    <picker:SfPicker x:Name="picker" FooterTemplate="{StaticResource footerTemplateSelector}">
+    </picker:SfPicker>
+</Grid.Resources>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+public class PickerTemplateSelector : DataTemplateSelector
+{
+    public PickerTemplateSelector()
+    {
+    }
+    public DataTemplate SelectedItemTemplate { get; set; }
+    public DataTemplate NonSelectedItemTemplate { get; set; }
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        var Details = item as PickerColumn;
+        if (Details != null)
+        {
+            if (Details.SelectedIndex <= 4)
+                return SelectedItemTemplate;
+        }
+        return NonSelectedItemTemplate;
+    }
+}
+
+{% endtabs %}
 
 ## Perform validation with default validation button
 
-Picker allows validation based on the OK or Cancel button by hooKing into the `SfPicker.OkButtonClicked` and `SfPicker.CancelButtonClicked` In this event, from the `SelectionChangedEvent` argument, current selected items can be obtained.
+Picker allows validation based on the OK or Cancel button by hooking into the `SfPicker.OkButtonClicked` and `SfPicker.CancelButtonClicked` In this event, from the `SelectionChangedEvent` argument, current selected items can be obtained.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -270,12 +435,12 @@ Picker allows validation based on the OK or Cancel button by hooKing into the `S
     this.picker.CancelButtonClicked += SfPicker_CancelButtonClicked;
     private void SfPicker_OkButtonClicked(object sender, EventArgs e)
     {
-      // Perform any operation.
+      //// Perform any operation.
     }
 
     private void SfPicker_CancelButtonClicked(object sender, EventArgs e)
     {
-      // Perform any operation.
+      //// Perform any operation.
     }
     
 {% endhighlight %}
@@ -283,11 +448,11 @@ Picker allows validation based on the OK or Cancel button by hooKing into the `S
 
 ## Selection view customization
 
-Customize the Picker Selection view by using the SelectionView property of the SfPicker.
+Customize the picker selection view by using the SelectionView property of the SfPicker.
 
-### Background and Selection shape customization
+### Background and selection shape customization
 
-In the SfPicker control, the CornerRadius, strOKe, Background and Padding can be customized by setting the the [CornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerSelectionView.html#Syncfusion_Maui_Picker_PickerSelectionView_CornerRadius), [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerSelectionView.html#Syncfusion_Maui_Picker_PickerSelectionView_Stroke), [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerSelectionView.html#Syncfusion_Maui_Picker_PickerSelectionView_Background) and [Padding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerSelectionView.html#Syncfusion_Maui_Picker_PickerSelectionView_Padding) properties in the [PickerSelectionView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerSelectionView.html).
+In the SfPicker control, the corner radius, stroke, background and padding can be customized by setting the [CornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerSelectionView.html#Syncfusion_Maui_Picker_PickerSelectionView_CornerRadius), [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerSelectionView.html#Syncfusion_Maui_Picker_PickerSelectionView_Stroke), [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerSelectionView.html#Syncfusion_Maui_Picker_PickerSelectionView_Background) and [Padding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerSelectionView.html#Syncfusion_Maui_Picker_PickerSelectionView_Padding) properties in the [PickerSelectionView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerSelectionView.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
@@ -301,11 +466,11 @@ In the SfPicker control, the CornerRadius, strOKe, Background and Padding can be
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 
-SfPicker picker  = new SfPicker();
-picker .SelectionView = new PickerSelectionView()
+SfPicker picker = new SfPicker();
+picker.SelectionView = new PickerSelectionView()
 {
     CornerRadius = 10,
-    StroKe = Color.FromArgb("#36454F"),
+    Stroke = Color.FromArgb("#36454F"),
     Padding = new Thickness(10, 5, 10, 5),
     Background = Color.FromArgb("#808080"),
 };
@@ -315,4 +480,4 @@ this.Content = picker;
 {% endhighlight %}
 {% endtabs %}
 
-   ![Selected item customization in .NET MAUI Picker (SfPicker).](images/custom-views/maui-picker-selected-item-customization.png)
+   ![Selected item customization in .NET MAUI Picker.](images/custom-views/maui-picker-selected-item-customization.png)
