@@ -120,7 +120,7 @@ The Header’s [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
 ### Custom Header Appearance using Datatemplate
 
-You can customize the picker header appearance by using the [Template]() property of the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html).
+You can customize the picker header appearance by using the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_HeaderTemplate) property in the [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html).
 
 {% tabs %}
 
@@ -140,13 +140,13 @@ You can customize the picker header appearance by using the [Template]() propert
 
 {% endtabs %}
 
-![Header template in .NET MAUI Picker.](maui-picker-header-template.png)
+![Header template in .NET MAUI Picker.](images/custom-views/maui-picker-header-template.png)
 
 N> If a template is applied to the header in the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html), the remaining header properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_DividerColor) Property.
 
 ### Custom Header appearance using DataTemplateSelector
 
-You can customize the picker header appearance by using the [Template]() property of the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the picker header. This lets you apply a custom data template to the header and customize its appearance based on specific conditions.
+You can customize the picker header appearance by using the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_HeaderTemplate) property in the [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the picker header. This lets you apply a custom data template to the header and customize its appearance based on specific conditions.
 
 {% tabs %}
 
@@ -190,6 +190,8 @@ public class PickerTemplateSelector : DataTemplateSelector
         return NonSelectedItemTemplate;
     }
 }
+
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -328,7 +330,7 @@ The Footer’s [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
 ### Custom Footer Appearance using Datatemplate
 
-You can customize the picker footer appearance by using the [Template]() property of the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html).
+You can customize the picker footer appearance by using the [FooterTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_FooterTemplate) property in the [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html).
 
 {% tabs %}
 
@@ -353,13 +355,13 @@ You can customize the picker footer appearance by using the [Template]() propert
 
 {% endtabs %}
 
-![Footer template in .NET MAUI Picker.](maui-picker-footer-template.png)
+![Footer template in .NET MAUI Picker.](images/custom-views/maui-picker-footer-template.png)
 
 N> If a template is applied to the footer in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html), the remaining footer properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_DividerColor) Property.
 
 ### Custom Footer appearance using DataTemplateSelector
 
-You can customize the picker footer appearance by using the [Template]() property of the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the picker footer. This lets you apply a custom data template to the footer and customize its appearance based on specific conditions.
+You can customize the picker footer appearance by using the [FooterTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_FooterTemplate) property in the [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the picker footer. This lets you apply a custom data template to the footer and customize its appearance based on specific conditions.
 
 {% tabs %}
 
@@ -413,6 +415,8 @@ public class PickerTemplateSelector : DataTemplateSelector
         return NonSelectedItemTemplate;
     }
 }
+
+{% endhighlight %}
 
 {% endtabs %}
 
