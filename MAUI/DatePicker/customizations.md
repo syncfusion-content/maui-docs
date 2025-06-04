@@ -194,6 +194,8 @@ public class DateTemplateSelector : DataTemplateSelector
     }
 }
 
+{% endhighlight %}
+
 {% endtabs %}
 
 ## Column Header Customization
