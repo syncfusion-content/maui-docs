@@ -405,6 +405,8 @@ public class DateTemplateSelector : DataTemplateSelector
     }
 }
 
+{% endhighlight %}
+
 {% endtabs %}
 
 ## Footer Customization
@@ -607,6 +609,8 @@ public class DateTemplateSelector : DataTemplateSelector
         return NormaldatesTemplate;
     }
 }
+
+{% endhighlight %}
 
 {% endtabs %}
 
