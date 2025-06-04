@@ -146,7 +146,7 @@ Customize the header text style and background color of the `Date Time picker` u
 </picker:SfDateTimePicker>
 
 {% endhighlight %}
-{% highlight c# tabtitle="C#"%}
+{% highlight c# tabtitle="C#" %}
 
 SfDateTimePicker picker = new SfDateTimePicker();
 picker.HeaderView = new DateTimePickerHeaderView()
