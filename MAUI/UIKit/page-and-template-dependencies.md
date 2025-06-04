@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Page Template Dependencies | Essential® UI Kit .NET MAUI | Syncfusion®
-description: The list of screen-wise resources and NuGet packages required for each Individual Essential® UI Kit for .NET MAUI Screens.
+description: The list of screen-wise resources and NuGet packages required for each individual Essential® UI Kit for .NET MAUI screens.
 platform: maui
 control: Essential<sup>®</sup> UI Kit for .NET MAUI
 documentation: ug
@@ -33,10 +33,10 @@ This page lists the dependencies (converters, renderers, and NuGet packages) req
 		   1<br/>
 		</td>
 		<td>
-		  Login with Social Icon<br/>
+		  Login With Social Icon<br/>
 		</td>
 		<td>
-		 Syncfusion.Maui.Buttons,<br/>  Syncfusion.Maui.Toolkit<br/>  Syncfusion.Maui.Toolkit<br>  Syncfusion.Maui.Core,<br/>  Syncfusion.Maui.DataForm<br/> 
+		 Syncfusion.Maui.Buttons,<br/>  Syncfusion.Maui.Toolkit<br/>  Syncfusion.Maui.Toolkit,<br/>  Syncfusion.Maui.Core,<br/>  Syncfusion.Maui.DataForm<br/> 
 		</td>
 		<td>
 		  Views\Forms\LoginWithSocialIcon.xaml<br/>  Views\Forms\LoginWithSocialIcon.xaml.cs<br/>  ViewModel\LoginPageViewModel.cs<br/>  Behavior\LoginWithSocialIconBehavior.cs<br/>  Common\ItemsSourceProvider.cs<br/>  Controls\BorderlessEntry.cs<br/>  Controls\BorderlessEditor.cs<br/>  Themes\DarkTheme.xaml<br/>  Themes\DarkTheme.xaml.cs<br/>  Themes\LightTheme.xaml<br/>  Themes\LightTheme.xaml.cs<br/>  Styles\AvatarViewStyles.xaml<br/>  Styles\AvatarViewStyles.xaml.cs<br/>  Styles\BorderStyles.xaml <br/>  Styles\BorderStyles.xaml.cs<br/>  Styles\BoxViewStyles.xaml<br/>  Styles\BoxViewStyles.xaml.cs <br/>  Styles\ButtonStyles.xaml<br/>  Styles\ButtonStyles.xaml.cs <br/>  Styles\Colors.xaml<br/>  Styles\Colors.xaml.cs<br/>  Styles\ComboBoxStyles.xaml<br/>  Styles\ComboBoxStyles.xaml.cs<br/>  Styles\EditorStyles.xaml<br/>  Styles\EditorStyles.xaml.cs<br/>  Styles\EntryStyles.xaml<br/>  Styles\EntryStyles.xaml.cs<br/>  Styles\FontIcons.xaml<br/>  Styles\FontIcons.xaml.cs<br/>  Styles\LabelStyles.xaml<br/>  Styles\LabelStyles.xaml.cs<br/>  Styles\ListViewStyles.xaml<br/>  Styles\ListViewStyles.xaml.cs<br/>  Styles\RadioButtonStyles.xaml<br/>  Styles\RadioButtonStyles.xaml.cs<br/>  Styles\RatingStyles.xaml<br/>  Styles\RatingStyles.xaml.cs<br/>  Styles\SegmentedControlStyles.xaml<br/>  Styles\SegmentedControlStyles.xaml.cs<br/>  Resources\Fonts\UIFontIcons.ttf<br/>  Resources\Fonts\Roboto-Medium.ttf<br/>  Resources\Fonts\Roboto-Regular.ttf<br/>  Resources\Fonts\OpenSans-Regular.ttf<br/>  Resources\Fonts\OpenSans-Semibold.ttf<br/>
@@ -628,7 +628,7 @@ This page lists the dependencies (converters, renderers, and NuGet packages) req
 		   2<br/>
 		</td>
 		<td>
-		  AboutUs Page With Cards<br/>
+		  About Us Page With Cards<br/>
 		</td>
 		<td>
 		 Syncfusion.Maui.Buttons,<br/>  Syncfusion.Maui.Toolkit<br/>  Syncfusion.Maui.Core,<br/>  Syncfusion.Maui.ListView,<br/> Syncfusion.Maui.Inputs<br/> 

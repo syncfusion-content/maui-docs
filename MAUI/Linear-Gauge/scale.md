@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Scale in .NET MAUI Linear Gauge control | Syncfusion<sup>&reg;</sup>
-description: Learn here all about adding and customizing scale of Syncfusion<sup>&reg;</sup> .NET MAUI Linear Gauge (SfLinearGauge) control and more.
+title: scale in .NET MAUI linear gauge control | Syncfusion<sup>&reg;</sup>
+description: Learn here all about adding and customizing scale of Syncfusion<sup>&reg;</sup> .NET MAUI linear gauge (SfLinearGauge) control and more.
 platform: maui
 control: SfLinearGauge
 
 documentation: ug
 ---
 
-# Scale in .NET MAUI Linear Gauge (SfLinearGauge)
+# scale in .NET MAUI linear gauge (SfLinearGauge)
 
-The Linear Gauge scale on which a set of values can be plotted. An scale can be customized by changing the thickness, color, and edge styles. Scale elements such as labels and ticks can also be easily customized and scale can be inversed.
+The linear gauge scale on which a set of values can be plotted. A scale can be customized by changing the thickness, color, and edge styles. scale elements such as labels and ticks can also be easily customized and the scale can be inverted.
 
 ## Default scale
 
@@ -37,7 +37,7 @@ this.Content = gauge;
 
 ## Customize minimum and maximum scale values
 
-The [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_Minimum) and [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_Maximum) properties of a Linear Gauge can be used to customize the scale values. In the following code sample, the scale is customized to have the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_Minimum) value of -50 to [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_Maximum) value of 50. The scale values are displayed by the labels. Customizing these label styles are further explained in next topics.  
+The [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_Minimum) and [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_Maximum) properties of a Linear Gauge can be used to customize the scale values. In the following code sample, the scale is customized to have a [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_Minimum) value of -50 to [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_Maximum) value of 50. The scale values are displayed by the labels. Customizing these label styles is further explained in the next topics. 
 
 {% tabs %}
 
@@ -64,7 +64,7 @@ this.Content = gauge;
 
 The orientation of linear scale can be customized by using the [`Orientation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_Orientation) property of linear gauge.
 
-When the Orientation property is Vertical, the scale will be rendered in bottom-to-top direction.
+When the Orientation property is Vertical, the scale will be rendered in a bottom-to-top direction.
 
 {% tabs %}
 
@@ -77,8 +77,8 @@ When the Orientation property is Vertical, the scale will be rendered in bottom-
 {% highlight c# %}
 
 SfLinearGauge gauge = new SfLinearGauge();
-		gauge.Orientation = GaugeOrientation.Vertical;
-		this.Content = gauge;
+gauge.Orientation = GaugeOrientation.Vertical;
+this.Content = gauge;
 
 {% endhighlight %}
 
@@ -103,10 +103,10 @@ The following code sample demonstrates how to customize the [`Thickness`](https:
 {% highlight xaml %}
 
  <gauge:SfLinearGauge>
-                <gauge:SfLinearGauge.LineStyle>
-                    <gauge:LinearLineStyle Thickness="15"/>
-                </gauge:SfLinearGauge.LineStyle>
-            </gauge:SfLinearGauge>
+    <gauge:SfLinearGauge.LineStyle>
+        <gauge:LinearLineStyle Thickness="15"/>
+    </gauge:SfLinearGauge.LineStyle>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
@@ -114,8 +114,8 @@ The following code sample demonstrates how to customize the [`Thickness`](https:
 
 SfLinearGauge gauge = new SfLinearGauge();
 
-		gauge.LineStyle.Thickness = 15;
-		this.Content = gauge;
+gauge.LineStyle.Thickness = 15;
+this.Content = gauge;
 
 {% endhighlight %}
 
@@ -132,24 +132,24 @@ The following code sample sets solid colors to the gauge track.
 {% highlight xaml %}
 
 <gauge:SfLinearGauge>
-                <gauge:SfLinearGauge.LineStyle>
-                    <gauge:LinearLineStyle Fill="Blue"/>
-                </gauge:SfLinearGauge.LineStyle>
-            </gauge:SfLinearGauge>
+    <gauge:SfLinearGauge.LineStyle>
+        <gauge:LinearLineStyle Fill="Blue"/>
+    </gauge:SfLinearGauge.LineStyle>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
 SfLinearGauge gauge = new SfLinearGauge();
-		gauge.LineStyle.Fill = new SolidColorBrush(Colors.Blue);
-		this.Content = gauge;
+gauge.LineStyle.Fill = new SolidColorBrush(Colors.Blue);
+this.Content = gauge;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Apply color to axis in linear guage](images/axis/axis_solid_color.PNG)
+![Apply color to axis in linear gauge](images/axis/axis_solid_color.PNG)
 
 ## Apply gradient
 
@@ -162,30 +162,30 @@ The following code sample sets gradient colors to the scale track.
 {% highlight xaml %}
 
  <gauge:SfLinearGauge>
-                <gauge:SfLinearGauge.LineStyle>
-                    <gauge:LinearLineStyle>
-                        <gauge:LinearLineStyle.GradientStops>
-                            <gauge:GaugeGradientStop Value="0" Color="Red"/>
-                            <gauge:GaugeGradientStop Value="100" Color="Blue"/>
-                        </gauge:LinearLineStyle.GradientStops>
-                    </gauge:LinearLineStyle>
-                </gauge:SfLinearGauge.LineStyle>
-            </gauge:SfLinearGauge>
+    <gauge:SfLinearGauge.LineStyle>
+        <gauge:LinearLineStyle>
+            <gauge:LinearLineStyle.GradientStops>
+                <gauge:GaugeGradientStop Value="0" Color="Red"/>
+                <gauge:GaugeGradientStop Value="100" Color="Blue"/>
+            </gauge:LinearLineStyle.GradientStops>
+        </gauge:LinearLineStyle>
+    </gauge:SfLinearGauge.LineStyle>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
 SfLinearGauge gauge = new SfLinearGauge();
-		gauge.LineStyle.GradientStops.Add(new GaugeGradientStop() { Value = 0, Color = Colors.Red });
-		gauge.LineStyle.GradientStops.Add(new GaugeGradientStop() { Value = 100, Color = Colors.Blue });
-		this.Content = gauge;
+gauge.LineStyle.GradientStops.Add(new GaugeGradientStop() { Value = 0, Color = Colors.Red });
+gauge.LineStyle.GradientStops.Add(new GaugeGradientStop() { Value = 100, Color = Colors.Blue });
+this.Content = gauge;
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![Apply color to axis in linear guage](images/axis/axis_gradient.PNG)
+![Apply color to axis in linear gauge](images/axis/axis_gradient.PNG)
 
 ## Customize corners
 
@@ -196,20 +196,20 @@ The [`CornerStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.L
 {% highlight xaml %}
 
  <gauge:SfLinearGauge>
-                <gauge:SfLinearGauge.LineStyle>
-                    <gauge:LinearLineStyle Thickness="20" 
-                                           CornerStyle="BothCurve"/>
-                </gauge:SfLinearGauge.LineStyle>
-            </gauge:SfLinearGauge>
+    <gauge:SfLinearGauge.LineStyle>
+        <gauge:LinearLineStyle Thickness="20" 
+                                CornerStyle="BothCurve"/>
+    </gauge:SfLinearGauge.LineStyle>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
 SfLinearGauge gauge = new SfLinearGauge();
-		gauge.LineStyle.Thickness = 20;
-		gauge.LineStyle.CornerStyle = CornerStyle.BothCurve;
-		this.Content = gauge;
+gauge.LineStyle.Thickness = 20;
+gauge.LineStyle.CornerStyle = CornerStyle.BothCurve;
+this.Content = gauge;
 
 {% endhighlight %}
 
@@ -224,20 +224,20 @@ Also [`CornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges
 {% highlight xaml %}
 
  <gauge:SfLinearGauge>
-                 <gauge:SfLinearGauge.LineStyle>
-                    <gauge:LinearLineStyle Thickness="20" 
-                                           CornerRadius="0,10,0,10"/>
-                </gauge:SfLinearGauge.LineStyle>
-            </gauge:SfLinearGauge>
+    <gauge:SfLinearGauge.LineStyle>
+        <gauge:LinearLineStyle Thickness="20" 
+                                CornerRadius="0,10,0,10"/>
+    </gauge:SfLinearGauge.LineStyle>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
 SfLinearGauge gauge = new SfLinearGauge();
-		gauge.LineStyle.Thickness = 20;
-		gauge.LineStyle.CornerRadius = new Thickness(0, 10, 0, 10);
-		this.Content = gauge;
+gauge.LineStyle.Thickness = 20;
+gauge.LineStyle.CornerRadius = new Thickness(0, 10, 0, 10);
+this.Content = gauge;
 
 {% endhighlight %}
 
@@ -245,7 +245,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ![Change axis track edge style](images/axis/axis_corner_radius.PNG)
 
-N> If you set both [`CornerStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearLineStyle.html#Syncfusion_Maui_Gauges_LinearLineStyle_CornerStyle) and [`CornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearLineStyle.html#Syncfusion_Maui_Gauges_LinearLineStyle_CornerRadius) in the [`LineStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearLineStyle.html), [`CornerStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearLineStyle.html#Syncfusion_Maui_Gauges_LinearLineStyle_CornerStyle) will be first priority for scale. 
+N> If you set both [`CornerStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearLineStyle.html#Syncfusion_Maui_Gauges_LinearLineStyle_CornerStyle) and [`CornerRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearLineStyle.html#Syncfusion_Maui_Gauges_LinearLineStyle_CornerRadius) in the [`LineStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearLineStyle.html), [`CornerStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearLineStyle.html#Syncfusion_Maui_Gauges_LinearLineStyle_CornerStyle) will be first priority for scale.
 
 ## Inverse the scale
 
@@ -264,8 +264,8 @@ When the [`IsInversed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gaug
 {% highlight c# %}
 
 SfLinearGauge gauge = new SfLinearGauge();
-		gauge.IsInversed = true;
-		this.Content = gauge;
+gauge.IsInversed = true;
+this.Content = gauge;
 
 {% endhighlight %}
 
@@ -291,8 +291,8 @@ You can hide the scale track by setting the [`ShowLine`](https://help.syncfusion
 {% highlight c# %}
 
 SfLinearGauge gauge = new SfLinearGauge();
-		gauge.ShowLine = false;
-		this.Content = gauge;
+gauge.ShowLine = false;
+this.Content = gauge;
 
 {% endhighlight %}
 
@@ -309,10 +309,10 @@ Linear gauge allows you to display a set of values along with a custom scale bas
 {% highlight xaml %}
 
  <local:LinearGauge Minimum="1" Maximum="10000">
-                <gauge:SfLinearGauge.MarkerPointers>
-                    <gauge:LinearShapePointer Value="1000" />
-                </gauge:SfLinearGauge.MarkerPointers>
-            </local:LinearGauge>
+    <gauge:SfLinearGauge.MarkerPointers>
+        <gauge:LinearShapePointer Value="1000" />
+    </gauge:SfLinearGauge.MarkerPointers>
+</local:LinearGauge>
 
 {% endhighlight %}
 

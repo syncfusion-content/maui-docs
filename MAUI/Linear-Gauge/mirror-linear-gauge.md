@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Mirror in .NET MAUI Linear Gauge control | Syncfusion<sup>&reg;</sup>
-description: Learn how to use the IsMirrored property to mirror the Syncfusion<sup>&reg;</sup>.NET MAUI Linear Gauge (SfLinearGauge) control.
+title: Mirror in .NET MAUI Linear Gauge Control | Syncfusion<sup>&reg;</sup>
+description: Learn how to use the IsMirrored property to mirror the Syncfusion<sup>&reg;</sup> .NET MAUI Linear Gauge (SfLinearGauge) control.
 platform: maui
 control: SfLinearGauge
 documentation: ug
 ---
 
-# Mirrored in .NET MAUI Linear Gauge (SfLinearGauge)
+# Mirror in .NET MAUI Linear Gauge (SfLinearGauge)
 
 The [`IsMirrored`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_IsMirrored) property in [`SfLinearGauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html?tabs=tabid-1) mirrors all the Gauge elements in the [`SfLinearGauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html?tabs=tabid-1). The following code sample demonstrates how to set the [`IsMirrored`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_IsMirrored) property.
 
@@ -33,6 +33,6 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Comparison for the mirrored and normal gauge
 
-The following screenshot provides a comparison for the mirrored and normal Linear Gauge. 
+The following screenshot shows a comparison between the mirrored and normal Linear Gauge. 
 
-![Mirrored linear gauge comparsion](images/mirrored/mirror_comparison.PNG)
+![Mirrored linear gauge comparison](images/mirrored/mirror_comparison.PNG)

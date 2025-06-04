@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfCard to .NET MAUI SfCard 
 
-To make the migration from the [Xamarin SfCards](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Cards.html) to [.NET MAUI SfCards](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.html) easier, most of the APIs from the Xamarin SfCards were kept in the.NET MAUI SfCards. However, to maintain the consistency of API naming in the .NET MAUI SfCards, some of the APIs have been renamed. Please find the difference in the following topics.
+To make the migration from the [Xamarin SfCards](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Cards.html) to [.NET MAUI SfCards](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.html) easier, most of the APIs from the Xamarin SfCards were kept in the .NET MAUI SfCards. However, to maintain the consistency of API naming in the .NET MAUI SfCards, some of the APIs have been renamed. Please find the differences in the following topics.
 
 ## Namespaces 
 
@@ -111,17 +111,17 @@ The following code example, explains how to initialize the properties of the `Xa
 <tr>
 <td>Nil</td>
 <td>{{'[BorderWidth]()'| markdownify }}</td>
-<td>Gets or sets the stroke size in SfCardView</td>
+<td>Gets or sets the border width in SfCardView</td>
 </tr>
 <tr>
 <td>Nil</td>
 <td>{{'[BorderColor]()'| markdownify }}</td>
-<td>Gets or sets the stroke in SfCardView.</td>
+<td>Gets or sets the stroke color in SfCardView.</td>
 </tr>
 <tr>
 <td>{{'[IsDismissed](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Cards.SfCardView.html#Syncfusion_XForms_Cards_SfCardView_IsDismissed)'| markdownify }}</td>
 <td>{{'[IsDismissed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardView.html#Syncfusion_Maui_Cards_SfCardView_IsDismissed)'| markdownify }}</td>
-<td>Gets or sets a card is dismissed or not.</td>
+<td>Gets or sets whether a card is dismissed or not.</td>
 </tr>
 <tr>
 <td>{{'[CornerRadius](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Cards.SfCardView.html#Syncfusion_XForms_Cards_SfCardView_CornerRadius)'| markdownify }}</td>
@@ -146,12 +146,12 @@ The following code example, explains how to initialize the properties of the `Xa
 <tr>
 <td>{{'[SwipeToDismiss](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Cards.SfCardView.html#Syncfusion_XForms_Cards_SfCardView_SwipeToDismiss)'| markdownify }}</td>
 <td>{{'[SwipeToDismiss](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardView.html#Syncfusion_Maui_Cards_SfCardView_SwipeToDismiss)'| markdownify }}</td>
-<td>Gets or sets the swipe to dismiss value in SfCardView.</td>
+<td>Gets or sets the swipe-to-dismiss value in SfCardView.</td>
 </tr>
 <tr>
 <td>{{'[FadeOutOnSwiping](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Cards.SfCardView.html#Syncfusion_XForms_Cards_SfCardView_FadeOutOnSwiping)'| markdownify }}</td>
 <td>{{'[FadeOutOnSwiping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardView.html#Syncfusion_Maui_Cards_SfCardView_FadeOutOnSwiping)'| markdownify }}</td>
-<td>Gets or sets the Fade out value in SfCardView.</td>
+<td>Gets or sets the fade-out value in SfCardView.</td>
 </tr>
 <tr>
 <td>{{'[SwipeDirection](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Cards.SfCardLayout.html#Syncfusion_XForms_Cards_SfCardLayout_SwipeDirection)'| markdownify }}</td>
@@ -161,22 +161,22 @@ The following code example, explains how to initialize the properties of the `Xa
 <tr>
 <td>{{'[ShowSwipedCard](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Cards.SfCardLayout.html#Syncfusion_XForms_Cards_SfCardLayout_ShowSwipedCard)'| markdownify }}</td>
 <td>{{'[ShowSwipedCard](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html#Syncfusion_Maui_Cards_SfCardLayout_ShowSwipedCard)'| markdownify }}</td>
-<td>Gets or sets the swiped card value in SfCardLayout.</td>
+<td>Gets or sets the swiped card visibility in SfCardLayout.</td>
 </tr>
 <tr>
 <td>{{'[VisibleCardIndex](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Cards.SfCardLayout.html#Syncfusion_XForms_Cards_SfCardLayout_VisibleCardIndex)'| markdownify }}</td>
 <td>{{'[VisibleIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html#Syncfusion_Maui_Cards_SfCardLayout_VisibleIndex)'| markdownify }}</td>
-<td>Gets or sets the visible index value in SfCardLayout.</td>
+<td>Gets or sets the visible card index in SfCardLayout.</td>
 </tr>
 <tr>
 <td>Nil</td>
 <td>{{'[VerticalCardSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html#Syncfusion_Maui_Cards_SfCardLayout_VerticalCardSpacing)'| markdownify }}</td>
-<td>Gets or sets the vertical space value in SfCardLayout.</td>
+<td>Gets or sets the vertical card spacing in SfCardLayout.</td>
 </tr>
 <tr>
 <td>Nil</td>
 <td>{{'[HorizontalCardSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html#Syncfusion_Maui_Cards_SfCardLayout_HorizontalCardSpacing)'| markdownify }}</td>
-<td>Gets or sets the horizontal space value in SfCardLayout.</td>
+<td>Gets or sets the horizontal card spacing in SfCardLayout.</td>
 </tr>
 </table>
 
@@ -191,27 +191,27 @@ The following code example, explains how to initialize the properties of the `Xa
 <tr>
 <td>{{'[CardTapped](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Cards.SfCardLayout.html#Syncfusion_XForms_Cards_SfCardLayout_CardTapped)'| markdownify }}</td>
 <td>{{'[Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html#Syncfusion_Maui_Cards_SfCardLayout_Tapped)'| markdownify }}</td>
-<td>Occurs whenever the card tapped on SfCardLayout. </td>
+<td>Occurs whenever a card is tapped on SfCardLayout. </td>
 </tr>
 <tr>
 <td>{{'[VisibleCardIndexChanged](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Cards.SfCardLayout.html#Syncfusion_XForms_Cards_SfCardLayout_VisibleCardIndexChanged)'| markdownify }}</td>
 <td>{{'[VisibleIndexChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html#Syncfusion_Maui_Cards_SfCardLayout_VisibleIndexChanged)'| markdownify }}</td>
-<td>Occurs whenever the card visible index changed on SfCardLayout. </td>
+<td>Occurs whenever the visible card index changes on SfCardLayout. </td>
 </tr>
 <tr>
 <td>{{'[VisibleCardIndexChanging](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Cards.SfCardLayout.html#Syncfusion_XForms_Cards_SfCardLayout_VisibleCardIndexChanging)'| markdownify }}</td>
 <td>{{'[VisibleIndexChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html#Syncfusion_Maui_Cards_SfCardLayout_VisibleIndexChanging)'| markdownify }}</td>
-<td>Occurs whenever the card visible index changing on SfCardLayout. </td>
+<td>Occurs whenever the visible card index is changing on SfCardLayout. </td>
 </tr>
 <tr>
 <td>{{'[Dismissed](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Cards.SfCardView.html#Syncfusion_XForms_Cards_SfCardView_Dismissed)'| markdownify }}</td>
 <td>{{'[Dismissed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardView.html#Syncfusion_Maui_Cards_SfCardView_Dismissed)'| markdownify }}</td>
-<td>Occurs whenever the card dismissed on SfCardView. </td>
+<td>Occurs whenever a card is dismissed on SfCardView. </td>
 </tr>
 <tr>
 <td>{{'[Dismissing](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Cards.SfCardView.html#Syncfusion_XForms_Cards_SfCardView_Dismissing)'| markdownify }}</td>
 <td>{{'[Dismissing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardView.html#Syncfusion_Maui_Cards_SfCardView_Dismissing)'| markdownify }}</td>
-<td>Occurs whenever the card dismissing on SfCardView. </td>
+<td>Occurs whenever a card is being dismissed on SfCardView. </td>
 </tr>
 </table>
 

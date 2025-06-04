@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Date Interval in .NET MAUI Date Picker Control | Syncfusion<sup>&reg;</sup>
+title: Date Interval in .NET MAUI Date Picker Control – Syncfusion<sup>&reg;</sup>
 description: Learn about date interval in Syncfusion<sup>&reg;</sup> .NET MAUI Date Picker (SfDatePicker) control and its basic features.
 platform: maui
 control: SfDatePicker
@@ -9,7 +9,7 @@ documentation: ug
 
 # Date Interval in .NET MAUI Date Picker(SfDatePicker)
 
-The `SfDatePicker` provides three intervals in [.NET MAUI Date Picker](https://www.syncfusion.com/maui-controls/maui-datepicker).
+The `SfDatePicker` provides three types of intervals in the [.NET MAUI Date Picker](https://www.syncfusion.com/maui-controls/maui-datepicker).
 
  * [`DayInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_DayInterval)
  * [`MonthInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_MonthInterval)
@@ -17,7 +17,7 @@ The `SfDatePicker` provides three intervals in [.NET MAUI Date Picker](https://w
 
 ## Day interval
 
-Date Picker provides an option to give an interval between days using the [DayInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_DayInterval) property of [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
+The Date Picker provides an option to set an interval between days using the [DayInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_DayInterval) property of [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
 
 {% tabs %}
 
@@ -41,11 +41,11 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-![Day interval in .NET MAUI Date picker.](images/intervals/maui-date-picker-day-interval.png)
+![Day interval in .NET MAUI Date Picker.](images/intervals/maui-date-picker-day-interval.png)
 
 ## Month interval
 
-Date Picker provides an option to give an interval between months using the [MonthInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_MonthInterval) property of [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
+The Date Picker provides an option to set an interval between months using the [MonthInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_MonthInterval) property of [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
 
 {% tabs %}
 
@@ -69,11 +69,11 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-![Month interval in .NET MAUI Date picker.](images/intervals/maui-date-picker-month-interval.png)
+![Month interval in .NET MAUI Date Picker.](images/intervals/maui-date-picker-month-interval.png)
 
 ## Year interval
 
-Date Picker provides an option to give an interval between years using the [YearInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_YearInterval) property of [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
+The Date Picker provides an option to set an interval between years using the [YearInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_YearInterval) property of [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
 
 {% tabs %}
 
@@ -97,4 +97,4 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-![Year interval in .NET MAUI Date picker.](images/intervals/maui-date-picker-year-interval.png)
+![Year interval in .NET MAUI Date Picker.](images/intervals/maui-date-picker-year-interval.png)

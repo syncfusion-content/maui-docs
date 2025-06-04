@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customization in .NET MAUI Toolbar Control | Syncfusion®
-description: Learn here all about Customization support in Syncfusion® .NET MAUI Toolbar (SfToolbar) control and more.
+description: Learn here all about Customization support in Syncfusion® .NET MAUI Toolbar (SfToolbar) Control and more.
 platform: maui
 control: Toolbar (SfToolbar)
 documentation: ug
@@ -9,17 +9,17 @@ documentation: ug
 
 # Customization in .NET MAUI Toolbar (SfToolbar)
 
-This section explains the ways about support for customization in syncfusion .NET MAUI Toolbar (SfToolbar) control.
+This section explains the ways about support for customization in Syncfusion .NET MAUI Toolbar (SfToolbar) Control.
 
 ## Toolbar Item Customization
 
-The toolbar control supports customization of toolbar items using properties [IsEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_IsEnabled),[TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_TextStyle) and `Color`.
+The Toolbar Control supports customization of Toolbar Items using Properties [IsEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_IsEnabled),[TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_TextStyle) and `Color`.
 
-* **IsEnabled** : This property is used to enable or disable the toolbar item.
-* **TextStyle** : This property is used to customize the text style of the toolbar item.
-* **Color** : This property is used to set color for the icon in the toolbar.
+* **IsEnabled** : This Property is used to enable or disable the Toolbar Item.
+* **TextStyle** : This Property is used to customize the text style of the Toolbar Item.
+* **Color** : This Property is used to set Color for the Icon in the Toolbar.
 
-The following code sample demonstrates how to create a toolbar control with toolbar Items customization.
+The following code sample demonstrates how to create a Toolbar Control with Toolbar Items customization.
 
 {% tabs %}
 
@@ -208,17 +208,16 @@ The following code sample demonstrates how to create a toolbar control with tool
 
 {% endtabs %}
 
-![toolbar-items-customization](images/toolbaritem-customization.png)
+![Toolbar-Items-customization](images/toolbaritem-customization.png)
 
 ## Separator Item Customization
 
-The toolbar control supports customization of separator item using properties [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SeparatorToolbarItem.html#Syncfusion_Maui_Toolbar_SeparatorToolbarItem_Stroke) and [StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SeparatorToolbarItem.html#Syncfusion_Maui_Toolbar_SeparatorToolbarItem_StrokeThickness).
+The Toolbar Control supports customization of separator Item using Properties [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SeparatorToolbarItem.html#Syncfusion_Maui_Toolbar_SeparatorToolbarItem_Stroke) and [StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SeparatorToolbarItem.html#Syncfusion_Maui_Toolbar_SeparatorToolbarItem_StrokeThickness).
 
+* **Stroke** : This Property is used to customize the Stroke Color of the separator Item.
+* **StrokeThickness** : This Property is used to customize the Stroke thickness of the separator Item.
 
-* **Stroke** : This property is used to customize the stroke color of the separator item.
-* **StrokeThickness** : This property is used to customize the stroke thickness of the separator item.
-
-The following code sample demonstrates how to create a toolbar control with separator item customization.
+The following code sample demonstrates how to create a Toolbar Control with separator Item customization.
 
 {% tabs %}
 
@@ -353,18 +352,18 @@ public partial class MainPage : ContentPage
 
 {% endtabs %}
 
-![separator-item-customization](images/separator-customization.png)
+![separator-Item-customization](images/separator-customization.png)
 
 ## Navigation Button Customization
 
-The toolbar control supports customization of navigation buttons using properties [ForwardButtonIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ForwardButtonIconColor), [BackwardButtonIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_BackwardButtonIconColor), [ForwardButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ForwardButtonBackground), [BackwardButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_BackwardButtonBackground).
+The Toolbar Control supports customization of navigation buttons using Properties [ForwardButtonIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ForwardButtonIconColor), [BackwardButtonIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_BackwardButtonIconColor), [ForwardButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ForwardButtonBackground), [BackwardButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_BackwardButtonBackground).
 
-* **ForwardButtonIconColor** : This property is used to customize the icon color of the forward button.
-* **BackwardButtonIconColor** : This property is used to customize the icon color of the backward button.
-* **ForwardButtonBackground** : This property is used to customize the background color of the forward button.
-* **BackwardButtonBackground** : This property is used to customize the background color of the backward button.
+* **ForwardButtonIconColor** : This Property is used to customize the Icon Color of the forward button.
+* **BackwardButtonIconColor** : This Property is used to customize the Icon Color of the backward button.
+* **ForwardButtonBackground** : This Property is used to customize the Background Color of the forward button.
+* **BackwardButtonBackground** : This Property is used to customize the Background Color of the backward button.
 
-The following code sample demonstrates how to create a toolbar control with navigation button customization.
+The following code sample demonstrates how to create a Toolbar Control with navigation button customization.
 
 {% tabs %}
 
@@ -509,12 +508,12 @@ The following code sample demonstrates how to create a toolbar control with navi
 
 ## More Button Customization
 
-The toolbar control supports customization of more button using properties [MoreButtonIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreButtonIconColor), [MoreButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreButtonBackground).
+The Toolbar Control supports customization of more button using Properties [MoreButtonIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreButtonIconColor), [MoreButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreButtonBackground).
 
-* **MoreButtonIconColor** : This property is used to customize the icon color of the more button.
-* **MoreButtonBackground** : This property is used to customize the background color of the more button.
+* **MoreButtonIconColor** : This Property is used to customize the Icon Color of the more button.
+* **MoreButtonBackground** : This Property is used to customize the Background Color of the more button.
 
-The following code sample demonstrates how to create a toolbar control with more button customization.
+The following code sample demonstrates how to create a Toolbar Control with more button customization.
 
 {% tabs %}
 

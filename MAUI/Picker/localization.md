@@ -9,11 +9,11 @@ documentation: ug
 
 # Localization in .NET MAUI Picker (SfPicker)
 
-Localization is the process of translating the application resources into different language for the specific cultures. The SfPicker can be localized by adding resource file.
+Localization is the process of translating the application resources into different languages for specific cultures. The SfPicker can be localized by adding resource file.
 
 ## Setting CurrentUICulture to the application
 
-Application culture can be changed by setting CurrentUICulture. in App.xaml.cs file.
+Application culture can be changed by setting CurrentUICulture in the App.xaml.cs file.
 
 {% tabs %}
 {% highlight c# tabtitle="App.xaml.cs" hl_lines="1 3 14 15" %}
@@ -29,7 +29,7 @@ public partial class App : Application
     {
         InitializeComponent();
 
-        //// ResXPath => Full path of the resx file; For example : // SfPickerResources.ResourceManager = new ResourceManager
+        // ResXPath => Full path of the resx file; For example: SfPickerResources.ResourceManager = new ResourceManager
 ("Picker.Resources.SfPicker", Application.Current.GetType().Assembly);
         CultureInfo.CurrentUICulture = new CultureInfo("fr-FR");
         SfPickerResources.ResourceManager = new ResourceManager("ResxPath", Application.Current.GetType().Assembly);
@@ -43,11 +43,11 @@ public partial class App : Application
    ![Picker localization in .NET MAUI Date Picker.](images/localization/maui-picker-localization.png)
 
 N>
-The required `resx` files with `Build Action` as `EmbeddedResource` (File name should contain culture code) into the `Resources` folder.
+Add the required `resx` files with `Build Action` set to `EmbeddedResource` (File name should contain culture code) into the `Resources` folder.
 
 ## Localize application level
 
-To localize the `Picker` based on `CurrentUICulture` using `resource` files, follow the below steps.
+To localize the `Picker` based on `CurrentUICulture` using `resource` files, follow the steps below.
 
    1. Create new folder, named as `Resources` in the application.
 
@@ -63,6 +63,6 @@ To localize the `Picker` based on `CurrentUICulture` using `resource` files, fol
 
         ![shows-the-added-resource-file-for-french-language-in-maui-picker](images/localization/shows-the-added-resource-file-for-french-language-in-maui-picker.png)
 
-   6. Add the Name/Value pair in Resource Designer of `SfPicker.fr-FR.resx` file and change its corresponding value to corresponding culture.
+   6. Add the Name/Value pair in Resource Designer of `SfPicker.fr-FR.resx` file and change its corresponding value to the corresponding culture.
 
    ![shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-picker](images/localization/shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-picker.png)

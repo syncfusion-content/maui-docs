@@ -11,17 +11,17 @@ documentation: ug
 
 ## Tapped
 
-The [`Tapped`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html#Syncfusion_Maui_Cards_SfCardLayout_Tapped) event is triggered when any card view is tapped. The associated argument contains the following information.
+The [`Tapped`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html#Syncfusion_Maui_Cards_SfCardLayout_Tapped) event is triggered when any CardView is tapped. The associated argument contains the following information.
 
-* [`CardView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardView.html) - Gets the details of a particular card view.
+* [`CardView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardView.html) - Gets the details of a particular CardView.
 
 ## VisibleIndexChanging
 
 The [`VisibleIndexChanging`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html#Syncfusion_Maui_Cards_SfCardLayout_VisibleIndexChanging)  event is triggered when the visible card index is changing. The associated argument contains the following information.
 
-* [`OldIndex`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.CardVisibleIndexChangingEventArgs.html#Syncfusion_Maui_Cards_CardVisibleIndexChangingEventArgs_OldIndex) - Gets the details of the previous index card.
+* [`OldIndex`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.CardVisibleIndexChangingEventArgs.html#Syncfusion_Maui_Cards_CardVisibleIndexChangingEventArgs_OldIndex) - Gets the details of the previous index CardView.
 
-* [`NewIndex`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.CardVisibleIndexChangingEventArgs.html#Syncfusion_Maui_Cards_CardVisibleIndexChangingEventArgs_NewIndex) - Gets the details of the next possible index card.
+* [`NewIndex`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.CardVisibleIndexChangingEventArgs.html#Syncfusion_Maui_Cards_CardVisibleIndexChangingEventArgs_NewIndex) - Gets the details of the next possible index CardView.
 
 * [`Cancel`]() - Gets or sets a value indicating whether the event should be canceled.
 
@@ -114,7 +114,7 @@ private void VisibleIndexChanged(System.Object sender, Syncfusion.Maui.Cards.Car
 
 The [`Dismissing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardView.html#Syncfusion_Maui_Cards_SfCardView_Dismissing) event fires when dismissing the card by swiping, with the `SwipeToDismiss` property enabled. The associated argument contains the following information.
 
-* [`DismissDirection`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.CardDismissingEventArgs.html#Syncfusion_Maui_Cards_CardDismissingEventArgs_DismissDirection) - Gets a dismissing direction of the card view.
+* [`DismissDirection`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.CardDismissingEventArgs.html#Syncfusion_Maui_Cards_CardDismissingEventArgs_DismissDirection) - Gets the dismissing direction of the CardView.
 
 * [`Cancel`]() - Gets or sets a value indicating whether the event should be canceled.
 
@@ -149,9 +149,9 @@ N> This event will not work when adding the `SfCardView` as a child of `SfCardLa
 
 ## Dismissed event
 
-The [`Dismissed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardView.html#Syncfusion_Maui_Cards_SfCardView_Dismissed) event fires when dismisses the card by swiping, with enables `SwipeToDismiss` property. The argument contains the following information.
+The [`Dismissed`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardView.html#Syncfusion_Maui_Cards_SfCardView_Dismissed) event fires when dismisses the card by swiping, with the enabled `SwipeToDismiss` property. The argument contains the following information.
 
-* [`DismissDirection`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.CardDismissedEventArgs.html#Syncfusion_Maui_Cards_CardDismissedEventArgs_DismissDirection) - Gets a dismissed direction of the card view.
+* [`DismissDirection`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.CardDismissedEventArgs.html#Syncfusion_Maui_Cards_CardDismissedEventArgs_DismissDirection) - Gets the dismissed direction of the CardView.
 
 {% tabs %}
 {% highlight xaml hl_lines="1" %}

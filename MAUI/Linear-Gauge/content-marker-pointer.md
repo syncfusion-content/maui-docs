@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Content Marker Pointer in .NET MAUI Linear Gauge control | Syncfusion<sup>&reg;</sup>
-description: Learn here all about Content Pointer feature of the Syncfusion<sup>&reg;</sup> .NET MAUI Linear Gauge control, including image, text pointer support and more.
+description: Learn all about Content Pointer feature of the Syncfusion<sup>&reg;</sup> .NET MAUI Linear Gauge control, including image, text pointer support and more.
 platform: maui
 control: SfLinearGauge
 documentation: ug
@@ -9,22 +9,22 @@ documentation: ug
 
 # Content Marker Pointer in .NET MAUI Linear Gauge (SfLinearGauge)
 
-The [`LinearContentPointer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearContentPointer.html) in [`SfLinearGauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html) allows you to use any .NET MAUI content as a marker pointer. The following code sample uses a `Image` as a marker pointer.
+The [`LinearContentPointer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearContentPointer.html) in [`SfLinearGauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html) allows you to use any .NET MAUI content as a marker pointer. The following code sample uses an `Image` as a marker pointer.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <gauge:SfLinearGauge>
-                <gauge:SfLinearGauge.MarkerPointers>
-                    <gauge:LinearContentPointer Value="50">
-                        <gauge:LinearContentPointer.Content>
-                            <Image Source="pin.png" HeightRequest="20" 
-                                   WidthRequest="20"/>
-                        </gauge:LinearContentPointer.Content>
-                    </gauge:LinearContentPointer>
-                </gauge:SfLinearGauge.MarkerPointers>
-            </gauge:SfLinearGauge>
+	<gauge:SfLinearGauge.MarkerPointers>
+		<gauge:LinearContentPointer Value="50">
+			<gauge:LinearContentPointer.Content>
+				<Image Source="pin.png" HeightRequest="20" 
+						WidthRequest="20"/>
+			</gauge:LinearContentPointer.Content>
+		</gauge:LinearContentPointer>
+	</gauge:SfLinearGauge.MarkerPointers>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
@@ -45,26 +45,25 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Change marker alignment
 
-The content marker pointer's alignment can be changed by the [`Alignment`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearMarkerPointer.html#Syncfusion_Maui_Gauges_LinearMarkerPointer_Alignment) property of [`LinearContentPointer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearContentPointer.html). The available marker positions are [`Start`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeAlignment.html#Syncfusion_Maui_Gauges_GaugeAlignment_Start), [`End`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeAlignment.html#Syncfusion_Maui_Gauges_GaugeAlignment_End), and [`Center`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeAlignment.html#Syncfusion_Maui_Gauges_GaugeAlignment_Center). 
+The content marker pointer alignment can be changed by the [`Alignment`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearMarkerPointer.html#Syncfusion_Maui_Gauges_LinearMarkerPointer_Alignment) property of [`LinearContentPointer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearContentPointer.html). The available marker positions are [`Start`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeAlignment.html#Syncfusion_Maui_Gauges_GaugeAlignment_Start), [`End`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeAlignment.html#Syncfusion_Maui_Gauges_GaugeAlignment_End), and [`Center`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.GaugeAlignment.html#Syncfusion_Maui_Gauges_GaugeAlignment_Center). 
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <gauge:SfLinearGauge>
-                <gauge:SfLinearGauge.MarkerPointers>
-                    <gauge:LinearContentPointer Value="50" Alignment="End">
-                        <gauge:LinearContentPointer.Content>
-                            <Grid HeightRequest="25" WidthRequest="25">
-                                <RoundRectangle CornerRadius="5" 
-                                                Fill="#ff0074E3"/>
-                                <Label Text="50" HorizontalOptions="Center"
-                                   VerticalOptions="Center" TextColor="White"/>
-                            </Grid>
-                        </gauge:LinearContentPointer.Content>
-                    </gauge:LinearContentPointer>
-                </gauge:SfLinearGauge.MarkerPointers>
-            </gauge:SfLinearGauge>
+	<gauge:SfLinearGauge.MarkerPointers>
+		<gauge:LinearContentPointer Value="50" Alignment="End">
+			<gauge:LinearContentPointer.Content>
+				<Grid HeightRequest="25" WidthRequest="25">
+					<RoundRectangle CornerRadius="5" Fill="#ff0074E3"/>
+					<Label Text="50" HorizontalOptions="Center"
+						VerticalOptions="Center" TextColor="White"/>
+				</Grid>
+			</gauge:LinearContentPointer.Content>
+		</gauge:LinearContentPointer>
+	</gauge:SfLinearGauge.MarkerPointers>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
@@ -106,19 +105,18 @@ By default, the shape pointer is positioned [`Outside`](https://help.syncfusion.
 {% highlight xaml %}
 
 <gauge:SfLinearGauge>
-                <gauge:SfLinearGauge.MarkerPointers>
-                    <gauge:LinearContentPointer Value="50" Position="Cross">
-                        <gauge:LinearContentPointer.Content>
-                            <Grid HeightRequest="25" WidthRequest="25">
-                                <RoundRectangle CornerRadius="5" 
-                                                Fill="#ff0074E3"/>
-                                <Label Text="50" HorizontalOptions="Center"
-                                   VerticalOptions="Center" TextColor="White"/>
-                            </Grid>
-                        </gauge:LinearContentPointer.Content>
-                    </gauge:LinearContentPointer>
-                </gauge:SfLinearGauge.MarkerPointers>
-            </gauge:SfLinearGauge>
+	<gauge:SfLinearGauge.MarkerPointers>
+		<gauge:LinearContentPointer Value="50" Position="Cross">
+			<gauge:LinearContentPointer.Content>
+				<Grid HeightRequest="25" WidthRequest="25">
+					<RoundRectangle CornerRadius="5" Fill="#ff0074E3"/>
+					<Label Text="50" HorizontalOptions="Center"
+						VerticalOptions="Center" TextColor="White"/>
+				</Grid>
+			</gauge:LinearContentPointer.Content>
+		</gauge:LinearContentPointer>
+	</gauge:SfLinearGauge.MarkerPointers>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 
@@ -153,26 +151,25 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Change the offset
 
-In addition to position the content marker pointer, it is also possible to change the offset of the shape pointer. The [`OffsetX`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearMarkerPointer.html#Syncfusion_Maui_Gauges_LinearMarkerPointer_OffsetX) and [`OffsetY`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearMarkerPointer.html#Syncfusion_Maui_Gauges_LinearMarkerPointer_OffsetY) are the distance from the scale. The cross-positioned elements will not get affected by the [`OffsetX`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearMarkerPointer.html#Syncfusion_Maui_Gauges_LinearMarkerPointer_OffsetX) and [`OffsetY`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearMarkerPointer.html#Syncfusion_Maui_Gauges_LinearMarkerPointer_OffsetY) values. The following code sample demonstrates how to change the offset value of the shape pointer. 
+In addition to position the content marker pointer, it is also possible to change the offset of the shape pointer. The [`OffsetX`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearMarkerPointer.html#Syncfusion_Maui_Gauges_LinearMarkerPointer_OffsetX) and [`OffsetY`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearMarkerPointer.html#Syncfusion_Maui_Gauges_LinearMarkerPointer_OffsetY) are the distance from the scale. The cross-positioned elements will not be affected by the [`OffsetX`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearMarkerPointer.html#Syncfusion_Maui_Gauges_LinearMarkerPointer_OffsetX) and [`OffsetY`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearMarkerPointer.html#Syncfusion_Maui_Gauges_LinearMarkerPointer_OffsetY) values. The following code sample demonstrates how to change the offset value of the shape pointer. 
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <gauge:SfLinearGauge>
-                <gauge:SfLinearGauge.MarkerPointers>
-                    <gauge:LinearContentPointer Value="50" OffsetY="-5">
-                        <gauge:LinearContentPointer.Content>
-                            <Grid HeightRequest="25" WidthRequest="25">
-                                <RoundRectangle CornerRadius="5" 
-                                                Fill="#ff0074E3"/>
-                                <Label Text="50" HorizontalOptions="Center"
-                                   VerticalOptions="Center" TextColor="White"/>
-                            </Grid>
-                        </gauge:LinearContentPointer.Content>
-                    </gauge:LinearContentPointer>
-                </gauge:SfLinearGauge.MarkerPointers>
-            </gauge:SfLinearGauge>
+	<gauge:SfLinearGauge.MarkerPointers>
+		<gauge:LinearContentPointer Value="50" OffsetY="-5">
+			<gauge:LinearContentPointer.Content>
+				<Grid HeightRequest="25" WidthRequest="25">
+					<RoundRectangle CornerRadius="5" Fill="#ff0074E3"/>
+					<Label Text="50" HorizontalOptions="Center"
+						VerticalOptions="Center" TextColor="White"/>
+				</Grid>
+			</gauge:LinearContentPointer.Content>
+		</gauge:LinearContentPointer>
+	</gauge:SfLinearGauge.MarkerPointers>
+</gauge:SfLinearGauge>
 
 {% endhighlight %}
 

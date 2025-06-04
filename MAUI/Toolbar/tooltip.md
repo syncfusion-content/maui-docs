@@ -9,14 +9,11 @@ documentation: ug
 
 # Enable the Tooltip
 
-The tooltip is enabled in the view when the [TooltipText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_ToolTipText) or [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_Text) property is set for the ToolbarItems. By default, the tooltip is supported only in the default view.
-
+The tooltip is enabled in the view when the [ToolTipText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_TooltipText) or [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_Text) property is set for the ToolbarItems. By default, the tooltip is supported only in the default view.
 ## Tooltip Text
 
-You can set the tooltip text by setting the [TooltipText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_ToolTipText) property.
-
-The following code sample demonstrates how to create a toolbar control with tooltip.
-
+You can set the tooltip text by setting the [ToolTipText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_TooltipText) property.
+The following code sample demonstrates how to create a toolbar control with a tooltip.
 {% tabs %}
 
 {% highlight xaml %}
@@ -159,16 +156,11 @@ namespace ToolbarGettingStarted
 
 ## Tooltip Settings
 
-The Toolbar control supports customizing tooltip using [ToolTipSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ToolTipSettings) property. You can set [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarToolTipSettings.html#Syncfusion_Maui_Toolbar_ToolbarToolTipSettings_Background), [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarToolTipSettings.html#Syncfusion_Maui_Toolbar_ToolbarToolTipSettings_TextStyle) and [ToolTipPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarToolTipSettings.html#Syncfusion_Maui_Toolbar_ToolbarToolTipSettings_ToolTipPosition).
+The Toolbar control supports customizing tooltips using the [TooltipSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_TooltipSettings) property. You can set the [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarTooltipSettings.html#Syncfusion_Maui_Toolbar_ToolbarTooltipSettings_Background), [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarTooltipSettings.html#Syncfusion_Maui_Toolbar_ToolbarTooltipSettings_TextStyle), and [TooltipPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarTooltipSettings.html#Syncfusion_Maui_Toolbar_ToolbarTooltipSettings_TooltipPosition).
+The properties of TooltipSettings are:
 
-The properties of ToolTipSettings are:
-
-* **Background** : Set background color for the tooltip.
-* **TextStyle** : Set text style for the tooltip text.
-* **ToolTipPosition** : Set the [ToolbarRelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarRelativePosition.html) for the tooltip. The options are [Auto](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarRelativePosition.html#Syncfusion_Maui_Toolbar_ToolbarRelativePosition_Auto), [Top](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarRelativePosition.html#Syncfusion_Maui_Toolbar_ToolbarRelativePosition_Top), [Bottom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarRelativePosition.html#Syncfusion_Maui_Toolbar_ToolbarRelativePosition_Bottom), [Left](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarRelativePosition.html#Syncfusion_Maui_Toolbar_ToolbarRelativePosition_Left) and [Right](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarRelativePosition.html#Syncfusion_Maui_Toolbar_ToolbarRelativePosition_Right). The default value is `Auto`.
-
+Set the [ToolbarRelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarRelativePosition.html) for the tooltip. The options are [Auto](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarRelativePosition.html#Syncfusion_Maui_Toolbar_ToolbarRelativePosition_Auto), [Top](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarRelativePosition.html#Syncfusion_Maui_Toolbar_ToolbarRelativePosition_Top), [Bottom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarRelativePosition.html#Syncfusion_Maui_Toolbar_ToolbarRelativePosition_Bottom), [Left](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarRelativePosition.html#Syncfusion_Maui_Toolbar_ToolbarRelativePosition_Left), and [Right](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarRelativePosition.html#Syncfusion_Maui_Toolbar_ToolbarRelativePosition_Right). The default value is `Auto`.Set the text style for the tooltip text.Set the [ToolbarRelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarRelativePosition.html) for the tooltip. The options are [Auto](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarRelativePosition.html#Syncfusion_Maui_Toolbar_ToolbarRelativePosition_Auto), [Top](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarRelativePosition.html#Syncfusion_Maui_Toolbar_ToolbarRelativePosition_Top), [Bottom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarRelativePosition.html#Syncfusion_Maui_Toolbar_ToolbarRelativePosition_Bottom), [Left](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarRelativePosition.html#Syncfusion_Maui_Toolbar_ToolbarRelativePosition_Left), and [Right](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarRelativePosition.html#Syncfusion_Maui_Toolbar_ToolbarRelativePosition_Right). The default value is `Auto`.
 The following code sample demonstrates how to create a toolbar control with tooltip settings.
-
 {% tabs %}
 
 {% highlight xaml %}
