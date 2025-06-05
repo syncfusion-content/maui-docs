@@ -306,8 +306,8 @@ this.Content = timePicker;
 </tr>
 <tr>
 <td>{{'[EnableLooping](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_EnableLoopingProperty)'| markdownify }}</td>
-<td>Nil</td>
-<td>Not Supported.</td>
+<td>{{'[EnableLooping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.EnableLooping.html)'| markdownify }}</td>
+<td>Gets or sets the value of enable looping.</td>
 </tr>
 <tr>
 <td>{{'[FooterHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_FooterHeightProperty)'| markdownify }}</td>
@@ -505,7 +505,3 @@ this.Content = timePicker;
 <td>Occurs whenever the footer cancel button is clicked in the time picker.</td>
 </tr>
 </table>
-
-## Upcoming Features
-
-* Enable looping support.
