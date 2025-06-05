@@ -225,8 +225,8 @@ The following code example, explains how to initialize the properties of the `Xa
 </tr>
 <tr>
 <td>{{'[EnableLooping](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_EnableLoopingProperty)'| markdownify }}</td>
-<td>Nil</td>
-<td>Not Supported.</td>
+<td>{{'[EnableLooping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.EnableLooping.html)'| markdownify }}</td>
+<td>Gets or sets the value of enable looping.</td>
 </tr>
 <tr>
 <td>{{'[FooterHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPicker.XForms.SfPicker.html#Syncfusion_SfPicker_XForms_SfPicker_FooterHeight)'| markdownify }}</td>
@@ -459,7 +459,3 @@ The following code example, explains how to initialize the properties of the `Xa
 
  * Picker background color is not applied to the popup.
  * Picker dynamic items source does not render the picker item.
-
-## Upcoming features
-
- * Looping support for picker items.
