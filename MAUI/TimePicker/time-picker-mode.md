@@ -187,4 +187,4 @@ this.timePicker.PopupHeight = 400;
 
 {% endtabs %}
 
-    ![PopupSize in .NET MAUI Time Picker.](maui-time-picker-popupsize.png)
+    ![PopupSize in .NET MAUI Time Picker.](images/time-picker-mode/maui-time-picker-popupsize.png)
