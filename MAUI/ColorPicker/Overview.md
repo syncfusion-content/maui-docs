@@ -22,3 +22,5 @@ The .NET MAUI Color Picker is a UI component that enables users to select a colo
 * **Theme adaptation** : Adapts to the system or app's current theme, ensuring visual consistency.
 * **No color option** : Includes an option to select `No Color`, allowing users to remove any previously selected color.
 * **Interaction states** : The color picker can be programmatically toggled to prevent or allow user interaction.
+
+![.NET MAUI Color Picker](Images/Overview/Spectrum.png)

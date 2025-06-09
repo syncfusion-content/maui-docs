@@ -12,7 +12,7 @@ keywords : .net maui color picker, maui color picker, .net maui color picker con
 
 ## Rendering palette at initial load
 
-The [ColorMode]() property determines the interface used to select a color. To display the palette area when the Color Picker pop-up is opened, set the [ColorMode]() property to `Palette`. By default, it is configured as `Spectrum`.
+The `ColorMode` property determines the interface used to select a color. To display the palette area when the Color Picker pop-up is opened, set the `ColorMode` property to `Palette`. By default, it is configured as `Spectrum`.
 
 {% tabs %}
 
@@ -33,9 +33,11 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 {% endtabs %}
 
-## Default color
+![Palette](Images/Mode/Palette.png)
 
-The [SelectedColor]() property of the Color Picker is used to display a default color during initial load. You can also select a color value in the UI using built-in elements like the color spectrum, sliders, palette, or HEX input.
+## Selected color
+
+The `SelectedColor` property of the Color Picker is used to display a default color during initial load. You can also select a color value in the UI using built-in elements like the color spectrum, sliders, palette, or HEX input.
 
 {% tabs %}
 
@@ -55,3 +57,5 @@ SfColorPicker colorPicker = new SfColorPicker()
 {% endhighlight %}
 
 {% endtabs %}
+
+![SelectedColor](Images/Mode/SelectedColor.png)

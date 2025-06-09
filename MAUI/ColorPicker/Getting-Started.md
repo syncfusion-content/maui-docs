@@ -10,7 +10,7 @@ keywords : .net maui color picker, maui color picker, color picker, color palett
 
 # Getting Started with .NET MAUI Color Picker
 
-This section guides you through setting up and configuring a [SfColorPicker]() in your .NET MAUI application. Follow the steps below to add a basic Color Picker to your project.
+This section guides you through setting up and configuring a `SfColorPicker` in your .NET MAUI application. Follow the steps below to add a basic Color Picker to your project.
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -39,11 +39,7 @@ Before proceeding, ensure the following are set up:
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% highlight c# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+
 using Syncfusion.Maui.Core.Hosting;
 
 namespace ColorPickerSample
@@ -72,7 +68,7 @@ namespace ColorPickerSample
 
 1. To initialize the control, import the Inputs namespace.
 
-2. Initialize the [SfColorPicker]().
+2. Initialize the `SfColorPicker`.
 
 {% tabs %}
 
@@ -141,11 +137,7 @@ Before proceeding, ensure the following are set up:
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% highlight c# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+
 using Syncfusion.Maui.Core.Hosting;
 
 namespace ColorPickerSample
@@ -174,7 +166,7 @@ namespace ColorPickerSample
 
 1. To initialize the control, import the Inputs namespace.
 
-2. Initialize the [SfColorPicker]().
+2. Initialize the `SfColorPicker`.
 
 {% tabs %}
 
@@ -242,11 +234,7 @@ Before proceeding, ensure the following are set up:
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% highlight c# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+
 using Syncfusion.Maui.Core.Hosting;
 
 namespace ColorPickerSample
@@ -275,7 +263,7 @@ namespace ColorPickerSample
 
 1. To initialize the control, import the Inputs namespace.
 
-2. Initialize the [SfColorPicker]().
+2. Initialize the `SfColorPicker`.
 
 {% tabs %}
 
@@ -314,3 +302,7 @@ namespace ColorPickerSample
 
 {% endtabcontent %}
 {% endtabcontents %}
+
+The following gif image illustrates the result of the above code.
+
+![.NET MAUI Color Picker.](Images/Overview/Spectrum.png){:width="524" height="681" loading="lazy"}

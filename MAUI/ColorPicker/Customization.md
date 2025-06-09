@@ -12,7 +12,7 @@ keywords : .net maui color picker, maui color picker, .net maui color picker con
 
 ## Show recent colors
 
-You can display the recently selected colors in the Color Picker when in `Palette` mode by enabling the [ShowRecentColors]() property. By default, it is set to `True`.
+You can display the recently selected colors in the Color Picker when in `Palette` mode by enabling the `ShowRecentColors` property. By default, it is set to `True`.
 
 {% tabs %}
 
@@ -33,9 +33,11 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 {% endtabs %}
 
+![Recent color](Images/Customization/RecentColors.png)
+
 ## Show input area
 
-You can show or hide the input area of the Color Picker by adjusting the [ShowInputArea]() property. By default, it is set to `True`.
+You can show or hide the input area of the Color Picker by adjusting the `ShowInputArea` property. By default, it is set to `True`.
 
 {% tabs %}
 
@@ -56,9 +58,11 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 {% endtabs %}
 
+![Input area](Images/Customization/InputArea.png)
+
 ## Alpha slider
 
-The alpha slider is used to control the transparency of the selected color. You can show or hide the alpha slider by adjusting the [ShowAlphaSlider]() property. By default, it is set to `True`.
+The alpha slider is used to control the transparency of the selected color. You can show or hide the alpha slider by adjusting the `ShowAlphaSlider` property. By default, it is set to `True`.
 
 {% tabs %}
 
@@ -79,9 +83,11 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 {% endtabs %}
 
+![Alpha slider](Images/Customization/AlphaSlider.png)
+
 ## Switch color mode
 
-To display the Color Picker in a single mode without allowing users to switch between different modes, set the [ColorMode]() property to `Palette` (or Spectrum), and disable the mode switcher UI by setting the [IsColorModeSwitcherVisible]() property to `False`. By default, [IsColorModeSwitcherVisible]() is set to `True`, allowing users to toggle between modes.
+To display the Color Picker in a single mode without allowing users to switch between different modes, set the `ColorMode` property to `Palette` (or Spectrum), and disable the mode switcher UI by setting the `IsColorModeSwitcherVisible` property to `False`. By default, `IsColorModeSwitcherVisible` is set to `True`, allowing users to toggle between modes.
 
 {% tabs %}
 
@@ -103,9 +109,11 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 {% endtabs %}
 
+![Color mode](Images/Customization/HideSwitchColor.png)
+
 ## Action buttons
 
-You can render the Color Picker without the Apply and Cancel buttons for a seamless color selection experience. When the control buttons are hidden, the selected color is applied instantly, and the Color Picker popup closes automatically upon selection. To enable this, simply set the [IsActionButtonsVisible]() property to `False`.
+You can render the Color Picker without the Apply and Cancel buttons for a seamless color selection experience. When the control buttons are hidden, the selected color is applied instantly, and the Color Picker popup closes automatically upon selection. To enable this, simply set the `IsActionButtonsVisible` property to `False`.
 
 {% tabs %}
 
@@ -126,16 +134,18 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 {% endtabs %}
 
+![Action buttons](Images/Customization/HideActionButtons.png)
+
 ## Customize action buttons
 
-You can customize the backgroun color for the action buttons by specifying a suitable color for the [ApplyButtonBackground]() and [CancelButtonBackground]() properties.
+You can customize the backgroun color for the action buttons by specifying a suitable color for the `ApplyButtonBackground` and `CancelButtonBackground` properties.
 
 {% tabs %}
 
 {% highlight xaml %}
 
 <inputs:SfColorPicker ApplyButtonBackground="Navy"
-                      CancelButtonBackground="PaleTurquoise">
+                      CancelButtonBackground="LightGrey">
 </inputs:SfColorPicker>
 
 {% endhighlight %}
@@ -145,16 +155,18 @@ You can customize the backgroun color for the action buttons by specifying a sui
 SfColorPicker colorPicker = new SfColorPicker()
 {
     ApplyButtonBackground = Colors.Navy,
-    CancelButtonBackground = Colors.PaleTurquoise
+    CancelButtonBackground = Colors.LightGrey
 };
     
 {% endhighlight %}
 
 {% endtabs %}
 
+![Action buttons customization](Images/Customization/CustomizeActionButtons)
+
 ## No color option
 
-The [ShowNoColor]() property determines whether the `No Color` option is displayed in the Color Picker UI. This option allows users to clear their selection from the palette, effectively choosing no color. By default, this property is set to `False`.
+The `ShowNoColor` property determines whether the `No Color` option is displayed in the Color Picker UI. This option allows users to clear their selection from the palette, effectively choosing no color. By default, this property is set to `False`.
 
 {% tabs %}
 
@@ -175,9 +187,11 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 {% endtabs %}
 
-## Palette rows and columns
+![No color](Images/Customization/NoColor.png)
 
-The [PaletteColumnCount]() and [PaletteRowCount]() properties define the number of columns and rows displayed in the palette grid. By default, both are set to 10.
+## Palette count
+
+The `PaletteColumnCount` and `PaletteRowCount` properties define the number of columns and rows displayed in the palette grid. By default, both are set to 10.
 
 {% tabs %}
 
@@ -199,9 +213,11 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 {% endtabs %}
 
+![Palette row and column](Images/Customization/PaletteCount.png)
+
 ## Palette spacing
 
-The [PaletteColumnSpacing]() property defines the horizontal spacing between columns, while the [PaletteRowSpacing]() property defines the vertical spacing between rows in `Palette` mode. By default, both properties are set to 0, meaning the swatches are placed directly next to each other without any spacing.
+The `PaletteColumnSpacing` property defines the horizontal spacing between columns, while the `PaletteRowSpacing` property defines the vertical spacing between rows in `Palette` mode. By default, both properties are set to 0, meaning the swatches are placed directly next to each other without any spacing.
 
 {% tabs %}
 {% highlight xaml %}
@@ -220,3 +236,5 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 {% endhighlight %}
 {% endtabs %}
+
+![Palette row spacing](Images/Customization/PaletteSpacing.png)
