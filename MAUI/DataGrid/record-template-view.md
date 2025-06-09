@@ -11,7 +11,7 @@ documentation: UG
 
 The SfDataGrid provides support to represent additional information of a row using [TemplateViewDefinition]() that can be defined in datagrid. It allows you to load any controls to [TemplateViewDefinition.RowTemplate]() in order to display the additional information of a row. You can expand or collapse the row template view by using an expander in a row or programmatically.
 
-<img alt="Unbound Rows" src="Images\row-template-view\maui-datagrid-row-template.png" width="404"/>
+<img alt="Unbound Rows" src="Images\record-template-view\maui-datagrid-row-template.png" width="404"/>
 
 ## Defining row template
 
@@ -208,7 +208,7 @@ public class DetailsViewTemplateSelector : DataTemplateSelector
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Unbound Rows" src="Images\row-template-view\maui-datagrid-row-template-selector.png" width="404"/>
+<img alt="Unbound Rows" src="Images\record-template-view\maui-datagrid-row-template-selector.png" width="404"/>
 
 ## Height customization
 
