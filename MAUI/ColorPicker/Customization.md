@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customization in .NET MAUI Color Picker | Syncfusion®
-description: This section explains how to customize the Syncfusion® .NET MAUI Color Picker control.
+description: This section explains how to customize the Syncfusion® .NET MAUI Color Picker control (SfColorPicker).
 platform: MAUI
 control: SfColorPicker
 documentation: UG
@@ -162,7 +162,7 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 {% endtabs %}
 
-![Action buttons customization](Images/Customization/CustomizeActionButtons)
+![Action buttons customization](Images/Customization/CustomizeActionButtons.png)
 
 ## No color option
 
