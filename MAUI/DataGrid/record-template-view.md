@@ -323,7 +323,7 @@ The [DetailsViewExpanding]() event is raised when the `RowTemplate` is expanded 
 {% highlight c# %}
 this.dataGrid.DetailsViewExpanding += dataGrid_DetailsViewExpanding;
 
-void dataGrid_DetailsViewExpanding(object sender, Syncfusion.UI.Xaml.Grid.GridDetailsViewExpandingEventArgs e)
+void dataGrid_DetailsViewExpanding(object sender, DataGridDetailsViewExpandingEventArgs e)
 {
 }
 {% endhighlight %}
@@ -337,7 +337,7 @@ The [DetailsViewExpanded]() event is raised when the `RowTemplate` is expanded b
 {% highlight c# %}
 this.dataGrid.DetailsViewExpanded += dataGrid_DetailsViewExpanded;
 
-void dataGrid_DetailsViewExpanded(object sender, Syncfusion.UI.Xaml.Grid.GridDetailsViewExpandingEventArgs e)
+void dataGrid_DetailsViewExpanded(object sender, DataGridDetailsViewExpandedEventArgs e)
 {
 }
 {% endhighlight %}
@@ -351,7 +351,7 @@ The [DetailsViewCollapsing]() event is raised when the `RowTemplate` is collapse
 {% highlight c# %}
 this.dataGrid.DetailsViewCollapsing += dataGrid_DetailsViewCollapsing;
 
-void dataGrid_DetailsViewCollapsing(object sender, Syncfusion.UI.Xaml.Grid.GridDetailsViewExpandingEventArgs e)
+void dataGrid_DetailsViewCollapsing(object sender, DataGridDetailsViewCollapsingEventArgs e)
 {
 }
 {% endhighlight %}
@@ -365,7 +365,7 @@ The [DetailsViewCollapsed]() event is raised when the `RowTemplate` is collapsed
 {% highlight c# %}
 this.dataGrid.DetailsViewCollapsed += dataGrid_DetailsViewCollapsed;
 
-void dataGrid_DetailsViewCollapsed(object sender, Syncfusion.UI.Xaml.Grid.GridDetailsViewExpandingEventArgs e)
+void dataGrid_DetailsViewCollapsed(object sender, DataGridDetailsViewCollapsedEventArgs e)
 {
 }
 {% endhighlight %}
@@ -373,33 +373,31 @@ void dataGrid_DetailsViewCollapsed(object sender, Syncfusion.UI.Xaml.Grid.GridDe
 
 ### Cancel expanding or collapsing operations through events
 
-You can cancel the expanding operation when expanding the `RowTemplate` by using the [GridDetailsViewExpandingEventArgs.Cancel]() property in the [DetailsViewExpanding]() event handler.
+You can cancel the expanding operation when expanding the `RowTemplate` by using the [DataGridDetailsViewExpandingEventArgs.Cancel]() property in the [DetailsViewExpanding]() event handler.
 
 {% tabs %}
 {% highlight c# %}
 this.dataGrid.DetailsViewExpanding += dataGrid_DetailsViewExpanding;
 
-void dataGrid_DetailsViewExpanding(object sender, Syncfusion.UI.Xaml.Grid.GridDetailsViewExpandingEventArgs e)
+void dataGrid_DetailsViewExpanding(object sender, DataGridDetailsViewExpandingEventArgs e)
 {
- 
-    if ((e.Record as OrderInfo).OrderID == 1002)
-        e.Cancel = true;
+     if ((e.Record as Employee).EmployeeID == 1002)
+     e.Cancel = true;
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-Similarly, the collapsing operation can also be canceled through the [GridDetailsViewCollapsingEventArgs.Cancel]() property in [DetailsViewCollapsing]() event handler.
+Similarly, the collapsing operation can also be canceled through the [DataGridDetailsViewCollapsingEventArgs.Cancel]() property in [DetailsViewCollapsing]() event handler.
 
 {% tabs %}
 {% highlight c# %}
 this.dataGrid.DetailsViewCollapsing += dataGrid_DetailsViewCollapsing;
 
-void dataGrid_DetailsViewCollapsing(object sender, Syncfusion.UI.Xaml.Grid.GridDetailsViewCollapsingEventArgs e)
+void dataGrid_DetailsViewCollapsing(object sender, DataGridDetailsViewCollapsingEventArgs e)
 {
- 
-    if ((e.Record as OrderInfo).OrderID == 1002)
-        e.Cancel = true;
+     if ((e.Record as Employee).EmployeeID == 1002)
+     e.Cancel = true;
 }
 {% endhighlight %}
 {% endtabs %}
