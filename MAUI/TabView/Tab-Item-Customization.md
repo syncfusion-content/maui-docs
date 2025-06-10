@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Display Type in .NET MAUI Tab View (SfTabView) control | Syncfusion®
-description: Learn here all about color and font customization in Syncfusion® .NET MAUI Tab View (SfTabView) control.
-platform: maui
-control: Tab View
-documentation: ug
+title: Display Type in .NET MAUI Tab View (SfTabView) Control | Syncfusion®
+description: Learn all about color and font customization in the Syncfusion® .NET MAUI Tab View (SfTabView) control.
+platform: MAUI
+control: SfTabView
+documentation: UG
 ---
 
-# Configure the appearance of Tab Item in .NET MAUI Tab View (SfTabView)
+# Configure the Appearance of Tab Item in .NET MAUI Tab View (SfTabView)
 
-A tab item consists of the following elements that can be customized.
+A tab item consists of various elements that can be customized in the .NET MAUI Tab View.
 
 ## Adding image in tab item
 
 ### Header
 
-Holds the text of the tab item that is displayed in the tab bar.
+The header holds the text of the tab item displayed in the tab bar.
 
 {% tabs %}
 
@@ -38,7 +38,7 @@ var tabItems = new TabItemCollection
 
 {% endtabs %}
 
-![Tab Item Header](images/Tab-Width-Mode-Default.png) 
+![Header](images/Tab-Width-Mode-Default.png) 
 
 ### ImageSource 
 
@@ -67,11 +67,11 @@ var tabItems = new TabItemCollection
 
 {% endtabs %}
 
-![Tab Item ImageSource](images/Image-Position-Left.png) 
+![ImageSource](images/Image-Position-Left.png) 
 
 ### Content 
 
-The assigned view will get displayed in the main area of the tab view.
+The assigned view will get displayed in the main area of the Tab View.
 
 {% tabs %}
 
@@ -104,13 +104,13 @@ The assigned view will get displayed in the main area of the tab view.
 
 {% endtabs %}
 
-![Tab Item Content](images/TabItem_Content.png) 
+![Content](images/TabItem_Content.png) 
 
-## Image position options 
+## ImagePosition options 
 
-The .NET MAUI Tab View provides four options that determine how the image of the tab aligns relative to the text. The options are left, top, right and bottom. It can be achieved using the [ImagePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_ImagePosition) property of [SfTabItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html) of type [ImagePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_ImagePosition).
+The .NET MAUI Tab View provides four options determining how the image of the tab aligns relative to the text. The options are left, top, right and bottom. These can be achieved using the [ImagePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_ImagePosition) property of [SfTabItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html).
 
-N> Each tab item can be set with different image positions. Visual State Manager can be used to apply same value to all tabs.
+N> Each tab item can have different image positions. The Visual State Manager can be used to apply the same value to all tabs.
 
 ### Top
 
@@ -137,7 +137,7 @@ var tabItems = new TabItemCollection
 
 {% endtabs %}
 
-![Image Position Top](images/Image-Position-Top.png) 
+![ImagePosition top](images/Image-Position-Top.png) 
 
 ### Bottom
 
@@ -164,11 +164,11 @@ var tabItems = new TabItemCollection
 
 {% endtabs %}
 
-![Image Position Bottom](images/Image-Position-Bottom.png) 
+![ImagePosition bottom](images/Image-Position-Bottom.png) 
 
 ### Left
 
-The image will be placed before the text horizontally.
+The image will be placed before the text, horizontally.
 
 {% tabs %}
 
@@ -191,11 +191,11 @@ var tabItems = new TabItemCollection
 
 {% endtabs %}
 
-![Image Position Left](images/Image-Position-Left.png) 
+![ImagePosition left](images/Image-Position-Left.png) 
 
 ### Right
 
-The image will be placed to the right side of the text horizontally.
+The image will be placed to the right side of the text, horizontally.
 
 {% tabs %}
 
@@ -218,11 +218,11 @@ var tabItems = new TabItemCollection
 
 {% endtabs %}
 
-![Image Position Right](images/Image-Position-Right.png) 
+![ImagePosition right](images/Image-Position-Right.png) 
 
-## Image Text Spacing
+## ImageTextSpacing
 
-The [ImageTextSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_ImageTextSpacing) property in SfTabItem allows for the provision of spacing between the image and the text of the tab item.
+The [ImageTextSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_ImageTextSpacing) property in SfTabItem allows spacing between the image and the text of the tab item.
 
 {% tabs %}
 
@@ -245,9 +245,9 @@ var tabItems = new TabItemCollection
 
 {% endtabs %}
 
-![Image Text Spacing](images/Image-Text-Spacing.png)
+![ImageTextSpacing](images/Image-Text-Spacing.png)
 
-## Text Color Customization 
+## TextColor customization 
 
 The text color of the tab item displayed in the tab bar.
 
@@ -272,11 +272,11 @@ var tabItems = new TabItemCollection
 
 {% endtabs %}
 
-![Tab Image TextColor](images/TextColor.png) 
+![TextColor](images/TextColor.png) 
 
-## Font Customization 
+## Font customization 
 
-This type of customization involves making changes to the looks of some font elements.
+This type of customization involves changes to some font elements.
 
 ### FontFamily
 
@@ -303,7 +303,7 @@ var tabItems = new TabItemCollection
 
 {% endtabs %}
 
-![TabItem FontFamily](images/FontFamily.png) 
+![FontFamily](images/FontFamily.png) 
 
 ### FontAttribute
 
@@ -330,7 +330,7 @@ var tabItems = new TabItemCollection
 
 {% endtabs %}
 
-![Tab Item FontAttribute](images/FontAttributes.png) 
+![FontAttribute](images/FontAttributes.png) 
 
 ### FontSize
 
@@ -357,13 +357,14 @@ var tabItems = new TabItemCollection
 
 {% endtabs %}
 
-![Tab Item FontSize](images/FontSize.png)
+![FontSize](images/FontSize.png)
 
-## Badge Support
+## Badge support
 
-In SfTabItem, the badges are used to notify users of new or unread messages, notifications, or the status of something.
+In SfTabItem, badges notify users of new or unread messages, notifications, or the status of something.
 
-### Badge text
+### BadgeText
+
 By using the [BadgeText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_BadgeText) property in the SfTabItem, you can add text to badge view.
 
 {% tabs %}
@@ -387,13 +388,13 @@ var tabItems = new TabItemCollection
 
 {% endtabs %}
 
-### Badge settings
+### BadgeSettings
 
-The [BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_BadgeSettings) property helps you to customize the basic look and feel of the badge view in the SfTabItem. 
+The [BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_BadgeSettings) property helps customize the basic look and feel of the badge view in the SfTabItem. 
 
-[BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_BadgeSettings) contains the sub-elements such as badge types, positions, and colors. You can customize the background color, text color, border color, width, offset, and font attributes.
+It contains the sub-elements such as badge types, positions, and colors. You can customize the background color, text color, border color, width, offset, and font attributes.
 
-N> To customize the badge beyond predefined styles, set [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Type) property to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeType.html#Syncfusion_Maui_Core_BadgeType_None) in the [BadgeSettings.](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#properties)
+N> To customize the badge beyond predefined styles, set [Type](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Type) property to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeType.html#Syncfusion_Maui_Core_BadgeType_None) in the [BadgeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#properties).
 
 {% tabs %}
 
@@ -442,11 +443,11 @@ tabView.Items = tabItems;
 
 {% endtabs %}
 
-![Tabview BadgeSupport](images/TabItem_badge.png) 
+![BadgeSupport](images/TabItem_badge.png) 
 
 N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/TabViewCustomizationSample) in GitHub.
 
-## Tab Header Padding
+## TabHeaderPadding
 
 The [TabHeaderPadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabHeaderPadding) property in [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1) allows for adding padding to the tab header.
 
@@ -468,11 +469,11 @@ tabView.TabHeaderPadding = new Thickness(5, 10, 5, 10);
 
 {% endtabs %}
 
-![Image Text Spacing](images/TabViewHeaderItem_Padding.png)
+![TabHeaderPadding](images/TabViewHeaderItem_Padding.png)
 
-## Scroll buttons on Header
+## Scroll buttons on header
 
-Scroll buttons are used to navigate through the items in the header of the tab view by adjusting the [IsScrollButtonEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IsScrollButtonEnabled) property of [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1). This functionality additionally indicates the presence of tabs beyond the currently visible area.
+Scroll buttons are used to navigate through the items in the header of the Tab View by adjusting the [IsScrollButtonEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IsScrollButtonEnabled) property of [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1). This additionally indicates the presence of tabs beyond the currently visible area.
 
 {% tabs %}
 
@@ -489,11 +490,11 @@ tabView.IsScrollButtonEnabled = true;
 
 {% endtabs %}
 
-![TabView Scroll Mode](images/TabViewScroll.gif) 
+![Scroll mode](images/TabViewScroll.gif) 
 
 ### Scroll button customization
 
-The [ScrollButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ScrollButtonBackground) and [ScrollButtonColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ScrollButtonColor) property of [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1) allows users to customize the background color and foreground color of scroll button.
+The [ScrollButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ScrollButtonBackground) and [ScrollButtonColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ScrollButtonColor) property of [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1) allows customization of the background and foreground color of the scroll button.
 
 {% tabs %}
 
@@ -513,11 +514,11 @@ this.Content = stackLayout;
 
 {% endtabs %}
 
-![ScrollButtonCustomization](images\ScrollButtonCustomization.png)
+![Scroll button customization](images\ScrollButtonCustomization.png)
 
-## Font auto scaling enabled
+## FontAutoScalingEnabled
 
-The [FontAutoScalingEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_FontAutoScalingEnabled) property is used to automatically scale the tab header's font size based on the operating system's text size. The default value of the `FontAutoScalingEnabled` property is `false.`
+The [FontAutoScalingEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_FontAutoScalingEnabled) property automatically scales the tab header's font size based on the operating system's text size. The default value is `false`.
 
 {% tabs %}
 
@@ -534,7 +535,7 @@ tabView.FontAutoScalingEnabled = true;
 
 {% endtabs %}
 
-## Content transition duration
+## ContentTransitionDuration
 
 You can customize the animation duration when changing the [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_SelectedIndex) of the Tab View by setting the [ContentTransitionDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_ContentTransitionDuration) property.
 
@@ -555,9 +556,9 @@ tabView.ContentTransitionDuration = 1000;
 
 ![ContentTransitionDuration](images/ContentTransition.gif)
 
-## Image size
+## ImageSize
 
-You can customize the image size in the .NET MAUI TabView control by setting the [ImageSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_ImageSize) property.
+You can customize the image size in the .NET MAUI Tab View control by setting the [ImageSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html#Syncfusion_Maui_TabView_SfTabItem_ImageSize) property.
 
 {% tabs %}
 

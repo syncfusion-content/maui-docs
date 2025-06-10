@@ -1,17 +1,18 @@
 ---
 layout: post
-title: Indicator color and Background in Syncfusion® .NET MAUI Busy Indicator.
-description: Learn here all about color support in Syncfusion® .NET MAUI Busy Indicator control (SfBusyIndicator) and more.
-platform: maui
-control: BusyIndicator
-documentation: ug
+title: Indicator Color and Background in .NET MAUI Busy Indicator | Syncfusion®
+description: Learn here about color support in Syncfusion® .NET MAUI Busy Indicator control (SfBusyIndicator) and more.
+platform: MAUI
+control: SfBusyIndicator
+documentation: UG
 keywords : .net maui busy indicator color, maui busy indicator color, maui busy indicator customize.
 ---
-# Indicator color and Background in .NET MAUI Busy Indicator
 
-## Indicator color in .NET MAUI Busy Indicator 
+# Indicator Color and Background in .NET MAUI Busy Indicator
 
-[.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) provides an option to customize the color of the indicator. This can be done using the [IndicatorColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_IndicatorColor) property.
+## IndicatorColor
+
+The [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) allows customization of the indicator's color using the [IndicatorColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_IndicatorColor) property.
 
 {% tabs %}
 
@@ -42,11 +43,11 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
 
 The following gif image illustrates the result of the above code.
 
-![Indicator Color](Images/IndicatorColor/IndicatorColor.gif)
+![IndicatorColor](Images/IndicatorColor/IndicatorColor.gif)
 
-## Overlay Background in SfBusyIndicator
+## Overlay background
 
-[.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html) provides an option to customize the overlay background. This can be done using the [OverlayFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_OverlayFill)  property.
+The [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html) also provides an option to customize the overlay background using the [OverlayFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_OverlayFill) property.
 
 {% tabs %}
 
@@ -80,9 +81,9 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
 
 The following gif image illustrates the result of the above code.
 
-![Overlay Fill](Images/IndicatorColor/OverlayFillColor.gif)
+![OverlayFill](Images/IndicatorColor/OverlayFillColor.gif)
 
-The [OverlayFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_OverlayFill) property type is `Brush`, so you can set Gradients as background.
+The [OverlayFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_OverlayFill) property type is `Brush`, which allows setting gradients as the background.
 
 {% tabs %}
 
@@ -129,5 +130,5 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
 
 The following gif image illustrates the result of the above code.
 
-![Overlay Fill](Images/IndicatorColor/OverlayFillBrush.gif)
+![OverlayFill](Images/IndicatorColor/OverlayFillBrush.gif)
 

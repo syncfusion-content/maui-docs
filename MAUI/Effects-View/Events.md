@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Events in .NET MAUI Effects View control | Syncfusion®
-description: Learn here all about Events support in Syncfusion® .NET Effects View (SfEffectsView) control and more.
-platform: Maui
-control: Effects View
-documentation: ug
+title: Events in .NET MAUI Effects View Control | Syncfusion®
+description: Learn here all about events support in Syncfusion® .NET Effects View (SfEffectsView) control and more.
+platform: MAUI
+control: SfEffectsView
+documentation: UG
 ---
 
 # Events in .NET MAUI Effects View (SfEffectsView)
@@ -26,8 +26,8 @@ The [AnimationCompleted](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cor
 
 {% highlight C# %} 
 
-    public partial class MainPage : ContentPage
-    {
+public partial class MainPage : ContentPage
+{
 
     public MainPage()
     {
@@ -45,7 +45,7 @@ The [AnimationCompleted](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cor
     {
         ...
     }
-    }
+}
 
 {% endhighlight %}
 

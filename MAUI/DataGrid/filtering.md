@@ -26,8 +26,8 @@ N> In order to refresh filtering for the newly added row or column, set the [SfD
 {% highlight c# %}
 private void Button_Clicked(object sender, EventArgs e)
 {
-	this.sfDataGrid.View.Filter = FilterRecords;
-	this.sfDataGrid.View.RefreshFilter();
+	this.dataGrid.View.Filter = FilterRecords;
+	this.dataGrid.View.RefreshFilter();
 }
 
 public bool FilterRecords(object record)
@@ -127,8 +127,8 @@ public bool CheckEquals(string value)
 
 private void Button_Clicked(object sender, EventArgs e)
 {
-	this.sfDataGrid.View.Filter = FilterRecords;
-	this.sfDataGrid.View.RefreshFilter();
+	this.dataGrid.View.Filter = FilterRecords;
+	this.dataGrid.View.RefreshFilter();
 }
 {% endhighlight %}
 {% endtabs %}
@@ -182,8 +182,8 @@ Clear the applied filtering by setting the `SfDataGrid.View.Filter` property to 
 {% highlight c# %}
 private void Button_Clicked(object sender, EventArgs e)
 {
-	this.sfDataGrid.View.Filter = null;
-	this.sfDataGrid.View.RefreshFilter();
+	this.dataGrid.View.Filter = null;
+	this.dataGrid.View.RefreshFilter();
 }
 {% endhighlight %}
 {% endtabs %}

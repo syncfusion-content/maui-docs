@@ -1,17 +1,16 @@
 ---
 layout: post
-title: Animation Duration in .NET MAUI Busy Indicator control | Syncfusion®
+title: Animation Duration in .NET MAUI Busy Indicator Control | Syncfusion®
 description: Learn here all about Animation Duration support in Syncfusion® .NET MAUI Busy Indicator (SfBusyIndicator) control and more.
-platform: maui
-control: BusyIndicator
-documentation: ug
-keywords : .net maui busy indicator duration, maui busy indicator duration.
+platform: MAUI
+control: SfBusyIndicator
+documentation: UG
+keywords : .net maui busy indicator duration, maui busy indicator duration
 ---
+
 # Animation Duration in .NET MAUI Busy Indicator (SfBusyIndicator)
 
-## Animation Duration in .NET MAUI Busy Indicator
-
-The [DurationFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_DurationFactor) property of the [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) can be used to set the animation speed based on given value. Setting smaller duration value accelerates animation speed. Its default value is 0.5 and ranges from 0 to 1. 
+The [DurationFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html#Syncfusion_Maui_Core_SfBusyIndicator_DurationFactor) property of the [.NET MAUI Busy Indicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBusyIndicator.html?tabs=tabid-1) is used to set the animation speed depending on a given value. A smaller duration value accelerates the animation speed. The default value is 0.5, and it ranges from 0 to 1.
 
 {% tabs %}
 
@@ -41,9 +40,4 @@ SfBusyIndicator busyIndicator = new SfBusyIndicator()
 
 The following screenshot illustrates the result of the above code.
 
-![Animation Duration](Images/Duration/Duration.gif)
-
-
-
-
-
+![Animation duration](Images/Duration/Duration.gif)

@@ -363,7 +363,7 @@ In [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfD
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid  x:Name="datagrid"
+<syncfusion:SfDataGrid  x:Name="dataGrid"
                         AutoGenerateRelations="True"
                         ItemsSource="{Binding Orders}" />
 {% endhighlight %}

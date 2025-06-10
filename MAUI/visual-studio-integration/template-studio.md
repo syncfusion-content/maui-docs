@@ -9,7 +9,7 @@ documentation: ug
 
 # Syncfusion<sup>®</sup> .NET MAUI Template Studio
 
-The .NET MAUI Template Studio is provided by Syncfusion<sup>®</sup> and is used to build the Syncfusion<sup>®</sup> .NET MAUI applications using Syncfusion<sup>®</sup> components. The required Syncfusion<sup>®</sup> components, NuGet references, namespace, and component render code are all used to develop the Syncfusion<sup>®</sup> .NET MAUI applications. The Syncfusion<sup>®</sup> .NET MAUI Template Studio providing a project wizard to simplify the process for you to create an application using Syncfusion<sup>®</sup> components.
+The .NET MAUI Template Studio, provided by Syncfusion<sup>®</sup>, helps you build .NET MAUI applications using Syncfusion<sup>®</sup> components. It includes the necessary components, NuGet references, namespaces, and rendering code to streamline development. The Template Studio also offers a project wizard that simplifies the process of creating applications with Syncfusion<sup>®</sup> components.
 
 The following steps below will assist you to create your **Syncfusion<sup>®</sup> .NET MAUI Application** through **Visual Studio 2022**:
 
@@ -35,7 +35,7 @@ N> Before use the Syncfusion<sup>®</sup> .NET MAUI Project Template, check whet
 
      ![CreateNewWizard](images/SyncfusionTemplate.png)
 
-4. After launching the Syncfusion<sup>®</sup> .NET MAUI Template Studio, the wizard for configuring the Syncfusion<sup>®</sup> .NET MAUI application will appear. You can add the following Syncfusion<sup>®</sup> .NET MAUI components to the application. Choose the required Syncfusion<sup>®</sup> .NET MAUI components 
+4. After launching the Syncfusion<sup>®</sup> .NET MAUI Template Studio, a configuration wizard will appear to help you set up your application. You can then choose from the available Syncfusion<sup>®</sup> .NET MAUI components and add the ones you need to your project. 
 
     ![Controls Section](images/ControlsTab.png)
 
@@ -69,6 +69,6 @@ N> Before use the Syncfusion<sup>®</sup> .NET MAUI Project Template, check whet
 
      ![Readme](images/MauiApplication.png)
 
-8. The Syncfusion<sup>®</sup> .NET MAUI application configures with most recent Syncfusion<sup>®</sup> .NET MAUI NuGet packages version, namespaces , and component render code for Syncfusion<sup>®</sup> components.
+8. The Syncfusion<sup>®</sup> .NET MAUI application is configured with the latest Syncfusion<sup>®</sup> .NET MAUI NuGet package versions, namespaces, and component rendering code.
 
 9. If you installed the trial setup or NuGet packages from nuget.org you must register the Syncfusion<sup>®</sup> license key to your application since Syncfusion<sup>®</sup> introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio<sup>®</sup> release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/overview#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion<sup>®</sup> license key to your application. Refer to this [blog](https://www.syncfusion.com/blogs/post/whats-new-in-2018-volume-2.aspx?_ga=2.11237684.1233358434.1587355730-230058891.1567654773) post for understanding the licensing changes introduced in Essential Studio<sup>®</sup>.

@@ -30,7 +30,7 @@ You can add annotations to a PDF document by importing them from FDF and XFDF fi
 {% highlight C# %}
 void ImportAnnotations()
 {
-    // Create a file stream from the XFDF file containing the annotations information. Here a file named "AnnotationsInfo.xfdf" is read from the application's data directory.
+    // Create a file stream from the XFDF file containing the annotations information. Here, a file named "AnnotationsInfo.xfdf" is read from the application's data directory.
     string fileName = Path.Combine(FileSystem.Current.AppDataDirectory, "AnnotationsInfo.xfdf");
     Stream inputFileStream = File.OpenRead(fileName);
     inputFileStream.Position = 0;
@@ -45,17 +45,17 @@ To import the annotations asynchronously, you may use the [ImportAnnotationsAsyn
 
 ## Export annotations
 
-The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to export annotations from a PDF document into FDF and XFDF files. This will help you to save the annotation information in a separate file rather than the complete PDF file. You need to provide the FDF or XFDF file stream as a parameter to the [ExportAnnotations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ExportAnnotations_System_IO_Stream_Syncfusion_Pdf_Parsing_AnnotationDataFormat_System_Collections_Generic_List_Syncfusion_Maui_PdfViewer_Annotation__) method to achieve the same. The annotations information will be exported to the given file stream. The following code explains how to export annotations from a PDF document into an XFDF file in the application’s data directory.
+The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to export annotations from a PDF document into FDF and XFDF files. This will help you to save the annotation information in a separate file rather than the complete PDF file. You need to provide the FDF or XFDF file stream as a parameter to the [ExportAnnotations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ExportAnnotations_System_IO_Stream_Syncfusion_Pdf_Parsing_AnnotationDataFormat_System_Collections_Generic_List_Syncfusion_Maui_PdfViewer_Annotation__) method to achieve the same. The annotation information will be exported to the given file stream. The following code explains how to export annotations from a PDF document into an XFDF file in the application’s data directory.
 
 {% tabs %}
 {% highlight C# %}
 private void ExportAnnotations()
 {
-    // Create a file stream to export the annotations. Here a file named "ExportedFile.xfdf" is created in the application's data directory.
+    // Create a file stream to export the annotations. Here, a file named "ExportedFile.xfdf" is created in the application's data directory.
     string targetFile = Path.Combine(FileSystem.Current.AppDataDirectory, "ExportedFile.xfdf");
     FileStream fileStream = File.Create(targetFile);
 
-    // Export the annotations to the file stream by passing stream to the `ExportAnnotations` method of `SfPdfViewer` instance.
+    // Export the annotations to the file stream by passing stream to the `ExportAnnotations` method of the `SfPdfViewer` instance.
     PdfViewer.ExportAnnotations(fileStream, Syncfusion.Pdf.Parsing.AnnotationDataFormat.XFdf);
 }
 {% endhighlight %}
@@ -63,9 +63,9 @@ private void ExportAnnotations()
 
 To import the annotations asynchronously, you may use the [ExportAnnotationsAsync](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ExportAnnotationsAsync_System_IO_Stream_Syncfusion_Pdf_Parsing_AnnotationDataFormat_System_Collections_Generic_List_Syncfusion_Maui_PdfViewer_Annotation__System_Threading_CancellationToken_) method.
 
-### Export specific list of annotations
+### Export a specific list of annotations
 
-You can export only specific list of annotations from a PDF document, by providing the list of annotations as an additional parameter to the [ExportAnnotations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ExportAnnotations_System_IO_Stream_Syncfusion_Pdf_Parsing_AnnotationDataFormat_System_Collections_Generic_List_Syncfusion_Maui_PdfViewer_Annotation__) method. You may use the Annotations property of the SfPdfViewer to obtain a specific list of annotations from the total annotations. The following example explains how to export the first five annotations in a PDF document into an XFDF file.
+You can export only a specific list of annotations from a PDF document by providing the list of annotations as an additional parameter to the [ExportAnnotations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ExportAnnotations_System_IO_Stream_Syncfusion_Pdf_Parsing_AnnotationDataFormat_System_Collections_Generic_List_Syncfusion_Maui_PdfViewer_Annotation__) method. You may use the Annotations property of the SfPdfViewer to obtain a specific list of annotations from the total annotations. The following example explains how to export the first five annotations in a PDF document into an XFDF file.
 
 {% tabs %}
 {% highlight C# %}
@@ -87,7 +87,7 @@ List<Annotation> GetAnnotations(int count)
 
 void ExportSpecificAnnotations()
 {
-    // Create a file stream to export the annotations. Here a file named "ExportedFile.xfdf" is created in the application's data directory.
+    // Create a file stream to export the annotations. Here, a file named "ExportedFile.xfdf" is created in the application's data directory.
     string targetFile = Path.Combine(FileSystem.Current.AppDataDirectory, "ExportedFile.xfdf");
     FileStream fileStream = File.Create(targetFile);
 
