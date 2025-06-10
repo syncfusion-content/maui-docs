@@ -308,6 +308,45 @@ this.Scheduler.AppointmentTextStyle = appointmentTextStyle;
 
 ![appointment-text-appearence-customization-in-maui-scheduler](images/agenda-view/appointment-text-appearence-customization-in-maui-scheduler.png)
 
+## No Events Text Color Customization
+The No events text style can be customized by using the [SchedulerTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTextStyle.html) property of [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
+
+{% tabs %}
+{% highlight XAML hl_lines="6" %}
+
+<scheduler:SfScheduler x:Name="scheduler"
+                       View="Week"
+                       AllowedViews="Day, Week, WorkWeek, Month, TimelineDay, TimelineWeek, TimelineWorkWeek, Agenda">
+    <scheduler:SfScheduler.AgendaView>
+        <scheduler:SchedulerAgendaView>
+            <scheduler:SchedulerAgendaView.NoEventsTextStyle>
+                <scheduler:SchedulerTextStyle TextColor="DarkSlateGrey" FontAttributes="Italic" FontSize="15"/>
+            </scheduler:SchedulerAgendaView.NoEventsTextStyle>
+        </scheduler:SchedulerAgendaView>
+    </scheduler:SfScheduler.AgendaView>
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight C# hl_lines="3" %}
+
+ // Customizing the No events text style in agenda view
+ var textStyle = new SchedulerTextStyle()
+ {
+     TextColor = Colors.DimGray,
+     FontAttributes = FontAttributes.Italic,
+     FontSize = 12,
+     FontAutoScalingEnabled = true
+ };
+// Setting the TextStyle for the NoEvets text.
+ this.scheduler.AgendaView.NoEventsTextStyle = textStyle;
+
+{% endhighlight %}
+{% endtabs %}       
+
+![]()
+
+N> When there is No appointments in the scheduler [AgendaView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAgendaView.html), No Events Text will appear.
+
 ## Change the appointment time format
 
 You can customize the appointment time format of the scheduler by using the [AppointmentTimeFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAgendaView.html#Syncfusion_Maui_Scheduler_SchedulerAgendaView_AppointmentTimeFormat) property of [AgendaView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAgendaView.html).
