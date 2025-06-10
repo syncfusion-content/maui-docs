@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrate from Syncfusion<sup>&reg;</sup> Xamarin SfTimePicker to .NET MAUI SfTimePicker
+title: Migrate from Syncfusion® Xamarin SfTimePicker to .NET MAUI SfTimePicker
 description: Learn about migrating from Syncfusion<sup>&reg;</sup> Xamarin TimePicker to Syncfusion<sup>&reg;</sup> .NET MAUI TimePicker control.
 platform: maui
 control: SfTimePicker
