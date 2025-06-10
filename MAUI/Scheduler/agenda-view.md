@@ -312,11 +312,11 @@ this.Scheduler.AppointmentTextStyle = appointmentTextStyle;
 The No events text style can be customized by using the [SchedulerTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTextStyle.html) property of [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}
-{% highlight XAML hl_lines="6" %}
+{% highlight XAML hl_lines="6 7 8" %}
 
 <scheduler:SfScheduler x:Name="scheduler"
-                       View="Week"
-                       AllowedViews="Day, Week, WorkWeek, Month, TimelineDay, TimelineWeek, TimelineWorkWeek, Agenda">
+                       View="Agenda"
+                       AllowedViews="Day, Agenda">
     <scheduler:SfScheduler.AgendaView>
         <scheduler:SchedulerAgendaView>
             <scheduler:SchedulerAgendaView.NoEventsTextStyle>
