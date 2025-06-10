@@ -87,7 +87,7 @@ To initialize the control, import the picker namespace and initialize `SfPicker`
 <th>.NET MAUI SfPicker</th>
 <th>Description</th></tr>
 <tr>
-<td>{{'[SfPicker](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfPicker.html)'| markdownify }}</td>
+<td>{{'[SfPicker](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPicker.XForms.SfPicker.html)'| markdownify }}</td>
 <td>{{'[SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html)'| markdownify }}</td>
 <td>The SfPicker class that represents a control, that allows you pick an item among a list of items.</td>
 </tr>

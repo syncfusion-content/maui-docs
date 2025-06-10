@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Looping support in .NET MAUI Picker Control | Syncfusion®
-description: Learn about looping support in Syncfusion<sup>&reg;</sup> .NET MAUI Picker (SfPicker) control.
+description: Learn about looping support in Syncfusion<sup>&reg;</sup> .NET MAUI Picker (SfPicker) control and its features.
 platform: maui
 control: SfPicker
 documentation: ug
