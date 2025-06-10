@@ -18,9 +18,9 @@ You can customize the selected color icon in the Color Picker using the `Selecte
 
 {% highlight xaml %}
 
-<inputs:SfColorPicker x:Name="colorPicker">
+<inputs:SfColorPicker x:Name="colorPicker" ColorChanging="colorPicker_ColorChanging">
     <inputs:SfColorPicker.SelectedColorIcon>
-        <FontImageSource FontFamily="MauiMaterialAssets" Glyph="&#xe748;" Color="DodgerBlue" />
+        <FontImageSource FontFamily="MauiMaterialAssets" Glyph="&#xe748;"  />
     </inputs:SfColorPicker.SelectedColorIcon>
 </inputs:SfColorPicker>
 
@@ -28,19 +28,13 @@ You can customize the selected color icon in the Color Picker using the `Selecte
 
 {% highlight c# %}
 
-var iconSource = new FontImageSource
+private void colorPicker_ColorChanging(object sender, ColorChangingEventArgs e)
 {
-    FontFamily = "MauiMaterialAssets",
-    Glyph = "\ue748",
-    Color = Colors.DodgerBlue
-};
-
-SfColorPicker colorPicker = new SfColorPicker()
-{
-    SelectedColorIcon = iconSource
-};
-
-Content = colorPicker;
+    if (colorPicker.SelectedColorIcon is FontImageSource fontIcon)
+    {
+        fontIcon.Color = e.NewColor;
+    }
+}
 
 {% endhighlight %}
 
@@ -59,8 +53,9 @@ To customize the appearance of the selected color, use the `SelectedColorTemplat
 <inputs:SfColorPicker x:Name="colorPicker">
     <inputs:SfColorPicker.SelectedColorTemplate>
         <DataTemplate>
-            <Label Text="Selected color.." VerticalTextAlignment="Center" HorizontalTextAlignment="Center" 
-                   Background="Pink"/>
+            <Border BackgroundColor="{Binding SelectedColor}">
+            <Label Text="Looks Good!" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            </Border>
         </DataTemplate>
     </inputs:SfColorPicker.SelectedColorTemplate>
 </inputs:SfColorPicker>
@@ -69,22 +64,23 @@ To customize the appearance of the selected color, use the `SelectedColorTemplat
 
 {% highlight c# %}
 
-var selectedColorTemplate = new DataTemplate(() =>
+colorPicker.SelectedColorTemplate = new DataTemplate(() =>
 {
-    return new Label
+    var border = new Border();
+    border.SetBinding(Border.BackgroundColorProperty, "SelectedColor");
+
+    var label = new Label
     {
-        Text = "Selected color..",
-        BackgroundColor = Colors.Pink,
-        VerticalTextAlignment="Center",
-        HorizontalTextAlignment="Center" 
+        Text = "Looks Good!",
+        FontAttributes = FontAttributes.Bold,
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center
     };
+
+    border.Content = label;
+    return border;
 });
 
-SfColorPicker colorPicker = new SfColorPicker()
-{
-    SelectedColorTemplate = selectedColorTemplate
-};
-    
 Content = colorPicker;    
 
 {% endhighlight %}
@@ -104,7 +100,7 @@ The drop-down icon of the Color Picker can be customized using the `DropDownButt
 <inputs:SfColorPicker x:Name="colorPicker">
     <inputs:SfColorPicker.DropDownButtonTemplate>
         <DataTemplate>
-            <Label Text="&#xe767;" FontFamily="MauiMaterialAssets" FontSize="14" TextColor="Blue" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+            <Label Text="&#xe710;" FontFamily="MauiMaterialAssets" FontSize="14" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
         </DataTemplate>
     </inputs:SfColorPicker.DropDownButtonTemplate>
 </inputs:SfColorPicker>
@@ -117,7 +113,7 @@ var dropDownTemplate = new DataTemplate(() =>
 {
     return new Label
     {
-        Text = "\ue767", 
+        Text = "\ue710", 
         FontFamily = "MauiMaterialAssets",
         TextColor = Colors.Black,
         FontSize = 14,

@@ -109,7 +109,7 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 {% endtabs %}
 
-![Color mode](Images/Customization/HideSwitchColor.png)
+![Color mode](Images/Customization/HideSwitchColorMode.png)
 
 ## Action buttons
 
@@ -197,7 +197,7 @@ The `PaletteColumnCount` and `PaletteRowCount` properties define the number of c
 
 {% highlight xaml %}
 
-<inputs:SfColorPicker PaletteColumnCount="4" PaletteRowCount="5"/>    
+<inputs:SfColorPicker PaletteColumnCount="6" PaletteRowCount="5"/>    
 
 {% endhighlight %}
 
@@ -205,7 +205,7 @@ The `PaletteColumnCount` and `PaletteRowCount` properties define the number of c
 
 SfColorPicker colorPicker = new SfColorPicker()
 {
-    PaletteColumnCount = 4,
+    PaletteColumnCount = 6,
     PaletteRowCount = 5
 };
     
