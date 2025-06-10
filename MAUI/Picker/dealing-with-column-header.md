@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Column header with .NET MAUI Picker Control | Syncfusion<sup>&reg;</sup>
+title: Column Header with .NET MAUI Picker Control | Syncfusion<sup>&reg;</sup>
 description: Learn here all about column header with Syncfusion<sup>&reg;</sup> .NET MAUI Picker (SfPicker) control and its basic features.
 platform: maui
 control: SfPicker
@@ -9,7 +9,7 @@ documentation: ug
 
 # Dealing with Column Header in .NET MAUI Picker (SfPicker)
 
-This section explains the column header customization of picker control.
+This section explains how to customize the column header in the Picker control.
 
 ## Column header view
 
@@ -36,7 +36,7 @@ The SfPicker enables or disables the column header section by setting the SfPick
 
 ## Column header customization
 
-Enhancing Column Header with `Height`, `Text Style`, `Background`, and `DividerColor` Properties.
+Enhance the column header using the `Height`, `TextStyle`, `Background`, and `DividerColor` properties.
 
 ### Background
 
@@ -97,7 +97,7 @@ The .NET MAUI Picker control and column header [TextStyle](https://help.syncfusi
 
 ### Divider color
 
-The .NET MAUI Picker control, Separator line background customized by setting `SfPicker.ColumnHeaderView.DividerColor` property.
+The separator line in the .NET MAUI Picker control can be customized by setting `SfPicker.ColumnHeaderView.DividerColor` property.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
@@ -120,7 +120,7 @@ The .NET MAUI Picker control, Separator line background customized by setting `S
 
 ### Custom Column Header Appearance using Datatemplate
 
-You can customize the picker column header appearance by using the [ColumnHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_ColumnHeaderTemplate) property in the [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html).
+You can customize the picker column header appearance by using the [Template]() property of the [PickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumnHeaderView.html).
 
 {% tabs %}
 
@@ -140,13 +140,13 @@ You can customize the picker column header appearance by using the [ColumnHeader
 
 {% endtabs %}
 
-![Column header template in .NET MAUI Picker.](images/dealing-with-column-header/maui-picker-column-header-template.png)
+![Column header template in .NET MAUI Picker.](maui-picker-column-header-template.png)
 
 N> If a template is applied to the column header in the [PickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumnHeaderView.html), the remaining column header properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumnHeaderView.html#Syncfusion_Maui_Picker_PickerColumnHeaderView_DividerColor) Property.
 
 ### Custom Column Header appearance using DataTemplateSelector
 
-You can customize the picker column header appearance by using the [ColumnHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_ColumnHeaderTemplate) property in the [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the picker column header. This lets you apply a custom data template to the column header and customize its appearance based on specific conditions.
+You can customize the picker column header appearance by using the [Template]() property of the [PickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumnHeaderView.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the picker column header. This lets you select a different data template for each column header and customize the appearance of a specific column header based on certain conditions.
 
 {% tabs %}
 
@@ -190,7 +190,5 @@ public class PickerTemplateSelector : DataTemplateSelector
         return NonSelectedItemTemplate;
     }
 }
-
-{% endhighlight %}
 
 {% endtabs %}

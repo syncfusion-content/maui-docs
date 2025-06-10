@@ -11,7 +11,7 @@ documentation: ug
 
 ## SelectionChanged
 
-The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_SelectionChanged) event is used to notify when the date selection is changed onto the view in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
+The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_SelectionChanged) event is used to notify when the date selection is changed in the view in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
 
 * `Sender`: This contains the `SfDatePicker` object.
 
@@ -75,7 +75,7 @@ this.picker.Opened += this.OnDatePickerPopUpOpened;
 
 private void OnDatePickerPopUpOpened(object sender, EventArgs e)
 {
-    // If you need to open the picker, set IsOpen property to true.
+    // To open the picker, set the IsOpen property to true.
     this.picker.IsOpen = true;
 }
 
@@ -108,7 +108,7 @@ this.picker.Closing += this.OnDatePickerPopUpClosing;
 
 private void OnDatePickerPopUpClosing(object sender, CancelEventArgs e)
 {
-    //To restrict the date picker get close, set e.Cancel to true.
+    //To prevent the date picker close, set e.Cancel to true.
     e.Cancel = true;
 }
 
@@ -140,7 +140,7 @@ this.picker.Closed += this.OnDatePickerPopUpClosed;
 
 private void OnDatePickerPopUpClosed(object sender, EventArgs e)
 {
-    // If you need to close the picker, set the IsOpen property to false.
+    // To close the picker, set the IsOpen property to false.
     this.picker.IsOpen = false;
 }
 
@@ -179,7 +179,7 @@ this.picker.OkButtonClicked += this.OnDatePickerOkButtonClicked;
 
 private void OnDatePickerOkButtonClicked(object sender, EventArgs e)
 {
-    // This event is used to updates the selected item in the Date picker.
+    // This event is used to update the selected item in the Date picker.
 }
 
 {% endhighlight %}
@@ -210,7 +210,7 @@ this.picker.CancelButtonClicked += this.OnDatePickerCancelButtonClicked;
 
 private void OnDatePickerCancelButtonClicked(object sender, EventArgs e)
 {
-    // This event cancels the selected item in the Date picker.
+    // This event cancels the selected item in the date picker.
 }
 
 {% endhighlight %}

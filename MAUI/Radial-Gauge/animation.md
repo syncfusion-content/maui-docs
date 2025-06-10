@@ -83,7 +83,7 @@ The radial gauge allows all of its elements to be animated using the [`EnableLoa
 
 ## Pointer animation
 
-The [`EnableAnimation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialPointer.html#Syncfusion_Maui_Gauges_RadialPointer_EnableAnimation) property of pointer allows you to enable or disable animation for pointer.
+The [`EnableAnimation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialPointer.html#Syncfusion_Maui_Gauges_RadialPointer_EnableAnimation) property of the pointer allows you to enable or disable animation for pointer.
 
 {% tabs %}
 
@@ -241,7 +241,7 @@ SfRadialGauge sfRadialGauge = new SfRadialGauge();
 
 ## Animation easing
 
-The [`AnimationEasing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialPointer.html#Syncfusion_Maui_Gauges_RadialPointer_AnimationEasing) property of pointer allows you to use below type of easing function in pointer animation. 
+The [`AnimationEasing`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialPointer.html#Syncfusion_Maui_Gauges_RadialPointer_AnimationEasing) property of the pointer allows you to use below type of easing function in pointer animation. 
 
 * `Linear`
 

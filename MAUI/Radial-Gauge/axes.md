@@ -872,7 +872,7 @@ this.Content = sfRadialGauge;
 
 ### Label position customization
 
-The [`LabelOffset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_LabelOffset) property allows to adjust the distance between the axis line and the labels. The [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_OffsetUnit) property of axis allows to specify the label offset either in factor or pixels. By default, the value of the label offset is `double.NaN`.
+The [`LabelOffset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_LabelOffset) property allows you to adjust the distance between the axis line and the labels. The [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialAxis.html#Syncfusion_Maui_Gauges_RadialAxis_OffsetUnit) property of axis allows you to specify the label offset either in factor or pixels. By default, the value of the label offset is `double.NaN`.
 
 ### Label offset in pixel
 
@@ -1271,7 +1271,7 @@ N> The [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges
 
 ## Multiple axis
 
-The [`radial gauge`](https://help.syncfusion.com/maui/radialgauge/overview) allows you to add n number of radial axis in its axes collection. You can also customize individual axis added in the [`Axes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfRadialGauge.html#Syncfusion_Maui_Gauges_SfRadialGauge_Axes) collection.
+The [`radial gauge`](https://help.syncfusion.com/maui/radialgauge/overview) allows you to add any number of radial axis in its axes collection. You can also customize individual axis added in the [`Axes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfRadialGauge.html#Syncfusion_Maui_Gauges_SfRadialGauge_Axes) collection.
 
 {% tabs %}
 
@@ -1386,7 +1386,7 @@ The [`radial gauge`](https://help.syncfusion.com/maui/radialgauge/overview) allo
 
 ## Custom scale range
 
-The radial gauge allows you to define a custom scale range by extending the axis based on your business logic.
+The radial gauge allows you to define a custom scale range by extending the axis based on your custom logic.
 
 {% tabs %}
 
@@ -1546,4 +1546,3 @@ The [`LabelCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.
 {% endtabs %}
 
 ![.NET MAUI Radial Gauge Axis Events](images/axis/maui-radial-gauge-axis-events.png)
-

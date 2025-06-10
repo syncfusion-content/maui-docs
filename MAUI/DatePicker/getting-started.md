@@ -8,9 +8,9 @@ documentation: ug
 ---
 
 # Getting started with .NET MAUI Date Picker
-This section explains how to add the [.NET MAUI Date Picker](https://www.syncfusion.com/maui-controls/maui-datepicker) control. It covers only the basic features needed to get started with Syncfusion<sup>&reg;</sup> Date Picker. Follow the steps below to add a .NET MAUI Date picker control to your project.
+This section explains how to add the [.NET MAUI Date Picker](https://www.syncfusion.com/maui-controls/maui-datepicker) control. It covers only the basic features needed to get started with Syncfusion<sup>&reg;</sup> Date Picker. Follow the steps below to add a .NET MAUI Date Picker control to your project.
 
-To get start quickly with our .NET MAUI Date Picker, you can check the below video.
+To get started quickly with our .NET MAUI Date Picker, you can check the below video.
 
 {% youtube "youtube:https://youtu.be/PeQf-5pPCWo?si=KlwcdMcLN634G_AA" %}
 
@@ -33,7 +33,7 @@ Before proceeding, ensure the following are set up:
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker/) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored.
+3. Ensure that the necessary dependencies are installed correctly and the project is restored.
 
 ## Step 3: Register the handler
 
@@ -67,7 +67,7 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-## Step 4: Add .NET MAUI Date picker control
+## Step 4: Add .NET MAUI Date Picker control
 
 1. To initialize the control, import the `Syncfusion.Maui.Picker` namespace into your code.
 2. Initialize [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
@@ -121,7 +121,7 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI Picker NuGet Package
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
-2. Ensure you're in the project root directory where your .csproj file is located.
+2. Ensure that you're in the project root directory where your .csproj file is located.
 3. Run the command `dotnet add package Syncfusion.Maui.Picker` to install the Syncfusion<sup>®</sup> .NET MAUI Picker NuGet package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
@@ -157,7 +157,7 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-## Step 4: Add .NET MAUI Date picker control
+## Step 4: Add .NET MAUI Date Picker control
 
 1. To initialize the control, import the `Syncfusion.Maui.Picker` namespace into your code.
 2. Initialize [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
@@ -199,7 +199,7 @@ public partial class MainPage : ContentPage
 
 Before proceeding, ensure the following are set up:
 
-1. Ensure you have the latest version of JetBrains Rider.
+1. Ensure that you have the latest version of JetBrains Rider.
 2. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
@@ -213,7 +213,7 @@ Before proceeding, ensure the following are set up:
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker/) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
+3. Ensure the necessary dependencies are installed correctly and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
 ## Step 3: Register the handler
 
@@ -247,7 +247,7 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-## Step 4: Add .NET MAUI Date picker control
+## Step 4: Add .NET MAUI Date Picker control
 
 1. To initialize the control, import the `Syncfusion.Maui.Picker` namespace into your code.
 2. Initialize [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
@@ -284,7 +284,7 @@ public partial class MainPage : ContentPage
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Set header to the Date Picker
+## Set a header to the Date Picker
 
 The SfDatePicker control allows you to add the header text by setting the [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_Text) property in the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html). To enable the header view by setting the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_Height) property in the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html).
 
@@ -312,9 +312,9 @@ this.Content = picker;
 {% endhighlight %}
 {% endtabs %}
 
-![Set Header view in .NET MAUI Date picker.](images/getting-started/maui-date-picker-set-header-view.png)
+![Set Header view in .NET MAUI Date Picker.](images/getting-started/maui-date-picker-set-header-view.png)
 
-## Set footer to the Date Picker
+## Set a footer to the Date Picker
 
 In the SfDatePicker control, validation buttons (OK and Cancel) can be customized by setting the [OkButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_OkButtonText) and [CancelButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_CancelButtonText) properties in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html). It allows you to confirm or cancel the selected date. The `OkButtonText` can be enabled using the [ShowOkButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_ShowOkButton) property in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html).
 
@@ -342,9 +342,9 @@ this.Content = picker;
 {% endhighlight %}  
 {% endtabs %}
 
-![Set Footer view in .NET MAUI Date picker.](images/getting-started/maui-date-picker-set-footer-view.png)
+![Set Footer view in .NET MAUI Date Picker.](images/getting-started/maui-date-picker-set-footer-view.png)
 
-## Set height and width to the Date Picker
+## Set the height and width of the Date Picker
 
 The SfDatePicker control allows you to change the height and the width using the [HeightRequest] and [WidthRequest] properties in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
 
@@ -370,9 +370,9 @@ this.Content = picker;
 {% endhighlight %}  
 {% endtabs %}
 
-![Set Height and width in .NET MAUI Date picker.](images/getting-started/maui-date-picker-set-height-and-width.png)
+![Set Height and width in .NET MAUI Date Picker.](images/getting-started/maui-date-picker-set-height-and-width.png)
 
-## Set selected date to the Date Picker
+## Set the selected date of the Date Picker
 
 The SfDatePicker control allows you to select the date using the [SelectedDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_SelectedDate) property in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html). The default value of the `SelectedDate` is the current date.
 
@@ -396,7 +396,7 @@ this.Content = picker;
 {% endhighlight %}  
 {% endtabs %}
 
-![Set Selected date in .NET MAUI Date picker.](images/getting-started/maui-date-picker-selected-date.png)
+![Set Selected date in .NET MAUI Date Picker.](images/getting-started/maui-date-picker-selected-date.png)
 
 ## Clear selection
 

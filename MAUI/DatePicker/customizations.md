@@ -34,7 +34,7 @@ The SfDatePicker control allows you to add the header text by setting the [Text]
 {% highlight c# tabtitle="C#" %}
 
 SfDatePicker datePicker = new SfDatePicker();
-datepicker.HeaderView = new PickerHeaderView()
+datePicker.HeaderView = new PickerHeaderView()
 {
     Height = 40,
     Text = "Date Picker"
@@ -46,7 +46,7 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-![Header text in .NET MAUI Date picker.](images/customizations/maui-date-picker-header-text.png)
+![Header text in .NET MAUI Date Picker.](images/customizations/maui-date-picker-header-text.png)
 
 ### Set the divider color
 
@@ -67,7 +67,7 @@ The SfDatePicker control allows you to customize the header divider color by set
 {% highlight c# tabtitle="C#" %}
 
 SfDatePicker datePicker = new SfDatePicker();
-datepicker.HeaderView = new PickerHeaderView()
+datePicker.HeaderView = new PickerHeaderView()
 {
     DividerColor = Colors.Red,
 };
@@ -78,11 +78,11 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-![Header divider color in .NET MAUI Date picker.](images/customizations/maui-date-picker-header-divider-color.png)
+![Header divider color in .NET MAUI Date Picker.](images/customizations/maui-date-picker-header-divider-color.png)
 
 ### Customization of the header
 
-Customize the header text style and background color of the `Date picker` using the [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_TextStyle) and [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_Background) properties of the [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_HeaderView) in the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html).
+Customize the header text style and background color of the `Date Picker` using the [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_TextStyle) and [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_Background) properties of the [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html#Syncfusion_Maui_Picker_SfDatePicker_HeaderView) in the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html).
 
 {% tabs %}
 
@@ -119,11 +119,11 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-![Custom Header in .NET MAUI Date picker.](images/customizations/maui-date-picker-custom-header.png)
+![Custom Header in .NET MAUI Date Picker.](images/customizations/maui-date-picker-custom-header.png)
 
 ### Custom Header Appearance using Datatemplate
 
-You can customize the date picker header appearance by using the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_HeaderTemplate) property in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
+You can customize the date picker header appearance by using the [Template]() property of the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html).
 
 {% tabs %}
 
@@ -149,7 +149,7 @@ N> If a template is applied to the header in the [PickerHeaderView](https://help
 
 ### Custom Header appearance using DataTemplateSelector
 
-You can customize the date picker header appearance by using the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_HeaderTemplate) property in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the date picker header. This lets you apply a custom data template to the header and customize its appearance based on specific conditions.
+You can customize the date picker header appearance by using the [Template]() property of the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the date picker header. This lets you apply a custom data template to the header and customize its appearance based on specific conditions.
 
 {% tabs %}
 
@@ -236,7 +236,7 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-![Set Column header text in .NET MAUI Date picker.](images/customizations/maui-date-picker-column-header-text.png)
+![Set Column header text in .NET MAUI Date Picker.](images/customizations/maui-date-picker-column-header-text.png)
 
 ### Set the divider color
 
@@ -257,7 +257,7 @@ The SfDatePicker control allows you to customize the column header divider color
 {% highlight c# tabtitle="C#" %}
 
 SfDatePicker datePicker = new SfDatePicker();
-datepicker.ColumnHeaderView = new DatePickerColumnHeaderView()
+datePicker.ColumnHeaderView = new DatePickerColumnHeaderView()
 {
     DividerColor = Colors.Red,
 };
@@ -268,7 +268,7 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-![Column header divider color in .NET MAUI Date picker.](images/customizations/maui-date-picker-column-header-divider-color.png)
+![Column header divider color in .NET MAUI Date Picker.](images/customizations/maui-date-picker-column-header-divider-color.png)
 
 ### Customization of the column header
 
@@ -309,11 +309,11 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-![Custom Column header text in .NET MAUI Date picker.](images/customizations/maui-date-picker-custom-column-header.png)
+![Custom Column header text in .NET MAUI Date Picker.](images/customizations/maui-date-picker-custom-column-header.png)
 
 ### Custom Column Header Appearance using Datatemplate
 
-You can customize the date picker column header appearance by using the [ColumnHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_ColumnHeaderTemplate) property in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
+You can customize the date picker column header appearance by using the [Template]() property of the [DatePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DatePickerColumnHeaderView.html).
 
 {% tabs %}
 
@@ -346,7 +346,7 @@ N> If a template is applied to the column header in the [DatePickerColumnHeaderV
 
 ### Custom Column Header appearance using DataTemplateSelector
 
-You can customize the date picker column header appearance by using the [ColumnHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_ColumnHeaderTemplate) property in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the date picker column header. This lets you apply a custom data template to the column header and customize its appearance based on specific conditions.
+You can customize the date picker column header appearance by using the [Template]() property of the [DatePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DatePickerColumnHeaderView.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the date picker column header. This lets you select a different data template for each column header and customize the appearance of a specific column header based on certain conditions.
 
 {% tabs %}
 
@@ -424,7 +424,7 @@ The Default value of the [OkButtonText](https://help.syncfusion.com/cr/maui/Sync
 
 <picker:SfDatePicker x:Name="datepicker" >
     <picker:SfDatePicker.FooterView >
-        <picker:PickerFooterView Height="40" OkButtonText="Save"
+        <picker:PickerFooterView Height="40" OKButtonText="Save"
                                  CancelButtonText="Exit"/>
     </picker:SfDatePicker.FooterView>
 </picker:SfDatePicker>
@@ -437,7 +437,7 @@ SfDatePicker datePicker = new SfDatePicker();
 datePicker.FooterView = new PickerFooterView()
 {
     Height = 40,
-    OkButtonText = "Save",
+    OKButtonText = "Save",
     CancelButtonText = "Exit",
 };
 
@@ -447,7 +447,7 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-![Set Footer text in .NET MAUI Date picker.](images/customizations/maui-date-picker-footer-text.png)
+![Set Footer text in .NET MAUI Date Picker.](images/customizations/maui-date-picker-footer-text.png)
 
 ### Set the divider color
 
@@ -468,7 +468,7 @@ The SfDatePicker control allows you to customize the footer divider color by set
 {% highlight c# tabtitle="C#" %}
 
 SfDatePicker datePicker = new SfDatePicker();
-datepicker.FooterView = new PickerFooterView()
+datePicker.FooterView = new PickerFooterView()
 {
     DividerColor = Colors.Red,
 };
@@ -479,7 +479,7 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-![Footer divider color in .NET MAUI Date picker.](images/customizations/maui-date-picker-footer-divider-color.png)
+![Footer divider color in .NET MAUI Date Picker.](images/customizations/maui-date-picker-footer-divider-color.png)
 
 ### Customization of the footer
 
@@ -520,11 +520,11 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-![Custom Footer in .NET MAUI Date picker.](images/customizations/maui-date-picker-custom-footer.png)
+![Custom Footer in .NET MAUI Date Picker.](images/customizations/maui-date-picker-custom-footer.png)
 
 ### Custom Footer Appearance using Datatemplate
 
-You can customize the date picker footer appearance by using the [FooterTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_FooterTemplate) property in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
+You can customize the date picker footer appearance by using the [Template]() property of the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html).
 
 {% tabs %}
 
@@ -555,7 +555,7 @@ N> If a template is applied to the footer in the [PickerFooterView](https://help
 
 ### Custom Footer appearance using DataTemplateSelector
 
-You can customize the date picker footer appearance by using the [FooterTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_FooterTemplate) property in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the date picker footer. This lets you apply a custom data template to the footer and customize its appearance based on specific conditions.
+You can customize the date picker footer appearance by using the [Template]() property of the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the date picker footer. This lets you apply a custom data template to the footer and customize its appearance based on specific conditions.
 
 {% tabs %}
 
@@ -641,7 +641,7 @@ datePicker.SelectionView = new PickerSelectionView()
 {
     CornerRadius = 10,
     Stroke = Color.FromArgb("#36454F"),
-    Pading = new Thickness(10, 5, 10, 5),
+    Padding = new Thickness(10, 5, 10, 5),
     Background = Color.FromArgb("#808080"),
 };
 
@@ -651,7 +651,7 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-![Custom selection shape in .NET MAUI Date picker.](images/customizations/maui-date-picker-selection-shape.png)
+![Custom selection shape in .NET MAUI Date Picker.](images/customizations/maui-date-picker-selection-shape.png)
 
 ### Customization of the selected item
 
@@ -687,7 +687,7 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-![Custom Selection view in .NET MAUI Date picker.](images/customizations/maui-date-picker-custom-selection-view.png)
+![Custom Selection view in .NET MAUI Date Picker.](images/customizations/maui-date-picker-custom-selection-view.png)
 
 ## Column divider color
 
@@ -711,4 +711,4 @@ this.Content = datepicker;
 {% endhighlight %}
 {% endtabs %}
 
-![Date picker coloumn divider color in .NET MAUI Date picker.](images/customizations/maui-date-picker-column-divider-color.png)
+![Date Picker column divider color in .NET MAUI Date Picker.](images/customizations/maui-date-picker-column-divider-color.png)

@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in .NET MAUI Calendar (SfCalendar)
 
-The Calendar has the events `ViewChanged`, `SelectionChanged`, `Tapped`, `DoubleTapped`, and `LongPressed` for notifying after user interactions in [.NET MAUI Calendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html).
+The Calendar has events `ViewChanged`, `SelectionChanged`, `Tapped`, `DoubleTapped`, and `LongPressed` to notify after user interactions in [.NET MAUI Calendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html).
 
 ## ViewChanged
 
@@ -51,7 +51,7 @@ Whenever a calendar view is changed, the `SelectableDayPredicate` function must 
 
 ## SelectionChanged
 
-The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionChanged) event is used to notify when the cell selection is changed onto the view in the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
+The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionChanged) event is used to notify when the cell selection is changed in the view in the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 * `Sender`: This contains the `SfCalendar` object.
 
@@ -72,7 +72,7 @@ The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calen
 
 this.calendar.SelectionChanged += this.OnCalendarSelectionChanged;
 
-private void OnCalendarSelectionChanged(object sender,  private void OnCalendarSelectionChanged(object sender, CalendarSelectionChangedEventArgs e)
+private void OnCalendarSelectionChanged(object sender, CalendarSelectionChangedEventArgs e)
     {
         var oldDateTime = e.OldValue;
         var newDateTime = e.NewValue;
@@ -86,7 +86,7 @@ The `Tapped` event is triggered first, followed by 'selection-changed' event wil
 
 ## Tapped
 
-A [Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_Tapped) event is triggered, each time a calendar view is tapped. The following are the list of arguments:
+A [Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_Tapped) event is triggered, each time a calendar element is tapped. The following are the list of arguments:
 
 * `Sender`: This contains the `SfCalendar` object.
 
@@ -119,7 +119,7 @@ private void OnCalendarTapped(object sender, CalendarTappedEventArgs e)
 
 ## DoubleTapped
 
-Whenever the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) elements are double-tapped onto the view, the [DoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_DoubleTapped) event occurs. The following are the list of arguments:
+Whenever the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) elements are double-tapped in the view, the [DoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_DoubleTapped) event occurs. The following are the list of arguments:
 
 * `Sender`: This contains the `SfCalendar` object.
 
@@ -153,7 +153,7 @@ private void OnCalendarDoubleTapped(object sender, CalendarDoubleTappedEventArgs
 
 ## LongPressed
 
-Whenever the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) elements are long-pressed onto the view, the [LongPressed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_LongPressed) event is triggered. The following are the list of arguments:
+Whenever the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) elements are long-pressed in the view, the [LongPressed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_LongPressed) event is triggered. The following are the list of arguments:
 
 * `Sender`: This contains the `SfCalendar` object.
 
@@ -189,7 +189,7 @@ private void OnCalendarLongPressed(object sender, CalendarLongPressedEventArgs e
 
 ### ViewChangedCommand
 
-The SfCalendar includes a built-in event called `ViewChanged`, which is triggered whenever the calendar view is navigated to either the previous or next view. This event can be invoked through the [ViewChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_ViewChangedCommand), and it also triggers when switching between different calendar views. The `CalendarViewChangedEventArgs` is provided as a parameter to this event.
+The SfCalendar includes a built-in event called `ViewChanged`, which is triggered whenever the calendar view is navigated to the previous or next view. This event can be invoked through the [ViewChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_ViewChangedCommand), and it also triggers when switching between different calendar views. The `CalendarViewChangedEventArgs` is provided as a parameter to this event.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -222,7 +222,7 @@ public class CalendarViewModel
 
 ### SelectionChangedCommand
 
-The SfCalendar includes a built-in event called `SelectionChanged` that is triggered whenever the selection in the calendar changes. This event can be invoked through the [SelectionChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionChangedCommand), which passes the `CalendarSelectionChangedEventArgs` as a parameter.
+The SfCalendar includes a built-in event called `SelectionChanged`, which is triggered whenever the selection in the calendar changes. This event can be invoked through the [SelectionChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionChangedCommand), which passes the `CalendarSelectionChangedEventArgs` as a parameter.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -255,7 +255,7 @@ public class CalendarViewModel
 
 ### TappedCommand
 
-The SfCalendar includes a built-in event called `Tapped` that is triggered whenever the calendar view is tapped. This event can be invoked through the [TappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_TappedCommand) which passes the `CalendarTappedEventArgs` as a parameter.
+The SfCalendar includes a built-in event called `Tapped`, which is triggered whenever the calendar view is tapped. This event can be invoked through the [TappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_TappedCommand) which passes the `CalendarTappedEventArgs` as a parameter.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -288,7 +288,7 @@ public class CalendarViewModel
 
 ### DoubleTappedCommand
 
-The SfCalendar includes a built-in event called `DoubleTapped` that is triggered whenever the calendar view is double-tapped. This event can be invoked through the [DoubleTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_DoubleTappedCommand), which passes the `CalendarDoubleTappedEventArgs` as a parameter.
+The SfCalendar includes a built-in event called `DoubleTapped`, which is triggered whenever the calendar view is double-tapped. This event can be invoked through the [DoubleTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_DoubleTappedCommand), which passes the `CalendarDoubleTappedEventArgs` as a parameter.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3,6,8" %}
@@ -321,7 +321,7 @@ public class CalendarViewModel
 
 ### LongPressedCommand
 
-The SfCalendar includes a built-in event called `LongPressed`, which is triggered when the calendar view is long pressed. This event can be invoked through the [LongPressedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_LongPressedCommand), with the `CalendarLongPressedEventArgs` passed as a parameter.
+The SfCalendar includes a built-in event called `LongPressed`, which is triggered when the calendar view is long-pressed. This event can be invoked through the [LongPressedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_LongPressedCommand), with the `CalendarLongPressedEventArgs` passed as a parameter.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -354,7 +354,7 @@ public class CalendarViewModel
 
 ### AcceptCommand
 
-The SfCalendar includes a built-in event called `ActionButtonClicked`, which is triggered when the confirm button is tapped on the calendar. This event can be invoked through the [AcceptCommand]().
+The SfCalendar includes a built-in event called `ActionButtonClicked`, which is triggered when the confirm button is tapped in the calendar. This event can be invoked through the [AcceptCommand]().
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -387,7 +387,7 @@ public class CalendarViewModel
 
 ### DeclineCommand
 
-The SfCalendar includes a built-in event called `ActionButtonCanceled`, which is triggered when the cancel button is tapped on the calendar. This event can be invoked through the [DeclineCommand]().
+The SfCalendar includes a built-in event called `ActionButtonCanceled`, which is triggered when the cancel button is tapped in the calendar. This event can be invoked through the [DeclineCommand]().
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}

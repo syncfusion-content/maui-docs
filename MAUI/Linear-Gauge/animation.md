@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Animation in .NET MAUI Linear Gauge control | Syncfusion<sup>&reg;</sup>
-description: Learn here all about adding and customizing animation of Syncfusion<sup>&reg;</sup> .NET MAUI Linear Gauge (SfLinearGauge) control and more.
+description: Learn all about adding and customizing animation of Syncfusion<sup>&reg;</sup> .NET MAUI Linear Gauge (SfLinearGauge) control and more.
 platform: maui
 control: SfLinearGauge
 documentation: ug
@@ -13,7 +13,7 @@ All Linear Gauge elements including the scale, ticks and labels, range, bar poin
 
 ## Animate axis
 
-The [`EnableAxisAnimation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_EnableAxisAnimation) and [`AnimationDuration`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_AnimationDuration) properties in [`SfLinearGauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html?tabs=tabid-1) is used to animate the scale along with the ticks and labels. The scale will have a fade-in with opacity animation when this [`EnableAxisAnimation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_EnableAxisAnimation) is set to true. By default, the [`EnableAxisAnimation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_EnableAxisAnimation) is set to false. 
+The [`EnableAxisAnimation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_EnableAxisAnimation) and [`AnimationDuration`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_AnimationDuration) properties in [`SfLinearGauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html?tabs=tabid-1) is used to animate the scale, ticks, and labels. The scale will have a fade-in with opacity animation when this [`EnableAxisAnimation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_EnableAxisAnimation) is set to true. By default, the [`EnableAxisAnimation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_EnableAxisAnimation) is set to false. 
 
 {% tabs %}
 
@@ -26,8 +26,8 @@ The [`EnableAxisAnimation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 {% highlight c# %}
 
 SfLinearGauge gauge = new SfLinearGauge();
-		gauge.EnableAxisAnimation = true;
-		this.Content = gauge;
+        gauge.EnableAxisAnimation = true;
+        this.Content = gauge;
 
 {% endhighlight %}
 
@@ -37,7 +37,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Animate range
 
-The [`EnableRangeAnimation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_EnableRangeAnimation) and [`AnimationDuration`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_AnimationDuration) properties in [`SfLinearGauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html?tabs=tabid-1) is used to animate the scale along with the ticks and labels. The range will have a fade-in with opacity animation when this [`EnableRangeAnimation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_EnableRangeAnimation) is set to true. By default, the [`EnableRangeAnimation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_EnableRangeAnimation) is set to false.
+The [`EnableRangeAnimation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_EnableRangeAnimation) and [`AnimationDuration`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_AnimationDuration) properties in [`SfLinearGauge`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html?tabs=tabid-1) is used to animate the scale, ticks, and labels. The range will have a fade-in opacity animation when this [`EnableRangeAnimation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_EnableRangeAnimation) is set to true. By default, the [`EnableRangeAnimation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfLinearGauge.html#Syncfusion_Maui_Gauges_SfLinearGauge_EnableRangeAnimation) is set to false.
 
 {% tabs %}
 
@@ -50,8 +50,8 @@ The [`EnableRangeAnimation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 {% highlight c# %}
 
 SfLinearGauge gauge = new SfLinearGauge();
-		gauge.EnableRangeAnimation = true;
-		this.Content = gauge;
+        gauge.EnableRangeAnimation = true;
+        this.Content = gauge;
 
 {% endhighlight %}
 
@@ -61,7 +61,7 @@ SfLinearGauge gauge = new SfLinearGauge();
 
 ## Pointer animation
 
-The animation behavior is common for all the three pointers in Linear Gauge - shape, content, and bar pointer.
+The animation behavior is common for all three pointers in Linear Gauge - shape, content, and bar pointer.
 
 All the above three pointers have the following properties for the animation:
 
@@ -117,7 +117,7 @@ The following code example demonstrates how to update the animation for bar poin
             Value = 70,
             EnableAnimation = true,
         });
-	this.Content = gauge;
+    this.Content = gauge;
 
 {% endhighlight %}
 
@@ -125,9 +125,9 @@ The following code example demonstrates how to update the animation for bar poin
 
 ### Animate marker pointers (Shape and Content Pointers)
 
-Both the shape and content marker pointers will have the same set of properties and behave similarly for animation. 
+Both the shape and content marker pointers have the same set of properties and behave similarly for animation. 
 
-So, demonstrated the [`LinearShapePointer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearShapePointer.html) only but the same is applicable for [`LinearContentPointer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearContentPointer.html) too. 
+So, the demonstrated [`LinearShapePointer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearShapePointer.html) only but the same is applicable for [`LinearContentPointer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.LinearContentPointer.html) too. 
 
 ### Marker pointer with `SpringOut` animation
 
@@ -147,21 +147,16 @@ So, demonstrated the [`LinearShapePointer`](https://help.syncfusion.com/cr/maui/
 {% highlight c# %}
 
 SfLinearGauge gauge = new SfLinearGauge();
-		gauge.MarkerPointers.Add(new LinearShapePointer()
-		{
-			Value = 70,
-			EnableAnimation = true,
-			AnimationEasing=Easing.SpringOut
-		});
-		this.Content = gauge;
+        gauge.MarkerPointers.Add(new LinearShapePointer()
+        {
+            Value = 70,
+            EnableAnimation = true,
+            AnimationEasing=Easing.SpringOut
+        });
+        this.Content = gauge;
 
 {% endhighlight %}
 
 {% endtabs %}
 
 ![Animate marker pointer in linear gauge](images/animation/bounceout.gif)
-
-
-
-
-

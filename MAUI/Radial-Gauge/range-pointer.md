@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Radial Range Pointer in .NET MAUI Radial Gauge control | Syncfusion<sup>&reg;</sup>
-description: Learn here all about Range Pointer feature of Syncfusion<sup>&reg;</sup> .NET MAUI Radial Gauge control with customization support.
+description: Learn all about the Range Pointer feature in the Syncfusion<sup>&reg;</sup> .NET MAUI Radial Gauge control with customization support.
 platform: maui
 control: SfRadialGauge
 documentation: ug
@@ -54,7 +54,7 @@ The following properties are used to customize the range pointer:
 
 * [`WidthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RangePointer.html#Syncfusion_Maui_Gauges_RangePointer_WidthUnit) – Specifies whether the [`PointerWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RangePointer.html#Syncfusion_Maui_Gauges_RangePointer_PointerWidth) is defined in pixels or factor.
 
-The [`PointerWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RangePointer.html#Syncfusion_Maui_Gauges_RangePointer_PointerWidth) of the pointer can be specified either in pixel or factor. If the [`WidthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RangePointer.html#Syncfusion_Maui_Gauges_RangePointer_WidthUnit) is specified as Pixel, then the range will be rendered based on the provided pixel value. If the [`WidthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RangePointer.html#Syncfusion_Maui_Gauges_RangePointer_WidthUnit) is set as factor, the provided factor value will be multiplied with axis radius. For example, if the pointer width is set as 0.1, then 10% of axis radius is considered as range pointer width.
+The [`PointerWidth`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RangePointer.html#Syncfusion_Maui_Gauges_RangePointer_PointerWidth) can be specified in pixels or as a factor. When [`WidthUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RangePointer.html#Syncfusion_Maui_Gauges_RangePointer_WidthUnit) is set to Pixel, the range is rendered using the given pixel value. If set to Factor, the value is multiplied by the axis radius. For example, if the pointer width is set as 0.1, then 10% of axis radius is considered as range pointer width.
 
 {% tabs %}
 
@@ -101,7 +101,7 @@ this.Content = sfRadialGauge;
  
 ## Setting gradient brush to the pointer
 
- The [`GradientStops`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RangePointer.html#Syncfusion_Maui_Gauges_RangePointer_GradientStops) property of range pointer allows you to specify the smooth color transition to pointer by specifying the different colors based on provided axis value.
+ The [`GradientStops`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RangePointer.html#Syncfusion_Maui_Gauges_RangePointer_GradientStops) property of the range pointer allows smooth color transitions by specifying different colors at specific axis values.
 
 {% tabs %}
 
@@ -245,6 +245,4 @@ this.Content = sfRadialGauge;
 
 ![.NET MAUI Radial Gauge Pointer Position](images/range-pointer/maui-radial-gauge-pointer-position.png)
 
-When you set the [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RangePointer.html#Syncfusion_Maui_Gauges_RangePointer_OffsetUnit) as pixel, the pointer will be moved to the provided pixel value.
-
-If the [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RangePointer.html#Syncfusion_Maui_Gauges_RangePointer_OffsetUnit) is specified as factor, the factor value will be multiplied with the axis radius. For example, if you set [`PointerOffset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RangePointer.html#Syncfusion_Maui_Gauges_RangePointer_PointerOffset) as 0.1, then the pointer offset is considered as 10% of axis radius.
+If the [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RangePointer.html#Syncfusion_Maui_Gauges_RangePointer_OffsetUnit) is set to Pixel, the pointer is offset by the specified pixel value. If set to Factor, the value is interpreted as a percentage of the axis radius. For example, if you set [`PointerOffset`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RangePointer.html#Syncfusion_Maui_Gauges_RangePointer_PointerOffset) as 0.1, then the pointer offset is considered as 10% of axis radius.

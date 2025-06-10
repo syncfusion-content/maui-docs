@@ -11,7 +11,7 @@ documentation: ug
 
 There are two ways for including the UI Kit screens into your application:
 
-1. Using the Visual Studio/Visual Studio Code extension's **Essential<sup>®</sup> UI Kit for .NET MAUI**.
+1. Using the Visual Studio or Visual Studio Code extension's **Essential<sup>®</sup> UI Kit for .NET MAUI**.
 
 2. Copying the files from our [GitHub repository](https://github.com/syncfusion/essential-ui-kit-for-.net-maui), which is open source.
 
@@ -33,22 +33,22 @@ This is the simplest way to integrate pre-defined screens into your application.
 
    ![Visual Studio Extensions and Updates](UI-Kit-images/Extension_Update.png)
 
-4. Restart the Visual Studio and allow it to complete the installation. 
+4. Restart Visual Studio and allow it to complete the installation. 
 
 5. Now, open an existing MAUI application or create a new application as per your requirements.
  
 6. Right-click the MAUI [NETStandard] project, and you can see the **Essential<sup>®</sup> UI Kit for .NET MAUI** option.
 
-N> The **Essential<sup>®</sup> UI Kit for .NET MAUI** add-in will be shown when the project have the **MAUI** NuGet package as a reference and also, MAUI project should be a NETStandard project.
+N> The **Essential<sup>®</sup> UI Kit for .NET MAUI** extension will be shown when the project have the **MAUI** NuGet package as a reference and also, MAUI project should be a NETStandard project.
 
 7. Select the category and pages you need to add in your application. In the following screenshot, the **Login with Social Icon** screen has been selected from the **Forms** category. 
 
    ![Visual Studio UIkit Category](UI-Kit-images/Essential_UIKit_Category.png)
-8. Clicking the 'Next' button will navigate to the following page to add page name : 
+8. Clicking the 'Next' button will navigate to the following page to add the page name : 
 
    ![Visual Studio UIkit Category](UI-Kit-images/Essential_UIKit_PageName.png)
 
-9. Clicking the 'Add' button will include the selected page to your project. The necessary class files, resources, and NuGet package references will automatically be added to your project as shown in the following screenshot.
+9. Clicking the 'Add' button will include the selected page in your project. The necessary class files, resources, and NuGet package references will automatically be added to your project as shown in the following screenshot.
 
    ![Visual Studio Ui Kit Files](UI-Kit-images/Essential_UIKit_Files.png)
 
@@ -58,11 +58,11 @@ N> The **Essential<sup>®</sup> UI Kit for .NET MAUI** add-in will be shown when
 
 1. Open Visual Studio Code.
 
-2. Navigate to **View > Extensions**, and the Manage Extensions option will appear on the left side of the window. Alternatively, you can access the extensions by pressing **Ctrl+Shift+X**
+2. Go to **View > Extensions**, and the Manage Extensions option will appear on the left side of the window. Alternatively, you can access the extensions by pressing **Ctrl+Shift+X**
 
     ![View-Tab](UI-Kit-images/Essential_UIKit_View.png)
 
-3. By entering the keyword **Essential<sup>®</sup> UI Kit for .NET MAUI** in the search box, you can find the **Essential<sup>®</sup> UI Kit for .NET MAUI - Syncfusion<sup>®</sup>** Visual Studio Code extension in the Visual Studio Code Marketplace.
+3. Enter the keyword **Essential<sup>®</sup> UI Kit for .NET MAUI** in the search box, you can find the **Essential<sup>®</sup> UI Kit for .NET MAUI - Syncfusion<sup>®</sup>** Visual Studio Code extension in the Visual Studio Code Marketplace.
 
     ![Extensions](UI-Kit-images/Essential_UiKit_Extension.png)
 

@@ -5,12 +5,12 @@ description: Learn here all about Migrating from Syncfusion<sup>&reg;</sup> Xama
 platform: maui
 control: DigitalGauge
 documentation: ug
-keywords: .net maui, .net maui digital gauge, digital gauge, character segments, digital character, character types, character display types
+keywords: .net maui, digital gauge, character segments, digital character, character types, character display types
 ---  
 
 # Migrate from Xamarin.Forms SfDigitalGauge to .NET MAUI SfDigitalGauge
 
-To make the migration from the [Xamarin SfDigitalGauge](https://www.nuget.org/packages/Syncfusion.Xamarin.SfGauge) to the [.NET MAUI SfDigitalGauge](https://www.syncfusion.com/maui-controls/maui-digital-gauge) easier, most of the similar APIs from the [Xamarin SfDigitalGauge](https://www.nuget.org/packages/Syncfusion.Xamarin.SfGauge) were kept in the [.NET MAUI SfDigitalGauge](https://www.syncfusion.com/maui-controls/maui-digital-gauge). Also, the APIs has been restructured by considering various use cases and maintaining API consistency. Please find the difference in the following topics.
+To make the migration from the [Xamarin SfDigitalGauge](https://www.nuget.org/packages/Syncfusion.Xamarin.SfGauge) to the [.NET MAUI SfDigitalGauge](https://www.syncfusion.com/maui-controls/maui-digital-gauge) easier, most of the similar APIs from the [Xamarin SfDigitalGauge](https://www.nuget.org/packages/Syncfusion.Xamarin.SfGauge) were kept in the [.NET MAUI SfDigitalGauge](https://www.syncfusion.com/maui-controls/maui-digital-gauge). Also, the APIs have been restructured by considering various use cases and maintaining API consistency. Please find the difference in the following topics.
 
 ## Initialize control
 

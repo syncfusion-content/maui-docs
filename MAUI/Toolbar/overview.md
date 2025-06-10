@@ -16,14 +16,14 @@ The Syncfusion<sup>&reg;</sup> [.NET MAUI Toolbar](https://help.syncfusion.com/c
 * **Toolbar Items** : Supports displaying toolbar items with icons, labels, a combination of both, or custom views, ensuring flexible and intuitive visual representation.
 * **Toolbar Orientation** : Allows both horizontal and vertical layouts, enabling flexible arrangement based on application needs.
 * **Items Alignment** : Aligns toolbar items to the Start, Center, or End within the available space.
-* **OverFlow Mode** : Manages overflowing items with three options:
+* **Overflow Mode** : Manages overflowing items with three options:
     * **Scroll** : Enables continuous navigation.
     * **Navigation Buttons** : Steps through items.
     * **More Button** : Displays excess items in a dropdown.
-* **More Items Relative Position** : Positions the More Items dropdown menu on the left, right, top, or bottom, or adjusts it automatically based on available space.
-* **OverLay Toolbar** : Displays a floating toolbar that appears when needed and hides when not in use.
-* **Toolbar Seperator** : Inserts a visual divider between toolbar items for better organization and readability.
+* **More Items' Relative Position** : Positions the More Items dropdown menu on the left, right, top, or bottom, or adjusts it automatically based on available space.
+* **Overlay Toolbar** : Displays a floating toolbar that appears when needed and hides when not in use.
+* **Toolbar Separator** : Inserts a visual divider between toolbar items for better organization and readability.
 * **Tooltip** : Displays a small floating label when hovering over a toolbar item, providing additional details about its function.
-* **IsEnabled** : Enables or disables individual toolbar items, controlling their availability for user interaction.
+* **Is Enabled** : Enables or disables individual toolbar items, controlling their availability for user interaction.
 * **Interaction** : Allows users to select or highlight specific toolbar items to improve usability and workflow efficiency.
 * **Keyboard Support** : Provides keyboard shortcuts for navigating between toolbar items, enhancing accessibility.

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Date Navigations in .NET MAUI Calendar control | Syncfusion<sup>&reg;</sup>
-description: Learn here all about Date navigations feature of Syncfusion<sup>&reg;</sup> .NET MAUI Calendar (SfCalendar) control and more.
+title: Date Navigation in .NET MAUI Calendar control | Syncfusion<sup>&reg;</sup>
+description: Learn here all about Date navigation feature of Syncfusion<sup>&reg;</sup> .NET MAUI Calendar (SfCalendar) control and more.
 platform: maui
 control: SfCalendar
 documentation: ug
 ---
 
-# Date Navigations in .NET MAUI Calendar (SfCalendar)
+# Date Navigation in .NET MAUI Calendar (SfCalendar)
 
 ## Programmatic date navigation
-It allows you to navigate using the Dates programmatically in the calendar control using the [DisplayDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_DisplayDate) property of [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html).
+It allows you to navigate dates programmatically in the calendar control using the [DisplayDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_DisplayDate) property of [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -30,7 +30,7 @@ this.calendar.DisplayDate = DateTime.Now.AddMonths(2).Date;
 ![Month view Display date in .NET MAUI Calendar.](images/date-navigation/maui-month-view-display-date.png)
 
 ## Programmatic view navigation
-It allows you to navigate using the views programmatically in the calendar control using the [View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_View) property of [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html).
+It allows you to navigate views programmatically in the calendar control using the [View](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_View) property of [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -50,9 +50,9 @@ this.calendar.View = CalendarView.Month;
 ![Month view in .NET MAUI Calendar.](images/date-navigation/maui-month-view.png)
 
 ## Allow view navigation
-It allows you to navigate using the `AllowViewNavigation` property by tapping interaction on the cell or header. By using this property, you can restrict the view navigation and allow you to select the cells in the Year, Decade, and Century views.
+You can navigate using the `AllowViewNavigation` property by tapping interaction on the cell or header. By using this property, you can restrict the view navigation and allow you to select the cells in the Year, Decade, and Century views.
 
-The following code shows when the [AllowViewNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_AllowViewNavigation) property is `true`.
+The following code shows how the [AllowViewNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_AllowViewNavigation) property is `true`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -73,7 +73,7 @@ this.calendar.AllowViewNavigation = true;
 ## Navigating Adjacent Months with Leading and Trailing Dates
 You can navigate to the next or previous month in the Calendar control by tapping on the leading or trailing dates. Tapping on a leading date moves the calendar to the previous month, while tapping on a trailing date moves it to the next month. In `SfCalendar`, this functionality can be enabled or disabled using the [NavigateToAdjacentMonth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_NavigateToAdjacentMonth) property.
 
-The following code shows the Navigation by using `NavigateToAdjacentMonth` property.
+The following code shows navigation using `NavigateToAdjacentMonth` property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -97,7 +97,7 @@ The `NavigateToAdjacentMonth` is only applicable for single selection mode.
 ![Month view navigation to adjacent months using leading/trailing dates in .NET MAUI Calendar.](images/date-navigation/maui-month-view-navigation-by-leading-trailing-month-dates.gif){:width="271" height="351"}
 
 ## Programmatically change to adjacent dates
-The next and previous views can be navigated by swiping the Calendar control from right to left and left to right. In the `SfCalendar`, view can be changed programmatically by using the [Forward](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_Forward) and [Backward](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_Backward) methods.
+You can navigate to the next and previous views by swiping the Calendar control from right to left and left to right. In the `SfCalendar`, view can be changed programmatically by using the [Forward](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_Forward) and [Backward](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_Backward) methods.
 
 ### Forward
 The `Forward` navigation allows you to view the next immediate date of the calendar based on the CalendarViews.
@@ -156,7 +156,7 @@ private void button_Clicked(object sender, EventArgs e)
 {% endtabs %}
 
 ## Navigation direction
-Views can be navigated by using the `Navigation direction` property, either `Vertical` or `Horizontal` direction by setting the `NavigationDirection` property of `Calendar`. The default [NavigationDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_NavigationDirection) is `Vertical`.
+You can navigate views using the `Navigation direction` property, either `Vertical` or `Horizontal` direction by setting the `NavigationDirection` property of `Calendar`. The default [NavigationDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_NavigationDirection) is `Vertical`.
 
 The following code shows the Navigation in the `Horizontal` direction.
 
@@ -179,7 +179,7 @@ this.calendar.NavigationDirection = CalendarNavigationDirection.Horizontal;
 ![Month view Horizontal navigation direction in .NET MAUI Calendar.](images/date-navigation/maui-month-view-horizontal-direction.png)
 
 ## Show navigation arrows
-By using the `ShowNavigationArrows` property of the `Calendar`, you can navigate to the next or previous view of the calendar without swiping.  By default, the value of [ShowNavigationArrows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html#Syncfusion_Maui_Calendar_CalendarHeaderView_ShowNavigationArrows) is `true`.
+Using the `ShowNavigationArrows` property of the `Calendar`, you can navigate to the next or previous view of the calendar without swiping.  By default, the value of [ShowNavigationArrows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarHeaderView.html#Syncfusion_Maui_Calendar_CalendarHeaderView_ShowNavigationArrows) is `true`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
