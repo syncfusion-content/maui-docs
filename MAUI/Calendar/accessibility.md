@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in .NET MAUI Calendar Control | Syncfusion<sup>&reg;</sup>
-description: Learn here all about the accessibility features of Syncfusion<sup>&reg;</sup> .NET MAUI Calendar (SfCalendar) control.
+description: Learn here all about the accessibility features of Syncfusion<sup>&reg;</sup> .NET MAUI Calendar (`SfCalendar`) control.
 platform: maui
 control: SfCalendar
 documentation: ug
@@ -25,19 +25,19 @@ Enhance .NET MAUI Calendar's accessibility with a user-friendly design, ensuring
 <td>May 2023</td>
 </tr>
 <tr>
-<td>Header – More than one month in view while number week lesser than 6</td>
+<td>Header – More than one month in view with fewer than 6 weeks</td>
 <td>MMMM – MMMM yyyy</td>
 <td>November – December 2023</td>
 </tr>
 <tr>
 <td>Left arrow</td>
 <td>string</td>
-<td>Backward</td>
+<td>Back</td>
 </tr>
 <tr>
 <td>Right arrow</td>
 <td>string</td>
-<td>Forward</td>
+<td>Next</td>
 </tr>
 <tr>
 <td>Today button</td>
@@ -45,9 +45,9 @@ Enhance .NET MAUI Calendar's accessibility with a user-friendly design, ensuring
 <td>Today</td>
 </tr>
 <tr>
-<td>Ok button</td>
+<td>OK button</td>
 <td>string</td>
-<td>Ok</td>
+<td>OK</td>
 </tr>
 <tr>
 <td>Cancel button</td>
@@ -187,7 +187,7 @@ Description
 DownArrow
 </td>
 <td>
-Moves selection to the date directly below the currently selected date on next row.
+Moves selection to the date directly below the currently selected date in the next row.
 </td>
 </tr>
 <tr>
@@ -195,7 +195,7 @@ Moves selection to the date directly below the currently selected date on next r
 UpArrow
 </td>
 <td>
-Moves selection to the date directly above the currently selected date on previous row.
+Moves selection to the date directly above the currently selected date in the previous row.
 </td>
 </tr>
 <tr>
@@ -203,7 +203,7 @@ Moves selection to the date directly above the currently selected date on previo
 RightArrow
 </td>
 <td>
-Moves the selection to the next date of the date currently selected.
+Moves the selection to the next date from the currently selected date.
 </td>
 </tr>
 <tr>
@@ -211,7 +211,7 @@ Moves the selection to the next date of the date currently selected.
 LeftArrow
 </td>
 <td>
-Moves the selection to the previous date of the date currently selected.
+Moves the selection to the previous date from the currently selected date.
 </td>
 </tr>
 </table>
@@ -295,7 +295,7 @@ View mode changes in the order of Month, Century, Decade, and Year.
 Ctrl + LeftArrow
 </td>
 <td>
-Navigate to the prev view.
+Navigate to the previous view.
 </td>
 </tr>
 <tr>

@@ -11,7 +11,7 @@ documentation: ug
 
 In .NET MAUI, you can bind a Picker control to an external data source by setting its ItemsSource property to an ObservableCollection. This enables the Picker to display and update data from the collection.
 
-Set the [ItemSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_ItemsSource) property in the [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html) class as shown in the following code to bind the item source in the picker.
+Set the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_ItemsSource) property in the [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html) class as shown in the following code to bind the item source in the picker.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -49,11 +49,11 @@ Set the [ItemSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.
 
 ## Multi-column items
 
-The picker populates the items as Multi-column based on the columns value.
+The picker populates the items as multi-column based on the column values.
 
-Collection of items can be created and assigned to a Collection based on index value, and each index is a column of picker.
+A collection of items can be created and assigned to a collection based on index value, with each index representing a column of the picker.
 
-The following code example encapsulate how to populate Country and Cities in each column of picker.
+The following code example encapsulates how to populate Country and Cities in each column of picker.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -109,9 +109,7 @@ The following code example encapsulate how to populate Country and Cities in eac
 
 ## Set items text style customization
 
-The .NET MAUI Picker control, selected and unselected items, `TextColor`, `FontSize`, `FontFamily`, and `FontAttributes` can be customized as shown in the following code.
-
-The .NET MAUI Picker control, selected and unselected items, `TextColor`, `FontSize`, `FontFamily`, and `FontAttributes` can be customized as shown in the following code.
+In the .NET MAUI Picker control, the `TextColor`, `FontSize`, `FontFamily`, and `FontAttributes` of selected and unselected items can be customized as shown in the following code.
 
 ### Selected item customization
 
@@ -163,7 +161,7 @@ The unselected item [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.M
 {% endhighlight %}
 {% endtabs %}
 
-   ![Picker un selected item customization in .NET MAUI Picker.](images/populating-items/maui-picker-un-selected-item-customization.png)
+   ![Picker unselected item customization in .NET MAUI Picker.](images/populating-items/maui-picker-un-selected-item-customization.png)
 
 ## Adding custom view to items
 

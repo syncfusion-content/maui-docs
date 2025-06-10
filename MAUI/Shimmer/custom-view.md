@@ -9,7 +9,7 @@ documentation: ug
 
 # Custom view of .NET MAUI Shimmer (SfShimmer)
 
-The `CustomView` property of the [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html) can be used to create your shimmer view. The below code demonstrates how to customize the shimmer view using the .NET MAUI framework elements by `CustomView`.
+The `CustomView` property of the [SfShimmer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.SfShimmer.html) can be used to create your shimmer view. The following code demonstrates how to customize the shimmer view using the .NET MAUI framework elements by `CustomView`.
 
 {% tabs %}
 
@@ -330,7 +330,7 @@ The `CustomView` property of the [SfShimmer](https://help.syncfusion.com/cr/maui
 
 ## Shimmer view
 
-[ShimmerView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.ShimmerView.html) can be used to customize the custom view with different shape by using [ShapeType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.ShimmerView.html#Syncfusion_Maui_Shimmer_ShimmerView_ShapeType). The `ShimmerView` is available in three different shape types such as Circle, Rectangle, and RoundedRectangle. By default, the shape type is [Rectangle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.ShimmerShapeType.html#Syncfusion_Maui_Shimmer_ShimmerShapeType_Rectangle).
+[ShimmerView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.ShimmerView.html) can be used to customize the view with different shapes by setting the [ShapeType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.ShimmerView.html#Syncfusion_Maui_Shimmer_ShimmerView_ShapeType) property. It supports three shape types: Circle, Rectangle, and RoundedRectangle. By default, the shape type is [Rectangle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Shimmer.ShimmerShapeType.html#Syncfusion_Maui_Shimmer_ShimmerShapeType_Rectangle).
 
 {% tabs %} 
 

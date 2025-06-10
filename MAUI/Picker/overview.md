@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About .NET MAUI Picker control | Syncfusion<sup>&reg;</sup>
-description: Learn about the overview of Syncfusion<sup>&reg;</sup> .NET MAUI Picker (SfPicker) control, its basic features, and picker functionalities.
+title: About .NET MAUI Picker Control – Syncfusion<sup>&reg;</sup>
+description: Learn about the Syncfusion<sup>&reg;</sup> .NET MAUI Picker (SfPicker) control, its key features, and functionalities.
 platform: maui
 control: SfPicker
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Overview of .NET MAUI Picker (SfPicker)
 
-Syncfusion .NET MAUI Picker (SfPicker) control allows you to select an item and visualize its items inside a popup or a drop-down UI element. It supports multiple-column layout, header, footer, and selection view customizations. It provides customization as a date picker, time picker, date-time picker, country picker, color picker, and more.
+Syncfusion .NET MAUI Picker (SfPicker) control allows you to select an item and visualize items in a popup or drop-down UI element. It supports multiple-column layout, header, footer, and selection view customizations. It can be customized as a date picker, time picker, date-time picker, country picker, color picker, and more.
 
 ## Key features
 
@@ -39,4 +39,4 @@ Syncfusion .NET MAUI Picker (SfPicker) control allows you to select an item and 
 
 * **Item template**: Customize the picker using item template support.
 
-   ![Item template in .NET MAUI Picker.](images/overview/maui-picker-item-template.png )
+![Item template in .NET MAUI Picker.](images/overview/maui-picker-item-template.png)

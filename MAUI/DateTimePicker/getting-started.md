@@ -1,19 +1,18 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Date Time Picker control | Syncfusion
-description: Learn about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Date Time Picker (SfDateTimePicker) control and its basic features.
+title: Getting started with .NET MAUI DateTimePicker control | Syncfusion
+description: Learn about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI DateTimePicker (SfDateTimePicker) control and its basic features.
 platform: maui
 control: SfDateTimePicker
 documentation: ug
 ---
 
 # Getting Started with the .NET MAUI DateTimePicker
-This section explains how to add the Date Time Picker control. It covers only the basic features needed to get started with Syncfusion<sup>&reg;</sup> Date Time Picker. Follow the steps below to add a .NET MAUI Date time picker to your project.
+This section explains how to add the DateTimePicker control. It covers only the basic features needed to get started with Syncfusion<sup>&reg;</sup> DateTimePicker. Follow the steps below to add a .NET MAUI DateTimePicker to your project.
 
-To get start quickly with our .NET MAUI Date Time Picker, you can check the below video.
+To get started quickly with our .NET MAUI DateTimePicker, you can check the below video.
 
-{% youtube
-"youtube:https://youtu.be/fKuMBHegq7s?si=pDLQy52nILzOQUWC"%}
+{% youtube "youtube:https://youtu.be/fKuMBHegq7s?si=pDLQy52nILzOQUWC"%}
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -68,7 +67,7 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-## Step 4: Add .NET MAUI Date time picker control
+## Step 4: Add .NET MAUI DateTimePicker control
 
 1. To initialize the control, import the `Syncfusion.Maui.Picker` namespace into your code.
 2. Initialize [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
@@ -76,11 +75,11 @@ namespace GettingStarted
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
 
-<ContentPage   
-    . . .
-    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+<ContentPage
+. . .
+xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
 
-    <picker:SfDateTimePicker />
+<picker:SfDateTimePicker />
 </ContentPage>
 
 {% endhighlight %}
@@ -109,7 +108,7 @@ public partial class MainPage : ContentPage
 
 Before proceeding, ensure the following are set up:
 
-1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) 
+1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
 2. Set up a .NET MAUI environment Visual Studio Code.
 3. Ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
 
@@ -159,7 +158,7 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-## Step 4: Add .NET MAUI Date time picker control
+## Step 4: Add .NET MAUI DateTimePicker control
 
 1. To initialize the control, import the `Syncfusion.Maui.Picker` namespace into your code.
 2. Initialize [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
@@ -167,11 +166,11 @@ namespace GettingStarted
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
 
-<ContentPage   
-    . . .
-    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+<ContentPage
+. . .
+xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
 
-    <picker:SfDateTimePicker />
+<picker:SfDateTimePicker />
 </ContentPage>
 
 {% endhighlight %}
@@ -249,7 +248,7 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-## Step 4: Add .NET MAUI Date time picker control
+## Step 4: Add .NET MAUI DateTimePicker control
 
 1. To initialize the control, import the `Syncfusion.Maui.Picker` namespace into your code.
 2. Initialize [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
@@ -257,11 +256,11 @@ namespace GettingStarted
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
 
-<ContentPage   
-    . . .
-    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
+<ContentPage
+. . .
+xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker">
 
-    <picker:SfDateTimePicker />
+<picker:SfDateTimePicker />
 </ContentPage>
 
 {% endhighlight %}
@@ -286,11 +285,11 @@ public partial class MainPage : ContentPage
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Date Time Picker header
+## DateTimePicker header
 
-The [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html) control provides the default header which shows the current selected date and selected time.
+The [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html) control provides the default header which shows the current selected date and time.
 
-## Set footer to the Date Time Picker
+## Set footer in the DateTimePicker
 
 In the SfDateTimePicker control, validation buttons (OK and Cancel) can be customized by setting the [OkButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_OkButtonText) and [CancelButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_CancelButtonText) properties in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html). It allows you to confirm or cancel the selected date and time. The `OkButtonText` can be enabled using the [ShowOkButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_ShowOkButton) property in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html).
 
@@ -308,27 +307,27 @@ In the SfDateTimePicker control, validation buttons (OK and Cancel) can be custo
 
 SfDateTimePicker picker = new SfDateTimePicker();
 picker.FooterView= new PickerFooterView()
-{  
+{
     ShowOkButton = true,
     Height = 40,
 };
 
 this.Content = picker;
 
-{% endhighlight %}  
+{% endhighlight %}
 {% endtabs %}
 
-   ![Set Footer view in .NET MAUI Date Time picker.](images/getting-started/maui-date-time-picker-footer-view.png)
+![Set Footer view in .NET MAUI DateTimePicker.](images/getting-started/maui-date-time-picker-footer-view.png)
 
-## Set height and width to the Date Time Picker
+## Set height and width in the DateTimePicker
 
 The SfDateTimePicker control allows you to change the height and width by using the `HeightRequest` and `WidthRequest` properties in the `SfDateTimePicker`.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2 3" %}
 
-<picker:SfDateTimePicker x:Name="picker" 
-                    HeightRequest="280" 
+<picker:SfDateTimePicker x:Name="picker"
+                    HeightRequest="280"
                     WidthRequest="300">
 </picker:SfDateTimePicker>
 
@@ -343,20 +342,20 @@ SfDateTimePicker picker = new SfDateTimePicker()
 
 this.Content = picker;
 
-{% endhighlight %}  
+{% endhighlight %}
 {% endtabs %}
 
-   ![Set Height and Width in .NET MAUI Date Time picker.](images/getting-started/maui-date-time-picker-set-height-and-width.png)
+![Set Height and Width in .NET MAUI DateTimePicker.](images/getting-started/maui-date-time-picker-set-height-and-width.png)
 
-## Set selected date and selected time to the Date Time Picker
+## Set selected date and time in the DateTimePicker
 
 The SfDateTimePicker control allows you to select the date and time by using the [SelectedDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_SelectedDate) property in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html). The default value of the `SelectedDate` is the current date and time.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
 
-<picker:SfDateTimePicker x:Name="picker" 
-                         SelectedDate="9/7/2023 10:15:22">
+<picker:SfDateTimePicker x:Name="picker"
+                        SelectedDate="9/7/2023 10:15:22">
 </picker:SfDateTimePicker>
 
 {% endhighlight %}
@@ -369,10 +368,10 @@ SfDateTimePicker picker = new SfDateTimePicker()
 
 this.Content = picker;
 
-{% endhighlight %}  
+{% endhighlight %}
 {% endtabs %}
 
-   ![Set selected date in .NET MAUI Date Time picker.](images/getting-started/maui-date-time-picker-set-selected-date.png)
+![Set selected date in .NET MAUI DateTimePicker.](images/getting-started/maui-date-time-picker-set-selected-date.png)
 
 ## Clear selection
 
@@ -386,9 +385,9 @@ The .NET MAUI DateTimePicker provides clear selection support, allowing you to c
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    this.Picker.SelectedDate = null;
+this.Picker.SelectedDate = null;
 
-{% endhighlight %}  
+{% endhighlight %}
 {% endtabs %}
 
-N> You can refer to our [.NET MAUI Date Time Picker](https://www.syncfusion.com/maui-controls/maui-datetimepicker) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Date Time Picker Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Picker/SampleBrowser.Maui.Picker/Samples/DateTimePicker/GettingStarted) that shows you how to render the Date Time Picker in .NET MAUI.
+N> You can refer to our [.NET MAUI DateTimePicker](https://www.syncfusion.com/maui-controls/maui-datetimepicker) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI DateTimePicker Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Picker/SampleBrowser.Maui.Picker/Samples/DateTimePicker/GettingStarted) that shows you how to render the DateTimePicker in .NET MAUI.

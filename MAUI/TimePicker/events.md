@@ -11,7 +11,7 @@ documentation: ug
 
 ## Selection changed event
 
-The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_SelectionChanged) event is used to notify when the time selection is changed onto the view in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
+The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_SelectionChanged) event is used to notify when the time selection is changes in the view in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
 
 * `Sender`: This contains the `SfTimePicker` object.
 
@@ -111,7 +111,7 @@ this.picker.Closing += this.OnTimePickerPopUpClosing;
 
 private void OnTimePickerPopUpClosing(object sender, CancelEventArgs e)
 {
-    //To restrict the time picker get close, set e.Cancel to true.
+    //To prevent the time picker from closingd, set e.Cancel to true.
     e.Cancel = true;
 }
 
@@ -182,7 +182,7 @@ this.picker.OkButtonClicked += this.OnTimePickerOkButtonClicked;
 
 private void OnTimePickerOkButtonClicked(object sender, EventArgs e)
 {
-    // This event is used to updates the selected item in the time picker.
+    // This event is used to update the selected item in the time picker.
 }
 
 {% endhighlight %}
@@ -248,7 +248,7 @@ public class ViewModel
     }
     private void SelectionChanged()
     {
-        // To do your requirement here.
+        // Implement your logic here.
     }
 }
 
@@ -281,7 +281,7 @@ public class ViewModel
     }
     private void ActionButtonClicked()
     {
-        // To do your requirement here.
+        // Implement your logic here.
     }
 }
 
@@ -314,7 +314,7 @@ public class ViewModel
     }
     private void ActionButtonCanceled()
     {
-        // To do your requirement here.
+        // Implement your logic here.
     }
 }
 
