@@ -197,6 +197,9 @@ private void OnDataFormValidateProperty(object sender, DataFormValidatePropertyE
 
 The data form supports customizing the style of both error and valid message label style easily.
 
+#### Customize show/hide error label
+
+
 #### Customize error label text style
 
 The error label style can be customized by changing the [ErrorLabelTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_ErrorLabelTextStyle) property of the [SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html).

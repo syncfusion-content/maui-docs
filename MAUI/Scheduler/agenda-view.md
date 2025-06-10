@@ -332,9 +332,9 @@ The No events text style can be customized by using the [SchedulerTextStyle](htt
  // Customizing the No events text style in agenda view
  var textStyle = new SchedulerTextStyle()
  {
-     TextColor = Colors.DimGray,
+     TextColor = Colors.DarkSlateGrey,
      FontAttributes = FontAttributes.Italic,
-     FontSize = 12,
+     FontSize = 15,
      FontAutoScalingEnabled = true
  };
 // Setting the TextStyle for the NoEvets text.
@@ -345,7 +345,7 @@ The No events text style can be customized by using the [SchedulerTextStyle](htt
 
 ![]()
 
-N> When there is No appointments in the scheduler [AgendaView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAgendaView.html), No Events Text will appear.
+N> When there is No appointments in Current Date and [DisplayDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_DisplayDate) of the scheduler [AgendaView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAgendaView.html), No Events Text will appear.
 
 ## Change the appointment time format
 
