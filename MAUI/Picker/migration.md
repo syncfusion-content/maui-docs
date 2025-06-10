@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migrate from Syncfusion<sup>&reg;</sup> Xamarin SfPicker to .NET MAUI SfPicker
-description: Learn all about Migrating from Syncfusion<sup>&reg;</sup> Xamarin Picker to Syncfusion<sup>&reg;</sup> .NET MAUI Picker control.
+title: Migrate from Syncfusion® Xamarin SfPicker to .NET MAUI SfPicker
+description: Learn here all about Migrating from Syncfusion<sup>&reg;</sup> Xamarin Picker to Syncfusion<sup>&reg;</sup> .NET MAUI Picker control.
 platform: maui
 control: SfPicker
 documentation: ug
@@ -87,7 +87,7 @@ To initialize the control, import the picker namespace and initialize `SfPicker`
 <th>.NET MAUI SfPicker</th>
 <th>Description</th></tr>
 <tr>
-<td>{{'[SfPicker](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfPicker.html)'| markdownify }}</td>
+<td>{{'[SfPicker](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPicker.XForms.SfPicker.html)'| markdownify }}</td>
 <td>{{'[SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html)'| markdownify }}</td>
 <td>The SfPicker class that represents a control, that allows you pick an item among a list of items.</td>
 </tr>
@@ -225,8 +225,8 @@ The following code example, explains how to initialize the properties of the `Xa
 </tr>
 <tr>
 <td>{{'[EnableLooping](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_EnableLoopingProperty)'| markdownify }}</td>
-<td>Nil</td>
-<td>Not Supported.</td>
+<td>{{'[EnableLooping]()'| markdownify }}</td>
+<td>Gets or sets the value of enable looping.</td>
 </tr>
 <tr>
 <td>{{'[FooterHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPicker.XForms.SfPicker.html#Syncfusion_SfPicker_XForms_SfPicker_FooterHeight)'| markdownify }}</td>
@@ -458,8 +458,4 @@ The following code example, explains how to initialize the properties of the `Xa
 ## Known issues
 
  * Picker background color is not applied to the popup.
- * Picker dynamic item source does not render the picker items.
-
-## Upcoming features
-
- * Looping support for picker items.
+ * Picker dynamic items source does not render the picker item.
