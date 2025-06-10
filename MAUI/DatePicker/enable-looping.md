@@ -9,9 +9,9 @@ documentation: ug
 
 # Looping support in .NET MAUI Date Picker (SfDatePicker)
 
-The [EnableLooping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.EnableLooping.html) property allows you to enable looping support in the date picker control. With looping enabled, the control seamlessly navigates from the last item to the first item and back again, iterating in both forward and backward directions.
+The [EnableLooping]() property allows you to enable looping support in the date picker control. With looping enabled, the control seamlessly navigates from the last item to the first item and back again, iterating in both forward and backward directions.
 
-To enable the looping in date picker by setting the [EnableLooping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.EnableLooping.html) property as `true`. The default value is `false`.
+To enable the looping in date picker by setting the [EnableLooping]() property as `true`. The default value is `false`.
 
 {% tabs %}
 
