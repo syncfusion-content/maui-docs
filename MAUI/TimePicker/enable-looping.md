@@ -34,3 +34,5 @@ this.Content = timePicker;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Enable Looping in .NET MAUI Time picker.](images/enable-looping/time-picker-enable-looping.gif){:width="330" height="360"}

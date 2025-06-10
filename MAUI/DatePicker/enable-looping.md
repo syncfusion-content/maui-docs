@@ -34,3 +34,5 @@ this.Content = datePicker;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Enable Looping in .NET MAUI Date picker.](images/enable-looping/date-picker-enable-looping.gif){:width="330" height="360"}

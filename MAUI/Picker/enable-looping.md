@@ -34,3 +34,5 @@ this.Content = picker;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Enable Looping in .NET MAUI picker.](images/enable-looping/maui-picker-enable-looping.gif){:width="330" height="360"}
