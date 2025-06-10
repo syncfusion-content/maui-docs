@@ -39,13 +39,13 @@ private void PdfViewer_Tapped(object sender, GestureEventArgs e)
 
 ### GestureEventArgs
 
-The [GestureEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.GestureEventArgs.html) provides information available on the tapped location and it includes the following properties.
+The [GestureEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.GestureEventArgs.html) provides information available on the tapped location, and it includes the following properties.
 
 1.	[PageNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.GestureEventArgs.html#Syncfusion_Maui_PdfViewer_GestureEventArgs_PageNumber) – This property returns the page number on which the tap took place. The value ranges from 1 to the total number of pages in the PDF document. If the tap occurs outside of any PDF page boundaries, the result will be -1.
-2.	[PagePositon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.GestureEventArgs.html#Syncfusion_Maui_PdfViewer_GestureEventArgs_PagePosition) – The property returns the page’s tapped position in the PDF coordinates. The coordinates have their origin at the top-left of the page. The number of the tapped page is identified by the [PageNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.GestureEventArgs.html#Syncfusion_Maui_PdfViewer_GestureEventArgs_PageNumber) property. If the tap occurs outside of any PDF page boundaries, the result will be (-1, -1).
+2.	[PagePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.GestureEventArgs.html#Syncfusion_Maui_PdfViewer_GestureEventArgs_PagePosition) – The property returns the page’s tapped position in the PDF coordinates. The coordinates have their origin at the top-left of the page. The number of the tapped page is identified by the [PageNumber](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.GestureEventArgs.html#Syncfusion_Maui_PdfViewer_GestureEventArgs_PageNumber) property. If the tap occurs outside of any PDF page boundaries, the result will be (-1, -1).
 3.	[Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.GestureEventArgs.html#Syncfusion_Maui_PdfViewer_GestureEventArgs_Position) – This property returns the tapped position on the PDF Viewer control. The coordinate space starts at the top left of the control.
 
-The following code example that demonstrates how to retrieve information from the [GestureEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.GestureEventArgs.html) and handle the tapped event.
+The following code example demonstrates how to retrieve information from the [GestureEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.GestureEventArgs.html) and handle the tapped event.
 
 {% tabs %}
 {% highlight c# %}

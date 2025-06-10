@@ -8,9 +8,9 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Add, Remove and Edit Annotations in .NET MAUI PDF Viewer (SfPdfViewer)
+# Add, Remove, and Edit Annotations in .NET MAUI PDF Viewer (SfPdfViewer)
 
-This section will go through the various functions available in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) for adding, removing and  editing annotations in a PDF document. 
+This section will review the various functions in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) for adding, removing, and  editing annotations in a PDF document. 
 
 ## Add annotations to a PDF document
 
@@ -18,14 +18,14 @@ This section will go through how to add annotations to a PDF document programmat
 
 ### Add annotations programmatically 
 
-You can add a new annotation to the PDF document programmatically by creating an annotation instance and providing it as a parameter to the [AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method. The following example shows how to create an instance of a circle annotation and add it to the PDF document. Similarly, you can create and add other types of annotation. 
+You can add a new annotation to the PDF document programmatically by creating an annotation instance and providing it as a parameter to the [AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method. The following example shows how to create an instance of a circle annotation and add it to the PDF document. Similarly, you can create and add other types of annotations. 
 
 {% tabs %}
 {% highlight c# %}
 void AddCircleAnnotation()
 {
     int pageNumber = 1;
-    // Define the bounds for circle in the PDF coordinates.
+    // Define the bounds for the circle in the PDF coordinates.
     RectF circleBounds = new RectF(10, 10, 100, 100);
     
     // Create a circle annotation.
@@ -37,7 +37,7 @@ void AddCircleAnnotation()
     annotation.BorderWidth = 2; //Stroke thickness
     annotation.Opacity = 0.75f; // 75% Opacity
 
-    // Add the annotation to the PDF document using `AddAnnotation` method of `SfPdfViewer`.
+    // Add the annotation to the PDF document using the `AddAnnotation` method of `SfPdfViewer`.
     PdfViewer.AddAnnotation(annotation);
 }
 {% endhighlight %}
@@ -69,7 +69,7 @@ This section will go through different methods of removing annotations from a PD
 
 ### Remove a specific annotation
 
-You can remove an annotation from the document programmatically by providing the specific annotation instance as the parameter to [RemoveAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_RemoveAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). The following example shows how to remove the first annotation in the annotation collection from a PDF document.
+You can remove an annotation from the document programmatically by providing the specific annotation instance as the parameter to the [RemoveAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_RemoveAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). The following example shows how to remove the first annotation in the annotation collection from a PDF document.
 
 {% tabs %}
 {% highlight c# %}
@@ -81,7 +81,7 @@ void RemoveFirstAnnotation()
     //Obtain the first annotation in the annotation collection.
     Annotation firstAnnotation = annotations[0];
 
-    //Remove the annotation using RemoveAnnotation method of `SfPdfViewer`.
+    //Remove the annotation using the RemoveAnnotation method of `SfPdfViewer`.
     PdfViewer.RemoveAnnotation(firstAnnotation);
 }
 {% endhighlight %}
@@ -89,7 +89,7 @@ void RemoveFirstAnnotation()
 
 ### Remove all the annotations
 
-You can remove all the annotations from a document programmatically by calling [RemoveAllAnnotations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_RemoveAllAnnotations) method. The following example shows how to remove all the annotations from a PDF document.
+You can remove all the annotations from a document programmatically by calling the [RemoveAllAnnotations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_RemoveAllAnnotations) method. The following example shows how to remove all the annotations from a PDF document.
 
 {% tabs %}
 {% highlight c# %}
@@ -127,7 +127,7 @@ This section will go through different methods of editing annotations in a PDF d
 
 ### Edit a specific annotation
 
-You can edit the properties of an annotation from the document programmatically by accessing the specific annotation instance from the [Annotations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_Annotations) property of the SfPdfViewer. The following example shows how to edit the first annotation in the annotation collection. Similarly, you can modify the other properties also.
+You can edit the properties of an annotation from the document programmatically by accessing the specific annotation instance from the [Annotations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_Annotations) property of the SfPdfViewer. The following example shows how to edit the first annotation in the annotation collection. Similarly, you can also modify the other properties.
 
 {% tabs %}
 {% highlight c# %}
@@ -143,7 +143,7 @@ void EditFirstAnnotation()
     annotation.Color = Colors.Green; //Stroke color.
     annotation.Opacity = 0.75f; // 75% Opacity
 
-    // Type cast to edit the properties of the specific annotation type. Here the first annotation is a circle annotation.
+    // Type cast to edit the properties of the specific annotation type. Here, the first annotation is a circle annotation.
     if (annotation is CircleAnnotation circleAnnotation)
     {
         circleAnnotation.FillColor = Colors.Red; //Inner fill color.
@@ -174,11 +174,11 @@ private void OnAnnotationEdited(object sender, AnnotationEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-### Adding custom information to a annotation
+### Adding custom information to an annotation
 
 The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to assign custom information to annotations. The [CustomData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_CustomData) property is utilized to store additional information about each annotation instance for reference. However, it's essential to note that these data are solely intended for reference purposes and will not be displayed in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) interface.
 
-The provided code sample illustrates how to set the [CustomData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_CustomData) property for an annotation. Within this code sample, we set the custom data to represent the created date of the annotation.
+The provided code sample illustrates how to set the [CustomData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_CustomData) property for an annotation. Within this code sample, we set the custom data to represent the creation date of the annotation.
 
 {% tabs %}
 {% highlight C# %}

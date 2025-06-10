@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Migrating from Xamarin to .NET MAUI Switch | Syncfusion® 
-description: Learn about Migrating from Syncfusion® Xamarin Switch to the Syncfusion® .NET MAUI Switch control, and more here.
-platform: maui
+description: Learn about migrating from Syncfusion® Xamarin Switch to the Syncfusion® .NET MAUI Switch control, and more.
+platform: MAUI
 control: SfSwitch
-documentation: ug
+documentation: UG
 ---  
 
 # Migrating from Xamarin SfSwitch to .NET MAUI SfSwitch 
 
-To migrate easier from Xamarin SfSwitch to .NET MAUI SfSwitch, we kept most of the APIs from Xamarin SfSwitch in MAUI SfSwitch. However, to maintain the consistency of the API naming in MAUI SfSwitch, we renamed some of the APIs. The APIs changed in MAUI SfSwitch from Xamarin SfSwitch are detailed as follows:
+To facilitate easier migration from Xamarin SfSwitch to .NET MAUI SfSwitch, most of the APIs from Xamarin SfSwitch have been retained in MAUI SfSwitch. However, to maintain API naming consistency in MAUI SfSwitch, some APIs have been renamed. The changes in APIs from Xamarin SfSwitch to MAUI SfSwitch are detailed as follows:
 
 ## Namespaces 
 

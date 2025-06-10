@@ -86,6 +86,7 @@ public class CityViewModel
 
 using Syncfusion.Maui.Inputs;
 
+CityViewModel cityViewModel = new CityViewModel();
 SfComboBox comboBox = new SfComboBox
 {
     IsEditable = true,
@@ -126,6 +127,7 @@ Filter the matching items based on the starting text and the first filtered item
 {% endhighlight %}
 {% highlight C# %}
 
+CityViewModel cityViewModel = new CityViewModel();
 SfComboBox comboBox = new SfComboBox
 {
     TextSearchMode = ComboBoxTextSearchMode.StartsWith,
@@ -163,6 +165,7 @@ Filter the matching items that contain specific text, and the first filtered ite
 
 using Syncfusion.Maui.Inputs;
 
+CityViewModel cityViewModel = new CityViewModel();
 SfComboBox comboBox = new SfComboBox
 {
     TextSearchMode = ComboBoxTextSearchMode.Contains,
@@ -255,6 +258,7 @@ public class CityFilteringBehavior : IComboBoxFilterBehavior
 
 {% highlight C# %}
 
+CityViewModel cityViewModel = new CityViewModel();  
 CityFilteringBehavior cityFilteringBehavior = new CityFilteringBehavior();
 SfComboBox comboBox = new SfComboBox
 {

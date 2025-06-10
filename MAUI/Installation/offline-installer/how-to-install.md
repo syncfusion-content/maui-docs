@@ -1,62 +1,57 @@
 ---
 layout: post
-title: Installing Syncfusion® .NET MAUI installer - Syncfusion®
-description: Learn here about the how to install Syncfusion® .NET MAUI offline installer after downloading from our syncfusion® website.
+title: Installing Syncfusion® .NET MAUI Installer - Syncfusion®
+description: Learn how to install the Syncfusion® .NET MAUI offline installer after downloading from our Syncfusion® website.
 platform: MAUI
 control: Installation and Deployment
-documentation: ug
+documentation: UG
 
 ---
 
 # Installing Syncfusion<sup>®</sup> .NET MAUI Offline Installer
 
-
-## Installing with UI   
+## Installing with UI
 
 The steps below show how to install the Essential Studio<sup>®</sup> .NET MAUI installer.
 
-1.	Open the Syncfusion<sup>®</sup> .NET MAUI offline installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package
+1.	**Open installer:** Double-click the downloaded Syncfusion<sup>®</sup> .NET MAUI offline installer file to open the Installer Wizard, which automatically extracts the package.
 
     ![Installer extraction wizard](images/Step-by-Step-Installation_img1.png)
 
-    N> The Installer wizard extracts the syncfusionessentialmaui_(version).exe dialog, which displays the package's unzip operation.
+    N> The installer extracts the `syncfusionessentialmaui_(version).exe` dialog, displaying the package's unzip operation.
 
-2.	To unlock the Syncfusion<sup>®</sup> offline installer, you have two options:
-
+2.	**Unlock installer:** You have two options to unlock the Syncfusion<sup>®</sup> offline installer:
    
     * *Login To Install*
    
     * *Use Unlock Key*
+    
    
+    **Login to install**
    
-   
-    **Login To Install**
-   
-    You must enter your Syncfusion<sup>®</sup> email address and password. If you don't already have a Syncfusion<sup>®</sup> account, you can sign up for one by clicking **"Create an account"**. If you have forgotten your password, click on **"Forgot Password"** to create a new one. Once you've entered your Syncfusion<sup>®</sup> email and password, click Next.
+    Enter your Syncfusion<sup>®</sup> email and password. Create an account if you don't have one by clicking **"Create an account"**. Reset your password by clicking **"Forgot Password"**. Click **Next** after entering your credentials.
 
     ![Login credentials](images/Step-by-Step-Installation_img2.png)   
 
-
-    **Use Unlock Key**
+    **Use unlock key**
    
     Unlock keys are used to unlock the Syncfusion<sup>®</sup> offline installer, and they are platform and version specific. You should use either Syncfusion<sup>®</sup> licensed or trial Unlock key to unlock Syncfusion<sup>®</sup> .NET MAUI installer.
    
     The trial unlock key is only valid for 30 days, and the installer will not accept an expired trial key. 
    
-    To learn how to generate an unlock key for both trial and licensed products, see [this](https://support.syncfusion.com/kb/article/2757/how-to-generate-syncfusion-setup-unlock-key-from-syncfusion-support-account) Knowledge Base article.
+    To learn how to generate an unlock key for both trial and licensed products, see this Knowledge Base [article](https://support.syncfusion.com/kb/article/2757/how-to-generate-syncfusion-setup-unlock-key-from-syncfusion-support-account).
 
     ![Product key](images/Step-by-Step-Installation_img3.png)   
 
 
-3.	After reading the License Terms and Privacy Policy, check the **“I agree to the License Terms and Privacy Policy”** check box. Click the Next button.
+3.	**Agree terms:** After reading the License Terms and Privacy Policy, check the **“I agree to the License Terms and Privacy Policy”** check box. Click the Next button.
 
 
-4.	Change the install and sample locations here. You can also change the Additional settings. Click Next\Install to install with the default settings.
-
+4.	**Configure settings:** Change install and sample locations and adjust additional settings as needed. Click **Next\Install** to proceed with default settings.
 
     ![Advanced options](images/Step-by-Step-Installation_img4.png)
 
-    **Additional Settings**
+    **Additional settings**
     
 	* Select the **Install Demos** check box to install Syncfusion<sup>®</sup> samples, or leave the check box unchecked, if you do not want to install Syncfusion<sup>®</sup> samples
     * Select the **Configure Syncfusion<sup>®</sup> controls in Visual Studio** check box to configure the Syncfusion<sup>®</sup> controls in the Visual Studio toolbox, or clear this check box when you do not want to configure the Syncfusion<sup>®</sup> controls in the Visual Studio toolbox during installation. Note that you must also select the Register Syncfusion<sup>®</sup> assemblies in GAC check box when you select this check box.
@@ -65,9 +60,7 @@ The steps below show how to install the Essential Studio<sup>®</sup> .NET MAUI 
     * Check the **Create Start Menu Shortcut** checkbox to add a shortcut to the start menu for Syncfusion<sup>®</sup> Control Panel
 
 
-
-
-5.	If any previous versions of the current product is installed, the Uninstall Previous Version(s) wizard will be opened. Select **Uninstall** checkbox to uninstall the previous versions and then click the Proceed button.
+5.	**Uninstall Previous Versions:** If any previous versions of the current product is installed, the Uninstall Previous Version(s) wizard will open. Select the **Uninstall** checkbox to uninstall the previous versions and then click the **Proceed** button.
 
 
     ![Advanced options](images/Step-by-Step-Installation_img7.png)
@@ -94,16 +87,16 @@ The steps below show how to install the Essential Studio<sup>®</sup> .NET MAUI 
 	
 	![Completed wizard](images/Step-by-Step-Installation_img10.png)
 	
-7.  After installing, click the **Launch Control Panel** link to open the Syncfusion<sup>®</sup> Control Panel.
+6.  **Access control panel:** After installing, click the **Launch Control Panel** link to open the Syncfusion<sup>®</sup> Control Panel.
 
 
-8.  Click the Finish button. Your system has been installed with the Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> .NET MAUI product.
+7.  Click **Finish** to finalize the installation. Your system now has Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> .NET MAUI installed.
 
 ## Installing in silent mode
 
 The Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> .NET MAUI Installer supports installation and uninstallation via the command line.
 
-### Command Line Installation
+### Command Line installation
 
 To install through the Command Line in Silent mode, follow the steps below.
 
@@ -128,7 +121,7 @@ To install through the Command Line in Silent mode, follow the steps below.
     N> x.x.x.x should be replaced with the Essential Studio<sup>®</sup> version and the Product Unlock Key needs to be replaced with the Unlock Key for that version.
    
 
-### Command Line Uninstallation
+### Command Line uninstallation
 
 Syncfusion<sup>®</sup> Essential<sup>®</sup> .NET MAUI can be uninstalled silently using the Command Line.
 

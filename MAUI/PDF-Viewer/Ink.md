@@ -10,13 +10,13 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 # Ink annotation in .NET MAUI PDF Viewer (SfPdfViewer)
 
-The ink annotation feature of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to add, remove and modify free hand drawings (ink) in the PDF document. This is useful for making corrections or emphasizing important points in the document. This section will go through the various functions available in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) for working with ink annotations.
+The ink annotation feature of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to add, remove, and modify freehand drawings (ink) in the PDF document. This is useful for making corrections or emphasizing important points in the document. This section will go through the various functions available in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) for working with ink annotations.
 
 ## Add ink annotations
 
 This section will cover how to add ink annotations to a PDF document using a toolbar as well as programmatically.
 
-## Add ink annotation using toolbar
+## Add an ink annotation using the toolbar
 
 On the built-in toolbar, an ink annotation tool is available. Using that, you can add ink annotations by drawing on the PDF document. Additionally, the toolbar shows the option to modify the properties of existing or new ink annotations.
 
@@ -28,7 +28,7 @@ The following image represents how to add the ink annotations using the toolbar 
 
 ![Ink annotation mobile](Images/Annotations/InkMobile.gif)
 
-## Add ink annotation without using toolbar
+## Add an ink annotation without using the toolbar
 
 You can draw and add ink annotations to a PDF document with UI interaction using touch or mouse. The following steps explains how to draw ink annotation on a PDF.
 
@@ -36,8 +36,8 @@ You can draw and add ink annotations to a PDF document with UI interaction using
 2.	Place your finger (or mouse) on the screen, where you want to start drawing the ink stroke.
 3.	Draw the stroke by dragging the finger (or cursor) across the screen.
 4.	Finish the stroke by releasing the finger (or cursor).
-5.	Repeat the steps 2-4, if you want to create multiple strokes on other areas during the ink drawing mode.
-6.	Once you have done, set the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_None). It will disable the drawing mode and save the drawn strokes to the PDF page as a single ink annotation.
+5.	Repeat steps 2-4 if you want to create multiple strokes on other areas during the ink drawing mode.
+6.	Once you have done that, set the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_None). It will disable the drawing mode and save the drawn strokes to the PDF page as a single ink annotation.
 7.	You can later move, resize, or edit the annotation.
 
 
@@ -54,7 +54,7 @@ void EnableInkDrawingMode()
 {% endhighlight %}
 {% endtabs %}
 
-Similarly, refer to following code to disable the ink annotation mode.
+Similarly, refer to the following code to disable the ink annotation mode.
 
 {% tabs %}
 {% highlight C# %}
@@ -78,7 +78,7 @@ InkAnnotation CreateInkAnnotation()
 {
     int pageNumber = 1;
     
-    // Provide the points collection to draw a stroke. Here a single stroke is created.
+    // Provide the points collection to draw a stroke. Here, a single stroke is created.
     List<List<float>> pointsCollection = new List<List<float>>()
     {
         new List<float> { 40, 300, 60, 100, 40, 50, 40, 300 }
@@ -100,7 +100,7 @@ void AddInkAnnotation()
 {
     Annotation inkAnnotation = CreateInkAnnotation();
 
-    // Add the ink annotation to the PDF document using `AddAnnotation` method of the `SfPdfViewer` instance.
+    // Add the ink annotation to the PDF document using the `AddAnnotation` method of the `SfPdfViewer` instance.
     PdfViewer.AddAnnotation(inkAnnotation);
 }
 {% endhighlight %}
@@ -112,7 +112,7 @@ In the ink annotation mode, the ink annotation will be drawn with a default appe
 
 ### Customize the default appearance
 
-You can customize the default appearance of ink annotation using the [InkAnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.InkAnnotationSettings.html). The following example explains how to obtain the default ink annotation settings and modify its appearance properties. Similarly, you can modify other available properties also.
+You can customize the default appearance of ink annotation using the [InkAnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.InkAnnotationSettings.html). The following example explains how to obtain the default ink annotation settings and modify their appearance properties. Similarly, you can also modify other available properties.
 
 {% tabs %}
 {% highlight C# %}
@@ -140,13 +140,13 @@ void DisableAggregateInkStrokes()
     // Obtain the default ink annotation settings from the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) instance.
     InkAnnotationSettings inkSettings = PdfViewer.AnnotationSettings.Ink;
 
-    // Disable aggregating the insk strokes
+    // Disable aggregating the ink strokes
     inkSettings.AggregateInkStrokes = false;
 }
 {% endhighlight %}
 {% endtabs %}
 
-### How to draw ink annotation only using stylus
+### How to draw an ink annotation only using a stylus
 
 The ink annotation operation can be customized so that the ink strokes can be added only using a stylus by setting the [AnnotationSettings.Ink.TouchScreenInputMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.InkAnnotationSettings.html#Syncfusion_Maui_PdfViewer_InkAnnotationSettings_TouchScreenInputMode) property to TouchScreenInputMode.Stylus. When TouchScreenInputMode is set to TouchScreenInputMode.Stylus, users can easily draw ink strokes using a stylus. However, zooming and scrolling functionality will still be available using their fingers.
 
@@ -164,7 +164,7 @@ N> * At present, this feature is available only in iOS and Android.
 
 ## Edit the selected ink annotation
 
-You can edit the properties of the selected ink annotation programmatically by accessing the selected annotation instance. The selected annotation instance may be obtained from the [AnnotationSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSelected) event. The following example shows how to edit some of the properties of the selected ink annotation. Similar you can modify the other properties.
+You can edit the properties of the selected ink annotation programmatically by accessing the selected annotation instance. The selected annotation instance may be obtained from the [AnnotationSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSelected) event. The following example shows how to edit some of the properties of the selected ink annotation. Similarly, you can modify the other properties.
 
 {% tabs %}
 {% highlight C# %}
@@ -174,7 +174,7 @@ You can edit the properties of the selected ink annotation programmatically by a
 /// <param name="selectedAnnotation">The selected annotation instance that may be obtained from the annotation selected event</param>
 void EditSelectedInkAnnotation(Annotation selectedAnnotation)
 {
-    // Type cast the selected annotation as ink annotation.
+    // Typecast the selected annotation as an ink annotation.
     if(selectedAnnotation is InkAnnotation inkAnnotation)
     {
         inkAnnotation.Color = Colors.Blue; // Change the color to blue.

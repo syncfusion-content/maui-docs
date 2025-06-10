@@ -18,7 +18,7 @@ The following example explains how to save the modified document if the document
 {% highlight c# %}
 private void SaveDocument()
 {
-	// Create a file stream to save the PDF document. Here a file named "ModifiedDocument.pdf" is created in the application's data directory.
+	// Create a file stream to save the PDF document. Here, a file named "ModifiedDocument.pdf" is created in the application's data directory.
 	string fileName = Path.Combine(FileSystem.Current.AppDataDirectory, "ModifiedDocument.pdf");
 	using FileStream fileStream = File.Create(fileName);
 	
@@ -32,9 +32,9 @@ To save a document asynchronously, you may use the [SaveDocumentAsync](https://h
 
 ## Flatten annotations and form fields on save
 
-Flattening refers to the process of converting interactive elements, such as annotations and form fields, into a static, non-editable format within a PDF document. The SfPdfViewer allows you to save the annotations and form fields by Flatten using [FlattenOnSave](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_FlattenOnSave) API.
+Flattening refers to the process of converting interactive elements, such as annotations and form fields, into a static, non-editable format within a PDF document. The SfPdfViewer allows you to save the annotations and form fields by flattening using the [FlattenOnSave](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_FlattenOnSave) API.
 
-### Flatten annotation on save
+### Flatten the annotation on save
 
 The [FlattenOnSave](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Annotation.html#Syncfusion_Maui_PdfViewer_Annotation_FlattenOnSave) API helps you to flatten the specified annotation in a PDF document. The following code sample explains how to flatten the first annotation from the annotation collection.
 
@@ -66,4 +66,4 @@ formField.FlattenOnSave = true;
 
 ### Limitation
 
-Currently, when saving a document by Flatten that contains sticky note annotations, the sticky note icon always appears as the default [comment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.StickyNoteIcon.html#Syncfusion_Maui_PdfViewer_StickyNoteIcon_Comment) icon appearance in the saved document.
+Currently, when saving a document by flattening that contains sticky note annotations, the sticky note icon always appears as the default [comment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.StickyNoteIcon.html#Syncfusion_Maui_PdfViewer_StickyNoteIcon_Comment) icon appearance in the saved document.

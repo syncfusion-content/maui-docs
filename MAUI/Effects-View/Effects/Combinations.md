@@ -1,17 +1,17 @@
 ---
 layout: post
-title: The .NET MAUI Combination Effects | Effects View control | Syncfusion<sup>®</sup>
-description: Learn here all about the combination of effects support in Syncfusion<sup>®</sup> .NET MAUI Effects View (SfEffectsView) control and more.
-platform: maui
-control: Effects View
-documentation: ug
+title: The .NET MAUI Combination Effects | Effects View Control | Syncfusion®
+description: Learn all about the combination of effects support in Syncfusion® .NET MAUI Effects View (SfEffectsView) control and more.
+platform: MAUI
+control: SfEffectsView
+documentation: UG
 ---
 
 # Combination of Effects 
 
-The [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) control provides support to apply multiple [SfEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html) in combination. The following are some valid combinations of [SfEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html):
+The [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) control supports applying multiple [SfEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html) in combination. Below are some valid combinations of [SfEffects](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html):
 
-## Highlight and ripple
+## Highlight and Ripple
 
 {% tabs %} 
 
@@ -33,7 +33,7 @@ var effectsView = new SfEffectsView()
 
 {% endtabs %}
 
-## Highlight and selection
+## Highlight and Selection
 
 {% tabs %} 
 
@@ -58,7 +58,7 @@ var effectsView = new SfEffectsView()
 
 {% endtabs %}
 
-## Ripple and selection
+## Ripple and Selection
 
 {% tabs %} 
 
@@ -83,7 +83,7 @@ var effectsView = new SfEffectsView()
 
 {% endtabs %}
 
-## Highlight, ripple, and selection
+## Highlight, Ripple, and Selection
 
 {% tabs %} 
 
@@ -108,7 +108,7 @@ var effectsView = new SfEffectsView()
 
 {% endtabs %}
 
-## Scale and selection
+## Scale and Selection
 
 {% tabs %} 
 

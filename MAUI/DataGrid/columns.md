@@ -100,7 +100,7 @@ By default, columns are also auto-generated for custom type properties and paren
 {% endhighlight %}
 
 {% highlight c# %}
-this.dataGrid.AutoGenerateColumnsModeForCustomType = AutoGenerateColumnsModeForCustomType.Both;
+dataGrid.AutoGenerateColumnsModeForCustomType = AutoGenerateColumnsModeForCustomType.Both;
 {% endhighlight %}
 {% endtabs %}
 
@@ -118,7 +118,7 @@ You can skip generating a column by handling the `SfDataGrid.AutoGeneratingColum
 
 {% tabs %}
 {% highlight c# %}
-this.sfDataGrid.AutoGeneratingColumn += SfDataGrid_AutoGeneratingColumn;
+this.dataGrid.AutoGeneratingColumn += SfDataGrid_AutoGeneratingColumn;
 
 private void SfDataGrid_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
 {
@@ -156,7 +156,7 @@ There are different types of columns available. Any column can be created based 
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="sfDataGrid"
+<syncfusion:SfDataGrid x:Name="dataGrid"
                        AutoGenerateColumnsMode="None"
                        ItemsSource="{Binding OrderInfoCollection}">
     <syncfusion:SfDataGrid.Columns>
@@ -175,7 +175,7 @@ There are different types of columns available. Any column can be created based 
 {% endhighlight %}
 
 {% highlight c# %}
-this.sfDataGrid.AutoGenerateColumnsMode = AutoGenerateColumnsMode.None;
+this.dataGrid.AutoGenerateColumnsMode = AutoGenerateColumnsMode.None;
 
 DataGridNumericColumn orderIdColumn = new DataGridNumericColumn { HeaderText = "Order ID", MappingName = "OrderID" };
 DataGridTextColumn customerIdColumn = new DataGridTextColumn { HeaderText = "Customer ID", MappingName = "CustomerID" };
@@ -183,11 +183,11 @@ DataGridTextColumn customerColumn = new DataGridTextColumn { HeaderText = "Custo
 DataGridTextColumn shipCityColumn = new DataGridTextColumn { HeaderText = "Ship City", MappingName = "ShipCity" };
 DataGridTextColumn shipCountryColumn = new DataGridTextColumn { HeaderText = "Ship Country", MappingName = "ShipCountry" };
 
-this.sfDataGrid.Columns.Add(orderIdColumn);
-this.sfDataGrid.Columns.Add(customerIdColumn);
-this.sfDataGrid.Columns.Add(customerColumn);
-this.sfDataGrid.Columns.Add(shipCityColumn);
-this.sfDataGrid.Columns.Add(shipCountryColumn);
+this.dataGrid.Columns.Add(orderIdColumn);
+this.dataGrid.Columns.Add(customerIdColumn);
+this.dataGrid.Columns.Add(customerColumn);
+this.dataGrid.Columns.Add(shipCityColumn);
+this.dataGrid.Columns.Add(shipCountryColumn);
 {% endhighlight %}
 {% endtabs %}
 
@@ -201,7 +201,7 @@ You can add a column to the DataGrid at runtime by adding an instance of a `Data
 
 {% tabs %}
 {% highlight c# %}
-this.sfDataGrid.Columns.Add(new DataGridTextColumn() { HeaderText = "Order ID", MappingName = "OrderID" });
+this.dataGrid.Columns.Add(new DataGridTextColumn() { HeaderText = "Order ID", MappingName = "OrderID" });
 {% endhighlight %}
 {% endtabs %}
 
@@ -211,9 +211,9 @@ You can access a column through its column index or [DataGridColumn.MappingName]
 
 {% tabs %}
 {% highlight c# %}
-DataGridColumn column = this.sfDataGrid.Columns[1];
+DataGridColumn column = this.dataGrid.Columns[1];
 // OR
-DataGridColumn column = this.sfDataGrid.Columns["OrderID"];
+DataGridColumn column = this.dataGrid.Columns["OrderID"];
 {% endhighlight %}
 {% endtabs %}
 
@@ -223,7 +223,7 @@ You can remove all the columns by clearing the `SfDataGrid.Columns` property.
 
 {% tabs %}
 {% highlight c# %}
-this.sfDataGrid.Columns.Clear();
+this.dataGrid.Columns.Clear();
 {% endhighlight %}
 {% endtabs %}
 
@@ -231,9 +231,9 @@ You can remove a column using the `Remove` and `RemoveAt` methods.
 
 {% tabs %}
 {% highlight c# %}
-this.sfDataGrid.Columns.Remove(column);
+this.dataGrid.Columns.Remove(column);
 // OR
-this.sfDataGrid.Columns.RemoveAt(1);
+this.dataGrid.Columns.RemoveAt(1);
 {% endhighlight %}
 {% endtabs %}
 

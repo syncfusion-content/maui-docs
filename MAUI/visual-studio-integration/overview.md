@@ -9,7 +9,7 @@ documentation: ug
 
 # Overview of .NET MAUI Extension for Visual Studio
 
-The Syncfusion<sup>®</sup> .NET MAUI Extension for Visual Studio simplifies the utilization of Syncfusion<sup>®</sup> .NET MAUI components by configuring the required Syncfusion<sup>®</sup> .NET MAUI NuGet packages. This extension streamlines the development process by providing developers with easy access to the powerful features and functionalities of Syncfusion<sup>®</sup> .NET MAUI components, thereby saving time and effort.
+The Syncfusion<sup>®</sup> .NET MAUI Extension for Visual Studio simplifies the use of Syncfusion<sup>®</sup> .NET MAUI components by automatically configuring the required NuGet packages. It streamlines development by giving developers easy access to powerful features, saving both time and effort.
 
 [Visual Studio 2022](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.MAUIVSExtension)
 

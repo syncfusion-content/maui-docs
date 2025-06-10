@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Select tab in .NET MAUI Tab View (SfTabView) | Syncfusion®
-description: Learn here all about select tab item programmatically in Syncfusion® .NET MAUI Tab View (SfTabView) control and more.
-platform: maui
-control: Tab View
-documentation: ug
+title: Select Tab in .NET MAUI Tab View (SfTabView) | Syncfusion®
+description: Learn all about selecting a tab item programmatically in the Syncfusion® .NET MAUI Tab View (SfTabView) control and more.
+platform: MAUI
+control: SfTabView
+documentation: UG
 ---
 
-# How to select a tab item programmatically? 
+# How to Select a Tab Item Programmatically? 
 
 ## Programmatically select the tab item
 
-Using the [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_SelectedIndex) property of SfTabView, we can programmatically select the tab item as like in the below code snippet.
+You can use the [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_SelectedIndex) property of SfTabView to programmatically select a tab item. Below is a code snippet demonstrating how to do this:
 
 {% tabs %}
 
@@ -26,9 +26,9 @@ Using the [SelectedIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ta
 
 ![SelectedIndex in SfTabView](images/SelectedIndexTabView.png)
 
-## Get the selected tab item using IsSelected
+## Get the selected tab item using IsSelected property
 
-Indicates whether the tab item is active or not. This property can be used to get selected item of tab view as like below code snippet.
+The `IsSelected` property indicates whether the tab item is active. This property can be used, as shown in the code snippet below, to check and perform actions on the selected tab item.
 
 {% tabs %}
 
