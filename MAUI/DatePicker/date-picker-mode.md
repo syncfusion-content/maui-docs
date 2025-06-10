@@ -186,5 +186,3 @@ this.datePicker.PopupHeight = 400;
 {% endhighlight %} 
 
 {% endtabs %}
-
-    ![PopupSize in .NET MAUI Date Picker](images/date-picker-mode/maui-date-picker-popupsize.png)

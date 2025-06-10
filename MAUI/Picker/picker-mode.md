@@ -215,5 +215,3 @@ private void pickerButton_Clicked(object sender, System.EventArgs e)
 {% endhighlight %} 
 
 {% endtabs %}
-
-    ![PopupSize in .Net Maui Picker.](images/picker-mode/maui-picker-popupsize.png)

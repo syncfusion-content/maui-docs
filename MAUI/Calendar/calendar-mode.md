@@ -142,4 +142,3 @@ this.calendar.PopupHeight = 400;
 
 {% endtabs %}
 
-    ![PopupSize in .NET MAUI Calendar](images/calendar-mode/calendar_PopupSize_support.png)
