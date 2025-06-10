@@ -547,6 +547,39 @@ SfAutocomplete autocomplete = new SfAutocomplete
 
 ![.NET MAUI Autocomplete DropDown Stroke Thickness](Images/UICustomization/DropDownStrokeThickness.png)
 
+### Customize the visibility of DropDown Shadow
+
+The `IsDropDownShadowVisible` property is used to customize the visibility of the dropdown shadow.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfAutocomplete x:Name="autocomplete"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Enter Media"
+                        IsDropDownShadowVisible="False" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfAutocomplete autocomplete = new SfAutocomplete
+{
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+    Placeholder = "Enter Media",
+    IsDropDownShadowVisible = False
+};
+
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI Autocomplete DropDown shadow visibility is false](Images/UICustomization/DropDownStrokeThickness.png)
+
 ### Customize the DropDown Item Height
 
 The [DropDownItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownItemHeight) property is used to modify the height of the dropdown items.

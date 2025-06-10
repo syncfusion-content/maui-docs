@@ -616,6 +616,39 @@ SfComboBox comboBox = new SfComboBox()
 
 ![.NET MAUI ComboBox DropDown StrokeThickness](Images/UICustomization/DropDownStrokeThickness.png)
 
+### Customize the visibility of DropDown Shadow
+
+The `IsDropDownShadowVisible` property is used to customize the visibility of the dropdown shadow.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfComboBox x:Name="comboBox"
+                    ItemsSource="{Binding SocialMedias}"
+                    DisplayMemberPath="Name"
+                    TextMemberPath="Name"
+                    Placeholder="Enter Media"
+                    IsDropDownShadowVisible="False" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfComboBox comboBox = new SfComboBox() 
+{
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+    Placeholder = "Enter Media",
+    IsDropDownShadowVisible = False
+};
+
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI ComboBox DropDown shadow visibility is false](Images/UICustomization/DropDownStrokeThickness.png)
+
 ### Customize the DropDown Item Height
 
 The [DropDownItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownItemHeight) property is used to modify the height of the dropdown items.

@@ -298,6 +298,48 @@ The following gif image illustrates the result of the above code:
 
 ## Selection changed notification
 
+### Value change notification
+The [ValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ValueChanged) event is triggered when the value of the ComboBox changes. This can occur through user selection, programmatic assignment, or any other method affecting the selected value. The ValueChanged event provides the new value that has been assigned, allowing for immediate response to changes.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfComboBox x:Name="comboBox" 
+                    TextMemberPath="Name" 
+                    DisplayMemberPath="Name" 
+                    ItemsSource="{Binding SocialMedias}" 
+                    ValueChanged="OnValueChanged" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfComboBox comboBox = new SfComboBox
+{
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name"
+};
+comboBox.ValueChanged += OnValueChanged;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+The ValueChanged event can be handled as follows:
+
+{% tabs %}
+{% highlight C# %}
+
+private async void OnValueChanged(object sender, Syncfusion.Maui.Inputs.ValueChangedEventArgs e)
+{
+    await DisplayAlert("Alert", "Value has changed to: " + e.NewValue.ToString(), "Ok");
+}
+
+{% endhighlight %}
+
+{% endtabs %} 
+ 
 When an item is selected from the .NET MAUI drop-down list, the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionChanged) event is triggered. The SelectionChanged event contains the newly selected and previously selected items in the `AddedItems` and `RemovedItems` properties. The SelectionChanged contains the following properties:
 
  * AddedItems - Contains the item that were currently selected.
