@@ -123,7 +123,7 @@ this.Content = timePicker;
 
 ### Custom Header Appearance using Datatemplate
 
-You can customize the time picker header appearance by using the [Template]() property of the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html).
+You can customize the time picker header appearance by using the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_HeaderTemplate) property in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
 
 {% tabs %}
 
@@ -143,13 +143,13 @@ You can customize the time picker header appearance by using the [Template]() pr
 
 {% endtabs %}
 
-![Set header template in .NET MAUI Time picker.](maui-time-picker-set-header-template.png)
+![Set header template in .NET MAUI Time picker.](images/customizations/maui-time-picker-set-header-template.png)
 
 N> If a template is applied to the header in the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html), the remaining header properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_DividerColor) Property.
 
 ### Custom Header appearance using DataTemplateSelector
 
-You can customize the time picker header appearance by using the [Template]() property of the [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the time picker header. This lets you apply a custom data template to the header and customize its appearance based on specific conditions.
+You can customize the time picker header appearance by using the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_HeaderTemplate) property in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the time picker header. This lets you apply a custom data template to the header and customize its appearance based on specific conditions.
 
 {% tabs %}
 
@@ -193,6 +193,8 @@ public class TimeTemplateSelector : DataTemplateSelector
         return FutureTimeTemplate;
     }
 }
+
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -313,7 +315,7 @@ this.Content = timePicker;
 
 ### Custom Column Header Appearance using Datatemplate
 
-You can customize the time picker column header appearance by using the [Template]() property of the [TimePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html).
+You can customize the time picker column header appearance by using the [ColumnHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_ColumnHeaderTemplate) property in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
 
 {% tabs %}
 
@@ -340,13 +342,13 @@ You can customize the time picker column header appearance by using the [Templat
 
 {% endtabs %}
 
-![Set column header template in .NET MAUI Time picker.](maui-time-picker-column-header-template.png)
+![Set column header template in .NET MAUI Time picker.](images/customizations/maui-time-picker-column-header-template.png)
 
 N> If a template is applied to the column header in the [TimePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html), the remaining colummn header properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html#Syncfusion_Maui_Picker_TimePickerColumnHeaderView_DividerColor).
 
 ### Custom Column Header appearance using DataTemplateSelector
 
-You can customize the time picker column header appearance by using the [Template]() property of the [TimePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.TimePickerColumnHeaderView.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the time picker column header. This lets you select a different data template for each header and customize the appearance of a specific header based on certain conditions.
+You can customize the time picker column header appearance by using the [ColumnHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_ColumnHeaderTemplate) property in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the time picker column header. This lets you apply a custom data template to the column header and customize its appearance based on specific conditions.
 
 {% tabs %}
 
@@ -404,6 +406,8 @@ public class TimeTemplateSelector : DataTemplateSelector
         return FutureTimeTemplate;
     }
 }
+
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -522,8 +526,7 @@ this.Content = timePicker;
 
 ### Custom Footer Appearance using Datatemplate
 
-You can customize the time picker footer appearance by using the [Template]() property of the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html).
-
+You can customize the time picker footer appearance by using the [FooterTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_FooterTemplate) property in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
 {% tabs %}
 
 {% highlight xaml tabtitle="XAML" %}
@@ -547,13 +550,13 @@ You can customize the time picker footer appearance by using the [Template]() pr
 
 {% endtabs %}
 
-![Set footer template in .NET MAUI Time picker.](maui-time-picker-set-footer-template.png)
+![Set footer template in .NET MAUI Time picker.](images/customizations/maui-time-picker-set-footer-template.png)
 
 N> If a template is applied to the footer in the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html), the remaining footer properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_DividerColor) Property.
 
 ### Custom Footer appearance using DataTemplateSelector
 
-You can customize the time picker footer appearance by using the [Template]() property of the [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the time picker footer. This lets you apply a custom data template to the footer and customize its appearance based on specific conditions.
+You can customize the time picker footer appearance by using the [FooterTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_FooterTemplate) property in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the time picker footer. This lets you apply a custom data template to the footer and customize its appearance based on specific conditions.
 
 {% tabs %}
 
@@ -607,6 +610,8 @@ public class TimeTemplateSelector : DataTemplateSelector
         return FutureTimeTemplate;
     }
 }
+
+{% endhighlight %}
 
 {% endtabs %}
 
