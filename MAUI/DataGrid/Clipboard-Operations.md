@@ -2,7 +2,7 @@
 layout: post
 title: Clipboard Operations in .NET Maui DataGrid control | Syncfusion®
 description: Learn here all about Clipboard Operations support in Syncfusion® Maui DataGrid (SfDataGrid) control and more.
-platform: Maui
+platform: MAUI
 control: SfDataGrid
 documentation: ug
 keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui clipboard operations, maui maui clipboard operations
