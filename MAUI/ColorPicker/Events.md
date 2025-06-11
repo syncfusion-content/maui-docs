@@ -18,8 +18,10 @@ The `SfColorPicker` control provides three built-in events to handle color selec
 
 ## ColorChanging event
 
-The `ColorChanging` event is triggered while the color is actively being changed. It can cancel the color selection using `ColorChangingEventArgs`, which contains the following property:
+The `ColorChanging` event is triggered while the color is being changed. The event arguments are of type `ColorChangingEventArgs` and provide the following properties:
 
+* `CurrentColor:` Gets the current color value before the change.
+* `NewColor:` Gets the newly selected color.
 * `Cancel:` Determines whether the color selection should be canceled.
 
  {% tabs %}
@@ -44,9 +46,15 @@ private void OnColorChanging(object sender, ColorChangingEventArgs e)
 
 ## ColorChanged event
 
-The `ColorChanged` event is triggered when the user selects a color.  The `ColorChangedEventArgs` contains the following property:
+The `ColorChanged` event is triggered when the user selects a color. Its behavior depends on the `IsActionButtonsVisible` property:
 
-* `NewColor:` The newly selected color.
+* If `IsActionButtonsVisible` is set to false, the event is triggered immediately while selecting a color.
+* If `IsActionButtonsVisible` is set to true, the event is triggered only when the selected color is applied.
+
+The event arguments are of type `ColorChangedEventArgs` and include the following properties:
+
+* OldColor: The previously selected color.
+* NewColor: The newly selected color.
 
 {% tabs %}
 
@@ -79,9 +87,9 @@ private void OnColorChanged(object sender, ColorChangedEventArgs e)
 
 ## ColorSelected event
 
-The `ColorSelected` event is triggered when the user selects a color by clicking or tapping on a predefined color or palette cell. The `ColorSelectedEventArgs` contains the following property:
+The `ColorSelected` event is triggered when the user selects a color by clicking or tapping on the selected color view. The event arguments are of type `ColorSelectedEventArgs` and include the following property:
 
-* `SelectedColor:` Current color selected by the user.
+* SelectedColor: The color currently selected by the user.
 
 {% tabs %}
 
