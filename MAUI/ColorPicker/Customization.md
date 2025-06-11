@@ -238,3 +238,80 @@ SfColorPicker colorPicker = new SfColorPicker()
 {% endtabs %}
 
 ![Palette row spacing](Images/Customization/PaletteSpacing.png)
+
+## Popup customization
+
+### IsOpen
+
+The Color Picker drop-down panel expands by default when the page loads if the IsOpen property is set to `True`. By default, this property is set to `False`.
+
+{% tabs %}
+{% highlight xaml %}
+
+<inputs:SfColorPicker x:Name="colorPicker" IsOpen="True"/>
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfColorPicker colorPicker = new SfColorPicker()
+{
+    IsOpen = true
+};
+
+{% endhighlight %}
+{% endtabs %}
+
+### Popup background
+
+The `PopupBackground` property sets the background color of the popup panel, which is the area that displays the color palette when the picker is expanded.
+
+{% tabs %}
+{% highlight xaml %}
+
+<inputs:SfColorPicker x:Name="colorPicker" PopupBackground="Thistle"/>
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfColorPicker colorPicker = new SfColorPicker()
+{
+    PopupBackground = Colors.Thistle
+};
+
+{% endhighlight %}
+{% endtabs %}
+
+![Popup background](Images/Customization/PopupBackground.png)
+
+### Popup relative position
+
+The `PopupRelativePosition` property determines the position of the color palette popup in eight different ways:
+
+* AlignBottom
+* AlignBottomLeft
+* AlignBottomRight
+* AlignToLeftOf
+* AlignTop
+* AlignTopLeft
+* AlignTopRight
+* AlignTopRightOf
+
+The default position is `AlignBottomLeft`.
+
+{% tabs %}
+{% highlight xaml %}
+
+<inputs:SfColorPicker x:Name="colorPicker" PopupRelativePosition="AlignTop"/>
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfColorPicker colorPicker = new SfColorPicker()
+{
+    PopupRelativePosition = PopupRelativePosition.AlignTop
+};
+
+{% endhighlight %}
+{% endtabs %}
+
+![Align top](Images/Customization/AlignTop.png)

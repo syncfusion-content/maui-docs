@@ -58,16 +58,16 @@ To customize the appearance of the selected color, use the `SelectedColorTemplat
 
 {% highlight xaml %}
 
-<editors:SfColorPicker x:Name="colorPicker">
-    <editors:SfColorPicker.SelectedColorTemplate>
+<inputs:SfColorPicker x:Name="colorPicker">
+    <inputs:SfColorPicker.SelectedColorTemplate>
         <DataTemplate>
             <VerticalStackLayout WidthRequest="70" Background="White">
                 <Label Text="A" HorizontalOptions="Center" TextColor="Black"/>
                 <BoxView HeightRequest="5" WidthRequest="30" Background="{Binding Source={x:Reference colorPicker},Path=SelectedColor}" />
             </VerticalStackLayout>
         </DataTemplate>
-    </editors:SfColorPicker.SelectedColorTemplate>
-</editors:SfColorPicker>
+    </inputs:SfColorPicker.SelectedColorTemplate>
+</inputs:SfColorPicker>
 
 {% endhighlight %}
 

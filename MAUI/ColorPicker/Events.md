@@ -18,24 +18,19 @@ The `SfColorPicker` control provides three built-in events to handle color selec
 
 ## ColorChanging event
 
-The `ColorChanging` event allows you to intercept and cancel a color selection before it is applied.
+The `ColorChanging` event allows you to cancel the color selection before it is applied.
 
  {% tabs %}
 
 {% highlight xaml %}
 
-<Grid ColumnDefinitions="*,Auto">
-    
-    <inputs:SfColorPicker x:Name="colorPicker" Grid.Column="0"
-                           ColorChanging="OnColorChanging"/>
-
-</Grid>
+<inputs:SfColorPicker x:Name="colorPicker" ColorChanging="OnColorChanging"/>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-private void ColorPicker_ColorChanging(object sender, ColorChangingEventArgs e)
+private void OnColorChanging(object sender, ColorChangingEventArgs e)
 {
     // To cancel the color picker change.
     e.Cancel = true;
@@ -47,7 +42,7 @@ private void ColorPicker_ColorChanging(object sender, ColorChangingEventArgs e)
 
 ## ColorChanged event
 
-The `ColorChanged` event is triggered when the user has completed their color selection.
+The `ColorChanged` event is triggered when the user selects a color.
 
 {% tabs %}
 
@@ -59,7 +54,6 @@ The `ColorChanged` event is triggered when the user has completed their color se
                            ColorChanged="OnColorChanged"/>
 
     <Label x:Name="label" Grid.Column="1" Text="Selected Color" 
- 
            HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
            TextColor="Black" BackgroundColor="LightGray"/>
 
