@@ -114,7 +114,7 @@ void AddCustomStampAnnotation()
 
 ### Add view as a custom stamp without using toolbar
 
-You can create a custom stamp from view and add it to a PDF document.  Adding a view (UI) to PDF pages programmatically in a .NET MAUI PDF Viewer as a custom stamp. It allows programmers to add interactive UI elements directly into PDF pages. The following example explains how to create a custom stamp from a button view in the application and add it to a PDF document using the [AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
+You can create a custom stamp view from any view such as Button, Entry, Label, Image and more anywhere in the pages of the PDF Viewer as custom stamp annotation and add it to a PDF document. The following example explains how to create a custom stamp from a button view in the application and add it to a PDF document using the [AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
 
 {% tabs %}
 {% highlight C# %}
@@ -125,14 +125,14 @@ StampAnnotation CreateCustomStamp()
     // Define the bounds for the stamp to be placed in the PDF page.
     RectF bounds = new RectF(100, 100, 200, 100);
 
-    // Create view from the button to be used as stamp.
+    // Create a button to be used as the visual content of the stamp.
     var button = new Button
    {
     Text = "Click Me",
     BackgroundColor = Colors.Blue,
    };
 
-    // Create a custom stamp annotation using the view.
+    // Create a custom stamp annotation using the button view.
     StampAnnotation customStamp = new StampAnnotation(button,pageNumber,bounds);
 
     // Return the stamp annotation.
@@ -148,14 +148,10 @@ void AddCustomStampAnnotation()
 {% endhighlight %}
 {% endtabs %}
 
-N> The following capabilities are supported when adding a view as a custom stamp in a .NET MAUI PDF Viewer using the StampAnnotation API:
-N>Any kind of view can be added as a custom stamp Standard MAUI control such as Grid, ComboBox, Label, Button, 
-N>Full interactive control of the view - Stamps can be moved, resized, and deleted by the user or programmatically.
-N>Opacity customization- You can adjust the transparency using the Opacity property.
-
 ### Limitations
 
- The view will be converted as an image in the saved PDF document. The view becomes read only once saved, and its contents cannot be edited after saving the document.
+ The view will be converted as an image in the saved PDF document. The view becomes read only once saved, and its contents cannot be edited after saving the document. 
+ Interactions within the view such as button clicks or text entry will not function inside the PDF Viewer.
 
 
 ## Edit the selected stamp
