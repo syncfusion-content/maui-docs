@@ -138,7 +138,6 @@ StampAnnotation CreateCustomStamp()
     // Return the stamp annotation.
     return customStamp;
 }
-
 void AddCustomStampAnnotation()
 {
     StampAnnotation stampAnnotation = CreateCustomStamp();
