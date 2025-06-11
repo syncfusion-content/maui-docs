@@ -214,8 +214,8 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
     </dataForm:SfDataForm>
 </ContentPage>
 
-{% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="2" %}
 
 this.dataForm.AutoGenerateItems = false;
 this.TextItem.ShowErrorLabel = false;
@@ -241,9 +241,6 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
 </ContentPage>
 
 {% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 this.dataForm.AutoGenerateItems = false;
