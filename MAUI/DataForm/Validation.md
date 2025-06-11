@@ -240,6 +240,9 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
     </dataForm:SfDataForm>
 </ContentPage>
 
+{% endhighlight %}
+{% endtabs %}
+
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 

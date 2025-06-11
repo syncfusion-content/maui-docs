@@ -327,7 +327,7 @@ The No events text style can be customized by using the [SchedulerTextStyle](htt
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# hl_lines="10" %}
 
  // Customizing the No events text style in agenda view
  var textStyle = new SchedulerTextStyle()
