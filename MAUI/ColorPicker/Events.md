@@ -18,7 +18,9 @@ The `SfColorPicker` control provides three built-in events to handle color selec
 
 ## ColorChanging event
 
-The `ColorChanging` event allows you to cancel the color selection before it is applied.
+The `ColorChanging` event is triggered while the color is actively being changed. It can cancel the color selection using `ColorChangingEventArgs`, which contains the following property:
+
+* `Cancel:` Determines whether the color selection should be canceled.
 
  {% tabs %}
 
@@ -42,7 +44,9 @@ private void OnColorChanging(object sender, ColorChangingEventArgs e)
 
 ## ColorChanged event
 
-The `ColorChanged` event is triggered when the user selects a color.
+The `ColorChanged` event is triggered when the user selects a color.  The `ColorChangedEventArgs` contains the following property:
+
+* `NewColor:` The newly selected color.
 
 {% tabs %}
 
@@ -75,7 +79,9 @@ private void OnColorChanged(object sender, ColorChangedEventArgs e)
 
 ## ColorSelected event
 
-The `ColorSelected` event is triggered when the user selects a color by clicking or tapping on a predefined color or palette cell.
+The `ColorSelected` event is triggered when the user selects a color by clicking or tapping on a predefined color or palette cell. The `ColorSelectedEventArgs` contains the following property:
+
+* `SelectedColor:` Current color selected by the user.
 
 {% tabs %}
 

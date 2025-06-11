@@ -243,7 +243,7 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 ### IsOpen
 
-The Color Picker drop-down panel expands by default when the page loads if the IsOpen property is set to `True`. By default, this property is set to `False`.
+The Color Picker drop-down opens programmatically when the IsOpen property is set to `True`. By default, this property is set to `False`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -263,7 +263,7 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 ### Popup background
 
-The `PopupBackground` property sets the background color of the popup panel, which is the area that displays the color palette when the picker is expanded.
+The `PopupBackground` property sets the background color of the popup panel.
 
 {% tabs %}
 {% highlight xaml %}
@@ -285,7 +285,7 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 ### Popup relative position
 
-The `PopupRelativePosition` property determines the position of the color palette popup in eight different ways:
+The `PopupRelativePosition` property determines the position of the color palette popup in the Color Picker control using eight different ways:
 
 * AlignBottom
 * AlignBottomLeft
@@ -296,7 +296,7 @@ The `PopupRelativePosition` property determines the position of the color palett
 * AlignTopRight
 * AlignTopRightOf
 
-The default position is `AlignBottomLeft`.
+The default position is `AlignBottom`.
 
 {% tabs %}
 {% highlight xaml %}
