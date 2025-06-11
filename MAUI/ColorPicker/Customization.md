@@ -138,7 +138,7 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 ## Customize action buttons
 
-You can customize the backgroun color for the action buttons by specifying a suitable color for the `ApplyButtonBackground` and `CancelButtonBackground` properties.
+You can customize the background color for the action buttons by specifying a suitable color for the `ApplyButtonBackground` and `CancelButtonBackground` properties.
 
 {% tabs %}
 
