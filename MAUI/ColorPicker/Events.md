@@ -37,6 +37,7 @@ The `ColorChanging` event allows you to intercept and cancel a color selection b
 
 private void ColorPicker_ColorChanging(object sender, ColorChangingEventArgs e)
 {
+    // To cancel the color picker change.
     e.Cancel = true;
 }
 
