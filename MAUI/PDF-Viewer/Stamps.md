@@ -114,7 +114,7 @@ void AddCustomStampAnnotation()
 
 ### Add view as a custom stamp without using toolbar
 
-You can create a custom stamp from any view — such as Button, Entry, Label, Image, or other views — and place it on the pages of the PDF Viewer. The following example explains how to create a custom stamp from a button view in the application and add it to a PDF document using the [AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
+You can create a custom stamp from any view, such as Button, Entry, Label, Image, or any other view, and add it to a PDF document. The following example explains how to create a custom stamp from a button view in the application and add it to a PDF document using the [AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
 
 {% tabs %}
 {% highlight C# %}
