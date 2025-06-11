@@ -10,7 +10,9 @@ keywords : .net maui color picker, maui color picker, .net maui color picker con
 
 # Display View Customization
 
-## Selected color icon
+## Selected color customization
+
+### Selected color icon
 
 You can customize the selected color icon in the Color Picker using the `SelectedColorIcon` property.
 
@@ -18,9 +20,9 @@ You can customize the selected color icon in the Color Picker using the `Selecte
 
 {% highlight xaml %}
 
-<inputs:SfColorPicker x:Name="colorPicker" ColorChanging="colorPicker_ColorChanging">
+<inputs:SfColorPicker x:Name="colorPicker">
     <inputs:SfColorPicker.SelectedColorIcon>
-        <FontImageSource FontFamily="MauiMaterialAssets" Glyph="&#xe748;"  />
+        <FontImageSource FontFamily="MauiMaterialAssets" Glyph="&#xe760;" Color="{Binding Source={x:Reference colorPicker},Path=SelectedColor}"/>
     </inputs:SfColorPicker.SelectedColorIcon>
 </inputs:SfColorPicker>
 
@@ -28,13 +30,19 @@ You can customize the selected color icon in the Color Picker using the `Selecte
 
 {% highlight c# %}
 
-private void colorPicker_ColorChanging(object sender, ColorChangingEventArgs e)
+var fontIcon = new FontImageSource
 {
-    if (colorPicker.SelectedColorIcon is FontImageSource fontIcon)
-    {
-        fontIcon.Color = e.NewColor;
-    }
-}
+    FontFamily = "MauiMaterialAssets",
+    Glyph = "\ue760", 
+    Color = colorPicker.SelectedColor 
+};
+
+colorPicker.SelectedColorIcon = fontIcon;
+
+colorPicker.ColorChanged += (s, e) =>
+{
+    fontIcon.Color = e.NewColor;
+};
 
 {% endhighlight %}
 
@@ -42,7 +50,7 @@ private void colorPicker_ColorChanging(object sender, ColorChangingEventArgs e)
 
 ![SelectedColorIcon](Images/DisplayView/Icon.png)
 
-## Selected color template
+### Selected color template
 
 To customize the appearance of the selected color, use the `SelectedColorTemplate` property to define a custom template.
 

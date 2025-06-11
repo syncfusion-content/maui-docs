@@ -27,12 +27,7 @@ The `ColorChanging` event is triggered in real-time as the user interacts with t
 <Grid ColumnDefinitions="*,Auto">
     
     <inputs:SfColorPicker x:Name="colorPicker" Grid.Column="0"
-                           ColorChanging="ColorPicker_ColorChanging"/>
-
-    <Label x:Name="colorPreviewLabel" Grid.Column="1" Text="Selected Color" 
-           FontAttributes="Bold" FontSize="16" HeightRequest="40" WidthRequest="200" 
-           HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
-           TextColor="Black" BackgroundColor="LightGray"/>
+                           ColorChanging="OnColorChanging"/>
 
 </Grid>
 
@@ -42,8 +37,7 @@ The `ColorChanging` event is triggered in real-time as the user interacts with t
 
 private void ColorPicker_ColorChanging(object sender, ColorChangingEventArgs e)
 {
-    colorPreviewLabel.BackgroundColor = e.NewColor;
-    colorPreviewLabel.Text = e.NewColor.ToHex();
+    e.Cancel = true;
 }
 
 {% endhighlight %}
@@ -52,7 +46,7 @@ private void ColorPicker_ColorChanging(object sender, ColorChangingEventArgs e)
 
 ## ColorChanged event
 
-The `ColorChanged` event is triggered only once, after the user has completed their color selection.
+The `ColorChanged` event is triggered when the user has completed their color selection.
 
 {% tabs %}
 
@@ -61,10 +55,10 @@ The `ColorChanged` event is triggered only once, after the user has completed th
 <Grid ColumnDefinitions="*,Auto">
     
     <inputs:SfColorPicker x:Name="colorPicker" Grid.Column="0"
-                           ColorChanged="ColorPicker_ColorChanged"/>
+                           ColorChanged="OnColorChanged"/>
 
-    <Label x:Name="selectedColor" Grid.Column="1" Text="Selected Color" 
-           FontAttributes="Bold" FontSize="16" HeightRequest="40" WidthRequest="200" 
+    <Label x:Name="label" Grid.Column="1" Text="Selected Color" 
+ 
            HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
            TextColor="Black" BackgroundColor="LightGray"/>
 
@@ -74,10 +68,10 @@ The `ColorChanged` event is triggered only once, after the user has completed th
 
 {% highlight c# %}
 
-private void ColorPicker_ColorChanged(object sender, ColorChangedEventArgs e)
+private void OnColorChanged(object sender, ColorChangedEventArgs e)
 {
-    selectedColor.BackgroundColor = e.NewColor;
-    selectedColor.Text = e.NewColor.ToHex();
+    label.BackgroundColor = e.NewColor;
+    label.Text = e.NewColor.ToHex();
 }
 
 {% endhighlight %}
@@ -86,7 +80,7 @@ private void ColorPicker_ColorChanged(object sender, ColorChangedEventArgs e)
 
 ## ColorSelected event
 
-The `ColorSelected` event is triggered when the user confirms a color selection, typically by clicking or tapping a predefined color or palette cell.
+The `ColorSelected` event is triggered when the user selects a color by clicking or tapping on a predefined color or palette cell.
 
 {% tabs %}
 
@@ -95,10 +89,9 @@ The `ColorSelected` event is triggered when the user confirms a color selection,
 <Grid ColumnDefinitions="*,Auto">
     
     <inputs:SfColorPicker x:Name="colorPicker" Grid.Column="0"
-                           ColorSelected="ColorPicker_ColorSelected"/>
+                           ColorSelected="OnColorSelected"/>
 
-    <Label x:Name="selectedColor" Grid.Column="1" Text="Selected Color" 
-           FontAttributes="Bold" FontSize="16" HeightRequest="40" WidthRequest="200" 
+    <Label x:Name="label" Grid.Column="1" Text="Selected Color"  
            HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
            TextColor="Black" BackgroundColor="LightGray"/>
 
@@ -108,10 +101,10 @@ The `ColorSelected` event is triggered when the user confirms a color selection,
 
 {% highlight c# %}
 
-private void ColorPicker_ColorSelected(object sender, ColorSelectedEventArgs e)
+private void OnColorSelected(object sender, ColorSelectedEventArgs e)
 {
-    selectedColor.BackgroundColor = e.SelectedColor;
-    selectedColor.Text = e.SelectedColor.ToHex();
+    label.BackgroundColor = e.SelectedColor;
+    label.Text = e.SelectedColor.ToHex();
 }
 
 {% endhighlight %}
