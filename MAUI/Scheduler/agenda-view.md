@@ -309,7 +309,7 @@ this.Scheduler.AppointmentTextStyle = appointmentTextStyle;
 ![appointment-text-appearence-customization-in-maui-scheduler](images/agenda-view/appointment-text-appearence-customization-in-maui-scheduler.png)
 
 ## No Events text color customization
-The No events text style can be customized by using the [SchedulerTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTextStyle.html) property of [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
+The No events text style can be customized by using the NoEventsTextStyle property of [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}
 {% highlight XAML hl_lines="6 7 8" %}
