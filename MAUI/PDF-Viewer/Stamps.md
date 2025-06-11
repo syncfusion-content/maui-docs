@@ -153,7 +153,6 @@ void AddCustomStampAnnotation()
  * The view will be converted as an image in the saved PDF document. The view becomes read only once saved, and its contents cannot be edited after saving the document. 
  * Interactions within the view such as button clicks or text entry will not function inside the PDF Viewer.
 
-
 ## Edit the selected stamp
 
 You can edit the properties of the selected stamp annotation programmatically by accessing the selected annotation instance. The selected annotation instance may be obtained from the [AnnotationSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSelected) event. 
