@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customization in .NET MAUI DockLayout Control | Syncfusion
-description: Learn about customization options in the Syncfusion .NET MAUI DockLayout (SfDockLayout) control, including spacing and child expansion behavior.
+title: Customization in .NET MAUI DockLayout Control | Syncfusion®
+description: Learn about customization options in the Syncfusion® .NET MAUI DockLayout (SfDockLayout) control, including spacing and child expansion behavior.
 platform: MAUI
 control: SfDockLayout
 documentation: ug
@@ -60,7 +60,7 @@ SfDockLayout dockLayout = new SfDockLayout()
 # Methods in .NET MAUI DockLayout Control
 
 ## GetDock
-The [GetDock]() method retrieves the docking position for a specified view within the layout.
+The `GetDock` method retrieves the docking position for a specified view within the layout.
 
 `GetDock(BindableObject view)`
 
@@ -78,7 +78,7 @@ Content = dockLayout;
 {% endhighlight %}
 
 ## SetDock
-The [SetDock]() method assigns a specific docking position to a child element within the layout.
+The `SetDock` method assigns a specific docking position to a child element within the layout.
 
 `SetDock(BindableObject view, Dock position)`
 
