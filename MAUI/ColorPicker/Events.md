@@ -18,25 +18,25 @@ The `SfColorPicker` control provides three built-in events to handle color selec
 
 ## ColorChanging event
 
-The `ColorChanging` event allows you to intercept and cancel a color selection before it is applied.
+The `ColorChanging` event is triggered while the color is being changed. The event arguments are of type `ColorChangingEventArgs` and provide the following properties:
+
+* `CurrentColor:` Gets the current color value before the change.
+* `NewColor:` Gets the newly selected color.
+* `Cancel:` Determines whether the color selection should be canceled.
 
  {% tabs %}
 
 {% highlight xaml %}
 
-<Grid ColumnDefinitions="*,Auto">
-    
-    <inputs:SfColorPicker x:Name="colorPicker" Grid.Column="0"
-                           ColorChanging="OnColorChanging"/>
-
-</Grid>
+<inputs:SfColorPicker x:Name="colorPicker" ColorChanging="OnColorChanging"/>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-private void ColorPicker_ColorChanging(object sender, ColorChangingEventArgs e)
+private void OnColorChanging(object sender, ColorChangingEventArgs e)
 {
+    // To cancel the color picker change.
     e.Cancel = true;
 }
 
@@ -46,7 +46,15 @@ private void ColorPicker_ColorChanging(object sender, ColorChangingEventArgs e)
 
 ## ColorChanged event
 
-The `ColorChanged` event is triggered when the user has completed their color selection.
+The `ColorChanged` event is triggered when the user selects a color. Its behavior depends on the `IsActionButtonsVisible` property:
+
+* If `IsActionButtonsVisible` is set to false, the event is triggered immediately while selecting a color.
+* If `IsActionButtonsVisible` is set to true, the event is triggered only when the selected color is applied.
+
+The event arguments are of type `ColorChangedEventArgs` and include the following properties:
+
+* OldColor: The previously selected color.
+* NewColor: The newly selected color.
 
 {% tabs %}
 
@@ -58,7 +66,6 @@ The `ColorChanged` event is triggered when the user has completed their color se
                            ColorChanged="OnColorChanged"/>
 
     <Label x:Name="label" Grid.Column="1" Text="Selected Color" 
- 
            HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
            TextColor="Black" BackgroundColor="LightGray"/>
 
@@ -80,7 +87,9 @@ private void OnColorChanged(object sender, ColorChangedEventArgs e)
 
 ## ColorSelected event
 
-The `ColorSelected` event is triggered when the user selects a color by clicking or tapping on a predefined color or palette cell.
+The `ColorSelected` event is triggered when the user selects a color by clicking or tapping on the selected color view. The event arguments are of type `ColorSelectedEventArgs` and include the following property:
+
+* SelectedColor: The color currently selected by the user.
 
 {% tabs %}
 

@@ -138,7 +138,7 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 ## Customize action buttons
 
-You can customize the backgroun color for the action buttons by specifying a suitable color for the `ApplyButtonBackground` and `CancelButtonBackground` properties.
+You can customize the background color for the action buttons by specifying a suitable color for the `ApplyButtonBackground` and `CancelButtonBackground` properties.
 
 {% tabs %}
 
@@ -238,3 +238,80 @@ SfColorPicker colorPicker = new SfColorPicker()
 {% endtabs %}
 
 ![Palette row spacing](Images/Customization/PaletteSpacing.png)
+
+## Popup customization
+
+### IsOpen
+
+The `IsOpen` property in the Color Picker control allows you to programmatically open the popup by setting it to `True.` By default, this property is set to `False.`
+
+{% tabs %}
+{% highlight xaml %}
+
+<inputs:SfColorPicker x:Name="colorPicker" IsOpen="True"/>
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfColorPicker colorPicker = new SfColorPicker()
+{
+    IsOpen = true
+};
+
+{% endhighlight %}
+{% endtabs %}
+
+### Popup background
+
+The `PopupBackground` property specifies the background color of the popup panel in the Color Picker control.
+
+{% tabs %}
+{% highlight xaml %}
+
+<inputs:SfColorPicker x:Name="colorPicker" PopupBackground="Thistle"/>
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfColorPicker colorPicker = new SfColorPicker()
+{
+    PopupBackground = Colors.Thistle
+};
+
+{% endhighlight %}
+{% endtabs %}
+
+![Popup background](Images/Customization/PopupBackground.png)
+
+### Popup relative position
+
+The `PopupRelativePosition` property specifies the placement of the popup in the Color Picker control. It supports the following eight positioning options:
+
+* AlignBottom
+* AlignBottomLeft
+* AlignBottomRight
+* AlignToLeftOf
+* AlignTop
+* AlignTopLeft
+* AlignTopRight
+* AlignTopRightOf
+
+The default position is `AlignBottom`.
+
+{% tabs %}
+{% highlight xaml %}
+
+<inputs:SfColorPicker x:Name="colorPicker" PopupRelativePosition="AlignTop"/>
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfColorPicker colorPicker = new SfColorPicker()
+{
+    PopupRelativePosition = PopupRelativePosition.AlignTop
+};
+
+{% endhighlight %}
+{% endtabs %}
+
+![Align top](Images/Customization/AlignTop.png)

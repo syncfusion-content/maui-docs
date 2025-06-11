@@ -61,9 +61,10 @@ To customize the appearance of the selected color, use the `SelectedColorTemplat
 <inputs:SfColorPicker x:Name="colorPicker">
     <inputs:SfColorPicker.SelectedColorTemplate>
         <DataTemplate>
-            <Border BackgroundColor="{Binding SelectedColor}">
-            <Label Text="Looks Good!" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-            </Border>
+            <VerticalStackLayout WidthRequest="70" Background="White">
+                <Label Text="A" HorizontalOptions="Center" TextColor="Black"/>
+                <BoxView HeightRequest="5" WidthRequest="30" Background="{Binding Source={x:Reference colorPicker},Path=SelectedColor}" />
+            </VerticalStackLayout>
         </DataTemplate>
     </inputs:SfColorPicker.SelectedColorTemplate>
 </inputs:SfColorPicker>
@@ -74,20 +75,38 @@ To customize the appearance of the selected color, use the `SelectedColorTemplat
 
 colorPicker.SelectedColorTemplate = new DataTemplate(() =>
 {
-    var border = new Border();
-    border.SetBinding(Border.BackgroundColorProperty, "SelectedColor");
-
     var label = new Label
     {
-        Text = "Looks Good!",
-        FontAttributes = FontAttributes.Bold,
-        HorizontalTextAlignment = TextAlignment.Center,
-        VerticalTextAlignment = TextAlignment.Center
+        Text = "A",
+        HorizontalOptions = LayoutOptions.Center,
+        TextColor = Colors.Black
     };
 
-    border.Content = label;
-    return border;
+    // Create the box view and bind its Background to colorPicker.SelectedColor
+    var boxView = new BoxView
+    {
+        HeightRequest = 5,
+        WidthRequest = 30
+    };
+
+    boxView.SetBinding(BoxView.BackgroundProperty, new Binding
+    {
+        Source = colorPicker,
+        Path = "SelectedColor",
+        Mode = BindingMode.OneWay
+    });
+
+    // Create the layout
+    var stackLayout = new VerticalStackLayout
+    {
+        WidthRequest = 70,
+        BackgroundColor = Colors.White,
+        Children = { label, boxView }
+    };
+
+    return stackLayout;
 });
+
 
 Content = colorPicker;    
 
@@ -108,7 +127,7 @@ The drop-down icon of the Color Picker can be customized using the `DropDownButt
 <inputs:SfColorPicker x:Name="colorPicker">
     <inputs:SfColorPicker.DropDownButtonTemplate>
         <DataTemplate>
-            <Label Text="&#xe710;" FontFamily="MauiMaterialAssets" FontSize="14" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+            <Label Text="&#xe705;" FontFamily="MauiMaterialAssets" FontSize="14" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
         </DataTemplate>
     </inputs:SfColorPicker.DropDownButtonTemplate>
 </inputs:SfColorPicker>
@@ -121,7 +140,7 @@ var dropDownTemplate = new DataTemplate(() =>
 {
     return new Label
     {
-        Text = "\ue710", 
+        Text = "\ue705", 
         FontFamily = "MauiMaterialAssets",
         TextColor = Colors.Black,
         FontSize = 14,
