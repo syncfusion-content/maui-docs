@@ -126,7 +126,7 @@ You can customize the picker header appearance by using the [HeaderTemplate](htt
 
 {% highlight xaml tabtitle="XAML" %}
 
-<Picker:SfPicker x:Name="picker" >
+<picker:SfPicker x:Name="picker" >
     <picker:SfPicker.HeaderTemplate>
         <DataTemplate>
             <Grid BackgroundColor="#BB9AB1">
@@ -134,7 +134,7 @@ You can customize the picker header appearance by using the [HeaderTemplate](htt
             </Grid>
         </DataTemplate>
     </picker:SfPicker.HeaderTemplate>
-</Picker:SfPicker>
+</picker:SfPicker>
 
 {% endhighlight %}
 
@@ -335,7 +335,7 @@ You can customize the picker footer appearance by using the [FooterTemplate](htt
 
 {% highlight xaml tabtitle="XAML" %}
 
-<Picker:SfPicker x:Name="picker" >
+<picker:SfPicker x:Name="picker" >
     <picker:SfPicker.FooterTemplate>
         <DataTemplate>
             <Grid BackgroundColor="#BB9AB1">
@@ -348,7 +348,7 @@ You can customize the picker footer appearance by using the [FooterTemplate](htt
             </Grid>
         </DataTemplate>
     </picker:SfPicker.FooterTemplate>
-</Picker:SfPicker>
+</picker:SfPicker>
 
 {% endhighlight %}
 
