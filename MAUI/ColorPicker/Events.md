@@ -10,7 +10,7 @@ keywords : .net maui color picker, maui color picker, .net maui color picker con
 
 # Events in .NET MAUI Color Picker (SfColorPicker)
 
-There are three built-in events in the `SfColorPicker` control, namely:
+The `SfColorPicker` control provides three built-in events to handle color selection changes:
 
 * ColorChanging
 * ColorChanged
@@ -18,7 +18,7 @@ There are three built-in events in the `SfColorPicker` control, namely:
 
 ## ColorChanging event
 
-The `ColorChanging` event activates in real-time as the user drags or modifies the color selector within the picker. This allows you to see the selected color instantly before it is finalized.
+The `ColorChanging` event is triggered in real-time as the user interacts with the color selector. It allows you to preview color changes immediately while the user is still dragging or adjusting the color.
 
  {% tabs %}
 
@@ -26,7 +26,7 @@ The `ColorChanging` event activates in real-time as the user drags or modifies t
 
 <Grid ColumnDefinitions="*,Auto">
     
-    <editors:SfColorPicker x:Name="colorPicker" Grid.Column="0"
+    <inputs:SfColorPicker x:Name="colorPicker" Grid.Column="0"
                            ColorChanging="ColorPicker_ColorChanging"/>
 
     <Label x:Name="colorPreviewLabel" Grid.Column="1" Text="Selected Color" 
@@ -52,7 +52,7 @@ private void ColorPicker_ColorChanging(object sender, ColorChangingEventArgs e)
 
 ## ColorChanged event
 
-The `ColorChanged` event is activated only once, after the user has completed their color selection, such as when they release the selector or finalize the change.
+The `ColorChanged` event is triggered only once, after the user has completed their color selection.
 
 {% tabs %}
 
@@ -60,7 +60,7 @@ The `ColorChanged` event is activated only once, after the user has completed th
 
 <Grid ColumnDefinitions="*,Auto">
     
-    <editors:SfColorPicker x:Name="colorPicker" Grid.Column="0"
+    <inputs:SfColorPicker x:Name="colorPicker" Grid.Column="0"
                            ColorChanged="ColorPicker_ColorChanged"/>
 
     <Label x:Name="selectedColor" Grid.Column="1" Text="Selected Color" 
@@ -78,6 +78,40 @@ private void ColorPicker_ColorChanged(object sender, ColorChangedEventArgs e)
 {
     selectedColor.BackgroundColor = e.NewColor;
     selectedColor.Text = e.NewColor.ToHex();
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## ColorSelected event
+
+The `ColorSelected` event is triggered when the user confirms a color selection, typically by clicking or tapping a predefined color or palette cell.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<Grid ColumnDefinitions="*,Auto">
+    
+    <inputs:SfColorPicker x:Name="colorPicker" Grid.Column="0"
+                           ColorSelected="ColorPicker_ColorSelected"/>
+
+    <Label x:Name="selectedColor" Grid.Column="1" Text="Selected Color" 
+           FontAttributes="Bold" FontSize="16" HeightRequest="40" WidthRequest="200" 
+           HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+           TextColor="Black" BackgroundColor="LightGray"/>
+
+</Grid>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+private void ColorPicker_ColorSelected(object sender, ColorSelectedEventArgs e)
+{
+    selectedColor.BackgroundColor = e.SelectedColor;
+    selectedColor.Text = e.SelectedColor.ToHex();
 }
 
 {% endhighlight %}
