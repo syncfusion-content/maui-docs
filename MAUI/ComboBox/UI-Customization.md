@@ -616,7 +616,7 @@ SfComboBox comboBox = new SfComboBox()
 
 ![.NET MAUI ComboBox DropDown StrokeThickness](Images/UICustomization/DropDownStrokeThickness.png)
 
-### Customize the visibility of DropDown Shadow
+### Customize the visibility of Dropdown Shadow
 
 The `IsDropDownShadowVisible` property is used to customize the visibility of the dropdown shadow.
 
@@ -647,7 +647,7 @@ SfComboBox comboBox = new SfComboBox()
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI ComboBox DropDown shadow visibility is false](Images/UICustomization/DropDownStrokeThickness.png)
+![.NET MAUI ComboBox Dropdown shadow visibility is false](Images/UICustomization/DropdownShadowVisible.png)
 
 ### Customize the DropDown Item Height
 

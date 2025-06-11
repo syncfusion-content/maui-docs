@@ -189,7 +189,7 @@ sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Both;
 {% endhighlight %}
 {% endtabs %}
 
-![UpDown Order is UpThenDown in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonAlignmentLeft.png)
+![UpDown Order is Up then down in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonOrderUpThenDown.png)
 
 ### UpDown button order: DownThenUP
 
@@ -216,7 +216,7 @@ sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Both;
 {% endhighlight %}
 {% endtabs %}
 
-![UpDown order is DownThenUp in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonAlignmentBoth.png)
+![UpDown order is DownThenUp in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonOrderDownThenUp.png)
 
 
 ## UpDown button customization

@@ -296,10 +296,12 @@ The following gif image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox selection changing event notification.](Images/Selection/net-maui-combobox-selection-changing-notification.gif)
 
-## Selection changed notification
 
 ### Value change notification
-The [ValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_ValueChanged) event is triggered when the value of the ComboBox changes. This can occur through user selection, programmatic assignment, or any other method affecting the selected value. The ValueChanged event provides the new value that has been assigned, allowing for immediate response to changes.
+When the value of comboBox changes, the `ValueChanged` event is triggered. This event is raised when the value changes due to user interaction, programmatic updates, or any other mechanism. It provides both `OldValue` and `NewValue`, allowing for responsive handling of changes. The ValueChanged event contains the following properties:
+
+* `OldValue` – Contains the previous text value before the change.
+* `NewValue` – Contains the new text value after the change.
 
 {% tabs %}
 {% highlight xaml %}
@@ -340,6 +342,8 @@ private async void OnValueChanged(object sender, Syncfusion.Maui.Inputs.ValueCha
 
 {% endtabs %} 
  
+## Selection changed notification
+
 When an item is selected from the .NET MAUI drop-down list, the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionChanged) event is triggered. The SelectionChanged event contains the newly selected and previously selected items in the `AddedItems` and `RemovedItems` properties. The SelectionChanged contains the following properties:
 
  * AddedItems - Contains the item that were currently selected.

@@ -17,14 +17,17 @@ The following property has been used in UIVirtualization support:
 
 ## EnableVirtualization
 
-The UI virtualization concept is implemented by enabling the [EnableVirtualization](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_EnableVirtualization) property in SfCarousel Linear mode and also supports the default mode.
+The UI virtualization concept is implemented by enabling the [EnableVirtualization](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_EnableVirtualization) property in SfCarousel, supporting both Default and Linear view modes.
 
 N> The default value of the [EnableVirtualization](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_EnableVirtualization) property is false.
+
+### Default Mode Example
 
 {% tabs %}
 
 {% highlight xaml %}
 
+<!-- Default View Mode -->
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
                      ItemTemplate="{StaticResource itemTemplate}" 
@@ -39,17 +42,56 @@ N> The default value of the [EnableVirtualization](https://help.syncfusion.com/c
 
 {% highlight c# %}
 
+// Default Mode Configuration
 SfCarousel carousel = new SfCarousel()
 {
     ItemHeight = 200,
     ItemWidth = 200,
     ItemSpacing = 2,
     EnableVirtualization = true,
-    ViewMode = ViewMode.Default // Can be Linear or Default
+    ViewMode = ViewMode.Default
 };
 
 carousel.ItemTemplate = itemTemplate;
 carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Linear Mode Example
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<!-- Linear View Mode -->
+<carousel:SfCarousel x:Name="linearCarousel"
+                     ItemsSource="{Binding ImageCollection}"
+                     ItemTemplate="{StaticResource itemTemplate}" 
+                     ItemHeight="200"
+                     ItemWidth="200"
+                     ItemSpacing="2"
+                     ViewMode="Linear"
+                     EnableVirtualization="true">
+</carousel:SfCarousel>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+// Linear Mode Configuration
+SfCarousel linearCarousel = new SfCarousel()
+{
+    ItemHeight = 200,
+    ItemWidth = 200,
+    ItemSpacing = 2,
+    EnableVirtualization = true,
+    ViewMode = ViewMode.Linear
+};
+
+linearCarousel.ItemTemplate = itemTemplate;
+linearCarousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 {% endhighlight %}
 

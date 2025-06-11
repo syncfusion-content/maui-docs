@@ -547,7 +547,7 @@ SfAutocomplete autocomplete = new SfAutocomplete
 
 ![.NET MAUI Autocomplete DropDown Stroke Thickness](Images/UICustomization/DropDownStrokeThickness.png)
 
-### Customize the visibility of DropDown Shadow
+### Customize the visibility of Dropdown Shadow
 
 The `IsDropDownShadowVisible` property is used to customize the visibility of the dropdown shadow.
 
@@ -578,7 +578,7 @@ SfAutocomplete autocomplete = new SfAutocomplete
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Autocomplete DropDown shadow visibility is false](Images/UICustomization/DropDownStrokeThickness.png)
+![.NET MAUI Autocomplete Dropdown shadow visibility is false](Images/UICustomization/DropdownShadowVisible.png)
 
 ### Customize the DropDown Item Height
 
