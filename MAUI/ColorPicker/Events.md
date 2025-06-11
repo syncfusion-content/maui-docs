@@ -18,7 +18,7 @@ The `SfColorPicker` control provides three built-in events to handle color selec
 
 ## ColorChanging event
 
-The `ColorChanging` event is triggered in real-time as the user interacts with the color selector. It allows you to preview color changes immediately while the user is still dragging or adjusting the color.
+The `ColorChanging` event allows you to intercept and cancel a color selection before it is applied.
 
  {% tabs %}
 
