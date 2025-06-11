@@ -259,7 +259,7 @@ You can manage the visibility of form fields using the `IsHidden` property. It h
 
 To hide form fields in the document, set the `IsHidden` property of the form fields to `true`.
 
-#### Hide all form fields
+### Hide all form fields
 
 While reviewing and presenting documents, all form fields can be hidden to improve the focus on the content and to avoid distraction caused by cluttered form fields. The following example explains how to hide all form fields in a PDF document. 
 
