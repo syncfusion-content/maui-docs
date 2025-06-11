@@ -268,7 +268,7 @@ N> The `Background` property of `SelectionIndicatorSettings` is applicable only 
 Customize the selected segment background of each segment item using the [SelectedSegmentBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentItem.html#Syncfusion_Maui_Buttons_SfSegmentItem_SelectedSegmentBackground) property of [SfSegmentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentItem.html).
 
 {% tabs %}
-{% highlight C# tabtitle="MainPage.xaml.cs"%}
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
 
 using Syncfusion.Maui.Buttons;
 . . .
@@ -344,7 +344,7 @@ public partial class MainPage : ContentPage
 Customize the selected segment text color of each segment item using the [SelectedSegmentTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentItem.html#Syncfusion_Maui_Buttons_SfSegmentItem_SelectedSegmentTextColor) property of [SfSegmentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentItem.html).
 
 {% tabs %}
-{% highlight C# tabtitle="MainPage.xaml.cs"%}
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
 
 using Syncfusion.Maui.Buttons;
 . . .
@@ -459,6 +459,46 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![Selected segment border thickness customization in .NET MAUI Segmented control.](images/selection/border-stroke-thickness.png)
+
+## Customizing the ripple effect animation of the segments
+
+The ripple effect of the segments when the segment clicked can be customized by switching between true or false by using the property of [EnableRippleEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_EnableRippleEffect) in the [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html)
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+
+  <button:SfSegmentedControl x:Name="segmentedControl"
+                             EnableRippleEffect="False">
+        <button:SfSegmentedControl.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                  <x:String>Day</x:String>
+                   <x:String>Week</x:String>
+                    <x:String>Month</x:String>
+                  <x:String>Year</x:String>
+                </x:Array>
+           </button:SfSegmentedControl.ItemsSource>
+      </button:SfSegmentedControl>
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml.cs" hl_lines="10" %}
+
+ SfSegmentedControl segmentedControl = new SfSegmentedControl();
+        List<SfSegmentItem> itemList = new List<SfSegmentItem>
+        {
+            new SfSegmentItem() {Text = "Day"},
+            new SfSegmentItem() {Text = "Week"},
+            new SfSegmentItem() {Text = "Month"},
+            new SfSegmentItem() {Text = "Year"},
+        };
+        segmentedControl.ItemsSource = itemList;
+        segmentedControl.EnableRippleEffect = false;
+        this.Content = segmentedControl;
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Notifying segment selection changes
 The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_SelectionChanged) event is triggered once the segment is selected in the segmented control. The [SelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SelectionChangedEventArgs.html) has the following values, which provide information for the `SelectionChanged` event.
