@@ -113,4 +113,3 @@ This setup displays each item with a black, 2-unit thick border, spaced 2 units 
 ## See Also
 
 - [Item Size Customization in .NET MAUI ListView](https://help.syncfusion.com/maui/listview/item-size-customization)
-- [How to create an expandable ListView (SfListView) in .NET MAUI](https://support.syncfusion.com/kb/article/11583/how-to-create-an-expandable-listview-sflistview-in-net-maui)
