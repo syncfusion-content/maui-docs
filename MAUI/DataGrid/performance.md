@@ -102,7 +102,7 @@ public class ViewModel
 
 ## Asynchronous Scrolling
 
-The DataGrid provides support for asynchronous scrolling to enhance scrolling performance during large scroll jumps, especially when using template columns on the Windows platform.
+The DataGrid provides support for asynchronous scrolling to enhance scrolling performance during large scroll jumps, especially on the Windows platform.
 
 When the `AllowAsyncScrolling` property is enabled, the DataGrid renders content asynchronously while scrolling rapidly. This approach improves the perceived performance by reducing UI thread blocking and delivering smoother scrolling behavior.
 
@@ -120,4 +120,4 @@ dataGrid.EnableDataVirtualization = true;
 {% endhighlight %}
 {% endtabs %}
 
-N> Asynchronous scrolling is supported only for template columns on the Windows platform.
+N> Asynchronous scrolling is supported for all column types only on the Windows platform.
