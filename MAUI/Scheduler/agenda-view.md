@@ -308,7 +308,7 @@ this.Scheduler.AppointmentTextStyle = appointmentTextStyle;
 
 ![appointment-text-appearence-customization-in-maui-scheduler](images/agenda-view/appointment-text-appearence-customization-in-maui-scheduler.png)
 
-## No Events Text Color Customization
+## No Events text color customization
 The No events text style can be customized by using the [SchedulerTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTextStyle.html) property of [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}
@@ -342,8 +342,6 @@ The No events text style can be customized by using the [SchedulerTextStyle](htt
 
 {% endhighlight %}
 {% endtabs %}       
-
-![]()
 
 N> When there is No appointments in Current Date and [DisplayDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_DisplayDate) of the scheduler [AgendaView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAgendaView.html), No Events Text will appear.
 
