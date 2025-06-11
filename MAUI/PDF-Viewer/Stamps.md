@@ -149,10 +149,8 @@ void AddCustomStampAnnotation()
 {% endhighlight %}
 {% endtabs %}
 
-### Limitations
-
- * The view will be converted as an image in the saved PDF document. The view becomes read only once saved, and its contents cannot be edited after saving the document. 
- * Interactions within the view such as button clicks or text entry will not function inside the PDF Viewer.
+N> * The view will be converted as an image in the saved PDF document. The view becomes read only once saved, and its contents cannot be edited after saving the document.  
+N> * Interactions within the view such as button clicks or text entry will not function inside the PDF Viewer.
 
 ## Edit the selected stamp
 
