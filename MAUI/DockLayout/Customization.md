@@ -10,24 +10,28 @@ documentation: ug
 # Customization in .NET MAUI DockLayout Control
 
 ## Exapnd LastChild
-The `ShouldExpandLastChild` property (of type `bool`) determines whether the last non-docked child should automatically occupy all remaining space after other docked children have been positioned. By default, this property is set to `True`. This feature is particularly valuable for ensuring that the last child element fully utilizes available space, resulting in a seamless and gap-free layout.
+The `ShouldExpandLastChild` property (of type `bool`) determines whether the last non-docked child should automatically occupy all remaining space after other docked children have been positioned. By default, this property is set to `True`. This feature is particularly valuable for ensuring that the last child element fully utilizes available space, resulting in a seamless and gap-free layout. If `ShouldExpandLastChild` is set to `False`, the last child's size must be defined explicitly.
 
 {% tabs %}
 {% highlight xaml %}
 
- <dx:SfDockLayout ShouldExpandLastChild="True">
+ <dx:SfDockLayout ShouldExpandLastChild="False">
     <!-- Add child elements here -->
+     <Label Text="None" HeightRequest="45"/>
  </dx:SfDockLayout>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-SfDockLayout dockLayout = new SfDockLayout() { ShouldExpandLastChild = true};
+ SfDockLayout dockLayout = new SfDockLayout() { ShouldExpandLastChild = false };
+ dockLayout.Children.Add(new Label() { Text = "None", WidthRequest = 45 });
 
 {% endhighlight %}
 
 {% endtabs %}
+
+![.NET MAUI DockLayout Last Child not Expanded](DockLayout-Images/maui-docklayout-lastchild-alignment.png)
 
 ## Spacing
 Customize the spacing between child elements using the `HorizontalSpacing` and `VerticalSpacing` properties.The default value for both is `0`
@@ -57,7 +61,7 @@ SfDockLayout dockLayout = new SfDockLayout()
 
 ![Output of DockLayout with Spacing](DockLayout-Images/maui-docklayout-spacing.png)
 
-# Methods in .NET MAUI DockLayout Control
+## Methods in .NET MAUI DockLayout Control
 
 ## GetDock
 The `GetDock` method retrieves the docking position for a specified view within the layout.

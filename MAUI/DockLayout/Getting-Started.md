@@ -220,12 +220,11 @@ Inside the `SfDockLayout` control, child views can be arranged using the `Dock` 
 
    <ContentPage.Content>
         <dx:SfDockLayout >
-             <Label Text="Left"  WidthRequest="80" dx:SfDockLayout.Dock="Left" Background="#E57373" />
+             <Label Text="Left" WidthRequest="80" dx:SfDockLayout.Dock="Left" Background="#E57373" />
+            <Label Text="Right" WidthRequest="80" dx:SfDockLayout.Dock="Right" Background="#BA68C8" />
             <Label Text="Top" HeightRequest="80" dx:SfDockLayout.Dock="Top" Background="#F06292" />
-            <Label Text="Right"  WidthRequest="80"  dx:SfDockLayout.Dock="Right" Background="#BA68C8" />
-            <Label Text="Bottom" HeightRequest="80"  dx:SfDockLayout.Dock="Bottom" 
-            Background="#9575CD"/>
-            <Label Text="None" dx:SfDockLayout.Dock="Top" MinimumHeightRequest="80" BackgroundColor="#64B5F6" />
+            <Label Text="Bottom" HeightRequest="80"  dx:SfDockLayout.Dock="Bottom" Background="#9575CD"/>
+            <Label Text="None" BackgroundColor="#64B5F6" />
         </dx:SfDockLayout>
     </ContentPage.Content>
     
@@ -246,8 +245,8 @@ namespace DockLayoutGettingStarted
             InitializeComponent();
             SfDockLayout dockLayout = new SfDockLayout();
             dockLayout.Children.Add(new Label() { Text = "Left", WidthRequest = 80, Background = Color.FromArgb("#E57373") }, Dock.Left);
-            dockLayout.Children.Add(new Label() { Text = "Top", HeightRequest = 80, Background = Color.FromArgb("#F06292") }, Dock.Top);
             dockLayout.Children.Add(new Label() { Text = "Right", WidthRequest = 80, Background = Color.FromArgb("#BA68C8") }, Dock.Right);
+            dockLayout.Children.Add(new Label() { Text = "Top", HeightRequest = 80, Background = Color.FromArgb("#F06292") }, Dock.Top);
             dockLayout.Children.Add(new Label() { Text = "Bottom", HeightRequest = 80, Background = Color.FromArgb("#9575CD") }, Dock.Bottom);
             dockLayout.Children.Add(new Label() { Text = "None", Background = Color.FromArgb("#64B5F6") });
             Content = dockLayout;   

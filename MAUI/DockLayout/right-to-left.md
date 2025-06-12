@@ -7,7 +7,7 @@ control: SfDockLayout
 documentation: ug
 ---
 
-# Right To Left in .NET MAUI DockLayout(SfDockLayout)
+# Right To Left in .NET MAUI DockLayout
 
 The .NET MAUI DockLayout control supports Right-to-Left (RTL) layout direction. When the `FlowDirection` property is set to `RightToLeft`, the docking positions are mirrored to align with RTL language standards.
 
@@ -32,4 +32,4 @@ SfDockLayout dockLayout = new SfDockLayout()
 {% endhighlight %}
 {% endtabs %}
 
-
+![.NET MAUI Docklayout with RTL support](DockLayout-Images/maui-docklayout-right-to-left.png)
