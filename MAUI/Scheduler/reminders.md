@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appointment Reminders in .NET MAUI Scheduler control | Syncfusion<sup>&reg;</sup>
+title: Appointment Reminders in .NET MAUI Scheduler control | Syncfusion
 description: Learn here all about the appointments reminders support in Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler (SfScheduler) appointments.
 platform: maui
 control: SfScheduler
