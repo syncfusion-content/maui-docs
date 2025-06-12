@@ -203,6 +203,47 @@ The SfDataGrid allows customizing the drag view text and background color using 
 
 <img alt="DataGrid column drag view background and text color" src="Images\column-drag-and-drop\maui-datagrid-drag-view-background-and-text-color.png" width="450"/>
 
+### Column drag-and-drop template
+
+The SfDataGrid allows you to load specific content during column drag-and-drop operations using the [SfDataGrid.ColumnDragDropTemplate](). This template can be defined either in code or XAML.
+
+### Default template
+
+The default template will be used for column drag-and-drop operations unless another template is explicitly assigned.
+
+<img alt="default column drag and drop" src="Images\column-drag-and-drop\maui-datagrid-column-drag-and-drop-default.gif" width="404"/>
+
+### Customizing column drag-and-drop template
+
+Any type of custom view can be loaded inside the [SfDataGrid.ColumnDragDropTemplate]().
+
+Please refer to the following code example that demonstrates how to load a view in a template:
+
+{% tabs %}
+{% highlight xaml %}
+
+<syncfusion:SfDataGrid>
+    <syncfusion:SfDataGrid.ColumnDragDropTemplate>
+        <DataTemplate>
+            <Grid BackgroundColor="LightBlue">
+                <Label  Text="Drag View"
+                        TextColor="Orange"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center" />
+            </Grid>
+        </DataTemplate>
+    </syncfusion:SfDataGrid.ColumnDragDropTemplate>
+</syncfusion:SfDataGrid>
+
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="Column drag and drop template" src="Images\column-drag-and-drop\maui-datagrid-column-drag-and-drop-template.gif" Width="404" />
+
+
+N> You can customize the width and height of the column drag view by setting the WidthRequest and HeightRequest properties on the parent layout element (such as a Grid) inside the ColumnDragDropTemplate.
+
+
 ## Cancel auto scrolling
 
 Auto-scrolling during column dragging can be disabled using the `CanAutoScroll` argument in the `QueryColumnDragging` event.
