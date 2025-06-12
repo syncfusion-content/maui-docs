@@ -35,7 +35,7 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 ![Palette](Images/Mode/Palette.png)
 
-## Disable switch color mode
+## Switch color mode visibility
 
 Disable the mode switcher UI by setting the `IsColorModeSwitcherVisible` property to `False`. By default, it is set to `True`, which allows users to switch between different color modes.
 
