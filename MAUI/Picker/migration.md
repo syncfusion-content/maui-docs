@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migrate from Syncfusion<sup>&reg;</sup> Xamarin SfPicker to .NET MAUI SfPicker
-description: Learn all about Migrating from Syncfusion<sup>&reg;</sup> Xamarin Picker to Syncfusion<sup>&reg;</sup> .NET MAUI Picker control.
+title: Migrate from Syncfusion® Xamarin SfPicker to .NET MAUI SfPicker
+description: Learn here all about Migrating from Syncfusion<sup>&reg;</sup> Xamarin Picker to Syncfusion<sup>&reg;</sup> .NET MAUI Picker control.
 platform: maui
 control: SfPicker
 documentation: ug
@@ -87,7 +87,7 @@ To initialize the control, import the picker namespace and initialize `SfPicker`
 <th>.NET MAUI SfPicker</th>
 <th>Description</th></tr>
 <tr>
-<td>{{'[SfPicker](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfPicker.html)'| markdownify }}</td>
+<td>{{'[SfPicker](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPicker.XForms.SfPicker.html)'| markdownify }}</td>
 <td>{{'[SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html)'| markdownify }}</td>
 <td>The SfPicker class that represents a control, that allows you pick an item among a list of items.</td>
 </tr>
@@ -176,7 +176,7 @@ The following code example, explains how to initialize the properties of the `Xa
 <tr>
 <td>{{'[CancelButtonBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_CancelButtonBackgroundColorProperty)'| markdownify }}</td>
 <td>{{'[Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_Background) '| markdownify }}</td>
-<td>Gets or sets the background of the Footer view in SfPicker.</td>
+<td>Gets or sets the background of the footer view in SfPicker.</td>
 </tr>
 <tr>
 <td>{{'[CancelButtonTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_CancelButtonTextColorProperty)'| markdownify }}</td>
@@ -186,7 +186,7 @@ The following code example, explains how to initialize the properties of the `Xa
 <tr>
 <td>{{'[ColumnHeaderBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPicker.XForms.SfPicker.html#Syncfusion_SfPicker_XForms_SfPicker_ColumnHeaderBackgroundColor)'| markdownify }}</td>
 <td>{{' [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumnHeaderView.html#Syncfusion_Maui_Picker_PickerColumnHeaderView_Background) '| markdownify }}</td>
-<td>Gets or sets the background of the column Header view in SfPicker.</td>
+<td>Gets or sets the background of the column header view in SfPicker.</td>
 </tr>
 <tr>
 <td>{{'[ColumnHeaderFontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_ColumnHeaderFontAttributeProperty)'| markdownify }}</td>
@@ -206,7 +206,7 @@ The following code example, explains how to initialize the properties of the `Xa
 <tr>
 <td>{{'[ColumnHeaderHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPicker.XForms.SfPicker.html#Syncfusion_SfPicker_XForms_SfPicker_ColumnHeaderHeight)'| markdownify }}</td>
 <td>{{'[Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumnHeaderView.html#Syncfusion_Maui_Picker_PickerColumnHeaderView_Height) From [PickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumnHeaderView.html)'| markdownify }}</td>
-<td>Gets or sets the value to specify the height of column Header view on SfPicker.</td>
+<td>Gets or sets the value to specify the height of column header view on SfPicker.</td>
 </tr>
 <tr>
 <td>{{'[ColumnHeaderText](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderTextColorProperty)'| markdownify }}</td>
@@ -225,23 +225,23 @@ The following code example, explains how to initialize the properties of the `Xa
 </tr>
 <tr>
 <td>{{'[EnableLooping](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_EnableLoopingProperty)'| markdownify }}</td>
-<td>Nil</td>
-<td>Not Supported.</td>
+<td>{{'[EnableLooping]()'| markdownify }}</td>
+<td>Gets or sets the value of enable looping.</td>
 </tr>
 <tr>
 <td>{{'[FooterHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPicker.XForms.SfPicker.html#Syncfusion_SfPicker_XForms_SfPicker_FooterHeight)'| markdownify }}</td>
 <td>{{'[Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_Height) From [PickerBase](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html) of [FooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_FooterView) '| markdownify }}</td>
-<td>Gets or sets the value to specify the height of Footer view on SfPicker.</td>
+<td>Gets or sets the value to specify the height of footer view on SfPicker.</td>
 </tr>
 <tr>
 <td>{{'[FooterView](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_FooterViewProperty)'| markdownify }}</td>
 <td>{{'[FooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_FooterView) From [PickerBase](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html)'| markdownify }}</td>
-<td>Gets or sets the value of Footer view. This property can be used to customize the of Footer in Picker.</td>
+<td>Gets or sets the value of footer view. This property can be used to customize the of Footer in Picker.</td>
 </tr>
 <tr>
 <td>{{'[HeaderBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderBackgroundColorProperty)'| markdownify }}</td>
 <td>{{'[Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_Background) From [HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html#Syncfusion_Maui_Picker_SfPicker_HeaderView) '| markdownify }}</td>
-<td>Gets or sets the background of the Header view in picker.</td>
+<td>Gets or sets the background of the header view in picker.</td>
 </tr>
 <tr>
 <td>{{'[HeaderFontAttribute](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderFontAttributeProperty)'| markdownify }}</td>
@@ -261,7 +261,7 @@ The following code example, explains how to initialize the properties of the `Xa
 <tr>
 <td>{{'[HeaderHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_HeaderHeightProperty)'| markdownify }}</td>
 <td>{{'[Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_Height) of [PickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html)'| markdownify }}</td>
-<td>Gets or sets the value to specify the height of Header view on picker.</td>
+<td>Gets or sets the value to specify the height of header view on picker.</td>
 </tr>
 <tr>
 <td>{{'[HeaderText](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPicker.XForms.SfPicker.html#Syncfusion_SfPicker_XForms_SfPicker_HeaderText)'| markdownify }}</td>
@@ -276,7 +276,7 @@ The following code example, explains how to initialize the properties of the `Xa
 <tr>
 <td>{{'[HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html#Syncfusion_Maui_Picker_SfPicker_HeaderView)'| markdownify }}</td>
 <td>{{'[HeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html#Syncfusion_Maui_Picker_SfPicker_HeaderView)'| markdownify }}</td>
-<td>Gets or sets the value of Header view. This property can be used to customize the of header in SfPicker.</td>
+<td>Gets or sets the value of header view. This property can be used to customize the of header in SfPicker.</td>
 </tr>
 <tr>
 <td>{{'[IsOpen](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_IsOpenProperty)'| markdownify }}</td>
@@ -286,7 +286,7 @@ The following code example, explains how to initialize the properties of the `Xa
 <tr>
 <td>{{'[ItemHeight](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_ItemHeightProperty)'| markdownify }}</td>
 <td>{{'[ItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_ItemHeight) of [PickerBase](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html)'| markdownify }}</td>
-<td>Gets or sets the value to specify the height of Picker view on Picker.</td>
+<td>Gets or sets the value to specify the height of picker view on Picker.</td>
 </tr>
 <tr>
 <td>{{'[ItemsSource](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPicker.XForms.SfPicker.html#Syncfusion_SfPicker_XForms_SfPicker_ItemsSource)'| markdownify }}</td>
@@ -296,17 +296,17 @@ The following code example, explains how to initialize the properties of the `Xa
 <tr>
 <td>{{'[ItemTemplate](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPicker.XForms.SfPicker.html#Syncfusion_SfPicker_XForms_SfPicker_ItemTemplate)'| markdownify }}</td>
 <td>{{'[ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html#Syncfusion_Maui_Picker_SfPicker_ItemTemplate)'| markdownify }}</td>
-<td>Gets or sets the picker items template in SfPicker.</td>
+<td>Gets or sets the picker item template in SfPicker.</td>
 </tr>
 <tr>
 <td>{{'[OKButtonBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPicker.XForms.SfPicker.html#Syncfusion_SfPicker_XForms_SfPicker_OKButtonBackgroundColor)'| markdownify }}</td>
 <td>{{'[Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_Background) of [PickerBase](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html) From [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html)'| markdownify }}</td>
-<td>Gets or sets the background of the Footer view in SfPicker.</td>
+<td>Gets or sets the background of the footer view in SfPicker.</td>
 </tr>
 <tr>
 <td>{{'[OKButtonTextColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPicker.XForms.SfPicker.html#Syncfusion_SfPicker_XForms_SfPicker_OKButtonTextColor)'| markdownify }}</td>
 <td>{{'[TextColor]() From [PickerTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTextStyle.html#Syncfusion_Maui_Picker_PickerTextStyle_TextColor) of [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_TextStyle) of [PickerBase](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html) From [PickerFooterView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html)'| markdownify }}</td>
-<td>Gets or sets the text color of the ok button of Footer view in SfPicker.</td>
+<td>Gets or sets the text color of the ok button of footer view in SfPicker.</td>
 </tr>
 <tr>
 <td>{{'[Parent](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPicker.XForms.SfPicker.html#Syncfusion_SfPicker_XForms_SfPicker_Parent)'| markdownify }}</td>
@@ -336,7 +336,7 @@ The following code example, explains how to initialize the properties of the `Xa
 <tr>
 <td>{{'[SelectedItem](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPicker.XForms.SfPicker.html#Syncfusion_SfPicker_XForms_SfPicker_SelectedItem)'| markdownify }}</td>
 <td>{{'[SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html#Syncfusion_Maui_Picker_PickerColumn_SelectedItem) From [PickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumn.html)'| markdownify }}</td>
-<td>Gets or sets the selected items of the columns on SfPicker.</td>
+<td>Gets or sets the selected item of the columns on SfPicker.</td>
 </tr>
 <tr>
 <td>{{'[SelectedItemFontAttributes](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_SelectedItemFontAttributeProperty)'| markdownify }}</td>
@@ -361,7 +361,7 @@ The following code example, explains how to initialize the properties of the `Xa
 <tr>
 <td>{{'[SelectionBackgroundColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_SelectionBackgroundColorProperty)'| markdownify }}</td>
 <td>{{'[Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerSelectionView.html#Syncfusion_Maui_Picker_PickerSelectionView_Background) From [PickerSelectionView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerSelectionView.html)'| markdownify }}</td>
-<td>Gets or sets the background color of the selected items.</td>
+<td>Gets or sets the background color of the selected item.</td>
 </tr>
 <tr>
 <td>{{'[ShowColumnHeader](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_ShowColumnHeaderProperty)'| markdownify }}</td>
@@ -446,20 +446,16 @@ The following code example, explains how to initialize the properties of the `Xa
 <tr>
 <td>{{'[OkButtonClicked](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfPicker.html#Syncfusion_XForms_Pickers_SfPicker_OkButtonClicked)'| markdownify }}</td>
 <td>{{'[OkButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_OkButtonClicked)'| markdownify }}</td>
-<td>Occurs whenever the footer OK button is clicked in Picker.</td>
+<td>Occurs whenever the footer ok button is clicked in Picker.</td>
 </tr>
 <tr>
 <td>{{'[CancelButtonClicked](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfPicker.html#Syncfusion_XForms_Pickers_SfPicker_CancelButtonClicked)'| markdownify }}</td>
 <td>{{'[CancelButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_CancelButtonClicked)'| markdownify }}</td>
-<td>Occurs whenever the footer Cancel button is clicked in Picker.</td>
+<td>Occurs whenever the footer cancel button is clicked in Picker.</td>
 </tr>
 </table>
 
 ## Known issues
 
  * Picker background color is not applied to the popup.
- * Picker dynamic item source does not render the picker items.
-
-## Upcoming features
-
- * Looping support for picker items.
+ * Picker dynamic items source does not render the picker item.
