@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About .NET MAUI DockLayout control | Syncfusion®
-description: Learn Syncfusion® .NET MAUI SfDockLayout control and its key features.
+description: Learn about the Syncfusion® .NET MAUI SfDockLayout control, its layout behavior, and key features for building structured UI.
 platform: MAUI
 control: SfDockLayout
 documentation: ug
