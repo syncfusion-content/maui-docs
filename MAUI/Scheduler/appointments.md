@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appointments in .NET MAUI Scheduler | Syncfusion<sup>&reg;</sup>
+title: Appointments in .NET MAUI Scheduler | Syncfusion
 description: Discover how to plan, configure, and manage all-day, recurring, and spanning appointments in Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler  control with ease.
 platform: maui
 control: SfScheduler

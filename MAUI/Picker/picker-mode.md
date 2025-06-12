@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Picker Mode in .NET MAUI Picker Control | Syncfusion<sup>&reg;</sup>
+title: Picker Mode in .NET MAUI Picker Control | Syncfusion
 description: Learn about the picker mode in Syncfusion<sup>&reg;</sup> .NET MAUI Picker (SfPicker) control and its basic features.
 platform: maui
 control: SfPicker
