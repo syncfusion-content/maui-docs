@@ -10,6 +10,31 @@ keywords : .net maui color picker, maui color picker, .net maui color picker con
 
 # Customization in .NET MAUI Color Picker (SfColorPicker)
 
+## Selected color
+
+The `SelectedColor` property of the Color Picker is used to display a default color during initial load. You can also select a color value in the UI using built-in elements like the color spectrum, sliders, palette, or HEX input.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<inputs:SfColorPicker SelectedColor="DodgerBlue"/>       
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfColorPicker colorPicker = new SfColorPicker()
+{
+    SelectedColor = Colors.DodgerBlue
+};
+ 
+{% endhighlight %}
+
+{% endtabs %}
+
+![SelectedColor](Images/Mode/SelectedColor.png)
+
 ## Show recent colors
 
 You can display the recently selected colors in the Color Picker when in `Palette` mode by enabling the `ShowRecentColors` property. By default, it is set to `True`.
@@ -84,32 +109,6 @@ SfColorPicker colorPicker = new SfColorPicker()
 {% endtabs %}
 
 ![Alpha slider](Images/Customization/AlphaSlider.png)
-
-## Switch color mode
-
-To display the Color Picker in a single mode without allowing users to switch between different modes, set the `ColorMode` property to `Palette` (or Spectrum), and disable the mode switcher UI by setting the `IsColorModeSwitcherVisible` property to `False`. By default, `IsColorModeSwitcherVisible` is set to `True`, allowing users to toggle between modes.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<inputs:SfColorPicker ColorMode="Palette" IsColorModeSwitcherVisible="False"/>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfColorPicker colorPicker = new SfColorPicker()
-{
-    ColorMode = ColorPickerMode.Palette,
-    IsColorModeSwitcherVisible = false
-};
-    
-{% endhighlight %}
-
-{% endtabs %}
-
-![Color mode](Images/Customization/HideSwitchColorMode.png)
 
 ## Action buttons
 
