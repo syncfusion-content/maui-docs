@@ -9,7 +9,7 @@ documentation: ug
 
 # Essential<sup>®</sup> UI Kit for .NET MAUI
 
-The Essential<sup>®</sup> UI Kit for .NET MAUI provides pre built XAML templates, allowing you to easily create user interfaces for cross-platform applications. It follows a well-structured separation of View, ViewModel, and Model classes, simplifying the integration of business logic and modifications to existing views.
+The Essential<sup>®</sup> UI Kit for .NET MAUI provides pre-built XAML templates, making it easy to create user interfaces for cross-platform applications. It follows a well-structured separation of View, ViewModel, and Model classes, simplifying the integration of business logic and the modification of existing views.
 
 N> Before using the **Essential<sup>®</sup> UI Kit for .NET MAUI - Syncfusion<sup>®</sup>**, ensure that the extension is installed in Visual Studio Code. To check, go to **View > Extensions** in the Extension Manager. If the extension is not installed, follow the steps in the [download and installation](https://help.syncfusion.com/maui/visual-studio-code-integration/download-and-installation#essential-ui-kit) help guide to install it.
 
