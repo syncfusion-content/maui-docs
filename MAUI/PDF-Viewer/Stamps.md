@@ -112,6 +112,46 @@ void AddCustomStampAnnotation()
 {% endhighlight %}
 {% endtabs %}
 
+### Add a view as custom stamps without using the toolbar
+
+You can create a custom stamp from any view, such as Button, Entry, Label, Image, or any other view, and add it to a PDF document. The following example explains how to create a custom stamp from a button view in the application and add it to a PDF document using the [AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
+
+{% tabs %}
+{% highlight C# %}
+StampAnnotation CreateCustomStamp()
+{
+    int pageNumber = 1;
+
+    // Define the bounds for the stamp to be placed in the PDF page.
+    RectF bounds = new RectF(100, 100, 200, 100);
+
+    // Create a button to be used as the visual content of the stamp.
+    var button = new Button
+   {
+    Text = "Click Me",
+    BackgroundColor = Colors.Blue,
+   };
+
+    // Create a custom stamp annotation using the button view.
+    StampAnnotation customStamp = new StampAnnotation(button,pageNumber,bounds);
+
+    // Return the stamp annotation.
+    return customStamp;
+}
+
+void AddCustomStampAnnotation()
+{
+    StampAnnotation stampAnnotation = CreateCustomStamp();
+
+    // Add the stamp to the PDF document using `SfPdfViewer` instance.
+    PdfViewer.AddAnnotation(stampAnnotation);
+}
+{% endhighlight %}
+{% endtabs %}
+
+N> * The view will be converted as an image in the saved PDF document. The view becomes read only once saved, and its contents cannot be edited after saving the document.  
+N> * Interactions within the view such as button clicks or text entry will not function inside the PDF Viewer.
+
 ## Edit the selected stamp
 
 You can edit the properties of the selected stamp annotation programmatically by accessing the selected annotation instance. The selected annotation instance may be obtained from the [AnnotationSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSelected) event. 
