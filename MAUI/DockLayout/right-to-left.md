@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Right-to-Left (RTL) Support in .NET MAUI DockLayout Control | Syncfusion®
-description: Learn how to enable and use right-to-left (RTL) layout direction in the Syncfusion® .NET MAUI DockLayout (SfDockLayout) control.
+description: Learn right-to-left (RTL) layout direction in the Syncfusion® .NET MAUI DockLayout (SfDockLayout) control.
 platform: MAUI
 control: SfDockLayout
 documentation: ug
