@@ -452,7 +452,7 @@ public class SerializationControllerExt : DataGridSerializationController
 }
 {% endhighlight %}
 
-You can download the sample demo [here](https://github.com/SyncfusionExamples/How-to-Serialize-custom-column-in-.NET-MAUI-DataGrid-SfDataGrid/tree/master)
+You can download the sample demo [here]()
 
 ### Serializing template column content
 
@@ -521,4 +521,4 @@ public class SerializationControllerExt : DataGridSerializationController
 }
 {% endhighlight %}
 
-You can download the sample demo [here](https://github.com/SyncfusionExamples/How-to-Serialize-template-column-content-in-.NET-MAUI-DataGrid--SfDataGrid/tree/master)
+You can download the sample demo [here]()
