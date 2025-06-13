@@ -13,7 +13,7 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.html) provide support for the clipboard operations such as cut, copy and paste the data within control and between other applications such as Notepad, Excel. Clipboard operations for copy and paste are enabled by default.. You can copy selected records/cells from SfDataGrid by pressing <kbd>Ctrl+C</kbd> and also can paste the content from [Clipboard](https://learn.microsoft.com/en-us/dotnet/api/system.windows.clipboard?view=windowsdesktop-7.0&viewFallbackFrom=net-5.0) to SfDataGrid by pressing <kbd>Ctrl+V</kbd>.
 
-N> Clipboard operations are not supported for the summary rows, add new row and unbound rows.To enable cut operations, the properties should be nullable and must implement INotifyPropertyChanged to ensure the user interface updates correctly when changes occur.
+N> Clipboard operations are not supported for the summary rows, add new row and unbound rows.To enable paste and cut operations, the properties should be nullable and must implement INotifyPropertyChanged to ensure the user interface updates correctly when changes occur.
 
 ## Copy to Clipboard in DataGrid
 
