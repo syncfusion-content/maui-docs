@@ -25,11 +25,13 @@ var openWorkflow = new KanbanWorkflow("Open", new List<object> { "In Progress" }
 workflows.Add(openWorkflow);
 
 //Define the category and list of categories which accepts the cards from “In Progress” state.
-var progressWorkflow = new KanbanWorkflow("In Progress", new List<object> { "Open", "Code Review" });
+var progressWorkflow = new KanbanWorkflow("In Progress", new List<object> { "Code Review", "Postponed" });
 workflows.Add(progressWorkflow);
 
 kanban.Workflows = workflows;
 
 {% endhighlight %}
 
-By following the code snippet, you will notice that the card picked from the `Open` state is not allowed to be dropped in the `Code Review` or `Done` states because we have defined that the card can only move from the `Open` state to the `In Progress` state and not to any other states.
+![workflow-in-maui-kanban](images/workflow/workflow-in-maui-kanban.gif)
+
+By following the code snippet, you will notice that the card picked from the `In Progress` state is not allowed to be dropped in the `Open` state because we have defined that the card can only move from the `In Progress` state to the `Code Review`, and `Postponed` states, and not to any other states.
