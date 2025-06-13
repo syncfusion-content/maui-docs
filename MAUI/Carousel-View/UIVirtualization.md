@@ -21,7 +21,7 @@ The UI virtualization concept is implemented by enabling the [EnableVirtualizati
 
 N> The default value of the [EnableVirtualization](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_EnableVirtualization) property is false.
 
-### Default Mode Example
+### Default Mode
 
 {% tabs %}
 
@@ -59,7 +59,7 @@ carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 {% endtabs %}
 
-### Linear Mode Example
+### Linear Mode
 
 {% tabs %}
 

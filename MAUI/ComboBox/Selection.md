@@ -335,7 +335,7 @@ The ValueChanged event can be handled as follows:
 
 private async void OnValueChanged(object sender, Syncfusion.Maui.Inputs.ValueChangedEventArgs e)
 {
-    await DisplayAlert("Alert", "Value has changed to: " + e.NewValue.ToString(), "Ok");
+    await DisplayAlert("Alert", "Value has changed to: " + e.Value.ToString(), "Ok");
 }
 
 {% endhighlight %}

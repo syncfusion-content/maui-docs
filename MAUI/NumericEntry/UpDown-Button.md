@@ -169,11 +169,11 @@ N> By default, the `UpDownOrder` property is set to **UpThenDown**.
 {% tabs %}
 {% highlight XAML %}
 
-<editors:SfNumericEntry Value="123" HorizontalTextAlignment="End" 
+<editors:SfNumericEntry Value="123"
                         WidthRequest="200"
                         UpDownOrder="UpThenDown"
                         UpDownPlacementMode="Inline" 
-                        UpDownButtonAlignment="Left"/>
+                        UpDownButtonAlignment="Right"/>
                      
 {% endhighlight %}
 {% highlight c# %}
@@ -181,10 +181,9 @@ N> By default, the `UpDownOrder` property is set to **UpThenDown**.
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
 sfNumericEntry.WidthRequest = 200;
 sfNumericEntry.Value = 123;
-sfNumericEntry.HorizontalTextAlignment = TextAlignment.Center;
 sfNumericEntry.UpDownOrder = UpDownOrder.UpThenDown;
 sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
-sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Both;
+sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Right;
 
 {% endhighlight %}
 {% endtabs %}
@@ -196,11 +195,11 @@ sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Both;
 {% tabs %}
 {% highlight XAML %}
 
-<editors:SfNumericEntry Value="123" HorizontalTextAlignment="Center" 
+<editors:SfNumericEntry Value="123"
                         WidthRequest="200"
                         UpDownOrder="DownThenUp"
                         UpDownPlacementMode="Inline" 
-                        UpDownButtonAlignment="Left/>
+                        UpDownButtonAlignment="Right/>
                      
 {% endhighlight %}
 {% highlight c# %}
@@ -208,10 +207,9 @@ sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Both;
 SfNumericEntry sfNumericEntry = new SfNumericEntry();
 sfNumericEntry.WidthRequest = 200;
 sfNumericEntry.Value = 123;
-sfNumericEntry.HorizontalTextAlignment = TextAlignment.Center;
 sfNumericEntry.UpDownOrder = UpDownOrder.DownThenUp;
 sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
-sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Both;
+sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Right;
 
 {% endhighlight %}
 {% endtabs %}
