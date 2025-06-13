@@ -103,7 +103,7 @@ sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.InlineVerti
 
 ## UpDown button alignment
 
-You can change the alignment of the UpDown buttons in the [NumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control using the [UpDownButtonAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_UpDownButtonAlignment) property. Set its value to **Left**, **Right**, or **Both** to position the buttons on the left, right, or both sides of the entry field, respectively.
+You can adjust the alignment of the UpDown buttons in the [NumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control using the [UpDownButtonAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_UpDownButtonAlignment) property. Set its value to **Left**, **Right**, or **Both** to position the buttons on the left, right, or both sides of the entry field, respectively.
 
 N> By default, the `UpDownButtonAlignment` property is set to **Right**.  
 
@@ -160,7 +160,7 @@ sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Both;
 
 ## UpDown button order
 
-You can adjust the order of the UpDown buttons in the [NumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control using the `UpDownOrder` property. Set its value to **UpThenDown** or **DownThenUp** to position the buttons on the entry field, respectively.
+You can change the order of the UpDown buttons in the [NumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control using the `UpDownOrder` property. Set its value to **UpThenDown** or **DownThenUp** to position the buttons on the entry field, respectively.
 
 N> By default, the `UpDownOrder` property is set to **UpThenDown**.  
 
