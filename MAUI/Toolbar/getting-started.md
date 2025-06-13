@@ -72,6 +72,7 @@ Before proceeding, ensure the following are set up:
 <ContentPage
     . . .    
     xmlns:toolbar="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar">
+
     <StackLayout>
         <toolbar:SfToolbar />
     </StackLayout>
@@ -81,6 +82,7 @@ Before proceeding, ensure the following are set up:
 {% highlight c# %}
 
 using Syncfusion.Maui.Toolbar;
+
 namespace ToolbarGettingStarted
 {
     public partial class MainPage : ContentPage
@@ -163,6 +165,7 @@ Before proceeding, ensure the following are set up:
 <ContentPage
     . . .    
     xmlns:toolbar="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar">
+
     <StackLayout>
         <toolbar:SfToolbar />
     </StackLayout>
@@ -171,7 +174,9 @@ Before proceeding, ensure the following are set up:
 {% endhighlight %}
 {% highlight c# %}
 
+
 using Syncfusion.Maui.Toolbar;
+
 namespace ToolbarGettingStarted
 {
     public partial class MainPage : ContentPage
@@ -279,11 +284,9 @@ public partial class MainPage : ContentPage
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
 {% endtabcontent %}
-
 {% endtabcontents %}
 
 ## Adding Toolbar items
@@ -297,6 +300,7 @@ You can use [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.
 <ContentPage 
             ...
              xmlns:toolbar="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar">
+
     <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56">
         <toolbar:SfToolbar.Items>
             <toolbar:SfToolbarItem Name="Bold"
@@ -365,7 +369,6 @@ namespace ToolbarGettingStarted
         public MainPage()
         {
             InitializeComponent();
-
             SfToolbar toolbar = new SfToolbar();
             toolbar.HeightRequest = 56;
             ObservableCollection<BaseToolbarItem> itemCollection = new ObservableCollection<BaseToolbarItem>

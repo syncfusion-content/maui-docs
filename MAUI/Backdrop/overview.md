@@ -13,14 +13,14 @@ The .NET MAUI Backdrop page comprises two surfaces: a back layer and a front lay
 
 ### Key features
 
- * Allows you to add with the NavigationPage and supports seamless navigation and toolbar customizations.
+* Allows integration with the NavigationPage and supports seamless navigation and toolbar customizations.
  
- * Adjusts the height of the back layer automatically based on its content and provides an option to expand the content to fit the screen.
+* Automatically adjusts the height of the back layer based on its content and provides an option to expand the content to fit the screen.
  
- * Supports curved and flat edge shapes for the front layer with corner radius customization options.
+* Supports both curved and flat edge shapes for the front layer with corner radius customization options.
  
- * Provides smooth animations for revealing and concealing the back layer content.
+* Provides smooth animations for revealing and concealing the back layer's content.
  
- * Allows users to customize the icons of the navigation header in the revealed and closed states separately.
+* Allows users to customize the icons of the navigation header in both the revealed and closed states separately.
 
  ![BackdropPage control for .NET MAUI.](images/overview/net_maui_backdrop.gif)

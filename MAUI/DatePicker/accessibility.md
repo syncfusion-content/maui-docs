@@ -9,29 +9,29 @@ documentation: ug
 
 # Accessibility in .NET MAUI Date Picker (SfDatePicker)
 
-The [.NET MAUI Date Picker](https://www.syncfusion.com/maui-controls/maui-datepicker) control has interact with the `Header`, `Column Header`, `Footer`, and `Picker Items`.
+The [.NET MAUI Date Picker](https://www.syncfusion.com/maui-controls/maui-datepicker) control interacts with the `Header`, `Column Header`, `Footer`, and `Picker Items`.
 
 ## Header Layout
 
-The SfDatePicker control has interact [Header Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_Text) with localization of header layout.
+The SfDatePicker control interacts [Header Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_Text) with localization of header layout.
 
 ![Header Layout in .NET MAUI Date Picker.](images/accessibility/maui-accessibility-datepicker-header.png)
 
 ## Column Header Layout
 
-The SfDatePicker control has interact column header text with localization of column header layout. It contains [DayHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DatePickerColumnHeaderView.html#Syncfusion_Maui_Picker_DatePickerColumnHeaderView_DayHeaderText), [MonthHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DatePickerColumnHeaderView.html#Syncfusion_Maui_Picker_DatePickerColumnHeaderView_MonthHeaderText), and [YearHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DatePickerColumnHeaderView.html#Syncfusion_Maui_Picker_DatePickerColumnHeaderView_YearHeaderText) properties of the [DatePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DatePickerColumnHeaderView.html). The default value of the `DayHeaderText` property is "Day", `MonthHeaderText` is "Month", and `YearHeaderText` is "Year".
+The SfDatePicker control interacts column header text with localization of column header layout. It contains [DayHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DatePickerColumnHeaderView.html#Syncfusion_Maui_Picker_DatePickerColumnHeaderView_DayHeaderText), [MonthHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DatePickerColumnHeaderView.html#Syncfusion_Maui_Picker_DatePickerColumnHeaderView_MonthHeaderText), and [YearHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DatePickerColumnHeaderView.html#Syncfusion_Maui_Picker_DatePickerColumnHeaderView_YearHeaderText) properties of the [DatePickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DatePickerColumnHeaderView.html). The default value of the `DayHeaderText` property is "Day", `MonthHeaderText` is "Month", and `YearHeaderText` is "Year".
 
 ![Column Header Layout in .NET MAUI Date Picker.](images/accessibility/maui-accessibility-datepicker-columnheader.png)
 
 ## Footer Layout
 
-The SfDatePicker control has interact validation buttons (OK and Cancel) with localization of footer layout. The Default value of the [OkButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_OkButtonText) property is "OK", and [CancelButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_CancelButtonText) is "Cancel".
+The SfDatePicker control interacts validation buttons (OK and Cancel) with localization of footer layout. The default value of the [OkButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_OkButtonText) property is "OK", and [CancelButtonText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_CancelButtonText) is "Cancel".
 
 ![Footer Layout in .NET MAUI Date Picker.](images/accessibility/maui-accessibility-datepicker-footer.png)
 
 ## Picker Items
 
-The SfDatePicker control has interact with the item source in picker items. The item source contains based on the [Date Format](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerDateFormat.html). For example, 
+The SfDatePicker control interacts with the item source in picker items. The item source is based on the [Date Format](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerDateFormat.html). For example, 
 
 <table>
 <tr>
@@ -58,7 +58,7 @@ The SfDatePicker control has interact with the item source in picker items. The 
 ![Picker Items in .NET MAUI Date Picker.](images/accessibility/maui-accessibility-datepicker-datepickeritems.png)
 
 ## Keyboard
-`SfDatePicker` supports selection using keyboard interactions.
+`SfDatePicker` supports selection through keyboard interactions.
 
 <table>
 <tr>
@@ -82,7 +82,7 @@ Focus the picker.
 Enter
 </td>
 <td>
-Opens the selected picker.
+Opens the picker.
 </td>
 </tr>
 <tr>
@@ -90,7 +90,7 @@ Opens the selected picker.
 DownArrow
 </td>
 <td>
-Selects an item from the currently expanded list by moving downwards.
+Selects an item from the expanded list by moving downwards.
 </td>
 </tr>
 <tr>
@@ -98,7 +98,7 @@ Selects an item from the currently expanded list by moving downwards.
 UpArrow
 </td>
 <td>
-Selects an item from the currently expanded list by moving upwards.
+Selects an item from the expanded list by moving upwards.
 </td>
 </tr>
 <tr>
@@ -106,7 +106,7 @@ Selects an item from the currently expanded list by moving upwards.
 RightArrow/Tab
 </td>
 <td>
-Navigates through the selected item in the right direction.
+Navigates through the items in the right direction.
 </td>
 </tr>
 <tr>
@@ -114,7 +114,7 @@ Navigates through the selected item in the right direction.
 LeftArrow/Shift+Tab
 </td>
 <td>
-Navigates through the selected item in the left direction.
+Navigates through the items in the left direction.
 </td>
 </tr>
 <tr>
@@ -122,7 +122,7 @@ Navigates through the selected item in the left direction.
 Esc/Enter
 </td>
 <td>
-Exit and commit selection.
+Exits and commits selection.
 </td>
 </tr>
 </table>
