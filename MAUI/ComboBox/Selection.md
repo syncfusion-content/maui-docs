@@ -333,9 +333,9 @@ The ValueChanged event can be handled as follows:
 {% tabs %}
 {% highlight C# %}
 
-private async void OnValueChanged(object sender, Syncfusion.Maui.Inputs.ValueChangedEventArgs e)
+private async void OnValueChanged(object sender, ComboBoxValueChangedEventArgs e)
 {
-    await DisplayAlert("Alert", "Value has changed to: " + e.Value.ToString(), "Ok");
+    await DisplayAlert("Alert", "Value has changed to: " + e.NewValue.ToString(), "Ok");
 }
 
 {% endhighlight %}
