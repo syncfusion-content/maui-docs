@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Serialization and Deserialization in .NET MAUI DataGrid control | Syncfusion®
+title: Serialization and Deserialization in MAUI DataGrid | Syncfusion®
 description: Learn all about column serialization and deserialization support in Syncfusion® MAUI DataGrid (SfDataGrid) control and more here.
 platform: MAUI
 control: SfDataGrid
