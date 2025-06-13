@@ -165,7 +165,7 @@ private void Button_Clicked(object sender, System.EventArgs e)
 
 ### Custom Popup Size
 
-SfTimePicker allows the display of the Popup to render at any desired size by setting the [PopupWidth] and [PopupHeight] properties.
+SfTimePicker allows the display of the Popup to render at any desired size by setting the [PopupWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html) and [PopupHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html) properties.
 
 {% tabs %}
 
