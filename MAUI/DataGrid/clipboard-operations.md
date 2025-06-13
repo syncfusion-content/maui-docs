@@ -5,7 +5,7 @@ description: Learn here all about Clipboard Operations support in Syncfusion® M
 platform: MAUI
 control: SfDataGrid
 documentation: ug
-keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui clipboard operations, maui maui clipboard operations
+keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui clipboard operations, Copy to clipboard, Cut to clipboard and Paste to clipboard
 ---
 
 
