@@ -162,3 +162,56 @@ private void Button_Clicked(object sender, System.EventArgs e)
    ![Relative dialog mode in .NET MAUI Picker.](images/picker-mode/maui-picker-relative-dialog-mode1.png)
 
    ![Relative dialog mode in .NET MAUI Picker.](images/picker-mode/maui-picker-relative-dialog-mode2.png)
+
+### Custom Popup Size
+
+SfPicker allows the display of the Popup to render at any desired size by setting the [PopupWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_PopupWidth) and [PopupHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_PopupHeight) properties.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<Grid>
+    <picker:SfPicker 
+            x:Name="picker"
+            Mode="Dialog"
+            RelativePosition="AlignToRightOf"
+            PopupWidth="200"
+            PopupHeight="440">
+        <picker:SfPicker.HeaderView >
+            <picker:PickerHeaderView Height="40" Text="Select a color" />
+        </picker:SfPicker.HeaderView>
+        <picker:SfPicker.Columns>
+            <picker:PickerColumn HeaderText="Colors" ItemsSource="{Binding DataSource}"/>
+        </picker:SfPicker.Columns>
+        <picker:SfPicker.ColumnHeaderView >
+            <picker:PickerColumnHeaderView Height="40"/>
+        </picker:SfPicker.ColumnHeaderView>
+        <picker:SfPicker.FooterView>
+            <picker:PickerFooterView  Height="40"/>
+        </picker:SfPicker.FooterView>
+    </picker:SfPicker>
+    <Button Text="Open Text"
+            x:Name="pickerButton"
+            Clicked="pickerButton_Clicked"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            HeightRequest="40"
+            WidthRequest="150">
+    </Button>
+</Grid>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+private void pickerButton_Clicked(object sender, System.EventArgs e)
+{
+    this.picker.IsOpen = true;
+    this.picker.PopupWidth = 300;
+    this.picker.PopupHeight = 440;
+}
+
+{% endhighlight %} 
+
+{% endtabs %}
