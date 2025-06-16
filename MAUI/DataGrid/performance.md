@@ -116,7 +116,7 @@ By default, the `AllowAsyncScrolling` property is set to `false`. To improve scr
 {% endhighlight %}
 
 {% highlight c# %}
-dataGrid.EnableDataVirtualization = true;
+dataGrid.AllowAsyncScrolling = true;
 {% endhighlight %}
 {% endtabs %}
 
