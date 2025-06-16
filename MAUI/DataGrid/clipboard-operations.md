@@ -237,7 +237,7 @@ The example below changes the clipboard value to "Test" instead of the clipboard
 {% highlight c# %}
 void dataGrid_PasteCellContent(object sender, DataGridCopyPasteCellEventArgs e)
 {
-    if (e.Column.MappingName == "CustomerID" && (e.RowData as OrderInfo).CustomerID == "Welli")
+    if (e.Column.MappingName == "CustomerID" && (e.RowData as OrderInfo).CustomerID == "Linod")
         e.ClipBoardValue = "Test";
 }
 {% endhighlight %}
