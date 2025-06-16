@@ -114,7 +114,7 @@ private void ListView_ScrollStateChanged(object sender, ScrollStateChangedEventA
 {% endhighlight %}
 {% endtabs %}
 
-## Enable fade effect while scrolling
+## Enable fade effect on scrolling
 
 The `SfListView` provides the ability to display a fade effect at the top and bottom edges while scrolling. This fade gradient helps indicate that more items are available beyond the visible area, enhancing the scrolling experience.
 

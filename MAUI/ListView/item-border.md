@@ -15,15 +15,36 @@ This section explains how to customize item borders in the `.NET MAUI ListView` 
 
 The `SfListView` allows applying borders to each item by setting the `ShowItemBorder` property to `true`. By default, item borders are not displayed. You can customize the color, thickness, margin, and corner radius of the borders using the respective APIs.
 
-### API List
-
-| API | Type | Description |
-|-----|------|-------------|
-| `ShowItemBorder` | `bool` | Enables or disables the visibility of item borders. *(Default: false)* |
-| `ItemBorderColor` | `Color` | Sets the color of the item border. |
-| `ItemBorderThickness` | `Thickness` | Defines the border thickness for each side of the item. |
-| `ItemBorderMargin` | `Thickness` | Sets the margin around the border within the item. |
-| `ItemBorderRadius` | `CornerRadius` | Sets the corner radius of the item border. |
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ShowItemBorder</code></td>
+      <td>Enables or disables the visibility of item borders. <em>(Default: false)</em></td>
+    </tr>
+    <tr>
+      <td><code>ItemBorderColor</code></td>
+      <td>Sets the color of the item border.</td>
+    </tr>
+    <tr>
+      <td><code>ItemBorderThickness</code></td>
+      <td>Defines the border thickness for each side of the item.</td>
+    </tr>
+    <tr>
+      <td><code>ItemBorderMargin</code></td>
+      <td>Sets the margin around the border within the item.</td>
+    </tr>
+    <tr>
+      <td><code>ItemBorderRadius</code></td>
+      <td>Sets the corner radius of the item border.</td>
+    </tr>
+  </tbody>
+</table>
 
 N> `ItemBorderRadius` is applicable only when `ItemBorderThickness` has uniform values on all sides.
 
