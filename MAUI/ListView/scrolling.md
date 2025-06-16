@@ -114,6 +114,28 @@ private void ListView_ScrollStateChanged(object sender, ScrollStateChangedEventA
 {% endhighlight %}
 {% endtabs %}
 
+## Enable fade effect while scrolling
+
+The `SfListView` provides the ability to display a fade effect at the top and bottom edges while scrolling. This fade gradient helps indicate that more items are available beyond the visible area, enhancing the scrolling experience.
+
+You can enable this behavior using the `EnableFadeOnScroll` property.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfListView x:Name="listView"
+                       ItemsSource="{Binding Items}"
+                       EnableFadeOnScroll="True" />
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+SfListView listView = new SfListView();
+listView.ItemsSource = viewModel.Items;
+listView.EnableFadeOnScroll = true;
+{% endhighlight %}
+{% endtabs %}
+
+![MAUI ListView FadeOnScroll](Images/scrolling/maui-listview-fade-on-scroll-example.gif)
+
 ## Identify when end of the list is reached on scrolling
 
 The `SfListView` can be notified when scrolling using the [Changed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridCommon.ScrollAxis.ScrollAxisBase.html#Syncfusion_Maui_GridCommon_ScrollAxis_ScrollAxisBase_Changed) event of [ScrollAxisBase](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridCommon.ScrollAxis.ScrollAxisBase.html) in [VisualContainer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.VisualContainer.html) of the `SfListView`. By using this event, you can find whether you have reached the last item in the list in the `SfListView` based on the [LastBodyVisibleLineIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridCommon.ScrollAxis.ScrollAxisBase.html#Syncfusion_Maui_GridCommon_ScrollAxis_ScrollAxisBase_LastBodyVisibleLineIndex) property and underlying collection count.
