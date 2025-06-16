@@ -25,6 +25,8 @@ treeView.AllowDragging= "true"
 
 While dropping, the dragged items can be added above or below to the target item based on drag indicator position.
 
+N> The drag and drop operation is not supported when Load on Demand is enabled.
+
 ## Dragging multiple items
 
 `SfTreeView` allows to drag multiple selected items. To enable multiple selection, set the [SfTreeView.SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectionMode) as `Multiple` or `Extended`.
@@ -137,9 +139,9 @@ The [ItemDragging]() event is raised while dragging and dropping the item in the
 
 [Action](): Returns the drag Action such as start, dragging, dropping and drop.
 [Handled](): If this member is set to true, dragging can be handled. It is applicable only if Action is Dragging.
-[Cancel]() : 
-DataItem: Returns the underlying data of the dragging item.
-[DraggingNode](): Returns the dragging node.DraggingNodes
+[Cancel]() : If this member is set to true, the drag and drop operation will be canceled.
+[DraggingNode](): Returns the DraggingNodes.
+[DropPosition](): Returns the position where dragged nodes are going to be dropped.
 [Position](): Returns the touch position of the drag item from the screen coordinates.
 
 ## Auto scroll options
