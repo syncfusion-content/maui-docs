@@ -231,7 +231,7 @@ void dataGrid_PasteCellContent(object sender, DataGridCopyPasteCellEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-The example below changes the clipboard value to "Test" instead of the clipboard value "Welli":
+The example below changes the clipboard value to "Test" instead of the clipboard value "Linod":
 
 {% tabs %}
 {% highlight c# %}
