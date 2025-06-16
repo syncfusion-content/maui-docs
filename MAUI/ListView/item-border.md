@@ -22,8 +22,8 @@ The `SfListView` allows applying borders to each item by setting the `ShowItemBo
 | `ShowItemBorder` | `bool` | Enables or disables the visibility of item borders. *(Default: false)* |
 | `ItemBorderColor` | `Color` | Sets the color of the item border. |
 | `ItemBorderThickness` | `Thickness` | Defines the border thickness for each side of the item. |
-| `ItemBorderMargin` | `Thickness` | Sets the margin around the border within the item container. |
-| `ItemBorderRadius` | `CornerRadius` | Sets the corner radius of the item border for rounded edges. |
+| `ItemBorderMargin` | `Thickness` | Sets the margin around the border within the item. |
+| `ItemBorderRadius` | `CornerRadius` | Sets the corner radius of the item border. |
 
 N> `ItemBorderRadius` is applicable only when `ItemBorderThickness` has uniform values on all sides.
 
@@ -34,8 +34,9 @@ N> `ItemBorderRadius` is applicable only when `ItemBorderThickness` has uniform 
                        ItemsSource="{Binding BookInfo}">
     <syncfusion:SfListView.ItemTemplate>
         <DataTemplate>
-            <StackLayout Padding="10">
-                <Label Text="{Binding BookName}" />
+            <StackLayout Padding="5">
+                <Label Text="{Binding BookName}" FontAttributes="Bold" />
+                <Label Text="{Binding BookDescription}" />
             </StackLayout>
         </DataTemplate>
     </syncfusion:SfListView.ItemTemplate>
@@ -61,16 +62,18 @@ After enabling the item border, you can customize its appearance using the follo
 {% tabs %}
 {% highlight xml tabtitle="MainPage.xaml" hl_lines="3 4 5 6" %}
 <syncfusion:SfListView x:Name="listView"
+                       ItemSize="60"
                        ShowItemBorder="True"
                        ItemBorderColor="Black"
                        ItemBorderThickness="2"
-                       ItemBorderMargin="2"
+                       ItemBorderMargin="5,2,5,2"
                        ItemBorderRadius="20,0,0,20"
                        ItemsSource="{Binding BookInfo}">
     <syncfusion:SfListView.ItemTemplate>
         <DataTemplate>
-            <StackLayout Padding="10">
-                <Label Text="{Binding BookName}" />
+            <StackLayout Padding="5">
+                <Label Text="{Binding BookName}" FontAttributes="Bold" />
+                <Label Text="{Binding BookDescription}" />
             </StackLayout>
         </DataTemplate>
     </syncfusion:SfListView.ItemTemplate>
