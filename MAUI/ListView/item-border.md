@@ -27,10 +27,6 @@ The `SfListView` allows applying borders to each item by setting the `ShowItemBo
 
 N> `ItemBorderRadius` is applicable only when `ItemBorderThickness` has uniform values on all sides.
 
-## Getting Started with Border
-
-To enable border support for items in `SfListView`, set the `ShowItemBorder` property to `true`. This enables border rendering around each item using default values.
-
 {% tabs %}
 {% highlight xml tabtitle="MainPage.xaml" hl_lines="2" %}
 <syncfusion:SfListView x:Name="listView"
@@ -51,9 +47,7 @@ listView.ShowItemBorder = true;
 {% endhighlight %}
 {% endtabs %}
 
-Once this property is enabled, borders will be drawn with default appearance unless customized further.
-
-![MAUI ListView Border Example](Images/item-border/maui-listview-item-border-example.png)
+![MAUI ListView Border Example](Images/item-border/maui-listview-item-border-example.jpg)
 
 ## Border Customization
 
@@ -62,7 +56,7 @@ After enabling the item border, you can customize its appearance using the follo
 - `ItemBorderColor`: Sets the border color.
 - `ItemBorderThickness`: Specifies the thickness of the border.
 - `ItemBorderMargin`: Adds margin around the border.
-- `ItemBorderRadius`: Rounds the item’s corners.
+- `ItemBorderRadius`: Sets the corner radius of the  border.
 
 {% tabs %}
 {% highlight xml tabtitle="MainPage.xaml" hl_lines="3 4 5 6" %}
@@ -92,23 +86,12 @@ listView.ItemBorderRadius = new CornerRadius(20,0,0,20);
 {% endhighlight %}
 {% endtabs %}
 
-This setup displays each item with a black, 2-unit thick border, spaced 2 units inward, and corners with a radius of 20 at TopLeft and BottomRight of the item.
-
-![MAUI ListView Border Example](Images/item-border/maui-listview-border-customization.png)
-
-## Border Customization Tips
-
-- Use `ItemBorderRadius` to rounded corners and soften the visual look.
-- Borders are drawn inside the item layout bounds and honor the padding and margin applied to the item.
-- Keep border thickness and color subtle for better UX across platforms.
+![MAUI ListView Border Example](Images/item-border/maui-listview-border-customization.jpg)
 
 ## Limitations
 
-- Item border is not applicable when using a Grid layout inside the ItemTemplate.
-- Item border will not be visible unless `ShowItemBorder` is explicitly set to `true`.
-- When `ShowItemBorder` is set to `true`, the Focus Border will reuse the item border and will not be drawn separately.
-- Only applies to items. Does not apply to headers, group headers, or footers.
-- Per-item border customization via data binding is not supported.
+- Item borders are not supported when ItemsLayout is set to GridLayout.
+- `ItemBorderRadius` is applicable only when `ItemBorderThickness` has uniform values on all sides.
 
 ## See Also
 
