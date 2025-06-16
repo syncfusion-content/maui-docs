@@ -231,13 +231,13 @@ void dataGrid_PasteCellContent(object sender, DataGridCopyPasteCellEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-The example below changes the clipboard value to "Test" instead of the clipboard value "Linod":
+The example below changes the clipboard value to "Test" instead of the clipboard value "Lino":
 
 {% tabs %}
 {% highlight c# %}
 void dataGrid_PasteCellContent(object sender, DataGridCopyPasteCellEventArgs e)
 {
-    if (e.Column.MappingName == "CustomerID" && (e.RowData as OrderInfo).CustomerID == "Linod")
+    if (e.Column.MappingName == "CustomerID" && (e.RowData as OrderInfo).CustomerID == "Lino")
         e.ClipBoardValue = "Test";
 }
 {% endhighlight %}
