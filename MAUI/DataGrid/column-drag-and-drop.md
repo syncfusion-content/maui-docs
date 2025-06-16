@@ -205,19 +205,9 @@ The SfDataGrid allows customizing the drag view text and background color using 
 
 ### Column drag-and-drop template
 
-The SfDataGrid allows you to load specific content during column drag-and-drop operations using the [SfDataGrid.ColumnDragDropTemplate](). This template can be defined either in code or XAML.
+The SfDataGrid allows you to load specific content into the column drag-and-drop template using the [SfDataGrid.ColumnDragDropTemplate](). The content can be provided through either a DataTemplate or a DataTemplateSelector.
 
-### Default template
-
-The default template will be used for column drag-and-drop operations unless another template is explicitly assigned.
-
-<img alt="default column drag and drop" src="Images\column-drag-and-drop\maui-datagrid-column-drag-and-drop-default.gif" width="404"/>
-
-### Customizing column drag-and-drop template
-
-Any type of custom view can be loaded inside the [SfDataGrid.ColumnDragDropTemplate]().
-
-Please refer to the following code example that demonstrates how to load a view in a template:
+The following code snippet demonstrates how to load a data template into the column drag-and-drop view:
 
 {% tabs %}
 {% highlight xaml %}
