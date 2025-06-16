@@ -5,15 +5,15 @@ description: Learn here all about Clipboard Operations support in Syncfusion® M
 platform: MAUI
 control: SfDataGrid
 documentation: ug
-keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui clipboard operations, maui maui clipboard operations
+keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui clipboard operations, Copy to clipboard, Cut to clipboard and Paste to clipboard
 ---
 
 
 # Clipboard Operations in Maui DataGrid (SfDataGrid)
 
-The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.html) provide support for the clipboard operations such as cut, copy and paste the data within control and between other applications such as Notepad, Excel. Clipboard operations for copy and paste are enabled by default.. You can copy selected records/cells from SfDataGrid by pressing <kbd>Ctrl+C</kbd> and also can paste the content from [Clipboard](https://learn.microsoft.com/en-us/dotnet/api/system.windows.clipboard?view=windowsdesktop-7.0&viewFallbackFrom=net-5.0) to SfDataGrid by pressing <kbd>Ctrl+V</kbd>.
+The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.html) provides support for clipboard operations such as cut, copy, and paste data within the control and between other applications such as Notepad and Excel. Clipboard operations for copy and paste are enabled by default. You can copy selected records/cells from SfDataGrid by pressing  <kbd>Ctrl+C</kbd> and paste the content from [Clipboard](https://learn.microsoft.com/en-us/dotnet/api/system.windows.clipboard?view=windowsdesktop-7.0&viewFallbackFrom=net-5.0) to SfDataGrid by pressing <kbd>Ctrl+V</kbd>.
 
-N> Clipboard operations are not supported for the summary rows, add new row and unbound rows.To enable paste and cut operations, the properties should be nullable and must implement INotifyPropertyChanged to ensure the user interface updates correctly when changes occur.
+N> Clipboard operations are not supported for summary rows, add new row, and unbound rows.To enable paste and cut operations, the properties should be nullable and must implement INotifyPropertyChanged to ensure the user interface updates correctly when changes occur.
 
 ## Copy to Clipboard in DataGrid
 
@@ -27,11 +27,11 @@ Copy operations work based on the `CopyOption` property.
 
 * IncludeHeaders – Column header is also copied along with data.
  
-* IncludeFormat – Copies the display text with format instead of actual value.
+* IncludeFormat – Copies the display text with format instead of the actual value.
  
-* IncludeHiddenColumn – Hidden column are also copied to clipboard.
+* IncludeHiddenColumn – Hidden columns are also copied to clipboard.
  
-You need to use `IncludeHeaders`, `IncludeFormat`, `IncludeHiddenColumn` options along with `CopyData` option.
+You need to use `IncludeHeaders`, `IncludeFormat`, `IncludeHiddenColumn` options along with the `CopyData` option.
 
 {% tabs %}
 {% highlight xaml %}
@@ -65,7 +65,7 @@ Paste operations work based on the `PasteOption` property.
  
 * IncludeHiddenColumn – Paste values into hidden columns as well.
 
-You need to use `ExcludeFirstLine`, `IncludeHiddenColumn` options along with the `PasteData` option.
+You need to use `ExcludeFirstLine` and `IncludeHiddenColumn` options along with the `PasteData` option.
 
 {% tabs %}
 {% highlight xaml %}
@@ -96,11 +96,11 @@ Cut operations work based on the `CopyOption` property.The cut operation works o
 
 * IncludeHeaders – Column header is also copied along with data.
  
-* IncludeFormat – Cuts the display text with format instead of actual value.
+* IncludeFormat – Cuts the display text with format instead of the actual value.
  
 * IncludeHiddenColumn – Hidden columns are also cut to clipboard.
  
-You need to use `IncludeHeaders`, `IncludeFormat`, `IncludeHiddenColumn` options along with the `CutData` option.
+You need to use `IncludeHeaders`, `IncludeFormat` and `IncludeHiddenColumn` options along with the `CutData` option.
 
 {% tabs %}
 {% highlight xaml %}
@@ -142,7 +142,7 @@ void dataGrid_CopyContent(object sender, DataGridCopyPasteEventArgs e)
 
 ### PasteContent
 
-The `PasteContent` event occurs when paste the clipboard value into SfDataGrid.`DataGridCopyPasteEventArgs` provides information for the `PasteContent` event. You can cancel the paste operation by handling this event.
+The `PasteContent` event occurs when pasting clipboard values into SfDataGrid.`DataGridCopyPasteEventArgs` provides information for the `PasteContent` event. You can cancel the paste operation by handling this event.
 
 {% tabs %}
 {% highlight c# %}
@@ -161,7 +161,7 @@ void dataGrid_PasteContent(object sender, DataGridCopyPasteEventArgs e)
 
 ### CopyCellContent
 
-The `CopyCellContent` event occurs when a cell is being copied or cut. `DataGridCopyPasteCellEventArgs` provides information for the `CopyCellContent` event, which has following members:
+The `CopyCellContent` event occurs when a cell is being copied or cut. `DataGridCopyPasteCellEventArgs` provides information for the `CopyCellContent` event, which has the following members:
 
 * ClipBoardValue – Returns cell value.
 
@@ -231,7 +231,7 @@ void dataGrid_PasteCellContent(object sender, DataGridCopyPasteCellEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-The example below changes the clipboard value to "Test" instead of the clipboard value "BOLID":
+The example below changes the clipboard value to "Test" instead of the clipboard value "Welli":
 
 {% tabs %}
 {% highlight c# %}

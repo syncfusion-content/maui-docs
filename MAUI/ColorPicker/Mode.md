@@ -12,7 +12,7 @@ keywords : .net maui color picker, maui color picker, .net maui color picker con
 
 ## Rendering palette at initial load
 
-The `ColorMode` property determines the interface used to select a color. To display the palette area when the Color Picker pop-up is opened, set the `ColorMode` property to `Palette`. By default, it is configured as `Spectrum`.
+To display the Color Picker in palette mode, I set its `ColorMode` property to `Palette`. By default, it is configured as `Spectrum`.
 
 {% tabs %}
 
@@ -35,15 +35,15 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 ![Palette](Images/Mode/Palette.png)
 
-## Selected color
+## Switch color mode visibility
 
-The `SelectedColor` property of the Color Picker is used to display a default color during initial load. You can also select a color value in the UI using built-in elements like the color spectrum, sliders, palette, or HEX input.
+Disable the mode switcher UI by setting the `IsColorModeSwitcherVisible` property to `False`. By default, it is set to `True`, which allows users to switch between different color modes.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<inputs:SfColorPicker SelectedColor="DodgerBlue"/>       
+<inputs:SfColorPicker ColorMode="Palette" IsColorModeSwitcherVisible="False"/>
 
 {% endhighlight %}
 
@@ -51,11 +51,12 @@ The `SelectedColor` property of the Color Picker is used to display a default co
 
 SfColorPicker colorPicker = new SfColorPicker()
 {
-    SelectedColor = Colors.DodgerBlue
+    ColorMode = ColorPickerMode.Palette,
+    IsColorModeSwitcherVisible = false
 };
- 
+    
 {% endhighlight %}
 
 {% endtabs %}
 
-![SelectedColor](Images/Mode/SelectedColor.png)
+![Color mode](Images/Customization/HideSwitchColorMode.png)

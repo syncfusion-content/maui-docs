@@ -305,4 +305,4 @@ namespace ColorPickerSample
 
 The following gif image illustrates the result of the above code.
 
-![.NET MAUI Color Picker.](Images/Overview/Spectrum.png){:width="524" height="681" loading="lazy"}
+![.NET MAUI Color Picker.](Images/Overview/ColorPicker.gif){:width="420" height="574" loading="lazy"}
