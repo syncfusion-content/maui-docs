@@ -1555,3 +1555,308 @@ In the provided code example, we've set up a custom template to display a securi
 ![Sytem generated message in .NET MAUI Chat](images/messages/maui-chat-system-generated-custom-message-template.png)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/system-generated-message-template-.net-maui-chat)
+
+## Message Delivery States
+The `SfChat` provides built-in support for displaying message delivery states such as sent, delivered, read, and failed. This feature enhances communication transparency by showing the current status of each message.
+
+### ShowDeliveryState
+The `ShowDeliveryState` property determines whether delivery state indicators are displayed for messages. By default, this property is set to false.
+
+### DeliveryState
+The `DeliveryState` property sets the current delivery status of a specific message. This property is available in the TextMessage class.
+
+The following delivery states are available:
+
+- `None` - No delivery indicator is shown
+- `Sent` - Message has been sent from the device
+- `Delivered` - Message has been delivered to the recipient's device
+- `Read` - Message has been read by the recipient
+- `Failed` - Message failed to deliver
+
+{% tabs %}
+{% highlight c# tabtitle="ViewModel.cs" %}
+
+public class ChatViewModel : INotifyPropertyChanged
+{
+    #region Fields
+
+    /// <summary>
+    /// Current User of Chat
+    /// </summary>
+    private Author currentUser;
+
+    /// <summary>
+    /// Collection of messages in a conversation.
+    /// </summary>
+    private ObservableCollection<object> messages;
+
+    #endregion
+
+    #region Constructor
+    public ChatViewModel()
+    {
+        this.messages = new ObservableCollection<object>();
+        this.currentUser = new Author() { Name = "Nancy" };
+        this.SendMessageCommand = new Command<object>(ExecuteSendMessageCommand);
+        this.GenerateMessages();
+    }
+
+    #endregion
+
+    #region Properties
+
+    /// <summary>
+    /// Gets or sets the current user of the message.
+    /// </summary>
+    public Author CurrentUser
+    {
+        get
+        {
+            return currentUser;
+        }
+        set
+        {
+            currentUser = value;
+            RaisePropertyChanged(nameof(CurrentUser));
+        }
+     }
+
+    /// <summary>
+    /// Gets or sets the collection of messages of a conversation.
+    /// </summary>
+    public ObservableCollection<object> Messages
+    {
+        get
+        {
+            return messages;
+        }
+        set
+        {
+            messages = value;
+            RaisePropertyChanged(nameof(Messages));
+        }
+    }
+
+    /// <summary>
+    /// Gets or sets the command used to send a message in the chat.
+    /// </summary>
+    public ICommand SendMessageCommand { get; set; }
+
+    #endregion
+
+    /// <summary>
+    /// Property changed handler.
+    /// </summary>
+    public event PropertyChangedEventHandler? PropertyChanged;
+
+    #region Private Methods
+
+    /// <summary>
+    /// Occurs when property is changed.
+    /// </summary>
+    /// <param name="propertyName">changed property name</param>
+    private void RaisePropertyChanged(string propertyName)
+    {
+        if(PropertyChanged != null)
+        {
+            PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+        }
+    }
+
+    /// <summary>
+    /// Generates the messages and adds them to the messages collection.
+    /// </summary>
+    private async void GenerateMessages()
+    {
+        var initialMessage = new TextMessage
+        {
+            Author = currentUser,
+            Text = "Hi guys, good morning! I'm very delighted to share with you the news that our team is going to launch a new mobile application.",
+            DeliveryState = Syncfusion.Maui.Chat.DeliveryStates.Sent,
+        };
+        messages.Add(initialMessage);
+        UpdateDeliveryStatesIfCurrentUser(initialMessage);
+
+        var responses = new[]
+        {
+            new TextMessage
+            {
+                Author = new Author { Name = "Andrea", Avatar = "peoplecircle16.png" },
+                Text = "Oh! That's great."
+            },
+            new TextMessage
+            {
+                Author = new Author { Name = "Harrison", Avatar = "peoplecircle14.png" },
+                Text = "That is good news."
+            }
+        };
+
+        foreach (var response in responses)
+        {
+            await Task.Delay(2000).ConfigureAwait(true);
+            messages.Add(response);
+        }
+    }
+
+    /// <summary>
+    /// Handles the send message command by updating the delivery state of the sent message to <see cref="Syncfusion.Maui.Chat.DeliveryStates.Sent"/>.
+    /// </summary>
+    /// <param name="sender">
+    /// The command sender, expected to be of type <see cref="SendMessageEventArgs"/> containing the message to update.
+    /// </param>
+    private void ExecuteSendMessageCommand(object sender)
+    {
+        if (sender is SendMessageEventArgs eventArgs && eventArgs.Message is TextMessage message)
+        {
+            message.DeliveryState = Syncfusion.Maui.Chat.DeliveryStates.Sent;
+            UpdateDeliveryStatesIfCurrentUser(message);
+        }
+    }
+
+    /// <summary>
+    /// Asynchronously updates the delivery state of a message if the specified author is the current user.
+    /// The delivery state transitions through Sent, Delivered, and Read, each after a delay,
+    /// simulating the typical message delivery process in chat applications.
+    /// </summary>
+    /// <param name="messageObj">The message object to update. Must be of type <see cref="TextMessage"/>.</param>
+    /// <returns>A task that represents the asynchronous operation.</returns>
+    private async void UpdateDeliveryStatesIfCurrentUser(TextMessage messageObj)
+    {
+        if (messageObj.Author == CurrentUser)
+        {
+            await Task.Delay(2000).ConfigureAwait(true);
+            messageObj.DeliveryState = Syncfusion.Maui.Chat.DeliveryStates.Delivered;
+            await Task.Delay(2000).ConfigureAwait(true);
+            messageObj.DeliveryState = Syncfusion.Maui.Chat.DeliveryStates.Read;
+        }
+    }
+
+    #endregion
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight xaml hl_lines="17" %}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+             xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             xmlns:local="clr-namespace:MauiChat"
+             x:Class="MauiChat.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:ChatViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <sfChat:SfChat x:Name="sfChat"
+                Messages="{Binding Messages}"
+                CurrentUser="{Binding CurrentUser}"
+                SendMessageCommand="{Binding SendMessageCommand}"
+                ShowDeliveryState="True"/>
+    </ContentPage.Content>
+
+</ContentPage>
+
+{% endhighlight %}
+{% highlight c# hl_lines="16" %}
+
+using Syncfusion.Maui.Chat;
+
+namespace MauiChat
+{
+    public partial class MainPage : ContentPage
+    {
+        SfChat sfChat;
+        ViewModel viewModel;
+        public MainPage()
+        {
+            InitializeComponent();
+            this.sfChat = new SfChat();
+            this.viewModel = new ViewModel();
+            this.sfChat.Messages = viewModel.Messages;
+            this.sfChat.CurrentUser = viewModel.CurrentUser;
+            this.sfChat.ShowDeliveryState = true;
+            this.Content = sfChat;
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![DeliveryState in .NET MAUI Chat](Images/messages/maui-chat-delivery-state.gif)
+
+### Customizing Delivery State Icons
+The `SfChat` control allows assigning custom icon values for each Delivery State.
+The following API is used to define the icon for each delivery state.
+- `SentIcon` - Sets a custom image for the sent state indicator
+- `DeliveredIcon` - Sets a custom image for the delivered state indicator
+- `ReadIcon` - Sets a custom image for the read state indicator
+- `FailedIcon` - Sets a custom image for the failed state indicator
+
+{% tabs %}
+{% highlight xaml hl_lines="19 20 21 22" %}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+             xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             xmlns:local="clr-namespace:DeliveryStates"
+             x:Class="DeliveryStates.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:ChatViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <sfChat:SfChat x:Name="sfChat"
+                Messages="{Binding Messages}"
+                CurrentUser="{Binding CurrentUser}"
+                SendMessageCommand="{Binding SendMessageCommand}"
+                ShowDeliveryState="True"
+                FailedIcon="failedicon.png"
+                SentIcon="senticon.png"
+                DeliveredIcon="deliveredicon.png"
+                ReadIcon="readicon.png"/>
+    </ContentPage.Content>
+
+</ContentPage>
+
+{% endhighlight %}
+{% highlight c# hl_lines="17 18 19 20" %}
+
+using Syncfusion.Maui.Chat;
+
+namespace MauiChat
+{
+    public partial class MainPage : ContentPage
+    {
+        SfChat sfChat;
+        ViewModel viewModel;
+        public MainPage()
+        {
+            InitializeComponent();
+            this.sfChat = new SfChat();
+            this.viewModel = new ViewModel();
+            this.sfChat.Messages = viewModel.Messages;
+            this.sfChat.CurrentUser = viewModel.CurrentUser;
+            this.sfChat.ShowDeliveryState = true;
+            sfChat.FailedIcon = "failedicon.png";
+            sfChat.SentIcon = "senticon.png";
+            sfChat.DeliveredIcon = "deliveredicon.png";
+            sfChat.ReadIcon = "readicon.png";
+            this.Content = sfChat;
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![DeliveryState Customization in .NET MAUI Chat](Images/messages/maui-chat-delivery-state-customization.png)
