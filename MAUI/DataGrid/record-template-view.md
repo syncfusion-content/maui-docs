@@ -30,8 +30,13 @@ You can bind the row data using the `Data.PropertyName` (where Data is the under
                        ItemsSource="{Binding Employees}">
     <syncfusion:SfDataGrid.DetailsViewDefinition>
         <syncfusion:TemplateViewDefinition  x:Name="Template"
-                                            RowTemplate="{StaticResource DetailsViewTemplate}"
-                                            HeightMode="Auto" />
+                                            HeightMode="Auto">
+            <syncfusion:TemplateViewDefinition.RowTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding Data.Name}" />
+                </DataTemplate>
+            </syncfusion:TemplateViewDefinition.RowTemplate>
+        </syncfusion:TemplateViewDefinition>
     </syncfusion:SfDataGrid.DetailsViewDefinition>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
@@ -243,7 +248,7 @@ Arranges template for the specified height in {{'[TemplateViewDefinition.Height]
 </tr>
 <tr>
 <td>
-<code>ViewPort</code>
+<code>ViewportHeight</code>
 </td>
 <td>
 Arranges template for the <code>ViewPortHeight</code> when the {{`RowTemplate`'| markdownify}} actual height is greater than <code>ViewPortHeight</code>.
@@ -317,7 +322,7 @@ this.dataGrid.CollapseDetailsViewAt(1);
 
 ### DetailsViewExpanding
 
-The [DetailsViewExpanding]() event is raised when the `RowTemplate` is expanded by using an expander.
+The [DetailsViewExpanding]() event is raised when the `RowTemplate` is being expanded by using an expander.
 
 {% tabs %}
 {% highlight c# %}
@@ -345,7 +350,7 @@ void dataGrid_DetailsViewExpanded(object sender, DataGridDetailsViewExpandedEven
 
 ### DetailsViewCollapsing
 
-The [DetailsViewCollapsing]() event is raised when the `RowTemplate` is collapsed by using an expander.
+The [DetailsViewCollapsing]() event is raised when the `RowTemplate` is being collapsed by using an expander.
 
 {% tabs %}
 {% highlight c# %}
