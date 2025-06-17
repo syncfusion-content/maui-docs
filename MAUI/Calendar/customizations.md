@@ -652,7 +652,7 @@ this.calendar.View = CalendarView.Decade;
 
 ## Selection cell appearance on month view using DataTemplate
 
-The `SfCalendar` provides the [SelectionCellTemplate]() property to customize the appearance of selected date cells in the MonthView. This property is of type DataTemplate and allows you to define a custom layout specifically for the selected cell.
+The `SfCalendar` provides the [SelectionCellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionCellTemplate) property to customize the appearance of selected date cells in the MonthView. This property is of type DataTemplate and allows you to define a custom layout specifically for the selected cell.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -717,13 +717,11 @@ internal class SelectionCellTemplate
 ![Month View Selection Cell Template in .NET MAUI Calendar.](images/customization/net-maui-month-view-selection-cell-template.png)
 
 N>
-The `SelectionCellTemplate` is applicable only when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html?tabs=tabid-6%2Ctabid-12%2Ctabid-18%2Ctabid-50%2Ctabid-10%2Ctabid-8%2Ctabid-14%2Ctabid-4%2Ctabid-22%2Ctabid-26%2Ctabid-24%2Ctabid-16%2Ctabid-2%2Ctabid-20#Syncfusion_Maui_Calendar_SfCalendar_SelectionMode) is set to Single. It is not applied in Multiple or Range selection modes. You can customize the selection cell appearance using `DataTemplateSelector`.
-
+The `SelectionCellTemplate` is applicable only when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionMode) is set to Single. It is not applied in Multiple or Range selection modes. You can customize the selection cell appearance using `DataTemplateSelector`.
 
 ## Selection cell appearance on year view using DataTemplate
 
-The `SfCalendar` provides the [SelectionCellTemplate] property to customize the appearance of selected date cells in the YearView. This property is of type DataTemplate and allows you to define a custom layout for the selected cells in the YearView.
-
+The `SfCalendar` provides the [SelectionCellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionCellTemplate) property to customize the appearance of selected date cells in the YearView. This property is of type DataTemplate and allows you to define a custom layout for the selected cells in the YearView.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -788,4 +786,4 @@ internal class SelectionCellTemplate
 ![Decade View Selection Cell Template in .NET MAUI Calendar.](images/customization/net-maui-decade-view-selection-cell-template.png)
 
 N>
-The `SelectionCellTemplate` is applicable only when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html?tabs=tabid-6%2Ctabid-12%2Ctabid-18%2Ctabid-50%2Ctabid-10%2Ctabid-8%2Ctabid-14%2Ctabid-4%2Ctabid-22%2Ctabid-26%2Ctabid-24%2Ctabid-16%2Ctabid-2%2Ctabid-20#Syncfusion_Maui_Calendar_SfCalendar_SelectionMode) is set to Single and [AllowViewNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html?tabs=tabid-6%2Ctabid-12%2Ctabid-18%2Ctabid-50%2Ctabid-10%2Ctabid-8%2Ctabid-14%2Ctabid-4%2Ctabid-22%2Ctabid-26%2Ctabid-24%2Ctabid-16%2Ctabid-2%2Ctabid-20#Syncfusion_Maui_Calendar_SfCalendar_AllowViewNavigation) is false. It is not applied in Multiple or Range selection modes. You can customize the selection cell appearance using `DataTemplateSelector`.
+The `SelectionCellTemplate` is applicable only when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionMode) is set to Single and [AllowViewNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_AllowViewNavigation) is false. It is not applied in Multiple or Range selection modes. You can customize the selection cell appearance using `DataTemplateSelector`.

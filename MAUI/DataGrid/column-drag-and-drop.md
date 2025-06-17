@@ -203,6 +203,33 @@ The SfDataGrid allows customizing the drag view text and background color using 
 
 <img alt="DataGrid column drag view background and text color" src="Images\column-drag-and-drop\maui-datagrid-drag-view-background-and-text-color.png" width="450"/>
 
+### Column drag-and-drop template
+
+The SfDataGrid allows you to load specific content into the column drag-and-drop template using the [SfDataGrid.ColumnDragDropTemplate](). The content can be provided through either a DataTemplate or a DataTemplateSelector.
+
+The following code snippet demonstrates how to load a data template into the column drag-and-drop view:
+
+{% tabs %}
+{% highlight xaml %}
+
+<syncfusion:SfDataGrid>
+    <syncfusion:SfDataGrid.ColumnDragDropTemplate>
+        <DataTemplate>
+            <Grid BackgroundColor="LightBlue">
+                <Label  Text="Drag View"
+                        TextColor="Orange"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center" />
+            </Grid>
+        </DataTemplate>
+    </syncfusion:SfDataGrid.ColumnDragDropTemplate>
+</syncfusion:SfDataGrid>
+
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="Column drag and drop template" src="Images\column-drag-and-drop\maui-datagrid-column-drag-and-drop-template.gif" Width="404" />
+
 ## Cancel auto scrolling
 
 Auto-scrolling during column dragging can be disabled using the `CanAutoScroll` argument in the `QueryColumnDragging` event.
