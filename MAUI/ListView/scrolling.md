@@ -58,7 +58,7 @@ listView.ItemsLayout.ScrollToRowIndex(index, true);
 
 ## Scrollbar visibility
 
-The `SfListView` provides an option to enable or disable the `Scrollbar` visibilty by using the [ScrollBarVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ScrollBarVisibility) property. By default, the value will be `Default`
+The `SfListView` provides an option to enable or disable the `Scrollbar` visibility by using the [ScrollBarVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ScrollBarVisibility) property. By default, the value will be `Default`
 
 N> This API is only available for the `WinUI` platform.
 
