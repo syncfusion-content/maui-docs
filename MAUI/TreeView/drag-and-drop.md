@@ -141,7 +141,7 @@ treeView.DragItemTemplate = new DataTemplate(() =>
 {% endhighlight %}
 {% endtabs %}
 
-Download the sample from GitHub [here](https://github.com/SyncfusionExamples/how-to-customize-the-drag-item-view).
+Download the sample from GitHub [here]().
 
 ![Drag item view customization](Images/drag-and-drop/drag-view-customization.gif)
 
