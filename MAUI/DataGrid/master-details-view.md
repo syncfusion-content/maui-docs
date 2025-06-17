@@ -617,6 +617,33 @@ this.dataGrid.CollapseDetailsViewAt(0);
  {% endhighlight %}
 {% endtabs %}
 
+## Hiding expander when parent record's relational property has empty collection or null
+By default, the expander will be visible for all the data rows in parent DataGrid even if its [RelationalColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ViewDefinition.html#Syncfusion_Maui_DataGrid_ViewDefinition_RelationalColumn) property has an empty collection or null.
+
+Setting the [HideEmptyDataGridViewDefinition]() property to `true` will hide the expander from the view when the respective `RelationalColumn` property contains an empty collection or null.
+
+{% tabs %} {% highlight xaml %} <syncfusion:SfDataGrid x:Name="dataGrid" AutoGenerateRelations="False" ItemsSource="{Binding Employees}" HideEmptyDataGridViewDefinition="True"/>
+{% endhighlight %}
+
+{% highlight c# %} dataGrid.HideEmptyDataGridViewDefinition = true;
+{% endhighlight %} {% endtabs %}
+
+<img alt="Hiding-empty-DetailsView-DataGrid" src="Images/master-details-view/maui-datagrid-HideEmptyDataGridViewDefinition.png" width="404"/> 
+
+## Hiding DetailsViewIndentCell in details view DataGrid
+
+By default the indent cell of details view DataGrid is always displayed. You can hide the indent cell by setting [ShowDetailsViewIndentCell]() property to `false` for the corresponding parent DataGrid.
+
+The default value of `ShowDetailsViewIndentCell` property is `true`.
+
+{% tabs %} {% highlight xaml %} <syncfusion:SfDataGrid x:Name="dataGrid" AutoGenerateRelations="False" ItemsSource="{Binding Employees}" ShowDetailsViewIndentCell="False"/>
+{% endhighlight %}
+
+{% highlight c# %} dataGrid.ShowDetailsViewIndentCell = false;
+{% endhighlight %} {% endtabs %}
+
+<img alt="Hiding-DetailsView-IndentCell" src="Images/master-details-view/maui-datagrid-ShowDetailsViewIndentCell.png" width="404"/> 
+
 ## Handling Events
 
 ### DetailsViewLoading
