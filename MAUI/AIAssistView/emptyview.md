@@ -23,16 +23,8 @@ The `EmptyView` property can also be set to a string or a view , which will be d
 
    <syncfusion:SfAIAssistView x:Name="sfAIAssistView" 
                               ShowHeader="False" 
-                              AssistItems="{Binding AssistItems}">
-        <syncfusion:SfAIAssistView.EmptyView>
-           <Grid HorizontalOptions="Center" VerticalOptions="Center">
-               <Label Text="Hi, How can I help you!" 
-                      HorizontalOptions="Center" 
-                      Grid.Row="1" 
-                      FontFamily="Roboto-Regular"
-                      FontSize="20"/>
-           </Grid>
-        </syncfusion:SfAIAssistView.EmptyView>
+                              AssistItems="{Binding AssistItems}"
+                              EmptyView="Ask AI Anything">
     </syncfusion:SfAIAssistView>
 </ContentPage>
 {% endhighlight %}
@@ -47,25 +39,7 @@ public partial class MainPage : ContentPage
         sfAIAssistView = new SfAIAssistView();
         GettingStartedViewMode viewModel = new GettingStartedViewMode();  
         sfAIAssistView.AssistItems = viewModel.AssistItems;
-       
-        var emptyGrid = new Grid
-        {
-           HorizontalOptions = LayoutOptions.Center,
-           VerticalOptions = LayoutOptions.Center
-        };
-
-        var helpLabel = new Label
-        {
-            Text = "Hi, How can I help you!",
-            FontSize = 20,
-            FontFamily = "Roboto-Regular",
-            HorizontalOptions = LayoutOptions.Center
-        };
-      
-        Grid.SetRow(helpLabel, 1);
-        emptyGrid.Children.Add(helpLabel);
-
-        sfAIAssistView.EmptyView = emptyGrid;
+        sfAIAssistView.EmptyView = "Ask AI Anything";
         Content = sfAIAssistView;
    }
 }
