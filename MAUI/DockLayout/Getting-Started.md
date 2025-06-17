@@ -5,6 +5,7 @@ description: Learn how to get started with Syncfusion® .NET MAUI DockLayout (Sf
 platform: MAUI
 control: SfDockLayout
 documentation: ug
+keywords: .net maui docklayout, syncfusion docklayout maui, dock layout .net maui, .net maui layout panels, sfdocklayout example maui, .net maui layout control, layout docking .net maui, multi-region layout .net maui, .net maui docking layout
 ---
 
 # Getting Started with .NET MAUI DockLayout (SfDockLayout)
