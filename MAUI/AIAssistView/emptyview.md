@@ -8,7 +8,7 @@ documentation: ug
 
 # Empty view in .NET MAUI AI AssistView
 
-The `AI AssistView` control provides the functionality to display custom empty view content when no data is available. This feature is implemented using the following properties:
+The `AI AssistView` control allows you to display and customize the empty view content when no request or response has been added. This can be achieved using the following properties:
 
 * `EmptyView`: This property can be set to a simple string or a custom view and will be used when the `AI AssistView` has no items. The default value is `null`.
 * `EmptyViewTemplate`: This allows for customization of the appearance of the `EmptyView`. The default value is `null`.
@@ -18,7 +18,7 @@ The `AI AssistView` control provides the functionality to display custom empty v
 The `EmptyView` property can also be set to a string or a view , which will be displayed when the `AssistItems` property is null or the collection specified by the `AssistItems` property is empty.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView">
 
    <syncfusion:SfAIAssistView x:Name="sfAIAssistView" 
@@ -28,7 +28,7 @@ The `EmptyView` property can also be set to a string or a view , which will be d
     </syncfusion:SfAIAssistView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# %}
 public partial class MainPage : ContentPage
 {
     SfAIAssistView sfAIAssistView;
@@ -53,7 +53,7 @@ The `EmptyView` can be customized by using the `EmptyViewTemplate` property. Thi
 
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml %}
 
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView">
 
@@ -90,7 +90,7 @@ The `EmptyView` can be customized by using the `EmptyViewTemplate` property. Thi
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# %}
 
   public partial class MainPage : ContentPage
   {
@@ -171,4 +171,6 @@ The `EmptyView` can be customized by using the `EmptyViewTemplate` property. Thi
 
 ![EmptyView customization in .NET MAUI AI AssistView](Images/maui-aiassistview-emptyview-customization.png)
 
-N> EmptyView can be set to custom type and the appearance of the EmptyView can be customized by using the EmptyViewTemplate.
+N>
+* The EmptyViewTemplate will only be applied when the EmptyView property is explicitly defined. If EmptyView is not set, the template will not be displayed.
+* EmptyView can be set to custom type and the appearance of the EmptyView can be customized by using the EmptyViewTemplate.
