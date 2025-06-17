@@ -622,11 +622,18 @@ By default, the expander will be visible for all the data rows in parent DataGri
 
 Setting the [HideEmptyDataGridViewDefinition]() property to `true` will hide the expander from the view when the respective `RelationalColumn` property contains an empty collection or null.
 
-{% tabs %} {% highlight xaml %} <syncfusion:SfDataGrid x:Name="dataGrid" AutoGenerateRelations="False" ItemsSource="{Binding Employees}" HideEmptyDataGridViewDefinition="True"/>
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                        AutoGenerateRelations="False"
+                        ItemsSource="{Binding Employees}"
+                        HideEmptyDataGridViewDefinition="True">
+</syncfusion:SfDataGrid>
 {% endhighlight %}
-
-{% highlight c# %} dataGrid.HideEmptyDataGridViewDefinition = true;
-{% endhighlight %} {% endtabs %}
+{% highlight c# %}
+dataGrid.HideEmptyDataGridViewDefinition = true;
+{% endhighlight %}
+{% endtabs %}
 
 <img alt="Hiding-empty-DetailsView-DataGrid" src="Images/master-details-view/maui-datagrid-HideEmptyDataGridViewDefinition.png" width="404"/> 
 
@@ -636,11 +643,18 @@ By default the indent cell of details view DataGrid is always displayed. You can
 
 The default value of `ShowDetailsViewIndentCell` property is `true`.
 
-{% tabs %} {% highlight xaml %} <syncfusion:SfDataGrid x:Name="dataGrid" AutoGenerateRelations="False" ItemsSource="{Binding Employees}" ShowDetailsViewIndentCell="False"/>
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                        AutoGenerateRelations="False"
+                        ItemsSource="{Binding Employees}"
+                        ShowDetailsViewIndentCell="False">
+</syncfusion:SfDataGrid>
 {% endhighlight %}
-
-{% highlight c# %} dataGrid.ShowDetailsViewIndentCell = false;
-{% endhighlight %} {% endtabs %}
+{% highlight c# %}
+dataGrid.ShowDetailsViewIndentCell = false;
+{% endhighlight %}
+{% endtabs %}
 
 <img alt="Hiding-DetailsView-IndentCell" src="Images/master-details-view/maui-datagrid-ShowDetailsViewIndentCell.png" width="404"/> 
 
