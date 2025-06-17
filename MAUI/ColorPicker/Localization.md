@@ -28,7 +28,7 @@ public partial class App : Application
 	{
 		InitializeComponent();
 		CultureInfo.CurrentUICulture = new CultureInfo("fr-FR");
-      //// ResXPath => Full path of the resx file; For example : //SfColorPickerResources.ResourceManager = new ResourceManager
+      // ResXPath => Full path of the resx file; For example : //SfColorPickerResources.ResourceManager = new ResourceManager
       // ("ColorPickerLocalization.Resources.SfColorPicker", Application.Current.GetType().Assembly);
 
 		SfColorPickerResources.ResourceManager = new ResourceManager(ResXPath, Application.Current.GetType().Assembly);
