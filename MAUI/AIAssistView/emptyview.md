@@ -37,7 +37,7 @@ public partial class MainPage : ContentPage
     { 
         InitializeComponent();
         sfAIAssistView = new SfAIAssistView();
-        GettingStartedViewMode viewModel = new GettingStartedViewMode();  
+        GettingStartedViewModel viewModel = new GettingStartedViewModel();  
         sfAIAssistView.AssistItems = viewModel.AssistItems;
         sfAIAssistView.EmptyView = "Ask AI Anything";
         Content = sfAIAssistView;
@@ -167,5 +167,8 @@ The `EmptyView` can be customized by using the `EmptyViewTemplate` property. Thi
 
 {% endhighlight %}
 {% endtabs %}
+
+
+![EmptyView customization in .NET MAUI AI AssistView](Images/maui-aiassistview-emptyview-customization.png)
 
 N> EmptyView can be set to custom type and the appearance of the EmptyView can be customized by using the EmptyViewTemplate.
