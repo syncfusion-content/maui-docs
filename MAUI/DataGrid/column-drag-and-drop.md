@@ -230,10 +230,6 @@ The following code snippet demonstrates how to load a data template into the col
 
 <img alt="Column drag and drop template" src="Images\column-drag-and-drop\maui-datagrid-column-drag-and-drop-template.gif" Width="404" />
 
-
-N> You can customize the width and height of the column drag view by setting the WidthRequest and HeightRequest properties on the parent layout element (such as a Grid) inside the ColumnDragDropTemplate.
-
-
 ## Cancel auto scrolling
 
 Auto-scrolling during column dragging can be disabled using the `CanAutoScroll` argument in the `QueryColumnDragging` event.
