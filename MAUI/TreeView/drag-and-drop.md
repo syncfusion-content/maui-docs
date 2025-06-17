@@ -27,6 +27,16 @@ While dropping, the dragged items can be added above or below to the target item
 
 N> The drag and drop operation is not supported when Load on Demand is enabled.
 
+### Invalid Drop Label
+
+An "Invalid drop" label is shown when the following conditions are met:
+
+`Drop As Child into Same Node:` The label appears if you attempt to drop an item as a child of the same node.
+
+`Incompatible Child Node Type:` When trying to drop an item as a child where the target node's child and the dragged item's types are incompatible.
+
+`Drop Below or Above with Different Type:` If attempting to drop an item below or above another node where the parent node's existing child's type is different from the dragged item's type.
+
 ## Dragging multiple items
 
 `SfTreeView` allows to drag multiple selected items. To enable multiple selection, set the [SfTreeView.SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectionMode) as `Multiple` or `Extended`.
