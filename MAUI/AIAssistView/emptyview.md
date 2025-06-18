@@ -1,7 +1,7 @@
 ---
 layout: post
 title: EmptyView in .NET MAUI AI AssistView control | Syncfusion
-description: Learn here all about EmptyView support in Syncfusion .NET MAUI AI AssistView control and more.
+description: Learn here all about EmptyView support in Syncfusion .NET MAUI AI AssistView (SfAIAssistView) control and more.
 control: AI AssistView
 documentation: ug
 ---
