@@ -12,7 +12,7 @@ The [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.Sf
 
 {% tabs %}
 {% highlight xaml hl_lines="4"%}
-<ContentPage  xmlns:treeView="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
+<ContentPage xmlns:treeView="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
   <syncfusion:SfTreeView x:Name="treeView" 
                          ItemsSource="{Binding Folders}"
                          AllowDragging="True" />
@@ -31,11 +31,11 @@ N> The drag and drop operation is not supported when Load on Demand is enabled.
 
 An "Invalid drop" label is shown when the following conditions are met:
 
-`Drop As Child into Same Node:` The label appears if you attempt to drop an item as a child of the same node.
+`Drop As Child into Same Node`: The label appears if you attempt to drop an item as a child of the same node.
 
-`Incompatible Child Node Type:` When trying to drop an item as a child where the target node's child and the dragged item's types are incompatible.
+`Incompatible Child Node Type`: When trying to drop an item as a child where the target node's child and the dragged item's types are incompatible.
 
-`Drop Below or Above with Different Type:` If attempting to drop an item below or above another node where the parent node's existing child's type is different from the dragged item's type.
+`Drop Below or Above with Different Type`: If attempting to drop an item below or above another node where the parent node's existing child's type is different from the dragged item's type.
 
 ## Dragging multiple items
 
@@ -47,7 +47,7 @@ By defining the [SfTreeView.DragItemTemplate]() property of the `SfTreeView`, yo
 
 {% tabs %}
 {% highlight xaml hl_lines="5"%}
-<ContentPage  xmlns:treeView="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
+<ContentPage xmlns:treeView="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
   <syncfusion:SfTreeView x:Name="treeView" 
                          ItemsSource="{Binding Folders}"
                          AllowDragging="True" >
@@ -202,7 +202,7 @@ To enable auto-expanding of nodes when dragging items over them, set the [CanAut
 
 {% tabs %}
 {% highlight xaml hl_lines="5"%}
-<ContentPage  xmlns:treeView="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
+<ContentPage xmlns:treeView="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
   <treeView:SfTreeView x:Name="treeView" 
                        ItemsSource="{Binding Folders}"
                        AllowDragging="True">
@@ -225,7 +225,7 @@ To set the delay for auto-expanding nodes, use the [AutoExpandDelay]() property.
 
 {% tabs %}
 {% highlight xaml hl_lines="5"%}
-<ContentPage  xmlns:treeView="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
+<ContentPage xmlns:treeView="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
   <treeView:SfTreeView x:Name="treeView" 
                        ItemsSource="{Binding Folders}"
                        AllowDragging="True">
