@@ -10,29 +10,24 @@ documentation: ug
 
 The `AI AssistView` control allows you to display and customize the empty view content when no request or response has been added. This can be achieved using the following properties:
 
-* `EmptyView`: This property can be set to a simple string or a custom view and will be used when the `AI AssistView` has no items. The default value is `null`.
-* `EmptyViewTemplate`: This allows for customization of the appearance of the `EmptyView`. The default value is `null`.
-
-## Display views when AI AssistView has no items
+## Display empty view when AI AssistView has no items
 
 The `EmptyView` property can also be set to a string or a view, which will be displayed when no request or response is available to display in the control.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml hl_lines="5" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView">
 
-   <syncfusion:SfAIAssistView x:Name="sfAIAssistView" 
-                              ShowHeader="False" 
+   <syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
                               AssistItems="{Binding AssistItems}"
                               EmptyView="Ask AI Anything">
     </syncfusion:SfAIAssistView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# hl_lines="10" %}
 public partial class MainPage : ContentPage
 {
     SfAIAssistView sfAIAssistView;
-
     public MainPage()
     { 
         InitializeComponent();
@@ -49,16 +44,14 @@ public partial class MainPage : ContentPage
 
 ## EmptyView Customization
 
-The `EmptyView` can be customized by using the `EmptyViewTemplate` property. This property allows you to define a custom layout and style for the `EmptyView`.
-
+The `SfAIAssistView` control allows you to fully customize the empty view appearance by using the `EmptyViewTemplate` property. This property lets you define a custom layout and style for the `EmptyView`.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml hl_lines="5 6" %}
 
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView">
 
  <syncfusion:SfAIAssistView x:Name="sfAIAssistView" 
-                         ShowHeader="False" 
                          AssistItems="{Binding AssistItems}"
                          EmptyView="No Items">
      <syncfusion:SfAIAssistView.EmptyViewTemplate>
@@ -86,30 +79,30 @@ The `EmptyView` can be customized by using the `EmptyViewTemplate` property. Thi
          </DataTemplate>
      </syncfusion:SfAIAssistView.EmptyViewTemplate>
  </syncfusion:SfAIAssistView>
-
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# hl_lines="9 13" %}
 
-  public partial class MainPage : ContentPage
-  {
+   public partial class MainPage : ContentPage
+   {
         SfAIAssistView sfAIAssistView;
-
         public MainPage()
         {
             InitializeComponent();
-
             sfAIAssistView = new SfAIAssistView
             {
-                ShowHeader = false,
                 EmptyView = "No Items"
             };
-
             GettingStartedViewMode viewModel = new GettingStartedViewMode();  
             sfAIAssistView.AssistItems = viewModel.AssistItems;
+            sfAIAssistView.EmptyViewTemplate = CreateEmptyViewTemplate;
+            Content = sfAIAssistView;
+        }
 
-            sfAIAssistView.EmptyViewTemplate = new DataTemplate(() =>
+        private DataTemplate CreateEmptyViewTemplate()
+        {
+            return new DataTemplate(() =>
             {
                 var grid = new Grid
                 {
@@ -160,8 +153,6 @@ The `EmptyView` can be customized by using the `EmptyViewTemplate` property. Thi
 
                 return grid;
             });
-
-            Content = sfAIAssistView;
         }
     }
 
@@ -172,5 +163,5 @@ The `EmptyView` can be customized by using the `EmptyViewTemplate` property. Thi
 ![EmptyView customization in .NET MAUI AI AssistView](Images/maui-aiassistview-emptyview-customization.png)
 
 N>
-* The EmptyViewTemplate will only be applied when the EmptyView property is explicitly defined. If EmptyView is not set, the template will not be displayed.
-* EmptyView can be set to custom type and the appearance of the EmptyView can be customized by using the EmptyViewTemplate.
+* The `EmptyViewTemplate` will only be applied when the `EmptyView` property is explicitly defined. If `EmptyView` is not set, the template will not be displayed.
+* `EmptyView` can be set to custom type and the appearance of the `EmptyView` can be customized by using the `EmptyViewTemplate`.
