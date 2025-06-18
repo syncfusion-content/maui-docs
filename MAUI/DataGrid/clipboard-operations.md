@@ -13,7 +13,7 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.html) provides support for clipboard operations such as cut, copy, and paste data within the control and between other applications such as Notepad and Excel. Clipboard operations for copy and paste are enabled by default. You can copy selected records/cells from SfDataGrid by pressing  <kbd>Ctrl+C</kbd> and paste the content from [Clipboard](https://learn.microsoft.com/en-us/dotnet/api/system.windows.clipboard?view=windowsdesktop-7.0&viewFallbackFrom=net-5.0) to SfDataGrid by pressing <kbd>Ctrl+V</kbd>.
 
-N> Clipboard operations are not supported for summary rows, add new row, and unbound rows.To enable paste and cut operations, the properties should be nullable and must implement INotifyPropertyChanged to ensure the user interface updates correctly when changes occur.
+N> Clipboard operations are not supported for summary rows, add new row, and unbound rows. To enable paste and cut operations, the properties should be nullable and must implement `INotifyPropertyChanged` to ensure the user interface updates correctly when changes occur.
 
 ## Copy to Clipboard in DataGrid
 
@@ -55,7 +55,7 @@ N> `IncludeHiddenColumn` is not supported when `SelectionUnit` is [Cell](https:/
 
 Paste operations work based on the `PasteOption` property. 
 
-`PasteOption` provides the following options,
+`PasteOption` provides the following options:
 
 * None – Disables paste in SfDataGrid.
 
@@ -82,13 +82,13 @@ this.dataGrid.PasteOption = DataGridPasteOption.PasteData | DataGridPasteOption.
 
 <img alt="Paste Clipboard Content in Maui DataGrid" src="Images/clipboard-operations/maui-datagrid-paste-to-clipboard.png" width="404"/>
 
-N>To enable pasting within the DataGrid, the AllowEditing property must be set to true.
+N>To enable pasting within the DataGrid, the `AllowEditing` property must be set to true.
 
 ## Cut to Clipboard in DataGrid
 
-Cut operations work based on the `CopyOption` property.The cut operation works only when the `AllowEditing` property is set to true.
+Cut operations work based on the `CopyOption` property. The cut operation works only when the `AllowEditing` property is set to true.
 
-`CopyOption` provides the following options,
+`CopyOption` provides the following options:
 
 * None – Disables cut in SfDataGrid.
 
@@ -118,14 +118,14 @@ this.dataGrid.CopyOption = DataGridCopyOption.CutData | DataGridCopyOption.Inclu
 
 <img alt="Cut to Clipboard in Maui DataGrid" src="Images/clipboard-operations/maui-datagrid-cut-to-clipboard.png" width="404"/>
 
-N> `IncludeHiddenColumn` is not supported when `SelectionUnit` is [Cell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionUnit.html#Syncfusion_Maui_DataGrid_DataGridSelectionUnit_Cell).For unbound columns, cut operations won't work, but the data can still be copied to the clipboard.
+N> `IncludeHiddenColumn` is not supported when `SelectionUnit` is [Cell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionUnit.html#Syncfusion_Maui_DataGrid_DataGridSelectionUnit_Cell). For unbound columns, cut operations won't work, but the data can still be copied to the clipboard.
 
 
 ## Events
 
 ### CopyContent
 
-The `CopyContent` event occurs when copying or cutting cells in SfDataGrid.`DataGridCopyPasteEventArgs` provides information for the `CopyContent` event. You can cancel the copy operation by handling this event.
+The `CopyContent` event occurs when copying or cutting cells in SfDataGrid. `DataGridCopyPasteEventArgs` provides information for the `CopyContent` event. You can cancel the copy operation by handling this event.
 
 {% tabs %}
 {% highlight c# %}
@@ -142,7 +142,7 @@ void dataGrid_CopyContent(object sender, DataGridCopyPasteEventArgs e)
 
 ### PasteContent
 
-The `PasteContent` event occurs when pasting clipboard values into SfDataGrid.`DataGridCopyPasteEventArgs` provides information for the `PasteContent` event. You can cancel the paste operation by handling this event.
+The `PasteContent` event occurs when pasting clipboard values into SfDataGrid. `DataGridCopyPasteEventArgs` provides information for the `PasteContent` event. You can cancel the paste operation by handling this event.
 
 {% tabs %}
 {% highlight c# %}
@@ -362,7 +362,7 @@ public class CustomCopyPaste : DataGridCopyPasteController
 
 {% tabs %}
 {% highlight c# %}
-public MainWindow()
+public MainPage()
 {
     InitializeComponent();
     this.dataGrid.CopyPasteController = new CustomCopyPaste(this.dataGrid);
