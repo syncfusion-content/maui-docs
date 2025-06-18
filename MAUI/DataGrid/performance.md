@@ -99,3 +99,25 @@ public class ViewModel
 }
 {% endhighlight %}
 {% endtabs %}
+
+## Asynchronous Scrolling
+
+The DataGrid provides support for asynchronous scrolling to enhance scrolling performance during large scroll jumps, especially on the Windows platform.
+
+When the `AllowAsyncScrolling` property is enabled, the DataGrid renders content asynchronously while scrolling rapidly. This approach improves the perceived performance by reducing UI thread blocking and delivering smoother scrolling behavior.
+
+By default, the `AllowAsyncScrolling` property is set to `false`. To improve scrolling performance, set this property to `true`.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding EmployeeDetails}"
+                       AllowAsyncScrolling="True"/>
+{% endhighlight %}
+
+{% highlight c# %}
+dataGrid.AllowAsyncScrolling = true;
+{% endhighlight %}
+{% endtabs %}
+
+N> Asynchronous scrolling is supported for all column types only on the Windows platform.
