@@ -1,14 +1,15 @@
 ---
 layout: post
-title: Item Reordering in .NET MAUI TreeView Control | Syncfusion
-description: Learn here all about Item Reordering support in the Syncfusion .NET MAUI TreeView (SfTreeView) control and more.
+title: Drag and drop in .NET MAUI TreeView Control | Syncfusion
+description: Learn here all about Drag and drop support in the Syncfusion .NET MAUI TreeView (SfTreeView) control and more.
 platform: MAUI
 control: SfTreeView
 documentation: ug
 ---
 
-# Item Reordering in .NET MAUI TreeView (SfTreeView)
-The [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html) allows drag and drop the items within the treeview control by setting the [AllowDragging]() property as `true`. 
+# Drag and drop in .NET MAUI TreeView (SfTreeView)
+## Enable Drag and drop
+The [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html) allows drag and drop the items within the treeview control by setting the `AllowDragging` property as `true`. 
 
 {% tabs %}
 {% highlight xaml hl_lines="4" %}
@@ -19,31 +20,33 @@ The [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.Sf
 </ContentPage>
 {% endhighlight %}
 {% highlight c# %}
-treeView.AllowDragging= "true" 
+var treeView = new SfTreeView();
+treeView.AllowDragging = true;
+treeView.SetBinding(SfTreeView.ItemsSourceProperty, new Binding("Folders"));
 {% endhighlight %}
 {% endtabs %}
 
-While dropping, the dragged items can be added above or below to the target item based on drag indicator position.
+While dropping, the dragged items can be added above, below, or as a child of the target item, depending on the position of the drag indicator.
 
 N> The drag and drop operation is not supported when Load on Demand is enabled.
 
-### Invalid Drop Label
+### Invalid Drop Indicator
 
-An "Invalid drop" label is shown when the following conditions are met:
+An "Invalid drop" indicator is shown in default drag item view when the following conditions are met:
 
-`Drop As Child into Same Node`: The label appears if you attempt to drop an item as a child of the same node.
+* `Drop as child into same node`: An indicator appears if you attempt to drop an item as a child of the same node.
 
-`Incompatible Child Node Type`: When trying to drop an item as a child where the target node's child and the dragged item's types are incompatible.
+* `Incompatible child node type`: When trying to drop an item as a child where the target node's child and the dragged item's types are incompatible. It is only applicable when `SfTreeView` has `HierarchyPropertyDescriptor`.
 
-`Drop Below or Above with Different Type`: If attempting to drop an item below or above another node where the parent node's existing child's type is different from the dragged item's type.
+* `Drop below or above with different type`: If attempting to drop an item below or above another node where the parent node's existing child's type is different from the dragged item's type. It is only applicable when `SfTreeView` has `HierarchyPropertyDescriptor`.
 
-## Dragging multiple items
+### Dragging multiple items
 
 `SfTreeView` allows to drag multiple selected items. To enable multiple selection, set the [SfTreeView.SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectionMode) as `Multiple` or `Extended`.
 
 
 ## Drag item customization
-By defining the [SfTreeView.DragItemTemplate]() property of the `SfTreeView`, you can display a custom user interface (UI) when performing drag and drop operations. The template can be defined either in code or XAML.
+By defining the `SfTreeView.DragItemTemplate` property of the `SfTreeView`, a custom user interface (UI) is displayed during drag-and-drop operations.
 
 {% tabs %}
 {% highlight xaml hl_lines="5" %}
@@ -89,6 +92,9 @@ By defining the [SfTreeView.DragItemTemplate]() property of the `SfTreeView`, yo
 </ContentPage>
 {% endhighlight %}
 {% highlight c# %}
+var treeView = new SfTreeView();
+treeView.AllowDragging = true;
+treeView.SetBinding(SfTreeView.ItemsSourceProperty, new Binding("Folders"));
 treeView.DragItemTemplate = new DataTemplate(() =>
 {
     // Create outer Border
@@ -159,18 +165,17 @@ treeView.DragItemTemplate = new DataTemplate(() =>
 {% endhighlight %}
 {% endtabs %}
 
-Download the sample from GitHub [here]().
-
+N> View sample in [GitHub]().
 ![Drag item view customization](Images/drag-and-drop/drag-view-customization.gif)
 
 ## Event
 
-The [ItemDragging]() event is raised while dragging and dropping the item in the `SfTreeView`. The [ItemDraggingEventArgs]() has the following members which provide the information for the ItemDragging event:
+The `ItemDragging` event is raised while dragging and dropping the item in the `SfTreeView`. The `ItemDraggingEventArgs` has the following members which provide the information for the ItemDragging event:
 
-[Action](): Returns the drag Action such as start, dragging, dropping and drop.
-[Handled](): If this member is set to true, dragging can be handled. It is applicable only if Action is Dragging.
+[Action](): Returns the drag `Action` such as start, dragging, dropping and drop.
+[Handled](): If this member is set to true, dragging can be handled. It is applicable only if Action is `Dragging`.
 [Cancel]() : If this member is set to true, the drag and drop operation will be canceled.
-[DraggingNode](): Returns the DraggingNodes.
+[DraggingNode](): Returns the `DraggingNodes`.
 [DropPosition](): Returns the position where dragged nodes are going to be dropped.
 [Position](): Returns the touch position of the drag item from the screen coordinates.
 
@@ -180,13 +185,15 @@ Auto-scrolling during drag-and-drop operations in the `SfTreeView` enhances the 
 
 ### Auto Scroll Margin
 
-To adjust the auto-scroll margin in `SfTreeView`, set the [ScrollMargin]() property of the [AutoScroller]() to enable auto-scrolling while dragging. The default value is 15. Auto-scrolling will be triggered when the drag item is within the `ScrollMargin` from the view's bounds.
+To adjust the auto-scroll margin in `SfTreeView`, set the `ScrollMargin` property of the `AutoScroller` to enable auto-scrolling while dragging. The default value is `15`. Auto-scrolling will be triggered when the drag item is within the `ScrollMargin` from the view's bounds.
 
-To disable auto-scrolling, set the `ScrollMargin` to `0`.
+N> To disable auto-scrolling, set the `ScrollMargin` to `0`.
 
 {% tabs %}
 {% highlight c# %}
-this.treeView.AutoScroller.ScrollMargin = 20;
+var treeView = new SfTreeView();
+treeView.AllowDragging = true;
+treeView.AutoScroller.ScrollMargin = 20;
 {% endhighlight %}
 {% endtabs %}
 
@@ -194,21 +201,25 @@ this.treeView.AutoScroller.ScrollMargin = 20;
 
 ### Auto Scroll Interval
 
-Adjust the auto-scroll interval during dragging by setting the [Interval]() property of the `AutoScroller`. The default interval is `150 milliseconds`.
+Adjust the auto-scroll interval during dragging by setting the `Interval` property of the `AutoScroller`. The default interval is `150 milliseconds`.
 
 {% tabs %}
 {% highlight c# %}
-this.treeView.AutoScroller.Interval = new TimeSpan(0, 0, 0, 0, 200);
+var treeView = new SfTreeView();
+treeView.AllowDragging = true;
+treeView.AutoScroller.Interval = new TimeSpan(0, 0, 0, 0, 200);
 {% endhighlight %}
 {% endtabs %}
 
 ### Disable Outside Scroll
 
-To prevent auto-scrolling when the dragged item is moved outside the `SfTreeView` during a drag, set the [AllowOutsideScroll]() property of the `AutoScroller` to `false`. The default value is `true`.
+To prevent auto-scrolling when the dragged item is moved outside the `SfTreeView` during a drag, set the `AllowOutsideScroll` property of the `AutoScroller` to `false`. The default value is `true`.
 
 {% tabs %}
 {% highlight c# %}
-this.treeView.AutoScroller.AllowOutsideScroll = false;
+var treeView = new SfTreeView();
+treeView.AllowDragging = true;
+treeView.AutoScroller.AllowOutsideScroll = false;
 {% endhighlight %}
 {% endtabs %}
 
@@ -216,7 +227,7 @@ this.treeView.AutoScroller.AllowOutsideScroll = false;
 
 ### Enable Auto Expand
 
-To enable auto-expanding of nodes when dragging items over them, set the [CanAutoExpand]() property to `true`. The default value is `false`.
+To enable auto-expanding of nodes when dragging items over them, set the `CanAutoExpand` property to `true`. The default value is `false`.
 
 {% tabs %}
 {% highlight xaml hl_lines="5" %}
@@ -231,6 +242,9 @@ To enable auto-expanding of nodes when dragging items over them, set the [CanAut
 </ContentPage>
 {% endhighlight %}
 {% highlight c# %}
+var treeView = new SfTreeView();
+treeView.AllowDragging = true;
+treeView.SetBinding(SfTreeView.ItemsSourceProperty, new Binding("Folders"));
 treeView.DragAndDropController.CanAutoExpand = true;
 {% endhighlight %}
 {% endtabs %}
@@ -239,7 +253,7 @@ treeView.DragAndDropController.CanAutoExpand = true;
 
 ### Auto Expand Delay
 
-To set the delay for auto-expanding nodes, use the [AutoExpandDelay]() property. The default value is `3 seconds`.
+To set the delay for auto-expanding nodes, use the `AutoExpandDelay` property. The default value is `3 seconds`.
 
 {% tabs %}
 {% highlight xaml hl_lines="5" %}
@@ -254,6 +268,9 @@ To set the delay for auto-expanding nodes, use the [AutoExpandDelay]() property.
 </ContentPage>
 {% endhighlight %}
 {% highlight c# %}
+var treeView = new SfTreeView();
+treeView.AllowDragging = true;
+treeView.SetBinding(SfTreeView.ItemsSourceProperty, new Binding("Folders"));
 treeView.DragAndDropController.CanAutoExpand = true;
 treeView.DragAndDropController.AutoExpandDelay = new TimeSpan(0, 0, 0, 1);
 {% endhighlight %}
@@ -261,19 +278,22 @@ treeView.DragAndDropController.AutoExpandDelay = new TimeSpan(0, 0, 0, 1);
 
 ## Disable dragging for particular item
 
-To disable dragging for a particular item, handle the [ItemDragging]() event based on the conditions of the Action event argument.
+To disable dragging for a particular item, handle the `ItemDragging` event based on the conditions of the Action event argument.
 
-You can cancel the dragging action for a particular item by setting the [Cancel]() property of the `ItemDraggingEventArgs`.
+You can cancel the dragging action for a particular item by setting the `Cancel` property of the `ItemDraggingEventArgs`.
 
 {% tabs %}
 {% highlight c# %}
 private void TreeView_ItemDragging(object sender, ItemDraggingEventArgs e)
 {
-  var item = e.DraggingNodes[0].Content as File;
-  if (item.FolderName == "Sanitation.docx")
-  {
-    e.Cancel = true;
-  }
+    if (e.Action == DragAction.Start)
+    {
+       var item = e.DraggingNodes[0].Content as File;
+       if (item.FolderName == "Sanitation.docx")
+       {
+          e.Cancel = true;
+       }
+    }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -282,7 +302,7 @@ private void TreeView_ItemDragging(object sender, ItemDraggingEventArgs e)
 
 To cancel dropping for the dragged item, handle the `ItemDragging` event based on the conditions of the Action event argument.
 
-You can cancel the dropping action for an item by setting the `Cancel` property of the `ItemDraggingEventArgs`.Cancel property of the ItemDraggingEventArgs.
+You can cancel the dropping action for an item by setting the `Cancel` property of the `ItemDraggingEventArgs`.
 
 {% tabs %}
 {% highlight c# %}
