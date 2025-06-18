@@ -414,8 +414,8 @@ The following table contains the default name and value details used in the SfPd
 <td>Next page</td>
 </tr>
 <tr>
-<td>NoBookmark</td>
-<td>No Bookmark</td>
+<td>NoBookmarks</td>
+<td>No Bookmarks</td>
 </tr>
 <tr>
 <td>NoColor</td>
@@ -560,5 +560,37 @@ The following table contains the default name and value details used in the SfPd
 <tr>
 <td>StandardStamps</td>
 <td>Standard Stamps</td>
+</tr>
+<tr>
+<td>AddBookmark</td>
+<td>Add bookmark</td>
+</tr>
+<tr>
+<td>Back</td>
+<td>Back</td>
+</tr>
+<tr>
+<td>MoreItems</td>
+<td>More items</td>
+</tr>
+<tr>
+<td>TextColor</td>
+<td>Text color</td>
+</tr>
+<tr>
+<td>TextFillColor</td>
+<td>Text fill color</td>
+</tr>
+<tr>
+<td>Bookmarks</td>
+<td>Bookmarks</td>
+</tr>
+<tr>
+<td>of</td>
+<td>of</td>
+</tr>
+<tr>
+<td>GoToPage</td>
+<td>Go to Page</td>
 </tr>
 </table>
