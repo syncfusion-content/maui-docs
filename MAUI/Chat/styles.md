@@ -1319,4 +1319,4 @@ public MainPage()
     ....
 }
 
-![Delivery State Style in .NET MAUI Chat](Images/styles/maui-chat-delivery-state-style.png)
+![Delivery State Style in .NET MAUI Chat](Images/styles/maui-chat-delivery-state-style.gif)
