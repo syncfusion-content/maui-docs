@@ -11,7 +11,7 @@ documentation: ug
 The [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html) allows drag and drop the items within the treeview control by setting the [AllowDragging]() property as `true`. 
 
 {% tabs %}
-{% highlight xaml hl_lines="4"%}
+{% highlight xaml hl_lines="4" %}
 <ContentPage xmlns:treeView="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
   <syncfusion:SfTreeView x:Name="treeView" 
                          ItemsSource="{Binding Folders}"
@@ -46,7 +46,7 @@ An "Invalid drop" label is shown when the following conditions are met:
 By defining the [SfTreeView.DragItemTemplate]() property of the `SfTreeView`, you can display a custom user interface (UI) when performing drag and drop operations. The template can be defined either in code or XAML.
 
 {% tabs %}
-{% highlight xaml hl_lines="5"%}
+{% highlight xaml hl_lines="5" %}
 <ContentPage xmlns:treeView="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
   <syncfusion:SfTreeView x:Name="treeView" 
                          ItemsSource="{Binding Folders}"
@@ -201,7 +201,7 @@ this.treeView.AutoScroller.AllowOutsideScroll = false;
 To enable auto-expanding of nodes when dragging items over them, set the [CanAutoExpand]() property to `true`. The default value is `false`.
 
 {% tabs %}
-{% highlight xaml hl_lines="5"%}
+{% highlight xaml hl_lines="5" %}
 <ContentPage xmlns:treeView="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
   <treeView:SfTreeView x:Name="treeView" 
                        ItemsSource="{Binding Folders}"
@@ -224,7 +224,7 @@ treeView.DragAndDropController.CanAutoExpand = true;
 To set the delay for auto-expanding nodes, use the [AutoExpandDelay]() property. The default value is `3 seconds`.
 
 {% tabs %}
-{% highlight xaml hl_lines="5"%}
+{% highlight xaml hl_lines="5" %}
 <ContentPage xmlns:treeView="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
   <treeView:SfTreeView x:Name="treeView" 
                        ItemsSource="{Binding Folders}"
