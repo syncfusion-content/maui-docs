@@ -1,6 +1,6 @@
 ---
 layout: post
-title: About .NET MAUI Shimmer control | Syncfusion<sup>&reg;</sup>
+title: About .NET MAUI Shimmer control | Syncfusion
 description: Learn here about the getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Shimmer (SfShimmer) control, its elements and more.
 platform: maui
 control: SfShimmer
