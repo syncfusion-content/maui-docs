@@ -81,7 +81,7 @@ After enabling the item border, you can customize its appearance using the follo
 - `ItemBorderRadius`: Sets the corner radius of the  border.
 
 {% tabs %}
-{% highlight xml tabtitle="MainPage.xaml" hl_lines="3 4 5 6" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 4 5 6" %}
 <syncfusion:SfListView x:Name="listView"
                        ItemSize="60"
                        ShowItemBorder="True"
@@ -114,7 +114,7 @@ listView.ItemBorderRadius = new CornerRadius(20,0,0,20);
 
 ## Limitations
 
-- Item borders are not supported when ItemsLayout is set to GridLayout.
+- Item borders are not supported when `SfListView.ItemsLayout` is set to `GridLayout`.
 - `ItemBorderRadius` is applicable only when `ItemBorderThickness` has uniform values on all sides.
 
 ## See Also
