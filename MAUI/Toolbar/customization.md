@@ -217,58 +217,48 @@ The SelectionHighlightColor property of the [SfToolbarItem](https://help.syncfus
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="5 9 13 21" %}
 
-<toolbar:SfToolbar x:Name="toolbar" OverflowMode="MoreButton" WidthRequest="390">
-            <toolbar:SfToolbar.Items>
-                <toolbar:SfToolbarItem Name="Bold"
-                                       Text="Bold"
-                                       SelectionHighlightColor="LightGreen">
-                </toolbar:SfToolbarItem>
-                <toolbar:SfToolbarItem Name="Underline"
-                                       Text="Underline"
-                                       SelectionHighlightColor="LightBlue">
-                </toolbar:SfToolbarItem>
-                <toolbar:SfToolbarItem Name="Italic"
-                                       Text="Italic"
-                                       SelectionHighlightColor="Violet">
-                    <toolbar:SfToolbarItem.Icon>
-                        <FontImageSource Glyph="&#xE771;"
-                                         FontFamily="MauiMaterialAssets"/>
-                    </toolbar:SfToolbarItem.Icon>
-                </toolbar:SfToolbarItem>
-                <toolbar:SfToolbarItem Name="AlignLeft"
-                                       Text="Align-Left"
-                                       SelectionHighlightColor="Yellow">
-                    <toolbar:SfToolbarItem.Icon>
-                        <FontImageSource Glyph="&#xE751;"
-                                         FontFamily="MauiMaterialAssets" />
-                    </toolbar:SfToolbarItem.Icon>
-                </toolbar:SfToolbarItem>
-                <toolbar:SfToolbarItem Name="AlignRight"
-                                       ToolTipText="Align-Right"
-                                       SelectionHighlightColor="Turquoise">
-                    <toolbar:SfToolbarItem.Icon>
-                        <FontImageSource Glyph="&#xE753;"
-                                         FontFamily="MauiMaterialAssets" />
-                    </toolbar:SfToolbarItem.Icon>
-                </toolbar:SfToolbarItem>
-                <toolbar:SfToolbarItem Name="AlignCenter"
-                                       ToolTipText="Align-Center"
-                                       SelectionHighlightColor="LavenderBlush">
-                    <toolbar:SfToolbarItem.Icon>
-                        <FontImageSource Glyph="&#xE752;"
-                                         FontFamily="MauiMaterialAssets" />
-                    </toolbar:SfToolbarItem.Icon>
-                </toolbar:SfToolbarItem>
-                <toolbar:SfToolbarItem Name="AlignJustify"
-                                       ToolTipText="Align-Justify"
-                                       SelectionHighlightColor="Wheat">
-                    <toolbar:SfToolbarItem.Icon>
-                        <FontImageSource Glyph="&#xE74F;"
-                                         FontFamily="MauiMaterialAssets" />
-                    </toolbar:SfToolbarItem.Icon>
-                </toolbar:SfToolbarItem>
-            </toolbar:SfToolbar.Items>
-        </toolbar:SfToolbar>
+<toolbar:SfToolbar x:Name="toolbar">
+    <toolbar:SfToolbar.Items>
+        <toolbar:SfToolbarItem Name="Bold"
+                               Text="Bold"
+                               SelectionHighlightColor="LightGreen"></toolbar:SfToolbarItem>
+        <toolbar:SfToolbarItem Name="Underline"
+                               Text="Underline"
+                               SelectionHighlightColor="LightBlue"></toolbar:SfToolbarItem>
+        <toolbar:SfToolbarItem Name="Italic"
+                               Text="Italic"
+                               SelectionHighlightColor="Violet">
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE771;"
+                                     FontFamily="MauiMaterialAssets"/>
+                </toolbar:SfToolbarItem.Icon>
+        </toolbar:SfToolbarItem>
+        <toolbar:SfToolbarItem Name="AlignLeft"
+                               Text="Align-Left"
+                               SelectionHighlightColor="Yellow">
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE751;"
+                                     FontFamily="MauiMaterialAssets" />
+                </toolbar:SfToolbarItem.Icon>
+        </toolbar:SfToolbarItem>
+        <toolbar:SfToolbarItem Name="AlignRight"
+                               ToolTipText="Align-Right"
+                               SelectionHighlightColor="Turquoise">
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE753;"
+                                     FontFamily="MauiMaterialAssets" />
+                </toolbar:SfToolbarItem.Icon>
+        </toolbar:SfToolbarItem>
+        <toolbar:SfToolbarItem Name="AlignCenter"
+                               ToolTipText="Align-Center"
+                               SelectionHighlightColor="LavenderBlush">
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE752;"
+                                     FontFamily="MauiMaterialAssets" />
+                </toolbar:SfToolbarItem.Icon>
+        </toolbar:SfToolbarItem>
+    </toolbar:SfToolbar.Items>
+</toolbar:SfToolbar>
 
 {% endhighlight %}
 {% endtabs %}
@@ -278,19 +268,51 @@ The SelectionHighlightColor property of the [SfToolbarItem](https://help.syncfus
 
 SfToolbar toolbar = new SfToolbar();
 toolbar.HeightRequest = 56;
-SfToolbarItem toolbarItem = new SfToolbarItem
+ObservableCollection<BaseToolbarItem> itemCollection = new ObservableCollection<BaseToolbarItem>
 {
-      Name = "Bold",
-      Text = "Bold",
-       SelectionHighlightColor = Colors.Transparent,
-       Icon = new FontImageSource()
-       {
-                Glyph = "\uE770",
-               FontFamily = "MaterialAssets"
-             
-        };
-}
-toolbar.Items.Add(toolbarItem);
+     new SfToolbarItem
+     {
+         Name = "Bold",
+         Text = "Bold",
+         SelectionHighlightColor = Colors.LightGreen
+     },
+     new SfToolbarItem
+     {
+         Name = "Underline",
+         Text = "Underline",
+         SelectionHighlightColor = Colors.LightBlue
+     },
+     new SfToolbarItem
+     {
+         Name = "Italic",
+         Text = "Italic",
+         Icon = new FontImageSource { Glyph = "\uE771", FontFamily="MauiMaterialAssets" },
+         SelectionHighlightColor = Colors.Violet
+     },
+     new SfToolbarItem
+     {
+         Name = "AlignLeft",
+         Text = "Align-Left",
+         Icon = new FontImageSource { Glyph = "\uE751", FontFamily="MauiMaterialAssets" },
+         SelectionHighlightColor = Colors.Yellow
+     },
+     new SfToolbarItem
+     {
+         Name = "AlignRight",
+         ToolTipText = "Align-Right",
+         Icon = new FontImageSource { Glyph = "\uE753", FontFamily="MauiMaterialAssets" },
+         SelectionHighlightColor = Colors.Turquoise
+     },
+     new SfToolbarItem
+     {
+         Name = "AlignCenter",
+         ToolTipText = "Align-Center",
+         Icon = new FontImageSource { Glyph = "\uE752", FontFamily="MauiMaterialAssets" },
+         SelectionHighlightColor = Colors.LavenderBlush
+     }
+};
+
+toolbar.Items = itemCollection;
 this.Content = toolbar;
 
 {% endhighlight %}
