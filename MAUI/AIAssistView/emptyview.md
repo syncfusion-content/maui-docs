@@ -8,7 +8,7 @@ documentation: ug
 
 # Empty view in .NET MAUI AI AssistView
 
-The `AI AssistView` control allows you to display and customize the empty view content when no request or response has been added. This can be achieved using the following properties:
+The `AI AssistView` control allows you to display and customize the empty view content when no request or response has been added.
 
 ## Display empty view when AI AssistView has no items
 
@@ -32,7 +32,7 @@ public partial class MainPage : ContentPage
     { 
         InitializeComponent();
         sfAIAssistView = new SfAIAssistView();
-        GettingStartedViewModel viewModel = new GettingStartedViewModel();  
+        GettingStartedViewModel viewModel = new GettingStartedViewModel();
         sfAIAssistView.AssistItems = viewModel.AssistItems;
         sfAIAssistView.EmptyView = "Ask AI Anything";
         Content = sfAIAssistView;
@@ -94,9 +94,9 @@ The `SfAIAssistView` control allows you to fully customize the empty view appear
             {
                 EmptyView = "No Items"
             };
-            GettingStartedViewMode viewModel = new GettingStartedViewMode();  
+            GettingStartedViewModel viewModel = new GettingStartedViewModel();
             sfAIAssistView.AssistItems = viewModel.AssistItems;
-            sfAIAssistView.EmptyViewTemplate = CreateEmptyViewTemplate;
+            sfAIAssistView.EmptyViewTemplate = CreateEmptyViewTemplate();
             Content = sfAIAssistView;
         }
 
