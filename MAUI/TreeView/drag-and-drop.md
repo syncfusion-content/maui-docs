@@ -53,32 +53,36 @@ By defining the [SfTreeView.DragItemTemplate]() property of the `SfTreeView`, yo
                          AllowDragging="True" >
         <treeView:SfTreeView.DragItemTemplate>
             <DataTemplate>
-                <Grid Background="LightGray" Padding="8">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="40" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
-                    <Label Text="&#xe739;" 
-                            TextColor="#90080B"
+                <Border x:Name="grid" Padding="8" StrokeThickness="1"  Stroke="#6750A4">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="8"/>
+                    </Border.StrokeShape>
+                    <Grid RowSpacing="0" Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="40" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Text="&#xe70E;" 
+                            TextColor="#B3261E"
                             VerticalOptions="Center" 
                             HorizontalOptions="Center"
                             FontSize="20"
-                            FontFamily="MauiMaterialAssets"                                     
+                            FontFamily="MauiMaterialAssets" 
                             IsVisible="{Binding Source={x:Reference viewModel}, Path=BlockIconVisible}"/>
-                    <Image Grid.Column="1" Source="{Binding ImageIcon}"
+                        <Image Grid.Column="1" Source="{Binding ImageIcon}"
                             VerticalOptions="Center"
                             HorizontalOptions="Center"
                             HeightRequest="24" 
-                            WidthRequest="24"/>                    
-                        <Label LineBreakMode="NoWrap" 
-                            Grid.Column="2"
+                            WidthRequest="24"/>
+                        <Label LineBreakMode="NoWrap" Grid.Column="2"
                             Margin="5,0,0,0"
                             Text="{Binding FolderName}"
                             CharacterSpacing="0.25" 
                             FontSize="14"
-                            VerticalTextAlignment="Center"/>
-                </Grid>
+                            VerticalTextAlignment="Center" />
+                    </Grid>
+                </Border>
             </DataTemplate>
         </treeView:SfTreeView.DragItemTemplate>
     </treeView:SfTreeView>
@@ -87,31 +91,39 @@ By defining the [SfTreeView.DragItemTemplate]() property of the `SfTreeView`, yo
 {% highlight c# %}
 treeView.DragItemTemplate = new DataTemplate(() =>
 {
-    var grid = new Grid
+    // Create outer Border
+    var border = new Border
     {
-        BackgroundColor = Colors.LightGray,
         Padding = 8,
-        ColumnDefinitions =
-        {
-            new ColumnDefinition { Width = GridLength.Auto },
-            new ColumnDefinition { Width = new GridLength(40) },
-            new ColumnDefinition { Width = GridLength.Star }
-        }
+        StrokeThickness = 1,
+        Stroke = Color.FromArgb("#6750A4"),
+        Background = Colors.White,
+        StrokeShape = new RoundRectangle { CornerRadius = 8 }
     };
 
-    var blockIconLabel = new Label
+    // Create Grid
+    var grid = new Grid
     {
-        Text = "\ue739",
-        TextColor = Color.FromArgb("#90080B"),
+        RowSpacing = 0
+    };
+
+    grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
+    grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(40) });
+    grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Star });
+
+    // Create first Label (icon)
+    var iconLabel = new Label
+    {
+        Text = "\uE70E",
+        TextColor = Color.FromArgb("#B3261E"),
         VerticalOptions = LayoutOptions.Center,
         HorizontalOptions = LayoutOptions.Center,
         FontSize = 20,
         FontFamily = "MauiMaterialAssets"
     };
+    iconLabel.SetBinding(Label.IsVisibleProperty, new Binding("BlockIconVisible", source: new RelativeBindingSource(RelativeBindingSourceMode.FindAncestorBindingContext, typeof(YourViewModelType), null)));
 
-    blockIconLabel.SetBinding(Label.IsVisibleProperty, new Binding("BlockIconVisible", 
-        source: new RelativeBindingSource(RelativeBindingSourceMode.FindAncestorBindingContext, typeof(ViewModelType))));
-
+    // Create Image
     var image = new Image
     {
         VerticalOptions = LayoutOptions.Center,
@@ -120,23 +132,29 @@ treeView.DragItemTemplate = new DataTemplate(() =>
         WidthRequest = 24
     };
     image.SetBinding(Image.SourceProperty, "ImageIcon");
+    Grid.SetColumn(image, 1);
 
-    var folderNameLabel = new Label
+    // Create second Label (FolderName)
+    var nameLabel = new Label
     {
-        LineBreakMode = LineBreakMode.NoWrap,
         Margin = new Thickness(5, 0, 0, 0),
+        LineBreakMode = LineBreakMode.NoWrap,
         CharacterSpacing = 0.25,
         FontSize = 14,
         VerticalTextAlignment = TextAlignment.Center
     };
-    folderNameLabel.SetBinding(Label.TextProperty, "FolderName");
+    nameLabel.SetBinding(Label.TextProperty, "FolderName");
+    Grid.SetColumn(nameLabel, 2);
 
-    // Add elements to grid
-    grid.Add(blockIconLabel, 0, 0);
-    grid.Add(image, 1, 0);
-    grid.Add(folderNameLabel, 2, 0);
+    // Add children to grid
+    grid.Children.Add(iconLabel);
+    grid.Children.Add(image);
+    grid.Children.Add(nameLabel);
 
-    return grid;
+    // Set the content of the border
+    border.Content = grid;
+
+    return border;
 });
 {% endhighlight %}
 {% endtabs %}
