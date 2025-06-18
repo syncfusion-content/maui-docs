@@ -95,7 +95,7 @@ N> The `SfAIAssistView.AssistItems` property is of type `IList<IAssistItem>`. To
 The `SfAIAssistView` control provides support for binding a custom model collection through the `ItemsSource` property. This feature allows users to use their own data models with the control. The `ItemsSource` property binds a collection of custom data objects to the `SfAIAssistView` and each item in the collection will be converted to an `AssistItem` and displayed in the view. The `ItemsSourceConverter` property sets the converter used to transform data objects into AssistItems and vice versa.
  
 {% tabs %}
-{% highlight xaml hl_lines="16 17" %}
+{% highlight xaml hl_lines="15 16" %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
@@ -110,13 +110,12 @@ The `SfAIAssistView` control provides support for binding a custom model collect
         <local:ViewModel x:Name="viewModel"/>
     </ContentPage.BindingContext>
     <syncfusion:SfAIAssistView x:Name="assistView"
-                               RequestCommand="{Binding AssistViewRequestCommand}"
                                ItemsSource="{Binding AssistItemsCollection}"
                                ItemsSourceConverter="{Binding Converter}" />
 </ContentPage>
 {% endhighlight %}
  
-{% highlight c# hl_lines="14 15" %}
+{% highlight c# hl_lines="12 13" %}
 SfAIAssistView assistView;
 ViewModel viewModel;
 ItemConverter assistItemConverter;
@@ -128,8 +127,6 @@ public MainPage()
     assistView = new SfAIAssistView();
     viewModel = new ViewModel();
     assistItemConverter = new ItemConverter();
-    assistView.RequestCommand = viewModel.AssistViewRequestCommand;
-
     assistView.ItemsSource = viewModel.AssistItems;
     assistView.ItemsSourceConverter = assistItemConverter;
 
