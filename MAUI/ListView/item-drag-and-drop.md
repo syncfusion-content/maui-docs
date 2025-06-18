@@ -41,7 +41,7 @@ listView.DragStartMode = DragStartMode.OnHold;
 To enable drag and drop using both `OnHold` and `OnDragIndicator`, follow the code example below.
 
 {% tabs %}
-{% highlight xaml hl_lines="4"%}
+{% highlight xaml hl_lines="4" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView" 
                    ItemsSource="{Binding ToDoList}"
@@ -62,7 +62,7 @@ To drag and drop the items by the [DragIndicatorView](https://help.syncfusion.co
 N> You must set the SfListView instance as a reference to the [ListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.DragIndicatorView.html#Syncfusion_Maui_ListView_DragIndicatorView_ListView) property in `DragIndicatorView`.
 
 {% tabs %}
-{% highlight xaml hl_lines="13"%}
+{% highlight xaml hl_lines="13" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView" 
                    ItemsSource="{Binding ToDoList}"
@@ -88,7 +88,7 @@ N> You must set the SfListView instance as a reference to the [ListView](https:/
 </syncfusion:SfListView>                
 </ContentPage>
 {% endhighlight %}
-{% highlight c# hl_lines="17"%}
+{% highlight c# hl_lines="17" %}
 listView.ItemTemplate = new DataTemplate(() =>
 {
   var grid = new Grid();
@@ -129,7 +129,7 @@ The screenshot shows the output of the reordering items by drag and drop. Downlo
 By defining the [SfListView.DragItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_DragItemTemplate) property of the `SfListView`, you can display a custom user interface (UI) when performing drag and drop operations. The template can be defined either in code or XAML.
 
 {% tabs %}
-{% highlight xaml hl_lines="5"%}
+{% highlight xaml hl_lines="5" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView" 
                    ItemsSource="{Binding ToDoList}"
