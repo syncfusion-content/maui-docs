@@ -197,9 +197,9 @@ private void OnDataFormValidateProperty(object sender, DataFormValidatePropertyE
 
 The data form supports customizing the style of both error and valid message label style easily.
 
-## Show/Hide error label visiblity customization
+## Show or Hide Error Labels
 
-The error label visiblity can be customized by switching it's value between true or false by changing ShowErrorLabel property of the [DataformItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html?tabs=tabid-53%2Ctabid-58%2Ctabid-100%2Ctabid-33%2Ctabid-38%2Ctabid-6%2Ctabid-1%2Ctabid-28%2Ctabid-63%2Ctabid-8%2Ctabid-48%2Ctabid-96%2Ctabid-68%2Ctabid-76%2Ctabid-18%2Ctabid-13%2Ctabid-23%2Ctabid-72%2Ctabid-84%2Ctabid-92%2Ctabid-80%2Ctabid-88%2Ctabid-43)
+The ShowErrorLabel property of a [DataformItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html?tabs=tabid-53%2Ctabid-58%2Ctabid-100%2Ctabid-33%2Ctabid-38%2Ctabid-6%2Ctabid-1%2Ctabid-28%2Ctabid-63%2Ctabid-8%2Ctabid-48%2Ctabid-96%2Ctabid-68%2Ctabid-76%2Ctabid-18%2Ctabid-13%2Ctabid-23%2Ctabid-72%2Ctabid-84%2Ctabid-92%2Ctabid-80%2Ctabid-88%2Ctabid-43) controls whether the error label is displayed. When set to true, the error label appears during validation failures. When set to false, the label remains hidden. 
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
@@ -223,31 +223,6 @@ this.TextItem.ShowErrorLabel = false;
 {% endhighlight %}
 {% endtabs %}
 
-## Show/Hide valid label visiblity customization
-
-The valid message label visiblity can be customized by switching it's value between true or false by changing ShowValidMessageLabel property of the [DataformItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html?tabs=tabid-53%2Ctabid-58%2Ctabid-100%2Ctabid-33%2Ctabid-38%2Ctabid-6%2Ctabid-1%2Ctabid-28%2Ctabid-63%2Ctabid-8%2Ctabid-48%2Ctabid-96%2Ctabid-68%2Ctabid-76%2Ctabid-18%2Ctabid-13%2Ctabid-23%2Ctabid-72%2Ctabid-84%2Ctabid-92%2Ctabid-80%2Ctabid-88%2Ctabid-43)
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
-
-<ContentPage 
-...
-xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
-    <dataForm:SfDataForm x:Name="dataForm" AutoGenerateItems="False">
-        <dataForm:SfDataForm.Items>
-            <dataForm:DataFormTextItem x:Name="TextItem" ShowValidMessageLabel="false"/>
-        </dataForm:SfDataForm.Items>
-    </dataForm:SfDataForm>
-</ContentPage>
-
-{% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
-
-this.dataForm.AutoGenerateItems = false;
-this.TextItem.ShowErrorLabel = false;
-
-{% endhighlight %}
-{% endtabs %}
 
 #### Customize error label text style
 

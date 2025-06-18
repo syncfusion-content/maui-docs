@@ -460,24 +460,25 @@ public partial class MainPage : ContentPage
 
 ![Selected segment border thickness customization in .NET MAUI Segmented control.](images/selection/border-stroke-thickness.png)
 
-## Customizing the ripple effect animation of the segments
+## Enable or Disable Ripple Animation
 
-The ripple effect of the segments when the segment clicked can be customized by switching between true or false by using the property of [EnableRippleEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.ButtonBase.html#Syncfusion_Maui_Core_ButtonBase_EnableRippleEffect) in the [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html)
+The [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html) provides a ripple animation that visually highlights a segment when it is tapped. This effect applies to both default segment items and items defined using custom data templates. You can enable or disable this animation using the EnableRippleEffect property. Set EnableRippleEffect to true to display the ripple effect when a segment is selected. Set it to false to disable the ripple animation.
+
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-  <button:SfSegmentedControl x:Name="segmentedControl"
-                             EnableRippleEffect="False">
-        <button:SfSegmentedControl.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                  <x:String>Day</x:String>
-                   <x:String>Week</x:String>
-                    <x:String>Month</x:String>
-                  <x:String>Year</x:String>
-                </x:Array>
-           </button:SfSegmentedControl.ItemsSource>
-      </button:SfSegmentedControl>
+<button:SfSegmentedControl x:Name="segmentedControl"
+                           EnableRippleEffect="False">
+    <button:SfSegmentedControl.ItemsSource>
+        <x:Array Type="{x:Type x:String}">
+                <x:String>Day</x:String>
+                <x:String>Week</x:String>
+                <x:String>Month</x:String>
+                <x:String>Year</x:String>
+        </x:Array>
+    </button:SfSegmentedControl.ItemsSource>
+</button:SfSegmentedControl>
 
 {% endhighlight %}
 {% endtabs %}
@@ -485,17 +486,17 @@ The ripple effect of the segments when the segment clicked can be customized by 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml.cs" hl_lines="10" %}
 
- SfSegmentedControl segmentedControl = new SfSegmentedControl();
-        List<SfSegmentItem> itemList = new List<SfSegmentItem>
-        {
-            new SfSegmentItem() {Text = "Day"},
-            new SfSegmentItem() {Text = "Week"},
-            new SfSegmentItem() {Text = "Month"},
-            new SfSegmentItem() {Text = "Year"},
-        };
-        segmentedControl.ItemsSource = itemList;
-        segmentedControl.EnableRippleEffect = false;
-        this.Content = segmentedControl;
+SfSegmentedControl segmentedControl = new SfSegmentedControl();
+List<SfSegmentItem> itemList = new List<SfSegmentItem>
+{
+    new SfSegmentItem() {Text = "Day"},
+    new SfSegmentItem() {Text = "Week"},
+    new SfSegmentItem() {Text = "Month"},
+    new SfSegmentItem() {Text = "Year"},
+};
+segmentedControl.ItemsSource = itemList;
+segmentedControl.EnableRippleEffect = false;
+this.Content = segmentedControl;
 
 {% endhighlight %}
 {% endtabs %}
