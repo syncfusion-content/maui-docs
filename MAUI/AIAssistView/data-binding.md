@@ -92,7 +92,7 @@ N> The `SfAIAssistView.AssistItems` property is of type `IList<IAssistItem>`. To
 
 ## Binding Custom Model Collection
  
-The `SfAIAssistView` control provides support for binding a custom model collection through the `ItemsSource` property. This feature allows users to use their own data models with the control. The `ItemsSource` property binds a collection of custom data objects to the `SfAIAssistView` and each item in the collection will be converted to an AssistItem and displayed in the view. The `ItemsSourceConverter` property sets the converter used to transform data objects into AssistItems and vice versa.
+The `SfAIAssistView` control provides support for binding a custom model collection through the `ItemsSource` property. This feature allows users to use their own data models with the control. The `ItemsSource` property binds a collection of custom data objects to the `SfAIAssistView` and each item in the collection will be converted to an `AssistItem` and displayed in the view. The `ItemsSourceConverter` property sets the converter used to transform data objects into AssistItems and vice versa.
  
 {% tabs %}
 {% highlight xaml hl_lines="16 17" %}
@@ -103,7 +103,7 @@ The `SfAIAssistView` control provides support for binding a custom model collect
              x:Class="MauiAssistView.MainPage">
     <ContentPage.Resources>
         <ResourceDictionary>
-            <local:AssistItemConverter x:Key="Converter" />
+            <local:ItemConverter x:Key="Converter" />
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.BindingContext>
@@ -119,7 +119,7 @@ The `SfAIAssistView` control provides support for binding a custom model collect
 {% highlight c# hl_lines="14 15" %}
 SfAIAssistView assistView;
 ViewModel viewModel;
-AssistItemConverter assistItemConverter;
+ItemConverter assistItemConverter;
 
 public MainPage()
 {
@@ -127,7 +127,7 @@ public MainPage()
 
     assistView = new SfAIAssistView();
     viewModel = new ViewModel();
-    assistItemConverter = new AssistItemConverter();
+    assistItemConverter = new ItemConverter();
     assistView.RequestCommand = viewModel.AssistViewRequestCommand;
 
     assistView.ItemsSource = viewModel.AssistItems;
@@ -135,6 +135,7 @@ public MainPage()
 
     Content = assistView;
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -196,7 +197,6 @@ Create the below collection of objects that must be converted to assist items co
 {% endtabs %}
 
 N> If you want your data model to respond to property changes, then implement [INotifyPropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-9.0) interface in your model class.
-
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
@@ -347,7 +347,7 @@ This converter must implement the `IAssistItemConverter` interface. Implement th
 {% endhighlight %}
 {% endtabs %}
  
-N> The `Data` property in AssistItem holds a reference to the original data model which is used for data operations.
+N> The `Data` property in `AssistItem` holds a reference to the original data model which is used for data operations.
 
 ## Bind the RequestCommand property
 
