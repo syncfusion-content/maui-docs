@@ -15,7 +15,7 @@ The `AI AssistView` control allows you to display and customize the empty view c
 
 ## Display views when AI AssistView has no items
 
-The `EmptyView` property can also be set to a string or a view , which will be displayed when the `AssistItems` property is null or the collection specified by the `AssistItems` property is empty.
+The `EmptyView` property can also be set to a string or a view, which will be displayed when no request or response is available to display in the control.
 
 {% tabs %}
 {% highlight xaml %}
