@@ -15,14 +15,14 @@ The default position of notification is [TopRight](https://help.syncfusion.com/c
 
 {% highlight xaml %}
 
- <badge:SfBadgeView BadgeText="NEW" HorizontalOptions="Center" WidthRequest="120" HeightRequest="60" VerticalOptions="Center">
-        <badge:SfBadgeView.Content>
-            <Button Text="Primary" BackgroundColor="#d6d8d7" TextColor="Black"  WidthRequest="120"  HeightRequest="60"/>
-        </badge:SfBadgeView.Content>
-        <badge:SfBadgeView.BadgeSettings>
-            <badge:BadgeSettings   Position="TopRight"/>
-        </badge:SfBadgeView.BadgeSettings>
-</badge:SfBadgeView>
+  <badge:SfBadgeView BadgeText="5" HorizontalOptions="Center"  VerticalOptions="Center">
+      <badge:SfBadgeView.Content>
+          <Button Text="Top Right" CornerRadius="0" BackgroundColor="#d6d8d7" TextColor="Black" WidthRequest="120" HeightRequest="60"/>
+      </badge:SfBadgeView.Content>
+      <badge:SfBadgeView.BadgeSettings>
+          <badge:BadgeSettings Background="CornflowerBlue"  Position="TopRight"/>
+      </badge:SfBadgeView.BadgeSettings>
+  </badge:SfBadgeView>
 
 {% endhighlight %}
 
