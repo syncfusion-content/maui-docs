@@ -7,7 +7,7 @@ control: SfDataGrid
 documentation: UG
 ---
 
-# EmptyView in MAUI DataGrid (SfDataGrid)
+# Empty view in MAUI DataGrid (SfDataGrid)
 
 The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) provides options to display and customize an empty view when no data is available to display using the following properties,
 
