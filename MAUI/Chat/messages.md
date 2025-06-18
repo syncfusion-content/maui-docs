@@ -1677,7 +1677,7 @@ public class ViewModel : INotifyPropertyChanged
 
         foreach (var response in responses)
         {
-            await Task.Delay(2000).ConfigureAwait(true);
+            await Task.Delay(1000).ConfigureAwait(true);
             messages.Add(response);
         }
     }
@@ -1708,9 +1708,9 @@ public class ViewModel : INotifyPropertyChanged
     {
         if (messageObj.Author == CurrentUser)
         {
-            await Task.Delay(2000).ConfigureAwait(true);
+            await Task.Delay(1000).ConfigureAwait(true);
             messageObj.DeliveryState = Syncfusion.Maui.Chat.DeliveryStates.Delivered;
-            await Task.Delay(2000).ConfigureAwait(true);
+            await Task.Delay(1000).ConfigureAwait(true);
             messageObj.DeliveryState = Syncfusion.Maui.Chat.DeliveryStates.Read;
         }
     }
