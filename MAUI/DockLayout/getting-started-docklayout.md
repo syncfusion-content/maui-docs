@@ -135,7 +135,8 @@ Make sure the following are installed:
 
 The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="6 17" %}
+{% tabs %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="6 17" %}
 
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
@@ -161,12 +162,11 @@ namespace DockLayoutSample
 
 		return builder.Build();
 	 }
-   
   }
-
 }     
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Step 4: Initialize the DockLayout Control
 
@@ -205,6 +205,7 @@ namespace DockLayoutGettingStarted
 
 {% endhighlight %}
 {% endtabs %}
+{% endtabcontent %}
 {% endtabcontents %}
 
 ### Set Dock Position for Child Views
@@ -212,7 +213,7 @@ Inside the `SfDockLayout` control, child views can be arranged using the `Dock` 
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" %}
+{% highlight xaml %}
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
