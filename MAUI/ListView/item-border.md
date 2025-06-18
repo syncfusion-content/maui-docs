@@ -49,7 +49,7 @@ The `SfListView` allows applying borders to each item by setting the `ShowItemBo
 N> `ItemBorderRadius` is applicable only when `ItemBorderThickness` has uniform values on all sides.
 
 {% tabs %}
-{% highlight xml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 <syncfusion:SfListView x:Name="listView"
                        ShowItemBorder="True"
                        ItemsSource="{Binding BookInfo}">
