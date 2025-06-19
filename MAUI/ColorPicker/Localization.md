@@ -51,7 +51,7 @@ To localize the `Color Picker` based on `CurrentUICulture` using `resource` file
 
    1. Right-click on the `Resources` folder, select `Add`, and then `NewItem`.
 
-   2. In the Add New Item wizard, select the Resource File option and name the file as `SfColorPicker.<culture name>.resx.` For example, name it `SfColorPicker.fr-FR.resx` for the French culture.
+   2. In the `Add New Item` wizard, select the `Resources File` option and name the file as `SfColorPicker.<culture name>.resx.` For example, name it `SfColorPicker.fr-FR.resx` for the French culture.
 
    3. The culture name indicates the name of the language and country.
 

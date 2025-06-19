@@ -38,7 +38,7 @@ Before proceeding, ensure the following are set up:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="6 17" %}
+{% highlight c# hl_lines="1 12" %}
 
 using Syncfusion.Maui.Core.Hosting;
 
@@ -46,18 +46,18 @@ namespace ColorPickerSample
 {
     public static class MauiProgram
     {
-    public static MauiApp CreateMauiApp()
-    {
-        var builder = MauiApp.CreateBuilder();
-        builder
-        .UseMauiApp<App>()
-        .ConfigureSyncfusionCore() 
-        .ConfigureFonts(fonts =>
+        public static MauiApp CreateMauiApp()
         {
-            fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-        });
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore() 
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-        return builder.Build();
+            return builder.Build();
         }      
     }
 }     
@@ -79,8 +79,8 @@ namespace ColorPickerSample
             xmlns:inputs="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs">
 
     <ContentPage.Content> 
-	 	<inputs:SfColorPicker x:Name="colorPicker"/>
-	</ContentPage.Content> 
+        <inputs:SfColorPicker x:Name="colorPicker"/>
+    </ContentPage.Content>
 
 </ContentPage>
 	
@@ -136,7 +136,7 @@ Before proceeding, ensure the following are set up:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="6 17" %}
+{% highlight c# hl_lines="1 12" %}
 
 using Syncfusion.Maui.Core.Hosting;
 
@@ -144,18 +144,18 @@ namespace ColorPickerSample
 {
     public static class MauiProgram
     {
-    public static MauiApp CreateMauiApp()
-    {
-        var builder = MauiApp.CreateBuilder();
-        builder
-        .UseMauiApp<App>()
-        .ConfigureSyncfusionCore() 
-        .ConfigureFonts(fonts =>
+        public static MauiApp CreateMauiApp()
         {
-            fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-        });
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore() 
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-        return builder.Build();
+            return builder.Build();
         }      
     }
 }     
@@ -177,8 +177,8 @@ namespace ColorPickerSample
             xmlns:inputs="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs">
     
     <ContentPage.Content> 
-	 	<core:SfColorPicker x:Name="colorPicker"/>
-	</ContentPage.Content> 
+        <inputs:SfColorPicker x:Name="colorPicker"/>
+    </ContentPage.Content>
 
 </ContentPage>
 	
@@ -233,7 +233,7 @@ Before proceeding, ensure the following are set up:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="6 17" %}
+{% highlight c# hl_lines="1 12" %}
 
 using Syncfusion.Maui.Core.Hosting;
 
@@ -241,18 +241,18 @@ namespace ColorPickerSample
 {
     public static class MauiProgram
     {
-    public static MauiApp CreateMauiApp()
-    {
-        var builder = MauiApp.CreateBuilder();
-        builder
-        .UseMauiApp<App>()
-        .ConfigureSyncfusionCore() 
-        .ConfigureFonts(fonts =>
+        public static MauiApp CreateMauiApp()
         {
-            fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-        });
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore() 
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-        return builder.Build();
+            return builder.Build();
         }      
     }
 }     
@@ -272,9 +272,11 @@ namespace ColorPickerSample
 <ContentPage 
             ...
             xmlns:inputs="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs">
+
     <ContentPage.Content> 
-	 	<core:SfColorPicker x:Name="colorPicker"/>
-	</ContentPage.Content> 
+	 	<inputs:SfColorPicker x:Name="colorPicker"/>
+	</ContentPage.Content>
+
 </ContentPage>
 	
 {% endhighlight %}

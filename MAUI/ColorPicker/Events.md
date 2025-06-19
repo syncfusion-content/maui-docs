@@ -53,8 +53,8 @@ The `ColorChanged` event is triggered when the user selects a color. Its behavio
 
 The event arguments are of type `ColorChangedEventArgs` and include the following properties:
 
-* OldColor: The previously selected color.
-* NewColor: The newly selected color.
+* `OldColor:` The previously selected color.
+* `NewColor:` The newly selected color.
 
 {% tabs %}
 
@@ -89,7 +89,7 @@ private void OnColorChanged(object sender, ColorChangedEventArgs e)
 
 The `ColorSelected` event is triggered when the user selects a color by clicking or tapping on the selected color view. The event arguments are of type `ColorSelectedEventArgs` and include the following property:
 
-* SelectedColor: The color currently selected by the user.
+* `SelectedColor:` The color currently selected by the user.
 
 {% tabs %}
 
