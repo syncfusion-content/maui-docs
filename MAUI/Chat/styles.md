@@ -1288,7 +1288,9 @@ You can style the delivery state by setting values to the in-built keys of the d
 </tr>
 </table>
 
-xaml
+{% tabs %}
+{% highlight xaml %}
+
     <ContentPage.Resources>
         <syncTheme:SyncfusionThemeDictionary>
             <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
@@ -1303,7 +1305,8 @@ xaml
         </syncTheme:SyncfusionThemeDictionary>
     </ContentPage.Resources>
 
-C#
+{% endhighlight %}
+{% highlight c# %}
 
 public MainPage()
 {
@@ -1318,5 +1321,8 @@ public MainPage()
     this.Resources.Add(dictionary);
     ....
 }
+
+{% endhighlight %}
+{% endtabs %}
 
 ![Delivery State Style in .NET MAUI Chat](Images/styles/maui-chat-delivery-state-style.gif)
