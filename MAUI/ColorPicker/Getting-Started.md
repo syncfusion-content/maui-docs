@@ -274,8 +274,8 @@ namespace ColorPickerSample
             xmlns:inputs="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs">
 
     <ContentPage.Content> 
-	 	<inputs:SfColorPicker x:Name="colorPicker"/>
-	</ContentPage.Content>
+        <inputs:SfColorPicker x:Name="colorPicker"/>
+    </ContentPage.Content>
 
 </ContentPage>
 	
