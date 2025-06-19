@@ -9,7 +9,7 @@ documentation: ug
 
 # Appearance in Maui Accordion (SfAccordion)
 
-The .NET MAUI SfAccordion comes with built-in support for customizing the appearance of the header.
+The .NET MAUI SfAccordion comes with built-in support for customizing the appearance of the header. 123
 
 ## Header icon position 
  
