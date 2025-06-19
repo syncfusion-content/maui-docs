@@ -217,6 +217,10 @@ The SelectionHighlightColor property of the [SfToolbarItem](https://help.syncfus
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="5 9 13 21" %}
 
+<ContentPage
+    . . .    
+    xmlns:toolbar="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar">
+
 <toolbar:SfToolbar x:Name="toolbar">
     <toolbar:SfToolbar.Items>
         <toolbar:SfToolbarItem Name="Bold"
@@ -260,60 +264,68 @@ The SelectionHighlightColor property of the [SfToolbarItem](https://help.syncfus
     </toolbar:SfToolbar.Items>
 </toolbar:SfToolbar>
 
+</ContentPage>
+
 {% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-SfToolbar toolbar = new SfToolbar();
-toolbar.HeightRequest = 56;
-ObservableCollection<BaseToolbarItem> itemCollection = new ObservableCollection<BaseToolbarItem>
+public partial class MainPage : ContentPage
 {
-     new SfToolbarItem
+     public MainPage()
      {
-         Name = "Bold",
-         Text = "Bold",
-         SelectionHighlightColor = Colors.LightGreen
-     },
-     new SfToolbarItem
-     {
-         Name = "Underline",
-         Text = "Underline",
-         SelectionHighlightColor = Colors.LightBlue
-     },
-     new SfToolbarItem
-     {
-         Name = "Italic",
-         Text = "Italic",
-         Icon = new FontImageSource { Glyph = "\uE771", FontFamily="MauiMaterialAssets" },
-         SelectionHighlightColor = Colors.Violet
-     },
-     new SfToolbarItem
-     {
-         Name = "AlignLeft",
-         Text = "Align-Left",
-         Icon = new FontImageSource { Glyph = "\uE751", FontFamily="MauiMaterialAssets" },
-         SelectionHighlightColor = Colors.Yellow
-     },
-     new SfToolbarItem
-     {
-         Name = "AlignRight",
-         ToolTipText = "Align-Right",
-         Icon = new FontImageSource { Glyph = "\uE753", FontFamily="MauiMaterialAssets" },
-         SelectionHighlightColor = Colors.Turquoise
-     },
-     new SfToolbarItem
-     {
-         Name = "AlignCenter",
-         ToolTipText = "Align-Center",
-         Icon = new FontImageSource { Glyph = "\uE752", FontFamily="MauiMaterialAssets" },
-         SelectionHighlightColor = Colors.LavenderBlush
-     }
-};
+            InitializeComponent();
+            SfToolbar toolbar = new SfToolbar();
+            ObservableCollection<BaseToolbarItem> itemCollection = new ObservableCollection<BaseToolbarItem>
+            {
+                new SfToolbarItem
+                {
+                    Name = "Bold",
+                    Text = "Bold",
+                    SelectionHighlightColor = Colors.LightGreen
+                },
+                new SfToolbarItem
+                {
+                    Name = "Underline",
+                    Text = "Underline",
+                    SelectionHighlightColor = Colors.LightBlue
+                },
+                new SfToolbarItem
+                {
+                    Name = "Italic",
+                    Text = "Italic",
+                    Icon = new FontImageSource { Glyph = "\uE771", FontFamily="MauiMaterialAssets" },
+                    SelectionHighlightColor = Colors.Violet
+                },
+                new SfToolbarItem
+                {
+                    Name = "AlignLeft",
+                    Text = "Align-Left",
+                    Icon = new FontImageSource { Glyph = "\uE751", FontFamily="MauiMaterialAssets" },
+                    SelectionHighlightColor = Colors.Yellow
+                },
+                new SfToolbarItem
+                {
+                    Name = "AlignRight",
+                    ToolTipText = "Align-Right",
+                    Icon = new FontImageSource { Glyph = "\uE753", FontFamily="MauiMaterialAssets" },
+                    SelectionHighlightColor = Colors.Turquoise
+                },
+                new SfToolbarItem
+                {
+                    Name = "AlignCenter",
+                    ToolTipText = "Align-Center",
+                    Icon = new FontImageSource { Glyph = "\uE752", FontFamily="MauiMaterialAssets" },
+                    SelectionHighlightColor = Colors.LavenderBlush
+                }
+            };
 
-toolbar.Items = itemCollection;
-this.Content = toolbar;
+            toolbar.Items = itemCollection;
+            this.Content = toolbar;
+     }
+ }
 
 {% endhighlight %}
 {% endtabs %}

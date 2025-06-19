@@ -468,17 +468,21 @@ The [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.But
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<button:SfSegmentedControl x:Name="segmentedControl"
+<ContentPage xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
+
+<buttons:SfSegmentedControl x:Name="segmentedControl"
                            EnableRippleEffect="False">
-    <button:SfSegmentedControl.ItemsSource>
+    <buttons:SfSegmentedControl.ItemsSource>
         <x:Array Type="{x:Type x:String}">
                 <x:String>Day</x:String>
                 <x:String>Week</x:String>
                 <x:String>Month</x:String>
                 <x:String>Year</x:String>
         </x:Array>
-    </button:SfSegmentedControl.ItemsSource>
-</button:SfSegmentedControl>
+    </buttons:SfSegmentedControl.ItemsSource>
+</buttons:SfSegmentedControl>
+
+</ContentPage>
 
 {% endhighlight %}
 {% endtabs %}
@@ -486,17 +490,27 @@ The [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.But
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml.cs" hl_lines="10" %}
 
-SfSegmentedControl segmentedControl = new SfSegmentedControl();
-List<SfSegmentItem> itemList = new List<SfSegmentItem>
+using Syncfusion.Maui.Buttons;
+. . .
+
+public partial class MainPage : ContentPage
 {
-    new SfSegmentItem() {Text = "Day"},
-    new SfSegmentItem() {Text = "Week"},
-    new SfSegmentItem() {Text = "Month"},
-    new SfSegmentItem() {Text = "Year"},
-};
-segmentedControl.ItemsSource = itemList;
-segmentedControl.EnableRippleEffect = false;
-this.Content = segmentedControl;
+    public MainPage()
+    {
+        InitializeComponent();
+        SfSegmentedControl segmentedControl = new SfSegmentedControl();
+        List<SfSegmentItem> itemList = new List<SfSegmentItem>
+        {
+            new SfSegmentItem() {Text = "Day"},
+            new SfSegmentItem() {Text = "Week"},
+            new SfSegmentItem() {Text = "Month"},
+            new SfSegmentItem() {Text = "Year"},
+        };
+        segmentedControl.ItemsSource = itemList;
+        segmentedControl.EnableRippleEffect = false;
+        this.Content = segmentedControl;
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
