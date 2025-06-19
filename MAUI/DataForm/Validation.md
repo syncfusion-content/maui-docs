@@ -193,13 +193,11 @@ private void OnDataFormValidateProperty(object sender, DataFormValidatePropertyE
 {% endhighlight %}
 {% endtabs %}
 
-## Validation label appearance customization
+## Show or Hide Validation Label
 
-The data form supports customizing the style of both error and valid message label style easily.
+#### Show or Hide Error Message Label
 
-## Show or Hide Error Labels
-
-The ShowErrorLabel property of a [DataformItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html?tabs=tabid-53%2Ctabid-58%2Ctabid-100%2Ctabid-33%2Ctabid-38%2Ctabid-6%2Ctabid-1%2Ctabid-28%2Ctabid-63%2Ctabid-8%2Ctabid-48%2Ctabid-96%2Ctabid-68%2Ctabid-76%2Ctabid-18%2Ctabid-13%2Ctabid-23%2Ctabid-72%2Ctabid-84%2Ctabid-92%2Ctabid-80%2Ctabid-88%2Ctabid-43) controls whether the error label is displayed. When set to true, the error label appears during validation failures. When set to false, the label remains hidden. 
+The `ShowErrorLabel` property of a [DataformItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html?tabs=tabid-53%2Ctabid-58%2Ctabid-100%2Ctabid-33%2Ctabid-38%2Ctabid-6%2Ctabid-1%2Ctabid-28%2Ctabid-63%2Ctabid-8%2Ctabid-48%2Ctabid-96%2Ctabid-68%2Ctabid-76%2Ctabid-18%2Ctabid-13%2Ctabid-23%2Ctabid-72%2Ctabid-84%2Ctabid-92%2Ctabid-80%2Ctabid-88%2Ctabid-43) controls whether the error label is displayed. When set to true, the error label appears during validation failures. When set to false, the label remains hidden. 
 
 {% tabs %}
 {% highlight XAML %}
@@ -223,9 +221,9 @@ this.TextItem.ShowErrorLabel = false;
 {% endhighlight %}
 {% endtabs %}
 
-## Show or Hide Valid Message Label
+#### Show or Hide Valid Message Label
 
-The ShowValidMessageLabel property of a [DataformItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html?tabs=tabid-53%2Ctabid-58%2Ctabid-100%2Ctabid-33%2Ctabid-38%2Ctabid-6%2Ctabid-1%2Ctabid-28%2Ctabid-63%2Ctabid-8%2Ctabid-48%2Ctabid-96%2Ctabid-68%2Ctabid-76%2Ctabid-18%2Ctabid-13%2Ctabid-23%2Ctabid-72%2Ctabid-84%2Ctabid-92%2Ctabid-80%2Ctabid-88%2Ctabid-43) controls the visibility of the valid message label. Setting this property to true displays the label when the input is valid, while setting it to false hides the label.
+The `ShowValidMessageLabel` property of a [DataformItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html?tabs=tabid-53%2Ctabid-58%2Ctabid-100%2Ctabid-33%2Ctabid-38%2Ctabid-6%2Ctabid-1%2Ctabid-28%2Ctabid-63%2Ctabid-8%2Ctabid-48%2Ctabid-96%2Ctabid-68%2Ctabid-76%2Ctabid-18%2Ctabid-13%2Ctabid-23%2Ctabid-72%2Ctabid-84%2Ctabid-92%2Ctabid-80%2Ctabid-88%2Ctabid-43) controls the visibility of the valid message label. Setting this property to true displays the label when the input is valid, while setting it to false hides the label.
 
 {% tabs %}
 {% highlight XAML %}
@@ -248,6 +246,10 @@ this.TextItem.ShowErrorLabel = false;
 
 {% endhighlight %}
 {% endtabs %}
+
+## Validation label appearance customization
+
+The data form supports customizing the style of both error and valid message label style easily.
 
 #### Customize error label text style
 

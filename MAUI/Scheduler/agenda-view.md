@@ -310,10 +310,10 @@ this.Scheduler.AppointmentTextStyle = appointmentTextStyle;
 
 ## Customize "No Events" Text Appearance
 
-The appearance of the "No events" text in the Agenda view can be customized using the NoEventsTextStyle property of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). This allows modification of font size, color, and other text attributes.
+The appearance of the "No events" text in the Agenda view can be customized using the `NoEventsTextStyle` property of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). This allows modification of font size, color, and other text attributes.
 
 {% tabs %}
-{% highlight XAML hl_lines="6 7 8" %}
+{% highlight XAML hl_lines="6 7 8 9" %}
 
 <scheduler:SfScheduler x:Name="scheduler"
                        View="Agenda"
@@ -344,7 +344,7 @@ The appearance of the "No events" text in the Agenda view can be customized usin
 {% endhighlight %}
 {% endtabs %}       
 
-N> The "No events" message is displayed when there are no appointments for the current date or for the date specified using the [DisplayDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_DisplayDate) property.
+N> The "No Events" message is displayed when there are no appointments for the current date or for the date specified using the [DisplayDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_DisplayDate) property.
 
 ## Change the appointment time format
 
