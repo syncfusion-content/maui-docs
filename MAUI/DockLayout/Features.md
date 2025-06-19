@@ -24,8 +24,8 @@ The `ShouldExpandLastChild` property (of type `bool`) determines whether the las
 
 {% highlight c# %}
 
- SfDockLayout dockLayout = new SfDockLayout() { ShouldExpandLastChild = false };
- dockLayout.Children.Add(new Label() { Text = "None", WidthRequest = 45 });
+SfDockLayout dockLayout = new SfDockLayout() { ShouldExpandLastChild = false };
+dockLayout.Children.Add(new Label() { Text = "None", WidthRequest = 45 });
 
 {% endhighlight %}
 
@@ -36,8 +36,8 @@ The `ShouldExpandLastChild` property (of type `bool`) determines whether the las
 ## Spacing
 Customize the spacing between child elements using the `HorizontalSpacing` and `VerticalSpacing` properties.The default value for both is 0.
 
-* [HorizontalSpacing]() —  Specifies the horizontal gap between docked children.
-* [VerticalSpacing]() — Specifies the vertical  gap between docked children.
+* `HorizontalSpacing` —  Specifies the horizontal gap between docked children.
+* `VerticalSpacing` — Specifies the vertical  gap between docked children.
 
 
 {% tabs %}
@@ -99,7 +99,7 @@ The `SetDock` method assigns a specific docking position to a child element with
 
 {% highlight c# hl_lines="5 9 13 17" %}
 
- SfDockLayout dockLayout = new SfDockLayout();
+SfDockLayout dockLayout = new SfDockLayout();
 
 var leftLabel = new Label() { Text = "Left", WidthRequest = 80, Background = Color.FromArgb("#CA7842") };
 dockLayout.Children.Add(leftLabel);
