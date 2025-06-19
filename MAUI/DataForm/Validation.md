@@ -238,7 +238,7 @@ xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
     </dataForm:SfDataForm>
 </ContentPage>
 
-{% tabs %}
+{% endhighlight %}
 {% highlight C# %}
 
 this.dataForm.AutoGenerateItems = false;
