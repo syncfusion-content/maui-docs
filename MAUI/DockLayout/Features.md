@@ -121,12 +121,11 @@ Content = dockLayout;
 
 {% endtabs %}
 
-## Right To Left in .NET MAUI DockLayout
+## Right To Left (RTL)
 
 The .NET MAUI DockLayout control supports Right-to-Left (RTL) layout direction. When the `FlowDirection` property is set to `RightToLeft`, the docking positions are mirrored to align with RTL language standards.
 
 You can enable RTL either by setting `FlowDirection` directly on the DockLayout, or by changing the device language to one that uses an RTL script.
-
 
 {% tabs %}
 
