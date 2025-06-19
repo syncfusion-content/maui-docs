@@ -3473,7 +3473,7 @@ This page lists the keys associated with each control and the respective UI elem
     </tr>
 
     <tr>
-        <td rowspan="16">
+        <td rowspan="23">
             SfColorPickerStyles  
             <br/>
             <br/>
