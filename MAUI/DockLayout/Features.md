@@ -61,8 +61,6 @@ SfDockLayout dockLayout = new SfDockLayout()
 
 ![Output of DockLayout with Spacing](DockLayout-Images/maui-docklayout-spacing.png)
 
-## Methods in .NET MAUI DockLayout Control
-
 ## GetDock
 The `GetDock` method retrieves the docking position for a specified view within the layout.
 
