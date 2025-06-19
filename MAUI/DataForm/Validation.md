@@ -62,11 +62,11 @@ The supported validation modes are as follows:
 {% tabs %}
 {% highlight XAML %}
 
-<ContentPage 
+<ContentPage
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
     <dataForm:SfDataForm
-        x:Name="dataForm" 
+        x:Name="dataForm"
         ValidationMode="LostFocus">
     </dataForm:SfDataForm>
 </ContentPage>
@@ -197,12 +197,12 @@ private void OnDataFormValidateProperty(object sender, DataFormValidatePropertyE
 
 #### Show or Hide Error Message Label
 
-The `ShowErrorLabel` property of a [DataformItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html?tabs=tabid-53%2Ctabid-58%2Ctabid-100%2Ctabid-33%2Ctabid-38%2Ctabid-6%2Ctabid-1%2Ctabid-28%2Ctabid-63%2Ctabid-8%2Ctabid-48%2Ctabid-96%2Ctabid-68%2Ctabid-76%2Ctabid-18%2Ctabid-13%2Ctabid-23%2Ctabid-72%2Ctabid-84%2Ctabid-92%2Ctabid-80%2Ctabid-88%2Ctabid-43) controls whether the error label is displayed. When set to true, the error label appears during validation failures. When set to false, the label remains hidden. 
+The `ShowErrorLabel` property of a [DataformItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html?tabs=tabid-53%2Ctabid-58%2Ctabid-100%2Ctabid-33%2Ctabid-38%2Ctabid-6%2Ctabid-1%2Ctabid-28%2Ctabid-63%2Ctabid-8%2Ctabid-48%2Ctabid-96%2Ctabid-68%2Ctabid-76%2Ctabid-18%2Ctabid-13%2Ctabid-23%2Ctabid-72%2Ctabid-84%2Ctabid-92%2Ctabid-80%2Ctabid-88%2Ctabid-43) controls whether the error label is displayed. When set to true, the error label appears during validation failures. When set to false, the label remains hidden.
 
 {% tabs %}
 {% highlight XAML %}
 
-<ContentPage 
+<ContentPage
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
     <dataForm:SfDataForm x:Name="dataForm" AutoGenerateItems="False">
@@ -228,7 +228,7 @@ The `ShowValidMessageLabel` property of a [DataformItem](https://help.syncfusion
 {% tabs %}
 {% highlight XAML %}
 
-<ContentPage 
+<ContentPage
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
     <dataForm:SfDataForm x:Name="dataForm" AutoGenerateItems="False">
@@ -257,7 +257,7 @@ The error label style can be customized by changing the [ErrorLabelTextStyle](ht
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 6 7" %}
-<ContentPage 
+<ContentPage
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
     <dataForm:SfDataForm
@@ -309,7 +309,7 @@ The valid message label style can be customized by changing the [ValidMessageLab
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 6 7" %}
 
-<ContentPage 
+<ContentPage
 ...
 xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm">
     <dataForm:SfDataForm
