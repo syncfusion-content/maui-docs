@@ -71,7 +71,7 @@ The `GetDock` method retrieves the docking position for a specified view within 
 
 {% tabs %}
 
-{% highlight c# hl_lines="6" %}
+{% highlight c# %}
 
 SfDockLayout dockLayout = new SfDockLayout();
 var leftLabel = new Label() { Text = "Left", WidthRequest = 80, Background = Color.FromArgb("#CA7842") };
@@ -95,7 +95,7 @@ The `SetDock` method assigns a specific docking position to a child element with
 
 {% tabs %}
 
-{% highlight c# hl_lines="5 9 13 17" %}
+{% highlight c# %}
 
 SfDockLayout dockLayout = new SfDockLayout();
 
