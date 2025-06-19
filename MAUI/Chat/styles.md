@@ -616,11 +616,11 @@ You can style the elements of a date picker message by setting values to the in-
 </tr>
 <tr>
 <td> SfChatDateTimeInputMessageIconColor </td>
-<td> Icon color for datetime input messsge. </td>
+<td> Icon color for datetime input message. </td>
 </tr>
 <tr>
 <td> SfChatDateTimeInputMessageIconBackground </td>
-<td> Icon background color for datetime input messsge. </td>
+<td> Icon background color for datetime input message. </td>
 </tr>
 </table>
 
