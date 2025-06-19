@@ -50,7 +50,7 @@ public class ViewModel
 
 Set the ViewModel instance as BindingContext of your page to bind properties of ViewModel to [`SfCardLayout`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html). 
 
-N> Add namespace of ViewModel class in your XAML page if you prefer to set BindingContext in XAML. 
+N> Add the namespace of the ViewModel class in your XAML page if you prefer to set the BindingContext in XAML. 
 
 {% tabs %} 
 
@@ -74,7 +74,7 @@ this.BindingContext = new ViewModel();
 
 ## Populate CardLayout with data
 
-[`SfCardLayout`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html) can be populated with data by setting the ItemSource property of BindableLayout to a collection of items that can be used in [`SfCardView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardView.html).
+[`SfCardLayout`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardLayout.html) can be populated with data by setting the ItemsSource property of BindableLayout to a collection of items that can be used in [`SfCardView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardView.html).
 
 {% tabs %} 
 

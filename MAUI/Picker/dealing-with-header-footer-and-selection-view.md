@@ -126,7 +126,7 @@ You can customize the picker header appearance by using the [HeaderTemplate](htt
 
 {% highlight xaml tabtitle="XAML" %}
 
-<Picker:SfPicker x:Name="picker" >
+<picker:SfPicker x:Name="picker" >
     <picker:SfPicker.HeaderTemplate>
         <DataTemplate>
             <Grid BackgroundColor="#BB9AB1">
@@ -134,7 +134,7 @@ You can customize the picker header appearance by using the [HeaderTemplate](htt
             </Grid>
         </DataTemplate>
     </picker:SfPicker.HeaderTemplate>
-</Picker:SfPicker>
+</picker:SfPicker>
 
 {% endhighlight %}
 
@@ -147,7 +147,6 @@ N> If a template is applied to the header in the [PickerHeaderView](https://help
 ### Custom Header appearance using DataTemplateSelector
 
 You can customize the picker header appearance by using the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_HeaderTemplate) property in the [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the picker header. This lets you apply a custom data template to the header and customize its appearance based on specific conditions.
-
 {% tabs %}
 
 {% highlight xaml tabtitle="XAML" %}
@@ -336,7 +335,7 @@ You can customize the picker footer appearance by using the [FooterTemplate](htt
 
 {% highlight xaml tabtitle="XAML" %}
 
-<Picker:SfPicker x:Name="picker" >
+<picker:SfPicker x:Name="picker" >
     <picker:SfPicker.FooterTemplate>
         <DataTemplate>
             <Grid BackgroundColor="#BB9AB1">
@@ -349,7 +348,7 @@ You can customize the picker footer appearance by using the [FooterTemplate](htt
             </Grid>
         </DataTemplate>
     </picker:SfPicker.FooterTemplate>
-</Picker:SfPicker>
+</picker:SfPicker>
 
 {% endhighlight %}
 

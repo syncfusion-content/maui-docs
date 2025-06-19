@@ -10,7 +10,7 @@ documentation: ug
 # Date Restriction in .NET MAUI Date Time Picker (SfDateTimePicker)
 
 ## Minimum date
-The Date time picker provides an option to restrict the selection of date and time using the [MinimumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_MinimumDate) property in [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html), and you cannot select the date and time beyond the minimum date range. The MinimumDate value has to be lesser than the MaximumDate value.
+The DateTime Picker provides an option to restrict the selection of date and time using the [MinimumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_MinimumDate) property in [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html), and you cannot select the date and time beyond the minimum date. The MinimumDate value has to be lesser than the MaximumDate value.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
@@ -29,10 +29,10 @@ this.Content = picker;
 {% endhighlight %}  
 {% endtabs %}
 
-   ![Minimum date in .NET MAUI Date Time picker.](images/date-restriction/maui-date-time-picker-minimum-date.png)
+![Minimum date in .NET MAUI Date Time picker.](images/date-restriction/maui-date-time-picker-minimum-date.png)
 
 ## Maximum date
-The Date time picker provides an option to restrict the selection of date and time using the [MaximumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_MaximumDate) property in [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html), and you cannot select the date and time beyond the maximum date range.
+The DateTime Picker provides an option to restrict the selection of date and time using the [MaximumDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_MaximumDate) property in [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html), and you cannot select the date and time beyond the maximum date.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="2" %}
@@ -51,11 +51,11 @@ this.Content = picker;
 {% endhighlight %}  
 {% endtabs %}
 
-   ![Maximum date in .NET MAUI Date Time picker.](images/date-restriction/maui-date-time-picker-maximum-date.png)
+![Maximum date in .NET MAUI Date Time picker.](images/date-restriction/maui-date-time-picker-maximum-date.png)
 
-## Blackout Date times
+## Blackout DateTimes
 
-The [Blackout Date times](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_BlackoutDateTimes) property in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html) component allows you to block the selection of specific dates and times. You can define a list of entire dates or particular time slots within those dates to disable, preventing their selection. This feature is useful for enforcing availability rules, such as restricting specific days or hours.
+The [Blackout DateTimes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_BlackoutDateTimes) property in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html) component allows you to block the selection of specific dates and times. You can define a list of entire dates or particular time slots within those dates to disable, preventing their selection. This feature is useful for enforcing availability rules, such as restricting specific days or hours.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
@@ -106,4 +106,4 @@ this.Content = picker;
 
 ![Blackout date times time columns in .NET MAUI Date Time picker.](images/date-restriction/maui-date-time-picker-blackout-date-times-time.png)
 
-N> The `Selection View` will not be applicable when setting `Blackout date times`.
+N> The `Selection View` will not be applicable when setting `Blackout DateTimes`.
