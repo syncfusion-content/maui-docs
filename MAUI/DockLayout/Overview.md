@@ -14,7 +14,7 @@ The .NET MAUI `SfDockLayout` is a versatile and powerful layout control that ena
 ## Key features
 
 * Flexible Docking - Easily dock child elements to the top, bottom, left, right, or center.
-
+ 
 * Adaptive Layouts - Automatically adapts to various screen sizes and orientations.
 
-* Customizable Spaces - Configure spacing between childs.
+* Customizable Spaces - Configure horizontal and vertical spacing between dock elements.
