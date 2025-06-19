@@ -92,7 +92,7 @@ N> The `SfAIAssistView.AssistItems` property is of type `IList<IAssistItem>`. To
 
 ## Binding Custom Model Collection
  
-The `SfAIAssistView` control provides support for binding a custom model collection through the `ItemsSource` property. This feature allows users to use their own data models with the control. The `ItemsSource` property binds a collection of custom data objects to the `SfAIAssistView` and each item in the collection will be converted to an `AssistItem` and displayed in the view. The `ItemsSourceConverter` property sets the converter used to transform data objects into AssistItems and vice versa.
+The `SfAIAssistView` control provides support for binding a custom model collection through the `ItemsSource` property. This feature allows users to use their own data models with the control. The `ItemsSource` property binds a collection of custom data objects to the `SfAIAssistView` and each item in the collection will be converted to an `AssistItem` and displayed in the view. The `ItemsSourceConverter` property sets the converter used to transform data objects into assist items and vice versa.
  
 {% tabs %}
 {% highlight xaml hl_lines="15 16" %}
@@ -145,6 +145,7 @@ Create the below collection of objects that must be converted to assist items co
     {
         private string? prompt;
         private string? response;
+        private object? promptItem;
         private bool isRequested;
 
         public string? Prompt
@@ -174,6 +175,16 @@ Create the below collection of objects that must be converted to assist items co
             {
                 isRequested = value;
                 RaisePropertyChanged(nameof(IsRequested));
+            }
+        }
+
+        public object? PromptItem
+        {
+            get { return promptItem; }
+            set
+            {
+                promptItem = value;
+                RaisePropertyChanged(nameof(PromptItem));
             }
         }
 
@@ -277,6 +288,7 @@ N> If you want your data model to respond to property changes, then implement [I
             {
                 Response = "Types of Listening : For a good communication, it is not only enough to convey the information efficiently, but it also needs to include good listening skill. Common types of Listening are Active listening and Passive listening.",
                 IsRequested = false,
+                PromptItem = requestItem,
             };
 
             // Add the response item to the collection
