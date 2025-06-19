@@ -97,7 +97,6 @@ treeView.AllowDragging = true;
 treeView.SetBinding(SfTreeView.ItemsSourceProperty, new Binding("Folders"));
 treeView.DragItemTemplate = new DataTemplate(() =>
 {
-    // Create outer Border
     var border = new Border
     {
         Padding = 8,
@@ -106,18 +105,13 @@ treeView.DragItemTemplate = new DataTemplate(() =>
         Background = Colors.White,
         StrokeShape = new RoundRectangle { CornerRadius = 8 }
     };
-
-    // Create Grid
     var grid = new Grid
     {
         RowSpacing = 0
     };
-
     grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Auto });
     grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(40) });
     grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Star });
-
-    // Create first Label (icon)
     var iconLabel = new Label
     {
         Text = "\uE70E",
@@ -128,8 +122,6 @@ treeView.DragItemTemplate = new DataTemplate(() =>
         FontFamily = "MauiMaterialAssets"
     };
     iconLabel.SetBinding(Label.IsVisibleProperty, new Binding("BlockIconVisible", source: new RelativeBindingSource(RelativeBindingSourceMode.FindAncestorBindingContext, typeof(YourViewModelType), null)));
-
-    // Create Image
     var image = new Image
     {
         VerticalOptions = LayoutOptions.Center,
@@ -139,8 +131,6 @@ treeView.DragItemTemplate = new DataTemplate(() =>
     };
     image.SetBinding(Image.SourceProperty, "ImageIcon");
     Grid.SetColumn(image, 1);
-
-    // Create second Label (FolderName)
     var nameLabel = new Label
     {
         Margin = new Thickness(5, 0, 0, 0),
@@ -151,15 +141,10 @@ treeView.DragItemTemplate = new DataTemplate(() =>
     };
     nameLabel.SetBinding(Label.TextProperty, "FolderName");
     Grid.SetColumn(nameLabel, 2);
-
-    // Add children to grid
     grid.Children.Add(iconLabel);
     grid.Children.Add(image);
     grid.Children.Add(nameLabel);
-
-    // Set the content of the border
     border.Content = grid;
-
     return border;
 });
 {% endhighlight %}
@@ -173,12 +158,12 @@ N> View sample in [GitHub](https://github.com/SyncfusionExamples/how-to-customiz
 
 The `ItemDragging` event is raised while dragging and dropping the item in the `SfTreeView`. The `ItemDraggingEventArgs` has the following members which provide the information for the ItemDragging event:
 
-[Action](): Returns the drag `Action` such as start, dragging, dropping and drop.
-[Handled](): If this member is set to true, dragging can be handled. It is applicable only if Action is `Dragging`.
-[Cancel]() : If this member is set to true, the drag and drop operation will be canceled.
-[DraggingNode](): Returns the `DraggingNodes`.
-[DropPosition](): Returns the position where dragged nodes are going to be dropped.
-[Position](): Returns the touch position of the drag item from the screen coordinates.
+`Action`: Returns the drag `Action` such as start, dragging, dropping and drop.
+`Handled`: If this member is set to true, dragging can be handled. It is applicable only if Action is `Dragging`.
+`Cancel` : If this member is set to true, the drag and drop operation will be canceled.
+`DraggingNode`: Returns the `DraggingNodes`.
+`DropPosition`: Returns the position where dragged nodes are going to be dropped.
+`Position`: Returns the touch position of the drag item from the screen coordinates.
 
 ## Auto scroll options
 
