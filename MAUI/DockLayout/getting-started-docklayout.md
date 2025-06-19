@@ -222,7 +222,7 @@ Inside the `SfDockLayout` control, child views can be arranged using the `Dock` 
 
    <ContentPage.Content>
         <dx:SfDockLayout >
-             <Label Text="Left" WidthRequest="80" dx:SfDockLayout.Dock="Left" Background="#E57373" />
+            <Label Text="Left" WidthRequest="80" dx:SfDockLayout.Dock="Left" Background="#E57373" />
             <Label Text="Right" WidthRequest="80" dx:SfDockLayout.Dock="Right" Background="#BA68C8" />
             <Label Text="Top" HeightRequest="80" dx:SfDockLayout.Dock="Top" Background="#F06292" />
             <Label Text="Bottom" HeightRequest="80"  dx:SfDockLayout.Dock="Bottom" Background="#9575CD"/>
