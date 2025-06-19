@@ -164,4 +164,4 @@ The `SfAIAssistView` control allows you to fully customize the empty view appear
 
 N>
 * The `EmptyViewTemplate` will only be applied when the `EmptyView` property is explicitly defined. If `EmptyView` is not set, the template will not be displayed.
-* `EmptyView` can be set to custom type and the appearance of the `EmptyView` can be customized by using the `EmptyViewTemplate`.
+* `EmptyView` can be set to custom data model and the appearance of the `EmptyView` can be customized by using the `EmptyViewTemplate`.
