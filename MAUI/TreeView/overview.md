@@ -22,3 +22,5 @@ The Syncfusion [.NET MAUI TreeView](https://www.syncfusion.com/maui-controls/mau
  * `Item templating`: Customize the appearance of each node.
 
  * `Expand and collapse nodes`: Easily reveal or hide underlying information.
+
+ * `Drag and drop`: Support to reorder the nodes by dragging and dropping them.
