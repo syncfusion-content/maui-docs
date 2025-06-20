@@ -667,7 +667,7 @@ The `SfCalendar` provides the [SelectionCellTemplate](https://help.syncfusion.co
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-internal class SelectionCellTemplate
+internal class SelectionCellTemplateView
 {
     private DataTemplate template;
 
@@ -683,7 +683,7 @@ internal class SelectionCellTemplate
         }
     }
 
-    public SelectionCellTemplate()
+    public SelectionCellTemplateView()
     {
         this.template = new DataTemplate(() =>
         {
@@ -773,7 +773,7 @@ The `SfCalendar` provides the [SelectionCellTemplate](https://help.syncfusion.co
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-internal class SelectionCellTemplate
+internal class SelectionCellTemplateView
 {
     private DataTemplate template;
 
@@ -789,7 +789,7 @@ internal class SelectionCellTemplate
         }
     }
 
-    public SelectionCellTemplate()
+    public SelectionCellTemplateView()
     {
         this.template = new DataTemplate(() =>
         {
