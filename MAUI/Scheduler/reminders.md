@@ -170,7 +170,7 @@ The [ReminderMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Schedu
 
 * [IsDismissed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminderMapping.html#Syncfusion_Maui_Scheduler_SchedulerReminderMapping_IsDismissed): Maps the property name of a custom class, which is equivalent to the [SchedulerReminder.IsDismissed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerReminder.html#Syncfusion_Maui_Scheduler_SchedulerReminder_IsDismissed).
 
-N> When publishing in AOT mode on iOS, ensure `[Preserve(AllMembers = true)]` is added to the model class to maintain reminder binding
+N> When publishing in AOT mode on iOS and macOS, ensure that `[Preserve(AllMembers = true)]` is added to the model class to maintain reminder binding.
 
 {% tabs %}
 {% highlight c# tabtitle="Reminder.cs" %}

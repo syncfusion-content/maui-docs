@@ -619,7 +619,7 @@ this.Content = scheduler;
 {% endhighlight %}
 {% endtabs %}
 
-N> When publishing in AOT mode on iOS, ensure `[Preserve(AllMembers = true)]` is added to the model class to maintain appointment binding.
+N> When publishing in AOT mode on iOS and macOS, ensure that `[Preserve(AllMembers = true)]` is added to the model class to maintain appointment binding.
 
 #### Bind appointment source for scheduler
 

@@ -146,7 +146,8 @@ public class Employee
 
 Map the properties of the `Employee` class by using the [SchedulerResourceMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceMapping.html) property of the `SchedulerResourceView`.
 
-N> When publishing in AOT mode on iOS, ensure `[Preserve(AllMembers = true)]` is added to the model class to maintain resources binding
+N> When publishing in AOT mode on iOS and macOS, ensure that `[Preserve(AllMembers = true)]` is added to the model class to maintain resources binding.
+
 
 {% tabs %}
 {% highlight XAML hl_lines="5 6 7 8" %}
