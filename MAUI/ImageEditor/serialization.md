@@ -78,3 +78,5 @@ The [Deserialize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEdito
 ![Serialization in .NET Maui ImageEditor](images/serialization/imageeditor-serialization.gif)
 
 N> Serialization and deserialization is not applicable for custom annotation views.
+
+N> Due to limitations in Ahead-of-Time (AOT) compilation, reflection-based operations like serialization and deserialization are not supported in AOT-compiled environments.
