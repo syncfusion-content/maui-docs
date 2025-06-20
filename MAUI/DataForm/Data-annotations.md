@@ -318,6 +318,8 @@ public string Name { get; set; }
 
 Specifies the Converter type, which converts the original value in a different format or as a different value.
 
+N> When publishing in AOT mode on iOS and macOS, ensure that [Preserve(AllMembers = true)] is added to the converter class in order to maintain its functionality.
+
 {% tabs %}
 {% highlight C# %}
 

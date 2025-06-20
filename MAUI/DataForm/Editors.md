@@ -724,6 +724,8 @@ this.dataForm.RegisterEditor("Country", DataFormEditorType.ComboBox);
 {% endhighlight %}
 {% endtabs %}
 
+N> Due to AOT limitations, auto-generated ItemSource for enum types is not supported when publishing in AOT mode on iOS and macOS.
+
 **Using GenerateDataFormItem event**
 
 You can also set the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_ItemsSource) for combo box editor by using the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is true.
@@ -851,6 +853,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 You can display the complex type property values in the combo box editor by using the [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_DisplayMemberPath) and [SelectedValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html?tabs=tabid-1#Syncfusion_Maui_DataForm_DataFormListItem_SelectedValuePath) properties of [DataFormComboBoxItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormComboBoxItem.html). You need to use the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event to set the [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_DisplayMemberPath) and [SelectedValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html?tabs=tabid-1#Syncfusion_Maui_DataForm_DataFormListItem_SelectedValuePath) property value of [DataFormComboBoxItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormComboBoxItem.html?tabs=tabid-1%2Ctabid-3) event when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is true.
 
 N> If [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is false, you can set the property directly by using the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). Please refer [here](https://help.syncfusion.com/maui/dataform/dataform-settings#explicitly-create-data-editors) to learn more about creating data editors explicitly.
+
+N> When publishing in AOT mode on iOS, ensure that [Preserve(AllMembers = true)] is added to both the model class and any classes used for complex types, in order to maintain functionality for DisplayMemberPath and SelectedValuePath.
 
 N> Class cannot be directly set as data type for combo box editor in this complex type scenario.
 
@@ -1007,6 +1011,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 You can display the complex type property values in autocomplete editor by using the [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_DisplayMemberPath) and [SelectedValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html?tabs=tabid-1#Syncfusion_Maui_DataForm_DataFormListItem_SelectedValuePath) properties of [DataFormAutoCompleteItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormAutoCompleteItem.html). You need to use the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event to set the [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_DisplayMemberPath) and [SelectedValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html?tabs=tabid-1#Syncfusion_Maui_DataForm_DataFormListItem_SelectedValuePath) property values of [DataFormAutoCompleteItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormAutoCompleteItem.html?tabs=tabid-1) when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is true.
 
 N> If [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is false, you can set the property directly by using the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). Please refer [here](https://help.syncfusion.com/maui/dataform/dataform-settings#explicitly-create-data-editors) to learn more about creating data editors explicitly.
+
+N> When publishing in AOT mode on iOS, ensure that [Preserve(AllMembers = true)] is added to both the model class and any classes used for complex types, in order to maintain functionality for DisplayMemberPath and SelectedValuePath.
 
 N> Class cannot be directly set as data type for autocomplete editor in this complex type scenario.
 
@@ -1212,6 +1218,8 @@ You can display the complex type property values in the picker editor by using t
 
 N> If [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is false, you can set the property directly by using the [DataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormItem.html). Please refer [here](https://help.syncfusion.com/maui/dataform/dataform-settings#explicitly-create-data-editors) to learn more about creating data editors explicitly.
 
+N> When publishing in AOT mode on iOS, ensure that [Preserve(AllMembers = true)] is added to both the model class and any classes used for complex types, in order to maintain functionality for DisplayMemberPath and SelectedValuePath.
+
 N> Class cannot be directly set as data type for picker editor in this complex type scenario.
 
 {% tabs %}
@@ -1405,6 +1413,8 @@ private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs
 #### Loading the complex type property values in segment
 
 You can display the complex type property values in the segment editor by using the [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_DisplayMemberPath) and [SelectedValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html?tabs=tabid-1#Syncfusion_Maui_DataForm_DataFormListItem_SelectedValuePath) properties of DataFormSegmentItem. You need to use the [GenerateDataFormItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_GenerateDataFormItem) event to set [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html#Syncfusion_Maui_DataForm_DataFormListItem_DisplayMemberPath) and [SelectedValuePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormListItem.html?tabs=tabid-1#Syncfusion_Maui_DataForm_DataFormListItem_SelectedValuePath) property values when [AutoGenerateItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_AutoGenerateItems) is true.
+
+N> When publishing in AOT mode on iOS, ensure that [Preserve(AllMembers = true)] is added to both the model class and any classes used for complex types, in order to maintain functionality for DisplayMemberPath and SelectedValuePath.
 
 {% tabs %}
 {% highlight C# %}

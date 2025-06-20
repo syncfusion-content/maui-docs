@@ -187,7 +187,7 @@ this.Scheduler.AppointmentsSource = Meetings;
 ![business-appointment-event-in-maui-scheduler](images/appointments/business-appointment-event-in-maui-scheduler.png)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)
-N> When publishing in AOT mode on iOS, ensure `[Preserve(AllMembers = true)]` is added to the model class to maintain appointment binding
+N> When publishing in AOT mode on iOS, ensure that [Preserve(AllMembers = true)] is added to the model class to maintain appointment binding.
 
 
 ## Spanned appointments
@@ -408,7 +408,7 @@ public class Meeting
 
 N> 
 Inherit this class from the `INotifyPropertyChanged` for dynamic changes in custom data.
-N> When publishing in AOT mode on iOS, ensure `[Preserve(AllMembers = true)]` is added to the model class to maintain recurrence binding
+N> When publishing in AOT mode on iOS, ensure that [Preserve(AllMembers = true)] is added to the model class to maintain recurrence binding.
 
 The [AppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html) property of the `Meeting` class maps those properties to the  scheduler appointment of the `.NET MAUI Scheduler` control.
 
