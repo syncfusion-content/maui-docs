@@ -338,7 +338,7 @@ public string Password { get; set; }
 ![Password editor in .NET MAUI DataForm.](images/editors/dataform-password-editor.png)
 
 ## Numeric editor
-In the numeric editor, the [SfNumericEntry](https://help.syncfusion.com/maui/numeric-entry/overview) will be loaded and the DataForm Numeric editor supports `int`, `double`, and `float` data type properties. 
+In the numeric editor, the [SfNumericEntry](https://help.syncfusion.com/maui/numericentry/overview) will be loaded and the DataForm Numeric editor supports `int`, `double`, and `float` data type properties. 
 
 Also, to add a DataForm numeric editor, register the editor as [DataFormEditorType.Numeric](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.DataFormEditorType.html#Syncfusion_Maui_DataForm_DataFormEditorType_Numeric) for the required field using the [RegisterEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html#Syncfusion_Maui_DataForm_SfDataForm_RegisterEditor_System_String_Syncfusion_Maui_DataForm_DataFormEditorType_) method.
 
