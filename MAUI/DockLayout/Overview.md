@@ -18,3 +18,5 @@ The .NET MAUI `SfDockLayout` is a versatile and powerful layout control that ena
 * Adaptive Layouts - Automatically adapts to various screen sizes and orientations.
 
 * Customizable Spaces - Configure horizontal and vertical spacing between dock elements.
+
+![.NET MAUI DockLayout](DockLayout-Images/maui-docklayout.png)
