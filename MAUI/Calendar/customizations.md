@@ -750,7 +750,7 @@ internal class SelectionCellTemplate
 {% endhighlight %}
 {% endtabs %}
 
-![Month View Selection Cell Template in .NET MAUI Calendar.](images\customization\net-maui-month-view-selection-cell-template.gif)
+![Month View Selection Cell Template in .NET MAUI Calendar.](images/customization/net-maui-month-view-selection-cell-template.gif)
 
 N>
 The `SelectionCellTemplate` is applicable only when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionMode) is set to Single. It is not applied in Multiple or Range selection modes. You can customize the selection cell appearance using `DataTemplateSelector`.
