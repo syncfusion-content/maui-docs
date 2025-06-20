@@ -188,6 +188,9 @@ this.Scheduler.AppointmentsSource = Meetings;
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/BusinessObject)
 
+N> When publishing in AOT mode on iOS and macOS, ensure that `[Preserve(AllMembers = true)]` is added to the model class to maintain appointment binding.
+
+
 ## Spanned appointments
 
 The spanned appointment is the one which lasts longer than 24 hours. The spanned appointment does not block out timeslots in the Scheduler, but it will render in all-day appointment panel exclusively.
@@ -406,6 +409,8 @@ public class Meeting
 
 N> 
 Inherit this class from the `INotifyPropertyChanged` for dynamic changes in custom data.
+
+N> When publishing in AOT mode on iOS, ensure that `[Preserve(AllMembers = true)]` is added to the model class to maintain recurrence binding.
 
 The [AppointmentMapping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointmentMapping.html) property of the `Meeting` class maps those properties to the  scheduler appointment of the `.NET MAUI Scheduler` control.
 
