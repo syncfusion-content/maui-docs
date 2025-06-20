@@ -617,6 +617,46 @@ this.dataGrid.CollapseDetailsViewAt(0);
  {% endhighlight %}
 {% endtabs %}
 
+## Hide Empty Grid Definitions
+
+By default, the expander will be visible for all the data rows in parent DataGrid even if its [RelationalColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ViewDefinition.html#Syncfusion_Maui_DataGrid_ViewDefinition_RelationalColumn) property has an empty collection or null.
+
+Setting the [HideEmptyDataGridViewDefinition]() property to `true` will hide the expander from the view when the respective `RelationalColumn` property contains an empty collection or null.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                        AutoGenerateRelations="False"
+                        ItemsSource="{Binding Employees}"
+                        HideEmptyDataGridViewDefinition="True">
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+dataGrid.HideEmptyDataGridViewDefinition = true;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="Hiding-empty-DetailsView-DataGrid" src="Images/master-details-view/maui-datagrid-HideEmptyDataGridViewDefinition.png" width="404"/> 
+
+## Hide Indent Cells in Details view
+
+By default the indent cell of details view `SfDataGrid` is always displayed. You can hide the indent cell by setting [ShowDetailsViewIndentCell]() property to `false` for the corresponding parent DataGrid. The default value of `ShowDetailsViewIndentCell` property is `true`.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                        AutoGenerateRelations="False"
+                        ItemsSource="{Binding Employees}"
+                        ShowDetailsViewIndentCell="False">
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+dataGrid.ShowDetailsViewIndentCell = false;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="Hiding-DetailsView-IndentCell" src="Images/master-details-view/maui-datagrid-ShowDetailsViewIndentCell.png" width="404"/> 
+
 ## Handling Events
 
 ### DetailsViewLoading
