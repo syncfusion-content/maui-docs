@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Serialization in .NET MAUI Image Editor Control | Syncfusion<sup>&reg;</sup>
-description: Learn about serialization support in the Syncfusion<sup>&reg;</sup> .NET MAUI ImageEditor(SfImageEditor) control and more.
+title: Serialization in .NET MAUI Image Editor Control | Syncfusion®
+description: Learn about serialization support in the Syncfusion® .NET MAUI ImageEditor(SfImageEditor) control and more.
 platform: maui
 control: SfImageEditor
 documentation: ug
