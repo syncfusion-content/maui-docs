@@ -485,10 +485,7 @@ The [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.But
 </ContentPage>
 
 {% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml.cs" hl_lines="17" %}
+{% highlight xaml tabtitle="MainPage.xaml.cs" hl_lines="18" %}
 
 using Syncfusion.Maui.Buttons;
 . . .

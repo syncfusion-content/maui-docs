@@ -313,7 +313,7 @@ this.Scheduler.AppointmentTextStyle = appointmentTextStyle;
 The appearance of the "No events" text in the Agenda view can be customized using the `NoEventsTextStyle` property of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). This allows modification of font size, color, and other text attributes.
 
 {% tabs %}
-{% highlight XAML hl_lines="6 7 8 9" %}
+{% highlight XAML hl_lines="6 7 8" %}
 
 <scheduler:SfScheduler x:Name="scheduler"
                        View="Agenda"
