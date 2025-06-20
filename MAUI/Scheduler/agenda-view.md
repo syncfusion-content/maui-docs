@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Agenda view in .NET MAUI Scheduler control | Syncfusion<sup>&reg;</sup>
+title: Agenda view in .NET MAUI Scheduler control | Syncfusion®
 description: Learn here all about the Agenda view feature of Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler (SfScheduler) control and more.
 platform: maui
 control: SfScheduler
@@ -307,6 +307,44 @@ this.Scheduler.AppointmentTextStyle = appointmentTextStyle;
 {% endtabs %}
 
 ![appointment-text-appearence-customization-in-maui-scheduler](images/agenda-view/appointment-text-appearence-customization-in-maui-scheduler.png)
+
+## Customize "No Events" Text Appearance
+
+The appearance of the "No events" text in the Agenda view can be customized using the `NoEventsTextStyle` property of the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html). This allows modification of font size, color, and other text attributes.
+
+{% tabs %}
+{% highlight XAML hl_lines="6 7 8 9" %}
+
+<scheduler:SfScheduler x:Name="scheduler"
+                       View="Agenda"
+                       AllowedViews="Day, Agenda">
+    <scheduler:SfScheduler.AgendaView>
+        <scheduler:SchedulerAgendaView>
+            <scheduler:SchedulerAgendaView.NoEventsTextStyle>
+                <scheduler:SchedulerTextStyle TextColor="DarkSlateGrey" FontAttributes="Italic" FontSize="15"/>
+            </scheduler:SchedulerAgendaView.NoEventsTextStyle>
+        </scheduler:SchedulerAgendaView>
+    </scheduler:SfScheduler.AgendaView>
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight C# hl_lines="10" %}
+
+ // Customizing the No events text style in agenda view
+ var textStyle = new SchedulerTextStyle()
+ {
+     TextColor = Colors.DarkSlateGrey,
+     FontAttributes = FontAttributes.Italic,
+     FontSize = 15,
+     FontAutoScalingEnabled = true
+ };
+// Setting the TextStyle for the NoEvets text.
+ this.scheduler.AgendaView.NoEventsTextStyle = textStyle;
+
+{% endhighlight %}
+{% endtabs %}       
+
+N> The "No Events" message is displayed when there are no appointments for the current date or for the date specified using the [DisplayDate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_DisplayDate) property.
 
 ## Change the appointment time format
 

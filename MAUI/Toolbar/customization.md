@@ -18,6 +18,7 @@ The toolbar control supports customization of toolbar items using properties [Is
 * **IsEnabled** : This property is used to enable or disable the toolbar item.
 * **TextStyle** : This property is used to customize the text style of the toolbar item.
 * **Color** : This property is used to set color for the icon in the toolbar.
+* **SelectionHighlightColor** : This property is used to set the color for the selected toolbar item. 
 
 The following code sample demonstrates how to create a toolbar control with toolbar Items customization.
 
@@ -210,10 +211,129 @@ The following code sample demonstrates how to create a toolbar control with tool
 
 ![toolbar-items-customization](images/toolbaritem-customization.png)
 
+## Set Highlight Color for Selected Toolbar Item
+
+The `SelectionHighlightColor` property of the [SfToolbarItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html) is used to define the color that highlights a toolbar item when it is tapped. This makes the selected item visually distinct from the others in the toolbar.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5 9 13 21" %}
+
+<ContentPage
+    . . .    
+    xmlns:toolbar="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar">
+
+<toolbar:SfToolbar x:Name="toolbar">
+    <toolbar:SfToolbar.Items>
+        <toolbar:SfToolbarItem Name="Bold"
+                               Text="Bold"
+                               SelectionHighlightColor="LightGreen"></toolbar:SfToolbarItem>
+        <toolbar:SfToolbarItem Name="Underline"
+                               Text="Underline"
+                               SelectionHighlightColor="LightBlue"></toolbar:SfToolbarItem>
+        <toolbar:SfToolbarItem Name="Italic"
+                               Text="Italic"
+                               SelectionHighlightColor="Violet">
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE771;"
+                                     FontFamily="MauiMaterialAssets"/>
+                </toolbar:SfToolbarItem.Icon>
+        </toolbar:SfToolbarItem>
+        <toolbar:SfToolbarItem Name="AlignLeft"
+                               Text="Align-Left"
+                               SelectionHighlightColor="Yellow">
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE751;"
+                                     FontFamily="MauiMaterialAssets" />
+                </toolbar:SfToolbarItem.Icon>
+        </toolbar:SfToolbarItem>
+        <toolbar:SfToolbarItem Name="AlignRight"
+                               ToolTipText="Align-Right"
+                               SelectionHighlightColor="Turquoise">
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE753;"
+                                     FontFamily="MauiMaterialAssets" />
+                </toolbar:SfToolbarItem.Icon>
+        </toolbar:SfToolbarItem>
+        <toolbar:SfToolbarItem Name="AlignCenter"
+                               ToolTipText="Align-Center"
+                               SelectionHighlightColor="LavenderBlush">
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE752;"
+                                     FontFamily="MauiMaterialAssets" />
+                </toolbar:SfToolbarItem.Icon>
+        </toolbar:SfToolbarItem>
+    </toolbar:SfToolbar.Items>
+</toolbar:SfToolbar>
+
+</ContentPage>
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+public partial class MainPage : ContentPage
+{
+     public MainPage()
+     {
+            InitializeComponent();
+            SfToolbar toolbar = new SfToolbar();
+            ObservableCollection<BaseToolbarItem> itemCollection = new ObservableCollection<BaseToolbarItem>
+            {
+                new SfToolbarItem
+                {
+                    Name = "Bold",
+                    Text = "Bold",
+                    SelectionHighlightColor = Colors.LightGreen
+                },
+                new SfToolbarItem
+                {
+                    Name = "Underline",
+                    Text = "Underline",
+                    SelectionHighlightColor = Colors.LightBlue
+                },
+                new SfToolbarItem
+                {
+                    Name = "Italic",
+                    Text = "Italic",
+                    Icon = new FontImageSource { Glyph = "\uE771", FontFamily="MauiMaterialAssets" },
+                    SelectionHighlightColor = Colors.Violet
+                },
+                new SfToolbarItem
+                {
+                    Name = "AlignLeft",
+                    Text = "Align-Left",
+                    Icon = new FontImageSource { Glyph = "\uE751", FontFamily="MauiMaterialAssets" },
+                    SelectionHighlightColor = Colors.Yellow
+                },
+                new SfToolbarItem
+                {
+                    Name = "AlignRight",
+                    ToolTipText = "Align-Right",
+                    Icon = new FontImageSource { Glyph = "\uE753", FontFamily="MauiMaterialAssets" },
+                    SelectionHighlightColor = Colors.Turquoise
+                },
+                new SfToolbarItem
+                {
+                    Name = "AlignCenter",
+                    ToolTipText = "Align-Center",
+                    Icon = new FontImageSource { Glyph = "\uE752", FontFamily="MauiMaterialAssets" },
+                    SelectionHighlightColor = Colors.LavenderBlush
+                }
+            };
+
+            toolbar.Items = itemCollection;
+            this.Content = toolbar;
+     }
+ }
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Separator Item Customization
 
 The toolbar control supports customization of separator item using properties [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SeparatorToolbarItem.html#Syncfusion_Maui_Toolbar_SeparatorToolbarItem_Stroke) and [StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SeparatorToolbarItem.html#Syncfusion_Maui_Toolbar_SeparatorToolbarItem_StrokeThickness).
-
 
 * **Stroke** : This property is used to customize the stroke color of the separator item.
 * **StrokeThickness** : This property is used to customize the stroke thickness of the separator item.
