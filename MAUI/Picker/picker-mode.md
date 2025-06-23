@@ -165,7 +165,7 @@ private void Button_Clicked(object sender, System.EventArgs e)
 
 ### Custom Popup Size
 
-SfPicker allows the display of the Popup to render at any desired size by setting the [PopupWidth] and [PopupHeight] properties.
+SfPicker allows the display of the Popup to render at any desired size by setting the [PopupWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_PopupWidth) and [PopupHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_PopupHeight) properties.
 
 {% tabs %}
 
@@ -175,6 +175,7 @@ SfPicker allows the display of the Popup to render at any desired size by settin
     <picker:SfPicker 
             x:Name="picker"
             Mode="Dialog"
+            IsOpen="True"
             RelativePosition="AlignToRightOf"
             PopupWidth="200"
             PopupHeight="440">
@@ -191,14 +192,6 @@ SfPicker allows the display of the Popup to render at any desired size by settin
             <picker:PickerFooterView  Height="40"/>
         </picker:SfPicker.FooterView>
     </picker:SfPicker>
-    <Button Text="Open Text"
-            x:Name="pickerButton"
-            Clicked="pickerButton_Clicked"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            HeightRequest="40"
-            WidthRequest="150">
-    </Button>
 </Grid>
 
 {% endhighlight %}

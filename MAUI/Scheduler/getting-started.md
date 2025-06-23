@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Scheduler control | Syncfusion<sup>&reg;</sup>
+title: Getting Started with .NET MAUI Scheduler control | Syncfusion®
 description: Learn here all about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler(SfScheduler) control, its basic features to schedule the events
 platform: maui
 control: SfScheduler
@@ -618,6 +618,8 @@ this.Content = scheduler;
 
 {% endhighlight %}
 {% endtabs %}
+
+N> When publishing in AOT mode on iOS and macOS, ensure that `[Preserve(AllMembers = true)]` is added to the model class to maintain appointment binding.
 
 #### Bind appointment source for scheduler
 

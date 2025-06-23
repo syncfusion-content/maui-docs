@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customizations in .NET MAUI Calendar control | Syncfusion<sup>&reg;</sup>
+title: Customizations in .NET MAUI Calendar control | Syncfusion®
 description: Learn here all about Customizations features of Syncfusion<sup>&reg;</sup> .NET MAUI Calendar (SfCalendar) control and more. 
 platform: maui
 control: SfCalendar
@@ -657,16 +657,17 @@ The `SfCalendar` provides the [SelectionCellTemplate](https://help.syncfusion.co
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar WidthRequest="350" HeightRequest="350" SelectionCellTemplate="{Binding Template}">
+<calendar:SfCalendar View="Month" WidthRequest="350" HeightRequest="400" 
+                        SelectionCellTemplate="{Binding Template}">
     <calendar:SfCalendar.BindingContext>
-        <local:SelectionCellTemplate/>
+        <local:SelectionCellTemplateView/>
     </calendar:SfCalendar.BindingContext>
 </calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-internal class SelectionCellTemplate
+internal class SelectionCellTemplateView
 {
     private DataTemplate template;
 
@@ -682,31 +683,66 @@ internal class SelectionCellTemplate
         }
     }
 
-    public SelectionCellTemplate()
+    public SelectionCellTemplateView()
     {
         this.template = new DataTemplate(() =>
         {
-            Grid grid = new Grid();
-            Border border = new Border();
-            border.BackgroundColor = Color.FromRgba("#FFA500");
-            border.StrokeShape = new RoundRectangle()
+            // Create a Grid with two columns
+            Grid grid = new Grid
             {
-                CornerRadius = new CornerRadius(25)
+                RowDefinitions =
+            {
+                new RowDefinition { Height = GridLength.Star },
+                new RowDefinition { Height = GridLength.Star }
+            },
+                Padding = new Thickness(1),
+                VerticalOptions = LayoutOptions.Center,
+                HeightRequest = 40
             };
 
-            border.Stroke = Color.FromArgb("#FFFFFF");
+            // Create a Border with rounded corners
+            Border border = new Border
+            {
+                BackgroundColor = Color.FromArgb("#4285F4"),
+                Stroke = Colors.Transparent,
+                StrokeShape = new RoundRectangle
+                {
+                    CornerRadius = new CornerRadius(10)
+                }
+            };
 
-            Label label = new Label();
+            // Create Label and bind to Date.Year
+            Label label = new Label
+            {
+                TextColor = Colors.White,
+                HorizontalTextAlignment = TextAlignment.Center,
+                VerticalTextAlignment = TextAlignment.Center,
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center
+            };
             label.SetBinding(Label.TextProperty, "Date.Day");
-            label.HorizontalOptions = LayoutOptions.Center;
-            label.VerticalOptions = LayoutOptions.Center;
-            label.Padding = new Thickness(2);
-            border.Content = label;
 
-            grid.Add(border);
-            grid.Padding = new Thickness(1);
+            // Create Image
+            Image image = new Image
+            {
+                Source = "tick_image2.png",
+                HeightRequest = 17,
+                WidthRequest = 17,
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center
+            };
 
-            return grid;
+            // Add label and image to inner grid
+            grid.Add(label, 0, 0);
+            grid.Add(image, 0, 1);
+
+            // Set content of border
+            border.Content = grid;
+
+            // Add border to outer grid
+            //grid.Add(border);
+
+            return border;
         });
     }
 }
@@ -714,7 +750,7 @@ internal class SelectionCellTemplate
 {% endhighlight %}
 {% endtabs %}
 
-![Month View Selection Cell Template in .NET MAUI Calendar.](images/customization/net-maui-month-view-selection-cell-template.png)
+![Month View Selection Cell Template in .NET MAUI Calendar.](images/customization/net-maui-month-view-selection-cell-template.gif)
 
 N>
 The `SelectionCellTemplate` is applicable only when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionMode) is set to Single. It is not applied in Multiple or Range selection modes. You can customize the selection cell appearance using `DataTemplateSelector`.
@@ -726,16 +762,18 @@ The `SfCalendar` provides the [SelectionCellTemplate](https://help.syncfusion.co
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<calendar:SfCalendar WidthRequest="350" HeightRequest="350" View="Decade" AllowViewNavigation="False" SelectionCellTemplate="{Binding Template}">
+<calendar:SfCalendar View="Decade" AllowViewNavigation="False" 
+                        WidthRequest="350" HeightRequest="400" 
+                        SelectionCellTemplate="{Binding Template}">
     <calendar:SfCalendar.BindingContext>
-        <local:SelectionCellTemplate/>
+        <local:SelectionCellTemplateView/>
     </calendar:SfCalendar.BindingContext>
 </calendar:SfCalendar>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-internal class SelectionCellTemplate
+internal class SelectionCellTemplateView
 {
     private DataTemplate template;
 
@@ -751,31 +789,66 @@ internal class SelectionCellTemplate
         }
     }
 
-    public SelectionCellTemplate()
+    public SelectionCellTemplateView()
     {
         this.template = new DataTemplate(() =>
         {
-            Grid grid = new Grid();
-            Border border = new Border();
-            border.BackgroundColor = Color.FromRgba("#FFA500");
-            border.StrokeShape = new RoundRectangle()
+            // Create a Grid with two columns
+            Grid grid = new Grid
             {
-                CornerRadius = new CornerRadius(25)
+                ColumnDefinitions =
+            {
+                new ColumnDefinition { Width = GridLength.Star },
+                new ColumnDefinition { Width = GridLength.Star }
+            },
+                Padding = new Thickness(1),
+                VerticalOptions = LayoutOptions.Center,
+                HeightRequest = 40
             };
 
-            border.Stroke = Color.FromArgb("#FFFFFF");
+            // Create a Border with rounded corners
+            Border border = new Border
+            {
+                BackgroundColor = Color.FromArgb("#4285F4"),
+                Stroke = Colors.Transparent,
+                StrokeShape = new RoundRectangle
+                {
+                    CornerRadius = new CornerRadius(10)
+                }
+            };
 
-            Label label = new Label();
+            // Create Label and bind to Date.Year
+            Label label = new Label
+            {
+                TextColor = Colors.White,
+                HorizontalTextAlignment = TextAlignment.Center,
+                VerticalTextAlignment = TextAlignment.Center,
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center
+            };
             label.SetBinding(Label.TextProperty, "Date.Year");
-            label.HorizontalOptions = LayoutOptions.Center;
-            label.VerticalOptions = LayoutOptions.Center;
-            label.Padding = new Thickness(2);
-            border.Content = label;
 
-            grid.Add(border);
-            grid.Padding = new Thickness(1);
+            // Create Image
+            Image image = new Image
+            {
+                Source = "tick_image2.png",
+                HeightRequest = 17,
+                WidthRequest = 17,
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center
+            };
 
-            return grid;
+            // Add label and image to inner grid
+            grid.Add(label, 0, 0);
+            grid.Add(image, 1, 0);
+
+            // Set content of border
+            border.Content = grid;
+
+            // Add border to outer grid
+            //grid.Add(border);
+
+            return border;
         });
     }
 }
@@ -783,7 +856,7 @@ internal class SelectionCellTemplate
 {% endhighlight %}
 {% endtabs %}
 
-![Decade View Selection Cell Template in .NET MAUI Calendar.](images/customization/net-maui-decade-view-selection-cell-template.png)
+![Decade View Selection Cell Template in .NET MAUI Calendar.](images/customization/net-maui-decade-view-selection-cell-template.gif)
 
 N>
 The `SelectionCellTemplate` is applicable only when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionMode) is set to Single and [AllowViewNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_AllowViewNavigation) is false. It is not applied in Multiple or Range selection modes. You can customize the selection cell appearance using `DataTemplateSelector`.
