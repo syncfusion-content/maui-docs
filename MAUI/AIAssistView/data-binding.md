@@ -92,7 +92,7 @@ N> The `SfAIAssistView.AssistItems` property is of type `IList<IAssistItem>`. To
 
 ## Binding Custom Model Collection
  
-The `SfAIAssistView` control provides support for binding a custom model collection through the `ItemsSource` property. This feature allows users to use their own data models with the control. The `ItemsSource` property binds a collection of custom data objects to the `SfAIAssistView` and each item in the collection will be converted to an `AssistItem` and displayed in the view. The `ItemsSourceConverter` property sets the converter used to transform data objects into assist items and vice versa.
+The `SfAIAssistView` control provides support for binding collection of custom data objects through the `ItemsSource` property. This feature allows users to use their own data objects with the control. The `ItemsSource` property binds a collection of custom data objects to the `SfAIAssistView` and each item in the collection will be converted to an `AssistItem` and displayed in the view. The `ItemsSourceConverter` property sets the converter used to transform data objects into assist items and vice versa.
  
 {% tabs %}
 {% highlight xaml hl_lines="15 16" %}
@@ -204,7 +204,7 @@ Create the below collection of objects that must be converted to assist items co
 {% endhighlight %}
 {% endtabs %}
 
-N> If you want your data model to respond to property changes, then implement [INotifyPropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-9.0) interface in your model class.
+N> If you want your data objects to respond to property changes, then implement [INotifyPropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-9.0) interface in your model class.
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
@@ -356,7 +356,7 @@ This converter must implement the `IAssistItemConverter` interface. Implement th
 {% endhighlight %}
 {% endtabs %}
  
-N> The `Data` property in `AssistItem` holds a reference to the original data model which is used for data operations.
+N> The `Data` property in `AssistItem` holds a reference to the original data objects which is used for data operations.
 
 ## Bind the RequestCommand property
 
