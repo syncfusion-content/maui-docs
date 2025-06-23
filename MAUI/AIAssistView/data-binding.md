@@ -103,7 +103,7 @@ The `SfAIAssistView` control provides support for binding collection of custom d
              x:Class="MauiAssistView.MainPage">
     <ContentPage.Resources>
         <ResourceDictionary>
-            <local:ItemConverter x:Key="Converter" />
+            <local:AssistItemConverter x:Key="converter" />
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.BindingContext>
@@ -111,14 +111,14 @@ The `SfAIAssistView` control provides support for binding collection of custom d
     </ContentPage.BindingContext>
     <syncfusion:SfAIAssistView x:Name="assistView"
                                ItemsSource="{Binding AssistItemsCollection}"
-                               ItemsSourceConverter="{Binding Converter}" />
+                               ItemsSourceConverter="{Binding converter}" />
 </ContentPage>
 {% endhighlight %}
  
 {% highlight c# hl_lines="12 13" %}
 SfAIAssistView assistView;
 ViewModel viewModel;
-ItemConverter assistItemConverter;
+AssistItemConverter assistItemConverter;
 
 public MainPage()
 {
@@ -126,7 +126,7 @@ public MainPage()
 
     assistView = new SfAIAssistView();
     viewModel = new ViewModel();
-    assistItemConverter = new ItemConverter();
+    assistItemConverter = new AssistItemConverter();
     assistView.ItemsSource = viewModel.AssistItems;
     assistView.ItemsSourceConverter = assistItemConverter;
 
@@ -242,26 +242,7 @@ N> If you want your data objects to respond to property changes, then implement 
             }
         }
         #endregion
-
-        #region INotifyPropertyChanged
-
-        /// <summary>
-        /// Property changed handler.
-        /// </summary>
-        public event PropertyChangedEventHandler? PropertyChanged;
-
-        /// <summary>
-        /// Occurs when property is changed.
-        /// </summary>
-        /// <param name="propName">changed property name</param>
-        public void RaisePropertyChanged(string propName)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propName));
-            }
-        }
-        #endregion
+        ...
 
         #region Item Generation
         private async void GenerateAssistItems()
@@ -303,9 +284,9 @@ N> If you want your data objects to respond to property changes, then implement 
 This converter must implement the `IAssistItemConverter` interface. Implement this interface to create a custom converter for the `ItemsSourceConverter` property.
  
 {% tabs %}
-{% highlight c# hl_lines="1" %}
+{% highlight c# tabtitle="AssistItemConverter.cs" hl_lines="1" %}
 
-    public class ItemConverter : IAssistItemConverter
+    public class AssistItemConverter : IAssistItemConverter
     {
         public IAssistItem ConvertToAssistItem(object customItem, SfAIAssistView assistView)
         {
