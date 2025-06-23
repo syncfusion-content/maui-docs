@@ -337,7 +337,7 @@ This converter must implement the `IAssistItemConverter` interface. Implement th
 {% endhighlight %}
 {% endtabs %}
  
-N> The `Data` property in `AssistItem` holds a reference to the original data objects which is used for data operations.
+N> The `Data` property in `AssistItem` holds a reference to the original data object which is used for data operations.
 
 ## Bind the RequestCommand property
 
