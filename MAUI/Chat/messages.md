@@ -989,10 +989,8 @@ N> The Action argument in `CardTappedEventArgs` holds a valid value only when cl
 {% endhighlight %}
 {% endtabs %}
 
-## Message Delivery States
+## Delivery States
 The `SfChat` provides built-in support for displaying message delivery states such as sent, delivered, read, and failed. This feature enhances communication transparency by showing the current status of each message.
-
-### Set Show Delivery State in Messages
 The `ShowDeliveryState` property determines whether delivery state indicators are displayed for messages. By default, this property is set to `false`.
 
 {% tabs %}
@@ -1047,7 +1045,7 @@ namespace MauiChat
 {% endhighlight %}
 {% endtabs %}
 
-### Define the Delivery State
+### Handling Message Delivery States
 The `DeliveryState` property sets the current delivery status of a specific message.
 The `SfChat` control provides the following delivery states:
 
