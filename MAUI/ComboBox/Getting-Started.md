@@ -323,6 +323,8 @@ Content = comboBox;
 {% endhighlight %}
 {% endtabs %}
 
+N> When publishing in AOT mode on iOS and macOS, ensure that `[Preserve(AllMembers = true)]` is added to the model class to maintain appointment binding.
+
 N> Set the BindingContext of your page to an instance of SocialMediaViewModel. This allows you to bind the properties of SocialMediaViewModel to the ComboBox control.
 
 **Step 3:** Setting TextMemberPath and DisplayMemberPath.

@@ -419,6 +419,8 @@ SfAutocomplete autocomplete = new SfAutocomplete()
 {% endhighlight %}
 {% endtabs %}
 
+N> When publishing in AOT mode on iOS, ensure [Preserve(AllMembers = true)] is added to the model class to maintain DisplayMemberPath binding
+
 N> Set the BindingContext of your page to an instance of SocialMediaViewModel. This allows you to bind the properties of SocialMediaViewModel to the Autocomplete control.
 
 **Step 3:** Set the **TextMemberPath** and **DisplayMemberPath**.
