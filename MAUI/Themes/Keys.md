@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About Keys for Syncfusion® Controls | Syncfusion®
-description: This section provides details about the keys mapped to UI elements of all the controls.
+description: This section provides details about the theme keys mapped to UI elements of all the Syncfusion .NET MAUI controls.
 platform: MAUI
 control: General
 documentation: UG
