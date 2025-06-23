@@ -298,7 +298,7 @@ private void TreeView_ItemDragging(object sender, ItemDraggingEventArgs e)
 
 ## Limitations
 
-In the following scenarios, drag and drop operations will not be performed. In these cases, an "Invalid drop" indicator will be displayed in the default drag item view.
+Drag and drop operations will not be executed in the following scenarios. When this occurs, the default drag item view will display an "Invalid drop" indicator to inform users that the action is not permitted.
 
 * `Drop as child into same node`: An indicator appears if you attempt to drop an item as a child of the same node.
 
