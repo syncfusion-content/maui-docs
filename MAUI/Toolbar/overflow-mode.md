@@ -606,7 +606,7 @@ The In-build more items drop down menu view can be cancelled with the help of `C
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
 
 <toolbar:SfToolbar x:Name="Toolbar" 
                     HeightRequest="56" 
