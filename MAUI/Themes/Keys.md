@@ -2475,6 +2475,23 @@ This page lists the keys associated with each control and the respective UI elem
         <td> SfChatCardButtonFontAttributes <br/><br/></td>
         <td> Font attributes of card button.<br/><br/></td>
     </tr>
+    <!--DeliveryStates-->
+    <tr>
+        <td> SfChatDeliveryStateFailedIconColor <br/><br/></td>
+        <td> Color of the Delivery State None. <br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatDeliveryStateSentIconColor <br/><br/></td>
+        <td> Color of the Delivery State Sent. <br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatDeliveryStateDeliveredIconColor <br/><br/></td>
+        <td> Color of the Delivery State Delivered. <br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatDeliveryStateReadIconColor <br/><br/></td>
+        <td> Color of the Delivery State Read. <br/><br/></td>
+    </tr>
     <!--Message input view-->
     <tr>
         <td> SfChatMessageInputViewBackground <br/><br/></td>
@@ -2647,23 +2664,6 @@ This page lists the keys associated with each control and the respective UI elem
     <tr>
         <td> SfChatLoadMoreStroke <br/><br/></td>
         <td> Border color of the load more button.<br/><br/></td>
-    </tr>
-    <!--DeliveryStates-->
-    <tr>
-        <td> SfChatDeliveryStateFailedIconColor <br/><br/></td>
-        <td> Color of the Delivery State None. <br/><br/></td>
-    </tr>
-    <tr>
-        <td> SfChatDeliveryStateSentIconColor <br/><br/></td>
-        <td> Color of the Delivery State Sent. <br/><br/></td>
-    </tr>
-    <tr>
-        <td> SfChatDeliveryStateDeliveredIconColor <br/><br/></td>
-        <td> Color of the Delivery State Delivered. <br/><br/></td>
-    </tr>
-    <tr>
-        <td> SfChatDeliveryStateReadIconColor <br/><br/></td>
-        <td> Color of the Delivery State Read. <br/><br/></td>
     </tr>
 </table>
 
