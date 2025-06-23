@@ -8,7 +8,6 @@ documentation: ug
 ---
 
 # Drag and drop in .NET MAUI TreeView (SfTreeView)
-## Enable Drag and drop
 The [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html) allows drag and drop the items within the treeview control by setting the `AllowDragging` property as `true`. 
 
 {% tabs %}
@@ -28,22 +27,13 @@ treeView.SetBinding(SfTreeView.ItemsSourceProperty, new Binding("Folders"));
 
 While dropping, the dragged items can be added above, below, or as a child of the target item, depending on the position of the drag indicator.
 
+![Drag and drop](Images/drag-and-drop/drag-and-drop.gif)
+
 N> The drag and drop operation is not supported when Load on Demand is enabled.
 
-### Invalid Drop Indicator
-
-An "Invalid drop" indicator is shown in default drag item view when the following conditions are met:
-
-* `Drop as child into same node`: An indicator appears if you attempt to drop an item as a child of the same node.
-
-* `Incompatible child node type`: When trying to drop an item as a child where the target node's child and the dragged item's types are incompatible. It is only applicable when `SfTreeView` has `HierarchyPropertyDescriptor`.
-
-* `Drop below or above with different type`: If attempting to drop an item below or above another node where the parent node's existing child's type is different from the dragged item's type. It is only applicable when `SfTreeView` has `HierarchyPropertyDescriptor`.
-
-### Dragging multiple items
+## Dragging multiple items
 
 `SfTreeView` allows to drag multiple selected items. To enable multiple selection, set the [SfTreeView.SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectionMode) as `Multiple` or `Extended`.
-
 
 ## Drag item customization
 By defining the `SfTreeView.DragItemTemplate` property of the `SfTreeView`, a custom user interface (UI) is displayed during drag-and-drop operations.
@@ -264,7 +254,7 @@ treeView.DragAndDropController.AutoExpandDelay = new TimeSpan(0, 0, 0, 1);
 
 ## Disable dragging for particular item
 
-To disable dragging for a particular item, handle the `ItemDragging` event based on the conditions of the Action event argument.
+To disable dragging for a particular item, handle the `ItemDragging` event based on the conditions of the `Action` event argument.
 
 You can cancel the dragging action for a particular item by setting the `Cancel` property of the `ItemDraggingEventArgs`.
 
@@ -305,3 +295,13 @@ private void TreeView_ItemDragging(object sender, ItemDraggingEventArgs e)
 }
 {% endhighlight %}
 {% endtabs %}
+
+## Limitations
+
+In the following scenarios, drag and drop operations will not be performed. In these cases, an "Invalid drop" indicator will be displayed in the default drag item view.
+
+* `Drop as child into same node`: An indicator appears if you attempt to drop an item as a child of the same node.
+
+* `Incompatible child node type`: When trying to drop an item as a child where the target node's child and the dragged item's types are incompatible. It is only applicable when `SfTreeView` has `HierarchyPropertyDescriptor`.
+
+* `Drop below or above with different type`: If attempting to drop an item below or above another node where the parent node's existing child's type is different from the dragged item's type. It is only applicable when `SfTreeView` has `HierarchyPropertyDescriptor`.
