@@ -79,10 +79,10 @@ namespace DockLayoutGettingStarted
 
 <ContentPage
     . . .    
-    xmlns:dx="clr-namespace:Syncfusion.Maui.Core;
+    xmlns:sf="clr-namespace:Syncfusion.Maui.Core;
     assembly=Syncfusion.Maui.Core">
    
-     <dx:SfDockLayout/>
+     <sf:SfDockLayout/>
 
 </ContentPage>
  
@@ -178,10 +178,10 @@ namespace DockLayoutSample
 
 <ContentPage
     . . .    
-    xmlns:dx="clr-namespace:Syncfusion.Maui.Core;
+    xmlns:sf="clr-namespace:Syncfusion.Maui.Core;
     assembly=Syncfusion.Maui.Core">
    
-     <dx:SfDockLayout/>
+     <sf:SfDockLayout/>
 
 </ContentPage>
  
@@ -217,17 +217,17 @@ Inside the `SfDockLayout` control, child views can be arranged using the `Dock` 
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:dx="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+             xmlns:sf="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
              x:Class="DockLayoutGettingStarted.MainPage">
 
    <ContentPage.Content>
-        <dx:SfDockLayout >
-            <Label Text="Left" WidthRequest="80" dx:SfDockLayout.Dock="Left" Background="#E57373" />
-            <Label Text="Right" WidthRequest="80" dx:SfDockLayout.Dock="Right" Background="#BA68C8" />
-            <Label Text="Top" HeightRequest="80" dx:SfDockLayout.Dock="Top" Background="#F06292" />
-            <Label Text="Bottom" HeightRequest="80"  dx:SfDockLayout.Dock="Bottom" Background="#9575CD"/>
+        <sf:SfDockLayout >
+            <Label Text="Left" WidthRequest="80" sf:SfDockLayout.Dock="Left" Background="#E57373" />
+            <Label Text="Right" WidthRequest="80" sf:SfDockLayout.Dock="Right" Background="#BA68C8" />
+            <Label Text="Top" HeightRequest="80" sf:SfDockLayout.Dock="Top" Background="#F06292" />
+            <Label Text="Bottom" HeightRequest="80"  sf:SfDockLayout.Dock="Bottom" Background="#9575CD"/>
             <Label Text="None" BackgroundColor="#64B5F6" />
-        </dx:SfDockLayout>
+        </sf:SfDockLayout>
     </ContentPage.Content>
     
 </ContentPage>
