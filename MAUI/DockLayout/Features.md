@@ -15,10 +15,10 @@ The `ShouldExpandLastChild` property (of type `bool`) determines whether the las
 {% tabs %}
 {% highlight xaml %}
 
-<dx:SfDockLayout ShouldExpandLastChild="False">
+<sf:SfDockLayout ShouldExpandLastChild="False">
     <!-- Since ShouldExpandLastChild is False, the last child's size must be defined explicitly -->
     <Label Text="None" HeightRequest="45"/>
-</dx:SfDockLayout>
+</sf:SfDockLayout>
 
 {% endhighlight %}
 
@@ -44,9 +44,9 @@ Customize the spacing between child elements using the `HorizontalSpacing` and `
 
 {% highlight xaml %}
 
-<dx:SfDockLayout HorizontalSpacing="10" VerticalSpacing="10">
+<sf:SfDockLayout HorizontalSpacing="10" VerticalSpacing="10">
     ...
-</dx:SfDockLayout>
+</sf:SfDockLayout>
  {% endhighlight %}
 
 {% highlight c# %}
@@ -131,9 +131,9 @@ You can enable RTL either by setting `FlowDirection` directly on the DockLayout,
 
 {% highlight xaml %}
 
-<dx:SfDockLayout FlowDirection="RightToLeft">
+<sf:SfDockLayout FlowDirection="RightToLeft">
 ...
-</dx:SfDockLayout>
+</sf:SfDockLayout>
 {% endhighlight %}
 
 {% highlight c# %}
