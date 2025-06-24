@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in .NET MAUI Sunburst Chart control | Syncfusion
-description: This section explains how to enable and customize tooltips in the Syncfusion® .NET MAUI Sunburst Chart control.
+description: This section explains how to enable and customize tooltips in the Syncfusion<sup>®</sup> .NET MAUI Sunburst Chart control.
 platform: maui
 control: SfSunburstChart
 documentation: ug

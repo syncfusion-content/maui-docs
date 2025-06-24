@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with .NET MAUI Parallax View control | Syncfusion
-description: Learn about getting started with Syncfusion® .NET MAUI Parallax View (SfParallaxView) control and more.
+description: Learn about getting started with Syncfusion<sup>®</sup> .NET MAUI Parallax View (SfParallaxView) control and more.
 platform: MAUI
 control: SfParallaxView
 documentation: ug
@@ -31,7 +31,7 @@ Before proceeding, ensure that the following are set up:
 2. Name the project and choose a location. Click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion® .NET MAUI Parallax View Package
+## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI Parallax View Package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2. Search for [Syncfusion.Maui.ParallaxView](https://www.nuget.org/packages/Syncfusion.Maui.ParallaxView/) and install the latest version.
@@ -39,7 +39,7 @@ Before proceeding, ensure that the following are set up:
 
 ## Step 3: Register the handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion® controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion® core.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% tabs %}
 {% highlight C# tabtitle="MauiProgram.cs" hl_lines="2 13" %}
@@ -128,16 +128,16 @@ Before proceeding, ensure that the following are set up:
 3. Select the project location, type the project name and press **Enter.**
 4. Then choose **Create project.**
 
-## Step 2: Install the Syncfusion® .NET MAUI Parallax View Package
+## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI Parallax View Package
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you're in the project root directory where your .csproj file is located.
-3. Run the command `dotnet add package Syncfusion.Maui.ParallaxView` to install the Syncfusion® .NET MAUI ParallaxView NuGet package.
+3. Run the command `dotnet add package Syncfusion.Maui.ParallaxView` to install the Syncfusion<sup>®</sup> .NET MAUI ParallaxView NuGet package.
 4. To ensure all dependencies are installed, run `dotnet restore`.
 
 ## Step 3: Register the handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion® controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion® core.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% tabs %}
 {% highlight C# tabtitle="MauiProgram.cs" hl_lines="2 13" %}
@@ -276,9 +276,9 @@ The [`Source`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.
 Currently, the [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html) directly supports the following controls. Bind the control to the [`Source`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Source) property.
 
     1. ScrollView
-    2. Syncfusion® ListView
+    2. Syncfusion<sup>®</sup> ListView
 
-The following code sample demonstrates how to bind the Syncfusion® ListView to the [`Source`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Source) property.
+The following code sample demonstrates how to bind the Syncfusion<sup>®</sup> ListView to the [`Source`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html#Syncfusion_Maui_ParallaxView_SfParallaxView_Source) property.
 
 {% tabs %}
 
