@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Segment item selection in .NET MAUI Segmented control | Syncfusion<sup>&reg;</sup>
+title: Segment item selection in .NET MAUI Segmented control | Syncfusion®
 description: Learn about the segment item selection in Syncfusion<sup>&reg;</sup> .NET MAUI Segmented Control (SfSegmentedControl).
 platform: maui
 control: SfSegmentedControl
@@ -268,7 +268,7 @@ N> The `Background` property of `SelectionIndicatorSettings` is applicable only 
 Customize the selected segment background of each segment item using the [SelectedSegmentBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentItem.html#Syncfusion_Maui_Buttons_SfSegmentItem_SelectedSegmentBackground) property of [SfSegmentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentItem.html).
 
 {% tabs %}
-{% highlight C# tabtitle="MainPage.xaml.cs"%}
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
 
 using Syncfusion.Maui.Buttons;
 . . .
@@ -344,7 +344,7 @@ public partial class MainPage : ContentPage
 Customize the selected segment text color of each segment item using the [SelectedSegmentTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentItem.html#Syncfusion_Maui_Buttons_SfSegmentItem_SelectedSegmentTextColor) property of [SfSegmentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentItem.html).
 
 {% tabs %}
-{% highlight C# tabtitle="MainPage.xaml.cs"%}
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
 
 using Syncfusion.Maui.Buttons;
 . . .
@@ -459,6 +459,58 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![Selected segment border thickness customization in .NET MAUI Segmented control.](images/selection/border-stroke-thickness.png)
+
+## Enable or Disable Ripple Animation
+
+The [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html) provides a ripple animation that visually highlights a segment when it is tapped. This effect applies to both default segment items and items defined using custom data templates. You can enable or disable this animation using the `EnableRippleEffect` property. Set `EnableRippleEffect` to true to display the ripple effect when a segment is selected. Set it to false to disable the ripple animation.
+
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
+
+<ContentPage xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
+
+<buttons:SfSegmentedControl x:Name="segmentedControl"
+                           EnableRippleEffect="False">
+    <buttons:SfSegmentedControl.ItemsSource>
+        <x:Array Type="{x:Type x:String}">
+                <x:String>Day</x:String>
+                <x:String>Week</x:String>
+                <x:String>Month</x:String>
+                <x:String>Year</x:String>
+        </x:Array>
+    </buttons:SfSegmentedControl.ItemsSource>
+</buttons:SfSegmentedControl>
+
+</ContentPage>
+
+{% endhighlight %}
+{% highlight xaml tabtitle="MainPage.xaml.cs" hl_lines="18" %}
+
+using Syncfusion.Maui.Buttons;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfSegmentedControl segmentedControl = new SfSegmentedControl();
+        List<SfSegmentItem> itemList = new List<SfSegmentItem>
+        {
+            new SfSegmentItem() {Text = "Day"},
+            new SfSegmentItem() {Text = "Week"},
+            new SfSegmentItem() {Text = "Month"},
+            new SfSegmentItem() {Text = "Year"},
+        };
+        segmentedControl.ItemsSource = itemList;
+        segmentedControl.EnableRippleEffect = false;
+        this.Content = segmentedControl;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Notifying segment selection changes
 The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_SelectionChanged) event is triggered once the segment is selected in the segmented control. The [SelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SelectionChangedEventArgs.html) has the following values, which provide information for the `SelectionChanged` event.

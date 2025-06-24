@@ -55,7 +55,7 @@ You can customize the type of search for the `SearchController` by using the [Se
 {% tabs %}
 {% highlight c# %}
 
-this.datagrid.SearchController.SearchType = DataGridSearchType.StartsWith;
+this.dataGrid.SearchController.SearchType = DataGridSearchType.StartsWith;
 
 {% endhighlight %}
 {% endtabs %}
@@ -115,7 +115,7 @@ The `SfDataGrid` processes search operations in the [DataGridSearchController](h
 {% tabs %}
 {% highlight c# %}
 
-this.datagrid.SearchController = new CustomDataGridSearchController (this.datagrid);
+this.dataGrid.SearchController = new CustomDataGridSearchController (this.datagrid);
 public class CustomDataGridSearchController  : DataGridSearchController
 {
     public CustomDataGridSearchController(SfDataGrid datagrid)
@@ -163,7 +163,7 @@ You can get the records by using the [GetSearchRecords](https://help.syncfusion.
 {% tabs %}
 {% highlight c# %}
 
-var records = this.datagrid.SearchController.GetSearchRecords();
+var records = this.dataGrid.SearchController.GetSearchRecords();
 
 {% endhighlight %}
 {% endtabs %}

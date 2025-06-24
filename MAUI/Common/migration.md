@@ -1,16 +1,15 @@
 ---
 layout: post
 title: Migrating from Xamarin to .NET MAUI | Syncfusion® 
-description: Basic overview about the list of available .NET MAUI components and equal Xamarin components on Syncfusion®.
-platform: maui
-control: Essential Studio<sup>®</sup>
-documentation: ug
+description: Basic overview of the available .NET MAUI components and their Xamarin equivalents on Syncfusion®.
+platform: MAUI
+control: Essential Studio®
+documentation: UG
 ---
-
 
 # Migrate from Xamarin to .NET MAUI
 
-Currently working on delivering brand-new .NET MAUI controls that can be used in your migrated .NET MAUI projects with minimal breaking changes. Every release delivers a set of controls, and over time will deliver all the equivalents to our Xamarin.Forms offering. Please find the following exclusive migration documents for each control to replace them with your migrated .NET MAUI application.
+We are actively working on delivering brand-new .NET MAUI controls that can be seamlessly integrated into your migrated .NET MAUI projects with minimal breaking changes. Each release introduces a set of controls, and over time, we aim to deliver all the equivalents to our Xamarin.Forms offerings. Below, you will find exclusive migration documents for each control to assist in replacing them within your migrated .NET MAUI application.
 
 <table>
 	<tr>

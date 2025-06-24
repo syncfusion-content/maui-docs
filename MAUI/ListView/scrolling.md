@@ -58,7 +58,7 @@ listView.ItemsLayout.ScrollToRowIndex(index, true);
 
 ## Scrollbar visibility
 
-The `SfListView` provides an option to enable or disable the `Scrollbar` visibilty by using the [ScrollBarVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ScrollBarVisibility) property. By default, the value will be `Default`
+The `SfListView` provides an option to enable or disable the `Scrollbar` visibility by using the [ScrollBarVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ScrollBarVisibility) property. By default, the value will be `Default`
 
 N> This API is only available for the `WinUI` platform.
 
@@ -113,6 +113,28 @@ private void ListView_ScrollStateChanged(object sender, ScrollStateChangedEventA
 
 {% endhighlight %}
 {% endtabs %}
+
+## Enable fade effect on scrolling
+
+The `SfListView` provides the ability to display a fade effect at the top and bottom edges while scrolling. This fade gradient helps indicate that more items are available beyond the visible area, enhancing the scrolling experience.
+
+You can enable this behavior using the `EnableFadeOnScroll` property.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfListView x:Name="listView"
+                       ItemsSource="{Binding Items}"
+                       EnableFadeOnScroll="True" />
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+SfListView listView = new SfListView();
+listView.ItemsSource = viewModel.Items;
+listView.EnableFadeOnScroll = true;
+{% endhighlight %}
+{% endtabs %}
+
+![MAUI ListView FadeOnScroll](Images/scrolling/maui-listview-fade-on-scroll-example.gif)
 
 ## Identify when end of the list is reached on scrolling
 

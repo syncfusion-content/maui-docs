@@ -304,13 +304,13 @@ In custom grouping, you can sort all the inner records of each group by setting 
 
 {% highlight c# %}
 
-datagrid.GroupColumnDescriptions.Add(new GroupColumnDescription()
+dataGrid.GroupColumnDescriptions.Add(new GroupColumnDescription()
 {
     ColumnName = "OrderID",
     Converter = new GroupOrderNoConverter(),
     SortGroupRecords = false
 });
-datagrid.GroupColumnDescriptions.Add(new GroupColumnDescription()
+dataGrid.GroupColumnDescriptions.Add(new GroupColumnDescription()
 {
     ColumnName = "Price",
     Converter = new PriceConverter(),
@@ -555,7 +555,7 @@ this.dataGrid.ShowColumnWhenGrouped = false;
 
 ## Load group icon through template
 
-The SfDataGrid uses an icon to indicate the expand and collapse state of groups. You can personalize the group icon by using the [sfDataGrid.GroupExpandCollapseTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_GroupExpandCollapseTemplate) property. This property allows you to define a custom template that will be displayed in its normal form when the group is expanded, and it will rotate downwards when the group is collapsed. To implement this, refer to the following code snippet:
+The SfDataGrid uses an icon to indicate the expand and collapse state of groups. You can personalize the group icon by using the [SfDataGrid.GroupExpandCollapseTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_GroupExpandCollapseTemplate) property. This property allows you to define a custom template that will be displayed in its normal form when the group is expanded, and it will rotate downwards when the group is collapsed. To implement this, refer to the following code snippet:
 
 {% tabs %}
 

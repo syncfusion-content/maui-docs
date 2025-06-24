@@ -1,24 +1,24 @@
 ---
 layout: post
 title: Syncfusion® Essential Studio® .NET MAUI Cross Platform UI
-description: The Syncfusion® .NET MAUI cross platform ui controls are an ideal choice for developing cross platform applications in Android, iOS, MacCatalyst and WinUI.
-platform: maui
+description: The Syncfusion® .NET MAUI cross platform UI controls are an ideal choice for developing cross platform applications in Android, iOS, Mac Catalyst and WinUI.
+platform: MAUI
 control: .NET MAUI
-documentation: ug
+documentation: UG
 ---
 
-# Syncfusion<sup>®</sup> .NET MAUI cross platform UI controls
+# Syncfusion<sup>®</sup> .NET MAUI Cross Platform UI Controls
 
-The Syncfusion<sup>®</sup> .NET MAUI cross platform UI controls are an ideal choice for developing rich cross platform applications with .NET from a single shared code base. You can build more responsive, interactive, and creative application that run on multiple platforms and devices with various form factors. Some of the cool features and customization options makes the controls a perfect one for your cross-platform application.
+The Syncfusion<sup>®</sup> .NET MAUI cross platform UI controls are an excellent choice for developing rich cross-platform applications with .NET from a single shared code base. Create responsive, interactive, and creative applications that run on multiple platforms and devices with various form factors. Some of the outstanding features and customization options make these controls perfect for your cross-platform application.
 
-Syncfusion<sup>®</sup> .NET MAUI controls support following platforms,
+Syncfusion<sup>®</sup> .NET MAUI controls support the following platforms:
 
 * Android
 * iOS
 * Mac Catalyst
 * WinUI
 
-You can find the platforms supported by each .NET MAUI control as below.
+Below you can find the platforms supported by each .NET MAUI control.
 
 <table>
 	<tr>
@@ -1150,7 +1150,7 @@ You can find the platforms supported by each .NET MAUI control as below.
 	</tr>
 </table>
 
-You can find the platforms supported by each .NET MAUI file-format library as below.
+You can find the platforms supported by each .NET MAUI file-format library as follows:
 
 | Control           | Android | iOS  | Mac Catalyst | WinUI |
 |-------------------|---------|------|--------------|-------|

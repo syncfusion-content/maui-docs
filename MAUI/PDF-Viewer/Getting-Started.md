@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with .NET MAUI PDF Viewer
 
-This section guides you through setting up and configuring PDF viewer in your .NET MAUI application. Follow the steps below to add the PDF viewer to your project and load a PDF document.
+This section guides you through setting up and configuring PDF Viewer in your .NET MAUI application. Follow the steps below to add the PDF viewer to your project and load a PDF document.
 
 To get started quickly, you can also check out our video tutorial below. 
 
@@ -29,13 +29,13 @@ Before proceeding, ensure the following are in place:
 
 1.  Go to **File > New > Project** and choose the **.NET MAUI App** template.
 2.  Name the project and choose a location, then click **Next**.
-3.  Select the .NET framework version and click **Create**.
+3.  Select the .NET Framework version and click **Create**.
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI PDF Viewer NuGet Package
 
-1.  In **Solution Explorer**, right click the project and choose **Manage NuGet Packages**.
+1.  In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
 2.  Search for [Syncfusion.Maui.PdfViewer](https://www.nuget.org/packages/Syncfusion.Maui.PdfViewer) and install the latest version.`
-3.  Ensure the necessary dependencies are installed correctly, and the project is restored.
+3.  Ensure the necessary dependencies are installed correctly and the project is restored.
 
 ## Step 3: Register the Syncfusion<sup>®</sup> Core Handler
 
@@ -95,8 +95,8 @@ Open the `MainPage.xaml` file and follow the steps below.
 
 ## Step 5: Load a PDF Document
 
-1.  From the solution explorer of the project, add a new folder to the project named `Assets` and add the PDF document you need to load in the PDF viewer. Here, a PDF document named `PDF_Succinctly.pdf` is used.
-2.  In Visual Studio, right click the added PDF document and set its `Build Action` as `Embedded Resource`. 
+1.  From the solution explorer of the project, add a new folder to the project named `Assets` and add the PDF document you need to load into the PDF viewer. Here, a PDF document named `PDF_Succinctly.pdf` is used.
+2.  In Visual Studio, right-click the added PDF document and set its `Build Action` as `Embedded Resource`. 
 3.  In this example, we will load the PDF document through MVVM binding. Create a new C# file named `PdfViewerViewModel.cs` and add the following code snippet.
 
 {% tabs %}
@@ -206,11 +206,11 @@ Before proceeding, ensure the following are in place:
 1.  Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
 2.  Choose the **.NET MAUI App** template.
 3.  Select the project location, type the project name and press enter.
-4.  Then choose **Create project**
+4.  Then choose **Create project**.
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI PDF Viewer NuGet Package
 
-1.  In **Solution Explorer**, right click the project and choose **Add NuGet Package**.
+1.  In **Solution Explorer**, right-click the project and choose **Add NuGet Package**.
 2.  Search for [Syncfusion.Maui.PdfViewer](https://www.nuget.org/packages/Syncfusion.Maui.PdfViewer) and install the latest version.`
 3.  Ensure the necessary dependencies are installed correctly, and the project is restored.
 
@@ -272,7 +272,7 @@ Open the `MainPage.xaml` file and follow the steps below.
 
 ## Step 5: Load a PDF Document
 
-1.  From the solution explorer of the project, add a new folder to the project named `Assets` and add the PDF document you need to load in the PDF viewer. Here, a PDF document named `PDF_Succinctly.pdf` is used.
+1.  From the solution explorer of the project, add a new folder to the project named `Assets` and add the PDF document you need to load into the PDF viewer. Here, a PDF document named `PDF_Succinctly.pdf` is used.
 2.  Open the `.csproj` file and add the following code snippet to embed the PDF document as a resource.
 
 {% tabs %}
@@ -387,20 +387,20 @@ N> 2. And, if you are using multiple pages in your application, then make sure t
 Before proceeding, ensure the following are set up:
 
 1. Ensure you have the latest version of JetBrains Rider.
-2. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
+2. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
 ## Step 1: Create a new .NET MAUI Project
 
-1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
+1. Go to **File > New Solution,** Select .NET (C#), and choose the .NET MAUI App template.
 2. Enter the Project Name, Solution Name, and Location.
-3. Select the .NET framework version and click Create.
+3. Select the .NET Framework version and click Create.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Pdf Viewer NuGet Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI PDF Viewer NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.PdfViewer](https://www.nuget.org/packages/Syncfusion.Maui.PdfViewer/) and install the latest version.
-3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
+3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, open the Terminal in Rider and manually run: `dotnet restore`.
 
 ## Step 3: Register the Syncfusion<sup>®</sup> Core Handler
 
@@ -461,6 +461,6 @@ Open the `MainPage.xaml` file and follow the steps below.
 {% endtabcontents %}
 ![Getting started with .NET MAUI PDF Viewer](Images\Getting-Started\maui-pdf-viewer-getting-started.png)
 
-The **Getting Started** example project for the.NET MAUI PDF Viewer can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples). 
+The **Getting Started** example project for the .NET MAUI PDF Viewer can be downloaded [here](https://github.com/SyncfusionExamples/maui-pdf-viewer-examples). 
 
 N> You can refer to our [.NET MAUI PDF Viewer](https://www.syncfusion.com/maui-controls/maui-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI PDF Viewer Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/PdfViewer) that shows you how to render the PDF Viewer in .NET MAUI.

@@ -157,6 +157,66 @@ sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Both;
 
 ![UpDown Alignment is Both in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonAlignmentBoth.png)
 
+
+## UpDown button order
+
+You can change the order of the UpDown buttons in the [NumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control using the `UpDownOrder` property. Set its value to **UpThenDown** or **DownThenUp** to position the buttons on the entry field, respectively.
+
+N> By default, the `UpDownOrder` property is set to **UpThenDown**.  
+
+### UpDown button order: UpThenDown
+
+{% tabs %}
+{% highlight XAML %}
+
+<editors:SfNumericEntry Value="123"
+                        WidthRequest="200"
+                        UpDownOrder="UpThenDown"
+                        UpDownPlacementMode="Inline" 
+                        UpDownButtonAlignment="Right"/>
+                     
+{% endhighlight %}
+{% highlight c# %}
+
+SfNumericEntry sfNumericEntry = new SfNumericEntry();
+sfNumericEntry.WidthRequest = 200;
+sfNumericEntry.Value = 123;
+sfNumericEntry.UpDownOrder = UpDownOrder.UpThenDown;
+sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
+sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Right;
+
+{% endhighlight %}
+{% endtabs %}
+
+![UpDown Order is Up then down in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonOrderUpThenDown.png)
+
+### UpDown button order: DownThenUP
+
+{% tabs %}
+{% highlight XAML %}
+
+<editors:SfNumericEntry Value="123"
+                        WidthRequest="200"
+                        UpDownOrder="DownThenUp"
+                        UpDownPlacementMode="Inline" 
+                        UpDownButtonAlignment="Right/>
+                     
+{% endhighlight %}
+{% highlight c# %}
+
+SfNumericEntry sfNumericEntry = new SfNumericEntry();
+sfNumericEntry.WidthRequest = 200;
+sfNumericEntry.Value = 123;
+sfNumericEntry.UpDownOrder = UpDownOrder.DownThenUp;
+sfNumericEntry.UpDownPlacementMode = NumericEntryUpDownPlacementMode.Inline;
+sfNumericEntry.UpDownButtonAlignment = UpDownButtonAlignment.Right;
+
+{% endhighlight %}
+{% endtabs %}
+
+![UpDown order is DownThenUp in .NET MAUI NumericEntry](UpDownButton_images/UpDownButtonOrderDownThenUp.png)
+
+
 ## UpDown button customization
 
 ## UpDown button color

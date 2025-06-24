@@ -1,15 +1,15 @@
 ---
 layout: post
 title: About Keys for Syncfusion® Controls | Syncfusion®
-description: This section contains the details about the keys which are mapped to the UI elements of all the controls
-platform: maui
+description: Explore the detailed mappings of the keys to the UI elements for all the controls in this comprehensive section.
+platform: MAUI
 control: General
-documentation: ug
+documentation: UG
 ---
 
 # Keys of Syncfusion<sup>®</sup> Controls
 
-This page lists the keys for each control and the element to which it is mapped for all the controls.
+This page lists the keys associated with each control and the respective UI elements they map to across all controls.
 
 ## SfAccordion
 
@@ -40,7 +40,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>    
-            By merging this key in application resources, you can customize the appearance of SfAccordion without merging common theme resource and control style resource dictionaries.
+            By merging this key in the application resources, you can customize the appearance of the SfAccordion without merging common theme resource and control style resource dictionaries.
 			
 {% highlight xaml %}
 
@@ -70,48 +70,48 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
     <tr>
         <td> SfAccordionNormalHeaderBackground <br/><br/></td>
-        <td> Background color of header in SfAccordion.<br/><br/></td>
+        <td> Background color of the header in SfAccordion.<br/><br/></td>
     </tr>
     <tr>
         <td> SfAccordionHoverHeaderBackground <br/><br/></td> 
-        <td> Background color of header when it is in hover state.<br/><br/></td>
+        <td> Background color of the header when it is in a hover state.<br/><br/></td>
     </tr>
     <tr>
         <td> SfAccordionFocusedHeaderBackground <br/><br/></td> 
-        <td> Background color of header when it is in focused state.<br/><br/></td>
+        <td> Background color of the header when it is in a focused state.<br/><br/></td>
     </tr>
     <tr>
         <td> SfAccordionHeaderRippleBackground <br/><br/></td> 
-        <td> Background color of header when it is in pressed state.<br/><br/></td>
+        <td> Background color of the header when it is in a pressed state.<br/><br/></td>
     </tr>
     <tr>
         <td> SfAccordionNormalHeaderIconColor <br/><br/></td>
-        <td> Color of the SfAccordion Header Icon.<br/><br/></td>
+        <td> Color of the SfAccordion header icon.<br/><br/></td>
     </tr>
     <tr>
         <td> SfAccordionHoverHeaderIconColor <br/><br/></td> 
-        <td> Color of header icon when it is in hover state.<br/><br/></td>
+        <td> Color of the header icon when it is in a hover state.<br/><br/></td>
     </tr>
     <tr>
         <td> SfAccordionPressedHeaderIconColor <br/><br/></td> 
-        <td> Color of header icon when it is in pressed state.<br/><br/></td>
+        <td> Color of the header icon when it is in a pressed state.<br/><br/></td>
     </tr>
     <tr>
         <td> SfAccordionFocusedHeaderIconColor <br/><br/></td> 
-        <td> Color of header icon when it is in focused state.<br/><br/></td>
+        <td> Color of the header icon when it is in a focused state.<br/><br/></td>
     </tr>
     <tr>
         <td> SfAccordionExpandedItemStroke <br/><br/></td> 
-        <td> Stroke color of expanded accordion item.<br/><br/></td>
+        <td> Stroke color of an expanded accordion item.<br/><br/></td>
     </tr>
     <tr>
         <td> SfAccordionExpandedItemStrokeThickness <br/><br/></td> 
-        <td> Stroke thickness of expanded accordion item.<br/><br/>
+        <td> Stroke thickness of an expanded accordion item.<br/><br/>
         </td>
     </tr>
     <tr>
         <td> SfAccordionFocusedItemStroke <br/><br/></td> 
-        <td> Stroke color of the header when it is in focused state during keyboard navigation.<br/><br/></td>
+        <td> Stroke color of the header when it is focused during keyboard navigation.<br/><br/></td>
     </tr>
 </table>
 
@@ -144,7 +144,8 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>    
-            By merging this key in application resources, you can customize the appearance of SfAIAssistView without merging common theme resource and control style resource dictionaries.
+            By merging this key in application resources, you can customize the appearance of SfAIAssistView
+            without merging common theme resource and control style resource dictionaries.
 			
 {% highlight xaml %}
 
@@ -557,7 +558,8 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>    
-            By merging this key in application resources, you can customize the appearance of SfAutocomplete without merging common theme resource and control style resource dictionaries.
+            By merging this key in application resources, you can customize the appearance of SfAutocomplete
+            without merging common theme resource and control style resource dictionaries.
 			
 {% highlight xaml %}
 
@@ -604,7 +606,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td> 
         <td>
-            Color of the clear button icon in normal state
+            Color of the clear button icon in normal state.
             <br/>
             <br/>
         </td>
@@ -628,7 +630,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td> 
         <td>
-            Color of the SfAutocomplete stroke in normal state
+            Color of the SfAutocomplete stroke in normal state.
             <br/>
             <br/>
         </td>
@@ -664,7 +666,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td> 
         <td>
-            Color of the SfAutocomplete background in focus state.
+            Color of the SfAutocomplete background in focused state.
             <br/>
             <br/>
         </td>
@@ -676,7 +678,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td> 
         <td>
-            Color of the SfAutocomplete stroke in focus state.
+            Color of the SfAutocomplete stroke in focused state.
             <br/>
             <br/>
         </td>
@@ -688,7 +690,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td> 
         <td>
-            Color of the SfAutocomplete text color in focus state.
+            Color of the SfAutocomplete text color in focused state.
             <br/>
             <br/>
         </td>
@@ -700,7 +702,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td> 
         <td>
-            Color of the SfAutocomplete background in disable state.
+            Color of the SfAutocomplete background in disabled state.
             <br/>
             <br/>
         </td>
@@ -712,7 +714,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td> 
         <td>
-            Color of the SfAutocomplete stroke in disable state.
+            Color of the SfAutocomplete stroke in disabled state.
             <br/>
             <br/>
         </td>
@@ -724,7 +726,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td> 
         <td>
-            Color of the SfAutocomplete text color in disable state.
+            Color of the SfAutocomplete text color in disabled state.
             <br/>
             <br/>
         </td>
@@ -797,7 +799,8 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>    
-            By merging this key in application resources, you can customize the appearance of SfAvatarView without merging common theme resource and control style resource dictionaries.
+            By merging this key in application resources, you can customize the appearance of SfAvatarView
+            without merging common theme resource and control style resource dictionaries.
 			
 {% highlight xaml %}
 
@@ -831,7 +834,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Stroke color of SfAvatarView
+            Stroke color of SfAvatarView.
             <br/>
             <br/>
         </td>
@@ -856,7 +859,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td> 
         <td>
-            Color for the Initials String
+            Color for the initials string in SfAvatarView.
             <br/>
             <br/>
         </td>
@@ -892,7 +895,8 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>    
-            By merging this key in application resources, you can customize the appearance of SfBackdrop without merging common theme resources and control style resource dictionaries.
+            By merging this key in application resources, you can customize the appearance of SfBackdrop
+            without merging common theme resources and control style resource dictionaries.
 			
 {% highlight xaml %}
 
@@ -963,7 +967,8 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>    
-            By merging this key in application resources, you can customize the appearance of SfBadgeView without merging common theme resource and control style resource dictionaries.
+            By merging this key in application resources, you can customize the appearance of SfBadgeView
+            without merging common theme resource and control style resource dictionaries.
 			
 {% highlight xaml %}
 
@@ -1031,7 +1036,8 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>    
-            By merging this key in application resources, you can customize the appearance of SfBarcodeGenerator without merging common theme resources and control style resource dictionaries.
+            By merging this key in application resources, you can customize the appearance of SfBarcodeGenerator
+            without merging common theme resources and control style resource dictionaries.
 			
 {% highlight xaml %}
 
@@ -1127,7 +1133,8 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>    
-            By merging this key in application resources, you can customize the appearance of SfButton without merging common theme resource and control style resource dictionaries.
+            By merging this key in application resources, you can customize the appearance of SfButton
+            without merging common theme resource and control style resource dictionaries.
 			
 {% highlight xaml %}
 
@@ -1267,7 +1274,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td> 
         <td>
-            Color of the SfButton background in disable state.
+            Color of the SfButton background in disabled state.
             <br/>
             <br/>
         </td>
@@ -1279,7 +1286,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td> 
         <td>
-            Color of the SfButton stroke in disable state.
+            Color of the SfButton stroke in disabled state.
             <br/>
             <br/>
         </td>
@@ -1291,7 +1298,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td> 
         <td>
-            Color of the SfButton text in disable state.
+            Color of the SfButton text in disabled state.
             <br/>
             <br/>
         </td>
@@ -1328,7 +1335,8 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>    
-            By merging this key in application resources, you can customize the appearance of SfBusyIndicator without merging common theme resource and control style resource dictionaries.
+            By merging this key in application resources, you can customize the appearance of SfBusyIndicator
+            without merging common theme resource and control style resource dictionaries.
 			
 {% highlight xaml %}
 
@@ -1432,7 +1440,8 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>    
-            By merging this key in application resources, it is possible to customize the appearance of the SfCalendar without merging common theme resource and control style resource dictionaries.
+            By merging this key in application resources, you can customize the appearance of the SfCalendar
+            without merging common theme resource and control style resource dictionaries.
 			
 {% highlight xaml %}
 
@@ -1479,7 +1488,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of calendar header background.
+            Color of the calendar header background.
             <br/>
             <br/>
         </td>
@@ -1491,7 +1500,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of calendar view header text.
+            Color of the calendar view header text.
             <br/>
             <br/>
         </td>
@@ -1503,7 +1512,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of calendar week number text.
+            Color of the calendar week number text.
             <br/>
             <br/>
         </td>
@@ -1515,7 +1524,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of week number background.
+            Color of the week number background.
             <br/>
             <br/>
         </td>
@@ -1527,7 +1536,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of month date text.
+            Color of the month date text.
             <br/>
             <br/>
         </td>
@@ -1539,7 +1548,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of month date text background. 
+            Color of the month date text background.
             <br/>
             <br/>
         </td>
@@ -1575,7 +1584,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of trailing and leading text of month.
+            Color of trailing and leading text of the month.
             <br/>
             <br/>
         </td>
@@ -1587,7 +1596,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of trailing and leading text of month background.
+            Color of trailing and leading text of the month background.
             <br/>
             <br/>
         </td>
@@ -1599,7 +1608,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of disabled date in month.
+            Color of disabled dates in the month.
             <br/>
             <br/>
         </td>
@@ -1611,7 +1620,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of disabled date in month background.
+            Color of disabled dates' background in the month.
             <br/>
             <br/>
         </td>
@@ -1623,7 +1632,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of weekend date text.
+            Color of weekend dates text.
             <br/>
             <br/>
         </td>
@@ -1635,7 +1644,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of weekend date text background.
+            Color of weekend dates text background.
             <br/>
             <br/>
         </td>
@@ -1659,7 +1668,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of special date text background
+            Color of special dates text background.
             <br/>
             <br/>
         </td>
@@ -1683,7 +1692,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of selected text in month.
+            Color of selected text in the month.
             <br/>
             <br/>
         </td>
@@ -1743,7 +1752,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of leading dates text in the year
+            Color of leading dates text in the year.
             <br/>
             <br/>
         </td>
@@ -1767,7 +1776,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of today text in the year.
+            Color of today's text in the year.
             <br/>
             <br/>
         </td>
@@ -1779,7 +1788,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of today background in the year. 
+            Color of today's background in the year. 
             <br/>
             <br/>
         </td>
@@ -1815,7 +1824,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of today highlight.
+            Color of today's highlight.
             <br/>
             <br/>
         </td>
@@ -1875,7 +1884,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of text when hovering over the header
+            Color of text when hovering over the header.
             <br/>
             <br/>
         </td>
@@ -1971,7 +1980,8 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>    
-            By merging this key in application resources, you can customize the appearance of SfCardView without merging common theme resources and control style resource dictionaries.
+            By merging this key in application resources, you can customize the appearance of SfCardView
+            without merging common theme resources and control style resource dictionaries.
 			
 {% highlight xaml %}
 
@@ -2017,7 +2027,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the indicator of the card view.
+            Color of the indicator in the card view.
             <br/>
             <br/>
         </td>
@@ -2158,7 +2168,7 @@ This page lists the keys for each control and the element to which it is mapped 
         </th>
     </tr>
     <tr>
-    <td rowspan="99">
+    <td rowspan="113">
             SfChatStyles
             <br/>
             <br/>
@@ -2200,108 +2210,108 @@ This page lists the keys for each control and the element to which it is mapped 
     <!--Incoming message-->
     <tr>
         <td> SfChatIncomingMessageBackground <br/><br/></td>
-        <td> Background color of an incoming message.<br/><br/></td>
+        <td> Background color of incoming messages.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatIncomingMessageTextColor <br/><br/></td>
-        <td> Text color of an incoming message.<br/><br/></td>
+        <td> Text color of incoming messages.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatIncomingMessageFontFamily <br/><br/></td>
-        <td> Font family of an incoming message.<br/><br/></td>
+        <td> Font family of incoming messages.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatIncomingMessageFontAttributes <br/><br/></td>
-        <td> Font attributes of an incoming message.<br/><br/></td>
+        <td> Font attributes of incoming messages.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatIncomingMessageFontSize <br/><br/></td>
-        <td> Font size of an incoming message.<br/><br/></td>
+        <td> Font size of incoming messages.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatIncomingMessageAuthorTextColor <br/><br/></td>
-        <td> Text color of the author name in an incoming message.<br/><br/></td>
+        <td> Text color of the author name in incoming messages.<br/><br/></td>
     </tr>
      <tr>
         <td> SfChatIncomingMessageAuthorFontFamily <br/><br/></td>
-        <td> Font family of the author name in an incoming message.<br/><br/></td>
+        <td> Font family of the author name in incoming messages.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatIncomingMessageAuthorFontAttributes <br/><br/></td>
-        <td> Font attributes of the author name in an incoming message.<br/><br/></td>
+        <td> Font attributes of the author name in incoming messages.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatIncomingMessageAuthorFontSize <br/><br/></td>
-        <td> Font size of the author name in an incoming message.<br/><br/></td>
+        <td> Font size of the author name in incoming messages.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatIncomingMessageTimestampTextColor <br/><br/></td>
-        <td> Text color of the timestamp in an incoming message.<br/><br/></td>
+        <td> Text color of the timestamp in incoming messages.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatIncomingMessageTimestampFontFamily <br/><br/></td>
-        <td> Font family of the timestamp in an incoming message.<br/><br/></td>
+        <td> Font family of the timestamp in incoming messages.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatIncomingMessageTimestampFontAttributes <br/><br/></td>
-        <td> Font attributes of the timestamp in an incoming message.<br/><br/></td>
+        <td> Font attributes of the timestamp in incoming messages.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatIncomingMessageTimestampFontSize <br/><br/></td>
-        <td> Font size of the timestamp in an incoming message.<br/><br/></td>
+        <td> Font size of the timestamp in incoming messages.<br/><br/></td>
     </tr>
     <!--Outgoing message-->
     <tr>
         <td> SfChatOutgoingMessageBackground <br/><br/></td>
-        <td> Background color of an outgoing message.<br/><br/></td>
+        <td> Background color of outgoing messages.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatOutgoingMessageTextColor <br/><br/></td>
-        <td> Text color of an outgoing message.<br/><br/></td>
+        <td> Text color of outgoing messages.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatOutgoingMessageFontFamily <br/><br/></td>
-        <td> Font family of an outgoing message.<br/><br/></td>
+        <td> Font family of outgoing messages.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatOutgoingMessageFontAttributes <br/><br/></td>
-        <td> Font attributes of an outgoing message.<br/><br/></td>
+        <td> Font attributes of outgoing messages.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatOutgoingMessageFontSize <br/><br/></td>
-        <td> Font size of an outgoing message.<br/><br/></td>
+        <td> Font size of outgoing messages.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatOutgoingMessageAuthorTextColor <br/><br/></td>
-        <td> Text color of the author name in an outgoing message.<br/><br/></td>
+        <td> Text color of the author name in outgoing messages.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatOutgoingMessageAuthorFontFamily <br/><br/></td>
-        <td> Font family of the author name in an outgoing message.<br/><br/></td>
+        <td> Font family of the author name in outgoing messages.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatOutgoingMessageAuthorFontAttributes <br/><br/></td>
-        <td> Font attributes of the author name in an outgoing message.<br/><br/></td>
+        <td> Font attributes of the author name in outgoing messages.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatOutgoingMessageAuthorFontSize <br/><br/></td>
-        <td> Font size of the author name in an outgoing message.<br/><br/></td>
+        <td> Font size of the author name in outgoing messages.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatOutgoingMessageTimestampTextColor <br/><br/></td>
-        <td> Text color of the timestamp in an outgoing message.<br/><br/></td>
+        <td> Text color of the timestamp in outgoing messages.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatOutgoingMessageTimestampFontFamily <br/><br/></td>
-        <td> Font family of the timestamp in an outgoing message.<br/><br/></td>
+        <td> Font family of the timestamp in outgoing messages.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatOutgoingMessageTimestampFontAttributes <br/><br/></td>
-        <td> Font attributes of the timestamp in an outgoing message.<br/><br/></td>
+        <td> Font attributes of the timestamp in outgoing messages.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatOutgoingMessageTimestampFontSize <br/><br/></td>
-        <td> Font size of the timestamp in an outgoing message.<br/><br/></td>
+        <td> Font size of the timestamp in outgoing messages.<br/><br/></td>
     </tr>
     <!--Date picker message-->
     <tr>
@@ -2345,40 +2355,40 @@ This page lists the keys for each control and the element to which it is mapped 
         <td> SfChatTimePickerBackground <br/><br/></td>
         <td> Background color of time picker.<br/><br/></td>
     </tr>
-    <!--Hyper link message-->
+    <!--Hyperlink message-->
     <tr>
         <td> SfChatIncomingHyperlinkColor <br/><br/></td>
-        <td> Text color of the URL in an incoming hyper link message.<br/><br/></td>
+        <td> Text color of the URL in an incoming hyperlink message.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatHyperlinkMetaTitleTextColor <br/><br/></td>
-        <td> Text color of the URL's meta title in a hyper link message.<br/><br/></td>
+        <td> Text color of the URL's meta title in a hyperlink message.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatHyperlinkDescriptionTextColor <br/><br/></td>
-        <td> Text color of the URL's meta description in a hyper link message.<br/><br/></td>
+        <td> Text color of the URL's meta description in a hyperlink message.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatHyperlinkDescriptionBackground <br/><br/></td>
-        <td> Background color of the URL description area in a hyper link message.<br/><br/></td>
+        <td> Background color of the URL description area in a hyperlink message.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatOutgoingHyperlinkColor <br/><br/></td>
-        <td> Text color of the URL in an outgoing hyper link message.<br/><br/></td>
+        <td> Text color of the URL in an outgoing hyperlink message.<br/><br/></td>
     </tr>
      <!--Image message-->
     <tr>
         <td> SfChatIncomingImageStroke <br/><br/></td>
-        <td> Border color of an image in an incoming image message.<br/><br/></td>
+        <td> Border color of an image in incoming image messages.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatOutgoingImageStroke <br/><br/></td>
-        <td> Border color of an image in an outgoing image message.<br/><br/></td>
+        <td> Border color of an image in outgoing image messages.<br/><br/></td>
     </tr>
      <!--Calendar message-->
     <tr>
         <td> SfChatCalendarBackground <br/><br/></td>
-        <td> Background color of calendar in a calendar message.<br/><br/></td>
+        <td> Background color of calendar within a calendar message.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatCalendarStroke <br/><br/></td>
@@ -2387,15 +2397,15 @@ This page lists the keys for each control and the element to which it is mapped 
     <!--Card message-->
     <tr>
         <td> SfChatCardBackground <br/><br/></td>
-        <td> Background color of card in a card message.<br/><br/></td>
+        <td> Background color of the card in a card message.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatCardStroke <br/><br/></td>
-        <td> Border color of card in a card message.<br/><br/></td>
+        <td> Border color of the card in a card message.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatCardTitleTextColor <br/><br/></td>
-        <td> Text color of title of the card.<br/><br/></td>
+        <td> Text color of the title of the card.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatCardTitleFontFamily <br/><br/></td>
@@ -2443,11 +2453,11 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
     <tr>
         <td> SfChatCardButtonBackground <br/><br/></td>
-        <td> Background color of card button.<br/><br/></td>
+        <td> Background color of the card button.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatCardButtonStroke <br/><br/></td>
-        <td> Border color of card button.<br/><br/></td>
+        <td> Border color of the card button.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatCardButtonTextColor <br/><br/></td>
@@ -2468,19 +2478,19 @@ This page lists the keys for each control and the element to which it is mapped 
     <!--Message input view-->
     <tr>
         <td> SfChatMessageInputViewBackground <br/><br/></td>
-        <td> Background color of message input view.<br/><br/></td>
+        <td> Background color of the message input view.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatEditorPlaceholderTextColor <br/><br/></td>
-        <td> Text color of editor place holder.<br/><br/></td>
+        <td> Text color of the editor placeholder.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatEditorTextColor <br/><br/></td>
-        <td> Text color of editor.<br/><br/></td>
+        <td> Text color of the editor.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatEditorBackground <br/><br/></td>
-        <td> Background color of editor.<br/><br/></td>
+        <td> Background color of the editor.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatFocusedEditorStroke <br/><br/></td>
@@ -2492,27 +2502,27 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
     <tr>
         <td> SfChatEditorFontFamily <br/><br/></td>
-        <td> Font family of editor text.<br/><br/></td>
+        <td> Font family of the editor text.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatEditorFontSize <br/><br/></td>
-        <td> Font size of editor text.<br/><br/></td>
+        <td> Font size of the editor text.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatEditorFontAttributes <br/><br/></td>
-        <td> Font attributes of editor text.<br/><br/></td>
+        <td> Font attributes of the editor text.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatSendButtonColor <br/><br/></td>
-        <td> Color of send button.<br/><br/></td>
+        <td> Color of the send button.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatSendButtonBackground <br/><br/></td>
-        <td> Background Color of send button.<br/><br/></td>
+        <td> Background color of the send button.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatSendButtonDisabledColor <br/><br/></td>
-        <td> Color of the send button when it is in 'Disabled' state. <br/><br/></td>
+        <td> Color of the send button in a 'Disabled' state. <br/><br/></td>
     </tr>
     <tr>
         <td> SfChatDisabledSendButtonBackground <br/><br/></td>
@@ -2528,7 +2538,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
     <tr>
         <td> SfChatAttachmentButtonColor <br/><br/></td>
-        <td> Color for attachment button.<br/><br/></td>
+        <td> Color for the attachment button.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatAttachmentBackground <br/><br/></td>
@@ -2549,48 +2559,48 @@ This page lists the keys for each control and the element to which it is mapped 
     <!--Time break view-->
     <tr>
         <td> SfChatTimeBreakViewTextColor <br/><br/></td>
-        <td> Text Color of time break view.<br/><br/></td>
+        <td> Text color of the time break view.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatTimeBreakViewBackground <br/><br/></td>
-        <td> Background Color of time break view.<br/><br/></td>
+        <td> Background color of the time break view.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatTimeBreakViewStroke <br/><br/></td>
-        <td> Border Color of time break view.<br/><br/></td>
+        <td> Border color of the time break view.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatTimeBreakViewFontFamily <br/><br/></td>
-        <td> Font family of time break view label.<br/><br/></td>
+        <td> Font family of the time break view label.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatTimeBreakViewFontSize <br/><br/></td>
-        <td> Font size of time break view label.<br/><br/></td>
+        <td> Font size of the time break view label.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatTimeBreakViewFontAttributes <br/><br/></td>
-        <td> Font attributes of time break view label.<br/><br/></td>
+        <td> Font attributes of the time break view label.<br/><br/></td>
     </tr>
     <!--typing indicator-->
     <tr>
         <td> SfChatTypingIndicatorTextColor <br/><br/></td>
-        <td> Text Color of typing indicator.<br/><br/></td>
+        <td> Text Color of the typing indicator.<br/><br/></td>
     </tr>
      <tr>
         <td> SfChatTypingIndicatorBackground <br/><br/></td>
-        <td> Background Color of typing indicator.<br/><br/></td>
+        <td> Background Color of the typing indicator.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatTypingIndicatorFontFamily <br/><br/></td>
-        <td> Font family of typing indicator.<br/><br/></td>
+        <td> Font family of the typing indicator.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatTypingIndicatorFontSize <br/><br/></td>
-        <td> Font size of typing indicator.<br/><br/></td>
+        <td> Font size of the typing indicator.<br/><br/></td>
     </tr>
     <tr>
         <td> SfChatTypingIndicatorFontAttributes <br/><br/></td>
-        <td> Font attributes of typing indicator.<br/><br/></td>
+        <td> Font attributes of the typing indicator.<br/><br/></td>
     </tr>
     <!--Suggestions-->
     <tr>
@@ -2619,7 +2629,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
     <tr>
         <td> SfChatSuggestionListBackground <br/><br/></td>
-        <td> Background color of suggestion list view.<br/><br/></td>
+        <td> Background color of the suggestion list view.<br/><br/></td>
     </tr>
     <!--Load more-->
     <tr>
@@ -2637,6 +2647,23 @@ This page lists the keys for each control and the element to which it is mapped 
     <tr>
         <td> SfChatLoadMoreStroke <br/><br/></td>
         <td> Border color of the load more button.<br/><br/></td>
+    </tr>
+    <!--DeliveryStates-->
+    <tr>
+        <td> SfChatDeliveryStateFailedIconColor <br/><br/></td>
+        <td> Color of the Delivery State None. <br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatDeliveryStateSentIconColor <br/><br/></td>
+        <td> Color of the Delivery State Sent. <br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatDeliveryStateDeliveredIconColor <br/><br/></td>
+        <td> Color of the Delivery State Delivered. <br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatDeliveryStateReadIconColor <br/><br/></td>
+        <td> Color of the Delivery State Read. <br/><br/></td>
     </tr>
 </table>
 
@@ -2702,7 +2729,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfCheckBox in it's uncheck state.
+            Color of the SfCheckBox in it's unchecked state.
             <br/>
             <br/>
         </td>
@@ -2714,7 +2741,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfCheckBox in it's check state
+            Color of the SfCheckBox in it's checked state
             <br/>
             <br/>
         </td>
@@ -2750,7 +2777,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfCheckBox in it's check state while hovering.
+            Color of the SfCheckBox in it's checked state while hovering.
             <br/>
             <br/>
         </td>
@@ -2774,7 +2801,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfCheckBox text in hover state.
+            Color of the SfCheckBox text in hovered state.
             <br/>
             <br/>
         </td>
@@ -2786,7 +2813,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfCheckBox in it's check state while pressed.
+            Color of the SfCheckBox in its checked state while pressed.
             <br/>
             <br/>
         </td>
@@ -2798,7 +2825,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfCheckBox in it's unchecked state while pressed.
+            Color of the SfCheckBox in its unchecked state while pressed.
             <br/>
             <br/>
         </td>
@@ -2822,7 +2849,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the unchecked SfCheckBox in disable state.
+            Color of the unchecked SfCheckBox in disabled state.
             <br/>
             <br/>
         </td>
@@ -2834,7 +2861,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the checked SfCheckBox in disable state.
+            Color of the checked SfCheckBox in disabled state.
             <br/>
             <br/>
         </td>
@@ -2999,7 +3026,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfChips background in disable state.
+            Color of the SfChips background in disabled state.
             <br/>
             <br/>
         </td>
@@ -3011,7 +3038,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfChips text in disable state.
+            Color of the SfChips text in disabled state.
             <br/>
             <br/>
         </td>
@@ -3023,7 +3050,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the clear button icon in disable state.
+            Color of the clear button icon in disabled state.
             <br/>
             <br/>
         </td>
@@ -3035,7 +3062,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfChips stroke in disable state.
+            Color of the SfChips stroke in disabled state.
             <br/>
             <br/>
         </td>
@@ -3047,7 +3074,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfChips selection indicator in disable state.
+            Color of the SfChips selection indicator in disabled state.
             <br/>
             <br/>
         </td>
@@ -3211,7 +3238,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfChipGroup background in disable state.
+            Color of the SfChipGroup background in disabled state.
             <br/>
             <br/>
         </td>
@@ -3223,7 +3250,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfChipGroup text in disable state.
+            Color of the SfChipGroup text in disabled state.
             <br/>
             <br/>
         </td>
@@ -3235,7 +3262,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfChipGroup stroke in disable state.
+            Color of the SfChipGroup stroke in disabled state.
             <br/>
             <br/>
         </td>
@@ -3247,7 +3274,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfChipGroup selected background in disable state.
+            Color of the SfChipGroup selected background in disabled state.
             <br/>
             <br/>
         </td>
@@ -3259,7 +3286,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfChipGroup selected text in disable state.
+            Color of the SfChipGroup selected text in disabled state.
             <br/>
             <br/>
         </td>
@@ -3271,7 +3298,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfChipGroup selection indicator in disable state.
+            Color of the SfChipGroup selection indicator in disabled state.
             <br/>
             <br/>
         </td>
@@ -3317,7 +3344,7 @@ This page lists the keys for each control and the element to which it is mapped 
          </tr>
      <tr>
         <td>SfCircularChartBackground<br/><br/></td>
-        <td>Background of circular chart<br/><br/></td>
+        <td>Background of the circular chart<br/><br/></td>
     </tr>
     <tr>
         <td>SfCircularChartSelectionBrush<br/><br/></td>
@@ -3333,7 +3360,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
     <tr>
         <td>SfCircularChartTooltipTextFontSize<br/><br/></td>
-        <td>Font size of tooltip text<br/><br/></td>
+        <td>Font size of the tooltip text<br/><br/></td>
     </tr>
   </table>  
 
@@ -3413,7 +3440,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the progress in circular progress bar.
+            Color of the progress in the circular progress bar.
         <br/>
         <br/>
         </td>
@@ -3440,6 +3467,332 @@ This page lists the keys for each control and the element to which it is mapped 
             Gradient stop color of the circular progress bar.
         <br/>
         <br/>
+        </td>
+    </tr>
+</table>
+
+## SfColorPicker
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="23">
+            SfColorPickerStyles  
+            <br/>
+            <br/>
+        </td>
+		<td>
+           SfColorPickerTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key into application resources, you can customize the appearance of SfColorPicker
+            without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfColorPickerTheme">CommonTheme</x:String>
+                <Color x:Key="SfColorPickerPopupBackground">Pink</Color>
+                <Color x:Key="SfColorPickerApplyButtonBackground">Blue</Color>
+                <Color x:Key="SfColorPickerCancelButtonBackground">Orange</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+
+....
+
+</Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+        </tr>
+    <tr>
+        <td>
+            SfColorPickerPopupBackground
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the Color Picker popup.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfColorPickerApplyButtonBackground  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the apply button.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfColorPickerApplyButtonTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the apply button.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfColorPickerCancelButtonBackground  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the cancel button.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfColorPickerCancelButtonTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the cancel button.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfColorPickerSpectrumInputViewTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the Spectrum's input view.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfColorPickerInputBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Border color of the Color Picker's input.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfColorPickerInputBorderFocusedColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Border color of the Color Picker's input when it is in a focused state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfColorPickerSliderThumbFill
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the slider thumb within the Color Picker.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfColorPickerSliderThumbStroke
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Stroke color of the slider thumb.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfColorPickerSpectrumSelectionIndicatorStroke
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Stroke color of the spectrum selection indicator.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfColorPickerModeSwitcherGradientBackground
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the mode switcher.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfColorPickerPaletteSelectionStroke 
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Stroke color for the palette selection.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfColorPickerRecentColorsLabelColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the label for recent colors.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfColorPickerCustomColorsLabelColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the label for custom colors.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfColorPickerAlphaSliderBackground  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the alpha (transparency) slider.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfColorPickerDisplayViewBorderStroke  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Border color for the display view.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfColorPickerDropDownIconColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the dropdown icon.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfColorPickerDisplayViewBackground  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color for the display view.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfColorPickerCancelButtonHovered  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the cancel button when hovered.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfColorPickerApplyButtonHovered  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the apply button when hovered.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfColorPickerApplyButtonPressed  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the apply button when pressed.
+            <br/>
+            <br/>
         </td>
     </tr>
 </table>
@@ -3578,7 +3931,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfComboBox background in focus state.
+            Color of the SfComboBox background in focused state.
             <br/>
             <br/>
         </td>
@@ -3590,7 +3943,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfComboBox stroke in focus state.
+            Color of the SfComboBox stroke in focused state.
             <br/>
             <br/>
         </td>
@@ -3602,7 +3955,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfComboBox dropdown icon in focus state.
+            Color of the SfComboBox dropdown icon in focused state.
             <br/>
             <br/>
         </td>
@@ -3614,7 +3967,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the clear button icon in focus state.
+            Color of the clear button icon in focused state.
             <br/>
             <br/>
         </td>
@@ -3626,7 +3979,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the clear button icon in disable state.
+            Color of the clear button icon in disabled state.
             <br/>
             <br/>
         </td>
@@ -3638,7 +3991,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfComboBox background in disable state.
+            Color of the SfComboBox background in disabled state.
             <br/>
             <br/>
         </td>
@@ -3650,7 +4003,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfComboBox stroke in disable state.
+            Color of the SfComboBox stroke in disabled state.
             <br/>
             <br/>
         </td>
@@ -3662,7 +4015,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfComboBox text in disable state.
+            Color of the SfComboBox text in disabled state.
             <br/>
             <br/>
         </td>
@@ -3674,7 +4027,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfComboBox dropdown icon in disable state.
+            Color of the SfComboBox dropdown icon in disabled state.
             <br/>
             <br/>
         </td>
@@ -3686,7 +4039,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfComboBox placeholder text in disable state.
+            Color of the SfComboBox placeholder text in disabled state.
             <br/>
             <br/>
         </td>
@@ -3698,7 +4051,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfComboBox background in hover state.
+            Color of the SfComboBox background in hovered state.
             <br/>
             <br/>
         </td>
@@ -3710,7 +4063,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfComboBox stroke in hover state.
+            Color of the SfComboBox stroke in hovered state.
             <br/>
             <br/>
         </td>
@@ -3722,7 +4075,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfComboBox text in hover state.
+            Color of the SfComboBox text in hovered state.
             <br/>
             <br/>
         </td>
@@ -3807,7 +4160,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Background color of dataform.
+            Background color of the dataform.
             <br/>
             <br/>
         </td>
@@ -3820,7 +4173,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Background color of dataform editors.
+            Background color of the dataform editors.
             <br/>
             <br/>
         </td>
@@ -4015,7 +4368,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Font size of editor text in dataform.
+            Font size of editor text in the dataform.
             <br/>
             <br/>
         </td>
@@ -4028,7 +4381,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Font size of label in dataform.     
+            Font size of label in the dataform.     
             <br/>
             <br/>
         </td>
@@ -4041,7 +4394,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Font size of error label's in dataform. 
+            Font size of error label's in the dataform. 
             <br/>
             <br/>
         </td>
@@ -4054,7 +4407,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Font size of valid message label's in dataform.
+            Font size of valid message label's in the dataform.
             <br/>
             <br/>
         </td>
@@ -4067,7 +4420,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Font size of group header text in dataform.
+            Font size of group header text in the dataform.
             <br/>
             <br/>
         </td>
@@ -4982,7 +5335,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
     <tr>
         <td> SfExpanderHoverHeaderBackground  <br/><br/></td> 
-        <td> Background color of header when it is in hover state.<br/><br/></td>
+        <td> Background color of header when it is in hovered state.<br/><br/></td>
     </tr>
     <tr>
         <td> SfExpanderHeaderRippleBackground <br/><br/></td> 
@@ -4994,7 +5347,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
     <tr>
         <td> SfExpanderHoverHeaderIconColor  <br/><br/></td> 
-        <td> Color of header icon when it is in hover state.<br/><br/></td>
+        <td> Color of header icon when it is in hovered state.<br/><br/></td>
     </tr>
     <tr>
         <td> SfExpanderPressedHeaderIconColor <br/><br/></td> 
@@ -5271,7 +5624,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Background Color of tooltip in Image editor toolbar    
+            Background Color of tooltip in Image editor toolbar.   
             <br/>
             <br/>
         </td>
@@ -5284,7 +5637,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of tooltip text in image editor     
+            Color of tooltip text in image editor.   
             <br/>
             <br/>
         </td>
@@ -5349,7 +5702,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of tool bar icons divider line.     
+            Color of the tool bar icons divider line.     
             <br/>
             <br/>
         </td>
@@ -5362,7 +5715,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Font size of toolbar text in image editor.    
+            Font size of the toolbar text in image editor.    
             <br/>
             <br/>
         </td>
@@ -5375,7 +5728,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Font size of tooltip text in image editor      
+            Font size of the tooltip text in image editor      
             <br/>
             <br/>
         </td>
@@ -5637,7 +5990,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the progress in linear progress bar.
+            Color of the progress in the linear progress bar.
         <br/>
         <br/>
         </td>
@@ -5649,7 +6002,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the secondary progress in linear progress bar.
+            Color of the secondary progress in the linear progress bar.
         <br/>
         <br/>
         </td>
@@ -5728,15 +6081,15 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
     <tr>
         <td> SfListViewNormalListViewItemBackground <br/><br/></td>
-        <td> Background color of ListViewItem. <br/><br/></td>
+        <td> Background color of the ListViewItem. <br/><br/></td>
     </tr>
     <tr>
         <td> SfListViewHoverListViewItemBackground <br/><br/></td>
-        <td> Background color of ListViewItem when it is in hover state.<br/><br/></td>
+        <td> Background color of the ListViewItem when it is in hovered state.<br/><br/></td>
     </tr>
     <tr>
         <td> SfListViewFocusedListViewItemBackground <br/><br/></td>
-        <td> Background color of ListViewItem when it is in focused state.<br/><br/></td>
+        <td> Background color of the ListViewItem when it is in focused state.<br/><br/></td>
     </tr>
     <tr>
         <td> SfListViewFocusedListViewItemStroke <br/><br/></td> 
@@ -5911,7 +6264,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Background Color of tooltip in maps.   
+            Background color of tooltip in maps.   
             <br/>
             <br/>
         </td>
@@ -5924,7 +6277,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of tooltip text in maps.  
+            Color of tooltip text in maps.
             <br/>
             <br/>
         </td>
@@ -6332,7 +6685,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfMaskedEntry text in disable state.
+            Color of the SfMaskedEntry text in the disabled state.
             <br/>
             <br/>
         </td>
@@ -6344,7 +6697,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfMaskedEntry background in disable state.
+            Color of the SfMaskedEntry background in the disabled state.
             <br/>
             <br/>
         </td>
@@ -6356,7 +6709,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfMaskedEntry stroke in disable state.
+            Color of the SfMaskedEntry stroke in the disabled state.
             <br/>
             <br/>
         </td>
@@ -6368,7 +6721,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfMaskedEntry text in hover state.
+            Color of the SfMaskedEntry text in hovered state.
             <br/>
             <br/>
         </td>
@@ -6380,7 +6733,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfMaskedEntry background in hover state.
+            Color of the SfMaskedEntry background in hovered state.
             <br/>
             <br/>
         </td>
@@ -6392,7 +6745,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfMaskedEntry stroke in hover state.
+            Color of the SfMaskedEntry stroke in hovered state.
             <br/>
             <br/>
         </td>
@@ -6404,7 +6757,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfMaskedEntry text in focus state.
+            Color of the SfMaskedEntry text in focused state.
             <br/>
             <br/>
         </td>
@@ -6416,7 +6769,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfMaskedEntry background in focus state.
+            Color of the SfMaskedEntry background in focused state.
             <br/>
             <br/>
         </td>
@@ -6428,7 +6781,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfMaskedEntry stroke in focus state.
+            Color of the SfMaskedEntry stroke in focused state.
             <br/>
             <br/>
         </td>
@@ -6614,7 +6967,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfNumericEntry text in disable state.
+            Color of the SfNumericEntry text in disabled state.
             <br/>
             <br/>
         </td>
@@ -6626,7 +6979,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfNumericEntry background in disable state.
+            Color of the SfNumericEntry background in disabled state.
             <br/>
             <br/>
         </td>
@@ -6638,7 +6991,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfNumericEntry clear button in disable state.
+            Color of the SfNumericEntry clear button in disabled state.
             <br/>
             <br/>
         </td>
@@ -6650,7 +7003,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfNumericEntry stroke in disable state.
+            Color of the SfNumericEntry stroke in disabled state.
             <br/>
             <br/>
         </td>
@@ -6662,7 +7015,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfNumericEntry arrow in disable state.
+            Color of the SfNumericEntry arrow in disabled state.
             <br/>
             <br/>
         </td>
@@ -6674,7 +7027,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfNumericEntry text in hover state.
+            Color of the SfNumericEntry text in hovered state.
             <br/>
             <br/>
         </td>
@@ -6686,7 +7039,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfNumericEntry background in hover state.
+            Color of the SfNumericEntry background in hovered state.
             <br/>
             <br/>
         </td>
@@ -6698,7 +7051,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfNumericEntry stroke in hover state.
+            Color of the SfNumericEntry stroke in hovered state.
             <br/>
             <br/>
         </td>
@@ -6722,7 +7075,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfNumericEntry arrow in hover state.
+            Color of the SfNumericEntry arrow in hovered state.
             <br/>
             <br/>
         </td>
@@ -6734,7 +7087,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfNumericEntry text in focus state.
+            Color of the SfNumericEntry text in focused state.
             <br/>
             <br/>
         </td>
@@ -6746,7 +7099,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfNumericEntry background in focus state.
+            Color of the SfNumericEntry background in focused state.
             <br/>
             <br/>
         </td>
@@ -6758,7 +7111,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfNumericEntry stroke in focus state.
+            Color of the SfNumericEntry stroke in focused state.
             <br/>
             <br/>
         </td>
@@ -8524,7 +8877,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td> 
         <td>
-            Hovering Background color of the signature pad's 'Close' button in the SfPdfViewer.
+            Hovering background color of the signature pad's 'Close' button in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8536,7 +8889,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td> 
         <td>
-            Pressed Background color of the signature pad's 'Close' button in the SfPdfViewer.
+            Pressed background color of the signature pad's 'Close' button in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8560,7 +8913,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td> 
         <td>
-            Text color of the signature pad's 'Crete' button in the SfPdfViewer.
+            Text color of the signature pad's 'Create' button in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -9160,7 +9513,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td> 
         <td>
-            Color of the page navigation dialog entry's normal state in the SfPdfViewer. 
+            Color of the page navigation dialog entry's normal state in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -11053,7 +11406,7 @@ This page lists the keys for each control and the element to which it is mapped 
     </tr>
     <tr>
         <td> SfPopupHoverCloseButtonIconBackground <br/><br/></td> 
-        <td> Color of the close button icon when it is in hover state.<br/><br/></td>
+        <td> Color of the close button icon when it is in hovered state.<br/><br/></td>
     </tr>
     <tr>
         <td> SfPopupPressedCloseButtonIconBackground <br/><br/></td> 
@@ -11294,7 +11647,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the unchecked SfRadioButton in hover state.
+            Color of the unchecked SfRadioButton in hovered state.
             <br/>
             <br/>
         </td>
@@ -11306,7 +11659,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the checked SfRadioButton in hover state.
+            Color of the checked SfRadioButton in hovered state.
             <br/>
             <br/>
         </td>
@@ -11318,7 +11671,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfRadioButton text in hover state.
+            Color of the SfRadioButton text in hovered state.
             <br/>
             <br/>
         </td>
@@ -11366,7 +11719,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the unchecked SfRadioButton in disable state.
+            Color of the unchecked SfRadioButton in disabled state.
             <br/>
             <br/>
         </td>
@@ -11378,7 +11731,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the checked SfRadioButton in disable state.
+            Color of the checked SfRadioButton in disabled state.
             <br/>
             <br/>
         </td>
@@ -11390,7 +11743,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfRadioButton text in disable state.
+            Color of the SfRadioButton text in disabled state.
             <br/>
             <br/>
         </td>
@@ -11460,7 +11813,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of axis label text in radial gauge.
+            Color of axis label text in the radial gauge.
             <br/>
             <br/>
         </td>
@@ -11472,7 +11825,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of axis line fill in radial gauge.
+            Color of axis line fill in the radial gauge.
             <br/>
             <br/>
         </td>
@@ -11887,7 +12240,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the rated portion of a SfRating in disable state.
+            Color of the rated portion of a SfRating in disabled state.
             <br/>
             <br/>
         </td>
@@ -11899,7 +12252,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the rated portion of a SfRating stroke in disable state.
+            Color of the rated portion of a SfRating stroke in disabled state.
             <br/>
             <br/>
         </td>
@@ -11911,7 +12264,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the rated portion of a SfRating in hover state.
+            Color of the rated portion of a SfRating in hovered state.
             <br/>
             <br/>
         </td>
@@ -11923,7 +12276,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the rated portion of a SfRating stroke in hover state.
+            Color of the rated portion of a SfRating stroke in hovered state.
             <br/>
             <br/>
         </td>
@@ -11959,7 +12312,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the unrated portion of a SfRating in disable state.
+            Color of the unrated portion of a SfRating in disabled state.
             <br/>
             <br/>
         </td>
@@ -11971,7 +12324,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the unrated portion of a SfRating stroke in disable state.
+            Color of the unrated portion of a SfRating stroke in disabled state.
             <br/>
             <br/>
         </td>
@@ -11983,7 +12336,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the unrated portion of a SfRating in hover state.
+            Color of the unrated portion of a SfRating in hovered state.
             <br/>
             <br/>
         </td>
@@ -11995,7 +12348,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the unrated portion of a SfRating stroke in hover state.
+            Color of the unrated portion of a SfRating stroke in hovered state.
             <br/>
             <br/>
         </td>
@@ -12198,7 +12551,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of scheduler cells when it is hovered
+            Color of scheduler cells when it is hovered.
             <br/>
             <br/>
         </td>
@@ -12328,7 +12681,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Disabled color of date text.     
+            Disabled color of date text.
             <br/>
             <br/>
         </td>
@@ -12341,7 +12694,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Background Color of appointment layout in day, week and work week view.    
+            Background color of appointment layout in day, week and work week view.  
             <br/>
             <br/>
         </td>
@@ -12354,7 +12707,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Background Color of week number in scheduler.      
+            Background color of week number in scheduler.      
             <br/>
             <br/>
         </td>
@@ -12380,7 +12733,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Background Color of header in scheduler.     
+            Background color of header in scheduler.     
             <br/>
             <br/>
         </td>
@@ -12406,7 +12759,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Background Color of view header.     
+            Background color of view header.
             <br/>
             <br/>
         </td>
@@ -12458,7 +12811,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-           Background Color of allowed view button.      
+           Background color of allowed view button.
             <br/>
             <br/>
         </td>
@@ -12470,7 +12823,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Background Color of allowed view more icon button when it is selected.      
+            Background color of allowed view more icon button when it is selected.   
             <br/>
             <br/>
         </td>
@@ -12666,7 +13019,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Background Color of segment when it is disabled. 
+            Background color of segment when it is disabled.
             <br/>
             <br/>
         </td>
@@ -12744,7 +13097,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Segmented controls border color when it is focused using the keyboard navigation keys.    
+            Segmented controls border color when it is focused using the keyboard navigation keys.
             <br/>
             <br/>
         </td>
@@ -12783,7 +13136,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Corner radius of segment in segmented control.      
+            Corner radius of segment in the segmented control.
             <br/>
             <br/>
         </td>
@@ -12796,7 +13149,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Font size of the segment item in segmented control.   
+            Font size of the segment item in the segmented control.
             <br/>
             <br/>
         </td>
@@ -12809,7 +13162,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Thickness of the border stroke in segmented control, when it is selected.     
+            Thickness of the border stroke in the segmented control, when it is selected.
             <br/>
             <br/>
         </td>
@@ -14856,7 +15209,7 @@ This page lists the keys for each control and the element to which it is mapped 
          </tr>
     <tr>
         <td>SfSunburstChartBackground<br/><br/></td>
-        <td>Background color of sunburst chart<br/><br/></td>
+        <td>Background color of the sunburst chart<br/><br/></td>
     </tr>
     <tr>
         <td>SfSunburstChartTooltipBackground<br/><br/></td>
@@ -15467,7 +15820,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            TextColor of the active filled SfTabView in focus state.
+            TextColor of the active filled SfTabView in focused state.
             <br/>
             <br/>
         </td>
@@ -15479,7 +15832,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            BackgroundColor of the active filled SfTabView in focus state.
+            BackgroundColor of the active filled SfTabView in focused state.
             <br/>
             <br/>
         </td>
@@ -15656,7 +16009,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfTextInputLayout background in focus state.
+            Color of the SfTextInputLayout background in focused state.
             <br/>
             <br/>
         </td>
@@ -15680,7 +16033,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfTextInputLayout background in disable state.
+            Color of the SfTextInputLayout background in disabled state.
             <br/>
             <br/>
         </td>
@@ -15692,7 +16045,7 @@ This page lists the keys for each control and the element to which it is mapped 
             <br/>
         </td>
         <td>
-            Color of the SfTextInputLayout stroke in disable state.
+            Color of the SfTextInputLayout stroke in disabled state.
             <br/>
             <br/>
         </td>
@@ -16834,4 +17187,4 @@ This page lists the keys for each control and the element to which it is mapped 
         <td> SfTreeViewNormalLoadMoreIndicatorColor <br/><br/></td> 
         <td> Color of the load more indicator.<br/><br/></td>
     </tr>
-</table> 
+</table>

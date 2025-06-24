@@ -17,7 +17,7 @@ This section walks you through the loading and unloading of documents in [SfPdfV
 
 The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) displays a built-in [ActivityIndicator](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/activityindicator) (loading indicator) under the following scenarios to indicate if there are any lengthy loadings.
 
-1.	`At the document` – To indicate that the document is loading
+1.	`At the document` – To indicate that the document is loading.
 2.	`At the pages` – To indicate that the page content is loading.
 
 To customize the appearance of the loading indicators, please refer to this [section](https://help.syncfusion.com/maui/pdf-viewer/ui-customization#customize-the-loading-indicator).
@@ -26,7 +26,7 @@ To customize the appearance of the loading indicators, please refer to this [sec
 
 The document source types accepted by the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) are `Stream` and `byte[]`. You can load the PDF document from a specified stream or bytes.
 
-**Load the document from stream** 
+**Load the document from the stream** 
 
 {% tabs %}
 {% highlight c# %}
@@ -40,7 +40,7 @@ PdfViewer.DocumentSource = pdfDocumentStream;
 
 {% tabs %}
 {% highlight c# %}
-// Load the document from Byte array
+// Load the document from a Byte array
 HttpClient httpClient = new HttpClient();
 HttpResponseMessage response = await httpClient.GetAsync("https://www.syncfusion.com/downloads/support/directtrac/general/pd/PDF_Succinctly1928776572");
 PdfViewer.DocumentSource = await response.Content.ReadAsByteArrayAsync();
@@ -70,7 +70,7 @@ The .NET MAUI PDF Viewer does not currently support annotations comparable to Xa
 
         Stream pdfDocumentStream = typeof(App).GetTypeInfo().Assembly.GetManifestResourceStream("GettingStarted.Assets.PDF_Succinctly.pdf");
         FlattenOptions flattenOption = FlattenOptions.Unsupported;
-        // Loads the PDF document from the stream with flatten option to render unsupported annotations.
+        // Loads the PDF document from the stream with the flatten option to render unsupported annotations.
         PdfViewer.LoadDocument(pdfDocumentStream, flattenOptions: flattenOption);
 
 {% endhighlight %}
@@ -82,5 +82,5 @@ N> * Refer to this [section](https://help.syncfusion.com/maui/pdf-viewer/migrati
 ## Check other PDF opening options
 
 * [Open a document from local storage](https://help.syncfusion.com/maui/pdf-viewer/open-a-document-from-local-storage)
-* [Open a document from URL](https://help.syncfusion.com/maui/pdf-viewer/open-a-document-from-url)
+* [Open a document from a URL](https://help.syncfusion.com/maui/pdf-viewer/open-a-document-from-url)
 * [Open a password-protected document](https://help.syncfusion.com/maui/pdf-viewer/open-a-password-protected-document)
