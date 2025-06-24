@@ -81,7 +81,7 @@ By defining the `SfTreeView.DragItemTemplate` property of the `SfTreeView`, a cu
     </treeView:SfTreeView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# hl_lines="4"%}
+{% highlight c# hl_lines="4" %}
 var treeView = new SfTreeView();
 treeView.AllowDragging = true;
 treeView.SetBinding(SfTreeView.ItemsSourceProperty, new Binding("Folders"));
