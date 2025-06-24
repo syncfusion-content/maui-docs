@@ -11,7 +11,7 @@ documentation: ug
 
 The [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html) for .NET MAUI provides an optimal way to scroll any control that implements the [IParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.IParallaxView.html) interface with a background element that translates more slowly than the foreground element. The SfParallaxView control binds the scroll position of a foreground element (such as a list) to a background element and moves the background element at a varying speed.
 
-## Key Features
+## Key features
 
 * Customize the speed of the parallax scroll effect
 * Support for both horizontal and vertical orientations
