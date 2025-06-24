@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance Customization of .NET MAUI Segmented Control (SfSegmentedControl) | Syncfusion<sup>&reg;</sup>
+title: Appearance Customization of .NET MAUI Segmented Control (SfSegmentedControl) | Syncfusion
 description: Learn about the appearance customization of Syncfusion<sup>&reg;</sup> .NET MAUI Segmented Control (SfSegmentedControl).
 platform: maui
 control: Segmented (SfSegmented) control

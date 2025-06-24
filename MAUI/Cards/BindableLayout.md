@@ -1,6 +1,6 @@
 ---
 layout: post
-title: BindableLayout in MAUI Cards control | Syncfusion<sup>&reg;</sup>
+title: BindableLayout in MAUI Cards control | Syncfusion
 description: Learn about BindableLayout support in Syncfusion<sup>&reg;</sup> Essential Studio<sup>&reg;</sup> MAUI Cards control, its elements and more.
 platform: MAUI
 control: Cards
