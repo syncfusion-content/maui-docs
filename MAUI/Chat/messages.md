@@ -1046,8 +1046,7 @@ namespace MauiChat
 {% endtabs %}
 
 ### Handling Message Delivery States
-The `DeliveryState` property sets the current delivery status of a specific message.
-The `SfChat` control provides the following delivery states:
+The `DeliveryState` property sets the current delivery status of a specific message. The `SfChat` control provides the following delivery states:
 
 - `None` - No delivery indicator is shown. This is the default value.
 - `Sent` - Message has been sent from the current user.
@@ -1155,8 +1154,7 @@ public class ViewModel : INotifyPropertyChanged
 ![DeliveryState in .NET MAUI Chat](Images/messages/maui-chat-delivery-state.gif)
 
 ### Customizing Delivery State Icons
-The `SfChat` control allows assigning custom icon values for each Delivery State.
-The following API is used to define the icon for each delivery state.
+The `SfChat` control allows assigning custom icon values for each Delivery State. The following API is used to define the icon for each delivery state.
 - `SentIcon` - Sets a custom image for the sent state indicator.
 - `DeliveredIcon` - Sets a custom image for the delivered state indicator.
 - `ReadIcon` - Sets a custom image for the read state indicator.

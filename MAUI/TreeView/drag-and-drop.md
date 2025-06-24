@@ -18,7 +18,7 @@ The [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.Sf
                          AllowDragging="True" />
 </ContentPage>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# hl_lines="2" %}
 var treeView = new SfTreeView();
 treeView.AllowDragging = true;
 treeView.SetBinding(SfTreeView.ItemsSourceProperty, new Binding("Folders"));
@@ -81,7 +81,7 @@ By defining the `SfTreeView.DragItemTemplate` property of the `SfTreeView`, a cu
     </treeView:SfTreeView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# hl_lines="4" %}
 var treeView = new SfTreeView();
 treeView.AllowDragging = true;
 treeView.SetBinding(SfTreeView.ItemsSourceProperty, new Binding("Folders"));
@@ -148,12 +148,12 @@ N> View sample in [GitHub](https://github.com/SyncfusionExamples/how-to-customiz
 
 The `ItemDragging` event is raised while dragging and dropping the item in the `SfTreeView`. The `ItemDraggingEventArgs` has the following members which provide the information for the ItemDragging event:
 
-`Action`: Returns the drag `Action` such as start, dragging, dropping and drop.
-`Handled`: If this member is set to true, dragging can be handled. It is applicable only if Action is `Dragging`.
-`Cancel` : If this member is set to true, the drag and drop operation will be canceled.
-`DraggingNode`: Returns the `DraggingNodes`.
-`DropPosition`: Returns the position where dragged nodes are going to be dropped.
-`Position`: Returns the touch position of the drag item from the screen coordinates.
+* `Action`: Returns the drag `Action` such as start, dragging, dropping and drop.
+* `Handled`: If this member is set to true, dragging can be handled. It is applicable only if Action is `Dragging`.
+* `Cancel` : If this member is set to true, the drag and drop operation will be canceled.
+* `DraggingNode`: Returns the `DraggingNodes`.
+* `DropPosition`: Returns the position where dragged nodes are going to be dropped.
+* `Position`: Returns the touch position of the drag item from the screen coordinates.
 
 ## Auto scroll options
 
@@ -166,7 +166,7 @@ To adjust the auto-scroll margin in `SfTreeView`, set the `ScrollMargin` propert
 N> To disable auto-scrolling, set the `ScrollMargin` to `0`.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# hl_lines="3" %}
 var treeView = new SfTreeView();
 treeView.AllowDragging = true;
 treeView.AutoScroller.ScrollMargin = 20;
@@ -180,7 +180,7 @@ treeView.AutoScroller.ScrollMargin = 20;
 Adjust the auto-scroll interval during dragging by setting the `Interval` property of the `AutoScroller`. The default interval is `150 milliseconds`.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# hl_lines="3" %}
 var treeView = new SfTreeView();
 treeView.AllowDragging = true;
 treeView.AutoScroller.Interval = new TimeSpan(0, 0, 0, 0, 200);
@@ -192,7 +192,7 @@ treeView.AutoScroller.Interval = new TimeSpan(0, 0, 0, 0, 200);
 To prevent auto-scrolling when the dragged item is moved outside the `SfTreeView` during a drag, set the `AllowOutsideScroll` property of the `AutoScroller` to `false`. The default value is `true`.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# hl_lines="3" %}
 var treeView = new SfTreeView();
 treeView.AllowDragging = true;
 treeView.AutoScroller.AllowOutsideScroll = false;
@@ -206,7 +206,7 @@ treeView.AutoScroller.AllowOutsideScroll = false;
 To enable auto-expanding of nodes when dragging items over them, set the `CanAutoExpand` property to `true`. The default value is `false`.
 
 {% tabs %}
-{% highlight xaml hl_lines="5" %}
+{% highlight xaml hl_lines="6" %}
 <ContentPage xmlns:treeView="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
   <treeView:SfTreeView x:Name="treeView" 
                        ItemsSource="{Binding Folders}"
@@ -217,7 +217,7 @@ To enable auto-expanding of nodes when dragging items over them, set the `CanAut
    </treeView:SfTreeView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# hl_lines="4" %}
 var treeView = new SfTreeView();
 treeView.AllowDragging = true;
 treeView.SetBinding(SfTreeView.ItemsSourceProperty, new Binding("Folders"));
@@ -232,7 +232,7 @@ treeView.DragAndDropController.CanAutoExpand = true;
 To set the delay for auto-expanding nodes, use the `AutoExpandDelay` property. The default value is `3 seconds`.
 
 {% tabs %}
-{% highlight xaml hl_lines="5" %}
+{% highlight xaml hl_lines="6" %}
 <ContentPage xmlns:treeView="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
   <treeView:SfTreeView x:Name="treeView" 
                        ItemsSource="{Binding Folders}"
@@ -243,7 +243,7 @@ To set the delay for auto-expanding nodes, use the `AutoExpandDelay` property. T
    </treeView:SfTreeView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# hl_lines="5" %}
 var treeView = new SfTreeView();
 treeView.AllowDragging = true;
 treeView.SetBinding(SfTreeView.ItemsSourceProperty, new Binding("Folders"));
@@ -259,7 +259,7 @@ To disable dragging for a particular item, handle the `ItemDragging` event based
 You can cancel the dragging action for a particular item by setting the `Cancel` property of the `ItemDraggingEventArgs`.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# hl_lines="8" %}
 private void TreeView_ItemDragging(object sender, ItemDraggingEventArgs e)
 {
     if (e.Action == DragAction.Start)
@@ -281,7 +281,7 @@ To cancel dropping for the dragged item, handle the `ItemDragging` event based o
 You can cancel the dropping action for an item by setting the `Cancel` property of the `ItemDraggingEventArgs`.
 
 {% tabs %}
-{% highlight c# %}
+{% highlight c# hl_lines="8" %}
 private void TreeView_ItemDragging(object sender, ItemDraggingEventArgs e)
 {
    if (e.Action == DragAction.Dropping)
