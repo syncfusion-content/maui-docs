@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data Editors in .NET MAUI DataForm(SfDataForm) control | Syncfusion<sup>&reg;</sup>
+title: Data Editors in .NET MAUI DataForm(SfDataForm) control | Syncfusion
 description: Learn about the supported data editors in Syncfusion<sup>&reg;</sup> .NET MAUI DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
 platform: maui
 control: SfDataForm
