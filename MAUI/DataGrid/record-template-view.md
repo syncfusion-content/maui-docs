@@ -220,7 +220,6 @@ public class DetailsViewTemplateSelector : DataTemplateSelector
 ### Height mode
 
 You can customize height of the row that contains `RowTemplate` by using the [TemplateViewDefinition.HeightMode]() property. The height modes are as follows.
-
 <table>
 <tr>
 <th>
@@ -258,7 +257,7 @@ Arranges template for the <code>ViewPortHeight</code> when the {{`RowTemplate`'|
 
 ## Populating record template view using events
 
-You can set the [RowTemplate]() on-demand when expanding the record by using the [GridDetailsViewExpandingEventArgs.RowTemplate]() property in [SfDataGrid.DetailsViewExpanding]() event handler.
+You can set the `RowTemplate` on-demand when expanding the record by using the [GridDetailsViewExpandingEventArgs.RowTemplate]() property in [SfDataGrid.DetailsViewExpanding]() event handler.
 
 {% tabs %}
 {% highlight xaml %}
