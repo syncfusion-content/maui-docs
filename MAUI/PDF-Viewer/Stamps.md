@@ -79,39 +79,6 @@ The following image represents the approved standard stamp appearance in the PDF
 
 ![Standard Approved Stamp.](Images/Annotations/approved-stamp.png)
 
-### Add custom stamps without using toolbar
-
-You can create a custom stamp from any image and add it to a PDF document. The following example explains how to create a custom stamp from an image in the application and add it to a PDF document using the [AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
-
-{% tabs %}
-{% highlight C# %}
-StampAnnotation CreateCustomStamp()
-{
-    int pageNumber = 1;
-
-    // Define the position and size for the stamp to be placed on the PDF page.
-    RectF bounds = new RectF(50, 50, 200, 100);
-
-    // Create an image stream from the image to be used as a stamp.
-    Stream imageStream = this.GetType().Assembly.GetManifestResourceStream("Annotations.Assets." + "Logo.png");
-
-    // Create a custom stamp annotation using the image stream.
-    StampAnnotation customStamp = new StampAnnotation(imageStream,pageNumber,bounds);
-
-    // Return the stamp annotation.
-    return customStamp;
-}
-
-void AddCustomStampAnnotation()
-{
-    StampAnnotation stampAnnotation = CreateCustomStamp();
-
-    // Add the stamp to the PDF document using the `SfPdfViewer` instance.
-    PdfViewer.AddAnnotation(stampAnnotation);
-}
-{% endhighlight %}
-{% endtabs %}
-
 ### Add a view as custom stamps programmatically
 
 You can create a custom stamp from any view, such as Button, Entry, Label, Image, or any other view, and add it to a PDF document. The following example explains how to create a custom stamp from a button view in the application and add it to a PDF document using the [AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
