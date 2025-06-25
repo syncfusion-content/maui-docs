@@ -259,7 +259,7 @@ using (var file = File.Open(localPath, FileMode.Open))
 
 ### Deserialize stacked headers
 
-By default, SfDataGrid allows you to deserialize the stack headers. You can disable the stacked headers deserialization by setting the [DataGridDeserializationOptions.DeserializeStackedHeaders]() to false.
+By default, SfDataGrid allows you to deserialize the stacked headers. You can disable the stacked headers deserialization by setting the [DataGridDeserializationOptions.DeserializeStackedHeaders]() to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -275,7 +275,7 @@ using (var file = File.Open(localPath, FileMode.Open))
 
 ### Deserialize Details View
 
-By default, SfDataGrid allows you to deserialize the DetailsViewDefinition. You can disable the DetailsViewDefinition deserialization by setting the [DataGridDeserializationOptions.DeserializeDetailsViewDefinition]() to false.
+By default, SfDataGrid allows you to deserialize the DetailsViewDefinition. You can disable the DetailsViewDefinition deserialization by setting the [DataGridDeserializationOptions.DeserializeDetailsViewDefinition]() to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -291,7 +291,7 @@ using (var file = File.Open(localPath, FileMode.Open))
 
 ### Deserialize unbound rows
 
-By default, SfDataGrid allows you to deserialize the unbound rows settings. You can disable the unbound rows deserialization by setting the [DataGridDeserializationOptions.DeserializeUnBoundRows]() to false.
+By default, SfDataGrid allows you to deserialize the unbound rows settings. You can disable the unbound rows deserialization by setting the [DataGridDeserializationOptions.DeserializeUnBoundRows]() to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -311,9 +311,9 @@ SfDataGrid allows you to customize the serialization and deserialization operati
 
 ### Serialize custom column
 
-By default, the unknown(custom) column types are serialized as `DataGridTextColumn` type. If you want to serialize the custom column, you have to add custom column type into predefined types.
+By default, the unknown(custom) column types are serialized as [DataGridTextColumn](https://help.syncfusion.com/maui/datagrid/column-types#datagridtextcolumn) type. If you want to serialize the custom column, you have to add custom column type into predefined types.
 
-In the below code snippet, [TextImageColumn]() is created.
+In the below code snippet, `TextImageColumn` is created.
 
 {% tabs %}
 {% highlight c# %}
@@ -351,7 +351,7 @@ public class TextImageColumn : DataGridColumn
 {% endhighlight %}
 {% endtabs %}
 
-In the below code snippet, the [TextImageColumn]() is defined in SfDataGrid.
+In the below code snippet, the `TextImageColumn` is defined in SfDataGrid.
 
 {% tabs %}
 {% highlight xaml %}
@@ -368,7 +368,7 @@ In the below code snippet, the [TextImageColumn]() is defined in SfDataGrid.
 {% endhighlight %}
 {% endtabs %}
 
-To serialize the above [TextImageColumn](), follow the below steps.
+To serialize the above `TextImageColumn`, follow the below steps.
 
 1. Create a class derived from [SerializableDataGridColumn]() and define the custom column properties in `SerializableCustomGridColumn` class.
 
