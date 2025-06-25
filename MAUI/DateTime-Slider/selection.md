@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Value selection in .NET MAUI Slider control | Syncfusion®
-description: Learn here all about value selection of Syncfusion® .NET MAUI Slider (SfDateTimeSlider) control and more.
+title: Value Selection in .NET MAUI Slider Control | Syncfusion®
+description: Learn about value selection features in the Syncfusion® .NET MAUI Slider (SfDateTimeSlider) control.
 platform: maui
 control: SfDateTimeSlider
 documentation: ug
 ---
 
-# Value selection in .NET MAUI DateTime Slider (SfDateTimeSlider)
+# Value Selection in .NET MAUI DateTime Slider (SfDateTimeSlider)
 
-This section helps to learn about the value selection in the DateTime Slider.
+This section provides insight into value selection within the DateTime Slider.
 
-## Discrete selection
+## Discrete Selection
 
-Move the thumb in discrete manner for date values using the [`StepDuration`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_StepDuration) property in the slider.
+Use the [`StepDuration`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_StepDuration) property to move the thumb discretely for DateTime values.
 
-For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum) is DateTime(2015, 01, 01), the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum) is DateTime(2020, 01, 01), and [`StepDuration`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html#Syncfusion_Maui_Sliders_SfDateTimeSlider_StepDuration) is `1`,the slider will move the thumbs at DateTime(2015, 01, 01), DateTime(2016, 01, 01), DateTime(2017, 01, 01),and DateTime(2018, 01, 01).
+For example, with a [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum) of `DateTime(2015, 01, 01)`, a [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum) of `DateTime(2020, 01, 01)`, and a `StepDuration` of `1`, the slider will move the thumb to DateTime(2015, 01, 01), DateTime(2016, 01, 01), DateTime(2017, 01, 01), and DateTime(2018, 01, 01).
 
 {% tabs %}
 
@@ -52,11 +52,11 @@ SfDateTimeSlider slider = new SfDateTimeSlider()
 
 ![Slider date discrete mode](images/selection/step-duration.gif)
 
-## Deferred update
+## Deferred Update
 
-You can control when the dependent components are updated while thumbs are being dragged continuously. It can be achieved by setting the `EnableDeferredUpdate` property and the delay in the update can be achieved by setting the `DeferredUpdateDelay` property. The default value of the `DeferredUpdateDelay` property is `500` milliseconds.
+Control when dependent components are updated while thumbs are being dragged continuously by setting the `EnableDeferredUpdate` property. The delay in updates can be managed using the `DeferredUpdateDelay` property, which defaults to `500` milliseconds.
 
-It invokes the `ValueChanging` event when the thumb is dragged and held for the duration specified in the `DeferredUpdateDelay`. However, the values are immediately updated in touch-up action.
+The `ValueChanging` event is invoked when the thumb is held for the duration specified in `DeferredUpdateDelay`. However, values are immediately updated upon touch release.
 
 {% tabs %}
 

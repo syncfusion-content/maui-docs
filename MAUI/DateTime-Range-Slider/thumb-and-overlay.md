@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Thumb and Thumb Overlay in .NET MAUI Range Slider control | Syncfusion®
-description: Learn here all about the Thumb and Thumb Overlay features of Syncfusion® .NET MAUI Range Slider (SfDateTimeRangeSlider) control and more.
+title: Thumb and Thumb Overlay in .NET MAUI Range Slider Control | Syncfusion®
+description: Learn about the Thumb and Thumb Overlay features of the Syncfusion® .NET MAUI Range Slider (SfDateTimeRangeSlider) control.
 platform: maui
 control: SfDateTimeRangeSlider
 documentation: ug
@@ -9,14 +9,14 @@ documentation: ug
 
 # Thumb and Overlay in DateTime Range Slider (SfDateTimeRangeSlider)
 
-This section helps to learn about how to customize the thumb and thumb overlay in the DateTime Range Slider.
+This section explains how to customize the thumb and thumb overlay in the DateTime Range Slider.
 
-* Thumb - It is one of the slider elements that can be used to drag and change the selected value of the range slider.
-* Thumb overlay - It is rendered around the thumbs while interacting with them.
+- **Thumb**: A slider element that can be dragged to alter the selected range slider value.
+- **Thumb Overlay**: Renders around the thumbs during interaction.
 
-## Thumb size
+## Thumb Size
 
-Change the size of the thumb using the [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_Radius)  property of the [`ThumbStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html) class. The default value of the [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_Radius) property is `10.0`.
+Modify the thumb size using the [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_Radius) property of the [`ThumbStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html) class. The default `Radius` is `10.0`.
 
 {% tabs %}
 
@@ -50,9 +50,9 @@ rangeSlider.ThumbStyle.Radius = 15;
 
 ![RangeSlider thumb size](images/thumb-and-thumb-overlay/thumb-radius.png)
 
-## Thumb color
+## Thumb Color
 
-Change the color of the thumb using the [`Fill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_Fill) property of the [`ThumbStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html) class.
+Change the thumb color using the [`Fill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_Fill) property of the [`ThumbStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html) class.
 
 {% tabs %}
 
@@ -86,9 +86,9 @@ rangeSlider.ThumbStyle.Fill = new SolidColorBrush(Color.FromArgb("#EE3F3F"));
 
 ![RangeSlider thumb color](images/thumb-and-thumb-overlay/thumb-color.png)
 
-## Thumb stroke thickness and stroke
+## Thumb Stroke Thickness and Stroke Color
 
-Change the thumb stroke width using the [`StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_StrokeThickness) property and thumb stroke color using the [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_Stroke) property of the [`ThumbStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html) class.
+Adjust the thumb stroke width using the [`StrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_StrokeThickness) property and change the stroke color using the [`Stroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_Stroke) property.
 
 {% tabs %}
 
@@ -123,9 +123,9 @@ rangeSlider.ThumbStyle.StrokeThickness = 2;
 
 ![RangeSlider thumb stroke color](images/thumb-and-thumb-overlay/thumb-stroke-color.png)
 
-## Thumb overlapping stroke color
+## Thumb Overlapping Stroke Color
 
-Change the thumb stroke color while two thumbs overlap by using the [`OverlapStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_OverlapStroke) property of the [`ThumbStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html) class.
+Change the thumb stroke color when thumbs overlap using the [`OverlapStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbStyle.html#Syncfusion_Maui_Sliders_SliderThumbStyle_OverlapStroke) property.
 
 {% tabs %}
 
@@ -157,11 +157,11 @@ rangeSlider.ThumbStyle.OverlapStroke = new SolidColorBrush(Color.FromArgb("#EE3F
 
 {% endtabs %}
 
-![RangeSlider thumb stroke color](images/thumb-and-thumb-overlay/thumb-overlapstrokecolor.gif)
+![RangeSlider thumb overlap stroke color](images/thumb-and-thumb-overlay/thumb-overlapstrokecolor.gif)
 
-## Thumb overlay size
+## Thumb Overlay Size
 
-Change the size of the thumb overlay using the [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbOverlayStyle.html#Syncfusion_Maui_Sliders_SliderThumbOverlayStyle_Radius) property of the [`ThumbOverlayStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbOverlayStyle.html) class. The default value of the [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbOverlayStyle.html#Syncfusion_Maui_Sliders_SliderThumbOverlayStyle_Radius) property is `24.0`.
+Adjust the thumb overlay size using the [`Radius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbOverlayStyle.html#Syncfusion_Maui_Sliders_SliderThumbOverlayStyle_Radius) property of the [`ThumbOverlayStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbOverlayStyle.html) class. The default is `24.0`.
 
 {% tabs %}
 
@@ -195,9 +195,9 @@ rangeSlider.ThumbOverlayStyle.Radius = 18;
 
 ![RangeSlider thumb overlay size](images/thumb-and-thumb-overlay/thumb-overlay-radius.png)
 
-## Thumb overlay color
+## Thumb Overlay Color
 
-Change the color of the thumb overlay using the [`Fill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbOverlayStyle.html#Syncfusion_Maui_Sliders_SliderThumbOverlayStyle_Fill) property of the [`ThumbOverlayStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbOverlayStyle.html) class.
+Change the thumb overlay color using the [`Fill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderThumbOverlayStyle.html#Syncfusion_Maui_Sliders_SliderThumbOverlayStyle_Fill) property.
 
 {% tabs %}
 
@@ -231,10 +231,9 @@ rangeSlider.ThumbOverlayStyle.Fill = new SolidColorBrush(Color.FromArgb("#66FFD7
 
 ![RangeSlider thumb overlay color](images/thumb-and-thumb-overlay/thumb-overlay-color.png)
 
-## Disabled thumb
+## Disabled Thumb
 
-Change the state of the DateTime Range Slider to disabled by setting `false` to the `IsEnabled` property. Using the Visual State Manager (VSM), customize the range slider thumb properties based on the visual states. The applicable visual states are enabled(default) and disabled.
-
+To disable the DateTime Range Slider, set the `IsEnabled` property to `false`. Customize thumb properties for enabled and disabled states using the Visual State Manager (VSM).
 {% tabs %}
 
 {% highlight xaml %}
