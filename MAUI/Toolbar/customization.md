@@ -328,6 +328,9 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+![Toolbar-Item-SelectionHighlightColor](images/toolbaritem-selectionhighlightcolor.gif)
+
+
 ## Separator Item Customization
 
 The toolbar control supports customization of separator item using properties [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SeparatorToolbarItem.html#Syncfusion_Maui_Toolbar_SeparatorToolbarItem_Stroke) and [StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SeparatorToolbarItem.html#Syncfusion_Maui_Toolbar_SeparatorToolbarItem_StrokeThickness).
