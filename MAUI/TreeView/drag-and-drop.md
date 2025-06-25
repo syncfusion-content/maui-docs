@@ -7,7 +7,7 @@ control: SfTreeView
 documentation: ug
 ---
 
-# Drag and drop in .NET MAUI TreeView (SfTreeView)
+# Drag and Drop in .NET MAUI TreeView (SfTreeView)
 The [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html) allows drag and drop the items within the treeview control by setting the `AllowDragging` property as `true`. 
 
 {% tabs %}
