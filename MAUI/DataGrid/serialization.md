@@ -311,7 +311,7 @@ SfDataGrid allows you to customize the serialization and deserialization operati
 
 ### Serialize custom column
 
-By default, the unknown(custom) column types are serialized as [DataGridTextColumn](https://help.syncfusion.com/maui/datagrid/column-types#datagridtextcolumn) type. If you want to serialize the custom column, you have to add custom column type into predefined types.
+By default, the unknown(custom) column types are serialized as [DataGridTextColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTextColumn.html) type. If you want to serialize the custom column, you have to add custom column type into predefined types.
 
 In the below code snippet, `TextImageColumn` is created.
 
