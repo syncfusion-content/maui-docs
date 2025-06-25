@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customizations in .NET MAUI Calendar control | Syncfusion<sup>&reg;</sup>
+title: Customizations in .NET MAUI Calendar control | Syncfusion®
 description: Learn here all about Customizations features of Syncfusion<sup>&reg;</sup> .NET MAUI Calendar (SfCalendar) control and more. 
 platform: maui
 control: SfCalendar
@@ -609,7 +609,7 @@ You can customize the year cell appearance by using the [CellTemplate](https://h
                                          LeadingDateTemplate="{StaticResource leadingDateTemplate}"/>
     </Grid.Resources>
     <calendar:SfCalendar x:Name="calendar" 
-                        View="Decade" >
+                        View="Decade">
         <calendar:SfCalendar.YearView>
             <calendar:CalendarYearView CellTemplate="{StaticResource yearCellTemplateSelector}" />
         </calendar:SfCalendar.YearView>
@@ -649,3 +649,214 @@ this.calendar.View = CalendarView.Decade;
 {% endtabs %}
 
 ![Decade view template selector in .NET MAUI Calendar.](images/customization/net-maui-decade-view-cell-template-selector.png)
+
+## Selection cell appearance on month view using DataTemplate
+
+The `SfCalendar` provides the [SelectionCellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionCellTemplate) property to customize the appearance of selected date cells in the MonthView. This property is of type DataTemplate and allows you to define a custom layout specifically for the selected cell.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<calendar:SfCalendar View="Month" WidthRequest="350" HeightRequest="400" 
+                        SelectionCellTemplate="{Binding Template}">
+    <calendar:SfCalendar.BindingContext>
+        <local:SelectionCellTemplateView/>
+    </calendar:SfCalendar.BindingContext>
+</calendar:SfCalendar>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+internal class SelectionCellTemplateView
+{
+    private DataTemplate template;
+
+    public DataTemplate Template
+    {
+        get
+        {
+            return template;
+        }
+        set
+        {
+            template = value;
+        }
+    }
+
+    public SelectionCellTemplateView()
+    {
+        this.template = new DataTemplate(() =>
+        {
+            // Create a Grid with two columns
+            Grid grid = new Grid
+            {
+                RowDefinitions =
+            {
+                new RowDefinition { Height = GridLength.Star },
+                new RowDefinition { Height = GridLength.Star }
+            },
+                Padding = new Thickness(1),
+                VerticalOptions = LayoutOptions.Center,
+                HeightRequest = 40
+            };
+
+            // Create a Border with rounded corners
+            Border border = new Border
+            {
+                BackgroundColor = Color.FromArgb("#4285F4"),
+                Stroke = Colors.Transparent,
+                StrokeShape = new RoundRectangle
+                {
+                    CornerRadius = new CornerRadius(10)
+                }
+            };
+
+            // Create Label and bind to Date.Year
+            Label label = new Label
+            {
+                TextColor = Colors.White,
+                HorizontalTextAlignment = TextAlignment.Center,
+                VerticalTextAlignment = TextAlignment.Center,
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center
+            };
+            label.SetBinding(Label.TextProperty, "Date.Day");
+
+            // Create Image
+            Image image = new Image
+            {
+                Source = "tick_image2.png",
+                HeightRequest = 17,
+                WidthRequest = 17,
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center
+            };
+
+            // Add label and image to inner grid
+            grid.Add(label, 0, 0);
+            grid.Add(image, 0, 1);
+
+            // Set content of border
+            border.Content = grid;
+
+            // Add border to outer grid
+            //grid.Add(border);
+
+            return border;
+        });
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Month View Selection Cell Template in .NET MAUI Calendar.](images/customization/net-maui-month-view-selection-cell-template.gif)
+
+N>
+The `SelectionCellTemplate` is applicable only when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionMode) is set to Single. It is not applied in Multiple or Range selection modes. You can customize the selection cell appearance using `DataTemplateSelector`.
+
+## Selection cell appearance on year view using DataTemplate
+
+The `SfCalendar` provides the [SelectionCellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionCellTemplate) property to customize the appearance of selected date cells in the YearView. This property is of type DataTemplate and allows you to define a custom layout for the selected cells in the YearView.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<calendar:SfCalendar View="Decade" AllowViewNavigation="False" 
+                        WidthRequest="350" HeightRequest="400" 
+                        SelectionCellTemplate="{Binding Template}">
+    <calendar:SfCalendar.BindingContext>
+        <local:SelectionCellTemplateView/>
+    </calendar:SfCalendar.BindingContext>
+</calendar:SfCalendar>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+internal class SelectionCellTemplateView
+{
+    private DataTemplate template;
+
+    public DataTemplate Template
+    {
+        get
+        {
+            return template;
+        }
+        set
+        {
+            template = value;
+        }
+    }
+
+    public SelectionCellTemplateView()
+    {
+        this.template = new DataTemplate(() =>
+        {
+            // Create a Grid with two columns
+            Grid grid = new Grid
+            {
+                ColumnDefinitions =
+            {
+                new ColumnDefinition { Width = GridLength.Star },
+                new ColumnDefinition { Width = GridLength.Star }
+            },
+                Padding = new Thickness(1),
+                VerticalOptions = LayoutOptions.Center,
+                HeightRequest = 40
+            };
+
+            // Create a Border with rounded corners
+            Border border = new Border
+            {
+                BackgroundColor = Color.FromArgb("#4285F4"),
+                Stroke = Colors.Transparent,
+                StrokeShape = new RoundRectangle
+                {
+                    CornerRadius = new CornerRadius(10)
+                }
+            };
+
+            // Create Label and bind to Date.Year
+            Label label = new Label
+            {
+                TextColor = Colors.White,
+                HorizontalTextAlignment = TextAlignment.Center,
+                VerticalTextAlignment = TextAlignment.Center,
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center
+            };
+            label.SetBinding(Label.TextProperty, "Date.Year");
+
+            // Create Image
+            Image image = new Image
+            {
+                Source = "tick_image2.png",
+                HeightRequest = 17,
+                WidthRequest = 17,
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center
+            };
+
+            // Add label and image to inner grid
+            grid.Add(label, 0, 0);
+            grid.Add(image, 1, 0);
+
+            // Set content of border
+            border.Content = grid;
+
+            // Add border to outer grid
+            //grid.Add(border);
+
+            return border;
+        });
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Decade View Selection Cell Template in .NET MAUI Calendar.](images/customization/net-maui-decade-view-selection-cell-template.gif)
+
+N>
+The `SelectionCellTemplate` is applicable only when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_SelectionMode) is set to Single and [AllowViewNavigation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_AllowViewNavigation) is false. It is not applied in Multiple or Range selection modes. You can customize the selection cell appearance using `DataTemplateSelector`.

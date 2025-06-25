@@ -438,6 +438,8 @@ this.Content = grid;
 
 ![ChipGroup sample with display member path and itemsSource demo](images/getting-started/getting_started.png)
 
+N> When publishing in AOT mode on iOS, ensure [Preserve(AllMembers = true)] is added to the model class to maintain DisplayMemberPath binding
+
 ## Set types of chip group
 
 The functionality of chips control differ based on its [ChipType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_ChipType) property.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About Keys for Syncfusion® Controls | Syncfusion®
-description: This section provides details about the keys mapped to UI elements of all the controls.
+description: Explore the detailed mappings of the keys to the UI elements for all the controls in this comprehensive section.
 platform: MAUI
 control: General
 documentation: UG
@@ -2168,7 +2168,7 @@ This page lists the keys associated with each control and the respective UI elem
         </th>
     </tr>
     <tr>
-    <td rowspan="99">
+    <td rowspan="113">
             SfChatStyles
             <br/>
             <br/>
@@ -2474,6 +2474,23 @@ This page lists the keys associated with each control and the respective UI elem
     <tr>
         <td> SfChatCardButtonFontAttributes <br/><br/></td>
         <td> Font attributes of card button.<br/><br/></td>
+    </tr>
+    <!--DeliveryStates-->
+    <tr>
+        <td> SfChatDeliveryStateFailedIconColor <br/><br/></td>
+        <td> Color of the Delivery State None. <br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatDeliveryStateSentIconColor <br/><br/></td>
+        <td> Color of the Delivery State Sent. <br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatDeliveryStateDeliveredIconColor <br/><br/></td>
+        <td> Color of the Delivery State Delivered. <br/><br/></td>
+    </tr>
+    <tr>
+        <td> SfChatDeliveryStateReadIconColor <br/><br/></td>
+        <td> Color of the Delivery State Read. <br/><br/></td>
     </tr>
     <!--Message input view-->
     <tr>
@@ -3450,6 +3467,332 @@ This page lists the keys associated with each control and the respective UI elem
             Gradient stop color of the circular progress bar.
         <br/>
         <br/>
+        </td>
+    </tr>
+</table>
+
+## SfColorPicker
+
+<table>
+    <tr>
+        <th>Theme Dictionary<br/>
+            <br/></th>        
+        <th>
+          Keys
+            <br/>
+            <br/>
+        </th>
+        <th>
+            Description
+            <br/>
+            <br/>
+        </th>
+    </tr>
+
+    <tr>
+        <td rowspan="23">
+            SfColorPickerStyles  
+            <br/>
+            <br/>
+        </td>
+		<td>
+           SfColorPickerTheme 
+            <br/>
+            <br/>
+        </td>
+        <td>    
+            By merging this key into application resources, you can customize the appearance of SfColorPicker
+            without merging common theme resource and control style resource dictionaries.
+			
+{% highlight xaml %}
+
+<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             ...>
+ <Application.Resources>
+    <ResourceDictionary>
+        <ResourceDictionary.MergedDictionaries>
+            <syncTheme:SyncfusionThemeResourceDictionary />
+            <ResourceDictionary>
+                <x:String x:Key="SfColorPickerTheme">CommonTheme</x:String>
+                <Color x:Key="SfColorPickerPopupBackground">Pink</Color>
+                <Color x:Key="SfColorPickerApplyButtonBackground">Blue</Color>
+                <Color x:Key="SfColorPickerCancelButtonBackground">Orange</Color>
+            </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+ </Application.Resources>
+
+....
+
+</Application>
+
+{% endhighlight %}
+            <br/>
+            <br/>
+        </td>
+        </tr>
+    <tr>
+        <td>
+            SfColorPickerPopupBackground
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the Color Picker popup.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfColorPickerApplyButtonBackground  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the apply button.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfColorPickerApplyButtonTextColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the apply button.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfColorPickerCancelButtonBackground  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the cancel button.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfColorPickerCancelButtonTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the cancel button.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfColorPickerSpectrumInputViewTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the Spectrum's input view.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfColorPickerInputBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Border color of the Color Picker's input.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfColorPickerInputBorderFocusedColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Border color of the Color Picker's input when it is in a focused state.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfColorPickerSliderThumbFill
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the slider thumb within the Color Picker.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfColorPickerSliderThumbStroke
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Stroke color of the slider thumb.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfColorPickerSpectrumSelectionIndicatorStroke
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Stroke color of the spectrum selection indicator.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfColorPickerModeSwitcherGradientBackground
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the mode switcher.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfColorPickerPaletteSelectionStroke 
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Stroke color for the palette selection.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+            SfColorPickerRecentColorsLabelColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the label for recent colors.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfColorPickerCustomColorsLabelColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the label for custom colors.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfColorPickerAlphaSliderBackground  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the alpha (transparency) slider.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfColorPickerDisplayViewBorderStroke  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Border color for the display view.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfColorPickerDropDownIconColor  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the dropdown icon.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfColorPickerDisplayViewBackground  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color for the display view.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfColorPickerCancelButtonHovered  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the cancel button when hovered.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfColorPickerApplyButtonHovered  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the apply button when hovered.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            SfColorPickerApplyButtonPressed  
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Color of the apply button when pressed.
+            <br/>
+            <br/>
         </td>
     </tr>
 </table>
