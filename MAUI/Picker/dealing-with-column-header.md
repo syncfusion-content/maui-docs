@@ -117,3 +117,80 @@ The .NET MAUI Picker control, Separator line background customized by setting `S
 {% endtabs %}
 
    ![Column header divider color in .NET MAUI Picker.](images/dealing-with-column-header/maui-picker-column-header-divider-color.png)
+
+### Custom Column Header Appearance using Datatemplate
+
+You can customize the picker column header appearance by using the [ColumnHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_ColumnHeaderTemplate) property in the [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html).
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfPicker x:Name="picker" >
+    <picker:SfPicker.ColumnHeaderTemplate>
+    <DataTemplate>
+        <Grid BackgroundColor="#BB9AB1">
+            <Label Text="Colors" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        </Grid>
+    </DataTemplate>
+</picker:SfPicker.ColumnHeaderTemplate>
+</picker:SfPicker>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Column header template in .NET MAUI Picker.](images/dealing-with-column-header/maui-picker-column-header-template.png)
+
+N> If a template is applied to the column header in the [PickerColumnHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumnHeaderView.html), the remaining column header properties will not have any effect, except for the [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerColumnHeaderView.html#Syncfusion_Maui_Picker_PickerColumnHeaderView_DividerColor) Property.
+
+### Custom Column Header appearance using DataTemplateSelector
+
+You can customize the picker column header appearance by using the [ColumnHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_ColumnHeaderTemplate) property in the [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html). The DataTemplateSelector allows you to choose a DataTemplate at runtime based on the value bound to the picker column header. This lets you apply a custom data template to the column header and customize its appearance based on specific conditions.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<Grid.Resources>
+    <DataTemplate x:Key="selectedItemTemplate">
+        <Grid Background = "LightBlue" >
+            <Label Text="Colors"  HorizontalOptions="Center" VerticalOptions="Center" TextColor="Red"/>
+        </Grid>
+    </DataTemplate>
+    <DataTemplate x:Key="nonSelectedItemTemplate">
+        <Grid Background="LightGreen" >
+            <Label Text="Colors"  HorizontalOptions="Center" VerticalOptions="Center" TextColor="Orange"/>
+        </Grid>
+    </DataTemplate>
+    <local:PickerTemplateSelector x:Key="columnHeaderTemplateSelector" SelectedItemTemplate="{StaticResource selectedItemTemplate}"  NonSelectedItemTemplate="{StaticResource nonSelectedItemTemplate}"/>
+    <picker:SfPicker x:Name="picker" ColumnHeaderTemplate="{StaticResource columnHeaderTemplateSelector}">
+    </picker:SfPicker>
+</Grid.Resources>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+public class PickerTemplateSelector : DataTemplateSelector
+{
+    public PickerTemplateSelector()
+    {
+    }
+    public DataTemplate SelectedItemTemplate { get; set; }
+    public DataTemplate NonSelectedItemTemplate { get; set; }
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {  
+        var Details = item as PickerColumn;
+        if (Details != null)
+        {
+            if (Details.SelectedIndex <= 4)
+                return SelectedItemTemplate;
+        }
+        return NonSelectedItemTemplate;
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}

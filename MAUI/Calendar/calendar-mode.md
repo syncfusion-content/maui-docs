@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Calendar Modes in .NET MAUI Calendar Control | Syncfusion<sup>&reg;</sup>
+title: Calendar Modes in .NET MAUI Calendar Control | Syncfusion®
 description: Learn about the calendar modes in Syncfusion<sup>&reg;</sup> Calendar for .NET MAUI (SfCalendar) control and its basic features.
 platform: maui
 control: SfCalendar
@@ -117,3 +117,28 @@ private void Button_Clicked(object sender, System.EventArgs e)
 {% endhighlight %} 
  
 {% endtabs %}
+
+### Custom Popup Size
+
+SfCalendar allows the display of the Popup to render at any desired size by setting the [PopupWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_PopupWidth) and [PopupHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_PopupHeight) properties.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<calendar:SfCalendar x:Name="calendar" 
+                         Mode="Dialog"
+                         PopupWidth="300"
+                         PopupHeight=400/>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+this.calendar.PopupWidth = 300;
+this.calendar.PopupHeight = 400;
+
+{% endhighlight %} 
+
+{% endtabs %}
+

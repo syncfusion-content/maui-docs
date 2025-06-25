@@ -162,3 +162,27 @@ private void Button_Clicked(object sender, System.EventArgs e)
    ![Relative dialog mode in .NET MAUI Time picker.](images/time-picker-mode/maui-time-picker-relative-dialog-mode1.png)
 
    ![Relative dialog mode in .NET MAUI Time picker.](images/time-picker-mode/maui-time-picker-relative-dialog-mode2.png)
+
+### Custom Popup Size
+
+SfTimePicker allows the display of the Popup to render at any desired size by setting the [PopupWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_PopupWidth) and [PopupHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_PopupHeight) properties.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfdatePicker x:Name="timePicker" 
+                         Mode="Dialog"
+                         PopupWidth="300"
+                         PopupHeight="400"/>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+this.timePicker.PopupWidth = 300;
+this.timePicker.PopupHeight = 400;
+
+{% endhighlight %} 
+
+{% endtabs %}
