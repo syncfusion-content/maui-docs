@@ -344,7 +344,7 @@ this.dataGrid.CopyPasteController.Paste();
 {% endhighlight %}
 {% endtabs %}
 
-## Customizing Copy Paste Behavior in Maui DataGrid
+## Customizing Clipboard operations in Maui DataGrid
 
 The SfDataGrid processes clipboard operations in the `DataGridCopyPasteController` class. You can customize the default copy-paste behaviors by overriding the `DataGridCopyPasteController` class and setting it to `SfDataGrid.CopyPasteController`.
 
