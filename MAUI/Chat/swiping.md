@@ -183,9 +183,9 @@ namespace GettingStarted
 
 ![Swipe views in .NET MAUI Chat](images/swiping/maui-chat-start-and-end-swipe-template.png)
 
-## Swipe Events
+## Swipe events
 
-### SwipeStarted Event
+### SwipeStarted event
 
 The [SwipeStarted](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SwipeStarted) event is raised when the swipe offset changes from its initial value. This event is triggered with [MessageSwipeStartedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageSwipeStartedEventArgs.html).
 
@@ -222,7 +222,7 @@ The `SwipeStarted` event provides the following properties in their arguments:
 {% endhighlight %}
 {% endtabs %}
 
-### Swiping Event
+### Swiping event
 
 The [Swiping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Swiping) event is raised while swiping a message is in progress. This event is triggered with [MessageSwipingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageSwipingEventArgs.html).
 
@@ -261,7 +261,7 @@ The `Swiping` event provides the following properties in their arguments:
 {% endhighlight %}
 {% endtabs %}
 
-### SwipeEnded Event
+### SwipeEnded event
 
 The [SwipeEnded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SwipeEnded) event is fired when the swipe offset value reaches the `MaxSwipeOffset` value indicating that the swipe action is completed. This event is triggered with [MessageSwipeEndedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageSwipeEndedEventArgs.html).
 
@@ -298,7 +298,7 @@ The `SwipeEnded` event provides the following properties in their arguments:
 {% endhighlight %}
 {% endtabs %}
 
-## Reset Swipe view Programmatically 
+## Reset swipe view programmatically 
 
 The `SfChat` allows you to cancel the swipe programmatically by calling the [ResetSwipeOffset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ResetSwipeOffset) method in the [SwipeEnded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SwipeEnded) event.
 
