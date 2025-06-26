@@ -13,7 +13,7 @@ This section explains how to customize item borders in the `.NET MAUI ListView` 
 
 ## Enable Item Border
 
-The `SfListView` allows applying borders to each item by setting the `ShowItemBorder` property to `true`. By default, item borders are not displayed. You can customize the color, thickness, margin, and corner radius of the borders using the respective APIs.
+The [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.html) allows applying borders to each item by setting the [ShowItemBorder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ShowItemBorderProperty) property to `true`. By default, item borders are not displayed. You can customize the color, thickness, margin, and corner radius of the borders using the respective APIs.
 
 <table>
   <thead>
@@ -24,23 +24,23 @@ The `SfListView` allows applying borders to each item by setting the `ShowItemBo
   </thead>
   <tbody>
     <tr>
-      <td><code>ShowItemBorder</code></td>
+      <td>{{'[ShowItemBorder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ShowItemBorderProperty)'| markdownify }}</td>
       <td>Enables or disables the visibility of item borders. <em>(Default: false)</em></td>
     </tr>
     <tr>
-      <td><code>ItemBorderColor</code></td>
+      <td>{{'[ItemBorderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemBorderColorProperty)'| markdownify }}</td>
       <td>Sets the color of the item border.</td>
     </tr>
     <tr>
-      <td><code>ItemBorderThickness</code></td>
+      <td>{{'[ItemBorderThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemBorderThicknessProperty)'| markdownify }}</td>
       <td>Defines the border thickness for each side of the item.</td>
     </tr>
     <tr>
-      <td><code>ItemBorderMargin</code></td>
+      <td>{{'[ItemBorderMargin](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemBorderMarginProperty)'| markdownify }}</td>
       <td>Sets the margin around the border within the item.</td>
     </tr>
     <tr>
-      <td><code>ItemBorderRadius</code></td>
+      <td>{{'[ItemBorderRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemBorderRadiusProperty)'| markdownify}}</td>
       <td>Sets the corner radius of the item border.</td>
     </tr>
   </tbody>
@@ -75,10 +75,10 @@ listView.ShowItemBorder = true;
 
 After enabling the item border, you can customize its appearance using the following properties:
 
-- `ItemBorderColor`: Sets the border color.
-- `ItemBorderThickness`: Specifies the thickness of the border.
-- `ItemBorderMargin`: Adds margin around the border.
-- `ItemBorderRadius`: Sets the corner radius of the  border.
+- [ItemBorderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemBorderColorProperty): Sets the border color.
+- [ItemBorderThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemBorderThicknessProperty): Specifies the thickness of the border.
+- [ItemBorderMargin](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemBorderMarginProperty): Adds margin around the border.
+- [ItemBorderRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemBorderRadiusProperty): Sets the corner radius of the  border.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 4 5 6" %}
@@ -114,8 +114,8 @@ listView.ItemBorderRadius = new CornerRadius(20,0,0,20);
 
 ## Limitations
 
-- Item borders are not supported when `SfListView.ItemsLayout` is set to `GridLayout`.
-- `ItemBorderRadius` is applicable only when `ItemBorderThickness` has uniform values on all sides.
+- Item borders are not supported when [SfListView.ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsLayout) is set to [GridLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.GridLayout.html).
+- [ItemBorderRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemBorderRadiusProperty) is applicable only when [ItemBorderThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemBorderThicknessProperty) has uniform values on all sides.
 
 ## See Also
 
