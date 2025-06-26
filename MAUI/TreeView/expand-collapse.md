@@ -11,7 +11,7 @@ documentation: ug
 
 The TreeView allows you to expand and collapse the nodes through user interaction or programmatically. 
 
-##  Expand Action Target
+##  Expand action target
 
 Expanding and collapsing of nodes can be performed by tapping the expander view or by setting the [ExpandActionTarget](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ExpandActionTarget) property in both the expander view and content view.
 
@@ -29,7 +29,7 @@ treeView.ExpandActionTarget = TreeViewExpandActionTarget.Node;
 {% endhighlight %}
 {% endtabs %}
 
-## Auto Expand Mode
+## Auto expand mode
 
 By default, the items in the treeview will be in a collapsed state. You can define how the nodes should be expanded when loading the TreeView by using the [AutoExpandMode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewAutoExpandMode.html) property.
 
@@ -39,7 +39,7 @@ The `AutoExpandMode` property is only applicable in bound mode. In the unbound m
 * `RootNodesExpanded` : Expands only the root item when loaded.
 * `AllNodesExpanded` : Expands all the items when loaded.
 
-## Programmatic Expand and Collapse
+## Programmatic expand and collapse
 
 TreeView allows programmatic expansion and collapse based on the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) and level using the following methods.
 
@@ -66,7 +66,7 @@ treeView.CollapseNode(node);
 {% endhighlight %}
 {% endtabs %}
 
-### Expand and Collapse all the nodes
+### Expand and collapse all the nodes
 
 Programmatically expand and collapse all the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) at runtime using the [SfTreeView.ExpandAll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ExpandAll) and [SfTreeView.CollapseAll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_CollapseAll) methods.
 
@@ -82,7 +82,7 @@ treeView.CollapseAll();
 {% endhighlight %}
 {% endtabs %}
 
-## Expand and Collapse using Keyboard
+## Expand and collapse using keyboard
 
 TreeView allows the expansion and collapse of the nodes using the right and left arrow keys. To expand a node, press the right arrow key; to collapse a node, press the left arrow key on the focused item.
 

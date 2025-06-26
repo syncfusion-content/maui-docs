@@ -7,7 +7,7 @@ control: SfTreeView
 documentation: ug
 ---
 
-# Drag and drop in .NET MAUI TreeView (SfTreeView)
+# Drag and Drop in .NET MAUI TreeView (SfTreeView)
 The [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html) allows drag and drop the items within the treeview control by setting the `AllowDragging` property as `true`. 
 
 {% tabs %}
@@ -149,7 +149,7 @@ N> View sample in [GitHub](https://github.com/SyncfusionExamples/how-to-customiz
 The `ItemDragging` event is raised while dragging and dropping the item in the `SfTreeView`. The `ItemDraggingEventArgs` has the following members which provide the information for the ItemDragging event:
 
 * `Action`: Returns the drag `Action` such as start, dragging, dropping and drop.
-* `Handled`: If this member is set to true, dragging can be handled. It is applicable only if Action is `Dragging`.
+* `Handled`: If ItemDragging event is handled, dragging will not be performed. It is applicable only if `Action` is `Dragging`.
 * `Cancel` : If this member is set to true, the drag and drop operation will be canceled.
 * `DraggingNode`: Returns the `DraggingNodes`.
 * `DropPosition`: Returns the position where dragged nodes are going to be dropped.
@@ -159,7 +159,7 @@ The `ItemDragging` event is raised while dragging and dropping the item in the `
 
 Auto-scrolling during drag-and-drop operations in the `SfTreeView` enhances the user experience by automatically scrolling the view when dragging an item near the edges.
 
-### Auto Scroll Margin
+### Auto scroll margin
 
 To adjust the auto-scroll margin in `SfTreeView`, set the `ScrollMargin` property of the `AutoScroller` to enable auto-scrolling while dragging. The default value is `15`. Auto-scrolling will be triggered when the drag item is within the `ScrollMargin` from the view's bounds.
 
@@ -175,7 +175,7 @@ treeView.AutoScroller.ScrollMargin = 20;
 
 ![Auto scroll](Images/drag-and-drop/auto-scroll.gif)
 
-### Auto Scroll Interval
+### Auto scroll interval
 
 Adjust the auto-scroll interval during dragging by setting the `Interval` property of the `AutoScroller`. The default interval is `150 milliseconds`.
 
@@ -187,7 +187,7 @@ treeView.AutoScroller.Interval = new TimeSpan(0, 0, 0, 0, 200);
 {% endhighlight %}
 {% endtabs %}
 
-### Disable Outside Scroll
+### Disable outside scroll
 
 To prevent auto-scrolling when the dragged item is moved outside the `SfTreeView` during a drag, set the `AllowOutsideScroll` property of the `AutoScroller` to `false`. The default value is `true`.
 
@@ -199,9 +199,9 @@ treeView.AutoScroller.AllowOutsideScroll = false;
 {% endhighlight %}
 {% endtabs %}
 
-## Auto Expand
+## Auto expand
 
-### Enable Auto Expand
+### Enable auto expand
 
 To enable auto-expanding of nodes when dragging items over them, set the `CanAutoExpand` property to `true`. The default value is `false`.
 
@@ -227,7 +227,7 @@ treeView.DragAndDropController.CanAutoExpand = true;
 
 ![Enable Auto Expand](Images/drag-and-drop/enable-auto-expand.gif)
 
-### Auto Expand Delay
+### Auto expand delay
 
 To set the delay for auto-expanding nodes, use the `AutoExpandDelay` property. The default value is `3 seconds`.
 

@@ -7,7 +7,7 @@ control: SfChat
 documentation: ug
 ---
 
-# Attachment button in .NET MAUI Chat (SfChat)
+# Attachment Button in .NET MAUI Chat (SfChat)
 
 In `SfChat`, you can show the attachment button by setting the [ShowAttachmentButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowAttachmentButton) to `true`.
 

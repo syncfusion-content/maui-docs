@@ -1300,7 +1300,7 @@ You can style the attachment button by setting values to the in-built keys of th
 
 ![Attachment button style in .NET MAUI Chat](images/styles/maui-chat-attachmentbutton-style.png)
 
-## Load More styling
+## Load more styling
 
 You can style the load more button by setting values to the in-built keys of the load more button in the resource dictionary.
 

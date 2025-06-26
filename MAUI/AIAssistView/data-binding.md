@@ -90,7 +90,7 @@ public class ViewModel : INotifyPropertyChanged
 
 N> The `SfAIAssistView.AssistItems` property is of type `IList<IAssistItem>`. To ensure the [AssistItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_AssistItems) property functions correctly, it is recommended to use a collection property in the ViewModel with the same type, such as `ObservableCollection<IAssistItem>`.
 
-## Binding Custom Model Collection
+## Binding custom model collection
  
 The `SfAIAssistView` control provides support for binding collection of custom data objects through the `ItemsSource` property. This feature allows users to use their own data objects with the control. The `ItemsSource` property binds a collection of custom data objects to the `SfAIAssistView` and each item in the collection will be converted to an `AssistItem` and displayed in the view. The `ItemsSourceConverter` property sets the converter used to transform data objects into assist items and vice versa.
  

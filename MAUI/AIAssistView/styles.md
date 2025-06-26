@@ -1043,7 +1043,7 @@ public MainPage()
 
 ![Stop responding style in .NET MAUI AI AssistView](images/styles/maui-aiassistview-styles-stopresponding.png)
 
-## Text Selection styling
+## Text selection styling
 
 To modify the highlight color of selected text, you need to update the value associated with the built-in key `SfAIAssistViewSelectionTextHighLightColor` in the resource dictionary.
 
@@ -1091,7 +1091,7 @@ public MainPage()
 
 ![Text Selection style in .NET MAUI AI AssistView](Images/styles/maui-aiassistview-styles-textselection.png)
 
-## Common Suggestions styling
+## Common suggestions styling
 
 To style the common suggestion view based on its appearance, set values to the in-built keys in the resource dictionary.
 
