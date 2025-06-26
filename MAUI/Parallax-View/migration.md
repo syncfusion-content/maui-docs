@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migration from Xamarin to .NET MAUI Parallax View control | Syncfusion
-description: This section explains the features available in the .NET MAUI Parallax View control over Xamarin Parallax View.
+description: This section explains the features available in the .NET MAUI Parallax View control compared to Xamarin Parallax View.
 platform: MAUI
 control: SfParallaxView
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfParallaxView to .NET MAUI SfParallaxView
 
-The [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html) is created from scratch using the upgraded APIs and performance of the .NET MAUI graphics library and framework layouts. However, to maintain the consistency of the API naming in MAUI [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html), we renamed some of the APIs. The APIs changed in MAUI [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html) from Xamarin [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html) are detailed as follows:
+The [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html) has been rebuilt from scratch using the upgraded APIs and performance capabilities of the .NET MAUI graphics library and framework layouts. To maintain API naming consistency in .NET MAUI [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html), some APIs have been renamed. The following sections detail the changes between Xamarin and .NET MAUI implementations of [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html).
 
 ## Namespaces
 
@@ -23,16 +23,16 @@ The [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Paralla
 Syncfusion.XForms.ParallaxView
 </td>
 <td>
-<div> Syncfusion.Maui.ParallaxView </div>
+Syncfusion.Maui.ParallaxView
 </td>
 </tr>
 </table>
 
-To make the migration easier, the most of the APIs from the Xamarin [SfParallaxView](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ParallaxView.SfParallaxView.html) were kept in the .NET MAUI [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html). Please refer to the following details and the API migration information available below.
+To facilitate easier migration, most of the APIs from the Xamarin [SfParallaxView](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.ParallaxView.SfParallaxView.html) have been preserved in the .NET MAUI [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html). Please refer to the following details and API migration information.
 
 ## Initialize control
 
-To initialize the control, import the parallax view namespace and Initialize [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html) as shown in the following code sample. 
+To initialize the control, import the parallax view namespace and initialize [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html) as shown in the following code samples:
 
 <table>
 <tr>
@@ -131,7 +131,7 @@ this.Content = parallax;
 <tr>
 <td>ParallaxScrollingEventArgs</td>
 <td>ParallaxScrollingEventArgs</td>
-<td>Defines the scrolling Event args</td>
+<td>Defines the scrolling event args</td>
 </tr>
 </table>
 
@@ -157,7 +157,7 @@ this.Content = parallax;
 <tr>
 <td>IParallaxView</td>
 <td>IParallaxView</td>
-<td>Defines a event and a property to perform parallax scrolling.</td>
+<td>Defines an event and a property to perform parallax scrolling.</td>
 </tr>
 </table>
 
@@ -191,7 +191,7 @@ this.Content = parallax;
 
 ### Parallax View
 
-The following table illustrates the API migration for the parallax view.
+The following table illustrates the API migration for the parallax view:
 
 <table>
 <tr>
@@ -238,4 +238,4 @@ The following table illustrates the API migration for the parallax view.
 
 ## Support and feedback
 
-If you are unable to find the migration information you require in the self-help resources listed above, please contact us by creating a [support ticket](https://internalsupport.bolddesk.com/agent/tickets/create). If you don't find what you need, please request it from our [feedback portal](https://www.syncfusion.com/feedback/maui). 
+If you are unable to find the migration information you require in the self-help resources listed above, please contact us by creating a [support ticket](https://internalsupport.bolddesk.com/agent/tickets/create). If you don't find what you need, please request it from our [feedback portal](https://www.syncfusion.com/feedback/maui).

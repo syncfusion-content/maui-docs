@@ -1,10 +1,11 @@
 ---
 layout: post
-title: Getting started with .NET MAUI DockLayout control | Syncfusion®
+title: Getting started with .NET MAUI DockLayout control | Syncfusion
 description: Learn how to get started with Syncfusion® .NET MAUI DockLayout (SfDockLayout) control and explore layout capabilities using various options.
 platform: MAUI
 control: SfDockLayout
 documentation: ug
+keywords: .net maui docklayout, syncfusion docklayout maui, dock layout .net maui, .net maui layout panels, sfdocklayout example maui, .net maui layout control, layout docking .net maui, multi-region layout .net maui, .net maui docking layout
 ---
 
 # Getting Started with .NET MAUI DockLayout (SfDockLayout)
@@ -78,10 +79,10 @@ namespace DockLayoutGettingStarted
 
 <ContentPage
     . . .    
-    xmlns:dx="clr-namespace:Syncfusion.Maui.Core;
+    xmlns:sf="clr-namespace:Syncfusion.Maui.Core;
     assembly=Syncfusion.Maui.Core">
    
-     <dx:SfDockLayout/>
+     <sf:SfDockLayout/>
 
 </ContentPage>
  
@@ -134,7 +135,8 @@ Make sure the following are installed:
 
 The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="6 17" %}
+{% tabs %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="6 17" %}
 
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
@@ -160,12 +162,11 @@ namespace DockLayoutSample
 
 		return builder.Build();
 	 }
-   
   }
-
 }     
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Step 4: Initialize the DockLayout Control
 
@@ -177,10 +178,10 @@ namespace DockLayoutSample
 
 <ContentPage
     . . .    
-    xmlns:dx="clr-namespace:Syncfusion.Maui.Core;
+    xmlns:sf="clr-namespace:Syncfusion.Maui.Core;
     assembly=Syncfusion.Maui.Core">
    
-     <dx:SfDockLayout/>
+     <sf:SfDockLayout/>
 
 </ContentPage>
  
@@ -204,6 +205,7 @@ namespace DockLayoutGettingStarted
 
 {% endhighlight %}
 {% endtabs %}
+{% endtabcontent %}
 {% endtabcontents %}
 
 ### Set Dock Position for Child Views
@@ -211,21 +213,21 @@ Inside the `SfDockLayout` control, child views can be arranged using the `Dock` 
 
 {% tabs %}
 
-{% highlight xaml tabtitle="XAML" %}
+{% highlight xaml %}
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:dx="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+             xmlns:sf="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
              x:Class="DockLayoutGettingStarted.MainPage">
 
    <ContentPage.Content>
-        <dx:SfDockLayout >
-             <Label Text="Left" WidthRequest="80" dx:SfDockLayout.Dock="Left" Background="#E57373" />
-            <Label Text="Right" WidthRequest="80" dx:SfDockLayout.Dock="Right" Background="#BA68C8" />
-            <Label Text="Top" HeightRequest="80" dx:SfDockLayout.Dock="Top" Background="#F06292" />
-            <Label Text="Bottom" HeightRequest="80"  dx:SfDockLayout.Dock="Bottom" Background="#9575CD"/>
+        <sf:SfDockLayout >
+            <Label Text="Left" WidthRequest="80" sf:SfDockLayout.Dock="Left" Background="#E57373" />
+            <Label Text="Right" WidthRequest="80" sf:SfDockLayout.Dock="Right" Background="#BA68C8" />
+            <Label Text="Top" HeightRequest="80" sf:SfDockLayout.Dock="Top" Background="#F06292" />
+            <Label Text="Bottom" HeightRequest="80"  sf:SfDockLayout.Dock="Bottom" Background="#9575CD"/>
             <Label Text="None" BackgroundColor="#64B5F6" />
-        </dx:SfDockLayout>
+        </sf:SfDockLayout>
     </ContentPage.Content>
     
 </ContentPage>

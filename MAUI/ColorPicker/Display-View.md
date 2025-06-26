@@ -107,7 +107,6 @@ colorPicker.SelectedColorTemplate = new DataTemplate(() =>
     return stackLayout;
 });
 
-
 Content = colorPicker;    
 
 {% endhighlight %}

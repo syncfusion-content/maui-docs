@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data annotations in .NET MAUI DataForm control | Syncfusion<sup>&reg;</sup>
-description: Learn here all about Data annotations support in Syncfusion<sup>&reg;</sup> Maui DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
+title: Data annotations in .NET MAUI DataForm control | Syncfusion®
+description: Data annotations support in Syncfusion® Maui DataForm (SfDataForm) control in mobile and desktop applications from a single shared codebase.
 platform: maui
 control: SfDataForm
 documentation: UG
@@ -317,6 +317,8 @@ public string Name { get; set; }
 #### DataFormValueConverter attribute
 
 Specifies the Converter type, which converts the original value in a different format or as a different value.
+
+N> When publishing in AOT mode on iOS and macOS, ensure that `[Preserve(AllMembers = true)]` is added to the converter class in order to maintain its functionality.
 
 {% tabs %}
 {% highlight C# %}

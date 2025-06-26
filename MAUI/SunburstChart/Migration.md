@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migration from Xamarin to .NET MAUI Sunburst Chart control | Syncfusion
+title: Xamarin to .NET MAUI Sunburst Chart Migration | Syncfusion
 description: This section explains the features available in the .NET MAUI Sunburst control over Xamarin SfSunburstChart.
 platform: MAUI
 control: SfSunburstChart
@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfSunburstChart to .NET MAUI SfSunburstChart
 
-The SfSunburstChart was created from the scratch using the upgraded APIs and performance of the .NET MAUI graphics library and framework layouts. However, to maintain the consistency of the API naming in MAUI SfSunburstChart, we renamed some of the APIs. The APIs changed in MAUI SfSunburstChart from Xamarin SfSunburstChart are detailed as follows:
+The SfSunburstChart was created from scratch using the upgraded APIs and performance of the .NET MAUI graphics library and framework layouts. However, to maintain API naming consistency in .NET MAUI SfSunburstChart, we renamed some of the APIs. The changes in APIs from Xamarin SfSunburstChart to .NET MAUI SfSunburstChart are detailed below:
 
 ## Namespaces
 
@@ -23,16 +23,16 @@ The SfSunburstChart was created from the scratch using the upgraded APIs and per
 Syncfusion.SfSunburstChart.XForms
 </td>
 <td>
-<div> Syncfusion.Maui.SunburstChart </div>
+Syncfusion.Maui.SunburstChart
 </td>
 </tr>
 </table>
 
-To make the migration easier, the most of the APIs from the Xamarin [SfSunburstChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSunburstChart.XForms.SfSunburstChart.html) were kept in the .NET MAUI [SfSunburstChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html). Currently, most of the features have been added in the [SfSunburstChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html), but only a few are pending in the .NET MAUI along with some limitations. Please refer to the following details and the API migration information available below.
+To make migration easier, most of the APIs from the Xamarin [SfSunburstChart](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSunburstChart.XForms.SfSunburstChart.html) were kept in the .NET MAUI [SfSunburstChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html). Currently, most features have been added to the [SfSunburstChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html), but a few are still pending in .NET MAUI along with some limitations. Please refer to the following details and API migration information below.
 
 ## Initialize control
 
-To initialize the control, import the sunburst chart namespace and Initialize [SfSunburstChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html) as shown in the following code sample. 
+To initialize the control, import the sunburst chart namespace and initialize [SfSunburstChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html) as shown in the following code sample:
 
 <table>
 <tr>
@@ -151,7 +151,7 @@ The following table illustrates the API migration for the sunburst chart.
 </tr>
 </table>
 
-The following code example explains how to migrate Xamarin SfSunburstChart to the .NET MAUI SfSunburstChart.
+The following code example explains how to migrate from Xamarin SfSunburstChart to .NET MAUI SfSunburstChart:
 
 <table>
 <tr>
@@ -227,7 +227,6 @@ sunburstChart.Levels.Add(new SunburstHierarchicalLevel() { GroupMemberPath = "Jo
 
 this.Content = sunburstChart;
                        
-
 {% endhighlight %}
 
 {% endtabs %}
@@ -272,7 +271,7 @@ this.Content = sunburstChart;
 </tr>
 </table>
 
-The following code example shows how to enable legend in the sunburst chart.
+The following code example shows how to enable legend in the sunburst chart:
 
 <table>
 <tr>
@@ -359,8 +358,9 @@ this.Content = sunburstChart;
 </table>
 
 ### Data Label
-To enable data labels, use the [ShowLabel](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSunburstChart.XForms.SunburstChartDataLabel.html#Syncfusion_SfSunburstChart_XForms_SunburstChartDataLabel_ShowLabel) property in the [SunburstChartDataLabel](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSunburstChart.XForms.SunburstChartDataLabel.html) class and the [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_ShowLabels) property in the [SfSunburstChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html) class, in Xamarin and MAUI respectively.
-To customize the data label appearance, create an instance of the [SunburstDataLabelSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstDataLabelSettings.html) class and add it to the [DataLabelSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_DataLabelSettings) of [SfSunburstChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html). The following code explains how to initialize data labels. 
+To enable data labels, use the [ShowLabel](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSunburstChart.XForms.SunburstChartDataLabel.html#Syncfusion_SfSunburstChart_XForms_SunburstChartDataLabel_ShowLabel) property in the [SunburstChartDataLabel](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSunburstChart.XForms.SunburstChartDataLabel.html) class in Xamarin and the [ShowLabels](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_ShowLabels) property in the [SfSunburstChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html) class in .NET MAUI.
+
+To customize the data label appearance, create an instance of the [SunburstDataLabelSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstDataLabelSettings.html) class and add it to the [DataLabelSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_DataLabelSettings) of [SfSunburstChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html). The following code explains how to initialize data labels:
 
 <table>
 <tr>
@@ -464,8 +464,9 @@ this.Content = sunburstChart;
 </table>
 
 ### Tooltip
-To enable the tooltip, use the [ShowTooltip](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSunburstChart.XForms.SunburstTooltipSettings.html#Syncfusion_SfSunburstChart_XForms_SunburstTooltipSettings_ShowTooltip) property in the [SunburstTooltipSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSunburstChart.XForms.SunburstTooltipSettings.html) class and the [EnableTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_EnableTooltip) property in the [SfSunburstChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html) class, in Xamarin and MAUI respectively.
-To customize the tooltip appearance, create an instance of the SunburstTooltipSettings class and add it to the TooltipSettings of SfSunburstChart. 
+To enable the tooltip, use the [ShowTooltip](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSunburstChart.XForms.SunburstTooltipSettings.html#Syncfusion_SfSunburstChart_XForms_SunburstTooltipSettings_ShowTooltip) property in the [SunburstTooltipSettings](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfSunburstChart.XForms.SunburstTooltipSettings.html) class in Xamarin and the [EnableTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_EnableTooltip) property in the [SfSunburstChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html) class in .NET MAUI.
+
+To customize the tooltip appearance, create an instance of the SunburstTooltipSettings class and add it to the TooltipSettings of SfSunburstChart.
 
 <table>
 <tr>
@@ -579,4 +580,4 @@ this.Content = sunburstChart;
 
 ## Support and feedback
 
-If you are unable to find the migration information you require in the self-help resources listed above, please contact us by creating a [support ticket](https://internalsupport.bolddesk.com/agent/tickets/create). If you do not see what you need, Please request it in our [feedback portal](https://www.syncfusion.com/feedback/maui). 
+If you are unable to find the migration information you require in the self-help resources listed above, please contact us by creating a [support ticket](https://internalsupport.bolddesk.com/agent/tickets/create). If you do not see what you need, please request it in our [feedback portal](https://www.syncfusion.com/feedback/maui).

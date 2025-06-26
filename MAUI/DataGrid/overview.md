@@ -38,11 +38,15 @@ The .NET MAUI DataGrid control is used to display and manipulate data in a tabul
 
 * **Filtering** - Programmatically filter data based on the criteria.
 
+* **Data virtualization** – Support for different modes of data virtualization such as paging, incremental loading.
+
 * **Selection** - Select one or more rows. Keyboard navigation is supported in Windows platform.
 
 * **Search** - Supports highlighting cell content and provides navigation functionalities.
 
-* **Master-Details View** – Supports displaying relational data using hierarchies
+* **Master-Details View** – Supports displaying relational data using hierarchies.
+
+* **Record Template View** - Supports customization of row presentation by defining templates for displaying additional information or complex layouts within the DataGrid.
 
 * **Column Sizing** - Set the width of columns with various sizing options. Columns can also be sized based on their content.
 
@@ -59,6 +63,10 @@ The .NET MAUI DataGrid control is used to display and manipulate data in a tabul
 * **Load More** -  Display an interactive view when the grid reaches its maximum or minimum offset while scrolling down or up. Tapping the interactive view triggers a command to add more data to the item source of the grid at runtime.
 
 * **Pull To Refresh** - Support allows users to load a subset of data when the DataGrid is pulled down.
+
+* **Serialization and Deserialization** – Supports the transfer of grid properties and settings between different instances, allowing for easy saving and loading of configurations.
+
+* **Clipboard Operations** – Supports standard clipboard functionalities, enabling the cutting, copying, and pasting of data within the DataGrid and across other applications.
 
 * **Exporting** - Support to export the data to Excel and PDF.
 
