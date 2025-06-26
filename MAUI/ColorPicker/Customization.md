@@ -12,7 +12,7 @@ keywords : .net maui color picker, maui color picker, .net maui color picker con
 
 ## Selected color
 
-The `SelectedColor` property of the Color Picker is used to display a default color during initial load. You can also select a color value in the UI using built-in elements like the color spectrum, sliders, palette, or HEX input.
+The [SelectedColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SelectedColor) property of the Color Picker is used to display a default color during initial load. You can also select a color value in the UI using built-in elements like the color spectrum, sliders, palette, or HEX input.
 
 {% tabs %}
 
@@ -37,7 +37,7 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 ## Show recent colors
 
-You can display the recently selected colors in the Color Picker when in `Palette` mode by enabling the `ShowRecentColors` property. By default, it is set to `True`.
+You can display the recently selected colors in the Color Picker when in [Palette](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorPickerMode.html#Syncfusion_Maui_Inputs_ColorPickerMode_Palette) mode by enabling the [ShowRecentColors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ShowRecentColors) property. By default, it is set to `True`.
 
 {% tabs %}
 
@@ -62,7 +62,7 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 ## Show input area
 
-You can show or hide the input area of the Color Picker by adjusting the `ShowInputArea` property. By default, it is set to `True`.
+You can show or hide the input area of the Color Picker by adjusting the [ShowInputArea](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ShowInputArea) property. By default, it is set to `True`.
 
 {% tabs %}
 
@@ -87,7 +87,7 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 ## Alpha slider
 
-The alpha slider is used to control the transparency of the selected color. You can show or hide the alpha slider by adjusting the `ShowAlphaSlider` property. By default, it is set to `True`.
+The alpha slider is used to control the transparency of the selected color. You can show or hide the alpha slider by adjusting the [ShowAlphaSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ShowAlphaSlider) property. By default, it is set to `True`.
 
 {% tabs %}
 
@@ -112,7 +112,7 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 ## Action buttons
 
-You can render the Color Picker without the Apply and Cancel buttons for a seamless color selection experience. When the control buttons are hidden, the selected color is applied instantly, and the Color Picker popup closes automatically upon selection. To enable this, simply set the `IsActionButtonsVisible` property to `False`.
+You can render the Color Picker without the Apply and Cancel buttons for a seamless color selection experience. When the control buttons are hidden, the selected color is applied instantly, and the Color Picker popup closes automatically upon selection. To enable this, simply set the [IsActionButtonsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_IsActionButtonsVisible) property to `False`.
 
 {% tabs %}
 
@@ -137,7 +137,7 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 ## Customize action buttons
 
-You can customize the background color for the action buttons by specifying a suitable color for the `ApplyButtonBackground` and `CancelButtonBackground` properties.
+You can customize the background color for the action buttons by specifying a suitable color for the [ApplyButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ApplyButtonBackground) and [CancelButtonBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_CancelButtonBackground) properties.
 
 {% tabs %}
 
@@ -165,7 +165,7 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 ## No color option
 
-The `ShowNoColor` property determines whether the `No Color` option is displayed in the Color Picker UI. This option allows users to clear their selection from the palette, effectively choosing no color. By default, this property is set to `False`.
+The [ShowNoColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ShowNoColor) property determines whether the `No Color` option is displayed in the Color Picker UI. This option allows users to clear their selection from the palette, effectively choosing no color. By default, this property is set to `False`.
 
 {% tabs %}
 
@@ -190,7 +190,7 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 ## Palette count
 
-The `PaletteColumnCount` and `PaletteRowCount` properties define the number of columns and rows displayed in the palette grid. By default, both are set to 10.
+The [PaletteColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_PaletteColumnCount) and [PaletteRowCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_PaletteRowCount) properties define the number of columns and rows displayed in the palette grid. By default, both are set to 10.
 
 {% tabs %}
 
@@ -216,7 +216,7 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 ## Palette spacing
 
-The `PaletteColumnSpacing` property defines the horizontal spacing between columns, while the `PaletteRowSpacing` property defines the vertical spacing between rows in `Palette` mode. By default, both properties are set to 0, meaning the swatches are placed directly next to each other without any spacing.
+The [PaletteColumnSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_PaletteColumnSpacing) property defines the horizontal spacing between columns, while the [PaletteRowSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_PaletteRowSpacing) property defines the vertical spacing between rows in [Palette](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorPickerMode.html#Syncfusion_Maui_Inputs_ColorPickerMode_Palette) mode. By default, both properties are set to 0, meaning the swatches are placed directly next to each other without any spacing.
 
 {% tabs %}
 {% highlight xaml %}
@@ -242,7 +242,7 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 ### IsOpen
 
-The `IsOpen` property in the Color Picker control allows you to programmatically open the popup by setting it to `True.` By default, this property is set to `False.`
+The [IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_IsOpen) property in the Color Picker control allows you to programmatically open the popup by setting it to `True.` By default, this property is set to `False.`
 
 {% tabs %}
 {% highlight xaml %}
@@ -262,7 +262,7 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 ### Popup background
 
-The `PopupBackground` property specifies the background color of the popup panel in the Color Picker control.
+The [PopupBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_PopupBackground) property specifies the background color of the popup panel in the Color Picker control.
 
 {% tabs %}
 {% highlight xaml %}
@@ -284,18 +284,18 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 ### Popup relative position
 
-The `PopupRelativePosition` property specifies the placement of the popup in the Color Picker control. It supports the following eight positioning options:
+The [PopupRelativePosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_PopupRelativePosition) property specifies the placement of the popup in the Color Picker control. It supports the following eight positioning options:
 
-* AlignBottom
-* AlignBottomLeft
-* AlignBottomRight
-* AlignToLeftOf
-* AlignTop
-* AlignTopLeft
-* AlignTopRight
-* AlignTopRightOf
+* [AlignBottom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupRelativePosition.html#Syncfusion_Maui_Popup_PopupRelativePosition_AlignBottom)
+* [AlignBottomLeft](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupRelativePosition.html#Syncfusion_Maui_Popup_PopupRelativePosition_AlignBottomLeft)
+* [AlignBottomRight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupRelativePosition.html#Syncfusion_Maui_Popup_PopupRelativePosition_AlignBottomRight)
+* [AlignToLeftOf](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupRelativePosition.html#Syncfusion_Maui_Popup_PopupRelativePosition_AlignToLeftOf)
+* [AlignTop](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupRelativePosition.html#Syncfusion_Maui_Popup_PopupRelativePosition_AlignTop)
+* [AlignTopLeft](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupRelativePosition.html#Syncfusion_Maui_Popup_PopupRelativePosition_AlignTopLeft)
+* [AlignTopRight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupRelativePosition.html#Syncfusion_Maui_Popup_PopupRelativePosition_AlignTopRight)
+* [AlignTopRightOf](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupRelativePosition.html#Syncfusion_Maui_Popup_PopupRelativePosition_AlignToRightOf)
 
-The default position is `AlignBottom`.
+The default position is [AlignBottom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.PopupRelativePosition.html#Syncfusion_Maui_Popup_PopupRelativePosition_AlignBottom).
 
 {% tabs %}
 {% highlight xaml %}
