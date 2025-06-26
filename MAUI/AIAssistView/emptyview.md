@@ -6,7 +6,7 @@ control: AI AssistView
 documentation: ug
 ---
 
-# Empty view in .NET MAUI AI AssistView
+# Empty View in .NET MAUI AI AssistView
 
 The `AI AssistView` control allows you to display and customize the empty view content when no request or response has been added.
 
@@ -42,7 +42,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-## EmptyView Customization
+## EmptyView customization
 
 The `SfAIAssistView` control allows you to fully customize the empty view appearance by using the `EmptyViewTemplate` property. This property lets you define a custom layout and style for the `EmptyView`.
 

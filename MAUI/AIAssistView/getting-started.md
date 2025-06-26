@@ -27,7 +27,7 @@ Before proceeding, ensure the following are in place:
 2. Name the project and choose a location. Then, click **Next.**
 3. Select the .NET framework version and click **Create.**
  
-## Step 2: Install the Syncfusion MAUI AI AssistView NuGet Package
+## Step 2: Install the syncfusion MAUI AI AssistView nuGet package
  
  1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
  2. Search for [Syncfusion.Maui.AIAssistView](https://www.nuget.org/packages/Syncfusion.Maui.AIAssistView) and install the latest version.
@@ -66,7 +66,7 @@ namespace GettingStarted
 {% endhighlight %} 
 {% endtabs %}
 
-## Step 4: Add a Basic AI AssistView
+## Step 4: Add a basic AI AssistView
 
  1. To initialize the control, import the `Syncfusion.Maui.AIAssistView` namespace into your code.
  2. Initialize [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html).
@@ -99,7 +99,7 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Define the View Model
+## Step 5: Define the view model
 
 Next, create a view model class and initialize the collection of [AssistItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html) instance as follows
 
@@ -230,7 +230,7 @@ To populate AI AssistView, bind the assist items in ViewModel to [AssistItems](h
 {% endhighlight %}
 {% endtabs %}
 
-## Step 6: Running the Application
+## Step 6: Running the application
 
 Press **F5** to build and run the application. Once compiled, the AI AssistView will be displayed with the data provided.
 
@@ -255,7 +255,7 @@ Before proceeding, ensure the following are in place:
 3. Select the project location, type the project name and press **Enter.**
 4. Then choose **Create project.**
 
-## Step 2: Install the Syncfusion MAUI AI AssistView NuGet Package
+## Step 2: Install the syncfusion MAUI AI AssistView nuGet package
  
  1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
  2. Search for [Syncfusion.Maui.AIAssistView](https://www.nuget.org/packages/Syncfusion.Maui.AIAssistView) and install the latest version.
@@ -294,7 +294,7 @@ namespace GettingStarted
 {% endhighlight %} 
 {% endtabs %}
 
-## Step 4: Add a Basic AI AssistView
+## Step 4: Add a basic AI AssistView
 
  1. To initialize the control, import the `Syncfusion.Maui.AIAssistView` namespace into your code.
  2. Initialize [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html).
@@ -327,7 +327,7 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Define the View Model
+## Step 5: Define the view model
 
 Next, create a view model class and initialize the collection of [AssistItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html) instance as follows
 
@@ -458,7 +458,7 @@ To populate AI AssistView, bind the assist items in ViewModel to [AssistItems](h
 {% endhighlight %}
 {% endtabs %}
 
-## Step 6: Running the Application
+## Step 6: Running the application
 
 Press **F5** to build and run the application. Once compiled, the AI AssistView will be displayed with the data provided.
 
@@ -478,13 +478,13 @@ Before proceeding, ensure the following are set up:
 2. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
-## Step 1: Create a new .NET MAUI Project
+## Step 1: Create a new .NET MAUI project
 
 1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI  AI AssistView NuGet Package
+## Step 2: Install the syncfusion<sup>®</sup> MAUI AI AssistView nuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.AIAssistView](https://www.nuget.org/packages/Syncfusion.Maui.AIAssistView/) and install the latest version.
@@ -523,7 +523,7 @@ namespace GettingStarted
 {% endhighlight %} 
 {% endtabs %}
 
-## Step 4: Add a Basic AI AssistView
+## Step 4: Add a basic AI AssistView
 
  1. To initialize the control, import the `Syncfusion.Maui.AIAssistView` namespace into your code.
  2. Initialize [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html).
@@ -558,7 +558,7 @@ namespace GettingStarted
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Request and Response item
+## Request and response item
  
 The [IsRequested](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_IsRequested) property is used to determine whether a item is a Request or a Response. If `IsRequested` property is set to `true`, the item is a Request item.
  

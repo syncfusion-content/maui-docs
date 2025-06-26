@@ -9,17 +9,17 @@ documentation: ug
 
 # Working with Suggestions in .NET MAUI AI AssistView (SfAIAssistView)
 
-## Common Suggestions
+## Common suggestions
 
 The `SfAIAssistView` control allows users to view a list of common suggestions to choose from. These suggestions offer recommendations, helpful tips, and guides for various tasks and topics.
 
 By providing assistance and encouraging the exploration of new ideas, the common suggestions feature is designed to make interactions more productive and enjoyable.
 
-### Displaying Common Suggestions
+### Displaying common suggestions
 
 Common Suggestions can be populated by creating list of [AssistSuggestion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistSuggestion.html) and assigning it to [Suggestions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_Suggestions) API. It will be displayed under the header as part of header view.
 
-#### View Model
+#### View model
 Create a simple view model as shown in the following code example, and save it as `GettingStartedViewModel.cs` file.
 
 {% tabs %}
@@ -59,7 +59,7 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-#### Binding Suggestions to SfAIAssistView
+#### Binding suggestions to SfAIAssistView
 To populate the Suggestions, bind the item collection from its BindingContext to `SfAIAssistView.Suggestions` property.
 
 {% tabs %}
@@ -111,7 +111,7 @@ public partial class MainPage : ContentPage
 
 N> To view [Suggestions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_Suggestions), it is mandatory to set [ShowHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ShowHeader) API to `true`.
 
-### Suggestion Customization
+### Suggestion customization
 
 The `SfAIAssistView` control allows you to fully customize the suggestions appearance by using the [SuggestionTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_SuggestionTemplate) property. This property lets you define a custom layout and style for the suggestion items.
 
@@ -168,11 +168,11 @@ public partial class MainPage : ContentPage
 
 ![Suggestion Template in .NET MAUI AI AssistView](Images/suggestions/maui-aiassistview-suggestions-commonsuggestiontemplate.png)
 
-## ResponseItem Suggestions
+## ResponseItem suggestions
 
 The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html) control enables the display of a list of suggestions for users to select from. Suggestions are supported for all response item types in `SfAIAssistView`.
 
-### Displaying ResponseItem Suggestions
+### Displaying ResponseItem suggestions
 
 Suggestions are displayed by creating an instance of [AssistSuggestion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistSuggestion.html) and assigning it to the item's [Suggestion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_Suggestion) property.
 
@@ -384,7 +384,7 @@ The [AssistItemSuggestion.ItemSpacing](https://help.syncfusion.com/cr/maui/Syncf
 {% endhighlight %}
 {% endtabs %}
 
-### ResponseItem Suggestion Customization
+### ResponseItem suggestion customization
 The `SfAIAssistView` control allows you to fully customize the appearance of the response suggestion items using the [ResponseSuggestionTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ResponseSuggestionTemplate) property. This property lets you define a custom layout and style for the suggestion item UI.
 
 {% tabs %}
@@ -436,7 +436,7 @@ public partial class MainPage : ContentPage
 ![Suggestion Template in .NET MAUI AI AssistView](Images/suggestions/maui-aiassistview-suggestiontemplate.png)
 
 
-## Event and Commands
+## Event and commands
 
 When a user selects a suggestion, the [SuggestionItemSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_SuggestionItemSelected) event and [SuggestionItemSelectedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_SuggestionItemSelectedCommand) are triggered, providing [SuggestionItemSelectedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SuggestionItemSelectedEventArgs.html) as arguments. This arguments contains the following details about the selected suggestion item.
 

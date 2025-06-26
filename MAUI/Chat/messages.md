@@ -7,7 +7,7 @@ control: SfChat
 documentation: ug
 ---
 
-# Messages in .NET Maui Chat (SfChat)
+# Messages in .NET MAUI Chat (SfChat)
 
 ## Configuring common settings for the message
 
@@ -772,7 +772,7 @@ Unlike the other messages, the `ImageMessage` can also be shown as an outgoing m
 
 ![Outgoing Image message in .NET MAUI Chat](images/messages/maui-chat-outgoing-image-message.png)
 
-## Card Message
+## Card message
 
 You can show a list of interactive cards with each card containing an image, a list of buttons, and text (title, subtitle, and description) to tie in with the cards of popular bot frameworks. Use the [Card.Image](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.Card.html#Syncfusion_Maui_Chat_Card_Image), [Card.Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.Card.html#Syncfusion_Maui_Chat_Card_Title), [Card.Subtitle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.Card.html#Syncfusion_Maui_Chat_Card_Subtitle), and [Card.Description](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.Card.html#Syncfusion_Maui_Chat_Card_Description) properties to display the image, title, subtitle, and description in a card respectively.
 
@@ -902,7 +902,7 @@ If you don’t want to display images, buttons, or text(title, subtitle, descrip
 **Card message without button**
 ![Card message type without button in .NET MAUI Chat](images/messages/maui-chat-card-message-without-button.png)
 
-### Event and Command
+### Event and command
 
 The [CardMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.CardMessage.html) comes with a built-in [CardTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CardTapped) event and [CardCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CardCommand) that will be fired upon tapping a button in a card or tapping any card in the message. You can get the selected Card, the clicked CardButton and the actual `CardMessage` via the [CardTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.CardTappedEventArgs.html) as [CardTappedEventArgs.Card](), [CardTappedEventArgs.Action]() and [CardTappedEventArgs.Message](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.CardTappedEventArgs.html#Syncfusion_Maui_Chat_CardTappedEventArgs_Message) respectively, in both the `CardTapped` event handler and action of `CardCommand`. Handling this event/command by setting [CardTappedEventArgs.Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.CardTappedEventArgs.html#Syncfusion_Maui_Chat_CardTappedEventArgs_Handled) prevents the `Card.Title` or `CardButton.Value` from getting added as a new message.
 
@@ -989,7 +989,7 @@ N> The Action argument in `CardTappedEventArgs` holds a valid value only when cl
 {% endhighlight %}
 {% endtabs %}
 
-## Delivery States
+## Delivery states
 The `SfChat` provides built-in support for displaying message delivery states such as sent, delivered, read, and failed. This feature enhances communication transparency by showing the current status of each message.
 The `ShowDeliveryState` property determines whether delivery state indicators are displayed for messages. By default, this property is set to `false`.
 
@@ -1045,7 +1045,7 @@ namespace MauiChat
 {% endhighlight %}
 {% endtabs %}
 
-### Handling Message Delivery States
+### Handling message delivery states
 The `DeliveryState` property sets the current delivery status of a specific message. The `SfChat` control provides the following delivery states:
 
 - `None` - No delivery indicator is shown. This is the default value.
@@ -1153,7 +1153,7 @@ public class ViewModel : INotifyPropertyChanged
 
 ![DeliveryState in .NET MAUI Chat](Images/messages/maui-chat-delivery-state.gif)
 
-### Customizing Delivery State Icons
+### Customizing delivery state icons
 The `SfChat` control allows assigning custom icon values for each Delivery State. The following API is used to define the icon for each delivery state.
 - `SentIcon` - Sets a custom image for the sent state indicator.
 - `DeliveredIcon` - Sets a custom image for the delivered state indicator.
@@ -1507,7 +1507,7 @@ By default, the keyboard will be open in view, even after a message is sent or f
 {% endhighlight %}
 {% endtabs %}
 
-## Restricting multi-line input in editor (single line messages) in Maui chat
+## Restricting multi-line input in editor (single line messages) in maui chat
 
 By default, users can input multi-line messages by adding new lines in the editor within the chat control for outgoing messages. However, if you wish to limit multi-line input and display a send button on the keyboard instead, you can achieve this by setting the [AllowMultilineInput](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_AllowMultilineInput) property to `false`.
 
@@ -1599,7 +1599,7 @@ By default, the author’s name and avatar are displayed for the incoming messag
 
 ![Hide incoming avatar and author visibility in .NET MAUI Chat](images/messages/maui-chat-hide-avatar.png)
 
-## MessageTimestampFormat for Incoming and Outgoing messages
+## MessageTimestampFormat for incoming and outgoing messages
 
 The `SfChat` allows you specify the format in which timestamps are shown for outgoing and incoming messages. The date and time representation can be customized using the [IncomingMessageTimestampFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_IncomingMessageTimestampFormat) and [OutgoingMessageTimestampFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_OutgoingMessageTimestampFormat) properties.
 
@@ -1728,7 +1728,7 @@ The `SfChat` allows to hide the message input view (editor) by setting `false` t
 {% endhighlight %}
 {% endtabs %}
 
-## Messages without author (System Generated Messages / Admin messages)
+## Messages without author (system generated messages / admin messages)
 
 Using templates, you can show messages with any information, similar to security alerts in WhatsApp or admin notifications. These messages can be put into the [Messages](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Messages) collection without specifying an author.
 In the provided code example, we've set up a custom template to display a security message from an admin when the author of the message is not specified.

@@ -9,11 +9,11 @@ documentation: ug
 
 # Events and Commands in .NET MAUI Chat (SfChat)
 
-## MessageTapped Event and Command
+## MessageTapped event and command
 
 The `SfChat` control includes a built-in event called [MessageTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageTapped) and a command named [MessageTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageTappedCommand). These are triggered when a message is tapped. You can access the tapped message and the point of interaction through the [MessageTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageTappedEventArgs.html). 
 
-### MessageTapped Event
+### MessageTapped event
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -34,7 +34,7 @@ The `SfChat` control includes a built-in event called [MessageTapped](https://he
 {% endhighlight %}
 {% endtabs %}
 
-### MessageTapped Command
+### MessageTapped command
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}   
@@ -71,11 +71,11 @@ The `SfChat` control includes a built-in event called [MessageTapped](https://he
 {% endhighlight %}
 {% endtabs %}
 
-## MessageDoubleTapped Event and Command
+## MessageDoubleTapped event and command
 
 The `SfChat` control includes built-in features like the [MessageDoubleTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageDoubleTapped) event and [MessageDoubleTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageDoubleTappedCommand). These are activated when a message is double-tapped. You can access the message that was double-tapped and the point of interaction through the [MessageDoubleTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageDoubleTappedEventArgs.html).
 
-### MessageDoubleTapped Event
+### MessageDoubleTapped event
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -95,7 +95,7 @@ The `SfChat` control includes built-in features like the [MessageDoubleTapped](h
 {% endhighlight %}
 {% endtabs %}
 
-### MessageDoubleTapped Command
+### MessageDoubleTapped command
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -132,11 +132,11 @@ The `SfChat` control includes built-in features like the [MessageDoubleTapped](h
 {% endhighlight %}
 {% endtabs %}
 
-## MessageLongPressed Event and Command
+## MessageLongPressed event and command
 
 The `SfChat` control has built-in features like the [MessageLongPressed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageLongPressed) event and [MessageLongPressedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageLongPressedCommand). These are activated when a message is long-pressed. You can access the message that was long-pressed and the point of interaction through the [MessageLongPressedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageLongPressedEventArgs.html).
 
-### MessageLongPressed Event
+### MessageLongPressed event
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -156,7 +156,7 @@ The `SfChat` control has built-in features like the [MessageLongPressed](https:/
 {% endhighlight %}
 {% endtabs %}
 
-### MessageLongPressed Command
+### MessageLongPressed command
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}

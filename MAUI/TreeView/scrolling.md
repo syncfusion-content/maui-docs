@@ -11,7 +11,7 @@ documentation: ug
 
 The `SfTreeView` provides various options to achieve programmatic scrolling. Please walk through the following section in detail to achieve the same.
 
-## Bring Into View
+## Bring into view
 
 The TreeView allows programmatic scrolling based on the data model and [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) using the [BringIntoView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_BringIntoView_Syncfusion_TreeView_Engine_TreeViewNode_System_Boolean_System_Boolean_Microsoft_Maui_Controls_ScrollToPosition_) method.
 
@@ -98,7 +98,7 @@ private void BringIntoView_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-## Scrollbar Visibility
+## Scrollbar visibility
 
 The TreeView provides an option to enable or disable the `Scrollbar` visibility by using the [ScrollBarVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ScrollBarVisibility) property. By default, the value will be `Default`.
 
@@ -112,7 +112,7 @@ treeView.ScrollBarVisibility = ScrollBarVisibility.Always;
 {% endhighlight %}
 {% endtabs %}
 
-## Horizontal Scrolling 
+## Horizontal scrolling 
 
 The TreeView allows you to enable horizontal scrolling based on the content by setting the [EnableHorizontalScrolling](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_EnableHorizontalScrolling) property to `True`. By default, this property is set to `False`.
 
