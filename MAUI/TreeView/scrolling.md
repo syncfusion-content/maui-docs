@@ -87,7 +87,7 @@ The fourth optional parameter `scrollToPosition` in the `BringIntoView` method a
 * `End`: Scroll to make the node positioned at the end of the view.
 
 {% tabs %}
-{% highlight c# hl_lines="6"%}
+{% highlight c# hl_lines="6" %}
 private void BringIntoView_Clicked(object sender, EventArgs e)
 {
     var count = viewModel.ImageNodeInfo.Count;
