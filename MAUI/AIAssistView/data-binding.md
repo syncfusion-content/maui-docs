@@ -92,7 +92,7 @@ N> The `SfAIAssistView.AssistItems` property is of type `IList<IAssistItem>`. To
 
 ## Binding Custom Model Collection
  
-The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control provides support for binding collection of custom data objects through the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ItemsSource) property. This feature allows users to use their own data objects with the control. The [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ItemsSource) property binds a collection of custom data objects to the `SfAIAssistView` and each item in the collection will be converted to an [AssistItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_AssistItems) and displayed in the view. The [ItemsSourceConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ItemsSourceConverter) property sets the converter used to transform data objects into assist items and vice versa.
+The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control provides support for binding collection of custom data objects through the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ItemsSource) property. This feature allows users to use their own data objects with the control. The `ItemsSource` property binds a collection of custom data objects to the `SfAIAssistView` and each item in the collection will be converted to an `AssistItem` and displayed in the view. The [ItemsSourceConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ItemsSourceConverter) property sets the converter used to transform data objects into assist items and vice versa.
  
 {% tabs %}
 {% highlight xaml hl_lines="15 16" %}
@@ -281,7 +281,7 @@ N> If you want your data objects to respond to property changes, then implement 
 {% endhighlight %}
 {% endtabs %}
  
-This converter must implement the [IAssistItemConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.IAssistItemConverter.html) interface. Implement this interface to create a custom converter for the [ItemsSourceConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ItemsSourceConverter) property.
+This converter must implement the [IAssistItemConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.IAssistItemConverter.html) interface. Implement this interface to create a custom converter for the `ItemsSourceConverter` property.
  
 {% tabs %}
 {% highlight c# tabtitle="AssistItemConverter.cs" hl_lines="1" %}
