@@ -23,29 +23,29 @@ The following code example describes the workflow functionality.
 {% highlight XAML %}
 
 <Grid>
-        <Grid.BindingContext>
-            <local:ViewModel />
-        </Grid.BindingContext>
-        <kanban:SfKanban x:Name="kanban"
-                         AutoGenerateColumns="False"
-                         ItemsSource="{Binding Cards}">
-            <kanban:KanbanColumn Title="To Do"
-                                 Categories="Open,Postponed"
-                                 MinimumLimit="5"
-                                 MaximumLimit="15" />
-            <kanban:KanbanColumn Title="In Progress"
-                                 Categories="In Progress"
-                                 MinimumLimit="3"
-                                 MaximumLimit="8" />
-            <kanban:KanbanColumn Title="Code Review"
-                                 Categories="Code Review"
-                                 MinimumLimit="5"
-                                 MaximumLimit="10" />
-            <kanban:KanbanColumn Title="Done"
-                                 Categories="Closed,Closed No Changes,Won't Fix"
-                                 MinimumLimit="8" />
-        </kanban:SfKanban>
-    </Grid>
+    <Grid.BindingContext>
+        <local:ViewModel />
+    </Grid.BindingContext>
+    <kanban:SfKanban x:Name="kanban"
+                     AutoGenerateColumns="False"
+                     ItemsSource="{Binding Cards}">
+        <kanban:KanbanColumn Title="To Do"
+                             Categories="Open,Postponed"
+                             MinimumLimit="5"
+                             MaximumLimit="15" />
+        <kanban:KanbanColumn Title="In Progress"
+                             Categories="In Progress"
+                             MinimumLimit="3"
+                             MaximumLimit="8" />
+        <kanban:KanbanColumn Title="Code Review"
+                             Categories="Code Review"
+                             MinimumLimit="5"
+                             MaximumLimit="10" />
+        <kanban:KanbanColumn Title="Done"
+                             Categories="Closed,Closed No Changes,Won't Fix"
+                             MinimumLimit="8" />
+    </kanban:SfKanban>
+</Grid>
 
 {% endhighlight %}
 
@@ -62,6 +62,11 @@ this.kanban.Workflows = new List<KanbanWorkflow>()
 {% endhighlight %}
 
 {% highlight C# tabtitle="ViewModel.cs" %}
+
+using System.Collections.ObjectModel;
+using System.Reflection;
+using SampleBrowser.Maui.Base.Converters;
+using Syncfusion.Maui.Kanban;
 
 public class ViewModel
 {
