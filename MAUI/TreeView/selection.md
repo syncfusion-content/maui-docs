@@ -72,7 +72,7 @@ treeView.SelectedItems.Clear();
 {% endhighlight %}
 {% endtabs %}
  
-### CurrentItem vs SelectedItem
+### Current item vs selected item
 
 The TreeView gets the selected item by using the [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectedItem) and [CurrentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_CurrentItem) properties. Both `SelectedItem` and `CurrentItem` return the same data object when selecting a single item. When selecting more than one item, the `SelectedItem` property returns the first selected item, and the `CurrentItem` property returns the last selected item.
 

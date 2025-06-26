@@ -13,7 +13,7 @@ This section explains about how to work with MVVM pattern in TreeView.
 
 ## Binding properties in MVVM pattern
 
-### Binding SelectedItem
+### Binding selected item
 
 TreeView support to select the items through binding the [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectedItem) property from view model by implementing the `INotifyPropertyChanged` interface that gives the call back notification to UI.
 
@@ -73,7 +73,7 @@ public class CountriesViewModel
 
 ![.NET MAUI TreeView with selection](Images/selection/maui-treeView-BindingSelectedItem.png)
 
-### Binding SelectedItems
+### Binding selected items
 
 The TreeView supports selecting multiple items by binding the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectedItems) property from the view model with the `ObservableCollection<object>` type.
 

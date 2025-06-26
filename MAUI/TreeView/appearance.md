@@ -74,7 +74,7 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-## BindingContext for ItemTemplate
+## BindingContext for item template
 
 By default, the binding context of the tree view item will be the data model object for Bound Mode and [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html) for Unbound Mode.
 
@@ -140,7 +140,7 @@ namespace GettingStarted
 
 Similarly, you can customize the expander view using the `ExpanderTemplate` property, as shown in the example above.
 
-## ItemTemplate Selector
+## Item template selector
 
 The TreeView allows you to customize the appearance of each item with different templates based on specific constraints using the [DataTemplateSelector](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplateselector?view=net-maui-7.0). You can choose a [DataTemplate](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/datatemplate) for each item at runtime based on the value of the data-bound property using the `DataTemplateSelector`.
 
@@ -226,7 +226,7 @@ treeView.Indentation = 40;
 {% endhighlight %}
 {% endtabs %}
 
-## ExpanderWidth
+## Expander width
 
 The TreeView allows customization of the width of the expander view by setting the [ExpanderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ExpanderWidth) property. The default value of this property is `32d`. This property can be customized at runtime.
 
@@ -240,7 +240,7 @@ treeView.ExpanderWidth = 40;
 {% endhighlight %}
 {% endtabs %}
 
-## ExpanderPosition
+## Expander position
 
 The TreeView allows you to change the position of the expander view by setting the [ExpanderPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ExpanderPosition) property. The default value of this property is `Start`.This property has the following two positions:
 
