@@ -326,7 +326,7 @@ N> The default value of the `IsAnimationEnabled` property is `false`.
 <syncfusion:SfTreeView x:Name="treeView" 
                        IsAnimationEnabled="true">
 {% endhighlight %}
-{% highlight c# hl_lines="2"%}
+{% highlight c# hl_lines="2" %}
 SfTreeView treeView = new SfTreeView();
 treeView.IsAnimationEnabled = true;
 {% endhighlight %}
