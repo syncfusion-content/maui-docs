@@ -30,7 +30,7 @@ Before proceeding, ensure the following are in place:
 2. Name the project and choose a location. Then, click **Next.**
 3. Select the .NET framework version and click **Create.**
  
-## Step 2: Install the syncfusion MAUI Chat nuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Chat NuGet package
  
  1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
  2. Search for [Syncfusion.Maui.Chat](https://www.nuget.org/packages/Syncfusion.Maui.Chat) and install the latest version.
@@ -290,7 +290,7 @@ Before proceeding, ensure the following are in place:
 3. Select the project location, type the project name and press **Enter.**
 4. Then choose **Create project.**
 
-## Step 2: Install the syncfusion MAUI Chat nuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Chat NuGet package
  
  1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
  2. Search for [Syncfusion.Maui.Chat](https://www.nuget.org/packages/Syncfusion.Maui.Chat) and install the latest version.
@@ -551,7 +551,7 @@ Before proceeding, ensure the following are set up:
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-## Step 2: Install the syncfusion<sup>®</sup> MAUI Chat nuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Chat NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.Chat](https://www.nuget.org/packages/Syncfusion.Maui.Chat/) and install the latest version.

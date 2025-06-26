@@ -9,7 +9,7 @@ documentation: ug
 
 # Working with TreeView in .NET MAUI TreeView (SfTreeView)
 
-## Interacting with treeview items
+## Interacting with TreeView items
 
 ### Loaded event
 

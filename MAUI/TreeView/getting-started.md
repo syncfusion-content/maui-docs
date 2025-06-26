@@ -46,13 +46,13 @@ Before proceeding, ensure the following are set up:
 2. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
-## Step 1: Create a new .net maui project
+## Step 1: Create a new .NET MAUI project
 
 1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-## Step 2: Install the syncfusion<sup>®</sup> maui treeview nuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI TreeView NuGet package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.TreeView](https://www.nuget.org/packages/Syncfusion.Maui.TreeView/) and install the latest version.
@@ -91,7 +91,7 @@ namespace GettingStarted
 {% endhighlight %} 
 {% endtabs %}
  
-## Step 4: Add a basic treeview
+## Step 4: Add a basic TreeView
 
  1. To initialize the control, import the `Syncfusion.Maui.TreeView` namespace into your code.
  2. Initialize [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html).
@@ -128,7 +128,7 @@ public partial class MainPage : ContentPage
 {% endtabcontent %}
 {% endtabcontents %}
  
-## Step 2: Install the syncfusion maui treeview nuGet package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI TreeView NuGet package
  
  1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
  2. Search for [Syncfusion.Maui.TreeView](https://www.nuget.org/packages/Syncfusion.Maui.TreeView) and install the latest version.
@@ -167,7 +167,7 @@ namespace GettingStarted
 {% endhighlight %} 
 {% endtabs %}
  
-## Step 4: Add a basic treeview
+## Step 4: Add a basic TreeView
 
  1. To initialize the control, import the `Syncfusion.Maui.TreeView` namespace into your code.
  2. Initialize [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html).
