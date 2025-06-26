@@ -339,7 +339,7 @@ This converter must implement the `IAssistItemConverter` interface. Implement th
  
 N> The `Data` property in `AssistItem` holds a reference to the original data object which is used for data operations.
 
-## Bind the requestcommand property
+## Bind the RequestCommand property
 
 The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control allows you to handle user requests by binding them to the [RequestCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestCommand) property. This command is triggered whenever the user sends a request in the assist view.
 

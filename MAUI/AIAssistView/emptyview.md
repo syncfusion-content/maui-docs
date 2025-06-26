@@ -10,7 +10,7 @@ documentation: ug
 
 The `AI AssistView` control allows you to display and customize the empty view content when no request or response has been added.
 
-## Display empty view when ai assistview has no items
+## Display empty view when AI AssistView has no items
 
 The `EmptyView` property can also be set to a string or a view, which will be displayed when no request or response is available to display in the control.
 

@@ -9,7 +9,7 @@ documentation: ug
 
 # Items in .NET MAUI AI AssistView (SfAIAssistView)
 
-## Configuring common settings for the assist item
+## Configuring common settings for the AssistItem
 
 <table>
 <tr>
