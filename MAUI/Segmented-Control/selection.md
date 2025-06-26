@@ -462,7 +462,7 @@ public partial class MainPage : ContentPage
 
 ## Enable or Disable Ripple Animation
 
-The [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html) provides a ripple animation that visually highlights a segment when it is tapped. This effect applies to both default segment items and items defined using custom data templates. You can enable or disable this animation using the `EnableRippleEffect` property. Set `EnableRippleEffect` to true to display the ripple effect when a segment is selected. Set it to false to disable the ripple animation.
+The [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html) provides a ripple animation that visually highlights a segment when it is tapped. This effect applies to both default segment items and items defined using custom data templates. You can enable or disable this animation using the [`EnableRippleEffect`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_EnableRippleEffect) property. Set [`EnableRippleEffect`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_EnableRippleEffect) to true to display the ripple effect when a segment is selected. Set it to false to disable the ripple animation.
 
 
 {% tabs %}
