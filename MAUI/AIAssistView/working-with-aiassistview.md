@@ -40,7 +40,7 @@ public MainPage()
 The `SfAIAssistView` control includes a built-in event called [StopResponding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_StopResponding) and a command named [StopRespondingCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_StopRespondingCommand). These are triggered when the `Stop Responding` button is clicked.
 To cancel the response using the `StopRespondingCommand` or `StopResponding` event, you can include logic to stop the ongoing response as shown below. 
 
-#### StopResponding event
+#### Stop responding event
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -61,7 +61,7 @@ private void OnStopResponding(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-#### StopResponding command
+#### Stop responding command
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -112,7 +112,7 @@ public class ViewModel : INotifyPropertyChanged
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-aiassistview)
 
-### StopResponding text
+### Stop responding text
 
 The `SfAIAssistView` control allows you to set custom text for the StopResponding view using the [StopRespondingText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_StopRespondingText) property.
 
@@ -140,7 +140,7 @@ public MainPage()
 
 ![Stop Responding Text in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-stopresondingtext.png)
 
-### StopResponding UI customization
+### StopResponding ui customization
 
 The `SfAIAssistView` control allows you to fully customize the Stop Responding view appearance by using the [StopRespondingTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_StopRespondingTemplate) property. This property lets you define a custom layout and style for the StopResponding UI.
 

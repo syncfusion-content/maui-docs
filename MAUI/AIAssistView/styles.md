@@ -11,7 +11,7 @@ documentation: ug
 
 You can style the elements of the [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control by creating resource dictionaries and assigning values to the in-built keys assigned for each individual element.
 
-## AI AssistView background
+## AI assist view background
 
 To set a solid color as the background for [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html), assign a color to the `SfAssistView.Background` property. However, if you want the solid color to be applied to the control, also set the background as transparent, as shown in the below code sample.
 

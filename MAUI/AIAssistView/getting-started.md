@@ -21,13 +21,13 @@ Before proceeding, ensure the following are in place:
  1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
  2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.8 or later).
 
-## Step 1: Create a .NET MAUI project
+## Step 1: Create a .net maui project
 
 1. Go to **File > New > Project** and choose the **.NET MAUI App** template.
 2. Name the project and choose a location. Then, click **Next.**
 3. Select the .NET framework version and click **Create.**
  
-## Step 2: Install the syncfusion MAUI AI AssistView nuGet package
+## Step 2: Install the syncfusion maui ai assistview nuGet package
  
  1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
  2. Search for [Syncfusion.Maui.AIAssistView](https://www.nuget.org/packages/Syncfusion.Maui.AIAssistView) and install the latest version.
@@ -66,7 +66,7 @@ namespace GettingStarted
 {% endhighlight %} 
 {% endtabs %}
 
-## Step 4: Add a basic AI AssistView
+## Step 4: Add a basic ai assistview
 
  1. To initialize the control, import the `Syncfusion.Maui.AIAssistView` namespace into your code.
  2. Initialize [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html).
@@ -191,7 +191,7 @@ Next, create a view model class and initialize the collection of [AssistItem](ht
 
 N> The `SfAIAssistView.AssistItems` property is of type `IList<IAssistItem>`. To ensure the [AssistItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_AssistItems) property functions correctly, it is recommended to use a collection property in the ViewModel with the same type, such as `ObservableCollection<IAssistItem>`.
 
-### Bind AssistItems
+### Bind assist items
 
 Set the `ViewModel` as the BindingContext for the AI AssistView or the parent ContentPage. This allows data binding between the UI and the ViewModel properties.
 To populate AI AssistView, bind the assist items in ViewModel to [AssistItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_AssistItems) property of AI AssistView.
@@ -248,14 +248,14 @@ Before proceeding, ensure the following are in place:
 2. Set up a .NET MAUI environment with Visual Studio Code.
 3. Ensure that the .NET MAUI extension is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
 
-## Step 1: Create a new .NET MAUI project
+## Step 1: Create a new .net maui project
 
 1. Open the command palette by pressing `Ctrl+Shift+P` and type **.NET:New Project** and enter.
 2. Choose the **.NET MAUI App** template.
 3. Select the project location, type the project name and press **Enter.**
 4. Then choose **Create project.**
 
-## Step 2: Install the syncfusion MAUI AI AssistView nuGet package
+## Step 2: Install the syncfusion maui ai assistview nuGet package
  
  1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
  2. Search for [Syncfusion.Maui.AIAssistView](https://www.nuget.org/packages/Syncfusion.Maui.AIAssistView) and install the latest version.
@@ -294,7 +294,7 @@ namespace GettingStarted
 {% endhighlight %} 
 {% endtabs %}
 
-## Step 4: Add a basic AI AssistView
+## Step 4: Add a basic ai assistview
 
  1. To initialize the control, import the `Syncfusion.Maui.AIAssistView` namespace into your code.
  2. Initialize [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html).
@@ -419,7 +419,7 @@ Next, create a view model class and initialize the collection of [AssistItem](ht
 
 N> The `SfAIAssistView.AssistItems` property is of type `IList<IAssistItem>`. To ensure the [AssistItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_AssistItems) property functions correctly, it is recommended to use a collection property in the ViewModel with the same type, such as `ObservableCollection<IAssistItem>`.
 
-### Bind AssistItems
+### Bind assist items
 
 Set the `ViewModel` as the BindingContext for the AI AssistView or the parent ContentPage. This allows data binding between the UI and the ViewModel properties.
 To populate AI AssistView, bind the assist items in ViewModel to [AssistItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_AssistItems) property of AI AssistView.
@@ -478,7 +478,7 @@ Before proceeding, ensure the following are set up:
 2. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
-## Step 1: Create a new .NET MAUI project
+## Step 1: Create a new .net maui project
 
 1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
 2. Enter the Project Name, Solution Name, and Location.
@@ -523,7 +523,7 @@ namespace GettingStarted
 {% endhighlight %} 
 {% endtabs %}
 
-## Step 4: Add a basic AI AssistView
+## Step 4: Add a basic ai assistview
 
  1. To initialize the control, import the `Syncfusion.Maui.AIAssistView` namespace into your code.
  2. Initialize [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html).

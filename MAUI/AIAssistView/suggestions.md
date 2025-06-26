@@ -172,7 +172,7 @@ public partial class MainPage : ContentPage
 
 The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html) control enables the display of a list of suggestions for users to select from. Suggestions are supported for all response item types in `SfAIAssistView`.
 
-### Displaying ResponseItem suggestions
+### Displaying response item suggestions
 
 Suggestions are displayed by creating an instance of [AssistSuggestion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistSuggestion.html) and assigning it to the item's [Suggestion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_Suggestion) property.
 
@@ -344,7 +344,7 @@ The [AssistItemSuggestion.Orientation](https://help.syncfusion.com/cr/maui/Syncf
 {% endhighlight %}
 {% endtabs %}
 
-#### Changing the Item spacing of suggestions
+#### Changing the item spacing of suggestions
 
 The [AssistItemSuggestion.ItemSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItemSuggestion.html#Syncfusion_Maui_AIAssistView_AssistItemSuggestion_ItemSpacing) property allows you to display suggestions with Spacing. By, default, the spacing is 8.
 
@@ -384,7 +384,7 @@ The [AssistItemSuggestion.ItemSpacing](https://help.syncfusion.com/cr/maui/Syncf
 {% endhighlight %}
 {% endtabs %}
 
-### ResponseItem suggestion customization
+### Response item suggestion customization
 The `SfAIAssistView` control allows you to fully customize the appearance of the response suggestion items using the [ResponseSuggestionTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ResponseSuggestionTemplate) property. This property lets you define a custom layout and style for the suggestion item UI.
 
 {% tabs %}
