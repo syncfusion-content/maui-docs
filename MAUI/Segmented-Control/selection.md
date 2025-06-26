@@ -512,6 +512,8 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+![Enable or Disable Ripple Effect Animation in .NET MAUI Segmented control.](images/selection/enable-ripple-effect.gif)
+
 ## Notifying segment selection changes
 The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_SelectionChanged) event is triggered once the segment is selected in the segmented control. The [SelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SelectionChangedEventArgs.html) has the following values, which provide information for the `SelectionChanged` event.
 

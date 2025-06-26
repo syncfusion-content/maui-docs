@@ -621,7 +621,7 @@ this.dataGrid.CollapseDetailsViewAt(0);
 
 By default, the expander will be visible for all the data rows in parent DataGrid even if its [RelationalColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ViewDefinition.html#Syncfusion_Maui_DataGrid_ViewDefinition_RelationalColumn) property has an empty collection or null.
 
-Setting the [HideEmptyDataGridViewDefinition]() property to `true` will hide the expander from the view when the respective `RelationalColumn` property contains an empty collection or null.
+Setting the [HideEmptyDataGridViewDefinition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_HideEmptyDataGridViewDefinition) property to `true` will hide the expander from the view when the respective `RelationalColumn` property contains an empty collection or null.
 
 {% tabs %}
 {% highlight xaml %}
@@ -640,7 +640,7 @@ dataGrid.HideEmptyDataGridViewDefinition = true;
 
 ## Hide Indent Cells in Details view
 
-By default the indent cell of details view `SfDataGrid` is always displayed. You can hide the indent cell by setting [ShowDetailsViewIndentCell]() property to `false` for the corresponding parent DataGrid. The default value of `ShowDetailsViewIndentCell` property is `true`.
+By default the indent cell of details view `SfDataGrid` is always displayed. You can hide the indent cell by setting [ShowDetailsViewIndentCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ShowDetailsViewIndentCell) property to `false` for the corresponding parent DataGrid. The default value of `ShowDetailsViewIndentCell` property is `true`.
 
 {% tabs %}
 {% highlight xaml %}

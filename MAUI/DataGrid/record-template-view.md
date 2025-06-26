@@ -9,9 +9,9 @@ documentation: UG
 
 # Record Template View in Maui DataGrid (SfDataGrid)
 
-The SfDataGrid provides support to represent additional information of a row using [TemplateViewDefinition]() that can be defined in datagrid. It allows you to load any controls to [TemplateViewDefinition.RowTemplate]() in order to display the additional information of a row. You can expand or collapse the row template view by using an expander in a row or programmatically.
+The SfDataGrid provides support to represent additional information of a row using [TemplateViewDefinition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.TemplateViewDefinition.html) that can be defined in datagrid. It allows you to load any controls to [TemplateViewDefinition.RowTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.TemplateViewDefinition.html#Syncfusion_Maui_DataGrid_TemplateViewDefinition_RowTemplate) in order to display the additional information of a row. You can expand or collapse the row template view by using an expander in a row or programmatically.
 
-<img alt="Unbound Rows" src="Images\record-template-view\maui-datagrid-row-template.png" width="404"/>
+<img alt="Unbound Rows" src="Images\record-template-view\maui-datagrid-row-template.png" width="504"/>
 
 ## Defining row template
 
@@ -20,7 +20,7 @@ Template view can be generated for the master row by using the `RowTemplate` def
 Follow the below steps to define the row template,
 * Create `TemplateViewDefinition`.
 * Define data template for the `TemplateViewDefinition.RowTemplate` property.
-* Then add `TemplateViewDefinition` to the [SfDataGrid.DetailsViewDefinition](). 
+* Then add `TemplateViewDefinition` to the [SfDataGrid.DetailsViewDefinition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DetailsViewDefinition). 
 
 You can bind the row data using the `Data.PropertyName` (where Data is the underlying object bound).
 
@@ -213,13 +213,13 @@ public class DetailsViewTemplateSelector : DataTemplateSelector
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Unbound Rows" src="Images\record-template-view\maui-datagrid-row-template-selector.png" width="404"/>
+<img alt="Unbound Rows" src="Images\record-template-view\maui-datagrid-row-template-selector.png" width="504"/>
 
 ## Height customization
 
 ### Height mode
 
-You can customize height of the row that contains `RowTemplate` by using the [TemplateViewDefinition.HeightMode]() property. The height modes are as follows.
+You can customize height of the row that contains `RowTemplate` by using the [TemplateViewDefinition.HeightMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.TemplateViewDefinition.html#Syncfusion_Maui_DataGrid_TemplateViewDefinition_HeightMode) property. The height modes are as follows.
 
 <table>
 <tr>
@@ -258,7 +258,7 @@ Arranges template for the <code>ViewPortHeight</code> when the {{`RowTemplate`'|
 
 ## Populating record template view using events
 
-You can set the [RowTemplate]() on-demand when expanding the record by using the [GridDetailsViewExpandingEventArgs.RowTemplate]() property in [SfDataGrid.DetailsViewExpanding]() event handler.
+You can set the [RowTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.TemplateViewDefinition.html#Syncfusion_Maui_DataGrid_TemplateViewDefinition_RowTemplate) on-demand when expanding the record by using the [DataGridDetailsViewExpandingEventArgs.RowTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDetailsViewExpandingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridDetailsViewExpandingEventArgs_RowTemplate) property in [SfDataGrid.DetailsViewExpanding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DetailsViewExpanding) event handler.
 
 {% tabs %}
 {% highlight xaml %}
@@ -298,7 +298,7 @@ The SfDataGrid allows you to expand or collapse the `RowTemplate` programmatical
 
 ### Expand or collapse all the row template
 
-You can expand or collapse all the `RowTemplate` by using the [ExpandAllDetailsView]() and [CollapseAllDetailsView]() methods.
+You can expand or collapse all the `RowTemplate` by using the [ExpandAllDetailsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ExpandAllDetailsView) and [CollapseAllDetailsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CollapseAllDetailsView) methods.
 
 {% tabs %}
 {% highlight c# %}
@@ -309,7 +309,7 @@ this.dataGrid.CollapseAllDetailsView();
 
 ### Expand or collapse row template based on record index
 
-You can expand or collapse the `RowTemplate` based on the record index by using the [ExpandDetailsViewAt]() and [CollapseDetailsViewAt]() methods.
+You can expand or collapse the `RowTemplate` based on the record index by using the [ExpandDetailsViewAt](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ExpandDetailsViewAt_System_Int32_) and [CollapseDetailsViewAt](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CollapseDetailsViewAt_System_Int32_) methods.
 
 {% tabs %}
 {% highlight c# %}
@@ -322,7 +322,7 @@ this.dataGrid.CollapseDetailsViewAt(1);
 
 ### DetailsViewExpanding
 
-The [DetailsViewExpanding]() event is raised when the `RowTemplate` is being expanded by using an expander.
+The [DetailsViewExpanding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DetailsViewExpanding) event is raised when the `RowTemplate` is being expanded by using an expander.
 
 {% tabs %}
 {% highlight c# %}
@@ -336,7 +336,7 @@ void dataGrid_DetailsViewExpanding(object sender, DataGridDetailsViewExpandingEv
 
 ### DetailsViewExpanded
 
-The [DetailsViewExpanded]() event is raised when the `RowTemplate` is expanded by using an expander.
+The [DetailsViewExpanded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DetailsViewExpanded) event is raised when the `RowTemplate` is expanded by using an expander.
 
 {% tabs %}
 {% highlight c# %}
@@ -350,7 +350,7 @@ void dataGrid_DetailsViewExpanded(object sender, DataGridDetailsViewExpandedEven
 
 ### DetailsViewCollapsing
 
-The [DetailsViewCollapsing]() event is raised when the `RowTemplate` is being collapsed by using an expander.
+The [DetailsViewCollapsing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DetailsViewCollapsing) event is raised when the `RowTemplate` is being collapsed by using an expander.
 
 {% tabs %}
 {% highlight c# %}
@@ -364,7 +364,7 @@ void dataGrid_DetailsViewCollapsing(object sender, DataGridDetailsViewCollapsing
 
 ### DetailsViewCollapsed
 
-The [DetailsViewCollapsed]() event is raised when the `RowTemplate` is collapsed by using an expander.
+The [DetailsViewCollapsed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DetailsViewCollapsed) event is raised when the `RowTemplate` is collapsed by using an expander.
 
 {% tabs %}
 {% highlight c# %}
@@ -378,7 +378,7 @@ void dataGrid_DetailsViewCollapsed(object sender, DataGridDetailsViewCollapsedEv
 
 ### Cancel expanding or collapsing operations through events
 
-You can cancel the expanding operation when expanding the `RowTemplate` by using the [DataGridDetailsViewExpandingEventArgs.Cancel]() property in the [DetailsViewExpanding]() event handler.
+You can cancel the expanding operation when expanding the `RowTemplate` by using the [DataGridDetailsViewExpandingEventArgs.Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDetailsViewExpandingEventArgs.html) property in the [DetailsViewExpanding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DetailsViewExpanding) event handler.
 
 {% tabs %}
 {% highlight c# %}
@@ -393,7 +393,7 @@ void dataGrid_DetailsViewExpanding(object sender, DataGridDetailsViewExpandingEv
 {% endhighlight %}
 {% endtabs %}
 
-Similarly, the collapsing operation can also be canceled through the [DataGridDetailsViewCollapsingEventArgs.Cancel]() property in [DetailsViewCollapsing]() event handler.
+Similarly, the collapsing operation can also be canceled through the [DataGridDetailsViewCollapsingEventArgs.Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridDetailsViewCollapsingEventArgs.html) property in [DetailsViewCollapsing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DetailsViewCollapsing) event handler.
 
 {% tabs %}
 {% highlight c# %}

@@ -16,7 +16,7 @@ The .NET MAUI Color Picker is a UI component that enables users to select a colo
 
 * **Color selection modes** : Switch between multiple color modes such as Palette and Spectrum.
 * **Custom colors** : Users can add or remove their own custom colors.
-* **Manual entry** : Supports direct input of color values in RGB, HSL, and HEX formats.
+* **Manual entry** : Supports direct input of color values in RGB, HSV, and HEX formats.
 * **Opacity control** : Adjust the transparency level of a selected color.
 * **Recent colors panel** : Automatically records and displays a list of recently selected colors for quick reuse.
 * **Theme adaptation** : Adapts to the system or app's current theme, ensuring visual consistency.
