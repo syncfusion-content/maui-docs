@@ -73,7 +73,7 @@ You can customize the datetime picker header appearance by using the [HeaderTemp
 ![Set header template in .NET MAUI Date Time picker.](images/customizations/maui-date-time-picker-header-template.png)
 
 N> 
-* If a template is applied to the header in the [DateTimePickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerHeaderView.html) will not work except [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerHeaderView.html#Syncfusion_Maui_Picker_PickerHeaderView_DividerColor) Property.
+* If a template is applied to the header in the [DateTimePickerHeaderView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerHeaderView.html) will not work except [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.DateTimePickerHeaderView.html#Syncfusion_Maui_Picker_DateTimePickerHeaderView_DividerColor) Property.
 * When a template is applied to the DateTimePicker Header, the built-in time selection switch becomes non-functional.
 
 ### Custom Header appearance using DataTemplateSelector
