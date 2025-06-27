@@ -902,7 +902,7 @@ If you don’t want to display images, buttons, or text(title, subtitle, descrip
 **Card message without button**
 ![Card message type without button in .NET MAUI Chat](images/messages/maui-chat-card-message-without-button.png)
 
-### Event and command
+### Event and Command
 
 The [CardMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.CardMessage.html) comes with a built-in [CardTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CardTapped) event and [CardCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CardCommand) that will be fired upon tapping a button in a card or tapping any card in the message. You can get the selected Card, the clicked CardButton and the actual `CardMessage` via the [CardTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.CardTappedEventArgs.html) as [CardTappedEventArgs.Card](), [CardTappedEventArgs.Action]() and [CardTappedEventArgs.Message](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.CardTappedEventArgs.html#Syncfusion_Maui_Chat_CardTappedEventArgs_Message) respectively, in both the `CardTapped` event handler and action of `CardCommand`. Handling this event/command by setting [CardTappedEventArgs.Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.CardTappedEventArgs.html#Syncfusion_Maui_Chat_CardTappedEventArgs_Handled) prevents the `Card.Title` or `CardButton.Value` from getting added as a new message.
 
@@ -1509,7 +1509,7 @@ By default, the keyboard will be open in view, even after a message is sent or f
 {% endhighlight %}
 {% endtabs %}
 
-## Restricting multi-line input in editor (single line messages) in maui chat
+## Restricting multi-line input in editor (single line messages) in chat
 
 By default, users can input multi-line messages by adding new lines in the editor within the chat control for outgoing messages. However, if you wish to limit multi-line input and display a send button on the keyboard instead, you can achieve this by setting the [AllowMultilineInput](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_AllowMultilineInput) property to `false`.
 
