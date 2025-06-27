@@ -10,18 +10,18 @@ keywords : .net maui color picker, maui color picker, .net maui color picker con
 
 # Events in .NET MAUI Color Picker (SfColorPicker)
 
-The `SfColorPicker` control provides three built-in events to handle color selection changes:
+The [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html) control provides three built-in events to handle color selection changes:
 
-* ColorChanging
-* ColorChanged
-* ColorSelected
+* [ColorChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ColorChanging)
+* [ColorChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ColorChanged)
+* [ColorSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ColorSelected)
 
 ## ColorChanging event
 
-The `ColorChanging` event is triggered while the color is being changed. The event arguments are of type `ColorChangingEventArgs` and provide the following properties:
+The [ColorChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ColorChanging) event is triggered while the color is being changed. The event arguments are of type [ColorChangingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorChangingEventArgs.html) and provide the following properties:
 
-* `CurrentColor:` Gets the current color value before the change.
-* `NewColor:` Gets the newly selected color.
+* [CurrentColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorChangingEventArgs.html#Syncfusion_Maui_Inputs_ColorChangingEventArgs_CurrentColor) : Gets the current color value before the change.
+* [NewColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorChangingEventArgs.html#Syncfusion_Maui_Inputs_ColorChangingEventArgs_NewColor) : Gets the newly selected color.
 * `Cancel:` Determines whether the color selection should be canceled.
 
  {% tabs %}
@@ -46,15 +46,15 @@ private void OnColorChanging(object sender, ColorChangingEventArgs e)
 
 ## ColorChanged event
 
-The `ColorChanged` event is triggered when the user selects a color. Its behavior depends on the `IsActionButtonsVisible` property:
+The [ColorChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ColorChanged) event is triggered when the user selects a color. Its behavior depends on the [IsActionButtonsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_IsActionButtonsVisible) property:
 
-* If `IsActionButtonsVisible` is set to false, the event is triggered immediately while selecting a color.
-* If `IsActionButtonsVisible` is set to true, the event is triggered only when the selected color is applied.
+* If [IsActionButtonsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_IsActionButtonsVisible) is set to false, the event is triggered immediately while selecting a color.
+* If [IsActionButtonsVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_IsActionButtonsVisible) is set to true, the event is triggered only when the selected color is applied.
 
-The event arguments are of type `ColorChangedEventArgs` and include the following properties:
+The event arguments are of type [ColorChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorChangedEventArgs.html) and include the following properties:
 
-* `OldColor:` The previously selected color.
-* `NewColor:` The newly selected color.
+* [OldColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorChangedEventArgs.html#Syncfusion_Maui_Inputs_ColorChangedEventArgs_OldColor) : The previously selected color.
+* [NewColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorChangedEventArgs.html#Syncfusion_Maui_Inputs_ColorChangedEventArgs_NewColor) : The newly selected color.
 
 {% tabs %}
 
@@ -87,9 +87,9 @@ private void OnColorChanged(object sender, ColorChangedEventArgs e)
 
 ## ColorSelected event
 
-The `ColorSelected` event is triggered when the user selects a color by clicking or tapping on the selected color view. The event arguments are of type `ColorSelectedEventArgs` and include the following property:
+The [ColorSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ColorSelected) event is triggered when the user selects a color by clicking or tapping on the selected color view. The event arguments are of type [ColorSelectedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorSelectedEventArgs.html) and include the following property:
 
-* `SelectedColor:` The color currently selected by the user.
+* [SelectedColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorSelectedEventArgs.html#Syncfusion_Maui_Inputs_ColorSelectedEventArgs_SelectedColor) : The color currently selected by the user.
 
 {% tabs %}
 
