@@ -618,7 +618,7 @@ SfComboBox comboBox = new SfComboBox()
 
 ### Customize the visibility of Dropdown Shadow
 
-The `IsDropDownShadowVisible` property is used to customize the visibility of the dropdown shadow.
+The [IsDropDownShadowVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_IsDropDownShadowVisible) property is used to customize the visibility of the dropdown shadow.
 
 {% tabs %}
 {% highlight xaml %}
