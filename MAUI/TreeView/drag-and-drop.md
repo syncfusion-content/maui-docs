@@ -150,10 +150,10 @@ The [ItemDragging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.
 
 * [Action](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemDraggingEventArgs.html#Syncfusion_Maui_TreeView_ItemDraggingEventArgs_Action): Returns the drag `Action` such as start, dragging, dropping and drop.
 * [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemDraggingEventArgs.html#Syncfusion_Maui_TreeView_ItemDraggingEventArgs_Handled): If this member is set to true, dragging can be handled. It is applicable only if Action is `Dragging`.
-* [Cancel](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.canceleventargs.cancel?view=net-9.0) : If this member is set to true, the drag and drop operation will be canceled.
 * [DraggingNode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemDraggingEventArgs.html#Syncfusion_Maui_TreeView_ItemDraggingEventArgs_DraggingNodes): Returns the `DraggingNodes`.
 * [DropPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemDraggingEventArgs.html#Syncfusion_Maui_TreeView_ItemDraggingEventArgs_DropPosition): Returns the position where dragged nodes are going to be dropped.
 * [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemDraggingEventArgs.html#Syncfusion_Maui_TreeView_ItemDraggingEventArgs_Position): Returns the touch position of the drag item from the screen coordinates.
+* `Cancel`: If this member is set to true, the drag and drop operation will be canceled.
 
 ## Auto scroll options
 
@@ -254,9 +254,9 @@ treeView.DragAndDropController.AutoExpandDelay = new TimeSpan(0, 0, 0, 1);
 
 ## Disable dragging for particular item
 
-To disable dragging for a particular item, handle the [ItemDragging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemDragging) event based on the conditions of the `Action` event argument.
+To disable dragging for a particular item, handle the `ItemDragging` event based on the conditions of the `Action` event argument.
 
-You can cancel the dragging action for a particular item by setting the [Cancel](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.canceleventargs.cancel?view=net-9.0) property of the [ItemDraggingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemDraggingEventArgs.html).
+You can cancel the dragging action for a particular item by setting the `Cancel` property of the `ItemDraggingEventArgs`.
 
 {% tabs %}
 {% highlight c# hl_lines="8" %}
@@ -276,9 +276,9 @@ private void TreeView_ItemDragging(object sender, ItemDraggingEventArgs e)
 
 ## Cancel dropping for the dragged item
 
-To cancel dropping for the dragged item, handle the [ItemDragging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemDragging) event based on the conditions of the `Action` event argument.
+To cancel dropping for the dragged item, handle the `ItemDragging` event based on the conditions of the `Action` event argument.
 
-You can cancel the dropping action for an item by setting the [Cancel](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.canceleventargs.cancel?view=net-9.0) property of the [ItemDraggingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemDraggingEventArgs.html).
+You can cancel the dropping action for an item by setting the `Cancel` property of the `ItemDraggingEventArgs`.
 
 {% tabs %}
 {% highlight c# hl_lines="8" %}
