@@ -1507,7 +1507,7 @@ By default, the keyboard will be open in view, even after a message is sent or f
 {% endhighlight %}
 {% endtabs %}
 
-## Restricting multi-line input in editor (single line messages) in maui chat
+## Restricting multi-line input in editor (single line messages) in chat
 
 By default, users can input multi-line messages by adding new lines in the editor within the chat control for outgoing messages. However, if you wish to limit multi-line input and display a send button on the keyboard instead, you can achieve this by setting the [AllowMultilineInput](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_AllowMultilineInput) property to `false`.
 
