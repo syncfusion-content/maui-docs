@@ -149,11 +149,11 @@ N> View sample in [GitHub](https://github.com/SyncfusionExamples/how-to-customiz
 The `ItemDragging` event is raised while dragging and dropping the item in the `SfTreeView`. The `ItemDraggingEventArgs` has the following members which provide the information for the ItemDragging event:
 
 * `Action`: Returns the drag `Action` such as start, dragging, dropping and drop.
-* `Handled`: If ItemDragging event is handled, dragging will not be performed. It is applicable only if `Action` is `Dragging`.
-* `Cancel` : If this member is set to true, the drag and drop operation will be canceled.
 * `DraggingNode`: Returns the `DraggingNodes`.
 * `DropPosition`: Returns the position where dragged nodes are going to be dropped.
 * `Position`: Returns the touch position of the drag item from the screen coordinates.
+* `Handled`: If `ItemDragging` event is handled, dragging will not be performed. It is applicable only if `Action` is `Dragging`.
+* `Cancel` : If this member is set to `true, the drag and drop operation will be canceled.
 
 ## Auto scroll options
 
