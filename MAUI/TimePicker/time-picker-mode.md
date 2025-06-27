@@ -171,7 +171,7 @@ SfTimePicker allows the display of the Popup to render at any desired size by se
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfdatePicker x:Name="timePicker" 
+<picker:SfTimePicker x:Name="timePicker" 
                          Mode="Dialog"
                          PopupWidth="300"
                          PopupHeight="400"/>
