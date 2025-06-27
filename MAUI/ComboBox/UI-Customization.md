@@ -1464,7 +1464,7 @@ N> When `WindowSoftInputModeAdjust.Resize` is set in the sample and `SfComboBox`
 
 
 ### Value change notification
-When the value of comboBox changes, the `ValueChanged` event is triggered. This event is raised when the value changes due to user interaction, programmatic updates, or any other mechanism. It provides both `OldValue` and `NewValue`, allowing for responsive handling of changes. The ValueChanged event contains the following properties:
+When the value of comboBox changes, the [ValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_ValueChanged) event is triggered. This event is raised when the value changes due to user interaction, programmatic updates, or any other mechanism. It provides both `OldValue` and `NewValue`, allowing for responsive handling of changes. The ValueChanged event contains the following properties:
 
 * `OldValue` – Contains the previous text value before the change.
 * `NewValue` – Contains the new text value after the change.
