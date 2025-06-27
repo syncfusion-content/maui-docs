@@ -7,7 +7,7 @@ control: SfAIAssistView
 documentation: ug
 ---
 
-# Header customization in .NET MAUI AI AssistView (SfAIAssistView)
+# Header Customization in .NET MAUI AI AssistView (SfAIAssistView)
 
 This section explains how to define and customize the header in the [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html).
 

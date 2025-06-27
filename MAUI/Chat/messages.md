@@ -7,7 +7,7 @@ control: SfChat
 documentation: ug
 ---
 
-# Messages in .NET Maui Chat (SfChat)
+# Messages in .NET MAUI Chat (SfChat)
 
 ## Configuring common settings for the message
 
@@ -772,7 +772,7 @@ Unlike the other messages, the `ImageMessage` can also be shown as an outgoing m
 
 ![Outgoing Image message in .NET MAUI Chat](images/messages/maui-chat-outgoing-image-message.png)
 
-## Card Message
+## Card message
 
 You can show a list of interactive cards with each card containing an image, a list of buttons, and text (title, subtitle, and description) to tie in with the cards of popular bot frameworks. Use the [Card.Image](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.Card.html#Syncfusion_Maui_Chat_Card_Image), [Card.Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.Card.html#Syncfusion_Maui_Chat_Card_Title), [Card.Subtitle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.Card.html#Syncfusion_Maui_Chat_Card_Subtitle), and [Card.Description](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.Card.html#Syncfusion_Maui_Chat_Card_Description) properties to display the image, title, subtitle, and description in a card respectively.
 
@@ -989,7 +989,7 @@ N> The Action argument in `CardTappedEventArgs` holds a valid value only when cl
 {% endhighlight %}
 {% endtabs %}
 
-## Delivery States
+## Delivery states
 The `SfChat` provides built-in support for displaying message delivery states such as sent, delivered, read, and failed. This feature enhances communication transparency by showing the current status of each message.
 The [ShowDeliveryState](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowDeliveryState) property determines whether delivery state indicators are displayed for messages. By default, this property is set to `false`.
 
@@ -1509,7 +1509,7 @@ By default, the keyboard will be open in view, even after a message is sent or f
 {% endhighlight %}
 {% endtabs %}
 
-## Restricting multi-line input in editor (single line messages) in Maui chat
+## Restricting multi-line input in editor (single line messages) in chat
 
 By default, users can input multi-line messages by adding new lines in the editor within the chat control for outgoing messages. However, if you wish to limit multi-line input and display a send button on the keyboard instead, you can achieve this by setting the [AllowMultilineInput](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_AllowMultilineInput) property to `false`.
 
@@ -1601,7 +1601,7 @@ By default, the author’s name and avatar are displayed for the incoming messag
 
 ![Hide incoming avatar and author visibility in .NET MAUI Chat](images/messages/maui-chat-hide-avatar.png)
 
-## MessageTimestampFormat for Incoming and Outgoing messages
+## MessageTimestampFormat for incoming and outgoing messages
 
 The `SfChat` allows you specify the format in which timestamps are shown for outgoing and incoming messages. The date and time representation can be customized using the [IncomingMessageTimestampFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_IncomingMessageTimestampFormat) and [OutgoingMessageTimestampFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_OutgoingMessageTimestampFormat) properties.
 
@@ -1730,7 +1730,7 @@ The `SfChat` allows to hide the message input view (editor) by setting `false` t
 {% endhighlight %}
 {% endtabs %}
 
-## Messages without author (System Generated Messages / Admin messages)
+## Messages without author (system generated messages / admin messages)
 
 Using templates, you can show messages with any information, similar to security alerts in WhatsApp or admin notifications. These messages can be put into the [Messages](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Messages) collection without specifying an author.
 In the provided code example, we've set up a custom template to display a security message from an admin when the author of the message is not specified.

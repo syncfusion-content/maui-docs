@@ -11,7 +11,7 @@ documentation: ug
 
 The `SfTreeView` provides support for loading [CheckBox](https://help.syncfusion.com/maui/checkbox/getting-started) in each node and enables users to check/uncheck the corresponding node. So, you should add a `CheckBox` in the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemTemplate) of the `SfTreeView` and bind the [IsChecked](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_IsChecked) property of the [TreeViewNode](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html).
 
-## Working with CheckBox in BoundMode
+## Working with checkbox in bound mode
 
 When populating treeview nodes from [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemsSource), accessing or modifying checked items can be achieved using [CheckedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_CheckedItems) property.
 
@@ -186,7 +186,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/load-checkbox-i
 
 ![CheckBox nodes in .NET MAUI TreeView in bound mode](Images/checkbox/maui-treeView-checkboxBoundMode.png)
 
-## Working with Checkbox in UnboundMode
+## Working with checkbox in unbound mode
 
 You can directly set the CheckBox state by setting the [TreeViewNode.IsChecked](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_IsChecked) property value while creating nodes.
 
@@ -242,7 +242,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/load-checkbox-i
 
 ![Checkbox nodes in .NET MAUI TreeView in unbound mode](Images/checkbox/maui-treeView-checkboxUnboundMode.png)
 
-## CheckBox State
+## CheckBox state
 
 The `SfTreeView` handles the [IsChecked](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.TreeViewNode.html#Syncfusion_TreeView_Engine_TreeViewNode_IsChecked) property (checkbox state) of `TreeViewNode` based on [CheckBoxMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_CheckBoxMode) property. `CheckBoxMode` property determines the behavior of parent and child node's CheckBox states when users check or uncheck a node. Its default value is `None`. Checkbox contains the  following three states:
 

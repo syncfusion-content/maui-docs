@@ -6,7 +6,7 @@ platform: MAUI
 control: Chat
 documentation: ug
 ---
-# Time break in .NET MAUI Chat (SfChat)
+# Time Break in .NET MAUI Chat (SfChat)
 
 The `Chat` control provides a simple way to organize messages by their date and time of creation, allowing users to easily identify messages in the order they were created. To display the time break view in Chat, set the [ShowTimeBreak](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowTimeBreak) property to `true`.
 

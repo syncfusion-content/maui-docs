@@ -7,7 +7,7 @@ control: SfChat
 documentation: ug
 ---
 
-# Typing indicator in .NET MAUI Chat (SfChat)
+# Typing Indicator in .NET MAUI Chat (SfChat)
 
 In `SfChat`, typing indicator indicates with an animation, that a user (or users) is currently typing, thereby providing an enhanced user experience. To show or hide the typing indicator set the [ShowTypingIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowTypingIndicator) property to `true` or `false` respectively. To show user image and text in the typing indicator create a new instance of [TypingIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_TypingIndicator), set the [TypingIndicator.Authors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ChatTypingIndicator.html#Syncfusion_Maui_Chat_ChatTypingIndicator_Authors) and [TypingIndicator.Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ChatTypingIndicator.html#Syncfusion_Maui_Chat_ChatTypingIndicator_Text) property and assign the typing indicator instance to the `TypingIndicator` property.
 
