@@ -161,7 +161,7 @@ Auto-scrolling during drag-and-drop operations in the `SfTreeView` enhances the 
 
 ### Auto Scroll Margin
 
-To adjust the auto-scroll margin in `SfTreeView`, set the [ScrollMargin](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.AutoScroller.html#Syncfusion_Maui_TreeView_AutoScroller_ScrollMargin) property of the [AutoScroller](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.AutoScroller.html) to enable auto-scrolling while dragging. The default value is `15`. Auto-scrolling will be triggered when the drag item is within the [ScrollMargin](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.AutoScroller.html#Syncfusion_Maui_TreeView_AutoScroller_ScrollMargin) from the view's bounds.
+To adjust the auto-scroll margin in `SfTreeView`, set the [ScrollMargin](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.AutoScroller.html#Syncfusion_Maui_TreeView_AutoScroller_ScrollMargin) property of the [AutoScroller](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.AutoScroller.html) to enable auto-scrolling while dragging. The default value is `15`. Auto-scrolling will be triggered when the drag item is within the `ScrollMargin` from the view's bounds.
 
 N> To disable auto-scrolling, set the `ScrollMargin` to `0`.
 
