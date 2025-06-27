@@ -105,7 +105,7 @@ N> `SelectionForeground` is applicable only for unbound mode.
 
 ## Events
 
-### SelectionChanging event
+### SelectionChanging Event
 
 The [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectionChanging) event is raised while selecting an item at the execution time. The [ItemSelectionChangingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemSelectionChangingEventArgs.html) has the following members which provide the information for `SelectionChanging` event:
 
@@ -128,7 +128,7 @@ private void TreeView_SelectionChanging(object sender, ItemSelectionChangingEven
 {% endhighlight %}
 {% endtabs %}
 
-### SelectionChanged event
+### SelectionChanged Event
 
 The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectionChanged) event will occur once selection process has been completed for the selected item in the TreeView. The [ItemSelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemSelectionChangedEventArgs.html) has the following members which provides information for `SelectionChanged` event:
 

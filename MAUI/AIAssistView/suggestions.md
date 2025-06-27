@@ -436,7 +436,7 @@ public partial class MainPage : ContentPage
 ![Suggestion Template in .NET MAUI AI AssistView](Images/suggestions/maui-aiassistview-suggestiontemplate.png)
 
 
-## Event and commands
+## Event and Commands
 
 When a user selects a suggestion, the [SuggestionItemSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_SuggestionItemSelected) event and [SuggestionItemSelectedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_SuggestionItemSelectedCommand) are triggered, providing [SuggestionItemSelectedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SuggestionItemSelectedEventArgs.html) as arguments. This arguments contains the following details about the selected suggestion item.
 
