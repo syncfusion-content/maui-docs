@@ -337,9 +337,9 @@ This converter must implement the [IAssistItemConverter](https://help.syncfusion
 {% endhighlight %}
 {% endtabs %}
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/custom-model-collection-in-.net-maui-aiassistview).
-
 N> The `Data` property in `AssistItem` holds a reference to the original data object which is used for data operations.
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/custom-model-collection-in-.net-maui-aiassistview).
 
 ## Bind the RequestCommand property
 

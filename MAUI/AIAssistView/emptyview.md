@@ -162,8 +162,8 @@ The `SfAIAssistView` control allows you to fully customize the empty view appear
 
 ![EmptyView customization in .NET MAUI AI AssistView](Images/maui-aiassistview-emptyview-customization.png)
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/how-to-display-empty-view-when-.net-maui-aiassistview-has-no-data).
-
 N>
 * The `EmptyViewTemplate` will only be applied when the `EmptyView` property is explicitly defined. If `EmptyView` is not set, the template will not be displayed.
 * `EmptyView` can be set to custom data model and the appearance of the `EmptyView` can be customized by using the `EmptyViewTemplate`.
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/how-to-display-empty-view-when-.net-maui-aiassistview-has-no-data).
