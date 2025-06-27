@@ -14,7 +14,7 @@ keywords : .net maui color picker, maui color picker, .net maui color picker con
 
 ### Selected color icon
 
-You can customize the selected color icon in the Color Picker using the `SelectedColorIcon` property.
+You can customize the selected color icon in the Color Picker using the [SelectedColorIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SelectedColorIcon) property.
 
 {% tabs %}
 
@@ -52,7 +52,7 @@ colorPicker.ColorChanged += (s, e) =>
 
 ### Selected color template
 
-To customize the appearance of the selected color, use the `SelectedColorTemplate` property to define a custom template.
+To customize the appearance of the selected color, use the [SelectedColorTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SelectedColorTemplate) property to define a custom template.
 
 {% tabs %}
 
@@ -117,7 +117,7 @@ Content = colorPicker;
 
 ## Drop-down icon
 
-The drop-down icon of the Color Picker can be customized using the `DropDownButtonTemplate` property.
+The drop-down icon of the Color Picker can be customized using the [DropDownButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_DropDownButtonTemplate) property.
 
 {% tabs %}
 

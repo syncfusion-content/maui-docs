@@ -205,7 +205,7 @@ The SfDataGrid allows customizing the drag view text and background color using 
 
 ### Column drag-and-drop template
 
-The SfDataGrid allows you to load specific content into the column drag-and-drop template using the [SfDataGrid.ColumnDragDropTemplate](). The content can be provided through either a DataTemplate or a DataTemplateSelector.
+The SfDataGrid allows you to load specific content into the column drag-and-drop template using the [SfDataGrid.ColumnDragDropTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ColumnDragDropTemplate). The content can be provided through either a [DataTemplate](https://learn.microsoft.com/en-us/dotnet/api/system.windows.datatemplate?view=windowsdesktop-9.0) or a [DataTemplateSelector](https://learn.microsoft.com/en-us/dotnet/api/system.windows.controls.datatemplateselector?view=windowsdesktop-9.0).
 
 The following code snippet demonstrates how to load a data template into the column drag-and-drop view:
 
