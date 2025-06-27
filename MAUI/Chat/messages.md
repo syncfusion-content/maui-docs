@@ -1045,7 +1045,7 @@ namespace MauiChat
 {% endhighlight %}
 {% endtabs %}
 
-### Handling Message Delivery States	
+### Handling Message Delivery States
 The [DeliveryState](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IMessage.html#Syncfusion_Maui_Chat_IMessage_DeliveryState) property sets the current delivery status of a specific message. The `SfChat` control provides the following delivery states:
 
 - [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.DeliveryStates.html#Syncfusion_Maui_Chat_DeliveryStates_None) - No delivery indicator is shown. This is the default value.
