@@ -297,7 +297,7 @@ private async void OnValueChanged(object sender, AutocompleteValueChangedEventAr
 {% endhighlight %}
 
 {% endtabs %} 
-
+ 
 ## Selection changing notification
 
 When a user attempts to select an item from the drop-down list, the [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionChanging) event is triggered. This event allows developers to intercept the selection process, providing an opportunity to cancel or modify the selection based on predefined criteria.
