@@ -1462,53 +1462,6 @@ The [DropDownClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 
 N> When `WindowSoftInputModeAdjust.Resize` is set in the sample and `SfComboBox` is placed inside a `ScrollView`, the dropdown may close unexpectedly due to layout resizing. To prevent this, override `OnSizeAllocated` and handle the `DropDownClosing`. For more details, refer to the [KB article](https://support.syncfusion.com/agent/kb/19349).
 
-
-### Value change notification
-When the value of comboBox changes, the `ValueChanged` event is triggered. This event is raised when the value changes due to user interaction, programmatic updates, or any other mechanism. It provides both `OldValue` and `NewValue`, allowing for responsive handling of changes. The ValueChanged event contains the following properties:
-
-* `OldValue` – Contains the previous text value before the change.
-* `NewValue` – Contains the new text value after the change.
-
-{% tabs %}
-{% highlight xaml %}
-
-<editors:SfComboBox x:Name="comboBox" 
-                    TextMemberPath="Name" 
-                    DisplayMemberPath="Name" 
-                    ItemsSource="{Binding SocialMedias}" 
-                    ValueChanged="OnValueChanged" />
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfComboBox comboBox = new SfComboBox
-{
-    ItemsSource = socialMediaViewModel.SocialMedias,
-    DisplayMemberPath = "Name",
-    TextMemberPath = "Name"
-};
-comboBox.ValueChanged += OnValueChanged;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-The ValueChanged event can be handled as follows:
-
-{% tabs %}
-{% highlight C# %}
-
-private async void OnValueChanged(object sender, ComboBoxValueChangedEventArgs e)
-{
-    await DisplayAlert("Alert", "Value has changed to: " + e.NewValue.ToString(), "Ok");
-}
-
-{% endhighlight %}
-
-{% endtabs %} 
- 
-
 ## CursorPosition
 
 The cursor position in the input view can be obtained or updated using the [CursorPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_CursorPosition) property in the SfComboBox.
