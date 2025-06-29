@@ -252,52 +252,6 @@ SfAutocomplete autoComplete = new SfAutocomplete
 
 ![.NET MAUI Autocomplete with TokensWrapMode as none.](Images/Selection/net-maui-autocomplete-nonemode.png)
 
-### Value change notification
-
-When the value of Autocomplete changes, the `ValueChanged` event is triggered. This event is raised when the value changes due to user interaction, programmatic updates, or any other mechanism. It provides both `OldValue` and `NewValue`, allowing for responsive handling of changes. The ValueChanged event contains the following properties:
-
-* `OldValue` – Contains the previous text value before the change.
-* `NewValue` – Contains the new text value after the change.
-
-{% tabs %}
-{% highlight xaml %}
-
-<editors:SfAutocomplete x:Name="autocomplete"  
-                    TextMemberPath="Name" 
-                    DisplayMemberPath="Name" 
-                    ItemsSource="{Binding SocialMedias}" 
-                    ValueChanged="OnValueChanged" />
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfAutoComplete autocomplete = new SfAutoComplete
-{
-    ItemsSource = socialMediaViewModel.SocialMedias,
-    DisplayMemberPath = "Name",
-    TextMemberPath = "Name"
-};
-autocomplete.ValueChanged += OnValueChanged;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-The ValueChanged event can be handled as follows:
-
-{% tabs %}
-{% highlight C# %}
-
-private async void OnValueChanged(object sender, AutocompleteValueChangedEventArgs e)
-{
-    await DisplayAlert("Alert", "Value has changed to: " + e.NewValue.ToString(), "Ok");
-}
-
-{% endhighlight %}
-
-{% endtabs %} 
- 
 ## Selection changing notification
 
 When a user attempts to select an item from the drop-down list, the [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionChanging) event is triggered. This event allows developers to intercept the selection process, providing an opportunity to cancel or modify the selection based on predefined criteria.
