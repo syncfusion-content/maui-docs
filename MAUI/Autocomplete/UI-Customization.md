@@ -1277,53 +1277,6 @@ The [DropDownClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 {% endhighlight %}
 {% endtabs %}
 
-### Value change notification
-
-When the value of Autocomplete changes, the `ValueChanged` event is triggered. This event is raised when the value changes due to user interaction, programmatic updates, or any other mechanism. It provides both `OldValue` and `NewValue`, allowing for responsive handling of changes. The ValueChanged event contains the following properties:
-
-* `OldValue` – Contains the previous text value before the change.
-* `NewValue` – Contains the new text value after the change.
-
-{% tabs %}
-{% highlight xaml %}
-
-<editors:SfAutocomplete x:Name="autocomplete"  
-                    TextMemberPath="Name" 
-                    DisplayMemberPath="Name" 
-                    ItemsSource="{Binding SocialMedias}" 
-                    ValueChanged="OnValueChanged" />
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfAutoComplete autocomplete = new SfAutoComplete
-{
-    ItemsSource = socialMediaViewModel.SocialMedias,
-    DisplayMemberPath = "Name",
-    TextMemberPath = "Name"
-};
-autocomplete.ValueChanged += OnValueChanged;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-The ValueChanged event can be handled as follows:
-
-{% tabs %}
-{% highlight C# %}
-
-private async void OnValueChanged(object sender, AutocompleteValueChangedEventArgs e)
-{
-    await DisplayAlert("Alert", "Value has changed to: " + e.NewValue.ToString(), "Ok");
-}
-
-{% endhighlight %}
-
-{% endtabs %} 
- 
-
 ## CursorPosition
 
 The cursor position in the input view can be obtained or updated using the [CursorPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDropdownEntry.html#Syncfusion_Maui_Core_SfDropdownEntry_CursorPosition) property in the SfAutocomplete.
