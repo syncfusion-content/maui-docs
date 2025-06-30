@@ -37,7 +37,7 @@ Enhance [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat
 </tr>
 </table>
 
-## Attachment Button
+## Attachment button
 
 <table>
 <tr>
@@ -50,7 +50,7 @@ Enhance [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat
 </tr>
 </table>
 
-## Send Icon
+## Send icon
 
 <table>
 <tr>

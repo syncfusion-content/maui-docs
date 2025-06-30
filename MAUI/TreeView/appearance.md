@@ -140,7 +140,7 @@ namespace GettingStarted
 
 Similarly, you can customize the expander view using the `ExpanderTemplate` property, as shown in the example above.
 
-## ItemTemplate Selector
+## ItemTemplate selector
 
 The TreeView allows you to customize the appearance of each item with different templates based on specific constraints using the [DataTemplateSelector](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplateselector?view=net-maui-7.0). You can choose a [DataTemplate](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/datatemplate) for each item at runtime based on the value of the data-bound property using the `DataTemplateSelector`.
 
@@ -326,7 +326,7 @@ N> The default value of the `IsAnimationEnabled` property is `false`.
 <syncfusion:SfTreeView x:Name="treeView" 
                        IsAnimationEnabled="true">
 {% endhighlight %}
-{% highlight c# hl_lines="2"%}
+{% highlight c# hl_lines="2" %}
 SfTreeView treeView = new SfTreeView();
 treeView.IsAnimationEnabled = true;
 {% endhighlight %}
