@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection in .NET MAUI TreeView Control | Syncfusion
-description: Learn here about Selection support in Syncfusion .NET MAUI TreeView (SfTreeView) control and more.
+description: Learn here about Selection support in Syncfusion .NET MAUI TreeView (SfTreeView) control, its elements and more more.
 platform: MAUI
 control: SfTreeView
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains how to perform selection and its related operations in the TreeView.
 
-## UI Selection
+## UI selection
 The TreeView allows selecting the items either programmatically or touch interactions by setting the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectionMode) property value to other than `None`. The control has different selection modes to perform selection operations as listed as follows.
 
 * [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.TreeViewSelectionMode.html#Syncfusion_Maui_TreeView_TreeViewSelectionMode_None): Allows disabling the selection.
@@ -31,7 +31,7 @@ treeView.SelectionMode = TreeViewSelectionMode.Multiple;
 
 ![.NET MAUI TreeView with Selection](Images/selection/maui-treeView-multipleselection.png)
 
-## Programmatic Selection
+## Programmatic selection
 
 When the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectionMode) is other than `None`, the item or items in the TreeView can be selected from the code by setting the [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectedItem), or adding items to the [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectedItems) property based on the `SelectionMode`.
 
@@ -60,7 +60,7 @@ W> If an item is selected programmatically when `SelectionMode` is `None` and if
 
 ## Selected items 
 
-### Gets selected Items
+### Gets selected items
 The TreeView gets all the selected items through the `SelectedItems` property and gets the single item by using the `SelectedItem` property.
 
 ### Clear selected items
@@ -128,7 +128,7 @@ private void TreeView_SelectionChanging(object sender, ItemSelectionChangingEven
 {% endhighlight %}
 {% endtabs %}
 
-### SelectionChanged event
+### SelectionChanged Event
 
 The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectionChanged) event will occur once selection process has been completed for the selected item in the TreeView. The [ItemSelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemSelectionChangedEventArgs.html) has the following members which provides information for `SelectionChanged` event:
 
@@ -148,7 +148,7 @@ private void TreeView_SelectionChanged(object sender, ItemSelectionChangedEventA
 
 N> `SelectionChanging` and `SelectionChanged` events will be triggered only on UI interactions.
 
-## Key Navigation
+## Key navigation
 
 The TreeView allows to select the items through keyboard interactions. Behavior of key navigation is explained as follows:
 

@@ -10,7 +10,7 @@ keywords : .net maui color picker, maui color picker, color picker, color palett
 
 # Getting Started with .NET MAUI Color Picker
 
-This section guides you through setting up and configuring a `SfColorPicker` in your .NET MAUI application. Follow the steps below to add a basic Color Picker to your project.
+This section guides you through setting up and configuring a [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html) in your .NET MAUI application. Follow the steps below to add a basic Color Picker to your project.
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -68,7 +68,7 @@ namespace ColorPickerSample
 
 1. To initialize the control, import the Inputs namespace.
 
-2. Initialize the `SfColorPicker`.
+2. Initialize the [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html).
 
 {% tabs %}
 
@@ -166,7 +166,7 @@ namespace ColorPickerSample
 
 1. To initialize the control, import the Inputs namespace.
 
-2. Initialize the `SfColorPicker`.
+2. Initialize the [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html).
 
 {% tabs %}
 
@@ -263,7 +263,7 @@ namespace ColorPickerSample
 
 1. To initialize the control, import the Inputs namespace.
 
-2. Initialize the `SfColorPicker`.
+2. Initialize the [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html).
 
 {% tabs %}
 
