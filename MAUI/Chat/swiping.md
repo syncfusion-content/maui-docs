@@ -298,7 +298,7 @@ The `SwipeEnded` event provides the following properties in their arguments:
 {% endhighlight %}
 {% endtabs %}
 
-## Reset Swipe view Programmatically 
+## Reset swipe view programmatically 
 
 The `SfChat` allows you to cancel the swipe programmatically by calling the [ResetSwipeOffset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ResetSwipeOffset) method in the [SwipeEnded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SwipeEnded) event.
 
