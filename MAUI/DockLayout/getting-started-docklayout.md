@@ -10,7 +10,7 @@ keywords: .net maui docklayout, syncfusion docklayout maui, dock layout .net mau
 
 # Getting Started with .NET MAUI DockLayout (SfDockLayout)
 
-This guide details the initial setup and basic usage of the `SfDockLayout` control, offering insight into the layout's capability to arrange views using different docking positions such as top, bottom, left, right, and none.
+This guide details the initial setup and basic usage of the [SfDockLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html) control, offering insight into the layout's capability to arrange views using different docking positions such as top, bottom, left, right, and none.
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -71,7 +71,7 @@ namespace DockLayoutGettingStarted
 ## Step 4: Initialize the DockLayout Control
 
 1. To initialize the control, import the `Synfusion.Maui.Core` namespace.
-2. Initialize an `SfDockLayout` instance.
+2. Initialize an [SfDockLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html) instance.
 
 {% tabs %} 
 
@@ -171,7 +171,7 @@ namespace DockLayoutSample
 ## Step 4: Initialize the DockLayout Control
 
 1. To initialize the control, import the `Synfusion.Maui.Core` namespace.
-2. Initialize an [SfDockLayout]() instance.
+2. Initialize an [SfDockLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html) instance.
 
 {% tabs %} 
 {% highlight xaml %}
@@ -209,7 +209,7 @@ namespace DockLayoutGettingStarted
 {% endtabcontents %}
 
 ### Set Dock Position for Child Views
-Inside the `SfDockLayout` control, child views can be arranged using the `Dock` attached property. This property allows to dock elements to specific edges— `Top`, `Bottom`, `Left`, `Right`, or set to `None` to remain undocked and fill the remaining space.
+Inside the [SfDockLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html) control, child views can be arranged using the [Dock](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html#Syncfusion_Maui_Core_SfDockLayout_DockProperty) attached property. This property allows to dock elements to specific edges— `Top`, `Bottom`, `Left`, `Right`, or set to `None` to remain undocked and fill the remaining space.
 
 {% tabs %}
 
