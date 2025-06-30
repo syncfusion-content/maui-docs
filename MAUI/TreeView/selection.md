@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection in .NET MAUI TreeView Control | Syncfusion
-description: Learn here about Selection support in Syncfusion .NET MAUI TreeView (SfTreeView) control and more.
+description: Learn here about Selection support in Syncfusion .NET MAUI TreeView (SfTreeView) control, its elements and more more.
 platform: MAUI
 control: SfTreeView
 documentation: ug
