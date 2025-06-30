@@ -35,12 +35,12 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-### Event and command
+### Event and Command
 
 The `SfAIAssistView` control includes a built-in event called [StopResponding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_StopResponding) and a command named [StopRespondingCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_StopRespondingCommand). These are triggered when the `Stop Responding` button is clicked.
 To cancel the response using the `StopRespondingCommand` or `StopResponding` event, you can include logic to stop the ongoing response as shown below. 
 
-#### StopResponding event
+#### StopResponding Event
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -61,7 +61,7 @@ private void OnStopResponding(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-#### StopResponding command
+#### StopResponding Command
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -140,7 +140,7 @@ public MainPage()
 
 ![Stop Responding Text in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-stopresondingtext.png)
 
-### StopResponding ui customization
+### StopResponding UI customization
 
 The `SfAIAssistView` control allows you to fully customize the Stop Responding view appearance by using the [StopRespondingTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_StopRespondingTemplate) property. This property lets you define a custom layout and style for the StopResponding UI.
 

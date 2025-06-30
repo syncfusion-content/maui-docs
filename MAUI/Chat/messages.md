@@ -902,7 +902,7 @@ If you don’t want to display images, buttons, or text(title, subtitle, descrip
 **Card message without button**
 ![Card message type without button in .NET MAUI Chat](images/messages/maui-chat-card-message-without-button.png)
 
-### Event and command
+### Event and Command
 
 The [CardMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.CardMessage.html) comes with a built-in [CardTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CardTapped) event and [CardCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_CardCommand) that will be fired upon tapping a button in a card or tapping any card in the message. You can get the selected Card, the clicked CardButton and the actual `CardMessage` via the [CardTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.CardTappedEventArgs.html) as [CardTappedEventArgs.Card](), [CardTappedEventArgs.Action]() and [CardTappedEventArgs.Message](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.CardTappedEventArgs.html#Syncfusion_Maui_Chat_CardTappedEventArgs_Message) respectively, in both the `CardTapped` event handler and action of `CardCommand`. Handling this event/command by setting [CardTappedEventArgs.Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.CardTappedEventArgs.html#Syncfusion_Maui_Chat_CardTappedEventArgs_Handled) prevents the `Card.Title` or `CardButton.Value` from getting added as a new message.
 
@@ -991,7 +991,7 @@ N> The Action argument in `CardTappedEventArgs` holds a valid value only when cl
 
 ## Delivery states
 The `SfChat` provides built-in support for displaying message delivery states such as sent, delivered, read, and failed. This feature enhances communication transparency by showing the current status of each message.
-The `ShowDeliveryState` property determines whether delivery state indicators are displayed for messages. By default, this property is set to `false`.
+The [ShowDeliveryState](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowDeliveryState) property determines whether delivery state indicators are displayed for messages. By default, this property is set to `false`.
 
 {% tabs %}
 {% highlight xaml hl_lines="18" %}
@@ -1045,14 +1045,14 @@ namespace MauiChat
 {% endhighlight %}
 {% endtabs %}
 
-### Handling message delivery states
-The `DeliveryState` property sets the current delivery status of a specific message. The `SfChat` control provides the following delivery states:
+### Handling Message Delivery States
+The [DeliveryState](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IMessage.html#Syncfusion_Maui_Chat_IMessage_DeliveryState) property sets the current delivery status of a specific message. The `SfChat` control provides the following delivery states:
 
-- `None` - No delivery indicator is shown. This is the default value.
-- `Sent` - Message has been sent from the current user.
-- `Delivered` - Message has been delivered to the recipient.
-- `Read` - Message has been read by the recipient.
-- `Failed` - Message failed to deliver.
+- [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.DeliveryStates.html#Syncfusion_Maui_Chat_DeliveryStates_None) - No delivery indicator is shown. This is the default value.
+- [Sent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.DeliveryStates.html#Syncfusion_Maui_Chat_DeliveryStates_Sent) - Message has been sent from the current user.
+- [Delivered](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.DeliveryStates.html#Syncfusion_Maui_Chat_DeliveryStates_Delivered) - Message has been delivered to the recipient.
+- [Read](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.DeliveryStates.html#Syncfusion_Maui_Chat_DeliveryStates_Read) - Message has been read by the recipient.
+- [Failed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.DeliveryStates.html#Syncfusion_Maui_Chat_DeliveryStates_Failed) - Message failed to deliver.
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
@@ -1153,12 +1153,14 @@ public class ViewModel : INotifyPropertyChanged
 
 ![DeliveryState in .NET MAUI Chat](Images/messages/maui-chat-delivery-state.gif)
 
-### Customizing delivery state icons
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/message-delivery-states-.net-maui-chat)
+
+### Customizing Delivery State Icons
 The `SfChat` control allows assigning custom icon values for each Delivery State. The following API is used to define the icon for each delivery state.
-- `SentIcon` - Sets a custom image for the sent state indicator.
-- `DeliveredIcon` - Sets a custom image for the delivered state indicator.
-- `ReadIcon` - Sets a custom image for the read state indicator.
-- `FailedIcon` - Sets a custom image for the failed state indicator.
+- [SentIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SentIcon) - Sets a custom image for the sent state indicator.
+- [DeliveredIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_DeliveredIcon) - Sets a custom image for the delivered state indicator.
+- [ReadIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ReadIcon) - Sets a custom image for the read state indicator.
+- [FailedIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_FailedIcon) - Sets a custom image for the failed state indicator.
 
 {% tabs %}
 {% highlight xaml hl_lines="19 20 21 22" %}
@@ -1507,7 +1509,7 @@ By default, the keyboard will be open in view, even after a message is sent or f
 {% endhighlight %}
 {% endtabs %}
 
-## Restricting multi-line input in editor (single line messages) in maui chat
+## Restricting multi-line input in editor (single line messages) in chat
 
 By default, users can input multi-line messages by adding new lines in the editor within the chat control for outgoing messages. However, if you wish to limit multi-line input and display a send button on the keyboard instead, you can achieve this by setting the [AllowMultilineInput](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_AllowMultilineInput) property to `false`.
 

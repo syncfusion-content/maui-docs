@@ -223,13 +223,13 @@ The [AssistImageItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssi
 {% endhighlight %}
 {% endtabs %}
 
-## ImageTapped event and command
+## ImageTapped Event and Command
 
 The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control includes a built-in event called [ImageTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ImageTapped) and a command named [ImageTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ImageTappedCommand). These are triggered when an image is tapped. The tapped image item is accessible through the [ImageTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ImageTappedEventArgs.html). The `ImageTappedEventArgs` has the following member:
 
  * [ImageItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ImageTappedEventArgs.html#Syncfusion_Maui_AIAssistView_ImageTappedEventArgs_ImageItem) : Refers to the tapped image item.
 
-### ImageTapped event
+### ImageTapped Event
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -250,7 +250,7 @@ The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssis
 {% endhighlight %}
 {% endtabs %}
 
-### ImageTapped command
+### ImageTapped Command
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}   
@@ -361,7 +361,7 @@ In AI AssistView, to display a list of interactive cards, each card can contain 
 {% endhighlight %}
 {% endtabs %}
 
-## CardTapped event and command
+## CardTapped Event and Command
 
 The `SfAIAssistView` control includes a built-in event called [CardTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_CardTapped) and a command named [CardTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_CardTappedCommand). These are triggered when a card is tapped. The tapped card item is accessible through the [CardTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.CardTappedEventArgs.html). The `CardTappedEventArgs` has the following members:
 
@@ -370,7 +370,7 @@ The `SfAIAssistView` control includes a built-in event called [CardTapped](https
  * [CardItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.CardTappedEventArgs.html#Syncfusion_Maui_AIAssistView_CardTappedEventArgs_CardItem) : Refers to the current assist view card item.
  * [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.CardTappedEventArgs.html#Syncfusion_Maui_AIAssistView_CardTappedEventArgs_Handled) : Indicates whether the event is handled or not.
 
-### CardTapped event
+### CardTapped Event
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -391,7 +391,7 @@ The `SfAIAssistView` control includes a built-in event called [CardTapped](https
 {% endhighlight %}
 {% endtabs %}
 
-### CardTapped command
+### CardTapped Command
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}   
