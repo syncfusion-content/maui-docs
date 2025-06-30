@@ -26,7 +26,7 @@ using (var file = File.Create(localPath))
 {% endhighlight %}
 {% endtabs %}
 
-### Serialize as Stream
+### Serialize as stream
 
 You can store the SfDataGrid settings as [Stream]() using [Serialize]() method by passing the stream.
 
@@ -46,7 +46,7 @@ SfDataGrid serialization operation can be customized by passing [DataGridSeriali
 
 ### Serialize sorting
 
-By default, SfDataGrid allows you to serialize the sorting operation. You can disable the sorting serialization by setting the [DataGridSerializationOptions.SerializeSorting]() to false.
+By default, SfDataGrid allows you to serialize the sorting operation. You can disable the sorting serialization by setting the [DataGridSerializationOptions.SerializeSorting]() to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -62,7 +62,7 @@ using (var file = File.Create(localPath))
 
 ### Serialize grouping
 
-By default, SfDataGrid allows you to serialize the grouping operation. You can disable the grouping serialization by setting the [DataGridSerializationOptions.SerializeGrouping]() to false.
+By default, SfDataGrid allows you to serialize the grouping operation. You can disable the grouping serialization by setting the [DataGridSerializationOptions.SerializeGrouping]() to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -78,7 +78,7 @@ using (var file = File.Create(localPath))
 
 ### Serialize columns
 
-By default, SfDataGrid allows you to serialize the columns manipulation operation. You can disable the columns serialization by setting the [DataGridSerializationOptions.SerializeColumns ]() to false.
+By default, SfDataGrid allows you to serialize the columns manipulation operation. You can disable the columns serialization by setting the [DataGridSerializationOptions.SerializeColumns ]() to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -96,7 +96,7 @@ using (var file = File.Create(localPath))
 
 By default, SfDataGrid allows you to serialize the caption summary, group summary and table summary settings in SfDataGrid.
 
-You can disable the summaries serialization by setting [DataGridSerializationOptions.SerializeCaptionSummary]() , [DataGridSerializationOptions.SerializeGroupSummaries]() , [DataGridSerializationOptions.SerializeTableSummaries]() properties to false.
+You can disable the summaries serialization by setting [DataGridSerializationOptions.SerializeCaptionSummary]() , [DataGridSerializationOptions.SerializeGroupSummaries]() , [DataGridSerializationOptions.SerializeTableSummaries]() properties to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -114,7 +114,7 @@ using (var file = File.Create(localPath))
 
 ### Serialize stacked headers
 
-By default, SfDataGrid allows you to serialize the stack headers operation. You can disable the stack headers serialization by setting the [DataGridSerializationOptions.SerializeStackedHeaders]() to false.
+By default, SfDataGrid allows you to serialize the stacked headers operation. You can disable the stacked headers serialization by setting the [DataGridSerializationOptions.SerializeStackedHeaders]() to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -130,7 +130,7 @@ using (var file = File.Create(localPath))
 
 ### Serialize Details View
 
-By default, SfDataGrid allows you to serialize the DetailsViewDefinition. You can disable the DetailsViewDefinition serialization by setting the [DataGridSerializationOptions.SerializeDetailsViewDefinition]() to false.
+By default, SfDataGrid allows you to serialize the DetailsViewDefinition. You can disable the DetailsViewDefinition serialization by setting the [DataGridSerializationOptions.SerializeDetailsViewDefinition]() to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -146,7 +146,7 @@ using (var file = File.Create(localPath))
 
 ### Serialize unbound rows
 
-By default, SfDataGrid allows you to serialize the unbound rows settings. You can disable the unbound rows serialization by setting the [DataGridSerializationOptions.SerializeUnBoundRows]() to false.
+By default, SfDataGrid allows you to serialize the unbound rows settings. You can disable the unbound rows serialization by setting the [DataGridSerializationOptions.SerializeUnBoundRows]() to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -174,7 +174,7 @@ using (var file = File.Open(localPath, FileMode.Open))
 {% endhighlight %}
 {% endtabs %}
 
-### Deserialize from Stream
+### Deserialize from stream
 
 You can deserialize the SfDataGrid settings from [Stream]() using [Deserialize]() method.
 
@@ -191,7 +191,7 @@ Deserialization operation can be customized by passing [DataGridDeserializationO
 
 ### Deserialize sorting
 
-By default, SfDataGrid allows you to deserialize the sorting operation. You can disable the sorting deserialization by setting the [DataGridDeserializationOptions.DeserializeSorting]() to false.
+By default, SfDataGrid allows you to deserialize the sorting operation. You can disable the sorting deserialization by setting the [DataGridDeserializationOptions.DeserializeSorting]() to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -207,7 +207,7 @@ using (var file = File.Open(localPath, FileMode.Open))
 
 ### Deserialize grouping
 
-By default, SfDataGrid allows you to deserialize the grouping operation. You can disable the grouping deserialization by setting the [DataGridDeserializationOptions.DeserializeGrouping]() to false.
+By default, SfDataGrid allows you to deserialize the grouping operation. You can disable the grouping deserialization by setting the [DataGridDeserializationOptions.DeserializeGrouping]() to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -223,7 +223,7 @@ using (var file = File.Open(localPath, FileMode.Open))
 
 ### Deserialize columns
 
-By default, SfDataGrid allows you to deserialize the columns manipulation operations. You can disable the columns deserialization by setting the [DataGridDeserializationOptions.DeserializeColumns]() to false.
+By default, SfDataGrid allows you to deserialize the columns manipulation operations. You can disable the columns deserialization by setting the [DataGridDeserializationOptions.DeserializeColumns]() to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -241,7 +241,7 @@ using (var file = File.Open(localPath, FileMode.Open))
 
 By default, SfDataGrid allows you to deserialize the group summary, caption summary and table summary settings.
 
-You can disable the summaries deserialization by setting [DataGridDeserializationOptions.DeserializeCaptionSummary]() , [DataGridDeserializationOptions.DeserializeGroupSummaries]() , [DataGridDeserializationOptions.DeserializeTableSummaries]() properties to false.
+You can disable the summaries deserialization by setting [DataGridDeserializationOptions.DeserializeCaptionSummary]() , [DataGridDeserializationOptions.DeserializeGroupSummaries]() , [DataGridDeserializationOptions.DeserializeTableSummaries]() properties to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -259,7 +259,7 @@ using (var file = File.Open(localPath, FileMode.Open))
 
 ### Deserialize stacked headers
 
-By default, SfDataGrid allows you to deserialize the stack headers. You can disable the stacked headers deserialization by setting the [DataGridDeserializationOptions.DeserializeStackedHeaders]() to false.
+By default, SfDataGrid allows you to deserialize the stacked headers. You can disable the stacked headers deserialization by setting the [DataGridDeserializationOptions.DeserializeStackedHeaders]() to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -275,7 +275,7 @@ using (var file = File.Open(localPath, FileMode.Open))
 
 ### Deserialize Details View
 
-By default, SfDataGrid allows you to deserialize the DetailsViewDefinition. You can disable the DetailsViewDefinition deserialization by setting the [DataGridDeserializationOptions.DeserializeDetailsViewDefinition]() to false.
+By default, SfDataGrid allows you to deserialize the DetailsViewDefinition. You can disable the DetailsViewDefinition deserialization by setting the [DataGridDeserializationOptions.DeserializeDetailsViewDefinition]() to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -291,7 +291,7 @@ using (var file = File.Open(localPath, FileMode.Open))
 
 ### Deserialize unbound rows
 
-By default, SfDataGrid allows you to deserialize the unbound rows settings. You can disable the unbound rows deserialization by setting the [DataGridDeserializationOptions.DeserializeUnBoundRows]() to false.
+By default, SfDataGrid allows you to deserialize the unbound rows settings. You can disable the unbound rows deserialization by setting the [DataGridDeserializationOptions.DeserializeUnBoundRows]() to `false`.
 
 {% tabs %}
 {% highlight c# %}
@@ -311,9 +311,9 @@ SfDataGrid allows you to customize the serialization and deserialization operati
 
 ### Serialize custom column
 
-By default, the unknown(custom) column types are serialized as `DataGridTextColumn` type. If you want to serialize the custom column, you have to add custom column type into predefined types.
+By default, the unknown(custom) column types are serialized as [DataGridTextColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTextColumn.html) type. If you want to serialize the custom column, you have to add custom column type into predefined types.
 
-In the below code snippet, TextImageColumn is created.
+In the below code snippet, `TextImageColumn` is created.
 
 {% tabs %}
 {% highlight c# %}
@@ -351,7 +351,7 @@ public class TextImageColumn : DataGridColumn
 {% endhighlight %}
 {% endtabs %}
 
-In the below code snippet, the TextImageColumn is defined in SfDataGrid.
+In the below code snippet, the `TextImageColumn` is defined in SfDataGrid.
 
 {% tabs %}
 {% highlight xaml %}
@@ -368,7 +368,7 @@ In the below code snippet, the TextImageColumn is defined in SfDataGrid.
 {% endhighlight %}
 {% endtabs %}
 
-To serialize the above TextImageColumn, follow the below steps.
+To serialize the above `TextImageColumn`, follow the below steps.
 
 1. Create a class derived from [SerializableDataGridColumn]() and define the custom column properties in `SerializableCustomGridColumn` class.
 
@@ -383,7 +383,7 @@ public class SerializableCustomGridColumn : SerializableDataGridColumn
 {% endhighlight %}
 {% endtabs %}
 
-2. Create a new class named as SerializationControllerExt by overriding [DataGridSerializationController]() class.
+2. Create a new class named as `SerializationControllerExt` by overriding [DataGridSerializationController]() class.
 
 {% tabs %}
 {% highlight c# %}
@@ -536,7 +536,7 @@ By default, you cannot serialize the template content in SfDataGrid. This is the
 {% endhighlight %}
 {% endtabs %}
 
-If you want to serialize and deserialize the template content, you have to reconstruct the same template during deserialization in RestoreColumnProperties method.
+If you want to serialize and deserialize the template content, you have to reconstruct the same template during deserialization in `RestoreColumnProperties` method.
 
 {% tabs %}
 {% highlight c# %}
