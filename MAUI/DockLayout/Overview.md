@@ -9,7 +9,7 @@ documentation: ug
 
 # .NET MAUI SfDockLayout Overview
 
-The .NET MAUI `SfDockLayout` is a versatile and powerful layout control that enables developers to arrange and dock child elements in a defined area, providing a robust framework for designing complex user interfaces in both mobile and desktop applications.
+The .NET MAUI [SfDockLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html) is a versatile and powerful layout control that enables developers to arrange and dock child elements in a defined area, providing a robust framework for designing complex user interfaces in both mobile and desktop applications.
 
 ## Key features
 
