@@ -239,4 +239,6 @@ public partial class MainPage : ContentPage
 
 ![Custom attachment button in .NET MAUI Chat](images/attachment-button/maui-chat-custom-attachment-button.png)
 
+## Attach image from gallery in .NET MAUI Chat
 
+You can add the desired image in to the chat by opening the device’s gallery when attachment button is tapped. You can download the entire project demo of adding an image from gallery in to `SfChat` from GitHub here.
