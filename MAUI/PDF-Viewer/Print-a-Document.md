@@ -32,7 +32,7 @@ Also, [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewe
 {% endhighlight %} 
 {% endtabs %}
 
-The following image represents the print preview dialogue.
+The following image represents the print preview dialogue in Android platform.
 
 ![Printing PDF Files in .NET MAUI PDF Viewer](Images/Print/print.png)
 
