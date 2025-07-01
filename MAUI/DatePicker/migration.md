@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrate from Syncfusion® Xamarin SfDatePicker to .NET MAUI SfDatePicker
+title: Migrate from Syncfusion® Xamarin to .NET MAUI SfDatePicker
 description: Learn about migrating from Syncfusion<sup>&reg;</sup> Xamarin DatePicker to Syncfusion<sup>&reg;</sup> .NET MAUI DatePicker control.
 platform: maui
 control: SfDatePicker
@@ -306,7 +306,7 @@ this.Content = datePicker;
 </tr>
 <tr>
 <td>{{'[EnableLooping](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_EnableLoopingProperty)'| markdownify }}</td>
-<td>{{'[EnableLooping]()'| markdownify }}</td>
+<td>{{'[EnableLooping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_EnableLooping)'| markdownify }}</td>
 <td>Gets or sets the value of enable looping.</td>
 </tr>
 <tr>

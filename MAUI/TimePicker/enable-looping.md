@@ -9,9 +9,9 @@ documentation: ug
 
 # Looping support in .NET MAUI Time Picker (SfTimePicker)
 
-The [EnableLooping]() property allows you to enable looping support in the time picker control. With looping enabled, the control seamlessly navigates from the last item to the first item and back again, iterating in both forward and backward directions.
+The [EnableLooping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_EnableLooping) property allows you to enable looping support in the time picker control. With looping enabled, the control seamlessly navigates from the last item to the first item and back again, iterating in both forward and backward directions.
 
-To enable the looping in time picker by setting the [EnableLooping]() property as `true`. The default value is `false`.
+To enable the looping in time picker by setting the [EnableLooping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_EnableLooping) property as `true`. The default value is `false`.
 
 {% tabs %}
 
