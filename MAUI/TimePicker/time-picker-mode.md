@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Time Picker Modes in .NET MAUI Time Picker Control | Syncfusion<sup>&reg;</sup>
+title: Time Picker Modes in .NET MAUI Time Picker Control | Syncfusion®
 description: Learn about the time picker modes in Syncfusion<sup>&reg;</sup> Time Picker for .NET MAUI (SfTimePicker) control and its basic features.
 platform: maui
 control: SfTimePicker
@@ -171,7 +171,7 @@ SfTimePicker allows the display of the Popup to render at any desired size by se
 
 {% highlight xaml tabtitle="XAML" %}
 
-<picker:SfdatePicker x:Name="timePicker" 
+<picker:SfTimePicker x:Name="timePicker" 
                          Mode="Dialog"
                          PopupWidth="300"
                          PopupHeight="400"/>
