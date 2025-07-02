@@ -1791,12 +1791,12 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/system-generate
 
 ## Assign unique color to each user in a group chat
 
-You can assign unique color to each user in a group chat by writing converter and custom control templates to [OutgoingMessageAuthorView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.OutgoingMessageAuthorView.html) and [IncomingMessageAuthorView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IncomingMessageAuthorView.html) using TargetStyle.
+You can assign unique color to each user in a group chat by writing converter and custom control templates to [OutgoingMessageAuthorView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.OutgoingMessageAuthorView.html) and [IncomingMessageAuthorView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IncomingMessageAuthorView.html) using `TargetStyle`.
 
-![Unique color to each user in .NET MAUI Chat](images/messages/maui-chat-assign-unique-color-each-user.png)
+![Unique color to each user in .NET MAUI Chat](images/messages/maui-chat-assign-color-each-user.png)
 
 ## Show drop down menu on tapping a message in .NET MAUI Chat
 
-You can add drop down icon to the incoming messages in `SfChat` by writing custom control template to [IncomingMessageTextView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IncomingMessageTextView.html) using TargetStyle. Using [SfPopup](https://help.syncfusion.com/maui/popup/overview), you can display the drop down menu by hovering the incoming messages in Windows and macOS platforms and long press for Android and iOS platforms.
+You can add drop down icon to the incoming messages in `SfChat` by writing custom control template to [IncomingMessageTextView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IncomingMessageTextView.html) using TargetStyle. Using [SfPopup](https://help.syncfusion.com/maui/popup/overview),you can display the drop down menu by using platform specific customization.
 
-![Drop down menu in .NET MAUI Chat](images/messages/maui-chat-show-drop-down-menu.png)
+![Drop down menu in .NET MAUI Chat](images/messages/maui-chat-show-drop-down-menu.gif)
