@@ -455,8 +455,8 @@ The following code example, explains how to initialize the properties of the `Xa
 </tr>
 <tr>
 <td>{{'[OnPickerItemLoaded](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPicker.XForms.SfPicker.html#Syncfusion_SfPicker_XForms_SfPicker_OnPickerItemLoaded)'| markdownify }}</td>
-<td>Nil</td>
-<td>Not Supported.</td>
+<td>{{'[ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html#Syncfusion_Maui_Picker_SfPicker_ItemTemplate)'| markdownify }}</td>
+<td>Using item template to achieve similar functionality in Picker.</td>
 </tr>
 </table>
 
