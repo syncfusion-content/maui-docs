@@ -7,6 +7,8 @@ control: SfDateTimePicker
 documentation: ug
 ---
 
+> **Notice**: After **Volume 3 2025 (Mid of Sep 2025)**, feature enhancements for this control will no longer be available in the Syncfusion® package. Please switch to the **Syncfusion® Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
+
 # Overview of .NET MAUI Date Time Picker (SfDateTimePicker)
 
 The Syncfusion<sup>&reg;</sup> [.NET MAUI Date Time Picker](https://www.syncfusion.com/maui-controls/maui-datetimepicker) provides a way to pick a date, time, or date and time. The Date Time Picker also enables you to set date ranges and date and time formats and to customize its dialog appearance by configuring its header, footer, and more.
