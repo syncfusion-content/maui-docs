@@ -7,8 +7,6 @@ control: SfPicker
 documentation: ug
 ---
 
-> **Notice**: After **Volume 2 2025 (Mid of Jun 2025)**, feature enhancements for this control will no longer be available in the Syncfusion® package. Please switch to the **Syncfusion® Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
-
 # Overview of .NET MAUI Picker (SfPicker)
 
 Syncfusion .NET MAUI Picker (SfPicker) control allows you to select an item and visualize its items inside a popup or a drop-down UI element. It supports multiple-column layout, header, footer, and selection view customizations. It provides customization as a date picker, time picker, date-time picker, country picker, color picker, and more.
