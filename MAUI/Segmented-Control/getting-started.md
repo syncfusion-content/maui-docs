@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Segmented control | Syncfusion<sup>&reg;</sup>
+title: Getting Started with .NET MAUI Segmented control | Syncfusion®
 description: Learn about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Segmented control (SfSegmentedControl) in mobile and desktop applications from a single shared codebase.
 platform: maui
 control: Segmented (SfSegmented) control
