@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Time Picker control | Syncfusion<sup>&reg;</sup>
+title: Getting started with .NET MAUI Time Picker control | Syncfusion®
 description: Learn about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Time Picker (SfTimePicker) control and its basic features.
 platform: maui
 control: SfTimePicker
