@@ -453,6 +453,11 @@ The following code example, explains how to initialize the properties of the `Xa
 <td>{{'[CancelButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_CancelButtonClicked)'| markdownify }}</td>
 <td>Occurs whenever the footer cancel button is clicked in Picker.</td>
 </tr>
+<tr>
+<td>{{'[OnPickerItemLoaded](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPicker.XForms.SfPicker.html#Syncfusion_SfPicker_XForms_SfPicker_OnPickerItemLoaded)'| markdownify }}</td>
+<td>{{'[ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html#Syncfusion_Maui_Picker_SfPicker_ItemTemplate)'| markdownify }}</td>
+<td>Item template is used to achieve similar functionality in Picker.</td>
+</tr>
 </table>
 
 ## Known issues
