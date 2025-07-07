@@ -7,6 +7,8 @@ control: SfAccordion
 documentation: ug
 ---
 
+> **Notice**: After **Volume 3 2025 (Mid of Sep 2025)**, feature enhancements for this control will no longer be available in the Syncfusion<sup>®</sup> package. Please switch to the **Syncfusion<sup>®</sup> Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
+
 # Getting Started with MAUI Accordion
 
 This section guides you through setting up and configuring a [Accordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html) in your .NET MAUI application. Follow the steps below to add a basic Accordion to your project.
