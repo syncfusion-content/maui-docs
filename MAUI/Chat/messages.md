@@ -1801,7 +1801,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/how-to-assign-c
 
 ## Show drop down menu on tapping a message in .NET MAUI Chat
 
-You can add drop down icon to the incoming messages in `SfChat` by writing custom control template to [IncomingMessageTextView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IncomingMessageTextView.html) using TargetStyle. Using [SfPopup](https://help.syncfusion.com/maui/popup/overview),you can display the drop down menu by using platform specific customization.
+You can add drop down icon to the incoming messages in `SfChat` by writing custom control template to [IncomingMessageTextView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IncomingMessageTextView.html) using `TargetStyle`. Using [SfPopup](https://help.syncfusion.com/maui/popup/overview),you can display the drop down menu by using platform specific customization.
 
 ![Drop down menu in .NET MAUI Chat](images/messages/maui-chat-show-drop-down-menu.gif)
 
