@@ -549,7 +549,7 @@ SfAutocomplete autocomplete = new SfAutocomplete
 
 ### Customize the visibility of Dropdown Shadow
 
-The `IsDropDownShadowVisible` property is used to customize the visibility of the dropdown shadow.
+The [IsDropDownShadowVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_IsDropDownShadowVisible) property is used to customize the visibility of the dropdown shadow.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1276,6 +1276,52 @@ The [DropDownClosed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 
 {% endhighlight %}
 {% endtabs %}
+
+## ValueChanged Event
+When the value of Autocomplete changes, the [ValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html#Syncfusion_Maui_Inputs_SfAutocomplete_ValueChanged) event is triggered. This event is raised when the value changes due to user interaction, programmatic updates, or any other mechanism. It provides both `OldValue` and `NewValue`, allowing for responsive handling of changes. The ValueChanged event contains the following properties:
+
+* `OldValue` – Contains the previous text value before the change.
+* `NewValue` – Contains the new text value after the change.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfAutocomplete x:Name="autocomplete"  
+                    TextMemberPath="Name" 
+                    DisplayMemberPath="Name" 
+                    ItemsSource="{Binding SocialMedias}" 
+                    ValueChanged="OnValueChanged" />
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfAutoComplete autocomplete = new SfAutoComplete
+{
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name"
+};
+autocomplete.ValueChanged += OnValueChanged;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+The ValueChanged event can be handled as follows:
+
+{% tabs %}
+{% highlight C# %}
+
+private async void OnValueChanged(object sender, AutocompleteValueChangedEventArgs e)
+{
+    await DisplayAlert("Alert", "Value has changed to: " + e.NewValue.ToString(), "Ok");
+}
+
+{% endhighlight %}
+
+{% endtabs %} 
+ 
 
 ## CursorPosition
 

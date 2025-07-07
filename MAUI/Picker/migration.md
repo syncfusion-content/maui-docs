@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Migrate from Syncfusion® Xamarin SfPicker to .NET MAUI SfPicker
+title: Migrate from Syncfusion® Xamarin to .NET MAUI SfPicker
 description: Learn here all about Migrating from Syncfusion<sup>&reg;</sup> Xamarin Picker to Syncfusion<sup>&reg;</sup> .NET MAUI Picker control.
 platform: maui
 control: SfPicker
@@ -225,7 +225,7 @@ The following code example, explains how to initialize the properties of the `Xa
 </tr>
 <tr>
 <td>{{'[EnableLooping](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.PickerHelper.PickerBase.html#Syncfusion_XForms_Pickers_PickerHelper_PickerBase_EnableLoopingProperty)'| markdownify }}</td>
-<td>{{'[EnableLooping]()'| markdownify }}</td>
+<td>{{'[EnableLooping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_EnableLooping)'| markdownify }}</td>
 <td>Gets or sets the value of enable looping.</td>
 </tr>
 <tr>
@@ -452,6 +452,11 @@ The following code example, explains how to initialize the properties of the `Xa
 <td>{{'[CancelButtonClicked](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.Pickers.SfPicker.html#Syncfusion_XForms_Pickers_SfPicker_CancelButtonClicked)'| markdownify }}</td>
 <td>{{'[CancelButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_CancelButtonClicked)'| markdownify }}</td>
 <td>Occurs whenever the footer cancel button is clicked in Picker.</td>
+</tr>
+<tr>
+<td>{{'[OnPickerItemLoaded](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPicker.XForms.SfPicker.html#Syncfusion_SfPicker_XForms_SfPicker_OnPickerItemLoaded)'| markdownify }}</td>
+<td>{{'[ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html#Syncfusion_Maui_Picker_SfPicker_ItemTemplate)'| markdownify }}</td>
+<td>Item template is used to achieve similar functionality in Picker.</td>
 </tr>
 </table>
 

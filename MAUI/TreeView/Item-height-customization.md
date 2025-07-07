@@ -11,7 +11,7 @@ documentation: ug
 
 The TreeView offers several options for customizing the height of items. To achieve this customization, please follow the steps outlined in the sections below.
 
-## Customize Item Height
+## Customize item height
 
 The TreeView allows for customization of item height by setting the [ItemHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemHeight) property. The default value of this property is `48d`. This property can be customized at runtime.
 
@@ -25,7 +25,7 @@ treeView.ItemHeight = 40;
 {% endhighlight %}
 {% endtabs %}
 
-## Customize Item height using `QueryNodeSize` event
+## Customize item height using `QueryNodeSize` event
 The TreeView allows customization of the height of the items using the [QueryNodeSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_QueryNodeSize) event. This event is raised whenever the item comes into view and is triggered with [QueryNodeSizeEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.QueryNodeSizeEventArgs.html).
 
 The `SfTreeView.QueryNodeSize` event provides the following arguments:

@@ -10,7 +10,7 @@ documentation: ug
 # Features in .NET MAUI DockLayout Control
 
 ## Expand LastChild
-The `ShouldExpandLastChild` property (of type `bool`) determines whether the last docked child should automatically occupy all remaining space after other docked children have been positioned. By default, this property is set to `True`. This feature is particularly valuable for ensuring that the last child element fully utilizes available space, resulting in a seamless and gap-free layout.
+The [ShouldExpandLastChild](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html#Syncfusion_Maui_Core_SfDockLayout_ShouldExpandLastChild) property (of type `bool`) determines whether the last docked child should automatically occupy all remaining space after other docked children have been positioned. By default, this property is set to `True`. This feature is particularly valuable for ensuring that the last child element fully utilizes available space, resulting in a seamless and gap-free layout.
 
 {% tabs %}
 {% highlight xaml %}
@@ -34,10 +34,10 @@ dockLayout.Children.Add(new Label() { Text = "None", WidthRequest = 45 });
 ![.NET MAUI DockLayout Last Child not Expanded](DockLayout-Images/maui-docklayout-lastchild-alignment.png)
 
 ## Spacing
-Customize the spacing between child elements using the `HorizontalSpacing` and `VerticalSpacing` properties.The default value for both is 0.
+Customize the spacing between child elements using the [HorizontalSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html#Syncfusion_Maui_Core_SfDockLayout_HorizontalSpacing) and [VerticalSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html#Syncfusion_Maui_Core_SfDockLayout_VerticalSpacing) properties.The default value for both is 0.
 
-* `HorizontalSpacing` —  Specifies the horizontal gap between docked children.
-* `VerticalSpacing` — Specifies the vertical  gap between docked children.
+* [HorizontalSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html#Syncfusion_Maui_Core_SfDockLayout_HorizontalSpacing) —  Specifies the horizontal gap between docked children.
+* [VerticalSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html#Syncfusion_Maui_Core_SfDockLayout_VerticalSpacing) — Specifies the vertical  gap between docked children.
 
 
 {% tabs %}
@@ -62,7 +62,7 @@ SfDockLayout dockLayout = new SfDockLayout()
 ![Output of DockLayout with Spacing](DockLayout-Images/maui-docklayout-spacing.png)
 
 ## GetDock
-The `GetDock` method retrieves the docking position for a specified view within the layout.
+The [GetDock](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html#Syncfusion_Maui_Core_SfDockLayout_GetDock_Microsoft_Maui_Controls_BindableObject_) method retrieves the docking position for a specified view within the layout.
 
 `GetDock(BindableObject view)`
 
@@ -85,7 +85,7 @@ Dock currentPosition = SfDockLayout.GetDock((BindableObject)dockLayout.Children[
 {% endtabs %}
 
 ## SetDock
-The `SetDock` method assigns a specific docking position to a child element within the layout.
+The [SetDock](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html#Syncfusion_Maui_Core_SfDockLayout_SetDock_Microsoft_Maui_Controls_BindableObject_Syncfusion_Maui_Core_Dock_) method assigns a specific docking position to a child element within the layout.
 
 `SetDock(BindableObject view, Dock position)`
 
