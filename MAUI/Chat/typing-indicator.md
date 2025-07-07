@@ -126,7 +126,7 @@ namespace GettingStarted
 
 ![Typing indicator with image in .NET MAUI Chat](images/typing-indicator/maui-chat-typing-indicator.png)
 
-N> The `SfChat` allows customizing the height of the typing indicator using the [SfChat.TypingIndicatorViewHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_TypingIndicatorViewHeight) property.
+N> The `SfChat` allows customizing the height of the typing indicator using the [TypingIndicatorViewHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_TypingIndicatorViewHeight) property.
 
 ## Customize avatar view of typing indicator
 
