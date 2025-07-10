@@ -1790,3 +1790,19 @@ In the provided code example, we've set up a custom template to display a securi
 ![Sytem generated message in .NET MAUI Chat](images/messages/maui-chat-system-generated-custom-message-template.png)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/system-generated-message-template-.net-maui-chat)
+
+## Assign unique color to each user in a group chat
+
+You can assign unique color to each user in a group chat by writing converter and custom control templates to [OutgoingMessageAuthorView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.OutgoingMessageAuthorView.html) and [IncomingMessageAuthorView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IncomingMessageAuthorView.html) using `TargetStyle`.
+
+![Unique color to each user in .NET MAUI Chat](images/messages/maui-chat-assign-color-each-user.png)
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/how-to-assign-color-each-user-in-.net-maui-chat)
+
+## Show drop down menu on tapping a message in .NET MAUI Chat
+
+You can add drop down icon to the incoming messages in `SfChat` by writing custom control template to [IncomingMessageTextView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IncomingMessageTextView.html) using `TargetStyle`. Using [SfPopup](https://help.syncfusion.com/maui/popup/overview), you can display the drop down menu by using platform specific customization.
+
+![Drop down menu in .NET MAUI Chat](images/messages/maui-chat-show-drop-down-menu.gif)
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/how-to-show-drop-down-menu-in-.net-maui-chat)
