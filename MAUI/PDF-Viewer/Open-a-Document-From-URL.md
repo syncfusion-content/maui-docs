@@ -7,9 +7,9 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Open a Document From URL in .NET MAUI PDF Viewer (SfPdfViewer)
+# Open a Document from URL in .NET MAUI PDF Viewer (SfPdfViewer)
 
-A PDF document can be opened in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) from a given URL by converting it to byte[] and assigning the obtained byte[] to the [DocumentSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) property. 
+A PDF document can be opened in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) from a given URL by converting it to a byte[] and assigning the obtained byte[] to the [DocumentSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) property. 
 
 N>If you experience issues loading a document into the PDF viewer from a URL, it may not be an issue with the PDF viewer itself. If you face issues, please ensure the PDF file is accessible by checking the URL validity, network connectivity, and authentication, and try opening the URL in a web browser.
 

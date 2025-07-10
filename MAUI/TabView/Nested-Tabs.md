@@ -1,17 +1,17 @@
 ---
 layout: post
-title: NestedTab in .NET MAUI Tab View (SfTabView) control | Syncfusion®
-description: Learn here about the nested tab support in Syncfusion® .NET MAUI Tab View (SfTabView) control and code sample.
-platform: maui
-control: Tab View
-documentation: ug
+title: NestedTab in .NET MAUI Tab View (SfTabView) Control | Syncfusion®
+description: Learn about the nested tab support in Syncfusion® .NET MAUI Tab View (SfTabView) control and more.
+platform: MAUI
+control: SfTabView
+documentation: UG
 ---
 
-# Nested tab in .NET MAUI Tab View (SfTabView)
+# Nested Tab in .NET MAUI Tab View (SfTabView)
 
-Nested tab items can be configured in Tab View using the [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_Items) property of [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html), which holds the nested collection of [SfTabItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html) by [TabItemsCollection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabItemCollection.html).
+You can configure nested tab items in the Tab View using the [Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_Items) property of [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html). This property holds the nested collection of [SfTabItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html) by [TabItemsCollection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.TabItemCollection.html).
 
-To get start quickly with Nested tab view in .NET MAUI TabView, you can check on this video:
+To get start quickly with Nested Tab View in .NET MAUI Tab View, you can check on this video:
 
 {% youtube "https://www.youtube.com/watch?v=batfDt1S8Mc&ab_channel=Syncfusion%2CInc" %}
 
@@ -191,4 +191,22 @@ public partial class MainPage : ContentPage
 
 ![NestedTab](images/Nested_Tab.png)
 
-N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/NestedTabViewSample) in GitHub
+N> View the [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/NestedTabViewSample) on GitHub.
+
+## EnableVirtualization
+
+Enabling virtualization improves the initial loading performance of [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html). To activate this feature, set the `EnableVirtualization` property to `true`.
+
+{% tabs %}
+{% highlight xaml %}
+
+<tabView:SfTabView EnableVirtualization="True" />
+
+{% endhighlight %}
+{% highlight C# %}
+
+SfTabView tabView = new SfTabView();
+tabView.EnableVirtualization = true;
+
+{% endhighlight %}
+{% endtabs %}

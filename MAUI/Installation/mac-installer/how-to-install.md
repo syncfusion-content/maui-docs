@@ -1,60 +1,60 @@
 ---
 layout: post
 title: Installing Syncfusion® .NET MAUI Mac installer - Syncfusion®
-description: Learn here about how to install Syncfusion® .NET MAUI Mac installer after downloading from our Syncfusion® website.
+description: Learn how to install Syncfusion® .NET MAUI Mac installer after downloading from our Syncfusion® website.
 platform: MAUI
 control: Installation and Deployment
-documentation: ug
+documentation: UG
 ---
 
-# Steps to resolve the warning message in Catalina OS or later
+# Steps to Resolve the Warning Message in Catalina OS or Later
 
-   While running .NET MAUI Mac Installers on Catalina MacOS or later, the below alert will be displayed.
+   While running .NET MAUI Mac Installers on Catalina macOS or later, the below alert will be displayed.
 
-   ![Alert Image](images/Mac_Catalina_MacOS_Alert1.png)  
+   ![Alert](images/Mac_Catalina_MacOS_Alert1.png)  
      
    If you receive this alert, follow the below steps for the easiest solution.   
 
-   1.	Right-click the downloaded dmg file.
+   1.	Right-click the downloaded DMG file.
    2.	Select the "Open With" option and choose "DiskImageMounter (Default)". The following pop-up appears.
 
-		![pop-up Image](images/Mac_Catalina_MacOS_Alert2.png)
+		![Pop-up](images/Mac_Catalina_MacOS_Alert2.png)
 
-   3.	When you click "Open" the installer window will be opened.
+   3.	Click "Open" to access the installer window.
 
-## Step-by-Step Installation
+## Step-by-Step installation
 
 The steps below show how to install .NET MAUI Mac installer.
 
-1. Locate the downloaded dmg file and open the file by double click on it.
+1. Locate the downloaded DMG file and open it by double-clicking.
 
    ![Welcome wizard](images/Mac_Installer1.png)
 
-2. This action will automatically mount the disk image and create a virtual drive on your desktop or in the Finder sidebar.
+2. This action will mount the disk image and create a virtual drive on your desktop or in the Finder sidebar.
 
-   ![License Agreement](images/Mac_Installer2.png)
+   ![License agreement](images/Mac_Installer2.png)
    
 3. Copy the mounted disk file.
 
-   ![License Agree Confirmation](images/Mac_Installer3.png)
+   ![License agree confirmation](images/Mac_Installer3.png)
    
-4. And paste it in "Applications" folder shortcut.
+4. Paste it into the "Applications" folder shortcut.
 
-   ![License Agree Confirmation](images/Mac_Installer4.png)
+   ![License agree confirmation](images/Mac_Installer4.png)
    
-   N> The Unlock key is not required to install the Mac installer. The Syncfusion<sup>®</sup> Mac installer can be used for development purposes without registering the Unlock key.
+   N> An Unlock key is not required to install the Mac installer. The Syncfusion<sup>®</sup> Mac installer can be used for development purposes without registering the Unlock key.
 
 
-5. Now you can open the folder to explore the Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> Mac installer.
+5. Open the folder to explore the Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> Mac installer.
 
    ![Destination](images/Mac_Installer5.png)
 
-6. To remove the DMG file, Right-click on the virtual drive on your desktop or in the Finder sidebar and select "Eject." Also delete the folder from the Applications.
+6. To remove the DMG file, right-click on the virtual drive on your desktop or in the Finder sidebar and select "Eject." Also delete the folder from the Applications.
 
-   ![Install Location](images/Mac_Installer6.png)
+   ![Install location](images/Mac_Installer6.png)
 
 ## License key registration in samples
 
-After the installation, the license key is required to register the demo source that is included in the Mac installer. To learn about the steps for license registration for the .NET MAUI Mac installer, please refer to this.
+After the installation, a license key is required to register the demo source included in the Mac installer. To learn about license registration for the .NET MAUI Mac installer, please refer to this.
 
 Register the license key in [App.xaml.cs](https://help.syncfusion.com/maui/licensing/how-to-register-in-an-application#net-maui) constructor before InitializeComponent().

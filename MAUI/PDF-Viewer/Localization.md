@@ -10,7 +10,7 @@ keywords : .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .n
 
 # Localization in .NET MAUI PDF Viewer (SfPdfViewer)
 
-Localization is the process of translating the application resources into a different language for the specific cultures. [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) is set up by default with the language code `en-US`. However, by including a resource file (.resx) in the application with the language code, the static text used in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) can be localized to a different language. 
+Localization is the process of translating the application resources into a different language for specific cultures. [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) is set up by default with the language code `en-US`. However, by including a resource file (.resx) in the application with the language code, the static text used in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) can be localized to a different language. 
 
 Follow the instructions given to apply localization to the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
 
@@ -56,11 +56,11 @@ Follow the given steps to create and add the resource file to the application.
 
 4. Click the `Add` option to add the resource file in the Resources folder.
 
-5. Change the `Build Action` of the resource file as `Embedded resource`.
+5. Change the `Build Action` of the resource file to `Embedded resource`.
 
     ![Build action of resource file](Images/Localization/BuildAction.png)
 
-6. Double tap on the resource file to add the name and value details in the Resource Designer.
+6. Double tap on the resource file to add the name and value details to the Resource Designer.
 	
 7. Set the `ResourceManager` as shown in the following code example, that looks up the resource file with the specified root name.
  
@@ -414,8 +414,8 @@ The following table contains the default name and value details used in the SfPd
 <td>Next page</td>
 </tr>
 <tr>
-<td>NoBookmark</td>
-<td>No Bookmark</td>
+<td>NoBookmarks</td>
+<td>No Bookmarks</td>
 </tr>
 <tr>
 <td>NoColor</td>
@@ -560,5 +560,37 @@ The following table contains the default name and value details used in the SfPd
 <tr>
 <td>StandardStamps</td>
 <td>Standard Stamps</td>
+</tr>
+<tr>
+<td>AddBookmark</td>
+<td>Add bookmark</td>
+</tr>
+<tr>
+<td>Back</td>
+<td>Back</td>
+</tr>
+<tr>
+<td>MoreItems</td>
+<td>More items</td>
+</tr>
+<tr>
+<td>TextColor</td>
+<td>Text color</td>
+</tr>
+<tr>
+<td>TextFillColor</td>
+<td>Text fill color</td>
+</tr>
+<tr>
+<td>Bookmarks</td>
+<td>Bookmarks</td>
+</tr>
+<tr>
+<td>of</td>
+<td>of</td>
+</tr>
+<tr>
+<td>GoToPage</td>
+<td>Go to Page</td>
 </tr>
 </table>

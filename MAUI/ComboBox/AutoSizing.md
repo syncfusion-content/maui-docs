@@ -18,7 +18,6 @@ The [EnableAutoSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-             WidthRequest="350"
              ItemsSource="{Binding SocialMedias}"
              SelectionMode="Multiple"
              MaxDropDownHeight="250"
@@ -29,6 +28,24 @@ The [EnableAutoSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
              EnableAutoSize="True" />
 
 {% endhighlight %}
+
+{% highlight c# %}
+
+SfComboBox comboBox = new SfComboBox() 
+{
+        ItemsSource = socialMediaViewModel.SocialMedias,
+        SelectionMode=ComboBoxSelectionMode.Multiple,
+        MaxDropDownHeight = 250,
+        DisplayMemberPath = "Name",
+        TextMemberPath = "Name",
+        Placeholder="Enter Media",
+        TokensWrapMode=ComboBoxTokensWrapMode.Wrap,
+        EnableAutoSize = true
+
+};
+
+{% endhighlight %}
+
 {% endtabs %}
 
 ![.NET MAUI ComboBox AutoSize.](Images/AutoSizing/net-maui-combobox-autosize.png)

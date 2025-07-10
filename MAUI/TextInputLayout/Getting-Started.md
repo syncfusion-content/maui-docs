@@ -108,7 +108,7 @@ Step 2: Add any input view control such as [Entry](https://learn.microsoft.com/e
 
 {% highlight C# %} 
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Content = new Entry(); 
 
 {% endhighlight %}
@@ -213,7 +213,7 @@ Step 3: Add any input view control such as [Entry](https://learn.microsoft.com/e
 
 {% highlight C# %} 
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Content = new Entry(); 
 
 {% endhighlight %}
@@ -239,7 +239,7 @@ Floating label for the text input layout can be added by setting the [Hint](http
 
 {% highlight C# %} 
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Name"; 
 inputLayout.Content = new Entry(); 
 
@@ -270,7 +270,7 @@ The password visibility toggle is used to show or hide the visibility of charact
 
 {% highlight C# %} 
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Password";
 inputLayout.EnablePasswordVisibilityToggle = true;
 inputLayout.Content = new Entry() { Text = "1234" }; 

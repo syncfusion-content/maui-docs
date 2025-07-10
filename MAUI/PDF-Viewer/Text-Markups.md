@@ -10,7 +10,7 @@ keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .ne
 
 # Text Markup Annotations in .NET MAUI PDF Viewer (SfPdfViewer)
 
-The text markup annotations feature of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to add, remove and modify text markups in the PDF document. This is useful for making corrections or emphasizing important texts in the document. This section will go through the various types and functions available in PDF Viewer for working with text markup annotations.
+The text markup annotations feature of [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to add, remove, and modify text markups in the PDF document. This is useful for making corrections or emphasizing important texts in the document. This section will go through the various types and functions available in PDF Viewer for working with text markup annotations.
 
 ## Types of text markups
 
@@ -32,18 +32,18 @@ This section will go through how to add text markup annotations to a PDF documen
 
 ### Add text markups from annotation mode
 
-You can add text markup annotations to a PDF document by touch (or mouse down) and drag using [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) property of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) . The following steps explains how to add text markup  annotation on a text in a PDF.
+You can add text markup annotations to a PDF document by touch (or mouse down) and drag using the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) property of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). The following steps explain how to add text markup  annotation on a text in a PDF.
 
 1.	Set the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) property of the SfPdfViewer to any text markups (say [Highlight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_Highlight)). It activates the highlight annotation mode on the control.
 2.	Place your finger (or mouse) on the text in the PDF document, where you want to start adding the text markup.
 3.	Drag the finger (or cursor) across the text to select.
 4.	Complete adding the text markup to the selected text by releasing the finger (or cursor).
-5.	Repeat the steps 2-4, if you want to add multiple text markups on other areas during the annotation mode.
-6.	Once you have done, set the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_None). It will disable the annotation mode. 
+5.	Repeat steps 2-4, if you want to add multiple text markups on other areas during the annotation mode.
+6.	Once you have done this, set the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode) to [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_None). It will disable the annotation mode. 
 7.	You can later select and edit the annotations if required.
 
 
-The following code explains how to enable the highlight annotation mode. Similarly, you can change the annotation mode for adding other text markups.
+The following code explains how to enable the highlight annotation mode. Similarly, you can change the annotation mode to add other text markups.
 
 {% tabs %}
 {% highlight C# %}
@@ -56,7 +56,7 @@ void EnableHighlightAnnotationMode()
 {% endhighlight %}
 {% endtabs %}
 
-Similarly, refer to following code to disable the highlight annotation mode.
+Similarly, refer to the following code to disable the highlight annotation mode.
 
 {% tabs %}
 {% highlight C# %}
@@ -69,7 +69,7 @@ void DisableHighlightMode()
 {% endhighlight %}
 {% endtabs %}
 
-### Add text markups from text selection
+### Add text markups from the text selection
 
 Text markups can be added to a PDF document using the text selection without enabling the [AnnotationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationMode). Select the text you want in a PDF document, and a context menu with the text markup options will appear after you complete your selection. You can select any of the text markup options to add annotation to a text in the PDF document. 
 
@@ -79,7 +79,7 @@ The following image represents the text selection context menu with text markup 
 
 ### Adding Annotations Programmatically
 
-You can create and add a text markup annotation to a PDF document programmatically using the [AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) . The following example explains how to create a highlight annotation and add it to the first page of a PDF document. Similarly, you can create other text markup annotation types.
+You can create and add a text markup annotation to a PDF document programmatically using the [AddAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). The following example explains how to create a highlight annotation and add it to the first page of a PDF document. Similarly, you can create other text markup annotation types.
 
 {% tabs %}
 {% highlight C# %}
@@ -90,7 +90,7 @@ HighlightAnnotation CreateHighlightAnnotation()
     // Create a list of text bounds that represents a multiple lines of text markups. Here a single line text markup are created.
     List<RectF> textBoundsCollection = new List<RectF> { new RectF(100, 100, 100, 20) };
 
-    // Create an highlight annotation.
+    // Create a highlight annotation.
     HighlightAnnotation annotation = new HighlightAnnotation(pageNumber, textBoundsCollection);
 
     // Set the appearance for the highlight annotation
@@ -113,9 +113,9 @@ void AddHighlightAnnotation()
 
 ## Text markup annotation settings
 
-In the text markup annotation mode, the text markups will be added with a default appearance. You can modify the annotation after it has been added to the pages. However, if you need to define the appearance before adding text markups on the document, you can change its default settings using the [AnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationSettings.html) property of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) . For that you need to obtain the default text markup annotation settings.
+In the text markup annotation mode, the text markups will be added with a default appearance. You can modify the annotation after it has been added to the pages. However, if you need to define the appearance before adding text markups on the document, you can change its default settings using the [AnnotationSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationSettings.html) property of the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). For that, you need to obtain the default text markup annotation settings.
 
-The following example explains how to obtain the default highlight annotation settings and modify some of its properties. Similarly, you can modify properties of other text markup annotations also.
+The following example explains how to obtain the default highlight annotation settings and modify some of its properties. Similarly, you can also modify the properties of other text markup annotations.
 
 {% tabs %}
 {% highlight C# %}
@@ -146,7 +146,7 @@ You can edit the properties of the selected text markup annotation programmatica
 /// <param name="selectedAnnotation">The selected annotation instance that may be obtained from the annotation selected event</param>
 void EditSelectedHighlightAnnotation(Annotation selectedAnnotation)
 {
-    // Type cast the selected annotation as highlight annotation.
+    // Typecast the selected annotation as a highlight annotation.
     if (selectedAnnotation is HighlightAnnotation highlightAnnotation)
     {
         // Change the color to blue.

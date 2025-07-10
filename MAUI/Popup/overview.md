@@ -7,6 +7,8 @@ control: SfPopup
 documentation: ug
 --- 
 
+> **Notice**: After **Volume 3 2025 (Mid of Sep 2025)**, feature enhancements for this control will no longer be available in the Syncfusion® package. Please switch to the **Syncfusion® Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
+
 # MAUI Popup (SfPopup) Overview
 
 Popup layout allows you to display an alert message with customizable buttons or load any desired view inside a popup. It provides options to fully customize the popup with custom header, body, and footer capabilities, allowing you to display important information precisely how users want to.

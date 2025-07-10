@@ -616,11 +616,11 @@ You can style the elements of a date picker message by setting values to the in-
 </tr>
 <tr>
 <td> SfChatDateTimeInputMessageIconColor </td>
-<td> Icon color for datetime input messsge. </td>
+<td> Icon color for datetime input message. </td>
 </tr>
 <tr>
 <td> SfChatDateTimeInputMessageIconBackground </td>
-<td> Icon background color for datetime input messsge. </td>
+<td> Icon background color for datetime input message. </td>
 </tr>
 </table>
 
@@ -728,6 +728,71 @@ You can style the elements of a time picker message by setting values to the in-
 {% endtabs %}
 
 ![Time picker message style in .NET MAUI Chat](images/styles/maui-chat-timepicker-message-style.png)
+
+## Delivery State styling
+You can style the delivery state by setting values to the in-built keys of the delivery state in the resource dictionary.
+
+<table>
+<tr>
+<th> Key </th>
+<th> Description </th>
+</tr>
+<tr>
+<td> SfChatDeliveryStateFailedIconColor </td>
+<td> Color of the Delivery State None. </td>
+</tr>
+<tr>
+<td> SfChatDeliveryStateSentIconColor </td>
+<td> Color of the Delivery State Sent. </td>
+</tr>
+<tr>
+<td> SfChatDeliveryStateDeliveredIconColor </td>
+<td> Color of the Delivery State Delivered. </td>
+</tr>
+<tr>
+<td> SfChatDeliveryStateReadIconColor </td>
+<td> Color of the Delivery State Read. </td>
+</tr>
+</table>
+
+{% tabs %}
+{% highlight xaml %}
+
+    <ContentPage.Resources>
+        <syncTheme:SyncfusionThemeDictionary>
+            <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <x:String x:Key="SfChatTheme">CustomTheme</x:String>
+                    <Color x:Key="SfChatDeliveryStateFailedIconColor">Red</Color>
+                    <Color x:Key="SfChatDeliveryStateSentIconColor">DarkGray</Color>
+                    <Color x:Key="SfChatDeliveryStateDeliveredIconColor">DarkGray</Color>
+                    <Color x:Key="SfChatDeliveryStateReadIconColor">Blue</Color>
+                </ResourceDictionary>
+            </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+        </syncTheme:SyncfusionThemeDictionary>
+    </ContentPage.Resources>
+
+{% endhighlight %}
+{% highlight c# %}
+
+public MainPage()
+{
+    ....
+    InitializeComponent();
+    ResourceDictionary dictionary = new ResourceDictionary();
+    dictionary.Add("SfChatTheme", "CustomTheme");
+    dictionary.Add("SfChatDeliveryStateFailedIconColor", Colors.Red);
+    dictionary.Add("SfChatDeliveryStateSentIconColor", Colors.DarkGray);
+    dictionary.Add("SfChatDeliveryStateDeliveredIconColor", Colors.DarkGray);
+    dictionary.Add("SfChatDeliveryStateReadIconColor", Colors.Blue);
+    this.Resources.Add(dictionary);
+    ....
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Delivery State Style in .NET MAUI Chat](Images/styles/maui-chat-delivery-state-style.gif)
 
 ## Message input view styling
 
@@ -1235,7 +1300,7 @@ You can style the attachment button by setting values to the in-built keys of th
 
 ![Attachment button style in .NET MAUI Chat](images/styles/maui-chat-attachmentbutton-style.png)
 
-## Load More styling
+## Load more styling
 
 You can style the load more button by setting values to the in-built keys of the load more button in the resource dictionary.
 

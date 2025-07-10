@@ -363,7 +363,7 @@ In [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfD
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid  x:Name="datagrid"
+<syncfusion:SfDataGrid  x:Name="dataGrid"
                         AutoGenerateRelations="True"
                         ItemsSource="{Binding Orders}" />
 {% endhighlight %}
@@ -617,6 +617,46 @@ this.dataGrid.CollapseDetailsViewAt(0);
  {% endhighlight %}
 {% endtabs %}
 
+## Hide Empty Grid Definitions
+
+By default, the expander will be visible for all the data rows in parent DataGrid even if its [RelationalColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ViewDefinition.html#Syncfusion_Maui_DataGrid_ViewDefinition_RelationalColumn) property has an empty collection or null.
+
+Setting the [HideEmptyDataGridViewDefinition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_HideEmptyDataGridViewDefinition) property to `true` will hide the expander from the view when the respective `RelationalColumn` property contains an empty collection or null.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                        AutoGenerateRelations="False"
+                        ItemsSource="{Binding Employees}"
+                        HideEmptyDataGridViewDefinition="True">
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+dataGrid.HideEmptyDataGridViewDefinition = true;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="Hiding-empty-DetailsView-DataGrid" src="Images/master-details-view/maui-datagrid-HideEmptyDataGridViewDefinition.png" width="404"/> 
+
+## Hide Indent Cells in Details view
+
+By default the indent cell of details view `SfDataGrid` is always displayed. You can hide the indent cell by setting [ShowDetailsViewIndentCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ShowDetailsViewIndentCell) property to `false` for the corresponding parent DataGrid. The default value of `ShowDetailsViewIndentCell` property is `true`.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                        AutoGenerateRelations="False"
+                        ItemsSource="{Binding Employees}"
+                        ShowDetailsViewIndentCell="False">
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+dataGrid.ShowDetailsViewIndentCell = false;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="Hiding-DetailsView-IndentCell" src="Images/master-details-view/maui-datagrid-ShowDetailsViewIndentCell.png" width="404"/> 
+
 ## Handling Events
 
 ### DetailsViewLoading
@@ -735,8 +775,13 @@ private void DataGrid_DetailsViewCollapsing(object? sender, DataGridDetailsViewC
 {% endtabs %}
 
 ## Master-Details View Limitations
+
 The `Master-Details View` in [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.html) has certain limitations that should be considered while using this feature:
 
- - The Master-Details View is released with basic functionalities. Currently, both the `SfDataGrid` and [DetailsViewDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DetailsViewDataGrid.html) do not support all existing features of `SfDataGrid` when the Master-Details View is enabled. Full support is planned for the 2025 Volume 2 Main Release.
- - Virtualization is not supported for `DetailsViewDataGrid` on Android, iOS, and Mac platforms. As a result, there may be delays in loading the details view data grid due to the initial loading of all rows and columns.
- - `DetailsViewPadding` property must have identical values in both `SfDataGrid` and `DetailsViewDataGrid`.
+- Virtualization is not supported for the `DetailsViewDataGrid` on Android, iOS, and Mac platforms. Consequently, there may be delays in loading the details view data grid due to the initial loading of all rows and columns.
+- `DetailsViewDataGrid` does not support `AutoGenerateColumnsMode.ResetAll`. Instead, it works based on `Reset`.
+- Master-Details View does not support Data Virtualization.
+- Master-Details View does not support Freeze Panes.
+- Master-Details View does not support Auto Row Height.
+- `DetailsViewDataGrid` does not support interaction features such as Swiping, Column Drag and Drop, and Row Drag and Drop, and Pull to Refresh.
+- For the `DetailsViewDataGrid`, the `SelectionMode`, `SelectionUnit`, `NavigationMode`, and `DetailsViewPadding` properties are assigned from its parent grid only. Therefore, both the parent `DataGrid` and `DetailsViewDataGrid` cannot have different values for these properties.

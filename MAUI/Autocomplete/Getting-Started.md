@@ -409,11 +409,12 @@ Now, populate this 'SocialMediaViewModel' data in the [Autocomplete](https://hel
 
 SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel();
 this.BindingContext = socialMediaViewModel;
-SfAutocomplete autocomplete = new SfAutocomplete(); 
-autocomplete.WidthRequest = 250;
-autocomplete.HeightRequest = 50;
-autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
-Content = autocomplete;
+SfAutocomplete autocomplete = new SfAutocomplete()
+{
+    WidthRequest = 250,
+    HeightRequest = 50,
+    ItemsSource = socialMediaViewModel.SocialMedias,
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -441,14 +442,19 @@ The [.NET MAUI Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 {% endhighlight %}
 {% highlight C# %}
 
-SfAutocomplete autocomplete = new SfAutocomplete(); 
-autocomplete.WidthRequest = 250;
-autocomplete.HeightRequest = 50;
-autocomplete.DisplayMemberPath = "Name";
-autocomplete.TextMemberPath = "Name";
-autocomplete.ItemsSource = socialMediaViewModel.SocialMedias;
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel(); 
+SfAutocomplete autocomplete = new SfAutocomplete()
+{
+    WidthRequest = 250,
+    HeightRequest = 50,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+    ItemsSource = socialMediaViewModel.SocialMedias,
+};
 
 {% endhighlight %}
 {% endtabs %}
+
+N> When publishing in AOT mode on iOS, ensure [Preserve(AllMembers = true)] is added to the model class to maintain DisplayMemberPath binding
 
 N> You can refer to our [.NET MAUI Autocomplete](https://www.syncfusion.com/maui-controls/maui-autocomplete) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Autocomplete Example](https://github.com/SyncfusionExamples/maui-autocomplete-samples) that shows you how to render the Autocomplete in .NET MAUI.

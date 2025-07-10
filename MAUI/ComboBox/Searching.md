@@ -32,7 +32,6 @@ In edit mode, searching will be performed based on the [TextMemberPath](https://
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    WidthRequest="250"
                     IsEditable="true"
                     ItemsSource="{Binding SocialMedias}"
                     TextMemberPath="ID"
@@ -41,8 +40,13 @@ In edit mode, searching will be performed based on the [TextMemberPath](https://
 {% endhighlight %}
 
 {% highlight C# %}
-
-comboBox.TextMemberPath = "ID";
+    SfComboBox comboBox = new SfComboBox() 
+    {
+        IsEditable = true,
+        ItemsSource = socialMediaViewModel.SocialMedias,
+        TextMemberPath = "ID",
+        DisplayMemberPath = "Name"
+    };
 
 {% endhighlight %}
 {% endtabs %}
@@ -68,7 +72,6 @@ Set the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 {% highlight XAML %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    WidthRequest="250"
                     TextSearchMode="StartsWith"
                     ItemsSource="{Binding SocialMedias}"
                     DisplayMemberPath="Name"
@@ -78,7 +81,13 @@ Set the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 
 {% highlight C# %}
 
-comboBox.TextSearchMode = ComboBoxTextSearchMode.StartsWith;
+    SfComboBox comboBox = new SfComboBox() 
+    {
+        TextSearchMode = ComboBoxTextSearchMode.StartsWith,
+        ItemsSource = socialMediaViewModel.SocialMedias,
+        TextMemberPath = "Name",
+        DisplayMemberPath = "Name",
+    };
 
 {% endhighlight %}
 {% endtabs %}
@@ -95,7 +104,6 @@ Set the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox"
-                    WidthRequest="250"
                     IsEditable="True"
                     TextSearchMode="Contains"
                     ItemsSource="{Binding SocialMedias}"
@@ -106,7 +114,14 @@ Set the [TextSearchMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inp
 
 {% highlight C# %}
 
-comboBox.TextSearchMode = ComboBoxTextSearchMode.Contains;
+SfComboBox comboBox = new SfComboBox() 
+{
+    IsEditable = true,
+    TextSearchMode = ComboBoxTextSearchMode.Contains,
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name",
+};
 
 {% endhighlight %}
 {% endtabs %}
@@ -123,7 +138,6 @@ Instead of displaying suggestion list on every character entry, matches can be f
 {% highlight xaml %}
 
 <editors:SfComboBox x:Name="comboBox" 
-                    WidthRequest="300"
                     IsFilteringEnabled="True"
                     IsEditable="True" 
                     ItemsSource="{Binding SocialMedias}"
@@ -135,7 +149,15 @@ Instead of displaying suggestion list on every character entry, matches can be f
 
 {% highlight C# %}
 
-comboBox.MinimumPrefixCharacters = 3;
+SfComboBox comboBox = new SfComboBox() 
+{
+    IsFilteringEnabled = true,
+    IsEditable = true,
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    MinimumPrefixCharacters = 3,
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name"
+};
 
 {% endhighlight %}
 {% endtabs %}

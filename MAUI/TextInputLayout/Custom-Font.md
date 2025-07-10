@@ -35,7 +35,7 @@ You can customize the font of the `hint` label by setting the FontFamily, FontSi
 
 {% highlight C# %} 
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Name";
 inputLayout.ContainerType = ContainerType.Outlined;
 inputLayout.HelperText = "Enter your name";
@@ -70,7 +70,7 @@ You can customize the font of the `helper text` label by setting the FontFamily,
 
 {% highlight C# %} 
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Name";
 inputLayout.ContainerType = ContainerType.Outlined;
 inputLayout.HelperText = "Enter your name";
@@ -106,7 +106,7 @@ You can customize the font of `error text` label by setting the FontFamily, Font
 
 {% highlight C# %} 
 
-var inputLayout = new SfTextInputLayout();
+SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Name";
 inputLayout.ContainerType = ContainerType.Outlined;
 inputLayout.HasError = true;

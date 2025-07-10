@@ -21,7 +21,7 @@ To get start quickly with apply styling .NET MAUI DataGrid, you can check on thi
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Content>
-        <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}" >
+        <syncfusion:SfDataGrid x:Name="dataGrid" ItemsSource="{Binding OrderInfoCollection}" >
             <syncfusion:SfDataGrid.DefaultStyle>
                 <syncfusion:DataGridStyle HeaderRowBackground="#0074E3" HeaderRowTextColor="White" RowBackground="#AFD5FB" RowTextColor="#212121"/>
             </syncfusion:SfDataGrid.DefaultStyle>
@@ -386,7 +386,7 @@ You can apply the alternative row color by using [AlternateRowBackground](https:
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Content>
-        <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}">
+        <syncfusion:SfDataGrid x:Name="dataGrid" ItemsSource="{Binding OrderInfoCollection}">
             <syncfusion:SfDataGrid.DefaultStyle>
                 <syncfusion:DataGridStyle AlternateRowBackground="#AFD5FB"/>
             </syncfusion:SfDataGrid.DefaultStyle>
@@ -415,7 +415,7 @@ You can change the row count which should be considered to apply the background 
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Content>
-        <syncfusion:SfDataGrid AlternationRowCount="3" 
+        <syncfusion:SfDataGrid x:Name="dataGrid" AlternationRowCount="3" 
                             ItemsSource="{Binding OrderInfoCollection}">
             <syncfusion:SfDataGrid.DefaultStyle>
                 <syncfusion:DataGridStyle AlternateRowBackground="#AFD5FB"/>
@@ -446,7 +446,7 @@ You can apply the style for header and row font attributes by using SfDataGrid.D
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Content>
-        <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}">
+        <syncfusion:SfDataGrid x:Name="dataGrid" ItemsSource="{Binding OrderInfoCollection}">
             <syncfusion:SfDataGrid.DefaultStyle>
                 <syncfusion:DataGridStyle HeaderRowFontAttributes="Bold"
                                         HeaderRowFontFamily="TimesNewRoman"
@@ -478,7 +478,7 @@ The following example shows how to apply both vertical and horizontal borders fo
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Content>
-        <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}"
+        <syncfusion:SfDataGrid x:Name="dataGrid" ItemsSource="{Binding OrderInfoCollection}"
                             GridLinesVisibility="Both"
                             HeaderGridLinesVisibility="Both"/>
     </ContentPage.Content>
@@ -507,10 +507,9 @@ The grid line color of column header and data row cells can be customized by set
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Content>
-        <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}">
+        <syncfusion:SfDataGrid x:Name="dataGrid" ItemsSource="{Binding OrderInfoCollection}">
             <syncfusion:SfDataGrid.DefaultStyle>
-                <syncfusion:DataGridStyle HeaderGridLineColor="#219ebc"/>
-                <syncfusion:DataGridStyle GridLineColor="#219ebc"/>
+                <syncfusion:DataGridStyle  HeaderGridLineColor="#219ebc" GridLineColor="#219ebc" />
             </syncfusion:SfDataGrid.DefaultStyle>
         </syncfusion:SfDataGrid>
     </ContentPage.Content>
@@ -536,10 +535,9 @@ The grid line stroke thickness of column header and data row cells can be custom
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Content>
-        <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}">
+        <syncfusion:SfDataGrid x:Name="dataGrid" ItemsSource="{Binding OrderInfoCollection}">
             <syncfusion:SfDataGrid.DefaultStyle>
-                <syncfusion:DataGridStyle HeaderGridLineStrokeThickness="3"/>
-                <syncfusion:DataGridStyle GridLineStrokeThickness="3"/>
+                <syncfusion:DataGridStyle HeaderGridLineStrokeThickness="3" GridLineStrokeThickness="3" />
             </syncfusion:SfDataGrid.DefaultStyle>
         </syncfusion:SfDataGrid>
     </ContentPage.Content>

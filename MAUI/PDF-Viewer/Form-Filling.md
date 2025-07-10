@@ -25,7 +25,7 @@ You can load and fill in the following form fields in a PDF document using the P
 
 ### Loading PDFs with XFA forms
 
-The PDF viewer supports only Acroforms. PDF documents that contain XFA form cannot be viewed in the PDF Viewer. When a PDF with XFA form is attempted to be loaded, the PDF will not be loaded and the [DocumentLoadFailed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoadFailed) event will be raised. Refer this [page](https://help.syncfusion.com/maui/pdf-viewer/documentloadnotifications#handling-document-load-failures) to know more about handling document load failure.
+The PDF viewer supports only Acroforms. PDF documents that contain an XFA form cannot be viewed in the PDF Viewer. When a PDF with an XFA form is attempted to be loaded, the PDF will not be loaded, and the [DocumentLoadFailed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoadFailed) event will be raised. Refer to this [page](https://help.syncfusion.com/maui/pdf-viewer/documentloadnotifications#handling-document-load-failures) to know more about handling document load failure.
 
 {% tabs %}
 {% highlight C# %}
@@ -43,7 +43,7 @@ private void PdfViewer_DocumentLoadFailed(object sender, DocumentLoadFailedEvent
 
 ### Retrieve form data from the PDF
 
-The form data in a PDF can be obtained from the [SfPdfViewer.FormFields](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FormFields) property. The form data will be available when the PDF completes loading and the data can be retrieved from the [DocumentLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoaded) event. The following code snippet illustrates getting the total count of form fields in the PDF document.
+The form data in a PDF can be obtained from the [SfPdfViewer.FormFields](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FormFields) property. The form data will be available when the PDF completes loading, and the data can be retrieved from the [DocumentLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoaded) event. The following code snippet illustrates getting the total count of form fields in the PDF document.
 
 {% tabs %}
 {% highlight C# %}
@@ -67,7 +67,7 @@ private void OnDocumentLoaded(object? sender, EventArgs? e)
 
 ### Editing text form fields
 
-A text form field can be modified using the [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TextFormField.html#Syncfusion_Maui_PdfViewer_TextFormField_Text) property. The following code snippet illustrates retrieving a text form field named "name" from PDF Viewer. 
+A text form field can be modified using the [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TextFormField.html#Syncfusion_Maui_PdfViewer_TextFormField_Text) property. The following code snippet illustrates retrieving a text form field named "name" from the PDF Viewer. 
 
 {% tabs %}
 {% highlight C# %}
@@ -85,7 +85,7 @@ if (formField is TextFormField nameTextBox)
 
 ### Editing checkbox form fields
 
-By modifying the [IsChecked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.CheckboxFormField.html#Syncfusion_Maui_PdfViewer_CheckboxFormField_IsChecked) property, the checkbox field can be checked or unchecked programmatically. The following code snippet illustrates retrieving a checkbox form field named "newsletter" from PDF Viewer. 
+By modifying the [IsChecked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.CheckboxFormField.html#Syncfusion_Maui_PdfViewer_CheckboxFormField_IsChecked) property, the checkbox field can be checked or unchecked programmatically. The following code snippet illustrates retrieving a checkbox form field named "newsletter" from the PDF Viewer. 
 
 {% tabs %}
 {% highlight C# %}
@@ -103,7 +103,7 @@ if (formField is CheckboxFormField checkBox)
 
 ### Editing combo box form fields
 
-The [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ComboBoxFormField.html#Syncfusion_Maui_PdfViewer_ComboBoxFormField_SelectedItem) property can be used to programmatically choose an item from the combo box. The [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ComboBoxFormField.html#Syncfusion_Maui_PdfViewer_ComboBoxFormField_SelectedItem) should be one of the values from the [ComboBoxFormField.Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ComboBoxFormField.html#Syncfusion_Maui_PdfViewer_ComboBoxFormField_Items) array. The following code snippet illustrates retrieving a combobox form field named "state" from PDF Viewer.  
+The [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ComboBoxFormField.html#Syncfusion_Maui_PdfViewer_ComboBoxFormField_SelectedItem) property can be used to programmatically choose an item from the combo box. The [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ComboBoxFormField.html#Syncfusion_Maui_PdfViewer_ComboBoxFormField_SelectedItem) should be one of the values from the [ComboBoxFormField.Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ComboBoxFormField.html#Syncfusion_Maui_PdfViewer_ComboBoxFormField_Items) array. The following code snippet illustrates retrieving a combobox form field named "state" from the PDF Viewer.  
 
 {% tabs %}
 {% highlight C# %}
@@ -112,7 +112,7 @@ FormField formField = PdfViewer.FormFields.Where(x => x.Name == "state").FirstOr
 
 if (formField is ComboBoxFormField comboBox)
 {
-    // Select the desire item from the combo box.
+    // Select the desired item from the combo box.
     comboBox.SelectedItem = comboBox.Items[4];
 }
 
@@ -121,7 +121,7 @@ if (formField is ComboBoxFormField comboBox)
 
 ### Editing list box form fields
 
-The [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ListBoxFormField.html#Syncfusion_Maui_PdfViewer_ListBoxFormField_SelectedItems) property can be used to programmatically choose an item from the list box. The [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ListBoxFormField.html#Syncfusion_Maui_PdfViewer_ListBoxFormField_SelectedItems) should contain only the values from the [ListBoxFormFields.Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ListBoxFormField.html#Syncfusion_Maui_PdfViewer_ListBoxFormField_Items) array. Both one and more selections are supported by the list box. The below code snippet illustrates modifying a single-select list box form field named "courses" from PDF Viewer.
+The [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ListBoxFormField.html#Syncfusion_Maui_PdfViewer_ListBoxFormField_SelectedItems) property can be used to programmatically choose an item from the list box. The [SelectedItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ListBoxFormField.html#Syncfusion_Maui_PdfViewer_ListBoxFormField_SelectedItems) should contain only the values from the [ListBoxFormFields.Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ListBoxFormField.html#Syncfusion_Maui_PdfViewer_ListBoxFormField_Items) array. One or more selections are supported by the list box. The below code snippet illustrates modifying a single-select list box form field named "courses" from the PDF Viewer.
 
 {% tabs %}
 {% highlight C# %}
@@ -130,14 +130,14 @@ FormField formField = PdfViewer.FormFields.Where(x => x.Name == "courses").First
 
 if (formField is ListBoxFormField listBox)
 {
-    // Select the desire item from the list box.
+    // Select the desired item from the list box.
     listBox.SelectedItems = new ObservableCollection<string> { listBox.Items[0] };
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-The below code snippet illustrates modifying a multi-select list box form field named "courses" from PDF Viewer.
+The below code snippet illustrates modifying a multi-select list box form field named "courses" from the PDF Viewer.
 
 {% tabs %}
 {% highlight C# %}
@@ -146,7 +146,7 @@ FormField formField = PdfViewer.FormFields.Where(x => x.Name == "courses").First
 
 if (formField is ListBoxFormField listBox)
 {
-    // Select the desire item from the list box.
+    // Select the desired item from the list box.
     listBox.SelectedItems = new System.Collections.ObjectModel.ObservableCollection<string> { listBox.Items[1], listBox.Items[2], listBox.Items[3] };
 }
 
@@ -156,7 +156,7 @@ if (formField is ListBoxFormField listBox)
 
 ### Editing radio button form fields
 
-Programmatically select an item from the radio buttons using the [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.RadioButtonFormField.html#Syncfusion_Maui_PdfViewer_RadioButtonFormField_SelectedItem) property. The [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.RadioButtonFormField.html#Syncfusion_Maui_PdfViewer_RadioButtonFormField_SelectedItem) should be one of the values from the [RadioButtonFormField.Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.RadioButtonFormField.html#Syncfusion_Maui_PdfViewer_RadioButtonFormField_Items) array. The following code snippet illustrates retrieving a radio button form field named "gender" from PDF Viewer.
+Programmatically select an item from the radio buttons using the [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.RadioButtonFormField.html#Syncfusion_Maui_PdfViewer_RadioButtonFormField_SelectedItem) property. The [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.RadioButtonFormField.html#Syncfusion_Maui_PdfViewer_RadioButtonFormField_SelectedItem) should be one of the values from the [RadioButtonFormField.Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.RadioButtonFormField.html#Syncfusion_Maui_PdfViewer_RadioButtonFormField_Items) array. The following code snippet illustrates retrieving a radio button form field named "gender" from the PDF Viewer.
 
 {% tabs %}
 {% highlight C# %}
@@ -174,7 +174,7 @@ if (formField is RadioButtonFormField radioButton)
 
 ### Editing signature form fields
 
-Programmatically, add a signature to an unsigned signature field by creating and assigning an ink annotation to the [SignatureFormField.Signature](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SignatureFormField.html#Syncfusion_Maui_PdfViewer_SignatureFormField_Signature) property. The following code snippet illustrates retrieving a signature form field named "signature" from PDF Viewer. 
+Programmatically, add a signature to an unsigned signature field by creating and assigning an ink annotation to the [SignatureFormField.Signature](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SignatureFormField.html#Syncfusion_Maui_PdfViewer_SignatureFormField_Signature) property. The following code snippet illustrates retrieving a signature form field named "signature" from the PDF Viewer. 
 
 {% tabs %}
 {% highlight C# %}
@@ -195,9 +195,9 @@ if (signature != null)
 
 The [Signature](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SignatureFormField.html#Syncfusion_Maui_PdfViewer_SignatureFormField_Signature) property is of type [InkAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.InkAnnotation.html) and it will behave like an ink after signing. If the PDF document is saved, the signature will be preserved as an ink annotation in the saved document. 
 
-#### Supressing the signature modal view
+#### Suppressing the signature modal view
 
-The [Sfpdfviewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to supress the signature modal view and use your own UI in its place. This can be achieved by setting the `FormFieldModalViewAppearingEventArgs.Cancel` property to `true` in the `SignatureModalViewAppearing` event handler. 
+The [Sfpdfviewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to suppress the signature modal view and use your own UI in its place. This can be achieved by setting the `FormFieldModalViewAppearingEventArgs.Cancel` property to `true` in the `SignatureModalViewAppearing` event handler. 
 
 The below code snippet illustrates supressing the signature modal view and using a UI implemented in the app in its place. In this illustration, it is assumed that the signature is produced in the form of an image stream when the user completes drawing the signature in the custom dialog. When the signing is completed using the custom dialog, a stamp annotation is created and assigned as the signature of the form field.   
 
@@ -218,7 +218,7 @@ private void PdfViewer_SignatureModalViewAppearing(object? Sender, FormFieldModa
 
 Private void customDialogOkButton_Clicked(object sender, EventArgs e)
 {
-   //Get the signature in the form of a Stream instance (possibly converted from an image of the user's free hand drawing) 
+   //Get the signature in the form of a Stream instance (possibly converted from an image of the user's freehand drawing) 
    signatureImageStream = GetSignatureImageStream();
    
    // Create a stamp annotation. The bounds values are not necessary since the stamp will be automatically fit over the signature form field. 
@@ -253,7 +253,7 @@ private void PdfViewer_FormFieldValueChanged(object sender, FormFieldValueChange
 
 ## Show and Hide form fields 
  
-You can manage the visibility of form fields using the `IsHidden` property. It helps you to hide form fields containing confidential data when sharing documents externally or presenting documents, ensuring data privacy and security. Also, it makes it easier to read the documents which are cluttered with more form fields. Like other form fields properties, you can undo and redo the hiding or showing actions. Additionally, when an form field is locked, it cannot be hidden. Form fields that are hidden will remain hidden during import, export, printing and saving.
+You can manage the visibility of form fields using the `IsHidden` property. It helps you to hide form fields containing confidential data when sharing documents externally or presenting documents, ensuring data privacy and security. Also, it makes it easier to read the documents that are cluttered with more form fields. Like other form field properties, you can undo and redo the hiding or showing actions. Additionally, when a form field is locked, it cannot be hidden. Form fields that are hidden will remain hidden during import, export, printing, and saving.
 
 ### Hide form fields
 
@@ -289,7 +289,7 @@ FormField formField = PdfViewer.FormFields.Where(x => x.Name == "name").FirstOrD
 //If the form field is a TextFormField, it hides that form field by setting its IsHidden property to true.
 if (formField is TextFormField nameTextBox)
 {
-    // Hide  the Text Box field.
+    // Hide the Text Box field.
     nameTextBox.IsHidden = true;
 }
 
@@ -304,26 +304,18 @@ Customizing form fields allows you to control their appearance and behavior. You
 
 ### Customize the background color of the form fields
 
-The BackgroundColor property sets the background color of a form field, letting you customize its appearance. Here's an example of how to use it for a text form field, and it can also be applied to checkboxes and radio buttons by adjusting their properties.
-
+The [BackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.Widget.html#Syncfusion_Maui_PdfViewer_Widget_BackgroundColor) property allows you to customize the appearance of form fields by setting their background color. The example below demonstrates how to apply a uniform background color to all form fields in the PDF document, regardless of their type. This approach can also be applied to specific form field types, such as checkboxes and radio buttons, by adjusting their respective properties individually.
 
 {% tabs %}
 {% highlight C# %}
-foreach (FormField formField in PdfViewer.FormFields) 
+foreach (FormField formField in PdfViewer.FormFields)
 {
-    // Check if the current form field is a text form field 
-    if (formField is TextFormField textBoxField)
+    foreach (Widget widget in formField.Widgets)
     {
-        // Loop through all the widgets associated with the text box field
-        foreach (var widget in textBoxField.Widgets)
-        {
-            // Set the background color of each widget to yellow
-            widget.BackgroundColor = Colors.Yellow;
-        }
+        //Set the background color of the widget to a semitransparent blue background with Rgba value of (204, 215, 255, 200)
+        widget.BackgroundColor = Color.FromRgba(204, 215, 255, 200);
     }
-}
- 
- 
+} 
 {% endhighlight %}
 {% endtabs %}
 
@@ -398,7 +390,12 @@ foreach (FormField formField in PdfViewer.FormFields)
 {% endhighlight %}
 {% endtabs %}
 
-## Property changed event for Form fields Widgets
+N> In versions prior to v29.1.33, the PDF Viewer rendered all form fields with a default semitransparent blue background, without considering the background color defined within the PDF document.
+N> Starting with v29.1.33, the PDF Viewer now renders form fields using the background color specified in their appearance settings, ensuring the fields are displayed as intended by the document author.
+N> To maintain backward compatibility, support has been added to customize the background color of form fields programmatically. This allows you to restore the previous behavior or apply custom styling based on your application requirements.
+N> If you prefer to retain the original semitransparent blue background used in earlier versions, you can apply it by setting the background color to `Color.FromRgba(204, 215, 255, 200)`. For example, please refer to the section [Customize the background color of the form fields](https://help.syncfusion.com/maui/pdf-viewer/form-filling#customize-the-background-color-of-the-form-fields).
+
+## Property changed event for Form field Widgets
 
 The `PropertyChanged` event occurs when a property is changed in the PDF document. It is common for properties such as border color, background color, border width, and foreground color to trigger this event as well. The following example explains how to wire and handle the event.
 
@@ -515,7 +512,7 @@ Similarly, the value changes of other form field types can also be detected usin
 
 ### Detecting the focus and unfocus of form fields
 
-The [FormFieldFocusChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FormFieldFocusChanged) event will be raised when text or signature field is focused or unfocused.
+The [FormFieldFocusChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FormFieldFocusChanged) event will be raised when a text or signature field is focused or unfocused.
 
 {% tabs %}
 {% highlight XAML %}
@@ -607,7 +604,7 @@ void ExportFormData()
 
 ### How to perform validation over the form field data?
 
-In PDF viewer, form validations can be done by obtaining the values from the form fields using the [FormFields](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FormFields) property and comparing them with the expected values. Below is an example that illustrates retrieving form fields by their names and checking whether they meet the expected values, before saving the document. 
+In the PDF viewer, form validations can be done by obtaining the values from the form fields using the [FormFields](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FormFields) property and comparing them with the expected values. Below is an example that illustrates retrieving form fields by their names and checking whether they meet the expected values, before saving the document. 
  
 In this example, the form field values are checked whether they meet the below criteria. If the criteria are satisfied, the PDF will be saved along with the form data. Otherwise, an error dialogue will be shown.
 
@@ -638,7 +635,7 @@ Email
 </td>
 <td>
 * Email is required.<br>
-* Email should be in correct format.<br>
+* Email should be in the correct format.<br>
 </td>
 </tr>
 <tr>
@@ -655,7 +652,7 @@ Date of birth
 Course
 </td>
 <td>
-* Atleast one course should be selected.
+* At least one course should be selected.
 </td>
 </tr>
 <tr>

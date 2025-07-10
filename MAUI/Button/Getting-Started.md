@@ -7,7 +7,7 @@ control: SfButton
 documentation: ug
 ---
 
-> **Notice**: After **Volume 1 2025 (Mid of March 2025)**, updates, bug fixes, and feature enhancements for this control will no longer be available in the Syncfusion<sup>®</sup> package. Please switch to the **Syncfusion<sup>®</sup> Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
+> **Notice**: After **Volume 1 2025 (Mid of March 2025)**, feature enhancements for this control will no longer be available in the Syncfusion<sup>®</sup> package. Please switch to the **Syncfusion<sup>®</sup> Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
 
 # Getting Started with .NET MAUI Button
 
@@ -89,6 +89,7 @@ Step 1: Add the namespace as shown in the following code sample.
 	using Syncfusion.Maui.Buttons;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 2: Add the [SfButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) control with a required optimal name using the included namespace.
 
@@ -108,7 +109,6 @@ SfButton button = new SfButton();
 
 {% endtabs %}
 
-{% endtabs %}
 
 {% endtabcontent %}
 {% tabcontent Visual Studio Code %}

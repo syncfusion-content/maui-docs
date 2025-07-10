@@ -9,7 +9,7 @@ documentation: ug
 
 # Syncfusion<sup>®</sup> Toolbox for .NET MAUI 
 
-The Syncfusion<sup>®</sup> Visual Studio Toolbox for the .NET MAUI platform is a valuable resource for developers seeking to seamlessly incorporate the Syncfusion<sup>®</sup> .NET MAUI components into their applications. Designed to be compatible with Visual Studio 2022, this toolbox offers a streamlined workflow, simplifying the integration and configuration process of Syncfusion<sup>®</sup> components.
+The Syncfusion<sup>®</sup> Visual Studio Toolbox for the .NET MAUI platform is a valuable resource for developers looking to seamlessly integrate Syncfusion<sup>®</sup> .NET MAUI components into their applications. Compatible with Visual Studio 2022, it streamlines the workflow by simplifying the integration and configuration of Syncfusion<sup>®</sup> components.
 
 I> The Syncfusion<sup>®</sup> .NET MAUI Toolbox supports Visual Studio 2022 and is available from Essential Studio<sup>®</sup> 2023 Volume 2(v22.1.34) onwards.
 
@@ -40,7 +40,7 @@ This toolbox provides a set of tools and features to easily incorporate Syncfusi
 
 ## Add Syncfusion<sup>®</sup> .NET MAUI Toolbox Components
    
-To incorporate Syncfusion<sup>®</sup>.NET MAUI components into your XAML design file, you can easily add them by dragging and dropping them from the toolbox. This intuitive approach automatically inserts the component's code sample and namespace into your XAML file, while also taking care of installing necessary NuGet packages.
+To incorporate Syncfusion<sup>®</sup> .NET MAUI components into your XAML design file, simply drag and drop them from the toolbox. This intuitive approach automatically inserts the component’s code and required namespace into the XAML file, and also installs the necessary NuGet packages.
 
    ![Syncfusion .NET MAUI Toolbox Wizard](images/ToolboxComponents.gif)
 

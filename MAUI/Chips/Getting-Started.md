@@ -7,7 +7,7 @@ control: Chips
 documentation: ug
 ---
 
-> **Notice**: After **Volume 1 2025 (Mid of March 2025)**, updates, bug fixes, and feature enhancements for this control will no longer be available in the Syncfusion<sup>®</sup> package. Please switch to the **Syncfusion Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
+> **Notice**: After **Volume 1 2025 (Mid of March 2025)**, feature enhancements for this control will no longer be available in the Syncfusion<sup>®</sup> package. Please switch to the **Syncfusion Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
 
 # Getting Started with .NET MAUI Chips
 
@@ -297,8 +297,7 @@ The chips control creates chip for each object and arranges chips in a StackLayo
 			<chip:SfChipGroup.ChipLayout>
 				<FlexLayout 
 					HorizontalOptions="Start" 
-					VerticalOptions="Center" 
-					/> 
+					VerticalOptions="Center" /> 
 			</chip:SfChipGroup.ChipLayout>
 		</chip:SfChipGroup> 
 	</Grid>
@@ -418,24 +417,28 @@ using Syncfusion.Maui.Core;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 
-	Grid grid = new Grid();
-	SfChipGroup chipGroup = new SfChipGroup();
-	grid.Children.Add(chipGroup);
-	this.BindingContext = new ViewModel();
-	chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
-	chipGroup.DisplayMemberPath = "Name";
-	chipGroup.HorizontalOptions = LayoutOptions.Start;
-	chipGroup.VerticalOptions = LayoutOptions.Center;
-	chipGroup.ChipTextColor = Colors.Black;
-	chipGroup.ChiBackground = Colors.White;
-	chipGroup.ChipPadding = new Thickness(8, 8, 0, 0);
-	this.Content = grid;
+this.BindingContext = new ViewModel();
+Grid grid = new Grid();
+SfChipGroup chipGroup = new SfChipGroup()
+{
+	DisplayMemberPath = "Name",
+	HorizontalOptions = LayoutOptions.Start,
+	VerticalOptions = LayoutOptions.Center,
+	ChipTextColor = Colors.Black,
+	ChipBackground = Colors.White,
+	ChipPadding = new Thickness(8, 8, 0, 0),
+};
+chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, "Employees");
+grid.Children.Add(chipGroup);
+this.Content = grid;
 		
 {% endhighlight %}
 
 {% endtabs %}
 
 ![ChipGroup sample with display member path and itemsSource demo](images/getting-started/getting_started.png)
+
+N> When publishing in AOT mode on iOS, ensure [Preserve(AllMembers = true)] is added to the model class to maintain DisplayMemberPath binding
 
 ## Set types of chip group
 
@@ -477,67 +480,42 @@ The following code example uses the [Action](https://help.syncfusion.com/cr/maui
 
 {% highlight c# %}
 
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Windows.Input;
+using Microsoft.Maui.Controls;
+using Syncfusion.Maui.Chips;
 
-namespace Chips
+this.BindingContext = new ViewModel();
+Grid grid = new Grid();
+Label nameLabel = new Label
 {
-	public class ViewModel :INotifyPropertyChanged
-	{
-		private ICommand actionCommand;
-
-		private ObservableCollection<Person> employees;
-
-		private string result;
-
-		public ICommand ActionCommand
-    	{
-			get { return actionCommand; }
-			set { actionCommand = value; }
-    	}
-    
-    	public ObservableCollection<Person> Employees
-    	{
-        	get { return employees; }
-        	set { Employees = value; OnPropertyChanged("Employees"); }
-    	}
-
-		public string Result
-		{
-			get { return result; }
-			set { result = value; OnPropertyChanged("Result"); }
-		}
-
-		public ViewModel()
-		{
-			ActionCommand = new Command(HandleAction);
-			employees = new ObservableCollection<Person>();
-			employees.Add(new Person() { Name = "John" });
-			employees.Add(new Person() { Name = "James" });
-			employees.Add(new Person() { Name = "Linda" });
-			employees.Add(new Person() { Name = "Rose" });
-			employees.Add(new Person() { Name = "Mark" });
-		}
-
-		public event PropertyChangedEventHandler PropertyChanged;
-
-		public void OnPropertyChanged(string property)
-		{
-			if (PropertyChanged != null)
-			{
-				PropertyChanged(this, new PropertyChangedEventArgs(property));
-			}
-		}
-
-		private void HandleAction(object obj)
-		{
-			Result = (obj as Person).Name.ToString();
-		}
-	}
-}
+    Text = "Name:",
+    FontAttributes = FontAttributes.Bold,
+    FontSize = 14
+};
+Label resultLabel = new Label
+{
+    FontAttributes = FontAttributes.Bold,
+    FontSize = 14
+};
+SfChipGroup chipGroup = new SfChipGroup
+{
+    DisplayMemberPath = "Name",
+    ChipType = SfChipType.Action
+};
+chipGroup.SetBinding(SfChipGroup.ItemsSourceProperty, new Binding("Employees"));
+chipGroup.SetBinding(SfChipGroup.CommandProperty, new Binding("ActionCommand"));
+resultLabel.SetBinding(Label.TextProperty, new Binding("Result"));
+StackLayout resultLayout = new StackLayout
+{
+    Orientation = StackOrientation.Horizontal,
+    Children = { nameLabel, resultLabel }
+};
+StackLayout mainLayout = new StackLayout
+{
+    Children = { chipGroup, resultLayout }
+};
+grid.Children.Add(mainLayout);
+this.Content = grid;
+	
 
 {% endhighlight %}
 

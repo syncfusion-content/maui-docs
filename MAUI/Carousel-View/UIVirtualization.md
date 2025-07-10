@@ -9,7 +9,7 @@ documentation : ug
 
 # UIVirtualization in .NET MAUI Carousel View (SfCarousel)
 
-In the UI virtualization concept, only the number of items that can be adaptable to the viewport of our device are arranged. Even, if numerous items have been added to the collection, it only loads the viewport adaptable count of the carousel items. Items are added at the right of the view when swiping the countable items in the forward direction. At the same time, the same number of items are removed at the left of the view to maintain the same viewport items count. Similarly, items are added at the left of the view when swiping backward to maintain the same viewport items count. At the same time, the same number of items are removed at the right of the view. Using this mechanism, the virtualization concept is achieved in the carousel control. 
+UI virtualization in the `SfCarousel` control ensures that only the items visible in the viewport are rendered, significantly improving performance when working with large data sets. As users swipe through the carousel, new items are dynamically added to the visible area while off-screen items are removed, maintaining a consistent number of rendered items.
 
 The following property has been used in UIVirtualization support:
 
@@ -17,16 +17,58 @@ The following property has been used in UIVirtualization support:
 
 ## EnableVirtualization
 
-The UI virtualization concept is implemented by enabling the [EnableVirtualization](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_EnableVirtualization) property in SfCarousel Linear mode.
+The UI virtualization concept is implemented by enabling the [EnableVirtualization](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_EnableVirtualization) property in SfCarousel, supporting both Default and Linear view modes.
 
 N> The default value of the [EnableVirtualization](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Carousel.SfCarousel.html#Syncfusion_Maui_Carousel_SfCarousel_EnableVirtualization) property is false.
+
+### Default Mode
 
 {% tabs %}
 
 {% highlight xaml %}
 
+<!-- Default View Mode -->
 <carousel:SfCarousel x:Name="carousel"
                      ItemsSource="{Binding ImageCollection}"
+                     ItemTemplate="{StaticResource itemTemplate}" 
+                     ItemHeight="200"
+                     ItemWidth="200"
+                     ItemSpacing="2"
+                     ViewMode="Default"
+                     EnableVirtualization="true">
+</carousel:SfCarousel>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+// Default Mode Configuration
+SfCarousel carousel = new SfCarousel()
+{
+    ItemHeight = 200,
+    ItemWidth = 200,
+    ItemSpacing = 2,
+    EnableVirtualization = true,
+    ViewMode = ViewMode.Default
+};
+
+carousel.ItemTemplate = itemTemplate;
+carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Linear Mode
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<!-- Linear View Mode -->
+<carousel:SfCarousel x:Name="linearCarousel"
+                     ItemsSource="{Binding ImageCollection}"
+                     ItemTemplate="{StaticResource itemTemplate}" 
                      ItemHeight="200"
                      ItemWidth="200"
                      ItemSpacing="2"
@@ -38,7 +80,8 @@ N> The default value of the [EnableVirtualization](https://help.syncfusion.com/c
 
 {% highlight c# %}
 
-SfCarousel carousel = new SfCarousel()
+// Linear Mode Configuration
+SfCarousel linearCarousel = new SfCarousel()
 {
     ItemHeight = 200,
     ItemWidth = 200,
@@ -47,7 +90,8 @@ SfCarousel carousel = new SfCarousel()
     ViewMode = ViewMode.Linear
 };
 
-carousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
+linearCarousel.ItemTemplate = itemTemplate;
+linearCarousel.SetBinding(SfCarousel.ItemsSourceProperty, "ImageCollection");
 
 {% endhighlight %}
 

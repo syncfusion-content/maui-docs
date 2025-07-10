@@ -16,6 +16,9 @@ To get start quickly with sorting in .NET MAUI DataGrid, you can check on this v
 
 <style>#MAUIDataGridVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIDataGridVideoTutorial' src='https://www.youtube.com/embed/5PhyEYLbGT4'></iframe>
 
+N>
+* To ensure that the sorting is updated when a row is added or removed, set `SfDataGrid.View.LiveDataUpdateMode` to `LiveDataUpdateMode.AllowDataShaping`.
+
 ## Programmatic sorting
 
 Sort the data programmatically by adding or removing the [SortColumnDescription](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SortColumnDescription.html) in [SfDataGrid.SortColumnDescriptions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SortColumnDescriptions) property.
@@ -27,7 +30,7 @@ The `SortColumnDescription` object holds the following two properties:
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="sfDataGrid" ItemsSource="{Binding OrderInfoCollection}" >
+<syncfusion:SfDataGrid x:Name="dataGrid" ItemsSource="{Binding OrderInfoCollection}" >
 
     <syncfusion:SfDataGrid.SortColumnDescriptions>
         <syncfusion:SortColumnDescription ColumnName="OrderID" SortDirection="Ascending" />
@@ -50,7 +53,7 @@ To apply the sort for multiple columns, tap the desired column headers after set
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="sfDataGrid" SortingMode="Multiple" ItemsSource="{Binding OrderInfoCollection}" >
+<syncfusion:SfDataGrid x:Name="dataGrid" SortingMode="Multiple" ItemsSource="{Binding OrderInfoCollection}" >
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% endtabs %}
@@ -63,7 +66,7 @@ In addition, to sort the data in ascending or descending order, the SfDataGrid u
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="sfDataGrid" SortingMode="Single" AllowTriStateSorting="True" ItemsSource="{Binding OrderInfoCollection}" >
+<syncfusion:SfDataGrid x:Name="dataGrid" SortingMode="Single" AllowTriStateSorting="True" ItemsSource="{Binding OrderInfoCollection}" >
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% endtabs %}
@@ -76,7 +79,7 @@ The `SfDataGrid` provides support to display the sequence numbers to denote the 
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="sfDataGrid" SortingMode="Multiple" ShowSortNumbers="True" ItemsSource="{Binding OrderInfoCollection}" >
+<syncfusion:SfDataGrid x:Name="dataGrid" SortingMode="Multiple" ShowSortNumbers="True" ItemsSource="{Binding OrderInfoCollection}" >
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% endtabs %}
@@ -89,7 +92,7 @@ By default, the column gets sorted when the column header is clicked. This behav
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="sfDataGrid" SortingMode="Single" SortingGestureType="DoubleTap" ItemsSource="{Binding OrderInfoCollection}" >
+<syncfusion:SfDataGrid x:Name="dataGrid" SortingMode="Single" SortingGestureType="DoubleTap" ItemsSource="{Binding OrderInfoCollection}" >
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% endtabs %}
@@ -109,7 +112,7 @@ The following code sample demonstrates how to cancel sorting for a particular co
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="sfDataGrid" SortingMode="Single" SortColumnsChanging="sfDataGrid_SortColumnsChanging" ItemsSource="{Binding OrderInfoCollection}" >
+<syncfusion:SfDataGrid x:Name="dataGrid" SortingMode="Single" SortColumnsChanging="sfDataGrid_SortColumnsChanging" ItemsSource="{Binding OrderInfoCollection}" >
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 
@@ -130,7 +133,7 @@ During auto-generating columns, disable sorting for an individual column by cust
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="sfDataGrid" AutoGeneratingColumn="sfDataGrid_AutoGeneratingColumn" SortingMode="Single" ItemsSource="{Binding OrderInfoCollection}" >
+<syncfusion:SfDataGrid x:Name="dataGrid" AutoGeneratingColumn="sfDataGrid_AutoGeneratingColumn" SortingMode="Single" ItemsSource="{Binding OrderInfoCollection}" >
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 
@@ -151,7 +154,7 @@ The `SfDataGrid` disables sorting for an individual column by setting the [DataG
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="sfDataGrid" AutoGenerateColumnsMode="None" SortingMode="Single"ItemsSource="{Binding OrderInfoCollection}" >
+<syncfusion:SfDataGrid x:Name="dataGrid" AutoGenerateColumnsMode="None" SortingMode="Single"ItemsSource="{Binding OrderInfoCollection}" >
     <syncfusion:SfDataGrid.Columns>
         <syncfusion:DataGridNumericColumn HeaderText="Order ID" AllowSorting="False" MappingName="OrderID" />
         <syncfusion:DataGridTextColumn HeaderText="Customer ID" MappingName="CustomerID" />
@@ -191,7 +194,7 @@ The following example shows how to sort the columns based on the length of their
         <local:ViewModel/>
     </ContentPage.BindingContext>
 
-    <syncfusion:SfDataGrid x:Name="sfDataGrid"  SortingMode="Single" ItemsSource="{Binding OrderInfoCollection}" >
+    <syncfusion:SfDataGrid x:Name="dataGrid"  SortingMode="Single" ItemsSource="{Binding OrderInfoCollection}" >
         <syncfusion:SfDataGrid.SortComparers>
             <data:SortComparer Comparer="{StaticResource comparer}" PropertyName="CustomerID" />
         </syncfusion:SfDataGrid.SortComparers>
@@ -252,7 +255,7 @@ The default sort icon color can be customized by setting the [DataGridStyle.Sort
 {% tabs %}
 
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="sfDataGrid"
+<syncfusion:SfDataGrid x:Name="dataGrid"
                         ItemsSource="{Binding OrderInfoCollection}" >
         <syncfusion:SfDataGrid.DefaultStyle>
                 <syncfusion:DataGridStyle SortIconColor="DodgerBlue" />

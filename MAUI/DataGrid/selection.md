@@ -101,7 +101,7 @@ The `SfDataGrid` provides [SelectedIndex](https://help.syncfusion.com/cr/maui/Sy
 
 ## Getting selected cells
 
-The `SfDataGrid` provides [SfDataGrid.GetSelectedCells()]((https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_GetSelectedCells)) and [SfDataGrid.GetSelectedCellInfo()]() methods to get details of the selected cells when the selection unit is [Cell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionUnit.html#Syncfusion_Maui_DataGrid_DataGridSelectionUnit_Cell) or [Any](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionUnit.html#Syncfusion_Maui_DataGrid_DataGridSelectionUnit_Any).
+The `SfDataGrid` provides [SfDataGrid.GetSelectedCells()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_GetSelectedCells) and [SfDataGrid.GetSelectedCellInfo()]() methods to get details of the selected cells when the selection unit is [Cell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionUnit.html#Syncfusion_Maui_DataGrid_DataGridSelectionUnit_Cell) or [Any](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionUnit.html#Syncfusion_Maui_DataGrid_DataGridSelectionUnit_Any).
 
 `SfDataGrid.GetSelectedCells()` : Provides details of all selected cells when multiple cells are selected
 
@@ -427,7 +427,7 @@ By default, the current cell is focusable for all the columns. To disable curren
 
 {% tabs %}
 {% highlight XAML %}
-<syncfusion:SfDataGrid x:Name="sfDataGrid"
+<syncfusion:SfDataGrid x:Name="dataGrid"
                     SelectionMode="Single"
                     NavigationMode="Cell"
                     ColumnWidthMode="Auto"
@@ -542,7 +542,7 @@ Change the selection back color and text color by using the  [SelectionBackgroun
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Content>
-        <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}">
+        <syncfusion:SfDataGrid x:Name="dataGrid" ItemsSource="{Binding OrderInfoCollection}">
             <syncfusion:SfDataGrid.DefaultStyle>
                 <syncfusion:DataGridStyle SelectedRowTextColor="Black" SelectionBackground="#E3F2FD"/>
             </syncfusion:SfDataGrid.DefaultStyle>
@@ -572,7 +572,7 @@ Change the current cell border color and width by using the [CurrentCellBorderCo
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Content>
-        <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}">
+        <syncfusion:SfDataGrid x:Name="dataGrid" ItemsSource="{Binding OrderInfoCollection}">
             <syncfusion:SfDataGrid.DefaultStyle>
                 <syncfusion:DataGridStyle CurrentCellBorderColor="Black" CurrentCellBorderWidth="4"/>
             </syncfusion:SfDataGrid.DefaultStyle>
@@ -682,7 +682,8 @@ By default, while pressing <kbd>Enter</kbd> key, the current cell will be moved 
 
 {% tabs %}
 {% highlight XAML %}
-<syncfusion:SfDataGrid SelectionMode="Single"
+<syncfusion:SfDataGrid x:Name="dataGrid" 
+                       SelectionMode="Single"
                        NavigationMode="Cell"
                        ItemsSource="{Binding OrderInfoCollection}" >
 </syncfusion:SfDataGrid>
@@ -719,7 +720,8 @@ The following code snippets show how to disable the default enter key behavior i
 
 {% tabs %}
 {% highlight XAML %}
-<syncfusion:SfDataGrid SelectionMode="Single"
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       SelectionMode="Single"
                        NavigationMode="Cell"
                        ItemsSource="{Binding OrderInfoCollection}" >
 </syncfusion:SfDataGrid>

@@ -1,26 +1,30 @@
 ---
 layout: post
-title: Customization in Syncfusion® Avatar View .NET MAUI
-description: This section will explain about how to achieve the customization of default View in .NET MAUI SfAvatarView.
-platform: maui
-control: AvatarView
-documentation: ug
+title: Customization in Syncfusion® .NET MAUI Avatar View 
+description: Learn how to achieve various customizations for the default view in .NET MAUI Avatar View.
+platform: MAUI
+control: SfAvatarView
+documentation: UG
 ---
 
-# Customization in SfAvatarView
+# Customization in .NET MAUI Avatar View (SfAvatarView)
 
-## Customization in .NET MAUI Avatar View(SfAvatarView)
+The [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) control provides options to customize its appearance, including color and size attributes. 
 
-The [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) control provides options to customize the color and size. The control can be customized using the following properties:
+To learn how to customize the .NET MAUI Avatar View quickly, you can check the below video.
+
+{% youtube "https://www.youtube.com/watch?v=xD28viNV2bI" %}
+
+The control can be customized using the following properties:
 
 ## Aspect
 
-The [Aspect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_Aspect) property in [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) controls how the picture is adjusted to fit the display. By default, its set to `AspectFill`.
+The [Aspect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_Aspect) property defines how the image fits the display in [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1). By default, it is set to `AspectFill`.
 
-* AspectFit: Ensures the entire picture fits, adding space if needed.
-* AspectFill: Clips the image to fill the display while keeping its shape.
-* Fill: Stretches the image to fill the entire display, but it may look distorted.
-* Center: Places the image in the center, maintaining its original shape.
+* **AspectFit:** Ensures the entire image fits, adding space if necessary.
+* **AspectFill:** Clips the image to fill the display while preserving its shape.
+* **Fill:** Stretches the image to fill the entire display; may result in distortion.
+* **Center:** Places the image in the center, maintaining its original shape.
 
 {% tabs %}
 
@@ -61,15 +65,15 @@ this.Content = mainGrid;
 
 {% endtabs %}
 
-![AvatarControl Aspect](Customization_Images/Aspect_AvatarView.png)
+![Aspect](Customization_Images/Aspect_AvatarView.png)
 
 ## Colors
 
-Color in the [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) can be customized by the stroke, the default background color, and automatic background color.
+The [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1) control provides options to customize colors, including the stroke, default background color, and automatic background color.
 
 ### Stroke
 
-The [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_Stroke) property is used for setting color to the stroke of [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1).
+The [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_Stroke) property is used to set the stroke color of the [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html?tabs=tabid-1).
 
 {% tabs %}
 
@@ -108,11 +112,11 @@ this.Content = mainGrid;
 
 {% endtabs %}
 
-![AvatarControl Stroke](Customization_Images/Stroke_AvatarView.png)
+![Stroke](Customization_Images/Stroke_AvatarView.png)
 
 ### Default background color
 
-The background color for the SfAvatarView control can be set using the [AvatarColorMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_AvatarColorMode) property. When the [AvatarColorMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_AvatarColorMode)  property is set to default, it displays the background color set in the [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_Background) property.
+The background color of the SfAvatarView control can be specified using the [AvatarColorMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_AvatarColorMode) property. When the [AvatarColorMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_AvatarColorMode) property is set to default, it displays the background color specified in the [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_Background) property.
 
 {% tabs %}
 
@@ -162,14 +166,14 @@ this.Content = mainGrid;
 
 ### Automatic background color
 
-The [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html) control allows automatic background color while initializing. It contains the following properties:
+The [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html) control supports automatic background colors through the following properties:
 
-* `DarkBackground`: Shows a dark color for the initials and background color.
-* `LightBackground`: Shows a light color for the initials and background color.
+* `DarkBackground`: Applies a dark tone to the initials and background color.
+* `LightBackground`: Applies a light tone to the initials and background color.
 
 #### Dark color
 
-The dark background color can be set using `DarkBackground` in the [AvatarColorMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_AvatarColorMode) property.
+You can set the background color to dark by using the `DarkBackground` option in the [AvatarColorMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_AvatarColorMode) property.
 
 {% tabs %}
 
@@ -218,7 +222,7 @@ this.Content = mainGrid;
 
 #### Light color
 
-The light background color can be set using `LightBackground` in the [AvatarColorMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_AvatarColorMode)   property.
+The background color can be set to a light tone by using the `LightBackground` option in the [AvatarColorMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_AvatarColorMode) property.
 
 {% tabs %}
 
@@ -266,7 +270,7 @@ this.Content = mainGrid;
 
 ### Gradients
 
-You can also specify a range of colors using `LinearGradientBrush` in [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_Background) Property as demonstrated in the following code example.
+Utilize `LinearGradientBrush` to specify gradient colors in the [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_Background) property, as shown in the example below.
 
 {% tabs %}
 
@@ -323,23 +327,23 @@ this.Content = mainGrid;
 
 {% endtabs %}
 
-![SfAvatarView control with gradient](Customization_Images/Gradient_SfAvatarView.png)
+![Gradient](Customization_Images/Gradient_SfAvatarView.png)
 
 ## Sizing
 
-In the [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html) control, size of the view can be controlled using width, height, stroke thickness, and corner radius.
+The [SfAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html) control allows you to control the view size using properties for width, height, stroke thickness, and corner radius.
 
 ### Width
 
-You can customize the width of the avatar view using the [WidthRequest](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_WidthRequest) property.
+The width of the Avatar View can be customized using the [WidthRequest](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_WidthRequest) property.
 
 ### Height
 
-You can customize the height of the avatar view using the  [HeightRequest](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_HeightRequest) property.
+The height of the Avatar View can be customized using the [HeightRequest](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_HeightRequest) property.
 
-### Stroke Thickness
+### StrokeThickness
 
-You can customize the thickness of the avatar view using the [StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_StrokeThickness) property.
+Customize the thickness of the Avatar View using the [StrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_StrokeThickness) property.
 
 {% tabs %}
 
@@ -378,11 +382,11 @@ this.Content = mainGrid;
 
 {% endtabs %}
 
-![AvatarView Stroke Thickness](Customization_Images/StrokeThickness_AvatarView.png)
+![StrokeThickness](Customization_Images/StrokeThickness_AvatarView.png)
 
-### Corner radius
+### CornerRadius
 
-You can customize the corner radius of the avatar view using the [CornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_CornerRadius) property.
+Customize the corner radius of the Avatar View using the [CornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_CornerRadius) property.
 
 {% tabs %}
 
@@ -423,11 +427,11 @@ this.Content = mainGrid;
 
 {% endtabs %}
 
-![SfAvatarView corner radius](Customization_Images/CornerRadius_AvatarView.png)
+![CornerRadius](Customization_Images/CornerRadius_AvatarView.png)
 
-### Content Padding
+### ContentPadding
 
-You can customize the spacing between the stroke and content in view using the [ContentPadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_ContentPadding) property.
+Customize the spacing between the stroke and content in the view using the [ContentPadding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_ContentPadding) property.
 
 {% tabs %}
 
@@ -464,11 +468,11 @@ this.Content = mainGrid;
 
 {% endtabs %}
 
-![SfAvatarView content padding](Customization_Images/ContentPadding_AvatarView.png)
+![ContentPadding](Customization_Images/ContentPadding_AvatarView.png)
 
-### Font auto scaling enabled
+### FontAutoScalingEnabled
 
-The [FontAutoScalingEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_FontAutoScalingEnabled) property is used to automatically scale the avatar view's font size based on the operating system's text size. The default value of the [FontAutoScalingEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_FontAutoScalingEnabled) property is `false.`
+The [FontAutoScalingEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_FontAutoScalingEnabled) property automatically scales the Avatar View's font size based on the operating system's text size. The default value is `false`.
 
 {% tabs %}
 
@@ -508,4 +512,3 @@ this.Content = mainGrid;
 {% endhighlight %}
 
 {% endtabs %}
-

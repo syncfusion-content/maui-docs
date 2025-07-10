@@ -1,48 +1,48 @@
 ---
 layout: post
-title: Position customization of Syncfusion® Badge view for .NET MAUI
+title: Position Customization of Syncfusion® .NET MAUI Badge View
 description: Learn here all about position customization in Syncfusion® .NET MAUI Badge View (SfBadgeView) control and more.
-platform: maui
-control: Badge View
-documentation: ug
+platform: MAUI
+control: SfBadgeView
+documentation: UG
 ---
 
 # Position customization
 
-The default position of notification is [TopRight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgePosition.html#Syncfusion_Maui_Core_BadgePosition_TopRight). The position can be customized as [TopLeft](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgePosition.html#Syncfusion_Maui_Core_BadgePosition_TopLeft),  [BottomLeft](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgePosition.html#Syncfusion_Maui_Core_BadgePosition_BottomLeft),  [BottomRight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgePosition.html#Syncfusion_Maui_Core_BadgePosition_BottomRight), `Left`,`Top`, `Right`, and `Bottom` using the [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Position) property. 
+The default position of notification is [TopRight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgePosition.html#Syncfusion_Maui_Core_BadgePosition_TopRight). The position can be customized as [TopLeft](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgePosition.html#Syncfusion_Maui_Core_BadgePosition_TopLeft), [BottomLeft](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgePosition.html#Syncfusion_Maui_Core_BadgePosition_BottomLeft), [BottomRight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgePosition.html#Syncfusion_Maui_Core_BadgePosition_BottomRight), `Left`, `Top`, `Right`, and `Bottom` using the [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Position) property. 
 
 {% tabs %}
 
 {% highlight xaml %}
 
- <badge:SfBadgeView BadgeText="NEW" HorizontalOptions="Center" WidthRequest="120" HeightRequest="60" VerticalOptions="Center">
-        <badge:SfBadgeView.Content>
-            <Button Text="Primary" BackgroundColor="#d6d8d7" TextColor="Black"  WidthRequest="120"  HeightRequest="60"/>
-        </badge:SfBadgeView.Content>
-        <badge:SfBadgeView.BadgeSettings>
-            <badge:BadgeSettings   Position="TopRight"/>
-        </badge:SfBadgeView.BadgeSettings>
-</badge:SfBadgeView>
+  <badge:SfBadgeView BadgeText="5" HorizontalOptions="Center"  VerticalOptions="Center">
+      <badge:SfBadgeView.Content>
+          <Button Text="Top Right" CornerRadius="0" BackgroundColor="#d6d8d7" TextColor="Black" WidthRequest="120" HeightRequest="60"/>
+      </badge:SfBadgeView.Content>
+      <badge:SfBadgeView.BadgeSettings>
+          <badge:BadgeSettings Background="CornflowerBlue"  Position="TopRight"/>
+      </badge:SfBadgeView.BadgeSettings>
+  </badge:SfBadgeView>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
 SfBadgeView sfBadgeView = new SfBadgeView();
-sfBadgeView.WidthRequest = 120;
-sfBadgeView.HeightRequest = 60;
 sfBadgeView.HorizontalOptions = LayoutOptions.Center;
 sfBadgeView.VerticalOptions = LayoutOptions.Center;
-sfBadgeView.BadgeText = "NEW";
+sfBadgeView.BadgeText = "5";
 Button button = new Button();
-button.Text = "Primary";
+button.Text = "Top Right";
 button.WidthRequest = 120;
 button.TextColor = Colors.Black;
+button.CornerRadius = 0;
 button.BackgroundColor = Color.FromRgba(214, 216, 215, 255);
 button.HeightRequest = 60;
 sfBadgeView.Content = button;
 BadgeSettings badgeSetting = new BadgeSettings();
 badgeSetting.Position = BadgePosition.TopRight;
+badgeSetting.Background = Colors.CornflowerBlue;
 sfBadgeView.BadgeSettings = badgeSetting;
 Content = sfBadgeView;
     
@@ -50,11 +50,11 @@ Content = sfBadgeView;
 
 {% endtabs %}
 
-![.NET MAUI Badge View Badge Position](badge-position_images/net_maui_badge_view_position.png)
+![Badge position](badge-position_images/net_maui_badge_view_position.png)
 
-## Setting a badge offset
+## Setting a badge Offset
 
-The badge view x,y position can be adjusted using the [Offset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Offset) property.
+The x,y position of the Badge View can be adjusted using the [Offset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_Offset) property to achieve precise placement.
 
 {% tabs %}
 
@@ -95,4 +95,4 @@ Content = sfBadgeView;
 
 {% endtabs %}
 
-![.NET MAUI Badge View Badge Offset](badge-position_images/net_maui_badge_view_offset.png)
+![Badge offset](badge-position_images/net_maui_badge_view_offset.png)

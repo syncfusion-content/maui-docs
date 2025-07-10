@@ -1,22 +1,22 @@
 ---
 layout: post
-title: About .NET MAUI Navigation Drawer control | Syncfusion®
-description: Learn here all about introduction of Syncfusion® .NET MAUI Navigation Drawer (SfNavigationDrawer) control, its elements and more.
-platform: maui
-control: NavigationDrawer
-documentation: ug
+title: About .NET MAUI Navigation Drawer Control | Syncfusion®
+description: Learn about introduction of the Syncfusion® .NET MAUI Navigation Drawer (SfNavigationDrawer) control, its elements, and more.
+platform: MAUI
+control: SfNavigationDrawer
+documentation: UG
 ---
 
->**Notice:** After **Volume 1 2025 (Mid of March 2025),** updates, bug fixes, and feature enhancements for this control will no longer be available in the Syncfusion<sup>®</sup> package. Please switch to the **Syncfusion<sup>®</sup> Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document.](https://help.syncfusion.com/maui-toolkit/migration)
+>**Notice:** After **Volume 1 2025 (Mid of March 2025)**, feature enhancements for this control will no longer be available in the Syncfusion<sup>®</sup> package. Please switch to the **Syncfusion<sup>®</sup> Toolkit for .NET MAUI** for continued support. For a smooth transition, refer to this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
 
 # .NET MAUI Navigation Drawer (SfNavigationDrawer) Overview
 
-The NavigationDrawer for .NET MAUI is a simpler component to create a navigation pane in the application. It consists of a content area and a sliding pane that slides out from the edge of the page. The pane can be opened by swiping the edges of the screen or programmatically.
+The .NET MAUI Navigation Drawer is a simpler component for creating a navigation pane in your application. It consists of a content area and a sliding pane that extends from the edge of the page. The pane can be opened either by swiping from the screen edges or programmatically.
 
 ![.NET MAUI Navigation Drawer.](Images/overview/net-maui-navigationdrawer.png)
 
-## Key Features
+## Key features
 
-* Pane positions – Supports pane position in all four directions: Left, Right, Top, and Bottom.
+* **Pane positions** – Supports positioning the pane in all four directions: Left, Right, Top, and Bottom.
 
-* Animated transitions – Supports opening/closing of pane due to the transition SlideOnTop, Push, and Reveal.
+* **Animated transitions** – Offers animated transitions such as SlideOnTop, Push, and Reveal for opening and closing the pane.

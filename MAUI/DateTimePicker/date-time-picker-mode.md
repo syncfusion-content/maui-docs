@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mode in .NET MAUI Date Time Picker Control | Syncfusion<sup>&reg;</sup>
+title: Mode in .NET MAUI Date Time Picker Control | Syncfusion®
 description: Learn about date time picker mode in Syncfusion<sup>&reg;</sup> .NET MAUI Date Time Picker (SfDateTimePicker) control and its basic features.
 platform: maui
 control: SfDateTimePicker
@@ -151,3 +151,27 @@ private void Button_Clicked(object sender, EventArgs e)
    ![Relative dialog mode in .NET MAUI Date Time picker.](images/date-time-picker-mode/maui-date-time-picker-relative-dialog-mode1.png)
 
    ![Relative dialog mode in .NET MAUI Date Time picker.](images/date-time-picker-mode/maui-date-time-picker-relative-dialog-mode2.png)
+
+### Custom Popup Size
+
+SfDateTimePicker allows the display of the Popup to render at any desired size by setting the [PopupWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_PopupWidth) and [PopupHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_PopupHeight) properties.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfDateTimePicker x:Name="picker" 
+                         Mode="Dialog"
+                         PopupWidth="300"
+                         PopupHeight="400"/>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+this.picker.PopupWidth = 300;
+this.picker.PopupHeight = 400;
+
+{% endhighlight %} 
+
+{% endtabs %}

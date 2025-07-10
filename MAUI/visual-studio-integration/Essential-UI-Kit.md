@@ -9,11 +9,11 @@ documentation: ug
 
 # Essential<sup>®</sup> UI Kit for .NET MAUI
 
-Essential<sup>®</sup> UI Kit for .NET MAUI for MAUI comes with ready-to-use XAML templates, enabling you to effortlessly design user interfaces for cross-platform applications. With a clear separation of the View, View Model, and Model classes, which makes the integration of your business logic and making changes to existing views simple.
+Essential<sup>®</sup> UI Kit for .NET MAUI comes with ready-to-use XAML templates, enabling you to effortlessly design user interfaces for cross-platform applications. It follows a clear separation of the View, ViewModel, and Model classes, making it easy to integrate your business logic and modify existing views.
 
 ## Installation of Essential<sup>®</sup> UI Kit for .NET MAUI Extension
 
-To get started with the Essential<sup>®</sup> UI Kit for .NET MAUI, first install the appropriate extension in Visual Studio by downloading it from the marketplace. As a result, you’ll be able to access and utilize the Syncfusion<sup>®</sup> Extension directly from the Syncfusion<sup>®</sup> menu within your project
+To get started with the Essential<sup>®</sup> UI Kit for .NET MAUI, first install the appropriate extension in Visual Studio by downloading it from the marketplace. This will allow you to access and use the Syncfusion<sup>®</sup> Extension directly from the Syncfusion<sup>®</sup> menu within your project.
 
 [Visual Studio 2022]()
 
@@ -50,7 +50,7 @@ To get started with the Essential<sup>®</sup> UI Kit for .NET MAUI, first insta
 
 ## Run the UI template item
 
-To set your preferred UI Template as the start page of your application, simply open the App.xaml.cs file in your MAUI project and make the following changes.
+To set your preferred UI template as the start page of your application, open the **App.xaml.cs** file in your .NET MAUI project and apply the following changes.
 
 Example: If you added Login With Social Icon Page,
 

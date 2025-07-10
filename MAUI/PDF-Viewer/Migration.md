@@ -140,12 +140,12 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <tr>
 <td>{{'[ShapeAnnotationSettings.Thickness](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.ShapeAnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_ShapeAnnotationSettings_Thickness)'| markdownify }}</td>
 <td>{{'[ShapeAnnotationSettings.BorderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.ShapeAnnotationSettings.html#Syncfusion_Maui_PdfViewer_ShapeAnnotationSettings_BorderWidth)'| markdownify}}</td>
-<td>Gets or sets the border thickness of shape annotation.</td>
+<td>Gets or sets the border thickness of the shape annotation.</td>
 </tr>
 <tr>
 <td>{{'[InkAnnotationSettings.EnableSeparateAttributesForEachStroke](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.InkAnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_InkAnnotationSettings_EnableSeparateAttributesForEachStroke)'| markdownify}}</td>
 <td>{{'[InkAnnotationSettings.AggregateInkStrokes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.InkAnnotationSettings.html#Syncfusion_Maui_PdfViewer_InkAnnotationSettings_AggregateInkStrokes)'| markdownify}}</td>
-<td>Gets or sets a value indicating whether each ink strokes should be treated as separate ink annotations.</td>
+<td>Gets or sets a value indicating whether each ink stroke should be treated as a separate ink annotation.</td>
 </tr>
 <tr>
 <td>{{'[ShapeAnnotationSettings.StrokeColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.ShapeAnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_ShapeAnnotationSettings_StrokeColor)'| markdownify}}</td>
@@ -155,12 +155,12 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <tr>
 <td>{{'[SelectorSettings.StrokeColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SelectorSettings.html#Syncfusion_SfPdfViewer_XForms_SelectorSettings_StrokeColor)'| markdownify }}</td>
 <td>{{'[AnnotationSelectorSettings.Color](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationSelectorSettings.html#Syncfusion_Maui_PdfViewer_AnnotationSelectorSettings_Color)'| markdownify}}</td>
-<td>Gets or sets the default color of annotation selector.</td>
+<td>Gets or sets the default color of the annotation selector.</td>
 </tr>
 <tr>
 <td>{{'[LockedStrokeColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SelectorSettings.html#Syncfusion_SfPdfViewer_XForms_SelectorSettings_LockedStrokeColor)'| markdownify}}</td>
 <td>{{'[LockedColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationSelectorSettings.html#Syncfusion_Maui_PdfViewer_AnnotationSelectorSettings_LockedColor)'| markdownify}}</td>
-<td>Gets or sets the default color of annotation selector when the selected annotation is locked.</td>
+<td>Gets or sets the default color of the annotation selector when the selected annotation is locked.</td>
 </tr>
 <tr>
 <td>{{'[LinePoints](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.ShapeAnnotation.html#Syncfusion_SfPdfViewer_XForms_ShapeAnnotation_LinePoints)'| markdownify}}</td>
@@ -290,7 +290,7 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 <div>{{'[TextMarkupEdited](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_TextMarkupEdited)'| markdownify }} </div>
 </td>
 <td>{{'[AnnotationEdited](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationEdited)'| markdownify }}</td>
-<td>Occurs when annotation is modified.</td>
+<td>Occurs when an annotation is modified.</td>
 </tr>
 <tr>
 <td>
@@ -322,7 +322,7 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
 
 </td>
 <td>{{'[PropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.bindableobject.propertychanged)'| markdownify }}</td>
-<td> Occurs when a property in the PDF Viewer is modified. It allows you to detect page changes occurred in the PDF Viewer. The example below demonstrates how to implement this:
+<td> Occurs when a property in the PDF Viewer is modified. It allows you to detect page changes that occurred in the PDF Viewer. The example below demonstrates how to implement this:
 
 {% highlight c# %}
 
@@ -462,7 +462,7 @@ For detailed implementation guidance, please refer to the following API document
 <tr>
 <td>{{'[SaveDocument(bool flattenForm)](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_SaveDocument_System_Boolean_)'| markdownify }}</td>
 <td>{{'[FormField.FlattenOnSave](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FormField.html#Syncfusion_Maui_PdfViewer_FormField_FlattenOnSave)'| markdownify }}</td>
-<td>Specifies whether the form fields should be flattened or not on saving</td>
+<td>Specifies whether the form fields should be flattened or not on saving.</td>
 </tr>
 </table>
 
@@ -486,7 +486,7 @@ For detailed implementation guidance, please refer to the following API document
 <tr>
 <td>{{'[TextSelectionCompletedEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.TextSelectionCompletedEventArgs.html)'| markdownify }}</td>
 <td>{{'[TextSelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.TextSelectionChangedEventArgs.html)'| markdownify}}</td>
-<td>Provides data for TextSelectionChanged event.</td>
+<td>Provides data for the TextSelectionChanged event.</td>
 </tr>
 <tr>
 <td>{{'[UnhandledConditionEventArgs](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.UnhandledConditionEventArgs.html#Syncfusion_SfPdfViewer_XForms_UnhandledConditionEventArgs)'| markdownify }}</td>
