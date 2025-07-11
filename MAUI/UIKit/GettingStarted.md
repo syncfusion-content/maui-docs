@@ -15,6 +15,10 @@ There are two ways for including the UI Kit screens into your application:
 
 2. Copying the files from our [GitHub repository](https://github.com/syncfusion/essential-ui-kit-for-.net-maui), which is open source.
 
+To get start quickly with our **Essential<sup>®</sup> UI Kit for .NET MAUI**, you can check the below video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=WvlfHnXLOjI"%}
 
 ## Essential<sup>®</sup> UI Kit for .NET MAUI Extension
 
