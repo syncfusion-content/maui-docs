@@ -539,7 +539,6 @@ We are actively working on delivering brand-new .NET MAUI controls that can be s
 		</td>
 		<td rowspan="1" valign="top">
 			Volume 3 2025 <br/>
-		 <strong>Disclaimer:</strong> The features promised in this release are subject to change based on user feedback and further testing.
     </td>
 	</tr>
 </table>
