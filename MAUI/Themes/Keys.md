@@ -7185,7 +7185,7 @@ This page lists the keys associated with each control and the respective UI elem
     </tr>
 
     <tr>
-        <td rowspan="330">
+        <td rowspan="430">
             SfPdfViewerStyles  
             <br/>
             <br/>
@@ -7232,7 +7232,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td>
         <td>
-            Background colour of the tabview container in the outlineview of the SfPdfViewer.
+            Background colour of the tabview container in the outline view of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7245,7 +7245,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td>
         <td>
-            Text colour of the No Bookmark label in the outlineview of the SfPdfViewer.
+            Text colour of the No Bookmark label in the outline view of the SfPdfViewer.
         <br/>
         <br/>
         </td>
@@ -7341,7 +7341,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Background color of the 'OK' button in the dialogs of the SfPdfViewer.
+            Background color of the 'OK' button in the password, message, combobox form field list, listbox form field list dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7353,7 +7353,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Background color of the 'OK' button while hovering over the button in the dialogs of the SfPdfViewer.
+            Background color of the 'OK' button while hovering over the button in the password, message, combobox form field list, listbox form field list dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7365,7 +7365,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Background color of the 'OK' button while pressing the button in the dialogs of the SfPdfViewer.
+            Background color of the 'OK' button while pressing the button in the password, message, combobox form field list, listbox form field list dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7377,7 +7377,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Background color of the 'OK' button while focusing the button in the dialogs of the SfPdfViewer.
+            Background color of the 'OK' button while focusing the button in the password, message, combobox form field list, listbox form field list dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7389,7 +7389,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Background color of the 'OK' button after disabled the button in the dialogs of the SfPdfViewer.
+            Background color of the 'OK' button after disabled the button in the password, message, combobox form field list, listbox form field list dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7401,7 +7401,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Stroke color of the 'OK' button in the dialogs of the SfPdfViewer.
+            Stroke color of the 'OK' button in the password, message, combobox form field list, listbox form field list dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7413,7 +7413,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Stroke color of the 'OK' button while hovering over the button in the dialogs of the SfPdfViewer.
+            Stroke color of the 'OK' button while hovering over the button in the password, message, combobox form field list, listbox form field list dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7425,7 +7425,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Stroke color of the 'OK' button while pressing the button in the dialogs of the SfPdfViewer.
+            Stroke color of the 'OK' button while pressing the button in the password, message, combobox form field list, listbox form field list dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7437,7 +7437,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Stroke color of the 'OK' button while focusing the button in the dialogs of the SfPdfViewer.
+            Stroke color of the 'OK' button while focusing the button in the password, message, combobox form field list, listbox form field list dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7449,7 +7449,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Stroke color of the 'OK' button after disabled the button in the dialogs of the SfPdfViewer.
+            Stroke color of the 'OK' button after disabled the button in the password, message, combobox form field list, listbox form field list dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7461,7 +7461,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Text color of the 'OK' button in the dialogs of the SfPdfViewer.
+            Text color of the 'OK' button in the password, message, combobox form field list, listbox form field list dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7473,7 +7473,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Text color of the 'OK' button while hovering over the button in the dialogs of the SfPdfViewer.
+            Text color of the 'OK' button while hovering over the button in the password, message, combobox form field list, listbox form field list dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7485,7 +7485,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Text color of the 'OK' button while focusing the button in the dialogs of the SfPdfViewer.
+            Text color of the 'OK' button while focusing the button in the password, message, combobox form field list, listbox form field list dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7497,7 +7497,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Text color of the 'OK' button while pressing the button in the dialogs of the SfPdfViewer.
+            Text color of the 'OK' button while pressing the button in the password, message, combobox form field list, listbox form field list dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7509,7 +7509,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Text color of the 'OK' button after disabled the button in the dialogs of the SfPdfViewer.
+            Text color of the 'OK' button after disabled the button in the password, message, combobox form field list, listbox form field list dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7521,7 +7521,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Text color of the title in the dialogs of the SfPdfViewer.
+            Text color of the title in the password, message and hyperlink dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7533,7 +7533,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Text color of the description in the dialogs of the SfPdfViewer.
+            Text color of the description in the password, message and hyperlink dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7545,7 +7545,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Background color of the 'close' button in the dialogs of the SfPdfViewer.
+            Background color of the 'close' button in the password, message, hyperlink and free text dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7557,7 +7557,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Background color of the 'close' button while hovering over the button in the dialogs of the SfPdfViewer.
+            Background color of the 'close' button while hovering over the button in the password, message, hyperlink and free text dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7569,7 +7569,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Background color of the 'close' button while pressing the button in the dialogs of the SfPdfViewer.
+            Background color of the 'close' button while pressing the button in the password, message, hyperlink and free text dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7581,7 +7581,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Background color of the 'close' button while focusing the button in the dialogs of the SfPdfViewer.
+            Background color of the 'close' button while focusing the button in the password, message, hyperlink and free text dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7593,7 +7593,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Text color of the 'close' button in the dialogs of the SfPdfViewer.
+            Text color of the 'close' button in the password, message, hyperlink and free text dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7605,7 +7605,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Text color of the 'close' button while hovering over the in the dialogs of the SfPdfViewer.
+            Text color of the 'close' button while hovering over the in the password, message, hyperlink and free text dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7617,7 +7617,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Text color of the 'close' button while focusing the in the dialogs of the SfPdfViewer.
+            Text color of the 'close' button while focusing the in the password, message, hyperlink and free text dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7629,7 +7629,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Text color of the 'close' button while pressing the in the dialogs of the SfPdfViewer.
+            Text color of the 'close' button while pressing the in the password, message, hyperlink and free text dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7641,7 +7641,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Border color of the 'close' button in the dialogs of the SfPdfViewer.
+            Border color of the 'close' button in the password, message, hyperlink and free text dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7653,7 +7653,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Border color of the 'close' button while hovering over the button in the dialogs of the SfPdfViewer.
+            Border color of the 'close' button while hovering over the button in the password, message, hyperlink and free text dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7665,7 +7665,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Border color of the 'close' button while focusing the button in the dialogs of the SfPdfViewer.
+            Border color of the 'close' button while focusing the button in the password, message, hyperlink and free text dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7677,7 +7677,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Border color of the 'close' button while pressing the button in the dialogs of the SfPdfViewer.
+            Border color of the 'close' button while pressing the button in the password, message, hyperlink and free text dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7689,7 +7689,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Background color of the dialogs in the SfPdfViewer.
+            Background color of the password, message, hyperlink, combobox form field list and listbox form field list dialogs in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7701,7 +7701,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Border color of the dialogs in the SfPdfViewer.
+            Border color of the password, message and hyperlink dialogs in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7713,7 +7713,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Background color of the 'cancel' button in the dialogs of the SfPdfViewer.
+            Background color of the 'cancel' button in the password, message, hyperlink, combobox form field list and listbox form field list dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7725,7 +7725,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Background color of the 'cancel' button while hovering over the button in the dialogs of the SfPdfViewer.
+            Background color of the 'cancel' button while hovering over the button in the password, message, hyperlink, combobox form field list and listbox form field list dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7737,7 +7737,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Background color of the 'cancel' button while pressing the button in the dialogs of the SfPdfViewer.
+            Background color of the 'cancel' button while pressing the button in the password, message, hyperlink, combobox form field list and listbox form field list dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7749,7 +7749,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Background color of the 'cancel' button while focusing the button in the dialogs of the SfPdfViewer.
+            Background color of the 'cancel' button while focusing the button in the password, message, hyperlink, combobox form field list and listbox form field list dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7761,7 +7761,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Background color of the 'cancel' button after disabled the button in the dialogs of the SfPdfViewer.
+            Background color of the 'cancel' button after disabled the button in the password, message, hyperlink, combobox form field list and listbox form field list dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7773,7 +7773,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Border color of the 'cancel' button in the dialogs of the SfPdfViewer.
+            Border color of the 'cancel' button in the password, message, hyperlink, combobox form field list and listbox form field list dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7785,7 +7785,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Border color of the 'cancel' button while hovering over the button in the dialogs of the SfPdfViewer.
+            Border color of the 'cancel' button while hovering over the button in the password, message, hyperlink, combobox form field list and listbox form field list dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7797,7 +7797,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Border color of the 'cancel' button while pressing the button in the dialogs of the SfPdfViewer.
+            Border color of the 'cancel' button while pressing the button in the password, message, hyperlink, combobox form field list and listbox form field list dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7809,7 +7809,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Border color of the 'cancel' button while focusing the button in the dialogs of the SfPdfViewer.
+            Border color of the 'cancel' button while focusing the button in the password, message, hyperlink, combobox form field list and listbox form field list dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7821,7 +7821,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Border color of the 'cancel' button after disabled the button in the dialogs of the SfPdfViewer.
+            Border color of the 'cancel' button after disabled the button in the password, message, hyperlink, combobox form field list and listbox form field list dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7833,7 +7833,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Text color of the 'cancel' button in the dialogs of the SfPdfViewer.
+            Text color of the 'cancel' button in the password, message, hyperlink, combobox form field list and listbox form field list dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7845,7 +7845,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Text color of the 'cancel' button while hovering over the button in the dialogs of the SfPdfViewer.
+            Text color of the 'cancel' button while hovering over the button in the password, message, hyperlink, combobox form field list and listbox form field list dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7857,7 +7857,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Text color of the 'cancel' button while focusing the button in the dialogs of the SfPdfViewer.
+            Text color of the 'cancel' button while focusing the button in the password, message, hyperlink, combobox form field list and listbox form field list dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7869,7 +7869,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Text color of the 'cancel' button while pressing the button in the dialogs of the SfPdfViewer.
+            Text color of the 'cancel' button while pressing the button in the password, message, hyperlink, combobox form field list and listbox form field list dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7881,7 +7881,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Text color of the 'cancel' button after disabled the button in the dialogs of the SfPdfViewer.
+            Text color of the 'cancel' button after disabled the button in the password, message, hyperlink, combobox form field list and listbox form field list dialogs of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7893,7 +7893,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Background color of the 'open' button in the dialogs of the SfPdfViewer.
+            Background color of the 'open' button in the hyperlink dialog of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7905,7 +7905,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Background color of the 'open' button while hovering over the button in the dialogs of the SfPdfViewer.
+            Background color of the 'open' button while hovering over the button in the hyperlink dialog of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7917,7 +7917,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Background color of the 'open' button while pressing the button in the dialogs of the SfPdfViewer.
+            Background color of the 'open' button while pressing the button in the hyperlink dialog of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7929,7 +7929,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Background color of the 'open' button while focusing the button in the dialogs of the SfPdfViewer.
+            Background color of the 'open' button while focusing the button in the hyperlink dialog of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7941,7 +7941,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Background color of the 'open' button after disabled the button in the dialogs of the SfPdfViewer.
+            Background color of the 'open' button after disabled the button in the hyperlink dialog of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7953,7 +7953,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Border color of the 'open' button in the dialogs of the SfPdfViewer.
+            Border color of the 'open' button in the hyperlink dialog of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7965,7 +7965,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Border color of the 'open' button while hovering over the button in the dialogs of the SfPdfViewer.
+            Border color of the 'open' button while hovering over the button in the hyperlink dialog of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7977,7 +7977,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Border color of the 'open' button while pressing the button in the dialogs of the SfPdfViewer.
+            Border color of the 'open' button while pressing the button in the hyperlink dialog of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -7989,7 +7989,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Border color of the 'open' button while focusing the button in the dialogs of the SfPdfViewer.
+            Border color of the 'open' button while focusing the button in the hyperlink dialog of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8001,7 +8001,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Border color of the 'open' button after disabled the button in the dialogs of the SfPdfViewer.
+            Border color of the 'open' button after disabled the button in the hyperlink dialog of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8013,7 +8013,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Text color of the 'open' button in the dialogs of the SfPdfViewer.
+            Text color of the 'open' button in the hyperlink dialog of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8025,7 +8025,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Text color of the 'open' button while hovering over the button in the dialogs of the SfPdfViewer.
+            Text color of the 'open' button while hovering over the button in the hyperlink dialog of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8037,7 +8037,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Text color of the 'open' button while focusing the button in the dialogs of the SfPdfViewer.
+            Text color of the 'open' button while focusing the button in the hyperlink dialog of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8049,7 +8049,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Text color of the 'open' button while pressing the button in the dialogs of the SfPdfViewer.
+            Text color of the 'open' button while pressing the button in the hyperlink dialog of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8061,7 +8061,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Text color of the 'open' button after disabled the button in the dialogs of the SfPdfViewer.
+            Text color of the 'open' button after disabled the button in the hyperlink dialog of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8073,7 +8073,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Text color of the title of the outlineview in the SfPdfViewer.
+            Text color of the title of the outline view in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8085,7 +8085,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Text color of the expander of the outlineview in the SfPdfViewer.
+            Text color of the expander of the outline view in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8097,7 +8097,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Background color of the expander of the outlineview in the SfPdfViewer.
+            Background color of the expander of the outline view in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8109,7 +8109,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Hovering background color of the expander of the outlineview in the SfPdfViewer.
+            Hovering background color of the expander of the outline view in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8121,7 +8121,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Pressed background color of the expander of the outlineview in the SfPdfViewer.
+            Pressed background color of the expander of the outline view in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8133,7 +8133,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Focused background color of the expander of the outlineview in the SfPdfViewer.
+            Focused background color of the expander of the outline view in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8145,7 +8145,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-             Border color of the expander button of the outlineview in the SfPdfViewer.
+             Border color of the expander button of the outline view in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8157,7 +8157,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-             Hovering border color of the expander button of the outlineview in the SfPdfViewer.
+             Hovering border color of the expander button of the outline view in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8169,7 +8169,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Pressed border color of the expander button of the outlineview in the SfPdfViewer.
+            Pressed border color of the expander button of the outline view in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8181,7 +8181,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Focused border color of the expander button of the outlineview in the SfPdfViewer.
+            Focused border color of the expander button of the outline view in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8193,7 +8193,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Text color of the expander button of the outlineview in the SfPdfViewer.
+            Text color of the expander button of the outline view in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8205,7 +8205,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Hovering text color of the expander button of the outlineview in the SfPdfViewer.
+            Hovering text color of the expander button of the outline view in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8217,7 +8217,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Focused text color of the expander button of the outlineview in the SfPdfViewer.
+            Focused text color of the expander button of the outline view in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8229,7 +8229,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Pressed text color of the expander button of the outlineview in the SfPdfViewer.
+            Pressed text color of the expander button of the outline view in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8241,7 +8241,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Separator color of outlineview in the SfPdfViewer.
+            Separator color of outline view in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8253,7 +8253,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Text color of the title of outlineview in the SfPdfViewer.
+            Text color of the title of outline view in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8265,7 +8265,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Background color of the outlineview container in the SfPdfViewer.
+            Background color of the outline view container in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8277,7 +8277,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Background color of the close button of the outlineview in the SfPdfViewer.
+            Background color of the close button of the outline view in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8289,7 +8289,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Hovering background color of the close button of the outlineview in the SfPdfViewer.
+            Hovering background color of the close button of the outline view in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8301,7 +8301,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Focused background color of the close button in the outlineview of the SfPdfViewer.
+            Focused background color of the close button in the outline view of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8313,7 +8313,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Pressed background color of the close button in the outlineview of the SfPdfViewer.
+            Pressed background color of the close button in the outline view of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8325,7 +8325,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Border color of the close button in the outlineview of the SfPdfViewer.
+            Border color of the close button in the outline view of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8337,7 +8337,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Hovering border color of the close button in the outlineview of the SfPdfViewer.
+            Hovering border color of the close button in the outline view of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8349,7 +8349,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Pressed border color of the close button in the outlineview of the SfPdfViewer.
+            Pressed border color of the close button in the outline view of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8361,7 +8361,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Focused border color of the close button in the outlineview of the SfPdfViewer.
+            Focused border color of the close button in the outline view of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8373,7 +8373,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Focused border color of the close button in the outlineview of the SfPdfViewer.
+            Focused border color of the close button in the outline view of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8385,7 +8385,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Text color of the close button in the outlineview of the SfPdfViewer.
+            Text color of the close button in the outline view of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8397,7 +8397,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Hovering text color of the close button in the outlineview of the SfPdfViewer.
+            Hovering text color of the close button in the outline view of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8409,7 +8409,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Focused text color of the close button in the outlineview of the SfPdfViewer.
+            Focused text color of the close button in the outline view of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8421,7 +8421,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Pressed text color of the close button in the outlineview of the SfPdfViewer.
+            Pressed text color of the close button in the outline view of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8457,7 +8457,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Text color of the 'Save' button in the dialog of the SfPdfViewer.
+            Text color of the 'Save' button in the free text dialog of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8469,7 +8469,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Hovering text color of the 'Save' button in the dialog of the SfPdfViewer.
+            Hovering text color of the 'Save' button in the free text dialog of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8481,7 +8481,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Pressed text color of the 'Save' button in the dialog of the SfPdfViewer.
+            Pressed text color of the 'Save' button in the free text dialog of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8493,7 +8493,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Text color of the 'Save' button after disabled the button in the dialog of the SfPdfViewer.
+            Text color of the 'Save' button after disabled the button in the free text dialog of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8505,7 +8505,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Background color of the 'Save' button in the dialog of the SfPdfViewer.
+            Background color of the 'Save' button in the free text dialog of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8517,7 +8517,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Hovering background color of the 'Save' button in the dialog of the SfPdfViewer.
+            Hovering background color of the 'Save' button in the free text dialog of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8529,7 +8529,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Pressed background color of the 'Save' button in the dialog of the SfPdfViewer.
+            Pressed background color of the 'Save' button in the free text dialog of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -8541,7 +8541,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Background color of the 'Save' button after disabled the button in the dialog of the SfPdfViewer.
+            Background color of the 'Save' button after disabled the button in the free text dialog of the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -9105,7 +9105,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Border color of signature listview's items in the SfPdfViewer.
+            Border color of signature list view's items in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -9129,7 +9129,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Background color of signature listview's items while long press in the SfPdfViewer.
+            Background color of signature list view's items while long press in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -9141,7 +9141,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Border color of signature listview's items while long pressing on item in the SfPdfViewer.
+            Border color of signature list view's items while long pressing on item in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -9153,7 +9153,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Background color of signature listview's items while tapping on the item in the SfPdfViewer.
+            Background color of signature list view's items while tapping on the item in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -9165,7 +9165,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Background color of signature listview in the SfPdfViewer.
+            Background color of signature list view in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -9177,7 +9177,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Text color of the signature listview container's create button in the SfPdfViewer.
+            Text color of the signature list view container's create button in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -9189,7 +9189,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Stroke color of the signature listview container's create button in the SfPdfViewer.
+            Stroke color of the signature list view container's create button in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -9201,7 +9201,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Text color of the signature listview container's delete button in the SfPdfViewer.
+            Text color of the signature list view container's delete button in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -9213,7 +9213,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Text color of the signature listview container's header in the SfPdfViewer.
+            Text color of the signature list view container's header in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -9225,7 +9225,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Text color of the signature listview delete button in the SfPdfViewer.
+            Text color of the signature list view delete button in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -9237,7 +9237,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Text color of the signature listview create button in the SfPdfViewer.
+            Text color of the signature list view create button in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -9501,7 +9501,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Text color of the page navigation dialog in the SfPdfViewer.
+            Text color of the page navigation(Go to page) dialog in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -9513,7 +9513,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Color of the page navigation dialog entry's normal state in the SfPdfViewer.
+            Color of the page navigation(Go to page) dialog entry's normal state in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -9525,7 +9525,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Focused color of the page navigation dialog entry in the SfPdfViewer.
+            Focused color of the page navigation(Go to page) dialog entry in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -9537,7 +9537,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-            Error state color of the page navigation dialog entry in the SfPdfViewer.
+            Error state color of the page navigation(Go to page) dialog entry in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -9549,7 +9549,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-           Background color of the page navigation dialog in the SfPdfViewer.    
+           Background color of the page navigation(Go to page) dialog in the SfPdfViewer.    
             <br/>
             <br/>
         </td>
@@ -9561,7 +9561,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-           Text color of the page navigation dialog's Title in the SfPdfViewer.
+           Text color of the page navigation(Go to page) dialog's Title in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -9573,7 +9573,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-           Text color of the page navigation dialog's close button in the SfPdfViewer.
+           Text color of the page navigation(Go to page) dialog's close button in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -9585,7 +9585,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-           Text color of the page navigation dialog's ok button in the SfPdfViewer.
+           Text color of the page navigation(Go to page) dialog's ok button in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -9597,7 +9597,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td> 
         <td>
-           Text color of the page navigation dialog's cancel button in the SfPdfViewer.
+           Text color of the page navigation(Go to page) dialog's cancel button in the SfPdfViewer.
             <br/>
             <br/>
         </td>
@@ -9769,32 +9769,8 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
             <br/>
         </td>
-    </tr>
-     <tr>
-        <td>
-          SfPdfViewerCustomStampApplyButtonTextColor
-            <br/>
-            <br/>
-        </td> 
-        <td>
-           Text color of the custom stamp dialog's apply button in the SfPdfViewer.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-     <tr>
-        <td>
-          SfPdfViewerCustomStampBackButtonTextColor
-            <br/>
-            <br/>
-        </td> 
-        <td>
-           Text color of the custom stamp dialog's back button in the SfPdfViewer.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-     <tr>
+    </tr>     
+    <tr>
         <td>
           SfPdfViewerCreateStampButtonBackgroundColor
             <br/>
@@ -9806,7 +9782,7 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td>
     </tr>
-     <tr>
+    <tr>
         <td>
           SfPdfViewerCreateStampButtonTextColor
             <br/>
@@ -11042,6 +11018,2106 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td>
     </tr>   
+    <tr>
+        <td>
+          SfPdfViewerCustomStampDialogApplyButtonTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the apply button in the custom stamp dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+         SfPdfViewerCustomStampDialogApplyButtonNormalBackgroundColor 
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Normal background color of the apply button in the custom stamp dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerCustomStampDialogApplyButtonNormalBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Normal border color of the apply button in the custom stamp dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerCustomStampDialogApplyButtonHoverBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering background color of the apply button in the custom stamp dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerCustomStampDialogApplyButtonHoverTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering text color of the apply button in the custom stamp dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerCustomStampDialogApplyButtonHoverBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering border color of the apply button in the custom stamp dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerCustomStampDialogApplyButtonPressedBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed background color of the apply button in the custom stamp dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerCustomStampDialogApplyButtonPressedTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed text color of the apply button in the custom stamp dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerCustomStampDialogApplyButtonPressedBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed border color of the apply button in the custom stamp dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerCustomStampDialogApplyButtonDisabledBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Disabled background color of the apply button in the custom stamp dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerCustomStampDialogApplyButtonDisabledTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Disabled text color of the apply button in the custom stamp dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerCustomStampDialogApplyButtonDisabledBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Disabled border color of the apply button in the custom stamp dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerCustomStampDialogCloseButtonNormalBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Normal background color of the close button in the custom stamp dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerCustomStampDialogCloseButtonNormalBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Normal border color of the close button in the custom stamp dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerCustomStampDialogCloseButtonHoverBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering background color of the close button in the custom stamp dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerCustomStampDialogCloseButtonHoverTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering text color of the close button in the custom stamp dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerCustomStampDialogCloseButtonHoverBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering border color of the close button in the custom stamp dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerCustomStampDialogCloseButtonPressedBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed background color of the close button in the custom stamp dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerCustomStampDialogCloseButtonPressedTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed text color of the close button in the custom stamp dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerCustomStampDialogCloseButtonPressedBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed border color of the close button in the custom stamp dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerCustomStampDialogCloseButtonDisabledBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Disabled background color of the close button in the custom stamp dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerCustomStampDialogCloseButtonDisabledTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Disabled text color of the close button in the custom stamp dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerCustomStampDialogCloseButtonDisabledBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Disabled border color of the close button in the custom stamp dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>    
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Border color of the page navigation(Go to page) dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogOkButtonNormalBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Normal background color of the ok button in the page navigation(Go to page) dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogOkButtonNormalBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Normal border color of the ok button in the page navigation(Go to page) dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogOkButtonHoverBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering background color of the ok button in the page navigation(Go to page) dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogOkButtonHoverTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering text color of the ok button in the page navigation(Go to page) dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogOkButtonHoverBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering border color of the ok button in the page navigation(Go to page) dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogOkButtonPressedBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed background color of the ok button in the page navigation(Go to page) dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogOkButtonPressedTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed text color of the ok button in the page navigation(Go to page) dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogOkButtonPressedBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed border color of the ok button in the page navigation(Go to page) dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogOkButtonDisabledBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Disabled background color of the ok button in the page navigation(Go to page) dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogOkButtonDisabledTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Disabled text color of the ok button in the page navigation(Go to page) dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogOkButtonDisabledBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Disabled border color of the ok button in the page navigation(Go to page) dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogCancelButtonNormalBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Normal background color of the cancel button in the page navigation(Go to page) dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogCancelButtonNormalBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Normal border color of the cancel button in the page navigation(Go to page) dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogCancelButtonHoverBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering background color of the cancel button in the page navigation(Go to page) dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogCancelButtonHoverTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering text color of the cancel button in the page navigation(Go to page) dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogCancelButtonHoverBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering border color of the cancel button in the page navigation(Go to page) dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogCancelButtonPressedBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed background color of the cancel button in the page navigation(Go to page) dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogCancelButtonPressedTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed text color of the cancel button in the page navigation(Go to page) dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogCancelButtonPressedBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed border color of the cancel button in the page navigation(Go to page) dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogCancelButtonDisabledBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Disabled background color of the cancel button in the page navigation(Go to page) dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogCancelButtonDisabledTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Disabled text color of the cancel button in the page navigation(Go to page) dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogCancelButtonDisabledBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Disabled border color of the cancel button in the page navigation(Go to page) dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogCloseButtonNormalBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Normal background color of the close button in the page navigation(Go to page) dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogCloseButtonNormalBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Normal border color of the close button in the page navigation(Go to page) dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogCloseButtonHoverBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering background color of the close button in the page navigation(Go to page) dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogCloseButtonHoverTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering text color of the close button in the page navigation(Go to page) dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogCloseButtonHoverBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering border color of the close button in the page navigation(Go to page) dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogCloseButtonPressedBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed background color of the close button in the page navigation(Go to page) dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogCloseButtonPressedTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed text color of the close button in the page navigation(Go to page) dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogCloseButtonPressedBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed border color of the close button in the page navigation(Go to page) dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogCloseButtonDisabledBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Disabled background color of the close button in the page navigation(Go to page) dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogCloseButtonDisabledTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Disabled text color of the close button in the page navigation(Go to page) dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerPageNavigationDialogCloseButtonDisabledBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Disabled border color of the close button in the page navigation(Go to page) dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogCloseButtonNormalBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Normal background color of the close button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogCloseButtonNormalBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Normal border color of the close button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogCloseButtonHoverBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering background color of the close button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogCloseButtonHoverTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering text color of the close button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogCloseButtonHoverBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering border color of the close button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogCloseButtonPressedBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed background color of the close button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogCloseButtonPressedTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed text color of the close button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogCloseButtonPressedBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed border color of the close button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogCloseButtonDisabledBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Disabled background color of the close button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogCloseButtonDisabledTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Disabled text color of the close button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogCloseButtonDisabledBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Disabled border color of the close button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogClearButtonNormalBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Normal background color of the clear button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogClearButtonNormalBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Normal border color of the clear button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogClearButtonHoverBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering background color of the clear button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogClearButtonHoverTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering text color of the clear button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogClearButtonHoverBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering border color of the clear button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogClearButtonPressedBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed background color of the clear button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogClearButtonPressedTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed text color of the clear button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogClearButtonPressedBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed border color of the clear button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogClearButtonDisabledBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Disabled background color of the clear button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogClearButtonDisabledTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Disabled text color of the clear button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogClearButtonDisabledBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Disabled border color of the clear button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogSearchButtonNormalBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Normal background color of the search button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogSearchButtonNormalBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Normal border color of the search button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogSearchButtonHoverBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering background color of the search button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogSearchButtonHoverTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering text color of the search button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogSearchButtonHoverBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering border color of the search button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogSearchButtonPressedBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed background color of the search button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogSearchButtonPressedTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed text color of the search button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogSearchButtonPressedBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed border color of the search button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogSearchButtonDisabledBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Disabled background color of the search button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogSearchButtonDisabledBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Disabled border color of the search button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogPreviousSearchButtonNormalBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Normal background color of the previous search button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogPreviousSearchButtonNormalBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Normal border color of the previous search button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogPreviousSearchButtonHoverBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering background color of the previous search button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogPreviousSearchButtonHoverTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering text color of the previous search button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogPreviousSearchButtonHoverBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering border color of the previous search button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+     <tr>
+        <td>
+          SfPdfViewerSearchDialogPreviousSearchButtonPressedBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed background color of the previous search button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSearchDialogPreviousSearchButtonPressedTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed text color of the previous search button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSearchDialogPreviousSearchButtonPressedBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed border color of the previous search button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSearchDialogPreviousSearchButtonDisabledBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Disabled background color of the previous search button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSearchDialogPreviousSearchButtonDisabledTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Disabled text color of the previous search button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSearchDialogPreviousSearchButtonDisabledBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Disabled border color of the previous search button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSearchDialogNextSearchButtonNormalBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Normal background color of the next search button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSearchDialogNextSearchButtonNormalBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Normal border color of the next search button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSearchDialogNextSearchButtonHoverBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering background color of the next search button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSearchDialogNextSearchButtonHoverTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering text color of the next search button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSearchDialogNextSearchButtonHoverBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering border color of the next search button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSearchDialogNextSearchButtonPressedBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed background color of the next search button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSearchDialogNextSearchButtonPressedTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed text color of the next search button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSearchDialogNextSearchButtonPressedBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed border color of the next search button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSearchDialogNextSearchButtonDisabledBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Disabled background color of the next search button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSearchDialogNextSearchButtonDisabledTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Disabled text color of the next search button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSearchDialogNextSearchButtonDisabledBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Disabled border color of the next search button in the search dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerOpacityDialogBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the opacity dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerThicknessDialogBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the thickness dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSignatureListViewCreateButtonSeparatorColor 
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Separator color of the signature list view's create button in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerCreateSignatureButtonBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Border color of the create signature button in the signature list view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerCreateSignatureButtonHoverTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering text color of the create signature button in the signature list view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerCreateSignatureButtonPressedTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed text color of the create signature button in the signature list view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerCreateSignatureButtonHoverBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering border color of the create signature button in the signature list view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerCreateSignatureButtonPressedBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed border color of the create signature button in the signature list view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerCreateSignatureButtonHoverBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering background color of the create signature button in the signature list view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerCreateSignatureButtonPressedBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed background color of the create signature button in the signature list view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSignaturePadCreateButtonNormalBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Normal background color of the create button in the signature pad dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSignaturePadCreateButtonDisabledBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Disabled background color of the create button in the signature pad dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSignatureViewUploadTabButtonHoverTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering text color of the upload button in the signature view's upload tab in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSignatureViewUploadTabButtonPressedTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed text color of the upload button in the signature view's upload tab in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSignatureViewUploadTabButtonHoverBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering border color of the upload button in the signature view's upload tab in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSignatureViewUploadTabButtonPressedBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed border color of the upload button in the signature view's upload tab in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSignatureViewUploadTabButtonHoverBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering background color of the upload button in the signature view's upload tab in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSignatureViewUploadTabButtonPressedBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed background color of the upload button in the signature view's upload tab in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSignatureViewBackButtonNormalTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Normal text color of the back button in the signature view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSignatureViewOkButtonNormalTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Normal text color of the ok button in the signature view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSignatureViewBackButtonPressedTextColor          
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed text color of the back button in the signature view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSignatureViewOkButtonPressedTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed text color of the ok button in the signature view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSignatureViewBackButtonPressedBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed background color of the back button in the signature view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSignatureViewOkButtonPressedBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed background color of the ok button in the signature view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>    
+    <tr>
+        <td>
+          SfPdfViewerSignatureListViewItemHoverBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering background color of the signature list view item in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSignatureListViewItemNormalBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Normal background color of the signature list view item in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSignatureListViewItemPressedBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed background color of the signature list view item in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSignatureViewTextLayoutTextColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Text color of the text layout in the signature view's type tab in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerSignatureTypeTabVariantsBackgroundColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Background color of the text layout in the signature view's type tab in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerNormalOutlineTitleFontSize
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Font size of the title of the outline view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>  
+    <tr>
+        <td>
+          SfPdfViewerNormalOutlineExpanderFontSize 
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Font size of the expander of the outline view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerNormalOutlineExpanderCornerRadius
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Corner radius of the expander of the outline view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerNormalOutlineExpanderButtonIconBorderThickness
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Normal border thickness of the expander button of the outline view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerHoverOutlineExpanderButtonIconBorderThickness
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering border thickness of the expander button of the outline view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerPressedOutlineExpanderButtonIconBorderThickness
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed border thickness of the expander button of the outline view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerNormalOutlineTitleLabelFontSize
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Font size of the outline view title label in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerNormalOutlineCloseButtonFontSize
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Font size of the close button of the outline view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerNormalOutlineCloseButtonIconBorderThickness
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Normal border thickness of the close button of the outline view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerHoverOutlineCloseButtonIconBorderThickness
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering border thickness of the close button of the outline view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerPressedOutlineCloseButtonIconBorderThickness
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed border thickness of the close button of the outline view in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerNormalDialogCornerRadius
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Corner radius of the password, hyperlink, message, combobox form field list and listbox form field list dialogs in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerNormalDialogOkButtonBorderThickness
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Normal border thickness of the ok button in the password, message, combobox form field list and listbox form field list dialogs in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerHoverDialogOkButtonBorderThickness
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering border thickness of the ok button in the password, message, combobox form field list and listbox form field list dialogs in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerPressedDialogOkButtonBorderThickness
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed border thickness of the ok button in the password, message, combobox form field list and listbox form field list dialogs in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerDisabledDialogOkButtonBorderThickness
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Disabled border thickness of the ok button in the password, message, combobox form field list and listbox form field list dialogs in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerNormalDialogOkButtonFontSize
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Font size of the ok button in the password, message, combobox form field list and listbox form field list dialogs in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerNormalDialogOkButtonCornerRadius
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Corner radius of the ok button in the password, message, combobox form field list and listbox form field list dialogs in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerNormalDialogCancelButtonBorderThickness
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Normal border thickness of the cancel button in the password, hyperlink, message, combobox form field list and listbox form field list dialogs in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerHoverDialogCancelButtonBorderThickness
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering border thickness of the cancel button in the password, hyperlink, message, combobox form field list and listbox form field list dialogs in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerPressedDialogCancelButtonBorderThickness
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed border thickness of the cancel button in the password, hyperlink, message, combobox form field list and listbox form field list dialogs in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerDisabledDialogCancelButtonBorderThickness
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Disabled border thickness of the cancel button in the password, hyperlink, message, combobox form field list and listbox form field list dialogs in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerNormalDialogCancelButtonFontSize
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Font size of the cancel button in the password, hyperlink, message, combobox form field list and listbox form field list dialogs in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerNormalDialogCancelButtonCornerRadius
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Corner radius of the cancel button in the password, hyperlink, message, combobox form field list and listbox form field list dialogs in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerNormalDialogSaveButtonBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Normal border color of the save button in the free text dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerHoverDialogSaveButtonBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering border color of the save button in the free text dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerPressedDialogSaveButtonBorderColor
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed border color of the save button in the free text dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerNormalDialogSaveButtonBorderThickness
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Normal border thickness of the save button in the free text dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerHoverDialogSaveButtonBorderThickness
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering border thickness of the save button in the free text dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerPressedDialogSaveButtonBorderThickness
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed border thickness of the save button in the free text dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerNormalDialogSaveButtonFontSize
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Font size of the save button in the free text dialog in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerNormalDialogCloseButtonIconBorderThickness
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Normal border thickness of the close button in the password, hyperlink, message and free text dialogs in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerHoverDialogCloseButtonIconBorderThickness
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Hovering border thickness of the close button in the password, hyperlink, message and free text dialogs in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerPressedDialogCloseButtonIconBorderThickness
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Pressed border thickness of the close button in the password, hyperlink, message and free text dialogs in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          SfPdfViewerNormalDialogCloseButtonFontSize
+            <br/>
+            <br/>
+        </td> 
+        <td>
+            Font size of the close button in the password, hyperlink, message and free text dialogs in the SfPdfViewer.
+            <br/>
+            <br/>
+        </td>
+    </tr>
 </table>
 
 ## SfPicker
