@@ -593,4 +593,8 @@ The following table contains the default name and value details used in the SfPd
 <td>GoToPage</td>
 <td>Go to Page</td>
 </tr>
+<tr>
+<td>CreateSignature</td>
+<td>Create Signature</td>
+</tr>
 </table>

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migrating from Xamarin to .NET MAUI | Syncfusion® 
-description: Basic overview of the available .NET MAUI components and their Xamarin equivalents on Syncfusion®.
+description: Basic overview of the available .NET MAUI components and their Xamarin equivalents on the Syncfusion®.
 platform: MAUI
 control: Essential Studio®
 documentation: UG
@@ -538,7 +538,7 @@ We are actively working on delivering brand-new .NET MAUI controls that can be s
 			<a href="https://help.syncfusion.com/xamarin/rich-text-editor/gettingstarted">SfRichTextEditor</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Volume 2 2025 <br/>
-		</td>
+			Volume 3 2025 <br/>
+    	</td>
 	</tr>
 </table>
