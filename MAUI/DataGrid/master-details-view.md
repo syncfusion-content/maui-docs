@@ -377,6 +377,48 @@ Here, `Master-Details View` relation is auto generated based on the `Orders` rel
 
 <img alt="auto-relation-DataTable" src="Images\master-details-view\Master-Details-View-DataTable.png" width="604" /> 
 
+#### Manually Defining Relations
+
+We can manually define the `Master-Details View` relation in `SfDataGrid` using DetailsViewDefinition when AutoGenerateRelations is set to false.
+
+### XAML Configuration
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       AutoGenerateRelations="False"   
+                       ItemsSource="{Binding Orders}">
+    <syncfusion:SfDataGrid.DetailsViewDefinition>
+        <syncfusion:DataGridViewDefinition RelationalColumn="Parent_Child">
+            <syncfusion:DataGridViewDefinition.DataGrid>
+                <syncfusion:SfDataGrid x:Name="firstInnerGrid"/>
+            </syncfusion:DataGridViewDefinition.DataGrid>
+        </syncfusion:DataGridViewDefinition>
+    </syncfusion:SfDataGrid.DetailsViewDefinition>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% endtabs %}
+
+# Notes on Naming Conventions for Relations and Relational Columns
+
+## Important Guidelines
+
+- **Relation Name Must Be Unique**
+  - A relation name **must not** be the same as:
+    - Any **column name** within the same or other relations.
+    - Any **other collection name** in the database.
+
+## XAML Configuration
+
+- When defining a **RelationalColumn** in XAML, use the **exact case-sensitive keyword**:
+  
+{% tabs %}
+{% highlight xaml %}
+  <syncfusion:DataGridViewDefinition RelationalColumn="Parent_Child">
+{% endhighlight %}
+{% endtabs %}
+
+
 ## Defining columns for DetailsViewDataGrid
 The [ViewDefinition.DataGrid’s](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ViewDefinition.html) columns can be generated either automatically or manually like parent `SfDataGrid`. You can refer here to know more about columns.
 
