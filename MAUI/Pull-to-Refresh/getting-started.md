@@ -314,7 +314,7 @@ To show the progress indicator while updating the view, set [IsRefreshing](https
                 this.pullToRefresh.Refreshing += PullToRefresh_Refreshing;
             }
 
-            private async void PullToRefresh_Refreshing(object sender, EventArgs e)
+            private async void PullToRefresh_Refreshing(object? sender, EventArgs e)
             {
                 this.pullToRefresh.IsRefreshing = true;
                 await Task.Delay(2000);
