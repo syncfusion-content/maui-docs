@@ -511,9 +511,9 @@ Sorting can also be configured by adding the column to the [SfDataGrid.SortColum
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid.SortColumnDescription>
+<syncfusion:SfDataGrid.SortColumnDescriptions>
     <syncfusion:SortColumnDescription ColumnName="CustomerID" />
-</syncfusion:SfDataGrid.SortColumnDescription> 
+</syncfusion:SfDataGrid.SortColumnDescriptions> 
 {% endhighlight %}
 {% highlight c# %}
 dataGrid.SortColumnDescriptions.Add(new SortColumnDescription() { ColumnName = "CustomerID" });
@@ -548,7 +548,6 @@ The following code example illustrates how this can be done:
                            ItemsSource="{Binding OrderInfoCollection}"
                            HeightRequest="290"
                            WidthRequest="200"
-                           VerticalOptions="CenterAndExpand"
                            HorizontalOptions="Center"/>
     
 </ContentPage>
