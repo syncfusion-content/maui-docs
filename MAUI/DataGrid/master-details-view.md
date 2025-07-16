@@ -379,7 +379,7 @@ Here, `Master-Details View` relation is auto generated based on the `Orders` rel
 
 #### Manually Defining Relations
 
-We can manually define the `Master-Details View` relation in `SfDataGrid` using DetailsViewDefinition when AutoGenerateRelations is set to false.
+We can manually define the `Master-Details View` relation in `SfDataGrid` using `DetailsViewDefinition` when `AutoGenerateRelations` is set to false.
 
 ### XAML Configuration
 
@@ -400,7 +400,7 @@ We can manually define the `Master-Details View` relation in `SfDataGrid` using 
 {% endtabs %}
 
 N>
- The relation name **must be unique** and **must not** match any column name or collection name in the database.  
+ The relation name **must be unique** and **must not** match any column name or collection name in the `DataTable`.  
  When defining a `RelationalColumn` in XAML, use the **exact case-sensitive keyword**. For example:  
  `<syncfusion:DataGridViewDefinition RelationalColumn="Parent_Child" />`
 
