@@ -399,24 +399,10 @@ We can manually define the `Master-Details View` relation in `SfDataGrid` using 
 {% endhighlight %}
 {% endtabs %}
 
-# Notes on Naming Conventions for Relations and Relational Columns
-
-## Important Guidelines
-
-- **Relation Name Must Be Unique**
-  - A relation name **must not** be the same as:
-    - Any **column name** within the same or other relations.
-    - Any **other collection name** in the database.
-
-## XAML Configuration
-
-- When defining a **RelationalColumn** in XAML, use the **exact case-sensitive keyword**:
-  
-{% tabs %}
-{% highlight xaml %}
-  <syncfusion:DataGridViewDefinition RelationalColumn="Parent_Child">
-{% endhighlight %}
-{% endtabs %}
+N>
+ The relation name **must be unique** and **must not** match any column name or collection name in the database.  
+ When defining a `RelationalColumn` in XAML, use the **exact case-sensitive keyword**. For example:  
+ `<syncfusion:DataGridViewDefinition RelationalColumn="Parent_Child" />`
 
 
 ## Defining columns for DetailsViewDataGrid
