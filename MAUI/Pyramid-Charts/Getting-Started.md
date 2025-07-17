@@ -385,7 +385,7 @@ The legend provides information about the data point displayed in the pyramid ch
 <chart:SfPyramidChart>
     . . .
     <chart:SfPyramidChart.Legend>
-    <chart:ChartLegend/>
+        <chart:ChartLegend/>
     </chart:SfPyramidChart.Legend>
 </chart:SfPyramidChart>
 
@@ -457,10 +457,12 @@ The following code example gives you the complete code of above configurations.
         <chart:SfPyramidChart.Legend>
             <chart:ChartLegend/>
         </chart:SfPyramidChart.Legend>
-        
+
+    </chart:SfPyramidChart>
+
 </ContentPage>
 
-</chart:SfPyramidChart>
+
  
 {% endhighlight %}
 
