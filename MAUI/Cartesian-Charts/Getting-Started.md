@@ -412,11 +412,11 @@ The title of the chart provide quick information to the user about the data bein
 
 {% highlight xaml %}
 
-    <chart:SfCartesianChart>
-        <chart:SfCartesianChart.Title>
-            <Label Text="Height Comparison"/>
-        </chart:SfCartesianChart.Title> 
-    </chart:SfCartesianChart>
+<chart:SfCartesianChart>
+    <chart:SfCartesianChart.Title>
+        <Label Text="Height Comparison"/>
+    </chart:SfCartesianChart.Title> 
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 

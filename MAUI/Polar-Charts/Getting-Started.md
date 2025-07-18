@@ -426,7 +426,7 @@ SfPolarChart chart = new SfPolarChart();
 chart.Title = new Label()
 {
     Text = "Plant Analysis",
-    HorizontalTextAlignment = "Center"
+    HorizontalTextAlignment = TextAlignment.Center
 };
 this.Content = chart;
 
@@ -635,7 +635,7 @@ namespace ChartGettingStarted
             chart.Title = new Label()
             {
                 Text = "Plant Analysis",
-                HorizontalTextAlignment= "Center"
+                HorizontalTextAlignment = TextAlignment.Center
             };
 
             CategoryAxis primaryAxis = new CategoryAxis();
