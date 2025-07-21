@@ -44,14 +44,10 @@ Before proceeding, ensure the following are set up:
 The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependency for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% highlight C# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace EffectsViewMauiSample
+namespace EffectsViewGettingStarted
 {
   public static class MauiProgram
   {
@@ -96,7 +92,7 @@ namespace EffectsViewMauiSample
 
 using Syncfusion.Maui.Core;
 
-namespace EffectsViewMauiSample   
+namespace EffectsViewGettingStarted   
 {  
 	public partial class MainPage : ContentPage                  
 	{ 
@@ -145,14 +141,10 @@ Before proceeding, ensure the following are set up:
 The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependency for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% highlight C# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace EffectsViewMauiSample
+namespace EffectsViewGettingStarted
 {
   public static class MauiProgram
   {
@@ -197,7 +189,7 @@ namespace EffectsViewMauiSample
 
 using Syncfusion.Maui.Core;
 
-namespace EffectsViewMauiSample   
+namespace EffectsViewGettingStarted   
 {  
 	public partial class MainPage : ContentPage                  
 	{ 
@@ -245,14 +237,10 @@ Before proceeding, ensure the following are set up:
 The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependency for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% highlight C# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace EffectsViewMauiSample
+namespace EffectsViewGettingStarted
 {
   public static class MauiProgram
   {
@@ -297,7 +285,7 @@ namespace EffectsViewMauiSample
 
 using Syncfusion.Maui.Core;
 
-namespace EffectsViewMauiSample   
+namespace EffectsViewGettingStarted   
 {  
 	public partial class MainPage : ContentPage                  
 	{ 
@@ -319,7 +307,47 @@ namespace EffectsViewMauiSample
 {% endtabcontent %}
 {% endtabcontents %}
 
+
+## Adding a content
+
+An image, label or any view can be added to the Effects View using the Content property.
+
+{% tabs %}
+{% highlight xaml %}
+
+    <Border HorizontalOptions="Center" VerticalOptions="Center">
+        <Border.StrokeShape>
+            <RoundRectangle CornerRadius="18" />
+        </Border.StrokeShape>
+        <Border.Background>
+            <LinearGradientBrush EndPoint="1,0">
+                <GradientStop Color="#4E54C8" Offset="0.0" />
+                <GradientStop Color="#8F94FB" Offset="1.0" />
+            </LinearGradientBrush>
+        </Border.Background>
+        <effectsView:SfEffectsView>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="90" />
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="laura.png" Margin="7" VerticalOptions="Center"
+                               WidthRequest="72" HeightRequest="72" />
+                <StackLayout Grid.Column="1" VerticalOptions="Center">
+                    <Label Text="Laura Steffi" Margin="10,0,10,0" FontSize="18" />
+                    <Label Text="Data Science Analyst" Margin="10,0,10,0" FontSize="12"/>
+                </StackLayout>
+            </Grid>
+        </effectsView:SfEffectsView>
+    </Border>
+
+{% endhighlight %}
+{% endtabs %}
+
 ![Effects View initialization](Getting-Started_images/RippleEffect.gif)
+
+You can download the getting started project of this demo from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-EffectsView)
 
 N> You can refer to our [.NET MAUI Effects View](https://www.syncfusion.com/maui-controls/maui-effects-view) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Effects View example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/EffectsView) that shows you how to render the Effects View in .NET MAUI.
 
