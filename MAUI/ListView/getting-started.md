@@ -76,7 +76,7 @@ namespace GettingStarted
  2. Initialize [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html).
  
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml %}
 
 <ContentPage   
     . . .
@@ -86,7 +86,7 @@ namespace GettingStarted
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# %}
 
 using Syncfusion.Maui.ListView;
 . . .
@@ -751,7 +751,7 @@ To filter the items based on the Title property of the underlying data by using 
      </Grid.RowDefinitions>
       <SearchBar x:Name="filterText" HeightRequest="40"
            Placeholder="Search here to filter"
-           TextChanged="OnFilterTextChanged" GridLayout.Row="0"/>
+           TextChanged="OnFilterTextChanged" Grid.Row="0"/>
       <syncfusion:SfListView x:Name="listView" 
 	                         Grid.Row="1" 
 							 ItemsSource="{Binding BookInfo}"/>
