@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Syncfusion® .NET MAUI Avatar View
-description: Learn how to initialize and use the .NET MAUI Avatar View control in a simple way.
+description: Learn all about getting started with the Syncfusion® .NET MAUI Avatar View (SfAvatarView) control, its elements, and more.
 platform: MAUI
 control: SfAvatarView
 documentation: UG
@@ -41,14 +41,10 @@ Before proceeding, ensure the following are set up:
 The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% highlight c# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace AvatarViewSample
+namespace AvatarViewGettingStarted
 {
   public static class MauiProgram
   {
@@ -140,14 +136,10 @@ Before proceeding, ensure the following are set up:
 The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% highlight c# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace AvatarViewSample
+namespace AvatarViewGettingStarted
 {
   public static class MauiProgram
   {
@@ -239,14 +231,10 @@ Before proceeding, ensure the following are set up:
 The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% highlight c# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace AvatarViewSample
+namespace AvatarViewGettingStarted
 {
   public static class MauiProgram
   {
@@ -327,11 +315,11 @@ You can add a custom image to display in the [.NET MAUI Avatar View](https://hel
                            ImageSource="alex.png"
                            VerticalOptions="Center"
                            HorizontalOptions="Center"   
-                           HeightRequest="50"
-                           CornerRadius="25"
-                           WidthRequest="50" 
+                           HeightRequest="100"
+                           CornerRadius="50"
+                           WidthRequest="100" 
                            Stroke="Black"
-                           StrokeThickness="1"/>
+                           StrokeThickness="2"/>
 </Grid>
 </ContentPage.Content>
 
@@ -358,11 +346,11 @@ namespace AvatarViewGettingStarted
             avatarView.HorizontalOptions = LayoutOptions.Center;
             avatarView.ContentType = ContentType.Custom;
             avatarView.ImageSource = "alex.png";
-            avatarView.WidthRequest = 50;
-            avatarView.HeightRequest = 50;
-            avatarView.CornerRadius = 25;
+            avatarView.WidthRequest = 100;
+            avatarView.HeightRequest = 100;
+            avatarView.CornerRadius = 50;
             avatarView.Stroke = Colors.Black;
-            avatarView.StrokeThickness = 1;
+            avatarView.StrokeThickness = 2;
             mainGrid.Children.Add(avatarView);
             this.Content = mainGrid;
         }
@@ -377,6 +365,6 @@ The following screenshot illustrates the result of the above code.
 
 ![.NET MAUI Avatar View](GettingStarted_Images/Getting_Started_Sample.png) 
 
-The Getting Started sample of .NET MAUI Avatar View is available in this following link: [Getting Started](https://github.com/SyncfusionExamples/maui-avatarview-samples). 
+You can download the getting started project of this demo from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-AvatarView)
 
 N> You can refer to our [.NET MAUI Avatar View](https://www.syncfusion.com/maui-controls/maui-avatarview) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Avatar View example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/AvatarView) that shows you how to render the Avatar View in .NET MAUI.
