@@ -357,7 +357,7 @@ namespace GettingStarted
  2. Initialize [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html).
  
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml %}
 
 <ContentPage   
     . . .
@@ -367,7 +367,7 @@ namespace GettingStarted
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# %}
 
 using Syncfusion.Maui.ListView;
 . . .
@@ -639,7 +639,7 @@ namespace GettingStarted
  2. Initialize [SfListView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html).
  
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml %}
 
 <ContentPage   
     . . .
@@ -649,7 +649,7 @@ namespace GettingStarted
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# %}
 
 using Syncfusion.Maui.ListView;
 . . .
@@ -676,7 +676,7 @@ SfListView supports different layouts such as linear and grid layouts. The linea
 The [SfListView.ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsLayout) property is used to define the layout of the SfListView. [LinearLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.LinearLayout.html) is default layout of this control.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
+{% highlight xaml hl_lines="5" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
  <syncfusion:SfListView x:Name="listView" 
                    ItemsSource="{Binding BookInfo}"
@@ -687,7 +687,7 @@ The [SfListView.ItemsLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
   </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# %}
 listView.ItemsLayout = new GridLayout() { SpanCount = 3 };
 {% endhighlight%}
 {% endtabs %}
@@ -831,7 +831,7 @@ The gesture type can be changed to select the item by setting the [SfListView.Se
 The [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChanging) and [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_SelectionChanged) events of the SfListView can be used to handle selection operations.
  
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 4 5" %}
+{% highlight xaml hl_lines="3 4 5" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
   <syncfusion:SfListView x:Name="listView" 
                  SelectionMode="Single"
@@ -839,7 +839,7 @@ The [SelectionChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.List
                  SelectionBackground="#E4E4E4"/>}
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# %}
 listView.SelectionMode = SelectionMode.Single;
 listView.SelectionGesture = TouchGesture.Tap;
 listView.SelectionBackground = Colors.FromHex("#E4E4E4");
@@ -853,7 +853,7 @@ The SfListView allows setting the header and footer to the user interface(UI) vi
 The header and footer can be handled as scrollable or sticky to the view by enabling or disabling the [IsStickyHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsStickyHeader) and [IsStickyFooter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_IsStickyFooter) properties.
  
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4 5 6 13" %}
+{% highlight xaml hl_lines="4 5 6 13" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView">
 <syncfusion:SfListView x:Name="listView"
                  ItemsSource="{Binding BookInfo}"
@@ -876,7 +876,7 @@ The header and footer can be handled as scrollable or sticky to the view by enab
   </syncfusion:SfListView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3 4 5 17" %}
+{% highlight c# hl_lines="3 4 5 17" %}
 ViewModel viewModel = new ViewModel ();
 listView.ItemsSource = viewModel.BookInfo; 
 listView.IsStickyHeader = true;
