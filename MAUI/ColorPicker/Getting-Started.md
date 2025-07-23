@@ -38,11 +38,11 @@ Before proceeding, ensure the following are set up:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="1 12" %}
-
+{% highlight C# hl_lines="2 13" %}
+using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace ColorPickerSample
+namespace ColorPickerGettingStarted
 {
     public static class MauiProgram
     {
@@ -90,7 +90,7 @@ namespace ColorPickerSample
 
 using Syncfusion.Maui.Inputs;
 
-namespace ColorPickerSample   
+namespace ColorPickerGettingStarted   
 {  
 	public partial class MainPage : ContentPage                  
 	{ 
@@ -136,11 +136,11 @@ Before proceeding, ensure the following are set up:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="1 12" %}
-
+{% highlight C# hl_lines="2 13" %}
+using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace ColorPickerSample
+namespace ColorPickerGettingStarted
 {
     public static class MauiProgram
     {
@@ -188,7 +188,7 @@ namespace ColorPickerSample
 
 using Syncfusion.Maui.Inputs;
 
-namespace ColorPickerSample   
+namespace ColorPickerGettingStarted   
 {  
 	public partial class MainPage : ContentPage                  
 	{ 
@@ -233,11 +233,11 @@ Before proceeding, ensure the following are set up:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="1 12" %}
-
+{% highlight C# hl_lines="2 13" %}
+using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace ColorPickerSample
+namespace ColorPickerGettingStarted
 {
     public static class MauiProgram
     {
@@ -274,7 +274,7 @@ namespace ColorPickerSample
             xmlns:inputs="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs">
 
     <ContentPage.Content> 
-        <inputs:SfColorPicker x:Name="colorPicker"/>
+        <inputs:SfColorPicker />
     </ContentPage.Content>
 
 </ContentPage>
@@ -285,7 +285,7 @@ namespace ColorPickerSample
 
 using Syncfusion.Maui.Inputs;
 
-namespace ColorPickerSample   
+namespace ColorPickerGettingStarted   
 {  
 	public partial class MainPage : ContentPage                  
 	{ 
@@ -308,3 +308,7 @@ namespace ColorPickerSample
 The following gif image illustrates the result of the above code.
 
 ![.NET MAUI Color Picker.](Images/Overview/ColorPicker.gif){:width="420" height="574" loading="lazy"}
+
+You can download the getting started project of this demo from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-ColorPicker)
+
+N> You can refer to our [.NET MAUI Color Picker](https://www.syncfusion.com/maui-controls/maui-colorpicker) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Color Picker example](https://github.com/SyncfusionExamples/maui-color-picker-samples) that shows you how to render the Color Picker in .NET MAUI.
