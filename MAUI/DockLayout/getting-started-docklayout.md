@@ -262,3 +262,5 @@ namespace DockLayoutGettingStarted
 ![Output of DockLayout View](DockLayout-Images/maui-docklayout-getting-started.png)
 
 You can access a complete getting started sample from this [link.](https://github.com/SyncfusionExamples/GettingStarted_DockLayout_MAUI)
+
+N> You can refer to our [.NET MAUI DockLayout](https://www.syncfusion.com/maui-controls/maui-colorpicker) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI DockLayout Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Inputs/SampleBrowser.Maui.Inputs/Samples/ColorPicker) that shows you how to render the DockLayout in .NET MAUI.

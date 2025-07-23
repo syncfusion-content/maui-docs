@@ -308,3 +308,5 @@ namespace ColorPickerSample
 The following gif image illustrates the result of the above code.
 
 ![.NET MAUI Color Picker.](Images/Overview/ColorPicker.gif){:width="420" height="574" loading="lazy"}
+
+N> You can refer to our [.NET MAUI Color Picker](https://www.syncfusion.com/maui-controls/maui-colorpicker) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Color Picker Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Inputs/SampleBrowser.Maui.Inputs/Samples/ColorPicker) that shows you how to render the Color Picker in .NET MAUI.
