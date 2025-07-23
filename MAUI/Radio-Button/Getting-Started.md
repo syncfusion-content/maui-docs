@@ -44,11 +44,7 @@ Before proceeding, ensure the following are set up:
 
 {% highlight c# hl_lines="6 17" %}
 
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
 namespace RadioButtonGettingStarted
@@ -140,11 +136,7 @@ Before proceeding, ensure the following are set up:
 
 {% highlight c# hl_lines="6 17" %}
 
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
 namespace RadioButtonGettingStarted
@@ -235,11 +227,7 @@ Before proceeding, ensure the following are set up:
 
 {% highlight c# hl_lines="6 17" %}
 
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
 namespace RadioButtonGettingStarted
@@ -363,6 +351,6 @@ N> [SfRadioButtons](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.
 
 ![.NET MAUI Radio Button](Images/Getting-Started/statechange.png)
 
-You can find the complete getting started sample of the .NET MAUI Radio Button from this [link](https://github.com/SyncfusionExamples/maui-radiobutton-samples).
+You can download the getting started project of this demo from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-RadioButton)
 
 N> You can also explore our [.NET MAUI Radio Button example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/Buttons/SampleBrowser.Maui.Buttons/Samples/RadioButton) that shows you how to render the .NET MAUI Radio Button.
