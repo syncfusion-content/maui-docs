@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open a PDF From base64 string in .NET MAUI PDF Viewer control | Syncfusion
+title: Open a PDF From base64string in .NET MAUI PDF Viewer control | Syncfusion
 description: Learn here about opening a PDF document from the base64 string in Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
 platform: MAUI
 control: SfPdfViewer
@@ -11,7 +11,7 @@ documentation: ug
 
 A PDF document can be opened in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) from a given base64 string by converting it to a byte[] and assigning it to the [DocumentSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) property.
 
-Just by making a few changes to the `PdfViewerViewModel.cs` shared in the getting started example, you can easily open a document from a given base64 string text file. Refer to the following code example:
+Just by making a few changes to the `PdfViewerViewModel.cs` shared in the getting started example, you can easily open a document from a given base64 string by converting the Base64 string to byte[] using the `Convert` class from the `System` namespace, which is designed for type conversion and assigning the obtained byte[] to the [DocumentSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentSource) property in the .NET MAUI PDF Viewer. Refer to the following code example for reference:
 
 {% tabs %}
 {% highlight c# tabtitle="PdfViewerViewModel.cs" %}
