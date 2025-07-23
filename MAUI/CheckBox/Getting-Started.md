@@ -40,13 +40,8 @@ Before proceeding, ensure the following are set up:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="6 17" %}
-
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+{% highlight C# hl_lines="2 13" %}
+using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
 namespace CheckBoxGettingStarted
@@ -135,13 +130,8 @@ Before proceeding, ensure the following are set up:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="6 17" %}
-
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+{% highlight C# hl_lines="2 13" %}
+using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
 namespace CheckBoxGettingStarted
@@ -230,13 +220,8 @@ Before proceeding, ensure the following are set up:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="6 17" %}
-
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+{% highlight C# hl_lines="2 13" %}
+using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
 namespace CheckBoxGettingStarted
@@ -420,26 +405,26 @@ Multiple CheckBoxes can be used as a group for multi-select scenarios where a us
 {% endhighlight %}
 {% highlight c# %}
 
-        StackLayout stackLayout = new StackLayout() { Padding = 20 };
-        Label label = new Label();
-        label.Text = "Pizza Toppings";
-        label.Margin = new Thickness(0,10);
-        SfCheckBox pepperoni = new SfCheckBox();
-        pepperoni.Text = "Pepperoni";
-        SfCheckBox beef = new SfCheckBox();
-        beef.Text = "Beef";
-        beef.IsChecked = true;
-        SfCheckBox mushroom = new SfCheckBox();
-        mushroom.Text = "Mushrooms";
-        SfCheckBox onion = new SfCheckBox();
-        onion.Text = "Pepperoni";
-        onion.IsChecked = true;
-        stackLayout.Children.Add(label);
-        stackLayout.Children.Add(pepperoni);
-        stackLayout.Children.Add(beef);
-        stackLayout.Children.Add(mushroom);
-        stackLayout.Children.Add(onion);
-        this.Content = stackLayout;
+    StackLayout stackLayout = new StackLayout() { Padding = 20 };
+    Label label = new Label();
+    label.Text = "Pizza Toppings";
+    label.Margin = new Thickness(0,10);
+    SfCheckBox pepperoni = new SfCheckBox();
+    pepperoni.Text = "Pepperoni";
+    SfCheckBox beef = new SfCheckBox();
+    beef.Text = "Beef";
+    beef.IsChecked = true;
+    SfCheckBox mushroom = new SfCheckBox();
+    mushroom.Text = "Mushrooms";
+    SfCheckBox onion = new SfCheckBox();
+    onion.Text = "Pepperoni";
+    onion.IsChecked = true;
+    stackLayout.Children.Add(label);
+    stackLayout.Children.Add(pepperoni);
+    stackLayout.Children.Add(beef);
+    stackLayout.Children.Add(mushroom);
+    stackLayout.Children.Add(onion);
+    this.Content = stackLayout;
 
 {% endhighlight %}
 {% endtabs %}
@@ -469,34 +454,43 @@ The Intermediate state is used when a group of sub-choices has both checked and 
 {% endhighlight %}
 {% highlight c# %}
 
+SfCheckBox selectAll, pepperoni, beef, mushroom, onion;
+public MainPage()
+{
+    InitializeComponent();
     StackLayout stackLayout = new StackLayout() { Padding = 20 };
-    SfCheckBox selectAll, pepperoni, beef, mushroom, onion;
     Label label = new Label();
     label.Text = "Pizza Toppings";
     label.Margin = new Thickness(10);
     selectAll = new SfCheckBox();
-    selectAll.StateChanged += SelectAll_StateChanged;
-    selectAll.Text = "Select All";   
-    selectAll.IsThreeState = true;
-    selectAll.IsChecked = null;
     pepperoni = new SfCheckBox();
+    beef = new SfCheckBox();
+    onion = new SfCheckBox();
+    mushroom = new SfCheckBox();
+
     pepperoni.StateChanged += CheckBox_StateChanged;
     pepperoni.Text = "Pepperoni";
     pepperoni.Margin = new Thickness(30, 0);
-    beef = new SfCheckBox();
+
     beef.StateChanged += CheckBox_StateChanged;
     beef.Text = "Beef";
     beef.IsChecked = true;
     beef.Margin = new Thickness(30, 0);
-    mushroom = new SfCheckBox();
+
     mushroom.StateChanged += CheckBox_StateChanged;
     mushroom.Text = "Mushrooms";
     mushroom.Margin = new Thickness(30, 0);
-    onion = new SfCheckBox();
+
     onion.StateChanged += CheckBox_StateChanged;
     onion.Text = "Onions";
     onion.Margin = new Thickness(30, 0);
     onion.IsChecked = true;
+
+    selectAll.StateChanged += SelectAll_StateChanged;
+    selectAll.Text = "Select All";
+    selectAll.IsThreeState = true;
+    selectAll.IsChecked = null;
+
     stackLayout.Children.Add(label);
     stackLayout.Children.Add(selectAll);
     stackLayout.Children.Add(pepperoni);
@@ -504,6 +498,7 @@ The Intermediate state is used when a group of sub-choices has both checked and 
     stackLayout.Children.Add(mushroom);
     stackLayout.Children.Add(onion);
     this.Content = stackLayout;
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -516,9 +511,9 @@ The Intermediate state is used when a group of sub-choices has both checked and 
     {
         if (!skip)
         {
-           skip = true;
-           pepperoni.IsChecked = beef.IsChecked = mushroom.IsChecked = onion.IsChecked = e.IsChecked;
-           skip = false;
+            skip = true;
+            pepperoni.IsChecked = beef.IsChecked = mushroom.IsChecked = onion.IsChecked = e.IsChecked;
+            skip = false;
         }
     }
 
@@ -526,14 +521,14 @@ The Intermediate state is used when a group of sub-choices has both checked and 
     {
         if (!skip)
         {
-           skip = true;
-           if (pepperoni.IsChecked.Value && beef.IsChecked.Value && mushroom.IsChecked.Value && onion.IsChecked.Value)
-               selectAll.IsChecked = true;
-           else if (!pepperoni.IsChecked.Value && !beef.IsChecked.Value && !mushroom.IsChecked.Value && !onion.IsChecked.Value)
-	           selectAll.IsChecked = false;
-           else
-               selectAll.IsChecked = null;
-           skip = false;
+            skip = true;
+            if (pepperoni.IsChecked.Value && beef.IsChecked.Value && mushroom.IsChecked.Value && onion.IsChecked.Value)
+                selectAll.IsChecked = true;
+            else if (!pepperoni.IsChecked.Value && !beef.IsChecked.Value && !mushroom.IsChecked.Value && !onion.IsChecked.Value)
+                selectAll.IsChecked = false;
+            else
+                selectAll.IsChecked = null;
+            skip = false;
         }
     }
 		
@@ -544,7 +539,7 @@ The Intermediate state is used when a group of sub-choices has both checked and 
 
 ![.NET MAUI CheckBox](Images/Getting-Started/selectalltoppings.png)
 
-You can find the complete getting started sample of the .NET MAUI CheckBox from this [link](https://github.com/SyncfusionExamples/maui-checkbox-samples).
+You can download the getting started project of this demo from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-CheckBox)
 
 ## See also 
 
