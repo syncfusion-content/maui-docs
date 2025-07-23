@@ -43,7 +43,7 @@ Before proceeding, ensure the following are set up:
 
 The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependency for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight C# hl_lines="6 17" %}
+{% highlight C# hl_lines="2 13" %}
 using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
@@ -140,7 +140,7 @@ Before proceeding, ensure the following are set up:
 
 The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependency for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight C# hl_lines="6 17" %}
+{% highlight C# hl_lines="2 13" %}
 using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
@@ -236,7 +236,7 @@ Before proceeding, ensure the following are set up:
 
 The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependency for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight C# hl_lines="6 17" %}
+{% highlight C# hl_lines="2 13" %}
 using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
