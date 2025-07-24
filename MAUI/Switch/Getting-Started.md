@@ -42,12 +42,8 @@ Before proceeding, ensure the following are set up:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls in .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+{% highlight c# hl_lines="2 13" %}
+using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
 namespace SwitchGettingStarted
@@ -140,12 +136,8 @@ Before proceeding, ensure the following are set up:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+{% highlight c# hl_lines="2 13" %}
+using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
 namespace SwitchGettingStarted
@@ -236,12 +228,8 @@ Before proceeding, ensure the following are set up:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+{% highlight c# hl_lines="2 13" %}
+using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
 namespace SwitchGettingStarted
@@ -318,14 +306,14 @@ The following code example displays a message box when the .NET MAUI Switch is s
 
 {% highlight xaml %}
 
-<buttons:SfSwitch x:Name="sfSwitch" StateChanged="SfSwitch_StateChanged"/>
+<buttons:SfSwitch x:Name="sfSwitch" StateChanged="OnSwitchStateChanged"/>
 	
 {% endhighlight %}
 
 {% highlight C# %}
 
 SfSwitch sfSwitch = new SfSwitch();
-sfSwitch.StateChanged+= SfSwitch_StateChanged;
+sfSwitch.StateChanged+= OnSwitchStateChanged;
 this.Content = sfSwitch;
 
 {% endhighlight %}
@@ -336,7 +324,7 @@ this.Content = sfSwitch;
 
 {% highlight c# %}
     
-private void SfSwitch_StateChanged(object sender, SwitchStateChangedEventArgs e)
+private void OnSwitchStateChanged(object sender, SwitchStateChangedEventArgs e)
 {
      DisplayAlert("Message", "SUCCESS", "OK");
 }
