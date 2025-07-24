@@ -43,12 +43,8 @@ Before proceeding, ensure the following are set up:
 
 The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls in .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+{% highlight C# hl_lines="2 13" %}
+using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
 namespace NavigationDrawerGettingStarted
@@ -143,12 +139,8 @@ Before proceeding, ensure the following are set up:
 
 The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+{% highlight C# hl_lines="2 13" %}
+using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
 namespace NavigationDrawerGettingStarted
@@ -242,12 +234,8 @@ Before proceeding, ensure the following are set up:
 
 The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+{% highlight C# hl_lines="2 13" %}
+using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
 namespace NavigationDrawerGettingStarted
@@ -325,14 +313,14 @@ The default position of the navigation pane is on the left. Change the drawer wi
 {% tabs %}
 {% highlight xaml %}
 
-<navigationdrawer:SfNavigationDrawer x:Name="navigationDrawer">
-    <navigationdrawer:SfNavigationDrawer.DrawerSettings>
-        <navigationdrawer:DrawerSettings DrawerWidth="250"/>
-    </navigationdrawer:SfNavigationDrawer.DrawerSettings>
-    <navigationdrawer:SfNavigationDrawer.ContentView>
+<navigationDrawer:SfNavigationDrawer x:Name="navigationDrawer">
+    <navigationDrawer:SfNavigationDrawer.DrawerSettings>
+        <navigationDrawer:DrawerSettings DrawerWidth="250"/>
+    </navigationDrawer:SfNavigationDrawer.DrawerSettings>
+    <navigationDrawer:SfNavigationDrawer.ContentView>
         <Grid/>
-    </navigationdrawer:SfNavigationDrawer.ContentView>
-</navigationdrawer:SfNavigationDrawer>
+    </navigationDrawer:SfNavigationDrawer.ContentView>
+</navigationDrawer:SfNavigationDrawer>
 
 {% endhighlight %}
 
@@ -342,9 +330,9 @@ using Syncfusion.Maui.NavigationDrawer;
 
 namespace NavigationDrawerGettingStarted;
 
-public partial class NavigationDrawerPage : ContentPage
+public partial class MainPage : ContentPage
 {
-	public NavigationDrawerPage()
+	public MainPage()
 	{
 		InitializeComponent();
         SfNavigationDrawer navigationDrawer = new SfNavigationDrawer();
@@ -370,11 +358,11 @@ Create an ImageButton and set the required image to the `Source` property. Ensur
 {% tabs %}
 {% highlight xaml %}
 
-<navigationdrawer:SfNavigationDrawer x:Name="navigationDrawer">
-    <navigationdrawer:SfNavigationDrawer.DrawerSettings>
-        <navigationdrawer:DrawerSettings DrawerWidth="250"/>
-    </navigationdrawer:SfNavigationDrawer.DrawerSettings>
-    <navigationdrawer:SfNavigationDrawer.ContentView>
+<navigationDrawer:SfNavigationDrawer x:Name="navigationDrawer">
+    <navigationDrawer:SfNavigationDrawer.DrawerSettings>
+        <navigationDrawer:DrawerSettings DrawerWidth="250"/>
+    </navigationDrawer:SfNavigationDrawer.DrawerSettings>
+    <navigationDrawer:SfNavigationDrawer.ContentView>
         <Grid x:Name="mainContentView" 
           BackgroundColor="White" RowDefinitions="Auto,*">
             <HorizontalStackLayout BackgroundColor="#6750A4" Spacing="10" Padding="5,0,0,0">
@@ -401,8 +389,8 @@ Create an ImageButton and set the required image to the `Source` property. Ensur
               FontSize="14" 
               TextColor="Black"/>
         </Grid>
-    </navigationdrawer:SfNavigationDrawer.ContentView>
-</navigationdrawer:SfNavigationDrawer>
+    </navigationDrawer:SfNavigationDrawer.ContentView>
+</navigationDrawer:SfNavigationDrawer>
 
 {% endhighlight %}
 
@@ -410,11 +398,11 @@ Create an ImageButton and set the required image to the `Source` property. Ensur
 
 namespace NavigationDrawerGettingStarted;
 
-public partial class NavigationDrawerPage : ContentPage
+public partial class MainPage : ContentPage
 {
     SfNavigationDrawer navigationDrawer;
     Label contentLabel;
-	public NavigationDrawerPage()
+	public MainPage()
 	{
 		InitializeComponent();
         navigationDrawer = new SfNavigationDrawer();
@@ -496,147 +484,233 @@ public partial class NavigationDrawerPage : ContentPage
 
 ![CustomView](Images/getting-started/getting_main_content.png)
 
-## Set ListView as DrawerContentView
+## Set CollectionView as DrawerContentView
 
-Create a ListView with items and set it as [DrawerContentView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerContentView). 
+Create a CollectionView with items and set it as [DrawerContentView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_DrawerContentView). 
 
 {% tabs %}
 {% highlight xaml %}
 
-<navigationdrawer:SfNavigationDrawer x:Name="navigationDrawer">
-    <navigationdrawer:SfNavigationDrawer.DrawerSettings>
-        <navigationdrawer:DrawerSettings DrawerWidth="250"
-                                     DrawerHeaderHeight="160">
-            <navigationdrawer:DrawerSettings.DrawerHeaderView>
+<navigationDrawer:SfNavigationDrawer x:Name="navigationDrawer">
+    <navigationDrawer:SfNavigationDrawer.DrawerSettings>
+        <navigationDrawer:DrawerSettings DrawerWidth="250"
+                                 DrawerHeaderHeight="160">
+            <navigationDrawer:DrawerSettings.DrawerHeaderView>
                 <Grid BackgroundColor="#6750A4" RowDefinitions="120,40">
                     <Image Source="user.png"
-                       HeightRequest="110"
-                       Margin="0,10,0,0"
-                       BackgroundColor="#6750A4"
-                       VerticalOptions="Center"
-                       HorizontalOptions="Center"/>
+                   HeightRequest="110"
+                   Margin="0,10,0,0"
+                   BackgroundColor="#6750A4"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"/>
                     <Label Text="James Pollock"
-                       Grid.Row="1"
-                       HorizontalTextAlignment="Center"
-                       HorizontalOptions="Center"
-                       FontSize="20"
-                       TextColor="White"/>
+                   Grid.Row="1"
+                   HorizontalTextAlignment="Center"
+                   HorizontalOptions="Center"
+                   FontSize="20"
+                   TextColor="White"/>
                 </Grid>
-            </navigationdrawer:DrawerSettings.DrawerHeaderView>
-            <navigationdrawer:DrawerSettings.DrawerContentView>
-                <ListView x:Name="listView"
-                      ItemSelected="listView_ItemSelected">
-                    <ListView.ItemTemplate>
+            </navigationDrawer:DrawerSettings.DrawerHeaderView>
+            <navigationDrawer:DrawerSettings.DrawerContentView>
+                <CollectionView x:Name="collectionView" SelectionMode="Single"
+                  SelectionChanged="collectionView_SelectionChanged">
+                    <CollectionView.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Home</x:String>
+                            <x:String>Profile</x:String>
+                            <x:String>Inbox</x:String>
+                            <x:String>Outbox</x:String>
+                            <x:String>Sent</x:String>
+                            <x:String>Draft</x:String>
+                        </x:Array>
+                    </CollectionView.ItemsSource>
+                    <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <ViewCell>
-                                <VerticalStackLayout HeightRequest="40">
-                                    <Label Margin="10,7,0,0"
-                                       Text="{Binding}"
-                                       FontSize="16"
-                                       TextColor="Black"/>
-                                </VerticalStackLayout>
-                            </ViewCell>
+                            <VerticalStackLayout HeightRequest="40">
+                                <Label Margin="10,7,0,0"
+                                   Text="{Binding}"
+                                   FontSize="16"
+                                   TextColor="Black"/>
+                            </VerticalStackLayout>
                         </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-            </navigationdrawer:DrawerSettings.DrawerContentView>
-        </navigationdrawer:DrawerSettings>
-    </navigationdrawer:SfNavigationDrawer.DrawerSettings>
-    <navigationdrawer:SfNavigationDrawer.ContentView>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </navigationDrawer:DrawerSettings.DrawerContentView>
+        </navigationDrawer:DrawerSettings>
+    </navigationDrawer:SfNavigationDrawer.DrawerSettings>
+    <navigationDrawer:SfNavigationDrawer.ContentView>
         <Grid x:Name="mainContentView" 
-      BackgroundColor="White" RowDefinitions="Auto,*">
+  BackgroundColor="White" RowDefinitions="Auto,*">
             <HorizontalStackLayout BackgroundColor="#6750A4" Spacing="10" Padding="5,0,0,0">
                 <ImageButton x:Name="hamburgerButton"
-                         HeightRequest="50"
-                         WidthRequest="50"
-                         HorizontalOptions="Start"
-                         Source="hamburgericon.png"
-                         BackgroundColor="#6750A4"
-                         Clicked="hamburgerButton_Clicked"/>
+                     HeightRequest="50"
+                     WidthRequest="50"
+                     HorizontalOptions="Start"
+                     Source="hamburgericon.png"
+                     BackgroundColor="#6750A4"
+                     Clicked="hamburgerButton_Clicked"/>
                 <Label x:Name="headerLabel" 
-               HeightRequest="50" 
-               HorizontalTextAlignment="Center" 
-               VerticalTextAlignment="Center" 
-               Text="Home" FontSize="16" 
-               TextColor="White" 
-               BackgroundColor="#6750A4"/>
+           HeightRequest="50" 
+           HorizontalTextAlignment="Center" 
+           VerticalTextAlignment="Center" 
+           Text="Home" FontSize="16" 
+           TextColor="White" 
+           BackgroundColor="#6750A4"/>
             </HorizontalStackLayout>
             <Label Grid.Row="1" 
-          x:Name="contentLabel" 
-          VerticalOptions="Center" 
-          HorizontalOptions="Center" 
-          Text="Content View" 
-          FontSize="14" 
-          TextColor="Black"/>
+      x:Name="contentLabel" 
+      VerticalOptions="Center" 
+      HorizontalOptions="Center" 
+      Text="Content View" 
+      FontSize="14" 
+      TextColor="Black"/>
         </Grid>
-    </navigationdrawer:SfNavigationDrawer.ContentView>
-</navigationdrawer:SfNavigationDrawer>
+    </navigationDrawer:SfNavigationDrawer.ContentView>
+</navigationDrawer:SfNavigationDrawer>
 
 {% endhighlight %}
 {% highlight c# %}
 
 namespace NavigationDrawerGettingStarted;
 
-public partial class NavigationDrawerPage : ContentPage
-{
-    SfNavigationDrawer navigationDrawer;
-	public NavigationDrawerPage()
-	{
-		InitializeComponent();
-        Grid headerGrid = new Grid()
+    public partial class MainPage : ContentPage
+    {
+
+        SfNavigationDrawer navigationDrawer;
+        Label headerLabel;
+        Label contentLabel;
+        CollectionView collectionView;
+
+        public MainPage()
         {
-            RowDefinitions =
+            InitializeComponent();
+
+            // Drawer Header View
+            var drawerHeader = new Grid
             {
-                new RowDefinition { Height = 120 },
-                new RowDefinition { Height = 40 },
-            },
-            BackgroundColor = Color.FromArgb("#6750A4"),
-        };
+                BackgroundColor = Color.FromArgb("#6750A4"),
+                RowDefinitions = new RowDefinitionCollection
+                {
+                    new RowDefinition { Height = 120 },
+                    new RowDefinition { Height = 40 }
+                }
+            };
 
-        var image = new Image
-        {
-            Source = "user.png",
-            HeightRequest = 110,
-            Margin = new Thickness(0, 10, 0, 0),
-            BackgroundColor = Color.FromArgb("#6750A4"),
-            HorizontalOptions = LayoutOptions.Center,
-            VerticalOptions = LayoutOptions.Center
-        };
+            drawerHeader.Add(new Image
+            {
+                Source = "user.png",
+                HeightRequest = 110,
+                Margin = new Thickness(0, 10, 0, 0),
+                BackgroundColor = Color.FromArgb("#6750A4"),
+                VerticalOptions = LayoutOptions.Center,
+                HorizontalOptions = LayoutOptions.Center
+            });
 
-        var headerlabel = new Label
-        {
-            Text = "James Pollock",
-            HorizontalTextAlignment = TextAlignment.Center,
-            HorizontalOptions = LayoutOptions.Center,
-            FontSize = 20,
-            TextColor = Colors.White
-        };
-        headerGrid.SetRow(image, 0);
-        headerGrid.SetRow(headerlabel, 1);
-        headerGrid.Children.Add(image);
-        headerGrid.Children.Add(headerlabel);
+            drawerHeader.Add(new Label
+            {
+                Text = "James Pollock",
+                FontSize = 20,
+                TextColor = Colors.White,
+                HorizontalTextAlignment = TextAlignment.Center,
+                HorizontalOptions = LayoutOptions.Center
+            }, 0, 1);
 
-        ListView listView = new ListView();
-        listView.ItemSelected += listView_ItemSelected;
-        List<string> list = new List<string>();
-        list.Add("Home");
-        list.Add("Profile");
-        list.Add("Inbox");
-        list.Add("Out box");
-        list.Add("Sent");
-        list.Add("Draft");
-        listView.ItemsSource = list;
+            // Drawer Content View
+            collectionView = new CollectionView
+            {
+                SelectionMode = SelectionMode.Single,
+                ItemsSource = new string[] { "Home", "Profile", "Inbox", "Outbox", "Sent", "Draft" },
+                ItemTemplate = new DataTemplate(() =>
+                {
 
-        navigationDrawer.DrawerSettings = new DrawerSettings()
-        {
-            DrawerHeaderView = headerGrid,
-            DrawerContentView = listView,
-            DrawerHeaderHeight = 160,
-            DrawerWidth = 250,
-        };
-        this.Content = navigationDrawer;
+                    var label = new Label
+                    {
+                        Margin = new Thickness(10, 7, 0, 0),
+                        FontSize = 16,
+                        TextColor = Colors.Black
+                    };
+                    label.SetBinding(Label.TextProperty, ".");
+
+                    return new VerticalStackLayout
+                    {
+                        HeightRequest = 40,
+                        Children = { label }
+                    };
+
+                })
+            };
+
+            collectionView.SelectionChanged += collectionView_SelectionChanged;
+
+            var drawerSettings = new DrawerSettings
+            {
+                DrawerWidth = 250,
+                DrawerHeaderHeight = 160,
+                DrawerHeaderView = drawerHeader,
+                DrawerContentView = collectionView
+            };
+
+            // Main Content View
+            headerLabel = new Label
+            {
+                Text = "Home",
+                FontSize = 16,
+                TextColor = Colors.White,
+                BackgroundColor = Color.FromArgb("#6750A4"),
+                HeightRequest = 50,
+                HorizontalTextAlignment = TextAlignment.Center,
+                VerticalTextAlignment = TextAlignment.Center
+            };
+
+            contentLabel = new Label
+            {
+                Text = "Content View",
+                FontSize = 14,
+                TextColor = Colors.Black,
+                VerticalOptions = LayoutOptions.Center,
+                HorizontalOptions = LayoutOptions.Center
+            };
+
+            var hamburgerButton = new ImageButton
+            {
+                Source = "hamburgericon.png",
+                HeightRequest = 50,
+                WidthRequest = 50,
+                BackgroundColor = Color.FromArgb("#6750A4"),
+                HorizontalOptions = LayoutOptions.Start
+            };
+            hamburgerButton.Clicked += hamburgerButton_Clicked;
+
+            var topBar = new HorizontalStackLayout
+            {
+                BackgroundColor = Color.FromArgb("#6750A4"),
+                Spacing = 10,
+                Padding = new Thickness(5, 0, 0, 0),
+                Children = { hamburgerButton, headerLabel }
+            };
+
+            var mainContent = new Grid
+            {
+                BackgroundColor = Colors.White,
+                RowDefinitions = new RowDefinitionCollection
+                {
+                    new RowDefinition { Height = GridLength.Auto },
+                    new RowDefinition { Height = GridLength.Star }
+                }
+            };
+            mainContent.Add(topBar);
+            mainContent.Add(contentLabel, 0, 1);
+
+            // Navigation Drawer
+            navigationDrawer = new SfNavigationDrawer
+            {
+                DrawerSettings = drawerSettings,
+                ContentView = mainContent
+            };
+
+            Content = navigationDrawer;
+        }
     }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -644,27 +718,20 @@ public partial class NavigationDrawerPage : ContentPage
 {% tabs %}
 {% highlight c# %}
 
-    private void hamburgerButton_Clicked(object sender, EventArgs e)
-    {
-        navigationDrawer.ToggleDrawer();
-    }
+        private void hamburgerButton_Clicked(object sender, EventArgs e)
+        {
+            navigationDrawer.ToggleDrawer();
+        }
 
-    private void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-    {
-        if (e.SelectedItem.ToString() == "Home")
-            contentLabel.Text = "Home";
-        else if (e.SelectedItem.ToString() == "Profile")
-            contentLabel.Text = "Profile";
-        else if (e.SelectedItem.ToString() == "Inbox")
-            contentLabel.Text = "Inbox";
-        else if (e.SelectedItem.ToString() == "Out box")
-            contentLabel.Text = "Out box";
-        else if (e.SelectedItem.ToString() == "Sent")
-            contentLabel.Text = "Sent";
-        else if (e.SelectedItem.ToString() == "Draft")
-            contentLabel.Text = "The folder is empty";
-        navigationDrawer.ToggleDrawer();
-    }
+        private void collectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (e.CurrentSelection.FirstOrDefault() is string selectedItem)
+            {
+                headerLabel.Text = selectedItem;
+                contentLabel.Text = $"{selectedItem} Content";
+                navigationDrawer.ToggleDrawer();
+            }
+        }
 
 {% endhighlight %}
 {% endtabs %}
