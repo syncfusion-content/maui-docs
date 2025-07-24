@@ -41,30 +41,31 @@ Before proceeding, ensure the following are set up:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 8" %}
+{% highlight C# hl_lines="2 13" %}
+using Microsoft.Extensions.Logging;
+using Syncfusion.Maui.Core.Hosting;
 
-    using Syncfusion.Maui.Core.Hosting;
+namespace RadialMenuGettingStarted
+{
     public static class MauiProgram
     {
-	    public static MauiApp CreateMauiApp()
-	    {
-	        var builder = MauiApp.CreateBuilder();
-		    builder
-			    .ConfigureSyncfusionCore()
-			    .UseMauiApp<App>()
-			    .ConfigureFonts(fonts =>
-			    {
-				    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-				    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-			    });
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-		    return builder.Build();
-	    }
+            return builder.Build();
+        }      
     }
+}   
 
 {% endhighlight %}
-{% endtabs %}
 
 ## Step 4: Add a Radial Menu
 
@@ -76,9 +77,7 @@ Before proceeding, ensure the following are set up:
 <ContentPage
     . . .    
     xmlns:radialMenu="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu">
-    <StackLayout>
         <radialMenu:SfRadialMenu />
-    </StackLayout>
 </ContentPage>
 
 {% endhighlight %}
@@ -92,10 +91,8 @@ namespace RadialMenuGettingStarted
         public MainPage()
         {
             InitializeComponent();           
-            StackLayout stackLayout = new StackLayout();
             SfRadialMenu radialMenu = new SfRadialMenu();
-            stackLayout.Children.Add(radialMenu);
-            this.Content = stackLayout;
+            this.Content = radialMenu;
         }
     }   
 }
@@ -132,30 +129,31 @@ Before proceeding, ensure the following are set up:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 8" %}
+{% highlight C# hl_lines="2 13" %}
+using Microsoft.Extensions.Logging;
+using Syncfusion.Maui.Core.Hosting;
 
-    using Syncfusion.Maui.Core.Hosting;
+namespace RadialMenuGettingStarted
+{
     public static class MauiProgram
     {
-	    public static MauiApp CreateMauiApp()
-	    {
-	        var builder = MauiApp.CreateBuilder();
-		    builder
-			    .ConfigureSyncfusionCore()
-			    .UseMauiApp<App>()
-			    .ConfigureFonts(fonts =>
-			    {
-				    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-				    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-			    });
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-		    return builder.Build();
-	    }
+            return builder.Build();
+        }      
     }
+}   
 
 {% endhighlight %}
-{% endtabs %}
 
 ## Step 4: Add a Radial Menu
 
@@ -167,9 +165,7 @@ Before proceeding, ensure the following are set up:
 <ContentPage
     . . .    
     xmlns:radialMenu="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu">
-    <StackLayout>
         <radialMenu:SfRadialMenu />
-    </StackLayout>
 </ContentPage>
 
 {% endhighlight %}
@@ -183,10 +179,8 @@ namespace RadialMenuGettingStarted
         public MainPage()
         {
             InitializeComponent();           
-            StackLayout stackLayout = new StackLayout();
             SfRadialMenu radialMenu = new SfRadialMenu();
-            stackLayout.Children.Add(radialMenu);
-            this.Content = stackLayout;
+            this.Content = radialMenu;
         }
     }   
 }
@@ -221,30 +215,31 @@ Before proceeding, ensure the following are set up:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 8" %}
+{% highlight C# hl_lines="2 13" %}
+using Microsoft.Extensions.Logging;
+using Syncfusion.Maui.Core.Hosting;
 
-    using Syncfusion.Maui.Core.Hosting;
+namespace RadialMenuGettingStarted
+{
     public static class MauiProgram
     {
-	    public static MauiApp CreateMauiApp()
-	    {
-	        var builder = MauiApp.CreateBuilder();
-		    builder
-			    .ConfigureSyncfusionCore()
-			    .UseMauiApp<App>()
-			    .ConfigureFonts(fonts =>
-			    {
-				    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-				    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-			    });
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
 
-		    return builder.Build();
-	    }
+            return builder.Build();
+        }      
     }
+}   
 
 {% endhighlight %}
-{% endtabs %}
 
 ## Step 4: Add a Radial Menu
 
@@ -256,9 +251,7 @@ Before proceeding, ensure the following are set up:
 <ContentPage
     . . .    
     xmlns:radialMenu="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu">
-    <StackLayout>
         <radialMenu:SfRadialMenu />
-    </StackLayout>
 </ContentPage>
 
 {% endhighlight %}
@@ -272,10 +265,8 @@ namespace RadialMenuGettingStarted
         public MainPage()
         {
             InitializeComponent();           
-            StackLayout stackLayout = new StackLayout();
             SfRadialMenu radialMenu = new SfRadialMenu();
-            stackLayout.Children.Add(radialMenu);
-            this.Content = stackLayout;
+            this.Content = radialMenu;
         }
     }   
 }
@@ -374,5 +365,4 @@ namespace RadialMenuGettingStarted
 
 N> You can find the getting started sample of .NET MAUI Radial Menu from this [link](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-Radial-Menu).
 
-
-
+N> You can refer to our [.NET MAUI Radial Menu](https://www.syncfusion.com/maui-controls/maui-radial-menu) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Effects View example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/RadialMenu) that shows you how to render the Effects View in .NET MAUI.
