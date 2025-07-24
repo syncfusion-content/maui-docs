@@ -88,6 +88,12 @@ public partial class App : Application
 {% endhighlight %}
 {% endtabs %}
 
+N> When localizing multiple Syncfusion controls in a MAUI application, you should store all localization keys (name-value pairs) for the controls in a single resource (.resx) file. Then, set the `ResourceManager` using the unified resource file as shown below:
+N>
+N>```csharp
+N> LocalizationResourceAccessor.ResourceManager = new ResourceManager("Localization.Resources.SyncfusionControls", Application.Current.GetType().Assembly);
+N> ```
+
 ## Default names and values
 
 The following table contains the default name and value details used in the SfPdfViewer in the `en-US` 
