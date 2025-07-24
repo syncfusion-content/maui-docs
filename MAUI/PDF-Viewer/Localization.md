@@ -91,6 +91,9 @@ public partial class App : Application
 N> When localizing multiple Syncfusion MAUI controls in a .NET MAUI application, it's important to understand that these controls support only a single `ResourceManager` instance for localization. If you assign different `ResourceManager` instances for separate resource (.resx) files, the last assigned ResourceManager will override the others. This can result in incomplete or incorrect localization across your controls. To ensure consistent and accurate localization, consolidate all localization keys (name-value pairs) into a single resource (.resx) file and assign the `ResourceManager` using that unified resource file, as shown below:
 N>
 N>```csharp
+N> using Syncfusion.Maui.Core.Localization;
+N>
+N> // Assign the ResourceManager using the unified .resx file 
 N> LocalizationResourceAccessor.ResourceManager = new ResourceManager("Localization.Resources.SyncfusionControls", Application.Current.GetType().Assembly);
 N> ```
 
