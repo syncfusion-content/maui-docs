@@ -88,6 +88,16 @@ public partial class App : Application
 {% endhighlight %}
 {% endtabs %}
 
+N> When localizing multiple Syncfusion MAUI controls in a .NET MAUI application, it's important to understand that these controls support only a single [ResourceManager](https://learn.microsoft.com/en-us/dotnet/api/system.resources.resourcemanager?view=net-9.0) instance for localization. If you assign different [ResourceManager](https://learn.microsoft.com/en-us/dotnet/api/system.resources.resourcemanager?view=net-9.0) instances for separate resource (.resx) files, the last assigned ResourceManager will override the others. This can result in incomplete or incorrect localization across your controls. To ensure consistent and accurate localization, consolidate all localization keys (name-value pairs) into a single resource (.resx) file and assign the [ResourceManager](https://learn.microsoft.com/en-us/dotnet/api/system.resources.resourcemanager?view=net-9.0) using that unified resource file, as shown below:
+N>
+N>```csharp
+N> using Syncfusion.Maui.Core.Localization;
+N>
+N> // Assign the ResourceManager using the unified .resx file 
+N> LocalizationResourceAccessor.ResourceManager = new ResourceManager("Localization.Resources.SyncfusionControls", Application.Current.GetType().Assembly);
+N> // Replace the above string with your resource file's actual namespace and name.
+N> ```
+
 ## Default names and values
 
 The following table contains the default name and value details used in the SfPdfViewer in the `en-US` 
