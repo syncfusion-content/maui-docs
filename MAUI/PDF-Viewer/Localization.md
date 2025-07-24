@@ -95,6 +95,7 @@ N> using Syncfusion.Maui.Core.Localization;
 N>
 N> // Assign the ResourceManager using the unified .resx file 
 N> LocalizationResourceAccessor.ResourceManager = new ResourceManager("Localization.Resources.SyncfusionControls", Application.Current.GetType().Assembly);
+N> // Replace the above string with your resource file's actual namespace and name.
 N> ```
 
 ## Default names and values
