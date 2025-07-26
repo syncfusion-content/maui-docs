@@ -57,6 +57,7 @@ The [DocumentLoadFailed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Pdf
 * When any password-protected document is loaded with an invalid or empty password.
 * When any non-PDF document is loaded.
 * When a PDF containing an XFA form is loaded.
+* When exceptions occur during PDF loading due to limitations in the platform-specific native PDF renderers.
 
 The [DocumentLoadFailedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.DocumentLoadFailedEventArgs.html) will return the error [Message](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.DocumentLoadFailedEventArgs.html#Syncfusion_Maui_PdfViewer_DocumentLoadFailedEventArgs_Message) and [Exception](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.DocumentLoadFailedEventArgs.html#Syncfusion_Maui_PdfViewer_DocumentLoadFailedEventArgs_Exception) details for the failure. The following code example explains the same.
 
