@@ -824,7 +824,7 @@ N> By default, the binding context for each tree view item will be the data mode
 The following code example demonstrates how to customize your content view using the `ItemTemplate` and `ExpanderTemplate` property in both XAML and C#.
 
 {% tabs %}
-{% highlight xaml hl_lines="13 35" %}
+{% highlight xaml hl_lines="14 36" %}
 <ContentPage  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
@@ -871,7 +871,7 @@ The following code example demonstrates how to customize your content view using
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# hl_lines="14 28" %}
+{% highlight c# hl_lines="16 30" %}
 using Syncfusion.Maui.TreeView;
 
 namespace GettingStarted
