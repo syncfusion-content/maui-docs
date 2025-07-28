@@ -232,6 +232,18 @@ To make migration from [Xamarin SfPdfViewer](https://www.syncfusion.com/xamarin-
   <td>{{'[ShowToolbars](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ShowToolbars)'| markdownify}}</td> 
   <td>Backing store for the ShowToolbars property.</td>
 </tr>
+<tr>
+  <td>{{'[AnnotationMode.HandwrittenSignature](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.AnnotationMode.html#Syncfusion_SfPdfViewer_XForms_AnnotationMode_HandwrittenSignature)'| markdownify}}</td> 
+  <td>{{'[AnnotationMode.Signature](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_Signature)'| markdownify}}</td> 
+  <td>This will display the signature dialog, allowing the user to create a signature. The created signature can then be added at the tapped location in the PDF Viewer.</td>
+</tr>
+<tr>
+  <td>{{'[AnnotationSettings.HandwrittenSignature](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.AnnotationSettings.html#Syncfusion_SfPdfViewer_XForms_AnnotationSettings_HandwrittenSignature)'| markdownify}}</td> 
+  <td>API Unavailable</td> 
+  <td>There is currently no API available in .NET MAUI PDF Viewer for configuring common settings specific to handwritten signatures. However, you can add a handwritten signature by programmatically creating an ink annotation and setting its [IsSignature](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.InkAnnotation.html#Syncfusion_Maui_PdfViewer_InkAnnotation_IsSignature) property to true.
+
+For detailed instructions on how to add a signature programmatically, please refer to the user guide: [Add a handwritten signature](https://help.syncfusion.com/maui/pdf-viewer/signature#add-a-handwritten-signature).</td>
+</tr>
 </table>
 
 ## Events
@@ -351,14 +363,12 @@ private void PdfViewer_PropertyChanged(object? sender, PropertyChangedEventArgs 
 </tr>
 <tr>
 <td>
-<div>{{'[ExportAsImageAsync](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_ExportAsImageAsync_System_Int32_System_Int32_System_Single_System_Threading_CancellationToken_)'| markdownify }}</div>
-
+{{'[DocumentSaveInitiated](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_DocumentSaveInitiated)'| markdownify }}
 </td>
 <td>API Unavailable</td>
-<td>In .NET MAUI PDF Viewer,  there is no support for exporting PDF as images. However, you can use the Syncfusion PDF to Image Converter library to convert PDF documents into images. 
-For detailed implementation guidance, please refer to the following API documentation:
-{{'[PdfToImageConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfToImageConverter.PdfToImageConverter.html)'| markdownify }}
+<td> In Xamarin, clicking the Save button in the built-in toolbar raises the DocumentSaveInitiated event. However, in .NET MAUI, a Save button is not provided in the built-in toolbar, so the DocumentSaveInitiated event is not available. To save documents from the PDF viewer in .NET MAUI, you can use the [SaveDocument](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_SaveDocument_System_IO_Stream_) method. The PdfViewer control exposes this method as an API, which can be easily integrated into your application. For more details on using the SaveDocument method, refer to the relevant UG Documentation [Save a Document](https://help.syncfusion.com/maui/pdf-viewer/save-a-document).
 
+In .NET MAUI's PdfViewer, if you need to add a Save button to the built-in toolbar, you can do so by customizing the toolbar items. Refer to the [Customize toolbar items user guide](https://help.syncfusion.com/maui/pdf-viewer/toolbar#customize-toolbar-items) for instructions on adding a custom Save button.
 </td>
 </tr>
 </table>
@@ -463,6 +473,18 @@ For detailed implementation guidance, please refer to the following API document
 <td>{{'[SaveDocument(bool flattenForm)](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_SaveDocument_System_Boolean_)'| markdownify }}</td>
 <td>{{'[FormField.FlattenOnSave](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.FormField.html#Syncfusion_Maui_PdfViewer_FormField_FlattenOnSave)'| markdownify }}</td>
 <td>Specifies whether the form fields should be flattened or not on saving.</td>
+</tr>
+<tr>
+<td>
+<div>{{'[ExportAsImageAsync](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_ExportAsImageAsync_System_Int32_System_Int32_System_Single_System_Threading_CancellationToken_)'| markdownify }}</div>
+
+</td>
+<td>API Unavailable</td>
+<td>In .NET MAUI PDF Viewer,  there is no support for exporting PDF as images. However, you can use the Syncfusion PDF to Image Converter library to convert PDF documents into images. 
+For detailed implementation guidance, please refer to the following API documentation:
+{{'[PdfToImageConverter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfToImageConverter.PdfToImageConverter.html)'| markdownify }}
+
+</td>
 </tr>
 </table>
 
