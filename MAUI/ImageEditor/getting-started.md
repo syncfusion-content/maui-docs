@@ -360,6 +360,15 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+N> To load an URI image on iOS platform, you need to set the [App Transport Security (ATS)](https://developer.apple.com/documentation/bundleresources/information-property-list/nsapptransportsecurity) configuration in the info.plist file.
+{% highlight xaml %}
+<key>NSAppTransportSecurity</key>
+<dict>
+	<key>NSAllowsArbitraryLoads</key>
+	<true/>
+</dict>
+{% endhighlight %}
+
 ### Load an image from Resource folder
 
 To load an image from a resource file.
