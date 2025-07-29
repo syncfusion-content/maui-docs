@@ -125,7 +125,7 @@ The signature modal view appears when a signature needs to be created. The [SfPd
 **Desktop:**
 ![Signature pad modal view  desktop](Images/Annotations/signature-pad-modal-view-desktop.png)
 
-The `Sfpdfviewer.SignatureModalViewAppearing` event is triggered whenever the modal view opens. 
+The `SfPdfViewer.SignatureModalViewAppearing` event is triggered whenever the modal view opens. 
 
 {% tabs %}
 {% highlight c# %}
@@ -140,7 +140,7 @@ private void PdfViewer_SignatureModalViewAppearing(object? Sender, FormFieldModa
 {% endhighlight %}
 {% endtabs %}
 
-The `Sfpdfviewer.SignatureModalViewDisappearing` event is triggered when the modal view is closing.
+The `SfPdfViewer.SignatureModalViewDisappearing` event is triggered when the modal view is closing.
 
 {% tabs %}
 {% highlight c# %}
@@ -155,9 +155,9 @@ Private void PdfViewer_SignatureModalViewDisappearing(object? Sender, EventArgs 
 {% endhighlight %} 
 {% endtabs %}
 
-### Supressing the signature modal view and implement your own UI
+### Suppressing the signature modal view and implement your own UI
 
-The [Sfpdfviewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to supress the signature modal view and use your own UI in its place. This can be achieved by setting the `FormFieldModalViewAppearingEventArgs.Cancel` property to `true` in the `SignatureModalViewAppearing` event handler. 
+The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to suppress the signature modal view and use your own UI in its place. This can be achieved by setting the `FormFieldModalViewAppearingEventArgs.Cancel` property to `true` in the `SignatureModalViewAppearing` event handler. 
 
 The below code snippet illustrates supressing the signature modal view and using a UI implemented in the app in its place. In this illustration, it is assumed that the signature is produced in the form of an image stream when the user completes drawing the signature in the custom dialog. When the PDF viewer is tapped, the created signature is added as a stamp annotation.  
 
