@@ -117,7 +117,7 @@ N> To add a text signature, you can use an image containing the signature text .
 
 ## Signature modal view
 
-The signature modal view appears when a signature needs to be created. The [Sfpdfviewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) notifies when the modal view is appearing and disappearing through events. The events help you in hiding and showing elements that are part of the app UI that are not necessary as long as the modal view is visible.
+The signature modal view appears when a signature needs to be created. The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) notifies when the modal view is appearing and disappearing through events. The events help you in hiding and showing elements that are part of the app UI that are not necessary as long as the modal view is visible.
 
 **Mobile:**
 ![Signature pad modal view mobile](Images/Annotations/signature-pad-modal-view-mobile.png)
@@ -125,7 +125,7 @@ The signature modal view appears when a signature needs to be created. The [Sfpd
 **Desktop:**
 ![Signature pad modal view  desktop](Images/Annotations/signature-pad-modal-view-desktop.png)
 
-The `Sfpdfviewer.SignatureModalViewAppearing` event is triggered whenever the modal view opens. 
+The `SfPdfViewer.SignatureModalViewAppearing` event is triggered whenever the modal view opens. 
 
 {% tabs %}
 {% highlight c# %}
@@ -140,7 +140,7 @@ private void PdfViewer_SignatureModalViewAppearing(object? Sender, FormFieldModa
 {% endhighlight %}
 {% endtabs %}
 
-The `Sfpdfviewer.SignatureModalViewDisappearing` event is triggered when the modal view is closing.
+The `SfPdfViewer.SignatureModalViewDisappearing` event is triggered when the modal view is closing.
 
 {% tabs %}
 {% highlight c# %}
@@ -155,11 +155,11 @@ Private void PdfViewer_SignatureModalViewDisappearing(object? Sender, EventArgs 
 {% endhighlight %} 
 {% endtabs %}
 
-### Supressing the signature modal view and implement your own UI
+### Suppressing the signature modal view and implement your own UI
 
-The [Sfpdfviewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to supress the signature modal view and use your own UI in its place. This can be achieved by setting the `FormFieldModalViewAppearingEventArgs.Cancel` property to `true` in the `SignatureModalViewAppearing` event handler. 
+The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to suppress the signature modal view and use your own UI in its place. This can be achieved by setting the `FormFieldModalViewAppearingEventArgs.Cancel` property to `true` in the `SignatureModalViewAppearing` event handler. 
 
-The below code snippet illustrates supressing the signature modal view and using a UI implemented in the app in its place. In this illustration, it is assumed that the signature is produced in the form of an image stream when the user completes drawing the signature in the custom dialog. When the PDF viewer is tapped, the created signature is added as a stamp annotation.  
+The below code snippet illustrates suppressing the signature modal view and using a UI implemented in the app in its place. In this illustration, it is assumed that the signature is produced in the form of an image stream when the user completes drawing the signature in the custom dialog. When the PDF viewer is tapped, the created signature is added as a stamp annotation.  
 
 {% tabs %}
 {% highlight c# %}
@@ -192,3 +192,30 @@ private void PdfViewer_Tapped(object sender, GestureEventArgs e)
 {% endhighlight %} 
 {% endtabs %}
 
+## Signature Created Event
+
+The [SignatureCreated](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_SignatureCreated) event in the .NET MAUI PDF Viewer provides a way to access and customize the properties of a handwritten signature immediately after it is created using built-in signature dialog. This is especially helpful when you want to apply consistent styling such as stroke color, border width, or opacity to all handwritten signatures.
+
+To customize the signature, check whether the [e.Signature](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SignatureCreatedEventArgs.html#Syncfusion_Maui_PdfViewer_SignatureCreatedEventArgs_Signature) object is of type [InkAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.InkAnnotation.html), which represents a handwritten ink-based signature. If it is, you can modify its properties as needed.
+
+The following example demonstrates how to handle the SignatureCreated event and apply custom styling to a handwritten signature:
+
+{% tabs %}
+{% highlight c# %}
+// Subscribe to the SignatureCreated event to customize the appearance of handwritten signatures.
+pdfViewer.SignatureCreated += PdfViewer_SignatureCreated;
+
+// Event handler triggered when a signature is created in the PDF Viewer.
+private void PdfViewer_SignatureCreated(object? sender, SignatureCreatedEventArgs e)
+{
+    // Ensure the signature is valid and is of type InkAnnotation (used for handwritten signatures).
+    if (e.Signature is InkAnnotation handWrittenSignature)
+    {
+        // Customize the appearance of the handwritten signature.
+        handWrittenSignature.BorderWidth = 6;         // Set the thickness of the signature stroke.
+        handWrittenSignature.Color = Colors.Yellow;   // Set the stroke color to yellow.
+        handWrittenSignature.Opacity = 0.75f;         // Set the transparency level of the signature.
+    }
+}
+{% endhighlight %}
+{% endtabs %}
