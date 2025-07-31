@@ -48,15 +48,16 @@ private void PdfViewer_DocumentLoaded(object sender, EventArgs e)
 
 ## Document load failures
 
-When a document fails to load in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html), the users will be notified with a default message prompt by the [DocumentLoadFailed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoadFailed) event.
+When a document fails to load in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html), users are notified with a context-specific error message via the [DocumentLoadFailed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoadFailed) event. This event helps developers identify the cause of the failure and implement custom error handling for a smoother user experience.
 
 ### Document load failed event
 
-The [DocumentLoadFailed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoadFailed) event triggers when the document loading fails in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). That is,
-* When any corrupted document is loaded.
-* When any password-protected document is loaded with an invalid or empty password.
-* When any non-PDF document is loaded.
-* When a PDF containing an XFA form is loaded.
+The [DocumentLoadFailed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoadFailed) event alerts users when a document fails to load in the [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) due to one of the following conditions:
+* A corrupted document is loaded.
+* A password-protected document is provided with an invalid or empty password.
+* A non-PDF file is attempted to be loaded.
+* The document contains an XFA form, which is currently unsupported.
+* Exceptions occur during PDF loading or page rendering due to limitations or issues in platform-specific native PDF renderers.
 
 The [DocumentLoadFailedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.DocumentLoadFailedEventArgs.html) will return the error [Message](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.DocumentLoadFailedEventArgs.html#Syncfusion_Maui_PdfViewer_DocumentLoadFailedEventArgs_Message) and [Exception](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.DocumentLoadFailedEventArgs.html#Syncfusion_Maui_PdfViewer_DocumentLoadFailedEventArgs_Exception) details for the failure. The following code example explains the same.
 

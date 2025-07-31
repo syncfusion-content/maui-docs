@@ -607,4 +607,12 @@ The following table contains the default name and value details used in the SfPd
 <td>CreateSignature</td>
 <td>Create Signature</td>
 </tr>
+<tr>
+<td>XFAFormNotSupportedMessage</td>
+<td>This PDF cannot be loaded because it contains an XFA form.</td>
+</tr>
+<tr>
+<td>InvalidPasswordError</td>
+<td>Can't open an encrypted document. The password is invalid.</td>
+</tr>
 </table>
