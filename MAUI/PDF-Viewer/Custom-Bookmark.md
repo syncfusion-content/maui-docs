@@ -94,7 +94,7 @@ private void Bookmarks_CollectionChanged(object? sender, NotifyCollectionChanged
     {
         foreach (Bookmark bookmark in e.NewItems)
         {
-            Debug.WriteLine($"Added bookmark: {newBookmark.Name} at page {newBookmark.PageNumber}");
+            Debug.WriteLine($"Added bookmark: {bookmark.Name} at page {bookmark.PageNumber}");
         }
     }
 }
@@ -220,12 +220,12 @@ In the [CollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.c
 // Event handler for changes in the bookmarks collection
 private void Bookmarks_CollectionChanged(object? sender, NotifyCollectionChangedEventArgs e)
 {
-    // Handle Removal of new bookmarks
+    // Handle removal of new bookmarks
     else if (e.Action == NotifyCollectionChangedAction.Remove && e.OldItems != null)
     {
         foreach (Bookmark bookmark in e.OldItems)
         {
-            Debug.WriteLine($"Removed bookmark: {oldBookmark.Name} at page {oldBookmark.PageNumber}");
+            Debug.WriteLine($"Removed bookmark: {bookmark.Name} at page {bookmark.PageNumber}");
         }
     }
 }
