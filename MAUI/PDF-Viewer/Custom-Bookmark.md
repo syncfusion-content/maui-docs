@@ -125,7 +125,7 @@ if (bookmarkToEdit != null)
 {% endhighlight %}
 {% endtabs %}
 
-### Tracking Custom Bookmarks rename changes
+### Tracking Custom Bookmarks Rename Changes
 
 For the newly added custom bookmarks, you need to wire the `PropertyChanged` event in the [CollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1.collectionchanged?view=net-9.0) event handler after checking whether the action is `Add` using the [NotifyCollectionChangedAction](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.notifycollectionchangedaction?view=net-9.0) enum.
 
