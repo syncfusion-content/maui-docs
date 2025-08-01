@@ -372,6 +372,24 @@ private void PdfViewer_PropertyChanged(object? sender, PropertyChangedEventArgs 
 In .NET MAUI PDF Viewer, you can implement custom save logic at the application level. If you would like to include a Save button in the built-in toolbar, this can be achieved by customizing the toolbar items. Refer to the {{'[Customize toolbar items user guide](https://help.syncfusion.com/maui/pdf-viewer/toolbar#customize-toolbar-items)'| markdownify }} for instructions on adding a custom Save button.
 </td>
 </tr>
+<tr>
+<td>
+<div>{{'[CanUndoModified](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_CanUndoModified)'| markdownify }},</div>
+<div>{{'[CanRedoModified](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_CanRedoModified)'| markdownify }},</div>
+<div>{{'[CanRedoInkModified](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_CanRedoInkModified)'| markdownify }},</div>
+<div>{{'[CanUndoInkModified](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfPdfViewer.XForms.SfPdfViewer.html#Syncfusion_SfPdfViewer_XForms_SfPdfViewer_CanUndoInkModified)'| markdownify }},</div>
+</td>
+<td>API Unavailable</td>
+<td>In the .NET MAUI PDF Viewer, there is no public APIs to detect the enabled or disabled state of the Undo and Redo buttons, unlike in Xamarin.
+However, you can reliably detect changes made to the PDF document by using the annotation-related events provided. These events include:
+<br><br>
+{{'[AnnotationAdded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationAdded)'| markdownify }}- Occurs when an annotation is added to a page.
+{{'[AnnotationEdited](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationEdited)'| markdownify }} - Occurs when annotation is modified.
+{{'[AnnotationRemoved](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationRemoved)'| markdownify }} - Occurs when an annotation is removed from the page.
+<br><br>
+By handling these events, you can determine whether any changes have been made to the PDF document.
+</td>
+</tr>
 </table>
 
 ## Methods
