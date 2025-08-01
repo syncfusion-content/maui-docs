@@ -44,7 +44,7 @@ var customBookmarks = pdfViewer.CustomBookmarks;
 
 To add, edit, or remove custom bookmarks in a PDF viewer, you can use the [CustomBookmarks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_CustomBookmarks) collection. This property provides access to the collection of custom bookmarks that can be manipulated to modify the bookmarks displayed in the viewer's bookmark view.
 
-### Add Custom Bookmarks from UI
+### Add Custom Bookmarks From UI
 
 Custom bookmarks can be added using the floating button in the bookmark pane.
 
@@ -102,7 +102,7 @@ private void Bookmarks_CollectionChanged(object? sender, NotifyCollectionChanged
 {% endhighlight %}
 {% endtabs %}
 
-### Rename Custom Bookmarks using Context Menu
+### Rename Custom Bookmarks Using Context Menu
 
 Tap the context menu button on the custom bookmark to be edited and choose Rename and enter the desired name.
 ![Custom bookmark context menu](Images\custom-bookmark-contextmenu.png)
@@ -189,7 +189,7 @@ private void Bookmark_PropertyChanged(object? sender, PropertyChangedEventArgs e
 {% endhighlight %}
 {% endtabs %}
 
-### Remove Custom Bookmarks using Context Menu
+### Remove Custom Bookmarks Using Context Menu
 
 Tap the context menu button on the custom bookmark to be removed and tap `Delete`.
 
