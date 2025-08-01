@@ -126,7 +126,7 @@ if (bookmarkToEdit != null)
 
 ### Tracking Custom Bookmarks Rename Changes
 
-For the newly added custom bookmarks, you need to wire the `PropertyChanged` event in the [CollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1.collectionchanged?view=net-9.0) event handler after checking whether the action is `Add` using the [NotifyCollectionChangedAction](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.notifycollectionchangedaction?view=net-9.0) enum.
+For the newly added custom bookmarks, you need to wire the [PropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged.propertychanged?view=net-9.0#system-componentmodel-inotifypropertychanged-propertychanged) event in the [CollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1.collectionchanged?view=net-9.0) event handler after checking whether the action is `Add` using the [NotifyCollectionChangedAction](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.notifycollectionchangedaction?view=net-9.0) enum.
 
 {% tabs %}
 {% highlight c# %}
@@ -158,7 +158,7 @@ private void Bookmark_PropertyChanged(object? sender, PropertyChangedEventArgs e
 {% endhighlight %}
 {% endtabs %}
 
-For the existing custom bookmark, you can track the bookmark rename changes by wiring the `PropertyChanged` event using the event handler in the [DocumentLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoaded) event handler for all existing custom bookmarks in the [CustomBookmarks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_CustomBookmarks)  collection, where you can track each custom bookmark rename changes. 
+For the existing custom bookmark, you can track the bookmark rename changes by wiring the [PropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged.propertychanged?view=net-9.0#system-componentmodel-inotifypropertychanged-propertychanged) event using the event handler in the [DocumentLoaded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_DocumentLoaded) event handler for all existing custom bookmarks in the [CustomBookmarks](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_CustomBookmarks)  collection, where you can track each custom bookmark rename changes. 
 
 {% tabs %}
 {% highlight c# %}
