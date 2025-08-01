@@ -93,7 +93,7 @@ private void PdfViewer_DocumentLoaded(object? sender, EventArgs? e)
 // Event handler for changes in the bookmarks collection
 private void Bookmarks_CollectionChanged(object? sender, NotifyCollectionChangedEventArgs e)
 {
-    Check if the change action is 'Add'
+    // Check if the change action is 'Add'
     if (e.Action == NotifyCollectionChangedAction.Add && e.NewItems != null)
     {
         // Iterate through newly added bookmarks
@@ -243,9 +243,10 @@ To track when a custom bookmark is removed, handle the [CollectionChanged](https
 // Event handler for changes in the bookmarks collection
 private void Bookmarks_CollectionChanged(object? sender, NotifyCollectionChangedEventArgs e)
 {
-    // Handle removal of new bookmarks
+    // Check if the change action is 'Remove'
     else if (e.Action == NotifyCollectionChangedAction.Remove && e.OldItems != null)
     {
+        // Iterate through reomoved bookmarks
         foreach (Bookmark bookmark in e.OldItems)
         {
             Debug.WriteLine($"Removed bookmark: {bookmark.Name} at page {bookmark.PageNumber}");
