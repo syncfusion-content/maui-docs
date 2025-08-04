@@ -176,6 +176,8 @@ void EditSelectedStampAnnotation(Annotation selectedAnnotation)
 {% endhighlight %}
 {% endtabs %}
 
+N> Changing the color of a stamp annotation after it has been added to a PDF is not supported, due to the predefined nature of standard stamps. These stamps use fixed colors to maintain consistency and convey distinct meanings. To work around this limitation, you can use the stamp with specific color, by creating [Custom stamp](Stamp Annotations in .NET MAUI PDF Viewer control | Syncfusion). Custom stamps allow users to design and apply stamps with user-defined colors and texts.
+
 ## Custom stamp modal view
 
 The custom stamp modal view appears when the user wants to create a custom stamp from a typed text. The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) notifies when the modal view is appearing and disappearing through events. The events help you in hiding and showing elements that are part of the app UI that are not necessary as long as the modal view is visible.
