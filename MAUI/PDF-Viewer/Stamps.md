@@ -205,7 +205,7 @@ private void PdfViewer_CustomStampModalViewAppearing(object? sender, AnnotationM
 {% endhighlight %} 
 {% endtabs %}
 
-The `Sfpdfviewer.CustomStampModalViewDisappearing` event is triggered whenever the modal view for stamp annotation is closing.
+The `SfPdfViewer.CustomStampModalViewDisappearing` event is triggered whenever the modal view for stamp annotation is closing.
 
 {% tabs %}
 {% highlight c# %}
@@ -224,7 +224,7 @@ private void PdfViewer_CustomStampModalViewDisappearing(object? sender, EventArg
 
 The [SfPdfViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to suppress the custom stamp modal view and use your own UI in its place. This can be achieved by setting the `AnnotationModalViewAppearingEventArgs.Cancel` property to `true` in the `CustomStampModalViewAppearing` event handler. 
 
-The below code snippet illustrates supressing the custom stamp modal view and using a UI implemented in the app in its place. In this illustration, when the user types a text in your own dialog and clicks the ok button, the text is converted into an image stream and a StampAnnotation instance is created. When the PDF viewer is tapped, the stamp annotation is added in the tapped position. 
+The below code snippet illustrates suppressing the custom stamp modal view and using a UI implemented in the app in its place. In this illustration, when the user types a text in your own dialog and clicks the ok button, the text is converted into an image stream and a StampAnnotation instance is created. When the PDF viewer is tapped, the stamp annotation is added in the tapped position. 
 
 {% tabs %}
 {% highlight c# %}
