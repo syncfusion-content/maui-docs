@@ -1,6 +1,6 @@
 ---
 layout: post
-title: What's New in Essential Studio<sup>&reg;</sup> for .NET MAUI | Syncfusion<sup>&reg;</sup>
+title: What's New in Essential Studio® for .NET MAUI | Syncfusion®
 description: A .NET MAUI backdrop appears behind all the surfaces in an app, displaying contextual and actionable content.
 platform: MAUI
 control: SfBackdropPage

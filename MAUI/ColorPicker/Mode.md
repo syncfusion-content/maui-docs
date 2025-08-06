@@ -12,7 +12,7 @@ keywords : .net maui color picker, maui color picker, .net maui color picker con
 
 ## Rendering palette at initial load
 
-To display the Color Picker in palette mode, I set its `ColorMode` property to `Palette`. By default, it is configured as `Spectrum`.
+To display the Color Picker in palette mode, I set its [ColorMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ColorMode) property to [Palette](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorPickerMode.html#Syncfusion_Maui_Inputs_ColorPickerMode_Palette). By default, it is configured as [Spectrum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.ColorPickerMode.html#Syncfusion_Maui_Inputs_ColorPickerMode_Spectrum).
 
 {% tabs %}
 
@@ -37,7 +37,7 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 ## Switch color mode visibility
 
-Disable the mode switcher UI by setting the `IsColorModeSwitcherVisible` property to `False`. By default, it is set to `True`, which allows users to switch between different color modes.
+Disable the mode switcher UI by setting the [IsColorModeSwitcherVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_IsColorModeSwitcherVisible) property to `False`. By default, it is set to `True`, which allows users to switch between different color modes.
 
 {% tabs %}
 

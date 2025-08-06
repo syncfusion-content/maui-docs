@@ -118,7 +118,7 @@ private void ListView_ScrollStateChanged(object sender, ScrollStateChangedEventA
 
 The `SfListView` provides the ability to display a fade effect at the top and bottom edges while scrolling. This fade gradient helps indicate that more items are available beyond the visible area, enhancing the scrolling experience.
 
-You can enable this behavior using the `EnableFadeOnScroll` property.
+You can enable this behavior using the [EnableFadeOnScroll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_EnableFadeOnScrollProperty) property.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}

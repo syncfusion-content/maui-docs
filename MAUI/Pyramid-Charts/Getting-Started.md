@@ -7,7 +7,7 @@ control: SfPyramidChart
 documentation: ug
 ---
 
-> **Notice**: After **Volume 1 2025 (Mid of March 2025)**, updates, bug fixes, and feature enhancements for this control will no longer be available in the Syncfusion® package. Please switch to the **Syncfusion® Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
+> **Notice**: After **Volume 1 2025 (Mid of March 2025)**, feature enhancements for this control will no longer be available in the Syncfusion® package. Please switch to the **Syncfusion® Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
 
 # Getting Started with .NET MAUI Chart(SfPyramidChart)
 
@@ -385,7 +385,7 @@ The legend provides information about the data point displayed in the pyramid ch
 <chart:SfPyramidChart>
     . . .
     <chart:SfPyramidChart.Legend>
-    <chart:ChartLegend/>
+        <chart:ChartLegend/>
     </chart:SfPyramidChart.Legend>
 </chart:SfPyramidChart>
 
@@ -457,10 +457,12 @@ The following code example gives you the complete code of above configurations.
         <chart:SfPyramidChart.Legend>
             <chart:ChartLegend/>
         </chart:SfPyramidChart.Legend>
-        
+
+    </chart:SfPyramidChart>
+
 </ContentPage>
 
-</chart:SfPyramidChart>
+
  
 {% endhighlight %}
 

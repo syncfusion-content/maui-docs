@@ -296,7 +296,6 @@ The following gif image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox selection changing event notification.](Images/Selection/net-maui-combobox-selection-changing-notification.gif)
 
-
 ## Selection changed notification
 
 When an item is selected from the .NET MAUI drop-down list, the [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_SelectionChanged) event is triggered. The SelectionChanged event contains the newly selected and previously selected items in the `AddedItems` and `RemovedItems` properties. The SelectionChanged contains the following properties:

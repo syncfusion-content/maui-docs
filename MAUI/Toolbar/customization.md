@@ -213,7 +213,7 @@ The following code sample demonstrates how to create a toolbar control with tool
 
 ## Set Highlight Color for Selected Toolbar Item
 
-The `SelectionHighlightColor` property of the [SfToolbarItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html) is used to define the color that highlights a toolbar item when it is tapped. This makes the selected item visually distinct from the others in the toolbar.
+The [`SelectionHighlightColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_SelectionHighlightColor) property of the [SfToolbarItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html) is used to define the color that highlights a toolbar item when it is tapped. This makes the selected item visually distinct from the others in the toolbar.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}

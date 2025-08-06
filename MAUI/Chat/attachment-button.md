@@ -7,7 +7,7 @@ control: SfChat
 documentation: ug
 ---
 
-# Attachment button in .NET MAUI Chat (SfChat)
+# Attachment Button in .NET MAUI Chat (SfChat)
 
 In `SfChat`, you can show the attachment button by setting the [ShowAttachmentButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowAttachmentButton) to `true`.
 
@@ -239,4 +239,10 @@ public partial class MainPage : ContentPage
 
 ![Custom attachment button in .NET MAUI Chat](images/attachment-button/maui-chat-custom-attachment-button.png)
 
+## Attach image from gallery in .NET MAUI Chat
 
+You can add the desired image in to the chat by opening the device’s gallery when attachment button is tapped.
+
+![Attach image from gallery in .NET MAUI Chat](images/attachment-button/maui-chat-attach-image-from-gallery.png)
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/how-to-attach-image-from-gallery-in-.net-maui-chat)

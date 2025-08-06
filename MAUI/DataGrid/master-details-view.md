@@ -377,6 +377,34 @@ Here, `Master-Details View` relation is auto generated based on the `Orders` rel
 
 <img alt="auto-relation-DataTable" src="Images\master-details-view\Master-Details-View-DataTable.png" width="604" /> 
 
+#### Manually Defining Relations
+
+We can manually define the `Master-Details View` relation in `SfDataGrid` using `DetailsViewDefinition` when `AutoGenerateRelations` is set to false.
+
+### XAML Configuration
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       AutoGenerateRelations="False"   
+                       ItemsSource="{Binding Orders}">
+    <syncfusion:SfDataGrid.DetailsViewDefinition>
+        <syncfusion:DataGridViewDefinition RelationalColumn="Parent_Child">
+            <syncfusion:DataGridViewDefinition.DataGrid>
+                <syncfusion:SfDataGrid x:Name="firstInnerGrid"/>
+            </syncfusion:DataGridViewDefinition.DataGrid>
+        </syncfusion:DataGridViewDefinition>
+    </syncfusion:SfDataGrid.DetailsViewDefinition>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% endtabs %}
+
+N>
+ The relation name **must be unique** and **must not** match any column name or collection name in the `DataTable`.  
+ When defining a `RelationalColumn` in XAML, use the **exact case-sensitive keyword**. For example:  
+ `<syncfusion:DataGridViewDefinition RelationalColumn="Parent_Child" />`
+
+
 ## Defining columns for DetailsViewDataGrid
 The [ViewDefinition.DataGrid’s](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ViewDefinition.html) columns can be generated either automatically or manually like parent `SfDataGrid`. You can refer here to know more about columns.
 
@@ -621,7 +649,7 @@ this.dataGrid.CollapseDetailsViewAt(0);
 
 By default, the expander will be visible for all the data rows in parent DataGrid even if its [RelationalColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ViewDefinition.html#Syncfusion_Maui_DataGrid_ViewDefinition_RelationalColumn) property has an empty collection or null.
 
-Setting the [HideEmptyDataGridViewDefinition]() property to `true` will hide the expander from the view when the respective `RelationalColumn` property contains an empty collection or null.
+Setting the [HideEmptyDataGridViewDefinition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_HideEmptyDataGridViewDefinition) property to `true` will hide the expander from the view when the respective `RelationalColumn` property contains an empty collection or null.
 
 {% tabs %}
 {% highlight xaml %}
@@ -640,7 +668,7 @@ dataGrid.HideEmptyDataGridViewDefinition = true;
 
 ## Hide Indent Cells in Details view
 
-By default the indent cell of details view `SfDataGrid` is always displayed. You can hide the indent cell by setting [ShowDetailsViewIndentCell]() property to `false` for the corresponding parent DataGrid. The default value of `ShowDetailsViewIndentCell` property is `true`.
+By default the indent cell of details view `SfDataGrid` is always displayed. You can hide the indent cell by setting [ShowDetailsViewIndentCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ShowDetailsViewIndentCell) property to `false` for the corresponding parent DataGrid. The default value of `ShowDetailsViewIndentCell` property is `true`.
 
 {% tabs %}
 {% highlight xaml %}

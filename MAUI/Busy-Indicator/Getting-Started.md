@@ -42,15 +42,11 @@ Before proceeding, ensure the following are set up:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+{% highlight C# hl_lines="2 13" %}
+using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace BusyIndicatorSample
+namespace BusyIndicatorGettingStarted
 {
     public static class MauiProgram
     {
@@ -97,7 +93,7 @@ namespace BusyIndicatorSample
 
 using Syncfusion.Maui.Core;
 
-namespace BusyIndicatorSample   
+namespace BusyIndicatorGettingStarted   
 {  
 	public partial class MainPage : ContentPage                  
 	{ 
@@ -143,15 +139,11 @@ Before proceeding, ensure the following are set up:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+{% highlight C# hl_lines="2 13" %}
+using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace BusyIndicatorSample
+namespace BusyIndicatorGettingStarted
 {
     public static class MauiProgram
     {
@@ -198,7 +190,7 @@ namespace BusyIndicatorSample
 
 using Syncfusion.Maui.Core;
 
-namespace BusyIndicatorSample   
+namespace BusyIndicatorGettingStarted   
 {  
 	public partial class MainPage : ContentPage                  
 	{ 
@@ -243,15 +235,11 @@ Before proceeding, ensure the following are set up:
 
 [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
 
-{% highlight c# hl_lines="6 17" %}
-using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
-using Microsoft.Maui.Controls.Compatibility;
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
+{% highlight C# hl_lines="2 13" %}
+using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
-namespace BusyIndicatorSample
+namespace BusyIndicatorGettingStarted
 {
     public static class MauiProgram
     {
@@ -298,7 +286,7 @@ namespace BusyIndicatorSample
 
 using Syncfusion.Maui.Core;
 
-namespace BusyIndicatorSample   
+namespace BusyIndicatorGettingStarted   
 {  
 	public partial class MainPage : ContentPage                  
 	{ 
@@ -332,7 +320,7 @@ The following example depicts the CircularMaterial type animation of .NET  MAUI 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
         xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-        x:Class="BusyIndicatorSample.MainPage">
+        x:Class="BusyIndicatorGettingStarted.MainPage">
 
     <ContentPage.Content>
         <core:SfBusyIndicator x:Name="busyIndicator"
@@ -346,10 +334,8 @@ The following example depicts the CircularMaterial type animation of .NET  MAUI 
 {% highlight C# %}
 
 using Syncfusion.Maui.Core;
-using Microsoft.Maui;
-using Microsoft.Maui.Controls;
 
-namespace BusyIndicatorSample
+namespace BusyIndicatorGettingStarted
 {
     public partial class MainPage : ContentPage
     {
@@ -374,6 +360,6 @@ The following gif image illustrates the result of the above code.
 
 ![CircularMaterial in .NET MAUI Busy Indicator.](images/gettingstarted/net-maui-busy-indicator-circular-material.gif){:width="144" height="138" loading="lazy"}
 
-You can find the complete getting started sample of .NET MAUI Busy Indicator from this [link](https://github.com/SyncfusionExamples/maui-busyindicator-samples).
+You can download the getting started project of this demo from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-BusyIndicator)
 
 N> You can refer to our [.NET MAUI Busy Indicator](https://www.syncfusion.com/maui-controls/maui-busy-indicator) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Busy Indicator example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/BusyIndicator) that shows you how to render the Busy Indicator in .NET MAUI.

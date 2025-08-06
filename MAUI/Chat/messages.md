@@ -7,7 +7,7 @@ control: SfChat
 documentation: ug
 ---
 
-# Messages in .NET Maui Chat (SfChat)
+# Messages in .NET MAUI Chat (SfChat)
 
 ## Configuring common settings for the message
 
@@ -772,7 +772,7 @@ Unlike the other messages, the `ImageMessage` can also be shown as an outgoing m
 
 ![Outgoing Image message in .NET MAUI Chat](images/messages/maui-chat-outgoing-image-message.png)
 
-## Card Message
+## Card message
 
 You can show a list of interactive cards with each card containing an image, a list of buttons, and text (title, subtitle, and description) to tie in with the cards of popular bot frameworks. Use the [Card.Image](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.Card.html#Syncfusion_Maui_Chat_Card_Image), [Card.Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.Card.html#Syncfusion_Maui_Chat_Card_Title), [Card.Subtitle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.Card.html#Syncfusion_Maui_Chat_Card_Subtitle), and [Card.Description](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.Card.html#Syncfusion_Maui_Chat_Card_Description) properties to display the image, title, subtitle, and description in a card respectively.
 
@@ -989,9 +989,9 @@ N> The Action argument in `CardTappedEventArgs` holds a valid value only when cl
 {% endhighlight %}
 {% endtabs %}
 
-## Delivery States
+## Delivery states
 The `SfChat` provides built-in support for displaying message delivery states such as sent, delivered, read, and failed. This feature enhances communication transparency by showing the current status of each message.
-The `ShowDeliveryState` property determines whether delivery state indicators are displayed for messages. By default, this property is set to `false`.
+The [ShowDeliveryState](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowDeliveryState) property determines whether delivery state indicators are displayed for messages. By default, this property is set to `false`.
 
 {% tabs %}
 {% highlight xaml hl_lines="18" %}
@@ -1046,13 +1046,13 @@ namespace MauiChat
 {% endtabs %}
 
 ### Handling Message Delivery States
-The `DeliveryState` property sets the current delivery status of a specific message. The `SfChat` control provides the following delivery states:
+The [DeliveryState](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IMessage.html#Syncfusion_Maui_Chat_IMessage_DeliveryState) property sets the current delivery status of a specific message. The `SfChat` control provides the following delivery states:
 
-- `None` - No delivery indicator is shown. This is the default value.
-- `Sent` - Message has been sent from the current user.
-- `Delivered` - Message has been delivered to the recipient.
-- `Read` - Message has been read by the recipient.
-- `Failed` - Message failed to deliver.
+- [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.DeliveryStates.html#Syncfusion_Maui_Chat_DeliveryStates_None) - No delivery indicator is shown. This is the default value.
+- [Sent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.DeliveryStates.html#Syncfusion_Maui_Chat_DeliveryStates_Sent) - Message has been sent from the current user.
+- [Delivered](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.DeliveryStates.html#Syncfusion_Maui_Chat_DeliveryStates_Delivered) - Message has been delivered to the recipient.
+- [Read](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.DeliveryStates.html#Syncfusion_Maui_Chat_DeliveryStates_Read) - Message has been read by the recipient.
+- [Failed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.DeliveryStates.html#Syncfusion_Maui_Chat_DeliveryStates_Failed) - Message failed to deliver.
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
@@ -1153,12 +1153,14 @@ public class ViewModel : INotifyPropertyChanged
 
 ![DeliveryState in .NET MAUI Chat](Images/messages/maui-chat-delivery-state.gif)
 
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/message-delivery-states-.net-maui-chat)
+
 ### Customizing Delivery State Icons
 The `SfChat` control allows assigning custom icon values for each Delivery State. The following API is used to define the icon for each delivery state.
-- `SentIcon` - Sets a custom image for the sent state indicator.
-- `DeliveredIcon` - Sets a custom image for the delivered state indicator.
-- `ReadIcon` - Sets a custom image for the read state indicator.
-- `FailedIcon` - Sets a custom image for the failed state indicator.
+- [SentIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_SentIcon) - Sets a custom image for the sent state indicator.
+- [DeliveredIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_DeliveredIcon) - Sets a custom image for the delivered state indicator.
+- [ReadIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ReadIcon) - Sets a custom image for the read state indicator.
+- [FailedIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_FailedIcon) - Sets a custom image for the failed state indicator.
 
 {% tabs %}
 {% highlight xaml hl_lines="19 20 21 22" %}
@@ -1507,7 +1509,7 @@ By default, the keyboard will be open in view, even after a message is sent or f
 {% endhighlight %}
 {% endtabs %}
 
-## Restricting multi-line input in editor (single line messages) in Maui chat
+## Restricting multi-line input in editor (single line messages) in chat
 
 By default, users can input multi-line messages by adding new lines in the editor within the chat control for outgoing messages. However, if you wish to limit multi-line input and display a send button on the keyboard instead, you can achieve this by setting the [AllowMultilineInput](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_AllowMultilineInput) property to `false`.
 
@@ -1599,7 +1601,7 @@ By default, the author’s name and avatar are displayed for the incoming messag
 
 ![Hide incoming avatar and author visibility in .NET MAUI Chat](images/messages/maui-chat-hide-avatar.png)
 
-## MessageTimestampFormat for Incoming and Outgoing messages
+## MessageTimestampFormat for incoming and outgoing messages
 
 The `SfChat` allows you specify the format in which timestamps are shown for outgoing and incoming messages. The date and time representation can be customized using the [IncomingMessageTimestampFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_IncomingMessageTimestampFormat) and [OutgoingMessageTimestampFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_OutgoingMessageTimestampFormat) properties.
 
@@ -1728,7 +1730,7 @@ The `SfChat` allows to hide the message input view (editor) by setting `false` t
 {% endhighlight %}
 {% endtabs %}
 
-## Messages without author (System Generated Messages / Admin messages)
+## Messages without author (system generated messages / admin messages)
 
 Using templates, you can show messages with any information, similar to security alerts in WhatsApp or admin notifications. These messages can be put into the [Messages](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_Messages) collection without specifying an author.
 In the provided code example, we've set up a custom template to display a security message from an admin when the author of the message is not specified.
@@ -1788,3 +1790,19 @@ In the provided code example, we've set up a custom template to display a securi
 ![Sytem generated message in .NET MAUI Chat](images/messages/maui-chat-system-generated-custom-message-template.png)
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/system-generated-message-template-.net-maui-chat)
+
+## Assign unique color to each user in a group chat
+
+You can assign unique color to each user in a group chat by writing converter and custom control templates to [OutgoingMessageAuthorView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.OutgoingMessageAuthorView.html) and [IncomingMessageAuthorView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IncomingMessageAuthorView.html) using `TargetStyle`.
+
+![Unique color to each user in .NET MAUI Chat](images/messages/maui-chat-assign-color-each-user.png)
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/how-to-assign-color-each-user-in-.net-maui-chat)
+
+## Show drop down menu on tapping a message in .NET MAUI Chat
+
+You can add drop down icon to the incoming messages in `SfChat` by writing custom control template to [IncomingMessageTextView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IncomingMessageTextView.html) using `TargetStyle`. Using [SfPopup](https://help.syncfusion.com/maui/popup/overview), you can display the drop down menu by using platform specific customization.
+
+![Drop down menu in .NET MAUI Chat](images/messages/maui-chat-show-drop-down-menu.gif)
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/how-to-show-drop-down-menu-in-.net-maui-chat)

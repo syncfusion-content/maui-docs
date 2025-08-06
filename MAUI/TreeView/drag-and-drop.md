@@ -7,8 +7,8 @@ control: SfTreeView
 documentation: ug
 ---
 
-# Drag and drop in .NET MAUI TreeView (SfTreeView)
-The [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html) allows drag and drop the items within the treeview control by setting the `AllowDragging` property as `true`. 
+# Drag and Drop in .NET MAUI TreeView (SfTreeView)	
+The [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html) allows drag and drop the items within the treeview control by setting the [AllowDragging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_AllowDragging) property as `true`. 
 
 {% tabs %}
 {% highlight xaml hl_lines="4" %}
@@ -36,7 +36,7 @@ N> The drag and drop operation is not supported when Load on Demand is enabled.
 `SfTreeView` allows to drag multiple selected items. To enable multiple selection, set the [SfTreeView.SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SelectionMode) as `Multiple` or `Extended`.
 
 ## Drag item customization
-By defining the `SfTreeView.DragItemTemplate` property of the `SfTreeView`, a custom user interface (UI) is displayed during drag-and-drop operations.
+By defining the [DragItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_DragItemTemplate) property of the `SfTreeView`, a custom user interface (UI) is displayed during drag-and-drop operations.
 
 {% tabs %}
 {% highlight xaml hl_lines="5" %}
@@ -140,28 +140,28 @@ treeView.DragItemTemplate = new DataTemplate(() =>
 {% endhighlight %}
 {% endtabs %}
 
-N> View sample in [GitHub](https://github.com/SyncfusionExamples/how-to-customize-the-drag-item-view).
-
 ![Drag item view customization](Images/drag-and-drop/drag-view-customization.gif)
+
+N> View sample in [GitHub](https://github.com/SyncfusionExamples/how-to-customize-the-drag-item-view).
 
 ## Event
 
-The `ItemDragging` event is raised while dragging and dropping the item in the `SfTreeView`. The `ItemDraggingEventArgs` has the following members which provide the information for the ItemDragging event:
+The [ItemDragging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemDragging) event is raised while dragging and dropping the item in the `SfTreeView`. The [ItemDraggingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemDraggingEventArgs.html) has the following members which provide the information for the ItemDragging event:
 
-* `Action`: Returns the drag `Action` such as start, dragging, dropping and drop.
-* `Handled`: If this member is set to true, dragging can be handled. It is applicable only if Action is `Dragging`.
-* `Cancel` : If this member is set to true, the drag and drop operation will be canceled.
-* `DraggingNode`: Returns the `DraggingNodes`.
-* `DropPosition`: Returns the position where dragged nodes are going to be dropped.
-* `Position`: Returns the touch position of the drag item from the screen coordinates.
+* [Action](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemDraggingEventArgs.html#Syncfusion_Maui_TreeView_ItemDraggingEventArgs_Action): Returns the drag `Action` such as start, dragging, dropping and drop.
+* [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemDraggingEventArgs.html#Syncfusion_Maui_TreeView_ItemDraggingEventArgs_Handled): If this member is set to true, dragging can be handled. It is applicable only if Action is `Dragging`.
+* [DraggingNode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemDraggingEventArgs.html#Syncfusion_Maui_TreeView_ItemDraggingEventArgs_DraggingNodes): Returns the `DraggingNodes`.
+* [DropPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemDraggingEventArgs.html#Syncfusion_Maui_TreeView_ItemDraggingEventArgs_DropPosition): Returns the position where dragged nodes are going to be dropped.
+* [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.ItemDraggingEventArgs.html#Syncfusion_Maui_TreeView_ItemDraggingEventArgs_Position): Returns the touch position of the drag item from the screen coordinates.
+* `Cancel`: If this member is set to true, the drag and drop operation will be canceled.
 
 ## Auto scroll options
 
 Auto-scrolling during drag-and-drop operations in the `SfTreeView` enhances the user experience by automatically scrolling the view when dragging an item near the edges.
 
-### Auto Scroll Margin
+### Auto scroll margin
 
-To adjust the auto-scroll margin in `SfTreeView`, set the `ScrollMargin` property of the `AutoScroller` to enable auto-scrolling while dragging. The default value is `15`. Auto-scrolling will be triggered when the drag item is within the `ScrollMargin` from the view's bounds.
+To adjust the auto-scroll margin in `SfTreeView`, set the [ScrollMargin](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.AutoScroller.html#Syncfusion_Maui_TreeView_AutoScroller_ScrollMargin) property of the [AutoScroller](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.AutoScroller.html) to enable auto-scrolling while dragging. The default value is `15`. Auto-scrolling will be triggered when the drag item is within the `ScrollMargin` from the view's bounds.
 
 N> To disable auto-scrolling, set the `ScrollMargin` to `0`.
 
@@ -175,9 +175,9 @@ treeView.AutoScroller.ScrollMargin = 20;
 
 ![Auto scroll](Images/drag-and-drop/auto-scroll.gif)
 
-### Auto Scroll Interval
+### Auto scroll interval
 
-Adjust the auto-scroll interval during dragging by setting the `Interval` property of the `AutoScroller`. The default interval is `150 milliseconds`.
+Adjust the auto-scroll interval during dragging by setting the [Interval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.AutoScroller.html#Syncfusion_Maui_TreeView_AutoScroller_Interval) property of the [AutoScroller](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.AutoScroller.html). The default interval is `150 milliseconds`.
 
 {% tabs %}
 {% highlight c# hl_lines="3" %}
@@ -187,9 +187,9 @@ treeView.AutoScroller.Interval = new TimeSpan(0, 0, 0, 0, 200);
 {% endhighlight %}
 {% endtabs %}
 
-### Disable Outside Scroll
+### Disable outside scroll
 
-To prevent auto-scrolling when the dragged item is moved outside the `SfTreeView` during a drag, set the `AllowOutsideScroll` property of the `AutoScroller` to `false`. The default value is `true`.
+To prevent auto-scrolling when the dragged item is moved outside the `SfTreeView` during a drag, set the [AllowOutsideScroll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.AutoScroller.html#Syncfusion_Maui_TreeView_AutoScroller_AllowOutsideScroll) property of the [AutoScroller](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.AutoScroller.html) to `false`. The default value is `true`.
 
 {% tabs %}
 {% highlight c# hl_lines="3" %}
@@ -199,11 +199,11 @@ treeView.AutoScroller.AllowOutsideScroll = false;
 {% endhighlight %}
 {% endtabs %}
 
-## Auto Expand
+## Auto expand
 
-### Enable Auto Expand
+### Enable auto expand
 
-To enable auto-expanding of nodes when dragging items over them, set the `CanAutoExpand` property to `true`. The default value is `false`.
+To enable auto-expanding of nodes when dragging items over them, set the [CanAutoExpand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.DragAndDropController.html#Syncfusion_Maui_TreeView_DragAndDropController_CanAutoExpand) property to `true`. The default value is `false`.
 
 {% tabs %}
 {% highlight xaml hl_lines="6" %}
@@ -227,9 +227,9 @@ treeView.DragAndDropController.CanAutoExpand = true;
 
 ![Enable Auto Expand](Images/drag-and-drop/enable-auto-expand.gif)
 
-### Auto Expand Delay
+### Auto expand delay
 
-To set the delay for auto-expanding nodes, use the `AutoExpandDelay` property. The default value is `3 seconds`.
+To set the delay for auto-expanding nodes, use the [AutoExpandDelay](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.DragAndDropController.html#Syncfusion_Maui_TreeView_DragAndDropController_AutoExpandDelay) property. The default value is `3 seconds`.
 
 {% tabs %}
 {% highlight xaml hl_lines="6" %}
@@ -276,7 +276,7 @@ private void TreeView_ItemDragging(object sender, ItemDraggingEventArgs e)
 
 ## Cancel dropping for the dragged item
 
-To cancel dropping for the dragged item, handle the `ItemDragging` event based on the conditions of the Action event argument.
+To cancel dropping for the dragged item, handle the `ItemDragging` event based on the conditions of the `Action` event argument.
 
 You can cancel the dropping action for an item by setting the `Cancel` property of the `ItemDraggingEventArgs`.
 
@@ -302,6 +302,6 @@ Drag and drop operations will not be executed in the following scenarios. When t
 
 * `Drop as child into same node`: An indicator appears if you attempt to drop an item as a child of the same node.
 
-* `Incompatible child node type`: When trying to drop an item as a child where the target node's child and the dragged item's types are incompatible. It is only applicable when `SfTreeView` has `HierarchyPropertyDescriptor`.
+* `Incompatible child node type`: When trying to drop an item as a child where the target node's child and the dragged item's types are incompatible. It is only applicable when `SfTreeView` has [HierarchyPropertyDescriptor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_HierarchyPropertyDescriptors).
 
 * `Drop below or above with different type`: If attempting to drop an item below or above another node where the parent node's existing child's type is different from the dragged item's type. It is only applicable when `SfTreeView` has `HierarchyPropertyDescriptor`.
