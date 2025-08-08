@@ -31,8 +31,8 @@ You can also retrieve the current zoom level using the same property.
 ### Setting Minimum and Maximum Zoom Limits
 
 By default, the zoom range varies by platform:
-1. **Mobile (Android/iOS):** 1.0 to 4.0
-2. **Desktop (Windows/macOS):** 0.25 to 4.0
+* **Mobile (Android/iOS):** 1.0 to 4.0
+* **Desktop (Windows/macOS):** 0.25 to 4.0
 
 To restrict zoom levels, use the [MinZoomFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_MinZoomFactor) and [MaxZoomFactor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_MaxZoomFactor) properties.
 
