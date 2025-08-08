@@ -40,3 +40,4 @@ The [.NET MAUI PDF Viewer](https://www.syncfusion.com/maui-controls/maui-pdf-vie
 * **Print** - Print the PDF files.
 * **Coordinates conversion** - Obtain the PDF page coordinates relative to the PDF Viewer’s client coordinates and vice versa. It also helps to obtain the scroll point relative to the PDF page coordinates and bring the given region into view.
 * **Localization** - All static text within the PDF Viewer can be localized to any supported language.
+* **Zoom modes** - Enhances readability by allowing users to adjust PDF magnification. It includes `Fit to Page` for full-page viewing without scroll and `Fit to Width` for better readability of documents with narrow columns.
