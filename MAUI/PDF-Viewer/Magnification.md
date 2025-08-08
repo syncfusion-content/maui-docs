@@ -30,7 +30,11 @@ You can also obtain the current zoom factor at which the document is displayed i
 
 ## Change the minimum and maximum zoom factor
 
-By default, the zoom factor can be adjusted or set between 1 and 4 to magnify the document displayed in the PDF Viewer. But it can also be restricted to a certain level by adjusting the [minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_MinZoomFactor) and [maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_MaxZoomFactor) zoom factors.
+By default, the zoom factor in the PDF Viewer can be adjusted to magnify the document display:
+* On Mobile platform (Android and iOS platforms), the zoom level ranges from 1.0 to 4.0.
+* On Desktop platform (Windows and MAC), it offers a adjustable range from 0.25 to 4.0.
+
+But it can also be restricted to a certain level by adjusting the [minimum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_MinZoomFactor) and [maximum](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_MaxZoomFactor) zoom factors.
 
 The following code example explains restricting the zoom factor between 0.5 and 2.
 
