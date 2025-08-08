@@ -20,7 +20,7 @@ You can scroll through pages by simply dragging the scroll head within the UI on
 ![Scroll Head](Images\ScrollHead.png)
 
 ### Page navigation using scroll head
-To navigate to a specific page, tap the scroll head to open the page navigation dialog. Enter a valid page number in the input field present in the dialog, then tap the OK button. Then it navigates to the selected page of the PDF document. For further more 
+To navigate to a specific page, tap the scroll head to open the page navigation dialog. Enter a valid page number in the input field present in the dialog, then tap the OK button. Then it navigates to the selected page of the PDF document. Refer to below reference video.
 
 ![Page navigation by tapping scroll head](Images\PageNavigationUsingScrollHead.gif)
 
