@@ -15,7 +15,8 @@ The [.NET MAUI PDF Viewer](https://www.syncfusion.com/maui-controls/maui-pdf-vie
 **Key Features**
 
 * **Virtual scrolling** - Easily scroll through the pages in the document fluently. The pages are rendered only when required to increase the loading and scrolling performance.
-* **Magnification** - The content of a PDF document can be efficiently zoomed in and out by pinching or changing the zoom factor programmatically. 
+* **Magnification** - The content of a PDF document can be efficiently zoomed in and out by pinching or changing the zoom factor programmatically.
+* **Zoom modes** - Improve document readability by adjusting magnification to suit your viewing needs. Use *Fit to Page* to display the entire page without scrolling, ideal for quick overviews. Choose *Fit to Width* for optimal reading of content with narrow columns, such as newspapers or multi-column layouts.
 * **Page navigation** - Navigate to the desired pages instantly using the page navigation option programmatically or by dragging the scroll head in the UI.
 * **Open password-protected PDFs** - Load and view password-protected PDFs in a hassle-free way. You can design a custom password request view and integrate the functionality easily with the options available.
 * **Built-in Toolbar** - The PDF Viewer control includes a built-in toolbar, offering a seamless user experience with essential functions such as page navigation, text search, page layout mode adjustments, and various annotation tools. The toolbar's visibility can also be customized according to user preferences.
@@ -40,4 +41,3 @@ The [.NET MAUI PDF Viewer](https://www.syncfusion.com/maui-controls/maui-pdf-vie
 * **Print** - Print the PDF files.
 * **Coordinates conversion** - Obtain the PDF page coordinates relative to the PDF Viewer’s client coordinates and vice versa. It also helps to obtain the scroll point relative to the PDF page coordinates and bring the given region into view.
 * **Localization** - All static text within the PDF Viewer can be localized to any supported language.
-* **Zoom modes** - Enhances readability by allowing users to adjust PDF magnification. It includes *Fit to Page* for full-page viewing without scroll and *Fit to Width* for better readability of documents with narrow columns.
