@@ -33,6 +33,8 @@ The [Closed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBa
 ## SelectionChanged Event
 The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html#Syncfusion_Maui_Picker_SfPicker_SelectionChanged) is raised after the selected index changed on the `SfPicker`.
 
+N> In SfPicker, the `SelectedIndex` is confirmed only when the OK button in the footer view is tapped. This behavior applies when [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Mode) of Default is disabled, [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_Height) property of the [PickerFooterView] is greater than zero, and [ShowOkButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_ShowOkButton) is true — preventing `SelectionChanged` updates during scrolling and ensuring intentional confirmation.
+
 ## OkButtonClicked Event
 
 The [OkButtonClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_OkButtonClicked) event is raised after the `ok` button clicked on the `SfPicker`. This event is not applicable while the footer view and `ok` button are not visible.

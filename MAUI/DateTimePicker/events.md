@@ -42,6 +42,8 @@ private void OnDateTimePickerSelectionChanged(object sender, DateTimePickerSelec
 {% endhighlight %}  
 {% endtabs %}
 
+N> In SfDateTimePicker, the `SelectedDate` is confirmed only when the OK button in the footer view is tapped. This behavior applies when [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Mode) of Default is disabled, [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_Height) property of the [PickerFooterView] is greater than zero, and [ShowOkButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_ShowOkButton) is true — preventing `SelectionChanged` updates during scrolling and ensuring intentional confirmation.
+
 ## Events in dialog mode
 
 In `SfDateTimePicker`, three events are used while the date time picker is in Dialog mode.
