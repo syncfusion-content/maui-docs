@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Scrolling in .NET MAUI PDF Viewer Control | Syncfusion
-description: Learn here all about scrolling functionality in .NET MAUI PDF Viewer including programmatically setting scroll positions and detecting scroll changes.
+description: Explore scrolling features in .NET MAUI PDF Viewer, including how to set scroll positions programmatically and detect scroll changes in real time.
 platform: MAUI
 control: SfPdfViewer
 documentation: ug
@@ -9,24 +9,24 @@ documentation: ug
 
 # Scrolling in .NET MAUI PDF Viewer (SfPdfViewer)
 
-The NET MAUI PDF Viewer has scrolling capabilities that allow users to navigate through content seamlessly. This section will walk you through various aspects of scrolling, including programmatically setting scroll positions and detecting scroll changes.
+The .NET MAUI PDF Viewer provides built-in scrolling capabilities that allow users to navigate through PDF content smoothly. This guide covers how to control scroll positions programmatically, detect scroll changes, and manage scroll-related UI elements.
 
-W> Please note that since the PDF Viewer has built-in scrolling capability, it is advised to avoid placing the PDF Viewer inside other controls that also offer scrolling, such as [ScrollView](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/scrollview?view=net-maui-8.0). Nesting within such controls may cause unexpected issues.
+W> Since the PDF Viewer includes built-in scrolling, avoid placing it inside other scrollable containers like [ScrollView](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/controls/scrollview?view=net-maui-8.0), as this may lead to unexpected behavior.
 
-## Navigate to the desired offset programmatically
+## Programmatic Scrolling
 
-The [ScrollToOffset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ScrollToOffset_System_Double_System_Double_) method moves the scroll position of the SfPdfViewer to the specified horizontal and vertical offsets. If the specified offset value is wrong, the scroll will not happen, and the older position will be retained. The offset values are represented in device-independent units.
+Use the [ScrollToOffset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ScrollToOffset_System_Double_System_Double_) method to scroll to a specific horizontal and vertical offset. Offset values are measured in **device-independent units**. If the specified offset is invalid or out of bounds, the scroll action will be ignored and the viewer will retain its current position.
 
 {% tabs %}
 {% highlight c# %}
-// Navigate to the scroll offset position (100,1000).
+// Scroll to position (100, 1000)
 PdfViewer.ScrollToOffset(100, 1000);
 {% endhighlight %}
 {% endtabs %}
 
-## Scroll changes detection
+## Detect Scroll Changes
 
-The `PropertyChanged` event can be used to identify the scroll changes in the PDF Viewer effectively. By monitoring the [HorizontalOffset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_HorizontalOffset) and [VerticalOffset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_VerticalOffset) property changes, you can respond to both the horizontal and vertical scroll movements respectively. 
+You can monitor scroll changes using the `PropertyChanged` event. By monitoring the [HorizontalOffset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_HorizontalOffset) and [VerticalOffset](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_VerticalOffset) property changes, you can respond to both the horizontal and vertical scroll movements respectively. 
 
 The following is the code example for subscribing to the `PropertyChanged` event.
 
@@ -49,7 +49,7 @@ void SubscribeToPropertyChangedEvent()
 {% endhighlight %}
 {% endtabs %}
 
-Handle scroll changes by implementing the event handler method. The following code example illustrates how to respond to both horizontal and vertical scroll changes:
+The following code example illustrates how implement the event handler and to respond to both horizontal and vertical scroll changes:
 
 {% tabs %}
 {% highlight c# %}
@@ -70,7 +70,7 @@ private void PdfViewer_PropertyChanged(object sender,
 {% endhighlight %}
 {% endtabs %}
 
-## Detecting the end of the document
+## Detecting End of Document
 
 You can determine if the control has reached the vertical end of the document by evaluating the following properties:
 
@@ -109,5 +109,31 @@ private void PdfViewer_PropertyChanged(object sender,
             PdfViewer.ClientRectangle.Width >= PdfViewer.ExtentWidth);
     }
 }
+
 {% endhighlight %}
 {% endtabs %}
+
+## Scroll Head (Mobile Platforms)
+
+On Android and iOS platforms, the scroll head offers a quick way to move through pages. Users can drag the thumb indicator to scroll within the PDF document.
+
+![Scroll Head](Images\ScrollHead.png)
+
+### Page Navigation via Scroll Head
+
+Tap the scroll head to open a page navigation dialog. Enter a valid page number and tap **OK** to jump directly to that page.
+
+![Page navigation by tapping scroll head](Images\PageNavigationUsingScrollHead.gif)
+
+### Show or Hide the Scroll Head
+
+Use the [ShowScrollHead](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_ShowScrollHead) property to control the visibility of the scroll head.
+
+{% tabs %}
+{% highlight c# %}
+// Hide the scroll head thumb
+PdfViewer.ShowScrollHead = false;
+{% endhighlight %}
+{% endtabs %}
+
+N> The scroll head is available only on **mobile platforms**. It is not supported on **Windows** or **macOS**.
