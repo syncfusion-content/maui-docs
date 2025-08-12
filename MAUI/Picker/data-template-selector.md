@@ -1,6 +1,6 @@
 ---
 layout: post
-title: DataTemplateSelector with .NET MAUI Picker Control | Syncfusion<sup>&reg;</sup>
+title: DataTemplateSelector with .NET MAUI Picker Control | Syncfusion®
 description: Learn here all about data template selector with Syncfusion<sup>&reg;</sup> .NET MAUI Picker (SfPicker) control.
 platform: maui
 control: SfPicker
