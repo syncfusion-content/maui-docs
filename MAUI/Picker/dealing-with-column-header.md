@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Column header with .NET MAUI Picker Control | Syncfusion<sup>&reg;</sup>
+title: Column header with .NET MAUI Picker Control | Syncfusion®
 description: Learn here all about column header with Syncfusion<sup>&reg;</sup> .NET MAUI Picker (SfPicker) control and its basic features.
 platform: maui
 control: SfPicker
