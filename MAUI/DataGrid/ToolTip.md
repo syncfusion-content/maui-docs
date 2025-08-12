@@ -10,11 +10,15 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 # ToolTip in MAUI DataGrid (SfDataGrid)
 
-The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) provides support for displaying tooltips. ToolTip provides the support to show the pop-up window that displays the information when the mouse hovers in cells of SfDataGrid.
+The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) provides support for displaying tooltips. ToolTip provides the support to show the pop-up window that displays the information when interacting with cells of SfDataGrid. 
+
+To show tooltips:
+- **On Windows/Mac**: Hover the mouse cursor over any cell in the grid
+- **On Android/iOS**: Long press on any cell in the grid
 
 ## Record cell tooltip
 
-You can enable the ToolTip for the GridCell by setting the `SfDataGrid.ShowToolTip` property to `true`.
+To enable tooltip for datagrid, set the `SfDataGrid.ShowToolTip` property to `true`. This will display tooltip containing cell content when users interact with the cells.
 
 {% tabs %}
 {% highlight XAML %}
