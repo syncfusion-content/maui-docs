@@ -48,8 +48,6 @@ this.Content = sunburst;
 
 {% endtabs %}
 
-![Child selection in MAUI Sunburst Chart.]()
-
 The following code shows the `Group` selection type.
 
 {% tabs %}
@@ -79,8 +77,6 @@ this.Content = sunburst;
 {% endhighlight %}
 
 {% endtabs %}
-
-![Group selection in MAUI Sunburst Chart.]()
 
 The following code shows the `Parent` selection type.
 
@@ -112,8 +108,6 @@ this.Content = sunburst;
 
 {% endtabs %}
 
-![Parent selection in MAUI Sunburst Chart.]()
-
 ## DisplayMode
 
 The `DisplayMode` property provides the following selection options to highlight the segments:
@@ -122,7 +116,7 @@ The `DisplayMode` property provides the following selection options to highlight
 * By opacity
 * By stroke
 
-# Brush 
+### Brush 
 
 This mode highlights the selected segment using the brush specified in the `Fill` property.
 
@@ -156,9 +150,7 @@ this.Content = sunburst;
 
 {% endtabs %}
 
-![ DisplayMode HighlightByBrush.]()
-
-# Opacity
+### Opacity
 
 This mode highlights the selected segment with the opacity specified in the `Opacity` property.
 
@@ -192,9 +184,7 @@ this.Content = sunburst;
 
 {% endtabs %}
 
-![DisplayMode HighlightByOpacity.]()
-
-# Stoke 
+### Stoke 
 
 This mode highlights the selected segment by applying stroke to it. The color and thickness of the stroke can be customized using the `Stroke` and `StrokeWidth` properties.
 
@@ -229,11 +219,9 @@ this.Content = sunburst;
 
 {% endtabs %}
 
-![DisplayMode HighlightByStroke.]()
-
 ## Events 
 
-# SelectionChanging
+### SelectionChanging
 
 The `SelectionChanging` occurs when a segment in the Sunburst chart is being selected.
 This is a cancelable event. The following properties are contained in the event arguments:
@@ -243,7 +231,7 @@ This is a cancelable event. The following properties are contained in the event 
 * `Cancel` - Gets or sets the value whether to continue selection or not.
 
 
-# Selection Changed
+### Selection Changed
 
 The `SelectionChanged` event occurs when a segment in the Sunburst chart is selected or deselected. The following properties are contained in the event arguments:
 
