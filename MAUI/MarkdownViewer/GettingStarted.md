@@ -1,0 +1,238 @@
+---
+layout: post
+title: Getting started with .NET MAUI MarkdownViewer control | Syncfusion
+description: Learn how to get started with Syncfusion® .NET MAUI MarkdownViewer control and explore its capabilities for rendering Markdown content with full formatting support.
+platform: MAUI
+control: MarkdownViewer
+documentation: ug
+keywords: .net maui markdownviewer, syncfusion markdownviewer maui, markdown viewer .net maui, .net maui markdown rendering, sfmarkdownviewer example maui, .net maui markdown control, markdown content .net maui, markdown rendering .net maui
+---
+
+# Getting Started with .NET MAUI MarkdownViewer
+
+This guide details the initial setup and basic usage of the [SfMarkdownViewer]() control, offering insight into its ability to render Markdown content with full formatting support across mobile and desktop platforms.
+
+{% tabcontents %}
+{% tabcontent Visual Studio %}
+
+## Prerequisites
+
+Ensure the following are installed before you begin:
+
+1. [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
+2. Visual Studio 2022 version 17.8 or later with the .NET MAUI workload.
+
+## Step 1: Create a new .NET MAUI project
+
+1. In **Visual Studio**, go to **File > New > Project**.
+2. Select the **.NET MAUI App** template and click **Next**.
+3. Enter a project name and location, then click **Create**.
+
+## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI MarkdownViewer Package
+
+1. Right-click on the project in **Solution Explorer** and choose **Manage NuGet Packages**.
+2. Search for [Syncfusion.Maui.MarkdownViewer](https://www.nuget.org/packages/Syncfusion.Maui.MarkdownViewer/) and install the latest version.
+3. Ensure all dependent packages are installed and the project builds successfully.
+
+## Step 3: Register the Syncfusion Core Handler
+
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) NuGet package is required for all Syncfusion<sup>®</sup> controls in .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
+
+{% tabs %}
+
+{% highlight csharp tabtitle="MauiProgram.cs" hl_lines="2 13" %}
+
+using Microsoft.Extensions.Logging;
+using Syncfusion.Maui.Core.Hosting;
+
+namespace MarkdownViewerGettingStarted
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+                .UseMauiApp<App>()
+                .ConfigureSyncfusionCore()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                });
+
+            return builder.Build();
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Step 4: Initialize the MarkdownViewer Control
+
+1. To initialize the control, import the `Syncfusion.Maui.MarkdownViewer` namespace.
+2. Add an [SfMarkdownViewer]() instance to your page.
+
+{% tabs %} 
+
+{% highlight xaml %}
+
+<ContentPage
+    . . .    
+    xmlns:markdown="clr-namespace:Syncfusion.Maui.MarkdownViewer;
+    assembly=Syncfusion.Maui.MarkdownViewer">
+   
+     <markdown:SfMarkdownViewer Source="Welcome to **Markdown Viewer**!" />
+     
+</ContentPage>
+ 
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.MarkdownViewer;
+
+namespace MarkdownViewerGettingStarted
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();  
+            SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
+            markdownViewer.Source = "Welcome to **Markdown Viewer**!";
+            Content = markdownViewer;       
+        }
+    }   
+}
+
+{% endhighlight %}
+{% endtabs %}
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+## Prerequisites
+
+Make sure the following are installed:
+1. [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
+2. Set up a .NET MAUI environment with Visual Studio Code.
+3. Ensure that the .NET MAUI extension is installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
+
+## Step 1: Create a new .NET MAUI project
+
+1. Open the command palette by pressing `Ctrl+Shift+P`, type **.NET:New Project** and press **Enter**.
+2. Choose the **.NET MAUI App** template.
+3. Select the project location, type the project name, and press **Enter**.
+4. Then choose **Create project**.
+
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI MarkdownViewer NuGet package
+
+1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
+2. Ensure you're in the project root directory where your .csproj file is located.
+3. Run the command `dotnet add package Syncfusion.Maui.MarkdownViewer` to install the MarkdownViewer package.
+4. To ensure all dependencies are installed, run `dotnet restore`.
+
+## Step 3: Register the handler
+
+The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the `MauiProgram.cs` file, register the handler for Syncfusion<sup>®</sup> core.
+
+{% tabs %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="6 17" %}
+
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Hosting;
+using Syncfusion.Maui.Core.Hosting;
+
+namespace MarkdownViewerSample
+{
+  public static class MauiProgram
+  {
+    public static MauiApp CreateMauiApp()
+    {
+        var builder = MauiApp.CreateBuilder();
+        builder
+        .UseMauiApp<App>()
+        .ConfigureSyncfusionCore()
+        .ConfigureFonts(fonts =>
+        {
+            fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+        });
+
+        return builder.Build();
+     }
+  }
+}     
+
+{% endhighlight %}
+{% endtabs %}
+
+## Step 4: Initialize the MarkdownViewer Control
+
+1. To initialize the control, import the `Syncfusion.Maui.MarkdownViewer` namespace.
+2. Add an [SfMarkdownViewer]() instance to your page.
+
+{% tabs %} 
+{% highlight xaml %}
+
+<ContentPage
+    . . .    
+    xmlns:markdown="clr-namespace:Syncfusion.Maui.MarkdownViewer;
+    assembly=Syncfusion.Maui.MarkdownViewer">
+   
+     <markdown:SfMarkdownViewer Source="Welcome to **Markdown Viewer**!" />
+
+</ContentPage>
+ 
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.MarkdownViewer;
+
+namespace MarkdownViewerGettingStarted
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();  
+            SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
+            markdownViewer.Source = "Welcome to **Markdown Viewer**!";
+            Content = markdownViewer;       
+        }
+    }   
+}
+
+{% endhighlight %}
+{% endtabs %}
+{% endtabcontent %}
+{% endtabcontents %}
+
+### Render Default Markdown Content
+
+The [SfMarkdownViewer]() control supports standard Markdown syntax including headings, bold and italic text, lists, tables, images, and code blocks. It ensures clean formatting, responsive layout, and seamless integration with your .NET MAUI application.
+
+{% tabs %}
+
+{% highlight markdown %}
+
+# What is Markdown Viewer?  
+Markdown View is a UI control in .NET MAUI that allows developers to render Markdown content with full formatting support.
+
+# Header 1  
+Used for the main title or top-level heading in a Markdown document. 
+
+## Header 2  
+Used to define major sections within your Markdown content.
+
+![image](https://cdn.syncfusion.com/content/images/Xamarin/Mascot-1.png)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Output of MarkdownViewer]()
+
+You can access a complete getting started sample from this [link.]()
