@@ -74,7 +74,7 @@ namespace DockLayoutGettingStarted
 
 ## Step 4: Initialize the DockLayout Control
 
-1. To initialize the control, import the `Synfusion.Maui.Core` namespace.
+1. To initialize the control, import the `Syncfusion.Maui.Core` namespace.
 2. Initialize an [SfDockLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html) instance.
 
 {% tabs %} 
@@ -174,7 +174,7 @@ namespace DockLayoutSample
 
 ## Step 4: Initialize the DockLayout Control
 
-1. To initialize the control, import the `Synfusion.Maui.Core` namespace.
+1. To initialize the control, import the `Syncfusion.Maui.Core` namespace.
 2. Initialize an [SfDockLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html) instance.
 
 {% tabs %} 
@@ -213,7 +213,7 @@ namespace DockLayoutGettingStarted
 {% endtabcontents %}
 
 ### Set Dock Position for Child Views
-Inside the [SfDockLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html) control, child views can be arranged using the [Dock](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html#Syncfusion_Maui_Core_SfDockLayout_DockProperty) attached property. This property allows to dock elements to specific edges— `Top`, `Bottom`, `Left`, `Right`, or set to `None` to remain undocked and fill the remaining space.
+Inside the [SfDockLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html) control, child views can be arranged using the [Dock](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html#Syncfusion_Maui_Core_SfDockLayout_DockProperty) attached property. This property allows to dock elements to specific edges— `Top`, `Bottom`, `Left`, `Right`, or set to `None` to remain non-docked and fill the remaining space.
 
 {% tabs %}
 
