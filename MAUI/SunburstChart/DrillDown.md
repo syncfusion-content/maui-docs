@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Drill down in .NET MAUI Sunburst Chart control | Syncfusion
-description: This section explains how to enable and customize drill down toolbar in the Syncfusion<sup>®</sup> .NET MAUI Sunburst Chart control.
+title: Drill Down in .NET MAUI Sunburst Chart control | Syncfusion
+description: This section explains how to enable and customize drill-down toolbar in the Syncfusion<sup>®</sup> .NET MAUI Sunburst Chart control.
 platform: maui
 control: SfSunburstChart
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 The drill-down provides better visualization of hierarchy. Large set of data can be virtualized into minimal views. Each level of the segments can be drilled down. The Sunburst Chart provides animation along with the drill-down support. Double tapping the segment performs the drill-down operation. Toolbar will be enabled on drill-down that helps in performing zoom back and reset operations. 
 
-To enable this feature, set the `EnableDrillDown` property to true in [SfSunburstChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html).
+To enable this feature, set the `EnableDrillDown` property to true in [SfSunburstChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html). By default, `EnableDrillDown` is set to false.
 
 {% tabs %}
 
@@ -51,7 +51,7 @@ Both the alignment properties has the following enum types:
 <sunburst:SfSunburstChart EnableDrillDown="True">
     . . .
     <chart:SfSunburstChart.ToolbarSettings>
-        <chart:SunburstDrillDownToolbarSettings HorizontalAlignment="Center" 
+        <chart:SunburstToolbarSettings HorizontalAlignment="Center" 
                                                 VerticalAlignment="Center"/>
     </chart:SfSunburstChart.ToolbarSettings>
 </sunburst:SfSunburstChart>
@@ -63,7 +63,7 @@ Both the alignment properties has the following enum types:
 SfSunburstChart sunburst = new SfSunburstChart();
 sunburst.EnableDrillDown = true;
 . . .
-SunburstDrillDownToolbarSettings toolbarSettings = new SunburstDrillDownToolbarSettings()
+SunburstToolbarSettings toolbarSettings = new SunburstToolbarSettings()
 {
     HorizontalAlignment = SunburstToolbarAlignment.Center,
     VerticalAlignment = SunburstToolbarAlignment.Center,
@@ -86,7 +86,7 @@ The toolbar's position within the Sunburst Chart can be adjusted both horizontal
 <sunburst:SfSunburstChart EnableDrillDown="True">
     . . .
     <chart:SfSunburstChart.ToolbarSettings >
-        <chart:SunburstDrillDownToolbarSettings OffsetX="50" OffsetY="100"/>
+        <chart:SunburstToolbarSettings OffsetX="50" OffsetY="100"/>
     </chart:SfSunburstChart.ToolbarSettings>
 </sunburst:SfSunburstChart>
     
@@ -97,7 +97,7 @@ The toolbar's position within the Sunburst Chart can be adjusted both horizontal
 SfSunburstChart sunburst = new SfSunburstChart();
 sunburst.EnableDrillDown = true;
 . . .
-SunburstDrillDownToolbarSettings toolbarSettings = new SunburstDrillDownToolbarSettings()
+SunburstToolbarSettings toolbarSettings = new SunburstToolbarSettings()
 {
     OffsetX = 50,
     OffsetY = 100,
@@ -123,7 +123,7 @@ The appearance of the drill-down toolbar in the Sunburst Chart can be customized
 <sunburst:SfSunburstChart EnableDrillDown="True">
     . . .
     <chart:SfSunburstChart.ToolbarSettings>
-        <chart:SunburstDrillDownToolbarSettings IconBrush="White" Background="#2989F9"/>
+        <chart:SunburstToolbarSettings IconBrush="White" Background="#2989F9"/>
     </chart:SfSunburstChart.ToolbarSettings>
 </sunburst:SfSunburstChart>
     
@@ -134,7 +134,7 @@ The appearance of the drill-down toolbar in the Sunburst Chart can be customized
 SfSunburstChart sunburst = new SfSunburstChart();
 sunburst.EnableDrillDown = true;
 . . .
-SunburstDrillDownToolbarSettings toolbarSettings = new SunburstDrillDownToolbarSettings()
+SunburstToolbarSettings toolbarSettings = new SunburstToolbarSettings()
 {
     IconBrush = Colors.White,
     ackground = new SolidColorBrush(Color.FromArgb("#2989F9")),
