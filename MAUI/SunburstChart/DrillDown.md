@@ -11,11 +11,11 @@ documentation: ug
 
 The drill-down provides better visualization of hierarchy. Large set of data can be virtualized into minimal views. Each level of the segments can be drilled down. The Sunburst Chart provides animation along with the drill-down support. Double tapping the segment performs the drill-down operation. Toolbar will be enabled on drill-down that helps in performing zoom back and reset operations. 
 
-To enable this feature, set the `EnableDrillDown` property to true in SfSunburstChart.
+To enable this feature, set the `EnableDrillDown` property to true in [SfSunburstChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html).
 
 {% tabs %}
 
-{% highlight xml %}
+{% highlight xaml %}
 
 <sunburst:SfSunburstChart EnableDrillDown="True" >
     . . .
@@ -34,7 +34,7 @@ this.Content = sunburst;
 
 {% endtabs %}
 
-## Toolbar alignment
+## Toolbar Alignment
 
 The vertical and the horizontal alignments of the toolbar can be customized using the `VerticalAlignment` and `HorizontalAlignment` properties, respectively.
 
@@ -46,7 +46,7 @@ Both the alignment properties has the following enum types:
 
 {% tabs %}
 
-{% highlight xml %}
+{% highlight xaml %}
 
 <sunburst:SfSunburstChart EnableDrillDown="True">
     . . .
@@ -81,12 +81,12 @@ The toolbar's position within the Sunburst Chart can be adjusted both horizontal
 
 {% tabs %}
 
-{% highlight xml %}
+{% highlight xaml %}
 
 <sunburst:SfSunburstChart EnableDrillDown="True">
     . . .
     <chart:SfSunburstChart.ToolbarSettings >
-        <chart:SunburstDrillDownToolbarSettings OffsetY="100" OffsetX="50"/>
+        <chart:SunburstDrillDownToolbarSettings OffsetX="50" OffsetY="100"/>
     </chart:SfSunburstChart.ToolbarSettings>
 </sunburst:SfSunburstChart>
     
@@ -99,8 +99,8 @@ sunburst.EnableDrillDown = true;
 . . .
 SunburstDrillDownToolbarSettings toolbarSettings = new SunburstDrillDownToolbarSettings()
 {
-    OffsetX = 100,
-    OffsetY = 50,
+    OffsetX = 50,
+    OffsetY = 100,
 };
 sunburst.ToolbarSettings = toolbarSettings;
 this.Content = sunburst;
@@ -109,7 +109,7 @@ this.Content = sunburst;
 
 {% endtabs %}
 
-## Toolbar customization  
+## Toolbar Customization  
 
 The appearance of the drill-down toolbar in the Sunburst Chart can be customized using the following properties
 
@@ -118,7 +118,7 @@ The appearance of the drill-down toolbar in the Sunburst Chart can be customized
 
 {% tabs %}
 
-{% highlight xml %}
+{% highlight xaml %}
 
 <sunburst:SfSunburstChart EnableDrillDown="True">
     . . .
