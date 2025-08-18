@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About .NET MAUI MarkdownViewer | Syncfusion
-description: Learn about the Syncfusion® .NET MAUI MarkdownViewer control, its rendering capabilities, and key features for displaying formatted Markdown content across platforms.
+title: About .NET MAUI MarkdownViewer control | Syncfusion
+description: Learn about the Syncfusion® .NET MAUI SfMarkdownViewer control, its rendering capabilities, and key features for displaying formatted Markdown content across platforms.
 platform: MAUI
-control: MarkdownViewer
+control: SfMarkdownViewer
 documentation: ug
 ---
 
-# .NET MAUI MarkdownViewer Overview
+# .NET MAUI SfMarkdownViewer Overview
 
 The .NET MAUI [SfMarkdownViewer]() is a lightweight and efficient UI control that enables developers to render Markdown content with full formatting support. It provides a seamless way to display documentation, help content, release notes, and other rich text formats in both mobile and desktop applications.
 
@@ -15,8 +15,22 @@ The .NET MAUI [SfMarkdownViewer]() is a lightweight and efficient UI control tha
 
 * **Standard Markdown Support** – Renders headings, bold and italic text, lists, tables, images, code blocks, etc.
 
-**Flexible Input Sources** – Accepts Markdown from local `.md` files, embedded resources, or direct strings.
+* **Flexible Input Sources** – Accepts Markdown from local `.md` files, embedded resources, or direct strings.
 
 * **Smooth Scrolling** – Provides fluid scrolling for large Markdown documents across devices.
 
-![.NET MAUI MarkdownViewer]()
+## Use Case
+
+* **In-app Documentation**  
+  Display user guides, feature tours, and onboarding content directly within the app using Markdown.
+
+* **Release Notes & Changelogs**  
+  Present version updates and feature changes in a consistent, scrollable format.
+
+* **Help & Support Sections**  
+  Provide FAQs, troubleshooting steps, and support articles with styled Markdown content.
+
+* **Interactive Links**  
+  Seamlessly integrate external URLs or internal navigation using automatic link rendering.
+
+![.NET MAUI MarkdownViewer](Images/maui-markdown-viewer-getting-started.png)

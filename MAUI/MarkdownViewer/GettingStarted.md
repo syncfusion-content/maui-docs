@@ -1,16 +1,16 @@
 ---
 layout: post
 title: Getting started with .NET MAUI MarkdownViewer control | Syncfusion
-description: Learn how to get started with Syncfusion® .NET MAUI MarkdownViewer control and explore its capabilities for rendering Markdown content with full formatting support.
+description: Learn how to get started with Syncfusion® .NET MAUI MarkdownViewer (SfMarkdownViewer) control and explore its capabilities for rendering Markdown content with full formatting support.
 platform: MAUI
 control: MarkdownViewer
 documentation: ug
 keywords: .net maui markdownviewer, syncfusion markdownviewer maui, markdown viewer .net maui, .net maui markdown rendering, sfmarkdownviewer example maui, .net maui markdown control, markdown content .net maui, markdown rendering .net maui
 ---
 
-# Getting Started with .NET MAUI MarkdownViewer
+# Getting Started with .NET MAUI MarkdownViewer (SfMarkdownViewer)
 
-This guide details the initial setup and basic usage of the [SfMarkdownViewer]() control, offering insight into its ability to render Markdown content with full formatting support across mobile and desktop platforms.
+This guide details the initial setup and basic usage of the [SfMarkdownViewer]() control, offering insight into its ability to render Markdown content with various formatting capabilities across mobile and desktop platforms.
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -108,6 +108,7 @@ namespace MarkdownViewerGettingStarted
 
 {% endhighlight %}
 {% endtabs %}
+
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
@@ -181,7 +182,7 @@ namespace MarkdownViewerSample
     xmlns:markdown="clr-namespace:Syncfusion.Maui.MarkdownViewer;
     assembly=Syncfusion.Maui.MarkdownViewer">
    
-     <markdown:SfMarkdownViewer Source="Welcome to **Markdown Viewer**!" />
+     <markdown:SfMarkdownViewer />
 
 </ContentPage>
  
@@ -199,40 +200,45 @@ namespace MarkdownViewerGettingStarted
         {
             InitializeComponent();  
             SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
-            markdownViewer.Source = "Welcome to **Markdown Viewer**!";
-            Content = markdownViewer;       
         }
     }   
 }
 
 {% endhighlight %}
 {% endtabs %}
+
+## Step 5: Add Source to the SfMarkdownViewer
+
+To display Markdown content, assign a string to the `Source` property of the SfMarkdownViewer control. This string can contain standard Markdown syntax such as headings, bold text, lists, and images.
+
+{% tabs %} 
+{% highlight xaml %}
+<ContentPage
+    
+    <markdown:SfMarkdownViewer Source="Welcome to **Markdown Viewer**!" />
+
+</ContentPage>
+{% endhighlight %}
+
+{% highlight C# %}
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();  
+        SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
+        markdownViewer.Source = "Welcome to **Markdown Viewer**!";
+        Content = markdownViewer;       
+    }
+}  
+{% endhighlight %}
+{% endtabs %}
+
+N> For more details about binding Markdown content from various sources, refer to [SourceBinding](/MarkdownSources.md).
+
 {% endtabcontent %}
 {% endtabcontents %}
 
-### Render Default Markdown Content
-
-The [SfMarkdownViewer]() control supports standard Markdown syntax including headings, bold and italic text, lists, tables, images, and code blocks. It ensures clean formatting, responsive layout, and seamless integration with your .NET MAUI application.
-
-{% tabs %}
-
-{% highlight markdown %}
-
-# What is Markdown Viewer?  
-Markdown View is a UI control in .NET MAUI that allows developers to render Markdown content with full formatting support.
-
-# Header 1  
-Used for the main title or top-level heading in a Markdown document. 
-
-## Header 2  
-Used to define major sections within your Markdown content.
-
-![image](https://cdn.syncfusion.com/content/images/Xamarin/Mascot-1.png)
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![Output of MarkdownViewer]()
+![Output of Markdown Viewer](Images/maui-markdown-viewer-getting-started.png)
 
 You can access a complete getting started sample from this [link.]()
