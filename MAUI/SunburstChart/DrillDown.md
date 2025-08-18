@@ -9,9 +9,9 @@ documentation: ug
 
 # Drill Down in .NET MAUI Sunburst Chart
 
-The drill-down provides better visualization of hierarchy. Large set of data can be virtualized into minimal views. Each level of the segments can be drilled down. The sunburst chart provides animation along with the drill-down support. Double tapping the segment performs the drill-down operation. Toolbar will be enabled on drill-down that helps in performing zoom back and reset operations. 
+The drill-down provides better visualization of hierarchy. Large set of data can be virtualized into minimal views. Each level of the segments can be drilled down. The Sunburst Chart provides animation along with the drill-down support. Double tapping the segment performs the drill-down operation. Toolbar will be enabled on drill-down that helps in performing zoom back and reset operations. 
 
-To enable this feature, set the `EnableDrillDown` property to true:
+To enable this feature, set the `EnableDrillDown` property to true in SfSunburstChart.
 
 {% tabs %}
 
@@ -26,42 +26,8 @@ To enable this feature, set the `EnableDrillDown` property to true:
 {% highlight c# %}
 
 SfSunburstChart sunburst = new SfSunburstChart();
-sunburst.ShowLabels = true;
+sunburst.EnableDrillDown = true;
 . . .
-this.Content = sunburst;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-## Positioning Toolbar
-
-The toolbar's position within the Sunburst Chart can be adjusted both horizontally and vertically using the `OffsetX` and `OffsetY` properties of the `SunburstToolbarSettings` class.
-
-{% tabs %}
-
-{% highlight xml %}
-
-<sunburst:SfSunburstChart EnableDrillDown="True">
-    . . .
-    <chart:SfSunburstChart.ToolbarSettings >
-        <chart:SunburstDrillDownToolbarSettings OffsetY="100" OffsetX="50"/>
-    </chart:SfSunburstChart.ToolbarSettings>
-</sunburst:SfSunburstChart>
-    
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfSunburstChart sunburst = new SfSunburstChart();
-sunburst.ShowLabels = true;
-. . .
-SunburstDrillDownToolbarSettings toolbarSettings = new SunburstDrillDownToolbarSettings()
-{
-    OffsetX = 100,
-    OffsetY = 50,
-};
-sunburst.ToolbarSettings = toolbarSettings;
 this.Content = sunburst;
 
 {% endhighlight %}
@@ -74,9 +40,9 @@ The vertical and the horizontal alignments of the toolbar can be customized usin
 
 Both the alignment properties has the following enum types:
 
-* Center: Toolbar takes the specified offset value as the center of the toolbar and get positioned.
-* End: Toolbar takes the specified offset value as the start of the toolbar and get positioned.
-* Start: Toolbar takes the specified offset value as the end of the toolbar and get positioned.
+* Start: Aligns the toolbar to the top (for vertical) or left (for horizontal) of the chart plot area.
+* Center: Aligns the toolbar to the center of the chart plot area, either vertically or horizontally.
+* End: Aligns the toolbar to the bottom (for vertical) or right (for horizontal) of the chart plot area.
 
 {% tabs %}
 
@@ -95,7 +61,7 @@ Both the alignment properties has the following enum types:
 {% highlight c# %}
 
 SfSunburstChart sunburst = new SfSunburstChart();
-sunburst.ShowLabels = true;
+sunburst.EnableDrillDown = true;
 . . .
 SunburstDrillDownToolbarSettings toolbarSettings = new SunburstDrillDownToolbarSettings()
 {
@@ -132,12 +98,46 @@ The appearance of the drill-down toolbar in the Sunburst Chart can be customized
 {% highlight c# %}
 
 SfSunburstChart sunburst = new SfSunburstChart();
-sunburst.ShowLabels = true;
+sunburst.EnableDrillDown = true;
 . . .
 SunburstDrillDownToolbarSettings toolbarSettings = new SunburstDrillDownToolbarSettings()
 {
-    IconBrush = Colors.Wheat,
+    IconBrush = Colors.White,
     ackground = new SolidColorBrush(Color.FromArgb("#2989F9")),
+};
+sunburst.ToolbarSettings = toolbarSettings;
+this.Content = sunburst;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Toolbar Positioning
+
+The toolbar's position within the Sunburst Chart can be adjusted both horizontally and vertically using the `OffsetX` and `OffsetY` properties of the `SunburstToolbarSettings` class.
+
+{% tabs %}
+
+{% highlight xml %}
+
+<sunburst:SfSunburstChart EnableDrillDown="True">
+    . . .
+    <chart:SfSunburstChart.ToolbarSettings >
+        <chart:SunburstDrillDownToolbarSettings OffsetY="100" OffsetX="50"/>
+    </chart:SfSunburstChart.ToolbarSettings>
+</sunburst:SfSunburstChart>
+    
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfSunburstChart sunburst = new SfSunburstChart();
+sunburst.EnableDrillDown = true;
+. . .
+SunburstDrillDownToolbarSettings toolbarSettings = new SunburstDrillDownToolbarSettings()
+{
+    OffsetX = 100,
+    OffsetY = 50,
 };
 sunburst.ToolbarSettings = toolbarSettings;
 this.Content = sunburst;
