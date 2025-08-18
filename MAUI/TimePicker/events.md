@@ -45,6 +45,7 @@ private void OnTimePickerSelectionChanged(object sender, TimePickerSelectionChan
 
 {% endtabs %}
 
+N> In `SfTimePicker`, the [SelectedTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_SelectedTime) is confirmed only when the OK button in the footer view is tapped. This behavior applies when the [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Mode) is set to `Dialog` or `RelativeDialog`, the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_Height) of the PickerFooterView is greater than zero, and [ShowOkButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_ShowOkButton) is enabled. Ensuring intentional selection and preventing `SelectionChanged` events during scrolling.
 ## Events in dialog mode
 
 In `SfTimePicker`, three events are used while the time picker is in Dialog mode.
