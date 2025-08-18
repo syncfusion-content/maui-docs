@@ -9,10 +9,12 @@ documentation: ug
 
 # Resource View in .NET MAUI Scheduler (SfScheduler)
 
-The [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) control allows you to group appointments based on the resources associated with them in the timeline day, timeline week, timeline workweek, and timeline month views, with complete business object binding, multi resource appointment sharing and UI customization features.
+The [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) control allows you to group appointments based on the resources associated with them in the day, week, workweek, timeline day, timeline week, timeline workweek, and timeline month views, with complete business object binding, multi resource appointment sharing and UI customization features.
 
 ## Create resources to Scheduler by using SchedulerResource
 You can create a resource view by setting the [Name](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Name), [Id](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Id), [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Background), and [Foreground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Foreground) and [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Foreground) properties of the built-in [SchedulerResource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html) class and assign `SchedulerResource` collection to the scheduler by using the [Resources](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) property of the [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6) class.
+
+In the **Day**, **Week** and **Work Week** views, resources are displayed **horizontally**, whereas in the **Timeline views** (Timeline Day, Timeline Week, Timeline Work Week and Timeline Month), resources are displayed **vertically**.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
@@ -35,6 +37,8 @@ var Resources = new ObservableCollection<SchedulerResource>()
 this.Scheduler.ResourceView.Resources = Resources;
 {% endhighlight %}
 {% endtabs %}
+
+N> The horizontal display of resources in the **Day**, **Week**, and **Work Week** views is supported only on .NET MAUI desktop platforms (**Windows** and **Mac**).
 
 ### Assigning Scheduler resources to appointments
 
@@ -80,6 +84,9 @@ this.Scheduler.AppointmentsSource = appointment;
 
 ![Resource view in .NET MAUI Scheduler.](images/resource-view/resource-view-appointments-in-net-maui-scheduler.png)
 
+![Resource view in Days View in .NET MAUI Scheduler.](images/resource-view/resource-view-appointments-in-days-view-in-net-maui-scheduler.png)
+
+
 ### Multiple resource sharing using Scheduler resources
 
 Multiple resources can share the same events or appointments by declaring resources ids in [ResourceIds](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerRegionBase.html#Syncfusion_Maui_Scheduler_SchedulerRegionBase_ResourceIds) in [ScheduleAppointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) class. If the appointment details are edited or updated, then the changes will be reflected on all other shared instances simultaneously.
@@ -109,6 +116,52 @@ this.Scheduler.AppointmentsSource = appointment;
 {% endtabs %}
 
 ![Resource sharing in .NET MAUI Scheduler.](images/resource-view/resource-view-sharing-in-net-maui-scheduler.png)
+
+![Resource Sharing in Days View in .NET MAUI Scheduler.](images/resource-view/resource-view-sharing-in-days-view-in-net-maui-scheduler.png)
+
+## Resource Grouping in Days View
+ 
+In the **Day**, **Week**, and **Work Week** views, you can control whether dates are grouped under resources or resources are grouped under dates by using the `ResourceGroupType` property of the `SchedulerResourceView` class.
+ 
+### Grouping by Resource
+ 
+The `ResourceGroupType` is set to `Resource` by default. In this mode, the scheduler arranges the dates under each resource.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<schedule:SfScheduler x:Name="Scheduler" View="Week">
+    <scheduler:SfScheduler.ResourceView>
+        <scheduler:SchedulerResourceView ResourceGroupType="Resource"/>
+    </scheduler:SfScheduler.ResourceView>
+</schedule:SfScheduler>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
+this.Scheduler.View = SchedulerView.Week;
+this.Scheduler.ResourceView.ResourceGroupType = SchedulerResourceGroupType.Resource;
+{% endhighlight %}
+{% endtabs %}
+
+![Resource Grouping By Resource in Days View in .NET MAUI Scheduler.](images/resource-view/group-resources-by-resource-in-days-view-in-net-maui-scheduler.png)
+ 
+### Grouping by Date
+ 
+When the `ResourceGroupType` is set to `Date`, the scheduler arranges the resources under each date.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<schedule:SfScheduler x:Name="Scheduler" View="Day">
+    <scheduler:SfScheduler.ResourceView>
+        <scheduler:SchedulerResourceView ResourceGroupType="Date"/>
+    </scheduler:SfScheduler.ResourceView>
+</schedule:SfScheduler>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
+this.Scheduler.View = SchedulerView.Day;
+this.Scheduler.ResourceView.ResourceGroupType = SchedulerResourceGroupType.Date;
+{% endhighlight %}
+{% endtabs %}
+
+![Resource Grouping By Date in Days View in .NET MAUI Scheduler.](images/resource-view/group-resources-by-date-in-days-view-in-net-maui-scheduler.png)
 
 
 ## Business object binding for resources
@@ -305,7 +358,7 @@ N>
 ![Resource minimum row and height in .NET MAUI Scheduler.](images/resource-view/resource-view-minimum-height-in-net-maui-scheduler.png)
 
 ## Assign special time regions to scheduler resources
-You can highlight a resources availability by creating special time regions in the timeline day, timeline week, and timeline workweek views.
+You can highlight a resources availability by creating special time regions in the day, week, workweek, timeline day, timeline week, and timeline workweek views.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="7" %}
@@ -329,6 +382,8 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 {% endtabs %}
 
 ![Resource view special timeregion in .NET MAUI Scheduler.](images/resource-view/special-regions-resources-in-net-maui-scheduler.png)
+
+![Resource View Special Time Region in Days View in .NET MAUI Scheduler.](images/resource-view/special-regions-resources-in-days-view-in-net-maui-scheduler.png)
 
 ## Programmatic resource selection
 You can programmatically select the resource by using the [SelectedResourceId]() and [SelectedDate]() of the SfScheduler. Please [click]() here to see more details about programmatic date selection.
