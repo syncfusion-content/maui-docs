@@ -65,7 +65,13 @@ The following table describes the types of columns and their usage:
 <td>{{'[DataGridComboBoxColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html)'| markdownify }}</td>
 <td>{{'[DataGridComboBoxRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxRenderer.html)'| markdownify }}</td>
 <td>ComboBox</td>
-<td>To display the date and time value.</td>
+<td>To display a combo box control for selecting items from a predefined list.</td>
+</tr>
+<tr>
+<td>{{`DataGridPickerColumn`| markdownify }}</td>
+<td>{{'[DataGridPickerCellRenderer]'| markdownify }}</td>
+<td>Picker</td>
+<td>To display a picker control for selecting items from a predefined list.</td>
 </tr>
 <tr>
 <td>{{'[DataGridUnboundColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundColumn.html)'| markdownify }}</td>
@@ -1011,6 +1017,156 @@ The [DataGridComboBoxColumn.CanFilterSuggestions](https://help.syncfusion.com/cr
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% endtabs %}
+
+## DataGridPickerColumn
+
+The `DataGridPickerColumn` inherits all the properties of the [SfDataGrid.DataGridColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html). It displays a list of items in the form of a [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html) as the content of a column. To enable or disable editing for a particular column, set the [DataGridColumn.AllowEditing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_AllowEditing) property to true or false. When in editing mode, it displays a `SfPicker` element. The data source for the `SfPicker` can be set using the `DataGridPickerColumn.ItemsSource` property. The picker column can be populated with data in the following ways:
+
+* Collection of primitive types
+* Collection of user-defined types (custom objects)
+
+![DataGrid with editing in picker column](Images\column-types\maui-datagrid-picker-column.png)
+
+### Collection of primitive types
+
+To display the collection of items in the Picker drop-down, create a `DataGridPickerColumn` and set its `ItemsSource` property to a simple collection.
+
+To load the `DataGridPickerColumn` with a simple string collection, you can refer to the code example below:
+
+{% tabs %}
+{% highlight xaml %}
+    <ContentPage.BindingContext>
+        <local:ViewModel x:Name="viewModel" />
+    </ContentPage.BindingContext>
+
+    <sfGrid:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}">
+        <sfGrid:SfDataGrid.Columns>
+            <sfGrid:DataGridPickerColumn BindingContext="{x:Reference viewModel}"
+                                         HeaderText="Name"
+                                         ItemsSource="{Binding CustomerNames}"
+                                         MappingName="DealerName" />
+        </sfGrid:SfDataGrid.Columns>
+    </sfGrid:SfDataGrid>
+{% endhighlight %}
+
+{% highlight c# %}
+dataGrid = new SfDataGrid();
+DataGridPickerColumn pickerColumn = new DataGridPickerColumn()
+{
+    BindingContext = viewModel,
+    MappingName = "DealerName",
+    ItemsSource = viewModel.CustomerNames,
+    HeaderText = "Name"
+
+};
+dataGrid.Columns.Add(pickerColumn);
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# %}
+
+public class ViewModel
+{
+    public ObservableCollection<string> CustomerNames { get; set; }
+
+    public ViewModel()
+    {
+        this.CustomerNames = Customers.ToObservableCollection();
+    }
+
+    internal string[] Customers = new string[] {"Adams","Crowley","Ellis","Gable","Irvine","Keefe","Mendoza","Owens","Rooney","Wadded",};
+    
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Collection of user-defined types
+
+To display a list of user-defined items in the picker, create a `DataGridPickerColumn` and set its `ItemsSource` property to a user-defined collection. By default, if the `DisplayMemberPath` is not set, the picker column will display the values from the `MappingName` property of the column.
+
+#### Display member path
+
+Displays a value by comparing values of the properties set as `DataGridColumn.MappingName` and `ValueMemberPath` in their respective underlying collections. If the values of `ValueMemberPath` property contains the current value of `MappingName` property, its corresponding value of `DisplayMemberPath` property is displayed in the `DataGridCell`. Or else the `DataGridCell` appears blank. However, in edit mode the values of the `DisplayMemberPath` property are displayed as picker items.
+
+#### Value member path
+
+Once editing completed, the column having the `MappingName` equal to the `ValueMemberPath` has its data changed to the corresponding `ValueMemberPath` value for the selected `DisplayMemberPath` value in the picker.
+
+### Loading different ItemSource for each row of DataGridPickerColumn
+
+To load different ItemSources for each row of a DataGridPickerColumn, you can utilize the `DataGridPickerColumn.ItemsSourceSelector` property.
+
+### Implementing IItemsSourceSelector
+
+`DataGridPickerColumn.ItemsSourceSelector` needs to implement the IItemsSourceSelector interface, which requires you to implement the GetItemsSource method. This method receives the following parameters:
+
+* Record: This is the data object associated with the row.
+* Data Context: This is the binding context of the data grid.
+
+In the provided code, the ItemsSource for the ShipCity column is returned based on the value of the ShipCountry column. This is done by using the record and the binding context of the data grid, which are passed to the GetItemsSource method.
+
+{% tabs %}
+{% highlight xaml %}
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:ItemSourceSelector x:Key="converter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <sfgrid:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding DealerInformation}"
+                       AllowEditing="True"
+                       AutoGenerateColumnsMode="None"
+                       NavigationMode="Cell"
+                       EditTapAction="OnDoubleTap"
+                       SelectionMode="Single">
+        <sfgrid:SfDataGrid.Columns>
+            <sfgrid:DataGridPickerColumn BindingContext="{x:Reference viewModel}"
+                                         ItemsSource="{Binding CountryList}"
+                                         MappingName="ShipCountry"
+                                         LoadUIView="True">
+            </sfgrid:DataGridPickerColumn>
+
+            <sfgrid:DataGridPickerColumn ItemsSourceSelector="{StaticResource converter}"
+                                         MappingName="ShipCity"
+                                         LoadUIView="True">
+            </sfgrid:DataGridPickerColumn>
+        </sfgrid:SfDataGrid.Columns>
+    </sfgrid:SfDataGrid>
+{% endhighlight %}
+
+{% highlight c# %}
+public class ItemSourceSelector : IItemsSourceSelector
+{
+    public IEnumerable GetItemsSource(object record, object dataContext)
+    {
+        if (record == null)
+        {
+            return null;
+        }
+
+        var orderinfo = record as DealerInfo;
+        var countryName = orderinfo.ShipCountry;
+        var viewModel = dataContext as EditingViewModel;
+
+        // Returns ShipCity collection based on ShipCountry.
+        if (viewModel.ShipCities.ContainsKey(countryName))
+        {
+            string[] shipcities = null;
+            viewModel.ShipCities.TryGetValue(countryName, out shipcities);
+            return shipcities.ToList();
+        }
+
+        return null;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+![DataGrid with ItemSourceSelector picker column](Images\column-types\maui-datagrid-picker-column-itemsourceselector.png)
+![DataGrid with ItemSourceSelector picker column](Images\column-types\maui-datagrid-picker-column-itemsourceselector2.png)
 
 ## DataGridNumericColumn
 
