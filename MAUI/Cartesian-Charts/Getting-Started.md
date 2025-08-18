@@ -14,6 +14,10 @@ keywords: .net maui cartesian chart, .net maui charting, cartesian chart maui, s
 
 This section explains how to populate the Cartesian chart with data, a title, data labels, a legend, and tooltips, as well as the essential aspects for getting started with the chart.
 
+To get start quickly with our [.NET MAUI Cartesian Chart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html), you can check the below video.
+
+{% youtube "https://www.youtube.com/watch?v=o616GkzdPJk&t=7s" %}
+
 {% tabcontents %}
 {% tabcontent Visual Studio %}
 

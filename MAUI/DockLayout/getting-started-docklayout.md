@@ -12,10 +12,6 @@ keywords: .net maui docklayout, syncfusion docklayout maui, dock layout .net mau
 
 This guide details the initial setup and basic usage of the [SfDockLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html) control, offering insight into the layout's capability to arrange views using different docking positions such as top, bottom, left, right, and none.
 
-To get start quickly with our [.NET MAUI DockLayout](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfDockLayout.html), you can check the below video.
-
-{% youtube "https://www.youtube.com/watch?v=g2NU8b_9aAg" %}
-
 {% tabcontents %}
 {% tabcontent Visual Studio %}
 

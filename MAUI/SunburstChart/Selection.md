@@ -8,15 +8,17 @@ documentation: ug
 ---
 # Selection in .NET MAUI Sunburst Chart 
 
-The sunburst chart provides support to select or highlight the segments.
+The sunburst chart provides ssupports selecting and highlighting segments. Selection is triggered by a tap gesture on a segment, enabling users to interact with hierarchical data.
 
 ## Type
 
-The SelectionType property allows you to select a segment based on the following categories:
+The `Type` property in allows you to select a segment based on the following categories:
 * Child: Highlights the selected segment along with its children in all levels.
 * Group: Highlights the entire group of the selected segment in a hierarchy.
 * Parent: Highlights the parent of the selected segment in the hierarchy.
 * Single: Highlights the selected segment alone.
+
+The default value of the `Type` property is `Single`.
 
 The following code shows the `Child` selection type.
 
@@ -108,6 +110,36 @@ this.Content = sunburst;
 
 {% endtabs %}
 
+The following code shows the `Single` selection type.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfSunburstChart>
+    . . .
+    <chart:SfSunburstChart.SelectionSettings>
+        <chart:SunburstSelectionSettings Type="Single"/>
+    </chart:SfSunburstChart.SelectionSettings>
+</chart:SfSunburstChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfSunburstChart sunburstChart = new SfSunburstChart();
+. . .
+SunburstSelectionSettings selectionSettings = new SunburstSelectionSettings
+{
+    Type = SunburstSelectionType.Single
+};
+sunburstChart.SelectionSettings = selectionSettings;
+this.Content = sunburst;
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ## DisplayMode
 
 The `DisplayMode` property provides the following selection options to highlight the segments:
@@ -116,9 +148,11 @@ The `DisplayMode` property provides the following selection options to highlight
 * By opacity
 * By stroke
 
+ The default value of `DisplayMode` is `HighlightByBrush`.
+
 ### Brush 
 
-This mode highlights the selected segment using the brush specified in the `Fill` property.
+This mode highlights the selected segment using the brush defined in the `Fill` property of the `SunburstSelectionSettings`.
 
 {% tabs %}
 
@@ -152,7 +186,7 @@ this.Content = sunburst;
 
 ### Opacity
 
-This mode highlights the selected segment with the opacity specified in the `Opacity` property.
+This mode highlights the selected segment with full opacity as 1, while unselected segments use the opacity value defined in the `Opacity` property.
 
 {% tabs %}
 
