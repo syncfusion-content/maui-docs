@@ -35,7 +35,7 @@ this.dataGrid.ShowToolTip = true;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="MAUI DataGrid displays ToolTip for Record Cell" src="Images\tooltip\maui-datagrid-tooltip-basic.png" width="404" height="396"/>   
+<img alt="MAUI DataGrid displays ToolTip for Record Cell" src="Images\tooltip\maui-datagrid-tooltip-basic.png" width="404" />   
 
 You can enable tooltips for specific columns by setting the `DataGridColumn.ShowToolTip` property to `true` for the desired columns.
 
@@ -86,7 +86,7 @@ You can change the appearance of the ToolTip by customizing the style with Targe
     </ContentPage.Resources>
 {% endhighlight %}
 {% endtabs %}
-<img alt="Customizing ToolTip Style in MAUI DataGrid" src="Images\tooltip\maui-datagrid-tooltip-style.png" width="404" height="396"/> 
+<img alt="Customizing ToolTip Style in MAUI DataGrid" src="Images\tooltip\maui-datagrid-tooltip-style.png" width="404" /> 
 
 ### Customize the ToolTip using ToolTipTemplate
 
@@ -108,7 +108,7 @@ You can customize the appearance and content of tooltips by setting the `SfDataG
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Customizing ToolTip using ToolTipTemplate in MAUI DataGrid" src="Images\tooltip\maui-datagrid-tooltip-template.png" width="404" height="396"/> 
+<img alt="Customizing ToolTip using ToolTipTemplate in MAUI DataGrid" src="Images\tooltip\maui-datagrid-tooltip-template.png" width="404" /> 
 
 ### Customize the ToolTip with ToolTipTemplateSelector
 
@@ -171,11 +171,11 @@ public class ToolTipTemplateSelector : DataTemplateSelector
 
 The below image refers the `DefaultTemplate` which is applied through `ToolTipTemplate`.
 
-<img alt="Customizing ToolTip with ToolTipTemplateSelector in MAUI DataGrid" src="Images\tooltip\maui-datagrid-tooltip-template-selector2.png" height="396" width="404"/>
+<img alt="Customizing ToolTip with ToolTipTemplateSelector in MAUI DataGrid" src="Images\tooltip\maui-datagrid-tooltip-template-selector2.png"  width="404"/>
 
 The below image refers the `AlternateTemplate` which is applied through `ToolTipTemplate`.
 
-<img alt="Displaying AlternateTemplate for ToolTip in MAUI DataGrid" src="Images\tooltip\maui-datagrid-tooltip-template-selector1.png" height="396" width="404"/>
+<img alt="Displaying AlternateTemplate for ToolTip in MAUI DataGrid" src="Images\tooltip\maui-datagrid-tooltip-template-selector1.png" width="404"/>
 
 ## Events
 
