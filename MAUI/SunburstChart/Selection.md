@@ -8,11 +8,11 @@ documentation: ug
 ---
 # Selection in .NET MAUI Sunburst Chart 
 
-The sunburst chart provides supports selecting and highlighting segments. Selection is triggered by a tap gesture on a segment, enabling users to interact with hierarchical data.
+The sunburst chart supports segment selection and highlighting. Selection is triggered by a tap gesture on a segment, allowing users to interact with hierarchical data.
 
 ## Type
 
-The `Type` property in allows you to select a segment based on the following categories:
+The `Type` property allows you to select a segment based on the following categories:
 * Child: Highlights the selected segment along with its children in all levels.
 * Group: Highlights the entire group of the selected segment in a hierarchy.
 * Parent: Highlights the parent of the selected segment in the hierarchy.
