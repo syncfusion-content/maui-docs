@@ -363,6 +363,7 @@ You can highlight a resources availability by creating special time regions in t
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="7" %}
 this.Scheduler.TimelineView.TimeRegions = this.GetTimeRegion();
+this.Scheduler.DaysView.TimeRegions = this.GetTimeRegion();
 
 private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 {
