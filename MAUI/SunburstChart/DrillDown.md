@@ -75,6 +75,40 @@ this.Content = sunburst;
 
 {% endtabs %}
 
+## Toolbar Positioning
+
+The toolbar's position within the Sunburst Chart can be adjusted both horizontally and vertically using the `OffsetX` and `OffsetY` properties of the `SunburstToolbarSettings` class.
+
+{% tabs %}
+
+{% highlight xml %}
+
+<sunburst:SfSunburstChart EnableDrillDown="True">
+    . . .
+    <chart:SfSunburstChart.ToolbarSettings >
+        <chart:SunburstDrillDownToolbarSettings OffsetY="100" OffsetX="50"/>
+    </chart:SfSunburstChart.ToolbarSettings>
+</sunburst:SfSunburstChart>
+    
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfSunburstChart sunburst = new SfSunburstChart();
+sunburst.EnableDrillDown = true;
+. . .
+SunburstDrillDownToolbarSettings toolbarSettings = new SunburstDrillDownToolbarSettings()
+{
+    OffsetX = 100,
+    OffsetY = 50,
+};
+sunburst.ToolbarSettings = toolbarSettings;
+this.Content = sunburst;
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ## Toolbar customization  
 
 The appearance of the drill-down toolbar in the Sunburst Chart can be customized using the following properties
@@ -104,40 +138,6 @@ SunburstDrillDownToolbarSettings toolbarSettings = new SunburstDrillDownToolbarS
 {
     IconBrush = Colors.White,
     ackground = new SolidColorBrush(Color.FromArgb("#2989F9")),
-};
-sunburst.ToolbarSettings = toolbarSettings;
-this.Content = sunburst;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-## Toolbar Positioning
-
-The toolbar's position within the Sunburst Chart can be adjusted both horizontally and vertically using the `OffsetX` and `OffsetY` properties of the `SunburstToolbarSettings` class.
-
-{% tabs %}
-
-{% highlight xml %}
-
-<sunburst:SfSunburstChart EnableDrillDown="True">
-    . . .
-    <chart:SfSunburstChart.ToolbarSettings >
-        <chart:SunburstDrillDownToolbarSettings OffsetY="100" OffsetX="50"/>
-    </chart:SfSunburstChart.ToolbarSettings>
-</sunburst:SfSunburstChart>
-    
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfSunburstChart sunburst = new SfSunburstChart();
-sunburst.EnableDrillDown = true;
-. . .
-SunburstDrillDownToolbarSettings toolbarSettings = new SunburstDrillDownToolbarSettings()
-{
-    OffsetX = 100,
-    OffsetY = 50,
 };
 sunburst.ToolbarSettings = toolbarSettings;
 this.Content = sunburst;
