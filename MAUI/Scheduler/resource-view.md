@@ -135,7 +135,7 @@ The `ResourceGroupType` is set to `Resource` by default. In this mode, the sched
     </scheduler:SfScheduler.ResourceView>
 </schedule:SfScheduler>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 this.Scheduler.View = SchedulerView.Week;
 this.Scheduler.ResourceView.ResourceGroupType = SchedulerResourceGroupType.Resource;
 {% endhighlight %}
@@ -155,7 +155,7 @@ When the `ResourceGroupType` is set to `Date`, the scheduler arranges the resour
     </scheduler:SfScheduler.ResourceView>
 </schedule:SfScheduler>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 this.Scheduler.View = SchedulerView.Day;
 this.Scheduler.ResourceView.ResourceGroupType = SchedulerResourceGroupType.Date;
 {% endhighlight %}
