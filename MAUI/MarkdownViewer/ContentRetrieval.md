@@ -3,7 +3,7 @@ layout: post
 title: Retrieve Content Programmatically in .NET MAUI MarkdownViewer | Syncfusion
 description: Learn how to retrieve and transform Markdown content using built-in methods in the Syncfusion .NET MAUI MarkdownViewer control, including raw Markdown, HTML, and plain text extraction.
 platform: MAUI
-control: MarkdownViewer
+control: SfMarkdownViewer
 documentation: ug
 ---
 
