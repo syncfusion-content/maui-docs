@@ -65,13 +65,13 @@ The following table describes the types of columns and their usage:
 <td>{{'[DataGridComboBoxColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html)'| markdownify }}</td>
 <td>{{'[DataGridComboBoxRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxRenderer.html)'| markdownify }}</td>
 <td>ComboBox</td>
-<td>To display a combo box control for selecting item from a predefined list.</td>
+<td>To display a ComboBox within each cell</td>
 </tr>
 <tr>
 <td>{{`DataGridPickerColumn`| markdownify }}</td>
 <td>{{'[DataGridPickerCellRenderer]'| markdownify }}</td>
 <td>Picker</td>
-<td>To display a picker control for selecting item from a predefined list.</td>
+<td>To display a Picker within each cell</td>
 </tr>
 <tr>
 <td>{{'[DataGridUnboundColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundColumn.html)'| markdownify }}</td>
@@ -1099,37 +1099,6 @@ public class ViewModel
         "UK",
         "USA",
     };
-}
-public class DealerInfo : INotifyPropertyChanged
-{
-    #region Properties
-    private string shipCountry;
-
-    public event PropertyChangedEventHandler? PropertyChanged;
-    public string ShipCountry
-    {
-        get
-        {
-            return this.shipCountry;
-        }
-
-        set
-        {
-            this.shipCountry = value;
-            this.RaisePropertyChanged("ShipCountry");
-        }
-    }
-    #endregion
-
-    #region INotifyPropertyChanged implementation
-    private void RaisePropertyChanged(string name)
-    {
-        if (this.PropertyChanged != null)
-        {
-            this.PropertyChanged(this, new PropertyChangedEventArgs(name));
-        }
-    }
-    #endregion
 }
 {% endhighlight %}
 {% endtabs %}
