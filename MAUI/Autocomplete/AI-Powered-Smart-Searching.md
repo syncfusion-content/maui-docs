@@ -7,303 +7,448 @@ control: SfAutocomplete
 documentation: ug
 ---
 
-# Implementing smart AI searching in .NET MAUI Autocomplete
+# Implementing AI-Powered Smart Search in .NET MAUI Autocomplete
 
-We’ll implement the AI-powered searching using the custom filtering feature of the .NET MAUI Autocomplete control. First, we’ll implement custom filtering, and then we’ll integrate AI search into this filtering process.
+This document will walk you through the implementation of an advanced search functionality in the Syncfusion `.NET MAUI SfAutocomplete` control. The example leverages the power of Azure OpenAI for an intelligent, AI-driven search experience while also providing a robust, offline fallback using phonetic and fuzzy search algorithms.
 
-We have used Azure OpenAI to provide the input prompts and retrieve the filtering results.
+## Implementing custom filtering in .NET MAUI Autocomplete
 
-# Implementing custom filtering in .NET MAUI Autocomplete
-
-The .NET MAUI Autocomplete control allows you to apply custom filter logic to suggest items based on your specific filter criteria by utilizing the FilterBehavior property.
-
-**Step 1:** create a new business model to search country names. Refer to the following code example.
+The `.NET MAUI Autocomplete` control allows you to apply custom filter logic to suggest items based on your specific filter criteria by utilizing the `FilterBehavior` property, which is the entry point for our smart search logic.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight c# %}
 
-//Model.cs
-
-public class CountryModel
+// Model.cs
+public class ComboBoxModel
 {
     public string? Name { get; set; }
 }
 
 //ViewModel.cs
-
-public class CountryViewModel : INotifyPropertyChanged
+public class ComboBoxViewModel : INotifyPropertyChanged
 {
-    private ObservableCollection<CountryModel> countries;
+        private ObservableCollection<ComboBoxModel> foods;
 
-    public ObservableCollection<CountryModel> Countries
-    {
-        get { return countries; }
-        set { countries = value; OnPropertyChanged(nameof(Countries)); }
-    }
-    public CountryViewModel()
-    {
-        countries = new ObservableCollection<CountryModel>
+        public ObservableCollection<ComboBoxModel> Foods
         {
-            new CountryModel { Name = "Afghanistan" },
-            new CountryModel { Name = "Akrotiri" },
-            new CountryModel { Name = "Albania" },
-            new CountryModel { Name = "Algeria" },
-            …..
-        };
-     }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-**Step 2:** Create a new class that derives from the IAutocompleteFilterBehavior interface.
-
-{% tabs %}
-{% highlight C# %}
-
-public class CountryFilterBehavior: IAutocompleteFilterBehavior
-{
-
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-**Step 3:** Next, implement the GetMatchingItemsAsync method from the IAutocompleteFilterBehavior interface to generate a suggestion list. This list should include the filtered items based on your custom logic, which will be displayed in the Autocomplete control’s drop-down. The GetMatchingItemsAsync method includes the following arguments:
-
-`source`: Represents the owner of the filter behavior, providing access to properties such as ItemsSource and other related information.
-`filterInfo`: Contains details about the text entered in the Autocomplete control. You can use this text to prepare the suggestion list, which will be displayed in the drop-down list.
-
-The following code demonstrates how to display a drop-down list of countries using the .NET MAUI Autocomplete control. The list is filtered based on the text entered, displaying only the countries that begin with the input.
-
-{% tabs %}
-{% highlight C# %}
-
-public class CountryFilterBehavior : IAutocompleteFilterBehavior
-{
-    public async Task<object> GetMatchingItemsAsync(SfAutocomplete source, AutocompleteFilterInfo filterInfo)
-    {
-        IEnumerable itemssource = source.ItemsSource as IEnumerable;
-        var filteredItems = (from CountryModel item in itemssource
-                             where item.Name.StartsWith(filterInfo.Text, StringComparison.CurrentCultureIgnoreCase) 
-                             select item);
-
-        return await Task.FromResult(filteredItems);
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-**Step 4:** Apply custom filtering to the .NET MAUI Autocomplete control using the FilterBehavior property.
-
-{% tabs %}
-{% highlight XAML %}
-
-<ContentPage.BindingContext>
-    <local: CountryViewModel />
-</ContentPage.BindingContext>
-
-<VerticalStackLayout>
-    <syncfusion:SfTextInputLayout Hint="Enter Country Name"
-        ContainerType="Outlined"
-        WidthRequest="248"
-        ContainerBackground="Transparent">
-        <editors:SfAutocomplete x:Name="autoComplete" 
-            DropDownPlacement="Bottom"
-            MaxDropDownHeight="200"
-            TextSearchMode="StartsWith"
-            DisplayMemberPath="Name"
-            ItemsSource="{Binding Countries}">
-     	    <editors:SfAutocomplete.FilterBehavior>
-         	<local: CountryFilterBehavior />
-     	    </editors:SfAutocomplete.FilterBehavior>
- 	</editors:SfAutocomplete>
-    </syncfusion:SfTextInputLayout>
-</VerticalStackLayout>
-
-{% endhighlight %}
-{% endtabs %}
-
-# Integrating Azure OpenAI with your .NET MAUI App
-
-First, ensure you have access to Azure OpenAI and have created a deployment in the Azure portal.
-
-If you don’t have access, please refer to the create and deploy Azure OpenAI service guide to set up a new account.
-
-we’ll use the Azure.AI.OpenAI NuGet package from the NuGet Gallery. So, before getting started, install the Azure.AI.OpenAI NuGet package in your .NET MAUI app.
-
-## Setting up Azure OpenAI
-Let’s begin creating the Azure OpenAI service.
-
-**Step 1:** We’ll assume that the GPT-35 model, deployed under GPT35Turbo, is being used. Be sure to replace the endpoint, deployment name, and key with your specific details.
-
-**Step 2:** Next, use the ChatCompletionsOptions to specify the prompt format for the system, user, and assistant messages in the Azure OpenAI. In our app, we’ve used the following messages as input.
-
-`ChatRequestSystemMessage` – You are a filtering assistant.
-`ChatRequestUserMessage` – Filter the list items based on the user input using characters Starting with and Phonetic algorithms like Soundex or Damerau-Levenshtein Distance. \” +\r$\”The filter should ignore spelling mistakes and be case insensitive.
-`ChatRequestAssistantMessage` – Afghanistan\nAkrotiri\nAlbania\nAlgeria\nAmerican Samoa \nAndorra\nAngola\nAnguilla
-
-**Step 3:** Then, use the OpenAIClient to manage the ChatCompletionsOptions and obtain the completion results with the GetChatCompletionsAsync method. We’ve previously defined the ChatRequestAssistantMessage format for the AI response. This allows us to receive the proper format of the response message. The following is the code for the AzureOpenAIService class.
-
-{% tabs %}
-{% highlight C# %}
-public class AzureOpenAIService
-{
-    const string endpoint = "https://{YOUR_END_POINT}.openai.azure.com";
-    const string deploymentName = "GPT35Turbo";
-    const string key = "";
-    private OpenAIClient? client;
-    private ChatCompletionsOptions? chatCompletions;
-    public AzureOpenAIService()
-    {
-        InitializeClient();
-    }
-
-    public void InitializeClient()
-    {
-        client = new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(key));
-        chatCompletions = new ChatCompletionsOptions
-        {
-            DeploymentName = deploymentName,
-            Temperature = (float)1.2f,
-            MaxTokens = 120,
-            NucleusSamplingFactor = (float)0.9,
-            FrequencyPenalty = 0.8f,
-            PresencePenalty = 0.8f
-        };
-        // Add the system message to the options.  
-        chatCompletions.Messages.Add(new ChatRequestSystemMessage("You are a filtering assistant."));
-        chatCompletions.Messages.Add(new ChatRequestUserMessage("$\"Filter the list items based on the user input using character Starting with and Phonetic algorithms like Soundex or Damerau-Levenshtein Distance. \" +\r$\"The filter should ignore spelling mistakes and be case insensitive."));       
-
-         chatCompletions.Messages.Add(newChatRequestAssistantMessage(
-           "\nAfghanistan\nAkrotiri\nAlbania\nAlgeria\nAmerican Samoa \nAndorra\nAngola\nAnguilla"));
-    }
-   
-    public async Task<string> GetCompletion(string prompt, CancellationToken cancellationToken)
-    {
-     if (chatCompletions != null && client != null)
-     {
-         if (chatCompletions.Messages.Count > 5)
-         {
-             //Remove the message history to avoid exceeding the token limit.
-             chatCompletions.Messages.RemoveAt(1); 
-             chatCompletions.Messages.RemoveAt(1);
-         }
-         // Add the user message to the options.
-         chatCompletions.Messages.Add(new ChatRequestUserMessage(prompt));
-         try
-         {
-            //Here, cancelling the previous request to continue our search.
-             cancellationToken.ThrowIfCancellationRequested();
-             var chatresponse = await client.GetChatCompletionsAsync(chatCompletions);
-             cancellationToken.ThrowIfCancellationRequested();
-             string chatcompletionText = chatresponse.Value.Choices[0].Message.Content.Trim();
-             chatCompletions.Messages.Add(new ChatRequestAssistantMessage(chatcompletionText));
-             return chatcompletionText;
-         }
-         catch (RequestFailedException ex)
-         {
-             // Log the error message and rethrow the exception or handle it appropriately.
-             Debug.WriteLine($"Request failed: {ex.Message}");
-             throw;
-         }
-         catch (Exception ex)
-         {
-             // Handle other potential exceptions.
-             Debug.WriteLine($"An error occurred: {ex.Message}");
-             throw;
-         }
-     }
-     return "";
- }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Connecting to Azure OpenAI
-
-In our .NET MAUI app, we can establish a connection to the Azure OpenAI service through a custom filtering class.
-
-The custom filtering class uses the GetMatchingItemsAsync method, which is invoked each time when we provide input text into the Autocomplete control. By connecting to Azure OpenAI service, we create a prompt based on the entered text and retrieve the response message. And then, we convert the response message to an output collection.
-
-So, modify the existing CountryFilterBehavior to connect to Azure OpenAI service. Refer to the following code example.
-
-{% tabs %}
-{% highlight C# %}
-
-public class CountryFilterBehavior: IAutocompleteFilterBehavior
-{
-    private readonly AzureAIService _azureAIService;
-    public ObservableCollection<CountryModel> Countries { get; set; }
-    public ObservableCollection<CountryModel> FilteredCountries { get; set; } = new ObservableCollection<CountryModel>();
-    private CancellationTokenSource? _cancellationTokenSource;
-
-    public CountryFilterBehavior ()
-    {
-        _azureAIService = new AzureAIService();
-        Countries = new ObservableCollection<CountryModel>();
-        _cancellationTokenSource = new CancellationTokenSource();
-    } 
-    public async Task<object?> GetMatchingItemsAsync(SfAutocomplete source, AutocompleteFilterInfo filterInfo)
-    {
-        if (string.IsNullOrEmpty(filterInfo.Text))
-        {
-           _cancellationTokenSource?.Cancel();
-           FilteredCountries.Clear();
-           return await Task.FromResult(FilteredCountries);
+            get { return foods; }
+            set { foods = value; OnPropertyChanged(nameof(Foods)); }
         }
-        Countries = (ObservableCollection<CountryModel>)source.ItemsSource;
-        string listItems = string.Join(", ", Countries!.Select(c => c.Name));
-        // Join the first five items with newline characters for the demo output template for AI           
-        string outputTemplate = string.Join("\n", Countries.Take(5).Select(c => c.Name));
-        //The cancellationToken was used for cancelling the API request if user types continuously       
-        _cancellationTokenSource?.Cancel();
-        _cancellationTokenSource = new CancellationTokenSource();
-        var cancellationToken = _cancellationTokenSource.Token;
-        // Filter the country list using the Azure open AI
-        var filterCountries = await FilterCountriesUsingAzureOpenAI(filterInfo.Text, listItems, outputTemplate, cancellationToken);
-        return await Task.FromResult(filterCountries);
-    }
-    
-    /// <summary>
-    /// Filters country names based on user input using Azure AI.
-    /// </summary> 
-    public async Task<ObservableCollection<CountryModel>> FilterCountriesUsingAzureOpenAI(string userInput, string itemsList, string outputTemplate, CancellationToken cancellationToken)
-    {
-        if (!string.IsNullOrEmpty(userInput))
+        public ComboBoxViewModel()
         {
-            //Add the prompt based on your filtering
-            var prompt = $"Filter the list items based on the user input using character Starting with and Phonetic algorithms like Soundex or Damerau-Levenshtein Distance. " +
-                         $"The filter should ignore spelling mistakes and be case insensitive. " +
-                         $"Return only the filtered items with each item in new line without any additional content like explanations, Hyphen, Numberings and - Minus sign. Ignore the content 'Here are the filtered items or similar things' " +
-                         $"Only return items that are present in the List Items. " +
-                         $"Ensure that each filtered item is returned in its entirety without missing any part of its content. " +
-                         $"Arrange the filtered items that starting with the user input's first letter are at the first index, followed by other matches. " +
-                         $"Examples of filtering behavior: " +
-                         $"The example data are for reference, dont provide these as output. Filter the item from list items properly" +
-                         $"Here is the User input: {userInput}, " +
-                         $"List of Items: {itemsList}" +
-                         $"If no items found, return \"Empty\" " +
-                         $"Dont use 'Here are the filtered items:' in the output. Check this demo output template, you should return output like this: {outputTemplate} ";
-
-            var completion = await _azureAIService.GetCompletion(prompt, cancellationToken);
-            var filteredCountryNames = completion.Split('\n').Select(x => x.Trim()).Where(x => !string.IsNullOrEmpty(x)).ToList();
-            if (FilteredCountries.Count > 0)
-                FilteredCountries.Clear();
-            if (completion.ToLower().Trim() != "empty")
-                        {
-                foreach (var country in filteredCountryNames)
-                {
-                    FilteredCountries.Add(new CountryModel { Name = country });
+             foods = new ObservableCollection<ComboBoxModel>
+             {
+                new ComboBoxModel { Name = "Acai Bowl" },
+                new ComboBoxModel { Name = "Aloo Gobi" },
+                new ComboBoxModel { Name = "Arepas" },
+                new ComboBoxModel { Name = "Baba Ganoush" },
+                new ComboBoxModel { Name = "Bagels" },
+                new ComboBoxModel { Name = "Bahn Xeo" },
+                ....
             }
-         }
-     }
-     return FilteredCountries;
- }
+        }
+
+        public event PropertyChangedEventHandler? PropertyChanged;
+
+        private void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+}
 
 {% endhighlight %}
+
+{% endtabs %}
+
+### Connecting the Custom Filter to Azure OpenAI
+
+ Implement the `GetMatchingItemsAsync` method from the interface. This method is the heart of the custom filter. It is invoked every time the text in the `Autocomplete` control changes. 
+
+The logic within `GetMatchingItemsAsync` intelligently decides whether to perform an online AI search or an offline algorithmic search based on the availability of Azure credentials.
+
+To get accurate and structured results from the AI, we must provide a detailed prompt. This is constructed inside the 
+`FilterCountriesUsingAzureAI` method.
+
+The `FilterCountriesUsingAzureAI` method uses prompt engineering to instruct the AI on how to filter the results, including asking it to handle spelling mistakes and providing the response in a clean, parsable format.
+
+{% tabs %}
+{% highlight c# %}
+
+//ComboBoxCustomFilter.cs
+
+public class ComboBoxCustomFilter : IComboBoxFilterBehavior
+{
+        private readonly ComboBoxAzureAIService _azureAIService;
+        public ObservableCollection<ComboBoxModel> Items { get; set; }
+        public ObservableCollection<ComboBoxModel> FilteredItems { get; set; } = new ObservableCollection<ComboBoxModel>();
+        private CancellationTokenSource? _cancellationTokenSource;
+        private SoundexAndLevensteinAlgorithm soundexAndLevensteinAlgorithm;
+
+        public ComboBoxCustomFilter()
+        {
+            _azureAIService = new ComboBoxAzureAIService();
+            Items = new ObservableCollection<ComboBoxModel>();
+            _cancellationTokenSource = new CancellationTokenSource();
+            soundexAndLevensteinAlgorithm = new SoundexAndLevensteinAlgorithm();
+        }
+
+        public async Task<object?> GetMatchingIndexes(SfComboBox source, ComboBoxFilterInfo filterInfo)
+        {
+            Items = (ObservableCollection<ComboBoxModel>)source.ItemsSource;
+
+            if (string.IsNullOrEmpty(filterInfo.Text))
+            {
+                _cancellationTokenSource?.Cancel();
+                return await Task.FromResult(Items);
+            }
+            
+            // If the Azure API credential is invalid, perform an offline search using Soundex and Levenshtein algorithms.
+            if (!AzureBaseService.IsCredentialValid)
+            {
+                foreach (ComboBoxModel item in Items)
+                {
+                    soundexAndLevensteinAlgorithm.FilterItemsBySoundexAndLevenshtein(filterInfo.Text, item.Name!);
+                }
+                var filteredItemsInOrder = soundexAndLevensteinAlgorithm.GetOrder();              
+                return await Task.FromResult(filteredItemsInOrder);
+            }           
+
+            string listItems = string.Join(", ", Items!.Select(c => c.Name));
+
+            // Join the first five items with newline characters for demo output template for AI.           
+            string outputTemplate = string.Join("\n", Items.Take(5).Select(c => c.Name));
+
+            //The cancellationToken was used for cancelling the API request if user types continuously.       
+            _cancellationTokenSource?.Cancel();
+            _cancellationTokenSource = new CancellationTokenSource();
+            var cancellationToken = _cancellationTokenSource.Token;
+
+            //Passing the User Input, ItemsSource, Reference output and CancellationToken
+            var filteredItems = await FilterItemsUsingAzureAI(filterInfo.Text, listItems, outputTemplate, cancellationToken);
+          
+            return await Task.FromResult(filteredItems);
+        }
+
+        public async Task<ObservableCollection<ComboBoxModel>> FilterItemsUsingAzureAI(string userInput, string itemsList, string outputTemplate, CancellationToken cancellationToken)
+        {
+            if (!string.IsNullOrEmpty(userInput))
+            {
+                var prompt = $"Filter the list items based on the user input using character Starting with and Phonetic algorithms like Soundex or Damerau-Levenshtein Distance. " +
+                           $"The filter should ignore spelling mistakes and be case insensitive. " +
+                           $"Return only the filtered items with each item in new line without any additional content like explanations, Hyphen, Numberings and - Minus sign. Ignore the content 'Here are the filtered items or similar things' " +
+                           $"Only return items that are present in the List Items. " +
+                           $"Ensure that each filtered item is returned in its entirety without missing any part of its content. " +
+                           $"Arrange the filtered items that starting with the user input's first letter are at the first index, followed by other matches. " +
+                           $"Examples of filtering behavior: " +
+                           $" userInput: a, filter the items starting with A " +
+                           $" userInput: b, filter items starting with B " +
+                           $" userInput: c, filter items starting with C " +
+                           $" userInput: d, filter items starting with D " +
+                           $" userInput: e, filter items starting with E " +
+                           $" userInput: f, filter items starting with F " +
+                           $" userInput: i, filter items starting with I " +
+                           $" userInput: z, filter items starting with Z " +
+                           $" userInput: l, filter items starting with L " +
+                           $" userInput: q, filter items starting with Q " +
+                           $" userInput: o, filter items starting with O " +
+                           $" userInput: in, filter items starting with In " +
+                           $" userInput: pa, filter items starting with Pa " +
+                           $" userInput: em, filter items starting with Em " +
+                           $"The example data are for reference, dont provide these as output. Filter the item from list items properly" +
+                           $"Here is the User input: {userInput}, " +
+                           $"List of Items: {itemsList}" +
+                           $"If no items found, return \"Empty\" " +
+                           $"Dont use 'Here are the filtered items:' in the output. Check this demo output template, you should return output like this: {outputTemplate} ";
+
+                var completion = await _azureAIService.GetCompletion(prompt, cancellationToken);
+
+                var filteredItems = completion.Split('\n').Select(x => x.Trim()).Where(x => !string.IsNullOrEmpty(x)).ToList();
+
+                if (FilteredItems.Count > 0)
+                    FilteredItems.Clear();
+                FilteredItems.AddRange(
+                        Items
+                        .Where(i => filteredItems.Any(item => i.Name!.StartsWith(item))));
+
+                cancellationToken.ThrowIfCancellationRequested();
+            }
+            return FilteredItems;
+        }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+Applying custom filtering to the `Autocomplete` control by using the `FilterBehavior` property.
+
+{% tabs %}
+{% highlight c# %}
+
+<syncfusion:SfTextInputLayout Hint="Enter Country Name"
+                              ContainerType="Outlined"
+                              WidthRequest="248"
+                              ContainerBackground="Transparent">
+    <editors:SfAutocomplete x:Name="autoComplete" 
+                              DropDownPlacement="Bottom"
+                              MaxDropDownHeight="200"
+                              TextSearchMode="Contains"
+                              DisplayMemberPath="Name"
+                              TextMemberPath="Name"
+                              ItemsSource="{Binding Countries}">
+        <editors:SfAutocomplete.FilterBehavior>
+            <local:CustomFilter/>
+        </editors:SfAutocomplete.FilterBehavior>
+    </editors:SfAutocomplete>
+</syncfusion:SfTextInputLayout>
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Online Search: Integrating with Azure OpenAI
+
+When Azure credentials are available, the application performs a real-time, intelligent search using AI.
+
+### The Azure AI Service
+
+In the `GetCompletion` method, we will construct the prompt and send it to the Azure OpenAI Service. The ChatHistory helps maintain context but is cleared for each new prompt in this implementation to ensure each search is independent.
+
+{% tabs %}
+{% highlight c# %}
+
+//ComboBoxAzureAIService.cs
+
+public class ComboBoxAzureAIService : AzureBaseService
+{
+        /// <summary>
+        /// Gets a completion response from the AzureAI service based on the provided prompt.
+        /// </summary>
+        /// <param name="prompt"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public async Task<string> GetCompletion(string prompt, CancellationToken cancellationToken)
+        {
+            ChatHistory = string.Empty;
+            if (ChatHistory != null && Client != null)
+            {
+                ChatHistory = ChatHistory + "You are a filtering assistant.";
+                // Add the user message to the options
+                ChatHistory = ChatHistory + prompt;
+                try
+                {
+                    cancellationToken.ThrowIfCancellationRequested();
+                    var chatresponse = await Client.CompleteAsync(ChatHistory);
+                    cancellationToken.ThrowIfCancellationRequested();
+                    return chatresponse.ToString();
+                }
+                catch (RequestFailedException ex)
+                {
+                    // Log the error message and rethrow the exception or handle it appropriately
+                    Debug.WriteLine($"Request failed: {ex.Message}");
+                    throw;
+                }
+                catch (Exception ex)
+                {
+                    // Handle other potential exceptions
+                    Debug.WriteLine($"An error occurred: {ex.Message}");
+                    throw;
+                }
+            }
+            return "";
+        }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Offline Search with Soundex and Levenshtein Distance
+
+For a seamless user experience when offline, the application implements a fallback using the Filtering Algorithm.
+
+`Soundex` is a phonetic algorithm that indexes names by their sound when pronounced in English. It is excellent for matching names that sound similar but are spelled differently.
+`Damerau-Levenshtein distance` is a string metric that measures the "edit distance" between two sequences. It is highly effective at catching common typing errors.
+
+The `FilterItemsBySoundexAndLevenshtein`method calculates these values, and any item that is a phonetic match or within a close spelling distance is added to the results. 
+
+The `GetOrder` method then sorts these results by their edit distance, ensuring the most accurate matches appear first.
+
+{% tabs %}
+{% highlight c# %}
+
+//SoundexAndLevensteinAlgorithm.cs
+
+public class SoundexAndLevensteinAlgorithm
+{
+        ObservableCollection<string> processedItems = new ObservableCollection<string>();
+        ObservableCollection<SearchData> filteredSearchResults = new ObservableCollection<SearchData>();
+
+        List<string> soundexTerms = new List<string>() { };
+
+        public SoundexAndLevensteinAlgorithm()
+        {
+            soundexTerms.Add("aeiouhyw");
+            soundexTerms.Add("bfpv");
+            soundexTerms.Add("cgikqsxz");
+            soundexTerms.Add("dt");
+            soundexTerms.Add("l");
+            soundexTerms.Add("mn");
+            soundexTerms.Add("r");
+        }
+
+        /// <summary>
+        /// Validate the Soundex and Levenshtein Distance for the user input against each source item.
+        /// </summary>
+        /// <param name="inputValue"></param>
+        /// <param name="itemValue"></param>
+        /// <returns></returns>
+        public bool FilterItemsBySoundexAndLevenshtein(object inputValue, object itemValue)
+        {
+            if (inputValue != null && itemValue != null)
+            {
+                var inputString = inputValue.ToString()!.ToLower();
+                var itemString = itemValue.ToString()!.ToLower();
+                if (inputString.Length > 0 && itemString.Length > 0)
+                    if (inputString[0] != itemString[0])
+                        return false;
+                var trimmedInputString = string.Empty;
+                var trimmedItemString = string.Empty;
+
+                if (inputString.Length < itemString.Length)
+                {
+                    trimmedItemString = itemString.Remove(inputString.Length);
+                    trimmedInputString = inputString;
+                }
+
+                if (itemString.Length < inputString.Length)
+                {
+                    return false;
+                }
+
+                if (itemString.Length == inputString.Length)
+                {
+                    trimmedInputString = inputString;
+                    trimmedItemString = itemString;
+                }
+                bool IsMatchSoundex = ProcessOnSoundexAlgorithmn(trimmedInputString) == ProcessOnSoundexAlgorithmn(trimmedItemString);
+                int Distance = GetDamerauLevenshteinDistance(trimmedInputString, trimmedItemString);
+
+                if (IsMatchSoundex || Distance <= 4)
+                {
+                    var searchData = new SearchData() { Item = itemValue.ToString(), Distance = Distance };
+                    if (!processedItems.Contains(itemValue.ToString()!))
+                    {
+                        filteredSearchResults.Add(searchData);
+                        processedItems.Add(itemValue.ToString()!);
+                    }
+                    return true;
+                }
+                else
+                    return false;
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Computes the Soundex value for the given input string.
+        /// </summary>
+        /// <returns>The on soundex algorithmn.</returns>
+        /// <param name="input">Input.</param>
+        /// <param name="moreAccuracy">If set to <c>true</c> more accuracy.</param>
+        public string ProcessOnSoundexAlgorithmn(string input, bool moreAccuracy = true)
+        {
+            string stringValue = string.Empty;
+            foreach (var item in input.ToLower())
+            {
+                for (int i = 0; i < soundexTerms.Count; i++)
+                {
+                    if (soundexTerms[i].Contains(item.ToString()))
+                    {
+                        stringValue += i.ToString();
+                        continue;
+                    }
+                }
+            }
+            if (stringValue.Length > 0)
+            {
+                if (moreAccuracy)
+                {
+                    stringValue = stringValue.Insert(0, input[0].ToString());
+                    stringValue = stringValue.Replace("0", "");
+                }
+            }
+            return stringValue;
+        }
+
+        /// <summary>
+        /// Computes the Damerau-Levenshtein distance between two strings
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="target"></param>
+        /// <returns></returns>
+        public int GetDamerauLevenshteinDistance(string source, string target)
+        {
+            var bounds = new { Height = source.Length + 1, Width = target.Length + 1 };
+
+            int[,] matrix = new int[bounds.Height, bounds.Width];
+
+            for (int height = 0; height < bounds.Height; height++) { matrix[height, 0] = height; };
+            for (int width = 0; width < bounds.Width; width++) { matrix[0, width] = width; };
+
+            for (int height = 1; height < bounds.Height; height++)
+            {
+                for (int width = 1; width < bounds.Width; width++)
+                {
+                    int cost = (source[height - 1] == target[width - 1]) ? 0 : 1;
+                    int insertion = matrix[height, width - 1] + 1;
+                    int deletion = matrix[height - 1, width] + 1;
+                    int substitution = matrix[height - 1, width - 1] + cost;
+
+                    int distance = Math.Min(insertion, Math.Min(deletion, substitution));
+
+                    if (height > 1 && width > 1 && source[height - 1] == target[width - 2] && source[height - 2] == target[width - 1])
+                    {
+                        distance = Math.Min(distance, matrix[height - 2, width - 2] + cost);
+                    }
+
+                    matrix[height, width] = distance;
+                }
+            }
+            return matrix[bounds.Height - 1, bounds.Width - 1];
+        }
+
+        /// <summary>
+        /// Arrange and return filtered items based on their Levenshtein distance
+        /// </summary>
+        /// <returns></returns>
+        public ObservableCollection<ComboBoxModel> GetOrder()
+        {
+            ObservableCollection<ComboBoxModel> orderedSource = new ObservableCollection<ComboBoxModel>();
+            for (int i = 0; i < 10; i++)
+            {
+                int count = 0;
+                for (int c = 0; c < filteredSearchResults.Count; c++)
+                {
+                    count++;
+                    if (filteredSearchResults[c] != null && filteredSearchResults[c].Distance == i)
+                    {
+                        orderedSource.Add(new ComboBoxModel() { Name = filteredSearchResults[c].Item! });
+                    }
+                }
+            }
+            processedItems.Clear();
+            filteredSearchResults.Clear();
+            return orderedSource;
+        }
+}
+
+{% endhighlight %}
+
 {% endtabs %}
 
 The following image demonstrates the output of the above AI-based search using a custom filtering sample.
+
+![.NET MAUI AutoComplete With AI Smart Search.](Images/\AISmartSearch/ai_smart_ssearch.png)
+
+By combining a powerful AI-driven online search with a robust, algorithm-based offline fallback, you can create a truly smart and reliable search experience in your .NET MAUI applications.
