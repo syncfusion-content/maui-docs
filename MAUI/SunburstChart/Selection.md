@@ -8,7 +8,7 @@ documentation: ug
 ---
 # Selection in .NET MAUI Sunburst Chart 
 
-The sunburst chart supports segment selection and highlighting. Selection is triggered by a tap gesture on a segment, allowing users to interact with hierarchical data.
+The Sunburst chart supports segment selection and highlighting. Selection is triggered by a tap gesture on a segment, allowing users to interact with hierarchical data.
 
 ## Type
 
@@ -50,6 +50,8 @@ this.Content = sunburst;
 
 {% endtabs %}
 
+![Child selection in MAUI Sunburst Chart.](Selection_images/maui_selection_type_child.png)
+
 The following code shows the `Group` selection type.
 
 {% tabs %}
@@ -79,6 +81,8 @@ this.Content = sunburst;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Group selection in MAUI Sunburst Chart.](Selection_images/maui_selection_type_group.png)
 
 The following code shows the `Parent` selection type.
 
@@ -110,6 +114,8 @@ this.Content = sunburst;
 
 {% endtabs %}
 
+![Parent selection in MAUI Sunburst Chart.](Selection_images/maui_selection_type_parent.png)
+
 The following code shows the `Single` selection type.
 
 {% tabs %}
@@ -139,6 +145,8 @@ this.Content = sunburst;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Single selection in MAUI Sunburst Chart.](Selection_images/maui_selection_type_single.png)
 
 ## DisplayMode
 
@@ -184,6 +192,8 @@ this.Content = sunburst;
 
 {% endtabs %}
 
+![ DisplayMode HighlightByBrush.](Selection_images/maui_selection_highlight_by_brush.png)
+
 ### Opacity
 
 This mode highlights the selected segment with full opacity as 1, while unselected segments use the opacity value defined in the `Opacity` property.
@@ -217,6 +227,8 @@ this.Content = sunburst;
 {% endhighlight %}
 
 {% endtabs %}
+
+![ DisplayMode HighlightByOpacity.](Selection_images/maui_selection_highlight_by_opacity.png)
 
 ### Stoke 
 
@@ -252,6 +264,8 @@ this.Content = sunburst;
 {% endhighlight %}
 
 {% endtabs %}
+
+![ DisplayMode HighlightByOpacity.](Selection_images/maui_selection_highlight_by_stroke.png)
 
 ## Events 
 
