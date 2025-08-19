@@ -121,7 +121,7 @@ this.Scheduler.AppointmentsSource = appointment;
 
 ## Resource Grouping in Days View
  
-In the **Day**, **Week**, and **Work Week** views, you can control whether dates are grouped under resources or resources are grouped under dates by using the `ResourceGroupType` property of the `SchedulerResourceView` class.
+In the **Day**, **Week**, and **Work Week** views, you can control whether dates are grouped under resources or resources are grouped under dates by using the `ResourceGroupType` property of the [`SchedulerResourceView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) class.
  
 ### Grouping by Resource
  
@@ -356,6 +356,52 @@ N>
 * If the MinimumRowHeight is less than the default row height then the default row height will be used.
 
 ![Resource minimum row and height in .NET MAUI Scheduler.](images/resource-view/resource-view-minimum-height-in-net-maui-scheduler.png)
+
+## Resource Header Height in Days View
+ 
+In the day, week, and work week views, resources are arranged horizontally. The height of the resource headers can be customized using the `ResourceHeaderHeight` property of the [`SchedulerResourceView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) class.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<schedule:SfScheduler x:Name="Scheduler" View="Day" >
+<schedule:SfScheduler.ResourceView>
+    <schedule:SchedulerResourceView ResourceHeaderHeight="100"/>
+</schedule:SfScheduler.ResourceView>
+</schedule:SfScheduler>
+{% endhighlight %}
+{% highlight C# %}
+
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.Day;
+scheduler.ResourceView.ResourceHeaderHeight = 100;
+this.Content = scheduler;
+
+{% endhighlight %}
+{% endtabs %}
+
+## Visible Resource Count in Days View
+ 
+The number of resources shown in the day, week, and work week views can be controlled using the `VisibleResourceCount` property of the [`SchedulerResourceView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) class. This lets you define how many resources are visible at a time.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<schedule:SfScheduler x:Name="Scheduler" View="Day" >
+<schedule:SfScheduler.ResourceView>
+    <schedule:SchedulerResourceView VisibleResourceCount="4"/>
+</schedule:SfScheduler.ResourceView>
+</schedule:SfScheduler>
+{% endhighlight %}
+{% highlight C# %}
+
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.Day;
+scheduler.ResourceView.VisibleResourceCount = 4;
+this.Content = scheduler;
+
+{% endhighlight %}
+{% endtabs %}
+
+N> If the value assigned to `VisibleResourceCount` is greater than the total number of resources, the scheduler will display all the resources in the SchedulerResource collection.
 
 ## Assign special time regions to scheduler resources
 You can highlight a resources availability by creating special time regions in the day, week, workweek, timeline day, timeline week, and timeline workweek views.
