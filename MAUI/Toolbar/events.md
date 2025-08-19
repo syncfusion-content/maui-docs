@@ -185,7 +185,7 @@ private void OnMoreButtonTapped(object? sender, ToolbarMoreButtonTappedEventArgs
 
 {% endtabs %}
 
-## SelectionChanged
+## Selection Changed
 
 A [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_SelectionChanged) event occurs, each time a toolbar item is selected.
 
@@ -210,8 +210,8 @@ Below is a list of the arguments:
 
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
-this.toolbar.Tapped += this.OnToolbarTapped;
-private void OnToolbarTapped(object? sender, ToolbarSelectionChangedEventArgs e)
+this.toolbar.SelectionChanged += this.OnToolbarSelectionChanged;
+private void OnToolbarSelectionChanged(object? sender, ToolbarSelectionChangedEventArgs e)
 {
     var newToolbarItems = e.NewToolbarItems;
     var oldToolbarItems = e.OldToolbarItems;
@@ -663,14 +663,14 @@ The [SelectionChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
 
 <Grid>
     <Grid.BindingContext>
         <local:ToolbarInteractionViewModel />
     </Grid.BindingContext>
     <toolbar:SfToolbar x:Name="toolbar"
-                    TappedCommand="{Binding ToolbarSelectionChangedCommand}"
+                    SelectionChangedCommand="{Binding ToolbarSelectionChangedCommand}"
                     HeightRequest="56"
                     Orientation="Horizontal">
         <toolbar:SfToolbar.Items>
@@ -695,7 +695,7 @@ The [SelectionChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="7" %}
 
 public partial class MainPage : ContentPage
 {
@@ -704,7 +704,7 @@ public partial class MainPage : ContentPage
         InitializeComponent();
         SfToolbar toolbar = new SfToolbar();
         ToolbarInteractionViewModel viewModel = new ToolbarInteractionViewModel();
-        toolbar.SelectionChanged = viewModel.ToolbarSelectionChangedCommand;
+        toolbar.SelectionChangedCommand = viewModel.ToolbarSelectionChangedCommand;
         ObservableCollection<BaseToolbarItem> itemCollection = new ObservableCollection<BaseToolbarItem>
         {
             new SfToolbarItem
@@ -748,8 +748,8 @@ public class ToolbarInteractionViewModel
     }
     private void ExecuteSelectionChanged(ToolbarSelectionChangedEventArgs obj)
     {
-        var oldItem = obj.OldToolbarItems;
-        var newItem = obj.NewToolbarItems;
+        var oldItems = obj.OldToolbarItems;
+        var newItems = obj.NewToolbarItems;
     }
 }
 
