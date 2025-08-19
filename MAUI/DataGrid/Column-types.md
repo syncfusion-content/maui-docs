@@ -65,13 +65,13 @@ The following table describes the types of columns and their usage:
 <td>{{'[DataGridComboBoxColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxColumn.html)'| markdownify }}</td>
 <td>{{'[DataGridComboBoxRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridComboBoxRenderer.html)'| markdownify }}</td>
 <td>ComboBox</td>
-<td>To display a combo box control for selecting items from a predefined list.</td>
+<td>To display a combo box control for selecting item from a predefined list.</td>
 </tr>
 <tr>
 <td>{{`DataGridPickerColumn`| markdownify }}</td>
 <td>{{'[DataGridPickerCellRenderer]'| markdownify }}</td>
 <td>Picker</td>
-<td>To display a picker control for selecting items from a predefined list.</td>
+<td>To display a picker control for selecting item from a predefined list.</td>
 </tr>
 <tr>
 <td>{{'[DataGridUnboundColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundColumn.html)'| markdownify }}</td>
@@ -1040,25 +1040,25 @@ To load the `DataGridPickerColumn` with a simple string collection, you can refe
     </ContentPage.BindingContext>
 
     <sfGrid:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}">
+                       ItemsSource="{Binding DealerInformation}"
+                       AllowEditing="True">
         <sfGrid:SfDataGrid.Columns>
-            <sfGrid:DataGridPickerColumn BindingContext="{x:Reference viewModel}"
-                                         HeaderText="Name"
-                                         ItemsSource="{Binding CustomerNames}"
-                                         MappingName="DealerName" />
+            <sfgrid:DataGridPickerColumn HeaderText="Ship Country"
+                                         MappingName="ShipCountry"
+                                         ItemsSource="{Binding Countries}"/>
         </sfGrid:SfDataGrid.Columns>
     </sfGrid:SfDataGrid>
 {% endhighlight %}
 
 {% highlight c# %}
-dataGrid = new SfDataGrid();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.DealerInformation;
+dataGrid.AllowEditing = true;
 DataGridPickerColumn pickerColumn = new DataGridPickerColumn()
 {
-    BindingContext = viewModel,
-    MappingName = "DealerName",
-    ItemsSource = viewModel.CustomerNames,
-    HeaderText = "Name"
-
+    MappingName = "ShipCountry",
+    HeaderText = "Ship Country",
+    ItemsSource = viewModel.Countries
 };
 dataGrid.Columns.Add(pickerColumn);
 {% endhighlight %}
@@ -1069,15 +1069,67 @@ dataGrid.Columns.Add(pickerColumn);
 
 public class ViewModel
 {
-    public ObservableCollection<string> CustomerNames { get; set; }
+    public ObservableCollection<DealerInfo> DealerInformation { get; set; }
+    public ObservableCollection<string> Countries { get; set; }
 
     public ViewModel()
     {
-        this.CustomerNames = Customers.ToObservableCollection();
+        this.Countries = this.shipCountry.ToObservableCollection();
     }
 
-    internal string[] Customers = new string[] {"Adams","Crowley","Ellis","Gable","Irvine","Keefe","Mendoza","Owens","Rooney","Wadded",};
-    
+    private string[] shipCountry = new string[]
+    {
+        "Argentina",
+        "Austria",
+        "Belgium",
+        "Brazil",
+        "Canada",
+        "Denmark",
+        "Finland",
+        "France",
+        "Germany",
+        "Ireland",
+        "Italy",
+        "Mexico",
+        "Norway",
+        "Poland",
+        "Portugal",
+        "Spain",
+        "Sweden",
+        "UK",
+        "USA",
+    };
+}
+public class DealerInfo : INotifyPropertyChanged
+{
+    #region Properties
+    private string shipCountry;
+
+    public event PropertyChangedEventHandler? PropertyChanged;
+    public string ShipCountry
+    {
+        get
+        {
+            return this.shipCountry;
+        }
+
+        set
+        {
+            this.shipCountry = value;
+            this.RaisePropertyChanged("ShipCountry");
+        }
+    }
+    #endregion
+
+    #region INotifyPropertyChanged implementation
+    private void RaisePropertyChanged(string name)
+    {
+        if (this.PropertyChanged != null)
+        {
+            this.PropertyChanged(this, new PropertyChangedEventArgs(name));
+        }
+    }
+    #endregion
 }
 {% endhighlight %}
 {% endtabs %}
