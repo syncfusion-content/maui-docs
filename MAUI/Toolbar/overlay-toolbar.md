@@ -196,7 +196,7 @@ N> If TooltipText is provided, tooltip will be displayed on the back icon. If no
                                               BackIconAlignment="End"
                                               BackIconToolTipText="Back"
                                               BackIconColor="Red">
-<toolbar:SfOverlayToolbar.BackIconTemplate>
+                        <toolbar:SfOverlayToolbar.BackIconTemplate>
                             <DataTemplate>
                                 <ViewCell>
                                     <Grid WidthRequest="47" HeightRequest="33" HorizontalOptions="Start">
@@ -235,7 +235,7 @@ N> If TooltipText is provided, tooltip will be displayed on the back icon. If no
                                 </toolbar:SfToolbarItem.Icon>
                             </toolbar:SfToolbarItem>
                             
-<toolbar:SeparatorToolbarItem/>
+                        <toolbar:SeparatorToolbarItem/>
    
                         </toolbar:SfOverlayToolbar.Items>
                     </toolbar:SfOverlayToolbar>
@@ -264,10 +264,10 @@ namespace ToolbarSample
                 HeightRequest = 33,
                 HorizontalOptions = LayoutOptions.Start
             };
-
-            var image = new Image
+            var image = new ImageButton
             {
-                Source = "close.png"
+                Source = "close.png",
+                Clicked = "ImageButton_Clicked",
             };
 
             grid.Children.Add(image);
@@ -285,27 +285,32 @@ namespace ToolbarSample
             overlaytoolbar.BackIconToolTipText = "Back";
             overlaytoolbar.BackIconAlignment = OverlayToolbarBackIconPosition.End;
         }
-    }
 
-    private async void Toolbar_Tapped(object sender, Syncfusion.Maui.Toolbar.ToolbarTappedEventArgs e)
-    {
-        if (e.NewToolbarItem != null)
+        private async void Toolbar_Tapped(object sender, Syncfusion.Maui.Toolbar.ToolbarTappedEventArgs e)
         {
-            if (e.NewToolbarItem.Name == "Alignment")
+            if (e.NewToolbarItem != null)
             {
-                var item = e.NewToolbarItem?.OverlayToolbar;
-    
-                if (!this.layout.Children.Contains(item))
+                if (e.NewToolbarItem.Name == "Alignment")
                 {
-                    this.layout.Children.Add(item);
+                    var item = e.NewToolbarItem?.OverlayToolbar;
+        
+                    if (!this.layout.Children.Contains(item))
+                    {
+                        this.layout.Children.Add(item);
+                    }
+        
+                    await Task.Delay(1000);
+                    (sender as SfToolbar)?.ClearSelection();
                 }
-    
-                await Task.Delay(1000);
-                (sender as SfToolbar)?.ClearSelection();
             }
         }
+
+        private void ImageButton_Clicked(object sender, EventArgs e)
+        {
+            this.overlaytoolbar.IsVisible = false;
+        }
     }
-}}
+}
 
 {% endhighlight %}
 
