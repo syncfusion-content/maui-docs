@@ -379,6 +379,8 @@ this.Content = scheduler;
 {% endhighlight %}
 {% endtabs %}
 
+![Resource Header Height in Days View in .NET MAUI Scheduler.](images/resource-view/resource-view-resource-header-height-in-days-view-in-.net-maui-scheduler.png)
+
 ## Visible Resource Count in Days View
  
 The number of resources shown in the day, week, and work week views can be controlled using the `VisibleResourceCount` property of the [`SchedulerResourceView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) class. This lets you define how many resources are visible at a time.
@@ -402,6 +404,8 @@ this.Content = scheduler;
 {% endtabs %}
 
 N> If the value assigned to `VisibleResourceCount` is greater than the total number of resources, the scheduler will display all the resources in the SchedulerResource collection.
+
+![Visible Resource Count in Days View in .NET MAUI Scheduler.](images/resource-view/resource-view-visible-resource-count-in-days-view-in-.net-maui-scheduler.png)
 
 ## Assign special time regions to scheduler resources
 You can highlight a resources availability by creating special time regions in the day, week, workweek, timeline day, timeline week, and timeline workweek views.
