@@ -14,7 +14,7 @@ Raw datasets often contain missing values, outliers, or noise that can distort v
 
 This guide shows how to use Azure OpenAI to clean and preprocess e-commerce website traffic data, then visualize the results using [Syncfusion .NET MAUI Charts](https://help.syncfusion.com/maui/cartesian-charts/getting-started).
 
-## Integrating Azure OpenAI for cleaning and preprocesing the data
+## Integrating Azure OpenAI for cleaning and preprocessing the data
 
 Azure OpenAI can process your raw data and return a cleaned version, handling missing values and outliers automatically. This integration allows you to focus on analysis and visualization, rather than manual data correction.
 

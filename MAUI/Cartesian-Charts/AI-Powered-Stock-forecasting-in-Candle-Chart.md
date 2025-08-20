@@ -119,7 +119,7 @@ public Task<ObservableCollection<DataModel>> GetAnswerFromGPT(string userPrompt,
 
 {% endtabs %}
 
-### 3. Implement the Syncfusion .NET MAUI Candle chart to disply forecasted data.
+### 3. Implement the Syncfusion .NET MAUI Candle chart to display forecasted data.
 
 The [Syncfusion .NET MAUI Candle chart](https://help.syncfusion.com/maui/cartesian-charts/candle) allows you to display the financial data's. Define the data Model that hold the financial data (High, Low, Open, Close) and ViewModel that hold the collection of data for binding.
 
@@ -264,6 +264,6 @@ private async void AIButtonClicked(object sender, EventArgs e)
 
 After receiving the AI-predicted stock trends, the chart updates to display both historical and forecasted data, providing a visual representation of potential market movements.
 
-The following image demonstrates the output of the above AI powered stock forecating .NET MAUI Candle chart.
+The following image demonstrates the output of the above AI powered stock forecasting .NET MAUI Candle chart.
 
 ![.NET MAUI Candle chart AI Stock forecasting.](Chart_Smart_component_images/forecasting_demo.gif) 
