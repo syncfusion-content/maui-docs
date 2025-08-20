@@ -152,41 +152,35 @@ To visualize website traffic data, use two line series to show data for before a
 
 {% highlight xaml %}
 
-xmlns:syncfusion="clr-namespace:Syncfusion.UI.Xaml.Charts;assembly=Syncfusion.SfChart.WPF"
-. . . 
-<syncfusion:SfChart Palette="Custom" Margin="5" >
+<chart:SfCartesianChart Grid.Row="0" x:Name="Chart" Margin="5" PaletteBrushes="{Binding PaletteBrushes}">
+ 
+    <chart:SfCartesianChart.Title>
+        <StackLayout Orientation="Vertical">
+            <Label Text="E-Commerce Website Traffic Data" FontSize="18" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+            <Label Text="AI-powered data cleaning and preprocessing every hour, tracking hourly website visitors" LineBreakMode="WordWrap" HorizontalTextAlignment="Center" FontSize="14"/>
+        </StackLayout>
+    </chart:SfCartesianChart.Title>
 
-    <syncfusion:SfChart.ColorModel>
-        <syncfusion:ChartColorModel>
-            <syncfusion:ChartColorModel.CustomBrushes>
-                <SolidColorBrush Color="#ffa600"/>
-                <SolidColorBrush Color="#58508d"/>
-                <SolidColorBrush Color="#ff208d"/>
-            </syncfusion:ChartColorModel.CustomBrushes>
-        </syncfusion:ChartColorModel>
-    </syncfusion:SfChart.ColorModel>
+    <chart:SfCartesianChart.XAxes>
+        <chart:DateTimeAxis ShowMajorGridLines="False" EdgeLabelsDrawingMode="Shift">
+            <chart:DateTimeAxis.LabelStyle>
+                <chart:ChartAxisLabelStyle LabelFormat="hh tt"/>
+            </chart:DateTimeAxis.LabelStyle>
+        </chart:DateTimeAxis>
+    </chart:SfCartesianChart.XAxes>
 
-    <syncfusion:SfChart.PrimaryAxis>
-        <syncfusion:DateTimeAxis LabelFormat="hh tt" ShowGridLines="False" EdgeLabelsDrawingMode="Shift">
-            <syncfusion:DateTimeAxis.LabelStyle>
-                <syncfusion:LabelStyle FontSize="12.8"/>
-            </syncfusion:DateTimeAxis.LabelStyle>
-        </syncfusion:DateTimeAxis>
-    </syncfusion:SfChart.PrimaryAxis>
+    <chart:SfCartesianChart.YAxes>
+        <chart:NumericalAxis ShowMajorGridLines="False" Minimum="140" Interval="30" Maximum="320">
+        </chart:NumericalAxis>
+    </chart:SfCartesianChart.YAxes>
 
-    <syncfusion:SfChart.SecondaryAxis>
-        <syncfusion:NumericalAxis ShowGridLines="False">
-            <syncfusion:NumericalAxis.LabelStyle>
-                <syncfusion:LabelStyle FontSize="12.8"/>
-            </syncfusion:NumericalAxis.LabelStyle>
-        </syncfusion:NumericalAxis>
-    </syncfusion:SfChart.SecondaryAxis>
+    <chart:LineSeries x:Name="CleanedDataSeries" ItemsSource="{Binding CleanedData}" XBindingPath="DateTime"
+                            YBindingPath="Visitors" StrokeWidth="2"/>
 
-    <syncfusion:FastLineSeries x:Name="CleanedDataSeries" ItemsSource="{Binding CleanedData}" XBindingPath="DateTime" YBindingPath="Visitors"/>
+    <chart:LineSeries x:Name="RawDataSeries" ItemsSource="{Binding RawData}" XBindingPath="DateTime"
+                            YBindingPath="Visitors" StrokeWidth="2"/>
 
-    <syncfusion:FastLineSeries x:Name="RawDataSeries" ItemsSource="{Binding RawData}" XBindingPath="DateTime" YBindingPath="Visitors"/>
-
-</syncfusion:SfChart>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
