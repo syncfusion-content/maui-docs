@@ -14,7 +14,7 @@ This guide demonstrates how to build an AI-powered .NET MAUI Candle Chart that f
 
 ## Integrating Azure OpenAI for Stock Forecasting
 
-Azure OpenAI can analyze historical stock data and predict future trends. The model identifies patterns and generates OHLC (Open, High, Low, Close) values for upcoming days.
+Azure OpenAI can analyze historical stock data and predict future trends. The model identifies patterns and generates financial (Open, High, Low, Close) values for upcoming days.
 
 ### 1. Configure Azure OpenAI Service
 
@@ -56,7 +56,7 @@ var client = new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(key));
 
 ### 2. Generate Prompts and Retrieve AI Predictions
 
-Prepare a structured prompt with historical data for the AI model:
+Prepare a structured prompt with historical data for the AI model, this helps to get the more accurate predicted values.
 
 {% tabs %}
 
