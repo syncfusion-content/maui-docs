@@ -695,7 +695,7 @@ The [SelectionChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="7" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="8" %}
 
 public partial class MainPage : ContentPage
 {

@@ -9,11 +9,11 @@ documentation: ug
 
 # Selection Mode in .NET MAUI Toolbar (SfToolbar)
 
-The Selection mode is specified in the Toolbar property enumeration. You can select the toolbar item by tapping the item in the toolbar. SfToolbar[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html] provides three types of modes such as `Single`, `SingleDeselect`, and `Multiple`. The default SelectionMode[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_SelectionMode] is Single[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarSelectionMode.html#Syncfusion_Maui_Toolbar_ToolbarSelectionMode_Single], which allows the user to select only one item at a time.
+The Selection mode is specified in the Toolbar property enumeration. You can select the toolbar item by tapping the item in the toolbar. [SfToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html) provides three types of modes such as `Single`, `SingleDeselect`, and `Multiple`. The default [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_SelectionMode) is [Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarSelectionMode.html#Syncfusion_Maui_Toolbar_ToolbarSelectionMode_Single), which allows the user to select only one item at a time.
 
 ## Single Selection
 
-The `Single` selection can be performed in the Toolbar by setting the SelectionMode[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_SelectionMode] property to Single[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarSelectionMode.html#Syncfusion_Maui_Toolbar_ToolbarSelectionMode_Single]. In this selection, you can select a single item at a time in the toolbar.
+The `Single` selection can be performed in the Toolbar by setting the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_SelectionMode) property to [Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarSelectionMode.html#Syncfusion_Maui_Toolbar_ToolbarSelectionMode_Single). In this selection, you can select a single item at a time in the toolbar.
 
 {% tabs %}
 
@@ -130,7 +130,7 @@ namespace ToolbarSample
 
 ## Single Deselection
 
-The `Single Deselection` can be performed in the Toolbar by setting the SelectionMode[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_SelectionMode] property to SingleDeselect[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarSelectionMode.html#Syncfusion_Maui_Toolbar_ToolbarSelectionMode_SingleDeselect]. In this mode, only one item can be selected at a time, and you can deselect the currently selected item by simply clicking on it again. This provides a quick way to clear the selection without needing additional actions.
+The `Single Deselection` can be performed in the Toolbar by setting the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_SelectionMode) property to [SingleDeselect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarSelectionMode.html#Syncfusion_Maui_Toolbar_ToolbarSelectionMode_SingleDeselect). In this mode, only one item can be selected at a time, and you can deselect the currently selected item by simply clicking on it again. This provides a quick way to clear the selection without needing additional actions.
 
 {% tabs %}
 
@@ -247,7 +247,7 @@ namespace ToolbarSample
 
 ## Multiple Selection
 
-The `Multiple selection` can be performed in the Toolbar by setting the SelectionMode[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_SelectionMode] property to Multiple[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarSelectionMode.html#Syncfusion_Maui_Toolbar_ToolbarSelectionMode_Multiple]. In this mode, users can select more than one item at a time. You can remove selected items by clicking on them again, which will deselect them. This toggle-based interaction provides a clear and efficient method for managing selections without requiring additional controls.
+The `Multiple selection` can be performed in the Toolbar by setting the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_SelectionMode) property to [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarSelectionMode.html#Syncfusion_Maui_Toolbar_ToolbarSelectionMode_Multiple). In this mode, users can select more than one item at a time. You can remove selected items by clicking on them again, which will deselect them. This toggle-based interaction provides a clear and efficient method for managing selections without requiring additional controls.
 
 N> Multiple selection not supported when ToolbarItem has Overlay toolbar.
 
