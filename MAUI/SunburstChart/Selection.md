@@ -50,7 +50,7 @@ this.Content = sunburst;
 
 {% endtabs %}
 
-![Child selection in MAUI Sunburst Chart.](Selection_images/maui_selection_type_child.jpg)
+![Child selection in MAUI Sunburst Chart.](Selection_images/maui_selection_type_child.png)
 
 The following code shows the `Group` selection type.
 
@@ -82,7 +82,7 @@ this.Content = sunburst;
 
 {% endtabs %}
 
-![Group selection in MAUI Sunburst Chart.](Selection_images/maui_selection_type_group.jpg)
+![Group selection in MAUI Sunburst Chart.](Selection_images/maui_selection_type_group.png)
 
 The following code shows the `Parent` selection type.
 
@@ -114,7 +114,7 @@ this.Content = sunburst;
 
 {% endtabs %}
 
-![Parent selection in MAUI Sunburst Chart.](Selection_images/maui_selection_type_parent.jpg)
+![Parent selection in MAUI Sunburst Chart.](Selection_images/maui_selection_type_parent.png)
 
 The following code shows the `Single` selection type.
 
@@ -146,7 +146,7 @@ this.Content = sunburst;
 
 {% endtabs %}
 
-![Single selection in MAUI Sunburst Chart.](Selection_images/maui_selection_type_single.jpg)
+![Single selection in MAUI Sunburst Chart.](Selection_images/maui_selection_type_single.png)
 
 ## DisplayMode
 
@@ -192,7 +192,7 @@ this.Content = sunburst;
 
 {% endtabs %}
 
-![ DisplayMode HighlightByBrush.](Selection_images/maui_selection_highlight_by_brush.jpg)
+![ DisplayMode HighlightByBrush.](Selection_images/maui_selection_highlight_by_brush.png)
 
 ### Opacity
 
@@ -228,7 +228,7 @@ this.Content = sunburst;
 
 {% endtabs %}
 
-![ DisplayMode HighlightByOpacity.](Selection_images/maui_selection_highlight_by_opacity.jpg)
+![ DisplayMode HighlightByOpacity.](Selection_images/maui_selection_highlight_by_opacity.png)
 
 ### Stoke 
 
@@ -265,7 +265,7 @@ this.Content = sunburst;
 
 {% endtabs %}
 
-![ DisplayMode HighlightByOpacity.](Selection_images/maui_selection_highlight_by_stroke.jpg)
+![ DisplayMode HighlightByOpacity.](Selection_images/maui_selection_highlight_by_stroke.png)
 
 ## Events 
 
