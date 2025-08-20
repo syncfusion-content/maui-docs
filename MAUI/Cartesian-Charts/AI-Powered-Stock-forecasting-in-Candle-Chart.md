@@ -10,7 +10,7 @@ keywords: .net maui chart AI forecasting, maui chart stock, .net maui chart data
 
 # AI Powered Stock Forecasting in Candle Chart
 
-This guide demonstrates how to build an AI-powered .NET MAUI Candle Chart that forecasts stock prices for the next 45 days, helping traders make informed decisions using Syncfusion controls and Azure OpenAI.
+This guide demonstrates how to build an AI-powered [.NET MAUI Candle Chart](https://help.syncfusion.com/maui/cartesian-charts/candle) that forecasts stock prices for the next 45 days, helping traders make informed decisions using Syncfusion controls and Azure OpenAI.
 
 ## Integrating Azure OpenAI for Stock Forecasting
 
@@ -18,7 +18,7 @@ Azure OpenAI can analyze historical stock data and predict future trends. The mo
 
 ### 1. Configure Azure OpenAI Service
 
-Ensure you have access to Azure OpenAI and a deployed model in the Azure portal. Set up the service endpoint and API key:
+Ensure you have access to [Azure OpenAI](https://azure.microsoft.com/en-in/products/ai-services/openai-service) and a deployed model in the Azure portal. Set up the service endpoint and API key. You can find the [Azure.AI.OpenAI](https://www.nuget.org/packages/Azure.AI.OpenAI/1.0.0-beta.12) NuGet package from the [NuGet Gallery](https://www.nuget.org/).
 
 {% tabs %}
 
@@ -121,7 +121,7 @@ public Task<ObservableCollection<DataModel>> GetAnswerFromGPT(string userPrompt,
 
 ### 3. Implement the Syncfusion .NET MAUI Candle chart to disply forecasted data.
 
-The Syncfusion .NET MAUI Candle chart allows you to display the financial data's. Define the data Model that hold the financial data (High, Low, Open, Close) and ViewModel that hold the collection of data for binding.
+The [Syncfusion .NET MAUI Candle chart](https://help.syncfusion.com/maui/cartesian-charts/candle) allows you to display the financial data's. Define the data Model that hold the financial data (High, Low, Open, Close) and ViewModel that hold the collection of data for binding.
 
 
 {% tabs %}
