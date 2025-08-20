@@ -320,7 +320,3 @@ namespace ToolbarSample
 {% endtabs %}
 
 ![backicon-customization](images/backicon-customization.png)
-
-
-
-
