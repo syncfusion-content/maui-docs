@@ -143,7 +143,7 @@ sunburst.EnableDrillDown = true;
 SunburstToolbarSettings toolbarSettings = new SunburstToolbarSettings()
 {
     IconBrush = Colors.White,
-    ackground = new SolidColorBrush(Color.FromArgb("#2989F9")),
+    Background = new SolidColorBrush(Color.FromArgb("#2989F9")),
 };
 sunburst.ToolbarSettings = toolbarSettings;
 this.Content = sunburst;
