@@ -141,3 +141,182 @@ namespace ToolbarSample
 {% endtabs %}
 
 ![overlay-toolbar](images/overlay-toolbar.gif)
+
+## Back icon customization
+The toolbar control support customization of back icon using properties [BackIconAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html#Syncfusion_Maui_Toolbar_SfOverlayToolbar_BackIconAlignment), [BackIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html#Syncfusion_Maui_Toolbar_SfOverlayToolbar_BackIconColor), [BackIconToolTipText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html#Syncfusion_Maui_Toolbar_SfOverlayToolbar_BackIconToolTipText), [BackIconTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html#Syncfusion_Maui_Toolbar_SfOverlayToolbar_BackIconTemplate).
+
+*    **BackIconColor** – This property is used to define the color of the back icon displayed in the overlay toolbar.
+*    **BackIconAlignment** – This property defines the position of the back icon within the overlay toolbar. It supports two position options: [Start](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.OverlayToolbarBackIconPosition.html#Syncfusion_Maui_Toolbar_OverlayToolbarBackIconPosition_Start), which places the icon at the leading edge, and [End](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.OverlayToolbarBackIconPosition.html#Syncfusion_Maui_Toolbar_OverlayToolbarBackIconPosition_End), which positions it at the trailing edge. By default, the back icon appears at the leading position.
+
+N> For a `Horizontal` orientation, the `Start` position corresponds to the `left` side and the `End` position to the `right`. In a `Vertical` orientation, the `Start` position aligns with the `top`, while the `End` position aligns with the `bottom`.
+
+*    **BackIconTemplate** – This property allows customization of the back icon's appearance by enabling the use of various view elements such as buttons, checkboxes, entries, and more.
+*    **BackIconToolTipText** – This property is used to define the tooltip text displayed when hovering over the back icon.
+
+N> TooltipText is only applicable to the default back icon. When using BackIconTemplate, tooltip behavior must be handled manually.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<Grid x:Name="layout">
+    <toolbar:SfToolbar x:Name="Toolbar" 
+                            HeightRequest="56" 
+                            WidthRequest="300"
+                            Tapped="Toolbar_Tapped">
+        <toolbar:SfToolbar.Items>
+            <toolbar:SfToolbarItem Name="Bold"
+                        ToolTipText="Bold">
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE770;"
+                                        FontFamily="MauiMaterialAssets" />
+                </toolbar:SfToolbarItem.Icon>
+            </toolbar:SfToolbarItem>
+            <toolbar:SfToolbarItem Name="Underline"
+                        ToolTipText="Underline">
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE762;"
+                                        FontFamily="MauiMaterialAssets" />
+                </toolbar:SfToolbarItem.Icon>
+            </toolbar:SfToolbarItem>
+            <toolbar:SfToolbarItem Name="Italic"
+                        ToolTipText="Italic">
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE771;"
+                                        FontFamily="MauiMaterialAssets" />
+                </toolbar:SfToolbarItem.Icon>
+            </toolbar:SfToolbarItem>
+            <toolbar:SfToolbarItem Name="Alignment"
+                                Text="Alignment"
+                                ToolTipText="Tap to view the overlay toolbar"
+                                Size="70,40">
+                <toolbar:SfToolbarItem.OverlayToolbar>
+                    <toolbar:SfOverlayToolbar x:Name="overlaytoolbar"
+                                                Orientation="Horizontal"
+                                                HeightRequest="56"
+                                                WidthRequest="300"
+                                                OverflowMode="Scroll"
+                                              BackIconAlignment="End"
+                                              BackIconToolTipText="Back"
+                                              BackIconColor="Red">
+                        <toolbar:SfOverlayToolbar.BackIconTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid WidthRequest="47" HeightRequest="33" HorizontalOptions="Start">
+                                        <ImageButton Source="close.png" Clicked="ImageButton_Clicked" />
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </toolbar:SfOverlayToolbar.BackIconTemplate>
+                        <toolbar:SfOverlayToolbar.Items>
+                            <toolbar:SfToolbarItem Name="AlignLeft"
+                                            ToolTipText="Align-Left">
+                                <toolbar:SfToolbarItem.Icon>
+                                    <FontImageSource Glyph="&#xE751;"
+                                                    FontFamily="MauiMaterialAssets" />
+                                </toolbar:SfToolbarItem.Icon>
+                            </toolbar:SfToolbarItem>
+                            <toolbar:SfToolbarItem Name="AlignRight"
+                                            ToolTipText="Align-Right">
+                                <toolbar:SfToolbarItem.Icon>
+                                    <FontImageSource Glyph="&#xE753;"
+                                        FontFamily="MauiMaterialAssets" />
+                                </toolbar:SfToolbarItem.Icon>
+                            </toolbar:SfToolbarItem>
+                            <toolbar:SfToolbarItem Name="AlignCenter"
+                                            ToolTipText="Align-Center">
+                                <toolbar:SfToolbarItem.Icon>
+                                    <FontImageSource Glyph="&#xE752;"
+                                        FontFamily="MauiMaterialAssets" />
+                                </toolbar:SfToolbarItem.Icon>
+                            </toolbar:SfToolbarItem>
+                            <toolbar:SfToolbarItem Name="AlignJustify"
+                                            ToolTipText="Align-Justify">
+                                <toolbar:SfToolbarItem.Icon>
+                                    <FontImageSource Glyph="&#xE74F;"
+                                        FontFamily="MauiMaterialAssets" />
+                                </toolbar:SfToolbarItem.Icon>
+                            </toolbar:SfToolbarItem>
+                            
+                        <toolbar:SeparatorToolbarItem/>
+   
+                        </toolbar:SfOverlayToolbar.Items>
+                    </toolbar:SfOverlayToolbar>
+                </toolbar:SfToolbarItem.OverlayToolbar>
+            </toolbar:SfToolbarItem>
+        </toolbar:SfToolbar.Items>
+    </toolbar:SfToolbar>
+</Grid>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+namespace ToolbarSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            var backIconTemplate = new DataTemplate(() =>
+            {
+            var grid = new Grid
+            {
+                WidthRequest = 47,
+                HeightRequest = 33,
+                HorizontalOptions = LayoutOptions.Start
+            };
+            var image = new ImageButton
+            {
+                Source = "close.png",
+                Clicked = "ImageButton_Clicked",
+            };
+
+            grid.Children.Add(image);
+
+            var viewCell = new ViewCell
+            {
+                View = grid
+            };
+
+                return viewCell;
+            });
+
+            overlaytoolbar.BackIconTemplate = backIconTemplate;
+            overlaytoolbar.BackIconColor = Colors.Blue;
+            overlaytoolbar.BackIconToolTipText = "Back";
+            overlaytoolbar.BackIconAlignment = OverlayToolbarBackIconPosition.End;
+        }
+
+        private async void Toolbar_Tapped(object sender, Syncfusion.Maui.Toolbar.ToolbarTappedEventArgs e)
+        {
+            if (e.NewToolbarItem != null)
+            {
+                if (e.NewToolbarItem.Name == "Alignment")
+                {
+                    var item = e.NewToolbarItem?.OverlayToolbar;
+        
+                    if (!this.layout.Children.Contains(item))
+                    {
+                        this.layout.Children.Add(item);
+                    }
+        
+                    await Task.Delay(1000);
+                    (sender as SfToolbar)?.ClearSelection();
+                }
+            }
+        }
+
+        private void ImageButton_Clicked(object sender, EventArgs e)
+        {
+            this.overlaytoolbar.IsVisible = false;
+        }
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![backicon-customization](images/backicon-customization.png)
