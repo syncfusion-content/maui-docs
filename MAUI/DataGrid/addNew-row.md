@@ -53,7 +53,7 @@ public partial class MainPage : ContentPage
 
 <img alt="addnewRowpositon-top" src="Images\addnewrow\maui-dataGrid-AddNewRowPosition-top.png" width="604"/>  
 
-# Changing the AddNewRow default text in DataGrid
+## Changing the AddNewRow default text in DataGrid
 
 You can change the default static string of AddNewRow in datagrid by using the [SfDataGrid.AddNewRowText]() property. The `AddNewRowText` property has higher priority than the text that is localized in resx file.
 
@@ -84,7 +84,7 @@ public partial class MainPage : ContentPage
 
 <img alt="addnewRow-text" src="Images\addnewrow\maui-dataGrid-AddNewRowText.png" width="604"/>  
 
-# Initializing default values for AddNewRow
+## Initializing default values for AddNewRow
 
 SfDataGrid allows you to set the default values for AddNewRow while initiating, through [AddNewRowInitiatingEventArgs.NewObject]() property in [SfDataGrid.AddNewRowInitiating]() event.
 
@@ -115,7 +115,7 @@ private void dataGrid_AddNewRowInitiating(object? sender, DataGridAddNewRowIniti
 
 <img alt="addnewRow-DefaultValue" src="Images\addnewrow\maui-dataGrid-DefaultValues.png" width="604"/>  
 
-# Working with complex properties in AddNewRow
+## Working with complex properties in AddNewRow
 
 SfDataGrid control does not initiate values for complex properties defined in the data object. Hence, you need to initiate the default values for the complex properties externally by using the `SfDataGrid.AddNewRowInitiating` event.
 
@@ -156,11 +156,11 @@ private void DataGrid_AddNewRowInitiating(object? sender, DataGridAddNewRowIniti
 {% endhighlight %}
 {% endtabs %}
 
-# Add row programmatically
+## Add row programmatically
 
 You can commit or cancel the new record in AddNewRow by pressing the Enter and Esc key respectively. AddNewRow operations can be performed programmatically by using [DataGridAddNewRowController.CommitAddNew]() and [DataGridAddNewRowController.CancelAddNew]() methods at runtime.
 
-## Cancel AddNewRow
+### Cancel AddNewRow
 
 {% tabs %}
 {% highlight c# %}
@@ -178,7 +178,7 @@ if (this.dataGrid.View.IsAddingNew)
 {% endhighlight %}
 {% endtabs %}
 
-## Commit AddNewRow
+### Commit AddNewRow
 
 {% tabs %}
 {% highlight c# %}
@@ -208,7 +208,7 @@ if (this.dataGrid.View.IsAddingNew)
 {% endhighlight %}
 {% endtabs %}
 
-# Customizing AddNewRow text using default resource file
+## Customizing AddNewRow text using default resource file
 
 SfDataGrid enables you to customize the watermark text of AddNewRow by changing value of AddNewRowText in Resource Designer.
 
@@ -218,11 +218,11 @@ To customize the AddNewRowText, add the default Syncfusion.SfDataGrid.WPF.resx f
 
 <img alt="addnewRow-Localization" src="Images\addnewrow\maui-dataGrid-AddNewRow_Localization.png" width="604"/> 
 
-# Customizing AddNewRow
+## Customizing AddNewRow
 
-## Implicit Styling of AddNewRow
+### Implicit Styling of AddNewRow
 
-DataGridAddNewRow can be customized by writting style for [DataGridAddNewRowView]() TargetType.
+DataGridAddNewRow can be customized by writing style for [DataGridAddNewRowView]() TargetType.
 
 {% tabs %}
 {% highlight xaml %}
@@ -243,7 +243,7 @@ DataGridAddNewRow can be customized by writting style for [DataGridAddNewRowView
 {% endhighlight %}
 {% endtabs %}
 
-## Default Styling of AddNewRow
+### Default Styling of AddNewRow
 
 You can customize the AddNewRow's Background, TextColor, FontAttribute, FontFamily by using [SfDataGrid.DefaultStyle]().
 
@@ -270,7 +270,7 @@ You can customize the AddNewRow's Background, TextColor, FontAttribute, FontFami
 
 <img alt="addnewRow-ImplicitStyle" src="Images\addnewrow\maui-dataGrid-AddNewRow_ImplicitStyle.png" width="604"/>  
 
-# AddNewRow support in Master-Details View
+## AddNewRow support in Master-Details View
 
 You can enable the AddNewRow in `DetailsViewDataGrid` by specifying the position to `SfDataGrid.AddNewRowPosition` property in [ViewDefinition.DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ViewDefinition.html).
 
@@ -366,7 +366,7 @@ private void DataGrid_AddNewRowInitiating(object? sender, DataGridAddNewRowIniti
 
 <img alt="addnewRow-MasterdetailsView" src="Images\addnewrow\maui-dataGrid-AddNewRow_MasterDetailsView.png" width="604"/> 
 
-## Changing the AddNewRow default text in details view grid
+### Changing the AddNewRow default text in details view grid
 
 You can change the default static string of AddNewRow in details view grid by using the `SfDataGrid.AddNewRowText` property in `ViewDefinition.DataGrid`. The `AddNewRowText` property has higher priority than the text that is localized in resx file.
 
