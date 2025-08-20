@@ -146,7 +146,7 @@ namespace ToolbarSample
 The toolbar control support customization of back icon using properties BackIconColor[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html#Syncfusion_Maui_Toolbar_SfOverlayToolbar_BackIconColor], BackIconAlignment[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html#Syncfusion_Maui_Toolbar_SfOverlayToolbar_BackIconAlignment], BackIconTemplate[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html#Syncfusion_Maui_Toolbar_SfOverlayToolbar_BackIconTemplate], BackIconToolTipText[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html#Syncfusion_Maui_Toolbar_SfOverlayToolbar_BackIconToolTipText].
 
 *    **BackIconColor** – This property is used to define the color of the back icon displayed in the overlay toolbar.
-*    **BackIconAlignment** – This property defines the alignment of the back icon within the overlay toolbar. It supports three alignment options: Start[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.OverlayToolbarBackIconPosition.html#Syncfusion_Maui_Toolbar_OverlayToolbarBackIconPosition_Start], which positions the icon at the leading edge; End[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.OverlayToolbarBackIconPosition.html#Syncfusion_Maui_Toolbar_OverlayToolbarBackIconPosition_End], which places it at the trailing edge. By default, the back icon is displayed at the leading position.
+*    **BackIconAlignment** – This property defines the position of the back icon within the overlay toolbar. It supports two position options: Start[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.OverlayToolbarBackIconPosition.html#Syncfusion_Maui_Toolbar_OverlayToolbarBackIconPosition_Start], which positions the icon at the leading edge; End[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.OverlayToolbarBackIconPosition.html#Syncfusion_Maui_Toolbar_OverlayToolbarBackIconPosition_End], which places it at the trailing edge. By default, the back icon is displayed at the leading position.
 *    **BackIconTemplate** – This property allows customization of the back icon's appearance by enabling the use of various view elements such as buttons, checkboxes, entries, and more.
 *    **BackIconToolTipText** – This property is used to define the tooltip text displayed when hovering over the back icon.
 
@@ -316,7 +316,7 @@ namespace ToolbarSample
 
 {% endtabs %}
 
-![overlay-toolbar](images/backicon-customization.png)
+![backicon-customization](images/backicon-customization.png)
 
 
 
