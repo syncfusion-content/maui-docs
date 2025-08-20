@@ -13,50 +13,64 @@ The [SfMarkdownViewer]() control in .NET MAUI comes with a set of built-in defau
 
 This guide explains how to override the default styles using the [MarkdownStyleSettings]() class and the [CssStyleRules]() property.
 
-### Override Styles in C# Code
-
-Override styles programmatically by extending the `SfMarkdownViewer` and overriding the `GetCustomCssStyles()` method.
+### Define Styles in XAML
 
 {% highlight xaml %}
 
-<ContentPage
-    . . .
-    <controls:CustomMarkdownViewer x:Name="MarkdownView" />
-    . . .
-</ContentPage>
+    <ResourceDictionary>
 
-{% endhighlight %}
-
-{% highlight C# %}
-
-public class CustomMarkdownViewer : SfMarkdownViewer
-{
-    private const string CustomStyle = @"
-body {
-    background: #F0F0F0;
-    font-family: 'Segoe UI', sans-serif;
-    padding: 20px;
-}
-h1 {
-    font-size: 28px;
-    color: #005EEB;
-}
-p {
-    font-size: 15px;
-    color: #444;
-}
-img {
-    max-width: 100%;
-    display: block;
-    margin: 16px auto;
-}";
-
-    protected override string GetCustomCssStyles()
-    {
-        return CustomStyle;
+        <x:String x:Key="CustomStyle">
+    body {
+        background: #FFFBFE;
+        font-family: 'Roboto', sans-serif;
     }
-}
+            
+    h1 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: 0px;
+        color: #1C1B1F;
+    }
+
+    h2 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: 0px;
+        color: #1C1B1F;
+    }
+
+    h3 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 28px;
+        letter-spacing: 0px;
+        color: #1C1B1F;
+    }
+        </x:String>
+    </ResourceDictionary>
 
 {% endhighlight %}
 
-By overriding default styles, you can transform the Markdown viewer into a fully branded and polished content surface that fits seamlessly into your app’s design system.
+{% highlight xaml %}
+
+    <ContentPage
+        . . .    
+        xmlns:markdown="clr-namespace:Syncfusion.Maui.MarkdownViewer;
+        assembly=Syncfusion.Maui.MarkdownViewer">
+    
+        <markdown:SfMarkdownViewer Source={Binding MarkdownContent}>
+            <markdown:SfMarkdownViewer.Settings>
+                <markdown:MarkdownStyleSettings CssStyleRules="{StaticResource CustomStyle}" />
+            </markdown:SfMarkdownViewer.Settings>
+        </markdown:SfMarkdownViewer>
+
+    </ContentPage>
+
+{% endhighlight %}
+
+By difining custom styles, you can transform the Markdown viewer into a fully branded and polished content surface that fits seamlessly into your app’s design system.

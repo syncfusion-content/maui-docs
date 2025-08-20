@@ -33,4 +33,4 @@ The .NET MAUI [SfMarkdownViewer]() is a lightweight and efficient UI control tha
 * **Interactive Links**  
   Seamlessly integrate external URLs or internal navigation using automatic link rendering.
 
-![.NET MAUI MarkdownViewer](Images/maui-markdown-viewer-getting-started.png)
+![.NET MAUI MarkdownViewer](Images/maui-markdown-viewer-overview.png)
