@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Appearance Customization of .NET MAUI Segmented Control (SfSegmentedControl) | Syncfusion<sup>&reg;</sup>
-description: Learn about the appearance customization of Syncfusion<sup>&reg;</sup> .NET MAUI Segmented Control (SfSegmentedControl).
+description: Learn about the appearance customization of Syncfusion® .NET MAUI Segmented Control (SfSegmentedControl).
 platform: maui
 control: Segmented (SfSegmented) control
 documentation: ug
@@ -245,7 +245,7 @@ public partial class MainPage : ContentPage
 Customize the text style of each segment item using the [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentItem.html#Syncfusion_Maui_Buttons_SfSegmentItem_TextStyle) property of [SfSegmentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentItem.html).
 
 {% tabs %}
-{% highlight C# tabtitle="MainPage.xaml.cs"%}
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
 
 using Syncfusion.Maui.Buttons;
 . . .
@@ -324,7 +324,7 @@ public partial class MainPage : ContentPage
 Customize the background of each segment item using the [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentItem.html#Syncfusion_Maui_Buttons_SfSegmentItem_Background) property of [SfSegmentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentItem.html).
 
 {% tabs %}
-{% highlight C# tabtitle="MainPage.xaml.cs"%}
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
 
 using Syncfusion.Maui.Buttons;
 . . .
