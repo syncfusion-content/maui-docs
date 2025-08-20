@@ -143,14 +143,17 @@ namespace ToolbarSample
 ![overlay-toolbar](images/overlay-toolbar.gif)
 
 ## Back icon customization
-The toolbar control support customization of back icon using properties BackIconColor[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html#Syncfusion_Maui_Toolbar_SfOverlayToolbar_BackIconColor], BackIconAlignment[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html#Syncfusion_Maui_Toolbar_SfOverlayToolbar_BackIconAlignment], BackIconTemplate[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html#Syncfusion_Maui_Toolbar_SfOverlayToolbar_BackIconTemplate], BackIconToolTipText[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html#Syncfusion_Maui_Toolbar_SfOverlayToolbar_BackIconToolTipText].
+The toolbar control support customization of back icon using properties BackIconAlignment[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html#Syncfusion_Maui_Toolbar_SfOverlayToolbar_BackIconAlignment], BackIconColor[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html#Syncfusion_Maui_Toolbar_SfOverlayToolbar_BackIconColor], BackIconToolTipText[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html#Syncfusion_Maui_Toolbar_SfOverlayToolbar_BackIconToolTipText], BackIconTemplate[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfOverlayToolbar.html#Syncfusion_Maui_Toolbar_SfOverlayToolbar_BackIconTemplate].
 
 *    **BackIconColor** – This property is used to define the color of the back icon displayed in the overlay toolbar.
-*    **BackIconAlignment** – This property defines the position of the back icon within the overlay toolbar. It supports two position options: Start[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.OverlayToolbarBackIconPosition.html#Syncfusion_Maui_Toolbar_OverlayToolbarBackIconPosition_Start], which positions the icon at the leading edge; End[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.OverlayToolbarBackIconPosition.html#Syncfusion_Maui_Toolbar_OverlayToolbarBackIconPosition_End], which places it at the trailing edge. By default, the back icon is displayed at the leading position.
+*    **BackIconAlignment** – This property defines the position of the back icon within the overlay toolbar. It supports two position options: Start[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.OverlayToolbarBackIconPosition.html#Syncfusion_Maui_Toolbar_OverlayToolbarBackIconPosition_Start], which places the icon at the leading edge, and End[https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.OverlayToolbarBackIconPosition.html#Syncfusion_Maui_Toolbar_OverlayToolbarBackIconPosition_End], which positions it at the trailing edge. By default, the back icon appears at the leading position.
+
+N> For a `Horizontal` orientation, the `Start` position corresponds to the `left` side and the `End` position to the `right`. In a `Vertical` orientation, the `Start` position aligns with the `top`, while the `End` position aligns with the `bottom`.
+
 *    **BackIconTemplate** – This property allows customization of the back icon's appearance by enabling the use of various view elements such as buttons, checkboxes, entries, and more.
 *    **BackIconToolTipText** – This property is used to define the tooltip text displayed when hovering over the back icon.
 
-N> If TooltipText is provided, tooltip will be displayed on the back icon. If not provided, use must handle the tooltip manually.
+N> If TooltipText is provided, a tooltip will be displayed on the back icon. If not provided, the user must handle the tooltip manually
 
 {% tabs %}
 
