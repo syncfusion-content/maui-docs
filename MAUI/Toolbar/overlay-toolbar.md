@@ -153,7 +153,7 @@ N> For a `Horizontal` orientation, the `Start` position corresponds to the `left
 *    **BackIconTemplate** – This property allows customization of the back icon's appearance by enabling the use of various view elements such as buttons, checkboxes, entries, and more.
 *    **BackIconToolTipText** – This property is used to define the tooltip text displayed when hovering over the back icon.
 
-N> If TooltipText is provided, a tooltip will be displayed on the back icon. If not provided, the user must handle the tooltip manually
+N> TooltipText is only applicable to the default back icon. When using BackIconTemplate, tooltip behavior must be handled manually.
 
 {% tabs %}
 
