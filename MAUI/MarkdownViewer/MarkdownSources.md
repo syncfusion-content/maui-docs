@@ -32,8 +32,6 @@ Assign a Markdown-formatted string to the `Source` property of the SfMarkdownVie
 
         ## Header 2  
         Used to define major sections within your Markdown content.
-                        
-        ![image](https://cdn.syncfusion.com/content/images/Xamarin/Mascot-1.png)
                     ]]>
                 </x:String>
             </markdown:SfMarkdownViewer.Source>
@@ -58,9 +56,7 @@ Assign a Markdown-formatted string to the `Source` property of the SfMarkdownVie
 
     ## Header 2  
     Used to define major sections within your Markdown content.
-
-    ![image](https://cdn.syncfusion.com/content/images/Xamarin/Mascot-1.png)
-    ";
+        ";
             
             public MainPage()
             {

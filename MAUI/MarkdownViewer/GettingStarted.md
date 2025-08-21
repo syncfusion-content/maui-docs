@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with .NET MAUI MarkdownViewer control | Syncfusion
-description: Learn how to get started with Syncfusion® .NET MAUI MarkdownViewer (SfMarkdownViewer) control and explore its capabilities for rendering Markdown content with full formatting support.
+description: Learn how to get started with Syncfusion® .NET MAUI SfMarkdownViewer control and explore its capabilities for rendering Markdown content.
 platform: MAUI
 control: SfMarkdownViewer
 documentation: ug
@@ -31,7 +31,7 @@ Ensure the following are installed before you begin:
 ## Step 2: Install the Syncfusion<sup>®</sup> .NET MAUI MarkdownViewer Package
 
 1. Right-click on the project in **Solution Explorer** and choose **Manage NuGet Packages**.
-2. Search for [Syncfusion.Maui.MarkdownViewer](https://www.nuget.org/packages/Syncfusion.Maui.MarkdownViewer/) and install the latest version.
+2. Search for [Syncfusion.Maui.MarkdownViewer]() and install the latest version.
 3. Ensure all dependent packages are installed and the project builds successfully.
 
 ## Step 3: Register the Syncfusion Core Handler

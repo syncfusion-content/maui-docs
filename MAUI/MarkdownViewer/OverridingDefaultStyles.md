@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Override Default Styles in .NET MAUI MarkdownViewer | Syncfusion
+title: Override Default Styles in .NET MAUI MarkdownViewer | Syncfusion
 description: Learn how to override the default appearance of Markdown content using custom CSS in the Syncfusion .NET MAUI MarkdownViewer control.
 platform: MAUI
 control: SfMarkdownViewer
@@ -73,4 +73,4 @@ This guide explains how to override the default styles using the [MarkdownStyleS
 
 {% endhighlight %}
 
-By difining custom styles, you can transform the Markdown viewer into a fully branded and polished content surface that fits seamlessly into your app’s design system.
+By defining custom styles, you can transform the Markdown viewer into a fully branded and polished content surface that fits seamlessly into your app’s design system.

@@ -51,16 +51,19 @@ The appearance of headings and body content in SfMarkdownViewer can be customize
     <ContentPage>
         . . .
         <markdown:SfMarkdownViewer Source={Binding MarkdownContent}>
-            <markdown:MarkdownStyleSettings H1FontSize = "32px"
-                                H1Color = "#8352FB"
-                                H2Color = "#9971FB"
-                                H3Color = "#A98AF7"
-                                BodyFontSize = "14px"
-                                BodyTextColor = "#2C3E50"
-                                TableBackground = "#FFE2ED"
-                                TableHeaderTextColor = "HotPink">
-            </markdown:MarkdownStyleSettings>
+            <markdown:SfMarkdownViewer.Settings>
+                <markdown:MarkdownStyleSettings H1FontSize = "32px"
+                                                H1Color = "#8352FB"
+                                                H2Color = "#9971FB"
+                                                H3Color = "#A98AF7"
+                                                BodyFontSize = "14px"
+                                                BodyTextColor = "#2C3E50"
+                                                TableBackground = "#FFE2ED"
+                                                TableHeaderTextColor = "HotPink">
+                </markdown:MarkdownStyleSettings>
+            </markdown:SfMarkdownViewer.Settings>
         </markdown:SfMarkdownViewer>
+        . . .
     </ContentPage>
 
 {% endhighlight %}
@@ -94,7 +97,8 @@ The appearance of headings and body content in SfMarkdownViewer can be customize
     }  
 
 {% endhighlight %}
+{% tabs %} 
 
-![Sample markdown content appearance customization](images/maui-markdown-viewer-appearance.png).
+![Sample markdown content appearance customization](images/maui-markdown-viewer-appearance.png)
 
 With [MarkdownStyleSettings](), you gain full control over how Markdown content looks in your .NET MAUI app—whether you're building a documentation viewer, a note-taking app, or a styled content portal.

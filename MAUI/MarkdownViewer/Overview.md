@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About .NET MAUI MarkdownViewer control | Syncfusion
-description: Learn about the Syncfusion® .NET MAUI SfMarkdownViewer control, its rendering capabilities, and key features for displaying formatted Markdown content across platforms.
+description: Learn about the Syncfusion® .NET MAUI SfMarkdownViewer control, its rendering capabilities, and key features.
 platform: MAUI
 control: SfMarkdownViewer
 documentation: ug
@@ -22,9 +22,9 @@ The .NET MAUI [SfMarkdownViewer]() is a lightweight and efficient UI control tha
 ## Use Case
 
 * **In-app Documentation**  
-  Display user guides, feature tours, and onboarding content directly within the app using Markdown.
+  Display user guides, feature tours, and getting started materials directly within the app using Markdown.
 
-* **Release Notes & Changelogs**  
+* **Release Notes & Feature Updates**  
   Present version updates and feature changes in a consistent, scrollable format.
 
 * **Help & Support Sections**  
