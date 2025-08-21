@@ -40,7 +40,7 @@ The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) 
 
 {% tabs %}
 
-{% highlight csharp tabtitle="MauiProgram.cs" hl_lines="2 13" %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="2 13" %}
 
 using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
@@ -77,14 +77,14 @@ namespace MarkdownViewerGettingStarted
 
 {% highlight xaml %}
 
-<ContentPage
-    . . .    
-    xmlns:markdown="clr-namespace:Syncfusion.Maui.MarkdownViewer;
-    assembly=Syncfusion.Maui.MarkdownViewer">
-   
-     <markdown:SfMarkdownViewer Source="Welcome to **Markdown Viewer**!" />
-     
-</ContentPage>
+    <ContentPage
+        . . .    
+        xmlns:markdown="clr-namespace:Syncfusion.Maui.MarkdownViewer;
+        assembly=Syncfusion.Maui.MarkdownViewer">
+    
+        <markdown:SfMarkdownViewer />
+        
+    </ContentPage>
  
 {% endhighlight %}
 
@@ -92,19 +92,18 @@ namespace MarkdownViewerGettingStarted
 
 using Syncfusion.Maui.MarkdownViewer;
 
-namespace MarkdownViewerGettingStarted
-{
-    public partial class MainPage : ContentPage
+    namespace MarkdownViewerGettingStarted
     {
-        public MainPage()
+        public partial class MainPage : ContentPage
         {
-            InitializeComponent();  
-            SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
-            markdownViewer.Source = "Welcome to **Markdown Viewer**!";
-            Content = markdownViewer;       
-        }
-    }   
-}
+            public MainPage()
+            {
+                InitializeComponent();  
+                SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
+                Content = markdownViewer;       
+            }
+        }   
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -143,7 +142,9 @@ The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/)
 
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
 using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
 using Syncfusion.Maui.Core.Hosting;
 
 namespace MarkdownViewerSample
@@ -190,19 +191,20 @@ namespace MarkdownViewerSample
 
 {% highlight C# %}
 
-using Syncfusion.Maui.MarkdownViewer;
+    using Syncfusion.Maui.MarkdownViewer;
 
-namespace MarkdownViewerGettingStarted
-{
-    public partial class MainPage : ContentPage
+    namespace MarkdownViewerGettingStarted
     {
-        public MainPage()
+        public partial class MainPage : ContentPage
         {
-            InitializeComponent();  
-            SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
-        }
-    }   
-}
+            public MainPage()
+            {
+                InitializeComponent();  
+                SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
+                Content = markdownViewer;    
+            }
+        }   
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -214,11 +216,10 @@ To display Markdown content, assign a string to the `Source` property of the SfM
 {% tabs %} 
 {% highlight xaml %}
 
-    <ContentPage>
-        <markdown:SfMarkdownViewer>
-            <markdown:SfMarkdownViewer.Source>
-                <x:String>
-                    <![CDATA[
+    <markdown:SfMarkdownViewer>
+        <markdown:SfMarkdownViewer.Source>
+            <x:String>
+                <![CDATA[
                                 # What is Markdown Viewer?  
         Markdown View is a UI control in .NET MAUI that allows developers to render Markdown content with full formatting support. It is designed to work efficiently across both mobile and desktop platforms. The viewer supports headings, bold and italic text, lists, tables, images, code blocks, etc.
 
@@ -227,8 +228,6 @@ To display Markdown content, assign a string to the `Source` property of the SfM
 
         ## Header 2  
         Used to define major sections within your Markdown content.
-                        
-        ---
 
         ## Table 
 
@@ -237,11 +236,10 @@ To display Markdown content, assign a string to the `Source` property of the SfM
         | Row 1        | Content  | Content  | Content  |
         | Row 2        | Content  | Content  | Content  |
         | Row 3        | Content  | Content  | Content  |
-                            ]]>
-                </x:String>
-            </markdown:SfMarkdownViewer.Source>
-        </markdown:SfMarkdownViewer>
-    </ContentPage>
+                ]]>
+            </x:String>
+        </markdown:SfMarkdownViewer.Source>
+    </markdown:SfMarkdownViewer>
 {% endhighlight %}
 
 {% highlight C# %}
@@ -256,8 +254,6 @@ To display Markdown content, assign a string to the `Source` property of the SfM
 
     ## Header 2  
     Used to define major sections within your Markdown content.
-                    
-    ---
 
     ## Table 
 

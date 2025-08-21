@@ -16,21 +16,21 @@ The [SfMarkdownViewer]() control provides built-in methods to retrieve and trans
 Retrieves the raw Markdown content currently assigned to the `Source` property of the [SfMarkdownViewer]() control. 
 
 {% tabs %}
-{% highlight C# %}
+{% highlight C# hl_lines="12" %}
 
-public partial class MainPage : ContentPage
-{
-    public MainPage()
+    public partial class MainPage : ContentPage
     {
-        InitializeComponent();  
-        SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
-        markdownViewer.Source = "Welcome to **Markdown Viewer**!";
-        Content = markdownViewer;       
-    }
-    . . .
+        public MainPage()
+        {
+            InitializeComponent();  
+            SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
+            markdownViewer.Source = "Welcome to **Markdown Viewer**!";
+            Content = markdownViewer;       
+        }
+        . . .
 
-    string markdown = MarkdownViewer.GetMarkdown();
-}
+        string markdown = MarkdownViewer.GetMarkdown();
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -40,21 +40,21 @@ public partial class MainPage : ContentPage
 Converts the Markdown content of the SfMarkdownViewer control into HTML format and provides the result as a string.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight C# hl_lines="12" %}
 
-public partial class MainPage : ContentPage
-{
-    public MainPage()
+    public partial class MainPage : ContentPage
     {
-        InitializeComponent();  
-        SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
-        markdownViewer.Source = "Welcome to **Markdown Viewer**!";
-        Content = markdownViewer;       
-    }
-    . . .
+        public MainPage()
+        {
+            InitializeComponent();  
+            SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
+            markdownViewer.Source = "Welcome to **Markdown Viewer**!";
+            Content = markdownViewer;       
+        }
+        . . .
 
-    string html = MarkdownViewer.GetHtml();
-}
+        string html = MarkdownViewer.GetHtml();
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -64,21 +64,21 @@ public partial class MainPage : ContentPage
 Extracts the plain text content from the Markdown assigned to the `SfMarkdownViewer` control, removing all Markdown formatting such as headings, emphasis, links, and code blocks.
 
 {% tabs %}
-{% highlight C# %}
+{% highlight C# hl_lines="12" %}
 
-public partial class MainPage : ContentPage
-{
-    public MainPage()
+    public partial class MainPage : ContentPage
     {
-        InitializeComponent();  
-        SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
-        markdownViewer.Source = "Welcome to **Markdown Viewer**!";
-        Content = markdownViewer;       
-    }
-    . . .
+        public MainPage()
+        {
+            InitializeComponent();  
+            SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
+            markdownViewer.Source = "Welcome to **Markdown Viewer**!";
+            Content = markdownViewer;       
+        }
+        . . .
 
-    string text = markdownViewer.GetText();
-}
+        string text = markdownViewer.GetText();
+    }
 
 {% endhighlight %}
 {% endtabs %}

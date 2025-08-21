@@ -74,35 +74,18 @@ Assign a Markdown-formatted string to the `Source` property of the SfMarkdownVie
 
 ## From Local File
 
-To load Markdown content from a local file, use the `FilePicker` API to select a `.md` file. Once selected, read the file asynchronously and assign its content to the `Source` property of the `SfMarkdownViewer`.
+To load Markdown content from a local `.md` file, you can directly specify the file path and read its contents using standard file I/O and assign its content to the `Source` property of the `SfMarkdownViewer`.
 
-{% tabs %}
-{% highlight C# %}
+{% highlight xaml %}
 
-    private async void OnPickFileClicked(object sender, EventArgs e)
-    {
-        var result = await FilePicker.Default.PickAsync(new PickOptions
-        {
-            PickerTitle = "Select a Markdown file"
-        });
+    <ContentPage>
+    
+        <markdown:SfMarkdownViewer x:Name="MarkdownViewer" />
 
-        if (result != null)
-        {
-            using var stream = await result.OpenReadAsync();
-            using var reader = new StreamReader(stream);
-            MarkdownViewer.Source = await reader.ReadToEndAsync();
-        }
-    }
+    </ContentPage>
 
 {% endhighlight %}
-{% endtabs %}
 
-## From Embedded Resource
-
-1. To load Markdown content from an embedded resource, place the `.md` file inside the `Resources` folder of your .NET MAUI project. 
-2. Use asynchronous file access to read and assign the content to the `Source` property of the `SfMarkdownViewer` control.
-
-{% tabs %}
 {% highlight C# %}
 
     public partial class MainPage : ContentPage
@@ -110,9 +93,38 @@ To load Markdown content from a local file, use the `FilePicker` API to select a
         public MainPage()
         {
             InitializeComponent();
-            SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
+
+            string filePath = @"D:\MAUI\MarkdownViewer\Files\MarkdownContent.md";
+            string markdownContent = File.ReadAllText(filePath);
+            MarkdownViewer.Source = markdownContent;
+        }
+    }
+
+{% endhighlight %}
+
+## From Embedded Resource
+
+1. To load Markdown content from an embedded resource, place the `.md` file inside the `Resources` folder of your .NET MAUI project. 
+2. Use asynchronous file access to read and assign the content to the `Source` property of the `SfMarkdownViewer` control.
+
+{% highlight xaml %}
+
+    <ContentPage>
+    
+        <markdown:SfMarkdownViewer x:Name="MarkdownViewer" />
+
+    </ContentPage>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
             _ = LoadMarkdownAsync();
-            Content = markdownViewer;  
         }
 
         private async Task LoadMarkdownAsync()
@@ -120,7 +132,7 @@ To load Markdown content from a local file, use the `FilePicker` API to select a
             using Stream stream = await FileSystem.OpenAppPackageFileAsync("MarkdownContent.md");
             using StreamReader reader = new StreamReader(stream, Encoding.UTF8);
             string markdownContent = await reader.ReadToEndAsync();
-            MarkdownView.Source = markdownContent;
+            MarkdownViewer.Source = markdownContent;
         }
     }
 
@@ -132,6 +144,18 @@ To load Markdown content from a local file, use the `FilePicker` API to select a
 Markdown content can be loaded directly from a publicly accessible URL. This is useful for displaying remote documentation, release notes, or any Markdown file hosted online.
 
 {% tabs %}
+
+{% highlight xaml %}
+
+    <ContentPage>
+    
+        <markdown:SfMarkdownViewer Source="https://raw.githubusercontent.com/SyncfusionExamples/GettingStarted_DockLayout_MAUI/refs/heads/master/README.md">
+        </markdown:SfMarkdownViewer>
+
+    </ContentPage>
+
+{% endhighlight %}
+
 {% highlight C# %}
 
     public partial class MainPage : ContentPage

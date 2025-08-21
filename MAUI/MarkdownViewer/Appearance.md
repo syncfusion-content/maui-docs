@@ -56,7 +56,7 @@ The appearance of headings and body content in SfMarkdownViewer can be customize
                                                 H1Color = "#8352FB"
                                                 H2Color = "#9971FB"
                                                 H3Color = "#A98AF7"
-                                                BodyFontSize = "14px"
+                                                BodyFontSize = "16px"
                                                 BodyTextColor = "#2C3E50"
                                                 TableBackground = "#FFE2ED"
                                                 TableHeaderTextColor = "HotPink">
@@ -86,7 +86,7 @@ The appearance of headings and body content in SfMarkdownViewer can be customize
                 H1Color = "#8352FB",
                 H2Color = "#9971FB",
                 H3Color = "#A98AF7",
-                BodyFontSize = "14px",
+                BodyFontSize = "16px",
                 BodyTextColor = "#2C3E50",
                 TableBackground = "#FFE2ED",
                 TableHeaderTextColor = "HotPink"
