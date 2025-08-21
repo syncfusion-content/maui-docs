@@ -214,3 +214,5 @@ kanban.CardTemplate = new KanbanTemplateSelector();
 {% endhighlight %}
 
 {% endtabs %}
+
+N> When using a custom model as the [`ItemsSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ItemsSource), the binding context for each card is set to an instance of that custom model. This means that all data bindings within the [`CardTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_CardTemplate) should reference the properties of your custom model directly.
