@@ -1183,10 +1183,13 @@ Here, first record only expanded in SfDataGrid. But all the DetailsViewDataGridâ
 
 You can customize its exporting operation by using `DataGridChildPdfExportingEventArgs`.
 
+N> While exporting DetailsViewDataGrid, `CanFitAllColumnInOnePage` is set to true internally as horizontal pagination is not supported for DetailsViewDataGrid.
+
 By default, [DetailsViewDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DetailsViewDataGrid.html) will be exported to PDF. You can customize its exporting operation by using `DataGridChildPdfExportingEventArgs`.
 
 ## Excluding DetailsViewDataGrid while exporting
-You can exclude particular DetailsViewDataGrid while exporting, by using the DataGridChildExcelExportingEventArgs and `DataGridChildPdfExportingEventArgs.Cancel`.
+
+You can exclude particular DetailsViewDataGrid while exporting, by using the `DataGridChildPdfExportingEventArgs.Cancel`.
 
 ```csharp
 private void Button_Clicked(object sender, EventArgs e)
@@ -1211,12 +1214,13 @@ private void PdfExport_DataGridChildPdfExporting(object? sender, DataGridChildPd
         e.Cancel = true;
 }
 ```
-<img alt="Excluding specific DetailsView while exporting to Excel in DataGrid " src="Images\export-to-excel\maui-datagrid-detailsviewexporting.png" Width="404"/>
+<img alt="Excluding specific DetailsView while exporting to PDF in DataGrid " src="Images/export-to-pdf/maui-datagrid-excluderows.png" Width="404"/>
 
 Here, `DetailsViewDataGrid` is not exported for the parent record having OrderID as 1002.
 
 ## Customizing DetailsViewDataGrid cells
-Like parent DataGrid, you can customize the DetailsViewDataGrid cells also by using [DataGridCellPdfExportingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridCellPdfExportingEventArgs.html).Based on `DataGridCellPdfExportingEventArgs.DetailsViewDefinition` property, you can identify the particular DetailsViewDataGrid and customize it.
+
+Similar to the parent DataGrid, you can also customize the cells of the DetailsViewDataGrid by using the DataGridCellPdfExportingEventArgs. By utilizing the `DataGridCellPdfExportingEventArgs.DetailsViewDefinition` property, you can identify the specific DetailsViewDataGrid and customize it accordingly.
 
 ```csharp
     private void Button_Clicked_1(object sender, EventArgs e)
@@ -1234,7 +1238,7 @@ Like parent DataGrid, you can customize the DetailsViewDataGrid cells also by us
         saveService.SaveAndView("ExportFeature.pdf", "application/pdf", stream);
     }
 
-    private void ExcelExport_CellExporting(object? sender, DataGridCellExcelExportingEventArgs e)
+    private void PdfExport_CellExporting(object? sender, DataGridCellPdfExportingEventArgs e)
     {
         if (e.DetailsViewDefinition == null && e.DetailsViewDefinition?.RelationalColumn != "OrdersList")
         {
@@ -1250,6 +1254,4 @@ Like parent DataGrid, you can customize the DetailsViewDataGrid cells also by us
         }
     }
 ```
-<img alt="Customizing DetailsViewDataGrid while exporting to PDF in DataGrid" src="Images\export-to-pdf\maui-datagrid-customize-detailsview.png" Width="404"/>
-
-
+<img alt="Customizing DetailsViewDataGrid while exporting to PDF in DataGrid" src="Images/export-to-pdf/maui-datagrid-customize-detailsview.png" Width="404"/>
