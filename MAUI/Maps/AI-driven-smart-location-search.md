@@ -21,7 +21,7 @@ Once you get your key and endpoint, follow these steps:
 
 ### Step 1: Set up Azure OpenAI
 
-To configure Azure OpenAI, we’ll use the GPT-4O model for text and the DALL-E model for images. Set up the OpenAIClient as shown in the following code example.
+To configure Azure OpenAI, we’ll use the GPT-4O model for text and the DALL-E model for images. Set up the `OpenAIClient` as shown in the following code example.
 
 {% tabs %}
 
@@ -66,7 +66,7 @@ This connection allows you to send prompts to the model and receive responses, w
 
 ### Step 3: Get the result from the AI service
 
-Implement the GetResultsFromAI and GetImageFromAI methods to retrieve responses from the OpenAI API based on user input.
+Implement the `GetResultsFromAI` and `GetImageFromAI` methods to retrieve responses from the OpenAI API based on user input.
 
 {% tabs %}
 
