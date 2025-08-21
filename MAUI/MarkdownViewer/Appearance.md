@@ -97,7 +97,7 @@ The appearance of headings and body content in SfMarkdownViewer can be customize
     }  
 
 {% endhighlight %}
-{% tabs %} 
+{% endtabs %} 
 
 ![Sample markdown content appearance customization](images/maui-markdown-viewer-appearance.png)
 

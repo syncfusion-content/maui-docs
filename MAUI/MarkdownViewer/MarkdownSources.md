@@ -16,7 +16,6 @@ The (SfMarkdownViewer)[] control supports flexible input sources, allowing devel
 Assign a Markdown-formatted string to the `Source` property of the SfMarkdownViewer control to render markdown content directly within your application.
 
 {% tabs %} 
-
 {% highlight xaml %}
 
     <ContentPage>
@@ -69,7 +68,6 @@ Assign a Markdown-formatted string to the `Source` property of the SfMarkdownVie
     }
 
 {% endhighlight %}
-
 {% endtabs %}
 
 ## From Local File
@@ -137,14 +135,12 @@ To load Markdown content from a local `.md` file, you can directly specify the f
     }
 
 {% endhighlight %}
-{% endtabs %}
 
 ## From URL
 
 Markdown content can be loaded directly from a publicly accessible URL. This is useful for displaying remote documentation, release notes, or any Markdown file hosted online.
 
 {% tabs %}
-
 {% highlight xaml %}
 
     <ContentPage>
