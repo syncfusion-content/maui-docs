@@ -1185,8 +1185,6 @@ You can customize its exporting operation by using `DataGridChildPdfExportingEve
 
 N> While exporting DetailsViewDataGrid, `CanFitAllColumnInOnePage` is set to true internally as horizontal pagination is not supported for DetailsViewDataGrid.
 
-By default, [DetailsViewDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DetailsViewDataGrid.html) will be exported to PDF. You can customize its exporting operation by using `DataGridChildPdfExportingEventArgs`.
-
 ## Excluding DetailsViewDataGrid while exporting
 
 You can exclude particular DetailsViewDataGrid while exporting, by using the `DataGridChildPdfExportingEventArgs.Cancel`.
