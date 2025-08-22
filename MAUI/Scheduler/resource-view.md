@@ -190,8 +190,8 @@ var Resources = new ObservableCollection<SchedulerResource>()
     new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.LightGreen, Id = "1000" },
     new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Gold, Id = "1001" },
     new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.Violet, Id = "1002" },
-    new SchedulerResource() { Name = "Stephen",  Foreground = Colors.White, Background = Colors.PaleTurquoise, Id = "1003" },
-    new SchedulerResource() { Name = "Brooklyn",  Foreground = Colors.White, Background = Colors.PeachPuff, Id = "1004" },
+    new SchedulerResource() { Name = "Brooklyn",  Foreground = Colors.White, Background = Colors.LightSkyBlue, Id = "1003" },
+    new SchedulerResource() { Name = "Stephen",  Foreground = Colors.White, Background = Colors.PeachPuff, Id = "1004" },
     new SchedulerResource() { Name = "Elena",  Foreground = Colors.White, Background = Colors.Pink, Id = "1005" },
 };
 
@@ -199,6 +199,8 @@ this.Scheduler.ResourceView.Resources = Resources;
 this.Scheduler.ResourceView.VisibleResourceCount = 4;
 {% endhighlight %}
 {% endtabs %}
+
+![Visible Resource Count in Days View in .NET MAUI Scheduler.](images/resource-view/visible-resource-count-for-resources-in-days-view-in-.net-maui-scheduler.png)
 
 N> 
 
@@ -209,9 +211,6 @@ N>
 - Setting `VisibleResourceCount` to 0 removes the resource view layout. For example, if the Scheduler is in Day view with resources displayed, changing the value to 0 will hide the resources and show only the plain Day view.
 
 - If the value assigned to `VisibleResourceCount` is greater than the total number of resources, the scheduler will display all the resources in the SchedulerResource collection.
-
-
-![Visible Resource Count in Days View in .NET MAUI Scheduler.](images/resource-view/resource-view-visible-resource-count-in-days-view-in-.net-maui-scheduler.png)
 
 ## Resource Header Height in Days View
  
@@ -238,7 +237,7 @@ this.Scheduler.ResourceView.ResourceHeaderHeight = 100;
 {% endhighlight %}
 {% endtabs %}
 
-![Resource Header Height in Days View in .NET MAUI Scheduler.](images/resource-view/resource-view-resource-header-height-in-days-view-in-.net-maui-scheduler.png)
+![Resource Header Height in Days View in .NET MAUI Scheduler.](images/resource-view/resource-header-height-for-resources-in-days-view-in-.net-maui-scheduler.png)
 
 ## Resource minimum row height
 
