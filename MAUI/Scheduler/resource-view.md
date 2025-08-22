@@ -270,8 +270,6 @@ N>
 
 ![Resource minimum row and height in .NET MAUI Scheduler.](images/resource-view/resource-view-minimum-height-in-net-maui-scheduler.png)
 
-
-
 ## Assign special time regions to scheduler resources
 
 You can highlight the resources availability by creating special [time regions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_TimeRegions) in the day, week, workweek, timeline day, timeline week, and timeline workweek views. Special time regions can represent unavailable or reserved slots such as lunch breaks, team meetings, or non-working hours.
