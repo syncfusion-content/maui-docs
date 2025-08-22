@@ -352,7 +352,7 @@ public partial class MainPage : ContentPage
 
 ![Segment item background customization in .NET MAUI Segmented control.](images/customization/segment-item-background.png)
 
-## Show or Hide Separator
+## Show or hide separator
 
 The [ShowSeparator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_ShowSeparator) property is used to control the visibility of the separator line that appears between the segments in the [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html?tabs=tabid-34%2Ctabid-30%2Ctabid-19%2Ctabid-16%2Ctabid-37%2Ctabid-3%2Ctabid-24%2Ctabid-32%2Ctabid-8%2Ctabid-36%2Ctabid-10%2Ctabid-6%2Ctabid-14%2Ctabid-26%2Ctabid-28%2Ctabid-22%2Ctabid-12%2Ctabid-1). By default, the separator is visible, and setting this property to false hides the separator line.
 
