@@ -427,3 +427,90 @@ The `SfAIAssistView` control includes a built-in event called [CardTapped](https
 
 {% endhighlight %}
 {% endtabs %}
+
+## Show error response UI
+
+The `SfAIAssistView` allows to display error responses by setting the text to the `ErrorMessage`, ensuring clear notification when an error occurs during AI interactions.
+
+{% tabs %}
+{% highlight xaml %}
+    
+    <?xml version="1.0" encoding="utf-8" ?>
+    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
+                xmlns:local="clr-namespace:MauiAIAssistView"             
+                x:Class="MauiAIAssistView.MainPage">
+
+        <ContentPage.BindingContext>
+            <local:ViewModel/>
+        </ContentPage.BindingContext>
+
+        <ContentPage.Content>
+            <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                                       AssistItems="{Binding AssistItems}"/>
+        </ContentPage.Content>
+    </ContentPage>
+
+{% endhighlight %}
+{% highlight c# %}
+
+    using Syncfusion.Maui.AIAssistView;
+
+    namespace MauiAIAssistView
+    {
+        public partial class MainPage : ContentPage
+        {
+            SfAiAssistView sfAIAssistView;
+            ViewModel viewModel;
+            public MainPage()
+            {
+                InitializeComponent();
+                this.sfAIAssistView = new SfAIAssistView();
+                this.viewModel = new ViewModel();
+                this.sfAIAssistView.AssistItems = viewModel.AssistItems;
+                this.Content = sfAIAssistView;
+            }
+        }
+    }
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="24" %}
+    
+    public class ViewModel : INotifyPropertyChanged
+    {
+
+       ...
+
+        private void GenerateAssistItems()
+        {
+            AssistItem requestItem = new AssistItem()
+            {
+               Text = "Hey AI, can you tell me what MAUI is? Could you provide a link to learn more about .NET MAUI?",
+               IsRequested = true
+            };
+
+            this.AssistItems.Add(requestItem);
+
+            await GetResult(requestItem);
+        }
+           
+        private async Task GetResult(AssistItem requestItem)
+        {
+           await Task.Delay(1000).ConfigureAwait(true);
+ 
+           AssistItem responseItem = new AssistItem()
+           {
+             ErrorMessage = "An error occured. Either the engine you requested does not exist or there was another issue processing your request.",
+             IsRequested = false,
+           };
+ 
+           this.AssistItems.Add(responseItem);
+
+        }
+    }
+    
+{% endhighlight %}
+{% endtabs %}
