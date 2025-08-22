@@ -34,6 +34,8 @@ this.Content = sunburst;
 
 {% endtabs %}
 
+![Drill Down in MAUI Sunburst Chart.](drill_down_images/maui_drill_down.gif)
+
 ## Toolbar Alignment
 
 The vertical and the horizontal alignments of the toolbar can be customized using the `VerticalAlignment` and `HorizontalAlignment` properties, respectively.
@@ -52,7 +54,7 @@ Both the alignment properties has the following enum types:
     . . .
     <chart:SfSunburstChart.ToolbarSettings>
         <chart:SunburstToolbarSettings HorizontalAlignment="Center" 
-                                                VerticalAlignment="Center"/>
+                                       VerticalAlignment="Center"/>
     </chart:SfSunburstChart.ToolbarSettings>
 </sunburst:SfSunburstChart>
     
@@ -75,6 +77,8 @@ this.Content = sunburst;
 
 {% endtabs %}
 
+![Drill Down Toolbar Alignment.](drill_down_images/maui_toolbar_alignment.png)
+
 ## Toolbar Positioning
 
 The toolbar's position within the Sunburst Chart can be adjusted both horizontally and vertically using the `OffsetX` and `OffsetY` properties of the `SunburstToolbarSettings` class.
@@ -86,7 +90,7 @@ The toolbar's position within the Sunburst Chart can be adjusted both horizontal
 <sunburst:SfSunburstChart EnableDrillDown="True">
     . . .
     <chart:SfSunburstChart.ToolbarSettings >
-        <chart:SunburstToolbarSettings OffsetX="50" OffsetY="100"/>
+        <chart:SunburstToolbarSettings OffsetX="-50" OffsetY="200"/>
     </chart:SfSunburstChart.ToolbarSettings>
 </sunburst:SfSunburstChart>
     
@@ -99,8 +103,8 @@ sunburst.EnableDrillDown = true;
 . . .
 SunburstToolbarSettings toolbarSettings = new SunburstToolbarSettings()
 {
-    OffsetX = 50,
-    OffsetY = 100,
+    OffsetX = -50,
+    OffsetY = 200,
 };
 sunburst.ToolbarSettings = toolbarSettings;
 this.Content = sunburst;
@@ -108,6 +112,8 @@ this.Content = sunburst;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Drill Down Toolbar Positioning.](drill_down_images/maui_toolbar_positioning.png)
 
 ## Toolbar Customization  
 
@@ -145,3 +151,5 @@ this.Content = sunburst;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Drill Down TToolbar Customization.](drill_down_images/maui_toolbar_customization.png)
