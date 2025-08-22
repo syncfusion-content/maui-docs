@@ -369,6 +369,18 @@ public class GroupCaptionConverter : IValueConverter
 
 ![DataGrid with template loaded for individual caption summary column](Images\caption-summary\maui-datagrid-template-column.png)
 
+### Displaying column summary with title
+
+SfDataGrid supports to show column summary and title summary at the same time. You can show column summary along with title by defining the [GridSummaryRow.Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html#Syncfusion_Maui_DataGrid_DataGridSummaryRow_Title) and GridSummaryRow.TitleColumnCount property along with defining summary columns. Showing column summary along with title can be only supported if [GridSummaryRow.ShowSummaryInRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html#Syncfusion_Maui_DataGrid_DataGridSummaryRow_ShowSummaryInRow) is disabled.
+
+In the below code snippet, GridSummaryRow.TitleColumnCount is set as 2 and [GridSummaryRow.Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html#Syncfusion_Maui_DataGrid_DataGridSummaryRow_Title) is defined along with summary columns.
+
+### Limitations
+
+The following are the limitations of displaying column summary along with title at same time for TableSummaryRow:
+
+* If FrozenColumnCount is defined lesser than GridSummaryRow.TitleColumnCount, the title summary will be spanned to FrozenColumnCount range, since spanned range and frozen range cannot be vary.
+
 ## Group summary
 
 `Group summary` values are calculated based on the records within each group. The summary information will be displayed at the bottom of each group. You can view the group summary row by expanding the corresponding group header. The data grid allows for the addition of any number of group summary rows.
@@ -662,6 +674,17 @@ public class GroupSummaryConverter : IValueConverter
 
 ![DataGrid with template loaded for individual group summary cell](Images\group-summary\maui-datagrid-column-template.png)
 
+### Displaying column summary with title
+
+SfDataGrid supports to show column summary and title summary at the same time. You can show column summary along with title by defining the [GridSummaryRow.Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html#Syncfusion_Maui_DataGrid_DataGridSummaryRow_Title) and GridSummaryRow.TitleColumnCount property along with defining summary columns. Showing column summary along with title can be only supported if [GridSummaryRow.ShowSummaryInRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html#Syncfusion_Maui_DataGrid_DataGridSummaryRow_ShowSummaryInRow) is disabled.
+
+In the below code snippet, GridSummaryRow.TitleColumnCount is set as 2 and [GridSummaryRow.Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html#Syncfusion_Maui_DataGrid_DataGridSummaryRow_Title) is defined along with summary columns.
+
+### Limitations
+
+The following are the limitations of displaying column summary along with title at same time for TableSummaryRow:
+
+* If FrozenColumnCount is defined lesser than GridSummaryRow.TitleColumnCount, the title summary will be spanned to FrozenColumnCount range, since spanned range and frozen range cannot be vary.
 
 ## Table summaries
 
@@ -1111,6 +1134,18 @@ public class TableSummaryConverter : IValueConverter
 ![Table summary template in a column](Images\table-summary\maui-datagrid-template-column.png)
 
 N> The `DataTemplateSelector` can also be directly assigned to the `SfDataGrid.TableSummaryTemplate`. When using data template selector, performance issues occur as the conversion template views take time within the framework.
+
+### Displaying column summary with title
+
+SfDataGrid supports to show column summary and title summary at the same time. You can show column summary along with title by defining the [GridSummaryRow.Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html#Syncfusion_Maui_DataGrid_DataGridSummaryRow_Title) and GridSummaryRow.TitleColumnCount property along with defining summary columns. Showing column summary along with title can be only supported if [GridSummaryRow.ShowSummaryInRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html#Syncfusion_Maui_DataGrid_DataGridSummaryRow_ShowSummaryInRow) is disabled.
+
+In the below code snippet, GridSummaryRow.TitleColumnCount is set as 2 and [GridSummaryRow.Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html#Syncfusion_Maui_DataGrid_DataGridSummaryRow_Title) is defined along with summary columns.
+
+### Limitations
+
+The following are the limitations of displaying column summary along with title at same time for TableSummaryRow:
+
+* If FrozenColumnCount is defined lesser than GridSummaryRow.TitleColumnCount, the title summary will be spanned to FrozenColumnCount range, since spanned range and frozen range cannot be vary.
 
 ## Formatting summary
 
