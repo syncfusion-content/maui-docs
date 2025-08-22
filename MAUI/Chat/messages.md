@@ -1367,7 +1367,7 @@ public class MessageTemplateSelector : ChatMessageTemplateSelector
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/message-template-.net-maui-chat)
 
-## Targetable Views 
+## Customizable Views
 
 The `SfChat` allows you to target and fully customize views within the chat control. The following views can be targeted and customized:
 - `IncomingMessageContentView` - Represents the incoming content view of the messages.
