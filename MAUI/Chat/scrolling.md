@@ -75,7 +75,7 @@ The [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.htm
 {% endtabs %}
 ## Scroll to Bottom Button
 
-The `SfChat` allows you to display a scroll to bottom button when `ShowScrollToBottomButton` property is set to `true` that helps to quickly navigate to the last message when they have scrolled up through older messages in the conversation.
+The `SfChat` allows you to display a scroll to bottom button when `ShowScrollToBottomButton` property is set to `true` that helps to quickly navigate to the last message when scrolled up through older messages in the conversation.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
