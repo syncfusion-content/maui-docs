@@ -831,7 +831,7 @@ Shift, Command
 
 The following example demonstrates how to use the modifier key properties to implement custom selection logic:
 
-{% endhighlight %}
+{% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 if (selectionController.IsShiftKeyPressed)
