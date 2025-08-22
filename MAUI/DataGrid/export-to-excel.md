@@ -26,7 +26,7 @@ To export the SfDataGrid to an Excel file, the following NuGet package should be
 </table>
 
 ## Save Service class in portable project.
-Add the new class file with name as SaveService to the Project and add below code in it. This is the helper class used to save and view the excel file in Windows, Android, IOS and MAC devices.
+Add the new class file with name as SaveService to the Project and add below code in it. This is the helper class used to save and view the excel file in Windows, Android, iOS and MAC devices.
 
 {% tabs %}
 {% highlight c# %}
@@ -228,9 +228,9 @@ Add the following code to the AndroidManifest.xml file located under Properties 
 {% endhighlight %}
 {% endtabs %}
 
-### Save and View the Excel document in IOS
+### Save and View the Excel document in iOS
 
-Add the new class file with name SaveIOS file under Platforms -> IOS directory to save and view the Excel document in the IOS device and use the below code in it.
+Add the new class file with name SaveIOS file under Platforms -> iOS directory to save and view the Excel document in the iOS device and use the below code in it.
 
 {% tabs %}
 {% highlight c# %}
