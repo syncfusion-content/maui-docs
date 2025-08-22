@@ -764,6 +764,8 @@ Bind the above data to [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusi
 
 N> If a custom model collection is used as the ItemsSource for the Kanban control, you must specify the [`ColumnMappingPath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ColumnMappingPath) property to dynamically generate columns based on a specific field in the model. Additionally, define a [`CardTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_CardTemplate) that binds to the properties of your custom model.
 
+{% tabs %}
+
 {% highlight xaml %}
 
 <kanban:SfKanban ItemsSource="{Binding TaskDetails}"
@@ -858,9 +860,13 @@ kanban.CardTemplate = new DataTemplate(() =>
 
 {% endhighlight %}
 
+{% endtabs %}
+
 ### Defining columns in the Kanban Board
 
 Follow the same approach specified under [Default Model](https://help.syncfusion.com/maui/kanban-board/getting-started#defining-columns-in-the-kanban-board).
+
+{% tabs %}
 
 {% highlight xaml %}
 
@@ -908,6 +914,8 @@ codeColumn.Categories = new List<object>() { "Code Review" };
 doneColumn.Categories = new List<object>() { "Done", "Closed", "Closed No Changes", "Won't Fix" };
 
 {% endhighlight %}
+
+{% endtabs %}
 
 ## Running the Application
 Press **F5** to build and run the application. Once compiled, the Kanban board will display with the data provided.
