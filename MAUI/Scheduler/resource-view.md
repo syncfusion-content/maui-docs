@@ -114,8 +114,6 @@ this.Scheduler.AppointmentsSource = appointment;
 
 ![Resource sharing in .NET MAUI Scheduler.](images/resource-view/resource-view-sharing-in-net-maui-scheduler.png)
 
-![Resource Sharing in Days View in .NET MAUI Scheduler.](images/resource-view/resource-view-sharing-in-days-view-in-net-maui-scheduler.png)
-
 ## Resource Grouping in Days View
  
 In the day, week, and work week views, you can control whether dates are grouped under resources or resources are grouped under dates by using the `ResourceGroupType` property of the [`SchedulerResourceView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) class.
@@ -125,14 +123,14 @@ In the day, week, and work week views, you can control whether dates are grouped
 The `ResourceGroupType` is set to `Resource` by default. In this mode, the scheduler arranges the dates under each resource.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
 <schedule:SfScheduler x:Name="Scheduler" View="Day">
     <scheduler:SfScheduler.ResourceView>
         <scheduler:SchedulerResourceView ResourceGroupType="Resource"/>
     </scheduler:SfScheduler.ResourceView>
 </schedule:SfScheduler>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
 var Resources = new ObservableCollection<SchedulerResource>()
 {
    new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.LightGreen, Id = "1000" },
@@ -141,6 +139,7 @@ var Resources = new ObservableCollection<SchedulerResource>()
 };
 
 this.Scheduler.ResourceView.Resources = Resources;
+this.Scheduler.ResourceView.ResourceGroupType = SchedulerResourceGroupType.Resource;
 {% endhighlight %}
 {% endtabs %}
 
@@ -151,14 +150,14 @@ this.Scheduler.ResourceView.Resources = Resources;
 When the `ResourceGroupType` is set to `Date`, the scheduler arranges the resources under each date.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
 <schedule:SfScheduler x:Name="Scheduler" View="Day">
     <scheduler:SfScheduler.ResourceView>
         <scheduler:SchedulerResourceView ResourceGroupType="Date"/>
     </scheduler:SfScheduler.ResourceView>
 </schedule:SfScheduler>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
 var Resources = new ObservableCollection<SchedulerResource>()
 {
    new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.LightGreen, Id = "1000" },
@@ -167,6 +166,7 @@ var Resources = new ObservableCollection<SchedulerResource>()
 };
 
 this.Scheduler.ResourceView.Resources = Resources;
+this.Scheduler.ResourceView.ResourceGroupType = SchedulerResourceGroupType.Date;
 {% endhighlight %}
 {% endtabs %}
 
@@ -177,14 +177,14 @@ this.Scheduler.ResourceView.Resources = Resources;
 The number of resources shown in the day, week, and work week views can be controlled using the `VisibleResourceCount` property of the [`SchedulerResourceView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) class. This lets you define how many resources are visible at a time.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
 <schedule:SfScheduler x:Name="Scheduler" View="Day" >
 <schedule:SfScheduler.ResourceView>
     <schedule:SchedulerResourceView VisibleResourceCount="4"/>
 </schedule:SfScheduler.ResourceView>
 </schedule:SfScheduler>
 {% endhighlight %}
-{% highlight C# %}
+{% highlight tabtitle="MainPage.xaml.cs" C# hl_lines="12"%}
 var Resources = new ObservableCollection<SchedulerResource>()
 {
     new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.LightGreen, Id = "1000" },
@@ -196,6 +196,7 @@ var Resources = new ObservableCollection<SchedulerResource>()
 };
 
 this.Scheduler.ResourceView.Resources = Resources;
+this.Scheduler.ResourceView.VisibleResourceCount = 4;
 {% endhighlight %}
 {% endtabs %}
 
@@ -240,6 +241,7 @@ this.Scheduler.ResourceView.ResourceHeaderHeight = 100;
 ![Resource Header Height in Days View in .NET MAUI Scheduler.](images/resource-view/resource-view-resource-header-height-in-days-view-in-.net-maui-scheduler.png)
 
 ## Resource minimum row height
+
 You can customize resource minimum row height of visible resources in timeline day, timeline week, timeline workweek and timeline month views by using the [MinimumRowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_MinimumRowHeight) property of [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html) in [SfScheduler.](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) By default, resource row height will be auto-expanded from minimum height based on the appointment counts.
 
 {% tabs %}
@@ -272,7 +274,8 @@ N>
 
 
 ## Assign special time regions to scheduler resources
-You can highlight a resources availability by creating special [time regions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_TimeRegions) in the day, week, workweek, timeline day, timeline week, and timeline workweek views. Special time regions can represent unavailable or reserved slots such as lunch breaks, team meetings, or non-working hours.
+
+You can highlight the resources availability by creating special [time regions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_TimeRegions) in the day, week, workweek, timeline day, timeline week, and timeline workweek views. Special time regions can represent unavailable or reserved slots such as lunch breaks, team meetings, or non-working hours.
 
 ### Special time regions for timeline view.
 
