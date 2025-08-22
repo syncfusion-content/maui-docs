@@ -277,7 +277,7 @@ N>
 
 You can highlight the resources availability by creating special [time regions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_TimeRegions) in the day, week, workweek, timeline day, timeline week, and timeline workweek views. Special time regions can represent unavailable or reserved slots such as lunch breaks, team meetings, or non-working hours.
 
-### Special time regions for timeline view.
+### Special time regions for timeline views.
 
 In the timeline views (timeline day, timeline week, and timeline work week), special time regions can be applied to visually highlight unavailable periods for different resources.
 
@@ -315,7 +315,7 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 {% endhighlight %}
 {% endtabs %}
 
-![Resource view special timeregion in .NET MAUI Scheduler.](images/resource-view/special-regions-resources-in-net-maui-scheduler.png)
+![Resource view special timeregion in .NET MAUI Scheduler.](images/resource-view/special-time-regions-for-resources-in-timeline-views-in-net-maui-scheduler.png)
 
 ### Special time regions for days view.
 
@@ -355,7 +355,7 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 {% endhighlight %}
 {% endtabs %}
 
-![Resource View Special Time Region in Days View in .NET MAUI Scheduler.](images/resource-view/special-regions-resources-in-days-view-in-net-maui-scheduler.png)
+![Resource View Special Time Region in Days View in .NET MAUI Scheduler.](images/resource-view/special-time-regions-for-resources-in-days-view-in-net-maui-scheduler.png)
 
 ## Business object binding for resources
 
