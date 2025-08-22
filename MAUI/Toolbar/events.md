@@ -185,9 +185,45 @@ private void OnMoreButtonTapped(object? sender, ToolbarMoreButtonTappedEventArgs
 
 {% endtabs %}
 
+## Selection Changed
+
+A [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_SelectionChanged) event occurs, each time a toolbar item is selected.
+
+Below is a list of the arguments:
+
+* **Sender** : This contains the SfToolbar object.
+
+* **SelectionChanged**: The selection changed action performed on an toolbar element can be found in the [ToolbarSelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarSelectionChangedEventArgs.html), you can see details about the selected items.
+
+    * **NewToolbarItems** : Returns the newly selected toolbar items.
+    * **OldToolbarItems** : Returns the previously selected toolbar items.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+
+<toolbar:SfToolbar x:Name="toolbar" 
+                       SelectionChanged="OnToolbarSelectionChanged" >
+</toolbar:SfToolbar>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
+
+this.toolbar.SelectionChanged += this.OnToolbarSelectionChanged;
+private void OnToolbarSelectionChanged(object? sender, ToolbarSelectionChangedEventArgs e)
+{
+    var newToolbarItems = e.NewToolbarItems;
+    var oldToolbarItems = e.OldToolbarItems;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ## Commands
 
-Toolbar commands allows to map [Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Tapped) event, [ItemTouchInteraction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ItemTouchInteraction) event, [ItemLongPressed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ItemLongPressed) event, [MoreItemsChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreItemsChanged) event and [MoreButtonTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreButtonTapped) event to `Commands` which supports the MVVM (Model-View-ViewModel) pattern.
+Toolbar commands allows to map [Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_Tapped) event, [ItemTouchInteraction](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ItemTouchInteraction) event, [ItemLongPressed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ItemLongPressed) event, [MoreItemsChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreItemsChanged) event, [MoreButtonTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_MoreButtonTapped) and [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_SelectionChanged) event to `Commands` which supports the MVVM (Model-View-ViewModel) pattern.
 
 ### Tapped Command
 
@@ -614,6 +650,106 @@ public class ToolbarInteractionViewModel
     private void ExecuteMoreItemsChanged(ToolbarMoreItemsChangedEventArgs e)
     {
         var moreItems = e.ToolbarItems;
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### SelectionChanged Command
+
+The [SelectionChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_SelectionChangedCommand) will be triggered when you select the toolbar items and pass the [ToolbarSelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarSelectionChangedEventArgs.html#properties) as parameter.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
+
+<Grid>
+    <Grid.BindingContext>
+        <local:ToolbarInteractionViewModel />
+    </Grid.BindingContext>
+    <toolbar:SfToolbar x:Name="toolbar"
+                    SelectionChangedCommand="{Binding ToolbarSelectionChangedCommand}"
+                    HeightRequest="56"
+                    Orientation="Horizontal">
+        <toolbar:SfToolbar.Items>
+            <toolbar:SfToolbarItem Name="ToolbarItem1" Text="Zoom-in">
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE713;" FontFamily="MaterialAssets"/>
+                </toolbar:SfToolbarItem.Icon>
+            </toolbar:SfToolbarItem>
+            <toolbar:SfToolbarItem Name="ToolbarItem2" Text="Zoom-out">
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE714;" FontFamily="MaterialAssets"/>
+                </toolbar:SfToolbarItem.Icon>
+            </toolbar:SfToolbarItem>
+            <toolbar:SfToolbarItem Name="ToolbarItem3" Text="Search">
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE715;" FontFamily="MaterialAssets"/>
+                </toolbar:SfToolbarItem.Icon>
+            </toolbar:SfToolbarItem>
+        </toolbar:SfToolbar.Items>
+    </toolbar:SfToolbar>
+</Grid>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="8" %}
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfToolbar toolbar = new SfToolbar();
+        ToolbarInteractionViewModel viewModel = new ToolbarInteractionViewModel();
+        toolbar.SelectionChangedCommand = viewModel.ToolbarSelectionChangedCommand;
+        ObservableCollection<BaseToolbarItem> itemCollection = new ObservableCollection<BaseToolbarItem>
+        {
+            new SfToolbarItem
+            {
+                Name = "Zoom-in",
+                ToolTipText = "Zoom-in",
+                Icon = new FontImageSource { Glyph = "&#xE713;", FontFamily = "MauiMaterialAssets" }
+            },
+            new SfToolbarItem
+            {
+                Name = "Zoom-out",
+                ToolTipText = "Zoom-out",
+                Icon = new FontImageSource { Glyph = "&#xE714;", FontFamily = "MauiMaterialAssets" }
+            },
+            new SfToolbarItem
+            {
+                Name = "Search",
+                ToolTipText = "Search",
+                Icon = new FontImageSource { Glyph = "&#xE715;", FontFamily = "MauiMaterialAssets" }
+            },
+        };
+        toolbar.Items = itemCollection;
+        this.Content = toolbar;
+    }   
+}
+
+{% endhighlight %}
+
+{% highlight C# tabtitle="ToolbarInteractionViewModel.cs" %}
+
+public class ToolbarInteractionViewModel
+{
+    public ICommand ToolbarSelectionChangedCommand { get; set; }
+    public ToolbarInteractionViewModel()
+    {
+        this.ToolbarSelectionChangedCommand = new Command<ToolbarSelectionChangedEventArgs>(ExecuteSelectionChanged, CanExecuteSelectionChanged);
+    }
+    private bool CanExecuteSelectionChanged(ToolbarSelectionChangedEventArgs arg)
+    {
+        return true;
+    }
+    private void ExecuteSelectionChanged(ToolbarSelectionChangedEventArgs obj)
+    {
+        var oldItems = obj.OldToolbarItems;
+        var newItems = obj.NewToolbarItems;
     }
 }
 
