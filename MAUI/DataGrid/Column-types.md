@@ -1170,3 +1170,279 @@ The SfDataGrid allows binding the view model property to the `HeaderTemplate` by
 {% endtabs %}
 
 ![DataGrid with header template bind to view model](Images\column-types\maui-datagrid-header-template-view-model.png)
+
+## Column CellTemplate in .NET MAUI DataGrid
+
+You can customize the display mode of any column in the `SfDataGrid` by setting the [DataGridColumn.CellTemplate]() property. In edit mode, the appropriate editor will be automatically loaded based on the column type.
+
+The `CellTemplate` allows you to:
+ - Format data visually using MAUI controls.
+ - Apply conditional styling or behavior using [DataTrigger]() or Binding.
+
+In the example below, a `DataGridNumericColumn` is configured to display a `Stepper and a Label` in view mode. When the cell enters edit mode, the appropriate numeric editor is shown automatically.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid x:Name="dataGrid"    
+                       ColumnWidthMode="Fill"                
+                       ItemsSource="{Binding Orders}">
+    <syncfusion:SfDataGrid.Columns>         
+        <syncfusion:DataGridNumericColumn HeaderText="Quantity" MappingName="Quantity" Width="150">
+            <syncfusion:DataGridNumericColumn.CellTemplate>
+                <DataTemplate>
+                    <Grid Padding="5" ColumnDefinitions="*,*" ColumnSpacing="5">
+                        <Stepper Value="{Binding Quantity, Mode=TwoWay}" Minimum="1"
+                                 Maximum="20" Increment="1" HorizontalOptions="Center"/>
+                        <Label Text="{Binding Quantity, StringFormat='Qty: {0}'}"
+                               HorizontalOptions="Center" VerticalOptions="Center" FontSize="14"
+                               TextColor="#333333" Grid.Column="1" Margin="0,5,0,0" />
+                    </Grid>
+                </DataTemplate>
+            </syncfusion:DataGridNumericColumn.CellTemplate>
+        </syncfusion:DataGridNumericColumn>
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="CellTemplate" src="Images\column-types\maui-datagrid-CellTemplate.png" width="404"/> 
+
+N>
+`CellTemplate` is not support by `DataGridCheckboxColumn`, `DataGridImageColumn` and `DataGridUnboundColumn` columns.
+
+### Reusing the Same DataTemplate for Multiple Columns in .NET MAUI DataGrid
+
+By default, the underlying record (i.e., the data item bound to the row) is the `BindingContext` for each column's `CellTemplate`. This means you typically need to define a separate template for each column to display values based on its `MappingName`.
+
+However, if you want to reuse a single [DataTemplate]() across multiple columns, you can do so by setting the [DataGridColumn.SetCellBoundValue]() property of the column to `true`.
+
+When `SetCellBoundValue` is set to true, the `BindingContext` of the CellTemplate is changed to a helper object called [BindingContextHelper](), which exposes the following members:
+
+  - `Value`: Returns the value based on the column's MappingName.
+  - `Record`: Returns the original data object (the row's bound item).
+This allows you to use a generic template that dynamically adapts to the column's mapping.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+  <ContentPage.Resources>
+      <ResourceDictionary>
+            <DataTemplate x:Key="cellTemplate">
+                 <Label Text="{Binding Path=Value}" 
+                        HorizontalOptions="CenterAndExpand" 
+                        VerticalOptions="CenterAndExpand"
+                        TextColor="#E65100"/>
+            </DataTemplate>
+      </ResourceDictionary>
+  </ContentPage.Resources>
+
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}">
+    <syncfusion:SfDataGrid.Columns>
+    <syncfusion:DataGridNumericColumn HeaderText="Order ID" 
+                                      MappingName="OrderID"
+                                      SetCellBoundValue="True" 
+                                      CellTemplate="{StaticResource cellTemplate}">
+           <syncfusion:DataGridTextColumn HeaderText="Customer Name" 
+                                       MappingName="CustomerName" 
+                                       SetCellBoundValue="True" 
+                                       CellTemplate="{StaticResource cellTemplate}"/>   
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="CellTemplate" src="Images\column-types\maui-datagrid-CellTemplate-Reusable.png" width="404"/>
+
+## Setting CellTemplate Based on Custom Logic Using Template Selector
+`DataGridColumn` provides support to choose different `DataTemplate` based on underlying data object using same `DataGridColumn.CellTemplate` property.
+
+In the example below, the `OrderID` column uses two different templates based on whether the `OrderID` is even or odd.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="DefaultTemplate">
+                <StackLayout Background="#FFF3E0"                    
+                             Padding="5">
+                    <Label Text="{Binding OrderID}" 
+                           TextColor="#E65100"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center"  
+                           VerticalTextAlignment="Center"/>
+                </StackLayout>
+            </DataTemplate>
+            <DataTemplate x:Key="AlternateTemplate">
+                <StackLayout Background="#E3F2FD" 
+                        Padding="5">
+                    <Label Text="{Binding OrderID}" 
+                           TextColor="#0D47A1" 
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center" 
+                           VerticalTextAlignment="Center" />
+                </StackLayout>
+            </DataTemplate>
+        <selector:CustomCellTemplateSelector  x:Key="OrderTemplateSelector"
+          DefaultTemplate="{StaticResource DefaultTemplate}"
+          AlternateTemplate="{StaticResource AlternateTemplate}" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+  
+{% endhighlight %}
+{% endtabs %}
+
+Below code returns the `DefaultTemplate` and `AlternateTemplate` based on `OrderID’s` value
+
+{% tabs %}
+{% highlight c# %}
+   public class CustomCellTemplateSelector : DataTemplateSelector
+   {
+       public DataTemplate DefaultTemplate { get; set; }
+       public DataTemplate AlternateTemplate { get; set; }
+
+       protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+       {
+           var order = item as OrderModel;
+
+           if (order != null)
+           {
+               return order.OrderID % 2 == 0 ? AlternateTemplate : DefaultTemplate;
+              
+           }
+           return DefaultTemplate;
+       }
+   }
+{% endhighlight %}
+{% endtabs %}
+
+In the below code, the custom template selector set to DataGridColumn.CellTemplate
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid Grid.Row="1"
+                       x:Name="dataGrid"
+                       ItemsSource="{Binding Orders}"
+                       AutoGenerateColumnsMode="None"
+                       ColumnWidthMode="Fill"
+                       SelectionMode="Single">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridNumericColumn HeaderText="Order ID" 
+                                          MappingName="OrderID" 
+                                          CellTemplate="{StaticResource OrderTemplateSelector}"/>
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="CellTemplate" src="Images\column-types\maui-datagrid-column-CellTemplateSelector.png" width="404"/>
+
+###  Binding ViewModel Properties with CellTemplate
+You can bind properties and commands defined in your `ViewModel` directly to controls inside a `CellTemplate` in the .NET MAUI DataGrid.
+
+In the example below command defined in ViewModel is bound to Button inside CellTemplate. Below code, denote the base command.
+
+{% tabs %}
+{% highlight c# %}
+public class BaseCommand : ICommand
+  {
+      private readonly Action<object> _execute;
+      private readonly Predicate<object> _canExecute;
+
+      public BaseCommand(Action<object> execute)
+      : this(execute, null)
+      {
+      }
+
+      public BaseCommand(Action<object> execute, Predicate<object> canExecute)
+      {
+          _execute = execute ?? throw new ArgumentNullException(nameof(execute));
+          _canExecute = canExecute;
+      }
+
+      public bool CanExecute(object parameter)
+      {
+          return _canExecute == null || _canExecute(parameter);
+      }
+
+      public event EventHandler CanExecuteChanged;
+
+      public void RaiseCanExecuteChanged()
+      {
+          CanExecuteChanged?.Invoke(this, EventArgs.Empty);
+      }
+
+      public void Execute(object parameter)
+      {
+          _execute(parameter);
+      }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+Below code, defines the command for Button in ViewModel.
+
+{% tabs %}
+{% highlight c# %}
+public class ViewModel
+{    
+    private BaseCommand deleteRecord;
+
+    public BaseCommand DeleteRecord
+    {
+        get
+        {
+
+            if (deleteRecord == null)
+                deleteRecord = new BaseCommand(OnDeleteRecordClicked, OnCanDelete);
+            return deleteRecord;
+        }
+    }
+
+    private static bool OnCanDelete(object obj)
+    {
+        return true;
+    }
+
+    private void OnDeleteRecordClicked(object obj)
+    {
+        //TODO ACTION.
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+In the below code, Button inside `CellTemplate` bound to the command in ViewModel.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid Grid.Row="1"
+                        x:Name="dataGrid"
+                        ItemsSource="{Binding Orders}"
+                        AutoGenerateColumnsMode="None"
+                        ColumnWidthMode="Fill"
+                        SelectionMode="Single">
+    <syncfusion:SfDataGrid.Columns>
+                <syncfusion:DataGridNumericColumn HeaderText="Sales Amount" MappingName="SalesAmount" 
+                       Format="C2">
+                    <syncfusion:DataGridNumericColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackLayout HorizontalOptions="CenterAndExpand">
+                                <Button Text="Delete"
+                                    BackgroundColor="#FF5252"
+                                    TextColor="White"
+                                    Command="{Binding BindingContext.DeleteRecord, Source={x:Reference dataGrid}}"
+                                    CommandParameter="{Binding .}" 
+                                    HeightRequest="35"
+                                    WidthRequest="80"
+                                    FontSize="12"/>
+                            </StackLayout>
+                        </DataTemplate>
+                    </syncfusion:DataGridNumericColumn.CellTemplate>
+                </syncfusion:DataGridNumericColumn>
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% endtabs %}
+
+N> When using complex `CellTemplates` with multiple controls or heavy operations, consider the impact on `scrolling performance`, especially with large datasets.

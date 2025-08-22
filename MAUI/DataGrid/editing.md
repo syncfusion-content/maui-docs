@@ -32,6 +32,56 @@ dataGrid.NavigationMode = NavigationMode.Cell;
 
 ![DataGrid with editing](Images\editing\maui-datagrid-editing.png)
 
+## Editing CheckBox columns
+
+In .NET MAUI DataGrid, CheckBox columns can be edited by setting the [DataGridCheckBoxColumn.AllowEditing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCheckBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridCheckBoxColumn_AllowEditing) property to `true`. By default, the editing behavior for CheckBox columns is consistent with other column types, requiring the `AllowEditing` property to be explicitly set to enable editing.
+
+You can enable editing for CheckBox columns in two ways:
+
+{% tabs %}
+{% highlight xaml %}
+<!-- Method 1: Enable editing at the DataGrid level -->
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       AllowEditing="True"
+                       SelectionMode="Multiple"    
+                       NavigationMode="Cell" 
+                       ItemsSource="{Binding OrderInfoCollection}">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridCheckBoxColumn MappingName="IsClosed" 
+                                          HeaderText="Is Closed" />
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+
+<!-- Method 2: Enable editing at the column level -->
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       SelectionMode="Multiple"    
+                       NavigationMode="Cell" 
+                       ItemsSource="{Binding OrderInfoCollection}">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridCheckBoxColumn MappingName="IsClosed" 
+                                           AllowEditing="True"
+                                           HeaderText="Is Closed" />
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+
+{% highlight c# %}
+// Method 1: Enable editing at the DataGrid level
+dataGrid.AllowEditing = true;
+dataGrid.SelectionMode = SelectionMode.Multiple;
+dataGrid.NavigationMode = NavigationMode.Cell;
+
+// Method 2: Enable editing at the column level
+DataGridCheckBoxColumn checkBoxColumn = new DataGridCheckBoxColumn();
+checkBoxColumn.MappingName = "IsClosed";
+checkBoxColumn.HeaderText = "Is Closed";
+checkBoxColumn.AllowEditing = true;
+dataGrid.Columns.Add(checkBoxColumn);
+{% endhighlight %}
+{% endtabs %}
+
+When a CheckBox column cell is in edit mode, you can toggle its value by tapping on the CheckBox. The CheckBox value will be immediately committed to the underlying data source when toggled.
+
 ## Column editing
 
 To enable or disable editing for a specific column, you can simply set the [DataGridColumn.AllowEditing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_AllowEditing) property to `true` or `false`.
