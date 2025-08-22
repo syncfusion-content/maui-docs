@@ -1163,7 +1163,7 @@ saveService.SaveAndView("ExportFeature.pdf", "application/pdf", stream);
 ```
 <img src="Images/export-to-pdf/maui-datagrid-exportdetailsview.png" alt="Maui DataGrid displays Nested dataGrid exported to PDF" width="404"/>
 
-By default, only expanded DetailsViewDataGrids only will be exported to PDF document. If you want to export all the DetailsViewDataGrids, you need to set `CanExportAllDetails` as true.
+By default, only expanded DetailsViewDataGrids will be exported to the PDF document. If you want to export all the DetailsViewDataGrids, you need to set `CanExportAllDetails` to true.
 
 ```csharp
 MemoryStream stream = new MemoryStream();
