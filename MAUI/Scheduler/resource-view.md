@@ -204,13 +204,9 @@ this.Scheduler.ResourceView.VisibleResourceCount = 4;
 
 N> 
 
-- When `VisibleResourceCount` is set to -1, the Scheduler will show up to three resources.
- 
-- If `VisibleResourceCount` is -1 but there are only three resources in total, then only two of them will be shown.
- 
-- Setting `VisibleResourceCount` to 0 removes the resource view layout. For example, if the Scheduler is in Day view with resources displayed, changing the value to 0 will hide the resources and show only the plain Day view.
+- When `VisibleResourceCount` is set to -1, the `SfScheduler` displays up to three resources. If the total number of resources is less than three, it displays all available resources.
 
-- If the value assigned to `VisibleResourceCount` is greater than the total number of resources, the scheduler will display all the resources in the SchedulerResource collection.
+- When `VisibleResourceCount` is set to 0, the resource view layout is removed, and only the plain Scheduler view (e.g., Day view without resources) is shown.
 
 ## Resource Header Height in Days View
  
@@ -316,7 +312,7 @@ private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
 
 ### Special time regions for days view.
 
-The Days View (day, week, and work week) allows you to block specific hours within a day for selected resources using special time regions. For example, you can highlight a lunch break between 1 PM and 2 PM so that users cannot schedule appointments during this time.
+In Days View (day, week, and work week) special time regions can be applied to visually highlight unavailable periods for different resources.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
