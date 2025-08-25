@@ -61,11 +61,13 @@ public class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-N> It is mandatory to specify the `PropertyName` of `SortDescriptor` in Programmatic Scrolling.
+![Programmatic sorting in .NET MAUI TreeView](images/sorting/maui-treeView-programmatic-sorting.gif)
+
+N> It is mandatory to specify the `PropertyName` of `SortDescriptor` in programmatic sorting.
 
 ## Custom sorting
 
-Custom sorting can be applied by assigning a comparer to the `SortDescriptor.Comparer` property. The comparer should be added to the `SortDescriptors` collection to enable sorting based on custom logic.
+Custom sorting can be applied by assigning a comparer to the `SortDescriptor.Comparer` property and the comparer will be added to the `SortDescriptors` collection.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="4 9" %}
@@ -104,7 +106,7 @@ Custom sorting can be applied by assigning a comparer to the `SortDescriptor.Com
 {% endhighlight %}
 {% endtabs %}
 
-## Clear Sorting
+## Clear sorting
 
 When the `SortDescriptors` collection is cleared, it restores the default order of the node collection, and the TreeView reverts to its original order.
 
@@ -112,7 +114,7 @@ When the `SortDescriptors` collection is cleared, it restores the default order 
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
   <Grid RowDefinitions="Auto,*">
-      <Button Text="Clear Sorting" Clicked="Clear_Sorting"/>
+      <Button Text="Clear sorting" Clicked="Clear_Sorting"/>
       <syncfusion:SfTreeView x:Name="treeView" Grid.Row="1">
         <syncfusion:SfTreeView.SortDescriptors>
             <treeviewengine:SortDescriptor PropertyName="ItemName" Direction="Ascending" />
@@ -120,10 +122,7 @@ When the `SortDescriptors` collection is cleared, it restores the default order 
       </syncfusion:SfTreeView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
-   private void Clear_Sorting(object sender, EventArgs e)
-   {
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 	  treeView.SortDescriptors.Clear();
-   }
 {% endhighlight %}
 {% endtabs %}
