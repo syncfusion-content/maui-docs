@@ -9,7 +9,7 @@ documentation: ug
 
 # AI-Driven Smart Location Search in .NET MAUI Maps (SfMaps)
 
-This document provides a comprehensive guide to implementing advanced search functionality within the Syncfusion [.NET MAUI Maps](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.SfMaps.html) control. By integrating Azure OpenAI, this solution enables an intelligent, AI-powered location search experience.
+This document provides a comprehensive guide to implementing advanced search functionality within the Syncfusion [.NET MAUI Maps](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Maps.SfMaps.html) control. By integrating **Azure OpenAI**, this solution enables an intelligent, AI-powered location search experience.
 
 ## Integrating Azure OpenAI with the .NET MAUI app
 
@@ -21,7 +21,7 @@ Once you get your key and endpoint, follow these steps:
 
 ### Step 1: Set up Azure OpenAI
 
-To configure Azure OpenAI, we’ll use the GPT-4O model for text and the DALL-E model for images. Set up the `OpenAIClient` as shown in the following code example.
+To configure **Azure OpenAI**, we’ll use the **GPT-4O** model for text and the **DALL-E** model for images. Set up the `OpenAIClient` as shown in the following code example.
 
 {% tabs %}
 
@@ -62,11 +62,11 @@ To set up the connection to Azure OpenAI. Refer to the following code.
 
 {% endtabs %}
 
-This connection allows you to send prompts to the model and receive responses, which can be used to generate map markers for .NET MAUI Maps.
+This connection allows you to send prompts to the model and **receive responses**, which can be used to generate map markers for .NET MAUI Maps.
 
 ### Step 3: Get the result from the AI service
 
-Implement the `GetResultsFromAI` and `GetImageFromAI` methods to retrieve responses from the OpenAI API based on user input.
+Implement the `GetResultsFromAI` and `GetImageFromAI` methods to retrieve responses from the **OpenAI** API based on user input.
 
 {% tabs %}
 
@@ -110,15 +110,15 @@ public async Task<Uri> GetImageFromAI(string? locationName)
 
 {% endtabs %}
 
-The AzureOpenAIService class now offers a convenient way to interact with the OpenAI API and retrieve completion results based on the provided prompt.
+The **AzureOpenAIService** class now offers a convenient way to interact with the **OpenAI** API and retrieve completion results based on the provided **prompt**.
 
 ## Integrating AI-powered smart location search in .NET MAUI Autocomplete
 
-To design the AI-powered smart location search UI using the [.NET MAUI Autocomplete](https://www.syncfusion.com/maui-controls/maui-autocomplete) control and then map the selected location into the .NET MAUI Maps control. Before proceeding, please refer to the getting started documentation for both Syncfusion .NET MAUI Maps and Autocomplete controls.
+To design the AI-powered smart location search UI using the [.NET MAUI Autocomplete](https://www.syncfusion.com/maui-controls/maui-autocomplete) control and then map the selected location into the **.NET MAUI Maps** control. Before proceeding, please refer to the getting started documentation for both Syncfusion .NET MAUI Maps and Autocomplete controls.
 
 ### Step 1: Create a custom marker model
 
-Create a custom marker model to define geographic location information for .NET MAUI Maps tile layer markers. The model can also include a name, details, address, and image to provide additional information for the marker tooltip.
+Create a custom marker model to define geographic location information for .NET MAUI **Maps tile layer markers**. The model can also include a name, details, address, and image to provide additional information for the **marker tooltip**.
 
 {% tabs %}
 
@@ -316,7 +316,7 @@ Refer to the following code example to add the .NET MAUI Autocomplete control an
 
 ### Step 5: Enable AI-powered smart searching in .NET MAUI Maps
 
-Add the prompt that requests the AI service to convert the user input into geographic locations in JSON format. The JSON data is then parsed into custom markers, which are added to the .NET MAUI Maps by using its Markers property in the MapTileLayer class.
+Add the **prompt** that requests the AI service to convert the user input into geographic locations in **JSON** format. The **JSON** data is then parsed into custom markers, which are added to the **.NET MAUI Maps** by using its **Markers** property in the **MapTileLayer** class.
 
 {% tabs %}
 
