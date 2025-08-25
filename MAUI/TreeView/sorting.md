@@ -104,7 +104,7 @@ Sort the items based on the custom logic and it can be applied to `SortDescripto
 When the `SortDescriptors` collection is cleared, it restores the default order of the node collection, and the TreeView reverts to its original order.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml"}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
   <Grid RowDefinitions="Auto,*">
       <Button Text="Clear Sorting" Clicked="Clear_Sorting"/>
