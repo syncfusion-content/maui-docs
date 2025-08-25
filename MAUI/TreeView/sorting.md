@@ -90,18 +90,18 @@ Custom sorting can be applied by assigning a comparer to the `SortDescriptor.Com
 {% tabs %}
 {% highlight c# tabtitle="CustomSortComaparer.cs" %}
 
-    public class CustomDateSortComparer : IComparer<object>
+public class CustomDateSortComparer : IComparer<object>
+{
+    public int Compare(object x, object y)
     {
-        public int Compare(object x, object y)
+        if (x is FileManager xFile && y is FileManager yFile)
         {
-            if (x is FileManager xFile && y is FileManager yFile)
-            {
-                // Latest file upadted dates will come first (descending order)
-                return -DateTime.Compare(xFile.Date, yFile.Date);
-            }
-            return 0;
+            // Latest file upadted dates will come first (descending order)
+            return -DateTime.Compare(xFile.Date, yFile.Date);
         }
+        return 0;
     }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -111,7 +111,7 @@ Custom sorting can be applied by assigning a comparer to the `SortDescriptor.Com
 When the `SortDescriptors` collection is cleared, it restores the default order of the node collection, and the TreeView reverts to its original order.
 
 {% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# %}
 treeView.SortDescriptors.Clear();
 {% endhighlight %}
 {% endtabs %}
