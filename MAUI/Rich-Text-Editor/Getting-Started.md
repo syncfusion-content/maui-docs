@@ -31,7 +31,7 @@ Before proceeding, ensure the following are in place:
 ## Step 2: Install the Syncfusion®.MAUI RichTextEditor NuGet Package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
-2. Search for [Syncfusion.Maui.RichTextEditor](https://www.nuget.org/packages/Syncfusion.Maui.RichTextEditor) and install the latest version.
+2. Search for and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 ## Step 3: Register the Handler
@@ -203,7 +203,7 @@ Step 1: Add the namespace as shown in the following code sample.
 {% endtabs %}
 
 
-Step 2: Add the [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html) control with a required optimal name using the included namespace.
+Step 2: Add the SfRichTextEditor control with a required optimal name using the included namespace.
 
 {% tabs %}
 
@@ -247,7 +247,7 @@ namespace RichTextEditorSample
 
 ## Enable the Toolbar
 
-The [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html) provides a comprehensive toolbar that allows users to format their content easily. You can enable it by setting the [ShowToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_ShowToolbar) property to `True`.
+The SfRichTextEditor provides a comprehensive toolbar that allows users to format their content easily. You can enable it by setting the ShowToolbar property to `True`.
 
 {% tabs %}
 
