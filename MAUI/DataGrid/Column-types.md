@@ -131,7 +131,7 @@ public class DisplayBindingConverter : IValueConverter
 
 ### Load DataTemplate for Cells
 
-You can customize the display of any column in the `SfDataGrid` by setting the [DataGridColumn.CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_CellTemplate) property. This allows you to format data visually using MAUI controls and apply conditional styling using DataTrigger or Binding. In edit mode, the appropriate editor will be loaded based on the column type.
+You can customize the display of any column in the `SfDataGrid` by setting the [DataGridColumn.CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_CellTemplate) property. This allows you to format data visually using MAUI controls and apply conditional styling using [DataTrigger](https://learn.microsoft.com/en-us/dotnet/api/system.windows.datatrigger?view=windowsdesktop-9.0) or Binding. In edit mode, the appropriate editor will be loaded based on the column type.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -159,41 +159,9 @@ You can customize the display of any column in the `SfDataGrid` by setting the [
 
 <img alt="CellTemplate" src="Images\column-types\maui-datagrid-CellTemplate.png" width="404"/>
 
-* **Reusing DataTemplate**: To reuse a single DataTemplate across multiple columns, set the [DataGridColumn.SetCellBoundValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_SetCellBoundValue) property to `true`. This changes the BindingContext to a helper object with `Value` (column's mapped value) and `Record` (original data object) properties.
+The `SfDataGrid` also supports using a [DataTemplateSelector](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/datatemplate#choose-a-datatemplate-based-on-properties-of-the-data-object) to dynamically choose templates based on data. This is useful when you want to apply different styles or layouts depending on the properties of the data object.
 
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-<ContentPage.Resources>
-    <ResourceDictionary>
-        <DataTemplate x:Key="cellTemplate">
-            <Label Text="{Binding Path=Value}" 
-                   HorizontalOptions="CenterAndExpand" 
-                   VerticalOptions="CenterAndExpand"
-                   TextColor="#E65100"/>
-        </DataTemplate>
-    </ResourceDictionary>
-</ContentPage.Resources>
-
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}">
-    <syncfusion:SfDataGrid.Columns>
-        <syncfusion:DataGridNumericColumn HeaderText="Order ID" 
-                                          MappingName="OrderID"
-                                          SetCellBoundValue="True" 
-                                          CellTemplate="{StaticResource cellTemplate}"/>
-        <syncfusion:DataGridTextColumn HeaderText="Customer Name" 
-                                       MappingName="CustomerName" 
-                                       SetCellBoundValue="True" 
-                                       CellTemplate="{StaticResource cellTemplate}"/>   
-    </syncfusion:SfDataGrid.Columns>
-</syncfusion:SfDataGrid>
-{% endhighlight %}
-{% endtabs %}
-
-<img alt="CellTemplate" src="Images\column-types\maui-datagrid-CellTemplate-Reusable.png" width="404"/>
-
-
-* **Template Selector**: Use [DataTemplateSelector](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/datatemplate#choose-a-datatemplate-based-on-properties-of-the-data-object) to choose different DataTemplates based on data object properties.
+In the following example, a custom DataTemplateSelector is used to apply different styles based on whether the OrderID is even or odd.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -256,6 +224,40 @@ public class CustomCellTemplateSelector : DataTemplateSelector
 {% endtabs %}
 
 <img alt="CellTemplate" src="Images\column-types\maui-datagrid-column-CellTemplateSelector.png" width="404"/>
+
+#### Reuse DataTemplate for multiple columns.
+ To reuse a single `DataTemplate` across multiple columns, set the [DataGridColumn.SetCellBoundValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_SetCellBoundValue) property to `true`. This changes the BindingContext to a helper object with `Value` (column's mapped value) and `Record` (original data object) properties.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <DataTemplate x:Key="cellTemplate">
+            <Label Text="{Binding Path=Value}" 
+                   HorizontalOptions="CenterAndExpand" 
+                   VerticalOptions="CenterAndExpand"
+                   TextColor="#E65100"/>
+        </DataTemplate>
+    </ResourceDictionary>
+</ContentPage.Resources>
+
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridNumericColumn HeaderText="Order ID" 
+                                          MappingName="OrderID"
+                                          SetCellBoundValue="True" 
+                                          CellTemplate="{StaticResource cellTemplate}"/>
+        <syncfusion:DataGridTextColumn HeaderText="Customer Name" 
+                                       MappingName="CustomerName" 
+                                       SetCellBoundValue="True" 
+                                       CellTemplate="{StaticResource cellTemplate}"/>   
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="CellTemplate" src="Images\column-types\maui-datagrid-CellTemplate-Reusable.png" width="404"/>
 
 N> `CellTemplate` is not supported by `DataGridCheckboxColumn`, `DataGridImageColumn` and `DataGridUnboundColumn` columns. When using complex templates, consider the impact on scrolling performance with large datasets.
 
@@ -576,7 +578,7 @@ The `DataGridCheckBoxColumn` inherits all the properties of the `DataGridColumn`
 ![DataGrid with CheckBox column](Images\column-types\maui-datagrid-column-checkbox.png)
 
 N>
-By default, `DataGridCheckBoxColumn` is read-only. To enable editing (allow users to toggle the checkbox), set the column’s AllowEditing property to true.
+By default, `DataGridCheckBoxColumn` is read-only. To enable editing and allow users to toggle the checkbox, set the AllowEditing property to true either at the column level or the grid level.
 
 ## DataGridImageColumn
 
