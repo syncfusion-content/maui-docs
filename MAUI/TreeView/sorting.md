@@ -111,18 +111,7 @@ Custom sorting can be applied by assigning a comparer to the `SortDescriptor.Com
 When the `SortDescriptors` collection is cleared, it restores the default order of the node collection, and the TreeView reverts to its original order.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
-  <Grid RowDefinitions="Auto,*">
-      <Button Text="Clear sorting" Clicked="Clear_Sorting"/>
-      <syncfusion:SfTreeView x:Name="treeView" Grid.Row="1">
-        <syncfusion:SfTreeView.SortDescriptors>
-            <treeviewengine:SortDescriptor PropertyName="ItemName" Direction="Ascending" />
-        </syncfusion:SfTreeView.SortDescriptors>                    
-      </syncfusion:SfTreeView>
-</ContentPage>
-{% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-	  treeView.SortDescriptors.Clear();
+treeView.SortDescriptors.Clear();
 {% endhighlight %}
 {% endtabs %}
