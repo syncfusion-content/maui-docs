@@ -1,0 +1,82 @@
+---
+layout: post
+title: EmptyView in .NET MAUI TreeView Control | Syncfusion
+description: Learn here about EmptyView support in Syncfusion .NET MAUI TreeView (SfTreeView) Control and more.
+platform: MAUI
+control: SfTreeView
+documentation: ug
+---
+
+# Empty view in .NET MAUI TreeView (SfTreeView)
+
+The `SfTreeView` allows to display and customize empty view content when there is no data available to display using the following properties,
+
+ * `EmptyView` object can be set to a string or view when `SfTreeView` has no items. The default value is null.
+ * `EmptyViewTemplate` is used to customize the appearance of `EmptyView`. The default value is null.
+
+## Display a string when TreeView has no items
+
+The `EmptyView` property can be set to a string, which will be displayed when the `ItemsSource` is null, or when the collection specified by the `ItemsSource` property is null or empty.
+
+{% tabs %}
+{% highlight xaml %}
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
+  <syncfusion:SfTreeView x:Name="treeView"
+                         ItemsSource="{Binding Items}"
+                         EmptyView="No Items">
+  </syncfusion:SfTreeView>
+</ContentPage>
+{% endhighlight %}
+{% highlight c# %}
+treeView.EmptyView = "No Items";
+{% endhighlight %}
+{% endtabs %}
+
+## Display views when TreeView has no items
+
+The `EmptyView` property can be set to a view, which will be displayed when the `ItemsSource` property is null, or when the collection specified by the `ItemsSource` property is null or empty.
+
+{% tabs %}
+{% highlight xaml hl_lines="4" %}
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
+  <syncfusion:SfTreeView x:Name="treeView"
+                         ItemsSource="{Binding Items}">
+    <syncfusion:SfTreeView.EmptyView>
+         <Border Padding="10" Stroke="Purple" StrokeThickness="2" HorizontalOptions="Center" VerticalOptions="Center">
+             <Border.StrokeShape>
+                 <RoundRectangle CornerRadius="6"/>
+             </Border.StrokeShape>
+             <Label Text="No Items Found" 
+                    HorizontalTextAlignment="Center" 
+                    VerticalTextAlignment="Center" 
+                    FontSize="16" FontAttributes="Bold" TextColor="Blue"/>
+         </Border>
+    </syncfusion:SfTreeView.EmptyView>                       
+  </syncfusion:SfTreeView>
+</ContentPage>
+{% endhighlight %}
+{% highlight c# hl_lines="3" %}
+SfTreeView treeView = new SfTreeView();
+treeView.ItemsSource = viewModel.Items;
+treeView.EmptyView = new Border
+{
+    Padding = 10,
+    Stroke = Colors.Purple,
+    StrokeThickness = 2,
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center,
+    StrokeShape = new RoundRectangle { CornerRadius = 6 },
+    Content = new Label
+    {
+        Text = "No Items Found",
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center,
+        FontSize = 16,
+        FontAttributes = FontAttributes.Bold,
+        TextColor = Colors.Blue
+    }
+};
+{% endhighlight %}
+{% endtabs %}
+
+N> View displayed by the `EmptyView` can be a single view or a view that contains multiple child views.
