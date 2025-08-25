@@ -56,9 +56,10 @@ public partial class MainPage : ContentPage
 
 <img alt="addnewRowpositon-top" src="Images\addnewrow\maui-dataGrid-AddNewRowPosition-top.png" width="604"/>  
 
-## Changing the AddNewRow Position
+## Changing the AddNewRow position
 
-AddNewRow position can be changed by setting `SfDataGrid.AddNewRowPosition` property.
+The position of the AddNewRow in SfDataGrid can be customized using the `SfDataGrid.AddNewRowPosition` property. By default, this property is set to Top.
+The following code snippet demonstrates how to change the AddNewRow position to Bottom in SfDataGrid:
 
 {% tabs %}
 {% highlight xaml %}
@@ -88,7 +89,38 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="addnewRowpositon-top" src="Images\addnewrow\maui-dataGrid-AddNewRowPosition-bottom.png" width="604"/>  
+<img alt="addnewRowpositon-bottom" src="Images\addnewrow\maui-dataGrid-AddNewRowPosition-bottom.png" width="604"/>
+
+## Customize the newly added row position
+
+SfDataGrid adds new data item from AddNewRow at the end of collection. When data operations (sorting, grouping) performed, the new item added based on data operations. You can customize the newly added data item position by setting [SfDataGrid.NewItemPlaceHolderPosition]().
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       AddNewRowPosition="Top"
+                       SelectionMode="Single"
+                       NavigationMode="Cell"
+                       AllowEditing="True"
+                       NewItemPlaceholderPosition="AtBeginning"
+                       ItemsSource="{Binding OrderInfoCollection}">
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        dataGrid.SelectionMode = DataGridSelectionMode.Single;
+        dataGrid.NavigationMode = DataGridNavigationMode.Cell;
+        dataGrid.AllowEditing = true;
+        dataGrid.AddNewRowPosition = DataGridAddNewRowPosition.Top;
+        dataGrid.NewItemPlaceholderPosition = Syncfusion.Maui.Data.NewItemPlaceholderPosition.AtBeginning;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
 
 ## Changing the AddNewRow default text
 
