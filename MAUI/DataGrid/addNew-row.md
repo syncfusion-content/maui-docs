@@ -45,7 +45,10 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        this.dataGrid.AddNewRowPosition = DataGridAddNewRowPosition.Top;
+        dataGrid.SelectionMode = DataGridSelectionMode.Single;
+        dataGrid.NavigationMode = DataGridNavigationMode.Cell;
+        dataGrid.AllowEditing = true;
+        dataGrid.AddNewRowPosition = DataGridAddNewRowPosition.Top;
     }
 }
 {% endhighlight %}
@@ -53,7 +56,41 @@ public partial class MainPage : ContentPage
 
 <img alt="addnewRowpositon-top" src="Images\addnewrow\maui-dataGrid-AddNewRowPosition-top.png" width="604"/>  
 
-## Changing the AddNewRow default text in DataGrid
+## Changing the AddNewRow Position
+
+AddNewRow position can be changed by setting `SfDataGrid.AddNewRowPosition` property.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       AddNewRowPosition="Bottom"
+                       AddNewRowText="Click here to add new row in datagrid"
+                       SelectionMode="Single"
+                       NavigationMode="Cell"
+                       AllowEditing="True"
+                       AutoGenerateColumnsMode="None"
+                       ItemsSource="{Binding OrderInfoCollection}">
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        dataGrid.SelectionMode = DataGridSelectionMode.Single;
+        dataGrid.NavigationMode = DataGridNavigationMode.Cell;
+        dataGrid.AllowEditing = true;
+        dataGrid.AddNewRowPosition = DataGridAddNewRowPosition.Bottom;
+        dataGrid.AddNewRowText = "Click here to add new row in datagrid";
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="addnewRowpositon-top" src="Images\addnewrow\maui-dataGrid-AddNewRowPosition-bottom.png" width="604"/>  
+
+## Changing the AddNewRow default text
 
 You can change the default static string of AddNewRow in datagrid by using the [SfDataGrid.AddNewRowText]() property. The `AddNewRowText` property has higher priority than the text that is localized in resx file.
 
@@ -75,8 +112,11 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        this.dataGrid.AddNewRowPosition = DataGridAddNewRowPosition.Top;
-        this.dataGrid.AddNewRowText = "Click here to add new row in datagrid";
+        dataGrid.SelectionMode = DataGridSelectionMode.Single;
+        dataGrid.NavigationMode = DataGridNavigationMode.Cell;
+        dataGrid.AllowEditing = true;
+        dataGrid.AddNewRowPosition = DataGridAddNewRowPosition.Top;
+        dataGrid.AddNewRowText = "Click here to add new row in datagrid";
     }
 }
 {% endhighlight %}
@@ -86,7 +126,7 @@ public partial class MainPage : ContentPage
 
 ## Initializing default values for AddNewRow
 
-SfDataGrid allows you to set the default values for AddNewRow while initiating, through [AddNewRowInitiatingEventArgs.NewObject]() property in [SfDataGrid.AddNewRowInitiating]() event.
+SfDataGrid allows you to set the default values for AddNewRow while initiating, through [AddNewRowInitiatingEventArgs.Object]() property in [SfDataGrid.AddNewRowInitiating]() event.
 
 {% tabs %}
 {% highlight xaml %}
@@ -220,7 +260,7 @@ To customize the AddNewRowText, add the default Syncfusion.SfDataGrid.WPF.resx f
 
 ## Customizing AddNewRow
 
-### Implicit Styling of AddNewRow
+### Apply implicit style
 
 DataGridAddNewRow can be customized by writing style for [DataGridAddNewRowView]() TargetType.
 
@@ -243,7 +283,7 @@ DataGridAddNewRow can be customized by writing style for [DataGridAddNewRowView]
 {% endhighlight %}
 {% endtabs %}
 
-### Default Styling of AddNewRow
+### Apply default style
 
 You can customize the AddNewRow's Background, TextColor, FontAttribute, FontFamily by using [SfDataGrid.DefaultStyle]().
 
