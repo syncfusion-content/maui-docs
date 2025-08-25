@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance Customization of .NET MAUI Segmented Control (SfSegmentedControl) | Syncfusion<sup>&reg;</sup>
-description: Learn about the appearance customization of Syncfusion<sup>&reg;</sup> .NET MAUI Segmented Control (SfSegmentedControl).
+title: Appearance Customization of .NET MAUI SfSegmentedControl | Syncfusion®
+description: Learn about the appearance customization of Syncfusion® .NET MAUI Segmented Control (SfSegmentedControl).
 platform: maui
 control: Segmented (SfSegmented) control
 documentation: ug
 ---
  
-# Appearance Customization of .NET MAUI Segmented Control (SfSegmentedControl)
+# Appearance Customization of .NET MAUI SfSegmentedControl
 The .NET MAUI Segmented control allows you to customize the background, text color, selection style, and more.
 
 ## Customize the border color
@@ -245,7 +245,7 @@ public partial class MainPage : ContentPage
 Customize the text style of each segment item using the [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentItem.html#Syncfusion_Maui_Buttons_SfSegmentItem_TextStyle) property of [SfSegmentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentItem.html).
 
 {% tabs %}
-{% highlight C# tabtitle="MainPage.xaml.cs"%}
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
 
 using Syncfusion.Maui.Buttons;
 . . .
@@ -324,7 +324,7 @@ public partial class MainPage : ContentPage
 Customize the background of each segment item using the [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentItem.html#Syncfusion_Maui_Buttons_SfSegmentItem_Background) property of [SfSegmentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentItem.html).
 
 {% tabs %}
-{% highlight C# tabtitle="MainPage.xaml.cs"%}
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
 
 using Syncfusion.Maui.Buttons;
 . . .
@@ -351,6 +351,56 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![Segment item background customization in .NET MAUI Segmented control.](images/customization/segment-item-background.png)
+
+## Separator Visibility Change to Show or Hide Separator
+
+The [ShowSeparator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html#Syncfusion_Maui_Buttons_SfSegmentedControl_ShowSeparator) property is used to control the visibility of the separator line that appears between the segments in the [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html?tabs=tabid-34%2Ctabid-30%2Ctabid-19%2Ctabid-16%2Ctabid-37%2Ctabid-3%2Ctabid-24%2Ctabid-32%2Ctabid-8%2Ctabid-36%2Ctabid-10%2Ctabid-6%2Ctabid-14%2Ctabid-26%2Ctabid-28%2Ctabid-22%2Ctabid-12%2Ctabid-1). By default, the separator is visible, and setting this property to false hides the separator line.
+
+{% tabs %}
+{% highlight XAML hl_lines="2" %}
+
+<ContentPage xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons">
+    <buttons:SfSegmentedControl x:Name="segmentedControl" ShowSeparator="False">
+        <buttons:SfSegmentedControl.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                <x:String>Day</x:String>
+                <x:String>Week</x:String>
+                <x:String>Month</x:String>
+                <x:String>Year</x:String>
+            </x:Array>
+        </buttons:SfSegmentedControl.ItemsSource>
+    </buttons:SfSegmentedControl>
+</ContentPage>
+
+{% endhighlight %}
+{% highlight C# hl_lines="18" %}
+
+using Syncfusion.Maui.Buttons;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfSegmentedControl segmentedControl = new SfSegmentedControl();
+        List<SfSegmentItem> itemList = new List<SfSegmentItem>
+        {
+            new SfSegmentItem() {Text = "Day"},
+            new SfSegmentItem() {Text = "Week"},
+            new SfSegmentItem() {Text = "Month"},
+            new SfSegmentItem() {Text = "Year"},
+        };
+        segmentedControl.ItemsSource = itemList;
+        segmentedControl.ShowSeparator = false;
+        this.Content = segmentedControl;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Hide Seperator line in .NET MAUI Segmented control.](images/customization/segmented-control-show-separator.png)
 
 ## Customize segment items appearance using DataTemplate
 

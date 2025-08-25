@@ -1145,3 +1145,111 @@ private void PdfExport_CellExporting(object sender, DataGridCellPdfExportingEven
 {% endtabs %}
 
 <img alt="Export DataGrid to PDF format with customized cell style" src="Images\export-to-pdf\maui-datagrid-style-based-on-column-name.png" width="689"/>
+
+### Exporting DetailsView
+
+By default, [DetailsViewDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DetailsViewDataGrid.html) will not be exported to PDF. You can export `DetailsViewDataGrid` by setting `CanExportDetailsView` property as true.
+
+```csharp
+MemoryStream stream = new MemoryStream();
+DataGridPdfExportingController pdfExport = new DataGridPdfExportingController();
+DataGridPdfExportingOption option = new DataGridPdfExportingOption();
+option.CanExportDetailsView = true;
+var pdfDoc = pdfExport.ExportToPdf(this.dataGrid, option);
+pdfDoc.Save(stream);
+pdfDoc.Close(true);
+SaveService saveService = new();
+saveService.SaveAndView("ExportFeature.pdf", "application/pdf", stream);
+```
+<img src="Images/export-to-pdf/maui-datagrid-exportdetailsview.png" alt="Maui DataGrid displays Nested dataGrid exported to PDF" width="404"/>
+
+By default, only expanded DetailsViewDataGrids will be exported to the PDF document. If you want to export all the DetailsViewDataGrids, you need to set `CanExportAllDetails` to true.
+
+```csharp
+MemoryStream stream = new MemoryStream();
+DataGridPdfExportingController pdfExport = new DataGridPdfExportingController();
+DataGridPdfExportingOption option = new DataGridPdfExportingOption();
+option.CanExportDetailsView = true;
+option.CanExportAllDetails = true;
+var pdfDoc = pdfExport.ExportToPdf(this.dataGrid, option);
+pdfDoc.Save(stream);
+pdfDoc.Close(true);
+SaveService saveService = new();
+saveService.SaveAndView("ExportFeature.pdf", "application/pdf", stream);
+```
+<img src="Images\export-to-pdf\maui-datagrid-exportalldetails.png" alt="Nested dataGrid exported to PDF" width="404"/>
+
+Here, first record only expanded in SfDataGrid. But all the DetailsViewDataGrid’s are shown in exported PDF document.
+
+You can customize its exporting operation by using `DataGridChildPdfExportingEventArgs`.
+
+N> While exporting DetailsViewDataGrid, `CanFitAllColumnInOnePage` is set to true internally as horizontal pagination is not supported for DetailsViewDataGrid.
+
+## Excluding DetailsViewDataGrid while exporting
+
+You can exclude particular DetailsViewDataGrid while exporting, by using the `DataGridChildPdfExportingEventArgs.Cancel`.
+
+```csharp
+private void Button_Clicked(object sender, EventArgs e)
+{
+    MemoryStream stream = new MemoryStream();
+    DataGridPdfExportingController pdfExport = new DataGridPdfExportingController();
+    DataGridPdfExportingOption option = new DataGridPdfExportingOption();
+    pdfExport.DataGridChildPdfExporting += PdfExport_DataGridChildPdfExporting;
+    option.CanExportDetailsView = true;
+    var pdfDoc = pdfExport.ExportToPdf(this.dataGrid, option);
+    pdfDoc.Save(stream);
+    pdfDoc.Close(true);
+    SaveService saveService = new();
+    saveService.SaveAndView("ExportFeature.pdf", "application/pdf", stream);
+}
+
+private void PdfExport_DataGridChildPdfExporting(object? sender, DataGridChildPdfExportingEventArgs e)
+{
+    var recordEntry = e.NodeEntry as RecordEntry;
+
+    if ((recordEntry?.Data as Orders)?.OrderID == 1002)
+        e.Cancel = true;
+}
+```
+<img alt="Excluding specific DetailsView while exporting to PDF in DataGrid " src="Images/export-to-pdf/maui-datagrid-excluderows.png" Width="404"/>
+
+Here, `DetailsViewDataGrid` is not exported for the parent record having OrderID as 1002.
+
+## Customizing DetailsViewDataGrid cells
+
+Similar to the parent DataGrid, you can also customize the cells of the DetailsViewDataGrid by using the DataGridCellPdfExportingEventArgs. By utilizing the `DataGridCellPdfExportingEventArgs.DetailsViewDefinition` property, you can identify the specific DetailsViewDataGrid and customize it accordingly.
+
+```csharp
+    private void Button_Clicked_1(object sender, EventArgs e)
+    {
+        MemoryStream stream = new MemoryStream();
+        DataGridPdfExportingController pdfExport = new DataGridPdfExportingController();
+        DataGridPdfExportingOption option = new DataGridPdfExportingOption();
+        pdfExport.DataGridChildPdfExporting += PdfExport_DataGridChildPdfExporting;
+        pdfExport.CellExporting += PdfExport_CellExporting;
+        option.CanExportDetailsView = true;
+        var pdfDoc = pdfExport.ExportToPdf(this.dataGrid, option);
+        pdfDoc.Save(stream);
+        pdfDoc.Close(true);
+        SaveService saveService = new();
+        saveService.SaveAndView("ExportFeature.pdf", "application/pdf", stream);
+    }
+
+    private void PdfExport_CellExporting(object? sender, DataGridCellPdfExportingEventArgs e)
+    {
+        if (e.DetailsViewDefinition == null && e.DetailsViewDefinition?.RelationalColumn != "OrdersList")
+        {
+            return;
+        }
+
+        if (e.ColumnName == "OrderID")
+        {
+            var cellStyle = new PdfGridCellStyle();
+            cellStyle.BackgroundBrush = PdfBrushes.Wheat;
+            cellStyle.Borders.All = new PdfPen(PdfBrushes.DarkGray, 0.2f);
+            e.PdfGridCell.Style = cellStyle;
+        }
+    }
+```
+<img alt="Customizing DetailsViewDataGrid while exporting to PDF in DataGrid" src="Images/export-to-pdf/maui-datagrid-customize-detailsview.png" Width="404"/>

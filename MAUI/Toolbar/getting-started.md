@@ -11,6 +11,11 @@ documentation: ug
 
 This section provides a quick overview of how to get started with the [.NET MAUI SfToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html) for .NET MAUI and a walk-through to configure the .NET MAUI Toolbar in a real-time scenario. Follow the steps below to add .NET MAUI Toolbar control to your project.
 
+To get start quickly with our .NET MAUI Toolbar, you can check the below video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=U4ZFNr0nsB0"%}
+
 {% tabcontents %}
 {% tabcontent Visual Studio %}
 
