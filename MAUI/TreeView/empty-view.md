@@ -1,7 +1,7 @@
 ---
 layout: post
 title: EmptyView in .NET MAUI TreeView Control | Syncfusion
-description: Learn here about EmptyView support in Syncfusion .NET MAUI TreeView (SfTreeView) Control and more.
+description: Learn here about EmptyView support in Syncfusion .NET MAUI TreeView (SfTreeView) Control and more about it.
 platform: MAUI
 control: SfTreeView
 documentation: ug
