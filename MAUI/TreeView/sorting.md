@@ -24,8 +24,9 @@ Sort items by creating a `SortDescriptor` with the property name and sort direct
 * `Comparer`: Describes the comparer to be applied when sorting takes place.
 
 {% tabs %}
-{% highlight xaml hl_lines="3 4" %}
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
+{% highlight xaml hl_lines="4 5" %}
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
+             xmlns:treeviewengine="clr-namespace:Syncfusion.TreeView.Engine;assembly=Syncfusion.Maui.TreeView">
   <syncfusion:SfTreeView x:Name="treeView">
         <syncfusion:SfTreeView.SortDescriptors>
             <treeviewengine:SortDescriptor PropertyName="ItemName" Direction="Ascending" />
@@ -33,12 +34,30 @@ Sort items by creating a `SortDescriptor` with the property name and sort direct
   </syncfusion:SfTreeView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# hl_lines="3 4" %}
-    treeView.SortDescriptors.Add(new SortDescriptor()
+{% highlight c# hl_lines="14 16 17 20" %}
+using Syncfusion.Maui.TreeView;
+using Syncfusion.TreeView.Engine;
+
+public class MainPage : ContentPage
+{
+    SfTreeView treeView;
+
+    public MainPage()
     {
-        PropertyName = "ItemName",
-        Direction = TreeViewSortDirection.Ascending
-    });
+        InitializeComponent();
+
+        treeView = new SfTreeView();
+
+        var sortDescriptor = new SortDescriptor()
+        {
+            PropertyName = "ItemName",
+            Direction = TreeViewSortDirection.Ascending
+        };
+
+        treeView.SortDescriptors.Add(sortDescriptor);
+        this.Content = treeView;
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -50,7 +69,8 @@ Custom sorting can be applied by assigning a comparer to the `SortDescriptor.Com
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="4 9" %}
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
+<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
+             xmlns:treeviewengine="clr-namespace:Syncfusion.TreeView.Engine;assembly=Syncfusion.Maui.TreeView">
   <ContentPage.Resources>
     <ResourceDictionary>
       <local:CustomDateSortComparer x:Key="CustomSortComparer" />
