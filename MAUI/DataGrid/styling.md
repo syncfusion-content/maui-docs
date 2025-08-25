@@ -441,14 +441,15 @@ public partial class MainPage : ContentPage
 
 ## Applying row hover background color
  
-The SfDataGrid provides a visual cue when the user's mouse pointer hovers over a row. By default, SfDataGrid applies a predefined hover color. You can customize this by using the`RowHoveredBackground` property in `SfDataGrid.DefaultStyle`.
+You can enable row hover highlighting in SfDataGrid by setting the `AllowRowHoverHighlighting` property to true. This displays a visual cue when the user's mouse pointer hovers over a row. By default, a predefined hover color is applied, which can be customized using the `RowHoveredBackground` property in `SfDataGrid.DefaultStyle`.
  
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Content>
         <syncfusion:SfDataGrid x:Name="dataGrid"
-                               ItemsSource="{Binding OrderInfoCollection}">
+                               ItemsSource="{Binding OrderInfoCollection}"
+                               AllowRowHoverHighlighting="True">
             <syncfusion:SfDataGrid.DefaultStyle>
                 <syncfusion:DataGridStyle RowHoveredBackground ="#AFD5FB"/>
             </syncfusion:SfDataGrid.DefaultStyle>
