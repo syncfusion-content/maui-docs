@@ -439,6 +439,35 @@ public partial class MainPage : ContentPage
 
 ![Changing the alternation row count in .NET MAUI DataGrid](Images/styling/maui-datagrid-Alternation-rowcount.png)
 
+## Applying row hover background color
+ 
+The SfDataGrid provides a visual cue when the user's mouse pointer hovers over a row. By default, SfDataGrid applies a predefined hover color. You can customize this by using the`RowHoveredBackground` property in `SfDataGrid.DefaultStyle`.
+ 
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+    <ContentPage.Content>
+        <syncfusion:SfDataGrid x:Name="dataGrid"
+                               ItemsSource="{Binding OrderInfoCollection}">
+            <syncfusion:SfDataGrid.DefaultStyle>
+                <syncfusion:DataGridStyle RowHoveredBackground ="#AFD5FB"/>
+            </syncfusion:SfDataGrid.DefaultStyle>
+        </syncfusion:SfDataGrid>
+    </ContentPage.Content>
+</ContentPage>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        this.dataGrid.DefaultStyle.RowHoveredBackground  = Color.FromArgb("#AFD5FB");
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
 ## Changing the font style
 You can apply the style for header and row font attributes by using SfDataGrid.DefaultStyle.
 
