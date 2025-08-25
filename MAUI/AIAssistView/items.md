@@ -488,7 +488,7 @@ The `SfAIAssistView` allows to display error responses by setting the text to th
         {
             AssistItem requestItem = new AssistItem()
             {
-               Text = "Hey AI, can you tell me what MAUI is? Could you provide a link to learn more about .NET MAUI?",
+               Text = "Types of listening",
                IsRequested = true
             };
 
@@ -514,3 +514,5 @@ The `SfAIAssistView` allows to display error responses by setting the text to th
     
 {% endhighlight %}
 {% endtabs %}
+
+![Error message in .NET MAUI AI AssistView](images/maui-aiassistview-error-message.png)
