@@ -9,14 +9,14 @@ documentation: ug
 
 # Empty view in .NET MAUI TreeView (SfTreeView)
 
-The `SfTreeView` allows to display and customize empty view content when there is no data available to display using the following properties,
+The `SfTreeView` enables you to display and customize empty view content when no data is available, using the following properties:
 
  * `EmptyView` object can be set to a string or view when `SfTreeView` has no items. The default value is null.
  * `EmptyViewTemplate` is used to customize the appearance of `EmptyView`. The default value is null.
 
 ## Display a string when TreeView has no items
 
-The `EmptyView` property can be set to a string, which will be displayed when the `ItemsSource` is null, or when the collection specified by the `ItemsSource` property is null or empty.
+The `EmptyView` property can be assigned a string, which will be shown when the `ItemsSource` is null or when the collection bound to the `ItemsSource` is empty.
 
 {% tabs %}
 {% highlight xaml %}
