@@ -80,3 +80,5 @@ treeView.EmptyView = new Border
 {% endtabs %}
 
 N> View displayed by the `EmptyView` can be a single view or a view that contains multiple child views.
+
+![EmptyView in .NET MAUI TreeView](images/empty-view/maui-treeview-empty-view.gif)
