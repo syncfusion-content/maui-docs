@@ -16,7 +16,7 @@ To show tooltips:
 - **On Windows/Mac**: Hover the mouse cursor over any cell in the grid
 - **On Android/iOS**: Long press on any cell in the grid
 
-## Record cell tooltip
+## Show tooltip in a header and record cell
 
 To enable tooltip for datagrid, set the `SfDataGrid.ShowToolTip` property to `true`. This will display tooltip containing cell content when users interact with the cells.
 
@@ -72,7 +72,16 @@ The `DataGridColumn.ShowToolTip` property takes higher priority than the `SfData
 
 ## ToolTip Customization
 
-You can change the appearance of the ToolTip by customizing the style with TargetType as DataGridToolTipView.
+You can customize the appearance of the tooltip in the MAUI SfDataGrid using either implicit styles or default style properties. Below are two approaches to achieve this:
+
+### Apply Implicit Style
+
+You can define an implicit style in the ContentPage.Resources section by targeting the DataGridToolTipView. This allows you to customize various visual aspects of the tooltip such as Background, TextColor, FontAttributes, FontFamily, and FontSize. 
+
+To change the tooltip's border appearance, use the Stroke and StrokeThickness properties within the implicit style.
+
+* `Stroke`: Sets the border color of the tooltip.
+* `StrokeThickness`: Defines the thickness of the tooltip border. 
 
 {% tabs %}
 {% highlight XAML %}
@@ -88,7 +97,21 @@ You can change the appearance of the ToolTip by customizing the style with Targe
 {% endtabs %}
 <img alt="Customizing ToolTip Style in MAUI DataGrid" src="Images\tooltip\maui-datagrid-tooltip-style.png" width="404" /> 
 
-### Customize the ToolTip using ToolTipTemplate
+### Apply Default Style
+
+You can apply basic tooltip styling using the DefaultStyle property of SfDataGrid. This method supports only background and text color customization.
+
+{% tabs %}
+{% highlight XAML %}
+            <syncfusion:SfDataGrid.DefaultStyle>
+                <syncfusion:DataGridStyle ToolTipBackground="Red" ToolTipTextColor="White" />
+            </syncfusion:SfDataGrid.DefaultStyle>
+{% endhighlight %}
+{% endtabs %}
+
+## Load views to the Tooltip
+
+### Customizing the ToolTip using DataTemplate
 
 You can customize the appearance and content of tooltips by setting the `SfDataGrid.ToolTipTemplate` property.
 
@@ -110,7 +133,7 @@ You can customize the appearance and content of tooltips by setting the `SfDataG
 
 <img alt="Customizing ToolTip using ToolTipTemplate in MAUI DataGrid" src="Images\tooltip\maui-datagrid-tooltip-template.png" width="404" /> 
 
-### Customize the ToolTip with ToolTipTemplateSelector
+### Customizing the ToolTip with DataTemplateSelector
 
 You can load different tooltip templates conditionally based on cell data by using a DataTemplateSelector with the `SfDataGrid.ToolTipTemplate` property.
 
