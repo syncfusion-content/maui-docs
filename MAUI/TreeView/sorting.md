@@ -11,8 +11,6 @@ documentation: ug
 
 The `SfTreeView` control provides built-in support for sorting data using the `SortDescriptors` property. Items can be sorted in either ascending or descending order. Custom sorting logic is also supported to sort the items.
 
-N> When the `ItemsSource` of the `SfTreeView` is updated, the existing `SortDescriptors` are automatically cleared. To maintain sorting behavior after changing the `ItemsSource`, you must retain sorting in the `SfTreeView`.
-
 ## Programmatic sorting
 
 Sort items by creating a `SortDescriptor` with the property name and sort direction, and then adding it to the `SortDescriptors` collection.
