@@ -9,11 +9,13 @@ documentation: ug
 
 # Sorting in .NET MAUI TreeView (SfTreeView)
 
-The `SfTreeView` supports sorting the data either in ascending or descending order by using the `SortDescriptors` property and custom logic.
+The `SfTreeView` control provides built-in support for sorting data using the `SortDescriptors` property. Items can be sorted in either ascending or descending order. Custom sorting logic is also supported to sort the items.
+
+N> When the `ItemsSource` of the `SfTreeView` is updated, the existing `SortDescriptors` are automatically cleared. To maintain sorting behavior after changing the `ItemsSource`, you must retain sorting in the `SfTreeView`.
 
 ## Programmatic sorting
 
-Sorting the data by creating a `SortDescriptor` with the required property name and direction and adding it into the `SortDescriptors` property.
+Sort items by creating a `SortDescriptor` with the property name and sort direction, and then adding it to the `SortDescriptors` collection.
 
 `SortDescriptor` object holds the following three properties:
 
@@ -44,14 +46,14 @@ N> It is mandatory to specify the `PropertyName` of `SortDescriptor` in Programm
 
 ## Custom sorting
 
-Sort the items based on the custom logic and it can be applied to `SortDescriptor.Comparer`, which is added into the `SortDescriptors` collection.
+Custom sorting can be applied by assigning a comparer to the `SortDescriptor.Comparer` property. The comparer should be added to the `SortDescriptors` collection to enable sorting based on custom logic.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="4 9" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
   <ContentPage.Resources>
     <ResourceDictionary>
-      <local:CustomSortComparer x:Key="CustomSortComparer" />
+      <local:CustomDateSortComparer x:Key="CustomSortComparer" />
     </ResourceDictionary>
   </ContentPage.Resources>
   <syncfusion:SfTreeView x:Name="treeView">
@@ -66,32 +68,15 @@ Sort the items based on the custom logic and it can be applied to `SortDescripto
 {% tabs %}
 {% highlight c# tabtitle="CustomSortComaparer.cs" %}
 
-    public class CustomSortComparer : IComparer<object>
+    public class CustomDateSortComparer : IComparer<object>
     {
         public int Compare(object x, object y)
         {
-            if (x.GetType() == typeof(FileManager))
+            if (x is FileManager xFile && y is FileManager yFile)
             {
-                var xitem = (x as FileManager).ItemName;
-                var yitem = (y as FileManager).ItemName;
-
-                if (xitem.Length > yitem.Length)
-                {
-                    return 1;
-                }
-                else if (xitem.Length < yitem.Length)
-                {
-                    return -1;
-                }
-                else
-                {
-                    if (string.Compare(xitem, yitem) == -1)
-                        return -1;
-                    else if (string.Compare(xitem, yitem) == 1)
-                        return 1;
-                }
+                // Latest file upadted dates will come first (descending order)
+                return -DateTime.Compare(xFile.Date, yFile.Date);
             }
-
             return 0;
         }
     }
