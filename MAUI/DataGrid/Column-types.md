@@ -225,7 +225,8 @@ public class CustomCellTemplateSelector : DataTemplateSelector
 
 <img alt="CellTemplate" src="Images\column-types\maui-datagrid-column-CellTemplateSelector.png" width="404"/>
 
-#### Reuse DataTemplate for multiple columns.
+#### Reuse DataTemplate for multiple columns 
+
  To reuse a single `DataTemplate` across multiple columns, set the [DataGridColumn.SetCellBoundValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_SetCellBoundValue) property to `true`. This changes the BindingContext to a helper object with `Value` (column's mapped value) and `Record` (original data object) properties.
 
 {% tabs %}
