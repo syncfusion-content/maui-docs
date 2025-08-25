@@ -1480,18 +1480,4 @@ The SfDataGrid allows binding the view model property to the `HeaderTemplate` by
 {% endtabs %}
 
 ![DataGrid with header template bind to view model](Images\column-types\maui-datagrid-header-template-view-model.png)
-
-
-
-                           HorizontalTextAlignment="Center" 
-                           VerticalTextAlignment="Center" />
-                </StackLayout>
-            </DataTemplate>
-        <selector:CustomCellTemplateSelector  x:Key="OrderTemplateSelector"
-          DefaultTemplate="{StaticResource DefaultTemplate}"
-          AlternateTemplate="{StaticResource AlternateTemplate}" />
-        </ResourceDictionary>
-    </ContentPage.Resources>
-  
-{% endhighlight %}
-{% endtabs %}
+                
