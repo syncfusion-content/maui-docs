@@ -451,6 +451,10 @@ dataGrid.CaptionSummaryRow = captionSummaryRow;
 {% endhighlight %}
 {% endtabs %}
 
+The following screenshot illustrates displaying summary columns with title at same time for `CaptionSummaryRow`.
+
+![DataGrid with caption summary column and title](Images\caption-summary\maui-datagrid-caption-column-summary-title.png)
+
 ### Limitations
 
 The following are the limitations of displaying column summary along with title at same time for DataGridSummaryRow:
@@ -818,6 +822,10 @@ dataGrid.GroupSummaryRows.Add(groupSummaryRow);
 
 {% endhighlight %}
 {% endtabs %}
+
+The following screenshot illustrates displaying summary columns with title at same time for `GroupSummaryRows`.
+
+![DataGrid with group summary column and title](Images\group-summary\maui-datagrid-group-column-summary-title.png)
 
 ### Limitations
 
@@ -1367,6 +1375,10 @@ dataGrid.TableSummaryRows.Add(bottomSummaryRow);
 
 {% endhighlight %}
 {% endtabs %}
+
+The following screenshot illustrates displaying summary columns with title at same time for `TableSummaryRows`.
+
+![DataGrid with table summary column and title](Images\table-summary\maui-datagrid-table-column-summary-title.png)
 
 ### Limitations
 
