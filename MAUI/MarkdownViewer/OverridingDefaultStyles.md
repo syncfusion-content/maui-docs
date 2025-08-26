@@ -17,42 +17,45 @@ This guide explains how to override the default styles using the [MarkdownStyleS
 
 {% highlight xaml %}
 
-    <ResourceDictionary>
+    <ContentPage.Resources>
 
-        <x:String x:Key="CustomStyle">
-    body {
-        background: #FFFBFE;
-        font-family: 'Roboto', sans-serif;
-    }
-            
-    h1 {
-        font-family: 'Roboto', sans-serif;
-        font-weight: 700;
-        font-size: 28px;
-        line-height: 36px;
-        letter-spacing: 0px;
-        color: #1C1B1F;
-    }
+        <ResourceDictionary>
+            <x:String x:Key="CustomStyle">
+            body {
+                background: #FFFBFE;
+                font-family: 'Roboto', sans-serif;
+            }
+                    
+            h1 {
+                font-family: 'Roboto', sans-serif;
+                font-weight: 700;
+                font-size: 28px;
+                line-height: 36px;
+                letter-spacing: 0px;
+                color: #1C1B1F;
+            }
 
-    h2 {
-        font-family: 'Roboto', sans-serif;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 32px;
-        letter-spacing: 0px;
-        color: #1C1B1F;
-    }
+            h2 {
+                font-family: 'Roboto', sans-serif;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 32px;
+                letter-spacing: 0px;
+                color: #1C1B1F;
+            }
 
-    h3 {
-        font-family: 'Roboto', sans-serif;
-        font-weight: 600;
-        font-size: 22px;
-        line-height: 28px;
-        letter-spacing: 0px;
-        color: #1C1B1F;
-    }
-        </x:String>
-    </ResourceDictionary>
+            h3 {
+                font-family: 'Roboto', sans-serif;
+                font-weight: 600;
+                font-size: 22px;
+                line-height: 28px;
+                letter-spacing: 0px;
+                color: #1C1B1F;
+            }
+            </x:String>
+        </ResourceDictionary>
+
+    </ContentPage.Resources>
 
 {% endhighlight %}
 
@@ -62,7 +65,7 @@ This guide explains how to override the default styles using the [MarkdownStyleS
         . . .    
         xmlns:markdown="clr-namespace:Syncfusion.Maui.MarkdownViewer;
         assembly=Syncfusion.Maui.MarkdownViewer">
-    
+        . . .
         <markdown:SfMarkdownViewer Source={Binding MarkdownContent}>
             <markdown:SfMarkdownViewer.Settings>
                 <markdown:MarkdownStyleSettings CssStyleRules="{StaticResource CustomStyle}" />
@@ -74,3 +77,5 @@ This guide explains how to override the default styles using the [MarkdownStyleS
 {% endhighlight %}
 
 By defining custom styles, you can transform the Markdown viewer into a fully branded and polished content surface that fits seamlessly into your app’s design system.
+
+N> Apply CSS styles only when necessary as they will override the properties of individual Markdown elements such as `H1FontSize`, `H1Color`, `BodyTextColor`, `TableHeaderFontSize`, etc., defined in the [MarkdownStyleSettings]() class.
