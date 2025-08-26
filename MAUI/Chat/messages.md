@@ -1323,13 +1323,13 @@ Create a custom class that inherits from `ChatMessageTemplateSelector`, and over
 
 public class MessageTemplateSelector : ChatMessageTemplateSelector
 {
-        public DataTemplate customOutgoingMessageTemplate;
-        public DataTemplate customIncomingMessageTemplate;
+        private readonly DataTemplate customOutgoingMessageTemplate;
+        private readonly DataTemplate customIncomingMessageTemplate;
 
         public MessageTemplateSelector(SfChat sfChat) : base(sfChat)
         {
-            this.customOutgoingMessageTemplate = new DataTemplate(typeof(CustomOutgoingMessageTemplate));
-            this.customIncomingMessageTemplate = new DataTemplate(typeof(CustomIncomingMessageTemplate));
+            this.customOutgoingMessageTemplate = new DataTemplate(typeof(OutgoingMessageTemplate));
+            this.customIncomingMessageTemplate = new DataTemplate(typeof(IncomingMessageTemplate));
         }
 
         protected override DataTemplate? OnSelectTemplate(object item, BindableObject container)
