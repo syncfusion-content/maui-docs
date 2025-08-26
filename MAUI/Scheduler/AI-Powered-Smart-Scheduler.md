@@ -1,33 +1,28 @@
 ---
 layout: post
 title: AI-powered Smart .NET MAUI Scheduler for Appointment Booking | Syncfusion®
-description: This guide explores how to build an intelligent appointment booking system using .NET MAUI SfScheduler and SfAIAssistView controls by integrating Azure OpenAI.
-
+description: Learn here all about the AI-Powered smart appointment booking app using .NET MAUI SfScheduler and SfAIAssistView controls by integrating Azure OpenAI.
 platform: maui
 control: SfScheduler
 documentation: ug
 ---
 
-# AI-powered Smart .NET MAUI Scheduler for Appointment Booking
+# AI-powered Smart Appointment Booking in .NET MAUI Scheduler (SfScheduler)
 
-This guide walks you through building a smart scheduling interface using Syncfusion’s .NET MAUI Scheduler (SfScheduler) powered by AI via Azure OpenAI. Utilizing the new AI AssistView (SfAIAssistView) control, users can easily book appointments and check resource availability with the help of AI assistance.
+This guide walks you through building a smart scheduling interface using .NET MAUI Scheduler ([SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html)) powered by AI via Azure OpenAI. Utilizing the new AI AssistView ([SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html)) control, users can easily book appointments and check resource availability with the help of AI assistance.
 
 ## Integrating Azure OpenAI with the .NET MAUI App
 
 ### Step 1: Set Up the .NET MAUI Project
 
-- Create a new .NET MAUI app using Visual Studio.
-- Add the required NuGet packages:
+- Create a new [.NET MAUI app](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?view=net-maui-9.0&viewFallbackFrom=net-maui-7.0&tabs=vswin&pivots=devices-android) using [Visual Studio](https://visualstudio.microsoft.com/).
+- Add the required [NuGet](https://www.nuget.org/) packages:
 `Syncfusion.Maui.Scheduler`
-`Syncfusion.Maui.AIAssistView` and `Azure.AI.OpenAI`
+`Syncfusion.Maui.AIAssistView` and [`Azure.AI.OpenAI`](https://www.nuget.org/packages/Azure.AI.OpenAI/1.0.0-beta.12)
 
 ### Step 2: Set Up Azure OpenAI
 
-To enable AI functionality in your .NET MAUI Scheduler, you need to set up Azure OpenAI. This service allows your application to process natural language prompts and generate intelligent responses for scheduling tasks.
-
-Start by creating an Azure OpenAI resource in the Azure portal. Once the resource is created, deploy a model such as **GPT-35 model**, which will be used to interpret user input. Assign a deployment name to the model (e.g.,"GPT35Turbo"), which you’ll reference in your application code.
-
-Next, retrieve the API key and endpoint URL from the resource settings. These credentials are required to authenticate and communicate with the OpenAI service from your app.
+To enable AI functionality in your .NET MAUI Scheduler, first ensure that you have access to [Azure OpenAI](https://azure.microsoft.com/en-in/products/ai-services/openai-service). In the Azure portal, create an Azure OpenAI resource and deploy a model such as GPT-35. Assign a deployment name (for example, GPT35Turbo) that you’ll reference in your application code. Finally, copy the API key and endpoint URL from the resource settings, as these are required for authentication and communication with the OpenAI service.
 
 ### Step 3: Connect to the Azure OpenAI.
 
@@ -48,11 +43,12 @@ internal class AzureOpenAIService
     }
 }
 ```
+
 ```
 this.client = new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(key));
 ```
 
-In this service, define a method called **GetResponseFromGPT**. This method takes a user prompt from the SfAIAssistView control as input, sends it to the deployed model (e.g., GPT35Turbo), and returns the AI-generated response.
+In this service, define a method called `GetResponseFromGPT`. This method takes a user prompt from the SfAIAssistView control as input, sends it to the deployed model (e.g., GPT35Turbo), and returns the AI-generated response.
 
 ```
 internal class AzureOpenAIService
@@ -205,7 +201,7 @@ Place both controls in your layout to allow users to interact with the scheduler
 
 ### Step 2: Capture User Requests in SfAIAssistView
 
-When the user enters text in the **SfAIAssistView** chat panel, the request is passed to the AI service. You can capture this input by handling the `Request` event in the **AssistViewBehavior.cs** file:
+When the user enters text in the SfAIAssistView chat panel, the request is passed to the AI service. You can capture this input by handling the `Request` event in the AssistViewBehavior.cs file:
 
 ```
 this.assistView.Request += this.OnAssistViewRequest;
@@ -248,12 +244,11 @@ public async Task GetAIResults(string query)
 }
 ```
 
-Here, the user’s request is sent to Azure OpenAI, and the response is shown in the **AIAssistView** chat.
+Here, the user’s request is sent to Azure OpenAI, and the response is shown in the AIAssistView chat.
 
 ### Step 4: Generate Appointment Slots with AI
 
-The core logic for finding available slots is inside the `GetRecommendation` method.
-This builds a **prompt** with constraints like doctor working hours, appointment duration, and JSON output format.
+The core logic for finding available slots is inside the `GetRecommendation` method. This builds a prompt with constraints like doctor working hours, appointment duration, and JSON output format.
 
 ```
 ///<summary>
@@ -327,11 +322,11 @@ this.JohnAvailableTimeSlots = GenerateTimeSlots(JohnStartTimeCollection);
 return GenerateFinalTimeSlots(userInput);
 ```
 
-This ensures **Doctor1** and **Doctor2** get separate collections of appointments.
+This ensures Doctor1 and Doctor2 get separate collections of appointments.
 
 ### Step 6: Display Available Slots
 
-The parsed results are then shown to the user in **natural text format** via AssistView:
+The parsed results are then shown to the user in natural text format via AssistView:
 
 ```
 ///<summary>
@@ -407,7 +402,7 @@ This ensures the AI always responds with structured, appointment-ready data.
 
 ### Step 8: Confirm and Add Appointments
 
-Once the user selects or confirms a suggested slot, the AI finalizes the appointment details. The confirmed appointment is then **programmatically added** to the Scheduler’s `Appointments` collection. As a result, the Scheduler UI automatically updates to reflect the newly created event.
+Once the user selects or confirms a suggested slot, the AI finalizes the appointment details. The confirmed appointment is then programmatically added to the scheduler’s appointments collection. As a result, the scheduler UI automatically updates to reflect the newly created event.
 
 ```
 private async void OnAssistViewRequest(object? sender, RequestEventArgs e)
@@ -502,7 +497,5 @@ private async void OnAssistViewRequest(object? sender, RequestEventArgs e)
 ```
 
 ![Booking-appointments-with-AI-in-NET-MAUI-Scheduler](images/smart-ai-samples/Booking-appointments-with-AI-in-NET-MAUI-Scheduler.gif)
-
-By integrating the .NET MAUI SfScheduler with SfAIAssistView and Azure OpenAI, your .NET MAUI application transforms traditional scheduling into a smart, conversational experience. Users can interact naturally using everyday language, while the AI interprets their intent and automates appointment creation within the SfScheduler.
 
 You can download the complete sample from this [link](https://github.com/SyncfusionExamples/AI-Powered-Smart-Scheduler-for-Easy-Appointment-Booking-in-.NET-MAUI)
