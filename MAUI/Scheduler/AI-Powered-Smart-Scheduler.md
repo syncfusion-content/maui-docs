@@ -14,14 +14,14 @@ This guide walks you through building a smart scheduling interface using Syncfus
 
 ## Integrating Azure OpenAI with the .NET MAUI App
 
-### Set Up the .NET MAUI Project
+### Step 1: Set Up the .NET MAUI Project
 
 - Create a new .NET MAUI app using Visual Studio.
 - Add the required NuGet packages:
 `Syncfusion.Maui.Scheduler`
 `Syncfusion.Maui.AIAssistView` and `Azure.AI.OpenAI`
 
-### Set Up Azure OpenAI
+### Step 2: Set Up Azure OpenAI
 
 To enable AI functionality in your .NET MAUI Scheduler, you need to set up Azure OpenAI. This service allows your application to process natural language prompts and generate intelligent responses for scheduling tasks.
 
@@ -29,7 +29,7 @@ Start by creating an Azure OpenAI resource in the Azure portal. Once the resourc
 
 Next, retrieve the API key and endpoint URL from the resource settings. These credentials are required to authenticate and communicate with the OpenAI service from your app.
 
-### Connect to the Azure OpenAI.
+### Step 3: Connect to the Azure OpenAI.
 
 To connect your .NET MAUI app to Azure OpenAI, create a service class that handles communication with the AI model. Start by initializing the OpenAIClient using your Azure endpoint and API key.
 
