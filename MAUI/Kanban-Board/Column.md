@@ -277,3 +277,750 @@ kanban.Columns.Add(todoColumn);
 {% endhighlight %}
 
 {% endtabs %}
+
+## Customize column appearance
+
+The .NET MAUI Kanban control allows you to customize the column's background, no card template UI, placeholder style, and more.
+
+### Customize the column background
+
+Use the `Background` property of the [`KanbanColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html) to customize the background color of each column in the Kanban control.
+
+{% tabs %}
+
+{% highlight XAML %}
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KanbanGettingStarted.MainPage"
+             xmlns:kanban="clr-namespace:Syncfusion.Maui.Kanban;assembly=Syncfusion.Maui.Kanban"
+             xmlns:local="clr-namespace:KanbanGettingStarted">
+
+    <ContentPage.BindingContext>
+        <local:KanbanViewModel />
+    </ContentPage.BindingContext>
+
+    <kanban:SfKanban x:Name="kanban"
+                     AutoGenerateColumns="False"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     HeightRequest="700"
+                     ItemsSource="{Binding Cards}">
+        <kanban:KanbanColumn Title="To Do"
+                             Categories="Open,Postponed"
+                             MinimumLimit="5"
+                             MaximumLimit="15"
+                             Background="#D6EAF5">
+            <kanban:KanbanColumn.PlaceholderStyle>
+                <kanban:KanbanPlaceholderStyle SelectionIndicatorBackground="#FAC7AD"
+                                               Background="#FAC7AD" />
+            </kanban:KanbanColumn.PlaceholderStyle>
+        </kanban:KanbanColumn>
+        <kanban:KanbanColumn Title="In Progress"
+                             Categories="In Progress"
+                             MinimumLimit="3"
+                             MaximumLimit="8"
+                             Background="#FFF8DC">
+            <kanban:KanbanColumn.PlaceholderStyle>
+                <kanban:KanbanPlaceholderStyle SelectionIndicatorBackground="#FAC7AD"
+                                               Background="#FAC7AD" />
+            </kanban:KanbanColumn.PlaceholderStyle>
+        </kanban:KanbanColumn>
+        <kanban:KanbanColumn Title="Code Review"
+                             Categories="Code Review"
+                             MinimumLimit="5"
+                             MaximumLimit="10"
+                             Background="#FFE4E1">
+            <kanban:KanbanColumn.NoCardTemplate>
+                <DataTemplate>
+                    <VerticalStackLayout VerticalOptions="Start"
+                                         Margin="0,210,0,0">
+                        <Image Source="image2.png"
+                               HeightRequest="100"
+                               WidthRequest="100"
+                               Background="#FFE4E1" />
+                        <Label Text="No code reviews pending"
+                               Margin="0,8,0,0"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               FontSize="14"
+                               FontAttributes="Bold"
+                               TextColor="#000000" />
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </kanban:KanbanColumn.NoCardTemplate>
+            <kanban:KanbanColumn.PlaceholderStyle>
+                <kanban:KanbanPlaceholderStyle SelectionIndicatorBackground="#FAC7AD"
+                                               Background="#FAC7AD" />
+            </kanban:KanbanColumn.PlaceholderStyle>
+        </kanban:KanbanColumn>
+        <kanban:KanbanColumn Title="Done"
+                             Categories="Closed"
+                             MinimumLimit="8"
+                             Background="#DCEDDC">
+            <kanban:KanbanColumn.PlaceholderStyle>
+                <kanban:KanbanPlaceholderStyle SelectionIndicatorBackground="#FAC7AD"
+                                               Background="#FAC7AD" />
+            </kanban:KanbanColumn.PlaceholderStyle>
+        </kanban:KanbanColumn>
+    </kanban:SfKanban>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+public partial class MainPage : ContentPage
+{
+	public MainPage()
+	{
+		InitializeComponent();
+		this.kanban.Workflows = new List<KanbanWorkflow>()
+		{
+			new KanbanWorkflow("Open", new List<object>() { "In Progress", "Closed", "Closed No Changes", "Won't Fix" }),
+			new KanbanWorkflow("Postponed", new List<object>() { "Open", "In Progress", "Closed", "Closed No Changes", "Won't Fix" }),
+			new KanbanWorkflow("Code Review", new List<object>() { "In Progress", "Closed", "Postponed" }),
+			new KanbanWorkflow("In Progress", new List<object>() { "Code Review", "Postponed" }),
+		};
+	}
+}
+
+{% endhighlight %}
+
+{% highlight C# tabtitle="KanbanViewModel.cs" %}
+
+public class KanbanViewModel
+{
+	public KanbanViewModel()
+	{
+		this.Cards = this.GetCardDetails();
+	}
+
+	public ObservableCollection<KanbanModel> Cards { get; set; }
+
+	private ObservableCollection<KanbanModel> GetCardDetails()
+	{
+		var cardsDetails = new ObservableCollection<KanbanModel>();
+
+		cardsDetails.Add(new KanbanModel()
+		{
+			ID = 6,
+			Title = "Xamarin - 6",
+			ImageURL = "People_circle2.png",
+			Category = "Open",
+			Description = "Show the retrieved data from the server in Grid control.",
+			IndicatorFill = Colors.Red,
+			Tags = new List<string> { "Bug", "Customer", "Breaking Issue" }
+		});
+
+		cardsDetails.Add(new KanbanModel()
+		{
+			ID = 21,
+			Title = "Xamarin - 21",
+			Category = "Open",
+			ImageURL = "People_circle11.png",
+			Description = "Improve the performance of editing functionality.",
+			IndicatorFill = Colors.Purple,
+			Tags = new List<string> { "Bug", "Customer" }
+		});
+
+		cardsDetails.Add(new KanbanModel()
+		{
+			ID = 3,
+			Title = "iOS - 3",
+			ImageURL = "People_circle3.png",
+			Category = "Postponed",
+			Description = "Fix the filtering issues reported in Safari.",
+			IndicatorFill = Colors.Red,
+			Tags = new List<string> { "Bug", "Customer", "Breaking Issue" }
+		});
+
+		cardsDetails.Add(new KanbanModel()
+		{
+			ID = 11,
+			Title = "iOS - 21",
+			ImageURL = "People_circle4.png",
+			Category = "Postponed",
+			Description = "Add input validation for editing.",
+			IndicatorFill = Colors.Red,
+			Tags = new List<string> { "Bug", "Customer", "Breaking Issue" }
+		});
+
+		cardsDetails.Add(new KanbanModel()
+		{
+			ID = 15,
+			Title = "Android - 15",
+			Category = "Open",
+			ImageURL = "People_circle5.png",
+			Description = "Arrange web meetings for customers.",
+			IndicatorFill = Colors.Red,
+			Tags = new List<string> { "Story", "Kanban" }
+		});
+
+		cardsDetails.Add(new KanbanModel()
+		{
+			ID = 4,
+			Title = "UWP - 4",
+			ImageURL = "People_circle7.png",
+			Category = "Code Review",
+			Description = "Enhance editing functionality.",
+			IndicatorFill = Colors.Brown,
+			Tags = new List<string> { "Story", "Kanban" }
+		});
+
+		
+		cardsDetails.Add(new KanbanModel()
+		{
+			ID = 13,
+			Title = "UWP - 13",
+			ImageURL = "People_circle9.png",
+			Category = "In Progress",
+			Description = "Add responsive support to applications.",
+			IndicatorFill = Colors.Brown,
+			Tags = new List<string> { "Story", "Kanban" }
+		});
+
+		cardsDetails.Add(new KanbanModel()
+		{
+			ID = 17,
+			Title = "Xamarin - 17",
+			Category = "In Progress",
+			ImageURL = "People_circle10.png",
+			Description = "Fix the issues reported in the IE browser.",
+			IndicatorFill = Colors.Brown,
+			Tags = new List<string> { "Bug", "Customer" }
+		});
+
+		cardsDetails.Add(new KanbanModel()
+		{
+			ID = 21,
+			Title = "Xamarin - 21",
+			Category = "In Progress",
+			ImageURL = "People_circle11.png",
+			Description = "Improve the performance of editing functionality.",
+			IndicatorFill = Colors.Purple,
+			Tags = new List<string> { "Bug", "Customer" }
+		});
+
+		cardsDetails.Add(new KanbanModel()
+		{
+			ID = 19,
+			Title = "iOS - 19",
+			Category = "In Progress",
+			ImageURL = "People_circle12.png",
+			Description = "Fix the issues reported by the customer.",
+			IndicatorFill = Colors.Purple,
+			Tags = new List<string> { "Bug" }
+		});
+	  
+	   cardsDetails.Add(new KanbanModel()
+		{
+			ID = 6,
+			Title = "Xamarin - 6",
+			ImageURL = "People_circle2.png",
+			Category = "In Progress",
+			Description = "Show the retrieved data from the server in Grid control.",
+			IndicatorFill = Colors.Red,
+			Tags = new List<string> { "Bug", "Customer", "Breaking Issue" }
+		});
+
+		cardsDetails.Add(new KanbanModel()
+		{
+			ID = 13,
+			Title = "UWP - 13",
+			ImageURL = "People_circle18.png",
+			Category = "Closed",
+			Description = "Fix cannot open user's default database SQL error.",
+			IndicatorFill = Colors.Purple,
+			Tags = new List<string> { "Bug", "Internal", "Release" }
+		});
+
+		cardsDetails.Add(new KanbanModel()
+		{
+			ID = 14,
+			Title = "Android - 14",
+			Category = "Closed",
+			ImageURL = "People_circle19.png",
+			Description = "Arrange a web meeting with the customer to get the login page requirement.",
+			IndicatorFill = Colors.Red,
+			Tags = new List<string> { "Feature" }
+		});
+
+		cardsDetails.Add(new KanbanModel()
+		{
+			ID = 15,
+			Title = "Xamarin - 15",
+			Category = "Closed",
+			ImageURL = "People_circle20.png",
+			Description = "Login page validation.",
+			IndicatorFill = Colors.Red,
+			Tags = new List<string> { "Bug" }
+		});
+
+		cardsDetails.Add(new KanbanModel()
+		{
+			ID = 16,
+			Title = "Xamarin - 16",
+			ImageURL = "People_circle21.png",
+			Category = "Closed",
+			Description = "Test the application in the IE browser.",
+			IndicatorFill = Colors.Purple,
+			Tags = new List<string> { "Bug" }
+		});
+
+		return cardsDetails;
+	}
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customize no card appearance using DataTemplate
+
+Use the `NoCardTemplate` property of the [`KanbanColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html) to define a custom UI for columns that have no cards. This allows you to display meaningful text or messages when a column is empty.
+
+The following example shows how to define a custom **no card** template using a `DataTemplate`
+
+{% tabs %}
+
+{% highlight XAML %}
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KanbanGettingStarted.MainPage"
+             xmlns:kanban="clr-namespace:Syncfusion.Maui.Kanban;assembly=Syncfusion.Maui.Kanban"
+             xmlns:local="clr-namespace:KanbanGettingStarted">
+
+    <ContentPage.BindingContext>
+        <local:KanbanViewModel />
+    </ContentPage.BindingContext>
+
+    <kanban:SfKanban x:Name="kanban"
+                     AutoGenerateColumns="False"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     HeightRequest="700"
+                     ItemsSource="{Binding Cards}">
+        <kanban:KanbanColumn Title="To Do"
+                             Categories="Open,Postponed"
+                             MinimumLimit="5"
+                             MaximumLimit="15"
+                             Background="#D6EAF5">
+            <kanban:KanbanColumn.PlaceholderStyle>
+                <kanban:KanbanPlaceholderStyle SelectionIndicatorBackground="#FAC7AD"
+                                               Background="#FAC7AD" />
+            </kanban:KanbanColumn.PlaceholderStyle>
+        </kanban:KanbanColumn>
+        <kanban:KanbanColumn Title="In Progress"
+                             Categories="In Progress"
+                             MinimumLimit="3"
+                             MaximumLimit="8"
+                             Background="#FFF8DC">
+            <kanban:KanbanColumn.PlaceholderStyle>
+                <kanban:KanbanPlaceholderStyle SelectionIndicatorBackground="#FAC7AD"
+                                               Background="#FAC7AD" />
+            </kanban:KanbanColumn.PlaceholderStyle>
+        </kanban:KanbanColumn>
+        <kanban:KanbanColumn Title="Code Review"
+                             Categories="Code Review"
+                             MinimumLimit="5"
+                             MaximumLimit="10"
+                             Background="#FFE4E1">
+            <kanban:KanbanColumn.NoCardTemplate>
+                <DataTemplate>
+                    <VerticalStackLayout VerticalOptions="Start"
+                                         Margin="0,210,0,0">
+                        <Image Source="image2.png"
+                               HeightRequest="100"
+                               WidthRequest="100"
+                               Background="#FFE4E1" />
+                        <Label Text="No code reviews pending"
+                               Margin="0,8,0,0"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               FontSize="14"
+                               FontAttributes="Bold"
+                               TextColor="#000000" />
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </kanban:KanbanColumn.NoCardTemplate>
+            <kanban:KanbanColumn.PlaceholderStyle>
+                <kanban:KanbanPlaceholderStyle SelectionIndicatorBackground="#FAC7AD"
+                                               Background="#FAC7AD" />
+            </kanban:KanbanColumn.PlaceholderStyle>
+        </kanban:KanbanColumn>
+        <kanban:KanbanColumn Title="Done"
+                             Categories="Closed"
+                             MinimumLimit="8"
+                             Background="#DCEDDC">
+            <kanban:KanbanColumn.PlaceholderStyle>
+                <kanban:KanbanPlaceholderStyle SelectionIndicatorBackground="#FAC7AD"
+                                               Background="#FAC7AD" />
+            </kanban:KanbanColumn.PlaceholderStyle>
+        </kanban:KanbanColumn>
+    </kanban:SfKanban>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+public partial class MainPage : ContentPage
+{
+	public MainPage()
+	{
+		InitializeComponent();
+		this.kanban.Workflows = new List<KanbanWorkflow>()
+		{
+			new KanbanWorkflow("Open", new List<object>() { "In Progress", "Closed", "Closed No Changes", "Won't Fix" }),
+			new KanbanWorkflow("Postponed", new List<object>() { "Open", "In Progress", "Closed", "Closed No Changes", "Won't Fix" }),
+			new KanbanWorkflow("Code Review", new List<object>() { "In Progress", "Closed", "Postponed" }),
+			new KanbanWorkflow("In Progress", new List<object>() { "Code Review", "Postponed" }),
+		};
+	}
+}
+
+{% endhighlight %}
+
+{% highlight C# tabtitle="KanbanViewModel.cs" %}
+
+public class KanbanViewModel
+{
+	public KanbanViewModel()
+	{
+		this.Cards = this.GetCardDetails();
+	}
+
+	public ObservableCollection<KanbanModel> Cards { get; set; }
+
+	private ObservableCollection<KanbanModel> GetCardDetails()
+	{
+		var cardsDetails = new ObservableCollection<KanbanModel>();
+
+		cardsDetails.Add(new KanbanModel()
+		{
+			ID = 6,
+			Title = "Xamarin - 6",
+			ImageURL = "People_circle2.png",
+			Category = "Open",
+			Description = "Show the retrieved data from the server in Grid control.",
+			IndicatorFill = Colors.Red,
+			Tags = new List<string> { "Bug", "Customer", "Breaking Issue" }
+		});
+
+		cardsDetails.Add(new KanbanModel()
+		{
+			ID = 21,
+			Title = "Xamarin - 21",
+			Category = "Open",
+			ImageURL = "People_circle11.png",
+			Description = "Improve the performance of editing functionality.",
+			IndicatorFill = Colors.Purple,
+			Tags = new List<string> { "Bug", "Customer" }
+		});
+
+		cardsDetails.Add(new KanbanModel()
+		{
+			ID = 3,
+			Title = "iOS - 3",
+			ImageURL = "People_circle3.png",
+			Category = "Postponed",
+			Description = "Fix the filtering issues reported in Safari.",
+			IndicatorFill = Colors.Red,
+			Tags = new List<string> { "Bug", "Customer", "Breaking Issue" }
+		});
+
+		cardsDetails.Add(new KanbanModel()
+		{
+			ID = 11,
+			Title = "iOS - 21",
+			ImageURL = "People_circle4.png",
+			Category = "Postponed",
+			Description = "Add input validation for editing.",
+			IndicatorFill = Colors.Red,
+			Tags = new List<string> { "Bug", "Customer", "Breaking Issue" }
+		});
+
+		cardsDetails.Add(new KanbanModel()
+		{
+			ID = 15,
+			Title = "Android - 15",
+			Category = "Open",
+			ImageURL = "People_circle5.png",
+			Description = "Arrange web meetings for customers.",
+			IndicatorFill = Colors.Red,
+			Tags = new List<string> { "Story", "Kanban" }
+		});
+
+		cardsDetails.Add(new KanbanModel()
+		{
+			ID = 4,
+			Title = "UWP - 4",
+			ImageURL = "People_circle7.png",
+			Category = "Code Review",
+			Description = "Enhance editing functionality.",
+			IndicatorFill = Colors.Brown,
+			Tags = new List<string> { "Story", "Kanban" }
+		});
+
+		
+		cardsDetails.Add(new KanbanModel()
+		{
+			ID = 13,
+			Title = "UWP - 13",
+			ImageURL = "People_circle9.png",
+			Category = "In Progress",
+			Description = "Add responsive support to applications.",
+			IndicatorFill = Colors.Brown,
+			Tags = new List<string> { "Story", "Kanban" }
+		});
+
+		cardsDetails.Add(new KanbanModel()
+		{
+			ID = 17,
+			Title = "Xamarin - 17",
+			Category = "In Progress",
+			ImageURL = "People_circle10.png",
+			Description = "Fix the issues reported in the IE browser.",
+			IndicatorFill = Colors.Brown,
+			Tags = new List<string> { "Bug", "Customer" }
+		});
+
+		cardsDetails.Add(new KanbanModel()
+		{
+			ID = 21,
+			Title = "Xamarin - 21",
+			Category = "In Progress",
+			ImageURL = "People_circle11.png",
+			Description = "Improve the performance of editing functionality.",
+			IndicatorFill = Colors.Purple,
+			Tags = new List<string> { "Bug", "Customer" }
+		});
+
+		cardsDetails.Add(new KanbanModel()
+		{
+			ID = 19,
+			Title = "iOS - 19",
+			Category = "In Progress",
+			ImageURL = "People_circle12.png",
+			Description = "Fix the issues reported by the customer.",
+			IndicatorFill = Colors.Purple,
+			Tags = new List<string> { "Bug" }
+		});
+	  
+	   cardsDetails.Add(new KanbanModel()
+		{
+			ID = 6,
+			Title = "Xamarin - 6",
+			ImageURL = "People_circle2.png",
+			Category = "In Progress",
+			Description = "Show the retrieved data from the server in Grid control.",
+			IndicatorFill = Colors.Red,
+			Tags = new List<string> { "Bug", "Customer", "Breaking Issue" }
+		});
+
+		cardsDetails.Add(new KanbanModel()
+		{
+			ID = 13,
+			Title = "UWP - 13",
+			ImageURL = "People_circle18.png",
+			Category = "Closed",
+			Description = "Fix cannot open user's default database SQL error.",
+			IndicatorFill = Colors.Purple,
+			Tags = new List<string> { "Bug", "Internal", "Release" }
+		});
+
+		cardsDetails.Add(new KanbanModel()
+		{
+			ID = 14,
+			Title = "Android - 14",
+			Category = "Closed",
+			ImageURL = "People_circle19.png",
+			Description = "Arrange a web meeting with the customer to get the login page requirement.",
+			IndicatorFill = Colors.Red,
+			Tags = new List<string> { "Feature" }
+		});
+
+		cardsDetails.Add(new KanbanModel()
+		{
+			ID = 15,
+			Title = "Xamarin - 15",
+			Category = "Closed",
+			ImageURL = "People_circle20.png",
+			Description = "Login page validation.",
+			IndicatorFill = Colors.Red,
+			Tags = new List<string> { "Bug" }
+		});
+
+		cardsDetails.Add(new KanbanModel()
+		{
+			ID = 16,
+			Title = "Xamarin - 16",
+			ImageURL = "People_circle21.png",
+			Category = "Closed",
+			Description = "Test the application in the IE browser.",
+			IndicatorFill = Colors.Purple,
+			Tags = new List<string> { "Bug" }
+		});
+
+		return cardsDetails;
+	}
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customize the placeholder style
+
+Use the `PlaceholderStyle` property of the [`KanbanColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html) to style the placeholder area where cards can be dropped during drag-and-drop operations. This enhances visual clarity and improves the user experience during interactions.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage.Resources>
+    <kanban:KanbanPlaceholderStyle  x:Key="PlaceholderStyle"
+                                    Background="Transparent"
+                                    SelectionIndicatorBackground="Transparent"
+                                    SelectionIndicatorStroke="{AppThemeBinding Light=#914C00, Dark=#FFB77F}">
+        <kanban:KanbanPlaceholderStyle.SelectionIndicatorTextStyle>
+            <kanban:KanbanTextStyle TextColor="{AppThemeBinding Light=#914C00, Dark=#FFB77F}" />
+        </kanban:KanbanPlaceholderStyle.SelectionIndicatorTextStyle>
+    </kanban:KanbanPlaceholderStyle>
+</ContentPage.Resources>
+
+<kanban:SfKanban x:Name="kanban"
+                 AutoGenerateColumns="False"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="FillAndExpand"
+                 ItemsSource="{Binding Cards}">
+    <kanban:SfKanban.Columns>
+        <kanban:KanbanColumn Title="To Do"
+                             Categories="Open"
+                             PlaceholderStyle="{StaticResource PlaceholderStyle}">
+        </kanban:KanbanColumn>
+        <kanban:KanbanColumn Title="In Progress"
+                             Categories="In Progress"
+                             PlaceholderStyle="{StaticResource PlaceholderStyle}">
+        </kanban:KanbanColumn>
+        <kanban:KanbanColumn Title="Code Review"
+                             Categories="Code Review"
+                             PlaceholderStyle="{StaticResource PlaceholderStyle}">
+        </kanban:KanbanColumn>
+        <kanban:KanbanColumn Title="Done"
+                             Categories="Done"
+                             PlaceholderStyle="{StaticResource PlaceholderStyle}">
+        </kanban:KanbanColumn>
+    </kanban:SfKanban.Columns>
+</kanban:SfKanban>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+kanban.AutoGenerateColumns = false; 
+kanban.SetBinding(SfKanban.ItemsSourceProperty, "Cards");
+kanban.ColumnMappingPath="TaskCategory"
+
+KanbanPlaceholderStyle placeholderStyle = new KanbanPlaceholderStyle
+{
+    Background = Colors.Transparent,
+    SelectionIndicatorBackground = Colors.Transparent,
+    SelectionIndicatorStroke = Application.Current.Resources.TryGetValue("SelectionIndicatorStrokeColor", out var strokeColor)
+        ? (Color)strokeColor
+        : App.Current.RequestedTheme == AppTheme.Dark ? Color.FromArgb("#FFB77F") : Color.FromArgb("#914C00"),
+    SelectionIndicatorTextStyle = new KanbanTextStyle
+    {
+        TextColor = App.Current.RequestedTheme == AppTheme.Dark ? Color.FromArgb("#FFB77F") : Color.FromArgb("#914C00")
+    }
+};
+
+KanbanColumn openColumn = new KanbanColumn();
+openColumn.Title = "To Do";
+openColumn.PlaceholderStyle = placeholderStyle;
+kanban.Columns.Add(openColumn);
+
+KanbanColumn progressColumn = new KanbanColumn();
+progressColumn.Title = "In Progress";
+progressColumn.PlaceholderStyle = placeholderStyle;
+kanban.Columns.Add(progressColumn);
+
+KanbanColumn codeColumn = new KanbanColumn();
+codeColumn.Title = "Code Review";
+codeColumn.PlaceholderStyle = placeholderStyle;
+kanban.Columns.Add(codeColumn);
+
+KanbanColumn doneColumn = new KanbanColumn();
+doneColumn.Title = "Done";
+doneColumn.PlaceholderStyle = placeholderStyle;
+kanban.Columns.Add(doneColumn);
+
+{% endhighlight %}
+
+{% highlight C# tabtitle="KanbanViewModel.cs" %}
+
+public class KanbanViewModel
+{
+    public ObservableCollection<KanbanModel> Cards { get; set; }
+    public KanbanViewModel()
+    {
+        Cards = new ObservableCollection<KanbanModel>();
+        Cards.Add(new KanbanModel()
+        {
+            ID = 1,
+            Title = "iOS - 1002",
+            ImageURL = "People_Circle1.png",
+            Category = "Open",
+            Description = "Analyze customer requirements",
+            IndicatorFill = Colors.Red,
+            Tags = new List<string> { "Incident", "Customer" }
+        });
+        Cards.Add(new KanbanModel()
+        {
+            ID = 6,
+            Title = "Xamarin - 4576",
+            ImageURL = "People_Circle2.png",
+            Category = "Open",
+            Description = "Show the retrieved data from the server in grid control",
+            IndicatorFill = Colors.Green,
+            Tags = new List<string> { "Story", "Customer" }
+        });
+        Cards.Add(new KanbanModel()
+        {
+            ID = 13,
+            Title = "UWP - 13",
+            ImageURL = "People_Circle3.png",
+            Category = "In Progress",
+            Description = "Add responsive support to application",
+            IndicatorFill = Colors.Brown,
+            Tags = new List<string> { "Story", "Customer" }
+        });
+        Cards.Add(new KanbanModel()
+        {
+            ID = 2543,
+            Title = "IOS- 11",
+            Category = "Code Review",
+            ImageURL = "People_Circle4.png",
+            Description = "Check login page validation",
+            IndicatorFill = Colors.Brown,
+            Tags = new List<string> { "Story", "Customer" }
+        });
+        Cards.Add(new KanbanModel()
+        {
+            ID = 123,
+            Title = "UWP-21",
+            Category = "Done",
+            ImageURL = "People_Circle5.png",
+            Description = "Check login page validation",
+            IndicatorFill = Colors.Brown,
+            Tags = new List<string> { "Story", "Customer" }
+        });
+    }
+
+}
+
+{% endhighlight %}
+
+{% endtabs %}
