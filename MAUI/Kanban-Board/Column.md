@@ -288,7 +288,7 @@ Use the `Background` property of the [`KanbanColumn`](https://help.syncfusion.co
 
 {% tabs %}
 
-{% highlight XAML %}
+{% highlight XAML hl_lines="21" %}
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -584,7 +584,7 @@ The following example shows how to define a custom **no card** template using a 
 
 {% tabs %}
 
-{% highlight XAML % hl_lines="21"}
+{% highlight XAML %}
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
