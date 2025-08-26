@@ -488,6 +488,8 @@ public class KanbanViewModel
 
 {% endtabs %}
 
+N> You can find the complete getting started sample from this [link](https://github.com/SyncfusionExamples/GettingStarted_Kanban_MAUI).
+
 ### Creating the custom model tasks with data mapping
 
 You can also map custom model data to our Kanban. Here are the steps to render tasks using the [.NET MAUI Kanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) control with respective custom data properties.
@@ -887,5 +889,3 @@ public class KanbanViewModel
 
 ## Running the Application
 Press **F5** to build and run the application. Once compiled, the Kanban board will display with the data provided.
-
-You can find the complete getting started sample from this [link](https://github.com/SyncfusionExamples/GettingStarted_Kanban_MAUI).
