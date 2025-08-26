@@ -78,4 +78,4 @@ This guide explains how to override the default styles using the [MarkdownStyleS
 
 By defining custom styles, you can transform the Markdown viewer into a fully branded and polished content surface that fits seamlessly into your app’s design system.
 
-N> You can also take advantage of the built-in styling properties to override the default styles of individual Markdown elements such as H1, H2, H3, body, and table styles within the [SfMarkdownViewer]() control. However, when both CSS style rules and property-based settings are applied, the values defined in `CssStyleRules` will take precedence and override the corresponding property values. For more details on all available built-in styling options, refer to [Appearance](/Appearance.md).
+N> Apply CSS styles only when necessary as they will override the properties of individual Markdown elements such as `H1FontSize`, `H1Color`, `BodyTextColor`, `TableHeaderFontSize`, etc., defined in the [MarkdownStyleSettings]() class.
