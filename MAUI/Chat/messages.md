@@ -1341,11 +1341,11 @@ public class MessageTemplateSelector : ChatMessageTemplateSelector
             }
             if (item as ITextMessage != null)
             {
-                if ((item as ITextMessage)!.Text == "Hi guys, good morning! I'm very delighted to share with you the news that our team is going to launch a new mobile application.")
+                if ((item as ITextMessage)!.Text == "Thank you")
                 {
                     return customOutgoingMessageTemplate;
                 }
-                else if ((item as ITextMessage)!.Text == "Oh! That's great.")
+                else if ((item as ITextMessage)!.Text == "How would you rate your interaction with our travel bot?")
                 {
                     return customIncomingMessageTemplate;
                 }
@@ -1811,7 +1811,7 @@ By default, the author’s name and avatar are displayed for the incoming messag
 
 ![Hide incoming avatar and author visibility in .NET MAUI Chat](images/messages/maui-chat-hide-avatar.png)
 
-N> In `SfChat`, when only the author's name is provided and no avatar image is set, the control automatically displays the author's initials.
+N> In `SfChat`, when only the author's name is provided and no avatar image is set, the control automatically displays the author's initials as the avatar.
 
 ## MessageTimestampFormat for incoming and outgoing messages
 
