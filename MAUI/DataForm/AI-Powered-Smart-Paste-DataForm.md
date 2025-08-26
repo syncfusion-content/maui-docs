@@ -14,14 +14,21 @@ This guide introduces the integration of AI-powered Smart Paste functionality in
 
 ## Integrating Azure OpenAI with the .NET MAUI app
 
-### Step 1: Set up Azure OpenAI
+### Step 1: Set Up the .NET MAUI Project
+
+- Create a new .NET MAUI app using Visual Studio.
+- Add the required NuGet packages:
+`Syncfusion.Maui.DataForm`
+`Syncfusion.Maui.AIAssistView` and `Azure.AI.OpenAI`
+
+### Step 2: Set up Azure OpenAI
 To enable AI functionality in your .NET MAUI DataForm, you need to set up Azure OpenAI. This service allows your application to process natural language prompts and generate intelligent responses for scheduling tasks.
 
 Start by creating an Azure OpenAI resource in the Azure portal. Once the resource is created, deploy a model such as **GPT-35 model**, which will be used to interpret user input. Assign a deployment name to the model, which you’ll reference in your application code.
 
 Next, retrieve the API key and endpoint URL from the resource settings. These credentials are required to authenticate and communicate with the OpenAI service from your app.
 
-### Step 2: Connect to the Azure OpenAI
+### Step 3: Connect to the Azure OpenAI
 To connect your .NET MAUI app to Azure OpenAI, create a service class that handles communication with the AI model. Start by initializing the OpenAIClient using your Azure endpoint and API key.
 
 In this service, define a method called **GetAnswerFromGPT**. This method takes a user prompt as input, sends it to the deployed model, and returns the AI-generated response. 
@@ -382,6 +389,8 @@ private void OnSubmitButtonClicked(object? sender, EventArgs e)
     this.popup.Show();
 }
 ```
+
+![AI powered Smart Paste .NET MAUI Dataform](images/smart-ai-samples/ai-smart-paste-dataform.mp4)
 
 By combining Azure OpenAI with the Syncfusion .NET MAUI DataForm, Smart Paste makes it possible to paste copied content directly into the correct fields. This integration reduces effort, increases reliability, and delivers a faster and smarter way to handle form-based data entry in .NET MAUI applications.
 
