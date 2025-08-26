@@ -124,7 +124,7 @@ public class FeedBackForm
 
 ### Step 2: Bind the model to the dataform
 
-Create a viewmodel containing an instance of the model. Assign this instance to the DataObject property of the dataform so that the fields are generated automatically according to the model properties.
+Create a view model containing an instance of the model. Assign this instance to the DataObject property of the dataform so that the fields are generated automatically according to the model properties.
 
 ### Step 3: Design the UI
 
@@ -271,7 +271,7 @@ The Smart Paste feature enables users to quickly populate form fields using unst
 
 To implement this, the application first checks whether the clipboard contains any text. If valid content is found, it constructs a prompt instructing the AI to convert the text into a JSON object that aligns with the FeedBackForm model. This prompt is sent to Azure OpenAI using the service class AzureOpenAIServiceConnector, which handles the connection and communication with the AI model.
 
-Once the AI returns a response, the application deserializes the JSON string into a FeedBackForm object. The deserialized values are then assigned to the model bound to the DataForm, automatically updating the form fields with the extracted values.
+Once the AI returns a response, the application deserialize the JSON string into a FeedBackForm object. The deserialized values are then assigned to the model bound to the DataForm, automatically updating the form fields with the extracted values.
 
 ```
  private async void OnlineSmartPasteButtonClicked(object? sender, EventArgs e)
