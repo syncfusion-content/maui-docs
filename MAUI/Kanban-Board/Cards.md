@@ -21,6 +21,8 @@ The default elements of a card can be customized using the below properties of [
 
 N> The image URL can be set in two ways: using an assembly reference or a local assembly. Ensure that the image is stored in the `Resources/Images` folder for assembly references.
 
+N> When using a custom model, the default card UI is not applied. You must define a custom `DataTemplate` via the the [`CardTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_CardTemplate) property to render the card content.
+
 {% highlight C# %}
 
 new KanbanModel()
