@@ -375,6 +375,82 @@ SfDataGrid supports displaying both column summaries and title summaries simulta
 
 In the code snippet below, DataGridSummaryRow.TitleColumnCount is set as 2, and [DataGridSummaryRow.Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html#Syncfusion_Maui_DataGrid_DataGridSummaryRow_Title) is defined along with summary columns.
 
+{% tabs %}
+{% highlight xaml %}
+<dataGrid:SfDataGrid x:Name="dataGrid" 
+            ItemsSource="{Binding OrderItems}"
+            AutoGenerateColumnsMode="None"
+            SelectionMode="Single"
+            GridLinesVisibility="Both"
+            HeaderGridLinesVisibility="Both"
+            AllowGroupExpandCollapse="True">
+
+    <dataGrid:SfDataGrid.Columns>
+        <dataGrid:DataGridTextColumn MappingName="OrderId" 
+                                     HeaderText="Order ID" />
+        <dataGrid:DataGridTextColumn MappingName="CustomerId" 
+                                     HeaderText="Customer ID"
+                                     ColumnWidthMode="Auto" />
+        <dataGrid:DataGridTextColumn MappingName="CustomerName" 
+                                     HeaderText="Customer Name"
+                                     ColumnWidthMode="Auto" />
+    </dataGrid:SfDataGrid.Columns>
+
+    <dataGrid:SfDataGrid.GroupColumnDescriptions>
+        <dataGrid:GroupColumnDescription ColumnName="CustomerId" />
+    </dataGrid:SfDataGrid.GroupColumnDescriptions>
+
+    <dataGrid:SfDataGrid.CaptionSummaryRow>
+        <dataGrid:DataGridSummaryRow Title="{}{ColumnName}Customer ID : {Key} - {ProductCount} Items" TitleColumnCount="2">
+            <dataGrid:DataGridSummaryRow.SummaryColumns>
+                <dataGrid:DataGridSummaryColumn Name="CustomerName" 
+                                                MappingName="CustomerName" 
+                                                Format="{}{Count}" 
+                                                SummaryType="CountAggregate" />
+                <dataGrid:DataGridSummaryColumn Name="ProductCount"
+                                                MappingName="ProductName"
+                                                Format="{}{Count}" 
+                                                SummaryType="CountAggregate" />
+            </dataGrid:DataGridSummaryRow.SummaryColumns>
+        </dataGrid:DataGridSummaryRow>
+    </dataGrid:SfDataGrid.CaptionSummaryRow>
+
+</dataGrid:SfDataGrid>
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# %}
+
+GridSummaryRow captionSummaryRow = new GridSummaryRow()
+{
+    Title = "Customer ID : {Key} - {ProductCount} Items",
+    TitleColumnCount = 2,
+    SummaryColumns = new ObservableCollection<ISummaryColumn>()
+    {
+        new GridSummaryColumn()
+        {
+            Name = "CustomerName",
+            MappingName = "CustomerName",
+            SummaryType = SummaryType.CountAggregate,
+            Format = "{Count}"
+        },
+        new GridSummaryColumn()
+        {
+            Name = "ProductCount",
+            MappingName = "ProductName",
+            SummaryType = SummaryType.CountAggregate,
+            Format = "{Count}"
+        }
+    }
+};
+
+dataGrid.CaptionSummaryRow = captionSummaryRow;
+
+{% endhighlight %}
+{% endtabs %}
+
 ### Limitations
 
 The following are the limitations of displaying column summary along with title at same time for DataGridSummaryRow:
@@ -679,6 +755,69 @@ public class GroupSummaryConverter : IValueConverter
 SfDataGrid supports displaying both column summaries and title summaries simultaneously. You can show column summary along with title by defining the [DataGridSummaryRow.Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html#Syncfusion_Maui_DataGrid_DataGridSummaryRow_Title) and DataGridSummaryRow.TitleColumnCount property, along with defining summary columns. Showing column summary along with title can be only supported if [DataGridSummaryRow.ShowSummaryInRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html#Syncfusion_Maui_DataGrid_DataGridSummaryRow_ShowSummaryInRow) is disabled.
 
 In the code snippet below, DataGridSummaryRow.TitleColumnCount is set as 2, and [DataGridSummaryRow.Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html#Syncfusion_Maui_DataGrid_DataGridSummaryRow_Title) is defined along with summary columns.
+
+{% tabs %}
+{% highlight xaml %}
+<dataGrid:SfDataGrid x:Name="dataGrid" 
+                        ItemsSource="{Binding OrderItems}"
+                        AutoGenerateColumnsMode="None"
+                        SelectionMode="Single"
+                        GridLinesVisibility="Both"
+                        HeaderGridLinesVisibility="Both"
+                        AllowGroupExpandCollapse="True">
+
+    <dataGrid:SfDataGrid.Columns>
+        <dataGrid:DataGridTextColumn MappingName="OrderId" 
+                                 HeaderText="Order ID" />
+        <dataGrid:DataGridTextColumn MappingName="CustomerId" 
+                                 HeaderText="Customer ID" />
+        <dataGrid:DataGridTextColumn MappingName="CustomerName" 
+                                 HeaderText="Customer Name"
+                                 ColumnWidthMode="Auto" />
+    </dataGrid:SfDataGrid.Columns>
+
+    <dataGrid:SfDataGrid.GroupColumnDescriptions>
+        <dataGrid:GroupColumnDescription ColumnName="CustomerId" />
+    </dataGrid:SfDataGrid.GroupColumnDescriptions>
+
+    <dataGrid:SfDataGrid.GroupSummaryRows>
+        <dataGrid:DataGridSummaryRow Title="Total Price: {PriceAmount} for {ProductCount} Products" TitleColumnCount="2">
+            <dataGrid:DataGridSummaryRow.SummaryColumns>
+                <dataGrid:DataGridSummaryColumn Name="CustomerName" 
+                                            MappingName="CustomerName" 
+                                            Format="{}{Count}" 
+                                            SummaryType="CountAggregate" />
+            </dataGrid:DataGridSummaryRow.SummaryColumns>
+        </dataGrid:DataGridSummaryRow>
+    </dataGrid:SfDataGrid.GroupSummaryRows>
+
+</dataGrid:SfDataGrid>
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# %}
+
+GridSummaryRow groupSummaryRow = new GridSummaryRow()
+{
+    Title = "Total Price: {PriceAmount} for {ProductCount} Products",
+    TitleColumnCount = 2,
+    SummaryColumns = new ObservableCollection<ISummaryColumn>()
+    {
+        new GridSummaryColumn()
+        {
+            Name = "CustomerName",
+            MappingName = "CustomerName",
+            SummaryType = SummaryType.CountAggregate,
+            Format = "{Count}"
+        }
+    }
+};
+
+dataGrid.GroupSummaryRows.Add(groupSummaryRow);
+
+{% endhighlight %}
+{% endtabs %}
 
 ### Limitations
 
@@ -1140,6 +1279,94 @@ N> The `DataTemplateSelector` can also be directly assigned to the `SfDataGrid.T
 SfDataGrid supports displaying both column summaries and title summaries simultaneously. You can show column summary along with title by defining the [DataGridTableSummaryRow.Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html#Syncfusion_Maui_DataGrid_DataGridSummaryRow_Title) and DataGridTableSummaryRow.TitleColumnCount property, along with defining summary columns. Showing column summary along with title can be only supported if [DataGridTableSummaryRow.ShowSummaryInRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html#Syncfusion_Maui_DataGrid_DataGridSummaryRow_ShowSummaryInRow) is disabled.
 
 In the code snippet below, DataGridTableSummaryRow.TitleColumnCount is set as 2, and [DataGridTableSummaryRow.Title](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html#Syncfusion_Maui_DataGrid_DataGridSummaryRow_Title) is defined along with summary columns.
+
+{% tabs %}
+{% highlight xaml %}
+<dataGrid:SfDataGrid x:Name="dataGrid" 
+                    ItemsSource="{Binding OrderItems}"
+                    AutoGenerateColumnsMode="None"
+                    SelectionMode="Single"
+                    GridLinesVisibility="Both"
+                    HeaderGridLinesVisibility="Both">
+    
+    <dataGrid:SfDataGrid.Columns>
+        <dataGrid:DataGridTextColumn MappingName="OrderId" 
+                                   HeaderText="Order ID" />
+        <dataGrid:DataGridTextColumn MappingName="CustomerId" 
+                                   HeaderText="Customer ID" />
+        <dataGrid:DataGridTextColumn MappingName="CustomerName" 
+                                   HeaderText="Customer Name"
+                                     ColumnWidthMode="Auto" />
+    </dataGrid:SfDataGrid.Columns>
+
+    <dataGrid:SfDataGrid.TableSummaryRows>
+        <dataGrid:DataGridTableSummaryRow Title="Total Price: {PriceAmount} for {ProductCount} products" TitleColumnCount="2" Position="Top">
+            <dataGrid:DataGridTableSummaryRow.SummaryColumns>
+                <dataGrid:DataGridSummaryColumn Name="CustomerName" 
+                                                MappingName="CustomerName" 
+                                                Format="{}{Count}" 
+                                                SummaryType="CountAggregate" />
+            </dataGrid:DataGridTableSummaryRow.SummaryColumns>
+        </dataGrid:DataGridTableSummaryRow>
+        <dataGrid:DataGridTableSummaryRow Title="Total Price: {PriceAmount} for {ProductCount} products" TitleColumnCount="2" Position="Bottom">
+            <dataGrid:DataGridTableSummaryRow.SummaryColumns>
+                <dataGrid:DataGridSummaryColumn Name="CustomerName" 
+                                MappingName="CustomerName" 
+                                Format="{}{Count}" 
+                                SummaryType="CountAggregate" />
+            </dataGrid:DataGridTableSummaryRow.SummaryColumns>
+        </dataGrid:DataGridTableSummaryRow>
+    </dataGrid:SfDataGrid.TableSummaryRows>
+
+</dataGrid:SfDataGrid>
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# %}
+
+GridTableSummaryRow topSummaryRow = new GridTableSummaryRow()
+{
+    ShowSummaryInRow = false,
+    Position = TableSummaryRowPosition.Top,
+    Title = "Total Price : {PriceAmount} for {ProductCount} products",
+    TitleColumnCount = 2,
+    SummaryColumns = new ObservableCollection<ISummaryColumn>()
+    {
+        new GridSummaryColumn()
+        {
+            Name = "CustomerName",
+            MappingName = "CustomerName",
+            SummaryType = SummaryType.CountAggregate,
+            Format = "{Count:d}"
+        }
+    }
+};
+
+dataGrid.TableSummaryRows.Add(topSummaryRow);
+
+GridTableSummaryRow bottomSummaryRow = new GridTableSummaryRow()
+{
+    ShowSummaryInRow = false,
+    Position = TableSummaryRowPosition.Bottom,
+    Title = "Total Price : {PriceAmount} for {ProductCount} products",
+    TitleColumnCount = 2,
+    SummaryColumns = new ObservableCollection<ISummaryColumn>()
+    {
+        new GridSummaryColumn()
+        {
+            Name = "CustomerName",
+            MappingName = "CustomerName",
+            SummaryType = SummaryType.CountAggregate,
+            Format = "{Count:d}"
+        }
+    }
+};
+
+dataGrid.TableSummaryRows.Add(bottomSummaryRow);
+
+{% endhighlight %}
+{% endtabs %}
 
 ### Limitations
 
