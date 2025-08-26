@@ -33,8 +33,7 @@ Next, retrieve the API key and endpoint URL from the resource settings. These cr
 
 To connect your .NET MAUI app to Azure OpenAI, create a service class that handles communication with the AI model. Start by initializing the OpenAIClient using your Azure endpoint and API key.
 
-{% tabs %}
-{% highlight c# %}
+```
 internal class AzureOpenAIService
 {
     const string endpoint = "https://{YOUR_END_POINT}.openai.azure.com";
@@ -48,33 +47,28 @@ internal class AzureOpenAIService
     {
     }
 }
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight c# %}
+```
+```
 this.client = new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(key));
-{% endhighlight %}
-{% endtabs %}
+```
 
-In this service, define a method called **GetResponseFromGPT**. This method takes a user prompt from the SfAIAssistView control as input, sends it to the deployed model (e.g., GPT35Turbo), and returns the AI-generated response. 
+In this service, define a method called **GetResponseFromGPT**. This method takes a user prompt from the SfAIAssistView control as input, sends it to the deployed model (e.g., GPT35Turbo), and returns the AI-generated response.
 
-{% tabs %}
-{% highlight c# %}
+```
 internal class AzureOpenAIService
 {
     const string endpoint = "https://{YOUR_END_POINT}.openai.azure.com";
     const string deploymentName = "GPT35Turbo";
     string key = "API key";
-    
+
     OpenAIClient? client;
     ChatCompletionsOptions? chatCompletions;
-    
+
     internal AzureOpenAIService()
     {
-        
+
     }
-    
+
     internal async Task<string> GetResponseFromGPT(string userPrompt)
     {
         this.chatCompletions = new ChatCompletionsOptions
@@ -86,20 +80,20 @@ internal class AzureOpenAIService
             FrequencyPenalty = 0,
             PresencePenalty = 0,
         };
-        
+
         this.client = new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(key));
         if (this.client != null)
         {
             // Add the user's prompt as a user message to the conversation.
             this.chatCompletions?.Messages.Add(new ChatRequestSystemMessage("You are a predictive analytics assistant."));
-            
+
             // Add the user's prompt as a user message to the conversation.
             this.chatCompletions?.Messages.Add(new ChatRequestUserMessage(userPrompt));
             try
             {
                 // Send the chat completion request to the OpenAI API and await the response.
                 var response = await this.client.GetChatCompletionsAsync(this.chatCompletions);
-                
+
                 // Return the content of the first choice in the response, which contains the AI's answer.
                 return response.Value.Choices[0].Message.Content;
             }
@@ -112,10 +106,9 @@ internal class AzureOpenAIService
         return "";
     }
 }
-{% endhighlight %}
-{% endtabs %}
+```
 
-## Implementing AI-powered Smart Appointment Booking in .NET MAUI Scheduler 
+## Implementing AI-powered Smart Appointment Booking in .NET MAUI Scheduler
 
 ### Step 1: Add the Scheduler and AIAssistView Controls
 
@@ -123,23 +116,22 @@ To design the scheduling interface, add the Scheduler control to display appoint
 
 The Scheduler supports multiple calendar views allowing users to manage their schedules visually. Resources such as doctors can be added to the Scheduler by defining a resource collection and linked to appointments, enabling the Scheduler to group and display events based on the assigned resource. This helps users view and manage schedules for specific resources more efficiently.
 
-{% tabs %}
-{% highlight xaml %}
+```
 xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
 
 <Grid.BindingContext>
   <local:SchedulerViewModel />
 </Grid.BindingContext>
 
-<scheduler:SfScheduler x:Name="scheduler" View="TimelineDay"> 
+<scheduler:SfScheduler x:Name="scheduler" View="TimelineDay">
   <scheduler:SfScheduler.TimelineView>
-    <scheduler:SchedulerTimelineView StartHour="9" 
-                                     TimeInterval="0:30:0" 
-                                     TimeIntervalWidth="90" 
-                                     TimeFormat="hh:mm" 
+    <scheduler:SchedulerTimelineView StartHour="9"
+                                     TimeInterval="0:30:0"
+                                     TimeIntervalWidth="90"
+                                     TimeFormat="hh:mm"
                                      EndHour="18" />
   </scheduler:SfScheduler.TimelineView>
-  
+
   <scheduler:SfScheduler.ResourceView>
     <scheduler:SchedulerResourceView Resources="{Binding Resources}">
       <scheduler:SchedulerResourceView.Mapping>
@@ -184,13 +176,11 @@ xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Mau
     </scheduler:SchedulerResourceView>
   </scheduler:SfScheduler.ResourceView>
 </scheduler:SfScheduler>
-{% endhighlight %}
-{% endtabs %}
+```
 
 The AIAssistView provides a chat-like interface that allows users to interact with AI services for scheduling assistance.
 
-{% tabs %}
-{% highlight xaml %}
+```
 xmlns:aiassistview="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
 
 <Grid.BindingContext>
@@ -209,8 +199,7 @@ xmlns:aiassistview="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusi
    <Shadow Brush="Black" Offset="0,0" Radius="1" Opacity="0.5" />
  </aiassistview:SfAIAssistView.Shadow>
 </aiassistview:SfAIAssistView>
-{% endhighlight %}
-{% endtabs %}
+```
 
 Place both controls in your layout to allow users to interact with the scheduler easily and view their scheduled events.
 
@@ -218,8 +207,7 @@ Place both controls in your layout to allow users to interact with the scheduler
 
 When the user enters text in the **SfAIAssistView** chat panel, the request is passed to the AI service. You can capture this input by handling the `Request` event in the **AssistViewBehavior.cs** file:
 
-{% tabs %}
-{% highlight c# %}
+```
 this.assistView.Request += this.OnAssistViewRequest;
 
 private async void OnAssistViewRequest(object? sender, RequestEventArgs e)
@@ -230,7 +218,7 @@ private async void OnAssistViewRequest(object? sender, RequestEventArgs e)
         {
             return;
         }
-        
+
         string pattern = @"\b\d{2}:\d{2} (AM|PM)\b";
         bool isValidPattern = Regex.IsMatch(requeststring, pattern);
         if (!isValidPattern)
@@ -239,20 +227,18 @@ private async void OnAssistViewRequest(object? sender, RequestEventArgs e)
         }
     }
 }
-{% endhighlight %}
-{% endtabs %}
+```
 
 ### Step 3: Send User Request to AI
 
 The SchedulerViewModel contains logic to process the request and fetch AI-generated responses.
 
-{% tabs %}
-{% highlight xaml %}
+```
 ///<summary>
 /// Method to get the AI response.
-///</summary> 
+///</summary>
 ///<param name="query">The query</param>
-///<returns></returns> 
+///<returns></returns>
 public async Task GetAIResults(string query)
 {
     await Task.Delay(1000).ConfigureAwait(true);
@@ -260,8 +246,7 @@ public async Task GetAIResults(string query)
     AssistItem botMessage = new AssistItem() { Text = reply, ShowAssistItemFooter = false };
     this.Messages.Add(botMessage);
 }
-{% endhighlight %}
-{% endtabs %}
+```
 
 Here, the user’s request is sent to Azure OpenAI, and the response is shown in the **AIAssistView** chat.
 
@@ -270,13 +255,12 @@ Here, the user’s request is sent to Azure OpenAI, and the response is shown in
 The core logic for finding available slots is inside the `GetRecommendation` method.
 This builds a **prompt** with constraints like doctor working hours, appointment duration, and JSON output format.
 
-{% tabs %}
-{% highlight c# %}
+```
 ///<summary>
 /// Method to contain AI response and updates.
-///</summary> 
+///</summary>
 ///<param name="userInput">The user input</param>
-///<returns></returns> 
+///<returns></returns>
 private async Task<string> GetRecommendation(string userInput)
 {
     DateTime todayDate = DateTime.Today;
@@ -290,13 +274,12 @@ private async Task<string> GetRecommendation(string userInput)
                     $"Do not repeat the same time. Generate the following fields: StartDate, EndDate, Subject, Location, and ResourceID." +
                     $"The return format should be the following JSON format: Doctor1[StartDate, EndDate, Subject, Location, ResourceID], Doctor2[StartDate, EndDate, Subject, Location, ResourceID]." +
                     $"Condition: provide details without any explanation. Don't include any special characters like ```";
-    
+
     returnMessage = await azureAIServices.GetResponseFromGPT(prompt);
     var jsonObj = JObject.Parse(returnMessage);
     ...
 }
-{% endhighlight %}
-{% endtabs %}
+```
 
 The AI service responds with structured appointment slot details in JSON format.
 
@@ -304,47 +287,45 @@ The AI service responds with structured appointment slot details in JSON format.
 
 Once the AI returns JSON, it is parsed into usable Scheduler collections for both doctors.
 
-{% tabs %}
-{% highlight c# %}
+```
 var jsonObj = JObject.Parse(returnMessage);
-    
-    var doctorAppointments = new Dictionary<string, (List<DateTime> StartTimes, List<DateTime> EndTimes, List<string> Subjects, List<string> Locations, List<string> ResourceIDs)>
-    {
-      { "Doctor1", (new List<DateTime>(), new List<DateTime>(), new List<string>(), new List<string>(), new List<string<()) },
-      { "Doctor2", (new List<DateTime>(), new List<DateTime>(), new List<string>(), new List<string>(), new List<string>()) }
-   };
 
-   foreach (var doctor in doctorAppointments.Keys)
+var doctorAppointments = new Dictionary<string, (List<DateTime> StartTimes, List<DateTime> EndTimes, List<string> Subjects, List<string> Locations, List<string> ResourceIDs)>
+{
+    { "Doctor1", (new List<DateTime>(), new List<DateTime>(), new List<string>(), new List<string>(), new List<string<()) },
+    { "Doctor2", (new List<DateTime>(), new List<DateTime>(), new List<string>(), new List<string>(), new List<string>()) }
+};
+
+foreach (var doctor in doctorAppointments.Keys)
+{
+    foreach (var appointment in jsonObj[doctor])
     {
-        foreach (var appointment in jsonObj[doctor])
+        if (DateTime.TryParse((string)appointment["StartDate"], out DateTime startTime) && DateTime.TryParse((string)appointment["EndDate"], out DateTime endTime))
         {
-            if (DateTime.TryParse((string)appointment["StartDate"], out DateTime startTime) && DateTime.TryParse((string)appointment["EndDate"], out DateTime endTime))
-            {
-                doctorAppointments[doctor].StartTimes.Add(startTime);
-                doctorAppointments[doctor].EndTimes.Add(endTime);
-            }
-            
-            doctorAppointments[doctor].Subjects.Add((string)appointment["Subject"]);            
-            doctorAppointments[doctor].Locations.Add((string)appointment["Location"]);            
-            doctorAppointments[doctor].ResourceIDs.Add((string)appointment["ResourceID"]);
+            doctorAppointments[doctor].StartTimes.Add(startTime);
+            doctorAppointments[doctor].EndTimes.Add(endTime);
         }
-    }
-    this.SophiaStartTimeCollection = doctorAppointments["Doctor1"].StartTimes;
-    this.SophiaEndTimeCollection = doctorAppointments["Doctor1"].EndTimes;
-    this.SophiaSubjectCollection = doctorAppointments["Doctor1"].Subjects;
-    this.SophiaLocationCollection = doctorAppointments["Doctor1"].Locations;
-    this.SophiaResourceIDCollection = doctorAppointments["Doctor1"].ResourceIDs;
-    this.JohnStartTimeCollection = doctorAppointments["Doctor2"].StartTimes;
-    this.JohnEndTimeCollection = doctorAppointments["Doctor2"].EndTimes;
-    this.JohnSubjectCollection = doctorAppointments["Doctor2"].Subjects;
-    this.JohnLocationCollection = doctorAppointments["Doctor2"].Locations;
-    this.JohnResourceIDCollection = doctorAppointments["Doctor2"].ResourceIDs;
 
-        this.SophiaAvailableTimeSlots = GenerateTimeSlots(SophiaStartTimeCollection);
-    this.JohnAvailableTimeSlots = GenerateTimeSlots(JohnStartTimeCollection);
-    return GenerateFinalTimeSlots(userInput);
-{% endhighlight %}
-{% endtabs %}
+        doctorAppointments[doctor].Subjects.Add((string)appointment["Subject"]);
+        doctorAppointments[doctor].Locations.Add((string)appointment["Location"]);
+        doctorAppointments[doctor].ResourceIDs.Add((string)appointment["ResourceID"]);
+    }
+}
+this.SophiaStartTimeCollection = doctorAppointments["Doctor1"].StartTimes;
+this.SophiaEndTimeCollection = doctorAppointments["Doctor1"].EndTimes;
+this.SophiaSubjectCollection = doctorAppointments["Doctor1"].Subjects;
+this.SophiaLocationCollection = doctorAppointments["Doctor1"].Locations;
+this.SophiaResourceIDCollection = doctorAppointments["Doctor1"].ResourceIDs;
+this.JohnStartTimeCollection = doctorAppointments["Doctor2"].StartTimes;
+this.JohnEndTimeCollection = doctorAppointments["Doctor2"].EndTimes;
+this.JohnSubjectCollection = doctorAppointments["Doctor2"].Subjects;
+this.JohnLocationCollection = doctorAppointments["Doctor2"].Locations;
+this.JohnResourceIDCollection = doctorAppointments["Doctor2"].ResourceIDs;
+
+this.SophiaAvailableTimeSlots = GenerateTimeSlots(SophiaStartTimeCollection);
+this.JohnAvailableTimeSlots = GenerateTimeSlots(JohnStartTimeCollection);
+return GenerateFinalTimeSlots(userInput);
+```
 
 This ensures **Doctor1** and **Doctor2** get separate collections of appointments.
 
@@ -352,13 +333,12 @@ This ensures **Doctor1** and **Doctor2** get separate collections of appointment
 
 The parsed results are then shown to the user in **natural text format** via AssistView:
 
-{% tabs %}
-{% highlight c# %}
+```
 ///<summary>
 /// Method to generate the final time slots.
-///<summary> 
+///<summary>
 ///<param name="userInput">The user input</param>
-///<returns></returns> 
+///<returns></returns>
 private string GenerateFinalTimeSlots(string userInput)
 {
     string sophiaAvailedTimeSlots = string.Join(" \n ", this.SophiaAvailableTimeSlots);
@@ -376,8 +356,7 @@ private string GenerateFinalTimeSlots(string userInput)
         return $"Doctor Sophia available appointment slots are\n {sophiaAvailedTimeSlots}\nDoctor John available appointment slots are\n {johnAvailedTimeSlots}\nEnter the time (hh:mm tt) to book an appointment.";
     }
 }
-{% endhighlight %}
-{% endtabs %}
+```
 
 The user can then select a specific time slot to confirm an appointment.
 
@@ -385,8 +364,7 @@ The user can then select a specific time slot to confirm an appointment.
 
 The communication with Azure OpenAI is handled in the `GetResponseFromGPT` method:
 
-{% tabs %}
-{% highlight c# %}
+```
 internal async Task<string> GetResponseFromGPT(string userPrompt)
     {
         this.chatCompletions = new ChatCompletionsOptions
@@ -398,20 +376,20 @@ internal async Task<string> GetResponseFromGPT(string userPrompt)
             FrequencyPenalty = 0,
             PresencePenalty = 0,
         };
-        
+
         this.client = new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(key));
         if (this.client != null)
         {
             // Add the user's prompt as a user message to the conversation.
             this.chatCompletions?.Messages.Add(new ChatRequestSystemMessage("You are a predictive analytics assistant."));
-            
+
             // Add the user's prompt as a user message to the conversation.
             this.chatCompletions?.Messages.Add(new ChatRequestUserMessage(userPrompt));
             try
             {
                 // Send the chat completion request to the OpenAI API and await the response.
                 var response = await this.client.GetChatCompletionsAsync(this.chatCompletions);
-                
+
                 // Return the content of the first choice in the response, which contains the AI's answer.
                 return response.Value.Choices[0].Message.Content;
             }
@@ -423,8 +401,7 @@ internal async Task<string> GetResponseFromGPT(string userPrompt)
         }
         return "";
     }
-{% endhighlight %}
-{% endtabs %}
+```
 
 This ensures the AI always responds with structured, appointment-ready data.
 
@@ -432,8 +409,7 @@ This ensures the AI always responds with structured, appointment-ready data.
 
 Once the user selects or confirms a suggested slot, the AI finalizes the appointment details. The confirmed appointment is then **programmatically added** to the Scheduler’s `Appointments` collection. As a result, the Scheduler UI automatically updates to reflect the newly created event.
 
-{% tabs %}
-{% highlight c# %}
+```
 private async void OnAssistViewRequest(object? sender, RequestEventArgs e)
 {
     string requeststring = e.RequestItem.Text;
@@ -447,17 +423,17 @@ private async void OnAssistViewRequest(object? sender, RequestEventArgs e)
     string johnSubject = string.Empty;
     string johnLocation = string.Empty;
     string johnResourceID = string.Empty;
-    
+
     if (azureAIServices.Client != null)
     {
         if (string.IsNullOrEmpty(e.RequestItem.Text))
         {
             return;
         }
-        
+
         string pattern = @"\b\d{2}:\d{2} (AM|PM)\b";
         bool isValidPattern = Regex.IsMatch(requeststring, pattern);
-        
+
         if (!isValidPattern)
         {
             await this.SchedulerViewModel.GetAIResults(e.RequestItem.Text).ConfigureAwait(true);
@@ -479,7 +455,7 @@ private async void OnAssistViewRequest(object? sender, RequestEventArgs e)
                     this.SchedulerViewModel.Messages.Add(botMessage);
                 }
             }
-            
+
             for (int j = 0; j < this.SchedulerViewModel.JohnAvailableTimeSlots?.Count; j++)
             {
                 if (requeststring == this.SchedulerViewModel.JohnAvailableTimeSlots[j].ToString())
@@ -498,11 +474,8 @@ private async void OnAssistViewRequest(object? sender, RequestEventArgs e)
         }
     }
 }
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight c# %}
+```
+```
  /// <summary>
  /// Method to book the online appointments.
  /// </summary>
@@ -526,8 +499,7 @@ private async void OnAssistViewRequest(object? sender, RequestEventArgs e)
 
      (this.Scheduler!.AppointmentsSource as ObservableCollection<SchedulerAppointment>)?.AddRange(this.SchedulerViewModel?.Appointments!);
  }
-{% endhighlight %}
-{% endtabs %}
+```
 
 ![Booking-appointments-with-AI-in-NET-MAUI-Scheduler](images/smart-ai-samples/Booking-appointments-with-AI-in-NET-MAUI-Scheduler.gif)
 
