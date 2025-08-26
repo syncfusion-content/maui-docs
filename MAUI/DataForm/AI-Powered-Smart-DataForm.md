@@ -1,8 +1,7 @@
 ---
 layout: post
 title: AI-powered Smart .NET MAUI Dataform for Data Entry | Syncfusion®
-description: This guide explores how to build an AI powered smart data entry in .NET MAUI SfDataForm by integrating Azure OpenAI.
-
+description: Learn here all about how to build an AI powered smart data entry in .NET MAUI SfDataForm by integrating Azure OpenAI.
 platform: maui
 control: SfDataForm
 documentation: ug
@@ -10,26 +9,23 @@ documentation: ug
 
 # AI-powered Smart .NET MAUI Dataform for Data Entry
 
-This guide explains how to implement AI-powered smart data forms in a .NET MAUI application using Syncfusion® DataForm and AIAssistView controls. These forms automatically generate fields, validate input, and guide users interactively using AI logic from Azure OpenAI Services.
+This guide explains how to implement AI-powered smart data forms in a .NET MAUI application using Syncfusion® DataForm ([SfDataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html)) and AIAssistView ([SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html)) controls. These forms automatically generate fields, validate input, and guide users interactively using AI logic from Azure OpenAI Services.
 
 ## Integrating Azure OpenAI with the .NET MAUI app
 
 ### Step 1: Set Up the .NET MAUI Project
 
-Create a .NET MAUI project in Visual Studio and install the following NuGet packages: `Syncfusion.Maui.DataForm`,  `Syncfusion.Maui.AIAssistView`, `Azure.AI.OpenAI`, `Microsoft.Extensions.AI.OpenAI` and `Azure.Identity` from [NuGet Gallery](https://www.nuget.org/)
+Create a [.NET MAUI app](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?view=net-maui-9.0&viewFallbackFrom=net-maui-7.0&tabs=vswin&pivots=devices-android) in [Visual Studio](https://visualstudio.microsoft.com/) and install the following NuGet packages: `Syncfusion.Maui.DataForm`,  `Syncfusion.Maui.AIAssistView`, [`Azure.AI.OpenAI`](https://www.nuget.org/packages/Azure.AI.OpenAI/1.0.0-beta.12), [`Microsoft.Extensions.AI.OpenAI`](https://www.nuget.org/packages/Microsoft.Extensions.AI.OpenAI/9.8.0-preview.1.25412.6) and [`Azure.Identity`](https://www.nuget.org/packages/Azure.Identity) from [NuGet Gallery](https://www.nuget.org/)
 
 ### Step 2: Set up Azure OpenAI
 
-To enable AI functionality in your .NET MAUI DataForm, you need to set up Azure OpenAI. This service allows your application to process natural language prompts and generate intelligent responses for scheduling tasks.
-
-Start by creating an Azure OpenAI resource in the Azure portal. Once the resource is created, deploy a model such as GPT-35 model, which will be used to interpret user input. Assign a deployment name to the model, which you’ll reference in your application code.
-
-Next, retrieve the API key and endpoint URL from the resource settings. These credentials are required to authenticate and communicate with the OpenAI service from your app.
+To enable AI functionality in your .NET MAUI Scheduler, first ensure that you have access to [Azure OpenAI](https://azure.microsoft.com/en-in/products/ai-services/openai-service). In the Azure portal, create an Azure OpenAI resource and deploy a model such as GPT-35. Assign a deployment name (for example, GPT35Turbo) that you’ll reference in your application code. Finally, copy the API key and endpoint URL from the resource settings, as these are required for authentication and communication with the OpenAI service.
 
 ### Step 3: Connect to the Azure OpenAI
+
 To connect your .NET MAUI app to Azure OpenAI, create a service class that handles communication with the AI model. Start by initializing the OpenAIClient using your Azure endpoint and API key.
 
-In this service, define a method called **GetAnswerFromGPT**. This method takes a user prompt as input, sends it to the deployed model, and returns the AI-generated response. 
+In this service, define a method called GetAnswerFromGPT. This method takes a user prompt as input, sends it to the deployed model, and returns the AI-generated response. 
 
 ```
 internal class DataFormAIService : AzureBaseService
@@ -66,13 +62,17 @@ internal class DataFormAIService : AzureBaseService
 }
 ```
 
+```
+this.client = new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(key));
+```
+
 ## Integrating AI-powered smart DataForm Generation in .NET MAUI DataForm
 
 ### Step 1: Designing the User Interface
 
-####  Editor and Button - Capturing the User Prompt
+####  Editor and Button - Capturing User Prompts
 
-The first step in designing the user interface for AI-powered smart data forms is to provide a way for users to describe the form they want to generate. This is accomplished using a combination of an Editor and a Button. The Editor serves as a multi-line text input field where users can type natural language prompts. This prompt is then sent to Azure OpenAI for processing. The Button acts as a trigger for this action. When clicked, it initiates the backend logic that sends the prompt to the AI service, receives the response, and begins the process of generating the form. 
+Use an Editor to collect natural language prompts and a Button to send the prompt to Azure OpenAI. The Editor allows users to describe the form they want, while the Button triggers the backend logic to process the prompt and generate the form.
 
 ```
                 <VerticalStackLayout Margin="20" VerticalOptions="Center" HorizontalOptions="Center">
@@ -96,8 +96,9 @@ The first step in designing the user interface for AI-powered smart data forms i
                 </VerticalStackLayout>
 ```
 
-#### Busy Indicator - Enhancing Visual Feedback During Form Generation
-The Busy Indicator (SfBusyIndicator) provides visual feedback to users while the application is performing background operations, such as generating a smart data form based on a user prompt. It helps maintain a smooth and engaging user experience by clearly indicating that the system is actively working. The indicator typically appears as a spinning animation or progress ring and is shown only while the AI is processing the prompt. Once the response is received and the form is ready to be displayed, the indicator is hidden.
+#### Busy Indicator - Showing Processing Status
+ 
+The SfBusyIndicator provides visual feedback while the AI processes the prompt. It is shown during form generation and hidden once the form is ready.
 
 ```
 xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
@@ -110,7 +111,7 @@ xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
 
 ####  DataForm - Displaying the Generated Form
 
-Once the AI processes the user’s prompt and returns a structured response, the application uses SfDataForm control to render the form dynamically. The form is bound to a model class that is either predefined or dynamically generated based on the AI’s output. This approach allows for rapid prototyping and deployment of forms tailored to specific data collection needs.
+The SfDataForm renders the generated form dynamically based on the AI response. 
 
 ```
 xmlns:dataform="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm"
@@ -127,9 +128,9 @@ xmlns:dataform="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.
                     </dataform:SfDataForm>
 ```
 
-#### AI AssistView – Providing Contextual Help
-
-The SfAIAssistView enhances the user experience by offering real-time suggestions. It acts like a chatbot embedded within the form interface. The AssistView is typically placed below the form or in a sidebar, depending on the layout, and is bound to a collection of messages or suggestions managed by the ViewModel. These messages can be updated dynamically based on user interaction or AI feedback.
+#### AI AssistView - Providing Suggestions
+ 
+The SfAIAssistView offers contextual help, such as real-time suggestions or chatbot-style assistance. 
 
 ```
     <aiassistview:SfAIAssistView x:Name="aiAssistView" 
@@ -142,6 +143,7 @@ The SfAIAssistView enhances the user experience by offering real-time suggestion
                         </aiassistview:SfAIAssistView.Behaviors>
                     </aiassistview:SfAIAssistView>
 ```
+
 ### Step 2: Create and Edit Data Form Items using Azure OpenAI
 
 #### Creating Data Form Items
@@ -169,7 +171,7 @@ We first create a button click event that triggers the AI-powered form item gene
 
 #### Generate Items from User Prompts
 
-The following method sends the user’s prompt to Azure OpenAI and processes the response to generate actions such as **New Form, Change Title, Add, Remove, or Replace**.
+The following method sends the user’s prompt to Azure OpenAI and processes the response to generate actions such as New Form, Change Title, Add, Remove, or Replace.
 
 ```
 internal async void GetDataFormFromAI(string userPrompt)
@@ -265,7 +267,7 @@ private async void GenerateAIDataForm(string userPrompt)
 
 #### Generating a New Data Form
 
-When the user request is identified as `"New Form"`, a complete form can be created dynamically.
+When the user request is identified as "New Form", a complete form can be created dynamically.
 
 #### Editing Data Form Items
 
@@ -285,11 +287,11 @@ Azure OpenAI also allows editing an existing form. The following operations are 
  
 (d) Add Values to a Field
  
-* Populates additional values into picker or combo-box style items.
+* Populates additional values into picker or combo-box items.
 
 #### Handling Requests via AIAssistView
  
-Finally, the **AIAssistView.Request** event listens to user inputs and invokes the data form generation or edit methods.
+Finally, the `Request` event in AIAssistView listens to user inputs and invokes the data form generation or edit methods.
 
 With these implementations, the DataForm becomes AI-powered, enabling users to create and modify form structures dynamically via Azure OpenAI.
 
