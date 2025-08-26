@@ -11,6 +11,8 @@ documentation: ug
 
 The `SfTreeView` control provides built-in support for sorting data using the `SortDescriptors` property. Items can be sorted in either ascending or descending order. Custom sorting logic is also supported to sort the items.
 
+N> When the new collection is updated to the `ItemsSource`, the `SortDescriptors` should be cleared and reinitialized manually based on the requirements for sorting.
+
 ## Programmatic sorting
 
 Sort items by creating a `SortDescriptor` with the property name and sort direction, and then adding it to the `SortDescriptors` collection.
@@ -106,7 +108,7 @@ public class CustomDateSortComparer : IComparer<object>
 
 ## Clear sorting
 
-When the `SortDescriptors` collection is cleared, it restores the default order of the node collection, and the TreeView reverts to its original order.
+When the `SortDescriptors` collection is cleared, the TreeView control restores the original order of its node collection. This means the nodes will appear in the default sequence as defined in the underlying data source, effectively removing any applied sorting.
 
 {% tabs %}
 {% highlight c# %}
