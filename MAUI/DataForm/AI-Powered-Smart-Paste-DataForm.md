@@ -1,8 +1,7 @@
 ---
 layout: post
 title: AI-powered Smart Paste .NET MAUI Dataform | Syncfusion®
-description: This guide explores how to build an AI powered smart paste .NET MAUI SfDataForm by integrating Azure OpenAI.
-
+description: Learn here all about how to build an AI powered smart paste .NET MAUI SfDataForm by integrating Azure OpenAI.
 platform: maui
 control: SfDataForm
 documentation: ug
@@ -10,28 +9,26 @@ documentation: ug
 
 # AI-powered Smart Paste .NET MAUI Dataform
 
-This guide introduces the integration of AI-powered Smart Paste functionality into the .NET MAUI DataForm, enhancing user experience by automating data entry through intelligent clipboard parsing. Smart Paste is an AI-powered feature that automates data entry by intelligently pasting and organizing clipboard content into the correct fields of a form. It reduces manual errors and boosts efficiency, especially useful in scenarios like customer feedback forms, surveys, and registrations
+This guide introduces the integration of AI-powered Smart Paste functionality into the .NET MAUI [DataForm](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataForm.SfDataForm.html), enhancing user experience by automating data entry through intelligent clipboard parsing. Smart Paste is an AI-powered feature that automates data entry by intelligently pasting and organizing clipboard content into the correct fields of a form. It reduces manual errors and boosts efficiency, especially useful in scenarios like customer feedback forms, surveys, and registrations
 
 ## Integrating Azure OpenAI with the .NET MAUI app
 
 ### Step 1: Set Up the .NET MAUI Project
 
-- Create a new .NET MAUI app using Visual Studio.
+- Create a new [.NET MAUI app](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?view=net-maui-9.0&viewFallbackFrom=net-maui-7.0&tabs=vswin&pivots=devices-android) using [Visual Studio](https://visualstudio.microsoft.com/).
 - Add the required NuGet packages:
 `Syncfusion.Maui.DataForm`
-`Syncfusion.Maui.AIAssistView` and `Azure.AI.OpenAI`
+`Syncfusion.Maui.AIAssistView` and [`Azure.AI.OpenAI`](https://www.nuget.org/packages/Azure.AI.OpenAI/1.0.0-beta.12)
 
 ### Step 2: Set up Azure OpenAI
-To enable AI functionality in your .NET MAUI DataForm, you need to set up Azure OpenAI. This service allows your application to process natural language prompts and generate intelligent responses for scheduling tasks.
 
-Start by creating an Azure OpenAI resource in the Azure portal. Once the resource is created, deploy a model such as **GPT-35 model**, which will be used to interpret user input. Assign a deployment name to the model, which you’ll reference in your application code.
-
-Next, retrieve the API key and endpoint URL from the resource settings. These credentials are required to authenticate and communicate with the OpenAI service from your app.
+To enable AI functionality in your .NET MAUI Scheduler, first ensure that you have access to [Azure OpenAI](https://azure.microsoft.com/en-in/products/ai-services/openai-service). In the Azure portal, create an Azure OpenAI resource and deploy a model such as GPT-35. Assign a deployment name (for example, GPT35Turbo) that you’ll reference in your application code. Finally, copy the API key and endpoint URL from the resource settings, as these are required for authentication and communication with the OpenAI service.
 
 ### Step 3: Connect to the Azure OpenAI
+
 To connect your .NET MAUI app to Azure OpenAI, create a service class that handles communication with the AI model. Start by initializing the OpenAIClient using your Azure endpoint and API key.
 
-In this service, define a method called **GetAnswerFromGPT**. This method takes a user prompt as input, sends it to the deployed model, and returns the AI-generated response. 
+In this service, define a method called GetAnswerFromGPT. This method takes a user prompt as input, sends it to the deployed model, and returns the AI-generated response. 
 
 ```
  /// <summary>
@@ -71,6 +68,10 @@ In this service, define a method called **GetAnswerFromGPT**. This method takes 
      }
  }
  ```
+
+ ```
+this.client = new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(key));
+```
 
 ## Integrating AI-powered Smart Paste in .NET MAUI DataForm
 
@@ -266,7 +267,7 @@ In XAML, set up the form layout - including labels, images, dataform control. Ad
 
 ### Step 4: Implement Smart Paste Functionality.
 
-The Smart Paste feature in enables users to quickly populate form fields using unstructured text copied to the clipboard. This functionality leverages Azure OpenAI’s GPT model to interpret the clipboard content and convert it into structured data that matches the form’s data model.
+The Smart Paste feature enables users to quickly populate form fields using unstructured text copied to the clipboard. This functionality leverages Azure OpenAI’s GPT model to interpret the clipboard content and convert it into structured data that matches the form’s data model.
 
 To implement this, the application first checks whether the clipboard contains any text. If valid content is found, it constructs a prompt instructing the AI to convert the text into a JSON object that aligns with the FeedBackForm model. This prompt is sent to Azure OpenAI using the service class AzureOpenAIServiceConnector, which handles the connection and communication with the AI model.
 
@@ -367,7 +368,7 @@ Once the AI returns a response, the application deserializes the JSON string int
 
 ### Step 5: Validate and Submit the form
 
-Enable DataForm validation for all the fields during submission. If validation passes, display a confirmation message. If validation fails, show appropriate error messages.
+Enable DataForm validation for all the fields during submission using the Validate method. If validation passes, display a confirmation message. If validation fails, show appropriate error messages.
 
 ```
 private void OnSubmitButtonClicked(object? sender, EventArgs e)
@@ -390,11 +391,7 @@ private void OnSubmitButtonClicked(object? sender, EventArgs e)
 }
 ```
 
-![AI powered Smart Paste .NET MAUI Dataform](images/smart-ai-samples/ai-smart-paste-dataform.mp4)
-
-By combining Azure OpenAI with the Syncfusion .NET MAUI DataForm, Smart Paste makes it possible to paste copied content directly into the correct fields. This integration reduces effort, increases reliability, and delivers a faster and smarter way to handle form-based data entry in .NET MAUI applications.
-
-You can download the complete sample from this [link](https://gitea.syncfusion.com/essential-studio/maui-AISolution/src/branch/development/maui/samples/SmartComponents)
+You can download the complete sample from this [link](https://github.com/SyncfusionExamples/Integrate-openai-powered-smart-paste-into-DataForm-for-Seamless-Data-Entry/tree/master)
 
 
 
