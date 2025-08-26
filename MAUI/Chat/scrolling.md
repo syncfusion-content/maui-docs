@@ -73,16 +73,17 @@ The [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.htm
 
 {% endhighlight %}
 {% endtabs %}
-## Scroll to Bottom Button
 
-The `SfChat` allows you to display a scroll to bottom button when `ShowScrollToBottomButton` property is set to `true` that helps to quickly navigate to the last message when scrolled up through older messages in the conversation.
+## Scroll to bottom Button
+
+The `SfChat` control provides the option to display a scroll to bottom button by setting the `ShowScrollToBottomButton` property to `true`. This button appears when scrolled up through older messages and allows quick navigation back to the latest message in the conversation.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
-    <sfChat:SfChat x:Name="sfChat"
-                Messages="{Binding Messages}"
-                CurrentUser="{Binding CurrentUser}"
-                ShowScrollToBottomButton="True"/>  
+<sfChat:SfChat x:Name="sfChat"
+               Messages="{Binding Messages}"
+               CurrentUser="{Binding CurrentUser}"
+               ShowScrollToBottomButton="True"/>  
 
 {% endhighlight %}
 {% endtabs %}
@@ -91,7 +92,7 @@ The `SfChat` allows you to display a scroll to bottom button when `ShowScrollToB
 
 ### Scroll to Bottom Button Template
 
-The `SfChat` control allows you to fully customize the  scroll to bottom button appearance by using the `ScrollToBottomButtonTemplate` property. This property lets you define a custom layout and style.
+The `SfChat` control allows you to fully customize the scroll to bottom button appearance by using the `ScrollToBottomButtonTemplate` property. This property lets you define a custom layout and style.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="20" %}
