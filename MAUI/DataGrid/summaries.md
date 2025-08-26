@@ -401,7 +401,7 @@ In the code snippet below, DataGridSummaryRow.TitleColumnCount is set as 2, and 
     </dataGrid:SfDataGrid.GroupColumnDescriptions>
 
     <dataGrid:SfDataGrid.CaptionSummaryRow>
-        <dataGrid:DataGridSummaryRow Title="{}{ColumnName}Customer ID : {Key} - {ProductCount} Items" TitleColumnCount="2">
+        <dataGrid:DataGridSummaryRow Title="{}{ColumnName} : {Key} - {ProductCount} Items" TitleColumnCount="2">
             <dataGrid:DataGridSummaryRow.SummaryColumns>
                 <dataGrid:DataGridSummaryColumn Name="CustomerName" 
                                                 MappingName="CustomerName" 
@@ -425,7 +425,7 @@ In the code snippet below, DataGridSummaryRow.TitleColumnCount is set as 2, and 
 
 GridSummaryRow captionSummaryRow = new GridSummaryRow()
 {
-    Title = "Customer ID : {Key} - {ProductCount} Items",
+    Title = "{ColumnName} : {Key} - {ProductCount} Items",
     TitleColumnCount = 2,
     SummaryColumns = new ObservableCollection<ISummaryColumn>()
     {
