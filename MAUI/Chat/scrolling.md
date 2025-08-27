@@ -99,7 +99,7 @@ sfChat.ShowScrollToBottomButton = true;
 
 ![Scroll to bottom button in .NET MAUI Chat](images/scrolling/maui-chat-scroll-to-bottom-button.gif)
 
-### Scroll to bottom button template
+### Scroll to bottom button customization
 
 The `SfChat` control allows you to fully customize the scroll to bottom button appearance by using the `ScrollToBottomButtonTemplate` property. This property lets you define a custom view and style.
 
