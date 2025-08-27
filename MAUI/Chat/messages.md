@@ -1815,7 +1815,7 @@ By default, the author’s name and avatar are displayed for the incoming messag
 
 ![Hide incoming avatar and author visibility in .NET MAUI Chat](images/messages/maui-chat-hide-avatar.png)
 
-N> In `SfChat`, when only the author's name is provided and no avatar image is set, the control automatically displays the author's initials as the avatar.
+N> In SfChat, when no avatar image is set, the author's initials are shown automatically based on their name.
 
 ## MessageTimestampFormat for incoming and outgoing messages
 
