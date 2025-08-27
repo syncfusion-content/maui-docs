@@ -430,10 +430,10 @@ The `SfAIAssistView` control includes a built-in event called [CardTapped](https
 
 ## Show error response
 
-The `SfAIAssistView` allows to display error responses by setting the text to the `ErrorMessage`, ensuring clear notification when an error occurs during AI interactions.
+The `SfAIAssistView` allows to display error responses by setting the error text to the `AssistItem.ErrorMessage` property, ensuring clear notification when an error occurs during AI interactions.
 
 {% tabs %}
-{% highlight c# tabtitle="ViewModel.cs" hl_lines="24" %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="36" %}
     
 public class ViewModel : INotifyPropertyChanged
 {
@@ -453,17 +453,28 @@ public class ViewModel : INotifyPropertyChanged
         await GetResult(requestItem);
     }
         
-    private async Task GetResult(AssistItem requestItem)
+    private async Task GetResultAsync(AssistItem requestItem)
     {
-        await Task.Delay(1000).ConfigureAwait(true);
- 
-        AssistItem responseItem = new AssistItem()
+       try
+       {
+           await Task.Delay(1000);
+           // If successful, add the normal response
+           AssistItem responseItem = new AssistItem()
+           {
+              Text = "Active Listening – Fully focusing and responding to the speaker with attention and empathy. Passive Listening – Hearing without reacting or engaging with the speaker. Empathetic Listening – Understanding the speaker’s emotions and feelings deeply.",
+              IsRequested = false,
+           };
+           this.AssistItems.Add(responseItem);
+        }
+        catch (Exception ex)
         {
-            ErrorMessage = "An error occured. Either the engine you requested does not exist or there was another issue processing your request.",
-            IsRequested = false,
-        };
- 
-        this.AssistItems.Add(responseItem);
+            AssistItem errorItem = new AssistItem()
+            {
+               ErrorMessage = "An error occurred. Either the engine you requested does not exist or there was another issue processing your request.",
+               IsRequested = false,
+            };
+            this.AssistItems.Add(errorItem);
+        }
     }
 }
     
