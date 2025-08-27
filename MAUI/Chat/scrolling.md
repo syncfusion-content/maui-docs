@@ -79,11 +79,20 @@ The [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.htm
 The `SfChat` control provides the option to display a scroll to bottom button by setting the `ShowScrollToBottomButton` property to `true`. This button appears when scrolled up through older messages and allows quick navigation back to the latest message in the conversation.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
+{% highlight xaml hl_lines="4" %}
 <sfChat:SfChat x:Name="sfChat"
                Messages="{Binding Messages}"
                CurrentUser="{Binding CurrentUser}"
                ShowScrollToBottomButton="True"/>  
+
+{% endhighlight %}
+{% highlight c# hl_lines="5" %}
+
+SfChat sfChat = new SfChat();
+ViewModel viewModel = new ViewModel();
+sfChat.Messages = viewModel.Messages;
+sfChat.CurrentUser = viewModel.CurrentUser;
+sfChat.ShowScrollToBottomButton = true;
 
 {% endhighlight %}
 {% endtabs %}
@@ -92,10 +101,10 @@ The `SfChat` control provides the option to display a scroll to bottom button by
 
 ### Scroll to Bottom Button Template
 
-The `SfChat` control allows you to fully customize the scroll to bottom button appearance by using the `ScrollToBottomButtonTemplate` property. This property lets you define a custom layout and style.
+The `SfChat` control allows you to fully customize the scroll to bottom button appearance by using the `ScrollToBottomButtonTemplate` property. This property lets you define a custom view and style.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="20" %}
+{% highlight xaml hl_lines="20" %}
 
 <ContentPage.Resources>
     <ResourceDictionary>
@@ -118,6 +127,47 @@ The `SfChat` control allows you to fully customize the scroll to bottom button a
                 ShowScrollToBottomButton="True"
                 ScrollToBottomButtonTemplate="{StaticResource scrollToBottomButtonTemplate}"/>  
 </ContentPage.Content>
+
+{% endhighlight %}
+{% highlight c# hl_lines="18" %}
+
+namespace MauiChat
+{
+    public partial class MainPage : ContentPage
+    {
+        SfChat sfChat;
+        ViewModel viewModel;
+
+        public MainPage()
+        {
+            InitializeComponent();
+            this.viewModel = new ViewModel();
+
+            this.sfChat = new SfChat
+            {
+                Messages = viewModel.Messages,
+                CurrentUser = viewModel.CurrentUser,
+                ShowScrollToBottomButton = true,
+                ScrollToBottomButtonTemplate = new DataTemplate(() =>
+                {
+                    var grid = new Grid();
+                    var label = new Label
+                    {
+                        Text = "↓",
+                        FontSize = 30,
+                        FontAttributes = FontAttributes.Bold,
+                        HorizontalOptions = LayoutOptions.Center,
+                        VerticalOptions = LayoutOptions.Center
+                    };
+                    grid.Children.Add(label);
+                    return grid;
+                })
+            };
+
+            this.Content = sfChat;
+        }
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
