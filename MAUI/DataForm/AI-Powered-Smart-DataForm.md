@@ -72,7 +72,7 @@ this.client = new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(key));
 
 ####  Editor and Button - Capturing User Prompts
 
-Use an Editor to collect natural language prompts and a Button to send the prompt to Azure OpenAI. The Editor allows users to describe the form they want, while the Button triggers the backend logic to process the prompt and generate the form.
+Use an Editor to collect natural language prompts and a Button to send the prompt to Azure OpenAI. The Editor allows users to describe the form they want, while the Button triggers the logic to process the prompt and generate the form.
 
 ```
                 <VerticalStackLayout Margin="20" VerticalOptions="Center" HorizontalOptions="Center">
