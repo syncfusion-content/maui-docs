@@ -1353,6 +1353,7 @@ public class MessageTemplateSelector : ChatMessageTemplateSelector
                 }
                 else
                 {
+                    // Returns the default incoming or outgoing message templates based on the type of message.
                     return base.OnSelectTemplate(item, container);
                 }
             }
