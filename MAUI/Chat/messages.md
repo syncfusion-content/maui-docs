@@ -1316,7 +1316,7 @@ We have loaded a custom template if the message's text contains a particular tex
 
 ### Template Selector to return base template
 
-Create a custom class that inherits from `ChatMessageTemplateSelector`, and override the OnSelectTemplate method to return the base template for that item.
+Create a custom class that inherits from `ChatMessageTemplateSelector`, and override the `OnSelectTemplate` method to return the base template for that item.
 
 {% tabs %}
 {% highlight c# tabtitle="MessageTemplateSelector.cs" %}
@@ -1325,9 +1325,11 @@ public class MessageTemplateSelector : ChatMessageTemplateSelector
 {
         private readonly DataTemplate customOutgoingMessageTemplate;
         private readonly DataTemplate customIncomingMessageTemplate;
+        private SfChat sfChat;
 
         public MessageTemplateSelector(SfChat sfChat) : base(sfChat)
         {
+            this.sfChat = sfChat;
             this.customOutgoingMessageTemplate = new DataTemplate(typeof(OutgoingMessageTemplate));
             this.customIncomingMessageTemplate = new DataTemplate(typeof(IncomingMessageTemplate));
         }
@@ -1341,7 +1343,7 @@ public class MessageTemplateSelector : ChatMessageTemplateSelector
             }
             if (item as ITextMessage != null)
             {
-                if ((item as ITextMessage)!.Text == "Thank you")
+                if (message.Author == sfChat.CurrentUser && (item as ITextMessage)!.Text == "Thank you")
                 {
                     return customOutgoingMessageTemplate;
                 }
