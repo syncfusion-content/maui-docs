@@ -68,7 +68,7 @@ N> It is mandatory to specify the `PropertyName` of `SortDescriptor` in programm
 Custom sorting can be applied by assigning a comparer to the `SortDescriptor.Comparer` property and the comparer will be added to the `SortDescriptors` collection.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4 9" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="9 10" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
              xmlns:treeviewengine="clr-namespace:Syncfusion.TreeView.Engine;assembly=Syncfusion.Maui.TreeView">
   <ContentPage.Resources>
