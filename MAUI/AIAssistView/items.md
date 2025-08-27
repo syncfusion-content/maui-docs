@@ -428,7 +428,7 @@ The `SfAIAssistView` control includes a built-in event called [CardTapped](https
 {% endhighlight %}
 {% endtabs %}
 
-## Show error response UI
+## Show error response
 
 The `SfAIAssistView` allows to display error responses by setting the text to the `ErrorMessage`, ensuring clear notification when an error occurs during AI interactions.
 
