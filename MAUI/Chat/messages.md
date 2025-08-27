@@ -1314,7 +1314,7 @@ We have loaded a custom template if the message's text contains a particular tex
 
 ![Message template in .NET MAUI Chat](images/messages/maui-chat-message-template.png)
 
-### Template Selector to return base template
+### Template selector to return base template
 
 Create a custom class that inherits from `ChatMessageTemplateSelector`, and override the `OnSelectTemplate` method to return the base template for that item.
 
@@ -1369,7 +1369,7 @@ public class MessageTemplateSelector : ChatMessageTemplateSelector
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/message-template-.net-maui-chat)
 
-## Customizable Views
+## Customizable views
 
 The `SfChat` allows you to target and fully customize views within the chat control. The following views can be targeted and customized:
 - `IncomingMessageContentView` - Represents the incoming content view of the messages.
