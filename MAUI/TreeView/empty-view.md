@@ -13,7 +13,7 @@ The `SfTreeView` control allows you to display and customize the empty view cont
 
 ## Display a string when treeView has no items
 
-The `EmptyView` property can be assigned a string, which will be shown when the `ItemsSource` is null or when the collection bound to the `ItemsSource` is empty.
+The `EmptyView` property can be set to a string.
 
 {% tabs %}
 {% highlight xaml %}
@@ -31,7 +31,7 @@ treeView.EmptyView = "No Items";
 
 ## Display views when treeView has no items
 
-The `EmptyView` property can be set to a view, which will be displayed when the `ItemsSource` property is null, or when the collection specified by the `ItemsSource` property is null or empty.
+The `EmptyView` property can be set to a view.
 
 {% tabs %}
 {% highlight xaml hl_lines="4" %}
