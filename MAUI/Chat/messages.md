@@ -1314,9 +1314,9 @@ We have loaded a custom template if the message's text contains a particular tex
 
 ![Message template in .NET MAUI Chat](images/messages/maui-chat-message-template.png)
 
-### Template selector to return base template
+### Using ChatMessageTemplateSelector for custom templates
 
-Create a custom class that inherits from `ChatMessageTemplateSelector`, and override the `OnSelectTemplate` method to return the base template for that item.
+Create a custom class that extends `ChatMessageTemplateSelector` and override the `OnSelectTemplate` method to return either a custom template or default templates based on the message item.
 
 {% tabs %}
 {% highlight c# tabtitle="MessageTemplateSelector.cs" %}
@@ -1432,6 +1432,7 @@ The `SfChat` allows you to target and fully customize views within the chat cont
                     </Setter.Value>
                 </Setter>
             </Style>
+            ...
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -1516,6 +1517,7 @@ namespace MauiChat
                     }
                 }
             };
+            ...
 
             Resources.Add(incomingStyle);
             Resources.Add(outgoingStyle);
