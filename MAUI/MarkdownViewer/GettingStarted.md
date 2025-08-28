@@ -231,7 +231,7 @@ To display Markdown content, assign a string to the `Source` property of the SfM
     ## Header 2  
     Used to define major sections within your Markdown content.
 
-    ## Table 
+    ### Table 
 
     |              | Column 1 | Column 2 | Column 3 |
     |--------------|----------|----------|----------|
@@ -258,7 +258,7 @@ public partial class MainPage : ContentPage
             ## Header 2  
             Used to define major sections within your Markdown content.
 
-            ## Table 
+            ### Table 
 
             |              | Column 1 | Column 2 | Column 3 |
             |--------------|----------|----------|----------|
