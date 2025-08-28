@@ -50,6 +50,8 @@ this.Content = sunburst;
 
 {% endtabs %}
 
+![Child selection in MAUI Sunburst Chart.](Selection_images/maui_selection_type_child.png)
+
 The following code shows the `Group` selection type.
 
 {% tabs %}
@@ -79,6 +81,8 @@ this.Content = sunburst;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Group selection in MAUI Sunburst Chart.](Selection_images/maui_selection_type_group.png)
 
 The following code shows the `Parent` selection type.
 
@@ -110,6 +114,8 @@ this.Content = sunburst;
 
 {% endtabs %}
 
+![Parent selection in MAUI Sunburst Chart.](Selection_images/maui_selection_type_parent.png)
+
 The following code shows the `Single` selection type.
 
 {% tabs %}
@@ -140,6 +146,8 @@ this.Content = sunburst;
 
 {% endtabs %}
 
+![Single selection in MAUI Sunburst Chart.](Selection_images/maui_selection_type_single.png)
+
 ## DisplayMode
 
 The `DisplayMode` property provides the following selection options to highlight the segments:
@@ -161,7 +169,7 @@ This mode highlights the selected segment using the brush defined in the `Fill` 
 <chart:SfSunburstChart>
     . . .
     <chart:SfSunburstChart.SelectionSettings>
-        <chart:SunburstSelectionSettings Fill="Pink" DisplayMode="HighlightByBrush" Type="Child"/>
+        <chart:SunburstSelectionSettings Fill="DarkRed" DisplayMode="HighlightByBrush" Type="Child"/>
     </chart:SfSunburstChart.SelectionSettings>
 </chart:SfSunburstChart>
 
@@ -173,7 +181,7 @@ SfSunburstChart sunburstChart = new SfSunburstChart();
 . . .
 SunburstSelectionSettings selectionSettings = new SunburstSelectionSettings
 {
-    Fill = Colors.Pink,
+    Fill = Colors.DarkRed,
     DisplayMode = SunburstSelectionDisplayMode.HighlightByBrush,
     Type = SunburstSelectionType.Child,
 };
@@ -183,6 +191,8 @@ this.Content = sunburst;
 {% endhighlight %}
 
 {% endtabs %}
+
+![ DisplayMode HighlightByBrush.](Selection_images/maui_selection_highlight_by_brush.png)
 
 ### Opacity
 
@@ -218,6 +228,8 @@ this.Content = sunburst;
 
 {% endtabs %}
 
+![ DisplayMode HighlightByOpacity.](Selection_images/maui_selection_highlight_by_opacity.png)
+
 ### Stoke 
 
 This mode highlights the selected segment by applying stroke to it. The color and thickness of the stroke can be customized using the `Stroke` and `StrokeWidth` properties.
@@ -252,6 +264,8 @@ this.Content = sunburst;
 {% endhighlight %}
 
 {% endtabs %}
+
+![ DisplayMode HighlightByOpacity.](Selection_images/maui_selection_highlight_by_stroke.png)
 
 ## Events 
 
