@@ -284,7 +284,7 @@ Once the AI returns JSON, it is parsed into usable Scheduler collections for bot
 ```
 var jsonObj = JObject.Parse(returnMessage);
 
-var doctorAppointments = new Dictionary<string, (List<DateTime> StartTimes, List<DateTime> EndTimes, List<string> Subjects, List<string> Locations, List<string> ResourceIDs)>
+var doctorAppointments = new Dictionary<string, (List<DateTime> StartTimes, List<DateTime> EndTimes, List<string> Subjects, List<string> Locations, List<string> ResourceIds)>
 {
     { "Doctor1", (new List<DateTime>(), new List<DateTime>(), new List<string>(), new List<string>(), new List<string<()) },
     { "Doctor2", (new List<DateTime>(), new List<DateTime>(), new List<string>(), new List<string>(), new List<string>()) }
@@ -302,19 +302,19 @@ foreach (var doctor in doctorAppointments.Keys)
 
         doctorAppointments[doctor].Subjects.Add((string)appointment["Subject"]);
         doctorAppointments[doctor].Locations.Add((string)appointment["Location"]);
-        doctorAppointments[doctor].ResourceIDs.Add((string)appointment["ResourceID"]);
+        doctorAppointments[doctor].ResourceIds.Add((string)appointment["ResourceID"]);
     }
 }
 this.SophiaStartTimeCollection = doctorAppointments["Doctor1"].StartTimes;
 this.SophiaEndTimeCollection = doctorAppointments["Doctor1"].EndTimes;
 this.SophiaSubjectCollection = doctorAppointments["Doctor1"].Subjects;
 this.SophiaLocationCollection = doctorAppointments["Doctor1"].Locations;
-this.SophiaResourceIDCollection = doctorAppointments["Doctor1"].ResourceIDs;
+this.SophiaResourceIDCollection = doctorAppointments["Doctor1"].ResourceIds;
 this.JohnStartTimeCollection = doctorAppointments["Doctor2"].StartTimes;
 this.JohnEndTimeCollection = doctorAppointments["Doctor2"].EndTimes;
 this.JohnSubjectCollection = doctorAppointments["Doctor2"].Subjects;
 this.JohnLocationCollection = doctorAppointments["Doctor2"].Locations;
-this.JohnResourceIDCollection = doctorAppointments["Doctor2"].ResourceIDs;
+this.JohnResourceIDCollection = doctorAppointments["Doctor2"].ResourceIds;
 
 this.SophiaAvailableTimeSlots = GenerateTimeSlots(SophiaStartTimeCollection);
 this.JohnAvailableTimeSlots = GenerateTimeSlots(JohnStartTimeCollection);
@@ -335,11 +335,11 @@ The parsed results are then shown to the user in natural text format via AssistV
 ///<returns></returns>
 private string GenerateFinalTimeSlots(string userInput)
 {
-    string sophiaAvailedTimeSlots = string.Join(" \n ", this.SophiaAvailableTimeSlots);
+    string SophiaAvailedTimeSlots = string.Join(" \n ", this.SophiaAvailableTimeSlots);
     string johnAvailedTimeSlots = string.Join(" \n ", this.JohnAvailableTimeSlots);
     if (userInput.Contains("Sophia"))
     {
-        return $"Doctor Sophia available appointment slots are\n {sophiaAvailedTimeSlots} \nEnter the time (hh:mm tt) to book an appointment.";
+        return $"Doctor Sophia available appointment slots are\n {SophiaAvailedTimeSlots} \nEnter the time (hh:mm tt) to book an appointment.";
     }
     else if (userInput.Contains("John"))
     {
@@ -347,7 +347,7 @@ private string GenerateFinalTimeSlots(string userInput)
     }
     else
     {
-        return $"Doctor Sophia available appointment slots are\n {sophiaAvailedTimeSlots}\nDoctor John available appointment slots are\n {johnAvailedTimeSlots}\nEnter the time (hh:mm tt) to book an appointment.";
+        return $"Doctor Sophia available appointment slots are\n {SophiaAvailedTimeSlots}\nDoctor John available appointment slots are\n {johnAvailedTimeSlots}\nEnter the time (hh:mm tt) to book an appointment.";
     }
 }
 ```
@@ -406,12 +406,12 @@ Once the user selects or confirms a suggested slot, the AI finalizes the appoint
 ```
 private async void OnAssistViewRequest(object? sender, RequestEventArgs e)
 {
-    string requeststring = e.RequestItem.Text;
-    DateTime sophiaStartTime;
-    DateTime sophiaEndTime;
-    string sophiaSubject = string.Empty;
-    string sophiaLocation = string.Empty;
-    string sophiaResourceID = string.Empty;
+    string requestString = e.RequestItem.Text;
+    DateTime SophiaStartTime;
+    DateTime SophiaEndTime;
+    string SophiaSubject = string.Empty;
+    string SophiaLocation = string.Empty;
+    string SophiaResourceID = string.Empty;
     DateTime johnStartTime;
     DateTime johnEndTime;
     string johnSubject = string.Empty;
@@ -426,7 +426,7 @@ private async void OnAssistViewRequest(object? sender, RequestEventArgs e)
         }
 
         string pattern = @"\b\d{2}:\d{2} (AM|PM)\b";
-        bool isValidPattern = Regex.IsMatch(requeststring, pattern);
+        bool isValidPattern = Regex.IsMatch(requestString, pattern);
 
         if (!isValidPattern)
         {
@@ -436,14 +436,14 @@ private async void OnAssistViewRequest(object? sender, RequestEventArgs e)
         {
             for (int i = 0; i < this.SchedulerViewModel.SophiaAvailableTimeSlots?.Count; i++)
             {
-                if (requeststring == this.SchedulerViewModel.SophiaAvailableTimeSlots[i].ToString())
+                if (requestString == this.SchedulerViewModel.SophiaAvailableTimeSlots[i].ToString())
                 {
-                    sophiaStartTime = this.SchedulerViewModel.SophiaStartTimeCollection[i];
-                    sophiaEndTime = this.SchedulerViewModel.SophiaEndTimeCollection[i];
-                    sophiaSubject = this.SchedulerViewModel.SophiaSubjectCollection[i];
-                    sophiaLocation = this.SchedulerViewModel.SophiaLocationCollection[i];
-                    sophiaResourceID = this.SchedulerViewModel.SophiaResourceIDCollection[i];
-                    this.AppointmentBooking(sophiaStartTime, sophiaEndTime, sophiaSubject, sophiaLocation, sophiaResourceID);
+                    SophiaStartTime = this.SchedulerViewModel.SophiaStartTimeCollection[i];
+                    SophiaEndTime = this.SchedulerViewModel.SophiaEndTimeCollection[i];
+                    SophiaSubject = this.SchedulerViewModel.SophiaSubjectCollection[i];
+                    SophiaLocation = this.SchedulerViewModel.SophiaLocationCollection[i];
+                    SophiaResourceID = this.SchedulerViewModel.SophiaResourceIDCollection[i];
+                    this.AppointmentBooking(SophiaStartTime, SophiaEndTime, SophiaSubject, SophiaLocation, SophiaResourceID);
                     await Task.Delay(1000);
                     AssistItem botMessage = new AssistItem() { Text = "Doctor Sophia appointment successfully booked.\nThank you!", ShowAssistItemFooter = false };
                     this.SchedulerViewModel.Messages.Add(botMessage);
@@ -452,7 +452,7 @@ private async void OnAssistViewRequest(object? sender, RequestEventArgs e)
 
             for (int j = 0; j < this.SchedulerViewModel.JohnAvailableTimeSlots?.Count; j++)
             {
-                if (requeststring == this.SchedulerViewModel.JohnAvailableTimeSlots[j].ToString())
+                if (requestString == this.SchedulerViewModel.JohnAvailableTimeSlots[j].ToString())
                 {
                     johnStartTime = this.SchedulerViewModel.JohnStartTimeCollection[j];
                     johnEndTime = this.SchedulerViewModel.JohnEndTimeCollection[j];
