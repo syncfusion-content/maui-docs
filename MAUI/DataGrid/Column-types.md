@@ -138,7 +138,15 @@ You can customize the display of any column in the `SfDataGrid` by setting the [
 <syncfusion:SfDataGrid x:Name="dataGrid"    
                        ColumnWidthMode="Fill"                
                        ItemsSource="{Binding Orders}">
-    <syncfusion:SfDataGrid.Columns>         
+    <syncfusion:SfDataGrid.Columns>    
+        <syncfusion:DataGridNumericColumn HeaderText="Order ID" MappingName="OrderID">
+           <syncfusion:DataGridNumericColumn.CellTemplate>
+              <DataTemplate>
+                 <Label Text="{Binding OrderID}" TextColor="Red" HorizontalOptions="Center" VerticalOptions="Center"/>
+              </DataTemplate>
+           </syncfusion:DataGridNumericColumn.CellTemplate>
+        </syncfusion:DataGridNumericColumn>     
+        <syncfusion:DataGridTextColumn  HeaderText="Customer Name" MappingName="CustomerName" />
         <syncfusion:DataGridNumericColumn HeaderText="Quantity" MappingName="Quantity" Width="150">
             <syncfusion:DataGridNumericColumn.CellTemplate>
                 <DataTemplate>
@@ -198,6 +206,8 @@ In the following example, a custom DataTemplateSelector is used to apply differe
         <syncfusion:DataGridNumericColumn HeaderText="Order ID" 
                                           MappingName="OrderID" 
                                           CellTemplate="{StaticResource OrderTemplateSelector}"/>
+        <syncfusion:DataGridTextColumn HeaderText="Customer ID" MappingName="CustomerID" />
+        <syncfusion:DataGridTextColumn HeaderText="Customer Name" MappingName="CustomerName"/>                                 
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
@@ -249,6 +259,7 @@ public class CustomCellTemplateSelector : DataTemplateSelector
                                           MappingName="OrderID"
                                           SetCellBoundValue="True" 
                                           CellTemplate="{StaticResource cellTemplate}"/>
+        <syncfusion:DataGridTextColumn HeaderText="Customer ID" MappingName="CustomerID" />                                    
         <syncfusion:DataGridTextColumn HeaderText="Customer Name" 
                                        MappingName="CustomerName" 
                                        SetCellBoundValue="True" 
@@ -260,7 +271,8 @@ public class CustomCellTemplateSelector : DataTemplateSelector
 
 <img alt="CellTemplate" src="Images\column-types\maui-datagrid-CellTemplate-Reusable.png" width="404"/>
 
-N> `CellTemplate` is not supported by `DataGridCheckboxColumn`, `DataGridImageColumn` and `DataGridUnboundColumn` columns. When using complex templates, consider the impact on scrolling performance with large datasets.
+N> 
+`CellTemplate` is not supported by `DataGridCheckboxColumn`, `DataGridImageColumn` and `DataGridUnboundColumn` columns. When using complex templates, consider the impact on scrolling performance with large datasets.
 
 ### TextAlignment
 
