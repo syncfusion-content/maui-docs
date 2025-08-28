@@ -85,7 +85,7 @@ Apply the defined CSS style to the Markdown Viewer using the `CssStyleRules` pro
 
 The output below reflects the styled appearance of the Markdown content.
 
-![Overriding default styles output image](/Images/maui-maarkdown-viewer-overriding-styles.png).
+![Overriding default styles output image](Images/maui-markdown-viewer-overriding-styles.png).
 
 By defining custom styles, you can transform the Markdown Viewer into a fully branded and polished content surface that fits seamlessly into your app’s design system.
 
