@@ -9,14 +9,14 @@ documentation: ug
 
 # Empty view in .NET MAUI TreeView (SfTreeView)
 
-The `SfTreeView` control allows you to display and customize the empty view content when no data is available. The `EmptyView` property can be set to a string or a view, which will be displayed when the `ItemsSource` is null or when the collection bound to the `ItemsSource` is empty and `EmptyViewTemplate` is used to customize the appearance of `EmptyView`.
+The `SfTreeView` control allows you to display and customize the empty view content when no data is available. The `EmptyView` property can be set to either a string or a view, and it will be displayed when the `ItemsSource` is empty or null, or the `Nodes` collection is empty. `EmptyViewTemplate` is used to customize the appearance of `EmptyView`.
 
-## Display a string when treeView has no items
+## Display a string when TreeView has no items
 
-The `EmptyView` property can be set to a string.
+The `EmptyView` property in `SfTreeView` can be set to a string, which will be displayed when no items are present in the tree view.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml hl_lines="4" %}
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
   <syncfusion:SfTreeView x:Name="treeView"
                          ItemsSource="{Binding Items}"
@@ -24,14 +24,16 @@ The `EmptyView` property can be set to a string.
   </syncfusion:SfTreeView>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# hl_lines="3" %}
+SfTreeView treeView = new SfTreeView();
+treeView.ItemsSource = viewModel.Items;
 treeView.EmptyView = "No Items";
 {% endhighlight %}
 {% endtabs %}
 
-## Display views when treeView has no items
+## Display views when TreeView has no items
 
-The `EmptyView` property can be set to a view.
+The `SfTreeView` control uses the `EmptyView` property to display a custom view when the tree has no items.
 
 {% tabs %}
 {% highlight xaml hl_lines="4" %}
@@ -76,6 +78,6 @@ treeView.EmptyView = new Border
 {% endhighlight %}
 {% endtabs %}
 
-N> View displayed by the `EmptyView` can be a single view or a view that contains multiple child views.
+N> The view displayed by the `EmptyView` can be a single view or a view that includes multiple child views.
 
 ![EmptyView in .NET MAUI TreeView](images/empty-view/maui-treeview-empty-view.gif)
