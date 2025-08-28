@@ -23,35 +23,40 @@ This guide explains how to override the default styles using the [MarkdownStyleS
         <ResourceDictionary>
             <x:String x:Key="CustomStyle">
             body {
-                background: #FFFBFE;
-                font-family: 'Roboto', sans-serif;
+                background: #F5F7FA;
+                font-family: 'Segoe UI', sans-serif;
+                font-size: 16px;
+                color: #2E2E2E;
+                line-height: 1.7;
             }
-                    
+
             h1 {
-                font-family: 'Roboto', sans-serif;
                 font-weight: 700;
-                font-size: 28px;
-                line-height: 36px;
-                letter-spacing: 0px;
-                color: #1C1B1F;
+                font-size: 30px;
+                line-height: 38px;
+                letter-spacing: 0.5px;
+                color: #1E3A8A;
+                margin-bottom: 16px;
             }
 
             h2 {
-                font-family: 'Roboto', sans-serif;
-                font-weight: 700;
+                font-weight: 600;
                 font-size: 24px;
                 line-height: 32px;
-                letter-spacing: 0px;
-                color: #1C1B1F;
+                letter-spacing: 0.4px;
+                color: #3B5BAA;
+                margin-top: 24px;
+                margin-bottom: 12px;
             }
 
             h3 {
-                font-family: 'Roboto', sans-serif;
-                font-weight: 600;
-                font-size: 22px;
+                font-weight: 500;
+                font-size: 20px;
                 line-height: 28px;
-                letter-spacing: 0px;
-                color: #1C1B1F;
+                letter-spacing: 0.3px;
+                color: #6C83C1;
+                margin-top: 20px;
+                margin-bottom: 10px;
             }
             </x:String>
         </ResourceDictionary>
@@ -77,6 +82,10 @@ Apply the defined CSS style to the Markdown Viewer using the `CssStyleRules` pro
     </ContentPage>
 
 {% endhighlight %}
+
+The output below reflects the styled appearance of the Markdown content.
+
+![Overriding default styles output image](/Images/maui-maarkdown-viewer-overriding-styles.png).
 
 By defining custom styles, you can transform the Markdown Viewer into a fully branded and polished content surface that fits seamlessly into your app’s design system.
 
