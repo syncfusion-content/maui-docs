@@ -169,7 +169,7 @@ This mode highlights the selected segment using the brush defined in the `Fill` 
 <chart:SfSunburstChart>
     . . .
     <chart:SfSunburstChart.SelectionSettings>
-        <chart:SunburstSelectionSettings Fill="Pink" DisplayMode="HighlightByBrush" Type="Child"/>
+        <chart:SunburstSelectionSettings Fill="DarkRed" DisplayMode="HighlightByBrush" Type="Child"/>
     </chart:SfSunburstChart.SelectionSettings>
 </chart:SfSunburstChart>
 
@@ -181,7 +181,7 @@ SfSunburstChart sunburstChart = new SfSunburstChart();
 . . .
 SunburstSelectionSettings selectionSettings = new SunburstSelectionSettings
 {
-    Fill = Colors.Pink,
+    Fill = Colors.DarkRed,
     DisplayMode = SunburstSelectionDisplayMode.HighlightByBrush,
     Type = SunburstSelectionType.Child,
 };
