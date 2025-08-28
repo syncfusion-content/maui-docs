@@ -13,12 +13,13 @@ The [SfMarkdownViewer]() control in .NET MAUI comes with a set of built-in defau
 
 This guide explains how to override the default styles using the [MarkdownStyleSettings]() class and the [CssStyleRules]() property.
 
-### Define Styles in XAML
+### Defining Styles
+
+**XAML**
 
 {% highlight xaml %}
 
     <ContentPage.Resources>
-
         <ResourceDictionary>
             <x:String x:Key="CustomStyle">
             body {
@@ -54,10 +55,11 @@ This guide explains how to override the default styles using the [MarkdownStyleS
             }
             </x:String>
         </ResourceDictionary>
-
     </ContentPage.Resources>
 
 {% endhighlight %}
+
+Apply the defined CSS style to the Markdown Viewer using the `CssStyleRules` property, as shown in the XAML code below:
 
 {% highlight xaml %}
 
@@ -76,6 +78,6 @@ This guide explains how to override the default styles using the [MarkdownStyleS
 
 {% endhighlight %}
 
-By defining custom styles, you can transform the Markdown viewer into a fully branded and polished content surface that fits seamlessly into your app’s design system.
+By defining custom styles, you can transform the Markdown Viewer into a fully branded and polished content surface that fits seamlessly into your app’s design system.
 
 N> Apply CSS styles only when necessary as they will override the properties of individual Markdown elements such as `H1FontSize`, `H1Color`, `BodyTextColor`, `TableHeaderFontSize`, etc., defined in the [MarkdownStyleSettings]() class.

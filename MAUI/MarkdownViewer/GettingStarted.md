@@ -77,14 +77,14 @@ namespace MarkdownViewerGettingStarted
 
 {% highlight xaml %}
 
-    <ContentPage
-        . . .    
-        xmlns:markdown="clr-namespace:Syncfusion.Maui.MarkdownViewer;
-        assembly=Syncfusion.Maui.MarkdownViewer">
+<ContentPage
+    . . .    
+    xmlns:markdown="clr-namespace:Syncfusion.Maui.MarkdownViewer;
+    assembly=Syncfusion.Maui.MarkdownViewer">
+
+    <markdown:SfMarkdownViewer />
     
-        <markdown:SfMarkdownViewer />
-        
-    </ContentPage>
+</ContentPage>
  
 {% endhighlight %}
 
@@ -92,22 +92,21 @@ namespace MarkdownViewerGettingStarted
 
 using Syncfusion.Maui.MarkdownViewer;
 
-    namespace MarkdownViewerGettingStarted
+namespace MarkdownViewerGettingStarted
+{
+    public partial class MainPage : ContentPage
     {
-        public partial class MainPage : ContentPage
+        public MainPage()
         {
-            public MainPage()
-            {
-                InitializeComponent();  
-                SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
-                Content = markdownViewer;       
-            }
-        }   
-    }
+            InitializeComponent();  
+            SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
+            Content = markdownViewer;       
+        }
+    }   
+}
 
 {% endhighlight %}
 {% endtabs %}
-
 {% endtabcontent %}
 
 {% tabcontent Visual Studio Code %}
@@ -178,36 +177,39 @@ namespace MarkdownViewerSample
 {% tabs %} 
 {% highlight xaml %}
 
-    <ContentPage
-        . . .    
-        xmlns:markdown="clr-namespace:Syncfusion.Maui.MarkdownViewer;
-        assembly=Syncfusion.Maui.MarkdownViewer">
-    
-        <markdown:SfMarkdownViewer />
+<ContentPage
+    . . .    
+    xmlns:markdown="clr-namespace:Syncfusion.Maui.MarkdownViewer;
+    assembly=Syncfusion.Maui.MarkdownViewer">
 
-    </ContentPage>
+    <markdown:SfMarkdownViewer />
+
+</ContentPage>
  
 {% endhighlight %}
 
 {% highlight C# %}
 
-    using Syncfusion.Maui.MarkdownViewer;
+using Syncfusion.Maui.MarkdownViewer;
 
-    namespace MarkdownViewerGettingStarted
+namespace MarkdownViewerGettingStarted
+{
+    public partial class MainPage : ContentPage
     {
-        public partial class MainPage : ContentPage
+        public MainPage()
         {
-            public MainPage()
-            {
-                InitializeComponent();  
-                SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
-                Content = markdownViewer;    
-            }
-        }   
-    }
+            InitializeComponent();  
+            SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
+            Content = markdownViewer;    
+        }
+    }   
+}
 
 {% endhighlight %}
 {% endtabs %}
+
+{% endtabcontent %}
+{% endtabcontents %}
 
 ## Step 5: Add Source to the SfMarkdownViewer
 
@@ -216,38 +218,12 @@ To display Markdown content, assign a string to the `Source` property of the SfM
 {% tabs %} 
 {% highlight xaml %}
 
-    <markdown:SfMarkdownViewer>
-        <markdown:SfMarkdownViewer.Source>
-            <x:String>
-                <![CDATA[
-                                # What is Markdown Viewer?  
-        Markdown View is a UI control in .NET MAUI that allows developers to render Markdown content with full formatting support. It is designed to work efficiently across both mobile and desktop platforms. The viewer supports headings, bold and italic text, lists, tables, images, code blocks, etc.
-
-        # Header 1  
-        Used for the main title or top-level heading in a Markdown document. 
-
-        ## Header 2  
-        Used to define major sections within your Markdown content.
-
-        ## Table 
-
-        |              | Column 1 | Column 2 | Column 3 |
-        |--------------|----------|----------|----------|
-        | Row 1        | Content  | Content  | Content  |
-        | Row 2        | Content  | Content  | Content  |
-        | Row 3        | Content  | Content  | Content  |
-                ]]>
-            </x:String>
-        </markdown:SfMarkdownViewer.Source>
-    </markdown:SfMarkdownViewer>
-{% endhighlight %}
-
-{% highlight C# %}
-
-    public partial class MainPage : ContentPage
-    {
-            private const string markdownContent = @"# What is Markdown Viewer?  
-    Markdown View is a UI control in .NET MAUI that allows developers to render Markdown content with full formatting support. It is designed to work efficiently across both mobile and desktop platforms. The viewer supports headings, bold and italic text, lists, tables, images, code blocks, etc.
+<markdown:SfMarkdownViewer>
+    <markdown:SfMarkdownViewer.Source>
+        <x:String>
+            <![CDATA[
+    # What is the Markdown Viewer?  
+    The Markdown Viewer is a UI control in .NET MAUI that allows developers to render Markdown content with full formatting support. It was designed to work efficiently on both mobile and desktop platforms. The viewer supports headings, bold and italic text, lists, tables, images, code blocks and more.
 
     # Header 1  
     Used for the main title or top-level heading in a Markdown document. 
@@ -261,25 +237,49 @@ To display Markdown content, assign a string to the `Source` property of the SfM
     |--------------|----------|----------|----------|
     | Row 1        | Content  | Content  | Content  |
     | Row 2        | Content  | Content  | Content  |
-    | Row 3        | Content  | Content  | Content  |";
+    | Row 3        | Content  | Content  | Content  |
+            ]]>
+        </x:String>
+    </markdown:SfMarkdownViewer.Source>
+</markdown:SfMarkdownViewer>
 
-        public MainPage()
-        {
-            InitializeComponent();  
-            SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
-            markdownViewer.Source = markdownContent;
-            Content = markdownViewer;       
-        }
-    }  
+{% endhighlight %}
+
+{% highlight C# %}
+
+public partial class MainPage : ContentPage
+{
+        private const string markdownContent = @"# What is the Markdown Viewer?  
+            The Markdown Viewer is a UI control in .NET MAUI that allows developers to render Markdown content with full formatting support. It was designed to work efficiently on both mobile and desktop platforms. The viewer supports headings, bold and italic text, lists, tables, images, code blocks and more.
+
+            # Header 1  
+            Used for the main title or top-level heading in a Markdown document. 
+
+            ## Header 2  
+            Used to define major sections within your Markdown content.
+
+            ## Table 
+
+            |              | Column 1 | Column 2 | Column 3 |
+            |--------------|----------|----------|----------|
+            | Row 1        | Content  | Content  | Content  |
+            | Row 2        | Content  | Content  | Content  |
+            | Row 3        | Content  | Content  | Content  |";
+
+    public MainPage()
+    {
+        InitializeComponent();  
+        SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
+        markdownViewer.Source = markdownContent;
+        Content = markdownViewer;       
+    }
+}  
 
 {% endhighlight %}
 {% endtabs %}
 
 N> For more details about binding Markdown content from various sources, refer to [MarkdownSources](/MarkdownSources.md).
 
-{% endtabcontent %}
-{% endtabcontents %}
-
 ![Output of Markdown Viewer](Images/maui-markdown-viewer-gettingstarted.png)
 
-You can access a complete getting started sample from this [link.]()
+You can access a complete getting started sample [here](https://github.com/SyncfusionExamples/.NET_MAUI_Markdown_Viewer_GettingStarted).
