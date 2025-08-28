@@ -282,4 +282,4 @@ N> For more details about binding Markdown content from various sources, refer t
 
 ![Output of Markdown Viewer](Images/maui-markdown-viewer-gettingstarted.png)
 
-You can access a complete getting started sample [here](https://github.com/SyncfusionExamples/.NET_MAUI_Markdown_Viewer_GettingStarted).
+You can access a complete getting started sample [here]().
