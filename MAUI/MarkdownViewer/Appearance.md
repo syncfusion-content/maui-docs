@@ -29,21 +29,15 @@ The [SfMarkdownViewer]() control in .NET MAUI provides a powerful styling system
 
 The appearance of headings and body content in SfMarkdownViewer can be customized using the MarkdownStyleSettings class.
 
-[H1FontSize](), [H2FontSize](), [H3FontSize]() – Gets or sets the font size for H1, H2, and H3 heading elements respectively.  
+- [H1FontSize](), [H2FontSize](), [H3FontSize]() – Gets or sets the font size for H1, H2, and H3 heading elements respectively.  
+- [H1Color](), [H2Color](), [H3Color]() – Gets or sets the text color for H1, H2, and H3 heading elements respectively.  
+- [BodyFontSize]() – Gets or sets the font size for regular paragraph text. 
 
-[H1Color](), [H2Color](), [H3Color]() – Gets or sets the text color for H1, H2, and H3 heading elements respectively.  
-
-[BodyFontSize]() – Gets or sets the font size for regular paragraph text. 
-
-[BodyTextColor]() – Gets or sets the text color for body content.  
-
-[TableHeaderFontSize](), [TableDataFontSize]() – Gets or sets the font size for table headers and table content respectively.  
-
-[TableHeaderTextColor](), [TableDataTextColor]() – Gets or sets the text color for table headers and table content respectively.  
-
-[TableBackground]() – Gets or sets the background color for the entire table area.
-
-[CssStyleRules]() – Gets or sets raw CSS styles to override or extend default Markdown rendering behavior.
+- [BodyTextColor]() – Gets or sets the text color for body content.  
+- [TableHeaderFontSize](), [TableDataFontSize]() – Gets or sets the font size for table headers and table content respectively.  
+- [TableHeaderTextColor](), [TableDataTextColor]() – Gets or sets the text color for table headers and table content respectively.  
+- [TableBackground]() – Gets or sets the background color for the entire table area.
+- [CssStyleRules]() – Gets or sets raw CSS styles to override or extend default Markdown rendering behavior.
 
 {% tabs %} 
 {% highlight xaml %}
@@ -99,6 +93,8 @@ The appearance of headings and body content in SfMarkdownViewer can be customize
 {% endhighlight %}
 {% endtabs %} 
 
+The following output shows how these style settings enhance the appearance of rendered Markdown content:
+
 ![Sample markdown content appearance customization](images/maui-markdown-viewer-appearance.png)
 
-With [MarkdownStyleSettings](), you gain full control over how Markdown content looks in your .NET MAUI app—whether you're building a documentation viewer, a note-taking app, or a styled content portal.
+With [MarkdownStyleSettings](), you gain full control over how Markdown content looks in your .NET MAUI app, whether you're building a documentation viewer, a note-taking app, or a styled content portal.
