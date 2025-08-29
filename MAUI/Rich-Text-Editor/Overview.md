@@ -11,7 +11,7 @@ documentation: ug
 
 The .NET MAUI Rich Text Editor provides a simple yet powerful editor interface to compose richly formatted text with all the common formatting options like bold and italics. The Rich Text Editor is used to create messaging applications, email composers, blog editors, forum post text boxes, feedback and review sections, notes sections, and more. It has a variety of tools to edit and format rich content and returns valid HTML markup content.
 
-![RichTextEditor Overview Gif](images/rich-text-editor-overview.gif)
+![RichTextEditor Overview Image](images/rich-text-editor-overview.png)
 
 ## Key features
 
