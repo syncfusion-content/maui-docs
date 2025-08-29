@@ -79,3 +79,63 @@ treeView.EmptyView = new Border
 N> The view displayed by the `EmptyView` can be a single view or a view that includes multiple child views.
 
 ![EmptyView in .NET MAUI TreeView](images/empty-view/maui-treeview-empty-view.gif)
+
+## Empty view customization
+
+The `SfTreeView` control allows you to fully customize the empty view appearance by using the `EmptyViewTemplate` property. This property lets you define a custom view and style for the `EmptyView`.
+
+{% tabs %}
+{% highlight xaml hl_lines="11" %}
+<SearchBar x:Name="filterText"
+           Placeholder="Search here"
+           TextChanged="filterText_TextChanged" />
+<syncfusion:SfTreeView x:Name="treeView"
+                       ItemsSource="{Binding FilteredFolders}"
+                       AutoExpandMode="AllNodesExpanded"
+                       NotificationSubscriptionMode="CollectionChange">
+      <syncfusion:SfTreeView.EmptyView>
+            <local:FilterItem Filter="{Binding Source={x:Reference filterText},Path=Text}" />
+      </syncfusion:SfTreeView.EmptyView>
+      <syncfusion:SfTreeView.EmptyViewTemplate>
+            <DataTemplate>
+               <Border>
+                     ....
+               </Border>
+            </DataTemplate>
+      </syncfusion:SfTreeView.EmptyViewTemplate>
+</syncfusion:SfTreeView>
+
+{% endhighlight %}
+{% highlight c# hl_lines="22" %}
+
+SearchBar filterText = new SearchBar
+{
+    Placeholder = "Search here"
+};
+filterText.TextChanged += FilterText_TextChanged;
+
+SfTreeView treeView = new SfTreeView
+{
+    AutoExpandMode = AutoExpandMode.AllNodesExpanded,
+    NotificationSubscriptionMode = NotificationSubscriptionMode.CollectionChange
+};
+treeView.ItemsSource = viewModel.FilteredFolders;
+
+var filterItem = new FilterItem
+{
+    BindingContext = filterText
+};
+filterItem.SetBinding(FilterItem.FilterProperty, "Text");
+
+treeView.EmptyView = filterItem;
+
+treeView.EmptyViewTemplate = new DataTemplate(() =>
+{
+    return new Border
+    {
+       ...
+    };
+});
+
+{% endhighlight %}
+{% endtabs %}
