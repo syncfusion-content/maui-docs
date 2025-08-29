@@ -55,7 +55,7 @@ The records can be filtered based on any of the following conditions:
 * Does not equal
 * Contains
 
-The above mentioned conditions are the mostly used conditions. Add new conditions and alter the following code samples based on your requiremen
+The above mentioned conditions are the mostly used conditions. Add new conditions and alter the following code samples based on your requirement.
 
 {% tabs %}
 {% highlight c# %}

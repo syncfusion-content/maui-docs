@@ -19,7 +19,10 @@ The default elements of a card can be customized using the below properties of [
 * [`Tags`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html#Syncfusion_Maui_Kanban_KanbanModel_Tags) - Used to specify the tags of a card. The tags will be displayed at bottom in default card template.
 * [`ID`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html#Syncfusion_Maui_Kanban_KanbanModel_ID) - Used to set the ID of a card.
 
-N> The image URL can be set in two ways: using an assembly reference or a local assembly. Ensure that the image is stored in the `Resources/Images` folder for assembly references.
+N> 
+* The image URL can be set in two ways: using an assembly reference or a local assembly. Ensure that the image is stored in the `Resources/Images` folder for assembly references.
+* When a custom data model is assigned to the [`ItemsSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ItemsSource) property of the [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) control, each card's `BindingContext` is set to an instance of that model. Therefore, bindings within the [`CardTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_CardTemplate) must directly reference the properties defined in the custom model.
+* The default card UI is not applicable when using a custom data model. To render the card content correctly, you must define a custom `DataTemplate` using the [`CardTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_CardTemplate) property.
 
 {% highlight C# %}
 
@@ -214,3 +217,5 @@ kanban.CardTemplate = new KanbanTemplateSelector();
 {% endhighlight %}
 
 {% endtabs %}
+
+N> When using a custom data model, the default card UI is not applicable. To render the card content, you must define a custom `DataTemplate` using the [`CardTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_CardTemplate) property.

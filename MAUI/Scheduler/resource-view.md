@@ -184,7 +184,7 @@ The number of resources shown in the day, week, and work week views can be contr
 </schedule:SfScheduler.ResourceView>
 </schedule:SfScheduler>
 {% endhighlight %}
-{% highlight tabtitle="MainPage.xaml.cs" C# hl_lines="12" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12" %}
 var Resources = new ObservableCollection<SchedulerResource>()
 {
     new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.LightGreen, Id = "1000" },
