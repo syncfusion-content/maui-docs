@@ -23,7 +23,7 @@ N> * The image URL can be set in two ways: using an assembly reference or a loca
 
 N> * When a custom data model is assigned to the [`ItemsSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ItemsSource) property of the [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) control, each card's `BindingContext` is set to an instance of that model. Therefore, bindings within the [`CardTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_CardTemplate) must directly reference the properties defined in the custom model.
 
-N> * The default card UI is not applicable when using a custom model. To render the card content correctly, you must define a custom `DataTemplate` using the [`CardTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_CardTemplate) property.
+N> * The default card UI is not applicable when using a custom data model. To render the card content correctly, you must define a custom `DataTemplate` using the [`CardTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_CardTemplate) property.
 
 {% highlight C# %}
 
@@ -219,4 +219,4 @@ kanban.CardTemplate = new KanbanTemplateSelector();
 
 {% endtabs %}
 
-N> When using a custom model, the default card UI is not applied. You must define a custom `DataTemplate` via the the [`CardTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_CardTemplate) property to render the card content.
+N> When using a custom data model, the default card UI is not applicable. To render the card content, you must define a custom `DataTemplate` using the [`CardTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_CardTemplate) property. 
