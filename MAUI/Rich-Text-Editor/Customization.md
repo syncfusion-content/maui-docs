@@ -75,7 +75,7 @@ You can customize the visual style of the toolbar using the `Toolbar` property. 
 <rte:SfRichTextEditor ShowToolbar="True">
     <rte:SfRichTextEditor.ToolbarSettings>
         <rte:RichTextEditorToolbarSettings BackgroundColor="LightSteelBlue"
-                                   TextColor="DarkSlateGray" IsScrollButtonVisible="True"="True"/>
+                                   TextColor="DarkSlateGray" IsScrollButtonVisible="True"/>
     </rte:SfRichTextEditor.ToolbarSettings>
 </rte:SfRichTextEditor>
 

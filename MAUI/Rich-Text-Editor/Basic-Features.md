@@ -72,20 +72,20 @@ The editor can display a placeholder text when the content is empty. This is use
 
 {% highlight xaml %}
 
-<rte:SfRichTextEditor Placeholder="Enter your content here..." />
+<rte:SfRichTextEditor Placeholder="Type Here..." />
 
 {% endhighlight %}
 
 {% highlight c# %}
 
 SfRichTextEditor richTextEditor = new SfRichTextEditor();
-richTextEditor.Placeholder = "Enter your content here...";
+richTextEditor.Placeholder = "Type Here...";
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![.NET MAUI Rich Text Editor with Placeholder](images/richtexteditor-image.png)
+![.NET MAUI Rich Text Editor with Placeholder](images/richtexteditor-placeholder.png)
 
 
 ## Events
