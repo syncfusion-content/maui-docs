@@ -16,8 +16,7 @@ The `SfTreeView` control allows you to display and customize the empty view cont
 The `EmptyView` property in `SfTreeView` can be set to a string, which will be displayed when no items are present in the tree view.
 
 {% tabs %}
-{% highlight xaml hl_lines="4" %}
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
+{% highlight xaml hl_lines="3" %}
   <syncfusion:SfTreeView x:Name="treeView"
                          ItemsSource="{Binding Items}"
                          EmptyView="No Items">
@@ -36,8 +35,7 @@ treeView.EmptyView = "No Items";
 The `SfTreeView` control uses the `EmptyView` property to display a custom view when the tree has no items.
 
 {% tabs %}
-{% highlight xaml hl_lines="4" %}
-<ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView">
+{% highlight xaml hl_lines="3" %}
   <syncfusion:SfTreeView x:Name="treeView"
                          ItemsSource="{Binding Items}">
     <syncfusion:SfTreeView.EmptyView>
