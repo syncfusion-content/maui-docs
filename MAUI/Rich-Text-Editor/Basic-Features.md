@@ -90,31 +90,6 @@ richTextEditor.Placeholder = "Type Here...";
 
 ## Events
 
-### TextChanged Event
-
-The `TextChanged` event is fired whenever the content in the editor is changed. The event arguments provide the old and new HTML content.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<rte:SfRichTextEditor TextChanged="OnTextChanged" />
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-private void OnTextChanged(object sender, RichTextEditorTextChangedEventArgs e)
-{
-    string oldHtml = e.OldValue;
-    string newHtml = e.NewValue;
-    // Logic to execute when the Text changes.
-}
-
-{% endhighlight %}
-
-{% endtabs %}
-
 ### FormatChanged Event
 
 The `FormatChanged` event is Occurs when the formatting status changes. This is useful for implementing contextual formatting options.
@@ -131,7 +106,7 @@ The `FormatChanged` event is Occurs when the formatting status changes. This is 
 
 private void OnFormatChanged(object sender, RichTextEditorFormatChangedEventArgs e)
 {
-    // Logic to execute when the Format changes.
+    // Handle when format changed
 }
 
 {% endhighlight %}
@@ -161,26 +136,75 @@ private void OnHyperlinkClicked(object sender, RichTextEditorHyperlinkClickedEve
 {
     string url =  e.URL;
     string text = e.DisplayText;
-    // You can handle the navigation here, for example:
+    // Handle when hyperlink clicked
 }
 
 {% endhighlight %}
 
 {% endtabs %}
 
-## Focus Management
+### TextChanged Event
 
-You can programmatically set or remove focus from the editor control using the `Focus()` and `Unfocus()` methods.
+The `TextChanged` event is fired whenever the content in the editor is changed. The event arguments provide the old and new HTML content.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight xaml %}
 
-// To set focus on the Rich Text Editor
-richTextEditor.Focus();
+<rte:SfRichTextEditor TextChanged="OnTextChanged" />
 
-// To remove focus from the Rich Text Editor
-richTextEditor.Unfocus();
+{% endhighlight %}
 
+{% highlight c# %}
+
+private void OnTextChanged(object sender, RichTextEditorTextChangedEventArgs e)
+{
+    string oldHtml = e.OldValue;
+    string newHtml = e.NewValue;
+    // Handle when Text changed
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+
+### Focused Event
+
+The `Focused` event occurs when the Rich Text Editor receives input focus.
+
+{% tabs %}
+
+{% highlight xaml %}
+<rte:SfRichTextEditor Focused="OnEditorFocused" />
+{% endhighlight %}
+
+{% highlight c# %}
+richTextEditor.Focused += OnEditorFocused;
+
+private void OnEditorFocused(object sender, EventArgs e)
+{
+    // Handle when editor focused
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Unfocused Event
+
+The `Unfocused` event occurs when the Rich Text Editor loses input focus.
+
+{% tabs %}
+
+{% highlight xaml %}
+<rte:SfRichTextEditor Unfocused="OnEditorUnfocused" />
+{% endhighlight %}
+
+{% highlight c# %}
+richTextEditor.Unfocused += OnEditorUnfocused;
+
+private void OnEditorUnfocused(object sender, EventArgs e)
+{
+    // Handle when editor loses focus
+}
 {% endhighlight %}
 {% endtabs %}
