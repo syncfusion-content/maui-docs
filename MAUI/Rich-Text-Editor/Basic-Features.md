@@ -87,7 +87,7 @@ richTextEditor.DefaultTextColor = Colors.DarkGreen;
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Rich Text Editor with Placeholder](images/richtexteditor-text.png)
+![.NET MAUI Rich Text Editor with Default text style](images/richtexteditor-text.png)
 
 
 ## Placeholder

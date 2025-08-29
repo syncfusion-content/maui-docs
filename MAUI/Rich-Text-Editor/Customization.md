@@ -79,11 +79,11 @@ You can customize the visual style of the toolbar using the `Toolbar` property. 
 
 <rte:SfRichTextEditor ShowToolbar="True">
     <rte:SfRichTextEditor.ToolbarSettings>
-        <rte:RichTextEditorToolbarSettings BackgroundColor="LightSteelBlue"
-                                   TextColor="DarkSlateGray" IsScrollButtonVisible="True"
+        <rte:RichTextEditorToolbarSettings BackgroundColor="SkyBlue"
+                                   TextColor="Orange" IsScrollButtonVisible="True"
                                    SeparatorColor="Brown" SeparatorThickness="5"
                                    ForwardIconBackground="Blue" ForwardIconColor="Green"
-                                   BackwardIconBackground="Green" BackwardIconColor="Yellow"/>
+                                   BackwardIconBackground="Yellow" BackwardIconColor="Green"/>
     </rte:SfRichTextEditor.ToolbarSettings>
 </rte:SfRichTextEditor>
 
@@ -101,12 +101,15 @@ richTextEditor.ToolbarSettings = new RichTextEditorToolbarSettings
     SeparatorThickness = 5,
     ForwardIconBackground = Colors.Blue,
     ForwardIconColor = Colors.Green,
-    BackwardIconBackground = Colors.Green,
-    BackwardIconColor = Colors.Yellow
+    BackwardIconBackground = Colors.Yellow,
+    BackwardIconColor = Colors.Green
 };
 
 {% endhighlight %}
 {% endtabs %}
+
+![.NET MAUI Rich Text Editor with Toolbar settings](images/richtexteditor-toolbar-settings.png)
+
 
 ### Customize Toolbar Position
 
@@ -140,7 +143,7 @@ The `SfRichTextEditor` provides several properties to customize the appearance o
 {% highlight xaml %}
 
 <rte:SfRichTextEditor EditorBackgroundColor="LightYellow"
-                      BorderColor="Gray"
+                      BorderColor="SlateGray"
                       BorderThickness="2"
                       EnableWordWrap="True" />
 
@@ -149,12 +152,15 @@ The `SfRichTextEditor` provides several properties to customize the appearance o
 
 SfRichTextEditor richTextEditor = new SfRichTextEditor();
 richTextEditor.EditorBackgroundColor = Colors.LightYellow;
-richTextEditor.BorderColor = Colors.Gray;
+richTextEditor.BorderColor = Colors.SlateGray;
 richTextEditor.BorderThickness = 2;
 richTextEditor.EnableWordWrap = true;
 
 {% endhighlight %}
 {% endtabs %}
+
+![.NET MAUI Customizing Rich Text Editor](images/richtexteditor-custom-editor.png)
+
 
 ## Programmatic Formatting
 
