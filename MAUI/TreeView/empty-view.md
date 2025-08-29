@@ -32,7 +32,7 @@ treeView.EmptyView = "No Items";
 
 ## Display views when TreeView has no items
 
-The `SfTreeView` control uses the `EmptyView` property to display a custom view when the tree has no items.
+The `SfTreeView` control uses the `EmptyView` property to display a custom view when the tree view has no items.
 
 {% tabs %}
 {% highlight xaml hl_lines="3" %}
