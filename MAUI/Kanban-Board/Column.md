@@ -317,7 +317,7 @@ kanban.ItemsSource = viewModel.Cards;
 kanban.Columns.Add(new KanbanColumn
 {
     Title = "To Do",
-    Categories = new List<object> { "object", "Postponed" },
+    Categories = new List<object> { "Open", "Postponed" },
     Background = Color.FromArgb("#D6EAF5")
 });
 
@@ -801,7 +801,7 @@ KanbanPlaceholderStyle placeholderStyle = new KanbanPlaceholderStyle
 kanban.Columns.Add(new KanbanColumn
 {
     Title = "To Do",
-    Categories = new List<object> { "object", "Postponed" },
+    Categories = new List<object> { "Open", "Postponed" },
     Background = Color.FromArgb("#D6EAF5"),
 	PlaceholderStyle = placeholderStyle
 });
