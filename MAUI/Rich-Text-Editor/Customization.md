@@ -82,8 +82,8 @@ You can customize the visual style of the toolbar using the `Toolbar` property. 
         <rte:RichTextEditorToolbarSettings BackgroundColor="LightSteelBlue"
                                    TextColor="DarkSlateGray" IsScrollButtonVisible="True"
                                    SeparatorColor="Brown" SeparatorThickness="5"
-                                    ForwardIconBackground="Blue" ForwardIconColor="Green"
-                                    BackwardIconBackground="Green" BackwardIconColor="Yellow"/>
+                                   ForwardIconBackground="Blue" ForwardIconColor="Green"
+                                   BackwardIconBackground="Green" BackwardIconColor="Yellow"/>
     </rte:SfRichTextEditor.ToolbarSettings>
 </rte:SfRichTextEditor>
 
@@ -308,62 +308,4 @@ richTextEditor.RemoveHyperlink("Syncfusion", "https://www.google.com/");
 {% endhighlight %}
 {% endtabs %}
 
-
-## Controlling Default Text Style
-
-You can define the default appearance for any new text typed into the editor. These settings apply to text that does not have any other specific formatting applied.
-
-*   `DefaultFontFamily`: Sets the default font family for the content.
-*   `DefaultFontSize`: Sets the default font size.
-*   `DefaultTextColor`: Sets the default color of the text.
-
-{% tabs %}
-{% highlight xaml %}
-
-<rte:SfRichTextEditor DefaultFontFamily="Impact"
-                      DefaultFontSize="20"
-                      DefaultTextColor="DarkGreen" />
-
-{% endhighlight %}
-{% highlight c# %}
-
-SfRichTextEditor richTextEditor = new SfRichTextEditor();
-richTextEditor.DefaultFontFamily = "Impact";
-richTextEditor.DefaultFontSize = 20;
-richTextEditor.DefaultTextColor = Colors.DarkGreen;
-
-{% endhighlight %}
-{% endtabs %}
-
-## Customizing the Placeholder
-
-The editor can display placeholder text when its content is empty. You can customize both the text and its appearance.
-
-*   `Placeholder`: Sets the text shown when the editor is empty.
-*   `PlaceholderFontFamily`: Sets the font family of the placeholder text.
-*   `PlaceholderFontSize`: Sets the font size of the placeholder text.
-*   `PlaceholderColor`: Sets the color of the placeholder text.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<rte:SfRichTextEditor Placeholder="Type your content here..."
-                      PlaceholderFontFamily="Impact"
-                      PlaceholderFontSize="36"
-                      PlaceholderColor="Green">
-</rte:SfRichTextEditor>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-SfRichTextEditor richTextEditor = new SfRichTextEditor();
-richTextEditor.Placeholder = "Type your content here...";
-richTextEditor.PlaceholderFontFamily = "Impact";
-richTextEditor.PlaceholderFontSize = 16;
-richTextEditor.PlaceholderColor = Colors.Green;
-
-{% endhighlight %}
-{% endtabs %}
 

@@ -11,46 +11,43 @@ documentation: ug
 
 This section covers the essential properties, methods, and events of the .NET MAUI `SfRichTextEditor` for handling content and user interactions.
 
-## Handling Content
+## Setting Text
 
-### Setting and Getting HTML Content
+The Rich Text Editor control displays the text/formatted text(HTML string) that can be set using the `Text` property.
 
-The rich content of the editor, including all formatting, is accessible through the `Text` property. You can use this property to both load and retrieve the content as an HTML string.
+{% tabs %} 
 
-{% tabs %}
+{% highlight xaml %} 
 
-{% highlight xaml %}
-
-<rte:SfRichTextEditor Text="The Syncfusion .NET MAUI Rich Text Editor is a WYSIWYG editor for creating and editing rich text content." />
+ <richtexteditor:SfRichTextEditor Text= "The &lt;b&gt; rich text editor &lt;/b&gt; component is WYSIWYG editor that provides the best user experience to create and update the content" />
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight C# %} 
 
 SfRichTextEditor richTextEditor = new SfRichTextEditor();
-richTextEditor.Text = "The Syncfusion .NET MAUI Rich Text Editor is a WYSIWYG editor for creating and editing rich text content.";
-this.Content = richTextEditor;
+richtexteditor.Text = "The <b>rich text editor</b> component is WYSIWYG editor that provides the best user experience to create and update the content";
 
 {% endhighlight %}
 
 {% endtabs %}
 
-### Getting HTML Content Asynchronously
+## Retrieving HTML text
 
-To ensure you get the most up-to-date content, especially after recent edits, you can retrieve the HTML string asynchronously using the `GetHtmlString` method.
+The formatted text of Rich Text Editor can be retrieved using the `HtmlText` property of `SfRichTextEditor`.
 
-{% tabs %}
+{% tabs %} 
 
-{% highlight c# %}
+{% highlight C# %} 
 
-string htmlContent = await rte.GetHtmlText();
+string HTMLText = richtexteditor.HtmlText;
 
 {% endhighlight %}
 
 {% endtabs %}
 
 
-### Getting Selected HTML
+## Getting Selected HTML
 
 To retrieve the HTML representation of the currently selected content, use the `GetSelectedText` method.
 
@@ -64,29 +61,186 @@ string selectedText = await rte.GetSelectedText();
 
 {% endtabs %}
 
+## Default Text Style
+
+You can define the default appearance for any new text typed into the editor. These settings apply to text that does not have any other specific formatting applied.
+
+*   `DefaultFontFamily`: Sets the default font family for the content.
+*   `DefaultFontSize`: Sets the default font size.
+*   `DefaultTextColor`: Sets the default color of the text.
+
+{% tabs %}
+{% highlight xaml %}
+
+<rte:SfRichTextEditor DefaultFontFamily="Impact"
+                      DefaultFontSize="14"
+                      DefaultTextColor="DarkGreen" />
+
+{% endhighlight %}
+{% highlight c# %}
+
+SfRichTextEditor richTextEditor = new SfRichTextEditor();
+richTextEditor.DefaultFontFamily = "Impact";
+richTextEditor.DefaultFontSize = 14;
+richTextEditor.DefaultTextColor = Colors.DarkGreen;
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI Rich Text Editor with Placeholder](images/richtexteditor-text.png)
+
+
 ## Placeholder
 
-The editor can display a placeholder text when the content is empty. This is useful for prompting the user. The placeholder is cleared as soon as the user starts typing.
+The editor can display a `placeholder` text when the content is empty. This is useful for prompting the user. The placeholder is cleared as soon as the user starts typing.
+
+*   `PlaceholderFontFamily`: Sets the font family of the placeholder text.
+*   `PlaceholderFontSize`: Sets the font size of the placeholder text.
+*   `PlaceholderColor`: Sets the color of the placeholder text.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<rte:SfRichTextEditor Placeholder="Type Here..." />
+<rte:SfRichTextEditor Placeholder="Type your content here..."
+                      PlaceholderFontFamily="Impact"
+                      PlaceholderFontSize="24"
+                      PlaceholderColor="Green">
+</rte:SfRichTextEditor>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
 SfRichTextEditor richTextEditor = new SfRichTextEditor();
-richTextEditor.Placeholder = "Type Here...";
+richTextEditor.Placeholder = "Type your content here...";
+richTextEditor.PlaceholderFontFamily = "Impact";
+richTextEditor.PlaceholderFontSize = 24;
+richTextEditor.PlaceholderColor = Colors.Green;
+
+{% endhighlight %}
+{% endtabs %}
+
+![.NET MAUI Rich Text Editor with Placeholder](images/richtexteditor-placeholder.png)
+
+
+
+## Programmatic Control
+
+The `SfRichTextEditor` provides several methods to programmatically control its behavior, such as managing focus, history, and cursor position.
+
+### Move Cursor to Start
+
+Moves the cursor to the very beginning of the content in the editor.
+
+{% tabs %}
+
+{% highlight c# %}
+
+richTextEditor.MoveCursorToStart();
 
 {% endhighlight %}
 
 {% endtabs %}
 
-![.NET MAUI Rich Text Editor with Placeholder](images/richtexteditor-placeholder.png)
+### Move Cursor to End
 
+Moves the cursor to the very end of the content in the editor.
+
+{% tabs %}
+
+{% highlight c# %}
+
+richTextEditor.MoveCursorToEnd();
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Increase Indent
+
+Increases the indentation of the current paragraph or selected paragraphs.
+
+{% tabs %}
+
+{% highlight c# %}
+
+richTextEditor.IncreaseIndent();
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Decrease Indent
+
+Decreases the indentation of the current paragraph or selected paragraphs.
+
+{% tabs %}
+
+{% highlight c# %}
+
+richTextEditor.DecreaseIndent();
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Set Focus
+
+Programmatically sets the input focus to the rich text editor.
+
+{% tabs %}
+
+{% highlight c# %}
+
+richTextEditor.Focus();
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Remove Focus
+
+Programmatically removes the input focus from the rich text editor.
+
+{% tabs %}
+
+{% highlight c# %}
+
+richTextEditor.Unfocus();
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Undo Last Action
+
+Reverts the last action performed in the editor.
+
+{% tabs %}
+
+{% highlight c# %}
+
+richTextEditor.Undo();
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Redo Last Action
+
+Re-applies the last action that was undone.
+
+{% tabs %}
+
+
+{% highlight c# %}
+
+richTextEditor.Redo();
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ## Events
 
