@@ -30,8 +30,10 @@ To migrate easily from [`Xamarin SfRichTextEditor`](https://help.syncfusion.com/
 <th>.NET MAUI SfRichTextEditor</th>
 <th>Description</th></tr>
 <tr>
-<td>{{'[DotsBorderColor](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRichTextEditor.XForms.SfRichTextEditor.html#Syncfusion_SfRichTextEditor_XForms_SfRichTextEditor_DotsBorderColor)'| markdownify }}</td>
-<td>DotsStroke</td>
-<td>Gets or sets the value of DotsStroke.
+<td>{{'[AutoSize](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.RichTextEditor.SfRichTextEditor.html#Syncfusion_XForms_RichTextEditor_SfRichTextEditor_AutoSize)'| markdownify }}</td>
+
+https://helpstaging.syncfusion.com/xamarin/rich-text-editor/autosize
+<td>EnableAutoSize</td>
+<td>Gets or sets the value of AutoSize.
 </td></tr>
 </table>

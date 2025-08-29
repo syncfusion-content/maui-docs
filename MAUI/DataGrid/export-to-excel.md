@@ -1053,11 +1053,11 @@ private void ExcelExport_RowExporting(object sender, DataGridRowExcelExportingEv
 {% endhighlight %}
 {% endtabs %}
 
-### Exporting DetailsView
+## Exporting DetailsView
 
 By default, [DetailsViewDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DetailsViewDataGrid.html) will not be exported to Excel. You can export `DetailsViewDataGrid` by setting `CanExportDetailsView` property as true. You can customize its exporting operation by using `DataGridChildExcelExportingEventArgs`.
 
-## Excluding DetailsViewDataGrid while exporting
+### Excluding DetailsViewDataGrid while exporting
 
 You can exclude particular DetailsViewDataGrid while exporting by using the `DataGridChildExcelExportingEventArgs.Cancel` property.
 
@@ -1091,7 +1091,7 @@ private void ExcelExport_DataGridChildExcelExporting(object? sender, DataGridChi
 
 Here, `DetailsViewDataGrid` is not exported for the parent record having OrderID as 1002.
 
-## Customizing DetailsViewDataGrid cells
+### Customizing DetailsViewDataGrid cells
 
 Similar to the parent DataGrid, you can also customize the cells of the DetailsViewDataGrid using the [DataGridCellExcelExportingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridCellExcelExportingEventArgs.html). By utilizing the `DataGridCellExcelExportingEventArgs.DetailsViewDefinition` property, you can identify the specific DetailsViewDataGrid and make your customizations.
 
