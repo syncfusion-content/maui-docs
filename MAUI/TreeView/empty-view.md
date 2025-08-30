@@ -85,57 +85,77 @@ N> The view displayed by the `EmptyView` can be a single view or a view that inc
 The `SfTreeView` control allows you to fully customize the empty view appearance by using the `EmptyViewTemplate` property. This property lets you define a custom view and style for the `EmptyView`.
 
 {% tabs %}
-{% highlight xaml hl_lines="11" %}
-<SearchBar x:Name="filterText"
-           Placeholder="Search here"
-           TextChanged="filterText_TextChanged" />
-<syncfusion:SfTreeView x:Name="treeView"
-                       ItemsSource="{Binding FilteredFolders}"
-                       AutoExpandMode="AllNodesExpanded"
-                       NotificationSubscriptionMode="CollectionChange">
-      <syncfusion:SfTreeView.EmptyView>
-            <local:FilterItem Filter="{Binding Source={x:Reference filterText},Path=Text}" />
-      </syncfusion:SfTreeView.EmptyView>
-      <syncfusion:SfTreeView.EmptyViewTemplate>
+{% highlight xaml hl_lines="14" %}
+<Grid RowDefinitions="Auto,*">
+    <SearchBar x:Name="filterText"
+               Placeholder="Search here"
+               TextChanged="filterText_TextChanged" />
+    <syncfusion:SfTreeView x:Name="treeView"
+                           ItemsSource="{Binding FilteredFolders}"
+                           AutoExpandMode="AllNodesExpanded"
+                           NotificationSubscriptionMode="CollectionChange"
+                           Grid.Row="1">
+        <syncfusion:SfTreeView.EmptyView>
+            <local:FilterItem Filter="{Binding Source={x:Reference filterText}, Path=Text}" />
+        </syncfusion:SfTreeView.EmptyView>
+
+        <syncfusion:SfTreeView.EmptyViewTemplate>
             <DataTemplate>
-               <Border>
-                     ....
-               </Border>
+                <Border>
+                      ....
+                </Border>
             </DataTemplate>
-      </syncfusion:SfTreeView.EmptyViewTemplate>
-</syncfusion:SfTreeView>
+        </syncfusion:SfTreeView.EmptyViewTemplate>
+    </syncfusion:SfTreeView>
+</Grid>
 
 {% endhighlight %}
-{% highlight c# hl_lines="22" %}
+{% highlight c# hl_lines="34" %}
 
-SearchBar filterText = new SearchBar
+var grid = new Grid();
+grid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
+grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
+
+var filterText = new SearchBar
 {
     Placeholder = "Search here"
 };
 filterText.TextChanged += FilterText_TextChanged;
 
-SfTreeView treeView = new SfTreeView
+// Add SearchBar to Grid (Row 0)
+grid.Children.Add(filterText);
+Grid.SetRow(filterText, 0);
+
+var treeView = new SfTreeView
 {
+    ItemsSource = viewModel.FilteredFolders,
     AutoExpandMode = AutoExpandMode.AllNodesExpanded,
     NotificationSubscriptionMode = NotificationSubscriptionMode.CollectionChange
 };
-treeView.ItemsSource = viewModel.FilteredFolders;
 
-var filterItem = new FilterItem
+Grid.SetRow(treeView, 1);
+grid.Children.Add(treeView);
+
+var filterItem = new FilterItem();
+filterItem.SetBinding(FilterItem.FilterProperty, new Binding
 {
-    BindingContext = filterText
-};
-filterItem.SetBinding(FilterItem.FilterProperty, "Text");
-
+    Source = filterText,
+    Path = "Text"
+});
 treeView.EmptyView = filterItem;
 
+// Define the EmptyViewTemplate
 treeView.EmptyViewTemplate = new DataTemplate(() =>
 {
     return new Border
     {
-       ...
+        ...
     };
 });
 
 {% endhighlight %}
 {% endtabs %}
+
+N>
+* The `EmptyViewTemplate` will only be applied when the `EmptyView` property is explicitly defined. If `EmptyView` is not set, the template will not be displayed.
+* `EmptyView` can be set to custom data model and the appearance of the `EmptyView` can be customized by using the `EmptyViewTemplate`.
