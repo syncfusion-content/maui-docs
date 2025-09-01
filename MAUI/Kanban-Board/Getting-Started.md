@@ -512,7 +512,7 @@ Let’s look at the practical code example:
                            HorizontalOptions="StartAndExpand" />
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
-                        <Label Text="{Binding Details}"
+                        <Label Text="{Binding Description}"
                                WidthRequest="150"
                                FontSize="14"
                                TextColor="Silver"
