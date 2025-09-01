@@ -47,7 +47,7 @@ The formatted text of Rich Text Editor can be retrieved using the `HtmlText` pro
 {% highlight C# %} 
 
 SfRichTextEditor richTextEditor = new SfRichTextEditor();
-richtexteditor.Text = "The rich text editor component is WYSIWYG editor that provides the best user experience to create and update the content";
+richtexteditor.HtmlText = "The rich text editor component is WYSIWYG editor that provides the best user experience to create and update the content";
 
 {% endhighlight %}
 
