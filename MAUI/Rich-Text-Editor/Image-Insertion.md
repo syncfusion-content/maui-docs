@@ -32,10 +32,10 @@ private async void OnImageInserting(object sender, RichTextEditorImageRequestedE
     e.IsHandled = true;
     RichTextEditorImageSource richTextEditorImageSource = new();
     richTextEditorImageSource.ImageFormat = RichTextEditorImageFormat.Base64;
-    richTextEditorImageSource.Source = ImageSource.FromResource("dotnet_bot.png");
+    richTextEditorImageSource.Source =ImageSource.FromUri(new Uri("https://aka.ms/campus.jpg"));
     richTextEditorImageSource.Width = 100;
     richTextEditorImageSource.Height = 20;
-    (sender as SfRichTextEditor)?.InsertImage(richTextEditorImageSource);
+    richTextEditor.InsertImage(richTextEditorImageSource);
 }
 
 {% endhighlight %}
