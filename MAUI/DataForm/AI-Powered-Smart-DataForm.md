@@ -23,11 +23,12 @@ To enable AI functionality in your .NET MAUI Scheduler, first ensure that you ha
 
 ### Step 3: Connect to the Azure OpenAI
 
-To connect your .NET MAUI app to Azure OpenAI, create a service class that handles communication with the AI model. Start by initializing the OpenAIClient using your Azure endpoint and API key.
-
-In this service, define a method called GetAnswerFromGPT. This method takes a user prompt as input, sends it to the deployed model, and returns the AI-generated response. 
+To connect your .NET MAUI app to Azure OpenAI, create a service class that handles communication with the AI model. 
 
 ```
+/// <summary>
+/// Represents Class to interact with Azure AI.
+/// </summary>
 internal class DataFormAIService : AzureBaseService
 {
     /// <summary>
@@ -61,10 +62,116 @@ internal class DataFormAIService : AzureBaseService
     }
 }
 ```
+In this service, define a method called `GetAnswerFromGPT`. This method takes a user prompt from the SfAIAssistView control as input, sends it to the deployed model (e.g., GPT35Turbo), and returns the AI-generated response.
 
 ```
-this.client = new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(key));
+    /// <summary>
+    /// Represents Class to interact with Azure AI.
+    /// </summary>
+    public class AzureAIServices : AzureBaseService
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AzureAIServices"/> class.
+        /// </summary>
+        public AzureAIServices()
+        {
+            
+        }
+
+        /// <summary>
+        /// Retrieves an answer from the deployment name model using the provided user prompt.
+        /// </summary>
+        /// <param name="userPrompt">The user prompt.</param>
+        /// <returns>The AI response.</returns>
+        internal async Task<string> GetAnswerFromGPT(string userPrompt)
+        {
+            ChatHistory = string.Empty;
+            if (IsCredentialValid && Client != null && ChatHistory != null)
+            {
+                // Add the user's prompt as a user message to the conversation.
+                ChatHistory = ChatHistory + "You are a predictive analytics assistant.";
+                // Add the user's prompt as a user message to the conversation.
+                ChatHistory = ChatHistory + userPrompt;
+                try
+                {
+                    //// Send the chat completion request to the OpenAI API and await the response.
+                    var response = await Client.CompleteAsync(ChatHistory);
+                    return response.ToString();
+                }
+                catch
+                {
+                    // If an exception occurs (e.g., network issues, API errors), return an empty string.
+                    return "";
+                }
+            }
+
+            return "";
+        }
+    }
+}
 ```
+
+Within the base service class (AzureBaseService), initialize the OpenAIClient with your Azure endpoint, deployment name, and API key.
+
+```
+ public abstract class AzureBaseService
+ {
+     #region Fields
+     /// <summary>
+     /// The EndPoint
+     /// </summary>
+     internal const string Endpoint = "YOUR_END_POINT_NAME";
+
+     /// <summary>
+     /// The Deployment name
+     /// </summary>
+     internal const string DeploymentName = "DEPLOYMENT_NAME";
+
+     /// <summary>
+     /// The Image Deployment name
+     /// </summary>
+     internal const string ImageDeploymentName = "IMAGE_DEPOLYMENT_NAME";
+
+     /// <summary>
+     /// The API key
+     /// </summary>
+     internal const string Key = "API_KEY";
+
+     /// <summary>
+     /// The already credential validated field
+     /// </summary>
+     private static bool isAlreadyValidated = false;
+
+     /// <summary>
+     /// Indicating whether an credentials are valid or not
+     /// </summary>
+     private static bool _isCredentialValid;
+
+     #endregion
+
+     public AzureBaseService()
+     {
+         ValidateCredential();
+     }
+
+    internal IChatClient? Client { get; set; }
+
+    /// <summary>
+    /// To get the Azure open ai method
+    /// </summary>
+    private void GetAzureOpenAI()
+    {
+        try
+        {
+            var client = new AzureOpenAIClient(new Uri(Endpoint), new AzureKeyCredential(Key)).AsChatClient(modelId: DeploymentName);
+            this.Client = client;
+        }
+        catch (Exception)
+        {
+        }
+    }
+ }
+ ```
 
 ## Integrating AI-powered smart DataForm Generation in .NET MAUI DataForm
 
