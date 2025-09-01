@@ -41,4 +41,4 @@ private async void OnImageInserting(object sender, RichTextEditorImageRequestedE
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Rich Text Editor image insertion image](images/richtexteditor-image-insertion.png)
+![.NET MAUI Rich Text Editor image insertion image](images/richtexteditor-image-insertion.gif)

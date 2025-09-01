@@ -320,8 +320,8 @@ The `TextChanged` event is fired whenever the content in the editor is changed. 
 
 private void OnTextChanged(object sender, RichTextEditorTextChangedEventArgs e)
 {
-    string oldHtml = e.OldValue;
-    string newHtml = e.NewValue;
+    string oldHtml = e.OldText;
+    string newHtml = e.NewText;
     // Handle when Text changed
 }
 
