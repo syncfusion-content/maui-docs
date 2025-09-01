@@ -26,82 +26,130 @@ To enable AI functionality in your .NET MAUI Scheduler, first ensure that you ha
 
 ### Step 3: Connect to the Azure OpenAI.
 
-To connect your .NET MAUI app to Azure OpenAI, create a service class that handles communication with the AI model. Start by initializing the OpenAIClient using your Azure endpoint and API key.
+To connect your .NET MAUI app to Azure OpenAI, create a service class that handles communication with the AI model. 
 
 ```
-internal class AzureOpenAIService
+/// <summary>
+/// Represents Class to interact with Azure AI.
+/// </summary>
+public class AzureAIServices : AzureBaseService
 {
-    const string endpoint = "https://{YOUR_END_POINT}.openai.azure.com";
-    const string deploymentName = "GPT35Turbo";
-    string key = "API key";
-
-    OpenAIClient? client;
-    ChatCompletionsOptions? chatCompletions;
-
-    internal AzureOpenAIService()
+    /// <summary>
+    /// Initializes a new instance of the <see cref="AzureAIServices"/> class.
+    /// </summary>
+    public AzureAIServices()
     {
+        
     }
 }
 ```
-```
-this.client = new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(key));
-```
-
-In this service, define a method called `GetResponseFromGPT`. This method takes a user prompt from the SfAIAssistView control as input, sends it to the deployed model (e.g., GPT35Turbo), and returns the AI-generated response.
+In this service, define a method called `GetResultsFromAI`. This method takes a user prompt from the SfAIAssistView control as input, sends it to the deployed model (e.g., GPT35Turbo), and returns the AI-generated response.
 
 ```
-internal class AzureOpenAIService
-{
-    const string endpoint = "https://{YOUR_END_POINT}.openai.azure.com";
-    const string deploymentName = "GPT35Turbo";
-    string key = "API key";
-
-    OpenAIClient? client;
-    ChatCompletionsOptions? chatCompletions;
-
-    internal AzureOpenAIService()
+    /// <summary>
+    /// Represents Class to interact with Azure AI.
+    /// </summary>
+    public class AzureAIServices : AzureBaseService
     {
-
-    }
-
-    internal async Task<string> GetResponseFromGPT(string userPrompt)
-    {
-        this.chatCompletions = new ChatCompletionsOptions
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AzureAIServices"/> class.
+        /// </summary>
+        public AzureAIServices()
         {
-            DeploymentName = deploymentName,
-            Temperature = (float)0.5f,
-            MaxTokens = 800,
-            NucleusSamplingFactor = (float)0.95f,
-            FrequencyPenalty = 0,
-            PresencePenalty = 0,
-        };
-
-        this.client = new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(key));
-        if (this.client != null)
-        {
-            // Add the user's prompt as a user message to the conversation.
-            this.chatCompletions?.Messages.Add(new ChatRequestSystemMessage("You are a predictive analytics assistant."));
-
-            // Add the user's prompt as a user message to the conversation.
-            this.chatCompletions?.Messages.Add(new ChatRequestUserMessage(userPrompt));
-            try
-            {
-                // Send the chat completion request to the OpenAI API and await the response.
-                var response = await this.client.GetChatCompletionsAsync(this.chatCompletions);
-
-                // Return the content of the first choice in the response, which contains the AI's answer.
-                return response.Value.Choices[0].Message.Content;
-            }
-            catch
-            {
-                // If an exception occurs (e.g., network issues, API errors), return an empty string.
-                return "";
-            }
+            
         }
-        return "";
+
+        /// <summary>
+        /// Retrieves an answer from the deployment name model using the provided user prompt.
+        /// </summary>
+        /// <param name="userPrompt">The user prompt.</param>
+        /// <returns>The AI response.</returns>
+        public async Task<string> GetResultsFromAI(string userPrompt)
+        {
+            if (IsCredentialValid && Client != null)
+            {
+                ChatHistory = string.Empty;
+                // Add the system message and user message to the options
+                ChatHistory = ChatHistory + "You are a predictive analytics assistant.";
+                ChatHistory = ChatHistory + userPrompt;
+                try
+                {
+                    var response = await Client.CompleteAsync(ChatHistory);
+                    return response.ToString();
+                }
+                catch
+                {
+                    return string.Empty;
+                }
+            }
+
+            return string.Empty;
+        }
     }
 }
 ```
+
+Within the base service class (AzureBaseService), initialize the OpenAIClient with your Azure endpoint, deployment name, and API key.
+
+```
+ public abstract class AzureBaseService
+ {
+     #region Fields
+     /// <summary>
+     /// The EndPoint
+     /// </summary>
+     internal const string Endpoint = "YOUR_END_POINT_NAME";
+
+     /// <summary>
+     /// The Deployment name
+     /// </summary>
+     internal const string DeploymentName = "DEPLOYMENT_NAME";
+
+     /// <summary>
+     /// The Image Deployment name
+     /// </summary>
+     internal const string ImageDeploymentName = "IMAGE_DEPOLYMENT_NAME";
+
+     /// <summary>
+     /// The API key
+     /// </summary>
+     internal const string Key = "API_KEY";
+
+     /// <summary>
+     /// The already credential validated field
+     /// </summary>
+     private static bool isAlreadyValidated = false;
+
+     /// <summary>
+     /// Indicating whether an credentials are valid or not
+     /// </summary>
+     private static bool _isCredentialValid;
+
+     #endregion
+
+     public AzureBaseService()
+     {
+         ValidateCredential();
+     }
+
+    internal IChatClient? Client { get; set; }
+
+    /// <summary>
+    /// To get the Azure open ai method
+    /// </summary>
+    private void GetAzureOpenAI()
+    {
+        try
+        {
+            var client = new AzureOpenAIClient(new Uri(Endpoint), new AzureKeyCredential(Key)).AsChatClient(modelId: DeploymentName);
+            this.Client = client;
+        }
+        catch (Exception)
+        {
+        }
+    }
+ }
+ ```
 
 ## Implementing AI-powered Smart Appointment Booking in .NET MAUI Scheduler
 
@@ -269,7 +317,7 @@ private async Task<string> GetRecommendation(string userInput)
                     $"The return format should be the following JSON format: Doctor1[StartDate, EndDate, Subject, Location, ResourceID], Doctor2[StartDate, EndDate, Subject, Location, ResourceID]." +
                     $"Condition: provide details without any explanation. Don't include any special characters like ```";
 
-    returnMessage = await azureAIServices.GetResponseFromGPT(prompt);
+    returnMessage = await azureAIServices.GetResultsFromAI(prompt);
     var jsonObj = JObject.Parse(returnMessage);
     ...
 }
@@ -356,45 +404,35 @@ The user can then select a specific time slot to confirm an appointment.
 
 ### Step 7: Fetch Response from Azure OpenAI
 
-The communication with Azure OpenAI is handled in the `GetResponseFromGPT` method:
+The communication with Azure OpenAI is handled in the `GetResultsFromAI` method:
 
 ```
-internal async Task<string> GetResponseFromGPT(string userPrompt)
+/// <summary>
+/// Retrieves an answer from the deployment name model using the provided user prompt.
+/// </summary>
+/// <param name="userPrompt">The user prompt.</param>
+/// <returns>The AI response.</returns>
+public async Task<string> GetResultsFromAI(string userPrompt)
+{
+    if (IsCredentialValid && Client != null)
     {
-        this.chatCompletions = new ChatCompletionsOptions
+        ChatHistory = string.Empty;
+        // Add the system message and user message to the options
+        ChatHistory = ChatHistory + "You are a predictive analytics assistant.";
+        ChatHistory = ChatHistory + userPrompt;
+        try
         {
-            DeploymentName = deploymentName,
-            Temperature = (float)0.5f,
-            MaxTokens = 800,
-            NucleusSamplingFactor = (float)0.95f,
-            FrequencyPenalty = 0,
-            PresencePenalty = 0,
-        };
-
-        this.client = new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(key));
-        if (this.client != null)
-        {
-            // Add the user's prompt as a user message to the conversation.
-            this.chatCompletions?.Messages.Add(new ChatRequestSystemMessage("You are a predictive analytics assistant."));
-
-            // Add the user's prompt as a user message to the conversation.
-            this.chatCompletions?.Messages.Add(new ChatRequestUserMessage(userPrompt));
-            try
-            {
-                // Send the chat completion request to the OpenAI API and await the response.
-                var response = await this.client.GetChatCompletionsAsync(this.chatCompletions);
-
-                // Return the content of the first choice in the response, which contains the AI's answer.
-                return response.Value.Choices[0].Message.Content;
-            }
-            catch
-            {
-                // If an exception occurs (e.g., network issues, API errors), return an empty string.
-                return "";
-            }
+            var response = await Client.CompleteAsync(ChatHistory);
+            return response.ToString();
         }
-        return "";
+        catch
+        {
+            return string.Empty;
+        }
     }
+
+    return string.Empty;
+}
 ```
 
 This ensures the AI always responds with structured, appointment-ready data.
