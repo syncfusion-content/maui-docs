@@ -66,19 +66,19 @@ Extracts the plain text content from the Markdown assigned to the `SfMarkdownVie
 {% tabs %}
 {% highlight C# hl_lines="12" %}
 
-    public partial class MainPage : ContentPage
+public partial class MainPage : ContentPage
+{
+    public MainPage()
     {
-        public MainPage()
-        {
-            InitializeComponent();  
-            SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
-            markdownViewer.Source = "Welcome to **Markdown Viewer**!";
-            Content = markdownViewer;       
-        }
-        . . .
-
-        string text = markdownViewer.GetText();
+        InitializeComponent();  
+        SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
+        markdownViewer.Source = "Welcome to **Markdown Viewer**!";
+        Content = markdownViewer;       
     }
+    . . .
+
+    string text = markdownViewer.GetText();
+}
 
 {% endhighlight %}
 {% endtabs %}
