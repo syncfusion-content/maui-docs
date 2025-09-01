@@ -375,7 +375,6 @@ using Syncfusion.Maui.Kanban;
 SfKanban kanban = new SfKanban();
 KanbanViewModel viewModel = new KanbanViewModel();
 kanban.AutoGenerateColumns = false; 
-kanban.ItemsSource = viewModel.Cards;
 
 kanban.Columns.Add(new KanbanColumn
 {
@@ -401,6 +400,7 @@ kanban.Columns.Add(new KanbanColumn
     Categories = new List<object>() { "Done" },
 });
 
+kanban.ItemsSource = viewModel.Cards;
 this.Content = kanban;
 
 {% endhighlight %}
@@ -529,13 +529,51 @@ Let’s look at the practical code example:
 SfKanban kanban = new SfKanban();
 KanbanViewModel viewModel = new KanbanViewModel();
 kanban.ColumnMappingPath = "Status";
+ kanban.CardTemplate = new DataTemplate(() =>
+ {
+     StackLayout root = new StackLayout()
+     {
+         WidthRequest = 250,
+         Orientation = StackOrientation.Vertical,
+         Padding = new Thickness(10),
+         BackgroundColor = Colors.Gray
+     };
+
+     HorizontalStackLayout titleLayout = new HorizontalStackLayout();
+     Label title = new Label()
+     {
+         TextColor = Colors.Silver,
+         HorizontalOptions = LayoutOptions.Start
+     };
+     title.SetBinding(Label.TextProperty, new Binding("Title"));
+     titleLayout.Children.Add(title);
+
+     StackLayout contentLayout = new StackLayout()
+     {
+         Orientation = StackOrientation.Horizontal
+     };
+     Label desc = new Label()
+     {
+         WidthRequest = 150,
+         FontSize = 14,
+         TextColor = Colors.Silver,
+         LineBreakMode = LineBreakMode.WordWrap
+     };
+     desc.SetBinding(Label.TextProperty, new Binding("Description"));
+     contentLayout.Children.Add(desc);
+
+     root.Children.Add(titleLayout);
+     root.Children.Add(contentLayout);
+     return root;
+ });
+
 kanban.ItemsSource = viewModel.Cards;
 this.Content = kanban;
 
 {% endhighlight %}
 {% highlight C# tabtitle="TaskDetails.cs" %}
 
-public class TaskDetails : INotifyPropertyChanged
+public class TaskDetails
 {
     public string Title { get; set; }
     public string Description  { get; set; }
