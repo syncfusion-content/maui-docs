@@ -312,7 +312,6 @@ To change the background color of a column, use the `Background` property of the
 SfKanban kanban = new SfKanban();
 KanbanViewModel viewModel = new KanbanViewModel();
 kanban.AutoGenerateColumns = false; 
-kanban.ItemsSource = viewModel.Cards;
 
 kanban.Columns.Add(new KanbanColumn
 {
@@ -341,6 +340,8 @@ kanban.Columns.Add(new KanbanColumn
     Categories = new List<object> { "Closed" },
     Background = Color.FromArgb("#DCEDDC")
 });
+
+kanban.ItemsSource = viewModel.Cards;
 
 this.Content = kanban;
 
@@ -564,6 +565,55 @@ The following example shows how to define a custom **no card** template using a 
 SfKanban kanban = new SfKanban();
 KanbanViewModel viewModel = new KanbanViewModel();
 kanban.AutoGenerateColumns = false; 
+
+kanban.Columns.Add(new KanbanColumn
+{
+    Title = "To Do",
+    Categories = new List<object> { "Open", "Postponed" },
+    Background = Color.FromArgb("#D6EAF5")
+});
+
+kanban.Columns.Add(new KanbanColumn
+{
+    Title = "In Progress",
+    Categories = new List<object> { "In Progress" },
+    Background = Color.FromArgb("#FFF8DC")
+});
+
+kanban.Columns.Add(new KanbanColumn
+{
+    Title = "Code Review",
+    Categories = new List<object> { "Code Review" },
+    Background = Color.FromArgb("#FFE4E1"),
+	NoCardTemplate = new DataTemplate(() =>
+	{
+		return new VerticalStackLayout
+		{
+			VerticalOptions = LayoutOptions.Center,
+			Children =
+			{
+				new Label
+				{
+					Text = "No code reviews pending",
+					Margin = new Thickness(0, 8, 0, 0),
+					HorizontalOptions = LayoutOptions.Center,
+					VerticalOptions = LayoutOptions.Center,
+					FontSize = 14,
+					FontAttributes = FontAttributes.Bold,
+					TextColor = Colors.Black
+				}
+			}
+		};
+	})
+});
+
+kanban.Columns.Add(new KanbanColumn
+{
+    Title = "Done",
+    Categories = new List<object> { "Closed" },
+    Background = Color.FromArgb("#DCEDDC")
+});
+
 kanban.ItemsSource = viewModel.Cards;
 this.Content = kanban;
 
@@ -785,7 +835,6 @@ The .NET MAUI Kanban control supports styling the placeholder area, where cards 
 SfKanban kanban = new SfKanban();
 KanbanViewModel viewModel = new KanbanViewModel();
 kanban.AutoGenerateColumns = false; 
-kanban.ItemsSource = viewModel.Cards;
 
 KanbanPlaceholderStyle placeholderStyle = new KanbanPlaceholderStyle
 {
@@ -829,6 +878,8 @@ kanban.Columns.Add(new KanbanColumn
     Background = Color.FromArgb("#DCEDDC"),
 	PlaceholderStyle = placeholderStyle
 });
+
+kanban.ItemsSource = viewModel.Cards;
 
 this.Content = kanban;
 
