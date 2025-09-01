@@ -379,7 +379,7 @@ kanban.ItemsSource = viewModel.Cards;
 
 kanban.Columns.Add(new KanbanColumn
 {
-    Title = "Open",
+    Title = "To Do",
     Categories = new List<object>() { "Open" },
 });
 
