@@ -393,6 +393,3 @@ With these implementations, the DataForm becomes AI-powered, enabling users to c
 ![AI powered Smart .NET MAUI Dataform](images/smart-ai-samples/Create-Data-Form-with-AI-technology-in-.NET-MAUI.gif)
 
 You can download the complete sample from this [link](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SmartComponents/SampleBrowser.Maui.SmartComponents/Samples/SmartComponents/SmartDataForm).
-
-
-
