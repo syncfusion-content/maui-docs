@@ -476,7 +476,7 @@ Once the AI returns a response, the application deserialize the JSON string into
 
 ### Step 5: Validate and Submit the form
 
-Enable DataForm validation for all the fields during submission using the Validate method. If validation passes, display a confirmation message. If validation fails, show appropriate error messages.
+Enable DataForm validation for all the fields during submission using the `Validate` method. If validation passes, display a confirmation message. If validation fails, show appropriate error messages.
 
 {% tabs %}
 
