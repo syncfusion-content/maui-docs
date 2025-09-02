@@ -9,7 +9,7 @@ documentation: ug
 
 # Migrating from Xamarin RichTextEditor to .NET MAUI RichTextEditor
 
-To migrate easily from [`Xamarin SfRichTextEditor`](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRichTextEditor.XForms.SfRichTextEditor.html) to `.NET MAUI SfRichTextEditor`, we kept all the APIs from Xamarin SfRichTextEditor in MAUI SfRichTextEditor. However, to maintain the consistency of API naming in MAUI SfRichTextEditor, we renamed some of the APIs. The APIs that have been changed in MAUI SfRichTextEditor from Xamarin SfRichTextEditor are detailed as follows.
+To migrate easily from [`Xamarin SfRichTextEditor`](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.RichTextEditor.html) to `.NET MAUI SfRichTextEditor`, we kept all the APIs from Xamarin SfRichTextEditor in MAUI SfRichTextEditor. However, to maintain the consistency of API naming in MAUI SfRichTextEditor, we renamed some of the APIs. The APIs that have been changed in MAUI SfRichTextEditor from Xamarin SfRichTextEditor are detailed as follows.
 
 ## Namespaces 
 
