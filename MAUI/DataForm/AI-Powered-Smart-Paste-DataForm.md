@@ -433,7 +433,6 @@ Once the AI returns a response, the application deserialize the JSON string into
 }
 ```
 
-
 ### Step 5: Validate and Submit the form
 
 Enable DataForm validation for all the fields during submission using the Validate method. If validation passes, display a confirmation message. If validation fails, show appropriate error messages.
@@ -460,10 +459,3 @@ private void OnSubmitButtonClicked(object? sender, EventArgs e)
 ```
 
 You can download the complete sample from this [link](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SmartComponents/SampleBrowser.Maui.SmartComponents/Samples/SmartComponents/SmartPasteDataForm)
-
-
-
-
-
-
-
