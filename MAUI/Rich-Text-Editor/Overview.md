@@ -22,5 +22,4 @@ The .NET MAUI Rich Text Editor provides a simple yet powerful editor interface t
 * `Customizable toolbar` - Includes a rich, configurable toolbar for quick access to formatting actions. Developers can show, hide, or customize toolbar items.
 * `Copy, paste, and cut` - Features built-in clipboard operations for user convenience.
 * `Undo and redo` - Provides robust undo and redo history for user-friendly editing.
-* `Clear formatting` - Includes an option to reset formatting and styles for selected text.
 * `Localization and accessibility` - Supports right-to-left layouts and accessibility features.

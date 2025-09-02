@@ -560,7 +560,7 @@ The following example shows how to define a custom **no card** template using a 
 </kanban:SfKanban>
 
 {% endhighlight %}
-{% highlight C# %}
+{% highlight C# hl_lines="19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44" %}
 
 SfKanban kanban = new SfKanban();
 KanbanViewModel viewModel = new KanbanViewModel();
