@@ -507,7 +507,7 @@ Let’s look at the practical code example:
                          BackgroundColor="Gray"
                          Padding="10,10,10,10">
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="{Binding Name}"
+                    <Label Text="{Binding Title}"
                            TextColor="Silver"
                            HorizontalOptions="StartAndExpand" />
                     </StackLayout>
