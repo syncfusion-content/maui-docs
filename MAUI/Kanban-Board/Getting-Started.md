@@ -349,7 +349,7 @@ The following sample code demonstrates this process in action:
 <kanban:SfKanban x:Name="kanban"
                  AutoGenerateColumns="False">
     </kanban:SfKanban.BindingContext>
-        <local:KanbanViewModel />
+        <local:ViewModel />
     </kanban:SfKanban.BindingContext>
     <kanban:SfKanban.Columns>
         <kanban:KanbanColumn Title="To Do"
@@ -373,7 +373,7 @@ The following sample code demonstrates this process in action:
 using Syncfusion.Maui.Kanban;
 
 SfKanban kanban = new SfKanban();
-KanbanViewModel viewModel = new KanbanViewModel();
+ViewModel viewModel = new ViewModel();
 kanban.AutoGenerateColumns = false; 
 
 kanban.Columns.Add(new KanbanColumn
@@ -404,14 +404,14 @@ kanban.ItemsSource = viewModel.Cards;
 this.Content = kanban;
 
 {% endhighlight %}
-{% highlight C# tabtitle="KanbanViewModel.cs" %}
+{% highlight C# tabtitle="ViewModel.cs" %}
 
 using Syncfusion.Maui.Kanban;
 
-public class KanbanViewModel
+public class ViewModel
 {
     public ObservableCollection<KanbanModel> Cards { get; set; }
-    public KanbanViewModel()
+    public ViewModel()
     {
         this.Cards = new ObservableCollection<KanbanModel>();
         this.Cards.Add(new KanbanModel()
@@ -498,7 +498,7 @@ Let’s look at the practical code example:
 <kanban:SfKanban ItemsSource="{Binding TaskDetails}"
                  ColumnMappingPath="Status">
     <<kanban:SfKanban.BindingContext>
-        <local:KanbanViewModel />
+        <local:ViewModel />
     </<kanban:SfKanban.BindingContext>
     <kanban:SfKanban.CardTemplate>
         <DataTemplate>
@@ -527,7 +527,7 @@ Let’s look at the practical code example:
 {% highlight C# hl_lines="3" %}
 
 SfKanban kanban = new SfKanban();
-KanbanViewModel viewModel = new KanbanViewModel();
+ViewModel viewModel = new ViewModel();
 kanban.ColumnMappingPath = "Status";
 kanban.CardTemplate = new DataTemplate(() =>
 {
@@ -584,12 +584,13 @@ public class TaskDetails
 }
 
 {% endhighlight %}
-{% highlight C# tabtitle="KanbanViewModel.cs" %}
+{% highlight C# tabtitle="ViewModel.cs" %}
 
-public class KanbanViewModel
+public class ViewModel
 {
     public ObservableCollection<TaskDetails> TaskDetails { get; set; }
-    public KanbanViewModel()
+    
+    public ViewModel()
     {
         this.TaskDetails = this.GetTaskDetails();
     }
