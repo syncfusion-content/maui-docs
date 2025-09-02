@@ -459,9 +459,7 @@ private void OnSubmitButtonClicked(object? sender, EventArgs e)
 }
 ```
 
-![AI powered Smart .NET MAUI Dataform](images/smart-ai-samples/ai-powered-smart-paste-.net-maui-dataform.gif)
-
-You can download the complete sample from this [link](https://github.com/SyncfusionExamples/Integrate-openai-powered-smart-paste-into-DataForm-for-Seamless-Data-Entry/tree/master)
+You can download the complete sample from this [link](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SmartComponents/SampleBrowser.Maui.SmartComponents/Samples/SmartComponents/SmartPasteDataForm)
 
 
 
