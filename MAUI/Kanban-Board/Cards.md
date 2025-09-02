@@ -83,7 +83,7 @@ var cardTemplate = new DataTemplate(() =>
         WidthRequest = 250,
         Orientation = StackOrientation.Vertical,
         Padding = new Thickness(10),
-        BackgroundColor = Color.Gray
+        BackgroundColor = Colors.Gray
     };
 
     HorizontalStackLayout titleLayout = new HorizontalStackLayout();

@@ -269,29 +269,6 @@ this.Content = richTextEditor;
 
 ![.NET MAUI Rich Text Editor with Toolbar](images/richtexteditor-image.png)
 
-## Set Initial HTML Content
-
-You can set the initial content of the editor by assigning an HTML string to the `Text` property.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<rte:SfRichTextEditor ShowToolbar="True" />
-
-{% endhighlight %}
-
-{% highlight C# %}
-
-SfRichTextEditor richTextEditor = new SfRichTextEditor();
-richTextEditor.ShowToolbar = true;
-richTextEditor.Text = "<p>The <b>Syncfusion .NET MAUI Rich Text Editor</b> is a powerful WYSIWYG editor that allows you to create and edit rich text content with a variety of formatting options.</p>";
-this.Content = richTextEditor;
-
-{% endhighlight %}
-
-{% endtabs %}
-
 ## Customize Toolbar Items
 
 By default, the toolbar shows a predefined set of items. You can customize which items are displayed by populating the `ToolbarItems` collection.
