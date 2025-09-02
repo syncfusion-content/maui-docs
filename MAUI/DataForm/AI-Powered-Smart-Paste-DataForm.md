@@ -28,7 +28,10 @@ To enable AI functionality in your .NET MAUI Scheduler, first ensure that you ha
 
 To connect your .NET MAUI app to Azure OpenAI, create a service class that handles communication with the AI model. 
 
-```
+{% tabs %}
+
+{% highlight c# %}
+
 /// <summary>
 /// Helper class to interact with Azure AI.
 /// </summary>
@@ -36,11 +39,17 @@ internal class AzureOpenAIServiceConnector : AzureBaseService
 {
 
 }
-```
+
+{% endhighlight %}
+
+{% endtabs %}
 
 In this service, define a method called `GetAnswerFromGPT`. This method takes a user prompt from the SfAIAssistView control as input, sends it to the deployed model (e.g., GPT35Turbo), and returns the AI-generated response.
 
-```
+{% tabs %}
+
+{% highlight c# %}
+
 /// <summary>
 /// Helper class to interact with Azure AI.
 /// </summary>
@@ -77,11 +86,17 @@ internal class AzureOpenAIServiceConnector : AzureBaseService
         return "";
     }
 }
-```
+
+{% endhighlight %}
+
+{% endtabs %}
 
 Within the base service class (AzureBaseService), initialize the OpenAIClient with your Azure endpoint, deployment name, and API key.
 
-```
+{% tabs %}
+
+{% highlight c# %}
+
  public abstract class AzureBaseService
  {
      #region Fields
@@ -139,7 +154,10 @@ Within the base service class (AzureBaseService), initialize the OpenAIClient wi
         }
     }
  }
- ```
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ## Integrating AI-powered Smart Paste in .NET MAUI DataForm
 
@@ -147,7 +165,10 @@ Within the base service class (AzureBaseService), initialize the OpenAIClient wi
 
 Define a model class (FeedBackForm) that represents the fields of the form. Add properties such as Name, Email, Product Name, Product Version, Rating and Comments. Use data annotations to configure display labels and validation rules.
 
-```
+{% tabs %}
+
+{% highlight c# %}
+
 /// <summary>
 /// Feedback form model class
 /// </summary>
@@ -188,7 +209,10 @@ public class FeedBackForm
     [Display(ShortName = "Describe your feedback in detail", Name = "Comments")]
     public string Comments { get; set; }
 }
-```
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ### Step 2: Bind the model to the dataform
 
@@ -198,7 +222,10 @@ Create a view model containing an instance of the model. Assign this instance to
 
 In XAML, set up the form layout - including labels, images, dataform control. Add a smart paste button that triggers that triggers the AI functionality and a submit button for data validation.
 
-```
+{% tabs %}
+
+{% highlight xaml %}
+
 <Grid BackgroundColor="{DynamicResource SfDataFormNormalBackground}">
     <Image Source="{converters:SfImageResource feedbackform.png}" Aspect="Fill"/>
 
@@ -331,7 +358,10 @@ In XAML, set up the form layout - including labels, images, dataform control. Ad
         </Border>
     </Grid>
 </Grid>
-```
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ### Step 4: Implement Smart Paste Functionality.
 
@@ -341,7 +371,10 @@ To implement this, the application first checks whether the clipboard contains a
 
 Once the AI returns a response, the application deserialize the JSON string into a FeedBackForm object. The deserialized values are then assigned to the model bound to the DataForm, automatically updating the form fields with the extracted values.
 
-```
+{% tabs %}
+
+{% highlight c# %}
+
  private async void OnlineSmartPasteButtonClicked(object? sender, EventArgs e)
  {
      if (Clipboard.Default.HasText)
@@ -399,9 +432,15 @@ Once the AI returns a response, the application deserialize the JSON string into
          this.UpdateOfflineSmartFillDataForm(finalResponse);
      }
  }
-```
 
-```
+{% endhighlight %}
+
+{% endtabs %}
+
+{% tabs %}
+
+{% highlight c# %}
+
     private void UpdateOfflineSmartFillDataForm(string response)
     {
         //// Deserialize the JSON string to a Dictionary
@@ -430,14 +469,19 @@ Once the AI returns a response, the application deserialize the JSON string into
             this.dataForm!.UpdateEditor(filedNames[i]);
         }
     }
-}
-```
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ### Step 5: Validate and Submit the form
 
 Enable DataForm validation for all the fields during submission using the Validate method. If validation passes, display a confirmation message. If validation fails, show appropriate error messages.
 
-```
+{% tabs %}
+
+{% highlight c# %}
+
 private void OnSubmitButtonClicked(object? sender, EventArgs e)
 {
     if (this.popup == null || this.dataForm == null)
@@ -456,7 +500,10 @@ private void OnSubmitButtonClicked(object? sender, EventArgs e)
 
     this.popup.Show();
 }
-```
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ![AI powered Smart Paste .NET MAUI Dataform](images/smart-ai-samples/ai-powered-smart-paste-.net-maui-dataform.png)
 
