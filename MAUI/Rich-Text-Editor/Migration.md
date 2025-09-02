@@ -169,9 +169,11 @@ To migrate easily from [`Xamarin SfRichTextEditor`](https://help.syncfusion.com/
     </tr>
 </table>
 
+
 ## Limitations
 
 * `Nested ScrollView:` RichTextEditor scroll behavior is incompatible with parent ScrollView containers and will be automatically disabled.
 * `AutoSize Configuration:` To prevent off-screen rendering when AutoSize is enabled, configure the MaximumHeightRequest property to constrain the control within viewport boundaries.
 * `Keyboard Interaction:` Toolbar visibility is affected when MaximumHeightRequest extends into the on-screen keyboard area, causing automatic hiding.
 * `Supported Content Types:` Editor content is restricted to plain text and HTML markup formats only.
+
