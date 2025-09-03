@@ -9,7 +9,7 @@ documentation: ug
 
 # Customization in .NET MAUI Rich Text Editor (SfRichTextEditor)
 
-The .NET MAUI Rich Text Editor control provides extensive options for customizing the toolbar's items, appearance, and position, as well as the editor's placeholder text and read-only state.
+The .NET MAUI Rich Text Editor control provides extensive options for customizing its appearance and functionality, from the toolbar and editor area to programmatic formatting and hyperlink management.
 
 ## Customizing the Toolbar
 
@@ -283,9 +283,9 @@ richTextEditor.InsertHyperlink("Example", "https://example.com");
 
 ### Edit a Hyperlink
 
-Use the `EditHyperlink( string text, string oldUrl, string newUrl)` method to modify an existing hyperlink. You can change its display text or its target URL.
+Use the `EditHyperlink(string text, string oldUrl, string newUrl)` method to modify an existing hyperlink. You can change its target URL.
 
-*   `text`: The new display text for the hyperlink.
+*   `text`: The existing display text for the hyperlink.
 *   `oldUrl`: The original URL of the hyperlink you want to edit.
 *   `newUrl`: The new URL for the hyperlink.
 
@@ -309,7 +309,7 @@ Use the `"RemoveHyperlink(string text, string Url)` method to remove a hyperlink
 {% highlight c# %}
 
 // Remove a specific hyperlink, keeping its text
-richTextEditor.RemoveHyperlink("Syncfusion", "https://www.google.com/");
+richTextEditor.RemoveHyperlink("Example", "https://www.google.com/");
 
 {% endhighlight %}
 {% endtabs %}

@@ -240,7 +240,6 @@ Re-applies the last action that was undone.
 
 {% tabs %}
 
-
 {% highlight c# %}
 
 richTextEditor.Redo();
@@ -250,10 +249,11 @@ richTextEditor.Redo();
 {% endtabs %}
 
 ## Events
+The `SfRichTextEditor` provides a variety of events to notify the changes and user interactions within the control. You can subscribe to these events to execute custom logic in response to actions like text changes, focus shifts, or hyperlink clicks.
 
 ### FormatChanged Event
 
-The `FormatChanged` event is Occurs when the formatting status changes. This is useful for implementing contextual formatting options.
+The `FormatChanged` event is occurs when the formatting status changes. This is useful for implementing contextual formatting options.
 
 {% tabs %}
 
@@ -276,7 +276,7 @@ private void OnFormatChanged(object sender, RichTextEditorFormatChangedEventArgs
 
 ### HyperlinkClicked Event
 
-The `HyperlinkClicked` event is fired when a user taps on a hyperlink within the content. The event arguments contain the URL and the text of the Clicked link.
+The `HyperlinkClicked` event is fired when a user taps on a hyperlink within the content. The event arguments contain the URL and the text of the clicked link.
 
 {% tabs %}
 
@@ -289,7 +289,7 @@ The `HyperlinkClicked` event is fired when a user taps on a hyperlink within the
 {% highlight c# %}
 
 SfRichTextEditor richTextEditor = new SfRichTextEditor();
-richTextEditor.Text = "<p>Visit the <a href='https://www.syncfusion.com'>Syncfusion</a> website.</p>";
+richTextEditor.HtmlText = "<p>Visit the <a href='https://www.syncfusion.com'>Syncfusion</a> website.</p>";
 richTextEditorHyperlinkClicked += OnHyperlinkClicked
 
 

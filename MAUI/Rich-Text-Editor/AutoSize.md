@@ -38,15 +38,27 @@ N> When using `EnableAutoSize`, it is recommended not to set the `HeightRequest`
 The following example demonstrates how to place an auto-sizing `SfRichTextEditor` within a `ScrollView`.
 
 {% tabs %}
+
 {% highlight xaml %}
+
 <ScrollView>
     <VerticalStackLayout>
-        <Label Text="User Feedback" FontSize="Title" Padding="10"/>
         <rte:SfRichTextEditor x:Name="richTextEditor"
-                              EnableAutoSize="True"
-                              Placeholder="Please provide your detailed feedback here..."/>
-        <Button Text="Submit" Margin="10"/>
+                              EnableAutoSize="True"/>
     </VerticalStackLayout>
 </ScrollView>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+ScrollView scrollView = new ScrollView();
+VerticalStackLayout verticalStackLayout = new VerticalStackLayout();
+SfRichTextEditor richTextEditor = new SfRichTextEditor();
+richTextEditor.EnableAutoSize = true;
+verticalStackLayout.Children.Add(richTextEditor);
+scrollView.Content = verticalStackLayout;
+this.Content = scrollView;
+
 {% endhighlight %}
 {% endtabs %}
