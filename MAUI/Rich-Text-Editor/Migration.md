@@ -75,7 +75,7 @@ To migrate easily from [`Xamarin SfRichTextEditor`](https://help.syncfusion.com/
     <tr>
         <td>{{'[WordWrap](https://help.syncfusion.com/cr/xamarin/Syncfusion.XForms.RichTextEditor.SfRichTextEditor.html#Syncfusion_XForms_RichTextEditor_SfRichTextEditor_PlaceHolderFontSize)'| markdownify }}</td>
         <td>EnableWordWrap</td>
-        <td>Gets or sets the word-wrap that allows long words to be able to be broken and wrap onto the next line.<td>
+        <td>Gets or sets the word-wrap that allows long words to be able to be broken and wrap onto the next line.</td>
     </tr>
 </table>
 
