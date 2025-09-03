@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AI-Powered Smart Searching in SfAutocomplete Control | Syncfusion®
-description: Learn about how to implement AI-powered smart search using Syncfusion .NET MAUI Autocomplete control.
+description: Learn about how to implement AI-powered smart search using Syncfusion® .NET MAUI Autocomplete control.
 platform: maui
 control: SfAutocomplete
 documentation: ug

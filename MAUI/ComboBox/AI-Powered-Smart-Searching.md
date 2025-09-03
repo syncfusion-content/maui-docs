@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AI-Powered Smart Searching in SfCombobox Control | Syncfusion®
-description: Learn about how to implement AI-powered smart search using Syncfusion .NET MAUI Combobox control.
+description: Learn about how to implement AI-powered smart search using Syncfusion® .NET MAUI Combobox control. 
 platform: maui
 control: SfCombobox
 documentation: ug
@@ -176,7 +176,7 @@ The logic within [GetMatchingIndexes](https://help.syncfusion.com/cr/maui/Syncfu
 To get accurate and structured results from the AI, we must provide a detailed prompt. This is constructed inside the 
 `FilterItemsUsingAzureAI` method.
 
-The `FilterItemsUsingAzureAI` method uses prompt engineering to instruct the AI on how to filter the results, including asking it to handle spelling mistakes and providing the response in a clean, parsable format.
+The `FilterItemsUsingAzureAI` method uses prompt engineering to instruct the AI on how to filter the results, including asking it to handle spelling mistakes and providing the response in a clean format.
 
 {% tabs %}
 {% highlight c# %}
@@ -317,6 +317,6 @@ The following image demonstrates the output of the above AI-based search using a
 
 ![.NET MAUI Combobox With AI Smart Search.](Images/AISearch/ai_smart_search.png)
 
-You can find the complete sample from this [link.
+You can find the complete sample from this [link.](https://github.com/SyncfusionExamples/Smart-AI-Searching-using-.NET-MAUI-ComboBox)
 
 By combining a powerful AI-driven online search with a robust you can create a truly smart and reliable search experience in your .NET MAUI applications.
