@@ -43,36 +43,7 @@ In the `GetCompletion` method, we will construct the prompt and send it to the A
 
         public AzureBaseService()
         {
-            ValidateCredential();
-        }
-                        
-        private async void ValidateCredential()
-        {
-            this.GetAzureOpenAIKernal();
 
-            if (isAlreadyValidated)
-            {
-                return;
-            }
-
-            try
-            {
-                if (Client != null)
-                {
-                    await Client!.CompleteAsync("Hello, Test Check");
-                    ChatHistory = string.Empty;
-                    IsCredentialValid = true;
-                    isAlreadyValidated = true;
-                }
-                else
-                {
-                    ShowAlertAsync();
-                }
-            }
-            catch (Exception)
-            {
-                return;
-            }
         }
 
         /// <summary>
@@ -345,5 +316,7 @@ Applying custom filtering to the [ComboBox](https://help.syncfusion.com/cr/maui/
 The following image demonstrates the output of the above AI-based search using a custom filtering sample.
 
 ![.NET MAUI Combobox With AI Smart Search.](Images/AISearch/ai_smart_search.png)
+
+You can find the complete sample from this [link.
 
 By combining a powerful AI-driven online search with a robust you can create a truly smart and reliable search experience in your .NET MAUI applications.

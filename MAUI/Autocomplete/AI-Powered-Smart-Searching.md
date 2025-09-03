@@ -43,38 +43,8 @@ In the `GetCompletion` method, we will construct the prompt and send it to the A
 
         public AzureBaseService()
         {
-            ValidateCredential();
         }
                         
-        private async void ValidateCredential()
-        {
-            this.GetAzureOpenAIKernal();
-
-            if (isAlreadyValidated)
-            {
-                return;
-            }
-
-            try
-            {
-                if (Client != null)
-                {
-                    await Client!.CompleteAsync("Hello, Test Check");
-                    ChatHistory = string.Empty;
-                    IsCredentialValid = true;
-                    isAlreadyValidated = true;
-                }
-                else
-                {
-                    ShowAlertAsync();
-                }
-            }
-            catch (Exception)
-            {
-                return;
-            }
-        }
-
         /// <summary>
         /// To get the Azure open ai kernal method
         /// </summary>
@@ -210,7 +180,7 @@ The logic within [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.M
 To get accurate and structured results from the AI, we must provide a detailed prompt. This is constructed inside the 
 `FilterCountriesUsingAzureAI` method.
 
-The `FilterCountriesUsingAzureAI` method uses prompt engineering to instruct the AI on how to filter the results, including asking it to handle spelling mistakes and providing the response in a clean, parsable format.
+The `FilterCountriesUsingAzureAI` method uses prompt engineering to instruct the AI on how to filter the results, including asking it to handle spelling mistakes and providing the response in a clean format.
 
 {% tabs %}
 {% highlight c# %}
@@ -336,7 +306,7 @@ public class CustomFilter : IAutocompleteFilterBehavior
 
 {% endtabs %}
 
-**Step:3** Applying Custom Filtering to AutoComplte
+**Step:3** Applying Custom Filtering to AutoComplete
 
 Applying custom filtering to the [Autocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control by using the `FilterBehavior` property.
 
@@ -362,5 +332,7 @@ Applying custom filtering to the [Autocomplete](https://help.syncfusion.com/cr/m
 The following image demonstrates the output of the above AI-based search using a custom filtering sample.
 
 ![.NET MAUI AutoComplete With AI Smart Search.](Images/AISmartSearch/ai_smart_search.png)
+
+You can find the complete sample from this [link](https://github.com/SyncfusionExamples/Smart-AI-Searching-using-.NET-MAUI-Autocomplete).
 
 By combining a powerful AI-driven online search with a robust you can create a truly smart and reliable search experience in your .NET MAUI applications.
