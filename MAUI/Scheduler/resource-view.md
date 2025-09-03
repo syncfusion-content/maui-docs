@@ -9,10 +9,12 @@ documentation: ug
 
 # Resource View in .NET MAUI Scheduler (SfScheduler)
 
-The [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) control allows you to group appointments based on the resources associated with them in the timeline day, timeline week, timeline workweek, and timeline month views, with complete business object binding, multi resource appointment sharing and UI customization features.
+The [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-scheduler) control allows you to group appointments based on the resources associated with them in the day, week, workweek, timeline day, timeline week, timeline workweek, and timeline month views, with complete business object binding, multi resource appointment sharing and UI customization features.
 
 ## Create resources to Scheduler by using SchedulerResource
 You can create a resource view by setting the [Name](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Name), [Id](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Id), [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Background), and [Foreground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Foreground) and [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Foreground) properties of the built-in [SchedulerResource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html) class and assign `SchedulerResource` collection to the scheduler by using the [Resources](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) property of the [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6) class.
+
+In the **Day**, **Week** and **Work Week** views, resources are displayed **horizontally**, whereas in the **Timeline views** (Timeline Day, Timeline Week, Timeline Work Week and Timeline Month), resources are displayed **vertically**.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
@@ -35,6 +37,8 @@ var Resources = new ObservableCollection<SchedulerResource>()
 this.Scheduler.ResourceView.Resources = Resources;
 {% endhighlight %}
 {% endtabs %}
+
+N> The horizontal display of resources in the **Day**, **Week**, and **Work Week** views is supported only on .NET MAUI desktop platforms (**Windows** and **macOS**).
 
 ### Assigning Scheduler resources to appointments
 
@@ -110,6 +114,241 @@ this.Scheduler.AppointmentsSource = appointment;
 
 ![Resource sharing in .NET MAUI Scheduler.](images/resource-view/resource-view-sharing-in-net-maui-scheduler.png)
 
+## Resource Grouping in Days View
+ 
+In the day, week, and work week views, you can control whether dates are grouped under resources or resources are grouped under dates by using the `ResourceGroupType` property of the [`SchedulerResourceView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) class.
+ 
+### Grouping by Resource
+ 
+The `ResourceGroupType` is set to `Resource` by default. In this mode, the scheduler arranges the dates under each resource.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
+<schedule:SfScheduler x:Name="Scheduler" View="Day">
+    <scheduler:SfScheduler.ResourceView>
+        <scheduler:SchedulerResourceView ResourceGroupType="Resource"/>
+    </scheduler:SfScheduler.ResourceView>
+</schedule:SfScheduler>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
+var Resources = new ObservableCollection<SchedulerResource>()
+{
+   new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.LightGreen, Id = "1000" },
+   new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Gold, Id = "1001" },
+   new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.Violet, Id = "1002" },
+};
+
+this.Scheduler.ResourceView.Resources = Resources;
+this.Scheduler.ResourceView.ResourceGroupType = SchedulerResourceGroupType.Resource;
+{% endhighlight %}
+{% endtabs %}
+
+![Resource Grouping By Resource in Days View in .NET MAUI Scheduler.](images/resource-view/group-resources-by-resource-in-days-view-in-net-maui-scheduler.png)
+ 
+### Grouping by Date
+ 
+When the `ResourceGroupType` is set to `Date`, the scheduler arranges the resources under each date.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
+<schedule:SfScheduler x:Name="Scheduler" View="Day">
+    <scheduler:SfScheduler.ResourceView>
+        <scheduler:SchedulerResourceView ResourceGroupType="Date"/>
+    </scheduler:SfScheduler.ResourceView>
+</schedule:SfScheduler>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
+var Resources = new ObservableCollection<SchedulerResource>()
+{
+   new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.LightGreen, Id = "1000" },
+   new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Gold, Id = "1001" },
+   new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.Violet, Id = "1002" },
+};
+
+this.Scheduler.ResourceView.Resources = Resources;
+this.Scheduler.ResourceView.ResourceGroupType = SchedulerResourceGroupType.Date;
+{% endhighlight %}
+{% endtabs %}
+
+![Resource Grouping By Date in Days View in .NET MAUI Scheduler.](images/resource-view/group-resources-by-date-in-days-view-in-net-maui-scheduler.png)
+
+## Visible Resource Count in Days View
+ 
+The number of resources shown in the day, week, and work week views can be controlled using the `VisibleResourceCount` property of the [`SchedulerResourceView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) class. This lets you define how many resources are visible at a time.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
+<schedule:SfScheduler x:Name="Scheduler" View="Day" >
+<schedule:SfScheduler.ResourceView>
+    <schedule:SchedulerResourceView VisibleResourceCount="4"/>
+</schedule:SfScheduler.ResourceView>
+</schedule:SfScheduler>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12" %}
+var Resources = new ObservableCollection<SchedulerResource>()
+{
+    new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.LightGreen, Id = "1000" },
+    new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Gold, Id = "1001" },
+    new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.Violet, Id = "1002" },
+    new SchedulerResource() { Name = "Brooklyn",  Foreground = Colors.White, Background = Colors.LightSkyBlue, Id = "1003" },
+    new SchedulerResource() { Name = "Stephen",  Foreground = Colors.White, Background = Colors.PeachPuff, Id = "1004" },
+    new SchedulerResource() { Name = "Elena",  Foreground = Colors.White, Background = Colors.Pink, Id = "1005" },
+};
+
+this.Scheduler.ResourceView.Resources = Resources;
+this.Scheduler.ResourceView.VisibleResourceCount = 4;
+{% endhighlight %}
+{% endtabs %}
+
+![Visible Resource Count in Days View in .NET MAUI Scheduler.](images/resource-view/visible-resource-count-for-resources-in-days-view-in-.net-maui-scheduler.png)
+
+N> 
+
+- When `VisibleResourceCount` is set to -1, the `SfScheduler` displays up to three resources. If the total number of resources is less than three, it displays all available resources.
+
+- When `VisibleResourceCount` is set to 0, the resource view layout is removed, and only the plain Scheduler view (e.g., Day view without resources) is shown.
+
+## Resource Header Height in Days View
+ 
+In the day, week, and work week views, resources are arranged horizontally. The height of the resource headers can be customized using the `ResourceHeaderHeight` property of the [`SchedulerResourceView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) class.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
+<schedule:SfScheduler x:Name="Scheduler" View="Day" >
+<schedule:SfScheduler.ResourceView>
+    <schedule:SchedulerResourceView ResourceHeaderHeight="100"/>
+</schedule:SfScheduler.ResourceView>
+</schedule:SfScheduler>
+{% endhighlight %}
+{% highlight C# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
+var Resources = new ObservableCollection<SchedulerResource>()
+{
+    new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.LightGreen, Id = "1000" },
+    new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Gold, Id = "1001" },
+    new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.Violet, Id = "1002" },
+};
+
+this.Scheduler.ResourceView.Resources = Resources;
+this.Scheduler.ResourceView.ResourceHeaderHeight = 100;
+{% endhighlight %}
+{% endtabs %}
+
+![Resource Header Height in Days View in .NET MAUI Scheduler.](images/resource-view/resource-header-height-for-resources-in-days-view-in-.net-maui-scheduler.png)
+
+## Resource minimum row height
+
+You can customize resource minimum row height of visible resources in timeline day, timeline week, timeline workweek and timeline month views by using the [MinimumRowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_MinimumRowHeight) property of [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html) in [SfScheduler.](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) By default, resource row height will be auto-expanded from minimum height based on the appointment counts.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 4 5" %}
+<schedule:SfScheduler x:Name="Scheduler"  View="TimelineWeek"
+                            AllowedViews="TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek" >
+<schedule:SfScheduler.ResourceView>
+    <schedule:SchedulerResourceView MinimumRowHeight="90"/>
+</schedule:SfScheduler.ResourceView>
+</schedule:SfScheduler>
+{% endhighlight %}
+{% highlight C# hl_lines="3" %}
+
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.TimelineWeek;
+scheduler.AllowedViews = SchedulerViews.TimelineDay | SchedulerViews.TimelineMonth | SchedulerViews.TimelineWeek | SchedulerViews.TimelineWorkWeek;
+scheduler.ResourceView.MinimumRowHeight = 100;
+this.Content = scheduler;
+
+{% endhighlight %}
+{% endtabs %} 
+
+N>
+* By default, if the viewport height is greater than 400 then each resource height will be calculated by viewport size divided by the minimum value of scheduler resources count and 4 (default resource count). 
+* If the viewport height is lesser than 400 then each resource height will be calculated by default viewport size(4 (default resource*100)) divided by the minimum value of scheduler resources count and 4 (default resource count).
+* If the MinimumRowHeight is less than the default row height then the default row height will be used.
+
+![Resource minimum row and height in .NET MAUI Scheduler.](images/resource-view/resource-view-minimum-height-in-net-maui-scheduler.png)
+
+## Assign special time regions to scheduler resources
+
+You can highlight the resources availability by creating special [time regions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_TimeRegions) in the day, week, workweek, timeline day, timeline week, and timeline workweek views. Special time regions can represent unavailable or reserved slots such as lunch breaks, team meetings, or non-working hours.
+
+### Special time regions for timeline views.
+
+In the timeline views (timeline day, timeline week, and timeline work week), special time regions can be applied to visually highlight unavailable periods for different resources.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<schedule:SfScheduler x:Name="Scheduler"  View="TimelineWeek"
+                      AllowedViews="TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek" >
+</schedule:SfScheduler>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
+var Resources = new ObservableCollection<SchedulerResource>()
+{
+    new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.LightGreen, Id = "1000" },
+    new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Gold, Id = "1001" },
+    new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.Violet, Id = "1002" },
+};
+
+this.Scheduler.ResourceView.Resources = Resources;
+this.Scheduler.TimelineView.TimeRegions = this.GetTimeRegion();
+
+private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
+{
+    var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
+    var timeRegion = new SchedulerTimeRegion()
+    {
+        StartTime = DateTime.Today.Date.AddHours(13),
+        EndTime = DateTime.Today.Date.AddHours(14),
+        Text = "Lunch",
+        EnablePointerInteraction = false,
+        ResourceIds= new ObservableCollection<object>() { "1000", "1001", "1002" }
+    };
+    timeRegions.Add(timeRegion);
+    return timeRegions;
+}
+{% endhighlight %}
+{% endtabs %}
+
+![Resource view special timeregion in .NET MAUI Scheduler.](images/resource-view/special-time-regions-for-resources-in-timeline-views-in-net-maui-scheduler.png)
+
+### Special time regions for days view.
+
+In Days View (day, week, and work week) special time regions can be applied to visually highlight unavailable periods for different resources.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<schedule:SfScheduler x:Name="Scheduler"  View="Day"
+                      AllowedViews="Day,Week,WorkWeek" >
+</schedule:SfScheduler>
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
+var Resources = new ObservableCollection<SchedulerResource>()
+{
+    new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.LightGreen, Id = "1000" },
+    new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Gold, Id = "1001" },
+    new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.Violet, Id = "1002" },
+};
+
+this.Scheduler.ResourceView.Resources = Resources;
+this.Scheduler.DaysView.TimeRegions = this.GetTimeRegion();
+
+private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
+{
+    var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
+    var timeRegion = new SchedulerTimeRegion()
+    {
+        StartTime = DateTime.Today.Date.AddHours(13),
+        EndTime = DateTime.Today.Date.AddHours(14),
+        Text = "Lunch",
+        EnablePointerInteraction = false,
+        ResourceIds= new ObservableCollection<object>() { "1000", "1001", "1002" }
+    };
+    timeRegions.Add(timeRegion);
+    return timeRegions;
+}
+{% endhighlight %}
+{% endtabs %}
+
+![Resource View Special Time Region in Days View in .NET MAUI Scheduler.](images/resource-view/special-time-regions-for-resources-in-days-view-in-net-maui-scheduler.png)
 
 ## Business object binding for resources
 
@@ -273,62 +512,6 @@ Meetings.Add(meeting);
 this.Schedule.ItemsSource = Meetings;
 {% endhighlight %}
 {% endtabs %}
-
-## Resource minimum row height
-You can customize resource minimum row height of visible resources in timeline day, timeline week, timeline workweek and timeline month views by using the [MinimumRowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_MinimumRowHeight) property of [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html) in [SfScheduler.](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) By default, resource row height will be auto-expanded from minimum height based on the appointment counts.
-
-{% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 4 5" %}
-<schedule:SfScheduler x:Name="Scheduler"  View="TimelineWeek"
-                            AllowedViews="TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek" >
-<schedule:SfScheduler.ResourceView>
-    <schedule:SchedulerResourceView MinimumRowHeight="90"/>
-</schedule:SfScheduler.ResourceView>
-</schedule:SfScheduler>
-{% endhighlight %}
-{% highlight C# hl_lines="3" %}
-
-SfScheduler scheduler = new SfScheduler();
-scheduler.View = SchedulerView.TimelineWeek;
-scheduler.AllowedViews = SchedulerViews.TimelineDay | SchedulerViews.TimelineMonth | SchedulerViews.TimelineWeek | SchedulerViews.TimelineWorkWeek;
-scheduler.ResourceView.MinimumRowHeight = 100;
-this.Content = scheduler;
-
-{% endhighlight %}
-{% endtabs %} 
-
-N>
-* By default, if the viewport height is greater than 400 then each resource height will be calculated by viewport size divided by the minimum value of scheduler resources count and 4 (default resource count). 
-* If the viewport height is lesser than 400 then each resource height will be calculated by default viewport size(4 (default resource*100)) divided by the minimum value of scheduler resources count and 4 (default resource count).
-* If the MinimumRowHeight is less than the default row height then the default row height will be used.
-
-![Resource minimum row and height in .NET MAUI Scheduler.](images/resource-view/resource-view-minimum-height-in-net-maui-scheduler.png)
-
-## Assign special time regions to scheduler resources
-You can highlight a resources availability by creating special time regions in the timeline day, timeline week, and timeline workweek views.
-
-{% tabs %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="7" %}
-this.Scheduler.TimelineView.TimeRegions = this.GetTimeRegion();
-
-private ObservableCollection<SchedulerTimeRegion> GetTimeRegion()
-{
-    var timeRegions = new ObservableCollection<SchedulerTimeRegion>();
-    var timeRegion = new SchedulerTimeRegion()
-    {
-        StartTime = DateTime.Today.Date.AddHours(13),
-        EndTime = DateTime.Today.Date.AddHours(14),
-        Text = "Lunch",
-        EnablePointerInteraction = false,
-        ResourceIds= new ObservableCollection<object>() { "1000", "1001", "1002" }
-    };
-    timeRegions.Add(timeRegion);
-    return timeRegions;
-}
-{% endhighlight %}
-{% endtabs %}
-
-![Resource view special timeregion in .NET MAUI Scheduler.](images/resource-view/special-regions-resources-in-net-maui-scheduler.png)
 
 ## Programmatic resource selection
 You can programmatically select the resource by using the [SelectedResourceId]() and [SelectedDate]() of the SfScheduler. Please [click]() here to see more details about programmatic date selection.

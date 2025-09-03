@@ -1314,7 +1314,222 @@ We have loaded a custom template if the message's text contains a particular tex
 
 ![Message template in .NET MAUI Chat](images/messages/maui-chat-message-template.png)
 
+### Using ChatMessageTemplateSelector for custom templates
+
+Create a custom class that extends `ChatMessageTemplateSelector` and override the `OnSelectTemplate` method to return either a custom template or default templates based on the message item.
+
+{% tabs %}
+{% highlight c# tabtitle="MessageTemplateSelector.cs" %}
+
+public class MessageTemplateSelector : ChatMessageTemplateSelector
+{
+        private readonly DataTemplate customOutgoingMessageTemplate;
+        private readonly DataTemplate customIncomingMessageTemplate;
+        private SfChat sfChat;
+
+        public MessageTemplateSelector(SfChat sfChat) : base(sfChat)
+        {
+            this.sfChat = sfChat;
+            this.customOutgoingMessageTemplate = new DataTemplate(typeof(OutgoingMessageTemplate));
+            this.customIncomingMessageTemplate = new DataTemplate(typeof(IncomingMessageTemplate));
+        }
+
+        protected override DataTemplate? OnSelectTemplate(object item, BindableObject container)
+        {
+            var message = item! as IMessage;
+            if (message == null)
+            {
+                return null;
+            }
+            if (item as ITextMessage != null)
+            {
+                if (message.Author == sfChat.CurrentUser && (item as ITextMessage)!.Text == "Thank you")
+                {
+                    return customOutgoingMessageTemplate;
+                }
+                else if ((item as ITextMessage)!.Text == "How would you rate your interaction with our travel bot?")
+                {
+                    return customIncomingMessageTemplate;
+                }
+                else
+                {
+                    // Returns the default incoming or outgoing message templates based on the type of message.
+                    return base.OnSelectTemplate(item, container);
+                }
+            }
+            else
+            {
+                return null;
+            }
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/message-template-.net-maui-chat)
+
+## Customizable views
+
+The `SfChat` allows you to target and fully customize views within the chat control. The following views can be targeted and customized:
+- `IncomingMessageContentView` - Represents the incoming content view of the messages.
+- `IncomingMessageAuthorView` - Represents incoming message author name area.
+- `IncomingMessageAvatarView` - Represents incoming message avatar area.
+- `IncomingMessageTimestampView` - Represents incoming message timestamp area.
+- `OutgoingMessageContentView` - Represents the outgoing content view of the messages.
+- `OutgoingMessageAuthorView` - Represents outgoing message author name area.
+- `OutgoingMessageAvatarView` - Represents outgoing message avatar area.
+- `OutgoingMessageTimestampView` - Represents outgoing message timestamp area.
+- `CardButtonView` - Represents a class which contains the information about an card action button.
+- `ChatImageView` - Represents the image view of the Image message.
+- `MessageSuggestionView` - Represents a list view for displaying suggestions view specific to a message.
+- `ChatSuggestionView` - Represents a list view for displaying chat suggestions.
+
+{% tabs %}
+{% highlight xaml hl_lines="15 31" %}
+    
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sfChat="clr-namespace:Syncfusion.Maui.Chat;assembly=Syncfusion.Maui.Chat"
+             xmlns:local="clr-namespace:MauiChat"             
+             x:Class="MauiChat.MainPage">
+
+        <ContentPage.BindingContext>
+            <local:ViewModel/>
+        </ContentPage.BindingContext>
+
+        <ContentPage.Resources>
+          <ResourceDictionary>
+            <!-- IncomingContentView Style -->
+            <Style TargetType="sfChat:IncomingMessageContentView">
+                <Setter Property="ControlTemplate">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Grid>
+                                <Label Text="{Binding Text}"
+                                       Padding="10"
+                                       FontSize="12"
+                                       FontAttributes="Italic" />
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            
+            <!-- OutgoingContentView Style -->
+            <Style TargetType="sfChat:OutgoingMessageContentView">
+                <Setter Property="ControlTemplate">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Grid>
+                                <Label  Padding="10,10,10,40"
+                                        FontSize="12" 
+                                        FontAttributes="Italic"
+                                        Text="{Binding Text}" />
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            ...
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+        <ContentPage.Content>
+            <sfChat:SfChat x:Name="sfChat"
+                            Messages="{Binding Messages}"                          
+                            CurrentUser="{Binding CurrentUser}" />
+        </ContentPage.Content>
+</ContentPage>
+
+{% endhighlight %}
+{% highlight c# hl_lines="23 48" %}
+
+using Syncfusion.Maui.Chat;
+
+namespace MauiChat
+
+    public partial class ContentViews : ContentPage
+    {
+        SfChat sfChat;
+        ViewModel viewModel;
+
+        public ContentViews()
+        {
+            InitializeComponent();
+
+            viewModel = new ViewModel();
+            sfChat = new SfChat
+            {
+                Messages = viewModel.Messages,
+                CurrentUser = viewModel.CurrentUser
+            };
+
+            Resources = new ResourceDictionary();
+
+            var incomingStyle = new Style(typeof(IncomingMessageContentView))
+            {
+                Setters =
+                {
+                    new Setter
+                    {
+                        Property = IncomingMessageContentView.ControlTemplateProperty,
+                        Value = new ControlTemplate(() =>
+                        {
+                            var grid = new Grid();
+                            var label = new Label
+                            {
+                                Padding = new Thickness(10),
+                                BackgroundColor = Colors.LightGoldenrodYellow,
+                                FontSize = 12,
+                                FontAttributes = FontAttributes.Italic
+                            };
+                            label.SetBinding(Label.TextProperty, "Text");
+                            grid.Children.Add(label);
+                            return grid;
+                        })
+                    }
+                }
+            };
+
+            var outgoingStyle = new Style(typeof(OutgoingMessageContentView))
+            {
+                Setters =
+                {
+                    new Setter
+                    {
+                        Property = OutgoingMessageContentView.ControlTemplateProperty,
+                        Value = new ControlTemplate(() =>
+                        {
+                            var grid = new Grid();
+                            var label = new Label
+                            {
+                                Padding = new Thickness(10, 10, 10, 40),
+                                FontSize = 12,
+                                BackgroundColor = Colors.LightGoldenrodYellow,
+                                FontAttributes = FontAttributes.Italic
+                            };
+                            label.SetBinding(Label.TextProperty, "Text");
+                            grid.Children.Add(label);
+                            return grid;
+                        })
+                    }
+                }
+            };
+            ...
+
+            Resources.Add(incomingStyle);
+            Resources.Add(outgoingStyle);
+
+            Content = sfChat;
+            BindingContext = viewModel;
+        }
+    }
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Spacing between messages
 
@@ -1600,6 +1815,8 @@ By default, the author’s name and avatar are displayed for the incoming messag
 {% endtabs %}
 
 ![Hide incoming avatar and author visibility in .NET MAUI Chat](images/messages/maui-chat-hide-avatar.png)
+
+N> In SfChat, when no avatar image is set, the author's initials are shown automatically based on their name.
 
 ## MessageTimestampFormat for incoming and outgoing messages
 

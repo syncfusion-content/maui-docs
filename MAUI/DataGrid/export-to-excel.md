@@ -26,7 +26,7 @@ To export the SfDataGrid to an Excel file, the following NuGet package should be
 </table>
 
 ## Save Service class in portable project.
-Add the new class file with name as SaveService to the Project and add below code in it. This is the helper class used to save and view the excell file in Windows, Android, IOS and MAC devices.
+Add the new class file with name as SaveService to the Project and add below code in it. This is the helper class used to save and view the excel file in Windows, Android, iOS and MAC devices.
 
 {% tabs %}
 {% highlight c# %}
@@ -228,9 +228,9 @@ Add the following code to the AndroidManifest.xml file located under Properties 
 {% endhighlight %}
 {% endtabs %}
 
-### Save and View the Excel document in IOS
+### Save and View the Excel document in iOS
 
-Add the new class file with name SaveIOS file under Platforms -> IOS directory to save and view the Excell document in the IOS device and use the below code in it.
+Add the new class file with name SaveIOS file under Platforms -> iOS directory to save and view the Excel document in the iOS device and use the below code in it.
 
 {% tabs %}
 {% highlight c# %}
@@ -356,7 +356,7 @@ namespace GettingStarted
 
 ### Save and View the Excel document in MacCatalyst
 
-Add the new class file with name SaveMAC file under Platforms -> MacCatylyst directory to save and view the Excel document in the MAC Device and use the below code in it.
+Add the new class file with name SaveMAC file under Platforms -> MacCatalyst directory to save and view the Excel document in the MAC Device and use the below code in it.
 
 {% tabs %}
 {% highlight c# %}
@@ -1052,3 +1052,80 @@ private void ExcelExport_RowExporting(object sender, DataGridRowExcelExportingEv
 }
 {% endhighlight %}
 {% endtabs %}
+
+## Exporting DetailsView
+
+By default, [DetailsViewDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DetailsViewDataGrid.html) will not be exported to Excel. You can export `DetailsViewDataGrid` by setting `CanExportDetailsView` property as true. You can customize its exporting operation by using `DataGridChildExcelExportingEventArgs`.
+
+### Excluding DetailsViewDataGrid while exporting
+
+You can exclude particular DetailsViewDataGrid while exporting by using the `DataGridChildExcelExportingEventArgs.Cancel` property.
+
+```csharp
+private void Button_Clicked_1(object sender, EventArgs e)
+{
+    DataGridExcelExportingController excelExport = new DataGridExcelExportingController();
+    DataGridExcelExportingOption option = new DataGridExcelExportingOption();
+    excelExport.DataGridChildExcelExporting += ExcelExport_DataGridChildExcelExporting;
+    option.CanExportDetailsView= true;
+    var excelEngine = excelExport.ExportToExcel(this.dataGrid, option);
+    var workbook = excelEngine.Excel.Workbooks[0];
+    MemoryStream stream = new MemoryStream();
+    workbook.SaveAs(stream);
+    workbook.Close();
+    excelEngine.Dispose();
+    string OutputFilename = "ExportFeature.xlsx";
+    SaveService saveService = new();
+    saveService.SaveAndView(OutputFilename, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", stream);
+}
+
+private void ExcelExport_DataGridChildExcelExporting(object? sender, DataGridChildExcelExportingEventArgs e)
+{
+    var recordEntry = e.NodeEntry as RecordEntry;
+
+    if ((recordEntry?.Data as Orders)?.OrderID == 1002)
+        e.Cancel = true;
+}
+```
+<img alt="Excluding specific DetailsView while exporting to Excel in DataGrid " src="Images\export-to-excel\maui-datagrid-detailsviewexporting.png" Width="404"/>
+
+Here, `DetailsViewDataGrid` is not exported for the parent record having OrderID as 1002.
+
+### Customizing DetailsViewDataGrid cells
+
+Similar to the parent DataGrid, you can also customize the cells of the DetailsViewDataGrid using the [DataGridCellExcelExportingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridCellExcelExportingEventArgs.html). By utilizing the `DataGridCellExcelExportingEventArgs.DetailsViewDefinition` property, you can identify the specific DetailsViewDataGrid and make your customizations.
+
+```csharp
+    private void Button_Clicked_1(object sender, EventArgs e)
+    {
+        DataGridExcelExportingController excelExport = new DataGridExcelExportingController();
+        DataGridExcelExportingOption option = new DataGridExcelExportingOption();
+        excelExport.CellExporting += ExcelExport_CellExporting;
+        option.CanExportDetailsView= true;
+        var excelEngine = excelExport.ExportToExcel(this.dataGrid, option);
+        var workbook = excelEngine.Excel.Workbooks[0];
+        MemoryStream stream = new MemoryStream();
+        workbook.SaveAs(stream);
+        workbook.Close();
+        excelEngine.Dispose();
+        string OutputFilename = "ExportFeature.xlsx";
+        SaveService saveService = new();
+        saveService.SaveAndView(OutputFilename, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", stream);
+    }
+
+    private void ExcelExport_CellExporting(object? sender, DataGridCellExcelExportingEventArgs e)
+    {
+        if (e.DetailsViewDefinition == null && e.DetailsViewDefinition?.RelationalColumn != "OrdersList")
+        {
+            return;
+        }
+
+        if (e.ColumnName == "OrderID")
+        {
+            e.Range.CellStyle.Font.Size = 12;
+            e.Range.CellStyle.Font.Color = ExcelKnownColors.Blue;
+            e.Range.CellStyle.Font.FontName = "Segoe UI";
+        }
+    }
+```
+<img alt="Customizing DetailsViewDataGrid while exporting to Excel in DataGrid" src="Images/export-to-excel/maui-datagrid-customize-detailsview-excel.png" Width="404"/>
