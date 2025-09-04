@@ -99,17 +99,19 @@ Images are a vital part of Markdown content, providing visual context and detail
 
 <x:String x:Key="CustomStyle">
 img {
-    border-radius: 8px;
-    border: 2px solid #e0e3ea;
+    border-radius: 12px;
+    border: 8px solid #e0e3ea;
     max-width: 95%;
-    box-shadow: 0 4px 16px rgba(31,45,61,0.08);
-    margin: 12px 0;
+    box-shadow: 0 4px 16px rgba(31,45,61,0.75);
+    margin: 16px 16px;
 }
 </x:String>
 
 {% endhighlight %}
 
 This CSS makes all images inside the Markdown content appear with rounded corners, a subtle border, and a shadow that helps them blend elegantly with modern app designs. Adjust the `margin` or `max-width` to fit the layout of your application.
+
+![Image Customization with CSS Styling](Images/maui-markdownviewer-image-styling.png)
 
 ### Define Styles for Tables
 
@@ -154,6 +156,8 @@ tr:nth-child(even) {
 
 This level of CSS styling allows you to match your app’s theme or improve data readability far beyond the built-in style properties. Remember that any CSS applied will take precedence over values set via the `MarkdownStyleSettings` table properties.
 
+![Table Customization with CSS Styling](Images/maui-markdownviewer-table-styling.png)
+
 ### Define Styles for ScrollBar
 
 Scrollbars are crucial for navigating through long Markdown documents, especially on desktop platforms or when embedding the control in a constrained space. SfMarkdownViewer enables you to customize scrollbar appearance and behavior via CSS:
@@ -181,6 +185,8 @@ Example CSS for a modern, visible scrollbar:
 
 {% endhighlight %}
 
-You can further hide the scrollbar by setting its width to 0, or match its color and thickness to seamlessly blend with your application's UI. Custom scrollbar styling will be effective on supported platforms (typically Windows and Android). Always verify cross-platform appearance for best results.
+![Scrollbar Customization with CSS Styling](Images/maui-markdownviewer-scrollbar.gif)
+
+You can further hide the scrollbar by setting `display: none;` in the `::-webkit-scrollbar` selector or by setting its width to 0, or match its color and thickness to seamlessly blend with your application's UI. Custom scrollbar styling will be effective on supported platforms (typically Windows and Android). Always verify cross-platform appearance for best results.
 
 With tailored scrollbar, table, and image styles, the SfMarkdownViewer control delivers beautiful, readable, and fully brand-aligned Markdown content in your .NET MAUI applications.
