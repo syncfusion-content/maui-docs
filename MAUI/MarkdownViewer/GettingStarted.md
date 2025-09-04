@@ -179,8 +179,7 @@ namespace MarkdownViewerSample
 
 <ContentPage
     . . .    
-    xmlns:markdown="clr-namespace:Syncfusion.Maui.MarkdownViewer;
-    assembly=Syncfusion.Maui.MarkdownViewer">
+    xmlns:markdown="clr-namespace:Syncfusion.Maui.MarkdownViewer;assembly=Syncfusion.Maui.MarkdownViewer">
 
     <markdown:SfMarkdownViewer />
 
