@@ -9,7 +9,9 @@ documentation: ug
 
 # Drill Down in .NET MAUI Sunburst Chart
 
-The drill-down provides better visualization of hierarchy. Large set of data can be virtualized into minimal views. Each level of the segments can be drilled down. The Sunburst Chart provides animation along with the drill-down support. Double tapping the segment performs the drill-down operation. Toolbar will be enabled on drill-down that helps in performing zoom back and reset operations. 
+Drill-down provides better visualization of hierarchical data. Large datasets can be visualized as simplified views. Each segment level can be drilled down into. The Sunburst Chart provides animation along with the drill-down support. Double-tapping a segment initiates the drill-down operation. A toolbar is enabled during drill-down, allowing zoom-back and reset operations. 
+
+## Enable Drill Down
 
 To enable this feature, set the `EnableDrillDown` property to true in [SfSunburstChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html). By default, `EnableDrillDown` is set to false.
 
@@ -40,11 +42,11 @@ this.Content = sunburst;
 
 The vertical and the horizontal alignments of the toolbar can be customized using the `VerticalAlignment` and `HorizontalAlignment` properties, respectively.
 
-Both the alignment properties has the following enum types:
+Both alignment properties have the following enum types:
 
-* Start: Aligns the toolbar to the top (for vertical) or left (for horizontal) of the chart plot area.
-* Center: Aligns the toolbar to the center of the chart plot area, either vertically or horizontally.
-* End: Aligns the toolbar to the bottom (for vertical) or right (for horizontal) of the chart plot area.
+* `Start`: Aligns the toolbar to the top (vertical) or left (horizontal) of the chart plot area.
+* `Center`: Aligns the toolbar to the center of the chart plot area.
+* `End`: Aligns the toolbar to the bottom (vertical) or right (horizontal) of the chart plot area.
 
 {% tabs %}
 
@@ -53,8 +55,8 @@ Both the alignment properties has the following enum types:
 <sunburst:SfSunburstChart EnableDrillDown="True">
     . . .
     <chart:SfSunburstChart.ToolbarSettings>
-        <chart:SunburstToolbarSettings HorizontalAlignment="Center" 
-                                       VerticalAlignment="Center"/>
+        <chart:SunburstToolbarSettings HorizontalAlignment="End" 
+                                       VerticalAlignment="End"/>
     </chart:SfSunburstChart.ToolbarSettings>
 </sunburst:SfSunburstChart>
     
@@ -67,8 +69,8 @@ sunburst.EnableDrillDown = true;
 . . .
 SunburstToolbarSettings toolbarSettings = new SunburstToolbarSettings()
 {
-    HorizontalAlignment = SunburstToolbarAlignment.Center,
-    VerticalAlignment = SunburstToolbarAlignment.Center,
+    HorizontalAlignment = SunburstToolbarAlignment.End,
+    VerticalAlignment = SunburstToolbarAlignment.End,
 };
 sunburst.ToolbarSettings = toolbarSettings;
 this.Content = sunburst;
@@ -152,4 +154,4 @@ this.Content = sunburst;
 
 {% endtabs %}
 
-![Drill Down TToolbar Customization.](drill_down_images/maui_toolbar_customization.png)
+![Drill Down Toolbar Customization.](drill_down_images/maui_toolbar_customization.png)

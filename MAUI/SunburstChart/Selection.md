@@ -8,15 +8,15 @@ documentation: ug
 ---
 # Selection in .NET MAUI Sunburst Chart 
 
-The Sunburst Chart supports segment selection and highlighting. Selection is triggered by a tap gesture on a segment, allowing users to interact with hierarchical data.
+The Sunburst Chart supports segment selection and visual highlighting. Selection is triggered by tapping a segment, enabling users to interact with hierarchical data
 
 ## Type
 
 The `Type` property allows you to select a segment based on the following categories:
-* Child: Highlights the selected segment along with its children in all levels.
-* Group: Highlights the entire group of the selected segment in a hierarchy.
-* Parent: Highlights the parent of the selected segment in the hierarchy.
-* Single: Highlights the selected segment alone.
+* `Child`: Highlights the selected segment along with its children in all levels.
+* `Group`: Highlights the entire group of the selected segment in a hierarchy.
+* `Parent`: Highlights the parent of the selected segment in the hierarchy.
+* `Single`: Highlights the selected segment alone.
 
 The default value of the `Type` property is `Single`.
 
@@ -150,13 +150,7 @@ this.Content = sunburst;
 
 ## DisplayMode
 
-The `DisplayMode` property provides the following selection options to highlight the segments:
-
-* By Brush
-* By opacity
-* By stroke
-
- The default value of `DisplayMode` is `HighlightByBrush`.
+The `DisplayMode` property allows segments to be highlighted using brush, opacity, or stroke. The default value of `DisplayMode` is `HighlightByBrush`.
 
 ### Brush 
 
@@ -230,7 +224,7 @@ this.Content = sunburst;
 
 ![ DisplayMode HighlightByOpacity.](Selection_images/maui_selection_highlight_by_opacity.png)
 
-### Stoke 
+### Stroke 
 
 This mode highlights the selected segment by applying stroke to it. The color and thickness of the stroke can be customized using the `Stroke` and `StrokeWidth` properties.
 
@@ -265,23 +259,23 @@ this.Content = sunburst;
 
 {% endtabs %}
 
-![ DisplayMode HighlightByOpacity.](Selection_images/maui_selection_highlight_by_stroke.png)
+![ DisplayMode HighlightByStroke.](Selection_images/maui_selection_highlight_by_stroke.png)
 
 ## Events 
 
 ### SelectionChanging
 
-The `SelectionChanging` occurs when a segment in the Sunburst chart is being selected.
+The `SelectionChanging` event is triggered when a segment is about to be selected.
 This is a cancelable event. The following properties are contained in the event arguments:
 
 * `NewSegment`: Gets the new segment that was selected. 
 * `OldSegment`: Gets the old segment that was selected or deselected.
-* `Cancel` - Gets or sets the value whether to continue selection or not.
+* `Cancel` - Gets or sets a value indicating whether to proceed with the selection.
 
 
 ### Selection Changed
 
-The `SelectionChanged` event occurs when a segment in the Sunburst chart is selected or deselected. The following properties are contained in the event arguments:
+The `SelectionChanged` event occurs after a segment is selected or deselected. The following properties are contained in the event arguments:
 
 * `IsSelected`: Indicates whether a segment is selected.
 * `NewSegment`: Gets the new segment that was selected. 

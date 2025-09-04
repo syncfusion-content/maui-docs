@@ -9,11 +9,11 @@ documentation: ug
 
 # Retrieve Content Programmatically in .NET MAUI SfMarkdownViewer
 
-The [SfMarkdownViewer]() control provides built-in methods to retrieve and transform Markdown content programmatically. These methods allow developers to access the raw Markdown, convert it to HTML, or extract plain text without formatting.
+The `SfMarkdownViewer` control provides built-in methods to retrieve and transform Markdown content programmatically. These methods allow developers to access the raw Markdown, convert it to HTML, or extract plain text without formatting.
 
-## GetMarkdownText()
+## GetMarkdownText
 
-Retrieves the raw Markdown content currently assigned to the `Source` property of the [SfMarkdownViewer]() control. 
+Retrieves the raw Markdown content currently assigned to the `Source` property of the `SfMarkdownViewer` control. 
 
 {% tabs %}
 {% highlight C# hl_lines="12" %}
@@ -29,13 +29,13 @@ Retrieves the raw Markdown content currently assigned to the `Source` property o
         }
         . . .
 
-        string markdown = MarkdownViewer.GetMarkdown();
+        string markdown = markdownViewer.GetMarkdownText();
     }
 
 {% endhighlight %}
 {% endtabs %}
 
-## GetHtml()
+## GetHtmlText
 
 Converts the Markdown content of the SfMarkdownViewer control into HTML format and provides the result as a string.
 
@@ -53,13 +53,13 @@ Converts the Markdown content of the SfMarkdownViewer control into HTML format a
         }
         . . .
 
-        string html = MarkdownViewer.GetHtml();
+        string html = markdownViewer.GetHtmlText();
     }
 
 {% endhighlight %}
 {% endtabs %}
 
-## GetText()
+## GetText
 
 Extracts the plain text content from the Markdown assigned to the `SfMarkdownViewer` control, removing all Markdown formatting such as headings, emphasis, links, and code blocks.
 
