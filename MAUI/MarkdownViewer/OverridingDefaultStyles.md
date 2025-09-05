@@ -115,7 +115,7 @@ This CSS makes all images inside the Markdown content appear with rounded corner
 
 ## Define Styles for Tables
 
-Tables are commonly used to present data and comparisons. While basic table styling (such as header font size, text color, and table background) can be easily set using properties of the `MarkdownStyleSettings` class—see the detailed explanation in the [Customize Appearance](https://help.syncfusion.com/maui/markdownviewer/appearance) documentation—you can take your table designs further by using custom CSS through the `CssStyleRules` property.
+Tables are commonly used to present data and comparisons. While basic table styling (such as header font size, text color, and table background) can be easily set using properties of the `MarkdownStyleSettings` class, see the detailed explanation in the [Customize Appearance](https://help.syncfusion.com/maui/markdownviewer/appearance) documentation. You can take your table designs further by using custom CSS through the `CssStyleRules` property.
 
 This enables effects such as striped rows, rounded corners, advanced padding, and borders for maximum brand consistency. For example:
 
@@ -148,7 +148,7 @@ tr:nth-child(even) {
 
 {% endhighlight %}
 
-CSS styles provide much finer control over table appearance than the standard style properties. For thorough details on property-based styling—including `TableHeaderFontSize`, `TableHeaderTextColor`, and more—please refer to the [Customize Appearance](https://help.syncfusion.com/maui/markdownviewer/appearance) documentation page. When both CSS and style properties are specified, CSS will take precedence.
+CSS styles provide much finer control over table appearance than the standard style properties. For thorough details on property based styling including `TableHeaderFontSize`, `TableHeaderTextColor`, and more, please refer to the [Customize Appearance](https://help.syncfusion.com/maui/markdownviewer/appearance) documentation page. When both CSS and style properties are specified, CSS will take precedence.
 
 ![Table Customization with CSS Styling](Images/maui-markdownviewer-table-styling.png)
 
