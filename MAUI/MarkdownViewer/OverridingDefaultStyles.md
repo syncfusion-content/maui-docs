@@ -152,7 +152,7 @@ CSS styles provide much finer control over table appearance than the standard st
 
 ![Table Customization with CSS Styling](Images/maui-markdownviewer-table-styling.png)
 
-### Define Styles for ScrollBar
+## Define Styles for ScrollBar
 
 Scrollbars are crucial for navigating through long Markdown documents, especially on desktop platforms or when embedding the control in a constrained space. SfMarkdownViewer enables you to customize scrollbar appearance and behavior via CSS:
 
