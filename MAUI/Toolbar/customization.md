@@ -482,7 +482,7 @@ The toolbar control supports customization of navigation buttons using propertie
 * **BackwardButtonIconColor** : This property is used to customize the icon color of the backward button.
 * **ForwardButtonBackground** : This property is used to customize the background color of the forward button.
 * **BackwardButtonBackground** : This property is used to customize the background color of the backward button.
-* **ForwardButtonTemplate** : This property is used to customize the forward button by provide custom views like button, lable and more.
+* **ForwardButtonTemplate** : This property is used to customize the forward button by provide custom views like button, label and more.
 * **BackwardButtonTemplate** : This property is used to customize the backward button by provide custom views like checkboxes, entries, etc.
 
 The following code sample demonstrates how to create a toolbar control with navigation button customization.
