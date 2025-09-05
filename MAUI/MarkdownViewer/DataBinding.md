@@ -9,11 +9,11 @@ documentation: ug
 
 # Loading Markdown Content in .NET MAUI MarkdownViewer
 
-The [SfMarkdownViewer]() control supports flexible input sources, allowing developers to load Markdown content from strings, local files, embedded resources, and external URLs.
+The [SfMarkdownViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html) control supports flexible input sources, allowing developers to load Markdown content from strings, local files, embedded resources, and external URLs.
 
 ## From String
 
-Assign a Markdown-formatted string to the `Source` property of the SfMarkdownViewer control to render markdown content directly within your application.
+Assign a Markdown-formatted string to the [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_Source) property of the [SfMarkdownViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html) control to render markdown content directly within your application.
 
 {% tabs %} 
 {% highlight xaml %}
@@ -71,19 +71,7 @@ namespace MarkdownViewerGettingStarted
 
 ## From Local File
 
-To load Markdown content from a local `.md` file, you can directly specify the file path and read its contents using standard file I/O and assign its content to the `Source` property of the `SfMarkdownViewer`.
-
-**XAML**
-
-{% highlight xaml %}
-
-<ContentPage>
-
-    <markdown:SfMarkdownViewer x:Name="MarkdownViewer" />
-
-</ContentPage>
-
-{% endhighlight %}
+To load Markdown content from a local `.md` file, you can directly specify the file path and read its contents using standard file I/O and assign its content to the [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_Source) property of the [SfMarkdownViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html).
 
 Use the following code-behind to read the file and assign its content to the Markdown Viewer:
 
@@ -96,10 +84,11 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-
+        SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
         string filePath = @"D:\MAUI\MarkdownViewer\Files\MarkdownContent.md";
         string markdownContent = File.ReadAllText(filePath);
-        MarkdownViewer.Source = markdownContent;
+        markdownViewer.Source = markdownContent;
+        Content = markdownViewer;  
     }
 }
 
@@ -108,19 +97,7 @@ public partial class MainPage : ContentPage
 ## From Embedded Resource
 
 1. To load Markdown content from an embedded resource, place the `.md` file inside the `Resources` folder of your .NET MAUI project. 
-2. Use asynchronous file access to read and assign the content to the `Source` property of the `SfMarkdownViewer` control.
-
-**XAML**
-
-{% highlight xaml %}
-
-<ContentPage>
-
-    <markdown:SfMarkdownViewer x:Name="MarkdownViewer" />
-
-</ContentPage>
-
-{% endhighlight %}
+2. Use asynchronous file access to read and assign the content to the [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html#Syncfusion_Maui_MarkdownViewer_SfMarkdownViewer_Source) property of the [SfMarkdownViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html) control.
 
 Refer to the following code-behind to read the embedded resource and assign its content to the Markdown Viewer:
 
@@ -130,10 +107,14 @@ Refer to the following code-behind to read the embedded resource and assign its 
 
 public partial class MainPage : ContentPage
 {
+    SfMarkdownViewer markdownViewer;
+
     public MainPage()
     {
         InitializeComponent();
+        markdownViewer = new SfMarkdownViewer();
         _ = LoadMarkdownAsync();
+        Content = markdownViewer;  
     }
 
     private async Task LoadMarkdownAsync()
@@ -141,7 +122,7 @@ public partial class MainPage : ContentPage
         using Stream stream = await FileSystem.OpenAppPackageFileAsync("MarkdownContent.md");
         using StreamReader reader = new StreamReader(stream, Encoding.UTF8);
         string markdownContent = await reader.ReadToEndAsync();
-        MarkdownViewer.Source = markdownContent;
+        markdownViewer.Source = markdownContent;
     }
 }
 
