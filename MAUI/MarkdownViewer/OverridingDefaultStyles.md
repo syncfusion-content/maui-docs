@@ -85,13 +85,13 @@ Apply the defined CSS style to the Markdown Viewer using the `CssStyleRules` pro
 
 The output below reflects the styled appearance of the Markdown content.
 
-![Overriding default styles output image](Images/maui-markdown-viewer-overriding-styles.png)
+![Applying CSS Style Rules](Images/maui-markdown-viewer-overriding-styles.png)
 
 By defining custom styles, you can transform the Markdown Viewer into a fully branded and polished content surface that fits seamlessly into your app’s design system.
 
 N> Apply CSS styles only when necessary as they will override the properties of individual Markdown elements such as `H1FontSize`, `H1Color`, `BodyTextColor`, `TableHeaderFontSize`, etc., defined in the `MarkdownStyleSettings` class.
 
-### Define Styles for Images
+## Define Styles for Images
 
 Images are a vital part of Markdown content, providing visual context and detail. SfMarkdownViewer allows you to override the appearance of images through CSS, enabling custom sizing, borders, or even special effects. For example:
 
@@ -113,17 +113,11 @@ This CSS makes all images inside the Markdown content appear with rounded corner
 
 ![Image Customization with CSS Styling](Images/maui-markdownviewer-image-styling.png)
 
-### Define Styles for Tables
+## Define Styles for Tables
 
-Tables are commonly used to present data or feature comparisons. The SfMarkdownViewer control provides direct customization through a set of properties in the `MarkdownStyleSettings` class for basic look and feel:
+Tables are commonly used to present data and comparisons. While basic table styling (such as header font size, text color, and table background) can be easily set using properties of the `MarkdownStyleSettings` class—see the detailed explanation in the [Customize Appearance](https://help.syncfusion.com/maui/markdownviewer/appearance) documentation—you can take your table designs further by using custom CSS through the `CssStyleRules` property.
 
-- `TableBackground`: Background color of the entire table.
-- `TableHeaderFontSize`: Font size for the header row.
-- `TableHeaderTextColor`: Text color for header cells.
-- `TableDataFontSize`: Font size for data cells.
-- `TableDataTextColor`: Text color for data cells.
-
-When you need advanced styling—like striped rows, custom cell padding, or specific border styles—use CSS in the `CssStyleRules` property. For example:
+This enables effects such as striped rows, rounded corners, advanced padding, and borders for maximum brand consistency. For example:
 
 {% highlight xaml %}
 
@@ -154,7 +148,7 @@ tr:nth-child(even) {
 
 {% endhighlight %}
 
-This level of CSS styling allows you to match your app’s theme or improve data readability far beyond the built-in style properties. Remember that any CSS applied will take precedence over values set via the `MarkdownStyleSettings` table properties.
+CSS styles provide much finer control over table appearance than the standard style properties. For thorough details on property-based styling—including `TableHeaderFontSize`, `TableHeaderTextColor`, and more—please refer to the [Customize Appearance](https://help.syncfusion.com/maui/markdownviewer/appearance) documentation page. When both CSS and style properties are specified, CSS will take precedence.
 
 ![Table Customization with CSS Styling](Images/maui-markdownviewer-table-styling.png)
 
@@ -171,15 +165,16 @@ Example CSS for a modern, visible scrollbar:
 
 <x:String x:Key="CustomStyle">
 ::-webkit-scrollbar {
-    width: 8px;
-    background: #F2F4F8;
+    width: 10px;
+    background: #eeeeee;
 }
 ::-webkit-scrollbar-thumb {
-    background: #B2B8C6;
-    border-radius: 4px;
+    background: #3B82F6;
+    border-radius: 8px;
+    border: 2px solid #1E293B;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #8293AE;
+    background: #2563EB;
 }
 </x:String>
 
