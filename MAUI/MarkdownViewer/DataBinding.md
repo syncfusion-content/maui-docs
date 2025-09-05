@@ -88,6 +88,7 @@ public partial class MainPage : ContentPage
         string filePath = @"D:\MAUI\MarkdownViewer\Files\MarkdownContent.md";
         string markdownContent = File.ReadAllText(filePath);
         markdownViewer.Source = markdownContent;
+        Content = markdownViewer;  
     }
 }
 
@@ -106,11 +107,14 @@ Refer to the following code-behind to read the embedded resource and assign its 
 
 public partial class MainPage : ContentPage
 {
+    SfMarkdownViewer markdownViewer;
+
     public MainPage()
     {
         InitializeComponent();
-        SfMarkdownViewer markdownViewer = new SfMarkdownViewer();
+        markdownViewer = new SfMarkdownViewer();
         _ = LoadMarkdownAsync();
+        Content = markdownViewer;  
     }
 
     private async Task LoadMarkdownAsync()

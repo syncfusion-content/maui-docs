@@ -9,7 +9,7 @@ documentation: ug
 
 # Drill Down in .NET MAUI Sunburst Chart
 
-Drill-down provides better visualization of hierarchical data. Large datasets can be visualized as simplified views. Each segment level can be drilled down into. The Sunburst Chart provides animation along with the drill-down support. Double-tapping a segment initiates the drill-down operation. A toolbar is enabled during drill-down, allowing zoom-back and reset operations. 
+Drill Down provides better visualization of hierarchical data. Large datasets can be visualized as simplified views. Each segment level can be drilled down into. The Sunburst Chart provides animation along with the drill-down support. Double-tapping a segment initiates the drill-down operation. A toolbar is enabled during drill-down, allowing zoom-back and reset operations. 
 
 ## Enable Drill Down
 
