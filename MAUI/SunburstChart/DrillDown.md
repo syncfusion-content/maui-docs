@@ -13,7 +13,7 @@ Drill Down provides better visualization of hierarchical data. Large datasets ca
 
 ## Enable Drill Down
 
-To enable this feature, set the `EnableDrillDown` property to true in [SfSunburstChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html). By default, `EnableDrillDown` is set to false.
+To enable this feature, set the [EnableDrillDown](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_EnableDrillDown) property to true in [SfSunburstChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html). By default, [EnableDrillDown](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SfSunburstChart.html#Syncfusion_Maui_SunburstChart_SfSunburstChart_EnableDrillDown) is set to false.
 
 {% tabs %}
 
@@ -40,13 +40,13 @@ this.Content = sunburst;
 
 ## Toolbar Alignment
 
-The vertical and the horizontal alignments of the toolbar can be customized using the `VerticalAlignment` and `HorizontalAlignment` properties, respectively.
+The vertical and the horizontal alignments of the toolbar can be customized using the [VerticalAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstToolbarSettings.html#Syncfusion_Maui_SunburstChart_SunburstToolbarSettings_VerticalAlignment) and [HorizontalAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstToolbarSettings.html#Syncfusion_Maui_SunburstChart_SunburstToolbarSettings_HorizontalAlignment) properties, respectively.
 
 Both alignment properties have the following enum types:
 
-* `Start`: Aligns the toolbar to the top (vertical) or left (horizontal) of the chart plot area.
-* `Center`: Aligns the toolbar to the center of the chart plot area.
-* `End`: Aligns the toolbar to the bottom (vertical) or right (horizontal) of the chart plot area.
+* [Start](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstToolbarAlignment.html#Syncfusion_Maui_SunburstChart_SunburstToolbarAlignment_Start): Aligns the toolbar to the top (vertical) or left (horizontal) of the chart plot area.
+* [Center](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstToolbarAlignment.html#Syncfusion_Maui_SunburstChart_SunburstToolbarAlignment_Center): Aligns the toolbar to the center of the chart plot area.
+* [End](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstToolbarAlignment.html#Syncfusion_Maui_SunburstChart_SunburstToolbarAlignment_End): Aligns the toolbar to the bottom (vertical) or right (horizontal) of the chart plot area.
 
 {% tabs %}
 
@@ -83,7 +83,7 @@ this.Content = sunburst;
 
 ## Toolbar Positioning
 
-The toolbar's position within the Sunburst Chart can be adjusted both horizontally and vertically using the `OffsetX` and `OffsetY` properties of the `SunburstToolbarSettings` class.
+The toolbar's position within the Sunburst Chart can be adjusted both horizontally and vertically using the [OffsetX](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstToolbarSettings.html#Syncfusion_Maui_SunburstChart_SunburstToolbarSettings_OffsetX) and [OffsetY](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstToolbarSettings.html#Syncfusion_Maui_SunburstChart_SunburstToolbarSettings_OffsetY) properties of the [SunburstToolbarSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstToolbarSettings.html) class.
 
 {% tabs %}
 
@@ -121,8 +121,8 @@ this.Content = sunburst;
 
 The appearance of the drill-down toolbar in the Sunburst Chart can be customized using the following properties
 
-* `IconBrush`: Gets or sets the brush used to style the icons within the drill-down toolbar.
-* `Background`: Gets or sets the background brush of the drill-down toolbar.
+* [IconBrush](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstToolbarSettings.html#Syncfusion_Maui_SunburstChart_SunburstToolbarSettings_IconBrush): Gets or sets the brush used to style the icons within the drill-down toolbar.
+* [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SunburstChart.SunburstToolbarSettings.html#Syncfusion_Maui_SunburstChart_SunburstToolbarSettings_Background): Gets or sets the background brush of the drill-down toolbar.
 
 {% tabs %}
 
