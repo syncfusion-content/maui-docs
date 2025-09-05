@@ -8,7 +8,7 @@ documentation: ug
 ---
 # Selection in .NET MAUI Sunburst Chart 
 
-The Sunburst Chart supports segment selection and visual highlighting. Selection is triggered by tapping a segment, enabling users to interact with hierarchical data
+The Sunburst Chart supports segment selection and visual highlighting. Selection is triggered by tapping a segment, enabling users to interact with hierarchical data.
 
 ## Type
 
@@ -150,7 +150,7 @@ this.Content = sunburst;
 
 ## DisplayMode
 
-The `DisplayMode` property allows segments to be highlighted using brush, opacity, or stroke. The default value of `DisplayMode` is `HighlightByBrush`.
+The `DisplayMode` property allows segments to be highlighted using brush, opacity, and stroke. The default value of `DisplayMode` is `HighlightByBrush`.
 
 ### Brush 
 
