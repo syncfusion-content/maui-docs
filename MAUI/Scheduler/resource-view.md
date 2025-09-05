@@ -203,10 +203,8 @@ this.Scheduler.ResourceView.VisibleResourceCount = 4;
 ![Visible Resource Count in Days View in .NET MAUI Scheduler.](images/resource-view/visible-resource-count-for-resources-in-days-view-in-.net-maui-scheduler.png)
 
 N> 
-
-- When `VisibleResourceCount` is set to -1, the `SfScheduler` displays up to three resources. If the total number of resources is less than three, it displays all available resources.
-
-- When `VisibleResourceCount` is set to 0, the resource view layout is removed, and only the plain Scheduler view (e.g., Day view without resources) is shown.
+* When `VisibleResourceCount` is set to -1, the `SfScheduler` displays up to three resources. If the total number of resources is less than three, it displays all available resources.
+* When `VisibleResourceCount` is set to 0, the resource view layout is removed, and only the plain Scheduler view (e.g., Day view without resources) is shown.
 
 ## Resource Header Height in Days View
  
