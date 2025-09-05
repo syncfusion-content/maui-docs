@@ -117,7 +117,7 @@ this.Content = sunburst;
 
 ![Drill Down Toolbar Positioning.](drill_down_images/maui_toolbar_positioning.png)
 
-## Toolbar Customization  
+## Toolbar Customization
 
 The appearance of the drill-down toolbar in the Sunburst Chart can be customized using the following properties
 
