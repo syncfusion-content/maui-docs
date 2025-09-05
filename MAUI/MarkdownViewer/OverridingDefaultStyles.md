@@ -9,9 +9,9 @@ documentation: ug
 
 # How to Apply CSS Style Rules in .NET MAUI SfMarkdownViewer
 
-The `SfMarkdownViewer` control in .NET MAUI comes with a set of built-in default styles that ensure Markdown content is rendered cleanly and consistently across platforms. However, in many real-world applications, developers may need to override these defaults to match their app’s branding, improve readability, or create a custom visual experience.
+The [SfMarkdownViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html) control in .NET MAUI comes with a set of built-in default styles that ensure Markdown content is rendered cleanly and consistently across platforms. However, in many real-world applications, developers may need to override these defaults to match their app’s branding, improve readability, or create a custom visual experience.
 
-This guide explains how to override the default styles using the `MarkdownStyleSettings` class and the `CssStyleRules` property.
+This guide explains how to override the default styles using the [MarkdownStyleSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownStyleSettings.html) class and the [CssStyleRules](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownStyleSettings.html#Syncfusion_Maui_MarkdownViewer_MarkdownStyleSettings_CssStyleRules) property.
 
 ## Defining Styles
 
@@ -64,7 +64,7 @@ This guide explains how to override the default styles using the `MarkdownStyleS
 
 {% endhighlight %}
 
-Apply the defined CSS style to the Markdown Viewer using the `CssStyleRules` property, as shown in the XAML code below:
+Apply the defined CSS style to the Markdown Viewer using the [CssStyleRules](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownStyleSettings.html#Syncfusion_Maui_MarkdownViewer_MarkdownStyleSettings_CssStyleRules) property, as shown in the XAML code below:
 
 {% highlight xaml %}
 
@@ -89,7 +89,7 @@ The output below reflects the styled appearance of the Markdown content.
 
 By defining custom styles, you can transform the Markdown Viewer into a fully branded and polished content surface that fits seamlessly into your app’s design system.
 
-N> Apply CSS styles only when necessary as they will override the properties of individual Markdown elements such as `H1FontSize`, `H1Color`, `BodyTextColor`, `TableHeaderFontSize`, etc., defined in the `MarkdownStyleSettings` class.
+N> Apply CSS styles only when necessary as they will override the properties of individual Markdown elements such as [H1FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownStyleSettings.html#Syncfusion_Maui_MarkdownViewer_MarkdownStyleSettings_H1FontSize), [H1Color](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownStyleSettings.html#Syncfusion_Maui_MarkdownViewer_MarkdownStyleSettings_H1Color), [BodyTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownStyleSettings.html#Syncfusion_Maui_MarkdownViewer_MarkdownStyleSettings_BodyTextColor), [TableHeaderFontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownStyleSettings.html#Syncfusion_Maui_MarkdownViewer_MarkdownStyleSettings_TableHeaderFontSize), etc., defined in the [MarkdownStyleSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownStyleSettings.html) class.
 
 ## Define Styles for Images
 
@@ -115,7 +115,7 @@ This CSS makes all images inside the Markdown content appear with rounded corner
 
 ## Define Styles for Tables
 
-Tables are commonly used to present data and comparisons. While basic table styling (such as header font size, text color, and table background) can be easily set using properties of the `MarkdownStyleSettings` class, see the detailed explanation in the [Customize Appearance](https://help.syncfusion.com/maui/markdownviewer/appearance) documentation. You can take your table designs further by using custom CSS through the `CssStyleRules` property.
+Tables are commonly used to present data and comparisons. While basic table styling (such as header font size, text color, and table background) can be easily set using properties of the [MarkdownStyleSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownStyleSettings.html) class, see the detailed explanation in the [Customize Appearance](https://help.syncfusion.com/maui/markdownviewer/appearance) documentation. You can take your table designs further by using custom CSS through the [CssStyleRules](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownStyleSettings.html#Syncfusion_Maui_MarkdownViewer_MarkdownStyleSettings_CssStyleRules) property.
 
 This enables effects such as striped rows, rounded corners, advanced padding, and borders for maximum brand consistency. For example:
 
@@ -148,7 +148,7 @@ tr:nth-child(even) {
 
 {% endhighlight %}
 
-CSS styles provide much finer control over table appearance than the standard style properties. For thorough details on property based styling including `TableHeaderFontSize`, `TableHeaderTextColor`, and more, please refer to the [Customize Appearance](https://help.syncfusion.com/maui/markdownviewer/appearance) documentation page. When both CSS and style properties are specified, CSS will take precedence.
+CSS styles provide much finer control over table appearance than the standard style properties. For thorough details on property based styling including [TableHeaderFontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownStyleSettings.html#Syncfusion_Maui_MarkdownViewer_MarkdownStyleSettings_TableHeaderFontSize), [TableHeaderTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownStyleSettings.html#Syncfusion_Maui_MarkdownViewer_MarkdownStyleSettings_TableHeaderTextColor), and more, please refer to the [Customize Appearance](https://help.syncfusion.com/maui/markdownviewer/appearance) documentation page. When both CSS and style properties are specified, CSS will take precedence.
 
 ![Table Customization with CSS Styling](Images/maui-markdownviewer-table-styling.png)
 
