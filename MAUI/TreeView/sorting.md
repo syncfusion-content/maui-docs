@@ -13,9 +13,9 @@ The [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.Sf
 
 ## Programmatic sorting
 
-Sort items by creating a [SortDescriptor](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.SortDescriptor.html) with the property name and sort direction, and then adding it to the [SortDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SortDescriptors) collection.
+Sort items by creating a [SortDescriptor](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.SortDescriptor.html) with the property name and sort direction, and then adding it to the `SortDescriptors` collection.
 
-[SortDescriptor](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.SortDescriptor.html) object holds the following three properties:
+`SortDescriptor` object holds the following three properties:
 
 * [PropertyName](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.SortDescriptor.html#Syncfusion_TreeView_Engine_SortDescriptor_PropertyName): Describes the name of the sorted property.
 * [Direction](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.SortDescriptor.html#Syncfusion_TreeView_Engine_SortDescriptor_Direction): Describes an object of type [TreeViewSortDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.TreeViewSortDirection.html) that defines the sorting direction.
@@ -114,6 +114,6 @@ treeView.SortDescriptors.Clear();
 {% endhighlight %}
 {% endtabs %}
 
-N> When the new collection is updated to the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemsSource) , the [SortDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SortDescriptors) should be cleared and reinitialized manually based on the requirements for sorting.
+N> When the new collection is updated to the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemsSource) , the `SortDescriptors` should be cleared and reinitialized manually based on the requirements for sorting.
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/custom-sorting-in-.net-maui-treeview)
