@@ -53,7 +53,7 @@ this.dataGrid.ScrollToColumnIndex(4, ScrollToPosition.MakeVisible, true);
 
 ## Scrolling mode
 
-The `SfDataGrid` allows you to customize three different scrolling modes using the [SfDataGrid.ScrollingMode]() property. By default, the control scrolls content based on pixel values. The `ScrollingMode` property supports both vertical and horizontal scrolling. The available scrolling modes are:
+The `SfDataGrid` allows you to customize three different scrolling modes using the [SfDataGrid.ScrollingMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ScrollingMode) property. By default, the control scrolls content based on pixel values. The `ScrollingMode` property supports both vertical and horizontal scrolling. The available scrolling modes are:
 
  - Pixel
  - Line
