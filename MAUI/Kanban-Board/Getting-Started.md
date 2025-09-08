@@ -344,7 +344,7 @@ The following sample code demonstrates this process in action:
 
 {% tabs %}
 
-{% highlight XAML hl_lines="2, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 19" %}
+{% highlight XAML hl_lines="2 6 7 8 9 10 11 12 13 14 15 16 17 18 19" %}
 
 <kanban:SfKanban x:Name="kanban"
                  AutoGenerateColumns="False">
@@ -368,7 +368,7 @@ The following sample code demonstrates this process in action:
 </kanban:SfKanban>
 
 {% endhighlight %}
-{% highlight C# hl_lines="5, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 20, 21, 22, 23, 24, 26, 27, 28, 29, 30" %}
+{% highlight C# hl_lines="5 8 9 10 11 12 14 15 16 17 18 20 21 22 23 24 26 27 28 29 30" %}
 
 using Syncfusion.Maui.Kanban;
 
@@ -493,7 +493,7 @@ Alternatively, you can manually define columns by setting [`AutoGenerateColumns`
 Let’s look at the practical code example:
 
 {% tabs %}
-{% highlight XAML hl_lines="2, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26" %}
+{% highlight XAML hl_lines="2 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26" %}
 
 <kanban:SfKanban ItemsSource="{Binding TaskDetails}"
                  ColumnMappingPath="Status">
@@ -524,7 +524,7 @@ Let’s look at the practical code example:
 </kanban:SfKanban>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# hl_lines="3 4 6 8 9 10 11 14 15 17 18 21 22 24 26 29 31 32 33 34 37 38 40 41 42 45" %}
 
 SfKanban kanban = new SfKanban();
 KanbanViewModel viewModel = new KanbanViewModel();

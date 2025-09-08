@@ -19,7 +19,7 @@ Create a [.NET MAUI app](https://learn.microsoft.com/en-us/dotnet/maui/get-start
 
 ### Step 2: Set up Azure OpenAI
 
-To enable AI functionality in your .NET MAUI Scheduler, first ensure that you have access to [Azure OpenAI](https://azure.microsoft.com/en-in/products/ai-services/openai-service). In the Azure portal, create an Azure OpenAI resource and deploy a model such as GPT-35. Assign a deployment name (for example, GPT35Turbo) that you’ll reference in your application code. Finally, copy the API key and endpoint URL from the resource settings, as these are required for authentication and communication with the OpenAI service.
+To enable AI functionality in your .NET MAUI DataForm, first ensure that you have access to [Azure OpenAI](https://azure.microsoft.com/en-in/products/ai-services/openai-service). In the Azure portal, create an Azure OpenAI resource and deploy a model such as GPT-35. Assign a deployment name (for example, GPT35Turbo) that you’ll reference in your application code. Finally, copy the API key and endpoint URL from the resource settings, as these are required for authentication and communication with the OpenAI service.
 
 ### Step 3: Connect to the Azure OpenAI
 
@@ -168,7 +168,7 @@ Within the base service class (AzureBaseService), initialize the OpenAIClient wi
 
 ### Step 1: Designing the User Interface
 
-####  Editor and Button - Capturing User Prompts
+#### Editor and Button - Capturing User Prompts
 
 Use an Editor to collect natural language prompts and a Button to send the prompt to Azure OpenAI. The Editor allows users to describe the form they want, while the Button triggers the logic to process the prompt and generate the form.
 
@@ -176,25 +176,34 @@ Use an Editor to collect natural language prompts and a Button to send the promp
 
 {% highlight xaml %}
 
-                <VerticalStackLayout Margin="20" VerticalOptions="Center" HorizontalOptions="Center">
-                    <Label x:Name="describeLabel" 
-                   Text="Create AI-Powered Smart Forms in .NET MAUI for Efficient Productivity."
-                   LineBreakMode="WordWrap" FontSize="Small" FontAttributes="Bold" />
-                    <Grid ColumnDefinitions="0.7*,0.3*" Margin="10" ColumnSpacing="5">
-                        
-                            <Editor AutoSize="TextChanges" x:Name="entry" 
-                            PlaceholderColor="Gray" 
-                            VerticalOptions="Center" 
-                            HorizontalOptions="Fill" 
-                            Placeholder="Create your own data form" />
-                        <Button x:Name="createButton" 
-                        Grid.Column="1" CornerRadius="10" 
-                        HeightRequest="35" Text="&#xe784;"  
-                        FontSize="Small"
-                        FontFamily="MauiMaterialAssets" 
-                        VerticalOptions="Center" HorizontalOptions="Start" />
-                    </Grid>
-                </VerticalStackLayout>
+<VerticalStackLayout Margin="20" 
+                     VerticalOptions="Center" 
+                     HorizontalOptions="Center">
+    <Label x:Name="describeLabel" 
+           Text="Create AI-Powered Smart Forms in .NET MAUI for Efficient Productivity."
+           LineBreakMode="WordWrap" 
+           FontSize="Small" 
+           FontAttributes="Bold" />
+    <Grid ColumnDefinitions="0.7*,0.3*" 
+          Margin="10" 
+          ColumnSpacing="5">        
+        <Editor x:Name="entry" 
+                AutoSize="TextChanges"  
+                PlaceholderColor="Gray" 
+                VerticalOptions="Center" 
+                HorizontalOptions="Fill" 
+                Placeholder="Create your own data form" />
+        <Button x:Name="createButton" 
+                Grid.Column="1" 
+                CornerRadius="10" 
+                HeightRequest="35" 
+                Text="&#xe784;"  
+                FontSize="Small"
+                FontFamily="MauiMaterialAssets" 
+                VerticalOptions="Center" 
+                HorizontalOptions="Start" />
+    </Grid>
+</VerticalStackLayout>
 
 {% endhighlight %}
 
@@ -219,7 +228,7 @@ xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
 
 {% endtabs %}
 
-####  DataForm - Displaying the Generated Form
+#### DataForm - Displaying the Generated Form
 
 The SfDataForm renders the generated form dynamically based on the AI response. 
 
@@ -229,16 +238,16 @@ The SfDataForm renders the generated form dynamically based on the AI response.
 
 xmlns:dataform="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm"
 
-                    <dataform:SfDataForm x:Name="dataForm"
-                                           Grid.RowSpan="1"
-                                           Grid.Row="1" AutoGenerateItems="False"
-                                           ValidationMode="PropertyChanged"
-                                           LayoutType="TextInputLayout"
-                                           HorizontalOptions="Center">
-                        <dataform:SfDataForm.TextInputLayoutSettings>
-                            <dataform:TextInputLayoutSettings ShowHelperText="True"/>
-                        </dataform:SfDataForm.TextInputLayoutSettings>
-                    </dataform:SfDataForm>
+<dataform:SfDataForm x:Name="dataForm"
+                    Grid.RowSpan="1"
+                    Grid.Row="1" AutoGenerateItems="False"
+                    ValidationMode="PropertyChanged"
+                    LayoutType="TextInputLayout"
+                    HorizontalOptions="Center">
+    <dataform:SfDataForm.TextInputLayoutSettings>
+        <dataform:TextInputLayoutSettings ShowHelperText="True"/>
+    </dataform:SfDataForm.TextInputLayoutSettings>
+</dataform:SfDataForm>
 
 {% endhighlight %}
 
@@ -252,15 +261,21 @@ The SfAIAssistView offers contextual help, such as real-time suggestions or chat
 
 {% highlight xaml %}
 
-    <aiassistview:SfAIAssistView x:Name="aiAssistView" 
-                                 Grid.Row="1"                      HorizontalOptions="Fill"
-                                 ShowHeader="False" 
-                                 AssistItems="{Binding Messages}">
-                        <aiassistview:SfAIAssistView.Behaviors>
-                            <local:DataFormAssistViewBehavior x:Name="dataFormAssistViewModel" AIActionButton="{x:Reference aiActionButton}"  RefreshButton="{x:Reference refreshButton}" CloseButton="{x:Reference close}" 
-                                                               DataFormNameLabel="{x:Reference dataFormNameLabel}" BusyIndicator="{x:Reference busyIndicator}"  DataForm="{x:Reference dataForm}"  DataFormGeneratorModel="{x:Reference dataFormGeneratorModel}" Entry="{x:Reference entry}" CreateButton="{x:Reference createButton}"/>
-                        </aiassistview:SfAIAssistView.Behaviors>
-                    </aiassistview:SfAIAssistView>
+<aiassistview:SfAIAssistView x:Name="aiAssistView" 
+                             Grid.Row="1"                      HorizontalOptions="Fill"
+                             ShowHeader="False" 
+                             AssistItems="{Binding Messages}">
+    <aiassistview:SfAIAssistView.Behaviors>
+        <local:DataFormAssistViewBehavior x:Name="dataFormAssistViewModel"  AIActionButton="{x:Reference aiActionButton}"  
+        RefreshButton="{x:Reference refreshButton}" 
+        CloseButton="{x:Reference close}" 
+        DataFormNameLabel="{x:Reference dataFormNameLabel}" 
+        BusyIndicator="{x:Reference busyIndicator}"  
+        DataForm="{x:Reference dataForm}"  
+        DataFormGeneratorModel="{x:Reference dataFormGeneratorModel}" Entry="{x:Reference entry}" 
+        CreateButton="{x:Reference createButton}"/>
+    </aiassistview:SfAIAssistView.Behaviors>
+</aiassistview:SfAIAssistView>
 
 {% endhighlight %}
 
