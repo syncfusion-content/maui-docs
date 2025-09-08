@@ -451,10 +451,6 @@ This page lists the keys associated with each control and the respective UI elem
     <td>Defines the font family of the error icon.<br/><br/></td>
   </tr>
   <tr>
-    <td>SfAIAssistViewErrorIcon <br/><br/></td>
-    <td>Defines the actual character/glyph for the error icon.<br/><br/></td>
-  </tr>
-  <tr>
     <td>SfAIAssistViewErrorIconFontAttributes <br/><br/></td>
     <td>Defines the font attributes for the error icon.<br/><br/></td>
   </tr>
