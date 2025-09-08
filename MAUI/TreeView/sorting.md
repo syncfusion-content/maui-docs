@@ -9,17 +9,17 @@ documentation: ug
 
 # Sorting in .NET MAUI TreeView (SfTreeView)
 
-The `SfTreeView` control provides built-in support for sorting data using the `SortDescriptors` property. Items can be sorted in either ascending or descending order. Custom sorting logic is also supported to sort the items.
+The [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html) control provides built-in support for sorting data using the [SortDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SortDescriptors) property. Items can be sorted in either ascending or descending order. Custom sorting logic is also supported to sort the items.
 
 ## Programmatic sorting
 
-Sort items by creating a `SortDescriptor` with the property name and sort direction, and then adding it to the `SortDescriptors` collection.
+Sort items by creating a [SortDescriptor](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.SortDescriptor.html) with the property name and sort direction, and then adding it to the [SortDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SortDescriptors) collection.
 
-`SortDescriptor` object holds the following three properties:
+[SortDescriptor](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.SortDescriptor.html) object holds the following three properties:
 
-* `PropertyName`: Describes the name of the sorted property.
-* `Direction`: Describes an object of type `TreeViewSortDirection` that defines the sorting direction.
-* `Comparer`: Describes the comparer to be applied when sorting takes place.
+* [PropertyName](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.SortDescriptor.html#Syncfusion_TreeView_Engine_SortDescriptor_PropertyName): Describes the name of the sorted property.
+* [Direction](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.SortDescriptor.html#Syncfusion_TreeView_Engine_SortDescriptor_Direction): Describes an object of type [TreeViewSortDirection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.TreeViewSortDirection.html) that defines the sorting direction.
+* [Comparer](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.SortDescriptor.html#Syncfusion_TreeView_Engine_SortDescriptor_Comparer): Describes the comparer to be applied when sorting takes place.
 
 {% tabs %}
 {% highlight xaml hl_lines="4 5" %}
@@ -65,7 +65,7 @@ N> It is mandatory to specify the `PropertyName` of `SortDescriptor` in programm
 
 ## Custom sorting
 
-Custom sorting can be applied by assigning a comparer to the `SortDescriptor.Comparer` property and the comparer will be added to the `SortDescriptors` collection.
+Custom sorting can be applied by assigning a comparer to the [SortDescriptor.Comparer](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.SortDescriptor.html#Syncfusion_TreeView_Engine_SortDescriptor_Comparer) property and the comparer will be added to the [SortDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SortDescriptors) collection.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="9 10" %}
@@ -114,4 +114,6 @@ treeView.SortDescriptors.Clear();
 {% endhighlight %}
 {% endtabs %}
 
-N> When the new collection is updated to the `ItemsSource`, the `SortDescriptors` should be cleared and reinitialized manually based on the requirements for sorting.
+N> When the new collection is updated to the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemsSource) , the [SortDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SortDescriptors) should be cleared and reinitialized manually based on the requirements for sorting.
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/custom-sorting-in-.net-maui-treeview)

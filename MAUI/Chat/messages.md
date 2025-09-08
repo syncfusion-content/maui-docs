@@ -1316,7 +1316,7 @@ We have loaded a custom template if the message's text contains a particular tex
 
 ### Using ChatMessageTemplateSelector for custom templates
 
-Create a custom class that extends `ChatMessageTemplateSelector` and override the `OnSelectTemplate` method to return either a custom template or default templates based on the message item.
+Create a custom class that extends [ChatMessageTemplateSelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ChatMessageTemplateSelector.html) and override the `OnSelectTemplate` method to return either a custom template or default templates based on the message item.
 
 {% tabs %}
 {% highlight c# tabtitle="MessageTemplateSelector.cs" %}
@@ -1373,18 +1373,18 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/message-templat
 ## Customizable views
 
 The `SfChat` allows you to target and fully customize views within the chat control. The following views can be targeted and customized:
-- `IncomingMessageContentView` - Represents the incoming content view of the messages.
-- `IncomingMessageAuthorView` - Represents incoming message author name area.
-- `IncomingMessageAvatarView` - Represents incoming message avatar area.
-- `IncomingMessageTimestampView` - Represents incoming message timestamp area.
-- `OutgoingMessageContentView` - Represents the outgoing content view of the messages.
-- `OutgoingMessageAuthorView` - Represents outgoing message author name area.
-- `OutgoingMessageAvatarView` - Represents outgoing message avatar area.
-- `OutgoingMessageTimestampView` - Represents outgoing message timestamp area.
-- `CardButtonView` - Represents a class which contains the information about an card action button.
-- `ChatImageView` - Represents the image view of the Image message.
-- `MessageSuggestionView` - Represents a list view for displaying suggestions view specific to a message.
-- `ChatSuggestionView` - Represents a list view for displaying chat suggestions.
+- [IncomingMessageContentView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IncomingMessageContentView.html) - Represents the incoming content view of the messages.
+- [IncomingMessageAuthorView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IncomingMessageAuthorView.html) - Represents incoming message author name area.
+- [IncomingMessageAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IncomingMessageAvatarView.html) - Represents incoming message avatar area.
+- [IncomingMessageTimestampView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IncomingMessageTimestampView.html) - Represents incoming message timestamp area.
+- [OutgoingMessageContentView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.OutgoingMessageContentView.html) - Represents the outgoing content view of the messages.
+- [OutgoingMessageAuthorView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.OutgoingMessageAuthorView.html) - Represents outgoing message author name area.
+- [OutgoingMessageAvatarView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.OutgoingMessageAvatarView.html) - Represents outgoing message avatar area.
+- [OutgoingMessageTimestampView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.OutgoingMessageTimestampView.html) - Represents outgoing message timestamp area.
+- [CardButtonView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.CardButtonView.html) - Represents a class which contains the information about an card action button.
+- [ChatImageView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ChatImageView.html) - Represents the image view of the Image message.
+- [MessageSuggestionView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageSuggestionView.html) - Represents a list view for displaying suggestions view specific to a message.
+- [ChatSuggestionView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ChatSuggestionView.html) - Represents a list view for displaying chat suggestions.
 
 {% tabs %}
 {% highlight xaml hl_lines="15 31" %}
