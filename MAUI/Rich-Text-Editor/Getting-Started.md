@@ -86,7 +86,7 @@ Step 1: Add the namespace as shown in the following code sample.
 {% endhighlight %}
 {% endtabs %}
 
-Step 2: Add the **SfRichTextEditor** control with a required optimal name using the included namespace.
+Step 2: Add the [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html) control with a required optimal name using the included namespace.
 
 {% tabs %}
 
@@ -203,7 +203,7 @@ Step 1: Add the namespace as shown in the following code sample.
 {% endtabs %}
 
 
-Step 2: Add the SfRichTextEditor control with a required optimal name using the included namespace.
+Step 2: Add the [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html) control with a required optimal name using the included namespace.
 
 {% tabs %}
 
@@ -247,7 +247,7 @@ namespace RichTextEditorSample
 
 ## Enable the Toolbar
 
-The SfRichTextEditor provides a comprehensive toolbar that allows users to format their content easily. You can enable it by setting the ShowToolbar property to `True`.
+The [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html) provides a comprehensive toolbar that allows users to format their content easily. You can enable it by setting the [ShowToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_ShowToolbar) property to `True`.
 
 {% tabs %}
 
@@ -271,7 +271,7 @@ this.Content = richTextEditor;
 
 ## Customize Toolbar Items
 
-By default, the toolbar shows a predefined set of items. You can customize which items are displayed by populating the `ToolbarItems` collection.
+By default, the toolbar shows a predefined set of items. You can customize which items are displayed by populating the [ToolbarItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_ToolbarItems) collection.
 
 {% tabs %}
 
@@ -312,5 +312,5 @@ this.Content = richTextEditor;
 
 {% endtabs %}
 
-N> You can find the getting started sample of .NET MAUI SfRichTextEditor from this [link](https://github.com/SyncfusionExamples/maui-richtexteditor-samples).
+N> You can find the getting started sample of .NET MAUI SfRichTextEditor from this [link](https://github.com/SyncfusionExamples/maui-richtexteditor-samplescc).
 
