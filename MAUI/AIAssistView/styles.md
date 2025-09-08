@@ -622,6 +622,96 @@ To apply styles to the elements of a card item, set values to the in-built keys 
 {% endhighlight %}
 {% endtabs %}
 
+## Error message Styling
+
+To apply styles to the elements of an error message, you can set values to the built-in keys of the error message item in the resource dictionary.
+
+<table>
+  <tr>
+    <th>Key</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>SfAIAssistViewErrorIconColor</td>
+    <td>Defines the color of the error icon.</td>
+  </tr>
+  <tr>
+    <td>SfAIAssistViewErrorIconFontSize</td>
+    <td>Defines the font size of the error icon.</td>
+  </tr>
+  <tr>
+    <td>SfAIAssistViewErrorIconFontFamily</td>
+    <td>Defines the font family of the error icon.</td>
+  </tr>
+  <tr>
+    <td>SfAIAssistViewErrorIcon</td>
+    <td>Defines the actual character/glyph for the error icon.</td>
+  </tr>
+  <tr>
+    <td>SfAIAssistViewErrorIconFontAttributes</td>
+    <td>Defines the font attributes for the error icon.</td>
+  </tr>
+  <tr>
+    <td>SfAIAssistViewErrorMessageTextColor</td>
+    <td>Defines the text color of the error message.</td>
+  </tr>
+  <tr>
+    <td>SfAIAssistViewErrorMessageFontSize</td>
+    <td>Defines the font size of the error message.</td>
+  </tr>
+  <tr>
+    <td>SfAIAssistViewErrorMessageFontFamily</td>
+    <td>Defines the font family of the error message.</td>
+  </tr>
+  <tr>
+    <td>SfAIAssistViewErrorMessageFontAttributes</td>
+    <td>Defines the font attributes for the error message.</td>
+  </tr>
+</table>
+
+{% tabs %}
+{% highlight xaml %}
+
+    <ContentPage.Resources>
+        <syncTheme:SyncfusionThemeDictionary>
+            <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                  <Color x:Key="SfAIAssistViewErrorIconColor">#FF8C00</Color>
+                  <x:Double x:Key="SfAIAssistViewErrorIconFontSize">16</x:Double>
+                  <x:String x:Key="SfAIAssistViewErrorIconFontFamily">Roboto-Medium</x:String>
+                  <x:String x:Key="SfAIAssistViewErrorIcon">&#xe7a0</x:String>
+                  <FontAttributes x:Key="SfAIAssistViewErrorIconFontAttributes">Bold</FontAttributes>
+                  <Color x:Key="SfAIAssistViewErrorMessageTextColor">#eb5050</Color>
+                  <x:Double x:Key="SfAIAssistViewErrorMessageFontSize">14</x:Double>
+                  <x:String x:Key="SfAIAssistViewErrorMessageFontFamily">Roboto-Medium</x:String>
+                  <FontAttributes x:Key="SfAIAssistViewErrorMessageFontAttributes">Italic</FontAttributes>
+                </ResourceDictionary>
+            </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+        </syncTheme:SyncfusionThemeDictionary>
+    </ContentPage.Resources>
+
+{% endhighlight %}
+{% highlight c# %}
+
+    public MainPage()
+    {
+        ....
+        InitializeComponent();
+        dictionary.Add("SfAIAssistViewErrorIconColor", Color.FromHex("#FF8C00"));
+        dictionary.Add("SfAIAssistViewErrorIconFontSize", 16d);
+        dictionary.Add("SfAIAssistViewErrorIconFontFamily", "Roboto-Medium");
+        dictionary.Add("SfAIAssistViewErrorIcon", "\ue7a0");
+        dictionary.Add("SfAIAssistViewErrorIconFontAttributes", FontAttributes.Bold);
+        dictionary.Add("SfAIAssistViewErrorMessageTextColor", Color.FromHex("#eb5050"));
+        dictionary.Add("SfAIAssistViewErrorMessageFontSize", 14d);
+        dictionary.Add("SfAIAssistViewErrorMessageFontFamily", "Roboto-Medium");
+        dictionary.Add("SfAIAssistViewErrorMessageFontAttributes", FontAttributes.Italic);
+        ....
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Item input view styling
 
 To apply styles to the elements of the input view, set values to the in-built keys of the input view in the resource dictionary.

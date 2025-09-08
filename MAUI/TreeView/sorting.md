@@ -65,7 +65,7 @@ N> It is mandatory to specify the `PropertyName` of `SortDescriptor` in programm
 
 ## Custom sorting
 
-Custom sorting can be applied by assigning a comparer to the [SortDescriptor.Comparer](https://help.syncfusion.com/cr/maui/Syncfusion.TreeView.Engine.SortDescriptor.html#Syncfusion_TreeView_Engine_SortDescriptor_Comparer) property and the comparer will be added to the [SortDescriptors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_SortDescriptors) collection.
+Custom sorting can be applied by assigning a comparer to the `SortDescriptor.Comparer` property and the comparer will be added to the `SortDescriptors` collection.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="9 10" %}
