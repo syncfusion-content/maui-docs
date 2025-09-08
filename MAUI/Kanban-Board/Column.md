@@ -284,7 +284,7 @@ The .NET MAUI Kanban control provides flexible options to customize the appearan
 To change the background color of a column, use the `Background` property of the [`KanbanColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html) class. This allows you to visually differentiate columns based on their status.
 
 {% tabs %}
-{% highlight XAML hl_lines="9, 12, 15, 18" %}
+{% highlight XAML hl_lines="9 12 15 18" %}
 
 <kanban:SfKanban x:Name="kanban"
                  AutoGenerateColumns="False"
@@ -307,7 +307,7 @@ To change the background color of a column, use the `Background` property of the
 </kanban:SfKanban>
 
 {% endhighlight %}
-{% highlight C# hl_lines="9, 16, 23, 30" %}
+{% highlight C# hl_lines="9 16 23 30" %}
 
 SfKanban kanban = new SfKanban();
 KanbanViewModel viewModel = new KanbanViewModel();
@@ -523,7 +523,7 @@ The .NET MAUI Kanban control allows you to define a custom UI for columns that h
 The following example shows how to define a custom **no card** template using a `DataTemplate`
 
 {% tabs %}
-{% highlight XAML hl_lines="16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28" %}
+{% highlight XAML hl_lines="16 17 18 19 20 21 22 23 24 25 26 27 28" %}
 
 <kanban:SfKanban x:Name="kanban"
                  AutoGenerateColumns="False"
@@ -560,7 +560,7 @@ The following example shows how to define a custom **no card** template using a 
 </kanban:SfKanban>
 
 {% endhighlight %}
-{% highlight C# hl_lines="19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44" %}
+{% highlight C# hl_lines="19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44" %}
 
 SfKanban kanban = new SfKanban();
 KanbanViewModel viewModel = new KanbanViewModel();
@@ -793,7 +793,7 @@ public class KanbanViewModel
 The .NET MAUI Kanban control supports styling the placeholder area, where cards can be dropped during drag-and-drop operations using the `PlaceholderStyle` property of the [`KanbanColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html). This customization enhances visual clarity and improves the user experience during interactions.
 
 {% tabs %}
-{% highlight xaml hl_lines="4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 20, 24, 28, 32" %}
+{% highlight xaml hl_lines="4 5 6 7 8 9 10 11 12 13 20 24 28 32" %}
 
 <kanban:SfKanban x:Name="kanban"
                  AutoGenerateColumns="False"
@@ -830,7 +830,7 @@ The .NET MAUI Kanban control supports styling the placeholder area, where cards 
 </kanban:SfKanban>
 
 {% endhighlight %}
-{% highlight C# hl_lines="6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 22, 30, 38, 46" %}
+{% highlight C# hl_lines="6 7 8 9 10 11 12 13 14 15 22 30 38 46" %}
 
 SfKanban kanban = new SfKanban();
 KanbanViewModel viewModel = new KanbanViewModel();

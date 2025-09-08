@@ -10,7 +10,7 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 # AddNewRow in MAUI DataGrid (SfDataGrid)
 
-DataGrid provides built-in row (called AddNewRow) that allows user to add new records to underlying collection. Built-in add new row can be enabled or disabled by setting [SfDataGrid.AddNewRowPosition]() property. AddNewRowPosition also denotes the position of add new row in DataGrid.
+DataGrid provides built-in row (called AddNewRow) that allows user to add new records to underlying collection. Built-in add new row can be enabled or disabled by setting [SfDataGrid.AddNewRowPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AddNewRowPosition) property. AddNewRowPosition also denotes the position of add new row in DataGrid.
 
 When you start editing in AddNewRow, the SfDataGrid control creates an instance for the underlying data object and adds it to underlying collection when editing completed.
 
@@ -93,7 +93,7 @@ public partial class MainPage : ContentPage
 
 ## Customize the newly added row position
 
-SfDataGrid adds new data item from AddNewRow at the end of collection. When data operations (sorting, grouping) performed, the new item added based on data operations. You can customize the newly added data item position by setting [SfDataGrid.NewItemPlaceHolderPosition]().
+SfDataGrid adds new data item from AddNewRow at the end of collection. When data operations (sorting, grouping) performed, the new item added based on data operations. You can customize the newly added data item position by setting [SfDataGrid.NewItemPlaceHolderPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_NewItemPlaceholderPosition).
 
 {% tabs %}
 {% highlight xaml %}
@@ -124,7 +124,7 @@ public partial class MainPage : ContentPage
 
 ## Changing the AddNewRow default text
 
-You can change the default static string of AddNewRow in datagrid by using the [SfDataGrid.AddNewRowText]() property. The `AddNewRowText` property has higher priority than the text that is localized in resx file.
+You can change the default static string of AddNewRow in datagrid by using the [SfDataGrid.AddNewRowText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AddNewRowText) property. The `AddNewRowText` property has higher priority than the text that is localized in resx file.
 
 {% tabs %}
 {% highlight xaml %}
@@ -158,7 +158,7 @@ public partial class MainPage : ContentPage
 
 ## Initializing default values for AddNewRow
 
-SfDataGrid allows you to set the default values for AddNewRow while initiating, through [AddNewRowInitiatingEventArgs.Object]() property in [SfDataGrid.AddNewRowInitiating]() event.
+SfDataGrid allows you to set the default values for AddNewRow while initiating, through [DataGridAddNewRowInitiatingEventArgs.Object](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridAddNewRowInitiatingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridAddNewRowInitiatingEventArgs_Object) property in [SfDataGrid.AddNewRowInitiating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AddNewRowInitiating) event.
 
 {% tabs %}
 {% highlight xaml %}
@@ -230,7 +230,7 @@ private void DataGrid_AddNewRowInitiating(object? sender, DataGridAddNewRowIniti
 
 ## Add row programmatically
 
-You can commit or cancel the new record in AddNewRow by pressing the Enter and Esc key respectively. AddNewRow operations can be performed programmatically by using [DataGridAddNewRowController.CommitAddNew]() and [DataGridAddNewRowController.CancelAddNew]() methods at runtime.
+You can commit or cancel the new record in AddNewRow by pressing the Enter and Esc key respectively. AddNewRow operations can be performed programmatically by using [DataGridAddNewRowController.CommitAddNew](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridAddNewRowController.html#Syncfusion_Maui_DataGrid_DataGridAddNewRowController_CommitAddNew_Syncfusion_Maui_DataGrid_SfDataGrid_System_Boolean_) and [DataGridAddNewRowController.CancelAddNew](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridAddNewRowController.html#Syncfusion_Maui_DataGrid_DataGridAddNewRowController_CancelAddNew) methods at runtime.
 
 ### Cancel AddNewRow
 
@@ -294,7 +294,7 @@ To customize the AddNewRowText, add the default Syncfusion.SfDataGrid.WPF.resx f
 
 ### Apply implicit style
 
-DataGridAddNewRow can be customized by writing style for [DataGridAddNewRowView]() TargetType.
+DataGridAddNewRow can be customized by writing style for [DataGridAddNewRowView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridAddNewRowView.html) TargetType.
 
 {% tabs %}
 {% highlight xaml %}
@@ -317,7 +317,7 @@ DataGridAddNewRow can be customized by writing style for [DataGridAddNewRowView]
 
 ### Apply default style
 
-You can customize the AddNewRow's Background, TextColor, FontAttribute, FontFamily by using [SfDataGrid.DefaultStyle]().
+You can customize the AddNewRow's Background, TextColor, FontAttribute, FontFamily by using [SfDataGrid.DefaultStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DefaultStyle).
 
 {% tabs %}
 {% highlight xaml %}
