@@ -18,7 +18,7 @@ To show tooltips:
 
 ## Show tooltip in a header and record cell
 
-To enable tooltip for datagrid, set the `SfDataGrid.ShowToolTip` property to `true`. This will display tooltip containing cell content when users interact with the cells.
+To enable tooltip for datagrid, set the [SfDataGrid.ShowToolTip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ShowToolTip) property to `true`. This will display tooltip containing cell content when users interact with the cells.
 
 {% tabs %}
 {% highlight XAML %}
@@ -113,7 +113,7 @@ You can apply basic tooltip styling using the DefaultStyle property of SfDataGri
 
 ### Customizing the ToolTip using DataTemplate
 
-You can customize the appearance and content of tooltips by setting the `SfDataGrid.ToolTipTemplate` property.
+You can customize the appearance and content of tooltips by setting the [SfDataGrid.ToolTipTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ToolTipTemplate) property.
 
 {% tabs %}
 {% highlight XAML %}
@@ -204,13 +204,13 @@ The below image refers the `AlternateTemplate` which is applied through `ToolTip
 
 ### CellToolTipOpening event
 
-The [CellToolTipOpening]() event is raised when a tooltip is about to be displayed for a cell. The event provides [DataGridCellToolTipOpeningEventArgs]() which contains the following properties:
+The [CellToolTipOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellToolTipOpening) event is raised when a tooltip is about to be displayed for a cell. The event provides [DataGridCellToolTipOpeningEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellToolTipOpeningEventArgs.html) which contains the following properties:
 
-* [Column](): Gets the GridColumn of the cell for which the tooltip is being shown.
-* [RowData](): Gets the data associated with a specific row. 
-* [RowColumnIndex](): Gets the row and column index of the cell.
-* [ToolTipText](): Gets the text content that is displayed within the tooltip.
-* [Cancel](): Gets or sets a value indicating whether the tooltip should be displayed. Set to `true` to prevent the tooltip from showing.
+* [Column](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellToolTipOpeningEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCellToolTipOpeningEventArgs_Column): Gets the GridColumn of the cell for which the tooltip is being shown.
+* [RowData](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellToolTipOpeningEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCellToolTipOpeningEventArgs_RowData): Gets the data associated with a specific row. 
+* [RowColumnIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellToolTipOpeningEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCellToolTipOpeningEventArgs_RowColumnIndex): Gets the row and column index of the cell.
+* [ToolTipText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellToolTipOpeningEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCellToolTipOpeningEventArgs_ToolTipText): Gets the text content that is displayed within the tooltip.
+* `Cancel`: Gets or sets a value indicating whether the tooltip should be displayed. Set to `true` to prevent the tooltip from showing.
 
 {% tabs %}
 {% highlight XAML %}
