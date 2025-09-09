@@ -129,6 +129,151 @@ public class DisplayBindingConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
+### Load DataTemplate for Cells
+
+You can customize the display of any column in the `SfDataGrid` by setting the [DataGridColumn.CellTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_CellTemplate) property. This allows you to format data visually using MAUI controls and apply conditional styling using [DataTrigger](https://learn.microsoft.com/en-us/dotnet/api/system.windows.datatrigger?view=windowsdesktop-9.0) or Binding. In edit mode, the appropriate editor will be loaded based on the column type.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid x:Name="dataGrid"    
+                       ColumnWidthMode="Fill"                
+                       ItemsSource="{Binding Orders}">
+    <syncfusion:SfDataGrid.Columns>    
+        <syncfusion:DataGridNumericColumn HeaderText="Order ID" MappingName="OrderID">
+           <syncfusion:DataGridNumericColumn.CellTemplate>
+              <DataTemplate>
+                 <Label Text="{Binding OrderID}" TextColor="Red" HorizontalOptions="Center" VerticalOptions="Center"/>
+              </DataTemplate>
+           </syncfusion:DataGridNumericColumn.CellTemplate>
+        </syncfusion:DataGridNumericColumn>     
+        <syncfusion:DataGridTextColumn  HeaderText="Customer Name" MappingName="CustomerName" />
+        <syncfusion:DataGridNumericColumn HeaderText="Quantity" MappingName="Quantity" Width="150">
+            <syncfusion:DataGridNumericColumn.CellTemplate>
+                <DataTemplate>
+                    <Grid Padding="5" ColumnDefinitions="*,*" ColumnSpacing="5">
+                        <Stepper Value="{Binding Quantity, Mode=TwoWay}" Minimum="1"
+                                 Maximum="20" Increment="1" HorizontalOptions="Center"/>
+                        <Label Text="{Binding Quantity, StringFormat='Qty: {0}'}"
+                               HorizontalOptions="Center" VerticalOptions="Center" FontSize="14"
+                               TextColor="#333333" Grid.Column="1" Margin="0,5,0,0" />
+                    </Grid>
+                </DataTemplate>
+            </syncfusion:DataGridNumericColumn.CellTemplate>
+        </syncfusion:DataGridNumericColumn>
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="CellTemplate" src="Images\column-types\maui-datagrid-CellTemplate.png" width="404"/>
+
+The `SfDataGrid` also supports using a [DataTemplateSelector](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/datatemplate#choose-a-datatemplate-based-on-properties-of-the-data-object) to dynamically choose templates based on data. This is useful when you want to apply different styles or layouts depending on the properties of the data object.
+
+In the following example, a custom DataTemplateSelector is used to apply different styles based on whether the OrderID is even or odd.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <DataTemplate x:Key="DefaultTemplate">
+            <StackLayout Background="#FFF3E0" Padding="5">
+                <Label Text="{Binding OrderID}" 
+                       TextColor="#E65100"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"  
+                       VerticalTextAlignment="Center"/>
+            </StackLayout>
+        </DataTemplate>
+        <DataTemplate x:Key="AlternateTemplate">
+            <StackLayout Background="#E3F2FD" Padding="5">
+                <Label Text="{Binding OrderID}" 
+                       TextColor="#0D47A1" 
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center" 
+                       VerticalTextAlignment="Center" />
+            </StackLayout>
+        </DataTemplate>
+        <selector:CustomCellTemplateSelector x:Key="OrderTemplateSelector"
+                                             DefaultTemplate="{StaticResource DefaultTemplate}"
+                                             AlternateTemplate="{StaticResource AlternateTemplate}" />
+    </ResourceDictionary>
+</ContentPage.Resources>
+
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding Orders}"
+                       AutoGenerateColumnsMode="None">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridNumericColumn HeaderText="Order ID" 
+                                          MappingName="OrderID" 
+                                          CellTemplate="{StaticResource OrderTemplateSelector}"/>
+        <syncfusion:DataGridTextColumn HeaderText="Customer ID" MappingName="CustomerID" />
+        <syncfusion:DataGridTextColumn HeaderText="Customer Name" MappingName="CustomerName"/>                                 
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# tabtitle="TemplateSelector.cs" %}
+public class CustomCellTemplateSelector : DataTemplateSelector
+{
+    public DataTemplate DefaultTemplate { get; set; }
+    public DataTemplate AlternateTemplate { get; set; }
+
+    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
+    {
+        var order = item as OrderModel;
+        if (order != null)
+        {
+            return order.OrderID % 2 == 0 ? AlternateTemplate : DefaultTemplate;
+        }
+        return DefaultTemplate;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="CellTemplate" src="Images\column-types\maui-datagrid-column-CellTemplateSelector.png" width="404"/>
+
+#### Reuse DataTemplate for multiple columns 
+
+ To reuse a single `DataTemplate` across multiple columns, set the [DataGridColumn.SetCellBoundValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_SetCellBoundValue) property to `true`. This changes the BindingContext to a helper object with `Value` (column's mapped value) and `Record` (original data object) properties.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <DataTemplate x:Key="cellTemplate">
+            <Label Text="{Binding Path=Value}" 
+                   HorizontalOptions="CenterAndExpand" 
+                   VerticalOptions="CenterAndExpand"
+                   TextColor="#E65100"/>
+        </DataTemplate>
+    </ResourceDictionary>
+</ContentPage.Resources>
+
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridNumericColumn HeaderText="Order ID" 
+                                          MappingName="OrderID"
+                                          SetCellBoundValue="True" 
+                                          CellTemplate="{StaticResource cellTemplate}"/>
+        <syncfusion:DataGridTextColumn HeaderText="Customer ID" MappingName="CustomerID" />                                    
+        <syncfusion:DataGridTextColumn HeaderText="Customer Name" 
+                                       MappingName="CustomerName" 
+                                       SetCellBoundValue="True" 
+                                       CellTemplate="{StaticResource cellTemplate}"/>   
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="CellTemplate" src="Images\column-types\maui-datagrid-CellTemplate-Reusable.png" width="404"/>
+
+N> 
+`CellTemplate` is not supported by `DataGridCheckboxColumn`, `DataGridImageColumn` and `DataGridUnboundColumn` columns. When using complex templates, consider the impact on scrolling performance with large datasets.
+
 ### TextAlignment
 
 In order to set the TextAlignment of the header cell and data row cell , use the [DataGridColumn.HeaderTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_HeaderTextAlignment) and [DataGridColumn.CellTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_CellTextAlignment) property. The default text alignment is based on the type of the columns. The header and data rows are right aligned for numeric, date columns and left aligned for text column.
@@ -444,6 +589,9 @@ The `DataGridCheckBoxColumn` inherits all the properties of the `DataGridColumn`
 {% endtabs %}
 
 ![DataGrid with CheckBox column](Images\column-types\maui-datagrid-column-checkbox.png)
+
+N>
+By default, `DataGridCheckBoxColumn` is read-only. To enable editing and allow users to toggle the checkbox, set the AllowEditing property to true either at the column level or the grid level.
 
 ## DataGridImageColumn
 
@@ -1347,3 +1495,4 @@ The SfDataGrid allows binding the view model property to the `HeaderTemplate` by
 {% endtabs %}
 
 ![DataGrid with header template bind to view model](Images\column-types\maui-datagrid-header-template-view-model.png)
+                

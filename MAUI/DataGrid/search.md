@@ -38,12 +38,12 @@ this.dataGrid.SearchController.Search(entry.Text);
 <img alt="Enabling Filter based on Search in DataGrid" src="Images\search\maui-datagrid-search-filtering.png" width="404"/>
 
 
-You can search the data with the case-sensitivity by setting [SearchController.AllowCaseSensitiveSearch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSearchController.html#Syncfusion_Maui_DataGrid_DataGridSearchController_AllowCaseSensitive) property.
+You can search the data with the case-sensitivity by setting [SearchController.AllowCaseSensitive](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSearchController.html#Syncfusion_Maui_DataGrid_DataGridSearchController_AllowCaseSensitive) property.
 
 {% tabs %}
 {% highlight c# %}
 
-this.dataGrid.SearchController.AllowCaseSensitiveSearch = true;
+this.dataGrid.SearchController.AllowCaseSensitive = true;
 
 {% endhighlight %}
 {% endtabs %}

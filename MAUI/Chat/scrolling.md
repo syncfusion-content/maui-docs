@@ -49,6 +49,104 @@ By default, the [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cha
 {% endhighlight %}
 {% endtabs %}
 
+## Scroll to bottom button
+
+The `SfChat` control provides the option to display a scroll to bottom button by setting the `ShowScrollToBottomButton` property to `true`. This button appears when scrolled up through older messages and allows quick navigation back to the latest message in the conversation.
+
+{% tabs %}
+{% highlight xaml hl_lines="4" %}
+<sfChat:SfChat x:Name="sfChat"
+               Messages="{Binding Messages}"
+               CurrentUser="{Binding CurrentUser}"
+               ShowScrollToBottomButton="True"/>  
+
+{% endhighlight %}
+{% highlight c# hl_lines="5" %}
+
+SfChat sfChat = new SfChat();
+ViewModel viewModel = new ViewModel();
+sfChat.Messages = viewModel.Messages;
+sfChat.CurrentUser = viewModel.CurrentUser;
+sfChat.ShowScrollToBottomButton = true;
+
+{% endhighlight %}
+{% endtabs %}
+
+![Scroll to bottom button in .NET MAUI Chat](images/scrolling/maui-chat-scroll-to-bottom-button.gif)
+
+### Scroll to bottom button customization
+
+The `SfChat` control allows you to fully customize the scroll to bottom button appearance by using the `ScrollToBottomButtonTemplate` property. This property lets you define a custom view and style.
+
+{% tabs %}
+{% highlight xaml hl_lines="20" %}
+
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <DataTemplate x:Key="scrollToBottomButtonTemplate">
+            <Grid>
+                <Label Text="↓"
+                       FontSize="30"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                       ...
+            </Grid>
+        </DataTemplate>
+    </ResourceDictionary>
+</ContentPage.Resources>
+<ContentPage.Content>
+       <sfChat:SfChat x:Name="sfChat"
+                Messages="{Binding Messages}"
+                CurrentUser="{Binding CurrentUser}"
+                ShowScrollToBottomButton="True"
+                ScrollToBottomButtonTemplate="{StaticResource scrollToBottomButtonTemplate}"/>  
+</ContentPage.Content>
+
+{% endhighlight %}
+{% highlight c# hl_lines="18" %}
+
+namespace MauiChat
+{
+    public partial class MainPage : ContentPage
+    {
+        SfChat sfChat;
+        ViewModel viewModel;
+
+        public MainPage()
+        {
+            InitializeComponent();
+            this.viewModel = new ViewModel();
+
+            this.sfChat = new SfChat
+            {
+                Messages = viewModel.Messages,
+                CurrentUser = viewModel.CurrentUser,
+                ShowScrollToBottomButton = true,
+                ScrollToBottomButtonTemplate = new DataTemplate(() =>
+                {
+                    var grid = new Grid();
+                    var label = new Label
+                    {
+                        Text = "↓",
+                        FontSize = 30,
+                        FontAttributes = FontAttributes.Bold,
+                        HorizontalOptions = LayoutOptions.Center,
+                        VerticalOptions = LayoutOptions.Center
+                    };
+                    grid.Children.Add(label);
+                    return grid;
+                })
+            };
+
+            this.Content = sfChat;
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Scrolled event
 
 The [SfChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html) control comes with a built-in `Scrolled` event that will be fired whenever the chat control is scrolled. You can get the current scroll offset, whether scrolling has reached the top or bottom of the message list in the [ChatScrolledEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ChatScrolledEventArgs.html). You can handle this event to restrict the auto-scroll in chat for newly added messages, if the user had already scrolled up manually and was currently not at the bottom of the chat when the new message was added. 
