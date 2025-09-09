@@ -312,7 +312,7 @@ Use the [RemoveHyperlink(string text, string Url)](https://help.syncfusion.com/c
 {% highlight c# %}
 
 // Remove a specific hyperlink, keeping its text
-richTextEditor.RemoveHyperlink("Example", "https://www.google.com/");
+richTextEditor.RemoveHyperlink("Syncfusion", "https://www.google.com/");
 
 {% endhighlight %}
 {% endtabs %}

@@ -19,26 +19,36 @@ The following example demonstrates how to place an auto-sizing [SfRichTextEditor
 
 {% highlight xaml %}
 
-<VerticalStackLayout>
-    <rte:SfRichTextEditor x:Name="richTextEditor"
-                          EnableAutoSize="True"/>
-</VerticalStackLayout>
+<rte:SfRichTextEditor EnableAutoSize="True" />
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-VerticalStackLayout verticalStackLayout = new VerticalStackLayout();
 SfRichTextEditor richTextEditor = new SfRichTextEditor();
 richTextEditor.EnableAutoSize = true;
-verticalStackLayout.Children.Add(richTextEditor);
-this.Content = verticalStackLayout;
 
 {% endhighlight %}
 {% endtabs %}
 
-The editor will now automatically resize to match the content's height.
+When `EnableAutoSize` is active, the editor’s height will grow or shrink as content is added or removed.
 
 ![.NET MAUI Rich Text Editor with AutoSize enabled](images/richtexteditor-autosize.gif)
 
-N> When using `EnableAutoSize`, it is recommended not to set the `HeightRequest` property on the `SfRichTextEditor`, as this may interfere with the automatic resizing behavior.
+N> When using `EnableAutoSize`, it is recommended not to set the `HeightRequest` property on the `SfRichTextEditor`, as this may interfere with the automatic resizing behavior. For the best results, place the editor within a layout that can accommodate its changing height, such as a `VerticalStackLayout` inside a `ScrollView`.
+
+The following example demonstrates how to place an auto-sizing `SfRichTextEditor` within a `ScrollView`.
+
+{% tabs %}
+{% highlight xaml %}
+<ScrollView>
+    <VerticalStackLayout>
+        <Label Text="User Feedback" FontSize="Title" Padding="10"/>
+        <rte:SfRichTextEditor x:Name="richTextEditor"
+                              EnableAutoSize="True"
+                              Placeholder="Please provide your detailed feedback here..."/>
+        <Button Text="Submit" Margin="10"/>
+    </VerticalStackLayout>
+</ScrollView>
+{% endhighlight %}
+{% endtabs %}
