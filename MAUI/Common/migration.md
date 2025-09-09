@@ -538,7 +538,7 @@ We are actively working on delivering brand-new .NET MAUI controls that can be s
 			<a href="https://help.syncfusion.com/xamarin/rich-text-editor/gettingstarted">SfRichTextEditor</a><br/>
 		</td>
 		<td rowspan="1" valign="top">
-			Volume 3 2025 <br/>
-    	</td>
+			<a href="https://help.syncfusion.com/maui/rich-text-editor/migration">SfRichTextEditor</a><br/>
+		</td>
 	</tr>
 </table>

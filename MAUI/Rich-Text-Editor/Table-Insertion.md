@@ -9,14 +9,14 @@ documentation: ug
 
 # Table Insertion in .NET MAUI Rich Text Editor (SfRichTextEditor)
 
-The `SfRichTextEditor` allows users to organize content in a structured format by creating, editing, and formatting tables. Tables can be added by the end-user through the toolbar or programmatically.
+The [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html) allows users to organize content in a structured format by creating, editing, and formatting tables. Tables can be added by the end-user through the toolbar or programmatically.
 
 ## Insert a table from the toolbar
 
 The most common way to insert a table is by using the **Table** item on the toolbar. When the user taps this button, a dialog appears, allowing them to specify the number of rows and columns for the new table.
 
 
-To enable this functionality, ensure the `Table` toolbar item is included in your `ToolbarItems` collection.
+To enable this functionality, ensure the `Table` toolbar item is included in your [ToolbarItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_ToolbarItems) collection.
 
 {% tabs %}
 {% highlight xaml %}
@@ -43,7 +43,7 @@ To enable this functionality, ensure the `Table` toolbar item is included in you
 
 ## Programmatic table insertion
 
-You can insert a table into the editor programmatically using the `InsertTable` method. This method requires the number of rows and columns as arguments.
+You can insert a table into the editor programmatically using the [InsertTable](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_InsertTable_System_Int32_System_Int32_) method. This method requires the number of rows and columns as arguments.
 
 The following example demonstrates how to insert a 3x3 table at the current cursor position.
 
