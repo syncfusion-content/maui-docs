@@ -22,7 +22,7 @@ This guide introduces the integration of AI-powered Smart Paste functionality in
 
 ### Step 2: Set up Azure OpenAI
 
-To enable AI functionality in your .NET MAUI Scheduler, first ensure that you have access to [Azure OpenAI](https://azure.microsoft.com/en-in/products/ai-services/openai-service). In the Azure portal, create an Azure OpenAI resource and deploy a model such as GPT-35. Assign a deployment name (for example, GPT35Turbo) that you’ll reference in your application code. Finally, copy the API key and endpoint URL from the resource settings, as these are required for authentication and communication with the OpenAI service.
+To enable AI functionality in your .NET MAUI DataForm, first ensure that you have access to [Azure OpenAI](https://azure.microsoft.com/en-in/products/ai-services/openai-service). In the Azure portal, create an Azure OpenAI resource and deploy a model such as GPT-35. Assign a deployment name (for example, GPT35Turbo) that you’ll reference in your application code. Finally, copy the API key and endpoint URL from the resource settings, as these are required for authentication and communication with the OpenAI service.
 
 ### Step 3: Connect to the Azure OpenAI
 
@@ -220,7 +220,7 @@ Create a view model containing an instance of the model. Assign this instance to
 
 ### Step 3: Design the UI
 
-In XAML, set up the form layout - including labels, images, dataform control. Add a smart paste button that triggers that triggers the AI functionality and a submit button for data validation.
+In XAML, set up the form layout - including labels, images, dataform control. Add a smart paste button that triggers the AI functionality and a submit button for data validation.
 
 {% tabs %}
 
