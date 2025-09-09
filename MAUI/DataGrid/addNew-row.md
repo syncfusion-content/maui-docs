@@ -8,7 +8,7 @@ documentation: UG
 keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui, .net maui addnewrow, maui add new row
 ---
 
-# AddNewRow in MAUI DataGrid (SfDataGrid)
+# Add New Row in MAUI DataGrid (SfDataGrid)
 
 DataGrid provides built-in row (called AddNewRow) that allows user to add new records to underlying collection. Built-in add new row can be enabled or disabled by setting [SfDataGrid.AddNewRowPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AddNewRowPosition) property. AddNewRowPosition also denotes the position of add new row in DataGrid.
 
@@ -54,7 +54,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="addnewRowpositon-top" src="Images\addnewrow\maui-dataGrid-AddNewRowPosition-top.png" width="604"/>  
+<img alt="addnewRowpositon-top" src="Images\addnewrow\maui-dataGrid-AddNewRowPosition-top.png" width="404"/>  
 
 ## Changing the AddNewRow position
 
@@ -89,7 +89,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="addnewRowpositon-bottom" src="Images\addnewrow\maui-dataGrid-AddNewRowPosition-bottom.png" width="604"/>
+<img alt="addnewRowpositon-bottom" src="Images\addnewrow\maui-dataGrid-AddNewRowPosition-bottom.png" width="404"/>
 
 ## Customize the newly added row position
 
@@ -154,7 +154,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="addnewRow-text" src="Images\addnewrow\maui-dataGrid-AddNewRowText.png" width="604"/>  
+<img alt="addnewRow-text" src="Images\addnewrow\maui-dataGrid-AddNewRowText.png" width="404"/>  
 
 ## Initializing default values for AddNewRow
 
@@ -185,7 +185,7 @@ private void dataGrid_AddNewRowInitiating(object? sender, DataGridAddNewRowIniti
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="addnewRow-DefaultValue" src="Images\addnewrow\maui-dataGrid-DefaultValues.png" width="604"/>  
+<img alt="addnewRow-DefaultValue" src="Images\addnewrow\maui-dataGrid-DefaultValues.png" width="404"/>  
 
 ## Working with complex properties in AddNewRow
 
@@ -286,9 +286,9 @@ SfDataGrid enables you to customize the watermark text of AddNewRow by changing 
 
 To customize the AddNewRowText, add the default Syncfusion.SfDataGrid.WPF.resx file in Resources folder and then customize the value of AddNewRowText. Refer [here](https://help.syncfusion.com/maui/datagrid/localization) to learn more about localization.
 
-<img alt="addnewRow-resxfile" src="Images\addnewrow\maui-dataGrid-AddNewRow_resxfile.png" width="604"/>  
+<img alt="addnewRow-resxfile" src="Images\addnewrow\maui-dataGrid-AddNewRow_resxfile.png" width="404"/>  
 
-<img alt="addnewRow-Localization" src="Images\addnewrow\maui-dataGrid-AddNewRow_Localization.png" width="604"/> 
+<img alt="addnewRow-Localization" src="Images\addnewrow\maui-dataGrid-AddNewRow_Localization.png" width="404"/> 
 
 ## Customizing AddNewRow
 
@@ -340,7 +340,7 @@ You can customize the AddNewRow's Background, TextColor, FontAttribute, FontFami
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="addnewRow-ImplicitStyle" src="Images\addnewrow\maui-dataGrid-AddNewRow_ImplicitStyle.png" width="604"/>  
+<img alt="addnewRow-ImplicitStyle" src="Images\addnewrow\maui-dataGrid-AddNewRow_ImplicitStyle.png" width="404"/>  
 
 ## AddNewRow support in Master-Details View
 
@@ -436,7 +436,7 @@ private void DataGrid_AddNewRowInitiating(object? sender, DataGridAddNewRowIniti
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="addnewRow-MasterdetailsView" src="Images\addnewrow\maui-dataGrid-AddNewRow_MasterDetailsView.png" width="604"/> 
+<img alt="addnewRow-MasterdetailsView" src="Images\addnewrow\maui-dataGrid-AddNewRow_MasterDetailsView.png" width="404"/> 
 
 ### Changing the AddNewRow default text in details view grid
 
@@ -491,4 +491,4 @@ this.firstLevelNestedGrid.AddNewRowText = "Click here to add new row in child gr
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="addnewRow-MasterdetailsView-childtext" src="Images\addnewrow\maui-dataGrid-AddNewRow_ChildText.png" width="604"/> 
+<img alt="addnewRow-MasterdetailsView-childtext" src="Images\addnewrow\maui-dataGrid-AddNewRow_ChildText.png" width="404"/> 
