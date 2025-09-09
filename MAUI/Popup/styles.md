@@ -533,6 +533,49 @@ public partial class MainPage : ContentPage
 
 ![Displaying a .NET MAUI Popup with close button icon](Images/styles/maui-popup-with-close-button-icon.png)
 
+### Change the close button icon color
+
+You can change the close button icon color of the [SfPopup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html), please find the code example of the same below.
+
+{% tabs %}
+{% highlight xaml hl_lines="16" %}
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PopupDemo"
+             xmlns:sfPopup="clr-namespace:Syncfusion.Maui.Popup;assembly=Syncfusion.Maui.Popup"
+             x:Class="PopupDemo.MainPage">
+    <StackLayout>
+        <Button x:Name="clickToShowPopup"
+                Text="ClickToShowPopup"
+                VerticalOptions="Start"
+                HorizontalOptions="Center"
+                Clicked="ClickToShowPopup_Clicked" />
+        <sfPopup:SfPopup x:Name="popup"
+                         ShowCloseButton="True">
+            <sfPopup:SfPopup.PopupStyle>
+                <sfPopup:PopupStyle CloseIconColor="OrangeRed" />
+            </sfPopup:SfPopup.PopupStyle>
+        </sfPopup:SfPopup>
+    </StackLayout>
+</ContentPage>
+{% endhighlight %}
+{% highlight c# hl_lines="8" %}
+public partial class MainPage : ContentPage
+{
+    SfPopup popup;
+    public MainPage()
+    {
+        InitializeComponent();
+        popup = new SfPopup();
+        popup.PopupStyle.CloseIconColor = "OrangeRed"";
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+![Displaying a .NET MAUI Popup with close button icon color](Images/styles/maui-popup-with-close-button-icon-color.png)
+
 ### Set Shadow
 
 The `SfPopup` allows you to add a shadow effect to the popup view. Refer to the code example below for reference.
