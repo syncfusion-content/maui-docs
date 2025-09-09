@@ -317,7 +317,7 @@ The following image illustrates the result of the above code:
 
 ## Select text on focus
 
-The `SelectAllOnFocus` property allows you to automatically select all the text in the masked entry when the control gains focus. This can improve user efficiency by making it easy to replace the entire content. The default value of this property is `true`.
+The [SelectAllOnFocus](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_SelectAllOnFocus) property allows you to automatically select all the text in the masked entry when the control gains focus. This can improve user efficiency by making it easy to replace the entire content. The default value of this property is `false`.
 
 {% tabs %}
 {% highlight xaml %}

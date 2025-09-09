@@ -9,11 +9,11 @@ documentation: ug
 
 # Advanced Features in .NET MAUI Rich Text Editor (SfRichTextEditor)
 
-This section covers the essential properties, methods, and events of the .NET MAUI `SfRichTextEditor` for handling content and user interactions.
+This section covers the essential properties, methods, and events of the .NET MAUI [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html) for handling content and user interactions.
 
 ## Setting Text
 
-The Rich Text Editor control displays the text/formatted text(HTML string) that can be set using the `Text` property.
+The Rich Text Editor control displays the text/formatted text(HTML string) that can be set using the [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_Text) property.
 
 {% tabs %} 
 
@@ -34,7 +34,7 @@ richtexteditor.Text = "The <b>rich text editor</b> component is WYSIWYG editor t
 
 ## Retrieving HTML text
 
-The formatted text of Rich Text Editor can be retrieved using the `HtmlText` property of `SfRichTextEditor`.
+The formatted text of Rich Text Editor can be retrieved using the [HtmlText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_HtmlText) property of `SfRichTextEditor`.
 
 {% tabs %} 
 
@@ -56,7 +56,7 @@ richtexteditor.HtmlText = "The rich text editor component is WYSIWYG editor that
 
 ## Getting Selected HTML
 
-To retrieve the HTML representation of the currently selected content, use the `GetSelectedText` method.
+To retrieve the HTML representation of the currently selected content, use the [GetSelectedText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_GetSelectedText) method.
 
 {% tabs %}
 
@@ -72,9 +72,9 @@ string selectedText = await rte.GetSelectedText();
 
 You can define the default appearance for any new text typed into the editor. These settings apply to text that does not have any other specific formatting applied.
 
-*   `DefaultFontFamily`: Sets the default font family for the content.
-*   `DefaultFontSize`: Sets the default font size.
-*   `DefaultTextColor`: Sets the default color of the text.
+*   [DefaultFontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_DefaultFontFamily): Sets the default font family for the content.
+*   [DefaultFontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_DefaultFontSize): Sets the default font size.
+*   [DefaultTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_DefaultTextColor): Sets the default color of the text.
 
 {% tabs %}
 {% highlight xaml %}
@@ -99,11 +99,11 @@ richTextEditor.DefaultTextColor = Colors.DarkGreen;
 
 ## Placeholder
 
-The editor can display a `placeholder` text when the content is empty. This is useful for prompting the user. The placeholder is cleared as soon as the user starts typing.
+The editor can display a [placeholder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_Placeholder) text when the content is empty. This is useful for prompting the user. The placeholder is cleared as soon as the user starts typing.
 
-*   `PlaceholderFontFamily`: Sets the font family of the placeholder text.
-*   `PlaceholderFontSize`: Sets the font size of the placeholder text.
-*   `PlaceholderColor`: Sets the color of the placeholder text.
+*   [PlaceholderFontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_PlaceholderFontFamily) : Sets the font family of the placeholder text.
+*   [PlaceholderFontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_PlaceholderFontSize): Sets the font size of the placeholder text.
+*   [PlaceholderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_PlaceholderColor): Sets the color of the placeholder text.
 
 {% tabs %}
 
@@ -131,10 +131,9 @@ richTextEditor.PlaceholderColor = Colors.Green;
 ![.NET MAUI Rich Text Editor with Placeholder](images/richtexteditor-placeholder.png)
 
 
-
 ## Programmatic Control
 
-The `SfRichTextEditor` provides several methods to programmatically control its behavior, such as managing focus, history, and cursor position.
+The [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html) provides several methods to programmatically control its behavior, such as managing focus, history, and cursor position.
 
 ### Move Cursor to Start
 
@@ -249,11 +248,11 @@ richTextEditor.Redo();
 {% endtabs %}
 
 ## Events
-The `SfRichTextEditor` provides a variety of events to notify the changes and user interactions within the control. You can subscribe to these events to execute custom logic in response to actions like text changes, focus shifts, or hyperlink clicks.
+The [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html) provides a variety of events to notify the changes and user interactions within the control. You can subscribe to these events to execute custom logic in response to actions like text changes, focus shifts, or hyperlink clicks.
 
 ### FormatChanged Event
 
-The `FormatChanged` event is occurs when the formatting status changes. This is useful for implementing contextual formatting options.
+The [FormatChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_FormatChanged) event is occurs when the formatting status changes. This is useful for implementing contextual formatting options.
 
 {% tabs %}
 
@@ -276,7 +275,7 @@ private void OnFormatChanged(object sender, RichTextEditorFormatChangedEventArgs
 
 ### HyperlinkClicked Event
 
-The `HyperlinkClicked` event is fired when a user taps on a hyperlink within the content. The event arguments contain the URL and the text of the clicked link.
+The [HyperlinkClicked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_HyperlinkClicked) event is fired when a user taps on a hyperlink within the content. The event arguments contain the URL and the text of the clicked link.
 
 {% tabs %}
 
@@ -306,7 +305,7 @@ private void OnHyperlinkClicked(object sender, RichTextEditorHyperlinkClickedEve
 
 ### TextChanged Event
 
-The `TextChanged` event is fired whenever the content in the editor is changed. The event arguments provide the old and new HTML content.
+The [TextChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_TextChanged) event is fired whenever the content in the editor is changed. The event arguments provide the old and new HTML content.
 
 {% tabs %}
 
@@ -332,7 +331,7 @@ private void OnTextChanged(object sender, RichTextEditorTextChangedEventArgs e)
 
 ### Focused Event
 
-The `Focused` event occurs when the Rich Text Editor receives input focus.
+The [Focused](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_Focused) event occurs when the Rich Text Editor receives input focus.
 
 {% tabs %}
 
@@ -352,7 +351,7 @@ private void OnEditorFocused(object sender, EventArgs e)
 
 ### Unfocused Event
 
-The `Unfocused` event occurs when the Rich Text Editor loses input focus.
+The [Unfocused](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_Unfocused) event occurs when the Rich Text Editor loses input focus.
 
 {% tabs %}
 

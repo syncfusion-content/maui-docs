@@ -13,11 +13,11 @@ The .NET MAUI Rich Text Editor control provides extensive options for customizin
 
 ## Customizing the Toolbar
 
-The `SfRichTextEditor` toolbar is highly customizable, allowing you to control its items, styling, and position.
+The [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html) toolbar is highly customizable, allowing you to control its items, styling, and position.
 
 ### Add or Remove Toolbar Items
 
-By default, the toolbar includes a comprehensive set of formatting tools. You can specify a custom set of items by populating the `ToolbarItems` collection. This allows you to add or remove any built-in toolbar item.
+By default, the toolbar includes a comprehensive set of formatting tools. You can specify a custom set of items by populating the [ToolbarItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_ToolbarItems) collection. This allows you to add or remove any built-in toolbar item.
 
 The following items are available to be added to the `ToolbarItems` collection:
 *   `Bold`, `Italic`, `Underline`, `Strikethrough`
@@ -62,26 +62,28 @@ richTextEditor.ToolbarItems.Add(new RichTextToolbarItem() { Type = RichTextToolb
 
 ### Customize Toolbar Appearance
 
-You can customize the visual style of the toolbar using the `Toolbar` property. This gives you access to the `RichTextEditorToolbar` object, which has several properties for changing its appearance.
+You can customize the visual style of the toolbar using the `ToolbarSettings` property. This gives you access to the [RichTextEditorToolbarSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.RichTextEditorToolbarSettings.html) object, which has several properties for changing its appearance.
 
-*   `BackgroundColor`: Sets the Background color or brush of the toolbar.
-*   `TextColor`: Sets the color of the toolbar item icons.
-*   `IsScrollButtonVisible`: Sets the scroll button visibility.
-*   `SeparatorColor`: Sets the color of the separator lines between toolbar items.
-*   `SeparatorThickness`: Sets the thickness of the separator lines.
-*   `ForwardIconBackground`: Sets the background color of the forward scroll icon.
-*   `ForwardIconColor`: Sets the color of the forward scroll icon.
-*   `BackwardIconBackground`: Sets the background color of the backward scroll icon.
-*   `BackwardIconColor`: Sets the color of the backward scroll icon.
+*   [BackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Maui_RichTextEditor_RichTextEditorToolbarSettings_BackgroundColor): Sets the Background color or brush of the toolbar.
+*   [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Maui_RichTextEditor_RichTextEditorToolbarSettings_TextColor) : Sets the color of the toolbar item icons.
+*   [IsScrollButtonVisible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Maui_RichTextEditor_RichTextEditorToolbarSettings_IsScrollButtonVisible): Sets the scroll button visibility.
+*   [SeparatorColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Maui_RichTextEditor_RichTextEditorToolbarSettings_SeparatorColor): Sets the color of the separator lines between toolbar items.
+*   [SeparatorThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Maui_RichTextEditor_RichTextEditorToolbarSettings_SeparatorThickness): Sets the thickness of the separator lines.
+*   [ForwardIconBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Maui_RichTextEditor_RichTextEditorToolbarSettings_ForwardIconBackground): Sets the background color of the forward scroll icon.
+*   [ForwardIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Maui_RichTextEditor_RichTextEditorToolbarSettings_ForwardIconColor): Sets the color of the forward scroll icon.
+*   [BackwardIconBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Maui_RichTextEditor_RichTextEditorToolbarSettings_BackwardIconBackground): Sets the background color of the backward scroll icon.
+*   [BackwardIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Maui_RichTextEditor_RichTextEditorToolbarSettings_BackwardIconColor): Sets the color of the backward scroll icon.
+*   [SelectionColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Maui_RichTextEditor_RichTextEditorToolbarSettings_SelectionColor): Sets the color for toolbar text hover and selection color.
+
 
 {% tabs %}
 {% highlight xaml %}
 
 <rte:SfRichTextEditor ShowToolbar="True">
     <rte:SfRichTextEditor.ToolbarSettings>
-        <rte:RichTextEditorToolbarSettings BackgroundColor="SkyBlue"
+        <rte:RichTextEditorToolbarSettings BackgroundColor="SkyBlue" SelectionColor="Brown"
                                    TextColor="Orange" IsScrollButtonVisible="True"
-                                   SeparatorColor="Brown" SeparatorThickness="5"
+                                   SeparatorColor="Brown" SeparatorThickness="5" 
                                    ForwardIconBackground="Blue" ForwardIconColor="Green"
                                    BackwardIconBackground="Yellow" BackwardIconColor="Green"/>
     </rte:SfRichTextEditor.ToolbarSettings>
@@ -97,6 +99,7 @@ richTextEditor.ToolbarSettings = new RichTextEditorToolbarSettings
     IsScrollButtonVisible = true,
     TextColor = Colors.Orange,
     BackgroundColor = Colors.SkyBlue,
+    SelectionColor = Colors.Brown,
     SeparatorColor = Colors.Brown,
     SeparatorThickness = 5,
     ForwardIconBackground = Colors.Blue,
@@ -113,7 +116,7 @@ richTextEditor.ToolbarSettings = new RichTextEditorToolbarSettings
 
 ### Customize Toolbar Position
 
-The toolbar can be positioned at the top or bottom of the editor control using the `ToolbarPosition` property.
+The toolbar can be positioned at the top or bottom of the editor control using the [ToolbarPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_ToolbarPosition) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -132,12 +135,12 @@ richTextEditor.ToolbarPosition = RichTextEditorToolbarPosition.Bottom;
 
 ## Customizing Editor Appearance
 
-The `SfRichTextEditor` provides several properties to customize the appearance of the main editor area, including its background, border, and text wrapping behavior.
+The [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html) provides several properties to customize the appearance of the main editor area, including its background, border, and text wrapping behavior.
 
-*   `EditorBackgroundColor`: Sets the background color of the content area.
-*   `BorderColor`: Sets the color of the border around the editor control.
-*   `BorderThickness`: Sets the thickness of the border.
-*   `EnableWordWrap`: Specifies whether text should wrap when it reaches the edge of the editor. By default, this is `True`.
+*   [EditorBackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_EditorBackgroundColor): Sets the background color of the content area.
+*   [BorderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_BorderColor): Sets the color of the border around the editor control.
+*   [BorderThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_BorderThickness): Sets the thickness of the border.
+*   [EnableWordWrap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_EnableWordWrap): Specifies whether text should wrap when it reaches the edge of the editor. By default, this is `True`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -172,12 +175,12 @@ The following code examples assume you have an instance of `SfRichTextEditor` na
 
 You can easily toggle common text styles like bold, italic, and underline on the current text selection.
 
-*   `ToggleBold()`: Toggles the bold style.
-*   `ToggleItalic()`: Toggles the italic style.
-*   `ToggleUnderline()`: Toggles the underline style.
-*   `ToggleStrikethrough()`: Toggles the strikethrough style.
-*   `ToggleSubscript()`: Toggles the subscript style.
-*   `ToggleSuperscript()`: Toggles the superscript style.
+*   [ToggleBold()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_ToggleBold): Toggles the bold style.
+*   [ToggleItalic()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_ToggleItalic): Toggles the italic style.
+*   [ToggleUnderline()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_ToggleUnderline) : Toggles the underline style.
+*   [ToggleStrikethrough()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_ToggleStrikethrough): Toggles the strikethrough style.
+*   [ToggleSubscript()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_ToggleSubscript): Toggles the subscript style.
+*   [ToggleSuperscript()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_ToggleSuperscript): Toggles the superscript style.
 
 {% tabs %}
 {% highlight c# %}
@@ -198,8 +201,8 @@ richTextEditor.ToggleUnderline();
 
 You can format the selected paragraphs as a bulleted or numbered list.
 
-*   `ToggleBulletList()`: Toggles a bulleted list for the selected paragraphs.
-*   `ToggleNumberList()`: Toggles a numbered list for the selected paragraphs.
+*   [ToggleBulletList()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_ToggleBulletList): Toggles a bulleted list for the selected paragraphs.
+*   [ToggleNumberList()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_ToggleNumberedList): Toggles a numbered list for the selected paragraphs.
 
 {% tabs %}
 {% highlight c# %}
@@ -217,10 +220,10 @@ richTextEditor.ToggleNumberList();
 
 These methods allow you to set the text alignment for the selected paragraphs.
 
-*   `AlignLeft()`: Aligns the text to the left.
-*   `AlignRight()`: Aligns the text to the right.
-*   `AlignCenter()`: Centers the text.
-*   `AlignJustify()`: Justifies the text.
+*   [AlignLeft()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_AlignLeft): Aligns the text to the left.
+*   [AlignRight()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_AlignRight) : Aligns the text to the right.
+*   [AlignCenter()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_AlignCenter) : Centers the text.
+*   [AlignJustify()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_AlignJustify): Justifies the text.
 
 {% tabs %}
 {% highlight c# %}
@@ -238,11 +241,11 @@ richTextEditor.AlignRight();
 
 These methods apply a specific value for a given formatting attribute to the current selection.
 
-*   `ApplyFontFamily(string fontName)`: Applies the specified font family.
-*   `ApplyFontSize(double fontSize)`: Applies the specified font size.
-*   `ApplyTextColor(Color textColor)`: Applies the specified text color.
-*   `ApplyHighlightColor(Color highlightColor)`: Applies the specified highlight color.
-*   `ApplyParagraphFormat(RichTextEditorParagraphFormat format)`: Applies a paragraph format, such as a heading.
+*   [ApplyFontFamily(string fontName)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_ApplyFontFamily_System_String_): Applies the specified font family.
+*   [ApplyFontSize(double fontSize)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_ApplyFontSize_System_Double_): Applies the specified font size.
+*   [ApplyTextColor(Color textColor)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_ApplyTextColor_Microsoft_Maui_Graphics_Color_): Applies the specified text color.
+*   [ApplyHighlightColor(Color highlightColor)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_ApplyHighlightColor_Microsoft_Maui_Graphics_Color_): Applies the specified highlight color.
+*   [ApplyParagraphFormat(RichTextEditorParagraphFormat format)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_ApplyParagraphFormat_Syncfusion_Maui_RichTextEditor_RichTextEditorParagraphFormat_): Applies a paragraph format, such as a heading.
 
 {% tabs %}
 {% highlight c# %}
@@ -263,11 +266,11 @@ richTextEditor.ApplyParagraphFormat(RichTextEditorParagraphFormat.Heading1);
 
 ## Managing Hyperlinks
 
-The `SfRichTextEditor` allows you to programmatically insert, edit, and remove hyperlinks from the content.
+The [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html) allows you to programmatically insert, edit, and remove hyperlinks from the content.
 
 ### Insert a Hyperlink
 
-Use the `InsertHyperlink(string displayText, string Url)` method to add a new hyperlink at the current cursor position or over the selected text.
+Use the [InsertHyperlink(string displayText, string Url)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_InsertHyperlink_System_String_System_String_) method to add a new hyperlink at the current cursor position or over the selected text.
 
 *   `displayText`: The text to be displayed for the hyperlink.
 *   `Url`: The URL the hyperlink will point to.
@@ -283,7 +286,7 @@ richTextEditor.InsertHyperlink("Example", "https://example.com");
 
 ### Edit a Hyperlink
 
-Use the `EditHyperlink(string text, string oldUrl, string newUrl)` method to modify an existing hyperlink. You can change its target URL.
+Use the [EditHyperlink(string text, string oldUrl, string newUrl)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_EditHyperlink_System_String_System_String_System_String_) method to modify an existing hyperlink. You can change its target URL.
 
 *   `text`: The existing display text for the hyperlink.
 *   `oldUrl`: The original URL of the hyperlink you want to edit.
@@ -300,7 +303,7 @@ richTextEditor.InsertHyperlink("Example", "https://example.com", "https://www.go
 
 ### Remove a Hyperlink
 
-Use the `"RemoveHyperlink(string text, string Url)` method to remove a hyperlink from the document. The link's text will remain in place as plain text.
+Use the [RemoveHyperlink(string text, string Url)](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_RemoveHyperlink_System_String_System_String_) method to remove a hyperlink from the document. The link's text will remain in place as plain text.
 
 *   `text`: The display text of the hyperlink to remove.
 *   `Url`: The URL of the hyperlink to remove.
