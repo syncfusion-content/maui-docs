@@ -452,7 +452,7 @@ The following screenshot illustrates displaying summary columns with title at sa
 
 ![DataGrid with caption summary column and title](Images\caption-summary\maui-datagrid-caption-column-summary-title.png)
 
-### Limitations
+#### Limitations
 
 The following are the limitations of displaying column summary along with title at same time for DataGridSummaryRow:
 
@@ -821,7 +821,7 @@ The following screenshot illustrates displaying summary columns with title at sa
 
 ![DataGrid with group summary column and title](Images\group-summary\maui-datagrid-group-column-summary-title.png)
 
-### Limitations
+#### Limitations
 
 The following are the limitations of displaying column summary along with title at same time for DataGridSummaryRow:
 
@@ -1371,7 +1371,7 @@ The following screenshot illustrates displaying summary columns with title at sa
 
 ![DataGrid with table summary column and title](Images\table-summary\maui-datagrid-table-column-summary-title.png)
 
-### Limitations
+#### Limitations
 
 The following are the limitations of displaying column summary along with title at same time for DataGridTableSummaryRow:
 
