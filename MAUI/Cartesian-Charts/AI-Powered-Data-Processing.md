@@ -8,11 +8,11 @@ documentation: ug
 keywords: .net maui chart AI data cleaning, maui chart data, .net maui chart data preprocessing, syncfusion maui chart AI preprocessing, .net maui chart data visualization, .net maui cartesian chart AI empty point preprocessing support.
 ---
 
-# AI Powered data cleaning and preprocessing in Syncfusion .NET MAUI Cartesian Chart.
+# AI Powered data cleaning and preprocessing in .NET MAUI Chart.
 
-Raw datasets often contain missing values, outliers, or noise that can distort visualizations and analysis. This is common in web traffic data, which may have gaps or spikes. Before visualizing such data, it’s essential to clean and preprocess it.
+Raw datasets often contain missing values, outliers, or noise that can distort visualizations and analysis. This is common in web traffic data, which may have gaps or spikes. Before visualizing such data, it’s essential to clean it.
 
-This guide shows how to use Azure OpenAI to clean and preprocess e-commerce website traffic data, then visualize the results using [Syncfusion .NET MAUI Charts](https://help.syncfusion.com/maui/cartesian-charts/getting-started).
+This guide shows how to use Azure OpenAI to clean and preprocessing e-commerce website traffic data, then visualize the results using [Syncfusion .NET MAUI Charts](https://help.syncfusion.com/maui/cartesian-charts/getting-started).
 
 ## Integrating Azure OpenAI for cleaning and preprocessing the data
 
