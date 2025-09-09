@@ -9,13 +9,13 @@ documentation: ug
 
 # Image Insertion in .NET MAUI Rich Text Editor (SfRichTextEditor)
 
-The `SfRichTextEditor` supports inserting images (JPEG, PNG) into the content area. Images can be added by the end-user through the toolbar or programmatically from various sources like a stream or a file path.
+The [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html) supports inserting images (JPEG, PNG) into the content area. Images can be added by the end-user through the toolbar or programmatically from various sources like a stream or a file path.
 
 ## Insert an image from the gallery
 
-When the user taps the "Image" toolbar button, the `ImageRequested` event is triggered. You can handle this event to open the device's media gallery and insert the selected image. .NET MAUI provides a built-in `IsHandled` API to select photos from the gallery.
+When the user taps the Image toolbar button, the [ImageRequested](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_ImageRequested) event is triggered. You can handle this event to open the device's media gallery and insert the selected image. .NET MAUI provides a built-in `IsHandled` API to select photos from the gallery.
 
-The following example shows how to use the `ImageRequested` to insert an image:
+The following example shows how to use the [ImageRequested](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_ImageRequested) to insert an image:
 
 {% tabs %}
 {% highlight xaml %}
