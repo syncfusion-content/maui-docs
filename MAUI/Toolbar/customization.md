@@ -549,73 +549,73 @@ The following code sample demonstrates how to create a toolbar control with navi
 
 {% highlight c# %}
 
- public partial class MainPage : ContentPage
+public partial class MainPage : ContentPage
  {
      public MainPage()
      {
-        InitializeComponent();
-        SfToolbar toolbar = new SfToolbar();
-        toolbar.HeightRequest = 56;
-        toolbar.WidthRequest = 270;
-        toolbar.OverflowMode = ToolbarItemOverflowMode.NavigationButtons;
-        toolbar.ForwardButtonIconColor = Colors.Red;
-        toolbar.BackwardButtonIconColor = Colors.Red;
-        toolbar.ForwardButtonBackground = Colors.Aqua;
-        toolbar.BackwardButtonBackground = Colors.Aqua;
+         InitializeComponent();
+         SfToolbar toolbar = new SfToolbar();
+         toolbar.HeightRequest = 56;
+         toolbar.WidthRequest = 270;
+         toolbar.OverflowMode = ToolbarItemOverflowMode.NavigationButtons;
+         toolbar.ForwardButtonIconColor = Colors.Red;
+         toolbar.BackwardButtonIconColor = Colors.Red;
+         toolbar.ForwardButtonBackground = Colors.Aqua;
+         toolbar.BackwardButtonBackground = Colors.Aqua;
 
-        ObservableCollection<BaseToolbarItem> itemCollection = new ObservableCollection<BaseToolbarItem>();
+         ObservableCollection<BaseToolbarItem> itemCollection = new ObservableCollection<BaseToolbarItem>();
 
-        itemCollection.Add(new SfToolbarItem
-        {
-            Name = "Bold",
-            ToolTipText = "Bold",
-            Icon = new FontImageSource { Glyph = "\uE770", FontFamily = "MauiMaterialAssets" }
-        });
+         itemCollection.Add(new SfToolbarItem
+         {
+             Name = "Bold",
+             ToolTipText = "Bold",
+             Icon = new FontImageSource { Glyph = "\uE770", FontFamily = "MauiMaterialAssets" }
+         });
 
-        itemCollection.Add(new SfToolbarItem
-        {
-            Name = "Underline",
-            ToolTipText = "Underline",
-            Icon = new FontImageSource { Glyph = "\uE762", FontFamily = "MauiMaterialAssets" }
-        });
+         itemCollection.Add(new SfToolbarItem
+         {
+             Name = "Underline",
+             ToolTipText = "Underline",
+             Icon = new FontImageSource { Glyph = "\uE762", FontFamily = "MauiMaterialAssets" }
+         });
 
-        itemCollection.Add(new SfToolbarItem
-        {
-            Name = "Italic",
-            ToolTipText = "Italic",
-            Icon = new FontImageSource { Glyph = "\uE771", FontFamily = "MauiMaterialAssets" }
-        });
+         itemCollection.Add(new SfToolbarItem
+         {
+             Name = "Italic",
+             ToolTipText = "Italic",
+             Icon = new FontImageSource { Glyph = "\uE771", FontFamily = "MauiMaterialAssets" }
+         });
 
-        itemCollection.Add(new SfToolbarItem
-        {
-            Name = "AlignLeft",
-            ToolTipText = "Align-Left",
-            Icon = new FontImageSource { Glyph = "\uE751", FontFamily = "MauiMaterialAssets" }
-        });
+         itemCollection.Add(new SfToolbarItem
+         {
+             Name = "AlignLeft",
+             ToolTipText = "Align-Left",
+             Icon = new FontImageSource { Glyph = "\uE751", FontFamily = "MauiMaterialAssets" }
+         });
 
-        itemCollection.Add(new SfToolbarItem
-        {
-            Name = "AlignRight",
-            ToolTipText = "Align-Right",
-            Icon = new FontImageSource { Glyph = "\uE753", FontFamily = "MauiMaterialAssets" }
-        });
+         itemCollection.Add(new SfToolbarItem
+         {
+             Name = "AlignRight",
+             ToolTipText = "Align-Right",
+             Icon = new FontImageSource { Glyph = "\uE753", FontFamily = "MauiMaterialAssets" }
+         });
 
-        itemCollection.Add(new SfToolbarItem
-        {
-            Name = "AlignCenter",
-            ToolTipText = "Align-Center",
-            Icon = new FontImageSource { Glyph = "\uE752", FontFamily = "MauiMaterialAssets" }
-        });
+         itemCollection.Add(new SfToolbarItem
+         {
+             Name = "AlignCenter",
+             ToolTipText = "Align-Center",
+             Icon = new FontImageSource { Glyph = "\uE752", FontFamily = "MauiMaterialAssets" }
+         });
 
-        itemCollection.Add(new SfToolbarItem
-        {
-            Name = "AlignJustify",
-            ToolTipText = "Align-Justify",
-            Icon = new FontImageSource { Glyph = "\uE74F", FontFamily = "MauiMaterialAssets" }
-        });
+         itemCollection.Add(new SfToolbarItem
+         {
+             Name = "AlignJustify",
+             ToolTipText = "Align-Justify",
+             Icon = new FontImageSource { Glyph = "\uE74F", FontFamily = "MauiMaterialAssets" }
+         });
 
-        toolbar.Items = itemCollection;
-        this.Content = toolbar;
+         toolbar.Items = itemCollection;
+         this.Content = toolbar;
      }
  }
 
@@ -625,7 +625,7 @@ The following code sample demonstrates how to create a toolbar control with navi
 
 ![navigation-button-customization](images/navigation-button-customization.png)
 
-## Navigation appearance using Datatemplate
+## Navigation appearance using DataTemplate
 You can customize the navigation appearance by using the [ForwardButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ForwardButtonTemplate) and [BackwardButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_BackwardButtonTemplate) Properties.
 
 * **ForwardButtonTemplate** : This property is used to customize the forward button by provide custom views like button, label and more.
