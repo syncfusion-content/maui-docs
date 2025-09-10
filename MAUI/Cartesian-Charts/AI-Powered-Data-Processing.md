@@ -1,6 +1,6 @@
 ---
 layout: post
-title: AI powered data cleaning and preprocessing in .NET MAUI Charts | Syncfusion
+title: AI-Powered Data Cleaning in .NET MAUI Charts | Syncfusion
 description: Learn here how to create a .NET MAUI Syncfusion® smart Chart using Azure OpenAI to assist in data cleaning and preprocessing for data. 
 platform: maui
 control: SfCartesianChart

@@ -266,4 +266,4 @@ After receiving the AI-predicted stock trends, the chart updates to display both
 
 The following image demonstrates the output of the above AI powered stock forecasting .NET MAUI Candle chart.
 
-![.NET MAUI Candle chart AI Stock forecasting.](Chart_Smart_component_images/forecasting_demo.gif) 
+![.NET MAUI Candle chart AI Stock forecasting.](Chart_Smart_component_images/stock_forecasting.gif) 
