@@ -281,29 +281,29 @@ The .NET MAUI Kanban control provides flexible options to customize the appearan
 
 ### Customize the column background
 
-To change the background color of a column, use the `Background` property of the [`KanbanColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html) class. This allows you to visually differentiate columns based on their status.
+To change the background color of a column, use the [`Background`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_Background) property of the [`KanbanColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html) class. This allows you to visually differentiate columns based on their status.
 
 {% tabs %}
 {% highlight XAML hl_lines="9 12 15 18" %}
 
 <kanban:SfKanban x:Name="kanban"
-                 AutoGenerateColumns="False"
-                 ItemsSource="{Binding Cards}">
-	<kanban:SfKanban.BindingContext>
+         		 AutoGenerateColumns="False"
+         		 ItemsSource="{Binding Cards}">
+    <kanban:SfKanban.BindingContext>
         <local:KanbanViewModel />
     </kanban:SfKanban.BindingContext>
     <kanban:KanbanColumn Title="To Do"
-                         Categories="Open,Postponed"
-                         Background="#D6EAF5"/>
+                 		 Categories="Open,Postponed"
+                 		 Background="#D6EAF5"/>
     <kanban:KanbanColumn Title="In Progress"
-                         Categories="In Progress"
-                         Background="#FFF8DC"/>
+						 Categories="In Progress"
+						 Background="#FFF8DC"/>
     <kanban:KanbanColumn Title="Code Review"
-                         Categories="Code Review"
-                         Background="#FFE4E1"/>
+						 Categories="Code Review"
+						 Background="#FFE4E1"/>
     <kanban:KanbanColumn Title="Done"
-                         Categories="Closed"
-                         Background="#DCEDDC"/>
+						 Categories="Closed"
+						 Background="#DCEDDC"/>
 </kanban:SfKanban>
 
 {% endhighlight %}
@@ -458,8 +458,8 @@ public class KanbanViewModel
 			IndicatorFill = Colors.Purple,
 			Tags = new List<string> { "Bug" }
 		});
-	  
-	   cardsDetails.Add(new KanbanModel()
+
+		cardsDetails.Add(new KanbanModel()
 		{
 			ID = 6,
 			Title = "Xamarin - 6",
@@ -518,45 +518,45 @@ public class KanbanViewModel
 
 ### Customize no card appearance using DataTemplate
 
-The .NET MAUI Kanban control allows you to define a custom UI for columns that have no cards using the `NoCardTemplate` property of the [`KanbanColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html). This feature helps you display meaningful messages or visuals when a column is empty, improving the user experience.
+The .NET MAUI Kanban control allows you to define a custom UI for columns that have no cards using the [`NoCardTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_NoCardTemplate) property of the [`KanbanColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html). This feature helps you display meaningful messages or visuals when a column is empty, improving the user experience.
 
-The following example shows how to define a custom **no card** template using a `DataTemplate`
+The following example shows how to define a custom **no card** template using a `DataTemplate`.
 
 {% tabs %}
 {% highlight XAML hl_lines="16 17 18 19 20 21 22 23 24 25 26 27 28" %}
 
 <kanban:SfKanban x:Name="kanban"
-                 AutoGenerateColumns="False"
-                 ItemsSource="{Binding Cards}">
+				 AutoGenerateColumns="False"
+				 ItemsSource="{Binding Cards}">
 	<kanban:SfKanban.BindingContext>
-        <local:KanbanViewModel />
-    </kanban:SfKanban.BindingContext>
-    <kanban:KanbanColumn Title="To Do"
-                         Categories="Open,Postponed"
-                         Background="#D6EAF5"/>
-    <kanban:KanbanColumn Title="In Progress"
-                         Categories="In Progress"
-                         Background="#FFF8DC"/>
-    <kanban:KanbanColumn Title="Code Review"
-                         Categories="Code Review"
-                         Background="#FFE4E1">
+		<local:KanbanViewModel />
+	</kanban:SfKanban.BindingContext>
+	<kanban:KanbanColumn Title="To Do"
+						 Categories="Open,Postponed"
+						 Background="#D6EAF5"/>
+	<kanban:KanbanColumn Title="In Progress"
+						 Categories="In Progress"
+						 Background="#FFF8DC"/>
+	<kanban:KanbanColumn Title="Code Review"
+						 Categories="Code Review"
+						 Background="#FFE4E1">
 		<kanban:KanbanColumn.NoCardTemplate>
-            <DataTemplate>
-                <VerticalStackLayout VerticalOptions="Center">
-                    <Label Text="No code reviews pending"
-                           Margin="0,8,0,0"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center"
-                           FontSize="14"
-                           FontAttributes="Bold"
-                           TextColor="#000000" />
-                </VerticalStackLayout>
-            </DataTemplate>
-        </kanban:KanbanColumn.NoCardTemplate>
+			<DataTemplate>
+				<VerticalStackLayout VerticalOptions="Center">
+					<Label Text="No code reviews pending"
+						   Margin="0,8,0,0"
+						   HorizontalOptions="Center"
+						   VerticalOptions="Center"
+						   FontSize="14"
+						   FontAttributes="Bold"
+						   TextColor="#000000" />
+				</VerticalStackLayout>
+			</DataTemplate>
+		</kanban:KanbanColumn.NoCardTemplate>
 	</kanban:KanbanColumn>
-    <kanban:KanbanColumn Title="Done"
-                         Categories="Closed"
-                         Background="#DCEDDC"/>
+	<kanban:KanbanColumn Title="Done"
+						 Categories="Closed"
+						 Background="#DCEDDC"/>
 </kanban:SfKanban>
 
 {% endhighlight %}
@@ -564,27 +564,27 @@ The following example shows how to define a custom **no card** template using a 
 
 SfKanban kanban = new SfKanban();
 KanbanViewModel viewModel = new KanbanViewModel();
-kanban.AutoGenerateColumns = false; 
+kanban.AutoGenerateColumns = false;
 
 kanban.Columns.Add(new KanbanColumn
 {
-    Title = "To Do",
-    Categories = new List<object> { "Open", "Postponed" },
-    Background = Color.FromArgb("#D6EAF5")
+	Title = "To Do",
+	Categories = new List<object> { "Open", "Postponed" },
+	Background = Color.FromArgb("#D6EAF5")
 });
 
 kanban.Columns.Add(new KanbanColumn
 {
-    Title = "In Progress",
-    Categories = new List<object> { "In Progress" },
-    Background = Color.FromArgb("#FFF8DC")
+	Title = "In Progress",
+	Categories = new List<object> { "In Progress" },
+	Background = Color.FromArgb("#FFF8DC")
 });
 
 kanban.Columns.Add(new KanbanColumn
 {
-    Title = "Code Review",
-    Categories = new List<object> { "Code Review" },
-    Background = Color.FromArgb("#FFE4E1"),
+	Title = "Code Review",
+	Categories = new List<object> { "Code Review" },
+	Background = Color.FromArgb("#FFE4E1"),
 	NoCardTemplate = new DataTemplate(() =>
 	{
 		return new VerticalStackLayout
@@ -609,9 +609,9 @@ kanban.Columns.Add(new KanbanColumn
 
 kanban.Columns.Add(new KanbanColumn
 {
-    Title = "Done",
-    Categories = new List<object> { "Closed" },
-    Background = Color.FromArgb("#DCEDDC")
+	Title = "Done",
+	Categories = new List<object> { "Closed" },
+	Background = Color.FromArgb("#DCEDDC")
 });
 
 kanban.ItemsSource = viewModel.Cards;
@@ -690,7 +690,7 @@ public class KanbanViewModel
 			IndicatorFill = Colors.Brown,
 			Tags = new List<string> { "Story", "Kanban" }
 		});
-		
+
 		cardsDetails.Add(new KanbanModel()
 		{
 			ID = 13,
@@ -730,8 +730,8 @@ public class KanbanViewModel
 			IndicatorFill = Colors.Purple,
 			Tags = new List<string> { "Bug" }
 		});
-	  
-	   cardsDetails.Add(new KanbanModel()
+
+		cardsDetails.Add(new KanbanModel()
 		{
 			ID = 6,
 			Title = "Xamarin - 6",
@@ -790,47 +790,47 @@ public class KanbanViewModel
 
 ### Customize the placeholder style
 
-The .NET MAUI Kanban control supports styling the placeholder area, where cards can be dropped during drag-and-drop operations using the `PlaceholderStyle` property of the [`KanbanColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html). This customization enhances visual clarity and improves the user experience during interactions.
+The .NET MAUI Kanban control supports styling the placeholder area, where cards can be dropped during drag-and-drop operations using the [`PlaceholderStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_PlaceholderStyle) property of the [`KanbanColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html). This customization enhances visual clarity and improves the user experience during interactions.
 
 {% tabs %}
 {% highlight xaml hl_lines="4 5 6 7 8 9 10 11 12 13 20 24 28 32" %}
 
 <kanban:SfKanban x:Name="kanban"
-                 AutoGenerateColumns="False"
-                 ItemsSource="{Binding Cards}">
+				 AutoGenerateColumns="False"
+				 ItemsSource="{Binding Cards}">
 	<kanban:SfKanban.Resources>
-    	<kanban:KanbanPlaceholderStyle x:Key="PlaceholderStyle"
-        	                           Background="Transparent"
-            	                       SelectionIndicatorBackground="Transparent"
-                	                   SelectionIndicatorStroke="#914C00">
-        	<kanban:KanbanPlaceholderStyle.SelectionIndicatorTextStyle>
-            	<kanban:KanbanTextStyle TextColor="#914C00" />
-        	</kanban:KanbanPlaceholderStyle.SelectionIndicatorTextStyle>
-    	</kanban:KanbanPlaceholderStyle>
+		<kanban:KanbanPlaceholderStyle x:Key="PlaceholderStyle"
+									   Background="Transparent"
+									   SelectionIndicatorBackground="Transparent"
+									   SelectionIndicatorStroke="#914C00">
+			<kanban:KanbanPlaceholderStyle.SelectionIndicatorTextStyle>
+				<kanban:KanbanTextStyle TextColor="#914C00" />
+			</kanban:KanbanPlaceholderStyle.SelectionIndicatorTextStyle>
+		</kanban:KanbanPlaceholderStyle>
 	</kanban:SfKanban.Resources>
 	<kanban:SfKanban.BindingContext>
-        <local:KanbanViewModel />
-    </kanban:SfKanban.BindingContext>
-    <kanban:KanbanColumn Title="To Do"
-                         Categories="Open,Postponed"
-                         Background="#D6EAF5"
+		<local:KanbanViewModel />
+	</kanban:SfKanban.BindingContext>
+	<kanban:KanbanColumn Title="To Do"
+						 Categories="Open,Postponed"
+						 Background="#D6EAF5"
 						 PlaceholderStyle="{StaticResource PlaceholderStyle}"/>
-    <kanban:KanbanColumn Title="In Progress"
-                         Categories="In Progress"
-                         Background="#FFF8DC"
+	<kanban:KanbanColumn Title="In Progress"
+						 Categories="In Progress"
+						 Background="#FFF8DC"
 						 PlaceholderStyle="{StaticResource PlaceholderStyle}"/>
-    <kanban:KanbanColumn Title="Code Review"
-                         Categories="Code Review"
-                         Background="#FFE4E1"
+	<kanban:KanbanColumn Title="Code Review"
+						 Categories="Code Review"
+						 Background="#FFE4E1"
 						 PlaceholderStyle="{StaticResource PlaceholderStyle}"/>
-    <kanban:KanbanColumn Title="Done"
-                         Categories="Closed"
-                         Background="#DCEDDC"
+	<kanban:KanbanColumn Title="Done"
+						 Categories="Closed"
+						 Background="#DCEDDC"
 						 PlaceholderStyle="{StaticResource PlaceholderStyle}"/>
 </kanban:SfKanban>
 
 {% endhighlight %}
-{% highlight C# hl_lines="6 7 8 9 10 11 12 13 14 15 22 30 38 46" %}
+{% highlight C# hl_lines="5 6 7 8 9 10 11 12 13 14 21 29 37 45" %}
 
 SfKanban kanban = new SfKanban();
 KanbanViewModel viewModel = new KanbanViewModel();
@@ -880,7 +880,6 @@ kanban.Columns.Add(new KanbanColumn
 });
 
 kanban.ItemsSource = viewModel.Cards;
-
 this.Content = kanban;
 
 {% endhighlight %}
