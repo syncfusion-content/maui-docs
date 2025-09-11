@@ -344,7 +344,7 @@ The following sample code demonstrates this process in action:
 
 <kanban:SfKanban x:Name="kanban"
                  AutoGenerateColumns="False">
-    </kanban:SfKanban.BindingContext>
+    <kanban:SfKanban.BindingContext>
         <local:KanbanViewModel />
     </kanban:SfKanban.BindingContext>
     <kanban:SfKanban.Columns>
@@ -465,6 +465,8 @@ public class KanbanViewModel
 {% endhighlight %}
 {% endtabs %}
 
+![defining-columns-using-default-modelin-maui-kanban](images/getting-started/defining-columns-using-default-modelin-maui-kanban.png)
+
 ### Creating the custom model tasks with data mapping
 
 You can also map a custom data model to the Kanban control. The following steps demonstrate how to render tasks using the [.NET MAUI Kanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) control with corresponding custom data properties.
@@ -484,7 +486,7 @@ Alternatively, you can manually define columns by setting [`AutoGenerateColumns`
 Let’s look at the practical code example:
 
 {% tabs %}
-{% highlight XAML hl_lines="2 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26" %}
+{% highlight XAML hl_lines="2 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24" %}
 
 <kanban:SfKanban ItemsSource="{Binding TaskDetails}"
                  ColumnMappingPath="Status">
@@ -493,75 +495,70 @@ Let’s look at the practical code example:
     </kanban:SfKanban.BindingContext>
     <kanban:SfKanban.CardTemplate>
         <DataTemplate>
-            <StackLayout WidthRequest="250"
-                         Orientation="Vertical"
-                         BackgroundColor="Gray"
-                         Padding="10,10,10,10">
-                <StackLayout Orientation="Horizontal">
+            <Border Stroke="Black"
+                    StrokeThickness="1"
+                    Background="#F3CFCE">
+                <VerticalStackLayout Margin="10">
                     <Label Text="{Binding Title}"
-                           TextColor="Silver"
-                           HorizontalOptions="StartAndExpand" />
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <Label Text="{Binding Description}"
-                               WidthRequest="150"
-                               FontSize="14"
-                               TextColor="Silver"
-                               LineBreakMode="WordWrap" />
-                </StackLayout>
-            </StackLayout>
+                           HorizontalTextAlignment="Center"
+                           FontAttributes="Bold"
+                           FontSize="14" />
+                    <Label Text="{Binding Description}"
+                           HorizontalTextAlignment="Center"
+                           FontSize="12"
+                           LineBreakMode="WordWrap"
+                           Margin="5" />
+                </VerticalStackLayout>
+            </Border>
         </DataTemplate>
     </kanban:SfKanban.CardTemplate>
 </kanban:SfKanban>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3 4 5 6 7 8 9 10 11 12 14 15 16 17 18 19 21 22 24 25 26 27 29 30 31 32 33 34 35 37 38 40 41 42 43 45 46" %}
+{% highlight C# hl_lines="3 4 6 8 9 10 13 15 17 18 19 20 23 25 26 27 28 31 33 34 35 36 39 42 43" %}
 
 SfKanban kanban = new SfKanban();
 KanbanViewModel viewModel = new KanbanViewModel();
 kanban.ColumnMappingPath = "Status";
 kanban.CardTemplate = new DataTemplate(() =>
 {
-    StackLayout stackLayout = new StackLayout()
+    var titleLabel = new Label
     {
-        WidthRequest = 250,
-        Orientation = StackOrientation.Vertical,
-        Padding = new Thickness(10),
-        BackgroundColor = Colors.Gray
+        HorizontalTextAlignment = TextAlignment.Center,
+        FontAttributes = FontAttributes.Bold,
+        FontSize = 14
     };
 
-    HorizontalStackLayout titleLayout = new HorizontalStackLayout();
-    Label title = new Label()
+    titleLabel.SetBinding(Label.TextProperty, "Title");
+
+    var descriptionLabel = new Label
     {
-        TextColor = Colors.Silver,
-        HorizontalOptions = LayoutOptions.Start
+        HorizontalTextAlignment = TextAlignment.Center,
+        FontSize = 12,
+        LineBreakMode = LineBreakMode.WordWrap,
+        Margin = new Thickness(5)
     };
 
-    title.SetBinding(Label.TextProperty, new Binding("Title"));
-    titleLayout.Children.Add(title);
+    descriptionLabel.SetBinding(Label.TextProperty, "Description");
 
-    StackLayout contentLayout = new StackLayout()
+    var stackLayout = new VerticalStackLayout
     {
-        Orientation = StackOrientation.Horizontal
+        Margin = new Thickness(10),
+        Children = { titleLabel, descriptionLabel }
     };
 
-    Label description = new Label()
+    var border = new Border
     {
-        WidthRequest = 150,
-        FontSize = 14,
-        TextColor = Colors.Silver,
-        LineBreakMode = LineBreakMode.WordWrap
+        Stroke = Colors.Black,
+        StrokeThickness = 1,
+        Background = Color.FromArgb("#F3CFCE"),
+        Content = stackLayout
     };
-    
-    description.SetBinding(Label.TextProperty, new Binding("Description"));
-    contentLayout.Children.Add(description);
 
-    stackLayout.Children.Add(titleLayout);
-    stackLayout.Children.Add(contentLayout);
-    return stackLayout;
+    return border;
 });
 
-kanban.ItemsSource = viewModel.Cards;
+kanban.ItemsSource = viewModel.TaskDetails;
 this.Content = kanban;
 
 {% endhighlight %}
@@ -648,6 +645,8 @@ public class KanbanViewModel
 
 {% endhighlight %}
 {% endtabs %}
+
+![defining-columns-using-custom-modelin-maui-kanban](images/getting-started/defining-columns-using-custom-modelin-maui-kanban.png)
 
 N> When using a custom data model, the default card UI is not applicable. You must define a custom `DataTemplate` using the [`CardTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_CardTemplate) property to render the card content appropriately.
 

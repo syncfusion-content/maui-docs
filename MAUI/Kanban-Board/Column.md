@@ -342,7 +342,6 @@ kanban.Columns.Add(new KanbanColumn
 });
 
 kanban.ItemsSource = viewModel.Cards;
-
 this.Content = kanban;
 
 {% endhighlight %}
@@ -515,6 +514,8 @@ public class KanbanViewModel
 
 {% endhighlight %}
 {% endtabs %}
+
+![column-background-customization-in-maui-kanban](images/column/column-background-customization-in-maui-kanban.png)
 
 ### Customize no card appearance using DataTemplate
 
@@ -788,6 +789,8 @@ public class KanbanViewModel
 {% endhighlight %}
 {% endtabs %}
 
+![no-card-appearance-in-maui-kanban](images/column/no-card-appearance-in-maui-kanban.png)
+
 ### Customize the placeholder style
 
 The .NET MAUI Kanban control supports styling the placeholder area, where cards can be dropped during drag-and-drop operations using the [`PlaceholderStyle`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_PlaceholderStyle) property of the [`KanbanColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html). This customization enhances visual clarity and improves the user experience during interactions.
@@ -800,8 +803,8 @@ The .NET MAUI Kanban control supports styling the placeholder area, where cards 
 				 ItemsSource="{Binding Cards}">
 	<kanban:SfKanban.Resources>
 		<kanban:KanbanPlaceholderStyle x:Key="PlaceholderStyle"
-									   Background="Transparent"
-									   SelectionIndicatorBackground="Transparent"
+									   Background="#FAC7AD"
+									   SelectionIndicatorBackground="#FAC7AD"
 									   SelectionIndicatorStroke="#914C00">
 			<kanban:KanbanPlaceholderStyle.SelectionIndicatorTextStyle>
 				<kanban:KanbanTextStyle TextColor="#914C00" />
@@ -838,12 +841,12 @@ kanban.AutoGenerateColumns = false;
 
 KanbanPlaceholderStyle placeholderStyle = new KanbanPlaceholderStyle
 {
-    Background = Colors.Transparent,
-    SelectionIndicatorBackground = Colors.Transparent,
-    SelectionIndicatorStroke = Color.FromArgb("#FFB77F"),
+    Background = Color.FromArgb("#FAC7AD"),
+    SelectionIndicatorBackground = Color.FromArgb("#FAC7AD"),
+    SelectionIndicatorStroke = Color.FromArgb("#914C00"),
     SelectionIndicatorTextStyle = new KanbanTextStyle
     {
-        TextColor = Color.FromArgb("#FFB77F")
+        TextColor = Color.FromArgb("#914C00")
     }
 };
 
@@ -945,3 +948,5 @@ public class KanbanViewModel
 
 {% endhighlight %}
 {% endtabs %}
+
+![placeholder-style-in-maui-kanban](images/column/placeholder-style-in-maui-kanban.png)
