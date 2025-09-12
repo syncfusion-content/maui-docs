@@ -441,7 +441,7 @@ public partial class MainPage : ContentPage
 
 ## Applying row hover background color
  
-You can enable row hover highlighting effect by setting `AllowRowHoverHighlighting` property to `true`. The default value is `false`. Also, you can change the mouse hover background color using the `RowHoveredBackground` property of [SfDataGrid.DefaultStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DefaultStyleProperty).
+You can enable row hover highlighting effect by setting [AllowRowHoverHighlighting](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowRowHoverHighlighting) property to `true`. The default value is `false`. Also, you can change the mouse hover background color using the [RowHoveredBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_RowHoveredBackground) property of [SfDataGrid.DefaultStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DefaultStyleProperty).
  
 {% tabs %}
 {% highlight xaml hl_lines="5 7" %}
