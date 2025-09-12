@@ -430,7 +430,7 @@ The `SfAIAssistView` control includes a built-in event called [CardTapped](https
 
 ## Show error response
 
-The `SfAIAssistView` allows to display error responses by setting the error text to the `AssistItem.ErrorMessage` property, ensuring clear notification when an error occurs during AI interactions.
+The `SfAIAssistView` allows to display error responses by setting the error text to the [AssistItem.ErrorMessage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.IAssistItem.html#Syncfusion_Maui_AIAssistView_IAssistItem_ErrorMessage) property, ensuring clear notification when an error occurs during AI interactions.
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="36" %}

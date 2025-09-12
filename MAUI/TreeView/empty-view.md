@@ -9,7 +9,7 @@ documentation: ug
 
 # Empty view in .NET MAUI TreeView (SfTreeView)
 
-The `SfTreeView` control allows you to display and customize the empty view content when no data is available. The `EmptyView` property can be set to either a string or a view, and it will be displayed when the `ItemsSource` is empty or null, or the `Nodes` collection is empty. `EmptyViewTemplate` is used to customize the appearance of `EmptyView`.
+The [SfTreeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html) control allows you to display and customize the empty view content when no data is available. The [EmptyView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_EmptyView) property can be set to either a string or a view, and it will be displayed when the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ItemsSource) is empty or null, or the [Nodes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_Nodes) collection is empty. [EmptyViewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_EmptyViewTemplate) is used to customize the appearance of `EmptyView`.
 
 ## Display a string when TreeView has no items
 
@@ -159,3 +159,5 @@ treeView.EmptyViewTemplate = new DataTemplate(() =>
 N>
 * The `EmptyViewTemplate` will only be applied when the `EmptyView` property is explicitly defined. If `EmptyView` is not set, the template will not be displayed.
 * `EmptyView` can be set to custom data model and the appearance of the `EmptyView` can be customized by using the `EmptyViewTemplate`.
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/how-to-display-empty-view-when-.net-maui-treeview-has-no-items)
