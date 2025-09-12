@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About .NET MAUI Barcode Generator control | Syncfusion<sup>&reg;</sup>
-description: Learn here all about introduction of Syncfusion<sup>&reg;</sup> .NET MAUI Barcodes(SfBarcodeGenerator) control with key features and more.
+title: About .NET MAUI Barcode Generator control | Syncfusion
+description: Learn here all about introduction of Syncfusion .NET MAUI Barcodes(SfBarcodeGenerator) control with key features and more.
 platform: maui
 control: SfBarcodeGenerator
 documentation: ug
