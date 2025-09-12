@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Chart control | Syncfusion
+title: Getting Started with .NET MAUI Pyramid Chart control | Syncfusion
 description: Learn here all about getting started with Syncfusion® .NET MAUI Chart (SfPyramidChart) control, its elements, and more.
 platform: maui
 control: SfPyramidChart
@@ -210,6 +210,103 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 {% endtabcontent %}
+
+{% tabcontent JetBrains Rider %}
+
+## Prerequisites
+
+Before proceeding, ensure the following are set up:
+
+1. Ensure you have the latest version of JetBrains Rider.
+2. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
+3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
+
+## Step 1: Create a new .NET MAUI Project
+
+1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
+2. Enter the Project Name, Solution Name, and Location.
+3. Select the .NET framework version and click Create.
+
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Charts NuGet Package
+
+1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
+2. Search for [Syncfusion.Maui.Charts](https://www.nuget.org/packages/Syncfusion.Maui.Charts/) and install the latest version.
+3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
+
+## Step 3: Register the handler
+
+Syncfusion.Maui.Core nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
+
+{% tabs %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="6 17" %}
+
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Syncfusion.Maui.Core.Hosting;
+
+namespace ChartGettingStarted
+{
+    public static class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+            .UseMauiApp<App>()
+            .ConfigureSyncfusionCore()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+            });
+
+            return builder.Build();
+        }
+    }
+}
+
+{% endhighlight %} 
+{% endtabs %}
+
+## Step 4: Add .NET MAUI Pyramid Chart
+
+1. To initialize the control, import the `Syncfusion.Maui.Charts` namespace.
+2. Initialize [SfPyramidChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html).
+
+{% tabs %} 
+{% highlight xaml %}
+
+<ContentPage   
+    . . .
+    xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+
+    <chart:SfPyramidChart/>
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.Charts;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        this.InitializeComponent();
+        SfPyramidChart chart = new SfPyramidChart();
+        this.Content = chart;
+    }
+}   
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
 {% endtabcontents %}
 
 ### Initialize view model
