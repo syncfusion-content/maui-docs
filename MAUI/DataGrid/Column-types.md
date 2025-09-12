@@ -68,8 +68,8 @@ The following table describes the types of columns and their usage:
 <td>To display a ComboBox within each cell</td>
 </tr>
 <tr>
-<td>{{`DataGridPickerColumn`| markdownify }}</td>
-<td>{{'[DataGridPickerCellRenderer]'| markdownify }}</td>
+<td>{{'[DataGridPickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridPickerColumn.html)'| markdownify }}</td>
+<td>{{'[DataGridPickerCellRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridPickerCellRenderer.html)'| markdownify }}</td>
 <td>Picker</td>
 <td>To display a Picker within each cell</td>
 </tr>
@@ -1168,7 +1168,7 @@ The [DataGridComboBoxColumn.CanFilterSuggestions](https://help.syncfusion.com/cr
 
 ## DataGridPickerColumn
 
-The `DataGridPickerColumn` inherits all the properties of the [SfDataGrid.DataGridColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html). It displays a list of items in the form of a [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html) as the content of a column. To enable or disable editing for a particular column, set the [DataGridColumn.AllowEditing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_AllowEditing) property to true or false. When in editing mode, it displays a `SfPicker` element. The data source for the `SfPicker` can be set using the `DataGridPickerColumn.ItemsSource` property. The picker column can be populated with data in the following ways:
+The [DataGridPickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridPickerColumn.html) inherits all the properties of the [SfDataGrid.DataGridColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html). It displays a list of items in the form of a [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html) as the content of a column. To enable or disable editing for a particular column, set the [DataGridColumn.AllowEditing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_AllowEditing) property to true or false. When in editing mode, it displays a `SfPicker` element. The data source for the `SfPicker` can be set using the [DataGridPickerColumn.ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridPickerColumn.html#Syncfusion_Maui_DataGrid_DataGridPickerColumn_ItemsSourceProperty) property. The picker column can be populated with data in the following ways:
 
 * Collection of primitive types
 * Collection of user-defined types (custom objects)
@@ -1177,9 +1177,9 @@ The `DataGridPickerColumn` inherits all the properties of the [SfDataGrid.DataGr
 
 ### Collection of primitive types
 
-To display the collection of items in the Picker drop-down, create a `DataGridPickerColumn` and set its `ItemsSource` property to a simple collection.
+To display the collection of items in the Picker drop-down, create a [DataGridPickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridPickerColumn.html) and set its [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridPickerColumn.html#Syncfusion_Maui_DataGrid_DataGridPickerColumn_ItemsSourceProperty) property to a simple collection.
 
-To load the `DataGridPickerColumn` with a simple string collection, you can refer to the code example below:
+To load the [DataGridPickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridPickerColumn.html) with a simple string collection, you can refer to the code example below:
 
 {% tabs %}
 {% highlight xaml %}
@@ -1253,7 +1253,7 @@ public class ViewModel
 
 ### Collection of user-defined types
 
-To display a list of user-defined items in the picker, create a `DataGridPickerColumn` and set its `ItemsSource` property to a user-defined collection. By default, if the `DisplayMemberPath` is not set, the picker column will display the values from the `MappingName` property of the column.
+To display a list of user-defined items in the picker, create a [DataGridPickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridPickerColumn.html) and set its [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridPickerColumn.html#Syncfusion_Maui_DataGrid_DataGridPickerColumn_ItemsSourceProperty) property to a user-defined collection. By default, if the [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridPickerColumn.html#Syncfusion_Maui_DataGrid_DataGridPickerColumn_DisplayMemberPathProperty) is not set, the picker column will display the values from the `MappingName` property of the column.
 
 #### Display member path
 
@@ -1265,11 +1265,11 @@ Once editing completed, the column having the `MappingName` equal to the `ValueM
 
 ### Loading different ItemSource for each row of DataGridPickerColumn
 
-To load different ItemSources for each row of a DataGridPickerColumn, you can utilize the `DataGridPickerColumn.ItemsSourceSelector` property.
+To load different ItemSources for each row of a DataGridPickerColumn, you can utilize the [DataGridPickerColumn.ItemsSourceSelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridPickerColumn.html#Syncfusion_Maui_DataGrid_DataGridPickerColumn_ItemsSourceSelectorProperty) property.
 
 ### Implementing IItemsSourceSelector
 
-`DataGridPickerColumn.ItemsSourceSelector` needs to implement the IItemsSourceSelector interface, which requires you to implement the GetItemsSource method. This method receives the following parameters:
+[DataGridPickerColumn.ItemsSourceSelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridPickerColumn.html#Syncfusion_Maui_DataGrid_DataGridPickerColumn_ItemsSourceSelectorProperty) needs to implement the IItemsSourceSelector interface, which requires you to implement the GetItemsSource method. This method receives the following parameters:
 
 * Record: This is the data object associated with the row.
 * Data Context: This is the binding context of the data grid.
