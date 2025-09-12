@@ -103,7 +103,7 @@ public class MainPage : ContentPage
 
 ## Setting DisplayMemberPath
  
-The `DisplayMemberPath` property in the SfListView provides a simple and efficient way to display a specific property from business objects without creating custom item template. This feature is especially useful for simple lists where you want to display a single property without defining a custom template.
+The [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_DisplayMemberPath) property in the SfListView provides a simple and efficient way to display a specific property from business objects without creating custom item template. This feature is especially useful for simple lists where you want to display a single property without defining a custom template.
  
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
