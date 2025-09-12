@@ -97,3 +97,5 @@ The following output shows how these style settings enhance the appearance of re
 ![Sample markdown content appearance customization](images/maui-markdown-viewer-appearance.png)
 
 With [MarkdownStyleSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownStyleSettings.html), you gain full control over how Markdown content looks in your .NET MAUI app, whether you're building a documentation viewer, a note-taking app, or a styled content portal.
+
+N> Always specify the font size with the "px" unit (e.g., H1FontSize="32px") to ensure consistent rendering across all platforms.
