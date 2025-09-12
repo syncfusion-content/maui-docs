@@ -333,86 +333,90 @@ Next, create a view model class and initialize the collection of [AssistItem](ht
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
+using Syncfusion.Maui.AIAssistView;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 
-  using Syncfusion.Maui.AIAssistView;
-  public class GettingStartedViewModel : INotifyPropertyChanged
-  {
-      /// <summary>
-      /// Collection of assistItem in a conversation.
-      /// </summary>
-      private ObservableCollection<IAssistItem> assistItems;
+namespace GettingStarted.ViewModel;
+
+public class GettingStartedViewModel : INotifyPropertyChanged
+{
+    /// <summary>
+    /// Collection of assistItem in a conversation.
+    /// </summary>
+    private ObservableCollection<IAssistItem> assistItems;
 
 
-      public GettingStartedViewModel()
-      {
-          this.assistItems = new ObservableCollection<IAssistItem>();
-          this.GenerateAssistItems();
-      }
+    public GettingStartedViewModel()
+    {
+        this.assistItems = new ObservableCollection<IAssistItem>();
+        this.GenerateAssistItems();
+    }
 
-      /// <summary>
-      /// Gets or sets the collection of AssistItem of a conversation.
-      /// </summary>
-      public ObservableCollection<IAssistItem> AssistItems
-      {
-          get
-          {
-              return this.assistItems;
-          }
+    /// <summary>
+    /// Gets or sets the collection of AssistItem of a conversation.
+    /// </summary>
+    public ObservableCollection<IAssistItem> AssistItems
+    {
+        get
+        {
+            return this.assistItems;
+        }
 
-          set
-          {
-              this.assistItems = value;
-          }
-      }
+        set
+        {
+            this.assistItems = value;
+        }
+    }
 
-      private async void GenerateAssistItems()
-      {
+    private async void GenerateAssistItems()
+    {
         // Adding a request item
         AssistItem requestItem = new AssistItem()
         {
-            Text = "listening", 
+            Text = "listening",
             IsRequested = true
         };
- 
+
         // Add the request item to the collection
         this.AssistItems.Add(requestItem);
- 
+
         // Generating response item
         await GetResult(requestItem);
-      }
- 
-     private async Task GetResult(AssistItem requestItem)
-     {
+    }
+
+    private async Task GetResult(AssistItem requestItem)
+    {
         await Task.Delay(1000).ConfigureAwait(true);
- 
+
         AssistItem responseItem = new AssistItem()
         {
-            Text ="Types of Listening : For a good communication, it is not only enough to convey the information efficiently, but it also needs to include good listening skill. Common types of Listening are Active listening and Passive listening.",
-            IsRequested = false, 
+            Text = "Types of Listening : For a good communication, it is not only enough to convey the information efficiently, but it also needs to include good listening skill. Common types of Listening are Active listening and Passive listening.",
+            IsRequested = false,
         };
- 
+
         // Add the response item to the collection
         this.AssistItems.Add(responseItem);
-     }
+    }
 
-      /// <summary>
-      /// Property changed handler.
-      /// </summary>
-      public event PropertyChangedEventHandler PropertyChanged;
+    /// <summary>
+    /// Property changed handler.
+    /// </summary>
+    public event PropertyChangedEventHandler PropertyChanged;
 
-      /// <summary>
-      /// Occurs when property is changed.
-      /// </summary>
-      /// <param name="propName">changed property name</param>
-      public void RaisePropertyChanged(string propName)
-      {
-          if (this.PropertyChanged != null)
-          {
-              this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
-          }
-      }
+    /// <summary>
+    /// Occurs when property is changed.
+    /// </summary>
+    /// <param name="propName">changed property name</param>
+    public void RaisePropertyChanged(string propName)
+    {
+        if (this.PropertyChanged != null)
+        {
+            this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
+        }
+    }
 
-   }
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -443,18 +447,22 @@ To populate AI AssistView, bind the assist items in ViewModel to [AssistItems](h
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# hl_lines="8" %}
- public partial class MainPage : ContentPage 
- {
+{% highlight c# hl_lines="12" %}
+using GettingStarted.ViewModel;
+using Syncfusion.Maui.AIAssistView;
+
+namespace GettingStarted;
+public partial class MainPage : ContentPage
+{
     public MainPage()
     {
         InitializeComponent();
         SfAIAssistView aiAssistView = new SfAIAssistView();
         GettingStartedViewModel viewModel = new GettingStartedViewModel();
-        this.aiAssistView.AssistItems = viewModel.AssistItems;
+        aiAssistView.AssistItems = viewModel.AssistItems;
         this.Content = aiAssistView;
     }
-  }
+}
 {% endhighlight %}
 {% endtabs %}
 

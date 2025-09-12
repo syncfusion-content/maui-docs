@@ -256,7 +256,7 @@ using System;
 
 namespace GettingStarted
 {
-    public class MainPage : ContentPage
+    public partial class MainPage : ContentPage
     {
         public MainPage()
         {
@@ -275,7 +275,7 @@ namespace GettingStarted
             var sanFrancisco = new TreeViewNode() { Content = "San Francisco" };
             usa.ChildNodes.Add(newYork);
             usa.ChildNodes.Add(california);
-            California.ChildNodes.Add(sanFrancisco);
+            california.ChildNodes.Add(sanFrancisco);
             treeView.Nodes.Add(australia);
             treeView.Nodes.Add(usa);
 
@@ -305,6 +305,8 @@ Create a simple data model as shown in the following code example, and save it a
 
 {% tabs %}
 {% highlight c# tabtitle="FileManager.cs" %}
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 public class FileManager : INotifyPropertyChanged
 {
    private string itemName;
@@ -317,7 +319,7 @@ public class FileManager : INotifyPropertyChanged
       set
       {
          subFiles = value;
-         RaisedOnPropertyChanged("SubFiles");
+         RaisedOnPropertyChanged(nameof(SubFiles));
       }
    }
 
@@ -327,7 +329,7 @@ public class FileManager : INotifyPropertyChanged
       set
       {
          itemName = value;
-         RaisedOnPropertyChanged("ItemName");
+         RaisedOnPropertyChanged(nameof(ItemName));
       }
    }
  
@@ -337,7 +339,7 @@ public class FileManager : INotifyPropertyChanged
        set
        {
           imageIcon = value;
-          RaisedOnPropertyChanged("ImageIcon");
+          RaisedOnPropertyChanged(nameof(ImageIcon));
        }
    }
 
@@ -363,6 +365,7 @@ Create a model repository class with `ImageNodeInfo` collection property initial
 
 {% tabs %}
 {% highlight c# tabtitle="FileManagerViewModel.cs" %}
+using System.Collections.ObjectModel;
 public class FileManagerViewModel
 {
    private ObservableCollection<FileManager> imageNodeInfo;
@@ -421,7 +424,7 @@ public class FileManagerViewModel
       download.SubFiles = new ObservableCollection<FileManager>
       {
          tutorials,
-         TypeScript,
+         typeScript,
          uiGuide
       };
 
@@ -530,7 +533,7 @@ public class Folder : INotifyPropertyChanged
         set
         {
             files = value;
-            RaisedOnPropertyChanged("Files");
+            RaisedOnPropertyChanged(nameof(Files));
         }
     }
 
@@ -540,7 +543,7 @@ public class Folder : INotifyPropertyChanged
         set
         {
             itemName = value;
-            RaisedOnPropertyChanged("ItemName");
+            RaisedOnPropertyChanged(nameof(ItemName));
         }
     }
 
@@ -550,7 +553,7 @@ public class Folder : INotifyPropertyChanged
         set
         {
             imageIcon = value;
-            RaisedOnPropertyChanged("ImageIcon");
+            RaisedOnPropertyChanged(nameof(ImageIcon));
         }
     }
 
@@ -581,7 +584,7 @@ public class File : INotifyPropertyChanged
         set
         {
             subFiles = value;
-            RaisedOnPropertyChanged("SubFiles");
+            RaisedOnPropertyChanged(nameof(SubFiles));
         }
     }
 
@@ -591,7 +594,7 @@ public class File : INotifyPropertyChanged
         set
         {
             itemName = value;
-            RaisedOnPropertyChanged("ItemName");
+            RaisedOnPropertyChanged(nameof(ItemName));
         }
     }
 
@@ -601,7 +604,7 @@ public class File : INotifyPropertyChanged
         set
         {
             imageIcon = value;
-            RaisedOnPropertyChanged("ImageIcon");
+            RaisedOnPropertyChanged(nameof(ImageIcon));
         }
     }
 
@@ -631,7 +634,7 @@ public class SubFile : INotifyPropertyChanged
         set
         {
             itemName = value;
-            RaisedOnPropertyChanged("ItemName");
+            RaisedOnPropertyChanged(nameof(ItemName));
         }
     }
 
@@ -641,7 +644,7 @@ public class SubFile : INotifyPropertyChanged
         set
         {
             imageIcon = value;
-            RaisedOnPropertyChanged("ImageIcon");
+            RaisedOnPropertyChanged(nameof(ImageIcon));
         }
     }
 
@@ -717,7 +720,6 @@ public class FileManagerViewModel
 
         download.Files = new ObservableCollection<File>
         {
-            games,
             tutorials,
             typeScript,
             uiGuide
@@ -804,7 +806,7 @@ namespace GettingStarted
        treeView.ItemsSource = viewModel.Folders; 
        var propertyDescriptor = new HierarchyPropertyDescriptors();
        propertyDescriptor.Add(new Syncfusion.TreeView.Engine.HierarchyPropertyDescriptor() { TargetType = typeof(Folder), ChildPropertyName = "Files" });
-       propertyDescriptor.Add(new Syncfusion.TreeView.Engine.HierarchyPropertyDescriptor() { TargetType = typeof(Files), ChildPropertyName = "SubFiles" });
+       propertyDescriptor.Add(new Syncfusion.TreeView.Engine.HierarchyPropertyDescriptor() { TargetType = typeof(File), ChildPropertyName = "SubFiles" });
        treeView.HierarchyPropertyDescriptors = propertyDescriptor;
        this.Content = treeView;
     }
@@ -822,92 +824,90 @@ N> By default, the binding context for each tree view item will be the data mode
 The following code example demonstrates how to customize your content view using the `ItemTemplate` and `ExpanderTemplate` property in both XAML and C#.
 
 {% tabs %}
-{% highlight xaml hl_lines="13 35" %}
+{% highlight xaml hl_lines="14 36" %}
 <ContentPage  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.TreeView;assembly=Syncfusion.Maui.TreeView"
-             xmlns:local="clr-namespace:GettingStarted.ViewModel"
+             xmlns:local="clr-namespace:GettingStarted"
              x:Class="GettingStarted.MainPage">
     <ContentPage.BindingContext>
-       <local:FileManagerViewModel x:Name="viewModel"></local:FileManagerViewModel>
+        <local:FileManagerViewModel x:Name="viewModel"/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-       <syncfusion:SfTreeView x:Name="treeView" 
+        <syncfusion:SfTreeView x:Name="treeView" 
                               ItemsSource="{Binding ImageNodeInfo}"
+                              ChildPropertyName="SubFiles"
                               ItemTemplateContextType="Node">
             <syncfusion:SfTreeView.ItemTemplate>
                 <DataTemplate>
-                           <Grid x:Name="grid" RowSpacing="0" 
-                                 BackgroundColor="Transparent">
-                              <Grid Padding="5,5,5,5">
-                                  <Image Source="{Binding Content.ImageIcon}" 
-                                         VerticalOptions="Center"
-                                         HorizontalOptions="Center" 
-                                         HeightRequest="35" 
-                                         WidthRequest="35"/>
-                              </Grid>
-                              <Grid Grid.Column="1" 
-                                    RowSpacing="1"
-                                    Padding="1,0,0,0"
-                                    VerticalOptions="Center">
-                              <Label LineBreakMode="NoWrap" 
-                                     Text="{Binding Content.ItemName}" 
-                                     VerticalTextAlignment="Center"/>
-                              </Grid>
-                           </Grid>
+                    <Grid x:Name="grid" RowSpacing="0"
+                          BackgroundColor="Transparent">
+                        <Grid Padding="5,5,5,5">
+                            <Image Source="{Binding Content.ImageIcon}" 
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center" 
+                                   HeightRequest="35" 
+                                   WidthRequest="35"/>
+                        </Grid>
+                        <Grid Grid.Column="1" 
+                              RowSpacing="1"
+                              Padding="1,0,0,0"
+                              VerticalOptions="Center">
+                            <Label LineBreakMode="NoWrap" 
+                                   Text="{Binding Content.ItemName}" 
+                                   VerticalTextAlignment="Center"/>
+                        </Grid>
+                    </Grid>
                 </DataTemplate>
             </syncfusion:SfTreeView.ItemTemplate>
             <syncfusion:SfTreeView.ExpanderTemplate>
                 <DataTemplate>
-                            <Image IsVisible="{Binding HasChildNodes,Converter={StaticResource IconVisibleConverter}}" 
-                                   Source="{ Binding IsExpanded,Converter={StaticResource ExpanderIconConverter}}"
-                                   VerticalOptions="Center" 
-                                   HorizontalOptions="Center"/>
+                    <Image Source="expander.png"
+                           VerticalOptions="Center" 
+                           HorizontalOptions="Center"/>
                 </DataTemplate>
             </syncfusion:SfTreeView.ExpanderTemplate>
-       </syncfusion:SfTreeView>
+        </syncfusion:SfTreeView>
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
-{% highlight c# hl_lines="14 28" %}
+{% highlight c# hl_lines="16 30" %}
 using Syncfusion.Maui.TreeView;
 
 namespace GettingStarted
 {
     public partial class MainPage : ContentPage
     {
-        InitializeComponent();
-
-        SfTreeView treeView = new SfTreeView();
-        FileManagerViewModel viewModel = new FileManagerViewModel();
-        treeView.ItemsSource = viewModel.ImageNodeInfo; 
-        treeView.ChildPropertyName = "SubFiles";
-        treeView.ItemTemplateContextType = ItemTemplateContextType.Node;
-        treeView.ItemTemplate = new DataTemplate(() => 
+        public MainPage()
         {
-            HorizontalStackLayout stack = new HorizontalStackLayout();
-            var imageIcon = new Image { WidthRequest = 24, HeightRequest = 24 };
-            imageIcon.SetBinding(Image.SourceProperty, new Binding("Content.ImageIcon"));
-            var itemName = new Label { FontSize = 15, VerticalTextAlignment=TextAlignment.Center, Padding=5 };
-            itemName.SetBinding(Label.TextProperty, new Binding("Content.ItemName"));
+            InitializeComponent();
 
-            stack.Children.Add(imageIcon);
-            stack.Children.Add(itemName);
+            SfTreeView treeView = new SfTreeView();
+            FileManagerViewModel viewModel = new FileManagerViewModel();
+            treeView.ItemsSource = viewModel.ImageNodeInfo;
+            treeView.ChildPropertyName = "SubFiles";
+            treeView.ItemTemplateContextType = ItemTemplateContextType.Node;
+            treeView.ItemTemplate = new DataTemplate(() =>
+            {
+                HorizontalStackLayout stack = new HorizontalStackLayout();
+                var imageIcon = new Image { WidthRequest = 24, HeightRequest = 24 };
+                imageIcon.SetBinding(Image.SourceProperty, new Binding("Content.ImageIcon"));
+                var itemName = new Label { FontSize = 15, VerticalTextAlignment = TextAlignment.Center, Padding = 5 };
+                itemName.SetBinding(Label.TextProperty, new Binding("Content.ItemName"));
 
-            return stack;
-        });
+                stack.Children.Add(imageIcon);
+                stack.Children.Add(itemName);
 
-        treeView.ExpanderTemplate = new DataTemplate(()=>
-        {
-            var grid = new Grid();
-            var expanderIcon = new Image();
-            expanderIcon.SetBinding(Image.SourceProperty, new Binding("IsExpanded"));
-            expanderIcon.SetBinding(Image.IsVisibleProperty, new Binding("HasChildNodes"));
-            grid.Children.Add(expanderIcon);
-            return grid;
-        });
+                return stack;
+            });
 
-        this.Content = treeView;
+            treeView.ExpanderTemplate = new DataTemplate(() =>
+            {
+                return new Image() { Source = "expander.png" };
+            });
+
+            this.Content = treeView;
+        }
     }
 }
 
