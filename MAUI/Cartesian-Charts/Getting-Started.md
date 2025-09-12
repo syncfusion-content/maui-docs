@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with .NET MAUI Chart control | Syncfusion
+title: Getting started with .NET MAUI Cartesian Chart control | Syncfusion
 description: This section explains about the getting started with Syncfusion® MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
@@ -10,7 +10,7 @@ keywords: .net maui cartesian chart, .net maui charting, cartesian chart maui, s
 
 > **Notice**: After **Volume 1 2025 (Mid of March 2025)**, feature enhancements for this control will no longer be available in the Syncfusion® package. Please switch to the **Syncfusion® Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
 
-# Getting Started with .NET MAUI Chart
+# Getting Started with .NET MAUI Cartesian Chart 
 
 This section explains how to populate the Cartesian chart with data, a title, data labels, a legend, and tooltips, as well as the essential aspects for getting started with the chart.
 

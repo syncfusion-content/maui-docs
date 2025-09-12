@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Chart Control | Syncfusion
+title: Getting Started with .NET MAUI Polar Chart Control | Syncfusion
 description: This section explains about the getting started with Syncfusion® .NET MAUI Chart (SfPolarChart) control.
 platform: maui
 control: SfPolarChart
@@ -9,7 +9,7 @@ documentation: ug
 
 > **Notice**: After **Volume 1 2025 (Mid of March 2025)**, feature enhancements for this control will no longer be available in the Syncfusion® package. Please switch to the **Syncfusion® Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
 
-# Getting Started with .NET MAUI Chart
+# Getting Started with .NET MAUI Polar Chart
 
 This section explains how to populate the Polar chart with data, a title, data labels, a legend, tooltips, and markers. It also covers the essential aspects of getting started with the chart.
 

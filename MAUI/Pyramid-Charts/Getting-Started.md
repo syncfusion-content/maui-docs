@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Chart control | Syncfusion
+title: Getting Started with .NET MAUI Pyramid Chart control | Syncfusion
 description: Learn here all about getting started with Syncfusion® .NET MAUI Chart (SfPyramidChart) control, its elements, and more.
 platform: maui
 control: SfPyramidChart
