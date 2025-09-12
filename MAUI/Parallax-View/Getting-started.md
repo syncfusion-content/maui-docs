@@ -233,7 +233,7 @@ Before proceeding, ensure the following are set up:
 
 ## Step 3: Register the handler
 
-Syncfusion.Maui.Core Nuget is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
+Syncfusion.Maui.Core NuGet is a dependent package for all Syncfusion<sup>®</sup> controls of .NET MAUI. In the **MauiProgram.cs** file, register the handler for Syncfusion<sup>®</sup> core.
 
 {% tabs %}
 {% highlight C# tabtitle="MauiProgram.cs" hl_lines="2 13" %}
@@ -266,7 +266,7 @@ namespace ParallaxViewGettingStarted
 
 ## Step 4: Add .NET MAUI Parallax View
 
-1. To initialize the control, import the `Synfusion.Maui.ParallaxView` namespace.
+1. To initialize the control, import the `Syncfusion.Maui.ParallaxView` namespace.
 2. Initialize [SfParallaxView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ParallaxView.SfParallaxView.html).
 
 {% tabs %} 
