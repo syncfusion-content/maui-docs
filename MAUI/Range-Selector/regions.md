@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Regions in.NET MAUI Range Selector control | Syncfusion®
-description: Learn here all about the Regions and its customization feature of .NET MAUI Range Selector (SfRangeSelector) control and more.
+title: Regions in .NET MAUI Range Selector Control | Syncfusion®
+description: Learn about the Regions and their customization features in the .NET MAUI Range Selector (SfRangeSelector) control.
 platform: maui
 control: SfRangeSelector
 documentation: ug
@@ -9,15 +9,13 @@ documentation: ug
 
 # Regions in Range Selector (SfRangeSelector)
 
-This section explains how to customize the active and inactive regions in the Range Selector control.
+This section explains how to customize the active and inactive regions within the Range Selector control.
 
-## Region color
+## Region Color
 
-Change the color of the active and inactive regions using the [`ActiveRegionFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSelectorBase-1.html#Syncfusion_Maui_Sliders_RangeSelectorBase_1_ActiveRegionFill) and [`InactiveRegionFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSelectorBase-1.html#Syncfusion_Maui_Sliders_RangeSelectorBase_1_InactiveRegionFill) properties of the [`RangeSelectorBase`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSelectorBase-1.html) class. The default value of the [`ActiveRegionFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSelectorBase-1.html#Syncfusion_Maui_Sliders_RangeSelectorBase_1_ActiveRegionFill) and the [`InactiveRegionFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSelectorBase-1.html#Syncfusion_Maui_Sliders_RangeSelectorBase_1_InactiveRegionFill) properties are `SolidColorBrush(Colors.Transparent)` and `SolidColorBrush(Color.FromRgba(255, 255, 255, 192)` respectively.
+The color of the active and inactive regions can be modified using the [`ActiveRegionFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSelectorBase-1.html#Syncfusion_Maui_Sliders_RangeSelectorBase_1_ActiveRegionFill) and [`InactiveRegionFill`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSelectorBase-1.html#Syncfusion_Maui_Sliders_RangeSelectorBase_1_InactiveRegionFill) properties of the [`RangeSelectorBase`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSelectorBase-1.html) class. By default, `ActiveRegionFill` is set to `SolidColorBrush(Colors.Transparent)`, and `InactiveRegionFill` is `SolidColorBrush(Color.FromRgba(255, 255, 255, 192))`.
 
-The active side of the Range Selector is between the start and the end thumbs.
-
-The inactive side of the Range Selector is between the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum) value and the left thumb and the right thumb and the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum) value.
+The active region spans between the start and end thumbs, while the inactive regions are between the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum) value and the left thumb, and the right thumb and the [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum) value.
 
 {% tabs %}
 
@@ -54,7 +52,7 @@ rangeSelector.Content = chart;
 
 ![RangeSelector region color](images/regions/region_color.png)
 
-## Region stroke
+## Region Stroke
 
 Change the stroke color of the active and inactive regions using the [`ActiveRegionStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSelectorBase-1.html#Syncfusion_Maui_Sliders_RangeSelectorBase_1_ActiveRegionStroke) and [`InactiveRegionStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSelectorBase-1.html#Syncfusion_Maui_Sliders_RangeSelectorBase_1_InactiveRegionStroke) properties of the [`RangeSelectorBase`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSelectorBase-1.html) class. The default value of the [`ActiveRegionStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSelectorBase-1.html#Syncfusion_Maui_Sliders_RangeSelectorBase_1_ActiveRegionStroke) and the [`InactiveRegionStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSelectorBase-1.html#Syncfusion_Maui_Sliders_RangeSelectorBase_1_InactiveRegionStroke) properties are `SolidColorBrush(Colors.Transparent)` and `SolidColorBrush(Colors.Transparent)` respectively.
 
@@ -101,7 +99,7 @@ rangeSelector.Content = chart;
 
 ![RangeSelector region stroke](images/regions/region_stroke.png)
 
-## Region stroke thickness
+## Region Stroke Thickness
 
 Change the stroke thickness of the active and inactive regions using the [`ActiveRegionStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSelectorBase-1.html#Syncfusion_Maui_Sliders_RangeSelectorBase_1_ActiveRegionStrokeThickness) and [`InactiveRegionStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSelectorBase-1.html#Syncfusion_Maui_Sliders_RangeSelectorBase_1_InactiveRegionStrokeThickness) properties of the [`RangeSelectorBase`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSelectorBase-1.html) class. The default value of the [`ActiveRegionStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSelectorBase-1.html#Syncfusion_Maui_Sliders_RangeSelectorBase_1_ActiveRegionStrokeThickness) and the [`InactiveRegionStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSelectorBase-1.html#Syncfusion_Maui_Sliders_RangeSelectorBase_1_InactiveRegionStrokeThickness) properties is `Thickness(1)`.
 

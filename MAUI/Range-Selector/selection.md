@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Range selection in .NET MAUI Range Selector control | Syncfusion®
-description: Learn here all about range selection of Syncfusion® .NET MAUI Range Selector (SfRangeSelector) control and more.
+title: Range Selection in .NET MAUI Range Selector Control | Syncfusion®
+description: Learn about range selection in the Syncfusion® .NET MAUI Range Selector (SfRangeSelector) control and its functionalities.
 platform: maui
 control: SfRangeSelector
 documentation: ug
 ---
 
-# Range selection in .NET MAUI Range Selector (SfRangeSelector)
+# Range Selection in .NET MAUI Range Selector (SfRangeSelector)
 
-This section helps to learn about the range selection in the Range Selector.
+This section provides insight into range selection within the Range Selector.
 
-## Discrete selection
+## Discrete Selection
 
-Move the thumb in discrete manner for numeric values using the [`StepSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.INumericElement.html#Syncfusion_Maui_Sliders_INumericElement_StepSize) property in the Range Selector.
+Use the [`StepSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.INumericElement.html#Syncfusion_Maui_Sliders_INumericElement_StepSize) property to move the thumb discretely for numeric values in the Range Selector.
 
 {% tabs %}
 
@@ -67,7 +67,7 @@ rangeSelector.Content = chart;
 
 ## Interval Selection
 
-Both the thumbs are moved to the selected interval if the [EnableIntervalSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_EnableIntervalSelection) property is true, otherwise the nearest thumb is moved to the touch position.
+This selection mode moves both thumbs to the selected interval when the [`EnableIntervalSelection`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_EnableIntervalSelection) property is set to `true`. Otherwise, the nearest thumb moves to the touch position.
 
 {% tabs %}
 
@@ -115,11 +115,11 @@ rangeSelector.Content = chart;
 
 ![RangeSelector EnableIntervalSelection](images/selection/enableintervalselection.gif)
 
-## DragBehavior
+## Drag Behavior
 
 ### OnThumb
 
-When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_DragBehavior) is set to [OnThumb](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDragBehavior.html#Syncfusion_Maui_Sliders_SliderDragBehavior_OnThumb), the individual thumb can be moved based on the dragging. By default, the [OnThumb](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDragBehavior.html#Syncfusion_Maui_Sliders_SliderDragBehavior_OnThumb) is used as drag behavior.
+With [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_DragBehavior) set to [OnThumb](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDragBehavior.html#Syncfusion_Maui_Sliders_SliderDragBehavior_OnThumb), you can move each thumb individually by dragging. This is the default drag behavior.
 
 {% tabs %}
 
@@ -170,7 +170,7 @@ rangeSelector.Content = chart;
 
 ### BetweenThumbs
 
-When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_DragBehavior) is set to [BetweenThumbs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDragBehavior.html#Syncfusion_Maui_Sliders_SliderDragBehavior_BetweenThumbs), both the thumbs can be moved at the same time without changing the range between the start and end thumbs. This behavior has been considered without the Range Selector thumb radius. It is not possible to move the individual thumb when setting this behavior.
+When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_DragBehavior) is set to [BetweenThumbs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDragBehavior.html#Syncfusion_Maui_Sliders_SliderDragBehavior_BetweenThumbs), both thumbs move together without altering the range between them. Individual thumb movement isn't possible with this setting.
 
 {% tabs %}
 
@@ -221,7 +221,7 @@ rangeSelector.Content = chart;
 
 ### Both
 
-When the  [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_DragBehavior) is set to [Both](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDragBehavior.html#Syncfusion_Maui_Sliders_SliderDragBehavior_Both), the individual thumb can be moved, and also both the thumbs can be moved at the same time without changing the range between the start and end thumbs.
+Setting the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_DragBehavior) to [Both](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDragBehavior.html#Syncfusion_Maui_Sliders_SliderDragBehavior_Both) allows both individual thumb movement and simultaneous thumb movement without changing the range between them.
 
 {% tabs %}
 
@@ -272,11 +272,11 @@ rangeSelector.Content = chart;
 
 ![RangeSelector DragBehavior](images/selection/drag_behavior.gif)
 
-## Deferred update
+## Deferred Update
 
-You can control when the dependent components are updated while thumbs are being dragged continuously. It can be achieved by setting the `EnableDeferredUpdate` property and the delay in the update can be achieved by setting the `DeferredUpdateDelay` property. The default value of the `DeferredUpdateDelay` property is `500` milliseconds.
+Control when dependent components are updated while thumbs are continuously dragged by setting the `EnableDeferredUpdate` property. The delay can be configured via the `DeferredUpdateDelay` property. Its default is `500` milliseconds.
 
-It invokes the `ValueChanging` event when the thumb is dragged and held for the duration specified in the `DeferredUpdateDelay`. However, the values are immediately updated in touch-up action.
+This triggers the `ValueChanging` event when thumbs are dragged and held for the specified delay duration, but values update immediately upon touch-up action.
 
 {% tabs %}
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migrate from Xamarin SfRangeSlider to .NET MAUI SfSlider | Syncfusion® 
-description: Learn here all about Migrating from Syncfusion® Xamarin RangeSlider to Syncfusion® .NET MAUI Slider control and more.
+description: Learn how to migrate from Syncfusion® Xamarin RangeSlider to Syncfusion® .NET MAUI Slider control.
 platform: MAUI
 control: SfSlider
 documentation: ug
@@ -9,10 +9,10 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfRangeSlider to .NET MAUI SfSlider 
 
-In Xamarin.Forms, the Range Slider and Slider are combined as the [Xamarin Range Slider](https://www.syncfusion.com/xamarin-ui-controls/xamarin-range-slider). But in MAUI, separate controls for Range Slider and Slider to make the control architecture more clear and user-friendly. In Xamarin.Forms, set the [ShowRange](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_AllowDragRange) of Range Slider to false to get a single thumb slider. But in MAUI, you have the following two controls, which will always have a single thumb.
+In Xamarin.Forms, the Range Slider and Slider are combined as the [Xamarin Range Slider](https://www.syncfusion.com/xamarin-ui-controls/xamarin-range-slider). But in .NET MAUI, there are separate controls for Range Slider and Slider to provide a clearer and user-friendly control architecture. In Xamarin.Forms, the [ShowRange](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_AllowDragRange) property of Range Slider can be set to false to get a single thumb slider. However, in .NET MAUI, you have the following two controls, each with a single thumb:
 
-1. SfDateTimeSlider – For date-time scale.
-2. SfSlider – For numeric scale.
+1. SfDateTimeSlider – For date-time scales.
+2. SfSlider – For numeric scales.
 
 ## Namespaces 
 

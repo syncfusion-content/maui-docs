@@ -1,7 +1,7 @@
 ---
 layout: post
-title: .NET MAUI Slider control | Syncfusion®
-description: Learn here all about introduction of Syncfusion® .NET MAUI Slider (SfDateTimeSlider) control with key features and more.
+title: .NET MAUI Slider Control | Syncfusion®
+description: Discover an introduction to the Syncfusion® .NET MAUI Slider (SfDateTimeSlider) control, including its key features.
 platform: maui
 control: SfDateTimeSlider
 documentation: ug
@@ -9,14 +9,13 @@ documentation: ug
 
 # .NET MAUI DateTime Slider Overview
 
-The Syncfusion<sup>®</sup> .NET MAUI DateTime Slider ([SfDateTimeSlider](https://www.syncfusion.com/maui-controls/maui-slider)) is a highly interactive UI control, allowing users to select a single value from a range of values.
+The Syncfusion<sup>®</sup> .NET MAUI DateTime Slider ([SfDateTimeSlider](https://www.syncfusion.com/maui-controls/maui-slider)) is a highly interactive UI control that allows users to select a single value from a range of values.
 
-## Key features
+## Key Features
 
-* **DateTime support** - Provided functionality for selecting DateTime values. 
-* **Orientation** - Supports both horizontal and vertical orientations.
-* **Labels** - Render labels for date values with the option to customize their formats based on your requirements.
-* **Ticks and dividers** - Provided an option to show ticks and dividers based on the slider interval. Also, minor ticks can be enabled to indicate the values between each interval. These options present the selected value in a more intuitive way for end users.
-* **Discrete mode** - Able to move the thumb in a discrete manner based on the provided step value.
-* **Tooltip** - Render a tooltip to show the selected value clearly.
-
+- **DateTime Support**: Enables selection of DateTime values.
+- **Orientation**: Supports both horizontal and vertical orientations.
+- **Labels**: Renders labels for date values, with customization options to fit user needs.
+- **Ticks and Dividers**: Allows displaying ticks and dividers based on slider intervals. Minor ticks can also be enabled to indicate values between intervals, making value selection more intuitive for users.
+- **Discrete Mode**: Enables discrete thumb movement based on a specified step value.
+- **Tooltip**: Displays a tooltip to clearly show the selected value.
