@@ -515,7 +515,7 @@ Let’s look at the practical code example:
 </kanban:SfKanban>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3 4 6 8 9 10 13 15 17 18 19 20 23 25 26 27 28 31 33 34 35 36 39 42 43" %}
+{% highlight C# hl_lines="3 4 5 6 7 8 9 10 11 13 15 16 17 18 19 20 21 23 25 26 27 28 29 31 32 33 34 35 36 37 39 40 42 43" %}
 
 SfKanban kanban = new SfKanban();
 KanbanViewModel viewModel = new KanbanViewModel();
