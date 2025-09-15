@@ -28,14 +28,18 @@ To get started, ensure you have access to [Azure OpenAI](https://azure.microsoft
 
 internal class AzureOpenAIService
 {
-    const string endpoint = "https://{YOUR_END_POINT}.openai.azure.com";
-    const string deploymentName = "GPT35Turbo";
 
-    string key = "";
+    internal const string Endpoint = "YOUR_END_POINT_NAME";
 
-    public AzureOpenAIService(string key)
+    internal const string DeploymentName = "DEPLOYMENT_NAME";
+
+    internal const string ImageDeploymentName = "IMAGE_DEPOLYMENT_NAME";
+
+    internal const string Key = "API_KEY";
+
+    public AzureOpenAIService()
     {
-        this. Key = key;
+
     }
 }
 
@@ -213,3 +217,5 @@ You can also provide a button or menu option for users to trigger data cleaning 
 The following image demonstrates the output of the above AI powered stock forecating .NET MAUI Candle chart.
 
 ![Ai smart data processing in .NET MAUI Chart](Chart_Smart_component_images/dataprocessing.png)
+
+For more information, please visit the [GitHub Sample](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SmartComponents/SampleBrowser.Maui.SmartComponents/Samples/SmartComponents/DataPreprocessing)

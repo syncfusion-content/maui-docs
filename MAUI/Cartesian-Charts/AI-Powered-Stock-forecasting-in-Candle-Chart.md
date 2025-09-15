@@ -26,14 +26,18 @@ Ensure you have access to [Azure OpenAI](https://azure.microsoft.com/en-in/produ
 
 internal class AzureOpenAIService
 {
-    const string endpoint = "https://{YOUR_END_POINT}.openai.azure.com";
-    const string deploymentName = "GPT35Turbo";
 
-    string key = "";
+    internal const string Endpoint = "YOUR_END_POINT_NAME";
 
-    public AzureOpenAIService(string key)
+    internal const string DeploymentName = "DEPLOYMENT_NAME";
+
+    internal const string ImageDeploymentName = "IMAGE_DEPOLYMENT_NAME";
+
+    internal const string Key = "API_KEY";
+
+    public AzureOpenAIService()
     {
-        this. Key = key;
+
     }
 }
 
@@ -90,29 +94,25 @@ Request predictions from Azure OpenAI using the 'GetChatCompletionsAsync':
 . . .
 public Task<ObservableCollection<DataModel>> GetAnswerFromGPT(string userPrompt, ViewModel viewModel, int index)
 {
-    var client = new OpenAIClient(new Uri(endpoint), new AzureKeyCredential(key));
-
-    var chatCompletionsOptions = new ChatCompletionsOptions
-    {
-        DeploymentName = deploymentName,
-        Temperature = (float)0.5,
-        MaxTokens = 800,
-        NucleusSamplingFactor = (float)0.95,
-        FrequencyPenalty = 0,
-        PresencePenalty = 0,
-    };
-
-    // Add the system message and user message to the options.
-    chatCompletionsOptions.Messages.Add(new ChatRequestUserMessage(userPrompt));
     try
     {
-        var response = client.GetChatCompletionsAsync(chatCompletionsOptions);
-        var content = response.Value.Choices[0].Message.Content;
+        if (IsCredentialValid && Client != null)
+        {
+            ChatHistory = string.Empty;
+            // Add the system message and user message to the options
+            ChatHistory = ChatHistory + userPrompt;
+            var response = await Client.CompleteAsync(ChatHistory);
+
+            //Helps to convert the response to respective data model
+            return this.ConvertToCompaniesModelCollection(response.ToString());
+        }
     }
     catch (Exception)
     {
-        return Task.FromResult(viewModel.GenerateDataSource(index));
+        return viewModel.GenerateDataSource();
     }
+
+    return viewModel.GenerateDataSource();
 }
 
 {% endhighlight %}
@@ -154,6 +154,8 @@ public class ViewModel : INotifyPropertyChanged
        }
     }
     
+    // Helps to store and display the Forecast data in view from AI response.
+    public ObservableCollection<CompaniesModel> ForeCastData { get; set; }
 
     public const string msftStockSource = "6/28/2024\t453.07\t455.38\t446.41\t446.95\t28,362,270\r\n6/27/2024\t452.18\t456.17\t451.77\t452.85\t14,806,320\r\n6/26/20..."; // Complete data from CSV file downloaded.
    
@@ -267,3 +269,5 @@ After receiving the AI-predicted stock trends, the chart updates to display both
 The following image demonstrates the output of the above AI powered stock forecasting .NET MAUI Candle chart.
 
 ![.NET MAUI Candle chart AI Stock forecasting.](Chart_Smart_component_images/stock_forecasting.gif) 
+
+For more information, please visit the [GitHub Sample](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SmartComponents/SampleBrowser.Maui.SmartComponents/Samples/SmartComponents/StockForecasting)
