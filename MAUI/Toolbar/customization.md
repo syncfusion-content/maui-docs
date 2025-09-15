@@ -628,8 +628,8 @@ public partial class MainPage : ContentPage
 ## Navigation Button appearance using DataTemplate
 You can customize the navigation appearance by using the [ForwardButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ForwardButtonTemplate) and [BackwardButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_BackwardButtonTemplate) Properties.
 
-* **ForwardButtonTemplate** : This property is used to customize the forward button by provide custom views.
-* **BackwardButtonTemplate** : This property is used to customize the backward button by provide custom views.
+* **ForwardButtonTemplate** : Enables customization of the forward navigation button by allowing the integration of user-defined views.
+* **BackwardButtonTemplate** : Enables customization of the backward navigation button by allowing the integration of user-defined views.
 
 The following code sample demonstrates how to create a toolbar control with navigation button customization.
 
