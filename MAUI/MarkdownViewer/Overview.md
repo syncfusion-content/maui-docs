@@ -1,6 +1,6 @@
 ---
 layout: post
-title: About .NET MAUI MarkdownViewer control | Syncfusion
+title: What Is .NET MAUI Markdown Viewer Control? | Syncfusion
 description: Learn about the Syncfusion® .NET MAUI SfMarkdownViewer control, its rendering capabilities, and key features.
 platform: MAUI
 control: SfMarkdownViewer
@@ -33,4 +33,4 @@ The .NET MAUI [SfMarkdownViewer](https://help.syncfusion.com/cr/maui/Syncfusion.
 * **Interactive Links**  
   Seamlessly integrate external URLs or internal navigation using automatic link rendering.
 
-![.NET MAUI MarkdownViewer](Images/maui-markdown-viewer-overview.png)
+![What is .NET MAUI Markdown Viewer.](Images/maui-markdown-viewer-overview.png)

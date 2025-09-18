@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Apply CSS Style Rules in .NET MAUI MarkdownViewer | Syncfusion
-description: Learn how to override the default appearance of Markdown content using custom CSS in the Syncfusion .NET MAUI MarkdownViewer control.
+title: How to Apply CSS Styles in .NET MAUI Markdown Viewer | Syncfusion
+description: Learn how to override the default appearance of Markdown content using custom CSS in the Syncfusion .NET MAUI Markdown Viewer control.
 platform: MAUI
 control: SfMarkdownViewer
 documentation: ug
@@ -85,7 +85,7 @@ Apply the defined CSS style to the Markdown Viewer using the [CssStyleRules](htt
 
 The output below reflects the styled appearance of the Markdown content.
 
-![Applying CSS Style Rules](Images/maui-markdown-viewer-overriding-styles.png)
+![Apply css style in MAUI Markdown Viewer.](Images/maui-markdown-viewer-overriding-styles.png)
 
 By defining custom styles, you can transform the Markdown Viewer into a fully branded and polished content surface that fits seamlessly into your app’s design system.
 
@@ -111,7 +111,7 @@ img {
 
 This CSS makes all images inside the Markdown content appear with rounded corners, a subtle border, and a shadow that helps them blend elegantly with modern app designs. Adjust the `margin` or `max-width` to fit the layout of your application.
 
-![Image Customization with CSS Styling](Images/maui-markdownviewer-image-styling.png)
+![Image customization with css styling in MAUI Markdown Viewer.](Images/maui-markdownviewer-image-styling.png)
 
 ## Define Styles for Tables
 
@@ -150,7 +150,7 @@ tr:nth-child(even) {
 
 CSS styles provide much finer control over table appearance than the standard style properties. For thorough details on property based styling including [TableHeaderFontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownStyleSettings.html#Syncfusion_Maui_MarkdownViewer_MarkdownStyleSettings_TableHeaderFontSize), [TableHeaderTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.MarkdownStyleSettings.html#Syncfusion_Maui_MarkdownViewer_MarkdownStyleSettings_TableHeaderTextColor), and more, please refer to the [Customize Appearance](https://help.syncfusion.com/maui/markdownviewer/appearance) documentation page. When both CSS and style properties are specified, CSS will take precedence.
 
-![Table Customization with CSS Styling](Images/maui-markdownviewer-table-styling.png)
+![Table customization with css styling in MAUI Markdown Viewer.](Images/maui-markdownviewer-table-styling.png)
 
 ## Define Styles for ScrollBar
 
@@ -180,7 +180,7 @@ Example CSS for a modern, visible scrollbar:
 
 {% endhighlight %}
 
-![Scrollbar Customization with CSS Styling](Images/maui-markdownviewer-scrollbar.gif)
+![Scrollbar customization with css styling in MAUI Markdown Viewer.](Images/maui-markdownviewer-scrollbar.gif)
 
 You can further hide the scrollbar by setting `display: none;` in the `::-webkit-scrollbar` selector or by setting its width to 0, or match its color and thickness to seamlessly blend with your application's UI. Custom scrollbar styling will be effective on supported platforms (typically Windows and Android). Always verify cross-platform appearance for best results.
 

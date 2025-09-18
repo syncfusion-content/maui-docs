@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Retrieve Content in .NET MAUI MarkdownViewer | Syncfusion
-description: Learn how to retrieve and transform Markdown content using built-in methods in the Syncfusion .NET MAUI MarkdownViewer control.
+title: How to Retrieve Content in .NET MAUI Markdown Viewer | Syncfusion
+description: Learn how to retrieve and transform Markdown content using built-in methods in the Syncfusion .NET MAUI Markdown Viewer control.
 platform: MAUI
 control: SfMarkdownViewer
 documentation: ug
