@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Transform in .NET MAUI Image Editor Control | Syncfusion<sup>&reg;</sup>
-description: Learn here all about how to Transform in Syncfusion<sup>&reg;</sup> .NET MAUI ImageEditor (SfImageEditor) control and more.
+title: Transform in .NET MAUI Image Editor Control | Syncfusion
+description: Learn here all about how to Transform in Syncfusion .NET MAUI ImageEditor (SfImageEditor) control and more.
 platform: maui
 control: SfImageEditor
 documentation: ug

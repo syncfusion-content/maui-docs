@@ -439,6 +439,37 @@ public partial class MainPage : ContentPage
 
 ![Changing the alternation row count in .NET MAUI DataGrid](Images/styling/maui-datagrid-Alternation-rowcount.png)
 
+## Applying row hover background color
+ 
+You can enable row hover highlighting effect by setting [AllowRowHoverHighlighting](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowRowHoverHighlighting) property to `true`. The default value is `false`. Also, you can change the mouse hover background color using the [RowHoveredBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_RowHoveredBackground) property of [SfDataGrid.DefaultStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_DefaultStyleProperty).
+ 
+{% tabs %}
+{% highlight xaml hl_lines="5 7" %}
+<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+    <ContentPage.Content>
+        <syncfusion:SfDataGrid x:Name="dataGrid"
+                               ItemsSource="{Binding OrderInfoCollection}"
+                               AllowRowHoverHighlighting="True">
+            <syncfusion:SfDataGrid.DefaultStyle>
+                <syncfusion:DataGridStyle RowHoveredBackground ="#AFD5FB"/>
+            </syncfusion:SfDataGrid.DefaultStyle>
+        </syncfusion:SfDataGrid>
+    </ContentPage.Content>
+</ContentPage>
+{% endhighlight %}
+{% highlight c# hl_lines="6 7" %}
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        this.dataGrid.AllowRowHoverHighlighting = true;
+        this.dataGrid.DefaultStyle.RowHoveredBackground  = Color.FromArgb("#AFD5FB");
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
 ## Changing the font style
 You can apply the style for header and row font attributes by using SfDataGrid.DefaultStyle.
 

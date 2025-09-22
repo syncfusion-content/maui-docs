@@ -51,6 +51,76 @@ this.dataGrid.ScrollToColumnIndex(4, ScrollToPosition.MakeVisible, true);
 {% endhighlight %}
 {% endtabs %}
 
+## Scrolling mode
+
+The `SfDataGrid` allows you to customize three different scrolling modes using the [SfDataGrid.ScrollingMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ScrollingMode) property. By default, the control scrolls content based on pixel values. The `ScrollingMode` property supports both vertical and horizontal scrolling. The available scrolling modes are:
+
+ - Pixel
+ - Line
+ - PixelLine
+
+### Pixel
+In the `DataGridScrollingMode.Pixel` mode, users can scroll through the data based on pixel values. The view updates with each change in the offset, and a row or column may appear cropped when the offset exceeds the origin of the row or column.
+
+{% tabs %}
+{% highlight xaml %}
+    <sfgrid:SfDataGrid x:Name="dataGrid"                                       
+                       ItemsSource="{Binding OrderInfoCollection}"         
+                       ScrollingMode = "Pixel">   
+    </sfgrid:SfDataGrid> 
+{% endhighlight %}
+
+{% highlight C# %}
+this.dataGrid.ScrollingMode = DataGridScrollingMode.Pixel;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="ScrollingMode-Pixel" src="Images\scrolling\maui-datagrid-ScrollingMode-Pixel.gif" width="404" />
+
+### Line
+The `DataGridScrollingMode.Line` mode allows users to scroll the DataGrid's contents by lines. The view updates only when the offset values reach the origin of a row or column in the bound collection.
+
+{% tabs %}
+{% highlight xaml %}
+    <sfgrid:SfDataGrid x:Name="dataGrid"                                       
+                       ItemsSource="{Binding OrderInfoCollection}"         
+                       ScrollingMode = "Line">   
+    </sfgrid:SfDataGrid> 
+{% endhighlight %}
+
+{% highlight C# %}
+this.dataGrid.ScrollingMode = DataGridScrollingMode.Line;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="ScrollingMode-Pixel" src="Images\scrolling\maui-datagrid-ScrollingMode-Line.gif" width="404"/>
+
+### PixelLine
+The `DataGridScrollingMode.PixelLine` mode allows users to scroll the contents like an Excel sheet. If a row or column is clipped at the top, it will automatically scroll to display the entire row or column.
+
+{% tabs %}
+{% highlight xaml %}
+    <sfgrid:SfDataGrid x:Name="dataGrid"                                       
+                       ItemsSource="{Binding OrderInfoCollection}"         
+                       ScrollingMode = "PixelLine">   
+    </sfgrid:SfDataGrid> 
+{% endhighlight %}
+
+{% highlight C# %}
+this.dataGrid.ScrollingMode = DataGridScrollingMode.PixelLine;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="ScrollingMode-Pixel" src="Images\scrolling\maui-datagrid-ScrollingMode-PixelLine.gif" width="404" />
+
+### Limitations
+
+The `ScrollingMode` has certain limitations that should be considered:
+
+ - Switching between modes at runtime is not supported.
+ - The `DataGridScrollingMode.Line` does not support master details view.
+ - The `DataGridScrollingMode.Line` will not be worked as expected when row height is customized through [SfDataGrid.QueryRowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_QueryRowHeight) event and width is customized through [SfDataGrid.ColumnWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ColumnWidthMode) property.
+
 ## Diagonal scrolling
 
 By default, the `SfDataGrid` allows both vertical and horizontal scrolling simultaneously (diagonal scrolling). By setting [SfDataGrid.AllowDiagonalScrolling](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowDiagonalScrolling) to false, you ensure that scrolling happens in only one direction at a time, either horizontally or vertically.

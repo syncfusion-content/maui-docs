@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Populating with .NET MAUI Picker Control | Syncfusion<sup>&reg;</sup>
-description: Learn here all about populating items with Syncfusion<sup>&reg;</sup> .NET MAUI Picker (SfPicker) control and its basic features.
+title: Populating with .NET MAUI Picker Control | Syncfusion
+description: Learn here all about populating items with Syncfusion .NET MAUI Picker (SfPicker) control and its basic features.
 platform: maui
 control: SfPicker
 documentation: ug

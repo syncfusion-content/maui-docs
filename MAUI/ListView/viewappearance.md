@@ -101,6 +101,22 @@ public class MainPage : ContentPage
 
 ![MAUI ListView Data Template Selector](Images/appearance/maui-listview-applying-the-data-template-selector.jpg)
 
+## Setting DisplayMemberPath
+ 
+The [DisplayMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_DisplayMemberPath) property in the SfListView provides a simple and efficient way to display a specific property from business objects without creating custom item template. This feature is especially useful for simple lists where you want to display a single property without defining a custom template.
+ 
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfListView x:Name="listView"
+                       DisplayMemberPath="BookName" />
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+listView.DisplayMemberPath = "BookName";
+{% endhighlight %}
+{% endtabs %}
+ 
+N> The `ItemTemplate` property takes precedence over `DisplayMemberPath`. If both are set, `ItemTemplate` will be used.
+
 ## Horizontal ListView
 
 The SfListView allows you to layout every item in the [SfListView.ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemsSource) property either in `Vertical` or `Horizontal` orientation by setting the [SfListView.Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_Orientation). The default orientation is `Vertical`.

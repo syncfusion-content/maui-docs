@@ -315,6 +315,32 @@ The following image illustrates the result of the above code:
 
 ![TextAlignment](MaskedEntry_Images/MaskedEntry_TextAlignment.png)
 
+## Select text on focus
+
+The [SelectAllOnFocus](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html#Syncfusion_Maui_Inputs_SfMaskedEntry_SelectAllOnFocus) property allows you to automatically select all the text in the masked entry when the control gains focus. This can improve user efficiency by making it easy to replace the entire content. The default value of this property is `false`.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfMaskedEntry WidthRequest="200"
+                       MaskType="Simple"
+                       Mask="(000) 000-0000"
+                       Value="1234567890"
+                       SelectAllOnFocus="True"/>
+
+{% endhighlight %}
+{% highlight c# %}
+
+SfMaskedEntry maskedEntry = new SfMaskedEntry();
+maskedEntry.WidthRequest = 200;
+maskedEntry.MaskType = MaskedEntryMaskType.Simple;
+maskedEntry.Mask = "(000) 000-0000";
+maskedEntry.Value = "1234567890";
+maskedEntry.SelectAllOnFocus = true;
+
+{% endhighlight %}
+{% endtabs %}
+
 ## ReturnType
 
 The `ReturnType` property specifies the return button (e.g., Next, Done, Go) of the keyboard. It helps manage the flow between multiple input fields by defining what happens when the action button is pressed.
