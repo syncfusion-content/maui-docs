@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Overview of .NET MAUI Toolbar | Syncfusion<sup>&reg;</sup>
-description: Learn about the introduction of Syncfusion<sup>&reg;</sup> .NET MAUI Toolbar(SfToolbar) control, its basic features, and the functionalities of Toolbar.
+title: Overview of .NET MAUI Toolbar | Syncfusion
+description: Learn about the introduction of Syncfusion .NET MAUI Toolbar(SfToolbar) control, its basic features, and the functionalities of Toolbar.
 platform: maui
 control: Toolbar (SfToolbar)
 documentation: ug
