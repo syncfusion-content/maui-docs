@@ -417,6 +417,78 @@ this.Content = chart;
 
 ![DateTimeAxis range customization support in MAUI Chart](Axis_Images/maui_chart_datetime_axis_range.jpg)
 
+## DateTimeCategoryAxis
+
+The `DateTimeCategoryAxis` is a specialized type of axis primarily used with financial series. Similar to the `CategoryAxis`, all data points are plotted with equal spacing, eliminating gaps for missing dates. The intervals and ranges for this axis are calculated similarly to the `DateTimeAxis`. There are no visual gaps between points, even if the difference between two points exceeds a year.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+    . . .
+    <chart:SfCartesianChart.XAxes>
+        <chart:DateTimeCategoryAxis/>
+    </chart:SfCartesianChart.XAxes>
+    . . .
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart(); 
+. . . 
+// Create an instance of the DateTimeCategoryAxis, used for displaying DateTime values as categories 
+DateTimeCategoryAxis primaryAxis = new DateTimeCategoryAxis(); 
+// Add the DateTimeCategoryAxis instance to the chart's XAxes collection 
+chart.XAxes.Add(primaryAxis);
+
+this.Content = chart; 
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![DateTimeCategory Axis support in MAUI Chart](Axis_Images/maui_dateTimeCategory_axis.png)
+
+### Interval
+
+In `DateTimeCategoryAxis`, intervals can be customized by using the Interval and IntervalType properties, similar to `DateTimeAxis`. For example, setting `Interval` as 5 and `IntervalType` as `Days` will consider 5 days as an interval.
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart> 
+    . . .
+        <chart:SfCartesianChart.XAxes>
+            <chart:DateTimeCategoryAxis Interval="5" 
+                                        IntervalType="Days"/> 
+        </chart:SfCartesianChart.XAxes> 
+    . . .
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart(); 
+. . .
+DateTimeCategoryAxis primaryAxis = new DateTimeCategoryAxis() 
+{ 
+    Interval = 5, 
+    IntervalType = DateTimeIntervalType.Days 
+}; 
+chart.XAxes.Add(primaryAxis);
+. . .
+this.Content = chart; 
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![DateTimeCategory Axis support in MAUI Chart](Axis_Images/maui_dateTimeCategory_interval.png)
+
 ## Logarithmic Axis
 
 The [LogarithmicAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html) uses a logarithmic scale, and it is very useful in visualizing data when the given data range has a big difference. It can be used either on the x-axis or the chart's y-axis.
