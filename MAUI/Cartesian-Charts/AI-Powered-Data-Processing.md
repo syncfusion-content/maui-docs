@@ -214,7 +214,7 @@ Now that your chart is set up with the cleaned data, you’ll see a smooth and a
 You can also provide a button or menu option for users to trigger data cleaning on demand, allowing them to refresh the chart with newly cleaned data whenever needed.
 
 
-The following image demonstrates the output of the above AI powered stock forecating .NET MAUI Candle chart.
+The following image demonstrates the output of the above AI Powered data cleaning and preprocessing .NET MAUI chart.
 
 ![Ai smart data processing in .NET MAUI Chart](Chart_Smart_component_images/dataprocessing.png)
 
