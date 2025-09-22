@@ -306,6 +306,8 @@ namespace DockLayoutGettingStarted
 {% endhighlight %}
 {% endtabs %}
 
+{% endtabcontent %}
+
 {% endtabcontents %}
 
 ### Set Dock Position for Child Views
