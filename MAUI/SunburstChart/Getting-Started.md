@@ -308,6 +308,8 @@ namespace SunburstGettingStarted
 {% endhighlight %}
 {% endtabs %}
 
+{% endtabcontent %}
+
 {% endtabcontents %}
 
 ### Initialize View Model

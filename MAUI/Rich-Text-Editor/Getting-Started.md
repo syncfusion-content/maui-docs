@@ -359,6 +359,8 @@ namespace RichTextEditorSample
 
 {% endtabs %}
 
+{% endtabcontent %}
+
 {% endtabcontents %}
 
 ## Enable the Toolbar
