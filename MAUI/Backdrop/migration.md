@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Migrate from Xamarin to .NET MAUI  Backdrop page | Syncfusion<sup>&reg;</sup>
-description: Learn about Migrating from the Syncfusion<sup>&reg;</sup> Xamarin backdrop page to Syncfusion<sup>&reg;</sup> .NET MAUI backdrop page control and more.
+title: Migrate from Xamarin to .NET MAUI  Backdrop page | Syncfusion
+description: Learn about Migrating from the Syncfusion Xamarin backdrop page to Syncfusion<sup>&reg;</sup> .NET MAUI backdrop page control and more.
 platform: MAUI
 control: SfBackdropPage
 documentation: ug
