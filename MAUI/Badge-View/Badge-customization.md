@@ -478,6 +478,93 @@ Content = sfBadgeView;
 
 ![BadgeAlignment](badge-customization_images\WithoutWidth.png)
 
+## Keeping multiple badges aligned uniformly
+
+When placing several SfBadgeViews in the same row or grid, you can keep the visual alignment consistent across items whether a badge is present or not by using AutoHide. When BadgeText is 0 and AutoHide=True, the badge is not rendered. The content area remains uniformly aligned, so layouts stay consistent for items with and without badges.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+ <HorizontalStackLayout Spacing="20" HorizontalOptions="Center" VerticalOptions="Center">
+     <core:SfBadgeView BadgeText="0" >
+                 <core:SfBadgeView.Content>
+             <core:SfAvatarView ContentType="AvatarCharacter" AvatarCharacter="Avatar1" CornerRadius="25" WidthRequest="50" HeightRequest="50"/>
+         </core:SfBadgeView.Content>
+                 <core:SfBadgeView.BadgeSettings>
+             <core:BadgeSettings BadgeAlignment="Center" AutoHide="True"  Type="None" Background="Red"/>
+                 </core:SfBadgeView.BadgeSettings>
+             </core:SfBadgeView>
+
+
+     <core:SfBadgeView BadgeText="10"    >
+                 <core:SfBadgeView.Content>
+             <core:SfAvatarView ContentType="AvatarCharacter" CornerRadius="25" WidthRequest="50" HeightRequest="50" AvatarCharacter="Avatar2"/>
+         </core:SfBadgeView.Content>
+                 <core:SfBadgeView.BadgeSettings>
+             <core:BadgeSettings BadgeAlignment="Center"  Type="None" Background="Red" AutoHide="True" />
+                 </core:SfBadgeView.BadgeSettings>
+             </core:SfBadgeView>
+
+        ...
+    </HorizontalStackLayout >
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+
+HorizontalStackLayout horizontalStack = new HorizontalStackLayout();
+horizontalStack.Spacing = 20;
+horizontalStack.HorizontalOptions = LayoutOptions.Center;
+horizontalStack.VerticalOptions = LayoutOptions.Center;
+
+SfAvatarView avatar1 = new SfAvatarView();
+avatar1.ContentType = ContentType.AvatarCharacter;
+avatar1.AvatarCharacter = AvatarCharacter.Avatar1;
+avatar1.CornerRadius = 25;
+avatar1.WidthRequest = 50;
+avatar1.HeightRequest = 50;
+
+BadgeSettings badgeSettings1 = new BadgeSettings();
+badgeSettings1.BadgeAlignment = BadgeAlignment.Center;
+badgeSettings1.AutoHide = true;
+badgeSettings1.Type = BadgeType.None;
+badgeSettings1.Background = Colors.Red;
+
+SfBadgeView badgeView1 = new SfBadgeView();
+badgeView1.BadgeText = "0";
+badgeView1.Content = avatar1;
+badgeView1.BadgeSettings = badgeSettings1;
+
+SfAvatarView avatar2 = new SfAvatarView();
+avatar2.ContentType = ContentType.AvatarCharacter;
+avatar2.AvatarCharacter = AvatarCharacter.Avatar2;
+avatar2.CornerRadius = 25;
+avatar2.WidthRequest = 50;
+avatar2.HeightRequest = 50;
+
+BadgeSettings badgeSettings2 = new BadgeSettings();
+badgeSettings2.BadgeAlignment = BadgeAlignment.Center;
+badgeSettings2.AutoHide = true;
+badgeSettings2.Type = BadgeType.None;
+badgeSettings2.Background = Colors.Red;
+
+SfBadgeView badgeView2 = new SfBadgeView();
+badgeView2.BadgeText = "10";
+badgeView2.Content = avatar2;
+badgeView2.BadgeSettings = badgeSettings2;
+
+horizontalStack.Children.Add(badgeView1);
+horizontalStack.Children.Add(badgeView2);
+
+Content = horizontalStack;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![BadgeAlignment](badge-customization_images\badgeview_alignment.png)
 
 ## FontAutoScalingEnabled
 
