@@ -347,11 +347,11 @@ Content = sfBadgeView;
 
 ## Badge Alignment and Sizing
 
-The [BadgeAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_BadgeAlignment) property positions the badge text relative to the SfBadgeView's content. You can set this to Start, Center, or End. However, the final visual position of the badge is also dependent on how the SfBadgeView and its Content are sized. The following scenarios explain how alignment behaves based on different size configurations.
+The [BadgeAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_BadgeAlignment) property positions the badge text relative to the [SfBadgeView's](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) content. You can set this to Start, Center, or End. However, the final visual position of the badge is also dependent on how the [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) and its Content are sized. The following scenarios explain how alignment behaves based on different size configurations.
 
 ### 1. Alignment with a Fixed Size on SfBadgeView
 
-When an explicit WidthRequest and HeightRequest are set directly on the SfBadgeView, the badge is aligned relative to these fixed dimensions. The size of the inner Content does not influence the badge's position. This approach is useful when you need the badge to appear at the edge of a specific, defined area, regardless of the content inside.
+When an explicit WidthRequest and HeightRequest are set directly on the [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1), the badge is aligned relative to these fixed dimensions. The size of the inner Content does not influence the badge's position. This approach is useful when you need the badge to appear at the edge of a specific, defined area, regardless of the content inside.
 
 {% tabs %}
 
@@ -396,7 +396,7 @@ Content = sfBadgeView;
 
 ### 2. Alignment with a Fixed Size on the Content
 
-When the SfBadgeView has no explicit size, but its Content does, the SfBadgeView wraps itself around the content. In this case, the badge is aligned relative to the bounds of the Content. This is a common scenario when you want to place a badge on a specific control like a Button or a larger Label.
+When the [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) has no explicit size, but its Content does, the [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) wraps itself around the content. In this case, the badge is aligned relative to the bounds of the Content. This is a common scenario when you want to place a badge on a specific control like a Button or a larger Label.
 
 {% tabs %}
 
@@ -439,7 +439,7 @@ Content = sfBadgeView;
 
 ### 3. Alignment with Automatic Sizing
 
-When neither the SfBadgeView nor its Content has an explicit size, both controls size themselves automatically based on their content. The SfBadgeView wraps its Content, and the badge is then aligned relative to the final calculated bounds of that Content.
+When neither the [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) nor its Content has an explicit size, both controls size themselves automatically based on their content. The [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) wraps its Content, and the badge is then aligned relative to the final calculated bounds of that Content.
 
 {% tabs %}
 
@@ -480,7 +480,7 @@ Content = sfBadgeView;
 
 ## Keeping multiple badges aligned uniformly
 
-When placing several SfBadgeViews in the same row or grid, you can keep the visual alignment consistent across items whether a badge is present or not by using AutoHide. When BadgeText is 0 and AutoHide=True, the badge is not rendered. The content area remains uniformly aligned, so layouts stay consistent for items with and without badges.
+When placing several [SfBadgeView's](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) in the same row or grid, you can keep the visual alignment consistent across items whether a badge is present or not by using AutoHide. When [BadgeText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_BadgeText) is 0 and AutoHide=True, the badge is not rendered. The content area remains uniformly aligned, so layouts stay consistent for items with and without badges.
 
 {% tabs %}
 
