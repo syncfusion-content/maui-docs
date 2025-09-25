@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migrate Xamarin SfRangeSlider to .NET MAUI SfRangeSlider | Syncfusion®
-description: Learn here all about Migrating from Syncfusion® Xamarin RangeSlider to Syncfusion® .NET MAUI RangeSlider control and more.
+description: Learn how to migrate from the Syncfusion® Xamarin RangeSlider to the Syncfusion® .NET MAUI RangeSlider control and more.
 platform: MAUI
 control: SfRangeSlider
 documentation: ug
@@ -9,12 +9,12 @@ documentation: ug
 
 # Migrate from Xamarin.Forms SfRangeSlider to .NET MAUI SfRangeSlider 
 
-To migrate from the [Xamarin Range Slider](https://www.syncfusion.com/xamarin-ui-controls/xamarin-range-slider) control to MAUI, use the following two controls.
+This guide explains how to migrate from the [Xamarin Range Slider](https://www.syncfusion.com/xamarin-ui-controls/xamarin-range-slider) control to .NET MAUI, utilizing the following controls:
 
-1. SfDateTimeRangeSlider – For date-time scale.
-2. SfRangeSlider – For numeric scale.
+1. **SfDateTimeRangeSlider** – For date-time scales.
+2. **SfRangeSlider** – For numeric scales.
 
-One more thing is, in .NET MAUI SfRangeSlider, you do not have an API name [ShowRange](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_AllowDragRange) in MAUI. Both the MAUI SfDateTimeRangeSlider and SfRangeSlider controls will show two thumbs by default. If you wish to use the single thumb, check the [Migration from Xamarin.Forms SfRangeSlider to .NET MAUI SfSlider](https://help.syncfusion.com/maui/slider/migration).
+In .NET MAUI SfRangeSlider, there is no API named [ShowRange](https://help.syncfusion.com/cr/xamarin/Syncfusion.SfRangeSlider.XForms.SfRangeSlider.html#Syncfusion_SfRangeSlider_XForms_SfRangeSlider_AllowDragRange). Both the MAUI SfDateTimeRangeSlider and SfRangeSlider controls display two thumbs by default. For a single thumb configuration, refer to [Migration from Xamarin.Forms SfRangeSlider to .NET MAUI SfSlider](https://help.syncfusion.com/maui/slider/migration).
 
 ## Namespaces 
 

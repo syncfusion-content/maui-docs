@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Range selection in .NET MAUI Range Slider control | Syncfusion®
-description: Learn here all about range selection of Syncfusion® .NET MAUI Range Slider (SfDateTimeRangeSlider) control and more.
+title: Range Selection in .NET MAUI Range Slider Control | Syncfusion®
+description: Explore the range selection features in the Syncfusion® .NET MAUI Range Slider (SfDateTimeRangeSlider) control.
 platform: maui
 control: SfDateTimeRangeSlider
 documentation: ug
 ---
 
-# Range selection in .NET MAUI Range Slider (SfDateTimeRangeSlider)
+# Range Selection in .NET MAUI Range Slider (SfDateTimeRangeSlider)
 
-This section helps to learn about the range selection in the DateTime Range Slider.
+This section explains the range selection capabilities in the DateTime Range Slider.
 
-## Discrete selection
+## Discrete Selection
 
-Move the thumb in a discrete manner for date values using the [`StepDuration`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_StepDuration) property in the DateTime Range Slider.
+The DateTime Range Slider allows discrete thumb movement for date values using the [`StepDuration`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_StepDuration) property.
 
-For example, if the [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum) is DateTime(2015, 01, 01), [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum) is DateTime(2020, 01, 01), and the [`StepDuration`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.IDateTimeElement.html#Syncfusion_Maui_Sliders_IDateTimeElement_StepDuration) is `1`, the range slider will move the thumbs at DateTime(2015, 01, 01), DateTime(2016, 01, 01), DateTime(2017, 01, 01),and DateTime(2018, 01, 01).
+For instance, with a [`Minimum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Minimum) of `DateTime(2015, 01, 01)`, a [`Maximum`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_Maximum) of `DateTime(2020, 01, 01)`, and a `StepDuration` of `1`, the slider will incrementally move the thumbs to DateTime(2015, 01, 01), DateTime(2016, 01, 01), and so forth.
 
 {% tabs %}
 
@@ -54,7 +54,7 @@ rangeSlider.StepDuration = new SliderStepDuration(years: 1);
 
 ## Interval Selection
 
-Both the thumbs are moved to the selected interval if the [EnableIntervalSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_EnableIntervalSelection) property is true, otherwise the nearest thumb is moved to the touch position.
+When the [EnableIntervalSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_EnableIntervalSelection) property is set to `true`, both thumbs move to the selected interval; otherwise, the nearest thumb moves to the touch position.
 
 {% tabs %}
 
@@ -90,11 +90,11 @@ rangeSlider.EnableIntervalSelection = true;
 
 ![RangeSlider EnableIntervalSelection](images/selection/enableintervalselection.gif)
 
-## DragBehavior
+## Drag Behavior
 
 ### OnThumb
 
-When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_DragBehavior) is set to [OnThumb](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDragBehavior.html#Syncfusion_Maui_Sliders_SliderDragBehavior_OnThumb), an individual thumb can be moved based on the dragging. By default, the [OnThumb](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDragBehavior.html#Syncfusion_Maui_Sliders_SliderDragBehavior_OnThumb) is used as drag behavior.
+Set the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_DragBehavior) to [OnThumb](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDragBehavior.html#Syncfusion_Maui_Sliders_SliderDragBehavior_OnThumb) to allow individual thumb movement based on dragging. This is the default behavior.
 
 {% tabs %}
 
@@ -130,7 +130,7 @@ rangeSlider.DragBehavior = SliderDragBehavior.OnThumb;
 
 ### BetweenThumbs
 
-When the [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_DragBehavior) is set to [BetweenThumbs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDragBehavior.html#Syncfusion_Maui_Sliders_SliderDragBehavior_BetweenThumbs), both the thumbs can be moved at the same time without changing the range between the start and end thumbs. We had considered this behavior without the range slider thumb radius. It is not possible to move the individual thumb when setting this behavior.
+With [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_DragBehavior) set to [BetweenThumbs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDragBehavior.html#Syncfusion_Maui_Sliders_SliderDragBehavior_BetweenThumbs), both thumbs move together without altering the range. This prevents individual thumb movement.
 
 {% tabs %}
 
@@ -166,7 +166,7 @@ rangeSlider.DragBehavior = SliderDragBehavior.BetweenThumbs;
 
 ### Both
 
-When the  [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_DragBehavior) is set to [Both](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDragBehavior.html#Syncfusion_Maui_Sliders_SliderDragBehavior_Both), the individual thumb can be moved, and both thumbs can be moved at the same time without changing the range between the start and end thumbs.
+Setting [DragBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeSliderBase-1.html#Syncfusion_Maui_Sliders_RangeSliderBase_1_DragBehavior) to [Both](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderDragBehavior.html#Syncfusion_Maui_Sliders_SliderDragBehavior_Both) allows individual and simultaneous thumb movement without changing the range.
 
 {% tabs %}
 
@@ -202,12 +202,11 @@ rangeSlider.DragBehavior = SliderDragBehavior.Both;
 
 ![RangeSlider DragBehavior](images/selection/drag_behavior.gif)
 
-## Deferred update
+## Deferred Update
 
-You can control when the dependent components are updated while thumbs are being dragged continuously. It can be achieved by setting the `EnableDeferredUpdate` property and the delay in the update can be achieved by setting the `DeferredUpdateDelay` property. The default value of the `DeferredUpdateDelay` property is `500` milliseconds.
+Control update timing of dependent components while dragging thumbs by setting `EnableDeferredUpdate`. Adjust the delay using the `DeferredUpdateDelay` property, defaulting at `500` milliseconds.
 
-It invokes the `ValueChanging` event when the thumb is dragged and held for the duration specified in the `DeferredUpdateDelay`. However, the values are immediately updated in touch-up action.
-
+Value changes invoke the `ValueChanging` event after the specified delay, while immediate updates occur on touch-up actions.
 {% tabs %}
 
 {% highlight xaml %}

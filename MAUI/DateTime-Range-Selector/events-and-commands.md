@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events and Commands in.NET MAUI Range Selector control | Syncfusion® 
-description: Learn here all about adding the events and commands of Syncfusion® .NET MAUI Range Selector (SfDateTimeRangeSelector) control and more.
+title: Events and Commands in .NET MAUI Range Selector Control | Syncfusion®
+description: Learn about adding events and commands in the Syncfusion® .NET MAUI Range Selector (SfDateTimeRangeSelector) control and more.
 platform: maui
 control: SfDateTimeRangeSelector
 documentation: ug
@@ -9,16 +9,16 @@ documentation: ug
 
 # Events and Commands in .NET MAUI DateTime Range Selector
 
-This section explains how to add the events and commands for the DateTime Range Selector(SfDateTimeRangeSelector).
+This section explains how to add events and commands to the DateTime Range Selector (SfDateTimeRangeSelector).
 
 ## Events
 
-### Handle callbacks
+### Handle Callbacks
 
-* [ValueChangeStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ValueChangeStart) -  Called when the user selects a new value for the selector by tapping or mouse down on the thumb.
-* [ValueChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSelector.html#Syncfusion_Maui_Sliders_SfDateTimeRangeSelector_ValueChanging) - Called when the user is selecting a new value for the selector by dragging the thumb.
-* [ValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSelector.html#Syncfusion_Maui_Sliders_SfDateTimeRangeSelector_ValueChanged) - Called when the user completed selecting a new value.
-* [ValueChangeEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ValueChangeEnd) - Called when the user stopped interacting with the selector by tapping or mouse up the thumb.
+* [ValueChangeStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ValueChangeStart) - Triggered when the user begins selecting a new value by tapping or pressing the thumb.
+* [ValueChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSelector.html#Syncfusion_Maui_Sliders_SfDateTimeRangeSelector_ValueChanging) - Triggered when the user is in the process of selecting a new value by dragging the thumb.
+* [ValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSelector.html#Syncfusion_Maui_Sliders_SfDateTimeRangeSelector_ValueChanged) - Triggered when the user completes the selection of a new value.
+* [ValueChangeEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_ValueChangeEnd) - Triggered when the user stops interacting with the selector by releasing the thumb.
 
 {% tabs %}
 
@@ -87,9 +87,9 @@ private void OnValueChangeEnd(object sender, EventArgs e)
 
 {% endtabs %}
 
-### Customize label text
+### Customize Label Text
 
-Format or change the whole date label text using the [`LabelCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_LabelCreated) event. The [`SliderLabelCreatedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html) contains the following parameters:
+Format or change the date label text using the [`LabelCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_LabelCreated) event. The `SliderLabelCreatedEventArgs` contains the following parameters:
 
 * Text – Customize the text color using the [`Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderLabelCreatedEventArgs_Text) parameter.
 * Style – Formats the text color, font size, font family, and offset using the [`Style`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderLabelCreatedEventArgs_Style) parameter.
@@ -171,11 +171,11 @@ private void OnLabelCreated(object sender, SliderLabelCreatedEventArgs e)
 
 ![RangeSelector custom label](images/labels-and-dividers/custom-label-format.png)
 
-### Tooltip text format
+### Tooltip Text Format
 
 By default, it is formatted based on the [`SliderTooltip.DateFormat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_DateFormat) property.
 
-Format or change the whole tooltip label text using the [`ToolTipLabelCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_TooltipLabelCreated) event. The [`SliderTooltipLabelCreatedEventArgs`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltipLabelCreatedEventArgs.html) contains the following parameters:
+Format or change the tooltip text using the [`ToolTipLabelCreated`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltip.html#Syncfusion_Maui_Sliders_SliderTooltip_TooltipLabelCreated) event. The `SliderTooltipLabelCreatedEventArgs` contains the following parameters:
 
 * Text – Change the tooltip text using the [`Text`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltipLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderTooltipLabelCreatedEventArgs_Text) property.
 * Color – Change the color of the tooltip text using the [`TextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SliderTooltipLabelCreatedEventArgs.html#Syncfusion_Maui_Sliders_SliderTooltipLabelCreatedEventArgs_TextColor) property.
@@ -243,11 +243,11 @@ private void OnTooltipLabelCreated(object sender, SliderTooltipLabelCreatedEvent
 
 ![RangeSelector custom tooltip](images/tooltip/custom-tooltip.png)
 
-## Commands and their parameter
+## Commands and Their Parameters
 
-### Drag started command
+### Drag Started Command
 
-The [`DragStartedCommand`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragStartedCommand) will be executed when the user starts moving the thumb.
+The [`DragStartedCommand`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragStartedCommand) is executed when the user starts moving the thumb.
 
 {% tabs %}
 
@@ -308,9 +308,9 @@ public class ViewModel
 
 {% endtabs %}
 
-### Drag started command parameter
+### Drag Started Command Parameter
 
-The [`DragStartedCommandParameter`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragStartedCommandParameter) will be executed when the user starts moving the thumb.
+The [`DragStartedCommandParameter`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragStartedCommandParameter) is executed when the user starts moving the thumb.
 
 {% tabs %}
 
@@ -373,9 +373,9 @@ public class ViewModel
 
 {% endtabs %}
 
-### Drag completed command
+### Drag Completed Command
 
-The [`DragCompletedCommand`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragCompletedCommand) will be executed when the user completes moving the thumb.
+The [`DragCompletedCommand`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.RangeView-1.html#Syncfusion_Maui_Sliders_RangeView_1_DragCompletedCommand) is executed when the user completes moving the thumb.
 
 {% tabs %}
 

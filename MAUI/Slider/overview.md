@@ -1,7 +1,7 @@
 ---
 layout: post
-title: .NET MAUI Slider control | Syncfusion®
-description: Learn here all about introduction of Syncfusion® .NET MAUI Slider (SfSlider) control with key features and more.
+title: .NET MAUI Slider Control | Syncfusion®
+description: Learn about the introduction of the Syncfusion® .NET MAUI Slider (SfSlider) control, its key features, and more.
 platform: maui
 control: SfSlider
 documentation: ug
@@ -9,14 +9,13 @@ documentation: ug
 
 # .NET MAUI Slider Overview
 
-The Syncfusion<sup>®</sup> .NET MAUI Slider ([SfSlider](https://www.syncfusion.com/maui-controls/maui-slider)) is a highly interactive UI control, allowing users to select a single value from a range of values. It provides rich features, such as track, labels, ticks, dividers, and tooltip.
+The Syncfusion<sup>®</sup> .NET MAUI Slider ([SfSlider](https://www.syncfusion.com/maui-controls/maui-slider)) is a highly interactive UI control that allows users to select a single value from a range of values. It offers rich features such as track, labels, ticks, dividers, and tooltips to enhance the user interface.
 
-## Key features
+## Key Features
 
-* **Numeric support** - Provided functionality for selecting numeric values.
-* **Orientation** - Supports both horizontal and vertical orientations.
-* **Labels** - Render labels with option to customize their formats based on your requirements.
-* **Ticks and dividers** - Provided an option to show ticks and dividers based on the slider interval. Also, minor ticks can be enabled to indicate the values between each interval. These options present the selected value in a more intuitive way for end users.
-* **Discrete mode** - Able to move the thumb in a discrete manner based on the provided step value.
-* **Tooltip** - Render a tooltip to show the selected value clearly.
-
+* **Numeric Support**: Provides functionality for selecting numeric values.
+* **Orientation**: Supports both horizontal and vertical orientations.
+* **Labels**: Renders labels with customizable formats based on specific requirements.
+* **Ticks and Dividers**: Offers options to display ticks and dividers at specific intervals. Minor ticks can also be enabled to indicate values between intervals, presenting the selected value in a more intuitive way for end users.
+* **Discrete Mode**: Enables the thumb to move in discrete steps based on a specified step value.
+* **Tooltip**: Renders a tooltip to clearly display the selected value.
