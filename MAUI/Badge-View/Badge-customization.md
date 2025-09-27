@@ -345,6 +345,227 @@ Content = sfBadgeView;
 
 ![Alignment](badge-customization_images/badge_alignment.png)
 
+## Badge Alignment and Sizing
+
+The [BadgeAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_BadgeAlignment) property positions the badge text relative to the [SfBadgeView's](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) content. You can set this to Start, Center, or End. However, the final visual position of the badge is also dependent on how the [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) and its Content are sized. The following scenarios explain how alignment behaves based on different size configurations.
+
+### 1. Alignment with a Fixed Size on SfBadgeView
+
+When an explicit WidthRequest and HeightRequest are set directly on the [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1), the badge is aligned relative to these fixed dimensions. The size of the inner Content does not influence the badge's position. This approach is useful when you need the badge to appear at the edge of a specific, defined area, regardless of the content inside.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+ <badge:SfBadgeView BadgeText="20"  WidthRequest="100" HeightRequest="100" HorizontalOptions="Center" VerticalOptions="Center" >
+     <badge:SfBadgeView.Content>
+         <Label Text="Start" BackgroundColor="LightGray" HorizontalTextAlignment="Center"       VerticalTextAlignment="Center" TextColor="Black" />
+     </badge:SfBadgeView.Content>
+     <badge:SfBadgeView.BadgeSettings>
+         <badge:BadgeSettings BadgeAlignment="Start" CornerRadius="0"/>
+     </badge:SfBadgeView.BadgeSettings>
+ </badge:SfBadgeView>
+
+ {% endhighlight %}
+
+{% highlight c# %}
+
+SfBadgeView sfBadgeView = new SfBadgeView();
+sfBadgeView.HorizontalOptions = LayoutOptions.Center;
+sfBadgeView.VerticalOptions = LayoutOptions.Center;
+sfBadgeView.WidthRequest = 100;
+sfBadgeView.HeightRequest = 100;
+sfBadgeView.BadgeText = "20";
+Label label = new Label();
+label.Text = "Start";
+label.BackgroundColor = Colors.LightGray;
+label.HorizontalTextAlignment = TextAlignment.Center;
+label.VerticalTextAlignment = TextAlignment.Center;
+label.TextColor = Colors.Black;
+sfBadgeView.Content = label;
+BadgeSettings badgeSetting = new BadgeSettings();
+badgeSetting.BadgeAlignment = BadgeAlignment.Start;
+sfBadgeView.BadgeSettings = badgeSetting;
+Content = sfBadgeView;
+    
+{% endhighlight %}
+
+{% endtabs %}
+
+![BadgeAlignment](badge-customization_images\WidthForBadgeView.png)
+
+### 2. Alignment with a Fixed Size on the Content
+
+When the [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) has no explicit size, but its Content does, the [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) wraps itself around the content. In this case, the badge is aligned relative to the bounds of the Content. This is a common scenario when you want to place a badge on a specific control like a Button or a larger Label.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+  <badge:SfBadgeView BadgeText="20" >
+     <badge:SfBadgeView.Content>
+     <Label Text="Start" Background="LightGray" HeightRequest="100" WidthRequest="100" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+     </badge:SfBadgeView.Content>
+     <badge:SfBadgeView.BadgeSettings>
+         <badge:BadgeSettings BadgeAlignment="Start" />
+     </badge:SfBadgeView.BadgeSettings>
+ </badge:SfBadgeView>
+
+ {% endhighlight %}
+
+{% highlight c# %}
+
+SfBadgeView sfBadgeView = new SfBadgeView();
+sfBadgeView.BadgeText = "20";
+Label label = new Label();
+label.Text = "Start";
+label.BackgroundColor = Colors.LightGray;
+label.HorizontalTextAlignment = TextAlignment.Center;
+label.VerticalTextAlignment = TextAlignment.Center;
+label.TextColor = Colors.Black;
+label.WidthRequest = 100;
+label.HeightRequest = 100;
+sfBadgeView.Content = label;
+BadgeSettings badgeSetting = new BadgeSettings();
+badgeSetting.BadgeAlignment = BadgeAlignment.Start;
+sfBadgeView.BadgeSettings = badgeSetting;
+Content = sfBadgeView;
+    
+{% endhighlight %}
+
+{% endtabs %}
+
+![BadgeAlignment](badge-customization_images\WidthForContent.png)
+
+### 3. Alignment with Automatic Sizing
+
+When neither the [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) nor its Content has an explicit size, both controls size themselves automatically based on their content. The [SfBadgeView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) wraps its Content, and the badge is then aligned relative to the final calculated bounds of that Content.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+   <badge:SfBadgeView BadgeText="20" >
+     <badge:SfBadgeView.Content>
+     <Label Text="Start" Background="LightGray" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+     </badge:SfBadgeView.Content>
+     <badge:SfBadgeView.BadgeSettings>
+         <badge:BadgeSettings BadgeAlignment="Start" />
+     </badge:SfBadgeView.BadgeSettings>
+ </badge:SfBadgeView>
+
+ {% endhighlight %}
+
+{% highlight c# %}
+
+SfBadgeView sfBadgeView = new SfBadgeView();
+sfBadgeView.BadgeText = "20";
+Label label = new Label();
+label.Text = "Start";
+label.BackgroundColor = Colors.LightGray;
+label.HorizontalTextAlignment = TextAlignment.Center;
+label.VerticalTextAlignment = TextAlignment.Center;
+label.TextColor = Colors.Black;
+sfBadgeView.Content = label;
+BadgeSettings badgeSetting = new BadgeSettings();
+badgeSetting.BadgeAlignment = BadgeAlignment.Start;
+sfBadgeView.BadgeSettings = badgeSetting;
+Content = sfBadgeView;
+    
+{% endhighlight %}
+
+{% endtabs %}
+
+![BadgeAlignment](badge-customization_images\WithoutWidth.png)
+
+## Keeping multiple badges aligned uniformly
+
+When placing several [SfBadgeView's](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html?tabs=tabid-1) in the same row or grid, you can keep the visual alignment consistent across items whether a badge is present or not by using AutoHide. When [BadgeText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_BadgeText) is 0 and AutoHide=True, the badge is not rendered. The content area remains uniformly aligned, so layouts stay consistent for items with and without badges.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+ <HorizontalStackLayout Spacing="20" HorizontalOptions="Center" VerticalOptions="Center">
+     <core:SfBadgeView BadgeText="0" >
+                 <core:SfBadgeView.Content>
+             <core:SfAvatarView ContentType="AvatarCharacter" AvatarCharacter="Avatar1" CornerRadius="25" WidthRequest="50" HeightRequest="50"/>
+         </core:SfBadgeView.Content>
+                 <core:SfBadgeView.BadgeSettings>
+             <core:BadgeSettings BadgeAlignment="Center" AutoHide="True"  Type="None" Background="Red"/>
+                 </core:SfBadgeView.BadgeSettings>
+             </core:SfBadgeView>
+
+
+     <core:SfBadgeView BadgeText="10"    >
+                 <core:SfBadgeView.Content>
+             <core:SfAvatarView ContentType="AvatarCharacter" CornerRadius="25" WidthRequest="50" HeightRequest="50" AvatarCharacter="Avatar2"/>
+         </core:SfBadgeView.Content>
+                 <core:SfBadgeView.BadgeSettings>
+             <core:BadgeSettings BadgeAlignment="Center"  Type="None" Background="Red" AutoHide="True" />
+                 </core:SfBadgeView.BadgeSettings>
+             </core:SfBadgeView>
+
+        ...
+    </HorizontalStackLayout >
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+
+HorizontalStackLayout horizontalStack = new HorizontalStackLayout();
+horizontalStack.Spacing = 20;
+horizontalStack.HorizontalOptions = LayoutOptions.Center;
+horizontalStack.VerticalOptions = LayoutOptions.Center;
+
+SfAvatarView avatar1 = new SfAvatarView();
+avatar1.ContentType = ContentType.AvatarCharacter;
+avatar1.AvatarCharacter = AvatarCharacter.Avatar1;
+avatar1.CornerRadius = 25;
+avatar1.WidthRequest = 50;
+avatar1.HeightRequest = 50;
+
+BadgeSettings badgeSettings1 = new BadgeSettings();
+badgeSettings1.BadgeAlignment = BadgeAlignment.Center;
+badgeSettings1.AutoHide = true;
+badgeSettings1.Type = BadgeType.None;
+badgeSettings1.Background = Colors.Red;
+
+SfBadgeView badgeView1 = new SfBadgeView();
+badgeView1.BadgeText = "0";
+badgeView1.Content = avatar1;
+badgeView1.BadgeSettings = badgeSettings1;
+
+SfAvatarView avatar2 = new SfAvatarView();
+avatar2.ContentType = ContentType.AvatarCharacter;
+avatar2.AvatarCharacter = AvatarCharacter.Avatar2;
+avatar2.CornerRadius = 25;
+avatar2.WidthRequest = 50;
+avatar2.HeightRequest = 50;
+
+BadgeSettings badgeSettings2 = new BadgeSettings();
+badgeSettings2.BadgeAlignment = BadgeAlignment.Center;
+badgeSettings2.AutoHide = true;
+badgeSettings2.Type = BadgeType.None;
+badgeSettings2.Background = Colors.Red;
+
+SfBadgeView badgeView2 = new SfBadgeView();
+badgeView2.BadgeText = "10";
+badgeView2.Content = avatar2;
+badgeView2.BadgeSettings = badgeSettings2;
+
+horizontalStack.Children.Add(badgeView1);
+horizontalStack.Children.Add(badgeView2);
+
+Content = horizontalStack;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![BadgeAlignment](badge-customization_images\badgeview_alignment.png)
+
 ## FontAutoScalingEnabled
 
 The [FontAutoScalingEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.BadgeSettings.html#Syncfusion_Maui_Core_BadgeSettings_FontAutoScalingEnabled) property automatically scales the badge text's font size based on the operating system's text size. The default value is `false`.
