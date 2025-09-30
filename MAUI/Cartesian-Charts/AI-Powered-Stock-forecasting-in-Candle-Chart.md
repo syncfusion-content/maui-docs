@@ -262,8 +262,6 @@ private async void AIButtonClicked(object sender, EventArgs e)
 
 {% endtabs %}
 
-## Output
-
 After receiving the AI-predicted stock trends, the chart updates to display both historical and forecasted data, providing a visual representation of potential market movements.
 
 The following image demonstrates the output of the above AI powered stock forecasting .NET MAUI Candle chart.
