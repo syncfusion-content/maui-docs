@@ -119,7 +119,7 @@ The `ScrollingMode` has certain limitations that should be considered:
 
  - Switching between modes at runtime is not supported.
  - The `DataGridScrollingMode.Line` does not support master details view.
- - The `DataGridScrollingMode.Line` will not be worked as expected when row height is customized through [SfDatagrid.QueryRowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_QueryRowHeight) event and width is customized through [SfDatagrid.ColumnWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ColumnWidthMode) property.
+ - The `DataGridScrollingMode.Line` will not be worked as expected when row height is customized through [SfDataGrid.QueryRowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_QueryRowHeight) event and width is customized through [SfDataGrid.ColumnWidthMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ColumnWidthMode) property.
 
 ## Diagonal scrolling
 

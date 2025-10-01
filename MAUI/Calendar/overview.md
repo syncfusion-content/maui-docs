@@ -1,7 +1,7 @@
 ---
 layout: post
-title: About .NET MAUI Calendar control | Syncfusion<sup>&reg;</sup>
-description: Learn here about the overview of Syncfusion<sup>&reg;</sup> .NET MAUI Calendar (SfCalendar) control, its basic features, and calendar functionalities.
+title: About .NET MAUI Calendar control | Syncfusion
+description: Learn here about the overview of Syncfusion .NET MAUI Calendar (SfCalendar) control, its basic features, and calendar functionalities.
 platform: maui
 control: SfCalendar
 documentation: ug

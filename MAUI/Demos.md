@@ -24,4 +24,4 @@ According to [Apple's App Store Review Guidelines (section 2.2 on beta testing)]
 Link: [iOS Demo](https://testflight.apple.com/join/EEOtwVNN)
 
 ### .NET MAUI Demos for macOS
-You can install the .NET MAUI Demos for macOS from [here](https://install.appcenter.ms/users/xamarincore/apps/syncfusion-maui-ui-controls/distribution_groups/public).
+You can install the .NET MAUI Demos for macOS from [here](https://s3.amazonaws.com/files2.syncfusion.com/MAUI/SampleBrowser.Maui.zip).

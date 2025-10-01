@@ -326,31 +326,25 @@ namespace KanbanGettingStarted
 
 ## Populate .NET MAUI Kanban item source
 
-This section explains how to populate the .NET MAUI Kanban control's `ItemSource` by creating and binding both default and custom task data models.
+This section explains how to populate the .NET MAUI Kanban control's `ItemsSource` by creating and binding both default and custom task data models.
 
 ### Creating the default model tasks
 
-* **Define the View Model:** 
+* **Define the View Model:** Create a view model class to set values for the properties listed in the [`KanbanModel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html) class as shown in the following example code. Each [`KanbanModel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html) instance represents a card in Kanban control.
 
-Create a view model class to set values for the properties listed in the [`KanbanModel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html) class as shown in the following example code. Each [`KanbanModel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html) instance represent a card in Kanban control.
+* **Bind item source for Kanban:** To populate the Kanban card items, utilize the [`ItemsSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ItemsSource) property of [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html).
 
-* **Bind item source for Kanban:** 
-
-To populate the kanban card items, utilize the [`ItemsSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ItemsSource) property of [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html).
-
-* **Defining columns in the Kanban Board:** The columns are generated automatically based on the different values of [`Category`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html#Syncfusion_Maui_Kanban_KanbanModel_Category) in the [`KanbanModel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html) class from [`ItemsSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ItemsSource). But, you can also define the columns by setting [`AutoGenerateColumns`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_AutoGenerateColumns) property to false and adding [`KanbanColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html) instance to [`Columns`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_Columns) property of [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html). Define the categories of column using [`Categories`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_Categories) property of [`KanbanColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html) and cards will be added to the respective columns.
+* **Defining columns in the Kanban Board:** The columns are generated automatically based on the different values of [`Category`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html#Syncfusion_Maui_Kanban_KanbanModel_Category) in the [`KanbanModel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html) class from [`ItemsSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ItemsSource). However, you can manually define the columns by setting the [`AutoGenerateColumns`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_AutoGenerateColumns) property to `false` and adding [`KanbanColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html) instances to the [`Columns`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_Columns) property of [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html). Define the categories of column using the [`Categories`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_Categories) property of [`KanbanColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html), and cards will be added to the respective columns.
 
 The following sample code demonstrates this process in action:
 
 {% tabs %}
 
-{% highlight XAML hl_lines="2 6 7 8 9 10 11 12 13 14 15 16 17 18 19" %}
+{% highlight XAML hl_lines="2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17" %}
 
 <kanban:SfKanban x:Name="kanban"
-                 AutoGenerateColumns="False">
-    </kanban:SfKanban.BindingContext>
-        <local:KanbanViewModel />
-    </kanban:SfKanban.BindingContext>
+                 AutoGenerateColumns="False"
+                 ItemsSource="{Binding Cards}">
     <kanban:SfKanban.Columns>
         <kanban:KanbanColumn Title="To Do"
                              Categories="Open">
@@ -365,10 +359,13 @@ The following sample code demonstrates this process in action:
                              Categories="Done">
         </kanban:KanbanColumn>
     </kanban:SfKanban.Columns>
+    <kanban:SfKanban.BindingContext>
+        <local:KanbanViewModel />
+    </kanban:SfKanban.BindingContext>
 </kanban:SfKanban>
 
 {% endhighlight %}
-{% highlight C# hl_lines="5 8 9 10 11 12 14 15 16 17 18 20 21 22 23 24 26 27 28 29 30" %}
+{% highlight C# hl_lines="5 7 8 9 10 11 13 14 15 16 17 19 20 21 22 23 24 25 26 27 28 29 31 32" %}
 
 using Syncfusion.Maui.Kanban;
 
@@ -424,7 +421,7 @@ public class KanbanViewModel
             Tags = new List<string> { "Incident", "Customer" }
         });
 
-        Cards.Add(new KanbanModel()
+        this.Cards.Add(new KanbanModel()
         {
             ID = 6,
             Title = "Xamarin - 4576",
@@ -434,7 +431,7 @@ public class KanbanViewModel
             Tags = new List<string> { "Story", "Customer" }
         });
 
-        Cards.Add(new KanbanModel()
+        this.Cards.Add(new KanbanModel()
         {
             ID = 13,
             Title = "UWP - 13",
@@ -444,7 +441,7 @@ public class KanbanViewModel
             Tags = new List<string> { "Story", "Customer" }
         });
 
-        Cards.Add(new KanbanModel()
+        this.Cards.Add(new KanbanModel()
         {
             ID = 2543,
             Title = "IOS- 11",
@@ -454,7 +451,7 @@ public class KanbanViewModel
             Tags = new List<string> { "Story", "Customer" }
         });
 
-        Cards.Add(new KanbanModel()
+        this.Cards.Add(new KanbanModel()
         {
             ID = 123,
             Title = "UWP-21",
@@ -469,108 +466,101 @@ public class KanbanViewModel
 {% endhighlight %}
 {% endtabs %}
 
+![defining-columns-using-default-modelin-maui-kanban](images/getting-started/defining-columns-using-default-modelin-maui-kanban.png)
+
 ### Creating the custom model tasks with data mapping
 
 You can also map a custom data model to the Kanban control. The following steps demonstrate how to render tasks using the [.NET MAUI Kanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) control with corresponding custom data properties.
 
-* **Create a data model for kanban:** Create a simple data model in a new class file as shown in the following example code.
+* **Create a data model for Kanban:** Create a simple data model in a new class file as shown in the following example code.
 
 * **Create view model:** Create a view model class to set values for the properties listed in the model class as shown in the following example code.
 
-* **Bind item source for Kanban:** 
+* **Bind item source for Kanban:** To populate the Kanban card items, utilize the [`ItemsSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ItemsSource) property of the [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) control. Additionally, ensure that the following properties of `SfKanban` are mapped from corresponding properties in the `ItemsSource` while initializing the Kanban control. 
 
-To populate the Kanban card items, utilize the [`ItemsSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ItemsSource) property of [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) control. Additionally, ensure that the following property of `SfKanban` are mapped from corresponding properties in the `ItemsSource` while initializing the kanban control.
+The [`ColumnMappingPath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ColumnMappingPath) specifies the name of the property within the data object that is used to generate columns in the Kanban control when [`AutoGenerateColumns`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_AutoGenerateColumns) is set to `true`.
 
-The [ColumnMappingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ColumnMappingPath) specifies the name of the property within the data object that is used to generate columns in the Kanban control when [`AutoGenerateColumns`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_AutoGenerateColumns) is set to `true`.
+* **Defining columns in the Kanban Board:** The [`Columns`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_Columns) in the Kanban board are mapped based on the values of a specified property (e.g., "Status") from your custom data model. The [`ColumnMappingPath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ColumnMappingPath) specifies the name of the property within the data object that is used to generate columns in the Kanban control when [`AutoGenerateColumns`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_AutoGenerateColumns) is set to `true`.
 
-
-* **Defining columns in the Kanban Board:** 
-
-The [`Columns`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_Columns) in the Kanban board are mapped based on the values of a specified property (e.g., "Status") from your custom data model. The [ColumnMappingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ColumnMappingPath) specifies the name of the property within the data object that is used to generate columns in the Kanban control when [`AutoGenerateColumns`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_AutoGenerateColumns)  is set to `true`. 
-
-Alternatively, you can manually define columns by setting [`AutoGenerateColumns`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_AutoGenerateColumns) to `false` and adding instances of [`KanbanColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html) to the [`Columns`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_Columns) collection of the [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) control. Based on the property specified in [ColumnMappingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ColumnMappingPath), the Kanban control will generate the columns and render the corresponding cards accordingly.
+Alternatively, you can manually define columns by setting [`AutoGenerateColumns`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_AutoGenerateColumns) to `false` and adding instances of [`KanbanColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html) to the [`Columns`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_Columns) collection of the [`SfKanban`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) control. Based on the property specified in [`ColumnMappingPath`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ColumnMappingPath), the Kanban control will generate the columns and render the corresponding cards accordingly.
 
 Let’s look at the practical code example:
 
 {% tabs %}
-{% highlight XAML hl_lines="2 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26" %}
+{% highlight XAML hl_lines="2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22" %}
 
-<kanban:SfKanban ItemsSource="{Binding TaskDetails}"
+<kanban:SfKanban x:Name="kanban"
+                 ItemsSource="{Binding TaskDetails}"
                  ColumnMappingPath="Status">
-    <<kanban:SfKanban.BindingContext>
-        <local:KanbanViewModel />
-    </<kanban:SfKanban.BindingContext>
     <kanban:SfKanban.CardTemplate>
         <DataTemplate>
-            <StackLayout WidthRequest="250"
-                         Orientation="Vertical"
-                         BackgroundColor="Gray"
-                         Padding="10,10,10,10">
-                <StackLayout Orientation="Horizontal">
+            <Border Stroke="Black"
+                    StrokeThickness="1"
+                    Background="#F3CFCE">
+                <VerticalStackLayout Margin="10">
                     <Label Text="{Binding Title}"
-                           TextColor="Silver"
-                           HorizontalOptions="StartAndExpand" />
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <Label Text="{Binding Description}"
-                               WidthRequest="150"
-                               FontSize="14"
-                               TextColor="Silver"
-                               LineBreakMode="WordWrap" />
-                </StackLayout>
-            </StackLayout>
+                           HorizontalTextAlignment="Center"
+                           FontAttributes="Bold"
+                           FontSize="14" />
+                    <Label Text="{Binding Description}"
+                           HorizontalTextAlignment="Center"
+                           FontSize="12"
+                           LineBreakMode="WordWrap"
+                           Margin="5" />
+                </VerticalStackLayout>
+            </Border>
         </DataTemplate>
     </kanban:SfKanban.CardTemplate>
+    <kanban:SfKanban.BindingContext>
+        <local:KanbanViewModel />
+    </kanban:SfKanban.BindingContext>
 </kanban:SfKanban>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3 4 6 8 9 10 11 14 15 17 18 21 22 24 26 29 31 32 33 34 37 38 40 41 42 45" %}
+{% highlight C# hl_lines="3 4 5 6 7 8 9 10 11 13 15 16 17 18 19 20 21 23 25 26 27 28 29 31 32 33 34 35 36 37 39 40 42 43" %}
 
 SfKanban kanban = new SfKanban();
 KanbanViewModel viewModel = new KanbanViewModel();
 kanban.ColumnMappingPath = "Status";
 kanban.CardTemplate = new DataTemplate(() =>
 {
-    StackLayout stackLayout = new StackLayout()
+    var titleLabel = new Label
     {
-        WidthRequest = 250,
-        Orientation = StackOrientation.Vertical,
-        Padding = new Thickness(10),
-        BackgroundColor = Colors.Gray
+        HorizontalTextAlignment = TextAlignment.Center,
+        FontAttributes = FontAttributes.Bold,
+        FontSize = 14
     };
 
-    HorizontalStackLayout titleLayout = new HorizontalStackLayout();
-    Label title = new Label()
+    titleLabel.SetBinding(Label.TextProperty, "Title");
+
+    var descriptionLabel = new Label
     {
-        TextColor = Colors.Silver,
-        HorizontalOptions = LayoutOptions.Start
+        HorizontalTextAlignment = TextAlignment.Center,
+        FontSize = 12,
+        LineBreakMode = LineBreakMode.WordWrap,
+        Margin = new Thickness(5)
     };
 
-    title.SetBinding(Label.TextProperty, new Binding("Title"));
-    titleLayout.Children.Add(title);
+    descriptionLabel.SetBinding(Label.TextProperty, "Description");
 
-    StackLayout contentLayout = new StackLayout()
+    var stackLayout = new VerticalStackLayout
     {
-        Orientation = StackOrientation.Horizontal
+        Margin = new Thickness(10),
+        Children = { titleLabel, descriptionLabel }
     };
 
-    Label description = new Label()
+    var border = new Border
     {
-        WidthRequest = 150,
-        FontSize = 14,
-        TextColor = Colors.Silver,
-        LineBreakMode = LineBreakMode.WordWrap
+        Stroke = Colors.Black,
+        StrokeThickness = 1,
+        Background = Color.FromArgb("#F3CFCE"),
+        Content = stackLayout
     };
-    
-    description.SetBinding(Label.TextProperty, new Binding("Description"));
-    contentLayout.Children.Add(description);
 
-    stackLayout.Children.Add(titleLayout);
-    stackLayout.Children.Add(contentLayout);
-    return stackLayout;
+    return border;
 });
 
-kanban.ItemsSource = viewModel.Cards;
+kanban.ItemsSource = viewModel.TaskDetails;
 this.Content = kanban;
 
 {% endhighlight %}
@@ -657,6 +647,8 @@ public class KanbanViewModel
 
 {% endhighlight %}
 {% endtabs %}
+
+![defining-columns-using-custom-modelin-maui-kanban](images/getting-started/defining-columns-using-custom-modelin-maui-kanban.png)
 
 N> When using a custom data model, the default card UI is not applicable. You must define a custom `DataTemplate` using the [`CardTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_CardTemplate) property to render the card content appropriately.
 
