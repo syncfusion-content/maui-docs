@@ -1148,7 +1148,7 @@ private void PdfExport_CellExporting(object sender, DataGridCellPdfExportingEven
 
 ## Exporting DetailsView
 
-By default, [DetailsViewDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DetailsViewDataGrid.html) will not be exported to PDF. You can export `DetailsViewDataGrid` by setting `CanExportDetailsView` property as true.
+By default, [DetailsViewDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DetailsViewDataGrid.html) will not be exported to PDF. You can export `DetailsViewDataGrid` by setting [CanExportDetailsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_CanExportDetailsView) property as true.
 
 ```csharp
 MemoryStream stream = new MemoryStream();
@@ -1163,7 +1163,7 @@ saveService.SaveAndView("ExportFeature.pdf", "application/pdf", stream);
 ```
 <img src="Images\export-to-pdf\maui-datagrid-exportdetailsview.png" alt="Maui DataGrid displays Nested dataGrid exported to PDF" width="404"/>
 
-By default, only expanded DetailsViewDataGrids will be exported to the PDF document. If you want to export all the DetailsViewDataGrids, you need to set `CanExportAllDetails` to true.
+By default, only expanded DetailsViewDataGrids will be exported to the PDF document. If you want to export all the DetailsViewDataGrids, you need to set [CanExportAllDetails](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_CanExportAllDetails) to true.
 
 ```csharp
 MemoryStream stream = new MemoryStream();
@@ -1181,9 +1181,9 @@ saveService.SaveAndView("ExportFeature.pdf", "application/pdf", stream);
 
 Here, first record only expanded in SfDataGrid. But all the DetailsViewDataGrid’s are shown in exported PDF document.
 
-You can customize its exporting operation by using `DataGridChildPdfExportingEventArgs`.
+You can customize its exporting operation by using [DataGridChildPdfExportingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridChildPdfExportingEventArgs.html).
 
-N> While exporting DetailsViewDataGrid, `CanFitAllColumnInOnePage` is set to true internally as horizontal pagination is not supported for DetailsViewDataGrid.
+N> While exporting DetailsViewDataGrid, [CanFitAllColumnInOnePage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_CanFitAllColumnsInOnePage) is set to true internally as horizontal pagination is not supported for DetailsViewDataGrid.
 
 ### Excluding DetailsViewDataGrid while exporting
 
@@ -1218,7 +1218,7 @@ Here, `DetailsViewDataGrid` is not exported for the parent record having OrderID
 
 ### Customizing DetailsViewDataGrid cells
 
-Similar to the parent DataGrid, you can also customize the cells of the DetailsViewDataGrid by using the DataGridCellPdfExportingEventArgs. By utilizing the `DataGridCellPdfExportingEventArgs.DetailsViewDefinition` property, you can identify the specific DetailsViewDataGrid and customize it accordingly.
+Similar to the parent DataGrid, you can also customize the cells of the DetailsViewDataGrid by using the DataGridCellPdfExportingEventArgs. By utilizing the [DataGridCellPdfExportingEventArgs.DetailsViewDefinition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridCellPdfExportingEventArgs.html#Syncfusion_Maui_DataGrid_Exporting_DataGridCellPdfExportingEventArgs_DetailsViewDefinition) property, you can identify the specific DetailsViewDataGrid and customize it accordingly.
 
 ```csharp
     private void Button_Clicked_1(object sender, EventArgs e)

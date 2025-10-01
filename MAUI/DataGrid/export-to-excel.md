@@ -1055,7 +1055,7 @@ private void ExcelExport_RowExporting(object sender, DataGridRowExcelExportingEv
 
 ## Exporting DetailsView
 
-By default, [DetailsViewDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DetailsViewDataGrid.html) will not be exported to Excel. You can export `DetailsViewDataGrid` by setting `CanExportDetailsView` property as true. You can customize its exporting operation by using `DataGridChildExcelExportingEventArgs`.
+By default, [DetailsViewDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DetailsViewDataGrid.html) will not be exported to Excel. You can export `DetailsViewDataGrid` by setting [CanExportDetailsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_CanExportDetailsView) property as true. You can customize its exporting operation by using [DataGridChildExcelExportingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridChildExcelExportingEventArgs.html).
 
 ### Excluding DetailsViewDataGrid while exporting
 
@@ -1093,7 +1093,7 @@ Here, `DetailsViewDataGrid` is not exported for the parent record having OrderID
 
 ### Customizing DetailsViewDataGrid cells
 
-Similar to the parent DataGrid, you can also customize the cells of the DetailsViewDataGrid using the [DataGridCellExcelExportingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridCellExcelExportingEventArgs.html). By utilizing the `DataGridCellExcelExportingEventArgs.DetailsViewDefinition` property, you can identify the specific DetailsViewDataGrid and make your customizations.
+Similar to the parent DataGrid, you can also customize the cells of the DetailsViewDataGrid using the [DataGridCellExcelExportingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridCellExcelExportingEventArgs.html). By utilizing the [DataGridCellExcelExportingEventArgs.DetailsViewDefinition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridCellExcelExportingEventArgs.html#Syncfusion_Maui_DataGrid_Exporting_DataGridCellExcelExportingEventArgs_DetailsViewDefinition) property, you can identify the specific DetailsViewDataGrid and make your customizations.
 
 ```csharp
     private void Button_Clicked_1(object sender, EventArgs e)
