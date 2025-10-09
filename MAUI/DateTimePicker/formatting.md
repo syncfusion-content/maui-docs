@@ -75,7 +75,7 @@ The different types of formats are:
 [`HH_mm`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTimeFormat.html#Syncfusion_Maui_Picker_PickerTimeFormat_HH_mm) - Represents the hour minute in HH_mm format.
 
 [`HH_mm_ss`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTimeFormat.html#Syncfusion_Maui_Picker_PickerTimeFormat_HH_mm_ss) - Represents the hour minute second in HH_mm_ss format.
-s
+
 [`hh_mm_ss_tt`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTimeFormat.html#Syncfusion_Maui_Picker_PickerTimeFormat_hh_mm_ss_tt) - Represents the hour minute second meridiem in hh_mm_ss_tt format.
 
 [`hh_mm_tt`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerTimeFormat.html#Syncfusion_Maui_Picker_PickerTimeFormat_hh_mm_tt) - Represents the hour minute meridiem in hh_mm_tt format.
