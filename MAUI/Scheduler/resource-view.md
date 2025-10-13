@@ -182,23 +182,27 @@ The number of resources shown in the day, week, work week, timelineday, timeline
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
 <schedule:SfScheduler x:Name="Scheduler" View="Day" >
 <schedule:SfScheduler.ResourceView>
-    <schedule:SchedulerResourceView VisibleResourceCount="4"/>
+    <schedule:SchedulerResourceView VisibleResourceCount="6"/>
 </schedule:SfScheduler.ResourceView>
 </schedule:SfScheduler>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="12" %}
 var Resources = new ObservableCollection<SchedulerResource>()
 {
-    new SchedulerResource() { Name = "Sophia", Foreground = Colors.White, Background = Colors.LightGreen, Id = "1000" },
-    new SchedulerResource() { Name = "Zoey Addison",  Foreground = Colors.White, Background = Colors.Gold, Id = "1001" },
-    new SchedulerResource() { Name = "James William",  Foreground = Colors.White, Background = Colors.Violet, Id = "1002" },
-    new SchedulerResource() { Name = "Brooklyn",  Foreground = Colors.White, Background = Colors.LightSkyBlue, Id = "1003" },
-    new SchedulerResource() { Name = "Stephen",  Foreground = Colors.White, Background = Colors.PeachPuff, Id = "1004" },
-    new SchedulerResource() { Name = "Elena",  Foreground = Colors.White, Background = Colors.Pink, Id = "1005" },
+    new SchedulerResource { Name = "Sophia",         Foreground = Colors.White, Background = Colors.LightGreen,  Id = "1000" },
+    new SchedulerResource { Name = "Zoey Addison",   Foreground = Colors.White, Background = Colors.Gold,        Id = "1001" },
+    new SchedulerResource { Name = "Aiden Clark",    Foreground = Colors.White, Background = Colors.LightSkyBlue,Id = "1002" },
+    new SchedulerResource { Name = "Mia Johnson",    Foreground = Colors.White, Background = Colors.Tomato,      Id = "1003" },
+    new SchedulerResource { Name = "Liam Parker",    Foreground = Colors.White, Background = Colors.Orchid,      Id = "1004" },
+    new SchedulerResource { Name = "Olivia Bennett", Foreground = Colors.White, Background = Colors.SlateBlue,   Id = "1005" },
+    new SchedulerResource { Name = "Noah Ramirez",   Foreground = Colors.White, Background = Colors.SeaGreen,    Id = "1006" },
+    new SchedulerResource { Name = "Ava Thompson",   Foreground = Colors.White, Background = Colors.Coral,       Id = "1007" },
+    new SchedulerResource { Name = "Ethan Davis",    Foreground = Colors.White, Background = Colors.DodgerBlue,  Id = "1008" },
+    new SchedulerResource { Name = "Isabella Moore", Foreground = Colors.White, Background = Colors.MediumOrchid,Id = "1009" },
 };
 
 this.Scheduler.ResourceView.Resources = Resources;
-this.Scheduler.ResourceView.VisibleResourceCount = 4;
+this.Scheduler.ResourceView.VisibleResourceCount = 6;
 {% endhighlight %}
 {% endtabs %}
 
@@ -231,9 +235,8 @@ this.Scheduler.ResourceView.VisibleResourceCount = 4;
 {% endtabs %}
 
 N> 
-* When [`VisibleResourceCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_VisibleResourceCount) is set to -1, the `SfScheduler` displays up to three resources. If the total number of resources is less than three, it displays all available resources.
-* When [`VisibleResourceCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_VisibleResourceCount) is set to 0, the resource view layout is removed, and only the plain Scheduler view (e.g., Day view without resources) is shown.
-* This property applies to the horizontal resource view on Windows and macOS, and to the timeline resource view on all platforms. When the value is -1 (default), the horizontal resource view displays three resources. In timeline resource views, the number of visible resource rows is determined by the minimum row height, and the auto row height.
+* When [`VisibleResourceCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_VisibleResourceCount) is set to 0, the resource view layout is removed, and only the plain Scheduler view is shown.
+* [`VisibleResourceCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_VisibleResourceCount) applies to the horizontal resource view on Windows and macOS, and to the timeline resource view on all platforms. When the value is -1 (default), the horizontal resource view displays three resources. In timeline resource views, the number of visible resource rows is determined by the minimum row height, and the auto row height.
 
 ## Resource Header Height in Days View
  
@@ -270,7 +273,7 @@ In the timelineday, timelineweek, and timeline work week views, resources are ar
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
 <schedule:SfScheduler x:Name="Scheduler" View="TimelineDay" >
 <schedule:SfScheduler.ResourceView>
-    <schedule:SchedulerResourceView ResourceHeaderWidth="200"/>
+    <schedule:SchedulerResourceView ResourceHeaderWidth="250"/>
 </schedule:SfScheduler.ResourceView>
 </schedule:SfScheduler>
 {% endhighlight %}
@@ -283,7 +286,7 @@ var Resources = new ObservableCollection<SchedulerResource>()
 };
 
 this.Scheduler.ResourceView.Resources = Resources;
-this.Scheduler.ResourceView.ResourceHeaderWidth = 200;
+this.Scheduler.ResourceView.ResourceHeaderWidth = 250;
 {% endhighlight %}
 {% endtabs %}
 

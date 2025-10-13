@@ -93,7 +93,7 @@ The scheduler month view allows you to customize the size of the appointment ind
 <schedule:SfScheduler x:Name="Scheduler"
                         View="Month" >
         <schedule:SfScheduler.MonthView>
-            <schedule:SchedulerMonthView AppointmentDisplayMode="Indicator" AppointmentIndicatorSize="20"/>
+            <schedule:SchedulerMonthView AppointmentDisplayMode="Indicator" AppointmentIndicatorSize="10"/>
         </schedule:SfScheduler.MonthView>
 </schedule:SfScheduler>
 
@@ -102,7 +102,7 @@ The scheduler month view allows you to customize the size of the appointment ind
 
 this.Scheduler.View = SchedulerView.Month;
 this.Scheduler.MonthView.AppointmentDisplayMode = SchedulerMonthAppointmentDisplayMode.Indicator;
-this.Scheduler.MonthView.AppointmentIndicatorSize = 20;
+this.Scheduler.MonthView.AppointmentIndicatorSize = 10;
 
 {% endhighlight %}  
 {% endtabs %}
