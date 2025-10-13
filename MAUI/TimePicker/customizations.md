@@ -231,7 +231,7 @@ timePicker.ColumnHeaderView = new TimePickerColumnHeaderView()
     MinuteHeaderText = "Minute Column",
     SecondHeaderText = "Second Column",
     MilliSecondHeaderText = "MilliSecond Column"
-    MerdiemHeaderText = "Merdiem Column"
+    MeridiemHeaderText = "Meridiem Column"
 };
 
 this.Content = timePicker;
