@@ -28,6 +28,8 @@ The following code example describes the card position changing functionality.
 
 <kanban:SfKanban x:Name="kanban"
                  ItemsSource="{Binding Cards}"
+                 SortingMappingPath="Index"
+                 SortingOrder="Ascending"
                  DragEnd="OnCardDragEnd">
     <kanban:SfKanban.BindingContext>
         <local:SortingViewModel/>
@@ -413,7 +415,7 @@ public class SortingViewModel
 
 ## Model property value updation while drag and drop
 
-Another way to sort the target column during drag-and-drop is by updating the dropped card’s SortingMappingPath value based on your custom requirements. In the sample, you can access the target column collection using `e.TargetColumn.`Items` in the ``DragEnd` event and apply your own sorting logic.
+Another way to sort the target column during drag-and-drop is by updating the dropped card’s SortingMappingPath value based on your custom requirements. In the sample, you can access the target column collection using `e.TargetColumn.Items' in the ``DragEnd` event and apply your own sorting logic.
 
 The following code example illustrate the model property updation functionality.
 
@@ -422,6 +424,8 @@ The following code example illustrate the model property updation functionality.
 
 <kanban:SfKanban x:Name="kanban"
                  ItemsSource="{Binding Cards}"
+                 SortingMappingPath="Index"
+                 SortingOrder="Ascending"
                  DragEnd="OnCardDragEnd">
     <kanban:SfKanban.BindingContext>
         <local:SortingViewModel/>
