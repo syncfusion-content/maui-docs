@@ -1,7 +1,7 @@
 ---
 layout: post
-Title: Appointment Drag and Drop in .NET MAUI Scheduler Control | Syncfusion<sup>&reg;</sup>
-Description: Learn here all about Appointment drag and drop support in the Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler(SfScheduler) control.
+title: Appointment Drag and Drop in .NET MAUI Scheduler Control | Syncfusion<sup>&reg;</sup>
+description: Learn here all about Appointment drag and drop support in the Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler(SfScheduler) control.
 platform: maui
 control: SfScheduler
 documentation: ug
