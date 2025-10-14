@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Markers in .NET MAUI Maps control | Syncfusion<sup>&reg;</sup>
-description: Learn all about the Markers feature of Syncfusion<sup>&reg;</sup> .NET MAUI Maps (SfMaps) control to customize its appearance, including text, icon and more.
+title: Markers in .NET MAUI Maps control | Syncfusion
+description: Learn all about the Markers feature of Syncfusion .NET MAUI Maps (SfMaps) control to customize its appearance, including text, icon and more.
 platform: MAUI
 control: SfMaps
 documentation: ug
