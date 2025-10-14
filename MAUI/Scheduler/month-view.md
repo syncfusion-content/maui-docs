@@ -107,7 +107,7 @@ this.Scheduler.MonthView.AppointmentIndicatorSize = 10;
 {% endhighlight %}  
 {% endtabs %}
 
-![change-appointment-indicator-size-in-maui-scheduler](images/month-view/appointment-indicator-size-maui-scheduler.png)
+![change-appointment-indicator-size-in-maui-scheduler](images/month-view/appointment-indicator-size-maui-scheduler.png){:width="325" height="600" loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
 
 ## Hide leading and trailing dates
 
