@@ -116,9 +116,9 @@ private void OnSchedulerAppointmentDrop(object? sender, AppointmentDropEventArgs
 {% endhighlight %}
 {% endtabs %}
 
-### How to prevent dropping appointments into the All-day panel
+### Prevent dropping appointments into the all-day panel
 
-You can use the `IsDroppingToAllDay` property to prevent appointments from being dropped into the all-day panel by setting `e.Cancel` as `true`.
+You can prevent appointments from being dropped into the all-day panel by checking the `IsDroppingToAllDay` property in the `AppointmentDrop` event and canceling the operation.
 
 {% tabs %}
 {% highlight c# %}
