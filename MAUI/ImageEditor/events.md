@@ -40,25 +40,23 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-image-edit
 
 This `AnnotationsDeserialized` event occurs when annotations are deserialized onto the image.
 
-N> Serialization and deserialization are not applicable for custom annotation views. 
+N> `Serialization` and `deserialization` are not applicable for custom annotation views. 
 
 {% tabs %}
-
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
-    <imageEditor:SfImageEditor x:Name="imageEditor" Source="image.png" AnnotationsDeserialized="OnAnnotationsDeserialized"/>
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
+    <imageEditor:SfImageEditor x:Name="imageEditor" 
+                               Source="image.png" 
+                               AnnotationsDeserialized="OnAnnotationsDeserialized"/>
  
 {% endhighlight %}
-
 {% highlight C# tabtitle="MainPage.xaml.cs" %}
 
     private async void OnAnnotationsDeserialized(object? sender, EventArgs e)
     {
-        await DisplayAlert("Alert", "Annotation are deserialized", "Ok");
+        await DisplayAlert("", "Annotations are deserialized", "Ok");
     }
 
 {% endhighlight %}
-
 {% endtabs %}
 
 ## Annotation selected event
