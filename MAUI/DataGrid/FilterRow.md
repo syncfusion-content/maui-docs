@@ -143,45 +143,51 @@ Below are the filter conditions supported by different filter row editors in SfD
 <th> ComboBox, MultiSelectComboBox  Editor </th>
 </tr>
 <tr>
-<td> The numeric editor is utilized in <code>DataGridFilterRowCell</code> when integer, double, short, decimal, byte, or long data types are bound to the <code>DataGridColumn</code>.FilterRowEditorType . </td>
-<td> The textBox editor is employed in <code>DataGridFilterRowCell</code> for string-bound <code>DataGridColumn</code> values or dynamic item sources. </td>
-<td> For <code>DataGridColumn</code> entries with dateTime data types, the DateTime editor is loaded into the <code>DataGridFilterRowCell</code>. </td>
-<td> When a boolean type is bound to the <code>DataGridColumn</code>, the CheckBox editor is automatically loaded in the <code>DataGridFilterRowCell</code>. </td>
+<td> The numeric editor is utilized in <code>DataGridFilterRowCell</code> when integer, double, short, decimal, byte, or long data types are bound to the <code>DataGridColumn.FilterRowEditorType</code>. </td>
+<td> The text editor is employed in <code>DataGridFilterRowCell</code> for string-bound <code>DataGridColumn</code> values or dynamic item sources. </td>
+<td> For <code>DataGridColumn</code> entries with datetime data types, the datetime editor is loaded into the <code>DataGridFilterRowCell</code>. </td>
+<td> When a boolean type is bound to the <code>DataGridColumn</code>, the checkbox editor is automatically loaded in the <code>DataGridFilterRowCell</code>. </td>
 <td> To use comboBox and MultiSelectComboBox editors, the FilterRowEditorType property must be explicitly set. </td>
 </tr>
 <tr>
-<td>The default numeric filter condition is 'Equals'. Additional available conditions include:
-Equals
-Does Not Equal
-Null
-Not Null
-Less Than
-Less Than or Equal
-Greater Than
-Greater Than or Equal</td>
-<td>The default text filter condition is 'Contains'. Other available conditions include:
-Equals
-Does Not Equal
-Null
-Not Null
-Begins With
-Does Not Begin With
-Ends With
-Does Not End With
-Contains
-Does Not Contain
-Empty
-Not Empty</td>
-<td>The default 'DateTime' filter condition is 'Equals'. Additional conditions provided are:
-Equals
-Does Not Equal
-Null
-Not Null
-Before
-Before or Equal
-After
-After or Equal</td>
-<td>For CheckBox values, the 'Equals' filter condition is always applied.</td>
+<td>The default numeric filter condition is <code>Equals</code>. Additional available conditions include:
+<ol>
+<li>Equals</li>
+<li>Does Not Equal</li> 
+<li>Null</li> 
+<li>Not Null</li> 
+<li>Less Than</li>
+<li>Less Than or Equal</li>
+<li>Greater Than</li>
+<li>Greater Than or Equal</li>
+</ol></td>
+<td>The default text filter condition is <code>Contains</code>. Other available conditions include:
+<ol>
+<li>Equals</li>
+<li>Does Not Equal</li> 
+<li>Null</li> 
+<li>Not Null</li> 
+<li>Begins With</li>
+<li>Does Not Begin With</li>
+<li>Ends With</li>
+<li>Does Not End With</li>
+<li>Contains</li>
+<li>Does Not Contain</li>
+<li>Empty</li>
+<li>Not Empty</li> 
+</ol></td>
+<td>The default <code>DateTime</code> filter condition is <code>Equal</code>. Additional conditions provided are:
+<ol>
+<li>Equals</li>
+<li>Does Not Equal</li>
+<li>Null</li>
+<li>Not Null</li>
+<li>Before</li>
+<li>Before or Equal</li>
+<li>After</li>
+<li>After or Equal</li>
+</ol></td>
+<td>For checkbox values, the <code>Equals</code> filter condition is always applied.</td>
 <td></td>
 </tr>
 </table>
@@ -206,7 +212,7 @@ this.dataGrid.Columns[0].FilterRowCondition =  FilterRowCondition.LessThan;
 
 ## Filtering null values
 
-Control the inclusion of null values in filtering by configuring the `DataGridColumn.AllowBlankFilters` property, which is true by default. When active, filter options display “Null” and “Not Null” choices, and ComboBox editors include a “Blanks” option for null value filtering.
+Control the inclusion of null values in filtering by configuring the `DataGridColumn.AllowBlankFilters` property, which is true by default. When active, filter options display `Null` and `Not Null` choices, and ComboBox editors include a `Blanks` option for null value filtering.
 
 {% tabs %}
 {% highlight XAML %}
@@ -269,6 +275,19 @@ private void DataGrid_CurrentCellBeginEdit(object? sender, DataGridCurrentCellBe
 
 ## Styling
 
+### Apply default style
+
+You can customize the basic styling of the FilterRow in SfDataGrid using the DefaultStyle property. This approach allows you to modify attributes such as `FilterRowFontAttributes`, `FilterIconHoverBackground`, `FilterRowBackground`, `FilterRowFontFamily`, `FilterRowFontSize`, and `FilterRowTextColor`.
+
+{% tabs %}
+{% highlight xaml %}
+
+            <syncfusion:SfDataGrid.DefaultStyle>
+                <syncfusion:DataGridStyle FilterRowFontAttributes="Bold" FilterIconHoverBackground="AliceBlue" FilterRowBackground="Yellow" FilterRowTextColor="CadetBlue" FilterRowFontSize="10" />
+            </syncfusion:SfDataGrid.DefaultStyle>
+{% endhighlight %}
+{% endtabs %}
+
 ### Filter row style
 Customize the appearance of the filter row by defining a style with TargetType [DataGridFilterRowView].
 {% tabs %}
@@ -292,7 +311,7 @@ Further customize the filter row cell's appearance through the `FilterRowCellSty
 <syncfusion:DataGridNumericColumn HeaderText="Order ID" MappingName="OrderID" >
                     <syncfusion:DataGridNumericColumn.FilterRowCellStyle>
                         <Style TargetType="syncfusion:SfDataGridFilterRowLabel">
-                            <Setter Property="TextColor" Value="Red" />
+                            <Setter Property="Background" Value="CornflowerBlue" />
                         </Style>
                     </syncfusion:DataGridNumericColumn.FilterRowCellStyle>
                 </syncfusion:DataGridNumericColumn>
@@ -302,42 +321,29 @@ Further customize the filter row cell's appearance through the `FilterRowCellSty
 
 <img alt="Customizing Filter Row Cell Style in MAUI DataGrid" src="Images\filterrow\maui-datagrid-filterrow-cellstyle.png" width="404" />  
 
-### Apply Default Style
-
-You can customize the basic styling of the FilterRow in SfDataGrid using the DefaultStyle property. This approach allows you to modify attributes such as FilterRowFontAttributes, FilterIconHoverBackground, FilterRowBackground, FilterRowFontFamily, FilterRowFontSize, and FilterRowTextColor.
-
-{% tabs %}
-{% highlight xaml %}
-
- <syncfusion:SfDataGrid.DefaultStyle>
-                <syncfusion:DataGridStyle FilterRowFontAttributes="Bold" FilterIconHoverBackground="AliceBlue" />
-            </syncfusion:SfDataGrid.DefaultStyle>
-{% endhighlight %}
-{% endtabs %}
-
 ## Customizing filter row editors
 
 ### Customizing the filter row renderer
 
-SfDataGrid allows you to customize the filter row renderer behavior by overriding the corresponding renderer associated with the filter row cell. Each renderer have a set of virtual methods for handling the filter row behaviors. You can also create new renderers instead of overriding the existing renderer.
-You can customize the default TextBox editor behavior by overriding DataGridFilterRowTextBoxRenderer class and add the custom renderer to FilterRowCellRenderers.
+[SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) allows you to customize the filter row renderer behavior by overriding the corresponding renderer associated with the filter row cell. Each renderer have a set of virtual methods for handling the filter row behaviors. You can also create new renderers instead of overriding the existing renderer.
+You can customize the default TextBox editor behavior by overriding `DataGridFilterRowTextBoxRenderer` class and add the custom renderer to `FilterRowCellRenderers`.
 
 {% tabs %}
 {% highlight xaml %}
                 <syncfusion:DataGridTextColumn  HeaderText="Customer ID"
-                                                MappingName="CustomerID" FilterRowEditorType="TextBoxExt"/>
+                                                MappingName="CustomerID" FilterRowEditorType="CustomTextBox"/>
 {% endhighlight %}
 {% highlight c# %}
         public MainPage()
         {
             InitializeComponent();
 
-            this.dataGrid.FilterRowCellRenderers.Add("TextBoxExt", new DataGridFilterRowTextBoxRendererExt());
+            this.dataGrid.FilterRowCellRenderers.Add("CustomTextBox", new CustomDataGridFilterRowTextBoxRenderer());
         }
 
-            public class DataGridFilterRowTextBoxRendererExt : DataGridFilterRowTextBoxRenderer
+            public class CustomDataGridFilterRowTextBoxRenderer : DataGridFilterRowTextBoxRenderer
     {
-        public DataGridFilterRowTextBoxRendererExt(): base() 
+        public CustomDataGridFilterRowTextBoxRenderer(): base() 
         {
         }
     }
@@ -351,17 +357,17 @@ By default, columns support filtering multiple values using the MultiSelectCombo
 {% tabs %}
 {% highlight xaml %}
                 <syncfusion:DataGridTextColumn  HeaderText="Customer ID"
-                                                MappingName="CustomerID" FilterRowEditorType="ComboBoxExt"/>
+                                                MappingName="CustomerID" FilterRowEditorType="CustomComboBox"/>
 {% endhighlight %}
 {% highlight c# %}
         public MainPage()
         {
             InitializeComponent();
 
-            this.dataGrid.FilterRowCellRenderers.Add("ComboBoxExt", new DataGridFilterRowComboBoxRendererExt());
+            this.dataGrid.FilterRowCellRenderers.Add("CustomComboBox", new CustomDataGridFilterRowComboBoxRenderer());
         }
 
-        public class DataGridFilterRowComboBoxRendererExt : DataGridFilterRowComboBoxRenderer , INotifyPropertyChanged
+        public class CustomDataGridFilterRowComboBoxRenderer : DataGridFilterRowComboBoxRenderer , INotifyPropertyChanged
 {
     private List<string>? numericComboBoxItems;
 
@@ -369,7 +375,7 @@ By default, columns support filtering multiple values using the MultiSelectCombo
 
     private string selectedText = string.Empty;
 
-    public DataGridFilterRowComboBoxRendererExt() 
+    public CustomDataGridFilterRowComboBoxRenderer() 
     {
         SetNumericComboBoxItemsList();
     }
@@ -536,12 +542,12 @@ By default, the `SfDataGrid` loads a `ComboBox` when the `FilterRow` enters edit
 {% highlight c# %}
 
             dataGrid.FilterRowCellRenderers.Remove("MultiSelectComboBox");
-            dataGrid.FilterRowCellRenderers.Add("MultiSelectComboBox", new DataGridMultiSelectComboBoxRendererExt());
+            dataGrid.FilterRowCellRenderers.Add("MultiSelectComboBox", new CustomDataGridMultiSelectComboBoxRenderer());
 
-                public class DataGridMultiSelectComboBoxRendererExt : DataGridFilterRowMultiSelectRenderer
+                public class CustomDataGridMultiSelectComboBoxRenderer : DataGridFilterRowMultiSelectRenderer
     {
 
-        public DataGridMultiSelectComboBoxRendererExt() 
+        public CustomDataGridMultiSelectComboBoxRenderer() 
         {
             SupportsRenderOptimization = false;
             IsEditable = true;
