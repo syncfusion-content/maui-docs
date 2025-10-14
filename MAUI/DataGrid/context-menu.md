@@ -8,16 +8,27 @@ documentation: ug
 keywords: maui datagrid context menu, maui grid context menu, .net maui datagrid right click, .net maui datagrid long press, maui datagrid header context menu, record context menu, group caption context menu, group summary context menu, table summary context menu
 ---
 
-# Context menu in .NET MAUI DataGrid (SfDataGrid)
+# Context Menu in .NET MAUI DataGrid (SfDataGrid)
 
-SfDataGrid displays a customizable context menu on right-click (Windows, Mac Catalyst) or long-press (Android, iOS). You can define menus for:
-- Header
-- Record (row)
-- Group caption
-- Group summary
-- Table summary
+## Overview
 
-## Header context menu
+The `SfDataGrid` control allows you to display a customizable context menu when a user performs a secondary click (right-click on Windows and Mac Catalyst) or a long-press gesture (on Android and iOS) on different parts of the DataGrid.
+
+### Types of Context Menus
+
+You can define context menus for the following elements:
+
+-   **Header**: Context menu for column headers.
+-   **Record (Row)**: Context menu for data rows.
+-   **Group Caption**: Context menu for group caption rows.
+-   **Group Summary**: Context menu for group summary rows.
+-   **Table Summary**: Context menu for table summary rows.
+
+Each context menu type provides specific options tailored to the DataGrid element it is associated with.
+
+## Customize Header Context Menu
+
+The header context menu is displayed when the user invokes the context menu on a column header.You can customize the menu items by adding `MenuItem` objects to the `SfDataGrid.HeaderContextMenu` collection.
 
 {% tabs %}
 {% highlight xaml %}
@@ -48,9 +59,9 @@ this.dataGrid.HeaderContextMenu = new MenuItemCollection
 
 <img alt="Column header context menu" src="Images/context-menu/header-contextmenu.png" width="404"/>
 
-## Header context menu with commands
+## Header Context Menu with Commands
 
-While binding the menu item using Command, you can get the command parameter as HeaderContextInfo, which contains DataGrid, Column, RowIndex, and ColumnIndex.
+When binding a menu item using a `Command`, you can access the command parameter as `HeaderContextInfo`. This object provides contextual information such as the `DataGrid` instance, the `Column` clicked, and its `RowIndex` and `ColumnIndex`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -79,7 +90,9 @@ private void SortAscending(object obj)
 {% endhighlight %}
 {% endtabs %}
 
-## Record context menu
+## Customize Record Context Menu
+
+The record context menu is displayed when the user invokes the context menu on a data row. You can customize the menu items by adding `MenuItem` objects to the `SfDataGrid.RecordContextMenu` collection.
 
 {% tabs %}
 {% highlight xaml %}
@@ -108,9 +121,9 @@ this.dataGrid.RecordContextMenu = new MenuItemCollection
 
 <img alt="Record context menu" src="Images/context-menu/record-context-menu.png" width="404"/>
 
-## Record context menu with commands
+## Record Context Menu with Commands
 
-While binding the menu item using Command, you can get the command parameter as RowContextMenuInfo, which contains the record (RowData) of the corresponding row along with DataGrid and RowIndex.
+When binding a menu item using a `Command`, you can access the command parameter as `RowContextMenuInfo`. This object contains the `RowData` of the corresponding row, along with the `DataGrid` instance and the `RowIndex`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -139,7 +152,9 @@ private void CopyCellContent(object obj)
 {% endhighlight %}
 {% endtabs %}
 
-## Group caption context menu
+## Customize Group Caption Context Menu
+
+The group caption context menu is displayed when the user invokes the context menu on a group caption row. You can customize the menu items by adding `MenuItem` objects to the `SfDataGrid.GroupCaptionContextMenu` collection.
 
 {% tabs %}
 {% highlight xaml %}
@@ -164,9 +179,9 @@ this.dataGrid.GroupCaptionContextMenu = new MenuItemCollection
 
 <img alt="Group caption context menu" src="Images/context-menu/group-caption-contextmenu.png" width="404"/>
 
-## Group caption context menu with commands
+## Group Caption Context Menu with Commands
 
-While binding the menu item using Command, you can get the command parameter as GroupCaptionContextInfo, which contains DataGrid, Group, and RowIndex.
+When binding a menu item using a `Command`, you can access the command parameter as `GroupCaptionContextInfo`. This object provides access to the `DataGrid` instance, the `Group` object, and the `RowIndex` of the clicked group caption.
 
 {% tabs %}
 {% highlight xaml %}
@@ -191,7 +206,9 @@ private void ExpandAll(object obj)
 {% endhighlight %}
 {% endtabs %}
 
-## Group summary context menu
+## Customize Group Summary Context Menu
+
+The group summary context menu is displayed when the user invokes the context menu on a group summary row. You can customize the menu items by adding `MenuItem` objects to the `SfDataGrid.GroupSummaryContextMenu` collection.
 
 {% tabs %}
 {% highlight xaml %}
@@ -213,9 +230,9 @@ this.dataGrid.GroupSummaryContextMenu = new MenuItemCollection
 
 <img alt="Group summary context menu" src="Images/context-menu/group-summary-contextmenu.png" width="404"/>
 
-## Group summary context menu with commands
+## Group Summary Context Menu with Commands
 
-While binding the menu item using Command, you can get the command parameter as GroupSummaryContextInfo, which contains DataGrid, SummaryRow, Group, and RowIndex.
+When binding a menu item using a `Command`, you can access the command parameter as `GroupSummaryContextInfo`. This object includes the `DataGrid` instance, the `SummaryRow`, the `Group` object, and the `RowIndex`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -238,7 +255,9 @@ While binding the menu item using Command, you can get the command parameter as 
 {% endhighlight %}
 {% endtabs %}
 
-## Table summary context menu
+## Customize Table Summary Context Menu
+
+The table summary context menu is displayed when the user invokes the context menu on a table summary row. You can customize the menu items by adding `MenuItem` objects to the `SfDataGrid.TableSummaryContextMenu` collection.
 
 {% tabs %}
 {% highlight xaml %}
@@ -268,9 +287,9 @@ this.dataGrid.TableSummaryContextMenu = new MenuItemCollection
 
 <img alt="Table summary context menu" src="Images/context-menu/table-summary-contextmenu.png" width="404"/>
 
-## Table summary context menu with commands
+## Table Summary Context Menu with Commands
 
-While binding the menu item using Command, you can get the command parameter as TableSummaryContextInfo, which contains DataGrid, Column, SummaryRow, and RowIndex.
+When binding a menu item using a `Command`, you can access the command parameter as `TableSummaryContextInfo`. This object provides the `DataGrid` instance, the relevant `Column`, the `SummaryRow`, and the `RowIndex`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -316,27 +335,37 @@ While binding the menu item using Command, you can get the command parameter as 
 The DataGrid exposes events to customize and react to the context menu life cycle.
 
 ### ContextMenuOpening
-Occurs before the context menu is displayed. Set Cancel to true to prevent showing the menu.
-- Cancel: bool — set to true to cancel the menu.
-- Column: DataGridColumn — the column for which the menu is opening.
-- MenuItems: IList<MenuItem> — items that will be displayed; add or remove to customize.
+
+The `ContextMenuOpening` event occurs before the context menu is displayed, allowing you to customize its content or cancel its display. The event handler receives `ContextMenuOpeningEventArgs` with the following properties:
+
+-   **Cancel**: Set to `true` to cancel the display of the context menu.
+-   **Column**: Represents the column for which the context menu is opening. This property will be `null` if the context menu is not opened for a column header.
+-   **MenuItems**: Provides access to the collection of `MenuItem` objects that will be displayed in the context menu. You can add, remove, or modify these items to customize the menu.
 
 ### ContextMenuOpened
-Occurs after the context menu is displayed.
-- Column: DataGridColumn — the column that triggered the menu.
-- MenuItems: IList<MenuItem> — the items that were displayed.
+
+The `ContextMenuOpened` event occurs immediately after the context menu has been displayed. The event handler receives `ContextMenuOpenedEventArgs` with the following properties:
+
+-   **Column**: Represents the column that triggered the context menu. This property will be `null` if the context menu was not opened for a column header.
+-   **MenuItems**: Provides access to the collection of `MenuItem` objects that are currently displayed in the context menu.
 
 ### ContextMenuItemClicked
-Occurs when a menu item is clicked.
-- MenuItem: MenuItem — the item that was clicked.
+
+The `ContextMenuItemClicked` event occurs when a menu item within the context menu is clicked. The event handler receives `ContextMenuItemClickedEventArgs` with the following property:
+
+-   **MenuItem**: Represents the `MenuItem` object that was clicked by the user.
 
 ### ContextMenuClosing
-Occurs before the context menu is closed. Set Cancel to true to keep it open.
-- Cancel: bool — set to true to keep the menu open.
-- Column: DataGridColumn — the column for which the menu is closing.
-- MenuItems: IList<MenuItem> — the items that were displayed.
+
+The `ContextMenuClosing` event occurs before the context menu is closed, allowing you to prevent its closure. The event handler receives `ContextMenuClosingEventArgs` with the following properties:
+
+-   **Cancel**: Set to `true` to keep the context menu open and prevent its closure.
+-   **Column**: Represents the column for which the context menu is closing. This property will be `null` if the context menu is not associated with a column header.
+-   **MenuItems**: Provides access to the collection of `MenuItem` objects that are currently displayed in the context menu.
 
 ### ContextMenuClosed
-Occurs after the context menu is closed.
-- Column: DataGridColumn — the column that triggered the menu.
-- MenuItems: IList<MenuItem> — the items that were displayed.
+
+The `ContextMenuClosed` event occurs after the context menu has been closed. The event handler receives `ContextMenuClosedEventArgs` with the following properties:
+
+-   **Column**: Represents the column that was associated with the closed context menu. This property will be `null` if the context menu was not opened for a column header.
+-   **MenuItems**: Provides access to the collection of `MenuItem` objects that were displayed in the closed context menu.
