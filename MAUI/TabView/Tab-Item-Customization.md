@@ -623,7 +623,6 @@ To disable the hover effect when the mouse pointer is over a [TabItem](https://h
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 			 ... >
 	<ContentPage.Resources>
-		<x:String x:Key="SfTabViewTheme">CustomTheme</x:String>
 		<Color x:Key="SfTabViewHoverBackground">Transparent</Color>
 	</ContentPage.Resources>
 	<ContentPage.Content>
