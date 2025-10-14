@@ -310,9 +310,9 @@ Further customize the filter row cell's appearance through the `FilterRowCellSty
 
 <syncfusion:DataGridNumericColumn HeaderText="Order ID" MappingName="OrderID" >
                     <syncfusion:DataGridNumericColumn.FilterRowCellStyle>
-                        <Style TargetType="syncfusion:SfDataGridFilterRowLabel">
-                            <Setter Property="Background" Value="CornflowerBlue" />
-                        </Style>
+                            <Style TargetType="syncfusion:DataGridFilterRowCell">
+                                <Setter Property="Background" Value="CornflowerBlue" />
+    </Style>
                     </syncfusion:DataGridNumericColumn.FilterRowCellStyle>
                 </syncfusion:DataGridNumericColumn>
 
