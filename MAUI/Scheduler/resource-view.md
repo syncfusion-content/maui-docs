@@ -238,7 +238,7 @@ N>
 * When [`VisibleResourceCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_VisibleResourceCount) is set to 0, the resource view layout is removed, and only the plain Scheduler view is shown.
 * [`VisibleResourceCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_VisibleResourceCount) applies to the horizontal resource view on Windows and macOS, and to the timeline resource view on all platforms. When the value is -1 (default), the horizontal resource view displays three resources. In timeline resource views, the number of visible resource rows is determined by the minimum row height, and the auto row height.
 
-![VisibleResourceCount in .NET MAUI Scheduler.](images/resource-view/visible-resource-count-net-maui-scheduler.webp)
+![VisibleResourceCount in .NET MAUI Scheduler.](images/resource-view/visible-resource-count-net-maui-scheduler.png)
 
 ## Resource Header Height in Days View
  
@@ -292,7 +292,7 @@ this.Scheduler.ResourceView.ResourceHeaderWidth = 250;
 {% endhighlight %}
 {% endtabs %}
 
-![Resource header width in .NET MAUI Scheduler.](images/resource-view/resource-width-net-maui-scheduler.webp)
+![Resource header width in .NET MAUI Scheduler.](images/resource-view/resource-width-net-maui-scheduler.png)
 
 ## Resource minimum row height
 
