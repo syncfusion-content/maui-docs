@@ -550,7 +550,7 @@ SfComboBox comboBox = new SfComboBox()
 
 ![.NET MAUI ComboBox Selected DropDown Item Background](Images/UICustomization/SelectedDropDownItemBackground.png)
 
-### Customize the Selected DropDown item text style
+### Customize the selected dropdown item's text style
 
 The [SelectedDropDownItemTextStyle]() property in the SfComboBox control allows developers to customize the appearance of the selected item in the dropdown list. This feature is useful for highlighting user selections and improving the overall UI experience.
 
