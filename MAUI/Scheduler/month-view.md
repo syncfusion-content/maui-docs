@@ -107,6 +107,8 @@ this.Scheduler.MonthView.AppointmentIndicatorSize = 10;
 {% endhighlight %}  
 {% endtabs %}
 
+![change-appointment-indicator-size-in-maui-scheduler](images/month-view/appointment-indicator-size-maui-scheduler.webp)
+
 ## Hide leading and trailing dates
 
 The previous and next month dates from a Scheduler month view can be hidden by using the [ShowLeadingAndTrailingDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_ShowLeadingAndTrailingDates) property in the [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). The `ShowLeadingAndTrailingDates` property defaults to `true.`
