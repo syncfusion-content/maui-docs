@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Custom Icons in .NET MAUI Text Input Layout control | Syncfusion®
-description: Learn here all about Custom Icons support in Syncfusion® .NET MAUI Text Input Layout (SfTextInputLayout) control and more.
+title: Custom Icons in .NET MAUI Text Input Layout control | Syncfusio
+description: Learn here all about Custom Icons support in Syncfusion .NET MAUI Text Input Layout (SfTextInputLayout) control and more.
 platform: maui
 control: SfTextInputLayout
 documentation: ug

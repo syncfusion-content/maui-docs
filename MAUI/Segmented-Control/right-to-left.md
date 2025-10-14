@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Right To Left FlowDirection in .NET MAUI Segmented control | Syncfusion<sup>&reg;</sup>
-description: Learn about Right To Left support in Syncfusion<sup>&reg;</sup> .NET MAUI Segmented control (SfSegmentedControl).
+title: Right To Left FlowDirection in .NET MAUI Segmented control | Syncfusion
+description: Learn about Right To Left support in Syncfusion .NET MAUI Segmented control (SfSegmentedControl).
 platform: maui
 control: Segmented (SfSegmented) control
 documentation: ug
