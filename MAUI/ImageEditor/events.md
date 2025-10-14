@@ -36,6 +36,31 @@ This [`ImageLoaded`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEd
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-image-editor-examples/tree/master/ImageLoadedSample)
 
+## Annotations deserialized event
+
+This `AnnotationsDeserialized` event occurs when annotations are deserialized onto the image.
+
+N> Serialization and deserialization are not applicable for custom annotation views. 
+
+{% tabs %}
+
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+    <imageEditor:SfImageEditor x:Name="imageEditor" Source="image.png" AnnotationsDeserialized="OnAnnotationsDeserialized"/>
+ 
+{% endhighlight %}
+
+{% highlight C# tabtitle="MainPage.xaml.cs" %}
+
+    private async void OnAnnotationsDeserialized(object? sender, EventArgs e)
+    {
+        await DisplayAlert("Alert", "Annotation are deserialized", "Ok");
+    }
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ## Annotation selected event
 
 This [`AnnotationSelected`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AnnotationSelected) event occurs when the annotation is selected.
