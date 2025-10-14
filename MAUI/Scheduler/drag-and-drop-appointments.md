@@ -127,7 +127,6 @@ scheduler.AppointmentDrop += OnSchedulerAppointmentDrop;
 
 private void OnSchedulerAppointmentDrop(object? sender, AppointmentDropEventArgs e)
 {
-    var appointment = e.Appointment;
     if (e.IsDroppingToAllDay)
     {
         e.Cancel = true;
