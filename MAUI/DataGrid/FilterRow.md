@@ -43,7 +43,7 @@ bool isFilterRowIndex = this.dataGrid.IsFilterRowIndex(1);
 {% endhighlight %}
 {% endtabs %}
 
-## Built-in Editors
+## Built-in editors
 
 The FilterRow automatically initializes editors that correspond to the underlying property type, simplifying data filtering. Customize these default editors by setting the `DataGridColumn.FilterRowEditorType` property.
 
@@ -143,11 +143,11 @@ Below are the filter conditions supported by different filter row editors in SfD
 <th> ComboBox, MultiSelectComboBox  Editor </th>
 </tr>
 <tr>
-<td> The Numeric editor is utilized in FilterRowCell when integer, double, short, decimal, byte, or long data types are bound to the GridColumn. </td>
-<td> The TextBox editor is employed in FilterRowCell for string-bound GridColumn values or dynamic item sources. </td>
-<td> For GridColumn entries with DateTime data types, the DateTime editor is loaded into the FilterRowCell. </td>
-<td> When a Boolean type is bound to the GridColumn, the CheckBox editor is automatically loaded in the FilterRowCell. </td>
-<td> To use ComboBox and MultiSelectComboBox editors, the FilterRowEditorType property must be explicitly set. </td>
+<td> The numeric editor is utilized in <code>DataGridFilterRowCell</code> when integer, double, short, decimal, byte, or long data types are bound to the <code>DataGridColumn</code>.FilterRowEditorType . </td>
+<td> The textBox editor is employed in <code>DataGridFilterRowCell</code> for string-bound <code>DataGridColumn</code> values or dynamic item sources. </td>
+<td> For <code>DataGridColumn</code> entries with dateTime data types, the DateTime editor is loaded into the <code>DataGridFilterRowCell</code>. </td>
+<td> When a boolean type is bound to the <code>DataGridColumn</code>, the CheckBox editor is automatically loaded in the <code>DataGridFilterRowCell</code>. </td>
+<td> To use comboBox and MultiSelectComboBox editors, the FilterRowEditorType property must be explicitly set. </td>
 </tr>
 <tr>
 <td>The default numeric filter condition is 'Equals'. Additional available conditions include:
@@ -186,7 +186,7 @@ After or Equal</td>
 </tr>
 </table>
 
-Modify the default FilterRow condition for any specific column using the GridColumn.FilterRowCondition property.
+Modify the default FilterRow condition for any specific column using the `DataGridColumn.FilterRowCondition` property.
 
 {% tabs %}
 {% highlight XAML %}
@@ -237,9 +237,9 @@ this.dataGrid.Columns[0].AllowBlankFilters = true;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Filter Row with Null option in MAUI DataGrid" src="Images\filterrow\maui-datagrid-filterrow-MultiSelectblankfilters.png" width="404" />   
+<img alt="Filter Row with Null option in MAUI DataGrid" src="Images\filterrow\maui-datagrid-filterrow-multiselectblankfilters.png" width="404" />   
 
-## Instant Filtering
+## Instant filtering
 Filters are typically applied to columns upon cell navigation or pressing the Enter key. However, by setting [DataGridColumn.ImmediateUpdateColumnFilter]() to `true`, you can enable instant filtering as you type within the editor.
 {% tabs %}
 {% highlight xaml %}
@@ -253,8 +253,8 @@ this.dataGrid.Columns[2].ImmediateUpdateColumnFilter = true;
 {% endtabs %}
 
 
-## Disable filtering for a particular FilterRowCell
-While filter row cells are editable by default for record filtering, you can prevent editing for a specific cell using the [CurrentCellBeginEdit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CurrentCellBeginEdit)  event.
+## Disable filtering for a particular cell
+While filter row cells are editable by default for record filtering, you can prevent editing for a specific cell using the [CurrentCellBeginEdit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CurrentCellBeginEdit) event.
 {% tabs %}
 {% highlight c# %}
 this.dataGrid.CurrentCellBeginEdit += DataGrid_CurrentCellBeginEdit;
@@ -270,11 +270,11 @@ private void DataGrid_CurrentCellBeginEdit(object? sender, DataGridCurrentCellBe
 ## Styling
 
 ### Filter row style
-Customize the appearance of the filter row by defining a style with TargetType [DataGridFilterRow].
+Customize the appearance of the filter row by defining a style with TargetType [DataGridFilterRowView].
 {% tabs %}
 {% highlight xaml %}
 <ContentPage.Resources>
-    <Style TargetType="syncfusion:DataGridFilterRow">
+    <Style TargetType="syncfusion:DataGridFilterRowView">
         <Setter Property="Background" Value="Red"/>
     </Style>
 </ContentPage.Resources>
@@ -284,7 +284,7 @@ Customize the appearance of the filter row by defining a style with TargetType [
 <img alt="Customizing Filter Row Style in MAUI DataGrid" src="Images\filterrow\maui-datagrid-filterrow-style.png" width="404" />  
 
 ### Customizing filter row cell
-Further customize the filter row cell's appearance through the FilterRowCellStyle property.
+Further customize the filter row cell's appearance through the `FilterRowCellStyle` property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -302,9 +302,22 @@ Further customize the filter row cell's appearance through the FilterRowCellStyl
 
 <img alt="Customizing Filter Row Cell Style in MAUI DataGrid" src="Images\filterrow\maui-datagrid-filterrow-cellstyle.png" width="404" />  
 
-### Customizing Filter row editors
+### Apply Default Style
 
-## Customizing the filter row renderer
+You can customize the basic styling of the FilterRow in SfDataGrid using the DefaultStyle property. This approach allows you to modify attributes such as FilterRowFontAttributes, FilterIconHoverBackground, FilterRowBackground, FilterRowFontFamily, FilterRowFontSize, and FilterRowTextColor.
+
+{% tabs %}
+{% highlight xaml %}
+
+ <syncfusion:SfDataGrid.DefaultStyle>
+                <syncfusion:DataGridStyle FilterRowFontAttributes="Bold" FilterIconHoverBackground="AliceBlue" />
+            </syncfusion:SfDataGrid.DefaultStyle>
+{% endhighlight %}
+{% endtabs %}
+
+## Customizing filter row editors
+
+### Customizing the filter row renderer
 
 SfDataGrid allows you to customize the filter row renderer behavior by overriding the corresponding renderer associated with the filter row cell. Each renderer have a set of virtual methods for handling the filter row behaviors. You can also create new renderers instead of overriding the existing renderer.
 You can customize the default TextBox editor behavior by overriding DataGridFilterRowTextBoxRenderer class and add the custom renderer to FilterRowCellRenderers.
@@ -331,7 +344,7 @@ You can customize the default TextBox editor behavior by overriding DataGridFilt
 {% endhighlight %}
 {% endtabs %}
 
-## Filter based on numeric interval by using the multi select combobox filter
+### Filter based on numeric interval by using the multi select combobox filter
 
 By default, columns support filtering multiple values using the MultiSelectComboBox filter editor type. To filter data based on a range of numeric values, you can override the PopulateComboBoxItems and GetFilterPredicates methods within the DataGridFilterRowComboBoxRenderer class, as demonstrated in the code below.
 
@@ -510,7 +523,7 @@ By default, columns support filtering multiple values using the MultiSelectCombo
 
 <img alt="Customizing Filter Row in MAUI DataGrid" src="Images\filterrow\maui-datagrid-filterrow-customnumericrenderer.png" width="404" />  
 
-## Customizing `DataGridFilterRowMultiSelectRenderer`
+## Customizing DataGridFilterRowMultiSelectRenderer
 
 By default, the `SfDataGrid` loads a `ComboBox` when the `FilterRow` enters edit mode. However, you can tailor the `DataGridFilterRowMultiSelectRenderer` to ensure the `ComboBox` is visible immediately upon `FilterRow` initialization.
 
