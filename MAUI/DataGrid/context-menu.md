@@ -313,7 +313,7 @@ While binding the menu item using Command, you can get the command parameter as 
 
 ## Events
 
-The DataGrid exposes events to customize and react to the context menu lifecycle.
+The DataGrid exposes events to customize and react to the context menu life cycle.
 
 ### ContextMenuOpening
 Occurs before the context menu is displayed. Set Cancel to true to prevent showing the menu.
