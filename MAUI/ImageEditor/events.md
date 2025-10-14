@@ -87,31 +87,3 @@ The [`BrowseImage`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEdi
 {% endhighlight %}
 
 {% endtabs %}
-
-## AnnotationsDeserialized event
-
-The 'AnnotationsDeserialized' event is triggered each time deserialization completes and annotations are applied to the ImageEditor control. This allows users to validate the data, update the UI, or execute custom business logic.
-
-N> Serialization and deserialization are not applicable for custom annotation views. 
-
-{% tabs %}
-
-{% highlight xaml tabtitle="MainPage.xaml" %}
-
-                <imageEditor:SfImageEditor x:Name="imageEditor"                                     
-                                       Source="image.png"
-                                       AnnotationsDeserialized="OnAnnotationsDeserialized"/>
- 
-{% endhighlight %}
-
-{% highlight C# tabtitle="MainPage.xaml.cs" %}
-
-    private void OnAnnotationsDeserialized(object? sender, EventArgs e)
-    {
-        
-        // Add anything here, like dispaly alert to show event raised
-    }
-
-{% endhighlight %}
-
-{% endtabs %}
