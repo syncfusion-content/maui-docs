@@ -86,12 +86,12 @@ Enable built-in validation support by setting [SfDataGrid.ValidationMode]() or [
 {% endhighlight %}
 {% highlight C# %}
 
-this.dataGrid.ValidationMode = dataGridValidationMode.InView;
+this.dataGrid.ValidationMode = DataGridValidationMode.InView;
                        
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="data-validation-with-IdataErrorInfo" src="Images\data-validation\maui-datagrid-datavalidation-idataerrorinfo.png" width="404" height="396"/>
+<img alt="data-validation-with-IDataErrorInfo" src="Images\data-validation\maui-datagrid-datavalidation-idataerrorinfo.png" width="404" height="396"/>
 
 ### Using INotifyDataErrorInfo
 
@@ -119,7 +119,7 @@ public class OrderInfo : INotifyDataErrorInfo
             return null;
 
         if (this.ShipCity.Contains("Graz") || this.ShipCity.Contains("Montréal"))
-            errors.Add("Delivery not available for the city " + this.ShipCity);
+            errors.Add("Delivery not available for " + this.ShipCity);
         return errors;
     }
 
@@ -169,7 +169,7 @@ A cell can be validated using [CellValidating]() event when the cell is edited. 
 
 this.dataGrid.CellValidating += dataGrid_CellValidating;
 
-void dataGrid_CellValidating(object sender, DataGridCellValidatingEventArgs args)
+private void dataGrid_CellValidating(object sender, DataGridCellValidatingEventArgs args)
 {
     if (args.NewValue.ToString().Equals("Brazil"))
     {
@@ -188,7 +188,7 @@ void dataGrid_CellValidating(object sender, DataGridCellValidatingEventArgs args
 
 this.dataGrid.CellValidated += dataGrid_CellValidated;
 
-void dataGrid_CellValidated(object sender, DataGridCellValidatedEventArgs args)
+private void dataGrid_CellValidated(object sender, DataGridCellValidatedEventArgs args)
 {
 
 }
@@ -230,7 +230,7 @@ void dataGrid_RowValidating(object sender, DataGridRowValidatingEventArgs args)
 
 this.dataGrid.RowValidated += dataGrid_RowValidated;
 
-void dataGrid_RowValidated(object sender, DataGridRowValidatedEventArgs args)
+private void dataGrid_RowValidated(object sender, DataGridRowValidatedEventArgs args)
 {
 
 }
@@ -242,7 +242,7 @@ void dataGrid_RowValidated(object sender, DataGridRowValidatedEventArgs args)
 
 ### Change Error Icon Color
 
-The default sort icon color can be customized by setting the [DataGridStyle.ErrorIconColor]() property.
+The default error icon color can be customized by setting the [DataGridStyle.ErrorIconColor]() property.
 
 {% tabs %}
 {% highlight XAML %}
@@ -365,7 +365,7 @@ public class ErrorIconTemplateSelector: DataTemplateSelector
 
 ### Change Error Tip Background and Foreground Color
 
-The background of the error tip can be changed by setting [DataGridStyle.ErrorTipBackground]() property. The error tip foreground color can be changed by setting [DataGridStyle.ErrorTipTextColor]() property.
+The background of the error tip can be changed by setting [DataGridStyle.ErrorTipBackground]() property. The error tip text color can be changed by setting [DataGridStyle.ErrorTipTextColor]() property.
 
 {% tabs %}
 {% highlight XAML %}
@@ -401,7 +401,7 @@ The SfDataGrid uses a tool tip to showcase an error message if a cell has error.
                        ValidationMode = "InView">
         <syncfusion:SfDataGrid.ErrorIconTemplate>
                 <DataTemplate>
-                    <Label Text = "Delivery not available for this Country" Background = "Orange" TextColor = "Black" Padding = "2"/>
+                    <Label Text = "Delivery not available" Background = "Orange" TextColor = "Black" Padding = "2"/>
                 </DataTemplate>
         </syncfusion:SfDataGrid.ErrorIconTemplate>
 </syncfusion:SfDataGrid>
@@ -414,7 +414,7 @@ this.dataGrid.ErrorTipTemplate = new DataTemplate(() =>
 {
     var label = new Label()
     {
-        Text = "Delivery Not Available for this Country",
+        Text = "Delivery Not available",
         Background = Colors.Orange,
         TextColor = Colors.Black
     };
@@ -439,7 +439,7 @@ When choosing a ErrorTipTemplate as a DataTemplateSelector, you have the option 
             <Label Text = "Delivery not available for Belgium" Background = "Orange" TextColor = "Black" Padding = "2"/>
         </DataTemplate>
     <DataTemplate x:Key = "CanadaTemplate">
-            <Label Text = "Delivery not available for Canada" Background = "MediumVioletRed" TextColor = "White" Padding = "2"/>
+            <Label Text = "Delivery not available for Canada" Background = "LightBlue" TextColor = "Black" Padding = "2"/>
         </DataTemplate>
     </ResourceDictionary>
 </ContentPage.Resources>
@@ -538,7 +538,7 @@ Master-Details View support to validate the cells and rows using [CellValidating
 
 #### Cell Validation
 
-The cells can be validated using [CellValidating]() event of [ViewDefinition.DataGrid]() when the cell is edited. `CellValidating` event occurs when the edited cells tries to commit the data or lose the focus.
+The cells can be validated using [CellValidating]() event of [ViewDefinition.DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ViewDefinition.html) when the cell is edited. `CellValidating` event occurs when the edited cells tries to commit the data or lose the focus.
 
 {% tabs %}
 {% highlight XAML %}
@@ -567,7 +567,7 @@ The cells can be validated using [CellValidating]() event of [ViewDefinition.Dat
 
 this.FirstLevelNestedGrid.CellValidating += FirstLevelNestedGrid_CellValidating;
 
-void FirstLevelNestedGrid_CellValidating(object sender, DataGridCellValidatingEventArgs args)
+private void FirstLevelNestedGrid_CellValidating(object sender, DataGridCellValidatingEventArgs args)
 {
 
     if (args.NewValue.ToString().Equals("SIMOB"))
@@ -587,7 +587,7 @@ void FirstLevelNestedGrid_CellValidating(object sender, DataGridCellValidatingEv
 
 this.FirstLevelNestedGrid.CellValidated += FirstLevelNestedGrid_CellValidated;
 
-void FirstLevelNestedGrid_CellValidated(object sender, DataGridCellValidatedEventArgs args)
+private void FirstLevelNestedGrid_CellValidated(object sender, DataGridCellValidatedEventArgs args)
 {
 
 }
@@ -603,7 +603,7 @@ When the relation is auto-generated, you can wire the `CellValidating` and `Cell
 dataGrid.AutoGenerateRelations = true;
 dataGrid.AutoGeneratingRelations += dataGrid_AutoGeneratingRelations;
 
-void dataGrid_AutoGeneratingRelations(object sender, AutoGeneratingRelationsArgs e)
+private void dataGrid_AutoGeneratingRelations(object sender, AutoGeneratingRelationsArgs e)
 {
     e.DataGridViewDefinition.DataGrid.CellValidating += FirstLevelNestedGrid_CurrentCellValidating;
     e.DataGridViewDefinition.DataGrid.CellValidated += FirstLevelNestedGrid_CurrentCellValidated;
@@ -645,7 +645,7 @@ The `RowValidating` event occurs when edited cells tries to commit the row data 
 
 this.FirstLevelNestedGrid.RowValidating += FirstLevelNestedGrid_RowValidating;
 
-void FirstLevelNestedGrid_RowValidating(object sender, DataGridRowValidatingEventArgs args)
+private void FirstLevelNestedGrid_RowValidating(object sender, DataGridRowValidatingEventArgs args)
 {
     var data = args.RowData.GetType().GetProperty("CustomerID").GetValue(args.RowData);
 
@@ -666,7 +666,7 @@ void FirstLevelNestedGrid_RowValidating(object sender, DataGridRowValidatingEven
 
 this.FirstLevelNestedGrid.RowValidated += FirstLevelNestedGrid_RowValidated;
 
-void FirstLevelNestedGrid_RowValidated(object sender, DataGridRowValidatedEventArgs args)
+private void FirstLevelNestedGrid_RowValidated(object sender, DataGridRowValidatedEventArgs args)
 {
 
 }
@@ -682,7 +682,7 @@ When the relation is auto-generated, you can wire the `RowValidating` and `RowVa
 dataGrid.AutoGenerateRelations = true;
 dataGrid.AutoGeneratingRelations += dataGrid_AutoGeneratingRelations;
 
-void dataGrid_AutoGeneratingRelations(object sender, AutoGeneratingRelationsArgs e)
+private void dataGrid_AutoGeneratingRelations(object sender, AutoGeneratingRelationsArgs e)
 {
     e.DataGridViewDefinition.DataGrid.RowValidating += FirstLevelNestedGrid_RowValidating;
     e.DataGridViewDefinition.DataGrid.RowValidated += FirstLevelNestedGrid_RowValidated;
