@@ -279,7 +279,7 @@ The `SetCellValue` method on `SfDataGrid` allows you to programmatically update 
 
 N>
 1. For features (like Sorting, Grouping, Filtering) set LiveDataUpdateMode="AllowDataShaping" to ensure the grid updates in live mode after a value change.
-2.Caption rows, summary rows ,unbound rows and unbound columns cannot be updated by SetCellValue.
+2.Caption rows, summary rows, unbound rows and unbound columns cannot be updated by SetCellValue.
 
 SfDataGrid provides two overloads of SetCellValue:
 
