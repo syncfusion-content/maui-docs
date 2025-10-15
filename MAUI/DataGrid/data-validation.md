@@ -14,9 +14,9 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 ## Built-in Validation
 
-Built-in validations through `IDataErrorInfo` and `INotifyDataErrorInfo`, can be enabled by setting [SfDataGrid.ValidationMode]() or [GridColumn.ValidationMode]() properties.
+Built-in validations through `IDataErrorInfo` and `INotifyDataErrorInfo`, can be enabled by setting [SfDataGrid.ValidationMode]() or [DataGridColumn.ValidationMode]() properties.
 
-`GridColumn.ValidationMode` takes priority than `SfDataGrid.ValidationMode`.
+`DataGridColumn.ValidationMode` takes priority than `SfDataGrid.ValidationMode`.
 
 * DataGridValidation.InEdit - display error icon & tips and also doesn’t allow the users to commit the invalid data by not allowing users to edit other cells.
 * DataGridValidation.InView - displays error icons and tips alone.
@@ -71,7 +71,7 @@ public class OrderInfo : IDataErrorInfo
 {% endhighlight %}
 {% endtabs %}
 
-Enable built-in validation support by setting [SfDataGrid.ValidationMode]() or [GridColumn.ValidationMode]() property to `InEdit` or `InView`.
+Enable built-in validation support by setting [SfDataGrid.ValidationMode]() or [DataGridColumn.ValidationMode]() property to `InEdit` or `InView`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -139,7 +139,7 @@ public class OrderInfo : INotifyDataErrorInfo
 {% endhighlight %}
 {% endtabs %}
 
-Enable built-in validation support by setting [SfDataGrid.ValidationMode]() or [GridColumn.ValidationMode]() property to `InEdit` or `InView`.
+Enable built-in validation support by setting [SfDataGrid.ValidationMode]() or [DataGridColumn.ValidationMode]() property to `InEdit` or `InView`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -160,9 +160,9 @@ Enable built-in validation support by setting [SfDataGrid.ValidationMode]() or [
 
 A cell can be validated using [CellValidating]() event when the cell is edited. `CellValidating` event occurs when the edited cells tries to commit the data or lose the focus. DataGrid will not allow user to edit other cells if validation failed.
 
-[CellValidatingEventArgs]() provides information to `CellValidating` event for validating the cell. `CellValidatingEventArgs.OriginalSource` returns the DataGrid fired this event for DetailsView.
+[DataGridCellValidatingEventArgs]() provides information to `CellValidating` event for validating the cell. `DataGridCellValidatingEventArgs.OriginalSource` returns the DataGrid fired this event for DetailsView.
 
-`CellValidatingEventArgs.NewValue` returns the edited value and you can set the validation status using `CellValidatingEventArgs.IsValid` property.
+`DataGridCellValidatingEventArgs.NewValue` returns the edited value and you can set the validation status using `DataGridCellValidatingEventArgs.IsValid` property.
 
 {% tabs %}
 {% highlight C# %}
@@ -200,9 +200,9 @@ private void dataGrid_CellValidated(object sender, DataGridCellValidatedEventArg
 
 A Row can be validated using [RowValidating]() event when the cell is edited. The `RowValidating` event occurs when the edited cells tries to commit the row data or lose the focus. DataGrid will not allow user to edit other rows if validation failed.
 
-[RowValidatingEventArgs]() provides information to `RowValidating` event for validating row. `RowValidatingEventArgs.OriginalSource` returns the DataGrid fired this event for DetailsView.
+[DataGridRowValidatingEventArgs]() provides information to `RowValidating` event for validating row. `DataGridRowValidatingEventArgs.OriginalSource` returns the DataGrid fired this event for DetailsView.
 
-`RowValidatingEventArgs.RowData` returns the edited value and you can set the validation status using `RowValidatingEventArgs.IsValid` property.
+`DataGridRowValidatingEventArgs.RowData` returns the edited value and you can set the validation status using `DataGridRowValidatingEventArgs.IsValid` property.
 
 {% tabs %}
 {% highlight C# %}
@@ -399,11 +399,11 @@ The SfDataGrid uses a tool tip to showcase an error message if a cell has error.
                        NavigationMode = "Cell"
                        AllowEditing = "True"                           
                        ValidationMode = "InView">
-        <syncfusion:SfDataGrid.ErrorIconTemplate>
+        <syncfusion:SfDataGrid.ErrorTipTemplate>
                 <DataTemplate>
                     <Label Text = "Delivery not available" Background = "Orange" TextColor = "Black" Padding = "2"/>
                 </DataTemplate>
-        </syncfusion:SfDataGrid.ErrorIconTemplate>
+        </syncfusion:SfDataGrid.ErrorTipTemplate>
 </syncfusion:SfDataGrid>
 
 {% endhighlight %}
@@ -450,9 +450,9 @@ When choosing a ErrorTipTemplate as a DataTemplateSelector, you have the option 
                        NavigationMode = "Cell"
                        AllowEditing = "True"                           
                        ValidationMode = "InView">
-        <syncfusion:SfDataGrid.ErrorIconTemplate>
+        <syncfusion:SfDataGrid.ErrorTipTemplate>
                 <local:ErrorTipTemplateSelector BelgiumTemplate = "{StaticResource BelgiumTemplate}" CanadaTemplate = "{StaticResource CanadaTemplate}" />
-        </syncfusion:SfDataGrid.ErrorIconTemplate>
+        </syncfusion:SfDataGrid.ErrorTipTemplate>
 </syncfusion:SfDataGrid>
 
 {% endhighlight %}
