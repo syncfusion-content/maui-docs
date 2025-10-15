@@ -350,5 +350,3 @@ SfDataGrid provides two overloads of SetCellValue:
   }
 {% endhighlight %}
 {% endtabs %}
-
-![SetCellValue .NET MAUI DataGrid](Images\setcellvalue\maui-datagrid-setcellvalue.gif)
