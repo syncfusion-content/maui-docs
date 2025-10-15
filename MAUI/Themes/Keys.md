@@ -17961,7 +17961,6 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td>
     </tr>
-    <tr>
 </table>
 
 ## SfTextInputLayout
