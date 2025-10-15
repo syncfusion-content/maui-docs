@@ -148,6 +148,155 @@ private void SfDataGrid_AutoGeneratingColumn(object sender, DataGridAutoGenerati
 {% endhighlight %}
 {% endtabs %}
 
+### Data Annotations with AutoGenerateColumns
+SfDataGrid support to generate the columns based on built-in [Data Annotation Attributes](https://learn.microsoft.com/en-us/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc490428(v=vs.95)). Data Annotations ignored, when the AutoGenerateColumns is set to False.
+
+#### Exclude column
+You can skip the column generation using AutoGenerateField property.
+
+{% tabs %}
+{% highlight c# %}
+[Display(AutoGenerateField = false, Description = "OrderID field is not generated in UI")]
+
+public int OrderID
+{
+    get { return orderID; }
+    set { orderID = value; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+#### Editing 
+
+You can change the value of the property using `Editable` attribute.
+
+{% tabs %}
+{% highlight c# %}
+[Editable(true)]
+
+public string Country
+{
+    get { return country; }
+    set { country = value; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+#### Change the HeaderText of column
+
+You can customize header text of column using `Display.Name` property or `Display.ShortName` property.
+
+{% tabs %}
+{% highlight c# %}
+[Display(Name="Name of the Customer",Description="CustomerName is necessary for identification ")]
+
+public string CustomerName
+{
+    get { return customerName; }
+    set { customerName = value; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+#### Change the order of the columns
+
+You can change the columns order using `Display.Order` property.
+
+{% tabs %}
+{% highlight c# %}
+[Display(Order=0)]
+
+public int OrderID
+{
+    get { return orderID; }
+    set { orderID = value; }
+}
+[Display(Order=1)]
+
+public string CustomerID
+{
+    get { return customerId; }
+    set { customerId = value; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+The OrderID and CustomerID column rearranged based on specified order.
+
+<img alt="Changing Columns Order in Maui DataGrid" src="Images\columns\maui-datagrid-order.png" width="404"/>
+
+#### DataGrid read-only column 
+
+You can disable the editing for a column using `ReadOnly` attribute.
+
+{% tabs %}
+{% highlight c# %}
+[ReadOnly(true)]
+
+public string Country
+{
+    get { return country; }
+    set { country = value; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+#### Format datagrid columns using DisplayFormat attribute
+
+The auto-generated columns will be formatted using the [DataFormatString](https://learn.microsoft.com/en-us/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc679306%28v%3dvs.95%29) property in the [DisplayFormat](https://learn.microsoft.com/en-us/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc679253%28v%3dvs.95%29) attribute when the `DisplayFormat` attribute is defined for the properties defined in the model. If the `DisplayFormat` attribute is defined with the `DataFormatString` property, the DataGrid formats the column only based on `DataFormatString`, without considering other formatting property settings of columns.
+
+{% tabs %}
+{% highlight c# %}
+[DisplayFormat(DataFormatString = "yyyy")]
+public DateTime OrderDate
+{
+    get {  return _orderDate; }
+    set {  orderDate = value; }
+}
+
+[DisplayFormat(DataFormatString = "Country is {0}")]
+public string Country
+{
+    get { return country; }
+    set { country = value; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+N> The `DataFormatString` attribute will be considered only when the column is auto-generated.
+
+<img alt="Maui DataGrid with Columns Formatting" src="Images\columns\maui-datagrid-formatting.png" width="404"/>
+
+#### Group columns under stacked header
+Enables grouping multiple columns under a shared stacked header in the user interface. It also supports hierarchical (nested) grouping by using the / separator in the ChildColumns property.
+
+{% tabs %}
+{% highlight c# %}
+[Display(GroupName = "Order Details")]
+public string? OrderID
+{
+    get { return orderID; }
+    set { this.orderID = value; }
+}
+
+[Display(GroupName = "Order Details")]
+public DateTime OrderDate
+{
+    get { return _orderDate; }
+    set { _orderDate = value; }
+}
+
+[Display(GroupName = "Order Details")]
+public string? ShipCountry
+{
+    get { return shipCountry; }
+    set { this.shipCountry = value; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="Maui DataGrid group columns with stacked header" src="Images\columns\maui-datagrid-groupName.png" width="404"/>
+
 ## Manually generate columns
 
 The `SfDataGrid` allows to define the columns manually by adding the [DataGridColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html) objects to the [SfDataGrid.Columns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_Columns) collection. If you want to show only the manually defined columns in the view, you can achieve that by setting the `SfDataGrid.AutoGenerateColumnsMode` property to `None`.
