@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui Kanban sorting, sfKanban sorting in .net maui, .net maui Kanban sorting support.
 ---
 
-# Card Item Sorting in .NET MAUI Kanban(SfKanban)
+# Card Item Sorting in .NET MAUI Kanban (SfKanban)
 
 The Kanban control supports customizable card sorting within columns based on specific data fields such as `Priority`, `DueDate`, or `Status`. Sorting can be configured programmatically and updated dynamically at runtime using the following properties:
 
@@ -202,5 +202,5 @@ public class SortingViewModel
 {% endtabs %}
 
 N> 
- * The Index-based sorting can be achieved at the sample level after a drag-and-drop action. To implement this handle the `DragEnd` event, access the items in the target column using `e.TargetColumn.Items`, and update the numeric field used for sorting to maintain a continuous order. Finally, call `RefreshKanbanColumn` to update the UI with the new order.
+ * The Index-based sorting can be achieved at the sample level after a drag-and-drop action. To implement this handle the `DragEnd` event, access the items in the target column using `e.TargetColumn.Items`, and update the numeric field used for sorting to maintain a continuous order. Finally, call `RefreshKanbanColumn` method to update the UI with the new order.
  * To disable sorting logic, avoid assigning a value to the `SortingMappingPath` property. This ensures that card positions remain static and reflect the order of the `ItemsSource` collection, making it suitable for scenarios where sorting is not required or is managed externally.
