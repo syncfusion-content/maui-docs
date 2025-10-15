@@ -135,7 +135,7 @@ The following code example illustrates how cards numeric property updated using 
                     <Border Stroke="Black" StrokeThickness="1" StrokeShape="RoundRectangle 8" Background="#F3EADC">
                 <Grid RowDefinitions="Auto,Auto,Auto" ColumnDefinitions="Auto,*" ColumnSpacing="8" Padding="8">
                     <HorizontalStackLayout Grid.Row="0" Grid.ColumnSpan="2" Spacing="4" VerticalOptions="Center" HeightRequest="20" HorizontalOptions="End">
-                                <Label Text="{Binding Index, StringFormat='Rank {0}'}" FontSize="14" FontAttributes="Bold" TextColor="#026B6E" VerticalOptions="Center" VerticalTextAlignment="Center" HeightRequest="20"/>
+                                <Label Text="{Binding Index, StringFormat='Rank #{0}'}" FontSize="14" FontAttributes="Bold" TextColor="#026B6E" VerticalOptions="Center" VerticalTextAlignment="Center" HeightRequest="20"/>
                     </HorizontalStackLayout>
                     <Label Grid.Row="1" Grid.ColumnSpan="2" Text="{Binding Title}" FontAttributes="Bold" FontSize="14" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="5"/>
                     <Label Grid.Row="2" Grid.ColumnSpan="2" Text="{Binding Description}" FontSize="12" HorizontalTextAlignment="Center" LineBreakMode="WordWrap" Margin="5"/>
