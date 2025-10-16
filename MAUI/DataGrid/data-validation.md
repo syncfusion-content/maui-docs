@@ -14,7 +14,7 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 ## Built-in Validation
 
-Built-in validations through `IDataErrorInfo` and `INotifyDataErrorInfo`, can be enabled by setting [SfDataGrid.ValidationMode]() or [DataGridColumn.ValidationMode]() properties.
+Built-in validations through `IDataErrorInfo` and `INotifyDataErrorInfo`, can be enabled by setting [SfDataGrid.ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ValidationMode) or [DataGridColumn.ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_ValidationMode) properties.
 
 `DataGridColumn.ValidationMode` takes priority than `SfDataGrid.ValidationMode`.
 
@@ -71,7 +71,7 @@ public class OrderInfo : IDataErrorInfo
 {% endhighlight %}
 {% endtabs %}
 
-Enable built-in validation support by setting [SfDataGrid.ValidationMode]() or [DataGridColumn.ValidationMode]() property to `InEdit` or `InView`.
+Enable built-in validation support by setting [SfDataGrid.ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ValidationMode) or [DataGridColumn.ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_ValidationMode) property to `InEdit` or `InView`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -139,7 +139,7 @@ public class OrderInfo : INotifyDataErrorInfo
 {% endhighlight %}
 {% endtabs %}
 
-Enable built-in validation support by setting [SfDataGrid.ValidationMode]() or [DataGridColumn.ValidationMode]() property to `InEdit` or `InView`.
+Enable built-in validation support by setting [SfDataGrid.ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ValidationMode) or [DataGridColumn.ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_ValidationMode) property to `InEdit` or `InView`.
 
 {% tabs %}
 {% highlight XAML %}
@@ -158,9 +158,9 @@ Enable built-in validation support by setting [SfDataGrid.ValidationMode]() or [
 
 ## Cell Validation
 
-A cell can be validated using [CellValidating]() event when the cell is edited. `CellValidating` event occurs when the edited cells tries to commit the data or lose the focus. DataGrid will not allow user to edit other cells if validation failed.
+A cell can be validated using [CellValidating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellValidating) event when the cell is edited. `CellValidating` event occurs when the edited cells tries to commit the data or lose the focus. DataGrid will not allow user to edit other cells if validation failed.
 
-[DataGridCellValidatingEventArgs]() provides information to `CellValidating` event for validating the cell. `DataGridCellValidatingEventArgs.OriginalSource` returns the DataGrid fired this event for DetailsView.
+[DataGridCellValidatingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellValidatingEventArgs.html) provides information to `CellValidating` event for validating the cell. `DataGridCellValidatingEventArgs.OriginalSource` returns the DataGrid fired this event for DetailsView.
 
 `DataGridCellValidatingEventArgs.NewValue` returns the edited value and you can set the validation status using `DataGridCellValidatingEventArgs.IsValid` property.
 
@@ -181,7 +181,7 @@ private void dataGrid_CellValidating(object sender, DataGridCellValidatingEventA
 {% endhighlight %}
 {% endtabs %}
 
-[SfDataGrid.CellValidated]() event triggered when the cell has finished validating with valid data.
+[SfDataGrid.CellValidated](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellValidated) event triggered when the cell has finished validating with valid data.
 
 {% tabs %}
 {% highlight C# %}
@@ -198,9 +198,9 @@ private void dataGrid_CellValidated(object sender, DataGridCellValidatedEventArg
 
 ## Row Validation
 
-A Row can be validated using [RowValidating]() event when the cell is edited. The `RowValidating` event occurs when the edited cells tries to commit the row data or lose the focus. DataGrid will not allow user to edit other rows if validation failed.
+A Row can be validated using [RowValidating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_RowValidating) event when the cell is edited. The `RowValidating` event occurs when the edited cells tries to commit the row data or lose the focus. DataGrid will not allow user to edit other rows if validation failed.
 
-[DataGridRowValidatingEventArgs]() provides information to `RowValidating` event for validating row. `DataGridRowValidatingEventArgs.OriginalSource` returns the DataGrid fired this event for DetailsView.
+[DataGridRowValidatingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRowValidatingEventArgs.html) provides information to `RowValidating` event for validating row. `DataGridRowValidatingEventArgs.OriginalSource` returns the DataGrid fired this event for DetailsView.
 
 `DataGridRowValidatingEventArgs.RowData` returns the edited value and you can set the validation status using `DataGridRowValidatingEventArgs.IsValid` property.
 
@@ -223,7 +223,7 @@ void dataGrid_RowValidating(object sender, DataGridRowValidatingEventArgs args)
 {% endhighlight %}
 {% endtabs %}
 
-[SfDataGrid.RowValidated]() event triggered when the row has finished validating with valid row data.
+[SfDataGrid.RowValidated](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_RowValidated) event triggered when the row has finished validating with valid row data.
 
 {% tabs %}
 {% highlight C# %}
@@ -242,7 +242,7 @@ private void dataGrid_RowValidated(object sender, DataGridRowValidatedEventArgs 
 
 ### Change Error Icon Color
 
-The default error icon color can be customized by setting the [DataGridStyle.ErrorIconColor]() property.
+The default error icon color can be customized by setting the [DataGridStyle.ErrorIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_ErrorIconColor) property.
 
 {% tabs %}
 {% highlight XAML %}
@@ -265,7 +265,7 @@ The default error icon color can be customized by setting the [DataGridStyle.Err
 
 ### Load Error Icon through Template
 
-The SfDataGrid uses an icon to indicate if a cell has error. You can personalize the error icon by using the [SfDataGrid.ErrorIconTemplate]() property.
+The SfDataGrid uses an icon to indicate if a cell has error. You can personalize the error icon by using the [SfDataGrid.ErrorIconTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ErrorIconTemplate) property.
 
 {% tabs %}
 {% highlight XAML %}
@@ -365,7 +365,7 @@ public class ErrorIconTemplateSelector: DataTemplateSelector
 
 ### Change Error Tip Background and Foreground Color
 
-The background of the error tip can be changed by setting [DataGridStyle.ErrorTipBackground]() property. The error tip text color can be changed by setting [DataGridStyle.ErrorTipTextColor]() property.
+The background of the error tip can be changed by setting [DataGridStyle.ErrorTipBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_ErrorTipBackground) property. The error tip text color can be changed by setting [DataGridStyle.ErrorTipTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_ErrorTipTextColor) property.
 
 {% tabs %}
 {% highlight XAML %}
@@ -377,7 +377,7 @@ The background of the error tip can be changed by setting [DataGridStyle.ErrorTi
                        AllowEditing = "True"                           
                        ValidationMode = "InView">
         <syncfusion:SfDataGrid.DefaultStyle>
-                <syncfusion:DataGridStyle ErrortipBackground = "Orange" ErrorTipTextColor = "Black"/>
+                <syncfusion:DataGridStyle ErrortipBackground = "LightBlue" ErrorTipTextColor = "Black"/>
         </syncfusion:SfDataGrid.DefaultStyle>
 </syncfusion:SfDataGrid>
 
@@ -388,7 +388,7 @@ The background of the error tip can be changed by setting [DataGridStyle.ErrorTi
 
 ### Load Error Tip through Template
 
-The SfDataGrid uses a tool tip to showcase an error message if a cell has error. You can personalize the error tip by using the [SfDataGrid.ErrorTipTemplate]() property.
+The SfDataGrid uses a tool tip to showcase an error message if a cell has error. You can personalize the error tip by using the [SfDataGrid.ErrorTipTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ErrorTipTemplate) property.
 
 {% tabs %}
 {% highlight XAML %}
@@ -488,7 +488,7 @@ public class ErrorTipTemplateSelector: DataTemplateSelector
 
 ## Data Validation with Master-Details View
 
-The data bound based on [IDataErrorInfo](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.idataerrorinfo?view=net-9.0) or [INotifyDataErrorInfo](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifydataerrorinfo?view=net-9.0) can be validated by setting [ValidationMode]() property of [DataGridViewDefinition.DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridViewDefinition.html).
+The data bound based on [IDataErrorInfo](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.idataerrorinfo?view=net-9.0) or [INotifyDataErrorInfo](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifydataerrorinfo?view=net-9.0) can be validated by setting [ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ValidationMode) property of [DataGridViewDefinition.DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridViewDefinition.html).
 
 {% tabs %}
 {% highlight XAML %}
@@ -534,11 +534,11 @@ void dataGrid_AutoGeneratingRelations(object sender, AutoGeneratingRelationsArgs
 
 ### Custom validation through events
 
-Master-Details View support to validate the cells and rows using [CellValidating]() and [RowValidating]() events.
+Master-Details View support to validate the cells and rows using [CellValidating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellValidated) and [RowValidating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_RowValidating) events.
 
 #### Cell Validation
 
-The cells can be validated using [CellValidating]() event of [ViewDefinition.DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ViewDefinition.html) when the cell is edited. `CellValidating` event occurs when the edited cells tries to commit the data or lose the focus.
+The cells can be validated using [CellValidating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellValidating) event of [ViewDefinition.DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ViewDefinition.html) when the cell is edited. `CellValidating` event occurs when the edited cells tries to commit the data or lose the focus.
 
 {% tabs %}
 {% highlight XAML %}
@@ -580,7 +580,7 @@ private void FirstLevelNestedGrid_CellValidating(object sender, DataGridCellVali
 {% endhighlight %}
 {% endtabs %}
 
-[CellValidated]() event [ViewDefinition.DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ViewDefinition.html) triggered when the cell has finished validating with valid data.
+[CellValidated](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellValidated) event [ViewDefinition.DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ViewDefinition.html) triggered when the cell has finished validating with valid data.
 
 {% tabs %}
 {% highlight C# %}
@@ -614,7 +614,7 @@ private void dataGrid_AutoGeneratingRelations(object sender, AutoGeneratingRelat
 
 #### Row Validation
 
-The row can be validated using [RowValidating]() event of [ViewDefinition.DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ViewDefinition.html) when the cell is edited.
+The row can be validated using [RowValidating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_RowValidating) event of [ViewDefinition.DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ViewDefinition.html) when the cell is edited.
 
 The `RowValidating` event occurs when edited cells tries to commit the row data or lose the focus.
 
@@ -659,7 +659,7 @@ private void FirstLevelNestedGrid_RowValidating(object sender, DataGridRowValida
 {% endhighlight %}
 {% endtabs %}
 
-[RowValidated]() of [ViewDefinition.DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ViewDefinition.html) event triggered when the row has finished validating with valid row data.
+[RowValidated](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_RowValidated) of [ViewDefinition.DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ViewDefinition.html) event triggered when the row has finished validating with valid row data.
 
 {% tabs %}
 {% highlight C# %}
