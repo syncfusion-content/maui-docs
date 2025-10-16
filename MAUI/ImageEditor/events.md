@@ -38,7 +38,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-image-edit
 
 ## Annotations deserialized event
 
-This `AnnotationsDeserialized` event occurs when annotations are deserialized onto the image.
+This [AnnotationsDeserialized](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AnnotationsDeserialized) event occurs when annotations are deserialized onto the image.
 
 N> `Serialization` and `deserialization` are not applicable for custom annotation views. 
 

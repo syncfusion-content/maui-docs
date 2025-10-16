@@ -12,12 +12,12 @@ keywords: .net maui Kanban sorting, sfKanban sorting in .net maui, .net maui Kan
 
 The Kanban control supports customizable card sorting within columns based on specific data fields such as `Priority`, `DueDate`, or `Status`. Sorting can be configured programmatically and updated dynamically at runtime using the following properties:
 
-* `SortingMappingPath` - Used to map the sorting field to a property name in the `KanbanModel` or `CustomModel`. The default value is `string.Empty`, in which case the cards will not be sorted.
-* `SortingOrder` - Used to define the direction of cards sorting within each column.
-   * `Ascending` - Cards with lower values appear first.
-   * `Descending` - Cards with higher values appear first. 
+* [SortingMappingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_SortingMappingPath) - Used to map the sorting field to a property name in the [KanbanModel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanModel.html) or `CustomModel`. The default value is `string.Empty`, in which case the cards will not be sorted.
+* [SortingOrder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_SortingOrder) - Used to define the direction of cards sorting within each column.
+   * [Ascending](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanSortingOrder.html#Syncfusion_Maui_Kanban_KanbanSortingOrder_Ascending) - Cards with lower values appear first.
+   * [Descending](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanSortingOrder.html#Syncfusion_Maui_Kanban_KanbanSortingOrder_Descending) - Cards with higher values appear first. 
 
-N> The `SortingOrder` property is applicable only when a valid value is assigned to `SortingMappingPath`.
+N> The [SortingOrder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_SortingOrder) property is applicable only when a valid value is assigned to [SortingMappingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_SortingMappingPath).
 
 ## Customize card order with sorting configuration
 
@@ -28,7 +28,7 @@ Sorting in the Kanban control can be implemented using the following approaches.
 
 ### Custom Field Sorting
 
-To enable custom sorting behavior, a valid property name from the `ItemsSource` must be mapped using the `SortingMappingPath` property. This mapping ensures that cards are loaded and repositioned based on the corresponding property value, allowing consistent sorting during both initialization and drag-and-drop operations.
+To enable custom sorting behavior, a valid property name from the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ItemsSource) must be mapped using the [SortingMappingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_SortingMappingPath) property. This mapping ensures that cards are loaded and repositioned based on the corresponding property value, allowing consistent sorting during both initialization and drag-and-drop operations.
 
 This example demonstrates how card positions are updated based on sorting configurations and property mappings.
 
@@ -108,8 +108,8 @@ public class SortingViewModel
 }
 
 N> 
- * To apply sorting after a drop operation, handle the `DragEnd` event and explicitly call the `RefreshKanbanColumn` method. This ensures the column updates to reflect the new card order based on the defined sorting logic.
- * When using a custom data model, the default card UI is not applicable. To render the card content, you must define a custom `DataTemplate` using the `CardTemplate` property.
+ * To apply sorting after a drop operation, handle the [DragEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_DragEnd) event and explicitly call the [RefreshKanbanColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_RefreshKanbanColumn) method. This ensures the column updates to reflect the new card order based on the defined sorting logic.
+ * When using a custom data model, the default card UI is not applicable. To render the card content, you must define a custom `DataTemplate` using the [CardTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_CardTemplate) property.
 
 {% endhighlight %}
 {% endtabs %}
@@ -118,7 +118,7 @@ N>
 
 The index-based approach in the Kanban control allows cards to be dropped at precise positions within a column. Upon dropping, the card's index is updated based on the index of the previous card. Additionally, the index of the next card is incremented relative to the drop position to maintain continuous ordering.
 
-N> The `SortingMappingPath` property must be mapped to a valid numeric property name from the `ItemsSource` to enable index-based sorting updates.
+N> The [SortingMappingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_SortingMappingPath) property must be mapped to a valid numeric property name from the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ItemsSource) to enable index-based sorting updates.
 
 The following code example illustrates how cards numeric property updated using the index-based sorting approach.
 
@@ -202,5 +202,5 @@ public class SortingViewModel
 {% endtabs %}
 
 N> 
- * The Index-based sorting can be achieved at the sample level after a drag-and-drop action. To implement this handle the `DragEnd` event, access the items in the target column using `e.TargetColumn.Items`, and update the numeric field used for sorting to maintain a continuous order. Finally, call `RefreshKanbanColumn` method to update the UI with the new order.
- * To disable sorting logic, avoid assigning a value to the `SortingMappingPath` property. This ensures that card positions remain static and reflect the order of the `ItemsSource` collection, making it suitable for scenarios where sorting is not required or is managed externally.
+ * The Index-based sorting can be achieved at the sample level after a drag-and-drop action. To implement this handle the [DragEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_DragEnd) event, access the items in the target column using [e.TargetColumn.Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_Items), and update the numeric field used for sorting to maintain a continuous order. Finally, call [RefreshKanbanColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_RefreshKanbanColumn) method to update the UI with the new order.
+ * To disable sorting logic, avoid assigning a value to the [SortingMappingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_SortingMappingPath) property. This ensures that card positions remain static and reflect the order of the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ItemsSource) collection, making it suitable for scenarios where sorting is not required or is managed externally.
