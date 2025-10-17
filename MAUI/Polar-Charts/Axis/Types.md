@@ -14,7 +14,7 @@ Polar chart supports the following types of chart axis.
 * NumericalAxis
 * CategoryAxis
 * DateTimeAxis
-* DateTimeCategoryAxiss
+* DateTimeCategoryAxis
 
 ## Numerical Axis
 
@@ -313,7 +313,7 @@ this.Content = chart;
 
 ## DateTimeCategoryAxis
 
-The `DateTimeCategoryAxis` is a specialized type of axis primarily used with financial series. Similar to the `CategoryAxis`, all data points are plotted with equal spacing, eliminating gaps for missing dates. The intervals and ranges for this axis are calculated similarly to the `DateTimeAxis`. There are no visual gaps between points, even if the difference between two points exceeds a year.
+The `DateTimeCategoryAxis` is a specialized type of axis primarily used with financial series. Similar to the [CategoryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CategoryAxis.html), all data points are plotted with equal spacing, eliminating gaps for missing dates. The intervals and ranges for this axis are calculated similarly to the [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html). There are no visual gaps between points, even if the difference between two points exceeds a year.
 
 {% tabs %}
 
@@ -348,7 +348,7 @@ this.Content = chart;
 
 ### Interval
 
-In `DateTimeCategoryAxis`, intervals can be customized by using the Interval and IntervalType properties, similar to `DateTimeAxis`. For example, setting `Interval` as 3 and `IntervalType` as `Months` will consider 3 months as interval.
+In `DateTimeCategoryAxis`, intervals can be customized by using the Interval and IntervalType properties, similar to [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html). For example, setting `Interval` as 3 and `IntervalType` as `Months` will consider 3 months as interval.
 
 {% tabs %}
 
