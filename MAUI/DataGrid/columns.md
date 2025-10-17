@@ -149,15 +149,18 @@ private void SfDataGrid_AutoGeneratingColumn(object sender, DataGridAutoGenerati
 {% endtabs %}
 
 ### Data Annotations with AutoGenerateColumns
+
 SfDataGrid support to generate the columns based on built-in [Data Annotation Attributes](https://learn.microsoft.com/en-us/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc490428(v=vs.95)). Data Annotations ignored, when the AutoGenerateColumns is set to False.
 
+N> Data annotations are only applied when the DataGrid.AutoGenerateColumns property is set to True.
+
 #### Exclude column
+
 You can skip the column generation using AutoGenerateField property.
 
 {% tabs %}
 {% highlight c# %}
 [Display(AutoGenerateField = false, Description = "OrderID field is not generated in UI")]
-
 public int OrderID
 {
     get { return orderID; }
@@ -166,9 +169,9 @@ public int OrderID
 {% endhighlight %}
 {% endtabs %}
 
-#### Editing 
+#### Editing
 
-You can change the value of the property using `Editable` attribute.
+You can change the value of a column cell by setting the `Editable` attribute to true.
 
 {% tabs %}
 {% highlight c# %}
@@ -200,7 +203,7 @@ public string CustomerName
 
 #### Change the order of the columns
 
-You can change the columns order using `Display.Order` property.
+You can change the order of columns using the `Display.Order` property. Columns are arranged based on the specified order value, with lower values appearing first.
 
 {% tabs %}
 {% highlight c# %}
