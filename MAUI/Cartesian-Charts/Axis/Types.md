@@ -15,6 +15,7 @@ Cartesian chart supports the following types of chart axis.
 * NumericalAxis
 * CategoryAxis
 * DateTimeAxis
+* DateTimeCategoryAxis
 * LogarithmicAxis
 
 ## Numerical Axis
