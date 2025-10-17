@@ -33,29 +33,64 @@ To enable custom sorting behavior, a valid property name from the [ItemsSource](
 This example demonstrates how card positions are updated based on sorting configurations and property mappings.
 
 {% tabs %}
-{% highlight XAML hl_lines="3 5" %}
+{% highlight XAML hl_lines="2 3 5" %}
 
-<kanban:SfKanban x:Name="kanban" 
+<kanban:SfKanban x:Name="kanban"
                  SortingMappingPath="Index"
                  SortingOrder="Ascending"
                  ItemsSource="{Binding Cards}"
                  ColumnMappingPath="Category">
     <kanban:SfKanban.CardTemplate>
-        <DataTemplate >
-            <Border Stroke="Black" StrokeThickness="1" StrokeShape="RoundRectangle 8" Background="#F3CFCE">
-                <Grid RowDefinitions="Auto,Auto,Auto" ColumnDefinitions="Auto,*" ColumnSpacing="8" Padding="8">
-                    <HorizontalStackLayout Grid.Row="0" Grid.ColumnSpan="2" Spacing="4" VerticalOptions="Center" HeightRequest="20">
-                        <Label Grid.Row="0" Grid.ColumnSpan="2" Text="{Binding Priority, StringFormat='• {0}'}" FontSize="14"             FontAttributes="Bold" TextColor="Orange" VerticalOptions="Center" VerticalTextAlignment="Center" HeightRequest="20"/>
+        <DataTemplate>
+            <Border Stroke="Black"
+                    StrokeThickness="1"
+                    StrokeShape="RoundRectangle 8"
+                    Background="#F3CFCE">
+                <Grid RowDefinitions="Auto,Auto,Auto"
+                      ColumnDefinitions="Auto,*"
+                      ColumnSpacing="8"
+                      Padding="8">
+                    <HorizontalStackLayout Grid.Row="0"
+                                           Grid.ColumnSpan="2"
+                                           Spacing="4"
+                                           VerticalOptions="Center"
+                                           HeightRequest="20">
+                        <Label Grid.Row="0"
+                               Grid.ColumnSpan="2"
+                               Text="{Binding Priority, StringFormat='• {0}'}"
+                               FontSize="14"
+                               FontAttributes="Bold"
+                               TextColor="Orange"
+                               VerticalOptions="Center"
+                               VerticalTextAlignment="Center"
+                               HeightRequest="20"/>
                     </HorizontalStackLayout>
-                    <Label Grid.Row="1" Grid.ColumnSpan="2" Text="{Binding Title}" FontAttributes="Bold" FontSize="14" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="5"/>
-                    <Label Grid.Row="2" Grid.ColumnSpan="2" Text="{Binding Description}" FontSize="12" HorizontalTextAlignment="Center" LineBreakMode="WordWrap" Margin="5"/>
+                    <Label Grid.Row="1"
+                           Grid.ColumnSpan="2"
+                           Text="{Binding Title}"
+                           FontAttributes="Bold"
+                           FontSize="14"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
+                           Margin="5"/>
+                    <Label Grid.Row="2"
+                           Grid.ColumnSpan="2"
+                           Text="{Binding Description}"
+                           FontSize="12"
+                           HorizontalTextAlignment="Center"
+                           LineBreakMode="WordWrap"
+                           Margin="5"/>
                 </Grid>
             </Border>
         </DataTemplate>
     </kanban:SfKanban.CardTemplate>
-    <kanban:KanbanColumn Title="Open" Categories="Open"/>
-    <kanban:KanbanColumn Title="In Progress" Categories="In Progress"/>
-    <kanban:KanbanColumn Title="Done" AllowDrag="False" Categories="Done"/>
+    <kanban:KanbanColumn Title="Open"
+                         Categories="Open"/>
+    <kanban:KanbanColumn Title="In Progress"
+                         Categories="In Progress"/>
+    <kanban:KanbanColumn Title="Done"
+                         Categories="Done"
+                         AllowDrag="False"/>
     <kanban:SfKanban.BindingContext>
         <local:SortingViewModel/>
     </kanban:SfKanban.BindingContext>
@@ -107,12 +142,12 @@ public class SortingViewModel
     public ObservableCollection<CardDetails> Cards { get; set; }
 }
 
+{% endhighlight %}
+{% endtabs %}
+
 N> 
  * To apply sorting after a drop operation, handle the [DragEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_DragEnd) event and explicitly call the [RefreshKanbanColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_RefreshKanbanColumn) method. This ensures the column updates to reflect the new card order based on the defined sorting logic.
  * When using a custom data model, the default card UI is not applicable. To render the card content, you must define a custom `DataTemplate` using the [CardTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_CardTemplate) property.
-
-{% endhighlight %}
-{% endtabs %}
 
 ### Index-Based Sorting
 
@@ -123,29 +158,63 @@ N> The [SortingMappingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 The following code example illustrates how cards numeric property updated using the index-based sorting approach.
 
 {% tabs %}
-{% highlight XAML hl_lines="2 3" %}
+{% highlight XAML hl_lines="2 3 5" %}
 
-<kanban:SfKanban x:Name="kanban" 
+<kanban:SfKanban x:Name="kanban"
                  SortingMappingPath="Index"
                  SortingOrder="Ascending"
                  ItemsSource="{Binding Cards}"
                  ColumnMappingPath="Category">
     <kanban:SfKanban.CardTemplate>
-        <DataTemplate >
-                    <Border Stroke="Black" StrokeThickness="1" StrokeShape="RoundRectangle 8" Background="#F3EADC">
-                <Grid RowDefinitions="Auto,Auto,Auto" ColumnDefinitions="Auto,*" ColumnSpacing="8" Padding="8">
-                    <HorizontalStackLayout Grid.Row="0" Grid.ColumnSpan="2" Spacing="4" VerticalOptions="Center" HeightRequest="20" HorizontalOptions="End">
-                                <Label Text="{Binding Index, StringFormat='Rank #{0}'}" FontSize="14" FontAttributes="Bold" TextColor="#026B6E" VerticalOptions="Center" VerticalTextAlignment="Center" HeightRequest="20"/>
+        <DataTemplate>
+            <Border Stroke="Black"
+                    StrokeThickness="1"
+                    StrokeShape="RoundRectangle 8"
+                    Background="#F3EADC">
+                <Grid RowDefinitions="Auto,Auto,Auto"
+                      ColumnDefinitions="Auto,*"
+                      ColumnSpacing="8"
+                      Padding="8">
+                    <HorizontalStackLayout Grid.Row="0"
+                                           Grid.ColumnSpan="2"
+                                           Spacing="4"
+                                           VerticalOptions="Center"
+                                           HeightRequest="20"
+                                           HorizontalOptions="End">
+                        <Label Text="{Binding Index, StringFormat='Rank #{0}'}"
+                               FontSize="14"
+                               FontAttributes="Bold"
+                               TextColor="#026B6E"
+                               VerticalOptions="Center"
+                               VerticalTextAlignment="Center"
+                               HeightRequest="20"/>
                     </HorizontalStackLayout>
-                    <Label Grid.Row="1" Grid.ColumnSpan="2" Text="{Binding Title}" FontAttributes="Bold" FontSize="14" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="5"/>
-                    <Label Grid.Row="2" Grid.ColumnSpan="2" Text="{Binding Description}" FontSize="12" HorizontalTextAlignment="Center" LineBreakMode="WordWrap" Margin="5"/>
+                    <Label Grid.Row="1"
+                           Grid.ColumnSpan="2"
+                           Text="{Binding Title}"
+                           FontAttributes="Bold"
+                           FontSize="14"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
+                           Margin="5"/>
+                    <Label Grid.Row="2"
+                           Grid.ColumnSpan="2"
+                           Text="{Binding Description}"
+                           FontSize="12"
+                           HorizontalTextAlignment="Center"
+                           LineBreakMode="WordWrap"
+                           Margin="5"/>
                 </Grid>
             </Border>
         </DataTemplate>
     </kanban:SfKanban.CardTemplate>
-    <kanban:KanbanColumn Title="Open" Categories="Open"/>
-    <kanban:KanbanColumn Title="In Progress" Categories="In Progress"/>
-    <kanban:KanbanColumn Title="Done" AllowDrag="False" Categories="Done"/>
+    <kanban:KanbanColumn Title="Open"
+                         Categories="Open"/>
+    <kanban:KanbanColumn Title="In Progress"
+                         Categories="In Progress"/>
+    <kanban:KanbanColumn Title="Done"
+                         Categories="Done"
+                         AllowDrag="False"/>
     <kanban:SfKanban.BindingContext>
         <local:SortingViewModel/>
     </kanban:SfKanban.BindingContext>
