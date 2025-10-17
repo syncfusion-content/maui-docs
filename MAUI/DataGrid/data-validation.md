@@ -91,7 +91,7 @@ this.dataGrid.ValidationMode = DataGridValidationMode.InView;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="data-validation-with-IDataErrorInfo" src="Images\data-validation\maui-datagrid-datavalidation-idataerrorinfo.png" width="505" height="396"/>
+<img alt="data-validation-with-IDataErrorInfo" src="Images\data-validation\maui-datagrid-datavalidation-idataerrorinfo.png" width="464" height="396"/>
 
 ### Using INotifyDataErrorInfo
 
@@ -154,7 +154,7 @@ Enable built-in validation support by setting [SfDataGrid.ValidationMode](https:
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="data-validation-with-INotifyDataErrorInfo" src="Images\data-validation\maui-datagrid-datavalidation-inotifydataerrorinfo.png" width="505" height="396"/>
+<img alt="data-validation-with-INotifyDataErrorInfo" src="Images\data-validation\maui-datagrid-datavalidation-inotifydataerrorinfo.png" width="464" height="396"/>
 
 ## Cell Validation
 
@@ -261,7 +261,7 @@ The default error icon color can be customized by setting the [DataGridStyle.Err
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="data-validation-error-icon-customization" src="Images\data-validation\maui-datagrid-datavalidation-erroriconcustomization.png" width="505" height="396"/>
+<img alt="data-validation-error-icon-customization" src="Images\data-validation\maui-datagrid-datavalidation-erroriconcustomization.png" width="464" height="396"/>
 
 ### Load Error Icon through Template
 
@@ -299,7 +299,7 @@ this.dataGrid.ErrorIconTemplate = new DataTemplate(() =>
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="data-validation-error-icon-template" src="Images\data-validation\maui-datagrid-datavalidation-erroricontemplate.png" width="505" height="396"/>
+<img alt="data-validation-error-icon-template" src="Images\data-validation\maui-datagrid-datavalidation-erroricontemplate.png" width="464" height="396"/>
 
 ### Load Error Icon through Template Selector
 
@@ -359,7 +359,7 @@ public class ErrorIconTemplateSelector: DataTemplateSelector
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="data-validation-error-icon-template-selector" src="Images\data-validation\maui-datagrid-datavalidation-erroricontemplateselector.png" width="505" height="396"/>
+<img alt="data-validation-error-icon-template-selector" src="Images\data-validation\maui-datagrid-datavalidation-erroricontemplateselector.png" width="464" height="396"/>
 
 ## Error Tip Customization
 
@@ -384,7 +384,7 @@ The background of the error tip can be changed by setting [DataGridStyle.ErrorTi
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="data-validation-error-tip-customization" src="Images\data-validation\maui-datagrid-datavalidation-errortipcustomization.png" width="505" height="396"/>
+<img alt="data-validation-error-tip-customization" src="Images\data-validation\maui-datagrid-datavalidation-errortipcustomization.png" width="464" height="396"/>
 
 ### Load Error Tip through Template
 
@@ -424,7 +424,7 @@ this.dataGrid.ErrorTipTemplate = new DataTemplate(() =>
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="data-validation-error-tip-template" src="Images\data-validation\maui-datagrid-datavalidation-errortiptemplate.gif" width="505" height="396"/>
+<img alt="data-validation-error-tip-template" src="Images\data-validation\maui-datagrid-datavalidation-errortiptemplate.gif" width="464" height="396"/>
 
 ### Load Error Tip through Template Selector
 
@@ -484,7 +484,7 @@ public class ErrorTipTemplateSelector: DataTemplateSelector
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="data-validation-error-tip-template-selector" src="Images\data-validation\maui-datagrid-datavalidation-errortiptemplateselector.gif" width="505" height="396"/>
+<img alt="data-validation-error-tip-template-selector" src="Images\data-validation\maui-datagrid-datavalidation-errortiptemplateselector.gif" width="464" height="396"/>
 
 ## Data Validation with Master-Details View
 
@@ -530,7 +530,7 @@ void dataGrid_AutoGeneratingRelations(object sender, AutoGeneratingRelationsArgs
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="data-validation-with-master-details-view" src="Images\data-validation\maui-datagrid-datavalidation-with-masterdetailsview.png" width="505" height="396"/>
+<img alt="data-validation-with-master-details-view" src="Images\data-validation\maui-datagrid-datavalidation-with-masterdetailsview.png" width="464" height="396"/>
 
 ### Custom validation through events
 
