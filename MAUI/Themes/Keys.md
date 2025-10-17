@@ -17961,6 +17961,18 @@ This page lists the keys associated with each control and the respective UI elem
             <br/>
         </td>
     </tr>
+    <tr>
+        <td>
+            SfTabViewHoverBackground
+            <br/>
+            <br/>
+        </td>
+        <td>
+            Hover BackgroundColor of the SfTabItem.
+            <br/>
+            <br/>
+        </td>
+    </tr>
 </table>
 
 ## SfTextInputLayout
