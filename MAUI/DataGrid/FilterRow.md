@@ -10,7 +10,7 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 # Filter Row in MAUI DataGrid (SfDataGrid)
 
-The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) includes a built-in Filter Row designed for efficient record filtering. You can enable the FilterRow by specifying the position where it should be displayed by setting [SfDataGrid.FilterRowPosition]() property.
+The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) includes a built-in Filter Row designed for efficient record filtering. You can enable the FilterRow by specifying the position where it should be displayed by setting [SfDataGrid.FilterRowPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FilterRowPosition) property.
 
 {% tabs %}
 {% highlight XAML %}
@@ -27,7 +27,7 @@ this.dataGrid.FilterRowPosition = DataGridFilterRowPosition.FixedTop;
 
 <img alt="MAUI DataGrid with Filter Row" src="Images\filterrow\maui-datagrid-filterrow-basic.png" width="404" />   
 
-Retrieve the row index of the FilterRow using the [SfDataGrid.GetFilterRowIndex]() method.
+Retrieve the row index of the FilterRow using the [SfDataGrid.GetFilterRowIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Helper.GridIndexResolver.html#Syncfusion_Maui_DataGrid_Helper_GridIndexResolver_GetFilterRowIndex_Syncfusion_Maui_DataGrid_SfDataGrid_) method.
 
 {% tabs %}
 {% highlight c# %}
@@ -35,7 +35,7 @@ int filterRowIndex = this.dataGrid.GetFilterRowIndex();
 {% endhighlight %}
 {% endtabs %}
 
-Verify if a given row index corresponds to the FilterRow by utilizing the [SfDataGrid.IsFilterRowIndex]() helper method.
+Verify if a given row index corresponds to the FilterRow by utilizing the [SfDataGrid.IsFilterRowIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Helper.GridIndexResolver.html#Syncfusion_Maui_DataGrid_Helper_GridIndexResolver_IsFilterRowIndex_Syncfusion_Maui_DataGrid_SfDataGrid_System_Int32_) helper method.
 
 {% tabs %}
 {% highlight c# %}
@@ -188,7 +188,7 @@ Below are the filter conditions supported by different filter row editors in SfD
 <li>After or Equal</li>
 </ol></td>
 <td>For checkbox values, the <code>Equals</code> filter condition is always applied.</td>
-<td></td>
+<td>The filter condition will use either equals or not equals based on the number of selected items when filtering the list.</td>
 </tr>
 </table>
 
@@ -246,7 +246,7 @@ this.dataGrid.Columns[0].AllowBlankFilters = true;
 <img alt="Filter Row with Null option in MAUI DataGrid" src="Images\filterrow\maui-datagrid-filterrow-multiselectblankfilters.png" width="404" />   
 
 ## Instant filtering
-Filters are typically applied to columns upon cell navigation or pressing the Enter key. However, by setting [DataGridColumn.ImmediateUpdateColumnFilter]() to `true`, you can enable instant filtering as you type within the editor.
+Filters are typically applied to columns upon cell navigation or pressing the Enter key. However, by setting [DataGridColumn.ImmediateUpdateColumnFilter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_ImmediateUpdateColumnFilter) to `true`, you can enable instant filtering as you type within the editor.
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:GridTextColumn MappingName="CustomerName"
@@ -289,7 +289,7 @@ You can customize the basic styling of the FilterRow in SfDataGrid using the Def
 {% endtabs %}
 
 ### Filter row style
-Customize the appearance of the filter row by defining a style with TargetType [DataGridFilterRowView].
+Customize the appearance of the filter row by defining a style with TargetType [DataGridFilterRowView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridFilterRowView.html).
 {% tabs %}
 {% highlight xaml %}
 <ContentPage.Resources>

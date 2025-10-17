@@ -18,9 +18,9 @@ Built-in validations through `IDataErrorInfo` and `INotifyDataErrorInfo`, can be
 
 `DataGridColumn.ValidationMode` takes priority than `SfDataGrid.ValidationMode`.
 
-* DataGridValidation.InEdit - display error icon & tips and also doesn’t allow the users to commit the invalid data by not allowing users to edit other cells.
-* DataGridValidation.InView - displays error icons and tips alone.
-* DataGridValidation.None - disables built-in validation support.
+* DataGridValidationMode.InEdit - display error icon & tips and also doesn’t allow the users to commit the invalid data by not allowing users to edit other cells.
+* DataGridValidationMode.InView - displays error icons and tips alone.
+* DataGridValidationMode.None - disables built-in validation support.
 
 ## Built-in validation using IDataErrorInfo / INotifyDataErrorInfo
 
@@ -363,7 +363,7 @@ public class ErrorIconTemplateSelector: DataTemplateSelector
 
 ## Error Tip Customization
 
-### Change Error Tip Background and Foreground Color
+### Change Error Tip Background and Text Color
 
 The background of the error tip can be changed by setting [DataGridStyle.ErrorTipBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_ErrorTipBackground) property. The error tip text color can be changed by setting [DataGridStyle.ErrorTipTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_ErrorTipTextColor) property.
 
@@ -552,7 +552,8 @@ The cells can be validated using [CellValidating](https://help.syncfusion.com/cr
                 <syncfuion:DataGridViewDefinition RelationalColumn = "OrdersList">
                         <syncfuion:DataGridViewDefinition.DataGrid>
                                 <syncfuion:SfDataGrid  x:Name = "FirstLevelNestedGrid" 
-                                                       AllowEditing = "True" 
+                                                       AllowEditing = "True"
+                                                       ValidationMode = "InView" 
                                                        GridLinesVisibility = "Both"/>
                         </syncfuion:DataGridViewDefinition.DataGrid>
                 </syncfuion:DataGridViewDefinition>
@@ -580,7 +581,7 @@ private void FirstLevelNestedGrid_CellValidating(object sender, DataGridCellVali
 {% endhighlight %}
 {% endtabs %}
 
-[CellValidated](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellValidated) event [ViewDefinition.DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ViewDefinition.html) triggered when the cell has finished validating with valid data.
+[CellValidated](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellValidated) event of [ViewDefinition.DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ViewDefinition.html) triggered when the cell has finished validating with valid data.
 
 {% tabs %}
 {% highlight C# %}
@@ -630,7 +631,8 @@ The `RowValidating` event occurs when edited cells tries to commit the row data 
                 <syncfuion:DataGridViewDefinition RelationalColumn = "OrdersList">
                         <syncfuion:DataGridViewDefinition.DataGrid>
                                 <syncfuion:SfDataGrid  x:Name = "FirstLevelNestedGrid" 
-                                                       AllowEditing = "True" 
+                                                       AllowEditing = "True"
+                                                       ValidationMode = "InView" 
                                                        GridLinesVisibility = "Both"/>
                         </syncfuion:DataGridViewDefinition.DataGrid>
                 </syncfuion:DataGridViewDefinition>
@@ -693,5 +695,4 @@ private void dataGrid_AutoGeneratingRelations(object sender, AutoGeneratingRelat
 
 ## Limitations
 
-N>
 1. Non editable columns will not support custom validation.
