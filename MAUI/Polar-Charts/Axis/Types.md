@@ -14,6 +14,7 @@ Polar chart supports the following types of chart axis.
 * NumericalAxis
 * CategoryAxis
 * DateTimeAxis
+* DateTimeCategoryAxis
 
 ## Numerical Axis
 
@@ -305,6 +306,77 @@ DateTimeAxis primaryAxis = new DateTimeAxis()
 chart.PrimaryAxis = primaryAxis;
 
 this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## DateTimeCategoryAxis
+
+The `DateTimeCategoryAxis` is a specialized type of axis primarily used with financial series. Similar to the [CategoryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CategoryAxis.html), all data points are plotted with equal spacing, eliminating gaps for missing dates. The intervals and ranges for this axis are calculated similarly to the [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html). There are no visual gaps between points, even if the difference between two points exceeds a year.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfPolarChart>
+    . . .
+    <chart:SfPolarChart.PrimaryAxis>
+        <chart:DateTimeCategoryAxis/>
+    </chart:SfPolarChart.PrimaryAxis>
+    . . .
+</chart:SfPolarChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfPolarChart chart = new SfPolarChart(); 
+. . . 
+// Create an instance of the DateTimeCategoryAxis, used for displaying DateTime values as categories 
+DateTimeCategoryAxis primaryAxis = new DateTimeCategoryAxis(); 
+// Add the DateTimeCategoryAxis instance to the chart's XAxes collection 
+chart.PrimaryAxis.Add(primaryAxis);
+. . .
+this.Content = chart; 
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![DateTimeCategory Axis support in MAUI Chart](Axis_Images/maui_dateTimeCategory_axis.png)
+
+### Interval
+
+In `DateTimeCategoryAxis`, intervals can be customized by using the Interval and IntervalType properties, similar to [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html). For example, setting `Interval` as 3 and `IntervalType` as `Months` will consider 3 months as interval.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfPolarChart> 
+    . . .
+        <chart:SfPolarChart.PrimaryAxis>
+            <chart:DateTimeCategoryAxis Interval="3" 
+                                        IntervalType="Months"/> 
+        </chart:SfPolarChart.PrimaryAxis> 
+    . . .
+</chart:SfPolarChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfPolarChart chart = new SfPolarChart(); 
+. . .
+DateTimeCategoryAxis primaryAxis = new DateTimeCategoryAxis() 
+{ 
+    Interval = 3, 
+    IntervalType = DateTimeIntervalType.Months 
+}; 
+chart.PrimaryAxis.Add(primaryAxis);
+. . .
+this.Content = chart; 
 
 {% endhighlight %}
 
