@@ -13,7 +13,7 @@ Essential Studio<sup>®</sup> for .NET MAUI is a comprehensive collection of .NE
 
 ## How to read this user guide most effectively
 
-* **Start with Getting Started**: Begin with the Getting Started section of the documentation for the component that you need. This section provides the critical information needed before writing the code. It is the only section recommended for end-to-end reading prior to coding. Other sections can be read as needed.
+* **Start with Getting Started**: Begin with the [Getting Started](https://help.syncfusion.com/maui/uikit/gettingstarted) section of the documentation for the component that you need. This section provides the critical information needed before writing the code. It is the only section recommended for end-to-end reading prior to coding. Other sections can be read as needed.
 
 * **Integration and Examples**: Once you're familiar with the fundamentals, start integrating the component into your application. Refer to the code examples in the sample browser, where you'll likely find a code example that matches your intended usage scenario.
 
