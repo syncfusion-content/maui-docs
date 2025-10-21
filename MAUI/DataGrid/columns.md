@@ -150,7 +150,7 @@ private void SfDataGrid_AutoGeneratingColumn(object sender, DataGridAutoGenerati
 
 ### Data Annotations with AutoGenerateColumns
 
-SfDataGrid support to generate the columns based on built-in [Data Annotation Attributes](https://learn.microsoft.com/en-us/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc490428(v=vs.95)). Data Annotations ignored, when the AutoGenerateColumns is set to False.
+SfDataGrid support to generate the columns based on built-in [Data Annotation Attributes](https://learn.microsoft.com/en-us/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc490428(v=vs.95)).
 
 N> Data annotations are only applied when the DataGrid.AutoGenerateColumns property is set to True.
 
@@ -171,12 +171,11 @@ public int OrderID
 
 #### Editing
 
-You can change the value of a column cell by setting the `Editable` attribute to true.
+When the `Editable` attribute is set to true, it enables editing of the cell values.
 
 {% tabs %}
 {% highlight c# %}
 [Editable(true)]
-
 public string Country
 {
     get { return country; }
@@ -192,7 +191,6 @@ You can customize header text of column using `Display.Name` property or `Displa
 {% tabs %}
 {% highlight c# %}
 [Display(Name="Name of the Customer",Description="CustomerName is necessary for identification ")]
-
 public string CustomerName
 {
     get { return customerName; }
@@ -207,19 +205,18 @@ You can change the order of columns using the `Display.Order` property. Columns 
 
 {% tabs %}
 {% highlight c# %}
-[Display(Order=0)]
-
-public int OrderID
-{
-    get { return orderID; }
-    set { orderID = value; }
-}
 [Display(Order=1)]
-
 public string CustomerID
 {
     get { return customerId; }
     set { customerId = value; }
+}
+
+[Display(Order=0)]
+public int OrderID
+{
+    get { return orderID; }
+    set { orderID = value; }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -235,7 +232,6 @@ You can disable the editing for a column using `ReadOnly` attribute.
 {% tabs %}
 {% highlight c# %}
 [ReadOnly(true)]
-
 public string Country
 {
     get { return country; }
@@ -246,7 +242,7 @@ public string Country
 
 #### Format datagrid columns using DisplayFormat attribute
 
-The auto-generated columns will be formatted using the [DataFormatString](https://learn.microsoft.com/en-us/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc679306%28v%3dvs.95%29) property in the [DisplayFormat](https://learn.microsoft.com/en-us/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc679253%28v%3dvs.95%29) attribute when the `DisplayFormat` attribute is defined for the properties defined in the model. If the `DisplayFormat` attribute is defined with the `DataFormatString` property, the DataGrid formats the column only based on `DataFormatString`, without considering other formatting property settings of columns.
+When the [DisplayFormat](https://learn.microsoft.com/en-us/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc679253%28v%3dvs.95%29) attribute is defined for properties in the model, the auto-generated columns in the DataGrid created via DataAnnotations will be formatted using the [DataFormatString](https://learn.microsoft.com/en-us/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc679306%28v%3dvs.95%29) specified in that attribute.
 
 {% tabs %}
 {% highlight c# %}
@@ -265,8 +261,6 @@ public string Country
 }
 {% endhighlight %}
 {% endtabs %}
-
-N> The `DataFormatString` attribute will be considered only when the column is auto-generated.
 
 <img alt="Maui DataGrid with Columns Formatting" src="Images\columns\maui-datagrid-formatting.png" width="404"/>
 
