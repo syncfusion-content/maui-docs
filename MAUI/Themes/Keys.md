@@ -17553,7 +17553,7 @@ This page lists the keys associated with each control and the respective UI elem
     </tr>
 
     <tr>
-        <td rowspan="32">
+        <td rowspan="33">
             SfTabViewStyles 
             <br/>
             <br/>
