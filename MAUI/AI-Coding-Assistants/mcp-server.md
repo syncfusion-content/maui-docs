@@ -62,18 +62,17 @@ You need to add your [Syncfusion API key](https://syncfusion.com/account/api-key
 }
 ```
 
-`SyncfusionMAUIAssistant` can be configured in various MCP clients. Below are setup instructions for popular environment:
+Below are setup instructions for popular MCP clients:
 
 ### Syncfusion<sup style="font-size:70%">&reg;</sup> Code Studio
 
-* In [Code Studio](https://www.syncfusion.com/code-studio/), open MCP Marketplace, find `SyncfusionMAUIAssistant`, and click Install.
-* When prompted, enter your [Syncfusion API key](https://syncfusion.com/account/api-key) and click Submit to register.
-* It installs locally on your machine and appears in the Installed list.
-* The server is ready for use in Code Studio.
+* In [Code Studio](https://www.syncfusion.com/code-studio/), open MCP Marketplace and navigate to the `Custom Servers` tab.
+* Enter the Server Name as `maui-mcp`, choose Server Type as npm package, and set the NPM Package name to `@syncfusion/maui-assistant`.
+* Add an environment variable as `Syncfusion_API_Key` and value as your [Syncfusion API key](https://syncfusion.com/account/api-key), then click **Install Server**.
+* Once installed, the server will appear in the User Installed Server list, and will be added to the **config.yaml** file.
+* The server is now ready for use in Code Studio. For more details, refer to the [Code Studio documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/mcp/customservers#npm-server).
 
-For additional details, see the Code Studio [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/mcp/marketplace).
-
-### VS Code (GitHub Copilot MCP)
+### Visual Studio Code (GitHub Copilot MCP)
 
 * To configure an MCP server for a specific workspace, you can create a `.vscode/mcp.json` file in your workspace folder.
 
@@ -95,11 +94,37 @@ For additional details, see the Code Studio [documentation](https://help.syncfus
 }
 ```
 
-* After updating the configuration in settings.json, you'll notice a "Start" option at the top of the config. This allows you to easily start the SyncfusionMauiAssistant server directly from the settings interface without additional commands.
+* After updating the configuration in settings.json, you'll notice a "Start" option at the top of the config. This allows you to easily start the `SyncfusionMauiAssistant` server directly from the settings interface without additional commands.
 
 * Confirm the server is active by checking for a message like: `SyncfusionMAUIAssistant is running...` in the output.
 
 * For additional guidance, refer to the [VS Code documentation](https://code.visualstudio.com/docs/copilot/customization/mcp-servers#_add-an-mcp-server).
+
+### Visual Studio (GitHub Copilot MCP)
+
+* To configure an MCP server for a specific workspace, you can create a `.vs/mcp.json` file in your workspace folder.
+
+```json
+{
+  "servers": {
+    "syncfusion-maui-assistant": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@syncfusion/maui-assistant@latest"
+      ],
+      "env": {
+        "Syncfusion_API_Key": "YOUR_API_KEY"
+      }
+    }
+  }
+}
+```
+
+* After updating the mcp.json configuration, open the GitHub Copilot Chat window. Click the Ask arrow, then select Agent.
+* Select the `SyncfusionMAUIAssistant`from the tools section.
+* For more details, refer to the official [Visual Studio documentation](https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022).
 
 ### Cursor
 
@@ -122,12 +147,13 @@ To configure an MCP server for a specific workspace, you can create a .cursor/mc
   }
 }
 ```
+For more details, refer to the [Cursor documentation](https://cursor.com/docs/context/mcp#using-mcp-json).
 
 ### JetBrains IDEs
 
-1. Go to Settings -> Tools -> AI Assistant -> Model Context Protocol (MCP).
-2. Click + Add to add a new MCP server configuration.
-3. In the New MCP Server dialog, switch the dropdown as `As JSON` and add the following config:
+* Go to Settings -> Tools -> AI Assistant -> Model Context Protocol (MCP).
+* Click + Add to add a new MCP server configuration.
+* In the New MCP Server dialog, switch the dropdown as `As JSON` and add the following config:
 
 ```json
 {
@@ -146,13 +172,11 @@ To configure an MCP server for a specific workspace, you can create a .cursor/mc
 }
 ```
 
-4. Click OK and Apply.
+* Click OK and Apply.
 
-> For more detailed information about configuring MCP servers in various clients, refer to the official documentations.
-  * [VS Code](https://code.visualstudio.com/docs/copilot/chat/mcp-servers#_add-an-mcp-server)
-  * [Cursor](https://cursor.com/docs/context/mcp#using-mcp-json)
-  * [JetBrains](https://www.jetbrains.com/help/ai-assistant/mcp.html#connect-to-an-mcp-server)
-  * [Windsurf](https://docs.windsurf.com/windsurf/cascade/mcp#mcp-config-json)
+For further assistance, see the [JetBrains documentation](https://www.jetbrains.com/help/ai-assistant/mcp.html#connect-to-an-mcp-server).
+
+> For more detailed information about configuring MCP servers in various clients, refer to the official documentations, e.g., [Windsurf](https://docs.windsurf.com/windsurf/cascade/mcp#mcp-config-json)
 
 ## Usage
 
@@ -166,9 +190,9 @@ To activate the SyncfusionMAUIAssistant MCP server:
     * '@ask_syncfusion_maui'
     * 'maui'
 
-   In VS Code, you can also use #SyncfusionMAUIAssistant to explicitly invoke the MCP server.
+   In VS Code, you can also use #SyncfusionMAUIAssistant for direct invocation.
 
-2. Grant the SyncfusionMAUIAssistant MCP server a permission to run for this session, workspace, or always.
+2. Grant permission for the server to run (for the session, workspace, or always).
 3. For best results, start a new chat for each new topic to maintain clean context.
 
 ### Mode availability
