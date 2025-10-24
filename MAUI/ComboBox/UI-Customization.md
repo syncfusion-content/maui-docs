@@ -550,6 +550,44 @@ SfComboBox comboBox = new SfComboBox()
 
 ![.NET MAUI ComboBox Selected DropDown Item Background](Images/UICustomization/SelectedDropDownItemBackground.png)
 
+### Customize the Selected DropDown Item Text Style
+
+The [SelectedDropDownItemTextStyle]() property in the SfComboBox control allows developers to customize the appearance of the selected item in the dropdown list. This feature is useful for highlighting user selections and improving the overall UI experience.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfComboBox x:Name="comboBox"
+                        ItemsSource="{Binding SocialMedias}"
+                        DisplayMemberPath="Name"
+                        TextMemberPath="Name"
+                        Placeholder="Enter Media">
+    <editors:SfComboBox.SelectedDropDownItemTextStyle>
+        <editors:DropDownTextStyle TextColor="Orange" FontSize="16" FontAttributes="Bold"/>
+    </editors:SfComboBox.SelectedDropDownItemTextStyle>
+</editors:SfComboBox>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfComboBox comboBox = new SfComboBox() 
+{
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    TextMemberPath = "Name",
+    DisplayMemberPath = "Name",
+    Placeholder="Enter Media",
+    SelectedDropDownItemTextStyle = new DropDownTextStyle
+    {
+        TextColor = Colors.Orange,
+        FontSize = 16,
+        FontAttributes = FontAttributes.Bold
+    }
+};
+
+{% endhighlight %}
+{% endtabs %}
+
 ### Customize the DropDown Border Color
 
 The [DropDownStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_DropDownStroke) property is used to modify the border color of the dropdown.
