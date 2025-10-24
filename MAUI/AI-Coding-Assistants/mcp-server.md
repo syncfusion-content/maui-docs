@@ -75,7 +75,7 @@ For additional details, see the Code Studio [documentation](https://help.syncfus
 
 ### VS Code (GitHub Copilot MCP)
 
-1. To configure an MCP server for a specific workspace, you can create a `.vscode/mcp.json` file in your workspace folder.
+* To configure an MCP server for a specific workspace, you can create a `.vscode/mcp.json` file in your workspace folder.
 
 ```json
 {
@@ -95,10 +95,11 @@ For additional details, see the Code Studio [documentation](https://help.syncfus
 }
 ```
 
-2. After updating the configuration in settings.json, you'll notice a "Start" option at the top of the config. This allows you to easily start the `SyncfusionMAUIAssistant` server directly from the settings interface without additional commands.
+* After updating the configuration in settings.json, you'll notice a "Start" option at the top of the config. This allows you to easily start the SyncfusionMauiAssistant server directly from the settings interface without additional commands.
 
-3. Confirm that `SyncfusionMAUIAssistant` is being used (this does not happen automatically). Look for a statement in the output, which is similar to:
-    * `SyncfusionMAUIAssistant is running...` (in VS Code)
+* Confirm the server is active by checking for a message like: `SyncfusionMAUIAssistant is running...` in the output.
+
+* For additional guidance, refer to the [VS Code documentation](https://code.visualstudio.com/docs/copilot/customization/mcp-servers#_add-an-mcp-server).
 
 ### Cursor
 
