@@ -3,7 +3,7 @@ layout: post
 title: Syncfusion AI Coding Assistant Overview | Syncfusion
 description: Learn how Syncfusion AI Coding Assistant boost .NET MAUI productivity by generating accurate code snippets, configuration examples, and contextual guidance.
 platform: MAUI
-control: Syncfusion AI Coding Assistant Overview
+control: Syncfusion AI Coding Assistant Overview.
 documentation: ug
 ---
 
