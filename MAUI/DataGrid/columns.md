@@ -171,7 +171,7 @@ public int OrderID
 
 #### Editing
 
-When the `Editable` attribute is set to true, it enables editing of the cell values.
+You can enable editing of cell values by setting the `Editable` attribute to true.
 
 {% tabs %}
 {% highlight c# %}
@@ -242,7 +242,7 @@ public string Country
 
 #### Format datagrid columns using DisplayFormat attribute
 
-When the [DisplayFormat](https://learn.microsoft.com/en-us/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc679253%28v%3dvs.95%29) attribute is defined for properties in the model, the auto-generated columns in the DataGrid created via DataAnnotations will be formatted using the [DataFormatString](https://learn.microsoft.com/en-us/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc679306%28v%3dvs.95%29) specified in that attribute.
+You can format auto-generated columns using the [DisplayFormat](https://learn.microsoft.com/en-us/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc679253%28v%3dvs.95%29) attribute with the [DataFormatString](https://learn.microsoft.com/en-us/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc679306%28v%3dvs.95%29) property defined for properties in the model.
 
 {% tabs %}
 {% highlight c# %}
@@ -265,7 +265,7 @@ public string Country
 <img alt="Maui DataGrid with Columns Formatting" src="Images\columns\maui-datagrid-formatting.png" width="404"/>
 
 #### Group columns under stacked header
-Enables grouping multiple columns under a shared stacked header in the user interface. It also supports hierarchical (nested) grouping by using the / separator in the ChildColumns property.
+You can group multiple columns under a shared stacked header using the `Display.GroupName` property. Nested grouping is supported using the / separator in the ChildColumns property.
 
 {% tabs %}
 {% highlight c# %}
