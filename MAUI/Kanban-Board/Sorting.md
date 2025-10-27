@@ -145,10 +145,10 @@ public class SortingViewModel
 {% endhighlight %}
 {% endtabs %}
 
+![custom-field-sorting-in-maui-kanban](images/sorting/custom-field-sorting-in-maui-kanban.gif)
+
 N>
 [View sample in GitHub](https://github.com/SyncfusionExamples/maui-kanban-examples/tree/master/CustomFieldSorting)
-
-![custom-field-sorting-in-maui-kanban](images/sorting/custom-field-sorting-in-maui-kanban.gif)
 
 N> 
  * To apply sorting after a drop operation, handle the [DragEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_DragEnd) event and explicitly call the [RefreshKanbanColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_RefreshKanbanColumn) method. This ensures the column updates to reflect the new card order based on the defined sorting logic.
@@ -275,10 +275,10 @@ public class SortingViewModel
 {% endhighlight %}
 {% endtabs %}
 
+![index-based-sorting-in-maui-kanban](images/sorting/index-based-sorting-in-maui-kanban.gif)
+
 N>
 [View sample in GitHub](https://github.com/SyncfusionExamples/maui-kanban-examples/tree/master/IndexBasedSorting)
-
-![index-based-sorting-in-maui-kanban](images/sorting/index-based-sorting-in-maui-kanban.gif)
 
 N> 
  * The Index-based sorting can be achieved at the sample level after a drag-and-drop action. To implement this handle the [DragEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_DragEnd) event, access the items in the target column using [e.TargetColumn.Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_Items), and update the numeric field used for sorting to maintain a continuous order. Finally, call [RefreshKanbanColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_RefreshKanbanColumn) method to update the UI with the new order.
