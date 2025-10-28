@@ -21,6 +21,8 @@ Localization is the process of translating the application resources into differ
 * TimelineMonth
 * Agenda
 * Today
+* NoEvents
+* AllDay
  
 ## Setting CurrentUICulture to the application
 
