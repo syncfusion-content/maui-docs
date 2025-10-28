@@ -9,7 +9,18 @@ documentation: ug
 
 # Localization in .NET MAUI Scheduler (SfScheduler)
 
-Localization is the process of translating the application resources into different language for the specific cultures. The `SfScheduler` can be localized by adding `resource` file. 
+Localization is the process of translating the application resources into different language for the specific cultures. The `SfScheduler` can be localized by adding `resource` file. The SfScheduler allows you to localize the following built-in strings to suit your application’s language and culture:
+
+* Day
+* Week
+* WorkWeek
+* Month
+* TimelineDay
+* TimelineWeek
+* TimelineWorkWeek
+* TimelineMonth
+* Agenda
+* Today
 
 ## Setting CurrentUICulture to the application
 
@@ -64,3 +75,6 @@ To localize the `Scheduler` based on `CurrentUICulture` using `resource` files, 
    6. Add the Name/Value pair in Resource Designer of `SfScheduler.fr-FR.resx` file and change its corresponding value to corresponding culture.
 
    ![shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-scheduler](images/localization/shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-scheduler.png)
+
+   The complete sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/Localization).
+   
