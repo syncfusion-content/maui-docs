@@ -21,7 +21,7 @@ By default, the toolbar includes a comprehensive set of formatting tools. You ca
 
 The following items are available to be added to the `ToolbarItems` collection:
 *   `Bold`, `Italic`, `Underline`, `Strikethrough`
-*   `Subscript`, `Superscript`
+*   `SubScript`, `SuperScript`
 *   `FontFamily`, `FontSize`, `TextColor`, `HighlightColor`
 *   `ParagraphFormat` , `Alignment`
 *   `NumberList`, `BulletList`
