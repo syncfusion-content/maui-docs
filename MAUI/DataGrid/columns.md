@@ -152,11 +152,11 @@ private void SfDataGrid_AutoGeneratingColumn(object sender, DataGridAutoGenerati
 
 SfDataGrid support to generate the columns based on built-in [Data Annotation Attributes](https://learn.microsoft.com/en-us/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc490428(v=vs.95)).
 
-N> Data annotations are only applied when the DataGrid.AutoGenerateColumns property is set to True.
+N> Data annotations are only applied when the `DataGrid.AutoGenerateColumns` property is set to True.
 
 #### Exclude column
 
-You can skip the column generation using AutoGenerateField property.
+You can skip the column generation using `AutoGenerateField` property.
 
 {% tabs %}
 {% highlight c# %}
@@ -240,7 +240,7 @@ public string Country
 {% endhighlight %}
 {% endtabs %}
 
-#### Format datagrid columns using DisplayFormat attribute
+#### Format DataGrid columns using DisplayFormat attribute
 
 You can format auto-generated columns using the [DisplayFormat](https://learn.microsoft.com/en-us/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc679253%28v%3dvs.95%29) attribute with the [DataFormatString](https://learn.microsoft.com/en-us/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc679306%28v%3dvs.95%29) property defined for properties in the model.
 
@@ -382,5 +382,6 @@ this.dataGrid.Columns.Remove(column);
 this.dataGrid.Columns.RemoveAt(1);
 {% endhighlight %}
 {% endtabs %}
+
 
 
