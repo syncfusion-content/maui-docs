@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Axis types in .NET MAUI Chart control | Syncfusion
+title: Axis types in .NET MAUI Cartesian Chart control | Syncfusion
 description: Learn here all about axis types and its features in Syncfusion® .NET MAUI Chart (SfCartesianChart) control and more.
 platform: maui
 control: SfCartesianChart
@@ -8,13 +8,14 @@ documentation: ug
 keywords: .net maui cartesian charts, .net maui axis types, cartesian chart axis types, syncfusion cartesian charts maui, maui chart axis customization, .net maui chart axis, cartesian chart axis guide maui, .net maui sfCartesianChart axis.
 ---
 
-# Types of Axis in .NET MAUI Chart
+# Types of Axis in .NET MAUI Cartesian Chart
 
 Cartesian chart supports the following types of chart axis.
 
 * NumericalAxis
 * CategoryAxis
 * DateTimeAxis
+* DateTimeCategoryAxis
 * LogarithmicAxis
 
 ## Numerical Axis
@@ -416,6 +417,78 @@ this.Content = chart;
 {% endtabs %}
 
 ![DateTimeAxis range customization support in MAUI Chart](Axis_Images/maui_chart_datetime_axis_range.jpg)
+
+## DateTimeCategoryAxis
+
+The `DateTimeCategoryAxis` is a specialized type of axis primarily used with financial series. Similar to the [CategoryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CategoryAxis.html), all data points are plotted with equal spacing, eliminating gaps for missing dates. The intervals and ranges for this axis are calculated similarly to the [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html). There are no visual gaps between points, even if the difference between two points exceeds a year.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+    . . .
+    <chart:SfCartesianChart.XAxes>
+        <chart:DateTimeCategoryAxis/>
+    </chart:SfCartesianChart.XAxes>
+    . . .
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart(); 
+. . . 
+// Create an instance of the DateTimeCategoryAxis, used for displaying DateTime values as categories 
+DateTimeCategoryAxis primaryAxis = new DateTimeCategoryAxis(); 
+// Add the DateTimeCategoryAxis instance to the chart's XAxes collection 
+chart.XAxes.Add(primaryAxis);
+
+this.Content = chart; 
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![DateTimeCategory Axis support in MAUI Chart](Axis_Images/maui_dateTimeCategory_axis.png)
+
+### Interval
+
+In `DateTimeCategoryAxis`, intervals can be customized by using the Interval and IntervalType properties, similar to [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html). For example, setting `Interval` as 5 and `IntervalType` as `Days` will consider 5 days as an interval.
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart> 
+    . . .
+        <chart:SfCartesianChart.XAxes>
+            <chart:DateTimeCategoryAxis Interval="5" 
+                                        IntervalType="Days"/> 
+        </chart:SfCartesianChart.XAxes> 
+    . . .
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart(); 
+. . .
+DateTimeCategoryAxis primaryAxis = new DateTimeCategoryAxis() 
+{ 
+    Interval = 5, 
+    IntervalType = DateTimeIntervalType.Days 
+}; 
+chart.XAxes.Add(primaryAxis);
+. . .
+this.Content = chart; 
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![DateTimeCategoryAxis interval support in MAUI Chart](Axis_Images/maui_dateTimeCategory_interval.png)
 
 ## Logarithmic Axis
 
