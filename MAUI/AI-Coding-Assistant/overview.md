@@ -66,5 +66,5 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> AI Coding Assistant is desi
 
 ## See also
 
-* Add the `SyncfusionMAUIAssistant MCP Server` to an MCP-enabled client
-* [Syncfusion<sup style="font-size:70%">&reg;</sup> MAUI Documentation](https://help.syncfusion.com/maui/introduction)
+* Add the [SyncfusionMAUIAssistant MCP Server](https://help.syncfusion.com/maui/ai-coding-assistant/mcp-server) to an MCP-enabled client.
+* [Syncfusion<sup style="font-size:70%">&reg;</sup> MAUI Documentation](https://help.syncfusion.com/maui/introduction).
