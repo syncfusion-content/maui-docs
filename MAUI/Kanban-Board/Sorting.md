@@ -145,6 +145,11 @@ public class SortingViewModel
 {% endhighlight %}
 {% endtabs %}
 
+![custom-field-sorting-in-maui-kanban](images/sorting/custom-field-sorting-in-maui-kanban.gif)
+
+N>
+[View sample in GitHub](https://github.com/SyncfusionExamples/maui-kanban-examples/tree/master/CustomFieldSorting)
+
 N> 
  * To apply sorting after a drop operation, handle the [DragEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_DragEnd) event and explicitly call the [RefreshKanbanColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_RefreshKanbanColumn) method. This ensures the column updates to reflect the new card order based on the defined sorting logic.
  * When using a custom data model, the default card UI is not applicable. To render the card content, you must define a custom `DataTemplate` using the [CardTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_CardTemplate) property.
@@ -221,15 +226,214 @@ The following code example illustrates how cards numeric property updated using 
 </kanban:SfKanban>
 
 {% endhighlight %}
-{% highlight C# hl_lines="2 6 7" %}
+{% highlight C# hl_lines="1 2 11 12" %}
 
 this.kanban.ItemsSource = new SortingViewModel().Cards;
 this.kanban.DragEnd += this.OnCardDragEnd;
 
 private void OnCardDragEnd(object? sender, KanbanDragEndEventArgs e)
 {
+    if (this.kanban == null)
+    {
+        return;
+    }
+
     this.ApplySortingWithoutPositionChange(e);
     this.kanban.RefreshKanbanColumn();
+}
+
+private void ApplySortingWithoutPositionChange(KanbanDragEndEventArgs eventArgs)
+{
+    if (this.kanban == null || eventArgs.Data == null || eventArgs.TargetColumn?.Items == null || eventArgs.SourceColumn == null || (eventArgs.SourceColumn == eventArgs.TargetColumn && eventArgs.SourceIndex == eventArgs.TargetIndex))
+    {
+        return;
+    }
+
+    // Retrieve sorting configuration
+    var sortMappingPath = kanban.SortingMappingPath;
+    var sortingOrder = kanban.SortingOrder;
+
+    // Extract and cast items from the target column
+    var targetColumnItems = eventArgs.TargetColumn.Items is IList<object> items
+        ? items.Cast<object>().ToList() : new List<object>();
+
+    // Proceed only if sorting path is defined
+    if (string.IsNullOrEmpty(sortMappingPath))
+    {
+        return;
+    }
+
+    // Sort items based on the sorting order
+    if (targetColumnItems.Count > 0)
+    {
+        Func<object, object?> keySelector = item => this.GetPropertyInfo(item.GetType(), sortMappingPath);
+
+        targetColumnItems = sortingOrder == KanbanSortingOrder.Ascending
+            ? targetColumnItems.OrderBy(item => keySelector(item) ?? 0).ToList()
+            : targetColumnItems.OrderByDescending(item => keySelector(item) ?? 0).ToList();
+    }
+
+    // Determine the index to insert the dragged card.
+    int currentCardIndex = eventArgs.TargetIndex;
+    if (currentCardIndex >= 0 && currentCardIndex <= targetColumnItems.Count)
+    {
+        targetColumnItems.Insert(currentCardIndex, eventArgs.Data);
+    }
+    else
+    {
+        targetColumnItems.Add(eventArgs.Data);
+        currentCardIndex = targetColumnItems.Count - 1;
+    }
+
+    // Update index property of all items using smart positioning logic
+    this.ApplySmartIndexUpdate(targetColumnItems, sortingOrder, currentCardIndex);
+}
+
+private void ApplySmartIndexUpdate(List<object> items, KanbanSortingOrder sortingOrder, int currentCardIndex)
+{
+    if (items == null || items.Count == 0)
+    {
+        return;
+    }
+
+    if (sortingOrder == KanbanSortingOrder.Ascending)
+    {
+        this.HandleAscendingIndexSorting(items, currentCardIndex);
+        return;
+    }
+
+    this.HandleDescendingIndexSorting(items, currentCardIndex);
+}
+
+private void HandleAscendingIndexSorting(List<object> items, int currentCardIndex)
+{
+    int afterCardIndex = -1;
+    int lastItemIndex = -1;
+
+    // Get the index of the card after the insertion point
+    if (currentCardIndex < items.Count - 1)
+    {
+        var afterCard = items[currentCardIndex + 1];
+        afterCardIndex = GetCardIndex(afterCard) ?? -1;
+    }
+
+    for (int i = 0; i < items.Count; i++)
+    {
+        var item = items[i];
+        if (item == null)
+        {
+            continue;
+        }
+
+        PropertyInfo? propertyInfo = this.GetPropertyInfo(item.GetType(), "Index");
+        if (propertyInfo == null)
+        {
+            continue;
+        }
+
+        int itemIndex = Convert.ToInt32(propertyInfo.GetValue(item) ?? 0);
+        bool isFirstItem = i == 0;
+        if (isFirstItem)
+        {
+            // If the inserted card is at the beginning, assign a smart index
+            if (currentCardIndex == 0)
+            {
+                lastItemIndex = afterCardIndex > 1 ? afterCardIndex - 1 : 1;
+                propertyInfo.SetValue(item, lastItemIndex);
+            }
+            else
+            {
+                lastItemIndex = itemIndex;
+            }
+        }
+        else
+        {
+            // Increment index for subsequent items
+            lastItemIndex++;
+            propertyInfo.SetValue(item, lastItemIndex);
+        }
+    }
+}
+
+private void HandleDescendingIndexSorting(List<object> items, int currentCardIndex)
+{
+    int beforeCardIndex = -1;
+    int lastItemIndex = -1;
+
+    // Get the index of the card before the insertion point
+    if (currentCardIndex > 0 && currentCardIndex < items.Count)
+    {
+        var cardBefore = items[currentCardIndex - 1];
+        beforeCardIndex = GetCardIndex(cardBefore) ?? -1;
+    }
+
+    for (int i = items.Count - 1; i >= 0; i--)
+    {
+        var item = items[i];
+        if (item == null)
+        {
+            continue;
+        }
+
+        PropertyInfo? propertyInfo = this.GetPropertyInfo(item.GetType(), "Index");
+        if (propertyInfo == null)
+        {
+            continue;
+        }
+
+        int itemIndex = Convert.ToInt32(propertyInfo.GetValue(item) ?? 0);
+        bool isLastItem = i == items.Count - 1;
+        if (isLastItem)
+        {
+            // If the inserted card is at the end, assign a smart index
+            if (currentCardIndex == items.Count - 1)
+            {
+                lastItemIndex = beforeCardIndex > 1 ? beforeCardIndex - 1 : 1;
+                propertyInfo.SetValue(item, lastItemIndex);
+            }
+            else
+            {
+                lastItemIndex = itemIndex;
+            }
+        }
+        else
+        {
+            lastItemIndex++;
+            propertyInfo.SetValue(item, lastItemIndex);
+        }
+    }
+}
+
+private int? GetCardIndex(object cardDetails)
+{
+    if (cardDetails == null)
+    {
+        return null;
+    }
+
+    PropertyInfo? propertyInfo = this.GetPropertyInfo(cardDetails.GetType(), "Index");
+    if (propertyInfo == null)
+    {
+        return null;
+    }
+
+    var indexValue = propertyInfo.GetValue(cardDetails);
+    if (indexValue != null)
+    {
+        return Convert.ToInt32(indexValue);
+    }
+
+    return null;
+}
+
+private PropertyInfo? GetPropertyInfo(Type type, string key)
+{
+    return this.GetPropertyInfoCustomType(type, key);
+}
+
+private PropertyInfo? GetPropertyInfoCustomType([DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicProperties)] Type type, string key)
+{
+    return type.GetProperty(key);
 }
 
 {% endhighlight %}
@@ -269,6 +473,11 @@ public class SortingViewModel
 
 {% endhighlight %}
 {% endtabs %}
+
+![index-based-sorting-in-maui-kanban](images/sorting/index-based-sorting-in-maui-kanban.gif)
+
+N>
+[View sample in GitHub](https://github.com/SyncfusionExamples/maui-kanban-examples/tree/master/IndexBasedSorting)
 
 N> 
  * The Index-based sorting can be achieved at the sample level after a drag-and-drop action. To implement this handle the [DragEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_DragEnd) event, access the items in the target column using [e.TargetColumn.Items](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanColumn.html#Syncfusion_Maui_Kanban_KanbanColumn_Items), and update the numeric field used for sorting to maintain a continuous order. Finally, call [RefreshKanbanColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_RefreshKanbanColumn) method to update the UI with the new order.
