@@ -21,7 +21,7 @@ By default, the toolbar includes a comprehensive set of formatting tools. You ca
 
 The following items are available to be added to the `ToolbarItems` collection:
 *   `Bold`, `Italic`, `Underline`, `Strikethrough`
-*   `Subscript`, `Superscript`
+*   `SubScript`, `SuperScript`
 *   `FontFamily`, `FontSize`, `TextColor`, `HighlightColor`
 *   `ParagraphFormat` , `Alignment`
 *   `NumberList`, `BulletList`
@@ -312,7 +312,7 @@ Use the [RemoveHyperlink(string text, string Url)](https://help.syncfusion.com/c
 {% highlight c# %}
 
 // Remove a specific hyperlink, keeping its text
-richTextEditor.RemoveHyperlink("Syncfusion", "https://www.google.com/");
+richTextEditor.RemoveHyperlink("Example", "https://www.google.com/");
 
 {% endhighlight %}
 {% endtabs %}

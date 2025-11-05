@@ -33,8 +33,8 @@ private async void OnImageInserting(object sender, RichTextEditorImageRequestedE
     RichTextEditorImageSource richTextEditorImageSource = new();
     richTextEditorImageSource.ImageFormat = RichTextEditorImageFormat.Base64;
     richTextEditorImageSource.Source =ImageSource.FromUri(new Uri("https://aka.ms/campus.jpg"));
-    richTextEditorImageSource.Width = 100;
-    richTextEditorImageSource.Height = 20;
+    richTextEditorImageSource.Width = 250;
+    richTextEditorImageSource.Height = 100;
     richTextEditor.InsertImage(richTextEditorImageSource);
 }
 

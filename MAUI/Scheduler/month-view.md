@@ -83,6 +83,32 @@ this.Scheduler.MonthView.AppointmentIndicatorCount = 1;
 
 ![change-appointment-indicator-count-in-maui-scheduler](images/month-view/change-appointment-indicator-count-in-maui-scheduler.jpeg)
 
+## Appointment indicator size
+
+The scheduler month view allows you to customize the size of the appointment indicator by using the [AppointmentIndicatorSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_AppointmentIndicatorSize) property of the [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). By default, the [AppointmentIndicatorSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_AppointmentIndicatorSize) is set to 6d.
+
+{% tabs %}  
+{% highlight XAML hl_lines="5" %}
+
+<schedule:SfScheduler x:Name="Scheduler"
+                        View="Month" >
+        <schedule:SfScheduler.MonthView>
+            <schedule:SchedulerMonthView AppointmentDisplayMode="Indicator" AppointmentIndicatorSize="10"/>
+        </schedule:SfScheduler.MonthView>
+</schedule:SfScheduler>
+
+{% endhighlight %}
+{% highlight C# hl_lines="3" %}
+
+this.Scheduler.View = SchedulerView.Month;
+this.Scheduler.MonthView.AppointmentDisplayMode = SchedulerMonthAppointmentDisplayMode.Indicator;
+this.Scheduler.MonthView.AppointmentIndicatorSize = 10;
+
+{% endhighlight %}  
+{% endtabs %}
+
+![change-appointment-indicator-size-in-maui-scheduler](images/month-view/appointment-indicator-size-maui-scheduler.png){:width="325" height="600" loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
+
 ## Hide leading and trailing dates
 
 The previous and next month dates from a Scheduler month view can be hidden by using the [ShowLeadingAndTrailingDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_ShowLeadingAndTrailingDates) property in the [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). The `ShowLeadingAndTrailingDates` property defaults to `true.`

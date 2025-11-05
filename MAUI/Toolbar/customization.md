@@ -549,7 +549,7 @@ The following code sample demonstrates how to create a toolbar control with navi
 
 {% highlight c# %}
 
- public partial class MainPage : ContentPage
+public partial class MainPage : ContentPage
  {
      public MainPage()
      {
@@ -619,12 +619,212 @@ The following code sample demonstrates how to create a toolbar control with navi
      }
  }
 
-
 {% endhighlight %}
 
 {% endtabs %}
 
 ![navigation-button-customization](images/navigation-button-customization.png)
+
+## Navigation Button appearance using DataTemplate
+You can customize the navigation appearance by using the [ForwardButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_ForwardButtonTemplate) and [BackwardButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_BackwardButtonTemplate) Properties.
+
+* **ForwardButtonTemplate** : Enables customization of the forward navigation button by allowing the integration of user-defined views.
+* **BackwardButtonTemplate** : Enables customization of the backward navigation button by allowing the integration of user-defined views.
+
+The following code sample demonstrates how to create a toolbar control with navigation button customization.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<VerticalStackLayout>
+     <toolbar:SfToolbar x:Name="Toolbar" HeightRequest="56" WidthRequest="270" OverflowMode="NavigationButtons">
+        <toolbar:SfToolbar.BackwardButtonTemplate>
+            <DataTemplate>
+                <Grid  HorizontalOptions="Start">
+                    <Image Source="less.png"  WidthRequest="18" HeightRequest="20"/>
+                </Grid>
+            </DataTemplate>
+        </toolbar:SfToolbar.BackwardButtonTemplate>
+        <toolbar:SfToolbar.ForwardButtonTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid HorizontalOptions="Start">
+                        <Image Source="greater.png" WidthRequest="18" HeightRequest="20" />
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </toolbar:SfToolbar.ForwardButtonTemplate>
+         <toolbar:SfToolbar.Items>
+             <toolbar:SfToolbarItem Name="Bold"
+             ToolTipText="Bold">
+                 <toolbar:SfToolbarItem.Icon>
+                     <FontImageSource Glyph="&#xE770;"
+                          FontFamily="MauiMaterialAssets" />
+                 </toolbar:SfToolbarItem.Icon>
+             </toolbar:SfToolbarItem>
+             <toolbar:SfToolbarItem Name="Underline"
+             ToolTipText="Underline">
+                 <toolbar:SfToolbarItem.Icon>
+                     <FontImageSource Glyph="&#xE762;"
+                          FontFamily="MauiMaterialAssets" />
+                 </toolbar:SfToolbarItem.Icon>
+             </toolbar:SfToolbarItem>
+             <toolbar:SfToolbarItem Name="Italic"
+             ToolTipText="Italic">
+                 <toolbar:SfToolbarItem.Icon>
+                     <FontImageSource Glyph="&#xE771;"
+                          FontFamily="MauiMaterialAssets" />
+                 </toolbar:SfToolbarItem.Icon>
+             </toolbar:SfToolbarItem>
+             <toolbar:SfToolbarItem Name="AlignLeft"
+                        ToolTipText="Align-Left">
+                 <toolbar:SfToolbarItem.Icon>
+                     <FontImageSource Glyph="&#xE751;"
+                          FontFamily="MauiMaterialAssets" />
+                 </toolbar:SfToolbarItem.Icon>
+             </toolbar:SfToolbarItem>
+             <toolbar:SfToolbarItem Name="AlignRight"
+                        ToolTipText="Align-Right">
+                 <toolbar:SfToolbarItem.Icon>
+                     <FontImageSource Glyph="&#xE753;"
+              FontFamily="MauiMaterialAssets" />
+                 </toolbar:SfToolbarItem.Icon>
+             </toolbar:SfToolbarItem>
+             <toolbar:SfToolbarItem Name="AlignCenter"
+                        ToolTipText="Align-Center">
+                 <toolbar:SfToolbarItem.Icon>
+                     <FontImageSource Glyph="&#xE752;"
+              FontFamily="MauiMaterialAssets" />
+                 </toolbar:SfToolbarItem.Icon>
+             </toolbar:SfToolbarItem>
+             <toolbar:SfToolbarItem Name="AlignJustify"
+                        ToolTipText="Align-Justify">
+                 <toolbar:SfToolbarItem.Icon>
+                     <FontImageSource Glyph="&#xE74F;"
+              FontFamily="MauiMaterialAssets" />
+                 </toolbar:SfToolbarItem.Icon>
+             </toolbar:SfToolbarItem>
+         </toolbar:SfToolbar.Items>
+     </toolbar:SfToolbar>
+ </VerticalStackLayout>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+ public partial class MainPage : ContentPage
+ {
+     public MainPage()
+     {
+         InitializeComponent();
+         SfToolbar toolbar = new SfToolbar();
+         toolbar.HeightRequest = 56;
+         toolbar.WidthRequest = 270;
+         toolbar.OverflowMode = ToolbarItemOverflowMode.NavigationButtons;
+
+        // Backward Button Template
+        var backwardTemplate = new DataTemplate(() =>
+        {
+            var grid = new Grid
+            {
+                HorizontalOptions = LayoutOptions.Start
+            };
+
+            var image = new Image
+            {
+                Source = "less.png",
+                WidthRequest = 18,
+                HeightRequest = 20
+            };
+
+            grid.Children.Add(image);
+            return grid;
+        });
+
+        // Forward Button Template
+        var forwardTemplate = new DataTemplate(() =>
+        {
+            var grid = new Grid
+            {
+                HorizontalOptions = LayoutOptions.Start
+            };
+
+            var image = new Image
+            {
+                Source = "greater.png",
+                WidthRequest = 18,
+                HeightRequest = 20
+            };
+
+            grid.Children.Add(image);
+            return new ViewCell { View = grid };
+        });
+
+        toolbar.BackwardButtonTemplate = backwardTemplate;
+        toolbar.ForwardButtonTemplate = forwardTemplate;
+
+         ObservableCollection<BaseToolbarItem> itemCollection = new ObservableCollection<BaseToolbarItem>();
+
+         itemCollection.Add(new SfToolbarItem
+         {
+             Name = "Bold",
+             ToolTipText = "Bold",
+             Icon = new FontImageSource { Glyph = "\uE770", FontFamily = "MauiMaterialAssets" }
+         });
+
+         itemCollection.Add(new SfToolbarItem
+         {
+             Name = "Underline",
+             ToolTipText = "Underline",
+             Icon = new FontImageSource { Glyph = "\uE762", FontFamily = "MauiMaterialAssets" }
+         });
+
+         itemCollection.Add(new SfToolbarItem
+         {
+             Name = "Italic",
+             ToolTipText = "Italic",
+             Icon = new FontImageSource { Glyph = "\uE771", FontFamily = "MauiMaterialAssets" }
+         });
+
+         itemCollection.Add(new SfToolbarItem
+         {
+             Name = "AlignLeft",
+             ToolTipText = "Align-Left",
+             Icon = new FontImageSource { Glyph = "\uE751", FontFamily = "MauiMaterialAssets" }
+         });
+
+         itemCollection.Add(new SfToolbarItem
+         {
+             Name = "AlignRight",
+             ToolTipText = "Align-Right",
+             Icon = new FontImageSource { Glyph = "\uE753", FontFamily = "MauiMaterialAssets" }
+         });
+
+         itemCollection.Add(new SfToolbarItem
+         {
+             Name = "AlignCenter",
+             ToolTipText = "Align-Center",
+             Icon = new FontImageSource { Glyph = "\uE752", FontFamily = "MauiMaterialAssets" }
+         });
+
+         itemCollection.Add(new SfToolbarItem
+         {
+             Name = "AlignJustify",
+             ToolTipText = "Align-Justify",
+             Icon = new FontImageSource { Glyph = "\uE74F", FontFamily = "MauiMaterialAssets" }
+         });
+
+         toolbar.Items = itemCollection;
+         this.Content = toolbar;
+     }
+ }
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![navigation-button-template](images/navigation-button-template.png)
 
 ## More Button Customization
 
@@ -773,3 +973,155 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![more-button-customization](images/more-button-customization.png)
+
+## Divider Customization
+
+The toolbar control supports customization for dividerLine using properties [DividedLineStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_DividedLineStroke) and [DividedLineStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_DividedLineStrokeThickness).
+
+* **DividedLineStroke** : This property is used to customize the stroke color of the divider line.
+* **DividedLineStrokeThickness** : This property is used to customize the stroke thickness of the divider line.
+
+The following code sample demonstrates how to create a toolbar control with divider line customization.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<Grid>
+    <toolbar:SfToolbar x:Name="toolbar"
+                        HeightRequest="56"
+                        WidthRequest="280"
+                        Orientation="Horizontal"
+                        OverflowMode="NavigationButtons"
+                    DividedLineStrokeThickness="5"
+                    DividedLineStroke="Red">
+        <toolbar:SfToolbar.Items>
+            <toolbar:SfToolbarItem Name="Bold"
+         ToolTipText="Bold">
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE770;"
+                      FontFamily="MauiMaterialAssets" />
+                </toolbar:SfToolbarItem.Icon>
+            </toolbar:SfToolbarItem>
+            <toolbar:SfToolbarItem Name="Underline"
+         ToolTipText="Underline">
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE762;"
+                      FontFamily="MauiMaterialAssets" />
+                </toolbar:SfToolbarItem.Icon>
+            </toolbar:SfToolbarItem>
+            <toolbar:SfToolbarItem Name="Italic"
+         ToolTipText="Italic">
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE771;"
+                      FontFamily="MauiMaterialAssets" />
+                </toolbar:SfToolbarItem.Icon>
+            </toolbar:SfToolbarItem>
+            <toolbar:SfToolbarItem Name="AlignLeft"
+                    ToolTipText="Align-Left">
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE751;"
+                      FontFamily="MauiMaterialAssets" />
+                </toolbar:SfToolbarItem.Icon>
+            </toolbar:SfToolbarItem>
+            <toolbar:SfToolbarItem Name="AlignRight"
+                    ToolTipText="Align-Right">
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE753;"
+          FontFamily="MauiMaterialAssets" />
+                </toolbar:SfToolbarItem.Icon>
+            </toolbar:SfToolbarItem>
+            <toolbar:SfToolbarItem Name="AlignCenter"
+                    ToolTipText="Align-Center">
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE752;"
+          FontFamily="MauiMaterialAssets" />
+                </toolbar:SfToolbarItem.Icon>
+            </toolbar:SfToolbarItem>
+            <toolbar:SfToolbarItem Name="AlignJustify"
+                    ToolTipText="Align-Justify">
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE74F;"
+          FontFamily="MauiMaterialAssets" />
+                </toolbar:SfToolbarItem.Icon>
+            </toolbar:SfToolbarItem>
+        </toolbar:SfToolbar.Items>
+    </toolbar:SfToolbar>
+</Grid>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfToolbar toolbar = new SfToolbar();
+        toolbar.HeightRequest = 56;
+        toolbar.WidthRequest = 280;
+        toolbar.OverflowMode = ToolbarItemOverflowMode.NavigationButtons;
+        toolbar.DividedLineStroke = Colors.Red;
+        toolbar.DividedLineStrokeThickness = 5;
+        ObservableCollection<BaseToolbarItem> itemCollection = new ObservableCollection<BaseToolbarItem>();
+
+        itemCollection.Add(new SfToolbarItem
+        {
+            Name = "Bold",
+            ToolTipText = "Bold",
+            Icon = new FontImageSource { Glyph = "\uE770", FontFamily = "MauiMaterialAssets" }
+        });
+
+        itemCollection.Add(new SfToolbarItem
+        {
+            Name = "Underline",
+            ToolTipText = "Underline",
+            Icon = new FontImageSource { Glyph = "\uE762", FontFamily = "MauiMaterialAssets" }
+        });
+
+        itemCollection.Add(new SfToolbarItem
+        {
+            Name = "Italic",
+            ToolTipText = "Italic",
+            Icon = new FontImageSource { Glyph = "\uE771", FontFamily = "MauiMaterialAssets" }
+        });
+
+        itemCollection.Add(new SfToolbarItem
+        {
+            Name = "AlignLeft",
+            ToolTipText = "Align-Left",
+            Icon = new FontImageSource { Glyph = "\uE751", FontFamily = "MauiMaterialAssets" }
+        });
+
+        itemCollection.Add(new SfToolbarItem
+        {
+            Name = "AlignRight",
+            ToolTipText = "Align-Right",
+            Icon = new FontImageSource { Glyph = "\uE753", FontFamily = "MauiMaterialAssets" }
+        });
+
+        itemCollection.Add(new SfToolbarItem
+        {
+            Name = "AlignCenter",
+            ToolTipText = "Align-Center",
+            Icon = new FontImageSource { Glyph = "\uE752", FontFamily = "MauiMaterialAssets" }
+        });
+
+        itemCollection.Add(new SfToolbarItem
+        {
+            Name = "AlignJustify",
+            ToolTipText = "Align-Justify",
+            Icon = new FontImageSource { Glyph = "\uE74F", FontFamily = "MauiMaterialAssets" }
+        });
+
+        toolbar.Items = itemCollection;
+        this.Content = toolbar;
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![divider-line-customization](images/divider-customization.png)

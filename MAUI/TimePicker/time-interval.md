@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Time Interval in .NET MAUI Time Picker Control | Syncfusion<sup>&reg;</sup>
+title: Time Interval in .NET MAUI Time Picker Control | Syncfusion®
 description: Learn about time interval in Syncfusion<sup>&reg;</sup> .NET MAUI Time Picker (SfTimePicker) control and its basic features.
 platform: maui
 control: SfTimePicker
@@ -14,6 +14,7 @@ The `SfTimePicker` provides three intervals in [.NET MAUI Time Picker](https://w
  * [`HourInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_HourInterval)
  * [`MinuteInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_MinuteInterval)
  * [`SecondInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_SecondInterval)
+  * [`MilliSecondInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_MilliSecondInterval)
 
 ## Hour interval
 
@@ -98,3 +99,31 @@ this.Content = timePicker;
 {% endtabs %}
 
 ![Second interval in .NET MAUI Date picker.](images/intervals/maui-time-picker-second-interval.png)
+
+## MilliSecond interval
+
+Time Picker provides an option to give an interval between milliseconds using the [MilliSecondInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_MilliSecondInterval) property of [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+
+<picker:SfTimePicker x:Name="timePicker"
+                     MilliSecondInterval="2"/>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" hl_lines="3" %}  
+
+SfTimePicker timePicker = new SfTimePicker()
+{
+    MilliSecondInterval = 2
+};
+
+this.Content = timePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![MilliSecond interval in .NET MAUI Date picker.](images/intervals/maui-time-picker-millisecond-interval.png)
