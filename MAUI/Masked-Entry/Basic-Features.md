@@ -341,6 +341,32 @@ maskedEntry.SelectAllOnFocus = true;
 {% endhighlight %}
 {% endtabs %}
 
+## IsReadOnly Mode
+
+The [`IsReadOnly`]() property allows you to make the masked entry non-editable while keeping it focusable and selectable. When enabled, users can still focus and select text, but cannot modify the value via typing, cut, paste, or the keyboard. The default value of this property is `false`.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfMaskedEntry WidthRequest="200"
+                       MaskType="Simple"
+                       Mask="(000) 000-0000"
+                       Value="1234567890"
+                       IsReadOnly="True" />
+
+{% endhighlight %}
+{% highlight c# %}
+
+SfMaskedEntry maskedEntry = new SfMaskedEntry();
+maskedEntry.WidthRequest = 200;
+maskedEntry.MaskType = MaskedEntryMaskType.Simple;
+maskedEntry.Mask = "(000) 000-0000";
+maskedEntry.Value = "1234567890";
+maskedEntry.IsReadOnly = true;
+
+{% endhighlight %}
+{% endtabs %}
+
 ## ReturnType
 
 The `ReturnType` property specifies the return button (e.g., Next, Done, Go) of the keyboard. It helps manage the flow between multiple input fields by defining what happens when the action button is pressed.
