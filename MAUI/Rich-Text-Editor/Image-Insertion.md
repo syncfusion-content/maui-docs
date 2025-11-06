@@ -13,7 +13,7 @@ The [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichT
 
 **Enable File Access Permission**
 
-On MacCatalyst devices, you need to enable file access by adding the required permission in the `Entitlements.plist` file, as illustrated in the following code snippet.
+On MacCatalyst devices, you need to enable file access by adding the required permission in the platform specific "info" file, as illustrated in the following code snippet.
 
 {% tabs %}
 {% highlight C# tabtitle="Entitlements.plist" %}
