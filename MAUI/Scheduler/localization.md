@@ -79,4 +79,3 @@ To localize the `Scheduler` based on `CurrentUICulture` using `resource` files, 
    ![shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-scheduler](images/localization/shows-the-added-resource-file-name-value-pair-in-the-resource-designer-in-maui-scheduler.png)
 
    The complete sample can be downloaded from [GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/Localization).
-   
