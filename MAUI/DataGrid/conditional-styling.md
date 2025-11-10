@@ -391,7 +391,8 @@ public class ForeColorConverter : IValueConverter
 ![Conditional cell styling based on RowIndex and ColumnIndex in .NET MAUI DataGrid](Images/conditional-styling/maui-datagrid-conditional-datagridcelltyle_basedon_rowcolumnindex.png)
 
 ### Customizing the BorderColor of a cell
-You can customize the border color of individual cells in the SfDataGrid based on RowIndex and ColumnIndex property , and setting the `BorderColor` property  in DataGridCell by writing the style for the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html)
+
+You can customize the border color of individual cells in the SfDataGrid based on RowIndex and ColumnIndex property , and setting the `BorderColor` property  in DataGridCell by writing the style for the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}

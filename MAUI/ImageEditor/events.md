@@ -19,16 +19,17 @@ This [`ImageLoaded`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEd
 
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-    <imageEditor:SfImageEditor Source="image.png" ImageLoaded = "OnImageLoaded" />
+<imageEditor:SfImageEditor Source="image.png"
+                           ImageLoaded = "OnImageLoaded"/>
 
 {% endhighlight %}
 
 {% highlight C# tabtitle="MainPage.xaml.cs" %}
             
-    private void OnImageLoaded(object sender, EventArgs e)
-    {
-        this.imageEditor.Rotate();
-    }
+private void OnImageLoaded(object sender, EventArgs e)
+{
+    this.imageEditor.Rotate();
+}
 
 {% endhighlight %}
 
@@ -38,23 +39,23 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-image-edit
 
 ## Annotations deserialized event
 
-This `AnnotationsDeserialized` event occurs when annotations are deserialized onto the image.
+This [AnnotationsDeserialized](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_AnnotationsDeserialized) event occurs when the annotations are deserialized onto the image.
 
 N> `Serialization` and `deserialization` are not applicable for custom annotation views. 
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
-    <imageEditor:SfImageEditor x:Name="imageEditor" 
-                               Source="image.png" 
-                               AnnotationsDeserialized="OnAnnotationsDeserialized"/>
+<imageEditor:SfImageEditor x:Name="imageEditor" 
+                           Source="image.png" 
+                           AnnotationsDeserialized="OnAnnotationsDeserialized"/>
  
 {% endhighlight %}
 {% highlight C# tabtitle="MainPage.xaml.cs" %}
 
-    private async void OnAnnotationsDeserialized(object? sender, EventArgs e)
-    {
-        await DisplayAlert("", "Annotations are deserialized", "Ok");
-    }
+private async void OnAnnotationsDeserialized(object? sender, EventArgs e)
+{
+    await DisplayAlert("", "Annotations are deserialized", "Ok");
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -69,19 +70,20 @@ N> This is common for Shape and Text annotations.
 
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-    <imageEditor:SfImageEditor Source="image.png" AnnotationSelected = "OnAnnotationSelected" />
+<imageEditor:SfImageEditor Source="image.png"
+                           AnnotationSelected = "OnAnnotationSelected"/>
 
 {% endhighlight %}
 
 {% highlight C# tabtitle="MainPage.xaml.cs" %}
 
-    private void OnAnnotationSelected(object sender, AnnotationSelectedEventArgs e)
+private void OnAnnotationSelected(object sender, AnnotationSelectedEventArgs e)
+{
+    if (e.AnnotationSettings is ImageEditorShapeSettings shapeSettings)
     {
-        if (e.AnnotationSettings is ImageEditorShapeSettings shapeSettings)
-        {
-            shapeSettings.Color = Colors.Black;
-        }
+        shapeSettings.Color = Colors.Black;
     }
+}
 
 {% endhighlight %}
 
@@ -96,16 +98,17 @@ The [`BrowseImage`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEdi
 
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-    <imageEditor:SfImageEditor Source="image.png" BrowseImage = "OnImageBrowse" />
+<imageEditor:SfImageEditor Source="image.png"
+                           BrowseImage = "OnImageBrowse"/>
 
 {% endhighlight %}
 
 {% highlight C# tabtitle="MainPage.xaml.cs" %}
             
-    private void OnImageBrowse(object sender, CancelEventArgs e)
-    {
-        e.Cancel = true;
-    }
+private void OnImageBrowse(object sender, CancelEventArgs e)
+{
+    e.Cancel = true;
+}
 
 {% endhighlight %}
 

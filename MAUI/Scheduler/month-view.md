@@ -85,7 +85,7 @@ this.Scheduler.MonthView.AppointmentIndicatorCount = 1;
 
 ## Appointment indicator size
 
-The scheduler month view allows you to customize the size of the appointment indicator by using the `AppointmentIndicatorSize` property of the [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). By default, the `AppointmentIndicatorSize` is set to 6d.
+The scheduler month view allows you to customize the size of the appointment indicator by using the [AppointmentIndicatorSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_AppointmentIndicatorSize) property of the [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). By default, the [AppointmentIndicatorSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_AppointmentIndicatorSize) is set to 6d.
 
 {% tabs %}  
 {% highlight XAML hl_lines="5" %}

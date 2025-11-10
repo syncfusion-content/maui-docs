@@ -10,6 +10,22 @@ documentation: ug
 # Localization in .NET MAUI Scheduler (SfScheduler)
 
 Localization is the process of translating the application resources into different language for the specific cultures. The `SfScheduler` can be localized by adding `resource` file. The SfScheduler allows you to localize the following built-in strings to suit your application’s language and culture:
+<<<<<<< HEAD
+=======
+
+* Day
+* Week
+* WorkWeek
+* Month
+* TimelineDay
+* TimelineWeek
+* TimelineWorkWeek
+* TimelineMonth
+* Agenda
+* Today
+* NoEvents
+* AllDay
+>>>>>>> master
 
 * Day
 * Week
