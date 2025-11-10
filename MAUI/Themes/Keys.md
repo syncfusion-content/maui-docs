@@ -17553,7 +17553,7 @@ This page lists the keys associated with each control and the respective UI elem
     </tr>
 
     <tr>
-        <td rowspan="33">
+        <td rowspan="32">
             SfTabViewStyles 
             <br/>
             <br/>
@@ -17957,18 +17957,6 @@ This page lists the keys associated with each control and the respective UI elem
         </td>
         <td>
             BackgroundColor of the disabled filled SfTabView.
-            <br/>
-            <br/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            SfTabViewHoverBackground
-            <br/>
-            <br/>
-        </td>
-        <td>
-            Hover BackgroundColor of the SfTabItem.
             <br/>
             <br/>
         </td>
