@@ -23,7 +23,7 @@ Localization is the process of translating the application resources into differ
 * Today
 * NoEvents
 * AllDay
-
+ 
 ## Setting CurrentUICulture to the application
 
 Application culture can be changed by setting `CurrentUICulture.` in `App.xaml.cs` file.
