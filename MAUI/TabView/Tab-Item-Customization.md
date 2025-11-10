@@ -587,7 +587,11 @@ this.Content = stackLayout;
 
 ## Disable ripple effect on item click
 
+<<<<<<< HEAD
 The [EnableRippleAnimation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_EnableRippleAnimation) property of the [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html) allows you to enable or disable the ripple animation for tab headers. This animation provides visual feedback when a tab header is tapped. The default value of the `EnableRippleAnimation` property is `true`.
+=======
+The `EnableRippleAnimation` property of the [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html) allows you to enable or disable the ripple animation for tab headers. This animation provides visual feedback when a tab header is tapped. The default value of the `EnableRippleAnimation` property is `true`.
+>>>>>>> 4e562dc72c58d8d728902da74c896d3096c75170
 
 {% tabs %}
 
