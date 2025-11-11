@@ -37,7 +37,7 @@ Our .NET MAUI components are compatible with the following development environme
 ### Supported .NET versions
 
 * .NET 9.0
-* .NET 8.0
+* .NET 10.0
 
 ### Supported platforms
 
