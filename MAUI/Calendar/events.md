@@ -72,11 +72,11 @@ The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calen
 
 this.calendar.SelectionChanged += this.OnCalendarSelectionChanged;
 
-private void OnCalendarSelectionChanged(object sender,  private void OnCalendarSelectionChanged(object sender, CalendarSelectionChangedEventArgs e)
-    {
-        var oldDateTime = e.OldValue;
-        var newDateTime = e.NewValue;
-    }
+private void OnCalendarSelectionChanged(object sender, CalendarSelectionChangedEventArgs e)
+{
+    var oldDateTime = e.OldValue;
+    var newDateTime = e.NewValue;
+}
 
 {% endhighlight %}
 {% endtabs %}
