@@ -12,6 +12,10 @@ keywords: .net maui markdownviewer, syncfusion markdownviewer maui, markdown vie
 
 This guide details the initial setup and basic usage of the [SfMarkdownViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html) control, offering insight into its ability to render Markdown content with various formatting capabilities across mobile and desktop platforms.
 
+To get start quickly with our [.NET MAUI MarkdownViewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.MarkdownViewer.SfMarkdownViewer.html), you can check the below video.
+
+{% youtube "https://www.youtube.com/watch?v=4wHEDadFrxM" %}
+
 {% tabcontents %}
 {% tabcontent Visual Studio %}
 
