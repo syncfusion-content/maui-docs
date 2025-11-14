@@ -11,6 +11,9 @@ documentation: ug
 
 This section guides you through setting up and configuring a **Rich Text Editor** in your .NET MAUI application. Follow the steps below to add a basic Rich Text Editor to your project.
 
+To get start quickly with our [.NET MAUI Rich Text Editor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html), you can check the below video.
+
+{% youtube "https://www.youtube.com/watch?v=1r8OrZxG_HI" %}
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
