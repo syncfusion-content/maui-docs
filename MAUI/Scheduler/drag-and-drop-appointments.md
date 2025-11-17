@@ -98,7 +98,7 @@ Using the [AppointmentDrop](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 [DropTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentDropEventArgs.html#Syncfusion_Maui_Scheduler_AppointmentDropEventArgs_DropTime) - Get or set the date and time at which the appointment is being dropped.
 [SourceResource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentDropEventArgs.html#Syncfusion_Maui_Scheduler_AppointmentDropEventArgs_SourceResource) - Get the original resource of the appointment that is being dropped.
 [TargetResource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentDropEventArgs.html#Syncfusion_Maui_Scheduler_AppointmentDropEventArgs_TargetResource) - Get the resource into which the appointment is being dropped.
-`IsDroppingToAllDay` - Gets a value indicating whether an appointment is being dropped into an all-day slot.
+[IsDroppingToAllDay](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentDropEventArgs.html#Syncfusion_Maui_Scheduler_AppointmentDropEventArgs_IsDroppingToAllDay) - Gets a value indicating whether an appointment is being dropped into an all-day slot.
 
 {% tabs %}
 {% highlight c# %}
@@ -118,7 +118,7 @@ private void OnSchedulerAppointmentDrop(object? sender, AppointmentDropEventArgs
 
 ### Prevent dropping appointments into the all-day panel
 
-You can prevent appointments from being dropped into the all-day panel by checking the `IsDroppingToAllDay` property in the `AppointmentDrop` event and canceling the operation.
+You can prevent appointments from being dropped into the all-day panel by checking the [IsDroppingToAllDay](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentDropEventArgs.html#Syncfusion_Maui_Scheduler_AppointmentDropEventArgs_IsDroppingToAllDay) property in the [AppointmentDrop](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentDrop) event and canceling the operation.
 
 {% tabs %}
 {% highlight c# %}

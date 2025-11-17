@@ -12,6 +12,31 @@ documentation: ug
 Localization is the process of translating the application resources into different language for the specific cultures. The `SfDataGrid` can be localized by adding `resource` file. In `SfDataGrid`, provides the support to localize the below strings
 
    * `Load More`
+   * `Click here to add new row`
+   * `Equals`
+   * `Does Not Equal`
+   * `Greater Than`
+   * `Greater Than or Equal`
+   * `Less Than`
+   * `Less Than or Equal`
+   * `Begins With`
+   * `Does Not Begin With`
+   * `Ends With`
+   * `Does Not End With`
+   * `Contains`
+   * `Does Not Contain`
+   * `Before`
+   * `Before or Equal`
+   * `After`
+   * `After or Equal`
+   * `Empty`
+   * `Not Empty`
+   * `Null`
+   * `Not Null`
+   * `(Blanks)`
+   * `(Select All)`
+   * `Ok`
+   * `Cancel`
 
 ## Setting CurrentUICulture to the application
 

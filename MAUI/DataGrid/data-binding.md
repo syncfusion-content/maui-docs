@@ -272,3 +272,81 @@ To retain the scroll position when [ItemsSource](https://help.syncfusion.com/cr/
 {% highlight C# %}
 dataGrid.CanMaintainScrollPosition = true;
 {% endhighlight %}
+
+## SetCellValue
+
+The `SetCellValue` method on `SfDataGrid` allows you to programmatically update the value of a specific cell.
+
+N>
+1. For features (like Sorting, Grouping, Filtering) set LiveDataUpdateMode="AllowDataShaping" to ensure the grid updates in live mode after a value change.
+2.Caption rows, summary rows, unbound rows and unbound columns cannot be updated by SetCellValue.
+
+SfDataGrid provides two overloads of SetCellValue:
+
+1. SetCellValue(int rowIndex, DataGridColumn column, object value)
+
+<table>
+<tr>
+<th> Parameter </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+<tr>
+<td> rowIndex </td>
+<td> int </td>
+<td> The index of the row in which the cell exists. </td>
+</tr>
+<tr>
+<td> column </td>
+<td> DataGridColumn </td>
+<td> It represents the column of the cell to be updated. </td>
+</tr>
+<tr>
+<td> value </td>
+<td> object </td>
+<td> The new value to assign to the cell. </td>
+</tr>
+</table>
+
+{% tabs %}
+{% highlight C# %}
+  private void Button_Clicked(object sender, EventArgs e)
+  {
+      dataGrid.SetCellValue(1, dataGrid.Columns[0], "11111");    
+  }
+{% endhighlight %}
+{% endtabs %}
+
+2. SetCellValue(int rowIndex, string fieldName, object value)
+
+<table>
+<tr>
+<th> Parameter </th>
+<th> Type </th>
+<th> Description </th>
+</tr>
+<tr>
+<td> rowIndex </td>
+<td> int </td>
+<td> The index of the row in which the cell exists. </td>
+</tr>
+<tr>
+<td> column </td>
+<td> string fieldName </td>
+<td> The name of the property to update in the data record. </td>
+</tr>
+<tr>
+<td> value </td>
+<td> object </td>
+<td> The new value to assign to the cell. </td>
+</tr>
+</table>
+
+{% tabs %}
+{% highlight C# %}
+  private void Button_Clicked(object sender, EventArgs e)
+  {
+      dataGrid.SetCellValue(1, "OrderID", "11111");    
+  }
+{% endhighlight %}
+{% endtabs %}

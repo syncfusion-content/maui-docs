@@ -215,11 +215,11 @@ public partial class MainPage : ContentPage
 
 ## Selection Mode
 
-You can select the segment item by tapping the item in the Segmented Control. SfSegmentedControl provides two types of modes such as `Single` and `SingleDeselect`. The default `SelectionMode` is `Single`.
+You can select the segment item by tapping the item in the Segmented Control. SfSegmentedControl provides two types of modes such as [Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SegmentSelectionMode.html) and [SingleDeselect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SegmentSelectionMode.html). The default [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SegmentSelectionMode.html) is `Single`.
 
 ### Single Selection
 
-The Single selection can be performed in the `Segmented Control` by setting the `SelectionMode` property to `Single`. In this selection, you can select a single item at a time in the segmented control.
+The Single selection can be performed in the [Segmented Control](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html) by setting the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SegmentSelectionMode.html) property to [Single](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SegmentSelectionMode.html). In this selection, you can select a single item at a time in the segmented control.
 
 {% tabs %}
 {% highlight XAML %}
