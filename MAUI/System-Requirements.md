@@ -30,7 +30,7 @@ The following are the system requirements for using the Syncfusion<sup>®</sup> 
 
 Our .NET MAUI components are compatible with the following development environments:
 
-* Visual Studio 2022 17.9.0 Preview 1.0.
+* Visual Studio 2026 18.0.0.
 * Visual Studio 2022 17.8.0.
 * Visual Studio Code. (Refer to this [link](https://devblogs.microsoft.com/visualstudio/announcing-the-dotnet-maui-extension-for-visual-studio-code/))
 
