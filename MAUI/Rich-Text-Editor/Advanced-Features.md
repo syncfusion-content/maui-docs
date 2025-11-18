@@ -34,9 +34,9 @@ richtexteditor.Text = "The rich text editor component is WYSIWYG editor that pro
 
 ![.NET MAUI Rich Text Editor with Text](images/richtexteditor-text-property.png)
 
-## Setting/Retrieving HTML Formatted Text
+## Setting HTML Formatted Text
 
-The [HtmlText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_HtmlText) property of the `SfRichTextEditor` control is used to set or retrieve HTML formatted text.
+The [HtmlText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_HtmlText) property of the `SfRichTextEditor` control is used to set HTML formatted text.
 
 {% tabs %} 
 
