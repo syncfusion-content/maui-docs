@@ -26,7 +26,7 @@ The Rich Text Editor control displays the plain text that can be set using the [
 {% highlight C# %} 
 
 SfRichTextEditor richTextEditor = new SfRichTextEditor();
-richtexteditor.Text = "The rich text editor component is WYSIWYG editor that provides the best user experience to create and update the content";
+richTextEditor.Text = "The rich text editor component is WYSIWYG editor that provides the best user experience to create and update the content";
 
 {% endhighlight %}
 
@@ -49,7 +49,7 @@ The [HtmlText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEdito
 {% highlight C# %} 
 
 SfRichTextEditor richTextEditor = new SfRichTextEditor();
-richtexteditor.HtmlText = "The <b>rich text editor</b> component is WYSIWYG editor that provides the best user experience to create and update the content";
+richTextEditor.HtmlText = "The <b>rich text editor</b> component is WYSIWYG editor that provides the best user experience to create and update the content";
 
 {% endhighlight %}
 
