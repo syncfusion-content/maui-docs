@@ -11,47 +11,50 @@ documentation: ug
 
 This section covers the essential properties, methods, and events of the .NET MAUI [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html) for handling content and user interactions.
 
-## Setting Text
+## Setting Plain Text
 
-The Rich Text Editor control displays the text/formatted text(HTML string) that can be set using the [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_Text) property.
+The Rich Text Editor control displays the plain text that can be set using the [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_Text) property.
 
 {% tabs %} 
 
 {% highlight xaml %} 
 
- <richtexteditor:SfRichTextEditor Text= "The &lt;b&gt; rich text editor &lt;/b&gt; component is WYSIWYG editor that provides the best user experience to create and update the content" />
+ <richtexteditor:SfRichTextEditor Text="The rich text editor component is WYSIWYG editor that provides the best user experience to create and update the content" />
 
 {% endhighlight %}
 
 {% highlight C# %} 
 
 SfRichTextEditor richTextEditor = new SfRichTextEditor();
-richtexteditor.Text = "The <b>rich text editor</b> component is WYSIWYG editor that provides the best user experience to create and update the content";
+richTextEditor.Text = "The rich text editor component is WYSIWYG editor that provides the best user experience to create and update the content";
 
 {% endhighlight %}
 
 {% endtabs %}
 
-## Retrieving HTML text
+![.NET MAUI Rich Text Editor with Text](images/richtexteditor-text-property.png)
 
-The formatted text of Rich Text Editor can be retrieved using the [HtmlText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_HtmlText) property of `SfRichTextEditor`.
+## Setting HTML Formatted Text
+
+The [HtmlText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_HtmlText) property of the `SfRichTextEditor` control is used to set HTML formatted text.
 
 {% tabs %} 
 
 {% highlight xaml %} 
 
- <richtexteditor:SfRichTextEditor HtmlText="The rich text editor component is WYSIWYG editor that provides the best user experience to create and update the content" />
+ <richtexteditor:SfRichTextEditor HtmlText= "The &lt;b&gt; rich text editor &lt;/b&gt; component is WYSIWYG editor that provides the best user experience to create and update the content" />
 
 {% endhighlight %}
 
 {% highlight C# %} 
 
 SfRichTextEditor richTextEditor = new SfRichTextEditor();
-richtexteditor.HtmlText = "The rich text editor component is WYSIWYG editor that provides the best user experience to create and update the content";
+richTextEditor.HtmlText = "The <b>rich text editor</b> component is WYSIWYG editor that provides the best user experience to create and update the content";
 
 {% endhighlight %}
 
 {% endtabs %}
+![.NET MAUI Rich Text Editor with HtmlText](images/richtexteditor-htmltext-property.png)
 
 
 ## Getting Selected HTML
