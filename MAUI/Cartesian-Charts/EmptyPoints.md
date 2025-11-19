@@ -127,9 +127,9 @@ this.Content = chart;
 ## Empty Point Customization
 The [EmptyPointSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.EmptyPointSettings.html) property allows you to customize the appearance of empty points in a series. This enables you to adjust various visual aspects of empty points, making them more distinct from the other data points. You can modify the following properties within [EmptyPointSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.EmptyPointSettings.html).
 
-* [Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.EmptyPointSettings.html#Syncfusion_Maui_Charts_EmptyPointSettings_FillProperty) - Gets or sets the fill color for the empty points.
-* [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.EmptyPointSettings.html#Syncfusion_Maui_Charts_EmptyPointSettings_StrokeProperty) - Gets or sets the stroke color for empty points.
-* [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.EmptyPointSettings.html#Syncfusion_Maui_Charts_EmptyPointSettings_StrokeWidthProperty) - Gets or sets the stroke thickness for empty points.
+* [Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.EmptyPointSettings.html#Syncfusion_Maui_Charts_EmptyPointSettings_Fill) - Gets or sets the fill color for the empty points.
+* [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.EmptyPointSettings.html#Syncfusion_Maui_Charts_EmptyPointSettings_Stroke) - Gets or sets the stroke color for empty points.
+* [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.EmptyPointSettings.html#Syncfusion_Maui_Charts_EmptyPointSettings_StrokeWidth) - Gets or sets the stroke thickness for empty points.
 
 {% tabs %}
 
