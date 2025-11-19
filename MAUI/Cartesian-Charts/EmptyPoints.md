@@ -29,12 +29,12 @@ ProductSales.Add(new Model() { Product = "Books", Sales = 50 });
 
 {% endhighlight %}
 
-By default, the `EmptyPointMode` property is `None`. So the empty points will not be rendered as shown in the below.
+By default, the [EmptyPointMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.EmptyPointMode.html) property is [None](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.EmptyPointMode.html#Syncfusion_Maui_Charts_EmptyPointMode_None). So the empty points will not be rendered as shown in the below.
 
 ![Empty Points in MAUI Chart](EmptyPoints_images/EmptyPoints_Default.png)
 
 ## Empty Point Mode
-The `EmptyPointMode` property of series specifies how empty points should be handled. 
+The [EmptyPointMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.EmptyPointMode.html) property of series specifies how empty points should be handled. 
 
 This property provides the following options.
 
@@ -42,7 +42,7 @@ This property provides the following options.
 * **Zero** - Empty points will be replaced with zero.
 * **Average** - Empty points will be replaced with the average value of the surrounding data points.
 
-The following code example shows the `EmptyPointMode` as `Zero`.
+The following code example shows the [EmptyPointMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.EmptyPointMode.html) as [Zero](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.EmptyPointMode.html#Syncfusion_Maui_Charts_EmptyPointMode_Zero).
 
 {% tabs %}
 
@@ -83,7 +83,7 @@ this.Content = chart;
 
 ![EmptyPoint Mode Zero in MAUI Chart](EmptyPoints_images/EmptyPoints_Mode_Zero.png)
 
-The following code example shows the `EmptyPointMode` as `Average`.
+The following code example shows the [EmptyPointMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.EmptyPointMode.html) as [Average](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.EmptyPointMode.html#Syncfusion_Maui_Charts_EmptyPointMode_Average).
 
 {% tabs %}
 
@@ -125,11 +125,11 @@ this.Content = chart;
 ![EmptyPoint Mode Average in MAUI Chart](EmptyPoints_images/EmptyPoints_Mode_Average.png)
 
 ## Empty Point Customization
-The `EmptyPointSettings` property allows you to customize the appearance of empty points in a series. This enables you to adjust various visual aspects of empty points, making them more distinct from the other data points. You can modify the following properties within `EmptyPointSettings`.
+The [EmptyPointSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.EmptyPointSettings.html) property allows you to customize the appearance of empty points in a series. This enables you to adjust various visual aspects of empty points, making them more distinct from the other data points. You can modify the following properties within [EmptyPointSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.EmptyPointSettings.html).
 
-* `Fill` - Gets or sets the fill color for the empty points.
-* `Stroke` - Gets or sets the stroke color for empty points.
-* `StrokeWidth` - Gets or sets the stroke thickness for empty points.
+* [Fill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.EmptyPointSettings.html#Syncfusion_Maui_Charts_EmptyPointSettings_FillProperty) - Gets or sets the fill color for the empty points.
+* [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.EmptyPointSettings.html#Syncfusion_Maui_Charts_EmptyPointSettings_StrokeProperty) - Gets or sets the stroke color for empty points.
+* [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.EmptyPointSettings.html#Syncfusion_Maui_Charts_EmptyPointSettings_StrokeWidthProperty) - Gets or sets the stroke thickness for empty points.
 
 {% tabs %}
 
