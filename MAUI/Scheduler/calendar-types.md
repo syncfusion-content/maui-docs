@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Calendar types in .NET MAUI Scheduler (SfScheduler)
-The Scheduler control supports different types of calendars such as Gregorian, Korean, Hebrew, and more. Change the calendar types by using the [CalendarType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_CalendarType) property in the SfScheduler.  
+The Scheduler control supports [different types of calendars] (https://www.jocalendars.com/types-of-calendars/) such as Gregorian, Korean, Hebrew, and more. Change the calendar types by using the [CalendarType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_CalendarType) property in the SfScheduler.  
 
 <table>
 <tr>
