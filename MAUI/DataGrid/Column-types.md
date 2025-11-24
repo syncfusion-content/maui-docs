@@ -1418,6 +1418,70 @@ The `DataGridNumericColumn` allows formatting the numeric data with culture-spec
 
 * `NullValue` - To set the null value when the numeric cell value is null, use the [DataGridNumericColumn.NullValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNumericColumn.html#Syncfusion_Maui_DataGrid_DataGridNumericColumn_NullValue) property.
 
+## DataGridHyperlinkColumn
+
+The `DataGridHyperlinkColumn` inherits all the properties of the `DataGridTextColumn`. It displays column data as clickable hyperlinks. It renders link text in each record cell and lets end users invoke navigation.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       AutoGenerateColumnsMode="None"
+                       ItemsSource="{Binding OrderInfoCollection}">
+     <syncfusion:SfDataGrid.Columns>
+         <syncfusion:DataGridHyperlinkColumn HeaderText="Country Link" 
+                                           MappingName="Country" 
+                                          />   
+     </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+
+{% endhighlight %}
+
+{% highlight c# %}
+DataGridHyperlinkColumn hyperlinkColumn = new DataGridHyperlinkColumn()
+{
+    MappingName = "Country",
+    HeaderText = "CountryLink",
+};
+dataGrid.Columns.Add(hyperlinkColumn);
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can allow end-user to navigate the Uri when the cell value contains valid Uri address or using `DataGridCurrentCellRequestNavigatingEventArgs ` event. The `CurrentCellRequestNavigating` occurs when the current cell in DataGridHyperlinkColumn is clicked for navigation.
+
+`DataGridCurrentCellRequestNavigatingEventArgs` of `CurrentCellRequestNavigating` event provide information about the hyperlink triggered this event. DataGridCurrentCellRequestNavigatingEventArgs.NavigateText returns the value from the column’s DisplayBinding if it is defined; otherwise, it uses the value bound to MappingName.
+
+{% tabs %}
+{% highlight C# %}
+
+dataGrid.CurrentCellRequestNavigating += dataGrid_CurrentCellRequestNavigating;
+
+private void dataGrid_CurrentCellRequestNavigating(object sender, DataGridCurrentCellRequestNavigatingEventArgs e)
+{
+    string address = "https://en.wikipedia.org/wiki/" + e.NavigateText;
+    Launcher.OpenAsync(new Uri(address));
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+
+## Cancel the navigation
+You can cancel the navigation by setting DataGridCurrentCellRequestNavigatingEventArgs.Cancel to true.
+
+{% tabs %}
+{% highlight C# %}
+dataGrid.CurrentCellRequestNavigating += dataGrid_CurrentCellRequestNavigating;
+
+private void dataGrid_CurrentCellRequestNavigating(object sender, DataGridCurrentCellRequestNavigatingEventArgs e)
+{
+     e.Cancel = true;
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Row header
 
 The row header is a type of column that is placed as the first cell of each row and remains frozen. To enable the row header, set [SfDataGrid.ShowRowHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ShowRowHeader) to `true` Additionally, the `SfDataGrid` allows you to customize the row header width using the [SfDataGrid.RowHeaderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_RowHeaderWidth) property. The default value is `30.`
