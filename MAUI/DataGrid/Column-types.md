@@ -1424,165 +1424,69 @@ The `DataGridNumericColumn` allows formatting the numeric data with culture-spec
 
 * `NullValue` - To set the null value when the numeric cell value is null, use the [DataGridNumericColumn.NullValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNumericColumn.html#Syncfusion_Maui_DataGrid_DataGridNumericColumn_NullValue) property.
 
-## DataGridMultiColumnComboBoxColumn
+## DataGridHyperlinkColumn
 
-The `DataGridMultiColumnComboBoxColumn` displays enumeration as cell contents and hosts a (SfMultiColumnComboBox)[] in editing mode. This column type allows you to define the predefined columns in its drop-down, similar to SfDataGrid.
-
-You can change the value by selecting the item from drop down or by editing the entry in `SfMultiColumnComboBox`. To disable text editing, set the (IsTextReadOnly)[] property to `true`.
+The `DataGridHyperlinkColumn` inherits all the properties of the `DataGridTextColumn`. It displays column data as clickable hyperlinks. It renders link text in each record cell and lets end users invoke navigation.
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name = "dataGrid"
-                       ItemsSource = "{Binding Orders}"
-                       AllowEditing = "True"
-                       SelectionMode = "Single"
-                       AutoGenerateColumnsMode = "None"
-                       NavigationMode="Row">
-    <syncfusion:SfDataGrid.Columns>
-        <syncfusion:DataGridMultiColumnComboBoxColumn AutoGenerateColumnsMode = "None"
-                                                      MappingName = "CustomerID"
-                                                      ItemsSource = "{Binding OrderDetails}"
-                                                      DisplayMember = "CustomerID"
-                                                      ValueMember = "CustomerID" 
-                                                      HeaderText="Customer ID">
-            <syncfusion:DataGridMultiColumnComboBoxColumn.Columns>
-                <syncfusion:DataGridTextColumn MappingName = "CustomerID" HeaderText = "Customer ID"/>
-                <syncfusion:DataGridNumericColumn MappingName = "ProductID" HeaderText = "Product ID"/>
-            </syncfusion:DataGridMultiColumnComboBoxColumn.Columns>
-        </syncfusion:DataGridMultiColumnComboBoxColumn>
-    </syncfusion:SfDataGrid.Columns>
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       AutoGenerateColumnsMode="None"
+                       ItemsSource="{Binding OrderInfoCollection}">
+     <syncfusion:SfDataGrid.Columns>
+         <syncfusion:DataGridHyperlinkColumn HeaderText="Country Link" 
+                                           MappingName="Country" 
+                                          />   
+     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 
 {% endhighlight %}
 
 {% highlight c# %}
-var column = new DataGridMultiColumnComboBoxColumn()
+DataGridHyperlinkColumn hyperlinkColumn = new DataGridHyperlinkColumn()
 {
-    MappingName = "CustomerID",
-    HeaderText = "Customer ID",
-    ValueMember = "CustomerID",
-    DisplayMember = "CustomerID",
-    ItemsSource = viewModel.OrderDetails,
-    AutoGenerateColumns = false,
-    Columns = new ColumnCollection()
-    {
-        new DataGridTextColumn() { MappingName = "CustomerID" },
-        new DataGridNumericColumn() { MappingName = "ProductID" }
-    }
+    MappingName = "Country",
+    HeaderText = "CountryLink",
 };
-this.dataGrid.Columns.Add(column);
+dataGrid.Columns.Add(hyperlinkColumn);
 
 {% endhighlight %}
 
 {% endtabs %}
 
-SfDataGrid triggers, (CurrentCellDropDownSelectionChanged)[] event, when the SelectedValue is changed. (CurrentCellDropDownSelectionChangedEventArgs)[] of `CurrentCellDropDownSelectionChanged` event provides the information about the changed cell value.
+You can allow end-user to navigate the Uri when the cell value contains valid Uri address or using `DataGridCurrentCellRequestNavigatingEventArgs ` event. The `CurrentCellRequestNavigating` occurs when the current cell in DataGridHyperlinkColumn is clicked for navigation.
 
-`SelectedIndex` property returns the index of selected item.
-`SelectedItem` property returns the selected item from drop down list.
-
-<img alt="DataGridMultiColumnComboBox column .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-MultiColumn-ComboBox-column.png" width="404"/>
-
-### Auto-complete support
-
-You can enable the `SfMultiColumnComboBox` to automatically complete the entered input value by setting the (AllowAutoComplete)[] property to `true`. When enabled, this property compares the entered text with each item in the underlying data source of `DataGridMultiColumnComboBoxColumn` and autocomplete the input with the matched value based on the DisplayMember.
-
-### Filtering
-
-You can enable the `SfMultiColumnComboBox` to dynamically filter the drop-down list items based on the text typed in the entry by setting (AllowIncrementalFiltering)[] property to `true`. Additionally, `DataGridMultiColumnComboBoxColumn` allows filtering based on case sensitivity by setting (AllowCaseSensitiveFiltering)[] to `true`. These features help users to quickly select items from large list.
-
-<img alt="DataGridMultiColumnComboBox column with Filtering .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-MultiColumn-ComboBox-column-filtering.png" width="404"/>
-
-### Null value support
-
-You can allow null values in the column by setting the (AllowNullValue)[] property to `true`.
-
-N>
-The AllowNullValue will work only when the underlying property type is Nullable.
-
-### Popup Size Customization
-
-You can change the size of drop-down popup by setting (PopupWidth)[] and (PopupHeight)[] properties. If these values are not set, the popup width defaults to the `PopupMinWidth` property, which is 200.0 by default. Similarly, the popup height defaults to the `PopupMinHeight` property, which is 300.0 by default.
-
-Additionally, `SfMultiColumnComboBox` can automatically adjust the popup width based on the actual size of the SfDataGrid by setting the (IsAutoPopupSize)[] property to `true`.
-
-### Loading different ItemsSource for each row
-
-You can load different ItemsSource to each row of `DataGridMultiColumnComboBoxColumn` by setting the `SfDataGrid.ItemsSourceSelector` property.
-
-### Implementing IItemsSourceSelector
-
-`ItemsSourceSelector` must implement the `IItemsSourceSelector` interface, which requires the implementation of the `GetItemsSource` method. The `GetItemsSource` method receives the following parameters:
-
-* **Record** – The data object associated with row.
-* **Data Context** – The data context of data grid.
-
-In the following example, the items source for `ShipCity` column is returned based on the value of the `ShipCountry` column, using the record and data context passed to the `GetItemsSource` method.
+`DataGridCurrentCellRequestNavigatingEventArgs` of `CurrentCellRequestNavigating` event provide information about the hyperlink triggered this event. DataGridCurrentCellRequestNavigatingEventArgs.NavigateText returns the value from the column’s DisplayBinding if it is defined; otherwise, it uses the value bound to MappingName.
 
 {% tabs %}
-{% highlight xaml %}
-<ContentPage.Resources>
-    <local:ItemsSourceSelector x:Key = "itemSourceSelector"/>
-</ContentPage.Resources>
+{% highlight C# %}
 
-<syncfusion:SfDataGrid ItemsSource = "{Binding Orders}"  
-                       AllowEditing = "True" 
-                       SelectionMode = "Single" 
-                       AutoGenerateColumnsMode = "None">
-    <syncfusion:SfDataGrid.Columns>
-        <syncfusion:DataGridNumericColumn MappingName = "OrderID" HeaderText = "Order ID" Format = "D"/>
-        <syncfusion:DataGridMultiColumnComboBoxColumn AutoGenerateColumnsMode = "None"
-                                                      DisplayMember = "ShipCity"
-                                                      HeaderText = "Ship City"
-                                                      ItemsSourceSelector = "{StaticResource itemSourceSelector}"
-                                                      MappingName = "ShipCity"
-                                                      ValueMember = "ShipCity">
-            <syncfusion:DataGridMultiColumnComboBoxColumn.Columns>
-                <syncfusion:DataGridTextColumn HeaderText = "Ship City" MappingName = "ShipCity" />
-                <syncfusion:DataGridCheckBoxColumn HeaderText = "Is Primary" MappingName = "IsPrimary" />
-            </syncfusion:DataGridMultiColumnComboBoxColumn.Columns>
-        </syncfusion:DataGridMultiColumnComboBoxColumn>
-        <syncfusion:DataGridTextColumn MappingName = "ShipCountry" HeaderText = "Ship Country"/>
-    </syncfusion:SfDataGrid.Columns>
-</syncfusion:SfDataGrid>
+dataGrid.CurrentCellRequestNavigating += dataGrid_CurrentCellRequestNavigating;
 
-{% endhighlight %}
-
-{% highlight c# %}
-
-internal class ItemsSourceSelector : IItemsSourceSelector
+private void dataGrid_CurrentCellRequestNavigating(object sender, DataGridCurrentCellRequestNavigatingEventArgs e)
 {
-    public IEnumerable GetItemsSource(object record, object dataContext)
-    {
-        if (record == null)
-            return null;
-
-        var orderinfo = record as Orders;
-        var countryName = orderinfo.ShipCountry;
-
-        var viewModel = dataContext as OrdersViewModel;
-
-        //Returns ShipCity collection based on ShipCountry.
-        if (viewModel.ShipCityItemsSources.ContainsKey(countryName))
-        {
-            ObservableCollection<ShipCityEntry> shipCities = null;
-            viewModel.ShipCityItemsSources.TryGetValue(countryName, out shipCities);
-            return shipCities.ToList();
-        }
-
-        return null;
-    }
+    string address = "https://en.wikipedia.org/wiki/" + e.NavigateText;
+    Launcher.OpenAsync(new Uri(address));
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
-<img alt="DataGridMultiColumnComboBox column with ItemsSourceSelector .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-MultiColumn-ComboBox-column-itemsourceselector.png" width="404"/>
 
-<img alt="DataGridMultiColumnComboBox column with ItemsSourceSelector .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-MultiColumn-ComboBox-column-itemsourceselector2.png" width="404"/>
+## Cancel the navigation
+You can cancel the navigation by setting DataGridCurrentCellRequestNavigatingEventArgs.Cancel to true.
 
-You can download the sample from the following link: (Sample)[https://github.com/SyncfusionExamples/How-to-load-different-items-for-each-row-in-MultiColumn-ComboBox-Column-in-.NET-MAUI-SfDataGrid].
+{% tabs %}
+{% highlight C# %}
+dataGrid.CurrentCellRequestNavigating += dataGrid_CurrentCellRequestNavigating;
+
+private void dataGrid_CurrentCellRequestNavigating(object sender, DataGridCurrentCellRequestNavigatingEventArgs e)
+{
+     e.Cancel = true;
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Row header
 
