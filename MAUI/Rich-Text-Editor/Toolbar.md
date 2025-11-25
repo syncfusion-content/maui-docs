@@ -11,7 +11,7 @@ documentation: ug
 
 ### Configuring the toolbar position
 
-The Rich Text Editor allows you to position the toolbar at the top or bottom of the content area, depending on your layout requirements. By default, the toolbar is displayed at the top of the editor.
+The Rich Text Editor allows you to position the toolbar at the top or bottom of the content area, depending on your layout requirements. By default, the toolbar appears at the top on Windows and macOS, and at the bottom on Android and iOS for better accessibility.
 
 {% tabs %}
 
