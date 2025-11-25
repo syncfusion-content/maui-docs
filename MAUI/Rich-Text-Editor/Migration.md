@@ -177,3 +177,6 @@ To migrate easily from [`Xamarin SfRichTextEditor`](https://help.syncfusion.com/
 * `Keyboard Interaction:` Toolbar visibility is affected when MaximumHeightRequest extends into the on-screen keyboard area, causing automatic hiding.
 * `Supported Content Types:` Editor content is restricted to plain text and HTML markup formats only.
 
+## Breaking Changes
+
+* `Multiple selection:` The workflow for selecting multiple items has been significantly enhanced for better usability and efficiency.
