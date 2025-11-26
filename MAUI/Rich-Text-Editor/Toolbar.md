@@ -7,9 +7,9 @@ control: Rich Text Editor
 documentation: ug
 ---
 
-## Toolbar position
+# Toolbar in .NET MAUI Rich Text Editor (SfRichTextEditor)
 
-### Configuring the toolbar position
+## Toolbar position
 
 The Rich Text Editor allows you to position the toolbar at the top or bottom of the content area, depending on your layout requirements. By default, the toolbar appears at the top on Windows and macOS, and at the bottom on Android and iOS for better accessibility.
 

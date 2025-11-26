@@ -179,4 +179,4 @@ To migrate easily from [`Xamarin SfRichTextEditor`](https://help.syncfusion.com/
 
 ## Breaking Changes
 
-* `Multiple selection:` The workflow for selecting multiple items has been significantly enhanced for better usability and efficiency.
+* `Multiple selection:` The workflow for selecting multiple toolbar items has been significantly enhanced for better usability and efficiency.
