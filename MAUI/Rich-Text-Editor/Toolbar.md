@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Toolbar in .NET MAUI Rich Text Editor | Syncfusion®
-description: Learn here all about Toolbar in Syncfusion® .NET MAUI Rich Text Editor (SfRichTextEditor) control.
+description: Learn here all about Toolbar features in Syncfusion® .NET MAUI Rich Text Editor (SfRichTextEditor) control.
 platform: maui 
 control: Rich Text Editor
 documentation: ug
