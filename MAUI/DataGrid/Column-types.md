@@ -1434,9 +1434,8 @@ The `DataGridHyperlinkColumn` inherits all the properties of the `DataGridTextCo
                        AutoGenerateColumnsMode="None"
                        ItemsSource="{Binding OrderInfoCollection}">
      <syncfusion:SfDataGrid.Columns>
-         <syncfusion:DataGridHyperlinkColumn HeaderText="Country Link" 
-                                           MappingName="Country" 
-                                          />   
+         <syncfusion:DataGridHyperlinkColumn HeaderText="Country" 
+                                             MappingName="Country" />
      </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 
@@ -1446,7 +1445,7 @@ The `DataGridHyperlinkColumn` inherits all the properties of the `DataGridTextCo
 DataGridHyperlinkColumn hyperlinkColumn = new DataGridHyperlinkColumn()
 {
     MappingName = "Country",
-    HeaderText = "CountryLink",
+    HeaderText = "Country",
 };
 dataGrid.Columns.Add(hyperlinkColumn);
 
@@ -1454,9 +1453,8 @@ dataGrid.Columns.Add(hyperlinkColumn);
 
 {% endtabs %}
 
-You can allow end-user to navigate the Uri when the cell value contains valid Uri address or using `DataGridCurrentCellRequestNavigatingEventArgs ` event. The `CurrentCellRequestNavigating` occurs when the current cell in DataGridHyperlinkColumn is clicked for navigation.
-
-`DataGridCurrentCellRequestNavigatingEventArgs` of `CurrentCellRequestNavigating` event provide information about the hyperlink triggered this event. DataGridCurrentCellRequestNavigatingEventArgs.NavigateText returns the value from the column’s DisplayBinding if it is defined; otherwise, it uses the value bound to MappingName.
+You can enable end-users to navigate to a URI either when the cell value contains a valid URI address or by handling the `DataGridCurrentCellRequestNavigatingEventArg`s event. The `CurrentCellRequestNavigating` event is triggered whenever a cell in the `DataGridHyperlinkColumn` is clicked for navigation.
+The `DataGridCurrentCellRequestNavigatingEventArgs` associated with the `CurrentCellRequestNavigating` event provides details about the hyperlink that initiated the action. Its `DataGridCurrentCellRequestNavigatingEventArgs.NavigateText` property returns the value from the column’s `DisplayBinding` if one is defined; otherwise, it falls back to the value bound to `MappingName`.
 
 {% tabs %}
 {% highlight C# %}
