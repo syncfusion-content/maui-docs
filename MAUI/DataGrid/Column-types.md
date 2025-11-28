@@ -1453,7 +1453,7 @@ dataGrid.Columns.Add(hyperlinkColumn);
 
 {% endtabs %}
 
-You can enable end-users to navigate to a URI either when the cell value contains a valid URI address or by handling the `DataGridCurrentCellRequestNavigatingEventArg`s event. The `CurrentCellRequestNavigating` event is triggered whenever a cell in the `DataGridHyperlinkColumn` is clicked for navigation.
+You can enable end-users to navigate to a URI either when the cell value contains a valid URI address or by handling the `DataGridCurrentCellRequestNavigatingEventArgs` event. The `CurrentCellRequestNavigating` event is triggered whenever a cell in the `DataGridHyperlinkColumn` is clicked for navigation.
 
 The `DataGridCurrentCellRequestNavigatingEventArgs` associated with the `CurrentCellRequestNavigating` event provides details about the hyperlink that initiated the action. Its `DataGridCurrentCellRequestNavigatingEventArgs.NavigateText` property returns the value from the column’s `DisplayBinding` if one is defined; otherwise, it falls back to the value bound to `MappingName`.
 
