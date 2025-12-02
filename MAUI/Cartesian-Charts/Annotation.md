@@ -619,9 +619,9 @@ this.Content = chart;
 
 ## Event
 
-**AnnotationClicked**
+**AnnotationTapped**
 
-The [`AnnotationClicked`]() event is triggered when the user has clicked the annotation. The argument [`AnnotationTappedEventArgs`]() contains the following information.
+The [`AnnotationTapped`]() event is triggered when the user has clicked the annotation. The argument [`AnnotationTappedEventArgs`]() contains the following information.
 
 * [`annotation`]() – used to get the instance of the annotation that was tapped.
 * [`x`]() – used to get the x position of touch point on annotation.
