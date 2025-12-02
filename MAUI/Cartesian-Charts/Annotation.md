@@ -616,3 +616,47 @@ this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
+
+## Event
+
+**AnnotationClicked**
+
+The [`AnnotationClicked`]() event is triggered when the user has clicked the annotation. The argument [`AnnotationTappedEventArgs`]() contains the following information.
+
+* [`annotation`]() – used to get the instance of the annotation that was tapped.
+* [`x`]() – used to get the x position of touch point on annotation.
+* [`y`]() – used to get the y position of touch point on annotation.
+
+## Public Methods
+
+The following override methods are available in the annotation class to handle touch interactions:
+
+* [`OnTouchDown`]() – occurs when touch down inside the annotation.
+* [`OnTouchMove`]() – occurs while moving the finger or mouse inside the annotation.
+* [`OnTouchUp`]() – occurs when touch up inside the annotation.
+
+{% tabs %}
+
+{% highlight c# %}
+
+public class LineAnnotationExt : LineAnnotation
+{
+    protected override void OnTouchDown(float pointX, float pointY)
+    {
+       base.OnTouchDown(pointX, pointY);
+    }
+
+    protected override void OnTouchMove(float pointX, float pointY)
+    {
+       base.OnTouchMove(pointX, pointY);
+    }
+
+    protected override void OnTouchUp(float pointX, float pointY)
+    {
+       base.OnTouchUp(pointX, pointY);
+    }
+}
+
+{% endhighlight  %}
+
+{% endtabs %}
