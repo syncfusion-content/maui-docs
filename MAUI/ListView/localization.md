@@ -65,4 +65,3 @@ To localize the `ListView` based on the `CurrentUICulture` using the `resource` 
 
    ![Localized content in .NET MAUI ListView](images/localization/maui-listview-with-localized-content.png)
 
-<!-- N> [View Sample in GitHub](https://github.com/SyncfusionExamples/localization-for-.net-maui-ListView) -->
