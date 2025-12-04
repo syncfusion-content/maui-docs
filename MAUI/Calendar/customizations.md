@@ -163,7 +163,7 @@ this.calendar.MonthView.SpecialDayPredicate = (date) =>
 >**NOTE**
 * The Background color and text style will be applied based on the following order: selectableDayPredicate dates, special dates, disable dates, today date, weekend dates, trailingLeading dates, and normal dates.
 
-*    **Special day predicate On Demand** - The on-demand refresh feature allows the `SfCalendar` to dynamically update special dates after new data is fetched. You can explicitly trigger a refresh to re-invoke the [SpecialDayPredicate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDayPredicate), ensuring that visual indicators such as icons, text styles, and backgrounds reflect the latest metadata only after the update. The new [UpdateSpecialDayPredicate]https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_UpdateSpecialDayPredicate) provides a direct way to force this re-evaluation, guaranteeing that special-day indicators display the most recent data after a refresh.
+*    **UpdateSpecialDayPredicate** - The UpdateSpecialDayPredicate feature allows the `SfCalendar` to dynamically update special dates after new data is fetched. You can explicitly trigger a refresh to re-invoke the [SpecialDayPredicate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_CalendarMonthView_SpecialDayPredicate), ensuring that visual indicators such as icons, text styles, and backgrounds reflect the latest metadata only after the update. The new [UpdateSpecialDayPredicate]https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMonthView.html#Syncfusion_Maui_Calendar_UpdateSpecialDayPredicate) provides a direct way to force this re-evaluation, guaranteeing that special-day indicators display the most recent data after a refresh.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -238,8 +238,6 @@ public class MainPage : ContentPage
 
 {% endhighlight %}
 {% endtabs %}
-
-![Special day iOn Demand con in .NET MAUI Calendar.](images/customization/net-maui-special_day_predicate_ondemand.png)
 
 ## Year cell customization
 You can customize the calendar `year`, `decade`, and `century` views by using the `YearView` property of `SfCalendar`.
