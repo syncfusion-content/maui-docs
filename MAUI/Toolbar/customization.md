@@ -1125,3 +1125,247 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![divider-line-customization](images/divider-customization.png)
+
+## Corner Radius Customization
+
+The toolbar control supports customizing its corners using the CornerRadius property, allowing rounded or sharp edges to match your design preferences.
+
+The following code sample demonstrates how to set the corner radius of the toolbar.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<Grid>
+    <toolbar:SfToolbar x:Name="Toolbar"
+                   HeightRequest="56"
+                   WidthRequest="330"
+                   CornerRadius="30">
+        <toolbar:SfToolbar.Items>
+            <toolbar:SfToolbarItem Name="Bold"
+               Text="Bold"
+               TextPosition="Right"
+               ToolTipText="Bold"
+               Size="90,40">
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE770;"
+                 FontFamily="MauiMaterialAssets"/>
+                </toolbar:SfToolbarItem.Icon>
+            </toolbar:SfToolbarItem>
+            <toolbar:SfToolbarItem Name="Underline"
+               Text="Underline"
+               TextPosition="Right"
+               ToolTipText="Underline"
+               Size="90,40">
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE762;"
+                 FontFamily="MauiMaterialAssets"/>
+                </toolbar:SfToolbarItem.Icon>
+            </toolbar:SfToolbarItem>
+            <toolbar:SfToolbarItem Name="Italic"
+               Text="Italic"
+               TextPosition="Right"
+               ToolTipText="Italic"
+               Size="90,40">
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE771;"
+                 FontFamily="MauiMaterialAssets"/>
+                </toolbar:SfToolbarItem.Icon>
+            </toolbar:SfToolbarItem>
+        </toolbar:SfToolbar.Items>
+    </toolbar:SfToolbar>
+</Grid>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        var grid = new Grid();
+
+        var toolbar = new SfToolbar
+        {
+            HeightRequest = 56,
+            WidthRequest = 330,
+            CornerRadius = 30
+        };
+
+        toolbar.Items = new ObservableCollection<BaseToolbarItem>
+        {
+            new SfToolbarItem
+            {
+                Name = "Bold",
+                Text = "Bold",
+                TextPosition = ToolbarItemTextPosition.Right,
+                ToolTipText = "Bold",
+                Size = new Size(90, 40),
+                Icon = new FontImageSource
+                {
+                    Glyph = "\uE770",
+                    FontFamily = "MauiMaterialAssets"
+                }
+            },
+            new SfToolbarItem
+            {
+                Name = "Underline",
+                Text = "Underline",
+                TextPosition = ToolbarItemTextPosition.Right,
+                ToolTipText = "Underline",
+                Size = new Size(90, 40),
+                Icon = new FontImageSource
+                {
+                    Glyph = "\uE762",
+                    FontFamily = "MauiMaterialAssets"
+                }
+            },
+            new SfToolbarItem
+            {
+                Name = "Italic",
+                Text = "Italic",
+                TextPosition = ToolbarItemTextPosition.Right,
+                ToolTipText = "Italic",
+                Size = new Size(90, 40),
+                Icon = new FontImageSource
+                {
+                    Glyph = "\uE771",
+                    FontFamily = "MauiMaterialAssets"
+                }
+            }
+        };
+
+        grid.Children.Add(toolbar);
+        Content = grid;
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![corner-radius](images/corner-radius.png)
+
+## Selection Corner Radius Customization
+
+The toolbar control supports customizing corners of the selection using the SelectionCornerRadius property, allowing the corners of the selected item to be rounded or sharp based on your preference.
+
+The following code sample demonstrates how to set the selection corner radius for toolbar items.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<Grid>
+    <toolbar:SfToolbar x:Name="Toolbar"
+                   HeightRequest="56"
+                   WidthRequest="330"
+                   SelectionCornerRadius="20">
+        <toolbar:SfToolbar.Items>
+            <toolbar:SfToolbarItem Name="Bold"
+               Text="Bold"
+               TextPosition="Right"
+               ToolTipText="Bold"
+               Size="90,40">
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE770;"
+                 FontFamily="MauiMaterialAssets"/>
+                </toolbar:SfToolbarItem.Icon>
+            </toolbar:SfToolbarItem>
+            <toolbar:SfToolbarItem Name="Underline"
+               Text="Underline"
+               TextPosition="Right"
+               ToolTipText="Underline"
+               Size="90,40">
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE762;"
+                 FontFamily="MauiMaterialAssets"/>
+                </toolbar:SfToolbarItem.Icon>
+            </toolbar:SfToolbarItem>
+            <toolbar:SfToolbarItem Name="Italic"
+               Text="Italic"
+               TextPosition="Right"
+               ToolTipText="Italic"
+               Size="90,40">
+                <toolbar:SfToolbarItem.Icon>
+                    <FontImageSource Glyph="&#xE771;"
+                 FontFamily="MauiMaterialAssets"/>
+                </toolbar:SfToolbarItem.Icon>
+            </toolbar:SfToolbarItem>
+        </toolbar:SfToolbar.Items>
+    </toolbar:SfToolbar>
+</Grid>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        var grid = new Grid();
+
+        var toolbar = new SfToolbar
+        {
+            HeightRequest = 56,
+            WidthRequest = 330,
+            SelectionCornerRadius = 20
+        };
+
+        toolbar.Items = new ObservableCollection<BaseToolbarItem>
+        {
+            new SfToolbarItem
+            {
+                Name = "Bold",
+                Text = "Bold",
+                TextPosition = ToolbarItemTextPosition.Right,
+                ToolTipText = "Bold",
+                Size = new Size(90, 40),
+                Icon = new FontImageSource
+                {
+                    Glyph = "\uE770",
+                    FontFamily = "MauiMaterialAssets"
+                }
+            },
+            new SfToolbarItem
+            {
+                Name = "Underline",
+                Text = "Underline",
+                TextPosition = ToolbarItemTextPosition.Right,
+                ToolTipText = "Underline",
+                Size = new Size(90, 40),
+                Icon = new FontImageSource
+                {
+                    Glyph = "\uE762",
+                    FontFamily = "MauiMaterialAssets"
+                }
+            },
+            new SfToolbarItem
+            {
+                Name = "Italic",
+                Text = "Italic",
+                TextPosition = ToolbarItemTextPosition.Right,
+                ToolTipText = "Italic",
+                Size = new Size(90, 40),
+                Icon = new FontImageSource
+                {
+                    Glyph = "\uE771",
+                    FontFamily = "MauiMaterialAssets"
+                }
+            }
+        };
+
+        grid.Children.Add(toolbar);
+        Content = grid;
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![selection-corner-radius](images/selection-corner-radius.png)
