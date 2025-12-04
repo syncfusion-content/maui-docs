@@ -160,6 +160,7 @@ this.calendar.MonthView.SpecialDayPredicate = (date) =>
 {% endtabs %}
 
 ![Special day icon in .NET MAUI Calendar.](images/customization/net-maui-special_day_predicate.png)
+
 >**NOTE**
 * The Background color and text style will be applied based on the following order: selectableDayPredicate dates, special dates, disable dates, today date, weekend dates, trailingLeading dates, and normal dates.
 
