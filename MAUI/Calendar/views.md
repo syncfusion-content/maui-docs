@@ -222,3 +222,5 @@ private void Button_Clicked(object sender, EventArgs e)
 
 {% endhighlight %}
 {% endtabs %}
+
+![Century view in .NET MAUI Calendar.](images/views/autofit-calendar.gif)
