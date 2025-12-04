@@ -119,7 +119,7 @@ The scheduler month view allows you to customize the appointment indicator rende
 <schedule:SfScheduler x:Name="Scheduler"
                         View="Month" >
         <schedule:SfScheduler.MonthView>
-            <schedule:SchedulerMonthView AppointmentDisplayMode="Indicator" AppointmentIndicatorRenderMode="FillAndStroke"/>
+            <schedule:SchedulerMonthView AppointmentDisplayMode="Indicator" AppointmentIndicatorSize="15" AppointmentIndicatorCount="2" AppointmentIndicatorRenderMode="Stroke"/>
         </schedule:SfScheduler.MonthView>
 </schedule:SfScheduler>
 
@@ -128,10 +128,14 @@ The scheduler month view allows you to customize the appointment indicator rende
 
 this.Scheduler.View = SchedulerView.Month;
 this.Scheduler.MonthView.AppointmentDisplayMode = SchedulerMonthAppointmentDisplayMode.Indicator;
-this.Scheduler.MonthView.AppointmentIndicatorRenderMode = AppointmentIndicatorRenderMode.FillAndStroke;
+this.Scheduler.MonthView.AppointmentIndicatorRenderMode = AppointmentIndicatorRenderMode.Stroke;
+this.Scheduler.MonthView.AppointmentIndicatorSize = 15;
+this.Scheduler.MonthView.AppointmentIndicatorCount = 2;
 
 {% endhighlight %}  
 {% endtabs %}
+
+![appointment-renderer-mode-stroke-maui-scheduler](images/month-view/appointment-renderer-mode-stroke-maui-scheduler.png){:width="325" height="600" loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
 
 ## Appointment indicator stroke thickness
 
@@ -143,7 +147,7 @@ The scheduler month view allows you to customize the appointment indicator strok
 <schedule:SfScheduler x:Name="Scheduler"
                         View="Month" >
         <schedule:SfScheduler.MonthView>
-            <schedule:SchedulerMonthView AppointmentDisplayMode="Indicator" AppointmentIndicatorSize="20" AppointmentIndicatorRenderMode="FillAndStroke" AppointmentIndicatorStrokeThickness="4"/>
+            <schedule:SchedulerMonthView AppointmentDisplayMode="Indicator" AppointmentIndicatorSize="20" AppointmentIndicatorRenderMode="Stroke" AppointmentIndicatorStrokeThickness="4"/>
         </schedule:SfScheduler.MonthView>
 </schedule:SfScheduler>
 
@@ -152,12 +156,14 @@ The scheduler month view allows you to customize the appointment indicator strok
 
 this.Scheduler.View = SchedulerView.Month;
 this.Scheduler.MonthView.AppointmentDisplayMode = SchedulerMonthAppointmentDisplayMode.Indicator;
-this.Scheduler.MonthView.AppointmentIndicatorRenderMode = AppointmentIndicatorRenderMode.FillAndStroke;
+this.Scheduler.MonthView.AppointmentIndicatorRenderMode = AppointmentIndicatorRenderMode.Stroke;
 this.Scheduler.MonthView.AppointmentIndicatorSize = 20;
 this.Scheduler.MonthView.AppointmentIndicatorStrokeThickness = 4;
 
 {% endhighlight %}  
 {% endtabs %}
+
+![appointment-indicator-stroke-thickness-maui-scheduler](images/month-view/appointment-indicator-stroke-thickness-maui-scheduler.png){:width="325" height="600" loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
 
 ## Hide leading and trailing dates
 

@@ -176,6 +176,8 @@ this.Scheduler.ResourceView.ResourceGroupType = SchedulerResourceGroupType.Date;
 
 In Mobile platforms, the resource view for the day, week, and work week view where grouped under an adaptive header.
 
+N> The adaptive header display of resources in the **Day**, **Week**, and **Work Week** views is supported only on .NET MAUI mobile platforms (**Android** and **iOS**).
+
 ### Customize hamburger icon color
 
 The hamburger icon color can be customized by using the `HamburgerIconColor` property of the [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6).
@@ -183,19 +185,28 @@ The hamburger icon color can be customized by using the `HamburgerIconColor` pro
 {% tabs %}
 {% highlight XAML hl_lines="4" %}
 
- <syncfusion:SfScheduler x:Name="Scheduler">
+ <syncfusion:SfScheduler x:Name="Scheduler" View="Day">
      <syncfusion:SfScheduler.ResourceView>
-         <syncfusion:SchedulerResourceView HamburgerIconColor="Black" />
+         <syncfusion:SchedulerResourceView HamburgerIconColor="Red" />
      </syncfusion:SfScheduler.ResourceView>
  </syncfusion:SfScheduler>
 
 {% endhighlight %}
-{% highlight C# hl_lines="2" %}
+{% highlight C# hl_lines="9" %}
+var Resources = new ObservableCollection<SchedulerResource>()
+{
+   new SchedulerResource() { Name = "Sophia", Id = "1000" },
+   new SchedulerResource() { Name = "Zoey Addison", Id = "1001" },
+   new SchedulerResource() { Name = "James William", Id = "1002" },
+};
 
-this.Scheduler.ResourceView.HamburgerIconColor = Colors.Black;
+this.Scheduler.ResourceView.Resources = Resources;
+this.Scheduler.ResourceView.HamburgerIconColor = Colors.Red;
 
 {% endhighlight %}
 {% endtabs %}
+
+![customize-hamburger-icon-color-in-maui-scheduler](images/resource-view/customize-hamburger-icon-color-in-maui-scheduler.png)
 
 ### Customize drawer resource selection color
 
@@ -204,19 +215,28 @@ The drawer resource selection color can be customized by using the `DrawerResour
 {% tabs %}
 {% highlight XAML hl_lines="4" %}
 
- <syncfusion:SfScheduler x:Name="Scheduler">
+ <syncfusion:SfScheduler x:Name="Scheduler" View="Day">
      <syncfusion:SfScheduler.ResourceView>
          <syncfusion:SchedulerResourceView DrawerResourceSelectionColor="DodgerBlue" />
      </syncfusion:SfScheduler.ResourceView>
  </syncfusion:SfScheduler>
 
 {% endhighlight %}
-{% highlight C# hl_lines="2" %}
+{% highlight C# hl_lines="9" %}
+var Resources = new ObservableCollection<SchedulerResource>()
+{
+   new SchedulerResource() { Name = "Sophia", Id = "1000" },
+   new SchedulerResource() { Name = "Zoey Addison", Id = "1001" },
+   new SchedulerResource() { Name = "James William", Id = "1002" },
+};
 
+this.Scheduler.ResourceView.Resources = Resources;
 this.Scheduler.ResourceView.DrawerResourceSelectionColor = Brush.DodgerBlue;
 
 {% endhighlight %}
 {% endtabs %}
+
+![customize-drawer-resource-selection-color-in-maui-scheduler](images/resource-view/customize-drawer-resource-selection-color-in-maui-scheduler.png)
 
 ### Customize drawer background
 
@@ -225,37 +245,57 @@ The drawer background can be customized by using the `DrawerBackground` property
 {% tabs %}
 {% highlight XAML hl_lines="4" %}
 
- <syncfusion:SfScheduler x:Name="Scheduler">
+ <syncfusion:SfScheduler x:Name="Scheduler" View="Day">
      <syncfusion:SfScheduler.ResourceView>
-         <syncfusion:SchedulerResourceView DrawerBackground="Red" />
+         <syncfusion:SchedulerResourceView DrawerBackground="LightGoldenrodYellow" />
      </syncfusion:SfScheduler.ResourceView>
  </syncfusion:SfScheduler>
 
 {% endhighlight %}
-{% highlight C# hl_lines="2" %}
+{% highlight C# hl_lines="9" %}
+var Resources = new ObservableCollection<SchedulerResource>()
+{
+   new SchedulerResource() { Name = "Sophia", Id = "1000" },
+   new SchedulerResource() { Name = "Zoey Addison", Id = "1001" },
+   new SchedulerResource() { Name = "James William", Id = "1002" },
+};
 
-this.Scheduler.ResourceView.DrawerBackground = Brush.Red;
+this.Scheduler.ResourceView.Resources = Resources;
+this.Scheduler.ResourceView.DrawerBackground = Brush.LightGoldenrodYellow;
 
 {% endhighlight %}
 {% endtabs %}
+
+![customize-drawer-background-in-maui-scheduler](images/resource-view/customize-drawer-background-in-maui-scheduler.png)
 
 ### Customize adaptive header appearance using DataTemplate
 
 The adaptive header appearance customization can be achieved by using the `AdaptiveHeaderTemplate` property of [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5 6 7 8 9 10 11 12 13 14 15" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
-<schedule:SfScheduler x:Name="Scheduler">
+<schedule:SfScheduler x:Name="Scheduler" View="Day">
     <schedule:SfScheduler.ResourceView>
         <schedule:SchedulerResourceView>
             <schedule:SchedulerResourceView.AdaptiveHeaderTemplate>
                 <DataTemplate>
-                    <Grid Padding="8">
+                    <Grid Padding="8" BackgroundColor="PaleGreen">
                         <HorizontalStackLayout Spacing="8" VerticalOptions="Center">
-                            <Label Text="{Binding Name}"
-                                        FontAttributes="Bold"
-                                        FontSize="14" />
+                            <Label Text="☰"
+                                    FontSize="16"
+                                    VerticalTextAlignment="Center"
+                                    HorizontalTextAlignment="Center"
+                                    TextColor="Red"
+                                    Margin="0,0,12,0">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnTapped" />
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <Label Text="{Binding Resource.Name}"
+                                    FontAttributes="Bold"
+                                    FontSize="14" 
+                                    TextColor="DarkViolet" />
                         </HorizontalStackLayout>
                     </Grid>
                 </DataTemplate>
@@ -267,24 +307,72 @@ The adaptive header appearance customization can be achieved by using the `Adapt
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
- this.Scheduler.ResourceView.AdaptiveHeaderTemplate = new DataTemplate(() =>
- {
+var Resources = new ObservableCollection<SchedulerResource>()
+{
+   new SchedulerResource() { Name = "Sophia", Id = "1000" },
+   new SchedulerResource() { Name = "Zoey Addison", Id = "1001" },
+   new SchedulerResource() { Name = "James William", Id = "1002" },
+};
+
+this.Scheduler.ResourceView.Resources = Resources;
+this.Scheduler.ResourceView.AdaptiveHeaderTemplate = new DataTemplate(() =>
+{
+    var grid = new Grid
+    {
+        Padding = 8,
+        BackgroundColor = Colors.PaleGreen
+    };
+
+    var stack = new HorizontalStackLayout
+    {
+        Spacing = 8,
+        VerticalOptions = LayoutOptions.Center
+    };
+
+    var menuLabel = new Label
+    {
+        Text = "☰",
+        FontSize = 16,
+        TextColor = Colors.Red,
+        VerticalTextAlignment = TextAlignment.Center,
+        HorizontalTextAlignment = TextAlignment.Center,
+        Margin = new Thickness(0, 0, 12, 0)
+    };
+
+    var tap = new TapGestureRecognizer();
+    tap.Tapped += OnTapped;
+    menuLabel.GestureRecognizers.Add(tap);
     var nameLabel = new Label
     {
         FontAttributes = FontAttributes.Bold,
         FontSize = 14,
-        VerticalOptions = LayoutOptions.Center
+        TextColor = Colors.DarkViolet
     };
-    nameLabel.SetBinding(Label.TextProperty, "Name");
-
-    var row = new HorizontalStackLayout { Spacing = 8, VerticalOptions = LayoutOptions.Center };
-    row.Children.Add(nameLabel);
-
-    return new Grid { Padding = 8, Children = { row } };
+    
+    nameLabel.SetBinding(Label.TextProperty, "Resource.Name");
+    stack.Add(menuLabel);
+    stack.Add(nameLabel);
+    grid.Add(stack);
+    return grid;
 });
+
+private void OnTapped(object sender, TappedEventArgs e)
+{
+    if (sender is Label label && label.BindingContext is SchedulerAdaptiveResource resource)
+    {
+        resource.ToggleResourceDrawerView();
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}
+
+![customize-adapter-header-template-in-maui-scheduler](images/resource-view/customize-adapter-header-template-in-maui-scheduler.png)
+
+N> 
+
+* The BindingContext of the `AdaptiveHeaderTemplate` is the `SchedulerAdaptiveResource.`
+* The `ToggleResourceDrawerView` method should be called on the `SchedulerAdaptiveResource` instance obtained from the control’s BindingContext. It toggles the visibility of the drawer resource view. It is used only when the `AdaptiveHeaderTemplate` is applied.
 
 ## Visible Resource Count
  
