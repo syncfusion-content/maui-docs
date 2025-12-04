@@ -33,7 +33,7 @@ richTextEditor.ToolbarPosition = RichTextEditorToolbarPosition.Bottom;
 
 The link quick tooltip appears when you click on a link in the editor. The Rich Text Editor provides essential tools in the link quick tooltip, including “Open”, “Edit Link” and “Remove Link”.
 
-![.NET MAUI Rich Text Editor Link Quick Toolbar](images/richtexteditor-link-quick-toolbar.png)
+![.NET MAUI Rich Text Editor Link Quick Toolbar](images/richtexteditor-link-quick-tooltip.png)
 
 N> The link quick tooltip will automatically disappear after 2 seconds if there is no user interaction.
 
