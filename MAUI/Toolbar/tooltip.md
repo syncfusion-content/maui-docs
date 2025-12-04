@@ -9,7 +9,7 @@ documentation: ug
 
 # Enable the Tooltip
 
-The tooltip is enabled in the view when the [TooltipText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_ToolTipText) or [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_Text) property is set for the ToolbarItems.
+The tooltip is enabled in the view when the [TooltipText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_ToolTipText) or [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_Text) property is set for the ToolbarItems. By default, the tooltip is supported only in the default view.
 
 ## Tooltip Text
 
