@@ -374,6 +374,62 @@ N>
 * The BindingContext of the `AdaptiveHeaderTemplate` is the `SchedulerAdaptiveResource.`
 * The `ToggleResourceDrawerView` method should be called on the `SchedulerAdaptiveResource` instance obtained from the control’s BindingContext. It toggles the visibility of the drawer resource view. It is used only when the `AdaptiveHeaderTemplate` is applied.
 
+### Customize drawer resource appearance using DataTemplate
+
+The drawer resource appearance customization can be achieved by using the `DrawerResourceTemplate` property of [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<ContentPage.Resources>
+    <DataTemplate x:Key="drawerResourceTemplate">
+        <Grid Background="{Binding DataItem.BackgroundBrush}">
+            <Label Margin="10" FontAttributes="Bold"  Text="{Binding DataItem.Name}" TextColor="{Binding DataItem.ForegroundBrush}"/>
+        </Grid>
+    </DataTemplate>
+</ContentPage.Resources>
+
+<scheduler:SfScheduler x:Name="scheduler">
+    <scheduler:SfScheduler.ResourceView>
+        <scheduler:SchedulerResourceView DrawerResourceTemplate="{StaticResource drawerResourceTemplate}">
+            <scheduler:SchedulerResourceView.Mapping>
+                <scheduler:SchedulerResourceMapping
+                     Id = "Id"
+                     Name="Name"
+                     Background="BackgroundColor"
+                     Foreground="ForegroundColor"/>
+            </scheduler:SchedulerResourceView.Mapping>
+        </scheduler:SchedulerResourceView>
+    </scheduler:SfScheduler.ResourceView>
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+public class Employee
+{
+    public string Name { get; set; }
+    public object Id { get; set; }
+    public Brush BackgroundBrush { get; set; }
+    public Brush ForegroundBrush { get; set; }
+}
+
+var Resources = new ObservableCollection<Employee>()
+{
+    new Employee() { Name = "Sophia", Id = "1000", BackgroundBrush = Brush.PaleGreen, ForegroundBrush = Brush.Black },
+    new Employee() { Name = "Zoey Addison", Id = "1001", BackgroundBrush = Brush.SkyBlue, ForegroundBrush = Brush.Black },
+    new Employee() { Name = "James William", Id = "1002", BackgroundBrush = Brush.LightPink, ForegroundBrush = Brush.Black },
+};
+
+this.scheduler.ResourceView.Resources = Resources;
+
+{% endhighlight %}
+{% endtabs %}
+
+![customize-drawer-resource-template-in-maui-scheduler](images/resource-view/customize-drawer-resource-template-in-maui-scheduler.png)
+
+N> The BindingContext of the `DrawerResourceTemplate` is the [SchedulerResource.](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html) and the custom data object can be bound in `DrawerResourceTemplate` by using `SchedulerResource.DataItem`.
+
 ## Visible Resource Count
  
 The number of resources shown in the day, week, work week, timelineday, timelineweek, timelineworkweek views can be controlled using the [`VisibleResourceCount`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_VisibleResourceCount) property of the [`SchedulerResourceView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) class. This lets you define how many resources are visible at a time.
