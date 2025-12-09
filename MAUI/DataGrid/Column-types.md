@@ -1489,22 +1489,22 @@ You can allow SfMultiColumnComboBox to complete the entered input value automati
 
 ### Filtering
 
-You can allow SfMultiColumnComboBox to filter the drop-down list items dynamically based on the text typed on editor by setting (AllowIncrementalFiltering)[] property to `true`. DataGridMultiColumnComboBoxColumn allows you to filter the items based on case by setting (AllowCasingforFilter)[] to `true`. This will help users to select from large number of items.
+You can allow SfMultiColumnComboBox to filter the drop-down list items dynamically based on the text typed on editor by setting (AllowIncrementalFiltering)[] property to `true`. DataGridMultiColumnComboBoxColumn allows you to filter the items based on case by setting (AllowCaseSensitiveFiltering)[] to `true`. This will help users to select from large number of items.
 
-<img alt="DataGridMultiColumnComboBox column .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-MultiColumn-ComboBox-column-filtering.png" width="404" height="500"/>
+<img alt="DataGridMultiColumnComboBox column with Filtering .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-MultiColumn-ComboBox-column-filtering.png" width="404" height="500"/>
 
 ### Null value support
 
-You can allow the null values by setting the (AllowNullInput)[] property to `true`.
+You can allow null values in the column by setting the (AllowNullValue)[] property to `true`.
 
 N>
-The AllowNullInput will work only when the underlying property type is Nullable.
+The AllowNullValue will work only when the underlying property type is Nullable.
 
 ### Popup Size Customization
 
-You can allow change the size of drop-down popup by setting (PopupWidth)[] and (PopupHeight)[] property. The PopupWidth will be set based on (PopUpMinWidth)[] property when the value is not set. By default, the `PopupMinWidth` value is 200.0.
+You can change the size of drop-down popup by setting (PopupWidth)[] and (PopupHeight)[] property. The PopupWidth will be set based on (PopUpMinWidth)[] property when the value is not set. By default, the `PopupMinWidth` value is 200.0.
 
-Similarly, the PopUpHeight based on (PopUpMinHeight)[] when the value is not set. The default value of `PopUpMinHeight` is 300.0.
+Similarly, the PopUpHeight will be set based on (PopUpMinHeight)[] when the value is not set. The default value of `PopUpMinHeight` is 300.0.
 
 SfMultiColumnComboBox can automatically adjust the popup width based on the actual size of SfDataGrid when setting (IsAutoPopupSize)[] to `true`.
 
@@ -1580,9 +1580,9 @@ internal class ItemsSourceSelector : IItemsSourceSelector
 
 {% endtabs %}
 
-<img alt="DataGridMultiColumnComboBox column .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-MultiColumn-ComboBox-column-itemsourceselector.png" width="404" height="500"/>
+<img alt="DataGridMultiColumnComboBox column with ItemsSourceSelector .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-MultiColumn-ComboBox-column-itemsourceselector.png" width="404" height="500"/>
 
-<img alt="DataGridMultiColumnComboBox column .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-MultiColumn-ComboBox-column-itemsourceselector2.png" width="404" height="500"/>
+<img alt="DataGridMultiColumnComboBox column with ItemsSourceSelector .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-MultiColumn-ComboBox-column-itemsourceselector2.png" width="404" height="500"/>
 
 You can download the sample from the following link: (Sample)[https://github.com/SyncfusionExamples/How-to-load-different-items-for-each-row-in-MultiColumn-ComboBox-Column-in-.NET-MAUI-SfDataGrid].
 
