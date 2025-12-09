@@ -400,6 +400,12 @@ While using `Extended`, you can select multiple rows or cells by pressing the ke
                        SelectionMode="Extended"
                        ItemsSource="{Binding Orders}">
 {% endhighlight %}
+
+{% highlight c# %}
+this.dataGrid.SelectionUnit  = DataGridSelectionUnit.Cell;
+this.dataGrid.NavigationMode = DataGridNavigationMode.Cell;
+this.dataGrid.SelectionMode  = DataGridSelectionMode.Extended;
+{% endhighlight %}
 {% endtabs %}
 
 <img alt="Extended selection support in .NET MAUI DataGrid" src="Images\selection\maui-dataGrid-extendedSelection.png" width="404"/>
