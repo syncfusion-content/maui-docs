@@ -111,7 +111,7 @@ this.Scheduler.MonthView.AppointmentIndicatorSize = 10;
 
 ## Appointment indicator renderer mode
 
-The scheduler month view allows you to customize the appointment indicator rendering mode by using the `AppointmentIndicatorRenderMode` property of the [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). By default, the `AppointmentIndicatorRenderMode` is set to Fill.
+The scheduler month view allows you to customize the appointment indicator rendering mode by using the `AppointmentIndicatorRenderMode` property of the [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). The `AppointmentIndicatorRenderMode` property supports three different types: `Fill`, `Stroke` and `FillAndStroke`. By default, the `AppointmentIndicatorRenderMode` is set to Fill.
 
 {% tabs %}  
 {% highlight XAML hl_lines="5" %}
