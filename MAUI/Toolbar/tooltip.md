@@ -7,7 +7,7 @@ control: Toolbar (SfToolbar)
 documentation: ug
 ---
 
-# Enable Tooltip
+# Enable Tooltip for Toolbar items
 
 The tooltip is enabled in the view when the [TooltipText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_ToolTipText) or [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbarItem.html#Syncfusion_Maui_Toolbar_SfToolbarItem_Text) property is set for the ToolbarItems.
 
