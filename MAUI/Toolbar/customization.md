@@ -1128,7 +1128,7 @@ public partial class MainPage : ContentPage
 
 ## Corner Radius Customization
 
-The toolbar control supports customizing its corners using the CornerRadius property, allowing rounded or sharp edges to match your design preferences.
+The toolbar control supports customizing its corners using the [CornerRadius] property, allowing rounded or sharp edges to match your design preferences.
 
 The following code sample demonstrates how to set the corner radius of the toolbar.
 
@@ -1250,7 +1250,7 @@ public partial class MainPage : ContentPage
 
 ## Selection Corner Radius Customization
 
-The toolbar control supports customizing corners of the selection using the SelectionCornerRadius property, allowing the corners of the selected item to be rounded or sharp based on your preference.
+The toolbar control supports customizing corners of the selection using the [SelectionCornerRadius] property, allowing the corners of the selected item to be rounded or sharp based on your preference.
 
 The following code sample demonstrates how to set the selection corner radius for toolbar items.
 
