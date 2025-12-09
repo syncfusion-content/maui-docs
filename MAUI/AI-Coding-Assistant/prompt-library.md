@@ -26,7 +26,7 @@ Before starting, make sure your MCP Server is set up and running.
 
 ### DataGrid
 
-The Syncfusion .NET MAUI DataGrid delivers flexible, performant data tables for handling extensive records with built-in interactivity.
+The Syncfusion .NET MAUI DataGrid delivers flexible, efficient data tables for handling extensive records with built-in interactivity.
 
 {% promptcards %}
 {% promptcard Data Binding %}
@@ -169,9 +169,6 @@ The Syncfusion .NET MAUI Scheduler helps manage events, resources, and timelines
 {% promptcard Min/Max Date Navigation Limits %}
 #SyncfusionMAUIAssistant How to restrict navigation with MinimumDateTime and MaximumDateTime to keep users in a valid planning range.
 {% endpromptcard %}
-{% promptcard Interactions and Keyboard Navigation %}
-#SyncfusionMAUIAssistant Enable tap-to-create, selection, and Windows keyboard navigation; customize selection behavior.
-{% endpromptcard %}
 {% promptcard Special Time Regions (Blocking Intervals) %}
 #SyncfusionMAUIAssistant Define special time regions to block interaction (e.g., holidays/breaks) and highlight them across views.
 {% endpromptcard %}
@@ -252,7 +249,7 @@ The Syncfusion .NET MAUI ListView provides a high-performance, flexible list wit
 The Syncfusion .NET MAUI AI AssistView provides a ready-made conversational UI for integrating LLMs with features like message list, input box, suggestions, attachments, and tool/action invocation.
 
 {% promptcard Messages %}
-#SyncfusionMAUIAssistant Bind AssistView to a message collection with system, user, and preload conversation history.
+#SyncfusionMAUIAssistant Bind AssistView to a message collection with system, user, and pre load conversation history.
 {% endpromptcard %}
 {% promptcard Streaming and Typing Indicator %}
 #SyncfusionMAUIAssistant Enable token streaming with a typing indicator and incremental message updates.
@@ -270,7 +267,7 @@ The Syncfusion .NET MAUI AI AssistView provides a ready-made conversational UI f
 #SyncfusionMAUIAssistant How to customize user/assistant avatars and use DataTemplate/DataTemplateSelector for message bubbles.
 {% endpromptcard %}
 {% promptcard Error Handling and Retries %}
-#SyncfusionMAUIAssistant Hwo to handle provider errors with retry/cancel UI and graceful fallback messages.
+#SyncfusionMAUIAssistant How to handle provider errors with retry/cancel UI and graceful fallback messages.
 {% endpromptcard %}
 {% promptcard Theming and Styling %}
 #SyncfusionMAUIAssistant Apply custom themes for message bubbles, background, input bar, and suggestion chips (Light/Dark support).
@@ -282,7 +279,7 @@ The Syncfusion .NET MAUI AI AssistView provides a ready-made conversational UI f
 #SyncfusionMAUIAssistant How to Save and restore conversations to local storage or database with message replay on app start.
 {% endpromptcard %}
 {% promptcard Citations and References %}
-#SyncfusionMAUIAssistant Display citations/references returned by the model as tappable links under the message.
+#SyncfusionMAUIAssistant Display citations/references returned by the model as hyper links under the message.
 {% endpromptcard %}
 {% endpromptcards %}
 
