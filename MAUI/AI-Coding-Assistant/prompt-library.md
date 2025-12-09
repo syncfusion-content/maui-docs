@@ -150,213 +150,141 @@ The Syncfusion .NET MAUI Chart suite offers versatile, high-performance charts f
 
 The Syncfusion .NET MAUI Scheduler helps manage events, resources, and timelines with powerful views and customization.
 
-Views and Quick Switch
-
+{% promptcards %}
+{% promptcard Views and Quick Switch %}
 #SyncfusionMAUIAssistant Configure Day, Week, WorkWeek, Month, Agenda, Timeline Day/Week/WorkWeek/Month views and add quick view switching.
-
-
-Appointment Mapping and Data Binding
-
+{% endpromptcard %}
+{% promptcard Appointment Mapping and Data Binding %}
 #SyncfusionMAUIAssistant How to bind custom appointment models using mapping (subject, notes, location, start/end, color, recurrence) with MVVM.
-
-
-Recurring Events and Series Editing
-
+{% endpromptcard %}
+{% promptcard Recurring Events and Series Editing %}
 #SyncfusionMAUIAssistant Create recurring appointments (daily/weekly/monthly/yearly) and enable editing a single occurrence or the entire series.
-
-
-Time Zones and DST
-
+{% endpromptcard %}
+{% promptcard Time Zones and DST %}
 #SyncfusionMAUIAssistant Show appointments in specific time zones with automatic Daylight Saving Time handling and conversion.
-
-
-Work Time, Work Days, and First Day of Week
-
+{% endpromptcard %}
+{% promptcard Work Time, Work Days, and First Day of Week %}
 #SyncfusionMAUIAssistant How to set working hours, configure work days, customize the first day of week, and hide non-working days.
-
-
-Min/Max Date Navigation Limits
-
+{% endpromptcard %}
+{% promptcard Min/Max Date Navigation Limits %}
 #SyncfusionMAUIAssistant How to restrict navigation with MinimumDateTime and MaximumDateTime to keep users in a valid planning range.
-
-
-Interactions and Keyboard Navigation
-
+{% endpromptcard %}
+{% promptcard Interactions and Keyboard Navigation %}
 #SyncfusionMAUIAssistant Enable tap-to-create, selection, and Windows keyboard navigation; customize selection behavior.
-
-
-Special Time Regions (Blocking Intervals)
-
+{% endpromptcard %}
+{% promptcard Special Time Regions (Blocking Intervals) %}
 #SyncfusionMAUIAssistant Define special time regions to block interaction (e.g., holidays/breaks) and highlight them across views.
-
-
-Blackout Dates (Selectable Day Predicate)
-
+{% endpromptcard %}
+{% promptcard Blackout Dates (Selectable Day Predicate) %}
 #SyncfusionMAUIAssistant Disable specific dates like weekends or holidays to prevent selection and interaction.
-
-
-Drag-and-Drop and Inline Editing
-
+{% endpromptcard %}
+{% promptcard Drag-and-Drop and Inline Editing %}
 #SyncfusionMAUIAssistant Enable drag to reschedule, resize to change duration, and inline editors for quick appointment updates.
-
-
-Resources and Grouping
-
+{% endpromptcard %}
+{% promptcard Resources and Grouping %}
 #SyncfusionMAUIAssistant Group by resources (rooms/people/teams) with color-coding and timeline views optimized for many resources.
-
-
-Load on Demand
-
+{% endpromptcard %}
+{% promptcard Load on Demand %}
 #SyncfusionMAUIAssistant Load appointments on demand with a loading indicator for large schedules.
-
-
-Reminders and Notifications Integration
-
+{% endpromptcard %}
+{% promptcard Reminders and Notifications Integration %}
 #SyncfusionMAUIAssistant Add reminder metadata to appointments and integrate with app notifications for alerts.
-
-
-Theming and Customization
-
+{% endpromptcard %}
+{% promptcard Theming and Customization %}
 #SyncfusionMAUIAssistant How to style headers, cells, appointments, selection, and special regions; support Light/Dark themes.
-
+{% endpromptcard %}
+{% endpromptcards %}
 
 ### ListView
 
 The Syncfusion .NET MAUI ListView provides a high-performance, flexible list with rich templating, data operations, and interactions.
 
-High-Performance Virtualization
-
+{% promptcards %}
+{% promptcard High-Performance Virtualization %}
 #SyncfusionMAUIAssistant Configure ListView with UI virtualization and recycling for smooth scrolling on large datasets.
-
-
-Data Binding
-
+{% endpromptcard %}
+{% promptcard Data Binding %}
 #SyncfusionMAUIAssistant How to bind ListView to ObservableCollection/IEnumerable with change tracking and updates.
-
-
-Item Templates and Template Selector
-
+{% endpromptcard %}
+{% promptcard Item Templates and Template Selector %}
 #SyncfusionMAUIAssistant How to use DataTemplate and DataTemplateSelector for different item appearances based on data.
-
-
-Grouping with Sticky Headers
-
+{% endpromptcard %}
+{% promptcard Grouping with Sticky Headers %}
 #SyncfusionMAUIAssistant Enable grouping with sticky group headers and customize group header templates.
-
-
-Sorting and Filtering
-
+{% endpromptcard %}
+{% promptcard Sorting and Filtering %}
 #SyncfusionMAUIAssistant Apply sorting and filtering via the ListView data source or ViewModel helpers.
-
-
-Selection (Single/Multiple)
-
+{% endpromptcard %}
+{% promptcard Selection (Single/Multiple) %}
 #SyncfusionMAUIAssistant Configure single and multiple selection modes and perform programmatic selection.
-
-
-Swipe Actions
-
+{% endpromptcard %}
+{% promptcard Swipe Actions %}
 #SyncfusionMAUIAssistant Add left and right swipe templates for contextual actions like delete and archive.
-
-
-Drag-and-Drop Reordering
-
+{% endpromptcard %}
+{% promptcard Drag-and-Drop Reordering %}
 #SyncfusionMAUIAssistant Enable drag-and-drop to reorder ListView items and persist the new order.
-
-
-Pull-to-Refresh
-
+{% endpromptcard %}
+{% promptcard Pull-to-Refresh %}
 #SyncfusionMAUIAssistant Add pull-to-refresh behavior to reload data with a loading indicator.
-
-
-Load More / Infinite Scrolling
-
+{% endpromptcard %}
+{% promptcard Load More / Infinite Scrolling %}
 #SyncfusionMAUIAssistant Implement load-more at end of list with automatic and manual triggers for infinite scrolling.
-
-
-Variable Item Height
-
+{% endpromptcard %}
+{% promptcard Variable Item Height %}
 #SyncfusionMAUIAssistant Configure dynamic item sizing to accommodate variable-height content.
-
-
-Headers and Footers
-
+{% endpromptcard %}
+{% promptcard Headers and Footers %}
 #SyncfusionMAUIAssistant Add header and footer templates with optional sticky behavior for contextual UI.
-
-
-Programmatic Scrolling
-
+{% endpromptcard %}
+{% promptcard Programmatic Scrolling %}
 #SyncfusionMAUIAssistant Scroll to a specific item or index with position (start/center/end) and animation options.
-
-
-Layout Modes
-
+{% endpromptcard %}
+{% promptcard Layout Modes %}
 #SyncfusionMAUIAssistant Switch between linear and grid-like layouts and configure span/count where supported.
-
-
-Empty View
-
+{% endpromptcard %}
+{% promptcard Empty View %}
 #SyncfusionMAUIAssistant Show a custom empty view template when no items are available.
-
+{% endpromptcard %}
+{% endpromptcards %}
 
 ### AI AssistView
 
 The Syncfusion .NET MAUI AI AssistView provides a ready-made conversational UI for integrating LLMs with features like message list, input box, suggestions, attachments, and tool/action invocation.
 
-Messages
-
+{% promptcard Messages %}
 #SyncfusionMAUIAssistant Bind AssistView to a message collection with system, user, and preload conversation history.
-
-
-Streaming and Typing Indicator
-
+{% endpromptcard %}
+{% promptcard Streaming and Typing Indicator %}
 #SyncfusionMAUIAssistant Enable token streaming with a typing indicator and incremental message updates.
-
-
-Suggestions (Quick Prompts)
-
+{% endpromptcard %}
+{% promptcard Suggestions (Quick Prompts) %}
 #SyncfusionMAUIAssistant How to add clickable suggestion chips that insert predefined prompts into the input box.
-
-
-Attachments and File Context
-
+{% endpromptcard %}
+{% promptcard Attachments and File Context %}
 #SyncfusionMAUIAssistant How to allow users to attach files and include file metadata/content as context in AI requests.
-
-
-Markdown and Rich Rendering
-
+{% endpromptcard %}
+{% promptcard Markdown and Rich Rendering %}
 #SyncfusionMAUIAssistant How to render assistant responses with Markdown (headings, code blocks) and support inline images/emojis.
-
-
-Avatars and Message Templates
-
+{% endpromptcard %}
+{% promptcard Avatars and Message Templates %}
 #SyncfusionMAUIAssistant How to customize user/assistant avatars and use DataTemplate/DataTemplateSelector for message bubbles.
-
-
-Error Handling and Retries
-
+{% endpromptcard %}
+{% promptcard Error Handling and Retries %}
 #SyncfusionMAUIAssistant Hwo to handle provider errors with retry/cancel UI and graceful fallback messages.
-
-
-Theming and Styling
-
+{% endpromptcard %}
+{% promptcard Theming and Styling %}
 #SyncfusionMAUIAssistant Apply custom themes for message bubbles, background, input bar, and suggestion chips (Light/Dark support).
-
-
-Command/Enter Behavior
-
+{% endpromptcard %}
+{% promptcard Command/Enter Behavior %}
 #SyncfusionMAUIAssistant Configure Enter to send and Shift+Enter for newline; support multiline input with character counter.
-
-
-Conversation Persistence
-
+{% endpromptcard %}
+{% promptcard Conversation Persistence %}
 #SyncfusionMAUIAssistant How to Save and restore conversations to local storage or database with message replay on app start.
-
-
-Citations and References
-
+{% endpromptcard %}
+{% promptcard Citations and References %}
 #SyncfusionMAUIAssistant Display citations/references returned by the model as tappable links under the message.
-
+{% endpromptcard %}
+{% endpromptcards %}
 
 ## See also
 
