@@ -233,6 +233,43 @@ this.Content = chart;
 
 {% endtabs %}
 
+## Floating Legend
+The Floating Legend feature allows you to position the legend inside the chart area based on its defined placement. When [IsFloating]() is set to true, the legend will start from the specified [Placement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_Placement) (such as Top, Bottom, Left, or Right) and then move according to the [OffsetX]() and [OffsetY]() values. 
+
+These offsets represent the horizontal and vertical distances from that placement position, enabling precise control over the legend’s location.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+    <chart:SfCartesianChart.Legend>
+        <chart:ChartLegend Placement="Top" IsFloating="True" OffsetX="-170" OffsetY="30"/>
+    </chart:SfCartesianChart.Legend>
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+chart.Legend = new ChartLegend()
+{ 
+    Placement = LegendPlacement.Top
+    IsFloating = true
+    OffsetX = -170;
+    OffsetY = 30; 
+};
+
+this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Floating Legend support in MAUI Cartesian Chart](Legend-images/floating_legend.png)
+
 ## Toggle the series visibility
 The visibility of series can be controlled by tapping the legend item using the [ToggleSeriesVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_ToggleSeriesVisibility) property. The default value of ToggleSeriesVisibility is `false`.
 

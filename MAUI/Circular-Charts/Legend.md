@@ -227,6 +227,37 @@ this.Content = chart;
 
 {% endtabs %}
 
+## Floating Legend
+The Floating Legend feature allows you to position the legend inside the chart area based on its defined placement. When [IsFloating]() is set to true, the legend will start from the specified [Placement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_Placement) (such as Top, Bottom, Left, or Right) and then move according to the [OffsetX]() and [OffsetY]() values. 
+
+These offsets represent the horizontal and vertical distances from that placement position, enabling precise control over the legend’s location.
+
+<chart:SfCircularChart>
+    <chart:SfCircularChart.Legend>
+        <chart:ChartLegend Placement="Bottom" IsFloating="True" OffsetX="-170" OffsetY="30"/>
+    </chart:SfCircularChart.Legend>
+</chart:SfCircularChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCircularChart chart = new SfCircularChart();
+
+chart.Legend = new ChartLegend()
+{ 
+    Placement = LegendPlacement.Top
+    IsFloating = true
+    OffsetX = -170;
+    OffsetY = 30; 
+};
+. . .    
+this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ## Toggle the series visibility
 The visibility of circular series data points can be controlled by tapping the legend item using the [ToggleSeriesVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_ToggleSeriesVisibility) property. The default value of ToggleSeriesVisibility is `false`.
 
