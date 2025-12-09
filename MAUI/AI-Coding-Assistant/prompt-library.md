@@ -28,406 +28,335 @@ Before starting, make sure your MCP Server is set up and running.
 
 The Syncfusion .NET MAUI DataGrid delivers flexible, performant data tables for handling extensive records with built-in interactivity.
 
-Data Binding (including DataTable)
-```
+{% promptcards %}
+{% promptcard Data Binding %}
 #SyncfusionMAUIAssistant How to bind the DataGrid to a DataTable and show an example with columns auto-generated and customized?
-```
-
-Column Types
-```
+{% endpromptcard %}
+{% promptcard Column Types %}
 #SyncfusionMAUIAssistant Show me a DataGrid using numeric, text, date, checkbox, image, combobox, picker, and template columns.
-```
-
-Editing with Column Types
-```
+{% endpromptcard %}
+{% promptcard Editing with Column Types %}
 #SyncfusionMAUIAssistant How to configure in-place editing using numeric, text, date, checkbox, image, combo box, picker, and template editors in the DataGrid.
-```
-
-Selection and Keyboard Navigation
-```
+{% endpromptcard %}
+{% promptcard Selection and Keyboard Navigation %}
 #SyncfusionMAUIAssistant Enable single and multiple row selection with programmatic selection APIs and Windows keyboard navigation.
-```
-
-Data Virtualization (Overview)
-```
+{% endpromptcard %}
+{% promptcard Data Virtualization (Overview) %}
 #SyncfusionMAUIAssistant Compare and configure DataGrid virtualization modes: paging, incremental loading, and virtualization for large datasets.
-```
-
-Master-Details View
-```
+{% endpromptcard %}
+{% promptcard Master-Details View %}
 #SyncfusionMAUIAssistant Display hierarchical data with a master-detail layout using nested DataGrids in .NET MAUI.
-```
-
-Multi-Column Sorting
-```
+{% endpromptcard %}
+{% promptcard Multi-Column Sorting %}
 #SyncfusionMAUIAssistant Enable sorting on multiple columns and show initial sort descriptions in the DataGrid.
-```
-
-Multi-Column Grouping
-```
+{% endpromptcard %}
+{% promptcard Multi-Column Grouping %}
 #SyncfusionMAUIAssistant How to enable interactive multiple columns grouping and show grouped summaries in the .NET MAUI DataGrid.
-```
-
-Summaries
-```
+{% endpromptcard %}
+{% promptcard Summaries %}
 #SyncfusionMAUIAssistant How to configure column and group summaries (Sum, Count, Average) in the .NET MAUI DataGrid with footer and group summary rows.
-```
-
-Filtering
-```
+{% endpromptcard %}
+{% promptcard Filtering %}
 #SyncfusionMAUIAssistant Programmatically filter DataGrid records using multiple criteria and clear filters on demand.
-```
-
-Column Sizing Modes
-```
+{% endpromptcard %}
+{% promptcard Column Sizing Modes %}
 #SyncfusionMAUIAssistant Set DataGrid column width modes (Auto, Star, FitToContent) and mix sizing strategies.
-```
-
-Column and Row Drag and Drop
-```
+{% endpromptcard %}
+{% promptcard Column and Row Drag and Drop %}
 #SyncfusionMAUIAssistant How to enable drag-and-drop to reorder columns and  reorder records in the DataGrid?
-```
-
-Freeze Panes
-```
+{% endpromptcard %}
+{% promptcard Freeze Panes %}
 #SyncfusionMAUIAssistant Freeze specific rows and columns so they remain visible while scrolling the DataGrid.
-```
-
-Styling and Conditional Formatting
-```
+{% endpromptcard %}
+{% promptcard Styling and Conditional Formatting %}
 #SyncfusionMAUIAssistant Customize cell and header styles and apply conditional formatting based on data values.
-```
-
-Paging
-```
+{% endpromptcard %}
+{% promptcard Paging %}
 #SyncfusionMAUIAssistant Enable paging with page size, navigation UI, and initial page in the .NET MAUI DataGrid.
-```
-
-Unbound Row and Column
-```
+{% endpromptcard %}
+{% promptcard Unbound Row and Column %}
 #SyncfusionMAUIAssistant Add an unbound row and column that displays calculated or custom values not present in the data model.
-```
-
-Exporting
-```
+{% endpromptcard %}
+{% promptcard Exporting %}
 #SyncfusionMAUIAssistant Export DataGrid content to Excel and PDF with options to include headers, summaries, and styles.
-```
+{% endpromptcard %}
+{% endpromptcards %}
 
-
-### Chart
+### Charts
 
 The Syncfusion .NET MAUI Chart suite offers versatile, high-performance charts for mobile and desktop with multiple series types and interactions.
 
-Local and Remote Data
-```
+{% promptcards %}
+{% promptcard Local and Remote Data %}
 #SyncfusionMAUIAssistant How do I bind both local and remote data sources to a Syncfusion .NET MAUI Chart?
-```
-
-Range Selection
-```
-#SyncfusionMAUIAssistant Show me how to enable range selection in a Syncfusion .NET MAUI Chart.
-```
-
-Chart Types Overview
-```
+{% endpromptcard %}
+{% promptcard Chart Types Overview %}
 #SyncfusionMAUIAssistant What chart types are available in the Syncfusion .NET MAUI Chart and how to configure them?
-```
-
-Markers and Data Labels
-```
+{% endpromptcard %}
+{% promptcard Markers and Data Labels %}
 #SyncfusionMAUIAssistant How can I display markers and data labels on a line chart in .NET MAUI?
-```
-
-Annotations
-```
+{% endpromptcard %}
+{% promptcard Annotations %}
 #SyncfusionMAUIAssistant Add custom annotations to highlight specific data points in a .NET MAUI chart.
-```
+{% endpromptcard %}
+{% promptcard Export to Image %}
+#SyncfusionMAUIAssistant How do I export a Syncfusion .NET MAUI Chart to image format?
+{% endpromptcard %}
+{% promptcard Axes and Multiple Axes %}
+#SyncfusionMAUIAssistant Configure CategoryAxis, NumericalAxis, DateTimeAxis, and add a secondary Y-axis with series mapped to it.
+{% endpromptcard %}
+{% promptcard Tooltips and Trackball %}
+#SyncfusionMAUIAssistant Show interactive tooltips and a trackball with formatted labels and multiple series value display.
+{% endpromptcard %}
+{% promptcard Legend and Title %}
+#SyncfusionMAUIAssistant Add chart title, subtitle, and a responsive legend (positioning, overflow modes) in a .NET MAUI chart.
+{% endpromptcard %}
+{% promptcard Data Labels and Smart Labels %}
+#SyncfusionMAUIAssistant Enable data labels with templates, alignment, and smart label collision avoidance for dense data.
+{% endpromptcard %}
+{% promptcard Annotations and Plot Bands %}
+#SyncfusionMAUIAssistant Add chart annotations and plot bands (strip lines) to highlight ranges and thresholds.
+{% endpromptcard %}
+{% promptcard Series Types Quick Setup %}
+#SyncfusionMAUIAssistant Create a chart with Line, Spline, StepLine, Area, SplineArea, Column, Bar, Scatter, and Bubble series.
+{% endpromptcard %}
+{% promptcard Range and Error Bars %}
+#SyncfusionMAUIAssistant Show RangeColumn/RangeArea series and add ErrorBar adornments for variability visualization.
+{% endpromptcard %}
+{% promptcard Financial Series %}
+#SyncfusionMAUIAssistant How to set up OHLC and Candle series with DateTimeAxis, tooltip formatting, and crosshair/trackball.
+{% endpromptcard %}
+{% promptcard Live (Real-time) Updates %}
+#SyncfusionMAUIAssistant How to implement a live-updating chart using ObservableCollection and timer-based data feeds.
+{% endpromptcard %}
+{% promptcard Segment Color Mapping and Gradients %}
+#SyncfusionMAUIAssistant Apply segment color mapping and gradient fills based on Y-value ranges.
+{% endpromptcard %}
+{% promptcard Axis Customization %}
+#SyncfusionMAUIAssistant Configure axis intervals, labels format, inversed axis, axis crossing, and logarithmic axis.
+{% endpromptcard %}
+{% promptcard Gridlines and Plot Area Styling %}
+#SyncfusionMAUIAssistant Customize major/minor gridlines, tick lines, plot area background, and border.
+{% endpromptcard %}
+{% promptcard Series Animation %}
+#SyncfusionMAUIAssistant Enable and customize series animation on load and refresh for a Cartesian chart.
+{% endpromptcard %}
+{% promptcard Sampling and Performance %}
+#SyncfusionMAUIAssistant Optimize large datasets with data sampling and performance tips for smooth interactions.
+{% endpromptcard %}
+{% endpromptcards %}
 
-Chart Export to Image or PDF
-```
-#SyncfusionMAUIAssistant How do I export a Syncfusion .NET MAUI Chart to PDF or image format?
-```
-
-Print Support
-```
-#SyncfusionMAUIAssistant Enable print functionality for a Syncfusion .NET MAUI Chart component.
-```
-
-Dynamic Chart with Remote Data
-```
-#SyncfusionMAUIAssistant Create a .NET MAUI chart that updates dynamically with remote API data.
-```
-
-Multiple Series Types
-```
-#SyncfusionMAUIAssistant How do I combine bar and line chart types in a single Syncfusion .NET MAUI Chart?
-```
-
-Troubleshooting Chart Data Binding
-```
-#SyncfusionMAUIAssistant Why isn’t my remote data showing up in the Syncfusion .NET MAUI Chart?
-```
-
-Interactive Range Selector
-```
-#SyncfusionMAUIAssistant Configure a range selector for zooming and filtering in a .NET MAUI time-series chart.
-```
-
-Custom Markers and Labels
-```
-#SyncfusionMAUIAssistant Show me an example of customizing chart markers and data label styles in .NET MAUI.
-```
-
-### Schedule
+### Scheduler
 
 The Syncfusion .NET MAUI Scheduler helps manage events, resources, and timelines with powerful views and customization.
 
-Module Injection
-```
-#SyncfusionMAUIAssistant How do I configure views and resources in the Syncfusion .NET MAUI Scheduler?
-```
+Views and Quick Switch
 
-Remote Data Binding
-```
-#SyncfusionMAUIAssistant Bind the Scheduler to a remote API for dynamic event loading in .NET MAUI.
-```
+#SyncfusionMAUIAssistant Configure Day, Week, WorkWeek, Month, Agenda, Timeline Day/Week/WorkWeek/Month views and add quick view switching.
 
-CRUD Actions
-```
-#SyncfusionMAUIAssistant Show me how to implement full CRUD operations in the .NET MAUI Scheduler.
-```
 
-Virtual Scrolling
-```
-#SyncfusionMAUIAssistant Enable virtual scrolling for large event datasets in the .NET MAUI Scheduler.
-```
+Appointment Mapping and Data Binding
 
-Timezone Support
-```
-#SyncfusionMAUIAssistant How can I configure timezone support in the Syncfusion .NET MAUI Scheduler?
-```
+#SyncfusionMAUIAssistant How to bind custom appointment models using mapping (subject, notes, location, start/end, color, recurrence) with MVVM.
 
-Export Schedule to PDF or Excel
-```
-#SyncfusionMAUIAssistant Add export functionality to download the Scheduler view as PDF or Excel in .NET MAUI.
-```
 
-Timeline Header Rows
-```
-#SyncfusionMAUIAssistant How do I customize timeline header rows in the .NET MAUI Scheduler?
-```
+Recurring Events and Series Editing
 
-Multiple Module Injection
-```
-#SyncfusionMAUIAssistant Configure multiple views like Day, Week, and Timeline in the .NET MAUI Scheduler.
-```
+#SyncfusionMAUIAssistant Create recurring appointments (daily/weekly/monthly/yearly) and enable editing a single occurrence or the entire series.
 
-Troubleshooting Schedule CRUD
-```
-#SyncfusionMAUIAssistant Why aren’t my CRUD actions working correctly in the .NET MAUI Scheduler?
-```
 
-Local and Remote Data
-```
-#SyncfusionMAUIAssistant Bind both local and remote event data to the .NET MAUI Scheduler.
-```
+Time Zones and DST
 
-Export and Timezone
-```
-#SyncfusionMAUIAssistant Configure timezone-aware exporting for the .NET MAUI Scheduler view.
-```
+#SyncfusionMAUIAssistant Show appointments in specific time zones with automatic Daylight Saving Time handling and conversion.
 
-Advanced Schedule Setup
-```
-#SyncfusionMAUIAssistant Create a Scheduler setup with multiple views, CRUD, virtual scrolling, and exporting in .NET MAUI.
-```
 
-### Kanban
+Work Time, Work Days, and First Day of Week
 
-The Syncfusion .NET MAUI Kanban organizes tasks in columns with drag-and-drop, swimlanes, and templating for agile workflows.
+#SyncfusionMAUIAssistant How to set working hours, configure work days, customize the first day of week, and hide non-working days.
+
+
+Min/Max Date Navigation Limits
+
+#SyncfusionMAUIAssistant How to restrict navigation with MinimumDateTime and MaximumDateTime to keep users in a valid planning range.
+
+
+Interactions and Keyboard Navigation
+
+#SyncfusionMAUIAssistant Enable tap-to-create, selection, and Windows keyboard navigation; customize selection behavior.
+
+
+Special Time Regions (Blocking Intervals)
+
+#SyncfusionMAUIAssistant Define special time regions to block interaction (e.g., holidays/breaks) and highlight them across views.
+
+
+Blackout Dates (Selectable Day Predicate)
+
+#SyncfusionMAUIAssistant Disable specific dates like weekends or holidays to prevent selection and interaction.
+
+
+Drag-and-Drop and Inline Editing
+
+#SyncfusionMAUIAssistant Enable drag to reschedule, resize to change duration, and inline editors for quick appointment updates.
+
+
+Resources and Grouping
+
+#SyncfusionMAUIAssistant Group by resources (rooms/people/teams) with color-coding and timeline views optimized for many resources.
+
+
+Load on Demand
+
+#SyncfusionMAUIAssistant Load appointments on demand with a loading indicator for large schedules.
+
+
+Reminders and Notifications Integration
+
+#SyncfusionMAUIAssistant Add reminder metadata to appointments and integrate with app notifications for alerts.
+
+
+Theming and Customization
+
+#SyncfusionMAUIAssistant How to style headers, cells, appointments, selection, and special regions; support Light/Dark themes.
+
+
+### ListView
+
+The Syncfusion .NET MAUI ListView provides a high-performance, flexible list with rich templating, data operations, and interactions.
+
+High-Performance Virtualization
+
+#SyncfusionMAUIAssistant Configure ListView with UI virtualization and recycling for smooth scrolling on large datasets.
+
 
 Data Binding
-```
-#SyncfusionMAUIAssistant How do I bind local or remote data to the Syncfusion .NET MAUI Kanban board?
-```
 
-Sorting
-```
-#SyncfusionMAUIAssistant Enable sorting of cards within columns in the .NET MAUI Kanban component.
-```
+#SyncfusionMAUIAssistant How to bind ListView to ObservableCollection/IEnumerable with change tracking and updates.
 
-Swimlane View
-```
-#SyncfusionMAUIAssistant Show me how to group Kanban cards using swimlane headers in .NET MAUI.
-```
 
-Kanban Card Editing
-```
-#SyncfusionMAUIAssistant How can I enable inline editing of Kanban cards in .NET MAUI?
-```
+Item Templates and Template Selector
 
-Virtualization
-```
-#SyncfusionMAUIAssistant Configure virtualization for performance with large Kanban datasets in .NET MAUI.
-```
+#SyncfusionMAUIAssistant How to use DataTemplate and DataTemplateSelector for different item appearances based on data.
 
-Localization
-```
-#SyncfusionMAUIAssistant How do I localize labels and messages in the .NET MAUI Kanban component?
-```
 
-Drag and Drop
-```
-#SyncfusionMAUIAssistant Enable drag-and-drop functionality for moving cards between columns in .NET MAUI.
-```
+Grouping with Sticky Headers
 
-Sorting and Swimlane
-```
-#SyncfusionMAUIAssistant Create a .NET MAUI Kanban board with swimlane grouping and sortable cards.
-```
+#SyncfusionMAUIAssistant Enable grouping with sticky group headers and customize group header templates.
 
-Editable Cards and Localization
-```
-#SyncfusionMAUIAssistant Show me how to edit cards and apply localization in the .NET MAUI Kanban.
-```
 
-Troubleshooting Kanban Drag and Drop
-```
-#SyncfusionMAUIAssistant Why isn’t drag-and-drop working correctly in my .NET MAUI Kanban board?
-```
+Sorting and Filtering
 
-Remote Data and Virtualization
-```
-#SyncfusionMAUIAssistant Bind remote data to .NET MAUI Kanban and enable virtualization for performance.
-```
+#SyncfusionMAUIAssistant Apply sorting and filtering via the ListView data source or ViewModel helpers.
 
-Advanced Kanban Setup
-```
-#SyncfusionMAUIAssistant Create a .NET MAUI Kanban board with data binding, swimlane, card editing, and drag-and-drop.
-```
 
-### RichTextEditor
+Selection (Single/Multiple)
 
-The Syncfusion .NET MAUI RichTextEditor offers a modern WYSIWYG editor with extensive formatting, media, and integration features for mobile and desktop.
+#SyncfusionMAUIAssistant Configure single and multiple selection modes and perform programmatic selection.
 
-Toolbar Configuration
-```
-#SyncfusionMAUIAssistant How do I customize the toolbar options in the Syncfusion RichTextEditor?
-```
 
-Link Manipulation
-```
-#SyncfusionMAUIAssistant Show me how to add, edit, and remove hyperlinks in RichTextEditor content.
-```
+Swipe Actions
 
-Read-only Mode
-```
-#SyncfusionMAUIAssistant How can I render the RichTextEditor in read-only mode and toggle editability?
-```
+#SyncfusionMAUIAssistant Add left and right swipe templates for contextual actions like delete and archive.
 
-Feature Enable/Disable
-```
-#SyncfusionMAUIAssistant Enable or disable features like toolbar, link, and image in the .NET MAUI RichTextEditor.
-```
 
-Undo and Redo
-```
-#SyncfusionMAUIAssistant Enable undo and redo functionality in the RichTextEditor toolbar.
-```
+Drag-and-Drop Reordering
 
-MVVM Data Binding
-```
-#SyncfusionMAUIAssistant How do I bind the RichTextEditor content using MVVM and validate input in .NET MAUI?
-```
+#SyncfusionMAUIAssistant Enable drag-and-drop to reorder ListView items and persist the new order.
 
-Content Import and Export
-```
-#SyncfusionMAUIAssistant Export RichTextEditor content to HTML or import existing HTML content.
-```
 
-Advanced Toolbar
-```
-#SyncfusionMAUIAssistant Create a RichTextEditor with toolbar options for formatting, links, and undo/redo.
-```
+Pull-to-Refresh
 
-Read-only and MVVM Support
-```
-#SyncfusionMAUIAssistant Use RichTextEditor in read-only mode and bind it to a ViewModel for submission in .NET MAUI.
-```
+#SyncfusionMAUIAssistant Add pull-to-refresh behavior to reload data with a loading indicator.
 
-Undo/Redo and Export
-```
-#SyncfusionMAUIAssistant Enable undo/redo and export content to HTML in RichTextEditor.
-```
 
-Module Injection and Link Editing
-```
-#SyncfusionMAUIAssistant Inject toolbar and link modules to enable rich link editing in the editor.
-```
+Load More / Infinite Scrolling
 
-### Calendar
+#SyncfusionMAUIAssistant Implement load-more at end of list with automatic and manual triggers for infinite scrolling.
 
-The Syncfusion .NET MAUI Calendar supports flexible date selection, localization, and custom rendering.
 
-Date Range Selection
-```
-#SyncfusionMAUIAssistant How do I enable date range selection in the Syncfusion .NET MAUI Calendar?
-```
+Variable Item Height
 
-Globalization Support
-```
-#SyncfusionMAUIAssistant Configure the .NET MAUI Calendar to support multiple cultures and languages.
-```
+#SyncfusionMAUIAssistant Configure dynamic item sizing to accommodate variable-height content.
 
-Multi-Date Selection
-```
-#SyncfusionMAUIAssistant Show me how to allow users to select multiple dates in the .NET MAUI Calendar.
-```
 
-Islamic Calendar Support
-```
-#SyncfusionMAUIAssistant How can I switch the .NET MAUI Calendar to use the Islamic calendar system?
-```
+Headers and Footers
 
-Skip Months Feature
-```
-#SyncfusionMAUIAssistant Enable skipping months in the .NET MAUI Calendar navigation for faster browsing.
-```
+#SyncfusionMAUIAssistant Add header and footer templates with optional sticky behavior for contextual UI.
 
-Calendar Showing Other Month Days
-```
-#SyncfusionMAUIAssistant How do I show days from adjacent months in the current .NET MAUI Calendar view?
-```
 
-Custom Day Cell Format
-```
-#SyncfusionMAUIAssistant Customize the day cell format in the .NET MAUI Calendar to show short weekday names.
-```
+Programmatic Scrolling
 
-Calendar Highlighting Weekends
-```
-#SyncfusionMAUIAssistant Highlight weekends in the .NET MAUI Calendar with a different background color.
-```
+#SyncfusionMAUIAssistant Scroll to a specific item or index with position (start/center/end) and animation options.
 
-Globalization and Islamic Calendar
-```
-#SyncfusionMAUIAssistant Configure the .NET MAUI Calendar for Arabic culture using Islamic calendar and localization.
-```
 
-Multi-Selection and Range
-```
-#SyncfusionMAUIAssistant Enable both multi-date selection and range selection in the .NET MAUI Calendar.
-```
+Layout Modes
 
-Troubleshooting Calendar Date Range
-```
-#SyncfusionMAUIAssistant Why isn’t my .NET MAUI Calendar selecting the correct date range?
-```
+#SyncfusionMAUIAssistant Switch between linear and grid-like layouts and configure span/count where supported.
 
-Advanced Calendar Setup
-```
-#SyncfusionMAUIAssistant Create a .NET MAUI Calendar with date range, multi-selection, globalization, and weekend highlights.
-```
+
+Empty View
+
+#SyncfusionMAUIAssistant Show a custom empty view template when no items are available.
+
+
+### AI AssistView
+
+The Syncfusion .NET MAUI AI AssistView provides a ready-made conversational UI for integrating LLMs with features like message list, input box, suggestions, attachments, and tool/action invocation.
+
+Messages
+
+#SyncfusionMAUIAssistant Bind AssistView to a message collection with system, user, and preload conversation history.
+
+
+Streaming and Typing Indicator
+
+#SyncfusionMAUIAssistant Enable token streaming with a typing indicator and incremental message updates.
+
+
+Suggestions (Quick Prompts)
+
+#SyncfusionMAUIAssistant How to add clickable suggestion chips that insert predefined prompts into the input box.
+
+
+Attachments and File Context
+
+#SyncfusionMAUIAssistant How to allow users to attach files and include file metadata/content as context in AI requests.
+
+
+Markdown and Rich Rendering
+
+#SyncfusionMAUIAssistant How to render assistant responses with Markdown (headings, code blocks) and support inline images/emojis.
+
+
+Avatars and Message Templates
+
+#SyncfusionMAUIAssistant How to customize user/assistant avatars and use DataTemplate/DataTemplateSelector for message bubbles.
+
+
+Error Handling and Retries
+
+#SyncfusionMAUIAssistant Hwo to handle provider errors with retry/cancel UI and graceful fallback messages.
+
+
+Theming and Styling
+
+#SyncfusionMAUIAssistant Apply custom themes for message bubbles, background, input bar, and suggestion chips (Light/Dark support).
+
+
+Command/Enter Behavior
+
+#SyncfusionMAUIAssistant Configure Enter to send and Shift+Enter for newline; support multiline input with character counter.
+
+
+Conversation Persistence
+
+#SyncfusionMAUIAssistant How to Save and restore conversations to local storage or database with message replay on app start.
+
+
+Citations and References
+
+#SyncfusionMAUIAssistant Display citations/references returned by the model as tappable links under the message.
+
 
 ## See also
 
