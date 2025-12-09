@@ -78,3 +78,23 @@ The DataGrid allows you to customize the color of the freeze pane line using the
 {% endtabs %}
 
 ![Customize freeze panes appearance in .NET MAUI DataGrid](Images\freeze-panes\maui-datagrid-freeze-panes-appearance.png)
+
+## Customize the Stroke Thickness of the Freeze Pane Line
+
+The DataGrid allows you to customize the thickness of the freeze pane divider line using the `DataGridStyle.FreezePaneLineStrokeThickness` property. This property specifies the stroke width for both the vertical divider that separates frozen columns and the horizontal divider that separates frozen rows.
+
+N> The default value of `FreezePaneLineStrokeThickness` is 1.
+
+{% tabs %}
+{% highlight xaml %}
+<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+    <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}" FrozenColumnCount="1" FrozenRowCount="1">
+        <syncfusion:SfDataGrid.DefaultStyle>
+            <syncfusion:DataGridStyle FreezePaneLineStrokeThickness="5" />
+        </syncfusion:SfDataGrid.DefaultStyle>
+    </syncfusion:SfDataGrid>
+</ContentPage> 
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="maui-datagrid-freeze-panes-strokethickness" src="Images\freeze-panes\maui-datagrid-freeze-panes-strokethickness.png" width="404" Height = "396"/>
