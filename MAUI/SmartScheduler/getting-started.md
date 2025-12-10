@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI Smart Scheduler control | Syncfusion®
-description: Learn here all about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Smart Scheduler (SfSmartScheduler) control, its basic features to schedule the events
+description: Learn here all about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Smart Scheduler (SfSmartScheduler) control.
 platform: maui
 control: SfSmartScheduler
 documentation: ug
@@ -137,7 +137,7 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Smart Scheduler  NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for [Syncfusion.Maui.SmartComponents](https://www.nuget.org/packages/Syncfusion.Maui.SmartComponents/) and install the latest version.
+2. Search for `Syncfusion.Maui.SmartComponents` and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
 ## Step 3: Register the handler
