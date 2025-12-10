@@ -1481,7 +1481,7 @@ SfDataGrid triggers, (CurrentCellDropDownSelectionChanged)[] event, when the Sel
 `SelectedIndex` property returns the index of selected item.
 `SelectedItem` property returns the selected item from drop down list.
 
-<img alt="DataGridMultiColumnComboBox column .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-multicolumn-combobox-column.png" width="404"/>
+<img alt="DataGridMultiColumnComboBox column .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-MultiColumn-ComboBox-column.png" width="404"/>
 
 ### Auto-complete support
 
@@ -1491,7 +1491,7 @@ You can enable the `SfMultiColumnComboBox` to automatically complete the entered
 
 You can enable the `SfMultiColumnComboBox` to dynamically filter the drop-down list items based on the text typed in the entry by setting (AllowIncrementalFiltering)[] property to `true`. Additionally, `DataGridMultiColumnComboBoxColumn` allows filtering based on case sensitivity by setting (AllowCaseSensitiveFiltering)[] to `true`. These features help users to quickly select items from large list.
 
-<img alt="DataGridMultiColumnComboBox column with Filtering .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-multicolumn-combobox-column-filtering.png" width="404"/>
+<img alt="DataGridMultiColumnComboBox column with Filtering .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-MultiColumn-ComboBox-column-filtering.png" width="404"/>
 
 ### Null value support
 
@@ -1578,9 +1578,9 @@ internal class ItemsSourceSelector : IItemsSourceSelector
 
 {% endtabs %}
 
-<img alt="DataGridMultiColumnComboBox column with ItemsSourceSelector .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-multicolumn-combobox-column-itemsourceselector.png" width="404"/>
+<img alt="DataGridMultiColumnComboBox column with ItemsSourceSelector .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-MultiColumn-ComboBox-column-itemsourceselector.png" width="404"/>
 
-<img alt="DataGridMultiColumnComboBox column with ItemsSourceSelector .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-multicolumn-combobox-column-itemsourceselector2.png" width="404"/>
+<img alt="DataGridMultiColumnComboBox column with ItemsSourceSelector .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-MultiColumn-ComboBox-column-itemsourceselector2.png" width="404"/>
 
 You can download the sample from the following link: (Sample)[https://github.com/SyncfusionExamples/How-to-load-different-items-for-each-row-in-MultiColumn-ComboBox-Column-in-.NET-MAUI-SfDataGrid].
 
