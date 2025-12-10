@@ -12,7 +12,7 @@ keywords: maui smart datagrid, ai datagrid maui, smart grid maui, ai gridview ma
 
 The .NET MAUI Smart DataGrid is an AI-assisted data grid control that enhances how users interact with data. It enables natural language–driven operations for sorting, filtering, grouping, and highlighting, helping users perform complex tasks more intuitively and efficiently.
 
-<img src="Images\getting-started\maui-smart-datagrid.png" width="600" alt="Getting started with .NET MAUI Smart DataGrid." />
+<img src="Images\getting-started\maui-smart-datagrid.png" width="600" alt=".NET MAUI Smart DataGrid." />
 
 **Key Features**
 

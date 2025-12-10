@@ -292,7 +292,7 @@ namespace GettingStarted
 }
 {% endhighlight %}
 
-## Step 4: Add a Basic Smart DataGrid
+## Step 5: Add a Basic Smart DataGrid
 
 1. Import the control namespace `Syncfusion.Maui.SmartComponents` in XAML or C# code.
 2. Initialize the [SfSmartDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartDataGrid.html) control.
@@ -328,7 +328,7 @@ public partial class MainPage : ContentPage
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Step 5: Define the View Model
+## Step 6: Define the View Model
 
 ### Data Model
 
@@ -474,7 +474,7 @@ dataGrid.ItemsSource = viewModel.OrderInfoCollection;
 {% endhighlight %}
 {% endtabs %}
 
-## Step 6: Enabling AI-Assisted Operations
+## Step 7: Enabling AI-Assisted Operations
 
 The Smart DataGrid supports natural language operations for enhanced data interaction. These features require configuring an AI provider in your application.
 
@@ -487,7 +487,7 @@ Once configured, leverage AI-assisted features such as:
 - **Smart Grouping**: Group data with prompts like “Group by ship country, then by customer”.
 - **Row and Cell Highlighting**: Highlight critical information, e.g., “Highlight orders where quantity is greater than 10”.
 
-## Step 7: Running the Application
+## Step 8: Running the Application
 
 Press **F5** to build and run the application. Once compiled, the smart datagrid will be displayed with the data provided, and AI features will be available after configuration.
 
