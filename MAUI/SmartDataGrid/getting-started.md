@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI Smart DataGrid | Syncfusion®
-description: Learn how to get started with the Syncfusion® .NET MAUI Smart DataGrid control, add the NuGet package, register the license, initialize the control, and bind data.
+description: Learn about getting started with Syncfusion .NET MAUI Smart DataGrid (SfDataGrid) control, its elements, and more here.
 platform: MAUI
 control: SfSmartDataGrid
 documentation: ug
@@ -32,7 +32,7 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Smart DataGrid NuGet Package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
-2. Search for [Syncfusion.Maui.SmartComponents](https://www.nuget.org/packages/Syncfusion.Maui.SmartComponents/) and install the latest version.
+2. Search for [Syncfusion.Maui.SmartComponents]() and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 ## Step 3: Register the handler
@@ -213,7 +213,7 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Smart DataGrid NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for [Syncfusion.Maui.SmartComponents](https://www.nuget.org/packages/Syncfusion.Maui.SmartComponents/) and install the latest version.
+2. Search for [Syncfusion.Maui.SmartComponents]() and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
 ## Step 3: Register the handler
@@ -495,4 +495,4 @@ Here is the result of the previous codes,
 
 <img src="Images\getting-started\maui-smart-datagrid.png" width="600" alt="Getting started with .NET MAUI Smart DataGrid." />
 
-N> You can refer to our [.NET MAUI Smart DataGrid](https://www.syncfusion.com/maui-controls/maui-smart-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Smart DataGrid Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SmartDataGrid) that shows you how to render the Smart DataGrid in .NET MAUI.
+N> You can refer to our [.NET MAUI Smart DataGrid]() feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Smart DataGrid Example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SmartDataGrid) that shows you how to render the Smart DataGrid in .NET MAUI.
