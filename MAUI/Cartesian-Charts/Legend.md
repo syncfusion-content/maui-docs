@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Legend in .NET MAUI Chart control | Syncfusion
+title: Legend in .NET MAUI Cartesian Chart control | Syncfusion
 description: This section explains about how to initialize legend and its customization in Syncfusion® .NET MAUI Chart (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
@@ -232,6 +232,45 @@ this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
+
+## Floating legend
+
+The floating legend feature allows you to position the legend inside the chart area based on its defined placement. When [IsFloating]() is set to true, the legend will start from the specified [Placement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_Placement) (such as Top, Bottom, Left, or Right) and then move according to the offset values, enabling precise control over the legend’s location.
+
+* [OffsetX](): Specifies the horizontal distance from the defined placement position.
+* [OffsetY](): Specifies the vertical distance from the defined placement position.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+    <chart:SfCartesianChart.Legend>
+        <chart:ChartLegend Placement="Top" IsFloating="True" OffsetX="-170" OffsetY="30"/>
+    </chart:SfCartesianChart.Legend>
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+chart.Legend = new ChartLegend()
+{ 
+    Placement = LegendPlacement.Top
+    IsFloating = true
+    OffsetX = -170;
+    OffsetY = 30; 
+};
+
+this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Floating Legend support in MAUI Cartesian Chart](Legend-images/floating_legend.png)
 
 ## Toggle the series visibility
 The visibility of series can be controlled by tapping the legend item using the [ToggleSeriesVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_ToggleSeriesVisibility) property. The default value of ToggleSeriesVisibility is `false`.
