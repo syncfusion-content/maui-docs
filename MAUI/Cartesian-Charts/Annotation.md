@@ -621,15 +621,15 @@ this.Content = chart;
 
 **AnnotationTapped**
 
-The [`AnnotationTapped`]() event is triggered when the user has clicked the annotation. The argument [`AnnotationTappedEventArgs`]() contains the following information.
+The [`AnnotationTapped`]() event occurs when an annotation is tapped. The [`AnnotationTappedEventArgs`]() provides the following details:
 
-* [`annotation`]() – used to get the instance of the annotation that was tapped.
-* [`x`]() – used to get the x position of touch point on annotation.
-* [`y`]() – used to get the y position of touch point on annotation.
+* [`annotation`]() – the annotation instance that was tapped.
+* [`x`]() – the X coordinate of the touch or mouse click position.
+* [`y`]() – the Y coordinate of the touch or mouse click position.
 
-## Public Methods
+## Public methods
 
-The following override methods are available in the annotation class to handle touch interactions:
+The following override methods allow you to handle touch interactions on annotations:
 
 * [`OnTouchDown`]() – triggered when touch starts (down) on the annotation.
 * [`OnTouchMove`]() – triggered when moving (dragging) the finger or mouse across the annotation.
