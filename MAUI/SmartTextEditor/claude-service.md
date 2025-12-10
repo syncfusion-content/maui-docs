@@ -9,7 +9,7 @@ documentation: ug
 
 # Claude AI Integration with .NET MAUI Smart Text Editor
 
-The Syncfusion .NET MAUI Smart Text Editor (SfSmartTextEditor) can provide AI-powered suggestions while typing. You can integrate Anthropic Claude AI using the IChatInferenceService interface, which acts as a bridge between the editor and your custom AI service.
+The Syncfusion [.NET MAUI Smart Text Editor] (SfSmartTextEditor) can provide AI-powered suggestions while typing. You can integrate Anthropic `Claude AI` using the `IChatInferenceService` interface, which acts as a bridge between the editor and your custom AI service.
 
 ## Setting Up Claude
 
@@ -103,7 +103,7 @@ N> Store the Claude API key in `appsettings.json` (e.g., `{ "Claude": { "ApiKey"
 
 ## Define Request and Response Models
 
-Create a file named ClaudeModels.cs in the Services folder and add:
+Create a file named `ClaudeModels.cs` in the Services folder and add:
 
 {% tabs %}
 {% highlight c# tabtitle="ClaudeModels.cs" %}
@@ -137,7 +137,7 @@ public class ClaudeContentBlock
 
 ## Implement IChatInferenceService
 
-Create ClaudeInferenceService.cs:
+Create `ClaudeInferenceService.cs`:
 
 {% tabs %}
 {% highlight c# tabtitle="ClaudeInferenceService.cs" %}
@@ -164,7 +164,7 @@ public class ClaudeInferenceService : IChatInferenceService
 
 ## Register Services in MAUI
 
-Update MauiProgram.cs:
+Update `MauiProgram.cs`:
 
 {% tabs %}
 {% highlight c# tabtitle="MauiProgram.cs" hl_lines="9 10" %}

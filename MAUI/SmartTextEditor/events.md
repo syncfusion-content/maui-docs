@@ -25,14 +25,14 @@ The [TextChanged] event is triggered whenever the text in the smart text editor 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<ste:SfSmartTextEditor x:Name="ste" 
+<smarttexteditor:SfSmartTextEditor x:Name="smarttexteditor" 
                       TextChanged="OnTextChanged">
-</ste:SfSmartTextEditor>
+</smarttexteditor:SfSmartTextEditor>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
 
-this.ste.TextChanged += OnTextChanged;
+this.smarttexteditor.TextChanged += OnTextChanged;
 private void OnTextChanged(object sender, Syncfusion.Maui.SmartComponents.TextChangedEventArgs e)
 {
     var oldValue = e.OldTextValue;
@@ -49,12 +49,12 @@ The SfSmartTextEditor includes a built-in property called `TextChangedCommand`, 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<ste:SfSmartTextEditor x:Name="ste"
+<smarttexteditor:SfSmartTextEditor x:Name="smarttexteditor"
                     TextChangedCommand="TextChangedCommand">
 <ContentPage.BindingContext>
     <local:SmartTextEditorViewModel/>
 </ContentPage.BindingContext>
-</ste:SfSmartTextEditor>
+</smarttexteditor:SfSmartTextEditor>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3,6,8" %}

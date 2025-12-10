@@ -9,7 +9,7 @@ documentation: ug
 
 # DeepSeek AI Integration with .NET MAUI Smart Text Editor
 
-The Syncfusion .NET MAUI Smart Text Editor (SfSmartTextEditor) can provide AI-powered suggestions while typing. You can integrate DeepSeek using the IChatInferenceService interface, which standardizes communication between the editor and your custom AI service.
+The Syncfusion [.NET MAUI Smart Text Editor] (SfSmartTextEditor) can provide AI-powered suggestions while typing. You can integrate DeepSeek using the `IChatInferenceService` interface, which standardizes communication between the editor and your custom AI service.
 
 ## Setting Up DeepSeek
 
@@ -20,7 +20,7 @@ The Syncfusion .NET MAUI Smart Text Editor (SfSmartTextEditor) can provide AI-po
 
 ## Create a DeepSeek AI Service
 
-This service manages requests to the DeepSeek Chat Completions endpoint and returns the generated text.
+This service manages requests to the `DeepSeek` Chat Completions endpoint and returns the generated text.
 
 1. Create a `Services` folder in your project.
 2. Add a new file named `DeepSeekAIService.cs` in the `Services` folder.
@@ -100,7 +100,7 @@ N> Store the DeepSeek API key in `appsettings.json` (e.g., `{ "DeepSeek": { "Api
 
 ## Define Request and Response Models
 
-Create a file named DeepSeekModels.cs in the Services folder and add:
+Create a file named `DeepSeekModels.cs` in the Services folder and add:
 
 {% tabs %}
 {% highlight c# tabtitle="DeepSeekModels.cs" %}
@@ -133,7 +133,7 @@ public class DeepSeekChoice
 
 ## Implement IChatInferenceService
 
-Create DeepSeekInferenceService.cs:
+Create `DeepSeekInferenceService.cs`:
 
 {% tabs %}
 {% highlight c# tabtitle="DeepSeekInferenceService.cs" %}
@@ -160,7 +160,7 @@ public class DeepSeekInferenceService : IChatInferenceService
 
 ## Register Services in MAUI
 
-Update MauiProgram.cs:
+Update `MauiProgram.cs`:
 
 {% tabs %}
 {% highlight c# tabtitle="MauiProgram.cs" hl_lines="9 10" %}

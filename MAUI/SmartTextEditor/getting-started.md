@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Getting started with .NET MAUI Smart Text Editor
-This section explains how to add the [.NET MAUI SmartTextEditor](https://www.syncfusion.com/maui-controls/maui-smarttexteditor) control. It covers only the basic features needed to get started with the Syncfusion Smart Text Editor. Follow the steps below to add a .NET MAUI Smart Text Editor control to your project.
+This section explains how to add the [.NET MAUI SmartTextEditor] control. It covers only the basic features needed to get started with the Syncfusion Smart Text Editor. Follow the steps below to add a .NET MAUI Smart Text Editor control to your project.
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -28,7 +28,7 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI SmartComponents NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for [Syncfusion.Maui.SmartComponents](https://www.nuget.org/packages/Syncfusion.Maui.SmartComponents/) and install the latest version.
+2. Search for [Syncfusion.Maui.SmartComponents] and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 ## Step 3: Register the handler
@@ -66,16 +66,16 @@ namespace GettingStarted
 ## Step 4: Add .NET MAUI Smart Text Editor control
 
 1. To initialize the control, import the `Syncfusion.Maui.SmartComponents` namespace into your code.
-2. Initialize [SfSmartTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartTextEditor.html).
+2. Initialize [SfSmartTextEditor]().
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
 
 <ContentPage   
     . . .
-    xmlns:ste="clr-namespace:Syncfusion.Maui.SmartComponents;assembly=Syncfusion.Maui.SmartComponents">
+    xmlns:smarttexteditor="clr-namespace:Syncfusion.Maui.SmartComponents;assembly=Syncfusion.Maui.SmartComponents">
 
-    <ste:SfSmartTextEditor />
+    <smarttexteditor:SfSmartTextEditor />
 </ContentPage>
 
 {% endhighlight %}
@@ -89,8 +89,8 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        SfSmartTextEditor ste = new SfSmartTextEditor();
-        this.Content = ste;
+        SfSmartTextEditor smarttexteditor = new SfSmartTextEditor();
+        this.Content = smarttexteditor;
     }
 }
 
@@ -155,16 +155,16 @@ namespace GettingStarted
 ## Step 4: Add .NET MAUI Smart Text Editor control
 
 1. To initialize the control, import the `Syncfusion.Maui.SmartComponents` namespace into your code.
-2. Initialize [SfSmartTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartTextEditor.html).
+2. Initialize [SfSmartTextEditor]().
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
 
 <ContentPage   
     . . .
-    xmlns:ste="clr-namespace:Syncfusion.Maui.SmartComponents;assembly=Syncfusion.Maui.SmartComponents">
+    xmlns:smarttexteditor="clr-namespace:Syncfusion.Maui.SmartComponents;assembly=Syncfusion.Maui.SmartComponents">
 
-    <ste:SfSmartTextEditor />
+    <smarttexteditor:SfSmartTextEditor />
 </ContentPage>
 
 {% endhighlight %}
@@ -178,8 +178,8 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        SfSmartTextEditor ste = new SfSmartTextEditor();
-        this.Content = ste;
+        SfSmartTextEditor smarttexteditor = new SfSmartTextEditor();
+        this.Content = smarttexteditor;
     }
 }
 
@@ -252,9 +252,9 @@ namespace GettingStarted
 
 <ContentPage
     . . .
-    xmlns:ste="clr-namespace:Syncfusion.Maui.SmartComponents;assembly=Syncfusion.Maui.SmartComponents">
+    xmlns:smarttexteditor="clr-namespace:Syncfusion.Maui.SmartComponents;assembly=Syncfusion.Maui.SmartComponents">
 
-    <ste:SfSmartTextEditor />
+    <smarttexteditor:SfSmartTextEditor />
 </ContentPage>
 
 {% endhighlight %}
@@ -268,8 +268,8 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        SfSmartTextEditor ste = new SfSmartTextEditor();
-        this.Content = ste;
+        SfSmartTextEditor smarttexteditor = new SfSmartTextEditor();
+        this.Content = smarttexteditor;
     }
 }
 
@@ -278,7 +278,7 @@ public partial class MainPage : ContentPage
 {% endtabcontent %}
 {% endtabcontents %}
 
-# Configure user role and phrases for suggestions
+## Configure user role and phrases for suggestions
 
 Set the writing context and preferred expressions to guide completions:
 - **UserRole** (required): Describes who is typing and the intent, shaping the tone and relevance of suggestions.
@@ -289,19 +289,19 @@ Set the writing context and preferred expressions to guide completions:
 
 <ContentPage
     .....
-    xmlns:ste="clr-namespace:Syncfusion.Maui.SmartComponents;assembly=Syncfusion.Maui.SmartComponents">
+    xmlns:smarttexteditor="clr-namespace:Syncfusion.Maui.SmartComponents;assembly=Syncfusion.Maui.SmartComponents">
 
-    <ste:SfSmartTextEditor
+    <smarttexteditor:SfSmartTextEditor
         Placeholder="Type your reply..."
         UserRole="Support engineer responding to customer tickets">
-        <ste:SfSmartTextEditor.UserPhrases>
+        <smarttexteditor:SfSmartTextEditor.UserPhrases>
             <x:Array Type="{x:Type x:String}">
                 <x:String>Thanks for reaching out.</x:String>
                 <x:String>Please share a minimal reproducible sample.</x:String>
                 <x:String>We’ll update you as soon as we have more details.</x:String>
             </x:Array>
-        </ste:SfSmartTextEditor.UserPhrases>
-    </ste:SfSmartTextEditor>
+        </smarttexteditor:SfSmartTextEditor.UserPhrases>
+    </smarttexteditor:SfSmartTextEditor>
 </ContentPage>
 
 {% endhighlight %}
@@ -311,7 +311,7 @@ N> If no AI inference service is configured, the editor generates offline sugges
 
 ## Configure AI Service
 
-The Smart Text Editor uses a chat inference service resolved from dependency injection to generate contextual suggestions. Register a compatible chat client and an inference adapter in MauiProgram.cs. If no AI inference service is configured, the editor generates offline suggestions from your UserPhrases.
+The Smart Text Editor uses a chat inference service resolved from dependency injection to generate contextual suggestions. Register a compatible chat client and an inference adapter in `MauiProgram.cs`. If no AI inference service is configured, the editor generates offline suggestions from your UserPhrases.
 
 ### Azure OpenAI
 
@@ -363,7 +363,7 @@ builder.ConfigureSyncfusionAIServices();
 
 ### Ollama
 
-To use Ollama for running self-hosted models:
+To use Ollama for running self hosted models:
 
 1. **Download and install Ollama**  
    Visit [Ollama's official website](https://ollama.com) and install the application appropriate for your operating system.

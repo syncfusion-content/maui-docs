@@ -7,11 +7,11 @@ control: SfSmartTextEditor
 documentation: ug
 ---
 
-# Choose How Suggestions Are Displayed
-The Smart Text Editor supports two display modes for showing completions as you type: Inline and Popup.
+# Choose how suggestions are displayed
+The Smart Text Editor supports two display modes for showing completions as you type: `Inline` and `Popup`.
 
-- Inline: Renders the predicted text in place after the caret, matching your text style.
-- Popup: Shows a compact hint near the caret that you can tap or accept via key press.
+- [Inline]: Renders the predicted text in place after the caret, matching your text style.
+- [Popup]: Shows a compact hint near the caret that you can tap or accept via key press.
 
 N>
 - Windows and Mac Catalyst default to **Inline**; Android and iOS default to **Popup**.
@@ -27,9 +27,9 @@ Inline mode displays the suggested text directly within the editor, seamlessly c
 <ContentPage  
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:ste="clr-namespace:Syncfusion.Maui.SmartComponents;assembly=Syncfusion.Maui.SmartComponents">
+    xmlns:smarttexteditor="clr-namespace:Syncfusion.Maui.SmartComponents;assembly=Syncfusion.Maui.SmartComponents">
 
-    <ste:SfSmartTextEditor
+    <smarttexteditor:SfSmartTextEditor
         Placeholder="Start typing..."
         UserRole="Email author responding to inquiries"
         SuggestionDisplayMode="Inline" />
@@ -40,7 +40,7 @@ Inline mode displays the suggested text directly within the editor, seamlessly c
 
 using Syncfusion.Maui.SmartComponents;
 
-var editor = new SfSmartTextEditor
+var smarttexteditor = new SfSmartTextEditor
 {
     Placeholder = "Start typing...",
     UserRole = "Email author responding to inquiries",
@@ -51,7 +51,7 @@ var editor = new SfSmartTextEditor
 {% endtabs %}
 
 ## Popup suggestion mode
-Popup mode displays the suggested text in a small overlay near the caret, making it easy to review and accept without interrupting your typing. This mode is especially useful on touch-based devices where tapping the suggestion feels natural and convenient.
+Popup mode displays the suggested text in a small overlay near the caret, making it easy to review and accept without interrupting your typing. This mode is especially useful on touch based devices where tapping the suggestion feels natural and convenient.
 
 {% tabs %}
 {% highlight C# tabtitle="XAML" hl_lines="9" %}
@@ -59,9 +59,9 @@ Popup mode displays the suggested text in a small overlay near the caret, making
 <ContentPage  
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:ste="clr-namespace:Syncfusion.Maui.SmartComponents;assembly=Syncfusion.Maui.SmartComponents">
+    xmlns:smarttexteditor="clr-namespace:Syncfusion.Maui.SmartComponents;assembly=Syncfusion.Maui.SmartComponents">
 
-    <ste:SfSmartTextEditor
+    <smarttexteditor:SfSmartTextEditor
         Placeholder="Start typing..."
         UserRole="Email author responding to inquiries"
         SuggestionDisplayMode="Popup" />
@@ -72,7 +72,7 @@ Popup mode displays the suggested text in a small overlay near the caret, making
 
 using Syncfusion.Maui.SmartComponents;
 
-var editor = new SfSmartTextEditor
+var smarttexteditor = new SfSmartTextEditor
 {
     Placeholder = "Start typing...",
     UserRole = "Email author responding to inquiries",

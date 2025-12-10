@@ -9,7 +9,7 @@ documentation: ug
 
 # Gemini AI Integration with .NET MAUI Smart Text Editor
 
-The Syncfusion .NET MAUI Smart Text Editor provides AI-powered suggestions for context-aware text input. By default, it works with providers like OpenAI or Azure OpenAI, but you can integrate Google Gemini AI using the IChatInferenceService interface. This guide explains how to implement and register Gemini AI for the Smart Text Editor in a .NET MAUI app.
+The Syncfusion [.NET MAUI Smart Text Editor] provides AI-powered suggestions for context-aware text input. By default, it works with providers like OpenAI or Azure OpenAI, but you can integrate `Google Gemini AI` using the `IChatInferenceService` interface. This guide explains how to implement and register Gemini AI for the Smart Text Editor in a .NET MAUI app.
 
 ## Setting Up Gemini
 
@@ -20,10 +20,10 @@ The Syncfusion .NET MAUI Smart Text Editor provides AI-powered suggestions for c
 
 ## Create a Gemini AI Service
 
-Create a service class to handle Gemini API calls, including authentication, request/response handling, and safety settings.
+Create a service class to handle `Gemini API` calls, including authentication, request/response handling, and safety settings.
 
-1. Create a Services folder in your MAUI project.
-2. Add a new file named GeminiService.cs in the Services folder.
+1. Create a `Services` folder in your MAUI project.
+2. Add a new file named `GeminiService.cs` in the Services folder.
 3. Implement the service as shown below:
 
 {% tabs %}
@@ -109,7 +109,7 @@ N> Store the Gemini API key securely in appsettings.json or as an environment va
 
 ## Define Request and Response Models
 
-Create a file named GeminiModels.cs in the Services folder and add:
+Create a file named `GeminiModels.cs` in the Services folder and add:
 
 {% tabs %}
 {% highlight c# tabtitle="GeminiModels.cs" %}
@@ -155,7 +155,7 @@ public class GeminiChatParameters
 
 ## Implement IChatInferenceService
 
-Create GeminiInferenceService.cs:
+Create `GeminiInferenceService.cs`:
 
 {% tabs %}
 {% highlight c# tabtitle="GeminiInferenceService.cs" %}
@@ -183,7 +183,7 @@ public class GeminiInferenceService : IChatInferenceService
 
 ## Register Services in MAUI
 
-Update MauiProgram.cs:
+Update `MauiProgram.cs`:
 
 {% tabs %}
 {% highlight c# tabtitle="MauiProgram.cs" hl_lines="9 10" %}

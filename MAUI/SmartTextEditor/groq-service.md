@@ -9,7 +9,7 @@ documentation: ug
 
 # Groq AI Integration with .NET MAUI Smart Text Editor
 
-The Syncfusion .NET MAUI Smart Text Editor (SfSmartTextEditor) can show AI‑powered suggestions while you type. You can integrate Groq using the IChatInferenceService interface and Groq’s OpenAI‑compatible Chat Completions API for fast, low‑latency results.
+The Syncfusion [.NET MAUI Smart Text Editor] (SfSmartTextEditor) can show AI‑powered suggestions while you type. You can integrate `Groq` using the `IChatInferenceService` interface and Groq’s OpenAI‑compatible Chat Completions API for fast, low‑latency results.
 
 ## Setting Up Groq
 
@@ -103,7 +103,7 @@ N> Store the Groq API key in `appsettings.json` (e.g., `{ "Groq": { "ApiKey": "y
 
 ## Define Request and Response Models
 
-Create a file named GroqModels.cs in the Services folder and add:
+Create a file named `GroqModels.cs` in the Services folder and add:
 
 {% tabs %}
 {% highlight c# tabtitle="GroqModels.cs" %}
@@ -137,7 +137,7 @@ public class GroqResponseObject
 
 ## Implement IChatInferenceService
 
-Create GroqInferenceService.cs:
+Create `GroqInferenceService.cs`:
 
 {% tabs %}
 {% highlight c# tabtitle="GroqInferenceService.cs" %}
@@ -164,7 +164,7 @@ public class GroqInferenceService : IChatInferenceService
 
 ## Register Services in MAUI
 
-Update MauiProgram.cs:
+Update `MauiProgram.cs`:
 
 {% tabs %}
 {% highlight c# tabtitle="MauiProgram.cs" hl_lines="9 10" %}
