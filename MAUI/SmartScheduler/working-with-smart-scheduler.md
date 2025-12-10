@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Working with .NET MAUI Smart Scheduler control | Syncfusion®
-description: Working with Syncfusion<sup>&reg;</sup> .NET MAUI Smart Scheduler(SfSmartScheduler) control.
+description: Learn here all about working with Syncfusion<sup>&reg;</sup> .NET MAUI Smart Scheduler(SfSmartScheduler) control.
 platform: maui
 control: SfSmartScheduler
 documentation: ug
