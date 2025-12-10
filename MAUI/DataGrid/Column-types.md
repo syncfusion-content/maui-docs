@@ -1426,9 +1426,9 @@ The `DataGridNumericColumn` allows formatting the numeric data with culture-spec
 
 ## DataGridMultiColumnComboBoxColumn
 
-The `DataGridMultiColumnComboBoxColumn` displays enumeration as cell contents. It hosts (SfMultiColumnComboBox)[] in editing mode. `DataGridMultiColumnComboBoxColumn` allows you to define the predefined columns in its drop-down like SfDataGrid.
+The `DataGridMultiColumnComboBoxColumn` displays enumeration as cell contents and hosts a (SfMultiColumnComboBox)[] in editing mode. This column type allows you to define the predefined columns in its drop-down, similar to SfDataGrid.
 
-You can change the value by selecting the item from drop down or you can edit the SfMultiColumnComboBox.Entry. You can disable the editing by setting (IsTextReadOnly)[].
+You can change the value by selecting the item from drop down or by editting the entry in SfMultiColumnComboBox. To disable text editing, set the (IsTextReadOnly)[] property to `true`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1466,8 +1466,8 @@ var column = new DataGridMultiColumnComboBoxColumn()
     AutoGenerateColumns = false,
     Columns = new ColumnCollection()
     {
-        new DataGridTextColumn(){MappingName = "CustomerID"},
-        new DataGridNumericColumn(){MappingName = "ProductID"}
+        new DataGridTextColumn() { MappingName = "CustomerID" },
+        new DataGridNumericColumn() { MappingName = "ProductID" }
     }
 };
 this.dataGrid.Columns.Add(column);
@@ -1485,11 +1485,11 @@ SfDataGrid triggers, (CurrentCellDropDownSelectionChanged)[] event, when the Sel
 
 ### Auto-complete support
 
-You can allow SfMultiColumnComboBox to complete the entered input value automatically by setting the (AllowAutoComplete)[] property to `true`. `AllowAutoComplete` property will autocomplete the input value by comparing it to each item of the underlying data source of `DataGridMultiColumnComboBoxColumn` and returns the matched value by DisplayMember.
+You can enable the SfMultiColumnComboBox to automatically complete the entered input value by setting the (AllowAutoComplete)[] property to `true`. When enabled, this property compares the entered text with each item in the underlying data source of DataGridMultiColumnComboBoxColumn and autocompletes the input with the matched value based on the DisplayMember.
 
 ### Filtering
 
-You can allow SfMultiColumnComboBox to filter the drop-down list items dynamically based on the text typed on editor by setting (AllowIncrementalFiltering)[] property to `true`. DataGridMultiColumnComboBoxColumn allows you to filter the items based on case by setting (AllowCaseSensitiveFiltering)[] to `true`. This will help users to select from large number of items.
+You can enable the SfMultiColumnComboBox to dynamically filter the drop-down list items based on the text typed in the entry by setting (AllowIncrementalFiltering)[] property to `true`. Additionally, DataGridMultiColumnComboBoxColumn allows filtering based on case sensitivity by setting (AllowCaseSensitiveFiltering)[] to `true`. These features help users to quickly select items from large list.
 
 <img alt="DataGridMultiColumnComboBox column with Filtering .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-MultiColumn-ComboBox-column-filtering.png" width="404" height="396"/>
 
@@ -1502,11 +1502,9 @@ The AllowNullValue will work only when the underlying property type is Nullable.
 
 ### Popup Size Customization
 
-You can change the size of drop-down popup by setting (PopupWidth)[] and (PopupHeight)[] property. The PopupWidth will be set based on (PopUpMinWidth)[] property when the value is not set. By default, the `PopupMinWidth` value is 200.0.
+You can change the size of drop-down popup by setting (PopupWidth)[] and (PopupHeight)[] properties. If these values are not set, the popup width defaults to the `PopupMinWidth` property, which is 200.0 by default. Similarly, the popup height defaults to the `PopupMinHeight` property, which is 300.0 by default.
 
-Similarly, the PopUpHeight will be set based on (PopUpMinHeight)[] when the value is not set. The default value of `PopUpMinHeight` is 300.0.
-
-SfMultiColumnComboBox can automatically adjust the popup width based on the actual size of SfDataGrid when setting (IsAutoPopupSize)[] to `true`.
+Additionally, SfMultiColumnComboBox can automatically adjust the popup width based on the actual size of the SfDataGrid by setting the (IsAutoPopupSize)[] property to `true`.
 
 ### Loading different ItemsSource for each row
 
@@ -1514,37 +1512,37 @@ You can load different ItemsSource to each row of `DataGridMultiColumnComboBoxCo
 
 ### Implementing IItemsSourceSelector
 
-`ItemsSourceSelector` needs to implement the `IItemsSourceSelector` interface, which is required to implement the `GetItemsSource` method. The `GetItemsSource` method receives the following parameters:
+`ItemsSourceSelector` must implement the `IItemsSourceSelector` interface, which requires the implementation of the `GetItemsSource` method. The `GetItemsSource` method receives the following parameters:
 
-* **Record** – Data object associated with row.
-* **Data Context** – Data context of data grid.
+* **Record** – The data object associated with row.
+* **Data Context** – The data context of data grid.
 
-In the following code, ItemsSource for `ShipCity` column is returned based on `ShipCountry` column value using the record and data context of data grid passed to the `GetItemsSource` method.
+In the following example, the items source for `ShipCity` column is returned based on the value of the `ShipCountry` column, using the record and data context passed to the `GetItemsSource` method.
 
 {% tabs %}
 {% highlight xaml %}
 <ContentPage.Resources>
-    <local:ItemsSourceSelector x:Key="itemSourceSelector"/>
+    <local:ItemsSourceSelector x:Key = "itemSourceSelector"/>
 </ContentPage.Resources>
 
-<syncfusion:SfDataGrid ItemsSource="{Binding Orders}"  
-                       AllowEditing="True" 
-                       SelectionMode="Single" 
-                       AutoGenerateColumnsMode="None">
+<syncfusion:SfDataGrid ItemsSource = "{Binding Orders}"  
+                       AllowEditing = "True" 
+                       SelectionMode = "Single" 
+                       AutoGenerateColumnsMode = "None">
     <syncfusion:SfDataGrid.Columns>
-        <syncfusion:DataGridNumericColumn MappingName="OrderID" HeaderText="Order ID" Format="D"/>
-        <syncfusion:DataGridMultiColumnComboBoxColumn AutoGenerateColumnsMode="None"
-                                                      DisplayMember="ShipCity"
-                                                      HeaderText="Ship City"
-                                                      ItemsSourceSelector="{StaticResource itemSourceSelector}"
-                                                      MappingName="ShipCity"
-                                                      ValueMember="ShipCity">
+        <syncfusion:DataGridNumericColumn MappingName = "OrderID" HeaderText = "Order ID" Format = "D"/>
+        <syncfusion:DataGridMultiColumnComboBoxColumn AutoGenerateColumnsMode = "None"
+                                                      DisplayMember = "ShipCity"
+                                                      HeaderText = "Ship City"
+                                                      ItemsSourceSelector = "{StaticResource itemSourceSelector}"
+                                                      MappingName = "ShipCity"
+                                                      ValueMember = "ShipCity">
             <syncfusion:DataGridMultiColumnComboBoxColumn.Columns>
-                <syncfusion:DataGridTextColumn HeaderText="Ship City" MappingName="ShipCity" />
-                <syncfusion:DataGridCheckBoxColumn HeaderText="Is Primary" MappingName="IsPrimary" />
+                <syncfusion:DataGridTextColumn HeaderText = "Ship City" MappingName = "ShipCity" />
+                <syncfusion:DataGridCheckBoxColumn HeaderText = "Is Primary" MappingName = "IsPrimary" />
             </syncfusion:DataGridMultiColumnComboBoxColumn.Columns>
         </syncfusion:DataGridMultiColumnComboBoxColumn>
-        <syncfusion:DataGridTextColumn MappingName="ShipCountry" HeaderText="Ship Country"/>
+        <syncfusion:DataGridTextColumn MappingName = "ShipCountry" HeaderText = "Ship Country"/>
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 
