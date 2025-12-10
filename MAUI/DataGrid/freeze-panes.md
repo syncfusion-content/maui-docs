@@ -15,7 +15,9 @@ In the [Syncfusion® .NET MAUI DataGrid](https://help.syncfusion.com/cr/maui/Syn
 | Property name | Description |
 |---------------|-------------|
 | [FrozenRowCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FrozenRowCount) | Sets the number of rows to freeze at the top of the DataGrid |
+| `FooterFrozenRowCount` | Sets the number of rows to freeze at the bottom (footer) of the DataGrid |
 | [FrozenColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FrozenColumnCount) | Sets the number of columns to freeze at the left side of the DataGrid |
+| `FooterFrozenColumnCount` | Sets the number of columns to freeze at the right side of the DataGrid |
 
 To get start quickly with freeze rows and columns in .NET MAUI DataGrid, you can check on this video:
 
@@ -37,9 +39,25 @@ The following code snippet shows how to freeze columns in the DataGrid:
 
 ![Freeze columns .NET MAUI DataGrid](Images\freeze-panes\maui-datagrid-freeze-columns.gif)
 
+## Freeze footer columns
+
+You can freeze footer columns in view, similar to Excel, by setting the `SfDataGrid.FooterFrozenColumnCount` property to a non‑negative value.
+
+The following code snippet shows how to freeze footer columns in the DataGrid:
+
+{% tabs %}
+{% highlight xaml %}
+<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+    <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}" FooterFrozenColumnCount="1" />
+</ContentPage>
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="maui-datagrid-freeze-footer-rows" src="Images\freeze-panes\maui-datagrid-freeze-footer-columns.gif" width="404" Height = "396"/>
+
 ### Limitations
 
-* The `FrozenColumnCount` value should be less than the number of columns displayed in the view. For example, if you have 5 columns in the view, you can set the `FrozenColumnCount` value to a maximum of 4.
+* The `FrozenColumnCount` and `FooterFrozenColumnCount` value should be less than the number of columns displayed in the view. For example, if you have 5 columns in the view, you can set the `FrozenColumnCount` and `FooterFrozenColumnCount` value to a maximum of 4.
 
 ## Freeze rows
 
@@ -57,9 +75,25 @@ The following code snippet shows how to freeze rows in the DataGrid:
 
 ![Freeze rows .NET MAUI DataGrid](Images\freeze-panes\maui-datagrid-freeze-rows.gif)
 
+## Freeze footer rows
+
+You can freeze footer rows in view, similar to Excel, by setting the `SfDataGrid.FooterFrozenRowCount` property to a non‑negative value.
+
+The following code snippet shows how to freeze footer rows in the DataGrid:
+
+{% tabs %}
+{% highlight xaml %}
+<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+    <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}" FooterFrozenRowCount="1" />
+</ContentPage>
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="maui-datagrid-freeze-footer-rows" src="Images\freeze-panes\maui-datagrid-freeze-footer-rows.gif" width="404" Height = "396"/>
+
 ### Limitations
 
-* The `FrozenRowCount` value should be less than the number of rows displayed in the view. For example, if you have 10 rows in the view, you can set the `FrozenRowCount` value to a maximum of 9.
+* The `FrozenRowCount` and `FooterFrozenRowCount` value should be less than the number of rows displayed in the view. For example, if you have 10 rows in the view, you can set the `FrozenRowCount` and `FooterFrozenRowCount` value to a maximum of 9.
 
 ## Appearance
 
