@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Suggestion Mode in .NET MAUI AI-Powered Text Editor | Syncfusion<sup>&reg;</sup>
+title: Suggestion Mode in AI-Powered Text Editor | Syncfusion®
 description: Learn about suggestion mode with Syncfusion<sup>&reg;</sup> AI-Powered Text Editor (SfSmartTextEditor) control and its basic features.
 platform: maui
 control: SfSmartTextEditor

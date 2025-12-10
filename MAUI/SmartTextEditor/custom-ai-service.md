@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Custom AI Service in .NET MAUI AI-Powered Text Editor control | Syncfusion<sup>&reg;</sup>
-description: Learn how to use IChatInferenceService to integrate custom AI services with Syncfusion<sup>&reg;</sup> .NET MAUI AI-Powered Text Editor (SfSmartTextEditor) control
+title: Custom AI for AI-Powered Text Editor control | Syncfusion®
+description: Learn how to use IChatInferenceService to integrate custom AI services with Syncfusion® .NET MAUI AI-Powered Text Editor (SfSmartTextEditor) control
 platform: maui
 control: SfSmartTextEditor
 documentation: ug

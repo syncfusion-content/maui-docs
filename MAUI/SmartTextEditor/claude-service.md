@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Claude AI Integration with .NET MAUI AI-Powered Text Editor | Syncfusion<sup>&reg;</sup>
+title: Claude AI for AI-Powered Text Editor | Syncfusion®
 description: Learn how to implement a custom AI service using the Claude API with Syncfusion<sup>&reg;</sup> AI-Powered Text Editor (SfSmartTextEditor) control.
 platform: maui
 control: SfSmartTextEditor

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Events in .NET MAUI AI-Powered Text Editor control | Syncfusion<sup>&reg;</sup>
+title: Events in AI-Powered Text Editor control | Syncfusion®
 description: Learn here all about the Events support in Syncfusion<sup>&reg;</sup> .NET MAUI AI-Powered Text Editor (SfSmartTextEditor) control and more details.
 platform: maui
 control: SfSmartTextEditor

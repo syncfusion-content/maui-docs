@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with .NET MAUI AI-Powered Text Editor control | Syncfusion<sup>&reg;</sup>
+title: Getting started with AI-Powered Text Editor control | Syncfusion®
 description: Learn about getting started with Syncfusion<sup>&reg;</sup> AI-Powered Text Editor (SfSmartTextEditor) control and its basic features.
 platform: maui
 control: SfSmartTextEditor

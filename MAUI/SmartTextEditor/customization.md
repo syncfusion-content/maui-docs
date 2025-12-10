@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customization in .NET MAUI AI-Powered Text Editor control | Syncfusion<sup>&reg;</sup>
+title: Customization in AI-Powered Text Editor control | Syncfusion®
 description: Learn here all about Customization features of Syncfusion<sup>&reg;</sup> .NET MAUI AI-Powered Text Editor (SfSmartTextEditor) control. 
 platform: maui
 control: SfSmartTextEditor

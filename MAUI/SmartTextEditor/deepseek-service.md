@@ -1,6 +1,6 @@
 ---
 layout: post
-title: DeepSeek AI Integration with .NET MAUI AI-Powered Text Editor | Syncfusion<sup>&reg;</sup>
+title: DeepSeek AI for AI-Powered Text Editor | Syncfusion®
 description: Learn how to integrate the DeepSeek AI services with Syncfusion<sup>&reg;</sup> AI-Powered Text Editor (SfSmartTextEditor) control.
 platform: maui
 control: SfSmartTextEditor

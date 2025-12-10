@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Gemini AI Integration with .NET MAUI AI-Powered Text Editor | Syncfusion<sup>&reg;</sup>
+title: Gemini AI for AI-Powered Text Editor | Syncfusion®
 description: Learn how to implement a custom AI service using Google's Gemini API with Syncfusion<sup>&reg;</sup> AI-Powered Text Editor (SfSmartTextEditor) control.
 platform: maui
 control: SfSmartTextEditor
