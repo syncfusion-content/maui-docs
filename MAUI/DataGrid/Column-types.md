@@ -1428,7 +1428,7 @@ The `DataGridNumericColumn` allows formatting the numeric data with culture-spec
 
 The `DataGridMultiColumnComboBoxColumn` displays enumeration as cell contents and hosts a (SfMultiColumnComboBox)[] in editing mode. This column type allows you to define the predefined columns in its drop-down, similar to SfDataGrid.
 
-You can change the value by selecting the item from drop down or by editting the entry in SfMultiColumnComboBox. To disable text editing, set the (IsTextReadOnly)[] property to `true`.
+You can change the value by selecting the item from drop down or by editing the entry in SfMultiColumnComboBox. To disable text editing, set the (IsTextReadOnly)[] property to `true`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1485,7 +1485,7 @@ SfDataGrid triggers, (CurrentCellDropDownSelectionChanged)[] event, when the Sel
 
 ### Auto-complete support
 
-You can enable the SfMultiColumnComboBox to automatically complete the entered input value by setting the (AllowAutoComplete)[] property to `true`. When enabled, this property compares the entered text with each item in the underlying data source of DataGridMultiColumnComboBoxColumn and autocompletes the input with the matched value based on the DisplayMember.
+You can enable the SfMultiColumnComboBox to automatically complete the entered input value by setting the (AllowAutoComplete)[] property to `true`. When enabled, this property compares the entered text with each item in the underlying data source of DataGridMultiColumnComboBoxColumn and autocomplete the input with the matched value based on the DisplayMember.
 
 ### Filtering
 
