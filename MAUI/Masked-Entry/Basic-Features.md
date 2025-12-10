@@ -486,3 +486,7 @@ public class CommandDemoViewModel
 
 {% endhighlight %}
 {% endtabs %}
+
+## Automation ID support for drawing elements
+
+The Syncfusion .NET MAUI Masked Entry control offers robust `AutomationId` support for its drawable elements. By assigning unique ID to components like the clear button, you significantly improve the efficiency of automated testing and enhance overall application accessibility. This allows for precise targeting and interaction with these elements during UI automation.

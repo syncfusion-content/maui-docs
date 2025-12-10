@@ -420,3 +420,7 @@ public class CommandDemoViewModel
 
 {% endhighlight %}
 {% endtabs %}
+
+## Automation ID support for drawing elements
+
+The Syncfusion .NET MAUI Numeric Entry control offers robust `AutomationId` support for its drawable elements. By assigning unique IDs to components like the clear, up, and down buttons, you significantly improve the efficiency of automated testing and enhance overall application accessibility. This allows for precise targeting and interaction with these elements during UI automation.
