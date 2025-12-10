@@ -260,6 +260,8 @@ this.Content = chart;
 
 {% endtabs %}
 
+![Floating Legend support in MAUI Pyramid Chart](Legend-images/floating_legend.png)
+
 ## Toggle the series visibility
 The visibility of segments in the pyramid chart can be controlled by tapping the legend item using the [ToggleSeriesVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_ToggleSeriesVisibility) property. The default value of ToggleSeriesVisibility is `false`.
 
