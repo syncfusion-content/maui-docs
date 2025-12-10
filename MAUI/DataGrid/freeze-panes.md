@@ -63,6 +63,8 @@ The following code snippet shows how to freeze rows in the DataGrid:
 
 ## Appearance
 
+### Freeze pane line color
+
 The DataGrid allows you to customize the color of the freeze pane line using the [DataGridStyle.FreezePaneLineColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FreezePaneLineColor) property.
 
 {% tabs %}
@@ -78,3 +80,23 @@ The DataGrid allows you to customize the color of the freeze pane line using the
 {% endtabs %}
 
 ![Customize freeze panes appearance in .NET MAUI DataGrid](Images\freeze-panes\maui-datagrid-freeze-panes-appearance.png)
+
+### Freeze pane line thickness
+
+The DataGrid provides an option to customize the thickness of the freeze pane line using the `DataGridStyle.FreezePaneLineStrokeThickness` property. This property defines the stroke width for all frozen rows and columns in both the body and footer regions
+
+N> The default value of `FreezePaneLineStrokeThickness` is 1.
+
+{% tabs %}
+{% highlight xaml %}
+<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
+    <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}" FrozenColumnCount="1" FrozenRowCount="1">
+        <syncfusion:SfDataGrid.DefaultStyle>
+            <syncfusion:DataGridStyle FreezePaneLineStrokeThickness="5" />
+        </syncfusion:SfDataGrid.DefaultStyle>
+    </syncfusion:SfDataGrid>
+</ContentPage> 
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="maui-datagrid-freeze-panes-strokethickness" src="Images\freeze-panes\maui-datagrid-freeze-panes-strokethickness.png" width="404" Height = "396"/>
