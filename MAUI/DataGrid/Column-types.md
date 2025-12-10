@@ -1428,7 +1428,7 @@ The `DataGridNumericColumn` allows formatting the numeric data with culture-spec
 
 The `DataGridMultiColumnComboBoxColumn` displays enumeration as cell contents and hosts a (SfMultiColumnComboBox)[] in editing mode. This column type allows you to define the predefined columns in its drop-down, similar to SfDataGrid.
 
-You can change the value by selecting the item from drop down or by editing the entry in SfMultiColumnComboBox. To disable text editing, set the (IsTextReadOnly)[] property to `true`.
+You can change the value by selecting the item from drop down or by editing the entry in `SfMultiColumnComboBox`. To disable text editing, set the (IsTextReadOnly)[] property to `true`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1481,17 +1481,17 @@ SfDataGrid triggers, (CurrentCellDropDownSelectionChanged)[] event, when the Sel
 `SelectedIndex` property returns the index of selected item.
 `SelectedItem` property returns the selected item from drop down list.
 
-<img alt="DataGridMultiColumnComboBox column .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-MultiColumn-ComboBox-column.png" width="404"/>
+<img alt="DataGridMultiColumnComboBox column .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-multicolumn-combobox-column.png" width="404"/>
 
 ### Auto-complete support
 
-You can enable the SfMultiColumnComboBox to automatically complete the entered input value by setting the (AllowAutoComplete)[] property to `true`. When enabled, this property compares the entered text with each item in the underlying data source of DataGridMultiColumnComboBoxColumn and autocomplete the input with the matched value based on the DisplayMember.
+You can enable the `SfMultiColumnComboBox` to automatically complete the entered input value by setting the (AllowAutoComplete)[] property to `true`. When enabled, this property compares the entered text with each item in the underlying data source of `DataGridMultiColumnComboBoxColumn` and autocomplete the input with the matched value based on the DisplayMember.
 
 ### Filtering
 
-You can enable the SfMultiColumnComboBox to dynamically filter the drop-down list items based on the text typed in the entry by setting (AllowIncrementalFiltering)[] property to `true`. Additionally, DataGridMultiColumnComboBoxColumn allows filtering based on case sensitivity by setting (AllowCaseSensitiveFiltering)[] to `true`. These features help users to quickly select items from large list.
+You can enable the `SfMultiColumnComboBox` to dynamically filter the drop-down list items based on the text typed in the entry by setting (AllowIncrementalFiltering)[] property to `true`. Additionally, `DataGridMultiColumnComboBoxColumn` allows filtering based on case sensitivity by setting (AllowCaseSensitiveFiltering)[] to `true`. These features help users to quickly select items from large list.
 
-<img alt="DataGridMultiColumnComboBox column with Filtering .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-MultiColumn-ComboBox-column-filtering.png" width="404"/>
+<img alt="DataGridMultiColumnComboBox column with Filtering .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-multicolumn-combobox-column-filtering.png" width="404"/>
 
 ### Null value support
 
@@ -1504,7 +1504,7 @@ The AllowNullValue will work only when the underlying property type is Nullable.
 
 You can change the size of drop-down popup by setting (PopupWidth)[] and (PopupHeight)[] properties. If these values are not set, the popup width defaults to the `PopupMinWidth` property, which is 200.0 by default. Similarly, the popup height defaults to the `PopupMinHeight` property, which is 300.0 by default.
 
-Additionally, SfMultiColumnComboBox can automatically adjust the popup width based on the actual size of the SfDataGrid by setting the (IsAutoPopupSize)[] property to `true`.
+Additionally, `SfMultiColumnComboBox` can automatically adjust the popup width based on the actual size of the SfDataGrid by setting the (IsAutoPopupSize)[] property to `true`.
 
 ### Loading different ItemsSource for each row
 
@@ -1578,9 +1578,9 @@ internal class ItemsSourceSelector : IItemsSourceSelector
 
 {% endtabs %}
 
-<img alt="DataGridMultiColumnComboBox column with ItemsSourceSelector .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-MultiColumn-ComboBox-column-itemsourceselector.png" width="404"/>
+<img alt="DataGridMultiColumnComboBox column with ItemsSourceSelector .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-multicolumn-combobox-column-itemsourceselector.png" width="404"/>
 
-<img alt="DataGridMultiColumnComboBox column with ItemsSourceSelector .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-MultiColumn-ComboBox-column-itemsourceselector2.png" width="404"/>
+<img alt="DataGridMultiColumnComboBox column with ItemsSourceSelector .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-multicolumn-combobox-column-itemsourceselector2.png" width="404"/>
 
 You can download the sample from the following link: (Sample)[https://github.com/SyncfusionExamples/How-to-load-different-items-for-each-row-in-MultiColumn-ComboBox-Column-in-.NET-MAUI-SfDataGrid].
 
