@@ -388,9 +388,7 @@ The selected rows will be deleted.
 
 ## Multiple Row or Cell Selection
 
-The `SfDataGrid` allows you to select multiple rows or cells by setting `SelectionMode` property as [Extended](), where you can select multiple rows or cells by dragging the mouse on SfDataGrid and also using the key modifiers.
-
-While using `Extended`, you can select multiple rows or cells by pressing the key modifiers <kbd>Ctrl</kbd> and <kbd>Shift</kbd>. 
+The `SfDataGrid` allows you to select multiple rows or cells by setting the `SelectionMode` property to [Extended](). This enables selection of multiple rows or cells by dragging the mouse or by clicking while holding modifier keys such as <kbd>Ctrl</kbd> and <kbd>Shift</kbd>.
 
 {% tabs %}
 {% highlight xaml %}
@@ -502,13 +500,12 @@ Key Combinations
 </tr>
 </table>
 
-## Extended Selection Limitations.
+## Extended Selection Limitations
 
 The `Extended Selection` in [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.html) has certain limitations that should be considered while using this feature:
 
 - Drag selection using the mouse pointer is not supported on Android or iOS.
 - Drag selection cannot be used together with PullToRefresh, Swiping, or Row drag-and-drop features.
-- Extended selection is not supported in the master-details view.
 
 ## Move Current Cell
 The [CurrentCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CurrentCell) can be moved to a particular [RowColumnIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridCommon.ScrollAxis.RowColumnIndex.html) by using the [SfDataGrid.MoveCurrentCellTo()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_MoveCurrentCellTo_Syncfusion_Maui_GridCommon_ScrollAxis_RowColumnIndex_System_Boolean_) method. This method is not applicable when the `SfDataGrid.SelectionMode` is None or the `NavigationMode` is Row.
