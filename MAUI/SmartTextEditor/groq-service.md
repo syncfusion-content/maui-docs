@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Groq AI Integration with .NET MAUI Smart Text Editor | Syncfusion
-description: Learn how to implement a custom AI service using the Groq API with Syncfusion<sup>&reg;</sup> Smart Text Editor (SfSmartTextEditor) control.
+title: Groq AI Integration with .NET MAUI AI-Powered Text Editor | Syncfusion<sup>&reg;</sup>
+description: Learn how to implement a custom AI service using the Groq API with Syncfusion<sup>&reg;</sup> AI-Powered Text Editor (SfSmartTextEditor) control.
 platform: maui
 control: SfSmartTextEditor
 documentation: ug

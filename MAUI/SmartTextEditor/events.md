@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Events in .NET MAUI Smart Text Editor control | Syncfusion®
-description: Learn here all about the Events support in Syncfusion<sup>&reg;</sup> .NET MAUI Smart Text Editor (SfSmartTextEditor) control and more details.
+title: Events in .NET MAUI AI-Powered Text Editor control | Syncfusion<sup>&reg;</sup>
+description: Learn here all about the Events support in Syncfusion<sup>&reg;</sup> .NET MAUI AI-Powered Text Editor (SfSmartTextEditor) control and more details.
 platform: maui
 control: SfSmartTextEditor
 documentation: ug
 ---
 
-# Events in .NET MAUI Smart Text Editor (SfSmartTextEditor)
+# Events in .NET MAUI AI-Powered Text Editor (SfSmartTextEditor)
 
-The Smart Text Editor provides the `TextChanged` event, which is triggered whenever the text in the smart text editor changes.
+The AI-Powered Text Editor provides the `TextChanged` event, which is triggered whenever the text in the smart text editor changes.
 
 ## TextChanged
 
@@ -44,7 +44,7 @@ private void OnTextChanged(object sender, Syncfusion.Maui.SmartComponents.TextCh
 
 ### TextChangedCommand
 
-The SfSmartTextEditor includes a built-in property called `TextChangedCommand`, which is triggered whenever the text in the smart text editor changes. This event can be invoked through the [TextChangedCommand].
+The [SfSmartTextEditor] includes a built-in property called `TextChangedCommand`, which is triggered whenever the text in the smart text editor changes. This event can be invoked through the [TextChangedCommand].
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
