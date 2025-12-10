@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui circular chart, chart legend, legend-wrap, legend view, legend layout, chart legend items, legend alignment.
 ---
 
-# Legend in .NET MAUI Chart (SfCircularChart)
+# Legend in .NET MAUI Circular Chart (SfCircularChart)
 The [Legend](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_Legend) provides a list of data points, helping to identify the corresponding data points in the chart. Here's a detailed guide on how to define and customize the legend in the circular chart.
 
 ## Defining the legend
@@ -227,10 +227,12 @@ this.Content = chart;
 
 {% endtabs %}
 
-## Floating Legend
-The Floating Legend feature allows you to position the legend inside the chart area based on its defined placement. When [IsFloating]() is set to true, the legend will start from the specified [Placement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_Placement) (such as Top, Bottom, Left, or Right) and then move according to the [OffsetX]() and [OffsetY]() values. 
+## Floating legend
 
-These offsets represent the horizontal and vertical distances from that placement position, enabling precise control over the legend’s location.
+The floating legend feature allows you to position the legend inside the chart area based on its defined placement. When [IsFloating]() is set to true, the legend will start from the specified [Placement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_Placement) (such as Top, Bottom, Left, or Right) and then move according to the offset values, enabling precise control over the legend’s location.
+
+* [OffsetX](): Specifies the horizontal distance from the defined placement position.
+* [OffsetY](): Specifies the vertical distance from the defined placement position.
 
 {% tabs %}
 
@@ -238,7 +240,7 @@ These offsets represent the horizontal and vertical distances from that placemen
 
 <chart:SfCircularChart>
     <chart:SfCircularChart.Legend>
-        <chart:ChartLegend Placement="Bottom" IsFloating="True" OffsetX="-170" OffsetY="30"/>
+        <chart:ChartLegend Placement="Right" IsFloating="True" OffsetX="-480" OffsetY="10"/>
     </chart:SfCircularChart.Legend>
 </chart:SfCircularChart>
 

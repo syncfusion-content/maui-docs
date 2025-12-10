@@ -631,9 +631,9 @@ The [`AnnotationTapped`]() event is triggered when the user has clicked the anno
 
 The following override methods are available in the annotation class to handle touch interactions:
 
-* [`OnTouchDown`]() – occurs when touch down inside the annotation.
-* [`OnTouchMove`]() – occurs while moving the finger or mouse inside the annotation.
-* [`OnTouchUp`]() – occurs when touch up inside the annotation.
+* [`OnTouchDown`]() – triggered when touch starts (down) on the annotation.
+* [`OnTouchMove`]() – triggered when moving (dragging) the finger or mouse across the annotation.
+* [`OnTouchUp`]() – triggered when touch ends (up) by lifting the finger or releasing the mouse from the annotation.
 
 {% tabs %}
 
