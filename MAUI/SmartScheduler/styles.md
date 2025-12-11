@@ -21,11 +21,7 @@ You can style the elements of the `.NET MAUI Smart Scheduler` assist view using 
                 <smartScheduler:SmartSchedulerAssistStyle PlaceholderColor="#6750A4" 
                                                           AssistViewHeaderBackground="#6750A4"
                                                           AssistViewHeaderTextColor="#FFFFFF"
-                                                          AssistViewHeaderFontSize="24"
-                                                          AssistViewHeaderFontAttributes="Bold"
-                                                          AssistViewHeaderFontFamily="OpenSansSemibold"
-                                                          AssistViewHeaderFontAutoScalingEnabled="True"
-                                                          />
+                                                          AssistViewHeaderFontSize="24" />
             </smartScheduler:SchedulerAssistViewSettings.AssistStyle>
         </smartScheduler:SchedulerAssistViewSettings>
     </smartScheduler:SfSmartScheduler.AssistViewSettings>
@@ -41,9 +37,6 @@ smartScheduler.AssistViewSettings.AssistStyle = new SmartSchedulerAssistStyle()
     AssistViewHeaderBackground = Color.FromArgb("#6750A4"),
     AssistViewHeaderTextColor = Color.FromArgb("#FFFFFF"),
     AssistViewHeaderFontSize = 24,
-    AssistViewHeaderFontAutoScalingEnabled = true,
-    AssistViewHeaderFontAttributes = FontAttributes.Italic,
-    AssistViewHeaderFontFamily = "OpenSansSemibold",
 };
 this.Content = smartScheduler;
 
