@@ -1481,7 +1481,7 @@ private void dataGrid_CurrentCellRequestNavigating(object sender, DataGridCurren
 {% endhighlight %}
 {% endtabs %}
 
-### Appearence
+### Appearance
 
 #### HyperlinkTextColor
 
