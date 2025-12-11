@@ -197,7 +197,7 @@ popup.AutoSizeTarget= Syncfusion.Maui.Popup.PopupAutoSizeTarget.Header | Syncfus
 In the following code sample, the Popup is auto-sized in the height based on the content loaded inside the [ContentTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ContentTemplate) property.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml"  hl_lines="10"%}
+{% highlight xaml tabtitle="MainPage.xaml"  hl_lines="10" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -236,7 +236,7 @@ Executing the above codes renders the following output in windows.
 In the following code sample, the Popup is auto-sized in the height based on the content loaded inside the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_HeaderTemplate), [ContentTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_ContentTemplate), [FooterTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_FooterTemplate) properties.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml"  hl_lines="10 11"%}
+{% highlight xaml tabtitle="MainPage.xaml"  hl_lines="10 11" %}
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
