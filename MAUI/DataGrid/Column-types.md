@@ -1507,12 +1507,10 @@ You can set the hyperlink text color using the HyperlinkTextColor property. If b
 {% endhighlight %}
 
 {% highlight c# %}
-DataGridHyperlinkColumn hyperlinkColumn = new DataGridHyperlinkColumn()
+dataGrid.DefaultStyle = new DataGridStyle
 {
-    MappingName = "Country",
-    HeaderText = "Country",
+    HyperlinkTextColor = Colors.Yellow
 };
-dataGrid.Columns.Add(hyperlinkColumn);
 
 {% endhighlight %}
 {% endtabs %}
