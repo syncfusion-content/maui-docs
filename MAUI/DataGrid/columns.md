@@ -387,7 +387,26 @@ this.dataGrid.Columns.RemoveAt(1);
 
 SfDataGrid allows you show or hide columns at runtime by selecting or deselecting them through the Column Chooser. You can enable this feature by setting the `SfDataGrid.ShowColumnChooser` property.
 
-You can also customize the header text of the Column Chooser using the `SfDataGrid.ColumnChooserHeaderText` property. By default, `SfDataGrid.ColumnChooserHeaderText` property is set to string.Empty, so the header is not displayed. If you assign any non-empty string, the header becomes visible.
+{% tabs %}
+{% highlight xaml %}
+
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding OrdersInfo}"
+                           ShowColumnChooser="True">
+    </syncfusion:SfDataGrid>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+dataGrid.ShowColumnChooser = true;
+
+{% endhighlight %}
+{% endtabs %}
+
+###Column Chooser Header Text
+
+You can also customize the header text of the Column Chooser using the `SfDataGrid.ColumnChooserHeaderText` property. By default, `SfDataGrid.ColumnChooserHeaderText` property is set to `string.Empty`, so the header is not displayed. If you assign any non-empty string, the header becomes visible.
 
 {% tabs %}
 {% highlight xaml %}
@@ -402,7 +421,7 @@ You can also customize the header text of the Column Chooser using the `SfDataGr
 
 {% highlight c# %}
 
-dataGrid.ShowColumnChooser = true;
+dataGrid.ColumnChooserHeaderText = "Select Visible Columns";
 
 {% endhighlight %}
 {% endtabs %}
