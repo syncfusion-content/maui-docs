@@ -1487,6 +1487,36 @@ private void dataGrid_CurrentCellRequestNavigating(object sender, DataGridCurren
 {% endhighlight %}
 {% endtabs %}
 
+## Appearence
+
+### HyperlinkTextColor
+
+You can set the hyperlink text color using the HyperlinkTextColor property. If both HyperlinkTextColor and a DataGridCell TextColor (via implicit or explicit styles) are defined, HyperlinkTextColor takes precedence and will be used. If HyperlinkTextColor is not specified, the implicit or explicit cell styles will determine the hyperlink text color.
+
+{% tabs %}
+{% highlight xaml %}
+
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       AutoGenerateColumnsMode="None"
+                       ItemsSource="{Binding OrderInfoCollection}">
+  <syncfusion:SfDataGrid.DefaultStyle>
+      <syncfusion:DataGridStyle  HyperlinkTextColor="Yellow"/>
+  </syncfusion:SfDataGrid.DefaultStyle>
+</syncfusion:SfDataGrid>
+
+{% endhighlight %}
+
+{% highlight c# %}
+DataGridHyperlinkColumn hyperlinkColumn = new DataGridHyperlinkColumn()
+{
+    MappingName = "Country",
+    HeaderText = "Country",
+};
+dataGrid.Columns.Add(hyperlinkColumn);
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Row header
 
 The row header is a type of column that is placed as the first cell of each row and remains frozen. To enable the row header, set [SfDataGrid.ShowRowHeader](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ShowRowHeader) to `true` Additionally, the `SfDataGrid` allows you to customize the row header width using the [SfDataGrid.RowHeaderWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_RowHeaderWidth) property. The default value is `30.`
