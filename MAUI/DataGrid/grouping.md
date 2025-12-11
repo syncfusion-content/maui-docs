@@ -34,6 +34,73 @@ You can enable data grouping in the SfDataGrid by setting the `SfDataGrid.AllowG
 {% endhighlight %}
 {% endtabs %}
 
+You can group data by an unlimited of columns. To group multiple columns, drag and drop the desired column headers into the GroupDropArea.
+
+
+
+Each group is represented by a `CaptionSummaryRow`, which organizes data into a hierarchical tree structure according to identical values in the grouped column. Users can expand or collapse the underlying records in a group by clicking on its group caption.
+
+A `CaptionSummaryRow` displays details about its group, such as the group name and the number of records it contains. For more details, refer to the Caption Summaries section.
+
+### Appearance
+
+#### GroupDropAreaText
+
+You can modify the GroupDropArea text by setting the `SfDataGrid.GroupDropAreaText` property.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                        ItemsSource="{Binding OrderInfoCollection}"
+                        GroupDropAreaText="Drag and drop the column here"
+                        AllowGrouping="true">
+</syncfusion:SfDataGrid> 
+{% endhighlight %}
+{% highlight c# %}
+    dataGrid.AllowGrouping = true;
+    dataGrid.GroupDropAreaText = "Drag and drop the column here";
+{% endhighlight %}
+{% endtabs %}
+
+
+
+#### GroupDropAreaHeight
+
+Use the `SfDataGrid.GroupDropAreaHeight` property to control the vertical size of the GroupDropArea (the region where users drag column headers to create groups).
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                        ItemsSource="{Binding OrderInfoCollection}"
+                        GroupDropAreaHeight="100"
+                        AllowGrouping="true">
+</syncfusion:SfDataGrid> 
+{% endhighlight %}
+{% highlight c# %}
+    dataGrid.AllowGrouping = true;
+    dataGrid.GroupDropAreaHeight = 100;
+{% endhighlight %}
+{% endtabs %}
+
+
+
+#### Customize the GroupDropArea
+
+You can style the `GroupDropArea` using the following SfDataGrid properties:
+
+* GroupDropAreaStrokeThickness: Sets the border thickness of the GroupDropArea.
+* GroupDropAreaStroke: Sets the border color of the GroupDropArea.
+* GroupDropAreaBackgroundColor: Sets the background color of the GroupDropArea.
+* GroupDropAreaTextColor: Sets the color of the instructional text displayed in the GroupDropArea.
+* GroupDropAreaFontSize: Sets the font size of the GroupDropArea text.
+* GroupDropAreaFontFamily: Sets the font family used for the GroupDropArea text.
+* GroupDropAreaFontAttribute: Sets the font style of the GroupDropArea text.
+
+
+#### Customize the GroupDropAreaItem
+
+
+
 ## Programmatic grouping
 
 The SfDataGrid allows to perform grouping programmatically by adding the [GroupColumnDescription](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.GroupColumnDescription.html) object in the [SfDataGrid.GroupColumnDescriptions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_GroupColumnDescriptionsProperty) collection. It groups the data based on the `GroupColumnDescription` object added to this collection.
