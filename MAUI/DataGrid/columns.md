@@ -385,9 +385,9 @@ this.dataGrid.Columns.RemoveAt(1);
 
 ##Column Chooser
 
-SfDataGrid allows you to show or hide columns at runtime by selecting or deselecting them in the Column Chooser. You can enable the column chooser by setting the ShowColumnChooser property.
+SfDataGrid allows you show or hide columns at runtime by selecting or deselecting them through the Column Chooser. You can enable this feature by setting the `SfDataGrid.ShowColumnChooser` property.
 
-You can also customize the Column Chooser header text by setting the ColumnChooserHeaderText property.
+You can also customize the header text of the Column Chooser using the `SfDataGrid.ColumnChooserHeaderText` property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -395,12 +395,6 @@ You can also customize the Column Chooser header text by setting the ColumnChoos
     <syncfusion:SfDataGrid x:Name="dataGrid"
                            ItemsSource="{Binding OrdersInfo}"
                            ShowColumnChooser="True">
-        <syncfusion:SfDataGrid.Columns>
-            <syncfusion:DataGridTextColumn MappingName="ID" HeaderText="Order ID"/>
-            <syncfusion:DataGridTextColumn MappingName="CustomerID" HeaderText="Name"/>
-            <syncfusion:DataGridTextColumn MappingName="ShipCity" HeaderText="City"/>
-            <syncfusion:DataGridTextColumn MappingName="ShipCountry" HeaderText="Country"/>
-        </syncfusion:SfDataGrid.Columns>
     </syncfusion:SfDataGrid>
 
 {% endhighlight %}
@@ -412,5 +406,5 @@ dataGrid.ShowColumnChooser = true;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Maui DataGrid Column Chooser" src="Images\columns/maui-datagrid-columnchooser.gif" width="404"/>
+<img alt="Maui DataGrid Column Chooser" src="Images\columns/maui-datagrid-columnchooser.png" width="404"/>
 
