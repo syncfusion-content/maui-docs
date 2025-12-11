@@ -266,7 +266,7 @@ The supported built-in filter types are shown below.
 </tr>
 </table>
 
-#### Case sensitivie
+#### Case sensitive
 By default, casing is not considered while filtering. Because, filter predicates will be created with [IsCaseSensitive]() as `false`. The case sensitive icon in the advanced filter UI can be used to enable `IsCaseSensitive` as `true` for the column. This option is only available for the `TextFilters` filter view.
 
 ## Events
@@ -475,7 +475,7 @@ Advanced Filter with `ImmediateUpdateColumnFilter` as `True`
 
 ## Customizing the filter popup menu options
 ### Visibility of sort options
-The sort options in the filter popup will be enabled only when we set [SortingMode]() as `Single` or `Multiple`. OtherWise the icons are in disable state. If you want to remove the sort options from the filter popup, set the [SortOptionsVisiblity]() to `false` using `FilterPopupStyle`. As the defualt value of `SortOptionsVisiblity` is `true`, the sort options is visible in the popup menu.
+The sort options in the filter popup will be enabled only when we set [SortingMode]() as `Single` or `Multiple`. OtherWise the icons are in disable state. If you want to remove the sort options from the filter popup, set the [SortOptionsVisibility]() to `false` using `FilterPopupStyle`. As the default value of `SortOptionsVisibility` is `true`, the sort options is visible in the popup menu.
 
 {% tabs %}
 {% highlight XAML %}
@@ -572,7 +572,7 @@ The `SfDataGrid` uses an icon to open the filter popup in UI filtering. You can 
 
 <img src="Images/filtering/maui-datagrid-filtering-filterTemplate.png" width="500" alt="Filter icon template">
 
-### Load filter icon through template seletcor
+### Load filter icon through template selector
 When choosing a `FilterIconTemplate` as a DataTemplateSelector, you have the option to supply two different templates for columns.
 
 {% tabs %}
