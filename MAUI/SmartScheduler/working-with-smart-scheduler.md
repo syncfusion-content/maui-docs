@@ -19,12 +19,12 @@ You can customize the assist button interaction and the default appearance of as
 The assist button interaction can be enabled or disabled by setting the `EnableAssistButton` property of the `SfSmartScheduler` control. By default, the `EnableAssistButton` property is set to true.
 
 {% tabs %}
-{% highlight XAML hl_lines="2" %}
+{% highlight XAML hl_lines="1" %}
 
  <smartScheduler:SfSmartScheduler x:Name="Scheduler" EnableAssistButton="False"/>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# hl_lines="2" %}
 
 SfSmartScheduler scheduler = new SfSmartScheduler();
 smartScheduler.EnableAssistButton = false;
@@ -38,7 +38,7 @@ this.Content = scheduler;
 The assist button appearance can be customized by using the `AssistButtonTemplate` property of `SfSmartScheduler` control.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3 4 5 6 7 8 9 10 11 12 13" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2 3 4 5 6 7 8 9 10 11 12" %}
 
  <smartScheduler:SfSmartScheduler x:Name="Scheduler">
     <smartScheduler:SfSmartScheduler.AssistButtonTemplate>
@@ -91,7 +91,7 @@ You can customize default appearance of the assist button view by setting the `A
 The assist view height can be customized by using the `AssistViewHeight` property of the `AssistViewSettings`.
 
 {% tabs %}
-{% highlight XAML hl_lines="4" %}
+{% highlight XAML hl_lines="3" %}
 
 <smartScheduler:SfSmartScheduler  x:Name="smartScheduler">
     <smartScheduler:SfSmartScheduler.AssistViewSettings>
@@ -100,7 +100,7 @@ The assist view height can be customized by using the `AssistViewHeight` propert
 </smartScheduler:SfSmartScheduler>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# hl_lines="2" %}
 
 SfSmartScheduler scheduler = new SfSmartScheduler();
 smartScheduler.AssistViewSettings.AssistViewHeight = 420;
@@ -114,19 +114,19 @@ this.Content = scheduler;
 The assist view width can be customized by using the `AssistViewWidth` property of the `AssistViewSettings`.
 
 {% tabs %}
-{% highlight XAML hl_lines="4" %}
+{% highlight XAML hl_lines="3" %}
 
 <smartScheduler:SfSmartScheduler  x:Name="smartScheduler">
     <smartScheduler:SfSmartScheduler.AssistViewSettings>
-        <smartScheduler:SchedulerAssistViewSettings AssistViewWidth="250"/>
+        <smartScheduler:SchedulerAssistViewSettings AssistViewWidth="400"/>
     </smartScheduler:SfSmartScheduler.AssistViewSettings>
 </smartScheduler:SfSmartScheduler>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# hl_lines="2" %}
 
 SfSmartScheduler scheduler = new SfSmartScheduler();
-smartScheduler.AssistViewSettings.AssistViewWidth = 250;
+smartScheduler.AssistViewSettings.AssistViewWidth = 400;
 this.Content = scheduler;
 
 {% endhighlight %}
@@ -137,7 +137,7 @@ this.Content = scheduler;
 The assist view header text can be customized by using the `AssistViewHeaderText` property of the `AssistViewSettings`. By default, `AI Assistant` text is shown in the assist view header.
 
 {% tabs %}
-{% highlight XAML hl_lines="4" %}
+{% highlight XAML hl_lines="3" %}
 
 <smartScheduler:SfSmartScheduler  x:Name="smartScheduler">
     <smartScheduler:SfSmartScheduler.AssistViewSettings>
@@ -146,7 +146,7 @@ The assist view header text can be customized by using the `AssistViewHeaderText
 </smartScheduler:SfSmartScheduler>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# hl_lines="2" %}
 
 SfSmartScheduler smartScheduler = new SfSmartScheduler();
 smartScheduler.AssistViewSettings.AssistViewHeaderText = "Smart Scheduler";
@@ -160,7 +160,7 @@ this.Content = smartScheduler;
 The assist view placeholder text can be customized by using the `Placeholder` property of the `AssistViewSettings`. By default, `Type here...` text is shown in the placeholder.
 
 {% tabs %}
-{% highlight XAML hl_lines="4" %}
+{% highlight XAML hl_lines="3" %}
 
 <smartScheduler:SfSmartScheduler  x:Name="smartScheduler">
     <smartScheduler:SfSmartScheduler.AssistViewSettings>
@@ -169,7 +169,7 @@ The assist view placeholder text can be customized by using the `Placeholder` pr
 </smartScheduler:SfSmartScheduler>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# hl_lines="2" %}
 
 SfSmartScheduler smartScheduler = new SfSmartScheduler();
 smartScheduler.AssistViewSettings.Placeholder = "Enter your message...";
@@ -183,7 +183,7 @@ this.Content = smartScheduler;
 The assist view prompt text can be customized by using the `Prompt` property of the `AssistViewSettings`. By default, the `Prompt` property is set to empty.
 
 {% tabs %}
-{% highlight XAML hl_lines="4" %}
+{% highlight XAML hl_lines="3" %}
 
 <smartScheduler:SfSmartScheduler  x:Name="smartScheduler">
     <smartScheduler:SfSmartScheduler.AssistViewSettings>
@@ -206,21 +206,41 @@ this.Content = smartScheduler;
 The assist view suggested prompts can be customized by using the `SuggestedPrompts` property of the `AssistViewSettings`. By default, the `SuggestedPrompts` property is set to null.
 
 {% tabs %}
-{% highlight XAML hl_lines="4" %}
+{% highlight XAML hl_lines="8" %}
+
+<ContentPage.BindingContext>
+    <local:ViewModel/>
+</ContentPage.BindingContext>
 
 <smartScheduler:SfSmartScheduler x:Name="smartScheduler">
     <smartScheduler:SfSmartScheduler.AssistViewSettings >
-        <smartScheduler:SchedulerAssistViewSettings ShowAssistViewBanner="True">
-            <smartScheduler:SchedulerAssistViewSettings.SuggestedPrompts>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Find free slots</x:String>
-                    <x:String>Create a meeting</x:String>
-                    <x:String>Summarize today</x:String>
-                </x:Array>
-            </smartScheduler:SchedulerAssistViewSettings.SuggestedPrompts>
-        </smartScheduler:SchedulerAssistViewSettings>
+        <smartScheduler:SchedulerAssistViewSettings ShowAssistViewBanner="True" SuggestedPrompts="{Binding SuggestedPrompts}"/>
     </smartScheduler:SfSmartScheduler.AssistViewSettings>
 </smartScheduler:SfSmartScheduler>
+
+{% endhighlight %}
+{% highlight C# tabtitle="ViewModel.cs" %}
+
+public class ViewModel
+{
+    private List<string> suggestedPrompts;
+    
+    public List<string> SuggestedPrompts
+    {
+        get { return suggestedPrompts; }
+        set { suggestedPrompts = value; }
+    }
+
+    public ViewModel()
+    {
+        this.suggestedPrompts = new List<string>()
+        {
+            "Summarize today's appointments",
+            "Find today's free timeslots",
+            "Conflict detection"
+        };
+    }
+}
 
 {% endhighlight %}
 {% highlight C# hl_lines="4 5 6 7 8 9" %}
@@ -229,9 +249,9 @@ The assist view suggested prompts can be customized by using the `SuggestedPromp
  smartScheduler.AssistViewSettings.ShowAssistViewBanner = true;
  smartScheduler.AssistViewSettings.SuggestedPrompts = new List<string>
  {
-     "Schedule meeting",
-     "Set reminder",
-     "Book appointment"
+    "Summarize today's appointments",
+    "Find today's free timeslots",
+    "Conflict detection"
  };
  this.Content = smartScheduler;
 

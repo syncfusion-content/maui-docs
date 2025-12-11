@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Events .NET MAUI Smart Scheduler control | Syncfusion
+title: Events support in .NET MAUI Smart Scheduler control | Syncfusion
 description: Learn here all about Events support in Syncfusion<sup>&reg;</sup> .NET MAUI Smart Scheduler(SfSmartScheduler) control.
 platform: MAUI
 control: SfSmartScheduler
@@ -23,7 +23,7 @@ The `SfSmartScheduler` control provides the `AssistAppointmentResponseCompleted`
 The following example demonstrates how to handle the `AssistAppointmentResponseCompleted` event.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="1" %}
 
 <smartScheduler:SfSmartScheduler x:Name="smartScheduler" AssistAppointmentResponseCompleted="OnAssistAppointmentResponseCompleted"/>
 
