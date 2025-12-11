@@ -42,6 +42,12 @@ The following image illustrates the output:
 
 The [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_Text) property is used to get the user-submitted text in the [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html). The default value of the `Text` property is `string.Empty`.
 
-## Automation ID support for drawing elements
+## Automation ID
 
-The Syncfusion .NET MAUI Autocomplete control offers robust `AutomationId` support for its drawable elements. By assigning unique ID to components like the clear button, you significantly improve the efficiency of automated testing and enhance overall application accessibility. This allows for precise targeting and interaction with these elements during UI automation.
+The [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) control provides `AutomationId` support specifically for the `editable entry` and the `clear button`, enabling UI automation frameworks to reliably target these two elements. Each element’s AutomationId is derived from the control’s `AutomationId` to ensure uniqueness. 
+
+For example, if the SfAutocomplete’s `AutomationId` is set to “Employee Autocomplete,” the editable entry can be targeted as “Employee Autocomplete Entry” and the clear button as “Employee Autocomplete Clear Button.” This focused support improves accessibility and automated UI testing by providing stable, predictable identifiers for the primary interactive elements
+
+The following screenshot illustrates the AutomationIds of inner elements.
+
+![.NET MAUI Autocomplete AutomationId Image demonstration]()

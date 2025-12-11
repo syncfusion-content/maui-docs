@@ -1750,6 +1750,12 @@ public SocialMediaViewModel
 {% endhighlight %}
 {% endtabs %}
 
-## Automation ID support for drawing elements
+## Automation ID
 
-The Syncfusion .NET MAUI Combo box control offers robust `AutomationId` support for its drawable elements. By assigning unique ID to components like the clear and down buttons, you significantly improve the efficiency of automated testing and enhance overall application accessibility. This allows for precise targeting and interaction with these elements during UI automation.
+Support for `AutomationId` has been added to the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control, allowing UI automation frameworks to reliably target the `editable entry`, `the clear button`, and `the dropdown button`. Each element’s AutomationId is derived from the control’s AutomationId to ensure uniqueness across your application. 
+
+For example, if the SfComboBox’s `AutomationId` is set to “Employee ComboBox,” the editable entry can be targeted as “Employee ComboBox Entry,” the clear button as “Employee ComboBox Clear Button,” and the dropdown button as “Employee ComboBox Dropdown Button.” This focused support provides stable, predictable identifiers for the primary interactive elements, improving accessibility and automated UI testing
+
+The following screenshot illustrates the AutomationIds of inner elements.
+
+![.NET MAUI ComboBox AutomationId Image demonstration]()
