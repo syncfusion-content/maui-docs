@@ -1467,7 +1467,7 @@ private void dataGrid_CurrentCellRequestNavigating(object sender, DataGridCurren
 
 
 ### Cancel the navigation
-You can cancel the navigation by setting DataGridCurrentCellRequestNavigatingEventArgs.Cancel to true.
+You can cancel the navigation by setting `DataGridCurrentCellRequestNavigatingEventArgs.Cancel` to true.
 
 {% tabs %}
 {% highlight C# %}
@@ -1485,7 +1485,7 @@ private void dataGrid_CurrentCellRequestNavigating(object sender, DataGridCurren
 
 #### HyperlinkTextColor
 
-You can set the hyperlink text color using the HyperlinkTextColor property. If both HyperlinkTextColor and a DataGridCell TextColor (via implicit or explicit styles) are defined, HyperlinkTextColor takes precedence and will be used. If HyperlinkTextColor is not specified, the implicit or explicit cell styles will determine the hyperlink text color.
+You can set the hyperlink text color using the `HyperlinkTextColor` property. If both HyperlinkTextColor and a DataGridCell TextColor (via implicit or explicit styles) are defined, HyperlinkTextColor takes precedence and will be used. If HyperlinkTextColor is not specified, the implicit or explicit cell styles will determine the hyperlink text color.
 
 {% tabs %}
 {% highlight xaml %}
