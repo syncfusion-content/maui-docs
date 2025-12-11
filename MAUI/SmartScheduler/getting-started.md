@@ -71,7 +71,7 @@ namespace GettingStarted
 To configure the AI services, you must call the `ConfigureSyncfusionAIServices()` method in the `MauiProgram.cs` file.
 
 {% tabs %}
-{% highlight c# hl_lines="6 26" %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using Microsoft.Maui.Controls.Compatibility;
@@ -108,6 +108,7 @@ namespace GettingStarted
         }
     }
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -223,7 +224,7 @@ namespace GettingStarted
 To configure the AI services, you must call the `ConfigureSyncfusionAIServices()` method in the `MauiProgram.cs` file.
 
 {% tabs %}
-{% highlight c# hl_lines="6 26" %}
+{% highlight tabtitle="MauiProgram.cs" c# hl_lines="6 26" %}
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using Microsoft.Maui.Controls.Compatibility;
@@ -337,12 +338,15 @@ namespace GettingStarted
     }
 }
 
+{% endhighlight %}
+{% endtabs %}
+
 ## Step 4: Register the AI Service
 
 To configure the AI services, you must call the `ConfigureSyncfusionAIServices()` method in the `MauiProgram.cs` file.
 
 {% tabs %}
-{% highlight c# hl_lines="6 26" %}
+{% highlight tabtitle="MauiProgram.cs" c# hl_lines="6 26" %}
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using Microsoft.Maui.Controls.Compatibility;
