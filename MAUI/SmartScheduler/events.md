@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Events .NET MAUI Smart Scheduler control | Syncfusion
+title: Events support in .NET MAUI Smart Scheduler control | Syncfusion
 description: Learn here all about Events support in Syncfusion<sup>&reg;</sup> .NET MAUI Smart Scheduler(SfSmartScheduler) control.
 platform: MAUI
 control: SfSmartScheduler

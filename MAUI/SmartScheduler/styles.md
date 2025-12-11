@@ -1,6 +1,6 @@
 ---
 layout: post
-title: About .NET MAUI Smart Scheduler control | Syncfusion
+title: Styles support .NET MAUI Smart Scheduler control | Syncfusion
 description: Learn here all about Styles support in Syncfusion<sup>&reg;</sup> .NET MAUI Smart Scheduler(SfSmartScheduler) control.
 platform: MAUI
 control: SfSmartScheduler
@@ -12,7 +12,7 @@ documentation: ug
 You can style the elements of the `.NET MAUI Smart Scheduler` assist view using the `PlaceholderColor`, `AssistViewHeaderTextColor`, `AssistViewHeaderBackground`, `AssistViewHeaderFontSize`,`AssistViewHeaderFontFamily`, `AssistViewHeaderFontAttributes` and `AssistViewHeaderFontAutoScalingEnabled` properties of the `AssistStyle`.
 
 {% tabs %}
-{% highlight XAML hl_lines="5 14" %}
+{% highlight XAML hl_lines="5 13" %}
 
 <smartScheduler:SfSmartScheduler x:Name="smartScheduler">
     <smartScheduler:SfSmartScheduler.AssistViewSettings>
@@ -24,8 +24,7 @@ You can style the elements of the `.NET MAUI Smart Scheduler` assist view using 
                                                           AssistViewHeaderFontSize="24"
                                                           AssistViewHeaderFontAttributes="Bold"
                                                           AssistViewHeaderFontFamily="OpenSansSemibold"
-                                                          AssistViewHeaderFontAutoScalingEnabled="True"
-                                                          />
+                                                          AssistViewHeaderFontAutoScalingEnabled="True" />
             </smartScheduler:SchedulerAssistViewSettings.AssistStyle>
         </smartScheduler:SchedulerAssistViewSettings>
     </smartScheduler:SfSmartScheduler.AssistViewSettings>
