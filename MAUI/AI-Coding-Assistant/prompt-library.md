@@ -2,10 +2,9 @@
 layout: post
 title: Syncfusion AI Coding Assistant Prompt Library | Syncfusion
 description: Enhance .NET MAUI productivity with the Syncfusion AI Coding Assistant Prompt Library: prompts for code generation, configuration, and contextual guidance.
-control: Syncfusion AI Coding Assistant Prompt Library
 platform: MAUI
+control: Syncfusion AI Coding Assistant Prompt Library
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
 # Prompt Library - AI Coding Assistant
