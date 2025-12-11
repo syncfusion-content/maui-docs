@@ -16,7 +16,23 @@ Grouping in a datagrid refers to the process of organizing and categorizing data
 
 N> 
 * To update the grouping for the newly added row or column, set the `SfDataGrid.View.LiveDataUpdateMode` to `LiveDataUpdateMode.AllowDataShaping`.
-* When `BeginInit` method is called, it suspends all the updates until `EndInit` method is called.  
+* When `BeginInit` method is called, it suspends all the updates until `EndInit` method is called.
+
+## UI Grouping
+
+You can enable data grouping in the SfDataGrid by setting the `SfDataGrid.AllowGrouping` property to `true`. This allows end users to group data by dragging and dropping columns into the GroupDropArea. When a column is grouped, all records with the same value in that column are organized together in a group.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                        ItemsSource="{Binding OrderInfoCollection}"
+                        AllowGrouping="true">
+</syncfusion:SfDataGrid> 
+{% endhighlight %}
+{% highlight c# %}
+    dataGrid.AllowGrouping = true; 
+{% endhighlight %}
+{% endtabs %}
 
 ## Programmatic grouping
 
