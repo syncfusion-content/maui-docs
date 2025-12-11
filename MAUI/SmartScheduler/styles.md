@@ -48,3 +48,5 @@ this.Content = smartScheduler;
 
 {% endhighlight %}
 {% endtabs %}
+
+![Assist view styles in .NET MAUI Smart Scheduler.](images/styles/maui-smart-scheduler-assist-view-styles.png)

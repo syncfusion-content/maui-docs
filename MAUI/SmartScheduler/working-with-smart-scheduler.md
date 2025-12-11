@@ -270,12 +270,14 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
+![Assist view suggested propmts in .NET MAUI Smart Scheduler.](images/working-with-smart-scheduler/maui-smart-scheduler-assist-view-suggested-prompts.png)
+
 ### Show assist view banner
 
 The assist view banner visibility can be customized by using the `ShowAssistViewBanner` property of the `AssistViewSettings`. By default, the `ShowAssistViewBanner` property is set to false.
 
 {% tabs %}
-{% highlight XAML tabtitle="MainPage.xaml" hl_lines="4" %}
+{% highlight XAML tabtitle="MainPage.xaml" hl_lines="3" %}
 
 <smartScheduler:SfSmartScheduler  x:Name="smartScheduler">
     <smartScheduler:SfSmartScheduler.AssistViewSettings>
@@ -286,27 +288,32 @@ The assist view banner visibility can be customized by using the `ShowAssistView
 {% endhighlight %}
 {% highlight C# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
 
-SfSmartScheduler smartScheduler = new SfSmartScheduler();
-smartScheduler.AssistViewSettings = new SchedulerAssistViewSettings();
-smartScheduler.AssistViewSettings.ShowAssistViewBanner = true;
-smartScheduler.AssistViewSettings.AssistViewBannerTemplate = new DataTemplate(() =>
+this.smartScheduler.AssistViewSettings.AssistViewBannerTemplate = new DataTemplate(() =>
 {
-    return new Grid
+    var grid = new Grid
     {
-        Padding = 6,
-        BackgroundColor = Color.FromArgb("#EEF2FF"),
-        Children =
-        {
-            new Label
-            {
-                Text = "Try asking: 'Create a standup at 10 AM'",
-                FontAttributes = FontAttributes.Bold,
-                TextColor = Color.FromArgb("#1C1B1F")
-            }
-        }
+        Padding = new Thickness(16),
+        Margin = new Thickness(0, 40, 0, 0),
+        BackgroundColor = Color.FromArgb("#E9EEFF"),
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Start
     };
+
+    var label = new Label
+    {
+        Text = "Hi! I’m your personalized assistant.\nHow can I help you?",
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center,
+        TextColor = Color.FromArgb("#1C1B1F"),
+        FontSize = 16,
+        Padding = new Thickness(10),
+        FontAttributes = FontAttributes.None
+    };
+
+    grid.Children.Add(label);
+
+    return grid;
 });
-this.Content = smartScheduler;
 
 {% endhighlight %}
 {% endtabs %}
@@ -320,15 +327,36 @@ The `SfSmartScheduler` facilitates the customization of both header and banner t
 The assist view header appearance can be customized by using the `AssistViewHeaderTemplate` property of the `AssistViewSettings`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5 6 7 8 9 10 11" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
 <smartScheduler:SfSmartScheduler x:Name="smartScheduler">
     <smartScheduler:SfSmartScheduler.AssistViewSettings>
         <smartScheduler:SchedulerAssistViewSettings>
             <smartScheduler:SchedulerAssistViewSettings.AssistViewHeaderTemplate>
                 <DataTemplate>
-                    <Grid Padding="8">
-                        <Label Text="AI Assistant" FontAttributes="Bold" />
+                    <Grid BackgroundColor="LightYellow"
+                        ColumnDefinitions="40,*,40,40">
+                        <Label Text="✦"
+                            FontSize="20"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Center"
+                            Grid.Column="0" />
+                        <Label Text="Smart Scheduler"
+                            FontAttributes="Bold"
+                            FontSize="16"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Start"
+                            Grid.Column="1" />
+                        <Label Text="⟳"
+                            FontSize="20"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Center"
+                            Grid.Column="2" />
+                        <Label Text="✕"
+                            FontSize="20"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Center"
+                            Grid.Column="3" />
                     </Grid>
                 </DataTemplate>
             </smartScheduler:SchedulerAssistViewSettings.AssistViewHeaderTemplate>
@@ -343,40 +371,91 @@ SfSmartScheduler smartScheduler = new SfSmartScheduler();
 smartScheduler.AssistViewSettings = new SchedulerAssistViewSettings();
 smartScheduler.AssistViewSettings.AssistViewHeaderTemplate = new DataTemplate(() =>
 {
-    return new Grid
+    var grid = new Grid
     {
-        Padding = 8,
-        Children =
+        BackgroundColor = Colors.LightYellow,
+        ColumnDefinitions =
         {
-            new Label
-            {
-                Text = "AI Assistant",
-                FontAttributes = FontAttributes.Bold
-            }
+            new ColumnDefinition { Width = 40 },
+            new ColumnDefinition { Width = GridLength.Star },
+            new ColumnDefinition { Width = 40 },
+            new ColumnDefinition { Width = 40 }
         }
     };
+
+    var symbol = new Label
+    {
+        Text = "✦",
+        FontSize = 20,
+        VerticalTextAlignment = TextAlignment.Center,
+        HorizontalTextAlignment = TextAlignment.Center
+    };
+    grid.Children.Add(symbol);
+    Grid.SetColumn(symbol, 0);
+
+    var title = new Label
+    {
+        Text = "Smart Scheduler",
+        FontAttributes = FontAttributes.Bold,
+        FontSize = 16,
+        VerticalTextAlignment = TextAlignment.Center,
+        HorizontalTextAlignment = TextAlignment.Start
+    };
+    grid.Children.Add(title);
+    Grid.SetColumn(title, 1);
+
+    var reset = new Label
+    {
+        Text = "⟳",
+        FontSize = 20,
+        VerticalTextAlignment = TextAlignment.Center,
+        HorizontalTextAlignment = TextAlignment.Center
+    };
+    grid.Children.Add(reset);
+    Grid.SetColumn(reset, 2);
+
+    var close = new Label
+    {
+        Text = "✕",
+        FontSize = 20,
+        VerticalTextAlignment = TextAlignment.Center,
+        HorizontalTextAlignment = TextAlignment.Center
+    };
+    grid.Children.Add(close);
+    Grid.SetColumn(close, 3);
+
+    return grid;
 });
 this.Content = smartScheduler;
 
 {% endhighlight %}
 {% endtabs %}
 
+![Assist view header template in .NET MAUI Smart Scheduler.](images/working-with-smart-scheduler/maui-smart-scheduler-assist-view-header-template.png)
+
 ### Customize assist view banner appearance using DataTemplate
 
 The assist view banner appearance can be customized by using the `AssistViewBannerTemplate` property of the `AssistViewSettings`.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5 6 7 8 9 10 11 12 13" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19" %}
 
 <smartScheduler:SfSmartScheduler x:Name="smartScheduler">
     <smartScheduler:SfSmartScheduler.AssistViewSettings>
         <smartScheduler:SchedulerAssistViewSettings ShowAssistViewBanner="True">
-            <smartScheduler:SchedulerAssistViewSettings.AssistViewBannerTemplate>
+             <smartScheduler:SchedulerAssistViewSettings.AssistViewBannerTemplate>
                 <DataTemplate>
-                    <Grid Padding="6" BackgroundColor="#EEF2FF">
-                        <Label Text="Try asking: 'Create a standup at 10 AM'"
-                                    FontAttributes="Bold"
-                                    TextColor="#1C1B1F" />
+                    <Grid Padding="16"
+                        Margin="0,40,0,0"
+                        BackgroundColor="#E9EEFF"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Start">
+                        <Label Text="Hi ! I’m your personalized assistant.&#10;How can I help you ?"
+                                HorizontalTextAlignment="Center"
+                                VerticalTextAlignment="Center"
+                                TextColor="#1C1B1F"
+                                FontSize="16"
+                                Padding="10" />
                     </Grid>
                 </DataTemplate>
             </smartScheduler:SchedulerAssistViewSettings.AssistViewBannerTemplate>
@@ -392,22 +471,32 @@ smartScheduler.AssistViewSettings = new SchedulerAssistViewSettings();
 smartScheduler.AssistViewSettings.ShowAssistViewBanner = true;
 smartScheduler.AssistViewSettings.AssistViewBannerTemplate = new DataTemplate(() =>
 {
-    return new Grid
+    var grid = new Grid
     {
-        Padding = 6,
-        BackgroundColor = Color.FromArgb("#EEF2FF"),
-        Children =
-        {
-            new Label
-            {
-                Text = "Try asking: 'Create a standup at 10 AM'",
-                FontAttributes = FontAttributes.Bold,
-                TextColor = Color.FromArgb("#1C1B1F")
-            }
-        }
+        Padding = new Thickness(16),
+        Margin = new Thickness(0, 40, 0, 0),
+        BackgroundColor = Color.FromArgb("#E9EEFF"),
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Start
     };
+
+    var label = new Label
+    {
+        Text = "Hi! I’m your personalized assistant.\nHow can I help you?",
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalTextAlignment = TextAlignment.Center,
+        TextColor = Color.FromArgb("#1C1B1F"),
+        FontSize = 16,
+        Padding = new Thickness(10),
+        FontAttributes = FontAttributes.None
+    };
+    
+    grid.Children.Add(label);
+    return grid;
 });
 this.Content = smartScheduler;
 
 {% endhighlight %}
 {% endtabs %}
+
+![Assist view banner template in .NET MAUI Smart Scheduler.](images/working-with-smart-scheduler/maui-smart-scheduler-assist-view-banner-template.png)
