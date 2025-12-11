@@ -235,9 +235,9 @@ public class ViewModel
     {
         this.suggestedPrompts = new List<string>()
         {
-            "Schedule meeting",
-            "Set reminder",
-            "Book appointment"
+            "Summarize today's appointments",
+            "Find today's free timeslots",
+            "Conflict detection"
         };
     }
 }
@@ -249,9 +249,9 @@ public class ViewModel
  smartScheduler.AssistViewSettings.ShowAssistViewBanner = true;
  smartScheduler.AssistViewSettings.SuggestedPrompts = new List<string>
  {
-     "Schedule meeting",
-     "Set reminder",
-     "Book appointment"
+    "Summarize today's appointments",
+    "Find today's free timeslots",
+    "Conflict detection"
  };
  this.Content = smartScheduler;
 
