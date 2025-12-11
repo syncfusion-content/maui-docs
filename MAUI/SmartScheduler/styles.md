@@ -12,7 +12,7 @@ documentation: ug
 You can style the elements of the `.NET MAUI Smart Scheduler` assist view using the `PlaceholderColor`, `AssistViewHeaderTextColor`, `AssistViewHeaderBackground`, `AssistViewHeaderFontSize`,`AssistViewHeaderFontFamily`, `AssistViewHeaderFontAttributes` and `AssistViewHeaderFontAutoScalingEnabled` properties of the `AssistStyle`.
 
 {% tabs %}
-{% highlight XAML hl_lines="5 14" %}
+{% highlight XAML hl_lines="5 13" %}
 
 <smartScheduler:SfSmartScheduler x:Name="smartScheduler">
     <smartScheduler:SfSmartScheduler.AssistViewSettings>
@@ -21,7 +21,10 @@ You can style the elements of the `.NET MAUI Smart Scheduler` assist view using 
                 <smartScheduler:SmartSchedulerAssistStyle PlaceholderColor="#6750A4" 
                                                           AssistViewHeaderBackground="#6750A4"
                                                           AssistViewHeaderTextColor="#FFFFFF"
-                                                          AssistViewHeaderFontSize="24" />
+                                                          AssistViewHeaderFontSize="24"
+                                                          AssistViewHeaderFontAttributes="Bold"
+                                                          AssistViewHeaderFontFamily="OpenSansSemibold"
+                                                          AssistViewHeaderFontAutoScalingEnabled="True" />
             </smartScheduler:SchedulerAssistViewSettings.AssistStyle>
         </smartScheduler:SchedulerAssistViewSettings>
     </smartScheduler:SfSmartScheduler.AssistViewSettings>
@@ -37,6 +40,9 @@ smartScheduler.AssistViewSettings.AssistStyle = new SmartSchedulerAssistStyle()
     AssistViewHeaderBackground = Color.FromArgb("#6750A4"),
     AssistViewHeaderTextColor = Color.FromArgb("#FFFFFF"),
     AssistViewHeaderFontSize = 24,
+    AssistViewHeaderFontAutoScalingEnabled = true,
+    AssistViewHeaderFontAttributes = FontAttributes.Italic,
+    AssistViewHeaderFontFamily = "OpenSansSemibold",
 };
 this.Content = smartScheduler;
 
