@@ -1758,4 +1758,4 @@ For example, if the SfComboBox’s `AutomationId` is set to “Employee ComboBox
 
 The following screenshot illustrates the AutomationIds of inner elements.
 
-![.NET MAUI ComboBox AutomationId Image demonstration](Images\UICustomization\ComboBox_AutomationID.png)
+![.NET MAUI ComboBox AutomationId Image demonstration](Images/UICustomization/ComboBox_AutomationID.png)
