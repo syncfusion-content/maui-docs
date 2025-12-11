@@ -70,6 +70,7 @@ namespace GettingStarted
 
 To configure the AI services, you must call the `ConfigureSyncfusionAIServices()` method in the `MauiProgram.cs` file.
 
+{% tabs %}
 {% highlight c# hl_lines="6 26" %}
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
@@ -108,6 +109,7 @@ namespace GettingStarted
     }
 }
 {% endhighlight %}
+{% endtabs %}
 
 ## Step 5: Add .NET MAUI Smart Scheduler
 
@@ -220,6 +222,7 @@ namespace GettingStarted
 
 To configure the AI services, you must call the `ConfigureSyncfusionAIServices()` method in the `MauiProgram.cs` file.
 
+{% tabs %}
 {% highlight c# hl_lines="6 26" %}
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
@@ -258,6 +261,7 @@ namespace GettingStarted
     }
 }
 {% endhighlight %}
+{% endtabs %}
 
 ## Step 5: Add .NET MAUI Smart Scheduler
 
@@ -337,6 +341,7 @@ namespace GettingStarted
 
 To configure the AI services, you must call the `ConfigureSyncfusionAIServices()` method in the `MauiProgram.cs` file.
 
+{% tabs %}
 {% highlight c# hl_lines="6 26" %}
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
