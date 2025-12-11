@@ -423,11 +423,9 @@ public class CommandDemoViewModel
 
 ## Automation ID
 
-Support for `AutomationId` has been added to the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control, enabling UI automation frameworks to reliably target the `editable entry` and the `clear button`. Each element’s AutomationId is derived from the control’s AutomationId to ensure uniqueness.
+The [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control provides `AutomationId` support specifically for the `editable entry` and the `clear button`, enabling UI automation frameworks to reliably target these two elements. Each element’s AutomationId is derived from the control’s AutomationId to ensure uniqueness.
 
-For example, if the SfNumericEntry’s `AutomationId` is set to “Employee Numeric Entry,” the editable entry can be targeted as “Employee Numeric Entry Entry” and the clear button as “Employee Numeric Entry Clear Button.” 
-
-This focused support provides stable, predictable identifiers for the primary interactive elements, improving accessibility and automated UI testing.
+For example, if the SfNumericEntry’s `AutomationId` is set to “Employee Numeric Entry,” the editable entry can be targeted as “Employee Numeric Entry Entry” and the clear button as “Employee Numeric Entry Clear Button.” This focused support improves accessibility and automated UI testing by providing stable, predictable identifiers for the primary interactive elements. 
 
 The following screenshot illustrates the AutomationIds of inner elements.
 
