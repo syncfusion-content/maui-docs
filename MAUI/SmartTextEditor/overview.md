@@ -28,3 +28,5 @@ Syncfusion [.NET MAUI AI-Powered Text Editor]() (SfSmartTextEditor) is a multili
 * **Placeholder text**: Allows configuration of placeholders with customizable color styling.
 
 * **Customization**: Gives users full control over fonts, colors, sizes, and styles for complete UI customization.
+
+![Overview in .NET MAUI Smart Text Editor.](images/overview/maui-smarttexteditor-overview.gif)

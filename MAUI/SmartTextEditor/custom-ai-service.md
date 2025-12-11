@@ -9,7 +9,7 @@ documentation: ug
 
 # Custom AI Service Integration with .NET MAUI Smart Text Editor
 
-The Syncfusion .NET MAUI AI-Powered Text Editor can use AI to provide intelligent suggestions while typing. By default, it works with providers like `OpenAI` or `Azure OpenAI` or `ollama`, but you can also integrate your own AI service using the `IChatInferenceService` interface. This interface ensures smooth communication between the smart text editor and your custom AI logic.
+The Syncfusion .NET MAUI AI-Powered Text Editor can use AI to provide intelligent suggestions while typing. By default, it works with providers like `OpenAI` or `Azure OpenAI` or `Ollama`, but you can also integrate your own AI service using the `IChatInferenceService` interface. This interface ensures smooth communication between the smart text editor and your custom AI logic.
 
 ## IChatInferenceService Interface
 

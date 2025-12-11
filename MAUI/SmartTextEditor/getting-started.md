@@ -412,7 +412,3 @@ builder.ConfigureSyncfusionAIServices();
 
 {% endhighlight %}
 {% endtabs %}
-
-## Upcoming Feature
-
-- RTL support
