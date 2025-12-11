@@ -83,6 +83,9 @@ The Keyboard navigation through the cells and rows is determined based on the [N
 <td> {{'[SingleDeselect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionMode.html#Syncfusion_Maui_DataGrid_DataGridSelectionMode_SingleDeselect)'| markdownify }} </td>
 <td> Allows selection of a single row or cell only. However, upon tapping the row or cell again, the selection is cleared. Similar to single mode, upon selecting the next row or cell, the selection in the previous row or cell is cleared. </td>
 </tr>
+<td> {{'[Extended]()'| markdownify }} </td>
+<td> Allows selecting multiple rows or cells. You can select multiple rows or cells in the SfDataGrid by dragging the mouse or by using the key modifiers <kbd>Ctrl</kbd> and <kbd>Shift</kbd>. </td>
+</tr>
 </table>
 
 ## Disable selection for rows and columns
@@ -382,6 +385,127 @@ The selected rows will be deleted.
 </td>
 </tr>
 </table>
+
+## Multiple Row or Cell Selection
+
+The `SfDataGrid` allows you to select multiple rows or cells by setting the `SelectionMode` property to [Extended](). This enables selection of multiple rows or cells by dragging the mouse or by clicking while holding modifier keys such as <kbd>Ctrl</kbd> and <kbd>Shift</kbd>.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       SelectionUnit="Cell"
+                       NavigationMode="Cell"
+                       SelectionMode="Extended"
+                       ItemsSource="{Binding Orders}">
+{% endhighlight %}
+
+{% highlight c# %}
+this.dataGrid.SelectionUnit  = DataGridSelectionUnit.Cell;
+this.dataGrid.NavigationMode = DataGridNavigationMode.Cell;
+this.dataGrid.SelectionMode  = DataGridSelectionMode.Extended;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="Extended selection support in .NET MAUI DataGrid" src="Images\selection\maui-dataGrid-extendedSelection.png" width="404"/>
+
+## Shift and ctrl Key Combinations
+
+When the `SelectionMode` is set to [Extended](), you can select multiple rows or cells using the navigation keys together with the <kbd>Shift</kbd> key. Before navigation begins, the current cell is marked as the pressed (anchor) cell, and the selection includes all rows or cells between the pressed cell and the current cell. 
+
+<table>
+<tr>
+<th>
+Key Combinations
+</th>
+</tr>
+<tr>
+<td>
+<kbd>Shift</kbd> + <kbd>DownArrow</kbd>
+</td>
+</tr>
+<tr>
+<td>
+<kbd>Shift</kbd> + <kbd>UpArrow</kbd>
+</td>
+</tr>
+<tr>
+<td>
+<kbd>Shift</kbd> + <kbd>RightArrow</kbd>
+</td>
+</tr>
+<tr>
+<td>
+<kbd>Shift</kbd> + <kbd>LeftArrow</kbd>
+</td>
+</tr>
+<tr>
+<td>
+<kbd>Shift</kbd> + <kbd>Home</kbd>
+</td>
+</tr>
+<tr>
+<td>
+<kbd>Shift</kbd> +<kbd> End</kbd>
+</td>
+</tr>
+<tr>
+<td>
+<kbd>Shift</kbd> + <kbd>PageDown</kbd>
+</td>
+</tr>
+<tr>
+<td>
+<kbd>Shift</kbd> + <kbd>PageUp</kbd>
+</td>
+</tr>
+<tr>
+<td>
+<kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>DownArrow</kbd>
+</td>
+</tr>
+<tr>
+<td>
+<kbd>Shift</kbd> + <kbd> Ctrl</kbd> + <kbd>UpArrow</kbd>
+</td>
+</tr>
+<tr>
+<td>
+<kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>RightArrow</kbd>
+</td>
+</tr>
+<tr>
+<td>
+<kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>LeftArrow</kbd>
+</td>
+</tr>
+<tr>
+<td>
+<kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>Home</kbd>
+</td>
+</tr>
+<tr>
+<td>
+<kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>End</kbd>
+</td>
+</tr>
+<tr>
+<td>
+<kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>PageDown</kbd>
+</td>
+</tr>
+<tr>
+<td>
+<kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>PageUp</kbd>
+</td>
+</tr>
+</table>
+
+## Extended Selection Limitations
+
+The `Extended Selection` in [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.html) has certain limitations that should be considered while using this feature:
+
+- Drag selection using the mouse pointer is not supported on Android or iOS.
+- Drag selection cannot be used together with PullToRefresh, Swiping, or Row drag-and-drop features.
 
 ## Move Current Cell
 The [CurrentCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CurrentCell) can be moved to a particular [RowColumnIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.GridCommon.ScrollAxis.RowColumnIndex.html) by using the [SfDataGrid.MoveCurrentCellTo()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_MoveCurrentCellTo_Syncfusion_Maui_GridCommon_ScrollAxis_RowColumnIndex_System_Boolean_) method. This method is not applicable when the `SfDataGrid.SelectionMode` is None or the `NavigationMode` is Row.
