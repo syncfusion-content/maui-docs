@@ -1,25 +1,27 @@
 ---
 layout: post
 title: Applying Liquid Glass UI to Syncfusion® Controls
-description: This section explains liquid glass effect in Syncfusion® controls.
+description: Learn how to enable and customize the Liquid Glass visual effect in Syncfusion® .NET MAUI controls.
 platform: MAUI
 control: General
 documentation: UG
 ---
 
-# Overview of Liquid Glass Visual Effect in Syncfusion Controls
+# Liquid Glass UI for .NET MAUI Overview
 
-Syncfusion provides Liquid Glass visual effect support to their .NET MAUI controls. This feature introduces a modern translucent appearance that enhances the user interface by creating a smooth, frosted-glass look which blends seamlessly with background content.
+Syncfusion® provides Liquid Glass visual effect support for all our `.NET MAUI` controls, introducing a modern UI design approach that creates a visually appealing, translucent surface with depth and realism. This feature applies `blurred backgrounds`, `adaptive color tinting`, and `light refraction` to create a modern, translucent design that enhances the overall look and feel of your applications while maintaining readability and accessibility across platforms.
 
-## Ways to Apply Liquid Glass Effect
+## Key Features
 
-**Built-in support**: Some Syncfusion MAUI controls include built-in Liquid Glass effect support. To enable, simply set the property `EnableLiquidGlassEffect` to true on the respective control.
-
-**Sample-level customization**: For other controls, the effect can be achieved by wrapping them with the SfGlassEffectsView container.
-* The view provides two effect types:
-    *  `Clear`: Produces a sharper, more transparent glass-like appearance.
-    *  `Regular`: Creates a softer, frosted look with subtle diffusion.
+* Applies smooth, real-time blur to background content for depth and clarity.
+* Automatically adjusts tint and saturation for light and dark themes.
+* Adds subtle distortion near edges and corners for a realistic glass-like appearance.
+* Creates glossy reflections that respond to user interaction and motion.
 
 ## Supported Platforms
 
-* Liquid Glass UI support is currently available only on macOS and iOS platforms.
+* .NET MAUI (requires .NET 10)
+* macOS 26 or higher
+* iOS 26 or higher
+
+N> This feature is not applicable for Windows and Android platforms.
