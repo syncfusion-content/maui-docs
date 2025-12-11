@@ -25,8 +25,8 @@ You can enable data grouping in the SfDataGrid by setting the `SfDataGrid.AllowG
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding OrderInfoCollection}"
-                        AllowGrouping="true">
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       AllowGrouping="true">
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
@@ -40,7 +40,7 @@ You can group data by an unlimited of columns. To group multiple columns, drag a
 
 Each group is represented by a `CaptionSummaryRow`, which organizes data into a hierarchical tree structure according to identical values in the grouped column. Users can expand or collapse the underlying records in a group by clicking on its group caption.
 
-A `CaptionSummaryRow` displays details about its group, such as the group name and the number of records it contains. For more details, refer to the Caption Summaries section.
+A `CaptionSummaryRow` displays details about its group, such as the group name and the number of records it contains. For more details, refer to the [Caption Summaries](https://help.syncfusion.com/maui/datagrid/summaries#caption-summaries) section.
 
 ### Appearance
 
@@ -51,9 +51,9 @@ You can modify the GroupDropArea text by setting the `SfDataGrid.GroupDropAreaTe
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding OrderInfoCollection}"
-                        GroupDropAreaText="Drag and drop the column here"
-                        AllowGrouping="true">
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       GroupDropAreaText="Drag and drop the column here"
+                       AllowGrouping="true">
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
@@ -62,7 +62,7 @@ You can modify the GroupDropArea text by setting the `SfDataGrid.GroupDropAreaTe
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Maui UI Grouping Group Drop Area Text" src="Images/Grouping/maui-datagrid-ui-grouping-text.png" width="404"/>
+<img alt="Maui UI Grouping Group Drop Area Text" src="Images/Grouping/maui-datagrid-ui-grouping-drop-area-text.png" width="404"/>
 
 #### GroupDropAreaHeight
 
@@ -71,9 +71,9 @@ Use the `SfDataGrid.GroupDropAreaHeight` property to control the vertical size o
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding OrderInfoCollection}"
-                        GroupDropAreaHeight="100"
-                        AllowGrouping="true">
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       GroupDropAreaHeight="100"
+                       AllowGrouping="true">
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
@@ -100,16 +100,16 @@ You can style the `GroupDropArea` using the following SfDataGrid properties:
 {% highlight xaml %}
 
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding OrderInfoCollection}"
-                        AllowGrouping="true">
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       AllowGrouping="true">
     <syncfusion:SfDataGrid.DefaultStyle>
         <syncfusion:DataGridStyle GroupDropAreaTextColor="Blue"
-                          GroupDropAreaBackgroundColor="Yellow"
-                          GroupDropAreaFontAttribute="Bold"
-                          GroupDropAreaFontSize="18"
-                          GroupDropAreaStroke="Brown"
-                          GroupDropAreaStrokeThickness="2"
-                          GroupDropAreaFontFamily="Roboto"/>
+                                  GroupDropAreaBackgroundColor="Yellow"
+                                  GroupDropAreaFontAttribute="Bold"
+                                  GroupDropAreaFontSize="18"
+                                  GroupDropAreaStroke="Brown"
+                                  GroupDropAreaStrokeThickness="2"
+                                  GroupDropAreaFontFamily="Roboto"/>
     </syncfusion:SfDataGrid.DefaultStyle>
 </syncfusion:SfDataGrid>
 
@@ -133,17 +133,17 @@ You can style the `GroupDropAreaItem` using the following SfDataGrid properties:
 {% highlight xaml %}
 
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding OrderInfoCollection}"
-                        AllowGrouping="true">
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       AllowGrouping="true">
     <syncfusion:SfDataGrid.DefaultStyle>
         <syncfusion:DataGridStyle GroupDropItemTextColor="Blue"
-                          GroupDropItemBackgroundColor="Yellow"
-                          GroupDropItemFontAttribute="Bold"
-                          GroupDropItemFontSize="18"
-                          GroupDropItemStroke="Brown"
-                          GroupDropItemStrokeThickness="2"
-                          GroupDropItemFontFamily="Roboto"
-                          GroupDropItemCloseIconColor="Gray"/>
+                                  GroupDropItemBackgroundColor="Yellow"
+                                  GroupDropItemFontAttribute="Bold"
+                                  GroupDropItemFontSize="18"
+                                  GroupDropItemStroke="Brown"
+                                  GroupDropItemStrokeThickness="2"
+                                  GroupDropItemFontFamily="Roboto"
+                                  GroupDropItemCloseIconColor="Gray"/>
     </syncfusion:SfDataGrid.DefaultStyle>
 </syncfusion:SfDataGrid>
 
@@ -164,7 +164,7 @@ To apply column grouping, please refer to the following code example:
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding OrderInfoCollection}">
+                       ItemsSource="{Binding OrderInfoCollection}">
     <syncfusion:SfDataGrid.GroupColumnDescriptions>
         <syncfusion:GroupColumnDescription ColumnName="Name" />
     </syncfusion:SfDataGrid.GroupColumnDescriptions>
@@ -242,10 +242,10 @@ To set a custom grouping converter for the group description that is added to gr
 {% tabs %}
 {% highlight xaml %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
-                xmlns:local="clr-namespace:GroupingUI"
-                x:Class="GroupingUI.MainPage">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
+             xmlns:local="clr-namespace:GroupingUI"
+             x:Class="GroupingUI.MainPage">
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -353,10 +353,10 @@ In custom grouping, you can sort all the inner records of each group by setting 
 {% tabs %}
 {% highlight xaml %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
-                xmlns:local="clr-namespace:GroupingUI"
-                x:Class="GroupingUI.MainPage">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
+             xmlns:local="clr-namespace:GroupingUI"
+             x:Class="GroupingUI.MainPage">
     <ContentPage.Resources>
         <ResourceDictionary>
             <local:GroupOrderNoConverter x:Key="groupOrderNoConverter" />
@@ -453,9 +453,9 @@ By default, column grouping occurs based on the value in the underlying collecti
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:DataGridTextColumn HeaderText="Order ID"
-                                MappingName="OrderID"
-                                GroupMode="Display"
-                                Format="#" />
+                               MappingName="OrderID"
+                               GroupMode="Display"
+                               Format="#" />
 {% endhighlight %}
 
 {% highlight c# %}
@@ -697,13 +697,12 @@ The SfDataGrid uses an icon to indicate the expand and collapse state of groups.
 
 {% highlight xaml %}
 <syncfusion:SfDataGrid VerticalOptions="FillAndExpand"
-                            HorizontalOptions="FillAndExpand"
-                            ItemsSource="{Binding OrderInfoCollection}"
-                            x:Name="dataGrid"
-                            GroupingMode="Multiple"
-                            AllowGroupExpandCollapse="True"
-                            AutoGenerateColumnsMode="None"
-                            >
+                       HorizontalOptions="FillAndExpand"
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       x:Name="dataGrid"
+                       GroupingMode="Multiple"
+                       AllowGroupExpandCollapse="True"
+                       AutoGenerateColumnsMode="None">
         <syncfusion:SfDataGrid.GroupExpandCollapseTemplate>
             <DataTemplate>
                 <Image Source="downward_icon.png"/>
@@ -747,8 +746,7 @@ When choosing a `GroupExpandCollapseTemplate` as a DataTemplateSelector, you hav
                             x:Name="dataGrid"
                             GroupingMode="Multiple"
                             AllowGroupExpandCollapse="True"
-                            AutoGenerateColumnsMode="None"
-                            >
+                            AutoGenerateColumnsMode="None">
         <syncfusion:SfDataGrid.GroupExpandCollapseTemplate>
             <local:ExpandCollapseTemplate ExpandTemplate="{StaticResource ExpandIcon }"
                                             CollapseTemplate="{StaticResource CollapseIcon}" />
@@ -802,8 +800,7 @@ The size of the group icon can be customized when the icon is loaded through `Gr
                             x:Name="dataGrid"
                             GroupingMode="Multiple"
                             AllowGroupExpandCollapse="True"
-                            AutoGenerateColumnsMode="None"
-                            >
+                            AutoGenerateColumnsMode="None">
         <syncfusion:SfDataGrid.GroupExpandCollapseTemplate>
             <DataTemplate>
                 <Image Source="downward_icon.png" HeightRequest="20" WidthRequest="20"/>
