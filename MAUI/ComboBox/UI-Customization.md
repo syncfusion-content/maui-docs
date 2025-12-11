@@ -1752,9 +1752,9 @@ public SocialMediaViewModel
 
 ## Automation ID
 
-Support for `AutomationId` has been added to the [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control, allowing UI automation frameworks to reliably target the `editable entry`, `the clear button`, and `the dropdown button`. Each element’s AutomationId is derived from the control’s AutomationId to ensure uniqueness across your application. 
+The [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control provides `AutomationId` support for the `editable entry`, the `clear button`, and the `dropdown button`, enabling UI automation frameworks to reliably target these primary elements. Each element’s AutomationId is derived from the control’s AutomationId to ensure uniqueness.
 
-For example, if the SfComboBox’s `AutomationId` is set to “Employee ComboBox,” the editable entry can be targeted as “Employee ComboBox Entry,” the clear button as “Employee ComboBox Clear Button,” and the dropdown button as “Employee ComboBox Dropdown Button.” This focused support provides stable, predictable identifiers for the primary interactive elements, improving accessibility and automated UI testing
+For example, if the SfComboBox’s `AutomationId` is set to “Employee ComboBox,” the editable entry can be targeted as “Employee ComboBox Entry,” the clear button as “Employee ComboBox Clear Button,” and the dropdown button as “Employee ComboBox Dropdown Button.” This focused support improves accessibility and automated UI testing by providing stable, predictable identifiers for the primary interactive elements.
 
 The following screenshot illustrates the AutomationIds of inner elements.
 
