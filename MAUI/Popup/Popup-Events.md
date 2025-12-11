@@ -28,17 +28,17 @@ The `PositionChanging` event allows you to customize the position of the popup b
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 <sfPopup:SfPopup x:Name="popup"
-                 PositionChanging="Popup_PositionChanging"/>
+                 PositionChanging="OnPopupPositionChanging"/>
 {%endhighlight%}
 
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4 9 10" %}
 public MainPage()
 {
     InitializeComponent();
-    popup.PositionChanging += myPopup_PositionChanging;
+    popup.PositionChanging += OnPopupPositionChanging;
 }
 
-private void Popup_PositionChanging(object sender, PopupPositionChangingEventArgs e)
+private void OnPopupPositionChanging(object sender, PopupPositionChangingEventArgs e)
 {
     e.MoveTo = new Point(50, 100); 
     e.Handled = true;
