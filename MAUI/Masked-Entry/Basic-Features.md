@@ -497,4 +497,4 @@ Support for `AutomationId` has been added to the [SfMaskedEntry](https://help.sy
 
  The following screenshot illustrates the AutomationIds of inner elements.
 
-![.NET MAUI MaskedEntry AutomationId Image demonstration]()
+![.NET MAUI MaskedEntry AutomationId Image demonstration](MaskedEntry_Images\MakedEntry_AutomationID.png)

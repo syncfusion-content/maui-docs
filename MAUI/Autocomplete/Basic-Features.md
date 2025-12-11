@@ -50,4 +50,4 @@ For example, if the SfAutocomplete’s `AutomationId` is set to “Employee Auto
 
 The following screenshot illustrates the AutomationIds of inner elements.
 
-![.NET MAUI Autocomplete AutomationId Image demonstration]()
+![.NET MAUI Autocomplete AutomationId Image demonstration](Images/GettingStarted/AutoComplete_AutomationID.png)
