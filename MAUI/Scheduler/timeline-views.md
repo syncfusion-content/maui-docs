@@ -136,6 +136,37 @@ this.Content = scheduler;
 
 N> The `Timeline workweek` view displays exactly the defined working days on Scheduler control, whereas other views displays all the days.
 
+## Hide non-working days in timeline month
+
+The `HideNonWorkingDays` property of the [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html) allows you to control the visibility of non-working days in `TimelineMonth`. By default, the `HideNonWorkingDays` property is set to false.
+
+{% tabs %}
+{% highlight XAML hl_lines="6" %}
+
+<scheduler:SfScheduler x:Name="Scheduler" 
+                       View="TimelineMonth">
+    <scheduler:SfScheduler.TimelineView>
+        <scheduler:SchedulerTimelineView 
+                       NonWorkingDays="Monday,Wednesday" HideNonWorkingDays = "True"/>
+    </scheduler:SfScheduler.TimelineView>
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight C# hl_lines="5" %}
+
+SfScheduler scheduler = new SfScheduler();
+scheduler.View = SchedulerView.TimelineMonth;
+scheduler.TimelineView.NonWorkingDays = SchedulerWeekDays.Monday | SchedulerWeekDays.Wednesday;
+scheduler.TimelineView.HideNonWorkingDays = true;
+this.Content = scheduler;
+
+{% endhighlight %}
+{% endtabs %}
+
+![hide-non-working-days-in-timelinemonth-maui-scheduler](images/timeline-views/hide-non-working-days-in-timelinemonth-maui-scheduler.png)
+
+N> The `HideNonWorkingDays` property will be applicable only for `TimelineMonth` view, and not be applicable for the remaining views.
+
 ## Flexible working hours
 
 The default values for [StartHour](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_StartHour) and [EndHour](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_EndHour) are `0` and `24` respectively, to show all the time slots for a timeline day, timeline week, or timeline workweek view. You may set these properties to show only the required time periods in [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html). You can set [StartHour](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_StartHour) and [EndHour](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimeSlotView.html#Syncfusion_Maui_Scheduler_SchedulerTimeSlotView_EndHour) in the time duration to show the required time duration in minutes.
@@ -167,7 +198,7 @@ this.Content = scheduler;
 ![flexible-working-hours-in-maui-scheduler](images/timeline-views/flexible-working-hours-in-maui-scheduler.png)
 
 N>
-* The `NonWorkingDays` property will be applicable only for `workWeek` and `TimelineWorkWeek` views only, and not be applicable for the remaining views.
+* The `NonWorkingDays` property will be applicable only for `workWeek` , `TimelineWorkWeek` and `TimelineMonth` views only, and not be applicable for the remaining views.
 * No need to specify the decimal point values for `StartHour` and `EndHour`, if you do not want to set the minutes.
 * The number of time slots will be calculated based on total minutes of a day and time interval (total minutes of a day ((start hour - end hour) * 60) / time interval).
 * If a custom timeInterval is given, then the number of time slots calculated based on the given `TimeInterval` should result in an integer value (total minutes % timeInterval = 0), otherwise the next immediate time interval that results in integer value when dividing total minutes of a day will be considered. For example, if TimeInterval=2 Hours 15 minutes and total minutes = 1440 (24 Hours per day), then the `TimeInterval` will be changed to ‘144’ (1440%144=0) by considering (total minutes % TimeInterval = 0), it will return integer value for time slots rendering.

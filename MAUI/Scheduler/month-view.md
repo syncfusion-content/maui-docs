@@ -109,6 +109,62 @@ this.Scheduler.MonthView.AppointmentIndicatorSize = 10;
 
 ![change-appointment-indicator-size-in-maui-scheduler](images/month-view/appointment-indicator-size-maui-scheduler.png){:width="325" height="600" loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
 
+## Appointment indicator renderer mode
+
+The scheduler month view allows you to customize the appointment indicator rendering mode by using the `AppointmentIndicatorRenderMode` property of the [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). The `AppointmentIndicatorRenderMode` property supports three different types: `Fill`, `Stroke` and `FillAndStroke`. By default, the `AppointmentIndicatorRenderMode` is set to Fill.
+
+{% tabs %}  
+{% highlight XAML hl_lines="5" %}
+
+<schedule:SfScheduler x:Name="Scheduler"
+                        View="Month" >
+        <schedule:SfScheduler.MonthView>
+            <schedule:SchedulerMonthView AppointmentDisplayMode="Indicator" AppointmentIndicatorSize="15" AppointmentIndicatorCount="2" AppointmentIndicatorRenderMode="Stroke"/>
+        </schedule:SfScheduler.MonthView>
+</schedule:SfScheduler>
+
+{% endhighlight %}
+{% highlight C# hl_lines="4" %}
+
+this.Scheduler.View = SchedulerView.Month;
+this.Scheduler.MonthView.AppointmentDisplayMode = SchedulerMonthAppointmentDisplayMode.Indicator;
+this.Scheduler.MonthView.AppointmentIndicatorRenderMode = AppointmentIndicatorRenderMode.Stroke;
+this.Scheduler.MonthView.AppointmentIndicatorSize = 15;
+this.Scheduler.MonthView.AppointmentIndicatorCount = 2;
+
+{% endhighlight %}  
+{% endtabs %}
+
+![appointment-renderer-mode-stroke-maui-scheduler](images/month-view/appointment-renderer-mode-stroke-maui-scheduler.png){:width="325" height="600" loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
+
+## Appointment indicator stroke thickness
+
+The scheduler month view allows you to customize the appointment indicator stroke thickness by using the `AppointmentIndicatorStrokeThickness` property of the [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). By default, the `AppointmentIndicatorStrokeThickness` is set to 1d.
+
+{% tabs %}  
+{% highlight XAML hl_lines="5" %}
+
+<schedule:SfScheduler x:Name="Scheduler"
+                        View="Month" >
+        <schedule:SfScheduler.MonthView>
+            <schedule:SchedulerMonthView AppointmentDisplayMode="Indicator" AppointmentIndicatorSize="20" AppointmentIndicatorRenderMode="Stroke" AppointmentIndicatorStrokeThickness="4"/>
+        </schedule:SfScheduler.MonthView>
+</schedule:SfScheduler>
+
+{% endhighlight %}
+{% highlight C# hl_lines="6" %}
+
+this.Scheduler.View = SchedulerView.Month;
+this.Scheduler.MonthView.AppointmentDisplayMode = SchedulerMonthAppointmentDisplayMode.Indicator;
+this.Scheduler.MonthView.AppointmentIndicatorRenderMode = AppointmentIndicatorRenderMode.Stroke;
+this.Scheduler.MonthView.AppointmentIndicatorSize = 20;
+this.Scheduler.MonthView.AppointmentIndicatorStrokeThickness = 4;
+
+{% endhighlight %}  
+{% endtabs %}
+
+![appointment-indicator-stroke-thickness-maui-scheduler](images/month-view/appointment-indicator-stroke-thickness-maui-scheduler.png){:width="325" height="600" loading="lazy" .lazy .shadow-effect .section-padding .img-padding}
+
 ## Hide leading and trailing dates
 
 The previous and next month dates from a Scheduler month view can be hidden by using the [ShowLeadingAndTrailingDates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html#Syncfusion_Maui_Scheduler_SchedulerMonthView_ShowLeadingAndTrailingDates) property in the [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). The `ShowLeadingAndTrailingDates` property defaults to `true.`
