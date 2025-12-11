@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Styles support .NET MAUI Smart Scheduler control | Syncfusion
-description: Learn here all about Styles support in Syncfusion<sup>&reg;</sup> .NET MAUI Smart Scheduler(SfSmartScheduler) control.
+title: Styles support .NET MAUI AI-Powered Scheduler control | Syncfusion
+description: Learn here all about Styles support in Syncfusion<sup>&reg;</sup> .NET MAUI AI-Powered Scheduler(SfSmartScheduler) control.
 platform: MAUI
 control: SfSmartScheduler
 documentation: ug
 ---
 
-# Styles in .NET MAUI Smart Scheduler (SfSmartScheduler)
+# Styles in .NET MAUI AI-Powered Scheduler (SfSmartScheduler)
 
-You can style the elements of the `.NET MAUI Smart Scheduler` assist view using the `PlaceholderColor`, `AssistViewHeaderTextColor`, `AssistViewHeaderBackground`, `AssistViewHeaderFontSize`,`AssistViewHeaderFontFamily`, `AssistViewHeaderFontAttributes` and `AssistViewHeaderFontAutoScalingEnabled` properties of the `AssistStyle`.
+You can style the elements of the `.NET MAUI AI-Powered Scheduler` assist view using the `PlaceholderColor`, `AssistViewHeaderTextColor`, `AssistViewHeaderBackground`, `AssistViewHeaderFontSize`,`AssistViewHeaderFontFamily`, `AssistViewHeaderFontAttributes` and `AssistViewHeaderFontAutoScalingEnabled` properties of the `AssistStyle`.
 
 {% tabs %}
-{% highlight XAML hl_lines="5 13" %}
+{% highlight XAML hl_lines="4 5 6 7 8 9 10 11 12" %}
 
 <smartScheduler:SfSmartScheduler x:Name="smartScheduler">
     <smartScheduler:SfSmartScheduler.AssistViewSettings>
@@ -31,7 +31,7 @@ You can style the elements of the `.NET MAUI Smart Scheduler` assist view using 
 </smartScheduler:SfSmartScheduler>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# %}
 
 SfSmartScheduler smartScheduler = new SfSmartScheduler();
 smartScheduler.AssistViewSettings.AssistStyle = new SmartSchedulerAssistStyle()
@@ -48,3 +48,5 @@ this.Content = smartScheduler;
 
 {% endhighlight %}
 {% endtabs %}
+
+![Assist view styles in .NET MAUI AI-Powered Scheduler.](images/styles/maui-smart-scheduler-assist-view-styles.png)
