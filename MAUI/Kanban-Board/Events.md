@@ -164,7 +164,7 @@ public class KanbanViewModel
 {% highlight C# hl_lines="2 6" %}
 
 this.kanban.ItemsSource = new ViewModel().TaskDetails;
-this.kanban.DragStarting += OnKanbanCardDragStart;
+this.kanban.DragStart += OnKanbanCardDragStart;
 
 private void OnKanbanCardDragStart(object sender, KanbanDragStartEventArgs e)
 {
