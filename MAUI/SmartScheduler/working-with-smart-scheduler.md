@@ -206,21 +206,41 @@ this.Content = smartScheduler;
 The assist view suggested prompts can be customized by using the `SuggestedPrompts` property of the `AssistViewSettings`. By default, the `SuggestedPrompts` property is set to null.
 
 {% tabs %}
-{% highlight XAML hl_lines="4" %}
+{% highlight XAML hl_lines="8" %}
+
+<ContentPage.BindingContext>
+    <local:ViewModel/>
+</ContentPage.BindingContext>
 
 <smartScheduler:SfSmartScheduler x:Name="smartScheduler">
     <smartScheduler:SfSmartScheduler.AssistViewSettings >
-        <smartScheduler:SchedulerAssistViewSettings ShowAssistViewBanner="True">
-            <smartScheduler:SchedulerAssistViewSettings.SuggestedPrompts>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Find free slots</x:String>
-                    <x:String>Create a meeting</x:String>
-                    <x:String>Summarize today</x:String>
-                </x:Array>
-            </smartScheduler:SchedulerAssistViewSettings.SuggestedPrompts>
-        </smartScheduler:SchedulerAssistViewSettings>
+        <smartScheduler:SchedulerAssistViewSettings ShowAssistViewBanner="True" SuggestedPrompts="{Binding SuggestedPrompts}"/>
     </smartScheduler:SfSmartScheduler.AssistViewSettings>
 </smartScheduler:SfSmartScheduler>
+
+{% endhighlight %}
+{% highlight C# tabtitle="ViewModel.cs" %}
+
+public class ViewModel
+{
+    private List<string> suggestedPrompts;
+    
+    public List<string> SuggestedPrompts
+    {
+        get { return suggestedPrompts; }
+        set { suggestedPrompts = value; }
+    }
+
+    public ViewModel()
+    {
+        this.suggestedPrompts = new List<string>()
+        {
+            "Schedule meeting",
+            "Set reminder",
+            "Book appointment"
+        };
+    }
+}
 
 {% endhighlight %}
 {% highlight C# hl_lines="4 5 6 7 8 9" %}
