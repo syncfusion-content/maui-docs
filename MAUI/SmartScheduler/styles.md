@@ -1,6 +1,6 @@
 ---
 layout: post
-title: About .NET MAUI Smart Scheduler control | Syncfusion
+title: Styles support .NET MAUI Smart Scheduler control | Syncfusion
 description: Learn here all about Styles support in Syncfusion<sup>&reg;</sup> .NET MAUI Smart Scheduler(SfSmartScheduler) control.
 platform: MAUI
 control: SfSmartScheduler
