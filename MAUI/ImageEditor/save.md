@@ -9,11 +9,11 @@ documentation: ug
 
 # Save image using .NET MAUI Image Editor (SfImageEditor)
 
-The Image Editor control in .NET MAUI allows you to save the edited image as PNG, JPEG, and BMP.
+The Image Editor control in .NET MAUI allows you to save the edited image as PNG, JPG, JPEG, and BMP.
 
 ## Save method
 
-To save the modified image, use the [`Save`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Save_System_Nullable_Syncfusion_Maui_ImageEditor_ImageFileType__System_String_System_String_System_Nullable_Microsoft_Maui_Graphics_Size__) method, which accepts parameters such as file name, file type, file path, and image size. The supported file types for saving are [`PNG`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageFileType.html#Syncfusion_Maui_ImageEditor_ImageFileType_Png), [`JPEG`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageFileType.html#Syncfusion_Maui_ImageEditor_ImageFileType_Jpeg) and `BMP`. You can save the image by clicking Save on the toolbar.
+To save the modified image, use the [`Save`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html#Syncfusion_Maui_ImageEditor_SfImageEditor_Save_System_Nullable_Syncfusion_Maui_ImageEditor_ImageFileType__System_String_System_String_System_Nullable_Microsoft_Maui_Graphics_Size__) method, which accepts parameters such as file name, file type, file path, and image size. The supported file types for saving are [`PNG`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageFileType.html#Syncfusion_Maui_ImageEditor_ImageFileType_Png), `JPG`, [`JPEG`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.ImageFileType.html#Syncfusion_Maui_ImageEditor_ImageFileType_Jpeg) and `BMP`. You can save the image by clicking Save on the toolbar.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -119,6 +119,8 @@ N> For android, you should include permission in AndroidManifest.xml file. Pleas
 {% endtabs %}
 
 ![Image save in .NET Maui ImageEditor](images/save/imageeditor-save-image.png)
+
+N> `JPG` format support in the ImageEditor control is currently available only on Android and Windows platforms. This feature is not supported on macOS and iOS.
 
 ## Image save action events
 
