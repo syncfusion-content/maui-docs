@@ -101,7 +101,7 @@ Character counter is used when you need to limit the characters. Character limit
 
 SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Password";
-inputLayout.CharMaxLength = 8;
+inputLayout.CharMaxLength = 20;
 inputLayout.ShowCharCount = true;
 inputLayout.ContainerType= ContainerType.Outlined;
 inputLayout.HelperText = "Enter 5 to 8 characters";
