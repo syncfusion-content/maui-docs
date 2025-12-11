@@ -18,7 +18,7 @@ The `SfSmartScheduler` control provides the `AssistAppointmentResponseCompleted`
  * [Appointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAppointment.html) : The appointment details.
  * `Handled` : The value indicates whether the event is handled or not.
  * `AssistantResponse` : The appointment response detail.
- * `Action` : The action whether the appointment is added, edited or deleted.
+ * `Action` : The action indicates whether the appointment is added, edited or deleted.
 
 The following example demonstrates how to handle the `AssistAppointmentResponseCompleted` event.
 

@@ -82,9 +82,11 @@ this.Content = smartScheduler;
 {% endhighlight %}
 {% endtabs %}
 
+![Assist button template in .NET MAUI Smart Scheduler.](images/working-with-smart-scheduler/maui-smart-scheduler-assist-button-template.png)
+
 ## Assist View
 
-You can customize default appearance of the assist button view by setting the `AssistViewHeight`, `AssistViewWidth`, `AssistViewHeaderText`, `Placeholder`, `Prompt`, `SuggestedPrompts` and `ShowAssistViewBanner` properties of `SfSmartScheduler` control.
+You can customize default appearance of the assist view by setting the `AssistViewHeight`, `AssistViewWidth`, `AssistViewHeaderText`, `Placeholder`, `Prompt`, `SuggestedPrompts` and `ShowAssistViewBanner` properties of `SfSmartScheduler` control.
 
 ### Assist view height
 
@@ -109,6 +111,8 @@ this.Content = scheduler;
 {% endhighlight %}
 {% endtabs %}
 
+![Assist view height in .NET MAUI Smart Scheduler.](images/working-with-smart-scheduler/maui-smart-scheduler-assist-view-height.png)
+
 ### Assist view width
 
 The assist view width can be customized by using the `AssistViewWidth` property of the `AssistViewSettings`.
@@ -132,9 +136,11 @@ this.Content = scheduler;
 {% endhighlight %}
 {% endtabs %}
 
+![Assist view width in .NET MAUI Smart Scheduler.](images/working-with-smart-scheduler/maui-smart-scheduler-assist-view-width.png)
+
 ### Assist view header text
 
-The assist view header text can be customized by using the `AssistViewHeaderText` property of the `AssistViewSettings`. By default, `AI Assistant` text is shown in the assist view header.
+The assist view header text can be customized by using the `AssistViewHeaderText` property of the `AssistViewSettings`.
 
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
@@ -155,9 +161,11 @@ this.Content = smartScheduler;
 {% endhighlight %}
 {% endtabs %}
 
+![Assist view header text in .NET MAUI Smart Scheduler.](images/working-with-smart-scheduler/maui-smart-scheduler-assist-view-header-text.png)
+
 ### Placeholder
 
-The assist view placeholder text can be customized by using the `Placeholder` property of the `AssistViewSettings`. By default, `Type here...` text is shown in the placeholder.
+The assist view placeholder text can be customized by using the `Placeholder` property of the `AssistViewSettings`.
 
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
@@ -177,6 +185,8 @@ this.Content = smartScheduler;
 
 {% endhighlight %}
 {% endtabs %}
+
+![Assist view placeholder in .NET MAUI Smart Scheduler.](images/working-with-smart-scheduler/maui-smart-scheduler-assist-view-placeholder.png)
 
 ### Prompt
 
@@ -200,6 +210,8 @@ this.Content = smartScheduler;
 
 {% endhighlight %}
 {% endtabs %}
+
+![Assist view prompt in .NET MAUI Smart Scheduler.](images/working-with-smart-scheduler/maui-smart-scheduler-assist-view-prompt.png)
 
 ### Suggested Prompts
 
@@ -243,7 +255,7 @@ public class ViewModel
 }
 
 {% endhighlight %}
-{% highlight C# hl_lines="4 5 6 7 8 9" %}
+{% highlight C# hl_lines="3 4 5 6 7 8" %}
 
  SfSmartScheduler smartScheduler = new SfSmartScheduler();
  smartScheduler.AssistViewSettings.ShowAssistViewBanner = true;

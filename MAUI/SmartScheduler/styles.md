@@ -12,7 +12,7 @@ documentation: ug
 You can style the elements of the `.NET MAUI Smart Scheduler` assist view using the `PlaceholderColor`, `AssistViewHeaderTextColor`, `AssistViewHeaderBackground`, `AssistViewHeaderFontSize`,`AssistViewHeaderFontFamily`, `AssistViewHeaderFontAttributes` and `AssistViewHeaderFontAutoScalingEnabled` properties of the `AssistStyle`.
 
 {% tabs %}
-{% highlight XAML hl_lines="5 13" %}
+{% highlight XAML hl_lines="4 5 6 7 8 9 10 11 12" %}
 
 <smartScheduler:SfSmartScheduler x:Name="smartScheduler">
     <smartScheduler:SfSmartScheduler.AssistViewSettings>
@@ -31,7 +31,7 @@ You can style the elements of the `.NET MAUI Smart Scheduler` assist view using 
 </smartScheduler:SfSmartScheduler>
 
 {% endhighlight %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# %}
 
 SfSmartScheduler smartScheduler = new SfSmartScheduler();
 smartScheduler.AssistViewSettings.AssistStyle = new SmartSchedulerAssistStyle()

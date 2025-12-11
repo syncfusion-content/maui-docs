@@ -26,6 +26,6 @@ The Syncfusion<sup>&reg;</sup> .NET MAUI Smart Scheduler (SfSmartScheduler) comb
 
 * **Adaptive assist panel:** The assist view opens in compact or expanded layouts with configurable height and width, providing a comfortable experience on phone, tablet, and desktop.
 
-* **Assist access button:**  The assist button can be enabled or disabled and replaced with a custom data template to match the app’s design.
+* **Assist button:**  The assist button can be enabled or disabled and replaced with a custom data template to match the app’s design.
  
 * **Event Support:**  Users can choose whether appointment changes are applied automatically by the Smart Scheduler or handled manually using events.
