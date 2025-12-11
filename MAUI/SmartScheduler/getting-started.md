@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI Smart Scheduler control | Syncfusion®
-description: Learn here all about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Smart Scheduler (SfSmartScheduler) control.
+description: Learn here all about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Smart Scheduler(SfSmartScheduler) control.
 platform: maui
 control: SfSmartScheduler
 documentation: ug
@@ -71,7 +71,7 @@ namespace GettingStarted
 To configure the AI services, you must call the `ConfigureSyncfusionAIServices()` method in the `MauiProgram.cs` file.
 
 {% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
+{% highlight C# tabtitle="MauiProgram.cs" %}
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using Microsoft.Maui.Controls.Compatibility;
@@ -224,7 +224,7 @@ namespace GettingStarted
 To configure the AI services, you must call the `ConfigureSyncfusionAIServices()` method in the `MauiProgram.cs` file.
 
 {% tabs %}
-{% highlight tabtitle="MauiProgram.cs" c# hl_lines="6 26" %}
+{% highlight C# tabtitle="MauiProgram.cs" %}
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using Microsoft.Maui.Controls.Compatibility;
@@ -346,7 +346,7 @@ namespace GettingStarted
 To configure the AI services, you must call the `ConfigureSyncfusionAIServices()` method in the `MauiProgram.cs` file.
 
 {% tabs %}
-{% highlight tabtitle="MauiProgram.cs" c# hl_lines="6 26" %}
+{% highlight C# tabtitle="MauiProgram.cs" %}
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using Microsoft.Maui.Controls.Compatibility;
