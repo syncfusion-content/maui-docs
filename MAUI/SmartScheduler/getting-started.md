@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI AI-Powered Scheduler control | Syncfusion®
+title: Getting Started with .NET MAUI AI-Powered Scheduler | Syncfusion®
 description: Learn here all about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI AI-Powered Scheduler(SfSmartScheduler) control.
 platform: maui
 control: SfSmartScheduler
