@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Legend in .NET MAUI Chart control | Syncfusion
+title: Legend in .NET MAUI Pyramid Chart control | Syncfusion
 description: This section explains about how to initialize legend and its customization in Syncfusion® .NET MAUI Chart (SfPyramidChart) control.
 platform: maui
 control: SfPyramidChart
@@ -212,6 +212,57 @@ this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
+
+## Floating legend
+
+The floating legend feature allows you to position the legend inside the chart area based on its defined placement. When [IsFloating]() is set to true, the legend will start from the specified [Placement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_Placement) (such as Top, Bottom, Left, or Right) and then move according to the offset values, enabling precise control over the legend’s location.
+
+* [OffsetX](): Specifies the horizontal distance from the defined placement position.
+* [OffsetY](): Specifies the vertical distance from the defined placement position.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfPyramidChart ItemsSource="{Binding Data}" 
+                      XBindingPath="Name"
+                      YBindingPath="Value">
+    <chart:SfPyramidChart.Legend>
+        <chart:ChartLegend Placement="Right"
+                           IsFloating="True" 
+                           OffsetX="-300" 
+                           OffsetY="80">
+        </chart:ChartLegend>
+    </chart:SfPyramidChart.Legend>
+</chart:SfPyramidChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfPyramidChart chart = new SfPyramidChart()
+{
+    XBindingPath = "Name",
+    YBindingPath = "Value",
+    ItemsSource = new ViewModel().Data,
+
+};
+   
+chart.Legend = new ChartLegend()
+{
+    Placement = LegendPlacement.Top
+    IsFloating = true
+    OffsetX = -170;
+    OffsetY = 30;  
+};
+
+this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Floating Legend support in MAUI Pyramid Chart](Legend-images/floating_legend.png)
 
 ## Toggle the series visibility
 The visibility of segments in the pyramid chart can be controlled by tapping the legend item using the [ToggleSeriesVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_ToggleSeriesVisibility) property. The default value of ToggleSeriesVisibility is `false`.
