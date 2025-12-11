@@ -111,7 +111,7 @@ inputLayout.Content = new Entry();
 
 {% endtabs %}
 
-![Character Maximum Length](images/AssistiveLabels/MaxCharCount.png)
+![Character Maximum Length](images/AssistiveLabels/textinputlayout_showchar.gif)
 
 N> When character count reaches the maximum character length, the error color will be applied to hint, border, and counter label.
 
