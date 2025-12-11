@@ -10,7 +10,9 @@ keywords : .net maui smartScheduler, maui smart scheduler, ai scheduling, natura
 
 # Overview of .NET MAUI Smart Scheduler (SfSmartScheduler)
 
-The Syncfusion<sup>&reg;</sup> .NET MAUI Smart Scheduler (SfSmartScheduler) combines the power of the Scheduler with AI-driven intent understanding. Users can create, update, delete, and explore appointments using plain language—reducing clicks and turning scheduling into a conversation. It respects current view context, resources, and availability, and can detect conflicts, find free time, and summarize schedules.
+The Syncfusion<sup>&reg;</sup> .NET MAUI Smart Scheduler (SfSmartScheduler) combines the power of the Scheduler with AI-driven intent understanding. Users can create, update, delete, and explore appointments using plain language, reducing clicks and turning scheduling into a conversation. It respects current view context, resources, and availability, and can detect conflicts, find free time, and summarize schedules.
+
+<img src="images\overview\maui-smart-scheduler-overview.png" width="600" alt=".NET MAUI Smart Scheduler." />
 
 ## Key features
 
@@ -18,7 +20,7 @@ The Syncfusion<sup>&reg;</sup> .NET MAUI Smart Scheduler (SfSmartScheduler) comb
 
 * **Resource-aware booking:** Book rooms, equipment, or people while respecting their availability and the scheduler’s current filters. When a requested resource is unavailable, the control can suggest alternatives or adjacent time slots.
 
-* **Conflict detection:** Instantly detect overlapping appointments for selected dates, ranges, or resources. The smart scheduler can highlight conflicts and propose resolutions (e.g., reschedule, reassign, or extend buffer times)()
+* **Conflict detection:** Instantly detect overlapping appointments for selected dates, ranges, or resources. The smart scheduler can highlight conflicts and propose resolutions (e.g., reschedule, reassign, or extend buffer times)
 
 * **Smart summarization:** Generate concise summaries for upcoming or selected appointments, helping users understand what’s next at a glance (e.g., “Summarize my meetings tomorrow”).
 

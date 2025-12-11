@@ -23,7 +23,7 @@ The `SfSmartScheduler` control provides the `AssistAppointmentResponseCompleted`
 The following example demonstrates how to handle the `AssistAppointmentResponseCompleted` event.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="1" %}
 
 <smartScheduler:SfSmartScheduler x:Name="smartScheduler" AssistAppointmentResponseCompleted="OnAssistAppointmentResponseCompleted"/>
 
