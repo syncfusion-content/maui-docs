@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Date Time intervals in .NET MAUI Date Time Picker Control | Syncfusion<sup>&reg;</sup>
+title: Date Time intervals in Date Time Picker Control | Syncfusion®
 description: Learn about date time intervals in Syncfusion<sup>&reg;</sup> .NET MAUI Date Time Picker (SfDateTimePicker) control and its basic features.
 platform: maui
 control: SfDateTimePicker
@@ -16,6 +16,7 @@ The `SfDateTimePicker` provides six intervals in [.NET MAUI Date Time Picker](ht
  * [`HourInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_HourInterval)
  * [`MinuteInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_MinuteInterval)
  * [`SecondInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_SecondInterval)
+ * [`MilliSecondInterval`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_MilliSecondInterval)
 
 ## Day interval
 Date Time picker provides an option to give an interval between days using the [DayInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_DayInterval) property of [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
@@ -142,3 +143,25 @@ this.Content = picker;
 {% endtabs %}
 
    ![Second interval in .NET MAUI Date Time picker.](images/intervals/maui-date-time-picker-second-interval.png)
+
+## MilliSecond Interval
+Date Time Picker provides an option to give an interval between milliseconds using the [MilliSecondInterval](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_MilliSecondInterval) property of [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" hl_lines="2" %}
+
+<picker:SfDateTimePicker x:Name="picker"
+                         TimeFormat="hh_mm_ss_fff_tt"
+                         MilliSecondInterval="2"/>
+
+{% endhighlight %}
+{% highlight c# tabtitle="C#" hl_lines="2" %}  
+
+SfDateTimePicker picker = new SfDateTimePicker()
+picker.MilliSecondInterval = 2;
+this.Content = picker;
+
+{% endhighlight %}
+{% endtabs %}
+
+   ![MilliSecond interval in .NET MAUI Date Time picker.](images/intervals/maui-date-time-picker-millisecond-interval.png)

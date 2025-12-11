@@ -390,6 +390,60 @@ public class ForeColorConverter : IValueConverter
 
 ![Conditional cell styling based on RowIndex and ColumnIndex in .NET MAUI DataGrid](Images/conditional-styling/maui-datagrid-conditional-datagridcelltyle_basedon_rowcolumnindex.png)
 
+### Customizing the BorderColor of a cell
+You can customize the border color of individual cells in the SfDataGrid based on RowIndex and ColumnIndex property, and setting the `BorderColor` property  in DataGridCell by writing the style for the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html)
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<ContentPage xmlns:syncfusion=http://schemas.syncfusion.com/maui>
+   <ContentPage.Resources>
+       <ResourceDictionary>
+           <local:BorderColorConverter x:Key="converter" />
+           <Style TargetType="syncfusion:DataGridCell">
+               <Setter Property="BorderColor" Value="{Binding Source={RelativeSource Mode=Self}, Converter={StaticResource converter}}" />
+           </Style>
+       </ResourceDictionary>
+   </ContentPage.Resources>
+
+   <ContentPage.Content>
+       <Grid>
+          <syncfusion:SfDataGrid x:Name="dataGrid"
+                                 ItemsSource="{Binding OrderInfoCollection}"
+                                 GridLinesVisibility="Both">
+          </syncfusion:SfDataGrid>
+        </Grid>
+   </ContentPage.Content>
+</ContentPage>
+{% endhighlight %}
+{% highlight xaml tabtitle="BorderColorConverter.cs" %}
+
+public class BorderColorConverter : IValueConverter
+{
+   public object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
+   {
+       var gridCell = value as DataGridCell;
+ 
+       if (gridCell != null)
+       {
+           if (gridCell.DataColumn!.RowIndex == 4 && gridCell.DataColumn.ColumnIndex == 3)
+               return Colors.Blue;
+ 
+           return Colors.Transparent;
+       }
+
+       return Colors.Transparent;
+   }
+
+   public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
+   {
+       throw new NotImplementedException();
+   }
+}
+{% endhighlight %}
+{% endtabs %}
+
+![Customizing the BorderColor of a cell based on RowIndex and ColumnIndex in .NET MAUI DataGrid](Images/conditional-styling/maui-datagrid-customizing-bordercolor_basedon_rowcolumnindex.png)
+
 ## Style a cell based on cell value
 Styling can be applied to a particular cell based on CellValue property by writing the style for the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html) TargetType.
 

@@ -278,6 +278,28 @@ The following image illustrates the result of the above code:
 
 ![HorizontalTextAlignment](GettingStarted_images/textalignment.png)
 
+## Select text on focus
+
+The [`SelectAllOnFocus`]() property allows you to automatically select all the text in the numeric entry when the control gains focus. This can improve user efficiency by making it easy to replace the entire content. The default value of this property is `true`.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfNumericEntry WidthRequest="200"
+                        Value="123456"
+                        SelectAllOnFocus="False" />
+
+{% endhighlight %}
+{% highlight c# %}
+
+SfNumericEntry numericEntry = new SfNumericEntry();
+numericEntry.WidthRequest = 200;
+numericEntry.Value = 123456;
+numericEntry.SelectAllOnFocus = false;
+
+{% endhighlight %}
+{% endtabs %}
+
 ## ReturnType
 
 The `ReturnType` property specifies the return button (e.g., Next, Done, Go) of the keyboard. It helps manage the flow between multiple input fields by defining what happens when the action button is pressed.

@@ -584,3 +584,54 @@ this.Content = stackLayout;
 {% endhighlight %}
 
 {% endtabs %}
+
+## Disable ripple effect on item click
+
+The [EnableRippleAnimation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_EnableRippleAnimation) property of the [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html) allows you to enable or disable the ripple animation for tab headers. This animation provides visual feedback when a tab header is tapped. The default value of the `EnableRippleAnimation` property is `true`.
+
+{% tabs %}
+
+{% highlight xaml %}
+<!-- Define the SfTabView control with the ripple animation disabled -->
+<tabView:SfTabView EnableRippleAnimation="False">
+    <!-- Define tab items -->
+</tabView:SfTabView>
+{% endhighlight %}
+
+{% highlight C# %}
+// Create an instance of the SfTabView control
+SfTabView tabView = new SfTabView();
+
+// Disable the ripple animation
+tabView.EnableRippleAnimation = false;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## How to
+
+### Disable hover effect on tab item
+
+To disable the hover effect when the mouse pointer is over a [TabItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabItem.html) header, set color value `Transparent` to the built-in key `SfTabViewHoverBackground`.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 ... >
+	<ContentPage.Resources>
+		<Color x:Key="SfTabViewHoverBackground">Transparent</Color>
+	</ContentPage.Resources>
+	<ContentPage.Content>
+		<tabView:SfTabView x:Name="tabView" EnableRippleAnimation="False">
+			<!-- Define tab items -->
+		</tabView:SfTabView>
+	</ContentPage.Content>
+</ContentPage>
+
+{% endhighlight %}
+
+{% endtabs %}
