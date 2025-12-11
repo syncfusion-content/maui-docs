@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Multi Drawer in .NET MAUI Navigation Drawer | Syncfusion®
-description: The navigation drawer allows users to open drawers on multiple sides with various toggle methods, offering customizable layouts and smooth transitions.
+description: The navigation drawer allows users to open drawers on multiple sides with different toggle methods, offering customizable layouts and smooth transitions.
 platform: MAUI
 control: SfNavigationDrawer
 documentation: UG
