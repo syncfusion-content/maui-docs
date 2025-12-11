@@ -307,6 +307,8 @@ Set the writing context and preferred expressions to guide completions:
 {% endhighlight %}
 {% endtabs %}
 
+![Getting Started in .NET MAUI Smart Text Editor.](images/getting-started/maui-smarttexteditor-getting-started.gif)
+
 N> If no AI inference service is configured, the editor generates offline suggestions from your UserPhrases.
 
 ## Configure AI Service

@@ -50,6 +50,8 @@ var smarttexteditor = new SfSmartTextEditor
 {% endhighlight %}
 {% endtabs %}
 
+![Inline Suggestion in .NET MAUI Smart Text Editor.](images/suggestion-display-mode/maui-smarttexteditor-inline-mode.gif)
+
 ## Popup suggestion mode
 Popup mode displays the suggested text in a small overlay near the caret, making it easy to review and accept without interrupting your typing. This mode is especially useful on touch based devices where tapping the suggestion feels natural and convenient.
 
@@ -81,3 +83,5 @@ var smarttexteditor = new SfSmartTextEditor
 
 {% endhighlight %}
 {% endtabs %}
+
+![Popup Suggestion in .NET MAUI Smart Text Editor.](images/suggestion-display-mode/maui-smarttexteditor-popup-mode.gif)

@@ -67,6 +67,8 @@ var smarttexteditor = new SfSmartTextEditor
 {% endhighlight %}
 {% endtabs %}
 
+![Text Style in .NET MAUI Smart Text Editor.](images/customization/maui-smarttexteditor-textcolor.gif)
+
 ## Placeholder text and color customization
 Add a helpful placeholder to guide users and use [PlaceholderColor] to make sure the text is easy to read.
 
@@ -96,7 +98,7 @@ Customize the color of the suggestion text using the [SuggestionTextColor] prope
 {% highlight xaml tabtitle="XAML" %}
 
 <smarttexteditor:SfSmartTextEditor
-    SuggestionTextColor="Goldenrod" />
+    SuggestionTextColor="LightYellow" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
@@ -117,7 +119,7 @@ Change the background color of the suggestion popup using the [SuggestionPopupBa
 
 <smarttexteditor:SfSmartTextEditor
     SuggestionDisplayMode="Popup"
-    SuggestionPopupBackground="LightYellow" />
+    SuggestionPopupBackground="LightPink" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
@@ -130,6 +132,8 @@ var smarttexteditor = new SfSmartTextEditor
 
 {% endhighlight %}
 {% endtabs %}
+
+![Customization in .NET MAUI Smart Text Editor.](images/customization/maui-smarttexteditor-customization.gif)
 
 ## Maximum input length
 Set a limit on the number of characters the user can enter in the smart text editor using the [MaxLength] property.
