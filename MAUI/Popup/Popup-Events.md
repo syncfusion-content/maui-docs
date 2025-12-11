@@ -9,12 +9,43 @@ documentation: ug
 
 # Popup Events And Commands in .NET MAUI Popup (SfPopup)
 
-There are four built-in events in the SfPopup control namely:
+There are five built-in events in the SfPopup control namely:
 
+* PositionChanging
 * Opening
 * Opened
 * Closing
 * Closed
+
+## PositionChanging Event
+
+The `PositionChanging` event allows you to customize the position of the popup before it opens. This event is triggered before the popup is displayed, giving you the flexibility to modify its location dynamically. When the PositionChanging event occurs, it provides an instance of `PopupPositionChangingEventArgs`, which contains the following members:
+
+* `Bounds` : Represents the current bounds of the popup.
+* `MoveTo` : Specifies the new position where the popup should be moved. You can assign a custom position to this property.
+* `Handled` : Must be set to `true` for the `MoveTo` value to take effect. If `Handled` is not set, the popup will retain its original position.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
+<sfPopup:SfPopup x:Name="popup"
+                 PositionChanging="Popup_PositionChanging"/>
+{%endhighlight%}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4 9 10" %}
+public MainPage()
+{
+    InitializeComponent();
+    popup.PositionChanging += myPopup_PositionChanging;
+}
+
+private void Popup_PositionChanging(object sender, PopupPositionChangingEventArgs e)
+{
+    e.MoveTo = new Point(50, 100); 
+    e.Handled = true;
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Opening event
 
