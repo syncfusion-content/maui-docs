@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Methods support in .NET MAUI Smart Scheduler control | Syncfusion
-description: Learn here all about methods support in Syncfusion<sup>&reg;</sup> .NET MAUI Smart Scheduler(SfSmartScheduler) control.
+title: Methods support in .NET MAUI AI-Powered Scheduler control | Syncfusion
+description: Learn here all about methods support in Syncfusion<sup>&reg;</sup> .NET MAUI AI-Powered Scheduler(SfSmartScheduler) control.
 platform: MAUI
 control: SfSmartScheduler
 documentation: ug
 ---
 
-# Methods in .NET MAUI Smart Scheduler (SfSmartScheduler)
+# Methods in .NET MAUI AI-Powered Scheduler (SfSmartScheduler)
 
 The `SfSmartScheduler` supports the `ResetAssistView`, `CloseAssistView` and `OpenAssistView` methods to reset, close or open assist view programmatically.
 

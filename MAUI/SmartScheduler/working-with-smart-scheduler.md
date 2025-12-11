@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Working with .NET MAUI Smart Scheduler control | Syncfusion®
-description: Learn here all about working with Syncfusion<sup>&reg;</sup> .NET MAUI Smart Scheduler(SfSmartScheduler) control.
+title: Working with .NET MAUI AI-Powered Scheduler control | Syncfusion®
+description: Learn here all about working with Syncfusion<sup>&reg;</sup> .NET MAUI AI-Powered Scheduler(SfSmartScheduler) control.
 platform: maui
 control: SfSmartScheduler
 documentation: ug
 keywords : .net maui smart scheduler  
 ---
 
-# Working with .NET MAUI Smart Scheduler (SfSmartScheduler)
+# Working with .NET MAUI AI-Powered Scheduler (SfSmartScheduler)
 
 ## Assist Button
 
@@ -82,7 +82,7 @@ this.Content = smartScheduler;
 {% endhighlight %}
 {% endtabs %}
 
-![Assist button template in .NET MAUI Smart Scheduler.](images/working-with-smart-scheduler/maui-smart-scheduler-assist-button-template.png)
+![Assist button template in .NET MAUI AI-Powered Scheduler.](images/working-with-smart-scheduler/maui-smart-scheduler-assist-button-template.png)
 
 ## Assist View
 
@@ -111,7 +111,7 @@ this.Content = scheduler;
 {% endhighlight %}
 {% endtabs %}
 
-![Assist view height in .NET MAUI Smart Scheduler.](images/working-with-smart-scheduler/maui-smart-scheduler-assist-view-height.png)
+![Assist view height in .NET MAUI AI-Powered Scheduler.](images/working-with-smart-scheduler/maui-smart-scheduler-assist-view-height.png)
 
 ### Assist view width
 
@@ -136,7 +136,7 @@ this.Content = scheduler;
 {% endhighlight %}
 {% endtabs %}
 
-![Assist view width in .NET MAUI Smart Scheduler.](images/working-with-smart-scheduler/maui-smart-scheduler-assist-view-width.png)
+![Assist view width in .NET MAUI AI-Powered Scheduler.](images/working-with-smart-scheduler/maui-smart-scheduler-assist-view-width.png)
 
 ### Assist view header text
 
@@ -161,7 +161,7 @@ this.Content = smartScheduler;
 {% endhighlight %}
 {% endtabs %}
 
-![Assist view header text in .NET MAUI Smart Scheduler.](images/working-with-smart-scheduler/maui-smart-scheduler-assist-view-header-text.png)
+![Assist view header text in .NET MAUI AI-Powered Scheduler.](images/working-with-smart-scheduler/maui-smart-scheduler-assist-view-header-text.png)
 
 ### Placeholder
 
@@ -186,7 +186,7 @@ this.Content = smartScheduler;
 {% endhighlight %}
 {% endtabs %}
 
-![Assist view placeholder in .NET MAUI Smart Scheduler.](images/working-with-smart-scheduler/maui-smart-scheduler-assist-view-placeholder.png)
+![Assist view placeholder in .NET MAUI AI-Powered Scheduler.](images/working-with-smart-scheduler/maui-smart-scheduler-assist-view-placeholder.png)
 
 ### Prompt
 
@@ -211,7 +211,7 @@ this.Content = smartScheduler;
 {% endhighlight %}
 {% endtabs %}
 
-![Assist view prompt in .NET MAUI Smart Scheduler.](images/working-with-smart-scheduler/maui-smart-scheduler-assist-view-prompt.png)
+![Assist view prompt in .NET MAUI AI-Powered Scheduler.](images/working-with-smart-scheduler/maui-smart-scheduler-assist-view-prompt.png)
 
 ### Suggested Prompts
 
@@ -270,7 +270,7 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
-![Assist view suggested propmts in .NET MAUI Smart Scheduler.](images/working-with-smart-scheduler/maui-smart-scheduler-assist-view-suggested-prompts.png)
+![Assist view suggested propmts in .NET MAUI AI-Powered Scheduler.](images/working-with-smart-scheduler/maui-smart-scheduler-assist-view-suggested-prompts.png)
 
 ### Show assist view banner
 
@@ -431,7 +431,7 @@ this.Content = smartScheduler;
 {% endhighlight %}
 {% endtabs %}
 
-![Assist view header template in .NET MAUI Smart Scheduler.](images/working-with-smart-scheduler/maui-smart-scheduler-assist-view-header-template.png)
+![Assist view header template in .NET MAUI AI-Powered Scheduler.](images/working-with-smart-scheduler/maui-smart-scheduler-assist-view-header-template.png)
 
 ### Customize assist view banner appearance using DataTemplate
 
@@ -499,4 +499,4 @@ this.Content = smartScheduler;
 {% endhighlight %}
 {% endtabs %}
 
-![Assist view banner template in .NET MAUI Smart Scheduler.](images/working-with-smart-scheduler/maui-smart-scheduler-assist-view-banner-template.png)
+![Assist view banner template in .NET MAUI AI-Powered Scheduler.](images/working-with-smart-scheduler/maui-smart-scheduler-assist-view-banner-template.png)

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Events support in .NET MAUI Smart Scheduler control | Syncfusion
-description: Learn here all about Events support in Syncfusion<sup>&reg;</sup> .NET MAUI Smart Scheduler(SfSmartScheduler) control.
+title: Events support in .NET MAUI AI-Powered Scheduler control | Syncfusion
+description: Learn here all about Events support in Syncfusion<sup>&reg;</sup> .NET MAUI AI-Powered Scheduler(SfSmartScheduler) control.
 platform: MAUI
 control: SfSmartScheduler
 documentation: ug
 ---
 
-# Events in .NET MAUI Smart Scheduler (SfSmartScheduler)
+# Events in .NET MAUI AI-Powered Scheduler (SfSmartScheduler)
 
-The `SfSmartScheduler` supports the `AssistAppointmentResponseCompleted` event to interact with .NET MAUI Smart Scheduler.
+The `SfSmartScheduler` supports the `AssistAppointmentResponseCompleted` event to interact with .NET MAUI AI-Powered Scheduler.
 
 ## AssistAppointmentResponseCompleted Event
 
