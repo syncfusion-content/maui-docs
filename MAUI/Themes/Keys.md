@@ -491,40 +491,72 @@ This page lists the keys associated with each control and the respective UI elem
     <td> Stroke thickness for the stop responding view.<br/><br/></td>
 </tr>
 <tr>
-<td> SfAIAssistViewSelectionTextHighLightColor<br/><br/></td>
-<td> Color to highlight the selected text. <br/><br/></td>
+    <td> SfAIAssistViewSelectionTextHighLightColor<br/><br/></td>
+    <td> Color to highlight the selected text. <br/><br/></td>
 </tr>
 <tr> 
-<td> SfAIAssistViewHeaderSuggestionBackground<br/><br/></td>
-<td> Background color of the common suggestions view.<br/><br/></td>
+    <td> SfAIAssistViewHeaderSuggestionBackground<br/><br/></td>
+    <td> Background color of the common suggestions view.<br/><br/></td>
 </tr>
 <tr>
-<td> SfAIAssistViewHeaderSuggestionItemStroke<br/><br/></td>
-<td> Stroke color for the common suggestion item.<br/><br/></td>
+    <td> SfAIAssistViewHeaderSuggestionItemStroke<br/><br/></td>
+    <td> Stroke color for the common suggestion item.<br/><br/></td>
 </tr>
 <tr>
-<td> SfAIAssistViewHeaderSuggestionItemStrokeThickness<br/><br/></td>
-<td> Stroke thickness for the common suggestion item.<br/><br/></td>
+    <td> SfAIAssistViewHeaderSuggestionItemStrokeThickness<br/><br/></td>
+    <td> Stroke thickness for the common suggestion item.<br/><br/></td>
 </tr>
 <tr>
-<td> SfAIAssistViewHeaderSuggestionItemBackground<br/><br/></td>
-<td> Background color of an item in the common suggestions.<br/><br/></td>
+    <td> SfAIAssistViewHeaderSuggestionItemBackground<br/><br/></td>
+    <td> Background color of an item in the common suggestions.<br/><br/></td>
 </tr>
 <tr>
-<td> SfAIAssistViewHeaderSuggestionItemTextColor<br/><br/></td>
-<td> Text color of an item in the common suggestions.<br/><br/></td>
+    <td> SfAIAssistViewHeaderSuggestionItemTextColor<br/><br/></td>
+    <td> Text color of an item in the common suggestions.<br/><br/></td>
 </tr>
 <tr>
-<td> SfAIAssistViewHeaderSuggestionItemFontSize<br/><br/></td>
-<td> Font size of an item in the common suggestions.<br/><br/></td>
+    <td> SfAIAssistViewHeaderSuggestionItemFontSize<br/><br/></td>
+    <td> Font size of an item in the common suggestions.<br/><br/></td>
 </tr>
 <tr>
-<td> SfAIAssistViewHeaderSuggestionItemFontFamily<br/><br/></td>
-<td> Font family of an item in the common suggestions.<br/><br/></td>
+    <td> SfAIAssistViewHeaderSuggestionItemFontFamily<br/><br/></td>
+    <td> Font family of an item in the common suggestions.<br/><br/></td>
 </tr>
 <tr>
-<td> SfAIAssistViewHeaderSuggestionItemFontAttribute<br/><br/></td>
-<td> Font attributes of an item in the common suggestions.<br/><br/></td>
+    <td> SfAIAssistViewHeaderSuggestionItemFontAttribute<br/><br/></td>
+    <td> Font attributes of an item in the common suggestions.<br/><br/></td>
+</tr>
+<tr>
+    <td>ScrollToBottomButtonBackground</td>
+    <td>Background color of the scroll to bottom button view.</td>
+</tr>
+<tr>
+    <td>ScrollToBottomButtonIconColor</td>
+    <td>Color of the scroll to bottom button.</td>
+</tr>
+<tr>
+    <td>HoveredScrollToBottomButtonBackground</td>
+    <td>Background color of scroll to bottom button in hover state.</td>
+</tr>
+<tr>
+    <td>PressedScrollToBottomButtonBackground</td>
+    <td>Background color when the scroll to bottom button is pressed.</td>
+</tr>
+<tr>
+    <td>ActionButtonBackground</td>
+    <td>Background color of the action button.</td>
+</tr>
+<tr>
+    <td>ActionButtonIconColor</td>
+    <td>Color of the action button.</td>
+</tr>
+<tr>
+    <td>ActionButtonTextColor</td>
+    <td>Text color of an item in the action button.</td>
+</tr>
+<tr>
+    <td>ActionButtonViewBackground</td>
+    <td>Background color of the action buttons view.</td>
 </tr>
 </table>
 
