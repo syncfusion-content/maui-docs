@@ -88,9 +88,9 @@ Character counter is used when you need to limit the characters. Character limit
 
 <inputLayout:SfTextInputLayout Hint="Password" 
                                ShowCharCount="true"
-                               CharMaxLength="8"
+                               CharMaxLength="20"
                                ContainerType="Outlined"
-                               HelperText="Enter 5 to 8 characters">
+                               HelperText="Enter 5 to 20 characters">
     <Entry />
 </inputLayout:SfTextInputLayout> 
   
