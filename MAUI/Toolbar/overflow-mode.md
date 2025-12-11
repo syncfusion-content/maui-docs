@@ -856,7 +856,7 @@ The Toolbar now supports showing items on multiple rows by setting the [Overflow
 
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="7" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="9" %}
 
 public MainPage()
 {
