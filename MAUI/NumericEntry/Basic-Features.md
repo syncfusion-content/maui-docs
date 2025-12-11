@@ -431,4 +431,4 @@ This focused support provides stable, predictable identifiers for the primary in
 
 The following screenshot illustrates the AutomationIds of inner elements.
 
-![.NET MAUI NumeriEntry AutomationId Image demonstration](GettingStarted_images\NumericEntry_AutomationID.png)
+![.NET MAUI NumeriEntry AutomationId Image demonstration](GettingStarted_images/NumericEntry_AutomationID.png)
