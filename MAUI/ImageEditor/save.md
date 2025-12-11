@@ -37,6 +37,8 @@ To save the modified image, use the [`Save`](https://help.syncfusion.com/cr/maui
 {% endhighlight %}
 {% endtabs %}
 
+N> `JPG` format is supported only on `Android` and `Windows`, not on `macOS` or `iOS`.
+
 The saved image will be added to the device for each platform in the following locations:
 
 #### Windows, MacCatalyst and iOS
@@ -119,8 +121,6 @@ N> For android, you should include permission in AndroidManifest.xml file. Pleas
 {% endtabs %}
 
 ![Image save in .NET Maui ImageEditor](images/save/imageeditor-save-image.png)
-
-N> `JPG` format support in the ImageEditor control is currently available only on Android and Windows platforms. This feature is not supported on macOS and iOS.
 
 ## Image save action events
 
