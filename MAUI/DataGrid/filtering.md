@@ -226,18 +226,18 @@ The SfDataGrid filter UI consists of two distinct user interfaces.
 
 The following image shows the checkbox filter popup menu on the desktop platform,
 
-<img alt="Checkbox filtering UI" src="images/filtering/maui-datagrid-filtering-checkbox-filtering.png"  width="500"/>
+<img alt="Checkbox filtering UI" src="Images/filtering/maui-datagrid-filtering-checkbox-filtering.png"  width="500"/>
 
 The following image shows the advanced filter popup menu on the desktop platform,
 
-<img alt="Advanced filtering UI" src="images/filtering/maui-datagrid-filtering-advanced-filtering.png" width="500"/>
+<img alt="Advanced filtering UI" src="Images/filtering/maui-datagrid-filtering-advanced-filtering.png" width="500"/>
 
 ### Checkbox filtering
 Checkbox filtering is similar to Excel's filter popup, which displays a checked list box of unique items along with a search text field. The items which are in the checked state will be visible in the view. Other items will be filtered out from the view.
 
 The checkbox filter popup menu with a few selected values in the checkbox list view for filtering is displayed in the following image.
 
-<img alt="Checkbox filtering with selected values" src="images/filtering/maui-datagrid-filtering-checkbox-filtering-with-selectedvalues.png"  width="500"/>
+<img alt="Checkbox filtering with selected values" src="Images/filtering/maui-datagrid-filtering-checkbox-filtering-with-selectedvalues.png"  width="500"/>
 
 ### Advanced filtering
 Multiple filter choices are available in the advanced filter UI to make data filtering simple. By automatically identifying the underlying date type, filter menu options are loaded based on the Advanced filter type.
@@ -372,7 +372,7 @@ We can change the filter UI for all the columns in DataGrid by changing the `Fil
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Filter mode as advanced filter" src="images/filtering/maui-datagrid-filtering-filterMode-advanced.png" width="500"/>
+<img alt="Filter mode as advanced filter" src="Images/filtering/maui-datagrid-filtering-filterMode-advanced.png" width="500"/>
 
 ### Changing filter UI for particular column
 Filter UI view can be changed for a particular column in DataGrid by changing the `FilterMode` property in DataGridFilterView by writing style and added it to [DataGridColumn.FilterPopupStyle]() property.
@@ -391,7 +391,7 @@ Filter UI view can be changed for a particular column in DataGrid by changing th
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Filter mode as checkbox filter" src="images/filtering/maui-datagrid-filtering-filter-mode-checkbox.png" width="500"/>
+<img alt="Filter mode as checkbox filter" src="Images/filtering/maui-datagrid-filtering-filter-mode-checkbox.png" width="500"/>
 
 ## Changing Advanced filter type
 [FilterBehavior]() determines the Advanced filter type loaded in filter view. You can change the advanced filter type using `FilterBehavior`.
@@ -429,7 +429,7 @@ Setting `FilterMode` to AdvancedFilter and [CanGenerateUniqueItems]() to `false`
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="loading performance in advanced filter" src="images/filtering/maui-datagrid-filtering-canGenerateUniqueItems-false.png" width="500"/>
+<img alt="loading performance in advanced filter" src="Images/filtering/maui-datagrid-filtering-canGenerateUniqueItems-false.png" width="500"/>
 
 ## Filtering null values
 By default the [AllowBlankFilters]() property is set to true. So, the filter items must have null values. `AllowBlankFilters` must be set to `false` if you want to remove null values from the list of filter items. 
@@ -447,11 +447,11 @@ dataGrid.Columns["OrderID"].AllowBlankFilters = false;
 
 Checkbox Filter with `AllowBlankFilters` as `True`
 
-<img alt="Blank filtering in checkbox filtering" src="images/filtering/maui-datagrid-null-filtering-checkbox.png" width="500"/>
+<img alt="Blank filtering in checkbox filtering" src="Images/filtering/maui-datagrid-null-filtering-checkbox.png" width="500"/>
 
 Advanced Filter with `AllowBlankFilters` as `True`
 
-<img alt="Blank filtering in advanced filtering" src="images/filtering/maui-datagrid-null-filtering-advanced.png" width="500"/>
+<img alt="Blank filtering in advanced filtering" src="Images/filtering/maui-datagrid-null-filtering-advanced.png" width="500"/>
 
 ## Instant Filtering
 By default, filtering is applied to the columns when OK button is clicked in UI filtering. You must set [ImmediateUpdateColumnFilter]() to True if you wish to update the filters instantly whenever the filter items are updated in the filter popup menu.
@@ -468,10 +468,10 @@ dataGrid.Columns["OrderID"].ImmediateUpdateColumnFilter = true;
 {% endtabs %}
 
 Checkbox Filter with `ImmediateUpdateColumnFilter` as `True`
-<img alt="Instant filtering in checkbox filtering" src="images/filtering/maui-datagrid-instant-filtering-checkbox.png" width="500"/>
+<img alt="Instant filtering in checkbox filtering" src="Images/filtering/maui-datagrid-instant-filtering-checkbox.png" width="500"/>
 
 Advanced Filter with `ImmediateUpdateColumnFilter` as `True`
-<img alt="Instant filtering in advanced filtering" src="images/filtering/maui-datagrid-instant-filtering-advanced.png" width="500"/>
+<img alt="Instant filtering in advanced filtering" src="Images/filtering/maui-datagrid-instant-filtering-advanced.png" width="500"/>
 
 ## Customizing the filter popup menu options
 ### Visibility of sort options
@@ -492,7 +492,7 @@ The sort options in the filter popup will be enabled only when we set [SortingMo
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="sort options visibility" src="images/filtering/maui-datagrid-filtering-sort-options-visibility.png" width="500"/>
+<img alt="sort options visibility" src="Images/filtering/maui-datagrid-filtering-sort-options-visibility.png" width="500"/>
 
 ### Customizing the sorting text
 We can customize the text present in the sort options using [AscendingSortString]() and [DescendingSortString]().
@@ -629,3 +629,4 @@ public class FilterIconTemplateSelector : DataTemplateSelector
 {% endtabs %}
 
 <img src="Images/filtering/maui-datagrid-filtering-filterTemplate-selector.png" width="500" alt="Filter icon template selector">
+
