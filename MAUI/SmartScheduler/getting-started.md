@@ -66,7 +66,50 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-## Step 4: Add .NET MAUI Smart Scheduler
+## Step 4: Register the AI Service
+
+To configure the AI services, you must call the `ConfigureSyncfusionAIServices()` method in the `MauiProgram.cs` file.
+
+{% highlight c# hl_lines="6 26" %}
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Syncfusion.Maui.SmartComponents.Hosting;
+
+namespace GettingStarted
+{
+    public class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+                .UseMauiApp<App>()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                });
+
+            string key = "<MENTION-YOUR-KEY>";
+            Uri azureEndPoint = new Uri("<MENTION-YOUR-URL>");
+            string deploymentName = "<MENTION-YOUR-DEPLOYMENT-NAME>";
+
+            // Shows how to configure Azure AI service to the Smart Components.
+            AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(azureEndPoint, new AzureKeyCredential(key));
+            IChatClient azureChatClient = azureOpenAIClient.GetChatClient(deploymentName).AsIChatClient();
+
+            builder.Services.AddChatClient(azureChatClient);
+            builder.ConfigureSyncfusionAIServices();
+
+            return builder.Build();
+        }
+    }
+}
+{% endhighlight %}
+
+## Step 5: Add .NET MAUI Smart Scheduler
 
 1. To initialize the control, import the `Syncfusion.Maui.SmartComponents` namespace into your code.
 2. Initialize `SfSmartScheduler`
@@ -173,7 +216,50 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-## Step 4: Add .NET MAUI Smart Scheduler
+## Step 4: Register the AI Service
+
+To configure the AI services, you must call the `ConfigureSyncfusionAIServices()` method in the `MauiProgram.cs` file.
+
+{% highlight c# hl_lines="6 26" %}
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Syncfusion.Maui.SmartComponents.Hosting;
+
+namespace GettingStarted
+{
+    public class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+                .UseMauiApp<App>()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                });
+
+            string key = "<MENTION-YOUR-KEY>";
+            Uri azureEndPoint = new Uri("<MENTION-YOUR-URL>");
+            string deploymentName = "<MENTION-YOUR-DEPLOYMENT-NAME>";
+
+            // Shows how to configure Azure AI service to the Smart Components.
+            AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(azureEndPoint, new AzureKeyCredential(key));
+            IChatClient azureChatClient = azureOpenAIClient.GetChatClient(deploymentName).AsIChatClient();
+
+            builder.Services.AddChatClient(azureChatClient);
+            builder.ConfigureSyncfusionAIServices();
+
+            return builder.Build();
+        }
+    }
+}
+{% endhighlight %}
+
+## Step 5: Add .NET MAUI Smart Scheduler
 
 1. To initialize the control, import the `Syncfusion.Maui.SmartComponents` namespace into your code.
 2. Initialize `SfSmartScheduler`.
@@ -247,10 +333,52 @@ namespace GettingStarted
     }
 }
 
+## Step 4: Register the AI Service
+
+To configure the AI services, you must call the `ConfigureSyncfusionAIServices()` method in the `MauiProgram.cs` file.
+
+{% highlight c# hl_lines="6 26" %}
+using Microsoft.Maui;
+using Microsoft.Maui.Hosting;
+using Microsoft.Maui.Controls.Compatibility;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Controls.Xaml;
+using Syncfusion.Maui.SmartComponents.Hosting;
+
+namespace GettingStarted
+{
+    public class MauiProgram
+    {
+        public static MauiApp CreateMauiApp()
+        {
+            var builder = MauiApp.CreateBuilder();
+            builder
+                .UseMauiApp<App>()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                });
+
+            string key = "<MENTION-YOUR-KEY>";
+            Uri azureEndPoint = new Uri("<MENTION-YOUR-URL>");
+            string deploymentName = "<MENTION-YOUR-DEPLOYMENT-NAME>";
+
+            // Shows how to configure Azure AI service to the Smart Components.
+            AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(azureEndPoint, new AzureKeyCredential(key));
+            IChatClient azureChatClient = azureOpenAIClient.GetChatClient(deploymentName).AsIChatClient();
+
+            builder.Services.AddChatClient(azureChatClient);
+            builder.ConfigureSyncfusionAIServices();
+
+            return builder.Build();
+        }
+    }
+}
+
 {% endhighlight %}
 {% endtabs %}
 
-## Step 4: Add .NET MAUI Smart Scheduler  view
+## Step 5: Add .NET MAUI Smart Scheduler  view
 
 1. To initialize the control, import the `Syncfusion.Maui.SmartComponents` namespace into your code.
 2. Initialize `SfSmartScheduler`.
