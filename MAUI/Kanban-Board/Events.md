@@ -146,7 +146,49 @@ public class KanbanViewModel
 * [`Cancel`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanDragStartEventArgs.html#Syncfusion_Maui_Kanban_KanbanDragStartEventArgs_Cancel) - Used to cancel the drag action.
 * [`Data`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanDragEventArgs.html#Syncfusion_Maui_Kanban_KanbanDragEventArgs_Data) - Used to get the underlying model of the card.
 * [`SourceColumn`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanDragEventArgs.html#Syncfusion_Maui_Kanban_KanbanDragEventArgs_SourceColumn) - Used to get the source column of card.
-* [`SourceIndex`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanDragEventArgs.html#Syncfusion_Maui_Kanban_KanbanDragEventArgs_SourceIndex) - Used to get the index of the card in source column.   
+* [`SourceIndex`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.KanbanDragEventArgs.html#Syncfusion_Maui_Kanban_KanbanDragEventArgs_SourceIndex) - Used to get the index of the card in source column. 
+* `KeepCard` - Determines whether the original card remains in the source column during a drag operation. When set to true, the card stays in its original column while being dragged, allowing repeated drag-and-drop actions without relocating the card. A preview of the card is generated during the drag.  
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="SimpleSample.MainPage"
+            xmlns:kanban="clr-namespace:Syncfusion.Maui.Kanban;assembly=Syncfusion.Maui.Kanban"
+            xmlns:local="clr-namespace:SimpleSample;assembly=SimpleSample">
+
+    <ContentPage.BindingContext>
+        <local:KanbanCustomViewModel />
+    </ContentPage.BindingContext>
+            
+    <kanban:SfKanban x:Name="kanban" HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand" ItemsSource="{Binding Cards}"
+                    DragStart="SfKanban_DragStart" >
+                
+    ...
+                
+    </kanban:SfKanban>
+
+</ContentPage>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfKanban kanban = new SfKanban();
+kanban.ItemsSource = viewModel.Cards;
+kanban.DragStart += SfKanban_DragStart;
+
+private void SfKanban_DragStart(object sender, Syncfusion.Maui.Kanban.KanbanDragStartEventArgs e)
+{
+    e.KeepCard = true;
+}
+      
+{% endhighlight %}
+
+{% endtabs %}
 
 ## DragEnd  
 
