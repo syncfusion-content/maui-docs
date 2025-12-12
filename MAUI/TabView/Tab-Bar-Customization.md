@@ -197,3 +197,34 @@ tabView.TabBarBackground = graBrush;
 ![Gradient color](images/TabBarGradientColor.png) 
 
 N> View [sample](https://github.com/SyncfusionExamples/maui-tabview-samples/tree/main/TabBarCustomization) in GitHub.
+
+## Tab bar border customization
+
+You can customize the border of the tab header area in .NET MAUI Tab View using the following properties:
+
+- TabBarBorderColor: Sets the border color.
+- TabBarBorderThickness: Sets the border thickness.
+- TabBarCornerRadius: Sets the corner radius of the tab bar's border.
+
+{% tabs %}
+
+{% highlight xaml %}
+<tabView:SfTabView
+    x:Name="tabView"
+    TabBarPlacement="Bottom"
+    TabBarBorderColor="#7C3AED"
+    TabBarBorderThickness="2"
+    TabBarCornerRadius="24">
+</tabView:SfTabView>
+{% endhighlight %}
+
+{% highlight C# %}
+ tabView.TabBarPlacement = TabBarPlacement.Bottom;
+ tabView.TabBarBorderColor = Color.FromArgb("#7C3AED");
+ tabView.TabBarBorderThickness = 2;
+ tabView.TabBarCornerRadius = new CornerRadius(24);
+{% endhighlight %}
+
+{% endtabs %}
+
+![Tab bar border](images/Tab-bar-border.png)

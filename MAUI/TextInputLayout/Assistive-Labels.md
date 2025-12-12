@@ -80,16 +80,17 @@ N> Error validations should be done in the application level.
 
 ## Character counter
 
-Character counter is used when you need to limit the characters. Character limit can be set using the [CharMaxLength](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_CharMaxLength) property.
+Character counter is used when you need to limit the characters. Character limit can be set using the [CharMaxLength](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_CharMaxLength) property.The character counter can be enabled by setting the [ShowCharCount]() property to true.
 
 {% tabs %} 
 
 {% highlight xaml %} 
 
 <inputLayout:SfTextInputLayout Hint="Password" 
-                               CharMaxLength="8"
+                               ShowCharCount="true"
+                               CharMaxLength="20"
                                ContainerType="Outlined"
-                               HelperText="Enter 5 to 8 characters">
+                               HelperText="Enter 5 to 20 characters">
     <Entry />
 </inputLayout:SfTextInputLayout> 
   
@@ -100,7 +101,8 @@ Character counter is used when you need to limit the characters. Character limit
 
 SfTextInputLayout inputLayout = new SfTextInputLayout();
 inputLayout.Hint = "Password";
-inputLayout.CharMaxLength = 8;
+inputLayout.CharMaxLength = 20;
+inputLayout.ShowCharCount = true;
 inputLayout.ContainerType= ContainerType.Outlined;
 inputLayout.HelperText = "Enter 5 to 8 characters";
 inputLayout.Content = new Entry(); 
@@ -109,7 +111,7 @@ inputLayout.Content = new Entry();
 
 {% endtabs %}
 
-![Character Maximum Length](images/AssistiveLabels/MaxCharCount.png)
+![Character Maximum Length](images/AssistiveLabels/textinputlayout_showchar.gif)
 
 N> When character count reaches the maximum character length, the error color will be applied to hint, border, and counter label.
 
