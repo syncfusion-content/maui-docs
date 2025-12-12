@@ -39,13 +39,14 @@ XAML example Enable the glass effect on SfChipGroup by setting EnableLiquidGlass
 
             <core:SfChipGroup
                 x:Name="FilterChips"
-                EnableLiquidGlassEffect="True"
-                SelectionMode="Single"
-                HorizontalOptions="Center">
-
-                <core:SfChipItem Text="All" />
-                <core:SfChipItem Text="Active" />
-                <core:SfChipItem Text="Completed" />
+                EnableLiquidGlassEffect="True">
+                <chip:SfChipGroup.Items>
+                    <chip:SfChip Text="Extra Small" Background="Blue"/>
+                    <chip:SfChip Text="Small" Background="Blue"/>
+                    <chip:SfChip Text="Medium" Background="Blue"/>
+                    <chip:SfChip Text="Large" Background="Blue"/>
+                    <chip:SfChip Text="Extra Large" Background="Blue"/>
+                </chip:SfChipGroup.Items>
             </core:SfChipGroup>
         </StackLayout>
     </Grid>
@@ -56,16 +57,16 @@ XAML example Enable the glass effect on SfChipGroup by setting EnableLiquidGlass
 
 using Syncfusion.Maui.Core;
 
-var chipGroup = new SfChipGroup
+SfChipGroup chipGroup = new SfChipGroup
 {
     EnableLiquidGlassEffect = true, // Enables built-in glassy look on chips
-    SelectionMode = ChipSelectionMode.Single,
-    HorizontalOptions = LayoutOptions.Center
 };
 
-chipGroup.Items.Add(new SfChipItem { Text = "All" });
-chipGroup.Items.Add(new SfChipItem { Text = "Active" });
-chipGroup.Items.Add(new SfChipItem { Text = "Completed" });
+chipGroup.Items.Add(new SfChip(){Text="Extra Small", Background = Colors.Blue });
+chipGroup.Items.Add(new SfChip(){Text="Small", Background = Colors.Blue });
+chipGroup.Items.Add(new SfChip(){Text="Medium", Background = Colors.Blue });
+chipGroup.Items.Add(new SfChip(){Text="Large", Background = Colors.Blue });
+chipGroup.Items.Add(new SfChip(){Text="Extra Large", Background = Colors.Blue });
 
 {% endhighlight %}
 {% endtabs %}
