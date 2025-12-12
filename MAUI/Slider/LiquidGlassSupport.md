@@ -10,7 +10,7 @@ documentation: ug
 
 # Liquid glass support:
 
-The  [SfSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html) provides `liquid glass` (acrylic/glassmorphism) effect for its thumb(s). The frosted, translucent effect is applied only while the user is pressing/dragging the thumb, creating a subtle, responsive visual that blends with the content behind it. This enhances visual feedback without altering the slider’s appearance at rest, and works well over images or colorful layouts.
+The  [SfSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfSlider.html) provides `liquid glass` (acrylic/glassmorphism) effect for its thumb when [EnableLiquidGlassEffect]() is enabled. The frosted, translucent effect is applied only while the user is pressing/dragging the thumb, creating a subtle, responsive visual that blends with the content behind it. This enhances visual feedback without altering the slider’s appearance at rest, and works well over images or colorful layouts.
 
 ## Availability
 
@@ -41,8 +41,7 @@ XAML example The thumb’s glass effect appears only while it is pressed/dragged
                 Minimum="0"
                 Maximum="100"
                 Value="45"
-                EnableLiquidGlassEffect="True"
-                HorizontalOptions="Fill" />
+                EnableLiquidGlassEffect="True" />
         </StackLayout>
     </Grid>
 </ContentPage>

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Provide Liquid Glass Support for .NET MAUI RangeSelector | Syncfusion®
-description: Learn here about providing liquid glass support for Syncfusion® .NET MAUI RangeSelector (SfRangeSelector) control and more.
+title: Provide Liquid Glass Support for .NET MAUI RangeSlider | Syncfusion®
+description: Learn here about providing liquid glass support for Syncfusion® .NET MAUI RangeSlider (SfRangeSlider) control and more.
 platform: MAUI
-control: SfRangeSelector
+control: SfRangeSlider
 documentation: ug
 ---
 
 
 # Liquid glass support:
 
-The  [SfRangeSelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSelector.html) provides `liquid glass` (acrylic/glassmorphism) effect for its thumbs when [EnableLiquidGlassEffect]() is enabled. The frosted, translucent effect is applied only while the user is pressing/dragging the thumb, creating a subtle, responsive visual that blends with the content behind it. This enhances visual feedback without altering the slider’s appearance at rest, and works well over images or colorful layouts.
+The  [SfRangeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html) provides `liquid glass` (acrylic/glassmorphism) effect for its thumb(s) when [EnableLiquidGlassEffect]() is enabled. The frosted, translucent effect is applied only while the user is pressing/dragging the thumb, creating a subtle, responsive visual that blends with the content behind it. This enhances visual feedback without altering the slider’s appearance at rest, and works well over images or colorful layouts.
 
 ## Availability
 
@@ -37,10 +37,9 @@ XAML example The thumb’s glass effect appears only while it is pressed/dragged
         <StackLayout Padding="24" Spacing="16" VerticalOptions="Center">
             <Label Text="Volume" FontSize="18" TextColor="White" />
 
-            <sliders:SfRangeSelector Minimum="10"
+            <sliders:SfRangeSlider 
+                             Minimum="10"
                              Maximum="20"
-                             RangeStart="13"
-                             RangeEnd="17"
                              EnableLiquidGlassEffect="True" />
         </StackLayout>
     </Grid>
@@ -51,12 +50,10 @@ XAML example The thumb’s glass effect appears only while it is pressed/dragged
 
 using Syncfusion.Maui.Sliders;
 
-var rangeSelector = new SfRangeSelector
+var rangeSlider = new SfRangeSlider
 {
     Minimum=10,
     Maximum=20,
-    RangeStart=13,
-    RangeEnd=17,
     EnableLiquidGlassEffect=true
 };
 
@@ -69,6 +66,6 @@ var rangeSelector = new SfRangeSelector
 - Place the slider over visually rich content (images, gradients, or color blocks) to better showcase the transient glass effect.
 - Visual output and performance may vary by device/platform; keep backgrounds moderately detailed to maintain clarity during interaction.
 
-The following screenshot illustrates SfRangeSelector with the glass effect visible on the thumb while it is pressed.
+The following screenshot illustrates SfRangeSlider with the glass effect visible on the thumb while it is pressed.
 
 N> The glass effect is applied to the thumb only while it is pressed/dragged.
