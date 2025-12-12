@@ -1181,3 +1181,127 @@ public MainPage()
 {% endtabs %}
 
 ![Common suggestion style in .NET MAUI AI AssistView](Images/styles/maui-aiassistview-styles-commonsuggestion.png)
+
+## Scroll to buttom buttom style
+
+To style the scroll to bottom button view based on its appearance, set values to the in-built keys in the resource dictionary.
+
+<table>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>ScrollToBottomButtonBackground</td>
+<td>Background color of the scroll to bottom button view.</td>
+</tr>
+<tr>
+<td>ScrollToBottomButtonIconColor</td>
+<td>Color of the scroll to bottom button.</td>
+</tr>
+<tr>
+<td>HoveredScrollToBottomButtonBackground</td>
+<td>Background color of scroll to bottom button in hover state.</td>
+</tr>
+<tr>
+<td>PressedScrollToBottomButtonBackground</td>
+<td>Background color when the scroll to bottom button is pressed.</td>
+</tr>
+</table>
+
+{% tabs %}
+{% highlight xaml %}
+
+<ContentPage.Resources>
+    <core:SyncfusionThemeDictionary>
+        <core:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
+                <Color x:Key="SfAIAssistViewScrollToBottomButtonBackground">Orange</Color>
+                <Color x:Key="SfAIAssistViewScrollToBottomButtonIconColor">White</Color>
+                <Color x:Key="SfAIAssistViewHoveredScrollToBottomButtonBackground">DarkOrange</Color>
+                <Color x:Key="SfAIAssistViewPressedScrollToBottomButtonBackground">Red</Color>
+            </ResourceDictionary>
+        </core:SyncfusionThemeDictionary.MergedDictionaries>
+    </core:SyncfusionThemeDictionary>
+</ContentPage.Resources>
+
+{% endhighlight %}
+{% highlight c# %}
+
+public MainPage()
+{
+    InitializeComponent();
+    ResourceDictionary dictionary = new ResourceDictionary();
+    dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
+    dictionary.Add("SfAIAssistViewScrollToBottomButtonBackground", Colors.Orange);
+    dictionary.Add("SfAIAssistViewScrollToBottomButtonIconColor", Colors.White);
+    dictionary.Add("SfAIAssistViewHoveredScrollToBottomButtonBackground", Colors.DarkOrange);
+    dictionary.Add("SfAIAssistViewPressedScrollToBottomButtonBackground", Colors.Red);
+    this.Resources.Add(dictionary);
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Action button style
+
+To style the action button view based on its appearance, set values to the in-built keys in the resource dictionary.
+
+<table>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>ActionButtonBackground</td>
+<td>Background color of the action button.</td>
+</tr>
+<tr>
+<td>ActionButtonIconColor</td>
+<td>Color of the action button.</td>
+</tr>
+<tr>
+<td>ActionButtonTextColor</td>
+<td>Text color of an item in the action button.</td>
+</tr>
+<tr>
+<td>ActionButtonViewBackground</td>
+<td>Background color of the action buttons view.</td>
+</tr>
+</table>
+
+{% tabs %}
+{% highlight xaml %}
+
+<ContentPage.Resources>
+    <core:SyncfusionThemeDictionary>
+        <core:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
+                <Color x:Key="SfAIAssistViewActionButtonBackground">Orange</Color>
+                <Color x:Key="SfAIAssistViewActionButtonIconColor">White</Color>
+                <Color x:Key="SfAIAssistViewActionButtonTextColor">Black</Color>
+                <Color x:Key="SfAIAssistViewActionButtonViewBackground">LightGray</Color>
+            </ResourceDictionary>
+        </core:SyncfusionThemeDictionary.MergedDictionaries>
+    </core:SyncfusionThemeDictionary>
+</ContentPage.Resources>
+
+{% endhighlight %}
+{% highlight c# %}
+
+public MainPage()
+{
+    InitializeComponent();
+    ResourceDictionary dictionary = new ResourceDictionary();
+    dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
+    dictionary.Add("SfAIAssistViewActionButtonBackground", Colors.Orange);
+    dictionary.Add("SfAIAssistViewActionButtonIconColor", Colors.White);
+    dictionary.Add("SfAIAssistViewActionButtonTextColor", Colors.Black);
+    dictionary.Add("SfAIAssistViewActionButtonViewBackground", Colors.LightGray);
+    this.Resources.Add(dictionary);
+}
+
+{% endhighlight %}
+{% endtabs %}
