@@ -7,23 +7,23 @@ control: SfBackdropPage
 documentation: ug
 ---
 
-# Liquid glass support
+# Liquid Glass Support
 
 The [SfBackdropPage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html) supports a liquid glass (acrylic/glassmorphism) appearance on both layers. Enable the effect directly on the [BackdropBackLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.BackdropBackLayer.html) and [BackdropFrontLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.BackdropFrontLayer.html) by setting their [EnableLiquidGlassEffect]() properties to true. This improves visual depth and readability when the backdrop layers are placed over images or colorful layouts.
 
-## Availability
+## Platform and Version Support
 
 1. This feature is supported on .NET 10 or greater.
-2. This feature is supported on mac or iOS 26 or greater.
+2. This feature is supported on macOS 26 and iOS 26 or later.
 3. On platforms or versions below these requirements, the layers render without the acrylic blur effect and fall back to a standard background.
 
 ## Prerequisites
 
-- Add the Syncfusion.Maui.Backdrop package (for SfBackdropPage, BackdropFrontLayer, BackdropBackLayer).
+- Add the [Syncfusion.Maui.Backdrop](https://www.nuget.org/packages/Syncfusion.Maui.Backdrop) package (for SfBackdropPage, BackdropFrontLayer, BackdropBackLayer).
 
-## Enable liquid glass on the back layer
+## Apply Liquid Glass Effect to the back layer
 
-Turn on the liquid glass effect on the back layer by setting EnableLiquidGlassEffect to true.
+Turn on the liquid glass effect on the back layer by setting [EnableLiquidGlassEffect]() to true.
 
 {% tabs %}
 {% highlight xaml %}
@@ -83,9 +83,9 @@ this.FrontLayer = new BackdropFrontLayer
 {% endhighlight %}
 {% endtabs %}
 
-## Enable liquid glass on the front layer
+## Apply Liquid Glass Effect to the front layer
 
-You can enable the liquid glass effect for the front layer as well by setting EnableLiquidGlassEffect to true.
+You can enable the liquid glass effect for the front layer as well by setting [EnableLiquidGlassEffect]() to true.
 
 {% tabs %}
 {% highlight xaml %}
@@ -154,9 +154,9 @@ N>
 * Liquid Glass effects are most visible over images or colorful backgrounds.
 * You can enable the effect independently on either the back layer, the front layer, or both as needed.
 
-## Behavior and tips
+## Best Practices and Tips
 
-- The back and front layers use built-in acrylic when their EnableLiquidGlassEffect property is true.
+- The back and front layers use built-in acrylic when their [EnableLiquidGlassEffect]() property is true.
 - Place imagery or vibrant backgrounds beneath the layer surface to see the blur clearly.
 - Combine with existing layout properties (RevealedHeight, EdgeShape, etc.) to achieve the desired design while using the effect.
 

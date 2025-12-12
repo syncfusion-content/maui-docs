@@ -7,26 +7,26 @@ control: SfPicker
 documentation: ug
 ---
 
-# Liquid glass support
+# Liquid Glass Support
 
 The [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html) supports a liquid glass (acrylic/glassmorphism) appearance by hosting the control inside the Syncfusion [SfGlassEffectsView](). You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when the picker is placed over images or colorful layouts.
 
 Additionally, when the picker is shown in [Dialog]() mode, you can apply the glass effect to the pop-up by enabling the [EnableLiquidGlassEffect]() property on the SfPicker.
 
-## Availability
+## Platform and Version Support
 
 1. This feature is supported on .NET 10 or greater.
-2. This feature is supported on mac or iOS 26 or greater.
+2. This feature is supported on macOS 26 and iOS 26 or later.
 3. On platforms or versions below these requirements, the control renders without the acrylic blur effect and falls back to a standard background.
 
 ## Prerequisites
 
-- Add the Syncfusion.Maui.Core package (for SfGlassEffectsView).
-- Add the Syncfusion.Maui.Picker package (for SfPicker).
+- Add the [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) package (for SfGlassEffectsView).
+- Add the [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker/) package (for SfPicker).
 
-## Picker inside a liquid glass view
+## Apply Liquid Glass Effect to SfPicker
 
-Wrap the SfPicker inside an SfGlassEffectsView to give the picker surface a glass (blurred or clear) appearance.
+Wrap the [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html) inside an [SfGlassEffectsView]() to give the picker surface a glass (blurred or clear) appearance.
 
 {% tabs %}
 {% highlight xaml %}
@@ -79,9 +79,9 @@ N>
 * Liquid Glass effects are most visible over images or colorful backgrounds.
 * Use EffectType="Regular" for a blurrier look and "Clear" for a glassy look.
 
-## Liquid glass for picker dialog mode
+## Enable Glass Effect in Dialog Mode
 
-When the picker displays in a dialog surface, enable the liquid glass effect by setting EnableLiquidGlassEffect to true.
+When the picker displays in a dialog surface, enable the liquid glass effect by setting [EnableLiquidGlassEffect]() to true.
 
 {% tabs %}
 {% highlight xaml %}
@@ -126,20 +126,20 @@ var picker = new SfPicker
 {% endtabs %}
 
 N>
-* The dialog gains the glass effect only when EnableLiquidGlassEffect is true.
+* The dialog gains the glass effect only when [EnableLiquidGlassEffect]() is true.
 
-## Key properties
+## Key Properties
 
-- EffectType: Choose between Regular (blurry) and Clear (glassy) effects.
-- EnableShadowEffect: Enables a soft shadow around the acrylic container.
-- CornerRadius: Rounds the corners of the acrylic container.
+- [EffectType](): Choose between Regular (blurry) and Clear (glassy) effects.
+- [EnableShadowEffect](): Enables a soft shadow around the acrylic container.
+- [CornerRadius](): Rounds the corners of the acrylic container.
 - Padding/Height/Width: Adjust layout around the embedded picker.
-- EnableLiquidGlassEffect (dialog): Enables the glass effect for the picker’s dialog surface.
+- [EnableLiquidGlassEffect]() (dialog): Enables the glass effect for the picker’s dialog surface.
 
-## Behavior and tips
+## Best Practices and Tips
 
-- Hosting the picker inside SfGlassEffectsView gives the picker body an acrylic look.
-- In dialog usage, the dialog surface applies the glass effect only when EnableLiquidGlassEffect is true.
+- Hosting the picker inside [SfGlassEffectsView]() gives the picker body an acrylic look.
+- In dialog usage, the dialog surface applies the glass effect only when [EnableLiquidGlassEffect]() is true.
 - For the most noticeable effect, place the control over images or vibrant backgrounds.
 
-The following screenshot illustrates SfPicker hosted within an acrylic container, and the dialog surface using the glass effect.
+The following screenshot illustrates [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html) hosted within an acrylic container, and the dialog surface using the glass effect.
