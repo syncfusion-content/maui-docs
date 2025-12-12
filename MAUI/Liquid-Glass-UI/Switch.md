@@ -27,8 +27,7 @@ XAML example The switch’s glass effect appears only while it is in active stat
     <Grid>
         <!-- Background to make the glass effect visible while pressing the switch -->
         <Image Source="wallpaper.jpg" Aspect="AspectFill" />
-        <Switch:SfSwitch
-                EnableLiquidGlassEffect="True" />
+        <Switch:SfSwitch EnableLiquidGlassEffect="True" />
      
     </Grid>
 
@@ -52,6 +51,8 @@ SfSwitch aSwitch = new SfSwitch
 - Place the switch over visually rich content (images, gradients, or color blocks) to better showcase the transient glass effect.
 - Visual output and performance may vary by device/platform; keep backgrounds moderately detailed to maintain clarity during interaction.
 
-The following screenshot illustrates SfSwitch with the glass effect visible on the switch while it is in active state.
+The following video illustrates SfSwitch with the glass effect visible on the switch while it is in active state.
+
+![Switch](images/switch.gif)
 
 N> The glass effect is applied to the switch only while it is in active state.

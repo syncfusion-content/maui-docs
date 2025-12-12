@@ -56,6 +56,8 @@ SfRadialMenu radialMenu = new SfRadialMenu
 - Place the radial menu over visually rich content (images, gradients, or color blocks) to better showcase the transient glass effect.
 - Visual output and performance may vary by device/platform; keep backgrounds moderately detailed to maintain clarity during interaction.
 
-The following screenshot illustrates SfRadialMenu with the glass effect visible on the radial menu while it is in active state.
+The following video illustrates SfRadialMenu with the glass effect visible on the radial menu while it is in active state.
+
+![Radial Menu](images/radial-menu.gif)
 
 N> The glass effect is applied to the radial menu only while it is in active state.

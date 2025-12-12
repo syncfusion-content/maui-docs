@@ -33,13 +33,8 @@ XAML example The navigation drawer’s glass effect appears only while it is in 
     <Grid>
         <!-- Background to make the glass effect visible while pressing the navigation drawer -->
         <Image Source="wallpaper.jpg" Aspect="AspectFill" />
-
-        <StackLayout Padding="24" Spacing="16" VerticalOptions="Center">
-            <Label Text="Volume" FontSize="18" TextColor="White" />
-
-            <navigationDrawer:SfNavigationDrawer
-                EnableLiquidGlassEffect="True" />
-        </StackLayout>
+        <navigationDrawer:SfNavigationDrawer EnableLiquidGlassEffect="True" />
+      
     </Grid>
 </ContentPage>
 
@@ -63,6 +58,8 @@ SfNavigationDrawer navigationDrawer = new SfNavigationDrawer
 - Visual output and performance may vary by device/platform; keep backgrounds moderately detailed to maintain clarity during interaction.
 - For an enhanced UI, set `ContentBackground="Transparent"` for the `SfNavigationDrawer` and `Background="Transparent"` at the sample level for the content view.
 
-The following screenshot illustrates SfNavigationDrawer with the glass effect visible on the navigation drawer while it is in active state.
+The following video illustrates SfNavigationDrawer with the glass effect visible on the navigation drawer while it is in active state.
+
+![Navigation Drawer](images/navigation-drawer.gif)
 
 N> The glass effect is applied to the navigation drawer only while it is in active state.

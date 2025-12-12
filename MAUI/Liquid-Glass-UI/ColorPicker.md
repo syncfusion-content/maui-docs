@@ -50,6 +50,8 @@ SfColorPicker colorPicker = new SfColorPicker
 - Visual output and performance may vary by device/platform; keep backgrounds moderately detailed to maintain clarity during interaction.
 - For an enhanced UI, set `SliderThumbStroke="Transparent"` at the sample level for the color picker.
 
-The following screenshot illustrates SfColorPicker with the glass effect visible on the color picker while it is in active state.
+The following video illustrates SfColorPicker with the glass effect visible on the color picker while it is in active state.
+
+![Color Picker](images/color-picker.gif)
 
 N> The glass effect is applied to the color picker only while it is in active state.

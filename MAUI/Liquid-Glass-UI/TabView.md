@@ -48,6 +48,8 @@ SfTabView tabView = new SfTabView
 - Place the tabview over visually rich content (images, gradients, or color blocks) to better showcase the transient glass effect.
 - Visual output and performance may vary by device/platform; keep backgrounds moderately detailed to maintain clarity during interaction.
 
-The following screenshot illustrates SfTabView with the glass effect visible on the tabview while it is in active state.
+The following video illustrates SfTabView with the glass effect visible on the tabview while it is in active state.
+
+![Tab View](images/tabview.gif)
 
 N> The glass effect is applied to the tabview only while it is in active state.
