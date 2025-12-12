@@ -79,7 +79,7 @@ Install-Package Microsoft.Extensions.AI.OpenAI
 * To configure the AI service, add the following settings to the **MauiProgram.cs** file in your app.
 
 {% tabs %}
-{% highlight C# tabtitle="Blazor Server App" hl_lines="7 8 9 11 12 13" %}
+{% highlight C# tabtitle="Blazor Server App" hl_lines="3 23" %}
 
 using Microsoft.Extensions.AI;
 using OpenAI;
