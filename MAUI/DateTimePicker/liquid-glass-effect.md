@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Provide Liquid Glass Support for .NET MAUI Date Time Picker | Syncfusion®
-description: Learn how to enable liquid glass (acrylic/glass morphism) support for the Syncfusion® .NET MAUI Date Time Picker using SfGlassEffectsView.
+description: Learn how to enable liquid glass support for the Syncfusion® .NET MAUI Date Time Picker using SfGlassEffectsView.
 platform: MAUI
 control: SfDateTimePicker
 documentation: ug
