@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Provide Liquid Glass Support for .NET MAUI Numeric entry | Syncfusion®
+title: Liquid Glass Support for .NET MAUI Numeric entry | Syncfusion®
 description: Learn here about providing liquid glass support for Syncfusion® .NET MAUI NumericEntry (SfNumericEntry) control and more.
 platform: MAUI
 control: SfNumericEntry
@@ -9,7 +9,7 @@ documentation: ug
 
 # Liquid glass support
 
-The  [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) supports a `liquid glass` (glassmorphism) appearance by hosting the control inside the Syncfusion [SfGlassEffectsView](). The acrylic view creates a blurred, translucent background that blends with the content behind it, producing a frosted `glass effect` around the entry. You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when SfNumericEntry is placed over images or colorful layouts.
+The  [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) supports a `liquid glass` appearance by hosting the control inside the Syncfusion [SfGlassEffectsView](). The acrylic view creates a blurred, translucent background that blends with the content behind it, producing a frosted `glass effect` around the entry. You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when SfNumericEntry is placed over images or colorful layouts.
 
 ## Availability
 
@@ -85,17 +85,5 @@ glassEffect.Content = numericEntry;
 {% endhighlight %}
 {% endtabs %}
 
-## Key properties
-
-- EffectType: Has two type Regular(Blurry) effect and Clear(Glassy) effect.
-- EnableShadowEffect: To enable the shadow around the acrylic container
-- CornerRadius: Rounds the corners of the acrylic container.
-- Padding/Height/Width: Adjust layout around the embedded SfNumericEntry.
-
-## Behavior and tips
-
-- Acrylic effects are most visible when there is content behind the control (e.g., images or vivid backgrounds).
-- Visual output and performance can vary by device; adjust EffectType to balance readability and performance.
-- Ensure the acrylic container is sufficiently larger than the entry so the glass outline is visible.
 
 The following screenshot illustrates SfNumericEntry within an acrylic container using the glass effect.

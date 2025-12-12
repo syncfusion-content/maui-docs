@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Provide Liquid Glass Support for .NET MAUI Button | Syncfusion®
+title: Liquid Glass Support for .NET MAUI Button | Syncfusion®
 description: Learn here about providing liquid glass support for Syncfusion® .NET MAUI Button (SfButton) control and more.
 platform: MAUI
 control: SfButton
@@ -9,7 +9,7 @@ documentation: ug
 
 # Liquid glass support
 
-The [SfButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) provides `liquid glass` (acrylic/glassmorphism) effect that gives the button a frosted, translucent appearance blending with the content behind it. When the glass effect is enabled, the button also scales while it is pressed, delivering a subtle, responsive interaction cue. This enhances visual depth and interactivity, especially when the button is placed over images or colorful layouts.
+The [SfButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) provides `liquid glass` effect that gives the button a frosted, translucent appearance blending with the content behind it. When the glass effect is enabled, the button also scales while it is pressed, delivering a subtle, responsive interaction cue. This enhances visual depth and interactivity, especially when the button is placed over images or colorful layouts.
 
 ## Availability
 
@@ -61,11 +61,5 @@ var glassButton = new SfButton
 
 {% endhighlight %}
 {% endtabs %}
-
-## Behavior and tips
-
-- When [EnableLiquidGlassEffect]() is true, the button uses a frosted glass appearance and scales while pressed, then returns to its normal size on release.
-- Place the button over visually rich content (images, gradients, or colorful panels) to highlight the glass look.
-- Visual output and performance can vary by device/platform; keep the background moderately detailed for clarity during interaction.
 
 The following screenshot illustrates SfButton with the glass effect enabled and the pressed-state scaling behavior over a wallpaper background.

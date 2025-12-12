@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Provide Liquid Glass Support for .NET MAUI Signature pad | Syncfusion®
+title: Liquid Glass Support for .NET MAUI Signature pad | Syncfusion®
 description: Learn here about providing liquid glass support for Syncfusion® .NET MAUI Signature pad (SfSignaturePad) control and more.
 platform: MAUI
 control: SfSignaturePad
@@ -9,7 +9,7 @@ documentation: ug
 
 # Liquid glass support
 
-The [SignaturePad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html) supports a `liquid glass` (glassEffects/glassmorphism) appearance by hosting the control inside the Syncfusion [SfGlassEffectsView](). You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when SfSignaturePad is placed over images or colorful layouts
+The [SignaturePad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html) supports a `liquid glass` appearance by hosting the control inside the Syncfusion [SfGlassEffectsView](). You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when SfSignaturePad is placed over images or colorful layouts
 
 ## Availability
 
@@ -79,17 +79,5 @@ glassEffects.Content = signaturePad;
 
 {% endhighlight %}
 {% endtabs %}
-
-## Key properties
-
-- EffectType: Has two types Regular(Blurry) effect and Clear(Glassy) effect.
-- EnableShadowEffect: To enable the shadow around the acrylic container
-- CornerRadius: Rounds the corners of the acrylic container.
-- Padding/Height/Width: Adjust layout around the embedded SfSignaturePad.
-
-## Behavior and tips
-
-- The entry surface inherits the acrylic effect from the surrounding `SfGlassEffectsView`.
-- Acrylic effects are most visible over images or colorful backgrounds.
 
 The following screenshot illustrates SfSignaturePad within an acrylic container, with the dropdown using the glass effect.

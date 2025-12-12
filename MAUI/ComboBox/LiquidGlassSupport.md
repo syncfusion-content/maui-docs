@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Provide Liquid Glass Support for .NET MAUI Combobox entry | Syncfusion®
+title: Liquid Glass Support for .NET MAUI Combobox entry | Syncfusion®
 description: Learn here about providing liquid glass support for Syncfusion® .NET MAUI Combobox (SfComboBox) control and more.
 platform: MAUI
 control: SfComboBox
@@ -9,7 +9,7 @@ documentation: ug
 
 # Liquid glass support
 
-The [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) supports a liquid `glass` (acrylic/glassmorphism) appearance by hosting the control inside the Syncfusion [SfGlassEffectsView](). You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when SfComboBox is placed over images or colorful layouts. Additionally, the dropdown portion of SfComboBox applies the glass effect only when the [EnableLiquidGlassEffect]() property is set to true.
+The [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) supports a `liquid glass` appearance by hosting the control inside the Syncfusion [SfGlassEffectsView](). You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when SfComboBox is placed over images or colorful layouts. Additionally, the dropdown portion of SfComboBox applies the glass effect only when the [EnableLiquidGlassEffect]() property is set to true.
 
 ## Availability
 
@@ -80,18 +80,5 @@ glassEffects.Content = Combobox;
 
 {% endhighlight %}
 {% endtabs %}
-
-## Key properties
-
-- EffectType: Has two types Regular(Blurry) effect and Clear(Glassy) effect.
-- EnableShadowEffect: To enable the shadow around the acrylic container
-- CornerRadius: Rounds the corners of the acrylic container.
-- Padding/Height/Width: Adjust layout around the embedded SfNumericEntry.
-
-## Behavior and tips
-
-- The entry surface inherits the acrylic effect from the surrounding `SfGlassEffectsView`.
-- The dropdown gains the glass effect only when `EnableLiquidGlassEffect` is true.
-- Acrylic effects are most visible over images or colorful backgrounds.
 
 The following screenshot illustrates SfComboBox within an acrylic container, with the dropdown using the glass effect.

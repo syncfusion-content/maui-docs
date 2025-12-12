@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Provide Liquid Glass Support for .NET MAUI DateTimeRangeSlider | Syncfusion®
+title: Liquid Glass Support for .NET MAUI DateTimeRangeSlider | Syncfusion®
 description: Learn here about providing liquid glass support for Syncfusion® .NET MAUI DateTimeRangeSlider (SfDateTimeRangeSlider) control and more.
 platform: MAUI
 control: SfDateTimeRangeSlider
@@ -10,7 +10,7 @@ documentation: ug
 
 # Liquid glass support:
 
-The  [SfDateTimeRangeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html) provides `liquid glass` (acrylic/glassmorphism) effect for its thumbs when [EnableLiquidGlassEffect]() is enabled. The frosted, translucent effect is applied only while the user is pressing/dragging the thumb, creating a subtle, responsive visual that blends with the content behind it. This enhances visual feedback without altering the slider’s appearance at rest, and works well over images or colorful layouts.
+The  [SfDateTimeRangeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html) provides `liquid glass` effect for its thumbs when [EnableLiquidGlassEffect]() is enabled. The frosted, translucent effect is applied only while the user is pressing/dragging the thumb, creating a subtle, responsive visual that blends with the content behind it. This enhances visual feedback without altering the slider’s appearance at rest, and works well over images or colorful layouts.
 
 ## Availability
 

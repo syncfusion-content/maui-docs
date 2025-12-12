@@ -60,12 +60,6 @@ var rangeSlider = new SfRangeSlider
 {% endhighlight %}
 {% endtabs %}
 
-## Behavior and tips
-
-- The glass effect is applied to the thumb only during press/drag interactions; at rest, the thumb uses the standard look.
-- Place the slider over visually rich content (images, gradients, or color blocks) to better showcase the transient glass effect.
-- Visual output and performance may vary by device/platform; keep backgrounds moderately detailed to maintain clarity during interaction.
-
 The following screenshot illustrates SfRangeSlider with the glass effect visible on the thumb while it is pressed.
 
 N> The glass effect is applied to the thumb only while it is pressed/dragged.
