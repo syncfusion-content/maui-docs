@@ -9,9 +9,7 @@ documentation: UG
 
 # Getting Started with Liquid Glass for modern UI
 
-This section explains how to enable and customize the Liquid Glass Effect in Syncfusion® .NET MAUI controls.
-
-For detailed information on specific Syncfusion® controls and their usage, refer to the User Guide Getting Started documentation, and ensure the control is properly configured and functioning before applying the Liquid Glass Effect.
+This section explains how to enable and customize the Liquid Glass Effect in Syncfusion® .NET MAUI controls. For detailed information on specific Syncfusion® controls and their usage, refer to the User Guide Getting Started documentation, and ensure the control is properly configured and functioning before applying the Liquid Glass Effect.
 
 N> This feature is supported only on .NET 10.
 
@@ -53,7 +51,7 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
 		<button:SfButton Text="Clear Glass"
 						 FontSize="16"
 						 Background="Transparent"
-						 TextColor="Black"
+						 TextColor="White"
 						 HorizontalOptions="Fill"
 						 VerticalOptions="Centre"/>
 		</core:SfGlassEffectView>
@@ -77,7 +75,7 @@ Defines the corner radius for the view, enabling customization of its shape such
 							WidthRequest="200"
 							CornerRadius="24"
 							VerticalOptions="Center">
-		<button:SfButton Text="Clear Glass"
+		<button:SfButton Text="Regular Glass"
 						 FontSize="16"
 						 Background="Transparent"
 						 TextColor="Black"
