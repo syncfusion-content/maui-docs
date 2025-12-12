@@ -9,7 +9,7 @@ documentation: ug
 
 # Styles in .NET MAUI AI-Powered Scheduler (SfSmartScheduler)
 
-You can style the elements of the `.NET MAUI AI-Powered Scheduler` assist view using the `PlaceholderColor`, `AssistViewHeaderTextColor`, `AssistViewHeaderBackground`, `AssistViewHeaderFontSize`,`AssistViewHeaderFontFamily`, `AssistViewHeaderFontAttributes` and `AssistViewHeaderFontAutoScalingEnabled` properties of the `AssistStyle`.
+You can style the elements of the `.NET MAUI Smart Scheduler` assist view using the `PlaceholderColor`, `AssistViewHeaderTextColor`, `AssistViewHeaderBackground`, `AssistViewHeaderFontSize`, `AssistViewHeaderFontFamily`, `AssistViewHeaderFontAttributes` and `AssistViewHeaderFontAutoScalingEnabled` properties of the `AssistStyle`.
 
 {% tabs %}
 {% highlight XAML hl_lines="4 5 6 7 8 9 10 11 12" %}

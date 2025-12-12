@@ -13,11 +13,10 @@ The `SfSmartScheduler` supports the `ResetAssistView`, `CloseAssistView` and `Op
 
 ## Reset assist view
 
-The `SfSmartScheduler` control provides the `ResetAssistView()` method to reset assist view programmatically using an event.
+The `SfSmartScheduler` control provides the `ResetAssistView` method to reset assist view programmatically.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-
 <Grid>
     <Grid.RowDefinitions>
         <RowDefinition/>
@@ -28,8 +27,7 @@ The `SfSmartScheduler` control provides the `ResetAssistView()` method to reset 
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4"  %}
-
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3"  %}
 private void Button_Clicked(object sender, EventArgs e)
 {
     this.smartScheduler.ResetAssistView();
@@ -40,11 +38,10 @@ private void Button_Clicked(object sender, EventArgs e)
 
 ## Close assist view
 
-The `SfSmartScheduler` control provides the `CloseAssistView()` method to close assist view programmatically using an event.
+The `SfSmartScheduler` control provides the `CloseAssistView` method to close assist view programmatically.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-
 <Grid>
     <Grid.RowDefinitions>
         <RowDefinition/>
@@ -55,8 +52,7 @@ The `SfSmartScheduler` control provides the `CloseAssistView()` method to close 
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4"  %}
-
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3"  %}
 private void Button_Clicked(object sender, EventArgs e)
 {
     this.smartScheduler.CloseAssistView();
@@ -67,11 +63,10 @@ private void Button_Clicked(object sender, EventArgs e)
 
 ## Open assist view
 
-The `SfSmartScheduler` control provides the `OpenAssistView()` method to open assist view programmatically using an event.
+The `SfSmartScheduler` control provides the `OpenAssistView` method to open assist view programmatically.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-
 <Grid>
     <Grid.RowDefinitions>
         <RowDefinition/>
@@ -82,8 +77,7 @@ The `SfSmartScheduler` control provides the `OpenAssistView()` method to open as
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4"  %}
-
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3"  %}
 private void Button_Clicked(object sender, EventArgs e)
 {
     this.smartScheduler.OpenAssistView();
