@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Liquid Glass UI in Syncfusion® .NET MAUI Controls
-description: Get started with the Liquid Glass Effect UI in Syncfusion® .NET MAUI controls and learn how to enable and customize it.
+description: Getting started with the Liquid Glass Effect UI in Syncfusion® .NET MAUI controls and learn how to enable and customize it.
 platform: MAUI
 control: General
 documentation: UG
@@ -24,20 +24,21 @@ N> This feature is supported only on .NET 10.
 
 The Liquid Glass effect adds a modern, translucent design with blur and depth, enhancing UI aesthetics without major layout changes. To apply Liquid Glass Effect to any Syncfusion® controls or custom views, use the `SfGlassEffectView` class. 
 
-This view acts as a visual container that adds blur, translucency, and light refraction to its content, creating a realistic glass-like appearance. In this section, we will demonstrate how to use SfGlassEffectView with a Syncfusion Button to achieve a visually appealing glass effect.
+This view acts as a visual container that adds blur, translucency, and light refraction to its content, creating a realistic glass-like appearance. In this section, we will demonstrate how to use `SfGlassEffectView` with Syncfusion® `SfButton` to achieve a visually appealing glass effect.
 
-The `SfGlassEffectView` class contains the following properties:
+The `SfGlassEffectView` class is available in [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) and it contains the following properties:
 
-### EffectType
+### Effect types
 
 Specifies the type of glass effect to apply:
 
 * **Regular:** Creates a blurred, frosted glass appearance.
-* **Clear:** Creates a transparent, glass-like appearance
+* **Clear:** Creates a transparent, glass-like appearance.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML hl_lines="9" %}
 
+xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core" 
 xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
 
 <Grid Background="#C977F8"
@@ -58,16 +59,15 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
 		</core:SfGlassEffectView>
 </Grid>
 
-	
 {% endhighlight %}
 {% endtabs %}
    
-### CornerRadius
+### Corner radius
 
-Specifies the corner rounding for the view, allowing customization of shapes such as rounded rectangles or capsules.
+Defines the corner radius for the view, enabling customization of its shape such as rounded rectangles or capsules.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML hl_lines="7" %}
 
 <Grid Background="#C977F8"
 	  Opacity="0.7"
@@ -89,12 +89,12 @@ Specifies the corner rounding for the view, allowing customization of shapes suc
 {% endhighlight %}
 {% endtabs %}
 
-### EnableShadowEffect
+### Enable shadow effect
 
-Determines whether a shadow is applied behind the glass view to add depth and visual contrast.
+Applies a subtle shadow behind the glass view, creating depth and a more realistic appearance.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML hl_lines="9" %}
 
 <Grid Background="#C977F8"
 	  Opacity="0.7"
@@ -121,6 +121,9 @@ Determines whether a shadow is applied behind the glass view to add depth and vi
 
 Applies a background tint color to the glass view, enabling modern UI styling and improved readability.
 
+{% tabs %}
+{% highlight XAML hl_lines="9" %}
+
 <Grid Background="#C977F8"
 	  Opacity="0.7"
 	  HorizontalOptions="Fill"
@@ -139,12 +142,15 @@ Applies a background tint color to the glass view, enabling modern UI styling an
 		</core:SfGlassEffectView>
 </Grid>
 
-## Interactive Glass Effects
+{% endhighlight %}
+{% endtabs %}
 
-Enable glass effects to respond to user interactions with adaptive blur and dynamic lighting for an engaging UI. To achieve this, set the `EnableLiquidGlassEffect` property to `true` on the button control, which activates interaction-based visual effects.
+## Interactive glass effects
+
+Enable glass effects to respond to user interactions with adaptive blur and dynamic lighting for an engaging UI. To achieve this, set the `EnableLiquidGlassEffect` property to `true` on the `SfButton` control, which activates interaction-based visual effects.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <Grid Background="#C977F8"
       Opacity="0.7"
@@ -208,7 +214,7 @@ Enable glass effects to respond to user interactions with adaptive blur and dyna
 Easily customize the `SfGlassEffectView` to achieve desired shapes like rounded rectangles, capsules, and circles by adjusting properties such as `CornerRadius`, `HeightRequest`, and `WidthRequest`.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight XAML %}
 
 <Grid Background="#C977F8"
       Opacity="0.7"
