@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Provide Liquid Glass Support for .NET MAUI Autocomplete entry | Syncfusion®
+title: Liquid Glass Support for .NET MAUI Autocomplete entry | Syncfusion®
 description: Learn here about providing liquid glass support for Syncfusion® .NET MAUI Autocomplete (SfAutocomplete) control and more.
 platform: MAUI
 control: SfAutocomplete
