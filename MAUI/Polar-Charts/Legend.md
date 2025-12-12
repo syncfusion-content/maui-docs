@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Legend in .NET MAUI Chart control | Syncfusion
+title: Legend in .NET MAUI Polar Chart control | Syncfusion
 description: This section explains about how to initialize legend and its customization in Syncfusion® .NET MAUI Chart (SfPolarChart) control.
 platform: maui
 control: SfPolarChart
