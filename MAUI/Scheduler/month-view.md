@@ -114,17 +114,17 @@ this.Scheduler.MonthView.AppointmentIndicatorSize = 10;
 The scheduler month view allows you to customize the appointment indicator rendering mode by using the `AppointmentIndicatorRenderMode` property of the [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). The `AppointmentIndicatorRenderMode` property supports three different types: `Fill`, `Stroke` and `FillAndStroke`. By default, the `AppointmentIndicatorRenderMode` is set to Fill.
 
 {% tabs %}  
-{% highlight XAML hl_lines="5" %}
+{% highlight XAML hl_lines="4" %}
 
 <schedule:SfScheduler x:Name="Scheduler"
                         View="Month" >
         <schedule:SfScheduler.MonthView>
-            <schedule:SchedulerMonthView AppointmentDisplayMode="Indicator" AppointmentIndicatorSize="15" AppointmentIndicatorCount="2" AppointmentIndicatorRenderMode="Stroke"/>
+            <schedule:SchedulerMonthView AppointmentIndicatorRenderMode="Stroke" AppointmentDisplayMode="Indicator" AppointmentIndicatorSize="15" AppointmentIndicatorCount="2" />
         </schedule:SfScheduler.MonthView>
 </schedule:SfScheduler>
 
 {% endhighlight %}
-{% highlight C# hl_lines="4" %}
+{% highlight C# hl_lines="3" %}
 
 this.Scheduler.View = SchedulerView.Month;
 this.Scheduler.MonthView.AppointmentDisplayMode = SchedulerMonthAppointmentDisplayMode.Indicator;
@@ -142,17 +142,17 @@ this.Scheduler.MonthView.AppointmentIndicatorCount = 2;
 The scheduler month view allows you to customize the appointment indicator stroke thickness by using the `AppointmentIndicatorStrokeThickness` property of the [MonthView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerMonthView.html). By default, the `AppointmentIndicatorStrokeThickness` is set to 1d.
 
 {% tabs %}  
-{% highlight XAML hl_lines="5" %}
+{% highlight XAML hl_lines="4" %}
 
 <schedule:SfScheduler x:Name="Scheduler"
                         View="Month" >
         <schedule:SfScheduler.MonthView>
-            <schedule:SchedulerMonthView AppointmentDisplayMode="Indicator" AppointmentIndicatorSize="20" AppointmentIndicatorRenderMode="Stroke" AppointmentIndicatorStrokeThickness="4"/>
+            <schedule:SchedulerMonthView AppointmentIndicatorStrokeThickness="4" AppointmentDisplayMode="Indicator" AppointmentIndicatorSize="20" AppointmentIndicatorRenderMode="Stroke" />
         </schedule:SfScheduler.MonthView>
 </schedule:SfScheduler>
 
 {% endhighlight %}
-{% highlight C# hl_lines="6" %}
+{% highlight C# hl_lines="5" %}
 
 this.Scheduler.View = SchedulerView.Month;
 this.Scheduler.MonthView.AppointmentDisplayMode = SchedulerMonthAppointmentDisplayMode.Indicator;

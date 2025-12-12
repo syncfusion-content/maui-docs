@@ -8,7 +8,7 @@ documentation: ug
 
 # Orientation in .NET MAUI Pyramid Chart
 
-The rendering direction of the pyramid chart can be changed using the [Orientation]() property. The default value of this property is Vertical, which arranges segments from top to bottom, and it can be set to Horizontal to render segments from left to right.
+The rendering direction of the pyramid chart can be changed using the [Orientation]() property. The default value of this property is Vertical, which arranges segments from top to bottom, and it can be set to Horizontal to render segments from right to left.
 
 {% tabs %}
 

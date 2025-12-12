@@ -526,38 +526,6 @@ This page lists the keys associated with each control and the respective UI elem
     <td> SfAIAssistViewHeaderSuggestionItemFontAttribute<br/><br/></td>
     <td> Font attributes of an item in the common suggestions.<br/><br/></td>
 </tr>
-<tr>
-    <td>ScrollToBottomButtonBackground</td>
-    <td>Background color of the scroll to bottom button view.</td>
-</tr>
-<tr>
-    <td>ScrollToBottomButtonIconColor</td>
-    <td>Color of the scroll to bottom button.</td>
-</tr>
-<tr>
-    <td>HoveredScrollToBottomButtonBackground</td>
-    <td>Background color of scroll to bottom button in hover state.</td>
-</tr>
-<tr>
-    <td>PressedScrollToBottomButtonBackground</td>
-    <td>Background color when the scroll to bottom button is pressed.</td>
-</tr>
-<tr>
-    <td>ActionButtonBackground</td>
-    <td>Background color of the action button.</td>
-</tr>
-<tr>
-    <td>ActionButtonIconColor</td>
-    <td>Color of the action button.</td>
-</tr>
-<tr>
-    <td>ActionButtonTextColor</td>
-    <td>Text color of an item in the action button.</td>
-</tr>
-<tr>
-    <td>ActionButtonViewBackground</td>
-    <td>Background color of the action buttons view.</td>
-</tr>
 </table>
 
 ## SfAutocomplete

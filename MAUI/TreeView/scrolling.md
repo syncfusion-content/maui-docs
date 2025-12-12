@@ -114,7 +114,7 @@ The TreeView allows you to enable horizontal scrolling based on the content by s
 The TreeView allows showing or hiding the scrollbars using the `VerticalScrollBarVisibility` and `HorizontalScrollBarVisibility` properties. By default, both are set to `Default`.
 
 {% tabs %}
-{% highlight xaml%}
+{% highlight xaml hl_lines="2 3" %}
 
 <syncfusion:SfTreeView x:Name="treeView" 
                        VerticalScrollBarVisibility="Always" 

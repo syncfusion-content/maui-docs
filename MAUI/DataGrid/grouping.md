@@ -16,9 +16,141 @@ Grouping in a datagrid refers to the process of organizing and categorizing data
 
 N> 
 * To update the grouping for the newly added row or column, set the `SfDataGrid.View.LiveDataUpdateMode` to `LiveDataUpdateMode.AllowDataShaping`.
-* When `BeginInit` method is called, it suspends all the updates until `EndInit` method is called.  
+* When `BeginInit` method is called, it suspends all the updates until `EndInit` method is called.
 
-## Programmatic grouping
+## UI Grouping
+
+You can enable data grouping in the SfDataGrid by setting the `SfDataGrid.AllowGrouping` property to `true`. This allows end users to group data by dragging and dropping columns into the GroupDropArea. When a column is grouped, all records with the same value in that column are organized together in a group.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       AllowGrouping="true">
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+    dataGrid.AllowGrouping = true;
+{% endhighlight %}
+{% endtabs %}
+
+You can group data by an unlimited of columns. To group multiple columns, drag and drop the desired column headers into the GroupDropArea.
+
+<img alt="Maui UI Grouping" src="Images/Grouping/maui-datagrid-ui-grouping.png" width="404"/>
+
+Each group is represented by a `CaptionSummaryRow`, which organizes data into a hierarchical tree structure according to identical values in the grouped column. Users can expand or collapse the underlying records in a group by clicking on its group caption.
+
+A `CaptionSummaryRow` displays details about its group, such as the group name and the number of records it contains. For more details, refer to the [Caption Summaries](https://help.syncfusion.com/maui/datagrid/summaries#caption-summaries) section.
+
+### Appearance
+
+#### GroupDropAreaText
+
+You can modify the GroupDropArea text by setting the `SfDataGrid.GroupDropAreaText` property.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       GroupDropAreaText="Drag and drop the column here"
+                       AllowGrouping="true">
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+    dataGrid.AllowGrouping = true;
+    dataGrid.GroupDropAreaText = "Drag and drop the column here";
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="Maui UI Grouping Group Drop Area Text" src="Images/Grouping/maui-datagrid-ui-grouping-drop-area-text.png" width="404"/>
+
+#### GroupDropAreaHeight
+
+Use the `SfDataGrid.GroupDropAreaHeight` property to control the vertical size of the GroupDropArea (the region where users drag column headers to create groups).
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       GroupDropAreaHeight="100"
+                       AllowGrouping="true">
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+    dataGrid.AllowGrouping = true;
+    dataGrid.GroupDropAreaHeight = 100;
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="Maui UI Grouping Group Drop Area Height" src="Images/Grouping/maui-datagrid-ui-grouping-drop-area-height.png" width="404"/>
+
+#### Customize the GroupDropArea
+
+You can style the `GroupDropArea` using the following SfDataGrid properties:
+
+* GroupDropAreaStrokeThickness: Sets the border thickness of the GroupDropArea.
+* GroupDropAreaStroke: Sets the border color of the GroupDropArea.
+* GroupDropAreaBackgroundColor: Sets the background color of the GroupDropArea.
+* GroupDropAreaTextColor: Sets the color of the instructional text displayed in the GroupDropArea.
+* GroupDropAreaFontSize: Sets the font size of the GroupDropArea text.
+* GroupDropAreaFontFamily: Sets the font family used for the GroupDropArea text.
+* GroupDropAreaFontAttribute: Sets the font style of the GroupDropArea text.
+
+{% tabs %}
+{% highlight xaml %}
+
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       AllowGrouping="true">
+    <syncfusion:SfDataGrid.DefaultStyle>
+        <syncfusion:DataGridStyle GroupDropAreaTextColor="Blue"
+                                  GroupDropAreaBackgroundColor="Yellow"
+                                  GroupDropAreaFontAttribute="Bold"
+                                  GroupDropAreaFontSize="18"
+                                  GroupDropAreaStroke="Brown"
+                                  GroupDropAreaStrokeThickness="2"
+                                  GroupDropAreaFontFamily="Roboto"/>
+    </syncfusion:SfDataGrid.DefaultStyle>
+</syncfusion:SfDataGrid>
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Customize the GroupDropAreaItem
+
+You can style the `GroupDropAreaItem` using the following SfDataGrid properties:
+
+* GroupDropItemBackgroundColor: Sets the background color of the GroupDropItem.
+* GroupDropItemTextColor: Sets the color of the text displayed in the GroupDropItem.
+* GroupDropItemFontSize: Sets the font size of the GroupDropItem text.
+* GroupDropItemFontFamily: Sets the font family used for the GroupDropItem text.
+* GroupDropItemFontAttribute:  Sets the font style of the GroupDropItem text.
+* GroupDropItemStrokeThickness: Sets the border thickness of the GroupDropItem.
+* GroupDropItemStroke: Sets the border color of the GroupDropItem.
+* GroupDropItemCloseIconColor: Sets the color of the close icon displayed in the GroupDropItem.
+
+{% tabs %}
+{% highlight xaml %}
+
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       AllowGrouping="true">
+    <syncfusion:SfDataGrid.DefaultStyle>
+        <syncfusion:DataGridStyle GroupDropItemTextColor="Blue"
+                                  GroupDropItemBackgroundColor="Yellow"
+                                  GroupDropItemFontAttribute="Bold"
+                                  GroupDropItemFontSize="18"
+                                  GroupDropItemStroke="Brown"
+                                  GroupDropItemStrokeThickness="2"
+                                  GroupDropItemFontFamily="Roboto"
+                                  GroupDropItemCloseIconColor="Gray"/>
+    </syncfusion:SfDataGrid.DefaultStyle>
+</syncfusion:SfDataGrid>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Programmatic Grouping
 
 The SfDataGrid allows to perform grouping programmatically by adding the [GroupColumnDescription](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.GroupColumnDescription.html) object in the [SfDataGrid.GroupColumnDescriptions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_GroupColumnDescriptionsProperty) collection. It groups the data based on the `GroupColumnDescription` object added to this collection.
 
@@ -32,16 +164,16 @@ To apply column grouping, please refer to the following code example:
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding OrderInfoCollection}">
+                       ItemsSource="{Binding OrderInfoCollection}">
     <syncfusion:SfDataGrid.GroupColumnDescriptions>
         <syncfusion:GroupColumnDescription ColumnName="Name" />
     </syncfusion:SfDataGrid.GroupColumnDescriptions>
-</syncfusion:SfDataGrid> 
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
     dataGrid.GroupColumnDescriptions.Add (new GroupColumnDescription () {
     ColumnName = "Name",
-}); 
+});
 {% endhighlight %}
 {% endtabs %}
 
@@ -49,7 +181,25 @@ The following screenshot shows the rendered output when grouping is applied:
 
 ![DataGrid with grouping](Images\Grouping\maui-datagrid-single-grouping.png)
 
-## MultiGrouping
+### Clearing or removing a group
+
+To clear the applied grouping, you can simply remove the particular item from the `SfDataGrid.GroupColumnDescriptions` collection or clear the entire collection.
+
+{% tabs %}
+{% highlight c# %}
+//Clearing the Group
+dataGrid.GroupColumnDescriptions.Clear();
+
+//Removing the Group based on group item
+var groupColumn = dataGrid.GroupColumnDescriptions[1];
+dataGrid.GroupColumnDescriptions.Remove(groupColumn);
+    
+//Removing the Group based on group index
+dataGrid.GroupColumnDescriptions.RemoveAt(0);
+{% endhighlight%} 
+{% endtabs %}
+
+## Multi Grouping
 
 The SfDataGrid also allows to group the data against one or more columns using the [SfDataGrid.GroupingMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_GroupingModeProperty) property. When the `GroupingMode` is set as `GroupingMode.Multiple`, the data is organized into a hierarchical tree structure based on identical values of that column. The multi-grouping feature works similarly to the multi-sorting feature. Initially, the data is grouped according to the first column added in the `GroupColumnDescriptions` collection. When more columns are added to the `GroupColumnDescriptions`, the newly added column will be grouped in consideration of the previous group(s). This results in a tree-like hierarchy. Refer to the following code snippet to enable `MultiGrouping`:
 
@@ -79,76 +229,7 @@ this.dataGrid.GroupingMode = GroupingMode.Multiple;
 The following screenshot shows the multi-grouping:
 ![DataGrid with multi-column grouping](Images\Grouping\maui-datagrid-multiple-grouping.png)
 
-## Customize indent column width
-
-The width of indent column can be customized by the [IndentColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_IndentColumnWidthProperty) property. The default width of the indent column is 35.
-
-{% tabs %}
-{% highlight xaml %}
-<syncfusion:SfDataGrid  x:Name="dataGrid"
-                        ItemsSource="{Binding OrderInfoCollection}"
-                        IndentColumnWidth="60" />
-{% endhighlight %}
-
-{% highlight c# %}
-
-this.dataGrid.IndentColumnWidth = 60;
-
-{% endhighlight %}
-{% endtabs %}
-
-### Customize indent column background color
-
-The indent columns can be customized by writing the implicit style for the [DataGridIndentCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridIndentCell.html). 
-
-The following code snippet shows how to apply a background color to the indent cell based on the column index:
-
-{% tabs %}
-{% highlight xaml %}
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <local:CellStyleConverter x:Key="cellStyleConverter" />
-            <Style  TargetType="syncfusion:DataGridIndentCell">
-                <Setter Property="Background"
-                        Value="{Binding Source={RelativeSource Mode=Self}, 
-                        Converter={StaticResource 
-                        Key=cellStyleConverter}}" />
-            </Style>
-        </ResourceDictionary>
-    </ContentPage.Resources>
-    <syncfusion:SfDataGrid  x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}">
-    <syncfusion:SfDataGrid.GroupColumnDescriptions>
-        <syncfusion:GroupColumnDescription ColumnName="Name" />
-        <syncfusion:GroupColumnDescription ColumnName="ShipCity" />
-    </syncfusion:SfDataGrid.GroupColumnDescriptions>
-</syncfusion:SfDataGrid>   
-{% endhighlight %}
-
-{% highlight c# %}
-public class CellStyleConverter : IValueConverter
-{
-    object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo info)
-    {
-        var rowType = ((value as DataGridIndentCell)?.Parent as DataGridRow)?.DataRow?.RowType.ToString();
-        if (rowType == "HeaderRow")
-            return Colors.Bisque;
-        else if (rowType == "CaptionCoveredRow")
-            return Colors.LightBlue;
-        else
-            return Colors.PaleVioletRed;
-    }
-    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-    {
-        return null;
-    }
-}
-{% endhighlight %}
-{% endtabs %}
-
-![SfDataGrid with IndentColumnBackgroundColor](Images\Grouping\maui-datagrid-indent-column-background-color.png)
-
-## Custom grouping
+## Custom Grouping
 
 The SfDataGrid allows to group a column based on custom logic when the standard grouping techniques do not meet the requirements.
 
@@ -161,10 +242,10 @@ To set a custom grouping converter for the group description that is added to gr
 {% tabs %}
 {% highlight xaml %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
-                xmlns:local="clr-namespace:GroupingUI"
-                x:Class="GroupingUI.MainPage">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
+             xmlns:local="clr-namespace:GroupingUI"
+             x:Class="GroupingUI.MainPage">
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -265,17 +346,17 @@ dataGrid.GroupColumnDescriptions.Add(new GroupColumnDescription()
 {% endhighlight %}
 {% endtabs %}
 
-
 ### Sorting the records in the grouped columns
+
 In custom grouping, you can sort all the inner records of each group by setting [GroupColumnDescription.SortGroupRecords](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.GroupColumnDescription.html#Syncfusion_Maui_DataGrid_GroupColumnDescription_SortGroupRecords) property as `true`. This will sort the records based on the `GroupColumnDescription.ColumnName` property.
 
 {% tabs %}
 {% highlight xaml %}
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
-                xmlns:local="clr-namespace:GroupingUI"
-                x:Class="GroupingUI.MainPage">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
+             xmlns:local="clr-namespace:GroupingUI"
+             x:Class="GroupingUI.MainPage">
     <ContentPage.Resources>
         <ResourceDictionary>
             <local:GroupOrderNoConverter x:Key="groupOrderNoConverter" />
@@ -365,24 +446,31 @@ As you can see in the below screenshot, the records are sorted based on the `Ord
 
 ![SfDataGrid with SortGroupRecords](Images\Grouping\maui-datagrid-sort-mode.png)
 
-## Expand groups initially
+## Display based grouping using GroupMode property
 
-To expand all groups initially, set the [SfDataGrid.AutoExpandGroups](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AutoExpandGroupsProperty) to `true`. While grouping any column, all groups will be in expanded state.
+By default, column grouping occurs based on the value in the underlying collection thereby creating a new group for each new value of that column. However, a column can also be grouped based on the Display value by setting the [DataGridColumn.GroupMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_GroupMode) property as `Display`. In the following code example, set the [DataGridColumn.Format](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_Format) property as "#" which displays only the rounded off value in the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html): 
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid  x:Name="dataGrid"
-                        AutoExpandGroups="True"
-                        AllowGroupExpandCollapse="True"
-                        ItemsSource="{Binding OrderInfoCollection}" />
+<syncfusion:DataGridTextColumn HeaderText="Order ID"
+                               MappingName="OrderID"
+                               GroupMode="Display"
+                               Format="#" />
 {% endhighlight %}
+
 {% highlight c# %}
-this.dataGrid.AutoExpandGroups = true;
-this.dataGrid.AllowGroupExpandCollapse = true;
-{% endhighlight %}
+DataGridTextColumn orderID = new DataGridTextColumn();
+orderID.MappingName = "OrderID";
+orderID.GroupMode = Syncfusion.Maui.Data.DataReflectionMode.Display;
+orderID.Format = "#";
+{% endhighlight%} 
 {% endtabs %}
 
-## Expand or collapse the groups
+The following screenshot shows a comparison between two group modes. `GroupMode.Value` on the Top and `GroupMode.Display` on the Bottom:
+![DataGrid with group mode](Images\Grouping\maui-datagrid-mode-value.png)
+![DataGrid with group mode](Images\Grouping\maui-datagrid-mode-display.png)
+
+## Expand and Collapse Groups
 
 To expand and collapse the groups at runtime, you can simply set the [SfDataGrid.AllowGroupExpandCollapse](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowGroupExpandCollapseProperty) property to `true`. The groups will be in expanded state by default.
 
@@ -395,6 +483,23 @@ To expand and collapse the groups at runtime, you can simply set the [SfDataGrid
                        
 {% endhighlight %}
 {% highlight c# %}
+this.dataGrid.AllowGroupExpandCollapse = true;
+{% endhighlight %}
+{% endtabs %}
+
+### Expand groups initially
+
+To expand all groups initially, set the [SfDataGrid.AutoExpandGroups](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AutoExpandGroupsProperty) to `true`. While grouping any column, all groups will be in expanded state.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid  x:Name="dataGrid"
+                        AutoExpandGroups="True"
+                        AllowGroupExpandCollapse="True"
+                        ItemsSource="{Binding OrderInfoCollection}" />
+{% endhighlight %}
+{% highlight c# %}
+this.dataGrid.AutoExpandGroups = true;
 this.dataGrid.AllowGroupExpandCollapse = true;
 {% endhighlight %}
 {% endtabs %}
@@ -424,48 +529,6 @@ this.dataGrid.CollapseGroup(group);
 {% endtabs %}
 
 ![DataGrid with group expanding and collapsing](Images\Grouping\maui-datagrid-expand-specific-group.png)
-
-## Display based grouping using GroupMode property
-
-By default, column grouping occurs based on the value in the underlying collection thereby creating a new group for each new value of that column. However, a column can also be grouped based on the Display value by setting the [DataGridColumn.GroupMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_GroupMode) property as `Display`. In the following code example, set the [DataGridColumn.Format](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_Format) property as "#" which displays only the rounded off value in the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html): 
-
-{% tabs %}
-{% highlight xaml %}
-<syncfusion:DataGridTextColumn HeaderText="Order ID"
-                                MappingName="OrderID"
-                                GroupMode="Display"
-                                Format="#" />
-{% endhighlight %}
-
-{% highlight c# %}
-DataGridTextColumn orderID = new DataGridTextColumn();
-orderID.MappingName = "OrderID";
-orderID.GroupMode = Syncfusion.Maui.Data.DataReflectionMode.Display;
-orderID.Format = "#";
-{% endhighlight%} 
-{% endtabs %}
-
-The following screenshot shows a comparison between two group modes. `GroupMode.Value` on the Top and `GroupMode.Display` on the Bottom:
-![DataGrid with group mode](Images\Grouping\maui-datagrid-mode-value.png)
-![DataGrid with group mode](Images\Grouping\maui-datagrid-mode-display.png)
-
-## Clearing or removing a group
-
-To clear the applied grouping, you can simply remove the particular item from the `SfDataGrid.GroupColumnDescriptions` collection or clear the entire collection.
-
-{% tabs %}
-{% highlight c# %}
-//Clearing the Group
-dataGrid.GroupColumnDescriptions.Clear();
-
-//Removing the Group based on group item
-var groupColumn = dataGrid.GroupColumnDescriptions[1];
-dataGrid.GroupColumnDescriptions.Remove(groupColumn);
-    
-//Removing the Group based on group index
-dataGrid.GroupColumnDescriptions.RemoveAt(0);
-{% endhighlight%} 
-{% endtabs %}
 
 ## Events
 
@@ -533,7 +596,78 @@ The `DataGridColumnGroupChangedEventArgs` of the `GroupCollapsed` event provides
 
  `Syncfusion.Data.Group`: Gets the collapsed group.
 
-## Customize grouped column visibility
+## Customization
+
+### Customize indent column width
+
+The width of indent column can be customized by the [IndentColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_IndentColumnWidthProperty) property. The default width of the indent column is 35.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid  x:Name="dataGrid"
+                        ItemsSource="{Binding OrderInfoCollection}"
+                        IndentColumnWidth="60" />
+{% endhighlight %}
+
+{% highlight c# %}
+
+this.dataGrid.IndentColumnWidth = 60;
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Customize indent column background color
+
+The indent columns can be customized by writing the implicit style for the [DataGridIndentCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridIndentCell.html). 
+
+The following code snippet shows how to apply a background color to the indent cell based on the column index:
+
+{% tabs %}
+{% highlight xaml %}
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:CellStyleConverter x:Key="cellStyleConverter" />
+            <Style  TargetType="syncfusion:DataGridIndentCell">
+                <Setter Property="Background"
+                        Value="{Binding Source={RelativeSource Mode=Self}, 
+                        Converter={StaticResource 
+                        Key=cellStyleConverter}}" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <syncfusion:SfDataGrid  x:Name="dataGrid"
+                        ItemsSource="{Binding Orders}">
+    <syncfusion:SfDataGrid.GroupColumnDescriptions>
+        <syncfusion:GroupColumnDescription ColumnName="Name" />
+        <syncfusion:GroupColumnDescription ColumnName="ShipCity" />
+    </syncfusion:SfDataGrid.GroupColumnDescriptions>
+</syncfusion:SfDataGrid>   
+{% endhighlight %}
+
+{% highlight c# %}
+public class CellStyleConverter : IValueConverter
+{
+    object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo info)
+    {
+        var rowType = ((value as DataGridIndentCell)?.Parent as DataGridRow)?.DataRow?.RowType.ToString();
+        if (rowType == "HeaderRow")
+            return Colors.Bisque;
+        else if (rowType == "CaptionCoveredRow")
+            return Colors.LightBlue;
+        else
+            return Colors.PaleVioletRed;
+    }
+    public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    {
+        return null;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+![SfDataGrid with IndentColumnBackgroundColor](Images\Grouping\maui-datagrid-indent-column-background-color.png)
+
+### Customize grouped column visibility
 
 The visibility of the grouped column can be customized by the [SfDataGrid.ShowColumnWhenGrouped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ShowColumnWhenGrouped) property. By default, all the grouped columns are visible. Refer to the following code snippet:
 
@@ -553,7 +687,9 @@ this.dataGrid.ShowColumnWhenGrouped = false;
 {% endhighlight %}
 {% endtabs %}
 
-## Load group icon through template
+### Customize group icon
+
+#### Load group icon through template
 
 The SfDataGrid uses an icon to indicate the expand and collapse state of groups. You can personalize the group icon by using the [SfDataGrid.GroupExpandCollapseTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_GroupExpandCollapseTemplate) property. This property allows you to define a custom template that will be displayed in its normal form when the group is expanded, and it will rotate downwards when the group is collapsed. To implement this, refer to the following code snippet:
 
@@ -561,13 +697,12 @@ The SfDataGrid uses an icon to indicate the expand and collapse state of groups.
 
 {% highlight xaml %}
 <syncfusion:SfDataGrid VerticalOptions="FillAndExpand"
-                            HorizontalOptions="FillAndExpand"
-                            ItemsSource="{Binding OrderInfoCollection}"
-                            x:Name="dataGrid"
-                            GroupingMode="Multiple"
-                            AllowGroupExpandCollapse="True"
-                            AutoGenerateColumnsMode="None"
-                            >
+                       HorizontalOptions="FillAndExpand"
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       x:Name="dataGrid"
+                       GroupingMode="Multiple"
+                       AllowGroupExpandCollapse="True"
+                       AutoGenerateColumnsMode="None">
         <syncfusion:SfDataGrid.GroupExpandCollapseTemplate>
             <DataTemplate>
                 <Image Source="downward_icon.png"/>
@@ -598,7 +733,7 @@ dataGrid.GroupExpandCollapseTemplate = new DataTemplate(() =>
 
 ![DataGrid with template](Images\Grouping\maui-datagrid-template.gif)
 
-## Load group icon through template selector
+#### Load group icon through template selector
 
 When choosing a `GroupExpandCollapseTemplate` as a DataTemplateSelector, you have the option to supply distinct templates for both the expanded and collapsed states of the group
 
@@ -611,8 +746,7 @@ When choosing a `GroupExpandCollapseTemplate` as a DataTemplateSelector, you hav
                             x:Name="dataGrid"
                             GroupingMode="Multiple"
                             AllowGroupExpandCollapse="True"
-                            AutoGenerateColumnsMode="None"
-                            >
+                            AutoGenerateColumnsMode="None">
         <syncfusion:SfDataGrid.GroupExpandCollapseTemplate>
             <local:ExpandCollapseTemplate ExpandTemplate="{StaticResource ExpandIcon }"
                                             CollapseTemplate="{StaticResource CollapseIcon}" />
@@ -653,7 +787,7 @@ public class ExpandCollapseTemplate : DataTemplateSelector
 N>
 * When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
-## Customize the size of group icon
+#### Customize the size of group icon
 
 The size of the group icon can be customized when the icon is loaded through `GroupExpandCollapseTemplate` by setting the `HeightRequest` and `WidthRequest`. To implement this, please refer the following code snippet:
 
@@ -666,8 +800,7 @@ The size of the group icon can be customized when the icon is loaded through `Gr
                             x:Name="dataGrid"
                             GroupingMode="Multiple"
                             AllowGroupExpandCollapse="True"
-                            AutoGenerateColumnsMode="None"
-                            >
+                            AutoGenerateColumnsMode="None">
         <syncfusion:SfDataGrid.GroupExpandCollapseTemplate>
             <DataTemplate>
                 <Image Source="downward_icon.png" HeightRequest="20" WidthRequest="20"/>

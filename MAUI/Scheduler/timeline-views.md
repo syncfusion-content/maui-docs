@@ -141,7 +141,7 @@ N> The `Timeline workweek` view displays exactly the defined working days on Sch
 The `HideNonWorkingDays` property of the [TimelineView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerTimelineView.html) allows you to control the visibility of non-working days in `TimelineMonth`. By default, the `HideNonWorkingDays` property is set to false.
 
 {% tabs %}
-{% highlight XAML hl_lines="6" %}
+{% highlight XAML hl_lines="5" %}
 
 <scheduler:SfScheduler x:Name="Scheduler" 
                        View="TimelineMonth">
@@ -152,7 +152,7 @@ The `HideNonWorkingDays` property of the [TimelineView](https://help.syncfusion.
 </scheduler:SfScheduler>
 
 {% endhighlight %}
-{% highlight C# hl_lines="5" %}
+{% highlight C# hl_lines="4" %}
 
 SfScheduler scheduler = new SfScheduler();
 scheduler.View = SchedulerView.TimelineMonth;

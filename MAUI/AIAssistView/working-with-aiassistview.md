@@ -269,6 +269,8 @@ The `SfAIAssistView` allows you to edit a previously sent request. This feature 
 
 N> Interaction: On desktop (Windows, macOS), hover over a request to reveal the Edit icon. On mobile (Android, iOS), tap the request to show the Edit option.
 
+![Edit Option in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-editoption.gif)
+
 ## EditorView template
 
 The `SfAIAssistView` control allows you to fully customize the editor's appearance by using the [EditorViewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_EditorViewTemplate) property. This property lets you define a custom layout and style for the editor.
@@ -433,6 +435,8 @@ public partial class MainPage : ContentPage
 {% endhighlight %} 
 {% endtabs %}
 
+![Action Buttons in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-actionbuttons.gif)
+
 ## Request button customization
 
 ### Request button icon
@@ -445,9 +449,9 @@ The `SfAIAssistView` control allows you to customize the request button icon by 
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                            AssistItems="{Binding AssistItems}">
         <syncfusion:SfAIAssistView.RequestButtonIcon>
-            <FontImageSource Glyph="&#xe791;"
+            <FontImageSource Glyph="&#xe809;"
                              FontFamily="MauiMaterialAssets"
-                             Color="Green" />
+                             Color="Black" />
         </syncfusion:SfAIAssistView.RequestButtonIcon>
 </syncfusion:SfAIAssistView>
 
@@ -465,7 +469,7 @@ public partial class MainPage : ContentPage
         sfAIAssistView = new SfAIAssistView();
         sfAIAssistView.RequestButtonIcon = new FontImageSource
         {
-            Glyph = "\ue791;",
+            Glyph = "\ue809;",
             FontFamily = "MauiMaterialAssets",
             Color = Colors.Green
         };
@@ -476,7 +480,9 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-### Request button temlpate
+![Request Button Icon in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-requestbutton.png)
+
+### Request button template
 
 The `SfAIAssistView` control allows you to fully customize the request button's appearance using the [RequestButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestButtonTemplate) property. This property lets you define a custom layout and style for the send button.
 
@@ -1028,6 +1034,8 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+![Scroll-To-Buttom in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-scrolltobottom.gif)
+
 ### Scroll to bottom button customization
 
 The `SfAIAssistView` control allows you to fully customize the scroll-to-bottom button appearance by using the `ScrollToBottomButtonTemplate` property. This property lets you define a custom layout and style.
@@ -1076,3 +1084,5 @@ public partial class MainPage : ContentPage
 
 {% endhighlight %}
 {% endtabs %}
+
+![Scroll-To-Buttom Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-scrolltobottomtemplate.png)
