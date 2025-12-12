@@ -94,8 +94,8 @@ glassEffect.Content = numericEntry;
 
 ## Behavior and tips
 
-Acrylic effects are most visible when there is content behind the control (e.g., images or vivid backgrounds).
-Visual output and performance can vary by device; adjust EffectType to balance readability and performance.
-Ensure the acrylic container is sufficiently larger than the entry so the glass outline is visible.
+- Acrylic effects are most visible when there is content behind the control (e.g., images or vivid backgrounds).
+- Visual output and performance can vary by device; adjust EffectType to balance readability and performance.
+- Ensure the acrylic container is sufficiently larger than the entry so the glass outline is visible.
 
 The following screenshot illustrates SfNumericEntry within an acrylic container using the glass effect.

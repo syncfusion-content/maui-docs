@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Provide Liquid Glass Support for .NET MAUI Autocomplete entry | Syncfusion®
-description: Learn here about providing liquid glass support for Syncfusion® .NET MAUI MaskedEntry (SfAutocomplete) control and more.
+description: Learn here about providing liquid glass support for Syncfusion® .NET MAUI Autocomplete (SfAutocomplete) control and more.
 platform: MAUI
 control: SfAutocomplete
 documentation: ug
@@ -86,7 +86,7 @@ glassEffects.Content = Autocomplete;
 - EffectType: Has two types Regular(Blurry) effect and Clear(Glassy) effect.
 - EnableShadowEffect: To enable the shadow around the acrylic container
 - CornerRadius: Rounds the corners of the acrylic container.
-- Padding/Height/Width: Adjust layout around the embedded SfNumericEntry.
+- Padding/Height/Width: Adjust layout around the embedded SfAutocomplete.
 
 ## Behavior and tips
 

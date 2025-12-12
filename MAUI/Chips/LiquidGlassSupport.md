@@ -73,7 +73,9 @@ chipGroup.Items.Add(new SfChip(){Text="Extra Large", Background = Colors.Blue })
 
 ## Behavior and tips
 
-The chip surfaces gain the translucent, blurred glass look only when `EnableLiquidGlassEffect` is True.
-Place the chip group over visually rich content (images, gradients, or colorful sections) to better reveal the glass effect.Ensure sufficient text contrast on chips to maintain readability over translucent backgrounds.
+- When [EnableLiquidGlassEffect]() is true, the chip uses a frosted glass appearance and scales while pressed, then returns to its normal size on release.
+- Place the chip over visually rich content (images, gradients, or colorful panels) to highlight the glass look.
+- Visual output and performance can vary by device/platform; keep the background moderately detailed for clarity during interaction.
+
 
 The following screenshot illustrates SfChipGroup with the built-in glass effect enabled via EnableLiquidGlassEffect, displayed over a wallpaper background.

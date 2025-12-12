@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Provide Liquid Glass Support for .NET MAUI Combobox entry | Syncfusion®
-description: Learn here about providing liquid glass support for Syncfusion® .NET MAUI MaskedEntry (SfCombobox) control and more.
+description: Learn here about providing liquid glass support for Syncfusion® .NET MAUI Combobox (SfComboBox) control and more.
 platform: MAUI
-control: SfCombobox
+control: SfComboBox
 documentation: ug
 ---
 
 # Liquid glass support
 
-The [SfCombobox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfCombobox.html) supports a liquid `glass` (acrylic/glassmorphism) appearance by hosting the control inside the Syncfusion [SfGlassEffectsView](). You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when SfCombobox is placed over images or colorful layouts. Additionally, the dropdown portion of SfCombobox applies the glass effect only when the [EnableLiquidGlassEffect]() property is set to true.
+The [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) supports a liquid `glass` (acrylic/glassmorphism) appearance by hosting the control inside the Syncfusion [SfGlassEffectsView](). You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when SfComboBox is placed over images or colorful layouts. Additionally, the dropdown portion of SfComboBox applies the glass effect only when the [EnableLiquidGlassEffect]() property is set to true.
 
 ## Availability
 
@@ -19,9 +19,9 @@ The [SfCombobox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfCo
 
 ## Prerequisites
 
-- Add the Syncfusion.Maui.Core package (for SfGlassEffectsView) and Syncfusion.Maui.Inputs (for SfCombobox).
+- Add the Syncfusion.Maui.Core package (for SfGlassEffectsView) and Syncfusion.Maui.Inputs (for SfComboBox).
 
-XAML example Wrap the SfCombobox in an SfGlassEffectsView, then enable the dropdown’s glass effect with `EnableLiquidGlassEffect`.
+XAML example Wrap the SfComboBox in an SfGlassEffectsView, then enable the dropdown’s glass effect with `EnableLiquidGlassEffect`.
 
 {% tabs %}
 {% highlight xaml hl_lines="49 52" %}
@@ -43,7 +43,7 @@ XAML example Wrap the SfCombobox in an SfGlassEffectsView, then enable the dropd
                 EffectType="Regular"
                 EnableShadowEffect="True">
 
-                <inputs:SfCombobox
+                <inputs:SfComboBox
                     EnableLiquidGlassEffect="True"
                     ItemsSource="{Binding Employees}"
                     DisplayMemberPath="Name"
@@ -67,7 +67,7 @@ var glassEffects = new SfGlassEffectsView
     EnableShadowEffect=True
 };
 
-var Combobox = new SfCombobox
+var Combobox = new SfComboBox
 {
     EnableLiquidGlassEffect = true, // Dropdown glass effect
     ItemsSource = viewModel.Employees,
@@ -94,4 +94,4 @@ glassEffects.Content = Combobox;
 - The dropdown gains the glass effect only when `EnableLiquidGlassEffect` is true.
 - Acrylic effects are most visible over images or colorful backgrounds.
 
-The following screenshot illustrates SfCombobox within an acrylic container, with the dropdown using the glass effect.
+The following screenshot illustrates SfComboBox within an acrylic container, with the dropdown using the glass effect.
