@@ -23,11 +23,11 @@ Add the Syncfusion.Maui.Core package (for SfGlassEffectsView) and Syncfusion.Mau
 Initialize Syncfusion in your app startup (once per app):
 C# Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY"); builder.ConfigureSyncfusionCore();
 
-XAML example Wrap the SfNumericEntry in an SfAcrylicView and adjust visual properties to achieve the desired glass effect.
+XAML example Wrap the SfNumericEntry in an SfGlassEffectsView and adjust visual properties to achieve the desired glass effect.
 
-Xaml
+{% tabs %}
+{% highlight xaml %}
 
-Apply
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -41,60 +41,50 @@ Apply
         <Image Source="wallpaper.jpg" Aspect="AspectFill" />
 
         <Grid Padding="24">
-            <core:SfAcrylicView
-                TintColor="#FFFFFF"
-                TintOpacity="0.35"
-                BlurRadius="25"
+            <core:SfGlassEffectsView
                 CornerRadius="14"
-                VerticalOptions="Center"
-                HorizontalOptions="Fill"
-                HeightRequest="64"
-                Padding="12">
+                EffectType="Regular"
+                EnableShadowEffect="True">
 
                 <inputs:SfNumericEntry
-                    AutomationId="Acrylic Numeric Entry"
                     Value="1234.56"
                     FormatString="N2"
                     Placeholder="Enter amount"
                     Maximum="1000000"
                     Minimum="0"
-                    ClearButtonVisibility="WhileEditing" />
-            </core:SfAcrylicView>
+                    showClearButton="True" />
+            </core:SfGlassEffectsView>
         </Grid>
     </Grid>
 </ContentPage>
-C# example
 
-Csharp
+{% endhighlight %}
+{% highlight c# %}
 
-Apply
 using Syncfusion.Maui.Core;
 using Syncfusion.Maui.Inputs;
 
-var acrylic = new SfAcrylicView
+var glassEffect = new SfGlassEffectsView
 {
-    TintColor = Color.FromArgb("#FFFFFF"),
-    TintOpacity = 0.35,
-    BlurRadius = 25,
-    CornerRadius = 14,
-    Padding = new Thickness(12),
-    HeightRequest = 64,
-    HorizontalOptions = LayoutOptions.Fill,
-    VerticalOptions = LayoutOptions.Center
+    CornerRadius=14,
+    EffectType=LiquidGlassEffectType.Regular,
+    EnableShadowEffect=true
 };
 
 var numericEntry = new SfNumericEntry
 {
-    AutomationId = "Acrylic Numeric Entry",
     Value = 1234.56,
     FormatString = "N2",
     Placeholder = "Enter amount",
     Maximum = 1_000_000,
     Minimum = 0,
-    ClearButtonVisibility = ClearButtonVisibility.WhileEditing
+    ShowClearButton=true
 };
 
-acrylic.Content = numericEntry;
+glassEffect.Content = numericEntry;
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Key properties
 
