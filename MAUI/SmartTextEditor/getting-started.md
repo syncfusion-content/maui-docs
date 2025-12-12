@@ -399,11 +399,9 @@ Set the writing context and preferred expressions to guide completions:
         Placeholder="Type your reply..."
         UserRole="Support engineer responding to customer tickets">
         <smarttexteditor:SfSmartTextEditor.UserPhrases>
-            <x:Array Type="{x:Type x:String}">
-                <x:String>Thanks for reaching out.</x:String>
-                <x:String>Please share a minimal reproducible sample.</x:String>
-                <x:String>We’ll update you as soon as we have more details.</x:String>
-            </x:Array>
+            <x:String>Thanks for reaching out.</x:String>
+            <x:String>Please share a minimal reproducible sample.</x:String>
+            <x:String>We’ll update you as soon as we have more details.</x:String>
         </smarttexteditor:SfSmartTextEditor.UserPhrases>
     </smarttexteditor:SfSmartTextEditor>
 </ContentPage>

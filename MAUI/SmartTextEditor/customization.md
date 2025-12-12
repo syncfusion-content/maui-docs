@@ -77,7 +77,7 @@ Add a helpful placeholder to guide users and use [PlaceholderColor]() to make su
 
 <smarttexteditor:SfSmartTextEditor
     Placeholder="Type your message..."
-    PlaceholderColor="#49454F" />
+    PlaceholderColor="#7E57C2" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
@@ -85,7 +85,7 @@ Add a helpful placeholder to guide users and use [PlaceholderColor]() to make su
 var editor = new SfSmartTextEditor
 {
     Placeholder = "Type your message...",
-    PlaceholderColor = Color.FromArgb("#49454F")
+    PlaceholderColor = Color.FromArgb("#7E57C2")
 };
 
 {% endhighlight %}
