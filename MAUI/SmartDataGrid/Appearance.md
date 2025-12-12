@@ -1,3 +1,13 @@
+---
+layout: post
+title: Appearance in MAUI SmartDataGrid control | Syncfusion®
+description: Learn here all about how to customize the appearance of Syncfusion® .NET MAUI SmartDataGrid (SfSmartDataGrid) control and more.
+platform: MAUI
+control: SfSmartDataGrid
+documentation: UG
+keywords : maui datagrid, appearance, styling, assistview, toolbar, templates
+---
+
 # Appearance in MAUI SmartDataGrid (SfSmartDataGrid)
 
 The `SfSmartDataGrid` provides options to customize the appearance of its toolbar, AssistView button, and AssistView popup. You can style elements such as background, stroke, and thickness, or replace default visuals with templates for complete control over the layout and design.
@@ -138,6 +148,8 @@ style.AssistButtonCornerRadius = 10;
 {% endtabs %}
 
 <img alt="maui-smart-datagrid-assist-button-style" src="Images\Appearance\maui-smart-datagrid-assist-button-style.png" width="600"/>
+
+N> To customize the AssistView control's chat appearance and styles, refer to Syncfusion's official help documentation for **[.NET MAUI AIAssistView](https://help.syncfusion.com/maui/aiassistview/styles)**.
 
 ### AssistViewButton Icon Visibility
 

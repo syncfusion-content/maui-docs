@@ -1,3 +1,13 @@
+---
+layout: post
+title: Customization in MAUI SmartDataGrid control | Syncfusion®
+description: Learn here all about how to customize behavior and features of Syncfusion® .NET MAUI SmartDataGrid (SfSmartDataGrid) control and more.
+platform: MAUI
+control: SfSmartDataGrid
+documentation: UG
+keywords : maui datagrid, customization, assistview, prompts, smart actions
+---
+
 # Customization in MAUI SmartDataGrid (SfSmartDataGrid)
 
 The `SfSmartDataGrid` provides options to customize its behavior and appearance, including predefined suggestions, initial prompts, enabling or disabling smart actions, and programmatic control of the AssistView.
@@ -68,7 +78,7 @@ SmartGrid.AssistViewSettings.EnableSmartActions = true;
 {% endhighlight %}
 {% endtabs %}
 
-## Show or hide AssistView programmatically
+## Show AssistView Programmatically
 
 The `ShowAssistView` and `CloseAssistView` methods in `DataGridAssistViewSettings` are used to display or hide the AssistView popup programmatically. By default, calling ShowAssistView() opens the AssistView popup relative to the default assist button. The ShowAssistView method also provides an optional parameter of type View; when a view is passed, the popup opens relative to the specified view instead of the default button.
 
@@ -86,7 +96,7 @@ SmartGrid.CloseAssistView();
 {% endhighlight %}
 {% endtabs %}
 
-## Get response manually
+## Apply Smart Actions Programmatically
 
 The `GetResponseAsync` method in `DataGridAssistViewSettings` is used to fetch a response programmatically without opening the AssistView popup. By passing a prompt to this method, the required action is applied directly to the DataGrid. 
 
@@ -99,9 +109,9 @@ SmartGrid.GetResponseAsync("Sort the OrderID by Descending");
 
 ## Events
 
-### AssistViewRequest Event
+### AssistViewRequest
 
-The SfSmartDataGrid.AssistViewRequest event is triggered whenever a user request is sent. This event provides the Prompt as an argument through AssistViewRequestEventArgs and includes a Cancel property. Setting Cancel to true prevents the request from being processed.
+The `SfSmartDataGrid.AssistViewRequest` event is triggered whenever a user request is sent. This event provides the Prompt as an argument through `AssistViewRequestEventArgs` and includes a `Cancel` property. Setting Cancel to true prevents the request from being processed.
 
 {% tabs %}
 {% highlight xaml %}
@@ -119,7 +129,7 @@ private void OnAssistRequest(object sender, AssistViewRequestEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-### AssistViewOpening Event
+### AssistViewOpening
 
 The `DataGridAssistViewSettings.AssistViewOpening` event is triggered whenever the AssistView popup is about to open. This event provides `AssistViewOpeningEventArgs`, which includes a `Cancel` property. Setting Cancel to true prevents the AssistView popup from opening.
 
@@ -140,7 +150,7 @@ private void OnAssistOpening(object sender, AssistViewOpeningEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-### AssistViewClosing Event
+### AssistViewClosing
 
 The `DataGridAssistViewSettings.AssistViewClosing` event is triggered whenever the AssistView popup is about to close. This event provides `AssistViewClosingEventArgs`, which includes a `Cancel` property. Setting Cancel to true prevents the AssistView popup from closing.
 
