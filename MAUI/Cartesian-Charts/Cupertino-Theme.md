@@ -18,13 +18,6 @@ N> The Cupertino liquid glass effect is only available on macOS and iOS platform
 
 The Cupertino theme enhances chart interactivity with liquid glass effects on tooltips and trackballs, creating a modern and visually appealing data visualization interface that delivers a sophisticated user experience.
 
-## Chart Elements Supported for Cupertino Theme
-
-The Cupertino theme support is provided for the following MAUI Cartesian Chart elements:
-
-- **Tooltip:** Interactive data point information display with liquid glass effect
-- **Trackball:** Trackball visualization with liquid glass effect for precise data inspection
-
 ## Enable Cupertino Theme
 
 To Enable Cupertino Theme effect by setting `True` to [EnableLiquidGlassEffect]() property of SfCartesianChart.

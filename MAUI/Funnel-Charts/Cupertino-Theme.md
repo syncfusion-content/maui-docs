@@ -5,7 +5,7 @@ description: Learn how to enable and customize the Liquid Glass visual effect in
 platform: maui
 control: SfFunnelChart
 documentation: ug
-keywords: .net maui chart, cupertino theme, glass effect, maui cupertino chart, cupertino funnel tooltip maui, .net maui chart visualization, cupertino funnel trackball maui.
+keywords: .net maui chart, cupertino theme, glass effect, maui cupertino chart, cupertino funnel tooltip maui, .net maui chart visualization.
 ---
 
 # Cupertino Theme in .NET MAUI Funnel Chart
@@ -17,12 +17,6 @@ N> The Cupertino liquid glass effect is only available on macOS and iOS platform
 ## How it Enhances Chart UI on macOS and iOS
 
 The Cupertino theme enhances chart interactivity with liquid glass effects on tooltips, creating a modern and visually appealing data visualization interface that delivers a sophisticated user experience.
-
-## Chart Elements Supported for Cupertino Theme
-
-The Cupertino theme support is provided for the following MAUI Funnel Chart elements:
-
-- **Tooltip:** Interactive data point information display with liquid glass effect
 
 ## Enable Cupertino Theme
 
