@@ -235,7 +235,7 @@ Definition
 <code>Auto</code>
 </td>
 <td>
-Arranges template for the actual size as the {{'`RowTemplate`'| markdownify}} is measured.
+Arranges template for the actual size as the {{'RowTemplate'| markdownify}} is measured.
 </td>
 </tr>
 <tr>
@@ -251,7 +251,7 @@ Arranges template for the specified height in {{'[TemplateViewDefinition.Height]
 <code>ViewportHeight</code>
 </td>
 <td>
-Arranges template for the <code>ViewPortHeight</code> when the {{`RowTemplate`'| markdownify}} actual height is greater than <code>ViewPortHeight</code>.
+Arranges template for the <code>ViewPortHeight</code> when the {{'RowTemplate'| markdownify}} actual height is greater than <code>ViewPortHeight</code>.
 </td>
 </tr>
 </table>
