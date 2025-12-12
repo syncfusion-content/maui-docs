@@ -11,7 +11,7 @@ documentation: ug
 This section explains how to change the AI-Powered Text Editor’s appearance and suggestion behavior. You can set text styles, placeholder options, and customize how suggestions are shown.
 
 ## Text customization
-Set or bind the smart text editor’s text using the [Text] property. You can use this to preloaded content or bind it to a field in your view model for data binding.
+Set or bind the smart text editor’s text using the [Text]() property. You can use this to preloaded content or bind it to a field in your view model for data binding.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
@@ -31,7 +31,7 @@ var smarttexteditor = new SfSmartTextEditor
 {% endtabs %}
 
 ## Text style customization
-You can change the text style and font using the [TextStyle] property to make the editor look the way you want.
+You can change the text style and font using the [TextStyle]() property to make the editor look the way you want.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
@@ -45,7 +45,7 @@ You can change the text style and font using the [TextStyle] property to make th
         <smarttexteditor:SfSmartTextEditor.TextStyle>
             <smarttexteditor:SmartTextEditorStyle
                 FontSize="16"
-                TextColor="Skyblue" />
+                TextColor="Blue" />
         </smarttexteditor:SfSmartTextEditor.TextStyle>
     </smarttexteditor:SfSmartTextEditor>
 </ContentPage>
@@ -60,7 +60,7 @@ var smarttexteditor = new SfSmartTextEditor
     TextStyle = new SmartTextEditorStyle
     {
         FontSize = 16,
-        TextColor = Colors.Skyblue,
+        TextColor = Colors.Blue,
     }
 };
 
@@ -70,7 +70,7 @@ var smarttexteditor = new SfSmartTextEditor
 ![Text Style in .NET MAUI Smart Text Editor.](images/customization/maui-smarttexteditor-textcolor.gif)
 
 ## Placeholder text and color customization
-Add a helpful placeholder to guide users and use [PlaceholderColor] to make sure the text is easy to read.
+Add a helpful placeholder to guide users and use [PlaceholderColor]() to make sure the text is easy to read.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
@@ -92,34 +92,36 @@ var editor = new SfSmartTextEditor
 {% endtabs %}
 
 ## Suggestion text color
-Customize the color of the suggestion text using the [SuggestionTextColor] property to match your theme and improves readability.
+Customize the color of the suggestion text using the [SuggestionTextColor]() property to match your theme and improves readability.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
 
 <smarttexteditor:SfSmartTextEditor
-    SuggestionTextColor="LightYellow" />
+    SuggestionTextColor="Skyblue" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
 
 var smarttexteditor = new SfSmartTextEditor
 {
-    SuggestionTextColor = Colors.Goldenrod
+    SuggestionTextColor = Colors.Skyblue
 };
 
 {% endhighlight %}
 {% endtabs %}
 
+![Suggestion Text Color in .NET MAUI Smart Text Editor.](images/customization/maui-smarttexteditor-textcolor.gif)
+
 ## Suggestion popup background
-Change the background color of the suggestion popup using the [SuggestionPopupBackground] property in Popup mode to align with your app's design.
+Change the background color of the suggestion popup using the [SuggestionPopupBackground]() property in Popup mode to align with your app's design.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
 
 <smarttexteditor:SfSmartTextEditor
     SuggestionDisplayMode="Popup"
-    SuggestionPopupBackground="LightPink" />
+    SuggestionPopupBackground="#0078D4" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
@@ -127,7 +129,7 @@ Change the background color of the suggestion popup using the [SuggestionPopupBa
 var smarttexteditor = new SfSmartTextEditor
 {
     SuggestionDisplayMode = SuggestionDisplayMode.Popup,
-    SuggestionPopupBackground = new SolidColorBrush(Colors.LightYellow)
+    SuggestionPopupBackground = Color.FromArgb("#0078D4"),
 };
 
 {% endhighlight %}
@@ -136,7 +138,7 @@ var smarttexteditor = new SfSmartTextEditor
 ![Customization in .NET MAUI Smart Text Editor.](images/customization/maui-smarttexteditor-customization.gif)
 
 ## Maximum input length
-Set a limit on the number of characters the user can enter in the smart text editor using the [MaxLength] property.
+Set a limit on the number of characters the user can enter in the smart text editor using the [MaxLength]() property.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}

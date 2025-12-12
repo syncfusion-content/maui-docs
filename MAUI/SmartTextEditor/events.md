@@ -13,14 +13,14 @@ The AI-Powered Text Editor provides the `TextChanged` event, which is triggered 
 
 ## TextChanged
 
-The [TextChanged] event is triggered whenever the text in the smart text editor changes.
+The [TextChanged]() event is triggered whenever the text in the smart text editor changes.
 
 * `Sender`: This contains the `SfSmartTextEditor` object.
 
-* `EventArgs`: The event uses [TextChangedEventArgs], which provides details about the text change.
+* `EventArgs`: The event uses [TextChangedEventArgs](), which provides details about the text change.
 
-    * [NewTextValue] : Returns the new text. 
-    * [OldTextValue] : Returns the previous text.
+    * [NewTextValue]() : Returns the new text. 
+    * [OldTextValue]() : Returns the previous text.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -44,7 +44,7 @@ private void OnTextChanged(object sender, Syncfusion.Maui.SmartComponents.TextCh
 
 ### TextChangedCommand
 
-The [SfSmartTextEditor] includes a built-in property called `TextChangedCommand`, which is triggered whenever the text in the smart text editor changes. This event can be invoked through the [TextChangedCommand].
+The [SfSmartTextEditor]() includes a built-in property called `TextChangedCommand`, which is triggered whenever the text in the smart text editor changes. This event can be invoked through the [TextChangedCommand]().
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
