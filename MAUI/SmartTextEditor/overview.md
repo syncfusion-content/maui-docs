@@ -11,6 +11,8 @@ documentation: ug
 
 Syncfusion [.NET MAUI AI-Powered Text Editor]() (SfSmartTextEditor) is a multiline input control that accelerates typing with predictive suggestions. It supports inline and popup suggestion display, can integrate with an AI inference service for context aware completions, and falls back to your custom phrase list when AI is unavailable. The control provides full text styling, placeholder customization, and command/event hooks for text changes.
 
+![Overview in .NET MAUI Smart Text Editor.](images/overview/maui-smarttexteditor-overview.gif)
+
 ## Key features
 
 * **Suggestion display modes**: Allows customizing suggestions in both inline and popup modes.
@@ -28,5 +30,3 @@ Syncfusion [.NET MAUI AI-Powered Text Editor]() (SfSmartTextEditor) is a multili
 * **Placeholder text**: Allows configuration of placeholders with customizable color styling.
 
 * **Customization**: Gives users full control over fonts, colors, sizes, and styles for complete UI customization.
-
-![Overview in .NET MAUI Smart Text Editor.](images/overview/maui-smarttexteditor-overview.gif)
