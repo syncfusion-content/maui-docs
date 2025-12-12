@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Provide Liquid Glass Support for .NET MAUI Numeric entry | Syncfusion®
-description: Learn here about providing liquid glass support for Syncfusion® .NET MAUI NumericEntry (SfNumericEntry) control and more.
+title: Provide Liquid Glass Support for .NET MAUI Masked entry | Syncfusion®
+description: Learn here about providing liquid glass support for Syncfusion® .NET MAUI MaskedEntry (SfMaskedEntry) control and more.
 platform: MAUI
-control: SfNumericEntry
+control: SfMaskedEntry
 documentation: ug
 ---
 
 # Liquid glass support
 
-The  [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) supports a `liquid glass` (glassmorphism) appearance by hosting the control inside the Syncfusion [SfGlassEffectsView](). The acrylic view creates a blurred, translucent background that blends with the content behind it, producing a frosted `glass effect` around the entry. You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when SfNumericEntry is placed over images or colorful layouts.
+The  [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) supports a `liquid glass` (glassmorphism) appearance by hosting the control inside the Syncfusion [SfGlassEffectsView](). The acrylic view creates a blurred, translucent background that blends with the content behind it, producing a frosted `glass effect` around the entry. You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when SfMaskedEntry is placed over images or colorful layouts.
 
 ## Availability
 
@@ -19,9 +19,9 @@ The  [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs
 
 ## Prerequisites
 
-- Add the Syncfusion.Maui.Core package (for SfGlassEffectsView) and Syncfusion.Maui.Inputs (for SfNumericEntry).
+- Add the Syncfusion.Maui.Core package (for SfGlassEffectsView) and Syncfusion.Maui.Inputs (for SfMaskedEntry).
 
-XAML example Wrap the `SfNumericEntry` in an `SfGlassEffectsView` and adjust visual properties to achieve the desired glass effect.
+XAML example Wrap the `SfMaskedEntry` in an `SfGlassEffectsView` and adjust visual properties to achieve the desired glass effect.
 
 {% tabs %}
 {% highlight xaml hl_lines="54" %}
@@ -32,26 +32,26 @@ XAML example Wrap the `SfNumericEntry` in an `SfGlassEffectsView` and adjust vis
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:inputs="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
     xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    x:Class="AcrylicNumericEntryPage">
+    x:Class="AcrylicMaskedEntryPage">
 
     <!-- Background content to make the acrylic blur visible -->
     <Grid>
         <Image Source="wallpaper.jpg" Aspect="AspectFill" />
-        <core:SfGlassEffectsView
-            CornerRadius="20"
-            HeightRequest="40"
-            EffectType="Regular"
-            EnableShadowEffect="True">
+            <core:SfGlassEffectsView
+                CornerRadius="20"
+                HeightRequest="40"
+                EffectType="Regular"
+                EnableShadowEffect="True">
 
-            <inputs:SfNumericEntry
-                Value="1234.56"
-                FormatString="N2"
-                Placeholder="Enter amount"
-                Maximum="1000000"
-                Background="Transparent"
-                Minimum="0"
-                showClearButton="True" />
-        </core:SfGlassEffectsView>
+                <inputs:SfMaskedEntry
+                    Value="1234.56"
+                    FormatString="N2"
+                    Placeholder="Enter amount"
+                    Maximum="1000000"
+                    Background="Transparent"
+                    Minimum="0"
+                    showClearButton="True" />
+            </core:SfGlassEffectsView>
     </Grid>
 </ContentPage>
 
@@ -69,7 +69,7 @@ var glassEffect = new SfGlassEffectsView
     EnableShadowEffect=true
 };
 
-var numericEntry = new SfNumericEntry
+var maskedEntry = new SfMaskedEntry
 {
     Value = 1234.56,
     FormatString = "N2",
@@ -80,7 +80,7 @@ var numericEntry = new SfNumericEntry
     ShowClearButton=true
 };
 
-glassEffect.Content = numericEntry;
+glassEffect.Content = maskedEntry;
 
 {% endhighlight %}
 {% endtabs %}
@@ -90,7 +90,7 @@ glassEffect.Content = numericEntry;
 - EffectType: Has two type Regular(Blurry) effect and Clear(Glassy) effect.
 - EnableShadowEffect: To enable the shadow around the acrylic container
 - CornerRadius: Rounds the corners of the acrylic container.
-- Padding/Height/Width: Adjust layout around the embedded SfNumericEntry.
+- Padding/Height/Width: Adjust layout around the embedded SfMaskedEntry.
 
 ## Behavior and tips
 
