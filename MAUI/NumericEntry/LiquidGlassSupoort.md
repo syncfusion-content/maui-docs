@@ -90,10 +90,10 @@ glassEffect.Content = numericEntry;
 
 ## Key properties
 
-EffectType: Has two type Regular(Blurry) effect and Clear(Glassy) effect.
-EnableShadowEffect: To enable the shadow around the acrylic container
-CornerRadius: Rounds the corners of the acrylic container.
-Padding/Height/Width: Adjust layout around the embedded SfNumericEntry.
+- EffectType: Has two type Regular(Blurry) effect and Clear(Glassy) effect.
+- EnableShadowEffect: To enable the shadow around the acrylic container
+- CornerRadius: Rounds the corners of the acrylic container.
+- Padding/Height/Width: Adjust layout around the embedded SfNumericEntry.
 
 ## Behavior and tips
 
