@@ -61,7 +61,7 @@ builder.ConfigureSyncfusionAIServices();
 
 ### OpenAI
 
-For **OpenAI**, create an API key and place it at `openAIApiKey`. The value for `openAIModel` is the model you wish to use (e.g., `gpt-3.5-turbo`, `gpt-4`, etc.).
+For **OpenAI**, create an API key and place it at `openAIApiKey`. The value for `openAIModel` is the model you wish.
 
 * Install the following NuGet packages to your project:
 
