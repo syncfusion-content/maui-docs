@@ -247,6 +247,7 @@ The Syncfusion .NET MAUI ListView provides a high-performance, flexible list wit
 
 The Syncfusion .NET MAUI AI AssistView provides a ready-made conversational UI for integrating LLMs with features like message list, input box, suggestions, attachments, and tool/action invocation.
 
+{% promptcards %}
 {% promptcard Messages %}
 #SyncfusionMAUIAssistant Bind AssistView to a message collection with system, user, and pre load conversation history.
 {% endpromptcard %}
