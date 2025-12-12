@@ -1,6 +1,6 @@
 ---
 layout: post
-title: About .NET MAUI Rich Text Editor control | Syncfusion®
+title: About Cupertino Theme on .NET MAUI Rich Text Editor control | Syncfusion®
 description: Learn here all about how to enable cupertino theme for Syncfusion® .NET MAUI Rich Text Editor (SfRichTextEditor) control, its elements and more.
 platform: maui 
 control: SfRichTextEditor
