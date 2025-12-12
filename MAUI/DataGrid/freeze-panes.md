@@ -117,7 +117,7 @@ The DataGrid allows you to customize the color of the freeze pane line using the
 
 ### Freeze pane line thickness
 
-The DataGrid provides an option to customize the thickness of the freeze pane line using the `DataGridStyle.FreezePaneLineStrokeThickness` property. This property defines the stroke width for all frozen rows and columns in both the body and footer regions
+The DataGrid provides an option to customize the thickness of the freeze pane line using the [DataGridStyle.FreezePaneLineStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_DataGridStyle_FreezePaneLineStrokeThickness) property. This property defines the stroke width for all frozen rows and columns in both the body and footer regions
 
 N> The default value of `FreezePaneLineStrokeThickness` is 1.
 
