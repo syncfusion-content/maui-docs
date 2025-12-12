@@ -81,17 +81,5 @@ glassEffects.Content = Autocomplete;
 {% endhighlight %}
 {% endtabs %}
 
-## Key properties
-
-- EffectType: Has two types Regular(Blurry) effect and Clear(Glassy) effect.
-- EnableShadowEffect: To enable the shadow around the acrylic container
-- CornerRadius: Rounds the corners of the acrylic container.
-- Padding/Height/Width: Adjust layout around the embedded SfAutocomplete.
-
-## Behavior and tips
-
-- The entry surface inherits the acrylic effect from the surrounding `SfGlassEffectsView`.
-- The dropdown gains the glass effect only when `EnableLiquidGlassEffect` is true.
-- Acrylic effects are most visible over images or colorful backgrounds.
 
 The following screenshot illustrates SfAutocomplete within an acrylic container, with the dropdown using the glass effect.
