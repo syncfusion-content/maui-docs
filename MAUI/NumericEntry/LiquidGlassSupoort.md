@@ -26,7 +26,7 @@ C# Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE 
 XAML example Wrap the SfNumericEntry in an SfGlassEffectsView and adjust visual properties to achieve the desired glass effect.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml hl_lines="54" %}
 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
@@ -51,6 +51,7 @@ XAML example Wrap the SfNumericEntry in an SfGlassEffectsView and adjust visual 
                     FormatString="N2"
                     Placeholder="Enter amount"
                     Maximum="1000000"
+                    Background="Transparent"
                     Minimum="0"
                     showClearButton="True" />
             </core:SfGlassEffectsView>
@@ -59,7 +60,7 @@ XAML example Wrap the SfNumericEntry in an SfGlassEffectsView and adjust visual 
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# hl_lines="82" %}
 
 using Syncfusion.Maui.Core;
 using Syncfusion.Maui.Inputs;
@@ -78,6 +79,7 @@ var numericEntry = new SfNumericEntry
     Placeholder = "Enter amount",
     Maximum = 1_000_000,
     Minimum = 0,
+    Background= Colors.Transparent,
     ShowClearButton=true
 };
 
