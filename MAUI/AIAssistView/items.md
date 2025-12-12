@@ -483,7 +483,7 @@ public class ViewModel : INotifyPropertyChanged
 
 ![Error message in .NET MAUI AI AssistView](images/maui-aiassistview-error-message.png)
 
-## Customizable (Targetable) views
+## Customizable views
 
 The `SfAIAssistView` allows you to customize specific parts of request and response items without changing the entire UI. You can apply styles, templates, or subclass these views to create custom visuals and behavior.
 
@@ -491,11 +491,11 @@ The following views can be customized individually:
 
 - `RequestTextView` – Represents the user request text content.
 - `RequestAssistImageView` – Represents the user request image content.
-- `RequestHyperlinkUrlLableView` – Represents the user request URL label area.
+- `RequestHyperlinkUrlLabelView` – Represents the user request URL label area.
 - `RequestHyperLinkDetailsViewFrameView` – Represents the user request URL details/preview frame area.
 - `ResponseTextView` – Represents the AI response text content.
 - `ResponseAssistImageView` – Represents the AI response image content.
-- `ResponseHyperlinkUrlLableView` – Represents the AI response URL label area.
+- `ResponseHyperlinkUrlLabelView` – Represents the AI response URL label area.
 - `ResponseHyperLinkDetailsViewFrameView` – Represents the AI response URL details/preview frame area.
 - `ResponseCardView` – Represents the container for card-based AI responses.
 - `CardItemView` – Represents a single card item within a response.
