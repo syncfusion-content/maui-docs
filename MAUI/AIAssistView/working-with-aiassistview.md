@@ -482,7 +482,7 @@ public partial class MainPage : ContentPage
 
 ![Request Button Icon in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-requestbutton.png)
 
-### Request button temlpate
+### Request button template
 
 The `SfAIAssistView` control allows you to fully customize the request button's appearance using the [RequestButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestButtonTemplate) property. This property lets you define a custom layout and style for the send button.
 
