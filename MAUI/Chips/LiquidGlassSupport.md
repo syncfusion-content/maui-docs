@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-## Liquid glass support
+# Liquid glass support
 
 The [Chips](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html) provides `liquid glass` (acrylic/glassmorphism) effect that can be enabled directly on the control using the public API [EnableLiquidGlassEffect](). When enabled, each chip surface adopts a frosted, translucent appearance that blends with the content behind it, improving visual depth and readability over images or colorful layouts.
 
@@ -70,12 +70,6 @@ chipGroup.Items.Add(new SfChip(){Text="Extra Large", Background = Colors.Blue })
 
 {% endhighlight %}
 {% endtabs %}
-
-## Behavior and tips
-
-- When [EnableLiquidGlassEffect]() is true, the chip uses a frosted glass appearance and scales while pressed, then returns to its normal size on release.
-- Place the chip over visually rich content (images, gradients, or colorful panels) to highlight the glass look.
-- Visual output and performance can vary by device/platform; keep the background moderately detailed for clarity during interaction.
 
 
 The following screenshot illustrates SfChipGroup with the built-in glass effect enabled via EnableLiquidGlassEffect, displayed over a wallpaper background.
