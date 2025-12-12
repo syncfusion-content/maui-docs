@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Provide Liquid Glass Support for .NET MAUI Backdrop Page | Syncfusion®
-description: Learn how to enable liquid glass (acrylic/glassmorphism) support for the Syncfusion® .NET MAUI Backdrop Page (SfBackdropPage) by turning on the EnableLiquidGlassEffect property on both the front and back layers.
+description: Learn how to enable liquid glass (acrylic/glass morphism) support for the Syncfusion® .NET MAUI Backdrop Page using the EnableLiquidGlassEffect property.
 platform: MAUI
 control: SfBackdropPage
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Liquid Glass Support
 
-The [SfBackdropPage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html) supports a liquid glass (acrylic/glassmorphism) appearance on both layers. Enable the effect directly on the [BackdropBackLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.BackdropBackLayer.html) and [BackdropFrontLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.BackdropFrontLayer.html) by setting their [EnableLiquidGlassEffect]() properties to true. This improves visual depth and readability when the backdrop layers are placed over images or colorful layouts.
+The [SfBackdropPage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html) supports a liquid glass (acrylic/glass morphism) appearance on both layers. Enable the effect directly on the [BackdropBackLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.BackdropBackLayer.html) and [BackdropFrontLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.BackdropFrontLayer.html) by setting their [EnableLiquidGlassEffect]() properties to true. This improves visual depth and readability when the backdrop layers are placed over images or colorful layouts.
 
 ## Platform and Version Support
 

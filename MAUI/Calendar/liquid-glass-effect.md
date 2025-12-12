@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Provide Liquid Glass Support for .NET MAUI Calendar | Syncfusion®
-description: Learn how to enable liquid glass (acrylic/glassmorphism) support for the Syncfusion® .NET MAUI Calendar (SfCalendar) using SfGlassEffectsView, and apply glass effect to the dialog mode popup via EnableLiquidGlassEffect Property in SfCalendar.
+description: Learn how to enable liquid glass (acrylic/glass morphism) support for the Syncfusion® .NET MAUI Calendar using SfGlassEffectsView.
 platform: MAUI
 control: SfCalendar
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Liquid Glass Support
 
-The [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html) supports a liquid glass (acrylic/glassmorphism) appearance by hosting the control inside the Syncfusion [SfGlassEffectsView](). You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when the calendar is placed over images or colorful layouts.
+The [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html) supports a liquid glass (acrylic/glass morphism) appearance by hosting the control inside the Syncfusion [SfGlassEffectsView](). You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when the calendar is placed over images or colorful layouts.
 
 Additionally, when the calendar is shown in [Dialog](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.CalendarMode.html#Syncfusion_Maui_Calendar_CalendarMode_Dialog) mode, you can apply the glass effect to the pop-up by enabling the [EnableLiquidGlassEffect]() property on the calendar.
 

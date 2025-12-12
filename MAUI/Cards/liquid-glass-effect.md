@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Provide Liquid Glass Support for .NET MAUI Cards | Syncfusion®
-description: Learn how to enable liquid glass (acrylic/glassmorphism) support for the Syncfusion® .NET MAUI Card view (SfCardView) using the EnableLiquidGlassEffect property.
+description: Learn how to enable liquid glass (acrylic/glass morphism) support for the Syncfusion® .NET MAUI Card view using the EnableLiquidGlassEffect property.
 platform: MAUI
 control: SfCardView
 documentation: ug

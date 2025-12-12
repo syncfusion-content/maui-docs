@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Provide Liquid Glass Support for .NET MAUI Date Time Picker | Syncfusion®
-description: Learn how to enable liquid glass (acrylic/glassmorphism) support for the Syncfusion® .NET MAUI Date Time Picker (SfDateTimePicker) using SfGlassEffectsView, and apply glass effect to the dialog popup via EnableLiquidGlassEffect Property in SfDateTimePicker.
+description: Learn how to enable liquid glass (acrylic/glass morphism) support for the Syncfusion® .NET MAUI Date Time Picker using SfGlassEffectsView.
 platform: MAUI
 control: SfDateTimePicker
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Liquid Glass Support
 
-The [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DateTimePicker.SfDateTimePicker.html) supports a liquid glass (acrylic/glassmorphism) appearance by hosting the control inside the Syncfusion [SfGlassEffectsView](). You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when the date-time picker is placed over images or colorful layouts.
+The [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DateTimePicker.SfDateTimePicker.html) supports a liquid glass (acrylic/glass morphism) appearance by hosting the control inside the Syncfusion [SfGlassEffectsView](). You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when the date-time picker is placed over images or colorful layouts.
 
 Additionally, when the datetime picker is shown in [Dialog]() mode, you can apply the glass effect to the pop-up by enabling the [EnableLiquidGlassEffect]() property on the SfDateTimePicker.
 
@@ -22,7 +22,7 @@ Additionally, when the datetime picker is shown in [Dialog]() mode, you can appl
 ## Prerequisites
 
 - Add the [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) package (for SfGlassEffectsView).
-- Add the [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker/) package (for SfDatTimePicker).
+- Add the [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker/) package (for SfDateTimePicker).
 
 ## Apply Liquid Glass Effect to SfDateTimePicker
 

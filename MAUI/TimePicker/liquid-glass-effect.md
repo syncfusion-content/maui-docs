@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Provide Liquid Glass Support for .NET MAUI Time Picker | Syncfusion®
-description: Learn how to enable liquid glass (acrylic/glassmorphism) support for the Syncfusion® .NET MAUI Time Picker (SfTimePicker) using SfGlassEffectsView, and apply glass effect to the dialog popup via EnableLiquidGlassEffect Property in SfTimePicker.
+description: Learn how to enable liquid glass (acrylic/glass morphism) support for the Syncfusion® .NET MAUI Time Picker using SfGlassEffectsView.
 platform: MAUI
 control: SfTimePicker
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Liquid Glass Support
 
-The [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TimePicker.SfTimePicker.html) supports a liquid glass (acrylic/glassmorphism) appearance by hosting the control inside the Syncfusion [SfGlassEffectsView](). You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when the time picker is placed over images or colorful layouts.
+The [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TimePicker.SfTimePicker.html) supports a liquid glass (acrylic/glass morphism) appearance by hosting the control inside the Syncfusion [SfGlassEffectsView](). You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when the time picker is placed over images or colorful layouts.
 
 Additionally, when the time selection is shown in a dialog, you can apply the glass effect to the pop-up by enabling the [EnableLiquidGlassEffect]() property on the time picker.
 
