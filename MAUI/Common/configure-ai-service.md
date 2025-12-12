@@ -7,7 +7,7 @@ control: SmartComponents
 documentation: ug
 ---
 
-## Configure AI Service With Smart Components
+# Configure AI Service With Smart Components
 
 The Smart Components uses a chat inference service resolved from dependency injection to generate contextual suggestions. Register a compatible chat client and an inference adapter in `MauiProgram.cs`.
 
