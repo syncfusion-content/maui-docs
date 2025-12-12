@@ -1188,24 +1188,24 @@ To style the scroll to bottom button view based on its appearance, set values to
 
 <table>
 <tr>
-<th>Key</th>
-<th>Description</th>
+<th> Key </th>
+<th> Description </th>
 </tr>
 <tr>
-<td>ScrollToBottomButtonBackground</td>
-<td>Background color of the scroll to bottom button view.</td>
+<td> ScrollToBottomButtonBackground </td>
+<td> Background color of the scroll to bottom button view. </td>
 </tr>
 <tr>
-<td>ScrollToBottomButtonIconColor</td>
-<td>Color of the scroll to bottom button.</td>
+<td> ScrollToBottomButtonIconColor </td>
+<td> Color of the scroll to bottom button. </td>
 </tr>
 <tr>
-<td>HoveredScrollToBottomButtonBackground</td>
-<td>Background color of scroll to bottom button in hover state.</td>
+<td> HoveredScrollToBottomButtonBackground </td>
+<td> Background color of scroll to bottom button in hover state. </td>
 </tr>
 <tr>
-<td>PressedScrollToBottomButtonBackground</td>
-<td>Background color when the scroll to bottom button is pressed.</td>
+<td> PressedScrollToBottomButtonBackground </td>
+<td> Background color when the scroll to bottom button is pressed. </td>
 </tr>
 </table>
 
@@ -1250,24 +1250,24 @@ To style the action button view based on its appearance, set values to the in-bu
 
 <table>
 <tr>
-<th>Key</th>
-<th>Description</th>
+<th> Key </th>
+<th> Description </th>
 </tr>
 <tr>
-<td>ActionButtonBackground</td>
-<td>Background color of the action button.</td>
+<td> ActionButtonBackground </td>
+<td> Background color of the action button. </td>
 </tr>
 <tr>
-<td>ActionButtonIconColor</td>
-<td>Color of the action button.</td>
+<td> ActionButtonIconColor </td>
+<td> Color of the action button. </td>
 </tr>
 <tr>
-<td>ActionButtonTextColor</td>
-<td>Text color of an item in the action button.</td>
+<td> ActionButtonTextColor </td>
+<td> Text color of an item in the action button. </td>
 </tr>
 <tr>
-<td>ActionButtonViewBackground</td>
-<td>Background color of the action buttons view.</td>
+<td> ActionButtonViewBackground </td>
+<td> Background color of the action buttons view. </td>
 </tr>
 </table>
 

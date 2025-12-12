@@ -527,36 +527,36 @@ This page lists the keys associated with each control and the respective UI elem
     <td> Font attributes of an item in the common suggestions.<br/><br/></td>
 </tr>
 <tr>
-    <td>ScrollToBottomButtonBackground<br/><br/></td>
-    <td>Background color of the scroll to bottom button view.<br/><br/></td>
+    <td> ScrollToBottomButtonBackground <br/><br/></td>
+    <td> Background color of the scroll to bottom button view. <br/><br/></td>
 </tr>
 <tr>
-    <td>ScrollToBottomButtonIconColor<br/><br/></td>
-    <td>Color of the scroll to bottom button.<br/><br/></td>
+    <td> ScrollToBottomButtonIconColor <br/><br/></td>
+    <td> Color of the scroll to bottom button. <br/><br/></td>
 </tr>
 <tr>
-    <td>HoveredScrollToBottomButtonBackground<br/><br/></td>
-    <td>Background color of scroll to bottom button in hover state.<br/><br/></td>
+    <td> HoveredScrollToBottomButtonBackground <br/><br/></td>
+    <td> Background color of scroll to bottom button in hover state. <br/><br/></td>
 </tr>
 <tr>
-    <td>PressedScrollToBottomButtonBackground<br/><br/></td>
-    <td>Background color when the scroll to bottom button is pressed.<br/><br/></td>
+    <td> PressedScrollToBottomButtonBackground <br/><br/></td>
+    <td> Background color when the scroll to bottom button is pressed. <br/><br/></td>
 </tr>
 <tr>
-    <td>ActionButtonBackground<br/><br/></td>
-    <td>Background color of the action button.<br/><br/></td>
+    <td> ActionButtonBackground <br/><br/></td>
+    <td> Background color of the action button. <br/><br/></td>
 </tr>
 <tr>
-    <td>ActionButtonIconColor<br/><br/></td>
-    <td>Color of the action button.<br/><br/></td>
+    <td> ActionButtonIconColor <br/><br/></td>
+    <td> Color of the action button. <br/><br/></td>
 </tr>
 <tr>
-    <td>ActionButtonTextColor<br/><br/></td>
-    <td>Text color of an item in the action button.<br/><br/></td>
+    <td> ActionButtonTextColor <br/><br/></td>
+    <td> Text color of an item in the action button. <br/><br/></td>
 </tr>
 <tr>
-    <td>ActionButtonViewBackground<br/><br/></td>
-    <td>Background color of the action buttons view.<br/><br/></td>
+    <td> ActionButtonViewBackground <br/><br/></td>
+    <td> Background color of the action buttons view. <br/><br/></td>
 </tr>
 </table>
 
