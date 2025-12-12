@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Liquid Glass Effect UI in Syncfusion® .NET MAUI Controls
+title: Getting Started with Liquid Glass UI in Syncfusion® .NET MAUI Controls
 description: Get started with the Liquid Glass Effect UI in Syncfusion® .NET MAUI controls and learn how to enable and customize it.
 platform: MAUI
 control: General
