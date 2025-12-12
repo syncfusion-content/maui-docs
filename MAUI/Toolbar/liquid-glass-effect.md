@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Provide Liquid Glass Support for .NET MAUI Toolbar | Syncfusion®
-description: Learn how to enable liquid glass (acrylic/glass morphism) support for the Syncfusion® .NET MAUI Toolbar using the EnableLiquidGlassEffect property.
+title: Liquid Glass Support for .NET MAUI Toolbar | Syncfusion®
+description: Learn how to enable liquid glass  support for the Syncfusion® .NET MAUI Toolbar using the EnableLiquidGlassEffect property.
 platform: maui
 control: Toolbar (SfToolbar)
 documentation: ug

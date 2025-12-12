@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Provide Liquid Glass Support for .NET MAUI Date Picker | Syncfusion®
-description: Learn how to enable liquid glass (acrylic/glass morphism) support for the Syncfusion® .NET MAUI Date Picker using SfGlassEffectsView.
+title: Liquid Glass Support for .NET MAUI Date Picker | Syncfusion®
+description: Learn how to enable liquid glass  support for the Syncfusion® .NET MAUI Date Picker using SfGlassEffectsView.
 platform: MAUI
 control: SfDatePicker
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Liquid Glass Support
 
-The [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DatePicker.SfDatePicker.html) supports a liquid glass (acrylic/glass morphism) appearance by hosting the control inside the Syncfusion [SfGlassEffectsView](). You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when the date picker is placed over images or colorful layouts.
+The [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DatePicker.SfDatePicker.html) supports a liquid glass  appearance by hosting the control inside the Syncfusion [SfGlassEffectsView](). You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when the date picker is placed over images or colorful layouts.
 
 Additionally, when the date picker is shown in [Dialog]() mode, you can apply the glass effect to the pop-up by enabling the [EnableLiquidGlassEffect]() property on the SfDatePicker.
 
