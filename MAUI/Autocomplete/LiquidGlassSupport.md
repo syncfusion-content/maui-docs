@@ -9,7 +9,7 @@ documentation: ug
 
 # Liquid glass support
 
-The [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) supports a liquid `glass` (acrylic/glassmorphism) appearance by hosting the control inside the Syncfusion [SfGlassEffectsView](). You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when SfAutocomplete is placed over images or colorful layouts. Additionally, the dropdown portion of SfAutocomplete applies the glass effect only when the [EnableLiquidGlassEffect]() property is set to true.
+The [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) supports a liquid `glass` appearance by hosting the control inside the Syncfusion [SfGlassEffectsView](). You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when SfAutocomplete is placed over images or colorful layouts. Additionally, the dropdown portion of SfAutocomplete applies the glass effect only when the [EnableLiquidGlassEffect]() property is set to true.
 
 ## Availability
 
