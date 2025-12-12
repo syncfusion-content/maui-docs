@@ -5,7 +5,7 @@ description: Learn how to enable and customize the Liquid Glass visual effect in
 platform: maui
 control: SfPyramidChart
 documentation: ug
-keywords: .net maui chart, cupertino theme, glass effect, maui cupertino chart, cupertino pyramid tooltip maui, .net maui chart visualization, cupertino pyramid trackball maui.
+keywords: .net maui chart, cupertino theme, glass effect, maui cupertino chart, cupertino pyramid tooltip maui, .net maui chart visualization.
 ---
 
 # Cupertino Theme in .NET MAUI Pyramid Chart
