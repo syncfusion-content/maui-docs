@@ -263,6 +263,12 @@ public class CustomAssistViewChat : AssistViewChat
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/custom-control-template-in-.net-maui-aiassistview)
 
+## Edit option for request item
+
+The `SfAIAssistView` allows you to edit a previously sent request. This feature lets users review and refine the prompt and resubmit from the editor to get more accurate responses. Each request shows an Edit icon; when tapped, the request text is placed in the editor (InputView) to redefine.
+
+N> Interaction: On desktop (Windows, macOS), hover over a request to reveal the Edit icon. On mobile (Android, iOS), tap the request to show the Edit option.
+
 ## EditorView template
 
 The `SfAIAssistView` control allows you to fully customize the editor's appearance by using the [EditorViewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_EditorViewTemplate) property. This property lets you define a custom layout and style for the editor.
@@ -327,9 +333,152 @@ public partial class MainPage : ContentPage
 
 ![EditorView Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-editorviewtemplate.png)
 
-## Send button customization
+## Action buttons in the editor
 
-The `SfAIAssistView` control allows you to fully customize the send button's appearance using the [RequestButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestButtonTemplate) property. This property lets you define a custom layout and style for the send button.
+The `SfAIAssistView` can display a quick action icon inside the editor. To enable the action button, set the `ShowActionButtons` property to `true`.
+
+{% tabs %} 
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %} 
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView" 
+                           ShowActionButtons="True" />
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %} 
+
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage 
+{ 
+    SfAIAssistView sfAIAssistView;
+    public MainPage()
+    {
+        InitializeComponent();
+        this.sfAIAssistView = new SfAIAssistView();
+        this.sfAIAssistView.ShowActionButtons = true;
+        this.Content = sfAIAssistView;
+    }
+} 
+
+{% endhighlight %} 
+{% endtabs %}
+
+### Displaying action buttons
+
+Bind the `ActionButtons` collection with one or more `ActionButton` items to populate the popup. The `ActionButton` provides the properties. When the `ActionButton` icon is tapped, an action popup appears with the list of configured `ActionButton`.
+
+- `Text`: Displays the text for the action button.
+- `Icon`: Displays an icon for the action button.
+- `Command`: Executes a command when the action button is tapped.
+- `CommandParameter`: Passes a parameter to the command when executed.
+
+{% tabs %} 
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4 5 6 7 8" %} 
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView" 
+                           ShowActionButtons="True"
+                           AssistItems="{Binding AssistItems}"> 
+    <syncfusion:SfAIAssistView.ActionButtons> 
+        <syncfusion:ActionButton Text="Copy" Icon="copy.png" Command="{Binding CopyCommand}" /> 
+        <syncfusion:ActionButton Text="Clear" Icon="trash.png" Command="{Binding ClearCommand}" /> 
+        <syncfusion:ActionButton Text="Share" Icon="share.png" Command="{Binding ShareCommand}" /> 
+    </syncfusion:SfAIAssistView.ActionButtons> 
+</syncfusion:SfAIAssistView>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="15 17 23 29" %} 
+
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage 
+{ 
+    SfAIAssistView sfAIAssistView;
+    ViewModel viewModel;
+    public MainPage()
+    {
+        InitializeComponent();
+        this.viewModel = new ViewModel();
+        this.BindingContext = this.viewModel;
+        this.sfAIAssistView = new SfAIAssistView();
+        this.sfAIAssistView.ShowActionButtons = true,
+        this.sfAIAssistView.AssistItems = this.viewModel.AssistItems,
+        this.sfAIAssistView.ActionButtons = new ObservableCollection<ActionButton>
+        {
+            new ActionButton
+            {
+                Text = "Copy",
+                Icon = ImageSource.FromFile("copy.png"),
+                Command = this.viewModel.CopyCommand
+            },
+            new ActionButton
+            {
+                Text = "Clear",
+                Icon = ImageSource.FromFile("trash.png"),
+                Command = this.viewModel.ClearCommand
+            },
+            new ActionButton
+            {
+                Text = "Share",
+                Icon = ImageSource.FromFile("share.png"),
+                Command = this.viewModel.ShareCommand
+            }
+        };
+
+        this.Content = sfAIAssistView;
+    }
+}
+
+{% endhighlight %} 
+{% endtabs %}
+
+## Request button customization
+
+### Request button icon
+
+The `SfAIAssistView` control allows you to customize the request button icon by setting an `ImageSource` to the `RequestButtonIcon` property.
+
+{% tabs %}
+{% highlight xaml hl_lines="3" %}
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           AssistItems="{Binding AssistItems}">
+        <syncfusion:SfAIAssistView.RequestButtonIcon>
+            <FontImageSource Glyph="&#xe791;"
+                             FontFamily="MauiMaterialAssets"
+                             Color="Green" />
+        </syncfusion:SfAIAssistView.RequestButtonIcon>
+</syncfusion:SfAIAssistView>
+
+{% endhighlight %}
+{% highlight c# hl_lines="10" %}
+
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    SfAIAssistView sfAIAssistView;
+    public MainPage()
+    {
+        InitializeComponent();
+        sfAIAssistView = new SfAIAssistView();
+        sfAIAssistView.RequestButtonIcon = new FontImageSource
+        {
+            Glyph = "\ue791;",
+            FontFamily = "MauiMaterialAssets",
+            Color = Colors.Green
+        };
+        this.Content = sfAIAssistView;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Request button temlpate
+
+The `SfAIAssistView` control allows you to fully customize the request button's appearance using the [RequestButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestButtonTemplate) property. This property lets you define a custom layout and style for the send button.
 
 {% tabs %}
 {% highlight xaml hl_lines="22" %}
@@ -847,3 +996,83 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![Text Selection in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-textselection.gif)
+
+## Scroll to bottom button
+
+The `SfAIAssistView` control provides an option to display a scroll-to-bottom button that helps users quickly navigate back to the latest responses when they have scrolled up in the AI conversation. To enable this, set the `ShowScrollToBottomButton` property to `true`.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           AssistItems="{Binding AssistItems}"
+                           ShowScrollToBottomButton="True" />
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
+
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    SfAIAssistView sfAIAssistView;
+    public MainPage()
+    {
+        InitializeComponent();
+        this.sfAIAssistView = new SfAIAssistView();
+        this.sfAIAssistView.ShowScrollToBottomButton = true;
+        this.Content = sfAIAssistView;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Scroll to bottom button customization
+
+The `SfAIAssistView` control allows you to fully customize the scroll-to-bottom button appearance by using the `ScrollToBottomButtonTemplate` property. This property lets you define a custom layout and style.
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="12" %}
+
+<ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="scrollToBottomButtonTemplate">
+                ...
+            </DataTemplate>
+        </ResourceDictionary>
+</ContentPage.Resources>
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           AssistItems="{Binding AssistItems}"
+                           ShowScrollToBottomButton="True"
+                           ScrollToBottomButtonTemplate="{StaticResource scrollToBottomButtonTemplate}" />
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10" %}
+
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    SfAIAssistView sfAIAssistView;
+    public MainPage()
+    {
+        InitializeComponent();
+        this.sfAIAssistView = new SfAIAssistView();
+        this.sfAIAssistView.ShowScrollToBottomButton = true;
+        this.sfAIAssistView.ScrollToBottomButtonTemplate = this.CreateScrollToBottomButtonTemplate();
+        this.Content = this.sfAIAssistView;
+    }
+
+    private DataTemplate CreateScrollToBottomButtonTemplate()
+    {
+        return new DataTemplate(() =>
+        {
+            ...
+        });
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
