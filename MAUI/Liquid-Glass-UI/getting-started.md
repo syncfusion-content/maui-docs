@@ -9,7 +9,7 @@ documentation: UG
 
 # Getting Started with Liquid Glass for modern UI
 
-The Liquid Glass effect adds a modern, translucent design with blur and depth, enhancing UI aesthetics without major layout changes. This section explains how to enable and customize the Liquid Glass Effect in Syncfusion® .NET MAUI controls.
+ This section explains how to enable and customize the Liquid Glass Effect in Syncfusion® .NET MAUI controls.
 
 For detailed information on specific Syncfusion® controls and their usage, refer to the User Guide Getting Started documentation, and ensure the control is properly configured and functioning before applying the Liquid Glass Effect.
 
@@ -20,24 +20,24 @@ N> This feature is supported only on .NET 10.
 * macOS 26 or higher
 * iOS 26 or higher
 
-## Apply Liquid Glass Effect
+## Liquid Glass Effect
 
-To apply Liquid Glass Effect to any Syncfusion® controls or custom views, use the `SfGlassEffectView` class. This view acts as a visual container that adds blur, translucency, and light refraction to its content, creating a realistic glass-like appearance.
+The Liquid Glass effect adds a modern, translucent design with blur and depth, enhancing UI aesthetics without major layout changes. To apply Liquid Glass Effect to any Syncfusion® controls or custom views, use the `SfGlassEffectView` class. 
 
-### Key Properties of SfGlassEffectView
+This view acts as a visual container that adds blur, translucency, and light refraction to its content, creating a realistic glass-like appearance. In this section, we demonstrate how to use SfGlassEffectView with a Syncfusion Button to achieve a visually appealing glass effect.
 
 The `SfGlassEffectView` class contains the following properties:
 
- * **EffectType:** - Defines the type of glass effect applied.
+### EffectType: Defines the type of glass effect applied.
   
   	* **Regular:** Blurred glass effect.
 	* **Clear:** Transparent glass-like effect.
    
- * **CornerRadius:** Specifies the corner rounding for the view.
+### CornerRadius: Specifies the corner rounding for the view.
 
- * **EnableShadowEffect:** Determines whether a shadow effect is applied behind the glass view.
+### EnableShadowEffect: Determines whether a shadow effect is applied behind the glass view.
 
-In this section, we’ll explain how to apply the Liquid Glass Effect to Syncfusion Button controls, along with example code snippets.
+### Background / BackgroundColor: Apply background with tintcolor for modern UI.
 
 {% tabs %}
 {% highlight xaml %}
@@ -99,7 +99,7 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
 
 ## Interactive Glass Effects
 
-Enable glass effects to react to user interactions with adaptive blur, and lighting for an engaging UI.
+Enable glass effects to react to user interactions with adaptive blur, and lighting for an engaging UI. `EnableLiquidGlassEffect`
 
 {% tabs %}
 {% highlight xaml %}
@@ -227,4 +227,6 @@ Easily customize the `SfGlassEffectView` to achieve desired shapes like rounded 
 
 For control specific usage of the Liquid Glass Effect on individual Syncfusion® controls, including availability, and configuration details, please refer to the respective documentation.
 
-N> View sample in GitHub. 
+- Calendar - 
+
+N> View sample in GitHub.

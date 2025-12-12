@@ -9,7 +9,7 @@ documentation: UG
 
 # Liquid Glass UI for .NET MAUI Overview
 
-Syncfusion® provides `Liquid Glass visual effect support` for all `.NET MAUI controls`, introducing a `modern UI design` with a `visually appealing`, `translucent`, `glass-like appearance`. This feature applies `blurred backgrounds`, `adaptive color tinting`, and `light refraction` to enhance the overall `look and feel` of your applications while maintaining `readability` and `accessibility` across platforms.
+Syncfusion® provides `Liquid Glass visual effect` support for all `.NET MAUI controls`, introducing a modern UI design with a visually appealing, translucent, glass-like appearance. This feature applies blurred backgrounds, adaptive color tinting, and light refraction to enhance the overall look and feel of your applications while maintaining readability and accessibility across platforms.
 
 ![overview-liquid-glass-ui-in-.net-maui](images/overview-liquid-glass-ui-in-.net-maui.webp)
 
