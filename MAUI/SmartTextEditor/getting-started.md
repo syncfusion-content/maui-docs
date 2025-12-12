@@ -110,6 +110,8 @@ namespace GettingStarted
 
 {% endhighlight %}
 
+N> You can refer [Configure AI Service](configure-ai-service) for `Azure`, `OpenAI`, `Ollama` service.
+
 ## Step 5: Add .NET MAUI Smart Text Editor control
 
 1. To initialize the control, import the `Syncfusion.Maui.SmartComponents` namespace into your code.
@@ -241,6 +243,8 @@ namespace GettingStarted
     }
 }
 {% endhighlight %}
+
+N> You can refer [Configure AI Service](configure-ai-service) for `Azure`, `OpenAI`, `Ollama` service.
 
 ## Step 5: Add .NET MAUI Smart Text Editor control
 
@@ -374,6 +378,8 @@ namespace GettingStarted
     }
 }
 {% endhighlight %}
+
+N> You can refer [Configure AI Service](configure-ai-service) for `Azure`, `OpenAI`, `Ollama` service.
 
 ## Step 5: Add .NET MAUI Smart Text Editor control
 
