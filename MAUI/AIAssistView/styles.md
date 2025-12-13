@@ -1182,7 +1182,7 @@ public MainPage()
 
 ![Common suggestion style in .NET MAUI AI AssistView](Images/styles/maui-aiassistview-styles-commonsuggestion.png)
 
-## Scroll to buttom button style
+## Scroll to button button style
 
 To style the scroll to bottom button view based on its appearance, set values to the in-built keys in the resource dictionary.
 
