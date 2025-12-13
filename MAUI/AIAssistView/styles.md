@@ -1186,29 +1186,6 @@ public MainPage()
 
 To style the scroll to bottom button view based on its appearance, set values to the in-built keys in the resource dictionary.
 
-<table>
-<tr>
-<th> Key </th>
-<th> Description </th>
-</tr>
-<tr>
-<td> SfAIAssistViewScrollToBottomButtonBackground </td>
-<td> Background color of the scroll to bottom button view. </td>
-</tr>
-<tr>
-<td> SfAIAssistViewScrollToBottomButtonIconColor </td>
-<td> Color of the scroll to bottom button. </td>
-</tr>
-<tr>
-<td> SfAIAssistViewHoveredScrollToBottomButtonBackground </td>
-<td> Background color of scroll to bottom button in hover state. </td>
-</tr>
-<tr>
-<td> SfAIAssistViewPressedScrollToBottomButtonBackground </td>
-<td> Background color when the scroll to bottom button is pressed. </td>
-</tr>
-</table>
-
 {% tabs %}
 {% highlight xaml %}
 
@@ -1247,29 +1224,6 @@ public MainPage()
 ## Action button style
 
 To style the action button view based on its appearance, set values to the in-built keys in the resource dictionary.
-
-<table>
-<tr>
-<th> Key </th>
-<th> Description </th>
-</tr>
-<tr>
-<td> SfAIAssistViewActionButtonBackground </td>
-<td> Background color of the action button. </td>
-</tr>
-<tr>
-<td> SfAIAssistViewActionButtonIconColor </td>
-<td> Color of the action button. </td>
-</tr>
-<tr>
-<td> SfAIAssistViewActionButtonViewTextColor </td>
-<td> Text color of an item in the action button. </td>
-</tr>
-<tr>
-<td> SfAIAssistViewActionButtonsPopupBackground </td>
-<td> Background color of the action buttons view. </td>
-</tr>
-</table>
 
 {% tabs %}
 {% highlight xaml %}
