@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Liquid Glass Effect UI in Syncfusion® .NET MAUI Controls
+title: Getting Started with Liquid Glass UI in Syncfusion® .NET MAUI Controls
 description: Getting started with the Liquid Glass Effect UI in Syncfusion® .NET MAUI controls and learn how to enable and customize it.
 platform: MAUI
 control: General
@@ -58,12 +58,12 @@ xmlns:button="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.But
         	<core:SfGlassEffectView WidthRequest="64"
                                     HeightRequest="64"
                                     EffectType="Clear"
-                                    FontAttributes="SemiBold"
                                     CornerRadius="32">
                 <core:SfAvatarView WidthRequest="64"
                                    HeightRequest="64"
                                    FontSize="24"
                                    CornerRadius="32"
+                                   FontAttributes="Bold"
                                    AvatarName="SF"
                                    Background="Transparent"
                                    ContentType="Initials"
@@ -113,7 +113,7 @@ Defines the corner radius for the view, enabling customization of its shape such
         </LinearGradientBrush>
     </Grid.Background>
     <core:SfGlassEffectView EffectType="Clear"
-							CornerRadius="20"
+							CornerRadius="30"
 							EnableShadowEffect="true"
                             Padding="16"
                             HeightRequest="140"
@@ -123,12 +123,12 @@ Defines the corner radius for the view, enabling customization of its shape such
         	<core:SfGlassEffectView WidthRequest="64"
                                     HeightRequest="64"
                                     EffectType="Clear"
-                                    FontAttributes="SemiBold"
                                     CornerRadius="32">
                 <core:SfAvatarView WidthRequest="64"
                                    HeightRequest="64"
                                    FontSize="24"
                                    CornerRadius="32"
+                                   FontAttributes="Bold"
                                    AvatarName="SF"
                                    Background="Transparent"
                                    ContentType="Initials"
@@ -188,12 +188,12 @@ Adds a soft shadow to the content within the glass view, creating depth and a mo
         	<core:SfGlassEffectView WidthRequest="64"
                                     HeightRequest="64"
                                     EffectType="Clear"
-                                    FontAttributes="SemiBold"
                                     CornerRadius="32">
                 <core:SfAvatarView WidthRequest="64"
                                    HeightRequest="64"
                                    FontSize="24"
                                    CornerRadius="32"
+                                   FontAttributes="Bold"
                                    AvatarName="SF"
                                    Background="Transparent"
                                    ContentType="Initials"
@@ -254,12 +254,12 @@ readability.
         	<core:SfGlassEffectView WidthRequest="64"
                                     HeightRequest="64"
                                     EffectType="Clear"
-                                    FontAttributes="SemiBold"
                                     CornerRadius="32">
                 <core:SfAvatarView WidthRequest="64"
                                    HeightRequest="64"
                                    FontSize="24"
                                    CornerRadius="32"
+                                   FontAttributes="Bold"
                                    AvatarName="SF"
                                    Background="Transparent"
                                    ContentType="Initials"
@@ -310,11 +310,15 @@ Enable glass effects that respond to user interactions with clear transparency a
     </Grid.Background>
     <core:SfGlassEffectView EffectType="Clear"
 							CornerRadius="20"
-							Background="Orange"
-                            Padding="16"
                             HeightRequest="140"
-                            WidthRequest="420">
-        </Grid>
+                            WidthRequest="380">
+         <button:SfButton Text="Regular Glass"
+                          EnableLiquidGlassEffect="True"
+                          FontSize="16"
+                          WidthRequest="150"
+                          HeightRequest="40"
+                          Background="Transparent"
+                          TextColor="Black"/>
     </core:SfGlassEffectView>
 </Grid>
 
