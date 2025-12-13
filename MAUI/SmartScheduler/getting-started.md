@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Getting Started with .NET MAUI Smart Scheduler control | Syncfusion®
-description: Learn here all about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI Smart Scheduler (SfSmartScheduler) control.
+title: Getting Started with .NET MAUI AI-Powered Scheduler | Syncfusion®
+description: Learn here all about getting started with Syncfusion<sup>&reg;</sup> .NET MAUI AI-Powered Scheduler(SfSmartScheduler) control.
 platform: maui
 control: SfSmartScheduler
 documentation: ug
 keywords : .net maui smart scheduler  
 ---
 
-# Getting Started with the .NET MAUI Smart Scheduler
+# Getting Started with the .NET MAUI AI-Powered Scheduler
 
-This section explains how to add the smart scheduler as well as the essential aspects for getting started with the Smart Scheduler and also provides a walk-through to configure the `.NET MAUI Smart Scheduler` control in a real-time scenario. Follow the steps below to add a .NET Smart Scheduler control to your project.
+This section explains how to add the smart scheduler as well as the essential aspects for getting started with the smart Scheduler and also provides a walk-through to configure the `.NET MAUI Smart Scheduler` control in a real-time scenario. Follow the steps below to add a .NET Smart Scheduler control to your project.
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
@@ -27,7 +27,7 @@ Before proceeding, ensure the following are set up:
 2. Name the project and choose a location. Then click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI Smart Scheduler  NuGet Package
+## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI smart Scheduler  NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for `Syncfusion.Maui.SmartComponents` and install the latest version.
@@ -71,7 +71,7 @@ namespace GettingStarted
 To configure the AI services, you must call the `ConfigureSyncfusionAIServices()` method in the `MauiProgram.cs` file.
 
 {% tabs %}
-{% highlight C# tabtitle="MauiProgram.cs" hl_lines="1 10" %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="6 31" %}
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using Microsoft.Maui.Controls.Compatibility;
@@ -112,7 +112,7 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Add .NET MAUI Smart Scheduler
+## Step 5: Add .NET MAUI smart Scheduler
 
 1. To initialize the control, import the `Syncfusion.Maui.SmartComponents` namespace into your code.
 2. Initialize `SfSmartScheduler`
@@ -180,7 +180,7 @@ Before proceeding, ensure the following are set up:
 2. Enter the Project Name, Solution Name, and Location.
 3. Select the .NET framework version and click Create.
 
-## Step 2: Install the Syncfusion<sup>®</sup> MAUI Smart Scheduler  NuGet Package
+## Step 2: Install the Syncfusion<sup>®</sup> MAUI Smart Scheduler NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for `Syncfusion.Maui.SmartComponents` and install the latest version.
@@ -224,7 +224,7 @@ namespace GettingStarted
 To configure the AI services, you must call the `ConfigureSyncfusionAIServices()` method in the `MauiProgram.cs` file.
 
 {% tabs %}
-{% highlight tabtitle="MauiProgram.cs" c# hl_lines="6 26" %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="6 31" %}
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using Microsoft.Maui.Controls.Compatibility;
@@ -264,7 +264,7 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Add .NET MAUI Smart Scheduler
+## Step 5: Add .NET MAUI smart Scheduler
 
 1. To initialize the control, import the `Syncfusion.Maui.SmartComponents` namespace into your code.
 2. Initialize `SfSmartScheduler`.
@@ -301,7 +301,7 @@ public partial class MainPage : ContentPage
 {% endtabcontent %}
 {% endtabcontents %}
 
-## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI Smart Scheduler  NuGet Package
+## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI Smart Scheduler NuGet Package
 
 1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 2. Ensure you're in the project root directory where your .csproj file is located.
@@ -346,7 +346,7 @@ namespace GettingStarted
 To configure the AI services, you must call the `ConfigureSyncfusionAIServices()` method in the `MauiProgram.cs` file.
 
 {% tabs %}
-{% highlight tabtitle="MauiProgram.cs" c# hl_lines="6 26" %}
+{% highlight C# tabtitle="MauiProgram.cs" hl_lines="6 31" %}
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using Microsoft.Maui.Controls.Compatibility;
@@ -387,7 +387,7 @@ namespace GettingStarted
 {% endhighlight %}
 {% endtabs %}
 
-## Step 5: Add .NET MAUI Smart Scheduler  view
+## Step 5: Add .NET MAUI smart Scheduler
 
 1. To initialize the control, import the `Syncfusion.Maui.SmartComponents` namespace into your code.
 2. Initialize `SfSmartScheduler`.
