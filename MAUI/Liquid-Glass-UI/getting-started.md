@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Getting Started with Liquid Glass UI in Syncfusion® .NET MAUI Controls
+title: Getting Started with Liquid Glass Effect UI in Syncfusion® .NET MAUI Controls
 description: Getting started with the Liquid Glass Effect UI in Syncfusion® .NET MAUI controls and learn how to enable and customize it.
 platform: MAUI
 control: General
 documentation: UG
 ---
 
-# Getting Started with Liquid Glass for modern UI
+# Getting Started with Liquid Glass for Modern UI
 
-This section explains how to enable and customize the Liquid Glass Effect in Syncfusion® .NET MAUI controls. For detailed information on specific Syncfusion® controls and their usage, refer to the User Guide Getting Started documentation, and ensure the control is properly configured and functioning before applying the Liquid Glass Effect.
+This section explains how to enable and customize the Liquid Glass Effect in Syncfusion® .NET MAUI controls. For detailed information on specific Syncfusion® controls and their usage, refer to the respective Getting Started documentation. Ensure the control is properly configured and functioning before applying the Liquid Glass Effect.
 
-N> This feature is supported only on .NET 10.
+N> This feature is supported only on `.NET 10`
 
 ## Supported Platforms
 
@@ -20,43 +20,80 @@ N> This feature is supported only on .NET 10.
 
 ## Liquid Glass Effect
 
-The Liquid Glass effect adds a modern, translucent design with blur and depth, enhancing UI aesthetics without major layout changes. To apply Liquid Glass Effect to any Syncfusion® controls or custom views, use the `SfGlassEffectView` class. 
+The Liquid Glass Effect provides a modern, translucent design with background blur and depth effects, enhancing the visual appearance of your UI without requiring major code changes. To apply the Liquid Glass Effect to any Syncfusion® .NET MAUI control or custom view (such as a DataTemplate), wrap the control inside the `SfGlassEffectView` class.
 
-This view acts as a visual container that adds blur, translucency, and light refraction to its content, creating a realistic glass-like appearance. In this section, we will demonstrate how to use `SfGlassEffectView` with Syncfusion® `SfButton` to achieve a visually appealing glass effect.
+This view acts as a visual container that adds blur, translucency, and light refraction to its content, creating a realistic glass-like appearance. In this section, we will demonstrate how to use `SfGlassEffectView` with Syncfusion® controls to achieve a visually appealing glass effect.
 
-The `SfGlassEffectView` class is available in [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) and it contains the following properties:
+The `SfGlassEffectView` class is available in [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) and provides the following properties:
 
 ### Effect types
 
-Specifies the type of glass effect to apply:
+The `EffectType` property specifies the type of glass effect to apply:
 
 * **Regular:** Creates a blurred, frosted glass appearance.
 * **Clear:** Creates a transparent, glass-like appearance.
 
 {% tabs %}
-{% highlight XAML hl_lines="9" %}
+{% highlight XAML hl_lines="14" %}
 
-xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core" 
-xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
+...
+xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+xmlns:button="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
 
-<Grid Background="#C977F8"
-	  Opacity="0.7"
-	  HorizontalOptions="Fill"
-	  VerticalOptions="Fill">
-	<core:SfGlassEffectView HeightRequest="48"
-							WidthRequest="200"
-							CornerRadius="24"
-							VerticalOptions="Center"
-							EffectType="Clear">
-		<button:SfButton Text="Clear Glass"
-						 FontSize="16"
-						 Background="Transparent"
-						 TextColor="White"
-						 HorizontalOptions="Fill"
-						 VerticalOptions="Centre"/>
-		</core:SfGlassEffectView>
+<Grid>
+    <Grid.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+        	<GradientStop Color="#0F4C75" Offset="0.0"/>
+            <GradientStop Color="#3282B8" Offset="0.5"/>
+            <GradientStop Color="#1B262C" Offset="1.0"/>
+        </LinearGradientBrush>
+    </Grid.Background>
+    <core:SfGlassEffectView CornerRadius="20"
+                            EffectType="Clear"
+                            Padding="16"
+                            HeightRequest="140"
+                            WidthRequest="420">
+        <Grid ColumnDefinitions="64,*,Auto" ColumnSpacing="12">
+            <!-- Avatar -->
+        	<core:SfGlassEffectView WidthRequest="64"
+                                    HeightRequest="64"
+                                    EffectType="Clear"
+                                    FontAttributes="SemiBold"
+                                    CornerRadius="32">
+                <core:SfAvatarView WidthRequest="64"
+                                   HeightRequest="64"
+                                   FontSize="24"
+                                   CornerRadius="32"
+                                   AvatarName="SF"
+                                   Background="Transparent"
+                                   ContentType="Initials"
+                                   InitialsType="DoubleCharacter"/>
+                </core:SfGlassEffectView>
+                <!-- Title / Subtitle -->
+                <VerticalStackLayout Grid.Column="1" Spacing="2"
+									 VerticalOptions="Center">
+                	<Label Text="Syncfusion®"
+                           TextColor="White"
+                           FontAttributes="Bold"
+                           FontSize="20"/>
+                    <Label Text="Deliver innovation with ease"
+                           TextColor="#DDFFFFFF"
+                           FontSize="15"/>
+                </VerticalStackLayout>
+                <!-- Action Button -->
+                <core:SfGlassEffectView CornerRadius="20"
+                                        EffectType="Clear"
+                                        WidthRequest="100"
+                                        Grid.Column="2"
+                                        HeightRequest="40">
+                    <button:SfButton Text="Follow"
+                            		 Background="Transparent"
+                                     TextColor="White"/>
+                </core:SfGlassEffectView>
+        </Grid>
+    </core:SfGlassEffectView>
 </Grid>
-
+	
 {% endhighlight %}
 {% endtabs %}
    
@@ -65,23 +102,61 @@ xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Bu
 Defines the corner radius for the view, enabling customization of its shape such as rounded rectangles or capsules.
 
 {% tabs %}
-{% highlight XAML hl_lines="7" %}
+{% highlight XAML hl_lines="10" %}
 
-<Grid Background="#C977F8"
-	  Opacity="0.7"
-	  HorizontalOptions="Fill"
-	  VerticalOptions="Fill">
-	<core:SfGlassEffectView HeightRequest="48"
-							WidthRequest="200"
-							CornerRadius="24"
-							VerticalOptions="Center">
-		<button:SfButton Text="Regular Glass"
-						 FontSize="16"
-						 Background="Transparent"
-						 TextColor="Black"
-						 HorizontalOptions="Fill"
-						 VerticalOptions="Centre"/>
-		</core:SfGlassEffectView>
+<Grid>
+    <Grid.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+        	<GradientStop Color="#0F4C75" Offset="0.0"/>
+            <GradientStop Color="#3282B8" Offset="0.5"/>
+            <GradientStop Color="#1B262C" Offset="1.0"/>
+        </LinearGradientBrush>
+    </Grid.Background>
+    <core:SfGlassEffectView EffectType="Clear"
+							CornerRadius="20"
+							EnableShadowEffect="true"
+                            Padding="16"
+                            HeightRequest="140"
+                            WidthRequest="420">
+        <Grid ColumnDefinitions="64,*,Auto" ColumnSpacing="12">
+            <!-- Avatar -->
+        	<core:SfGlassEffectView WidthRequest="64"
+                                    HeightRequest="64"
+                                    EffectType="Clear"
+                                    FontAttributes="SemiBold"
+                                    CornerRadius="32">
+                <core:SfAvatarView WidthRequest="64"
+                                   HeightRequest="64"
+                                   FontSize="24"
+                                   CornerRadius="32"
+                                   AvatarName="SF"
+                                   Background="Transparent"
+                                   ContentType="Initials"
+                                   InitialsType="DoubleCharacter"/>
+                </core:SfGlassEffectView>
+                <!-- Title / Subtitle -->
+                <VerticalStackLayout Grid.Column="1" Spacing="2"
+									 VerticalOptions="Center">
+                	<Label Text="Syncfusion®"
+                           TextColor="White"
+                           FontAttributes="Bold"
+                           FontSize="20"/>
+                    <Label Text="Deliver innovation with ease"
+                           TextColor="#DDFFFFFF"
+                           FontSize="15"/>
+                </VerticalStackLayout>
+                <!-- Action Button -->
+                <core:SfGlassEffectView CornerRadius="20"
+                                        EffectType="Clear"
+                                        WidthRequest="100"
+                                        Grid.Column="2"
+                                        HeightRequest="40">
+                    <button:SfButton Text="Follow"
+                            		 Background="Transparent"
+                                     TextColor="White"/>
+                </core:SfGlassEffectView>
+        </Grid>
+    </core:SfGlassEffectView>
 </Grid>
 	
 {% endhighlight %}
@@ -89,196 +164,158 @@ Defines the corner radius for the view, enabling customization of its shape such
 
 ### Enable shadow effect
 
-Applies a subtle shadow behind the glass view, creating depth and a more realistic appearance.
+Adds a soft shadow to the content within the glass view, creating depth and a more realistic appearance.
 
 {% tabs %}
-{% highlight XAML hl_lines="9" %}
+{% highlight XAML hl_lines="11" %}
 
-<Grid Background="#C977F8"
-	  Opacity="0.7"
-	  HorizontalOptions="Fill"
-	  VerticalOptions="Fill">
-	<core:SfGlassEffectView HeightRequest="48"
-							WidthRequest="200"
-							CornerRadius="24"
-							VerticalOptions="Center"
-							EnableShadowEffect="True">
-		<button:SfButton Text="Regular Glass"
-						 FontSize="16"
-						 Background="Transparent"
-						 TextColor="Black"
-						 HorizontalOptions="Fill"
-						 VerticalOptions="Centre"/>
-		</core:SfGlassEffectView>
+<Grid>
+    <Grid.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+        	<GradientStop Color="#0F4C75" Offset="0.0"/>
+            <GradientStop Color="#3282B8" Offset="0.5"/>
+            <GradientStop Color="#1B262C" Offset="1.0"/>
+        </LinearGradientBrush>
+    </Grid.Background>
+    <core:SfGlassEffectView EffectType="Clear"
+							CornerRadius="20"
+							EnableShadowEffect="true"
+                            Padding="16"
+                            HeightRequest="140"
+                            WidthRequest="420">
+        <Grid ColumnDefinitions="64,*,Auto" ColumnSpacing="12">
+            <!-- Avatar -->
+        	<core:SfGlassEffectView WidthRequest="64"
+                                    HeightRequest="64"
+                                    EffectType="Clear"
+                                    FontAttributes="SemiBold"
+                                    CornerRadius="32">
+                <core:SfAvatarView WidthRequest="64"
+                                   HeightRequest="64"
+                                   FontSize="24"
+                                   CornerRadius="32"
+                                   AvatarName="SF"
+                                   Background="Transparent"
+                                   ContentType="Initials"
+                                   InitialsType="DoubleCharacter"/>
+                </core:SfGlassEffectView>
+                <!-- Title / Subtitle -->
+                <VerticalStackLayout Grid.Column="1" Spacing="2"
+									 VerticalOptions="Center">
+                	<Label Text="Syncfusion®"
+                           TextColor="White"
+                           FontAttributes="Bold"
+                           FontSize="20"/>
+                    <Label Text="Deliver innovation with ease"
+                           TextColor="#DDFFFFFF"
+                           FontSize="15"/>
+                </VerticalStackLayout>
+                <!-- Action Button -->
+                <core:SfGlassEffectView CornerRadius="20"
+                                        EffectType="Clear"
+                                        WidthRequest="100"
+                                        Grid.Column="2"
+                                        HeightRequest="40">
+                    <button:SfButton Text="Follow"
+                            		 Background="Transparent"
+                                     TextColor="White"/>
+                </core:SfGlassEffectView>
+        </Grid>
+    </core:SfGlassEffectView>
 </Grid>
 	
 {% endhighlight %}
 {% endtabs %}
 
-### Background / BackgroundColor
+### Set background color
 
-Applies a background tint color to the glass view, enabling modern UI styling and improved readability.
+Applies a background tint color to the glass view, to enhance modern UI styling and improve
+readability.
 
 {% tabs %}
-{% highlight XAML hl_lines="9" %}
+{% highlight XAML hl_lines="11" %}
 
-<Grid Background="#C977F8"
-	  Opacity="0.7"
-	  HorizontalOptions="Fill"
-	  VerticalOptions="Fill">
-	<core:SfGlassEffectView HeightRequest="48"
-							WidthRequest="200"
-							CornerRadius="24"
-							VerticalOptions="Center"
-							Background="#FFD200">
-		<button:SfButton Text="Regular Glass"
-						 FontSize="16"
-						 Background="Transparent"
-						 TextColor="Black"
-						 HorizontalOptions="Fill"
-						 VerticalOptions="Centre"/>
-		</core:SfGlassEffectView>
+<Grid>
+    <Grid.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+        	<GradientStop Color="#0F4C75" Offset="0.0"/>
+            <GradientStop Color="#3282B8" Offset="0.5"/>
+            <GradientStop Color="#1B262C" Offset="1.0"/>
+        </LinearGradientBrush>
+    </Grid.Background>
+    <core:SfGlassEffectView EffectType="Clear"
+							CornerRadius="20"
+							Background="Orange"
+                            Padding="16"
+                            HeightRequest="140"
+                            WidthRequest="420">
+        <Grid ColumnDefinitions="64,*,Auto" ColumnSpacing="12">
+            <!-- Avatar -->
+        	<core:SfGlassEffectView WidthRequest="64"
+                                    HeightRequest="64"
+                                    EffectType="Clear"
+                                    FontAttributes="SemiBold"
+                                    CornerRadius="32">
+                <core:SfAvatarView WidthRequest="64"
+                                   HeightRequest="64"
+                                   FontSize="24"
+                                   CornerRadius="32"
+                                   AvatarName="SF"
+                                   Background="Transparent"
+                                   ContentType="Initials"
+                                   InitialsType="DoubleCharacter"/>
+                </core:SfGlassEffectView>
+                <!-- Title / Subtitle -->
+                <VerticalStackLayout Grid.Column="1" Spacing="2"
+									 VerticalOptions="Center">
+                	<Label Text="Syncfusion®"
+                           TextColor="White"
+                           FontAttributes="Bold"
+                           FontSize="20"/>
+                    <Label Text="Deliver innovation with ease"
+                           TextColor="#DDFFFFFF"
+                           FontSize="15"/>
+                </VerticalStackLayout>
+                <!-- Action Button -->
+                <core:SfGlassEffectView CornerRadius="20"
+                                        EffectType="Clear"
+                                        WidthRequest="100"
+                                        Grid.Column="2"
+                                        HeightRequest="40">
+                    <button:SfButton Text="Follow"
+                            		 Background="Transparent"
+                                     TextColor="White"/>
+                </core:SfGlassEffectView>
+        </Grid>
+    </core:SfGlassEffectView>
 </Grid>
-
+	
 {% endhighlight %}
 {% endtabs %}
 
-## Interactive glass effects
+## Interactive Glass Effects
 
-Enable glass effects to respond to user interactions with adaptive blur and dynamic lighting for an engaging UI. To achieve this, set the `EnableLiquidGlassEffect` property to `true` on the `SfButton` control, which activates interaction-based visual effects.
+Enable glass effects that respond to user interactions with clear transparency and dynamic lighting for an engaging UI. To enable this feature, set the `EnableLiquidGlassEffect` property to `true` on the Syncfusion `SfSwitch` control. This activates interaction-based visual effects.
 
 {% tabs %}
 {% highlight XAML %}
 
-<Grid Background="#C977F8"
-      Opacity="0.7"
-	  HorizontalOptions="Fill"
-	  VerticalOptions="Fill">
-    <VerticalStackLayout Spacing="18"
-	                     VerticalOptions="Center">
-        <core:SfGlassEffectView HeightRequest="48"
-                                WidthRequest="200"
-                                CornerRadius="24"
-                                VerticalOptions="Center"
-                                EnableShadowEffect="True"
-                                EffectType="Regular">
-            <button:SfButton Text="Regular Glass"
-			                 EnableLiquidGlassEffect="True"
-                             FontSize="16"
-                             Background="Transparent"
-                             TextColor="Black"
-                             HorizontalOptions="Fill"
-                             VerticalOptions="Centre"/>
-        </core:SfGlassEffectView>
-
-        <core:SfGlassEffectView HeightRequest="48"
-                                WidthRequest="200"
-                                CornerRadius="24"
-                                EnableShadowEffect="True"
-                                VerticalOptions="Center"
-                                EffectType="Regular"
-                                Background="#FFD200">
-            <button:SfButton Text="Tinted Glass"
-			                 EnableLiquidGlassEffect="True"
-                             FontSize="16"
-                             Background="Transparent"
-                             TextColor="Black"
-                             HorizontalOptions="Fill"
-                             VerticalOptions="Centre"/>
-        </core:SfGlassEffectView>
-
-        <core:SfGlassEffectView HeightRequest="48"
-                                WidthRequest="200"
-                                CornerRadius="24"
-                                EnableShadowEffect="True"
-                                VerticalOptions="Center"
-                                EffectType="Clear">
-            <button:SfButton Text="Clear Glass"
-			                 EnableLiquidGlassEffect="True"
-                             FontSize="16"
-                             Background="Transparent"
-                             TextColor="White"
-                             HorizontalOptions="Fill"
-                             VerticalOptions="Centre"/>
-        </core:SfGlassEffectView>
-    </VerticalStackLayout>
-</Grid>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Custom Shapes
-
-Easily customize the `SfGlassEffectView` to achieve desired shapes like rounded rectangles, capsules, and circles by adjusting properties such as `CornerRadius`, `HeightRequest`, and `WidthRequest`.
-
-{% tabs %}
-{% highlight XAML %}
-
-<Grid Background="#C977F8"
-      Opacity="0.7"
-      HorizontalOptions="Fill"
-      VerticalOptions="Fill">
-    <VerticalStackLayout Spacing="18"
-						 HorizontalOptions="Center"
-						 VerticalOptions="Center">
-		<core:SfGlassEffectView HeightRequest="48"
-								WidthRequest="180"
-								CornerRadius="12"
-								VerticalOptions="Center"
-								EnableShadowEffect="True"
-								Background="Transparent"
-								EffectType="Regular">
-			<button:SfButton Text="Rounded rectangle"
-							 FontSize="16"
-							 Background="Transparent"
-							 TextColor="Black"
-							 HorizontalOptions="Fill"
-							 VerticalOptions="Centre"/>
-		</core:SfGlassEffectView>
-
-		<core:SfGlassEffectView HeightRequest="48"
-								WidthRequest="100"
-								CornerRadius="24"
-								VerticalOptions="Center"
-								EnableShadowEffect="True"
-								Background="Transparent"
-								EffectType="Regular">
-			<button:SfButton Text="Capsule"
-							 FontSize="16"
-							 Background="Transparent"
-							 TextColor="Black"
-							 HorizontalOptions="Fill"
-							 VerticalOptions="Centre"/>
-		</core:SfGlassEffectView>
-
-		<core:SfGlassEffectView HeightRequest="48"
-								WidthRequest="48"
-								CornerRadius="24"
-								VerticalOptions="Center"
-								EnableShadowEffect="True"
-								Background="Transparent"
-								EffectType="Clear">
-			<button:SfButton Background="Transparent">
-				<button:SfButton.Content>
-					<DataTemplate>
-						<Grid HorizontalOptions="Center" VerticalOptions="Center">
-							<Grid Padding="5,0,5,0"  Grid.Column="1" >
-								<Label Text="&#xe78a;"
-									   FontFamily="MauiSampleFontIcon"
-									   HorizontalTextAlignment="Center"
-									   VerticalOptions="Center"
-									   VerticalTextAlignment="Center"
-									   HorizontalOptions="Start"
-									   FontSize="16"
-									   TextColor="{AppThemeBinding Light=Black, Dark=White}">
-								</Label>
-							</Grid>
-						</Grid>
-					</DataTemplate>
-				</button:SfButton.Content>
-			</button:SfButton>
-		</core:SfGlassEffectView>
-	</VerticalStackLayout>
+<Grid>
+    <Grid.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+        	<GradientStop Color="#0F4C75" Offset="0.0"/>
+            <GradientStop Color="#3282B8" Offset="0.5"/>
+            <GradientStop Color="#1B262C" Offset="1.0"/>
+        </LinearGradientBrush>
+    </Grid.Background>
+    <core:SfGlassEffectView EffectType="Clear"
+							CornerRadius="20"
+							Background="Orange"
+                            Padding="16"
+                            HeightRequest="140"
+                            WidthRequest="420">
+        </Grid>
+    </core:SfGlassEffectView>
 </Grid>
 
 {% endhighlight %}
@@ -286,6 +323,6 @@ Easily customize the `SfGlassEffectView` to achieve desired shapes like rounded 
 
 ## Controls list
 
-For control specific usage of the Liquid Glass Effect on individual Syncfusion® controls, including availability, and configuration details, please refer to the respective documentation.
+For control specific usage of the Liquid Glass Effect on individual Syncfusion® controls, including availability, and configuration details, please refer to the respective control documentation.
 
 N> View sample in GitHub.
