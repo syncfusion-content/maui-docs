@@ -1225,7 +1225,7 @@ public MainPage()
     ResourceDictionary dictionary = new ResourceDictionary();
     dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
     dictionary.Add("SfAIAssistViewScrollToBottomButtonBackground", Colors.Orange);
-    dictionary.Add("SfAIAssistViewScrollToBottomButtonIconColor", Colors.White);\
+    dictionary.Add("SfAIAssistViewScrollToBottomButtonIconColor", Colors.White);
     this.Resources.Add(dictionary);
 }
 
