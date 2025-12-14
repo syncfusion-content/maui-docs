@@ -1199,14 +1199,6 @@ To style the scroll to bottom button view based on its appearance, set values to
 <td> SfAIAssistViewScrollToBottomButtonIconColor </td>
 <td> Color of the scroll to bottom button. </td>
 </tr>
-<tr>
-<td> SfAIAssistViewHoveredScrollToBottomButtonBackground </td>
-<td> Background color of scroll to bottom button in hover state. </td>
-</tr>
-<tr>
-<td> SfAIAssistViewPressedScrollToBottomButtonBackground </td>
-<td> Background color when the scroll to bottom button is pressed. </td>
-</tr>
 </table>
 
 {% tabs %}
@@ -1219,8 +1211,6 @@ To style the scroll to bottom button view based on its appearance, set values to
                 <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
                 <Color x:Key="SfAIAssistViewScrollToBottomButtonBackground">Orange</Color>
                 <Color x:Key="SfAIAssistViewScrollToBottomButtonIconColor">White</Color>
-                <Color x:Key="SfAIAssistViewHoveredScrollToBottomButtonBackground">DarkOrange</Color>
-                <Color x:Key="SfAIAssistViewPressedScrollToBottomButtonBackground">Red</Color>
             </ResourceDictionary>
         </core:SyncfusionThemeDictionary.MergedDictionaries>
     </core:SyncfusionThemeDictionary>
@@ -1235,9 +1225,7 @@ public MainPage()
     ResourceDictionary dictionary = new ResourceDictionary();
     dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
     dictionary.Add("SfAIAssistViewScrollToBottomButtonBackground", Colors.Orange);
-    dictionary.Add("SfAIAssistViewScrollToBottomButtonIconColor", Colors.White);
-    dictionary.Add("SfAIAssistViewHoveredScrollToBottomButtonBackground", Colors.DarkOrange);
-    dictionary.Add("SfAIAssistViewPressedScrollToBottomButtonBackground", Colors.Red);
+    dictionary.Add("SfAIAssistViewScrollToBottomButtonIconColor", Colors.White);\
     this.Resources.Add(dictionary);
 }
 
