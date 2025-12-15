@@ -491,40 +491,44 @@ This page lists the keys associated with each control and the respective UI elem
     <td> Stroke thickness for the stop responding view.<br/><br/></td>
 </tr>
 <tr>
-<td> SfAIAssistViewSelectionTextHighLightColor<br/><br/></td>
-<td> Color to highlight the selected text. <br/><br/></td>
+    <td> SfAIAssistViewSelectionTextHighLightColor<br/><br/></td>
+    <td> Color to highlight the selected text. <br/><br/></td>
 </tr>
 <tr> 
-<td> SfAIAssistViewHeaderSuggestionBackground<br/><br/></td>
-<td> Background color of the common suggestions view.<br/><br/></td>
+    <td> SfAIAssistViewHeaderSuggestionBackground<br/><br/></td>
+    <td> Background color of the common suggestions view.<br/><br/></td>
 </tr>
 <tr>
-<td> SfAIAssistViewHeaderSuggestionItemStroke<br/><br/></td>
-<td> Stroke color for the common suggestion item.<br/><br/></td>
+    <td> SfAIAssistViewHeaderSuggestionItemStroke<br/><br/></td>
+    <td> Stroke color for the common suggestion item.<br/><br/></td>
 </tr>
 <tr>
-<td> SfAIAssistViewHeaderSuggestionItemStrokeThickness<br/><br/></td>
-<td> Stroke thickness for the common suggestion item.<br/><br/></td>
+    <td> SfAIAssistViewHeaderSuggestionItemStrokeThickness<br/><br/></td>
+    <td> Stroke thickness for the common suggestion item.<br/><br/></td>
 </tr>
 <tr>
-<td> SfAIAssistViewHeaderSuggestionItemBackground<br/><br/></td>
-<td> Background color of an item in the common suggestions.<br/><br/></td>
+    <td> SfAIAssistViewHeaderSuggestionItemBackground<br/><br/></td>
+    <td> Background color of an item in the common suggestions.<br/><br/></td>
 </tr>
 <tr>
-<td> SfAIAssistViewHeaderSuggestionItemTextColor<br/><br/></td>
-<td> Text color of an item in the common suggestions.<br/><br/></td>
+    <td> SfAIAssistViewHeaderSuggestionItemTextColor<br/><br/></td>
+    <td> Text color of an item in the common suggestions.<br/><br/></td>
 </tr>
 <tr>
-<td> SfAIAssistViewHeaderSuggestionItemFontSize<br/><br/></td>
-<td> Font size of an item in the common suggestions.<br/><br/></td>
+    <td> SfAIAssistViewHeaderSuggestionItemFontSize<br/><br/></td>
+    <td> Font size of an item in the common suggestions.<br/><br/></td>
 </tr>
 <tr>
-<td> SfAIAssistViewHeaderSuggestionItemFontFamily<br/><br/></td>
-<td> Font family of an item in the common suggestions.<br/><br/></td>
+    <td> SfAIAssistViewHeaderSuggestionItemFontFamily<br/><br/></td>
+    <td> Font family of an item in the common suggestions.<br/><br/></td>
 </tr>
 <tr>
-<td> SfAIAssistViewHeaderSuggestionItemFontAttribute<br/><br/></td>
-<td> Font attributes of an item in the common suggestions.<br/><br/></td>
+    <td> SfAIAssistViewHeaderSuggestionItemFontAttribute<br/><br/></td>
+    <td> Font attributes of an item in the common suggestions.<br/><br/></td>
+</tr>
+<tr>
+    <td> SfAIAssistViewScrollToBottomButtonBackground <br/><br/></td>
+    <td> Background color of the scroll to bottom button view. <br/><br/></td>
 </tr>
 </table>
 

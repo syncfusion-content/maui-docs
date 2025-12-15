@@ -376,21 +376,20 @@ Bind the `ActionButtons` collection with one or more `ActionButton` items to pop
 - `CommandParameter`: Passes a parameter to the command when executed.
 
 {% tabs %} 
-{% highlight xaml hl_lines="4 5 6 7 8" %} 
+{% highlight xaml hl_lines="4 5 6 7" %} 
 
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView" 
                            ShowActionButtons="True"
                            AssistItems="{Binding AssistItems}"> 
     <syncfusion:SfAIAssistView.ActionButtons> 
-        <syncfusion:ActionButton Text="Copy" Icon="copy.png" Command="{Binding CopyCommand}" /> 
-        <syncfusion:ActionButton Text="Clear" Icon="trash.png" Command="{Binding ClearCommand}" /> 
-        <syncfusion:ActionButton Text="Share" Icon="share.png" Command="{Binding ShareCommand}" /> 
+        <syncfusion:ActionButton Text="Upload images" Icon="image.png" Command="{Binding UploadCommand}" /> 
+        <syncfusion:ActionButton Text="Search in web" Icon="web.png" Command="{Binding SearchCommand}" />
     </syncfusion:SfAIAssistView.ActionButtons> 
 </syncfusion:SfAIAssistView>
 
 {% endhighlight %}
 
-{% highlight c# hl_lines="15 17 23 29" %} 
+{% highlight c# hl_lines="15 17 23" %} 
 
 using Syncfusion.Maui.AIAssistView;
 
@@ -410,22 +409,16 @@ public partial class MainPage : ContentPage
         {
             new ActionButton
             {
-                Text = "Copy",
-                Icon = ImageSource.FromFile("copy.png"),
-                Command = this.viewModel.CopyCommand
+                Text = "Upload images",
+                Icon = ImageSource.FromFile("image.png"),
+                Command = this.viewModel.UploadCommand
             },
             new ActionButton
             {
-                Text = "Clear",
-                Icon = ImageSource.FromFile("trash.png"),
-                Command = this.viewModel.ClearCommand
+                Text = "Search in web",
+                Icon = ImageSource.FromFile("web.png"),
+                Command = this.viewModel.SearchCommand
             },
-            new ActionButton
-            {
-                Text = "Share",
-                Icon = ImageSource.FromFile("share.png"),
-                Command = this.viewModel.ShareCommand
-            }
         };
 
         this.Content = sfAIAssistView;
