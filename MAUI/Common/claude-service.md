@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Claude AI for AI-Powered Text Editor | Syncfusion®
-description: Learn how to implement a custom AI service using the Claude API with Syncfusion<sup>&reg;</sup> AI-Powered Text Editor (SfSmartTextEditor) control.
+title: Claude AI for AI-Powered Components | Syncfusion®
+description: Learn how to implement a custom AI service using the Claude API with Syncfusion<sup>&reg;</sup> AI-Powered Components.
 platform: maui
-control: SfSmartTextEditor
+control: SmartComponents
 documentation: ug
 ---
 
-# Claude AI Integration with .NET MAUI Smart Text Editor
+# Claude AI Integration with .NET MAUI Smart Components
 
-The Syncfusion [.NET MAUI Smart Text Editor] (SfSmartTextEditor) can provide AI-powered suggestions while typing. You can integrate Anthropic `Claude AI` using the `IChatInferenceService` interface, which acts as a bridge between the editor and your custom AI service.
+The Syncfusion .NET MAUI AI-powered components can enhance applications with intelligent capabilities. You can integrate Anthropic `Claude AI` using the `IChatInferenceService` interface, which acts as a bridge between the editor and your custom AI service.
 
 ## Setting Up Claude
 

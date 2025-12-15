@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Groq AI Integration with AI-Powered Text Editor | Syncfusion®
-description: Learn how to implement a custom AI service using the Groq API with Syncfusion<sup>&reg;</sup> AI-Powered Text Editor (SfSmartTextEditor) control.
+title: Groq AI Integration with AI-Powered Components | Syncfusion®
+description: Learn how to implement a custom AI service using the Groq API with Syncfusion<sup>&reg;</sup> AI-Powered Components.
 platform: maui
-control: SfSmartTextEditor
+control: SmartComponents
 documentation: ug
 ---
 
-# Groq AI Integration with .NET MAUI Smart Text Editor
+# Groq AI Integration with .NET MAUI Smart Components
 
-The Syncfusion [.NET MAUI Smart Text Editor] (SfSmartTextEditor) can show AI‑powered suggestions while you type. You can integrate `Groq` using the `IChatInferenceService` interface and Groq’s OpenAI‑compatible Chat Completions API for fast, low‑latency results.
+The Syncfusion .NET MAUI AI-powered components can enhance applications with intelligent capabilities. You can integrate `Groq` by implementing the `IChatInferenceService` interface and leveraging Groq’s OpenAI-compatible Chat Completions API to deliver fast, low-latency results.
 
 ## Setting Up Groq
 

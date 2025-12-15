@@ -10,7 +10,7 @@ documentation: ug
 
 # Liquid glass support:
 
-The  [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) provides `liquid glass` (acrylic/glassmorphism) effect for its navigation drawer when [EnableLiquidGlassEffect]() is enabled. The frosted, translucent effect is applied only while the navigation drawer is in active state, creating a subtle, responsive visual that blends with the content behind it. This enhances visual feedback without altering the navigation drawer’s appearance at rest, and works well over images or colorful layouts.
+The  [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) provides `liquid glass` (acrylic/glassmorphism) effect for its navigation drawer when [EnableLiquidGlassEffect]() is enabled. The frosted, translucent effect is applied only while the navigation drawer is in active state, creating a subtle, responsive visual that blends with the content behind it. This enhances visual feedback without altering the navigation drawer's appearance at rest, and works well over images or colorful layouts.
 
 ## Availability
 
@@ -18,30 +18,19 @@ The  [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Na
 2.  Supported on mac or iOS 26 or greater.
 3.  On platforms/versions below these requirements, the glass effect is not applied and the navigation drawer render with the standard appearance.
 
-XAML example The navigation drawer’s glass effect appears only while it is in active state.
+XAML example The navigation drawer's glass effect appears only while it is in active state.
 
 {% tabs %}
-{% highlight xaml hl_lines="49 52" %}
+{% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:navigationDrawer="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-    x:Class="NavigationDrawerGlassEffectPage">
-
-    <Grid>
-        <!-- Background to make the glass effect visible while pressing the navigation drawer -->
-        <Image Source="wallpaper.jpg" Aspect="AspectFill" />
-        <navigationDrawer:SfNavigationDrawer EnableLiquidGlassEffect="True" />
-      
-    </Grid>
-</ContentPage>
+<Grid>
+    <!-- Background to make the glass effect visible while pressing the navigation drawer -->
+    <Image Source="wallpaper.jpg" Aspect="AspectFill" />
+    <navigationDrawer:SfNavigationDrawer EnableLiquidGlassEffect="True" />     
+</Grid>
 
 {% endhighlight %}
-{% highlight c# hl_lines="74 77" %}
-
-using Syncfusion.Maui.Sliders;
+{% highlight c# %}
 
 SfNavigationDrawer navigationDrawer = new SfNavigationDrawer
 {
@@ -60,6 +49,6 @@ SfNavigationDrawer navigationDrawer = new SfNavigationDrawer
 
 The following video illustrates SfNavigationDrawer with the glass effect visible on the navigation drawer while it is in active state.
 
-![Navigation Drawer](images/navigation-drawer.gif)
+![Navigation Drawer](images/LiquidGlass/liquid-glass.gif)
 
 N> The glass effect is applied to the navigation drawer only while it is in active state.

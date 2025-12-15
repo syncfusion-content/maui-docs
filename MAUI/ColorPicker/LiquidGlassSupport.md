@@ -7,10 +7,9 @@ control: SfColorPicker
 documentation: ug
 ---
 
-
 # Liquid glass support:
 
-The  [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html) provides `liquid glass` (acrylic/glassmorphism) effect for its color picker when [EnableLiquidGlassEffect]() is enabled. The frosted, translucent effect is applied only while the color picker is in active state, creating a subtle, responsive visual that blends with the content behind it. This enhances visual feedback without altering the color picker’s appearance at rest, and works well over images or colorful layouts.
+The  [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html) provides `liquid glass` (acrylic/glassmorphism) effect for its color picker when [EnableLiquidGlassEffect]() is enabled. The frosted, translucent effect is applied only while the color picker is in active state, creating a subtle, responsive visual that blends with the content behind it. This enhances visual feedback without altering the color picker's appearance at rest, and works well over images or colorful layouts.
 
 ## Availability
 
@@ -18,10 +17,10 @@ The  [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 2.  Supported on mac or iOS 26 or greater.
 3.  On platforms/versions below these requirements, the glass effect is not applied and the color picker render with the standard appearance.
 
-XAML example The color picker’s glass effect appears only while it is in active state.
+XAML example The color picker's glass effect appears only while it is in active state.
 
 {% tabs %}
-{% highlight xaml hl_lines="49 52" %}
+{% highlight xaml %}
 
     <Grid>
         <!-- Background to make the glass effect visible while pressing the color picker -->
@@ -31,9 +30,7 @@ XAML example The color picker’s glass effect appears only while it is in activ
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# hl_lines="74 77" %}
-
-using Syncfusion.Maui.Sliders;
+{% highlight c# %}
 
 SfColorPicker colorPicker = new SfColorPicker
 {
@@ -52,6 +49,6 @@ SfColorPicker colorPicker = new SfColorPicker
 
 The following video illustrates SfColorPicker with the glass effect visible on the color picker while it is in active state.
 
-![Color Picker](images/color-picker.gif)
+![Color Picker](images/LiquidGlass/liquid-glass.gif)
 
 N> The glass effect is applied to the color picker only while it is in active state.
