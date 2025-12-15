@@ -7,7 +7,7 @@ control: SfImageEditor
 documentation: ug
 ---
 
-# Liquid Glass Effect in Image Editor
+# Liquid Glass Effect for Image Editor
 
 The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Image Editor (SfImageEditor) control.
 
@@ -64,27 +64,10 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="21 23 24 25 28" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4 6 7 8 9 11" %}
 
 using Syncfusion.Maui.Core;
 using Syncfusion.Maui.ImageEditor;
-
-var gradientBrush = new LinearGradientBrush
-{
-    StartPoint = new Point(0, 0),
-    EndPoint = new Point(0, 1),
-    GradientStops = new GradientStopCollection
-    {
-        new GradientStop { Color = Color.FromArgb("#0F4C75"), Offset = 0.0f },
-        new GradientStop { Color = Color.FromArgb("#3282B8"), Offset = 0.5f },
-        new GradientStop { Color = Color.FromArgb("#1B262C"), Offset = 1.0f }
-    }
-};
-
-var grid = new Grid
-{
-    Background = gradientBrush
-};
 
 var glassView = new SfGlassEffectsView
 {
@@ -95,8 +78,6 @@ var glassView = new SfGlassEffectsView
 
 this.imageEditor.EnableLiquidGlassEffect = true;
 glassView.Content = this.imageEditor;
-grid.Children.Add(glassView);
-this.Content = grid;
 
 {% endhighlight %}
 {% endtabs %}
