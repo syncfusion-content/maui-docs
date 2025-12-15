@@ -9,15 +9,13 @@ documentation: ug
 
 # Liquid Glass Support for .NET MAUI ColorPicker:
 
-The  [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html) provides `liquid glass` (acrylic/glass morphism) effect for its color picker when [EnableLiquidGlassEffect]() is enabled. The frosted, translucent effect is applied only while the color picker is in active state, creating a subtle, responsive visual that blends with the content behind it. This enhances visual feedback without altering the color picker's appearance at rest, and works well over images or colorful layouts.
+The [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html) supports a `liquid glass` effect (also called acrylic or glass morphism) when you enable the `EnableLiquidGlassEffect`. This feature adds a frosted, translucent style that blends with the background, giving the color picker a modern and elegant look. It works best over images or colorful layouts and provides smooth visual feedback during interaction.
 
 ## Availability
 
 1.  Supported on .NET 10 or greater.
 2.  Supported on mac or iOS 26 or greater.
 3.  On platforms/versions below these requirements, the glass effect is not applied and the color picker render with the standard appearance.
-
-XAML example The color picker's glass effect appears only while it is in active state.
 
 {% tabs %}
 {% highlight xaml %}
@@ -27,7 +25,6 @@ XAML example The color picker's glass effect appears only while it is in active 
         <Image Source="wallpaper.jpg" Aspect="AspectFill" />
         <colorPicker:SfColorPicker  EnableLiquidGlassEffect="True" />
     </Grid>
-</ContentPage>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -42,9 +39,7 @@ SfColorPicker colorPicker = new SfColorPicker
 
 ## Behavior and tips
 
-- The glass effect is applied to the color picker only during active interactions; at rest, the color picker uses the standard look.
+- The glass effect is applied to the color picker at render time and during user interaction.
 - Place the color picker over visually rich content (images, gradients, or color blocks) to better showcase the transient glass effect.
 - Visual output and performance may vary by device/platform; keep backgrounds moderately detailed to maintain clarity during interaction.
-- For an enhanced UI, set `SliderThumbStroke="Transparent"` at the sample level for the color picker.
-
-N> The glass effect is applied to the color picker only while it is in active state.
+- For an enhanced UI, set `SliderThumbStroke="Transparent"` and `SliderThumbFill="White"` at the sample level for the color picker.
