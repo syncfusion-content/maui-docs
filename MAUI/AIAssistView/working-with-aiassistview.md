@@ -376,7 +376,7 @@ Bind the `ActionButtons` collection with one or more `ActionButton` items to pop
 - `CommandParameter`: Passes a parameter to the command when executed.
 
 {% tabs %} 
-{% highlight xaml tabtitle="XAML" hl_lines="4 5 6 7 8" %} 
+{% highlight xaml hl_lines="4 5 6 7 8" %} 
 
 <syncfusion:SfAIAssistView x:Name="sfAIAssistView" 
                            ShowActionButtons="True"
