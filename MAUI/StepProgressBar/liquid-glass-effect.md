@@ -17,7 +17,7 @@ Follow these steps to enable and configure the Liquid Glass Effect in the Step P
 
 ### Step 1: Wrap the control inside glass effect view
 
-To apply the Liquid Glass Effect to Syncfusion® .NET MAUI [StepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html) control, wrap the control inside the `SfGlassEffectView` class.
+To apply the Liquid Glass Effect to the Syncfusion® .NET MAUI [StepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html) control, wrap the control inside the `SfGlassEffectView` class.
 
 For more details, refer to the [Liquid Glass Getting Started documentation](https://help.syncfusion.com/maui/liquid-glass-ui/getting-started).
 
