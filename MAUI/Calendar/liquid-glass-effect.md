@@ -32,10 +32,46 @@ To achieve a glass like background in the Calendar, set the `Background` propert
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfCalendar` control:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14 16 20" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar"
+    xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+    x:Class="AcrylicCalendarPage">
+
+    <Grid>
+        <Image Source="wallpaper.jpg" Aspect="AspectFill" />
+
+        <core:SfGlassEffectsView
+            CornerRadius="20"
+            Padding="12"
+            EffectType="Regular"
+            EnableShadowEffect="True">
+
+            <calendar:SfCalendar />
+        </core:SfGlassEffectsView>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="21 22 23 24 25 30" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Core;
+using Syncfusion.Maui.Calendar;
+
+var glassView = new SfGlassEffectsView
+{
+    CornerRadius = 20,
+    Padding = new Thickness(12),
+    EffectType = LiquidGlassEffectType.Regular,
+    EnableShadowEffect = true
+};
+
+var calendar = new SfCalendar();
+
+glassView.Content = calendar;
 
 {% endhighlight %}
 {% endtabs %}

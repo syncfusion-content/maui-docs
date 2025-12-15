@@ -26,10 +26,74 @@ To achieve a glass like background in the Front or Back Layer, set the `Backgrou
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the Front or Back layer of the `SfBackdropPage` control:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14 16 20" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<backdrop:SfBackdropPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                         x:Class="AcrylicBackdropPage"
+                         xmlns:backdrop="clr-namespace:Syncfusion.Maui.Backdrop;assembly=Syncfusion.Maui.Backdrop">
+
+    <backdrop:SfBackdropPage.BackLayer>
+        <backdrop:BackdropBackLayer EnableLiquidGlassEffect="True">
+            <Grid>
+                <Image Source="wallpaper.jpg" Aspect="AspectFill" />
+                <StackLayout Padding="16">
+                    <Label Text="Back layer content" FontSize="16"/>
+                </StackLayout>
+            </Grid>
+        </backdrop:BackdropBackLayer>
+    </backdrop:SfBackdropPage.BackLayer>
+
+    <backdrop:SfBackdropPage.FrontLayer>
+        <backdrop:BackdropFrontLayer EnableLiquidGlassEffect="True">
+            <Grid>
+                <Image Source="wallpaper.jpg" Aspect="AspectFill" />
+                <StackLayout Padding="16">
+                    <Label Text="Front layer content" FontSize="16"/>
+                </StackLayout>
+            </Grid>
+        </backdrop:BackdropFrontLayer>
+    </backdrop:SfBackdropPage.FrontLayer>
+</backdrop:SfBackdropPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="21 22 23 24 25 30" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Backdrop;
+
+this.BackLayer = new BackdropBackLayer
+{
+    EnableLiquidGlassEffect = true,
+    Content = new Grid
+    {
+        Children =
+        {
+            new Image { Source = "wallpaper.jpg", Aspect = Aspect.AspectFill },
+            new VerticalStackLayout
+            {
+                Padding = 16,
+                Children = { new Label { Text = "Back layer content", FontSize = 16 } }
+            }
+        }
+    }
+};
+
+this.FrontLayer = new BackdropFrontLayer
+{
+    EnableLiquidGlassEffect = true,
+    Content = new Grid
+    {
+        Children =
+        {
+            new Image { Source = "wallpaper.jpg", Aspect = Aspect.AspectFill },
+            new VerticalStackLayout
+            {
+                Padding = 16,
+                Children = { new Label { Text = "Front layer content", FontSize = 16 } }
+            }
+        }
+    }
+};
 
 {% endhighlight %}
 {% endtabs %}
