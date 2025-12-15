@@ -526,10 +526,6 @@ This page lists the keys associated with each control and the respective UI elem
 <td> SfAIAssistViewHeaderSuggestionItemFontAttribute<br/><br/></td>
 <td> Font attributes of an item in the common suggestions.<br/><br/></td>
 </tr>
-<tr>
-    <td> SfAIAssistViewScrollToBottomButtonBackground <br/><br/></td>
-    <td> Background color of the scroll to bottom button view. <br/><br/></td>
-</tr>
 </table>
 
 ## SfAutocomplete
