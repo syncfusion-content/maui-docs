@@ -20,7 +20,7 @@ The Liquid Glass Effect enhances chart interactivity with liquid glass effects o
 
 ## Apply Liquid Glass Effect to SfPyramidChart
 
-Wrap the SfPyramidChart inside an [SfGlassEffectsView]() to give the chart surface a glass (blurred or clear) appearance. Enable the liquid glass effect to get a sleek, glassy output. SfGlassEffectsView available in [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) package.
+Wrap the SfPyramidChart inside an [SfGlassEffectsView]() to give the chart surface a glass (blurred or clear) appearance. SfGlassEffectsView is available in the [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) package. To apply the glassy effect to the chart’s tooltips, set the SfPyramidChart property [EnableLiquidGlassEffect]() to `True`.
 
 {% tabs %}
 
@@ -50,7 +50,6 @@ var glass = new SfGlassEffectsView
     Padding = 12,
     EffectType = GlassEffectType.Regular, // Regular (blurrier) or Clear (glassy)
     EnableShadowEffect = true,
-    LiquidGlassEffect = true,
     Content = chart
 };
 
@@ -71,4 +70,4 @@ var glass = new SfGlassEffectsView
 - Liquid glass effects are most visible over images or colorful backgrounds.
 - Use EffectType="Regular" for a blurrier look and EffectType="Clear" for a crisper, glassy look.
 - Tune CornerRadius and Padding to balance content density and visual polish.
-- When using a custom template for tooltip using [TooltipTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html#Syncfusion_Maui_Charts_SfPyramidChart_TooltipTemplate), set the background to transparent to display the liquid glass effect.
+- When using a custom template for tooltip using [TooltipTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html#Syncfusion_Maui_Charts_SfPyramidChart_TooltipTemplate), set the background to `Transparent` to display the liquid glass effect.
