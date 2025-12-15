@@ -7,7 +7,7 @@ control: SfImageEditor
 documentation: ug
 ---
 
-# Liquid Glass Effect for Image Editor
+# Liquid Glass Effect in .NET MAUI Image Editor (SfImageEditor)
 
 The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Image Editor (SfImageEditor) control.
 
@@ -27,12 +27,12 @@ Set the `EnableLiquidGlassEffect` property to `true` in the `SfImageEditor` cont
 
 ### Step 3: Customize the background
 
-To achieve a glass like background in the Image Editor and its Toolbar, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
+To achieve a glass like background in the Image Editor and its Toolbar control, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
 
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfImageEditor` control:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14 15 16 21" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14 16 20" %}
 
 <Grid>
     <Grid.Background>
@@ -48,7 +48,6 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
     </Grid.Background>
 
     <core:SfGlassEffectView EffectType="Regular"
-                            EnableShadowEffect="True"
                             CornerRadius="20">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Background="Transparent"
@@ -64,20 +63,51 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4 6 7 8 9 11" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="21 22 23 24 25 30" %}
 
 using Syncfusion.Maui.Core;
 using Syncfusion.Maui.ImageEditor;
 
+var gradientBrush = new LinearGradientBrush
+{
+    StartPoint = new Point(0, 0),
+    EndPoint = new Point(0, 1),
+    GradientStops = new GradientStopCollection
+    {
+        new GradientStop { Color = Color.FromArgb("#0F4C75"), Offset = 0.0f },
+        new GradientStop { Color = Color.FromArgb("#3282B8"), Offset = 0.5f },
+        new GradientStop { Color = Color.FromArgb("#1B262C"), Offset = 1.0f }
+    }
+};
+
+var grid = new Grid
+{
+    Background = gradientBrush
+};
+
 var glassView = new SfGlassEffectsView
 {
     CornerRadius = 20,
-    EffectType = LiquidGlassEffectType.Regular,
-    EnableShadowEffect = true
+    EffectType = LiquidGlassEffectType.Regular
 };
 
-this.imageEditor.EnableLiquidGlassEffect = true;
+var imageEditor = new SfImageEditor
+{
+    Background = Colors.Transparent,
+    EnableLiquidGlassEffect = true,
+    SelectionStroke = Color.FromArgb("#AE97FF"),
+    Source = ImageSource.FromFile("editorimage.png"),
+    EnableLiquidGlassEffect = true,
+    ToolbarSettings = new ImageEditorToolbarSettings
+    {
+        Background = Colors.Transparent,
+        Stroke = Colors.Transparent
+    }
+};
+
 glassView.Content = this.imageEditor;
+grid.Children.Add(glassView);
+this.Content = grid;
 
 {% endhighlight %}
 {% endtabs %}
