@@ -11,11 +11,9 @@ documentation: ug
 
 The [SfRadialMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.html) supports a `liquid glass` effect (also called acrylic or glass morphism) when you enable the `EnableLiquidGlassEffect`. This feature adds a frosted, translucent style that blends with the background, giving the menu a modern and elegant look. It works best over images or colorful layouts and provides smooth visual feedback during interaction.
 
-## Availability
-
-1.  Supported on .NET 10 or greater.
-2.  Supported on mac or iOS 26 or greater.
-3.  On platforms/versions below these requirements, the glass effect is not applied and the radial menu render with the standard appearance.
+N>
+* Supported on `macOS 26 or higher` and `iOS 26 or higher`.
+* This feature is available only in `.NET 10.`
 
 {% tabs %}
 {% highlight xaml %}
