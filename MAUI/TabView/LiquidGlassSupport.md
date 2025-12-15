@@ -43,3 +43,6 @@ SfTabView tabView = new SfTabView
 - Place the Tab View  over visually rich content (images, gradients, or color blocks) to better showcase the transient glass effect.
 - Visual output and performance may vary by device/platform; keep backgrounds moderately detailed to maintain clarity during interaction.
 
+The following GIF demonstrates the liquid glass effect
+
+![Liquid Glass](images/liquid-glass.gif)
