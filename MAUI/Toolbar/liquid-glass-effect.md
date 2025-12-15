@@ -7,82 +7,39 @@ control: Toolbar (SfToolbar)
 documentation: ug
 ---
 
-# Liquid Glass Support
+# Liquid Glass Effect in .NET MAUI Toolbar (SfToolbar)
 
-The [SfToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html) supports a liquid glass effect by setting the [EnableLiquidGlassEffect]() property to true. This enhances visual depth and readability when toolbars are placed over images or colorful layouts.
+The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Toolbar (SfToolbar) control.
 
-## Platform and Version Support
+## Apply liquid glass effect
 
-1. This feature is supported on .NET 10 or greater.
-2. This feature is supported on macOS 26 and iOS 26 or later.
-3. On platforms or versions below these requirements, the control renders without the acrylic blur effect and falls back to a standard background.
+Follow these steps to enable and configure the Liquid Glass Effect in the Toolbar control:
 
-## Apply Liquid Glass Effect to SfToolbar
+### Step 1: Wrap the control inside glass effect view
 
-Turn on the liquid glass effect on the toolbar by setting [EnableLiquidGlassEffect]() to true.
+To apply the Liquid Glass Effect to Syncfusion® .NET MAUI `Toolbar` control, wrap the control inside the `SfGlassEffectView` class.
+
+For more details, refer to the `Liquid Glass Getting Started documentation`.
+
+### Step 2: Enable the liquid glass effect on Toolbar
+
+Set the `EnableLiquidGlassEffect` property to `true` in the `SfToolbar` control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its dependent controls and provides responsive interaction for a smooth and engaging user experience.
+
+### Step 3: Customize the background
+
+To achieve a glass like background in the Toolbar, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
+
+The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfToolbar` control:
 
 {% tabs %}
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:toolbar="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar"
-    x:Class="AcrylicToolbarPage">
-
-    <Grid>
-        <!-- Background to make acrylic blur visible -->
-        <Image Source="wallpaper.jpg" Aspect="AspectFill" />
-
-        <toolbar:SfToolbar
-            EnableLiquidGlassEffect="True"
-            HeightRequest="56"
-            WidthRequest="320">
-            <toolbar:SfToolbar.Items>
-                <toolbar:SfToolbarItem Name="Bold" ToolTipText="Bold">
-                    <toolbar:SfToolbarItem.Icon>
-                        <FontImageSource Glyph="&#xE770;" FontFamily="MauiMaterialAssets" />
-                    </toolbar:SfToolbarItem.Icon>
-                </toolbar:SfToolbarItem>
-                <toolbar:SfToolbarItem Name="Italic" ToolTipText="Italic">
-                    <toolbar:SfToolbarItem.Icon>
-                        <FontImageSource Glyph="&#xE771;" FontFamily="MauiMaterialAssets" />
-                    </toolbar:SfToolbarItem.Icon>
-                </toolbar:SfToolbarItem>
-                <toolbar:SfToolbarItem Name="Underline" ToolTipText="Underline">
-                    <toolbar:SfToolbarItem.Icon>
-                        <FontImageSource Glyph="&#xE762;" FontFamily="MauiMaterialAssets" />
-                    </toolbar:SfToolbarItem.Icon>
-                </toolbar:SfToolbarItem>
-            </toolbar:SfToolbar.Items>
-        </toolbar:SfToolbar>
-    </Grid>
-</ContentPage>
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14 16 20" %}
 
 {% endhighlight %}
-{% highlight c# %}
-
-using Syncfusion.Maui.Toolbar;
-
-var toolbar = new SfToolbar
-{
-    EnableLiquidGlassEffect = true,
-    HeightRequest = 56,
-    WidthRequest = 320
-};
-
-toolbar.Items = new ObservableCollection<BaseToolbarItem>
-{
-    new SfToolbarItem { Name = "Bold", ToolTipText = "Bold", Icon = new FontImageSource { Glyph = "\uE770", FontFamily = "MauiMaterialAssets" } },
-    new SfToolbarItem { Name = "Italic", ToolTipText = "Italic", Icon = new FontImageSource { Glyph = "\uE771", FontFamily = "MauiMaterialAssets" } },
-    new SfToolbarItem { Name = "Underline", ToolTipText = "Underline", Icon = new FontImageSource { Glyph = "\uE762", FontFamily = "MauiMaterialAssets" } }
-};
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="21 22 23 24 25 30" %}
 
 {% endhighlight %}
 {% endtabs %}
 
 N>
-* Liquid Glass effects are most visible over images or colorful backgrounds.
-
-The following screenshot illustrates [SfToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html) with the liquid glass effect enabled over a colorful background.
+* Supported on `macOS 26 or higher` and `iOS 26 or higher`.
+* This feature is available only in `.NET 10.`

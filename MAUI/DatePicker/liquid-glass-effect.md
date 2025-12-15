@@ -7,139 +7,39 @@ control: SfDatePicker
 documentation: ug
 ---
 
-# Liquid Glass Support
+# Liquid Glass Effect in .NET MAUI Date Picker (SfDatePicker)
 
-The [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DatePicker.SfDatePicker.html) supports a liquid glass  appearance by hosting the control inside the Syncfusion [SfGlassEffectsView](). You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when the date picker is placed over images or colorful layouts.
+The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Date Picker (SfDatePicker) control.
 
-Additionally, when the date picker is shown in [Dialog]() mode, you can apply the glass effect to the pop-up by enabling the [EnableLiquidGlassEffect]() property on the SfDatePicker.
+## Apply liquid glass effect
 
-## Platform and Version Support
+Follow these steps to enable and configure the Liquid Glass Effect in the Date Picker control:
 
-1. This feature is supported on .NET 10 or greater.
-2. This feature is supported on macOS 26 and iOS 26 or later.
-3. On platforms or versions below these requirements, the control renders without the acrylic blur effect and falls back to a standard background.
+### Step 1: Wrap the control inside glass effect view
 
-## Prerequisites
+To apply the Liquid Glass Effect to Syncfusion® .NET MAUI `Date Picker` control, wrap the control inside the `SfGlassEffectView` class.
 
-- Add the [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) package (for SfGlassEffectsView).
-- Add the [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker/) package (for SfDatePicker).
+For more details, refer to the `Liquid Glass Getting Started documentation`.
 
-## Apply Liquid Glass Effect to SfDatePicker
+### Step 2: Enable the liquid glass effect on Date Picker
 
-Wrap the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) inside an [SfGlassEffectsView]() to give the picker surface a glass (blurred or clear) appearance.
+Set the `EnableLiquidGlassEffect` property to `true` in the `SfDatePicker` control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its dependent controls and provides responsive interaction for a smooth and engaging user experience.
+
+### Step 3: Customize the background
+
+To achieve a glass like background in the Date Picker, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
+
+The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfDatePicker` control:
 
 {% tabs %}
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:datepicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-    xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    x:Class="AcrylicDatePickerPage">
-
-    <Grid>
-        <!-- Background to make acrylic blur visible -->
-        <Image Source="wallpaper.jpg" Aspect="AspectFill" />
-
-        <core:SfGlassEffectsView
-            CornerRadius="20"
-            Padding="12"
-            EffectType="Regular"
-            EnableShadowEffect="True">
-
-            <datepicker:SfDatePicker />
-        </core:SfGlassEffectsView>
-    </Grid>
-</ContentPage>
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14 16 20" %}
 
 {% endhighlight %}
-{% highlight c# %}
-
-using Syncfusion.Maui.Core;
-using Syncfusion.Maui.Picker;
-
-var glassView = new SfGlassEffectsView
-{
-    CornerRadius = 20,
-    Padding = new Thickness(12),
-    EffectType = LiquidGlassEffectType.Regular,
-    EnableShadowEffect = true
-};
-
-var datePicker = new SfDatePicker();
-
-glassView.Content = datePicker;
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="21 22 23 24 25 30" %}
 
 {% endhighlight %}
 {% endtabs %}
 
 N>
-* Liquid Glass effects are most visible over images or colorful backgrounds.
-* Use EffectType="Regular" for a blurrier look and "Clear" for a glassy look.
-
-## Enable Glass Effect in Dialog Mode
-
-When the date picker displays its dialog surface, enable the liquid glass effect by setting [EnableLiquidGlassEffect]() to true.
-
-{% tabs %}
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:datepicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-    xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    x:Class="DatePickerDialogGlassPage">
-
-    <Grid>
-        <Image Source="wallpaper.jpg" Aspect="AspectFill" />
-
-        <!-- Optional: host the launcher/control within a glass view as well -->
-        <core:SfGlassEffectsView
-            CornerRadius="16"
-            Padding="10"
-            EffectType="Clear"
-            EnableShadowEffect="True">
-
-            <datepicker:SfDatePicker
-                EnableLiquidGlassEffect="True" />
-        </core:SfGlassEffectsView>
-    </Grid>
-</ContentPage>
-
-{% endhighlight %}
-{% highlight c# %}
-
-using Syncfusion.Maui.Core;
-using Syncfusion.Maui.Picker;
-
-var datePicker = new SfDatePicker
-{
-    // Applies acrylic/glass effect to the dialog surface
-    EnableLiquidGlassEffect = true
-};
-
-{% endhighlight %}
-{% endtabs %}
-
-N>
-* The dialog gains the glass effect only when [EnableLiquidGlassEffect]() is true.
-
-## Key Properties
-
-- [EffectType](): Choose between Regular (blurry) and Clear (glassy) effects.
-- [EnableShadowEffect](): Enables a soft shadow around the acrylic container.
-- [CornerRadius](): Rounds the corners of the acrylic container.
-- Padding/Height/Width: Adjust layout around the embedded date picker.
-- [EnableLiquidGlassEffect]() (dialog): Enables the glass effect for the date picker’s dialog surface.
-
-## Best Practices and Tips
-
-- Hosting the date picker inside [SfGlassEffectsView]() gives the picker body an acrylic look.
-- The dialog surface applies the glass effect only when [EnableLiquidGlassEffect]() is true.
-- For the most noticeable effect, place the control over images or vibrant backgrounds.
-
-The following screenshot illustrates [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) hosted within an acrylic container, and the dialog surface using the glass effect.
+* Supported on `macOS 26 or higher` and `iOS 26 or higher`.
+* This feature is available only in `.NET 10.`
