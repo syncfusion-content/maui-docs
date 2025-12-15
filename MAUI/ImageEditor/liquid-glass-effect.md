@@ -85,7 +85,7 @@ var grid = new Grid
     Background = gradientBrush
 };
 
-var glassView = new SfGlassEffectsView
+var glassView = new SfGlassEffectView
 {
     CornerRadius = 20,
     EffectType = LiquidGlassEffectType.Regular
