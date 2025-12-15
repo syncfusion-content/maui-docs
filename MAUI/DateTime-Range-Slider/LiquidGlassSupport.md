@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Liquid glass support:
+# Liquid Glass Support for .NET MAUI DateTime Range Slider
 
 The  [SfDateTimeRangeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSlider.html) provides `liquid glass` effect for its thumbs when [EnableLiquidGlassEffect]() is enabled. The frosted, translucent effect is applied only while the user is pressing/dragging the thumb, creating a subtle, responsive visual that blends with the content behind it. This enhances visual feedback without altering the slider’s appearance at rest, and works well over images or colorful layouts.
 
@@ -21,7 +21,7 @@ The  [SfDateTimeRangeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 XAML example The thumb’s glass effect appears only while it is pressed/dragged.
 
 {% tabs %}
-{% highlight xaml hl_lines="49 52" %}
+{% highlight xaml hl_lines="20" %}
 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
@@ -48,7 +48,7 @@ XAML example The thumb’s glass effect appears only while it is pressed/dragged
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# hl_lines="74 77" %}
+{% highlight c# hl_lines="9" %}
 
 using Syncfusion.Maui.Sliders;
 
@@ -64,12 +64,8 @@ SfDateTimeRangeSlider dateTimeRangeSlider = new SfDateTimeRangeSlider
 {% endhighlight %}
 {% endtabs %}
 
-## Behavior and tips
+The following screenshot illustrates SfRangeSlider with the glass effect visible on the thumb while it is pressed.
 
-- The glass effect is applied to the thumb only during press/drag interactions; at rest, the thumb uses the standard look.
-- Place the slider over visually rich content (images, gradients, or color blocks) to better showcase the transient glass effect.
-- Visual output and performance may vary by device/platform; keep backgrounds moderately detailed to maintain clarity during interaction.
-
-The following screenshot illustrates SfDateTimeRangeSlider with the glass effect visible on the thumb while it is pressed.
+![date time range slider with liquid glass support](images/getting-started/rangeslider_liquidglass.gif)
 
 N> The glass effect is applied to the thumb only while it is pressed/dragged.
