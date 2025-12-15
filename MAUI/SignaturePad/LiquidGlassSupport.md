@@ -7,7 +7,7 @@ control: SfSignaturePad
 documentation: ug
 ---
 
-# Liquid Glass Support
+# Liquid Glass Support for .NET MAUI SignaturePad
 
 The [SignaturePad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html) supports a `liquid glass` appearance by hosting the control inside the Syncfusion [SfGlassEffectView](). You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when SfSignaturePad is placed over images or colorful layouts
 

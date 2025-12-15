@@ -7,7 +7,7 @@ control: SfNumericEntry
 documentation: ug
 ---
 
-# Liquid Glass Support
+# Liquid Glass Support for .NET MAUI NumericEntry
 
 The  [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) supports a `liquid glass` appearance by hosting the control inside the Syncfusion [SfGlassEffectView](). The acrylic view creates a blurred, translucent background that blends with the content behind it, producing a frosted `glass effect` around the entry. You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when SfNumericEntry is placed over images or colorful layouts.
 

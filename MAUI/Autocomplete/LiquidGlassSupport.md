@@ -7,7 +7,7 @@ control: SfAutocomplete
 documentation: ug
 ---
 
-# Liquid Glass Support
+# Liquid Glass Support for .NET MAUI Autocomplete
 
 The [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) supports a `liquid glass` appearance by hosting the control inside the Syncfusion [SfGlassEffectView](). You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when SfAutocomplete is placed over images or colorful layouts. Additionally, the dropdown portion of SfAutocomplete applies the glass effect only when the [EnableLiquidGlassEffect]() property is set to true.
 

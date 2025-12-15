@@ -7,7 +7,7 @@ control: SfButton
 documentation: ug
 ---
 
-# Liquid Glass Support
+# Liquid Glass Support for .NET MAUI Buttons
 
 The [SfButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) provides `liquid glass` effect that gives the button a frosted, translucent appearance blending with the content behind it. When the glass effect is enabled, the button also scales while it is pressed, delivering a subtle, responsive interaction cue. This enhances visual depth and interactivity, especially when the button is placed over images or colorful layouts.
 
