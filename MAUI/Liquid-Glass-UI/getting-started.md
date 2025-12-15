@@ -316,9 +316,9 @@ Applies a background tint color to the glass view, to enhance modern UI styling 
 {% endhighlight %}
 {% endtabs %}
 
-## Interactive Glass Effects
+## Interactive Glass Effect
 
-Enable glass effects that respond to user interactions with clear transparency and dynamic lighting for an engaging UI. To enable this feature, set the `EnableLiquidGlassEffect` property to `true` on the Syncfusion® `SfSwitch` control. This activates interaction-based visual effects.
+Enable glass effect that respond to user interactions with clear transparency and dynamic lighting for an engaging UI. To enable this feature, set the `EnableLiquidGlassEffect` property to `true` on the Syncfusion® `SfSwitch` control. This activates interaction-based visual effects.
 
 {% tabs %}
 {% highlight XAML %}
