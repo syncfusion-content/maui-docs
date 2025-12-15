@@ -11,11 +11,9 @@ documentation: ug
 
 The [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html) supports a `liquid glass` effect (also called acrylic or glass morphism) when you enable the `EnableLiquidGlassEffect`. This feature adds a frosted, translucent style that blends with the background, giving the color picker a modern and elegant look. It works best over images or colorful layouts and provides smooth visual feedback during interaction.
 
-## Availability
-
-1.  Supported on .NET 10 or greater.
-2.  Supported on mac or iOS 26 or greater.
-3.  On platforms/versions below these requirements, the glass effect is not applied and the color picker render with the standard appearance.
+N>
+* Supported on `macOS 26 or higher` and `iOS 26 or higher`.
+* This feature is available only in `.NET 10.`
 
 {% tabs %}
 {% highlight xaml %}
@@ -43,3 +41,7 @@ SfColorPicker colorPicker = new SfColorPicker
 - Place the color picker over visually rich content (images, gradients, or color blocks) to better showcase the transient glass effect.
 - Visual output and performance may vary by device/platform; keep backgrounds moderately detailed to maintain clarity during interaction.
 - For an enhanced UI, set `SliderThumbStroke="Transparent"` and `SliderThumbFill="White"` at the sample level for the color picker.
+
+The following GIF demonstrates the liquid glass effect of Color Picker
+
+![Liquid Glass](images/LiquidGlass/liquid-glass.gif)
