@@ -64,7 +64,7 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4 6 7 8 9 11" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="21 23 24 25 28" %}
 
 using Syncfusion.Maui.Core;
 using Syncfusion.Maui.ImageEditor;
