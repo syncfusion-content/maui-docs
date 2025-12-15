@@ -7,9 +7,9 @@ control: SfSwitch
 documentation: ug
 ---
 
-# Liquid glass support:
+# Liquid Glass Support for .NET MAUI Switch:
 
-The  [SfSwitch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html) provides `liquid glass` (acrylic/glassmorphism) effect for its switch when [EnableLiquidGlassEffect]() is enabled. The frosted, translucent effect is applied only while the switch is in active state, creating a subtle, responsive visual that blends with the content behind it. This enhances visual feedback without altering the switch's appearance at rest, and works well over images or colorful layouts.
+The  [SfSwitch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html) provides `liquid glass` (acrylic/glass morphism) effect for its switch when [EnableLiquidGlassEffect]() is enabled. The frosted, translucent effect is applied only while the switch is in active state, creating a subtle, responsive visual that blends with the content behind it. This enhances visual feedback without altering the switch's appearance at rest, and works well over images or colorful layouts.
 
 ## Availability
 
@@ -44,9 +44,5 @@ SfSwitch aSwitch = new SfSwitch
 - The glass effect is applied to the switch only during active interactions; at rest, the switch uses the standard look.
 - Place the switch over visually rich content (images, gradients, or color blocks) to better showcase the transient glass effect.
 - Visual output and performance may vary by device/platform; keep backgrounds moderately detailed to maintain clarity during interaction.
-
-The following video illustrates SfSwitch with the glass effect visible on the switch while it is in active state.
-
-![Switch](images/LiquidGlass/liquid-glass.gif)
 
 N> The glass effect is applied to the switch only while it is in active state.

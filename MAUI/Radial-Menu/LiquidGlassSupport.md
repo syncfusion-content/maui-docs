@@ -7,9 +7,9 @@ control: SfRadialMenu
 documentation: ug
 ---
 
-# Liquid glass support:
+# Liquid Glass Support for .NET MAUI RadialMenu:
 
-The  [SfRadialMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.html) provides `liquid glass` (acrylic/glassmorphism) effect for its radial menu when [EnableLiquidGlassEffect]() is enabled. The frosted, translucent effect is applied only while the radial menu is in active state, creating a subtle, responsive visual that blends with the content behind it. This enhances visual feedback without altering the radial menu's appearance at rest, and works well over images or colorful layouts.
+The  [SfRadialMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.html) provides `liquid glass` (acrylic/glass morphism) effect for its radial menu when [EnableLiquidGlassEffect]() is enabled. The frosted, translucent effect is applied only while the radial menu is in active state, creating a subtle, responsive visual that blends with the content behind it. This enhances visual feedback without altering the radial menu's appearance at rest, and works well over images or colorful layouts.
 
 ## Availability
 
@@ -44,9 +44,5 @@ SfRadialMenu radialMenu = new SfRadialMenu
 - The glass effect is applied to the radial menu only during active interactions; at rest, the radial menu uses the standard look.
 - Place the radial menu over visually rich content (images, gradients, or color blocks) to better showcase the transient glass effect.
 - Visual output and performance may vary by device/platform; keep backgrounds moderately detailed to maintain clarity during interaction.
-
-The following video illustrates SfRadialMenu with the glass effect visible on the radial menu while it is in active state.
-
-![Radial Menu](images/LiquidGlass/liquid-glass.gif)
 
 N> The glass effect is applied to the radial menu only while it is in active state.
