@@ -65,7 +65,7 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="20" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="19" %}
 
 using Syncfusion.Maui.Kanban;
 
