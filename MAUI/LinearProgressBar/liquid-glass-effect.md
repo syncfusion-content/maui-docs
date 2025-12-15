@@ -30,10 +30,6 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
 {% tabs %}
 {% highlight xaml %}
 
-...
-xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-xmlns:progressBar="clr-namespace:Syncfusion.Maui.ProgressBar;assembly=Syncfusion.Maui.ProgressBar"
-
 <Grid>
     <Grid.Background>
         <LinearGradientBrush StartPoint="0,0"
@@ -64,9 +60,6 @@ xmlns:progressBar="clr-namespace:Syncfusion.Maui.ProgressBar;assembly=Syncfusion
 
 {% endhighlight %}
 {% highlight c# %}
-
-using Syncfusion.Maui.Core;
-using Syncfusion.Maui.ProgressBar;
 
 var gradientBrush = new LinearGradientBrush
 {
@@ -112,8 +105,8 @@ var linearProgressBar = new SfLinearProgressBar
 };
 
 glassView.Content = linearProgressBar;
-stackLayout.Children.Add(glass);
-grid.Children.Add(glassView);
+stackLayout.Children.Add(glassView);
+grid.Children.Add(stackLayout);
 this.Content = grid;
 
 {% endhighlight %}

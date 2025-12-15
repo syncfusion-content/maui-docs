@@ -30,10 +30,6 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
 {% tabs %}
 {% highlight xaml %}
 
-...
-xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-xmlns:stepProgressBar="clr-namespace:Syncfusion.Maui.ProgressBar;assembly=Syncfusion.Maui.ProgressBar"
-
 <ContentPage.BindingContext>
     <local:ViewModel />
 </ContentPage.BindingContext>
@@ -87,9 +83,6 @@ xmlns:stepProgressBar="clr-namespace:Syncfusion.Maui.ProgressBar;assembly=Syncfu
 
 {% endhighlight %}
 {% highlight c# %}
-
-using Syncfusion.Maui.Core;
-using Syncfusion.Maui.ProgressBar;
 
 ViewModel viewModel = new ViewModel();
 SfStepProgressBar stepProgressBar = new SfStepProgressBar()
