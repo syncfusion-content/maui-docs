@@ -28,7 +28,7 @@ To achieve a glass like background in the Step Progress Bar, set the `Background
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the [SfStepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html) control:
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml hl_lines="29 30 31 32 45" %}
 
 <ContentPage.BindingContext>
     <local:ViewModel />
@@ -82,7 +82,7 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
 </Grid>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# hl_lines="18 20 21 22 23 47 48" %}
 
 ViewModel viewModel = new ViewModel();
 SfStepProgressBar stepProgressBar = new SfStepProgressBar()
@@ -179,5 +179,5 @@ public class ViewModel
 {% endtabs %}
 
 N>
-* Supported on `macOS 26 or higher` and `iOS 16 or higher`.
+* Supported on `macOS 26 or higher` and `iOS 26 or higher`.
 * This feature is available only in `.NET 10.`
