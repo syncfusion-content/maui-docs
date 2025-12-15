@@ -9,7 +9,7 @@ documentation: ug
 
 # Liquid glass support
 
-The  [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) supports a `liquid glass` appearance by hosting the control inside the Syncfusion [SfGlassEffectsView](). The acrylic view creates a blurred, translucent background that blends with the content behind it, producing a frosted `glass effect` around the entry. You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when SfMaskedEntry is placed over images or colorful layouts.
+The  [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) supports a `liquid glass` appearance by hosting the control inside the Syncfusion [SfGlassEffectView](). The acrylic view creates a blurred, translucent background that blends with the content behind it, producing a frosted `glass effect` around the entry. You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when SfMaskedEntry is placed over images or colorful layouts.
 
 ## Availability
 
@@ -19,9 +19,9 @@ The  [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 
 ## Prerequisites
 
-- Add the Syncfusion.Maui.Core package (for SfGlassEffectsView) and Syncfusion.Maui.Inputs (for SfMaskedEntry).
+- Add the Syncfusion.Maui.Core package (for SfGlassEffectView) and Syncfusion.Maui.Inputs (for SfMaskedEntry).
 
-XAML example Wrap the `SfMaskedEntry` in an `SfGlassEffectsView` and adjust visual properties to achieve the desired glass effect.
+XAML example Wrap the `SfMaskedEntry` in an `SfGlassEffectView` and adjust visual properties to achieve the desired glass effect.
 
 {% tabs %}
 {% highlight xaml hl_lines="20" %}
@@ -37,7 +37,7 @@ XAML example Wrap the `SfMaskedEntry` in an `SfGlassEffectsView` and adjust visu
     <!-- Background content to make the acrylic blur visible -->
     <Grid>
         <Image Source="wallpaper.jpg" Aspect="AspectFill" />
-            <core:SfGlassEffectsView
+            <core:SfGlassEffectView
                 CornerRadius="20"
                 HeightRequest="40"
                 EffectType="Regular"
@@ -49,7 +49,7 @@ XAML example Wrap the `SfMaskedEntry` in an `SfGlassEffectsView` and adjust visu
                     ClearButtonVisibility="WhileEditing"
                     MaskType="RegEx"
                     Mask="[A-Za-z0-9._%-]+@[A-Za-z0-9]+.[A-Za-z]{2,3}" />
-            </core:SfGlassEffectsView>
+            </core:SfGlassEffectView>
     </Grid>
 </ContentPage>
 
@@ -59,7 +59,7 @@ XAML example Wrap the `SfMaskedEntry` in an `SfGlassEffectsView` and adjust visu
 using Syncfusion.Maui.Core;
 using Syncfusion.Maui.Inputs;
 
-var glassEffect = new SfGlassEffectsView
+var glassEffect = new SfGlassEffectView
 {
     CornerRadius=20,
     HeightRequest=40,

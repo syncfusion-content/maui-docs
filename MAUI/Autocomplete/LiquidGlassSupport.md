@@ -9,7 +9,7 @@ documentation: ug
 
 # Liquid glass support
 
-The [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) supports a `liquid glass` appearance by hosting the control inside the Syncfusion [SfGlassEffectsView](). You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when SfAutocomplete is placed over images or colorful layouts. Additionally, the dropdown portion of SfAutocomplete applies the glass effect only when the [EnableLiquidGlassEffect]() property is set to true.
+The [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) supports a `liquid glass` appearance by hosting the control inside the Syncfusion [SfGlassEffectView](). You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when SfAutocomplete is placed over images or colorful layouts. Additionally, the dropdown portion of SfAutocomplete applies the glass effect only when the [EnableLiquidGlassEffect]() property is set to true.
 
 ## Availability
 
@@ -19,9 +19,9 @@ The [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 
 ## Prerequisites
 
-- Add the Syncfusion.Maui.Core package (for SfGlassEffectsView) and Syncfusion.Maui.Inputs (for SfAutocomplete).
+- Add the Syncfusion.Maui.Core package (for SfGlassEffectView) and Syncfusion.Maui.Inputs (for SfAutocomplete).
 
-XAML example Wrap the SfAutocomplete in an SfGlassEffectsView, then enable the dropdown’s glass effect with `EnableLiquidGlassEffect`.
+XAML example Wrap the SfAutocomplete in an SfGlassEffectView, then enable the dropdown’s glass effect with `EnableLiquidGlassEffect`.
 
 {% tabs %}
 {% highlight xaml hl_lines="19 22" %}
@@ -37,7 +37,7 @@ XAML example Wrap the SfAutocomplete in an SfGlassEffectsView, then enable the d
     <Grid>
         <!-- Background to make acrylic blur visible -->
         <Image Source="wallpaper.jpg" Aspect="AspectFill" />
-            <core:SfGlassEffectsView
+            <core:SfGlassEffectView
                 CornerRadius="20"
                 HeightRequest="40"
                 EffectType="Regular"
@@ -50,7 +50,7 @@ XAML example Wrap the SfAutocomplete in an SfGlassEffectsView, then enable the d
                     DisplayMemberPath="Name"
                     DropDownBackground="Transparent"
                     Placeholder="Select employee"/>
-            </core:SfGlassEffectsView>
+            </core:SfGlassEffectView>
     </Grid>
 </ContentPage>
 
@@ -60,7 +60,7 @@ XAML example Wrap the SfAutocomplete in an SfGlassEffectsView, then enable the d
 using Syncfusion.Maui.Core;
 using Syncfusion.Maui.Inputs;
 
-var glassEffects = new SfGlassEffectsView
+var glassEffects = new SfGlassEffectView
 {
     CornerRadius=20,
     HeightRequest=40,
