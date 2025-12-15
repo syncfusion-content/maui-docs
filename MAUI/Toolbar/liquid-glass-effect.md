@@ -32,10 +32,61 @@ To achieve a glass like background in the Toolbar, set the `Background` property
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfToolbar` control:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14 16 20" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolbar="clr-namespace:Syncfusion.Maui.Toolbar;assembly=Syncfusion.Maui.Toolbar"
+    x:Class="AcrylicToolbarPage">
+
+    <Grid>
+        <!-- Background to make acrylic blur visible -->
+        <Image Source="wallpaper.jpg" Aspect="AspectFill" />
+
+        <toolbar:SfToolbar
+            EnableLiquidGlassEffect="True"
+            HeightRequest="56"
+            WidthRequest="320">
+            <toolbar:SfToolbar.Items>
+                <toolbar:SfToolbarItem Name="Bold" ToolTipText="Bold">
+                    <toolbar:SfToolbarItem.Icon>
+                        <FontImageSource Glyph="&#xE770;" FontFamily="MauiMaterialAssets" />
+                    </toolbar:SfToolbarItem.Icon>
+                </toolbar:SfToolbarItem>
+                <toolbar:SfToolbarItem Name="Italic" ToolTipText="Italic">
+                    <toolbar:SfToolbarItem.Icon>
+                        <FontImageSource Glyph="&#xE771;" FontFamily="MauiMaterialAssets" />
+                    </toolbar:SfToolbarItem.Icon>
+                </toolbar:SfToolbarItem>
+                <toolbar:SfToolbarItem Name="Underline" ToolTipText="Underline">
+                    <toolbar:SfToolbarItem.Icon>
+                        <FontImageSource Glyph="&#xE762;" FontFamily="MauiMaterialAssets" />
+                    </toolbar:SfToolbarItem.Icon>
+                </toolbar:SfToolbarItem>
+            </toolbar:SfToolbar.Items>
+        </toolbar:SfToolbar>
+    </Grid>
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="21 22 23 24 25 30" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+using Syncfusion.Maui.Toolbar;
+
+var toolbar = new SfToolbar
+{
+    EnableLiquidGlassEffect = true,
+    HeightRequest = 56,
+    WidthRequest = 320
+};
+
+toolbar.Items = new ObservableCollection<BaseToolbarItem>
+{
+    new SfToolbarItem { Name = "Bold", ToolTipText = "Bold", Icon = new FontImageSource { Glyph = "\uE770", FontFamily = "MauiMaterialAssets" } },
+    new SfToolbarItem { Name = "Italic", ToolTipText = "Italic", Icon = new FontImageSource { Glyph = "\uE771", FontFamily = "MauiMaterialAssets" } },
+    new SfToolbarItem { Name = "Underline", ToolTipText = "Underline", Icon = new FontImageSource { Glyph = "\uE762", FontFamily = "MauiMaterialAssets" } }
+};
 
 {% endhighlight %}
 {% endtabs %}

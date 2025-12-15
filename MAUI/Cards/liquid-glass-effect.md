@@ -26,10 +26,46 @@ To achieve a glass like background in the card view, set the `Background` proper
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the card view:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14 16 20" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:cards="clr-namespace:Syncfusion.Maui.Cards;assembly=Syncfusion.Maui.Cards"
+    x:Class="AcrylicCardsPage">
+
+    <Grid>
+        <Image Source="wallpaper.jpg" Aspect="AspectFill" />
+
+        <cards:SfCardView
+            EnableLiquidGlassEffect="True">
+            <VerticalStackLayout Spacing="8">
+                <Label Text="Glass Card" FontSize="18" FontAttributes="Bold"/>
+                <Label Text="This card uses the built-in liquid glass effect."/>
+            </VerticalStackLayout>
+        </cards:SfCardView>
+    </Grid>
+
+</ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="21 22 23 24 25 30" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+using Syncfusion.Maui.Cards;
+
+var card = new SfCardView
+{
+    EnableLiquidGlassEffect = true,
+};
+
+card.Content = new VerticalStackLayout
+{
+    Spacing = 8,
+    Children =
+    {
+        new Label { Text = "Glass Card", FontSize = 18, FontAttributes = FontAttributes.Bold },
+        new Label { Text = "This card uses the built-in liquid glass effect." },
+    }
+};
 
 {% endhighlight %}
 {% endtabs %}
