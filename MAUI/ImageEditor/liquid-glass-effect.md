@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Liquid Glass Support for .NET MAUI Image Editor | Syncfusion®
+title: Liquid Glass Effect for .NET MAUI Image Editor | Syncfusion®
 description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI Image Editor (SfImageEditor) control.
 platform: MAUI
 control: SfImageEditor
 documentation: ug
 ---
 
-# Liquid glass effect
+# Liquid Glass Effect
 
 The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Image Editor (SfImageEditor) control.
 
@@ -19,7 +19,7 @@ Follow these steps to enable and configure the Liquid Glass Effect in the Image 
 
 To apply the Liquid Glass Effect to Syncfusion® .NET MAUI `ImageEditor` control, wrap the control inside the `SfGlassEffectView` class.
 
-For more details, refer to the Liquid Glass Getting Started documentation.
+For more details, refer to the [Liquid Glass Getting Started documentation](https://help.syncfusion.com/maui/liquid-glass-ui/getting-started).
 
 ### Step 2: Enable the liquid glass effect on Image Editor
 
@@ -27,11 +27,9 @@ Set the `EnableLiquidGlassEffect` property to `true` in the `SfImageEditor` cont
 
 ### Step 3: Customize the background
 
-To achieve a glass like background in the Image Editor and its Toolbar, set the `Background` property to `Transparent`.
+To achieve a glass like background in the Image Editor and its Toolbar, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
 
-The background will then be treated as a tinted color, ensuring a consistent glass effect across the control.
-
-The following code snippet demonstrates how to apply the Liquid Glass Effect to the SfImageEditor control:
+The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfImageEditor` control:
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="14 15 16 21" %}
@@ -66,7 +64,7 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4 6 7 8 11" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4 6 7 8 9 11" %}
 
 using Syncfusion.Maui.Core;
 using Syncfusion.Maui.ImageEditor;
@@ -103,6 +101,6 @@ this.Content = grid;
 {% endhighlight %}
 {% endtabs %}
 
-Note>
-* Supported on macOS 26 or higher and iOS 16 or higher.
-* This feature is available only in .NET 10.
+N>
+* Supported on `macOS 26 or higher` and `iOS 16 or higher`.
+* This feature is available only in `.NET 10.`
