@@ -7,7 +7,7 @@ control: SfImageEditor
 documentation: ug
 ---
 
-# Liquid Glass Effect
+# Liquid Glass Effect in Image Editor
 
 The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Image Editor (SfImageEditor) control.
 
@@ -19,7 +19,7 @@ Follow these steps to enable and configure the Liquid Glass Effect in the Image 
 
 To apply the Liquid Glass Effect to Syncfusion® .NET MAUI `ImageEditor` control, wrap the control inside the `SfGlassEffectView` class.
 
-For more details, refer to the [Liquid Glass Getting Started documentation](https://help.syncfusion.com/maui/liquid-glass-ui/getting-started).
+For more details, refer to the `Liquid Glass Getting Started documentation`.
 
 ### Step 2: Enable the liquid glass effect on Image Editor
 
