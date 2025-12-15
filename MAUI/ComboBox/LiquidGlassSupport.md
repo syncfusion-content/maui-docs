@@ -7,7 +7,7 @@ control: SfComboBox
 documentation: ug
 ---
 
-# Liquid glass support
+# Liquid Glass Support
 
 The [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) supports a `liquid glass` appearance by hosting the control inside the Syncfusion [SfGlassEffectView](). You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when SfComboBox is placed over images or colorful layouts. Additionally, the dropdown portion of SfComboBox applies the glass effect only when the [EnableLiquidGlassEffect]() property is set to true.
 
