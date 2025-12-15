@@ -559,7 +559,7 @@ The following views can be customized individually:
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# hl_lines="21 47" %}
+{% highlight c# hl_lines="23 47" %}
 
 using Syncfusion.Maui.AIAssistView;
 

@@ -276,7 +276,7 @@ N> **Interaction**: On desktop (Windows, macOS), hover over a request to reveal 
 The `SfAIAssistView` control allows you to fully customize the editor's appearance by using the [EditorViewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_EditorViewTemplate) property. This property lets you define a custom layout and style for the editor.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="13" %}
+{% highlight xaml hl_lines="13" %}
 
 <ContentPage.Resources>
     <ResourceDictionary>
@@ -1057,7 +1057,7 @@ The `SfAIAssistView` control allows you to fully customize the scroll-to-bottom 
                            ScrollToBottomButtonTemplate="{StaticResource scrollToBottomButtonTemplate}" />
 
 {% endhighlight %}
-{% highlight c# hl_lines="10" %}
+{% highlight c# hl_lines="11" %}
 
 using Syncfusion.Maui.AIAssistView;
 

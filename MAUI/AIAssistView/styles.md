@@ -1311,6 +1311,14 @@ To style the response suggestion header text view based on its appearance, set v
 <td> SfAIAssistViewSuggestionHeaderFontSize </td>
 <td> Font size of response suggestion header text. </td>
 </tr>
+<tr>
+<td> SfAIAssistViewSuggestionHeaderFontFamily </td>
+<td> Font family of response suggestion header text. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewSuggestionHeaderFontAttributes </td>
+<td> Font attributes of response suggestion header text. </td>
+</tr>
 </table>
 
 {% tabs %}
@@ -1323,6 +1331,8 @@ To style the response suggestion header text view based on its appearance, set v
                 <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
                 <Color x:Key="SfAIAssistViewSuggestionHeaderTextColor">DarkBlue</Color>
                 <x:Double x:Key="SfAIAssistViewSuggestionHeaderFontSize">14</x:Double>
+                <x:String x:Key="SfAIAssistViewSuggestionHeaderFontFamily">Roboto-Medium</x:String>
+                <FontAttributes x:Key="SfAIAssistViewSuggestionHeaderFontAttributes">Bold</FontAttributes>
             </ResourceDictionary>
         </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
     </syncTheme:SyncfusionThemeDictionary>
@@ -1338,11 +1348,12 @@ public MainPage()
     ResourceDictionary dictionary = new ResourceDictionary();
     dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
     dictionary.Add("SfAIAssistViewSuggestionHeaderTextColor", Colors.DarkBlue);
-    dictionary.Add("SfAIAssistViewSuggestionHeaderFontSize", 14.0);
+    dictionary.Add("SfAIAssistViewSuggestionHeaderFontSize", 14);
+    dictionary.Add("SfAIAssistViewSuggestionHeaderFontFamily", "Roboto-Medium");
+    dictionary.Add("SfAIAssistViewSuggestionHeaderFontAttributes", FontAttributes.Bold);
     this.Resources.Add(dictionary);
     ....
 }
 
 {% endhighlight %}
 {% endtabs %}
-

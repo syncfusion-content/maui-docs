@@ -420,6 +420,8 @@ The `SfAIAssistView` control allows you to define the header text for each respo
 {% endhighlight %}
 {% endtabs %}
 
+![Suggestion Header Text in .NET MAUI AI AssistView](Images/suggestions/maui-aiassistview-suggestion-headertext.png)
+
 ### Response item suggestion customization
 The `SfAIAssistView` control allows you to fully customize the appearance of the response suggestion items using the [ResponseSuggestionTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ResponseSuggestionTemplate) property. This property lets you define a custom layout and style for the suggestion item UI.
 
