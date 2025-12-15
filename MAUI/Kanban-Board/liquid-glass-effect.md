@@ -27,7 +27,7 @@ Set the `EnableLiquidGlassEffect` property to `true` in the `SfKanban` control t
 
 ### Step 3: Customize the background
 
-To achieve a glass-like background in the Kanban control, set its Background property to Transparent and apply theme keys with transparent values to enable the liquid glass effect for kanban child elements. This ensures a consistent look and feel across your application.
+To achieve a glass like background in the Kanban control, set its Background property to Transparent and apply theme keys with transparent values to enable the liquid glass effect for kanban child elements. This ensures a consistent look and feel across your application.
 
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the `Kanban` control:
 
@@ -127,14 +127,12 @@ public class KanbanViewModel
     /// <returns>The collection of <see cref="KanbanModel"/> instances.</returns>
     private ObservableCollection<KanbanModel> GetCardDetails()
     {
-        Assembly assemblyName = typeof(SfImageSourceConverter).GetTypeInfo().Assembly;
         var cardsDetails = new ObservableCollection<KanbanModel>();
 
         cardsDetails.Add(new KanbanModel()
         {
             ID = 1,
             Title = "iOS - 1",
-            ImageURL = assemblyName + ".people_circle1.png",
             Category = "Open",
             Description = "Analyze customer requirements.",
             IndicatorFill = Colors.Red,
@@ -145,7 +143,6 @@ public class KanbanViewModel
         {
             ID = 6,
             Title = "Xamarin - 6",
-            ImageURL = assemblyName + ".people_circle2.png",
             Category = "Open",
             Description = "Show the retrieved data from the server in Grid control.",
             IndicatorFill = Colors.Red,
@@ -156,7 +153,6 @@ public class KanbanViewModel
         {
             ID = 3,
             Title = "iOS - 3",
-            ImageURL = assemblyName + ".people_circle3.png",
             Category = "Postponed",
             Description = "Fix the filtering issues reported in Safari.",
             IndicatorFill = Colors.Red,
@@ -167,7 +163,6 @@ public class KanbanViewModel
         {
             ID = 11,
             Title = "iOS - 21",
-            ImageURL = assemblyName + ".people_circle4.png",
             Category = "Postponed",
             Description = "Add input validation for editing.",
             IndicatorFill = Colors.Red,
@@ -179,7 +174,6 @@ public class KanbanViewModel
             ID = 15,
             Title = "Android - 15",
             Category = "Open",
-            ImageURL = assemblyName + ".people_circle5.png",
             Description = "Arrange web meetings for customers.",
             IndicatorFill = Colors.Red,
             Tags = new List<string> { "Story", "Kanban" }
@@ -190,7 +184,6 @@ public class KanbanViewModel
             ID = 3,
             Title = "Android - 3",
             Category = "Code Review",
-            ImageURL = assemblyName + ".people_circle6.png",
             Description = "API Improvements.",
             IndicatorFill = Colors.Purple,
             Tags = new List<string> { "Bug", "Customer" }
@@ -200,7 +193,6 @@ public class KanbanViewModel
         {
             ID = 4,
             Title = "UWP - 4",
-            ImageURL = assemblyName + ".people_circle7.png",
             Category = "Code Review",
             Description = "Enhance editing functionality.",
             IndicatorFill = Colors.Brown,
@@ -211,7 +203,6 @@ public class KanbanViewModel
         {
             ID = 9,
             Title = "Xamarin - 9",
-            ImageURL = assemblyName + ".people_circle8.png",
             Category = "Code Review",
             Description = "Improve application's performance.",
             IndicatorFill = Colors.Orange,
@@ -222,7 +213,6 @@ public class KanbanViewModel
         {
             ID = 13,
             Title = "UWP - 13",
-            ImageURL = assemblyName + ".people_circle9.png",
             Category = "In Progress",
             Description = "Add responsive support to applications.",
             IndicatorFill = Colors.Brown,
@@ -233,7 +223,6 @@ public class KanbanViewModel
         {
             ID = 24,
             Title = "UWP - 24",
-            ImageURL = assemblyName + ".people_circle14.png",
             Category = "In Progress",
             Description = "Test editing functionality.",
             IndicatorFill = Colors.Orange,
@@ -245,7 +234,6 @@ public class KanbanViewModel
             ID = 20,
             Title = "iOS - 20",
             Category = "In Progress",
-            ImageURL = assemblyName + ".people_circle15.png",
             Description = "Fix the issues reported in data binding.",
             IndicatorFill = Colors.Red,
             Tags = new List<string> { "Feature", "Release" }
@@ -255,7 +243,6 @@ public class KanbanViewModel
         {
             ID = 13,
             Title = "UWP - 13",
-            ImageURL = assemblyName + ".people_circle18.png",
             Category = "Closed",
             Description = "Fix cannot open user's default database SQL error.",
             IndicatorFill = Colors.Purple,
@@ -267,7 +254,6 @@ public class KanbanViewModel
             ID = 14,
             Title = "Android - 14",
             Category = "Closed",
-            ImageURL = assemblyName + ".people_circle19.png",
             Description = "Arrange a web meeting with the customer to get the login page requirement.",
             IndicatorFill = Colors.Red,
             Tags = new List<string> { "Feature" }
@@ -278,7 +264,6 @@ public class KanbanViewModel
             ID = 15,
             Title = "Xamarin - 15",
             Category = "Closed",
-            ImageURL = assemblyName + ".people_circle20.png",
             Description = "Login page validation.",
             IndicatorFill = Colors.Red,
             Tags = new List<string> { "Bug" }
