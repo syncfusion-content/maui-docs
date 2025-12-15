@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Gemini AI for AI-Powered Text Editor | Syncfusion®
-description: Learn how to implement a custom AI service using Google's Gemini API with Syncfusion<sup>&reg;</sup> AI-Powered Text Editor (SfSmartTextEditor) control.
+title: Gemini AI for AI-Powered Components | Syncfusion®
+description: Learn how to implement a custom AI service using Google's Gemini API with Syncfusion<sup>&reg;</sup> AI-Powered Components.
 platform: maui
-control: SfSmartTextEditor
+control: SmartComponents
 documentation: ug
 ---
 
-# Gemini AI Integration with .NET MAUI Smart Text Editor
+# Gemini AI Integration with .NET MAUI Smart Components
 
-The Syncfusion [.NET MAUI Smart Text Editor] provides AI-powered suggestions for context-aware text input. By default, it works with providers like OpenAI or Azure OpenAI, but you can integrate `Google Gemini AI` using the `IChatInferenceService` interface. This guide explains how to implement and register Gemini AI for the Smart Text Editor in a .NET MAUI app.
+The Syncfusion .NET MAUI AI-powered components can enhance applications with intelligent capabilities. By default, it works with providers like OpenAI or Azure OpenAI, but you can integrate `Google Gemini AI` using the `IChatInferenceService` interface. This guide explains how to implement and register Gemini AI for the Smart Text Editor in a .NET MAUI app.
 
 ## Setting Up Gemini
 

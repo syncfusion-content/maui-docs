@@ -14,7 +14,7 @@ The [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-schedule
 ## Create resources to Scheduler by using SchedulerResource
 You can create a resource view by setting the [Name](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Name), [Id](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Id), [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Background), and [Foreground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Foreground) and [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Foreground) properties of the built-in [SchedulerResource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html) class and assign `SchedulerResource` collection to the scheduler by using the [Resources](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) property of the [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6) class.
 
-In the **Day**, **Week** and **Work Week** views, resources are displayed **horizontally**, whereas in the **Timeline views** (Timeline Day, Timeline Week, Timeline Work Week and Timeline Month), resources are displayed **vertically**.
+In the **Day**, **Week** and **Work Week** views, resources are displayed **horizontally** on desktop platforms and under an **adaptive header** on mobile platforms. In the **Timeline views** (Timeline Day, Timeline Week, Timeline Work Week and Timeline Month), resources are displayed **vertically**.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
@@ -37,8 +37,6 @@ var Resources = new ObservableCollection<SchedulerResource>()
 this.Scheduler.ResourceView.Resources = Resources;
 {% endhighlight %}
 {% endtabs %}
-
-N> The horizontal display of resources in the **Day**, **Week**, and **Work Week** views is supported only on .NET MAUI desktop platforms (**Windows** and **macOS**).
 
 ### Assigning Scheduler resources to appointments
 
@@ -176,14 +174,12 @@ this.Scheduler.ResourceView.ResourceGroupType = SchedulerResourceGroupType.Date;
 
 In Mobile platforms, the resource view for the day, week, and work week view where grouped under an adaptive header.
 
-N> The adaptive header display of resources in the **Day**, **Week**, and **Work Week** views is supported only on .NET MAUI mobile platforms (**Android** and **iOS**).
-
 ### Customize hamburger icon color
 
 The hamburger icon color can be customized by using the `HamburgerIconColor` property of the [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6).
 
 {% tabs %}
-{% highlight XAML hl_lines="4" %}
+{% highlight XAML hl_lines="3" %}
 
  <syncfusion:SfScheduler x:Name="Scheduler" View="Day">
      <syncfusion:SfScheduler.ResourceView>
@@ -213,7 +209,7 @@ this.Scheduler.ResourceView.HamburgerIconColor = Colors.Red;
 The drawer resource selection color can be customized by using the `DrawerResourceSelectionColor` property of the [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6).
 
 {% tabs %}
-{% highlight XAML hl_lines="4" %}
+{% highlight XAML hl_lines="3" %}
 
  <syncfusion:SfScheduler x:Name="Scheduler" View="Day">
      <syncfusion:SfScheduler.ResourceView>
@@ -243,7 +239,7 @@ this.Scheduler.ResourceView.DrawerResourceSelectionColor = Brush.DodgerBlue;
 The drawer background can be customized by using the `DrawerBackground` property of the [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6).
 
 {% tabs %}
-{% highlight XAML hl_lines="4" %}
+{% highlight XAML hl_lines="3" %}
 
  <syncfusion:SfScheduler x:Name="Scheduler" View="Day">
      <syncfusion:SfScheduler.ResourceView>
@@ -370,7 +366,6 @@ private void OnTapped(object sender, TappedEventArgs e)
 ![customize-adapter-header-template-in-maui-scheduler](images/resource-view/customize-adapter-header-template-in-maui-scheduler.png)
 
 N> 
-
 * The BindingContext of the `AdaptiveHeaderTemplate` is the `SchedulerAdaptiveResource.`
 * The `ToggleResourceDrawerView` method should be called on the `SchedulerAdaptiveResource` instance obtained from the control’s BindingContext. It toggles the visibility of the drawer resource view. It is used only when the `AdaptiveHeaderTemplate` is applied.
 
@@ -428,7 +423,7 @@ this.scheduler.ResourceView.Resources = Resources;
 
 ![customize-drawer-resource-template-in-maui-scheduler](images/resource-view/customize-drawer-resource-template-in-maui-scheduler.png)
 
-N> The BindingContext of the `DrawerResourceTemplate` is the [SchedulerResource.](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html) and the custom data object can be bound in `DrawerResourceTemplate` by using `SchedulerResource.DataItem`.
+N> The BindingContext of the `DrawerResourceTemplate` is the [SchedulerResource.](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html) and the custom data object can be bound in `DrawerResourceTemplate` by using `SchedulerResource.DataItem` .
 
 ## Visible Resource Count
  

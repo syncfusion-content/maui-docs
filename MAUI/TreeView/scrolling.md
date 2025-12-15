@@ -98,20 +98,6 @@ private void BringIntoView_Clicked(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-## Scrollbar visibility
-
-The TreeView provides an option to enable or disable the `Scrollbar` visibility by using the [ScrollBarVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_ScrollBarVisibility) property. By default, the value will be `Default`.
-
-{% tabs %}
-{% highlight xaml%}
-<syncfusion:SfTreeView x:Name="treeView" ScrollBarVisibility="Always" />
-{% endhighlight %}
-{% highlight c# hl_lines="2" %}
-SfTreeView treeView = new SfTreeView();
-treeView.ScrollBarVisibility = ScrollBarVisibility.Always;
-{% endhighlight %}
-{% endtabs %}
-
 ## Horizontal scrolling 
 
 The TreeView allows you to enable horizontal scrolling based on the content by setting the [EnableHorizontalScrolling](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_EnableHorizontalScrolling) property to `True`. By default, this property is set to `False`.
@@ -120,5 +106,26 @@ The TreeView allows you to enable horizontal scrolling based on the content by s
 {% highlight xaml hl_lines="2" %}
 <syncfusion:SfTreeView x:Name="treeView" 
                        EnableHorizontalScrolling="True" />
+{% endhighlight %}
+{% endtabs %}
+
+## Scrollbar visibility
+
+The TreeView allows showing or hiding the scrollbars using the `VerticalScrollBarVisibility` and `HorizontalScrollBarVisibility` properties. By default, both are set to `Default`.
+
+{% tabs %}
+{% highlight xaml hl_lines="2 3" %}
+
+<syncfusion:SfTreeView x:Name="treeView" 
+                       VerticalScrollBarVisibility="Always" 
+                       HorizontalScrollBarVisibility="Always" />
+
+{% endhighlight %}
+{% highlight c# hl_lines="2 3" %}
+
+SfTreeView treeView = new SfTreeView();
+treeView.VerticalScrollBarVisibility = ScrollBarVisibility.Always;
+treeView.HorizontalScrollBarVisibility = ScrollBarVisibility.Always;
+
 {% endhighlight %}
 {% endtabs %}

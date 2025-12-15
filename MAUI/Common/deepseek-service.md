@@ -1,15 +1,15 @@
 ---
 layout: post
-title: DeepSeek AI for AI-Powered Text Editor | Syncfusion®
-description: Learn how to integrate the DeepSeek AI services with Syncfusion<sup>&reg;</sup> AI-Powered Text Editor (SfSmartTextEditor) control.
+title: DeepSeek AI for AI-Powered Components | Syncfusion®
+description: Learn how to integrate the DeepSeek AI services with Syncfusion<sup>&reg;</sup> AI-Powered Components.
 platform: maui
-control: SfSmartTextEditor
+control: SmartComponents
 documentation: ug
 ---
 
-# DeepSeek AI Integration with .NET MAUI Smart Text Editor
+# DeepSeek AI Integration with .NET MAUI Smart Components
 
-The Syncfusion [.NET MAUI Smart Text Editor] (SfSmartTextEditor) can provide AI-powered suggestions while typing. You can integrate DeepSeek using the `IChatInferenceService` interface, which standardizes communication between the editor and your custom AI service.
+The Syncfusion .NET MAUI AI-powered components can enhance applications with intelligent capabilities. You can integrate DeepSeek using the `IChatInferenceService` interface, which standardizes communication between the editor and your custom AI service.
 
 ## Setting Up DeepSeek
 
