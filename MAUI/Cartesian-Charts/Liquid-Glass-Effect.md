@@ -68,7 +68,6 @@ var glass = new SfGlassEffectsView
     Padding = 12,
     EffectType = GlassEffectType.Regular, // Regular (blurrier) or Clear (glassy)
     EnableShadowEffect = true,
-    LiquidGlassEffect = true,
     Content = chart
 };
 
@@ -85,7 +84,7 @@ var glass = new SfGlassEffectsView
 
 ### Best Practices and Tips
 
-- Hosting the chart inside [SfGlassEffectsView]() gives the chart body an acrylic look.
+- Host the chart inside an [SfGlassEffectsView]() to give the chart body a glass appearance.
 - Liquid glass effects are most visible over images or colorful backgrounds.
 - Use EffectType="Regular" for a blurrier look and EffectType="Clear" for a crisper, glassy look.
 - Tune CornerRadius and Padding to balance content density and visual polish.

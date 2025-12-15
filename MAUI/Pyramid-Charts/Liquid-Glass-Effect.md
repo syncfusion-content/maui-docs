@@ -12,7 +12,7 @@ keywords: .net maui chart, cupertino theme, glass effect, maui cupertino chart, 
 
 The Liquid Glass Effect is a modern design style that provides a sleek, minimalist appearance with clean lines, subtle visual effects, and elegant styling. It features smooth rounded corners and sophisticated visual treatments that create a polished, professional look for your charts.
 
-N> The liquid glass effect is only available on macOS and iOS platforms with iOS version 26 or higher.
+N> The liquid glass effect is only available on macOS and iOS platforms with version 26 or higher.
 
 ## How it Enhances Chart UI on macOS and iOS
 
@@ -67,7 +67,7 @@ var glass = new SfGlassEffectsView
 
 ### Best Practices and Tips
 
-- Hosting the chart inside [SfGlassEffectsView]() gives the chart body an acrylic look.
+- Host the chart inside an [SfGlassEffectsView]() to give the chart body a glass appearance.
 - Liquid glass effects are most visible over images or colorful backgrounds.
 - Use EffectType="Regular" for a blurrier look and EffectType="Clear" for a crisper, glassy look.
 - Tune CornerRadius and Padding to balance content density and visual polish.

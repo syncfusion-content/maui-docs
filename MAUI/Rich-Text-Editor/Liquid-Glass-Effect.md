@@ -11,7 +11,7 @@ documentation: ug
 
 The Liquid Glass Effect is a modern design style that provides a sleek, minimalist appearance with clean lines, subtle visual effects, and elegant styling. It features smooth rounded corners, refined color palettes, and sophisticated visual treatments that create a polished, professional look for your RichTextEditor.
 
-N> The liquid glass effect is only available on macOS and iOS platforms with iOS version 26 or higher.
+N> The liquid glass effect is only available on macOS and iOS platforms with version 26 or higher.
 
 ## How it Enhances RichTextEditor UI on macOS and iOS
 
