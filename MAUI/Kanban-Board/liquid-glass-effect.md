@@ -27,7 +27,7 @@ Set the `EnableLiquidGlassEffect` property to `true` in the `SfKanban` control t
 
 ### Step 3: Customize the background
 
-To achieve a glass like background in the Kanban control, set its Background property to Transparent and apply theme keys with transparent values to enable the liquid glass effect for kanban child elements. This ensures a consistent look and feel across your application.
+To achieve a glass like background in the Kanban control, set its `Background` property to `Transparent` and apply theme keys with transparent values to enable the liquid glass effect for kanban child elements. This ensures a consistent look and feel across your application.
 
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the `Kanban` control:
 
