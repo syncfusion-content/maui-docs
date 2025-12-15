@@ -491,8 +491,8 @@ This page lists the keys associated with each control and the respective UI elem
     <td> Stroke thickness for the stop responding view.<br/><br/></td>
 </tr>
 <tr>
-    <td> SfAIAssistViewSelectionTextHighLightColor<br/><br/></td>
-    <td> Color to highlight the selected text. <br/><br/></td>
+<td> SfAIAssistViewSelectionTextHighLightColor<br/><br/></td>
+<td> Color to highlight the selected text. <br/><br/></td>
 </tr>
 <tr> 
 <td> SfAIAssistViewHeaderSuggestionBackground<br/><br/></td>
