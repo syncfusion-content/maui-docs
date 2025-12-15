@@ -59,7 +59,7 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
 </Grid>
 
 {% endhighlight %}
-{% highlight c# hl_lines="18 20 21 22 44 45" %}
+{% highlight c# hl_lines="19 21 22 23 37 38" %}
 
 var gradientBrush = new LinearGradientBrush
 {
@@ -78,19 +78,12 @@ var grid = new Grid
     Background = gradientBrush
 };
 
-var glassView = new SfGlassEffectsView
-{
-    CornerRadius = 20,
-    EffectType = LiquidGlassEffectType.Clear,
-    EnableShadowEffect = true
-};
-
 var stackLayout = new StackLayout();
-var glassView = new SfGlassEffectsView
+var glassView = new SfGlassEffectView
 {
     HeightRequest = 18,
     CornerRadius = 9,
-    EffectType = GlassEffectType.Clear
+    EffectType = LiquidGlassEffectType.Clear
 };
 
 var linearProgressBar = new SfLinearProgressBar
