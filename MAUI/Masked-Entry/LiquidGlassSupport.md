@@ -24,7 +24,7 @@ The  [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 XAML example Wrap the `SfMaskedEntry` in an `SfGlassEffectsView` and adjust visual properties to achieve the desired glass effect.
 
 {% tabs %}
-{% highlight xaml hl_lines="54" %}
+{% highlight xaml hl_lines="20" %}
 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
@@ -44,19 +44,17 @@ XAML example Wrap the `SfMaskedEntry` in an `SfGlassEffectsView` and adjust visu
                 EnableShadowEffect="True">
 
                 <inputs:SfMaskedEntry
-                    Value="1234.56"
-                    FormatString="N2"
-                    Placeholder="Enter amount"
-                    Maximum="1000000"
+                    WidthRequest="200"
                     Background="Transparent"
-                    Minimum="0"
-                    showClearButton="True" />
+                    ClearButtonVisibility="WhileEditing"
+                    MaskType="RegEx"
+                    Mask="[A-Za-z0-9._%-]+@[A-Za-z0-9]+.[A-Za-z]{2,3}" />
             </core:SfGlassEffectsView>
     </Grid>
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# hl_lines="82" %}
+{% highlight c# hl_lines="8" %}
 
 using Syncfusion.Maui.Core;
 using Syncfusion.Maui.Inputs;
@@ -71,13 +69,11 @@ var glassEffect = new SfGlassEffectsView
 
 var maskedEntry = new SfMaskedEntry
 {
-    Value = 1234.56,
-    FormatString = "N2",
-    Placeholder = "Enter amount",
-    Maximum = 1_000_000,
-    Minimum = 0,
-    Background= Colors.Transparent,
-    ShowClearButton=true
+    WidthRequest = 200,
+    ClearButtonVisibility = ClearButtonVisibility.WhileEditing,
+    MaskType = MaskedEntryMaskType.RegEx,
+    Background=Colors.Transparent,
+    Mask = "[A-Za-z0-9._%-]+@[A-Za-z0-9]+.[A-Za-z]{2,3}"
 };
 
 glassEffect.Content = maskedEntry;
@@ -87,3 +83,5 @@ glassEffect.Content = maskedEntry;
 
 
 The following screenshot illustrates SfMaskedEntry within an acrylic container using the glass effect.
+
+![Masked entry with liquid glass support](MaskedEntry_Images/Maskedentry_liquidglass.png)

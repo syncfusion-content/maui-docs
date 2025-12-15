@@ -21,7 +21,7 @@ The  [SfDateTimeRangeSelector](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 XAML example The thumb’s glass effect appears only while it is pressed/dragged.
 
 {% tabs %}
-{% highlight xaml hl_lines="49 52" %}
+{% highlight xaml hl_lines="20" %}
 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
@@ -48,7 +48,7 @@ XAML example The thumb’s glass effect appears only while it is pressed/dragged
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# hl_lines="74 77" %}
+{% highlight c# hl_lines="8" %}
 
 using Syncfusion.Maui.Sliders;
 
@@ -65,5 +65,7 @@ SfDateTimeRangeSelector rangeSelector = new SfDateTimeRangeSelector()
 {% endtabs %}
 
 The following screenshot illustrates SfRangeSlider with the glass effect visible on the thumb while it is pressed.
+
+![date time range selector with liquid glass support](images/getting-started/rangeslider_liquidglass.gif)
 
 N> The glass effect is applied to the thumb only while it is pressed/dragged.

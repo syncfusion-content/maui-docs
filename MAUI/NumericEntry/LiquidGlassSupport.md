@@ -24,7 +24,7 @@ The  [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs
 XAML example Wrap the `SfNumericEntry` in an `SfGlassEffectsView` and adjust visual properties to achieve the desired glass effect.
 
 {% tabs %}
-{% highlight xaml hl_lines="54" %}
+{% highlight xaml hl_lines="31" %}
 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
@@ -50,13 +50,13 @@ XAML example Wrap the `SfNumericEntry` in an `SfGlassEffectsView` and adjust vis
                 Maximum="1000000"
                 Background="Transparent"
                 Minimum="0"
-                showClearButton="True" />
+                ShowClearButton="True" />
         </core:SfGlassEffectsView>
     </Grid>
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# hl_lines="82" %}
+{% highlight c# hl_lines="19" %}
 
 using Syncfusion.Maui.Core;
 using Syncfusion.Maui.Inputs;
@@ -87,3 +87,5 @@ glassEffect.Content = numericEntry;
 
 
 The following screenshot illustrates SfNumericEntry within an acrylic container using the glass effect.
+
+![numeric entry with liquid glass support](GettingStarted_images/NumericEntry_liquidGlass.png)

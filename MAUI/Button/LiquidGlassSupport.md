@@ -20,7 +20,7 @@ The [SfButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfBut
 XAML example Enable the glass effect on `SfButton`. When pressed, the button will `scale` while the effect is enabled.
 
 {% tabs %}
-{% highlight xaml hl_lines="49 52" %}
+{% highlight xaml hl_lines="16 17" %}
 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
@@ -38,6 +38,7 @@ XAML example Enable the glass effect on `SfButton`. When pressed, the button wil
                 x:Name="GlassButton"
                 Text="Continue"
                 EnableLiquidGlassEffect="True"
+                Background="Transparent"
                 WidthRequest="180"
                 CornerRadius="24"
                 HeightRequest="48" />
@@ -46,7 +47,7 @@ XAML example Enable the glass effect on `SfButton`. When pressed, the button wil
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# hl_lines="74 77" %}
+{% highlight c# hl_lines="7 9" %}
 
 using Syncfusion.Maui.Buttons;
 
@@ -56,6 +57,7 @@ var glassButton = new SfButton
     AutomationId = "Acrylic Button",
     EnableLiquidGlassEffect = true, // Enables glass look and press-time scaling
     WidthRequest = 180,
+    Background=Colors.Transparent;
     HeightRequest = 48
 };
 
@@ -63,3 +65,5 @@ var glassButton = new SfButton
 {% endtabs %}
 
 The following screenshot illustrates SfButton with the glass effect enabled and the pressed-state scaling behavior over a wallpaper background.
+
+![button with liquid glass support](Images/customization-images/Button_liquidglass.png)

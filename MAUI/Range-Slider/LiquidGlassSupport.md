@@ -10,7 +10,7 @@ documentation: ug
 
 # Liquid glass support:
 
-The  [SfRangeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html) provides `liquid glass` effect for its thumb(s) when [EnableLiquidGlassEffect]() is enabled. The frosted, translucent effect is applied only while the user is pressing/dragging the thumb, creating a subtle, responsive visual that blends with the content behind it. This enhances visual feedback without altering the slider’s appearance at rest, and works well over images or colorful layouts.
+The  [SfRangeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfRangeSlider.html) provides `liquid glass` effect for its thumbs when [EnableLiquidGlassEffect]() is enabled. The frosted, translucent effect is applied only while the user is pressing/dragging the thumb, creating a subtle, responsive visual that blends with the content behind it. This enhances visual feedback without altering the slider’s appearance at rest, and works well over images or colorful layouts.
 
 ## Availability
 
@@ -21,7 +21,7 @@ The  [SfRangeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders
 XAML example The thumb’s glass effect appears only while it is pressed/dragged.
 
 {% tabs %}
-{% highlight xaml hl_lines="49 52" %}
+{% highlight xaml hl_lines="18" %}
 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
@@ -46,7 +46,7 @@ XAML example The thumb’s glass effect appears only while it is pressed/dragged
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# hl_lines="74 77" %}
+{% highlight c# hl_lines="7" %}
 
 using Syncfusion.Maui.Sliders;
 
@@ -61,5 +61,7 @@ var rangeSlider = new SfRangeSlider
 {% endtabs %}
 
 The following screenshot illustrates SfRangeSlider with the glass effect visible on the thumb while it is pressed.
+
+![range slider with liquid glass support](images/getting-started/rangeslider_liquidglass.gif)
 
 N> The glass effect is applied to the thumb only while it is pressed/dragged.

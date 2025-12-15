@@ -19,7 +19,7 @@ The [Chips](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html
 3. On platforms/versions below these requirements, the glass effect is not applied and the chips render with the standard background.
 
 {% tabs %}
-{% highlight xaml hl_lines="49 52" %}
+{% highlight xaml hl_lines="17" %}
 
 XAML example Enable the glass effect on SfChipGroup by setting EnableLiquidGlassEffect to True.
 
@@ -41,11 +41,11 @@ XAML example Enable the glass effect on SfChipGroup by setting EnableLiquidGlass
                 x:Name="FilterChips"
                 EnableLiquidGlassEffect="True">
                 <chip:SfChipGroup.Items>
-                    <chip:SfChip Text="Extra Small" Background="Blue"/>
-                    <chip:SfChip Text="Small" Background="Blue"/>
-                    <chip:SfChip Text="Medium" Background="Blue"/>
-                    <chip:SfChip Text="Large" Background="Blue"/>
-                    <chip:SfChip Text="Extra Large" Background="Blue"/>
+                    <chip:SfChip Text="Extra Small"/>
+                    <chip:SfChip Text="Small" />
+                    <chip:SfChip Text="Medium" />
+                    <chip:SfChip Text="Large"/>
+                    <chip:SfChip Text="Extra Large"/>
                 </chip:SfChipGroup.Items>
             </core:SfChipGroup>
         </StackLayout>
@@ -53,7 +53,7 @@ XAML example Enable the glass effect on SfChipGroup by setting EnableLiquidGlass
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# hl_lines="74 77" %}
+{% highlight c# hl_lines="5" %}
 
 using Syncfusion.Maui.Core;
 
@@ -73,3 +73,5 @@ chipGroup.Items.Add(new SfChip(){Text="Extra Large", Background = Colors.Blue })
 
 
 The following screenshot illustrates SfChipGroup with the built-in glass effect enabled via EnableLiquidGlassEffect, displayed over a wallpaper background.
+
+![chips with liquid glass support](images/customization-images/Chip_liquidglass.png)
