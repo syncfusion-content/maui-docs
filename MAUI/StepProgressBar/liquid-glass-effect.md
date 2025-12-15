@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Liquid Glass Support for .NET MAUI Step ProgressBar | Syncfusion®
-description: Learn how to enable liquid glass support for the Syncfusion® .NET MAUI Step ProgressBar (SfStepProgressBar) control using SfGlassEffectsView.
+description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI Step ProgressBar (SfStepProgressBar) control.
 platform: MAUI
 control: SfStepProgressBar
 documentation: ug
@@ -9,21 +9,23 @@ documentation: ug
 
 # Liquid Glass Support
 
-The [SfStepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html) supports a liquid glass appearance by hosting the control inside the Syncfusion [SfGlassEffectsView](). You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when the step progressbar is placed over images or colorful layouts.
+The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Step ProgressBar (SfStepProgressBar) control.
 
-N> This feature is supported only on `.NET 10`
+## Apply liquid glass effect
 
-## Supported Platforms
+Follow these steps to enable and configure the Liquid Glass Effect in the Step ProgressBar control:
 
-* macOS 26 or higher
-* iOS 26 or higher
+### Step 1: Wrap the control inside glass effect view
 
-## Prerequisites
+To apply the Liquid Glass Effect to Syncfusion® .NET MAUI [StepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html) control, wrap the control inside the `SfGlassEffectView` class.
 
-* Add the [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) package (for SfGlassEffectsView).
-* Add the [Syncfusion.Maui.ProgressBar](https://www.nuget.org/packages/Syncfusion.Maui.ProgressBar/) package (for SfStepProgressBar).
+For more details, refer to the [Liquid Glass Getting Started documentation](https://help.syncfusion.com/maui/liquid-glass-ui/getting-started).
 
-## Apply Liquid Glass Effect to SfStepProgressBar
+### Step 2: Customize the background
+
+To achieve a glass like background in the Step ProgressBar, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
+
+The following code snippet demonstrates how to apply the Liquid Glass Effect to the [SfStepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html) control:
 
 {% tabs %}
 {% highlight xaml %}
@@ -36,39 +38,52 @@ xmlns:stepProgressBar="clr-namespace:Syncfusion.Maui.ProgressBar;assembly=Syncfu
     <local:ViewModel />
 </ContentPage.BindingContext>
 
-<stepProgressBar:SfStepProgressBar x:Name="stepProgress"
-                                   VerticalOptions="Center"
+<Grid>
+    <Grid.Background>
+        <LinearGradientBrush StartPoint="0,0"
+                             EndPoint="0,1">
+            <GradientStop Color="#0F4C75"
+                          Offset="0.0" />
+            <GradientStop Color="#3282B8"
+                          Offset="0.5" />
+            <GradientStop Color="#1B262C"
+                          Offset="1.0" />
+        </LinearGradientBrush>
+    </Grid.Background>
+    <stepProgressBar:SfStepProgressBar x:Name="stepProgress"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"
+                                       Orientation="Horizontal"
+                                       LabelSpacing="12"
+                                       ActiveStepIndex="2"
+                                       ActiveStepProgressValue="60"
+                                       ProgressAnimationDuration="2500"
+                                       ItemsSource="{Binding StepProgressItem}">
+        <stepProgressBar:SfStepProgressBar.StepTemplate>
+            <DataTemplate>
+                <Grid>
+                    <core:SfGlassEffectView WidthRequest="32"
+                                            HeightRequest="32"
+                                            CornerRadius="16"
+                                            Background="#007AFF">
+                        <Border Background="Transparent"
+                                Margin="0.5">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="15" />
+                            </Border.StrokeShape>
+                            <Label Text="&#xe70c;"
+                                   FontFamily="MauiMaterialAssets"
                                    HorizontalOptions="Center"
-                                   Orientation="Horizontal"
-                                   LabelSpacing="12"
-                                   ActiveStepIndex="2"
-                                   ActiveStepProgressValue="60"
-                                   ProgressAnimationDuration="2500"
-                                   ItemsSource="{Binding StepProgressItem}">
-    <stepProgressBar:SfStepProgressBar.StepTemplate>
-        <DataTemplate>
-            <Grid>
-                <core:SfGlassEffectView WidthRequest="32"
-                                        HeightRequest="32"
-                                        CornerRadius="16"
-                                        Background="#007AFF">
-                    <Border Background="Transparent"
-                            Margin="0.5">
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="15" />
-                        </Border.StrokeShape>
-                        <Label Text="&#xe70c;"
-                               FontFamily="MauiMaterialAssets"
-                               HorizontalOptions="Center"
-                               VerticalOptions="Center"
-                               TextColor="White"
-                               FontSize="20" />
-                    </Border>
-                </core:SfGlassEffectView>
-            </Grid>
-        </DataTemplate>
-    </stepProgressBar:SfStepProgressBar.StepTemplate>
-</stepProgressBar:SfStepProgressBar>
+                                   VerticalOptions="Center"
+                                   TextColor="White"
+                                   FontSize="20" />
+                        </Border>
+                    </core:SfGlassEffectView>
+                </Grid>
+            </DataTemplate>
+        </stepProgressBar:SfStepProgressBar.StepTemplate>
+    </stepProgressBar:SfStepProgressBar>
+</Grid>
 
 {% endhighlight %}
 {% highlight c# %}
@@ -129,7 +144,8 @@ var stepTemplate = new DataTemplate(() =>
 });
 
 stepProgressBar.StepTemplate = stepTemplate;
-this.Content = stepProgressBar;
+grid.Children.Add(stepProgressBar);
+this.Content = grid;
 
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel.cs" %}
@@ -170,17 +186,5 @@ public class ViewModel
 {% endtabs %}
 
 N>
-* Liquid Glass effects are most visible over images or colorful backgrounds.
-* Use EffectType="Regular" for a blurrier look and "Clear" for a glassy look.
-
-## Key Properties
-
-* [EffectType](): Choose between Regular (blurry) and Clear (glassy) effects.
-* [EnableShadowEffect](): Enables a soft shadow around the acrylic container.
-* [CornerRadius](): Rounds the corners of the acrylic container.
-* Padding/Height/Width: Adjust layout around the embedded step progressbar.
-
-## Best Practices and Tips
-
-* Hosting the step progressbar inside [SfGlassEffectsView]() gives the step progressbar body an acrylic look.
-* For the most noticeable effect, place the control over images or vibrant backgrounds.
+* Supported on `macOS 26 or higher` and `iOS 16 or higher`.
+* This feature is available only in `.NET 10.`

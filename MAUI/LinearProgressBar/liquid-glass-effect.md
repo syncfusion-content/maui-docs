@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Liquid Glass Support for .NET MAUI Linear ProgressBar | Syncfusion®
-description: Learn how to enable liquid glass support for the Syncfusion® .NET MAUI Linear ProgressBar (SfLinearProgressBar) control using SfGlassEffectsView.
+description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI Linear ProgressBar (SfLinearProgressBar) control.
 platform: MAUI
 control: SfLinearProgressBar
 documentation: ug
@@ -9,21 +9,23 @@ documentation: ug
 
 # Liquid Glass Support
 
-The [SfLinearProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html) supports a liquid glass appearance by hosting the control inside the Syncfusion [SfGlassEffectsView](). You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when the linear progressbar is placed over images or colorful layouts.
+The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Linear ProgressBar (SfLinearProgressBar) control.
 
-N> This feature is supported only on `.NET 10`
+## Apply liquid glass effect
 
-## Supported Platforms
+Follow these steps to enable and configure the Liquid Glass Effect in the Linear ProgressBar control:
 
-* macOS 26 or higher
-* iOS 26 or higher
+### Step 1: Wrap the control inside glass effect view
 
-## Prerequisites
+To apply the Liquid Glass Effect to Syncfusion® .NET MAUI [LinearProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html) control, wrap the control inside the `SfGlassEffectView` class.
 
-* Add the [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) package (for SfGlassEffectsView).
-* Add the [Syncfusion.Maui.ProgressBar](https://www.nuget.org/packages/Syncfusion.Maui.ProgressBar/) package (for SfLinearProgressBar).
+For more details, refer to the [Liquid Glass Getting Started documentation](https://help.syncfusion.com/maui/liquid-glass-ui/getting-started).
 
-## Apply Liquid Glass Effect to SfLinearProgressBar
+### Step 2: Customize the background
+
+To achieve a glass like background in the Linear ProgressBar, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
+
+The following code snippet demonstrates how to apply the Liquid Glass Effect to the [SfLinearProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html) control:
 
 {% tabs %}
 {% highlight xaml %}
@@ -32,26 +34,63 @@ N> This feature is supported only on `.NET 10`
 xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
 xmlns:progressBar="clr-namespace:Syncfusion.Maui.ProgressBar;assembly=Syncfusion.Maui.ProgressBar"
 
-<StackLayout>
-    <core:SfGlassEffectView HeightRequest="18"
-                            CornerRadius="9"
-                            EffectType="Clear">
-        <progressBar:SfLinearProgressBar x:Name="linearProgressBar"
-                                        TrackHeight="8"
-                                        ProgressHeight="8"
-                                        ProgressCornerRadius="8"
-                                        TrackCornerRadius="8"
-                                        Progress="75"
-                                        Margin="5"
-                                        BackgroundColor="Transparent"/>
-    </core:SfGlassEffectView>
-</StackLayout>
+<Grid>
+    <Grid.Background>
+        <LinearGradientBrush StartPoint="0,0"
+                             EndPoint="0,1">
+            <GradientStop Color="#0F4C75"
+                          Offset="0.0" />
+            <GradientStop Color="#3282B8"
+                          Offset="0.5" />
+            <GradientStop Color="#1B262C"
+                          Offset="1.0" />
+        </LinearGradientBrush>
+    </Grid.Background>
+    <StackLayout>
+        <core:SfGlassEffectView HeightRequest="18"
+                                CornerRadius="9"
+                                EffectType="Clear">
+            <progressBar:SfLinearProgressBar x:Name="linearProgressBar"
+                                             TrackHeight="8"
+                                             ProgressHeight="8"
+                                             ProgressCornerRadius="8"
+                                             TrackCornerRadius="8"
+                                             Progress="75"
+                                             Margin="5"
+                                             BackgroundColor="Transparent" />
+        </core:SfGlassEffectView>
+    </StackLayout>
+</Grid>
 
 {% endhighlight %}
 {% highlight c# %}
 
 using Syncfusion.Maui.Core;
 using Syncfusion.Maui.ProgressBar;
+
+var gradientBrush = new LinearGradientBrush
+{
+    StartPoint = new Point(0, 0),
+    EndPoint = new Point(0, 1),
+    GradientStops = new GradientStopCollection
+    {
+        new GradientStop { Color = Color.FromArgb("#0F4C75"), Offset = 0.0f },
+        new GradientStop { Color = Color.FromArgb("#3282B8"), Offset = 0.5f },
+        new GradientStop { Color = Color.FromArgb("#1B262C"), Offset = 1.0f }
+    }
+};
+
+var grid = new Grid
+{
+    Background = gradientBrush
+};
+
+var glassView = new SfGlassEffectsView
+{
+    CornerRadius = 20,
+    EffectType = LiquidGlassEffectType.Clear,
+    EnableShadowEffect = true
+};
 
 var stackLayout = new StackLayout();
 var glassView = new SfGlassEffectsView
@@ -74,23 +113,12 @@ var linearProgressBar = new SfLinearProgressBar
 
 glassView.Content = linearProgressBar;
 stackLayout.Children.Add(glass);
-this.Content = stackLayout;
+grid.Children.Add(glassView);
+this.Content = grid;
 
 {% endhighlight %}
 {% endtabs %}
 
 N>
-* Liquid Glass effects are most visible over images or colorful backgrounds.
-* Use EffectType="Regular" for a blurrier look and "Clear" for a glassy look.
-
-## Key Properties
-
-* [EffectType](): Choose between Regular (blurry) and Clear (glassy) effects.
-* [EnableShadowEffect](): Enables a soft shadow around the acrylic container.
-* [CornerRadius](): Rounds the corners of the acrylic container.
-* Padding/Height/Width: Adjust layout around the embedded linear progressbar.
-
-## Best Practices and Tips
-
-* Hosting the linear progressbar inside [SfGlassEffectsView]() gives the linear progressbar body an acrylic look.
-* For the most noticeable effect, place the control over images or vibrant backgrounds.
+* Supported on `macOS 26 or higher` and `iOS 16 or higher`.
+* This feature is available only in `.NET 10.`
