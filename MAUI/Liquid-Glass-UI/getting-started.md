@@ -102,6 +102,8 @@ xmlns:button="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.But
 	
 {% endhighlight %}
 {% endtabs %}
+
+![liquid-glass-ui-with-clear-effect-type-in-.net-maui](images/getting-started/liquid-glass-ui-with-clear-effect-type-in-.net-maui.png)
    
 ### Corner radius
 
@@ -174,6 +176,8 @@ Defines the corner radius for the view, enabling customization of its shape such
 {% endhighlight %}
 {% endtabs %}
 
+![liquid-glass-ui-with-corner-radius-in-.net-maui](images/getting-started/liquid-glass-ui-with-corner-radius-in-.net-maui.png)
+
 ### Enable shadow effect
 
 Adds a soft shadow to the content within the glass view, creating depth and a more realistic appearance.
@@ -245,6 +249,8 @@ Adds a soft shadow to the content within the glass view, creating depth and a mo
 {% endhighlight %}
 {% endtabs %}
 
+![liquid-glass-ui-with-shadow-in-.net-maui](images/getting-started/liquid-glass-ui-with-shadow-in-.net-maui.png)
+
 ### Set background color
 
 Applies a background tint color to the glass view, to enhance modern UI styling and improve readability.
@@ -315,6 +321,8 @@ Applies a background tint color to the glass view, to enhance modern UI styling 
 	
 {% endhighlight %}
 {% endtabs %}
+
+![liquid-glass-ui-with-background-in-.net-maui](images/getting-started/liquid-glass-ui-with-background-in-.net-maui.png)
 
 ## Interactive Glass Effect
 
