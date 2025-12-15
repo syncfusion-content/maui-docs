@@ -9,7 +9,7 @@ documentation: ug
 
 # Liquid Glass Support for .NET MAUI TabView:
 
-The [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1) supports a liquid glass effect (also called acrylic or glassmorphism) when you enable `EnableLiquidGlassEffect`. This feature applies a frosted, translucent style that blends seamlessly with the background, giving the Tab View a modern and elegant look. The effect is rendered dynamically during loading and user interaction, creating a subtle, responsive visual without changing the Tab View’s default structure. It works best over vibrant images or colorful layouts, enhancing depth and providing a stylish appearance to your application.
+The [SfTabView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html?tabs=tabid-1) supports a liquid glass effect (also called acrylic or glass morphism) when you enable `EnableLiquidGlassEffect`. This feature applies a frosted, translucent style that blends seamlessly with the background, giving the Tab View a modern and elegant look. The effect is rendered dynamically during loading and user interaction, creating a subtle, responsive visual without changing the Tab View’s default structure. It works best over vibrant images or colorful layouts, enhancing depth and providing a stylish appearance to your application.
 
 ## Availability
 
