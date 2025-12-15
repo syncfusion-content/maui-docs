@@ -20,7 +20,7 @@ The Liquid Glass Effect enhances chart interactivity with liquid glass effects o
 
 ## Apply Liquid Glass Effect to SfFunnelChart
 
-Wrap the SfFunnelChart inside an [SfGlassEffectsView]() to give the chart surface a glass (blurred or clear) appearance. SfGlassEffectsView is available in the [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) package. To apply the glassy effect to the chart’s tooltips, set the SfFunnelChart property [EnableLiquidGlassEffect]() to `True`.
+Wrap the SfFunnelChart inside an [SfGlassEffectsView]() to give the chart surface a glass (blurred or clear) appearance. SfGlassEffectsView is available in the [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) package. To apply the glassy effect to the chart’s tooltips, set the [EnableLiquidGlassEffect]() property of SfFunnelChart to `True`.
 
 {% tabs %}
 

@@ -20,7 +20,7 @@ The Liquid Glass Effect enhances chart interactivity with liquid glass effects o
 
 ## Apply Liquid Glass Effect to SfCartesianChart
 
-Wrap the SfCartesianChart inside an [SfGlassEffectsView]() to give the chart surface a glass (blurred or clear) appearance. SfGlassEffectsView is available in the [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) package. To apply the glassy effect to the chart’s tooltips and trackballs, set the SfCartesianChart property [EnableLiquidGlassEffect]() to `True`.
+Wrap the SfCartesianChart inside an [SfGlassEffectsView]() to give the chart surface a glass (blurred or clear) appearance. SfGlassEffectsView is available in the [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) package. To apply the glassy effect to the chart’s tooltips and trackballs, set the [EnableLiquidGlassEffect]() property of SfCartesianChart to `True`.
 
 {% tabs %}
 
