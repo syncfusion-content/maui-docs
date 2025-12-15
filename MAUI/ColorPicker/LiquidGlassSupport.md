@@ -44,6 +44,6 @@ SfColorPicker colorPicker = new SfColorPicker
 - Visual output and performance may vary by device/platform; keep backgrounds moderately detailed to maintain clarity during interaction.
 - For an enhanced UI, set `SliderThumbStroke="Transparent"` and `SliderThumbFill="White"` at the sample level for the color picker.
 
-The following GIF demonstrates the liquid glass effect
+The following GIF demonstrates the liquid glass effect of Color Picker
 
 ![Liquid Glass](images/LiquidGlass/liquid-glass.gif)

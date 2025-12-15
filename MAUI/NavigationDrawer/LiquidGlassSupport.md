@@ -45,7 +45,7 @@ SfNavigationDrawer navigationDrawer = new SfNavigationDrawer
 - Visual output and performance may vary by device/platform; keep backgrounds moderately detailed to maintain clarity during interaction.
 - For an enhanced UI, set `ContentBackground="Transparent"` for the `DrawerSettings` and `Background="Transparent"` for the `ContentView` at the sample .
 
-The following GIF demonstrates the liquid glass effect
+The following GIF demonstrates the liquid glass effect of Navigation Drawer
 
 ![Liquid Glass](images/LiquidGlass/liquid-glass.gif)
 

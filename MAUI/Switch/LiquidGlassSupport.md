@@ -43,6 +43,6 @@ SfSwitch aSwitch = new SfSwitch
 - Place the switch over visually rich content (images, gradients, or color blocks) to better showcase the transient glass effect.
 - Visual output and performance may vary by device/platform; keep backgrounds moderately detailed to maintain clarity during interaction.
 
-The following GIF demonstrates the liquid glass effect
+The following GIF demonstrates the liquid glass effect of Switch
 
 ![Liquid Glass](images/LiquidGlass/liquid-glass.gif)
