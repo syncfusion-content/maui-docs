@@ -9,7 +9,7 @@ documentation: ug
 
 # Liquid Glass Support
 
-The `SfKanban` supports a liquid glass effect by setting the [EnableLiquidGlassEffect]() property to true. This enhances visual depth and readability when kanban control placed over images or colorful layouts.
+The [SfKanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) supports a liquid glass effect by setting the [EnableLiquidGlassEffect]() property to true. This enhances visual depth and readability when kanban control placed over images or colorful layouts.
 
 ## Platform and Version Support
 
@@ -357,4 +357,4 @@ public class KanbanViewModel
 N>
 * Liquid Glass effects are most visible over images or colorful backgrounds.
 
-The following screenshot illustrates `SfCardView` with the liquid glass effect enabled over a colorful background.
+The following screenshot illustrates [SfKanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) with the liquid glass effect enabled over a colorful background.

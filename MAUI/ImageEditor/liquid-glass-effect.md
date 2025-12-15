@@ -1,45 +1,61 @@
 ---
 layout: post
-title: Liquid Glass Support for .NET MAUI Image Editor Control | Syncfusion®
-description: Learn how to enable liquid glass support for the Syncfusion® .NET MAUI ImageEditor(SfImageEditor) control using SfGlassEffectsView.
+title: Liquid Glass Support for .NET MAUI Image Editor | Syncfusion®
+description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI Image Editor (SfImageEditor) control.
 platform: MAUI
 control: SfImageEditor
 documentation: ug
 ---
 
-# Liquid Glass Support
+# Liquid glass effect
 
-The `SfImageEditor` supports a liquid glass  appearance by hosting the control inside the Syncfusion [SfGlassEffectsView](). You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when the Image Editor is placed over images or colorful layouts.
+The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Image Editor (SfImageEditor) control.
 
-Additionally, you can apply the glass effect to the ImageEditor control by enabling the [EnableLiquidGlassEffect]() property.
+## Apply liquid glass effect
 
-## Platform and Version Support
+Follow these steps to enable and configure the Liquid Glass Effect in the Image Editor control:
 
-1. This feature is supported on .NET 10 or greater.
-2. This feature is supported on macOS 26 and iOS 26 or later.
-3. On platforms or versions below these requirements, the control renders without the acrylic blur effect and falls back to a standard background.
+### Step 1: Wrap the control inside glass effect view
 
-## Prerequisites
+To apply the Liquid Glass Effect to Syncfusion® .NET MAUI `ImageEditor` control, wrap the control inside the `SfGlassEffectView` class.
 
-- Add the [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) package (for SfGlassEffectsView).
-- Add the [Syncfusion.Maui.ImageEditor](https://www.nuget.org/packages/Syncfusion.Maui.ImageEditor/) package (for SfImageEditor).
+For more details, refer to the Liquid Glass Getting Started documentation.
 
-## Apply Liquid Glass Effect to SfImageEditor
+### Step 2: Enable the liquid glass effect on Image Editor
 
-Wrap the `SfImageEditor` inside an [SfGlassEffectsView]() to give the Image Editor surface a glass (blurred or clear) appearance.
+Set the `EnableLiquidGlassEffect` property to `true` in the `SfImageEditor` control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its dependent controls and provides responsive interaction for a smooth and engaging user experience.
+
+### Step 3: Customize the background
+
+To achieve a glass like background in the Image Editor and its Toolbar, set the `Background` property to `Transparent`.
+
+The background will then be treated as a tinted color, ensuring a consistent glass effect across the control.
+
+The following code snippet demonstrates how to apply the Liquid Glass Effect to the SfImageEditor control:
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14 15 16 21" %}
 
 <Grid>
-    <Image Source="liquidglassimage.jpg"
-           Aspect="AspectFill" />
+    <Grid.Background>
+        <LinearGradientBrush StartPoint="0,0" 
+                             EndPoint="0,1">
+            <GradientStop Color="#0F4C75" 
+                          Offset="0.0"/>
+            <GradientStop Color="#3282B8" 
+                          Offset="0.5"/>
+            <GradientStop Color="#1B262C" 
+                          Offset="1.0"/>
+        </LinearGradientBrush>
+    </Grid.Background>
 
-    <core:SfGlassEffectView>
+    <core:SfGlassEffectView EffectType="Regular"
+                            EnableShadowEffect="True"
+                            CornerRadius="20">
         <imageEditor:SfImageEditor x:Name="imageEditor"
                                    Background="Transparent"
                                    SelectionStroke="#AE97FF"
-                                   Source="{converters:SfImageResource Source={OnPlatform Default=imageeditordesktop.png, Android=imageeditormobile.png, iOS=imageeditormobile.png}}"
+                                   Source="editorimage.png"
                                    EnableLiquidGlassEffect="True">
             <imageEditor:SfImageEditor.ToolbarSettings>
                 <imageEditor:ImageEditorToolbarSettings Background="Transparent"
@@ -50,7 +66,7 @@ Wrap the `SfImageEditor` inside an [SfGlassEffectsView]() to give the Image Edit
 </Grid>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4 6 7 8 11" %}
 
 using Syncfusion.Maui.Core;
 using Syncfusion.Maui.ImageEditor;
@@ -58,7 +74,6 @@ using Syncfusion.Maui.ImageEditor;
 var glassView = new SfGlassEffectsView
 {
     CornerRadius = 20,
-    Padding = new Thickness(12),
     EffectType = LiquidGlassEffectType.Regular,
     EnableShadowEffect = true
 };
@@ -69,20 +84,6 @@ glassView.Content = this.imageEditor;
 {% endhighlight %}
 {% endtabs %}
 
-N>
-* Liquid Glass effects are most visible over images or colorful backgrounds.
-* Use EffectType="Regular" for a blurrier look and "Clear" for a glassy look.
-
-## Key Properties
-
-- [EffectType](): Choose between Regular (blurry) and Clear (glassy) effects.
-- [EnableShadowEffect](): Enables a soft shadow around the acrylic container.
-- [CornerRadius](): Rounds the corners of the acrylic container.
-- Padding/Height/Width: Adjust layout around the ImageEditor control.
-
-## Best Practices and Tips
-
-- Hosting the Image Editor control inside [SfGlassEffectsView]() gives the control body an acrylic look.
-- For the most noticeable effect, place the control over images or vibrant backgrounds.
-
-The following screenshot illustrates `SfImageEditor` hosted within an acrylic container, and the dialog mode using the glass effect.
+Note>
+* Supported on macOS 26 or higher and iOS 16 or higher.
+* This feature is available only in .NET 10.
