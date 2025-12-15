@@ -71,6 +71,23 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
 using Syncfusion.Maui.Core;
 using Syncfusion.Maui.ImageEditor;
 
+var gradientBrush = new LinearGradientBrush
+{
+    StartPoint = new Point(0, 0),
+    EndPoint = new Point(0, 1),
+    GradientStops = new GradientStopCollection
+    {
+        new GradientStop { Color = Color.FromArgb("#0F4C75"), Offset = 0.0f },
+        new GradientStop { Color = Color.FromArgb("#3282B8"), Offset = 0.5f },
+        new GradientStop { Color = Color.FromArgb("#1B262C"), Offset = 1.0f }
+    }
+};
+
+var grid = new Grid
+{
+    Background = gradientBrush
+};
+
 var glassView = new SfGlassEffectsView
 {
     CornerRadius = 20,
@@ -80,6 +97,8 @@ var glassView = new SfGlassEffectsView
 
 this.imageEditor.EnableLiquidGlassEffect = true;
 glassView.Content = this.imageEditor;
+grid.Children.Add(glassView);
+this.Content = grid;
 
 {% endhighlight %}
 {% endtabs %}
