@@ -7,157 +7,33 @@ control: SfBackdropPage
 documentation: ug
 ---
 
-# Liquid Glass Support
+# Liquid Glass Effect in .NET MAUI Backdrop Page (SfBackdropPage)
 
-The [SfBackdropPage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html) supports a liquid glass  appearance on both layers. Enable the effect directly on the [BackdropBackLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.BackdropBackLayer.html) and [BackdropFrontLayer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.BackdropFrontLayer.html) by setting their [EnableLiquidGlassEffect]() properties to true. This improves visual depth and readability when the backdrop layers are placed over images or colorful layouts.
+The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in .NET MAUI Backdrop Page's Front or Back layer.
 
-## Platform and Version Support
+## Apply liquid glass effect
 
-1. This feature is supported on .NET 10 or greater.
-2. This feature is supported on macOS 26 and iOS 26 or later.
-3. On platforms or versions below these requirements, the layers render without the acrylic blur effect and fall back to a standard background.
+Follow these steps to enable and configure the Liquid Glass Effect in the Front or Back Layer:
 
-## Prerequisites
+### Step 1: Enable the liquid glass effect on Front or Back Layer
 
-- Add the [Syncfusion.Maui.Backdrop](https://www.nuget.org/packages/Syncfusion.Maui.Backdrop) package (for SfBackdropPage, BackdropFrontLayer, BackdropBackLayer).
+Set the `EnableLiquidGlassEffect` property to `true` in the `SfBackdropPage` control's Front or Back Layer to apply the Liquid Glass Effect.
 
-## Apply Liquid Glass Effect to the back layer
+### Step 2: Customize the background
 
-Turn on the liquid glass effect on the back layer by setting [EnableLiquidGlassEffect]() to true.
+To achieve a glass like background in the Front or Back Layer, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
 
-{% tabs %}
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<backdrop:SfBackdropPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                         x:Class="AcrylicBackdropPage"
-                         xmlns:backdrop="clr-namespace:Syncfusion.Maui.Backdrop;assembly=Syncfusion.Maui.Backdrop">
-
-    <backdrop:SfBackdropPage.BackLayer>
-        <backdrop:BackdropBackLayer EnableLiquidGlassEffect="True">
-            <Grid>
-                <!-- Optional: colorful/image background to visualize acrylic -->
-                <Image Source="wallpaper.jpg" Aspect="AspectFill" />
-                <StackLayout Padding="16">
-                    <Label Text="Back layer content" FontSize="16"/>
-                </StackLayout>
-            </Grid>
-        </backdrop:BackdropBackLayer>
-    </backdrop:SfBackdropPage.BackLayer>
-
-    <backdrop:SfBackdropPage.FrontLayer>
-        <backdrop:BackdropFrontLayer>
-            <Grid BackgroundColor="WhiteSmoke" />
-        </backdrop:BackdropFrontLayer>
-    </backdrop:SfBackdropPage.FrontLayer>
-</backdrop:SfBackdropPage>
-
-{% endhighlight %}
-{% highlight c# %}
-
-using Syncfusion.Maui.Backdrop;
-
-this.BackLayer = new BackdropBackLayer
-{
-    EnableLiquidGlassEffect = true,
-    Content = new Grid
-    {
-        Children =
-        {
-            new Image { Source = "wallpaper.jpg", Aspect = Aspect.AspectFill },
-            new VerticalStackLayout
-            {
-                Padding = 16,
-                Children = { new Label { Text = "Back layer content", FontSize = 16 } }
-            }
-        }
-    }
-};
-
-this.FrontLayer = new BackdropFrontLayer
-{
-    Content = new Grid { BackgroundColor = Colors.WhiteSmoke }
-};
-
-{% endhighlight %}
-{% endtabs %}
-
-## Apply Liquid Glass Effect to the front layer
-
-You can enable the liquid glass effect for the front layer as well by setting [EnableLiquidGlassEffect]() to true.
+The following code snippet demonstrates how to apply the Liquid Glass Effect to the Front or Back layer of the `SfBackdropPage` control:
 
 {% tabs %}
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<backdrop:SfBackdropPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-                         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                         x:Class="AcrylicBackdropFrontPage"
-                         xmlns:backdrop="clr-namespace:Syncfusion.Maui.Backdrop;assembly=Syncfusion.Maui.Backdrop">
-
-    <backdrop:SfBackdropPage.BackLayer>
-        <backdrop:BackdropBackLayer>
-            <Grid>
-                <Label Text="Menu" HorizontalOptions="Center" VerticalOptions="Center"/>
-            </Grid>
-        </backdrop:BackdropBackLayer>
-    </backdrop:SfBackdropPage.BackLayer>
-
-    <backdrop:SfBackdropPage.FrontLayer>
-        <backdrop:BackdropFrontLayer EnableLiquidGlassEffect="True">
-            <Grid>
-                <!-- Optional: place bright imagery behind the surface to visualize blur -->
-                <Image Source="wallpaper.jpg" Aspect="AspectFill" />
-                <StackLayout Padding="16">
-                    <Label Text="Front layer content" FontSize="16"/>
-                </StackLayout>
-            </Grid>
-        </backdrop:BackdropFrontLayer>
-    </backdrop:SfBackdropPage.FrontLayer>
-</backdrop:SfBackdropPage>
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14 16 20" %}
 
 {% endhighlight %}
-{% highlight c# %}
-
-using Syncfusion.Maui.Backdrop;
-
-this.BackLayer = new BackdropBackLayer
-{
-    Content = new Grid
-    {
-        Children = { new Label { Text = "Menu", HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.Center } }
-    }
-};
-
-this.FrontLayer = new BackdropFrontLayer
-{
-    EnableLiquidGlassEffect = true,
-    Content = new Grid
-    {
-        Children =
-        {
-            new Image { Source = "wallpaper.jpg", Aspect = Aspect.AspectFill },
-            new VerticalStackLayout
-            {
-                Padding = 16,
-                Children = { new Label { Text = "Front layer content", FontSize = 16 } }
-            }
-        }
-    }
-};
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="21 22 23 24 25 30" %}
 
 {% endhighlight %}
 {% endtabs %}
 
 N>
-* Liquid Glass effects are most visible over images or colorful backgrounds.
-* You can enable the effect independently on either the back layer, the front layer, or both as needed.
-
-## Best Practices and Tips
-
-- The back and front layers use built-in acrylic when their [EnableLiquidGlassEffect]() property is true.
-- Place imagery or vibrant backgrounds beneath the layer surface to see the blur clearly.
-- Combine with existing layout properties (RevealedHeight, EdgeShape, etc.) to achieve the desired design while using the effect.
-
-The following screenshots illustrate the back and front layers with the liquid glass effect enabled over colorful backgrounds.
+* Supported on `macOS 26 or higher` and `iOS 26 or higher`.
+* This feature is available only in `.NET 10.`

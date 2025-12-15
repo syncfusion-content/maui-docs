@@ -7,68 +7,33 @@ control: SfCardView
 documentation: ug
 ---
 
-# Liquid Glass Support
+# Liquid Glass Effect in .NET MAUI Cards (SfCards)
 
-The [SfCardView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardView.html) supports a liquid glass effect by setting the [EnableLiquidGlassEffect]() property to true. This enhances visual depth and readability when cards are placed over images or colorful layouts.
+The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Cards (SfCards) control.
 
-## Platform and Version Support
+## Apply liquid glass effect
 
-1. This feature is supported on .NET 10 or greater.
-2. This feature is supported on macOS 26 and iOS 26 or later.
-3. On platforms or versions below these requirements, the control renders without the acrylic blur effect and falls back to a standard background.
+Follow these steps to enable and configure the Liquid Glass Effect in the Card View:
 
-## Apply Liquid Glass Effect to SfCardView
+### Step 1: Enable the liquid glass effect on Card View
 
-Turn on the liquid glass effect on a card view by setting [EnableLiquidGlassEffect]() to true.
+Set the `EnableLiquidGlassEffect` property to `true` in the card view to apply the Liquid Glass Effect.
+
+### Step 2: Customize the background
+
+To achieve a glass like background in the card view, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
+
+The following code snippet demonstrates how to apply the Liquid Glass Effect to the card view:
 
 {% tabs %}
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:cards="clr-namespace:Syncfusion.Maui.Cards;assembly=Syncfusion.Maui.Cards"
-    x:Class="AcrylicCardsPage">
-
-    <Grid>
-        <!-- Background to make acrylic blur visible -->
-        <Image Source="wallpaper.jpg" Aspect="AspectFill" />
-
-        <cards:SfCardView
-            EnableLiquidGlassEffect="True">
-            <VerticalStackLayout Spacing="8">
-                <Label Text="Glass Card" FontSize="18" FontAttributes="Bold"/>
-                <Label Text="This card uses the built-in liquid glass effect."/>
-            </VerticalStackLayout>
-        </cards:SfCardView>
-    </Grid>
-</ContentPage>
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14 16 20" %}
 
 {% endhighlight %}
-{% highlight c# %}
-
-using Syncfusion.Maui.Cards;
-
-var card = new SfCardView
-{
-    EnableLiquidGlassEffect = true,
-};
-
-card.Content = new VerticalStackLayout
-{
-    Spacing = 8,
-    Children =
-    {
-        new Label { Text = "Glass Card", FontSize = 18, FontAttributes = FontAttributes.Bold },
-        new Label { Text = "This card uses the built-in liquid glass effect." },
-    }
-};
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="21 22 23 24 25 30" %}
 
 {% endhighlight %}
 {% endtabs %}
 
 N>
-* Liquid Glass effects are most visible over images or colorful backgrounds.
-
-The following screenshot illustrates [SfCardView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardView.html) with the liquid glass effect enabled over a colorful background.
+* Supported on `macOS 26 or higher` and `iOS 26 or higher`.
+* This feature is available only in `.NET 10.`
