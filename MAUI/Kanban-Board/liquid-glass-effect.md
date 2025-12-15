@@ -7,7 +7,7 @@ control: Kanban (SfKanban)
 documentation: ug
 ---
 
-# Liquid Glass Effect for .NET MAUI Kanban Board (SfKanban)
+# Liquid Glass Effect in .NET MAUI Kanban Board (SfKanban)
 
 The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Kanban Board (SfKanban) control.
 
@@ -15,71 +15,55 @@ The Liquid Glass Effect introduces a modern, translucent design with adaptive co
 
 Follow these steps to enable and configure the Liquid Glass Effect in the Kanban control:
 
-### Step 1: Enable the liquid glass effect on Kanban
+### Step 1: Wrap the control inside glass effect view
 
-Set the `EnableLiquidGlassEffect` property to `true` in the `SfKanban` control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its dependent elements and provides responsive interaction for a smooth and engaging user experience.
-
-### Step 2: Customize the background
-
-To achieve a glass like background in Kanban, set the `Background` property to `Transparent` and use theme keys to style it, ensuring a consistent look and feel across your application.
+To apply the Liquid Glass Effect to Syncfusion® .NET MAUI `Kanban` control, wrap the control inside the `SfGlassEffectView` class.
 
 For more details, refer to the `Liquid Glass Getting Started documentation`.
+
+### Step 2: Enable the liquid glass effect on Kanban
+
+Set the `EnableLiquidGlassEffect` property to `true` in the `SfKanban` control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its child elements and provides responsive interaction for a smooth and engaging user experience.
+
+### Step 3: Customize the background
+
+To achieve a glass-like background in the Kanban control, set its Background property to Transparent and apply theme keys with transparent values to enable the liquid glass effect for kanban child elements. This ensures a consistent look and feel across your application.
 
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the `Kanban` control:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="18" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="8" %}
 
-<Grid>
-    <Grid.Background>
-        <LinearGradientBrush StartPoint="0,0" 
-                             EndPoint="0,1">
-            <GradientStop Color="#0F4C75" 
-                          Offset="0.0"/>
-            <GradientStop Color="#3282B8" 
-                          Offset="0.5"/>
-            <GradientStop Color="#1B262C" 
-                          Offset="1.0"/>
-        </LinearGradientBrush>
-    </Grid.Background>
-
-    <kanban:SfKanban x:Name="kanban"
-                     Background="Transparent"
-                     AutoGenerateColumns="False"
-                     ItemsSource="{Binding Cards}"
-                     EnableLiquidGlassEffect="True">
-        <kanban:SfKanban.Columns>
-            <kanban:KanbanColumn Title="To Do"
-                                 Categories="Open"/>
-            <kanban:KanbanColumn Title="In Progress"
-                                 Categories="In Progress"/>
-            <kanban:KanbanColumn Title="Code Review"
-                                 Categories="Code Review"/>
-            <kanban:KanbanColumn Title="Done"
-                                 Categories="Done"/>
-        </kanban:SfKanban.Columns>
-        <kanban:SfKanban.BindingContext>
-            <local:KanbanViewModel/>
-        </kanban:SfKanban.BindingContext>
-    </kanban:SfKanban>
+<Grid BackgroundColor="Transparent">
+    <core:SfGlassEffectView EffectType="Clear"
+                            CornerRadius="7">
+        <kanban:SfKanban x:Name="kanban"
+                         Background="Transparent"
+                         AutoGenerateColumns="False"
+                         ItemsSource="{Binding Cards}"
+                         EnableLiquidGlassEffect="True">
+            <kanban:SfKanban.Columns>
+                <kanban:KanbanColumn Title="To Do"
+                                     Categories="Open"/>
+                <kanban:KanbanColumn Title="In Progress"
+                                     Categories="In Progress"/>
+                <kanban:KanbanColumn Title="Code Review"
+                                     Categories="Code Review"/>
+                <kanban:KanbanColumn Title="Done"
+                                     Categories="Done"/>
+            </kanban:SfKanban.Columns>
+            <kanban:SfKanban.BindingContext>
+                <local:KanbanViewModel/>
+            </kanban:SfKanban.BindingContext>
+        </kanban:SfKanban>
+    </core:SfGlassEffectView>
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="19" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="8 22 23 24 25 26" %}
 
 using Syncfusion.Maui.Kanban;
-
-var gradientBrush = new LinearGradientBrush
-{
-    StartPoint = new Point(0, 0),
-    EndPoint = new Point(0, 1),
-    GradientStops = new GradientStopCollection
-    {
-        new GradientStop { Color = Color.FromArgb("#0F4C75"), Offset = 0.0f },
-        new GradientStop { Color = Color.FromArgb("#3282B8"), Offset = 0.5f },
-        new GradientStop { Color = Color.FromArgb("#1B262C"), Offset = 1.0f }
-    }
-};
+using Syncfusion.Maui.Core;
 
 var kanban = new SfKanban
 {
@@ -96,11 +80,215 @@ kanban.Columns.Add(new KanbanColumn { Title = "Done", Categories = new List<stri
 
 var grid = new Grid
 {
-    Background = gradientBrush,
-    Children = { kanban }
+    BackgroundColor = Colors.Transparent
 };
 
+var glassView = new SfGlassEffectView
+{
+    CornerRadius = 7,
+    EffectType = LiquidGlassEffectType.Clear
+};
+
+glassView.Content = this.kanban;
+grid.Children.Add(glassView);
 this.Content = grid;
+
+{% endhighlight %}
+{% highlight C# tabtitle="KanbanViewModel.cs" %}
+
+public class KanbanViewModel
+{
+    #region Constructor
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="KanbanViewModel"/> class.
+    /// </summary>
+    public KanbanViewModel()
+    {
+        this.Cards = this.GetCardDetails();
+    }
+
+    #endregion
+
+    #region Properties
+
+    /// <summary>
+    /// Gets or sets the collection of <see cref="KanbanModel"/> objects representing cards in various stages.
+    /// </summary>
+    public ObservableCollection<KanbanModel> Cards { get; set; }
+
+    #endregion
+
+    #region Private methods
+
+    /// <summary>
+    /// Method to get the collection of predefined Kanban task cards.
+    /// </summary>
+    /// <returns>The collection of <see cref="KanbanModel"/> instances.</returns>
+    private ObservableCollection<KanbanModel> GetCardDetails()
+    {
+        Assembly assemblyName = typeof(SfImageSourceConverter).GetTypeInfo().Assembly;
+        var cardsDetails = new ObservableCollection<KanbanModel>();
+
+        cardsDetails.Add(new KanbanModel()
+        {
+            ID = 1,
+            Title = "iOS - 1",
+            ImageURL = assemblyName + ".people_circle1.png",
+            Category = "Open",
+            Description = "Analyze customer requirements.",
+            IndicatorFill = Colors.Red,
+            Tags = new List<string> { "Bug", "Customer", "Release Bug" }
+        });
+
+        cardsDetails.Add(new KanbanModel()
+        {
+            ID = 6,
+            Title = "Xamarin - 6",
+            ImageURL = assemblyName + ".people_circle2.png",
+            Category = "Open",
+            Description = "Show the retrieved data from the server in Grid control.",
+            IndicatorFill = Colors.Red,
+            Tags = new List<string> { "Bug", "Customer", "Breaking Issue" }
+        });
+
+        cardsDetails.Add(new KanbanModel()
+        {
+            ID = 3,
+            Title = "iOS - 3",
+            ImageURL = assemblyName + ".people_circle3.png",
+            Category = "Postponed",
+            Description = "Fix the filtering issues reported in Safari.",
+            IndicatorFill = Colors.Red,
+            Tags = new List<string> { "Bug", "Customer", "Breaking Issue" }
+        });
+
+        cardsDetails.Add(new KanbanModel()
+        {
+            ID = 11,
+            Title = "iOS - 21",
+            ImageURL = assemblyName + ".people_circle4.png",
+            Category = "Postponed",
+            Description = "Add input validation for editing.",
+            IndicatorFill = Colors.Red,
+            Tags = new List<string> { "Bug", "Customer", "Breaking Issue" }
+        });
+
+        cardsDetails.Add(new KanbanModel()
+        {
+            ID = 15,
+            Title = "Android - 15",
+            Category = "Open",
+            ImageURL = assemblyName + ".people_circle5.png",
+            Description = "Arrange web meetings for customers.",
+            IndicatorFill = Colors.Red,
+            Tags = new List<string> { "Story", "Kanban" }
+        });
+
+        cardsDetails.Add(new KanbanModel()
+        {
+            ID = 3,
+            Title = "Android - 3",
+            Category = "Code Review",
+            ImageURL = assemblyName + ".people_circle6.png",
+            Description = "API Improvements.",
+            IndicatorFill = Colors.Purple,
+            Tags = new List<string> { "Bug", "Customer" }
+        });
+
+        cardsDetails.Add(new KanbanModel()
+        {
+            ID = 4,
+            Title = "UWP - 4",
+            ImageURL = assemblyName + ".people_circle7.png",
+            Category = "Code Review",
+            Description = "Enhance editing functionality.",
+            IndicatorFill = Colors.Brown,
+            Tags = new List<string> { "Story", "Kanban" }
+        });
+
+        cardsDetails.Add(new KanbanModel()
+        {
+            ID = 9,
+            Title = "Xamarin - 9",
+            ImageURL = assemblyName + ".people_circle8.png",
+            Category = "Code Review",
+            Description = "Improve application's performance.",
+            IndicatorFill = Colors.Orange,
+            Tags = new List<string> { "Story", "Kanban" }
+        });
+
+        cardsDetails.Add(new KanbanModel()
+        {
+            ID = 13,
+            Title = "UWP - 13",
+            ImageURL = assemblyName + ".people_circle9.png",
+            Category = "In Progress",
+            Description = "Add responsive support to applications.",
+            IndicatorFill = Colors.Brown,
+            Tags = new List<string> { "Story", "Kanban" }
+        });
+
+        cardsDetails.Add(new KanbanModel()
+        {
+            ID = 24,
+            Title = "UWP - 24",
+            ImageURL = assemblyName + ".people_circle14.png",
+            Category = "In Progress",
+            Description = "Test editing functionality.",
+            IndicatorFill = Colors.Orange,
+            Tags = new List<string> { "Feature", "Customer", "Release" }
+        });
+
+        cardsDetails.Add(new KanbanModel()
+        {
+            ID = 20,
+            Title = "iOS - 20",
+            Category = "In Progress",
+            ImageURL = assemblyName + ".people_circle15.png",
+            Description = "Fix the issues reported in data binding.",
+            IndicatorFill = Colors.Red,
+            Tags = new List<string> { "Feature", "Release" }
+        });
+
+        cardsDetails.Add(new KanbanModel()
+        {
+            ID = 13,
+            Title = "UWP - 13",
+            ImageURL = assemblyName + ".people_circle18.png",
+            Category = "Closed",
+            Description = "Fix cannot open user's default database SQL error.",
+            IndicatorFill = Colors.Purple,
+            Tags = new List<string> { "Bug", "Internal", "Release" }
+        });
+
+        cardsDetails.Add(new KanbanModel()
+        {
+            ID = 14,
+            Title = "Android - 14",
+            Category = "Closed",
+            ImageURL = assemblyName + ".people_circle19.png",
+            Description = "Arrange a web meeting with the customer to get the login page requirement.",
+            IndicatorFill = Colors.Red,
+            Tags = new List<string> { "Feature" }
+        });
+
+        cardsDetails.Add(new KanbanModel()
+        {
+            ID = 15,
+            Title = "Xamarin - 15",
+            Category = "Closed",
+            ImageURL = assemblyName + ".people_circle20.png",
+            Description = "Login page validation.",
+            IndicatorFill = Colors.Red,
+            Tags = new List<string> { "Bug" }
+        });
+
+        return cardsDetails;
+    }
+
+    #endregion
+}
 
 {% endhighlight %}
 {% endtabs %}

@@ -34,19 +34,7 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="14 16 20" %}
 
-<Grid>
-    <Grid.Background>
-        <LinearGradientBrush StartPoint="0,0" 
-                             EndPoint="0,1">
-            <GradientStop Color="#0F4C75" 
-                          Offset="0.0"/>
-            <GradientStop Color="#3282B8" 
-                          Offset="0.5"/>
-            <GradientStop Color="#1B262C" 
-                          Offset="1.0"/>
-        </LinearGradientBrush>
-    </Grid.Background>
-
+<Grid BackgroundColor="Transparent">
     <core:SfGlassEffectView EffectType="Regular"
                             CornerRadius="20">
         <imageEditor:SfImageEditor x:Name="imageEditor"
@@ -68,21 +56,9 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
 using Syncfusion.Maui.Core;
 using Syncfusion.Maui.ImageEditor;
 
-var gradientBrush = new LinearGradientBrush
-{
-    StartPoint = new Point(0, 0),
-    EndPoint = new Point(0, 1),
-    GradientStops = new GradientStopCollection
-    {
-        new GradientStop { Color = Color.FromArgb("#0F4C75"), Offset = 0.0f },
-        new GradientStop { Color = Color.FromArgb("#3282B8"), Offset = 0.5f },
-        new GradientStop { Color = Color.FromArgb("#1B262C"), Offset = 1.0f }
-    }
-};
-
 var grid = new Grid
 {
-    Background = gradientBrush
+    BackgroundColor = Colors.Transparent
 };
 
 var glassView = new SfGlassEffectView
