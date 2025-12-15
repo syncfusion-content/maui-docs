@@ -502,7 +502,7 @@ The following views can be customized individually:
 - `CardButtonView` – Represents an action button inside a card item; exposes Title and Value bindable properties
 
 {% tabs %}
-{% highlight xaml hl_lines="12 27" %}
+{% highlight xaml hl_lines="14 30" %}
 
 <?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -559,7 +559,7 @@ The following views can be customized individually:
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# hl_lines="18 41" %}
+{% highlight c# hl_lines="21 47" %}
 
 using Syncfusion.Maui.AIAssistView;
 

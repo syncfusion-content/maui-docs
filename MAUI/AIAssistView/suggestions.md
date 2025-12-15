@@ -384,6 +384,42 @@ The [AssistItemSuggestion.ItemSpacing](https://help.syncfusion.com/cr/maui/Syncf
 {% endhighlight %}
 {% endtabs %}
 
+### Response item suggestion header
+
+The `SfAIAssistView` control allows you to define the header text for each response suggestion by setting a custom text to the `AssistItem.SuggestionHeaderText` property, ensuring clear identification and context for each suggestion group displayed to users.
+
+{% tabs %}
+{% highlight c# tabtitle="ViewModel.cs" hl_lines="19" %}
+
+	...
+	private async Task GetResult(AssistItem requestItem)
+    {
+        await Task.Delay(1000).ConfigureAwait(true);
+
+        AssistItem responseItem = new AssistItem()
+        {
+           Text = "MAUI stands for .NET Multi-platform App UI. It's a .NET framework for building cross-platform apps with a single C# codebase for iOS, Android, macOS, and Windows. Sure! Here's a link to learn more about .NET MAUI",
+        };
+		
+		var assistSuggestions = new AssistItemSuggestion();
+
+        suggestions = new ObservableCollection<ISuggestion>();
+        suggestions.Add(new AssistSuggestion() { Text = "Get started with .NET MAUI" });
+        suggestions.Add(new AssistSuggestion() { Text = "Build your first MAUI app" });
+
+        assistSuggestions.Items = suggestions;
+		
+		assistSuggestions.SuggestionHeaderText = "Related Topics";
+		
+		// Assign suggestions to response item.
+		responseItem.Suggestion = assistSuggestions;
+        this.AssistItems.Add(responseItem);
+    }
+    ...
+ 
+{% endhighlight %}
+{% endtabs %}
+
 ### Response item suggestion customization
 The `SfAIAssistView` control allows you to fully customize the appearance of the response suggestion items using the [ResponseSuggestionTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ResponseSuggestionTemplate) property. This property lets you define a custom layout and style for the suggestion item UI.
 
@@ -434,7 +470,6 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![Suggestion Template in .NET MAUI AI AssistView](Images/suggestions/maui-aiassistview-suggestiontemplate.png)
-
 
 ## Event and Commands
 

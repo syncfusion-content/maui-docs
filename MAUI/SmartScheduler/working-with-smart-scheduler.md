@@ -12,7 +12,7 @@ keywords : .net maui smart scheduler
 
 ## Assist Button
 
-You can customize the assist button interaction and the default appearance of assist button by setting the `EnableAssistButton` and `AssistButtonTemplate` properties of `SfSmartScheduler` control.
+The assist button interaction and the default appearance of assist button can be customized by setting the `EnableAssistButton` and `AssistButtonTemplate` properties of `SfSmartScheduler` control.
 
 ### Enable assist button
 
@@ -86,7 +86,7 @@ this.Content = smartScheduler;
 
 ## Assist View
 
-You can customize default appearance of the assist view by setting the `AssistViewHeight`, `AssistViewWidth`, `AssistViewHeaderText`, `Placeholder`, `Prompt`, `SuggestedPrompts` and `ShowAssistViewBanner` properties of `SfSmartScheduler` control.
+The default appearance of the assist view can be customized by setting the `AssistViewHeight`, `AssistViewWidth`, `AssistViewHeaderText`, `Placeholder`, `Prompt`, `SuggestedPrompts` and `ShowAssistViewBanner` properties of `SfSmartScheduler` control.
 
 ### Assist view height
 
@@ -122,7 +122,7 @@ The assist view width can be customized by using the `AssistViewWidth` property 
 
 <smartScheduler:SfSmartScheduler  x:Name="smartScheduler">
     <smartScheduler:SfSmartScheduler.AssistViewSettings>
-        <smartScheduler:SchedulerAssistViewSettings AssistViewWidth="400"/>
+        <smartScheduler:SchedulerAssistViewSettings AssistViewWidth="500"/>
     </smartScheduler:SfSmartScheduler.AssistViewSettings>
 </smartScheduler:SfSmartScheduler>
 
@@ -130,7 +130,7 @@ The assist view width can be customized by using the `AssistViewWidth` property 
 {% highlight C# hl_lines="2" %}
 
 SfSmartScheduler scheduler = new SfSmartScheduler();
-smartScheduler.AssistViewSettings.AssistViewWidth = 400;
+smartScheduler.AssistViewSettings.AssistViewWidth = 500;
 this.Content = scheduler;
 
 {% endhighlight %}

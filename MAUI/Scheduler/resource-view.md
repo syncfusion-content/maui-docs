@@ -179,7 +179,7 @@ In Mobile platforms, the resource view for the day, week, and work week view whe
 The hamburger icon color can be customized by using the `HamburgerIconColor` property of the [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6).
 
 {% tabs %}
-{% highlight XAML hl_lines="4" %}
+{% highlight XAML hl_lines="3" %}
 
  <syncfusion:SfScheduler x:Name="Scheduler" View="Day">
      <syncfusion:SfScheduler.ResourceView>
