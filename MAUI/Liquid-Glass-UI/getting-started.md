@@ -364,4 +364,9 @@ Enable glass effect that respond to user interactions with clear transparency an
 
 For control specific usage of the Liquid Glass Effect on individual Syncfusion® controls, including availability, and configuration details, please refer to the respective controls' documentation.
 
-N> View sample in GitHub.
+* [SfImageEditor](https://help.syncfusion.com/maui/imageeditor/liquid-glass-effect)
+* [SfKanban](https://help.syncfusion.com/maui/kanban-board/liquid-glass-effect)
+* [SfLinearProgressBar](https://help.syncfusion.com/maui/linearprogressbar/liquid-glass-effect)
+* [SfStepProgressBar](https://help.syncfusion.com/maui/stepprogressbar/liquid-glass-effect)
+
+N> View sample in [GitHub](https://github.com/syncfusion/maui-demos).
