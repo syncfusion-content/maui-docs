@@ -22,7 +22,7 @@ Set the `EnableLiquidGlassEffect` property to `true` in the `SfDateTimeSlider` c
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfDateTimeSlider` control:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14 16 20" %}<Grid>
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14 16 20" %}
     <Grid>
         <StackLayout Padding="24" Spacing="16" VerticalOptions="Center">
             <sliders:SfDateTimeSlider
