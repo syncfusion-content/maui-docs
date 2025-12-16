@@ -17,7 +17,7 @@ Follow these steps to enable and configure the Liquid Glass Effect in the Button
 
 ### Step 1: Enable the liquid glass effect on Buttons
 
-Set the `EnableLiquidGlassEffect` property to `true` in the `SfButton` control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its dependent controls and provides responsive interaction for a smooth and engaging user experience.
+Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_EnableLiquidGlassEffect) property to `true` in the [SfButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its dependent controls and provides responsive interaction for a smooth and engaging user experience.
 
 ### Step 3: Customize the background
 

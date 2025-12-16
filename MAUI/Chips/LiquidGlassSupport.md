@@ -17,7 +17,7 @@ Follow these steps to enable and configure the Liquid Glass Effect in the Chips 
 
 ### Step 1: Enable the liquid glass effect on Chips
 
-Set the `EnableLiquidGlassEffect` property to `true` in the `SfChip` control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its dependent controls and provides responsive interaction for a smooth and engaging user experience.
+Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html#Syncfusion_Maui_Core_SfChipGroup_EnableLiquidGlassEffect) property to `true` in the [SfChipGroup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChipGroup.html) control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its dependent controls and provides responsive interaction for a smooth and engaging user experience.
 
 ### Step 3: Customize the background
 

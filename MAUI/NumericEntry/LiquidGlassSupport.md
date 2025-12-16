@@ -17,7 +17,7 @@ Follow these steps to enable and configure the Liquid Glass Effect in the Numeri
 
 ### Step 1: Wrap the control inside glass effect view
 
-To apply the Liquid Glass Effect to Syncfusion® .NET MAUI `NumericEntry` control, wrap the control inside the `SfGlassEffectView` class.
+To apply the Liquid Glass Effect to Syncfusion® .NET MAUI [NumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control, wrap the control inside the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) class.
 
 For more details, refer to the `Liquid Glass Getting Started documentation`.
 
