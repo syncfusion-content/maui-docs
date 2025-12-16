@@ -21,7 +21,7 @@ To apply the Liquid Glass Effect to the Syncfusion® [.NET MAUI Scheduler](https
 
 For more details, refer to the `Liquid Glass Getting Started documentation`.
 
-### Step 2: Enable the liquid glass effect on Image Editor
+### Step 2: Enable the liquid glass effect on Scheduler
 
 Set the `EnableLiquidGlassEffect` property to `true` in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its dependent controls and provides responsive interaction for a smooth and engaging user experience.
 
