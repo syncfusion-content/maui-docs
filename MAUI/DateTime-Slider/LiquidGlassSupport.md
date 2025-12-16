@@ -1,54 +1,50 @@
 ---
 layout: post
-title: Liquid Glass Support for .NET MAUI DateTimeSlider | Syncfusion®
-description: Learn here about providing liquid glass support for Syncfusion® .NET MAUI DateTimeSlider (SfDateTimeSlider) control and more.
+title: Liquid Glass Effect for .NET MAUI DateTime Slider | Syncfusion®
+description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI DateTime Slider (SfDateTimeSlider) control.
 platform: MAUI
 control: SfDateTimeSlider
 documentation: ug
 ---
 
+# Liquid Glass Effect in .NET MAUI DateTime Slider (SfDateTimeSlider)
 
-# Liquid Glass Support for .NET MAUI DateTime Slider
+The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI DateTime Slider (SfDateTimeSlider) control.
 
-The  [SfDateTimeSlider](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeSlider.html) provides `liquid glass` effect for its thumb when [EnableLiquidGlassEffect]() is enabled. The frosted, translucent effect is applied only while the user is pressing/dragging the thumb, creating a subtle, responsive visual that blends with the content behind it. This enhances visual feedback without altering the slider’s appearance at rest, and works well over images or colorful layouts.
+## Apply liquid glass effect
 
-## Availability
+Follow these steps to enable and configure the Liquid Glass Effect in the DateTime Slider control:
 
-1. Supported on .NET 10 or greater.
-2. Supported on mac or iOS 26 or greater.
-3. On platforms/versions below these requirements, the glass effect is not applied and the slider thumb render with the standard appearance.
+### Step 1: Enable the liquid glass effect on DateTime Slider
 
-XAML example The thumb’s glass effect appears only while it is pressed/dragged.
+Set the `EnableLiquidGlassEffect` property to `true` in the `SfDateTimeSlider` control to apply the Liquid Glass Effect. When enabled,it provides responsive interaction for a smooth and engaging user experience.
+
+The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfDateTimeSlider` control:
 
 {% tabs %}
-{% highlight xaml hl_lines="18" %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
-    x:Class="SliderGlassEffectPage">
-
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
     <Grid>
-        <!-- Background to make the glass effect visible while pressing the thumb -->
-        <Image Source="wallpaper.jpg" Aspect="AspectFill" />
-
-        <StackLayout Padding="24" Spacing="16" VerticalOptions="Center">
-            <Label Text="Volume" FontSize="18" TextColor="White" />
-
+        <Image Source="Wallpaper.png" Aspect="AspectFill">
             <sliders:SfDateTimeSlider
                 Minimum="2010-01-01" 
                 Maximum="2018-01-01" 
                 EnableLiquidGlassEffect="True" />
-        </StackLayout>
     </Grid>
-</ContentPage>
 
 {% endhighlight %}
-{% highlight c# hl_lines="7" %}
-
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="17" %}
 using Syncfusion.Maui.Sliders;
+var grid = new Grid
+{
+    BackgroundColor = Colors.Transparent
+};
+
+var image = new Image
+{
+    Source = "Wallpaper.png",
+    Aspect = Aspect.AspectFill
+};
+grid.Children.Add(image);
 
 SfDateTimeSlider dateTimeSlider = new SfDateTimeSlider
 {
@@ -57,6 +53,9 @@ SfDateTimeSlider dateTimeSlider = new SfDateTimeSlider
     EnableLiquidGlassEffect = true
 };
 
+grid.Children.Add(dateTimeSlider);
+this.Content = grid;
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -64,4 +63,5 @@ The following screenshot illustrates SfDateTimeSlider with the glass effect visi
 
 ![date time slider with liquid glass support](images/getting-started/slider_liquidglass.gif)
 
-N> The glass effect is applied to the thumb only while it is pressed/dragged.
+N>
+This feature is supported only on .NET 10 along with iOS 26 and macOS 26 

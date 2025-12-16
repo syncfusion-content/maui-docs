@@ -93,7 +93,7 @@ Implement the secondary drawer using the SecondaryDrawerSettings property in SfN
 
 N> When the primary drawer and the secondary drawer are set to the same position, the primary drawer will open on swiping.
 
-## Toggling method
+### Toggling method
 
 Users can toggle the secondary drawer using the `ToggleSecondaryDrawer` method. 
 
