@@ -7,7 +7,7 @@ control: SfStepProgressBar
 documentation: ug
 ---
 
-# Liquid Glass Effect for Step Progress Bar
+# Liquid Glass Effect in .NET MAUI Step Progress Bar (SfStepProgressBar)
 
 The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Step Progress Bar (SfStepProgressBar) control.
 
@@ -28,11 +28,7 @@ To achieve a glass like background in the Step Progress Bar, set the `Background
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the [SfStepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html) control:
 
 {% tabs %}
-{% highlight xaml hl_lines="29 30 31 32 45" %}
-
-<ContentPage.BindingContext>
-    <local:ViewModel />
-</ContentPage.BindingContext>
+{% highlight xaml hl_lines="28 29 30 31 44" %}
 
 <Grid>
     <Grid.Background>
@@ -46,6 +42,9 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
                           Offset="1.0" />
         </LinearGradientBrush>
     </Grid.Background>
+    <Grid.BindingContext>
+        <local:ViewModel />
+    </Grid.BindingContext>
     <stepProgressBar:SfStepProgressBar x:Name="stepProgress"
                                        VerticalOptions="Center"
                                        HorizontalOptions="Center"
