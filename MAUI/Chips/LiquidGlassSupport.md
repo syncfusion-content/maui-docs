@@ -1,42 +1,34 @@
 ---
 layout: post
-title: Provide Liquid Glass Support for .NET MAUI Chips | Syncfusion®
-description: Learn here about providing liquid glass support for Syncfusion® .NET MAUI Chips (SfChip) control and more.
+title: Liquid Glass Effect for .NET MAUI Chips | Syncfusion®
+description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI Chips (SfChip) control.
 platform: MAUI
 control: SfChip
 documentation: ug
 ---
 
+# Liquid Glass Effect in .NET MAUI Chips (SfChip)
 
-# Liquid Glass Support for .NET MAUI Chips
+The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Chips (SfChip) control.
 
-The [Chips](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfChip.html) provides `liquid glass` effect that can be enabled directly on the control using the public API [EnableLiquidGlassEffect](). When enabled, each chip surface adopts a frosted, translucent appearance that blends with the content behind it, improving visual depth and readability over images or colorful layouts.
+## Apply liquid glass effect
 
-## Availability
+Follow these steps to enable and configure the Liquid Glass Effect in the Chips control:
 
-1. Supported on .NET 10 or greater.
-2. Supported on mac or iOS 26 or greater.
-3. On platforms/versions below these requirements, the glass effect is not applied and the chips render with the standard background.
+### Step 1: Enable the liquid glass effect on Chips
 
+Set the `EnableLiquidGlassEffect` property to `true` in the `SfChip` control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its dependent controls and provides responsive interaction for a smooth and engaging user experience.
+
+### Step 3: Customize the background
+
+To achieve a glass like background in the Chips, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
+
+The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfChip` control:
 {% tabs %}
-{% highlight xaml hl_lines="17" %}
-
-XAML example Enable the glass effect on SfChipGroup by setting EnableLiquidGlassEffect to True.
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    x:Class="ChipGroupGlassPage">
-
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14 16 20" %}
     <Grid>
-        <!-- Background to showcase glass effect -->
-        <Image Source="wallpaper.jpg" Aspect="AspectFill" />
-
         <StackLayout Padding="24" Spacing="16" VerticalOptions="Center">
             <Label Text="Filters" FontSize="18" TextColor="White" />
-
             <core:SfChipGroup
                 x:Name="FilterChips"
                 EnableLiquidGlassEffect="True">
@@ -50,10 +42,8 @@ XAML example Enable the glass effect on SfChipGroup by setting EnableLiquidGlass
             </core:SfChipGroup>
         </StackLayout>
     </Grid>
-</ContentPage>
-
 {% endhighlight %}
-{% highlight c# hl_lines="5" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="21 22 23 24 25 30" %}
 
 using Syncfusion.Maui.Core;
 
@@ -71,7 +61,6 @@ chipGroup.Items.Add(new SfChip(){Text="Extra Large", Background = Colors.Blue })
 {% endhighlight %}
 {% endtabs %}
 
-
-The following screenshot illustrates SfChipGroup with the built-in glass effect enabled via EnableLiquidGlassEffect, displayed over a wallpaper background.
-
-![chips with liquid glass support](images/customization-images/Chip_liquidglass.png)
+N>
+* Supported on `macOS 26 or higher` and `iOS 26 or higher`.
+* This feature is available only in `.NET 10.`
