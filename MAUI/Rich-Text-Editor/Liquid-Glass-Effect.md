@@ -15,7 +15,7 @@ N> The liquid glass effect is supported only on `.NET 10` and on `iOS` and `macO
 
 ## How it Enhances RichTextEditor UI on macOS and iOS
 
-The Liquid Glass Effect elevates the SfRichTextEditor with a modern, glassy aesthetic and a refined, high-quality editing experience.
+The Liquid Glass Effect elevates the [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html) with a modern, glassy aesthetic and a refined, high-quality editing experience.
 
 - Toolbar:
     - Font family picker
@@ -30,7 +30,7 @@ The Liquid Glass Effect elevates the SfRichTextEditor with a modern, glassy aest
 
 ## Apply Liquid Glass Effect to SfRichTextEditor
 
-To enable the Cupertino theme's liquid glass effect, set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_EnableLiquidGlassEffect) property to `True` on the SfRichTextEditor. For optimal visual appearance with a sleek and glassy output, set transparent backgrounds for both the editor and toolbar using the [EditorBackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_EditorBackgroundColor) property of SfRichTextEditor and the [BackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Maui_RichTextEditor_RichTextEditorToolbarSettings_BackgroundColor) property of ToolbarSettings.
+To enable the Cupertino theme's liquid glass effect, set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_EnableLiquidGlassEffect) property to `True` on the [SfRichTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html). For optimal visual appearance with a sleek and glassy output, set transparent backgrounds for both the editor and toolbar using the [EditorBackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_EditorBackgroundColor) property of `SfRichTextEditor` and the [BackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Maui_RichTextEditor_RichTextEditorToolbarSettings_BackgroundColor) property of ToolbarSettings.
 
 {% tabs %}
 
