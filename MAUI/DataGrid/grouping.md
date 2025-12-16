@@ -88,13 +88,13 @@ dataGrid.GroupDropAreaHeight = 100;
 
 You can style the `GroupDropArea` using the following SfDataGrid properties:
 
-* **GroupDropAreaStrokeThickness:** Sets the border thickness of the GroupDropArea.
-* **GroupDropAreaStroke:** Sets the border color of the GroupDropArea.
-* **GroupDropAreaBackgroundColor:** Sets the background color of the GroupDropArea.
-* **GroupDropAreaTextColor:** Sets the color of the instructional text displayed in the GroupDropArea.
-* **GroupDropAreaFontSize:** Sets the font size of the GroupDropArea text.
-* **GroupDropAreaFontFamily:** Sets the font family used for the GroupDropArea text.
-* **GroupDropAreaFontAttribute:** Sets the font style of the GroupDropArea text.
+* `GroupDropAreaStrokeThickness:` Sets the border thickness of the GroupDropArea.
+* `GroupDropAreaStroke:` Sets the border color of the GroupDropArea.
+* `GroupDropAreaBackgroundColor:` Sets the background color of the GroupDropArea.
+* `GroupDropAreaTextColor:` Sets the color of the instructional text displayed in the GroupDropArea.
+* `GroupDropAreaFontSize:` Sets the font size of the GroupDropArea text.
+* `GroupDropAreaFontFamily:` Sets the font family used for the GroupDropArea text.
+* `GroupDropAreaFontAttribute:` Sets the font style of the GroupDropArea text.
 
 {% tabs %}
 {% highlight xaml %}
@@ -133,14 +133,14 @@ dataGrid.DefaultStyle = defaultStyle;
 
 You can style the `GroupDropAreaItem` using the following SfDataGrid properties:
 
-* **GroupDropItemBackgroundColor:** Sets the background color of the GroupDropItem.
-* **GroupDropItemTextColor:** Sets the color of the text displayed in the GroupDropItem.
-* **GroupDropItemFontSize:** Sets the font size of the GroupDropItem text.
-* **GroupDropItemFontFamily:** Sets the font family used for the GroupDropItem text.
-* **GroupDropItemFontAttribute:**  Sets the font style of the GroupDropItem text.
-* **GroupDropItemStrokeThickness:** Sets the border thickness of the GroupDropItem.
-* **GroupDropItemStroke:** Sets the border color of the GroupDropItem.
-* **GroupDropItemCloseIconColor:** Sets the color of the close icon displayed in the GroupDropItem.
+* `GroupDropItemBackgroundColor:` Sets the background color of the GroupDropItem.
+* `GroupDropItemTextColor:` Sets the color of the text displayed in the GroupDropItem.
+* `GroupDropItemFontSize:` Sets the font size of the GroupDropItem text.
+* `GroupDropItemFontFamily:` Sets the font family used for the GroupDropItem text.
+* `GroupDropItemFontAttribute:`  Sets the font style of the GroupDropItem text.
+* `GroupDropItemStrokeThickness:` Sets the border thickness of the GroupDropItem.
+* `GroupDropItemStroke:` Sets the border color of the GroupDropItem.
+* `GroupDropItemCloseIconColor:` Sets the color of the close icon displayed in the GroupDropItem.
 
 {% tabs %}
 {% highlight xaml %}
