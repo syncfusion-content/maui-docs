@@ -23,7 +23,7 @@ Set the `EnableLiquidGlassEffect` property to `true` in the `SfChip` control to 
 
 To achieve a glass like background in the Chips, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
 
-The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfChip` control:
+The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfChipGroup` control:
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
     <Grid>
