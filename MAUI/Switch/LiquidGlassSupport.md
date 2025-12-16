@@ -12,8 +12,7 @@ documentation: ug
 The [SfSwitch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html) control supports a glass effect (also called acrylic or glass morphism) when you enable the `EnableLiquidGlassEffect` property. It works best over vibrant images or colorful layouts and enhances the visual depth of your UI. When toggled, the Switch provides smooth transitions and clear visual feedback, making interactions feel polished and premium.
 
 N>
-* Supported on `macOS 26 or higher` and `iOS 26 or higher`.
-* This feature is available only in `.NET 10.`
+* This feature is supported only on `.NET 10` along with `iOS 26` and `macOS 26` .
 
 {% tabs %}
 {% highlight xaml %}

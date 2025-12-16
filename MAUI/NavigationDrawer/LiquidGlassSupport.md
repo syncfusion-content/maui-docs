@@ -13,8 +13,7 @@ documentation: ug
 The [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) supports a `liquid glass` effect (also called acrylic or glass morphism) when you enable the `EnableLiquidGlassEffect`. This feature adds a frosted, translucent style that blends with the background, giving the Navigation Drawer a modern and elegant look.
 
 N>
-* Supported on `macOS 26 or higher` and `iOS 26 or higher`.
-* This feature is available only in `.NET 10.`
+* This feature is supported only on `.NET 10` along with `iOS 26` and `macOS 26` .
 
 {% tabs %}
 {% highlight xaml %}
