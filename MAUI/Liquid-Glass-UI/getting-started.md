@@ -30,8 +30,8 @@ The `SfGlassEffectView` class is available in [Syncfusion.Maui.Core](https://www
 
 The `EffectType` property specifies the type of glass effect to apply:
 
-* **Regular:** Creates a blurred, frosted glass appearance.
-* **Clear:** Creates a transparent, glass-like appearance.
+* **[Regular](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LiquidGlassEffectType.html#Syncfusion_Maui_Core_LiquidGlassEffectType_Regular):** Creates a blurred, frosted glass appearance.
+* **[Clear](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LiquidGlassEffectType.html#Syncfusion_Maui_Core_LiquidGlassEffectType_Clear):** Creates a transparent, glass-like appearance.
 
 {% tabs %}
 {% highlight XAML hl_lines="18" %}
