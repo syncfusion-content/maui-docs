@@ -110,6 +110,8 @@ this.Content = chart;
 
 {% endtabs %}
 
+![Polar line Chart with Liquid Glass Tooltip](Liquid-Glass-Images/polar_liquid_tooltip.png)
+
 ### Best Practices and Tips
 
 - Host the chart inside an [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) to give the chart body a glass appearance.

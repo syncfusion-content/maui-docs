@@ -124,6 +124,8 @@ this.Content = chart;
 
 {% endtabs %}
 
+![Column Chart with Liquid Glass Tooltip](Liquid-Glass-Images/column_liquid_tooltip.png)
+
 ### Trackball
 
 To Enable Liquid Glass effect to the trackball, set `True` to [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_EnableLiquidGlassEffect) property of SfCartesianChart and [ShowTrackballLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CartesianSeries.html#Syncfusion_Maui_Charts_CartesianSeries_ShowTrackballLabel) property of ChartSeries
@@ -162,6 +164,8 @@ this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Line Chart with Liquid Glass Trackball](Liquid-Glass-Images/line_liquid_trackball.png)
 
 ### Best Practices and Tips
 

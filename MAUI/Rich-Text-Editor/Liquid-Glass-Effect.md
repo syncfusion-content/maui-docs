@@ -91,4 +91,6 @@ The toolbar corner radius, toolbar selection corner radius and editor corner rad
 
 {% endtabs %}
 
+![Rich Text Editor with Liquid Glass Effect](Liquid-Glass-Images/rte_liquid_glass.png)
+
 

@@ -109,6 +109,7 @@ this.Content = chart;
 
 {% endtabs %}
 
+![Pie Chart with Liquid Glass Tooltip](Liquid-Glass-Images/Pie_liquid_tooltip.png)
 
 ### Best Practices and Tips
 
