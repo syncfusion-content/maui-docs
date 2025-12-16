@@ -16,11 +16,14 @@ N> The liquid glass effect is supported only on `.NET 10` and on `iOS` and `macO
 
 ## How it Enhances Chart UI on macOS and iOS
 
-The Liquid Glass Effect enhances chart interactivity with liquid glass effects on tooltips, creating a modern and visually appealing data visualization interface that delivers a sophisticated user experience.
+The Liquid Glass Effect enhances MAUI SfPyramidChart with a sleek, glassy look and improved interactivity.
+
+**Tooltip:** Applies a glassy appearance to tooltips for clearer data highlights.
+**Chart Background:** Wrap the chart in an SfGlassEffectView to give the chart surface a blurred or clear glass background.
 
 ## Apply Liquid Glass Effect to SfPyramidChart
 
-Wrap the SfPyramidChart inside an [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) to give the chart surface a glass (blurred or clear) appearance. SfGlassEffectView is available in the [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) package. To apply the glassy effect to the chart’s tooltips, set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_EnableLiquidGlassEffect) property of SfPyramidChart to `True`.
+Wrap the SfPyramidChart inside an [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) to give the chart surface a glass (blurred or clear) appearance. SfGlassEffectView is available in the [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) package.
 
 {% tabs %}
 
@@ -31,10 +34,7 @@ Wrap the SfPyramidChart inside an [SfGlassEffectView](https://help.syncfusion.co
                         EffectType="Regular"
                         EnableShadowEffect="True">
 
-    <chart:SfPyramidChart EnableLiquidGlassEffect="True">
-    . . .
-
-    </chart:SfPyramidChart>
+    <chart:SfPyramidChart/>
 </core:SfGlassEffectView>
 
 {% endhighlight %}
@@ -42,7 +42,6 @@ Wrap the SfPyramidChart inside an [SfGlassEffectView](https://help.syncfusion.co
 {% highlight c# %}
 
 SfPyramidChart chart = new SfPyramidChart();
-chart.EnableLiquidGlassEffect = true;
 
 var glass = new SfGlassEffectView
 {
@@ -58,6 +57,35 @@ var glass = new SfGlassEffectView
 {% endtabs %}
 
 For detailed guidance on SfGlassEffectView, refer to the Getting Started [documentation](https://help.syncfusion.com/maui/liquid-glass-ui/getting-started).
+
+### Enable Liquid Glass Effect to SfPyramidChart Tooltip
+
+To Enable Liquid Glass Effect to the tooltip, set `True` to [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_EnableLiquidGlassEffect) property and [EnableTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html#Syncfusion_Maui_Charts_SfPyramidChart_EnableTooltip) property of SfPyramidChart.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfPyramidChart EnableLiquidGlassEffect="True"
+                      EnableTooltip="True">
+. . .
+
+</chart:SfPyramidChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfPyramidChart chart = new SfPyramidChart();
+chart.EnableLiquidGlassEffect = true;
+chart.EnableTooltip = true;
+. . .
+
+this.Content = chart;
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ### Best Practices and Tips
 
