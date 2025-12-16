@@ -23,7 +23,7 @@ For more details, refer to the `Liquid Glass Getting Started documentation`.
 
 ### Step 2: Customize the background
 
-To achieve a glass like background in the MaskedEntry, set the `Background` and `DropDownBackground` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
+To achieve a glass like background in the MaskedEntry, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
 
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfMaskedEntry` control:
 
