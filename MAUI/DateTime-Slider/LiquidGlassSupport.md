@@ -47,6 +47,4 @@ SfDateTimeSlider dateTimeSlider = new SfDateTimeSlider
 {% endtabs %}
 
 N>
-* Supported on `macOS 26 or higher` and `iOS 26 or higher`.
-* This feature is available only in `.NET 10.`
-* The glass effect is applied to the thumb only while it is pressed/dragged.
+This feature is supported only on .NET 10 along with iOS 26 and macOS 26 

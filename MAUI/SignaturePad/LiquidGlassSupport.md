@@ -72,5 +72,4 @@ glassEffects.Content = signaturePad;
 {% endtabs %}
 
 N>
-* Supported on `macOS 26 or higher` and `iOS 26 or higher`.
-* This feature is available only in `.NET 10
+This feature is supported only on .NET 10 along with iOS 26 and macOS 26 
