@@ -106,7 +106,7 @@ navigationDrawer.ToggleSecondaryDrawer();
 
 ### Opening the drawer programmatically
 
-The `IsOpen` property in the [DrawerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerSettings) of `SecondaryDrawerSettings` used to open or close the secondary drawer programmatically.
+The [IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_IsOpen) property in the [DrawerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_DrawerSettings) of `SecondaryDrawerSettings` used to open or close the secondary drawer programmatically.
 
 The following code sample demonstrates how to set `IsOpen` property in XAML and C#.
 
