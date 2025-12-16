@@ -7,9 +7,9 @@ control: SfMaskedEntry
 documentation: ug
 ---
 
-# Liquid glass support
+# Liquid Glass Support for .NET MAUI MaskedEntry
 
-The  [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) supports a `liquid glass` appearance by hosting the control inside the Syncfusion [SfGlassEffectsView](). The acrylic view creates a blurred, translucent background that blends with the content behind it, producing a frosted `glass effect` around the entry. You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when SfMaskedEntry is placed over images or colorful layouts.
+The  [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) supports a `liquid glass` appearance by hosting the control inside the Syncfusion [SfGlassEffectView](). The acrylic view creates a blurred, translucent background that blends with the content behind it, producing a frosted `glass effect` around the entry. You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when SfMaskedEntry is placed over images or colorful layouts.
 
 ## Availability
 
@@ -19,12 +19,12 @@ The  [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.
 
 ## Prerequisites
 
-- Add the Syncfusion.Maui.Core package (for SfGlassEffectsView) and Syncfusion.Maui.Inputs (for SfMaskedEntry).
+- Add the Syncfusion.Maui.Core package (for SfGlassEffectView) and Syncfusion.Maui.Inputs (for SfMaskedEntry).
 
-XAML example Wrap the `SfMaskedEntry` in an `SfGlassEffectsView` and adjust visual properties to achieve the desired glass effect.
+XAML example Wrap the `SfMaskedEntry` in an `SfGlassEffectView` and adjust visual properties to achieve the desired glass effect.
 
 {% tabs %}
-{% highlight xaml hl_lines="54" %}
+{% highlight xaml hl_lines="20" %}
 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
@@ -37,31 +37,29 @@ XAML example Wrap the `SfMaskedEntry` in an `SfGlassEffectsView` and adjust visu
     <!-- Background content to make the acrylic blur visible -->
     <Grid>
         <Image Source="wallpaper.jpg" Aspect="AspectFill" />
-            <core:SfGlassEffectsView
+            <core:SfGlassEffectView
                 CornerRadius="20"
                 HeightRequest="40"
                 EffectType="Regular"
                 EnableShadowEffect="True">
 
                 <inputs:SfMaskedEntry
-                    Value="1234.56"
-                    FormatString="N2"
-                    Placeholder="Enter amount"
-                    Maximum="1000000"
+                    WidthRequest="200"
                     Background="Transparent"
-                    Minimum="0"
-                    showClearButton="True" />
-            </core:SfGlassEffectsView>
+                    ClearButtonVisibility="WhileEditing"
+                    MaskType="RegEx"
+                    Mask="[A-Za-z0-9._%-]+@[A-Za-z0-9]+.[A-Za-z]{2,3}" />
+            </core:SfGlassEffectView>
     </Grid>
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# hl_lines="82" %}
+{% highlight c# hl_lines="8" %}
 
 using Syncfusion.Maui.Core;
 using Syncfusion.Maui.Inputs;
 
-var glassEffect = new SfGlassEffectsView
+var glassEffect = new SfGlassEffectView
 {
     CornerRadius=20,
     HeightRequest=40,
@@ -71,13 +69,11 @@ var glassEffect = new SfGlassEffectsView
 
 var maskedEntry = new SfMaskedEntry
 {
-    Value = 1234.56,
-    FormatString = "N2",
-    Placeholder = "Enter amount",
-    Maximum = 1_000_000,
-    Minimum = 0,
-    Background= Colors.Transparent,
-    ShowClearButton=true
+    WidthRequest = 200,
+    ClearButtonVisibility = ClearButtonVisibility.WhileEditing,
+    MaskType = MaskedEntryMaskType.RegEx,
+    Background=Colors.Transparent,
+    Mask = "[A-Za-z0-9._%-]+@[A-Za-z0-9]+.[A-Za-z]{2,3}"
 };
 
 glassEffect.Content = maskedEntry;
@@ -87,3 +83,5 @@ glassEffect.Content = maskedEntry;
 
 
 The following screenshot illustrates SfMaskedEntry within an acrylic container using the glass effect.
+
+![Masked entry with liquid glass support](MaskedEntry_Images/Maskedentry_liquidglass.png)

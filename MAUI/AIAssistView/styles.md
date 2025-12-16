@@ -1293,3 +1293,67 @@ public MainPage()
 
 {% endhighlight %}
 {% endtabs %}
+
+## Response suggestion header text style
+
+To style the response suggestion header text view based on its appearance, set values to the in-built keys in the resource dictionary.
+
+<table>
+<tr>
+<th> Key </th>
+<th> Description </th>
+</tr>
+<tr>
+<td> SfAIAssistViewSuggestionHeaderTextColor </td>
+<td> Text color of response suggestion header text. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewSuggestionHeaderFontSize </td>
+<td> Font size of response suggestion header text. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewSuggestionHeaderFontFamily </td>
+<td> Font family of response suggestion header text. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewSuggestionHeaderFontAttributes </td>
+<td> Font attributes of response suggestion header text. </td>
+</tr>
+</table>
+
+{% tabs %}
+{% highlight xaml %}
+
+<ContentPage.Resources>
+    <syncTheme:SyncfusionThemeDictionary>
+        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
+                <Color x:Key="SfAIAssistViewSuggestionHeaderTextColor">DarkBlue</Color>
+                <x:Double x:Key="SfAIAssistViewSuggestionHeaderFontSize">14</x:Double>
+                <x:String x:Key="SfAIAssistViewSuggestionHeaderFontFamily">Roboto-Medium</x:String>
+                <FontAttributes x:Key="SfAIAssistViewSuggestionHeaderFontAttributes">Bold</FontAttributes>
+            </ResourceDictionary>
+        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+    </syncTheme:SyncfusionThemeDictionary>
+</ContentPage.Resources>
+
+{% endhighlight %}
+{% highlight c# %}
+
+public MainPage()
+{
+    ....
+    InitializeComponent();
+    ResourceDictionary dictionary = new ResourceDictionary();
+    dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
+    dictionary.Add("SfAIAssistViewSuggestionHeaderTextColor", Colors.DarkBlue);
+    dictionary.Add("SfAIAssistViewSuggestionHeaderFontSize", 14);
+    dictionary.Add("SfAIAssistViewSuggestionHeaderFontFamily", "Roboto-Medium");
+    dictionary.Add("SfAIAssistViewSuggestionHeaderFontAttributes", FontAttributes.Bold);
+    this.Resources.Add(dictionary);
+    ....
+}
+
+{% endhighlight %}
+{% endtabs %}

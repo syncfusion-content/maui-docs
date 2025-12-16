@@ -110,7 +110,7 @@ namespace GettingStarted
 
 {% endhighlight %}
 
-N> You can refer [Configure AI Service](configure-ai-service) for `Azure`, `OpenAI`, `Ollama` service.
+N> You can refer [Configure AI Service](/Common/configure-ai-service) for `Azure`, `OpenAI`, `Ollama` service.
 
 ## Step 5: Add .NET MAUI Smart Text Editor control
 
