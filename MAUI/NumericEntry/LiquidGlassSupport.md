@@ -28,7 +28,7 @@ To achieve a glass like background in the MaskedEntry, set the `Background` and 
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfMaskedEntry` control:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="" %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
     <Grid>
     <Image Source="Wallpaper.png" Aspect="AspectFill">
         <core:SfGlassEffectView
@@ -48,7 +48,7 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
     </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 using Syncfusion.Maui.Core;
 using Syncfusion.Maui.Inputs;
