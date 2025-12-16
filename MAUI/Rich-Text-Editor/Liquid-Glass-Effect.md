@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Cupertino Theme on .NET MAUI RichTextEditor control | Syncfusion®
+title: Liquid Glass Effect on .NET MAUI RichTextEditor control | Syncfusion®
 description: Learn here all about how to enable cupertino theme for Syncfusion® .NET MAUI Rich Text Editor (SfRichTextEditor) control, its elements and more.
 platform: maui 
 control: SfRichTextEditor
 documentation: ug
 ---
 
-# Cupertino Theme in .NET MAUI RichTextEditor
+# Liquid Glass Effect in .NET MAUI RichTextEditor
 
-The Cupertino theme is a modern design style that provides a sleek, minimalist appearance with clean lines, subtle visual effects, and elegant styling. It features smooth rounded corners, refined color palettes, and sophisticated visual treatments that create a polished, professional look for your RichTextEditor.
+The Liquid Glass Effect is a modern design style that provides a sleek, minimalist appearance with clean lines, subtle visual effects, and elegant styling. It features smooth rounded corners, refined color palettes, and sophisticated visual treatments that create a polished, professional look for your RichTextEditor.
 
-N> The Cupertino liquid glass effect is only available on macOS and iOS platforms with iOS version 26 or higher.
+N> The liquid glass effect is only available on macOS and iOS platforms with version 26 or higher.
 
 ## How it Enhances RichTextEditor UI on macOS and iOS
 
-The Cupertino theme enhances the RichTextEditor with liquid glass effects on toolbar and editor elements, creating a modern and visually appealing text editing interface that delivers a sophisticated user experience.
+The Liquid Glass Effect enhances the RichTextEditor with liquid glass effects on toolbar and editor elements, creating a modern and visually appealing text editing interface that delivers a sophisticated user experience.
 
-## Enable Cupertino Theme
+## Apply Liquid Glass Effect to SfRichTextEditor
 
 To enable the Cupertino theme's liquid glass effect, set the [EnableLiquidGlassEffect]() property to `True` on the SfRichTextEditor. For optimal visual appearance with a sleek and glassy output, set transparent backgrounds for both the editor and toolbar using the [EditorBackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.SfRichTextEditor.html#Syncfusion_Maui_RichTextEditor_SfRichTextEditor_EditorBackgroundColor) property of SfRichTextEditor and the [BackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RichTextEditor.RichTextEditorToolbarSettings.html#Syncfusion_Maui_RichTextEditor_RichTextEditorToolbarSettings_BackgroundColor) property of ToolbarSettings.
 
@@ -114,8 +114,13 @@ The editor corner radius can be customized using the Syncfusion theme key:
 
 {% endtabs %}
 
-N> `SfRichTextEditorCornerRadius` theme key works with the liquid glass effect on iOS and macOS only.
+### Best Practices and Tips
 
-N> To override the default appearance of the toolbar and the editor’s corner radius, you need to initialize the Syncfusion theme dictionary resources in the application’s resource dictionary. For more details, refer to the [documentation](https://help.syncfusion.com/maui/themes/themes).
+- To override the default appearance of the toolbar and the editor’s corner radius, you need to initialize the Syncfusion theme dictionary resources in the application’s resource dictionary. For more details, refer to the [documentation](https://help.syncfusion.com/maui/themes/themes).
+- `SfRichTextEditorToolbarCornerRadius` theme key used to customize the corner radius of the toolbar.
+- `SfRichTextEditorToolbarSelectionCornerRadius` theme key used to customize the corner radius of selected toolbar item.
+- `SfRichTextEditorCornerRadius` theme key used the customize the corner radius of SfRichTextEditor.
+
+N> `SfRichTextEditorCornerRadius` theme key works with the liquid glass effect on iOS and macOS only.
 
 
