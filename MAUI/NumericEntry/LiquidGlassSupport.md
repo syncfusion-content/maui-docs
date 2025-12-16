@@ -1,31 +1,31 @@
 ---
 layout: post
-title: Liquid Glass Effect for .NET MAUI MaskedEntry | Syncfusion®
-description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI MaskedEntry (SfMaskedEntry) control.
+title: Liquid Glass Effect for .NET MAUI NumericEntry | Syncfusion®
+description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI NumericEntry (SfNumericEntry) control.
 platform: MAUI
-control: SfMaskedEntry
+control: SfNumericEntry
 documentation: ug
 ---
 
-# Liquid Glass Effect in .NET MAUI MaskedEntry (SfMaskedEntry)
+# Liquid Glass Effect in .NET MAUI NumericEntry (SfNumericEntry)
 
-The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI MaskedEntry (SfMaskedEntry) control.
+The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI NumericEntry (SfNumericEntry) control.
 
 ## Apply liquid glass effect
 
-Follow these steps to enable and configure the Liquid Glass Effect in the MaskedEntry control:
+Follow these steps to enable and configure the Liquid Glass Effect in the NumericEntry control:
 
 ### Step 1: Wrap the control inside glass effect view
 
-To apply the Liquid Glass Effect to Syncfusion® .NET MAUI `MaskedEntry` control, wrap the control inside the `SfGlassEffectView` class.
+To apply the Liquid Glass Effect to Syncfusion® .NET MAUI `NumericEntry` control, wrap the control inside the `SfGlassEffectView` class.
 
 For more details, refer to the `Liquid Glass Getting Started documentation`.
 
 ### Step 2: Customize the background
 
-To achieve a glass like background in the MaskedEntry, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
+To achieve a glass like background in the NumericEntry, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
 
-The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfMaskedEntry` control:
+The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfNumericEntry` control:
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
