@@ -20,9 +20,9 @@ The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Sf
 
 ## Prerequisites
 
-- Add the Syncfusion.Maui.Core package (for SfGlassEffectsView) and Syncfusion.Maui.DataGrid (for SfDataGrid).
+- Add the [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) package (for SfGlassEffectsView) and [Syncfusion.Maui.DataGrid](https://www.nuget.org/packages/Syncfusion.Maui.DataGrid/) (for SfDataGrid).
 
-XAML example: Wrap the SfDataGrid in an SfGlassEffectsView. For surfaces like drag views, tooltip, and context menu, set their Background to Transparent to reveal the glass effect.
+XAML example: Wrap the `SfDataGrid` in an `SfGlassEffectsView`, then enable the glass effect with `EnableLiquidGlassEffect`. For surfaces like drag views, tooltip, and context menu, set their Background to Transparent to reveal the glass effect.
 
 {% tabs %}
 {% highlight xaml %}
@@ -39,7 +39,6 @@ XAML example: Wrap the SfDataGrid in an SfGlassEffectsView. For surfaces like dr
         <Image Source="wallpaper.jpg" Aspect="AspectFill" />
         <core:SfGlassEffectsView
             CornerRadius="20"
-            HeightRequest="200"
             EffectType="Regular"
             EnableShadowEffect="True">
 
@@ -60,10 +59,18 @@ XAML example: Wrap the SfDataGrid in an SfGlassEffectsView. For surfaces like dr
 using Syncfusion.Maui.Core;
 using Syncfusion.Maui.DataGrid;
 
+var grid = new Grid();
+var background = new Image
+{
+    Source = "wallpaper.jpg",
+    Aspect = Aspect.AspectFill
+};
+
+grid.Children.Add(background);
+
 var glassEffects = new SfGlassEffectsView
 {
     CornerRadius = 20,
-    HeightRequest = 200,
     EffectType = LiquidGlassEffectType.Regular,
     EnableShadowEffect = true
 };
@@ -79,13 +86,15 @@ dataGrid.DefaultStyle.RowDragViewBackgroundColor = Colors.Transparent;
 dataGrid.DefaultStyle.ColumnDragViewBackgroundColor = Colors.Transparent;
 
 glassEffects.Content = dataGrid;
-this.Content = glassEffects;
+grid.Children.Add(glassView);
+Content = grid;
+
 {% endhighlight %}
 {% endtabs %}
 
 ## SfDataPager
 
-You can also enable the liquid glass effect for the standalone [SfDataPager]() control by setting `EnableLiquidGlassEffect` to `True`. Wrapping with `SfGlassEffectsView` is optional for additional container styling.
+You can also enable the liquid glass effect for the standalone [SfDataPager](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataPager.SfDataPager.html) control by setting `EnableLiquidGlassEffect` to `True`. Wrapping with `SfGlassEffectsView` is optional for additional container styling.
 
 {% tabs %}
 {% highlight xaml %}
@@ -137,5 +146,3 @@ pagerGlass.Content = dataPager;
 this.Content = pagerGlass;
 {% endhighlight %}
 {% endtabs %}
-
-The following screenshot illustrates SfDataGrid within an acrylic container, with grid surfaces revealing the glass effect.
