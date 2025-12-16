@@ -17,7 +17,7 @@ Follow these steps to enable and configure the Liquid Glass Effect in the DateTi
 
 ### Step 1: Enable the liquid glass effect on DateTime RangeSelector
 
-Set the `EnableLiquidGlassEffect` property to `true` in the `SfDateTimeRangeSelector` control to apply the Liquid Glass Effect. When enabled,it provides responsive interaction for a smooth and engaging user experience.
+Set the [EnableLiquidGlassEffect]() property to `true` in the [SfDateTimeRangeSelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sliders.SfDateTimeRangeSelector.html) control to apply the Liquid Glass Effect. When enabled,it provides responsive interaction for a smooth and engaging user experience.
 
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfDateTimeRangeSelector` control:
 
