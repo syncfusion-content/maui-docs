@@ -25,14 +25,10 @@ For more details, refer to the `Liquid Glass Getting Started documentation`.
 
 Set the `EnableLiquidGlassEffect` property to `true` in the `SfListView` control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its dependent controls and provides responsive interaction for a smooth and engaging user experience.
 
-### Step 3: Customize the background
-
-To achieve a glass like background in the ListView and its Toolbar control, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
-
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfListView` control:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14 16 20" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
 <Grid>
       <core:SfGlassEffectView x:Name="glassview" EffectType="Regular">
           <ListView:SfListView x:Name="listView"
@@ -53,7 +49,7 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
   </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="21 22 23 24 25 30" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="18" %}
 
 
 using Microsoft.Maui.Controls;
