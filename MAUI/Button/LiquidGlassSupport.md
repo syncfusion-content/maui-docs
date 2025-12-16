@@ -26,37 +26,50 @@ To achieve a glass like background in the Buttons, set the `Background` property
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfButton` control:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14 16 20" %}
-
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
     <Grid>
-        <StackLayout Padding="24" Spacing="16" VerticalOptions="Center" HorizontalOptions="Center">
-            <buttons:SfButton
-                x:Name="GlassButton"
-                Text="Continue"
-                EnableLiquidGlassEffect="True"
-                Background="Transparent"
-                WidthRequest="180"
-                CornerRadius="24"
-                HeightRequest="48" />
-        </StackLayout>
+    <Image Source="Wallpaper.png" Aspect="AspectFill">
+        <buttons:SfButton
+            x:Name="GlassButton"
+            Text="GlassButton"
+            EnableLiquidGlassEffect="True"
+            Background="Transparent"
+            WidthRequest="180"
+            CornerRadius="24"
+            HeightRequest="48" />
     </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="21 22 23 24 25 30" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="17" %}
 
 using Syncfusion.Maui.Buttons;
 
-var glassButton = new SfButton
-{
-    Text = "GlassButton",
-    EnableLiquidGlassEffect = true, // Enables glass look and press-time scaling
-    WidthRequest = 180,
-    Background=Colors.Transparent;
-    HeightRequest = 48
-};
+    var grid = new Grid();
+    var image = new Image
+    {
+        Source = "Wallpaper.png",
+        Aspect = Aspect.AspectFill
+    };
+    grid.Children.Add(image);
+    var glassButton = new SfButton
+    {
+        Text = "GlassButton",
+        Background = Colors.Transparent,
+        WidthRequest = 180,
+        HeightRequest = 48,
+        CornerRadius = 24,
+        EnableLiquidGlassEffect = true
+    };
+    grid.Children.Add(GlassButton);
+
+    this.Content = grid;
 
 {% endhighlight %}
 {% endtabs %}
+
+The following screenshot illustrates SfButton with the glass effect enabled.
+
+![button with liquid glass support](Images/customization-images/Button_liquidglass.png)
 
 N>
 This feature is supported only on .NET 10 along with iOS 26 and macOS 26 

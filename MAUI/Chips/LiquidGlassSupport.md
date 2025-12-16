@@ -25,41 +25,54 @@ To achieve a glass like background in the Chips, set the `Background` property t
 
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfChip` control:
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14 16 20" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
     <Grid>
-        <StackLayout Padding="24" Spacing="16" VerticalOptions="Center">
-            <Label Text="Filters" FontSize="18" TextColor="White" />
-            <core:SfChipGroup
-                x:Name="FilterChips"
-                EnableLiquidGlassEffect="True">
-                <chip:SfChipGroup.Items>
-                    <chip:SfChip Text="Extra Small"/>
-                    <chip:SfChip Text="Small" />
-                    <chip:SfChip Text="Medium" />
-                    <chip:SfChip Text="Large"/>
-                    <chip:SfChip Text="Extra Large"/>
-                </chip:SfChipGroup.Items>
-            </core:SfChipGroup>
-        </StackLayout>
+    <Image Source="Wallpaper.png" Aspect="AspectFill">
+        <core:SfChipGroup
+            x:Name="FilterChips"
+            EnableLiquidGlassEffect="True">
+            <chip:SfChipGroup.Items>
+                <chip:SfChip Text="Extra Small"/>
+                <chip:SfChip Text="Small" />
+                <chip:SfChip Text="Medium" />
+                <chip:SfChip Text="Large"/>
+                <chip:SfChip Text="Extra Large"/>
+            </chip:SfChipGroup.Items>
+        </core:SfChipGroup>
     </Grid>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="21 22 23 24 25 30" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="13" %}
 
 using Syncfusion.Maui.Core;
 
-SfChipGroup chipGroup = new SfChipGroup
-{
-    EnableLiquidGlassEffect = true, // Enables built-in glassy look on chips
-};
+    var grid = new Grid();
+    var image = new Image
+    {
+        Source = "Wallpaper.png",
+        Aspect = Aspect.AspectFill
+    };
+    grid.Children.Add(image);
 
-chipGroup.Items.Add(new SfChip(){Text="Extra Small"});
-chipGroup.Items.Add(new SfChip(){Text="Small"});
-chipGroup.Items.Add(new SfChip(){Text="Medium"});
-chipGroup.Items.Add(new SfChip(){Text="Large"});
-chipGroup.Items.Add(new SfChip(){Text="Extra Large" });
+    var FilterChips = new SfChipGroup
+    {
+        EnableLiquidGlassEffect = true
+    };
+
+    FilterChips.Items.Add(new SfChip { Text = "Extra Small" });
+    FilterChips.Items.Add(new SfChip { Text = "Small" });
+    FilterChips.Items.Add(new SfChip { Text = "Medium" });
+    FilterChips.Items.Add(new SfChip { Text = "Large" });
+    FilterChips.Items.Add(new SfChip { Text = "Extra Large" });
+
+    grid.Children.Add(FilterChips);
+    Content = grid;
 
 {% endhighlight %}
 {% endtabs %}
+
+The following screenshot illustrates SfChipGroup with the built-in glass effect enabled via EnableLiquidGlassEffect, displayed over a wallpaper background.
+
+![chips with liquid glass support](images/customization-images/Chip_liquidglass.png)
 
 N>
 This feature is supported only on .NET 10 along with iOS 26 and macOS 26 

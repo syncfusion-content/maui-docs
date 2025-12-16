@@ -28,32 +28,45 @@ To achieve a glass like background in the Signature Pad, set the `Background` pr
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfSignaturePad` control:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14 16 20" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="" %}
     <Grid>
-            <core:SfGlassEffectView
-                CornerRadius="20"
-                HeightRequest="40"
-                EffectType="Regular"
-                EnableShadowEffect="True">
-                <signature:SfSignaturePad
-                    x:Name="SignaturePad"
-                    Background="Transparent"
-                    StrokeColor="#1F2937"
-                    StrokeWidth="2"/>
-            </core:SfGlassEffectView>
+    <Image Source="Wallpaper.png" Aspect="AspectFill">
+        <core:SfGlassEffectView
+            CornerRadius="20"
+            HeightRequest="40"
+            EffectType="Regular"
+            EnableShadowEffect="True">
+            <signature:SfSignaturePad
+                x:Name="SignaturePad"
+                Background="Transparent"
+                StrokeColor="#1F2937"
+                StrokeWidth="2"/>
+        </core:SfGlassEffectView>
     </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="14" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="" %}
 
 using Syncfusion.Maui.Core;
 using Syncfusion.Maui.SignaturePad;
 
+var grid = new Grid
+{
+    BackgroundColor = Colors.Transparent
+};
+
+var image = new Image
+{
+    Source = "Wallpaper.png",
+    Aspect = Aspect.AspectFill
+};
+grid.Children.Add(image);
+
 var glassEffects = new SfGlassEffectView
 {
-    CornerRadius=20,
-    HeightRequest=40,
-    EffectType=LiquidGlassEffectType.Regular,
+    CornerRadius = 20,
+    HeightRequest = 40,
+    EffectType = LiquidGlassEffectType.Regular,
     EnableShadowEffect=True
 };
 
@@ -68,8 +81,15 @@ var signaturePad = new SfSignaturePad
 
 glassEffects.Content = signaturePad;
 
+grid.Children.Add(glassEffects);
+this.Content = grid;
+
 {% endhighlight %}
 {% endtabs %}
+
+The following screenshot illustrates SfSignaturePad within an acrylic container, with the dropdown using the glass effect.
+
+![signature pad with liquid glass support](images/getting-started/SignaturePad_liquidglass.png)
 
 N>
 This feature is supported only on .NET 10 along with iOS 26 and macOS 26 

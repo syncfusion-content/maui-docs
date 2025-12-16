@@ -22,19 +22,29 @@ Set the `EnableLiquidGlassEffect` property to `true` in the `SfDateTimeSlider` c
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfDateTimeSlider` control:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14 16 20" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
     <Grid>
-        <StackLayout Padding="24" Spacing="16" VerticalOptions="Center">
+        <Image Source="Wallpaper.png" Aspect="AspectFill">
             <sliders:SfDateTimeSlider
                 Minimum="2010-01-01" 
                 Maximum="2018-01-01" 
                 EnableLiquidGlassEffect="True" />
-        </StackLayout>
     </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="21 22 23 24 25 30" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="17" %}
 using Syncfusion.Maui.Sliders;
+var grid = new Grid
+{
+    BackgroundColor = Colors.Transparent
+};
+
+var image = new Image
+{
+    Source = "Wallpaper.png",
+    Aspect = Aspect.AspectFill
+};
+grid.Children.Add(image);
 
 SfDateTimeSlider dateTimeSlider = new SfDateTimeSlider
 {
@@ -43,8 +53,15 @@ SfDateTimeSlider dateTimeSlider = new SfDateTimeSlider
     EnableLiquidGlassEffect = true
 };
 
+grid.Children.Add(dateTimeSlider);
+this.Content = grid;
+
 {% endhighlight %}
 {% endtabs %}
+
+The following screenshot illustrates SfDateTimeSlider with the glass effect visible on the thumb while it is pressed.
+
+![date time slider with liquid glass support](images/getting-started/slider_liquidglass.gif)
 
 N>
 This feature is supported only on .NET 10 along with iOS 26 and macOS 26 

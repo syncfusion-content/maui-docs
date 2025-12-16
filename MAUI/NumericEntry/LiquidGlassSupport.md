@@ -28,8 +28,9 @@ To achieve a glass like background in the MaskedEntry, set the `Background` and 
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfMaskedEntry` control:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14 16 20" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="" %}
     <Grid>
+    <Image Source="Wallpaper.png" Aspect="AspectFill">
         <core:SfGlassEffectView
             CornerRadius="20"
             HeightRequest="40"
@@ -47,10 +48,22 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
     </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="21 22 23 24 25 30" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="" %}
 
 using Syncfusion.Maui.Core;
 using Syncfusion.Maui.Inputs;
+
+var grid = new Grid
+{
+    BackgroundColor = Colors.Transparent
+};
+
+var image = new Image
+{
+    Source = "Wallpaper.png",
+    Aspect = Aspect.AspectFill
+};
+grid.Children.Add(image);
 
 var glassEffect = new SfGlassEffectView
 {
@@ -72,9 +85,15 @@ var numericEntry = new SfNumericEntry
 };
 
 glassEffect.Content = numericEntry;
+grid.Children.Add(glassEffect);
+this.Content = grid;
 
 {% endhighlight %}
 {% endtabs %}
+
+The following screenshot illustrates SfNumericEntry within an acrylic container using the glass effect.
+
+![numeric entry with liquid glass support](GettingStarted_images/NumericEntry_liquidGlass.png)
 
 N>
 This feature is supported only on .NET 10 along with iOS 26 and macOS 26 

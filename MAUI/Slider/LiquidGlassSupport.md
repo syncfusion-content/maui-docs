@@ -22,21 +22,32 @@ Set the `EnableLiquidGlassEffect` property to `true` in the `SfSlider` control t
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfSlider` control:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14 16 20" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="7" %}
     <Grid>
-        <StackLayout Padding="24" Spacing="16" VerticalOptions="Center">
-            <sliders:SfSlider
-                Minimum="0"
-                Maximum="100"
-                Value="45"
-                EnableLiquidGlassEffect="True" />
-        </StackLayout>
+    <Image Source="Wallpaper.png" Aspect="AspectFill">
+        <sliders:SfSlider
+            Minimum="0"
+            Maximum="100"
+            Value="45"
+            EnableLiquidGlassEffect="True" />
     </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="21 22 23 24 25 30" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="18" %}
 
 using Syncfusion.Maui.Sliders;
+
+var grid = new Grid
+{
+    BackgroundColor = Colors.Transparent
+};
+
+var image = new Image
+{
+    Source = "Wallpaper.png",
+    Aspect = Aspect.AspectFill
+};
+grid.Children.Add(image);
 
 var slider = new SfSlider
 {
@@ -46,8 +57,15 @@ var slider = new SfSlider
     Value = 45
 };
 
+grid.Children.Add(slider);
+this.Content = grid;
+
 {% endhighlight %}
 {% endtabs %}
+
+The following screenshot illustrates SfSlider with the glass effect visible on the thumb while it is pressed.
+
+![slider with liquid glass support](images/getting-started/slider_liquidglass.gif)
 
 N>
 This feature is supported only on .NET 10 along with iOS 26 and macOS 26 

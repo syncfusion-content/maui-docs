@@ -22,20 +22,31 @@ Set the `EnableLiquidGlassEffect` property to `true` in the `SfRangeSlider` cont
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfRangeSlider` control:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="18" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
     <Grid>
-        <StackLayout Padding="24" Spacing="16" VerticalOptions="Center">
-            <sliders:SfRangeSlider 
-                             Minimum="10"
-                             Maximum="20"
-                             EnableLiquidGlassEffect="True" />
-        </StackLayout>
+        <Image Source="Wallpaper.png" Aspect="AspectFill">
+        <sliders:SfRangeSlider 
+                Minimum="10"
+                Maximum="20"
+                EnableLiquidGlassEffect="True" />
     </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="7" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="18" %}
 
 using Syncfusion.Maui.Sliders;
+
+var grid = new Grid
+{
+    BackgroundColor = Colors.Transparent
+};
+
+var image = new Image
+{
+    Source = "Wallpaper.png",
+    Aspect = Aspect.AspectFill
+};
+grid.Children.Add(image);
 
 var rangeSlider = new SfRangeSlider
 {
@@ -44,8 +55,15 @@ var rangeSlider = new SfRangeSlider
     EnableLiquidGlassEffect=true
 };
 
+grid.Children.Add(rangeSlider);
+this.Content = grid;
+
 {% endhighlight %}
 {% endtabs %}
+
+The following screenshot illustrates SfRangeSlider with the glass effect visible on the thumb while it is pressed.
+
+![range slider with liquid glass support](images/getting-started/rangeslider_liquidglass.gif)
 
 N>
 This feature is supported only on .NET 10 along with iOS 26 and macOS 26 
