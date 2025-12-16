@@ -32,32 +32,19 @@ To achieve a glass like background in the TreeView  control to maintain the desi
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfTreeView` control:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="13 19" %}
+{% highlight xaml hl_lines="2 5" %}
 
-<Grid>
-    <Grid.Background>
-        <LinearGradientBrush StartPoint="0,0"
-                             EndPoint="0,1">
-            <GradientStop Color="#0F4C75"
-                          Offset="0.0"/>
-            <GradientStop Color="#3282B8"
-                          Offset="0.5"/>
-            <GradientStop Color="#1B262C"
-                          Offset="1.0"/>
-        </LinearGradientBrush>
-    </Grid.Background>
+<Grid Background="#FF54A3CD">
     <core:SfGlassEffectView EffectType="Regular"
                             CornerRadius="20">
         <treeView:SfTreeView x:Name="treeView"
                              Background="Transparent"
-                             ChildPropertyName="SubFiles"
-                             ItemsSource="{Binding ImageNodeInfo}"
                              EnableLiquidGlassEffect="True"/>
     </core:SfGlassEffectView>
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="26 35" %}
+{% highlight c# hl_lines="14 23" %}
 
 using Syncfusion.Maui.Core;
 using Syncfusion.Maui.TreeView;
@@ -67,21 +54,9 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        var gradientBrush = new LinearGradientBrush
-        {
-            StartPoint = new Point(0, 0),
-            EndPoint = new Point(0, 1),
-            GradientStops = new GradientStopCollection
-            {
-                new GradientStop { Color = Color.FromArgb("#0F4C75"), Offset = 0.0f },
-                new GradientStop { Color = Color.FromArgb("#3282B8"), Offset = 0.5f },
-                new GradientStop { Color = Color.FromArgb("#1B262C"), Offset = 1.0f }
-            }
-        };
-
         var grid = new Grid
         {
-            Background = gradientBrush
+            Background = Color.FromArgb("#FF54A3CD")
         };
 
         var glassView = new SfGlassEffectView
@@ -94,8 +69,6 @@ public partial class MainPage : ContentPage
         {
             Background = Colors.Transparent,
             EnableLiquidGlassEffect = true,
-            ChildPropertyName = "SubFiles",
-            ItemsSource = viewModel.ImageNodeInfo
         };
 
         glassView.Content = treeView;

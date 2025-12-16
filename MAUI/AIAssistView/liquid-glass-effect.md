@@ -21,7 +21,7 @@ To apply the Liquid Glass Effect to Syncfusion® .NET MAUI `AIAssistView` contro
 
 For more details, refer to the `Liquid Glass Getting Started documentation`.
 
-### Step 2: Enable the liquid glass effect on Image Editor
+### Step 2: Enable the liquid glass effect on AI AssistView
 
 Set the `EnableLiquidGlassEffect` property to `true` in the `SfAIAssistView` control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its dependent controls and provides responsive interaction for a smooth and engaging user experience.
 
@@ -32,31 +32,19 @@ To achieve a glass like background in the AI AssistView control to maintain the 
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfAIAssistView` control:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="13 18" %}
+{% highlight xaml hl_lines="2 6" %}
 
-<Grid>
-    <Grid.Background>
-        <LinearGradientBrush StartPoint="0,0"
-                             EndPoint="0,1">
-            <GradientStop Color="#0F4C75"
-                          Offset="0.0"/>
-            <GradientStop Color="#3282B8"
-                          Offset="0.5"/>
-            <GradientStop Color="#1B262C"
-                          Offset="1.0"/>
-        </LinearGradientBrush>
-    </Grid.Background>
+<Grid Background="#FF54A3CD">
     <core:SfGlassEffectView EffectType="Regular"
                             CornerRadius="20">
         <assistView:SfAIAssistView x:Name="aiAssistView"
                                    Background="Transparent"
-                                   AssistItems="{Binding AssistItems}"
                                    EnableLiquidGlassEffect="True"/>
     </core:SfGlassEffectView>
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="26 35" %}
+{% highlight c# hl_lines="14 23" %}
 
 using Syncfusion.Maui.Core;
 using Syncfusion.Maui.AIAssistView;
@@ -66,21 +54,9 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        var gradientBrush = new LinearGradientBrush
-        {
-            StartPoint = new Point(0, 0),
-            EndPoint = new Point(0, 1),
-            GradientStops = new GradientStopCollection
-            {
-                new GradientStop { Color = Color.FromArgb("#0F4C75"), Offset = 0.0f },
-                new GradientStop { Color = Color.FromArgb("#3282B8"), Offset = 0.5f },
-                new GradientStop { Color = Color.FromArgb("#1B262C"), Offset = 1.0f }
-            }
-        };
-
         var grid = new Grid
         {
-            Background = gradientBrush
+            Background = Color.FromArgb("#FF54A3CD")
         };
 
         var glassView = new SfGlassEffectView

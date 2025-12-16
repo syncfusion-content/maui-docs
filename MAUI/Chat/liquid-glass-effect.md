@@ -32,69 +32,51 @@ To achieve a glass like background in the Chat control to maintain the desired t
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfChat` control:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="13 19" %}
+{% highlight xaml hl_lines="2 6" %}
 
-<Grid>
-    <Grid.Background>
-        <LinearGradientBrush StartPoint="0,0"
-                             EndPoint="0,1">
-            <GradientStop Color="#0F4C75"
-                          Offset="0.0"/>
-            <GradientStop Color="#3282B8"
-                          Offset="0.5"/>
-            <GradientStop Color="#1B262C"
-                          Offset="1.0"/>
-        </LinearGradientBrush>
-    </Grid.Background>
+<Grid Background="#FF54A3CD">
     <core:SfGlassEffectView EffectType="Regular"
                             CornerRadius="20">
         <chat:SfChat x:Name="chat"
                      Background="Transparent"
-                     CurrentUser="{Binding CurrentUser}"
-                     Messages="{Binding Messages}"
                      EnableLiquidGlassEffect="True">
         </chat:SfChat>
     </core:SfGlassEffectView>
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="21 30" %}
+{% highlight c# hl_lines="14 23" %}
 
 using Syncfusion.Maui.Core;
 using Syncfusion.Maui.Chat;
 
-var gradientBrush = new LinearGradientBrush
+public partial class MainPage : ContentPage
 {
-    StartPoint = new Point(0, 0),
-    EndPoint = new Point(0, 1),
-    GradientStops = new GradientStopCollection
+    public MainPage()
     {
-        new GradientStop { Color = Color.FromArgb("#0F4C75"), Offset = 0.0f },
-        new GradientStop { Color = Color.FromArgb("#3282B8"), Offset = 0.5f },
-        new GradientStop { Color = Color.FromArgb("#1B262C"), Offset = 1.0f }
+        InitializeComponent();
+        var grid = new Grid
+        {
+            Background = Color.FromArgb("#FF54A3CD")
+        };
+
+        var glassView = new SfGlassEffectView
+        {
+            CornerRadius = 20,
+            EffectType = LiquidGlassEffectType.Regular
+        };
+
+        var chat = new SfChat
+        {
+            Background = Colors.Transparent,
+            EnableLiquidGlassEffect = true,
+        };
+
+        glassView.Content = chat;
+        grid.Children.Add(glassView);
+        this.Content = grid;
     }
-};
-
-var grid = new Grid
-{
-    Background = gradientBrush
-};
-
-var glassView = new SfGlassEffectView
-{
-    CornerRadius = 20,
-    EffectType = LiquidGlassEffectType.Regular
-};
-
-var chat = new SfChat
-{
-    Background = Colors.Transparent,
-    EnableLiquidGlassEffect = true,
-};
-
-glassView.Content = chat;
-grid.Children.Add(glassView);
-this.Content = grid;
+}
 
 {% endhighlight %}
 {% endtabs %}
