@@ -204,7 +204,7 @@ You can customize the border of the tab header area in .NET MAUI Tab View using 
 
 - [TabBarBorderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarBorderColor): Sets the border color.
 - [TabBarBorderThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarBorderThickness): Sets the border thickness.
-- TabBarCornerRadius: Sets the corner radius of the tab bar's border.
+- [TabBarCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarCornerRadius): Sets the corner radius of the tab bar's border.
 
 {% tabs %}
 
