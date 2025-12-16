@@ -1,89 +1,81 @@
 ---
 layout: post
-title: Liquid Glass Support for .NET MAUI Autocomplete entry | Syncfusion®
-description: Learn here about providing liquid glass support for Syncfusion® .NET MAUI Autocomplete (SfAutocomplete) control and more.
+title: Liquid Glass Effect for .NET MAUI Autocomplete | Syncfusion®
+description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI Autocomplete (SfAutocomplete) control.
 platform: MAUI
 control: SfAutocomplete
 documentation: ug
 ---
 
-# Liquid Glass Support for .NET MAUI Autocomplete
+# Liquid Glass Effect in .NET MAUI Autocomplete (SfAutocomplete)
 
-The [SfAutocomplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfAutocomplete.html) supports a `liquid glass` appearance by hosting the control inside the Syncfusion [SfGlassEffectView](). You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when SfAutocomplete is placed over images or colorful layouts. Additionally, the dropdown portion of SfAutocomplete applies the glass effect only when the [EnableLiquidGlassEffect]() property is set to true.
+The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Autocomplete (SfAutocomplete) control.
 
-## Availability
+## Apply liquid glass effect
 
-1. This feature is supported on .NET 10 or greater.
-2. This feature is supported on mac or iOS 26 or greater.
-3. On platforms or versions below these requirements, the control renders without the acrylic blur effect and falls back to a standard background.
+Follow these steps to enable and configure the Liquid Glass Effect in the Autocomplete control:
 
-## Prerequisites
+### Step 1: Wrap the control inside glass effect view
 
-- Add the Syncfusion.Maui.Core package (for SfGlassEffectView) and Syncfusion.Maui.Inputs (for SfAutocomplete).
+To apply the Liquid Glass Effect to Syncfusion® .NET MAUI `Autocomplete` control, wrap the control inside the `SfGlassEffectView` class.
 
-XAML example Wrap the SfAutocomplete in an SfGlassEffectView, then enable the dropdown’s glass effect with `EnableLiquidGlassEffect`.
+For more details, refer to the `Liquid Glass Getting Started documentation`.
+
+### Step 2: Enable the liquid glass effect on Autocomplete
+
+Set the `EnableLiquidGlassEffect` property to `true` in the `SfAutocomplete` control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its dependent controls and provides responsive interaction for a smooth and engaging user experience.
+
+### Step 3: Customize the background
+
+To achieve a glass like background in the Autocomplete, set the `Background` and `DropDownBackground` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
+
+The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfAutocomplete` control:
 
 {% tabs %}
-{% highlight xaml hl_lines="19 22" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14 16 20" %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:inputs="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
-    xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    x:Class="AcrylicAutocompleteBoxPage">
-
-    <Grid>
-        <!-- Background to make acrylic blur visible -->
-        <Image Source="wallpaper.jpg" Aspect="AspectFill" />
-            <core:SfGlassEffectView
-                CornerRadius="20"
-                HeightRequest="40"
-                EffectType="Regular"
-                EnableShadowEffect="True">
-
-                <inputs:SfAutocomplete
-                    EnableLiquidGlassEffect="True"
-                    Background="Transparent"
-                    ItemsSource="{Binding Employees}"
-                    DisplayMemberPath="Name"
-                    DropDownBackground="Transparent"
-                    Placeholder="Select employee"/>
-            </core:SfGlassEffectView>
-    </Grid>
-</ContentPage>
+<Grid BackgroundColor="Transparent">
+    <core:SfGlassEffectView EffectType="Regular"
+                            CornerRadius="20">
+        <Autocomplete:SfAutocomplete x:Name="Autocomplete"
+                                   Background="Transparent"
+                                   DropDownBackground="Transparent"
+                                   EnableLiquidGlassEffect="True">
+        </Autocomplete:SfAutocomplete>
+    </core:SfGlassEffectView>
+</Grid>
 
 {% endhighlight %}
-{% highlight c# hl_lines="14 17" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="21 22 23 24 25 30" %}
 
 using Syncfusion.Maui.Core;
 using Syncfusion.Maui.Inputs;
 
-var glassEffects = new SfGlassEffectView
+var grid = new Grid
 {
-    CornerRadius=20,
-    HeightRequest=40,
-    EffectType=LiquidGlassEffectType.Regular,
-    EnableShadowEffect=True
+    BackgroundColor = Colors.Transparent
+};
+
+var glassView = new SfGlassEffectView
+{
+    CornerRadius = 20,
+    EffectType = LiquidGlassEffectType.Regular
 };
 
 var Autocomplete = new SfAutocomplete
 {
-    EnableLiquidGlassEffect = true, // Dropdown glass effect
-    ItemsSource = viewModel.Employees,
-    DisplayMemberPath = "Name",
-    Background=Colors.Transparent,
-    DropDownBackground= Colors.Transparent,
-    Placeholder = "Select employee",
+    Background = Colors.Transparent,
+    EnableLiquidGlassEffect = true,
+    DropDownBackground = Colors.Transparent
 };
 
-glassEffects.Content = Autocomplete;
+glassView.Content = this.Autocomplete;
+grid.Children.Add(glassView);
+this.Content = grid;
 
 {% endhighlight %}
 {% endtabs %}
 
-
-The following screenshot illustrates SfAutocomplete within an acrylic container, with the dropdown using the glass effect.
-
-![Autocomplete editor with liquid glass support](Images/UICustomization/Autocomplete_liquidglass.png)
+N>
+* Supported on `macOS 26 or higher` and `iOS 26 or higher`.
+* This feature is available only in `.NET 10.`
