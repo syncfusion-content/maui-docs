@@ -52,11 +52,11 @@ SfChipGroup chipGroup = new SfChipGroup
     EnableLiquidGlassEffect = true, // Enables built-in glassy look on chips
 };
 
-chipGroup.Items.Add(new SfChip(){Text="Extra Small", Background = Colors.Blue });
-chipGroup.Items.Add(new SfChip(){Text="Small", Background = Colors.Blue });
-chipGroup.Items.Add(new SfChip(){Text="Medium", Background = Colors.Blue });
-chipGroup.Items.Add(new SfChip(){Text="Large", Background = Colors.Blue });
-chipGroup.Items.Add(new SfChip(){Text="Extra Large", Background = Colors.Blue });
+chipGroup.Items.Add(new SfChip(){Text="Extra Small"});
+chipGroup.Items.Add(new SfChip(){Text="Small"});
+chipGroup.Items.Add(new SfChip(){Text="Medium"});
+chipGroup.Items.Add(new SfChip(){Text="Large"});
+chipGroup.Items.Add(new SfChip(){Text="Extra Large" });
 
 {% endhighlight %}
 {% endtabs %}
