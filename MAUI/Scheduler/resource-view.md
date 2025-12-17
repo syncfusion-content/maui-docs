@@ -14,7 +14,7 @@ The [.NET MAUI Scheduler](https://www.syncfusion.com/maui-controls/maui-schedule
 ## Create resources to Scheduler by using SchedulerResource
 You can create a resource view by setting the [Name](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Name), [Id](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Id), [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Background), and [Foreground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Foreground) and [DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_Foreground) properties of the built-in [SchedulerResource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html) class and assign `SchedulerResource` collection to the scheduler by using the [Resources](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) property of the [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6) class.
 
-In the **Day**, **Week** and **Work Week** views, resources are displayed **horizontally**, whereas in the **Timeline views** (Timeline Day, Timeline Week, Timeline Work Week and Timeline Month), resources are displayed **vertically**.
+In the **Day**, **Week** and **Work Week** views, resources are displayed **horizontally** on desktop platforms and under an **adaptive header** on mobile platforms. In the **Timeline views** (Timeline Day, Timeline Week, Timeline Work Week and Timeline Month), resources are displayed **vertically**.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="3" %}
@@ -37,8 +37,6 @@ var Resources = new ObservableCollection<SchedulerResource>()
 this.Scheduler.ResourceView.Resources = Resources;
 {% endhighlight %}
 {% endtabs %}
-
-N> The horizontal display of resources in the **Day**, **Week**, and **Work Week** views is supported only on .NET MAUI desktop platforms (**Windows** and **macOS**).
 
 ### Assigning Scheduler resources to appointments
 
@@ -114,7 +112,7 @@ this.Scheduler.AppointmentsSource = appointment;
 
 ![Resource sharing in .NET MAUI Scheduler.](images/resource-view/resource-view-sharing-in-net-maui-scheduler.png)
 
-## Resource Grouping in Days View
+## Resource Grouping in Days View - Desktop
  
 In the day, week, and work week views, you can control whether dates are grouped under resources or resources are grouped under dates by using the [`ResourceGroupType`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_ResourceGroupType) property of the [`SchedulerResourceView`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_Resources) class.
  
@@ -171,6 +169,261 @@ this.Scheduler.ResourceView.ResourceGroupType = SchedulerResourceGroupType.Date;
 {% endtabs %}
 
 ![Resource Grouping By Date in Days View in .NET MAUI Scheduler.](images/resource-view/group-resources-by-date-in-days-view-in-net-maui-scheduler.png)
+
+## Resource Grouping in Days View - Mobile
+
+In Mobile platforms, the resource view for the day, week, and work week view where grouped under an adaptive header.
+
+### Customize hamburger icon color
+
+The hamburger icon color can be customized by using the `HamburgerIconColor` property of the [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6).
+
+{% tabs %}
+{% highlight XAML hl_lines="3" %}
+
+ <syncfusion:SfScheduler x:Name="Scheduler" View="Day">
+     <syncfusion:SfScheduler.ResourceView>
+         <syncfusion:SchedulerResourceView HamburgerIconColor="Red" />
+     </syncfusion:SfScheduler.ResourceView>
+ </syncfusion:SfScheduler>
+
+{% endhighlight %}
+{% highlight C# hl_lines="9" %}
+var Resources = new ObservableCollection<SchedulerResource>()
+{
+   new SchedulerResource() { Name = "Sophia", Id = "1000" },
+   new SchedulerResource() { Name = "Zoey Addison", Id = "1001" },
+   new SchedulerResource() { Name = "James William", Id = "1002" },
+};
+
+this.Scheduler.ResourceView.Resources = Resources;
+this.Scheduler.ResourceView.HamburgerIconColor = Colors.Red;
+
+{% endhighlight %}
+{% endtabs %}
+
+![customize-hamburger-icon-color-in-maui-scheduler](images/resource-view/customize-hamburger-icon-color-in-maui-scheduler.png)
+
+### Customize drawer resource selection color
+
+The drawer resource selection color can be customized by using the `DrawerResourceSelectionColor` property of the [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6).
+
+{% tabs %}
+{% highlight XAML hl_lines="3" %}
+
+ <syncfusion:SfScheduler x:Name="Scheduler" View="Day">
+     <syncfusion:SfScheduler.ResourceView>
+         <syncfusion:SchedulerResourceView DrawerResourceSelectionColor="DodgerBlue" />
+     </syncfusion:SfScheduler.ResourceView>
+ </syncfusion:SfScheduler>
+
+{% endhighlight %}
+{% highlight C# hl_lines="9" %}
+var Resources = new ObservableCollection<SchedulerResource>()
+{
+   new SchedulerResource() { Name = "Sophia", Id = "1000" },
+   new SchedulerResource() { Name = "Zoey Addison", Id = "1001" },
+   new SchedulerResource() { Name = "James William", Id = "1002" },
+};
+
+this.Scheduler.ResourceView.Resources = Resources;
+this.Scheduler.ResourceView.DrawerResourceSelectionColor = Brush.DodgerBlue;
+
+{% endhighlight %}
+{% endtabs %}
+
+![customize-drawer-resource-selection-color-in-maui-scheduler](images/resource-view/customize-drawer-resource-selection-color-in-maui-scheduler.png)
+
+### Customize drawer background
+
+The drawer background can be customized by using the `DrawerBackground` property of the [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6).
+
+{% tabs %}
+{% highlight XAML hl_lines="3" %}
+
+ <syncfusion:SfScheduler x:Name="Scheduler" View="Day">
+     <syncfusion:SfScheduler.ResourceView>
+         <syncfusion:SchedulerResourceView DrawerBackground="LightGoldenrodYellow" />
+     </syncfusion:SfScheduler.ResourceView>
+ </syncfusion:SfScheduler>
+
+{% endhighlight %}
+{% highlight C# hl_lines="9" %}
+var Resources = new ObservableCollection<SchedulerResource>()
+{
+   new SchedulerResource() { Name = "Sophia", Id = "1000" },
+   new SchedulerResource() { Name = "Zoey Addison", Id = "1001" },
+   new SchedulerResource() { Name = "James William", Id = "1002" },
+};
+
+this.Scheduler.ResourceView.Resources = Resources;
+this.Scheduler.ResourceView.DrawerBackground = Brush.LightGoldenrodYellow;
+
+{% endhighlight %}
+{% endtabs %}
+
+![customize-drawer-background-in-maui-scheduler](images/resource-view/customize-drawer-background-in-maui-scheduler.png)
+
+### Customize adaptive header appearance using DataTemplate
+
+The adaptive header appearance customization can be achieved by using the `AdaptiveHeaderTemplate` property of [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<schedule:SfScheduler x:Name="Scheduler" View="Day">
+    <schedule:SfScheduler.ResourceView>
+        <schedule:SchedulerResourceView>
+            <schedule:SchedulerResourceView.AdaptiveHeaderTemplate>
+                <DataTemplate>
+                    <Grid Padding="8" BackgroundColor="PaleGreen">
+                        <HorizontalStackLayout Spacing="8" VerticalOptions="Center">
+                            <Label Text="☰"
+                                    FontSize="16"
+                                    VerticalTextAlignment="Center"
+                                    HorizontalTextAlignment="Center"
+                                    TextColor="Red"
+                                    Margin="0,0,12,0">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnTapped" />
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <Label Text="{Binding Resource.Name}"
+                                    FontAttributes="Bold"
+                                    FontSize="14" 
+                                    TextColor="DarkViolet" />
+                        </HorizontalStackLayout>
+                    </Grid>
+                </DataTemplate>
+            </schedule:SchedulerResourceView.AdaptiveHeaderTemplate>
+        </schedule:SchedulerResourceView>
+    </schedule:SfScheduler.ResourceView>
+</schedule:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+var Resources = new ObservableCollection<SchedulerResource>()
+{
+   new SchedulerResource() { Name = "Sophia", Id = "1000" },
+   new SchedulerResource() { Name = "Zoey Addison", Id = "1001" },
+   new SchedulerResource() { Name = "James William", Id = "1002" },
+};
+
+this.Scheduler.ResourceView.Resources = Resources;
+this.Scheduler.ResourceView.AdaptiveHeaderTemplate = new DataTemplate(() =>
+{
+    var grid = new Grid
+    {
+        Padding = 8,
+        BackgroundColor = Colors.PaleGreen
+    };
+
+    var stack = new HorizontalStackLayout
+    {
+        Spacing = 8,
+        VerticalOptions = LayoutOptions.Center
+    };
+
+    var menuLabel = new Label
+    {
+        Text = "☰",
+        FontSize = 16,
+        TextColor = Colors.Red,
+        VerticalTextAlignment = TextAlignment.Center,
+        HorizontalTextAlignment = TextAlignment.Center,
+        Margin = new Thickness(0, 0, 12, 0)
+    };
+
+    var tap = new TapGestureRecognizer();
+    tap.Tapped += OnTapped;
+    menuLabel.GestureRecognizers.Add(tap);
+    var nameLabel = new Label
+    {
+        FontAttributes = FontAttributes.Bold,
+        FontSize = 14,
+        TextColor = Colors.DarkViolet
+    };
+    
+    nameLabel.SetBinding(Label.TextProperty, "Resource.Name");
+    stack.Add(menuLabel);
+    stack.Add(nameLabel);
+    grid.Add(stack);
+    return grid;
+});
+
+private void OnTapped(object sender, TappedEventArgs e)
+{
+    if (sender is Label label && label.BindingContext is SchedulerAdaptiveResource resource)
+    {
+        resource.ToggleResourceDrawerView();
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![customize-adapter-header-template-in-maui-scheduler](images/resource-view/customize-adapter-header-template-in-maui-scheduler.png)
+
+N> 
+* The BindingContext of the `AdaptiveHeaderTemplate` is the `SchedulerAdaptiveResource.`
+* The `ToggleResourceDrawerView` method should be called on the `SchedulerAdaptiveResource` instance obtained from the control’s BindingContext. It toggles the visibility of the drawer resource view. It is used only when the `AdaptiveHeaderTemplate` is applied.
+
+### Customize drawer resource appearance using DataTemplate
+
+The drawer resource appearance customization can be achieved by using the `DrawerResourceTemplate` property of [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
+
+{% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
+
+<ContentPage.Resources>
+    <DataTemplate x:Key="drawerResourceTemplate">
+        <Grid Background="{Binding DataItem.BackgroundBrush}">
+            <Label Margin="10" FontAttributes="Bold"  Text="{Binding DataItem.Name}" TextColor="{Binding DataItem.ForegroundBrush}"/>
+        </Grid>
+    </DataTemplate>
+</ContentPage.Resources>
+
+<scheduler:SfScheduler x:Name="scheduler">
+    <scheduler:SfScheduler.ResourceView>
+        <scheduler:SchedulerResourceView DrawerResourceTemplate="{StaticResource drawerResourceTemplate}">
+            <scheduler:SchedulerResourceView.Mapping>
+                <scheduler:SchedulerResourceMapping
+                     Id = "Id"
+                     Name="Name"
+                     Background="BackgroundColor"
+                     Foreground="ForegroundColor"/>
+            </scheduler:SchedulerResourceView.Mapping>
+        </scheduler:SchedulerResourceView>
+    </scheduler:SfScheduler.ResourceView>
+</scheduler:SfScheduler>
+
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+
+public class Employee
+{
+    public string Name { get; set; }
+    public object Id { get; set; }
+    public Brush BackgroundBrush { get; set; }
+    public Brush ForegroundBrush { get; set; }
+}
+
+var Resources = new ObservableCollection<Employee>()
+{
+    new Employee() { Name = "Sophia", Id = "1000", BackgroundBrush = Brush.PaleGreen, ForegroundBrush = Brush.Black },
+    new Employee() { Name = "Zoey Addison", Id = "1001", BackgroundBrush = Brush.SkyBlue, ForegroundBrush = Brush.Black },
+    new Employee() { Name = "James William", Id = "1002", BackgroundBrush = Brush.LightPink, ForegroundBrush = Brush.Black },
+};
+
+this.scheduler.ResourceView.Resources = Resources;
+
+{% endhighlight %}
+{% endtabs %}
+
+![customize-drawer-resource-template-in-maui-scheduler](images/resource-view/customize-drawer-resource-template-in-maui-scheduler.png)
+
+N> The BindingContext of the `DrawerResourceTemplate` is the [SchedulerResource.](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html) and the custom data object can be bound in `DrawerResourceTemplate` by using `SchedulerResource.DataItem` .
 
 ## Visible Resource Count
  

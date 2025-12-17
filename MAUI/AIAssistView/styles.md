@@ -1181,3 +1181,179 @@ public MainPage()
 {% endtabs %}
 
 ![Common suggestion style in .NET MAUI AI AssistView](Images/styles/maui-aiassistview-styles-commonsuggestion.png)
+
+## Scroll to bottom button style
+
+To style the scroll to bottom button view based on its appearance, set values to the in-built keys in the resource dictionary.
+
+<table>
+<tr>
+<th> Key </th>
+<th> Description </th>
+</tr>
+<tr>
+<td> SfAIAssistViewScrollToBottomButtonBackground </td>
+<td> Background color of the scroll to bottom button view. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewScrollToBottomButtonIconColor </td>
+<td> Color of the scroll to bottom button. </td>
+</tr>
+</table>
+
+{% tabs %}
+{% highlight xaml %}
+
+<ContentPage.Resources>
+    <core:SyncfusionThemeDictionary>
+        <core:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
+                <Color x:Key="SfAIAssistViewScrollToBottomButtonBackground">Orange</Color>
+                <Color x:Key="SfAIAssistViewScrollToBottomButtonIconColor">White</Color>
+            </ResourceDictionary>
+        </core:SyncfusionThemeDictionary.MergedDictionaries>
+    </core:SyncfusionThemeDictionary>
+</ContentPage.Resources>
+
+{% endhighlight %}
+{% highlight c# %}
+
+public MainPage()
+{
+    InitializeComponent();
+    ResourceDictionary dictionary = new ResourceDictionary();
+    dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
+    dictionary.Add("SfAIAssistViewScrollToBottomButtonBackground", Colors.Orange);
+    dictionary.Add("SfAIAssistViewScrollToBottomButtonIconColor", Colors.White);
+    this.Resources.Add(dictionary);
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Action button style
+
+To style the action button view based on its appearance, set values to the in-built keys in the resource dictionary.
+
+<table>
+<tr>
+<th> Key </th>
+<th> Description </th>
+</tr>
+<tr>
+<td> SfAIAssistViewActionButtonBackground </td>
+<td> Background color of the action button. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewActionButtonIconColor </td>
+<td> Color of the action button. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewActionButtonViewTextColor </td>
+<td> Text color of an item in the action button. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewActionButtonsPopupBackground </td>
+<td> Background color of the action buttons view. </td>
+</tr>
+</table>
+
+{% tabs %}
+{% highlight xaml %}
+
+<ContentPage.Resources>
+    <core:SyncfusionThemeDictionary>
+        <core:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
+                <Color x:Key="SfAIAssistViewActionButtonBackground">Orange</Color>
+                <Color x:Key="SfAIAssistViewActionButtonIconColor">White</Color>
+                <Color x:Key="SfAIAssistViewActionButtonViewTextColor">Black</Color>
+                <Color x:Key="SfAIAssistViewActionButtonsPopupBackground">LightGray</Color>
+            </ResourceDictionary>
+        </core:SyncfusionThemeDictionary.MergedDictionaries>
+    </core:SyncfusionThemeDictionary>
+</ContentPage.Resources>
+
+{% endhighlight %}
+{% highlight c# %}
+
+public MainPage()
+{
+    InitializeComponent();
+    ResourceDictionary dictionary = new ResourceDictionary();
+    dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
+    dictionary.Add("SfAIAssistViewActionButtonBackground", Colors.Orange);
+    dictionary.Add("SfAIAssistViewActionButtonIconColor", Colors.White);
+    dictionary.Add("SfAIAssistViewActionButtonViewTextColor", Colors.Black);
+    dictionary.Add("SfAIAssistViewActionButtonsPopupBackground", Colors.LightGray);
+    this.Resources.Add(dictionary);
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Response suggestion header text style
+
+To style the response suggestion header text view based on its appearance, set values to the in-built keys in the resource dictionary.
+
+<table>
+<tr>
+<th> Key </th>
+<th> Description </th>
+</tr>
+<tr>
+<td> SfAIAssistViewSuggestionHeaderTextColor </td>
+<td> Text color of response suggestion header text. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewSuggestionHeaderFontSize </td>
+<td> Font size of response suggestion header text. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewSuggestionHeaderFontFamily </td>
+<td> Font family of response suggestion header text. </td>
+</tr>
+<tr>
+<td> SfAIAssistViewSuggestionHeaderFontAttributes </td>
+<td> Font attributes of response suggestion header text. </td>
+</tr>
+</table>
+
+{% tabs %}
+{% highlight xaml %}
+
+<ContentPage.Resources>
+    <syncTheme:SyncfusionThemeDictionary>
+        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+            <ResourceDictionary>
+                <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
+                <Color x:Key="SfAIAssistViewSuggestionHeaderTextColor">DarkBlue</Color>
+                <x:Double x:Key="SfAIAssistViewSuggestionHeaderFontSize">14</x:Double>
+                <x:String x:Key="SfAIAssistViewSuggestionHeaderFontFamily">Roboto-Medium</x:String>
+                <FontAttributes x:Key="SfAIAssistViewSuggestionHeaderFontAttributes">Bold</FontAttributes>
+            </ResourceDictionary>
+        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+    </syncTheme:SyncfusionThemeDictionary>
+</ContentPage.Resources>
+
+{% endhighlight %}
+{% highlight c# %}
+
+public MainPage()
+{
+    ....
+    InitializeComponent();
+    ResourceDictionary dictionary = new ResourceDictionary();
+    dictionary.Add("SfAIAssistViewTheme", "CustomTheme");
+    dictionary.Add("SfAIAssistViewSuggestionHeaderTextColor", Colors.DarkBlue);
+    dictionary.Add("SfAIAssistViewSuggestionHeaderFontSize", 14);
+    dictionary.Add("SfAIAssistViewSuggestionHeaderFontFamily", "Roboto-Medium");
+    dictionary.Add("SfAIAssistViewSuggestionHeaderFontAttributes", FontAttributes.Bold);
+    this.Resources.Add(dictionary);
+    ....
+}
+
+{% endhighlight %}
+{% endtabs %}

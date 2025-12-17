@@ -482,3 +482,166 @@ public class ViewModel : INotifyPropertyChanged
 {% endtabs %}
 
 ![Error message in .NET MAUI AI AssistView](images/maui-aiassistview-error-message.png)
+
+## Customizable views
+
+The `SfAIAssistView` allows you to customize specific parts of request and response items without changing the entire UI. You can apply styles, templates, or subclass these views to create custom visuals and behavior.
+
+The following views can be customized individually:
+
+- `RequestTextView` – Represents the user request text content.
+- `RequestAssistImageView` – Represents the user request image content.
+- `RequestHyperlinkUrlLabelView` – Represents the user request URL label area.
+- `RequestHyperLinkDetailsViewFrameView` – Represents the user request URL details/preview frame area.
+- `ResponseTextView` – Represents the AI response text content.
+- `ResponseAssistImageView` – Represents the AI response image content.
+- `ResponseHyperlinkUrlLabelView` – Represents the AI response URL label area.
+- `ResponseHyperLinkDetailsViewFrameView` – Represents the AI response URL details/preview frame area.
+- `ResponseCardView` – Represents the container for card-based AI responses.
+- `CardItemView` – Represents a single card item within a response.
+- `CardButtonView` – Represents an action button inside a card item; exposes Title and Value bindable properties
+
+{% tabs %}
+{% highlight xaml hl_lines="14 30" %}
+
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
+    x:Class="MauiAIAssistView.MainPage">
+
+    <ContentPage.BindingContext>
+            <local:ViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!-- Request text customization -->
+            <Style TargetType="syncfusion:RequestTextView">
+                <Setter Property="ControlTemplate">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Grid Padding="8" BackgroundColor="{DynamicResource SecondaryContainer}">
+                                <Label
+                                    Text="{Binding Text}"
+                                    FontSize="13"
+                                    TextColor="{DynamicResource OnSecondaryContainer}" />
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <!-- Response text customization -->
+            <Style TargetType="syncfusion:ResponseTextView">
+                <Setter Property="ControlTemplate">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Grid Padding="10" BackgroundColor="{DynamicResource PrimaryContainer}">
+                                <Label
+                                    Text="{Binding Text}"
+                                    FontSize="13"
+                                    FontAttributes="Italic"
+                                    TextColor="{DynamicResource OnPrimaryContainer}" />
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            ...
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <syncfusion:SfAIAssistView x:Name="AssistView"
+                                   AssistItems="{Binding AssistItems}" />
+    </ContentPage.Content>
+</ContentPage>
+
+{% endhighlight %}
+{% highlight c# hl_lines="23 47" %}
+
+using Syncfusion.Maui.AIAssistView;
+
+namespace MauiAIAssistView
+{
+    public partial class MainPage : ContentPage
+    {
+        SfAIAssistView assistView;
+        ViewModel viewModel;
+
+        public MainPage()
+        {
+            InitializeComponent();
+            viewModel = new ViewModel();
+
+            assistView = new SfAIAssistView
+            {
+                AssistItems = viewModel.AssistItems;
+            };
+            
+            var resources = new ResourceDictionary();
+
+            // Request text customization
+            var requestTextStyle = new Style(typeof(RequestTextView))
+            {
+                Setters =
+                {
+                    new Setter
+                    {
+                        Property = RequestTextView.ControlTemplateProperty,
+                        Value = new ControlTemplate(() =>
+                        {
+                            var grid = new Grid { Padding = 8, BackgroundColor = Colors.Beige };
+                            var label = new Label
+                            {
+                                FontSize = 13,
+                                TextColor = Colors.Black
+                            };
+                            label.SetBinding(Label.TextProperty, "Text");
+                            grid.Children.Add(label);
+                            return grid;
+                        })
+                    }
+                }
+            };
+
+            // Response text customization 
+            var responseTextStyle = new Style(typeof(ResponseTextView))
+            {
+                Setters =
+                {
+                    new Setter
+                    {
+                        Property = ResponseTextView.ControlTemplateProperty,
+                        Value = new ControlTemplate(() =>
+                        {
+                            var grid = new Grid { Padding = 10, BackgroundColor = Colors.LightSkyBlue };
+                            var label = new Label
+                            {
+                                FontSize = 13,
+                                FontAttributes = FontAttributes.Italic,
+                                TextColor = Colors.White
+                            };
+                            label.SetBinding(Label.TextProperty, "Text");
+                            grid.Children.Add(label);
+                            return grid;
+                        })
+                    }
+                }
+            };
+
+            ...
+
+            resources.Add(requestTextStyle);
+            resources.Add(responseTextStyle);
+
+            this.Resources = resources;
+            this.Content = assistView;
+            this.BindingContext = viewModel;
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}

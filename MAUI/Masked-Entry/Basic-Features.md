@@ -486,3 +486,13 @@ public class CommandDemoViewModel
 
 {% endhighlight %}
 {% endtabs %}
+
+## Automation ID
+
+The [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) control provides `AutomationId` support specifically for the `editable entry` and the `clear button`, enabling UI automation frameworks to reliably target these two elements. Each element’s AutomationId is derived from the control’s AutomationId to ensure uniqueness.
+
+For example, if the SfMaskedEntry’s `AutomationId` is set to “Employee MaskedEntry,” the editable entry can be targeted as “Employee MaskedEntry Entry” and the clear button as “Employee MaskedEntry Clear Button.” This focused support improves accessibility and automated UI testing by providing stable, predictable identifiers for the primary interactive elements.
+
+The following screenshot illustrates the AutomationIds of inner elements.
+
+![.NET MAUI MaskedEntry AutomationId Image demonstration](MaskedEntry_Images/MakedEntry_AutomationID.png)
