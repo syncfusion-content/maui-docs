@@ -17,19 +17,19 @@ Follow these steps to enable and configure the Liquid Glass Effect in the Calend
 
 ### Step 1: Wrap the control inside glass effect view
 
-To apply the Liquid Glass Effect to Syncfusion® .NET MAUI `Calendar` control, wrap the control inside the `SfGlassEffectView` class.
+To apply the Liquid Glass Effect to Syncfusion® .NET MAUI [Calendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html) control, wrap the control inside the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) class.
 
-For more details, refer to the `Liquid Glass Getting Started documentation`.
+For more details, refer to the [Liquid Glass Getting Started documentation](https://help.syncfusion.com/maui/liquid-glass-ui/getting-started).
 
 ### Step 2: Enable the liquid glass effect on Image Editor
 
-Set the `EnableLiquidGlassEffect` property to `true` in the `SfCalendar` control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its dependent controls and provides responsive interaction for a smooth and engaging user experience.
+Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_EnableLiquidGlassEffect) property to `true` in the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html) control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its dependent controls and provides responsive interaction for a smooth and engaging user experience.
 
 ### Step 3: Customize the background
 
 To achieve a glass like background in the Calendar, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
 
-The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfCalendar` control:
+The following code snippet demonstrates how to apply the Liquid Glass Effect to the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html) control:
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}

@@ -17,13 +17,13 @@ Follow these steps to enable and configure the Liquid Glass Effect in the Card V
 
 ### Step 1: Enable the liquid glass effect on Card View
 
-Set the `EnableLiquidGlassEffect` property to `true` in the card view to apply the Liquid Glass Effect.
+Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardView.html#Syncfusion_Maui_Cards_SfCardView_EnableLiquidGlassEffect) property to `true` in the [SfCardView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardView.html) to apply the Liquid Glass Effect.
 
 ### Step 2: Customize the background
 
 To achieve a glass like background in the card view, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
 
-The following code snippet demonstrates how to apply the Liquid Glass Effect to the card view:
+The following code snippet demonstrates how to apply the Liquid Glass Effect to the [SfCardView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cards.SfCardView.html):
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
