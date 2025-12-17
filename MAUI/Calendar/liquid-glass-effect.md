@@ -21,7 +21,7 @@ To apply the Liquid Glass Effect to Syncfusion® .NET MAUI [Calendar](https://he
 
 For more details, refer to the [Liquid Glass Getting Started documentation](https://help.syncfusion.com/maui/liquid-glass-ui/getting-started).
 
-### Step 2: Enable the liquid glass effect on Image Editor
+### Step 2: Enable the liquid glass effect on Calendar
 
 Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html#Syncfusion_Maui_Calendar_SfCalendar_EnableLiquidGlassEffect) property to `true` in the [SfCalendar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Calendar.SfCalendar.html) control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its dependent controls and provides responsive interaction for a smooth and engaging user experience.
 
