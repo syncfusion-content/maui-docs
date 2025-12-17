@@ -34,68 +34,31 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<Grid>
-    <Grid.Background>
-        <LinearGradientBrush StartPoint="0,0"
-                 EndPoint="0,1">
-            <GradientStop Color="#0F4C75"
-              Offset="0.0" />
-            <GradientStop Color="#3282B8"
-              Offset="0.5" />
-            <GradientStop Color="#1B262C"
-              Offset="1.0" />
-        </LinearGradientBrush>
-    </Grid.Background>
-    <StackLayout>
-        <core:SfGlassEffectView CornerRadius="9"
-                                EffectType="Clear">
-            <buttons:SfSegmentedControl x:Name="segmentedControl"
-                                    EnableLiquidGlassEffect="True"
-                                    Margin="5"
-                                    Background="Transparent" >
-                <buttons:SfSegmentedControl.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Day</x:String>
-                        <x:String>Week</x:String>
-                        <x:String>Month</x:String>
-                        <x:String>Year</x:String>
-                    </x:Array>
-                </buttons:SfSegmentedControl.ItemsSource>
-            </buttons:SfSegmentedControl>
-        </core:SfGlassEffectView>
-    </StackLayout>
-</Grid>
+<core:SfGlassEffectView EffectType="Regular">
+    <buttons:SfSegmentedControl x:Name="segmentedControl"
+                                EnableLiquidGlassEffect="True"
+                                Background="Transparent">
+        <buttons:SfSegmentedControl.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                <x:String>Day</x:String>
+                <x:String>Week</x:String>
+                <x:String>Month</x:String>
+                <x:String>Year</x:String>
+            </x:Array>
+        </buttons:SfSegmentedControl.ItemsSource>
+    </buttons:SfSegmentedControl>
+</core:SfGlassEffectView>
     
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-var gradientBrush = new LinearGradientBrush
-{
-    StartPoint = new Point(0, 0),
-    EndPoint = new Point(0, 1),
-    GradientStops = new GradientStopCollection
-    {
-        new GradientStop { Color = Color.FromArgb("#0F4C75"), Offset = 0.0f },
-        new GradientStop { Color = Color.FromArgb("#3282B8"), Offset = 0.5f },
-        new GradientStop { Color = Color.FromArgb("#1B262C"), Offset = 1.0f }
-    }
-};
-
-var grid = new Grid
-{
-    Background = gradientBrush
-};
-
-var stackLayout = new StackLayout();
 var glassView = new SfGlassEffectView
 {
-    CornerRadius = 9,
     EffectType = LiquidGlassEffectType.Clear
 };
 
 var segmentedControl = new SfSegmentedControl
 {
-    Margin = new Thickness(5),
     Background = Colors.Transparent,
     EnableLiquidGlassEffect = true,
     ItemsSource = new List<SfSegmentItem>
@@ -108,9 +71,7 @@ var segmentedControl = new SfSegmentedControl
 };
 
 glassView.Content = segmentedControl;
-stackLayout.Children.Add(glassView);
-grid.Children.Add(stackLayout);
-this.Content = grid;
+this.Content = glassView;
 
 {% endhighlight %}
 {% endtabs %}

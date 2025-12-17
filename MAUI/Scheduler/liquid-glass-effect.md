@@ -34,52 +34,19 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
- <Grid>
-     <Grid.Background>
-         <LinearGradientBrush StartPoint="0,0"
-              EndPoint="0,1">
-             <GradientStop Color="#0F4C75"
-           Offset="0.0" />
-             <GradientStop Color="#3282B8"
-           Offset="0.5" />
-             <GradientStop Color="#1B262C"
-           Offset="1.0" />
-         </LinearGradientBrush>
-     </Grid.Background>
-     <StackLayout>
-         <core:SfGlassEffectView CornerRadius="9"
-                                 EffectType="Clear">
-             <scheduler:SfScheduler x:Name="scheduler"
-                        Background="Transparent">
-                 <scheduler:SfScheduler.HeaderView>
-                     <scheduler:SchedulerHeaderView EnableLiquidGlassEffect="True" Background="Transparent"/>
-                 </scheduler:SfScheduler.HeaderView>
-             </scheduler:SfScheduler>
-         </core:SfGlassEffectView>
-     </StackLayout>
- </Grid>
+<core:SfGlassEffectView CornerRadius="9"
+                        EffectType="Clear">
+    <scheduler:SfScheduler x:Name="scheduler"
+                           Background="Transparent">
+        <scheduler:SfScheduler.HeaderView>
+            <scheduler:SchedulerHeaderView EnableLiquidGlassEffect="True" Background="Transparent"/>
+        </scheduler:SfScheduler.HeaderView>
+    </scheduler:SfScheduler>
+</core:SfGlassEffectView>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-var gradientBrush = new LinearGradientBrush
-{
-    StartPoint = new Point(0, 0),
-    EndPoint = new Point(0, 1),
-    GradientStops = new GradientStopCollection
-    {
-        new GradientStop { Color = Color.FromArgb("#0F4C75"), Offset = 0.0f },
-        new GradientStop { Color = Color.FromArgb("#3282B8"), Offset = 0.5f },
-        new GradientStop { Color = Color.FromArgb("#1B262C"), Offset = 1.0f }
-    }
-};
-
-var grid = new Grid
-{
-    Background = gradientBrush
-};
-
-var stackLayout = new StackLayout();
 var glassView = new SfGlassEffectView
 {
     CornerRadius = 9,
@@ -88,7 +55,6 @@ var glassView = new SfGlassEffectView
 
 var scheduler = new SfScheduler
 {
-    Margin = new Thickness(5),
     Background = Colors.Transparent,
     HeaderView = new SchedulerHeaderView()
     {
@@ -98,12 +64,7 @@ var scheduler = new SfScheduler
 };
 
 glassView.Content = scheduler;
-stackLayout.Children.Add(glassView);
-grid.Children.Add(stackLayout);
-this.Content = grid;
-
-{% endhighlight %}
-{% endtabs %}
+this.Content = glassView;
 
 N>
 * Supported on `macOS 26 or higher` and `iOS 26 or higher`.
