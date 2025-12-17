@@ -621,19 +621,19 @@ this.Content = chart;
 
 **AnnotationTapped**
 
-The [`AnnotationTapped`]() event occurs when an annotation is tapped. The [`AnnotationTappedEventArgs`]() provides the following details:
+The [AnnotationTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_AnnotationTapped) event occurs when an annotation is tapped. The [AnnotationTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Chart.Events.AnnotationTappedEventArgs.html) provides the following details:
 
-* [`annotation`]() – the annotation instance that was tapped.
-* [`x`]() – the X coordinate of the touch or mouse click position.
-* [`y`]() – the Y coordinate of the touch or mouse click position.
+* [Annotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Chart.Events.AnnotationTappedEventArgs.html#Syncfusion_Maui_Charts_Chart_Events_AnnotationTappedEventArgs_Annotation) – the annotation instance that was tapped.
+* [X](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Chart.Events.AnnotationTappedEventArgs.html#Syncfusion_Maui_Charts_Chart_Events_AnnotationTappedEventArgs_X) – the X coordinate of the touch or mouse click position.
+* [Y](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.Chart.Events.AnnotationTappedEventArgs.html#Syncfusion_Maui_Charts_Chart_Events_AnnotationTappedEventArgs_Y) – the Y coordinate of the touch or mouse click position.
 
 ## Public methods
 
 The following override methods allow you to handle touch interactions on annotations:
 
-* [`OnTouchDown`]() – triggered when touch starts (down) on the annotation.
-* [`OnTouchMove`]() – triggered when moving (dragging) the finger or mouse across the annotation.
-* [`OnTouchUp`]() – triggered when touch ends (up) by lifting the finger or releasing the mouse from the annotation.
+* [OnTouchDown()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAnnotation.html#Syncfusion_Maui_Charts_ChartAnnotation_OnTouchDown_System_Single_System_Single_) – triggered when touch starts (down) on the annotation.
+* [OnTouchMove()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAnnotation.html#Syncfusion_Maui_Charts_ChartAnnotation_OnTouchMove_System_Single_System_Single_) – triggered when moving (dragging) the finger or mouse across the annotation.
+* [OnTouchUp()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAnnotation.html#Syncfusion_Maui_Charts_ChartAnnotation_OnTouchUp_System_Single_System_Single_) – triggered when touch ends (up) by lifting the finger or releasing the mouse from the annotation.
 
 {% tabs %}
 
