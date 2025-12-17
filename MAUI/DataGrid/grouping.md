@@ -26,11 +26,11 @@ You can enable data grouping in the SfDataGrid by setting the `SfDataGrid.AllowG
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
                        ItemsSource="{Binding OrderInfoCollection}"
-                       AllowGrouping="true">
+                       AllowGrouping="True">
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-    dataGrid.AllowGrouping = true;
+dataGrid.AllowGrouping = true;
 {% endhighlight %}
 {% endtabs %}
 
@@ -53,12 +53,12 @@ You can modify the GroupDropArea text by setting the `SfDataGrid.GroupDropAreaTe
 <syncfusion:SfDataGrid x:Name="dataGrid"
                        ItemsSource="{Binding OrderInfoCollection}"
                        GroupDropAreaText="Drag and drop the column here"
-                       AllowGrouping="true">
+                       AllowGrouping="True">
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-    dataGrid.AllowGrouping = true;
-    dataGrid.GroupDropAreaText = "Drag and drop the column here";
+dataGrid.AllowGrouping = true;
+dataGrid.GroupDropAreaText = "Drag and drop the column here";
 {% endhighlight %}
 {% endtabs %}
 
@@ -73,12 +73,12 @@ Use the `SfDataGrid.GroupDropAreaHeight` property to control the vertical size o
 <syncfusion:SfDataGrid x:Name="dataGrid"
                        ItemsSource="{Binding OrderInfoCollection}"
                        GroupDropAreaHeight="100"
-                       AllowGrouping="true">
+                       AllowGrouping="True">
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-    dataGrid.AllowGrouping = true;
-    dataGrid.GroupDropAreaHeight = 100;
+dataGrid.AllowGrouping = true;
+dataGrid.GroupDropAreaHeight = 100;
 {% endhighlight %}
 {% endtabs %}
 
@@ -88,20 +88,19 @@ Use the `SfDataGrid.GroupDropAreaHeight` property to control the vertical size o
 
 You can style the `GroupDropArea` using the following SfDataGrid properties:
 
-* GroupDropAreaStrokeThickness: Sets the border thickness of the GroupDropArea.
-* GroupDropAreaStroke: Sets the border color of the GroupDropArea.
-* GroupDropAreaBackgroundColor: Sets the background color of the GroupDropArea.
-* GroupDropAreaTextColor: Sets the color of the instructional text displayed in the GroupDropArea.
-* GroupDropAreaFontSize: Sets the font size of the GroupDropArea text.
-* GroupDropAreaFontFamily: Sets the font family used for the GroupDropArea text.
-* GroupDropAreaFontAttribute: Sets the font style of the GroupDropArea text.
+* `GroupDropAreaStrokeThickness:` Sets the border thickness of the GroupDropArea.
+* `GroupDropAreaStroke:` Sets the border color of the GroupDropArea.
+* `GroupDropAreaBackgroundColor:` Sets the background color of the GroupDropArea.
+* `GroupDropAreaTextColor:` Sets the color of the instructional text displayed in the GroupDropArea.
+* `GroupDropAreaFontSize:` Sets the font size of the GroupDropArea text.
+* `GroupDropAreaFontFamily:` Sets the font family used for the GroupDropArea text.
+* `GroupDropAreaFontAttribute:` Sets the font style of the GroupDropArea text.
 
 {% tabs %}
 {% highlight xaml %}
-
 <syncfusion:SfDataGrid x:Name="dataGrid"
                        ItemsSource="{Binding OrderInfoCollection}"
-                       AllowGrouping="true">
+                       AllowGrouping="True">
     <syncfusion:SfDataGrid.DefaultStyle>
         <syncfusion:DataGridStyle GroupDropAreaTextColor="Blue"
                                   GroupDropAreaBackgroundColor="Yellow"
@@ -112,7 +111,21 @@ You can style the `GroupDropArea` using the following SfDataGrid properties:
                                   GroupDropAreaFontFamily="Roboto"/>
     </syncfusion:SfDataGrid.DefaultStyle>
 </syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+dataGrid.AllowGrouping = true;
+var defaultStyle = new DataGridStyle()
+{
+    GroupDropAreaTextColor = Colors.Blue,
+    GroupDropAreaBackgroundColor = Colors.Yellow,
+    GroupDropAreaFontAttribute = FontAttributes.Bold,
+    GroupDropAreaFontSize = 18,
+    GroupDropAreaStroke = Colors.Brown,
+    GroupDropAreaStrokeThickness = 2,
+    GroupDropAreaFontFamily = "Roboto"
+};
 
+dataGrid.DefaultStyle = defaultStyle;
 {% endhighlight %}
 {% endtabs %}
 
@@ -120,21 +133,20 @@ You can style the `GroupDropArea` using the following SfDataGrid properties:
 
 You can style the `GroupDropAreaItem` using the following SfDataGrid properties:
 
-* GroupDropItemBackgroundColor: Sets the background color of the GroupDropItem.
-* GroupDropItemTextColor: Sets the color of the text displayed in the GroupDropItem.
-* GroupDropItemFontSize: Sets the font size of the GroupDropItem text.
-* GroupDropItemFontFamily: Sets the font family used for the GroupDropItem text.
-* GroupDropItemFontAttribute:  Sets the font style of the GroupDropItem text.
-* GroupDropItemStrokeThickness: Sets the border thickness of the GroupDropItem.
-* GroupDropItemStroke: Sets the border color of the GroupDropItem.
-* GroupDropItemCloseIconColor: Sets the color of the close icon displayed in the GroupDropItem.
+* `GroupDropItemBackgroundColor:` Sets the background color of the GroupDropItem.
+* `GroupDropItemTextColor:` Sets the color of the text displayed in the GroupDropItem.
+* `GroupDropItemFontSize:` Sets the font size of the GroupDropItem text.
+* `GroupDropItemFontFamily:` Sets the font family used for the GroupDropItem text.
+* `GroupDropItemFontAttribute:`  Sets the font style of the GroupDropItem text.
+* `GroupDropItemStrokeThickness:` Sets the border thickness of the GroupDropItem.
+* `GroupDropItemStroke:` Sets the border color of the GroupDropItem.
+* `GroupDropItemCloseIconColor:` Sets the color of the close icon displayed in the GroupDropItem.
 
 {% tabs %}
 {% highlight xaml %}
-
 <syncfusion:SfDataGrid x:Name="dataGrid"
                        ItemsSource="{Binding OrderInfoCollection}"
-                       AllowGrouping="true">
+                       AllowGrouping="True">
     <syncfusion:SfDataGrid.DefaultStyle>
         <syncfusion:DataGridStyle GroupDropItemTextColor="Blue"
                                   GroupDropItemBackgroundColor="Yellow"
@@ -146,7 +158,22 @@ You can style the `GroupDropAreaItem` using the following SfDataGrid properties:
                                   GroupDropItemCloseIconColor="Gray"/>
     </syncfusion:SfDataGrid.DefaultStyle>
 </syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+dataGrid.AllowGrouping = true;
+var defaultStyle = new DataGridStyle()
+{
+    GroupDropItemTextColor = Colors.Blue,
+    GroupDropItemBackgroundColor = Colors.Yellow,
+    GroupDropItemFontAttribute = FontAttributes.Bold,
+    GroupDropItemFontSize = 18,
+    GroupDropItemStroke = Colors.Brown,
+    GroupDropItemStrokeThickness = 2,
+    GroupDropItemFontFamily = "Roboto",
+    GroupDropItemCloseIconColor = Colors.Gray
+};
 
+dataGrid.DefaultStyle = defaultStyle;
 {% endhighlight %}
 {% endtabs %}
 
@@ -624,18 +651,18 @@ The following code snippet shows how to apply a background color to the indent c
 
 {% tabs %}
 {% highlight xaml %}
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <local:CellStyleConverter x:Key="cellStyleConverter" />
-            <Style  TargetType="syncfusion:DataGridIndentCell">
-                <Setter Property="Background"
-                        Value="{Binding Source={RelativeSource Mode=Self}, 
-                        Converter={StaticResource 
-                        Key=cellStyleConverter}}" />
-            </Style>
-        </ResourceDictionary>
-    </ContentPage.Resources>
-    <syncfusion:SfDataGrid  x:Name="dataGrid"
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <local:CellStyleConverter x:Key="cellStyleConverter" />
+        <Style  TargetType="syncfusion:DataGridIndentCell">
+            <Setter Property="Background"
+                    Value="{Binding Source={RelativeSource Mode=Self}, 
+                    Converter={StaticResource 
+                    Key=cellStyleConverter}}" />
+        </Style>
+    </ResourceDictionary>
+</ContentPage.Resources>
+<syncfusion:SfDataGrid  x:Name="dataGrid"
                         ItemsSource="{Binding Orders}">
     <syncfusion:SfDataGrid.GroupColumnDescriptions>
         <syncfusion:GroupColumnDescription ColumnName="Name" />
@@ -679,11 +706,8 @@ The visibility of the grouped column can be customized by the [SfDataGrid.ShowCo
                         ItemsSource="{Binding OrderInfoCollection}"
                         ShowColumnWhenGrouped="False" />
 {% endhighlight %}
-
 {% highlight c# %}
-
 this.dataGrid.ShowColumnWhenGrouped = false;
-
 {% endhighlight %}
 {% endtabs %}
 

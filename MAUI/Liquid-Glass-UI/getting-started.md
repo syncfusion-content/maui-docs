@@ -20,18 +20,18 @@ N> This feature is supported only on `.NET 10`
 
 ## Liquid Glass Effect
 
-The Liquid Glass Effect provides a modern, translucent design with background blur and depth effects, enhancing the visual appearance of your UI without requiring major code changes. To apply the Liquid Glass Effect to any Syncfusion® .NET MAUI control or custom view (such as a DataTemplate), wrap the control inside the `SfGlassEffectView` class.
+The Liquid Glass Effect provides a modern, translucent design with background blur and depth effects, enhancing the visual appearance of your UI without requiring major code changes. To apply the Liquid Glass Effect to any Syncfusion® .NET MAUI control or custom view (such as a DataTemplate), wrap the control inside the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) class.
 
-This view acts as a visual container that adds blur, translucency, and light refraction to its content, creating a realistic glass-like appearance. In this section, we will demonstrate how to use `SfGlassEffectView` with Syncfusion® controls to achieve a visually appealing glass effect.
+This view acts as a visual container that adds blur, translucency, and light refraction to its content, creating a realistic glass-like appearance. In this section, we will demonstrate how to use [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) with Syncfusion® controls to achieve a visually appealing glass effect.
 
-The `SfGlassEffectView` class is available in [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) and provides the following properties:
+The [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) class is available in [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) and provides the following properties:
 
 ### Effect types
 
-The `EffectType` property specifies the type of glass effect to apply:
+The [EffectType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html#Syncfusion_Maui_Core_SfGlassEffectView_EffectType) property specifies the type of glass effect to apply:
 
-* **Regular:** Creates a blurred, frosted glass appearance.
-* **Clear:** Creates a transparent, glass-like appearance.
+* **[Regular](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LiquidGlassEffectType.html#Syncfusion_Maui_Core_LiquidGlassEffectType_Regular):** Creates a blurred, frosted glass appearance.
+* **[Clear](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.LiquidGlassEffectType.html#Syncfusion_Maui_Core_LiquidGlassEffectType_Clear):** Creates a transparent, glass-like appearance.
 
 {% tabs %}
 {% highlight XAML hl_lines="18" %}
@@ -326,7 +326,7 @@ Applies a background tint color to the glass view, to enhance modern UI styling 
 
 ## Interactive Glass Effect
 
-Enable glass effect that respond to user interactions with clear transparency and dynamic lighting for an engaging UI. To enable this feature, set the `EnableLiquidGlassEffect` property to `true` on the Syncfusion® `SfSwitch` control. This activates interaction-based visual effects.
+Enable glass effect that respond to user interactions with clear transparency and dynamic lighting for an engaging UI. To enable this feature, set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_EnableLiquidGlassEffect) property to `true` on the Syncfusion® [SfButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) control. This activates interaction-based visual effects.
 
 {% tabs %}
 {% highlight XAML %}
@@ -364,4 +364,9 @@ Enable glass effect that respond to user interactions with clear transparency an
 
 For control specific usage of the Liquid Glass Effect on individual Syncfusion® controls, including availability, and configuration details, please refer to the respective controls' documentation.
 
-N> View sample in GitHub.
+* [SfImageEditor](https://help.syncfusion.com/maui/imageeditor/liquid-glass-effect)
+* [SfKanban](https://help.syncfusion.com/maui/kanban-board/liquid-glass-effect)
+* [SfLinearProgressBar](https://help.syncfusion.com/maui/linearprogressbar/liquid-glass-effect)
+* [SfStepProgressBar](https://help.syncfusion.com/maui/stepprogressbar/liquid-glass-effect)
+
+N> View sample in [GitHub](https://github.com/syncfusion/maui-demos).

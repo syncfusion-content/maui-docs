@@ -1,68 +1,72 @@
 ---
 layout: post
-title: Liquid Glass Support for .NET MAUI Signature pad | Syncfusion®
-description: Learn here about providing liquid glass support for Syncfusion® .NET MAUI Signature pad (SfSignaturePad) control and more.
+title: Liquid Glass Effect for .NET MAUI Signature Pad | Syncfusion®
+description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI Signature Pad (SfSignaturePad) control.
 platform: MAUI
 control: SfSignaturePad
 documentation: ug
 ---
 
-# Liquid Glass Support for .NET MAUI SignaturePad
+# Liquid Glass Effect in .NET MAUI Signature Pad (SfSignaturePad)
 
-The [SignaturePad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html) supports a `liquid glass` appearance by hosting the control inside the Syncfusion [SfGlassEffectView](). You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when SfSignaturePad is placed over images or colorful layouts
+The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Signature Pad (SfSignaturePad) control.
 
-## Availability
+## Apply liquid glass effect
 
-- Supported on .NET 10 or greater.
-- Supported on mac or iOS 26 or greater.
-- On platforms/versions below these requirements, the glassEffects blur is not applied and the control falls back to a standard background.
+Follow these steps to enable and configure the Liquid Glass Effect in the Signature Pad control:
 
-## Prerequisites
+### Step 1: Wrap the control inside glass effect view
 
-- Add Syncfusion.Maui.Core (for SfGlassEffectView) and Syncfusion.Maui.SignaturePad (for SfSignaturePad).
+To apply the Liquid Glass Effect to Syncfusion® .NET MAUI [Signature Pad](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SignaturePad.SfSignaturePad.html) control, wrap the control inside the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) class.
 
-XAML example Wrap the SfSignaturePad in an `SfGlassEffectView` and adjust glassEffects properties to achieve the desired glass effect.
+For more details, refer to the `Liquid Glass Getting Started documentation`.
+
+### Step 2: Customize the background
+
+To achieve a glass like background in the Signature Pad, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
+
+The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfSignaturePad` control:
 
 {% tabs %}
-{% highlight xaml hl_lines="20" %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    xmlns:signature="clr-namespace:Syncfusion.Maui.SignaturePad;assembly=Syncfusion.Maui.SignaturePad"
-    x:Class="glassEffectsSignaturePadPage">
-
+{% highlight xaml tabtitle="MainPage.xaml" %}
     <Grid>
-        <!-- Background to make the glassEffects blur visible -->
-        <Image Source="wallpaper.jpg" Aspect="AspectFill" />
-            <core:SfGlassEffectView
-                CornerRadius="20"
-                HeightRequest="40"
-                EffectType="Regular"
-                EnableShadowEffect="True">
-
-                <signature:SfSignaturePad
-                    x:Name="SignaturePad"
-                    Background="Transparent"
-                    StrokeColor="#1F2937"
-                    StrokeWidth="2"/>
-            </core:SfGlassEffectView>
+    <Image Source="Wallpaper.png" Aspect="AspectFill">
+        <core:SfGlassEffectView
+            CornerRadius="20"
+            HeightRequest="40"
+            EffectType="Regular"
+            EnableShadowEffect="True">
+            <signature:SfSignaturePad
+                x:Name="SignaturePad"
+                Background="Transparent"
+                StrokeColor="#1F2937"
+                StrokeWidth="2"/>
+        </core:SfGlassEffectView>
     </Grid>
-</ContentPage>
 
 {% endhighlight %}
-{% highlight c# hl_lines="14" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 using Syncfusion.Maui.Core;
 using Syncfusion.Maui.SignaturePad;
 
+var grid = new Grid
+{
+    BackgroundColor = Colors.Transparent
+};
+
+var image = new Image
+{
+    Source = "Wallpaper.png",
+    Aspect = Aspect.AspectFill
+};
+grid.Children.Add(image);
+
 var glassEffects = new SfGlassEffectView
 {
-    CornerRadius=20,
-    HeightRequest=40,
-    EffectType=LiquidGlassEffectType.Regular,
+    CornerRadius = 20,
+    HeightRequest = 40,
+    EffectType = LiquidGlassEffectType.Regular,
     EnableShadowEffect=True
 };
 
@@ -77,9 +81,15 @@ var signaturePad = new SfSignaturePad
 
 glassEffects.Content = signaturePad;
 
+grid.Children.Add(glassEffects);
+this.Content = grid;
+
 {% endhighlight %}
 {% endtabs %}
 
 The following screenshot illustrates SfSignaturePad within an acrylic container, with the dropdown using the glass effect.
 
 ![signature pad with liquid glass support](images/getting-started/SignaturePad_liquidglass.png)
+
+N>
+This feature is supported only on .NET 10 along with iOS 26 and macOS 26 

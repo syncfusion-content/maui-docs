@@ -9,11 +9,10 @@ documentation: ug
 
 # Liquid Glass Support for .NET MAUI RadialMenu:
 
-The [SfRadialMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.html) supports a `liquid glass` effect (also called acrylic or glass morphism) when you enable the `EnableLiquidGlassEffect`. This feature adds a frosted, translucent style that blends with the background, giving the menu a modern and elegant look. It works best over images or colorful layouts and provides smooth visual feedback during interaction.
+The [SfRadialMenu](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.html) supports a `liquid glass` effect (also called acrylic or glass morphism) when you enable the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_EnableLiquidGlassEffect). This feature adds a frosted, translucent style that blends with the background, giving the menu a modern and elegant look. It works best over images or colorful layouts and provides smooth visual feedback during interaction.
 
 N>
-* Supported on `macOS 26 or higher` and `iOS 26 or higher`.
-* This feature is available only in `.NET 10.`
+* This feature is supported only on `.NET 10` along with `iOS 26` and `macOS 26` .
 
 {% tabs %}
 {% highlight xaml %}
@@ -37,8 +36,8 @@ SfRadialMenu radialMenu = new SfRadialMenu
 
 ## Behavior and tips
 
-- The glass effect is applied to the radial menu at render time and during user interaction.
-- Place the radial menu over visually rich content (images, gradients, or color blocks) to better showcase the transient glass effect.
+- The glass effect is applied to the Radial Menu at render time and during user interaction.
+- Place the Radial Menu over visually rich content (images, gradients, or color blocks) to better showcase the transient glass effect.
 - Visual output and performance may vary by device/platform; keep backgrounds moderately detailed to maintain clarity during interaction.
 
 The following image demonstrates the liquid glass effect of Radial Menu
