@@ -33,39 +33,72 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:cards="clr-namespace:Syncfusion.Maui.Cards;assembly=Syncfusion.Maui.Cards"
     x:Class="AcrylicCardsPage">
-
     <Grid>
-        <Image Source="wallpaper.jpg" Aspect="AspectFill" />
-
-        <cards:SfCardView
-            EnableLiquidGlassEffect="True">
-            <VerticalStackLayout Spacing="8">
-                <Label Text="Glass Card" FontSize="18" FontAttributes="Bold"/>
-                <Label Text="This card uses the built-in liquid glass effect."/>
-            </VerticalStackLayout>
-        </cards:SfCardView>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0"
+                                 EndPoint="0,1">
+                <GradientStop Color="#0F4C75"
+                              Offset="0.0"/>
+                <GradientStop Color="#3282B8"
+                              Offset="0.5"/>
+                <GradientStop Color="#1B262C"
+                              Offset="1.0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid>
+            <cards:SfCardView x:Name="cardView" EnableLiquidGlassEffect="True"
+                    Background="Transparent"
+                    BorderColor="Transparent"
+                    WidthRequest="350"
+                    HeightRequest="200">
+                <Label Text="SfCardView"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+            </cards:SfCardView>
+        </Grid>
     </Grid>
-
 </ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-using Syncfusion.Maui.Cards;
 
-var card = new SfCardView
+// Outer grid with gradient background
+var mainGrid = new Grid()
 {
-    EnableLiquidGlassEffect = true,
-};
-
-card.Content = new VerticalStackLayout
-{
-    Spacing = 8,
-    Children =
+    Background = new LinearGradientBrush()
     {
-        new Label { Text = "Glass Card", FontSize = 18, FontAttributes = FontAttributes.Bold },
-        new Label { Text = "This card uses the built-in liquid glass effect." },
+        StartPoint = new Point(0, 0),
+        EndPoint = new Point(0, 1),
+        GradientStops =
+        {
+            new GradientStop { Color = Color.FromArgb("#0F4C75"), Offset = 0.0f },
+            new GradientStop { Color = Color.FromArgb("#3282B8"), Offset = 0.5f },
+            new GradientStop { Color = Color.FromArgb("#1B262C"), Offset = 1.0f }
+        }
     }
 };
+
+var innerGrid = new Grid();
+
+var card = new SfCardView()
+{
+    EnableLiquidGlassEffect = true,
+    Background = Colors.Transparent,
+    BorderColor = Colors.Transparent,
+    WidthRequest = 350,
+    HeightRequest = 200,
+};
+
+card.Content = new Label()
+{
+    Text = "SfCardView",
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center
+};
+
+innerGrid.Add(card);
+mainGrid.Add(innerGrid);
+this.Content = mainGrid;
 
 {% endhighlight %}
 {% endtabs %}

@@ -40,38 +40,83 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
     xmlns:datepicker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
     xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
     x:Class="AcrylicDatePickerPage">
-
     <Grid>
-        <Image Source="wallpaper.jpg" Aspect="AspectFill" />
-
-        <core:SfGlassEffectsView
-            CornerRadius="20"
-            Padding="12"
-            EffectType="Regular"
-            EnableShadowEffect="True">
-
-            <datepicker:SfDatePicker />
-        </core:SfGlassEffectsView>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0"
+                                 EndPoint="0,1">
+                <GradientStop Color="#0F4C75"
+                              Offset="0.0"/>
+                <GradientStop Color="#3282B8"
+                              Offset="0.5"/>
+                <GradientStop Color="#1B262C"
+                              Offset="1.0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid>
+            <core:SfGlassEffectView
+                EffectType="Regular"
+                CornerRadius="20"
+                WidthRequest="350"
+                HeightRequest="350">
+                <picker:SfDatePicker x:Name="datepicker"
+                                     EnableLiquidGlassEffect="True"
+                                     Background="Transparent">
+                    <picker:SfDatePicker.ColumnHeaderView>
+                        <picker:DatePickerColumnHeaderView Background="Transparent"/>
+                    </picker:SfDatePicker.ColumnHeaderView>
+                </picker:SfDatePicker>
+            </core:SfGlassEffectView>
+        </Grid>
     </Grid>
 </ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-using Syncfusion.Maui.Core;
-using Syncfusion.Maui.Picker;
-
-var glassView = new SfGlassEffectsView
+// Outer grid with gradient background
+var mainGrid = new Grid()
 {
-    CornerRadius = 20,
-    Padding = new Thickness(12),
-    EffectType = LiquidGlassEffectType.Regular,
-    EnableShadowEffect = true
+    Background = new LinearGradientBrush()
+    {
+        StartPoint = new Point(0, 0),
+        EndPoint = new Point(0, 1),
+        GradientStops =
+        {
+            new GradientStop { Color = Color.FromArgb("#0F4C75"), Offset = 0.0f },
+            new GradientStop { Color = Color.FromArgb("#3282B8"), Offset = 0.5f },
+            new GradientStop { Color = Color.FromArgb("#1B262C"), Offset = 1.0f }
+        }
+    }
 };
 
-var datePicker = new SfDatePicker();
+// Inner grid container
+var innerGrid = new Grid();
+
+var glassView = new SfGlassEffectsView()
+{
+    CornerRadius = 20,
+    EffectType = LiquidGlassEffectType.Regular,
+    WidthRequest = 350,
+    HeightRequest = 350,
+    Background = Colors.Transparent
+};
+
+var datePicker = new SfDatePicker()
+{
+    EnableLiquidGlassEffect = true,
+    Background = Colors.Transparent,
+    WidthRequest = 350,
+    HeightRequest = 350,
+    ColumnHeaderView = new DatePickerColumnHeaderView()
+    { 
+        Background = Colors.Transparent,
+    }
+};
 
 glassView.Content = datePicker;
+innerGrid.Children.Add(glassView);
+mainGrid.Children.Add(innerGrid);
+this.Content = mainGrid;
 
 {% endhighlight %}
 {% endtabs %}

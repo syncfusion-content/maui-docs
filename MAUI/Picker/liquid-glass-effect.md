@@ -40,38 +40,104 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
     xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
     xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
     x:Class="AcrylicPickerPage">
-
     <Grid>
-        <Image Source="wallpaper.jpg" Aspect="AspectFill" />
-
-        <core:SfGlassEffectsView
-            CornerRadius="20"
-            Padding="12"
-            EffectType="Regular"
-            EnableShadowEffect="True">
-
-            <picker:SfPicker />
-        </core:SfGlassEffectsView>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0"
+                                 EndPoint="0,1">
+                <GradientStop Color="#0F4C75"
+                              Offset="0.0"/>
+                <GradientStop Color="#3282B8"
+                              Offset="0.5"/>
+                <GradientStop Color="#1B262C"
+                              Offset="1.0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid>
+            <core:SfGlassEffectView
+                EffectType="Regular"
+                CornerRadius="20"
+                WidthRequest="350"
+                HeightRequest="350">
+                <picker:SfPicker x:Name="picker"
+                                 EnableLiquidGlassEffect="True"
+                                 Background="Transparent">
+                    <picker:SfPicker.HeaderView>
+                        <picker:PickerHeaderView Height="40"
+                                Text="Select City"
+                                Background="Transparent"/>
+                    </picker:SfPicker.HeaderView>
+                </picker:SfPicker>
+            </core:SfGlassEffectView>
+ 
+        </Grid>
     </Grid>
 </ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-using Syncfusion.Maui.Core;
-using Syncfusion.Maui.Picker;
-
-var glassView = new SfGlassEffectsView
+// Outer grid with gradient background
+var mainGrid = new Grid()
 {
-    CornerRadius = 20,
-    Padding = new Thickness(12),
-    EffectType = LiquidGlassEffectType.Regular,
-    EnableShadowEffect = true
+    Background = new LinearGradientBrush()
+    {
+        StartPoint = new Point(0, 0),
+        EndPoint = new Point(0, 1),
+        GradientStops =
+        {
+            new GradientStop { Color = Color.FromArgb("#0F4C75"), Offset = 0.0f },
+            new GradientStop { Color = Color.FromArgb("#3282B8"), Offset = 0.5f },
+            new GradientStop { Color = Color.FromArgb("#1B262C"), Offset = 1.0f }
+        }
+    }
 };
 
-var picker = new SfPicker();
+// Inner grid container
+var innerGrid = new Grid();
+
+var glassView = new SfGlassEffectView()
+{
+    EffectType = GlassEffectType.Regular,
+    CornerRadius = 20,
+    WidthRequest = 350,
+    HeightRequest = 350
+};
+
+var picker = new SfPicker()
+{
+    EnableLiquidGlassEffect = true,
+    Background = Colors.Transparent,
+    HeaderView = new PickerHeaderView()
+    {
+        HeightRequest = 40,
+        Text = "Select City",
+        Background = Colors.Transparent
+    }
+};
+
+ObservableCollection<object> cityName = new ObservableCollection<object>();
+cityName.Add("Chennai");
+cityName.Add("Mumbai");
+cityName.Add("Delhi");
+cityName.Add("Kolkata");
+cityName.Add("Bangalore");
+cityName.Add("Hyderabad");
+cityName.Add("Pune");
+cityName.Add("Ahmedabad");
+cityName.Add("Jaipur");
+cityName.Add("Lucknow");
+cityName.Add("Chandigarh");
+PickerColumn pickerColumn = new PickerColumn()
+{
+    ItemsSource = cityName,
+};
+
+picker.Columns.Add(pickerColumn);
 
 glassView.Content = picker;
+innerGrid.Children.Add(glassView);
+mainGrid.Children.Add(innerGrid);
+this.Content = mainGrid;
 
 {% endhighlight %}
 {% endtabs %}
