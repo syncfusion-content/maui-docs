@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Liquid Glass Effect for .NET MAUI TreeView  Control | Syncfusion®
+title: Liquid Glass Effect for .NET MAUI TreeView Control | Syncfusion®
 description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI TreeView (SfTreeView) control.
 platform: MAUI
 control: SfAIAssistView
@@ -17,13 +17,13 @@ Follow these steps to enable and configure the Liquid Glass Effect in the TreeVi
 
 ### Step 1: Wrap the control inside glass effect view
 
-To apply the Liquid Glass Effect to Syncfusion® .NET MAUI `TreeView ` control, wrap the control inside the `SfGlassEffectView` class.
+To apply the Liquid Glass Effect to Syncfusion® .NET MAUI `TreeView ` control, wrap the control inside the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) class.
 
 For more details, refer to the `Liquid Glass Getting Started documentation`.
 
 ### Step 2: Enable the liquid glass effect on TreeView 
 
-Set the `EnableLiquidGlassEffect` property to `true` in the `SfTreeView` control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its dependent controls and provides responsive interaction for a smooth and engaging user experience.
+Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_EnableLiquidGlassEffect) property to `true` in the `SfTreeView` control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its dependent controls and provides responsive interaction for a smooth and engaging user experience.
 
 ### Step 3: Customize the background
 

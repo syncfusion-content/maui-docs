@@ -17,13 +17,13 @@ Follow these steps to enable and configure the Liquid Glass Effect in the AI Ass
 
 ### Step 1: Wrap the control inside glass effect view
 
-To apply the Liquid Glass Effect to Syncfusion® .NET MAUI `AIAssistView` control, wrap the control inside the `SfGlassEffectView` class.
+To apply the Liquid Glass Effect to Syncfusion® .NET MAUI `AIAssistView` control, wrap the control inside the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) class.
 
 For more details, refer to the `Liquid Glass Getting Started documentation`.
 
 ### Step 2: Enable the liquid glass effect on AI AssistView
 
-Set the `EnableLiquidGlassEffect` property to `true` in the `SfAIAssistView` control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its dependent controls and provides responsive interaction for a smooth and engaging user experience.
+Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_EnableLiquidGlassEffect) property to `true` in the `SfAIAssistView` control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its dependent controls and provides responsive interaction for a smooth and engaging user experience.
 
 ### Step 3: Customize the background
 

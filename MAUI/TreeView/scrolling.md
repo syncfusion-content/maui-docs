@@ -111,7 +111,7 @@ The TreeView allows you to enable horizontal scrolling based on the content by s
 
 ## Scrollbar visibility
 
-The TreeView allows showing or hiding the scrollbars using the `VerticalScrollBarVisibility` and `HorizontalScrollBarVisibility` properties. By default, both are set to `Default`.
+The TreeView allows showing or hiding the scrollbars using the [VerticalScrollBarVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_VerticalScrollBarVisibility) and [HorizontalScrollBarVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_HorizontalScrollBarVisibility) properties. By default, both are set to `Default`.
 
 {% tabs %}
 {% highlight xaml hl_lines="2 3" %}
