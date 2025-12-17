@@ -23,7 +23,7 @@ For more details, refer to the `Liquid Glass Getting Started documentation`.
 
 ### Step 2: Enable the liquid glass effect on Autocomplete
 
-Set the [EnableLiquidGlassEffect]() property to `true` in the `SfAutocomplete` control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its dependent controls and provides responsive interaction for a smooth and engaging user experience.
+Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.DropDownControls.DropDownListBase.html#Syncfusion_Maui_Inputs_DropDownControls_DropDownListBase_EnableLiquidGlassEffect) property to `true` in the `SfAutocomplete` control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its dependent controls and provides responsive interaction for a smooth and engaging user experience.
 
 ### Step 3: Customize the background
 
