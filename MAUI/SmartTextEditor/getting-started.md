@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 # Getting started with .NET MAUI Smart Text Editor
-This section explains how to add the [.NET MAUI SmartTextEditor]() control. It covers only the basic features needed to get started with the Syncfusion AI-Powered Text Editor. Follow the steps below to add a .NET MAUI AI-Powered Text Editor control to your project.
+This section explains how to add the [.NET MAUI SmartTextEditor](https://www.syncfusion.com/maui-controls/maui-smart-texteditor) control. It covers only the basic features needed to get started with the Syncfusion AI-Powered Text Editor. Follow the steps below to add a .NET MAUI AI-Powered Text Editor control to your project.
 
 N> The Smart Text Editor is distributed as part of the `Syncfusion.Maui.SmartComponents` package provides advanced AI-assisted features to enhance text editing and content management. Ensure your application has the required AI service configuration to enable these features.
 
@@ -30,7 +30,7 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI SmartComponents NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for [Syncfusion.Maui.SmartComponents]() and install the latest version.
+2. Search for [Syncfusion.Maui.SmartComponents](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.html) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 ## Step 3: Register the handler
@@ -110,12 +110,12 @@ namespace GettingStarted
 
 {% endhighlight %}
 
-N> You can refer [Configure AI Service](/Common/configure-ai-service) for `Azure`, `OpenAI`, `Ollama` service.
+N> You can refer [Configure AI Service](https://help.syncfusion.com/maui/common/configure-ai-service) for `Azure`, `OpenAI`, `Ollama` service.
 
 ## Step 5: Add .NET MAUI Smart Text Editor control
 
 1. To initialize the control, import the `Syncfusion.Maui.SmartComponents` namespace into your code.
-2. Initialize [SfSmartTextEditor]().
+2. Initialize [SfSmartTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartTextEditor.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
@@ -244,12 +244,12 @@ namespace GettingStarted
 }
 {% endhighlight %}
 
-N> You can refer [Configure AI Service](configure-ai-service) for `Azure`, `OpenAI`, `Ollama` service.
+N> You can refer [Configure AI Service](https://help.syncfusion.com/maui/common/configure-ai-service) for `Azure`, `OpenAI`, `Ollama` service.
 
 ## Step 5: Add .NET MAUI Smart Text Editor control
 
 1. To initialize the control, import the `Syncfusion.Maui.SmartComponents` namespace into your code.
-2. Initialize [SfSmartTextEditor]().
+2. Initialize [SfSmartTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartTextEditor.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
@@ -301,7 +301,7 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI SmartComponents NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
-2. Search for [Syncfusion.Maui.SmartComponents]() and install the latest version.
+2. Search for [Syncfusion.Maui.SmartComponents](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.html) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, Open the Terminal in Rider and manually run: `dotnet restore`
 
 ## Step 3: Register the handler
@@ -379,12 +379,12 @@ namespace GettingStarted
 }
 {% endhighlight %}
 
-N> You can refer [Configure AI Service](configure-ai-service) for `Azure`, `OpenAI`, `Ollama` service.
+N> You can refer [Configure AI Service](https://help.syncfusion.com/maui/common/configure-ai-service) for `Azure`, `OpenAI`, `Ollama` service.
 
 ## Step 5: Add .NET MAUI Smart Text Editor control
 
 1. To initialize the control, import the `Syncfusion.Maui.SmartComponents` namespace into your code.
-2. Initialize [SfSmartTextEditor]().
+2. Initialize [SfSmartTextEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartTextEditor.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3 5" %}
@@ -454,4 +454,4 @@ Here is the result of the previous codes,
 
 ![Getting Started in .NET MAUI Smart Text Editor.](images/getting-started/maui-smarttexteditor-getting-started.gif)
 
-N> You can refer to our [.NET MAUI Smart Text Editor]() feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Smart Text Editor Example]() that shows you how to render the Smart Text Editor in .NET MAUI.
+N> You can refer to our [.NET MAUI Smart Text Editor](https://www.syncfusion.com/maui-controls/maui-smart-texteditor) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Smart Text Editor Example]() that shows you how to render the Smart Text Editor in .NET MAUI.
