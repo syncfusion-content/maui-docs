@@ -17,23 +17,29 @@ The drawer in the SfNavigationDrawer can be toggled using the following methods:
 
 ## Opening drawer programmatically
 
-The [IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_IsOpen) property and [ToggleDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ToggleDrawer) method enable programmatically opening or closing the drawer.
+The [IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_IsOpen) property and [ToggleDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html#Syncfusion_Maui_NavigationDrawer_SfNavigationDrawer_ToggleDrawer) method enable programmatically opening or closing the drawer.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<navigationdrawer:SfNavigationDrawer x:Name="navigationDrawer" IsOpen="True">
-</navigationdrawer:SfNavigationDrawer>
+ <navigationDrawer:SfNavigationDrawer>
+        <navigationDrawer:SfNavigationDrawer.DrawerSettings>
+            <navigationDrawer:DrawerSettings IsOpen="True">
+            </navigationDrawer:DrawerSettings>
+        </navigationDrawer:SfNavigationDrawer.DrawerSettings>
+</navigationDrawer:SfNavigationDrawer>
+
 
 {% endhighlight %}	
 	
 {% highlight c# %} 
 
-SfNavigationDrawer navigationDrawer = new SfNavigationDrawer()
-{
-    IsOpen = true,
-};
+    SfNavigationDrawer navigationDrawer = new SfNavigationDrawer();
+    DrawerSettings primaryDrawer = new DrawerSettings();
+    primaryDrawer.IsOpen = true;
+    navigationDrawer.DrawerSettings = primaryDrawer;
+    this.Content = navigationDrawer;
 
 {% endhighlight %}
 
