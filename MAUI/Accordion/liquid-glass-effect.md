@@ -32,7 +32,7 @@ To achieve a glass like background, set the `Background` property to `Transparen
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfAccordion` control:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="11 12 14 75" %}
 <Grid>
     <Grid.Background>
         <LinearGradientBrush StartPoint="0,0"
@@ -55,7 +55,7 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
                         </Grid>
                     </syncfusion:AccordionItem.Header>
                     <syncfusion:AccordionItem.Content>
-                        <Grid ColumnSpacing="10" RowSpacing="2" BackgroundColor="#f4f4f4"  >
+                        <Grid ColumnSpacing="10" RowSpacing="2">
                             <Grid Margin="16,6,0,0">
                                 <Grid.Resources>
                                     <Style TargetType="Label">
@@ -144,37 +144,152 @@ var accordion = new SfAccordion
 };
 
 var accordionItem = new AccordionItem();
-var headerGrid = new Grid { HeightRequest = 48 };
-headerGrid.Children.Add(new Label
+
+var headerGrid = new Grid
+{
+    HeightRequest = 48
+};
+
+var headerLabel = new Label
 {
     Text = "Robin Rane",
     Margin = new Thickness(16, 14, 0, 14),
     CharacterSpacing = 0.25,
     FontFamily = "Roboto-Regular",
     FontSize = 14
-});
+};
 
+headerGrid.Children.Add(headerLabel);
 accordionItem.Header = headerGrid;
-var contentGrid = new Grid
+
+var contentOuterGrid = new Grid
 {
     ColumnSpacing = 10,
-    RowSpacing = 2,
-    BackgroundColor = Color.FromArgb("#f4f4f4")
+    RowSpacing = 2
 };
+
+var contentGrid = new Grid
+{
+    Margin = new Thickness(16, 6, 0, 0)
+};
+
+var labelStyle = new Style(typeof(Label));
+labelStyle.Setters.Add(new Setter { Property = Label.FontFamilyProperty, Value = "Roboto-Regular" });
+contentGrid.Resources = new ResourceDictionary();
+contentGrid.Resources.Add(labelStyle);
+contentGrid.RowDefinitions.Add(new RowDefinition { Height = 25 });
+contentGrid.RowDefinitions.Add(new RowDefinition { Height = 25 });
+contentGrid.RowDefinitions.Add(new RowDefinition { Height = 25 });
+contentGrid.RowDefinitions.Add(new RowDefinition { Height = 25 });
+contentGrid.RowDefinitions.Add(new RowDefinition { Height = DeviceInfo.Platform == DevicePlatform.Android ? 90 : DeviceInfo.Platform == DevicePlatform.WinUI ? 70 : DeviceInfo.Platform == DevicePlatform.iOS ? 100 : DeviceInfo.Platform == DevicePlatform.MacCatalyst ? 70 : 90 });
+contentGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
+contentGrid.ColumnDefinitions.Add(new ColumnDefinition { Width = 100 });
+contentGrid.ColumnDefinitions.Add(new ColumnDefinition { Width = 100 });
+contentGrid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Star });
+var border = new Border
+{
+    Padding = 0,
+    Margin = new Thickness(0, 0, 0, 7)
+};
+
+Grid.SetRow(border, 0);
+Grid.SetColumn(border, 0);
+Grid.SetRowSpan(border, 4);
+var image = new Image
+{
+    Source = "emp_01.png"
+};
+
+border.Content = image;
+contentGrid.Children.Add(border);
+
+var positionLabel = new Label { Text = "Position", Margin = new Thickness(6, 0, 0, 0) };
+Grid.SetRow(positionLabel, 0);
+Grid.SetColumn(positionLabel, 1);
+contentGrid.Children.Add(positionLabel);
+
+var chairmanLabel = new Label { Text = "Chairman" };
+Grid.SetRow(chairmanLabel, 0);
+Grid.SetColumn(chairmanLabel, 2);
+contentGrid.Children.Add(chairmanLabel);
+
+var organizationLabel = new Label { Text = "Organization ", Margin = new Thickness(6, 0, 0, 0) };
+Grid.SetRow(organizationLabel, 1);
+Grid.SetColumn(organizationLabel, 1);
+contentGrid.Children.Add(organizationLabel);
+
+var abcIncLabel = new Label { Text = "ABC Inc." };
+Grid.SetRow(abcIncLabel, 1);
+Grid.SetColumn(abcIncLabel, 2);
+contentGrid.Children.Add(abcIncLabel);
+
+var dobLabel = new Label { Text = "Date Of Birth ", Margin = new Thickness(6, 0, 0, 0) };
+Grid.SetRow(dobLabel, 2);
+Grid.SetColumn(dobLabel, 1);
+contentGrid.Children.Add(dobLabel);
+
+var dateLabel = new Label { Text = "09/17/1973" };
+Grid.SetRow(dateLabel, 2);
+Grid.SetColumn(dateLabel, 2);
+contentGrid.Children.Add(dateLabel);
+
+var locationTitleLabel = new Label { Text = "Location ", Margin = new Thickness(6, 0, 0, 0) };
+Grid.SetRow(locationTitleLabel, 3);
+Grid.SetColumn(locationTitleLabel, 1);
+contentGrid.Children.Add(locationTitleLabel);
+
+var locationLabel = new Label { Text = "Boston" };
+Grid.SetRow(locationLabel, 3);
+Grid.SetColumn(locationLabel, 2);
+contentGrid.Children.Add(locationLabel);
 
 var descriptionLabel = new Label
 {
-    Text = "Robin Rane, Chairman of ABC Inc., leads with dedication and vision. Under his guidance, the company thrives and continues to make a significant impact in the industry.",
-    Margin = new Thickness(16, 6, 0, 0),
     Padding = new Thickness(0, 10, 0, 10),
     LineBreakMode = LineBreakMode.WordWrap,
     FontSize = 14,
     CharacterSpacing = 0.25,
+    VerticalTextAlignment = TextAlignment.Center,
+    Text = "Robin Rane, Chairman of ABC Inc., leads with dedication and vision.Under his guidance, the company thrives and continues to make a significant impact in the industry."
+};
+
+Grid.SetRow(descriptionLabel, 4);
+Grid.SetColumnSpan(descriptionLabel, 3);
+contentGrid.Children.Add(descriptionLabel);
+
+var phoneStack = new StackLayout
+{
+    Orientation = StackOrientation.Horizontal,
+    Margin = new Thickness(0, 0, 0, 12)
+};
+
+Grid.SetRow(phoneStack, 5);
+
+var phoneIcon = new Label
+{
+    Text = "\ue700",
+    FontSize = 16,
+    Margin = new Thickness(0, 2, 2, 2),
+    FontFamily = DeviceInfo.Platform == DevicePlatform.Android ? "AccordionFontIcons.ttf#" :
+                    DeviceInfo.Platform == DevicePlatform.WinUI ? "AccordionFontIcons.ttf#AccordionFontIcons" :
+                    "AccordionFontIcons",
+    VerticalOptions = LayoutOptions.Center,
     VerticalTextAlignment = TextAlignment.Center
 };
 
-contentGrid.Children.Add(descriptionLabel);
-accordionItem.Content = contentGrid;
+var phoneNumber = new Label
+{
+    Text = "(617) 555-1234",
+    VerticalOptions = LayoutOptions.Center,
+    CharacterSpacing = 0.25,
+    FontSize = 14
+};
+
+phoneStack.Children.Add(phoneIcon);
+phoneStack.Children.Add(phoneNumber);
+contentGrid.Children.Add(phoneStack);
+contentOuterGrid.Children.Add(contentGrid);
+accordionItem.Content = contentOuterGrid;
 accordion.Items.Add(accordionItem);
 glassView.Content = accordion;
 grid.Children.Add(glassView);
