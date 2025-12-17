@@ -15,21 +15,15 @@ The Liquid Glass Effect introduces a modern, translucent design with adaptive co
 
 Follow these steps to enable and configure the Liquid Glass Effect in the Toolbar control:
 
-### Step 1: Wrap the control inside glass effect view
+### Step 1: Enable the liquid glass effect on Toolbar
 
-To apply the Liquid Glass Effect to Syncfusion® .NET MAUI `Toolbar` control, wrap the control inside the `SfGlassEffectView` class.
+Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_EnableLiquidGlassEffect) property to `true` in the [SfToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html) control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its dependent controls and provides responsive interaction for a smooth and engaging user experience.
 
-For more details, refer to the `Liquid Glass Getting Started documentation`.
-
-### Step 2: Enable the liquid glass effect on Toolbar
-
-Set the `EnableLiquidGlassEffect` property to `true` in the `SfToolbar` control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its dependent controls and provides responsive interaction for a smooth and engaging user experience.
-
-### Step 3: Customize the background
+### Step 2: Customize the background
 
 To achieve a glass like background in the Toolbar, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
 
-The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfToolbar` control:
+The following code snippet demonstrates how to apply the Liquid Glass Effect to the [SfToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html) control:
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}

@@ -17,13 +17,13 @@ Follow these steps to enable and configure the Liquid Glass Effect in the Front 
 
 ### Step 1: Enable the liquid glass effect on Front or Back Layer
 
-Set the `EnableLiquidGlassEffect` property to `true` in the `SfBackdropPage` control's Front or Back Layer to apply the Liquid Glass Effect.
+Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.BackdropBackLayer.html#Syncfusion_Maui_Backdrop_BackdropBackLayer_EnableLiquidGlassEffect) property to `true` in the [SfBackdropPage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html) control's Front or Back Layer to apply the Liquid Glass Effect.
 
 ### Step 2: Customize the background
 
 To achieve a glass like background in the Front or Back Layer, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
 
-The following code snippet demonstrates how to apply the Liquid Glass Effect to the Front or Back layer of the `SfBackdropPage` control:
+The following code snippet demonstrates how to apply the Liquid Glass Effect to the Front or Back layer of the [SfBackdropPage](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Backdrop.SfBackdropPage.html) control:
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
