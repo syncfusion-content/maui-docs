@@ -10,8 +10,8 @@ documentation: ug
 # Choose how suggestions are displayed
 
 The AI-Powered Text Editor supports two display modes for showing completions as you type: `Inline` and `Popup`.
-- [Inline](): Renders the predicted text in place after the caret, matching your text style.
-- [Popup](): Shows a compact hint near the caret that you can tap or accept via key press.
+- [Inline](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SuggestionDisplayMode.html#Syncfusion_Maui_SmartComponents_SuggestionDisplayMode_Inline): Renders the predicted text in place after the caret, matching your text style.
+- [Popup](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SuggestionDisplayMode.html#Syncfusion_Maui_SmartComponents_SuggestionDisplayMode_Popup): Shows a compact hint near the caret that you can tap or accept via key press.
 
 N>
 - Windows and Mac Catalyst default to **Inline**; Android and iOS default to **Popup**.
