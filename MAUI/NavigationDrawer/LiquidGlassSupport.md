@@ -8,7 +8,7 @@ documentation: ug
 ---
 
 
-# Liquid Glass Support for .NET MAUI NavigationDrawer:
+# Liquid Glass Support for .NET MAUI NavigationDrawer
 
 The [SfNavigationDrawer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.SfNavigationDrawer.html) supports a `liquid glass` effect (also called acrylic or glass morphism) when you enable the `EnableLiquidGlassEffect`. This feature adds a frosted, translucent style that blends with the background, giving the navigation drawer a modern and elegant look.
 
@@ -43,7 +43,7 @@ SfNavigationDrawer navigationDrawer = new SfNavigationDrawer
 - Visual output and performance may vary by device/platform; keep backgrounds moderately detailed to maintain clarity during interaction.
 - For an enhanced UI, set `ContentBackground="Transparent"` for the `DrawerSettings` and `Background="Transparent"` for the `ContentView` at the sample .
 
-The following GIF demonstrates the liquid glass effect of Navigation Drawer
+The following GIF demonstrates the liquid glass effect of Navigation Drawer.
 
 ![Liquid Glass](images/LiquidGlass/liquid-glass.gif)
 

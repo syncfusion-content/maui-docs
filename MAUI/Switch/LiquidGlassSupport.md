@@ -7,7 +7,7 @@ control: SfSwitch
 documentation: ug
 ---
 
-# Liquid Glass Support for .NET MAUI Switch:
+# Liquid Glass Support for .NET MAUI Switch
 
 The [SfSwitch](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSwitch.html) control supports a glass effect (also called acrylic or glass morphism) when you enable the `EnableLiquidGlassEffect` property. It works best over vibrant images or colorful layouts and enhances the visual depth of your UI. When toggled, the switch provides smooth transitions and clear visual feedback, making interactions feel polished and premium.
 
@@ -41,6 +41,6 @@ SfSwitch aSwitch = new SfSwitch
 - Place the switch over visually rich content (images, gradients, or color blocks) to better showcase the transient glass effect.
 - Visual output and performance may vary by device/platform; keep backgrounds moderately detailed to maintain clarity during interaction.
 
-The following GIF demonstrates the liquid glass effect of Switch
+The following GIF demonstrates the liquid glass effect of Switch.
 
 ![Liquid Glass](images/LiquidGlass/liquid-glass.gif)
