@@ -1586,7 +1586,7 @@ You can download the sample from the following link: (Sample)[https://github.com
 
 ## DataGridHyperlinkColumn
 
-The `DataGridHyperlinkColumn` inherits all the properties of the `DataGridTextColumn`. It displays column data as clickable hyperlinks. It renders link text in each record cell and lets end users invoke navigation.
+The [DataGridHyperlinkColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridHyperlinkColumn.html) inherits all the properties of the [DataGridTextColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTextColumn.html). It displays column data as clickable hyperlinks. It renders link text in each record cell and lets end users invoke navigation.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1613,9 +1613,9 @@ dataGrid.Columns.Add(hyperlinkColumn);
 
 {% endtabs %}
 
-You can enable end-users to navigate to a URI either when the cell value contains a valid URI address or by handling the `DataGridCurrentCellRequestNavigatingEventArgs` event. The `CurrentCellRequestNavigating` event is triggered whenever a cell in the `DataGridHyperlinkColumn` is clicked for navigation.
+You can enable end-users to navigate to a URI either when the cell value contains a valid URI address or by handling the [DataGridCurrentCellRequestNavigatingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCurrentCellRequestNavigatingEventArgs.html) event. The [CurrentCellRequestNavigating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_SfDataGrid_CurrentCellRequestNavigating) event is triggered whenever a cell in the `DataGridHyperlinkColumn` is clicked for navigation.
 
-The `DataGridCurrentCellRequestNavigatingEventArgs` associated with the `CurrentCellRequestNavigating` event provides details about the hyperlink that initiated the action. Its `DataGridCurrentCellRequestNavigatingEventArgs.NavigateText` property returns the value from the column’s `DisplayBinding` if one is defined; otherwise, it falls back to the value bound to `MappingName`.
+The [DataGridCurrentCellRequestNavigatingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCurrentCellRequestNavigatingEventArgs.html) associated with the `CurrentCellRequestNavigating` event provides details about the hyperlink that initiated the action. Its [DataGridCurrentCellRequestNavigatingEventArgs.NavigateText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCurrentCellRequestNavigatingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCurrentCellRequestNavigatingEventArgs_NavigateText) property returns the value from the column’s `DisplayBinding` if one is defined; otherwise, it falls back to the value bound to `MappingName`.
 
 {% tabs %}
 {% highlight C# %}
@@ -1633,7 +1633,7 @@ private void dataGrid_CurrentCellRequestNavigating(object sender, DataGridCurren
 
 
 ### Cancel the navigation
-You can cancel the navigation by setting `DataGridCurrentCellRequestNavigatingEventArgs.Cancel` to true.
+You can cancel the navigation by setting [DataGridCurrentCellRequestNavigatingEventArgs.Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCurrentCellRequestNavigatingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCurrentCellRequestNavigatingEventArgs_Cancel) to true.
 
 {% tabs %}
 {% highlight C# %}
@@ -1651,7 +1651,7 @@ private void dataGrid_CurrentCellRequestNavigating(object sender, DataGridCurren
 
 #### HyperlinkTextColor
 
-You can set the hyperlink text color using the `HyperlinkTextColor` property. If both HyperlinkTextColor and a DataGridCell TextColor (via implicit or explicit styles) are defined, HyperlinkTextColor takes precedence and will be used. If HyperlinkTextColor is not specified, the implicit or explicit cell styles will determine the hyperlink text color.
+You can set the hyperlink text color using the [HyperlinkTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_HyperlinkTextColor) property. If both HyperlinkTextColor and a DataGridCell TextColor (via implicit or explicit styles) are defined, HyperlinkTextColor takes precedence and will be used. If HyperlinkTextColor is not specified, the implicit or explicit cell styles will determine the hyperlink text color.
 
 {% tabs %}
 {% highlight xaml %}
