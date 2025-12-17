@@ -85,10 +85,10 @@ Here are examples of AI services integrated using the `IChatInferenceService` in
 
 | Service | Documentation |
 |---------|---------------|
-| Claude | [Claude Integration](/Common/claude-service) |
-| DeepSeek | [DeepSeek Integration](/Common/deepseek-service) |
-| Groq | [Groq Integration](/Common/groq-service) |
-| Gemini | [Gemini Integration](/Common/gemini-service) |
+| Claude | [Claude Integration](https://help.syncfusion.com/maui/common/claude-service) |
+| DeepSeek | [DeepSeek Integration](https://help.syncfusion.com/maui/common/deepseek-service) |
+| Groq | [Groq Integration](https://help.syncfusion.com/maui/common/groq-service) |
+| Gemini | [Gemini Integration](https://help.syncfusion.com/maui/common/gemini-service) |
 
 ## Troubleshooting
 
