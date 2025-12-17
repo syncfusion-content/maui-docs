@@ -40,39 +40,82 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
     xmlns:timepicker="clr-namespace:Syncfusion.Maui.TimePicker;assembly=Syncfusion.Maui.TimePicker"
     xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
     x:Class="AcrylicTimePickerPage">
-
     <Grid>
-        <!-- Background to make acrylic blur visible -->
-        <Image Source="wallpaper.jpg" Aspect="AspectFill" />
-
-        <core:SfGlassEffectsView
-            CornerRadius="20"
-            Padding="12"
-            EffectType="Regular"
-            EnableShadowEffect="True">
-
-            <timepicker:SfTimePicker />
-        </core:SfGlassEffectsView>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0"
+                                 EndPoint="0,1">
+                <GradientStop Color="#0F4C75"
+                              Offset="0.0"/>
+                <GradientStop Color="#3282B8"
+                              Offset="0.5"/>
+                <GradientStop Color="#1B262C"
+                              Offset="1.0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid>
+            <core:SfGlassEffectView
+                EffectType="Regular"
+                CornerRadius="20"
+                WidthRequest="350"
+                HeightRequest="350">
+                <picker:SfTimePicker x:Name="picker"
+                                     EnableLiquidGlassEffect="True"
+                                     Background="Transparent">
+                    <picker:SfTimePicker.ColumnHeaderView>
+                        <picker:TimePickerColumnHeaderView Background="Transparent"/>
+                    </picker:SfTimePicker.ColumnHeaderView>
+                </picker:SfTimePicker>
+            </core:SfGlassEffectView>
+        </Grid>
     </Grid>
 </ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-using Syncfusion.Maui.Core;
-using Syncfusion.Maui.TimePicker;
-
-var glassView = new SfGlassEffectsView
+// Outer grid with gradient background
+var mainGrid = new Grid()
 {
-    CornerRadius = 20,
-    Padding = new Thickness(12),
-    EffectType = LiquidGlassEffectType.Regular,
-    EnableShadowEffect = true
+    Background = new LinearGradientBrush()
+    {
+        StartPoint = new Point(0, 0),
+        EndPoint = new Point(0, 1),
+        GradientStops =
+        {
+            new GradientStop { Color = Color.FromArgb("#0F4C75"), Offset = 0.0f },
+            new GradientStop { Color = Color.FromArgb("#3282B8"), Offset = 0.5f },
+            new GradientStop { Color = Color.FromArgb("#1B262C"), Offset = 1.0f }
+        }
+    }
 };
 
-var timePicker = new SfTimePicker();
+// Inner grid container
+var innerGrid = new Grid();
+
+var glassView = new SfGlassEffectView()
+{
+    EffectType = GlassEffectType.Regular,
+    CornerRadius = 20,
+    WidthRequest = 350,
+    HeightRequest = 350
+};
+
+var timePicker = new SfTimePicker()
+{
+    EnableLiquidGlassEffect = true,
+    Background = Colors.Transparent,
+    WidthRequest = 350,
+    HeightRequest = 350,
+    ColumnHeaderView = new TimePickerColumnHeaderView()
+    {
+        Background = Colors.Transparent
+    }
+};
 
 glassView.Content = timePicker;
+innerGrid.Children.Add(glassView);
+mainGrid.Children.Add(innerGrid);
+this.Content = mainGrid;
 
 {% endhighlight %}
 {% endtabs %}

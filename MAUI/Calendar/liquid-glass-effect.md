@@ -40,38 +40,70 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
     xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar"
     xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
     x:Class="AcrylicCalendarPage">
-
     <Grid>
-        <Image Source="wallpaper.jpg" Aspect="AspectFill" />
-
-        <core:SfGlassEffectsView
-            CornerRadius="20"
-            Padding="12"
-            EffectType="Regular"
-            EnableShadowEffect="True">
-
-            <calendar:SfCalendar />
-        </core:SfGlassEffectsView>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0"
+                                 EndPoint="0,1">
+                <GradientStop Color="#0F4C75"
+                              Offset="0.0"/>
+                <GradientStop Color="#3282B8"
+                              Offset="0.5"/>
+                <GradientStop Color="#1B262C"
+                              Offset="1.0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid>
+            <core:SfGlassEffectView
+                EffectType="Regular"
+                CornerRadius="20">
+                <calendar:SfCalendar x:Name="calendar"
+                    EnableLiquidGlassEffect="True"
+                    Background="Transparent"
+                    WidthRequest="350"
+                    HeightRequest="350"/>
+            </core:SfGlassEffectView>
+        </Grid>
     </Grid>
 </ContentPage>
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-using Syncfusion.Maui.Core;
-using Syncfusion.Maui.Calendar;
+// Outer grid with gradient background
+var mainGrid = new Grid()
+{
+    Background = new LinearGradientBrush()
+    {
+        StartPoint = new Point(0, 0),
+        EndPoint = new Point(0, 1),
+        GradientStops =
+        {
+            new GradientStop { Color = Color.FromArgb("#0F4C75"), Offset = 0.0f },
+            new GradientStop { Color = Color.FromArgb("#3282B8"), Offset = 0.5f },
+            new GradientStop { Color = Color.FromArgb("#1B262C"), Offset = 1.0f }
+        }
+    }
+};
 
-var glassView = new SfGlassEffectsView
+// Inner grid container
+var innerGrid = new Grid();
+
+var glassView = new SfGlassEffectsView()
 {
     CornerRadius = 20,
-    Padding = new Thickness(12),
     EffectType = LiquidGlassEffectType.Regular,
-    EnableShadowEffect = true
 };
 
 var calendar = new SfCalendar();
+calendar.EnableLiquidGlassEffect = true;
+calendar.Background = Colors.Transparent;
+calendar.WidthRequest = 350;
+calendar.HeightRequest = 350;
 
 glassView.Content = calendar;
+innerGrid.Children.Add(glassView);
+mainGrid.Children.Add(innerGrid);
+this.Content = mainGrid;
 
 {% endhighlight %}
 {% endtabs %}
