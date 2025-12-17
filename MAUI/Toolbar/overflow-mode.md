@@ -632,7 +632,7 @@ private void OnMoreButtonTapped(object? sender, ToolbarMoreButtonTappedEventArgs
 
 ## MultiRow
 
-The Toolbar now supports showing items on multiple rows by setting the [OverflowMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_OverflowMode) property to [MultiRow]().When enabled, items wrap to additional rows based on available width, making it easier to manage many items.
+The Toolbar now supports showing items on multiple rows by setting the [OverflowMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html#Syncfusion_Maui_Toolbar_SfToolbar_OverflowMode) property to [MultiRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarItemOverflowMode.html#Syncfusion_Maui_Toolbar_ToolbarItemOverflowMode_MultiRow).When enabled, items wrap to additional rows based on available width, making it easier to manage many items.
 
 {% tabs %}
 
