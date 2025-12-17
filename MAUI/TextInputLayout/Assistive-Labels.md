@@ -80,7 +80,7 @@ N> Error validations should be done in the application level.
 
 ## Character counter
 
-Character counter is used when you need to limit the characters. Character limit can be set using the [CharMaxLength](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_CharMaxLength) property.The character counter can be enabled by setting the [ShowCharCount]() property to true.
+Character counter is used when you need to limit the characters. Character limit can be set using the [CharMaxLength](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_CharMaxLength) property.The character counter can be enabled by setting the [ShowCharCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfTextInputLayout.html#Syncfusion_Maui_Core_SfTextInputLayout_ShowCharCount) property to true.
 
 {% tabs %} 
 
