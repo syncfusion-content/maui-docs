@@ -9,11 +9,11 @@ documentation: ug
 
 # Methods in .NET MAUI AI-Powered Scheduler (SfSmartScheduler)
 
-The `SfSmartScheduler` supports the `ResetAssistView`, `CloseAssistView` and `OpenAssistView` methods to reset, close or open assist view programmatically.
+The [SfSmartScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartScheduler.html) supports the [ResetAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartScheduler.html#Syncfusion_Maui_SmartComponents_SfSmartScheduler_ResetAssistView), [CloseAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartScheduler.html#Syncfusion_Maui_SmartComponents_SfSmartScheduler_CloseAssistView) and [OpenAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartScheduler.html#Syncfusion_Maui_SmartComponents_SfSmartScheduler_OpenAssistView) methods to reset, close or open assist view programmatically.
 
 ## Reset assist view
 
-The `SfSmartScheduler` control provides the `ResetAssistView` method to reset assist view programmatically.
+The [SfSmartScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartScheduler.html) control provides the [ResetAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartScheduler.html#Syncfusion_Maui_SmartComponents_SfSmartScheduler_ResetAssistView) method to reset assist view programmatically.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -38,7 +38,7 @@ private void Button_Clicked(object sender, EventArgs e)
 
 ## Close assist view
 
-The `SfSmartScheduler` control provides the `CloseAssistView` method to close assist view programmatically.
+The [SfSmartScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartScheduler.html) control provides the [CloseAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartScheduler.html#Syncfusion_Maui_SmartComponents_SfSmartScheduler_CloseAssistView) method to close assist view programmatically.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -63,7 +63,7 @@ private void Button_Clicked(object sender, EventArgs e)
 
 ## Open assist view
 
-The `SfSmartScheduler` control provides the `OpenAssistView` method to open assist view programmatically.
+The [SfSmartScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartScheduler.html) control provides the [OpenAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartScheduler.html#Syncfusion_Maui_SmartComponents_SfSmartScheduler_OpenAssistView) method to open assist view programmatically.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
