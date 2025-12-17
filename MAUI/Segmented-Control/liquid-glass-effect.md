@@ -33,7 +33,6 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-
 <core:SfGlassEffectView EffectType="Regular">
     <buttons:SfSegmentedControl x:Name="segmentedControl"
                                 EnableLiquidGlassEffect="True"
@@ -48,10 +47,8 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
         </buttons:SfSegmentedControl.ItemsSource>
     </buttons:SfSegmentedControl>
 </core:SfGlassEffectView>
-    
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-
 var glassView = new SfGlassEffectView
 {
     EffectType = LiquidGlassEffectType.Clear
@@ -72,7 +69,6 @@ var segmentedControl = new SfSegmentedControl
 
 glassView.Content = segmentedControl;
 this.Content = glassView;
-
 {% endhighlight %}
 {% endtabs %}
 

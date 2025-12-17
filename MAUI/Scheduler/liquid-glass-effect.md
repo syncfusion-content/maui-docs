@@ -33,7 +33,6 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-
 <core:SfGlassEffectView CornerRadius="9"
                         EffectType="Clear">
     <scheduler:SfScheduler x:Name="scheduler"
@@ -43,10 +42,8 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
         </scheduler:SfScheduler.HeaderView>
     </scheduler:SfScheduler>
 </core:SfGlassEffectView>
-
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-
 var glassView = new SfGlassEffectView
 {
     CornerRadius = 9,
@@ -65,6 +62,8 @@ var scheduler = new SfScheduler
 
 glassView.Content = scheduler;
 this.Content = glassView;
+{% endhighlight %}
+{% endtabs %}
 
 N>
 * Supported on `macOS 26 or higher` and `iOS 26 or higher`.
