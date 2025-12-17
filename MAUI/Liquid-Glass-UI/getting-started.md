@@ -137,13 +137,13 @@ var glassEffectView = new SfGlassEffectView
 // Content grid inside glass effect
 var contentGrid = new Grid
 {
+    ColumnSpacing = 12,
     ColumnDefinitions = new ColumnDefinitionCollection
     {
         new ColumnDefinition { Width = 64 },
         new ColumnDefinition { Width = GridLength.Star },
         new ColumnDefinition { Width = GridLength.Auto }
     },
-    ColumnSpacing = 12
 };
 
 // Avatar glass
@@ -171,13 +171,13 @@ var avatar = new SfAvatarView
 avatarGlass.Content = avatar;
 
 // Title / Subtitle stack
-var textStack = new VerticalStackLayout
+var stackLayout = new VerticalStackLayout
 {
     Spacing = 2,
     VerticalOptions = LayoutOptions.Center
 };
 
-textStack.Children.Add(new Label
+stackLayout.Children.Add(new Label
 {
     Text = "Syncfusion®",
     TextColor = Colors.White,
@@ -185,14 +185,14 @@ textStack.Children.Add(new Label
     FontSize = 20
 });
 
-textStack.Children.Add(new Label
+stackLayout.Children.Add(new Label
 {
     Text = "Deliver innovation with ease",
     TextColor = Color.FromArgb("#DDFFFFFF"),
     FontSize = 15
 });
 
-Grid.SetColumn(textStack, 1);
+Grid.SetColumn(stackLayout, 1);
 
 // Action button glass
 var buttonGlass = new SfGlassEffectView
@@ -215,7 +215,7 @@ Grid.SetColumn(buttonGlass, 2);
 
 // Add children to content grid
 contentGrid.Children.Add(avatarGlass);
-contentGrid.Children.Add(textStack);
+contentGrid.Children.Add(stackLayout);
 contentGrid.Children.Add(buttonGlass);
 
 // Set content of glassEffectView
@@ -228,7 +228,7 @@ innerGrid.Children.Add(glassEffectView);
 mainGrid.Children.Add(innerGrid);
 
 // Set page content
-Content = mainGrid;
+this.Content = mainGrid;
 
 {% endhighlight %}
 {% endtabs %}
@@ -341,13 +341,13 @@ var glassEffectView = new SfGlassEffectView
 // Content grid inside glass effect
 var contentGrid = new Grid
 {
+    ColumnSpacing = 12,
     ColumnDefinitions = new ColumnDefinitionCollection
     {
         new ColumnDefinition { Width = 64 },
         new ColumnDefinition { Width = GridLength.Star },
         new ColumnDefinition { Width = GridLength.Auto }
     },
-    ColumnSpacing = 12
 };
 
 // Avatar glass
@@ -374,13 +374,13 @@ var avatar = new SfAvatarView
 
 avatarGlass.Content = avatar;
 
-var textStack = new VerticalStackLayout
+var stackLayout = new VerticalStackLayout
 {
     Spacing = 2,
     VerticalOptions = LayoutOptions.Center
 };
 
-textStack.Children.Add(new Label
+stackLayout.Children.Add(new Label
 {
     Text = "Syncfusion®",
     TextColor = Colors.White,
@@ -388,14 +388,14 @@ textStack.Children.Add(new Label
     FontSize = 20
 });
 
-textStack.Children.Add(new Label
+stackLayout.Children.Add(new Label
 {
     Text = "Deliver innovation with ease",
     TextColor = Color.FromArgb("#DDFFFFFF"),
     FontSize = 15
 });
 
-Grid.SetColumn(textStack, 1);
+Grid.SetColumn(stackLayout, 1);
 
 // Action button glass
 var buttonGlass = new SfGlassEffectView
@@ -418,7 +418,7 @@ Grid.SetColumn(buttonGlass, 2);
 
 // Add children to content grid
 contentGrid.Children.Add(avatarGlass);
-contentGrid.Children.Add(textStack);
+contentGrid.Children.Add(stackLayout);
 contentGrid.Children.Add(buttonGlass);
 
 // Set content of glassEffectView
@@ -431,7 +431,7 @@ innerGrid.Children.Add(glassEffectView);
 mainGrid.Children.Add(innerGrid);
 
 // Set page content
-Content = mainGrid;
+this.Content = mainGrid;
 
 {% endhighlight %}
 {% endtabs %}
@@ -544,13 +544,13 @@ var glassEffectView = new SfGlassEffectView
 // Content grid inside glass effect
 var contentGrid = new Grid
 {
+    ColumnSpacing = 12,
     ColumnDefinitions = new ColumnDefinitionCollection
     {
         new ColumnDefinition { Width = 64 },
         new ColumnDefinition { Width = GridLength.Star },
         new ColumnDefinition { Width = GridLength.Auto }
     },
-    ColumnSpacing = 12
 };
 
 // Avatar glass
@@ -577,13 +577,13 @@ var avatar = new SfAvatarView
 
 avatarGlass.Content = avatar;
 
-var textStack = new VerticalStackLayout
+var stackLayout = new VerticalStackLayout
 {
     Spacing = 2,
     VerticalOptions = LayoutOptions.Center
 };
 
-textStack.Children.Add(new Label
+stackLayout.Children.Add(new Label
 {
     Text = "Syncfusion®",
     TextColor = Colors.White,
@@ -591,14 +591,14 @@ textStack.Children.Add(new Label
     FontSize = 20
 });
 
-textStack.Children.Add(new Label
+stackLayout.Children.Add(new Label
 {
     Text = "Deliver innovation with ease",
     TextColor = Color.FromArgb("#DDFFFFFF"),
     FontSize = 15
 });
 
-Grid.SetColumn(textStack, 1);
+Grid.SetColumn(stackLayout, 1);
 
 // Action button glass
 var buttonGlass = new SfGlassEffectView
@@ -621,7 +621,7 @@ Grid.SetColumn(buttonGlass, 2);
 
 // Add children to content grid
 contentGrid.Children.Add(avatarGlass);
-contentGrid.Children.Add(textStack);
+contentGrid.Children.Add(stackLayout);
 contentGrid.Children.Add(buttonGlass);
 
 // Set content of glassEffectView
@@ -634,7 +634,7 @@ innerGrid.Children.Add(glassEffectView);
 mainGrid.Children.Add(innerGrid);
 
 // Set page content
-Content = mainGrid;
+this.Content = mainGrid;
 
 {% endhighlight %}
 {% endtabs %}
@@ -747,13 +747,13 @@ var glassEffectView = new SfGlassEffectView
 // Content grid inside glass effect
 var contentGrid = new Grid
 {
+    ColumnSpacing = 12,
     ColumnDefinitions = new ColumnDefinitionCollection
     {
         new ColumnDefinition { Width = 64 },
         new ColumnDefinition { Width = GridLength.Star },
         new ColumnDefinition { Width = GridLength.Auto }
     },
-    ColumnSpacing = 12
 };
 
 // Avatar glass
@@ -780,13 +780,13 @@ var avatar = new SfAvatarView
 
 avatarGlass.Content = avatar;
 
-var textStack = new VerticalStackLayout
+var stackLayout = new VerticalStackLayout
 {
     Spacing = 2,
     VerticalOptions = LayoutOptions.Center
 };
 
-textStack.Children.Add(new Label
+stackLayout.Children.Add(new Label
 {
     Text = "Syncfusion®",
     TextColor = Colors.White,
@@ -794,14 +794,14 @@ textStack.Children.Add(new Label
     FontSize = 20
 });
 
-textStack.Children.Add(new Label
+stackLayout.Children.Add(new Label
 {
     Text = "Deliver innovation with ease",
     TextColor = Color.FromArgb("#DDFFFFFF"),
     FontSize = 15
 });
 
-Grid.SetColumn(textStack, 1);
+Grid.SetColumn(stackLayout, 1);
 
 // Action button glass
 var buttonGlass = new SfGlassEffectView
@@ -824,7 +824,7 @@ Grid.SetColumn(buttonGlass, 2);
 
 // Add children to content grid
 contentGrid.Children.Add(avatarGlass);
-contentGrid.Children.Add(textStack);
+contentGrid.Children.Add(stackLayout);
 contentGrid.Children.Add(buttonGlass);
 
 // Set content of glassEffectView
@@ -837,7 +837,7 @@ innerGrid.Children.Add(glassEffectView);
 mainGrid.Children.Add(innerGrid);
 
 // Set page content
-Content = mainGrid;
+this.Content = mainGrid;
 
 {% endhighlight %}
 {% endtabs %}
@@ -932,7 +932,7 @@ innerGrid.Children.Add(glassEffectView);
 mainGrid.Children.Add(innerGrid);
 
 // Set page content
-Content = mainGrid;
+this.Content = mainGrid;
 
 {% endhighlight %}
 {% endtabs %}
