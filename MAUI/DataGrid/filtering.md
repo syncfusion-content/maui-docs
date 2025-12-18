@@ -468,9 +468,11 @@ dataGrid.Columns["EmployeeID"].ImmediateUpdateColumnFilter = true;
 {% endtabs %}
 
 Checkbox Filter with `ImmediateUpdateColumnFilter` as `True`
+
 <img alt="Instant filtering in checkbox filtering" src="Images/filtering/maui-datagrid-instant-filtering-checkbox.png" width="500"/>
 
 Advanced Filter with `ImmediateUpdateColumnFilter` as `True`
+
 <img alt="Instant filtering in advanced filtering" src="Images/filtering/maui-datagrid-instant-filtering-advanced.png" width="500"/>
 
 ## Customizing the filter popup menu options
@@ -629,4 +631,5 @@ public class FilterIconTemplateSelector : DataTemplateSelector
 {% endtabs %}
 
 <img src="Images/filtering/maui-datagrid-filtering-filterTemplate-selector.png" width="500" alt="Filter icon template selector">
+
 
