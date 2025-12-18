@@ -32,23 +32,48 @@ To achieve a glass like background in the Segmented Control, set the `Background
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the [SfSegmentedControl](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfSegmentedControl.html) control:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-<core:SfGlassEffectView EffectType="Regular">
-    <buttons:SfSegmentedControl x:Name="segmentedControl"
-                                EnableLiquidGlassEffect="True"
-                                Background="Transparent">
-        <buttons:SfSegmentedControl.ItemsSource>
-            <x:Array Type="{x:Type x:String}">
-                <x:String>Day</x:String>
-                <x:String>Week</x:String>
-                <x:String>Month</x:String>
-                <x:String>Year</x:String>
-            </x:Array>
-        </buttons:SfSegmentedControl.ItemsSource>
-    </buttons:SfSegmentedControl>
-</core:SfGlassEffectView>
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="11" %}
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:buttons="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
+    xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+    x:Class="SegmentPage">
+    <Grid>
+        <Image Source="wallpaper.jpg" Aspect="AspectFill" />
+        <core:SfGlassEffectView EffectType="Clear">
+            <buttons:SfSegmentedControl x:Name="segmentedControl" 
+                                EnableLiquidGlassEffect="True" 
+                                Stroke="#1F000000" 
+                                Background="#EDEDED" 
+                                StrokeThickness="1">
+                <buttons:SfSegmentedControl.SelectionIndicatorSettings>
+                    <buttons:SelectionIndicatorSettings TextColor="#0088FF" Background="#19F2F2F7"/>
+                </buttons:SfSegmentedControl.SelectionIndicatorSettings>
+                <buttons:SfSegmentedControl.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Day</x:String>
+                        <x:String>Week</x:String>
+                        <x:String>Month</x:String>
+                    </x:Array>
+                </buttons:SfSegmentedControl.ItemsSource>
+            </buttons:SfSegmentedControl>
+        </core:SfGlassEffectView>
+    </Grid>
+</ContentPage>
+
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="14" %}
+
+using Syncfusion.Maui.Core;
+using Syncfusion.Maui.Buttons;
+
+var backgroundImage = new Image
+{
+    Source = "wallpaper.jpg",
+    Aspect = Aspect.AspectFill
+};
+
 var glassView = new SfGlassEffectView
 {
     EffectType = LiquidGlassEffectType.Clear
@@ -56,21 +81,34 @@ var glassView = new SfGlassEffectView
 
 var segmentedControl = new SfSegmentedControl
 {
-    Background = Colors.Transparent,
     EnableLiquidGlassEffect = true,
+    Stroke = Color.FromArgb("#1F000000"),
+    Background = Color.FromArgb("#EDEDED"),
+    StrokeThickness = 1,
     ItemsSource = new List<SfSegmentItem>
     {
         new SfSegmentItem() {Text = "Day"},
         new SfSegmentItem() {Text = "Week"},
         new SfSegmentItem() {Text = "Month"},
-        new SfSegmentItem() {Text = "Year"},
     }
 };
 
+segmentedControl.SelectionIndicatorSettings = new SelectionIndicatorSettings
+{
+    TextColor = Color.FromArgb("#0088FF"),
+    Background = Color.FromArgb("#19F2F2F7")
+};
+
 glassView.Content = segmentedControl;
-this.Content = glassView;
+var grid = new Grid();
+grid.Children.Add(backgroundImage);
+grid.Children.Add(glassView);
+this.Content = grid;
+
 {% endhighlight %}
 {% endtabs %}
+
+![Liquid effect glass in .NET MAUI Segmented control.](images/liquid-glass-effect/liquid-glass-segmented-control.png)
 
 N>
 * Supported on `macOS 26 or higher` and `iOS 26 or higher`.

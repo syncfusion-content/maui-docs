@@ -32,28 +32,48 @@ To achieve a glass like background in the Scheduler control, set the `Background
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html) control:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
-<core:SfGlassEffectView CornerRadius="9"
-                        EffectType="Clear">
-    <scheduler:SfScheduler x:Name="scheduler"
-                           Background="Transparent">
-        <scheduler:SfScheduler.HeaderView>
-            <scheduler:SchedulerHeaderView EnableLiquidGlassEffect="True" Background="Transparent"/>
-        </scheduler:SfScheduler.HeaderView>
-    </scheduler:SfScheduler>
-</core:SfGlassEffectView>
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14" %}
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
+    xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+    x:Class="SchedulePage">
+    <Grid>
+        <Image Source="wallpaper.jpg" Aspect="AspectFill" />
+        <core:SfGlassEffectView CornerRadius="9"
+                                EffectType="Clear">
+            <scheduler:SfScheduler x:Name="scheduler"
+                                Background="Transparent">
+                <scheduler:SfScheduler.HeaderView>
+                    <scheduler:SchedulerHeaderView  EnableLiquidGlassEffect="True" Background="Transparent"/>
+                </scheduler:SfScheduler.HeaderView>
+            </scheduler:SfScheduler>
+        </core:SfGlassEffectView>
+    </Grid>
+</ContentPage>
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="18 19" %}
+
+using Syncfusion.Maui.Core;
+using Syncfusion.Maui.Scheduler;
+
+var backgroundImage = new Image
+{
+    Source = "wallpaper.jpg",
+    Aspect = Aspect.AspectFill
+};
+
 var glassView = new SfGlassEffectView
 {
     CornerRadius = 9,
-    EffectType = LiquidGlassEffectType.Clear
+    EffectType = LiquidGlassEffectType.Clear,
 };
 
 var scheduler = new SfScheduler
 {
     Background = Colors.Transparent,
-    HeaderView = new SchedulerHeaderView()
+    HeaderView = new SchedulerHeaderView
     {
         EnableLiquidGlassEffect = true,
         Background = Colors.Transparent
@@ -61,9 +81,15 @@ var scheduler = new SfScheduler
 };
 
 glassView.Content = scheduler;
-this.Content = glassView;
+var grid = new Grid();
+grid.Children.Add(backgroundImage);
+grid.Children.Add(glassView);
+
+this.Content = grid;
 {% endhighlight %}
 {% endtabs %}
+
+![Liquid effect glass in .NET MAUI Scheduler control.](images/liquid-glass-effect/liquid-glass-effect-in-maui-scheduler.png)
 
 N>
 * Supported on `macOS 26 or higher` and `iOS 26 or higher`.
