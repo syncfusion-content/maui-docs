@@ -7,139 +7,141 @@ control: SfPicker
 documentation: ug
 ---
 
-# Liquid Glass Support
+# Liquid Glass Effect in .NET MAUI Picker (SfPicker)
 
-The [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html) supports a liquid glass  appearance by hosting the control inside the Syncfusion [SfGlassEffectsView](). You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when the picker is placed over images or colorful layouts.
+The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI Picker (SfPicker) control.
 
-Additionally, when the picker is shown in [Dialog]() mode, you can apply the glass effect to the pop-up by enabling the [EnableLiquidGlassEffect]() property on the SfPicker.
+## Apply liquid glass effect
 
-## Platform and Version Support
+Follow these steps to enable and configure the Liquid Glass Effect in the Picker control:
 
-1. This feature is supported on .NET 10 or greater.
-2. This feature is supported on macOS 26 and iOS 26 or later.
-3. On platforms or versions below these requirements, the control renders without the acrylic blur effect and falls back to a standard background.
+### Step 1: Wrap the control inside glass effect view
 
-## Prerequisites
+To apply the Liquid Glass Effect to Syncfusion® .NET MAUI [Picker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html) control, wrap the control inside the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) class.
 
-- Add the [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) package (for SfGlassEffectsView).
-- Add the [Syncfusion.Maui.Picker](https://www.nuget.org/packages/Syncfusion.Maui.Picker/) package (for SfPicker).
+For more details, refer to the [Liquid Glass Getting Started documentation](https://help.syncfusion.com/maui/liquid-glass-ui/getting-started).
 
-## Apply Liquid Glass Effect to SfPicker
+### Step 2: Enable the liquid glass effect on Picker
 
-Wrap the [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html) inside an [SfGlassEffectsView]() to give the picker surface a glass (blurred or clear) appearance.
+Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_EnableLiquidGlassEffect) property to `true` in the [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html) control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its dependent controls and provides responsive interaction for a smooth and engaging user experience.
+
+### Step 3: Customize the background
+
+To achieve a glass like background in the Picker, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
+
+The following code snippet demonstrates how to apply the Liquid Glass Effect to the [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html) control:
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
     xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
     x:Class="AcrylicPickerPage">
-
     <Grid>
-        <!-- Background to make acrylic blur visible -->
-        <Image Source="wallpaper.jpg" Aspect="AspectFill" />
-
-        <core:SfGlassEffectsView
-            CornerRadius="20"
-            Padding="12"
-            EffectType="Regular"
-            EnableShadowEffect="True">
-
-            <picker:SfPicker />
-        </core:SfGlassEffectsView>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0"
+                                 EndPoint="0,1">
+                <GradientStop Color="#0F4C75"
+                              Offset="0.0"/>
+                <GradientStop Color="#3282B8"
+                              Offset="0.5"/>
+                <GradientStop Color="#1B262C"
+                              Offset="1.0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid>
+            <core:SfGlassEffectView
+                EffectType="Regular"
+                CornerRadius="20"
+                WidthRequest="350"
+                HeightRequest="350">
+                <picker:SfPicker x:Name="picker"
+                                 EnableLiquidGlassEffect="True"
+                                 Background="Transparent">
+                    <picker:SfPicker.HeaderView>
+                        <picker:PickerHeaderView Height="40"
+                                Text="Select City"
+                                Background="Transparent"/>
+                    </picker:SfPicker.HeaderView>
+                </picker:SfPicker>
+            </core:SfGlassEffectView>
+ 
+        </Grid>
     </Grid>
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-using Syncfusion.Maui.Core;
-using Syncfusion.Maui.Picker;
-
-var glassView = new SfGlassEffectsView
+// Outer grid with gradient background
+var mainGrid = new Grid()
 {
-    CornerRadius = 20,
-    Padding = new Thickness(12),
-    EffectType = LiquidGlassEffectType.Regular,
-    EnableShadowEffect = true
+    Background = new LinearGradientBrush()
+    {
+        StartPoint = new Point(0, 0),
+        EndPoint = new Point(0, 1),
+        GradientStops =
+        {
+            new GradientStop { Color = Color.FromArgb("#0F4C75"), Offset = 0.0f },
+            new GradientStop { Color = Color.FromArgb("#3282B8"), Offset = 0.5f },
+            new GradientStop { Color = Color.FromArgb("#1B262C"), Offset = 1.0f }
+        }
+    }
 };
 
-var picker = new SfPicker();
+// Inner grid container
+var innerGrid = new Grid();
+
+var glassView = new SfGlassEffectView()
+{
+    EffectType = GlassEffectType.Regular,
+    CornerRadius = 20,
+    WidthRequest = 350,
+    HeightRequest = 350
+};
+
+var picker = new SfPicker()
+{
+    EnableLiquidGlassEffect = true,
+    Background = Colors.Transparent,
+    HeaderView = new PickerHeaderView()
+    {
+        HeightRequest = 40,
+        Text = "Select City",
+        Background = Colors.Transparent
+    }
+};
+
+ObservableCollection<object> cityName = new ObservableCollection<object>();
+cityName.Add("Chennai");
+cityName.Add("Mumbai");
+cityName.Add("Delhi");
+cityName.Add("Kolkata");
+cityName.Add("Bangalore");
+cityName.Add("Hyderabad");
+cityName.Add("Pune");
+cityName.Add("Ahmedabad");
+cityName.Add("Jaipur");
+cityName.Add("Lucknow");
+cityName.Add("Chandigarh");
+PickerColumn pickerColumn = new PickerColumn()
+{
+    ItemsSource = cityName,
+};
+
+picker.Columns.Add(pickerColumn);
 
 glassView.Content = picker;
+innerGrid.Children.Add(glassView);
+mainGrid.Children.Add(innerGrid);
+this.Content = mainGrid;
 
 {% endhighlight %}
 {% endtabs %}
 
 N>
-* Liquid Glass effects are most visible over images or colorful backgrounds.
-* Use EffectType="Regular" for a blurrier look and "Clear" for a glassy look.
-
-## Enable Glass Effect in Dialog Mode
-
-When the picker displays in a dialog surface, enable the liquid glass effect by setting [EnableLiquidGlassEffect]() to true.
-
-{% tabs %}
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
-    xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    x:Class="PickerDialogGlassPage">
-
-    <Grid>
-        <Image Source="wallpaper.jpg" Aspect="AspectFill" />
-
-        <!-- Optional: host the launcher/control within a glass view as well -->
-        <core:SfGlassEffectsView
-            CornerRadius="16"
-            Padding="10"
-            EffectType="Clear"
-            EnableShadowEffect="True">
-
-            <picker:SfPicker
-                EnableLiquidGlassEffect="True" />
-        </core:SfGlassEffectsView>
-    </Grid>
-</ContentPage>
-
-{% endhighlight %}
-{% highlight c# %}
-
-using Syncfusion.Maui.Core;
-using Syncfusion.Maui.Picker;
-
-var picker = new SfPicker
-{
-    // Applies acrylic/glass effect to the dialog surface
-    EnableLiquidGlassEffect = true
-};
-
-{% endhighlight %}
-{% endtabs %}
-
-N>
-* The dialog gains the glass effect only when [EnableLiquidGlassEffect]() is true.
-
-## Key Properties
-
-- [EffectType](): Choose between Regular (blurry) and Clear (glassy) effects.
-- [EnableShadowEffect](): Enables a soft shadow around the acrylic container.
-- [CornerRadius](): Rounds the corners of the acrylic container.
-- Padding/Height/Width: Adjust layout around the embedded picker.
-- [EnableLiquidGlassEffect]() (dialog): Enables the glass effect for the picker’s dialog surface.
-
-## Best Practices and Tips
-
-- Hosting the picker inside [SfGlassEffectsView]() gives the picker body an acrylic look.
-- In dialog usage, the dialog surface applies the glass effect only when [EnableLiquidGlassEffect]() is true.
-- For the most noticeable effect, place the control over images or vibrant backgrounds.
-
-The following screenshot illustrates [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html) hosted within an acrylic container, and the dialog surface using the glass effect.
+* Supported on `macOS 26 or higher` and `iOS 26 or higher`.
+* This feature is available only in `.NET 10.`
