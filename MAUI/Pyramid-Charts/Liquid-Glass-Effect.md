@@ -18,8 +18,8 @@ N> The liquid glass effect is supported only on `.NET 10` and on `iOS` and `macO
 
 The Liquid Glass Effect enhances MAUI [SfPyramidChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPyramidChart.html) with a sleek, glassy look and improved interactivity.
 
-**Tooltip:** Applies a glassy appearance to tooltips for clearer data highlights.
-**Chart Background:** Wrap the chart in an [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) to give the chart surface a blurred or clear glass background.
+- **Tooltip:** Applies a glassy appearance to tooltips for clearer data highlights.
+- **Chart Background:** Wrap the chart in an [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) to give the chart surface a blurred or clear glass background.
 
 ## Apply Liquid Glass Effect to SfPyramidChart
 

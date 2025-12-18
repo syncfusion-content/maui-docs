@@ -937,4 +937,4 @@ this.Content = mainGrid;
 {% endhighlight %}
 {% endtabs %}
 
-N> View sample in [GitHub](https://github.com/syncfusion/maui-demos).
+N> View sample in [GitHub](https://github.com/syncfusion/maui-demos/tree/master/MAUI/LiquidGlass).
