@@ -1,24 +1,26 @@
 ---
 layout: post
-title: Annotation Drag and Reposition .NET MAUI Cartesian Chart | Syncfusion
-description: Learn how to enable annotation interaction in Syncfusion® .NET MAUI Chart (SfCartesianChart) control to drag, reposition, and customize annotations dynamically.
+title: Annotation Drag and Reposition in .NET MAUI Cartesian Chart | Syncfusion
+description: Learn how to enable annotation interaction in Syncfusion® .NET MAUI Chart (SfCartesianChart) control to drag and reposition annotations dynamically.
 platform: maui
 control: SfCartesianChart
 documentation: ug
-Keywords: .net maui chart annotation interaction, .net maui chart annotation drag and drop, sfCartesianChart annotation interaction in .net maui, .net maui chart annotation customization.
+Keywords: .net maui chart annotation interaction, .net maui chart annotation drag and drop, .net maui chart annotation reposition, .net maui chart dynamic annotation movement.
 ---
 
-# Annotation Drag and Drop by interaction in .NET MAUI Cartesian Chart
+# Annotation Drag and Reposition
 
-The annotation interaction feature in the .NET MAUI Cartesian Chart allows users to **drag and reposition annotations** such as **Text annotation**, **Shape annotations**, and **View annotation** within the chart area, making data visualization more interactive and dynamic.
+The .NET MAUI Cartesian Chart enables **dynamic annotation repositioning** through touch interaction. By implementing custom annotation classes that inherit from Syncfusion annotation types and override touch interaction methods, annotations such as [TextAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.TextAnnotation.html), [ShapeAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ShapeAnnotation.html), and [ViewAnnotation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ViewAnnotation.html) can be dragged and repositioned within the chart area, enhancing interactivity and data analysis capabilities.
 
-To enable drag-and-drop functionality, implement a custom annotation class that inherits from Syncfusion annotation types and override the following touch interaction methods:
+## Touch Interaction Methods
 
-* **OnTouchDown** – Triggered when touch starts on the annotation. Converts the screen pixel coordinates to axis values using the chart’s `PointToValue` method to prepare for repositioning.
+The annotation interaction is managed through the following protected override methods:
 
-* **OnTouchMove** – Triggered when moving (dragging) the finger or mouse across the annotation. Calculates the difference between the current and previous touch positions and applies these changes to the annotation’s position properties (`X1`, `Y1`, `X2`, `Y2`). The position is clamped within the chart bounds to prevent moving outside the visible area.
+* **OnTouchDown** – Triggered when touch starts on the annotation.
 
-* **OnTouchUp** – Triggered when touch ends by lifting the finger or releasing the mouse from* **OnTouchUp** – Triggered when touch ends by lifting the finger or releasing the mouse from the annotation. Completes the drag operation and finalizes the annotation’s new position.
+* **OnTouchMove** – Triggered when moving (dragging) the finger or mouse across the annotation. Calculates the difference between current and previous touch positions and applies these changes to the annotation's position properties (`X1`, `Y1`, `X2`, `Y2`).
+
+* **OnTouchUp** – Triggered when touch ends by lifting the finger or releasing the mouse from the annotation. Completes the drag operation and finalizes the annotation's new position.
 
 These methods together provide smooth drag-and-drop repositioning for annotations.
 
