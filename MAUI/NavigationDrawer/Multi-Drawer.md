@@ -40,16 +40,14 @@ Implement the primary drawer using the [DrawerSettings](https://help.syncfusion.
 
 {% highlight c# %}
 
-
-    SfNavigationDrawer navigationDrawer = new SfNavigationDrawer();
-    DrawerSettings drawerSettings = new DrawerSettings();
-    drawerSettings.DrawerWidth = 250;
-    drawerSettings.Transition = Transition.SlideOnTop;
-    drawerSettings.ContentBackground = Colors.LightGray;
-    drawerSettings.Position = Position.Left;
-    navigationDrawer.DrawerSettings = drawerSettings;
-    this.Content = navigationDrawer;
-
+SfNavigationDrawer navigationDrawer = new SfNavigationDrawer();
+DrawerSettings drawerSettings = new DrawerSettings();
+drawerSettings.DrawerWidth = 250;
+drawerSettings.Transition = Transition.SlideOnTop;
+drawerSettings.ContentBackground = Colors.LightGray;
+drawerSettings.Position = Position.Left;
+navigationDrawer.DrawerSettings = drawerSettings;
+this.Content = navigationDrawer;
 
 {% endhighlight %}
 
@@ -73,20 +71,19 @@ Implement the secondary drawer using the [SecondaryDrawerSettings](https://help.
             </navigationDrawer:DrawerSettings>
         </navigationDrawer:SfNavigationDrawer.SecondaryDrawerSettings>
     </navigationDrawer:SfNavigationDrawer>
-               
+
 {% endhighlight %}
 
 {% highlight c# %}
 
-    SfNavigationDrawer navigationDrawer = new SfNavigationDrawer();
-    DrawerSettings secondaryDrawer = new DrawerSettings();
-    secondaryDrawer.Position = Position.Right;
-    secondaryDrawer.Transition = Transition.SlideOnTop;
-    secondaryDrawer.ContentBackground = Colors.Blue;
-    secondaryDrawer.DrawerWidth = 250;
-    navigationDrawer.SecondaryDrawerSettings = secondaryDrawer;
-    this.Content = navigationDrawer;
-  
+SfNavigationDrawer navigationDrawer = new SfNavigationDrawer();
+DrawerSettings secondaryDrawer = new DrawerSettings();
+secondaryDrawer.Position = Position.Right;
+secondaryDrawer.Transition = Transition.SlideOnTop;
+secondaryDrawer.ContentBackground = Colors.Blue;
+secondaryDrawer.DrawerWidth = 250;
+navigationDrawer.SecondaryDrawerSettings = secondaryDrawer;
+this.Content = navigationDrawer;
 {% endhighlight %}
 
 {% endtabs %}
@@ -125,15 +122,12 @@ The following code sample demonstrates how to set [IsOpen](https://help.syncfusi
 
 {% highlight c# %}
 
-    SfNavigationDrawer navigationDrawer = new SfNavigationDrawer();
-    DrawerSettings secondaryDrawer = new DrawerSettings();
-    secondaryDrawer.IsOpen = true;
-    navigationDrawer.SecondaryDrawerSettings = secondaryDrawer;
-    this.Content = navigationDrawer;
+SfNavigationDrawer navigationDrawer = new SfNavigationDrawer();
+DrawerSettings secondaryDrawer = new DrawerSettings();
+secondaryDrawer.IsOpen = true;
+navigationDrawer.SecondaryDrawerSettings = secondaryDrawer;
+this.Content = navigationDrawer;
 
 {% endhighlight %}
 
 {% endtabs %}
-
-
-

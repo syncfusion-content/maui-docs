@@ -219,10 +219,10 @@ You can customize the border of the tab header area in .NET MAUI Tab View using 
 {% endhighlight %}
 
 {% highlight C# %}
- tabView.TabBarPlacement = TabBarPlacement.Bottom;
- tabView.TabBarBorderColor = Color.FromArgb("#7C3AED");
- tabView.TabBarBorderThickness = 2;
- tabView.TabBarCornerRadius = new CornerRadius(24);
+tabView.TabBarPlacement = TabBarPlacement.Bottom;
+tabView.TabBarBorderColor = Color.FromArgb("#7C3AED");
+tabView.TabBarBorderThickness = 2;
+tabView.TabBarCornerRadius = new CornerRadius(24);
 {% endhighlight %}
 
 {% endtabs %}
