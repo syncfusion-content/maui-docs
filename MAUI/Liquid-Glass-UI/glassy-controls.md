@@ -1,13 +1,13 @@
 ---
 layout: post
-title: List of Syncfusion® .NET MAUI controls that support the Liquid Glass visual effect
+title: Syncfusion® .NET MAUI Controls with Liquid Glass Support
 description: Explore the Syncfusion® .NET MAUI controls that seamlessly integrate the Liquid Glass visual effect for stunning UI experiences.
 platform: MAUI
 control: General
 documentation: UG
 ---
 
-# Syncfusion® .NET MAUI Controls with Liquid Glass Support
+# Liquid glass integration with Syncfusion® .NET MAUI controls
 
 The **Liquid Glass visual effect** brings a modern, frosted-glass aesthetic to your .NET MAUI applications, adding depth and elegance to your UI. Syncfusion® controls make it easy to enable and customize this effect, ensuring clarity, accessibility, and smooth performance across platforms.
  
