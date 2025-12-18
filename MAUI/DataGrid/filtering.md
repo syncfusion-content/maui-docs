@@ -195,7 +195,7 @@ The .NET MAUI DataGrid (SfDataGrid) provides excel like filtering UI and also ad
 {% tabs %}
 {% highlight XAML %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}" 
+                       ItemsSource="{Binding Employees}" 
                        AllowFiltering="True"/>
 {% endhighlight %}
 {% highlight c# %}
@@ -208,10 +208,10 @@ We can enable/disable filtering for particular column by setting [DataGridColumn
 {% tabs %}
 {% highlight XAML %}
 <syncfusion:DataGridTextColumn AllowFiltering="True"
-                                MappingName="OrderID"/>
+                                MappingName="EmployeeID"/>
 {% endhighlight %}
 {% highlight c# %}
-dataGrid.Columns["OrderID"].AllowFiltering = true;
+dataGrid.Columns["EmployeeID"].AllowFiltering = true;
 {% endhighlight %}
 {% endtabs %}
 
@@ -278,7 +278,7 @@ SfDataGrid provide the following events to UI filtering.
 {% tabs %}
 {% highlight XAML %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}" 
+                       ItemsSource="{Binding Employees}" 
                        AllowFiltering="True"
                        FilterChaning="dataGrid_FilterChanging"/>
 {% endhighlight %}
@@ -296,7 +296,7 @@ private void dataGrid_FilterChanging(object sender, DataGridFilterChangingEventA
 {% tabs %}
 {% highlight XAML %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}" 
+                       ItemsSource="{Binding Employees}" 
                        AllowFiltering="True"
                        FilterChanged="dataGrid_FilterChanged"/>
 {% endhighlight %}
@@ -314,7 +314,7 @@ When the filter list items in filter view are being populated, the [FilterItemsP
 {% tabs %}
 {% highlight XAML %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}" 
+                       ItemsSource="{Binding Employees}" 
                        AllowFiltering="True"
                        FilterItemsPopulating="dataGrid_FilterItemsPopulating"/>
 {% endhighlight %}
@@ -332,7 +332,7 @@ private void dataGrid_FilterItemsPopulating(object sender, Syncfusion.Maui.DataG
 {% tabs %}
 {% highlight XAML %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}" 
+                       ItemsSource="{Binding Employees}" 
                        AllowFiltering="True"
                        FilterItemsPopulated="dataGrid_FilterItemsPopulated"/>
 {% endhighlight %}
@@ -366,7 +366,7 @@ We can change the filter UI for all the columns in DataGrid by changing the `Fil
 </ContentPage.Resources>
 
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}" 
+                       ItemsSource="{Binding Employees}" 
                        AllowFiltering="True"
                        FilterPopupStyle="{StaticResource filterViewStyle}"/>
 {% endhighlight %}
@@ -386,7 +386,7 @@ Filter UI view can be changed for a particular column in DataGrid by changing th
     </Style>
 </ContentPage.Resources>
 
-<syncfusion:DataGridTextColumn MappingName="OrderID"
+<syncfusion:DataGridTextColumn MappingName="EmployeeID"
                                 FilterPopupStyle="{StaticResource filterViewStyle}"/>
 {% endhighlight %}
 {% endtabs %}
@@ -401,10 +401,10 @@ Filter UI view can be changed for a particular column in DataGrid by changing th
 
 {% tabs %}
 {% highlight XAML %}
-<syncfusion:DataGridTextColumn MappingName="OrderID" FilterBehavior="StringTyped"/>
+<syncfusion:DataGridTextColumn MappingName="EmployeeID" FilterBehavior="StringTyped"/>
 {% endhighlight %}
 {% highlight c# %}
-dataGrid.Columns["OrderID"].FilterBehavior = FilterBehavior.StringTyped;
+dataGrid.Columns["EmployeeID"].FilterBehavior = FilterBehavior.StringTyped;
 {% endhighlight %}
 {% endtabs %}
 
@@ -423,7 +423,7 @@ Setting `FilterMode` to AdvancedFilter and [CanGenerateUniqueItems]() to `false`
 </ContentPage.Resources>
 
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}" 
+                       ItemsSource="{Binding Employees}" 
                        AllowFiltering="True"
                        FilterPopupStyle="{StaticResource filterViewStyle}"/>
 {% endhighlight %}
@@ -438,10 +438,10 @@ When we set `AllowBlankFilters` as `True`, Combobox options have Null and Not Nu
 
 {% tabs %}
 {% highlight XAML %}
-<syncfusion:DataGridTextColumn MappingName="OrderID" AllowBlankFilters="False">
+<syncfusion:DataGridTextColumn MappingName="EmployeeID" AllowBlankFilters="False">
 {% endhighlight %}
 {% highlight c# %}
-dataGrid.Columns["OrderID"].AllowBlankFilters = false;
+dataGrid.Columns["EmployeeID"].AllowBlankFilters = false;
 {% endhighlight %}
 {% endtabs %}
 
@@ -460,10 +460,10 @@ In this, Done button is displayed to close the filter popup instead of OK and Ca
 
 {% tabs %}
 {% highlight XAML %}
-<syncfusion:DataGridTextColumn MappingName="OrderID" ImmediateUpdateColumnFilter="True">
+<syncfusion:DataGridTextColumn MappingName="EmployeeID" ImmediateUpdateColumnFilter="True">
 {% endhighlight %}
 {% highlight c# %}
-dataGrid.Columns["OrderID"].ImmediateUpdateColumnFilter = true;
+dataGrid.Columns["EmployeeID"].ImmediateUpdateColumnFilter = true;
 {% endhighlight %}
 {% endtabs %}
 
@@ -486,7 +486,7 @@ The sort options in the filter popup will be enabled only when we set [SortingMo
 </ContentPage.Resources>
 
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}" 
+                       ItemsSource="{Binding Employees}" 
                        AllowFiltering="True"
                        FilterPopupStyle="{StaticResource filterViewStyle}"/>
 {% endhighlight %}
@@ -527,7 +527,7 @@ You can customize the FilterPopup size using [FilterPopupHeight]() and [FilterPo
 </ContentPage.Resources>
 
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}" 
+                       ItemsSource="{Binding Employees}" 
                        AllowFiltering="True"
                        FilterPopupStyle="{StaticResource filterViewStyle}"/>
 {% endhighlight %}
@@ -543,7 +543,7 @@ The default color of the filter icon can be customized by setting the [DataGridS
 {% highlight XAML %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
                         AllowFiltering="True"
-                        ItemsSource="{Binding OrderInfoCollection}" >
+                        ItemsSource="{Binding Employees}" >
         <syncfusion:SfDataGrid.DefaultStyle>
                 <syncfusion:DataGridStyle FilterIconColor="DarkBlue" />
         </syncfusion:SfDataGrid.DefaultStyle>
@@ -554,11 +554,11 @@ The default color of the filter icon can be customized by setting the [DataGridS
 <img src="Images/filtering/maui-datagrid-filtering-filterIconColor.png" width="500" alt="Filter icon color">
 
 ### Load filter icon through template
-The `SfDataGrid` uses an icon to open the filter popup in UI filtering. You can personalize the filtering icon by using the [SfDataGrid.FilterIconTemplate] property. This property allow you to define a custom template that appears in the column header instead of default filter icon.
+The `SfDataGrid` uses an icon to open the filter popup in UI filtering. You can personalize the filtering icon by using the [SfDataGrid.FilterIconTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FilterIconTemplate) property. This property allow you to define a custom template that appears in the column header instead of default filter icon.
 
 {% tabs %}
 {% highlight XAML %}
-<syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}"
+<syncfusion:SfDataGrid ItemsSource="{Binding Employees}"
                             x:Name="dataGrid"
                             AllowFiltering="True">
         <syncfusion:SfDataGrid.FilterIconTemplate>
