@@ -51,4 +51,4 @@ For detailed usage guidelines, customization options, and code examples, refer t
 * [SfToolbar](https://help.syncfusion.com/maui/toolbar/liquid-glass-effect)
 * [SfTimePicker](https://help.syncfusion.com/maui/timepicker/liquid-glass-effect)
  
-N> View sample in [GitHub](https://github.com/syncfusion/maui-demos).
+N> View sample in [GitHub](https://github.com/syncfusion/maui-demos/tree/master/MAUI/LiquidGlass).
