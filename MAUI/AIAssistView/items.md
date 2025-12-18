@@ -489,17 +489,67 @@ The `SfAIAssistView` allows you to customize specific parts of request and respo
 
 The following views can be customized individually:
 
-- `RequestTextView` – Represents the user request text content.
-- `RequestAssistImageView` – Represents the user request image content.
-- `RequestHyperlinkUrlLabelView` – Represents the user request URL label area.
-- `RequestHyperLinkDetailsViewFrameView` – Represents the user request URL details/preview frame area.
-- `ResponseTextView` – Represents the AI response text content.
-- `ResponseAssistImageView` – Represents the AI response image content.
-- `ResponseHyperlinkUrlLabelView` – Represents the AI response URL label area.
-- `ResponseHyperLinkDetailsViewFrameView` – Represents the AI response URL details/preview frame area.
-- `ResponseCardView` – Represents the container for card-based AI responses.
-- `CardItemView` – Represents a single card item within a response.
-- `CardButtonView` – Represents an action button inside a card item; exposes Title and Value bindable properties
+### Request Views
+
+<table>
+<tr>
+<th> View </th>
+<th> Description </th>
+</tr>
+<tr>
+<td> {{ '[RequestTextView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.RequestTextView.html)'| markdownify }} </td>
+<td> Represents the user request text content. </td>
+</tr>
+<tr>
+<td> {{ '[RequestAssistImageView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.RequestAssistImageView.html)'| markdownify }} </td>
+<td> Represents the user request image content. </td>
+</tr>
+<tr>
+<td> {{ '[RequestHyperlinkUrlLabelView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.RequestHyperlinkUrlLabelView.html)'| markdownify }} </td>
+<td> Represents the user request URL label area. </td>
+</tr>
+<tr>
+<td> {{ '[RequestHyperLinkDetailsViewFrameView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.RequestHyperLinkDetailsViewFrameView.html)'| markdownify }} </td>
+<td> Represents the user request URL details/preview frame area. </td>
+</tr>
+</table>
+
+### Response Views
+
+<table>
+<tr>
+<th> View </th>
+<th> Description </th>
+</tr>
+<tr>
+<td> {{ '[ResponseTextView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ResponseTextView.html)'| markdownify }} </td>
+<td> Represents the AI response text content. </td>
+</tr>
+<tr>
+<td> {{ '[ResponseAssistImageView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ResponseAssistImageView.html)'| markdownify }} </td>
+<td> Represents the AI response image content. </td>
+</tr>
+<tr>
+<td> {{ '[ResponseHyperlinkUrlLabelView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ResponseHyperlinkUrlLabelView.html)'| markdownify }} </td>
+<td> Represents the AI response URL label area. </td>
+</tr>
+<tr>
+<td> {{ '[ResponseHyperLinkDetailsViewFrameView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ResponseHyperLinkDetailsViewFrameView.html)'| markdownify }} </td>
+<td> Represents the AI response URL details/preview frame area. </td>
+</tr>
+<tr>
+<td> {{ '[ResponseCardView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ResponseCardView.html)'| markdownify }} </td>
+<td> Represents the container for card-based AI responses. </td>
+</tr>
+<tr>
+<td> {{ '[CardItemView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.CardItemView.html)'| markdownify }} </td>
+<td> Represents a single card item within a response. </td>
+</tr>
+<tr>
+<td> {{ '[CardButtonView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.CardButtonView.html)'| markdownify }} </td>
+<td> Represents an action button inside a card item; exposes Title and Value bindable properties. </td>
+</tr>
+</table>
 
 {% tabs %}
 {% highlight xaml hl_lines="14 30" %}
