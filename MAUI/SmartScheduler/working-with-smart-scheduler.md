@@ -12,11 +12,11 @@ keywords : .net maui smart scheduler
 
 ## Assist Button
 
-The assist button interaction and the default appearance of assist button can be customized by setting the `EnableAssistButton` and `AssistButtonTemplate` properties of `SfSmartScheduler` control.
+The assist button interaction and the default appearance of assist button can be customized by setting the [EnableAssistButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartScheduler.html#Syncfusion_Maui_SmartComponents_SfSmartScheduler_EnableAssistButton) and [AssistButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartScheduler.html#Syncfusion_Maui_SmartComponents_SfSmartScheduler_AssistButtonTemplate) properties of [SfSmartScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartScheduler.html) control.
 
 ### Enable assist button
 
-The assist button interaction can be enabled or disabled by setting the `EnableAssistButton` property of the `SfSmartScheduler` control. By default, the `EnableAssistButton` property is set to true.
+The assist button interaction can be enabled or disabled by setting the [EnableAssistButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartScheduler.html#Syncfusion_Maui_SmartComponents_SfSmartScheduler_EnableAssistButton) property of the [SfSmartScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartScheduler.html) control. By default, the [EnableAssistButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartScheduler.html#Syncfusion_Maui_SmartComponents_SfSmartScheduler_EnableAssistButton) property is set to true.
 
 {% tabs %}
 {% highlight XAML hl_lines="1" %}
@@ -35,7 +35,7 @@ this.Content = scheduler;
 
 ### Customize assist button appearance using DataTemplate
 
-The assist button appearance can be customized by using the `AssistButtonTemplate` property of `SfSmartScheduler` control.
+The assist button appearance can be customized by using the [AssistButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartScheduler.html#Syncfusion_Maui_SmartComponents_SfSmartScheduler_AssistButtonTemplate) property of [SfSmartScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartScheduler.html) control.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2 3 4 5 6 7 8 9 10 11 12" %}
@@ -86,11 +86,11 @@ this.Content = smartScheduler;
 
 ## Assist View
 
-The default appearance of the assist view can be customized by setting the `AssistViewHeight`, `AssistViewWidth`, `AssistViewHeaderText`, `Placeholder`, `Prompt`, `SuggestedPrompts` and `ShowAssistViewBanner` properties of `SfSmartScheduler` control.
+The default appearance of the assist view can be customized by setting the [AssistViewHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SchedulerAssistViewSettings.html#Syncfusion_Maui_SmartComponents_SchedulerAssistViewSettings_AssistViewHeight), [AssistViewWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SchedulerAssistViewSettings.html#Syncfusion_Maui_SmartComponents_SchedulerAssistViewSettings_AssistViewWidth), [AssistViewHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SchedulerAssistViewSettings.html#Syncfusion_Maui_SmartComponents_SchedulerAssistViewSettings_AssistViewHeaderText), [Placeholder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SchedulerAssistViewSettings.html#Syncfusion_Maui_SmartComponents_SchedulerAssistViewSettings_Placeholder), [Prompt](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SchedulerAssistViewSettings.html#Syncfusion_Maui_SmartComponents_SchedulerAssistViewSettings_Prompt), [SuggestedPrompts](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SchedulerAssistViewSettings.html#Syncfusion_Maui_SmartComponents_SchedulerAssistViewSettings_SuggestedPrompts) and [ShowAssistViewBanner](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SchedulerAssistViewSettings.html#Syncfusion_Maui_SmartComponents_SchedulerAssistViewSettings_ShowAssistViewBanner) properties of [SfSmartScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartScheduler.html) control.
 
 ### Assist view height
 
-The assist view height can be customized by using the `AssistViewHeight` property of the `AssistViewSettings`.
+The assist view height can be customized by using the [AssistViewHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SchedulerAssistViewSettings.html#Syncfusion_Maui_SmartComponents_SchedulerAssistViewSettings_AssistViewHeight) property of the [AssistViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SchedulerAssistViewSettings.html).
 
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
@@ -115,7 +115,7 @@ this.Content = scheduler;
 
 ### Assist view width
 
-The assist view width can be customized by using the `AssistViewWidth` property of the `AssistViewSettings`.
+The assist view width can be customized by using the [AssistViewWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SchedulerAssistViewSettings.html#Syncfusion_Maui_SmartComponents_SchedulerAssistViewSettings_AssistViewWidth) property of the [AssistViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SchedulerAssistViewSettings.html).
 
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
@@ -140,7 +140,7 @@ this.Content = scheduler;
 
 ### Assist view header text
 
-The assist view header text can be customized by using the `AssistViewHeaderText` property of the `AssistViewSettings`.
+The assist view header text can be customized by using the [AssistViewHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SchedulerAssistViewSettings.html#Syncfusion_Maui_SmartComponents_SchedulerAssistViewSettings_AssistViewHeaderText) property of the [AssistViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SchedulerAssistViewSettings.html).
 
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
@@ -165,7 +165,7 @@ this.Content = smartScheduler;
 
 ### Placeholder
 
-The assist view placeholder text can be customized by using the `Placeholder` property of the `AssistViewSettings`.
+The assist view placeholder text can be customized by using the [Placeholder](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SchedulerAssistViewSettings.html#Syncfusion_Maui_SmartComponents_SchedulerAssistViewSettings_Placeholder) property of the [AssistViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SchedulerAssistViewSettings.html).
 
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
@@ -190,7 +190,7 @@ this.Content = smartScheduler;
 
 ### Prompt
 
-The assist view prompt text can be customized by using the `Prompt` property of the `AssistViewSettings`. By default, the `Prompt` property is set to empty.
+The assist view prompt text can be customized by using the [Prompt](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SchedulerAssistViewSettings.html#Syncfusion_Maui_SmartComponents_SchedulerAssistViewSettings_Prompt) property of the [AssistViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SchedulerAssistViewSettings.html). By default, the [Prompt](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SchedulerAssistViewSettings.html#Syncfusion_Maui_SmartComponents_SchedulerAssistViewSettings_Prompt) property is set to empty.
 
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
@@ -215,7 +215,7 @@ this.Content = smartScheduler;
 
 ### Suggested Prompts
 
-The assist view suggested prompts can be customized by using the `SuggestedPrompts` property of the `AssistViewSettings`. By default, the `SuggestedPrompts` property is set to null.
+The assist view suggested prompts can be customized by using the [SuggestedPrompts](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SchedulerAssistViewSettings.html#Syncfusion_Maui_SmartComponents_SchedulerAssistViewSettings_SuggestedPrompts) property of the [AssistViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SchedulerAssistViewSettings.html). By default, the [SuggestedPrompts](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SchedulerAssistViewSettings.html#Syncfusion_Maui_SmartComponents_SchedulerAssistViewSettings_SuggestedPrompts) property is set to null.
 
 {% tabs %}
 {% highlight XAML hl_lines="8" %}
@@ -274,7 +274,7 @@ public class ViewModel
 
 ### Show assist view banner
 
-The assist view banner visibility can be customized by using the `ShowAssistViewBanner` property of the `AssistViewSettings`. By default, the `ShowAssistViewBanner` property is set to false.
+The assist view banner visibility can be customized by using the [ShowAssistViewBanner](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SchedulerAssistViewSettings.html#Syncfusion_Maui_SmartComponents_SchedulerAssistViewSettings_ShowAssistViewBanner) property of the [AssistViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SchedulerAssistViewSettings.html). By default, the [ShowAssistViewBanner](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SchedulerAssistViewSettings.html#Syncfusion_Maui_SmartComponents_SchedulerAssistViewSettings_ShowAssistViewBanner) property is set to false.
 
 {% tabs %}
 {% highlight XAML tabtitle="MainPage.xaml" hl_lines="3" %}
@@ -320,11 +320,11 @@ this.smartScheduler.AssistViewSettings.AssistViewBannerTemplate = new DataTempla
 
 ## Template Customization
 
-The `SfSmartScheduler` facilitates the customization of both header and banner templates according to specific requirements. This feature enhances flexibility and provides a higher degree of control over the display of assist view.
+The [SfSmartScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartScheduler.html) facilitates the customization of both header and banner templates according to specific requirements. This feature enhances flexibility and provides a higher degree of control over the display of assist view.
 
 ### Customize assist view header appearance using DataTemplate
 
-The assist view header appearance can be customized by using the `AssistViewHeaderTemplate` property of the `AssistViewSettings`.
+The assist view header appearance can be customized by using the [AssistViewHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SchedulerAssistViewSettings.html#Syncfusion_Maui_SmartComponents_SchedulerAssistViewSettings_AssistViewHeaderTemplate) property of the [AssistViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SchedulerAssistViewSettings.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -435,7 +435,7 @@ this.Content = smartScheduler;
 
 ### Customize assist view banner appearance using DataTemplate
 
-The assist view banner appearance can be customized by using the `AssistViewBannerTemplate` property of the `AssistViewSettings`.
+The assist view banner appearance can be customized by using the [AssistViewBannerTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SchedulerAssistViewSettings.html#Syncfusion_Maui_SmartComponents_SchedulerAssistViewSettings_AssistViewBannerTemplate) property of the [AssistViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SchedulerAssistViewSettings.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19" %}

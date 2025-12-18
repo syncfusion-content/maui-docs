@@ -337,7 +337,7 @@ public partial class MainPage : ContentPage
 
 ## Action buttons in the editor
 
-The `SfAIAssistView` can display a quick action icon inside the editor. To enable the action button, set the `ShowActionButtons` property to `true`.
+The `SfAIAssistView` can display a quick action icon inside the editor. To enable the action button, set the [ShowActionButtons](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ShowActionButtons) property to `true`.
 
 {% tabs %} 
 {% highlight xaml hl_lines="2" %} 
@@ -368,12 +368,12 @@ public partial class MainPage : ContentPage
 
 ### Displaying action buttons
 
-Bind the `ActionButtons` collection with one or more `ActionButton` items to populate the popup. The `ActionButton` provides the properties. When the `ActionButton` icon is tapped, an action popup appears with the list of configured `ActionButton`.
+Bind the [ActionButtons](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ActionButtons) collection with one or more [ActionButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ActionButton.html) items to populate the popup. The `ActionButton` provides the properties. When the `ActionButton` icon is tapped, an action popup appears with the list of configured `ActionButton`. 
 
-- `Text`: Displays the text for the action button.
-- `Icon`: Displays an icon for the action button.
-- `Command`: Executes a command when the action button is tapped.
-- `CommandParameter`: Passes a parameter to the command when executed.
+- [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ActionButton.html#Syncfusion_Maui_AIAssistView_ActionButton_Text): Displays the text for the action button.
+- [Icon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ActionButton.html#Syncfusion_Maui_AIAssistView_ActionButton_Icon): Displays an icon for the action button.
+- [Command](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ActionButton.html#Syncfusion_Maui_AIAssistView_ActionButton_Command): Executes a command when the action button is tapped.
+- [CommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ActionButton.html#Syncfusion_Maui_AIAssistView_ActionButton_CommandParameter): Passes a parameter to the command when executed.
 
 {% tabs %} 
 {% highlight xaml hl_lines="4 5 6 7" %} 
@@ -434,7 +434,7 @@ public partial class MainPage : ContentPage
 
 ### Request button icon
 
-The `SfAIAssistView` control allows you to customize the request button icon by setting an `ImageSource` to the `RequestButtonIcon` property.
+The `SfAIAssistView` control allows you to customize the request button icon by setting an `ImageSource` to the [RequestButtonIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestButtonIcon) property.
 
 {% tabs %}
 {% highlight xaml hl_lines="3" %}
@@ -998,7 +998,7 @@ public partial class MainPage : ContentPage
 
 ## Scroll to bottom button
 
-The `SfAIAssistView` control provides an option to display a scroll-to-bottom button that helps users quickly navigate back to the latest responses when they have scrolled up in the AI conversation. To enable this, set the `ShowScrollToBottomButton` property to `true`.
+The `SfAIAssistView` control provides an option to display a scroll-to-bottom button that helps users quickly navigate back to the latest responses when they have scrolled up in the AI conversation. To enable this, set the [ShowScrollToBottomButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ShowScrollToBottomButton) property to `true`.
 
 {% tabs %}
 {% highlight xaml hl_lines="3" %}
@@ -1031,7 +1031,7 @@ public partial class MainPage : ContentPage
 
 ### Scroll to bottom button customization
 
-The `SfAIAssistView` control allows you to fully customize the scroll-to-bottom button appearance by using the `ScrollToBottomButtonTemplate` property. This property lets you define a custom layout and style.
+The `SfAIAssistView` control allows you to fully customize the scroll-to-bottom button appearance by using the [ScrollToBottomButtonTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ScrollToBottomButtonTemplate) property. This property lets you define a custom layout and style.
 
 {% tabs %}
 {% highlight xaml hl_lines="12" %}

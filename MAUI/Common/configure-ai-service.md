@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Configure AI Service with AI-Powered Components | Syncfusion®
-description: Learn how to implement a configure AI service with Syncfusion<sup>&reg;</sup> AI-Powered Components.
+title: Configure Chat Client with AI-Powered Components | Syncfusion®
+description: Learn how to implement a configure chat client with Syncfusion<sup>&reg;</sup> AI-Powered Components.
 platform: maui
 control: SmartComponents
 documentation: ug
 ---
 
-# Configure AI Service With Smart Components
+# Configure Chat Client With Smart Components
 
 The Smart Components uses a chat inference service resolved from dependency injection to generate contextual suggestions. Register a compatible chat client and an inference adapter in `MauiProgram.cs`.
 

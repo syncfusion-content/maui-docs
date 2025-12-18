@@ -8,7 +8,7 @@ documentation: ug
 
 # Orientation in .NET MAUI Funnel Chart
 
-The rendering direction of the funnel chart can be changed using the [Orientation]() property. The default value of this property is Vertical, which arranges segments from bottom to top, and it can be set to Horizontal to render segments from right to left.
+The rendering direction of the funnel chart can be changed using the [Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html#Syncfusion_Maui_Charts_SfFunnelChart_Orientation) property. The default value of this property is Vertical, which arranges segments from bottom to top, and it can be set to Horizontal to render segments from right to left.
 
 {% tabs %}
 
