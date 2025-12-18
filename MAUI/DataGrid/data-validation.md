@@ -156,6 +156,74 @@ Enable built-in validation support by setting [SfDataGrid.ValidationMode](https:
 
 <img alt="data-validation-with-INotifyDataErrorInfo" src="Images\data-validation\maui-datagrid-datavalidation-inotifydataerrorinfo.png" width="464" height="396"/>
 
+## Built-in validation using Data Annotation
+
+You can validate the data using **data annotation attributes** by setting 
+[SfDataGrid.ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ValidationMode) or [DataGridColumn.ValidationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_ValidationMode) property to `InEdit` or `InView`.
+
+### Using different annotations
+
+The numeric type like int, double, decimal properties can be validated using [Range attributes](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.rangeattribute?view=net-5.0).
+
+{% tabs %}
+{% highlight c# %}
+private int orderID;
+
+[Range(1001, 1005, ErrorMessage = "OrderID between 1001 and 1005 alone processed")]
+public int OrderID
+{
+    get { return orderID; }
+    set { orderID = value; }
+}
+
+private decimal price;
+
+[Range(typeof(decimal),"12","20")]
+public decimal Price
+{
+    get { return price; }
+    set { price = value; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+The string type property can be validated using [Required](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.requiredattribute?view=net-5.0), [String Length attributes](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.stringlengthattribute?view=net-5.0)
+
+{% tabs %}
+{% highlight c# %}
+private string shippingCity;
+
+[Required]
+public string ShipCity
+{
+    get { return shippingCity; }
+    set { shippingCity = value; }
+}
+
+private string customerName;
+
+[StringLength(17)]
+public string CustomerName
+{
+    get { return customerName; }
+    set { customerName = value; }
+}
+{% endhighlight %}
+{% endtabs %}
+
+The data that has heterogeneous type (combination of number, special character) can be validated using [RegularExpressions](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.dataannotations.regularexpressionattribute?view=net-5.0).
+
+{% tabs %}
+{% highlight c# %}
+[RegularExpressionAttribute(@"^[a-zA-Z]{1,40}$", ErrorMessage="Numbers and special characters not allowed")]
+public string CustomerID
+{
+    get { return customerId; }
+    set { customerId = value; }
+}
+{% endhighlight %}
+{% endtabs %}
+
 ## Cell Validation
 
 A cell can be validated using [CellValidating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellValidating) event when the cell is edited. `CellValidating` event occurs when the edited cells tries to commit the data or lose the focus. DataGrid will not allow user to edit other cells if validation failed.
