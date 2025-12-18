@@ -15,7 +15,7 @@ N>
 * This feature is supported only on `.NET 10` along with `iOS 26` and `macOS 26` .
 
 {% tabs %}
-{% highlight xaml hl_lines="49 52" %}
+{% highlight xaml %}
 
     <Grid>
         <!-- Background to make the glass effect visible while pressing the Tab View  -->
