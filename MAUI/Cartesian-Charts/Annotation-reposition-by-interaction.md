@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Annotation Drag and Reposition in .NET MAUI Cartesian Chart | Syncfusion
-description: Learn how to enable annotation interaction in Syncfusion® .NET MAUI Chart (SfCartesianChart) control to drag and reposition annotations dynamically.
+title: Annotation Drag and Reposition | Syncfusion
+description: Learn how to enable annotation drag and drop interaction in Syncfusion® .NET MAUI Chart (SfCartesianChart) to reposition annotations within the chart area dynamically.
 platform: maui
 control: SfCartesianChart
 documentation: ug
@@ -16,11 +16,11 @@ The .NET MAUI Cartesian Chart enables **dynamic annotation repositioning** throu
 
 The annotation interaction is managed through the following protected override methods:
 
-* **OnTouchDown** – Triggered when touch starts on the annotation.
+* **[OnTouchDown](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAnnotation.html#Syncfusion_Maui_Charts_ChartAnnotation_OnTouchDown_System_Single_System_Single_)** – Triggered when touch starts on the annotation.
 
-* **OnTouchMove** – Triggered when moving (dragging) the finger or mouse across the annotation. Calculates the difference between current and previous touch positions and applies these changes to the annotation's position properties (`X1`, `Y1`, `X2`, `Y2`).
+* **[OnTouchMove](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAnnotation.html#Syncfusion_Maui_Charts_ChartAnnotation_OnTouchMove_System_Single_System_Single_)** – Triggered when moving (dragging) the finger or mouse across the annotation. Calculates the difference between current and previous touch positions and applies these changes to the annotation's position properties (`X1`, `Y1`, `X2`, `Y2`).
 
-* **OnTouchUp** – Triggered when touch ends by lifting the finger or releasing the mouse from the annotation. Completes the drag operation and finalizes the annotation's new position.
+* **[OnTouchUp](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAnnotation.html#Syncfusion_Maui_Charts_ChartAnnotation_OnTouchUp_System_Single_System_Single_)** – Triggered when touch ends by lifting the finger or releasing the mouse from the annotation. Completes the drag operation and finalizes the annotation's new position.
 
 These methods together provide smooth drag-and-drop repositioning for annotations.
 
