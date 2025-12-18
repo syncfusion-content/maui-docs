@@ -386,7 +386,7 @@ The [AssistItemSuggestion.ItemSpacing](https://help.syncfusion.com/cr/maui/Syncf
 
 ### Response item suggestion header
 
-The `SfAIAssistView` control allows you to define the header text for each response suggestion by setting a custom text to the `AssistItem.SuggestionHeaderText` property, ensuring clear identification and context for each suggestion group displayed to users.
+The `SfAIAssistView` control allows you to define the header text for each response suggestion by setting a custom text to the [AssistItem.SuggestionHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_SuggestionHeaderText) property, ensuring clear identification and context for each suggestion group displayed to users.
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="19" %}

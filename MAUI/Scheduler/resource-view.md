@@ -176,7 +176,7 @@ In Mobile platforms, the resource view for the day, week, and work week view whe
 
 ### Customize hamburger icon color
 
-The hamburger icon color can be customized by using the `HamburgerIconColor` property of the [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6).
+The hamburger icon color can be customized by using the [HamburgerIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_HamburgerIconColor) property of the [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6).
 
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
@@ -206,7 +206,7 @@ this.Scheduler.ResourceView.HamburgerIconColor = Colors.Red;
 
 ### Customize drawer resource selection color
 
-The drawer resource selection color can be customized by using the `DrawerResourceSelectionColor` property of the [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6).
+The drawer resource selection color can be customized by using the [DrawerResourceSelectionColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_DrawerResourceSelectionColor) property of the [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6).
 
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
@@ -236,7 +236,7 @@ this.Scheduler.ResourceView.DrawerResourceSelectionColor = Brush.DodgerBlue;
 
 ### Customize drawer background
 
-The drawer background can be customized by using the `DrawerBackground` property of the [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6).
+The drawer background can be customized by using the [DrawerBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_DrawerBackground) property of the [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6).
 
 {% tabs %}
 {% highlight XAML hl_lines="3" %}
@@ -266,7 +266,7 @@ this.Scheduler.ResourceView.DrawerBackground = Brush.LightGoldenrodYellow;
 
 ### Customize adaptive header appearance using DataTemplate
 
-The adaptive header appearance customization can be achieved by using the `AdaptiveHeaderTemplate` property of [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
+The adaptive header appearance customization can be achieved by using the [AdaptiveHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_AdaptiveHeaderTemplate) property of [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -366,12 +366,12 @@ private void OnTapped(object sender, TappedEventArgs e)
 ![customize-adapter-header-template-in-maui-scheduler](images/resource-view/customize-adapter-header-template-in-maui-scheduler.png)
 
 N> 
-* The BindingContext of the `AdaptiveHeaderTemplate` is the `SchedulerAdaptiveResource.`
-* The `ToggleResourceDrawerView` method should be called on the `SchedulerAdaptiveResource` instance obtained from the control’s BindingContext. It toggles the visibility of the drawer resource view. It is used only when the `AdaptiveHeaderTemplate` is applied.
+* The BindingContext of the [AdaptiveHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_AdaptiveHeaderTemplate) is the [SchedulerAdaptiveResource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAdaptiveResource.html).
+* The [ToggleResourceDrawerView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAdaptiveResource.html#Syncfusion_Maui_Scheduler_SchedulerAdaptiveResource_ToggleResourceDrawerView) method should be called on the [SchedulerAdaptiveResource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerAdaptiveResource.html) instance obtained from the control’s BindingContext. It toggles the visibility of the drawer resource view. It is used only when the [AdaptiveHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_AdaptiveHeaderTemplate) is applied.
 
 ### Customize drawer resource appearance using DataTemplate
 
-The drawer resource appearance customization can be achieved by using the `DrawerResourceTemplate` property of [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
+The drawer resource appearance customization can be achieved by using the [DrawerResourceTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_DrawerResourceTemplate) property of [SchedulerResourceView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html?tabs=tabid-13%2Ctabid-6) in the [SfScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -423,7 +423,7 @@ this.scheduler.ResourceView.Resources = Resources;
 
 ![customize-drawer-resource-template-in-maui-scheduler](images/resource-view/customize-drawer-resource-template-in-maui-scheduler.png)
 
-N> The BindingContext of the `DrawerResourceTemplate` is the [SchedulerResource.](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html) and the custom data object can be bound in `DrawerResourceTemplate` by using `SchedulerResource.DataItem` .
+N> The BindingContext of the [DrawerResourceTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_DrawerResourceTemplate) is the [SchedulerResource.](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html) and the custom data object can be bound in [DrawerResourceTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResourceView.html#Syncfusion_Maui_Scheduler_SchedulerResourceView_DrawerResourceTemplate) by using [SchedulerResource.DataItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SchedulerResource.html#Syncfusion_Maui_Scheduler_SchedulerResource_DataItem) .
 
 ## Visible Resource Count
  

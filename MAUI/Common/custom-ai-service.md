@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Custom AI for AI-Powered Text Editor control | Syncfusion®
-description: Learn how to use IChatInferenceService to integrate custom AI services with Syncfusion® .NET MAUI AI-Powered Text Editor (SfSmartTextEditor) control
+title: Custom AI for AI-Powered Components | Syncfusion®
+description: Learn how to use IChatInferenceService to integrate custom AI services with Syncfusion® .NET MAUI AI-Powered Components.
 platform: maui
-control: SfSmartTextEditor
+control: SmartComponents
 documentation: ug
 ---
 
-# Custom AI Service Integration with .NET MAUI Smart Text Editor
+# Custom AI Service Integration with .NET MAUI Smart Components
 
-The Syncfusion .NET MAUI AI-Powered Text Editor can use AI to provide intelligent suggestions while typing. By default, it works with providers like `OpenAI` or `Azure OpenAI` or `Ollama`, but you can also integrate your own AI service using the `IChatInferenceService` interface. This interface ensures smooth communication between the smart text editor and your custom AI logic.
+The Syncfusion .NET MAUI Smart Components can leverage AI to provide intelligent assistance during user interaction. By default, it works with providers like `OpenAI` or `Azure OpenAI` or `Ollama`, but you can also integrate your own AI service using the `IChatInferenceService` interface. This interface ensures smooth communication between the smart components and your custom AI logic.
 
 ## IChatInferenceService Interface
 
-The `IChatInferenceService` interface defines how the Smart Text Editor interacts with an AI service. It sends user input and context messages and expects an AI-generated response.
+The `IChatInferenceService` interface defines how the Smart Components interacts with an AI service. It sends user input and context messages and expects an AI-generated response.
 
 {% tabs %}
 {% highlight xaml tabtitle="C#" %}
@@ -85,10 +85,10 @@ Here are examples of AI services integrated using the `IChatInferenceService` in
 
 | Service | Documentation |
 |---------|---------------|
-| Claude | [Claude Integration](/Common/claude-service) |
-| DeepSeek | [DeepSeek Integration](/Common/deepseek-service) |
-| Groq | [Groq Integration](/Common/groq-service) |
-| Gemini | [Gemini Integration](/Common/gemini-service) |
+| Claude | [Claude Integration](https://help.syncfusion.com/maui/common/claude-service) |
+| DeepSeek | [DeepSeek Integration](https://help.syncfusion.com/maui/common/deepseek-service) |
+| Groq | [Groq Integration](https://help.syncfusion.com/maui/common/groq-service) |
+| Gemini | [Gemini Integration](https://help.syncfusion.com/maui/common/gemini-service) |
 
 ## Troubleshooting
 
