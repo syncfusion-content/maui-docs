@@ -23,8 +23,11 @@ To get start quickly with our .NET MAUI Date Time Picker, you can check the belo
 ## Prerequisites
 
 Before proceeding, ensure the following are set up:
-1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) or later is installed.
-2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later).
+1. Install .NET SDK
+  - [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later must be installed.
+2. Set up a .NET MAUI Environment with Visual Studio. Supported Visual Studio Versions:
+  - Visual Studio 2022: Version 17.13 or later (e.g., 17.14.7) for .NET 9 development.
+  - Visual Studio 2026: Required for .NET 10 development.
 
 ## Step 1: Create a New .NET MAUI Project
 
@@ -111,7 +114,7 @@ public partial class MainPage : ContentPage
 
 Before proceeding, ensure the following are set up:
 
-1. Install [.NET 7 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) 
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) 
 2. Set up a .NET MAUI environment Visual Studio Code.
 3. Ensure that the .NET MAUI workload is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
 
@@ -204,7 +207,7 @@ public partial class MainPage : ContentPage
 Before proceeding, ensure the following are set up:
 
 1. Ensure you have the latest version of JetBrains Rider.
-2. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
+2. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later is installed.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
 ## Step 1: Create a new .NET MAUI Project
