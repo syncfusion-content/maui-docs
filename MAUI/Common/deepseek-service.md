@@ -24,7 +24,7 @@ This service manages requests to the `DeepSeek` Chat Completions endpoint and re
 
 1. Create a `Services` folder in your project.
 2. Add a new file named `DeepSeekAIService.cs` in the `Services` folder.
-3. Implement the service as shown below, storing the API key securely in a configuration file or environment variable (e.g., `appsettings.json`).
+3. Implement the service as shown below:
 
 {% tabs %}
 {% highlight c# tabtitle="DeepSeekAIService.cs" %}
@@ -37,7 +37,7 @@ using System.Text.Json;
 
 public class DeepSeekAIService
 {
-    private readonly string _apiKey;
+    private readonly string _apiKey = ""; // API key
     private readonly string _modelName = "deepseek-chat"; // Example model
     private readonly string _endpoint = "https://api.deepseek.com/v1/chat/completions";
     private static readonly HttpClient HttpClient = new(new SocketsHttpHandler
@@ -55,7 +55,6 @@ public class DeepSeekAIService
 
     public DeepSeekAIService(IConfiguration configuration)
     {
-        _apiKey = configuration["DeepSeek:ApiKey"] ?? throw new ArgumentNullException("DeepSeek API key is missing.");
         if (!HttpClient.DefaultRequestHeaders.Contains("Authorization"))
         {
             HttpClient.DefaultRequestHeaders.Clear();
@@ -95,8 +94,6 @@ public class DeepSeekAIService
 
 {% endhighlight %}
 {% endtabs %}
-
-N> Store the DeepSeek API key in `appsettings.json` (e.g., `{ "DeepSeek": { "ApiKey": "your-api-key" } }`) or as an environment variable to ensure security.
 
 ## Define Request and Response Models
 

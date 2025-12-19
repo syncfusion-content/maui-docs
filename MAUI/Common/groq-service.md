@@ -26,7 +26,7 @@ This service calls Groq’s Chat Completions endpoint and returns the first assi
 
 1. Create a `Services` folder in your project.
 2. Add a new file named `GroqService.cs` in the `Services` folder.
-3. Implement the service as shown below, storing the API key securely in a configuration file or environment variable (e.g., `appsettings.json` or environment variables).
+3. Implement the service as shown below.
 
 {% tabs %}
 {% highlight c# tabtitle="GroqService.cs" %}
@@ -58,7 +58,6 @@ public class GroqService
 
     public GroqService(IConfiguration configuration)
     {
-        _apiKey = configuration["Groq:ApiKey"] ?? throw new ArgumentNullException("Groq API key is missing.");
         if (!HttpClient.DefaultRequestHeaders.Contains("Authorization"))
         {
             HttpClient.DefaultRequestHeaders.Clear();
@@ -98,8 +97,6 @@ public class GroqService
 
 {% endhighlight %}
 {% endtabs %}
-
-N> Store the Groq API key in `appsettings.json` (e.g., `{ "Groq": { "ApiKey": "your-api-key" } }`) or as an environment variable to ensure security.
 
 ## Define Request and Response Models
 

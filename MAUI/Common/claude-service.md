@@ -26,7 +26,7 @@ This service handles communication with the Claude API, including authentication
 
 1. Create a `Services` folder in your project.
 2. Add a new file named `ClaudeAIService.cs` in the `Services` folder.
-3. Implement the service as shown below, storing the API key securely in a configuration file or environment variable (e.g., `appsettings.json`).
+3. Implement the service as shown below:
 
 {% tabs %}
 {% highlight c# tabtitle="ClaudeAIService.cs" %}
@@ -38,7 +38,7 @@ using Microsoft.Extensions.AI;
 
 public class ClaudeAIService
 {
-    private readonly string _apiKey;
+    private readonly string _apiKey = ""; // API key
     private readonly string _modelName = "claude-3-5-sonnet-20241022"; // Example model
     private readonly string _endpoint = "https://api.anthropic.com/v1/messages";
     private static readonly HttpClient HttpClient = new(new SocketsHttpHandler
@@ -56,7 +56,6 @@ public class ClaudeAIService
 
     public ClaudeAIService(IConfiguration configuration)
     {
-        _apiKey = configuration["Claude:ApiKey"] ?? throw new ArgumentNullException("Claude API key is missing.");
         if (!HttpClient.DefaultRequestHeaders.Contains("x-api-key"))
         {
             HttpClient.DefaultRequestHeaders.Clear();
@@ -98,8 +97,6 @@ public class ClaudeAIService
 
 {% endhighlight %}
 {% endtabs %}
-
-N> Store the Claude API key in `appsettings.json` (e.g., `{ "Claude": { "ApiKey": "your-api-key" } }`) or as an environment variable to ensure security. Verify the `anthropic-version` header in [Claude API Documentation](https://docs.anthropic.com/claude/docs) for the latest version.
 
 ## Define Request and Response Models
 
