@@ -81,7 +81,7 @@ builder.Services.AddSingleton<IChatInferenceService, MockAIService>();
 
 ## Implemented AI Services
 
-Here are examples of AI services integrated using the `IChatInferenceService` interface:
+Here are examples of AI services integrated using the `IChatInferenceService` interface. These are only examples; you can use `IChatInferenceService` to create your own service.
 
 | Service | Documentation |
 |---------|---------------|

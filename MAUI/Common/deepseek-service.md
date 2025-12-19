@@ -18,13 +18,46 @@ The Syncfusion .NET MAUI AI-powered components can enhance applications with int
 2. **Review Model Specifications**  
    Refer to [DeepSeek Models Documentation](https://api-docs.deepseek.com/quick_start/pricing) for details on available models (e.g., `deepseek-chat`).
 
+## Define Request and Response Models
+
+Create a file named `DeepSeekModels.cs` in the Services folder and add:
+
+{% tabs %}
+{% highlight c# tabtitle="DeepSeekModels.cs" %}
+
+public class DeepSeekMessage
+{
+    public string? Role { get; set; }
+    public string? Content { get; set; }
+}
+
+public class DeepSeekChatRequest
+{
+    public string? Model { get; set; }
+    public float Temperature { get; set; }
+    public List<DeepSeekMessage>? Messages { get; set; }
+}
+
+public class DeepSeekChatResponse
+{
+    public List<DeepSeekChoice>? Choices { get; set; }
+}
+
+public class DeepSeekChoice
+{
+    public DeepSeekMessage? Message { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Create a DeepSeek AI Service
 
 This service manages requests to the `DeepSeek` Chat Completions endpoint and returns the generated text.
 
 1. Create a `Services` folder in your project.
 2. Add a new file named `DeepSeekAIService.cs` in the `Services` folder.
-3. Implement the service as shown below, storing the API key securely in a configuration file or environment variable (e.g., `appsettings.json`).
+3. Implement the service as shown below:
 
 {% tabs %}
 {% highlight c# tabtitle="DeepSeekAIService.cs" %}
@@ -37,7 +70,7 @@ using System.Text.Json;
 
 public class DeepSeekAIService
 {
-    private readonly string _apiKey;
+    private readonly string _apiKey = ""; // API key
     private readonly string _modelName = "deepseek-chat"; // Example model
     private readonly string _endpoint = "https://api.deepseek.com/v1/chat/completions";
     private static readonly HttpClient HttpClient = new(new SocketsHttpHandler
@@ -53,9 +86,8 @@ public class DeepSeekAIService
         PropertyNamingPolicy = JsonNamingPolicy.CamelCase
     };
 
-    public DeepSeekAIService(IConfiguration configuration)
+    public DeepSeekAIService()
     {
-        _apiKey = configuration["DeepSeek:ApiKey"] ?? throw new ArgumentNullException("DeepSeek API key is missing.");
         if (!HttpClient.DefaultRequestHeaders.Contains("Authorization"))
         {
             HttpClient.DefaultRequestHeaders.Clear();
@@ -91,41 +123,6 @@ public class DeepSeekAIService
             throw new InvalidOperationException("Failed to communicate with DeepSeek API.", ex);
         }
     }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-N> Store the DeepSeek API key in `appsettings.json` (e.g., `{ "DeepSeek": { "ApiKey": "your-api-key" } }`) or as an environment variable to ensure security.
-
-## Define Request and Response Models
-
-Create a file named `DeepSeekModels.cs` in the Services folder and add:
-
-{% tabs %}
-{% highlight c# tabtitle="DeepSeekModels.cs" %}
-
-public class DeepSeekMessage
-{
-    public string? Role { get; set; }
-    public string? Content { get; set; }
-}
-
-public class DeepSeekChatRequest
-{
-    public string? Model { get; set; }
-    public float Temperature { get; set; }
-    public List<DeepSeekMessage>? Messages { get; set; }
-}
-
-public class DeepSeekChatResponse
-{
-    public List<DeepSeekChoice>? Choices { get; set; }
-}
-
-public class DeepSeekChoice
-{
-    public DeepSeekMessage? Message { get; set; }
 }
 
 {% endhighlight %}

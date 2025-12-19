@@ -1,6 +1,6 @@
 ---
 layout: post
-title: About .NET MAUI Shimmer control | Syncfusion
+title: Custom View for .NET MAUI Shimmer control | Syncfusion
 description: Learn here all about the custom view support in Syncfusion .NET MAUI Shimmer (SfShimmer) control and more.
 platform: maui
 control: SfShimmer

@@ -20,13 +20,47 @@ The Syncfusion .NET MAUI AI-powered components can enhance applications with int
 3. **Choose a Model**  
    Refer to [Groq Models Documentation](https://console.groq.com/docs/models) for details on available models (e.g., `llama3-8b-8192`).
 
+## Define Request and Response Models
+
+Create a file named `GroqModels.cs` in the Services folder and add:
+
+{% tabs %}
+{% highlight c# tabtitle="GroqModels.cs" %}
+
+public class Choice
+{
+    public Message? Message { get; set; }
+}
+
+public class Message
+{
+    public string? Role { get; set; }
+    public string? Content { get; set; }
+}
+
+public class GroqChatParameters
+{
+    public string? Model { get; set; }
+    public List<Message>? Messages { get; set; }
+    public List<string>? Stop { get; set; }
+}
+
+public class GroqResponseObject
+{
+    public string? Model { get; set; }
+    public List<Choice>? Choices { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Create a Groq AI Service
 
 This service calls Groq’s Chat Completions endpoint and returns the first assistant message. It keeps your code simple and OpenAI‑compatible.
 
 1. Create a `Services` folder in your project.
 2. Add a new file named `GroqService.cs` in the `Services` folder.
-3. Implement the service as shown below, storing the API key securely in a configuration file or environment variable (e.g., `appsettings.json` or environment variables).
+3. Implement the service as shown below.
 
 {% tabs %}
 {% highlight c# tabtitle="GroqService.cs" %}
@@ -56,9 +90,8 @@ public class GroqService
         PropertyNamingPolicy = JsonNamingPolicy.CamelCase
     };
 
-    public GroqService(IConfiguration configuration)
+    public GroqService()
     {
-        _apiKey = configuration["Groq:ApiKey"] ?? throw new ArgumentNullException("Groq API key is missing.");
         if (!HttpClient.DefaultRequestHeaders.Contains("Authorization"))
         {
             HttpClient.DefaultRequestHeaders.Clear();
@@ -94,42 +127,6 @@ public class GroqService
             throw new InvalidOperationException("Failed to communicate with Groq API.", ex);
         }
     }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-N> Store the Groq API key in `appsettings.json` (e.g., `{ "Groq": { "ApiKey": "your-api-key" } }`) or as an environment variable to ensure security.
-
-## Define Request and Response Models
-
-Create a file named `GroqModels.cs` in the Services folder and add:
-
-{% tabs %}
-{% highlight c# tabtitle="GroqModels.cs" %}
-
-public class Choice
-{
-    public Message? Message { get; set; }
-}
-
-public class Message
-{
-    public string? Role { get; set; }
-    public string? Content { get; set; }
-}
-
-public class GroqChatParameters
-{
-    public string? Model { get; set; }
-    public List<Message>? Messages { get; set; }
-    public List<string>? Stop { get; set; }
-}
-
-public class GroqResponseObject
-{
-    public string? Model { get; set; }
-    public List<Choice>? Choices { get; set; }
 }
 
 {% endhighlight %}
