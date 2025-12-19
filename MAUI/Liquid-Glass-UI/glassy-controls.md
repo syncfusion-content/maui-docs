@@ -12,13 +12,15 @@ documentation: UG
 The **Liquid Glass visual effect** brings a modern, frosted-glass aesthetic to your .NET MAUI applications, adding depth and elegance to your UI. Syncfusion® controls make it easy to enable and customize this effect, ensuring clarity, accessibility, and smooth performance across platforms.
  
 For detailed usage guidelines, customization options, and code examples, refer to the documentation for each control:
- 
+
+* [SfAIAssistView](https://help.syncfusion.com/maui/aiassistview/liquid-glass-effect)
 * [SfAutocomplete](https://help.syncfusion.com/maui/autocomplete/liquidglasssupport)
 * [SfBackdropPage](https://help.syncfusion.com/maui/backdrop/liquid-glass-effect)
 * [SfButton](https://help.syncfusion.com/maui/button/liquidglasssupport)
 * [SfCards](https://help.syncfusion.com/maui/cards/liquid-glass-effect)
 * [SfCalendar](https://help.syncfusion.com/maui/calendar/liquid-glass-effect)
 * [SfCartesianChart](https://help.syncfusion.com/maui/cartesian-charts/liquid-glass-effect)
+* [SfChat](https://help.syncfusion.com/maui/chat/liquid-glass-effect)
 * [SfChips](https://help.syncfusion.com/maui/chips/liquidglasssupport)
 * [SfCircularChart](https://help.syncfusion.com/maui/circular-charts/liquid-glass-effect)
 * [SfColorPicker](https://help.syncfusion.com/maui/colorpicker/liquidglasssupport)
@@ -32,11 +34,13 @@ For detailed usage guidelines, customization options, and code examples, refer t
 * [SfImageEditor](https://help.syncfusion.com/maui/imageeditor/liquid-glass-effect)
 * [SfKanban](https://help.syncfusion.com/maui/kanban-board/liquid-glass-effect)
 * [SfLinearProgressBar](https://help.syncfusion.com/maui/linearprogressbar/liquid-glass-effect)
+* [SfListView](https://help.syncfusion.com/maui/listview/liquid-glass-effect)
 * [SfMaskedEntry](https://help.syncfusion.com/maui/masked-entry/liquidglasssupport)
 * [SfNavigationDrawer](https://help.syncfusion.com/maui/navigationdrawer/liquidglasssupport)
 * [SfNumericEntry](https://help.syncfusion.com/maui/numericentry/liquidglasssupport)
 * [SfPicker](https://help.syncfusion.com/maui/picker/liquid-glass-effect)
 * [SfPolarChart](https://help.syncfusion.com/maui/polar-charts/liquid-glass-effect)
+* [SfPopup](https://help.syncfusion.com/maui/popup/liquid-glass-effect)
 * [SfPyramidChart](https://help.syncfusion.com/maui/pyramid-charts/liquid-glass-effect)
 * [SfRadialMenu](https://help.syncfusion.com/maui/radial-menu/liquidglasssupport)
 * [SfRangeSelector](https://help.syncfusion.com/maui/range-selector/liquidglasssupport)
@@ -50,5 +54,6 @@ For detailed usage guidelines, customization options, and code examples, refer t
 * [SfTabView](https://help.syncfusion.com/maui/tabview/liquidglasssupport)
 * [SfToolbar](https://help.syncfusion.com/maui/toolbar/liquid-glass-effect)
 * [SfTimePicker](https://help.syncfusion.com/maui/timepicker/liquid-glass-effect)
+* [SfTreeView](https://help.syncfusion.com/maui/treeview/liquid-glass-effect)
  
 N> View sample in [GitHub](https://github.com/syncfusion/maui-demos/tree/master/MAUI/LiquidGlass).
