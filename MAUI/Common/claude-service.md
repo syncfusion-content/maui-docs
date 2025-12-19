@@ -20,13 +20,47 @@ The Syncfusion .NET MAUI AI-powered components can enhance applications with int
 3. **Review Model Specifications**  
    Refer to [Claude Models Documentation](https://docs.anthropic.com/claude/docs/models-overview) for details on available models.
 
+## Define Request and Response Models
+
+Create a file named `ClaudeModels.cs` in the Services folder and add:
+
+{% tabs %}
+{% highlight c# tabtitle="ClaudeModels.cs" %}
+
+public class ClaudeChatRequest
+{
+    public string? Model { get; set; }
+    public int Max_tokens { get; set; }
+    public List<ClaudeMessage>? Messages { get; set; }
+    public List<string>? Stop_sequences  { get; set; }
+}
+
+public class ClaudeMessage
+{
+    public string? Role { get; set; }
+    public string? Content { get; set; }
+}
+
+public class ClaudeChatResponse
+{
+    public List<ClaudeContentBlock>? Content { get; set; }
+}
+
+public class ClaudeContentBlock
+{
+    public string? Text { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Create a Claude AI Service
 
 This service handles communication with the Claude API, including authentication and response parsing.
 
 1. Create a `Services` folder in your project.
 2. Add a new file named `ClaudeAIService.cs` in the `Services` folder.
-3. Implement the service as shown below, storing the API key securely in a configuration file or environment variable (e.g., `appsettings.json`).
+3. Implement the service as shown below:
 
 {% tabs %}
 {% highlight c# tabtitle="ClaudeAIService.cs" %}
@@ -38,7 +72,7 @@ using Microsoft.Extensions.AI;
 
 public class ClaudeAIService
 {
-    private readonly string _apiKey;
+    private readonly string _apiKey = ""; // API key
     private readonly string _modelName = "claude-3-5-sonnet-20241022"; // Example model
     private readonly string _endpoint = "https://api.anthropic.com/v1/messages";
     private static readonly HttpClient HttpClient = new(new SocketsHttpHandler
@@ -54,9 +88,8 @@ public class ClaudeAIService
         PropertyNamingPolicy = JsonNamingPolicy.CamelCase
     };
 
-    public ClaudeAIService(IConfiguration configuration)
+    public ClaudeAIService()
     {
-        _apiKey = configuration["Claude:ApiKey"] ?? throw new ArgumentNullException("Claude API key is missing.");
         if (!HttpClient.DefaultRequestHeaders.Contains("x-api-key"))
         {
             HttpClient.DefaultRequestHeaders.Clear();
@@ -94,42 +127,6 @@ public class ClaudeAIService
             throw new InvalidOperationException("Failed to communicate with Claude API.", ex);
         }
     }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-N> Store the Claude API key in `appsettings.json` (e.g., `{ "Claude": { "ApiKey": "your-api-key" } }`) or as an environment variable to ensure security. Verify the `anthropic-version` header in [Claude API Documentation](https://docs.anthropic.com/claude/docs) for the latest version.
-
-## Define Request and Response Models
-
-Create a file named `ClaudeModels.cs` in the Services folder and add:
-
-{% tabs %}
-{% highlight c# tabtitle="ClaudeModels.cs" %}
-
-public class ClaudeChatRequest
-{
-    public string? Model { get; set; }
-    public int Max_tokens { get; set; }
-    public List<ClaudeMessage>? Messages { get; set; }
-    public List<string>? Stop_sequences  { get; set; }
-}
-
-public class ClaudeMessage
-{
-    public string? Role { get; set; }
-    public string? Content { get; set; }
-}
-
-public class ClaudeChatResponse
-{
-    public List<ClaudeContentBlock>? Content { get; set; }
-}
-
-public class ClaudeContentBlock
-{
-    public string? Text { get; set; }
 }
 
 {% endhighlight %}
