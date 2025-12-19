@@ -20,6 +20,40 @@ The Syncfusion .NET MAUI AI-powered components can enhance applications with int
 3. **Review Model Specifications**  
    Refer to [Claude Models Documentation](https://docs.anthropic.com/claude/docs/models-overview) for details on available models.
 
+## Define Request and Response Models
+
+Create a file named `ClaudeModels.cs` in the Services folder and add:
+
+{% tabs %}
+{% highlight c# tabtitle="ClaudeModels.cs" %}
+
+public class ClaudeChatRequest
+{
+    public string? Model { get; set; }
+    public int Max_tokens { get; set; }
+    public List<ClaudeMessage>? Messages { get; set; }
+    public List<string>? Stop_sequences  { get; set; }
+}
+
+public class ClaudeMessage
+{
+    public string? Role { get; set; }
+    public string? Content { get; set; }
+}
+
+public class ClaudeChatResponse
+{
+    public List<ClaudeContentBlock>? Content { get; set; }
+}
+
+public class ClaudeContentBlock
+{
+    public string? Text { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Create a Claude AI Service
 
 This service handles communication with the Claude API, including authentication and response parsing.
@@ -54,7 +88,7 @@ public class ClaudeAIService
         PropertyNamingPolicy = JsonNamingPolicy.CamelCase
     };
 
-    public ClaudeAIService(IConfiguration configuration)
+    public ClaudeAIService()
     {
         if (!HttpClient.DefaultRequestHeaders.Contains("x-api-key"))
         {
@@ -93,40 +127,6 @@ public class ClaudeAIService
             throw new InvalidOperationException("Failed to communicate with Claude API.", ex);
         }
     }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Define Request and Response Models
-
-Create a file named `ClaudeModels.cs` in the Services folder and add:
-
-{% tabs %}
-{% highlight c# tabtitle="ClaudeModels.cs" %}
-
-public class ClaudeChatRequest
-{
-    public string? Model { get; set; }
-    public int Max_tokens { get; set; }
-    public List<ClaudeMessage>? Messages { get; set; }
-    public List<string>? Stop_sequences  { get; set; }
-}
-
-public class ClaudeMessage
-{
-    public string? Role { get; set; }
-    public string? Content { get; set; }
-}
-
-public class ClaudeChatResponse
-{
-    public List<ClaudeContentBlock>? Content { get; set; }
-}
-
-public class ClaudeContentBlock
-{
-    public string? Text { get; set; }
 }
 
 {% endhighlight %}

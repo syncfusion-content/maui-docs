@@ -113,7 +113,10 @@ namespace GettingStarted
 
 {% endhighlight %}
 
-N> You can refer [Configure AI Service](https://help.syncfusion.com/maui/common/configure-ai-service) for `Azure`, `OpenAI`, `Ollama` service.
+N>
+- You can refer to [Configure Chat Client](https://help.syncfusion.com/maui/common/configure-ai-service) for services like `Azure`, `OpenAI`, and `Ollama`.
+- You can also refer to the [Custom AI Service](https://help.syncfusion.com/maui/common/custom-ai-service) section to configure your own services, such as `Claude`, `Gemini`, `DeepSeek`, `Groq`, etc.
+- If you are using a custom AI service, there is no need to register `ConfigureSyncfusionAIServices()` in `MauiProgram`.
 
 ## Step 5: Add .NET MAUI Smart Text Editor control
 
@@ -247,7 +250,10 @@ namespace GettingStarted
 }
 {% endhighlight %}
 
-N> You can refer [Configure AI Service](https://help.syncfusion.com/maui/common/configure-ai-service) for `Azure`, `OpenAI`, `Ollama` service.
+N>
+- You can refer to [Configure Chat Client](https://help.syncfusion.com/maui/common/configure-ai-service) for services like `Azure`, `OpenAI`, and `Ollama`.
+- You can also refer to the [Custom AI Service](https://help.syncfusion.com/maui/common/custom-ai-service) section to configure your own services, such as `Claude`, `Gemini`, `DeepSeek`, `Groq`, etc.
+- If you are using a custom AI service, there is no need to register `ConfigureSyncfusionAIServices()` in `MauiProgram`.
 
 ## Step 5: Add .NET MAUI Smart Text Editor control
 
@@ -382,7 +388,10 @@ namespace GettingStarted
 }
 {% endhighlight %}
 
-N> You can refer [Configure AI Service](https://help.syncfusion.com/maui/common/configure-ai-service) for `Azure`, `OpenAI`, `Ollama` service.
+N>
+- You can refer to [Configure Chat Client](https://help.syncfusion.com/maui/common/configure-ai-service) for services like `Azure`, `OpenAI`, and `Ollama`.
+- You can also refer to the [Custom AI Service](https://help.syncfusion.com/maui/common/custom-ai-service) section to configure your own services, such as `Claude`, `Gemini`, `DeepSeek`, `Groq`, etc.
+- If you are using a custom AI service, there is no need to register `ConfigureSyncfusionAIServices()` in `MauiProgram`.
 
 ## Step 5: Add .NET MAUI Smart Text Editor control
 

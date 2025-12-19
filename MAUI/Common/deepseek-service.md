@@ -18,6 +18,39 @@ The Syncfusion .NET MAUI AI-powered components can enhance applications with int
 2. **Review Model Specifications**  
    Refer to [DeepSeek Models Documentation](https://api-docs.deepseek.com/quick_start/pricing) for details on available models (e.g., `deepseek-chat`).
 
+## Define Request and Response Models
+
+Create a file named `DeepSeekModels.cs` in the Services folder and add:
+
+{% tabs %}
+{% highlight c# tabtitle="DeepSeekModels.cs" %}
+
+public class DeepSeekMessage
+{
+    public string? Role { get; set; }
+    public string? Content { get; set; }
+}
+
+public class DeepSeekChatRequest
+{
+    public string? Model { get; set; }
+    public float Temperature { get; set; }
+    public List<DeepSeekMessage>? Messages { get; set; }
+}
+
+public class DeepSeekChatResponse
+{
+    public List<DeepSeekChoice>? Choices { get; set; }
+}
+
+public class DeepSeekChoice
+{
+    public DeepSeekMessage? Message { get; set; }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Create a DeepSeek AI Service
 
 This service manages requests to the `DeepSeek` Chat Completions endpoint and returns the generated text.
@@ -53,7 +86,7 @@ public class DeepSeekAIService
         PropertyNamingPolicy = JsonNamingPolicy.CamelCase
     };
 
-    public DeepSeekAIService(IConfiguration configuration)
+    public DeepSeekAIService()
     {
         if (!HttpClient.DefaultRequestHeaders.Contains("Authorization"))
         {
@@ -90,39 +123,6 @@ public class DeepSeekAIService
             throw new InvalidOperationException("Failed to communicate with DeepSeek API.", ex);
         }
     }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-## Define Request and Response Models
-
-Create a file named `DeepSeekModels.cs` in the Services folder and add:
-
-{% tabs %}
-{% highlight c# tabtitle="DeepSeekModels.cs" %}
-
-public class DeepSeekMessage
-{
-    public string? Role { get; set; }
-    public string? Content { get; set; }
-}
-
-public class DeepSeekChatRequest
-{
-    public string? Model { get; set; }
-    public float Temperature { get; set; }
-    public List<DeepSeekMessage>? Messages { get; set; }
-}
-
-public class DeepSeekChatResponse
-{
-    public List<DeepSeekChoice>? Choices { get; set; }
-}
-
-public class DeepSeekChoice
-{
-    public DeepSeekMessage? Message { get; set; }
 }
 
 {% endhighlight %}

@@ -18,6 +18,52 @@ The Syncfusion .NET MAUI AI-powered components can enhance applications with int
 2. **Review Model Details**  
    Refer to [Gemini Models Documentation](https://ai.google.dev/gemini-api/docs/models) for details on available models.
 
+## Define Request and Response Models
+
+Create a file named `GeminiModels.cs` in the Services folder and add:
+
+{% tabs %}
+{% highlight c# tabtitle="GeminiModels.cs" %}
+
+
+public class Part { public string Text { get; set; } }
+public class Content { public Part[] Parts { get; init; } = Array.Empty<Part>(); }
+public class Candidate { public Content Content { get; init; } = new(); }
+public class GeminiResponseObject { public Candidate[] Candidates { get; init; } = Array.Empty<Candidate>(); }
+
+public class ResponseContent
+{
+    public List<Part> Parts { get; init; }
+    public string Role { get; init; }
+    public ResponseContent(string text, string role)
+    {
+        Parts = new List<Part> { new Part { Text = text } };
+        Role = role;
+    }
+}
+
+public class GenerationConfig
+{
+    public int MaxOutputTokens { get; init; } = 2048;
+    public List<string> StopSequences { get; init; } = new();
+}
+
+public class SafetySetting
+{
+    public string Category { get; init; } = string.Empty;
+    public string Threshold { get; init; } = string.Empty;
+}
+
+public class GeminiChatParameters
+{
+    public List<ResponseContent> Contents { get; init; } = new();
+    public GenerationConfig GenerationConfig { get; init; } = new();
+    public List<SafetySetting> SafetySettings { get; init; } = new();
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Create a Gemini AI Service
 
 Create a service class to handle `Gemini API` calls, including authentication, request/response handling, and safety settings.
@@ -53,7 +99,7 @@ public class GeminiService
         PropertyNamingPolicy = JsonNamingPolicy.CamelCase
     };
 
-    public GeminiService(IConfiguration configuration)
+    public GeminiService()
     {
         HttpClient.DefaultRequestHeaders.Clear();
         HttpClient.DefaultRequestHeaders.Add("x-goog-api-key", _apiKey);
@@ -100,54 +146,6 @@ public class GeminiService
         }
         };
     }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-N> Store the Gemini API key securely in appsettings.json or as an environment variable.
-
-## Define Request and Response Models
-
-Create a file named `GeminiModels.cs` in the Services folder and add:
-
-{% tabs %}
-{% highlight c# tabtitle="GeminiModels.cs" %}
-
-
-public class Part { public string Text { get; set; } }
-public class Content { public Part[] Parts { get; init; } = Array.Empty<Part>(); }
-public class Candidate { public Content Content { get; init; } = new(); }
-public class GeminiResponseObject { public Candidate[] Candidates { get; init; } = Array.Empty<Candidate>(); }
-
-public class ResponseContent
-{
-    public List<Part> Parts { get; init; }
-    public string Role { get; init; }
-    public ResponseContent(string text, string role)
-    {
-        Parts = new List<Part> { new Part { Text = text } };
-        Role = role;
-    }
-}
-
-public class GenerationConfig
-{
-    public int MaxOutputTokens { get; init; } = 2048;
-    public List<string> StopSequences { get; init; } = new();
-}
-
-public class SafetySetting
-{
-    public string Category { get; init; } = string.Empty;
-    public string Threshold { get; init; } = string.Empty;
-}
-
-public class GeminiChatParameters
-{
-    public List<ResponseContent> Contents { get; init; } = new();
-    public GenerationConfig GenerationConfig { get; init; } = new();
-    public List<SafetySetting> SafetySettings { get; init; } = new();
 }
 
 {% endhighlight %}
