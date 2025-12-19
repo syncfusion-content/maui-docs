@@ -383,36 +383,46 @@ this.dataGrid.Columns.RemoveAt(1);
 {% endhighlight %}
 {% endtabs %}
 
-## Column Chooser
+##Column Chooser
 
-SfDataGrid allows you show or hide columns at runtime by selecting or deselecting them through the Column Chooser. You can enable this feature by setting the [SfDataGrid.ShowColumnChooser](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ShowColumnChooser) property.
+SfDataGrid allows you show or hide columns at runtime by selecting or deselecting them through the Column Chooser. You can enable this feature by setting the `SfDataGrid.ShowColumnChooser` property.
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrdersInfo}"
-                       ShowColumnChooser="True">
-</syncfusion:SfDataGrid>
+
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding OrdersInfo}"
+                           ShowColumnChooser="True">
+    </syncfusion:SfDataGrid>
+
 {% endhighlight %}
+
 {% highlight c# %}
+
 dataGrid.ShowColumnChooser = true;
+
 {% endhighlight %}
 {% endtabs %}
 
-### Column Chooser Header Text
+###Column Chooser Header Text
 
-You can also customize the header text of the Column Chooser using the [SfDataGrid.ColumnChooserHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ColumnChooserHeaderText) property. By default, [SfDataGrid.ColumnChooserHeaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ColumnChooserHeaderText) property is set to `string.Empty`, so the header is not displayed. If you assign any non-empty string, the header becomes visible.
+You can also customize the header text of the Column Chooser using the `SfDataGrid.ColumnChooserHeaderText` property. By default, `SfDataGrid.ColumnChooserHeaderText` property is set to `string.Empty`, so the header is not displayed. If you assign any non-empty string, the header becomes visible.
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrdersInfo}"
-                       ColumnChooserHeaderText="Select Visible Columns"
-                       ShowColumnChooser="True">
-</syncfusion:SfDataGrid>
+
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding OrdersInfo}"
+                           ColumnChooserHeaderText="Select Visible Columns"
+                           ShowColumnChooser="True">
+    </syncfusion:SfDataGrid>
+
 {% endhighlight %}
+
 {% highlight c# %}
+
 dataGrid.ColumnChooserHeaderText = "Select Visible Columns";
+
 {% endhighlight %}
 {% endtabs %}
 

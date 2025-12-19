@@ -15,9 +15,9 @@ In the [Syncfusion® .NET MAUI DataGrid](https://help.syncfusion.com/cr/maui/Syn
 | Property name | Description |
 |---------------|-------------|
 | [FrozenRowCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FrozenRowCount) | Sets the number of rows to freeze at the top of the DataGrid |
-| [FooterFrozenRowCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FooterFrozenRowCount) | Sets the number of rows to freeze at the bottom (footer) of the DataGrid |
+| `FooterFrozenRowCount` | Sets the number of rows to freeze at the bottom (footer) of the DataGrid |
 | [FrozenColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FrozenColumnCount) | Sets the number of columns to freeze at the left side of the DataGrid |
-| [FooterFrozenColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FooterFrozenColumnCount) | Sets the number of columns to freeze at the right side of the DataGrid |
+| `FooterFrozenColumnCount` | Sets the number of columns to freeze at the right side of the DataGrid |
 
 To get start quickly with freeze rows and columns in .NET MAUI DataGrid, you can check on this video:
 
@@ -117,7 +117,7 @@ The DataGrid allows you to customize the color of the freeze pane line using the
 
 ### Freeze pane line thickness
 
-The DataGrid provides an option to customize the thickness of the freeze pane line using the [DataGridStyle.FreezePaneLineStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_DataGridStyle_FreezePaneLineStrokeThickness) property. This property defines the stroke width for all frozen rows and columns in both the body and footer regions
+The DataGrid provides an option to customize the thickness of the freeze pane line using the `DataGridStyle.FreezePaneLineStrokeThickness` property. This property defines the stroke width for all frozen rows and columns in both the body and footer regions
 
 N> The default value of `FreezePaneLineStrokeThickness` is 1.
 
