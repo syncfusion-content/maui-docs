@@ -47,14 +47,15 @@ namespace MarkdownViewerGettingStarted
 {
     public partial class MainPage : ContentPage
     {
-        private const string markdownContent = @"# What is the Markdown Viewer?  
-            The Markdown Viewer is a UI control in .NET MAUI that allows developers to render Markdown content with full formatting support. It was designed to work efficiently on both mobile and desktop platforms. The viewer supports headings, bold and italic text, lists, tables, images, code blocks and more.
+        private const string markdownContent = @"
+# What is the Markdown Viewer?  
+The Markdown Viewer is a UI control in .NET MAUI that allows developers to render Markdown content with full formatting support. It was designed to work efficiently on both mobile and desktop platforms. The viewer supports headings, bold and italic text, lists, tables, images, code blocks and more.
 
-            # Header 1  
-            Used for the main title or top-level heading in a Markdown document. 
+# Header 1  
+Used for the main title or top-level heading in a Markdown document. 
 
-            ## Header 2  
-            Used to define major sections within your Markdown content.";
+## Header 2  
+Used to define major sections within your Markdown content.";
         
         public MainPage()
         {
