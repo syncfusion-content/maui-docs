@@ -142,6 +142,8 @@ this.Content = mainGrid;
 {% endhighlight %}
 {% endtabs %}
 
+![Liquid glass effect in .NET MAUI Picker](images/liquid-glass/maui-picker-liquid-glass.png)
+
 N>
 * Supported on `macOS 26 or higher` and `iOS 26 or higher`.
 * This feature is available only in `.NET 10.`
