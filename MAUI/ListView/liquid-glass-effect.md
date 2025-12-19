@@ -17,18 +17,19 @@ Follow these steps to enable and configure the Liquid Glass Effect in the ListVi
 
 ### Step 1: Wrap the control inside glass effect view
 
-To apply the Liquid Glass Effect to Syncfusion® .NET MAUI `ListView` control, wrap the control inside the `SfGlassEffectView` class.
+To apply the Liquid Glass Effect to Syncfusion® .NET MAUI `ListView` control, wrap the control inside the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) class.
 
-For more details, refer to the `Liquid Glass Getting Started documentation`.
+For more details, refer to the [Liquid Glass Getting Started documentation](https://help.syncfusion.com/maui/liquid-glass-ui/getting-started).
 
 ### Step 2: Enable the liquid glass effect on ListView
 
-Set the `EnableLiquidGlassEffect` property to `true` in the `SfListView` control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its dependent controls and provides responsive interaction for a smooth and engaging user experience.
+Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_EnableLiquidGlassEffect) property to `true` in the `SfListView` control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its dependent controls and provides responsive interaction for a smooth and engaging user experience.
 
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfListView` control:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
+
 <Grid>
       <core:SfGlassEffectView x:Name="glassview" EffectType="Regular">
           <ListView:SfListView x:Name="listView"
@@ -49,8 +50,7 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
   </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="18" %}
-
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="19" %}
 
 using Microsoft.Maui.Controls;
 using Syncfusion.Maui.Core;
