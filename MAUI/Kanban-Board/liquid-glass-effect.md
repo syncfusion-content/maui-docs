@@ -32,7 +32,7 @@ To achieve a glass like background in the Kanban control, set its `Background` p
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the [Kanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) control:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="8" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2 3 5 8 23" %}
 
 <Grid BackgroundColor="Transparent">
     <core:SfGlassEffectView EffectType="Clear"
@@ -60,7 +60,7 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="8 22 23 24 25 26" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="6 8 22 23 24 25 26" %}
 
 using Syncfusion.Maui.Kanban;
 using Syncfusion.Maui.Core;
