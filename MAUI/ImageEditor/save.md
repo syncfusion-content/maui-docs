@@ -29,10 +29,10 @@ To save the modified image, use the [`Save`](https://help.syncfusion.com/cr/maui
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-    private void OnSaveImageClicked(object sender, EventArgs e)
-    {
-        this.imageEditor.Save(ImageFileType.Png, "D:\\Syncfusion\\Pictures", "Syncfusion");
-    }
+private void OnSaveImageClicked(object sender, EventArgs e)
+{
+    this.imageEditor.Save(ImageFileType.Png, "D:\\Syncfusion\\Pictures", "Syncfusion");
+}
 
 {% endhighlight %}
 {% endtabs %}

@@ -160,7 +160,7 @@ The index-based approach in the Kanban control allows cards to be dropped at pre
 
 N> The [SortingMappingPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_SortingMappingPath) property must be mapped to a valid numeric property name from the [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html#Syncfusion_Maui_Kanban_SfKanban_ItemsSource) to enable index-based sorting updates.
 
-The following code example illustrates how cards numeric property updated using the index-based sorting approach.
+The following code example illustrates how cards numeric property is updated using the index-based sorting approach.
 
 {% tabs %}
 {% highlight XAML hl_lines="2 3 5" %}
