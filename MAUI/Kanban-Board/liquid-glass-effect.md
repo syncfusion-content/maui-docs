@@ -32,39 +32,81 @@ To achieve a glass like background in the Kanban control, set its `Background` p
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the [Kanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) control:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="8" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14 15 17 20 35" %}
 
-<Grid BackgroundColor="Transparent">
-    <core:SfGlassEffectView EffectType="Clear"
-                            CornerRadius="7">
-        <kanban:SfKanban x:Name="kanban"
-                         Background="Transparent"
-                         AutoGenerateColumns="False"
-                         ItemsSource="{Binding Cards}"
-                         EnableLiquidGlassEffect="True">
-            <kanban:SfKanban.Columns>
-                <kanban:KanbanColumn Title="To Do"
-                                     Categories="Open"/>
-                <kanban:KanbanColumn Title="In Progress"
-                                     Categories="In Progress"/>
-                <kanban:KanbanColumn Title="Code Review"
-                                     Categories="Code Review"/>
-                <kanban:KanbanColumn Title="Done"
-                                     Categories="Done"/>
-            </kanban:SfKanban.Columns>
-            <kanban:SfKanban.BindingContext>
-                <local:KanbanViewModel/>
-            </kanban:SfKanban.BindingContext>
-        </kanban:SfKanban>
-    </core:SfGlassEffectView>
+<Grid>
+    <Grid.Background>
+        <LinearGradientBrush StartPoint="0,0"
+                             EndPoint="0,1">
+            <GradientStop Color="#0F4C75"
+                          Offset="0.0" />
+            <GradientStop Color="#3282B8"
+                          Offset="0.5" />
+            <GradientStop Color="#1B262C"
+                          Offset="1.0" />
+        </LinearGradientBrush>
+    </Grid.Background>
+    <Grid>
+        <core:SfGlassEffectView EffectType="Clear"
+                                CornerRadius="7">
+            <kanban:SfKanban x:Name="kanban"
+                             Background="Transparent"
+                             AutoGenerateColumns="False"
+                             ItemsSource="{Binding Cards}"
+                             EnableLiquidGlassEffect="True">
+                <kanban:SfKanban.Columns>
+                    <kanban:KanbanColumn Title="To Do"
+                                         Categories="Open"/>
+                    <kanban:KanbanColumn Title="In Progress"
+                                         Categories="In Progress"/>
+                    <kanban:KanbanColumn Title="Code Review"
+                                         Categories="Code Review"/>
+                    <kanban:KanbanColumn Title="Done"
+                                         Categories="Done"/>
+                </kanban:SfKanban.Columns>
+                <kanban:SfKanban.BindingContext>
+                    <local:KanbanViewModel/>
+                </kanban:SfKanban.BindingContext>
+            </kanban:SfKanban>
+        </core:SfGlassEffectView>
+    </Grid>
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="8 22 23 24 25 26" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="26 27 28 29 30 35 37" %}
 
 using Syncfusion.Maui.Kanban;
 using Syncfusion.Maui.Core;
 
+var gradientBrush = new LinearGradientBrush
+{
+    StartPoint = new Point(0, 0),
+    EndPoint = new Point(0, 1),
+    GradientStops =
+    {
+        new GradientStop { Color = Color.FromArgb("#0F4C75"), Offset = 0.0 },
+        new GradientStop { Color = Color.FromArgb("#3282B8"), Offset = 0.5 },
+        new GradientStop { Color = Color.FromArgb("#1B262C"), Offset = 1.0 }
+    }
+};
+
+// Outer grid with background
+var outerGrid = new Grid
+{
+    Background = gradientBrush
+};
+
+// Inner grid
+var innerGrid = new Grid();
+
+// Glass effect view
+var glassEffectView = new SfGlassEffectView
+{
+    EffectType = GlassEffectType.Clear,
+    CornerRadius = 7
+};
+
+// Kanban control
 var kanban = new SfKanban
 {
     Background = Colors.Transparent,
@@ -73,25 +115,16 @@ var kanban = new SfKanban
     BindingContext = new KanbanViewModel()
 };
 
-kanban.Columns.Add(new KanbanColumn { Title = "To Do", Categories = new List<string> { "Open" } });
-kanban.Columns.Add(new KanbanColumn { Title = "In Progress", Categories = new List<string> { "In Progress" } });
-kanban.Columns.Add(new KanbanColumn { Title = "Code Review", Categories = new List<string> { "Code Review" } });
-kanban.Columns.Add(new KanbanColumn { Title = "Done", Categories = new List<string> { "Done" } });
+// Define columns
+kanban.Columns.Add(new KanbanColumn { Title = "To Do", Categories = { "Open" } });
+kanban.Columns.Add(new KanbanColumn { Title = "In Progress", Categories = { "In Progress" } });
+kanban.Columns.Add(new KanbanColumn { Title = "Code Review", Categories = { "Code Review" } });
+kanban.Columns.Add(new KanbanColumn { Title = "Done", Categories = { "Done" } });
 
-var grid = new Grid
-{
-    BackgroundColor = Colors.Transparent
-};
-
-var glassView = new SfGlassEffectView
-{
-    CornerRadius = 7,
-    EffectType = LiquidGlassEffectType.Clear
-};
-
-glassView.Content = this.kanban;
-grid.Children.Add(glassView);
-this.Content = grid;
+glassEffectView.Content = kanban;
+innerGrid.Children.Add(glassEffectView);
+outerGrid.Children.Add(innerGrid);
+Content = outerGrid;
 
 {% endhighlight %}
 {% highlight C# tabtitle="KanbanViewModel.cs" %}

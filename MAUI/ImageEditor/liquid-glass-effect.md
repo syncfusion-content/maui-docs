@@ -32,58 +32,90 @@ To achieve a glass like background in the Image Editor and its Toolbar control, 
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the [SfImageEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ImageEditor.SfImageEditor.html) control:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14 16 20" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="14 15 17 20 22 26" %}
 
-<Grid BackgroundColor="Transparent">
-    <core:SfGlassEffectView EffectType="Regular"
-                            CornerRadius="20">
-        <imageEditor:SfImageEditor x:Name="imageEditor"
-                                   Background="Transparent"
-                                   SelectionStroke="#AE97FF"
-                                   Source="editorimage.png"
-                                   EnableLiquidGlassEffect="True">
-            <imageEditor:SfImageEditor.ToolbarSettings>
-                <imageEditor:ImageEditorToolbarSettings Background="Transparent"
-                                                        Stroke="Transparent"/>
-            </imageEditor:SfImageEditor.ToolbarSettings>
-        </imageEditor:SfImageEditor>
-    </core:SfGlassEffectView>
+<Grid>
+    <Grid.Background>
+        <LinearGradientBrush StartPoint="0,0"
+                             EndPoint="0,1">
+            <GradientStop Color="#0F4C75"
+                          Offset="0.0" />
+            <GradientStop Color="#3282B8"
+                          Offset="0.5" />
+            <GradientStop Color="#1B262C"
+                          Offset="1.0" />
+        </LinearGradientBrush>
+    </Grid.Background>
+    <Grid>
+        <core:SfGlassEffectView EffectType="Regular"
+                                CornerRadius="20">
+            <imageEditor:SfImageEditor x:Name="imageEditor"
+                                       Background="Transparent"
+                                       SelectionStroke="#AE97FF"
+                                       Source="dotnet_bot.png"
+                                       EnableLiquidGlassEffect="True">
+                <imageEditor:SfImageEditor.ToolbarSettings>
+                    <imageEditor:ImageEditorToolbarSettings Background="Transparent"
+                                                            Stroke="Transparent"/>
+                </imageEditor:SfImageEditor.ToolbarSettings>
+            </imageEditor:SfImageEditor>
+        </core:SfGlassEffectView>
+    </Grid>
 </Grid>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="21 22 23 24 25 30" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="26 27 28 29 30 34 37 43 44" %}
 
 using Syncfusion.Maui.Core;
 using Syncfusion.Maui.ImageEditor;
 
-var grid = new Grid
+var gradientBrush = new LinearGradientBrush
 {
-    BackgroundColor = Colors.Transparent
+    StartPoint = new Point(0, 0),
+    EndPoint = new Point(0, 1),
+    GradientStops =
+    {
+        new GradientStop { Color = Color.FromArgb("#0F4C75"), Offset = 0.0 },
+        new GradientStop { Color = Color.FromArgb("#3282B8"), Offset = 0.5 },
+        new GradientStop { Color = Color.FromArgb("#1B262C"), Offset = 1.0 }
+    }
 };
 
-var glassView = new SfGlassEffectView
+// Outer grid with background
+var outerGrid = new Grid
 {
-    CornerRadius = 20,
-    EffectType = LiquidGlassEffectType.Regular
+    Background = gradientBrush
+};
+
+// Inner grid
+var innerGrid = new Grid();
+
+// Glass effect view
+var glassEffectView = new SfGlassEffectView
+{
+    EffectType = GlassEffectType.Regular,
+    CornerRadius = 20
 };
 
 var imageEditor = new SfImageEditor
 {
     Background = Colors.Transparent,
-    EnableLiquidGlassEffect = true,
     SelectionStroke = Color.FromArgb("#AE97FF"),
-    Source = ImageSource.FromFile("editorimage.png"),
-    EnableLiquidGlassEffect = true,
-    ToolbarSettings = new ImageEditorToolbarSettings
-    {
-        Background = Colors.Transparent,
-        Stroke = Colors.Transparent
-    }
+    Source = "dotnet_bot.png",
+    EnableLiquidGlassEffect = true
 };
 
-glassView.Content = this.imageEditor;
-grid.Children.Add(glassView);
-this.Content = grid;
+// Toolbar settings
+imageEditor.ToolbarSettings = new ImageEditorToolbarSettings
+{
+    Background = Colors.Transparent,
+    Stroke = Colors.Transparent
+};
+
+glassEffectView.Content = imageEditor;
+innerGrid.Children.Add(glassEffectView);
+outerGrid.Children.Add(innerGrid);
+Content = outerGrid;
 
 {% endhighlight %}
 {% endtabs %}
