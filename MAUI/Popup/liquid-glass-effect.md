@@ -17,7 +17,7 @@ Follow these steps to enable and configure the Liquid Glass Effect in the Popup 
 
 ### Step 1: Enable the liquid glass effect on Popup
 
-Set the `EnableLiquidGlassEffect` property to `true` in the `SfPopup` control to apply the Liquid Glass Effect. When enabled, the effect is also applied to popup view and dependent controls, it provides responsive interaction for a smooth and engaging user experience.
+Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Popup.SfPopup.html#Syncfusion_Maui_Popup_SfPopup_EnableLiquidGlassEffect) property to `true` in the `SfPopup` control to apply the Liquid Glass Effect. When enabled, the effect is also applied to popup view and dependent controls, it provides responsive interaction for a smooth and engaging user experience.
 
 ### Step 2: Customize the background
 
