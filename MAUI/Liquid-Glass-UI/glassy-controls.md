@@ -23,6 +23,7 @@ For detailed usage guidelines, customization options, and code examples, refer t
 * [SfCircularChart](https://help.syncfusion.com/maui/circular-charts/liquid-glass-effect)
 * [SfColorPicker](https://help.syncfusion.com/maui/colorpicker/liquidglasssupport)
 * [SfComboBox](https://help.syncfusion.com/maui/combobox/liquidglasssupport)
+* [SfDataGrid](https://help.syncfusion.com/maui/datagrid/liquid-glass-effect)
 * [SfDatePicker](https://help.syncfusion.com/maui/datepicker/liquid-glass-effect)
 * [SfDateTimePicker](https://help.syncfusion.com/maui/datetimepicker/liquid-glass-effect)
 * [SfDateTimeRangeSelector](https://help.syncfusion.com/maui/datetime-range-selector/liquidglasssupport)
