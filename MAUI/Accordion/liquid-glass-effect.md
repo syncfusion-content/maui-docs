@@ -17,19 +17,19 @@ Follow these steps to enable and configure the Liquid Glass Effect in the Accord
 
 ### Step 1: Wrap the control inside glass effect view
 
-To apply the Liquid Glass Effect to Syncfusion® .NET MAUI `SfAccordion`, wrap it inside the `SfGlassEffectView`.
+To apply the Liquid Glass Effect to Syncfusion® .NET MAUI [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html), wrap it inside the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html).
 
-For more details, refer to the `Liquid Glass Getting Started documentation`.
+For more details, refer to the [Liquid Glass Getting Started documentation](https://help.syncfusion.com/maui/liquid-glass-ui/getting-started).
 
 ### Step 2: Enable the liquid glass effect on Accordion
 
-Set the `EnableLiquidGlassEffect` property to `true` in the `SfAccordion` control. When enabled, the effect is applied to all accordion items and provides responsive interaction for a smooth and engaging user experience. 
+Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_EnableLiquidGlassEffectProperty) property to `true` in the [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html) control. When enabled, the effect is applied to all accordion items and provides responsive interaction for a smooth and engaging user experience. 
 
 ### Step 3: Customize the background
 
 To achieve a glass like background, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
 
-The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfAccordion` control:
+The following code snippet demonstrates how to apply the Liquid Glass Effect to the [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html) control:
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="11 12 14 75" %}
@@ -296,6 +296,10 @@ grid.Children.Add(glassView);
 this.Content = grid;
 {% endhighlight %}
 {% endtabs %}
+
+The following screenshot illustrates SfAccordion within SfGlassEffectView.
+
+<img alt="MAUI Accordion with liquid glass support" src="Images/liquid-glass-effect/maui-accordion-liquid-glass-effect.png" Width="404"/>   
 
 N>
 * Supported on `macOS 26 or higher` and `iOS 26 or higher`.

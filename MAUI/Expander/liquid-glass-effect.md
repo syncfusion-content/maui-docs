@@ -17,19 +17,19 @@ Follow these steps to enable and configure the Liquid Glass Effect in the Expand
 
 ### Step 1: Wrap the control inside glass effect view
 
-To apply the Liquid Glass Effect to Syncfusion® .NET MAUI `SfExpander`, wrap it inside the `SfGlassEffectView`.
+To apply the Liquid Glass Effect to Syncfusion® .NET MAUI [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html), wrap it inside the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html).
 
-For more details, refer to the `Liquid Glass Getting Started documentation`.
+For more details, refer to the [Liquid Glass Getting Started documentation](https://help.syncfusion.com/maui/liquid-glass-ui/getting-started).
 
 ### Step 2: Enable the liquid glass effect on Expander
 
-Set the `EnableLiquidGlassEffect` property to `true` in the `SfExpander` control. When enabled, the effect is applied to the header and content, providing a smooth and engaging user experience.
+Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_EnableLiquidGlassEffectProperty) property to `true` in the [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html) control. When enabled, the effect is applied to the header and content, providing a smooth and engaging user experience.
 
 ### Step 3: Customize the background
 
 To achieve a glass like background, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
 
-The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfExpander` control:
+The following code snippet demonstrates how to apply the Liquid Glass Effect to the [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html) control:
 
 {% tabs %}
 {% highlight xaml tabtitle="ExpanderPage.xaml" hl_lines="11 12 30 58 100 142 174" %}
@@ -527,6 +527,10 @@ root.Children.Add(glass);
 this.Content = root;
 {% endhighlight %}
 {% endtabs %}
+
+This The following screenshot illustrates SfDataGrid within SfGlassEffectView.
+
+<img alt="MAUI Expander with liquid glass support" src="Images/liquid-glass-effect/maui-expander-liquid-glass-effect.png" Width="404" />   
 
 N>
 * Supported on `macOS 26 or higher` and `iOS 26 or higher`.
