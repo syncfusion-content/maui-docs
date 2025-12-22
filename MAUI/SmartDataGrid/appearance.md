@@ -157,9 +157,9 @@ The `SfSmartDataGrid.ShowAssistButtonIcon` property determines whether the Assis
 
 {% tabs %}
 {% highlight xaml %}
-    <smart:SfSmartDataGrid ItemsSource="{Binding OrderInfoCollection}"
-                        ShowAssistButtonIcon="False">
-    </smart:SfSmartDataGrid>
+<smart:SfSmartDataGrid ItemsSource="{Binding OrderInfoCollection}"
+                    ShowAssistButtonIcon="False">
+</smart:SfSmartDataGrid>
 {% endhighlight %}
 
 {% highlight c# %}
@@ -238,7 +238,7 @@ Use `SmartAssistStyle` to style the AssistView popup, header, and default highli
 
 - `AssistPopupStroke`: Border color of the AssistView popup.
 - `AssistPopupStrokeThickness`: Border thickness of the AssistView popup.
-- `AssistViewHeaderTextColor`:Text color of the header.
+- `AssistViewHeaderTextColor`: Text color of the header.
 - `AssistViewHeaderFontFamily`: Font family used for the header text.
 - `AssistViewHeaderFontAttributes`: Font attributes (e.g., Bold, Italic).
 - `AssistViewHeaderFontSize`: Font size for header text.
