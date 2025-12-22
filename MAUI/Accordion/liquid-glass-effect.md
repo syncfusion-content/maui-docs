@@ -23,7 +23,7 @@ For more details, refer to the [Liquid Glass Getting Started documentation](http
 
 ### Step 2: Enable the liquid glass effect on Accordion
 
-Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_EnableLiquidGlassEffectProperty) property to `true` in the [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html) control. When enabled, the effect is applied to all accordion items and provides responsive interaction for a smooth and engaging user experience. 
+Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_EnableLiquidGlassEffect) property to `true` in the [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html) control. When enabled, the effect is applied to all accordion items and provides responsive interaction for a smooth and engaging user experience. 
 
 ### Step 3: Customize the background
 

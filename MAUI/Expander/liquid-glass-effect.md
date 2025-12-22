@@ -23,7 +23,7 @@ For more details, refer to the [Liquid Glass Getting Started documentation](http
 
 ### Step 2: Enable the liquid glass effect on Expander
 
-Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_EnableLiquidGlassEffectProperty) property to `true` in the [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html) control. When enabled, the effect is applied to the header and content, providing a smooth and engaging user experience.
+Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_EnableLiquidGlassEffect) property to `true` in the [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html) control. When enabled, the effect is applied to the header and content, providing a smooth and engaging user experience.
 
 ### Step 3: Customize the background
 
