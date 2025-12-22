@@ -90,8 +90,8 @@ var gradientBrush = new LinearGradientBrush
     }
 };
 
-// Outer grid with background
-var outerGrid = new Grid
+// Main grid with background
+var mainGrid = new Grid
 {
     Background = gradientBrush
 };
@@ -123,8 +123,8 @@ kanban.Columns.Add(new KanbanColumn { Title = "Done", Categories = { "Done" } })
 
 glassEffectView.Content = kanban;
 innerGrid.Children.Add(glassEffectView);
-outerGrid.Children.Add(innerGrid);
-Content = outerGrid;
+mainGrid.Children.Add(innerGrid);
+this.Content = mainGrid;
 
 {% endhighlight %}
 {% highlight C# tabtitle="KanbanViewModel.cs" %}
