@@ -93,7 +93,7 @@ var innerGrid = new Grid();
 // Glass effect view
 var glassEffectView = new SfGlassEffectView
 {
-    EffectType = GlassEffectType.Regular,
+    EffectType = LiquidGlassEffectType.Regular,
     CornerRadius = 20
 };
 
