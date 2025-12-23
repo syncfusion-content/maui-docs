@@ -1,15 +1,15 @@
 ---
 layout: post
-title: AI-Driven anamoly detection in .NET MAUI DataGrid | Syncfusion
-description: Learn here all about the AI-Driven anamoly detection feature of Syncfusion<sup>&reg;</sup> .NET MAUI DataGrid (SfDataGrid) control and more.
+title: AI-Driven anomaly detection in .NET MAUI DataGrid | Syncfusion
+description: Learn here all about the AI-Driven anomaly detection feature of Syncfusion<sup>&reg;</sup> .NET MAUI DataGrid (SfDataGrid) control and more.
 platform: MAUI
 control: SfDataGrid
 documentation: ug
 ---
 
-# AI-Driven Anamoly Detection in .NET MAUI DataGrid (SfDataGrid)
+# AI-Driven Anomaly Detection in .NET MAUI DataGrid (SfDataGrid)
 
-This document provides a comprehensive guide to implementing AI-driven anamoly detection with the Syncfusion [.NET MAUI DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html). It uses the provided AnamolyDetection sample and integrates Azure OpenAI via the OpenAi helper service.
+This document provides a comprehensive guide to implementing AI-driven anomaly detection with the Syncfusion [.NET MAUI DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html). It uses the provided AnomalyDetection sample and integrates Azure OpenAI via the OpenAi helper service.
 
 ## Integrating Azure OpenAI with the .NET MAUI app
 
@@ -96,9 +96,9 @@ public async Task<string> GetResultsFromAI(string userPrompt)
 
 The **AzureOpenAIService** class now offers a convenient way to interact with the **OpenAI** API and retrieve completion results based on the provided **prompt**.
 
-## Integrating AI-driven anamoly detection in .NET MAUI DataGrid
+## Integrating AI-driven anomaly detection in .NET MAUI DataGrid
 
-To design an AI-powered anamoly detection UI using the `.NET MAUI DataGrid` control, you can style cells dynamically based on anamoly detection logic and visualize outliers in real-time. Before proceeding, please refer to the getting started documentation for the Syncfusion .NET MAUI DataGrid control.
+To design an AI-powered anomaly detection UI using the `.NET MAUI DataGrid` control, you can style cells dynamically based on anomaly detection logic and visualize outliers in real-time. Before proceeding, please refer to the getting started documentation for the Syncfusion .NET MAUI DataGrid control.
 
 ### Step 1: Create the DataGrid layout
 
@@ -107,7 +107,7 @@ To design an AI-powered anamoly detection UI using the `.NET MAUI DataGrid` cont
 {% highlight xaml %}
 <ContentPage   xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-               x:Class="SampleBrowser.Maui.SmartDemos.SmartDemos.AnamolyDetection"
+               x:Class="SampleBrowser.Maui.SmartDemos.SmartDemos.AnomalyDetection"
                xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
 
     <ContentPage.BindingContext>
@@ -115,7 +115,7 @@ To design an AI-powered anamoly detection UI using the `.NET MAUI DataGrid` cont
     </ContentPage.BindingContext>
 
     <ContentPage.Resources>
-        <local:AnamolyDetetcionConverter x:Key="converter" />
+        <local:AnomalyDetetcionConverter x:Key="converter" />
         <Style TargetType="syncfusion:DataGridCell">
             <Setter Property="Background"
                     Value="{Binding Source={RelativeSource Mode=Self}, Converter={StaticResource Key=converter}}" />
@@ -140,7 +140,7 @@ To design an AI-powered anamoly detection UI using the `.NET MAUI DataGrid` cont
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
-                <Label Text="Anamoly Detection"
+                <Label Text="Anomaly Detection"
                        VerticalTextAlignment="Center"
                        Padding="16,0,16,0"
                        FontSize="15"
@@ -188,13 +188,13 @@ To design an AI-powered anamoly detection UI using the `.NET MAUI DataGrid` cont
 
 ### Step 2: Enable AI-powered .NET MAUI DataGrid
 
-Add the prompt that requests the AI service to analyze the bound dataset and return anamoly detection results in JSON format. The JSON response should include the row index and anamoly status for each record. This data is then parsed and applied to the SfDataGrid by dynamically updating cell styles using the AnamolyDetectionConverter or by setting custom properties in the ViewModel.
+Add the prompt that requests the AI service to analyze the bound dataset and return anomaly detection results in JSON format. The JSON response should include the row index and anomaly status for each record. This data is then parsed and applied to the SfDataGrid by dynamically updating cell styles using the AnomalyDetectionConverter or by setting custom properties in the ViewModel.
 
 {% tabs %}
 
 {% highlight c# %}
 
-private async Task GetAnamolyResponseAsync()
+private async Task GetAnomalyResponseAsync()
 {
 
     try
@@ -216,7 +216,7 @@ private async Task GetAnamolyResponseAsync()
 
         if (string.IsNullOrWhiteSpace(result))
         {
-            result = openAi.GetAnamolyDetectionResponse();
+            result = openAi.GetAnomalyyDetectionResponse();
         }
 
         result = result.Replace("```json", "").Replace("```", "").Trim();
@@ -227,15 +227,15 @@ private async Task GetAnamolyResponseAsync()
         {
 
             string[] anomalies = deserializeResult.DataSource
-                .Select(x => x.AnamolyDescription)
+                .Select(x => x.AnomalyDescription)
                 .ToArray();
 
-            var colorConverter = new AnamolyDetetcionConverter();
+            var colorConverter = new AnomalyDetetcionConverter();
             colorConverter.GetString(anomalies);
 
-            var anamolyDescriptionColumn = new DataGridTextColumn() { HeaderText = "Anamoly Description", MappingName = "AnamolyDescription",ColumnWidthMode = ColumnWidthMode.Auto };
+            var anomalyDescriptionColumn = new DataGridTextColumn() { HeaderText = "Anomaly Description", MappingName = "AnomalyDescription",ColumnWidthMode = ColumnWidthMode.Auto };
 
-            this.datagrid?.Columns.Add(anamolyDescriptionColumn);
+            this.datagrid?.Columns.Add(anomalyDescriptionColumn);
 
             if (gridReport.DataSource != null)
             {
@@ -244,7 +244,7 @@ private async Task GetAnamolyResponseAsync()
                     if (generateDataAlone.Contains(item.MachineID))
                     {
                         index++;
-                        item.AnamolyDescription = deserializeResult.DataSource[index].AnamolyDescription;
+                        item.AnomalyDescription = deserializeResult.DataSource[index].AnomalyDescription;
                     }
                 }
             }
