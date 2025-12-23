@@ -17,9 +17,9 @@ Follow these steps to enable and configure the Liquid Glass Effect in the Step P
 
 ### Step 1: Wrap the control inside glass effect view
 
-To apply the Liquid Glass Effect to the Syncfusion® .NET MAUI [StepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html) control, wrap the control inside the `SfGlassEffectView` class.
+To apply the Liquid Glass Effect to the Syncfusion® .NET MAUI [StepProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfStepProgressBar.html) control, wrap the control inside the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) class.
 
-For more details, refer to the `Liquid Glass Getting Started documentation`.
+For more details, refer to the [Liquid Glass Getting Started documentation](https://help.syncfusion.com/maui/liquid-glass-ui/getting-started).
 
 ### Step 2: Customize the background
 
@@ -100,7 +100,7 @@ var stepTemplate = new DataTemplate(() =>
 {
     var grid = new Grid();
 
-    var glassVeiew = new SfGlassEffectView
+    var glassView = new SfGlassEffectView
     {
         WidthRequest = 32,
         HeightRequest = 32,
@@ -129,8 +129,8 @@ var stepTemplate = new DataTemplate(() =>
     };
 
     border.Content = iconLabel;
-    glassVeiew.Content = border;
-    grid.Add(glassVeiew);
+    glassView.Content = border;
+    grid.Add(glassView);
 
     return grid;
 });

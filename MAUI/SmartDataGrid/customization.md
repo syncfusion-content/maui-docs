@@ -18,11 +18,11 @@ The [SuggestedPrompts](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Smart
 
 {% tabs %}
 {% highlight xaml %}
-    <smart:SfSmartDataGrid ItemsSource="{Binding OrderInfoCollection}">
-        <syncfusion:SfSmartDataGrid.AssistViewSettings>
-            <syncfusion:DataGridAssistViewSettings SuggestedPrompts="{Binding Suggestions}"/>
-        </syncfusion:SfSmartDataGrid.AssistViewSettings>
-    </smart:SfSmartDataGrid>
+<smart:SfSmartDataGrid ItemsSource="{Binding OrderInfoCollection}">
+    <syncfusion:SfSmartDataGrid.AssistViewSettings>
+        <syncfusion:DataGridAssistViewSettings SuggestedPrompts="{Binding Suggestions}"/>
+    </syncfusion:SfSmartDataGrid.AssistViewSettings>
+</smart:SfSmartDataGrid>
 {% endhighlight %}
 
 {% highlight c# %}
@@ -48,11 +48,11 @@ The [Prompt](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents
 
 {% tabs %}
 {% highlight xaml %}
-    <smart:SfSmartDataGrid ItemsSource="{Binding OrderInfoCollection}">
-        <syncfusion:SfSmartDataGrid.AssistViewSettings>
-            <syncfusion:DataGridAssistViewSettings Prompt="Sort by OrderDate ascending" />
-        </syncfusion:SfSmartDataGrid.AssistViewSettings>
-    </smart:SfSmartDataGrid>
+<smart:SfSmartDataGrid ItemsSource="{Binding OrderInfoCollection}">
+    <syncfusion:SfSmartDataGrid.AssistViewSettings>
+        <syncfusion:DataGridAssistViewSettings Prompt="Sort by OrderDate ascending" />
+    </syncfusion:SfSmartDataGrid.AssistViewSettings>
+</smart:SfSmartDataGrid>
 {% endhighlight %}
 
 {% highlight c# %}
@@ -66,11 +66,11 @@ The [EnableSmartActions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Sma
 
 {% tabs %}
 {% highlight xaml %}
-    <smart:SfSmartDataGrid ItemsSource="{Binding OrderInfoCollection}">
-        <syncfusion:SfSmartDataGrid.AssistViewSettings>
-            <syncfusion:DataGridAssistViewSettings EnableSmartActions="True" />
-        </syncfusion:SfSmartDataGrid.AssistViewSettings>
-    </smart:SfSmartDataGrid>
+<smart:SfSmartDataGrid ItemsSource="{Binding OrderInfoCollection}">
+    <syncfusion:SfSmartDataGrid.AssistViewSettings>
+        <syncfusion:DataGridAssistViewSettings EnableSmartActions="True" />
+    </syncfusion:SfSmartDataGrid.AssistViewSettings>
+</smart:SfSmartDataGrid>
 {% endhighlight %}
 
 {% highlight c# %}
@@ -115,9 +115,9 @@ The [SfSmartDataGrid.AssistViewRequest](https://help.syncfusion.com/cr/maui/Sync
 
 {% tabs %}
 {% highlight xaml %}
-    <smart:SfSmartDataGrid ItemsSource="{Binding OrderInfoCollection}" 
-                           AssistViewRequest="OnAssistRequest">
-    </smart:SfSmartDataGrid>
+<smart:SfSmartDataGrid ItemsSource="{Binding OrderInfoCollection}" 
+                       AssistViewRequest="OnAssistRequest">
+</smart:SfSmartDataGrid>
 {% endhighlight %}
 
 {% highlight c# %}
@@ -135,11 +135,11 @@ The [DataGridAssistViewSettings.AssistViewOpening](https://help.syncfusion.com/c
 
 {% tabs %}
 {% highlight xaml %}
-    <smart:SfSmartDataGrid ItemsSource="{Binding OrderInfoCollection}">
-        <syncfusion:SfSmartDataGrid.AssistViewSettings>
-            <syncfusion:DataGridAssistViewSettings AssistViewOpening="OnAssistOpening" />
-        </syncfusion:SfSmartDataGrid.AssistViewSettings>
-    </smart:SfSmartDataGrid>
+<smart:SfSmartDataGrid ItemsSource="{Binding OrderInfoCollection}">
+    <syncfusion:SfSmartDataGrid.AssistViewSettings>
+        <syncfusion:DataGridAssistViewSettings AssistViewOpening="OnAssistOpening" />
+    </syncfusion:SfSmartDataGrid.AssistViewSettings>
+</smart:SfSmartDataGrid>
 {% endhighlight %}
 
 {% highlight c# %}
@@ -156,11 +156,11 @@ The [DataGridAssistViewSettings.AssistViewClosing](https://help.syncfusion.com/c
 
 {% tabs %}
 {% highlight xaml %}
-    <smart:SfSmartDataGrid ItemsSource="{Binding OrderInfoCollection}">
-        <syncfusion:SfSmartDataGrid.AssistViewSettings>
-            <syncfusion:DataGridAssistViewSettings AssistViewClosing="OnAssistClosing" />
-        </syncfusion:SfSmartDataGrid.AssistViewSettings>
-    </smart:SfSmartDataGrid>
+<smart:SfSmartDataGrid ItemsSource="{Binding OrderInfoCollection}">
+    <syncfusion:SfSmartDataGrid.AssistViewSettings>
+        <syncfusion:DataGridAssistViewSettings AssistViewClosing="OnAssistClosing" />
+    </syncfusion:SfSmartDataGrid.AssistViewSettings>
+</smart:SfSmartDataGrid>
 {% endhighlight %}
 
 {% highlight c# %}

@@ -13,6 +13,7 @@ The **Liquid Glass visual effect** brings a modern, frosted-glass aesthetic to y
  
 For detailed usage guidelines, customization options, and code examples, refer to the documentation for each control:
  
+* [SfAccordion](https://help.syncfusion.com/maui/accordion/liquid-glass-effect)
 * [SfAutocomplete](https://help.syncfusion.com/maui/autocomplete/liquidglasssupport)
 * [SfBackdropPage](https://help.syncfusion.com/maui/backdrop/liquid-glass-effect)
 * [SfButton](https://help.syncfusion.com/maui/button/liquidglasssupport)
@@ -23,11 +24,13 @@ For detailed usage guidelines, customization options, and code examples, refer t
 * [SfCircularChart](https://help.syncfusion.com/maui/circular-charts/liquid-glass-effect)
 * [SfColorPicker](https://help.syncfusion.com/maui/colorpicker/liquidglasssupport)
 * [SfComboBox](https://help.syncfusion.com/maui/combobox/liquidglasssupport)
+* [SfDataGrid](https://help.syncfusion.com/maui/datagrid/liquid-glass-effect)
 * [SfDatePicker](https://help.syncfusion.com/maui/datepicker/liquid-glass-effect)
 * [SfDateTimePicker](https://help.syncfusion.com/maui/datetimepicker/liquid-glass-effect)
 * [SfDateTimeRangeSelector](https://help.syncfusion.com/maui/datetime-range-selector/liquidglasssupport)
 * [SfDateTimeRangeSlider](https://help.syncfusion.com/maui/datetime-range-slider/liquidglasssupport)
 * [SfDateTimeSlider](https://help.syncfusion.com/maui/datetime-slider/liquidglasssupport)
+* [SfExpander](https://help.syncfusion.com/maui/expander/liquid-glass-effect)
 * [SfFunnelChart](https://help.syncfusion.com/maui/funnel-charts/liquid-glass-effect)
 * [SfImageEditor](https://help.syncfusion.com/maui/imageeditor/liquid-glass-effect)
 * [SfKanban](https://help.syncfusion.com/maui/kanban-board/liquid-glass-effect)
