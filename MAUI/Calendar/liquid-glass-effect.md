@@ -55,12 +55,12 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
         <Grid>
             <core:SfGlassEffectView
                 EffectType="Regular"
-                CornerRadius="20">
+                CornerRadius="20"
+                WidthRequest="350"
+                HeightRequest="350">
                 <calendar:SfCalendar x:Name="calendar"
                     EnableLiquidGlassEffect="True"
-                    Background="Transparent"
-                    WidthRequest="350"
-                    HeightRequest="350"/>
+                    Background="Transparent"/>
             </core:SfGlassEffectView>
         </Grid>
     </Grid>
@@ -107,6 +107,8 @@ this.Content = mainGrid;
 
 {% endhighlight %}
 {% endtabs %}
+
+![Liquid glass effect in .NET MAUI Calendar](images/liquid-glass/maui-calendar-liquid-glass.webp)
 
 N>
 * Supported on `macOS 26 or higher` and `iOS 26 or higher`.
