@@ -27,7 +27,7 @@ Before proceeding, ensure the following are set up:
 2. Name the project and choose a location. Then click **Next**.
 3. Select the .NET framework version and click **Create**.
 
-## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI smart Scheduler  NuGet Package
+## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI Smart Scheduler  NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
 2. Search for [Syncfusion.Maui.SmartComponents](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.html) and install the latest version.
@@ -166,20 +166,6 @@ Before proceeding, ensure the following are set up:
 {% endtabcontent %}
 {% tabcontent JetBrains Rider %}
 
-## Prerequisites
-
-Before proceeding, ensure the following are set up:
-
-1. Ensure you have the latest version of JetBrains Rider.
-2. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later is installed.
-3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
-
-## Step 1: Create a new .NET MAUI Project
-
-1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
-2. Enter the Project Name, Solution Name, and Location.
-3. Select the .NET framework version and click Create.
-
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Smart Scheduler NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages.**
@@ -300,6 +286,20 @@ public partial class MainPage : ContentPage
 
 {% endtabcontent %}
 {% endtabcontents %}
+
+## Prerequisites
+
+Before proceeding, ensure the following are set up:
+
+1. Ensure you have the latest version of JetBrains Rider.
+2. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later is installed.
+3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
+
+## Step 1: Create a New .NET MAUI Project
+
+1. Go to **File > New Solution,** Select .NET (C#) and choose the .NET MAUI App template.
+2. Enter the Project Name, Solution Name, and Location.
+3. Select the .NET framework version and click Create.
 
 ## Step 2: Install the Syncfusion<sup>&reg;</sup> .NET MAUI Smart Scheduler NuGet Package
 
