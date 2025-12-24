@@ -9,7 +9,7 @@ documentation: ug
 
 # Liquid Glass Effect in .NET MAUI Segmented control
 
-The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® [.NET MAUI Segmented control (SfSegmentedControl)](https://www.syncfusion.com/maui-controls/maui-segmented-control) control.
+The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® [.NET MAUI Segmented control](https://www.syncfusion.com/maui-controls/maui-segmented-control) control.
 
 ## Apply liquid glass effect
 
@@ -63,7 +63,7 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
 </ContentPage>
 
 {% endhighlight %}
-{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="14" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="17" %}
 
 using Syncfusion.Maui.Core;
 using Syncfusion.Maui.Buttons;
