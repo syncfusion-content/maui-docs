@@ -107,7 +107,7 @@ this.FrontLayer.EnableLiquidGlassEffect = true;
 {% endhighlight %}
 {% endtabs %}
 
-![Liquid glass effect in .NET MAUI Backdrop Page](images/liquid-glass/backdrop-liquid-glass.png)
+![Liquid glass effect in .NET MAUI Backdrop Page](images/liquid-glass/backdrop-liquid-glass.webp)
 
 N>
 * Supported on `macOS 26 or higher` and `iOS 26 or higher`.

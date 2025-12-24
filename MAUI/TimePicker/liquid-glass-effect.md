@@ -120,7 +120,7 @@ this.Content = mainGrid;
 {% endhighlight %}
 {% endtabs %}
 
-![Liquid glass effect in .NET MAUI Time Picker](images/liquid-glass/maui-time-picker-liquid-glass.png)
+![Liquid glass effect in .NET MAUI Time Picker](images/liquid-glass/maui-time-picker-liquid-glass.webp)
 
 N>
 * Supported on `macOS 26 or higher` and `iOS 26 or higher`.
