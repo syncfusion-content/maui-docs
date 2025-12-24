@@ -103,6 +103,8 @@ this.Content = mainGrid;
 {% endhighlight %}
 {% endtabs %}
 
+![Liquid glass effect in .NET MAUI Cards](images/maui-card-liquid-glass.webp)
+
 N>
 * Supported on `macOS 26 or higher` and `iOS 26 or higher`.
 * This feature is available only in `.NET 10.`
