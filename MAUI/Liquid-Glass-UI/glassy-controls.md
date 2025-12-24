@@ -45,6 +45,8 @@ For detailed usage guidelines, customization options, and code examples, refer t
 * [SfRangeSelector](https://help.syncfusion.com/maui/range-selector/liquidglasssupport)
 * [SfRangeSlider](https://help.syncfusion.com/maui/range-slider/liquidglasssupport)
 * [SfRichTextEditor](https://help.syncfusion.com/maui/rich-text-editor/liquid-glass-effect)
+* [SfScheduler](https://help.syncfusion.com/maui/scheduler/liquid-glass-effect)
+* [SfSegmentedControl](https://help.syncfusion.com/maui/segmented-control/liquid-glass-effect)
 * [SfSignaturePad](https://help.syncfusion.com/maui/signaturepad/liquidglasssupport)
 * [SfSlider](https://help.syncfusion.com/maui/slider/liquidglasssupport)
 * [SfStepProgressBar](https://help.syncfusion.com/maui/stepprogressbar/liquid-glass-effect)
