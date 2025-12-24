@@ -177,6 +177,8 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
+![Liquid UI in .NET MAUI SfStepProgressBar.](images/liquid-ui/maui-stepprogressbar-liquid-ui.png){:width="286" height="351"}
+
 N>
 * Supported on `macOS 26 or higher` and `iOS 26 or higher`.
 * This feature is available only in `.NET 10.`

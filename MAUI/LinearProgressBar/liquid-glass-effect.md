@@ -105,6 +105,8 @@ this.Content = grid;
 {% endhighlight %}
 {% endtabs %}
 
+![.NET MAUI Linear ProgressBar with Liquid UI Support](images/liquid-ui/linerarprogressbar-with-liquid-ui.gif)
+
 N>
 * Supported on `macOS 26 or higher` and `iOS 26 or higher`.
 * This feature is available only in `.NET 10.`
