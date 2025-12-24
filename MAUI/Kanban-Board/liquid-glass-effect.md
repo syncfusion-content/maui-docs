@@ -311,7 +311,7 @@ public class KanbanViewModel
 {% endhighlight %}
 {% endtabs %}
 
-![liquid-ui-support-in-maui-kanban](images/liquid-ui/liquid-ui-in-maui-kanban.gif)
+![.NET MAUI Kanban with Liquid UI Support](images/liquid-ui/liquid-ui-in-maui-kanban.gif)
 
 N>
 * Supported on `macOS 26 or higher` and `iOS 26 or higher`.
