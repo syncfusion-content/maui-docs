@@ -59,10 +59,10 @@ When using multiple Syncfusion<sup>®</sup> controls in an application, to make 
 
 ### Cupertino design
 
-Syncfusion themes include a Cupertino design that follows the same resource structure as Material, but with Cupertino-specific color values. This ensures visual consistency with Apple’s Human Interface Guidelines while preserving the same resource keys and theming entry points across all Syncfusion .NET MAUI controls.
+Syncfusion® themes include a **Cupertino** design that follows the same resource structure as **Material**, but with Cupertino-specific color values. This ensures visual consistency with Apple’s **human interface guidelines** while preserving the same resource keys and theming entry points across all Syncfusion® .NET MAUI controls.
 
-* **Availability:** CupertinoLight and CupertinoDark are supported for all platforms supported by Syncfusion .NET MAUI controls
-* **Implementation:** The Cupertino themes use the same SyncfusionThemeResourceDictionary and keys you already use for Material. Only the color tokens vary by theme.
+* **Availability:** `CupertinoLight` and `CupertinoDark` are supported for all platforms supported by Syncfusion® .NET MAUI controls
+* **Implementation:** The **Cupertino** themes use the same `SyncfusionThemeResourceDictionary` and keys you already use for **Material**. Only the **color tokens** vary by theme.
 
 ## Overriding the default theme
 
