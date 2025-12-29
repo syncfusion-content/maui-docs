@@ -177,6 +177,8 @@ public class ViewModel
 {% endhighlight %}
 {% endtabs %}
 
+![liquid-glass-ui-in-.net-maui-stepprogressbar-control](images/liquid-ui/liquid-glass-ui-in-.net-maui-stepprogressbar-control.png){:width="286" height="351"}
+
 N>
 * Supported on `macOS 26 or higher` and `iOS 26 or higher`.
 * This feature is available only in `.NET 10.`

@@ -105,6 +105,8 @@ this.Content = grid;
 {% endhighlight %}
 {% endtabs %}
 
+![liquid-glass-ui-in-.net-maui-linearprogressbar-control](images/liquid-ui/liquid-glass-ui-in-.net-maui-linearprogressbar-control.gif)
+
 N>
 * Supported on `macOS 26 or higher` and `iOS 26 or higher`.
 * This feature is available only in `.NET 10.`
