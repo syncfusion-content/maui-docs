@@ -38,11 +38,11 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
     <Grid.Background>
         <LinearGradientBrush StartPoint="0,0"
                              EndPoint="0,1">
-            <GradientStop Color="#0F4C75"
+            <GradientStop Color="#FF44A9EC"
                           Offset="0.0" />
-            <GradientStop Color="#3282B8"
+            <GradientStop Color="#FF84BBE6"
                           Offset="0.5" />
-            <GradientStop Color="#1B262C"
+            <GradientStop Color="#FFCDD6DB"
                           Offset="1.0" />
         </LinearGradientBrush>
     </Grid.Background>
@@ -84,9 +84,9 @@ var gradientBrush = new LinearGradientBrush
     EndPoint = new Point(0, 1),
     GradientStops =
     {
-        new GradientStop { Color = Color.FromArgb("#0F4C75"), Offset = 0.0 },
-        new GradientStop { Color = Color.FromArgb("#3282B8"), Offset = 0.5 },
-        new GradientStop { Color = Color.FromArgb("#1B262C"), Offset = 1.0 }
+        new GradientStop { Color = Color.FromArgb("#FF44A9EC"), Offset = 0.0 },
+        new GradientStop { Color = Color.FromArgb("#FF84BBE6"), Offset = 0.5 },
+        new GradientStop { Color = Color.FromArgb("#FFCDD6DB"), Offset = 1.0 }
     }
 };
 
@@ -310,6 +310,8 @@ public class KanbanViewModel
 
 {% endhighlight %}
 {% endtabs %}
+
+![.NET MAUI Kanban with Liquid UI Support](images/liquid-ui/liquid-ui-in-maui-kanban.png)
 
 N>
 * Supported on `macOS 26 or higher` and `iOS 26 or higher`.
