@@ -937,4 +937,6 @@ this.Content = mainGrid;
 {% endhighlight %}
 {% endtabs %}
 
+![liquid-glass-ui-with-interactive-effect-in-.net-maui](images/getting-started/liquid-glass-ui-with-interactive-effect-in-.net-maui.gif)
+
 N> View sample in [GitHub](https://github.com/syncfusion/maui-demos/tree/master/MAUI/LiquidGlass).
