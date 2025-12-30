@@ -268,4 +268,4 @@ The following image demonstrates the output of the above AI powered stock foreca
 
 ![.NET MAUI Candle chart AI Stock forecasting.](Chart_Smart_component_images/stock_forecasting.gif) 
 
-For more information, please visit the [GitHub Sample](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SmartComponents/SampleBrowser.Maui.SmartComponents/Samples/SmartComponents/StockForecasting)
+For more information, please visit the [GitHub Sample](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SmartDemos/SampleBrowser.Maui.SmartDemos/Samples/SmartDemos/StockForecasting)

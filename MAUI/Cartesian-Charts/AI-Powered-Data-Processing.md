@@ -218,4 +218,4 @@ The following image demonstrates the output of the above AI Powered data cleanin
 
 ![Ai smart data processing in .NET MAUI Chart](Chart_Smart_component_images/dataprocessing.png)
 
-For more information, please visit the [GitHub Sample](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SmartComponents/SampleBrowser.Maui.SmartComponents/Samples/SmartComponents/DataPreprocessing)
+For more information, please visit the [GitHub Sample](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SmartDemos/SampleBrowser.Maui.SmartDemos/Samples/SmartDemos/DataPreprocessing)
