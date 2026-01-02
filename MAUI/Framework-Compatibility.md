@@ -19,7 +19,7 @@ Below table represents the supported Syncfusion® Essential Studio® version for
 <table>
 <tr>
 <th>Syncfusion Version</th>
-<th>.NET 6
+<th>.NET 6.0
 </th>
 <th>.NET 7
 </th>
@@ -31,7 +31,7 @@ Below table represents the supported Syncfusion® Essential Studio® version for
 </th>
 </tr>
 <tr>
-<td>From v19.3.0(2021 Vol 3 )</td>
+<td>>= v19.3.0</td>
 <td>Yes</td>
 <td>No</td>
 <td>No</td>
@@ -39,7 +39,7 @@ Below table represents the supported Syncfusion® Essential Studio® version for
 <td>No</td>
 </tr>
 <tr>
-<td>From v23.2.4(2023 Vol 3 )</td>
+<td>>= v23.2.4</td>
 <td>No</td>
 <td>Yes</td>
 <td>Yes</td>
@@ -47,7 +47,7 @@ Below table represents the supported Syncfusion® Essential Studio® version for
 <td>No</td>
 </tr>
 <tr>
-<td>From v27.2.2(2024 Vol 3 )</td>
+<td>>= v27.2.2</td>
 <td>No</td>
 <td>No</td>
 <td>Yes</td>
@@ -55,7 +55,7 @@ Below table represents the supported Syncfusion® Essential Studio® version for
 <td>No</td>
 </tr>
 <tr>
-<td>From v31.2.10(2025 Vol3)</td>
+<td>>= v31.2.10</td>
 <td>No</td>
 <td>No</td>
 <td>No</td>
