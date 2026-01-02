@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotation Color Customization | Syncfusion
-description: Learn how to customize annotation colors in Syncfusion® .NET MAUI Chart (SfCartesianChart) control using the AnnotationTapped event for dynamic color changes in real-time.
+description: Learn how to customize annotation colors in Syncfusion® .NET MAUI Chart (SfCartesianChart) using the AnnotationTapped event for real-time color changes.
 platform: maui
 control: SfCartesianChart
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotation Drag and Reposition | Syncfusion
-description: Learn how to enable annotation drag and drop interaction in Syncfusion® .NET MAUI Chart (SfCartesianChart) to reposition annotations within the chart area dynamically.
+description: Learn how to enable drag-and-drop interaction for annotations in Syncfusion® .NET MAUI Chart (SfCartesianChart) to reposition them dynamically.
 platform: maui
 control: SfCartesianChart
 documentation: ug
