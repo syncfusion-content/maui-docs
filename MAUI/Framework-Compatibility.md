@@ -21,13 +21,13 @@ Below table represents the supported Syncfusion® Essential Studio® version for
 <th>Syncfusion Version</th>
 <th>.NET 6.0
 </th>
-<th>.NET 7
+<th>.NET 7.0
 </th>
-<th>.NET 8
+<th>.NET 8.0
 </th>
-<th>.NET 9
+<th>.NET 9.0
 </th>
-<th>.NET 10
+<th>.NET 10.0
 </th>
 </tr>
 <tr>
