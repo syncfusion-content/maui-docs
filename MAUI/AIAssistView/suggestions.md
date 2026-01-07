@@ -29,14 +29,14 @@ using Syncfusion.Maui.AIAssistView;
 public class GettingStartedViewModel : INotifyPropertyChanged
 {
 	private ObservableCollection<ISuggestion> _suggestions;
-	public GettingStartedViewModal()
+	public GettingStartedViewModel()
 	{
     
 		...
 		this._suggestions = new ObservableCollection<ISuggestion>()
 		{
 			new AssistSuggestion() {Text = "Ownership", ImageSource="ownership.png"},
-			new AssistSuggestion() {Text = "Brainstroming", ImageSource = "brainstorming.png"},
+			new AssistSuggestion() {Text = "Brainstorming", ImageSource = "brainstorming.png"},
 			new AssistSuggestion() { Text = "Listening", ImageSource="listening.png"},
 			new AssistSuggestion() { Text = "Resilience", ImageSource="resilience.png"},
 		};
@@ -73,7 +73,7 @@ To populate the Suggestions, bind the item collection from its BindingContext to
              x:Class="GettingStarted.MainPage">
 
     <ContentPage.BindingContext>
-        <local:GettingStartedViewModal/>
+        <local:GettingStartedViewModel/>
     </ContentPage.BindingContext>
 
     <ContentPage.Content>
@@ -98,7 +98,7 @@ public partial class MainPage : ContentPage
         this.sfAIAssistView = new SfAIAssistView();
         GettingStartedViewModel viewModel = new GettingStartedViewModel();
         this.sfAIAssistView.AssistItems = viewModel.AssistItems;
-        this.sfAIAssistView.Suggestions = viewModal.Suggestions;
+        this.sfAIAssistView.Suggestions = viewModel.Suggestions;
         this.sfAIAssistView.ShowHeader = true;
         this.Content = sfAIAssistView;
     }
@@ -127,7 +127,7 @@ The `SfAIAssistView` control allows you to fully customize the suggestions appea
 </ContentPage.Resources>
 
 <ContentPage.Content>
-    <assistView:SfAIAssistView x:Name="sfAIAssistView"
+    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
                                AssistItems="{Binding AssistItems}"
                                Suggestions="{Binding Suggestions}"
                                SuggestionTemplate="{StaticResource suggestionTemplate}"
@@ -148,7 +148,7 @@ public partial class MainPage : ContentPage
         this.sfAIAssistView = new SfAIAssistView();
         GettingStartedViewModel viewModel = new GettingStartedViewModel();
         this.sfAIAssistView.AssistItems = viewModel.AssistItems;
-        this.sfAIAssistView.Suggestions = viewModal.Suggestions;
+        this.sfAIAssistView.Suggestions = viewModel.Suggestions;
         this.sfAIAssistView.SuggestionTemplate = CreateSuggestionTemplate();
         this.sfAIAssistView.ShowHeader = true;
         this.Content = sfAIAssistView;
@@ -187,7 +187,8 @@ Suggestions are displayed by creating an instance of [AssistSuggestion](https://
 
       <ContentPage.Content>
              <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                                        AssistItems="{Binding AssistItems}"/>
+                                        AssistItems="{Binding AssistItems}"
+                                        ShowHeader="True"/>
 	  <ContentPage.Content>	
   </ContentPage>
 
@@ -205,6 +206,7 @@ Suggestions are displayed by creating an instance of [AssistSuggestion](https://
               SfAIAssistView sfAIAssistView = new SfAIAssistView();
               SuggestionsViewModel viewModel = new SuggestionsViewModel();
               this.sfAIAssistView.AssistItems = viewModel.AssistItems;
+              this.sfAIAssistView.ShowHeader = true;
               this.Content = sfAIAssistView;
              }
          }
@@ -305,7 +307,7 @@ You can add an image to the suggestion item by setting the [ImageSource](https:/
 
 #### Changing the orientation of suggestions
 
-The [AssistItemSuggestion.Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItemSuggestion.html#Syncfusion_Maui_AIAssistView_AssistItemSuggestion_Orientation) property allows you to display suggestions horizontally or vertically. By, default, the orientation is vertical.
+The [AssistItemSuggestion.Orientation](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItemSuggestion.html#Syncfusion_Maui_AIAssistView_AssistItemSuggestion_Orientation) property allows you to display suggestions horizontally or vertically. By default, the orientation is vertical.
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="21" %}
@@ -346,7 +348,7 @@ The [AssistItemSuggestion.Orientation](https://help.syncfusion.com/cr/maui/Syncf
 
 #### Changing the item spacing of suggestions
 
-The [AssistItemSuggestion.ItemSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItemSuggestion.html#Syncfusion_Maui_AIAssistView_AssistItemSuggestion_ItemSpacing) property allows you to display suggestions with Spacing. By, default, the spacing is 8.
+The [AssistItemSuggestion.ItemSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItemSuggestion.html#Syncfusion_Maui_AIAssistView_AssistItemSuggestion_ItemSpacing) property allows you to display suggestions with spacing. By default, the spacing is 8.
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="21" %}
@@ -437,9 +439,10 @@ The `SfAIAssistView` control allows you to fully customize the appearance of the
 </ContentPage.Resources>
 <ContentPage.Content>
       <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                                 AssistItem = "{Binding AssistItems}"
+                                 AssistItems = "{Binding AssistItems}"
+                                 ShowHeader="True"
                                  ResponseSuggestionTemplate="{StaticResource suggestionTemplate}">
-      </syncfusion:SfSfAIAssistView>
+      </syncfusion:SfAIAssistView>
 </ContentPage.Content>
 
 {% endhighlight %}
@@ -456,6 +459,7 @@ public partial class MainPage : ContentPage
         InitializeComponent();
         sfAIAssistView = new SfAIAssistView();
         sfAIAssistView.ResponseSuggestionTemplate = this.CreateSuggestionTemplate();
+        sfAIAssistView.ShowHeader = true;
         this.Content = sfAIAssistView;
     }
 
@@ -473,9 +477,9 @@ public partial class MainPage : ContentPage
 
 ![Suggestion Template in .NET MAUI AI AssistView](Images/suggestions/maui-aiassistview-suggestiontemplate.png)
 
-## Event and Commands
+## Events and Commands
 
-When a user selects a suggestion, the [SuggestionItemSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_SuggestionItemSelected) event and [SuggestionItemSelectedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_SuggestionItemSelectedCommand) are triggered, providing [SuggestionItemSelectedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SuggestionItemSelectedEventArgs.html) as arguments. This arguments contains the following details about the selected suggestion item.
+When a user selects a suggestion, the [SuggestionItemSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_SuggestionItemSelected) event and [SuggestionItemSelectedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_SuggestionItemSelectedCommand) are triggered, providing [SuggestionItemSelectedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SuggestionItemSelectedEventArgs.html) as arguments. This argument contains the following details about the selected suggestion item.
 
  * [SelectedItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SuggestionItemSelectedEventArgs.html#Syncfusion_Maui_AIAssistView_SuggestionItemSelectedEventArgs_SelectedItem) : The suggestion item chosen by the user.
  * [RequestItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SuggestionItemSelectedEventArgs.html#Syncfusion_Maui_AIAssistView_SuggestionItemSelectedEventArgs_RequestItem) : The request item associated with the selected suggestion.
@@ -515,6 +519,7 @@ By default, a suggestion is automatically sent as a request item immediately whe
         <ContentPage.Content>
             <syncfusion:SfAIAssistView x:Name="sfAIAssistView" 
                                        AssistItems="{Binding AssistItems}"
+                                       ShowHeader="True"
                                        SuggestionItemSelectedCommand="{Binding SuggestionItemSelectedCommand}" />
         </ContentPage.Content>
  </ContentPage>

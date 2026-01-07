@@ -41,7 +41,7 @@ documentation: ug
 
 ## Text item
 
-The [AssistItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html) is used to display plain text as a item, which is used to represent text-based content.
+The [AssistItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html) is used to display plain text as an item, which is used to represent text-based content.
 
 {% tabs %}
 {% highlight xaml %}
@@ -72,7 +72,7 @@ The [AssistItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistVie
     {
         public partial class MainPage : ContentPage
         {
-            SfAiAssistView sfAIAssistView;
+            SfAIAssistView sfAIAssistView;
             ViewModel viewModel;
             public MainPage()
             {
@@ -132,7 +132,7 @@ The [AssistItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistVie
 
 ## Hyperlink item
 
-The [AssistHyperlinkItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistHyperlinkItem.html) is used to send a [URL](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistHyperlinkItem.html#Syncfusion_Maui_AIAssistView_AssistHyperlinkItem_Url) as a item. Along with the link, the thumbnail, title, and description of the URL are automatically fetched and displayed.
+The [AssistHyperlinkItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistHyperlinkItem.html) is used to send a [URL](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistHyperlinkItem.html#Syncfusion_Maui_AIAssistView_AssistHyperlinkItem_Url) as an item. Along with the link, the thumbnail, title, and description of the URL are automatically fetched and displayed.
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="23" %}
@@ -178,7 +178,7 @@ The [AssistHyperlinkItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AI
 
 ## Image item
 
-The [AssistImageItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistImageItem.html) is used to display an image as a item. Using the [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistImageItem.html#Syncfusion_Maui_AIAssistView_AssistImageItem_Source), [Size](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistImageItem.html#Syncfusion_Maui_AIAssistView_AssistImageItem_Size), and [Aspect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistImageItem.html#Syncfusion_Maui_AIAssistView_AssistImageItem_Aspect) properties, you can display the desired image in the desired height and width as a item in the AI AssistView control.
+The [AssistImageItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistImageItem.html) is used to display an image as an item. Using the [Source](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistImageItem.html#Syncfusion_Maui_AIAssistView_AssistImageItem_Source), [Size](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistImageItem.html#Syncfusion_Maui_AIAssistView_AssistImageItem_Size), and [Aspect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistImageItem.html#Syncfusion_Maui_AIAssistView_AssistImageItem_Aspect) properties, you can display the desired image in the desired height and width as an item in the AI AssistView control.
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="24" %}
@@ -206,7 +206,7 @@ The [AssistImageItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssi
             await Task.Delay(1000).ConfigureAwait(true);
             
             // Adding image item as a response from the AI service.
-            AssistItem responseItem = newnew AssistImageItem()
+            AssistItem responseItem = new AssistImageItem()
             {
                   Aspect = Aspect.AspectFit,
                   Text = "Here's an image of a bird.",
@@ -317,7 +317,7 @@ In AI AssistView, to display a list of interactive cards, each card can contain 
                 Description = "Miami, officially the City of Miami, is the seat of Miami-Dade County and the cultural, economic and financial center of South Florida in the United States. The city covers an area of about 56 square miles between the Everglades to the west and Biscayne Bay to the east.",
                 Image = "miami.png",
             };
-            card1.Buttons.Add(new CardButton() { Title = "Choose", Value = "Miammi" });
+            card1.Buttons.Add(new CardButton() { Title = "Choose", Value = "Miami" });
 
             Card card2 = new Card()
             {
