@@ -13,7 +13,7 @@ You can style the elements of the [SfAIAssistView](https://help.syncfusion.com/c
 
 ## AI AssistView background
 
-To set a solid color as the background for [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html), assign a color to the `SfAssistView.Background` property. However, if you want the solid color to be applied to the control, also set the background as transparent, as shown in the below code sample.
+To set a solid color as the background for [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html), assign a color to the `SfAIAssistView.Background` property. However, if you want the solid color to be applied to the control, also set the background as transparent, as shown in the below code sample.
 
 {% tabs %}
 {% highlight xaml hl_lines="18 27" %}
@@ -35,7 +35,7 @@ To set a solid color as the background for [SfAIAssistView](https://help.syncfus
              <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
                  <ResourceDictionary>
                      <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
-                     <Color x:Key="SfAIAssistViewBackground">transparent</Color>
+                     <Color x:Key="SfAIAssistViewBackground">Transparent</Color>
                  </ResourceDictionary>
              </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
           </syncTheme:SyncfusionThemeDictionary>
@@ -63,7 +63,7 @@ To set a solid color as the background for [SfAIAssistView](https://help.syncfus
             this.sfAIAssistView = new SfAIAssistView ();
             this.viewModel = new ViewModel();
             this.sfAIAssistView.AssistItems = viewModel.AssistItems;
-            sfAIAssistView .Background = Color.FromHex("#94b6ec");
+            sfAIAssistView.Background = Color.FromHex("#94b6ec");
             this.Content = sfAIAssistView ;
         }
     }
@@ -95,7 +95,7 @@ To set an image as the background for the `SfAIAssistView`, set the `SfAIAssistV
              <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
                 <ResourceDictionary>
                     <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
-                    <Color x:Key="SfAIAssistViewBackground">transparent</Color>
+                    <Color x:Key="SfAIAssistViewBackground">Transparent</Color>
                 </ResourceDictionary>
             </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
           </syncTheme:SyncfusionThemeDictionary>
@@ -163,7 +163,7 @@ To apply a gradient view as a background to the AI AssistView, set the `SfAIAssi
              <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
                 <ResourceDictionary>
                     <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
-                    <Color x:Key="SfAIAssistViewBackground">transparent</Color>
+                    <Color x:Key="SfAIAssistViewBackground">Transparent</Color>
                 </ResourceDictionary>
             </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
           </syncTheme:SyncfusionThemeDictionary>
@@ -204,7 +204,7 @@ To apply a gradient view as a background to the AI AssistView, set the `SfAIAssi
             linearGradientBrush.GradientStops.Add(new GradientStop(Colors.SteelBlue, 0.5f));
             linearGradientBrush.GradientStops.Add(new GradientStop(Colors.LightSkyBlue, 0.75f));
             linearGradientBrush.GradientStops.Add(new GradientStop(Colors.LightGray, 1.0f));
-            this.AIAssistView.Background = linearGradientBrush;
+            this.sfAIAssistView.Background = linearGradientBrush;
             this.Content = sfAIAssistView;
         }
     }
@@ -849,7 +849,7 @@ To apply styles to the elements of the action view, set values to the in-built k
 </tr>
 <tr>
 <td> SfAIAssistViewNormalActionViewIconColor </td>
-<td> Icon color of the copy,retry,like, dislike icons. </td>
+<td> Icon color of the copy, retry, like, dislike icons. </td>
 </tr>
 <tr>
 <td> SfAIAssistViewSelectedLikeIconColor </td>
@@ -1062,14 +1062,14 @@ To modify the highlight color of selected text, you need to update the value ass
 {% highlight xaml %}
 
  <ContentPage.Resources>
-     <core:SyncfusionThemeDictionary>
-         <core:SyncfusionThemeDictionary.MergedDictionaries>
+     <syncTheme:SyncfusionThemeDictionary>
+         <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
              <ResourceDictionary>
                  <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
                  <Color x:Key="SfAIAssistViewSelectionTextHighLightColor">Orange</Color>
              </ResourceDictionary>
-         </core:SyncfusionThemeDictionary.MergedDictionaries>
-     </core:SyncfusionThemeDictionary>
+         </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+     </syncTheme:SyncfusionThemeDictionary>
  </ContentPage.Resources>
 
 {% endhighlight %}
@@ -1142,14 +1142,14 @@ To style the common suggestion view based on its appearance, set values to the i
         <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
             <ResourceDictionary>
                 <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
-		<Color x:Key="SfAIAssistViewHeaderSuggestionBackground">LightSkyBlue</Color>
-		<Color x:Key="SfAIAssistViewHeaderSuggestionItemStroke">BlueViolet</Color>
-		<x:Double x:Key="SfAIAssistViewHeaderSuggestionItemStrokeThickness">2</x:Double>
-		<Color x:Key="SfAIAssistViewHeaderSuggestionItemBackground">White</Color>
-		<Color x:Key="SfAIAssistViewHeaderSuggestionItemTextColor">Blue</Color>
-		<x:Double x:Key="SfAIAssistViewHeaderSuggestionItemFontSize">16</x:Double>
-		<FontAttributes x:Key="SfAIAssistViewHeaderSuggestionItemFontAttribute">Italic</FontAttributes>
-		<x:String x:Key="SfAIAssistViewEditorFontFamily">Roboto-Medium</x:String>
+                <Color x:Key="SfAIAssistViewHeaderSuggestionBackground">LightSkyBlue</Color>
+                <Color x:Key="SfAIAssistViewHeaderSuggestionItemStroke">BlueViolet</Color>
+                <x:Double x:Key="SfAIAssistViewHeaderSuggestionItemStrokeThickness">2</x:Double>
+                <Color x:Key="SfAIAssistViewHeaderSuggestionItemBackground">White</Color>
+                <Color x:Key="SfAIAssistViewHeaderSuggestionItemTextColor">Blue</Color>
+                <x:Double x:Key="SfAIAssistViewHeaderSuggestionItemFontSize">16</x:Double>
+                <FontAttributes x:Key="SfAIAssistViewHeaderSuggestionItemFontAttribute">Italic</FontAttributes>
+                <x:String x:Key="SfAIAssistViewEditorFontFamily">Roboto-Medium</x:String>
             </ResourceDictionary>
         </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
     </syncTheme:SyncfusionThemeDictionary>
@@ -1205,15 +1205,15 @@ To style the scroll to bottom button view based on its appearance, set values to
 {% highlight xaml %}
 
 <ContentPage.Resources>
-    <core:SyncfusionThemeDictionary>
-        <core:SyncfusionThemeDictionary.MergedDictionaries>
+    <syncTheme:SyncfusionThemeDictionary>
+        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
             <ResourceDictionary>
                 <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
                 <Color x:Key="SfAIAssistViewScrollToBottomButtonBackground">Orange</Color>
                 <Color x:Key="SfAIAssistViewScrollToBottomButtonIconColor">White</Color>
             </ResourceDictionary>
-        </core:SyncfusionThemeDictionary.MergedDictionaries>
-    </core:SyncfusionThemeDictionary>
+        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+    </syncTheme:SyncfusionThemeDictionary>
 </ContentPage.Resources>
 
 {% endhighlight %}
@@ -1263,8 +1263,8 @@ To style the action button view based on its appearance, set values to the in-bu
 {% highlight xaml %}
 
 <ContentPage.Resources>
-    <core:SyncfusionThemeDictionary>
-        <core:SyncfusionThemeDictionary.MergedDictionaries>
+    <syncTheme:SyncfusionThemeDictionary>
+        <syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
             <ResourceDictionary>
                 <x:String x:Key="SfAIAssistViewTheme">CustomTheme</x:String>
                 <Color x:Key="SfAIAssistViewActionButtonBackground">Orange</Color>
@@ -1272,8 +1272,8 @@ To style the action button view based on its appearance, set values to the in-bu
                 <Color x:Key="SfAIAssistViewActionButtonViewTextColor">Black</Color>
                 <Color x:Key="SfAIAssistViewActionButtonsPopupBackground">LightGray</Color>
             </ResourceDictionary>
-        </core:SyncfusionThemeDictionary.MergedDictionaries>
-    </core:SyncfusionThemeDictionary>
+        </syncTheme:SyncfusionThemeDictionary.MergedDictionaries>
+    </syncTheme:SyncfusionThemeDictionary>
 </ContentPage.Resources>
 
 {% endhighlight %}
