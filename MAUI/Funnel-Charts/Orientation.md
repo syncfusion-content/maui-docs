@@ -2,6 +2,7 @@
 layout: post
 title: Orientation in .NET MAUI Funnel Chart control (Syncfusion)
 description: Learn how to change the rendering direction of segments in .NET MAUI Funnel Chart (SfFunnelChart) using the Orientation property.
+platform: maui
 control: SfFunnelChart
 documentation: ug
 ---
