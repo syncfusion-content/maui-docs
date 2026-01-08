@@ -1271,7 +1271,7 @@ N> The [`OffsetUnit`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges
 
 ## Multiple axis
 
-The [`radial gauge`](https://help.syncfusion.com/maui/radialgauge/overview) allows you to add n number of radial axis in its axes collection. You can also customize individual axis added in the [`Axes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfRadialGauge.html#Syncfusion_Maui_Gauges_SfRadialGauge_Axes) collection.
+The [`radial gauge`](https://help.syncfusion.com/maui/radial-gauge/overview) allows you to add n number of radial axis in its axes collection. You can also customize individual axis added in the [`Axes`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.SfRadialGauge.html#Syncfusion_Maui_Gauges_SfRadialGauge_Axes) collection.
 
 {% tabs %}
 
