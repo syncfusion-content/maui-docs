@@ -380,7 +380,7 @@ Used to define major sections within your Markdown content.
 {% endhighlight %}
 {% endtabs %}
 
-N> For more details about binding Markdown content from various sources, refer to [MarkdownSources](/MarkdownSources.md).
+N> For more details about binding Markdown content from various sources, refer to [MarkdownSources](https://help.syncfusion.com/maui/markdownviewer/databinding).
 
 ![Output of Markdown Viewer](Images/maui-markdown-viewer-gettingstarted.png)
 
