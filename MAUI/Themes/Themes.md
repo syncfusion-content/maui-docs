@@ -21,7 +21,7 @@ By default, Syncfusion<sup>®</sup> offers support for both light and dark theme
 
 To apply themes to your application, merge the [SyncfusionThemeResourceDictionary](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Themes.SyncfusionThemeResourceDictionary.html) item.
 
-#### Theme resource dictionary
+### Theme resource dictionary
 
 This resource dictionary includes keys and their corresponding color codes for all Syncfusion<sup>®</sup> controls. Additionally, it contains the [VisualTheme](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Themes.SyncfusionThemeResourceDictionary.html#Syncfusion_Maui_Themes_SyncfusionThemeResourceDictionary_VisualTheme) property where we can declare the following four theme color values:
 
@@ -30,9 +30,11 @@ This resource dictionary includes keys and their corresponding color codes for a
 3. CupertinoLight
 4. CupertinoDark
 
-#### Automatic merging
+### Automatic merging
 
 When using multiple Syncfusion<sup>®</sup> controls in an application, to make the process easier for merging the control style dictionaries of the controls, the [SyncfusionThemeResourceDictionary](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Themes.SyncfusionThemeResourceDictionary.html) class has been provided for automatic merging.
+
+#### Using Material Dark theme
 
 {% highlight xaml %}
 
@@ -43,7 +45,6 @@ When using multiple Syncfusion<sup>®</sup> controls in an application, to make 
 <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <!-- Theme resource dictionary (example: Material Dark) -->
                 <syncTheme:SyncfusionThemeResourceDictionary VisualTheme="MaterialDark"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
@@ -57,18 +58,31 @@ When using multiple Syncfusion<sup>®</sup> controls in an application, to make 
 
 ![DarkThemeImage](Images/DarkTheme.png)
 
-### Cupertino design
+#### Using Cupertino Dark theme
 
-Syncfusion® themes include a **Cupertino** design that follows the same resource structure as **Material**, but with Cupertino-specific color values. This ensures visual consistency with Apple’s **human interface guidelines** while preserving the same resource keys and theming entry points across all Syncfusion® .NET MAUI controls.
+{% highlight xaml %}
 
-* **Availability:** `CupertinoLight` and `CupertinoDark` are supported for all platforms supported by Syncfusion® .NET MAUI controls
-* **Implementation:** The **Cupertino** themes use the same `SyncfusionThemeResourceDictionary` and keys you already use for **Material**. Only the **color tokens** vary by theme.
+<Application xmlns:base="clr-namespace:SampleBrowser.Maui.Base;assembly=SampleBrowser.Maui.Base"
+             xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
+             x:Class="SampleBrowser.Maui.App"
+             ...>
+<Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <syncTheme:SyncfusionThemeResourceDictionary VisualTheme="CupertinoDark"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+</Application.Resources>
+
+....
+
+</Application>
+
+{% endhighlight %}
 
 ## Overriding the default theme
 
 The theme resource dictionary contains a set of keys mapped to styles in control style dictionaries. The default appearance of themes can be customized by overriding the key values.
-
-This overriding mechanism applies to all VisualTheme values, including CupertinoLight and CupertinoDark. You can override any control-specific color keys exactly as you do with Material.
 
 The following section explains how to override the control specific keys.
 
@@ -108,7 +122,7 @@ In addition to the primary keys, the theme resource dictionary also contains the
 You can also create your own theme as an alternative approach to the above methods. To create your own theme, first, you need to merge the resource, whose key name should be "ControlName" + "Theme" based on the controls. For example, the SfChartTheme and SfTextInputLayoutTheme. You can find this key for each control in this [documentation](https://help.syncfusion.com/maui/themes/keys). After merging this resource, you need to merge the required color resources based on the UI elements that need to be customized. You can find the keys and the UI elements to which they are mapped to all the controls in this [documentation](https://help.syncfusion.com/maui/themes/keys).
 Using this approach, you can create your own theme for all the controls or specific controls you need.
 
-Create your own theme on top of MaterialDark:
+#### Customize MaterialDark theme
 
 {% highlight xaml %}
 
@@ -136,7 +150,7 @@ Create your own theme on top of MaterialDark:
 
 {% endhighlight %}
 
-Create your own theme on top of CupertinoDark:
+#### Customize CupertinoDark theme
 
 {% highlight xaml %}
 
@@ -165,5 +179,5 @@ Create your own theme on top of CupertinoDark:
 {% endhighlight %}
 
 N>
-* When `EnableLiquidGlassEffect` is enabled (iOS/macOS only), the UI will adapt to Liquid Glass design layered over Cupertino or Material themes.
-* The Liquid Glass Effect feature is available only in `.NET 10.` and supported on `macOS 26 or higher` and `iOS 26 or higher`
+* When Liquid Glass Effect is applied to controls, the UI adapts to the Liquid Glass design layered over the selected theme (`Cupertino` or `Material`).
+* The Liquid Glass Effect feature is available only in `.NET 10.` and is supported on `macOS 26 or higher` and `iOS 26 or higher`
