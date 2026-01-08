@@ -116,7 +116,7 @@ slider.ShowTicks = true;
 
 ![Slider label placement](images/labels-and-dividers/label-placement.png)
 
-N> Refer [here](https://help.syncfusion.com/maui/range-selector/events-and-commands) to customize the label text format through slider events.
+N> Refer [here](https://help.syncfusion.com/maui/datetime-slider/events-and-commands) to customize the label text format through slider events.
 
 ## Edge labels placement
 
