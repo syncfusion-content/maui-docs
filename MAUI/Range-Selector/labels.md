@@ -162,7 +162,7 @@ rangeSelector.Content = chart;
 
 ![RangeSelector label placement](images/labels-and-dividers/label-placement.png)
 
-N> Refer [here](https://help.syncfusion.com/maui/range-slider/events) to customize label text format through range slider events.
+N> Refer [here](https://help.syncfusion.com/maui/range-selector/events-and-commands) to customize label text format through range slider events.
 
 ## Edge labels placement
 
