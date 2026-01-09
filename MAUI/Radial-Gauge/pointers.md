@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Pointers in .NET MAUI Radial Gauge control | Syncfusion<sup>&reg;</sup>
+title: Pointers in .NET MAUI Radial Gauge control | Syncfusion®
 description: Learn here all about Pointers feature of Syncfusion<sup>&reg;</sup> .NET MAUI Radial Gauge control with multiple pointer support and more.
 platform: maui
 control: SfRadialGauge
@@ -13,8 +13,8 @@ documentation: ug
 
 * [`Shape pointer`](https://help.syncfusion.com/maui/radial-gauge/shape-pointer)
 * [`Content pointer`](https://help.syncfusion.com/maui/radial-gauge/content-pointer)
-* [`Needle Pointer`](https://help.syncfusion.com/maui/radialgauge/needle-pointer)
-* [`Range pointer`](https://help.syncfusion.com/maui/radialgauge/range-pointer)
+* [`Needle Pointer`](https://help.syncfusion.com/maui/radial-gauge/needle-pointer)
+* [`Range pointer`](https://help.syncfusion.com/maui/radial-gauge/range-pointer)
 
 All the pointers can be customized as needed. You can add multiple pointers to the gauge to point the multiple values on the same scale. The value of the pointer is set using the [`Value`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Gauges.RadialPointer.html#Syncfusion_Maui_Gauges_RadialPointer_Value) property.
 
