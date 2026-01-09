@@ -21,7 +21,7 @@ By default, Syncfusion<sup>®</sup> offers support for both light and dark theme
 
 To apply themes to your application, merge the [SyncfusionThemeResourceDictionary](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Themes.SyncfusionThemeResourceDictionary.html) item.
 
-### Theme resource dictionary
+#### Theme resource dictionary
 
 This resource dictionary includes keys and their corresponding color codes for all Syncfusion<sup>®</sup> controls. Additionally, it contains the [VisualTheme](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Themes.SyncfusionThemeResourceDictionary.html#Syncfusion_Maui_Themes_SyncfusionThemeResourceDictionary_VisualTheme) property where we can declare the following four theme color values:
 
@@ -30,11 +30,11 @@ This resource dictionary includes keys and their corresponding color codes for a
 3. CupertinoLight
 4. CupertinoDark
 
-### Automatic merging
+#### Automatic merging
 
 When using multiple Syncfusion<sup>®</sup> controls in an application, to make the process easier for merging the control style dictionaries of the controls, the [SyncfusionThemeResourceDictionary](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Themes.SyncfusionThemeResourceDictionary.html) class has been provided for automatic merging.
 
-#### Using Material Dark theme
+##### Using Material Dark theme
 
 {% highlight xaml %}
 
@@ -58,7 +58,7 @@ When using multiple Syncfusion<sup>®</sup> controls in an application, to make 
 
 ![DarkThemeImage](Images/DarkTheme.png)
 
-#### Using Cupertino Dark theme
+##### Using Cupertino Dark theme
 
 {% highlight xaml %}
 
@@ -79,6 +79,8 @@ When using multiple Syncfusion<sup>®</sup> controls in an application, to make 
 </Application>
 
 {% endhighlight %}
+
+![CupertinoDarkThemeImage](Images/CupertinoDarkTheme.png)
 
 ## Overriding the default theme
 
