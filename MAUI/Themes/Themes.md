@@ -45,6 +45,7 @@ When using multiple Syncfusion<sup>®</sup> controls in an application, to make 
 <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                <!-- Theme resource dictionary -->
                 <syncTheme:SyncfusionThemeResourceDictionary VisualTheme="MaterialDark"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
@@ -69,6 +70,7 @@ When using multiple Syncfusion<sup>®</sup> controls in an application, to make 
 <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                <!-- Theme resource dictionary -->
                 <syncTheme:SyncfusionThemeResourceDictionary VisualTheme="CupertinoDark"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
