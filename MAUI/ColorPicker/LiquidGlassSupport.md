@@ -33,6 +33,13 @@ SfColorPicker colorPicker = new SfColorPicker
     EnableLiquidGlassEffect = true
 };
 
+SfGlassEffectView liquidGlassView = new SfGlassEffectView
+{
+    CornerRadius = 16,
+    WidthRequest = 70,
+    Content = colorPicker
+};
+
 {% endhighlight %}
 {% endtabs %}
 
