@@ -20,7 +20,9 @@ N>
     <Grid>
         <!-- Background to make the glass effect visible while pressing the color picker -->
         <Image Source="wallpaper.jpg" Aspect="AspectFill" />
-        <colorPicker:SfColorPicker  EnableLiquidGlassEffect="True" />
+        <core:SfGlassEffectView CornerRadius="16" WidthRequest="70">
+            <colorPicker:SfColorPicker  EnableLiquidGlassEffect="True" />
+        </core:SfGlassEffectView>
     </Grid>
 
 {% endhighlight %}
