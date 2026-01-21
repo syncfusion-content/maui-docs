@@ -110,7 +110,7 @@ The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssis
         <local:ViewModel x:Name="viewModel"/>
     </ContentPage.BindingContext>
     <syncfusion:SfAIAssistView x:Name="assistView"
-                               ItemsSource="{Binding AssistItemsCollection}"
+                               AssistItems="{Binding AssistItemsCollection}"
                                ItemsSourceConverter="{Binding converter}" />
 </ContentPage>
 {% endhighlight %}

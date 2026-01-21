@@ -18,7 +18,7 @@ This section guides you through setting up and configuring AI AssistView (SfAIAs
 
 Before proceeding, ensure the following are in place:
 
- 1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
+ 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
  2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.8 or later).
 
 ## Step 1: Create a .NET MAUI project
@@ -39,9 +39,7 @@ The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) 
 
 {% tabs %}
 {% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 20" %}
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Microsoft.Maui.Hosting;
+using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
 namespace GettingStarted
@@ -74,10 +72,13 @@ namespace GettingStarted
 {% tabs %}
 {% highlight xaml hl_lines="4" %}
 
-    <ContentPage> 
-      . . .
-      xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView">
-      <syncfusion:SfAIAssistView />
+    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
+                 x:Class="MauiAssistView.MainPage">
+
+            <syncfusion:SfAIAssistView />
+
     </ContentPage>
 
 {% endhighlight %}
@@ -244,9 +245,9 @@ Here is the result of the previous codes,
 ## Prerequisites
 Before proceeding, ensure the following are in place:
 
-1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 2. Set up a .NET MAUI environment with Visual Studio Code.
-3. Ensure that the .NET MAUI extension is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code)
+3. Ensure that the .NET MAUI extension is installed and configured as described [here.](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-9.0&tabs=visual-studio-code)
 
 ## Step 1: Create a new .NET MAUI project
 
@@ -257,9 +258,10 @@ Before proceeding, ensure the following are in place:
 
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI AI AssistView NuGet package
  
- 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
- 2. Search for [Syncfusion.Maui.AIAssistView](https://www.nuget.org/packages/Syncfusion.Maui.AIAssistView) and install the latest version.
- 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
+1. Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
+2. Ensure you're in the project root directory where your .csproj file is located.
+3. Run the command `dotnet add package Syncfusion.Maui.AIAssistView` to install the Syncfusion<sup>®</sup> .NET MAUI AI AssistView package.
+4. To ensure all dependencies are installed, run `dotnet restore`.
 
 ## Step 3: Register the handler
 
@@ -267,9 +269,7 @@ The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) 
 
 {% tabs %}
 {% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 20" %}
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Microsoft.Maui.Hosting;
+using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
 namespace GettingStarted
@@ -302,10 +302,13 @@ namespace GettingStarted
 {% tabs %}
 {% highlight xaml hl_lines="4" %}
 
-    <ContentPage> 
-      . . .
-      xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView">
+    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
+                 x:Class="MauiAssistView.MainPage">
+
       <syncfusion:SfAIAssistView />
+
     </ContentPage>
 
 {% endhighlight %}
@@ -475,7 +478,7 @@ Here is the result of the previous codes,
 Before proceeding, ensure the following are set up:
 
 1. Ensure you have the latest version of JetBrains Rider.
-2. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
+2. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
 3. Make sure the MAUI workloads are installed and configured as described [here.](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start)
 
 ## Step 1: Create a new .NET MAUI project
@@ -496,9 +499,7 @@ The [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core) 
 
 {% tabs %}
 {% highlight c# tabtitle="MauiProgram.cs" hl_lines="4 20" %}
-using Microsoft.Maui.Controls.Hosting;
-using Microsoft.Maui.Controls.Xaml;
-using Microsoft.Maui.Hosting;
+using Microsoft.Extensions.Logging;
 using Syncfusion.Maui.Core.Hosting;
 
 namespace GettingStarted
@@ -531,10 +532,13 @@ namespace GettingStarted
 {% tabs %}
 {% highlight xaml hl_lines="4" %}
 
-    <ContentPage> 
-      . . .
-      xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView">
+    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:syncfusion="clr-namespace:Syncfusion.Maui.AIAssistView;assembly=Syncfusion.Maui.AIAssistView"
+                 x:Class="MauiAssistView.MainPage">
+
       <syncfusion:SfAIAssistView />
+
     </ContentPage>
 
 {% endhighlight %}
@@ -560,7 +564,7 @@ namespace GettingStarted
 
 ## Request and response item
  
-The [IsRequested](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_IsRequested) property is used to determine whether a item is a Request or a Response. If `IsRequested` property is set to `true`, the item is a Request item.
+The [IsRequested](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistItem.html#Syncfusion_Maui_AIAssistView_AssistItem_IsRequested) property is used to determine whether an item is a Request or a Response. If `IsRequested` property is set to `true`, the item is a Request item.
  
 ### Request item
 

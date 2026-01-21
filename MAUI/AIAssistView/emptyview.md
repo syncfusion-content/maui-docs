@@ -62,7 +62,7 @@ The `SfAIAssistView` control allows you to fully customize the empty view appear
                    VerticalOptions="Center">
                 <Border Background="#6C4EC2" 
                          Stroke="#CAC4D0"  
-                         HorizontalOptions="Center" >
+                         HorizontalOptions="Center">
                     <Border.StrokeShape>
                          <RoundRectangle CornerRadius="12"/>
                     </Border.StrokeShape>
