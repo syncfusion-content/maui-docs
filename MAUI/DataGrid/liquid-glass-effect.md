@@ -17,13 +17,13 @@ Follow these steps to enable and configure the Liquid Glass Effect in the DataGr
 
 ### Step 1: Wrap the control inside glass effect view
 
-To apply the Liquid Glass Effect to Syncfusion® .NET MAUI `SfDataGrid` control, wrap the control inside the `SfGlassEffectView` class.
+To apply the Liquid Glass Effect to Syncfusion® .NET MAUI [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) control, wrap the control inside the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) class.
 
-For more details, refer to the `Liquid Glass Getting Started documentation`.
+For more details, refer to the [Liquid Glass Getting Started documentation](https://help.syncfusion.com/maui/liquid-glass-ui/getting-started).
 
 ### Step 2: Enable the liquid glass effect on DataGrid
 
-Set the `EnableLiquidGlassEffect` property to `true` in the `SfDataGrid` control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its dependent surfaces such as the row/column dragging view, tooltip, popups, context menu, and editor drop-downs (e.g., ComboBox/Picker) when their corresponding backgrounds are set to `Transparent` for a smooth and engaging user experience.
+Set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_SfDataGrid_EnableLiquidGlassEffect) property to `true` in the [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) control to apply the Liquid Glass Effect. When enabled, the effect is also applied to its dependent surfaces such as the row/column dragging view, tooltip, popups, context menu, and editor drop-downs (e.g., ComboBox/Picker) when their corresponding backgrounds are set to `Transparent` for a smooth and engaging user experience.
 
 ### Step 3: Customize the background
 
@@ -110,6 +110,10 @@ this.Content = grid;
 
 {% endhighlight %}
 {% endtabs %}
+
+The following screenshot illustrates SfDataGrid within SfGlassEffectView.
+
+<img alt="MAUI DataGrid with liquid glass support" src="Images/liquidGlassEffect/maui-datagrid-Liquid-Glass-Effect.png" width="404" />   
 
 N>
 * Supported on `macOS 26 or higher` and `iOS 26 or higher`.
