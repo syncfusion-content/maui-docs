@@ -528,8 +528,9 @@ The following code example binds the collection created in the previous step to 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.SmartComponents;assembly=Syncfusion.Maui.SmartComponents"
-              xmlns:local="clr-namespace:GettingStarted"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.SmartComponents;assembly=Syncfusion.Maui.SmartComponents"
+             xmlns:sfgrid="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
+             xmlns:local="clr-namespace:GettingStarted"
              x:Class="GettingStarted.MainPage">
 
     <ContentPage.BindingContext>
@@ -537,15 +538,16 @@ The following code example binds the collection created in the previous step to 
     </ContentPage.BindingContext>
 
     <ContentPage.Content>
-        <syncfusion:SfSmartDataGrid x:Name="dataGrid"
+        <syncfusion:SfSmartDataGrid x:Name="smartDataGrid"
                                ItemsSource="{Binding OrderInfoCollection}">
         <syncfusion:SfSmartDataGrid.Columns>
-            <syncfusion:TextColumn HeaderText="Order ID" Format="0"
-                                            MappingName="OrderID" Width="150"/>
-            <syncfusion:TextColumn  HeaderText="Customer ID"
+            <sfgrid:DataGridNumericColumn HeaderText="Order ID" Format="0"
+                                            MappingName="OrderID" 
+                                            Width="150"/>
+            <sfgrid:DataGridTextColumn  HeaderText="Customer ID"
                                             MappingName="CustomerID"
                                             Width="150" />
-            <syncfusion:TextColumn  HeaderText="Ship Country"
+            <sfgrid:DataGridTextColumn  HeaderText="Ship Country"
                                             MappingName="ShipCountry"
                                             Width="150" />
         </syncfusion:SfSmartDataGrid.Columns>
