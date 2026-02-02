@@ -368,7 +368,7 @@ public partial class MainPage : ContentPage
 
 ### Displaying action buttons
 
-Bind the [ActionButtons](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ActionButtons) collection with one or more [ActionButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ActionButton.html) items to populate the popup. The `ActionButton` provides the properties. When the `ActionButton` icon is tapped, an action popup appears with the list of configured `ActionButton`. 
+Bind the [ActionButtons](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ActionButtons) collection with one or more [ActionButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ActionButton.html) items to populate the popup. The `ActionButton` provides the properties. When the `ActionButton` icon is tapped, an action popup appears with the list of configured `ActionButton`.
 
 - [Text](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ActionButton.html#Syncfusion_Maui_AIAssistView_ActionButton_Text): Displays the text for the action button.
 - [Icon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ActionButton.html#Syncfusion_Maui_AIAssistView_ActionButton_Icon): Displays an icon for the action button.
@@ -382,14 +382,14 @@ Bind the [ActionButtons](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIA
                            ShowActionButtons="True"
                            AssistItems="{Binding AssistItems}"> 
     <syncfusion:SfAIAssistView.ActionButtons> 
-        <syncfusion:ActionButton Text="Upload images" Icon="image.png" Command="{Binding UploadCommand}" /> 
-        <syncfusion:ActionButton Text="Search in web" Icon="web.png" Command="{Binding SearchCommand}" />
+        <syncfusion:ActionButton BindingContext="{x:Reference viewModel}" Text="Upload images" Icon="image.png" Command="{Binding UploadCommand}" /> 
+        <syncfusion:ActionButton BindingContext="{x:Reference viewModel}" Text="Search in web" Icon="web.png" Command="{Binding SearchCommand}" />
     </syncfusion:SfAIAssistView.ActionButtons> 
 </syncfusion:SfAIAssistView>
 
 {% endhighlight %}
 
-{% highlight c# hl_lines="15 17 23" %} 
+{% highlight c# hl_lines="15 17 24" %} 
 
 using Syncfusion.Maui.AIAssistView;
 
@@ -409,12 +409,14 @@ public partial class MainPage : ContentPage
         {
             new ActionButton
             {
+                BindingContext = this.viewModel;
                 Text = "Upload images",
                 Icon = ImageSource.FromFile("image.png"),
                 Command = this.viewModel.UploadCommand
             },
             new ActionButton
             {
+                BindingContext = this.viewModel;
                 Text = "Search in web",
                 Icon = ImageSource.FromFile("web.png"),
                 Command = this.viewModel.SearchCommand
