@@ -74,10 +74,10 @@ The following table describes the types of columns and their usage:
 <td>To display a Picker within each cell</td>
 </tr>
 <tr>
-<td>{{'[DataGridMultiColumnComboBoxColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridMultiColumnComboBoxColumn.html)'| markdownify }}</td>
-<td>{{'[DataGridMultiColumnComboBoxCellRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridMultiColumnComboBoxCellRenderer.html)'| markdownify }}</td>
+<td>{{'[DataGridMultiColumnComboBoxColumn]()'| markdownify }}</td>
+<td>{{'[DataGridMultiColumnComboBoxCellRenderer]()'| markdownify }}</td>
 <td>MultiColumnComboBox</td>
-<td>Use to display the IEnumerable data using {{'[SfMultiColumnComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfMultiColumnComboBox.html)'| markdownify }}.</td>
+<td>Use to display the IEnumerable data using [SfMultiColumnComboBox]() .</td>
 </tr>
 <tr>
 <td>{{'[DataGridUnboundColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundColumn.html)'| markdownify }}</td>
@@ -1426,9 +1426,9 @@ The `DataGridNumericColumn` allows formatting the numeric data with culture-spec
 
 ## DataGridMultiColumnComboBoxColumn
 
-The `DataGridMultiColumnComboBoxColumn` displays enumeration as cell contents and hosts a [SfMultiColumnComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfMultiColumnComboBox.html) in editing mode. This column type allows you to define the predefined columns in its drop-down, similar to SfDataGrid.
+The `DataGridMultiColumnComboBoxColumn` displays enumeration as cell contents and hosts a (SfMultiColumnComboBox)[] in editing mode. This column type allows you to define the predefined columns in its drop-down, similar to SfDataGrid.
 
-You can change the value by selecting the item from drop down or by editing the entry in `SfMultiColumnComboBox`. To disable text editing, set the [IsTextReadOnly](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridMultiColumnComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridMultiColumnComboBoxColumn_IsTextReadOnly) property to `true`.
+You can change the value by selecting the item from drop down or by editing the entry in `SfMultiColumnComboBox`. To disable text editing, set the (IsTextReadOnly)[] property to `true`.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1476,7 +1476,7 @@ this.dataGrid.Columns.Add(column);
 
 {% endtabs %}
 
-SfDataGrid triggers, [CurrentCellDropDownSelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CurrentCellDropDownSelectionChanged) event, when the SelectedValue is changed. [CurrentCellDropDownSelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.CurrentCellDropDownSelectionChangedEventArgs.html) of `CurrentCellDropDownSelectionChanged` event provides the information about the changed cell value.
+SfDataGrid triggers, (CurrentCellDropDownSelectionChanged)[] event, when the SelectedValue is changed. (CurrentCellDropDownSelectionChangedEventArgs)[] of `CurrentCellDropDownSelectionChanged` event provides the information about the changed cell value.
 
 `SelectedIndex` property returns the index of selected item.
 `SelectedItem` property returns the selected item from drop down list.
@@ -1485,26 +1485,26 @@ SfDataGrid triggers, [CurrentCellDropDownSelectionChanged](https://help.syncfusi
 
 ### Auto-complete support
 
-You can enable the `SfMultiColumnComboBox` to automatically complete the entered input value by setting the [AllowAutoComplete](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridMultiColumnComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridMultiColumnComboBoxColumn_AllowAutoComplete) property to `true`. When enabled, this property compares the entered text with each item in the underlying data source of `DataGridMultiColumnComboBoxColumn` and autocomplete the input with the matched value based on the DisplayMember.
+You can enable the `SfMultiColumnComboBox` to automatically complete the entered input value by setting the (AllowAutoComplete)[] property to `true`. When enabled, this property compares the entered text with each item in the underlying data source of `DataGridMultiColumnComboBoxColumn` and autocomplete the input with the matched value based on the DisplayMember.
 
 ### Filtering
 
-You can enable the `SfMultiColumnComboBox` to dynamically filter the drop-down list items based on the text typed in the entry by setting [AllowIncrementalFiltering](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridMultiColumnComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridMultiColumnComboBoxColumn_AllowAutoComplete) property to `true`. Additionally, `DataGridMultiColumnComboBoxColumn` allows filtering based on case sensitivity by setting [AllowCaseSensitiveFiltering](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridMultiColumnComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridMultiColumnComboBoxColumn_AllowCaseSensitiveFiltering) to `true`. These features help users to quickly select items from large list.
+You can enable the `SfMultiColumnComboBox` to dynamically filter the drop-down list items based on the text typed in the entry by setting (AllowIncrementalFiltering)[] property to `true`. Additionally, `DataGridMultiColumnComboBoxColumn` allows filtering based on case sensitivity by setting (AllowCaseSensitiveFiltering)[] to `true`. These features help users to quickly select items from large list.
 
 <img alt="DataGridMultiColumnComboBox column with Filtering .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-MultiColumn-ComboBox-column-filtering.png" width="404"/>
 
 ### Null value support
 
-You can allow null values in the column by setting the [AllowNullValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridMultiColumnComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridMultiColumnComboBoxColumn_AllowNullValue) property to `true`.
+You can allow null values in the column by setting the (AllowNullValue)[] property to `true`.
 
 N>
 The AllowNullValue will work only when the underlying property type is Nullable.
 
 ### Popup Size Customization
 
-You can change the size of drop-down popup by setting [PopupWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridMultiColumnComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridMultiColumnComboBoxColumn_PopupWidth) and [PopupHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridMultiColumnComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridMultiColumnComboBoxColumn_PopupHeight) properties. If these values are not set, the popup width defaults to the `PopupMinWidth` property, which is 200.0 by default. Similarly, the popup height defaults to the `PopupMinHeight` property, which is 300.0 by default.
+You can change the size of drop-down popup by setting (PopupWidth)[] and (PopupHeight)[] properties. If these values are not set, the popup width defaults to the `PopupMinWidth` property, which is 200.0 by default. Similarly, the popup height defaults to the `PopupMinHeight` property, which is 300.0 by default.
 
-Additionally, `SfMultiColumnComboBox` can automatically adjust the popup width based on the actual size of the SfDataGrid by setting the [IsAutoPopupSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridMultiColumnComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridMultiColumnComboBoxColumn_IsAutoPopupSize) property to `true`.
+Additionally, `SfMultiColumnComboBox` can automatically adjust the popup width based on the actual size of the SfDataGrid by setting the (IsAutoPopupSize)[] property to `true`.
 
 ### Loading different ItemsSource for each row
 
@@ -1582,11 +1582,11 @@ internal class ItemsSourceSelector : IItemsSourceSelector
 
 <img alt="DataGridMultiColumnComboBox column with ItemsSourceSelector .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-MultiColumn-ComboBox-column-itemsourceselector2.png" width="404"/>
 
-You can download the sample from the following link: [Sample](https://github.com/SyncfusionExamples/How-to-load-different-items-for-each-row-in-MultiColumn-ComboBox-Column-in-.NET-MAUI-SfDataGrid).
+You can download the sample from the following link: (Sample)[https://github.com/SyncfusionExamples/How-to-load-different-items-for-each-row-in-MultiColumn-ComboBox-Column-in-.NET-MAUI-SfDataGrid].
 
 ## DataGridHyperlinkColumn
 
-The [DataGridHyperlinkColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridHyperlinkColumn.html) inherits all the properties of the [DataGridTextColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTextColumn.html). It displays column data as clickable hyperlinks. It renders link text in each record cell and lets end users invoke navigation.
+The `DataGridHyperlinkColumn` inherits all the properties of the `DataGridTextColumn`. It displays column data as clickable hyperlinks. It renders link text in each record cell and lets end users invoke navigation.
 
 {% tabs %}
 {% highlight xaml %}
@@ -1613,9 +1613,9 @@ dataGrid.Columns.Add(hyperlinkColumn);
 
 {% endtabs %}
 
-You can enable end-users to navigate to a URI either when the cell value contains a valid URI address or by handling the [DataGridCurrentCellRequestNavigatingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCurrentCellRequestNavigatingEventArgs.html) event. The [CurrentCellRequestNavigating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_SfDataGrid_CurrentCellRequestNavigating) event is triggered whenever a cell in the `DataGridHyperlinkColumn` is clicked for navigation.
+You can enable end-users to navigate to a URI either when the cell value contains a valid URI address or by handling the `DataGridCurrentCellRequestNavigatingEventArgs` event. The `CurrentCellRequestNavigating` event is triggered whenever a cell in the `DataGridHyperlinkColumn` is clicked for navigation.
 
-The [DataGridCurrentCellRequestNavigatingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCurrentCellRequestNavigatingEventArgs.html) associated with the `CurrentCellRequestNavigating` event provides details about the hyperlink that initiated the action. Its [DataGridCurrentCellRequestNavigatingEventArgs.NavigateText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCurrentCellRequestNavigatingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCurrentCellRequestNavigatingEventArgs_NavigateText) property returns the value from the column’s `DisplayBinding` if one is defined; otherwise, it falls back to the value bound to `MappingName`.
+The `DataGridCurrentCellRequestNavigatingEventArgs` associated with the `CurrentCellRequestNavigating` event provides details about the hyperlink that initiated the action. Its `DataGridCurrentCellRequestNavigatingEventArgs.NavigateText` property returns the value from the column’s `DisplayBinding` if one is defined; otherwise, it falls back to the value bound to `MappingName`.
 
 {% tabs %}
 {% highlight C# %}
@@ -1633,7 +1633,7 @@ private void dataGrid_CurrentCellRequestNavigating(object sender, DataGridCurren
 
 
 ### Cancel the navigation
-You can cancel the navigation by setting [DataGridCurrentCellRequestNavigatingEventArgs.Cancel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCurrentCellRequestNavigatingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCurrentCellRequestNavigatingEventArgs_Cancel) to true.
+You can cancel the navigation by setting `DataGridCurrentCellRequestNavigatingEventArgs.Cancel` to true.
 
 {% tabs %}
 {% highlight C# %}
@@ -1651,7 +1651,7 @@ private void dataGrid_CurrentCellRequestNavigating(object sender, DataGridCurren
 
 #### HyperlinkTextColor
 
-You can set the hyperlink text color using the [HyperlinkTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_HyperlinkTextColor) property. If both HyperlinkTextColor and a DataGridCell TextColor (via implicit or explicit styles) are defined, HyperlinkTextColor takes precedence and will be used. If HyperlinkTextColor is not specified, the implicit or explicit cell styles will determine the hyperlink text color.
+You can set the hyperlink text color using the `HyperlinkTextColor` property. If both HyperlinkTextColor and a DataGridCell TextColor (via implicit or explicit styles) are defined, HyperlinkTextColor takes precedence and will be used. If HyperlinkTextColor is not specified, the implicit or explicit cell styles will determine the hyperlink text color.
 
 {% tabs %}
 {% highlight xaml %}

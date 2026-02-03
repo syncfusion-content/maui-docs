@@ -1,48 +1,41 @@
 ---
 layout: post
-title: Liquid Glass Support for .NET MAUI Numeric entry | Syncfusion®
-description: Learn here about providing liquid glass support for Syncfusion® .NET MAUI NumericEntry (SfNumericEntry) control and more.
+title: Liquid Glass Effect for .NET MAUI NumericEntry | Syncfusion®
+description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion® .NET MAUI NumericEntry (SfNumericEntry) control.
 platform: MAUI
 control: SfNumericEntry
 documentation: ug
 ---
 
-# Liquid Glass Support for .NET MAUI NumericEntry
+# Liquid Glass Effect in .NET MAUI NumericEntry (SfNumericEntry)
 
-The  [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) supports a `liquid glass` appearance by hosting the control inside the Syncfusion [SfGlassEffectView](). The acrylic view creates a blurred, translucent background that blends with the content behind it, producing a frosted `glass effect` around the entry. You can customize the effect using properties such as [EffectType](), [EnableShadowEffect](), and round the corners using [CornerRadius](). This approach improves visual depth and readability when SfNumericEntry is placed over images or colorful layouts.
+The Liquid Glass Effect introduces a modern, translucent design with adaptive color tinting and light refraction, creating a sleek, glass like user experience that remains clear and accessible. This section explains how to enable and customize the effect in the Syncfusion® .NET MAUI NumericEntry (SfNumericEntry) control.
 
-## Availability
+## Apply liquid glass effect
 
-1. This feature is supported on .NET 10 or greater.
-2. This feature is supported on mac or iOS 26 or greater.
-3. On platforms or versions below these requirements, the control renders without the acrylic blur effect and falls back to a standard background.
+Follow these steps to enable and configure the Liquid Glass Effect in the NumericEntry control:
 
-## Prerequisites
+### Step 1: Wrap the control inside glass effect view
 
-- Add the Syncfusion.Maui.Core package (for SfGlassEffectView) and Syncfusion.Maui.Inputs (for SfNumericEntry).
+To apply the Liquid Glass Effect to Syncfusion® .NET MAUI [NumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control, wrap the control inside the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) class.
 
-XAML example Wrap the `SfNumericEntry` in an `SfGlassEffectView` and adjust visual properties to achieve the desired glass effect.
+For more details, refer to the `Liquid Glass Getting Started documentation`.
+
+### Step 2: Customize the background
+
+To achieve a glass like background in the NumericEntry, set the `Background` property to `Transparent`. The background will then be treated as a tinted color, ensuring a consistent glass effect across the controls.
+
+The following code snippet demonstrates how to apply the Liquid Glass Effect to the `SfNumericEntry` control:
 
 {% tabs %}
-{% highlight xaml hl_lines="31" %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:inputs="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
-    xmlns:core="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
-    x:Class="AcrylicNumericEntryPage">
-
-    <!-- Background content to make the acrylic blur visible -->
+{% highlight xaml tabtitle="MainPage.xaml" %}
     <Grid>
-        <Image Source="wallpaper.jpg" Aspect="AspectFill" />
+    <Image Source="Wallpaper.png" Aspect="AspectFill">
         <core:SfGlassEffectView
             CornerRadius="20"
             HeightRequest="40"
             EffectType="Regular"
             EnableShadowEffect="True">
-
             <inputs:SfNumericEntry
                 Value="1234.56"
                 FormatString="N2"
@@ -53,13 +46,24 @@ XAML example Wrap the `SfNumericEntry` in an `SfGlassEffectView` and adjust visu
                 ShowClearButton="True" />
         </core:SfGlassEffectView>
     </Grid>
-</ContentPage>
 
 {% endhighlight %}
-{% highlight c# hl_lines="19" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 using Syncfusion.Maui.Core;
 using Syncfusion.Maui.Inputs;
+
+var grid = new Grid
+{
+    BackgroundColor = Colors.Transparent
+};
+
+var image = new Image
+{
+    Source = "Wallpaper.png",
+    Aspect = Aspect.AspectFill
+};
+grid.Children.Add(image);
 
 var glassEffect = new SfGlassEffectView
 {
@@ -81,11 +85,15 @@ var numericEntry = new SfNumericEntry
 };
 
 glassEffect.Content = numericEntry;
+grid.Children.Add(glassEffect);
+this.Content = grid;
 
 {% endhighlight %}
 {% endtabs %}
 
-
 The following screenshot illustrates SfNumericEntry within an acrylic container using the glass effect.
 
 ![numeric entry with liquid glass support](GettingStarted_images/NumericEntry_liquidGlass.png)
+
+N>
+This feature is supported only on .NET 10 along with iOS 26 and macOS 26 

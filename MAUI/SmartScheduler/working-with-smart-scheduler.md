@@ -202,7 +202,7 @@ The assist view prompt text can be customized by using the [Prompt](https://help
 </smartScheduler:SfSmartScheduler>
 
 {% endhighlight %}
-{% highlight C# hl_lines="2" %}
+{% highlight C# hl_lines="3" %}
 
 SfSmartScheduler smartScheduler = new SfSmartScheduler();
 smartScheduler.AssistViewSettings.Prompt = "Find 30-minute slots this week";
@@ -218,7 +218,7 @@ this.Content = smartScheduler;
 The assist view suggested prompts can be customized by using the [SuggestedPrompts](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SchedulerAssistViewSettings.html#Syncfusion_Maui_SmartComponents_SchedulerAssistViewSettings_SuggestedPrompts) property of the [AssistViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SchedulerAssistViewSettings.html). By default, the [SuggestedPrompts](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SchedulerAssistViewSettings.html#Syncfusion_Maui_SmartComponents_SchedulerAssistViewSettings_SuggestedPrompts) property is set to null.
 
 {% tabs %}
-{% highlight XAML hl_lines="7" %}
+{% highlight XAML hl_lines="8" %}
 
 <ContentPage.BindingContext>
     <local:ViewModel/>
@@ -226,7 +226,7 @@ The assist view suggested prompts can be customized by using the [SuggestedPromp
 
 <smartScheduler:SfSmartScheduler x:Name="smartScheduler">
     <smartScheduler:SfSmartScheduler.AssistViewSettings >
-        <smartScheduler:SchedulerAssistViewSettings SuggestedPrompts="{Binding SuggestedPrompts}" ShowAssistViewBanner="True"/>
+        <smartScheduler:SchedulerAssistViewSettings ShowAssistViewBanner="True" SuggestedPrompts="{Binding SuggestedPrompts}"/>
     </smartScheduler:SfSmartScheduler.AssistViewSettings>
 </smartScheduler:SfSmartScheduler>
 
@@ -286,7 +286,7 @@ The assist view banner visibility can be customized by using the [ShowAssistView
 </smartScheduler:SfSmartScheduler>
 
 {% endhighlight %}
-{% highlight C# tabtitle="MainPage.xaml.cs" %}
+{% highlight C# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
 
 this.smartScheduler.AssistViewSettings.AssistViewBannerTemplate = new DataTemplate(() =>
 {

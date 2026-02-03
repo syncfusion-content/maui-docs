@@ -210,7 +210,7 @@ checkBox.CheckedChanged += CheckBox_CheckedChanged;
 {% endhighlight %}
 {% endtabs %}
 
-`EmptyView` is changed based on value of [CheckBox.IsChecked](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfCheckBox.html#Syncfusion_Maui_Buttons_SfCheckBox_IsChecked) property at run time.
+`EmptyView` is changed based on value of [CheckBox.IsChecked](vhttps://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.checkbox.ischecked?view=net-maui-7.0) property at run time.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}

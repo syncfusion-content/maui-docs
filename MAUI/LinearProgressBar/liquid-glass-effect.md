@@ -17,9 +17,9 @@ Follow these steps to enable and configure the Liquid Glass Effect in the Linear
 
 ### Step 1: Wrap the control inside glass effect view
 
-To apply the Liquid Glass Effect to the Syncfusion® .NET MAUI [LinearProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html) control, wrap the control inside the [SfGlassEffectView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfGlassEffectView.html) class.
+To apply the Liquid Glass Effect to the Syncfusion® .NET MAUI [LinearProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html) control, wrap the control inside the `SfGlassEffectView` class.
 
-For more details, refer to the [Liquid Glass Getting Started documentation](https://help.syncfusion.com/maui/liquid-glass-ui/getting-started).
+For more details, refer to the `Liquid Glass Getting Started documentation`.
 
 ### Step 2: Customize the background
 
@@ -28,7 +28,7 @@ To achieve a glass like background in the Linear Progress Bar, set the `Backgrou
 The following code snippet demonstrates how to apply the Liquid Glass Effect to the [SfLinearProgressBar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ProgressBar.SfLinearProgressBar.html) control:
 
 {% tabs %}
-{% highlight xaml hl_lines="14 15 16 24 25" %}
+{% highlight xaml hl_lines="14 15 16 25" %}
 
 <Grid>
     <Grid.Background>
@@ -59,7 +59,7 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
 </Grid>
 
 {% endhighlight %}
-{% highlight c# hl_lines="19 20 21 22 23 24 34 37 38" %}
+{% highlight c# hl_lines="19 21 22 23 37 38" %}
 
 var gradientBrush = new LinearGradientBrush
 {
@@ -104,8 +104,6 @@ this.Content = grid;
 
 {% endhighlight %}
 {% endtabs %}
-
-![liquid-glass-ui-in-.net-maui-linearprogressbar-control](images/liquid-ui/liquid-glass-ui-in-.net-maui-linearprogressbar-control.gif)
 
 N>
 * Supported on `macOS 26 or higher` and `iOS 26 or higher`.
