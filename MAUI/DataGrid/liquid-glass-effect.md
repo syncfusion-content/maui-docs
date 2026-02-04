@@ -115,6 +115,7 @@ The following screenshot illustrates SfDataGrid within SfGlassEffectView.
 
 <img alt="MAUI DataGrid with liquid glass support" src="Images/liquidGlassEffect/maui-datagrid-Liquid-Glass-Effect.png" width="404" />   
 
+
 N>
 * Supported on `macOS 26 or higher` and `iOS 26 or higher`.
 * This feature is available only in `.NET 10.`
