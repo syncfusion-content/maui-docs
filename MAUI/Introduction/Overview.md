@@ -7,8 +7,7 @@ control: Overview
 documentation: UG
 ---
 
-# Welcome to Syncfusion® Essential Studio® for .NET MAUI
-
+# Welcome to Syncfusion<sup>®</sup> Essential Studio<sup>®</sup> for .NET MAUI
 
 Essential Studio<sup>®</sup> for .NET MAUI is a comprehensive collection of .NET MAUI components designed for building modern Mobile and Desktop applications. This suite includes our first set of .NET MAUI UI controls such as Charts, Gauge, and Tab View.
 
@@ -30,6 +29,6 @@ Essential Studio<sup>®</sup> for .NET MAUI is a comprehensive collection of .NE
 
 ## Support and feedback
 
-If you cannot find the information you are looking for in the self-help resources mentioned above, please contact us by creating a [support ticket](https://support.syncfusion.com/support/tickets/create).
+If you cannot find the information you are looking for in the self-help resources mentioned above, please contact us by creating a [support ticket](support.syncfusion.com/support/tickets/create).
 
 If you do not find what you need, please make a request in our [feedback portal](https://www.syncfusion.com/feedback/maui).

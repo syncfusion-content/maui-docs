@@ -23,18 +23,14 @@ To apply themes to your application, merge the [SyncfusionThemeResourceDictionar
 
 #### Theme resource dictionary
 
-This resource dictionary includes keys and their corresponding color codes for all Syncfusion<sup>®</sup> controls. Additionally, it contains the [VisualTheme](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Themes.SyncfusionThemeResourceDictionary.html#Syncfusion_Maui_Themes_SyncfusionThemeResourceDictionary_VisualTheme) property where we can declare the following four theme color values:
+This resource dictionary includes keys and their corresponding color codes for all Syncfusion<sup>®</sup> controls. Additionally, it contains the [VisualTheme](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Themes.SyncfusionThemeResourceDictionary.html#Syncfusion_Maui_Themes_SyncfusionThemeResourceDictionary_VisualTheme) property where we can declare the following two theme color values:
 
 1. MaterialLight
 2. MaterialDark
-3. CupertinoLight
-4. CupertinoDark
 
 #### Automatic merging
 
 When using multiple Syncfusion<sup>®</sup> controls in an application, to make the process easier for merging the control style dictionaries of the controls, the [SyncfusionThemeResourceDictionary](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Themes.SyncfusionThemeResourceDictionary.html) class has been provided for automatic merging.
-
-##### Using Material Dark theme
 
 {% highlight xaml %}
 
@@ -58,31 +54,6 @@ When using multiple Syncfusion<sup>®</sup> controls in an application, to make 
 {% endhighlight %}
 
 ![DarkThemeImage](Images/DarkTheme.png)
-
-##### Using Cupertino Dark theme
-
-{% highlight xaml %}
-
-<Application xmlns:base="clr-namespace:SampleBrowser.Maui.Base;assembly=SampleBrowser.Maui.Base"
-             xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
-             x:Class="SampleBrowser.Maui.App"
-             ...>
-<Application.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <!-- Theme resource dictionary -->
-                <syncTheme:SyncfusionThemeResourceDictionary VisualTheme="CupertinoDark"/>
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-</Application.Resources>
-
-....
-
-</Application>
-
-{% endhighlight %}
-
-![CupertinoDarkThemeImage](Images/CupertinoDarkTheme.png)
 
 ## Overriding the default theme
 
@@ -126,8 +97,6 @@ In addition to the primary keys, the theme resource dictionary also contains the
 You can also create your own theme as an alternative approach to the above methods. To create your own theme, first, you need to merge the resource, whose key name should be "ControlName" + "Theme" based on the controls. For example, the SfChartTheme and SfTextInputLayoutTheme. You can find this key for each control in this [documentation](https://help.syncfusion.com/maui/themes/keys). After merging this resource, you need to merge the required color resources based on the UI elements that need to be customized. You can find the keys and the UI elements to which they are mapped to all the controls in this [documentation](https://help.syncfusion.com/maui/themes/keys).
 Using this approach, you can create your own theme for all the controls or specific controls you need.
 
-#### Customize MaterialDark theme
-
 {% highlight xaml %}
 
 <Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
@@ -154,34 +123,4 @@ Using this approach, you can create your own theme for all the controls or speci
 
 {% endhighlight %}
 
-#### Customize CupertinoDark theme
-
-{% highlight xaml %}
-
-<Application xmlns:syncTheme="clr-namespace:Syncfusion.Maui.Themes;assembly=Syncfusion.Maui.Core"
-             ...>
- <Application.Resources>
-    <ResourceDictionary>
-        <ResourceDictionary.MergedDictionaries>
-            <syncTheme:SyncfusionThemeResourceDictionary VisualTheme="CupertinoDark"/>
-            <ResourceDictionary>
-                <x:String x:Key="SfRadialGaugeTheme">CommonTheme</x:String>
-                <Color x:Key="SfRadialGaugeNeedlePointerNeedleFillColor">LimeGreen</Color>
-                <Color x:Key="SfRadialGaugeNeedlePointerKnobFillColor">LimeGreen</Color>
-                <Color x:Key="SfRadialGaugeNeedlePointerTailFillColor">Black</Color>
-                <Color x:Key="SfRadialGaugeAxisLineFillColor">Green</Color>
-                <Color x:Key="SfRadialGaugeRangePointerFillColor">LimeGreen</Color>
-            </ResourceDictionary>
-        </ResourceDictionary.MergedDictionaries>
-    </ResourceDictionary>
-</Application.Resources>
-
-....
-
-</Application>
-
-{% endhighlight %}
-
-N>
-* When Liquid Glass Effect is applied to controls, the UI adapts to the Liquid Glass design layered over the selected theme (`Cupertino` or `Material`).
-* The Liquid Glass Effect feature is available only in `.NET 10.` and is supported on `macOS 26 or higher` and `iOS 26 or higher`
+ 

@@ -20,7 +20,7 @@ N>
 
 ## UI Grouping
 
-You can enable data grouping in the SfDataGrid by setting the `SfDataGrid.AllowGrouping` property to `true`. This allows end users to group data by dragging and dropping columns into the GroupDropArea. When a column is grouped, all records with the same value in that column are organized together in a group.
+You can enable data grouping in the SfDataGrid by setting the [SfDataGrid.AllowGrouping](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowGrouping) property to `true`. This allows end users to group data by dragging and dropping columns into the GroupDropArea. When a column is grouped, all records with the same value in that column are organized together in a group.
 
 {% tabs %}
 {% highlight xaml %}
@@ -46,7 +46,7 @@ A `CaptionSummaryRow` displays details about its group, such as the group name a
 
 #### GroupDropAreaText
 
-You can modify the GroupDropArea text by setting the `SfDataGrid.GroupDropAreaText` property.
+You can modify the GroupDropArea text by setting the [SfDataGrid.GroupDropAreaText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_GroupDropAreaText) property.
 
 {% tabs %}
 {% highlight xaml %}
@@ -66,7 +66,7 @@ dataGrid.GroupDropAreaText = "Drag and drop the column here";
 
 #### GroupDropAreaHeight
 
-Use the `SfDataGrid.GroupDropAreaHeight` property to control the vertical size of the GroupDropArea (the region where users drag column headers to create groups).
+Use the [SfDataGrid.GroupDropAreaHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_GroupDropAreaHeight) property to control the vertical size of the GroupDropArea (the region where users drag column headers to create groups).
 
 {% tabs %}
 {% highlight xaml %}
@@ -88,13 +88,13 @@ dataGrid.GroupDropAreaHeight = 100;
 
 You can style the `GroupDropArea` using the following SfDataGrid properties:
 
-* `GroupDropAreaStrokeThickness:` Sets the border thickness of the GroupDropArea.
-* `GroupDropAreaStroke:` Sets the border color of the GroupDropArea.
-* `GroupDropAreaBackgroundColor:` Sets the background color of the GroupDropArea.
-* `GroupDropAreaTextColor:` Sets the color of the instructional text displayed in the GroupDropArea.
-* `GroupDropAreaFontSize:` Sets the font size of the GroupDropArea text.
-* `GroupDropAreaFontFamily:` Sets the font family used for the GroupDropArea text.
-* `GroupDropAreaFontAttribute:` Sets the font style of the GroupDropArea text.
+* [GroupDropAreaStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_GroupDropAreaStrokeThickness): Sets the border thickness of the GroupDropArea.
+* [GroupDropAreaStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_GroupDropAreaStroke): Sets the border color of the GroupDropArea.
+* [GroupDropAreaBackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_GroupDropAreaBackgroundColor): Sets the background color of the GroupDropArea.
+* [GroupDropAreaTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_GroupDropAreaTextColor): Sets the color of the instructional text displayed in the GroupDropArea.
+* [GroupDropAreaFontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_GroupDropAreaFontSize): Sets the font size of the GroupDropArea text.
+* [GroupDropAreaFontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_GroupDropAreaFontFamily): Sets the font family used for the GroupDropArea text.
+* [GroupDropAreaFontAttribute](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_GroupDropAreaFontAttribute): Sets the font style of the GroupDropArea text.
 
 {% tabs %}
 {% highlight xaml %}
@@ -133,14 +133,14 @@ dataGrid.DefaultStyle = defaultStyle;
 
 You can style the `GroupDropAreaItem` using the following SfDataGrid properties:
 
-* `GroupDropItemBackgroundColor:` Sets the background color of the GroupDropItem.
-* `GroupDropItemTextColor:` Sets the color of the text displayed in the GroupDropItem.
-* `GroupDropItemFontSize:` Sets the font size of the GroupDropItem text.
-* `GroupDropItemFontFamily:` Sets the font family used for the GroupDropItem text.
-* `GroupDropItemFontAttribute:`  Sets the font style of the GroupDropItem text.
-* `GroupDropItemStrokeThickness:` Sets the border thickness of the GroupDropItem.
-* `GroupDropItemStroke:` Sets the border color of the GroupDropItem.
-* `GroupDropItemCloseIconColor:` Sets the color of the close icon displayed in the GroupDropItem.
+* [GroupDropItemBackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_GroupDropItemBackgroundColor): Sets the background color of the GroupDropItem.
+* [GroupDropItemTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_GroupDropItemTextColor): Sets the color of the text displayed in the GroupDropItem.
+* [GroupDropItemFontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_GroupDropItemFontSize): Sets the font size of the GroupDropItem text.
+* [GroupDropItemFontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_GroupDropItemFontFamily): Sets the font family used for the GroupDropItem text.
+* [GroupDropItemFontAttribute](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_GroupDropItemFontAttribute):  Sets the font style of the GroupDropItem text.
+* [GroupDropItemStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_GroupDropItemStrokeThickness): Sets the border thickness of the GroupDropItem.
+* [GroupDropItemStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_GroupDropItemStroke): Sets the border color of the GroupDropItem.
+* [GroupDropItemCloseIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_GroupDropItemCloseIconColor): Sets the color of the close icon displayed in the GroupDropItem.
 
 {% tabs %}
 {% highlight xaml %}

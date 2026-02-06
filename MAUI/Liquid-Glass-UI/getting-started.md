@@ -849,7 +849,7 @@ this.Content = mainGrid;
 Enable glass effect that respond to user interactions with clear transparency and dynamic lighting for an engaging UI. To enable this feature, set the [EnableLiquidGlassEffect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html#Syncfusion_Maui_Buttons_SfButton_EnableLiquidGlassEffect) property to `true` on the Syncfusion® [SfButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.SfButton.html) control. This activates interaction-based visual effects.
 
 {% tabs %}
-{% highlight XAML hl_lines="19" %}
+{% highlight XAML %}
 
 <Grid>
     <Grid.Background>
@@ -880,7 +880,7 @@ Enable glass effect that respond to user interactions with clear transparency an
 </Grid>
 
 {% endhighlight %}
-{% highlight C# hl_lines="33" %}
+{% highlight C# %}
 
 // Outer grid with gradient background
 var mainGrid = new Grid
@@ -937,6 +937,4 @@ this.Content = mainGrid;
 {% endhighlight %}
 {% endtabs %}
 
-![liquid-glass-ui-with-interactive-effect-in-.net-maui](images/getting-started/liquid-glass-ui-with-interactive-effect-in-.net-maui.gif)
-
-N> View sample in [GitHub](https://github.com/syncfusion/maui-demos/tree/master/MAUI/LiquidGlass).
+N> View sample in [GitHub](https://github.com/syncfusion/maui-demos).
