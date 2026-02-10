@@ -7,7 +7,7 @@ control: SfScheduler
 documentation: ug
 ---
 
-## Accessibility Support in .NET MAUI Scheduler (SfScheduler)
+# Accessibility Support in .NET MAUI Scheduler (SfScheduler)
 
 Accessibility support in `SfScheduler` is designed to provide voice descriptions of scheduler elements and scheduled events.
 
