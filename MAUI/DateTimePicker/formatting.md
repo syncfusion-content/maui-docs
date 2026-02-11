@@ -46,9 +46,9 @@ The different types of formats are:
 
 [`yyyy_MMMM`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerDateFormat.html#Syncfusion_Maui_Picker_PickerDateFormat_yyyy_MMMM) - Represents the year month in yyyy/MMMM format.
 
-[`yyyy_MM_dd`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerDateFormat.html#Syncfusion_Maui_Picker_PickerDateFormat_yyyy_MMM_dd) - Represents the year month day in yyyyy/MMM/dd format.
+[`yyyy_MMM_dd`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerDateFormat.html#Syncfusion_Maui_Picker_PickerDateFormat_yyyy_MMM_dd) - Represents the year month day in yyyy/MMM/dd format.
 
-[`yyyy_MMMM_dd`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerDateFormat.html#Syncfusion_Maui_Picker_PickerDateFormat_yyyy_MMMM_dd) - Represents the year month day in yyyyy/MMMM/dd format.
+[`yyyy_MMMM_dd`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerDateFormat.html#Syncfusion_Maui_Picker_PickerDateFormat_yyyy_MMMM_dd) - Represents the year month day in yyyy/MMMM/dd format.
 
 [`dd_MMM`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerDateFormat.html#Syncfusion_Maui_Picker_PickerDateFormat_dd_MMM) - Represents the day month in dd/MMM format.
 
