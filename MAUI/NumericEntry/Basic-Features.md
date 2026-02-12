@@ -214,6 +214,25 @@ async void OnNumericEntryCompleted(object sender, EventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
+## ClearButtonClicked Event
+
+The [ClearButtonClicked]() event is raised when the user taps the clear button on an `SfNumericEntry`. Use this event to handle cleanup, clear model state, close the dropdown, or perform navigation. The handler receives standard EventArgs and can access the sender (the `SfNumericEntry`) to read or modify its state.
+
+{% tabs %}
+{% highlight C# %}
+
+    SfNumericEntry numericEntry = new SfNumericEntry();
+    numericEntry.ClearButtonClicked += OnNumericEntryClearButtonClicked;
+
+    async void OnNumericEntryClearButtonClicked(object sender, EventArgs e)
+    {
+        // Function used to handle cleanup,
+        // clear model state, close the dropdown, or perform navigation
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Stroke
 
 The NumericEntry border color can be changed by using the [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Stroke) property. The default `Stroke` color is **Black**.
