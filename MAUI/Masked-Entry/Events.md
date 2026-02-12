@@ -69,3 +69,21 @@ private async void MaskedEntry_ValueChanged(object sender, MaskedEntryValueChang
 {% endhighlight %}
 {% endtabs %}
 
+## Completed Event
+
+The [Completed]() event is raised when the user finalizes input via the platform Return/Done action on a `MaskedEntry`. Use this event to perform final validation, formatting, or navigation. The handler receives standard EventArgs from the sender.
+
+{% tabs %}
+{% highlight C# %}
+
+    SfMaskedEntry maskedEntry = new SfMaskedEntry();
+    maskedEntry.Completed += OnMaskedEntryCompleted;
+
+    async void OnMaskedEntryCompleted(object sender, EventArgs e)
+    {
+        // Finalize input (validate, format, navigate, etc.)
+    }
+
+{% endhighlight %}
+{% endtabs %}
+

@@ -196,6 +196,24 @@ public partial class MainPage : ContentPage
 
 ![.NET MAUI NumericEntry with ValueChange Mode](GettingStarted_images/valuechangemode.gif)
 
+## Completed Event
+
+The [Completed]() event is raised when the user finalizes input via the platform Return/Done action on a `NumericEntry`. Use this event to perform final validation, formatting, or navigation. The handler receives standard EventArgs from the sender.
+
+{% tabs %}
+{% highlight C# %}
+
+    SfNumericEntry numericEntry = new SfNumericEntry();
+    numericEntry.Completed += OnNumericEntryCompleted;
+
+async void OnNumericEntryCompleted(object sender, EventArgs e)
+{
+    // Finalize input (validate, format, navigate, etc.)
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Stroke
 
 The NumericEntry border color can be changed by using the [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Stroke) property. The default `Stroke` color is **Black**.
