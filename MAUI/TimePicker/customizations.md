@@ -879,7 +879,7 @@ this.Content = timePicker;
 Customize the hour column width of the `Time Picker` using the [HourColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_HourColumnWidth) property in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
 
 N>
-* In custom column width, hour, minute, second, meridiem and millisecond columns are applicable for `SfTimePicker` and `SfDatetimepicker` only.
+* In custom column width, hour, minute, second, meridiem and millisecond columns are applicable for `SfTimePicker` and `SfDateTimePicker` only.
 
 {% tabs %}
 
