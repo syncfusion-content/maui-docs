@@ -715,3 +715,294 @@ this.Content = picker;
 {% endtabs %}
 
 ![Time picker coloumn divider color in .NET MAUI Time picker.](images/customizations/maui-time-picker-column-divider-color.png)
+
+### Customization of the hour column text style
+
+Customize the hour column text style of the `Time Picker` using The [HourColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_HourColumnTextStyle) property of the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
+
+N>
+* In custom column textstyle, hour, minute, second, meridiem and milli second columns are applicable for `SfTimePicker` and `SfDatetimepicker` only.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfTimePicker x:Name="timePicker" >
+    <picker:SfTimePicker.HourColumnTextStyle>
+        <picker:PickerTextStyle FontSize="15" TextColor="DeepPink"/>
+    </picker:SfTimePicker.HourColumnTextStyle>
+</picker:SfTimePicker>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.HourColumnTextStyle = new PickerTextStyle()
+{
+    TextStyle = new PickerTextStyle()
+    {
+        TextColor = Colors.DeepPink,
+        FontSize = 15,
+    }
+};
+
+this.Content = timePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the minute column text style
+
+Customize the minute column text style of the `Time Picker` using The [MinuteColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MinuteColumnTextStyle) property of the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfTimePicker x:Name="timePicker" >
+    <picker:SfTimePicker.MinuteColumnTextStyle>
+        <picker:PickerTextStyle FontSize="15" TextColor="MediumPurple"/>
+    </picker:SfTimePicker.MinuteColumnTextStyle>
+</picker:SfTimePicker>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.MinuteColumnTextStyle = new PickerTextStyle()
+{
+    TextStyle = new PickerTextStyle()
+    {
+        TextColor = Colors.MediumPurple,
+        FontSize = 15,
+    }
+};
+
+this.Content = timePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the second column text style
+
+Customize the second column text style of the `Time Picker` using The [SecondColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_SecondColumnTextStyle) property of the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfTimePicker x:Name="timePicker" >
+    <picker:SfTimePicker.SecondColumnTextStyle>
+        <picker:PickerTextStyle FontSize="15" TextColor="DarkCyan"/>
+    </picker:SfTimePicker.SecondColumnTextStyle>
+</picker:SfTimePicker>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.SecondColumnTextStyle = new PickerTextStyle()
+{
+    TextStyle = new PickerTextStyle()
+    {
+        TextColor = Colors.DarkCyan,
+        FontSize = 15,
+    }
+};
+
+this.Content = timePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the meridiem column text style
+
+Customize the meridiem column text style of the `Time Picker` using The [MeridiemColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MeridiemColumnTextStyle) property of the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfTimePicker x:Name="timePicker" >
+    <picker:SfTimePicker.MeridiemColumnTextStyle>
+        <picker:PickerTextStyle FontSize="15" TextColor="DarkCyan"/>
+    </picker:SfTimePicker.MeridiemColumnTextStyle>
+</picker:SfTimePicker>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.MeridiemColumnTextStyle = new PickerTextStyle()
+{
+    TextStyle = new PickerTextStyle()
+    {
+        TextColor = Colors.DarkCyan,
+        FontSize = 15,
+    }
+};
+
+this.Content = timePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the milli second column text style
+
+Customize the milli second column text style of the `Time Picker` using The [MilliSecondColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MilliSecondColumnTextStyle) property of the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfTimePicker x:Name="timePicker" >
+    <picker:SfTimePicker.MilliSecondColumnTextStyle>
+        <picker:PickerTextStyle FontSize="15" TextColor="DarkCyan"/>
+    </picker:SfTimePicker.MilliSecondColumnTextStyle>
+</picker:SfTimePicker>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.MilliSecondColumnTextStyle = new PickerTextStyle()
+{
+    TextStyle = new PickerTextStyle()
+    {
+        TextColor = Colors.DarkCyan,
+        FontSize = 15,
+    }
+};
+
+this.Content = timePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the hour column width
+
+Customize the hour column width of the `Time Picker` using the [HourColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_HourColumnWidth) property in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
+
+N>
+* In custom column width, hour, minute, second, meridiem and milli second columns are applicable for `SfTimePicker` and `SfDatetimepicker` only.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfTimePicker x:Name="timePicker" HourColumnWidth="150"/>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.HourColumnWidth = 150;
+
+this.Content = timePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the minute column width
+
+Customize the minute column width of the `Time Picker` using the [MinuteColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MinuteColumnWidth) property in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfTimePicker x:Name="timePicker" MinuteColumnWidth="150"/>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.MinuteColumnWidth = 150;
+
+this.Content = timePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the second column width
+
+Customize the second column width of the `Time Picker` using the [SecondColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_SecondColumnWidth) property in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfTimePicker x:Name="timePicker" SecondColumnWidth="150"/>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.SecondColumnWidth = 150;
+
+this.Content = timePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the meridiem column width
+
+Customize the meridiem column width of the `Time Picker` using the [MeridiemColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MeridiemColumnWidth) property in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfTimePicker x:Name="timePicker" MeridiemColumnWidth="150"/>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.MeridiemColumnWidth = 150;
+
+this.Content = timePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the milli second column width
+
+Customize the milli second column width of the `Time Picker` using the [MilliSecondColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MilliSecondColumnWidth) property in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfTimePicker x:Name="timePicker" MilliSecondColumnWidth="150"/>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.MilliSecondColumnWidth = 150;
+
+this.Content = timePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
