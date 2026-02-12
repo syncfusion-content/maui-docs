@@ -683,11 +683,8 @@ Customize the day column text style of the `Date Time Picker` using The [DayColu
 SfDateTimePicker dateTimePicker = new SfDateTimePicker();
 dateTimePicker.DayColumnTextStyle = new PickerTextStyle()
 {
-    TextStyle = new PickerTextStyle()
-    {
-        TextColor = Colors.DeepPink,
-        FontSize = 15,
-    }
+    TextColor = Colors.DeepPink,
+    FontSize = 15,
 };
 
 this.Content = dateTimePicker;
@@ -717,11 +714,8 @@ Customize the month column text style of the `Date Time Picker` using The [Month
 SfDateTimePicker dateTimePicker = new SfDateTimePicker();
 dateTimePicker.MonthColumnTextStyle = new PickerTextStyle()
 {
-    TextStyle = new PickerTextStyle()
-    {
-        TextColor = Colors.MediumPurple,
-        FontSize = 15,
-    }
+    TextColor = Colors.MediumPurple,
+    FontSize = 15,
 };
 
 this.Content = dateTimePicker;
@@ -751,11 +745,8 @@ Customize the year column text style of the `Date Time Picker` using The [YearCo
 SfDateTimePicker dateTimePicker = new SfDateTimePicker();
 dateTimePicker.YearColumnTextStyle = new PickerTextStyle()
 {
-    TextStyle = new PickerTextStyle()
-    {
-        TextColor = Colors.DarkCyan,
-        FontSize = 15,
-    }
+    TextColor = Colors.DarkCyan,
+    FontSize = 15,
 };
 
 this.Content = dateTimePicker;
@@ -854,11 +845,8 @@ Customize the hour column text style of the `Date Time Picker` using The [HourCo
 SfDateTimePicker dateTimePicker = new SfDateTimePicker();
 dateTimePicker.HourColumnTextStyle = new PickerTextStyle()
 {
-    TextStyle = new PickerTextStyle()
-    {
-        TextColor = Colors.DeepPink,
-        FontSize = 15,
-    }
+    TextColor = Colors.DeepPink,
+    FontSize = 15,
 };
 
 this.Content = dateTimePicker;
@@ -888,11 +876,8 @@ Customize the minute column text style of the `Date Time Picker` using The [Minu
 SfDateTimePicker dateTimePicker = new SfDateTimePicker();
 dateTimePicker.MinuteColumnTextStyle = new PickerTextStyle()
 {
-    TextStyle = new PickerTextStyle()
-    {
-        TextColor = Colors.MediumPurple,
-        FontSize = 15,
-    }
+    TextColor = Colors.MediumPurple,
+    FontSize = 15,
 };
 
 this.Content = dateTimePicker;
@@ -922,11 +907,8 @@ Customize the second column text style of the `Date Time Picker` using The [Seco
 SfDateTimePicker dateTimePicker = new SfDateTimePicker();
 dateTimePicker.SecondColumnTextStyle = new PickerTextStyle()
 {
-    TextStyle = new PickerTextStyle()
-    {
-        TextColor = Colors.DarkCyan,
-        FontSize = 15,
-    }
+    TextColor = Colors.DarkCyan,
+    FontSize = 15,
 };
 
 this.Content = dateTimePicker;
@@ -956,11 +938,8 @@ Customize the meridiem column text style of the `Date Time Picker` using The [Me
 SfDateTimePicker dateTimePicker = new SfDateTimePicker();
 dateTimePicker.MeridiemColumnTextStyle = new PickerTextStyle()
 {
-    TextStyle = new PickerTextStyle()
-    {
-        TextColor = Colors.DarkCyan,
-        FontSize = 15,
-    }
+    TextColor = Colors.DarkCyan,
+    FontSize = 15,
 };
 
 this.Content = dateTimePicker;
@@ -969,9 +948,9 @@ this.Content = dateTimePicker;
 
 {% endtabs %}
 
-### Customization of the milli second column text style
+### Customization of the millisecond column text style
 
-Customize the milli second column text style of the `Date Time Picker` using The [MilliSecondColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MilliSecondColumnTextStyle) property of the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
+Customize the millisecond column text style of the `Date Time Picker` using The [MilliSecondColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MilliSecondColumnTextStyle) property of the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
 
 {% tabs %}
 
@@ -1095,9 +1074,9 @@ this.Content = dateTimePicker;
 
 {% endtabs %}
 
-### Customization of the milli second column width
+### Customization of the millisecond column width
 
-Customize the milli second column width of the `Date Time Picker` using the [MilliSecondColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MilliSecondColumnWidth) property in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
+Customize the millisecond column width of the `Date Time Picker` using the [MilliSecondColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MilliSecondColumnWidth) property in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
 
 {% tabs %}
 

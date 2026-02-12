@@ -718,7 +718,7 @@ this.Content = datepicker;
 Customize the day column text style of the `Date Picker` using The [DayColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_DayColumnTextStyle) property in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
 
 N>
-* In custom column textstyle, day, month and year columns are applicable for `SfDatePicker` and `SfDatetimepicker` only.
+* In custom column text style, day, month and year columns are applicable for `SfDatePicker` and `SfDateTimePicker` only.
 
 {% tabs %}
 
@@ -737,11 +737,8 @@ N>
 SfDatePicker datePicker = new SfDatePicker();
 datePicker.DayColumnTextStyle = new PickerTextStyle()
 {
-    TextStyle = new PickerTextStyle()
-    {
-        TextColor = Colors.DeepPink,
-        FontSize = 15,
-    }
+    TextColor = Colors.DeepPink,
+    FontSize = 15,
 };
 
 this.Content = datePicker;
@@ -771,11 +768,8 @@ Customize the month column text style of the Date Picker using The [MonthColumnT
 SfDatePicker datePicker = new SfDatePicker();
 datePicker.MonthColumnTextStyle = new PickerTextStyle()
 {
-    TextStyle = new PickerTextStyle()
-    {
-        TextColor = Colors.MediumPurple,
-        FontSize = 15,
-    }
+    TextColor = Colors.MediumPurple,
+    FontSize = 15,
 };
 
 this.Content = datePicker;
@@ -805,11 +799,8 @@ Customize the year column text style of the Date Picker using The [YearColumnTex
 SfDatePicker datePicker = new SfDatePicker();
 datePicker.YearColumnTextStyle = new PickerTextStyle()
 {
-    TextStyle = new PickerTextStyle()
-    {
-        TextColor = Colors.DarkCyan,
-        FontSize = 15,
-    }
+    TextColor = Colors.DarkCyan,
+    FontSize = 15,
 };
 
 this.Content = datePicker;
@@ -825,7 +816,7 @@ this.Content = datePicker;
 Customize the day column width of the Date Picker using the [DayColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_DayColumnWidth) property in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html).
 
 N>
-* In custom column width, day, month and year columns are applicable for `SfDatePicker` and `SfDatetimepicker` only.
+* In custom column width, day, month and year columns are applicable for `SfDatePicker` and `SfDateTimePicker` only.
 
 {% tabs %}
 
