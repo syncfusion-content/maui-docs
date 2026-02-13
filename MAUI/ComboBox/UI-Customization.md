@@ -1704,6 +1704,25 @@ The following image illustrates the result of the above code:
 
 ![.NET MAUI ComboBox ClearButtonPath](Images/UICustomization/clearbuttoncustomization.png)
 
+## ClearButtonClicked Event
+
+The [OnClearButtonClicked]() event is raised when the user taps the clear button on an `SfComboBox`. Use this event to handle cleanup, clear model state, close the dropdown, or perform navigation. The handler receives standard EventArgs and can access the sender (the `SfComboBox`) to read or modify its state.
+
+{% tabs %}
+{% highlight C# %}
+
+    SfComboBox comboBox = new SfComboBox();
+    comboBox.OnClearButtonClicked += OnComboBoxClearButtonClicked;
+
+    async void OnComboBoxClearButtonClicked(object sender, EventArgs e)
+    {
+        // Function used to handle cleanup,
+        // clear model state, close the dropdown, or perform navigation
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Return Command and Return Command Parameter
 
 - `ReturnCommand`, of type ICommand, defines the command to be executed when the return key is pressed.

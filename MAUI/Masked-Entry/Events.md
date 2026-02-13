@@ -69,3 +69,40 @@ private async void MaskedEntry_ValueChanged(object sender, MaskedEntryValueChang
 {% endhighlight %}
 {% endtabs %}
 
+## Completed Event
+
+The [Completed]() event is raised when the user finalizes input via the platform Return/Done action on a `MaskedEntry`. Use this event to perform final validation, formatting, or navigation. The handler receives standard EventArgs from the sender.
+
+{% tabs %}
+{% highlight C# %}
+
+    SfMaskedEntry maskedEntry = new SfMaskedEntry();
+    maskedEntry.Completed += OnMaskedEntryCompleted;
+
+    async void OnMaskedEntryCompleted(object sender, EventArgs e)
+    {
+        // Finalize input (validate, format, navigate, etc.)
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+## ClearButtonClicked Event
+
+The [ClearButtonClicked]() event is raised when the user taps the clear button on an `SfMaskedEntry`. Use this event to handle cleanup, clear model state, close the dropdown, or perform navigation. The handler receives standard EventArgs and can access the sender (the `SfMaskedEntry`) to read or modify its state.
+
+{% tabs %}
+{% highlight C# %}
+
+    SfMaskedEntry maskedEntry = new SfMaskedEntry();
+    maskedEntry.ClearButtonClicked += OnMaskedEntryClearButtonClicked;
+
+    async void OnMaskedEntryClearButtonClicked(object sender, EventArgs e)
+    {
+        // Function used to handle cleanup,
+        // clear model state, close the dropdown, or perform navigation
+    }
+
+{% endhighlight %}
+{% endtabs %}
+

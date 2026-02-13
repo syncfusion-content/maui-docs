@@ -1353,6 +1353,25 @@ private async void OnValueChanged(object sender, AutocompleteValueChangedEventAr
 {% endhighlight %}
 
 {% endtabs %} 
+
+## ClearButtonClicked Event
+
+The [OnClearButtonClicked]() event is raised when the user taps the clear button on an `SfAutocomplete`. Use this event to handle cleanup, clear model state, close the dropdown, or perform navigation. The handler receives standard EventArgs and can access the sender (the `SfAutocomplete`) to read or modify its state.
+
+{% tabs %}
+{% highlight C# %}
+
+    SfAutocomplete autoComplete = new SfAutocomplete();
+    autoComplete.OnClearButtonClicked += OnAutocompleteClearButtonClicked;
+
+    async void OnAutocompleteClearButtonClicked(object sender, EventArgs e)
+    {
+        // Function used to handle cleanup,
+        // clear model state, close the dropdown, or perform navigation
+    }
+
+{% endhighlight %}
+{% endtabs %}
  
 
 ## CursorPosition
