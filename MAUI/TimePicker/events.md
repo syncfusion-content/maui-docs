@@ -48,7 +48,6 @@ private void OnTimePickerSelectionChanged(object sender, TimePickerSelectionChan
 N> In `SfTimePicker`,
 * When [IsImmediateSelectionEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_IsImmediateSelectionEnabled) is set to `true` by `default`, the [SelectedTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_SelectedTime) is updated immediately upon selection.
 * When [IsImmediateSelectionEnabled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_IsImmediateSelectionEnabled) is set to `false`, the [SelectedTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html#Syncfusion_Maui_Picker_SfTimePicker_SelectedTime) is confirmed only when the OK button in the footer view is tapped.
-* This explicit confirmation behavior applies only when the [Mode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_Mode) is set to `Dialog` or `RelativeDialog`, the [Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_Height) of the PickerFooterView is greater than zero, and [ShowOkButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerFooterView.html#Syncfusion_Maui_Picker_PickerFooterView_ShowOkButton) is enabled.
 
 ## Events in dialog mode
 
