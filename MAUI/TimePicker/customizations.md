@@ -729,7 +729,7 @@ N>
 
 <picker:SfTimePicker x:Name="timePicker" >
     <picker:SfTimePicker.HourColumnTextStyle>
-        <picker:PickerTextStyle FontSize="15" TextColor="DeepPink"/>
+        <picker:PickerTextStyle FontSize="15" TextColor="#2F855A"/>
     </picker:SfTimePicker.HourColumnTextStyle>
 </picker:SfTimePicker>
 
@@ -740,7 +740,7 @@ N>
 SfTimePicker timePicker = new SfTimePicker();
 timePicker.HourColumnTextStyle = new PickerTextStyle()
 {
-    TextColor = Colors.DeepPink,
+    TextColor = Color.FromArgb("#2F855A"),
     FontSize = 15,
 };
 
@@ -760,7 +760,7 @@ Customize the minute column text style of the `Time Picker` using The [MinuteCol
 
 <picker:SfTimePicker x:Name="timePicker" >
     <picker:SfTimePicker.MinuteColumnTextStyle>
-        <picker:PickerTextStyle FontSize="15" TextColor="MediumPurple"/>
+        <picker:PickerTextStyle FontSize="15" TextColor="#D53F8C"/>
     </picker:SfTimePicker.MinuteColumnTextStyle>
 </picker:SfTimePicker>
 
@@ -771,7 +771,7 @@ Customize the minute column text style of the `Time Picker` using The [MinuteCol
 SfTimePicker timePicker = new SfTimePicker();
 timePicker.MinuteColumnTextStyle = new PickerTextStyle()
 {
-    TextColor = Colors.MediumPurple,
+    TextColor = Color.FromArgb("#D53F8C"),
     FontSize = 15,
 };
 
@@ -791,7 +791,7 @@ Customize the second column text style of the `Time Picker` using The [SecondCol
 
 <picker:SfTimePicker x:Name="timePicker" >
     <picker:SfTimePicker.SecondColumnTextStyle>
-        <picker:PickerTextStyle FontSize="15" TextColor="DarkCyan"/>
+        <picker:PickerTextStyle FontSize="15" TextColor="#2B6CB0"/>
     </picker:SfTimePicker.SecondColumnTextStyle>
 </picker:SfTimePicker>
 
@@ -802,7 +802,7 @@ Customize the second column text style of the `Time Picker` using The [SecondCol
 SfTimePicker timePicker = new SfTimePicker();
 timePicker.SecondColumnTextStyle = new PickerTextStyle()
 {
-    TextColor = Colors.DarkCyan,
+    TextColor = Color.FromArgb("#2B6CB0"),
     FontSize = 15,
 };
 
@@ -873,6 +873,8 @@ this.Content = timePicker;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Custom column textstyle in .NET MAUI Time picker.](images/customizations/maui-time-picker-column-textstyle.png)
 
 ### Customization of the hour column width
 

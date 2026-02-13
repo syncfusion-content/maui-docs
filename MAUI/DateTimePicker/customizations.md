@@ -683,7 +683,7 @@ Customize the day column text style of the `Date Time Picker` using The [DayColu
 SfDateTimePicker dateTimePicker = new SfDateTimePicker();
 dateTimePicker.DayColumnTextStyle = new PickerTextStyle()
 {
-    TextColor = Colors.DeepPink,
+    TextColor = Color.FromArgb("#2F855A"),
     FontSize = 15,
 };
 
@@ -703,7 +703,7 @@ Customize the month column text style of the `Date Time Picker` using The [Month
 
 <picker:SfDateTimePicker x:Name="datetimepicker" >
     <picker:SfDateTimePicker.MonthColumnTextStyle>
-        <picker:PickerTextStyle FontSize="15" TextColor="MediumPurple"/>
+        <picker:PickerTextStyle FontSize="15" TextColor="#D53F8C"/>
     </picker:SfDateTimePicker.MonthColumnTextStyle>
 </picker:SfDateTimePicker>
 
@@ -714,7 +714,7 @@ Customize the month column text style of the `Date Time Picker` using The [Month
 SfDateTimePicker dateTimePicker = new SfDateTimePicker();
 dateTimePicker.MonthColumnTextStyle = new PickerTextStyle()
 {
-    TextColor = Colors.MediumPurple,
+    TextColor = Color.FromArgb("#D53F8C"),
     FontSize = 15,
 };
 
@@ -734,7 +734,7 @@ Customize the year column text style of the `Date Time Picker` using The [YearCo
 
 <picker:SfDateTimePicker x:Name="datetimepicker" >
     <picker:SfDateTimePicker.YearColumnTextStyle>
-        <picker:PickerTextStyle FontSize="15" TextColor="DarkCyan"/>
+        <picker:PickerTextStyle FontSize="15" TextColor="#2B6CB0"/>
     </picker:SfDateTimePicker.YearColumnTextStyle>
 </picker:SfDateTimePicker>
 
@@ -745,78 +745,9 @@ Customize the year column text style of the `Date Time Picker` using The [YearCo
 SfDateTimePicker dateTimePicker = new SfDateTimePicker();
 dateTimePicker.YearColumnTextStyle = new PickerTextStyle()
 {
-    TextColor = Colors.DarkCyan,
+    TextColor = Color.FromArgb("#2B6CB0"),
     FontSize = 15,
 };
-
-this.Content = dateTimePicker;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-### Customization of the day column width
-
-Customize the day column width of the `Date Time Picker` using the [DayColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_DayColumnWidth) property in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
-
-{% tabs %}
-
-{% highlight xaml tabtitle="XAML" %}
-
-<picker:SfDateTimePicker x:Name="datetimepicker" DayColumnWidth="150"/>
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C#" %}
-
-SfDateTimePicker dateTimePicker = new SfDateTimePicker();
-dateTimePicker.DayColumnWidth = 150;
-
-this.Content = dateTimePicker;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-### Customization of the month column width
-
-Customize the month column width of the `Date Time Picker` using the [MonthColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MonthColumnWidth) property in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
-
-{% tabs %}
-
-{% highlight xaml tabtitle="XAML" %}
-
-<picker:SfDateTimePicker x:Name="datetimepicker" MonthColumnWidth="150"/>
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C#" %}
-
-SfDateTimePicker dateTimePicker = new SfDateTimePicker();
-dateTimePicker.MonthColumnWidth = 150;
-
-this.Content = dateTimePicker;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-### Customization of the year column width
-
-Customize the year column width of the `Date Time Picker` using the [YearColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_YearColumnWidth) property in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
-
-{% tabs %}
-
-{% highlight xaml tabtitle="XAML" %}
-
-<picker:SfDateTimePicker x:Name="datetimepicker" YearColumnWidth="150"/>
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C#" %}
-
-SfDateTimePicker dateTimePicker = new SfDateTimePicker();
-dateTimePicker.YearColumnWidth = 150;
 
 this.Content = dateTimePicker;
 
@@ -975,6 +906,77 @@ dateTimePicker.MilliSecondColumnTextStyle = new PickerTextStyle()
         FontSize = 15,
     }
 };
+
+this.Content = dateTimePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Custom column textstyle in .NET MAUI Date Time picker.](images/customizations/maui-date-time-picker-column-textstyle.png)
+
+### Customization of the day column width
+
+Customize the day column width of the `Date Time Picker` using the [DayColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_DayColumnWidth) property in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfDateTimePicker x:Name="datetimepicker" DayColumnWidth="150"/>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+dateTimePicker.DayColumnWidth = 150;
+
+this.Content = dateTimePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the month column width
+
+Customize the month column width of the `Date Time Picker` using the [MonthColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MonthColumnWidth) property in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfDateTimePicker x:Name="datetimepicker" MonthColumnWidth="150"/>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+dateTimePicker.MonthColumnWidth = 150;
+
+this.Content = dateTimePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the year column width
+
+Customize the year column width of the `Date Time Picker` using the [YearColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_YearColumnWidth) property in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfDateTimePicker x:Name="datetimepicker" YearColumnWidth="150"/>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+dateTimePicker.YearColumnWidth = 150;
 
 this.Content = dateTimePicker;
 

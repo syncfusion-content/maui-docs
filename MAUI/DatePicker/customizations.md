@@ -726,7 +726,7 @@ N>
 
 <picker:SfDatePicker x:Name="datepicker" >
     <picker:SfDatePicker.DayColumnTextStyle>
-        <picker:PickerTextStyle FontSize="15" TextColor="DeepPink"/>
+        <picker:PickerTextStyle FontSize="15" TextColor="#2F855A"/>
     </picker:SfDatePicker.DayColumnTextStyle>
 </picker:SfDatePicker>
 
@@ -737,7 +737,7 @@ N>
 SfDatePicker datePicker = new SfDatePicker();
 datePicker.DayColumnTextStyle = new PickerTextStyle()
 {
-    TextColor = Colors.DeepPink,
+    TextColor = Color.FromArgb("#2F855A"),
     FontSize = 15,
 };
 
@@ -757,7 +757,7 @@ Customize the month column text style of the Date Picker using The [MonthColumnT
 
 <picker:SfDatePicker x:Name="datepicker" >
     <picker:SfDatePicker.MonthColumnTextStyle>
-        <picker:PickerTextStyle FontSize="15" TextColor="MediumPurple"/>
+        <picker:PickerTextStyle FontSize="15" TextColor="#D53F8C"/>
     </picker:SfDatePicker.MonthColumnTextStyle>
 </picker:SfDatePicker>
 
@@ -768,7 +768,7 @@ Customize the month column text style of the Date Picker using The [MonthColumnT
 SfDatePicker datePicker = new SfDatePicker();
 datePicker.MonthColumnTextStyle = new PickerTextStyle()
 {
-    TextColor = Colors.MediumPurple,
+    TextColor = Color.FromArgb("#D53F8C"),
     FontSize = 15,
 };
 
@@ -788,7 +788,7 @@ Customize the year column text style of the Date Picker using The [YearColumnTex
 
 <picker:SfDatePicker x:Name="datepicker" >
     <picker:SfDatePicker.YearColumnTextStyle>
-        <picker:PickerTextStyle FontSize="15" TextColor="DarkCyan"/>
+        <picker:PickerTextStyle FontSize="15" TextColor="#2B6CB0"/>
     </picker:SfDatePicker.YearColumnTextStyle>
 </picker:SfDatePicker>
 
@@ -799,7 +799,7 @@ Customize the year column text style of the Date Picker using The [YearColumnTex
 SfDatePicker datePicker = new SfDatePicker();
 datePicker.YearColumnTextStyle = new PickerTextStyle()
 {
-    TextColor = Colors.DarkCyan,
+    TextColor = Color.FromArgb("#2B6CB0"),
     FontSize = 15,
 };
 
@@ -809,7 +809,7 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-![Custom column textstyle in .NET MAUI Date picker.](images/customizations/maui-date-picker-column-textstyle.png){Width=300, height=300}
+![Custom column textstyle in .NET MAUI Date picker.](images/customizations/maui-date-picker-column-textstyle.png)
 
 ### Customization of the day column width
 
