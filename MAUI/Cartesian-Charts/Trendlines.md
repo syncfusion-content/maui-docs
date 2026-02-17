@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Trendlines in MAUI Charts control | Syncfusion
-description: Learn here all about Trendlines support in Syncfusion® MAUI Charts (SfCartesianChart) control.
+description: This section explains all about trendlines support in Syncfusion® MAUI Charts (SfCartesianChart) control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
@@ -48,7 +48,7 @@ chart.Series.Add(series);
 
 {% endtabs %}
 
-![Trendline support in MAUI Charts](trendline_images/trendline.png)
+![Trendline support in MAUI Charts](#)
 
 ## Types of Trendline
 
@@ -89,7 +89,7 @@ chart.Series.Add(series);
 
 {% endtabs %}
 
-![Linear type trendline](trendline_images/linear.png)
+![Linear type trendline](#)
 
 ### Logarithmic
 
@@ -117,7 +117,7 @@ chart.Series.Add(series);
 
 {% endtabs %}
 
-![Logarithmic type trendline](trendline_images/logarithmic.png)
+![Logarithmic type trendline](#)
 
 ### Exponential
 
@@ -145,7 +145,7 @@ chart.Series.Add(series);
 
 {% endtabs %}
 
-![Exponential type trendline](trendline_images/exponential.png)
+![Exponential type trendline](#)
 
 ### Power
 
@@ -173,11 +173,11 @@ chart.Series.Add(series);
 
 {% endtabs %}
 
-![Power type trendline](trendline_images/power.png)
+![Power type trendline](#)
 
 ### Polynomial
 
-Polynomial trendline fits fluctuating data. Use Order to set the polynomial degree (default commonly 2). Avoid very high order to prevent overfitting.
+Polynomial trendline fits fluctuating data. Use Order to set the polynomial degree (default commonly 2). Avoid very high order to prevent excessive curve fitting.
 
 {% tabs %}
 
@@ -201,7 +201,7 @@ chart.Series.Add(series);
 
 {% endtabs %}
 
-![Polynomial type trendline](trendline_images/polynomial.png)
+![Polynomial type trendline](#)
 
 ### Moving Average
 
@@ -229,7 +229,7 @@ chart.Series.Add(series);
 
 {% endtabs %}
 
-![Moving average trendline](trendline_images/movingaverage.png)
+![Moving average trendline](#)
 
 ## Forecasting
 
@@ -259,7 +259,7 @@ series.Trendlines.Add(new Trendline { Type = TrendlineType.Linear, ForwardForeca
 
 {% endtabs %}
 
-![Forward Forecasting](trendline_images/forward.png)
+![Forward Forecasting](#)
 
 ### Backward Forecasting
 
@@ -285,7 +285,7 @@ series.Trendlines.Add(new Trendline { Type = TrendlineType.Linear, BackwardForec
 
 {% endtabs %}
 
-![Backward Forecasting](trendline_images/backward.png)
+![Backward Forecasting](#)
 
 ## Customization
 
@@ -316,7 +316,7 @@ series.Trendlines.Add(t);
 
 {% endtabs %}
 
-![Custom stroke and dash](trendline_images/customLine.png)
+![Custom stroke and dash](#)
 
 ## Legend Item Visibility
 
@@ -366,7 +366,7 @@ series.Trendlines.Add(t);
 
 {% endtabs %}
 
-![Trendline markers](trendline_images/marker.png)
+![Trendline markers](#)
 
 ## Tooltip and Trackball
 
@@ -397,7 +397,7 @@ series.Trendlines.Add(t);
 
 {% endtabs %}
 
-![Tooltip example](trendline_images/tooltip.png)
+![Tooltip example](#)
 
 ## ValueField for Candle/HiLo series
 
@@ -475,7 +475,7 @@ chart.Series.Add(series);
 ## Notes & best practices
 
 - Exponential and Power require positive non-zero data.  
-- Keep Polynomial Order modest to avoid overfitting.  
+- Keep Polynomial Order modest to avoid overly complex fitting.  
 - MovingAverage Period must be an integer > 1.  
 - Forecast values are in axis units; for DateTime axis they follow the axis Interval/IntervalType.  
 - Read computed statistics only after rendering (Loaded/LayoutChanged or render callback).
