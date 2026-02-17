@@ -13,7 +13,7 @@ The toolbar control supports displaying an overlay toolbar in the view. You can 
 
 ## How to display the overlay toolbar
 
-You can retrieve the overlay toolbar of a toolbar item and add it to the view using the [Tapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.ToolbarTappedEventArgs.html) event in the [SfToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Toolbar.SfToolbar.html) control. The following code sample demonstrates how to add an overlay toolbar to the view.
+To display an overlay toolbar, define the `OverlayToolbar` property for a toolbar item. When the toolbar item is tapped, the overlay toolbar will appear. The following example shows how to add an overlay toolbar to a toolbar item.
 
 {% tabs %}
 
@@ -28,8 +28,7 @@ You can retrieve the overlay toolbar of a toolbar item and add it to the view us
     <Grid x:Name="layout">
         <toolbar:SfToolbar x:Name="Toolbar" 
                                 HeightRequest="56" 
-                                WidthRequest="300"
-                                Tapped="Toolbar_Tapped">
+                                WidthRequest="300">
             <toolbar:SfToolbar.Items>
                 <toolbar:SfToolbarItem Name="Bold"
                             ToolTipText="Bold">
@@ -57,11 +56,7 @@ You can retrieve the overlay toolbar of a toolbar item and add it to the view us
                                     ToolTipText="Tap to view the overlay toolbar"
                                     Size="70,40">
                 <toolbar:SfToolbarItem.OverlayToolbar>
-                    <toolbar:SfOverlayToolbar x:Name="overlaytoolbar"
-                                                    Orientation="Horizontal"
-                                                    HeightRequest="56"
-                                                    WidthRequest="300"
-                                                    OverflowMode="Scroll">
+                    <toolbar:SfOverlayToolbar x:Name="overlaytoolbar">
                         <toolbar:SfOverlayToolbar.Items>
                             <toolbar:SfToolbarItem Name="AlignLeft"
                                                 ToolTipText="Align-Left">
@@ -115,25 +110,6 @@ namespace ToolbarSample
             InitializeComponent();
         }
     }
-
-    private async void Toolbar_Tapped(object sender, Syncfusion.Maui.Toolbar.ToolbarTappedEventArgs e)
-    {
-        if (e.NewToolbarItem != null)
-        {
-            if (e.NewToolbarItem.Name == "Alignment")
-            {
-                var item = e.NewToolbarItem?.OverlayToolbar;
-    
-                if (!this.layout.Children.Contains(item))
-                {
-                    this.layout.Children.Add(item);
-                }
-    
-                await Task.Delay(1000);
-                (sender as SfToolbar)?.ClearSelection();
-            }
-        }
-    }
 }
 
 {% endhighlight %}
@@ -162,8 +138,7 @@ N> TooltipText is only applicable to the default back icon. When using BackIconT
 <Grid x:Name="layout">
     <toolbar:SfToolbar x:Name="Toolbar" 
                             HeightRequest="56" 
-                            WidthRequest="300"
-                            Tapped="Toolbar_Tapped">
+                            WidthRequest="300">
         <toolbar:SfToolbar.Items>
             <toolbar:SfToolbarItem Name="Bold"
                         ToolTipText="Bold">
@@ -192,10 +167,6 @@ N> TooltipText is only applicable to the default back icon. When using BackIconT
                                 Size="70,40">
                 <toolbar:SfToolbarItem.OverlayToolbar>
                     <toolbar:SfOverlayToolbar x:Name="overlaytoolbar"
-                                                Orientation="Horizontal"
-                                                HeightRequest="56"
-                                                WidthRequest="300"
-                                                OverflowMode="Scroll"
                                               BackIconAlignment="End"
                                               BackIconToolTipText="Back"
                                               BackIconColor="Red">
@@ -203,7 +174,7 @@ N> TooltipText is only applicable to the default back icon. When using BackIconT
                             <DataTemplate>
                                 <ViewCell>
                                     <Grid WidthRequest="47" HeightRequest="33" HorizontalOptions="Start">
-                                        <ImageButton Source="close.png" Clicked="ImageButton_Clicked" />
+                                        <ImageButton Source="close.png" InputTransparent="True" />
                                     </Grid>
                                 </ViewCell>
                             </DataTemplate>
@@ -270,7 +241,6 @@ namespace ToolbarSample
             var image = new ImageButton
             {
                 Source = "close.png",
-                Clicked = "ImageButton_Clicked",
             };
 
             grid.Children.Add(image);
@@ -287,30 +257,6 @@ namespace ToolbarSample
             overlaytoolbar.BackIconColor = Colors.Blue;
             overlaytoolbar.BackIconToolTipText = "Back";
             overlaytoolbar.BackIconAlignment = OverlayToolbarBackIconPosition.End;
-        }
-
-        private async void Toolbar_Tapped(object sender, Syncfusion.Maui.Toolbar.ToolbarTappedEventArgs e)
-        {
-            if (e.NewToolbarItem != null)
-            {
-                if (e.NewToolbarItem.Name == "Alignment")
-                {
-                    var item = e.NewToolbarItem?.OverlayToolbar;
-        
-                    if (!this.layout.Children.Contains(item))
-                    {
-                        this.layout.Children.Add(item);
-                    }
-        
-                    await Task.Delay(1000);
-                    (sender as SfToolbar)?.ClearSelection();
-                }
-            }
-        }
-
-        private void ImageButton_Clicked(object sender, EventArgs e)
-        {
-            this.overlaytoolbar.IsVisible = false;
         }
     }
 }
