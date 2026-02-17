@@ -3,6 +3,7 @@ layout: post
 title: Appearance | Accordion for Maui | Syncfusion
 description: Learn about Appearance support in Syncfusion Maui Accordion (SfAccordion) control and more details.
 platform: MAUI
+title: Appearance | Accordion for Maui testing | Syncfusion
 control: SfAccordion
 documentation: ug
 ---
@@ -11,7 +12,7 @@ documentation: ug
 
 The .NET MAUI SfAccordion comes with built-in support for customizing the appearance of the header.
 
-## Header icon position 
+# Header icon position 
  
 The [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html) allows you to customize the position of the header icon in each accordion item using the [HeaderIconPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_HeaderIconPosition) property. By default, the header icon position is set to [End](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.ExpanderIconPosition.html#Syncfusion_Maui_Expander_ExpanderIconPosition_End).
 
@@ -217,5 +218,6 @@ The appearance of the [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusi
 {% endtabs %}
 
 ![Expanded and collapsed visual states in .NET MAUI Accordion](Images/appearance/maui-accordion-with-visual-state-manager.png)
+
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/customize-the-ui-appearance-using-visual-states-in-.net-maui-accordion).
