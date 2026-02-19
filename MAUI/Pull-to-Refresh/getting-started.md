@@ -19,8 +19,8 @@ This section guides you through setting up and configuring a [PullToRefresh](htt
 ## Prerequisites
 Before proceeding, ensure the following are set up:
 
-1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later is installed.
-2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later).
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with Visual Studio 2026 (v18.0.0 or later).
 
 ## Step 1: Create a new .NET MAUI Project
 
