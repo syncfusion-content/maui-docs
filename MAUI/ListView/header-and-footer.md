@@ -127,8 +127,6 @@ The `SfListView` allows you to perform tab view structure by customizing the [He
     <ContentPage.Resources>
         <ResourceDictionary>
             <DataTemplate x:Key="template">
-                <ViewCell>
-                    <ViewCell.View>
                         <Grid x:Name="grid" RowSpacing="0" Margin="5">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="*" />
@@ -144,8 +142,6 @@ The `SfListView` allows you to perform tab view structure by customizing the [He
                             </Grid>
                             <StackLayout Grid.Row="1" BackgroundColor="#E4E4E4" HeightRequest="1"/>
                         </Grid>
-                    </ViewCell.View>
-                </ViewCell>
             </DataTemplate>
         </ResourceDictionary>
     </ContentPage.Resources>

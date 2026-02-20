@@ -162,7 +162,7 @@ The .NET MAUI ListView (SfListView) supports customizing the selection backgroun
        </Grid.RowDefinitions>
       <Label Text="{Binding SongTitle}" />
       <Label Text="{Binding SongAuther}" Grid.Row="1"/>
-      <Frame Grid.Row="2" HasShadow="True" HeightRequest="1"/>
+      <Border Grid.Row="2" HeightRequest="1"/>
      </Grid>
     </DataTemplate>
    </syncfusion:SfListView.SelectedItemTemplate>
@@ -181,17 +181,16 @@ The .NET MAUI ListView (SfListView) supports customizing the selection backgroun
   songTitle.SetBinding(Label.TextProperty, new Binding("SongTitle"));
   var songAuthor = new Label();
   songAuthor.SetBinding(Label.TextProperty, new Binding("songAuthor"));
-  var frame = new Frame()
+  var border = new Border()
   {
     HeightRequest = 1,
-    HasShadow = true,
   };
   grid.Children.Add(songTitle);
   grid.Children.Add(songAuthor);
-  grid.Children.Add(frame);
+  grid.Children.Add(border);
   grid.SetRow(songTitle, 0);
   grid.SetRow(songAuthor, 1);
-  grid.SetRow(frame, 2);
+  grid.SetRow(border, 2);
   return grid;
 });
 {% endhighlight %}
