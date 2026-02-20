@@ -141,13 +141,9 @@ To apply the sorting when tapping the header, handle the [ItemTapped](https://he
                         IsStickyHeader="True">
     <syncfusion:SfListView.HeaderTemplate>
       <DataTemplate>
-        <ViewCell>
-          <ViewCell.View>
             <StackLayout BackgroundColor="Teal">
               <Label TextColor="White" FontSize="20" FontAttributes="Bold" Text="CustomerDetails" />
             </StackLayout>
-          </ViewCell.View>
-        </ViewCell>
       </DataTemplate>
     </syncfusion:SfListView.HeaderTemplate>
   </syncfusion:SfListView>
