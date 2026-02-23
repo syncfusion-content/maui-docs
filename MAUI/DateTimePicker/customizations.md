@@ -664,9 +664,9 @@ this.Content = picker;
 
 ## CloseButtonIcon
 
-### Enable CloseButton
+### Show Close Button
 
-You can enable the CloseButton in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html), above the header by using the [ShowCloseButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_ShowCloseButton) property. The default value is false.
+You can enable or disable the close button in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html), above the header by setting the [ShowCloseButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_ShowCloseButton) property. The default value is `false`.
 
 {% tabs %}
 
@@ -702,9 +702,9 @@ private void Button_Clicked(object sender, EventArgs e)
 
 N>For the CloseButton to render properly, the header view must be present; otherwise, it will not function.
 
-### Enable CloseButtonIcon
+### Close Button Icon
 
-You can enable the CloseButtonIcon in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html), above the header by assigning a value to the [CloseButtonIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_CloseButtonIcon) property. The default value is false.
+You can customize the close button icon in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html), above the header by setting the [CloseButtonIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_CloseButtonIcon) property.
 
 {% tabs %}
 
@@ -742,11 +742,9 @@ N>The ShowCloseButton property must be set to true for the close button icon to 
 
 ### Customization of Active View
 
-The active tab of the DateTimePicker is controlled by the ActiveView property, which uses the [DateTimePickerView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_DateTimePickerView) enumeration to determine whether the picker opens with the Date or Time view. It supports two values — `Date` and `Time`. The default active view in the SfDateTimePicker is `Date`.
-
 ## Active View
 
-[ActiveView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_ActiveView) property is used to programmatically control the initial active tab(Date or Time) when opening the MAUI [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html).
+You can control the initial active tab (Date or Time) in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html) by setting the [ActiveView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_ActiveView) property. This property uses the [DateTimePickerView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_DateTimePickerView) enumeration with two values: `Date` and `Time`. The default value is `Date`.
 
 {% tabs %}
 
