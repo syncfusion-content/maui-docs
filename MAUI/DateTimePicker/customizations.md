@@ -1064,7 +1064,7 @@ this.Content = dateTimePicker;
 Customize the minute-column width of the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html) using the [MinuteColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MinuteColumnWidth) property, which controls the width of the minute-column.
 
 N>
-* Custom column width for the mnute-column is supported only in `SfDateTimePicker`.
+* Custom column width for the minute-column is supported only in `SfDateTimePicker`.
 
 {% tabs %}
 
