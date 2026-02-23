@@ -809,7 +809,7 @@ this.Content = datePicker;
 
 {% endtabs %}
 
-![Custom column textstyle in .NET MAUI Date picker.](images/customizations/maui-date-picker-column-textstyle.png)
+![Custom column textstyle in .NET MAUI Date picker.](images/customizations/maui-date-picker-column-textstyle.webp)
 
 ### Customization of the day column width
 

@@ -874,7 +874,7 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-![Custom column textstyle in .NET MAUI Time picker.](images/customizations/maui-time-picker-column-textstyle.png)
+![Custom column textstyle in .NET MAUI Time picker.](images/customizations/maui-time-picker-column-textstyle.webp)
 
 ### Customization of the hour column width
 

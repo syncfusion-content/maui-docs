@@ -913,7 +913,7 @@ this.Content = dateTimePicker;
 
 {% endtabs %}
 
-![Custom column textstyle in .NET MAUI Date Time picker.](images/customizations/maui-date-time-picker-column-textstyle.png)
+![Custom column textstyle in .NET MAUI Date Time picker.](images/customizations/maui-date-time-picker-column-textstyle.webp)
 
 ### Customization of the day column width
 
