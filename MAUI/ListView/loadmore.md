@@ -546,14 +546,12 @@ The `SfListView` allows loading more items automatically when reaching the top o
                         AutoFitMode="Height">
         <syncfusion:SfListView.HeaderTemplate>
             <DataTemplate>
-            <ViewCell>
                 <Grid>
                 <syncfusion:ListViewLoadMoreIndicator 
                 Color="Blue" 
                 IsRunning="True" 
                 IsVisible="{Binding IndicatorIsVisible}"/>
                 </Grid>
-            </ViewCell>
             </DataTemplate>
         </syncfusion:SfListView.HeaderTemplate>
     </syncfusion:SfListView>
@@ -672,7 +670,6 @@ The `SfListView` allows loading more items when tapping the button loaded in the
                        ItemSize="100">
   <syncfusion:SfListView.HeaderTemplate>
     <DataTemplate>
-      <ViewCell>
         <Grid>
           <Grid BackgroundColor="#d3d3d3" IsVisible="{Binding GridIsVisible}">
             <Button Text="Load More" Clicked="Button_Clicked" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
@@ -680,7 +677,6 @@ The `SfListView` allows loading more items when tapping the button loaded in the
           </Grid>
           <syncfusion:ListViewLoadMoreIndicator Color="Blue" IsRunning="True" IsVisible="{Binding IndicatorIsVisible}"/>
         </Grid>
-      </ViewCell>
     </DataTemplate>
   </syncfusion:SfListView.HeaderTemplate>
 </syncfusion:SfListView>

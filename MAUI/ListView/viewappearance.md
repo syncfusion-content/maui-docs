@@ -39,8 +39,8 @@ class MyDataTemplateSelector : DataTemplateSelector
 
    public MyDataTemplateSelector()
    {
-      this.incomingDataTemplate = new DataTemplate(typeof(IncomingViewCell));
-      this.outgoingDataTemplate = new DataTemplate(typeof(OutgoingViewCell));      
+      this.incomingDataTemplate = new DataTemplate(typeof(IncomingTemplate));
+      this.outgoingDataTemplate = new DataTemplate(typeof(OutgoingTemplate));      
    }
 
    protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
@@ -150,11 +150,7 @@ The `SfListView` allows you to layout the items like `TabView` in the horizontal
             <syncfusion:SfListView x:Name="listView" ItemTapped="list_ItemTapped" ItemSize="70" ItemsSource="{Binding ContactsInfo}">
                 <syncfusion:SfListView.ItemTemplate>
                     <DataTemplate x:Name="ItemTemplate"  x:Key="ItemTemplate" >
-                        <ViewCell>
-                            <ViewCell.View>
-                                    <Image Source="{Binding ContactImage}" />
-                            </ViewCell.View>
-                        </ViewCell>
+                        <Image Source="{Binding ContactImage}" />
                     </DataTemplate>
                 </syncfusion:SfListView.ItemTemplate>
             </syncfusion:SfListView>
@@ -191,11 +187,9 @@ public partial class MainPage : ContentPage
         listView.ItemTapped += ListView_ItemTapped;
         listView.ItemTemplate = new DataTemplate(() =>
         {
-            var viewCell = new ViewCell();
             var image1 = new Image();
             image1.SetBinding(Image.SourceProperty, new Binding("ContactImage"));
-            viewCell.View = image1;
-            return viewCell;
+            return image1;
         });
 
         grid.Children.Add(label);
@@ -392,7 +386,7 @@ public class IndexToColorConverter : IValueConverter
 
 ## Rounded corner on items
 
-The `SfListView` allows customizing the item appearance, such as rounded corners, by using the `Frame` layout in the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) property. By defining the `CornerRadius` property of frame layout, you can perform rounded corner for items. 
+The `SfListView` allows customizing the item appearance, such as rounded corners, by using the `Border` layout in the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) property. By defining the `CornerRadius` property of the border, you can perform rounded corner for items. 
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="6" %}
@@ -401,13 +395,13 @@ The `SfListView` allows customizing the item appearance, such as rounded corners
         <syncfusion:SfListView x:Name="listView" ItemSize="60" ItemsSource="{Binding customerDetails}">
             <syncfusion:SfListView.ItemTemplate>
                 <DataTemplate>
-                    <Frame x:Name="frame" CornerRadius="10" HasShadow="False">
+                    <Border x:Name="frame" CornerRadius="10" Padding="0">
                         <StackLayout>
                             <Label Text="{Binding ContactName}" />
                             <Label Text="{Binding ContactNumber}" />
                             <Label Text="{Binding ContactType}" />
                         </StackLayout>
-                    </Frame>
+                    </Border>
                 </DataTemplate>
             </syncfusion:SfListView.ItemTemplate>
         </syncfusion:SfListView>
@@ -426,8 +420,8 @@ public partial class MainPage : ContentPage
         listView.ItemSize = 60;
         listView.ItemTemplate = new DataTemplate(() =>
         {
-            var frame = new Frame();
-            frame.CornerRadius = 10;
+            var border = new Border();
+            border.CornerRadius = 10;
             var stackLayout = new StackLayout();
             var label1 = new Label();
             label.SetBinding(Label.TextProperty, new Binding("ContactName"));
@@ -438,9 +432,9 @@ public partial class MainPage : ContentPage
             stackLayout.Children.Add(label1);
             stackLayout.Children.Add(label2);
             stackLayout.Children.Add(label3);
-            frame.Children.Add(stackLayout);
+            border.Content = stackLayout;
 
-            return frame;
+            return border;
         });
     }
 }
@@ -451,9 +445,9 @@ public partial class MainPage : ContentPage
 
 ## Drop shadow effect on items
 
-The `SfListView` allows customizing the item appearance like shadow effect for items by setting the shadow property of frame as true in [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) property.
+The `SfListView` allows customizing the item appearance like shadow effect for items by using a `Border` inside the [ItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html#Syncfusion_Maui_ListView_SfListView_ItemTemplate) property.
 
-N> Define the frame within any view inside `ItemTemplate` with some margin around it. 
+N> Define the border within any view inside `ItemTemplate` with some margin around it. 
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="7" %}
@@ -463,13 +457,13 @@ N> Define the frame within any view inside `ItemTemplate` with some margin aroun
             <syncfusion:SfListView.ItemTemplate>
                 <DataTemplate>
                     <Grid Padding="2" Margin="2" >
-                        <Frame x:Name="frame" HasShadow="True" Padding="2" Margin="2">
+                        <Border x:Name="frame" Padding="2" Margin="2">
                             <StackLayout>
                                 <Label Text="{Binding ContactName}" /> 
                                 <Label Text="{Binding ContactNumber}" />
                                 <Label Text="{Binding ContactType}" />
                             </StackLayout>
-                        </Frame>
+                        </Border>
                     </Grid>
                 </DataTemplate>
             </syncfusion:SfListView.ItemTemplate>
@@ -492,10 +486,9 @@ public partial class MainPage : ContentPage
             var grid = new Grid();
             grid.Padding = 2;
             grid.Margin = 2;
-            var frame = new Frame();
-            frame.Padding = 2;
-            frame.Margin = 2;
-            frame.HasShadow = "True";
+            var border = new Border();
+            border.Padding = 2;
+            border.Margin = 2;
             var stackLayout = new StackLayout();
             var label1 = new Label();
             label.SetBinding(Label.TextProperty, new Binding("ContactName"));
@@ -506,8 +499,8 @@ public partial class MainPage : ContentPage
             stackLayout.Children.Add(label1);
             stackLayout.Children.Add(label2);
             stackLayout.Children.Add(label3);
-            frame.Children.Add(stackLayout);
-            grid.Children.Add(frame);
+            border.Content = stackLayout;
+            grid.Children.Add(border);
 
             return grid;
         });
@@ -757,70 +750,66 @@ The `SfListView` supports accordion view to display a list of items. Each item c
       <syncfusion:SfListView x:Name="listView" AutoFitMode="DynamicHeight" SelectionMode ="None"  ItemSpacing="0">
         <syncfusion:SfListView.ItemTemplate>
           <DataTemplate>
-            <ViewCell>
-              <ViewCell.View>
-                <Grid Padding="2" Margin="1" BackgroundColor="#F0F0F0" >
-                  <Frame x:Name="frame" CornerRadius="2" Padding="1" Margin="1" OutlineColor="White">
-                    <Grid VerticalOptions="FillAndExpand" BackgroundColor="White" HorizontalOptions="FillAndExpand">
-                      <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                      </Grid.RowDefinitions>
-                      <Grid x:Name="grid" >
-                        <Grid.RowDefinitions>
-                          <RowDefinition Height="60" />
-                        </Grid.RowDefinitions>
-                        <Grid RowSpacing="0">
-                          <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="60" />
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="50" />
-                          </Grid.ColumnDefinitions>
-                          <Image Grid.Row="0" Grid.Column="0" Source="{Binding ContactImage}" VerticalOptions="Center"/>
-                          <Grid Grid.Row="0" Grid.Column="1" VerticalOptions="CenterAndExpand">
-                            <Grid.RowDefinitions>
-                              <RowDefinition Height="*" />
-                              <RowDefinition Height="*" />
-                            </Grid.RowDefinitions>
-                            <Label Grid.Row="0" LineBreakMode="NoWrap" TextColor="#474747" Text="{Binding ContactName}" />
-                            <Label Grid.Row="1" TextColor="#474747" LineBreakMode="NoWrap" Text="{Binding CallTime}" />
-                          </Grid>
-                          <Grid Grid.Row="0" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center">
-                            <Image Source="{Binding PhoneImage}" HeightRequest="20" WidthRequest="20" HorizontalOptions="Center" VerticalOptions="Center" />
-                          </Grid>
-                        </Grid>
-                      </Grid>
-                      <Grid IsVisible="{Binding IsVisible, Mode=TwoWay}" ColumnSpacing="0" RowSpacing="0" Grid.Row="1" BackgroundColor="White"
-                            HorizontalOptions="FillAndExpand" Padding="5" VerticalOptions="FillAndExpand">
-                        <Grid.RowDefinitions>
-                          <RowDefinition Height="1" />
-                          <RowDefinition Height="40" />
-                          <RowDefinition Height="40" />
-                          <RowDefinition Height="40" />
-                          <RowDefinition Height="40" />
-                          <RowDefinition Height="40" />
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions >
-                          <ColumnDefinition Width="50" />
-                          <ColumnDefinition Width="*" />
+            <Grid Padding="2" Margin="1" BackgroundColor="#F0F0F0" >
+                <Border x:Name="frame" CornerRadius="2" Padding="1" Margin="1" Stroke="White">
+                <Grid VerticalOptions="FillAndExpand" BackgroundColor="White" HorizontalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid x:Name="grid" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60" />
+                    </Grid.RowDefinitions>
+                    <Grid RowSpacing="0">
+                        <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="50" />
                         </Grid.ColumnDefinitions>
-                        <BoxView Grid.Row="0" Grid.Column="0" BackgroundColor="LightGray" />
-                        <Image Grid.Row="1" Grid.Column="0" Source="{Binding NewContact}"  />
-                        <Image Grid.Row="2" Grid.Column="0" Source="{Binding AddContact}" />
-                        <Image Grid.Row="3" Grid.Column="0" Source="{Binding SendMessage}"  />
-                        <Image Grid.Row="4" Grid.Column="0" Source="{Binding BlockSpan}"  />
-                        <Image Grid.Row="5" Grid.Column="0" Source="{Binding CallDetails}" />
-                        <BoxView Grid.Row="0" Grid.Column="1" BackgroundColor="LightGray" />
-                        <Label Grid.Row="1" Grid.Column="1" Text="Create new contact" TextColor="#000000" />
-                        <Label Grid.Row="2" Grid.Column="1" Text="Add to a contact" TextColor="#000000"/>
-                        <Label Grid.Row="3" Grid.Column="1" Text="Send a message" TextColor="#000000" />
-                        <Label Grid.Row="4" Grid.Column="1" Text="Block/report Spam" TextColor="#000000" />
-                        <Label Grid.Row="5" Grid.Column="1" Text="Call details" TextColor="#000000" />
-                      </Grid>
+                        <Image Grid.Row="0" Grid.Column="0" Source="{Binding ContactImage}" VerticalOptions="Center"/>
+                        <Grid Grid.Row="0" Grid.Column="1" VerticalOptions="CenterAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" LineBreakMode="NoWrap" TextColor="#474747" Text="{Binding ContactName}" />
+                        <Label Grid.Row="1" TextColor="#474747" LineBreakMode="NoWrap" Text="{Binding CallTime}" />
+                        </Grid>
+                        <Grid Grid.Row="0" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Image Source="{Binding PhoneImage}" HeightRequest="20" WidthRequest="20" HorizontalOptions="Center" VerticalOptions="Center" />
+                        </Grid>
                     </Grid>
-                  </Frame>
+                    </Grid>
+                    <Grid IsVisible="{Binding IsVisible, Mode=TwoWay}" ColumnSpacing="0" RowSpacing="0" Grid.Row="1" BackgroundColor="White"
+                        HorizontalOptions="FillAndExpand" Padding="5" VerticalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1" />
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="40" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions >
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <BoxView Grid.Row="0" Grid.Column="0" BackgroundColor="LightGray" />
+                    <Image Grid.Row="1" Grid.Column="0" Source="{Binding NewContact}"  />
+                    <Image Grid.Row="2" Grid.Column="0" Source="{Binding AddContact}" />
+                    <Image Grid.Row="3" Grid.Column="0" Source="{Binding SendMessage}"  />
+                    <Image Grid.Row="4" Grid.Column="0" Source="{Binding BlockSpan}"  />
+                    <Image Grid.Row="5" Grid.Column="0" Source="{Binding CallDetails}" />
+                    <BoxView Grid.Row="0" Grid.Column="1" BackgroundColor="LightGray" />
+                    <Label Grid.Row="1" Grid.Column="1" Text="Create new contact" TextColor="#000000" />
+                    <Label Grid.Row="2" Grid.Column="1" Text="Add to a contact" TextColor="#000000"/>
+                    <Label Grid.Row="3" Grid.Column="1" Text="Send a message" TextColor="#000000" />
+                    <Label Grid.Row="4" Grid.Column="1" Text="Block/report Spam" TextColor="#000000" />
+                    <Label Grid.Row="5" Grid.Column="1" Text="Call details" TextColor="#000000" />
+                    </Grid>
                 </Grid>
-              </ViewCell.View>
-            </ViewCell>
+                </Border>
+            </Grid>
           </DataTemplate>
         </syncfusion:SfListView.ItemTemplate>
       </syncfusion:SfListView>

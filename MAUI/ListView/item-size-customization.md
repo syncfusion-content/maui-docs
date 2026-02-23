@@ -166,22 +166,18 @@ private void Button_Clicked(object sender, EventArgs e)
                 AutoFitMode="Height">
                 <syncfusion:SfListView.HeaderTemplate>
                     <DataTemplate>
-                        <ViewCell>
                             <Grid>
                                 <Label Text="Contact Details"
                                        FontSize="{Binding BindingContext.FontSize, Source={x:Reference listView}}"/>
                             </Grid>
-                        </ViewCell>
                     </DataTemplate>
                 </syncfusion:SfListView.HeaderTemplate>
                 <syncfusion:SfListView.FooterTemplate>
                     <DataTemplate>
-                        <ViewCell>
                             <Grid >
                                 <Label Text="{Binding contactsinfo.Count}" HorizontalOptions="Start" TextColor="Black" Grid.Column="1" FontSize="{Binding BindingContext.FontSize, Source={x:Reference listView}}"/>
                                 <Label Grid.Column="0" HorizontalOptions="End" Text="Contacts Count" TextColor="Black" FontSize="{Binding BindingContext.FontSize, Source={x:Reference listView}}"/>
                             </Grid>
-                        </ViewCell>
                     </DataTemplate>
                 </syncfusion:SfListView.FooterTemplate>
     </syncfusion:SfListView>                
