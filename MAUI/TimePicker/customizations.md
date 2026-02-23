@@ -716,12 +716,13 @@ this.Content = picker;
 
 ![Time picker coloumn divider color in .NET MAUI Time picker.](images/customizations/maui-time-picker-column-divider-color.png)
 
-### Customization of the hour column text style
+### Customization of the hour-column text style
 
-Customize the hour column text style of the `Time Picker` using The [HourColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_HourColumnTextStyle) property of the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
+Customize the hour-column text style of the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html) using the [HourColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_HourColumnTextStyle) property. This property accepts a `TextStyle` object that allows you to define font size, color, weight, and other text attributes for the hour‑column labels.
 
 N>
-* In custom column text style, hour, minute, second, meridiem and millisecond columns are applicable for `SfTimePicker` and `SfDateTimePicker` only.
+* Applying `HourTextStyle` overrides the previously defined unselected [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle), so the unselected style will no longer be applied.
+* The appearance of unselected items [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle) can be customized using the `SfTimePicker.TextStyle` property.
 
 {% tabs %}
 
@@ -750,9 +751,13 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-### Customization of the minute column text style
+### Customization of the minute-column text style
 
-Customize the minute column text style of the `Time Picker` using The [MinuteColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MinuteColumnTextStyle) property of the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
+Customize the minute-column text style of the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html) using the [MinuteColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MinuteColumnTextStyle) property. This property accepts a `TextStyle` object that allows you to define font size, color, weight, and other text attributes for the minute‑column labels.
+
+N>
+* Applying `MinuteTextStyle` overrides the previously defined unselected [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle), so the unselected style will no longer be applied.
+* The appearance of unselected items [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle) can be customized using the `SfTimePicker.TextStyle` property.
 
 {% tabs %}
 
@@ -781,9 +786,13 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-### Customization of the second column text style
+### Customization of the second-column text style
 
-Customize the second column text style of the `Time Picker` using The [SecondColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_SecondColumnTextStyle) property of the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
+Customize the second-column text style of the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html) using the [SecondColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_SecondColumnTextStyle) property. This property accepts a `TextStyle` object that allows you to define font size, color, weight, and other text attributes for the second‑column labels.
+
+N>
+* Applying `SecondTextStyle` overrides the previously defined unselected [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle), so the unselected style will no longer be applied.
+* The appearance of unselected items [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle) can be customized using the `SfTimePicker.TextStyle` property.
 
 {% tabs %}
 
@@ -812,9 +821,13 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-### Customization of the meridiem column text style
+### Customization of the meridiem-column text style
 
-Customize the meridiem column text style of the `Time Picker` using The [MeridiemColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MeridiemColumnTextStyle) property of the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
+Customize the meridiem-column text style of the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html) using the [MeridiemColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MeridiemColumnTextStyle) property. This property accepts a `TextStyle` object that allows you to define font size, color, weight, and other text attributes for the meridiem‑column labels.
+
+N>
+* Applying `MeridiemTextStyle` overrides the previously defined unselected [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle), so the unselected style will no longer be applied.
+* The appearance of unselected items [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle) can be customized using the `SfTimePicker.TextStyle` property.
 
 {% tabs %}
 
@@ -843,9 +856,13 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-### Customization of the millisecond column text style
+### Customization of the millisecond-column text style
 
-Customize the millisecond column text style of the `Time Picker` using The [MilliSecondColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MilliSecondColumnTextStyle) property of the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
+Customize the millisecond-column text style of the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html) using the [MilliSecondColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MilliSecondColumnTextStyle) property. This property accepts a `TextStyle` object that allows you to define font size, color, weight, and other text attributes for the millisecond‑column labels.
+
+N>
+* Applying `MilliSecondTextStyle` overrides the previously defined unselected [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle), so the unselected style will no longer be applied.
+* The appearance of unselected items [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle) can be customized using the `SfTimePicker.TextStyle` property.
 
 {% tabs %}
 
@@ -876,12 +893,12 @@ this.Content = timePicker;
 
 ![Custom column textstyle in .NET MAUI Time picker.](images/customizations/maui-time-picker-column-textstyle.webp)
 
-### Customization of the hour column width
+### Customization of the hour-column width
 
-Customize the hour column width of the `Time Picker` using the [HourColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_HourColumnWidth) property in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
+Customize the hour‑column width of the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html) using the [HourColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_HourColumnWidth) property, which controls the width of the hour-column.
 
 N>
-* In custom column width, hour, minute, second, meridiem and millisecond columns are applicable for `SfTimePicker` and `SfDateTimePicker` only.
+* Custom column width for hour, minute, second, meridiem, and millisecond columns are supported only in `SfTimePicker`.
 
 {% tabs %}
 
@@ -902,9 +919,9 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-### Customization of the minute column width
+### Customization of the minute-column width
 
-Customize the minute column width of the `Time Picker` using the [MinuteColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MinuteColumnWidth) property in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
+Customize the minute-column width of the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html) using the [MinuteColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MinuteColumnWidth) property, which controls the width of the minute-column.
 
 {% tabs %}
 
@@ -925,9 +942,9 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-### Customization of the second column width
+### Customization of the second-column width
 
-Customize the second column width of the `Time Picker` using the [SecondColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_SecondColumnWidth) property in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
+Customize the second-column width of the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html) using the [SecondColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_SecondColumnWidth) property, which controls the width of the second-column.
 
 {% tabs %}
 
@@ -948,9 +965,9 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-### Customization of the meridiem column width
+### Customization of the meridiem-column width
 
-Customize the meridiem column width of the `Time Picker` using the [MeridiemColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MeridiemColumnWidth) property in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
+Customize the meridiem-column width of the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html) using the [MeridiemColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MeridiemColumnWidth) property, which controls the width of the meridiem-column.
 
 {% tabs %}
 
@@ -971,9 +988,9 @@ this.Content = timePicker;
 
 {% endtabs %}
 
-### Customization of the millisecond column width
+### Customization of the millisecond-column width
 
-Customize the millisecond column width of the `Time Picker` using the [MilliSecondColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MilliSecondColumnWidth) property in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
+Customize the millisecond-column width of the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html) using the [MilliSecondColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MilliSecondColumnWidth) property, which controls the width of the millisecond-column.
 
 {% tabs %}
 
