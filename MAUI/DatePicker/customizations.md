@@ -720,7 +720,7 @@ Customize the day-column text style of the [SfDatePicker](https://help.syncfusio
 N>
 * Applying `DayTextStyle` overrides the previously defined unselected [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle), so the unselected style will no longer be applied.
 * The appearance of unselected items [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle) can be customized using the `SfDatePicker.TextStyle` property.
-* Custom column text styles for day, month, and year columns are supported only in `SfDatePicker`.
+* Custom column text style for the day-column is supported only in `SfDatePicker`.
 
 {% tabs %}
 
@@ -756,6 +756,7 @@ Customize the month-column text style of the [SfDatePicker](https://help.syncfus
 N>
 * Applying `MonthTextStyle` overrides the previously defined unselected [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle), so the unselected style will no longer be applied.
 * The appearance of unselected items [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle) can be customized using the `SfDatePicker.TextStyle` property.
+* Custom column text style for the month-column is supported only in `SfDatePicker`.
 
 {% tabs %}
 
@@ -791,6 +792,7 @@ Customize the year-column text style of the [SfDatePicker](https://help.syncfusi
 N>
 * Applying `YearTextStyle` overrides the previously defined unselected [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle), so the unselected style will no longer be applied.
 * The appearance of unselected items [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle) can be customized using the `SfDatePicker.TextStyle` property.
+* Custom column text style for the year-column is supported only in `SfDatePicker`.
 
 {% tabs %}
 
@@ -826,7 +828,7 @@ this.Content = datePicker;
 Customize the day‑column width of the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) using the [DayColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_DayColumnWidth) property, which controls the width of the day-column.
 
 N>
-* Custom column width for day, month, and year columns are supported only in `SfDatePicker`.
+* Custom column width for the day-column is supported only in `SfDatePicker`.
 
 {% tabs %}
 
@@ -851,6 +853,9 @@ this.Content = datePicker;
 
 Customize the month‑column width of the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) using the [MonthColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_DayColumnWidth) property, which controls the width of the month-column.
 
+N>
+* Custom column width for the month-column is supported only in `SfDatePicker`.
+
 {% tabs %}
 
 {% highlight xaml tabtitle="XAML" %}
@@ -873,6 +878,9 @@ this.Content = datePicker;
 ### Customization of the year-column width
 
 Customize the year‑column width of the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) using the [YearColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_YearColumnWidth) property, which controls the width of the year-column.
+
+N>
+* Custom column width for the year-column is supported only in `SfDatePicker`.
 
 {% tabs %}
 
