@@ -36,7 +36,7 @@ To enable the crosshair in the chart, create an instance of the `ChartCrossHairB
 SfCartesianChart chart = new SfCartesianChart();
 ...
 ChartCrossHairBehavior crosshair = new ChartCrossHairBehavior();
-chart.CrossHairBehavior= crosshair;
+chart.CrossHairBehavior = crosshair;
 ...
 this.Content = chart;
 
@@ -46,7 +46,7 @@ this.Content = chart;
 
 ## Show Crosshair axis labels
 
-To view the axis labels then set the `ShowTrackballLabel` property to true as shown in the below code snippet.
+To view the axis labels then set the `ShowTrackballLabel` property to true as shown in the below code snippet. The default value of the `ChartAxis.ShowTrackballLabel` is False.
 
 
 {% tabs %}
@@ -55,6 +55,10 @@ To view the axis labels then set the `ShowTrackballLabel` property to true as sh
 
 <chart:SfCartesianChart>
     ...
+    <chart:SfCartesianChart.CrossHairBehavior>
+        <chart:ChartCrossHairBehavior/>
+    </chart:SfCartesianChart.CrossHairBehavior> 
+   
     <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis ShowTrackballLabel="True"/>
     </chart:SfCartesianChart.XAxes>
@@ -72,19 +76,17 @@ To view the axis labels then set the `ShowTrackballLabel` property to true as sh
 SfCartesianChart chart = new SfCartesianChart();
 ...
 ChartCrossHairBehavior crosshair = new ChartCrossHairBehavior();
-chart.CrossHairBehavior= crosshair;
+chart.CrossHairBehavior = crosshair;
 
-
-chart.PrimaryAxis = new CategoryAxis
+CategoryAxis chartAxis = new CategoryAxis()
 {
-    ShowTrackballLabel = true
-};
+  chartAxis.ShowTrackballLabel = true
+}
 
-
-chart.SecondaryAxis = new NumericalAxis
+NumericalAxis chartAxis = new NumericalAxis()
 {
-    ShowTrackballLabel = true
-};
+  chartAxis.ShowTrackballLabel = true
+}
 ...
 this.Content = chart;
 
@@ -103,7 +105,7 @@ The appearance of the track line in crosshair can be customized using the follow
 * `Stroke`, of type `Brush`, used to change the stroke color of the line.
 * `StrokeDashArray`, of type `DoubleCollection`, specifies the dashes to be applied on the line.
 
-#### HorizontalLineStyle
+### HorizontalLineStyle
 
 
 {% tabs %}
@@ -132,15 +134,15 @@ The appearance of the track line in crosshair can be customized using the follow
 SfCartesianChart chart = new SfCartesianChart();
 ...
 ChartCrossHairBehavior crosshair = new ChartCrossHairBehavior();
-chart.CrossHairBehavior= crosshair;
+chart.CrossHairBehavior = crosshair;
 
-ChartLineStyle lineStyle = new ChartLineStyle()
+ChartLineStyle horizontalLineStyle = new ChartLineStyle()
 {
     Stroke = "Red",
     StrokeWidth = 1.5,
     StrokeDashArray = "2,2"
 };
-crosshair.LineStyle = lineStyle;
+crosshair.HorizontalLineStyle = horizontalLineStyle;
 ...
 this.Content = chart;
 
@@ -148,7 +150,7 @@ this.Content = chart;
 
 {% endtabs %}
 
-#### VerticalLineStyle
+### VerticalLineStyle
 
 
 {% tabs %}
@@ -177,15 +179,15 @@ this.Content = chart;
 SfCartesianChart chart = new SfCartesianChart();
 ...
 ChartCrossHairBehavior crosshair = new ChartCrossHairBehavior();
-chart.CrossHairBehavior= crosshair;
+chart.CrossHairBehavior = crosshair;
 
-ChartLineStyle lineStyle = new ChartLineStyle()
+ChartLineStyle verticalLineStyle = new ChartLineStyle()
 {
     Stroke = "Blue",
     StrokeWidth = 2,
     StrokeDashArray = "5,3"
 };
-crosshair.LineStyle = lineStyle;
+crosshair.VerticalLineStyle = verticalLineStyle;
 ...
 this.Content = chart;
 
@@ -194,9 +196,9 @@ this.Content = chart;
 {% endtabs %}
 
 
-## Crosshair Labels customization
+## Crosshair Axis Labels Customization
 
-The `LabelStyle` property allows you to customize the appearance of crosshair labels by adjusting their colors, fonts, borders, formatting, and overall layout. These options are:
+The `LabelStyle` property allows you to customize the appearance of crosshair axis labels. These options are:
 
 * `Background`, of type `Brush`, used to change the label background color.
 * `Margin`, of type `Thickness`, used to change the margin of the label.
@@ -216,13 +218,13 @@ The `LabelStyle` property allows you to customize the appearance of crosshair la
 
 <chart:SfCartesianChart>
     ...
-    <chart:ChartTrackballBehavior.LabelStyle>
-        <chart:ChartLabelStyle Background="LightBlue"   
+    <chart:CategoryAxis.TrackballLabelStyle>
+        <chart:ChartAxisLabelStyle Background="LightBlue"   
                                FontSize="15" 
                                CornerRadius="5"
                                StrokeWidth="2" 
                                Stroke="Gray"/>
-    </chart:ChartTrackballBehavior.LabelStyle>
+    </chart:CategoryAxis.TrackballLabelStyle>
     ...
 </chart:SfCartesianChart>
 
@@ -232,8 +234,10 @@ The `LabelStyle` property allows you to customize the appearance of crosshair la
 
 SfCartesianChart chart = new SfCartesianChart();
 . . .
-ChartTrackballBehavior trackball = new ChartTrackballBehavior();
-ChartLabelStyle labelStyle = new ChartLabelStyle()
+ChartCrossHairBehavior crosshair = new ChartCrossHairBehavior();
+chart.CrossHairBehavior = crosshair;
+
+ChartAxisLabelStyle axisLabelStyle = new ChartAxisLabelStyle()
 {
     Background = Colors.LightBlue,
     FontSize = 15,
@@ -241,7 +245,7 @@ ChartLabelStyle labelStyle = new ChartLabelStyle()
     StrokeWidth = 2,
     Stroke = Colors.Gray
 };
-trackball.LabelStyle = labelStyle;
+trackball.ChartAxisLabelStyle = axisLabelStyle;
 . . .
 this.Content = chart;
 
