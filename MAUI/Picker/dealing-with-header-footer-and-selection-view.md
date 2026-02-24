@@ -202,7 +202,7 @@ The Header’s [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
    ![Header divider color in .NET MAUI Picker.](images/custom-views/maui-picker-header-divider-color.png)
 
-### Custom Header Appearance using Datatemplate
+### Custom Header Appearance using Data template
 
 You can customize the picker header appearance by using the [HeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_HeaderTemplate) property in the [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html).
 
@@ -412,7 +412,7 @@ The Footer’s [DividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
    ![Footer divider color in .NET MAUI Picker.](images/custom-views/maui-picker-footer-divider-color.png)
 
-### Custom Footer Appearance using Datatemplate
+### Custom Footer Appearance using Data template
 
 You can customize the picker footer appearance by using the [FooterTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_FooterTemplate) property in the [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html).
 
