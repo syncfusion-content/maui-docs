@@ -713,6 +713,90 @@ this.Content = datepicker;
 
 ![Date picker coloumn divider color in .NET MAUI Date picker.](images/customizations/maui-date-picker-column-divider-color.png)
 
+## CloseButtonIcon
+
+### Show Close Button
+
+You can enable or disable the CloseButton in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) header by setting the [ShowCloseButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_ShowCloseButton) property. The default value is `false`.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+ <Grid>
+     <picker:SfDatePicker x:Name="datePicker" Mode="Dialog" ShowCloseButton="True">
+         <picker:SfDatePicker.HeaderView >
+             <picker:PickerHeaderView Height="40" Text="Date Picker"/>
+         </picker:SfDatePicker.HeaderView>
+     </picker:SfDatePicker>
+     <Button Text="Open Picker" 
+             x:Name="pickerButton"
+             Clicked="Button_Clicked"
+             HorizontalOptions="Center"
+             VerticalOptions="Center"
+             HeightRequest="50" 
+             WidthRequest="150">
+     </Button>
+ </Grid>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+private void Button_Clicked(object sender, EventArgs e)
+{
+    datePicker.IsOpen = true;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Enable CloseButton in the .NET MAUI Date Picker](images/customizations/maui-date-picker-enable-closebutton.png)
+
+N>For the CloseButton to render properly, the header view must be present; otherwise, it will not function.
+
+### Close Button Icon
+
+You can customize the close button icon in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) header by setting the [CloseButtonIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_CloseButtonIcon) property.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+ <Grid>
+     <picker:SfDatePicker x:Name="datePicker" Mode="Dialog" ShowCloseButton="True" CloseButtonIcon="closeicon.png">
+         <picker:SfDatePicker.HeaderView >
+             <picker:PickerHeaderView Height="40" Text="Date Picker"/>
+         </picker:SfDatePicker.HeaderView>
+     </picker:SfDatePicker>
+     <Button Text="Open Picker" 
+             x:Name="pickerButton"
+             Clicked="Button_Clicked"
+             HorizontalOptions="Center"
+             VerticalOptions="Center"
+             HeightRequest="50" 
+             WidthRequest="150">
+     </Button>
+ </Grid>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+private void Button_Clicked(object sender, EventArgs e)
+{
+    datePicker.IsOpen = true;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Enable CloseButtonIcon in the .NET MAUI Date Picker](images/customizations/maui-date-pikcer-enable-closebuttonicon.png)
+
+N>The ShowCloseButton property must be set to true for the close button icon to be displayed.
+
 ### Customization of the day column text style
 
 Customize the day column text style of the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) by setting its [DayColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_DayColumnTextStyle) property. This property accepts a TextStyle to change font, size, color, and attributes for the day labels.
