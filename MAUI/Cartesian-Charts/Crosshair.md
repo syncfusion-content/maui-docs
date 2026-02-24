@@ -262,7 +262,7 @@ ChartAxisLabelStyle axisLabelStyle = new ChartAxisLabelStyle()
     StrokeWidth = 2,
     Stroke = Colors.Gray
 };
-categoryAxis.ChartAxisLabelStyle = axisLabelStyle;
+categoryAxis.TrackballLabelStyle = axisLabelStyle;
 . . .
 this.Content = chart;
 
