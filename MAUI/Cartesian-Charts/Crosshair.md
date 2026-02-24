@@ -78,15 +78,15 @@ SfCartesianChart chart = new SfCartesianChart();
 ChartCrossHairBehavior crosshair = new ChartCrossHairBehavior();
 chart.CrossHairBehavior = crosshair;
 
-CategoryAxis chartAxis = new CategoryAxis()
-{
-  chartAxis.ShowTrackballLabel = true
-}
+    CategoryAxis chartXAxis = new CategoryAxis()
+    {
+        chartXAxis.ShowTrackballLabel = true
+    };
 
-NumericalAxis chartAxis = new NumericalAxis()
-{
-  chartAxis.ShowTrackballLabel = true
-}
+    NumericalAxis chartYAxis = new NumericalAxis()
+    {
+        chartYAxis.ShowTrackballLabel = true
+    };
 ...
 this.Content = chart;
 
@@ -106,6 +106,8 @@ The appearance of the track line in crosshair can be customized using the follow
 * `StrokeDashArray`, of type `DoubleCollection`, specifies the dashes to be applied on the line.
 
 ### HorizontalLineStyle
+
+The following code snippet demonstrates how to configure the line style for the horizontal line in the crosshair.
 
 
 {% tabs %}
@@ -151,6 +153,8 @@ this.Content = chart;
 {% endtabs %}
 
 ### VerticalLineStyle
+
+The following code snippet demonstrates how to configure the line style for the vertical ine in the crosshair.
 
 
 {% tabs %}
@@ -218,13 +222,15 @@ The `LabelStyle` property allows you to customize the appearance of crosshair ax
 
 <chart:SfCartesianChart>
     ...
-    <chart:CategoryAxis.TrackballLabelStyle>
-        <chart:ChartAxisLabelStyle Background="LightBlue"   
-                               FontSize="15" 
-                               CornerRadius="5"
-                               StrokeWidth="2" 
-                               Stroke="Gray"/>
-    </chart:CategoryAxis.TrackballLabelStyle>
+    <chart:CategoryAxis>
+        <chart:CategoryAxis.TrackballLabelStyle>
+            <chart:ChartAxisLabelStyle Background="LightBlue"   
+                                       FontSize="15" 
+                                       CornerRadius="5"
+                                       StrokeWidth="2" 
+                                       Stroke="Gray"/>
+        </chart:CategoryAxis.TrackballLabelStyle>
+    </chart:CategoryAxis>
     ...
 </chart:SfCartesianChart>
 
@@ -237,6 +243,7 @@ SfCartesianChart chart = new SfCartesianChart();
 ChartCrossHairBehavior crosshair = new ChartCrossHairBehavior();
 chart.CrossHairBehavior = crosshair;
 
+CategoryAxis categoryAxis = new CategoryAxis();
 ChartAxisLabelStyle axisLabelStyle = new ChartAxisLabelStyle()
 {
     Background = Colors.LightBlue,
@@ -245,7 +252,7 @@ ChartAxisLabelStyle axisLabelStyle = new ChartAxisLabelStyle()
     StrokeWidth = 2,
     Stroke = Colors.Gray
 };
-trackball.ChartAxisLabelStyle = axisLabelStyle;
+categoryAxis.ChartAxisLabelStyle = axisLabelStyle;
 . . .
 this.Content = chart;
 
