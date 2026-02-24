@@ -715,3 +715,87 @@ this.Content = picker;
 {% endtabs %}
 
 ![Time picker coloumn divider color in .NET MAUI Time picker.](images/customizations/maui-time-picker-column-divider-color.png)
+
+## CloseButtonIcon
+
+### Show Close Button
+
+You can enable or disable the close button in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html) header by setting the [ShowCloseButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_ShowCloseButton) property. The default value is `false`.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<Grid>
+    <picker:SfTimePicker x:Name="timePicker" Mode="Dialog" ShowCloseButton="True">
+        <picker:SfTimePicker.HeaderView >
+            <picker:PickerHeaderView Height="40" Text="Date Picker"/>
+        </picker:SfTimePicker.HeaderView>
+    </picker:SfTimePicker>
+    <Button Text="Open Picker" 
+            x:Name="pickerButton"
+            Clicked="Button_Clicked"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            HeightRequest="50" 
+            WidthRequest="150">
+    </Button>
+</Grid>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+private void Button_Clicked(object sender, EventArgs e)
+{
+    timePicker.IsOpen = true;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Enable CloseButton in the .NET MAUI Time Picker](images/customizations/maui-time-picker-enable-closebutton.png)
+
+N>For the CloseButton to render properly, the header view must be present; otherwise, it will not function.
+
+### Close Button Icon
+
+You can customize the close button icon in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html) header by setting the [CloseButtonIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_CloseButtonIcon) property.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<Grid>
+    <picker:SfTimePicker x:Name="timePicker" Mode="Dialog" ShowCloseButton="True" CloseButtonIcon="closeicon.png">
+        <picker:SfTimePicker.HeaderView >
+            <picker:PickerHeaderView Height="40" Text="Date Picker"/>
+        </picker:SfTimePicker.HeaderView>
+    </picker:SfTimePicker>
+    <Button Text="Open Picker" 
+            x:Name="pickerButton"
+            Clicked="Button_Clicked"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            HeightRequest="50" 
+            WidthRequest="150">
+    </Button>
+</Grid>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+private void Button_Clicked(object sender, EventArgs e)
+{
+    timePicker.IsOpen = true;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Enable CloseButtonIcon in the .NET MAUI Time Picker](images/customizations/maui-time-picker-enable-closebuttonicon.png)
+
+N>The ShowCloseButton property must be set to true for the close button icon to be displayed.

@@ -661,3 +661,117 @@ this.Content = picker;
 {% endtabs %}
 
    ![Date Time picker coloumn divider color in .NET MAUI Date Time picker.](images/customizations/maui-time-picker-column-divider-color.png)
+
+## CloseButtonIcon
+
+### Show Close Button
+
+You can enable or disable the close button in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html), above the header by setting the [ShowCloseButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_ShowCloseButton) property. The default value is `false`.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<Grid>
+    <picker:SfDateTimePicker x:Name="dateTimePicker" Mode="Dialog" ShowCloseButton="True">
+    </picker:SfDateTimePicker>
+    <Button Text="Open Picker" 
+            x:Name="pickerButton"
+            Clicked="Button_Clicked"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            HeightRequest="50" 
+            WidthRequest="150">
+    </Button>
+</Grid>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+private void Button_Clicked(object sender, EventArgs e)
+{
+    dateTimePicker.IsOpen = true;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Enable CloseButton in the .NET MAUI Date Time Picker](images/customizations/maui-date-time-picker-custom-enable-closebutton.png)
+
+N>For the CloseButton to render properly, the header view must be present; otherwise, it will not function.
+
+### Close Button Icon
+
+You can customize the close button icon in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html), above the header by setting the [CloseButtonIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_CloseButtonIcon) property.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<Grid>
+    <picker:SfDateTimePicker x:Name="dateTimePicker" Mode="Dialog" ShowCloseButton="True" CloseButtonIcon="designer_two.png">
+    </picker:SfDateTimePicker>
+    <Button Text="Open Picker" 
+            x:Name="pickerButton"
+            Clicked="Button_Clicked"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            HeightRequest="50" 
+            WidthRequest="150">
+    </Button>
+</Grid>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+private void Button_Clicked(object sender, EventArgs e)
+{
+    dateTimePicker.IsOpen = true;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Enable CloseButtonIcon in the .NET MAUI Date Time Picker](images/customizations/maui-date-time-picker-custom-enable-closebuttonicon.png)
+
+N>The ShowCloseButton property must be set to true for the close button icon to be displayed.
+
+### Customization of Active View
+
+## Active View
+
+You can control the initial active tab (Date or Time) in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html) by setting the [ActiveView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_ActiveView) property. This property uses the [DateTimePickerView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_DateTimePickerView) enumeration with two values: `Date` and `Time`. The default value is `Date`.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfDateTimePicker ActiveView="Time">
+    
+</picker:SfDateTimePicker>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Maui.Picker;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDateTimePicker sfDateTimePicker = new SfDateTimePicker();
+        sfDateTimePicker.ActiveView = DateTimePickerView.Time;
+        this.Content = sfDateTimePicker;
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
