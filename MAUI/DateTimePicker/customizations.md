@@ -918,8 +918,6 @@ Customize the minute column text style of the [SfDateTimePicker](https://help.sy
 
 N>
 * Applying `MinuteTextStyle` overrides the previously defined unselected [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle), so the unselected style will no longer be applied.
-* The appearance of unselected items [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle) can be customized using the `SfDateTimePicker.TextStyle` property.
-* Custom column text style for the minute-column is supported only in `SfDateTimePicker`.
 
 {% tabs %}
 
