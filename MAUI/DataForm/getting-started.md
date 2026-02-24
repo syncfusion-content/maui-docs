@@ -18,7 +18,7 @@ This section provides a quick overview of how to get started with the [.NET MAUI
 
 Before proceeding, ensure the following are setup:
 1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later is installed.
-2. Set up a .NET MAUI environment with Visual Studio 2026 18.0.0. with existing 2022.
+2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or Visual Studio 2026 (18.0.0).
 
 ## Step 1: Create a New .NET MAUI Project
 
