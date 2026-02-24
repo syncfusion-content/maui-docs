@@ -78,15 +78,17 @@ SfCartesianChart chart = new SfCartesianChart();
 ChartCrossHairBehavior crosshair = new ChartCrossHairBehavior();
 chart.CrossHairBehavior = crosshair;
 
-    CategoryAxis chartXAxis = new CategoryAxis()
-    {
-        chartXAxis.ShowTrackballLabel = true
-    };
+CategoryAxis chartXAxis = new CategoryAxis()
+{
+    ShowTrackballLabel = true
+};
 
-    NumericalAxis chartYAxis = new NumericalAxis()
-    {
-        chartYAxis.ShowTrackballLabel = true
-    };
+NumericalAxis chartYAxis = new NumericalAxis()
+{
+    ShowTrackballLabel = true
+};
+chart.XAxes.Add(chartXAxis);
+chart.YAxes.Add(chartXAxis);
 ...
 this.Content = chart;
 
@@ -138,11 +140,15 @@ SfCartesianChart chart = new SfCartesianChart();
 ChartCrossHairBehavior crosshair = new ChartCrossHairBehavior();
 chart.CrossHairBehavior = crosshair;
 
+DoubleCollection doubleCollection = new DoubleCollection();
+doubleCollection.Add(2);
+doubleCollection.Add(2);
+
 ChartLineStyle horizontalLineStyle = new ChartLineStyle()
 {
-    Stroke = "Red",
+    Stroke = Colors.Red,
     StrokeWidth = 1.5,
-    StrokeDashArray = "2,2"
+    StrokeDashArray = doubleCollection
 };
 crosshair.HorizontalLineStyle = horizontalLineStyle;
 ...
@@ -185,11 +191,15 @@ SfCartesianChart chart = new SfCartesianChart();
 ChartCrossHairBehavior crosshair = new ChartCrossHairBehavior();
 chart.CrossHairBehavior = crosshair;
 
+DoubleCollection doubleCollection = new DoubleCollection();
+doubleCollection.Add(5);
+doubleCollection.Add(3);
+
 ChartLineStyle verticalLineStyle = new ChartLineStyle()
 {
-    Stroke = "Blue",
+    Stroke = Colors.Blue,
     StrokeWidth = 2,
-    StrokeDashArray = "5,3"
+    StrokeDashArray = doubleCollection
 };
 crosshair.VerticalLineStyle = verticalLineStyle;
 ...
