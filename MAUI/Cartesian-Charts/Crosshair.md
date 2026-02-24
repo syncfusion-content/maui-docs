@@ -88,7 +88,7 @@ NumericalAxis chartYAxis = new NumericalAxis()
     ShowTrackballLabel = true
 };
 chart.XAxes.Add(chartXAxis);
-chart.YAxes.Add(chartXAxis);
+chart.YAxes.Add(chartYAxis);
 ...
 this.Content = chart;
 
