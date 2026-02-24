@@ -160,7 +160,7 @@ this.Content = chart;
 
 ### VerticalLineStyle
 
-The following code snippet demonstrates how to configure the line style for the vertical ine in the crosshair.
+The following code snippet demonstrates how to configure the line style for the vertical line in the crosshair.
 
 
 {% tabs %}
