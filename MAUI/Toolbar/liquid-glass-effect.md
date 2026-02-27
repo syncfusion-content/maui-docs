@@ -436,4 +436,3 @@ this.Content = mainGrid;
 N>
 * Supported on `macOS 26 or higher` and `iOS 26 or higher`.
 * This feature is available only in `.NET 10.`
-* Grouping layout automatically applies when `EnableLiquidGlassEffect` is enabled on the toolbar.
