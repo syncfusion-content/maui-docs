@@ -96,6 +96,8 @@ this.Content = chart;
 
 {% endtabs %}
 
+![Crosshair Behavior support in MAUI chart](Crosshair_images\maui_chart_crosshair.png)
+
 
 ## Vertical and Horizontal Line Customization
 
@@ -123,7 +125,7 @@ The following code snippet demonstrates how to configure the line style for the 
             <chart:ChartCrossHairBehavior.HorizontalLineStyle>
                  <chart:ChartLineStyle 
                     Stroke="Red" 
-                    StrokeWidth="1.5",
+                    StrokeWidth="1.5"
                     StrokeDashArray="2,2"/>
             </chart:ChartCrossHairBehavior.HorizontalLineStyle>
         </chart:ChartCrossHairBehavior>
@@ -157,6 +159,8 @@ this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Crosshair HorizontalLineStyle Customization support in MAUI chart](Crosshair_images\maui_chart_crosshair_horizontal_linestyle.png)
 
 ### VerticalLineStyle
 
@@ -209,6 +213,7 @@ this.Content = chart;
 
 {% endtabs %}
 
+![Crosshair VerticalLineStyle Customization support in MAUI chart](Crosshair_images\maui_chart_crosshair_vertical_linestyle.png)
 
 ## Crosshair Axis Labels Customization
 
@@ -269,3 +274,5 @@ this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Crosshair Axis Labels Customization support in MAUI chart](Crosshair_images\maui_chart_crosshair_label_customia.png)
