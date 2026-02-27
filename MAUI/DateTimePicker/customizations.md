@@ -740,9 +740,9 @@ private void Button_Clicked(object sender, EventArgs e)
 
 N>The ShowCloseButton property must be set to true for the close button icon to be displayed.
 
-### Customization of Active View
+## Customization of Active View
 
-## Active View
+### Active View
 
 You can control the initial active tab (Date or Time) in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html) by setting the [ActiveView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_ActiveView) property. This property uses the [DateTimePickerView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_DateTimePickerView) enumeration with two values: `Date` and `Time`. The default value is `Date`.
 
