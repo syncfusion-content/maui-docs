@@ -776,6 +776,8 @@ public partial class MainPage : ContentPage
 
 {% endtabs %}
 
+## Column Customization
+
 ### Customization of the day column text style
 
 Customize the day column text style of the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html) by setting its [DayColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_DayColumnTextStyle) property. This property accepts a TextStyle to change font, size, color, and attributes for the day labels.
@@ -789,7 +791,7 @@ N>
 
 <picker:SfDateTimePicker x:Name="datetimepicker" >
     <picker:SfDateTimePicker.DayColumnTextStyle>
-        <picker:PickerTextStyle FontSize="15" TextColor="DeepPink"/>
+        <picker:PickerTextStyle FontSize="15" TextColor="#2F855A"/>
     </picker:SfDateTimePicker.DayColumnTextStyle>
 </picker:SfDateTimePicker>
 
@@ -1051,7 +1053,7 @@ this.Content = dateTimePicker;
 
 {% endtabs %}
 
-![Custom column textstyle in .NET MAUI Date Time picker.](images/customizations/maui-date-time-picker-column-textstyle.webp)
+![Custom column textstyle in .NET MAUI Date Time picker.](images/customizations/maui-date-time-picker-column-textstyle.webp){:width="380" }
 
 ### Customization of the day column width
 
