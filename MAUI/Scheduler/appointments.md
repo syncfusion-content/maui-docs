@@ -1223,13 +1223,13 @@ You can control when the editor is available by using the `AppointmentEditorMode
 By default, `AppointmentEditorMode` is set to `None`. To allow users to open and interact with the Appointment Editor, set the `AppointmentEditorMode` to `Add` or `Edit`.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="6" %}
+{% highlight xaml tabtitle="XAML" hl_lines="3" %}
 <scheduler:SfScheduler x:Name="scheduler" 
                        View="Day" 
                        AppointmentEditorMode="Add,Edit">
 </scheduler:SfScheduler>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="7" %}
+{% highlight c# tabtitle="C#" hl_lines="6" %}
 public partial class MainPage : ContentPage
 {
     public MainPage()
@@ -1270,10 +1270,10 @@ The `AppointmentResizeSettings` property lets you configure automatic scrolling,
 
 #### Allow Resize Scroll
 
-You can enable automatic scrolling during resizing using the `AllowResizeScroll` property. When set to true, the scheduler scrolls automatically if the appointment is dragged beyond the visible area. By default, AllowResizeScroll is false.
+You can enable automatic scrolling during appointment resizing using the `AllowResizeScroll` property. As the appointment is being resized and reaches the boundary of the visible timeslots, the scheduler scrolls to display additional timeslots. This allows the resizing process to continue smoothly. Setting `AllowResizeScroll` to `true` enables this functionality. The default value is `false`.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="3" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 <scheduler:SfScheduler x:Name="scheduler" 
                        View="Day" 
                        AllowAppointmentResize="True">
@@ -1282,13 +1282,12 @@ You can enable automatic scrolling during resizing using the `AllowResizeScroll`
     </scheduler:SfScheduler.AppointmentResizeSettings>
 </scheduler:SfScheduler>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="7 8" %}
+{% highlight c# tabtitle="C#" hl_lines="7" %}
 public partial class MainPage : ContentPage
 {
     public MainPage()
     {
         InitializeComponent();
-
         this.scheduler.AllowAppointmentResize = true;
         this.scheduler.AppointmentResizeSettings.AllowResizeScroll = true;
     }
@@ -1301,7 +1300,7 @@ public partial class MainPage : ContentPage
 You can display a time indicator while resizing an appointment by using the `ShowTimeIndicator` property. By default, `ShowTimeIndicator` is set to `true`. To hide the time indicator during resizing, set the `ShowTimeIndicator` property to `false`.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="4 5 6" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 <scheduler:SfScheduler x:Name="scheduler" 
                        View="Day" 
                        AllowAppointmentResize="True">
@@ -1328,7 +1327,7 @@ public partial class MainPage : ContentPage
 The format of the time displayed in the time indicator while resizing an appointment can be customized using the `TimeIndicatorTextFormat` property.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="4 5 6" %}
+{% highlight xaml tabtitle="XAML" hl_lines="5" %}
 <scheduler:SfScheduler x:Name="scheduler" 
                        View="Day" 
                        AllowAppointmentResize="True">
@@ -1368,7 +1367,7 @@ The appearance of the time indicator text, including color, font size, font fami
     </scheduler:SfScheduler.AppointmentResizeSettings>
 </scheduler:SfScheduler>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="7 8 9 10 11 12 13" %}
+{% highlight c# tabtitle="C#" hl_lines="7 8 9 10 11 12 13 14" %}
 public partial class MainPage : ContentPage
 {
     public MainPage()
@@ -1397,7 +1396,7 @@ The border displayed around an appointment during resizing can be customized usi
                        View="Day" 
                        AllowAppointmentResize="True">
     <scheduler:SfScheduler.AppointmentResizeSettings>
-        <scheduler:AppointmentResizeSettings ResizeBorderThickness="10" ResizeBorderStroke="Red"/>
+        <scheduler:AppointmentResizeSettings ResizeBorderThickness="5" ResizeBorderStroke="Red"/>
     </scheduler:SfScheduler.AppointmentResizeSettings>
 </scheduler:SfScheduler>
 {% endhighlight %}
@@ -1455,15 +1454,15 @@ The AppointmentToolTipSettings property allows you to customize the appearance a
                        View="Day" 
                        EnableAppointmentToolTip="True">
     <scheduler:SfScheduler.AppointmentToolTipSettings>
-        <scheduler:AppointmentToolTipSettings Background="AliceBlue" Padding="5" ToolTipPosition="Right">
+        <scheduler:AppointmentToolTipSettings Background="PaleGreen" Padding="5" ToolTipPosition="Right">
             <scheduler:AppointmentToolTipSettings.TextStyle>
-                <scheduler:SchedulerTextStyle TextColor="DarkBlue" FontSize="14" FontAttributes="Bold"/>
+                <scheduler:SchedulerTextStyle TextColor="Purple" FontSize="15" FontAttributes="Bold"/>
             </scheduler:AppointmentToolTipSettings.TextStyle>
         </scheduler:AppointmentToolTipSettings>
     </scheduler:SfScheduler.AppointmentToolTipSettings>
 </scheduler:SfScheduler>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="7 10 13 16 19 20 21 22 23 24" %}
+{% highlight c# tabtitle="C#" hl_lines="7 8 9 10 11 12 13 14 15 16 17 18" %}
 public partial class MainPage : ContentPage
 {
     public MainPage()
@@ -1472,20 +1471,13 @@ public partial class MainPage : ContentPage
         this.scheduler.EnableAppointmentToolTip = true;
         this.scheduler.AppointmentToolTipSettings = new AppointmentToolTipSettings()
         {
-            // Background color
-            Background = Colors.AliceBlue,
-
-            // Padding inside the tooltip (left, top, right, bottom)
+            Background = Colors.PaleGreen,
             Padding = new Thickness(5),
-
-            // Tooltip placement relative to the appointment
             ToolTipPosition = SchedulerToolTipPosition.Right,
-
-            // Text style inside the tooltip
             TextStyle = new SchedulerTextStyle
             {
-                TextColor = Colors.DarkBlue,
-                FontSize = 14,
+                TextColor = Colors.Purple,
+                FontSize = 15,
                 FontAttributes = FontAttributes.Bold
             }
         };
@@ -1497,3 +1489,32 @@ public partial class MainPage : ContentPage
 ### Appointment ToolTip Template
 
 The `AppointmentToolTipTemplate` property lets you create a custom tooltip layout for appointments, allowing you to display additional information or change the tooltip’s appearance as needed.
+
+{% tabs %}
+{% highlight xaml tabtitle="XAML" hl_lines="4 5 24 25" %}
+<scheduler:SfScheduler x:Name="scheduler" 
+                       View="Day" 
+                       EnableAppointmentToolTip="True">
+    <scheduler:SfScheduler.AppointmentToolTipTemplate>
+        <DataTemplate x:DataType="scheduler:SchedulerAppointment">
+            <StackLayout>
+                <Label Text="{Binding Subject}"
+                       TextColor="Green"
+                       Background="LightYellow"
+                       FontSize="16"
+                       FontAttributes="Bold"
+                       LineBreakMode="NoWrap" />
+                <Label Text="{Binding StartTime, StringFormat='{0:dddd, MMMM d, yyyy}'}"
+                       TextColor="Purple"
+                       Background="LightYellow"
+                       FontSize="14"
+                       LineBreakMode="NoWrap" />
+                <Label Text="{Binding EndTime, StringFormat='{0:dddd, MMMM d, yyyy}'}"
+                       TextColor="Purple"
+                       Background="LightYellow"
+                       FontSize="14"
+                       LineBreakMode="NoWrap" />
+            </StackLayout>
+        </DataTemplate>
+    </scheduler:SfScheduler.AppointmentToolTipTemplate>
+</scheduler:SfScheduler>
