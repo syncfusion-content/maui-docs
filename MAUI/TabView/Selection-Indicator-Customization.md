@@ -174,7 +174,7 @@ The indicator will be placed at the left of the selected tab.
 {% tabs %}
 
 {% highlight xaml %}
-    <tabView:SfTabView TabBarPlacement="Left"  
+    <tabView:SfTabView TabBarPlacement="Right"  
                    IndicatorPlacement="Left"
                    TabBarWidth="60"
                    IndicatorWidthMode="Stretch">
@@ -209,7 +209,7 @@ The indicator will be placed at the left of the selected tab.
 
 {% highlight C# %}
     var tabView = new SfTabView();
-    tabView.TabBarPlacement = TabBarPlacement.Left;
+    tabView.TabBarPlacement = TabBarPlacement.Right;
     tabView.IndicatorPlacement = TabIndicatorPlacement.Left;
     tabView.TabBarWidth = 60;
     tabView.IndicatorWidthMode = IndicatorWidthMode.Stretch;
@@ -242,7 +242,7 @@ The indicator will be placed at the left of the selected tab.
 
 {% endtabs %}
 
-![Left](images\TabBarPlacementLeft.png) 
+![Left](images\TabIndicatorPlacementLeft.png) 
 
 ### Right
 

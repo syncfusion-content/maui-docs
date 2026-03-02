@@ -364,7 +364,7 @@ The tab bar will be placed right to the content region of the Tab View control.
 
 {% endtabs %}
 
-![TabBarPlacement Right](images\TabBarPlacemntRight.png) 
+![TabBarPlacement Right](images\TabBarPlacementRight.png) 
 
 ## TabBarBackground customization
 
