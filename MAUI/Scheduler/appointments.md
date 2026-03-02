@@ -1241,6 +1241,8 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+![Appointment-Editor-In-.NET-MAUI-SfScheduler](images/appointments/appointment-editor.gif)
+
 ## Appointment Resizing
 
 Modify appointment durations directly by dragging the start or end edges of an appointment. In Day, Week, and Work Week views, drag the top or bottom edges, while in Month and Timeline views, drag the left or right edges to adjust the appointment timing. By default, `AllowAppointmentResize` is set to `false`. Enable this functionality by setting the `AllowAppointmentResize` property to `true`.
@@ -1263,6 +1265,8 @@ public partial class MainPage : ContentPage
 }
 {% endhighlight %}
 {% endtabs %}
+
+![Appointment-Resizing-In-.NET-MAUI-SfScheduler](images/appointments/appointment-resizing.gif)
 
 ### Appointment Resize Settings
 
@@ -1295,6 +1299,8 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+![AllowResizeScroll-In-Appointment-Resizing-In-.NET-MAUI-SfScheduler](images/appointments/allow-resize-scroll.gif)
+
 #### Show Time Indicator
 
 You can display a time indicator while resizing an appointment by using the `ShowTimeIndicator` property. By default, `ShowTimeIndicator` is set to `true`. To hide the time indicator during resizing, set the `ShowTimeIndicator` property to `false`.
@@ -1321,6 +1327,8 @@ public partial class MainPage : ContentPage
 }
 {% endhighlight %}
 {% endtabs %}
+
+![ShowTimeIndicator-In-Appointment-Resizing-In-.NET-MAUI-SfScheduler](images/appointments/show-time-indicator.gif)
 
 #### Time Indicator Text Format
 
@@ -1386,6 +1394,8 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+![TimeIndicatorStyle-Of-TimeIndicator-in-Appointment-Resizing-in-.NET-MAUI-SfScheduler](images/appointments/time-indicator-style.gif)
+
 #### Resize Border
  
 The border displayed around an appointment during resizing can be customized using the `ResizeBorderThickness` and `ResizeBorderStroke` properties. ResizeBorderThickness defines how thick the border appears, while ResizeBorderStroke specifies its color.
@@ -1413,15 +1423,17 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+![ResizeBorder-in-Appointment-Resizing-in-.NET-MAUI-SfScheduler](images/appointments/resize-border.gif)
+
 ## Appointment Tooltip
 
-The appointment tooltip provides a quick, contextual preview of scheduled events. By default, the `EnableAppointmentToolTip` property is set to `false`. To display appointment details such as the subject, start time, and end time when hovering over or tapping an appointment, set the `EnableAppointmentToolTip` property to `true`.
+The appointment tooltip provides a quick, contextual preview of scheduled events. By default, the `IsAppointmentToolTipEnabled` property is set to `false`. To display appointment details such as the subject, start time, and end time when hovering over or tapping an appointment, set the `IsAppointmentToolTipEnabled` property to `true`.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
 <scheduler:SfScheduler x:Name="scheduler" 
                        View="Day" 
-                       EnableAppointmentToolTip="True">
+                       IsAppointmentToolTipEnabled="True">
 </scheduler:SfScheduler>
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="6" %}
@@ -1430,11 +1442,13 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        this.scheduler.EnableAppointmentToolTip = true;
+        this.scheduler.IsAppointmentToolTipEnabled = true;
     }
 }
 {% endhighlight %}
 {% endtabs %}
+
+![Appointment-Tooltip-in-.NET-MAUI-SfScheduler](images/appointments/appointment-tooltip.png)
 
 ### Appointment Tooltip Settings
 
@@ -1486,6 +1500,8 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
+![Appointment-Tooltip-Settings-in-.NET-MAUI-SfScheduler](images/appointments/appointment-tooltip-settings.png)
+
 ### Appointment ToolTip Template
 
 The `AppointmentToolTipTemplate` property lets you create a custom tooltip layout for appointments, allowing you to display additional information or change the tooltip’s appearance as needed.
@@ -1494,7 +1510,7 @@ The `AppointmentToolTipTemplate` property lets you create a custom tooltip layou
 {% highlight xaml tabtitle="XAML" hl_lines="4 5 24 25" %}
 <scheduler:SfScheduler x:Name="scheduler" 
                        View="Day" 
-                       EnableAppointmentToolTip="True">
+                       IsAppointmentToolTipEnabled="True">
     <scheduler:SfScheduler.AppointmentToolTipTemplate>
         <DataTemplate x:DataType="scheduler:SchedulerAppointment">
             <StackLayout>
