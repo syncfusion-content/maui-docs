@@ -11,7 +11,7 @@ documentation: UG
 
 ## Placement options
 
-The .NET MAUI Tab View provides three options for determining how the selection indicator aligns relative to the tab header item. These options are top, bottom, left, right and fill. This can be configured by setting the [IndicatorPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IndicatorPlacement) property of SfTabView.
+The .NET MAUI Tab View provides five options for determining how the selection indicator aligns relative to the tab header item. These options are top, bottom, left, right and fill. This can be configured by setting the [IndicatorPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IndicatorPlacement) property of SfTabView.
 
 ### Top
 
