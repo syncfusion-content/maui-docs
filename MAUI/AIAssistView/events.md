@@ -78,7 +78,7 @@ To handle the tap action using commands (MVVM), bind the [ItemTappedCommand](htt
 
 ## ItemLongPressed Event and Command
 
-The `SfAIAssistView` control also supports the [ItemLongPressed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ItemLongPressed) event and [ItemLongPressedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ItemLongPressedCommand), which are triggered when item is long-pressed. The [ItemLongPressedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ItemLongPressedEventArgs.html) argument provides the following details:
+The `SfAIAssistView` control also supports the [ItemLongPressed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ItemLongPressed) event and [ItemLongPressedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ItemLongPressedCommand), which are triggered when an item is long-pressed. The [ItemLongPressedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ItemLongPressedEventArgs.html) argument provides the following details:
 
  * [Item](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ItemLongPressedEventArgs.html#Syncfusion_Maui_AIAssistView_ItemLongPressedEventArgs_Item) : The item that was long-pressed.
  * [Position](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ItemLongPressedEventArgs.html#Syncfusion_Maui_AIAssistView_ItemLongPressedEventArgs_Position) : The touch position of the long press.
@@ -142,7 +142,7 @@ To handle the long-press action using commands (MVVM), bind the [ItemLongPressed
 
 ## Request Event and Command
 
-The [Request](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_Request) event and [RequestCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestCommand) are triggered when a request item is sent. The [RequestEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.RequestEventArgs.html) arguments provides the following details:
+The [Request](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_Request) event and [RequestCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestCommand) are triggered when a request item is sent. The [RequestEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.RequestEventArgs.html) argument provides the following details:
 
  * [RequestItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.RequestEventArgs.html#Syncfusion_Maui_AIAssistView_RequestEventArgs_RequestItem) : Represents the item requested.
  * [Handled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.RequestEventArgs.html#Syncfusion_Maui_AIAssistView_RequestEventArgs_Handled) : Indicates whether the request has been handled.
@@ -285,7 +285,7 @@ The [ItemRetryCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAss
 {% endhighlight %}
 {% endtabs %}
 
-##  ItemRatingChanged Command
+## ItemRatingChanged Command
 
 The [ItemRatingChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ItemRatingChangedCommand) is executed whenever a user changes the rating of a response item. This typically occurs when a user performs an action like liking or disliking the item.
 
