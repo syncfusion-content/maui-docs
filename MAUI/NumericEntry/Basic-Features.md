@@ -198,7 +198,7 @@ public partial class MainPage : ContentPage
 
 ## Completed Event
 
-The [Completed]() event is raised when the user finalizes the text in the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) editable mode by pressing return key on the keyboard.The handler for the event is a generic event handler, taking the `sender` and `EventArgs`(the `EventArgs` value is `string.Empty`):
+The [Completed]() event is raised when the user finalizes the text in the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) editable mode by pressing return key on the keyboard. The handler for the event is a generic event handler, taking the `sender` and `EventArgs`(the `EventArgs` value is `string.Empty`):
 
 {% tabs %}
 {% highlight xaml %}
