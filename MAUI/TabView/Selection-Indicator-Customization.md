@@ -11,7 +11,7 @@ documentation: UG
 
 ## Placement options
 
-The .NET MAUI Tab View provides three options for determining how the selection indicator aligns relative to the tab header item. These options are top, bottom, and fill. This can be configured by setting the [IndicatorPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IndicatorPlacement) property of SfTabView.
+The .NET MAUI Tab View provides three options for determining how the selection indicator aligns relative to the tab header item. These options are top, bottom, left, right and fill. This can be configured by setting the [IndicatorPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_IndicatorPlacement) property of SfTabView.
 
 ### Top
 
@@ -20,11 +20,70 @@ The indicator will be placed at the top of the selected tab.
 {% tabs %}
 
 {% highlight xaml %}
-    <tabView:SfTabView IndicatorPlacement="Top">
+    <tabView:SfTabView TabBarPlacement="Top"  
+                   IndicatorPlacement="Top"
+                   TabBarWidth="60"
+                   IndicatorWidthMode="Stretch">
+
+    <tabView:SfTabView.Items>
+        <tabView:SfTabItem Header="ITEM 1">
+            <tabView:SfTabItem.Content>
+                    <Label Text="Tab item content" 
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Center" />
+            </tabView:SfTabItem.Content>
+        </tabView:SfTabItem>
+
+        <tabView:SfTabItem Header="ITEM 2">
+            <tabView:SfTabItem.Content>
+                        <Label Text="Tab item content" 
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" />
+            </tabView:SfTabItem.Content>
+        </tabView:SfTabItem>
+
+        <tabView:SfTabItem Header="ITEM 3">
+            <tabView:SfTabItem.Content>
+                        <Label Text="Tab item content" 
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" />
+            </tabView:SfTabItem.Content>
+        </tabView:SfTabItem>
+    </tabView:SfTabView.Items>
+</tabView:SfTabView>
 {% endhighlight %}
 
 {% highlight C# %}
-     tabView.IndicatorPlacement = IndicatorPlacement.Top;
+    var tabView = new SfTabView();
+    tabView.TabBarPlacement = TabBarPlacement.Top;
+    tabView.IndicatorPlacement = TabIndicatorPlacement.Top;
+    tabView.TabBarWidth = 60;
+    tabView.IndicatorWidthMode = IndicatorWidthMode.Stretch;
+    var item1 = new SfTabItem { Header = "ITEM 1" };
+    item1.Content = new Label
+    {
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item1);
+    var item2 = new SfTabItem { Header = "ITEM 2" };
+    item2.Content = new Label
+    {
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item2);
+    var item3 = new SfTabItem { Header = "ITEM 2" };
+    item3.Content = new Label
+    {
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item3);
+    this.Content = tabView;
 {% endhighlight %}
 
 {% endtabs %}
@@ -38,16 +97,229 @@ The indicator will be placed at the bottom of the selected tab.
 {% tabs %}
 
 {% highlight xaml %}
-    <tabView:SfTabView IndicatorPlacement="Bottom">
+    <tabView:SfTabView TabBarPlacement="Top"  
+                   IndicatorPlacement="Bottom"
+                   TabBarWidth="60"
+                   IndicatorWidthMode="Stretch">
+
+    <tabView:SfTabView.Items>
+        <tabView:SfTabItem Header="ITEM 1">
+            <tabView:SfTabItem.Content>
+                    <Label Text="Tab item content" 
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Center" />
+            </tabView:SfTabItem.Content>
+        </tabView:SfTabItem>
+
+        <tabView:SfTabItem Header="ITEM 2">
+            <tabView:SfTabItem.Content>
+                        <Label Text="Tab item content" 
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" />
+            </tabView:SfTabItem.Content>
+        </tabView:SfTabItem>
+
+        <tabView:SfTabItem Header="ITEM 3">
+            <tabView:SfTabItem.Content>
+                        <Label Text="Tab item content" 
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" />
+            </tabView:SfTabItem.Content>
+        </tabView:SfTabItem>
+    </tabView:SfTabView.Items>
+</tabView:SfTabView>
 {% endhighlight %}
 
 {% highlight C# %}
-     tabView.IndicatorPlacement = IndicatorPlacement.Bottom;
+    var tabView = new SfTabView();
+    tabView.TabBarPlacement = TabBarPlacement.Top;
+    tabView.IndicatorPlacement = TabIndicatorPlacement.Bottom;
+    tabView.TabBarWidth = 60;
+    tabView.IndicatorWidthMode = IndicatorWidthMode.Stretch;
+    var item1 = new SfTabItem { Header = "ITEM 1" };
+    item1.Content = new Label
+    {
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item1);
+    var item2 = new SfTabItem { Header = "ITEM 2" };
+    item2.Content = new Label
+    {
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item2);
+    var item3 = new SfTabItem { Header = "ITEM 2" };
+    item3.Content = new Label
+    {
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item3);
+    this.Content = tabView;
 {% endhighlight %}
 
 {% endtabs %}
 
 ![Bottom](images/Selection-Indicator-placement-Bottom.png) 
+
+### Left
+
+The indicator will be placed at the left of the selected tab.
+
+{% tabs %}
+
+{% highlight xaml %}
+    <tabView:SfTabView TabBarPlacement="Left"  
+                   IndicatorPlacement="Left"
+                   TabBarWidth="60"
+                   IndicatorWidthMode="Stretch">
+
+    <tabView:SfTabView.Items>
+        <tabView:SfTabItem Header="ITEM 1">
+            <tabView:SfTabItem.Content>
+                    <Label Text="Tab item content" 
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Center" />
+            </tabView:SfTabItem.Content>
+        </tabView:SfTabItem>
+
+        <tabView:SfTabItem Header="ITEM 2">
+            <tabView:SfTabItem.Content>
+                        <Label Text="Tab item content" 
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" />
+            </tabView:SfTabItem.Content>
+        </tabView:SfTabItem>
+
+        <tabView:SfTabItem Header="ITEM 3">
+            <tabView:SfTabItem.Content>
+                        <Label Text="Tab item content" 
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" />
+            </tabView:SfTabItem.Content>
+        </tabView:SfTabItem>
+    </tabView:SfTabView.Items>
+</tabView:SfTabView>
+{% endhighlight %}
+
+{% highlight C# %}
+    var tabView = new SfTabView();
+    tabView.TabBarPlacement = TabBarPlacement.Left;
+    tabView.IndicatorPlacement = TabIndicatorPlacement.Left;
+    tabView.TabBarWidth = 60;
+    tabView.IndicatorWidthMode = IndicatorWidthMode.Stretch;
+    var item1 = new SfTabItem { Header = "ITEM 1" };
+    item1.Content = new Label
+    {
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item1);
+    var item2 = new SfTabItem { Header = "ITEM 2" };
+    item2.Content = new Label
+    {
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item2);
+    var item3 = new SfTabItem { Header = "ITEM 2" };
+    item3.Content = new Label
+    {
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item3);
+    this.Content = tabView;
+{% endhighlight %}
+
+{% endtabs %}
+
+![Left](images\TabBarPlacementLeft.png) 
+
+### Right
+
+The indicator will be placed at the right of the selected tab.
+
+{% tabs %}
+
+{% highlight xaml %}
+    <tabView:SfTabView TabBarPlacement="Right"  
+                   IndicatorPlacement="Right"
+                   TabBarWidth="60"
+                   IndicatorWidthMode="Stretch">
+
+    <tabView:SfTabView.Items>
+        <tabView:SfTabItem Header="ITEM 1">
+            <tabView:SfTabItem.Content>
+                    <Label Text="Tab item content" 
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Center" />
+            </tabView:SfTabItem.Content>
+        </tabView:SfTabItem>
+
+        <tabView:SfTabItem Header="ITEM 2">
+            <tabView:SfTabItem.Content>
+                        <Label Text="Tab item content" 
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" />
+            </tabView:SfTabItem.Content>
+        </tabView:SfTabItem>
+
+        <tabView:SfTabItem Header="ITEM 3">
+            <tabView:SfTabItem.Content>
+                        <Label Text="Tab item content" 
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" />
+            </tabView:SfTabItem.Content>
+        </tabView:SfTabItem>
+    </tabView:SfTabView.Items>
+</tabView:SfTabView>
+{% endhighlight %}
+
+{% highlight C# %}
+    var tabView = new SfTabView();
+    tabView.TabBarPlacement = TabBarPlacement.Right;
+    tabView.IndicatorPlacement = TabIndicatorPlacement.Right;
+    tabView.TabBarWidth = 60;
+    tabView.IndicatorWidthMode = IndicatorWidthMode.Stretch;
+    var item1 = new SfTabItem { Header = "ITEM 1" };
+    item1.Content = new Label
+    {
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item1);
+    var item2 = new SfTabItem { Header = "ITEM 2" };
+    item2.Content = new Label
+    {
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item2);
+    var item3 = new SfTabItem { Header = "ITEM 2" };
+    item3.Content = new Label
+    {
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item3);
+    this.Content = tabView;
+{% endhighlight %}
+
+{% endtabs %}
+
+![Right](images\TabIndicatorPlacementRight.png) 
 
 ### Fill
 
@@ -65,7 +337,11 @@ The indicator will fill the selected tab.
 
 {% endtabs %}
 
-![Fill](images/Selection-Indicator-placement-Fill.png) 
+![Fill](images/Selection-Indicator-placement-Fill.png)
+
+### Limitations
+
+* **TabIndicatorPlacement behavior with VerticalTabBarPlacement:** When using VerticalTabBarPlacement (i.e., the tab bar is positioned on the left or right side of the Tab View), the TabIndicatorPlacement property only supports Left and Right indicator placements. Setting the indicator placement to Top or Bottom will have no effect when the tab bar is placed vertically. Similarly, when using the default horizontal tab bar placement (i.e., the tab bar is positioned on the top or bottom), the TabIndicatorPlacement property only supports Top and Bottom indicator placements. Setting the indicator placement to Left or Right will have no effect when the tab bar is placed horizontally. Mixing incompatible indicator placements with tab bar placements may result in the indicator not being rendered or behaving unexpectedly.
 
 ## Background customization
 
