@@ -103,7 +103,7 @@ maskedEntry.Completed += maskedEntry_Completed;
     
     private async void maskedEntry_Completed(object sender, EventArgs e)
     {
-        await DisplayAlert("Message", "Text entering Completed", "close");
+        await DisplayAlert("Message", "Text entering Completed", "ok");
     }
 
 
@@ -145,7 +145,7 @@ The [ClearButtonClicked]() event is raised when the user activates the clear but
     
     private async void maskedEntry_ClearButtonClicked(object sender, EventArgs e)
     {
-        await DisplayAlert("Message", "Clear Button Clicked", "close");
+        await DisplayAlert("Message", "Clear Button Clicked", "ok");
     }
 
 {% endhighlight %}

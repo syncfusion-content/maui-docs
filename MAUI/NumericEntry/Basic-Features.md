@@ -228,7 +228,7 @@ The [Completed]() event is raised when the user finalizes the text in the [SfNum
 
     private async void numericEntry_Completed(object sender, EventArgs e)
     {
-        await DisplayAlert("Message", "Text entering Completed", "close");
+        await DisplayAlert("Message", "Text entering Completed", "ok");
     }
 
 {% endhighlight %}
@@ -270,7 +270,7 @@ The [ClearButtonClicked]() event is raised when the user activates the clear but
     
     private async void numericEntry_ClearButtonClicked(object sender, EventArgs e)
     {
-        await DisplayAlert("Message", "Clear Button Clicked", "close");
+        await DisplayAlert("Message", "Clear Button Clicked", "ok");
     }
 
 ## Stroke

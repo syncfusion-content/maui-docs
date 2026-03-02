@@ -1738,7 +1738,7 @@ The `ClearButtonClicked` event can be handled as follows:
     
 private async void comboBox_ClearButtonClicked(object sender, EventArgs e)
 {
-   await DisplayAlert("Message", "Clear Button Clicked", "close");
+   await DisplayAlert("Message", "Clear Button Clicked", "ok");
 }
 
 {% endhighlight %}
