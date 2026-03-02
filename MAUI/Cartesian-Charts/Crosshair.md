@@ -14,7 +14,7 @@ Crosshair allows you to view exact values on the chart by showing vertical and h
 
 ## Enable Crosshair 
 
-To enable the crosshair in the chart, create an instance of the `ChartCrossHairBehavior` and set it to the `CrossHairBehavior` property of `SfCartesianChart`.
+To enable the crosshair in the chart, create an instance of the `ChartCrosshairBehavior` and set it to the `CrosshairBehavior` property of `SfCartesianChart`.
 
 
 {% tabs %}
@@ -23,9 +23,9 @@ To enable the crosshair in the chart, create an instance of the `ChartCrossHairB
 
 <chart:SfCartesianChart>
     ...
-    <chart:SfCartesianChart.CrossHairBehavior>
-        <chart:ChartCrossHairBehavior/>
-    </chart:SfCartesianChart.CrossHairBehavior>
+    <chart:SfCartesianChart.CrosshairBehavior>
+        <chart:ChartCrosshairBehavior/>
+    </chart:SfCartesianChart.CrosshairBehavior>
     ...
 </chart:SfCartesianChart>
 
@@ -35,8 +35,8 @@ To enable the crosshair in the chart, create an instance of the `ChartCrossHairB
 
 SfCartesianChart chart = new SfCartesianChart();
 ...
-ChartCrossHairBehavior crosshair = new ChartCrossHairBehavior();
-chart.CrossHairBehavior = crosshair;
+ChartCrosshairBehavior crosshair = new ChartCrosshairBehavior();
+chart.CrosshairBehavior = crosshair;
 ...
 this.Content = chart;
 
@@ -55,9 +55,9 @@ To view the axis labels then set the `ShowTrackballLabel` property to true as sh
 
 <chart:SfCartesianChart>
     ...
-    <chart:SfCartesianChart.CrossHairBehavior>
-        <chart:ChartCrossHairBehavior/>
-    </chart:SfCartesianChart.CrossHairBehavior> 
+    <chart:SfCartesianChart.CrosshairBehavior>
+        <chart:ChartCrosshairBehavior/>
+    </chart:SfCartesianChart.CrosshairBehavior> 
    
     <chart:SfCartesianChart.XAxes>
         <chart:CategoryAxis ShowTrackballLabel="True"/>
@@ -75,8 +75,8 @@ To view the axis labels then set the `ShowTrackballLabel` property to true as sh
 
 SfCartesianChart chart = new SfCartesianChart();
 ...
-ChartCrossHairBehavior crosshair = new ChartCrossHairBehavior();
-chart.CrossHairBehavior = crosshair;
+ChartCrosshairBehavior crosshair = new ChartCrosshairBehavior();
+chart.CrosshairBehavior = crosshair;
 
 CategoryAxis chartXAxis = new CategoryAxis()
 {
@@ -101,7 +101,7 @@ this.Content = chart;
 
 ## Vertical and Horizontal Line Customization
 
-When you add the `ChartCrossHairBehavior` to a chart, horizontal and vertical lines appear. These lines can be customized individually using the `HorizontalLineStyle` and `VerticalLineStyle` properties.
+When you add the `ChartCrosshairBehavior` to a chart, horizontal and vertical lines appear. These lines can be customized individually using the `HorizontalLineStyle` and `VerticalLineStyle` properties.
 
 The appearance of the track line in crosshair can be customized using the following properties.
 
@@ -120,16 +120,16 @@ The following code snippet demonstrates how to configure the line style for the 
 
 <chart:SfCartesianChart>
     . . .
-    <chart:SfCartesianChart.CrossHairBehavior>
-        <chart:ChartCrossHairBehavior>
-            <chart:ChartCrossHairBehavior.HorizontalLineStyle>
+    <chart:SfCartesianChart.CrosshairBehavior>
+        <chart:ChartCrosshairBehavior>
+            <chart:ChartCrosshairBehavior.HorizontalLineStyle>
                  <chart:ChartLineStyle 
                     Stroke="Red" 
                     StrokeWidth="1.5"
                     StrokeDashArray="2,2"/>
-            </chart:ChartCrossHairBehavior.HorizontalLineStyle>
-        </chart:ChartCrossHairBehavior>
-    </chart:SfCartesianChart.CrossHairBehavior>
+            </chart:ChartCrosshairBehavior.HorizontalLineStyle>
+        </chart:ChartCrosshairBehavior>
+    </chart:SfCartesianChart.CrosshairBehavior>
     ...
 </chart:SfCartesianChart>
 
@@ -139,8 +139,8 @@ The following code snippet demonstrates how to configure the line style for the 
 
 SfCartesianChart chart = new SfCartesianChart();
 ...
-ChartCrossHairBehavior crosshair = new ChartCrossHairBehavior();
-chart.CrossHairBehavior = crosshair;
+ChartCrosshairBehavior crosshair = new ChartCrosshairBehavior();
+chart.CrosshairBehavior = crosshair;
 
 DoubleCollection doubleCollection = new DoubleCollection();
 doubleCollection.Add(2);
@@ -173,16 +173,16 @@ The following code snippet demonstrates how to configure the line style for the 
 
 <chart:SfCartesianChart>
     . . .
-    <chart:SfCartesianChart.CrossHairBehavior>
-        <chart:ChartCrossHairBehavior>
-            <chart:ChartCrossHairBehavior.VerticalLineStyle>
+    <chart:SfCartesianChart.CrosshairBehavior>
+        <chart:ChartCrosshairBehavior>
+            <chart:ChartCrosshairBehavior.VerticalLineStyle>
                  <chart:ChartLineStyle 
                     Stroke="Blue" 
                     StrokeWidth="2"
                     StrokeDashArray="5,3"/>
-            </chart:ChartCrossHairBehavior.VerticalLineStyle>
-        </chart:ChartCrossHairBehavior>
-    </chart:SfCartesianChart.CrossHairBehavior>
+            </chart:ChartCrosshairBehavior.VerticalLineStyle>
+        </chart:ChartCrosshairBehavior>
+    </chart:SfCartesianChart.CrosshairBehavior>
     ...
 </chart:SfCartesianChart>
 
@@ -192,8 +192,8 @@ The following code snippet demonstrates how to configure the line style for the 
 
 SfCartesianChart chart = new SfCartesianChart();
 ...
-ChartCrossHairBehavior crosshair = new ChartCrossHairBehavior();
-chart.CrossHairBehavior = crosshair;
+ChartCrosshairBehavior crosshair = new ChartCrosshairBehavior();
+chart.CrosshairBehavior = crosshair;
 
 DoubleCollection doubleCollection = new DoubleCollection();
 doubleCollection.Add(5);
@@ -255,8 +255,8 @@ The `LabelStyle` property allows you to customize the appearance of crosshair ax
 
 SfCartesianChart chart = new SfCartesianChart();
 . . .
-ChartCrossHairBehavior crosshair = new ChartCrossHairBehavior();
-chart.CrossHairBehavior = crosshair;
+ChartCrosshairBehavior crosshair = new ChartCrosshairBehavior();
+chart.CrosshairBehavior = crosshair;
 
 CategoryAxis categoryAxis = new CategoryAxis();
 ChartAxisLabelStyle axisLabelStyle = new ChartAxisLabelStyle()
