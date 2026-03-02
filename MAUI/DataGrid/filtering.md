@@ -630,3 +630,155 @@ public class FilterIconTemplateSelector : DataTemplateSelector
 
 <img src="Images/filtering/maui-datagrid-filtering-filterTemplate-selector.png" width="500" alt="Filter icon template selector">
 
+## Customize the appearance of filter popup menu
+
+The `SfDataGrid` provides extensive appearance customization for the filter popup through `DataGridStyle`. You can set these properties on the grid via `SfDataGrid.DefaultStyle` to tailor colors for icons, dividers, buttons, and advanced/checkbox filter visuals.
+
+{% tabs %}
+{% highlight XAML %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding EmployeeDetails}"
+                       AllowFiltering="True">
+    <syncfusion:SfDataGrid.DefaultStyle>
+        <syncfusion:DataGridStyle
+            FilterPopupIconColor="Maroon"
+            FilterPopupBackground="LightCyan"
+            FilterPopupOkButtonBackgroundColor="Purple"
+            FilterPopupCheckboxCheckedColor="ForestGreen" />
+    </syncfusion:SfDataGrid.DefaultStyle>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+   dataGrid.DefaultStyle = new DataGridStyle
+   {
+        FilterPopupIconColor= Colors.Maroon,
+        FilterPopupBackground= Colors.LightCyan,
+        FilterPopupOkButtonBackgroundColor= Colors.Purple,
+        FilterPopupCheckboxCheckedColor= Colors.ForestGreen,
+    };
+{% endhighlight %}
+{% endtabs %}
+
+<img src="Images/filtering/maui-datagrid-filtering-popup-customization.png" width="500" alt="filter popup customization"/>
+
+Use the following `DataGridStyle` properties to customize the filter popup menu and related elements:
+
+<table>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>[DataGridStyle.FilterPopupBackground]()</td>
+<td>Background color of the filter popup (Brush).</td>
+</tr>
+<tr>
+<td>[DataGridStyle.FilterPopupTextColor]()</td>
+<td>Text color used within the popup.</td>
+</tr>
+<tr>
+<td>[DataGridStyle.FilterPopupIconColor]()</td>
+<td>Color for icons displayed in the popup.</td>
+</tr>
+<tr>
+<td>[DataGridStyle.FilterPopupTopDividerColor]()</td>
+<td>Color of the top divider line in the popup.</td>
+</tr>
+<tr>
+<td>[DataGridStyle.AdvanceFilterDropdownIconColor]()</td>
+<td>Dropdown icon color used in the advanced filter header area.</td>
+</tr>
+<tr>
+<td>[DataGridStyle.FilterPopupOkButtonBackgroundColor]()</td>
+<td>Background color of the OK button in the popup.</td>
+</tr>
+<tr>
+<td>[DataGridStyle.FilterPopupOkButtonTextColor]()</td>
+<td>Text color of the OK button in the popup.</td>
+</tr>
+<tr>
+<td>[DataGridStyle.FilterPopupOkButtonDisabledColor]()</td>
+<td>Color of the OK button when disabled in the popup.</td>
+</tr>
+<tr>
+<td>[DataGridStyle.FilterPopupCancelButtonBackgroundColor]()</td>
+<td>Background color of the Cancel button in the popup.</td>
+</tr>
+<tr>
+<td>[DataGridStyle.FilterPopupCancelButtonTextColor]()</td>
+<td>Text color of the Cancel button in the popup.</td>
+</tr>
+<tr>
+<td>[DataGridStyle.FilterPopupHeaderOkIconColor]()</td>
+<td>Color of the header OK icon in the popup.</td>
+</tr>
+<tr>
+<td>[DataGridStyle.FilterPopupHeaderCancelIconColor]()</td>
+<td>Color of the header Cancel/Close icon in the popup.</td>
+</tr>
+<tr>
+<td>[DataGridStyle.FilterPopupPlaceholderColor]()</td>
+<td>Placeholder color for search bar, entry, and combo boxes in the popup.</td>
+</tr>
+<tr>
+<td>[DataGridStyle.FilterPopupDisabledIconColor]()</td>
+<td>Color of the clear-filter icon when it’s disabled in the popup.</td>
+</tr>
+<tr>
+<td>[DataGridStyle.FilterPopupCheckboxCheckedColor]()</td>
+<td>Fill color of checkboxes when selected in Checkbox filter view.</td>
+</tr>
+<tr>
+<td>[DataGridStyle.FilterPopupSearchBarIconColor]()</td>
+<td>Color of the search icon in the checkbox filter view.</td>
+</tr>
+<tr>
+<td>[DataGridStyle.FilterPopupSearchBarStroke]()</td>
+<td>Border color of the search bar in the checkbox filter view.</td>
+</tr>
+<tr>
+<td>[DataGridStyle.FilterPopupNoMatchesTextColor]()</td>
+<td>Text color of the “No matches” label in the checkbox filter view.</td>
+</tr>
+<tr>
+<td>[DataGridStyle.FilterPopupRadioButtonCheckedColor]()</td>
+<td>Color of checked And/Or radio buttons in Advanced filter view.</td>
+</tr>
+<tr>
+<td>[DataGridStyle.FilterPopupRadioButtonUncheckedColor]()</td>
+<td>Color of unchecked And/Or radio buttons in Advanced filter view.</td>
+</tr>
+<tr>
+<td>[DataGridStyle.FilterPopupCaseSensitiveActiveColor]()</td>
+<td>Case-sensitive icon color when activated in Advanced text filters.</td>
+</tr>
+<tr>
+<td>[DataGridStyle.FilterPopupCaseSensitiveInactiveColor]()</td>
+<td>Case-sensitive icon color when inactive in Advanced text filters.</td>
+</tr>
+<tr>
+<td>[DataGridStyle.FilterPopupCaseSensitiveHoverColor]()</td>
+<td>Background color when hovering the case-sensitive icon (Advanced text filters).</td>
+</tr>
+<tr>
+<td>[DataGridStyle.FilterPopupCalendarIconColor]()</td>
+<td>Calendar icon color for date pickers in Advanced date filters.</td>
+</tr>
+<tr>
+<td>[DataGridStyle.AdvanceFilterTypeDropdownIconColor]()</td>
+<td>Dropdown icon color of the filter type combo box in Advanced filter.</td>
+</tr>
+<tr>
+<td>[DataGridStyle.AdvanceFilterValueDropdownIconColor]()</td>
+<td>Dropdown icon color of the filter value combo box in Advanced filter.</td>
+</tr>
+<tr>
+<td>[DataGridStyle.AdvanceFilterTypeDropdownStroke]()</td>
+<td>Border color of the filter type combo box (Advanced filter).</td>
+</tr>
+<tr>
+<td>[DataGridStyle.AdvanceFilterValueDropdownStroke]()</td>
+<td>Border color of the filter value combo box (Advanced filter).</td>
+</tr>
+</table>
+N> The `FilterPopupHeaderCancelIconColor` and `FilterPopupHeaderOkIconColor` properties are supported only on mobile platforms.
