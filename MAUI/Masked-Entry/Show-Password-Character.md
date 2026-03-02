@@ -53,4 +53,8 @@ The [PasswordDelayDuration]() setting on a `MaskedEntry` controls how long the m
 {% endhighlight %}
 {% endtabs %}
 
+The following image demonstrates the result of the password delay support:
+
+![.NET MAUI MaskedEntry PasswordDelayDuration](MaskedEntry_Images/PasswordDelayDuration.gif)
+
 

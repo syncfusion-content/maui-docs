@@ -227,8 +227,7 @@ Completed event can be subscribed in C# also:
 SfNumericEntry numericEntry = new SfNumericEntry()
 {
     WidthRequest = 200;
-    MaskType = numericEntryMaskType.Simple;
-    Mask = "(000) 000-0000";,
+    Value = 153,
 };
 numericEntry.Completed += numericEntry_Completed;
 
