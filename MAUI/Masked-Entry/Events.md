@@ -85,26 +85,26 @@ The [Completed]() event is raised when the user finalizes the text in the [SfMas
 {% endhighlight %}
 {% highlight C# %}
 
-    private async void maskedEntry_Completed(object sender, EventArgs e)
+    SfMaskedEntry maskedEntry = new SfMaskedEntry()
     {
-        await DisplayAlert("Message", "Text entering Completed", "close");
-    }
+        WidthRequest = 200;
+        MaskType = MaskedEntryMaskType.Simple;
+        Mask = "(000) 000-0000";,
+    };
+maskedEntry.Completed += maskedEntry_Completed;
 
 {% endhighlight %}
 {% endtabs %}
 
-Completed event can be subscribed in C# also:
+`Completed` event can be handled in C# as:
 
 {% tabs %}
 {% highlight C# %}
     
-SfMaskedEntry maskedEntry = new SfMaskedEntry()
-{
-    WidthRequest = 200;
-    MaskType = MaskedEntryMaskType.Simple;
-    Mask = "(000) 000-0000";,
-};
-maskedEntry.Completed += maskedEntry_Completed;
+    private async void maskedEntry_Completed(object sender, EventArgs e)
+    {
+        await DisplayAlert("Message", "Text entering Completed", "close");
+    }
 
 
 {% endhighlight %}
@@ -127,26 +127,26 @@ The [ClearButtonClicked]() event is raised when the user activates the clear but
 {% endhighlight %}
 {% highlight C# %}
 
-    private async void maskedEntry_ClearButtonClicked(object sender, EventArgs e)
+    SfMaskedEntry maskedEntry = new SfMaskedEntry()
     {
-        await DisplayAlert("Message", "Clear Button Clicked", "close");
-    }
+        WidthRequest = 200;
+        MaskType = MaskedEntryMaskType.Simple;
+        Mask = "(000) 000-0000";,
+    };
+    maskedEntry.ClearButtonClicked += maskedEntry_ClearButtonClicked;
 
 {% endhighlight %}
 {% endtabs %}
 
-ClearButtonClicked event can be subscribed in C# also:
+`ClearButtonClicked` event can be Handled in C# as:
 
 {% tabs %}
 {% highlight C# %}
     
-SfMaskedEntry maskedEntry = new SfMaskedEntry()
-{
-    WidthRequest = 200;
-    MaskType = MaskedEntryMaskType.Simple;
-    Mask = "(000) 000-0000";,
-};
-maskedEntry.ClearButtonClicked += maskedEntry_ClearButtonClicked;
+    private async void maskedEntry_ClearButtonClicked(object sender, EventArgs e)
+    {
+        await DisplayAlert("Message", "Clear Button Clicked", "close");
+    }
 
 {% endhighlight %}
 {% endtabs %}

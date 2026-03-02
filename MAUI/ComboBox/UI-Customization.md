@@ -1712,32 +1712,34 @@ The [ClearButtonClicked]() event is raised when the user activates the clear but
 {% highlight xaml %}
 
     <editors:SfComboBox x:Name="comboBox"
-                        WidthRequest="200"
-                        Value="153" 
-                        OnClearButtonClicked="comboBox_OnClearButtonClicked"/>
+                        ItemsSource="{Binding SocialMedias}"
+                        TextMemberPath="Name"
+                        DisplayMemberPath="Name"
+                        OnClearButtonClicked="comboBox_ClearButtonClicked"/>
 
 {% endhighlight %}
 {% highlight C# %}
 
-    private async void comboBox_OnClearButtonClicked(object sender, EventArgs e)
+    SfAutoComplete comboBox = new SfAutoComplete
     {
-        await DisplayAlert("Message", "Clear Button Clicked", "close");
-    }
+        ItemsSource = socialMediaViewModel.SocialMedias,
+        TextMemberPath = "Name",
+        DisplayMemberPath = "Name"
+    };
+comboBox.OnClearButtonClicked += comboBox_ClearButtonClicked;
 
 {% endhighlight %}
 {% endtabs %}
 
-ClearButtonClicked event can be subscribed in C# also:
+The `ClearButtonClicked` event can be handled as follows:
 
 {% tabs %}
 {% highlight C# %}
     
-SfComboBox comboBox = new SfComboBox()
+private async void comboBox_ClearButtonClicked(object sender, EventArgs e)
 {
-    WidthRequest = 200;
-    value = 153,
-};
-comboBox.OnClearButtonClicked += comboBox_OnClearButtonClicked;
+   await DisplayAlert("Message", "Clear Button Clicked", "close");
+}
 
 {% endhighlight %}
 {% endtabs %}

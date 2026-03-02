@@ -210,27 +210,26 @@ The [Completed]() event is raised when the user finalizes the text in the [SfNum
 
 {% endhighlight %}
 {% highlight C# %}
+     
+    SfNumericEntry numericEntry = new SfNumericEntry()
+    {
+        WidthRequest = 200;
+        Value = 153,
+    };
+    numericEntry.Completed += numericEntry_Completed;
+
+{% endhighlight %}
+{% endtabs %}
+
+`Completed` event can be Handled in C# as:
+
+{% tabs %}
+{% highlight C# %}
 
     private async void numericEntry_Completed(object sender, EventArgs e)
     {
         await DisplayAlert("Message", "Text entering Completed", "close");
     }
-
-{% endhighlight %}
-{% endtabs %}
-
-Completed event can be subscribed in C# also:
-
-{% tabs %}
-{% highlight C# %}
-    
-SfNumericEntry numericEntry = new SfNumericEntry()
-{
-    WidthRequest = 200;
-    Value = 153,
-};
-numericEntry.Completed += numericEntry_Completed;
-
 
 {% endhighlight %}
 {% endtabs %}
@@ -251,28 +250,28 @@ The [ClearButtonClicked]() event is raised when the user activates the clear but
 {% endhighlight %}
 {% highlight C# %}
 
-    private async void numericEntry_ClearButtonClicked(object sender, EventArgs e)
+   SfNumericEntry numericEntry = new SfNumericEntry()
     {
-        await DisplayAlert("Message", "Clear Button Clicked", "close");
-    }
+        WidthRequest = 200;
+        value = 153,
+    };
+    numericEntry.ClearButtonClicked += numericEntry_ClearButtonClicked;
 
 {% endhighlight %}
 {% endtabs %}
 
-ClearButtonClicked event can be subscribed in C# also:
+{% endhighlight %}
+{% endtabs %}
+
+`ClearButtonClicked` event can be Handled in C# as:
 
 {% tabs %}
 {% highlight C# %}
     
-SfNumericEntry numericEntry = new SfNumericEntry()
-{
-    WidthRequest = 200;
-    value = 153,
-};
-numericEntry.ClearButtonClicked += numericEntry_ClearButtonClicked;
-
-{% endhighlight %}
-{% endtabs %}
+    private async void numericEntry_ClearButtonClicked(object sender, EventArgs e)
+    {
+        await DisplayAlert("Message", "Clear Button Clicked", "close");
+    }
 
 ## Stroke
 
