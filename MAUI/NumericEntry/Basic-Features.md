@@ -221,7 +221,7 @@ The [Completed]() event is raised when the user finalizes the text in the [SfNum
 {% endhighlight %}
 {% endtabs %}
 
-`Completed` event can be Handled in C# as:
+`Completed` event can be Handled in C# as follows:
 
 {% tabs %}
 {% highlight C# %}
@@ -263,7 +263,7 @@ The [ClearButtonClicked]() event is raised when the user activates the clear but
 {% endhighlight %}
 {% endtabs %}
 
-`ClearButtonClicked` event can be Handled in C# as:
+`ClearButtonClicked` event can be Handled in C# as follows:
 
 {% tabs %}
 {% highlight C# %}

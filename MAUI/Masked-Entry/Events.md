@@ -96,7 +96,7 @@ maskedEntry.Completed += maskedEntry_Completed;
 {% endhighlight %}
 {% endtabs %}
 
-`Completed` event can be handled in C# as:
+`Completed` event can be handled in C# as follows:
 
 {% tabs %}
 {% highlight C# %}
@@ -138,7 +138,7 @@ The [ClearButtonClicked]() event is raised when the user activates the clear but
 {% endhighlight %}
 {% endtabs %}
 
-`ClearButtonClicked` event can be Handled in C# as:
+`ClearButtonClicked` event can be Handled in C# as follows:
 
 {% tabs %}
 {% highlight C# %}
