@@ -198,37 +198,79 @@ public partial class MainPage : ContentPage
 
 ## Completed Event
 
-The [Completed]() event is raised when the user finalizes input via the platform Return/Done action on a `NumericEntry`. Use this event to perform final validation, formatting, or navigation. The handler receives standard EventArgs from the sender.
+The [Completed]() event is raised when the user finalizes the text in the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) editable mode by pressing return key on the keyboard.The handler for the event is a generic event handler, taking the `sender` and `EventArgs`(the `EventArgs` value is `string.Empty`):
 
 {% tabs %}
+{% highlight xaml %}
+
+    <editors:SfNumericEntry x:Name="numericEntry"
+                        WidthRequest="200"
+                        Value = "153"
+                        Completed="numericEntry_Completed"/>
+
+{% endhighlight %}
 {% highlight C# %}
 
-    SfNumericEntry numericEntry = new SfNumericEntry();
-    numericEntry.Completed += OnNumericEntryCompleted;
-
-async void OnNumericEntryCompleted(object sender, EventArgs e)
-{
-    // Finalize input (validate, format, navigate, etc.)
-}
+    private async void numericEntry_Completed(object sender, EventArgs e)
+    {
+        await DisplayAlert("Message", "Text entering Completed", "close");
+    }
 
 {% endhighlight %}
 {% endtabs %}
 
-## ClearButtonClicked Event
-
-The [ClearButtonClicked]() event is raised when the user taps the clear button on an `SfNumericEntry`. Use this event to handle cleanup, clear model state, close the dropdown, or perform navigation. The handler receives standard EventArgs and can access the sender (the `SfNumericEntry`) to read or modify its state.
+Completed event can be subscribed in C# also:
 
 {% tabs %}
 {% highlight C# %}
+    
+SfNumericEntry numericEntry = new SfNumericEntry()
+{
+    WidthRequest = 200;
+    MaskType = numericEntryMaskType.Simple;
+    Mask = "(000) 000-0000";,
+};
+numericEntry.Completed += numericEntry_Completed;
 
-    SfNumericEntry numericEntry = new SfNumericEntry();
-    numericEntry.ClearButtonClicked += OnNumericEntryClearButtonClicked;
 
-    async void OnNumericEntryClearButtonClicked(object sender, EventArgs e)
+{% endhighlight %}
+{% endtabs %}
+
+
+## ClearButtonClicked Event
+
+The [ClearButtonClicked]() event is raised when the user activates the clear button in the `SfNumericEntry` editable mode by tapping or pressing the clear button on the keyboard. The handler for the event is a generic event handler, taking the `sender` and `EventArgs`.
+
+{% tabs %}
+{% highlight xaml %}
+
+    <editors:SfNumericEntry x:Name="numericEntry"
+                        WidthRequest="200"
+                        Value="153" 
+                        ClearButtonClicked="numericEntry_Completed"/>
+
+{% endhighlight %}
+{% highlight C# %}
+
+    private async void numericEntry_ClearButtonClicked(object sender, EventArgs e)
     {
-        // Function used to handle cleanup,
-        // clear model state, close the dropdown, or perform navigation
+        await DisplayAlert("Message", "Clear Button Clicked", "close");
     }
+
+{% endhighlight %}
+{% endtabs %}
+
+ClearButtonClicked event can be subscribed in C# also:
+
+{% tabs %}
+{% highlight C# %}
+    
+SfNumericEntry numericEntry = new SfNumericEntry()
+{
+    WidthRequest = 200;
+    value = 153,
+};
+numericEntry.ClearButtonClicked += numericEntry_ClearButtonClicked;
 
 {% endhighlight %}
 {% endtabs %}

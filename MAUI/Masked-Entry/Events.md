@@ -71,38 +71,84 @@ private async void MaskedEntry_ValueChanged(object sender, MaskedEntryValueChang
 
 ## Completed Event
 
-The [Completed]() event is raised when the user finalizes input via the platform Return/Done action on a `MaskedEntry`. Use this event to perform final validation, formatting, or navigation. The handler receives standard EventArgs from the sender.
+The [Completed]() event is raised when the user finalizes the text in the [SfMaskedEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfMaskedEntry.html) editable mode by pressing return key on the keyboard.The handler for the event is a generic event handler, taking the `sender` and `EventArgs`(the `EventArgs` value is `string.Empty`):
 
 {% tabs %}
+{% highlight xaml %}
+
+    <editors:SfMaskedEntry x:Name="maskedEntry"
+                        WidthRequest="200"
+                        MaskType="Simple"
+                        Mask="(000) 000-0000" 
+                        Completed="maskedEntry_Completed"/>
+
+{% endhighlight %}
 {% highlight C# %}
 
-    SfMaskedEntry maskedEntry = new SfMaskedEntry();
-    maskedEntry.Completed += OnMaskedEntryCompleted;
-
-    async void OnMaskedEntryCompleted(object sender, EventArgs e)
+    private async void maskedEntry_Completed(object sender, EventArgs e)
     {
-        // Finalize input (validate, format, navigate, etc.)
+        await DisplayAlert("Message", "Text entering Completed", "close");
     }
 
 {% endhighlight %}
 {% endtabs %}
+
+Completed event can be subscribed in C# also:
+
+{% tabs %}
+{% highlight C# %}
+    
+SfMaskedEntry maskedEntry = new SfMaskedEntry()
+{
+    WidthRequest = 200;
+    MaskType = MaskedEntryMaskType.Simple;
+    Mask = "(000) 000-0000";,
+};
+maskedEntry.Completed += maskedEntry_Completed;
+
+
+{% endhighlight %}
+{% endtabs %}
+
 
 ## ClearButtonClicked Event
 
-The [ClearButtonClicked]() event is raised when the user taps the clear button on an `SfMaskedEntry`. Use this event to handle cleanup, clear model state, close the dropdown, or perform navigation. The handler receives standard EventArgs and can access the sender (the `SfMaskedEntry`) to read or modify its state.
+The [ClearButtonClicked]() event is raised when the user activates the clear button in the `SfMaskedEntry` editable mode by tapping or pressing the clear button on the keyboard. The handler for the event is a generic event handler, taking the `sender` and `EventArgs`.
 
 {% tabs %}
+{% highlight xaml %}
+
+    <editors:SfMaskedEntry x:Name="maskedEntry"
+                        WidthRequest="200"
+                        MaskType="Simple"
+                        Mask="(000) 000-0000" 
+                        ClearButtonClicked="maskedEntry_Completed"/>
+
+{% endhighlight %}
 {% highlight C# %}
 
-    SfMaskedEntry maskedEntry = new SfMaskedEntry();
-    maskedEntry.ClearButtonClicked += OnMaskedEntryClearButtonClicked;
-
-    async void OnMaskedEntryClearButtonClicked(object sender, EventArgs e)
+    private async void maskedEntry_ClearButtonClicked(object sender, EventArgs e)
     {
-        // Function used to handle cleanup,
-        // clear model state, close the dropdown, or perform navigation
+        await DisplayAlert("Message", "Clear Button Clicked", "close");
     }
 
 {% endhighlight %}
 {% endtabs %}
+
+ClearButtonClicked event can be subscribed in C# also:
+
+{% tabs %}
+{% highlight C# %}
+    
+SfMaskedEntry maskedEntry = new SfMaskedEntry()
+{
+    WidthRequest = 200;
+    MaskType = MaskedEntryMaskType.Simple;
+    Mask = "(000) 000-0000";,
+};
+maskedEntry.ClearButtonClicked += maskedEntry_ClearButtonClicked;
+
+{% endhighlight %}
+{% endtabs %}
+
 

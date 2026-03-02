@@ -1706,19 +1706,38 @@ The following image illustrates the result of the above code:
 
 ## ClearButtonClicked Event
 
-The [OnClearButtonClicked]() event is raised when the user taps the clear button on an `SfComboBox`. Use this event to handle cleanup, clear model state, close the dropdown, or perform navigation. The handler receives standard EventArgs and can access the sender (the `SfComboBox`) to read or modify its state.
+The [ClearButtonClicked]() event is raised when the user activates the clear button in the `SfComboBox` editable mode by tapping or pressing the clear button on the keyboard. The handler for the event is a generic event handler, taking the `sender` and `EventArgs`.
+
+{% tabs %}
+{% highlight xaml %}
+
+    <editors:SfComboBox x:Name="comboBox"
+                        WidthRequest="200"
+                        Value="153" 
+                        OnClearButtonClicked="comboBox_OnClearButtonClicked"/>
+
+{% endhighlight %}
+{% highlight C# %}
+
+    private async void comboBox_OnClearButtonClicked(object sender, EventArgs e)
+    {
+        await DisplayAlert("Message", "Clear Button Clicked", "close");
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+ClearButtonClicked event can be subscribed in C# also:
 
 {% tabs %}
 {% highlight C# %}
-
-    SfComboBox comboBox = new SfComboBox();
-    comboBox.OnClearButtonClicked += OnComboBoxClearButtonClicked;
-
-    async void OnComboBoxClearButtonClicked(object sender, EventArgs e)
-    {
-        // Function used to handle cleanup,
-        // clear model state, close the dropdown, or perform navigation
-    }
+    
+SfComboBox comboBox = new SfComboBox()
+{
+    WidthRequest = 200;
+    value = 153,
+};
+comboBox.OnClearButtonClicked += comboBox_OnClearButtonClicked;
 
 {% endhighlight %}
 {% endtabs %}
