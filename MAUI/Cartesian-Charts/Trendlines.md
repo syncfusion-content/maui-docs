@@ -5,16 +5,16 @@ description: This section explains all about trendlines support in Syncfusion® 
 platform: maui
 control: SfCartesianChart
 documentation: ug
-keywords: .net maui chart trendlines, maui chart trendlines, syncfusion maui trendlines chart, cartesian trendlines maui, .net maui trendlines visualization.
+keywords: .net maui trendlines, maui chart trendlines, cartesian trendlines, trend analysis, data forecasting, trend prediction, trendline customization, syncfusion maui charts, sfcartesianchart, maui data visualization, trend pattern recognition.
 ---
 
 # Trendlines in MAUI Charts
 
-A Trendline is a line drawn over a series to show the overall direction of the data. Trendlines help reveal patterns and can be used for simple forecasting.
+A trendline is a visual representation of the linear relationship between data points in a series. It shows the overall direction and trend of data by fitting a line (or curve) through the data points. 
 
-N> Trendlines can be added to Cartesian series (Line, Spline, Column, Area, Scatter, Candle, HiLo, etc.).
+N> We can draw trendlines for all type of Cartesian series except bar type.
 
-The following examples show how to add trendlines in MAUI Charts using XAML and C#.
+You can add trendlines to your charts using XAML or C# as shown in the following examples.
 
 {% tabs %}
 
@@ -23,30 +23,36 @@ The following examples show how to add trendlines in MAUI Charts using XAML and 
 <ContentPage x:Class="TrendlineSample.MainPage"
              xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
 
-  <syncfusion:SfCartesianChart x:Name="chart">  
-    <syncfusion:LineSeries ItemsSource="{Binding Data}"
-                           XBindingPath="X" 
-                           YBindingPath="Y">
-      <syncfusion:LineSeries.Trendlines>
-        <syncfusion:LinearTrendline/>
-      </syncfusion:LineSeries.Trendlines>
-    </syncfusion:LineSeries>
-  </syncfusion:SfCartesianChart>
+  <chart:SfCartesianChart x:Name="chart">  
+    <chart:LineSeries ItemsSource="{Binding Data}"
+                      XBindingPath="X" 
+                      YBindingPath="Y">
+      <chart:LineSeries.Trendlines>
+        <chart:LinearTrendline/>
+      </chart:LineSeries.Trendlines>
+    </chart:LineSeries>
+  </chart:SfCartesianChart>
 </ContentPage>
 
 {% endhighlight %}
 
-{% highlight c# %} 
+{% highlight c# %}
 
 using Syncfusion.Maui.Charts;
 using Microsoft.Maui.Graphics;
 
-var chart = new SfCartesianChart();
-var series = new LineSeries { ItemsSource = viewModel.Data, XBindingPath = "X", YBindingPath = "Y" };
+SfCartesianChart chart = new SfCartesianChart();
+LineSeries series = new LineSeries 
+{ 
+    ItemsSource = viewModel.Data, 
+    XBindingPath = "X", 
+    YBindingPath = "Y" 
+};
 series.Trendlines.Add(new LinearTrendline());
-chart.Series.Add(series); 
+chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -69,27 +75,36 @@ Each type is described below.
 
 ### Linear
 
-Linear trendline is a straight best-fit line for simple linear datasets. Use it when data increases or decreases at a steady rate.
+A linear trendline draws a straight line through your data. Use this when your data moves in a consistent direction—either steadily up or down. It's the simplest way to show the overall trend in your data.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<syncfusion:LineSeries ItemsSource="{Binding linearData}" XBindingPath="X" YBindingPath="Y">
-  <syncfusion:LineSeries.Trendlines>
-    <syncfusion:LinearTrendline Stroke="Blue" StrokeWidth="2"/>
-  </syncfusion:LineSeries.Trendlines>
-</syncfusion:LineSeries>
+<chart:SfCartesianChart>
+    . . .
+    <chart:LineSeries ItemsSource="{Binding linearData}" XBindingPath="X" YBindingPath="Y">
+        <chart:LineSeries.Trendlines>
+            <chart:LinearTrendline Stroke="Blue" StrokeWidth="2"/>
+        </chart:LineSeries.Trendlines>
+    </chart:LineSeries>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
-using Syncfusion.Maui.Charts;  
-using Microsoft.Maui.Graphics;
- 
-var chart = new SfCartesianChart();
-var series = new LineSeries { ItemsSource = linearData, XBindingPath = "X", YBindingPath = "Y" };
-series.Trendlines.Add(new LinearTrendline { Stroke = new SolidColorBrush(Colors.Blue), StrokeWidth = 2  });
+
+LineSeries series = new LineSeries() 
+{ 
+    ItemsSource = new ViewModel().LinearData, 
+    XBindingPath = "X", 
+    YBindingPath = "Y"
+};
+series.Trendlines.Add(new LinearTrendline 
+{ 
+    Stroke = new SolidColorBrush(Colors.Blue), 
+    StrokeWidth = 2 
+});
 chart.Series.Add(series);
 
 {% endhighlight %}
@@ -100,27 +115,36 @@ chart.Series.Add(series);
 
 ### Logarithmic
 
-Logarithmic trendline fits data that changes rapidly and then levels off. It supports negative and positive values.
+A logarithmic trendline shows data that changes quickly at first and then levels off. This is useful for showing how something grows or reduces rapidly in the beginning but then stabilizes over time.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<syncfusion:LineSeries ItemsSource="{Binding data}" XBindingPath="X" YBindingPath="Y">
-  <syncfusion:LineSeries.Trendlines>
-    <syncfusion:LogarithmicTrendline Stroke="Blue" StrokeWidth="2"  />
-  </syncfusion:LineSeries.Trendlines>
-</syncfusion:LineSeries>
+<chart:SfCartesianChart>
+    . . .
+    <chart:LineSeries ItemsSource="{Binding data}" XBindingPath="X" YBindingPath="Y">
+        <chart:LineSeries.Trendlines>
+            <chart:LogarithmicTrendline Stroke="Blue" StrokeWidth="2"/>
+        </chart:LineSeries.Trendlines>
+    </chart:LineSeries>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
-using Syncfusion.Maui.Charts;
-using Microsoft.Maui.Graphics;
 
-var chart = new SfCartesianChart();
-var series = new LineSeries { ItemsSource = data, XBindingPath = "X", YBindingPath = "Y" };
-series.Trendlines.Add(new LogarithmicTrendline { Stroke = new SolidColorBrush(Colors.Blue), StrokeWidth = 2  });
+var series = new LineSeries() 
+{ 
+    ItemsSource = data, 
+    XBindingPath = "X", 
+    YBindingPath = "Y" 
+};
+series.Trendlines.Add(new LogarithmicTrendline 
+{ 
+    Stroke = new SolidColorBrush(Colors.Blue), 
+    StrokeWidth = 2 
+});
 chart.Series.Add(series);
 
 {% endhighlight %}
@@ -131,27 +155,36 @@ chart.Series.Add(series);
 
 ### Exponential
 
-Exponential trendline fits data that rises or falls at an increasing rate. Do not use when data contains zeros or negatives.
+An exponential trendline shows data that grows or shrinks at an increasingly fast rate. Use this for data that accelerates over time, like population growth or viral spread. This trendline requires all positive values and cannot work with zero or negative numbers.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<syncfusion:LineSeries ItemsSource="{Binding data}" XBindingPath="X" YBindingPath="Y">
-  <syncfusion:LineSeries.Trendlines>
-    <syncfusion:ExponentialTrendline Stroke="Blue" StrokeWidth="2"  />
-  </syncfusion:LineSeries.Trendlines>
-</syncfusion:LineSeries>
+<chart:SfCartesianChart>
+    . . .
+    <chart:LineSeries ItemsSource="{Binding data}" XBindingPath="X" YBindingPath="Y">
+        <chart:LineSeries.Trendlines>
+            <chart:ExponentialTrendline Stroke="Blue" StrokeWidth="2"/>
+        </chart:LineSeries.Trendlines>
+    </chart:LineSeries>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
-using Syncfusion.Maui.Charts;
-using Microsoft.Maui.Graphics;
 
-var chart = new SfCartesianChart();
-var series = new LineSeries { ItemsSource = data, XBindingPath = "X", YBindingPath = "Y" };
-series.Trendlines.Add(new ExponentialTrendline { Stroke = new SolidColorBrush(Colors.Blue), StrokeWidth = 2  });
+var series = new LineSeries() 
+{ 
+    ItemsSource = data, 
+    XBindingPath = "X", 
+    YBindingPath = "Y" 
+};
+series.Trendlines.Add(new ExponentialTrendline 
+{ 
+    Stroke = new SolidColorBrush(Colors.Blue), 
+    StrokeWidth = 2 
+});
 chart.Series.Add(series);
 
 {% endhighlight %}
@@ -162,27 +195,36 @@ chart.Series.Add(series);
 
 ### Power
 
-Power trendline models data that grows at a specific multiplicative rate. Use positive values where applicable.
+A power trendline models data that accelerates at different rates. It works well for scientific or physical measurements where the rate of change depends on the magnitude of the values. Always use positive values for best results.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<syncfusion:LineSeries ItemsSource="{Binding data}" XBindingPath="X" YBindingPath="Y">
-  <syncfusion:LineSeries.Trendlines>
-    <syncfusion:PowerTrendline Stroke="Blue" StrokeWidth="2"  />
-  </syncfusion:LineSeries.Trendlines>
-</syncfusion:LineSeries>
+<chart:SfCartesianChart>
+    . . .
+    <chart:LineSeries ItemsSource="{Binding data}" XBindingPath="X" YBindingPath="Y">
+        <chart:LineSeries.Trendlines>
+            <chart:PowerTrendline Stroke="Blue" StrokeWidth="2"/>
+        </chart:LineSeries.Trendlines>
+    </chart:LineSeries>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
-using Syncfusion.Maui.Charts;
-using Microsoft.Maui.Graphics;
 
-var chart = new SfCartesianChart();
-var series = new LineSeries { ItemsSource = data, XBindingPath = "X", YBindingPath = "Y" };
-series.Trendlines.Add(new PowerTrendline { Stroke = new SolidColorBrush(Colors.Blue), StrokeWidth = 2  });
+var series = new LineSeries() 
+{ 
+    ItemsSource = data, 
+    XBindingPath = "X", 
+    YBindingPath = "Y" 
+};
+series.Trendlines.Add(new PowerTrendline 
+{ 
+    Stroke = new SolidColorBrush(Colors.Blue), 
+    StrokeWidth = 2 
+});
 chart.Series.Add(series);
 
 {% endhighlight %}
@@ -193,27 +235,37 @@ chart.Series.Add(series);
 
 ### Polynomial
 
-Polynomial trendline fits fluctuating data. Use Order to set the polynomial degree (default commonly 2). Avoid very high order to prevent excessive curve fitting.
+A polynomial trendline is a curved line that follows the ups and downs in your data. Use this when your data has multiple peaks and valleys or doesn't follow a straight line. You can control how closely the curve follows your data using the `Order` property (default is 2).
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<syncfusion:LineSeries ItemsSource="{Binding data}" XBindingPath="X" YBindingPath="Y">
-  <syncfusion:LineSeries.Trendlines>
-    <syncfusion:PolynomialTrendline Order="3" Stroke="Blue" StrokeWidth="2"  />
-  </syncfusion:LineSeries.Trendlines>
-</syncfusion:LineSeries>
+<chart:SfCartesianChart>
+    . . .
+    <chart:LineSeries ItemsSource="{Binding data}" XBindingPath="X" YBindingPath="Y">
+        <chart:LineSeries.Trendlines>
+            <chart:PolynomialTrendline Order="3" Stroke="Blue" StrokeWidth="2"/>
+        </chart:LineSeries.Trendlines>
+    </chart:LineSeries>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
-using Syncfusion.Maui.Charts;
-using Microsoft.Maui.Graphics;
 
-var chart = new SfCartesianChart();
-var series = new LineSeries { ItemsSource = data, XBindingPath = "X", YBindingPath = "Y" };
-series.Trendlines.Add(new PolynomialTrendline { Order = 3, Stroke = new SolidColorBrush(Colors.Blue), StrokeWidth = 2  });
+var series = new LineSeries() 
+{ 
+    ItemsSource = data, 
+    XBindingPath = "X", 
+    YBindingPath = "Y" 
+};
+series.Trendlines.Add(new PolynomialTrendline 
+{ 
+    Order = 3, 
+    Stroke = new SolidColorBrush(Colors.Blue), 
+    StrokeWidth = 2 
+});
 chart.Series.Add(series);
 
 {% endhighlight %}
@@ -224,27 +276,37 @@ chart.Series.Add(series);
 
 ### Moving Average
 
-Moving Average smooths short-term fluctuations. Use Period to define the window size (default 2).
+A moving average trendline smooths out small bumps in your data by averaging nearby points. This helps you see the main trend without being distracted by temporary ups and downs. You can change how many points are used for averaging with the `Period` property (default is 2).
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<syncfusion:LineSeries ItemsSource="{Binding data}" XBindingPath="X" YBindingPath="Y">
-  <syncfusion:LineSeries.Trendlines>
-    <syncfusion:MovingAverageTrendline Period="5" Stroke="Blue" StrokeWidth="2"  />
-  </syncfusion:LineSeries.Trendlines>
-</syncfusion:LineSeries>
+<chart:SfCartesianChart>
+    . . .
+    <chart:LineSeries ItemsSource="{Binding data}" XBindingPath="X" YBindingPath="Y">
+        <chart:LineSeries.Trendlines>
+            <chart:MovingAverageTrendline Period="5" Stroke="Blue" StrokeWidth="2"/>
+        </chart:LineSeries.Trendlines>
+    </chart:LineSeries>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
-using Syncfusion.Maui.Charts;
-using Microsoft.Maui.Graphics;
 
-var chart = new SfCartesianChart();
-var series = new LineSeries { ItemsSource = data, XBindingPath = "X", YBindingPath = "Y" };
-series.Trendlines.Add(new MovingAverageTrendline { Period = 5, Stroke = new SolidColorBrush(Colors.Blue), StrokeWidth = 2  });
+var series = new LineSeries() 
+{ 
+    ItemsSource = data, 
+    XBindingPath = "X", 
+    YBindingPath = "Y" 
+};
+series.Trendlines.Add(new MovingAverageTrendline 
+{ 
+    Period = 5, 
+    Stroke = new SolidColorBrush(Colors.Blue), 
+    StrokeWidth = 2 
+});
 chart.Series.Add(series);
 
 {% endhighlight %}
@@ -255,95 +317,129 @@ chart.Series.Add(series);
 
 ## Forecasting
 
-Forecasting predicts future/past trends using ForwardForecast and BackwardForecast.
+Forecasting extends the trendline beyond your existing data to predict future or past values based on the established trend. This is useful for projecting outcomes or understanding historical patterns. You can extend the trendline using two properties:
+
+* **ForwardForecast** - Extends the trendline into the future
+* **BackwardForecast** - Extends the trendline into the past
 
 ### Forward Forecasting
 
-Set ForwardForecast to extend the trendline forward.
+Use the `ForwardForecast` property to extend the trendline forward and visualize predicted future trends. The value represents the number of data points to forecast ahead.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<syncfusion:LineSeries ItemsSource="{Binding data}" XBindingPath="X" YBindingPath="Y">
-  <syncfusion:LineSeries.Trendlines>
-    <syncfusion:LinearTrendline ForwardForecast="5" Stroke="Blue" StrokeWidth="2"  />
-  </syncfusion:LineSeries.Trendlines>
-</syncfusion:LineSeries>
+<chart:SfCartesianChart>
+    . . .
+    <chart:LineSeries ItemsSource="{Binding data}" XBindingPath="X" YBindingPath="Y">
+        <chart:LineSeries.Trendlines>
+            <chart:LinearTrendline ForwardForecast="5" Stroke="Blue" StrokeWidth="2"/>
+        </chart:LineSeries.Trendlines>
+    </chart:LineSeries>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
-using Syncfusion.Maui.Charts;
-using Microsoft.Maui.Graphics;
 
-var chart = new SfCartesianChart();
-var series = new LineSeries { ItemsSource = data, XBindingPath = "X", YBindingPath = "Y" };
-series.Trendlines.Add(new LinearTrendline { ForwardForecast = 5, Stroke = new SolidColorBrush(Colors.Blue), StrokeWidth = 2});
+var series = new LineSeries() 
+{ 
+    ItemsSource = data, 
+    XBindingPath = "X", 
+    YBindingPath = "Y" 
+};
+series.Trendlines.Add(new LinearTrendline 
+{ 
+    ForwardForecast = 5, 
+    Stroke = new SolidColorBrush(Colors.Blue), 
+    StrokeWidth = 2
+});
 chart.Series.Add(series);
 {% endhighlight %}
 
 {% endtabs %}
 
-![Forward Forecasting](#)
+![Forward Forecasting](TrendlineS_images/trendline_forward_forecast.png)
 
 ### Backward Forecasting
 
-Set BackwardForecast to extend the trendline backward.
+Use the `BackwardForecast` property to extend the trendline backward and visualize historical trend projections. The value represents the number of data points to forecast backward.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<syncfusion:LineSeries ItemsSource="{Binding data}" XBindingPath="X" YBindingPath="Y">
-  <syncfusion:LineSeries.Trendlines>
-    <syncfusion:LinearTrendline BackwardForecast="3" Stroke="Blue" StrokeWidth="2" />
-  </syncfusion:LineSeries.Trendlines>
-</syncfusion:LineSeries>
+<chart:SfCartesianChart>
+    . . .
+    <chart:LineSeries ItemsSource="{Binding data}" XBindingPath="X" YBindingPath="Y">
+        <chart:LineSeries.Trendlines>
+            <chart:LinearTrendline BackwardForecast="3" Stroke="Blue" StrokeWidth="2"/>
+        </chart:LineSeries.Trendlines>
+    </chart:LineSeries>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
-using Syncfusion.Maui.Charts;
-using Microsoft.Maui.Graphics;
 
-var chart = new SfCartesianChart();
-var series = new LineSeries { ItemsSource = data, XBindingPath = "X", YBindingPath = "Y" };
-series.Trendlines.Add(new LinearTrendline { BackwardForecast = 3, Stroke = new SolidColorBrush(Colors.Blue), StrokeWidth = 2  });
+var series = new LineSeries() 
+{ 
+    ItemsSource = data, 
+    XBindingPath = "X", 
+    YBindingPath = "Y" 
+};
+series.Trendlines.Add(new LinearTrendline 
+{ 
+    BackwardForecast = 3, 
+    Stroke = new SolidColorBrush(Colors.Blue), 
+    StrokeWidth = 2 
+});
 chart.Series.Add(series);
 {% endhighlight %}
 
 {% endtabs %}
 
-![Backward Forecasting](#)
+![Backward Forecasting](TrendlineS_images/trendline_backward_forecast.png)
 
 ## Customization
 
-Customize stroke, width and dash pattern using Stroke, StrokeWidth and StrokeDashArray.
+You can customize the appearance of trendlines to match your chart design. The key customization properties are:
+
+* **Stroke** - Sets the color of the trendline
+* **StrokeWidth** - Defines the thickness of the trendline
+* **StrokeDashArray** - Creates a dashed or dotted line pattern
+
+The following example shows how to customize a trendline with a black color, thickness of 2, and a dashed pattern:
 
 {% tabs %}
 
 {% highlight xaml %}
-<syncfusion:LineSeries ItemsSource="{Binding linearData}" XBindingPath="X"        
-                       YBindingPath="Y">
-    <syncfusion:LineSeries.Trendlines>
-      <syncfusion:LinearTrendline Stroke="Black" 
-                                  StrokeWidth="2"  
-                                  StrokeDashArray="5,6">
-      </syncfusion:LinearTrendline>
-    </syncfusion:LineSeries.Trendlines>
-</syncfusion:LineSeries>
+<chart:SfCartesianChart>
+    . . .
+    <chart:LineSeries ItemsSource="{Binding linearData}" XBindingPath="X" YBindingPath="Y">
+        <chart:LineSeries.Trendlines>
+            <chart:LinearTrendline Stroke="Black" StrokeWidth="2" StrokeDashArray="5,6"/>
+        </chart:LineSeries.Trendlines>
+    </chart:LineSeries>
+</chart:SfCartesianChart>
 {% endhighlight %}
 
 {% highlight c# %}
-using Syncfusion.Maui.Charts;
-using Microsoft.Maui.Graphics;
 
-var chart = new SfCartesianChart();
-var series = new LineSeries { ItemsSource = data, XBindingPath = "X", YBindingPath = "Y" };
-var t = new LinearTrendline { Stroke = new SolidColorBrush(Colors.Black), StrokeWidth = 2  };
-t.StrokeDashArray = new DoubleCollection { 5, 6 };
-series.Trendlines.Add(t);
+var series = new LineSeries() 
+{ 
+    ItemsSource = data, 
+    XBindingPath = "X", 
+    YBindingPath = "Y" 
+};
+var trendline = new LinearTrendline 
+{ 
+    Stroke = new SolidColorBrush(Colors.Black), 
+    StrokeWidth = 2 
+};
+trendline.StrokeDashArray = new DoubleCollection { 5, 6 };
+series.Trendlines.Add(trendline);
 chart.Series.Add(series);
 {% endhighlight %}
 
@@ -351,29 +447,39 @@ chart.Series.Add(series);
 
 ![Custom stroke and dash](TrendlineS_images/custom_trend.png)
 
-## Trendline Legend Labal
+## Trendline Legend Label
 
-Control trendline legend labal with Label.
+You can display a custom label for the trendline in the chart legend using the `Label` property. This helps distinguish between multiple trendlines and makes your chart more descriptive.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<syncfusion:LineSeries ItemsSource="{Binding linearData}" XBindingPath="X" YBindingPath="Y">
-  <syncfusion:LineSeries.Trendlines>
-    <syncfusion:LinearTrendline Stroke="Blue" StrokeWidth="2" Label="Trend (shown in legend)"/>
-  </syncfusion:LineSeries.Trendlines>
-</syncfusion:LineSeries>
+<chart:SfCartesianChart>
+    . . .
+    <chart:LineSeries ItemsSource="{Binding linearData}" XBindingPath="X" YBindingPath="Y">
+        <chart:LineSeries.Trendlines>
+            <chart:LinearTrendline Stroke="Blue" StrokeWidth="2" Label="Trend (shown in legend)"/>
+        </chart:LineSeries.Trendlines>
+    </chart:LineSeries>
+</chart:SfCartesianChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
-using Syncfusion.Maui.Charts;
-using Microsoft.Maui.Graphics;
 
-var chart = new SfCartesianChart();
-var series = new LineSeries { ItemsSource = data, XBindingPath = "X", YBindingPath = "Y" };
-series.Trendlines.Add(new LinearTrendline {Stroke = new SolidColorBrush(Colors.Blue), StrokeWidth = 2 , Label = "Trend (shown in legend)" });
+var series = new LineSeries() 
+{ 
+    ItemsSource = data, 
+    XBindingPath = "X", 
+    YBindingPath = "Y" 
+};
+series.Trendlines.Add(new LinearTrendline 
+{ 
+    Stroke = new SolidColorBrush(Colors.Blue), 
+    StrokeWidth = 2, 
+    Label = "Trend (shown in legend)" 
+});
 chart.Series.Add(series);
 {% endhighlight %}
 
@@ -383,30 +489,48 @@ chart.Series.Add(series);
 
 ## Markers
 
-Enable markers on trendline points via ShowMarkers and customize markers using MarkerSettings.
+Markers are visual indicators (like circles, squares, etc.) placed along the trendline to highlight specific data points. You can enable and customize markers using:
+
+* **ShowMarkers** - Enables markers on the trendline
+* **MarkerSettings** - Customizes the appearance, size, shape, and color of markers
+
+This is helpful for emphasizing key points on the trendline or making it more visually distinct.
 
 {% tabs %}
 
 {% highlight xaml %}
-<syncfusion:LineSeries ItemsSource="{Binding linearData}" XBindingPath="X" YBindingPath="Y">
-    <syncfusion:LinearTrendline ShowMarkers="True">
-      <syncfusion:LinearTrendline.MarkerSettings>
-        <syncfusion:ChartMarkerSettings Width="8" Height="8" Type="Circle" Fill="Purple" Stroke="Blue"/>
-      </syncfusion:LinearTrendline.MarkerSettings>
-    </syncfusion:LinearTrendline>
-</syncfusion:LineSeries>
+<chart:SfCartesianChart>
+    . . .
+    <chart:LineSeries ItemsSource="{Binding linearData}" XBindingPath="X" YBindingPath="Y">
+        <chart:LineSeries.Trendlines>
+            <chart:LinearTrendline ShowMarkers="True">
+                <chart:LinearTrendline.MarkerSettings>
+                    <chart:ChartMarkerSettings Width="8" Height="8" Type="Circle" Fill="Purple" Stroke="Blue"/>
+                </chart:LinearTrendline.MarkerSettings>
+            </chart:LinearTrendline>
+        </chart:LineSeries.Trendlines>
+    </chart:LineSeries>
+</chart:SfCartesianChart>
 {% endhighlight %}
 
 {% highlight c# %}
-using Syncfusion.Maui.Charts;
-using Microsoft.Maui.Graphics;
 
-var chart = new SfCartesianChart();
-var series = new LineSeries { ItemsSource = data, XBindingPath = "X", YBindingPath = "Y" };
-var t = new LinearTrendline();
-t.ShowMarkers=true;
-t.MarkerSettings = new ChartMarkerSettings { Width = 8, Height = 8 ,Stroke = new SolidColorBrush(Colors.Blue), Fill = new SolidColorBrush(Colors.Purple), Type=ShapeType.Circle };
-series.Trendlines.Add(t);
+var series = new LineSeries() 
+{ 
+    ItemsSource = data, 
+    XBindingPath = "X", 
+    YBindingPath = "Y" 
+};
+var trendline = new LinearTrendline() { ShowMarkers = true };
+trendline.MarkerSettings = new ChartMarkerSettings 
+{ 
+    Width = 8, 
+    Height = 8, 
+    Stroke = new SolidColorBrush(Colors.Blue), 
+    Fill = new SolidColorBrush(Colors.Purple), 
+    Type = ShapeType.Circle 
+};
+series.Trendlines.Add(trendline);
 chart.Series.Add(series);
 {% endhighlight %}
 
@@ -416,28 +540,43 @@ chart.Series.Add(series);
 
 ## Tooltip and Trackball
 
-Enable tooltip for trendlines using EnableTooltip and customize with TooltipTemplate. Trackball labels can be enabled via ShowTrackballLabel and TrackballLabelTemplate.
+Tooltips and trackball labels provide interactive information when users hover over or tap the trendline:
+
+* **EnableTooltip** - Displays a tooltip showing trendline data when hovered
+* **ShowTrackballLabel** - Displays a label when the trackball intersects the trendline
+* **TooltipTemplate** - Customizes the tooltip appearance and content
+* **TrackballLabelTemplate** - Customizes the trackball label appearance
+
+These features enhance user interactivity and data exploration.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<syncfusion:LineSeries ItemsSource="{Binding linearData}" XBindingPath="X" YBindingPath="Y">
-    <syncfusion:LineSeries.Trendlines>
-      <syncfusion:LinearTrendline EnableTooltip="True" 
-                                  ShowTrackballLabel="True"/>
-    </syncfusion:LinearTrendline>
-</syncfusion:LineSeries>
+<chart:SfCartesianChart>
+    . . .
+    <chart:LineSeries ItemsSource="{Binding linearData}" XBindingPath="X" YBindingPath="Y">
+        <chart:LineSeries.Trendlines>
+            <chart:LinearTrendline EnableTooltip="True" ShowTrackballLabel="True"/>
+        </chart:LineSeries.Trendlines>
+    </chart:LineSeries>
+</chart:SfCartesianChart>
 {% endhighlight %}
 
 {% highlight c# %}
-using Syncfusion.Maui.Charts;
-using Microsoft.Maui.Graphics;
 
-var chart = new SfCartesianChart();
-var series = new LineSeries { ItemsSource = data, XBindingPath = "X", YBindingPath = "Y" };
-var t = new LinearTrendline { EnableTooltip = true, ShowTrackballLabel = true };
-series.Trendlines.Add(t);
+var series = new LineSeries() 
+{ 
+    ItemsSource = data, 
+    XBindingPath = "X", 
+    YBindingPath = "Y" 
+};
+var trendline = new LinearTrendline 
+{ 
+    EnableTooltip = true, 
+    ShowTrackballLabel = true 
+};
+series.Trendlines.Add(trendline);
 chart.Series.Add(series);
 {% endhighlight %}
 
@@ -446,7 +585,14 @@ chart.Series.Add(series);
 ![Tooltip example](TrendlineS_images/tooltip_trackball_trend.png) 
 
 ## Multiple Trendlines
-Add multiple trendlines to compare different fits simultaneously, aiding analysis, visualization, and short-term forecasting across series.
+
+You can add multiple trendlines to a single series to compare different trend models and find the best fit for your data. This is useful for:
+
+* Comparing different trendline types (Linear vs. Polynomial vs. Moving Average)
+* Analyzing which trend model best represents your data
+* Providing multiple perspectives on the same dataset
+
+Each trendline can have different properties, colors, and labels to make them easily distinguishable.
 
 {% tabs %}
 {% highlight xaml %}
@@ -454,32 +600,52 @@ Add multiple trendlines to compare different fits simultaneously, aiding analysi
 <ContentPage x:Class="TrendlineSample.MainPage"
              xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"> 
-    <syncfusion:SfCartesianChart x:Name="chart">
-      <syncfusion:LineSeries ItemsSource="{Binding Data}" XBindingPath="X" YBindingPath="Y">
-        <syncfusion:LineSeries.Trendlines>
-          <syncfusion:LinearTrendline Stroke="RoyalBlue" StrokeWidth="2" Label="Linear" />
-          <syncfusion:PolynomialTrendline Order="3" Stroke="Orange" StrokeWidth="2" Label="Polynomial (3)" />
-          <syncfusion:MovingAverageTrendline Period="5" Stroke="Green" StrokeWidth="2" Label="MovingAverage (5)" />
-        </syncfusion:LineSeries.Trendlines>
-      </syncfusion:LineSeries>
-    </syncfusion:SfCartesianChart>
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"> 
+    <chart:SfCartesianChart x:Name="chart">
+      <chart:LineSeries ItemsSource="{Binding Data}" XBindingPath="X" YBindingPath="Y">
+        <chart:LineSeries.Trendlines>
+          <chart:LinearTrendline Stroke="RoyalBlue" StrokeWidth="2" Label="Linear" />
+          <chart:PolynomialTrendline Order="3" Stroke="Orange" StrokeWidth="2" Label="Polynomial (3)" />
+          <chart:MovingAverageTrendline Period="5" Stroke="Green" StrokeWidth="2" Label="MovingAverage (5)" />
+        </chart:LineSeries.Trendlines>
+      </chart:LineSeries>
+    </chart:SfCartesianChart>
 </ContentPage>
 {% endhighlight %}
  
 
 {% highlight c# %}
-using Syncfusion.Maui.Charts;
-using Microsoft.Maui.Graphics;
 
-var chart = new SfCartesianChart(); 
-var series = new LineSeries { ItemsSource = data, XBindingPath = "X", YBindingPath = "Y" };
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+LineSeries series = new LineSeries() 
+{ 
+    ItemsSource = data, 
+    XBindingPath = "X", 
+    YBindingPath = "Y" 
+};
 
-series.Trendlines.Add(new LinearTrendline { Stroke = new SolidColorBrush(Colors.Blue), StrokeWidth = 2,Label="Linear" });
-series.Trendlines.Add(new PolynomialTrendline { Order = 3, Stroke = new SolidColorBrush(Colors.Orange) },Label="Polynomial (3)");
-series.Trendlines.Add(new MovingAverageTrendline { Period = 5, Stroke = new SolidColorBrush(Colors.Green) },Label="MovingAverage (5)");
+series.Trendlines.Add(new LinearTrendline 
+{ 
+    Stroke = new SolidColorBrush(Colors.Blue), 
+    StrokeWidth = 2, 
+    Label = "Linear" 
+});
+series.Trendlines.Add(new PolynomialTrendline 
+{ 
+    Order = 3, 
+    Stroke = new SolidColorBrush(Colors.Orange), 
+    Label = "Polynomial (3)" 
+});
+series.Trendlines.Add(new MovingAverageTrendline 
+{ 
+    Period = 5, 
+    Stroke = new SolidColorBrush(Colors.Green), 
+    Label = "MovingAverage (5)" 
+});
 
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 {% endtabs %} 
