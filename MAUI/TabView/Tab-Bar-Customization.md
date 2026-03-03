@@ -91,6 +91,22 @@ tabView.HeaderHorizontalTextAlignment = TextAlignment.Center; {% endhighlight %}
 ![Tab header text alignment](images/HorizontalTextAlignmentCenter.png) 
 
 
+## AnimationEasing
+
+The animation of the tab item content and selection indicator can be customized by setting the [AnimationEasing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarHeight) property. The default value is `Easing.Linear`.
+
+{% tabs %}
+
+{% highlight xaml %}
+    <tabView:SfTabView AnimationEasing="SpringOut">
+{% endhighlight %}
+
+{% highlight C# %}
+     tabView.AnimationEasing = Easing.SpringOut;
+{% endhighlight %}
+
+{% endtabs %}
+
 ## TabBarPlacement options
 
 The .NET MAUI Tab View provides two options for determining how the tab bar aligns relative to the tab content. The options are top and bottom. This can be achieved using the [TabBarPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarPlacement) property.
