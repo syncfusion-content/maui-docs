@@ -1328,7 +1328,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![ShowTimeIndicator-In-Appointment-Resizing-In-.NET-MAUI-SfScheduler](images/appointments/show-time-indicator.gif)
+![ShowTimeIndicator-In-Appointment-Resizing-In-.NET-MAUI-SfScheduler](images/appointments/show-time-indicator.png)
 
 #### Time Indicator Text Format
 
@@ -1394,7 +1394,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![TimeIndicatorStyle-Of-TimeIndicator-in-Appointment-Resizing-in-.NET-MAUI-SfScheduler](images/appointments/time-indicator-style.gif)
+![TimeIndicatorStyle-Of-TimeIndicator-in-Appointment-Resizing-in-.NET-MAUI-SfScheduler](images/appointments/time-indicator-style.png)
 
 #### Resize Border
  
@@ -1423,7 +1423,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![ResizeBorder-in-Appointment-Resizing-in-.NET-MAUI-SfScheduler](images/appointments/resize-border.gif)
+![ResizeBorder-in-Appointment-Resizing-in-.NET-MAUI-SfScheduler](images/appointments/resize-border.png)
 
 ## Appointment Tooltip
 
