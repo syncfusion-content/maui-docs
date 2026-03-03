@@ -659,7 +659,11 @@ The `SfDataGrid` provides extensive appearance customization for the filter popu
 {% endhighlight %}
 {% endtabs %}
 
+Here is the checkbox and advanced filter popup with some appearance customizations
+
 <img src="Images/filtering/maui-datagrid-filtering-popup-customization.png" width="500" alt="filter popup customization"/>
+
+<img src="Images/filtering/maui-datagrid-filtering-popup-customization-advancedFilter.png" width="500" alt="filter popup customization- advanced filter"/>
 
 Use the following `DataGridStyle` properties to customize the filter popup menu and related elements:
 
