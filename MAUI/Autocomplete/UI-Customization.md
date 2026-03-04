@@ -1093,6 +1093,42 @@ The following image illustrates the result of the above code:
 
 ![.NET MAUI Autocomplete ItemTemplateSelector](Images/UICustomization/TemplateSelector.png)
 
+## Customize Dropdown corner radius
+
+The [DropDownCornerRadius]() property is used to modify the corner radius of the dropdown container for the `SfAutoComplete` control.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfAutocomplete x:Name="autocomplete"
+                        WidthRequest="250" 
+                        HeightRequest = "50"
+                        DropDownCornerRadius = "25"
+                        DisplayMemberPath = "Name"
+                        TextMemberPath = "Name"
+                        ItemsSource="{Binding SocialMedias}" />
+
+{% endhighlight %}
+{% highlight C# %}
+
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel(); 
+SfAutocomplete autocomplete = new SfAutocomplete()
+{
+    WidthRequest = 250,
+    HeightRequest = 50,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    DropDownCornerRadius = 25
+};
+
+{% endhighlight %}
+{% endtabs %}
+
+The following image illustrates the result of the above code:
+
+![.NET MAUI Autocomplete with tokenitemstyle](Images/UICustomization/dropdonw_corner_radius_ac.png)
+
 ## Styling token items
 
 The Autocomplete control allows you to customize the style of the TokenItem generated in the selection area by using the TokenItemStyle property.

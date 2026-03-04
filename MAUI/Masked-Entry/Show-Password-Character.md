@@ -37,7 +37,7 @@ maskedEntry.PasswordChar = '*';
 
 ## Password Delay Duration
 
-The [PasswordDelayDuration]() setting on a `MaskedEntry` controls how long the most-recently typed character remains visible before being replaced by the mask character. Use this to provide brief visual confirmation to users while preserving password privacy.
+The [PasswordDelayDuration]() setting on a `SfMaskedEntry` controls how long the most-recently typed character remains visible before being replaced by the mask character. Use this to provide brief visual confirmation to users while preserving password privacy.
 
 {% tabs %}
 {% highlight xaml %}

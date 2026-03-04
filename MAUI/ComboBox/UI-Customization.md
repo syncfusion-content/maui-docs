@@ -1211,6 +1211,42 @@ SfComboBox comboBox = new SfComboBox
 
 ![.NET MAUI ComboBox DropDown Button Size Customization](images/UICustomization/DropDownButtonSize.png)
 
+## Customize Dropdown corner radius
+
+The [DropDownCornerRadius]() property is used to modify the corner radius of the dropdown container for the `SfComboBox` control.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfComboBox x:Name="comboBox"
+                        WidthRequest="250" 
+                        HeightRequest = "50"
+                        DropDownCornerRadius = "25"
+                        DisplayMemberPath = "Name"
+                        TextMemberPath = "Name"
+                        ItemsSource="{Binding SocialMedias}" />
+
+{% endhighlight %}
+{% highlight C# %}
+
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel(); 
+SfComboBox comboBox = new SfComboBox()
+{
+    WidthRequest = 250,
+    HeightRequest = 50,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    DropDownCornerRadius = 25
+};
+
+{% endhighlight %}
+{% endtabs %}
+
+The following image illustrates the result of the above code:
+
+![.NET MAUI ComboBox with Dropdown corner radius](Images/UICustomization/dropdonw_corner_radius.png)
+
 ### View for DropDown button
 
 We can set view to the drop down button in [SfComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) using [DropDownButtonSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html#Syncfusion_Maui_Inputs_SfComboBox_DropDownButtonSettings) property.
