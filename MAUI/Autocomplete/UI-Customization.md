@@ -1127,7 +1127,7 @@ SfAutocomplete autocomplete = new SfAutocomplete()
 
 The following image illustrates the result of the above code:
 
-![.NET MAUI Autocomplete with tokenitemstyle](Images/UICustomization/dropdonw_corner_radius_ac.png)
+![.NET MAUI Autocomplete with Dropdown corner radius](Images/UICustomization/dropdonw_corner_radius_ac.png)
 
 ## Styling token items
 
