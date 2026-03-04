@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Selection & interaction in .NET MAUI Tab View (SfTabView) | Syncfusion®
+title: Selection in .NET MAUI Tab View (SfTabView) | Syncfusion®
 description: Learn all about selection & interaction in Syncfusion® .NET MAUI Tab View (SfTabView) control, its elements, and more.
 platform: MAUI
 control: SfTabView
 documentation: UG
 ---
 
-# Selection and Interaction
+# Selection and interaction in .NET MAUI Tab View
 
 This page covers how selection works in `SfTabView`, how to handle selection-related events, and how to enable swipe-based navigation.
 

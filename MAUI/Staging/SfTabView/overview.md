@@ -1,9 +1,10 @@
 ---
-title: "SfTabView"
-page_title: ".NET MAUI SfTabView: Overview"
-description: "Overview, key concepts, and links to guides and API reference for Syncfusion.Maui.TabView SfTabView."
-slug: "controls-sftabview-overview"
-position: 1
+layout: post
+title: .NET MAUI SfTabView: Overview | Syncfusion®
+description: Overview, key concepts, and links to guides and API reference for Syncfusion.Maui.TabView SfTabView.
+platform: MAUI
+control: SfTabView
+documentation: UG
 ---
 
 # Overview of .NET MAUI Tab View

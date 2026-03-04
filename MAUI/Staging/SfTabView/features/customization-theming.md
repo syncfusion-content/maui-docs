@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization and theming in .NET MAUI Tab View (SfTabView) | Syncfusion®
+title: Customization in .NET MAUI Tab View (SfTabView) | Syncfusion®
 description: Learn all about customization and theming in Syncfusion® .NET MAUI Tab View (SfTabView) control, its elements, and more.
 platform: MAUI
 control: SfTabView
 documentation: UG
 ---
 
-# Customization & Theming
+# Customization & Theming in .NET MAUI Tab View
 
 This page covers customizing the look and feel of `SfTabView` and `SfTabItem` using properties, styles, and `VisualStateManager`.
 

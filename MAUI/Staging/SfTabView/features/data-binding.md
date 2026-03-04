@@ -7,7 +7,7 @@ control: SfTabView
 documentation: UG
 ---
 
-# Data Binding
+# Data binding in .NET MAUI Tab View
 
 This page covers data-driven usage of `SfTabView`, including binding `ItemsSource`, templating headers/content, and binding selection.
 

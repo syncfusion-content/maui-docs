@@ -7,7 +7,7 @@ control: SfTabView
 documentation: UG
 ---
 
-# Accessibility & RTL
+# Accessibility and RTL in .NET MAUI Tab View
 
 This page covers Right-to-Left (RTL) layout behavior and practical accessibility guidance when using `SfTabView`.
 

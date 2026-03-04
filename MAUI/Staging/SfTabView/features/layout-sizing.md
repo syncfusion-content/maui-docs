@@ -1,13 +1,13 @@
 ---
 layout: post
-title: layout and sizing in .NET MAUI Tab View (SfTabView) | Syncfusion®
+title: Layout and sizing in .NET MAUI Tab View (SfTabView) | Syncfusion®
 description: Learn all about layout and sizing in Syncfusion® .NET MAUI Tab View (SfTabView) control, its elements, and more.
 platform: MAUI
 control: SfTabView
 documentation: UG
 ---
 
-# Layout & Sizing
+# Layout and sizing in .NET MAUI Tab View
 
 This page covers tab-bar placement and common sizing behaviors.
 
