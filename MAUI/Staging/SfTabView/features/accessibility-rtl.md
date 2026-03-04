@@ -1,4 +1,13 @@
-# Category: Accessibility & RTL
+---
+layout: post
+title: Accessibility and RTL in .NET MAUI Tab View (SfTabView) | Syncfusion®
+description: Learn all about accessibility & RTL in Syncfusion® .NET MAUI Tab View (SfTabView) control, its elements, and more.
+platform: MAUI
+control: SfTabView
+documentation: UG
+---
+
+# Accessibility & RTL
 
 This page covers Right-to-Left (RTL) layout behavior and practical accessibility guidance when using `SfTabView`.
 

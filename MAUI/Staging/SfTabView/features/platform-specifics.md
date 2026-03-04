@@ -1,4 +1,13 @@
-# Category: Platform Specifics
+---
+layout: post
+title: Liquid glass effect in .NET MAUI Tab View (SfTabView) | Syncfusion®
+description: Learn all about liquid glass effect in Syncfusion® .NET MAUI Tab View (SfTabView) control, its elements, and more.
+platform: MAUI
+control: SfTabView
+documentation: UG
+---
+
+# Platform Specifics - Liquid Glass Effect
 
 This page documents `SfTabView` behavior or properties that are explicitly platform-scoped in the source.
 

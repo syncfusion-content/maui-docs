@@ -6,7 +6,7 @@ slug: "controls-sftabview-overview"
 position: 1
 ---
 
-# SfTabView: Overview
+# Overview of .NET MAUI Tab View
 
 `SfTabView` (namespace: `Syncfusion.Maui.TabView`) provides a tabbed navigation UI for .NET MAUI apps. It renders a tab bar (headers) and a content region, and supports horizontal (Top/Bottom) and vertical (Left/Right) tab bars.
 

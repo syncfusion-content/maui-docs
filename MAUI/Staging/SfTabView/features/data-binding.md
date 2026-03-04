@@ -1,4 +1,13 @@
-# Category: Data Binding
+---
+layout: post
+title: Data binding in .NET MAUI Tab View (SfTabView) | Syncfusion®
+description: Learn all about data binding in Syncfusion® .NET MAUI Tab View (SfTabView) control, its elements, and more.
+platform: MAUI
+control: SfTabView
+documentation: UG
+---
+
+# Data Binding
 
 This page covers data-driven usage of `SfTabView`, including binding `ItemsSource`, templating headers/content, and binding selection.
 
