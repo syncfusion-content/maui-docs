@@ -1212,7 +1212,7 @@ N>
 
 ## Appointment Editor
 
-The Appointment Editor is a popup dialog used for adding, editing, or deleting appointments in the Scheduler. It provides fields for entering detailed event information, along with options for color customization, recurrence configuration, and timezone settings. The editor can be opened by double‑tapping a time slot or an existing appointment.
+The Appointment Editor is a popup dialog used for adding, editing, or deleting appointments in the Scheduler. It provides fields for entering detailed event information, along with options for color customization, recurrence configuration, and timezone selection. The editor can be opened by double‑tapping a time slot or an existing appointment.
 
 You can control when the editor is available by using the `AppointmentEditorMode` property:
 
@@ -1220,7 +1220,7 @@ You can control when the editor is available by using the `AppointmentEditorMode
 - **Edit** – Allows users to modify existing appointments.
 - **None** – Disables the editor entirely.
 
-By default, `AppointmentEditorMode` is set to `None`. To allow users to open and interact with the Appointment Editor, set the `AppointmentEditorMode` to `Add` or `Edit`.
+By default, `AppointmentEditorMode` is set to `None`. To enable the Appointment Editor for user interaction, set the AppointmentEditorMode property to `Add`, `Edit`, or both.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
@@ -1245,7 +1245,7 @@ public partial class MainPage : ContentPage
 
 ## Appointment Resizing
 
-Modify appointment durations directly by dragging the start or end edges of an appointment. In Day, Week, and Work Week views, drag the top or bottom edges, while in Month and Timeline views, drag the left or right edges to adjust the appointment timing. By default, `AllowAppointmentResize` is set to `false`. Enable this functionality by setting the `AllowAppointmentResize` property to `true`.
+Appointments can be resized interactively to adjust their start or end times. In Day, Week, and Work Week views, you can resize an appointment by dragging its top or bottom edges. In Month, Week All‑Day, and Timeline views, resizing is performed by dragging the left or right edges of the appointment. By default, the `AllowAppointmentResize` property is set to `false`. To enable appointment resizing, set the `AllowAppointmentResize` property to `true`.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
@@ -1268,13 +1268,17 @@ public partial class MainPage : ContentPage
 
 ![Appointment-Resizing-In-.NET-MAUI-SfScheduler](images/appointments/appointment-resizing.gif)
 
+N>
+- Appointment resizing is supported only on desktop platforms.
+- Resizing works exclusively through mouse interactions, using the built‑in mouse resize cursors of the native platform.
+
 ### Appointment Resize Settings
 
 The `AppointmentResizeSettings` property lets you configure automatic scrolling, time indicators with customizable format and style, and the border appearance when an appointment is resized.
 
 #### Allow Resize Scroll
 
-You can enable automatic scrolling during appointment resizing using the `AllowResizeScroll` property. As the appointment is being resized and reaches the boundary of the visible timeslots, the scheduler scrolls to display additional timeslots. This allows the resizing process to continue smoothly. Setting `AllowResizeScroll` to `true` enables this functionality. The default value is `false`.
+You can enable automatic scrolling during appointment resizing using the `AllowResizeScroll` property. As the appointment is being resized and reaches the boundary of the visible timeslots, the scheduler scrolls to display additional timeslots. This allows the resizing process to continue smoothly. By default, `AllowResizeScroll` is set to `true`. To disable automatic scrolling during appointment resizing, set the `AllowResizeScroll` property to `false`.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="5" %}
@@ -1311,7 +1315,7 @@ You can display a time indicator while resizing an appointment by using the `Sho
                        View="Day" 
                        AllowAppointmentResize="True">
     <scheduler:SfScheduler.AppointmentResizeSettings>
-        <scheduler:AppointmentResizeSettings ShowTimeIndicator="False"/>
+        <scheduler:AppointmentResizeSettings ShowTimeIndicator="True"/>
     </scheduler:SfScheduler.AppointmentResizeSettings>
 </scheduler:SfScheduler>
 {% endhighlight %}
@@ -1329,6 +1333,9 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![ShowTimeIndicator-In-Appointment-Resizing-In-.NET-MAUI-SfScheduler](images/appointments/show-time-indicator.png)
+
+N>
+- The time indicator is not displayed in Month view, the All‑Day layout, and TimelineMonthView.
 
 #### Time Indicator Text Format
 
@@ -1396,7 +1403,7 @@ public partial class MainPage : ContentPage
 
 ![TimeIndicatorStyle-Of-TimeIndicator-in-Appointment-Resizing-in-.NET-MAUI-SfScheduler](images/appointments/time-indicator-style.png)
 
-#### Resize Border
+#### Resize Border Customization
  
 The border displayed around an appointment during resizing can be customized using the `ResizeBorderThickness` and `ResizeBorderStroke` properties. ResizeBorderThickness defines how thick the border appears, while ResizeBorderStroke specifies its color.
 
@@ -1449,6 +1456,10 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![Appointment-Tooltip-in-.NET-MAUI-SfScheduler](images/appointments/appointment-tooltip.png)
+
+N>
+- **Desktop platforms**: A tooltip is shown when you hover the mouse over an appointment.
+- **Mobile platforms**: A tooltip is shown when you tap or long‑press an appointment. For long‑press interactions, the tooltip appears only when appointment dragging is disabled.
 
 ### Appointment Tooltip Settings
 
