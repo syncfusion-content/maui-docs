@@ -776,6 +776,8 @@ public partial class MainPage : ContentPage
 
 {% endtabs %}
 
+![Active View in the .NET MAUI Date Time Picker](images/customizations/maui-date-time-picker-active-view.gif)
+
 ## Column Customization
 
 ### Customization of the day column text style
