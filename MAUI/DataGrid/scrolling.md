@@ -208,8 +208,8 @@ The [SfDataGrid.HorizontalOverScrollMode]() property customizes the horizontal s
 
 The [HorizontalOverScrollMode]() property is of type `DataGridHorizontalScrollMode` and includes the following modes:
 
-**Bounce**: Enables a bounce‑back animation when the user scrolls beyond the horizontal limits of the grid. This is the default mode on the iOS platform.
-**None**: Disables the bounce effect, causing scrolling to stop immediately at the content edges. This is the default mode on the Android platform.
+ - **Bounce**: Enables a bounce‑back animation when the user scrolls beyond the horizontal limits of the grid. This is the default mode on the iOS platform.
+ - **None**: Disables the bounce effect, causing scrolling to stop immediately at the content edges. This is the default mode on the Android platform.
 
 To customize the bouncing effect in the data grid, follow the code example:
 {% tabs %}
