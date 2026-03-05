@@ -196,6 +196,83 @@ public partial class MainPage : ContentPage
 
 ![.NET MAUI NumericEntry with ValueChange Mode](GettingStarted_images/valuechangemode.gif)
 
+## Completed Event
+
+The [Completed]() event is raised when the user finalizes the text in the [SfNumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) editable mode by pressing return key on the keyboard. The handler for the event is a generic event handler, taking the `sender` and `EventArgs`(the `EventArgs` value is `string.Empty`):
+
+{% tabs %}
+{% highlight xaml %}
+
+    <editors:SfNumericEntry x:Name="numericEntry"
+                        WidthRequest="200"
+                        Value = "153"
+                        Completed="numericEntry_Completed"/>
+
+{% endhighlight %}
+{% highlight C# %}
+     
+    SfNumericEntry numericEntry = new SfNumericEntry()
+    {
+        WidthRequest = 200;
+        Value = 153,
+    };
+    numericEntry.Completed += numericEntry_Completed;
+
+{% endhighlight %}
+{% endtabs %}
+
+`Completed` event can be Handled in C# as follows:
+
+{% tabs %}
+{% highlight C# %}
+
+    private async void numericEntry_Completed(object sender, EventArgs e)
+    {
+        await DisplayAlert("Message", "Text entering Completed", "ok");
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+
+## ClearButtonClicked Event
+
+The [ClearButtonClicked]() event is raised when the user activates the clear button in the `SfNumericEntry` editable mode by tapping or pressing the clear button on the keyboard. The handler for the event is a generic event handler, taking the `sender` and `EventArgs`.
+
+{% tabs %}
+{% highlight xaml %}
+
+    <editors:SfNumericEntry x:Name="numericEntry"
+                        WidthRequest="200"
+                        Value="153" 
+                        ClearButtonClicked="numericEntry_Completed"/>
+
+{% endhighlight %}
+{% highlight C# %}
+
+   SfNumericEntry numericEntry = new SfNumericEntry()
+    {
+        WidthRequest = 200;
+        value = 153,
+    };
+    numericEntry.ClearButtonClicked += numericEntry_ClearButtonClicked;
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endhighlight %}
+{% endtabs %}
+
+`ClearButtonClicked` event can be Handled in C# as follows:
+
+{% tabs %}
+{% highlight C# %}
+    
+    private async void numericEntry_ClearButtonClicked(object sender, EventArgs e)
+    {
+        await DisplayAlert("Message", "Clear Button Clicked", "ok");
+    }
+
 ## Stroke
 
 The NumericEntry border color can be changed by using the [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html#Syncfusion_Maui_Inputs_SfNumericEntry_Stroke) property. The default `Stroke` color is **Black**.
