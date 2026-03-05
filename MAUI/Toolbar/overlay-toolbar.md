@@ -15,6 +15,8 @@ The toolbar control supports displaying an overlay toolbar in the view. You can 
 
 To display an overlay toolbar, define the `OverlayToolbar` property for a toolbar item. When the toolbar item is tapped, the overlay toolbar will appear. The following example shows how to add an overlay toolbar to a toolbar item.
 
+N> There is no need to set framework‑specific layout properties such as `Height`, `Width`, `FlowDirection`, or explicit frame bounds for the overlay toolbar. The overlay toolbar automatically aligns with the main toolbar, inheriting its layout, size, and orientation. All sizing and flow behavior are managed by the main toolbar.
+
 {% tabs %}
 
 {% highlight xaml %}

@@ -793,7 +793,7 @@ private void Button_Clicked(object sender, EventArgs e)
 
 {% endtabs %}
 
-![Enable CloseButtonIcon in the .NET MAUI Date Picker](images/customizations/maui-date-pikcer-enable-closebuttonicon.png)
+![Enable CloseButtonIcon in the .NET MAUI Date Picker](images/customizations/maui-date-picker-enable-closebuttonicon.png)
 
 N>The ShowCloseButton property must be set to true for the close button icon to be displayed.
 
