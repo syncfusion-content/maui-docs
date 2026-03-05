@@ -32,7 +32,7 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion<sup>®</sup> MAUI Smart DataGrid NuGet Package
 
 1. In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
-2. Search for [Syncfusion.Maui.SmartComponents]([DataGridAssistViewSettings.AssistViewClosing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.DataGridAssistViewSettings.html#Syncfusion_Maui_SmartComponents_DataGridAssistViewSettings_AssistViewClosing) event is triggered whenever the AssistView popup is about to close. This event provides [AssistViewClosingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.AssistViewClosingEventArgs.html),) and install the latest version.
+2. Search for [Syncfusion.Maui.SmartComponents](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.html) and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored.
 
 ## Step 3: Register the handler

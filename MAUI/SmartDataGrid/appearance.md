@@ -421,7 +421,7 @@ SmartGrid.AssistViewSettings.AssistViewHeaderTemplate = new DataTemplate(() =>
 
 ### AssistView Banner Template
 
-The `SfSmartDataGrid` control allows you to fully customize the AssistView banner area by using the [AssistViewHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.DataGridAssistViewSettings.html#Syncfusion_Maui_SmartComponents_DataGridAssistViewSettings_AssistViewHeaderTemplate) property in [DataGridAssistViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.DataGridAssistViewSettings.html). This property lets you define a custom layout and style for the banner.
+The `SfSmartDataGrid` control allows you to fully customize the AssistView banner area by using the [AssistViewBannerTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.DataGridAssistViewSettings.html#Syncfusion_Maui_SmartComponents_DataGridAssistViewSettings_AssistViewBannerTemplate) property in [DataGridAssistViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.DataGridAssistViewSettings.html). This property lets you define a custom layout and style for the banner.
 
 N> To display the content defined in `AssistViewBannerTemplate`, you must set `ShowAssistViewBanner` to true.
 
@@ -462,7 +462,7 @@ SmartGrid.AssistViewSettings.AssistViewBannerTemplate = new DataTemplate(() =>
 
 ### AssistView Editor Template
 
-The `SfSmartDataGrid` control allows you to fully customize the AssistView Editor area by using the  [AssistViewHeaderTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.DataGridAssistViewSettings.html#Syncfusion_Maui_SmartComponents_DataGridAssistViewSettings_AssistViewHeaderTemplate) property in [DataGridAssistViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.DataGridAssistViewSettings.html). This property lets you define a custom layout and style for the editor.
+The `SfSmartDataGrid` control allows you to fully customize the AssistView Editor area by using the [AssistViewEditorTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.DataGridAssistViewSettings.html#Syncfusion_Maui_SmartComponents_DataGridAssistViewSettings_AssistViewEditorTemplate) property in [DataGridAssistViewSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.DataGridAssistViewSettings.html). This property lets you define a custom layout and style for the editor.
 
 {% tabs %}
 {% highlight xaml %}
