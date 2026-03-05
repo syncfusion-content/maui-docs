@@ -289,7 +289,7 @@ The group summary row can be customized by the writing style for [DataGridGroupS
 ![Group summary row styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-group-summary-row-style.png)
 
 ### Styling unbound row cell
-The unbound row cell can be customized by the writing style for [DataGridUnboundRowCell]() TargetType.
+The unbound row cell can be customized by the writing style for [DataGridUnboundRowCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundRowCell.html) TargetType.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -310,7 +310,7 @@ The unbound row cell can be customized by the writing style for [DataGridUnbound
 <img alt="Unbound row cell styling in .NET MAUI DataGrid" src="Images\styling\maui-datagrid-unbound-row-cell-styling.png" width="404"/>
 
 ### Styling unbound row
-The unbound row can be customized by the writing style for [DataGridUnboundRowView]() TargetType.
+The unbound row can be customized by the writing style for [DataGridUnboundRowView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundRowView.html) TargetType.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}

@@ -190,7 +190,7 @@ private void Button_Clicked(object sender, EventArgs e)
 {% endtabs %}
 
 ## UI Filtering
-The .NET MAUI DataGrid (SfDataGrid) provides excel like filtering UI and also advanced filter UI to filter the data easily. UI filtering can be enabled by setting [SfDataGrid.AllowFiltering]() property to true , where you can open filter UI by clicking the Filter icon in column header and filter the records. The filtering UI appears as a popup menu on desktop and as a new page on mobile platforms.
+The .NET MAUI DataGrid (SfDataGrid) provides excel like filtering UI and also advanced filter UI to filter the data easily. UI filtering can be enabled by setting [SfDataGrid.AllowFiltering](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowFiltering) property to true , where you can open filter UI by clicking the Filter icon in column header and filter the records. The filtering UI appears as a popup menu on desktop and as a new page on mobile platforms.
 
 {% tabs %}
 {% highlight XAML %}
@@ -203,7 +203,7 @@ this.dataGrid.AllowFiltering = true;
 {% endhighlight %}
 {% endtabs %}
 
-We can enable/disable filtering for particular column by setting [DataGridColumn.AllowFiltering]() property.
+We can enable/disable filtering for particular column by setting [DataGridColumn.AllowFiltering](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_AllowFiltering) property.
 
 {% tabs %}
 {% highlight XAML %}
@@ -267,13 +267,13 @@ The supported built-in filter types are shown below.
 </table>
 
 #### Case sensitive
-By default, casing is not considered while filtering. Because, filter predicates will be created with [IsCaseSensitive]() as `false`. The case sensitive icon in the advanced filter UI can be used to enable `IsCaseSensitive` as `true` for the column. This option is only available for the `TextFilters` filter view.
+By default, casing is not considered while filtering. Because, filter predicates will be created with [IsCaseSensitive](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.FilterPredicate.html#Syncfusion_Maui_Data_FilterPredicate_IsCaseSensitive) as `false`. The case sensitive icon in the advanced filter UI can be used to enable `IsCaseSensitive` as `true` for the column. This option is only available for the `TextFilters` filter view.
 
 ## Events
 SfDataGrid provide the following events to UI filtering.
 
 ### FilterChanging
-[FilterChanging]() event invokes when the filtering is being applied to the particular column through UI filtering. Using this event we can change the [FilterPredicates](), [FilterType]() and [FilterBehavior]().
+[FilterChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FilterChanging) event invokes when the filtering is being applied to the particular column through UI filtering. Using this event we can change the [FilterPredicates](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridFilterChangingEventArgs.html#Syncfusion_Maui_DataGrid_DataGridFilterChangingEventArgs_FilterPredicates), [FilterType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.FilterPredicate.html#Syncfusion_Maui_Data_FilterPredicate_FilterType) and [FilterBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data.FilterPredicate.html#Syncfusion_Maui_Data_FilterPredicate_FilterBehavior).
 
 {% tabs %}
 {% highlight XAML %}
@@ -291,7 +291,7 @@ private void dataGrid_FilterChanging(object sender, DataGridFilterChangingEventA
 {% endtabs %}
 
 ### FilterChanged
-[FilterChanged]() is event invoked after the filtering is applied to the particular column through UI filtering. You can use this event to get the filter records.
+[FilterChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FilterChanged) is event invoked after the filtering is applied to the particular column through UI filtering. You can use this event to get the filter records.
 
 {% tabs %}
 {% highlight XAML %}
@@ -309,7 +309,7 @@ private void dataGrid1_FilterChanged(object sender, DataGridFilterChangedEventAr
 {% endtabs %}
 
 ### FilterItemsPopulating
-When the filter list items in filter view are being populated, the [FilterItemsPopulating]() event is raised. This event allows you to modify DataGridFilterView properties.
+When the filter list items in filter view are being populated, the [FilterItemsPopulating](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FilterItemsPopulating) event is raised. This event allows you to modify DataGridFilterView properties.
 
 {% tabs %}
 {% highlight XAML %}
@@ -327,7 +327,7 @@ private void dataGrid_FilterItemsPopulating(object sender, Syncfusion.Maui.DataG
 {% endtabs %}
 
 ### FilterItemsPopulated
-[FilterItemsPopulated]() event is raised after filter list items are populated. You can change GridFilterControl ItemSource by using this event.
+[FilterItemsPopulated](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FilterItemsPopulated) event is raised after filter list items are populated. You can change GridFilterControl ItemSource by using this event.
 
 {% tabs %}
 {% highlight XAML %}
@@ -345,7 +345,7 @@ private void dataGrid_FilterItemsPopulated(object sender, DataGridFilterItemsPop
 {% endtabs %}
 
 ## Changing built-in UI views
-You can choose which filter UI view to show in the DataGrid (SfDataGrid) for a column or the whole grid using the [DataGridFilterView.FilterMode]() property.
+You can choose which filter UI view to show in the DataGrid (SfDataGrid) for a column or the whole grid using the [DataGridFilterView.FilterMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridFilterView.html#Syncfusion_Maui_DataGrid_DataGridFilterView_FilterMode) property.
 
 The options are listed below.
 
@@ -354,7 +354,7 @@ The options are listed below.
 3. Both: Shows both filter views.
 
 ### Changing filter UI for DataGrid
-We can change the filter UI for all the columns in DataGrid by changing the `FilterMode` property in DataGridFilterView by setting style and added it to [SfDataGrid.FilterPopupStyle]().
+We can change the filter UI for all the columns in DataGrid by changing the `FilterMode` property in DataGridFilterView by setting style and added it to [SfDataGrid.FilterPopupStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FilterPopupStyle).
 
 {% tabs %}
 {% highlight XAML %}
@@ -375,7 +375,7 @@ We can change the filter UI for all the columns in DataGrid by changing the `Fil
 <img alt="Filter mode as advanced filter" src="Images/filtering/maui-datagrid-filtering-filterMode-advanced.png" width="500"/>
 
 ### Changing filter UI for particular column
-Filter UI view can be changed for a particular column in DataGrid by changing the `FilterMode` property in DataGridFilterView by writing style and added it to [DataGridColumn.FilterPopupStyle]() property.
+Filter UI view can be changed for a particular column in DataGrid by changing the `FilterMode` property in DataGridFilterView by writing style and added it to [DataGridColumn.FilterPopupStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_FilterPopupStyle) property.
 
 {% tabs %}
 {% highlight XAML %}
@@ -394,7 +394,7 @@ Filter UI view can be changed for a particular column in DataGrid by changing th
 <img alt="Filter mode as checkbox filter" src="Images/filtering/maui-datagrid-filtering-filter-mode-checkbox.png" width="500"/>
 
 ## Changing Advanced filter type
-[FilterBehavior]() determines the Advanced filter type loaded in filter view. You can change the advanced filter type using `FilterBehavior`.
+[FilterBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_FilterBehavior) determines the Advanced filter type loaded in filter view. You can change the advanced filter type using `FilterBehavior`.
 
  - StringTyped - TextFilters will be loaded in AdvancedFilterControl.
  - Strongly Typed – Advanced filter type is automatically detected based on underlying data type.
@@ -409,7 +409,7 @@ dataGrid.Columns["OrderID"].FilterBehavior = FilterBehavior.StringTyped;
 {% endtabs %}
 
 ## Increased loading Performance
-Setting `FilterMode` to AdvancedFilter and [CanGenerateUniqueItems]() to `false` will improve [DataGridFilterView's]() loading performance. Instead of Combobox control, Entry is loaded which lets you manually enter text for filtering.
+Setting `FilterMode` to AdvancedFilter and [CanGenerateUniqueItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridFilterView.html#Syncfusion_Maui_DataGrid_DataGridFilterView_CanGenerateUniqueItems) to `false` will improve [DataGridFilterView's](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridFilterView.html) loading performance. Instead of Combobox control, Entry is loaded which lets you manually enter text for filtering.
 
 {% tabs %}
 {% highlight XAML %}
@@ -432,7 +432,7 @@ Setting `FilterMode` to AdvancedFilter and [CanGenerateUniqueItems]() to `false`
 <img alt="loading performance in advanced filter" src="Images/filtering/maui-datagrid-filtering-canGenerateUniqueItems-false.png" width="500"/>
 
 ## Filtering null values
-By default the [AllowBlankFilters]() property is set to true. So, the filter items must have null values. `AllowBlankFilters` must be set to `false` if you want to remove null values from the list of filter items. 
+By default the [AllowBlankFilters](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_AllowBlankFilters) property is set to true. So, the filter items must have null values. `AllowBlankFilters` must be set to `false` if you want to remove null values from the list of filter items. 
 
 When we set `AllowBlankFilters` as `True`, Combobox options have Null and Not Null choices in advanced filter and checkbox items include a Blanks option in checkbox filtering UI.
 
@@ -454,7 +454,7 @@ Advanced Filter with `AllowBlankFilters` as `True`
 <img alt="Blank filtering in advanced filtering" src="Images/filtering/maui-datagrid-null-filtering-advanced.png" width="500"/>
 
 ## Instant Filtering
-By default, filtering is applied to the columns when OK button is clicked in UI filtering. You must set [ImmediateUpdateColumnFilter]() to True if you wish to update the filters instantly whenever the filter items are updated in the filter popup menu.
+By default, filtering is applied to the columns when OK button is clicked in UI filtering. You must set [ImmediateUpdateColumnFilter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_ImmediateUpdateColumnFilter) to True if you wish to update the filters instantly whenever the filter items are updated in the filter popup menu.
 
 In this, Done button is displayed to close the filter popup instead of OK and Cancel buttons.
 
@@ -468,14 +468,16 @@ dataGrid.Columns["OrderID"].ImmediateUpdateColumnFilter = true;
 {% endtabs %}
 
 Checkbox Filter with `ImmediateUpdateColumnFilter` as `True`
+
 <img alt="Instant filtering in checkbox filtering" src="Images/filtering/maui-datagrid-instant-filtering-checkbox.png" width="500"/>
 
 Advanced Filter with `ImmediateUpdateColumnFilter` as `True`
+
 <img alt="Instant filtering in advanced filtering" src="Images/filtering/maui-datagrid-instant-filtering-advanced.png" width="500"/>
 
 ## Customizing the filter popup menu options
 ### Visibility of sort options
-The sort options in the filter popup will be enabled only when we set [SortingMode]() as `Single` or `Multiple`. OtherWise the icons are in disable state. If you want to remove the sort options from the filter popup, set the [SortOptionsVisibility]() to `false` using `FilterPopupStyle`. As the default value of `SortOptionsVisibility` is `true`, the sort options is visible in the popup menu.
+The sort options in the filter popup will be enabled only when we set [SortingMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SortingMode) as `Single` or `Multiple`. OtherWise the icons are in disable state. If you want to remove the sort options from the filter popup, set the [SortOptionsVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridFilterView.html#Syncfusion_Maui_DataGrid_DataGridFilterView_SortOptionsVisibility) to `false` using `FilterPopupStyle`. As the default value of `SortOptionsVisibility` is `true`, the sort options is visible in the popup menu.
 
 {% tabs %}
 {% highlight XAML %}
@@ -495,7 +497,7 @@ The sort options in the filter popup will be enabled only when we set [SortingMo
 <img alt="sort options visibility" src="Images/filtering/maui-datagrid-filtering-sort-options-visibility.png" width="500"/>
 
 ### Customizing the sorting text
-We can customize the text present in the sort options using [AscendingSortString]() and [DescendingSortString]().
+We can customize the text present in the sort options using [AscendingSortString](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridFilterView.html#Syncfusion_Maui_DataGrid_DataGridFilterView_AscendingSortString) and [DescendingSortString](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridFilterView.html#Syncfusion_Maui_DataGrid_DataGridFilterView_DescendingSortString).
 
 {% tabs %}
 {% highlight c# %}
@@ -515,7 +517,7 @@ private void dataGrid_FilterItemsPopulating(object sender, Syncfusion.Maui.DataG
 <img src="Images/filtering/maui-datagrid-filtering-sorting-text.png" width="500" alt="customize the sorting text">
 
 ### Customize the filter popup size
-You can customize the FilterPopup size using [FilterPopupHeight]() and [FilterPopupWidth]() properties by writing style of TargetType as DataGridFilterView.
+You can customize the FilterPopup size using [FilterPopupHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridFilterView.html#Syncfusion_Maui_DataGrid_DataGridFilterView_FilterPopupHeight) and [FilterPopupWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridFilterView.html#Syncfusion_Maui_DataGrid_DataGridFilterView_FilterPopupWidth) properties by writing style of TargetType as DataGridFilterView.
 
 {% tabs %}
 {% highlight XAML %}
@@ -537,7 +539,7 @@ You can customize the FilterPopup size using [FilterPopupHeight]() and [FilterPo
 
 ## Customize the filter icon
 ### Change the filter icon color
-The default color of the filter icon can be customized by setting the [DataGridStyle.FilterIconColor]() property.
+The default color of the filter icon can be customized by setting the [DataGridStyle.FilterIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterIconColor) property.
 
 {% tabs %}
 {% highlight XAML %}
@@ -554,7 +556,7 @@ The default color of the filter icon can be customized by setting the [DataGridS
 <img src="Images/filtering/maui-datagrid-filtering-filterIconColor.png" width="500" alt="Filter icon color">
 
 ### Load filter icon through template
-The `SfDataGrid` uses an icon to open the filter popup in UI filtering. You can personalize the filtering icon by using the [SfDataGrid.FilterIconTemplate] property. This property allow you to define a custom template that appears in the column header instead of default filter icon.
+The `SfDataGrid` uses an icon to open the filter popup in UI filtering. You can personalize the filtering icon by using the [SfDataGrid.FilterIconTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FilterIconTemplate) property. This property allow you to define a custom template that appears in the column header instead of default filter icon.
 
 {% tabs %}
 {% highlight XAML %}
@@ -632,7 +634,9 @@ public class FilterIconTemplateSelector : DataTemplateSelector
 
 ## Customize the appearance of filter popup menu
 
-The `SfDataGrid` provides extensive appearance customization for the filter popup through `DataGridStyle`. You can set these properties on the grid via `SfDataGrid.DefaultStyle` to tailor colors for icons, dividers, buttons, and advanced/checkbox filter visuals.
+The `SfDataGrid` provides extensive appearance customization options for its filter popup through the `DataGridStyle`. These settings allow you to customize visual elements such as icons, dividers, checkboxes, and button backgrounds in both the basic and advanced filter popups.
+
+You can apply these customizations by assigning a DataGridStyle instance to the `SfDataGrid.DefaultStyle` property
 
 {% tabs %}
 {% highlight XAML %}
@@ -685,12 +689,12 @@ Use the following `DataGridStyle` properties to customize the filter popup menu 
 <td>Color for icons displayed in the popup.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupTopDividerColor]()</td>
-<td>Color of the top divider line in the popup.</td>
+<td>[DataGridStyle.FilterPopupDisabledIconColor]()</td>
+<td>Color of the clear-filter icon when it’s disabled in the popup.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.AdvanceFilterDropdownIconColor]()</td>
-<td>Dropdown icon color used in the advanced filter header area.</td>
+<td>[DataGridStyle.FilterPopupTopDividerColor]()</td>
+<td>Color of the top divider line in the popup.</td>
 </tr>
 <tr>
 <td>[DataGridStyle.FilterPopupOkButtonBackgroundColor]()</td>
@@ -714,19 +718,15 @@ Use the following `DataGridStyle` properties to customize the filter popup menu 
 </tr>
 <tr>
 <td>[DataGridStyle.FilterPopupHeaderOkIconColor]()</td>
-<td>Color of the header OK icon in the popup.</td>
+<td>Color of the OK icon in the popup in Mobile view.</td>
 </tr>
 <tr>
 <td>[DataGridStyle.FilterPopupHeaderCancelIconColor]()</td>
-<td>Color of the header Cancel/Close icon in the popup.</td>
+<td>Color of the Cancel/Close icon in the popup in Mobile view.</td>
 </tr>
 <tr>
 <td>[DataGridStyle.FilterPopupPlaceholderColor]()</td>
 <td>Placeholder color for search bar, entry, and combo boxes in the popup.</td>
-</tr>
-<tr>
-<td>[DataGridStyle.FilterPopupDisabledIconColor]()</td>
-<td>Color of the clear-filter icon when it’s disabled in the popup.</td>
 </tr>
 <tr>
 <td>[DataGridStyle.FilterPopupCheckboxCheckedColor]()</td>
@@ -769,7 +769,11 @@ Use the following `DataGridStyle` properties to customize the filter popup menu 
 <td>Calendar icon color for date pickers in Advanced date filters.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.AdvanceFilterTypeDropdownIconColor]()</td>
+<td>`DataGridStyle.AdvanceFilterDropdownIconColor`</td>
+<td>Dropdown icon color used in the advanced filter header area.</td>
+</tr>
+<tr>
+<td>`DataGridStyle.AdvanceFilterTypeDropdownIconColor`</td>
 <td>Dropdown icon color of the filter type combo box in Advanced filter.</td>
 </tr>
 <tr>
@@ -785,4 +789,5 @@ Use the following `DataGridStyle` properties to customize the filter popup menu 
 <td>Border color of the filter value combo box (Advanced filter).</td>
 </tr>
 </table>
+
 N> The `FilterPopupHeaderCancelIconColor` and `FilterPopupHeaderOkIconColor` properties are supported only on mobile platforms.
