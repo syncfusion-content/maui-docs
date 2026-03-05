@@ -769,11 +769,11 @@ Use the following `DataGridStyle` properties to customize the filter popup menu 
 <td>Calendar icon color for date pickers in Advanced date filters.</td>
 </tr>
 <tr>
-<td>`DataGridStyle.AdvanceFilterDropdownIconColor`</td>
+<td>[DataGridStyle.AdvanceFilterDropdownIconColor]()</td>
 <td>Dropdown icon color used in the advanced filter header area.</td>
 </tr>
 <tr>
-<td>`DataGridStyle.AdvanceFilterTypeDropdownIconColor`</td>
+<td>[DataGridStyle.AdvanceFilterTypeDropdownIconColor]()</td>
 <td>Dropdown icon color of the filter type combo box in Advanced filter.</td>
 </tr>
 <tr>
