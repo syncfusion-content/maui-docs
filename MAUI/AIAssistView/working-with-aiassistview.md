@@ -271,7 +271,8 @@ N> **Interaction**: On desktop (Windows, macOS), hover over a request to reveal 
 
 ![Edit Option in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-editoption.gif)
 
-## EditorView template
+## Editor
+### EditorView template
 
 The `SfAIAssistView` control allows you to fully customize the editor's appearance by using the [EditorViewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_EditorViewTemplate) property. This property lets you define a custom layout and style for the editor.
 
@@ -335,6 +336,32 @@ public partial class MainPage : ContentPage
 
 ![EditorView Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-editorviewtemplate.png)
 
+### Editor customization
+The `SfAIAssistView` allows users to customize the editor’s visual surface by accessing the [RequestEditor]() only in the code behind C#.
+
+{% tabs %}
+{% highlight c# hl_lines="10" %}
+
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+            InitializeComponent();
+            sfAIAssistView = new SfAIAssistView();
+            sfAIAssistView.RequestEditor.PlaceholderColor = Colors.Red;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+<img src="Images/working-with-aiassistview/maui-aiassitview-Editor-customization.png" width="444"/>
+
+### Customizing editor using RequestEditorView
+The `SfAIAssistView` allows you to access the editor by using [RequestEditorView](), which helps you to customize the editor’s visual elements and overall appearance wherever it is used.
+ 
 ## Action buttons in the editor
 
 The `SfAIAssistView` can display a quick action icon inside the editor. To enable the action button, set the [ShowActionButtons](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ShowActionButtons) property to `true`.
