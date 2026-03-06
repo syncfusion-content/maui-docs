@@ -90,6 +90,42 @@ tabView.HeaderHorizontalTextAlignment = TextAlignment.Center; {% endhighlight %}
 
 ![Tab header text alignment](images/HorizontalTextAlignmentCenter.png) 
 
+## Customize the HeaderItemSpacing
+
+The spacing between the tab items can be customized by setting the [HeaderItemSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarHeight) property. The default spacing is 36.
+
+N> `HeaderItemSpacing` is effective only when the `TabWidthMode` is set as `SizeToContent`.
+
+{% tabs %}
+
+{% highlight xaml %}
+    <tabView:SfTabView HeaderItemSpacing="100" TabWidthMode="SizeToContent">
+{% endhighlight %}
+
+{% highlight C# %}
+     tabView.HeaderItemSpacing = 100;
+     tabView.TabWidthMode = TabWidthMode.SizeToContent;
+{% endhighlight %}
+
+{% endtabs %}
+
+![HeaderItemSpacing](images/HeaderItemSpacing.png) 
+
+## AnimationEasing
+
+The animation of the tab item content and selection indicator can be customized by setting the [AnimationEasing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarHeight) property. The default value is `Easing.Linear`.
+
+{% tabs %}
+
+{% highlight xaml %}
+    <tabView:SfTabView AnimationEasing="SpringOut">
+{% endhighlight %}
+
+{% highlight C# %}
+     tabView.AnimationEasing = Easing.SpringOut;
+{% endhighlight %}
+
+{% endtabs %}
 
 ## TabBarPlacement options
 
