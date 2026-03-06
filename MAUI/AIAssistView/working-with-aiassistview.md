@@ -359,7 +359,7 @@ public partial class MainPage : ContentPage
 
 <img src="Images/working-with-aiassistview/maui-aiassitview-Editor-customization.png" width="444"/>
 
-### Customizing editor using RequestEditorView
+### Accessing the editor in AssistView
 The `SfAIAssistView` allows you to access the editor by using [RequestEditorView](), which helps you to customize the editor’s visual elements and overall appearance wherever it is used.
  
 ## Action buttons in the editor
