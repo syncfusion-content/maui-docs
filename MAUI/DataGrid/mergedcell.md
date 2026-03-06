@@ -315,7 +315,7 @@ N> Vertical cell merging is not supported for a parent row that has an expanded 
 
 ### Add covered range
 
-You can add a range to `SfDataGrid.CoveredCells`at runtime using the `AddRange` extension method of `SfDataGridHelpers`. After adding the range, call `GetVisualContainer().InvalidateMeasure()` to refresh the layout and reflect the merged cell changes in the UI.
+You can add a range to `SfDataGrid.CoveredCells` at runtime using the `AddRange` extension method of `SfDataGridHelpers`. After adding the range, call `GetVisualContainer().InvalidateMeasure()` to refresh the layout and reflect the merged cell changes in the UI.
 
 {% tabs %}
 {% highlight c# %}
