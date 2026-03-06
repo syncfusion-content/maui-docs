@@ -238,29 +238,46 @@ N> When the [SortingGestureType](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 <img alt="Column selection support in .NET MAUI DataGrid" src="Images\selection\maui_datagrid_column_selection.gif" width="404"/>
 
-## Mouse selection behavior
+## Selection behavior
 
 You can control selection behavior for mouse actions using the `AllowSelectionOnPress` and `AllowSelectionOnSecondaryTap` properties on `SfDataGrid`.
 
-- `AllowSelectionOnPress`: When set to `True`, rows and cells are selected on mouse-down (press) instead of mouse-up. This enables immediate selection feedback when the user presses the primary mouse button.
-- `AllowSelectionOnSecondaryTap`: When set to `False`, selection is suppressed for secondary (right) mouse button taps, allowing right-click behaviors to be handled without changing selection.
+### Enable selection on mouse-down
+
+Enable selecting rows or cells immediately when the primary mouse button is pressed by setting `AllowSelectionOnPress` to `True`. This gives immediate selection on mouse-down instead of waiting for mouse-up.
 
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                           ItemsSource="{Binding OrderInfoCollection}"
-                           NavigationMode="Cell"
-                           SelectionUnit="Cell"
-                           SelectionMode="Multiple">
-</syncfusion:SfDataGrid>
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       SelectionMode="Single"
+                       SelectionUnit="Row"
+                       NavigationMode="Cell"
+                       AllowSelectionOnPress="True" />
 {% endhighlight %}
 
 {% highlight c# %}
-this.dataGrid.AllowSelectionOnPress = true;
-this.dataGrid.AllowSelectionOnSecondaryTap = false;
+dataGrid.AllowSelectionOnPress = true;
 {% endhighlight %}
 {% endtabs %}
 
+### Disable selection on right-click
+
+To disable selection on right-click, set `AllowSelectionOnSecondaryTap` to `False`. This allows you to interact on right-press without changing the current selection.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       SelectionMode="Multiple"
+                       SelectionUnit="Row"
+                       AllowSelectionOnSecondaryTap="False" />
+{% endhighlight %}
+
+{% highlight c# %}
+dataGrid.AllowSelectionOnSecondaryTap = false;
+{% endhighlight %}
+{% endtabs %}
 
 ## Keyboard behavior
 <table>
