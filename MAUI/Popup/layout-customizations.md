@@ -691,7 +691,7 @@ public partial class MainPage : ContentPage
 
 #### Show SfPopup using native embedding in Android?
 
-Enables showing `SfPopup` inside apps that embed MAUI content natively. Create the `Sfpopup` by passing the current `Activity` and `IMauiContext`, convert the MAUI layout using ToPlatform, and set it as the Activity’s content.
+Enables showing `SfPopup` inside apps that embed MAUI content natively. Create the `SfPopup` by passing the current `Activity` and `IMauiContext`, convert the MAUI layout using ToPlatform, and set it as the Activity’s content.
 
 {% tabs %}
 {% highlight c# hl_lines="18 19 20 21 22 37 38" %}
