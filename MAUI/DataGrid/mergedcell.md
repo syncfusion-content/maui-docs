@@ -31,7 +31,7 @@ N> `SelectionUnit` and `NavigationMode` do not need to be set to `Cell` when `Se
 {% highlight c# %}
 this.dataGrid.QueryCoveredRange += dataGrid_QueryCoveredRange;
 
-private void dataGrid_QueryCoveredRange(object? sender, DataGridQueryCoveredRangeEventArgs e)
+private void dataGrid_QueryCoveredRange(object sender, DataGridQueryCoveredRangeEventArgs e)
 {
 }
 {% endhighlight %}
@@ -68,7 +68,7 @@ private void dataGrid_QueryCoveredRange(object sender, DataGridQueryCoveredRange
 {% endhighlight %}
 {% endtabs %}
 
-![Horizontally merged cells in .NET MAUI DataGrid.](Images\mergedcell\net-maui-datagrid-horizontal-merged-cells.png)
+<img alt="Horizontally merged cells in .NET MAUI DataGrid" src="Images\mergedcell\maui-datagrid-horizontal-merged-cells.png" width="404"/>
 
 ### Merging cells vertically by fixed range
 
@@ -97,7 +97,7 @@ private void dataGrid_QueryCoveredRange(object sender, DataGridQueryCoveredRange
 {% endhighlight %}
 {% endtabs %}
 
-![Vertically merged cells in .NET MAUI DataGrid.](Images\mergedcell\net-maui-datagrid-vertical-merged-cells.png)
+<img alt="Vertically merged cells in .NET MAUI DataGrid" src="Images\mergedcell\maui-datagrid-vertical-merged-cells.png" width="404"/>
 
 ### Merging a range of cells
 
@@ -122,7 +122,7 @@ private void dataGrid_QueryCoveredRange(object sender, DataGridQueryCoveredRange
 {% endhighlight %}
 {% endtabs %}
 
-![Merged range of cells in .NET MAUI DataGrid.](Images\mergedcell\net-maui-datagrid-merge-range-of-cells.png)
+<img alt="Merged range of cells in .NET MAUI DataGrid" src="Images\mergedcell\maui-datagrid-merge-range-of-cells.png" width="404"/>
 
 ## Merging cells based on content
 
@@ -256,20 +256,20 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Merged cells based on content in .NET MAUI DataGrid.](Images\mergedcell\net-maui-datagrid-merge-cells-based-on-content.png)
+<img alt="Merged cells based on content in .NET MAUI DataGrid" src="Images\mergedcell\maui-datagrid-merge-cells-based-on-content.png" width="404"/>
 
 ## Merge cells in Master-Details view
 
-The master-details view allows you to merge the range of cells using the `QueryCoveredRange` event of the nested [DetailsViewDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DetailsViewDataGrid.html).
+The master-details view allows you to merge the range of cells using the `QueryCoveredRange` event of the nested `DetailsViewDataGrid`.
 
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding Employees}"
+                       ItemsSource="{Binding OrderInfoCollection}"
                        GridLinesVisibility="Both"
                        HeaderGridLinesVisibility="Both">
     <syncfusion:SfDataGrid.DetailsViewDefinition>
-        <syncfusion:DataGridViewDefinition RelationalColumn="Sales">
+        <syncfusion:DataGridViewDefinition RelationalColumn="Orders">
             <syncfusion:DataGridViewDefinition.DataGrid>
                 <syncfusion:SfDataGrid x:Name="FirstLevelNestedGrid"
                                        GridLinesVisibility="Both"
@@ -283,62 +283,31 @@ The master-details view allows you to merge the range of cells using the `QueryC
 {% highlight c# %}
 private void FirstLevelNestedGrid_QueryCoveredRange(object sender, DataGridQueryCoveredRangeEventArgs e)
 {
-    if (e.RowColumnIndex.RowIndex == 1)
+    if (e.RowColumnIndex.ColumnIndex == 3)
     {
-        if (e.RowColumnIndex.ColumnIndex >= 1 && e.RowColumnIndex.ColumnIndex <= 2)
-        {
-            e.Range = new CoveredCellInfo(1, 2, 1, 1);
-            e.Handled = true;
-        }
+        e.Range = new CoveredCellInfo(3, 3, 2, 3);
+        e.Handled = true;
     }
 }
 {% endhighlight %}
 {% endtabs %}
 
-![Merged cells in Master-Details view in .NET MAUI DataGrid.](Images\mergedcell\net-maui-datagrid-merge-cells-master-details-view.png)
+<img alt="Merged cells in Master-Details view in .NET MAUI DataGrid" src="Images\mergedcell\maui-datagrid-merge-cells-master-details-view.png" width="404"/>
 
 ### Merging range of parent cells
 
-You cannot merge cells vertically for a parent row that has a details view expanded beneath it. Before defining the merged range inside the `QueryCoveredRange` event handler of the parent grid, use the [CanMergeNextRows](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridMergedCellHelper.html#Syncfusion_Maui_DataGrid_DataGridMergedCellHelper_CanMergeNextRows_Syncfusion_Maui_DataGrid_SfDataGrid_System_Object_) extension method of [DataGridMergedCellHelper](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridMergedCellHelper.html) to check whether the row has a details view, and skip the merge accordingly.
+You cannot merge cells vertically for a parent row that has a details view expanded beneath it. Before defining the merged range inside the `QueryCoveredRange` event handler of the parent grid, use the `CanMergeNextRows` extension method of `SfDataGridHelpers` to check whether the row has a details view, and skip the merge accordingly.
 
 {% tabs %}
-{% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding Employees}"
-                       GridLinesVisibility="Both"
-                       HeaderGridLinesVisibility="Both">
-    <syncfusion:SfDataGrid.DetailsViewDefinition>
-        <syncfusion:DataGridViewDefinition RelationalColumn="Sales">
-            <syncfusion:DataGridViewDefinition.DataGrid>
-                <syncfusion:SfDataGrid x:Name="FirstLevelNestedGrid"
-                                       GridLinesVisibility="Both"
-                                       HeaderGridLinesVisibility="Both"
-                                       QueryCoveredRange="FirstLevelNestedGrid_QueryCoveredRange" />
-            </syncfusion:DataGridViewDefinition.DataGrid>
-        </syncfusion:DataGridViewDefinition>
-    </syncfusion:SfDataGrid.DetailsViewDefinition>
-</syncfusion:SfDataGrid>
-{% endhighlight %}
 {% highlight c# %}
 private void dataGrid_QueryCoveredRange(object sender, DataGridQueryCoveredRangeEventArgs e)
 {
-    // Use CanMergeNextRows from DataGridMergedCellHelper to check if the row has a details view
-    if (!dataGrid.CanMergeNextRows(e.RowData))
+    // Use CanMergeNextRows from SfDataGridHelpers to check if the row has a details view
+    if (!dataGrid.CanMergeNextRows(e.Record))
         return;
-
-    if (e.RowColumnIndex.ColumnIndex == 1)
-    {
-        if (e.RowColumnIndex.RowIndex >= 1 && e.RowColumnIndex.RowIndex <= 3)
-        {
-            e.Range = new CoveredCellInfo(1, 1, 1, 3);
-            e.Handled = true;
-        }
-    }
 }
 {% endhighlight %}
 {% endtabs %}
-
-![Merged range of parent cells in .NET MAUI DataGrid.](Images\mergedcell\net-maui-datagrid-merge-range-of-parent-cells.png)
 
 N> Vertical cell merging is not supported for a parent row that has an expanded details view.
 
@@ -346,7 +315,7 @@ N> Vertical cell merging is not supported for a parent row that has an expanded 
 
 ### Add covered range
 
-You can add a range to `SfDataGrid.CoveredCells`at runtime using the `AddRange` extension method of `DataGridMergedCellHelper`. After adding the range, call `GetVisualContainer().InvalidateMeasure()` to refresh the layout and reflect the merged cell changes in the UI.
+You can add a range to `SfDataGrid.CoveredCells`at runtime using the `AddRange` extension method of `SfDataGridHelpers`. After adding the range, call `GetVisualContainer().InvalidateMeasure()` to refresh the layout and reflect the merged cell changes in the UI.
 
 {% tabs %}
 {% highlight c# %}
@@ -360,7 +329,7 @@ private void AddRange_Clicked(object sender, EventArgs e)
 
 ### Remove covered range
 
-You can remove a range from `SfDataGrid.CoveredCells` at runtime using the `RemoveRange` extension method of `DataGridMergedCellHelper`. After removing the range, call `GetVisualContainer().InvalidateMeasure()` to refresh the layout and reflect the changes in the UI.
+You can remove a range from `SfDataGrid.CoveredCells` at runtime using the `RemoveRange` extension method of `SfDataGridHelpers`. After removing the range, call `GetVisualContainer().InvalidateMeasure()` to refresh the layout and reflect the changes in the UI.
 
 {% tabs %}
 {% highlight c# %}
