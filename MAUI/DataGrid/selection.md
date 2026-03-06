@@ -238,47 +238,6 @@ N> When the [SortingGestureType](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 <img alt="Column selection support in .NET MAUI DataGrid" src="Images\selection\maui_datagrid_column_selection.gif" width="404"/>
 
-## Selection behavior
-
-You can control selection behavior for mouse actions using the `AllowSelectionOnPress` and `AllowSelectionOnSecondaryTap` properties on `SfDataGrid`.
-
-### Enable selection on mouse-down
-
-Enable selecting rows or cells immediately when the primary mouse button is pressed by setting `AllowSelectionOnPress` to `True`. This gives immediate selection on mouse-down instead of waiting for mouse-up.
-
-{% tabs %}
-{% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}"
-                       SelectionMode="Single"
-                       SelectionUnit="Row"
-                       NavigationMode="Cell"
-                       AllowSelectionOnPress="True" />
-{% endhighlight %}
-
-{% highlight c# %}
-dataGrid.AllowSelectionOnPress = true;
-{% endhighlight %}
-{% endtabs %}
-
-### Disable selection on right-click
-
-To disable selection on right-click, set `AllowSelectionOnSecondaryTap` to `False`. This allows you to interact on right-press without changing the current selection.
-
-{% tabs %}
-{% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}"
-                       SelectionMode="Multiple"
-                       SelectionUnit="Row"
-                       AllowSelectionOnSecondaryTap="False" />
-{% endhighlight %}
-
-{% highlight c# %}
-dataGrid.AllowSelectionOnSecondaryTap = false;
-{% endhighlight %}
-{% endtabs %}
-
 ## Keyboard behavior
 <table>
 <tr>
