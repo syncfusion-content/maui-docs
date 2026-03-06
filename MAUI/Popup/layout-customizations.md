@@ -739,6 +739,8 @@ namespace AndroidApp
 {% endhighlight %}
 {% endtabs %}
 
+![.NET MAUI Popup with android native embedding](Images/layout-customizations/maui-popup-using-nativeembedding-android.png)
+
 #### Show SfPopup using native embedding in iOS?
 
 Allows showing `SfPopup` in an iOS app that embeds MAUI content natively. Create the popup using the native `UIWindow` and `MauiContext` in the `SceneDelegate`, convert the layout to a `UIView` using ToPlatform, and host it through the window’s `root controller`.
@@ -809,6 +811,8 @@ namespace iOSApp
 }
 {% endhighlight %}
 {% endtabs %}
+
+![.NET MAUI Popup with android native embedding](Images/layout-customizations/maui-popup-using-nativeembedding-ios.png)
 
 ### Show listView as a popup
 
