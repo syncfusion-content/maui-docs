@@ -681,6 +681,8 @@ public partial class MainPage : ContentPage
 
 ![Item template in .NET MAUI Tab View.](images/net-maui-tab-view-item-template.png)
 
+N> You can download the demo from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-TabView/tree/master/TabViewItemTemplateSample)
+
 ## Data template selector
 
 By extending the `DataTemplateSelector` to `HeaderItemTemplate` of the `SfTabView`, multiple custom user interfaces can be achieved to display the tab header data items based on certain conditions.
@@ -760,7 +762,7 @@ public class TabItemViewModel : INotifyPropertyChanged
 
 ![DataTemplateSelector in .NET MAUI Tab View.](images/DataTemplateSelector.png)
 
-N> You can download the demo from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-TabView/tree/master/TabViewItemTemplateSample)
+N> The star image shown in the output should be included externally. 
 
 N> You can refer to our [.NET MAUI Tab View](https://www.syncfusion.com/maui-controls/maui-tab-view) feature tour page for its groundbreaking feature representations. You can also explore our  [.NET MAUI Tab View example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/TabView) that shows you how to render the .NET MAUI Tab View.
 
