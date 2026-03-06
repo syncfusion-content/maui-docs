@@ -1129,3 +1129,27 @@ Similar to the parent DataGrid, you can also customize the cells of the DetailsV
     }
 ```
 <img alt="Customizing DetailsViewDataGrid while exporting to Excel in DataGrid" src="Images/export-to-excel/maui-datagrid-customize-detailsview-excel.png" Width="404"/>
+
+## Exporting merged cells
+
+The `SfDataGrid` supports exporting merged cells when exporting to an Excel worksheet.
+To enable merged‑cell exporting, set the [ExportMergedCells]() property to true in the `DataGridExcelExportingOption` before calling `ExportToExcel`.
+
+{% tabs %}
+{% highlight c# %}
+DataGridExcelExportingController excelExport = new DataGridExcelExportingController();
+DataGridExcelExportingOption option = new DataGridExcelExportingOption();
+option.ExportMergedCells = true;
+var excelEngine = excelExport.ExportToExcel(this.dataGrid, option);
+var workbook = excelEngine.Excel.Workbooks[0];
+MemoryStream stream = new MemoryStream();
+workbook.SaveAs(stream);
+workbook.Close();
+excelEngine.Dispose();
+string OutputFilename = "ExportFeature.xlsx";
+SaveService saveService = new();
+saveService.SaveAndView(OutputFilename, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", stream);
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="MergedCells Exporting" src="Images/export-to-excel/maui-datagrid-MergedCell.png" Width="404"/>
