@@ -177,7 +177,11 @@ namespace DataGridSample
 
 N> These properties do not have any effect when the datagrid has no scrollable content in its respective direction. In such cases, the scroll bar will not be displayed.
 
-## Vertical Over Scroll Mode
+
+## Over Scroll Mode
+The `SfDataGrid` supports over-scroll behavior that controls the bounce effect when the user scrolls past the edges of its content. Use the `VerticalOverScrollMode` and `HorizontalOverScrollMode` properties to enable or disable bounce effects independently for each axis.
+
+### Vertical Over Scroll Mode
 
 The [SfDataGrid.VerticalOverScrollMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_VerticalOverScrollMode) property customizes the vertical scrolling behavior in the data grid by controlling the bouncing effect when the user scrolls beyond the grid's boundaries. This property defines whether users experience a smooth, elastic pull effect or a strict stop when reaching the start or end of the scrollable content.
 
@@ -202,7 +206,7 @@ dataGrid.VerticalOverScrollMode = DataGridVerticalOverScrollMode.Bounce;
 
  <img alt="Vertical-OverScroll-Mode" src="Images\scrolling\maui-datagrid-verticaloverscrollMode.gif" width="404" height="396"/>
 
-## Horizontal Over Scroll Mode
+### Horizontal Over Scroll Mode
 
 The [SfDataGrid.HorizontalOverScrollMode]() property customizes the horizontal scrolling behavior of the data grid by controlling the bounce effect when users scroll past the left or right edges of the grid. This setting determines whether the grid provides an elastic over‑scroll experience or stops strictly at the content boundary.
 
