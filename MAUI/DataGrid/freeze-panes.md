@@ -15,9 +15,9 @@ In the [Syncfusion® .NET MAUI DataGrid](https://help.syncfusion.com/cr/maui/Syn
 | Property name | Description |
 |---------------|-------------|
 | [FrozenRowCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FrozenRowCount) | Sets the number of rows to freeze at the top of the DataGrid |
-| `FooterFrozenRowCount` | Sets the number of rows to freeze at the bottom (footer) of the DataGrid |
+| [FooterFrozenRowCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FooterFrozenRowCount) | Sets the number of rows to freeze at the bottom (footer) of the DataGrid |
 | [FrozenColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FrozenColumnCount) | Sets the number of columns to freeze at the left side of the DataGrid |
-| `FooterFrozenColumnCount` | Sets the number of columns to freeze at the right side of the DataGrid |
+| [FooterFrozenColumnCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_FooterFrozenColumnCount) | Sets the number of columns to freeze at the right side of the DataGrid |
 
 To get start quickly with freeze rows and columns in .NET MAUI DataGrid, you can check on this video:
 
