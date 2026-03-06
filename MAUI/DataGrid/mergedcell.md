@@ -345,7 +345,7 @@ private void RemoveRange_Clicked(object sender, EventArgs e)
 
 You can trigger the `QueryCoveredRange` event for a particular cell by removing its range from `SfDataGrid.CoveredCells` and calling `GetVisualContainer().InvalidateMeasure()` to invalidate the layout. You can retrieve the range for a particular cell in `CoveredCells` by passing the row and column index to the `CoveredCells.GetCoveredCellInfo` method.
 
-For example, if you want to merge adjacent cells with the same content while editing, you can remove the existing range and invalidate the container in the [CurrentCellEndEdit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CurrentCellEndEdit) event so that the `QueryCoveredRange` event is retriggered to recalculate the merged ranges.
+For example, if you want to merge adjacent cells with the same content while editing, you can remove the existing range and invalidate the container in the [CurrentCellEndEdit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CurrentCellEndEdit) event so that the `QueryCoveredRange` event is triggered again to recalculate the merged ranges.
 
 {% tabs %}
 {% highlight c# %}
