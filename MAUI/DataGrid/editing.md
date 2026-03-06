@@ -317,8 +317,8 @@ The SfDataGrid invokes the following events during editing:
 The [SfDataGrid.CurrentCellBeginEdit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CurrentCellBeginEdit) event occurs when the CurrentCell enters into edit mode. The [DataGridCurrentCellBeginEditEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCurrentCellBeginEditEventArgs.html) has the following members that provides information for `SfDataGrid.CurrentCellBeginEdit` event:
 
  * [Cancel](): When this member set to `true`, the event is canceled and the CurrentCell does not enter into the edit mode.
- * [RowColumnIndex](): Gets the current row and column index of the DataGrid.
- * [Column](): Gets the Grid Column of the SfDataGrid.
+ * [RowColumnIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCurrentCellBeginEditEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCurrentCellBeginEditEventArgs_RowColumnIndex): Gets the current row and column index of the DataGrid.
+ * [Column](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCurrentCellBeginEditEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCurrentCellBeginEditEventArgs_Column): Gets the Grid Column of the SfDataGrid.
 
 To hook the `SfDataGrid.CurrentCellBeginEdit` event, follow the code example:
 
@@ -339,7 +339,7 @@ private void DataGrid_CurrentCellBeginEdit(object sender, DataGridCurrentCellBeg
 
 The [CurrentCellEndEdit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CurrentCellEndEdit) event occurs when the CurrentCell exits the edit mode. The [DataGridCurrentCellEndEditEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCurrentCellEndEditEventArgs.html) has following members that provides information for `SfDataGrid.CurrentCellEndEdit` event:
 
- * [RowColumnIndex](): Gets the current row and column index of the DataGrid.
+ * [RowColumnIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCurrentCellEndEditEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCurrentCellEndEditEventArgs_RowColumnIndex): Gets the current row and column index of the DataGrid.
  * [Cancel](): When this member set to `true`, the event is canceled and the edited value is not committed in the underlying collection.
 
 To hook the `SfDataGrid.CurrentCellEndEdit` event, follow the code example:

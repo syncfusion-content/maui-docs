@@ -201,3 +201,29 @@ dataGrid.VerticalOverScrollMode = DataGridVerticalOverScrollMode.Bounce;
 {% endtabs %}
 
  <img alt="Vertical-OverScroll-Mode" src="Images\scrolling\maui-datagrid-verticaloverscrollMode.gif" width="404" height="396"/>
+
+## Identifying scroll state changes
+
+The `SfDataGrid` raises the [ScrollStateChanged]() event whenever its scrolling state is changed.
+
+The following current states are indicated by the [ScrollState]() property in the event argument.
+
+- Dragging: Indicates that DataGrid is being dragged in the view right now.
+- Fling: Indicates that fling action is performed on the DataGrid.
+- Idle: Indicates that DataGrid is not currently scrolling.
+- Programmatic: Indicates that the [ScrollToColumnIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ScrollToColumnIndex_System_Int32_Microsoft_Maui_Controls_ScrollToPosition_System_Boolean_) or [ScrollToRowIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ScrollToRowIndex_System_Int32_Microsoft_Maui_Controls_ScrollToPosition_System_Boolean_) methods are used for scrolling.
+
+{% tabs %}
+{% highlight C# %}  
+dataGrid.ScrollStateChanged += DataGrid_ScrollStateChanged;
+
+private void DataGrid_ScrollStateChanged(object? sender, DataGridScrollStateChangedEventArgs e)
+{
+    if (e.ScrollState == DataGridScrollState.Idle)
+    {
+        DisplayAlert("ScrollState", "Scrolling has stopped", "OK");
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
