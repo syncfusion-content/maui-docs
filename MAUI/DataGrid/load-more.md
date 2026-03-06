@@ -77,8 +77,6 @@ private async void ExecuteLoadMoreCommand()
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="DataGrid-LoadMoreOption-auto" src="Images\loadmore\maui-datagrid-loadmoreoption-auto.gif" width="404"/>
-
 ### Load more manually
 
 Set the `SfDataGrid.LoadMoreOption` property as `Manual` to load more items manually using the `SfDataGrid.LoadMoreCommand` and `SfDataGrid.LoadMoreCommandParameter` when tapping the load more button at end of the list.
@@ -104,8 +102,6 @@ private async void ExecuteLoadMoreCommand()
     viewModel.LoadMore();
     this.dataGrid.IsBusy = false;
 }
-
-<img alt="DataGrid-LoadMoreOption-auto" src="Images\loadmore\maui-datagrid-loadmoreoption-manual.gif" width="404"/>
 
 {% endhighlight %}
 {% endtabs %}
