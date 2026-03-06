@@ -93,7 +93,7 @@ tabView.HeaderHorizontalTextAlignment = TextAlignment.Center; {% endhighlight %}
 
 ## TabBarPlacement options
 
-The .NET MAUI Tab View provides two options for determining how the tab bar aligns relative to the tab content. The options are top and bottom. This can be achieved using the [TabBarPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarPlacement) property.
+The .NET MAUI Tab View provides four options for determining how the tab bar aligns relative to the tab content. The options are top, bottom, left and right. This can be achieved using the [TabBarPlacement](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarPlacement) property.
 
 ### Top
 
@@ -102,11 +102,68 @@ The tab bar will be placed above the content region of the Tab View control.
 {% tabs %}
 
 {% highlight xaml %}
-    <tabView:SfTabView TabBarPlacement="Top">
+    <tabView:SfTabView TabBarPlacement="Top" 
+                       TabBarHeight="60"
+                       IndicatorWidthMode="Stretch">
+
+    <tabView:SfTabView.Items>
+        <tabView:SfTabItem Header="ITEM 1">
+            <tabView:SfTabItem.Content>
+                    <Label Text="Tab item content" 
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Center" />
+            </tabView:SfTabItem.Content>
+        </tabView:SfTabItem>
+
+        <tabView:SfTabItem Header="ITEM 2">
+            <tabView:SfTabItem.Content>
+                        <Label Text="Tab item content" 
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" />
+            </tabView:SfTabItem.Content>
+        </tabView:SfTabItem>
+
+        <tabView:SfTabItem Header="ITEM 3">
+            <tabView:SfTabItem.Content>
+                        <Label Text="Tab item content" 
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" />
+            </tabView:SfTabItem.Content>
+        </tabView:SfTabItem>
+    </tabView:SfTabView.Items>
+</tabView:SfTabView>
 {% endhighlight %}
 
 {% highlight C# %}
-     tabView.TabBarPlacement = TabBarPlacement.Top;
+    var tabView = new SfTabView();
+    tabView.TabBarPlacement = TabBarPlacement.Top;
+    tabView.TabBarHeight = 60;
+    tabView.IndicatorWidthMode = IndicatorWidthMode.Stretch;
+    var item1 = new SfTabItem { Header = "ITEM 1" };
+    item1.Content = new Label
+    {
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item1);
+    var item2 = new SfTabItem { Header = "ITEM 2" };
+    item2.Content = new Label
+    {
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item2);
+    var item3 = new SfTabItem { Header = "ITEM 2" };
+    item3.Content = new Label
+    {
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item3);
+    this.Content = tabView;
 {% endhighlight %}
 
 {% endtabs %}
@@ -124,12 +181,190 @@ The tab bar will be placed below the content region of the Tab View control.
 {% endhighlight %}
 
 {% highlight C# %}
-     tabView.TabBarPlacement = TabBarPlacement.Bottom;
+    var tabView = new SfTabView();
+    tabView.TabBarPlacement = TabBarPlacement.Bottom;
+    tabView.TabBarHeight = 60;
+    tabView.IndicatorWidthMode = IndicatorWidthMode.Stretch;
+    var item1 = new SfTabItem { Header = "ITEM 1" };
+    item1.Content = new Label
+    {
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item1);
+    var item2 = new SfTabItem { Header = "ITEM 2" };
+    item2.Content = new Label
+    {
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item2);
+    var item3 = new SfTabItem { Header = "ITEM 2" };
+    item3.Content = new Label
+    {
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item3);
+    this.Content = tabView;
 {% endhighlight %}
 
 {% endtabs %}
 
 ![TabBarPlacement bottom](images/Tab-bar-Placement-Bottom.png) 
+
+### Left
+
+The tab bar will be placed left to the content region of the Tab View control.
+
+{% tabs %}
+
+{% highlight xaml %}
+  <tabView:SfTabView TabBarPlacement="Left" 
+                     TabBarWidth="60"
+                     IndicatorWidthMode="Stretch">
+
+    <tabView:SfTabView.Items>
+        <tabView:SfTabItem Header="ITEM 1">
+            <tabView:SfTabItem.Content>
+                    <Label Text="Tab item content" 
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Center" />
+            </tabView:SfTabItem.Content>
+        </tabView:SfTabItem>
+
+        <tabView:SfTabItem Header="ITEM 2">
+            <tabView:SfTabItem.Content>
+                        <Label Text="Tab item content" 
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" />
+            </tabView:SfTabItem.Content>
+        </tabView:SfTabItem>
+
+        <tabView:SfTabItem Header="ITEM 3">
+            <tabView:SfTabItem.Content>
+                        <Label Text="Tab item content" 
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" />
+            </tabView:SfTabItem.Content>
+        </tabView:SfTabItem>
+    </tabView:SfTabView.Items>
+</tabView:SfTabView>
+{% endhighlight %}
+
+{% highlight C# %}
+    var tabView = new SfTabView();
+    tabView.TabBarPlacement = TabBarPlacement.Left;
+    tabView.TabBarWidth = 60;
+    tabView.IndicatorWidthMode = IndicatorWidthMode.Stretch;
+    var item1 = new SfTabItem { Header = "ITEM 1" };
+    item1.Content = new Label
+    {
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item1);
+    var item2 = new SfTabItem { Header = "ITEM 2" };
+    item2.Content = new Label
+    {
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item2);
+    var item3 = new SfTabItem { Header = "ITEM 2" };
+    item3.Content = new Label
+    {
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item3);
+    this.Content = tabView;
+{% endhighlight %}
+
+{% endtabs %}
+
+![TabBarPlacement Left](images\TabBarPlacementLeft.png) 
+
+### Right
+
+The tab bar will be placed right to the content region of the Tab View control.
+
+{% tabs %}
+
+{% highlight xaml %}
+  <tabView:SfTabView TabBarPlacement="Right" 
+                   TabBarWidth="60"
+                   IndicatorWidthMode="Stretch">
+
+    <tabView:SfTabView.Items>
+        <tabView:SfTabItem Header="ITEM 1">
+            <tabView:SfTabItem.Content>
+                    <Label Text="Tab item content" 
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Center" />
+            </tabView:SfTabItem.Content>
+        </tabView:SfTabItem>
+
+        <tabView:SfTabItem Header="ITEM 2">
+            <tabView:SfTabItem.Content>
+                        <Label Text="Tab item content" 
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" />
+            </tabView:SfTabItem.Content>
+        </tabView:SfTabItem>
+
+        <tabView:SfTabItem Header="ITEM 3">
+            <tabView:SfTabItem.Content>
+                        <Label Text="Tab item content" 
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" />
+            </tabView:SfTabItem.Content>
+        </tabView:SfTabItem>
+    </tabView:SfTabView.Items>
+</tabView:SfTabView>
+{% endhighlight %}
+
+{% highlight C# %}
+    var tabView = new SfTabView();
+    tabView.TabBarPlacement = TabBarPlacement.Right;
+    tabView.TabBarWidth = 60;
+    tabView.IndicatorWidthMode = IndicatorWidthMode.Stretch;
+    var item1 = new SfTabItem { Header = "ITEM 1" };
+    item1.Content = new Label
+    {
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item1);
+    var item2 = new SfTabItem { Header = "ITEM 2" };
+    item2.Content = new Label
+    {
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item2);
+    var item3 = new SfTabItem { Header = "ITEM 2" };
+    item3.Content = new Label
+    {
+        Text = "Tab item content",
+        HorizontalOptions = LayoutOptions.Center,
+        VerticalOptions = LayoutOptions.Center
+    };
+    tabView.Items.Add(item3);
+    this.Content = tabView;
+{% endhighlight %}
+
+{% endtabs %}
+
+![TabBarPlacement Right](images\TabBarPlacementRight.png) 
 
 ## TabBarBackground customization
 
