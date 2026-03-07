@@ -687,6 +687,8 @@ By extending the `DataTemplateSelector` to `HeaderItemTemplate` of the `SfTabVie
 
 Similarly we shall extend the `DataTemplateSelector` to `ContentItemTemplate` of the `SfTabView`.
 
+N> The star image shown in the output should be included externally. 
+
 {% tabs %}
 
 {% highlight xaml %}
