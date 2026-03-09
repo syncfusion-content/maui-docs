@@ -103,6 +103,8 @@ Double-tapping an appointment displays a dialog that shows the appointment detai
 ![Editing-Appointment-In-.NET-MAUI-SfScheduler](images/appointment-editor/edit-appointment.png)
  
 Selecting `Edit` opens the editor filled in with the current appointment details. After making changes, select `Save` to update the appointment or`Cancel` to discard changes.
+
+![Edit-Appointment-In-.NET-MAUI-SfScheduler](images/appointment-editor/edit-event.png)
  
 When the scheduler is bound to a data source, the updated values are automatically reflected in the underlying data object.
 

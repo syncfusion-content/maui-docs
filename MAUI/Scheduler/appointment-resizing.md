@@ -51,7 +51,7 @@ You can enable automatic scrolling during appointment resizing using the `AllowR
                        View="Day" 
                        AllowAppointmentResize="True">
     <scheduler:SfScheduler.AppointmentResizeSettings>
-        <scheduler:AppointmentResizeSettings AllowResizeScroll="True"/>
+        <scheduler:AppointmentResizeSettings AllowResizeScroll="False"/>
     </scheduler:SfScheduler.AppointmentResizeSettings>
 </scheduler:SfScheduler>
 {% endhighlight %}
@@ -62,7 +62,7 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
         this.scheduler.AllowAppointmentResize = true;
-        this.scheduler.AppointmentResizeSettings.AllowResizeScroll = true;
+        this.scheduler.AppointmentResizeSettings.AllowResizeScroll = false;
     }
 }
 {% endhighlight %}
@@ -78,7 +78,7 @@ You can display a time indicator while resizing an appointment by using the `Sho
                        View="Day" 
                        AllowAppointmentResize="True">
     <scheduler:SfScheduler.AppointmentResizeSettings>
-        <scheduler:AppointmentResizeSettings ShowTimeIndicator="True"/>
+        <scheduler:AppointmentResizeSettings ShowTimeIndicator="False"/>
     </scheduler:SfScheduler.AppointmentResizeSettings>
 </scheduler:SfScheduler>
 {% endhighlight %}
