@@ -689,7 +689,7 @@ public partial class MainPage : ContentPage
 
 ![.NET MAUI Popup with ShowOverlayAlways](Images/layout-customizations/maui-popup-disable-overlay.png)
 
-#### Show SfPopup using native embedding in Android?
+#### Display popup in Android native embedding?
 
 Enables showing `SfPopup` inside apps that embed MAUI content natively. Create the `SfPopup` by passing the current `Activity` and `IMauiContext`, convert the MAUI layout using ToPlatform, and set it as the Activity’s content.
 
@@ -741,7 +741,7 @@ namespace AndroidApp
 
 ![.NET MAUI Popup with android native embedding](Images/layout-customizations/maui-popup-using-nativeembedding-android.png)
 
-#### Show SfPopup using native embedding in iOS?
+#### Display popup in iOS native embedding?
 
 Allows showing `SfPopup` in an iOS app that embeds MAUI content natively. Create the popup using the native `UIWindow` and `MauiContext` in the `SceneDelegate`, convert the layout to a `UIView` using ToPlatform, and host it through the window’s `root controller`.
 
