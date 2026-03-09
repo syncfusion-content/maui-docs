@@ -376,7 +376,7 @@ this.Scheduler.AppointmentsSource = appointment;
 
 ![recurrence-scheduler-appointment-in-maui-scheduler](images/appointments/recurrence-scheduler-appointment-in-maui-scheduler.png)
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecurringAppointment/SchedulerAppointment)
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecurringAppointment/RecurringAppointment)
 
 ### Creating the business object recurrence appointment
 
@@ -634,7 +634,7 @@ this.Scheduler.AppointmentsSource = appointment;
 
 ![adding-exception-dates-to-recurrence-pattern-scheduler-appointment-in-maui-scheduler](images/appointments/adding-exception-dates-to-recurrence-pattern-scheduler-appointment-in-maui-scheduler.png)
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecursiveExceptionAppointment/SchedulerAppointment)
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecursiveExceptionAppointment/RecursiveExceptionAppointment)
 
 #### Add exception appointment to the recurrence pattern for scheduler appointment
 
@@ -702,7 +702,7 @@ N>
 * The exception appointment should be a normal appointment and should not be created as a recurring appointment, since its occurrence is from a recurrence pattern.
 * The `RecurrenceExceptionDates` should be in a Universal Time Coordinates (UTC) time zone.
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecursiveExceptionAppointment/SchedulerAppointment)
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/maui-scheduler-examples/tree/main/RecursiveExceptionAppointment/RecursiveExceptionAppointment)
 
 ### Create the recurrence exceptions for business object
 
