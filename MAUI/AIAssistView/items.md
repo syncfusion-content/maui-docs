@@ -473,6 +473,9 @@ The [AssistAttachmentItem]() is used to display the preview for a file or an ima
         ...
     }
 
+{% endhighlight %}
+{% endtabs %}
+
 ## AttachmentTapped event and command
 
 The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control includes a built-in event called [AttachmentTapped]() and a command named [AttachmentTappedCommand](). These are triggered when an attachment preview is tapped. The tapped attachment item is accessible through the [AttachmentTappedEventArgs](). The `AttachmentTappedEventArgs` has the following member:

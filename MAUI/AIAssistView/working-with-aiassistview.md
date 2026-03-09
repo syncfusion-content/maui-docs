@@ -273,7 +273,7 @@ N> **Interaction**: On desktop (Windows, macOS), hover over a request to reveal 
 
 ## Attachment Preview in EditorView
 
-The `SfAIAssistView` allows you to add files and images as attachments in the editor using [Attachments]()property. This feature lets you show the preview for attachments added in the editor. `Attachments` are added as [AssistAttachment]() which has the following members:
+The `SfAIAssistView` allows you to add files and images as attachments in the editor using [Attachments]() property. This feature lets you show the preview for attachments added in the editor. `Attachments` are added as [AssistAttachment]() which has the following members:
 
 * [FileName]() : Displays the name of the file.
 * [FileSize]() : Displays the size of the file.
