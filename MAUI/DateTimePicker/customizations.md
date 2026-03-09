@@ -776,7 +776,7 @@ public partial class MainPage : ContentPage
 
 {% endtabs %}
 
-![Active View in the .NET MAUI Date Time Picker](images/customizations/maui-date-time-picker-active-view.gif)
+![Active View in the .NET MAUI Date Time Picker](images/customizations/maui-date-time-picker-active-view.gif){:width="260" height="260"}
 
 ## Column Customization
 
