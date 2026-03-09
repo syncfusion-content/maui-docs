@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Appointment Resizing in .NET MAUI Scheduler | Syncfusion
-description: Learn how to resize appointments in the Syncfusion .NET MAUI Scheduler, adjust appointment duration interactively, and customize resize behavior using settings and events.
+description: Learn how to resize appointments in the Syncfusion .NET MAUI Scheduler, adjust their duration interactively, and customize resize behavior using settings and events.
 platform: maui
 control: SfScheduler
 documentation: ug
@@ -232,7 +232,7 @@ The `AppointmentResizeStartEventArgs` contains the following properties:
 </table>
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML"%}
+{% highlight xaml tabtitle="XAML" %}
 <scheduler:SfScheduler x:Name="Scheduler" 
                        View="Day" 
                        AppointmentResizeStart="Scheduler_AppointmentResizeStart">
@@ -337,7 +337,7 @@ The `AppointmentResizeEndEventArgs` includes the following properties:
 </table>
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML"%}
+{% highlight xaml tabtitle="XAML" %}
 <scheduler:SfScheduler x:Name="Scheduler" 
                        View="Day" 
                        AppointmentResizeEnd="Scheduler_AppointmentResizeEnd">

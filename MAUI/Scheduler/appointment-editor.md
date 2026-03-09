@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Appointment Editor in .NET MAUI Scheduler | Syncfusion
-description: Learn how to use the built-in appointment editor in the Syncfusion .NET MAUI Scheduler to create, modify and delete appointments through an interactive popup interface.
+description: Explore how the Syncfusion .NET MAUI Scheduler’s built-in appointment editor enables users to create, update, and delete appointments through an interactive popup interface.
 platform: maui
 control: SfScheduler
 documentation: ug
@@ -102,7 +102,7 @@ Double-tapping an appointment displays a dialog that shows the appointment detai
 
 ![Editing-Appointment-In-.NET-MAUI-SfScheduler](images/appointment-editor/edit-appointment.png)
  
-Selecting `Edit` opens the editor prefilled with the current appointment details. After making changes, select `Save` to update the appointment or`Cancel` to discard changes.
+Selecting `Edit` opens the editor filled in with the current appointment details. After making changes, select `Save` to update the appointment or`Cancel` to discard changes.
  
 When the scheduler is bound to a data source, the updated values are automatically reflected in the underlying data object.
 
@@ -236,7 +236,7 @@ The `AppointmentEditorClosingEventArgs` contains details about the operation per
                        AppointmentEditorClosing="Scheduler_AppointmentEditorClosing">
 </scheduler:SfScheduler>
 {% endhighlight %}
-{% highlight c# tabtitle="C#"%}
+{% highlight c# tabtitle="C#" %}
     private void Scheduler_AppointmentEditorClosing(object? sender, AppointmentEditorClosingEventArgs e)
     {
         var appointment = e.Appointment;
@@ -292,7 +292,7 @@ The `RecurringAppointmentBeginningEditEventArgs` contains details about the edit
                        RecurringAppointmentBeginningEdit="Scheduler_RecurringAppointmentBeginningEdit">
 </scheduler:SfScheduler>
 {% endhighlight %}
-{% highlight c# tabtitle="C#"%}
+{% highlight c# tabtitle="C#" %}
     private void Scheduler_RecurringAppointmentBeginningEdit(object? sender, RecurringAppointmentBeginningEditEventArgs e)
     {
         var editMode = e.EditMode;

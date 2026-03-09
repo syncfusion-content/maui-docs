@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Appointment Tooltip in .NET MAUI Scheduler | Syncfusion
-description: Learn how to display appointment tooltips in the Syncfusion .NET MAUI Scheduler to quickly view appointment details and customize tooltip appearance and behavior.
+description: Learn how to show appointment tooltips in the Syncfusion .NET MAUI Scheduler to quickly view details and customize tooltip appearance and behavior.
 platform: maui
 control: SfScheduler
 documentation: ug
