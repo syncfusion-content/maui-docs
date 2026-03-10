@@ -10,7 +10,7 @@ keywords : .net maui scheduler appointments, .net maui appointment resizing, .ne
 
 # Appointment Resizing in .NET MAUI SfScheduler
 
-Appointments can be resized interactively to adjust their start or end times. In Day, Week, and Work Week views, you can resize an appointment by dragging its top or bottom edges. In Month, Week All‑Day, and Timeline views, resizing is performed by dragging the left or right edges of the appointment. By default, the `AllowAppointmentResize` property is set to `false`. To enable appointment resizing, set the `AllowAppointmentResize` property to `true`.
+Appointments can be resized interactively to adjust their start or end times. In Day, Week, and Work Week views, you can resize an appointment by dragging its top or bottom edges. In Month, Week, All‑Day, and Timeline views, resizing is performed by dragging the left or right edges of the appointment. By default, the `AllowAppointmentResize` property is set to `false`. To enable appointment resizing, set the `AllowAppointmentResize` property to `true`.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
@@ -203,10 +203,10 @@ The `AppointmentResizeStart` event is triggered when resizing of an appointment 
 </scheduler:SfScheduler>
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="3" %}
-    private void Scheduler_AppointmentResizeStart(object sender, AppointmentResizeStartEventArgs e)
-    {
-        e.Cancel = true;
-    }
+private void Scheduler_AppointmentResizeStart(object sender, AppointmentResizeStartEventArgs e)
+{
+    e.Cancel = true;
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -232,19 +232,19 @@ The `AppointmentResizeStartEventArgs` contains the following properties:
 </table>
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" %}
+{% highlight xaml tabtitle="XAML" hl_lines="3" %}
 <scheduler:SfScheduler x:Name="Scheduler" 
                        View="Day" 
                        AppointmentResizeStart="Scheduler_AppointmentResizeStart">
 </scheduler:SfScheduler>
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
-    private void Scheduler_AppointmentResizeStart(object sender, AppointmentResizeStartEventArgs e)
-    {
-        var appointment = e.Appointment;
-        var resource = e.Resource;
-        var resizeEdge = e.ResizeEdge;
-    }
+private void Scheduler_AppointmentResizeStart(object sender, AppointmentResizeStartEventArgs e)
+{
+    var appointment = e.Appointment;
+    var resource = e.Resource;
+    var resizeEdge = e.ResizeEdge;
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -260,10 +260,10 @@ The `AppointmentResizing` event is triggered continuously while the appointment 
 </scheduler:SfScheduler>
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="3" %}
-    private void Scheduler_AppointmentResizing(object sender, AppointmentResizingEventArgs e)
-    {
-        e.Cancel = true;
-    }
+private void Scheduler_AppointmentResizing(object sender, AppointmentResizingEventArgs e)
+{
+    e.Cancel = true;
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -304,10 +304,10 @@ The `AppointmentResizeEnd` event occurs when the resizing action is completed an
 </scheduler:SfScheduler>
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="3" %}
-    private void Scheduler_AppointmentResizeEnd(object sender, AppointmentResizeEndEventArgs e)
-    {
-        e.Cancel = true;
-    }
+private void Scheduler_AppointmentResizeEnd(object sender, AppointmentResizeEndEventArgs e)
+{
+    e.Cancel = true;
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -337,19 +337,19 @@ The `AppointmentResizeEndEventArgs` includes the following properties:
 </table>
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" %}
+{% highlight xaml tabtitle="XAML" hl_lines="3" %}
 <scheduler:SfScheduler x:Name="Scheduler" 
                        View="Day" 
                        AppointmentResizeEnd="Scheduler_AppointmentResizeEnd">
 </scheduler:SfScheduler>
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
-    private void Scheduler_AppointmentResizeEnd(object sender, AppointmentResizeEndEventArgs e)
-    {
-        var appointment = e.Appointment;
-        var resource = e.Resource;
-        var resizeEdge = e.ResizeEdge;
-        var resizedTime = e.ResizedTime;
-    }
+private void Scheduler_AppointmentResizeEnd(object sender, AppointmentResizeEndEventArgs e)
+{
+    var appointment = e.Appointment;
+    var resource = e.Resource;
+    var resizeEdge = e.ResizeEdge;
+    var resizedTime = e.ResizedTime;
+}
 {% endhighlight %}
 {% endtabs %}
