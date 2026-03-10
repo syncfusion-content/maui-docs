@@ -7,8 +7,6 @@ control: Carousel
 documentation: ug
 ---
 
-> **Notice**: After **Volume 1 2025 (Mid of March 2025)**, feature enhancements for this control will no longer be available in the Syncfusion<sup>®</sup> package. Please switch to the **Syncfusion<sup>®</sup> Toolkit for .NET MAUI** for continued support. For a smooth transition refer this [migration document](https://help.syncfusion.com/maui-toolkit/migration).
-
 # Getting Started with .NET MAUI Carousel
 
 This section guides you through setting up and configuring a [Carousel](https://www.syncfusion.com/maui-controls/maui-carousel) in your .NET MAUI application. Follow the steps below to add a basic Carousel to your project.
