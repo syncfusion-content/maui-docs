@@ -712,3 +712,262 @@ this.Content = datepicker;
 {% endtabs %}
 
 ![Date picker coloumn divider color in .NET MAUI Date picker.](images/customizations/maui-date-picker-column-divider-color.png)
+
+## CloseButtonIcon
+
+### Show Close Button
+
+You can enable or disable the CloseButton in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) header by setting the [ShowCloseButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_ShowCloseButton) property. The default value is `false`.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+ <Grid>
+     <picker:SfDatePicker x:Name="datePicker" Mode="Dialog" ShowCloseButton="True">
+         <picker:SfDatePicker.HeaderView >
+             <picker:PickerHeaderView Height="40" Text="Date Picker"/>
+         </picker:SfDatePicker.HeaderView>
+     </picker:SfDatePicker>
+     <Button Text="Open Picker" 
+             x:Name="pickerButton"
+             Clicked="Button_Clicked"
+             HorizontalOptions="Center"
+             VerticalOptions="Center"
+             HeightRequest="50" 
+             WidthRequest="150">
+     </Button>
+ </Grid>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+private void Button_Clicked(object sender, EventArgs e)
+{
+    datePicker.IsOpen = true;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Enable CloseButton in the .NET MAUI Date Picker](images/customizations/maui-date-picker-enable-closebutton.png)
+
+N>For the CloseButton to render properly, the header view must be present; otherwise, it will not function.
+
+### Close Button Icon
+
+You can customize the close button icon in the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) header by setting the [CloseButtonIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_CloseButtonIcon) property.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+ <Grid>
+     <picker:SfDatePicker x:Name="datePicker" Mode="Dialog" ShowCloseButton="True" CloseButtonIcon="closeicon.png">
+         <picker:SfDatePicker.HeaderView >
+             <picker:PickerHeaderView Height="40" Text="Date Picker"/>
+         </picker:SfDatePicker.HeaderView>
+     </picker:SfDatePicker>
+     <Button Text="Open Picker" 
+             x:Name="pickerButton"
+             Clicked="Button_Clicked"
+             HorizontalOptions="Center"
+             VerticalOptions="Center"
+             HeightRequest="50" 
+             WidthRequest="150">
+     </Button>
+ </Grid>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+private void Button_Clicked(object sender, EventArgs e)
+{
+    datePicker.IsOpen = true;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Enable CloseButtonIcon in the .NET MAUI Date Picker](images/customizations/maui-date-picker-enable-closebuttonicon.png)
+
+N>The ShowCloseButton property must be set to true for the close button icon to be displayed.
+
+## Column Customization
+
+### Customization of the day column text style
+
+Customize the day column text style of the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) by setting its [DayColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_DayColumnTextStyle) property. This property accepts a TextStyle to change font, size, color, and attributes for the day labels.
+
+N>
+* Applying `DayColumnTextStyle` overrides the previously defined unselected [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle), so the unselected style will no longer be applied.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfDatePicker x:Name="datepicker" >
+    <picker:SfDatePicker.DayColumnTextStyle>
+        <picker:PickerTextStyle FontSize="15" TextColor="#2F855A"/>
+    </picker:SfDatePicker.DayColumnTextStyle>
+</picker:SfDatePicker>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfDatePicker datePicker = new SfDatePicker();
+datePicker.DayColumnTextStyle = new PickerTextStyle()
+{
+    TextColor = Color.FromArgb("#2F855A"),
+    FontSize = 15,
+};
+
+this.Content = datePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the month column text style
+
+Customize the month column text style of the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) by setting its [MonthColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MonthColumnTextStyle) property. This property accepts a TextStyle to change font, size, color, and attributes for the month labels.
+
+N>
+* Applying `MonthColumnTextStyle` overrides the previously defined unselected [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle), so the unselected style will no longer be applied.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfDatePicker x:Name="datepicker" >
+    <picker:SfDatePicker.MonthColumnTextStyle>
+        <picker:PickerTextStyle FontSize="15" TextColor="#D53F8C"/>
+    </picker:SfDatePicker.MonthColumnTextStyle>
+</picker:SfDatePicker>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfDatePicker datePicker = new SfDatePicker();
+datePicker.MonthColumnTextStyle = new PickerTextStyle()
+{
+    TextColor = Color.FromArgb("#D53F8C"),
+    FontSize = 15,
+};
+
+this.Content = datePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the year column text style
+
+Customize the year column text style of the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) by setting its [YearColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_YearColumnTextStyle) property. This property accepts a TextStyle to change font, size, color, and attributes for the year labels.
+
+N>
+* Applying `YearColumnTextStyle` overrides the previously defined unselected [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle), so the unselected style will no longer be applied.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfDatePicker x:Name="datepicker" >
+    <picker:SfDatePicker.YearColumnTextStyle>
+        <picker:PickerTextStyle FontSize="15" TextColor="#2B6CB0"/>
+    </picker:SfDatePicker.YearColumnTextStyle>
+</picker:SfDatePicker>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfDatePicker datePicker = new SfDatePicker();
+datePicker.YearColumnTextStyle = new PickerTextStyle()
+{
+    TextColor = Color.FromArgb("#2B6CB0"),
+    FontSize = 15,
+};
+
+this.Content = datePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Custom column textstyle in .NET MAUI Date picker.](images/customizations/maui-date-picker-column-textstyle.webp){:width="380"}
+
+### Customization of the day column width
+
+Customize the day column width of the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) by setting its [DayColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_DayColumnWidth) property. This property controls the width of the day column.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfDatePicker x:Name="datepicker" DayColumnWidth="150"/>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfDatePicker datePicker = new SfDatePicker();
+datePicker.DayColumnWidth = 150;
+
+this.Content = datePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the month column width
+
+Customize the month column width of the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) by setting its [MonthColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MonthColumnWidth) property. This property controls the width of the month column.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfDatePicker x:Name="datepicker" MonthColumnWidth="150"/>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfDatePicker datePicker = new SfDatePicker();
+datePicker.MonthColumnWidth = 150;
+
+this.Content = datePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the year column width
+
+Customize the year column width of the [SfDatePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDatePicker.html) by setting its [YearColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_YearColumnWidth) property. This property controls the width of the year column.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfDatePicker x:Name="datepicker" YearColumnWidth="150"/>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfDatePicker datePicker = new SfDatePicker();
+datePicker.YearColumnWidth = 150;
+
+this.Content = datePicker;
+
+{% endhighlight %}
+
+{% endtabs %}

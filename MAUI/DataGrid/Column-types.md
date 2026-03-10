@@ -74,10 +74,10 @@ The following table describes the types of columns and their usage:
 <td>To display a Picker within each cell</td>
 </tr>
 <tr>
-<td>{{'[DataGridMultiColumnComboBoxColumn]()'| markdownify }}</td>
-<td>{{'[DataGridMultiColumnComboBoxCellRenderer]()'| markdownify }}</td>
+<td>{{'[DataGridMultiColumnComboBoxColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridMultiColumnComboBoxColumn.html)'| markdownify }}</td>
+<td>{{'[DataGridMultiColumnComboBoxCellRenderer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridMultiColumnComboBoxCellRenderer.html)'| markdownify }}</td>
 <td>MultiColumnComboBox</td>
-<td>Use to display the IEnumerable data using [SfMultiColumnComboBox]() .</td>
+<td>Use to display the IEnumerable data using [SfMultiColumnComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfMultiColumnComboBox.html) .</td>
 </tr>
 <tr>
 <td>{{'[DataGridUnboundColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundColumn.html)'| markdownify }}</td>
@@ -675,7 +675,7 @@ Underlying records will be the BindingContext for the `CellTemplate`.
 
 ### Edit template
 
-The `SfDataGrid` allows you to load any custom view in edit mode using the [EditTemplate]() property.
+The `SfDataGrid` allows you to load any custom view in edit mode using the [EditTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTemplateColumn.html#Syncfusion_Maui_DataGrid_DataGridTemplateColumn_EditTemplate) property.
 
 {% tabs %}
 {% highlight xaml %}

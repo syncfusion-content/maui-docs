@@ -884,7 +884,6 @@ this.Content = chart;
 
 **Axis**
 
-* DateTime category axis support.
 * Range style customization.
 * Event or method to notify the axis label click.
 * Support for axis draw labels as multiple lines using /n.
@@ -894,7 +893,6 @@ this.Content = chart;
 
 * Title support for legend. 
 * Support to enable or disable the legend icon visibility.
-* Legend floating support.
 * Event or method to notify when a legend item is clicked.
 
 **Data label**

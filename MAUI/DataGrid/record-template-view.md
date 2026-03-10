@@ -243,7 +243,7 @@ Arranges template for the actual size as the {{'RowTemplate'| markdownify}} is m
 <code>Fixed</code>
 </td>
 <td>
-Arranges template for the specified height in {{'[TemplateViewDefinition.Height]()'| markdownify}}.
+Arranges template for the specified height in {{'[TemplateViewDefinition.Height](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.TemplateViewDefinition.html#Syncfusion_Maui_DataGrid_TemplateViewDefinition_Height)'| markdownify}}.
 </td>
 </tr>
 <tr>

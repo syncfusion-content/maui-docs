@@ -83,7 +83,7 @@ The Keyboard navigation through the cells and rows is determined based on the [N
 <td> {{'[SingleDeselect](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionMode.html#Syncfusion_Maui_DataGrid_DataGridSelectionMode_SingleDeselect)'| markdownify }} </td>
 <td> Allows selection of a single row or cell only. However, upon tapping the row or cell again, the selection is cleared. Similar to single mode, upon selecting the next row or cell, the selection in the previous row or cell is cleared. </td>
 </tr>
-<td> {{'[Extended]()'| markdownify }} </td>
+<td> {{'[Extended](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionMode.html#Syncfusion_Maui_DataGrid_DataGridSelectionMode_Extended)'| markdownify }} </td>
 <td> Allows selecting multiple rows or cells. You can select multiple rows or cells in the SfDataGrid by dragging the mouse or by using the key modifiers <kbd>Ctrl</kbd> and <kbd>Shift</kbd>. </td>
 </tr>
 </table>
@@ -212,7 +212,7 @@ public partial class MainPage : ContentPage
 ![All the rows selected in .NET MAUI DataGrid](Images/selection/maui-datagrid-selectall.png)
 
 ## Column selection
-The `SfDataGrid` includes the [SfDataGrid.AllowColumnSelection]() property, which allows you to select columns by tapping the column header cell. This feature is enabled only when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionMode.html) is set to [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSortingMode.html#Syncfusion_Maui_DataGrid_DataGridSortingMode_Multiple), the [SelectionUnit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionUnit.html) is set to [Cell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionUnit.html#Syncfusion_Maui_DataGrid_DataGridSelectionUnit_Cell), and the [NavigationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNavigationMode.html#fields) is set to `Cell`.
+The `SfDataGrid` includes the [SfDataGrid.AllowColumnSelection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowColumnSelection) property, which allows you to select columns by tapping the column header cell. This feature is enabled only when the [SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionMode.html) is set to [Multiple](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSortingMode.html#Syncfusion_Maui_DataGrid_DataGridSortingMode_Multiple), the [SelectionUnit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionUnit.html) is set to [Cell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionUnit.html#Syncfusion_Maui_DataGrid_DataGridSelectionUnit_Cell), and the [NavigationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridNavigationMode.html#fields) is set to `Cell`.
 
 N> When the [SortingGestureType](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSortingGestureType.html#fields) is set to [Tap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSortingGestureType.html#Syncfusion_Maui_DataGrid_DataGridSortingGestureType_Tap), column selection is applied only when double-tapping the column header cell. This ensures both sorting and column selection interactions can occur without conflicts.
 
@@ -237,6 +237,47 @@ N> When the [SortingGestureType](https://help.syncfusion.com/cr/maui/Syncfusion.
 {% endtabs %}
 
 <img alt="Column selection support in .NET MAUI DataGrid" src="Images\selection\maui_datagrid_column_selection.gif" width="404"/>
+
+## Selection behavior
+
+You can control selection behavior for mouse actions using the `AllowSelectionOnPress` and `AllowSelectionOnSecondaryTap` properties on `SfDataGrid`.
+
+### Enable selection on mouse-down
+
+Enable selecting rows or cells immediately when the primary mouse button is pressed by setting `AllowSelectionOnPress` to `True`. This gives immediate selection on mouse-down instead of waiting for mouse-up.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       SelectionMode="Single"
+                       SelectionUnit="Row"
+                       NavigationMode="Cell"
+                       AllowSelectionOnPress="True" />
+{% endhighlight %}
+
+{% highlight c# %}
+dataGrid.AllowSelectionOnPress = true;
+{% endhighlight %}
+{% endtabs %}
+
+### Disable selection on right-click
+
+To disable selection on right-click, set `AllowSelectionOnSecondaryTap` to `False`. This allows you to interact on right-press without changing the current selection.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       SelectionMode="Multiple"
+                       SelectionUnit="Row"
+                       AllowSelectionOnSecondaryTap="False" />
+{% endhighlight %}
+
+{% highlight c# %}
+dataGrid.AllowSelectionOnSecondaryTap = false;
+{% endhighlight %}
+{% endtabs %}
 
 ## Keyboard behavior
 <table>
@@ -388,7 +429,7 @@ The selected rows will be deleted.
 
 ## Multiple Row or Cell Selection
 
-The `SfDataGrid` allows you to select multiple rows or cells by setting the `SelectionMode` property to [Extended](). This enables selection of multiple rows or cells by dragging the mouse or by clicking while holding modifier keys such as <kbd>Ctrl</kbd> and <kbd>Shift</kbd>.
+The `SfDataGrid` allows you to select multiple rows or cells by setting the `SelectionMode` property to [Extended](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSelectionMode.html#Syncfusion_Maui_DataGrid_DataGridSelectionMode_Extended). This enables selection of multiple rows or cells by dragging the mouse or by clicking while holding modifier keys such as <kbd>Ctrl</kbd> and <kbd>Shift</kbd>.
 
 {% tabs %}
 {% highlight xaml %}
@@ -410,7 +451,7 @@ this.dataGrid.SelectionMode  = DataGridSelectionMode.Extended;
 
 ## Shift and ctrl Key Combinations
 
-When the `SelectionMode` is set to [Extended](), you can select multiple rows or cells using the navigation keys together with the <kbd>Shift</kbd> key. Before navigation begins, the current cell is marked as the pressed (anchor) cell, and the selection includes all rows or cells between the pressed cell and the current cell. 
+When the `SelectionMode` is set to `Extended`, you can select multiple rows or cells using the navigation keys together with the <kbd>Shift</kbd> key. Before navigation begins, the current cell is marked as the pressed (anchor) cell, and the selection includes all rows or cells between the pressed cell and the current cell. 
 
 <table>
 <tr>

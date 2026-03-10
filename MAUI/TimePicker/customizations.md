@@ -695,7 +695,7 @@ this.Content = timePicker;
 
 ## Column divider color
 
-Customize the column divider color using the [ColumnDividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_ColumnDividerColor) property in [SfPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfPicker.html).
+Customize the column divider color using the [ColumnDividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_ColumnDividerColor) property in [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html).
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" %}
@@ -715,3 +715,376 @@ this.Content = picker;
 {% endtabs %}
 
 ![Time picker coloumn divider color in .NET MAUI Time picker.](images/customizations/maui-time-picker-column-divider-color.png)
+
+## CloseButtonIcon
+
+### Show Close Button
+
+You can enable or disable the close button in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html) header by setting the [ShowCloseButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_ShowCloseButton) property. The default value is `false`.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<Grid>
+    <picker:SfTimePicker x:Name="timePicker" Mode="Dialog" ShowCloseButton="True">
+        <picker:SfTimePicker.HeaderView >
+            <picker:PickerHeaderView Height="40" Text="Date Picker"/>
+        </picker:SfTimePicker.HeaderView>
+    </picker:SfTimePicker>
+    <Button Text="Open Picker" 
+            x:Name="pickerButton"
+            Clicked="Button_Clicked"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            HeightRequest="50" 
+            WidthRequest="150">
+    </Button>
+</Grid>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+private void Button_Clicked(object sender, EventArgs e)
+{
+    timePicker.IsOpen = true;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Enable CloseButton in the .NET MAUI Time Picker](images/customizations/maui-time-picker-enable-closebutton.png)
+
+N>For the CloseButton to render properly, the header view must be present; otherwise, it will not function.
+
+### Close Button Icon
+
+You can customize the close button icon in the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html) header by setting the [CloseButtonIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_CloseButtonIcon) property.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<Grid>
+    <picker:SfTimePicker x:Name="timePicker" Mode="Dialog" ShowCloseButton="True" CloseButtonIcon="closeicon.png">
+        <picker:SfTimePicker.HeaderView >
+            <picker:PickerHeaderView Height="40" Text="Date Picker"/>
+        </picker:SfTimePicker.HeaderView>
+    </picker:SfTimePicker>
+    <Button Text="Open Picker" 
+            x:Name="pickerButton"
+            Clicked="Button_Clicked"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            HeightRequest="50" 
+            WidthRequest="150">
+    </Button>
+</Grid>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+private void Button_Clicked(object sender, EventArgs e)
+{
+    timePicker.IsOpen = true;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Enable CloseButtonIcon in the .NET MAUI Time Picker](images/customizations/maui-time-picker-enable-closebuttonicon.png)
+
+N>The ShowCloseButton property must be set to true for the close button icon to be displayed.
+
+## Column Customization
+
+### Customization of the hour column text style
+
+Customize the hour column text style of the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html) by setting its [HourColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_HourColumnTextStyle) property. This property accepts a TextStyle to change font, size, color, and attributes for the hour labels.
+
+N>
+* Applying `HourColumnTextStyle` overrides the previously defined unselected [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle), so the unselected style will no longer be applied.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfTimePicker x:Name="timePicker" >
+    <picker:SfTimePicker.HourColumnTextStyle>
+        <picker:PickerTextStyle FontSize="15" TextColor="#2F855A"/>
+    </picker:SfTimePicker.HourColumnTextStyle>
+</picker:SfTimePicker>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.HourColumnTextStyle = new PickerTextStyle()
+{
+    TextColor = Color.FromArgb("#2F855A"),
+    FontSize = 15,
+};
+
+this.Content = timePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the minute column text style
+
+Customize the minute column text style of the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html) by setting its [MinuteColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MinuteColumnTextStyle) property. This property accepts a TextStyle to change font, size, color, and attributes for the minute labels.
+
+N>
+* Applying `MinuteColumnTextStyle` overrides the previously defined unselected [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle), so the unselected style will no longer be applied.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfTimePicker x:Name="timePicker" >
+    <picker:SfTimePicker.MinuteColumnTextStyle>
+        <picker:PickerTextStyle FontSize="15" TextColor="#D53F8C"/>
+    </picker:SfTimePicker.MinuteColumnTextStyle>
+</picker:SfTimePicker>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.MinuteColumnTextStyle = new PickerTextStyle()
+{
+    TextColor = Color.FromArgb("#D53F8C"),
+    FontSize = 15,
+};
+
+this.Content = timePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the second column text style
+
+Customize the second column text style of the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html) by setting its [SecondColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_SecondColumnTextStyle) property. This property accepts a TextStyle to change font, size, color, and attributes for the second labels.
+
+N>
+* Applying `SecondColumnTextStyle` overrides the previously defined unselected [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle), so the unselected style will no longer be applied.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfTimePicker x:Name="timePicker" >
+    <picker:SfTimePicker.SecondColumnTextStyle>
+        <picker:PickerTextStyle FontSize="15" TextColor="#2B6CB0"/>
+    </picker:SfTimePicker.SecondColumnTextStyle>
+</picker:SfTimePicker>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.SecondColumnTextStyle = new PickerTextStyle()
+{
+    TextColor = Color.FromArgb("#2B6CB0"),
+    FontSize = 15,
+};
+
+this.Content = timePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the meridiem column text style
+
+Customize the meridiem column text style of the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html) by setting its [MeridiemColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MeridiemColumnTextStyle) property. This property accepts a TextStyle to change font, size, color, and attributes for the meridiem labels.
+
+N>
+* Applying `MeridiemColumnTextStyle` overrides the previously defined unselected [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle), so the unselected style will no longer be applied.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfTimePicker x:Name="timePicker" >
+    <picker:SfTimePicker.MeridiemColumnTextStyle>
+        <picker:PickerTextStyle FontSize="15" TextColor="DarkCyan"/>
+    </picker:SfTimePicker.MeridiemColumnTextStyle>
+</picker:SfTimePicker>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.MeridiemColumnTextStyle = new PickerTextStyle()
+{
+    TextColor = Colors.DarkCyan,
+    FontSize = 15,
+};
+
+this.Content = timePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the millisecond column text style
+
+Customize the millisecond column text style of the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html) by setting its [MilliSecondColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MilliSecondColumnTextStyle) property. This property accepts a TextStyle to change font, size, color, and attributes for the millisecond labels.
+
+N>
+* Applying `MilliSecondColumnTextStyle` overrides the previously defined unselected [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle), so the unselected style will no longer be applied.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfTimePicker x:Name="timePicker" >
+    <picker:SfTimePicker.MilliSecondColumnTextStyle>
+        <picker:PickerTextStyle FontSize="15" TextColor="DarkCyan"/>
+    </picker:SfTimePicker.MilliSecondColumnTextStyle>
+</picker:SfTimePicker>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.MilliSecondColumnTextStyle = new PickerTextStyle()
+{
+    TextColor = Colors.DarkCyan,
+    FontSize = 15,
+};
+
+this.Content = timePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Custom column textstyle in .NET MAUI Time picker.](images/customizations/maui-time-picker-column-textstyle.webp){:width="380"}
+
+### Customization of the hour column width
+
+Customize the hour column width of the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html) by setting its [HourColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_HourColumnWidth) property. This property controls the width of the hour column.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfTimePicker x:Name="timePicker" HourColumnWidth="150"/>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.HourColumnWidth = 150;
+
+this.Content = timePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the minute column width
+
+Customize the minute column width of the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html) by setting its [MinuteColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MinuteColumnWidth) property. This property controls the width of the minute column.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfTimePicker x:Name="timePicker" MinuteColumnWidth="150"/>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.MinuteColumnWidth = 150;
+
+this.Content = timePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the second column width
+
+Customize the second column width of the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html) by setting its [SecondColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_SecondColumnWidth) property. This property controls the width of the second column.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfTimePicker x:Name="timePicker" SecondColumnWidth="150"/>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.SecondColumnWidth = 150;
+
+this.Content = timePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the meridiem column width
+
+Customize the meridiem column width of the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html) by setting its [MeridiemColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MeridiemColumnWidth) property. This property controls the width of the meridiem column.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfTimePicker x:Name="timePicker" MeridiemColumnWidth="150"/>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.MeridiemColumnWidth = 150;
+
+this.Content = timePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the millisecond column width
+
+Customize the millisecond column width of the [SfTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfTimePicker.html) by setting its [MilliSecondColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MilliSecondColumnWidth) property. This property controls the width of the millisecond column.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfTimePicker x:Name="timePicker" MilliSecondColumnWidth="150"/>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfTimePicker timePicker = new SfTimePicker();
+timePicker.MilliSecondColumnWidth = 150;
+
+this.Content = timePicker;
+
+{% endhighlight %}
+
+{% endtabs %}

@@ -213,8 +213,6 @@ For each group, display the sum of the values of the property from the model obj
   <syncfusion:SfListView x:Name="listView" ItemsSource="{Binding contactsinfo}">
       <syncfusion:SfListView.GroupHeaderTemplate>
                     <DataTemplate x:Name="GroupHeaderTemplate"  x:Key="GroupHeaderTemplate">
-                        <ViewCell>
-                            <ViewCell.View>
                                 <Grid BackgroundColor="#E4E4E4">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*" />
@@ -222,8 +220,6 @@ For each group, display the sum of the values of the property from the model obj
                                     <Label Text="{Binding Key}" />
                                     <Label Text="{Binding Items,Converter={StaticResource Converter}}" Grid.Column="1" />
                                 </Grid>
-                            </ViewCell.View>
-                        </ViewCell>
                     </DataTemplate>
       </syncfusion:SfListView.GroupHeaderTemplate>
   </syncfusion:SfListView>
@@ -384,15 +380,11 @@ N> Multi-level grouping is only applicable for `LinearLayout` in the SfListView.
     </syncfusion:SfListView.DataSource>
     <syncfusion:SfListView.GroupHeaderTemplate>
       <DataTemplate>
-          <ViewCell>
-            <ViewCell.View>
               <StackLayout BackgroundColor="{Binding Level,Converter={StaticResource TemplateConverter}}"
                             Padding="{Binding Level,Converter={StaticResource TemplateConverter}}">
                   <Label Text="{Binding Key}" 
                         VerticalOptions="Center" HorizontalOptions="Start"/>
               </StackLayout>
-            </ViewCell.View>
-          </ViewCell>
       </DataTemplate>
     </syncfusion:SfListView.GroupHeaderTemplate>
   </syncfusion:SfListView>
@@ -687,8 +679,6 @@ To customize the view for group header items and bind the [Key](https://help.syn
  <syncfusion:SfListView x:Name="listView" ItemsSource="{Binding ContactsInfo}">
   <syncfusion:SfListView.GroupHeaderTemplate>
     <DataTemplate>
-      <ViewCell>
-        <ViewCell.View>
           <StackLayout BackgroundColor="#E4E4E4">
             <Label Text="{Binding Key}"
                    FontSize="22"
@@ -697,8 +687,6 @@ To customize the view for group header items and bind the [Key](https://help.syn
                    HorizontalOptions="Start"
                    Margin="20,0,0,0" />
           </StackLayout>
-        </ViewCell.View>
-      </ViewCell>
     </DataTemplate>
   </syncfusion:SfListView.GroupHeaderTemplate>
  </syncfusion:SfListView>
@@ -736,8 +724,6 @@ Expand and collapse the group when tapping icon in the group header item by cust
         <ResourceDictionary>
             <local:BoolToImageConverter x:Key="BoolToImageConverter"/>
             <DataTemplate x:Name="GroupHeaderTemplate"  x:Key="GroupHeaderTemplate">
-                <ViewCell>
-                    <ViewCell.View>
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="30" />
@@ -748,8 +734,6 @@ Expand and collapse the group when tapping icon in the group header item by cust
                                    VerticalOptions="Center"/>
                             <Label Text="{Binding Key}" Grid.Column="1"/>
                         </Grid>
-                    </ViewCell.View>
-                </ViewCell>
             </DataTemplate>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -857,8 +841,6 @@ ListView supports selecting each group and items in the group like a checkBox se
   <syncfusion:SfListView x:Name="listView" ItemsSource="{Binding ContactsInfo}">
     <syncfusion:SfListView.GroupHeaderTemplate>
         <DataTemplate>
-            <ViewCell>
-              <ViewCell.View>
                 <Grid BackgroundColor="#d3d3d3">
                    <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="30" />
@@ -874,8 +856,6 @@ ListView supports selecting each group and items in the group like a checkBox se
                         </Image.GestureRecognizers>
                    </Image>
                 </Grid>
-              </ViewCell.View>
-            </ViewCell>
         </DataTemplate>
     </syncfusion:SfListView.GroupHeaderTemplate>
   </syncfusion:SfListView>

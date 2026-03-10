@@ -161,27 +161,19 @@ You can bind a command for a `Button` inside `ItemTemplate` to the command in Mo
 <listView:SfListView x:Name="listView" ItemsSource="{Binding ContactInfo}">
      <listView:SfListView.ItemTemplate>
         <DataTemplate>
-           <ViewCell>
-                <ViewCell.View>
                    <StackLayout>
                         <listView:SfListView x:Name="list1" ItemsSource="{Binding ContactDetails}"TapCommand="{Binding Path=BindingContext.NavigateToSelectModelsCommand, Source={x:Reference listView}}" TapCommandParameter="{Binding}">
                             <listView:SfListView.ItemTemplate>
                                  <DataTemplate>
-                                      <ViewCell>
-                                          <ViewCell.View>
                                                <StackLayout BackgroundColor="Teal" >
                                                     <Label Text="{Binding ContactName} "/>
                                                     <Label Text="{Binding ContactNumber}"/>
                                                     <StackLayout HeightRequest="1" BackgroundColor="Gray"/>
                                                 </StackLayout>
-                                           </ViewCell.View>
-                                       </ViewCell>
                                  </DataTemplate>
                             </listView:SfListView.ItemTemplate>
                         </listView:SfListView>
                     </StackLayout>
-                </ViewCell.View>
-            </ViewCell>
         </DataTemplate>
     </listView:SfListView.ItemTemplate>
 </listView:SfListView>
@@ -220,13 +212,11 @@ You can bind command of `Button` inside `ItemTemplate` to the command in ViewMod
 <Syncfusion:SfListView x:Name="listView" ItemsSource="{Binding contactsinfo}" >
     <Syncfusion:SfListView.ItemTemplate>
         <DataTemplate>
-            <ViewCell>
                 <Grid >
                     <Button Text="Delete" 
                     Command="{Binding Path=BindingContext.DeleteCommand, Source={x:Reference listView}}" 
                     CommandParameter="{x:Reference listView}"/>
                 </Grid>
-            </ViewCell>
         </DataTemplate>
     </Syncfusion:SfListView.ItemTemplate>
 </Syncfusion:SfListView>
@@ -620,7 +610,7 @@ You can also get the reference of element bound as parameter by using command pa
                 ItemsSource="{Binding BookInfoCollection}">
     <syncfusion:SfListView.ItemTemplate>
         <DataTemplate>
-            <Frame HasShadow="True" Margin="5,5,5,5" >
+            <Border Margin="5,5,5,5" >
                 <Grid Padding="5">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
@@ -629,7 +619,7 @@ You can also get the reference of element bound as parameter by using command pa
                     <Button x:Name="bookName" Text="{Binding BookName}" Command="{Binding Path=BindingContext.BackgroundColorCommand, Source={x:Reference listView}}" CommandParameter="{x:Reference bookName}}" BackgroundColor="Transparent" FontAttributes="Bold" FontSize="19"/>
                     <Label Grid.Row="1" Text="{Binding BookDescription}" FontSize="15" />
                 </Grid>
-            </Frame>
+            </Border>
         </DataTemplate>
     </syncfusion:SfListView.ItemTemplate>
 </syncfusion:SfListView>
@@ -637,9 +627,8 @@ You can also get the reference of element bound as parameter by using command pa
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="10 11 12 13 14 15 16 17" %}
  listView.ItemTemplate = new DataTemplate(() =>
  {
-    var frame = new Frame();
-    frame.HasShadow = true;
-    frame.Margin = 5;
+    var border = new Border();
+    border.Margin = 5;
     var grid = new Grid();
     grid.RowDefinitions.Add(new RowDefinition());
     grid.RowDefinitions.Add(new RowDefinition());
@@ -661,8 +650,8 @@ You can also get the reference of element bound as parameter by using command pa
     grid.Children.Add(label);
     grid.SetRow(button, 0);
     grid.SetRow(label, 1);
-    frame.Content = grid;
-    return frame;
+    border.Content = grid;
+    return border;
  });
 {% endhighlight %}
 {% endtabs %}

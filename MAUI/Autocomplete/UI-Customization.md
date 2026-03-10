@@ -1093,6 +1093,42 @@ The following image illustrates the result of the above code:
 
 ![.NET MAUI Autocomplete ItemTemplateSelector](Images/UICustomization/TemplateSelector.png)
 
+## Customize Dropdown corner radius
+
+The [DropDownCornerRadius]() property is used to modify the corner radius of the dropdown container for the `SfAutoComplete` control.
+
+{% tabs %}
+{% highlight xaml %}
+
+<editors:SfAutocomplete x:Name="autocomplete"
+                        WidthRequest="250" 
+                        HeightRequest = "50"
+                        DropDownCornerRadius = "25"
+                        DisplayMemberPath = "Name"
+                        TextMemberPath = "Name"
+                        ItemsSource="{Binding SocialMedias}" />
+
+{% endhighlight %}
+{% highlight C# %}
+
+SocialMediaViewModel socialMediaViewModel = new SocialMediaViewModel(); 
+SfAutocomplete autocomplete = new SfAutocomplete()
+{
+    WidthRequest = 250,
+    HeightRequest = 50,
+    DisplayMemberPath = "Name",
+    TextMemberPath = "Name",
+    ItemsSource = socialMediaViewModel.SocialMedias,
+    DropDownCornerRadius = 25
+};
+
+{% endhighlight %}
+{% endtabs %}
+
+The following image illustrates the result of the above code:
+
+![.NET MAUI Autocomplete with Dropdown corner radius](Images/UICustomization/dropdonw_corner_radius_ac.png)
+
 ## Styling token items
 
 The Autocomplete control allows you to customize the style of the TokenItem generated in the selection area by using the TokenItemStyle property.
@@ -1353,7 +1389,46 @@ private async void OnValueChanged(object sender, AutocompleteValueChangedEventAr
 {% endhighlight %}
 
 {% endtabs %} 
- 
+
+## ClearButtonClicked Event
+
+The [ClearButtonClicked]() event is raised when the user activates the clear button in the `SfAutocomplete` editable mode by tapping or pressing the clear button on the keyboard. The handler for the event is a generic event handler, taking the `sender` and `EventArgs`.
+
+{% tabs %}
+{% highlight xaml %}
+
+    <editors:SfAutocomplete x:Name="autocomplete"
+                        ItemsSource="{Binding SocialMedias}"
+                        TextMemberPath="Name"
+                        DisplayMemberPath="Name"
+                        OnClearButtonClicked="autocomplete_ClearButtonClicked"/>
+
+{% endhighlight %}
+{% highlight C# %}
+
+    SfAutoComplete autocomplete = new SfAutoComplete
+    {
+        ItemsSource = socialMediaViewModel.SocialMedias,
+        TextMemberPath = "Name",
+        DisplayMemberPath = "Name"
+    };
+autocomplete.OnClearButtonClicked += autocomplete_ClearButtonClicked;
+
+{% endhighlight %}
+{% endtabs %}
+
+The `ClearButtonClicked` event can be handled as follows:
+
+{% tabs %}
+{% highlight C# %}
+    
+private async void autocomplete_ClearButtonClicked(object sender, EventArgs e)
+{
+   await DisplayAlert("Message", "Clear Button Clicked", "ok");
+}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## CursorPosition
 
