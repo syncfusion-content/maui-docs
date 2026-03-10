@@ -296,64 +296,64 @@ The `SfAIAssistView` allows you to add files and images as attachments in the ed
 
 using Syncfusion.Maui.AIAssistView;
 
-    internal class ViewModel : INotifyPropertyChanged
+internal class ViewModel : INotifyPropertyChanged
+{
+    private ObservableCollection<IAttachment>? attachments;
+
+    public ViewModel()
     {
-        private ObservableCollection<IAttachment>? attachments;
+        Attachments = new ObservableCollection<IAttachment>();
+        UploadCommand = new Command(async () => await UploadFilesAsync());
+    }
 
-        public ViewModel()
+    public ObservableCollection<IAttachment>? Attachments
+    {
+        get => attachments;
+        set
         {
-            Attachments = new ObservableCollection<IAttachment>();
-            UploadCommand = new Command(async () => await UploadFilesAsync());
-        }
-
-        public ObservableCollection<IAttachment>? Attachments
-        {
-            get => attachments;
-            set
+            if (attachments != value)
             {
-                if (attachments != value)
-                {
-                    attachments = value;
-                }
-            }
-        }
-
-        public ICommand UploadCommand { get; }
-
-        private async Task UploadFilesAsync()
-        {
-            var results = await FilePicker.Default.PickMultipleAsync();
-            if (results == null) return;
-
-            foreach (var file in results)
-            {
-                Stream stream = await file.OpenReadAsync();
-
-                long size;
-                if (stream.CanSeek)
-                {
-                    size = stream.Length;
-                }
-                else
-                {
-                    using var ms = new MemoryStream();
-                    await stream.CopyToAsync(ms);
-                    size = ms.Length;
-                    stream.Dispose();
-                    stream = new MemoryStream(ms.ToArray());
-                }
-
-                Attachments?.Add(new AssistAttachment
-                {
-                    FileName = file.FileName,
-                    FileSize = size,
-                    FilePath = file.FullPath ?? string.Empty,
-                    FileExtension = Path.GetExtension(file.FileName) ?? string.Empty,
-                    FileContent = stream,
-                });
+                attachments = value;
             }
         }
     }
+
+    public ICommand UploadCommand { get; }
+
+    private async Task UploadFilesAsync()
+    {
+        var results = await FilePicker.Default.PickMultipleAsync();
+        if (results == null) return;
+
+        foreach (var file in results)
+        {
+            Stream stream = await file.OpenReadAsync();
+
+            long size;
+            if (stream.CanSeek)
+            {
+                size = stream.Length;
+            }
+            else
+            {
+                using var ms = new MemoryStream();
+                await stream.CopyToAsync(ms);
+                size = ms.Length;
+                stream.Dispose();
+                stream = new MemoryStream(ms.ToArray());
+            }
+
+            Attachments?.Add(new AssistAttachment
+            {
+                FileName = file.FileName,
+                FileSize = size,
+                FilePath = file.FullPath ?? string.Empty,
+                FileExtension = Path.GetExtension(file.FileName) ?? string.Empty,
+                FileContent = stream,
+            });
+        }
+    }
+}
 
 {% endhighlight %}
 {% endtabs %}

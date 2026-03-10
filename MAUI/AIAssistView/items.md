@@ -435,107 +435,110 @@ The [AssistAttachmentItem]() is used to display the preview for a file or an ima
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="8" %}
 
-    public class ViewModel : INotifyPropertyChanged
+public class ViewModel : INotifyPropertyChanged
+{
+    ...
+
+    private async void GenerateAssistItems()
     {
-        ...
-
-        private async void GenerateAssistItems()
+        // Adding a user request as attachments 
+        var requestItem = new AssistAttachmentItem()
         {
-            // Adding a user request as attachments 
-            var requestItem = new AssistAttachmentItem()
-            {
-                Text = "Read the following documents",
-                IsRequested = true,
-                Attachments = new List<IAttachment> { staticAttachment1, staticAttachment2, staticAttachment3 }
-            };
+            Text = "Read the following documents",
+            IsRequested = true,
+            Attachments = new List<IAttachment> { staticAttachment1, staticAttachment2, staticAttachment3 }
+        };
 
-            AssistItems.Add(requestItem);
+        AssistItems.Add(requestItem);
 
-            // Generating response item
-            await GetResult(requestItem);
-        }
-
-        private async Task GetResult(AssistItem requestItem)
-        {
-            await Task.Delay(1000).ConfigureAwait(true);
-
-            AssistItem responseItem = new AssistItem()
-            {
-                // Adding a text item as a response from the AI service
-                Text = "Thank you for sharing the documents. I will review the text file, the Excel sheet, and the PDF to provide you with a summary or any insights you need. Please let me know if you have any specific questions about these files.",
-                IsRequested = false,
-            };
-
-            // Add the response item to the collection
-            this.AssistItems.Add(responseItem);
-        }
-
-        ...
+        // Generating response item
+        await GetResult(requestItem);
     }
+
+    private async Task GetResult(AssistItem requestItem)
+    {
+        await Task.Delay(1000).ConfigureAwait(true);
+
+        AssistItem responseItem = new AssistItem()
+        {
+            // Adding a text item as a response from the AI service
+            Text = "Thank you for sharing the documents. I will review the text file, the Excel sheet, and the PDF to provide you with a summary or any insights you need. Please let me know if you have any specific questions about these files.",
+            IsRequested = false,
+        };
+
+        // Add the response item to the collection
+        this.AssistItems.Add(responseItem);
+    }
+
+    ...
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-## AttachmentTapped event and command
+## AttachmentTapped Event and Command
 
-The [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html) control includes a built-in event called [AttachmentTapped]() and a command named [AttachmentTappedCommand](). These are triggered when an attachment preview is tapped. The tapped attachment item is accessible through the [AttachmentTappedEventArgs](). The `AttachmentTappedEventArgs` has the following member:
+The [SfAIAssistView]() control includes a built-in event and command to listen for tap interactions in the attachment preview. The tapped attachment item can be accessed through the [AttachmentTappedEventArgs](). The `AttachmentTappedEventArgs` has the following member:
 
  * [Attachment]() : Refers to the tapped attachment item.
 
 ### AttachmentTapped Event
 
+The [AttachmentTapped]() event is triggered when a preview attachment item is tapped.
+
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"
-                               AttachmentTapped="sfAIAssistView_AttachmentTapped" />
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                        AttachmentTapped="sfAIAssistView_AttachmentTapped" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
       
-    sfAIAssistView.AttachmentTapped += SfAIAssistView_AttachmentTapped;
+sfAIAssistView.AttachmentTapped += SfAIAssistView_AttachmentTapped;
 
-    private void SfAIAssistView_AttachmentTapped(object sender, AttachmentTappedEventArgs e)
-    {  
-       DisplayAlert("Attachment", " Tapped on attachment :" + e.Attachment.FileName, "Ok");                  
-    }
+private void SfAIAssistView_AttachmentTapped(object sender, AttachmentTappedEventArgs e)
+{  
+    DisplayAlert("Attachment", " Tapped on attachment :" + e.Attachment.FileName, "Ok");                  
+}
 
 {% endhighlight %}
 {% endtabs %}
 
 ### AttachmentTapped Command
 
+The [AttachmentTappedCommand]() is triggered when a preview attachment item is tapped.
+
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}   
 
-    <syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
-                               AttachmentTappedCommand="{Binding TappedCommand}" />
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"  
+                            AttachmentTappedCommand="{Binding TappedCommand}" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="16" %}
 
-    public class ViewModel : INotifyPropertyChanged
+public class ViewModel : INotifyPropertyChanged
+{
+    public Command<object> tappedCommand;
+
+    public ViewModel()
     {
-        public Command<object> tappedCommand;
-
-        public ViewModel()
-        {
-            TappedCommand = new Command<object>(AttachmentTapped);
-        }
-        
-        public Command<object> TappedCommand
-        {
-            get { return tappedCommand; }
-            set { tappedCommand = value; }
-        }
-
-        private void AttachmentTapped(object obj)
-        {
-           var AttachmentTappedArgs = obj as AttachmentTappedEventArgs;
-           DisplayAlert("Attachment", " Tapped on Attachment item :" + AttachmentTappedArgs.Attachment.FileName, "Ok");                  
-        }    
-      
+        TappedCommand = new Command<object>(AttachmentTapped);
     }
+    
+    public Command<object> TappedCommand
+    {
+        get { return tappedCommand; }
+        set { tappedCommand = value; }
+    }
+
+    private void AttachmentTapped(object obj)
+    {
+        var AttachmentTappedArgs = obj as AttachmentTappedEventArgs;
+        DisplayAlert("Attachment", " Tapped on Attachment item :" + AttachmentTappedArgs.Attachment.FileName, "Ok");                  
+    }      
+}
 
 {% endhighlight %}
 {% endtabs %}
