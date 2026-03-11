@@ -15,7 +15,7 @@ The following steps below will assist you to create your **Syncfusion<sup>®</su
 
 N> Before use the Syncfusion<sup>®</sup> .NET MAUI Project Template, check whether the Syncfusion<sup>®</sup> .NET MAUI Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed. If this extension not installed, install the extension by follow the steps from the [download and installation](download-and-installation) help topic.
 
-1. Open the Visual Studio 2022.
+1. Open the Visual Studio 2022 or later.
 
 2. To develop the Syncfusion<sup>®</sup> .NET MAUI application, select one of the following options:
 
@@ -55,7 +55,7 @@ N> Before use the Syncfusion<sup>®</sup> .NET MAUI Project Template, check whet
 
     By unchecking the features checkboxes, you can unselect the features from the selected controls.
 
-6. The Configuration section will load if you choose to click the **Next** button or the **Configuration tab**. You can select the required .NET Core Version (.NET 8.0 or .NET 9.0)
+6. The Configuration section will load if you choose to click the **Next** button or the **Configuration tab**. You can select the required .NET Core Version (.NET 9.0 or .NET 10.0)
 
      ![Choose required Project Configuration](images/ConfigurationsTab.png)
 
