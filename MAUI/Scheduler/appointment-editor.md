@@ -102,7 +102,7 @@ Double-tapping an appointment displays a dialog that shows the appointment detai
 
 ![Editing-Appointment-In-.NET-MAUI-SfScheduler](images/appointment-editor/edit-appointment.png)
  
-Selecting `Edit` opens the editor filled in with the current appointment details. After making changes, select `Save` to update the appointment or`Cancel` to discard changes.
+Selecting `Edit` opens the editor filled in with the current appointment details. After making changes, select `Save` to update the appointment or `Cancel` to discard changes.
 
 ![Edit-Appointment-In-.NET-MAUI-SfScheduler](images/appointment-editor/edit-event.png)
  
@@ -134,10 +134,10 @@ The `AppointmentEditorOpening` event is raised before the appointment editor dia
 </scheduler:SfScheduler>
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="3" %}
-    private void Scheduler_AppointmentEditorOpening(object? sender, AppointmentEditorOpeningEventArgs e)
-    {
-        e.Cancel = true;
-    }
+private void Scheduler_AppointmentEditorOpening(object? sender, AppointmentEditorOpeningEventArgs e)
+{
+    e.Cancel = true;
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -174,20 +174,20 @@ The `AppointmentEditorOpeningEventArgs` provides information about the editor op
                        AppointmentEditorOpening="Scheduler_AppointmentEditorOpening">
 </scheduler:SfScheduler>
 {% endhighlight %}
-{% highlight c# tabtitle="C#" hl_lines="3" %}
-    private void Scheduler_AppointmentEditorOpening(object? sender, AppointmentEditorOpeningEventArgs e)
-    {
-        var appointment = e.Appointment;
-        var dateTime = e.DateTime;
-        var resource = e.Resource;
-        var recurringAppointmentEditMode = e.RecurringAppointmentEditMode;
-    }
+{% highlight c# tabtitle="C#" %}
+private void Scheduler_AppointmentEditorOpening(object? sender, AppointmentEditorOpeningEventArgs e)
+{
+    var appointment = e.Appointment;
+    var dateTime = e.DateTime;
+    var resource = e.Resource;
+    var recurringAppointmentEditMode = e.RecurringAppointmentEditMode;
+}
 {% endhighlight %}
 {% endtabs %}
 
 ### Appointment Editor Closing
 
-The AppointmentEditorClosing event is triggered when the appointment editor is about to close after performing an action such as Add, Edit, Delete, or Cancel. This event allows you to control the close operation and optionally handle the performed action. Set the event args' `Cancel` property to `true` to stop the editor from closing.
+The `AppointmentEditorClosing` event is triggered when the appointment editor is about to close after performing an action such as Add, Edit, Delete, or Cancel. This event allows you to control the close operation and optionally handle the performed action. Set the event args' `Cancel` property to `true` to stop the editor from closing.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="4" %}
@@ -198,10 +198,10 @@ The AppointmentEditorClosing event is triggered when the appointment editor is a
 </scheduler:SfScheduler>
 {% endhighlight %}
 {% highlight c# tabtitle="C#" hl_lines="3" %}
-    private void Scheduler_AppointmentEditorClosing(object? sender, AppointmentEditorClosingEventArgs e)
-    {
-        e.Cancel = true;
-    }
+private void Scheduler_AppointmentEditorClosing(object? sender, AppointmentEditorClosingEventArgs e)
+{
+    e.Cancel = true;
+}
 {% endhighlight %}
 {% endtabs %}
  
@@ -239,18 +239,18 @@ The `AppointmentEditorClosingEventArgs` contains details about the operation per
 </scheduler:SfScheduler>
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
-    private void Scheduler_AppointmentEditorClosing(object? sender, AppointmentEditorClosingEventArgs e)
-    {
-        var appointment = e.Appointment;
-        var action = e.Action;
-        var resources = e.Resources;
-    }
+private void Scheduler_AppointmentEditorClosing(object? sender, AppointmentEditorClosingEventArgs e)
+{
+    var appointment = e.Appointment;
+    var action = e.Action;
+    var resources = e.Resources;
+}
 {% endhighlight %}
 {% endtabs %}
 
 ### Recurring Appointment Beginning Edit
 
-The RecurringAppointmentBeginningEdit event occurs when a recurring appointment is edited or deleted. This event lets you control how recurring appointments are modified.
+The `RecurringAppointmentBeginningEdit` event occurs when a recurring appointment is edited or deleted. This event lets you control how recurring appointments are modified.
  
 The `RecurringAppointmentBeginningEditEventArgs` contains details about the editing behavior of a recurring appointment.
 
@@ -295,9 +295,9 @@ The `RecurringAppointmentBeginningEditEventArgs` contains details about the edit
 </scheduler:SfScheduler>
 {% endhighlight %}
 {% highlight c# tabtitle="C#" %}
-    private void Scheduler_RecurringAppointmentBeginningEdit(object? sender, RecurringAppointmentBeginningEditEventArgs e)
-    {
-        var editMode = e.EditMode;
-    }
+private void Scheduler_RecurringAppointmentBeginningEdit(object? sender, RecurringAppointmentBeginningEditEventArgs e)
+{
+    var editMode = e.EditMode;
+}
 {% endhighlight %}
 {% endtabs %}
