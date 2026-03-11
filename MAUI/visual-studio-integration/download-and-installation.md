@@ -11,23 +11,23 @@ documentation: ug
 
 Syncfusion<sup>®</sup> publishes the Visual Studio extension at the Visual Studio Marketplace link below. You can either install it directly from Visual Studio or download and install it from the Visual Studio Marketplace.
 
-[Visual Studio 2022](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.MAUIVSExtension)
+[Visual Studio 2022 or 2026](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.MAUIVSExtension)
 
 
 ## Prerequisites
 
 The following software prerequisites must be installed to use the Syncfusion<sup>®</sup> .NET MAUI extension, including for creating applications and adding code snippets in Syncfusion<sup>®</sup> .NET MAUI projects.
 
-* [Visual Studio 2022 17.3 or later](https://visualstudio.microsoft.com/downloads/).
+* [Visual Studio 2022 or later](https://visualstudio.microsoft.com/downloads/).
 
-* [.NET Core 8.0 or later](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).
+* [.NET Core 9.0 or later](https://dotnet.microsoft.com/en-us/download/dotnet/9.0).
 
 
 ## Install through the Visual Studio Manage Extensions
 
 The following steps will guide you on how to install the Syncfusion<sup>®</sup> .NET MAUI extensions using **Visual Studio Manage Extensions**.
 
-1. Open Visual Studio 2022.
+1. Open Visual Studio 2022 or later.
 
 2. Navigate to **Extension ->Manage Extensions** and open the Manage Extensions.
 
@@ -55,7 +55,7 @@ The following steps illustrate how to download and install the Syncfusion<sup>®
 
 1. Download the Syncfusion<sup>®</sup> .NET MAUI Extensions from the below Visual Studio Marketplace.
 
-   [Visual Studio 2022](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.MAUIVSExtension)
+   [Visual Studio 2022 or later](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.MAUIVSExtension)
 
 2. Close all running instances of Visual Studio if you have them.
 
