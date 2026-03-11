@@ -1,7 +1,7 @@
 ---
 layout: post
 title: FlowDirection in .NET MAUI Kanban Control | Syncfusion®
-description: Learn how to configure FlowDirection in the Syncfusion® .NET MAUI Kanban control.
+description: Learn how to configure FlowDirection property in the Syncfusion® .NET MAUI Kanban control.
 platform: maui
 control: SfKanban
 documentation: ug
