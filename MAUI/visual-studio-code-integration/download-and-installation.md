@@ -7,9 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# Download and Installation
-
-
+# Download and Installation Guide
 
 [Essential MAUI](#essential-maui)
 
