@@ -1,18 +1,20 @@
 ---
 layout: post
-title: Right To Left in .NET MAUI Kanban Control | Syncfusion®
-description: Learn about the comprehensive support for right-to-left (RTL) directionality within the Syncfusion® .NET MAUI Kanban.
+title: FlowDirection in .NET MAUI Kanban Control | Syncfusion®
+description: Learn how to configure FlowDirection in the Syncfusion® .NET MAUI Kanban control.
 platform: maui
 control: SfKanban
 documentation: ug
 ---
 
-# Right To Left in .NET MAUI Kanban
+# FlowDirection in .NET MAUI Kanban
 
-`SfKanban` supports changing the layout direction of the control in the right-to-left direction by setting the `FlowDirection` to `RightToLeft`.
+The `SfKanban` control supports customizing the layout direction using the `FlowDirection` property. This allows you to display the Kanban board in either `LeftToRight` or `RightToLeft` flow direction based on your application needs. By default, the FlowDirection is set to LeftToRight.
+
+The following example illustrates how to apply the RightToLeft flow direction to the Kanban control.
 
 {% tabs %}
-{% highlight XAML %}
+{% highlight XAML hl_lines="4" %}
 
 <kanban:SfKanban x:Name="kanban"
                  AutoGenerateColumns="False"
@@ -36,7 +38,7 @@ documentation: ug
 </kanban:SfKanban>
 
 {% endhighlight %}
-{% highlight C# %}
+{% highlight C# hl_lines="4" %}
 
 SfKanban kanban = new SfKanban();
 KanbanViewModel viewModel = new KanbanViewModel();
@@ -122,7 +124,7 @@ public class KanbanViewModel
         {
             ID = 11,
             Title = "iOS - 21",
-            Category = "Postponed",
+            Category = "Code Review",
             Description = "Add input validation for editing.",
             IndicatorFill = Colors.Red,
             Tags = new List<string> { "Bug", "Customer", "Breaking Issue" }
@@ -192,7 +194,7 @@ public class KanbanViewModel
         {
             ID = 6,
             Title = "Xamarin - 6",
-            Category = "In Progress",
+            Category = "Code Review",
             Description = "Show the retrieved data from the server in Grid control.",
             IndicatorFill = Colors.Red,
             Tags = new List<string> { "Bug", "Customer", "Breaking Issue" }
@@ -245,4 +247,4 @@ public class KanbanViewModel
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Kanban RTL support](images/right-to-left/RTL.png)
+![.NET MAUI Kanban FlowDirection support](images/flowdirection/FlowDirection.png)
