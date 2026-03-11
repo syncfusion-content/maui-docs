@@ -247,4 +247,4 @@ public class KanbanViewModel
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Kanban FlowDirection support](images/flowdirection/FlowDirection.png)
+![.NET MAUI Kanban FlowDirection support](images/flowdirection/rtl-flowdirection-in-maui-kanban.png)
