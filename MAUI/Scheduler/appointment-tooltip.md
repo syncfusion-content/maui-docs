@@ -100,29 +100,49 @@ The `AppointmentToolTipTemplate` property lets you create a custom tooltip layou
                        IsAppointmentToolTipEnabled="True">
 
     <scheduler:SfScheduler.AppointmentToolTipSettings>
-                <scheduler:AppointmentToolTipSettings Background="Transparent" ToolTipPosition="Left"/>
+        <scheduler:AppointmentToolTipSettings ToolTipPosition="Left"/>
     </scheduler:SfScheduler.AppointmentToolTipSettings>
 
     <scheduler:SfScheduler.AppointmentToolTipTemplate>
         <DataTemplate x:DataType="scheduler:SchedulerAppointment">
-            <StackLayout>
-                <Label Text="{Binding Subject}"
-                       TextColor="Green"
-                       Background="LightYellow"
-                       FontSize="16"
-                       FontAttributes="Bold"
-                       LineBreakMode="NoWrap" />
-                <Label Text="{Binding StartTime, StringFormat='{0:dddd, MMMM d, yyyy}'}"
-                       TextColor="Purple"
-                       Background="LightYellow"
-                       FontSize="14"
-                       LineBreakMode="NoWrap" />
-                <Label Text="{Binding EndTime, StringFormat='{0:dddd, MMMM d, yyyy}'}"
-                       TextColor="Purple"
-                       Background="LightYellow"
-                       FontSize="14"
-                       LineBreakMode="NoWrap" />
-            </StackLayout>
+            <Grid ColumnDefinitions="Auto,*">
+                <BoxView Grid.Column="0"
+                         Background="{Binding Background}"
+                         WidthRequest="10"
+                         HorizontalOptions="Start"
+                         VerticalOptions="Fill"
+                         Margin="0,0,5,0" />
+
+                <VerticalStackLayout Grid.Column="1" Spacing="5">
+                    <Label Text="{Binding Subject}"
+                           FontAttributes="Bold"
+                           FontSize="12"
+                           TextColor="White"
+                           LineBreakMode="TailTruncation"
+                           MaxLines="2"
+                           Margin="0,0,0,5" />
+
+                    <HorizontalStackLayout Spacing="4">
+                        <Label Text="Start Time: "
+                               FontAttributes="Bold"
+                               FontSize="12"
+                               TextColor="White" />
+                        <Label Text="{Binding StartTime, StringFormat='{0:MM/dd/yyyy}'}"
+                               FontSize="12"
+                               TextColor="White" />
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout Spacing="4">
+                        <Label Text="End Time: "
+                               FontAttributes="Bold"
+                               FontSize="12"
+                               TextColor="White" />
+                        <Label Text="{Binding EndTime, StringFormat='{0:MM/dd/yyyy}'}"
+                                FontSize="12"
+                                TextColor="White" />
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Grid>
         </DataTemplate>
     </scheduler:SfScheduler.AppointmentToolTipTemplate>
 </scheduler:SfScheduler>
