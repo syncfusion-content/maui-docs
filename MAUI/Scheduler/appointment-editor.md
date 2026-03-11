@@ -143,28 +143,10 @@ private void Scheduler_AppointmentEditorOpening(object? sender, AppointmentEdito
 
 The `AppointmentEditorOpeningEventArgs` provides information about the editor opening operation.
 
-<table>
-    <tr>
-        <th>Property</th>
-        <th>Description</th>
-    </tr>
-    <tr>
-        <td>Appointment</td>
-        <td>Retrieves the appointment that is being edited. The value will be null when the editor is opened to create a new appointment.</td>
-    </tr>
-    <tr>
-        <td>DateTime</td>
-        <td>Indicates the date and time of the selected time slot.</td>
-    </tr>
-    <tr>
-        <td>Resource</td>
-        <td>Returns the resource associated with the appointment.</td>
-    </tr>
-    <tr>
-        <td>RecurringAppointmentEditMode</td>
-        <td>Specifies the edit mode applied when modifying a recurring appointment.</td>
-    </tr>
-</table>
+- Appointment : Retrieves the appointment that is being edited. The value will be null when the editor is opened to create a new appointment.
+- DateTime : Indicates the date and time of the selected time slot.
+- Resource : Returns the resource associated with the appointment.
+- RecurringAppointmentEditMode : Specifies the edit mode applied when modifying a recurring appointment.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="4" %}
@@ -207,28 +189,10 @@ private void Scheduler_AppointmentEditorClosing(object? sender, AppointmentEdito
  
 The `AppointmentEditorClosingEventArgs` contains details about the operation performed in the editor.
 
-<table>
-    <tr>
-        <th>Property</th>
-        <th>Description</th>
-    </tr>
-    <tr>
-        <td>Action</td>
-        <td>Indicates the action executed in the editor such as Add, Edit, Delete, or Cancel.</td>
-    </tr>
-    <tr>
-        <td>Appointment</td>
-        <td>Contains the appointment details associated with the performed action.</td>
-    </tr>
-    <tr>
-        <td>Resources</td>
-        <td>Provides the collection of resources assigned to the appointment.</td>
-    </tr>
-    <tr>
-        <td>Handled</td>
-        <td>Determines whether the scheduler should process the action automatically. When set to `true`, the action must be handled in the event handler.</td>
-    </tr>
-</table>
+- Action : Indicates the action executed in the editor such as Add, Edit, Delete, or Cancel.
+- Appointment : Contains the appointment details associated with the performed action.
+- Resources : Provides the collection of resources assigned to the appointment.
+- Handled : Determines whether the scheduler should process the action automatically. When set to `true`, the action must be handled in the event handler.
  
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="4" %}
@@ -254,37 +218,13 @@ The `RecurringAppointmentBeginningEdit` event occurs when a recurring appointmen
  
 The `RecurringAppointmentBeginningEditEventArgs` contains details about the editing behavior of a recurring appointment.
 
-<table>
-    <tr>
-        <th>Property</th>
-        <th>Description</th>
-    </tr>
-    <tr>
-        <td>EditMode</td>
-        <td>Defines how the recurring appointment should be edited.</td>
-    </tr>
-</table>
+- EditMode : Defines how the recurring appointment should be edited.
  
 #### RecurringAppointmentEditMode Options
 
-<table>
-    <tr>
-        <th>Mode</th>
-        <th>Description</th>
-    </tr>
-    <tr>
-        <td>User</td>
-        <td>Displays a dialog prompting whether to edit a single occurrence or the entire series.</td>
-    </tr>
-    <tr>
-        <td>Occurrence</td>
-        <td>Edits only the selected occurrence in the series.</td>
-    </tr>
-    <tr>
-        <td>Series</td>
-        <td>Edits the entire recurring appointment series.</td>
-    </tr>
-</table>
+- User : Displays a dialog prompting whether to edit a single occurrence or the entire series.
+- Occurrence : Edits only the selected occurrence in the series.
+- Series : Edits the entire recurring appointment series.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="4" %}

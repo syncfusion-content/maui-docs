@@ -94,10 +94,15 @@ public partial class MainPage : ContentPage
 The `AppointmentToolTipTemplate` property lets you create a custom tooltip layout for appointments, allowing you to display additional information or change the tooltip’s appearance as needed.
 
 {% tabs %}
-{% highlight xaml tabtitle="XAML" hl_lines="4 5 24 25" %}
+{% highlight xaml tabtitle="XAML" hl_lines="9 10 29 30" %}
 <scheduler:SfScheduler x:Name="scheduler" 
                        View="Day" 
                        IsAppointmentToolTipEnabled="True">
+
+    <scheduler:SfScheduler.AppointmentToolTipSettings>
+                <scheduler:AppointmentToolTipSettings Background="Transparent" ToolTipPosition="Left"/>
+    </scheduler:SfScheduler.AppointmentToolTipSettings>
+
     <scheduler:SfScheduler.AppointmentToolTipTemplate>
         <DataTemplate x:DataType="scheduler:SchedulerAppointment">
             <StackLayout>
@@ -123,3 +128,5 @@ The `AppointmentToolTipTemplate` property lets you create a custom tooltip layou
 </scheduler:SfScheduler>
 {% endhighlight %}
 {% endtabs %}
+
+![Appointment-Tooltip-Template-in-.NET-MAUI-SfScheduler](images/appointment-tooltip/appointment-tooltip-template.png)
