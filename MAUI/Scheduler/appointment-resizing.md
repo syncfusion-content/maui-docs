@@ -212,24 +212,9 @@ private void Scheduler_AppointmentResizeStart(object sender, AppointmentResizeSt
 
 The `AppointmentResizeStartEventArgs` contains the following properties:
 
-<table>
-    <tr>
-        <th>Property</th>
-        <th>Description</th>
-    </tr>
-    <tr>
-        <td>Appointment</td>
-        <td>Represents the appointment that is about to be resized.</td>
-    </tr>
-    <tr>
-        <td>Resource</td>
-        <td>Indicates the resource associated with the appointment when resource grouping is enabled.</td>
-    </tr>
-    <tr>
-        <td>ResizeEdge</td>
-        <td>Specifies the edge from which the resizing action starts. The values include Top, Bottom, Left, and Right.</td>
-    </tr>
-</table>
+- Appointment : Represents the appointment that is about to be resized.
+- Resource : Indicates the resource associated with the appointment when resource grouping is enabled.
+- ResizeEdge : Specifies the edge from which the resizing action starts. The values include Top, Bottom, Left, and Right.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
@@ -269,28 +254,10 @@ private void Scheduler_AppointmentResizing(object sender, AppointmentResizingEve
 
 The `AppointmentResizingEventArgs` provides the following information:
 
-<table>
-    <tr>
-        <th>Property</th>
-        <th>Description</th>
-    </tr>
-    <tr>
-        <td>Appointment</td>
-        <td>Represents the appointment currently being resized.</td>
-    </tr>
-    <tr>
-        <td>Resource</td>
-        <td>Indicates the resource linked to the appointment when resource grouping is applied.</td>
-    </tr>
-    <tr>
-        <td>ResizeEdge</td>
-        <td>Specifies the edge used for resizing the appointment. The values include Top, Bottom, Left, and Right.</td>
-    </tr>
-    <tr>
-        <td>ResizingTime</td>
-        <td>Represents the date time value that corresponds to the current resize position.</td>
-    </tr>
-</table>
+- Appointment : Represents the appointment currently being resized.
+- Resource : Indicates the resource linked to the appointment when resource grouping is applied.
+- ResizeEdge : Specifies the edge used for resizing the appointment. The values include Top, Bottom, Left, and Right.
+- ResizingTime : Represents the date time value that corresponds to the current resize position.
 
 ### Appointment Resize End
 
@@ -313,28 +280,10 @@ private void Scheduler_AppointmentResizeEnd(object sender, AppointmentResizeEndE
 
 The `AppointmentResizeEndEventArgs` includes the following properties:
 
-<table>
-    <tr>
-        <th>Property</th>
-        <th>Description</th>
-    </tr>
-    <tr>
-        <td>Appointment</td>
-        <td>Represents the appointment whose duration has been modified.</td>
-    </tr>
-    <tr>
-        <td>Resource</td>
-        <td>Indicates the resource associated with the appointment when grouping is enabled.</td>
-    </tr>
-    <tr>
-        <td>ResizeEdge</td>
-        <td>Specifies the edge from which the appointment was resized. The values include Top, Bottom, Left, and Right.</td>
-    </tr>
-    <tr>
-        <td>ResizedTime</td>
-        <td>Represents the final date time value after the resizing operation.</td>
-    </tr>
-</table>
+- Appointment : Represents the appointment whose duration has been modified.
+- Resource : Indicates the resource associated with the appointment when grouping is enabled.
+- ResizeEdge : Specifies the edge from which the appointment was resized. The values include Top, Bottom, Left, and Right.
+- ResizedTime : Represents the final date time value after the resizing operation. The final resized time can be modified within this event if necessary by assigning a new value to the ResizedTime property.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
