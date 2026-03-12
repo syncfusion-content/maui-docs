@@ -9,7 +9,7 @@ documentation: ug
 
 # Right To Left Flow Direction in .NET MAUI Kanban (SfKanban)
 
-The `SfKanban` supports changing the flow direction of items rendering in the right-to-left order by setting the `FlowDirection` to `RightToLeft`.
+The [SfKanban](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Kanban.SfKanban.html) supports changing the flow direction of items rendering in the right-to-left order by setting the `FlowDirection` to `RightToLeft`.
 
 The following example illustrates how to apply the `RightToLeft` flow direction to the Kanban control.
 
