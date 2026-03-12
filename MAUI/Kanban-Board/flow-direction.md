@@ -1,17 +1,17 @@
 ---
 layout: post
-title: FlowDirection in .NET MAUI Kanban Control | Syncfusion®
-description: Learn here all about FlowDirection in Syncfusion® .NET MAUI Kanban Board (SfKanban) control and more.
+title: Flow direction feature in .NET MAUI Kanban Control | Syncfusion®
+description: Learn here all about Flow Direction support in Syncfusion® .NET MAUI Kanban Board(SfKanban) control and more.
 platform: maui
 control: SfKanban
 documentation: ug
 ---
 
-# FlowDirection in .NET MAUI Kanban
+# Right To Left Flow Direction in .NET MAUI Kanban (SfKanban)
 
-The `SfKanban` control supports customizing the layout direction using the `FlowDirection` property. This allows you to display the Kanban board in either `LeftToRight` or `RightToLeft` flow direction based on your application needs. By default, the FlowDirection is set to LeftToRight.
+The `SfKanban` supports changing the flow direction of items rendering in the right-to-left order by setting the `FlowDirection` to `RightToLeft`.
 
-The following example illustrates how to apply the RightToLeft flow direction to the Kanban control.
+The following example illustrates how to apply the `RightToLeft` flow direction to the Kanban control.
 
 {% tabs %}
 {% highlight XAML hl_lines="4" %}
@@ -247,4 +247,4 @@ public class KanbanViewModel
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Kanban FlowDirection support](images/flowdirection/rtl-flowdirection-in-maui-kanban.png)
+![flow-direction-support-in-.net-maui-kanban-control](images/flowdirection/flow-direction-support-in-.net-maui-kanban-control.png)
