@@ -26,6 +26,7 @@ You can add trendlines to your charts using XAML or C# as shown in the following
              xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts">
 
   <chart:SfCartesianChart x:Name="chart">  
+    . . .
     <chart:LineSeries ItemsSource="{Binding Data}"
                       XBindingPath="X" 
                       YBindingPath="Y">
@@ -44,6 +45,7 @@ using Syncfusion.Maui.Charts;
 using Microsoft.Maui.Graphics;
 
 SfCartesianChart chart = new SfCartesianChart();
+. . .
 LineSeries series = new LineSeries 
 { 
     ItemsSource = viewModel.Data, 
@@ -83,7 +85,7 @@ A linear trendline draws a straight line through your data. Use this when your d
 
 <chart:SfCartesianChart>
     . . .
-    <chart:LineSeries ItemsSource="{Binding linearData}" XBindingPath="X" YBindingPath="Y">
+    <chart:LineSeries ItemsSource="{Binding Data}" XBindingPath="X" YBindingPath="Y">
         <chart:LineSeries.Trendlines>
             <chart:LinearTrendline Stroke="Blue" StrokeWidth="2"/>
         </chart:LineSeries.Trendlines>
@@ -94,9 +96,11 @@ A linear trendline draws a straight line through your data. Use this when your d
 
 {% highlight c# %}
 
+SfCartesianChart chart = new SfCartesianChart();
+. . .
 LineSeries series = new LineSeries() 
 { 
-    ItemsSource = new ViewModel().LinearData, 
+    ItemsSource = new ViewModel().Data, 
     XBindingPath = "X", 
     YBindingPath = "Y"
 };
@@ -106,6 +110,7 @@ series.Trendlines.Add(new LinearTrendline
     StrokeWidth = 2 
 });
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -134,6 +139,8 @@ A logarithmic trendline shows data that changes quickly at first and then levels
 
 {% highlight c# %}
 
+SfCartesianChart chart = new SfCartesianChart();
+. . .
 var series = new LineSeries() 
 { 
     ItemsSource = data, 
@@ -146,6 +153,7 @@ series.Trendlines.Add(new LogarithmicTrendline
     StrokeWidth = 2 
 });
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -163,7 +171,7 @@ An exponential trendline shows data that grows or shrinks at an increasingly fas
 
 <chart:SfCartesianChart>
     . . .
-    <chart:LineSeries ItemsSource="{Binding data}" XBindingPath="X" YBindingPath="Y">
+    <chart:LineSeries ItemsSource="{Binding Data}" XBindingPath="X" YBindingPath="Y">
         <chart:LineSeries.Trendlines>
             <chart:ExponentialTrendline Stroke="Blue" StrokeWidth="2"/>
         </chart:LineSeries.Trendlines>
@@ -174,6 +182,8 @@ An exponential trendline shows data that grows or shrinks at an increasingly fas
 
 {% highlight c# %}
 
+SfCartesianChart chart = new SfCartesianChart();
+. . .
 var series = new LineSeries() 
 { 
     ItemsSource = data, 
@@ -186,6 +196,7 @@ series.Trendlines.Add(new ExponentialTrendline
     StrokeWidth = 2 
 });
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -203,7 +214,7 @@ A power trendline models data that accelerates at different rates. It works well
 
 <chart:SfCartesianChart>
     . . .
-    <chart:LineSeries ItemsSource="{Binding data}" XBindingPath="X" YBindingPath="Y">
+    <chart:LineSeries ItemsSource="{Binding Data}" XBindingPath="X" YBindingPath="Y">
         <chart:LineSeries.Trendlines>
             <chart:PowerTrendline Stroke="Blue" StrokeWidth="2"/>
         </chart:LineSeries.Trendlines>
@@ -214,6 +225,8 @@ A power trendline models data that accelerates at different rates. It works well
 
 {% highlight c# %}
 
+SfCartesianChart chart = new SfCartesianChart();
+. . .
 var series = new LineSeries() 
 { 
     ItemsSource = data, 
@@ -226,6 +239,7 @@ series.Trendlines.Add(new PowerTrendline
     StrokeWidth = 2 
 });
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -243,7 +257,7 @@ A polynomial trendline is a curved line that follows the ups and downs in your d
 
 <chart:SfCartesianChart>
     . . .
-    <chart:LineSeries ItemsSource="{Binding data}" XBindingPath="X" YBindingPath="Y">
+    <chart:LineSeries ItemsSource="{Binding Data}" XBindingPath="X" YBindingPath="Y">
         <chart:LineSeries.Trendlines>
             <chart:PolynomialTrendline Order="3" Stroke="Blue" StrokeWidth="2"/>
         </chart:LineSeries.Trendlines>
@@ -254,6 +268,8 @@ A polynomial trendline is a curved line that follows the ups and downs in your d
 
 {% highlight c# %}
 
+SfCartesianChart chart = new SfCartesianChart();
+. . .
 var series = new LineSeries() 
 { 
     ItemsSource = data, 
@@ -267,6 +283,7 @@ series.Trendlines.Add(new PolynomialTrendline
     StrokeWidth = 2 
 });
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -284,7 +301,7 @@ A moving average trendline smooths out small bumps in your data by averaging nea
 
 <chart:SfCartesianChart>
     . . .
-    <chart:LineSeries ItemsSource="{Binding data}" XBindingPath="X" YBindingPath="Y">
+    <chart:LineSeries ItemsSource="{Binding Data}" XBindingPath="X" YBindingPath="Y">
         <chart:LineSeries.Trendlines>
             <chart:MovingAverageTrendline Period="5" Stroke="Blue" StrokeWidth="2"/>
         </chart:LineSeries.Trendlines>
@@ -295,6 +312,8 @@ A moving average trendline smooths out small bumps in your data by averaging nea
 
 {% highlight c# %}
 
+SfCartesianChart chart = new SfCartesianChart();
+. . .
 var series = new LineSeries() 
 { 
     ItemsSource = data, 
@@ -308,6 +327,7 @@ series.Trendlines.Add(new MovingAverageTrendline
     StrokeWidth = 2 
 });
 chart.Series.Add(series);
+this.Content = chart;
 
 {% endhighlight %}
 
@@ -332,7 +352,7 @@ Use the `ForwardForecast` property to extend the trendline forward and visualize
 
 <chart:SfCartesianChart>
     . . .
-    <chart:LineSeries ItemsSource="{Binding data}" XBindingPath="X" YBindingPath="Y">
+    <chart:LineSeries ItemsSource="{Binding Data}" XBindingPath="X" YBindingPath="Y">
         <chart:LineSeries.Trendlines>
             <chart:LinearTrendline ForwardForecast="5" Stroke="Blue" StrokeWidth="2"/>
         </chart:LineSeries.Trendlines>
@@ -343,6 +363,8 @@ Use the `ForwardForecast` property to extend the trendline forward and visualize
 
 {% highlight c# %}
 
+SfCartesianChart chart = new SfCartesianChart();
+. . .
 var series = new LineSeries() 
 { 
     ItemsSource = data, 
@@ -356,6 +378,8 @@ series.Trendlines.Add(new LinearTrendline
     StrokeWidth = 2
 });
 chart.Series.Add(series);
+this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -372,7 +396,7 @@ Use the `BackwardForecast` property to extend the trendline backward and visuali
 
 <chart:SfCartesianChart>
     . . .
-    <chart:LineSeries ItemsSource="{Binding data}" XBindingPath="X" YBindingPath="Y">
+    <chart:LineSeries ItemsSource="{Binding Data}" XBindingPath="X" YBindingPath="Y">
         <chart:LineSeries.Trendlines>
             <chart:LinearTrendline BackwardForecast="3" Stroke="Blue" StrokeWidth="2"/>
         </chart:LineSeries.Trendlines>
@@ -383,6 +407,8 @@ Use the `BackwardForecast` property to extend the trendline backward and visuali
 
 {% highlight c# %}
 
+SfCartesianChart chart = new SfCartesianChart();
+. . .
 var series = new LineSeries() 
 { 
     ItemsSource = data, 
@@ -396,6 +422,8 @@ series.Trendlines.Add(new LinearTrendline
     StrokeWidth = 2 
 });
 chart.Series.Add(series);
+this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -417,7 +445,7 @@ The following example shows how to customize a trendline with a black color, thi
 {% highlight xaml %}
 <chart:SfCartesianChart>
     . . .
-    <chart:LineSeries ItemsSource="{Binding linearData}" XBindingPath="X" YBindingPath="Y">
+    <chart:LineSeries ItemsSource="{Binding Data}" XBindingPath="X" YBindingPath="Y">
         <chart:LineSeries.Trendlines>
             <chart:LinearTrendline Stroke="Black" StrokeWidth="2" StrokeDashArray="5,6"/>
         </chart:LineSeries.Trendlines>
@@ -427,6 +455,8 @@ The following example shows how to customize a trendline with a black color, thi
 
 {% highlight c# %}
 
+SfCartesianChart chart = new SfCartesianChart();
+. . .
 var series = new LineSeries() 
 { 
     ItemsSource = data, 
@@ -441,6 +471,8 @@ var trendline = new LinearTrendline
 trendline.StrokeDashArray = new DoubleCollection { 5, 6 };
 series.Trendlines.Add(trendline);
 chart.Series.Add(series);
+this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -457,7 +489,7 @@ You can display a custom label for the trendline in the chart legend using the `
 
 <chart:SfCartesianChart>
     . . .
-    <chart:LineSeries ItemsSource="{Binding linearData}" XBindingPath="X" YBindingPath="Y">
+    <chart:LineSeries ItemsSource="{Binding Data}" XBindingPath="X" YBindingPath="Y">
         <chart:LineSeries.Trendlines>
             <chart:LinearTrendline Stroke="Blue" StrokeWidth="2" Label="Trend (shown in legend)"/>
         </chart:LineSeries.Trendlines>
@@ -468,6 +500,8 @@ You can display a custom label for the trendline in the chart legend using the `
 
 {% highlight c# %}
 
+SfCartesianChart chart = new SfCartesianChart();
+. . .
 var series = new LineSeries() 
 { 
     ItemsSource = data, 
@@ -481,6 +515,8 @@ series.Trendlines.Add(new LinearTrendline
     Label = "Trend (shown in legend)" 
 });
 chart.Series.Add(series);
+this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -501,7 +537,7 @@ This is helpful for emphasizing key points on the trendline or making it more vi
 {% highlight xaml %}
 <chart:SfCartesianChart>
     . . .
-    <chart:LineSeries ItemsSource="{Binding linearData}" XBindingPath="X" YBindingPath="Y">
+    <chart:LineSeries ItemsSource="{Binding Data}" XBindingPath="X" YBindingPath="Y">
         <chart:LineSeries.Trendlines>
             <chart:LinearTrendline ShowMarkers="True">
                 <chart:LinearTrendline.MarkerSettings>
@@ -515,6 +551,8 @@ This is helpful for emphasizing key points on the trendline or making it more vi
 
 {% highlight c# %}
 
+SfCartesianChart chart = new SfCartesianChart();
+. . .
 var series = new LineSeries() 
 { 
     ItemsSource = data, 
@@ -532,6 +570,8 @@ trendline.MarkerSettings = new ChartMarkerSettings
 };
 series.Trendlines.Add(trendline);
 chart.Series.Add(series);
+this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -555,7 +595,7 @@ These features enhance user interactivity and data exploration.
 
 <chart:SfCartesianChart>
     . . .
-    <chart:LineSeries ItemsSource="{Binding linearData}" XBindingPath="X" YBindingPath="Y">
+    <chart:LineSeries ItemsSource="{Binding Data}" XBindingPath="X" YBindingPath="Y">
         <chart:LineSeries.Trendlines>
             <chart:LinearTrendline EnableTooltip="True" ShowTrackballLabel="True"/>
         </chart:LineSeries.Trendlines>
@@ -565,6 +605,8 @@ These features enhance user interactivity and data exploration.
 
 {% highlight c# %}
 
+SfCartesianChart chart = new SfCartesianChart();
+. . .
 var series = new LineSeries() 
 { 
     ItemsSource = data, 
@@ -578,6 +620,8 @@ var trendline = new LinearTrendline
 };
 series.Trendlines.Add(trendline);
 chart.Series.Add(series);
+this.Content = chart;
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -602,6 +646,7 @@ Each trendline can have different properties, colors, and labels to make them ea
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"> 
     <chart:SfCartesianChart x:Name="chart">
+      . . .
       <chart:LineSeries ItemsSource="{Binding Data}" XBindingPath="X" YBindingPath="Y">
         <chart:LineSeries.Trendlines>
           <chart:LinearTrendline Stroke="RoyalBlue" StrokeWidth="2" Label="Linear" />
