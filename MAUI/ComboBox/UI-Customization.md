@@ -1751,7 +1751,7 @@ The [ClearButtonClicked]() event is raised when the user activates the clear but
                         ItemsSource="{Binding SocialMedias}"
                         TextMemberPath="Name"
                         DisplayMemberPath="Name"
-                        OnClearButtonClicked="comboBox_ClearButtonClicked"/>
+                        ClearButtonClicked="comboBox_ClearButtonClicked"/>
 
 {% endhighlight %}
 {% highlight C# %}
@@ -1762,7 +1762,7 @@ The [ClearButtonClicked]() event is raised when the user activates the clear but
         TextMemberPath = "Name",
         DisplayMemberPath = "Name"
     };
-comboBox.OnClearButtonClicked += comboBox_ClearButtonClicked;
+comboBox.ClearButtonClicked += comboBox_ClearButtonClicked;
 
 {% endhighlight %}
 {% endtabs %}
