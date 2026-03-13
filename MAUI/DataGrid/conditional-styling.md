@@ -702,7 +702,7 @@ Here, table summary cells are customized based on `Salary` summary value.
 
 ## Unbound row cell
 
-Unbound row cells can be customized the unbound row cell based on various properties exposed in [DataGridUnboundRow]() (example: `Position` property).
+Unbound row cells can be customized the unbound row cell based on various properties exposed in [DataGridUnboundRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundRow.html) (example: `Position` property).
 
 ### Conditional styling of unbound row cell using converter
 

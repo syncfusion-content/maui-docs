@@ -1253,3 +1253,24 @@ Similar to the parent DataGrid, you can also customize the cells of the DetailsV
     }
 ```
 <img alt="Customizing DetailsViewDataGrid while exporting to PDF in DataGrid" src="Images/export-to-pdf/maui-datagrid-customize-detailsview.png" Width="404"/>
+
+## Exporting merged cells
+
+The `SfDataGrid` supports exporting merged cells when generating a PDF document.
+By default, merged‑cell exporting is disabled. To enable it, set the [ExportMergedCells]() property to `true` in the `DataGridPdfExportingOption` before calling `ExportToPdf`.
+
+{% tabs %}
+{% highlight c# %}
+MemoryStream stream = new MemoryStream();
+DataGridPdfExportingController pdfExport = new DataGridPdfExportingController();
+DataGridPdfExportingOption option = new DataGridPdfExportingOption();
+option.ExportMergedCells = true;
+var pdfDoc = pdfExport.ExportToPdf(this.dataGrid, option);
+pdfDoc.Save(stream);
+pdfDoc.Close(true);
+SaveService saveService = new();
+saveService.SaveAndView("ExportFeature.pdf", "application/pdf", stream);
+{% endhighlight %}
+{% endtabs %}
+
+<img alt="MergedCells Exporting" src="Images/export-to-pdf/maui-datagrid-MergedCell.png" Width="404"/>

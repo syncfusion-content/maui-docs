@@ -359,6 +359,48 @@ var tabItems = new TabItemCollection
 
 ![FontSize](images/FontSize.png)
 
+## LineBreakMode
+
+Line break mode of the tab item text displayed in the tab bar.
+
+{% tabs %}
+
+{% highlight xaml %}
+<tabView:SfTabView>
+    <tabView:SfTabItem Header="Terms and Conditions and Privacy Policy" LineBreakMode="WordWrap"/>
+    <tabView:SfTabItem Header="Account Settings and Preferences" LineBreakMode="WordWrap"/>
+    <tabView:SfTabItem Header="Licenses and Copyrights Agreements" LineBreakMode="WordWrap"/>
+</tabView:SfTabView>
+{% endhighlight %}
+
+{% highlight C# %}
+ var tabItem = new SfTabItem { Header = "Very long header text that may wrap or truncate" };
+ tabItem.LineBreakMode = LineBreakMode.WordWrap;
+ var tabView = new SfTabView();
+var tabItems = new TabItemCollection
+{
+    new SfTabItem()
+    {
+        Header = "Terms and Conditions and Privacy Policy",
+        LineBreakMode = LineBreakMode.WordWrap
+    },
+    new SfTabItem()
+    {
+        Header = "Account Settings and Preferences",
+        LineBreakMode = LineBreakMode.WordWrap
+    },
+    new SfTabItem()
+    {
+        Header = "Licenses and Copyrights Agreements",
+        LineBreakMode = LineBreakMode.WordWrap
+    }
+}
+{% endhighlight %}
+
+{% endtabs %}
+
+![LineBreakMode](images/LineBreakMode.png)
+
 ## Badge support
 
 In SfTabItem, badges notify users of new or unread messages, notifications, or the status of something.

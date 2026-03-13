@@ -661,3 +661,582 @@ this.Content = picker;
 {% endtabs %}
 
    ![Date Time picker coloumn divider color in .NET MAUI Date Time picker.](images/customizations/maui-time-picker-column-divider-color.png)
+
+## CloseButtonIcon
+
+### Show Close Button
+
+You can enable or disable the close button in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html), above the header by setting the [ShowCloseButton](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_ShowCloseButton) property. The default value is `false`.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<Grid>
+    <picker:SfDateTimePicker x:Name="dateTimePicker" Mode="Dialog" ShowCloseButton="True">
+    </picker:SfDateTimePicker>
+    <Button Text="Open Picker" 
+            x:Name="pickerButton"
+            Clicked="Button_Clicked"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            HeightRequest="50" 
+            WidthRequest="150">
+    </Button>
+</Grid>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+private void Button_Clicked(object sender, EventArgs e)
+{
+    dateTimePicker.IsOpen = true;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Enable CloseButton in the .NET MAUI Date Time Picker](images/customizations/maui-date-time-picker-custom-enable-closebutton.png)
+
+N>For the CloseButton to render properly, the header view must be present; otherwise, it will not function.
+
+### Close Button Icon
+
+You can customize the close button icon in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html), above the header by setting the [CloseButtonIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_CloseButtonIcon) property.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<Grid>
+    <picker:SfDateTimePicker x:Name="dateTimePicker" Mode="Dialog" ShowCloseButton="True" CloseButtonIcon="designer_two.png">
+    </picker:SfDateTimePicker>
+    <Button Text="Open Picker" 
+            x:Name="pickerButton"
+            Clicked="Button_Clicked"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            HeightRequest="50" 
+            WidthRequest="150">
+    </Button>
+</Grid>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+private void Button_Clicked(object sender, EventArgs e)
+{
+    dateTimePicker.IsOpen = true;
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Enable CloseButtonIcon in the .NET MAUI Date Time Picker](images/customizations/maui-date-time-picker-custom-enable-closebuttonicon.png)
+
+N>The ShowCloseButton property must be set to true for the close button icon to be displayed.
+
+## Customization of Active View
+
+### Active View
+
+You can control the initial active tab (Date or Time) in the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html) by setting the [ActiveView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html#Syncfusion_Maui_Picker_SfDateTimePicker_ActiveView) property. This property uses the [DateTimePickerView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_DateTimePickerView) enumeration with two values: `Date` and `Time`. The default value is `Date`.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfDateTimePicker ActiveView="Time">
+    
+</picker:SfDateTimePicker>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+using Syncfusion.Maui.Picker;
+. . .
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDateTimePicker sfDateTimePicker = new SfDateTimePicker();
+        sfDateTimePicker.ActiveView = DateTimePickerView.Time;
+        this.Content = sfDateTimePicker;
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Active View in the .NET MAUI Date Time Picker](images/customizations/maui-date-time-picker-active-view.gif){:width="260" height="260"}
+
+## Column Customization
+
+### Customization of the day column text style
+
+Customize the day column text style of the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html) by setting its [DayColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_DayColumnTextStyle) property. This property accepts a TextStyle to change font, size, color, and attributes for the day labels.
+
+N>
+* Applying `DayColumnTextStyle` overrides the previously defined unselected [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle), so the unselected style will no longer be applied.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfDateTimePicker x:Name="datetimepicker" >
+    <picker:SfDateTimePicker.DayColumnTextStyle>
+        <picker:PickerTextStyle FontSize="15" TextColor="#2F855A"/>
+    </picker:SfDateTimePicker.DayColumnTextStyle>
+</picker:SfDateTimePicker>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+dateTimePicker.DayColumnTextStyle = new PickerTextStyle()
+{
+    TextColor = Color.FromArgb("#2F855A"),
+    FontSize = 15,
+};
+
+this.Content = dateTimePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the month column text style
+
+Customize the month column text style of the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html) by setting its [MonthColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MonthColumnTextStyle) property. This property accepts a TextStyle to change font, size, color, and attributes for the month labels.
+
+N>
+* Applying `MonthColumnTextStyle` overrides the previously defined unselected [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle), so the unselected style will no longer be applied.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfDateTimePicker x:Name="datetimepicker" >
+    <picker:SfDateTimePicker.MonthColumnTextStyle>
+        <picker:PickerTextStyle FontSize="15" TextColor="#D53F8C"/>
+    </picker:SfDateTimePicker.MonthColumnTextStyle>
+</picker:SfDateTimePicker>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+dateTimePicker.MonthColumnTextStyle = new PickerTextStyle()
+{
+    TextColor = Color.FromArgb("#D53F8C"),
+    FontSize = 15,
+};
+
+this.Content = dateTimePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the year column text style
+
+Customize the year column text style of the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html) by setting its [YearColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_YearColumnTextStyle) property. This property accepts a TextStyle to change font, size, color, and attributes for the year labels.
+
+N>
+* Applying `YearColumnTextStyle` overrides the previously defined unselected [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle), so the unselected style will no longer be applied.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfDateTimePicker x:Name="datetimepicker" >
+    <picker:SfDateTimePicker.YearColumnTextStyle>
+        <picker:PickerTextStyle FontSize="15" TextColor="#2B6CB0"/>
+    </picker:SfDateTimePicker.YearColumnTextStyle>
+</picker:SfDateTimePicker>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+dateTimePicker.YearColumnTextStyle = new PickerTextStyle()
+{
+    TextColor = Color.FromArgb("#2B6CB0"),
+    FontSize = 15,
+};
+
+this.Content = dateTimePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the hour column text style
+
+Customize the hour column text style of the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html) by setting its [HourColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_HourColumnTextStyle) property. This property accepts a TextStyle to change font, size, color, and attributes for the hour labels.
+
+N>
+* Applying `HourColumnTextStyle` overrides the previously defined unselected [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle), so the unselected style will no longer be applied.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfDateTimePicker x:Name="datetimepicker" >
+    <picker:SfDateTimePicker.HourColumnTextStyle>
+        <picker:PickerTextStyle FontSize="15" TextColor="DeepPink"/>
+    </picker:SfDateTimePicker.HourColumnTextStyle>
+</picker:SfDateTimePicker>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+dateTimePicker.HourColumnTextStyle = new PickerTextStyle()
+{
+    TextColor = Colors.DeepPink,
+    FontSize = 15,
+};
+
+this.Content = dateTimePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the minute column text style
+
+Customize the minute column text style of the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html) by setting its [MinuteColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MinuteColumnTextStyle) property. This property accepts a TextStyle to change font, size, color, and attributes for the minute labels.
+
+N>
+* Applying `MinuteColumnTextStyle` overrides the previously defined unselected [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle), so the unselected style will no longer be applied.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfDateTimePicker x:Name="datetimepicker" >
+    <picker:SfDateTimePicker.MinuteColumnTextStyle>
+        <picker:PickerTextStyle FontSize="15" TextColor="MediumPurple"/>
+    </picker:SfDateTimePicker.MinuteColumnTextStyle>
+</picker:SfDateTimePicker>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+dateTimePicker.MinuteColumnTextStyle = new PickerTextStyle()
+{
+    TextColor = Colors.MediumPurple,
+    FontSize = 15,
+};
+
+this.Content = dateTimePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the second column text style
+
+Customize the second column text style of the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html) by setting its [SecondColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_SecondColumnTextStyle) property. This property accepts a TextStyle to change font, size, color, and attributes for the second labels.
+
+N>
+* Applying `SecondColumnTextStyle` overrides the previously defined unselected [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle), so the unselected style will no longer be applied.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfDateTimePicker x:Name="datetimepicker" >
+    <picker:SfDateTimePicker.SecondColumnTextStyle>
+        <picker:PickerTextStyle FontSize="15" TextColor="DarkCyan"/>
+    </picker:SfDateTimePicker.SecondColumnTextStyle>
+</picker:SfDateTimePicker>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+dateTimePicker.SecondColumnTextStyle = new PickerTextStyle()
+{
+    TextColor = Colors.DarkCyan,
+    FontSize = 15,
+};
+
+this.Content = dateTimePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the meridiem column text style
+
+Customize the meridiem column text style of the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html) by setting its [MeridiemColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MeridiemColumnTextStyle) property. This property accepts a TextStyle to change font, size, color, and attributes for the meridiem labels.
+
+N>
+* Applying `MeridiemColumnTextStyle` overrides the previously defined unselected [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle), so the unselected style will no longer be applied.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfDateTimePicker x:Name="datetimepicker" >
+    <picker:SfDateTimePicker.MeridiemColumnTextStyle>
+        <picker:PickerTextStyle FontSize="15" TextColor="DarkCyan"/>
+    </picker:SfDateTimePicker.MeridiemColumnTextStyle>
+</picker:SfDateTimePicker>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+dateTimePicker.MeridiemColumnTextStyle = new PickerTextStyle()
+{
+    TextColor = Colors.DarkCyan,
+    FontSize = 15,
+};
+
+this.Content = dateTimePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the millisecond column text style
+
+Customize the millisecond column text style of the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html) by setting its [MilliSecondColumnTextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MilliSecondColumnTextStyle) property. This property accepts a TextStyle to change font, size, color, and attributes for the millisecond labels.
+
+N>
+* Applying `MilliSecondColumnTextStyle` overrides the previously defined unselected [TextStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_TextStyle), so the unselected style will no longer be applied.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfDateTimePicker x:Name="datetimepicker" >
+    <picker:SfDateTimePicker.MilliSecondColumnTextStyle>
+        <picker:PickerTextStyle FontSize="15" TextColor="DarkCyan"/>
+    </picker:SfDateTimePicker.MilliSecondColumnTextStyle>
+</picker:SfDateTimePicker>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+dateTimePicker.MilliSecondColumnTextStyle = new PickerTextStyle()
+{
+    TextStyle = new PickerTextStyle()
+    {
+        TextColor = Colors.DarkCyan,
+        FontSize = 15,
+    }
+};
+
+this.Content = dateTimePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Custom column textstyle in .NET MAUI Date Time picker.](images/customizations/maui-date-time-picker-column-textstyle.webp){:width="380" }
+
+### Customization of the day column width
+
+Customize the day column width of the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html) by setting its [DayColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_DayColumnWidth) property. This property controls the width of the day column.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfDateTimePicker x:Name="datetimepicker" DayColumnWidth="150"/>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+dateTimePicker.DayColumnWidth = 150;
+
+this.Content = dateTimePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the month column width
+
+Customize the month column width of the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html) by setting its [MonthColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MonthColumnWidth) property. This property controls the width of the month column.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfDateTimePicker x:Name="datetimepicker" MonthColumnWidth="150"/>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+dateTimePicker.MonthColumnWidth = 150;
+
+this.Content = dateTimePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the year column width
+
+Customize the year column width of the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html) by setting its [YearColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_YearColumnWidth) property. This property controls the width of the year column.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfDateTimePicker x:Name="datetimepicker" YearColumnWidth="150"/>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+dateTimePicker.YearColumnWidth = 150;
+
+this.Content = dateTimePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the hour column width
+
+Customize the hour column width of the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html) by setting its [HourColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_HourColumnWidth) property. This property controls the width of the hour column.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfDateTimePicker x:Name="datetimepicker" HourColumnWidth="150"/>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+dateTimePicker.HourColumnWidth = 150;
+
+this.Content = dateTimePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the minute column width
+
+Customize the minute column width of the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html) by setting its [MinuteColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MinuteColumnWidth) property. This property controls the width of the minute column.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfDateTimePicker x:Name="datetimepicker" MinuteColumnWidth="150"/>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+dateTimePicker.MinuteColumnWidth = 150;
+
+this.Content = dateTimePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the second column width
+
+Customize the second column width of the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html) by setting its [SecondColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_SecondColumnWidth) property. This property controls the width of the second column.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfDateTimePicker x:Name="datetimepicker" SecondColumnWidth="150"/>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+dateTimePicker.SecondColumnWidth = 150;
+
+this.Content = dateTimePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the meridiem column width
+
+Customize the meridiem column width of the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html) by setting its [MeridiemColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MeridiemColumnWidth) property. This property controls the width of the meridiem column.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfDateTimePicker x:Name="datetimepicker" MeridiemColumnWidth="150"/>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+dateTimePicker.MeridiemColumnWidth = 150;
+
+this.Content = dateTimePicker;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Customization of the millisecond column width
+
+Customize the millisecond column width of the [SfDateTimePicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.SfDateTimePicker.html) by setting its [MilliSecondColumnWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Picker.PickerBase.html#Syncfusion_Maui_Picker_PickerBase_MilliSecondColumnWidth) property. This property controls the width of the millisecond column.
+
+{% tabs %}
+
+{% highlight xaml tabtitle="XAML" %}
+
+<picker:SfDateTimePicker x:Name="datetimepicker" MilliSecondColumnWidth="150"/>
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+
+SfDateTimePicker dateTimePicker = new SfDateTimePicker();
+dateTimePicker.MilliSecondColumnWidth = 150;
+
+this.Content = dateTimePicker;
+
+{% endhighlight %}
+
+{% endtabs %}

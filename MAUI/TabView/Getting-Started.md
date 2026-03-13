@@ -681,6 +681,87 @@ public partial class MainPage : ContentPage
 
 ![Item template in .NET MAUI Tab View.](images/net-maui-tab-view-item-template.png)
 
+## Data template selector
+
+By extending the `DataTemplateSelector` to `HeaderItemTemplate` of the `SfTabView`, multiple custom user interfaces can be achieved to display the tab header data items based on certain conditions.
+
+Similarly we shall extend the `DataTemplateSelector` to `ContentItemTemplate` of the `SfTabView`.
+
+N> The star image shown in the output should be included externally. 
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<ContentPage.Resources>
+    <DataTemplate x:Key="NormalHeaderTemplate">
+        <Label Text="{Binding Title}" VerticalTextAlignment="Center" Margin="10" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="ImportantHeaderTemplate">
+        <StackLayout Orientation="Horizontal" Spacing="10" Margin="10">
+            <Image Source="star.png" WidthRequest="16" HeightRequest="16"/>
+            <Label Text="{Binding Title}" FontAttributes="Bold" VerticalTextAlignment="Center" TextColor="DarkGoldenrod"/>
+        </StackLayout>
+    </DataTemplate>
+
+    <local:TabHeaderTemplateSelector x:Key="TabHeaderTemplateSelector"
+                                      NormalTemplate="{StaticResource NormalHeaderTemplate}"
+                                      ImportantTemplate="{StaticResource ImportantHeaderTemplate}" />
+</ContentPage.Resources>
+
+<ContentPage.BindingContext>
+    <local:TabItemViewModel />
+</ContentPage.BindingContext>
+
+<tabView:SfTabView ItemsSource="{Binding Tabs}" HeaderItemTemplate="{StaticResource TabHeaderTemplateSelector}" />
+{% endhighlight %}
+
+{% highlight C# %}
+
+public class TabHeaderTemplateSelector : DataTemplateSelector
+{
+    public DataTemplate? NormalTemplate { get; set; }
+    public DataTemplate? ImportantTemplate { get; set; }
+
+    protected override DataTemplate? OnSelectTemplate(object item, BindableObject container)
+    {
+        var viewModel = item as TabItemModel;
+        return viewModel?.IsImportant == true ? ImportantTemplate : NormalTemplate;
+    }
+}
+
+public class TabItemModel
+{
+    public string Title { get; set; } = string.Empty;
+    public bool IsImportant { get; set; }
+}
+
+public class TabItemViewModel : INotifyPropertyChanged
+{
+    public ObservableCollection<TabItemModel> Tabs { get; }
+
+    public event PropertyChangedEventHandler? PropertyChanged;
+
+    public TabItemViewModel()
+    {
+        Tabs = new ObservableCollection<TabItemModel>
+        {
+            new TabItemModel { Title = "Profile" },
+            new TabItemModel { Title = "Notifications", IsImportant = true },
+            new TabItemModel { Title = "Settings" }
+        };
+    }
+
+    protected void OnPropertyChanged(string propertyName)
+        => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+}
+{% endhighlight %}
+
+{% endtabs %}
+
+![DataTemplateSelector in .NET MAUI Tab View.](images/DataTemplateSelector.png)
+
 N> You can download the demo from [GitHub](https://github.com/SyncfusionExamples/Getting-Started-with-.NET-MAUI-TabView/tree/master/TabViewItemTemplateSample)
 
 N> You can refer to our [.NET MAUI Tab View](https://www.syncfusion.com/maui-controls/maui-tab-view) feature tour page for its groundbreaking feature representations. You can also explore our  [.NET MAUI Tab View example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/TabView) that shows you how to render the .NET MAUI Tab View.
