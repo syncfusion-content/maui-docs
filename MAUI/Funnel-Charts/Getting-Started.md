@@ -7,7 +7,7 @@ control: SfFunnelChart
 documentation: ug
 ---
 
-# Getting Started with .NET MAUI Chart
+# Getting Started with .NET MAUI Funnel Chart
 
 This section explains how to populate the funnel chart with data, a title, data labels, a legend, and tooltips, as well as the essential aspects for getting started with the funnel chart.
 
