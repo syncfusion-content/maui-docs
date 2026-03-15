@@ -1401,7 +1401,7 @@ The [ClearButtonClicked]() event is raised when the user activates the clear but
                         ItemsSource="{Binding SocialMedias}"
                         TextMemberPath="Name"
                         DisplayMemberPath="Name"
-                        OnClearButtonClicked="autocomplete_ClearButtonClicked"/>
+                        ClearButtonClicked="autocomplete_ClearButtonClicked"/>
 
 {% endhighlight %}
 {% highlight C# %}
@@ -1412,7 +1412,7 @@ The [ClearButtonClicked]() event is raised when the user activates the clear but
         TextMemberPath = "Name",
         DisplayMemberPath = "Name"
     };
-autocomplete.OnClearButtonClicked += autocomplete_ClearButtonClicked;
+autocomplete.ClearButtonClicked += autocomplete_ClearButtonClicked;
 
 {% endhighlight %}
 {% endtabs %}
