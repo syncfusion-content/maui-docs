@@ -473,6 +473,56 @@ public partial class MainPage : ContentPage
 
 ![Suggestion Template in .NET MAUI AI AssistView](Images/suggestions/maui-aiassistview-suggestiontemplate.png)
 
+## Footer suggestions (Editor suggestions)
+
+`SfAIAssistView` supports a dedicated set of suggestions that appear above the input area (footer). These Footer suggestions are intended to help users compose messages quickly and are configured separately from the header or response suggestions.
+
+Key properties and APIs
+- **`FooterSuggestions`**: Bind an `IList<ISuggestion>` to this property to populate the footer suggestion list.
+- **`FooterSuggestionTemplate`**: Provide a `DataTemplate` to customize each footer suggestion item UI.
+
+Behavior and notes
+- Footer suggestions are rendered only when `FooterSuggestions` contains items. Tapping a footer suggestion raises the same `SuggestionItemSelected` pipeline as header/response suggestions (the assist view will either auto-send the suggestion or provide it to your `SuggestionItemSelected` handler depending on `CancelRequest`).
+- The footer list supports horizontal scrolling and exposes small left/right scroll icons on desktop platforms; use `FooterSuggestionTemplate` to supply custom suggestion cards or chips.
+
+{% tabs %}
+{% highlight xaml hl_lines="12-13" %}
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <DataTemplate x:Key="footerSuggestionTemplate">
+            <Border Padding="8">
+                <Label Text="Sample" />
+            </Border>
+        </DataTemplate>
+    </ResourceDictionary>
+</ContentPage.Resources>
+<ContentPage.Content>
+<syncfusion:SfAIAssistView x:Name="assist" 
+    FooterSuggestions="{Binding FooterSuggestions}" 
+    FooterSuggestionTemplate="{StaticResource footerSuggestionTemplate}" />
+</ContentPage.Content>
+{% endhighlight %}
+
+{% highlight c# %}
+
+    SfAIAssistView sfAIAssistView;
+    public MainPage()
+    {
+        InitializeComponent();
+        sfAIAssistView = new SfAIAssistView();
+        sfAIAssistView.FooterSuggestions = viewModel.FooterSuggestions;
+        sfAIAssistView.FooterSuggestionTemplate = new DataTemplate(() =>
+        {
+            var border = new Border { Padding = 8 };
+            border.Content = new Label { Text = "Sample" };
+            return border;
+        });
+        this.Content = sfAIAssistView;
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Event and Commands
 
 When a user selects a suggestion, the [SuggestionItemSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_SuggestionItemSelected) event and [SuggestionItemSelectedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_SuggestionItemSelectedCommand) are triggered, providing [SuggestionItemSelectedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SuggestionItemSelectedEventArgs.html) as arguments. This arguments contains the following details about the selected suggestion item.
