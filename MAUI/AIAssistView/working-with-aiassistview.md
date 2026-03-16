@@ -230,9 +230,9 @@ The [CreateAssistChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAss
 {% tabs %} 
 {% highlight c# %}
 
-public class CustomAIAssiststView : SfAIAssistView
+public class CustomAIAssistView : SfAIAssistView
 {
-    public CustomAIAssiststView() { }
+    public CustomAIAssistView() { }
 
     protected override AssistViewChat CreateAssistChat()
     {
