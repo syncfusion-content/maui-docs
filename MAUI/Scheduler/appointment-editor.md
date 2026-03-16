@@ -13,13 +13,13 @@ keywords : .net maui scheduler, .net maui scheduler appointment editor, net maui
 
 The Appointment Editor is a popup dialog used for adding, editing, or deleting appointments in the Scheduler. It provides fields for entering detailed event information, along with options for color customization, recurrence configuration, and timezone selection. The editor can be opened by double‑tapping a time slot or an existing appointment.
 
-You can control when the editor is available by using the `AppointmentEditorMode` property:
+You can control when the editor is available by using the [AppointmentEditorMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentEditorMode.html) property:
 
 - **Add** – Allows users to create new appointments.
 - **Edit** – Allows users to modify existing appointments.
 - **None** – Disables the editor entirely.
 
-By default, `AppointmentEditorMode` is set to `None`. To enable the Appointment Editor for user interaction, set the AppointmentEditorMode property to `Add`, `Edit`, or both.
+By default, [AppointmentEditorMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentEditorMode.html) is set to `None`. To enable the Appointment Editor for user interaction, set the AppointmentEditorMode property to `Add`, `Edit`, or both.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
@@ -48,7 +48,7 @@ Appointments can be created using the appointment editor window.
  
 Double-tapping a time slot opens the editor, where appointment details can be entered and saved.
  
-To allow appointment creation, configure the `AppointmentEditorMode` property with the `Add` option. If the `AppointmentEditorMode` does not include `Add`, double‑tapping a time slot will not open the editor.
+To allow appointment creation, configure the [AppointmentEditorMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentEditorMode.html) property with the `Add` option. If the [AppointmentEditorMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentEditorMode.html) does not include `Add`, double‑tapping a time slot will not open the editor.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
@@ -73,7 +73,7 @@ public partial class MainPage : ContentPage
 
 ## Editing Appointment
 
-Existing appointments can be modified through the appointment editor. To allow editing, set the `AppointmentEditorMode` to `Edit`.
+Existing appointments can be modified through the appointment editor. To allow editing, set the [AppointmentEditorMode(https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentEditorMode.html) to `Edit`.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
@@ -123,7 +123,7 @@ After selecting the required option, the appointment editor opens with the corre
 
 ### Appointment Editor Opening
 
-The `AppointmentEditorOpening` event is raised before the appointment editor dialog appears. It occurs when an appointment is double‑tapped for modification or when a time slot is double‑tapped to create a new appointment. Set the event args' `Cancel` property to `true` to prevent the editor from opening.
+The [AppointmentEditorOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentEditorOpening) event is raised before the appointment editor dialog appears. It occurs when an appointment is double‑tapped for modification or when a time slot is double‑tapped to create a new appointment. Set the event args' `Cancel` property to `true` to prevent the editor from opening.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="4" %}
@@ -141,7 +141,7 @@ private void Scheduler_AppointmentEditorOpening(object? sender, AppointmentEdito
 {% endhighlight %}
 {% endtabs %}
 
-The `AppointmentEditorOpeningEventArgs` provides information about the editor opening operation.
+The [AppointmentEditorOpeningEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentEditorOpeningEventArgs.html) provides information about the editor opening operation.
 
 - Appointment : Retrieves the appointment that is being edited. The value will be null when the editor is opened to create a new appointment.
 - DateTime : Indicates the date and time of the selected time slot.
@@ -169,7 +169,7 @@ private void Scheduler_AppointmentEditorOpening(object? sender, AppointmentEdito
 
 ### Appointment Editor Closing
 
-The `AppointmentEditorClosing` event is triggered when the appointment editor is about to close after performing an action such as Add, Edit, Delete, or Cancel. This event allows you to control the close operation and optionally handle the performed action. Set the event args' `Cancel` property to `true` to stop the editor from closing.
+The [AppointmentEditorClosing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentEditorClosing) event is triggered when the appointment editor is about to close after performing an action such as Add, Edit, Delete, or Cancel. This event allows you to control the close operation and optionally handle the performed action. Set the event args' `Cancel` property to `true` to stop the editor from closing.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="4" %}
@@ -187,7 +187,7 @@ private void Scheduler_AppointmentEditorClosing(object? sender, AppointmentEdito
 {% endhighlight %}
 {% endtabs %}
  
-The `AppointmentEditorClosingEventArgs` contains details about the operation performed in the editor.
+The [AppointmentEditorClosingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentEditorClosingEventArgs.html) contains details about the operation performed in the editor.
 
 - Action : Indicates the action executed in the editor such as Add, Edit, Delete, or Cancel.
 - Appointment : Contains the appointment details associated with the performed action.
@@ -214,9 +214,9 @@ private void Scheduler_AppointmentEditorClosing(object? sender, AppointmentEdito
 
 ### Recurring Appointment Beginning Edit
 
-The `RecurringAppointmentBeginningEdit` event occurs when a recurring appointment is edited or deleted. This event lets you control how recurring appointments are modified.
+The [RecurringAppointmentBeginningEdit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_RecurringAppointmentBeginningEdit) event occurs when a recurring appointment is edited or deleted. This event lets you control how recurring appointments are modified.
  
-The `RecurringAppointmentBeginningEditEventArgs` contains details about the editing behavior of a recurring appointment.
+The [RecurringAppointmentBeginningEditEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.RecurringAppointmentBeginningEditEventArgs.html) contains details about the editing behavior of a recurring appointment.
 
 - EditMode : Defines how the recurring appointment should be edited.
  
