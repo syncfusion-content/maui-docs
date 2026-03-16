@@ -10,7 +10,7 @@ keywords : .net maui scheduler appointments, .net maui appointment resizing, .ne
 
 # Appointment Resizing in .NET MAUI SfScheduler
 
-Appointments can be resized interactively to adjust their start or end times. In Day, Week, and Work Week views, you can resize an appointment by dragging its top or bottom edges. In Month, Week, All‑Day, and Timeline views, resizing is performed by dragging the left or right edges of the appointment. By default, the `AllowAppointmentResize` property is set to `false`. To enable appointment resizing, set the `AllowAppointmentResize` property to `true`.
+Appointments can be resized interactively to adjust their start or end times. In Day, Week, and Work Week views, you can resize an appointment by dragging its top or bottom edges. In Month, Week, All‑Day, and Timeline views, resizing is performed by dragging the left or right edges of the appointment. By default, the [AllowAppointmentResize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AllowAppointmentResize) property is set to `false`. To enable appointment resizing, set the `AllowAppointmentResize` property to `true`.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
@@ -39,11 +39,11 @@ N>
 
 ## Appointment Resize Settings
 
-The `AppointmentResizeSettings` property lets you configure automatic scrolling, time indicators with customizable format and style, and the border appearance when an appointment is resized.
+The [AppointmentResizeSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentResizeSettings) property lets you configure automatic scrolling, time indicators with customizable format and style, and the border appearance when an appointment is resized.
 
 ### Allow Resize Scroll
 
-You can enable automatic scrolling during appointment resizing using the `AllowResizeScroll` property. As the appointment is being resized and reaches the boundary of the visible timeslots, the scheduler scrolls to display additional timeslots. This allows the resizing process to continue smoothly. By default, `AllowResizeScroll` is set to `true`. To disable automatic scrolling during appointment resizing, set the `AllowResizeScroll` property to `false`.
+You can enable automatic scrolling during appointment resizing using the [AllowResizeScroll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeSettings.html#Syncfusion_Maui_Scheduler_AppointmentResizeSettings_AllowResizeScroll) property. As the appointment is being resized and reaches the boundary of the visible timeslots, the scheduler scrolls to display additional timeslots. This allows the resizing process to continue smoothly. By default, `AllowResizeScroll` is set to `true`. To disable automatic scrolling during appointment resizing, set the `AllowResizeScroll` property to `false`.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="5" %}
@@ -70,7 +70,7 @@ public partial class MainPage : ContentPage
 
 ### Show Time Indicator
 
-You can display a time indicator while resizing an appointment by using the `ShowTimeIndicator` property. By default, `ShowTimeIndicator` is set to `true`. To hide the time indicator during resizing, set the `ShowTimeIndicator` property to `false`.
+You can display a time indicator while resizing an appointment by using the [ShowTimeIndicator](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeSettings.html#Syncfusion_Maui_Scheduler_AppointmentResizeSettings_ShowTimeIndicator) property. By default, `ShowTimeIndicator` is set to `true`. To hide the time indicator during resizing, set the `ShowTimeIndicator` property to `false`.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="5" %}
@@ -100,7 +100,7 @@ N>
 
 ### Time Indicator Text Format
 
-The format of the time displayed in the time indicator while resizing an appointment can be customized using the `TimeIndicatorTextFormat` property.
+The format of the time displayed in the time indicator while resizing an appointment can be customized using the [TimeIndicatorTextFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeSettings.html#Syncfusion_Maui_Scheduler_AppointmentResizeSettings_TimeIndicatorTextFormat) property.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="5" %}
@@ -127,7 +127,7 @@ public partial class MainPage : ContentPage
 
 ### Time Indicator Style
 
-The appearance of the time indicator text, including color, font size, font family, and font attributes, can be customized using the `TimeIndicatorStyle` property.
+The appearance of the time indicator text, including color, font size, font family, and font attributes, can be customized using the [TimeIndicatorStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeSettings.html#Syncfusion_Maui_Scheduler_AppointmentResizeSettings_TimeIndicatorStyle) property.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="6 7 8" %}
@@ -164,7 +164,7 @@ public partial class MainPage : ContentPage
 
 ### Resize Border Customization
  
-The border displayed around an appointment during resizing can be customized using the `ResizeBorderThickness` and `ResizeBorderStroke` properties. ResizeBorderThickness defines how thick the border appears, while ResizeBorderStroke specifies its color.
+The border displayed around an appointment during resizing can be customized using the [ResizeBorderThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeSettings.html#Syncfusion_Maui_Scheduler_AppointmentResizeSettings_ResizeBorderThickness) and [ResizeBorderStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeSettings.html#Syncfusion_Maui_Scheduler_AppointmentResizeSettings_ResizeBorderStroke) properties. ResizeBorderThickness defines how thick the border appears, while ResizeBorderStroke specifies its color.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="4 5 6" %}
@@ -193,7 +193,7 @@ public partial class MainPage : ContentPage
 
 ### Appointment Resize Start
 
-The `AppointmentResizeStart` event is triggered when resizing of an appointment begins. This event occurs when the pointer is placed on a resizable edge of an appointment and the resize operation is initiated. This event can be used to validate whether the appointment can be resized before the operation proceeds. The resize operation can be cancelled by setting `e.Cancel` to true.
+The [AppointmentResizeStart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentResizeStart) event is triggered when resizing of an appointment begins. This event occurs when the pointer is placed on a resizable edge of an appointment and the resize operation is initiated. This event can be used to validate whether the appointment can be resized before the operation proceeds. The resize operation can be cancelled by setting `e.Cancel` to true.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
@@ -210,7 +210,7 @@ private void Scheduler_AppointmentResizeStart(object sender, AppointmentResizeSt
 {% endhighlight %}
 {% endtabs %}
 
-The `AppointmentResizeStartEventArgs` contains the following properties:
+The [AppointmentResizeStartEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeStartEventArgs.html) contains the following properties:
 
 - Appointment : Represents the appointment that is about to be resized.
 - Resource : Indicates the resource associated with the appointment when resource grouping is enabled.
@@ -235,7 +235,7 @@ private void Scheduler_AppointmentResizeStart(object sender, AppointmentResizeSt
 
 ### Appointment Resizing
 
-The `AppointmentResizing` event is triggered continuously while the appointment is being resized. This event is raised as the resize handle is dragged and the appointment duration changes dynamically. This event can be used to monitor the resizing process or to apply custom validation logic while the appointment duration is changing. The resizing operation can be prevented during interaction by setting `e.Cancel` to true.
+The [AppointmentResizing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentResizing) event is triggered continuously while the appointment is being resized. This event is raised as the resize handle is dragged and the appointment duration changes dynamically. This event can be used to monitor the resizing process or to apply custom validation logic while the appointment duration is changing. The resizing operation can be prevented during interaction by setting `e.Cancel` to true.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
@@ -252,7 +252,7 @@ private void Scheduler_AppointmentResizing(object sender, AppointmentResizingEve
 {% endhighlight %}
 {% endtabs %}
 
-The `AppointmentResizingEventArgs` provides the following information:
+The [AppointmentResizingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizingEventArgs.html) provides the following information:
 
 - Appointment : Represents the appointment currently being resized.
 - Resource : Indicates the resource linked to the appointment when resource grouping is applied.
@@ -261,7 +261,7 @@ The `AppointmentResizingEventArgs` provides the following information:
 
 ### Appointment Resize End
 
-The `AppointmentResizeEnd` event occurs when the resizing action is completed and the pointer is released. After this event is triggered, the scheduler updates the appointment duration according to the resized position. You can prevent this update by setting the `Cancel` property to `true`, which keeps the appointment with its original duration.
+The [AppointmentResizeEnd](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentResizeEnd) event occurs when the resizing action is completed and the pointer is released. After this event is triggered, the scheduler updates the appointment duration according to the resized position. You can prevent this update by setting the `Cancel` property to `true`, which keeps the appointment with its original duration.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
@@ -278,7 +278,7 @@ private void Scheduler_AppointmentResizeEnd(object sender, AppointmentResizeEndE
 {% endhighlight %}
 {% endtabs %}
 
-The `AppointmentResizeEndEventArgs` includes the following properties:
+The [AppointmentResizeEndEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeEndEventArgs.html) includes the following properties:
 
 - Appointment : Represents the appointment whose duration has been modified.
 - Resource : Indicates the resource associated with the appointment when grouping is enabled.
