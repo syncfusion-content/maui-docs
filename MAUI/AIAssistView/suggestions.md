@@ -486,8 +486,21 @@ Behavior and notes
 - The footer list supports horizontal scrolling and exposes small left/right scroll icons on desktop platforms; use `FooterSuggestionTemplate` to supply custom suggestion cards or chips.
 
 {% tabs %}
-{% highlight xaml %}
-<syncfusion:SfAIAssistView x:Name="assist" FooterSuggestions="{Binding FooterSuggestions}" FooterSuggestionTemplate="{StaticResource footerSuggestionTemplate}" />
+{% highlight xaml hl_lines="12-13" %}
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <DataTemplate x:Key="footerSuggestionTemplate">
+            <Border Padding="8">
+                <Label Text="Sample" />
+            </Border>
+        </DataTemplate>
+    </ResourceDictionary>
+</ContentPage.Resources>
+<ContentPage.Content>
+<syncfusion:SfAIAssistView x:Name="assist" 
+    FooterSuggestions="{Binding FooterSuggestions}" 
+    FooterSuggestionTemplate="{StaticResource footerSuggestionTemplate}" />
+</ContentPage.Content>
 {% endhighlight %}
 
 {% highlight c# %}
