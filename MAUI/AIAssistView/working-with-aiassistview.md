@@ -263,6 +263,46 @@ public class CustomAssistViewChat : AssistViewChat
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/custom-control-template-in-.net-maui-aiassistview)
 
+## Temporary Chat (Temporary Mode)
+
+The `SfAIAssistView` supports a Temporary Chat mode that provides an ephemeral conversation surface for quick, non-persistent interactions. When temporary mode is Clicked, the control clears the active `AssistItems` collection and displays a banner above the chat to indicate the temporary state. The control preserves your original `EmptyViewTemplate` and restores it when temporary mode ends.
+
+Key properties and APIs
+- **`EnableTemporaryChat`**: Set to `true` to enter Temporary Chat mode; set to `false` to exit.
+- **`TemporaryChatBannerTemplate`**: Provide a `DataTemplate` to replace the default temporary-mode banner with a custom view.
+- **`TemporaryChatBannerText`**: The default banner text when no custom banner template is provided.
+- **`ChatModeChanging` / `ChatModeChanged` events**: `ChatModeChanging` fires before the mode change (handlers can cancel by setting `Cancel = true`), and `ChatModeChanged` fires after the change completes.
+
+Behavior and notes
+- Enabling `EnableTemporaryChat` includes the temporary chat in the toolbar's new chat Button. Clicking the temporary chat routes new requests to a fresh `AssistItems` collection and displays a temporary banner. 
+
+- If `TemporaryChatBannerTemplate` is provided, the banner uses that template.
+
+{% tabs %}
+{% highlight xaml %}
+<syncfusion:SfAIAssistView x:Name="assist"
+                           EnableTemporaryChat="True"
+                           TemporaryChatBannerText="This chat will not be saved" />
+{% endhighlight %}
+
+{% highlight c# %}
+
+    public partial class MainPage : ContentPage
+    {
+        SfAIAssistView sfAIAssistView;
+        public MainPage()
+        {
+            InitializeComponent();
+            sfAIAssistView = new SfAIAssistView();
+            sfAIAssistView.EnableTemporaryChat = true;
+            sfAIAssistView.TemporaryChatBannerText="This chat will not be saved"
+            this.Content = sfAIAssistView;
+        }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Edit option for request item
 
 The `SfAIAssistView` allows you to edit a previously sent request. This feature lets users review and refine the prompt and resubmit from the editor to get more accurate responses. Each request shows an Edit icon; when tapped, the request text is placed in the editor (InputView) to redefine.
@@ -470,7 +510,7 @@ The editor action button and its popup are customizable beyond the `ActionButton
             this.sfAIAssistView.ActionButtonIcon = trueImageSource.FromFile("dotmenu.png"),
             this.sfAIAssistView.ActionButtonPosition = ActionButtonPosition.End; // or   ActionButtonPosition.Start,
             this.sfAIAssistView.AssistItems = this.viewModel.AssistItems,
-            this.sfAIAssistView.ActionButtons = new     ObservableCollection<ActionButton>
+            this.sfAIAssistView.ActionButtons = new ObservableCollection<ActionButton>
             {
                 new ActionButton
                 {
