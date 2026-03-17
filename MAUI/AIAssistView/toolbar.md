@@ -61,13 +61,13 @@ The `SfAIAssistView` supports a Temporary Chat mode that provides an ephemeral c
 N> Enabling `EnableTemporaryChat` includes the temporary chat in the toolbar's new chat Button. Clicking the temporary chat routes new requests to a fresh `AssistItems` collection and displays a temporary banner.
 
 {% tabs %}
-{% highlight xaml hl_lines="2 3"%}
+{% highlight xaml hl_lines="2 3" %}
 <syncfusion:SfAIAssistView x:Name="assist"
                                EnableTemporaryChat="True"
                                TemporaryChatBannerText="This chat will not be saved" />
 {% endhighlight %}
 
-{% highlight c# hl_lines="8 9"%}
+{% highlight c# hl_lines="8 9" %}
 
     public partial class MainPage : ContentPage
     {
