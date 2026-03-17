@@ -35,19 +35,8 @@ public class GettingStartedViewModel : INotifyPropertyChanged
     public AIAssistViewModel()
     {
         ...
-        this.conversationItems = new ObservableCollection<AssistConversationItem>
-        {
-            new AssistConversationItem 
-            { 
-                Text = "Hello! How can I help you?", 
-                Author = "Assistant" 
-            },
-            new AssistConversationItem 
-            { 
-                Text = "Can you explain machine learning?", 
-                Author = "User" 
-            }
-        };
+        this.conversationItems = new ObservableCollection<AssistConversationItem>();
+        this.InitializeConversationHistory();
         ...
     }
 
@@ -59,6 +48,57 @@ public class GettingStartedViewModel : INotifyPropertyChanged
         {
             this.conversationItems = value;
             this.RaisePropertyChanged(nameof(ConversationItems));
+        }
+    }
+    ...
+
+    public void InitializeConversationHistory()
+    {
+        DateTime baseTime = DateTime.Now;
+
+        string[] topics = new string[]
+        {
+            "listening",
+            "Hey AI, can you tell me what Maui is?",
+        };
+
+        string[] responses = new string[]
+        {
+            "Types of Listening : For a good communication, it is not only enough to convey the information efficiently, but it also needs to include good listening skill. Common types of Listening are Active listening and Passive listening.",
+            "MAUI stands for .NET Multi-platform APP UI. It's is a framework that allowws you to create cross-platform applications using a single codebase.",
+        };
+
+        for (int i = 0; i < 2; i++)
+        {
+            var dateTime = baseTime.AddDays(-i);
+            var request = new AssistItem
+            {
+                Text = topics[i],
+                IsRequested = true,
+                DateTime = dateTime,
+            };
+
+            var response = new AssistItem
+            {
+                Text = responses[i],
+                IsRequested = false,
+                DateTime = dateTime,
+                RequestItem = request,
+            };
+
+            var title = topics[i];
+            var conversationItem = new AssistConversationItem
+            {
+                Title = title,
+                DateTime = baseTime.AddDays(-i),
+                AssistItems = new ObservableCollection<IAssistItem>
+                {
+                    request,
+                    response,
+                }
+            };
+
+            this.ConversationItems.Add(conversationItem);
         }
     }
     ...

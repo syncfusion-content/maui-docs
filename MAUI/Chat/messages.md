@@ -1263,7 +1263,9 @@ namespace MauiChat
 {% endhighlight %}
 {% endtabs %}
 
-N> The `IsPinned` property in messages is used to mark a message as pinned manually at initial load.
+N> 
+* The `IMessage.IsPinned` property in messages is used to mark a message as pinned manually at initial load.
+* The pinned messages are stored in the `PinnedMessages` property of `SfChat`, which is a read-only collection.
 
 ### Restricting pinned message container visibility
 
@@ -1395,7 +1397,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-### Events and pinned messages
+### Events for pinned messages
 
 The `SfChat` control triggers the `MessagePinned` and `MessageUnpinned` events when messages are pinned and unpinned respectively. The `MessagePinned` event has the `MessagePinnedEventArgs` and `MessageUnpinned` event has the `MessageUnpinnedEventArgs`. Each event args contains the message that was pinned or unpinned.
 
@@ -1426,8 +1428,6 @@ private void OnMessageUnpinned(object sender, MessageUnpinnedEventArgs e)
 
 {% endhighlight %}
 {% endtabs %}
-
-N> The pinned messages are stored in the `PinnedMessages` property of `SfChat`, which is a read-only collection.
 
 ## Template for message
 
