@@ -1224,6 +1224,211 @@ namespace MauiChat
 
 ![DeliveryState Customization in .NET MAUI Chat](Images/messages/maui-chat-delivery-state-customization.gif)
 
+## Pin message
+
+The `SfChat` control allows you to pin messages using the `AllowPinning` property. To enable pin message support, set the `AllowPinning` property to `true`.
+
+{% tabs %}
+{% highlight xaml hl_lines="4" %}
+
+<sfChat:SfChat x:Name="sfChat"
+               Messages="{Binding Messages}"
+               CurrentUser="{Binding CurrentUser}"
+               AllowPinning="True" />
+
+{% endhighlight %}
+{% highlight c# hl_lines="16" %}
+
+using Syncfusion.Maui.Chat;
+
+namespace MauiChat
+{
+    public partial class MainPage : ContentPage
+    {
+        SfChat sfChat;
+        ViewModel viewModel;
+        public MainPage()
+        {
+            InitializeComponent();
+            this.sfChat = new SfChat();
+            this.viewModel = new ViewModel();
+            this.sfChat.Messages = viewModel.Messages;
+            this.sfChat.CurrentUser = viewModel.CurrentUser;
+            this.sfChat.AllowPinning = true;
+            this.Content = sfChat;
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+N> 
+* The `IMessage.IsPinned` property in messages is used to mark a message as pinned manually at initial load.
+* The pinned messages are stored in the `PinnedMessages` property of `SfChat`, which is a read-only collection.
+
+### Restricting pinned message container visibility
+
+The `SfChat` control allows you to restrict the display of the pinned message container by setting the `ShowPinnedMessagesContainer` property to `false`. By default, it is set to `true`.
+
+{% tabs %}
+{% highlight xaml hl_lines="5" %}
+
+<sfChat:SfChat x:Name="sfChat"
+               Messages="{Binding Messages}"
+               CurrentUser="{Binding CurrentUser}"
+               AllowPinning="True"
+               ShowPinnedMessagesContainer="False" />
+
+{% endhighlight %}
+{% highlight c# hl_lines="17" %}
+
+using Syncfusion.Maui.Chat;
+
+namespace MauiChat
+{
+    public partial class MainPage : ContentPage
+    {
+        SfChat sfChat;
+        ViewModel viewModel;
+        public MainPage()
+        {
+            InitializeComponent();
+            this.sfChat = new SfChat();
+            this.viewModel = new ViewModel();
+            this.sfChat.Messages = viewModel.Messages;
+            this.sfChat.CurrentUser = viewModel.CurrentUser;
+            this.sfChat.AllowPinning = true;
+            this.sfChat.ShowPinnedMessagesContainer = false;
+            this.Content = sfChat;
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Customizing pinned message view
+
+#### Pinned container height customization
+
+The `SfChat` control allows you to set the height of the pinned message container by using the `PinnedContainerHeight` property. The default value is `48d`.
+
+{% tabs %}
+{% highlight xaml hl_lines="5" %}
+
+<sfChat:SfChat x:Name="sfChat"
+               Messages="{Binding Messages}"
+               CurrentUser="{Binding CurrentUser}"
+               AllowPinning="True"
+               PinnedContainerHeight="80" />
+
+{% endhighlight %}
+{% highlight c# hl_lines="13" %}
+
+public partial class MainPage : ContentPage
+{
+    SfChat sfChat;
+    ViewModel viewModel;
+    public MainPage()
+    {
+        InitializeComponent();
+        this.sfChat = new SfChat();
+        this.viewModel = new ViewModel();
+        this.sfChat.Messages = viewModel.Messages;
+        this.sfChat.CurrentUser = viewModel.CurrentUser;
+        this.sfChat.AllowPinning = true;
+        this.sfChat.PinnedContainerHeight = 80;
+        this.Content = sfChat;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+#### Pinned message template
+
+The `SfChat` control allows to customize the messages displayed in the pinned message container by using the `PinnedMessageTemplate` property.
+
+{% tabs %}
+{% highlight xaml hl_lines="12" %}
+
+    <ContentPage.Resources>
+        <DataTemplate x:Key="PinnedTemplate">
+            ...
+        </DataTemplate>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <sfChat:SfChat x:Name="sfChat"
+                Messages="{Binding Messages}"
+                CurrentUser="{Binding CurrentUser}"
+                AllowPinning="True"
+                PinnedMessageTemplate="{StaticResource PinnedTemplate}" />
+    </ContentPage.Content>
+
+{% endhighlight %}
+{% highlight c# hl_lines="12" %}
+
+public partial class MainPage : ContentPage
+{
+    SfChat sfChat;
+    ViewModel viewModel;
+    public MainPage()
+    {
+        InitializeComponent();
+        this.viewModel = new ViewModel();
+        this.sfChat.Messages = viewModel.Messages;
+        this.sfChat.CurrentUser = viewModel.CurrentUser;
+        this.sfChat.AllowPinning = true;
+        this.sfChat.PinnedMessageTemplate = this.CreatePinnedMessageTemplate();
+        this.Content = sfChat;
+    }
+
+    private DataTemplate CreatePinnedMessageTemplate()
+    {
+        return new DataTemplate(() =>
+        {
+            ...
+        });
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Events for pinned messages
+
+The `SfChat` control triggers the `MessagePinned` and `MessageUnpinned` events when messages are pinned and unpinned respectively. The `MessagePinned` event has the `MessagePinnedEventArgs` and `MessageUnpinned` event has the `MessageUnpinnedEventArgs`. Each event args contains the message that was pinned or unpinned.
+
+{% tabs %}
+{% highlight xaml hl_lines="5, 6" %}
+    
+    <sfChat:SfChat x:Name="sfChat"
+                   Messages="{Binding Messages}"
+                   CurrentUser="{Binding CurrentUser}"
+                   AllowPinning="True"
+                   MessagePinned="OnMessagePinned"
+                   MessageUnpinned="OnMessageUnpinned" />
+
+{% endhighlight %}
+{% highlight c#  hl_lines="1, 2" %}
+
+sfChat.MessagePinned += OnMessagePinned;
+sfChat.MessageUnpinned += OnMessageUnpinned;
+
+private void OnMessagePinned(object sender, MessagePinnedEventArgs e)
+{
+    // Handle message pinned event
+}
+private void OnMessageUnpinned(object sender, MessageUnpinnedEventArgs e)
+{
+    // Handle message unpinned event
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Template for message
 
 `SfChat` allows the loading of custom templates for all incoming and outgoing messages using the [MessageTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageTemplate) property. You can customize the message views as per your liking with the support to load a template for each individual message by using a custom template selector derived from [ChatMessageTemplateSelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ChatMessageTemplateSelector.html) and assigning it to `MessageTemplate` as shown below. Load custom templates based on the message type, text, author, etc. The limits are endless.
