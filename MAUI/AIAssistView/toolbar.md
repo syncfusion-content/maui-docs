@@ -13,33 +13,33 @@ This section explains how to define and customize the toolbar in the [SfAIAssist
 
 ## AssistView Toolbar
 
-`SfAIAssistView` exposes a lightweight header toolbar that can be enabled and customized for conversation-level actions and titles. The toolbar is intended for use when `ShowToolbar` is enabled.
+`SfAIAssistView` exposes a header toolbar that can be enabled and customized for conversation-level actions and titles. The toolbar will be visible when the `ShowToolbar` is set to `true`.
 
 Key properties and APIs
-- **`ShowToolbar`**: Set to `true` to display the toolbar.
-- **`ToolbarTitle`**: A simple string title you can bind or set to display centered/left in the toolbar.
+- **`ShowToolbar`**: Set to `false` to hide the toolbar. The default value is `true`.
+- **`ToolbarTitle`**: A simple string title you can bind or set to display in the toolbar.
 - **`ToolbarHeight`**: Set a custom height for the toolbar area.
 
 {% tabs %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2-4" %}
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2,3,4" %}
     <syncfusion:SfAIAssistView 
                 ShowToolbar="True" 
-                ToolbarTitle="Support Bot" 
-                ToolbarHeight="56">
+                ToolbarTitle="AI AssistView" 
+                ToolbarHeight="50">
     </syncfusion:SfAIAssistView>
 {% endhighlight %}
 
-{% highlight c# hl_lines="6-8" %}
+{% highlight c# hl_lines="6,7,8" %}
 
     SfAIAssistView sfAIAssistView; 
     public MainPage() 
     { 
         InitializeComponent(); 
         this.sfAIAssistView = new SfAIAssistView();
-        this.sfAIAssistView.ToolbarTitle = "Support Bot";
+        this.sfAIAssistView.ToolbarTitle = "AI AssistView";
         this.sfAIAssistView.ShowToolbar = true;
-        this.sfAIAssistView.ToolbarHeight = 56;
+        this.sfAIAssistView.ToolbarHeight = 50;
         this.Content = sfAIAssistView; 
      }
 
@@ -50,11 +50,9 @@ Key properties and APIs
 
 The `SfAIAssistView` supports a Temporary Chat mode that provides an ephemeral conversation surface for quick, non-persistent interactions. When temporary mode is Clicked, the control clears the active `AssistItems` collection and displays a banner above the chat to indicate the temporary state. The control preserves your original `EmptyViewTemplate` and restores it when temporary mode ends.
 
-Key properties and APIs
-- **`EnableTemporaryChat`**: Set to `true` to enter Temporary Chat mode; set to `false` to exit.
+- **`EnableTemporaryChat`**: Set to `true` to enable Temporary Chat mode; set to `false` to disable.
 - **`TemporaryChatBannerTemplate`**: Provide a `DataTemplate` to replace the default temporary-mode banner with a custom view.
 - **`TemporaryChatBannerText`**: The default banner text when no custom banner template is provided.
-- **`ChatModeChanging` / `ChatModeChanged` events**: `ChatModeChanging` fires before the mode change (handlers can cancel by setting `Cancel = true`), and `ChatModeChanged` fires after the change completes.
 
 N> Enabling `EnableTemporaryChat` includes the temporary chat in the toolbar's new chat Button. Clicking the temporary chat routes new requests to a fresh `AssistItems` collection and displays a temporary banner.
 

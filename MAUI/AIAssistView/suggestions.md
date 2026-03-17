@@ -475,15 +475,10 @@ public partial class MainPage : ContentPage
 
 ## Footer suggestions (Editor suggestions)
 
-`SfAIAssistView` supports a dedicated set of suggestions that appear above the input area (footer). These Footer suggestions are intended to help users compose messages quickly and are configured separately from the header or response suggestions.
+`SfAIAssistView` supports a dedicated set of suggestions that appear above the input area. These Footer suggestions are intended to help users compose messages quickly and are configured separately from the header or response suggestions.
 
-Key properties and APIs
 - **`FooterSuggestions`**: Bind an `IList<ISuggestion>` to this property to populate the footer suggestion list.
 - **`FooterSuggestionTemplate`**: Provide a `DataTemplate` to customize each footer suggestion item UI.
-
-Behavior and notes
-- Footer suggestions are rendered only when `FooterSuggestions` contains items. Tapping a footer suggestion raises the same `SuggestionItemSelected` pipeline as header/response suggestions (the assist view will either auto-send the suggestion or provide it to your `SuggestionItemSelected` handler depending on `CancelRequest`).
-- The footer list supports horizontal scrolling and exposes small left/right scroll icons on desktop platforms; use `FooterSuggestionTemplate` to supply custom suggestion cards or chips.
 
 {% tabs %}
 {% highlight xaml hl_lines="12-13" %}
@@ -491,7 +486,7 @@ Behavior and notes
     <ResourceDictionary>
         <DataTemplate x:Key="footerSuggestionTemplate">
             <Border Padding="8">
-                <Label Text="Sample" />
+                <Label Text="{Binding Text}" />
             </Border>
         </DataTemplate>
     </ResourceDictionary>
@@ -514,7 +509,10 @@ Behavior and notes
         sfAIAssistView.FooterSuggestionTemplate = new DataTemplate(() =>
         {
             var border = new Border { Padding = 8 };
-            border.Content = new Label { Text = "Sample" };
+            var label = new Label();
+            label.SetBinding(Label.TextProperty, new Binding("Text"));
+            border.Content = label;
+            
             return border;
         });
         this.Content = sfAIAssistView;
