@@ -260,9 +260,6 @@ The [ClearButtonClicked]() event is raised when the user activates the clear but
 {% endhighlight %}
 {% endtabs %}
 
-{% endhighlight %}
-{% endtabs %}
-
 `ClearButtonClicked` event can be Handled in C# as follows:
 
 {% tabs %}
@@ -272,6 +269,9 @@ The [ClearButtonClicked]() event is raised when the user activates the clear but
     {
         await DisplayAlert("Message", "Clear Button Clicked", "ok");
     }
+    
+{% endhighlight %}
+{% endtabs %}
 
 ## Stroke
 
