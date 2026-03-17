@@ -39,7 +39,7 @@ N>
 
 ## Appointment Tooltip Settings
 
-The AppointmentToolTipSettings property allows you to customize the appearance and behavior of appointment tooltips. The following settings can be configured:
+The [AppointmentToolTipSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_AppointmentToolTipSettings) property allows you to customize the appearance and behavior of appointment tooltips. The following settings can be configured:
  
 - **Background** – Defines the background color of the tooltip.
  
