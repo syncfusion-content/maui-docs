@@ -164,7 +164,7 @@ public partial class MainPage : ContentPage
 
 ### Resize Border Customization
  
-The border displayed around an appointment during resizing can be customized using the [ResizeBorderThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeSettings.html#Syncfusion_Maui_Scheduler_AppointmentResizeSettings_ResizeBorderThickness) and [ResizeBorderStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeSettings.html#Syncfusion_Maui_Scheduler_AppointmentResizeSettings_ResizeBorderStroke) properties. ResizeBorderThickness defines how thick the border appears, while ResizeBorderStroke specifies its color.
+The border displayed around an appointment during resizing can be customized using the [ResizeBorderThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeSettings.html#Syncfusion_Maui_Scheduler_AppointmentResizeSettings_ResizeBorderThickness) and [ResizeBorderStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeSettings.html#Syncfusion_Maui_Scheduler_AppointmentResizeSettings_ResizeBorderStroke) properties. `ResizeBorderThickness` defines how thick the border appears, while `ResizeBorderStroke` specifies its color.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="4 5 6" %}
@@ -212,9 +212,9 @@ private void Scheduler_AppointmentResizeStart(object sender, AppointmentResizeSt
 
 The [AppointmentResizeStartEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeStartEventArgs.html) contains the following properties:
 
-- Appointment : Represents the appointment that is about to be resized.
-- Resource : Indicates the resource associated with the appointment when resource grouping is enabled.
-- ResizeEdge : Specifies the edge from which the resizing action starts. The values include Top, Bottom, Left, and Right.
+- [Appointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeStartEventArgs.html#Syncfusion_Maui_Scheduler_AppointmentResizeStartEventArgs_Appointment) : Represents the appointment that is about to be resized.
+- [Resource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeStartEventArgs.html#Syncfusion_Maui_Scheduler_AppointmentResizeStartEventArgs_Resource) : Indicates the resource associated with the appointment when resource grouping is enabled.
+- [ResizeEdge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeStartEventArgs.html#Syncfusion_Maui_Scheduler_AppointmentResizeStartEventArgs_ResizeEdge) : Specifies the edge from which the resizing action starts. The values include Top, Bottom, Left, and Right.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
@@ -254,10 +254,10 @@ private void Scheduler_AppointmentResizing(object sender, AppointmentResizingEve
 
 The [AppointmentResizingEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizingEventArgs.html) provides the following information:
 
-- Appointment : Represents the appointment currently being resized.
-- Resource : Indicates the resource linked to the appointment when resource grouping is applied.
-- ResizeEdge : Specifies the edge used for resizing the appointment. The values include Top, Bottom, Left, and Right.
-- ResizingTime : Represents the date time value that corresponds to the current resize position.
+- [Appointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizingEventArgs.html#Syncfusion_Maui_Scheduler_AppointmentResizingEventArgs_Appointment) : Represents the appointment currently being resized.
+- [Resource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizingEventArgs.html#Syncfusion_Maui_Scheduler_AppointmentResizingEventArgs_Resource) : Indicates the resource linked to the appointment when resource grouping is applied.
+- [ResizeEdge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizingEventArgs.html#Syncfusion_Maui_Scheduler_AppointmentResizingEventArgs_ResizeEdge) : Specifies the edge used for resizing the appointment. The values include Top, Bottom, Left, and Right.
+- [ResizingTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizingEventArgs.html#Syncfusion_Maui_Scheduler_AppointmentResizingEventArgs_ResizingTime) : Represents the date time value that corresponds to the current resize position.
 
 ### Appointment Resize End
 
@@ -280,10 +280,10 @@ private void Scheduler_AppointmentResizeEnd(object sender, AppointmentResizeEndE
 
 The [AppointmentResizeEndEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeEndEventArgs.html) includes the following properties:
 
-- Appointment : Represents the appointment whose duration has been modified.
-- Resource : Indicates the resource associated with the appointment when grouping is enabled.
-- ResizeEdge : Specifies the edge from which the appointment was resized. The values include Top, Bottom, Left, and Right.
-- ResizedTime : Represents the final date time value after the resizing operation. The final resized time can be modified within this event if necessary by assigning a new value to the ResizedTime property.
+- [Appointment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeEndEventArgs.html#Syncfusion_Maui_Scheduler_AppointmentResizeEndEventArgs_Appointment) : Represents the appointment whose duration has been modified.
+- [Resource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeEndEventArgs.html#Syncfusion_Maui_Scheduler_AppointmentResizeEndEventArgs_Resource) : Indicates the resource associated with the appointment when grouping is enabled.
+- [ResizeEdge](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeEndEventArgs.html#Syncfusion_Maui_Scheduler_AppointmentResizeEndEventArgs_ResizeEdge) : Specifies the edge from which the appointment was resized. The values include Top, Bottom, Left, and Right.
+- [ResizedTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.AppointmentResizeEndEventArgs.html#Syncfusion_Maui_Scheduler_AppointmentResizeEndEventArgs_ResizedTime) : Represents the final date time value after the resizing operation. The final resized time can be modified within this event if necessary by assigning a new value to the ResizedTime property.
 
 {% tabs %}
 {% highlight xaml tabtitle="XAML" hl_lines="3" %}
