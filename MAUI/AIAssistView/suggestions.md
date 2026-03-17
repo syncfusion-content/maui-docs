@@ -481,7 +481,7 @@ public partial class MainPage : ContentPage
 - **`FooterSuggestionTemplate`**: Provide a `DataTemplate` to customize each footer suggestion item UI.
 
 {% tabs %}
-{% highlight xaml hl_lines="12-13" %}
+{% highlight xaml hl_lines="12 13" %}
 <ContentPage.Resources>
     <ResourceDictionary>
         <DataTemplate x:Key="footerSuggestionTemplate">

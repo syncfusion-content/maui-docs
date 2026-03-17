@@ -12,10 +12,9 @@ documentation: ug
 This section explains how to define and customize the toolbar in the [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html).
 
 ## AssistView Toolbar
+.
+`SfAIAssistView` exposes a header toolbar that can be enabled and customized for conversation-level actions and titles. The toolbar will not be visible when the `ShowToolbar` is set to `false`.
 
-`SfAIAssistView` exposes a header toolbar that can be enabled and customized for conversation-level actions and titles. The toolbar will be visible when the `ShowToolbar` is set to `true`.
-
-Key properties and APIs
 - **`ShowToolbar`**: Set to `false` to hide the toolbar. The default value is `true`.
 - **`ToolbarTitle`**: A simple string title you can bind or set to display in the toolbar.
 - **`ToolbarHeight`**: Set a custom height for the toolbar area.
@@ -46,24 +45,29 @@ Key properties and APIs
 {% endhighlight %}
 {% endtabs %}
 
+## New chat button (toolbar)
+
+The toolbar now includes a chat option that provides both New Chat. When clicked, it opens a new chat window where the user can start an entirely new session, while the previous session is preserved in the conversation history.
+
 ## Temporary Chat (Temporary Mode)
 
 The `SfAIAssistView` supports a Temporary Chat mode that provides an ephemeral conversation surface for quick, non-persistent interactions. When temporary mode is Clicked, the control clears the active `AssistItems` collection and displays a banner above the chat to indicate the temporary state. The control preserves your original `EmptyViewTemplate` and restores it when temporary mode ends.
 
-- **`EnableTemporaryChat`**: Set to `true` to enable Temporary Chat mode; set to `false` to disable.
+- **`EnableTemporaryChat`**: Set to `true` to enable Temporary Chat mode;
+
 - **`TemporaryChatBannerTemplate`**: Provide a `DataTemplate` to replace the default temporary-mode banner with a custom view.
 - **`TemporaryChatBannerText`**: The default banner text when no custom banner template is provided.
 
 N> Enabling `EnableTemporaryChat` includes the temporary chat in the toolbar's new chat Button. Clicking the temporary chat routes new requests to a fresh `AssistItems` collection and displays a temporary banner.
 
 {% tabs %}
-{% highlight xaml %}
+{% highlight xaml hl_lines="2 3"%}
 <syncfusion:SfAIAssistView x:Name="assist"
-                           EnableTemporaryChat="True"
-                           TemporaryChatBannerText="This chat will not be saved" />
+                               EnableTemporaryChat="True"
+                               TemporaryChatBannerText="This chat will not be saved" />
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight c# hl_lines="8 9"%}
 
     public partial class MainPage : ContentPage
     {
@@ -80,3 +84,32 @@ N> Enabling `EnableTemporaryChat` includes the temporary chat in the toolbar's n
 
 {% endhighlight %}
 {% endtabs %}
+
+## Events for chat mode
+
+`SfAIAssistView` raises two events when the user changes the chat mode via the toolbar: `ChatModeChanging` (raised before the change) and `ChatModeChanged` (raised after the change).
+
+- **`ChatModeChanging`**: provides a `ChatModeChangingEventArgs`  with the `ChatMode` that the control is about to transition to. Handlers can cancel the change by setting `e.Cancel = true`.
+- **`ChatModeChanged`**: provides a `ChatModeChangedEventArgs` with the `ChatMode` that the control has transitioned to.
+
+{% highlight c# %}
+    private void OnChatModeChanging(object sender,  ChatModeChangingEventArgs e)
+    {
+        if (e.ChatMode == ChatMode.TemporaryChat)
+        {
+            e.Cancel = true; 
+        }
+    }
+
+    private void OnChatModeChanged(object sender, ChatModeChangedEventArgs e)
+    {
+        if (e.ChatMode == ChatMode.TemporaryChat)
+        {
+            // Temporary chat is active: maybe show custom banner or reset local state
+        }
+        else
+        {
+            // New chat mode active: restore saved templates/state if needed
+        }
+    }
+{% endhighlight %}
