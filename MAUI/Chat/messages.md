@@ -1226,7 +1226,8 @@ namespace MauiChat
 
 ## Pin message
 
-The `SfChat` control allows you to pin messages using the `AllowPinning` property. To enable pin message support, set the `AllowPinning` property to `true`.
+The [`SfChat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html) control allows you to pin messages using the [`AllowPinning`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_AllowPinning) property.
+To enable pin message support, set the `AllowPinning` property to `true`.
 
 {% tabs %}
 {% highlight xaml hl_lines="4" %}
@@ -1247,6 +1248,7 @@ namespace MauiChat
     {
         SfChat sfChat;
         ViewModel viewModel;
+
         public MainPage()
         {
             InitializeComponent();
@@ -1259,17 +1261,17 @@ namespace MauiChat
         }
     }
 }
-
 {% endhighlight %}
 {% endtabs %}
 
 N> 
-* The `IMessage.IsPinned` property in messages is used to mark a message as pinned manually at initial load.
-* The pinned messages are stored in the `PinnedMessages` property of `SfChat`, which is a read-only collection.
+* The [`IMessage.IsPinned`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IMessage.html#Syncfusion_Maui_Chat_IMessage_IsPinned) property is used to mark a message as pinned during initial load.
+* Pinned messages are stored in the read‑only [`SfChat.PinnedMessages`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_PinnedMessages) collection.
 
 ### Restricting pinned message container visibility
 
-The `SfChat` control allows you to restrict the display of the pinned message container by setting the `ShowPinnedMessagesContainer` property to `false`. By default, it is set to `true`.
+You can hide the pinned message container using the [`ShowPinnedMessagesContainer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowPinnedMessagesContainer) property.
+By default, it is set to `true`.
 
 {% tabs %}
 {% highlight xaml hl_lines="5" %}
@@ -1291,6 +1293,7 @@ namespace MauiChat
     {
         SfChat sfChat;
         ViewModel viewModel;
+
         public MainPage()
         {
             InitializeComponent();
@@ -1312,7 +1315,7 @@ namespace MauiChat
 
 #### Pinned container height customization
 
-The `SfChat` control allows you to set the height of the pinned message container by using the `PinnedContainerHeight` property. The default value is `48d`.
+The `SfChat` control allows you to set the height of the pinned message container by using the [`PinnedContainerHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_PinnedContainerHeight) property. The default value is `48d`.
 
 {% tabs %}
 {% highlight xaml hl_lines="5" %}
@@ -1330,6 +1333,7 @@ public partial class MainPage : ContentPage
 {
     SfChat sfChat;
     ViewModel viewModel;
+
     public MainPage()
     {
         InitializeComponent();
@@ -1342,13 +1346,13 @@ public partial class MainPage : ContentPage
         this.Content = sfChat;
     }
 }
-
 {% endhighlight %}
 {% endtabs %}
 
 #### Pinned message template
 
-The `SfChat` control allows to customize the messages displayed in the pinned message container by using the `PinnedMessageTemplate` property.
+You can customize pinned message appearance using the 
+[`PinnedMessageTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_PinnedMessageTemplate) property.
 
 {% tabs %}
 {% highlight xaml hl_lines="12" %}
@@ -1369,11 +1373,11 @@ The `SfChat` control allows to customize the messages displayed in the pinned me
 
 {% endhighlight %}
 {% highlight c# hl_lines="12" %}
-
 public partial class MainPage : ContentPage
 {
     SfChat sfChat;
     ViewModel viewModel;
+
     public MainPage()
     {
         InitializeComponent();
@@ -1393,13 +1397,12 @@ public partial class MainPage : ContentPage
         });
     }
 }
-
 {% endhighlight %}
 {% endtabs %}
 
 ### Events for pinned messages
 
-The `SfChat` control triggers the `MessagePinned` and `MessageUnpinned` events when messages are pinned and unpinned respectively. The `MessagePinned` event has the `MessagePinnedEventArgs` and `MessageUnpinned` event has the `MessageUnpinnedEventArgs`. Each event args contains the message that was pinned or unpinned.
+The `SfChat` control triggers the [MessagePinned](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessagePinned) and [MessageUnpinned](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageUnpinned) events when messages are pinned and unpinned respectively. The `MessagePinned` event has the  [MessagePinnedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessagePinnedEventArgs.html) and `MessageUnpinned` event has the [MessageUnpinnedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageUnpinnedEventArgs.html). Each event args contains the message that was pinned or unpinned.
 
 {% tabs %}
 {% highlight xaml hl_lines="5, 6" %}
@@ -1412,8 +1415,7 @@ The `SfChat` control triggers the `MessagePinned` and `MessageUnpinned` events w
                    MessageUnpinned="OnMessageUnpinned" />
 
 {% endhighlight %}
-{% highlight c#  hl_lines="1, 2" %}
-
+{% highlight c# hl_lines="1, 2" %}
 sfChat.MessagePinned += OnMessagePinned;
 sfChat.MessageUnpinned += OnMessageUnpinned;
 
@@ -1421,11 +1423,11 @@ private void OnMessagePinned(object sender, MessagePinnedEventArgs e)
 {
     // Handle message pinned event
 }
+
 private void OnMessageUnpinned(object sender, MessageUnpinnedEventArgs e)
 {
     // Handle message unpinned event
 }
-
 {% endhighlight %}
 {% endtabs %}
 

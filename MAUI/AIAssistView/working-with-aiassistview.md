@@ -337,7 +337,7 @@ public partial class MainPage : ContentPage
 ![EditorView Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-editorviewtemplate.png)
 
 ### Editor customization
-The `SfAIAssistView` allows users to customize the editor’s visual surface by accessing the [RequestEditor]() only in the code behind C#.
+The `SfAIAssistView` allows users to customize the editor’s visual surface by accessing the [RequestEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestEditor) only in the code behind C#.
 
 {% tabs %}
 {% highlight c# hl_lines="10" %}
@@ -360,18 +360,18 @@ public partial class MainPage : ContentPage
 <img src="Images/working-with-aiassistview/maui-aiassitview-Editor-customization.png" width="444"/>
 
 ### Accessing the editor in AssistView
-The `SfAIAssistView` allows you to access the editor by using [RequestEditorView](), which helps you to customize the editor’s visual elements and overall appearance wherever it is used.
+The `SfAIAssistView` allows you to access the editor by using [RequestEditorView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.RequestEditorView.html), which helps you to customize the editor’s visual elements and overall appearance wherever it is used.
 
 ## Attachment Preview in EditorView
 
-The `SfAIAssistView` allows you to add files and images as attachments in the editor using [Attachments]() property. This feature lets you show the preview for attachments added in the editor. `Attachments` are added as [AssistAttachment]() which has the following members:
+The `SfAIAssistView` allows you to add files and images as attachments in the editor using [Attachments](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_Attachments) property. This feature lets you show the preview for attachments added in the editor. `Attachments` are added as [AssistAttachment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistAttachment.html) which has the following members:
 
-* [FileName]() : Displays the name of the file.
-* [FileSize]() : Displays the size of the file.
-* [FilePath]() : Displays the local path of the file.
-* [FileExtension]() : Displays the type of the file using the extension.
-* [FileContent]() : Displays the content of the file.
-* [FilePreviewIcon]() : Displays the preview icon for the file.
+* [FileName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistAttachment.html#Syncfusion_Maui_AIAssistView_AssistAttachment_FileName) : Displays the name of the file.
+* [FileSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistAttachment.html#Syncfusion_Maui_AIAssistView_AssistAttachment_FileSize) : Displays the size of the file.
+* [FilePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistAttachment.html#Syncfusion_Maui_AIAssistView_AssistAttachment_FilePath) : Displays the local path of the file.
+* [FileExtension](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistAttachment.html#Syncfusion_Maui_AIAssistView_AssistAttachment_FileExtension) : Displays the type of the file using the extension.
+* [FileContent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistAttachment.html#Syncfusion_Maui_AIAssistView_AssistAttachment_FileContent) : Displays the content of the file.
+* [FilePreviewIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistAttachment.html#Syncfusion_Maui_AIAssistView_AssistAttachment_FilePreviewIcon) : Displays the preview icon for the file.
 
 {% tabs %}
 {% highlight xaml hl_lines="3" %}
@@ -453,7 +453,7 @@ internal class ViewModel : INotifyPropertyChanged
 
 ### Max Attachment Count
 
-The `SfAIAssistView` control allows you to control the number of attachments using the [MaxAttachmentCount]() property. This feature allows us to restrict the number of attachments that can be added to the `Attachments`. The default value is 10.
+The `SfAIAssistView` control allows you to control the number of attachments using the [MaxAttachmentCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_MaxAttachmentCount) property. This feature allows us to restrict the number of attachments that can be added to the `Attachments`. The default value is 10.
 
 {% tabs %}
 {% highlight xaml hl_lines="4" %}
@@ -488,7 +488,7 @@ public partial class MainPage : ContentPage
 
 ### Attachment Item Template
 
-The `SfAIAssistView` control allows you to customize the preview for the attachments by using the [AttachmentItemTemplate]() property. This property lets you define a custom layout for the attachment preview UI.
+The `SfAIAssistView` control allows you to customize the preview for the attachments by using the [AttachmentItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_AttachmentItemTemplate) property. This property lets you define a custom layout for the attachment preview UI.
 
 {% tabs %}
 {% highlight xaml hl_lines="13" %}

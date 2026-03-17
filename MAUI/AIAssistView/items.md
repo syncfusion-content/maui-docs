@@ -430,7 +430,7 @@ The `SfAIAssistView` control includes a built-in event called [CardTapped](https
 
 ## Attachment item
 
-The [AssistAttachmentItem]() is used to display the preview for a file or an image as a item. Using the [Attachments]() property, you can display the desired attachments as item in the AI AssistView control.
+The [AssistAttachmentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistAttachmentItem.html) is used to display the preview for a file or an image as a item. Using the [Attachments](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_Attachments) property, you can display the desired attachments as item in the AI AssistView control.
 
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="8" %}
@@ -478,13 +478,13 @@ public class ViewModel : INotifyPropertyChanged
 
 ## AttachmentTapped Event and Command
 
-The [SfAIAssistView]() control includes a built-in event and command to listen for tap interactions in the attachment preview. The tapped attachment item can be accessed through the [AttachmentTappedEventArgs](). The `AttachmentTappedEventArgs` has the following member:
+The `SfAIAssistView` control includes a built-in event and command to listen for tap interactions in the attachment preview. The tapped attachment item can be accessed through the [AttachmentTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AttachmentTappedEventArgs.html). The `AttachmentTappedEventArgs` has the following member:
 
  * [Attachment]() : Refers to the tapped attachment item.
 
 ### AttachmentTapped Event
 
-The [AttachmentTapped]() event is triggered when a preview attachment item is tapped.
+The [AttachmentTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_AttachmentTapped) event is triggered when a preview attachment item is tapped.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
@@ -507,7 +507,7 @@ private void SfAIAssistView_AttachmentTapped(object sender, AttachmentTappedEven
 
 ### AttachmentTapped Command
 
-The [AttachmentTappedCommand]() is triggered when a preview attachment item is tapped.
+The [AttachmentTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_AttachmentTappedCommand) is triggered when a preview attachment item is tapped.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}   
