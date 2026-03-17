@@ -432,6 +432,69 @@ public partial class MainPage : ContentPage
 
 ![Action Buttons in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-actionbuttons.gif)
 
+### Action button customization
+
+The editor action button and its popup are customizable beyond the `ActionButtons` collection:
+
+- **`ActionButtonIcon`**: Set a custom `ImageSource` for the quick action icon shown inside the editor (the icon that opens the action popup).
+- **`ActionButtonPosition`**: Controls where the action icon appears in the input view. Use `ActionButtonPosition.Start` or `ActionButtonPosition.End` to place the icon at the leading or trailing edge.
+
+{% tabs %} 
+{% highlight xaml %}
+
+<syncfusion:SfAIAssistView
+    ShowActionButtons="True"
+    ActionButtonIcon="dotmenu.png"
+    ActionButtonPosition="End">
+    <syncfusion:SfAIAssistView.ActionButtons>
+        <syncfusion:ActionButton BindingContext="{x:Reference viewModel}" Text="Attach" Icon="attach.png" Command="{Binding AttachCommand}" />
+        <syncfusion:ActionButton BindingContext="{x:Reference viewModel}" Text="Format" Icon="format.png" Command="{Binding FormatCommand}" />
+    </syncfusion:SfAIAssistView.ActionButtons>
+</syncfusion:SfAIAssistView>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+    public partial class MainPage : ContentPage 
+    { 
+        SfAIAssistView sfAIAssistView;
+        ViewModel viewModel;
+        public MainPage()
+        {
+            InitializeComponent();
+            this.viewModel = new ViewModel();
+            this.BindingContext = this.viewModel;
+            this.sfAIAssistView = new SfAIAssistView();
+            this.sfAIAssistView.ShowActionButtons = true,
+            this.sfAIAssistView.ActionButtonIcon = trueImageSource.FromFile("dotmenu.png"),
+            this.sfAIAssistView.ActionButtonPosition = ActionButtonPosition.End; // or   ActionButtonPosition.Start,
+            this.sfAIAssistView.AssistItems = this.viewModel.AssistItems,
+            this.sfAIAssistView.ActionButtons = new     ObservableCollection<ActionButton>
+            {
+                new ActionButton
+                {
+                    BindingContext = this.viewModel;
+                    Text = "Attach",
+                    Icon = ImageSource.FromFile ("attach.png"),
+                    Command = viewModel.AttachCommand
+                },
+                new ActionButton
+                {
+                    BindingContext = this.viewModel;
+                    Text = "Search in web",
+                    Icon = ImageSource.FromFile ("format.png"),
+                    Command = this.viewModel.FormatCommand
+                },
+            };
+
+            this.Content = sfAIAssistView;
+        }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Request button customization
 
 ### Request button icon
