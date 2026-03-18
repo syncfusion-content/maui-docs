@@ -35,11 +35,15 @@ When `FilterMode` is `None` or `FilterText` is null/empty, no filtering is appli
 
 {% tabs %}
 {% highlight xaml %}
+
 <syncfusion:SfTreeView x:Name="treeView"
                        FilterMode="Contains"/>
+
 {% endhighlight %}
 {% highlight c# %}
+
 treeView.FilterMode = TreeViewFilterMode.Contains;
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -47,9 +51,10 @@ treeView.FilterMode = TreeViewFilterMode.Contains;
 
 The `FilterText` property is a bindable string property that holds the text used for filtering nodes. When `FilterText` is set and `FilterMode` is not `None`, the TreeView automatically filters nodes based on the specified mode.
 
-N> **Important**: `FilterPath` or `FilterPaths` must be specified to enable filtering. `FilterPath` specifies the single property name of the data model to use for filtering. If not set, filtering defaults to the display member used in the ItemTemplate.
+N> 
+* **Important**: `FilterPath` or `FilterPaths` must be specified to enable filtering. `FilterPath` specifies the single property name of the data model to use for filtering. If not set, filtering defaults to the display member used in the ItemTemplate.
 
-N> When `FilterText` is `null` or empty, no filtering is applied, and all nodes become visible.
+* When `FilterText` is `null` or empty, no filtering is applied, and all nodes become visible.
 
 ### Programmatic filtering
 
@@ -57,8 +62,10 @@ You can set the `FilterText` property programmatically to apply filtering:
 
 {% tabs %}
 {% highlight c# %}
+
 treeView.FilterText = "Documents";
 treeView.FilterMode = TreeViewFilterMode.StartsWith;
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -68,6 +75,7 @@ You can bind the `FilterText` property to a property in your ViewModel for MVVM 
 
 {% tabs %}
 {% highlight xaml %}
+
 <Entry Placeholder="Enter filter text"
        Text="{Binding FilterText, Mode=TwoWay}"/>
 
@@ -77,6 +85,7 @@ You can bind the `FilterText` property to a property in your ViewModel for MVVM 
                        FilterText="{Binding FilterText}"
                        FilterMode="Contains"
                        FilterPath="ItemName"/>
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -88,14 +97,18 @@ The `FilterPath` property specifies a single property name of the data model to 
 
 {% tabs %}
 {% highlight xaml %}
+
 <syncfusion:SfTreeView x:Name="treeView"
                        ItemsSource="{Binding Items}"
                        FilterText="{Binding FilterText}"
                        FilterPath="Name"
                        FilterMode="Contains"/>
+
 {% endhighlight %}
 {% highlight c# %}
+
 treeView.FilterPath = "Name";
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -105,6 +118,7 @@ The `FilterPaths` property allows filtering across multiple properties. When spe
 
 {% tabs %}
 {% highlight xaml %}
+
 <syncfusion:SfTreeView x:Name="treeView"
                        ItemsSource="{Binding Items}"
                        FilterText="{Binding FilterText}"
