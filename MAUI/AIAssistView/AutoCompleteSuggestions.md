@@ -21,7 +21,7 @@ The `SfAIAssistView` control exposes several properties on its `AutoSuggestionOv
 
 ### AutoSuggestions
 
-The [AutoSuggestions]() property accepts a collection of `ISuggestion` items that are displayed in the autocomplete overlay as the user types. Populate this collection from your ViewModel or code-behind and bind it to the control to provide contextual, real-time suggestions.
+The [AutoSuggestions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AutoSuggestionOverlay.html#Syncfusion_Maui_AIAssistView_AutoSuggestionOverlay_AutoSuggestions) property accepts a collection of `ISuggestion` items that are displayed in the autocomplete overlay as the user types. Populate this collection from your ViewModel or code-behind and bind it to the control to provide contextual, real-time suggestions.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="4" %}
@@ -70,7 +70,7 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 
 ### ItemSelectedCommand
 
-The [ItemSelectedCommand]() property accepts an `ICommand` that is executed when the user selects an item from the autocomplete overlay. The command parameter is the selected `ISuggestion` instance, which you can use to populate the editor, trigger a request, or perform any custom action.
+The [ItemSelectedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AutoSuggestionOverlay.html#Syncfusion_Maui_AIAssistView_AutoSuggestionOverlay_ItemSelectedCommand) property accepts an `ICommand` that is executed when the user selects an item from the autocomplete overlay. The command parameter is the selected `ISuggestion` instance, which you can use to populate the editor, trigger a request, or perform any custom action.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
@@ -105,9 +105,9 @@ public class GettingStartedViewModel : INotifyPropertyChanged
 {% endhighlight %}
 {% endtabs %}
 
-### AutoSuggestionsTemplate
+### AutoSuggestionTemplate
 
-The [AutoSuggestionsTemplate]() property accepts a `DataTemplate` used to render each row in the autocomplete overlay. This allows you to fully customize the visual appearance of suggestion items — for example, adding icons, secondary text, or custom layouts — beyond the default text-only presentation.
+The [AutoSuggestionTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AutoSuggestionOverlay.html#Syncfusion_Maui_AIAssistView_AutoSuggestionOverlay_AutoSuggestionTemplate) property accepts a `DataTemplate` used to render each row in the autocomplete overlay. This allows you to fully customize the visual appearance of suggestion items — for example, adding icons, secondary text, or custom layouts — beyond the default text-only presentation.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="20" %}
@@ -131,7 +131,7 @@ The [AutoSuggestionsTemplate]() property accepts a `DataTemplate` used to render
                            AssistItems="{Binding AssistItems}">
     <syncfusion:SfAIAssistView.AutoSuggestionOverlay>
         <syncfusion:AutoSuggestionOverlay AutoSuggestions="{Binding AutoCompleteSuggestions}"
-                                          AutoSuggestionsTemplate="{StaticResource autoSuggestionTemplate}" />
+                                          AutoSuggestionTemplate="{StaticResource autoSuggestionTemplate}" />
     </syncfusion:SfAIAssistView.AutoSuggestionOverlay>
 </syncfusion:SfAIAssistView>
 
@@ -153,7 +153,7 @@ public partial class MainPage : ContentPage
         this.sfAIAssistView.AutoSuggestionOverlay = new AutoSuggestionOverlay()
         {
             AutoSuggestions = viewModel.AutoCompleteSuggestions,
-            AutoSuggestionsTemplate = CreateSuggestionTemplate(),
+            AutoSuggestionTemplate = CreateSuggestionTemplate(),
         };
         this.Content = sfAIAssistView;
     }
@@ -189,7 +189,7 @@ public partial class MainPage : ContentPage
 
 ### MinimumPrefixCharacters
 
-The [MinimumPrefixCharacters]() property specifies the minimum number of characters a user must type in the editor before the autocomplete overlay is triggered and suggestions are displayed. The default value is `1`. Increasing this value avoids showing suggestions too early, which is useful when your suggestion list is large or when network-based lookups are involved.
+The [MinimumPrefixCharacters](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AutoSuggestionOverlay.html#Syncfusion_Maui_AIAssistView_AutoSuggestionOverlay_MinimumPrefixCharacters) property specifies the minimum number of characters a user must type in the editor before the autocomplete overlay is triggered and suggestions are displayed. The default value is `1`. Increasing this value avoids showing suggestions too early, which is useful when your suggestion list is large or when network-based lookups are involved.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
@@ -214,9 +214,9 @@ this.sfAIAssistView.AutoSuggestionOverlay = new AutoSuggestionOverlay()
 {% endhighlight %}
 {% endtabs %}
 
-### DebounceMs
+### SuggestionOpenDelay 
 
-The [DebounceMs]() property sets the debounce delay, in milliseconds, that is applied before the suggestion query is triggered after the user stops typing. This helps reduce unnecessary lookups or filtering operations when the user is typing rapidly. The default value is `200`.
+The [SuggestionOpenDelay](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AutoSuggestionOverlay.html#Syncfusion_Maui_AIAssistView_AutoSuggestionOverlay_SuggestionOpenDelay) property sets the suggestion open delay, in milliseconds, that is applied before the suggestion query is triggered after the user stops typing. This helps reduce unnecessary lookups or filtering operations when the user is typing rapidly. The default value is `200`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
@@ -225,7 +225,7 @@ The [DebounceMs]() property sets the debounce delay, in milliseconds, that is ap
                            AssistItems="{Binding AssistItems}">
     <syncfusion:SfAIAssistView.AutoSuggestionOverlay>
         <syncfusion:AutoSuggestionOverlay AutoSuggestions="{Binding AutoCompleteSuggestions}"
-                                          DebounceMs="300" />
+                                          SuggestionOpenDelay="300" />
     </syncfusion:SfAIAssistView.AutoSuggestionOverlay>
 </syncfusion:SfAIAssistView>
 
@@ -235,15 +235,15 @@ The [DebounceMs]() property sets the debounce delay, in milliseconds, that is ap
 this.sfAIAssistView.AutoSuggestionOverlay = new AutoSuggestionOverlay()
 {
     AutoSuggestions = viewModel.AutoCompleteSuggestions,
-    DebounceMs = 300,
+    SuggestionOpenDelay = 300,
 };
 
 {% endhighlight %}
 {% endtabs %}
 
-### AutoSubmitOnSuggestionSelect
+### CancelRequest
 
-The [AutoSubmitOnSuggestionSelect]() property controls whether selecting a suggestion from the overlay automatically submits it as a request item. When set to `true`, the selected suggestion text is immediately sent as a user request without any additional confirmation. When set to `false`, the selected suggestion text is populated into the editor, allowing the user to review or modify it before submitting. The default value is `false`.
+The [CancelRequest](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AutoSuggestionOverlay.html#Syncfusion_Maui_AIAssistView_AutoSuggestionOverlay_CancelRequest) property controls whether selecting a suggestion from the overlay automatically submits it as a request item. When set to `true`, the selected suggestion text is immediately sent as a user request without any additional confirmation. When set to `false`, the selected suggestion text is populated into the editor, allowing the user to review or modify it before submitting. The default value is `false`.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="5" %}
@@ -252,7 +252,7 @@ The [AutoSubmitOnSuggestionSelect]() property controls whether selecting a sugge
                            AssistItems="{Binding AssistItems}">
     <syncfusion:SfAIAssistView.AutoSuggestionOverlay>
         <syncfusion:AutoSuggestionOverlay AutoSuggestions="{Binding AutoCompleteSuggestions}"
-                                          AutoSubmitOnSuggestionSelect="True" />
+                                          CancelRequest="True" />
     </syncfusion:SfAIAssistView.AutoSuggestionOverlay>
 </syncfusion:SfAIAssistView>
 
@@ -262,7 +262,7 @@ The [AutoSubmitOnSuggestionSelect]() property controls whether selecting a sugge
 this.sfAIAssistView.AutoSuggestionOverlay = new AutoSuggestionOverlay()
 {
     AutoSuggestions = viewModel.AutoCompleteSuggestions,
-    AutoSubmitOnSuggestionSelect = true,
+    CancelRequest = true,
 };
 
 {% endhighlight %}
@@ -270,7 +270,7 @@ this.sfAIAssistView.AutoSuggestionOverlay = new AutoSuggestionOverlay()
 
 ### IsOpen
 
-The [IsOpen]() property is a read-only boolean that reflects whether the autocomplete suggestion overlay is currently visible (`true`) or hidden (`false`). This property is managed internally by the control and is updated automatically as the user types or dismisses the overlay. You can observe this property in your ViewModel or code-behind to react to overlay state changes, such as adjusting the UI layout when the overlay is shown or hidden.
+The [IsOpen](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AutoSuggestionOverlay.html#Syncfusion_Maui_AIAssistView_AutoSuggestionOverlay_IsOpen) property is a read-only boolean that reflects whether the autocomplete suggestion overlay is currently visible (`true`) or hidden (`false`). This property is managed internally by the control and is updated automatically as the user types or dismisses the overlay. You can observe this property in your ViewModel or code-behind to react to overlay state changes, such as adjusting the UI layout when the overlay is shown or hidden.
 
 {% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
