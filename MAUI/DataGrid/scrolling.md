@@ -233,9 +233,9 @@ dataGrid.HorizontalOverScrollMode = DataGridHorizontalOverScrollMode.Bounce;
 
 ## Identifying scroll state changes
 
-The `SfDataGrid` raises the [ScrollStateChanged]() event whenever its scrolling state is changed.
+The `SfDataGrid` raises the [ScrollStateChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_SfDataGrid_ScrollStateChanged) event whenever its scrolling state is changed.
 
-The following current states are indicated by the [ScrollState]() property in the event argument.
+The following current states are indicated by the [ScrollState](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridScrollStateChangedEventArgs.html#Syncfusion_Maui_DataGrid_DataGridScrollStateChangedEventArgs_ScrollState) property in the event argument.
 
 - Dragging: Indicates that DataGrid is being dragged in the view right now.
 - Fling: Indicates that fling action is performed on the DataGrid.

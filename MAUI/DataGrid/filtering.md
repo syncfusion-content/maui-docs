@@ -677,115 +677,115 @@ Use the following `DataGridStyle` properties to customize the filter popup menu 
 <th>Description</th>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupBackground]()</td>
+<td>{{'[DataGridStyle.FilterPopupBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupBackground)'| markdownify }}</td>
 <td>Background color of the filter popup (Brush).</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupTextColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupTextColor)'| markdownify }}</td>
 <td>Text color used within the popup.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupIconColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupIconColor)'| markdownify }}</td>
 <td>Color for icons displayed in the popup.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupDisabledIconColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupDisabledIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupDisabledIconColor)'| markdownify }}</td>
 <td>Color of the clear-filter icon when it’s disabled in the popup.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupTopDividerColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupTopDividerColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupTopDividerColor)'| markdownify }}</td>
 <td>Color of the top divider line in the popup.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupOkButtonBackgroundColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupOkButtonBackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupOkButtonBackgroundColor)'| markdownify }}</td>
 <td>Background color of the OK button in the popup.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupOkButtonTextColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupOkButtonTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupOkButtonTextColor)'| markdownify }}</td>
 <td>Text color of the OK button in the popup.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupOkButtonDisabledColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupOkButtonDisabledColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupOkButtonDisabledColor)'| markdownify }}</td>
 <td>Color of the OK button when disabled in the popup.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupCancelButtonBackgroundColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupCancelButtonBackgroundColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupCancelButtonBackgroundColor)'| markdownify }}</td>
 <td>Background color of the Cancel button in the popup.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupCancelButtonTextColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupCancelButtonTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupCancelButtonTextColor)'| markdownify }}</td>
 <td>Text color of the Cancel button in the popup.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupHeaderOkIconColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupHeaderOkIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupHeaderOkIconColor)'| markdownify }}</td>
 <td>Color of the OK icon in the popup in Mobile view.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupHeaderCancelIconColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupHeaderCancelIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupHeaderCancelIconColor)'| markdownify }}</td>
 <td>Color of the Cancel/Close icon in the popup in Mobile view.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupPlaceholderColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupPlaceholderColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupPlaceholderColor)'| markdownify }}</td>
 <td>Placeholder color for search bar, entry, and combo boxes in the popup.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupCheckboxCheckedColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupCheckboxCheckedColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupCheckboxCheckedColor)'| markdownify }}</td>
 <td>Fill color of checkboxes when selected in Checkbox filter view.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupSearchBarIconColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupSearchBarIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupSearchBarIconColor)'| markdownify }}</td>
 <td>Color of the search icon in the checkbox filter view.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupSearchBarStroke]()</td>
+<td>{{'[DataGridStyle.FilterPopupSearchBarStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupSearchBarStroke)'| markdownify }}</td>
 <td>Border color of the search bar in the checkbox filter view.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupNoMatchesTextColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupNoMatchesTextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupNoMatchesTextColor)'| markdownify }}</td>
 <td>Text color of the “No matches” label in the checkbox filter view.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupRadioButtonCheckedColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupRadioButtonCheckedColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupRadioButtonCheckedColor)'| markdownify }}</td>
 <td>Color of checked And/Or radio buttons in Advanced filter view.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupRadioButtonUncheckedColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupRadioButtonUncheckedColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupRadioButtonUncheckedColor)'| markdownify }}</td>
 <td>Color of unchecked And/Or radio buttons in Advanced filter view.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupCaseSensitiveActiveColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupCaseSensitiveActiveColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupCaseSensitiveActiveColor)'| markdownify }}</td>
 <td>Case-sensitive icon color when activated in Advanced text filters.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupCaseSensitiveInactiveColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupCaseSensitiveInactiveColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupCaseSensitiveInactiveColor)'| markdownify }}</td>
 <td>Case-sensitive icon color when inactive in Advanced text filters.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupCaseSensitiveHoverColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupCaseSensitiveHoverColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupCaseSensitiveHoverColor)'| markdownify }}</td>
 <td>Background color when hovering the case-sensitive icon (Advanced text filters).</td>
 </tr>
 <tr>
-<td>[DataGridStyle.FilterPopupCalendarIconColor]()</td>
+<td>{{'[DataGridStyle.FilterPopupCalendarIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_FilterPopupCalendarIconColor)'| markdownify }}</td>
 <td>Calendar icon color for date pickers in Advanced date filters.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.AdvanceFilterDropdownIconColor]()</td>
+<td>{{'[DataGridStyle.AdvanceFilterDropdownIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_AdvanceFilterDropdownIconColor)'| markdownify }}</td>
 <td>Dropdown icon color used in the advanced filter header area.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.AdvanceFilterTypeDropdownIconColor]()</td>
+<td>{{'[DataGridStyle.AdvanceFilterTypeDropdownIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_AdvanceFilterTypeDropdownIconColor)'| markdownify }}</td>
 <td>Dropdown icon color of the filter type combo box in Advanced filter.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.AdvanceFilterValueDropdownIconColor]()</td>
+<td>{{'[DataGridStyle.AdvanceFilterValueDropdownIconColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_AdvanceFilterValueDropdownIconColor)'| markdownify }}</td>
 <td>Dropdown icon color of the filter value combo box in Advanced filter.</td>
 </tr>
 <tr>
-<td>[DataGridStyle.AdvanceFilterTypeDropdownStroke]()</td>
+<td>{{'[DataGridStyle.AdvanceFilterTypeDropdownStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_AdvanceFilterTypeDropdownStroke)'| markdownify }}</td>
 <td>Border color of the filter type combo box (Advanced filter).</td>
 </tr>
 <tr>
-<td>[DataGridStyle.AdvanceFilterValueDropdownStroke]()</td>
+<td>{{'[DataGridStyle.AdvanceFilterValueDropdownStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_AdvanceFilterValueDropdownStroke)'| markdownify }}</td>
 <td>Border color of the filter value combo box (Advanced filter).</td>
 </tr>
 </table>
