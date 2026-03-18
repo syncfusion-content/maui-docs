@@ -10,10 +10,10 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 # Load More in MAUI DataGrid (SfDataGrid)
 
-The SfDataGrid enables the load more option when the [SfDataGrid.AllowLoadMore](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowLoadMore) property is set to true and [SfDataGrid.LoadMoreOption]() property is set. When the load more feature is enabled, an interactive load more view will be displayed on the datagrid only when the datagrid reaches the maximum scroll offset while scrolling down. It loads a subset of data into its data source at runtime when users tap the [DataGridLoadMoreView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridLoadMoreView.html).
+The SfDataGrid enables the load more option when the [SfDataGrid.AllowLoadMore](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowLoadMore) property is set to true and [SfDataGrid.LoadMoreOption](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_LoadMoreOption) property is set. When the load more feature is enabled, an interactive load more view will be displayed on the datagrid only when the datagrid reaches the maximum scroll offset while scrolling down. It loads a subset of data into its data source at runtime when users tap the [DataGridLoadMoreView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridLoadMoreView.html).
 
 ## Load more command
-The datagrid loads a subset of data to its data source at runtime by triggering an ICommand bound to the [SfDataGrid.LoadMoreCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_LoadMoreCommand) property and [SfDataGrid.LoadMoreCommandParameter]() property. It will be executed when the user taps the load more view manually or when the user reaches the end.
+The datagrid loads a subset of data to its data source at runtime by triggering an ICommand bound to the [SfDataGrid.LoadMoreCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_LoadMoreCommand) property and [SfDataGrid.LoadMoreCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_LoadMoreCommandParameter) property. It will be executed when the user taps the load more view manually or when the user reaches the end.
 
 Set the [SfDataGrid.IsBusy](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_IsBusy ) property to true before loading items to notify the datagrid that more items are about to be loaded. Set the property to false after successfully loading items into the datagrid. When loading items, customize the duration for displaying the activity indicator by introducing a delay based on specific requirements.
 
@@ -44,13 +44,13 @@ You can download the complete project from [GitHub](https://github.com/Syncfusio
 
 The `SfDataGrid.LoadMoreOption` property contains the following three different modes of operations:
 
- * [Manual](): Displays the load more button when reaching the end of the list and execute `SfDataGrid.LoadMoreCommand` when tapping the button.
- * [Auto](): Automatically execute the `SfDataGrid.LoadMoreCommand` when reaching end of the list.
- * [AutoOnScroll](): Executes `SfDataGrid.LoadMoreCommand` when users interact with the datagrid and reach the end of list.
+ * [Manual](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridLoadMoreOption.html#Syncfusion_Maui_DataGrid_DataGridLoadMoreOption_Manual): Displays the load more button when reaching the end of the list and execute `SfDataGrid.LoadMoreCommand` when tapping the button.
+ * [Auto](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridLoadMoreOption.html#Syncfusion_Maui_DataGrid_DataGridLoadMoreOption_Auto): Automatically execute the `SfDataGrid.LoadMoreCommand` when reaching end of the list.
+ * [AutoOnScroll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridLoadMoreOption.html#Syncfusion_Maui_DataGrid_DataGridLoadMoreOption_AutoOnScroll): Executes `SfDataGrid.LoadMoreCommand` when users interact with the datagrid and reach the end of list.
 
 ### Load more automatically
 
-Set the [SfDataGrid.LoadMoreOption]() property as `Auto` to automatically load more items using the [SfDataGrid.LoadMoreCommand]() and [SfDataGrid.LoadMoreCommandParameter]() when reaching end of the list.
+Set the [SfDataGrid.LoadMoreOption](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_LoadMoreOption) property as `Auto` to automatically load more items using the [SfDataGrid.LoadMoreCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_LoadMoreCommand) and [SfDataGrid.LoadMoreCommandParameter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_LoadMoreCommandParameter) when reaching end of the list.
 
 {% tabs %}
 {% highlight xaml %}
@@ -108,7 +108,7 @@ private async void ExecuteLoadMoreCommand()
 
 ### Load more when user interacts
 
-To load more items only when users interact with the datagrid and reach to the end of list using `SfDataGrid.LoadMoreCommand` and `SfDataGrid.LoadMoreCommandParameter`, set the `SfDataGrid.LoadMoreOption` property to [AutoOnScroll]().
+To load more items only when users interact with the datagrid and reach to the end of list using `SfDataGrid.LoadMoreCommand` and `SfDataGrid.LoadMoreCommandParameter`, set the `SfDataGrid.LoadMoreOption` property to [AutoOnScroll](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridLoadMoreOption.html#Syncfusion_Maui_DataGrid_DataGridLoadMoreOption_AutoOnScroll).
 
 The `SfDataGrid.LoadMoreCommand` will not execute when the datagrid is initially loaded. The `SfDataGrid.LoadMoreCommand` will execute only when users interact and reach to the end of list.
 
