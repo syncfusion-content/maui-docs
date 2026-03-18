@@ -208,9 +208,9 @@ dataGrid.VerticalOverScrollMode = DataGridVerticalOverScrollMode.Bounce;
 
 ### Horizontal Over Scroll Mode
 
-The [SfDataGrid.HorizontalOverScrollMode]() property customizes the horizontal scrolling behavior of the data grid by controlling the bounce effect when users scroll past the left or right edges of the grid. This setting determines whether the grid provides an elastic over‑scroll experience or stops strictly at the content boundary.
+The [SfDataGrid.HorizontalOverScrollMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_HorizontalOverScrollMode) property customizes the horizontal scrolling behavior of the data grid by controlling the bounce effect when users scroll past the left or right edges of the grid. This setting determines whether the grid provides an elastic over‑scroll experience or stops strictly at the content boundary.
 
-The [HorizontalOverScrollMode]() property is of type `DataGridHorizontalScrollMode` and includes the following modes:
+The [HorizontalOverScrollMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_HorizontalOverScrollMode) property is of type `DataGridHorizontalScrollMode` and includes the following modes:
 
  - **Bounce**: Enables a bounce‑back animation when the user scrolls beyond the horizontal limits of the grid. This is the default mode on the iOS platform.
  - **None**: Disables the bounce effect, causing scrolling to stop immediately at the content edges. This is the default mode on the Android platform.
