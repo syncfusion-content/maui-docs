@@ -1257,7 +1257,7 @@ Similar to the parent DataGrid, you can also customize the cells of the DetailsV
 ## Exporting merged cells
 
 The `SfDataGrid` supports exporting merged cells when generating a PDF document.
-By default, merged‑cell exporting is disabled. To enable it, set the [ExportMergedCells]() property to `true` in the `DataGridPdfExportingOption` before calling `ExportToPdf`.
+By default, merged‑cell exporting is disabled. To enable it, set the [ExportMergedCells](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridPdfExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridPdfExportingOption_ExportMergedCells) property to `true` in the `DataGridPdfExportingOption` before calling `ExportToPdf`.
 
 {% tabs %}
 {% highlight c# %}
