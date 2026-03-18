@@ -271,6 +271,52 @@ N> **Interaction**: On desktop (Windows, macOS), hover over a request to reveal 
 
 ![Edit Option in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-editoption.gif)
 
+## Request context menu
+
+The `SfAIAssistView` supports a Request context menu for per-request actions. Use the `RequestContextMenu` property to provide developer-defined items for each request message. The control ships with no built-in actions — developers must supply all menu items.
+
+- **Property:** `RequestContextMenu` — type `IList<AIAssistContextMenuItem>`
+- **Menu item model:** `AIAssistContextMenuItem` supports `Text`, `Icon`, `Command`, `CommandParameter` and an optional per-item `ItemTemplate` override.
+- **Templates:** `ContextMenuItemTemplate` (global item template) and `ContextMenuPanelTemplate` (full menu UI override).
+- **Event:** `ContextMenuOpening` — raised before the menu is rendered; exposes the target message, a mutable list of items, and can be cancelled.
+- **Behavior & accessibility:** Menus auto-position to stay within the viewport, support RTL and light/dark themes, and reflect runtime changes to the `RequestContextMenu` collection immediately.
+
+
+{% tabs %}
+{% highlight xaml hl_lines="13" %}
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView">
+    <syncfusion:SfAIAssistView.RequestContextMenu>
+        <syncfusion:AssistContextMenuItem Text="Copy" Icon="copy.png" Command="{Binding CopyCommand}" />
+        <syncfusion:AssistContextMenuItem Text="Delete" Icon="delete.png" Command="{Binding DeleteCommand}" />
+    </syncfusion:SfAIAssistView.RequestContextMenu>
+</syncfusion:SfAIAssistView>
+{% endhighlight %}
+
+{% highlight c# hl_lines="10" %}
+public MainPage()
+{
+    InitializeComponent();
+
+    sfAIAssistView.RequestContextMenu = new ObservableCollection<AssistContextMenuItem>
+    {
+        new AssistContextMenuItem
+        {
+            Text = "Copy",
+            Command = new Command<object>(item => CopyText(item)),
+            CommandParameter = null
+        },
+        new AssistContextMenuItem
+        {
+            Text = "Delete",
+            Command = new Command<object>(item => DeleteItem(item))
+        }
+    };
+}
+{% endhighlight %}
+{% endtabs %}
+
+![Request Context menu in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-requestContextMenu.gif)
+
 ## EditorView template
 
 The `SfAIAssistView` control allows you to fully customize the editor's appearance by using the [EditorViewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_EditorViewTemplate) property. This property lets you define a custom layout and style for the editor.
