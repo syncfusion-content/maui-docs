@@ -435,43 +435,43 @@ The [AssistAttachmentItem](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.A
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="8" %}
 
-public class ViewModel : INotifyPropertyChanged
-{
-    ...
-
-    private async void GenerateAssistItems()
+    public class ViewModel : INotifyPropertyChanged
     {
-        // Adding a user request as attachments 
-        var requestItem = new AssistAttachmentItem()
+        ...
+
+        private async void GenerateAssistItems()
         {
-            Text = "Read the following documents",
-            IsRequested = true,
-            Attachments = new List<IAttachment> { staticAttachment1, staticAttachment2, staticAttachment3 }
-        };
+            // Adding a user request as attachments 
+            var requestItem = new AssistAttachmentItem()
+            {
+                Text = "Read the following documents",
+                IsRequested = true,
+                Attachments = new List<IAttachment> { staticAttachment1,    staticAttachment2, staticAttachment3 }
+            };
 
-        AssistItems.Add(requestItem);
+            AssistItems.Add(requestItem);
 
-        // Generating response item
-        await GetResult(requestItem);
-    }
+            // Generating response item
+            await GetResult(requestItem);
+        }
 
-    private async Task GetResult(AssistItem requestItem)
-    {
-        await Task.Delay(1000).ConfigureAwait(true);
-
-        AssistItem responseItem = new AssistItem()
+        private async Task GetResult(AssistItem requestItem)
         {
-            // Adding a text item as a response from the AI service
-            Text = "Thank you for sharing the documents. I will review the text file, the Excel sheet, and the PDF to provide you with a summary or any insights you need. Please let me know if you have any specific questions about these files.",
-            IsRequested = false,
-        };
+            await Task.Delay(1000).ConfigureAwait(true);
 
-        // Add the response item to the collection
-        this.AssistItems.Add(responseItem);
+            AssistItem responseItem = new AssistItem()
+            {
+                // Adding a text item as a response from the AI service
+                Text = "Thank you for sharing the documents. I will review the  text file, the Excel sheet, and the PDF to provide you with a    summary or any insights you need. Please let me know if you have   any specific questions about these files.",
+                IsRequested = false,
+            };
+
+            // Add the response item to the collection
+            this.AssistItems.Add(responseItem);
+        }
+        
+        ...
     }
-
-    ...
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -480,7 +480,7 @@ public class ViewModel : INotifyPropertyChanged
 
 The `SfAIAssistView` control includes a built-in event and command to listen for tap interactions in the attachment preview. The tapped attachment item can be accessed through the [AttachmentTappedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AttachmentTappedEventArgs.html). The `AttachmentTappedEventArgs` has the following member:
 
- * [Attachment]() : Refers to the tapped attachment item.
+ * `Attachment` : Refers to the tapped attachment item.
 
 ### AttachmentTapped Event
 
@@ -494,13 +494,13 @@ The [AttachmentTapped](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAss
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="1" %}
-      
-sfAIAssistView.AttachmentTapped += SfAIAssistView_AttachmentTapped;
 
-private void SfAIAssistView_AttachmentTapped(object sender, AttachmentTappedEventArgs e)
-{  
-    DisplayAlert("Attachment", " Tapped on attachment :" + e.Attachment.FileName, "Ok");                  
-}
+    sfAIAssistView.AttachmentTapped += SfAIAssistView_AttachmentTapped;
+
+    private void SfAIAssistView_AttachmentTapped(object sender,     AttachmentTappedEventArgs e)
+    {  
+        DisplayAlert("Attachment", " Tapped on attachment :" + e.Attachment.    FileName, "Ok");                  
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -518,27 +518,27 @@ The [AttachmentTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel.cs" hl_lines="16" %}
 
-public class ViewModel : INotifyPropertyChanged
-{
-    public Command<object> tappedCommand;
+    public class ViewModel : INotifyPropertyChanged
+    {
+        public Command<object> tappedCommand;
 
-    public ViewModel()
-    {
-        TappedCommand = new Command<object>(AttachmentTapped);
-    }
-    
-    public Command<object> TappedCommand
-    {
-        get { return tappedCommand; }
-        set { tappedCommand = value; }
-    }
+        public ViewModel()
+        {
+            TappedCommand = new Command<object>(AttachmentTapped);
+        }
 
-    private void AttachmentTapped(object obj)
-    {
-        var AttachmentTappedArgs = obj as AttachmentTappedEventArgs;
-        DisplayAlert("Attachment", " Tapped on Attachment item :" + AttachmentTappedArgs.Attachment.FileName, "Ok");                  
-    }      
-}
+        public Command<object> TappedCommand
+        {
+            get { return tappedCommand; }
+            set { tappedCommand = value; }
+        }
+
+        private void AttachmentTapped(object obj)
+        {
+            var AttachmentTappedArgs = obj as AttachmentTappedEventArgs;
+            DisplayAlert("Attachment", " Tapped on Attachment item :" +     AttachmentTappedArgs.Attachment.FileName, "Ok");                  
+        }      
+    }
 
 {% endhighlight %}
 {% endtabs %}

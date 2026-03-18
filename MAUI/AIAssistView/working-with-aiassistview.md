@@ -342,17 +342,17 @@ The `SfAIAssistView` allows users to customize the editor’s visual surface by 
 {% tabs %}
 {% highlight c# hl_lines="10" %}
 
-using Syncfusion.Maui.AIAssistView;
+    using Syncfusion.Maui.AIAssistView;
 
-public partial class MainPage : ContentPage
-{
-    public MainPage()
+    public partial class MainPage : ContentPage
     {
-            InitializeComponent();
-            sfAIAssistView = new SfAIAssistView();
-            sfAIAssistView.RequestEditor.PlaceholderColor = Colors.Red;
+        public MainPage()
+        {
+                InitializeComponent();
+                sfAIAssistView = new SfAIAssistView();
+                sfAIAssistView.RequestEditor.PlaceholderColor = Colors.Red;
+        }
     }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -385,66 +385,66 @@ The `SfAIAssistView` allows you to add files and images as attachments in the ed
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel.cs" %}
 
-using Syncfusion.Maui.AIAssistView;
+    using Syncfusion.Maui.AIAssistView;
 
-internal class ViewModel : INotifyPropertyChanged
-{
-    private ObservableCollection<IAttachment>? attachments;
-
-    public ViewModel()
+    internal class ViewModel : INotifyPropertyChanged
     {
-        Attachments = new ObservableCollection<IAttachment>();
-        UploadCommand = new Command(async () => await UploadFilesAsync());
-    }
+        private ObservableCollection<IAttachment>? attachments;
 
-    public ObservableCollection<IAttachment>? Attachments
-    {
-        get => attachments;
-        set
+        public ViewModel()
         {
-            if (attachments != value)
+            Attachments = new ObservableCollection<IAttachment>();
+            UploadCommand = new Command(async () => await UploadFilesAsync());
+        }
+
+        public ObservableCollection<IAttachment>? Attachments
+        {
+            get => attachments;
+            set
             {
-                attachments = value;
+                if (attachments != value)
+                {
+                    attachments = value;
+                }
+            }
+        }
+
+        public ICommand UploadCommand { get; }
+
+        private async Task UploadFilesAsync()
+        {
+            var results = await FilePicker.Default.PickMultipleAsync();
+            if (results == null) return;
+
+            foreach (var file in results)
+            {
+                Stream stream = await file.OpenReadAsync();
+
+                long size;
+                if (stream.CanSeek)
+                {
+                    size = stream.Length;
+                }
+                else
+                {
+                    using var ms = new MemoryStream();
+                    await stream.CopyToAsync(ms);
+                    size = ms.Length;
+                    stream.Dispose();
+                    stream = new MemoryStream(ms.ToArray());
+                }
+
+                Attachments?.Add(new AssistAttachment
+                {
+                    FileName = file.FileName,
+                    FileSize = size,
+                    FilePath = file.FullPath ?? string.Empty,
+                    FileExtension = Path.GetExtension(file.FileName) ?? string. Empty,
+                    FileContent = stream,
+                });
             }
         }
     }
-
-    public ICommand UploadCommand { get; }
-
-    private async Task UploadFilesAsync()
-    {
-        var results = await FilePicker.Default.PickMultipleAsync();
-        if (results == null) return;
-
-        foreach (var file in results)
-        {
-            Stream stream = await file.OpenReadAsync();
-
-            long size;
-            if (stream.CanSeek)
-            {
-                size = stream.Length;
-            }
-            else
-            {
-                using var ms = new MemoryStream();
-                await stream.CopyToAsync(ms);
-                size = ms.Length;
-                stream.Dispose();
-                stream = new MemoryStream(ms.ToArray());
-            }
-
-            Attachments?.Add(new AssistAttachment
-            {
-                FileName = file.FileName,
-                FileSize = size,
-                FilePath = file.FullPath ?? string.Empty,
-                FileExtension = Path.GetExtension(file.FileName) ?? string.Empty,
-                FileContent = stream,
-            });
-        }
-    }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -468,20 +468,20 @@ The `SfAIAssistView` control allows you to control the number of attachments usi
 {% endhighlight %}
 {% highlight c# hl_lines="11" %}
 
-using Syncfusion.Maui.AIAssistView;
+    using Syncfusion.Maui.AIAssistView;
 
-public partial class MainPage : ContentPage
-{
-    SfAIAssistView sfAIAssistView;
-    public MainPage()
+    public partial class MainPage : ContentPage
     {
-        InitializeComponent();
-        sfAIAssistView = new SfAIAssistView();
-        sfAIAssistView.Attachment = viewModel.Attachments;
-        sfAIAssistView.MaxAttachmentCount = 8;
-        this.Content = sfAIAssistView;
+        SfAIAssistView sfAIAssistView;
+        public MainPage()
+        {
+            InitializeComponent();
+            sfAIAssistView = new SfAIAssistView();
+            sfAIAssistView.Attachment = viewModel.Attachments;
+            sfAIAssistView.MaxAttachmentCount = 8;
+            this.Content = sfAIAssistView;
+        }
     }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -512,28 +512,28 @@ The `SfAIAssistView` control allows you to customize the preview for the attachm
 {% endhighlight %}
 {% highlight c# hl_lines="11" %}
 
-using Syncfusion.Maui.AIAssistView;
-
-public partial class MainPage : ContentPage
-{
-    SfAIAssistView sfAIAssistView;
-    public MainPage()
+    using Syncfusion.Maui.AIAssistView;
+    
+    public partial class MainPage : ContentPage
     {
-        InitializeComponent();
-        sfAIAssistView = new SfAIAssistView();
-        SfAIAssistView.Attachments = viewModel.Attachments;
-        sfAIAssistView.AttachmentItemTemplate = CreateAttachmentItemTemplate();
-        this.Content = sfAIAssistView;
-    }
-
-    private DataTemplate CreateAttachmentItemTemplate()
-    {
-        return new DataTemplate(() =>
+        SfAIAssistView sfAIAssistView;
+        public MainPage()
         {
-            ...
-        });
+            InitializeComponent();
+            sfAIAssistView = new SfAIAssistView();
+            SfAIAssistView.Attachments = viewModel.Attachments;
+            sfAIAssistView.AttachmentItemTemplate = CreateAttachmentItemTemplate    ();
+            this.Content = sfAIAssistView;
+        }
+    
+        private DataTemplate CreateAttachmentItemTemplate()
+        {
+            return new DataTemplate(() =>
+            {
+                ...
+            });
+        }
     }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -643,21 +643,19 @@ The editor action button and its popup are customizable beyond the `ActionButton
 - **`ActionButtonPosition`**: Controls where the action icon appears in the input view. Use `ActionButtonPosition.Start` or `ActionButtonPosition.End` to place the icon at the leading or trailing edge.
 
 {% tabs %} 
-{% highlight xaml %}
+{% highlight xaml hl_lines="3 4" %}
 
 <syncfusion:SfAIAssistView
     ShowActionButtons="True"
     ActionButtonIcon="dotmenu.png"
-    ActionButtonPosition="End">
+    ActionButtonPosition="Start">
     <syncfusion:SfAIAssistView.ActionButtons>
-        <syncfusion:ActionButton BindingContext="{x:Reference viewModel}" Text="Attach" Icon="attach.png" Command="{Binding AttachCommand}" />
-        <syncfusion:ActionButton BindingContext="{x:Reference viewModel}" Text="Format" Icon="format.png" Command="{Binding FormatCommand}" />
+        ...
     </syncfusion:SfAIAssistView.ActionButtons>
 </syncfusion:SfAIAssistView>
 
 {% endhighlight %}
-
-{% highlight c# %}
+{% highlight c# hl_lines="12 13" %}
 
     public partial class MainPage : ContentPage 
     { 
@@ -671,24 +669,11 @@ The editor action button and its popup are customizable beyond the `ActionButton
             this.sfAIAssistView = new SfAIAssistView();
             this.sfAIAssistView.ShowActionButtons = true,
             this.sfAIAssistView.ActionButtonIcon = trueImageSource.FromFile("dotmenu.png"),
-            this.sfAIAssistView.ActionButtonPosition = ActionButtonPosition.End; // or   ActionButtonPosition.Start,
+            this.sfAIAssistView.ActionButtonPosition = ActionButtonPosition.Start;
             this.sfAIAssistView.AssistItems = this.viewModel.AssistItems,
             this.sfAIAssistView.ActionButtons = new     ObservableCollection<ActionButton>
             {
-                new ActionButton
-                {
-                    BindingContext = this.viewModel;
-                    Text = "Attach",
-                    Icon = ImageSource.FromFile ("attach.png"),
-                    Command = viewModel.AttachCommand
-                },
-                new ActionButton
-                {
-                    BindingContext = this.viewModel;
-                    Text = "Search in web",
-                    Icon = ImageSource.FromFile ("format.png"),
-                    Command = this.viewModel.FormatCommand
-                },
+                ...
             };
 
             this.Content = sfAIAssistView;

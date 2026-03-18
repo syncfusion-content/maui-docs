@@ -12,7 +12,7 @@ documentation: ug
 This section explains how to define and customize the toolbar in the [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html).
 
 ## AssistView Toolbar
-.
+
 `SfAIAssistView` exposes a header toolbar that can be enabled and customized for conversation-level actions and titles. The toolbar will not be visible when the `ShowToolbar` is set to `false`.
 
 - **`ShowToolbar`**: Set to `false` to hide the toolbar. The default value is `true`.
@@ -20,16 +20,16 @@ This section explains how to define and customize the toolbar in the [SfAIAssist
 - **`ToolbarHeight`**: Set a custom height for the toolbar area.
 
 {% tabs %}
+{% highlight xaml hl_lines="2 3 4" %}
 
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2,3,4" %}
-    <syncfusion:SfAIAssistView 
-                ShowToolbar="True" 
-                ToolbarTitle="AI AssistView" 
-                ToolbarHeight="50">
-    </syncfusion:SfAIAssistView>
+<syncfusion:SfAIAssistView 
+            ShowToolbar="True" 
+            ToolbarTitle="AI AssistView" 
+            ToolbarHeight="50">
+</syncfusion:SfAIAssistView>
+
 {% endhighlight %}
-
-{% highlight c# hl_lines="6,7,8" %}
+{% highlight c# hl_lines="6 7 8" %}
 
     SfAIAssistView sfAIAssistView; 
     public MainPage() 
@@ -62,11 +62,12 @@ N> Enabling `EnableTemporaryChat` includes the temporary chat in the toolbar's n
 
 {% tabs %}
 {% highlight xaml hl_lines="2 3" %}
+
 <syncfusion:SfAIAssistView x:Name="assist"
                                EnableTemporaryChat="True"
                                TemporaryChatBannerText="This chat will not be saved" />
-{% endhighlight %}
 
+{% endhighlight %}
 {% highlight c# hl_lines="8 9" %}
 
     public partial class MainPage : ContentPage
@@ -92,7 +93,9 @@ N> Enabling `EnableTemporaryChat` includes the temporary chat in the toolbar's n
 - **`ChatModeChanging`**: provides a `ChatModeChangingEventArgs`  with the `ChatMode` that the control is about to transition to. Handlers can cancel the change by setting `e.Cancel = true`.
 - **`ChatModeChanged`**: provides a `ChatModeChangedEventArgs` with the `ChatMode` that the control has transitioned to.
 
+{% tabs %}
 {% highlight c# %}
+
     private void OnChatModeChanging(object sender,  ChatModeChangingEventArgs e)
     {
         if (e.ChatMode == ChatMode.TemporaryChat)
@@ -112,4 +115,6 @@ N> Enabling `EnableTemporaryChat` includes the temporary chat in the toolbar's n
             // New chat mode active: restore saved templates/state if needed
         }
     }
+
 {% endhighlight %}
+{% endtabs %}

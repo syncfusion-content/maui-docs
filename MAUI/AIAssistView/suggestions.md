@@ -482,6 +482,7 @@ public partial class MainPage : ContentPage
 
 {% tabs %}
 {% highlight xaml hl_lines="12 13" %}
+
 <ContentPage.Resources>
     <ResourceDictionary>
         <DataTemplate x:Key="footerSuggestionTemplate">
@@ -496,9 +497,9 @@ public partial class MainPage : ContentPage
     FooterSuggestions="{Binding FooterSuggestions}" 
     FooterSuggestionTemplate="{StaticResource footerSuggestionTemplate}" />
 </ContentPage.Content>
-{% endhighlight %}
 
-{% highlight c# %}
+{% endhighlight %}
+{% highlight c# hl_lines="6" %}
 
     SfAIAssistView sfAIAssistView;
     public MainPage()

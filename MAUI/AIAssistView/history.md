@@ -25,84 +25,84 @@ Create a simple view model as shown in the following code example, and save it a
 {% tabs %}
 {% highlight c# tabtitle="ViewModel.cs" %}
 
-using Syncfusion.Maui.AIAssistView;
-public class GettingStartedViewModel : INotifyPropertyChanged
-{
-    ...
-    private ObservableCollection<AssistConversationItem> conversationItems;
-    ...
-
-    public AIAssistViewModel()
+    using Syncfusion.Maui.AIAssistView;
+    public class GettingStartedViewModel : INotifyPropertyChanged
     {
         ...
-        this.conversationItems = new ObservableCollection<AssistConversationItem>();
-        this.InitializeConversationHistory();
+        private ObservableCollection<AssistConversationItem> conversationItems;
         ...
-    }
 
-    ...
-    public ObservableCollection<AssistConversationItem> ConversationItems 
-    { 
-        get { return this.conversationItems; }
-        set 
+        public AIAssistViewModel()
         {
-            this.conversationItems = value;
-            this.RaisePropertyChanged(nameof(ConversationItems));
+            ...
+            this.conversationItems = new ObservableCollection<AssistConversationItem>();
+            this.InitializeConversationHistory();
+            ...
         }
-    }
-    ...
 
-    public void InitializeConversationHistory()
-    {
-        DateTime baseTime = DateTime.Now;
-
-        string[] topics = new string[]
-        {
-            "listening",
-            "Hey AI, can you tell me what Maui is?",
-        };
-
-        string[] responses = new string[]
-        {
-            "Types of Listening : For a good communication, it is not only enough to convey the information efficiently, but it also needs to include good listening skill. Common types of Listening are Active listening and Passive listening.",
-            "MAUI stands for .NET Multi-platform APP UI. It's is a framework that allowws you to create cross-platform applications using a single codebase.",
-        };
-
-        for (int i = 0; i < 2; i++)
-        {
-            var dateTime = baseTime.AddDays(-i);
-            var request = new AssistItem
+        ...
+        public ObservableCollection<AssistConversationItem> ConversationItems 
+        { 
+            get { return this.conversationItems; }
+            set 
             {
-                Text = topics[i],
-                IsRequested = true,
-                DateTime = dateTime,
+                this.conversationItems = value;
+                this.RaisePropertyChanged(nameof(ConversationItems));
+            }
+        }
+        ...
+
+        public void InitializeConversationHistory()
+        {
+            DateTime baseTime = DateTime.Now;
+
+            string[] topics = new string[]
+            {
+                "listening",
+                "Hey AI, can you tell me what Maui is?",
             };
 
-            var response = new AssistItem
+            string[] responses = new string[]
             {
-                Text = responses[i],
-                IsRequested = false,
-                DateTime = dateTime,
-                RequestItem = request,
+                "Types of Listening : For a good communication, it is not only enough to convey     the information efficiently, but it also needs to include good listening skill.     Common types of Listening are Active listening and Passive listening.",
+                "MAUI stands for .NET Multi-platform APP UI. It's is a framework that allowws   you to create cross-platform applications using a single codebase.",
             };
 
-            var title = topics[i];
-            var conversationItem = new AssistConversationItem
+            for (int i = 0; i < 2; i++)
             {
-                Title = title,
-                DateTime = baseTime.AddDays(-i),
-                AssistItems = new ObservableCollection<IAssistItem>
+                var dateTime = baseTime.AddDays(-i);
+                var request = new AssistItem
                 {
-                    request,
-                    response,
-                }
-            };
+                    Text = topics[i],
+                    IsRequested = true,
+                    DateTime = dateTime,
+                };
 
-            this.ConversationItems.Add(conversationItem);
+                var response = new AssistItem
+                {
+                    Text = responses[i],
+                    IsRequested = false,
+                    DateTime = dateTime,
+                    RequestItem = request,
+                };
+
+                var title = topics[i];
+                var conversationItem = new AssistConversationItem
+                {
+                    Title = title,
+                    DateTime = baseTime.AddDays(-i),
+                    AssistItems = new ObservableCollection<IAssistItem>
+                    {
+                        request,
+                        response,
+                    }
+                };
+
+                this.ConversationItems.Add(conversationItem);
+            }
         }
+        ...
     }
-    ...
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -135,19 +135,19 @@ To populate the conversation items, bind the item collection from its BindingCon
 {% endhighlight %}
 {% highlight c# hl_lines="10" %}
 
-public partial class MainPage : ContentPage 
-{
-    SfAIAssistView sfAIAssistView;
-    public MainPage()
+    public partial class MainPage : ContentPage 
     {
-        InitializeComponent();
-        this.sfAIAssistView = new SfAIAssistView();
-        GettingStartedViewModel viewModel = new GettingStartedViewModel();
-        this.sfAIAssistView.AssistItems = viewModel.AssistItems;
-        this.sfAIAssistView.ConversationItemsSource = viewModel.ConversationItems;
-        this.Content = sfAIAssistView;
+        SfAIAssistView sfAIAssistView;
+        public MainPage()
+        {
+            InitializeComponent();
+            this.sfAIAssistView = new SfAIAssistView();
+            GettingStartedViewModel viewModel = new GettingStartedViewModel();
+            this.sfAIAssistView.AssistItems = viewModel.AssistItems;
+            this.sfAIAssistView.ConversationItemsSource = viewModel.ConversationItems;
+            this.Content = sfAIAssistView;
+        }
     }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -165,14 +165,14 @@ The `SfAIAssistView` control provides the `ConversationHeaderText` API to set th
 {% endhighlight %}
 {% highlight c# hl_lines="6" %}
 
-SfAIAssistView sfAIAssistView; 
-public MainPage() 
-{ 
-    InitializeComponent(); 
-    this.sfAIAssistView = new SfAIAssistView();
-    this.sfAIAssistView.ConversationHeaderText = "Chat History";
-    this.Content = sfAIAssistView;
-}
+    SfAIAssistView sfAIAssistView; 
+    public MainPage() 
+    { 
+        InitializeComponent(); 
+        this.sfAIAssistView = new SfAIAssistView();
+        this.sfAIAssistView.ConversationHeaderText = "Chat History";
+        this.Content = sfAIAssistView;
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -194,19 +194,20 @@ The `ConversationEmptyView` property can be set to a string or a custom view, wh
 
 {% endhighlight %}
 {% highlight c# hl_lines="10" %}
-public partial class MainPage : ContentPage
-{
-    SfAIAssistView sfAIAssistView;
-    public MainPage()
-    { 
-        InitializeComponent();
-        sfAIAssistView = new SfAIAssistView();
-        GettingStartedViewModel viewModel = new GettingStartedViewModel();
-        sfAIAssistView.AssistItems = viewModel.AssistItems;
-        sfAIAssistView.ConversationEmptyView = "No conversations available";
-        Content = sfAIAssistView;
-   }
-}
+
+    public partial class MainPage : ContentPage
+    {
+        SfAIAssistView sfAIAssistView;
+        public MainPage()
+        { 
+            InitializeComponent();
+            sfAIAssistView = new SfAIAssistView();
+            GettingStartedViewModel viewModel = new GettingStartedViewModel();
+            sfAIAssistView.AssistItems = viewModel.AssistItems;
+            sfAIAssistView.ConversationEmptyView = "No conversations available";
+            Content = sfAIAssistView;
+       }
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -229,12 +230,12 @@ When a user selects a conversation item, the `ConversationItemTapped` event and 
 {% endhighlight %}
 {% highlight c# hl_lines="1" %}
 
-aiAssistView.ConversationItemTapped += OnConversationItemTapped;
+    aiAssistView.ConversationItemTapped += OnConversationItemTapped;
 
-private void OnConversationItemTapped(object sender, ConversationItemTappedEventArgs e)
-{
-    // Handle the conversation item action
-}
+    private void OnConversationItemTapped(object sender, ConversationItemTappedEventArgs e)
+    {
+        // Handle the conversation item action
+    }
 
 {% endhighlight %}
 {% endtabs %}
@@ -248,28 +249,28 @@ private void OnConversationItemTapped(object sender, ConversationItemTappedEvent
                      ConversationItemTappedCommand="{Binding ConversationItemTappedCommand}"/>
 
 {% endhighlight %}
-{% highlight c# hl_lines="4,7" %}
+{% highlight c# hl_lines="4 7" %}
 
-public class AIAssistViewModel : INotifyPropertyChanged
-{
-    ...
-    public ICommand ConversationItemTappedCommand { get; }
-    ...
-
-    public AIAssistViewModel()
+    public class AIAssistViewModel : INotifyPropertyChanged
     {
         ...
-        this.ConversationItemTappedCommand = new Command<object>(OnConversationItemTapped);
+        public ICommand ConversationItemTappedCommand { get; }
+        ...
+    
+        public AIAssistViewModel()
+        {
+            ...
+            this.ConversationItemTappedCommand = new Command<object>    (OnConversationItemTapped);
+            ...
+        }
+    
+        ...
+        private void OnConversationItemTapped(object obj)
+        {
+            // Handle the conversation item action
+        }
         ...
     }
-
-    ...
-    private void OnConversationItemTapped(object obj)
-    {
-        // Handle the conversation item action
-    }
-    ...
-}
 
 {% endhighlight %}
 {% endtabs %} 
