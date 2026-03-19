@@ -513,7 +513,7 @@ The `SfAIAssistView` control allows you to customize the preview for the attachm
 {% highlight c# hl_lines="11" %}
 
     using Syncfusion.Maui.AIAssistView;
-    
+
     public partial class MainPage : ContentPage
     {
         SfAIAssistView sfAIAssistView;
@@ -525,7 +525,7 @@ The `SfAIAssistView` control allows you to customize the preview for the attachm
             sfAIAssistView.AttachmentItemTemplate = CreateAttachmentItemTemplate    ();
             this.Content = sfAIAssistView;
         }
-    
+
         private DataTemplate CreateAttachmentItemTemplate()
         {
             return new DataTemplate(() =>
@@ -1332,3 +1332,150 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![Scroll-To-Buttom Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-scrolltobottomtemplate.png)
+
+## Request Context menu
+
+The `SfAIAssistView` control supports customizable Request context menu for both request. Use the following properties to configure context menus and their templates:
+
+- **RequestContextMenu**: `ObservableCollection<AssistContextMenuItem>` — collection of menu items shown for request items.
+- RequestContextMenuItemTemplate**: `DataTemplate` — template for individual menu items.
+- RequestContextMenuPanelTemplate**: `DataTemplate` — template for the popup panel that contains the menu items.
+
+Assist context menu items are represented by `AssistContextMenuItem` (inherits from `ActionButton`) and expose the familiar `Text`, `Icon`, `Command`, and `CommandParameter` properties. When the menu is opened for a specific assist item, the control sets the `AssistItem` property on each `AssistContextMenuItem` so commands can access the target `IAssistItem`.
+
+- When a menu item is tapped the control executes the `Command` on the `AssistContextMenuItem` (if present). If `CommandParameter` is `null`, the control passes the `AssistContextMenuItem` instance as the parameter (so you can access the `AssistItem` property). Alternatively, set `CommandParameter` to `{Binding AssistItem}` in your item template.
+- The context menu is shown when the More Options icon is tapped for an item. The `ContextMenuOpening` event is raised before the popup appears so you can modify or cancel it.
+
+{% tabs %}
+{% highlight xaml %}
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView">
+    <syncfusion:SfAIAssistView.RequestContextMenu>
+        <syncfusion:AssistContextMenuItem Text="Retry" Command="{Binding RetryCommand}" />
+    </syncfusion:SfAIAssistView.RequestContextMenu>
+</syncfusion:SfAIAssistView>
+
+{% endhighlight %}
+{% highlight c# %}
+
+    var ResquestMenu = new ObservableCollection<AssistContextMenuItem>
+    {
+        new AssistContextMenuItem
+        {
+            Text = "Copy",
+            Command = new Command<object>(param =>
+            {
+                var item = param as AssistContextMenuItem;
+                var assist = item?.AssistItem;
+                if (assist is AssistItem ai)
+                {
+                    ...
+                }
+            })
+        }
+    };
+
+    sfAIAssistView.ResquestContextMenu = ResquestMenu;
+
+{% endhighlight %}
+{% endtabs %}
+
+Custom item template example (binding AssistItem into CommandParameter):
+
+{% highlight xaml %}
+<syncfusion:SfAIAssistView.ResquestContextMenuItemTemplate>
+    <DataTemplate>
+        <Grid Padding="8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image Source="{Binding Icon}" HeightRequest="20" WidthRequest="20" />
+            <Label Grid.Column="1" Text="{Binding Text}" />
+            <!-- Make the AssistItem available to the command as parameter -->
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding Command}" CommandParameter="{Binding AssistItem}" />
+            </Grid.GestureRecognizers>
+        </Grid>
+    </DataTemplate>
+</syncfusion:SfAIAssistView.ResquestContextMenuItemTemplate>
+{% endhighlight %}
+
+Event: `ContextMenuOpening`
+
+Subscribe to `ContextMenuOpening` if you need to modify the menu or prevent it from opening. The event receives the `IList<AssistContextMenuItem>` that will be displayed so you can add/remove items at runtime.
+
+## Response Context menu
+
+The `SfAIAssistView` control supports customizable Response context menu for both response. Use the following properties to configure Response context menu and its template:
+
+- **ResponseContextMenu**: `IList<AssistContextMenuItem>` — collection of menu items shown for response items.
+- **ResponseContextMenuItemTemplate**: `DataTemplate` — template for individual menu items.
+- **ResponseContextMenuPanelTemplate**: `DataTemplate` — template for the popup panel that contains the menu items.
+
+Assist context menu items are represented by `AssistContextMenuItem` (inherits from `ActionButton`) and expose the familiar `Text`, `Icon`, `Command`, and `CommandParameter` properties. When the menu is opened for a specific assist item, the control sets the `AssistItem` property on each `AssistContextMenuItem` so commands can access the target `IAssistItem`.
+
+- When a menu item is tapped the control executes the `Command` on the `AssistContextMenuItem` (if present). If `CommandParameter` is `null`, the control passes the `AssistContextMenuItem` instance as the parameter (so you can access the `AssistItem` property). Alternatively, set `CommandParameter` to `{Binding AssistItem}` in your item template.
+- The context menu is shown when the More Options icon is tapped for an item. The `ContextMenuOpening` event is raised before the popup appears so you can modify or cancel it.
+
+{% highlight xaml %}
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView">
+    <syncfusion:SfAIAssistView.ResponseContextMenu>
+        <syncfusion:AssistContextMenuItem Text="Copy" Command="{Binding CopyCommand}" />
+        <syncfusion:AssistContextMenuItem Text="Retry" Command="{Binding RetryCommand}" />
+    </syncfusion:SfAIAssistView.ResponseContextMenu>
+</syncfusion:SfAIAssistView>
+
+{% endhighlight %}
+{% highlight c# %}
+
+    var responseMenu = new ObservableCollection<AssistContextMenuItem>
+    {
+        new AssistContextMenuItem
+        {
+            Text = "Copy",
+            Command = new Command<object>(param =>
+            {
+                var item = param as AssistContextMenuItem;
+                if (assist is AssistItem ai)
+                {
+                    ...
+                }
+            })
+        },
+        new AssistContextMenuItem
+        {
+            Text = "Like",
+            Command = new Command<object>(param => { /* like action */ })
+        }
+    };
+
+    sfAIAssistView.ResponseContextMenu = responseMenu;
+
+{% endhighlight %}
+
+Custom item template example (binding AssistItem into CommandParameter):
+
+{% highlight xaml %}
+<syncfusion:SfAIAssistView.ResponseContextMenuItemTemplate>
+    <DataTemplate>
+        <Grid Padding="8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image Source="{Binding Icon}" HeightRequest="20" WidthRequest="20" />
+            <Label Grid.Column="1" Text="{Binding Text}" />
+            <!-- Make the AssistItem available to the command as parameter -->
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding Command}" CommandParameter="{Binding AssistItem}" />
+            </Grid.GestureRecognizers>
+        </Grid>
+    </DataTemplate>
+</syncfusion:SfAIAssistView.ResponseContextMenuItemTemplate>
+{% endhighlight %}
+
+Event: `ContextMenuOpening`
+
+Subscribe to `ContextMenuOpening` if you need to modify the menu or prevent it from opening. The event receives the `IList<AssistContextMenuItem>` that will be displayed so you can add/remove items at runtime.
