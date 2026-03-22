@@ -342,17 +342,17 @@ The `SfAIAssistView` allows users to customize the editor’s visual surface by 
 {% tabs %}
 {% highlight c# hl_lines="10" %}
 
-using Syncfusion.Maui.AIAssistView;
+    using Syncfusion.Maui.AIAssistView;
 
-public partial class MainPage : ContentPage
-{
-    public MainPage()
+    public partial class MainPage : ContentPage
     {
-            InitializeComponent();
-            sfAIAssistView = new SfAIAssistView();
-            sfAIAssistView.RequestEditor.PlaceholderColor = Colors.Red;
+        public MainPage()
+        {
+                InitializeComponent();
+                sfAIAssistView = new SfAIAssistView();
+                sfAIAssistView.RequestEditor.PlaceholderColor = Colors.Red;
+        }
     }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -385,66 +385,66 @@ The `SfAIAssistView` allows you to add files and images as attachments in the ed
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel.cs" %}
 
-using Syncfusion.Maui.AIAssistView;
+    using Syncfusion.Maui.AIAssistView;
 
-internal class ViewModel : INotifyPropertyChanged
-{
-    private ObservableCollection<IAttachment>? attachments;
-
-    public ViewModel()
+    internal class ViewModel : INotifyPropertyChanged
     {
-        Attachments = new ObservableCollection<IAttachment>();
-        UploadCommand = new Command(async () => await UploadFilesAsync());
-    }
+        private ObservableCollection<IAttachment>? attachments;
 
-    public ObservableCollection<IAttachment>? Attachments
-    {
-        get => attachments;
-        set
+        public ViewModel()
         {
-            if (attachments != value)
+            Attachments = new ObservableCollection<IAttachment>();
+            UploadCommand = new Command(async () => await UploadFilesAsync());
+        }
+
+        public ObservableCollection<IAttachment>? Attachments
+        {
+            get => attachments;
+            set
             {
-                attachments = value;
+                if (attachments != value)
+                {
+                    attachments = value;
+                }
+            }
+        }
+
+        public ICommand UploadCommand { get; }
+
+        private async Task UploadFilesAsync()
+        {
+            var results = await FilePicker.Default.PickMultipleAsync();
+            if (results == null) return;
+
+            foreach (var file in results)
+            {
+                Stream stream = await file.OpenReadAsync();
+
+                long size;
+                if (stream.CanSeek)
+                {
+                    size = stream.Length;
+                }
+                else
+                {
+                    using var ms = new MemoryStream();
+                    await stream.CopyToAsync(ms);
+                    size = ms.Length;
+                    stream.Dispose();
+                    stream = new MemoryStream(ms.ToArray());
+                }
+
+                Attachments?.Add(new AssistAttachment
+                {
+                    FileName = file.FileName,
+                    FileSize = size,
+                    FilePath = file.FullPath ?? string.Empty,
+                    FileExtension = Path.GetExtension(file.FileName) ?? string. Empty,
+                    FileContent = stream,
+                });
             }
         }
     }
-
-    public ICommand UploadCommand { get; }
-
-    private async Task UploadFilesAsync()
-    {
-        var results = await FilePicker.Default.PickMultipleAsync();
-        if (results == null) return;
-
-        foreach (var file in results)
-        {
-            Stream stream = await file.OpenReadAsync();
-
-            long size;
-            if (stream.CanSeek)
-            {
-                size = stream.Length;
-            }
-            else
-            {
-                using var ms = new MemoryStream();
-                await stream.CopyToAsync(ms);
-                size = ms.Length;
-                stream.Dispose();
-                stream = new MemoryStream(ms.ToArray());
-            }
-
-            Attachments?.Add(new AssistAttachment
-            {
-                FileName = file.FileName,
-                FileSize = size,
-                FilePath = file.FullPath ?? string.Empty,
-                FileExtension = Path.GetExtension(file.FileName) ?? string.Empty,
-                FileContent = stream,
-            });
-        }
-    }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -468,20 +468,20 @@ The `SfAIAssistView` control allows you to control the number of attachments usi
 {% endhighlight %}
 {% highlight c# hl_lines="11" %}
 
-using Syncfusion.Maui.AIAssistView;
+    using Syncfusion.Maui.AIAssistView;
 
-public partial class MainPage : ContentPage
-{
-    SfAIAssistView sfAIAssistView;
-    public MainPage()
+    public partial class MainPage : ContentPage
     {
-        InitializeComponent();
-        sfAIAssistView = new SfAIAssistView();
-        sfAIAssistView.Attachment = viewModel.Attachments;
-        sfAIAssistView.MaxAttachmentCount = 8;
-        this.Content = sfAIAssistView;
+        SfAIAssistView sfAIAssistView;
+        public MainPage()
+        {
+            InitializeComponent();
+            sfAIAssistView = new SfAIAssistView();
+            sfAIAssistView.Attachment = viewModel.Attachments;
+            sfAIAssistView.MaxAttachmentCount = 8;
+            this.Content = sfAIAssistView;
+        }
     }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -512,28 +512,28 @@ The `SfAIAssistView` control allows you to customize the preview for the attachm
 {% endhighlight %}
 {% highlight c# hl_lines="11" %}
 
-using Syncfusion.Maui.AIAssistView;
+    using Syncfusion.Maui.AIAssistView;
 
-public partial class MainPage : ContentPage
-{
-    SfAIAssistView sfAIAssistView;
-    public MainPage()
+    public partial class MainPage : ContentPage
     {
-        InitializeComponent();
-        sfAIAssistView = new SfAIAssistView();
-        SfAIAssistView.Attachments = viewModel.Attachments;
-        sfAIAssistView.AttachmentItemTemplate = CreateAttachmentItemTemplate();
-        this.Content = sfAIAssistView;
-    }
-
-    private DataTemplate CreateAttachmentItemTemplate()
-    {
-        return new DataTemplate(() =>
+        SfAIAssistView sfAIAssistView;
+        public MainPage()
         {
-            ...
-        });
+            InitializeComponent();
+            sfAIAssistView = new SfAIAssistView();
+            SfAIAssistView.Attachments = viewModel.Attachments;
+            sfAIAssistView.AttachmentItemTemplate = CreateAttachmentItemTemplate    ();
+            this.Content = sfAIAssistView;
+        }
+
+        private DataTemplate CreateAttachmentItemTemplate()
+        {
+            return new DataTemplate(() =>
+            {
+                ...
+            });
+        }
     }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -643,21 +643,19 @@ The editor action button and its popup are customizable beyond the `ActionButton
 - **`ActionButtonPosition`**: Controls where the action icon appears in the input view. Use `ActionButtonPosition.Start` or `ActionButtonPosition.End` to place the icon at the leading or trailing edge.
 
 {% tabs %} 
-{% highlight xaml %}
+{% highlight xaml hl_lines="3 4" %}
 
 <syncfusion:SfAIAssistView
     ShowActionButtons="True"
     ActionButtonIcon="dotmenu.png"
-    ActionButtonPosition="End">
+    ActionButtonPosition="Start">
     <syncfusion:SfAIAssistView.ActionButtons>
-        <syncfusion:ActionButton BindingContext="{x:Reference viewModel}" Text="Attach" Icon="attach.png" Command="{Binding AttachCommand}" />
-        <syncfusion:ActionButton BindingContext="{x:Reference viewModel}" Text="Format" Icon="format.png" Command="{Binding FormatCommand}" />
+        ...
     </syncfusion:SfAIAssistView.ActionButtons>
 </syncfusion:SfAIAssistView>
 
 {% endhighlight %}
-
-{% highlight c# %}
+{% highlight c# hl_lines="12 13" %}
 
     public partial class MainPage : ContentPage 
     { 
@@ -671,24 +669,11 @@ The editor action button and its popup are customizable beyond the `ActionButton
             this.sfAIAssistView = new SfAIAssistView();
             this.sfAIAssistView.ShowActionButtons = true,
             this.sfAIAssistView.ActionButtonIcon = trueImageSource.FromFile("dotmenu.png"),
-            this.sfAIAssistView.ActionButtonPosition = ActionButtonPosition.End; // or   ActionButtonPosition.Start,
+            this.sfAIAssistView.ActionButtonPosition = ActionButtonPosition.Start;
             this.sfAIAssistView.AssistItems = this.viewModel.AssistItems,
             this.sfAIAssistView.ActionButtons = new     ObservableCollection<ActionButton>
             {
-                new ActionButton
-                {
-                    BindingContext = this.viewModel;
-                    Text = "Attach",
-                    Icon = ImageSource.FromFile ("attach.png"),
-                    Command = viewModel.AttachCommand
-                },
-                new ActionButton
-                {
-                    BindingContext = this.viewModel;
-                    Text = "Search in web",
-                    Icon = ImageSource.FromFile ("format.png"),
-                    Command = this.viewModel.FormatCommand
-                },
+                ...
             };
 
             this.Content = sfAIAssistView;
@@ -1347,3 +1332,150 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![Scroll-To-Buttom Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-scrolltobottomtemplate.png)
+
+## Request Context menu
+
+The `SfAIAssistView` control supports customizable Request context menu for both request. Use the following properties to configure context menus and their templates:
+
+- **RequestContextMenu**: `ObservableCollection<AssistContextMenuItem>` — collection of menu items shown for request items.
+- RequestContextMenuItemTemplate**: `DataTemplate` — template for individual menu items.
+- RequestContextMenuPanelTemplate**: `DataTemplate` — template for the popup panel that contains the menu items.
+
+Assist context menu items are represented by `AssistContextMenuItem` (inherits from `ActionButton`) and expose the familiar `Text`, `Icon`, `Command`, and `CommandParameter` properties. When the menu is opened for a specific assist item, the control sets the `AssistItem` property on each `AssistContextMenuItem` so commands can access the target `IAssistItem`.
+
+- When a menu item is tapped the control executes the `Command` on the `AssistContextMenuItem` (if present). If `CommandParameter` is `null`, the control passes the `AssistContextMenuItem` instance as the parameter (so you can access the `AssistItem` property). Alternatively, set `CommandParameter` to `{Binding AssistItem}` in your item template.
+- The context menu is shown when the More Options icon is tapped for an item. The `ContextMenuOpening` event is raised before the popup appears so you can modify or cancel it.
+
+{% tabs %}
+{% highlight xaml %}
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView">
+    <syncfusion:SfAIAssistView.RequestContextMenu>
+        <syncfusion:AssistContextMenuItem Text="Retry" Command="{Binding RetryCommand}" />
+    </syncfusion:SfAIAssistView.RequestContextMenu>
+</syncfusion:SfAIAssistView>
+
+{% endhighlight %}
+{% highlight c# %}
+
+    var ResquestMenu = new ObservableCollection<AssistContextMenuItem>
+    {
+        new AssistContextMenuItem
+        {
+            Text = "Copy",
+            Command = new Command<object>(param =>
+            {
+                var item = param as AssistContextMenuItem;
+                var assist = item?.AssistItem;
+                if (assist is AssistItem ai)
+                {
+                    ...
+                }
+            })
+        }
+    };
+
+    sfAIAssistView.ResquestContextMenu = ResquestMenu;
+
+{% endhighlight %}
+{% endtabs %}
+
+Custom item template example (binding AssistItem into CommandParameter):
+
+{% highlight xaml %}
+<syncfusion:SfAIAssistView.ResquestContextMenuItemTemplate>
+    <DataTemplate>
+        <Grid Padding="8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image Source="{Binding Icon}" HeightRequest="20" WidthRequest="20" />
+            <Label Grid.Column="1" Text="{Binding Text}" />
+            <!-- Make the AssistItem available to the command as parameter -->
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding Command}" CommandParameter="{Binding AssistItem}" />
+            </Grid.GestureRecognizers>
+        </Grid>
+    </DataTemplate>
+</syncfusion:SfAIAssistView.ResquestContextMenuItemTemplate>
+{% endhighlight %}
+
+Event: `ContextMenuOpening`
+
+Subscribe to `ContextMenuOpening` if you need to modify the menu or prevent it from opening. The event receives the `IList<AssistContextMenuItem>` that will be displayed so you can add/remove items at runtime.
+
+## Response Context menu
+
+The `SfAIAssistView` control supports customizable Response context menu for both response. Use the following properties to configure Response context menu and its template:
+
+- **ResponseContextMenu**: `IList<AssistContextMenuItem>` — collection of menu items shown for response items.
+- **ResponseContextMenuItemTemplate**: `DataTemplate` — template for individual menu items.
+- **ResponseContextMenuPanelTemplate**: `DataTemplate` — template for the popup panel that contains the menu items.
+
+Assist context menu items are represented by `AssistContextMenuItem` (inherits from `ActionButton`) and expose the familiar `Text`, `Icon`, `Command`, and `CommandParameter` properties. When the menu is opened for a specific assist item, the control sets the `AssistItem` property on each `AssistContextMenuItem` so commands can access the target `IAssistItem`.
+
+- When a menu item is tapped the control executes the `Command` on the `AssistContextMenuItem` (if present). If `CommandParameter` is `null`, the control passes the `AssistContextMenuItem` instance as the parameter (so you can access the `AssistItem` property). Alternatively, set `CommandParameter` to `{Binding AssistItem}` in your item template.
+- The context menu is shown when the More Options icon is tapped for an item. The `ContextMenuOpening` event is raised before the popup appears so you can modify or cancel it.
+
+{% highlight xaml %}
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView">
+    <syncfusion:SfAIAssistView.ResponseContextMenu>
+        <syncfusion:AssistContextMenuItem Text="Copy" Command="{Binding CopyCommand}" />
+        <syncfusion:AssistContextMenuItem Text="Retry" Command="{Binding RetryCommand}" />
+    </syncfusion:SfAIAssistView.ResponseContextMenu>
+</syncfusion:SfAIAssistView>
+
+{% endhighlight %}
+{% highlight c# %}
+
+    var responseMenu = new ObservableCollection<AssistContextMenuItem>
+    {
+        new AssistContextMenuItem
+        {
+            Text = "Copy",
+            Command = new Command<object>(param =>
+            {
+                var item = param as AssistContextMenuItem;
+                if (assist is AssistItem ai)
+                {
+                    ...
+                }
+            })
+        },
+        new AssistContextMenuItem
+        {
+            Text = "Like",
+            Command = new Command<object>(param => { /* like action */ })
+        }
+    };
+
+    sfAIAssistView.ResponseContextMenu = responseMenu;
+
+{% endhighlight %}
+
+Custom item template example (binding AssistItem into CommandParameter):
+
+{% highlight xaml %}
+<syncfusion:SfAIAssistView.ResponseContextMenuItemTemplate>
+    <DataTemplate>
+        <Grid Padding="8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image Source="{Binding Icon}" HeightRequest="20" WidthRequest="20" />
+            <Label Grid.Column="1" Text="{Binding Text}" />
+            <!-- Make the AssistItem available to the command as parameter -->
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding Command}" CommandParameter="{Binding AssistItem}" />
+            </Grid.GestureRecognizers>
+        </Grid>
+    </DataTemplate>
+</syncfusion:SfAIAssistView.ResponseContextMenuItemTemplate>
+{% endhighlight %}
+
+Event: `ContextMenuOpening`
+
+Subscribe to `ContextMenuOpening` if you need to modify the menu or prevent it from opening. The event receives the `IList<AssistContextMenuItem>` that will be displayed so you can add/remove items at runtime.
