@@ -40,7 +40,7 @@ To learn more about the Skills CLI, refer [here](https://skills.sh/docs).
 1. **Reads the relevant Skill files based on the user's query**, with the assistant retrieving component usage patterns, APIs, and best-practice guidance from the installed Syncfusion® Skills.
 2. **Enforces Syncfusion® best practices**, including:
    - Referencing the correct NuGet packages for each component.
-   - Applying MVVM data-binding patterns and platform-specific initialisation (for example, `MauiProgram.cs` handler registration).
+   - Applying MVVM data-binding patterns and platform-specific initialization (for example, `MauiProgram.cs` handler registration).
    - Adding the correct theme resource dictionaries and style imports.
 3. **Generates component-accurate code**, avoiding invalid properties or unsupported patterns.
 
