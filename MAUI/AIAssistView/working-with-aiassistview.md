@@ -648,7 +648,7 @@ The editor action button and its popup are customizable beyond the `ActionButton
 <syncfusion:SfAIAssistView
     ShowActionButtons="True"
     ActionButtonIcon="dotmenu.png"
-    ActionButtonPosition="End">
+    ActionButtonPosition="Start">
     <syncfusion:SfAIAssistView.ActionButtons>
         <syncfusion:ActionButton BindingContext="{x:Reference viewModel}" Text="Attach" Icon="attach.png" Command="{Binding AttachCommand}" />
         <syncfusion:ActionButton BindingContext="{x:Reference viewModel}" Text="Format" Icon="format.png" Command="{Binding FormatCommand}" />
@@ -671,7 +671,7 @@ The editor action button and its popup are customizable beyond the `ActionButton
             this.sfAIAssistView = new SfAIAssistView();
             this.sfAIAssistView.ShowActionButtons = true,
             this.sfAIAssistView.ActionButtonIcon = trueImageSource.FromFile("dotmenu.png"),
-            this.sfAIAssistView.ActionButtonPosition = ActionButtonPosition.End; // or   ActionButtonPosition.Start,
+            this.sfAIAssistView.ActionButtonPosition = ActionButtonPosition.Start; // or   ActionButtonPosition.End,
             this.sfAIAssistView.AssistItems = this.viewModel.AssistItems,
             this.sfAIAssistView.ActionButtons = new     ObservableCollection<ActionButton>
             {
