@@ -56,7 +56,7 @@ N> When `FilterText` is `null` or empty, no filtering is applied, and all nodes 
 You can set the `FilterText` property programmatically to apply filtering:
 
 {% tabs %}
-{% highlight c#  hl_lines="1, 2"%}
+{% highlight c# hl_lines="1, 2" %}
 treeView.FilterText = "Documents";
 treeView.FilterMode = TreeViewFilterMode.StartsWith;
 {% endhighlight %}
@@ -67,7 +67,7 @@ treeView.FilterMode = TreeViewFilterMode.StartsWith;
 You can bind the `FilterText` property to a property in your ViewModel for MVVM scenarios:
 
 {% tabs %}
-{% highlight xaml hl_lines="7, 8, 9"%}
+{% highlight xaml hl_lines="7, 8, 9" %}
 <Entry Placeholder="Enter filter text"
        Text="{Binding FilterText, Mode=TwoWay}"/>
 
@@ -89,14 +89,14 @@ You can bind the `FilterText` property to a property in your ViewModel for MVVM 
 The [FilterPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_FilterPath) property specifies a single property name of the data model to use for filtering. If `FilterPath` is not set, filtering is applied to the default display member used in the ItemTemplate or the ToString() method.
 
 {% tabs %}
-{% highlight xaml  hl_lines="4"%}
+{% highlight xaml hl_lines="4" %}
 <syncfusion:SfTreeView x:Name="treeView"
                        ItemsSource="{Binding Items}"
                        FilterText="{Binding FilterText}"
                        FilterPath="Name"
                        FilterMode="Contains"/>
 {% endhighlight %}
-{% highlight c#  hl_lines="1"%}
+{% highlight c# hl_lines="1" %}
 treeView.FilterPath = "Name";
 {% endhighlight %}
 {% endtabs %}
@@ -106,7 +106,7 @@ treeView.FilterPath = "Name";
 The [FilterPaths](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_FilterPaths) property allows filtering across multiple properties. When specified, the filter evaluates all properties and displays a node if any property matches the filter criteria.
 
 {% tabs %}
-{% highlight xaml  hl_lines="5"%}
+{% highlight xaml hl_lines="5" %}
 <syncfusion:SfTreeView x:Name="treeView"
                        ItemsSource="{Binding Items}"
                        FilterText="{Binding FilterText}"
@@ -118,7 +118,7 @@ The [FilterPaths](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.S
     </syncfusion:SfTreeView.FilterPaths>
 </syncfusion:SfTreeView>
 {% endhighlight %}
-{% highlight c#  hl_lines="1"%}
+{% highlight c# hl_lines="1" %}
 treeView.FilterPaths = new List<string> { "Name", "Code", "Description" };
 {% endhighlight %}
 {% endtabs %}
@@ -130,7 +130,7 @@ For advanced filtering scenarios, you can use `FilterMode.Custom` with the [Filt
 ### Setting a filter predicate
 
 {% tabs %}
-{% highlight c#  hl_lines="2"%}
+{% highlight c# hl_lines="2" %}
 treeView.FilterMode = TreeViewFilterMode.Custom;
 treeView.FilterPredicate = (item) =>
 {
@@ -153,7 +153,7 @@ The [AutoExpandOnFilter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Tre
                        FilterMode="Contains"
                        FilterText="Report"/>
 {% endhighlight %}
-{% highlight c# hl_lines="1"%}
+{% highlight c# hl_lines="1" %}
 treeView.AutoExpandOnFilter = true;
 {% endhighlight %}
 {% endtabs %}
