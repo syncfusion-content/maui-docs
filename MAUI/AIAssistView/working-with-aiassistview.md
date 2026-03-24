@@ -639,8 +639,8 @@ public partial class MainPage : ContentPage
 
 The editor action button and its popup are customizable beyond the `ActionButtons` collection:
 
-- **`ActionButtonIcon`**: Set a custom `ImageSource` for the quick action icon shown inside the editor (the icon that opens the action popup).
-- **`ActionButtonPosition`**: Controls where the action icon appears in the input view. Use `ActionButtonPosition.Start` or `ActionButtonPosition.End` to place the icon at the leading or trailing edge.
+- **[ActionButtonIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ActionButtonIcon)**: Set a custom `ImageSource` for the quick action icon shown inside the editor (the icon that opens the action popup).
+- **[ActionButtonPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ActionButtonPosition)**: Controls where the action icon appears in the input view. Use [ActionButtonPosition.Start](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ActionButtonPosition.html#Syncfusion_Maui_AIAssistView_ActionButtonPosition_Start) or [ActionButtonPosition.End](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ActionButtonPosition.html#Syncfusion_Maui_AIAssistView_ActionButtonPosition_End) to place the icon at the leading or trailing edge.
 
 {% tabs %} 
 {% highlight xaml %}
@@ -697,6 +697,8 @@ The editor action button and its popup are customizable beyond the `ActionButton
 
 {% endhighlight %}
 {% endtabs %}
+
+![Action button customization in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassitview-actionbutton-customization.png)
 
 ## Request button customization
 

@@ -1264,6 +1264,8 @@ namespace MauiChat
 {% endhighlight %}
 {% endtabs %}
 
+![Pin Message in .NET MAUI Chat](Images/messages/maui-chat-pin-message.gif)
+
 N> 
 * The [`IMessage.IsPinned`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IMessage.html#Syncfusion_Maui_Chat_IMessage_IsPinned) property is used to mark a message as pinned during initial load.
 * Pinned messages are stored in the read‑only [`SfChat.PinnedMessages`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_PinnedMessages) collection.
@@ -1283,7 +1285,7 @@ By default, it is set to `true`.
                ShowPinnedMessagesContainer="False" />
 
 {% endhighlight %}
-{% highlight c# hl_lines="17" %}
+{% highlight c# hl_lines="18" %}
 
 using Syncfusion.Maui.Chat;
 
@@ -1311,6 +1313,8 @@ namespace MauiChat
 {% endhighlight %}
 {% endtabs %}
 
+![Show Pin Message Container in .NET MAUI Chat](Images/messages/maui-chat-pin-message-show-container.png)
+
 ### Customizing pinned message view
 
 #### Pinned container height customization
@@ -1327,7 +1331,7 @@ The `SfChat` control allows you to set the height of the pinned message containe
                PinnedContainerHeight="80" />
 
 {% endhighlight %}
-{% highlight c# hl_lines="13" %}
+{% highlight c# hl_lines="14" %}
 
 public partial class MainPage : ContentPage
 {
@@ -1348,6 +1352,8 @@ public partial class MainPage : ContentPage
 }
 {% endhighlight %}
 {% endtabs %}
+
+![Pin Message Container Height in .NET MAUI Chat](Images/messages/maui-chat-pin-message-container-height.png)
 
 #### Pinned message template
 
@@ -1372,7 +1378,7 @@ You can customize pinned message appearance using the
     </ContentPage.Content>
 
 {% endhighlight %}
-{% highlight c# hl_lines="12" %}
+{% highlight c# hl_lines="13" %}
 public partial class MainPage : ContentPage
 {
     SfChat sfChat;
@@ -1399,6 +1405,9 @@ public partial class MainPage : ContentPage
 }
 {% endhighlight %}
 {% endtabs %}
+
+![Pin Message Template in .NET MAUI Chat](Images/messages/maui-chat-pin-message-template.png)
+
 
 ### Events for pinned messages
 
