@@ -21,9 +21,8 @@ To quickly get started with the .NET MAUI Rotator, watch this video.
 ## Prerequisites
 
 Before proceeding, ensure the following are in place:
-
-1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
-2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.8 or later).
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later is installed.
+2. Set up a .NET MAUI environment with Visual Studio 2026 (v18.0.0 or later).
 
 ## Step 1: Create a New MAUI Project
 
