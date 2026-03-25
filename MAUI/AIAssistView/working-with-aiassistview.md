@@ -1349,3 +1349,42 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![Scroll-To-Buttom Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-scrolltobottomtemplate.png)
+
+## Auto scroll control to bottom when new message is added
+
+By default, the `SfAIAssistView` control automatically scrolls to the bottom of the conversation to display newly added messages. If you want to prevent this behavior and retain the current scroll position, you can disable auto‑scrolling by setting the [CanAutoScrollToBottom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_CanAutoScrollToBottom) property to `false`.
+
+{% tabs %}
+{% highlight xaml hl_lines="16" %}
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           AssistItems="{Binding AssistItems}"
+                           CanAutoScrollToBottom="False" />
+
+{% endhighlight %}
+{% endtabs %}
+
+## Scrolled Event
+
+The `SfAIAssistView` control comes with a built-in [Scrolled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_Scrolled) event that will be fired whenever the coversation view is scrolled.  This event allows developers to track the current scroll position and determine whether the user has reached the top or bottom of the conversation list through the [ScrolledEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ScrolledEventArgs.html). 
+
+You can handle this event to control the auto-scroll behavior of the AssistView. For example, if the user manually scrolls up and is no longer at the bottom of the conversation, auto-scrolling can be disabled to prevent newly added messages from interrupting the user’s reading position.
+
+{% tabs %}
+{% highlight xaml %}
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           Scrolled="sfAIAssistView_Scrolled" />
+
+{% endhighlight %}
+{% highlight c# %}
+
+ sfAIAssistView.Scrolled += sfAIAssistView_Scrolled;
+
+private void sfAIAssistView_Scrolled(object sender, Syncfusion.Maui.AIAssistView.ScrolledEventArgs e)
+{
+   // Handle the Scrolled event.
+}
+
+{% endhighlight %}
+{% endtabs %}

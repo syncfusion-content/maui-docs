@@ -9,6 +9,12 @@ documentation: ug
 
 # Working with Suggestions in .NET MAUI AI AssistView (SfAIAssistView)
 
+This section explains how to use suggestions and its related operations in the `SfAIAssistView`.
+
+To get start quickly with suggestions in .NET MAUI AI AssistView, you can check on this video:
+
+<style>#MAUIAIAssistViewSuggestionsVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIAIAssistViewSuggestionsVideoTutorial' src='https://www.youtube.com/watch?v=dz9EOTvvAOU'></iframe>
+
 ## Common suggestions
 
 The `SfAIAssistView` control allows users to view a list of common suggestions to choose from. These suggestions offer recommendations, helpful tips, and guides for various tasks and topics.
