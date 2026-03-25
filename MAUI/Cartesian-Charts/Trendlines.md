@@ -77,7 +77,7 @@ Each type is described below.
 
 ### Linear
 
-A [linear](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LinearTrendline.html) trendline draws a straight line through your data. Use this when your data moves in a consistent direction—either steadily up or down. It's the simplest way to show the overall trend in your data.
+A [linear trendline](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LinearTrendline.html) draws a straight line through your data. Use this when your data moves in a consistent direction—either steadily up or down. It's the simplest way to show the overall trend in your data.
 
 {% tabs %}
 
@@ -120,7 +120,7 @@ this.Content = chart;
 
 ### Logarithmic
 
-A [logarithmic](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicTrendline.html) trendline shows data that changes quickly at first and then levels off. This is useful for showing how something grows or reduces rapidly in the beginning but then stabilizes over time.
+A [logarithmic trendline](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicTrendline.html) shows data that changes quickly at first and then levels off. This is useful for showing how something grows or reduces rapidly in the beginning but then stabilizes over time.
 
 {% tabs %}
 
@@ -163,7 +163,7 @@ this.Content = chart;
 
 ### Exponential
 
-An [exponential](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ExponentialTrendline.html) trendline shows data that grows or shrinks at an increasingly fast rate. Use this for data that accelerates over time, like population growth or viral spread. This trendline requires all positive values and cannot work with zero or negative numbers.
+An [exponential trendline](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ExponentialTrendline.html) shows data that grows or shrinks at an increasingly fast rate. Use this for data that accelerates over time, like population growth or viral spread. This trendline requires all positive values and cannot work with zero or negative numbers.
 
 {% tabs %}
 
@@ -206,7 +206,7 @@ this.Content = chart;
 
 ### Power
 
-A [power](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PowerTrendline.html) trendline models data that accelerates at different rates. It works well for scientific or physical measurements where the rate of change depends on the magnitude of the values. Always use positive values for best results.
+A [power trendline](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PowerTrendline.html) models data that accelerates at different rates. It works well for scientific or physical measurements where the rate of change depends on the magnitude of the values. Always use positive values for best results.
 
 {% tabs %}
 
@@ -249,7 +249,7 @@ this.Content = chart;
 
 ### Polynomial
 
-A [polynomial](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolynomialTrendline.html) trendline is a curved line that follows the ups and downs in your data. Use this when your data has multiple peaks and valleys or doesn't follow a straight line. You can control how closely the curve follows your data using the [Order](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolynomialTrendline.html#Syncfusion_Maui_Charts_PolynomialTrendline_Order) property (default is 2).
+A [polynomial trendline](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolynomialTrendline.html) is a curved line that follows the ups and downs in your data. Use this when your data has multiple peaks and valleys or doesn't follow a straight line. You can control how closely the curve follows your data using the [Order](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolynomialTrendline.html#Syncfusion_Maui_Charts_PolynomialTrendline_Order) property (default is 2).
 
 {% tabs %}
 
@@ -293,7 +293,7 @@ this.Content = chart;
 
 ### Moving Average
 
-A [moving average](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.MovingAverageTrendline.html) trendline smooths out small bumps in your data by averaging nearby points. This helps you see the main trend without being distracted by temporary ups and downs. You can change how many points are used for averaging with the [Period](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.MovingAverageTrendline.html#Syncfusion_Maui_Charts_MovingAverageTrendline_Period) property (default is 2).
+A [moving average trendline](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.MovingAverageTrendline.html) smooths out small bumps in your data by averaging nearby points. This helps you see the main trend without being distracted by temporary ups and downs. You can change how many points are used for averaging with the [Period](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.MovingAverageTrendline.html#Syncfusion_Maui_Charts_MovingAverageTrendline_Period) property (default is 2).
 
 {% tabs %}
 
