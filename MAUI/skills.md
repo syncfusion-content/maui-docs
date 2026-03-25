@@ -29,7 +29,7 @@ Before installing Syncfusion® MAUI Agent Skills, ensure the following:
 
 ## Installation
 
-Install [Syncfusion® MAUI components skills](https://github.com/syncfusion/maui-ui-components-skills.git) using the Skills CLI. Users can also explore available skills from the [marketplace](https://skills.sh/syncfusion/).
+Install [Syncfusion® .NET MAUI components skills](https://github.com/syncfusion/maui-ui-components-skills.git) using the Skills CLI. Users can also explore available skills from the [marketplace](https://skills.sh/syncfusion/).
 
 ### Install all skills
 
