@@ -116,7 +116,7 @@ To learn more about the Skills CLI, refer [here](https://skills.sh/docs).
 
 ## How Syncfusion® Agent Skills Work
 
-1. **Reads the relevant Skill files based on the user's query**, with the assistant retrieving component usage patterns, APIs, and best-practice guidance from the installed Syncfusion® Skills.
+1. **Reads relevant Skill files based on queries**, retrieving component usage patterns, APIs, and best‑practice guidance from installed Syncfusion® Skills. The assistant initially loads only skill names and descriptions, then dynamically loads the required skill and reference files as needed to provide accurate Syncfusion guidance.
 2. **Enforces Syncfusion® best practices**, including:
    - Referencing the correct NuGet packages for each component.
    - Applying MVVM data-binding patterns and platform-specific initialization (for example, `MauiProgram.cs` handler registration).
