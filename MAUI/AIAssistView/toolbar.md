@@ -47,11 +47,13 @@ This section explains how to define and customize the toolbar in the [SfAIAssist
 
 ![Toolbar in .NET MAUI AI AssistView](Images/toolbar/maui-aiassistview-toolbar.png)
 
-## New chat button (toolbar)
+## Chat Modes
+
+### New chat button
 
 The toolbar now includes a chat option that provides both New Chat. When clicked, it opens a new chat window where the user can start an entirely new session, while the previous session is preserved in the conversation history.
 
-## Temporary Chat (Temporary Mode)
+### Temporary Chat
 
 The `SfAIAssistView` supports a Temporary Chat mode that provides an ephemeral conversation surface for quick, non-persistent interactions. When temporary mode is Clicked, the control clears the active `AssistItems` collection and displays a banner above the chat to indicate the temporary state. The control preserves your original `EmptyViewTemplate` and restores it when temporary mode ends.
 
@@ -89,7 +91,7 @@ N> Enabling `EnableTemporaryChat` includes the temporary chat in the toolbar's n
 
 ![Temporary Chat Banner in .NET MAUI AI AssistView](Images/toolbar/maui-aiassistview-temporary-chat-banner.png)
 
-## Events for chat mode
+### Events for chat mode
 
 `SfAIAssistView` raises two events when the user changes the chat mode via the toolbar: [ChatModeChanging](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ChatModeChanging) (raised before the change) and [ChatModeChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ChatModeChanged) (raised after the change).
 
