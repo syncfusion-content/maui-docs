@@ -11,7 +11,7 @@ documentation: ug
 
 ## Displaying AutoComplete suggestions
 
-The `SfAIAssistView` control includes an `AutoCompletesuggestions` feature that displays relevant suggestions as the user types. The suggestions appear when the user enters the required number of characters, defined by the `MinimumPrefixCharacters` property. As the user continues typing, the list updates automatically.
+The `SfAIAssistView` control includes an `AutoCompleteSuggestions` feature that displays relevant suggestions as the user types. The suggestions appear when the user enters the required number of characters, defined by the `MinimumPrefixCharacters` property. As the user continues typing, the list updates automatically.
 
 Suggestions are provided through the AutoSuggestions property, which accepts any `IEnumerable<ISuggestion>` collection.
 This feature helps users compose clearer and more effective prompts, making it especially valuable in conversational AI scenarios.
@@ -191,7 +191,7 @@ this.sfAIAssistView.AutoSuggestionOverlay = new AutoSuggestionOverlay()
 
 ### SuggestionOpenDelay 
 
-The [SuggestionOpenDelay](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AutoSuggestionOverlay.html#Syncfusion_Maui_AIAssistView_AutoSuggestionOverlay_SuggestionOpenDelay) property sets the delay (in milliseconds) before the autosuggestion overlay opens after typing. This helps reduce unnecessary lookups during rapid typing. The default value is `200`.
+The [SuggestionOpenDelay](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AutoSuggestionOverlay.html#Syncfusion_Maui_AIAssistView_AutoSuggestionOverlay_SuggestionOpenDelay) property sets the delay (in milliseconds) before the auto suggestion overlay opens after typing. This helps reduce unnecessary lookups during rapid typing. The default value is `200`.
 
 {% tabs %}
 {% highlight xaml hl_lines="5" %}
