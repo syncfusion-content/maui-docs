@@ -14,7 +14,7 @@ Crosshair allows you to view exact values on the chart by showing vertical and h
 
 ## Enable Crosshair 
 
-To enable the crosshair in the chart, create an instance of the `ChartCrosshairBehavior` and set it to the `CrosshairBehavior` property of `SfCartesianChart`.
+To enable the crosshair in the chart, create an instance of the [ChartCrosshairBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartCrosshairBehavior.html) and set it to the [CrosshairBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html#Syncfusion_Maui_Charts_SfCartesianChart_CrosshairBehavior) property of [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html).
 
 
 {% tabs %}
@@ -46,7 +46,7 @@ this.Content = chart;
 
 ## Show Crosshair axis labels
 
-To view the axis labels then set the `ShowTrackballLabel` property to true as shown in the below code snippet. The default value of the `ChartAxis.ShowTrackballLabel` is False.
+To view the axis labels then set the [ShowTrackballLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ShowTrackballLabel) property to true as shown in the below code snippet. The default value of the [ChartAxis.ShowTrackballLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartAxis.html#Syncfusion_Maui_Charts_ChartAxis_ShowTrackballLabel) is False.
 
 
 {% tabs %}
@@ -101,13 +101,13 @@ this.Content = chart;
 
 ## Vertical and Horizontal Line Customization
 
-When you add the `ChartCrosshairBehavior` to a chart, horizontal and vertical lines appear. These lines can be customized individually using the `HorizontalLineStyle` and `VerticalLineStyle` properties.
+When you add the [ChartCrosshairBehavior](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartCrosshairBehavior.html) to a chart, horizontal and vertical lines appear. These lines can be customized individually using the [HorizontalLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartCrosshairBehavior.html#Syncfusion_Maui_Charts_ChartCrosshairBehavior_HorizontalLineStyle) and [VerticalLineStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartCrosshairBehavior.html#Syncfusion_Maui_Charts_ChartCrosshairBehavior_VerticalLineStyle) properties.
 
 The appearance of the track line in crosshair can be customized using the following properties.
 
-* `StrokeWidth`, of type `double`, used to change the stroke width of the line.
-* `Stroke`, of type `Brush`, used to change the stroke color of the line.
-* `StrokeDashArray`, of type `DoubleCollection`, specifies the dashes to be applied on the line.
+* [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLineStyle.html#Syncfusion_Maui_Charts_ChartLineStyle_StrokeWidth), of type `double`, used to change the stroke width of the line.
+* [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLineStyle.html#Syncfusion_Maui_Charts_ChartLineStyle_Stroke), of type `Brush`, used to change the stroke color of the line.
+* [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLineStyle.html#Syncfusion_Maui_Charts_ChartLineStyle_StrokeDashArray), of type `DoubleCollection`, specifies the dashes to be applied on the line.
 
 ### HorizontalLineStyle
 
@@ -217,18 +217,18 @@ this.Content = chart;
 
 ## Crosshair Axis Labels Customization
 
-The `LabelStyle` property allows you to customize the appearance of crosshair axis labels. These options are:
+The [LabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrackballBehavior.html#Syncfusion_Maui_Charts_ChartTrackballBehavior_LabelStyle) property allows you to customize the appearance of crosshair axis labels. These options are:
 
-* `Background`, of type `Brush`, used to change the label background color.
-* `Margin`, of type `Thickness`, used to change the margin of the label.
-* `TextColor`, of type `Color`, used to change the text color.
-* `StrokeWidth`, of type `double`, used to change the stroke thickness of the label.
-* `Stroke`, of type `Brush`, used to customize the border of the label.
-* `LabelFormat`, of type `string`, used to change the format of the label.
-* `FontFamily`, of type `string`, used to change the font family for the trackball label.
-* `FontAttributes`, of type `FontAttributes`, used to change the font style for the trackball label.
-* `FontSize`, of type `double`, used to change the font size for the trackball label.
-* `CornerRadius`, of type `CornerRadius`, used to set the rounded corners for labels.
+* [Background](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_Background), of type `Brush`, used to change the label background color.
+* [Margin](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_Margin), of type `Thickness`, used to change the margin of the label.
+* [TextColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_TextColor), of type `Color`, used to change the text color.
+* [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_StrokeWidth), of type `double`, used to change the stroke thickness of the label.
+* [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_Stroke), of type `Brush`, used to customize the border of the label.
+* [LabelFormat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_LabelFormat), of type `string`, used to change the format of the label.
+* [FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_LabelFormat), of type `string`, used to change the font family for the trackball label.
+* [FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_FontAttributes), of type `FontAttributes`, used to change the font style for the trackball label.
+* [FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_FontSize), of type `double`, used to change the font size for the trackball label.
+* [CornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLabelStyle.html#Syncfusion_Maui_Charts_ChartLabelStyle_CornerRadius), of type `CornerRadius`, used to set the rounded corners for labels.
 
 
 {% tabs %}
