@@ -15,7 +15,7 @@ Syncfusion® Skills eliminate common issues with generic AI suggestions by groun
 
 ## Prerequisites
 
-Before installing Syncfusion® React Agent Skills, ensure the following:
+Before installing Syncfusion® ReaMAUIct Agent Skills, ensure the following:
 
 - Required [Node.js](https://nodejs.org/en/) version >= 16
 - MAUI application (existing or new); see [Quick Start](https://help.syncfusion.com/maui/introduction/overview)
