@@ -15,7 +15,7 @@ Syncfusion® Skills eliminate common issues with generic AI suggestions by groun
 
 ## Prerequisites
 
-Before installing Syncfusion® ReaMAUIct Agent Skills, ensure the following:
+Before installing Syncfusion® .NET MAUI Agent Skills, ensure the following:
 
 - Required [Node.js](https://nodejs.org/en/) version >= 16
 - MAUI application (existing or new); see [Quick Start](https://help.syncfusion.com/maui/introduction/overview)
@@ -29,7 +29,7 @@ Before installing Syncfusion® ReaMAUIct Agent Skills, ensure the following:
 
 ## Installation
 
-Install [Syncfusion® MAUI components skills](https://github.com/syncfusion/maui-ui-components-skills.git) using the Skills CLI. Users can also explore available skills from the [marketplace](https://skills.sh/syncfusion/).
+Install [Syncfusion® .NET MAUI components skills](https://github.com/syncfusion/maui-ui-components-skills.git) using the Skills CLI. Users can also explore available skills from the [marketplace](https://skills.sh/syncfusion/).
 
 ### Install all skills
 
