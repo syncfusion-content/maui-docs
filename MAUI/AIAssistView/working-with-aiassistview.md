@@ -340,7 +340,7 @@ public partial class MainPage : ContentPage
 The `SfAIAssistView` allows users to customize the editor’s visual surface by accessing the [RequestEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestEditor) only in the code behind C#.
 
 {% tabs %}
-{% highlight c# hl_lines="10" %}
+{% highlight c# hl_lines="9" %}
 
 using Syncfusion.Maui.AIAssistView;
 
@@ -612,14 +612,14 @@ public partial class MainPage : ContentPage
         {
             new ActionButton
             {
-                BindingContext = this.viewModel;
+                BindingContext = this.viewModel,
                 Text = "Upload images",
                 Icon = ImageSource.FromFile("image.png"),
                 Command = this.viewModel.UploadCommand
             },
             new ActionButton
             {
-                BindingContext = this.viewModel;
+                BindingContext = this.viewModel,
                 Text = "Search in web",
                 Icon = ImageSource.FromFile("web.png"),
                 Command = this.viewModel.SearchCommand
@@ -639,8 +639,8 @@ public partial class MainPage : ContentPage
 
 The editor action button and its popup are customizable beyond the `ActionButtons` collection:
 
-- **`ActionButtonIcon`**: Set a custom `ImageSource` for the quick action icon shown inside the editor (the icon that opens the action popup).
-- **`ActionButtonPosition`**: Controls where the action icon appears in the input view. Use `ActionButtonPosition.Start` or `ActionButtonPosition.End` to place the icon at the leading or trailing edge.
+- **[ActionButtonIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ActionButtonIcon)**: Set a custom `ImageSource` for the quick action icon shown inside the editor (the icon that opens the action popup).
+- **[ActionButtonPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ActionButtonPosition)**: Controls where the action icon appears in the input view. Use [ActionButtonPosition.Start](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ActionButtonPosition.html#Syncfusion_Maui_AIAssistView_ActionButtonPosition_Start) or [ActionButtonPosition.End](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ActionButtonPosition.html#Syncfusion_Maui_AIAssistView_ActionButtonPosition_End) to place the icon at the leading or trailing edge.
 
 {% tabs %} 
 {% highlight xaml %}
@@ -648,7 +648,7 @@ The editor action button and its popup are customizable beyond the `ActionButton
 <syncfusion:SfAIAssistView
     ShowActionButtons="True"
     ActionButtonIcon="dotmenu.png"
-    ActionButtonPosition="End">
+    ActionButtonPosition="Start">
     <syncfusion:SfAIAssistView.ActionButtons>
         <syncfusion:ActionButton BindingContext="{x:Reference viewModel}" Text="Attach" Icon="attach.png" Command="{Binding AttachCommand}" />
         <syncfusion:ActionButton BindingContext="{x:Reference viewModel}" Text="Format" Icon="format.png" Command="{Binding FormatCommand}" />
@@ -671,7 +671,7 @@ The editor action button and its popup are customizable beyond the `ActionButton
             this.sfAIAssistView = new SfAIAssistView();
             this.sfAIAssistView.ShowActionButtons = true,
             this.sfAIAssistView.ActionButtonIcon = trueImageSource.FromFile("dotmenu.png"),
-            this.sfAIAssistView.ActionButtonPosition = ActionButtonPosition.End; // or   ActionButtonPosition.Start,
+            this.sfAIAssistView.ActionButtonPosition = ActionButtonPosition.Start; // or   ActionButtonPosition.End,
             this.sfAIAssistView.AssistItems = this.viewModel.AssistItems,
             this.sfAIAssistView.ActionButtons = new     ObservableCollection<ActionButton>
             {
@@ -697,6 +697,8 @@ The editor action button and its popup are customizable beyond the `ActionButton
 
 {% endhighlight %}
 {% endtabs %}
+
+![Action button customization in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassitview-actionbutton-customization.png)
 
 ## Request button customization
 
@@ -1347,3 +1349,42 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![Scroll-To-Buttom Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-scrolltobottomtemplate.png)
+
+## Auto scroll control to bottom when new message is added
+
+By default, the `SfAIAssistView` control automatically scrolls to the bottom of the conversation to display newly added messages. If you want to prevent this behavior and retain the current scroll position, you can disable auto‑scrolling by setting the [CanAutoScrollToBottom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_CanAutoScrollToBottom) property to `false`.
+
+{% tabs %}
+{% highlight xaml hl_lines="16" %}
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           AssistItems="{Binding AssistItems}"
+                           CanAutoScrollToBottom="False" />
+
+{% endhighlight %}
+{% endtabs %}
+
+## Scrolled Event
+
+The `SfAIAssistView` control comes with a built-in [Scrolled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_Scrolled) event that will be fired whenever the conversation view is scrolled.  This event allows developers to track the current scroll position and determine whether the user has reached the top or bottom of the conversation list through the [ScrolledEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ScrolledEventArgs.html). 
+
+You can handle this event to control the auto-scroll behavior of the AssistView. For example, if the user manually scrolls up and is no longer at the bottom of the conversation, auto-scrolling can be disabled to prevent newly added messages from interrupting the user’s reading position.
+
+{% tabs %}
+{% highlight xaml %}
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           Scrolled="sfAIAssistView_Scrolled" />
+
+{% endhighlight %}
+{% highlight c# %}
+
+ sfAIAssistView.Scrolled += sfAIAssistView_Scrolled;
+
+private void sfAIAssistView_Scrolled(object sender, Syncfusion.Maui.AIAssistView.ScrolledEventArgs e)
+{
+   // Handle the Scrolled event.
+}
+
+{% endhighlight %}
+{% endtabs %}
