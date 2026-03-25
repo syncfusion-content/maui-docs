@@ -12,7 +12,7 @@ documentation: ug
 This section explains how to define and customize the toolbar in the [SfAIAssistView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.html).
 
 ## AssistView Toolbar
-.
+
 `SfAIAssistView` exposes a header toolbar that can be enabled and customized for conversation-level actions and titles. The toolbar will not be visible when the [ShowToolbar](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ShowToolbar) is set to `false`.
 
 - **`ShowToolbar`**: Set to `false` to hide the toolbar. The default value is `true`.
@@ -57,7 +57,7 @@ The toolbar now includes a chat option that provides both New Chat. When clicked
 
 The `SfAIAssistView` supports a Temporary Chat mode that provides an ephemeral conversation surface for quick, non-persistent interactions. When temporary mode is Clicked, the control clears the active `AssistItems` collection and displays a banner above the chat to indicate the temporary state. The control preserves your original `EmptyViewTemplate` and restores it when temporary mode ends.
 
-- **[EnableTemporaryChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_EnableTemporaryChat)**: Set to `false` to disable Temporary Chat mode;
+- **[EnableTemporaryChat](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_EnableTemporaryChat)**: Set to `false` to disable Temporary Chat mode.
 
 - **[TemporaryChatBannerTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_TemporaryChatBannerTemplate)**: Provide a `DataTemplate` to replace the default temporary-mode banner with a custom view.
 - **[TemporaryChatBannerText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_TemporaryChatBannerText)**: The default banner text when no custom banner template is provided.
@@ -81,7 +81,7 @@ N> Enabling `EnableTemporaryChat` includes the temporary chat in the toolbar's n
             InitializeComponent();
             sfAIAssistView = new SfAIAssistView();
             sfAIAssistView.EnableTemporaryChat = true;
-            sfAIAssistView.TemporaryChatBannerText="This chat will not be saved"
+            sfAIAssistView.TemporaryChatBannerText="This chat will not be saved";
             this.Content = sfAIAssistView;
         }
     }

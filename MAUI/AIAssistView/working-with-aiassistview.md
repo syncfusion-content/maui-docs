@@ -340,7 +340,7 @@ public partial class MainPage : ContentPage
 The `SfAIAssistView` allows users to customize the editor’s visual surface by accessing the [RequestEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestEditor) only in the code behind C#.
 
 {% tabs %}
-{% highlight c# hl_lines="10" %}
+{% highlight c# hl_lines="9" %}
 
 using Syncfusion.Maui.AIAssistView;
 
@@ -612,14 +612,14 @@ public partial class MainPage : ContentPage
         {
             new ActionButton
             {
-                BindingContext = this.viewModel;
+                BindingContext = this.viewModel,
                 Text = "Upload images",
                 Icon = ImageSource.FromFile("image.png"),
                 Command = this.viewModel.UploadCommand
             },
             new ActionButton
             {
-                BindingContext = this.viewModel;
+                BindingContext = this.viewModel,
                 Text = "Search in web",
                 Icon = ImageSource.FromFile("web.png"),
                 Command = this.viewModel.SearchCommand
