@@ -440,55 +440,50 @@ When choosing a ErrorIconTemplate as a DataTemplateSelector, you have the option
 
 {% tabs %}
 {% highlight XAML %}
-
 <ContentPage.Resources>
     <ResourceDictionary>
-        <DataTemplate x:Key = "BelgiumTemplate">
-            <Image Source = "error_icon.png"/>
+        <DataTemplate x:Key="NorwayTemplate">
+            <Image Source="error_icon.png"/>
         </DataTemplate>
-    <DataTemplate x:Key = "CanadaTemplate">
-            <Image Source = "error_triangle.png"/>
+        <DataTemplate x:Key="FranceTemplate">
+            <Image Source="error_triangle.png"/>
         </DataTemplate>
     </ResourceDictionary>
 </ContentPage.Resources>
 
-<syncfusion:SfDataGrid x:Name = "dataGrid"
-                       ItemsSource = "{Binding OrderInfoCollection}"
-                       SelectionMode = "Single"
-                       NavigationMode = "Cell"
-                       AllowEditing = "True"                           
-                       ValidationMode = "InView">
-        <syncfusion:SfDataGrid.ErrorIconTemplate>
-                <local:ErrorIconTemplateSelector BelgiumTemplate = "{StaticResource BelgiumTemplate}" CanadaTemplate = "{StaticResource CanadaTemplate}" />
-        </syncfusion:SfDataGrid.ErrorIconTemplate>
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                        ItemsSource="{Binding Orders}"
+                        SelectionMode="Single"
+                        NavigationMode="Cell"
+                        AllowEditing="True"
+                        ValidationMode="InView">
+    <syncfusion:SfDataGrid.ErrorIconTemplate>
+        <local:ErrorIconTemplateSelector NorwayTemplate="{StaticResource NorwayTemplate}"
+                                            FranceTemplate="{StaticResource FranceTemplate}"/>
+    </syncfusion:SfDataGrid.ErrorIconTemplate>
 </syncfusion:SfDataGrid>
-
 {% endhighlight %}
 {% highlight C# %}
-
-public class ErrorIconTemplateSelector: DataTemplateSelector
+public class ErrorIconTemplateSelector : Microsoft.Maui.Controls.DataTemplateSelector
 {
-    public DataTemplate BelgiumTemplate { get; set; }
-    public DataTemplate CanadaTemplate { get; set; }
-
+    public DataTemplate NorwayTemplate { get; set; }
+    public DataTemplate FranceTemplate { get; set; }
     protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
     {
-        if (item is Orders order)
+        if (item is OrderInfo order)
         {
-            if (order.ShipCountry == "Belgium")
+            if (order.Country == "Norway")
             {
-                return BelgiumTemplate;
+                return NorwayTemplate;
             }
             else
             {
-                return CanadaTemplate;
+                return FranceTemplate;
             }
         }
-
-        return CanadaTemplate;
+        return FranceTemplate;
     }
 }
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -583,55 +578,56 @@ When choosing a ErrorTipTemplate as a DataTemplateSelector, you have the option 
 
 {% tabs %}
 {% highlight XAML %}
-
 <ContentPage.Resources>
     <ResourceDictionary>
-        <DataTemplate x:Key = "BelgiumTemplate">
-            <Label Text = "Delivery not available for Belgium" Background = "Orange" TextColor = "Black" Padding = "2"/>
+        <DataTemplate x:Key="NorwayTemplate">
+            <Label Text="Delivery not available for Norway"
+                    Background="Orange"
+                    TextColor="Black"
+                    Padding="2"/>
         </DataTemplate>
-    <DataTemplate x:Key = "CanadaTemplate">
-            <Label Text = "Delivery not available for Canada" Background = "LightBlue" TextColor = "Black" Padding = "2"/>
+        <DataTemplate x:Key="FranceTemplate">
+            <Label Text="Delivery not available for France"
+                    Background="LightBlue"
+                    TextColor="Black"
+                    Padding="2"/>
         </DataTemplate>
     </ResourceDictionary>
 </ContentPage.Resources>
 
-<syncfusion:SfDataGrid x:Name = "dataGrid"
-                       ItemsSource = "{Binding OrderInfoCollection}"
-                       SelectionMode = "Single"
-                       NavigationMode = "Cell"
-                       AllowEditing = "True"                           
-                       ValidationMode = "InView">
-        <syncfusion:SfDataGrid.ErrorTipTemplate>
-                <local:ErrorTipTemplateSelector BelgiumTemplate = "{StaticResource BelgiumTemplate}" CanadaTemplate = "{StaticResource CanadaTemplate}" />
-        </syncfusion:SfDataGrid.ErrorTipTemplate>
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                        ItemsSource="{Binding Orders}"
+                        SelectionMode="Single"
+                        NavigationMode="Cell"
+                        AllowEditing="True"
+                        ValidationMode="InView">
+    <syncfusion:SfDataGrid.ErrorTipTemplate>
+        <local:ErrorTipTemplateSelector  NorwayTemplate="{StaticResource NorwayTemplate}"
+                                            FranceTemplate="{StaticResource FranceTemplate}"/>
+    </syncfusion:SfDataGrid.ErrorTipTemplate>
 </syncfusion:SfDataGrid>
-
 {% endhighlight %}
 {% highlight C# %}
-
-public class ErrorTipTemplateSelector: DataTemplateSelector
+public class ErrorTipTemplateSelector : Microsoft.Maui.Controls.DataTemplateSelector
 {
-    public DataTemplate BelgiumTemplate { get; set; }
-    public DataTemplate CanadaTemplate { get; set; }
-
+    public DataTemplate NorwayTemplate { get; set; }
+    public DataTemplate FranceTemplate { get; set; }
     protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
     {
-        if (item is Orders order)
+        if (item is OrderInfo order)
         {
-            if (order.ShipCountry == "Belgium")
+            if (order.Country == "Norway")
             {
-                return BelgiumTemplate;
+                return NorwayTemplate;
             }
             else
             {
-                return CanadaTemplate;
+                return FranceTemplate;
             }
         }
-
-        return CanadaTemplate;
+        return FranceTemplate;
     }
 }
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -643,24 +639,52 @@ The data bound based on [IDataErrorInfo](https://learn.microsoft.com/en-us/dotne
 
 {% tabs %}
 {% highlight XAML %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                        ItemsSource="{Binding Orders}"
+                        SelectionMode="Single"
+                        NavigationMode="Cell"
+                        GridLinesVisibility="Both"
+                        HeaderGridLinesVisibility="Both">
+    <syncfusion:SfDataGrid.DetailsViewDefinition>
+        <syncfusion:DataGridViewDefinition RelationalColumn="Orders">
+            <syncfusion:DataGridViewDefinition.DataGrid>
+                <syncfusion:SfDataGrid  x:Name="FirstLevelNestedGrid"
+                                        ValidationMode="InView"
+                                        AllowEditing="True"
+                                        GridLinesVisibility="Both"
+                                        HeaderGridLinesVisibility="Both"/>
+            </syncfusion:DataGridViewDefinition.DataGrid>
+        </syncfusion:DataGridViewDefinition>
+    </syncfusion:SfDataGrid.DetailsViewDefinition>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight C# %}
+// Parent DataGrid
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
+dataGrid.SelectionMode = DataGridSelectionMode.Single;
+dataGrid.NavigationMode = DataGridNavigationMode.Cell;
+dataGrid.GridLinesVisibility = GridLinesVisibility.Both;
+dataGrid.HeaderGridLinesVisibility = GridLinesVisibility.Both;
 
-<syncfuion:SfDataGrid x:Name = "dataGrid" 
-                      ItemsSource = "{Binding OrderList}" 
-                      SelectionMode = "Single" 
-                      NavigationMode = "Cell" 
-                      GridLinesVisibility = "Both">
-        <syncfuion:SfDataGrid.DetailsViewDefinition>
-                <syncfuion:DataGridViewDefinition RelationalColumn = "OrdersList">
-                        <syncfuion:DataGridViewDefinition.DataGrid>
-                                <syncfuion:SfDataGrid  x:Name = "FirstLevelNestedGrid" 
-                                                       ValidationMode = "InView"
-                                                       AllowEditing = "True" 
-                                                       GridLinesVisibility = "Both"/>
-                        </syncfuion:DataGridViewDefinition.DataGrid>
-                </syncfuion:DataGridViewDefinition>
-        </syncfuion:SfDataGrid.DetailsViewDefinition>
-</syncfuion:SfDataGrid>
+// Child (DetailsView) DataGrid
+SfDataGrid detailsGrid = new SfDataGrid();
+detailsGrid.ValidationMode = DataGridValidationMode.InView;
+detailsGrid.AllowEditing = true;
+detailsGrid.GridLinesVisibility = GridLinesVisibility.Both;
+detailsGrid.HeaderGridLinesVisibility = GridLinesVisibility.Both;
 
+// DetailsView definition
+DataGridViewDefinition viewDefinition = new DataGridViewDefinition();
+viewDefinition.RelationalColumn = "Orders";
+viewDefinition.DataGrid = detailsGrid;
+
+// Assign DetailsView to parent grid
+dataGrid.DetailsViewDefinition.Add(viewDefinition);
+
+// Set content
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -693,74 +717,154 @@ The cells can be validated using [CellValidating](https://help.syncfusion.com/cr
 
 {% tabs %}
 {% highlight XAML %}
-
-<syncfuion:SfDataGrid x:Name = "dataGrid" 
-                      ItemsSource = "{Binding OrderList}" 
-                      SelectionMode = "Single" 
-                      NavigationMode = "Cell" 
-                      GridLinesVisibility = "Both">
-        <syncfuion:SfDataGrid.DetailsViewDefinition>
-                <syncfuion:DataGridViewDefinition RelationalColumn = "OrdersList">
-                        <syncfuion:DataGridViewDefinition.DataGrid>
-                                <syncfuion:SfDataGrid  x:Name = "FirstLevelNestedGrid" 
-                                                       AllowEditing = "True"
-                                                       ValidationMode = "InView" 
-                                                       GridLinesVisibility = "Both"/>
-                        </syncfuion:DataGridViewDefinition.DataGrid>
-                </syncfuion:DataGridViewDefinition>
-        </syncfuion:SfDataGrid.DetailsViewDefinition>
-</syncfuion:SfDataGrid>
-
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                        ItemsSource="{Binding Orders}"
+                        SelectionMode="Single"
+                        NavigationMode="Cell"
+                        GridLinesVisibility="Both"
+                        HeaderGridLinesVisibility="Both">
+    <syncfusion:SfDataGrid.DetailsViewDefinition>
+        <syncfusion:DataGridViewDefinition RelationalColumn="Orders">
+            <syncfusion:DataGridViewDefinition.DataGrid>
+                <syncfusion:SfDataGrid  x:Name="FirstLevelNestedGrid"
+                                        ValidationMode="InView"
+                                        AllowEditing="True"
+                                        GridLinesVisibility="Both"
+                                        HeaderGridLinesVisibility="Both"
+                                        CellValidating="FirstLevelNestedGrid_CellValidating"/>
+            </syncfusion:DataGridViewDefinition.DataGrid>
+        </syncfusion:DataGridViewDefinition>
+    </syncfusion:SfDataGrid.DetailsViewDefinition>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight C# %}
+private void FirstLevelNestedGrid_CellValidating(object sender, DataGridCellValidatingEventArgs e)
+{
+    if (e.NewValue.ToString().Equals("Packed"))
+    {
+        e.IsValid = false;
+        e.ErrorMessage = "Packed cannot be passed";
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
 {% highlight C# %}
+// Parent DataGrid
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
+dataGrid.SelectionMode = DataGridSelectionMode.Single;
+dataGrid.NavigationMode = DataGridNavigationMode.Cell;
+dataGrid.GridLinesVisibility = GridLinesVisibility.Both;
+dataGrid.HeaderGridLinesVisibility = GridLinesVisibility.Both;
 
-this.FirstLevelNestedGrid.CellValidating += FirstLevelNestedGrid_CellValidating;
+// Child (DetailsView) DataGrid
+SfDataGrid detailsGrid = new SfDataGrid();
+detailsGrid.ValidationMode = DataGridValidationMode.InView;
+detailsGrid.AllowEditing = true;
+detailsGrid.GridLinesVisibility = GridLinesVisibility.Both;
+detailsGrid.HeaderGridLinesVisibility = GridLinesVisibility.Both;
+detailsGrid.CellValidating += FirstLevelNestedGrid_CellValidating;
 
-private void FirstLevelNestedGrid_CellValidating(object sender, DataGridCellValidatingEventArgs args)
+// DetailsView definition
+DataGridViewDefinition viewDefinition = new DataGridViewDefinition();
+viewDefinition.RelationalColumn = "Orders";
+viewDefinition.DataGrid = detailsGrid;
+
+// Assign DetailsView to parent grid
+dataGrid.DetailsViewDefinition.Add(viewDefinition);
+
+// Set content
+this.Content = dataGrid;
+
+// CellValidating event handler for the child grid (DetailsView)
+private void FirstLevelNestedGrid_CellValidating(object sender, DataGridCellValidatingEventArgs e)
 {
-
-    if (args.NewValue.ToString().Equals("SIMOB"))
+    if (e.NewValue.ToString().Equals("Packed"))
     {
-        args.IsValid = false;
-        args.ErrorMessage = "SIMOB cannot be passed";
+        e.IsValid = false;
+        e.ErrorMessage = "Packed cannot be passed";
     }
 }
-
 {% endhighlight %}
 {% endtabs %}
 
 [CellValidated](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CellValidated) event of [ViewDefinition.DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ViewDefinition.html) triggered when the cell has finished validating with valid data.
 
 {% tabs %}
+{% highlight XAML %}
+     <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding Orders}"
+                           SelectionMode="Single"
+                           NavigationMode="Cell"
+                           GridLinesVisibility="Both"
+                           HeaderGridLinesVisibility="Both">
+        <syncfusion:SfDataGrid.DetailsViewDefinition>
+            <syncfusion:DataGridViewDefinition RelationalColumn="Orders">
+                <syncfusion:DataGridViewDefinition.DataGrid>
+                    <syncfusion:SfDataGrid  x:Name="FirstLevelNestedGrid"
+                                            ValidationMode="InView"
+                                            AllowEditing="True"
+                                            GridLinesVisibility="Both"
+                                            HeaderGridLinesVisibility="Both"
+                                            CellValidated="FirstLevelNestedGrid_CellValidated"/>
+                </syncfusion:DataGridViewDefinition.DataGrid>
+            </syncfusion:DataGridViewDefinition>
+        </syncfusion:SfDataGrid.DetailsViewDefinition>
+    </syncfusion:SfDataGrid> 
+{% endhighlight %}
 {% highlight C# %}
-
-this.FirstLevelNestedGrid.CellValidated += FirstLevelNestedGrid_CellValidated;
-
-private void FirstLevelNestedGrid_CellValidated(object sender, DataGridCellValidatedEventArgs args)
+// CellValidated event handler for the child grid (DetailsView)
+private void FirstLevelNestedGrid_CellValidated(object sender, DataGridCellValidatedEventArgs e)
 {
-
+    // Perform the required logic here
 }
-
 {% endhighlight %}
 {% endtabs %}
 
 When the relation is auto-generated, you can wire the `CellValidating` and `CellValidated` events for `AutoGeneratingRelations.DataGridViewDefinition.DataGrid` in [AutoGeneratingRelations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGeneratingRelations) event handler.
 
 {% tabs %}
+{% highlight XAML %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                        ItemsSource="{Binding Orders}"
+                        AllowEditing="True"
+                        SelectionMode="Single"
+                        NavigationMode="Cell"
+                        GridLinesVisibility="Both"
+                        HeaderGridLinesVisibility="Both"
+                        AutoGenerateRelations="True"
+                        AutoGeneratingRelations="dataGrid_AutoGeneratingRelations">
+</syncfusion:SfDataGrid>
+{% endhighlight %}
 {% highlight C# %}
-
-dataGrid.AutoGenerateRelations = true;
-dataGrid.AutoGeneratingRelations += dataGrid_AutoGeneratingRelations;
-
-private void dataGrid_AutoGeneratingRelations(object sender, AutoGeneratingRelationsArgs e)
+private void dataGrid_AutoGeneratingRelations(object sender, DataGridAutoGeneratingRelationsArgs e)
 {
-    e.DataGridViewDefinition.DataGrid.CellValidating += FirstLevelNestedGrid_CurrentCellValidating;
-    e.DataGridViewDefinition.DataGrid.CellValidated += FirstLevelNestedGrid_CurrentCellValidated;
+    e.DataGridViewDefinition.DataGrid.ValidationMode = DataGridValidationMode.InView;
+    e.DataGridViewDefinition.DataGrid.AllowEditing = true;
+    e.DataGridViewDefinition.DataGrid.GridLinesVisibility = GridLinesVisibility.Both;
+    e.DataGridViewDefinition.DataGrid.HeaderGridLinesVisibility = GridLinesVisibility.Both;
+    e.DataGridViewDefinition.DataGrid.CellValidating += FirstLevelNestedGrid_CellValidating;
+    e.DataGridViewDefinition.DataGrid.CellValidated += FirstLevelNestedGrid_CellValidated;
 }
 
+// CellValidating event handler for the child grid (DetailsView)
+private void FirstLevelNestedGrid_CellValidating(object sender, DataGridCellValidatingEventArgs e)
+{
+    if (e.NewValue.ToString().Equals("Packed"))
+    {
+        e.IsValid = false;
+        e.ErrorMessage = "Packed cannot be passed";
+    }
+}
+
+// CellValidated event handler for the child grid (DetailsView)
+private void FirstLevelNestedGrid_CellValidated(object sender, DataGridCellValidatedEventArgs e)
+{
+    // Perform the required logic here
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -772,40 +876,79 @@ The `RowValidating` event occurs when edited cells tries to commit the row data 
 
 {% tabs %}
 {% highlight XAML %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                        ItemsSource="{Binding Orders}"
+                        SelectionMode="Single"
+                        NavigationMode="Cell"
+                        GridLinesVisibility="Both"
+                        HeaderGridLinesVisibility="Both">
+    <syncfusion:SfDataGrid.DetailsViewDefinition>
+        <syncfusion:DataGridViewDefinition RelationalColumn="Orders">
+            <syncfusion:DataGridViewDefinition.DataGrid>
+                <syncfusion:SfDataGrid  x:Name="FirstLevelNestedGrid"
+                                        ValidationMode="InView"
+                                        AllowEditing="True"
+                                        GridLinesVisibility="Both"
+                                        HeaderGridLinesVisibility="Both"
+                                        RowValidating="FirstLevelNestedGrid_RowValidating"/>
+            </syncfusion:DataGridViewDefinition.DataGrid>
+        </syncfusion:DataGridViewDefinition>
+    </syncfusion:SfDataGrid.DetailsViewDefinition>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight C# %}
+private void FirstLevelNestedGrid_RowValidating(object sender, DataGridRowValidatingEventArgs e)
+{
+    var data = e.RowData.GetType().GetProperty("Status").GetValue(e.RowData);
 
-<syncfuion:SfDataGrid x:Name = "dataGrid" 
-                      ItemsSource = "{Binding OrderList}" 
-                      SelectionMode = "Single" 
-                      NavigationMode = "Cell" 
-                      GridLinesVisibility = "Both">
-        <syncfuion:SfDataGrid.DetailsViewDefinition>
-                <syncfuion:DataGridViewDefinition RelationalColumn = "OrdersList">
-                        <syncfuion:DataGridViewDefinition.DataGrid>
-                                <syncfuion:SfDataGrid  x:Name = "FirstLevelNestedGrid" 
-                                                       AllowEditing = "True"
-                                                       ValidationMode = "InView" 
-                                                       GridLinesVisibility = "Both"/>
-                        </syncfuion:DataGridViewDefinition.DataGrid>
-                </syncfuion:DataGridViewDefinition>
-        </syncfuion:SfDataGrid.DetailsViewDefinition>
-</syncfuion:SfDataGrid>
-
+    if (data != null && data.ToString().Equals("Packed"))
+    {
+        e.IsValid = false;
+        e.ErrorMessages.Add("Status", "Packed cannot be passed");
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
 {% highlight C# %}
+// Parent DataGrid
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
+dataGrid.SelectionMode = DataGridSelectionMode.Single;
+dataGrid.NavigationMode = DataGridNavigationMode.Cell;
+dataGrid.GridLinesVisibility = GridLinesVisibility.Both;
+dataGrid.HeaderGridLinesVisibility = GridLinesVisibility.Both;
 
-this.FirstLevelNestedGrid.RowValidating += FirstLevelNestedGrid_RowValidating;
+// Child (DetailsView) DataGrid
+SfDataGrid detailsGrid = new SfDataGrid();
+detailsGrid.ValidationMode = DataGridValidationMode.InView;
+detailsGrid.AllowEditing = true;
+detailsGrid.GridLinesVisibility = GridLinesVisibility.Both;
+detailsGrid.HeaderGridLinesVisibility = GridLinesVisibility.Both;
+detailsGrid.RowValidating += FirstLevelNestedGrid_RowValidating;
 
-private void FirstLevelNestedGrid_RowValidating(object sender, DataGridRowValidatingEventArgs args)
+// DetailsView definition
+DataGridViewDefinition viewDefinition = new DataGridViewDefinition();
+viewDefinition.RelationalColumn = "Orders";
+viewDefinition.DataGrid = detailsGrid;
+
+// Assign DetailsView to parent grid
+dataGrid.DetailsViewDefinition.Add(viewDefinition);
+
+// Set content
+this.Content = dataGrid;
+
+// RowValidating event handler for the child grid (DetailsView)
+private void FirstLevelNestedGrid_RowValidating(object sender, DataGridRowValidatingEventArgs e)
 {
-    var data = args.RowData.GetType().GetProperty("CustomerID").GetValue(args.RowData);
+    var data = e.RowData.GetType().GetProperty("Status").GetValue(e.RowData);
 
-    if (data.ToString().Equals("MEREP"))
+    if (data != null && data.ToString().Equals("Packed"))
     {
-        args.IsValid = false;
-        args.ErrorMessages.Add("CustomerID", "MEREP cannot be passed");
+        e.IsValid = false;
+        e.ErrorMessages.Add("Status", "Packed cannot be passed");
     }
 }
 
@@ -815,32 +958,79 @@ private void FirstLevelNestedGrid_RowValidating(object sender, DataGridRowValida
 [RowValidated](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_RowValidated) of [ViewDefinition.DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.ViewDefinition.html) event triggered when the row has finished validating with valid row data.
 
 {% tabs %}
+{% highlight XAML %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                        ItemsSource="{Binding Orders}"
+                        SelectionMode="Single"
+                        NavigationMode="Cell"
+                        GridLinesVisibility="Both"
+                        HeaderGridLinesVisibility="Both">
+    <syncfusion:SfDataGrid.DetailsViewDefinition>
+        <syncfusion:DataGridViewDefinition RelationalColumn="Orders">
+            <syncfusion:DataGridViewDefinition.DataGrid>
+                <syncfusion:SfDataGrid  x:Name="FirstLevelNestedGrid"
+                                        ValidationMode="InView"
+                                        AllowEditing="True"
+                                        GridLinesVisibility="Both"
+                                        HeaderGridLinesVisibility="Both"
+                                        RowValidated="FirstLevelNestedGrid_RowValidated"/>
+            </syncfusion:DataGridViewDefinition.DataGrid>
+        </syncfusion:DataGridViewDefinition>
+    </syncfusion:SfDataGrid.DetailsViewDefinition>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
 {% highlight C# %}
-
-this.FirstLevelNestedGrid.RowValidated += FirstLevelNestedGrid_RowValidated;
-
-private void FirstLevelNestedGrid_RowValidated(object sender, DataGridRowValidatedEventArgs args)
+// RowValidated event handler for the child grid (DetailsView)
+private void FirstLevelNestedGrid_RowValidated(object sender, DataGridRowValidatedEventArgs e)
 {
-
+    // Perform the required logic here
 }
-
 {% endhighlight %}
 {% endtabs %}
 
 When the relation is auto-generated, you can wire the `RowValidating` and `RowValidated` events for `AutoGeneratingRelations.DataGridViewDefinition.DataGrid` in [AutoGeneratingRelations](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html?tabs=tabid-1#Syncfusion_Maui_DataGrid_SfDataGrid_AutoGeneratingRelations) event handler.
 
 {% tabs %}
+{% highlight XAML %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                        ItemsSource="{Binding Orders}"
+                        AllowEditing="True"
+                        SelectionMode="Single"
+                        NavigationMode="Cell"
+                        GridLinesVisibility="Both"
+                        HeaderGridLinesVisibility="Both"
+                        AutoGenerateRelations="True"
+                        AutoGeneratingRelations="dataGrid_AutoGeneratingRelations">
+</syncfusion:SfDataGrid>
+{% endhighlight %}
 {% highlight C# %}
-
-dataGrid.AutoGenerateRelations = true;
-dataGrid.AutoGeneratingRelations += dataGrid_AutoGeneratingRelations;
-
-private void dataGrid_AutoGeneratingRelations(object sender, AutoGeneratingRelationsArgs e)
+private void dataGrid_AutoGeneratingRelations(object sender, DataGridAutoGeneratingRelationsArgs e)
 {
+    e.DataGridViewDefinition.DataGrid.ValidationMode = DataGridValidationMode.InView;
+    e.DataGridViewDefinition.DataGrid.AllowEditing = true;
+    e.DataGridViewDefinition.DataGrid.GridLinesVisibility = GridLinesVisibility.Both;
+    e.DataGridViewDefinition.DataGrid.HeaderGridLinesVisibility = GridLinesVisibility.Both;
     e.DataGridViewDefinition.DataGrid.RowValidating += FirstLevelNestedGrid_RowValidating;
     e.DataGridViewDefinition.DataGrid.RowValidated += FirstLevelNestedGrid_RowValidated;
 }
 
+// RowValidating event handler for the child grid (DetailsView)
+private void FirstLevelNestedGrid_RowValidating(object sender, DataGridRowValidatingEventArgs e)
+{
+    var data = e.RowData.GetType().GetProperty("Status").GetValue(e.RowData);
+
+    if (data != null && data.ToString().Equals("Packed"))
+    {
+        e.IsValid = false;
+        e.ErrorMessages.Add("Status", "Packed cannot be passed");
+    }
+}
+
+// RowValidated event handler for the child grid (DetailsView)
+private void FirstLevelNestedGrid_RowValidated(object sender, DataGridRowValidatedEventArgs e)
+{
+    // Perform the required logic here
+}
 {% endhighlight %}
 {% endtabs %}
 
