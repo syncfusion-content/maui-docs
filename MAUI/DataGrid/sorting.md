@@ -139,12 +139,12 @@ By default, the column gets sorted when the column header is clicked. This behav
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-            SfDataGrid dataGrid = new SfDataGrid();
-            OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
-            dataGrid.ItemsSource = orderInfoViewModel.Orders;
-            dataGrid.SortingMode = DataGridSortingMode.Single;
-            dataGrid.SortingGestureType = DataGridSortingGestureType.DoubleTap;
-            this.Content = dataGrid;
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
+dataGrid.SortingMode = DataGridSortingMode.Single;
+dataGrid.SortingGestureType = DataGridSortingGestureType.DoubleTap;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -169,7 +169,6 @@ The following code sample demonstrates how to cancel sorting for a particular co
                         ItemsSource="{Binding Orders}">
 </syncfusion:SfDataGrid>
 {% endhighlight %}
-
 {% highlight c# %}
 private void sfDataGrid_SortColumnsChanging(object sender, DataGridSortColumnsChangingEventArgs e)
 {
