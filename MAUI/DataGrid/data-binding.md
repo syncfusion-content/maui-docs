@@ -34,6 +34,7 @@ The codes below codes demonstrate how to bind a data source to the `SfDataGrid`.
 
 {% highlight c# %}
 OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+SfDataGrid dataGrid = new SfDataGrid();
 this.dataGrid.ItemsSource = orderInfoViewModel.OrderInfoCollection;
 {% endhighlight %}
 {% endtabs %}
@@ -53,6 +54,7 @@ The `SfDataGrid` control supports binding the [DataTable](https://learn.microsof
 {% tabs %}
 {% highlight c# %}
 DataTable table = this.GetDataTable();
+SfDataGrid dataGrid = new SfDataGrid();
 this.dataGrid.ItemsSource = table;
 {% endhighlight %}
 {% endtabs %}
@@ -158,6 +160,12 @@ public class EmployeeCollection
 {% endhighlight %}
 
 {% highlight c# %}
+OrderInfoRepository viewModel = new OrderInfoRepository();
+
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.OrderInfoCollection;
+dataGrid.AutoGeneratingColumn += datagrid_AutoGeneratingColumn;
+
 private void datagrid_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
 {
      e.Column.MappingName = "[" + e.Column.MappingName + "]";
@@ -240,6 +248,7 @@ During data manipulation operations and property changes, the `SfDataGrid` suppo
 
 {% tabs %}
 {% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
 this.dataGrid.Loaded += SfDataGrid_Loaded;
 
 private void SfDataGrid_Loaded(object sender, EventArgs e)
@@ -270,6 +279,7 @@ The [SourceCollectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 To retain the scroll position when [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSource) changes, set the [SfDataGrid.CanMaintainScrollPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CanMaintainScrollPosition) to true. If you set `SfDataGrid.CanMaintainScrollPosition` to true then on changing `ItemsSource`, the newly added `ItemsSource` will be loaded with the previous ItemsSource's `ScrollOffset`.
 
 {% highlight C# %}
+SfDataGrid dataGrid = new SfDataGrid();
 dataGrid.CanMaintainScrollPosition = true;
 {% endhighlight %}
 

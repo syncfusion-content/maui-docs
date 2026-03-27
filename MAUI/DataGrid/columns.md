@@ -93,13 +93,14 @@ By default, columns are also auto-generated for custom type properties and paren
 {% highlight xaml %}
   <syncfusion:SfDataGrid x:Name="dataGrid"
                            ItemsSource="{Binding OrderInfoCollection}"
-                           AutoGenerateColumnsModeForCustomType="Both"
-                           NavigationMode="Cell"
-                           SelectionMode="Single">
+                           AutoGenerateColumnsModeForCustomType="Both">
     </syncfusion:SfDataGrid>
 {% endhighlight %}
 
 {% highlight c# %}
+OrderInfoRepository viewModel = new OrderInfoRepository();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.OrderInfoCollection;
 dataGrid.AutoGenerateColumnsModeForCustomType = AutoGenerateColumnsModeForCustomType.Both;
 {% endhighlight %}
 {% endtabs %}
@@ -206,10 +207,10 @@ You can change the order of columns using the `Display.Order` property. Columns 
 {% tabs %}
 {% highlight c# %}
 [Display(Order=1)]
-public string CustomerID
+public string Customer
 {
-    get { return customerId; }
-    set { customerId = value; }
+    get { return customer; }
+    set { customer = value; }
 }
 
 [Display(Order=0)]
@@ -221,7 +222,7 @@ public int OrderID
 {% endhighlight %}
 {% endtabs %}
 
-The OrderID and CustomerID column rearranged based on specified order.
+The OrderID and Customer column rearranged based on specified order.
 
 <img alt="Changing Columns Order in Maui DataGrid" src="Images\columns\maui-datagrid-order.png" width="404"/>
 
@@ -289,6 +290,13 @@ public string? ShipCountry
     get { return shipCountry; }
     set { this.shipCountry = value; }
 }
+
+[Display(GroupName = "Order Details")]
+public double Qty
+{
+    get { return qty; }
+    set { this.qty = value; }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -321,6 +329,9 @@ There are different types of columns available. Any column can be created based 
 {% endhighlight %}
 
 {% highlight c# %}
+OrderInfoRepository viewModel = new OrderInfoRepository();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.OrderInfoCollection;
 this.dataGrid.AutoGenerateColumnsMode = AutoGenerateColumnsMode.None;
 
 DataGridNumericColumn orderIdColumn = new DataGridNumericColumn { HeaderText = "Order ID", MappingName = "OrderID" };
@@ -390,11 +401,14 @@ SfDataGrid allows you show or hide columns at runtime by selecting or deselectin
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrdersInfo}"
+                       ItemsSource="{Binding OrderInfoCollection}"
                        ShowColumnChooser="True">
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
+OrderInfoRepository viewModel = new OrderInfoRepository();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.OrderInfoCollection;
 dataGrid.ShowColumnChooser = true;
 {% endhighlight %}
 {% endtabs %}
@@ -406,15 +420,18 @@ You can also customize the header text of the Column Chooser using the `SfDataGr
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrdersInfo}"
+                       ItemsSource="{Binding OrderInfoCollection}"
                        ColumnChooserHeaderText="Select Visible Columns"
                        ShowColumnChooser="True">
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
+OrderInfoRepository viewModel = new OrderInfoRepository();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.OrderInfoCollection;
+dataGrid.ShowColumnChooser = true;
 dataGrid.ColumnChooserHeaderText = "Select Visible Columns";
 {% endhighlight %}
 {% endtabs %}
 
 <img alt="Maui DataGrid Column Chooser" src="Images\columns/maui-datagrid-columnchooser.png" width="404"/>
-
