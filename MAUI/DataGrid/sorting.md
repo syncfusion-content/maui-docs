@@ -31,11 +31,11 @@ The `SortColumnDescription` object holds the following two properties:
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-        ItemsSource="{Binding OrderInfoCollection}">
+                        ItemsSource="{Binding Orders}">
 
     <syncfusion:SfDataGrid.SortColumnDescriptions>
         <syncfusion:SortColumnDescription ColumnName="OrderID"
-                SortDirection="Ascending"/>
+                                            SortDirection="Ascending"/>
     </syncfusion:SfDataGrid.SortColumnDescriptions>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
@@ -339,15 +339,17 @@ The default sort icon color can be customized by setting the [DataGridStyle.Sort
     <syncfusion:SfDataGrid.DefaultStyle>
         <syncfusion:DataGridStyle SortIconColor="DodgerBlue"/>
     </syncfusion:SfDataGrid.DefaultStyle>
-    <syncfusion:SfDataGrid.Columns>
-        <syncfusion:DataGridTextColumn MappingName="OrderID"
-                                        AllowSorting="True"
-                                        HeaderText="Order ID"/>
-        <syncfusion:DataGridTextColumn MappingName="Customer"
-                                        HeaderText="Customer"/>
-        <syncfusion:DataGridTextColumn MappingName="Country "
-                                        HeaderText="Ship Country "/>
-    </syncfusion:SfDataGrid.Columns>
+        <syncfusion:SfDataGrid.Columns>
+            <syncfusion:DataGridTextColumn MappingName="OrderID"
+                                           AllowSorting="True"
+                                           HeaderText="Order ID"/>
+            <syncfusion:DataGridTextColumn MappingName="Customer"
+                                           HeaderText="Customer"/>
+            <syncfusion:DataGridTextColumn MappingName="City"
+                                           HeaderText="Ship City"/>
+            <syncfusion:DataGridTextColumn MappingName="Country "
+                                           HeaderText="Ship Country "/>
+        </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
