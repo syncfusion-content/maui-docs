@@ -40,21 +40,24 @@ To get start quickly with perform selection in .NET MAUI DataGrid, you can check
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                           ItemsSource="{Binding OrderInfoCollection}"
-                           NavigationMode="Cell"
-                           SelectionUnit="Cell"
-                           SelectionMode="Multiple">
+                        ItemsSource="{Binding Orders}"
+                        NavigationMode="Cell"
+                        SelectionUnit="Cell"
+                        SelectionMode="Multiple">
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 
 {% highlight c# %}
-this.dataGrid.SelectionUnit  = DataGridSelectionUnit.Cell;
-this.dataGrid.NavigationMode = DataGridNavigationMode.Cell;
-this.dataGrid.SelectionMode  = DataGridSelectionMode.Multiple;
+dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.SelectionUnit  = DataGridSelectionUnit.Cell;
+dataGrid.NavigationMode = DataGridNavigationMode.Cell;
+dataGrid.SelectionMode  = DataGridSelectionMode.Multiple;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="Selection-unit" src="Images\selection\maui-datagrid-selection-unit.png" width="404" height="392" />
+<img alt="Selection-unit" src="Images\selection\maui-datagrid-selection-unit.png" width="404"/>
 
 N>  It is not possible to set `NavigationMode.Row` when cell selection is enabled (SelectionUnit is Cell or Any). 
 
@@ -142,7 +145,7 @@ public partial class MainPage : ContentPage
         this.dataGrid.SelectedIndex = 3;
 
         //Perform selection using the selected row
-        this.dataGrid.SelectedRow = new ViewModel().OrderInfoCollection[3];
+        this.dataGrid.SelectedRow = new ViewModel().Orders[3];
     }
 }
 {% endhighlight %}
@@ -159,10 +162,10 @@ public partial class MainPage : ContentPage
         InitializeComponent();
         // Perform multiple selection using the selected rows
         var viewModel = new ViewModel();
-        dataGrid.SelectedRows.Add(viewModel.OrderInfoCollection[4]);
-        dataGrid.SelectedRows.Add(viewModel.OrderInfoCollection[6]);
-        dataGrid.SelectedRows.Add(viewModel.OrderInfoCollection[2]);
-        dataGrid.SelectedRows.Add(viewModel.OrderInfoCollection[11]);
+        dataGrid.SelectedRows.Add(viewModel.Orders[4]);
+        dataGrid.SelectedRows.Add(viewModel.Orders[6]);
+        dataGrid.SelectedRows.Add(viewModel.Orders[2]);
+        dataGrid.SelectedRows.Add(viewModel.Orders[11]);
     }
 }
 {% endhighlight %}
@@ -219,19 +222,19 @@ N> When the [SortingGestureType](https://help.syncfusion.com/cr/maui/Syncfusion.
 {% tabs %}
 {% highlight XAML %}
 <syncfusion:SfDataGrid SelectionMode="Multiple"
-                    NavigationMode="Cell"
-                    SelectionUnit="Cell"
-                    AllowColumnSelection="True"
-                    AutoGenerateColumnsMode="None"
-                    ItemsSource="{Binding OrderInfoCollection}" >
-<syncfusion:SfDataGrid.Columns>
-   <syncfusion:DataGridTextColumn MappingName="OrderID"
-                 HeaderText="Order ID" />
-   <syncfusion:DataGridTextColumn MappingName="CustomerID"
-                 HeaderText="Customer ID" />
-   <syncfusion:DataGridTextColumn MappingName="ShipCountry "
-                 HeaderText="Ship Country " />
-</syncfusion:SfDataGrid.Columns>
+                       NavigationMode="Cell"
+                       SelectionUnit="Cell"
+                       AllowColumnSelection="True"
+                       AutoGenerateColumnsMode="None"
+                       ItemsSource="{Binding Orders}" >
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridTextColumn MappingName="OrderID"
+                        HeaderText="Order ID" />
+        <syncfusion:DataGridTextColumn MappingName="CustomerID"
+                        HeaderText="Customer ID" />
+        <syncfusion:DataGridTextColumn MappingName="ShipCountry "
+                        HeaderText="Ship Country " />
+    </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% endtabs %}
@@ -249,7 +252,7 @@ Enable selecting rows or cells immediately when the primary mouse button is pres
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}"
+                       ItemsSource="{Binding Orders}"
                        SelectionMode="Single"
                        SelectionUnit="Row"
                        NavigationMode="Cell"
@@ -257,7 +260,13 @@ Enable selecting rows or cells immediately when the primary mouse button is pres
 {% endhighlight %}
 
 {% highlight c# %}
+dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.SelectionMode = DataGridSelectionMode.Single;
+dataGrid.SelectionUnit = DataGridSelectionUnit.Row;
+dataGrid.NavigationMode = DataGridNavigationMode.Cell;
 dataGrid.AllowSelectionOnPress = true;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -268,14 +277,19 @@ To disable selection on right-click, set `AllowSelectionOnSecondaryTap` to `Fals
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}"
+                       ItemsSource="{Binding Orders}"
                        SelectionMode="Multiple"
                        SelectionUnit="Row"
                        AllowSelectionOnSecondaryTap="False" />
 {% endhighlight %}
 
 {% highlight c# %}
+dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.SelectionMode = DataGridSelectionMode.Multiple;
+dataGrid.SelectionUnit = DataGridSelectionUnit.Row;
 dataGrid.AllowSelectionOnSecondaryTap = false;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -441,9 +455,12 @@ The `SfDataGrid` allows you to select multiple rows or cells by setting the `Sel
 {% endhighlight %}
 
 {% highlight c# %}
-this.dataGrid.SelectionUnit  = DataGridSelectionUnit.Cell;
-this.dataGrid.NavigationMode = DataGridNavigationMode.Cell;
-this.dataGrid.SelectionMode  = DataGridSelectionMode.Extended;
+dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.SelectionUnit  = DataGridSelectionUnit.Cell;
+dataGrid.NavigationMode = DataGridNavigationMode.Cell;
+dataGrid.SelectionMode  = DataGridSelectionMode.Extended;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -593,20 +610,20 @@ By default, the current cell is focusable for all the columns. To disable curren
 {% tabs %}
 {% highlight XAML %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                    SelectionMode="Single"
-                    NavigationMode="Cell"
-                    ColumnWidthMode="Auto"
-                    ItemsSource="{Binding OrderInfoCollection}" >
-<syncfusion:SfDataGrid.Columns>
-   <syncfusion:DataGridTextColumn MappingName="OrderID"
-                 Format="D"
-                 AllowFocus="False"
-                 HeaderText="Order ID" />
-   <syncfusion:DataGridTextColumn MappingName="CustomerID"
-                 HeaderText="Customer ID" />
-   <syncfusion:DataGridTextColumn MappingName="ShipCountry "
-                 HeaderText="Ship Country " />
-</syncfusion:SfDataGrid.Columns>
+                       SelectionMode="Single"
+                       NavigationMode="Cell"
+                       ColumnWidthMode="Auto"
+                       ItemsSource="{Binding Orders}" >
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridTextColumn MappingName="OrderID"
+                                       Format="D"
+                                       AllowFocus="False"
+                                       HeaderText="Order ID" />
+        <syncfusion:DataGridTextColumn MappingName="CustomerID"
+                                       HeaderText="Customer ID" />
+        <syncfusion:DataGridTextColumn MappingName="ShipCountry "
+                                       HeaderText="Ship Country " />
+    </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% endtabs %}
@@ -618,9 +635,9 @@ By default, the selected rows will be deleted when pressing the delete key. It c
 {% tabs %}
 {% highlight XAML %}
 <syncfusion:SfDataGrid SelectionMode="Single"
-                    NavigationMode="Cell"
-                    AllowDeleting="False"
-                    ItemsSource="{Binding OrderInfoCollection}" >
+                       NavigationMode="Cell"
+                       AllowDeleting="False"
+                       ItemsSource="{Binding Orders}" >
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% endtabs %}
@@ -688,7 +705,7 @@ The `SfDataGrid` supports highlighting the current row when the `SelectionMode` 
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Content>
-        <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}">
+        <syncfusion:SfDataGrid ItemsSource="{Binding Orders}">
             <syncfusion:SfDataGrid.DefaultStyle>
                 <syncfusion:DataGridStyle CurrentRowHighlightColor="Red"/>
             </syncfusion:SfDataGrid.DefaultStyle>
@@ -707,9 +724,9 @@ Change the selection back color and text color by using the  [SelectionBackgroun
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Content>
-        <syncfusion:SfDataGrid x:Name="dataGrid" ItemsSource="{Binding OrderInfoCollection}">
+        <syncfusion:SfDataGrid x:Name="dataGrid" ItemsSource="{Binding Orders}"       SelectionMode="Single">
             <syncfusion:SfDataGrid.DefaultStyle>
-                <syncfusion:DataGridStyle SelectedRowTextColor="Black" SelectionBackground="#E3F2FD"/>
+                <syncfusion:DataGridStyle SelectedRowTextColor="Black"                        SelectionBackground="#E3F2FD"/>
             </syncfusion:SfDataGrid.DefaultStyle>
         </syncfusion:SfDataGrid>
     </ContentPage.Content>
@@ -721,8 +738,12 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        this.dataGrid.DefaultStyle.SelectedRowTextColor = Colors.Black;
-        this.dataGrid.DefaultStyle.SelectionBackground = Color.FromArgb("#E3F2FD");
+        dataGrid = new SfDataGrid();
+        dataGrid.ItemsSource = viewModel.Orders;
+        dataGrid.SelectionMode  = DataGridSelectionMode.Single;
+        dataGrid.DefaultStyle.SelectedRowTextColor = Colors.Black;
+        dataGrid.DefaultStyle.SelectionBackground = Color.FromArgb("#E3F2FD");
+        this.Content = dataGrid;
     }
 }
 {% endhighlight %}
@@ -737,7 +758,7 @@ Change the current cell border color and width by using the [CurrentCellBorderCo
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Content>
-        <syncfusion:SfDataGrid x:Name="dataGrid" ItemsSource="{Binding OrderInfoCollection}">
+        <syncfusion:SfDataGrid x:Name="dataGrid" ItemsSource="{Binding Orders}" SelectionMode="Single">
             <syncfusion:SfDataGrid.DefaultStyle>
                 <syncfusion:DataGridStyle CurrentCellBorderColor="Black" CurrentCellBorderWidth="4"/>
             </syncfusion:SfDataGrid.DefaultStyle>
@@ -751,8 +772,12 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        this.dataGrid.DefaultStyle.CurrentCellBorderColor = Colors.Black;
-        this.dataGrid.DefaultStyle.CurrentCellBorderWidth = 4;
+        dataGrid = new SfDataGrid();
+        dataGrid.ItemsSource = viewModel.Orders;
+        dataGrid.SelectionMode  = DataGridSelectionMode.Single;
+        dataGrid.DefaultStyle.CurrentCellBorderColor = Colors.Black;
+        dataGrid.DefaultStyle.CurrentCellBorderWidth = 4;
+        this.Content = dataGrid;
     }
 }
 {% endhighlight %}
@@ -767,59 +792,59 @@ The SfDataGrid allows you to bind the selection properties such as `SelectedInde
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Content>
-        <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}"
-                            SelectedIndex="{Binding DataGridSelectedIndex}"
-                            SelectedRow="{Binding DataGridSelectedRow}"/>
+        <syncfusion:SfDataGrid ItemsSource="{Binding Orders}"
+                               SelectedIndex="{Binding DataGridSelectedIndex}"
+                               SelectedRow="{Binding DataGridSelectedRow}"/>
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
 {% highlight c# tabtitle="ViewModel.cs" %}
 public class ViewModel : INotifyPropertyChanged
+{
+    private int dataGridSelectedIndex;
+
+    private object dataGridSelectedRow;
+
+    public int DataGridSelectedIndex
     {
-        private int dataGridSelectedIndex;
-
-        private object dataGridSelectedRow;
-
-        public int DataGridSelectedIndex
+        get
         {
-            get
-            {
-                return dataGridSelectedIndex;
-            }
-            set
-            {
-                this.dataGridSelectedIndex = value;
-                RaisePropertyChanged("DataGridSelectedIndex");
-            }
+            return dataGridSelectedIndex;
         }
-
-        public object DataGridSelectedRow
+        set
         {
-            get
-            {
-                return dataGridSelectedRow;
-            }
-            set
-            {
-                this.dataGridSelectedRow = value;
-                RaisePropertyChanged("DataGridSelectedRow");
-            }
-        }
-
-        public ViewModel()
-        {
-            DataGridSelectedIndex = 2;
-            DataGridSelectedRow = OrderInfoCollection[5];
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        private void RaisePropertyChanged(string name)
-        {
-            if (PropertyChanged != null)
-                this.PropertyChanged(this, new PropertyChangedEventArgs(name));
+            this.dataGridSelectedIndex = value;
+            RaisePropertyChanged("DataGridSelectedIndex");
         }
     }
+
+    public object DataGridSelectedRow
+    {
+        get
+        {
+            return dataGridSelectedRow;
+        }
+        set
+        {
+            this.dataGridSelectedRow = value;
+            RaisePropertyChanged("DataGridSelectedRow");
+        }
+    }
+
+    public ViewModel()
+    {
+        DataGridSelectedIndex = 2;
+        DataGridSelectedRow = Orders[5];
+    }
+
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    private void RaisePropertyChanged(string name)
+    {
+        if (PropertyChanged != null)
+            this.PropertyChanged(this, new PropertyChangedEventArgs(name));
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -830,9 +855,9 @@ By default, the keyboard navigation will be enabled when setting the selection a
 {% tabs %}
 {% highlight XAML %}
 <syncfusion:SfDataGrid SelectionMode="Single"
-                    NavigationMode="Cell"
-                    AllowKeyboardNavigation="False"
-                    ItemsSource="{Binding OrderInfoCollection}" >
+                       NavigationMode="Cell"
+                       AllowKeyboardNavigation="False"
+                       ItemsSource="{Binding Orders}" >
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% endtabs %}
@@ -850,7 +875,7 @@ By default, while pressing <kbd>Enter</kbd> key, the current cell will be moved 
 <syncfusion:SfDataGrid x:Name="dataGrid" 
                        SelectionMode="Single"
                        NavigationMode="Cell"
-                       ItemsSource="{Binding OrderInfoCollection}" >
+                       ItemsSource="{Binding Orders}" >
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -888,7 +913,7 @@ The following code snippets show how to disable the default enter key behavior i
 <syncfusion:SfDataGrid x:Name="dataGrid"
                        SelectionMode="Single"
                        NavigationMode="Cell"
-                       ItemsSource="{Binding OrderInfoCollection}" >
+                       ItemsSource="{Binding Orders}" >
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
