@@ -291,15 +291,12 @@ public class OrderInfo
 {
     public int OrderID { get; set; }
     public string Customer { get; set; }
-    public string City { get; set; }
+
+    [DisplayFormat(DataFormatString = "yyyy"), Display(Name = "Order Date")]
+    public DateTime OrderDate { get; set; }
 
     [DisplayFormat(DataFormatString = "Country is {0}")]
     public string Country { get; set; }
-
-    public string Product { get; set; }
-
-    [DisplayFormat(DataFormatString = "yyyy")]
-    public DateTime OrderDate { get; set; }
 }
 {% endhighlight %}
 {% endtabs %}
