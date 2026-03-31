@@ -10,7 +10,7 @@ keywords: .net maui trendlines, maui chart trendlines, cartesian trendlines, tre
 
 # Trendlines in MAUI Charts
 
-A trendline is a visual representation of the linear relationship between data points in a series. It shows the overall direction and trend of data by fitting a line (or curve) through the data points. 
+A [trendline](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrendline.html) is a visual representation of the linear relationship between data points in a series. It shows the overall direction and trend of data by fitting a line (or curve) through the data points. 
 
 N> We can draw trendlines for all type of Cartesian series except bar type.
 
@@ -66,18 +66,18 @@ this.Content = chart;
 
 MAUI Charts support the following trendline types:
 
-* Linear  
-* Exponential  
-* Logarithmic  
-* Power  
-* Polynomial  
+* Linear
+* Exponential
+* Logarithmic
+* Power
+* Polynomial
 * MovingAverage
 
 Each type is described below.
 
 ### Linear
 
-A linear trendline draws a straight line through your data. Use this when your data moves in a consistent direction—either steadily up or down. It's the simplest way to show the overall trend in your data.
+A [linear trendline](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LinearTrendline.html) draws a straight line through your data. Use this when your data moves in a consistent direction—either steadily up or down. It's the simplest way to show the overall trend in your data.
 
 {% tabs %}
 
@@ -120,7 +120,7 @@ this.Content = chart;
 
 ### Logarithmic
 
-A logarithmic trendline shows data that changes quickly at first and then levels off. This is useful for showing how something grows or reduces rapidly in the beginning but then stabilizes over time.
+A [logarithmic trendline](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicTrendline.html) shows data that changes quickly at first and then levels off. This is useful for showing how something grows or reduces rapidly in the beginning but then stabilizes over time.
 
 {% tabs %}
 
@@ -163,7 +163,7 @@ this.Content = chart;
 
 ### Exponential
 
-An exponential trendline shows data that grows or shrinks at an increasingly fast rate. Use this for data that accelerates over time, like population growth or viral spread. This trendline requires all positive values and cannot work with zero or negative numbers.
+An [exponential trendline](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ExponentialTrendline.html) shows data that grows or shrinks at an increasingly fast rate. Use this for data that accelerates over time, like population growth or viral spread. This trendline requires all positive values and cannot work with zero or negative numbers.
 
 {% tabs %}
 
@@ -206,7 +206,7 @@ this.Content = chart;
 
 ### Power
 
-A power trendline models data that accelerates at different rates. It works well for scientific or physical measurements where the rate of change depends on the magnitude of the values. Always use positive values for best results.
+A [power trendline](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PowerTrendline.html) models data that accelerates at different rates. It works well for scientific or physical measurements where the rate of change depends on the magnitude of the values. Always use positive values for best results.
 
 {% tabs %}
 
@@ -249,7 +249,7 @@ this.Content = chart;
 
 ### Polynomial
 
-A polynomial trendline is a curved line that follows the ups and downs in your data. Use this when your data has multiple peaks and valleys or doesn't follow a straight line. You can control how closely the curve follows your data using the `Order` property (default is 2).
+A [polynomial trendline](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolynomialTrendline.html) is a curved line that follows the ups and downs in your data. Use this when your data has multiple peaks and valleys or doesn't follow a straight line. You can control how closely the curve follows your data using the [Order](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.PolynomialTrendline.html#Syncfusion_Maui_Charts_PolynomialTrendline_Order) property (default is 2).
 
 {% tabs %}
 
@@ -293,7 +293,7 @@ this.Content = chart;
 
 ### Moving Average
 
-A moving average trendline smooths out small bumps in your data by averaging nearby points. This helps you see the main trend without being distracted by temporary ups and downs. You can change how many points are used for averaging with the `Period` property (default is 2).
+A [moving average trendline](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.MovingAverageTrendline.html) smooths out small bumps in your data by averaging nearby points. This helps you see the main trend without being distracted by temporary ups and downs. You can change how many points are used for averaging with the [Period](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.MovingAverageTrendline.html#Syncfusion_Maui_Charts_MovingAverageTrendline_Period) property (default is 2).
 
 {% tabs %}
 
@@ -344,7 +344,7 @@ Forecasting extends the trendline beyond your existing data to predict future or
 
 ### Forward Forecasting
 
-Use the `ForwardForecast` property to extend the trendline forward and visualize predicted future trends. The value represents the number of data points to forecast ahead.
+Use the [ForwardForecast](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrendline.html#Syncfusion_Maui_Charts_ChartTrendline_ForwardForecast) property to extend the trendline forward and visualize predicted future trends. The value represents the number of data points to forecast ahead.
 
 {% tabs %}
 
@@ -388,7 +388,7 @@ this.Content = chart;
 
 ### Backward Forecasting
 
-Use the `BackwardForecast` property to extend the trendline backward and visualize historical trend projections. The value represents the number of data points to forecast backward.
+Use the [BackwardForecast](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrendline.html#Syncfusion_Maui_Charts_ChartTrendline_BackwardForecast) property to extend the trendline backward and visualize historical trend projections. The value represents the number of data points to forecast backward.
 
 {% tabs %}
 
@@ -434,9 +434,9 @@ this.Content = chart;
 
 You can customize the appearance of trendlines to match your chart design. The key customization properties are:
 
-* **Stroke** - Sets the color of the trendline
-* **StrokeWidth** - Defines the thickness of the trendline
-* **StrokeDashArray** - Creates a dashed or dotted line pattern
+* [Stroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrendline.html#Syncfusion_Maui_Charts_ChartTrendline_Stroke) - Sets the color of the trendline
+* [StrokeWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrendline.html#Syncfusion_Maui_Charts_ChartTrendline_StrokeWidth) - Defines the thickness of the trendline
+* [StrokeDashArray](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrendline.html#Syncfusion_Maui_Charts_ChartTrendline_StrokeDashArray) - Creates a dashed or dotted line pattern
 
 The following example shows how to customize a trendline with a black color, thickness of 2, and a dashed pattern:
 
@@ -481,7 +481,7 @@ this.Content = chart;
 
 ## Trendline Legend Label
 
-You can display a custom label for the trendline in the chart legend using the `Label` property. This helps distinguish between multiple trendlines and makes your chart more descriptive.
+You can display a custom label for the trendline in the chart legend using the [Label](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrendline.html#Syncfusion_Maui_Charts_ChartTrendline_Label) property. This helps distinguish between multiple trendlines and makes your chart more descriptive.
 
 {% tabs %}
 
@@ -527,8 +527,8 @@ this.Content = chart;
 
 Markers are visual indicators (like circles, squares, etc.) placed along the trendline to highlight specific data points. You can enable and customize markers using:
 
-* **ShowMarkers** - Enables markers on the trendline
-* **MarkerSettings** - Customizes the appearance, size, shape, and color of markers
+* [ShowMarkers](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrendline.html#Syncfusion_Maui_Charts_ChartTrendline_ShowMarkers) - Enables markers on the trendline
+* [MarkerSettings](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrendline.html#Syncfusion_Maui_Charts_ChartTrendline_MarkerSettings) - Customizes the appearance, size, shape, and color of markers
 
 This is helpful for emphasizing key points on the trendline or making it more visually distinct.
 
@@ -582,10 +582,10 @@ this.Content = chart;
 
 Tooltips and trackball labels provide interactive information when users hover over or tap the trendline:
 
-* **EnableTooltip** - Displays a tooltip showing trendline data when hovered
-* **ShowTrackballLabel** - Displays a label when the trackball intersects the trendline
-* **TooltipTemplate** - Customizes the tooltip appearance and content
-* **TrackballLabelTemplate** - Customizes the trackball label appearance
+* [EnableTooltip](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrendline.html#Syncfusion_Maui_Charts_ChartTrendline_EnableTooltip) - Displays a tooltip showing trendline data when hovered
+* [ShowTrackballLabel](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrendline.html#Syncfusion_Maui_Charts_ChartTrendline_ShowTrackballLabel) - Displays a label when the trackball intersects the trendline
+* [TooltipTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrendline.html#Syncfusion_Maui_Charts_ChartTrendline_TooltipTemplate) - Customizes the tooltip appearance and content
+* [TrackballLabelTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartTrendline.html#Syncfusion_Maui_Charts_ChartTrendline_TrackballLabelTemplate) - Customizes the trackball label appearance
 
 These features enhance user interactivity and data exploration.
 
