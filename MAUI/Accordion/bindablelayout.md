@@ -213,12 +213,12 @@ this.BindingContext = new EmployeeDetails();
 The following code example binds the collection created in the previous step to the `BindableLayout.ItemsSource` property.
 
 {% tabs %}
-{% highlight xaml hl_lines="2"%}
+{% highlight xaml hl_lines="2" %}
 <syncfusion:SfAccordion x:Name="Accordion"
                         BindableLayout.ItemsSource="{Binding Employees}"/>
 </ContentPage>      
 {% endhighlight %}
-{% highlight c# hl_lines="2"%}
+{% highlight c# hl_lines="2" %}
 SfAccordion Accordion = new SfAccordion();
 BindableLayout.SetItemsSource(Accordion, viewModel.Employees);
 {% endhighlight %}
@@ -274,7 +274,7 @@ The [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.
     </BindableLayout.ItemTemplate>
 </syncfusion:SfAccordion>    
 {% endhighlight %}
-{% highlight c# hl_lines="27 28"%}
+{% highlight c# hl_lines="27 28" %}
 SfAccordion accordion = new SfAccordion();
 DataTemplate ItemTemplate = new DataTemplate(() =>
 {
