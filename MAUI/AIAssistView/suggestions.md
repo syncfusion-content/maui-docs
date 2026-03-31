@@ -9,6 +9,12 @@ documentation: ug
 
 # Working with Suggestions in .NET MAUI AI AssistView (SfAIAssistView)
 
+This section explains how to use suggestions and its related operations in the `SfAIAssistView`.
+
+To get start quickly with suggestions in .NET MAUI AI AssistView, you can check on this video:
+
+<style>#MAUIAIAssistViewSuggestionsVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIAIAssistViewSuggestionsVideoTutorial' src='https://www.youtube.com/watch?v=dz9EOTvvAOU'></iframe>
+
 ## Common suggestions
 
 The `SfAIAssistView` control allows users to view a list of common suggestions to choose from. These suggestions offer recommendations, helpful tips, and guides for various tasks and topics.
@@ -477,8 +483,8 @@ public partial class MainPage : ContentPage
 
 `SfAIAssistView` supports a dedicated set of suggestions that appear above the input area. These Footer suggestions are intended to help users compose messages quickly and are configured separately from the header or response suggestions.
 
-- **`FooterSuggestions`**: Bind an `IList<ISuggestion>` to this property to populate the footer suggestion list.
-- **`FooterSuggestionTemplate`**: Provide a `DataTemplate` to customize each footer suggestion item UI.
+- **[FooterSuggestions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_FooterSuggestions)**: Bind an `IList<ISuggestion>` to this property to populate the footer suggestion list.
+- **[FooterSuggestionTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_FooterSuggestionTemplate)**: Provide a `DataTemplate` to customize each footer suggestion item UI.
 
 {% tabs %}
 {% highlight xaml hl_lines="12 13" %}
@@ -520,6 +526,8 @@ public partial class MainPage : ContentPage
 
 {% endhighlight %}
 {% endtabs %}
+
+![Footer Suggestions in .NET MAUI AI AssistView](Images/suggestions/maui-aiassistview-footer-suggestions.png)
 
 ## Event and Commands
 
