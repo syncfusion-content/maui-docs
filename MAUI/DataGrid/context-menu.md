@@ -32,27 +32,102 @@ The header context menu is displayed when the user invokes the context menu on a
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid" ItemsSource="{Binding Orders}">
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                        ItemsSource="{Binding Orders}">
     <syncfusion:SfDataGrid.HeaderContextMenu>
         <syncfusion:MenuItemCollection>
-            <syncfusion:MenuItem Text="Sort Ascending"/>
-            <syncfusion:MenuItem Text="Sort Descending"/>
-            <syncfusion:MenuItem Text="Clear Sorting"/>
-            <syncfusion:MenuItem Text="Group by Column"/>
-            <syncfusion:MenuItem Text="Best Fit"/>
+            <syncfusion:MenuItem Text="Sort Ascending">
+                <syncfusion:MenuItem.Icon>
+                    <Label Text="&#xe791;"
+                            FontFamily="MaterialAssets"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                </syncfusion:MenuItem.Icon>
+            </syncfusion:MenuItem>
+            <syncfusion:MenuItem Text="Sort Descending">
+                <syncfusion:MenuItem.Icon>
+                    <Label Text="&#xe792;"
+                            FontFamily="MaterialAssets"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                </syncfusion:MenuItem.Icon>
+            </syncfusion:MenuItem>
+            <syncfusion:MenuItem Text="Clear Sorting">
+                <syncfusion:MenuItem.Icon>
+                    <Label Text="&#xe70e;"
+                            FontFamily="MaterialAssets"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                </syncfusion:MenuItem.Icon>
+            </syncfusion:MenuItem>
+            <syncfusion:MenuItem Text="Search">
+                <syncfusion:MenuItem.Icon>
+                    <Label Text="&#xe715;"
+                            FontFamily="MaterialAssets"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                </syncfusion:MenuItem.Icon>
+            </syncfusion:MenuItem>
         </syncfusion:MenuItemCollection>
     </syncfusion:SfDataGrid.HeaderContextMenu>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-this.dataGrid.HeaderContextMenu = new MenuItemCollection
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
+
+// Create Header Context Menu
+var headerContextMenu = new Syncfusion.Maui.DataGrid.MenuItemCollection
 {
-    new MenuItem("Sort Ascending") ,
-    new MenuItem("Sort Descending"),
-    new MenuItem("Clear Sorting")  ,
-    new MenuItem("Group by Column"),
-    new MenuItem("Best Fit"),
+    new Syncfusion.Maui.DataGrid.MenuItem
+    {
+        Text = "Sort Ascending",
+        Icon = new Label
+        {
+            Text = "\ue791",
+            FontFamily = "MaterialAssets",
+            HorizontalTextAlignment = TextAlignment.Center,
+            VerticalTextAlignment = TextAlignment.Center
+        }
+    },
+    new Syncfusion.Maui.DataGrid.MenuItem
+    {
+        Text = "Sort Descending",
+        Icon = new Label
+        {
+            Text = "\ue792",
+            FontFamily = "MaterialAssets",
+            HorizontalTextAlignment = TextAlignment.Center,
+            VerticalTextAlignment = TextAlignment.Center
+        }
+    },
+    new Syncfusion.Maui.DataGrid.MenuItem
+    {
+        Text = "Clear Sorting",
+        Icon = new Label
+        {
+            Text = "\ue70e",
+            FontFamily = "MaterialAssets",
+            HorizontalTextAlignment = TextAlignment.Center,
+            VerticalTextAlignment = TextAlignment.Center
+        }
+    },
+    new Syncfusion.Maui.DataGrid.MenuItem
+    {
+        Text = "Search",
+        Icon = new Label
+        {
+            Text = "\ue715",
+            FontFamily = "MaterialAssets",
+            HorizontalTextAlignment = TextAlignment.Center,
+            VerticalTextAlignment = TextAlignment.Center
+        }
+    }
 };
+
+dataGrid.HeaderContextMenu = headerContextMenu;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -97,25 +172,101 @@ The record context menu is displayed when the user invokes the context menu on a
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding Orders}">
+                        ItemsSource="{Binding Orders}">
     <syncfusion:SfDataGrid.RecordContextMenu>
         <syncfusion:MenuItemCollection>
-            <syncfusion:MenuItem Text="Copy"/>
-            <syncfusion:MenuItem Text="Paste"/>
-            <syncfusion:MenuItem Text="Cut"/>
-            <syncfusion:MenuItem Text="Delete"/>
+            <syncfusion:MenuItem Text="Copy">
+                <syncfusion:MenuItem.Icon>
+                    <Label Text="&#xe7a0;"
+                            FontFamily="MaterialAssets"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                </syncfusion:MenuItem.Icon>
+            </syncfusion:MenuItem>
+            <syncfusion:MenuItem Text="Paste">
+                <syncfusion:MenuItem.Icon>
+                    <Label Text="&#xe797;"
+                            FontFamily="MaterialAssets"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                </syncfusion:MenuItem.Icon>
+            </syncfusion:MenuItem>
+            <syncfusion:MenuItem Text="Cut">
+                <syncfusion:MenuItem.Icon>
+                    <Label Text="&#xe710;"
+                            FontFamily="MaterialAssets"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                </syncfusion:MenuItem.Icon>
+            </syncfusion:MenuItem>
+            <syncfusion:MenuItem Text="Delete">
+                <syncfusion:MenuItem.Icon>
+                    <Label Text="&#xe70f;"
+                            FontFamily="MaterialAssets"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                </syncfusion:MenuItem.Icon>
+            </syncfusion:MenuItem>
         </syncfusion:MenuItemCollection>
     </syncfusion:SfDataGrid.RecordContextMenu>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-this.dataGrid.RecordContextMenu = new MenuItemCollection
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
+
+// Define the context menu for records
+var recordContextMenu = new Syncfusion.Maui.DataGrid.MenuItemCollection
 {
-    new MenuItem("Copy")  ,
-    new MenuItem("Paste") ,
-    new MenuItem("Cut")   ,
-    new MenuItem("Delete"),
+    new Syncfusion.Maui.DataGrid.MenuItem
+    {
+        Text = "Copy",
+        Icon = new Label
+        {
+            Text = "\ue7a0",
+            FontFamily = "MaterialAssets",
+            HorizontalTextAlignment = TextAlignment.Center,
+            VerticalTextAlignment = TextAlignment.Center
+        }
+    },
+    new Syncfusion.Maui.DataGrid.MenuItem
+    {
+        Text = "Paste",
+        Icon = new Label
+        {
+            Text = "\ue797",
+            FontFamily = "MaterialAssets",
+            HorizontalTextAlignment = TextAlignment.Center,
+            VerticalTextAlignment = TextAlignment.Center
+        }
+    },
+    new Syncfusion.Maui.DataGrid.MenuItem
+    {
+        Text = "Cut",
+        Icon = new Label
+        {
+            Text = "\ue710",
+            FontFamily = "MaterialAssets",
+            HorizontalTextAlignment = TextAlignment.Center,
+            VerticalTextAlignment = TextAlignment.Center
+        }
+    },
+    new Syncfusion.Maui.DataGrid.MenuItem
+    {
+        Text = "Delete",
+        Icon = new Label
+        {
+            Text = "\ue70f",
+            FontFamily = "MaterialAssets",
+            HorizontalTextAlignment = TextAlignment.Center,
+            VerticalTextAlignment = TextAlignment.Center
+        }
+    }
 };
+
+dataGrid.RecordContextMenu = recordContextMenu;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -158,21 +309,79 @@ The group caption context menu is displayed when the user invokes the context me
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid ...>
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                        ItemsSource="{Binding Orders}"
+                        AllowGroupExpandCollapse="True">
+
+    // Grouping the data based on the Country column.
+    <syncfusion:SfDataGrid.GroupColumnDescriptions>
+        <syncfusion:GroupColumnDescription ColumnName="Country"/>
+    </syncfusion:SfDataGrid.GroupColumnDescriptions>
+
+    // Context menu for group caption.
     <syncfusion:SfDataGrid.GroupCaptionContextMenu>
         <syncfusion:MenuItemCollection>
-            <syncfusion:MenuItem Text="Expand All"/>
-            <syncfusion:MenuItem Text="Collapse All"/>
+            <syncfusion:MenuItem Text="Expand All">
+                <syncfusion:MenuItem.Icon>
+                    <Label Text="&#xe705;"
+                            FontFamily="MaterialAssets"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                </syncfusion:MenuItem.Icon>
+            </syncfusion:MenuItem>
+            <syncfusion:MenuItem Text="Collapse All">
+                <syncfusion:MenuItem.Icon>
+                    <Label Text="&#xe708;"
+                            FontFamily="MaterialAssets"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                </syncfusion:MenuItem.Icon>
+            </syncfusion:MenuItem>
         </syncfusion:MenuItemCollection>
     </syncfusion:SfDataGrid.GroupCaptionContextMenu>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-this.dataGrid.GroupCaptionContextMenu = new MenuItemCollection
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
+dataGrid.AllowGroupExpandCollapse = true;
+
+// Grouping the DataGrid based on the Country column
+dataGrid.GroupColumnDescriptions.Add(new GroupColumnDescription()
 {
-    new MenuItem("Expand All")  ,
-    new MenuItem("Collapse All"),
+    ColumnName = "Country",
+});
+
+// Define the context menu for group captions
+var groupCaptionContextMenu = new Syncfusion.Maui.DataGrid.MenuItemCollection
+{
+    new Syncfusion.Maui.DataGrid.MenuItem
+    {
+        Text = "Expand All",
+        Icon = new Label
+        {
+            Text = "\ue705",
+            FontFamily = "MaterialAssets",
+            HorizontalTextAlignment = TextAlignment.Center,
+            VerticalTextAlignment = TextAlignment.Center
+        }
+    },
+    new Syncfusion.Maui.DataGrid.MenuItem
+    {
+        Text = "Collapse All",
+        Icon = new Label
+        {
+            Text = "\ue708",
+            FontFamily = "MaterialAssets",
+            HorizontalTextAlignment = TextAlignment.Center,
+            VerticalTextAlignment = TextAlignment.Center
+        }
+    }
 };
+
+dataGrid.GroupCaptionContextMenu = groupCaptionContextMenu;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -212,19 +421,90 @@ The group summary context menu is displayed when the user invokes the context me
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid>
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                        ItemsSource="{Binding Orders}"
+                        AllowGroupExpandCollapse="True">
+
+    // Grouping the data based on the Country column.
+    <syncfusion:SfDataGrid.GroupColumnDescriptions>
+        <syncfusion:GroupColumnDescription ColumnName="Country"/>
+    </syncfusion:SfDataGrid.GroupColumnDescriptions>
+
+    // Context menu for group caption.
+    <syncfusion:SfDataGrid.GroupSummaryRows>
+        <syncfusion:DataGridSummaryRow ShowSummaryInRow="True"
+                                        Title="Total Orders: {Orders}">
+            <syncfusion:DataGridSummaryRow.SummaryColumns>
+                <syncfusion:DataGridSummaryColumn Name="Orders"
+                                                    MappingName="OrderID"
+                                                    Format="{}{Count}"
+                                                    SummaryType="CountAggregate">
+                </syncfusion:DataGridSummaryColumn>
+            </syncfusion:DataGridSummaryRow.SummaryColumns>
+        </syncfusion:DataGridSummaryRow>
+    </syncfusion:SfDataGrid.GroupSummaryRows>
+
+    // Context menu for group summary.
     <syncfusion:SfDataGrid.GroupSummaryContextMenu>
         <syncfusion:MenuItemCollection>
-            <syncfusion:MenuItem Text="Clear Summary"/>
+            <syncfusion:MenuItem Text="Clear Summary">
+                <syncfusion:MenuItem.Icon>
+                    <Label Text="&#xe70b;"
+                            FontFamily="MaterialAssets"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                </syncfusion:MenuItem.Icon>
+            </syncfusion:MenuItem>
         </syncfusion:MenuItemCollection>
     </syncfusion:SfDataGrid.GroupSummaryContextMenu>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-this.dataGrid.GroupSummaryContextMenu = new MenuItemCollection
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
+dataGrid.AllowGroupExpandCollapse = true;
+
+// Grouping the DataGrid based on the Country column
+dataGrid.GroupColumnDescriptions.Add(new GroupColumnDescription()
 {
-    new MenuItem("Clear Summary") ,
+    ColumnName = "Country",
+});
+
+dataGrid.GroupSummaryRows.Add(new DataGridSummaryRow()
+{
+    ShowSummaryInRow = true,
+    Title = "Total Orders: {Orders}",
+    SummaryColumns = new ObservableCollection<ISummaryColumn>()
+    {
+        new DataGridSummaryColumn()
+        {
+            Name="Orders",
+            MappingName="OrderID",
+            Format="{Count}",
+            SummaryType=SummaryType.CountAggregate
+        }
+    }
+});
+
+// Define the context menu for group captions
+var groupSummaryContextMenu = new Syncfusion.Maui.DataGrid.MenuItemCollection
+{
+    new Syncfusion.Maui.DataGrid.MenuItem
+    {
+        Text = "Clear Summary",
+        Icon = new Label
+        {
+            Text = "\ue70b",
+            FontFamily = "MaterialAssets",
+            HorizontalTextAlignment = TextAlignment.Center,
+            VerticalTextAlignment = TextAlignment.Center
+        }
+    }
 };
+
+dataGrid.GroupSummaryContextMenu = groupSummaryContextMenu;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -261,27 +541,165 @@ The table summary context menu is displayed when the user invokes the context me
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid ...>
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                        ItemsSource="{Binding Orders}"
+                        AllowGroupExpandCollapse="True">
+
+    // Grouping the data based on the Country column.
+    <syncfusion:SfDataGrid.GroupColumnDescriptions>
+        <syncfusion:GroupColumnDescription ColumnName="Country"/>
+    </syncfusion:SfDataGrid.GroupColumnDescriptions>
+
+    // Table Summary row to display the total number of orders.
+    <syncfusion:SfDataGrid.TableSummaryRows>
+        <syncfusion:DataGridTableSummaryRow Title="Total Orders : {Orders}"
+                                            Position="Top"
+                                            ShowSummaryInRow="True">
+            <syncfusion:DataGridTableSummaryRow.SummaryColumns>
+                <syncfusion:DataGridSummaryColumn Name="Orders"
+                                                    Format="{}{Count}"
+                                                    MappingName="OrderID"
+                                                    SummaryType="CountAggregate"/>
+            </syncfusion:DataGridTableSummaryRow.SummaryColumns>
+        </syncfusion:DataGridTableSummaryRow>
+    </syncfusion:SfDataGrid.TableSummaryRows>
+
+    // Context menu for table summary.
     <syncfusion:SfDataGrid.TableSummaryContextMenu>
         <syncfusion:MenuItemCollection>
-            <syncfusion:MenuItem Text="Count"/>
-            <syncfusion:MenuItem Text="Minimum"/>
-            <syncfusion:MenuItem Text="Maximum"/>
-            <syncfusion:MenuItem Text="Sum"/>
-            <syncfusion:MenuItem Text="Average"/>
+            <syncfusion:MenuItem Text="Count">
+                <syncfusion:MenuItem.Icon>
+                    <Label Text="&#xe793;"
+                            FontFamily="MaterialAssets"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                </syncfusion:MenuItem.Icon>
+            </syncfusion:MenuItem>
+            <syncfusion:MenuItem Text="Minimum">
+                <syncfusion:MenuItem.Icon>
+                    <Label Text="&#xe701;"
+                            FontFamily="MaterialAssets"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                </syncfusion:MenuItem.Icon>
+            </syncfusion:MenuItem>
+            <syncfusion:MenuItem Text="Maximum">
+                <syncfusion:MenuItem.Icon>
+                    <Label Text="&#xe702;"
+                            FontFamily="MaterialAssets"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                </syncfusion:MenuItem.Icon>
+            </syncfusion:MenuItem>
+            <syncfusion:MenuItem Text="Sum">
+                <syncfusion:MenuItem.Icon>
+                    <Label Text="&#xe70d;"
+                            FontFamily="MaterialAssets"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                </syncfusion:MenuItem.Icon>
+            </syncfusion:MenuItem>
+            <syncfusion:MenuItem Text="Average">
+                <syncfusion:MenuItem.Icon>
+                    <Label Text="&#xe710;"
+                            FontFamily="MaterialAssets"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                </syncfusion:MenuItem.Icon>
+            </syncfusion:MenuItem>
         </syncfusion:MenuItemCollection>
     </syncfusion:SfDataGrid.TableSummaryContextMenu>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-this.dataGrid.TableSummaryContextMenu = new MenuItemCollection
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
+dataGrid.AllowGroupExpandCollapse = true;
+
+// Grouping the DataGrid based on the Country column
+dataGrid.GroupColumnDescriptions.Add(new GroupColumnDescription()
 {
-    new MenuItem("Count")  ,
-    new MenuItem("Minimum") ,
-    new MenuItem("Maximum") ,
-    new MenuItem("Sum")     ,
-    new MenuItem("Average") ,
+    ColumnName = "Country",
+});
+
+// Table summary row to display the total number of orders
+DataGridTableSummaryRow tableSummaryRow = new DataGridTableSummaryRow();
+tableSummaryRow.Title = "Total Orders : {Orders}";
+tableSummaryRow.ShowSummaryInRow = true;
+tableSummaryRow.Position = SummaryRowPosition.Top;
+tableSummaryRow.SummaryColumns.Add(new DataGridSummaryColumn()
+{
+    Name = "Orders",
+    MappingName = "Orders",
+    Format = "{Count}",
+    SummaryType = SummaryType.CountAggregate
+});
+dataGrid.TableSummaryRows.Add(tableSummaryRow);
+
+// Define the context menu for Table summary row
+var tableSummaryContextMenu = new Syncfusion.Maui.DataGrid.MenuItemCollection
+{
+    new Syncfusion.Maui.DataGrid.MenuItem
+    {
+        Text = "Count",
+        Icon = new Label
+        {
+            Text = "\ue793",
+            FontFamily = "MaterialAssets",
+            HorizontalTextAlignment = TextAlignment.Center,
+            VerticalTextAlignment = TextAlignment.Center
+        }
+    },
+    new Syncfusion.Maui.DataGrid.MenuItem
+    {
+        Text = "Minimum",
+        Icon = new Label
+        {
+            Text = "\ue701",
+            FontFamily = "MaterialAssets",
+            HorizontalTextAlignment = TextAlignment.Center,
+            VerticalTextAlignment = TextAlignment.Center
+        }
+    },
+    new Syncfusion.Maui.DataGrid.MenuItem
+    {
+        Text = "Maximum",
+        Icon = new Label
+        {
+            Text = "\ue702",
+            FontFamily = "MaterialAssets",
+            HorizontalTextAlignment = TextAlignment.Center,
+            VerticalTextAlignment = TextAlignment.Center
+        }
+    },
+    new Syncfusion.Maui.DataGrid.MenuItem
+    {
+        Text = "Sum",
+        Icon = new Label
+        {
+            Text = "\ue70d",
+            FontFamily = "MaterialAssets",
+            HorizontalTextAlignment = TextAlignment.Center,
+            VerticalTextAlignment = TextAlignment.Center
+        }
+    },
+    new Syncfusion.Maui.DataGrid.MenuItem
+    {
+        Text = "Average",
+        Icon = new Label
+        {
+            Text = "\ue710",
+            FontFamily = "MaterialAssets",
+            HorizontalTextAlignment = TextAlignment.Center,
+            VerticalTextAlignment = TextAlignment.Center
+        }
+    },
+
 };
+
+dataGrid.TableSummaryContextMenu = tableSummaryContextMenu;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
