@@ -332,7 +332,7 @@ There are different types of columns available. Any column can be created based 
 OrderInfoRepository viewModel = new OrderInfoRepository();
 SfDataGrid dataGrid = new SfDataGrid();
 dataGrid.ItemsSource = viewModel.OrderInfoCollection;
-this.dataGrid.AutoGenerateColumnsMode = AutoGenerateColumnsMode.None;
+dataGrid.AutoGenerateColumnsMode = AutoGenerateColumnsMode.None;
 
 DataGridNumericColumn orderIdColumn = new DataGridNumericColumn { HeaderText = "Order ID", MappingName = "OrderID" };
 DataGridTextColumn customerIdColumn = new DataGridTextColumn { HeaderText = "Customer ID", MappingName = "CustomerID" };
@@ -340,11 +340,11 @@ DataGridTextColumn customerColumn = new DataGridTextColumn { HeaderText = "Custo
 DataGridTextColumn shipCityColumn = new DataGridTextColumn { HeaderText = "Ship City", MappingName = "ShipCity" };
 DataGridTextColumn shipCountryColumn = new DataGridTextColumn { HeaderText = "Ship Country", MappingName = "ShipCountry" };
 
-this.dataGrid.Columns.Add(orderIdColumn);
-this.dataGrid.Columns.Add(customerIdColumn);
-this.dataGrid.Columns.Add(customerColumn);
-this.dataGrid.Columns.Add(shipCityColumn);
-this.dataGrid.Columns.Add(shipCountryColumn);
+dataGrid.Columns.Add(orderIdColumn);
+dataGrid.Columns.Add(customerIdColumn);
+dataGrid.Columns.Add(customerColumn);
+dataGrid.Columns.Add(shipCityColumn);
+dataGrid.Columns.Add(shipCountryColumn);
 {% endhighlight %}
 {% endtabs %}
 

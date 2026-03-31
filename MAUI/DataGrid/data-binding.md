@@ -35,7 +35,7 @@ The codes below codes demonstrate how to bind a data source to the `SfDataGrid`.
 {% highlight c# %}
 OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
 SfDataGrid dataGrid = new SfDataGrid();
-this.dataGrid.ItemsSource = orderInfoViewModel.OrderInfoCollection;
+dataGrid.ItemsSource = orderInfoViewModel.OrderInfoCollection;
 {% endhighlight %}
 {% endtabs %}
 
@@ -55,7 +55,7 @@ The `SfDataGrid` control supports binding the [DataTable](https://learn.microsof
 {% highlight c# %}
 DataTable table = this.GetDataTable();
 SfDataGrid dataGrid = new SfDataGrid();
-this.dataGrid.ItemsSource = table;
+dataGrid.ItemsSource = table;
 {% endhighlight %}
 {% endtabs %}
 
@@ -249,11 +249,11 @@ During data manipulation operations and property changes, the `SfDataGrid` suppo
 {% tabs %}
 {% highlight c# %}
 SfDataGrid dataGrid = new SfDataGrid();
-this.dataGrid.Loaded += SfDataGrid_Loaded;
+dataGrid.Loaded += SfDataGrid_Loaded;
 
 private void SfDataGrid_Loaded(object sender, EventArgs e)
 {
-    this.dataGrid.View.LiveDataUpdateMode = LiveDataUpdateMode.Default;
+    dataGrid.View.LiveDataUpdateMode = LiveDataUpdateMode.Default;
 }
 {% endhighlight %}
 {% endtabs %}

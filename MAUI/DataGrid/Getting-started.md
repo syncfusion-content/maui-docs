@@ -413,7 +413,19 @@ The following code example binds the collection created in the previous step to 
     <ContentPage.Content>
         <syncfusion:SfDataGrid x:Name="dataGrid"
                                ItemsSource="{Binding OrderInfoCollection}">
-        
+        <syncfusion:SfDataGrid.Columns>
+            <syncfusion:DataGridNumericColumn HeaderText="Order ID" Format="0"
+                                                MappingName="OrderID" Width="150"/>
+                <syncfusion:DataGridTextColumn  HeaderText="Customer"
+                                                MappingName="Customer"
+                                                Width="150" />
+                <syncfusion:DataGridTextColumn  HeaderText="Ship City"
+                                                MappingName="ShipCity"
+                                                Width="150" />
+                <syncfusion:DataGridTextColumn  HeaderText="Ship Country"
+                                                MappingName="ShipCountry"
+                                                Width="150" />
+        </syncfusion:SfDataGrid.Columns>        
         </syncfusion:SfDataGrid>
     </ContentPage.Content>
 </ContentPage>
