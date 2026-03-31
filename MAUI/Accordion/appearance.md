@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Appearance | Accordion for Maui | Syncfusion
-description: Learn about Appearance support in Syncfusion Maui Accordion (SfAccordion) control and more details.
+description: Learn here all about Appearance support in Syncfusion Maui Accordion (SfAccordion) control and more details. 
 platform: MAUI
 control: SfAccordion
 documentation: ug
