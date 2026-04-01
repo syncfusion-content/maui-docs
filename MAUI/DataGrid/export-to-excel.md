@@ -791,7 +791,7 @@ option.CanAllowSortingAndFiltering = true;
 
 ### Applying styles while exporting
 
-The SfDataGrid allows exporting the data with the applied GridStyle by setting the [DataGridExcelExportingOption.CanApplyGridStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_CanApplyGridStyle) to `true`. By default, the data will be exported without the GridStyle.
+The SfDataGrid allows exporting the data with the applied `DefaultStyle` by setting the [DataGridExcelExportingOption.CanApplyGridStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_CanApplyGridStyle) to `true`. By default, the data will be exported without the `DefaultStyle`.
 
 {% tabs %}
 {% highlight c# %}
