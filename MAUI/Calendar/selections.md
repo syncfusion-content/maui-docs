@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Selections in .NET MAUI Calendar control | Syncfusion<sup>&reg;</sup>
+title: Selections in .NET MAUI Calendar control | Syncfusion
 description: Learn here all about Selections feature in Syncfusion<sup>&reg;</sup> .NET MAUI Calendar (SfCalendar) control and more.
 platform: maui
 control: SfCalendar
