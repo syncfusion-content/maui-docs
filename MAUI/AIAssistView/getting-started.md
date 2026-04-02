@@ -13,7 +13,7 @@ This section guides you through setting up and configuring AI AssistView (SfAIAs
 
 To quickly get started with the .NET MAUI AI AssistView, watch this video:
 
-<style>#MAUIAIAssistViewVideoTutorial{width : 90% !important; height: 400px !important }</style> <iframe id='MAUIAIAssistViewVideoTutorial' src='https://www.youtube.com/watch?v=l_mW3Py0N3M'></iframe>
+{% youtube "https://www.youtube.com/watch?v=l_mW3Py0N3M" %}
 
 {% tabcontents %}
 {% tabcontent Visual Studio %}
