@@ -326,6 +326,37 @@ this.Content = badgeView;
 
 {% endtabs %}
 
+## Adding screen reader text
+
+Use the [ScreenReaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_ScreenReaderText) property to specify text that screen readers announce for the badge. This is especially helpful for accessibility when the badge only contains an icon or when you want to provide a custom description.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<badgeView:SfBadgeView ScreenReaderText="20">
+    <badgeView:SfBadgeView.Content>
+        <Button Text="Primary" WidthRequest="120" HeightRequest="60"/>
+    </badgeView:SfBadgeView.Content>
+</badgeView:SfBadgeView>
+
+{% endhighlight %}
+
+{% highlight c# %}
+   
+SfBadgeView badgeView = new SfBadgeView();
+badgeView.ScreenReaderText = "20";
+Button button = new Button();
+button.Text = "Primary";
+button.WidthRequest = 120;
+button.HeightRequest = 60;
+badgeView.Content = button;
+Content = badgeView;
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ## Adding a content
 
 An image, button, label or any view can be added to the Badge View using the [Content](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_Content) property. If you need to display a custom icon or image in the badge, ensure the image is included correctly in your project resources.

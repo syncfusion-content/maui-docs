@@ -231,65 +231,73 @@ Use [InitialsMemberPath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Cor
 {% tabs %}
 {% highlight c# %}
  public class Employee
+{
+
+    private string name;
+    public string Name
     {
-
-        private string name;
-        public string Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
-
-        private string imagesource;
-
-        public string ImageSource
-        {
-            get { return imagesource; }
-            set { imagesource = value; }
-        }
-
-        private Color colors;
-
-        public Color Colors
-        {
-            get { return colors; }
-            set { colors = value; }
-        }
-
+        get { return name; }
+        set { name = value; }
     }
 
-    public class EmployeeViewModel : INotifyPropertyChanged
+    private string imagesource;
+
+    public string ImageSource
     {
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        private void OnPropertyRaised(string propertyname)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyname));
-            }
-        }
-        private ObservableCollection<Employee> collectionimage;
-
-        public ObservableCollection<Employee> CollectionImage
-        {
-            get { return collectionimage; }
-            set
-            {
-                collectionimage = value;
-                OnPropertyRaised("CollectionImage");
-            }
-        }
-
-        public EmployeeViewModel()
-        {
-            CollectionImage = new ObservableCollection<Employee>();
-            CollectionImage.Add(new Employee { Name="Mike" , ImageSource = "mike.png",Colors=Colors.Gray });
-            CollectionImage.Add(new Employee { Name="Alex",ImageSource= "alex.png", Colors = Colors.Bisque });
-            CollectionImage.Add(new Employee { Name="Ellanaa", ImageSource= "ellanaa.png",Colors=Colors.LightCoral });
-        }
-
+        get { return imagesource; }
+        set { imagesource = value; }
     }
+
+    private Color colors;
+
+    public Color Colors
+    {
+        get { return colors; }
+        set { colors = value; }
+    }
+
+    private Color initialcolors;
+
+    public Color InitialsColor
+    {
+        get { return initialcolors; }
+        set { initialcolors = value; }
+    }
+
+}
+
+public class EmployeeViewModel : INotifyPropertyChanged
+{
+
+    public event PropertyChangedEventHandler PropertyChanged;
+    private void OnPropertyRaised(string propertyname)
+    {
+        if (PropertyChanged != null)
+        {
+            PropertyChanged(this, new PropertyChangedEventArgs(propertyname));
+        }
+    }
+    private ObservableCollection<Employee> collectionimage;
+
+    public ObservableCollection<Employee> CollectionImage
+    {
+        get { return collectionimage; }
+        set
+        {
+            collectionimage = value;
+            OnPropertyRaised("CollectionImage");
+        }
+    }
+
+    public EmployeeViewModel()
+    {
+        CollectionImage = new ObservableCollection<Employee>();
+        CollectionImage.Add(new Employee { Name = "Mike", ImageSource = "mike.png", Colors = Colors.Gray, InitialsColor = Colors.White });
+        CollectionImage.Add(new Employee { Name = "Alex", ImageSource = "alex.png", Colors = Colors.Bisque, InitialsColor = Colors.Red });
+        CollectionImage.Add(new Employee { Name = "Ellanaa", ImageSource = "ellanaa.png", Colors = Colors.LightCoral, InitialsColor = Colors.Green });
+    }
+
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -407,6 +415,68 @@ public partial class MainPage : ContentPage, INotifyPropertyChanged
 {% endtabs %}
 
 ![Group view in initials only](ContentType_Images/GroupView_InitialsAlone.png)
+
+## Add initials color in group view
+
+You can customize the color of the initials displayed in a group view by using the [InitialsColorMemberPath]() property. The following example shows how this is done.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+ <ContentPage.BindingContext>
+     <local:EmployeeViewModel/>
+ </ContentPage.BindingContext>
+
+ <sfavatar:SfAvatarView ContentType="Group"                         
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    GroupSource="{Binding CollectionImage}"
+                    BackgroundColorMemberPath="Colors"
+                    InitialsMemberPath="Name"
+                    InitialsColorMemberPath="InitialsColor"
+                    WidthRequest="50"
+                    HeightRequest="50"
+                    CornerRadius="25"
+                    Stroke="Black"
+                    StrokeThickness="1">
+ </sfavatar:SfAvatarView>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+public partial class MainPage : ContentPage, INotifyPropertyChanged
+{
+    EmployeeViewModel emp;
+    public MainPage()
+    {
+
+        Grid mainGrid = new Grid();
+        emp = new EmployeeViewModel();
+        SfAvatarView avatarview = new SfAvatarView();
+        avatarview.VerticalOptions = LayoutOptions.Center;
+        avatarview.HorizontalOptions = LayoutOptions.Center;
+        avatarview.WidthRequest = 50;
+        avatarview.HeightRequest = 50;
+        avatarview.CornerRadius = 25;
+        avatarview.ContentType = ContentType.Group;
+        avatarview.GroupSource = emp.CollectionImage;
+        avatarview.InitialsMemberPath = "Name";
+        avatarview.InitialsColorMemberPath = "InitialsColor";
+        avatarview.BackgroundColorMemberPath = "Colors";
+        avatarview.Stroke = Colors.Black;
+        avatarview.StrokeThickness = 1;
+        this.BindingContext = emp;
+        mainGrid.Children.Add(avatarview);
+        this.Content = mainGrid;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Group view in initials only](ContentType_Images/GroupView_InitialsColor.png)
 
 ## Add both image and initials in a group view
 
