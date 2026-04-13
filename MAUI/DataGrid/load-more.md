@@ -21,30 +21,18 @@ To enable and load items at runtime, follow the code example:
 
 {% tabs %}
 {% highlight c# %}
-public partial class MainPage : ContentPage
+
+dataGrid.AllowLoadMore = true;
+dataGrid.LoadMoreCommand = new Command(ExecuteLoadMoreCommand);
+ 
+private async void ExecuteLoadMoreCommand()
 {
-    SfDataGrid dataGrid;
-    OrderInfoViewModel viewModel;
+    this.dataGrid.IsBusy = true;
+    await Task.Delay(new TimeSpan(0, 0, 5));
+    viewModel.LoadMoreItems();
+    this.dataGrid.IsBusy = false;
+} 
 
-    public MainPage()
-    {
-        InitializeComponent();
-        dataGrid = new SfDataGrid();
-        viewModel = new OrderInfoViewModel();
-        dataGrid.ItemsSource = viewModel.Orders;
-        dataGrid.AllowLoadMore = true;
-        dataGrid.LoadMoreCommand = new Command(ExecuteLoadMoreCommand);
-        this.Content = dataGrid;
-    }
-
-    private async void ExecuteLoadMoreCommand()
-    {
-        this.dataGrid.IsBusy = true;
-        await Task.Delay(new TimeSpan(0, 0, 5));
-        viewModel.LoadMoreItems();
-        this.dataGrid.IsBusy = false;
-    }
-}
 {% endhighlight %}
 {% endtabs %}
 
@@ -66,23 +54,26 @@ Set the [SfDataGrid.LoadMoreOption](https://help.syncfusion.com/cr/maui/Syncfusi
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="DataGrid"
-                       ItemsSource="{Binding Orders}"
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"
                        AllowLoadMore="True"
                        LoadMoreOption="Auto"
-                       LoadMoreCommandParameter="{Reference DataGrid}">
+                       LoadMoreCommandParameter="{Reference dataGrid}">
 </syncfusion:SfDataGrid>
+
 {% endhighlight %}
 {% highlight c# %}
-DataGrid.LoadMoreCommand = new Command(ExecuteLoadMoreCommand);
+
+dataGrid.LoadMoreCommand = new Command(ExecuteLoadMoreCommand);
 
 private async void ExecuteLoadMoreCommand()
 {
-    DataGrid.IsBusy = true;
+    this.dataGrid.IsBusy = true;
     await Task.Delay(new TimeSpan(0, 0, 5));
-    ViewModel.LoadMoreItems();
-    DataGrid.IsBusy = false;
+    viewModel.LoadMore();
+    this.dataGrid.IsBusy = false;
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -92,23 +83,26 @@ Set the `SfDataGrid.LoadMoreOption` property as `Manual` to load more items manu
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="DataGrid"
-                       ItemsSource="{Binding Orders}"
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"
                        AllowLoadMore="True"
                        LoadMoreOption="Manual"
-                       LoadMoreCommandParameter="{Reference DataGrid}">
+                       LoadMoreCommandParameter="{Reference dataGrid}">
 </syncfusion:SfDataGrid>
+
 {% endhighlight %}
 {% highlight c# %}
-DataGrid.LoadMoreCommand = new Command(ExecuteLoadMoreCommand);
+
+dataGrid.LoadMoreCommand = new Command(ExecuteLoadMoreCommand);
 
 private async void ExecuteLoadMoreCommand()
 {
-    DataGrid.IsBusy = true;
+    this.dataGrid.IsBusy = true;
     await Task.Delay(new TimeSpan(0, 0, 5));
-    ViewModel.LoadMoreItems();
-    DataGrid.IsBusy = false;
+    viewModel.LoadMore();
+    this.dataGrid.IsBusy = false;
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -120,23 +114,26 @@ The `SfDataGrid.LoadMoreCommand` will not execute when the datagrid is initially
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="DataGrid"
-                       ItemsSource="{Binding Orders}"
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}"
                        AllowLoadMore="True"
                        LoadMoreOption="AutoOnScroll"
-                       LoadMoreCommandParameter="{Reference DataGrid}">
+                       LoadMoreCommandParameter="{Reference dataGrid}">
 </syncfusion:SfDataGrid>
+
 {% endhighlight %}
 {% highlight c# %}
-DataGrid.LoadMoreCommand = new Command(ExecuteLoadMoreCommand);
+
+dataGrid.LoadMoreCommand = new Command(ExecuteLoadMoreCommand);
 
 private async void ExecuteLoadMoreCommand()
 {
-    DataGrid.IsBusy = true;
+    this.dataGrid.IsBusy = true;
     await Task.Delay(new TimeSpan(0, 0, 5));
-    ViewModel.LoadMoreItems();
-    DataGrid.IsBusy = false;
+    viewModel.LoadMore();
+    this.dataGrid.IsBusy = false;
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -147,31 +144,9 @@ Customize the text displayed in the load more view by setting the [SfDataGrid.Lo
 
 {% tabs %}
 {% highlight c# %}
-public partial class MainPage : ContentPage
-{
-    SfDataGrid dataGrid;
-    OrderInfoViewModel viewModel;
 
-    public MainPage()
-    {
-        InitializeComponent();
-        dataGrid = new SfDataGrid();
-        viewModel = new OrderInfoViewModel();
-        dataGrid.ItemsSource = viewModel.Orders;
-        dataGrid.AllowLoadMore = true;
-        dataGrid.LoadMoreText = "LOAD MORE";
-        dataGrid.LoadMoreCommand = new Command(ExecuteLoadMoreCommand);
-        this.Content = dataGrid;
-    }
+dataGrid.LoadMoreText = "LOAD MORE";
 
-    private async void ExecuteLoadMoreCommand()
-    {
-        this.dataGrid.IsBusy = true;
-        await Task.Delay(new TimeSpan(0, 0, 5));
-        viewModel.LoadMoreItems();
-        this.dataGrid.IsBusy = false;
-    }
-}
 {% endhighlight %}
 {% endtabs %}
 
@@ -180,31 +155,9 @@ The position of load more view can be customized by using the [SfDataGrid.LoadMo
 
 {% tabs %}
 {% highlight c# %}
-public partial class MainPage : ContentPage
-{
-    SfDataGrid dataGrid;
-    OrderInfoViewModel viewModel;
 
-    public MainPage()
-    {
-        InitializeComponent();
-        dataGrid = new SfDataGrid();
-        viewModel = new OrderInfoViewModel();
-        dataGrid.ItemsSource = viewModel.Orders;
-        dataGrid.AllowLoadMore = true;
-        dataGrid.LoadMorePosition = DataGridLoadMorePosition.Top;
-        dataGrid.LoadMoreCommand = new Command(ExecuteLoadMoreCommand);
-        this.Content = dataGrid;
-    }
+dataGrid.LoadMorePosition = DataGridLoadMorePosition.Top;
 
-    private async void ExecuteLoadMoreCommand()
-    {
-        this.dataGrid.IsBusy = true;
-        await Task.Delay(new TimeSpan(0, 0, 5));
-        viewModel.LoadMoreItems();
-        this.dataGrid.IsBusy = false;
-    }
-}
 {% endhighlight %}
 {% endtabs %}
 
@@ -236,33 +189,6 @@ The appearance of the built-in load more view can be personalized through the fo
 </tr>
 </table>
 
-{% tabs %}
-{% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="DataGrid"
-                       ItemsSource="{Binding Orders}"
-                       AllowLoadMore="True"
-                       LoadMoreOption="Manual"
-                       LoadMoreCommandParameter="{Reference DataGrid}">
-    <syncfusion:SfDataGrid.DefaultStyle>
-        <syncfusion:DataGridStyle LoadMoreBackground="#FFF1F6"
-                                  LoadMoreButtonBackground="#FFAFCC"
-                                  LoadMoreButtonTextColor="#c1121f"
-                                  LoadMoreIndicatorColor="#CDB4DB" />
-    </syncfusion:SfDataGrid.DefaultStyle>
-</syncfusion:SfDataGrid>
-{% endhighlight %}
-{% highlight c# %}
-DataGrid.LoadMoreCommand = new Command(ExecuteLoadMoreCommand);
-
-private async void ExecuteLoadMoreCommand()
-{
-    DataGrid.IsBusy = true;
-    await Task.Delay(new TimeSpan(0, 0, 5));
-    ViewModel.LoadMoreItems();
-    DataGrid.IsBusy = false;
-}
-{% endhighlight %}
-{% endtabs %}
 
 <img alt="DataGridLoadMore with customized appearance" src="Images\loadmore\maui-datagrid-loadmoreview-loadmore-custom-appearance.png" width="404"/>
 
@@ -272,33 +198,11 @@ The data grid allows to customize the size of the load more view by setting the 
 
 {% tabs %}
 {% highlight c# %}
-public partial class MainPage : ContentPage
-{
-    SfDataGrid dataGrid;
-    OrderInfoViewModel viewModel;
 
-    public MainPage()
-    {
-        InitializeComponent();
-        dataGrid = new SfDataGrid();
-        viewModel = new OrderInfoViewModel();
-        dataGrid.ItemsSource = viewModel.Orders;
-        dataGrid.AllowLoadMore = true;
-        dataGrid.LoadMoreText = "Load More Items";
-        dataGrid.LoadMoreView.HeightRequest = 50;
-        dataGrid.LoadMoreView.Children.OfType<Button>().First().WidthRequest = 150;
-        dataGrid.LoadMoreCommand = new Command(ExecuteLoadMoreCommand);
-        this.Content = dataGrid;
-    }
+dataGrid.LoadMoreText = "Load More Items";
+dataGrid.LoadMoreView.HeightRequest = 50;
+dataGrid.LoadMoreView.Children.OfType<Button>().First().WidthRequest = 150;
 
-    private async void ExecuteLoadMoreCommand()
-    {
-        dataGrid.IsBusy = true;
-        await Task.Delay(new TimeSpan(0, 0, 5));
-        viewModel.LoadMoreItems();
-        dataGrid.IsBusy = false;
-    }
-}
 {% endhighlight %}
 {% endtabs %}
 
@@ -312,31 +216,6 @@ The following code snippets demonstrate how to enable a custom load more view in
 
 {% tabs %}
 {% highlight c# %}
-public partial class MainPage : ContentPage
-{
-    SfDataGrid dataGrid;
-    OrderInfoViewModel viewModel;
-
-    public MainPage()
-    {
-        InitializeComponent();
-        dataGrid = new SfDataGrid();
-        viewModel = new OrderInfoViewModel();
-        dataGrid.ItemsSource = viewModel.Orders;
-        dataGrid.AllowLoadMore = true;
-        dataGrid.LoadMoreView = new CustomLoadMoreView();
-        dataGrid.LoadMoreCommand = new Command(ExecuteLoadMoreCommand);
-        this.Content = dataGrid;
-    }
-
-    private async void ExecuteLoadMoreCommand()
-    {
-        dataGrid.IsBusy = true;
-        await Task.Delay(new TimeSpan(0, 0, 5));
-        viewModel.LoadMoreItems();
-        dataGrid.IsBusy = false;
-    }
-}
 
 public class CustomLoadMoreView : DataGridLoadMoreView
 {
@@ -378,6 +257,7 @@ public class CustomLoadMoreView : DataGridLoadMoreView
         return bounds.Size;
     }
 }
+
 {% endhighlight %}
 {% endtabs %}
 

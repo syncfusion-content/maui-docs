@@ -24,9 +24,8 @@ The [Expanding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.Sf
 * [Index](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.ExpandingAndCollapsingEventArgs.html#Syncfusion_Maui_Accordion_ExpandingAndCollapsingEventArgs_Index): Gets the index of the current expanding accordion item.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
-<syncfusion:SfAccordion x:Name="accordion" 
-                        Expanding="accordion_Expanding">
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="1"%}
+<syncfusion:SfAccordion x:Name="accordion" Expanding="accordion_Expanding">
     <syncfusion:SfAccordion.Items>
         <syncfusion:AccordionItem>
             ...
@@ -36,7 +35,7 @@ The [Expanding](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.Sf
  </syncfusion:SfAccordion>
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
 private void accordion_Expanding(object sender, Syncfusion.Maui.Accordion.ExpandingAndCollapsingEventArgs e)
 {
     if (e.Index == 2)
@@ -52,9 +51,8 @@ private void accordion_Expanding(object sender, Syncfusion.Maui.Accordion.Expand
 The [Expanded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_Expanded) event is triggered when the accordion item is fully expanded. You can execute your own code when this event occurs.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
-<syncfusion:SfAccordion x:Name="accordion" 
-                        Expanded="accordion_Expanded">
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="1" %}
+<syncfusion:SfAccordion x:Name="accordion" Expanded="accordion_Expanded">
     <syncfusion:SfAccordion.Items>
         <syncfusion:AccordionItem>
             ...
@@ -64,7 +62,7 @@ The [Expanded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfA
  </syncfusion:SfAccordion>
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4"%}
 private void accordion_Expanded(object sender, Syncfusion.Maui.Accordion.ExpandedAndCollapsedEventArgs e)
 {
     // Get the index of current accordion item
@@ -81,9 +79,8 @@ The [Collapsing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.S
 * [Index](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.ExpandingAndCollapsingEventArgs.html#Syncfusion_Maui_Accordion_ExpandingAndCollapsingEventArgs_Index): Gets the index of the current collapsing accordion item.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
-<syncfusion:SfAccordion x:Name="accordion" 
-                        Collapsing="accordion_Collapsing">
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="1"%}
+<syncfusion:SfAccordion x:Name="accordion" Collapsing="accordion_Collapsing">
     <syncfusion:SfAccordion.Items>
         <syncfusion:AccordionItem>
             ...
@@ -93,7 +90,7 @@ The [Collapsing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.S
  </syncfusion:SfAccordion>
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="3" %}
 private void accordion_Collapsing(object sender, Syncfusion.Maui.Accordion.ExpandingAndCollapsingEventArgs e)
 {
     if (e.Index == 2)
@@ -109,9 +106,8 @@ private void accordion_Collapsing(object sender, Syncfusion.Maui.Accordion.Expan
 The [Collapsed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.SfAccordion.html#Syncfusion_Maui_Accordion_SfAccordion_Collapsed) event is triggered when the accordion item is collapsed. You can execute your own code when this event occurs.
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
-<syncfusion:SfAccordion x:Name="accordion" 
-                        Collapsed="accordion_Collapsed">
+{% highlight xaml tabtitle="MainPage.xaml" hl_lines="1"%}
+<syncfusion:SfAccordion x:Name="accordion" Collapsed="accordion_Collapsed">
     <syncfusion:SfAccordion.Items>
         <syncfusion:AccordionItem>
             ...
@@ -121,7 +117,7 @@ The [Collapsed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.Sf
  </syncfusion:SfAccordion>
 {% endhighlight %}
 
-{% highlight c# tabtitle="MainPage.xaml.cs" %}
+{% highlight c# tabtitle="MainPage.xaml.cs" hl_lines="4"%}
 private void accordion_Collapsed(object sender, Syncfusion.Maui.Accordion.ExpandedAndCollapsedEventArgs e)
 {
     // Get the index of current accordion item

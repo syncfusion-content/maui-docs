@@ -278,336 +278,173 @@ Here, the Grid with Labels is loaded in the Header and Content of the expander.
 N> Loading the `Label` as direct children of the `Header` or `Content` of the Expander will lead to an exception. So, load the Label inside the Grid to overcome the crash.
 
 {% tabs %}
-{% highlight xaml %}
-<ContentPage.Content>
-    <ScrollView>
-        <StackLayout  HorizontalOptions="{OnPlatform MacCatalyst=Center,WinUI=Center}" >
-            <Label Text="Invoice: #FRU037020142097"  Opacity="1.0" VerticalTextAlignment="Center" Margin="0,0,0,5" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center"/>
-            <Border StrokeShape="RoundRectangle 8,8,8,8" Margin="{OnPlatform Default='8,0,8,8',WinUI='8,0,6,8',MacCatalyst='8,0,6,8'}" Stroke="#CAC4D0"  StrokeThickness="{OnPlatform MacCatalyst=2,Default=1}" WidthRequest="{OnPlatform MacCatalyst=460,WinUI=340}">
-                <syncfusion:SfExpander IsExpanded="True">
-                    <syncfusion:SfExpander.Header>
-                        <Grid RowDefinitions="48" ColumnDefinitions="35,*">
-                            <Label Text="&#xe703;" FontSize="16" Margin="14,2,2,2" FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}'
-                                       VerticalOptions="Center" VerticalTextAlignment="Center"/>
-                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="Invoice Date" FontSize="14" Grid.Column="1" VerticalOptions="Center"/>
-                        </Grid>
-                    </syncfusion:SfExpander.Header>
-                    <syncfusion:SfExpander.Content>
-                        <Grid Padding="18,8,0,18" >
-                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="11:03 AM, 15 January 2019" FontSize="14" VerticalOptions="Center"/>
-                        </Grid>
-                    </syncfusion:SfExpander.Content>
-                </syncfusion:SfExpander>
-            </Border>
-            <Border StrokeShape="RoundRectangle 8,8,8,8" Margin="{OnPlatform Default='8,0,8,8',WinUI='8,0,6,8',MacCatalyst='8,0,6,8'}" Stroke="#CAC4D0"  StrokeThickness="{OnPlatform MacCatalyst=2,Default=1}" WidthRequest="{OnPlatform MacCatalyst=460,WinUI=340}">
-                <syncfusion:SfExpander  AnimationDuration="200" IsExpanded="False">
-                    <syncfusion:SfExpander.Header>
-                        <Grid RowDefinitions="48" ColumnDefinitions="35,*">
-                            <Label Text="&#xe701;" FontSize="16" Margin="14,2,2,2" FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}' VerticalOptions="Center" VerticalTextAlignment="Center"/>
-                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="Item(s)" FontSize="14" Grid.Column="1" VerticalOptions="Center"/>
-                        </Grid>
-                    </syncfusion:SfExpander.Header>
-                    <syncfusion:SfExpander.Content>
-                        <Grid Padding="18,8,18,18" RowDefinitions="20,20,20,20,20,20,20" ColumnDefinitions="*,*">
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="2018 Subaru Outback"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="All-Weather Mats" Grid.Row="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Door Edge Guard Kit" Grid.Row="2"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Rear Bumper Cover" Grid.Row="3"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Wheel Locks" Grid.Row="4"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Gas Full Tank" Grid.Row="5"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Total Amount" TextColor="{StaticResource Primary}" Grid.Row="6"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$35,705.00" Grid.Row="0" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$101.00" Grid.Row="1" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$162.00" Grid.Row="2" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$107.00" Grid.Row="3" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$81.00" Grid.Row="4" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$64.00" Grid.Row="5" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$36,220.00" TextColor="{StaticResource Primary}" Grid.Row="6" Grid.Column="1"/>
-                        </Grid>
-                    </syncfusion:SfExpander.Content>
-                </syncfusion:SfExpander>
-            </Border>
-            <Border StrokeShape="RoundRectangle 8,8,8,8" Margin="{OnPlatform Default='8,0,8,8',WinUI='8,0,6,8',MacCatalyst='8,0,6,8'}" Stroke="#CAC4D0" StrokeThickness="{OnPlatform MacCatalyst=2,Default=1}" WidthRequest="{OnPlatform MacCatalyst=460,WinUI=340}">
-                <syncfusion:SfExpander AnimationDuration="200"  IsExpanded="False">
-                    <syncfusion:SfExpander.Header>
-                        <Grid RowDefinitions="48" ColumnDefinitions="35,*">
-                            <Label Text="&#xe702;" FontSize="16" Margin="14,2,2,2" FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}' VerticalOptions="Center" VerticalTextAlignment="Center"/>
-                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="Payment Details" FontSize="14" Grid.Column="1" VerticalOptions="Center"/>
-                        </Grid>
-                    </syncfusion:SfExpander.Header>
-                    <syncfusion:SfExpander.Content>
-                        <Grid Padding="18,8,18,18"  RowSpacing="6" RowDefinitions="20,20,20" ColumnDefinitions="*,*">
-                            <Grid.Resources>
-                                <Style TargetType="Label">
-                                    <Setter Property="FontFamily" Value="Roboto-Regular"/>
-                                </Style>
-                            </Grid.Resources>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Card Payment"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Third-Party coupons" Grid.Row="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Total Amount Paid" TextColor="{StaticResource Primary}" Grid.Row="2"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$31,200.00" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$5,000.00" Grid.Row="1" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$36,200.00" TextColor="{StaticResource Primary}" Grid.Row="2" Grid.Column="1"/>
-                        </Grid>
-                    </syncfusion:SfExpander.Content>
-                </syncfusion:SfExpander>
-            </Border>
-            <Border StrokeShape="RoundRectangle 8,8,8,8" Margin="{OnPlatform Default='8,0,8,8',WinUI='8,0,6,8',MacCatalyst='8,0,6,8'}" Stroke="#CAC4D0" StrokeThickness="{OnPlatform MacCatalyst=2,Default=1}" WidthRequest="{OnPlatform MacCatalyst=460,WinUI=340}">
-                <syncfusion:SfExpander AnimationDuration="200" IsExpanded="True">
-                    <syncfusion:SfExpander.Header>
-                        <Grid RowDefinitions="48" ColumnDefinitions="35,*">
-                            <Label Text="&#xe704;" FontSize="16" Margin="14,2,2,2" FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}' VerticalOptions="Center" VerticalTextAlignment="Center"/>
-                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular" FontSize="14" Text="Address" Grid.Column="1" VerticalOptions="Center"/>
-                        </Grid>
-                    </syncfusion:SfExpander.Header>
-                    <syncfusion:SfExpander.Content>
-                        <Grid Padding="18,8,18,18" Grid.Row="1" RowSpacing="1" RowDefinitions="Auto,Auto,Auto">
-                            <Grid.Resources>
-                                <Style TargetType="Label">
-                                    <Setter Property="FontFamily" Value="Roboto-Regular"/>
-                                </Style>
-                            </Grid.Resources>
-                            <Label CharacterSpacing="0.25"  FontSize="14" Text="Alex" FontAttributes="Bold"/>
-                            <Label CharacterSpacing="0.25"  FontSize="14" Text="No.8 Blossom St, Washington, DC 20019" Grid.Row="1"/>
-                            <Label CharacterSpacing="0.25"  FontSize="14" Text="(202) 547-3555" Grid.Row="2"/>
-                        </Grid>
-                    </syncfusion:SfExpander.Content>
-                </syncfusion:SfExpander>
-            </Border>
-        </StackLayout>
-    </ScrollView>
-</ContentPage.Content>
-{% endhighlight %}
-{% highlight c# hl_lines="62 63 64 65 66 67" %}
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        Title = "Invoice";
-
-        Content = new ScrollView
-        {
-            Content = new StackLayout
-            {
-                HorizontalOptions = LayoutOptions.Center,
-                Children =
-                {
-                    CreateInvoiceHeader(),
-                    CreateInvoiceDate(),
-                    CreateItems(),
-                    CreatePaymentDetails(),
-                    CreateAddress()
-                }
-            }
-        };
-    }
-
-    private SfExpander CreateExpander(bool expanded, string icon, string title, View content)
-    {
-        var headerGrid = new Grid
-        {
-            ColumnDefinitions =
-        {
-            new ColumnDefinition { Width = 35 },
-            new ColumnDefinition { Width = GridLength.Star }
-        },
-            HeightRequest = 48
-        };
-
-        headerGrid.Add(
-            new Label
-            {
-                Text = icon,
-                FontFamily = "AccordionFontIcons",
-                FontSize = 16,
-                Margin = new Thickness(14, 2),
-                VerticalTextAlignment = TextAlignment.Center
-            },
-            column: 0,
-            row: 0
-        );
-
-        headerGrid.Add(
-            new Label
-            {
-                Text = title,
-                FontFamily = "Roboto-Regular",
-                FontSize = 14,
-                VerticalOptions = LayoutOptions.Center
-            },
-            column: 1,
-            row: 0
-        );
-
-        return new SfExpander
-        {
-            IsExpanded = expanded,
-            Header = headerGrid,
-            Content = content
-        };
-    }
-
-    private View CreateInvoiceHeader()
-    {
-        return new Label
-        {
-            Text = "Invoice: #FRU037020142097",
-            FontAttributes = FontAttributes.Bold,
-            Margin = new Thickness(0, 0, 0, 5),
-            HorizontalOptions = LayoutOptions.Center,
-            VerticalOptions = LayoutOptions.Center
-        };
-    }
-
-    private View CreateInvoiceDate()
-    {
-        return CreateBorder(CreateExpander(true, "\ue703", "Invoice Date",
-                new Grid
-                {
-                    Padding = new Thickness(18, 8, 0, 18),
-                    Children =
-                    {
-                        new Label
-                        {
-                            Text = "11:03 AM, 15 January 2019",
-                            FontFamily = "Roboto-Regular",
-                            FontSize = 14
-                        }
-                    }
-                }
-            )
-        );
-    }
-
-    private View CreateItems()
-    {
-        var grid = new Grid
-        {
-            Padding = new Thickness(18, 8, 18, 18),
-            ColumnDefinitions = { new ColumnDefinition(), new ColumnDefinition() }
-        };
-
-        string[] items =
-        {
-            "2018 Subaru Outback",
-            "All-Weather Mats",
-            "Door Edge Guard Kit",
-            "Rear Bumper Cover",
-            "Wheel Locks",
-            "Gas Full Tank",
-            "Total Amount"
-        };
-
-        string[] prices =
-        {
-            "$35,705.00",
-            "$101.00",
-            "$162.00",
-            "$107.00",
-            "$81.00",
-            "$64.00",
-            "$36,220.00"
-        };
-
-        for (int i = 0; i < items.Length; i++)
-        {
-            grid.Add(new Label
-            {
-                Text = items[i],
-                FontSize = 14,
-                FontFamily = "Roboto-Regular",
-                TextColor = i == 6 ? Colors.Blue : Colors.Black
-            }, 0, i);
-
-            grid.Add(new Label
-            {
-                Text = prices[i],
-                FontSize = 14,
-                HorizontalOptions = LayoutOptions.End,
-                TextColor = i == 6 ? Colors.Blue : Colors.Black
-            }, 1, i);
-        }
-
-        return CreateBorder(
-            CreateExpander(false, "\ue701", "Item(s)", grid)
-        );
-    }
-
-    private View CreatePaymentDetails()
-    {
-        var grid = new Grid
-        {
-            Padding = new Thickness(18, 8, 18, 18),
-            ColumnDefinitions = { new ColumnDefinition(), new ColumnDefinition() },
-            RowDefinitions =
-            {
-                new RowDefinition(),
-                new RowDefinition(),
-                new RowDefinition()
-            }
-        };
-
-        grid.Add(new Label { Text = "Card Payment" }, 0, 0);
-        grid.Add(new Label { Text = "$31,200.00", HorizontalOptions = LayoutOptions.End }, 1, 0);
-
-        grid.Add(new Label { Text = "Third-Party coupons" }, 0, 1);
-        grid.Add(new Label { Text = "$5,000.00", HorizontalOptions = LayoutOptions.End }, 1, 1);
-
-        grid.Add(new Label
-        {
-            Text = "Total Amount Paid",
-            TextColor = Colors.Blue,
-            FontAttributes = FontAttributes.Bold
-        }, 0, 2);
-
-        grid.Add(new Label
-        {
-            Text = "$36,200.00",
-            TextColor = Colors.Blue,
-            HorizontalOptions = LayoutOptions.End
-        }, 1, 2);
-
-        return CreateBorder(
-            CreateExpander(false, "\ue702", "Payment Details", grid)
-        );
-    }
-
-    private View CreateAddress()
-    {
-        var grid = new Grid
-        {
-            Padding = new Thickness(18, 8, 18, 18),
-            RowDefinitions =
-            {
-                new RowDefinition(),
-                new RowDefinition(),
-                new RowDefinition()
-            }
-        };
-
-        grid.Add(new Label { Text = "Alex", FontAttributes = FontAttributes.Bold }, 0, 0);
-        grid.Add(new Label { Text = "No.8 Blossom St, Washington, DC 20019" }, 0, 1);
-        grid.Add(new Label { Text = "(202) 547-3555" }, 0, 2);
-
-        return CreateBorder(CreateExpander(true, "\ue704", "Address", grid));
-    }
-
-    private View CreateBorder(View content)
-    {
-        return new Border
-        {
-            Stroke = Color.FromArgb("#CAC4D0"),
-            StrokeThickness = DeviceInfo.Platform == DevicePlatform.MacCatalyst ? 2 : 1,
-            StrokeShape = new RoundRectangle { CornerRadius = 8 },
-            WidthRequest =
-                DeviceInfo.Platform == DevicePlatform.MacCatalyst ? 460 :
-                DeviceInfo.Platform == DevicePlatform.WinUI ? 340 : -1,
-            Margin = new Thickness(8, 0, 8, 8),
-            Content = content
-        };
-    }
-}
+{% highlight xaml hl_lines="11" %}
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Expander;assembly=Syncfusion.Maui.Expander"
+             x:Class="GettingStarted.MainPage">
+    <ContentPage.Content>
+        <ScrollView >
+            <StackLayout  HorizontalOptions="{OnPlatform MacCatalyst=Center,WinUI=Center}"  >
+                <Label Text="Invoice: #FRU037020142097"  Opacity="1.0" VerticalTextAlignment="Center" Margin="0,0,0,5" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+                <Border StrokeShape="RoundRectangle 8,8,8,8" Margin="{OnPlatform Default='8,0,8,8',WinUI='8,0,6,8',MacCatalyst='8,0,6,8'}" Stroke="#CAC4D0"  StrokeThickness="{OnPlatform MacCatalyst=2,Default=1}" WidthRequest="{OnPlatform MacCatalyst=460,WinUI=340}">
+                    <syncfusion:SfExpander AnimationDuration="200" IsExpanded="True" >
+                        <syncfusion:SfExpander.Header>
+                            <Grid >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="48"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="35"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="&#xe703;" FontSize="16" Margin="14,2,2,2"
+                                                   FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}'
+                                                   VerticalOptions="Center" VerticalTextAlignment="Center"/>
+                                <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="Invoice Date" FontSize="14" Grid.Column="1" VerticalOptions="CenterAndExpand"/>
+                            </Grid>
+                        </syncfusion:SfExpander.Header>
+                        <syncfusion:SfExpander.Content>
+                            <Grid Padding="18,8,0,18" >
+                                <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="11:03 AM, 15 January 2019" FontSize="14" VerticalOptions="CenterAndExpand"/>
+                            </Grid>
+                        </syncfusion:SfExpander.Content>
+                    </syncfusion:SfExpander>
+                </Border>
+                <Border StrokeShape="RoundRectangle 8,8,8,8" Margin="{OnPlatform Default='8,0,8,8',WinUI='8,0,6,8',MacCatalyst='8,0,6,8'}" Stroke="#CAC4D0"  StrokeThickness="{OnPlatform MacCatalyst=2,Default=1}" WidthRequest="{OnPlatform MacCatalyst=460,WinUI=340}">
+                    <syncfusion:SfExpander  AnimationDuration="200" IsExpanded="False">
+                        <syncfusion:SfExpander.Header>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="48"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="35"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="&#xe701;" FontSize="16" Margin="14,2,2,2"
+                                                   FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}'
+                                                   VerticalOptions="Center" VerticalTextAlignment="Center"/>
+                                <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="Item(s)" FontSize="14" Grid.Column="1" VerticalOptions="CenterAndExpand"/>
+                            </Grid>
+                        </syncfusion:SfExpander.Header>
+                        <syncfusion:SfExpander.Content>
+                            <Grid Padding="18,8,18,18">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="20"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label FontSize="14" CharacterSpacing="0.25"  Text="2018 Subaru Outback"/>
+                                <Label FontSize="14" CharacterSpacing="0.25"  Text="All-Weather Mats" Grid.Row="1"/>
+                                <Label FontSize="14" CharacterSpacing="0.25"  Text="Door Edge Guard Kit" Grid.Row="2"/>
+                                <Label FontSize="14" CharacterSpacing="0.25"  Text="Rear Bumper Cover" Grid.Row="3"/>
+                                <Label FontSize="14" CharacterSpacing="0.25"  Text="Wheel Locks" Grid.Row="4"/>
+                                <Label FontSize="14" CharacterSpacing="0.25"  Text="Gas Full Tank" Grid.Row="5"/>
+                                <Label FontSize="14" CharacterSpacing="0.25"  Text="Total Amount" TextColor="{StaticResource Primary}" Grid.Row="6"/>
+                                <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$35,705.00" Grid.Row="0" Grid.Column="1"/>
+                                <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$101.00" Grid.Row="1" Grid.Column="1"/>
+                                <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$162.00" Grid.Row="2" Grid.Column="1"/>
+                                <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$107.00" Grid.Row="3" Grid.Column="1"/>
+                                <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$81.00" Grid.Row="4" Grid.Column="1"/>
+                                <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$64.00" Grid.Row="5" Grid.Column="1"/>
+                                <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$36,220.00" TextColor="{StaticResource Primary}" Grid.Row="6" Grid.Column="1"/>
+                            </Grid>
+                        </syncfusion:SfExpander.Content>
+                    </syncfusion:SfExpander>
+                </Border>
+                <Border StrokeShape="RoundRectangle 8,8,8,8" Margin="{OnPlatform Default='8,0,8,8',WinUI='8,0,6,8',MacCatalyst='8,0,6,8'}" Stroke="#CAC4D0" StrokeThickness="{OnPlatform MacCatalyst=2,Default=1}" WidthRequest="{OnPlatform MacCatalyst=460,WinUI=340}">
+                    <syncfusion:SfExpander AnimationDuration="200"  IsExpanded="False">
+                        <syncfusion:SfExpander.Header>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="48"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="35"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="&#xe702;" FontSize="16" Margin="14,2,2,2"
+                                                   FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}'
+                                                   VerticalOptions="Center" VerticalTextAlignment="Center"/>
+                                <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="Payment Details" FontSize="14" Grid.Column="1" VerticalOptions="CenterAndExpand"/>
+                            </Grid>
+                        </syncfusion:SfExpander.Header>
+                        <syncfusion:SfExpander.Content>
+                            <Grid Padding="18,8,18,18"  RowSpacing="6" >
+                                <Grid.Resources>
+                                    <Style TargetType="Label">
+                                        <Setter Property="FontFamily" Value="Roboto-Regular"/>
+                                    </Style>
+                                </Grid.Resources>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="20"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label FontSize="14" CharacterSpacing="0.25"  Text="Card Payment"/>
+                                <Label FontSize="14" CharacterSpacing="0.25"  Text="Third-Party coupons" Grid.Row="1"/>
+                                <Label FontSize="14" CharacterSpacing="0.25"  Text="Total Amount Paid" TextColor="{StaticResource Primary}" Grid.Row="2"/>
+                                <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$31,200.00" Grid.Column="1"/>
+                                <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$5,000.00" Grid.Row="1" Grid.Column="1"/>
+                                <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$36,200.00" TextColor="{StaticResource Primary}" Grid.Row="2" Grid.Column="1"/>
+                            </Grid>
+                        </syncfusion:SfExpander.Content>
+                    </syncfusion:SfExpander>
+                </Border>
+                <Border StrokeShape="RoundRectangle 8,8,8,8" Margin="{OnPlatform Default='8,0,8,8',WinUI='8,0,6,8',MacCatalyst='8,0,6,8'}" Stroke="#CAC4D0" StrokeThickness="{OnPlatform MacCatalyst=2,Default=1}" WidthRequest="{OnPlatform MacCatalyst=460,WinUI=340}">
+                    <syncfusion:SfExpander AnimationDuration="200" IsExpanded="True">
+                        <syncfusion:SfExpander.Header>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="48"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="35"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="&#xe704;" FontSize="16" Margin="14,2,2,2"
+                                                   FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}'
+                                                   VerticalOptions="Center" VerticalTextAlignment="Center"/>
+                                <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular" FontSize="14" Text="Address" Grid.Column="1" VerticalOptions="CenterAndExpand"/>
+                            </Grid>
+                        </syncfusion:SfExpander.Header>
+                        <syncfusion:SfExpander.Content>
+                            <Grid Padding="18,8,18,18" Grid.Row="1" RowSpacing="1">
+                                <Grid.Resources>
+                                    <Style TargetType="Label">
+                                        <Setter Property="FontFamily" Value="Roboto-Regular"/>
+                                    </Style>
+                                </Grid.Resources>
+                                <Grid.RowDefinitions >
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Label CharacterSpacing="0.25"  FontSize="14" Text="Alex" FontAttributes="Bold"/>
+                                <Label CharacterSpacing="0.25"  FontSize="14" Text="No.8 Blossom St, Washington, DC 20019" Grid.Row="1"/>
+                                <Label CharacterSpacing="0.25"  FontSize="14" Text="(202) 547-3555" Grid.Row="2"/>
+                            </Grid>
+                        </syncfusion:SfExpander.Content>
+                    </syncfusion:SfExpander>
+                </Border>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
 {% endhighlight %}
 {% endtabs %}
 
@@ -617,7 +454,7 @@ Press **F5** to build and run the application. Once compiled, the Expander will 
 
 Here is the result of the previous codes,
 
-<img alt="Defining the Header and Content" src="Images/maui-expander-with-gettingstarted.png" width="404" /> 
+![.NET MAUI Expander](Images/maui-expander-with-gettingstarted.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started-with-.net-maui-expander).
 
@@ -626,345 +463,12 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/getting-started
 The [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html) allows you to customize the expanding and collapsing duration by using the [AnimationDuration](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_AnimationDuration) property. By default, the animation duration is `300 milliseconds`.
 
 {% tabs %}
-{% highlight xaml hl_lines="8 26 56 83" %}
-<ContentPage.Content>
-    <ScrollView>
-        <StackLayout  HorizontalOptions="{OnPlatform MacCatalyst=Center,WinUI=Center}" >
-            <Label Text="Invoice: #FRU037020142097"  Opacity="1.0" VerticalTextAlignment="Center" Margin="0,0,0,5" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center"/>
-            <Border StrokeShape="RoundRectangle 8,8,8,8" Margin="{OnPlatform Default='8,0,8,8',WinUI='8,0,6,8',MacCatalyst='8,0,6,8'}" Stroke="#CAC4D0"  StrokeThickness="{OnPlatform MacCatalyst=2,Default=1}" WidthRequest="{OnPlatform MacCatalyst=460,WinUI=340}">
-                <syncfusion:SfExpander x:Name="ExpanderDate"
-                                       IsExpanded="True"
-                                       AnimationDuration="250">
-                    <syncfusion:SfExpander.Header>
-                        <Grid RowDefinitions="48" ColumnDefinitions="35,*">
-                            <Label Text="&#xe703;" FontSize="16" Margin="14,2,2,2" FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}'
-                                       VerticalOptions="Center" VerticalTextAlignment="Center"/>
-                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="Invoice Date" FontSize="14" Grid.Column="1" VerticalOptions="Center"/>
-                        </Grid>
-                    </syncfusion:SfExpander.Header>
-                    <syncfusion:SfExpander.Content>
-                        <Grid Padding="18,8,0,18" >
-                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="11:03 AM, 15 January 2019" FontSize="14" VerticalOptions="Center"/>
-                        </Grid>
-                    </syncfusion:SfExpander.Content>
-                </syncfusion:SfExpander>
-            </Border>
-            <Border StrokeShape="RoundRectangle 8,8,8,8" Margin="{OnPlatform Default='8,0,8,8',WinUI='8,0,6,8',MacCatalyst='8,0,6,8'}" Stroke="#CAC4D0"  StrokeThickness="{OnPlatform MacCatalyst=2,Default=1}" WidthRequest="{OnPlatform MacCatalyst=460,WinUI=340}">
-                <syncfusion:SfExpander x:Name="ExpanderItems" 
-                                       IsExpanded="False"
-                                       AnimationDuration="250">
-                    <syncfusion:SfExpander.Header>
-                        <Grid RowDefinitions="48" ColumnDefinitions="35,*">
-                            <Label Text="&#xe701;" FontSize="16" Margin="14,2,2,2" FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}' VerticalOptions="Center" VerticalTextAlignment="Center"/>
-                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="Item(s)" FontSize="14" Grid.Column="1" VerticalOptions="Center"/>
-                        </Grid>
-                    </syncfusion:SfExpander.Header>
-                    <syncfusion:SfExpander.Content>
-                        <Grid Padding="18,8,18,18" RowDefinitions="20,20,20,20,20,20,20" ColumnDefinitions="*,*">
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="2018 Subaru Outback"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="All-Weather Mats" Grid.Row="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Door Edge Guard Kit" Grid.Row="2"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Rear Bumper Cover" Grid.Row="3"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Wheel Locks" Grid.Row="4"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Gas Full Tank" Grid.Row="5"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Total Amount" TextColor="{StaticResource Primary}" Grid.Row="6"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$35,705.00" Grid.Row="0" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$101.00" Grid.Row="1" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$162.00" Grid.Row="2" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$107.00" Grid.Row="3" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$81.00" Grid.Row="4" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$64.00" Grid.Row="5" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$36,220.00" TextColor="{StaticResource Primary}" Grid.Row="6" Grid.Column="1"/>
-                        </Grid>
-                    </syncfusion:SfExpander.Content>
-                </syncfusion:SfExpander>
-            </Border>
-            <Border StrokeShape="RoundRectangle 8,8,8,8" Margin="{OnPlatform Default='8,0,8,8',WinUI='8,0,6,8',MacCatalyst='8,0,6,8'}" Stroke="#CAC4D0" StrokeThickness="{OnPlatform MacCatalyst=2,Default=1}" WidthRequest="{OnPlatform MacCatalyst=460,WinUI=340}">
-                <syncfusion:SfExpander x:Name="ExpanderPayment" 
-                                       IsExpanded="False"
-                                       AnimationDuration="250">
-                    <syncfusion:SfExpander.Header>
-                        <Grid RowDefinitions="48" ColumnDefinitions="35,*">
-                            <Label Text="&#xe702;" FontSize="16" Margin="14,2,2,2" FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}' VerticalOptions="Center" VerticalTextAlignment="Center"/>
-                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="Payment Details" FontSize="14" Grid.Column="1" VerticalOptions="Center"/>
-                        </Grid>
-                    </syncfusion:SfExpander.Header>
-                    <syncfusion:SfExpander.Content>
-                        <Grid Padding="18,8,18,18"  RowSpacing="6" RowDefinitions="20,20,20" ColumnDefinitions="*,*">
-                            <Grid.Resources>
-                                <Style TargetType="Label">
-                                    <Setter Property="FontFamily" Value="Roboto-Regular"/>
-                                </Style>
-                            </Grid.Resources>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Card Payment"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Third-Party coupons" Grid.Row="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Total Amount Paid" TextColor="{StaticResource Primary}" Grid.Row="2"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$31,200.00" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$5,000.00" Grid.Row="1" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$36,200.00" TextColor="{StaticResource Primary}" Grid.Row="2" Grid.Column="1"/>
-                        </Grid>
-                    </syncfusion:SfExpander.Content>
-                </syncfusion:SfExpander>
-            </Border>
-            <Border StrokeShape="RoundRectangle 8,8,8,8" Margin="{OnPlatform Default='8,0,8,8',WinUI='8,0,6,8',MacCatalyst='8,0,6,8'}" Stroke="#CAC4D0" StrokeThickness="{OnPlatform MacCatalyst=2,Default=1}" WidthRequest="{OnPlatform MacCatalyst=460,WinUI=340}">
-                <syncfusion:SfExpander x:Name="ExpanderAddress" 
-                                       IsExpanded="True"
-                                       AnimationDuration="250">
-                    <syncfusion:SfExpander.Header>
-                        <Grid RowDefinitions="48" ColumnDefinitions="35,*">
-                            <Label Text="&#xe704;" FontSize="16" Margin="14,2,2,2" FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}' VerticalOptions="Center" VerticalTextAlignment="Center"/>
-                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular" FontSize="14" Text="Address" Grid.Column="1" VerticalOptions="Center"/>
-                        </Grid>
-                    </syncfusion:SfExpander.Header>
-                    <syncfusion:SfExpander.Content>
-                        <Grid Padding="18,8,18,18" Grid.Row="1" RowSpacing="1" RowDefinitions="Auto,Auto,Auto">
-                            <Grid.Resources>
-                                <Style TargetType="Label">
-                                    <Setter Property="FontFamily" Value="Roboto-Regular"/>
-                                </Style>
-                            </Grid.Resources>
-                            <Label CharacterSpacing="0.25"  FontSize="14" Text="Alex" FontAttributes="Bold"/>
-                            <Label CharacterSpacing="0.25"  FontSize="14" Text="No.8 Blossom St, Washington, DC 20019" Grid.Row="1"/>
-                            <Label CharacterSpacing="0.25"  FontSize="14" Text="(202) 547-3555" Grid.Row="2"/>
-                        </Grid>
-                    </syncfusion:SfExpander.Content>
-                </syncfusion:SfExpander>
-            </Border>
-        </StackLayout>
-    </ScrollView>
-</ContentPage.Content>
+{% highlight xaml hl_lines="2" %}
+    <syncfusion:SfExpander x:Name="expander" 
+                           AnimationDuration="250"/>
 {% endhighlight %}
-{% highlight c# hl_lines="65" %}
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        Title = "Invoice";
-
-        Content = new ScrollView
-        {
-            Content = new StackLayout
-            {
-                HorizontalOptions = LayoutOptions.Center,
-                Children =
-                {
-                    CreateInvoiceHeader(),
-                    CreateInvoiceDate(),
-                    CreateItems(),
-                    CreatePaymentDetails(),
-                    CreateAddress()
-                }
-            }
-        };
-    }
-
-    private SfExpander CreateExpander(bool expanded, string icon, string title, View content)
-    {
-        var headerGrid = new Grid
-        {
-            ColumnDefinitions =
-        {
-            new ColumnDefinition { Width = 35 },
-            new ColumnDefinition { Width = GridLength.Star }
-        },
-            HeightRequest = 48
-        };
-
-        headerGrid.Add(
-            new Label
-            {
-                Text = icon,
-                FontFamily = "AccordionFontIcons",
-                FontSize = 16,
-                Margin = new Thickness(14, 2),
-                VerticalTextAlignment = TextAlignment.Center
-            },
-            column: 0,
-            row: 0
-        );
-
-        headerGrid.Add(
-            new Label
-            {
-                Text = title,
-                FontFamily = "Roboto-Regular",
-                FontSize = 14,
-                VerticalOptions = LayoutOptions.Center
-            },
-            column: 1,
-            row: 0
-        );
-
-        return new SfExpander
-        {
-            IsExpanded = expanded,
-            AnimationDuration = 250,
-            Header = headerGrid,
-            Content = content
-        };
-    }
-
-    private View CreateInvoiceHeader()
-    {
-        return new Label
-        {
-            Text = "Invoice: #FRU037020142097",
-            FontAttributes = FontAttributes.Bold,
-            Margin = new Thickness(0, 0, 0, 5),
-            HorizontalOptions = LayoutOptions.Center,
-            VerticalOptions = LayoutOptions.Center
-        };
-    }
-
-    private View CreateInvoiceDate()
-    {
-        return CreateBorder(CreateExpander(true, "\ue703", "Invoice Date",
-                new Grid
-                {
-                    Padding = new Thickness(18, 8, 0, 18),
-                    Children =
-                    {
-                        new Label
-                        {
-                            Text = "11:03 AM, 15 January 2019",
-                            FontFamily = "Roboto-Regular",
-                            FontSize = 14
-                        }
-                    }
-                }
-            )
-        );
-    }
-
-    private View CreateItems()
-    {
-        var grid = new Grid
-        {
-            Padding = new Thickness(18, 8, 18, 18),
-            ColumnDefinitions = { new ColumnDefinition(), new ColumnDefinition() }
-        };
-
-        string[] items =
-        {
-            "2018 Subaru Outback",
-            "All-Weather Mats",
-            "Door Edge Guard Kit",
-            "Rear Bumper Cover",
-            "Wheel Locks",
-            "Gas Full Tank",
-            "Total Amount"
-        };
-
-        string[] prices =
-        {
-            "$35,705.00",
-            "$101.00",
-            "$162.00",
-            "$107.00",
-            "$81.00",
-            "$64.00",
-            "$36,220.00"
-        };
-
-        for (int i = 0; i < items.Length; i++)
-        {
-            grid.Add(new Label
-            {
-                Text = items[i],
-                FontSize = 14,
-                FontFamily = "Roboto-Regular",
-                TextColor = i == 6 ? Colors.Blue : Colors.Black
-            }, 0, i);
-
-            grid.Add(new Label
-            {
-                Text = prices[i],
-                FontSize = 14,
-                HorizontalOptions = LayoutOptions.End,
-                TextColor = i == 6 ? Colors.Blue : Colors.Black
-            }, 1, i);
-        }
-
-        return CreateBorder(
-            CreateExpander(false, "\ue701", "Item(s)", grid)
-        );
-    }
-
-    private View CreatePaymentDetails()
-    {
-        var grid = new Grid
-        {
-            Padding = new Thickness(18, 8, 18, 18),
-            ColumnDefinitions = { new ColumnDefinition(), new ColumnDefinition() },
-            RowDefinitions =
-            {
-                new RowDefinition(),
-                new RowDefinition(),
-                new RowDefinition()
-            }
-        };
-
-        grid.Add(new Label { Text = "Card Payment" }, 0, 0);
-        grid.Add(new Label { Text = "$31,200.00", HorizontalOptions = LayoutOptions.End }, 1, 0);
-
-        grid.Add(new Label { Text = "Third-Party coupons" }, 0, 1);
-        grid.Add(new Label { Text = "$5,000.00", HorizontalOptions = LayoutOptions.End }, 1, 1);
-
-        grid.Add(new Label
-        {
-            Text = "Total Amount Paid",
-            TextColor = Colors.Blue,
-            FontAttributes = FontAttributes.Bold
-        }, 0, 2);
-
-        grid.Add(new Label
-        {
-            Text = "$36,200.00",
-            TextColor = Colors.Blue,
-            HorizontalOptions = LayoutOptions.End
-        }, 1, 2);
-
-        return CreateBorder(
-            CreateExpander(false, "\ue702", "Payment Details", grid)
-        );
-    }
-
-    private View CreateAddress()
-    {
-        var grid = new Grid
-        {
-            Padding = new Thickness(18, 8, 18, 18),
-            RowDefinitions =
-            {
-                new RowDefinition(),
-                new RowDefinition(),
-                new RowDefinition()
-            }
-        };
-
-        grid.Add(new Label { Text = "Alex", FontAttributes = FontAttributes.Bold }, 0, 0);
-        grid.Add(new Label { Text = "No.8 Blossom St, Washington, DC 20019" }, 0, 1);
-        grid.Add(new Label { Text = "(202) 547-3555" }, 0, 2);
-
-        return CreateBorder(CreateExpander(true, "\ue704", "Address", grid));
-    }
-
-    private View CreateBorder(View content)
-    {
-        return new Border
-        {
-            Stroke = Color.FromArgb("#CAC4D0"),
-            StrokeThickness = DeviceInfo.Platform == DevicePlatform.MacCatalyst ? 2 : 1,
-            StrokeShape = new RoundRectangle { CornerRadius = 8 },
-            WidthRequest =
-                DeviceInfo.Platform == DevicePlatform.MacCatalyst ? 460 :
-                DeviceInfo.Platform == DevicePlatform.WinUI ? 340 : -1,
-            Margin = new Thickness(8, 0, 8, 8),
-            Content = content
-        };
-    }
-}
+{% highlight c# %}
+    expander.AnimationDuration = 250;
 {% endhighlight %}
 {% endtabs %}
 
@@ -973,344 +477,12 @@ public partial class MainPage : ContentPage
 The [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html) allows you to customize the rate of change of parameters over time or animation style by using the [AnimationEasing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_AnimationEasing) property. By default, the animation easing is `Linear`.
 
 {% tabs %}
-{% highlight xaml hl_lines="7 25 55 82" %}
-<ContentPage.Content>
-    <ScrollView>
-        <StackLayout  HorizontalOptions="{OnPlatform MacCatalyst=Center,WinUI=Center}" >
-            <Label Text="Invoice: #FRU037020142097"  Opacity="1.0" VerticalTextAlignment="Center" Margin="0,0,0,5" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center"/>
-            <Border StrokeShape="RoundRectangle 8,8,8,8" Margin="{OnPlatform Default='8,0,8,8',WinUI='8,0,6,8',MacCatalyst='8,0,6,8'}" Stroke="#CAC4D0"  StrokeThickness="{OnPlatform MacCatalyst=2,Default=1}" WidthRequest="{OnPlatform MacCatalyst=460,WinUI=340}">
-                <syncfusion:SfExpander x:Name="expander"
-                                       AnimationEasing="SinOut">
-                    <syncfusion:SfExpander.Header>
-                        <Grid RowDefinitions="48" ColumnDefinitions="35,*">
-                            <Label Text="&#xe703;" FontSize="16" Margin="14,2,2,2" FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}'
-                                       VerticalOptions="Center" VerticalTextAlignment="Center"/>
-                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="Invoice Date" FontSize="14" Grid.Column="1" VerticalOptions="Center"/>
-                        </Grid>
-                    </syncfusion:SfExpander.Header>
-                    <syncfusion:SfExpander.Content>
-                        <Grid Padding="18,8,0,18" >
-                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="11:03 AM, 15 January 2019" FontSize="14" VerticalOptions="Center"/>
-                        </Grid>
-                    </syncfusion:SfExpander.Content>
-                </syncfusion:SfExpander>
-            </Border>
-            <Border StrokeShape="RoundRectangle 8,8,8,8" Margin="{OnPlatform Default='8,0,8,8',WinUI='8,0,6,8',MacCatalyst='8,0,6,8'}" Stroke="#CAC4D0"  StrokeThickness="{OnPlatform MacCatalyst=2,Default=1}" WidthRequest="{OnPlatform MacCatalyst=460,WinUI=340}">
-                <syncfusion:SfExpander AnimationDuration="200" 
-                                       IsExpanded="False"
-                                       AnimationEasing="SinOut">
-                    <syncfusion:SfExpander.Header>
-                        <Grid RowDefinitions="48" ColumnDefinitions="35,*">
-                            <Label Text="&#xe701;" FontSize="16" Margin="14,2,2,2" FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}' VerticalOptions="Center" VerticalTextAlignment="Center"/>
-                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="Item(s)" FontSize="14" Grid.Column="1" VerticalOptions="Center"/>
-                        </Grid>
-                    </syncfusion:SfExpander.Header>
-                    <syncfusion:SfExpander.Content>
-                        <Grid Padding="18,8,18,18" RowDefinitions="20,20,20,20,20,20,20" ColumnDefinitions="*,*">
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="2018 Subaru Outback"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="All-Weather Mats" Grid.Row="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Door Edge Guard Kit" Grid.Row="2"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Rear Bumper Cover" Grid.Row="3"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Wheel Locks" Grid.Row="4"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Gas Full Tank" Grid.Row="5"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Total Amount" TextColor="{StaticResource Primary}" Grid.Row="6"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$35,705.00" Grid.Row="0" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$101.00" Grid.Row="1" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$162.00" Grid.Row="2" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$107.00" Grid.Row="3" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$81.00" Grid.Row="4" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$64.00" Grid.Row="5" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$36,220.00" TextColor="{StaticResource Primary}" Grid.Row="6" Grid.Column="1"/>
-                        </Grid>
-                    </syncfusion:SfExpander.Content>
-                </syncfusion:SfExpander>
-            </Border>
-            <Border StrokeShape="RoundRectangle 8,8,8,8" Margin="{OnPlatform Default='8,0,8,8',WinUI='8,0,6,8',MacCatalyst='8,0,6,8'}" Stroke="#CAC4D0" StrokeThickness="{OnPlatform MacCatalyst=2,Default=1}" WidthRequest="{OnPlatform MacCatalyst=460,WinUI=340}">
-                <syncfusion:SfExpander AnimationDuration="200" 
-                                       IsExpanded="False"
-                                       AnimationEasing="SinOut">
-                    <syncfusion:SfExpander.Header>
-                        <Grid RowDefinitions="48" ColumnDefinitions="35,*">
-                            <Label Text="&#xe702;" FontSize="16" Margin="14,2,2,2" FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}' VerticalOptions="Center" VerticalTextAlignment="Center"/>
-                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="Payment Details" FontSize="14" Grid.Column="1" VerticalOptions="Center"/>
-                        </Grid>
-                    </syncfusion:SfExpander.Header>
-                    <syncfusion:SfExpander.Content>
-                        <Grid Padding="18,8,18,18"  RowSpacing="6" RowDefinitions="20,20,20" ColumnDefinitions="*,*">
-                            <Grid.Resources>
-                                <Style TargetType="Label">
-                                    <Setter Property="FontFamily" Value="Roboto-Regular"/>
-                                </Style>
-                            </Grid.Resources>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Card Payment"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Third-Party coupons" Grid.Row="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Total Amount Paid" TextColor="{StaticResource Primary}" Grid.Row="2"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$31,200.00" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$5,000.00" Grid.Row="1" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$36,200.00" TextColor="{StaticResource Primary}" Grid.Row="2" Grid.Column="1"/>
-                        </Grid>
-                    </syncfusion:SfExpander.Content>
-                </syncfusion:SfExpander>
-            </Border>
-            <Border StrokeShape="RoundRectangle 8,8,8,8" Margin="{OnPlatform Default='8,0,8,8',WinUI='8,0,6,8',MacCatalyst='8,0,6,8'}" Stroke="#CAC4D0" StrokeThickness="{OnPlatform MacCatalyst=2,Default=1}" WidthRequest="{OnPlatform MacCatalyst=460,WinUI=340}">
-                <syncfusion:SfExpander AnimationDuration="200" 
-                                       IsExpanded="True"
-                                       AnimationEasing="SinOut">
-                    <syncfusion:SfExpander.Header>
-                        <Grid RowDefinitions="48" ColumnDefinitions="35,*">
-                            <Label Text="&#xe704;" FontSize="16" Margin="14,2,2,2" FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}' VerticalOptions="Center" VerticalTextAlignment="Center"/>
-                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular" FontSize="14" Text="Address" Grid.Column="1" VerticalOptions="Center"/>
-                        </Grid>
-                    </syncfusion:SfExpander.Header>
-                    <syncfusion:SfExpander.Content>
-                        <Grid Padding="18,8,18,18" Grid.Row="1" RowSpacing="1" RowDefinitions="Auto,Auto,Auto">
-                            <Grid.Resources>
-                                <Style TargetType="Label">
-                                    <Setter Property="FontFamily" Value="Roboto-Regular"/>
-                                </Style>
-                            </Grid.Resources>
-                            <Label CharacterSpacing="0.25"  FontSize="14" Text="Alex" FontAttributes="Bold"/>
-                            <Label CharacterSpacing="0.25"  FontSize="14" Text="No.8 Blossom St, Washington, DC 20019" Grid.Row="1"/>
-                            <Label CharacterSpacing="0.25"  FontSize="14" Text="(202) 547-3555" Grid.Row="2"/>
-                        </Grid>
-                    </syncfusion:SfExpander.Content>
-                </syncfusion:SfExpander>
-            </Border>
-        </StackLayout>
-    </ScrollView>
-</ContentPage.Content>    
+{% highlight xaml hl_lines="2" %}
+    <syncfusion:SfExpander x:Name="expander"
+                           AnimationEasing="SinOut"/>       
 {% endhighlight %}
-{% highlight c# hl_lines="65" %}
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        Title = "Invoice";
-
-        Content = new ScrollView
-        {
-            Content = new StackLayout
-            {
-                HorizontalOptions = LayoutOptions.Center,
-                Children =
-                {
-                    CreateInvoiceHeader(),
-                    CreateInvoiceDate(),
-                    CreateItems(),
-                    CreatePaymentDetails(),
-                    CreateAddress()
-                }
-            }
-        };
-    }
-
-    private SfExpander CreateExpander(bool expanded, string icon, string title, View content)
-    {
-        var headerGrid = new Grid
-        {
-            ColumnDefinitions =
-        {
-            new ColumnDefinition { Width = 35 },
-            new ColumnDefinition { Width = GridLength.Star }
-        },
-            HeightRequest = 48
-        };
-
-        headerGrid.Add(
-            new Label
-            {
-                Text = icon,
-                FontFamily = "AccordionFontIcons",
-                FontSize = 16,
-                Margin = new Thickness(14, 2),
-                VerticalTextAlignment = TextAlignment.Center
-            },
-            column: 0,
-            row: 0
-        );
-
-        headerGrid.Add(
-            new Label
-            {
-                Text = title,
-                FontFamily = "Roboto-Regular",
-                FontSize = 14,
-                VerticalOptions = LayoutOptions.Center
-            },
-            column: 1,
-            row: 0
-        );
-
-        return new SfExpander
-        {
-            IsExpanded = expanded,
-            AnimationEasing = ExpanderAnimationEasing.SinOut,
-            Header = headerGrid,
-            Content = content
-        };
-    }
-
-    private View CreateInvoiceHeader()
-    {
-        return new Label
-        {
-            Text = "Invoice: #FRU037020142097",
-            FontAttributes = FontAttributes.Bold,
-            Margin = new Thickness(0, 0, 0, 5),
-            HorizontalOptions = LayoutOptions.Center,
-            VerticalOptions = LayoutOptions.Center
-        };
-    }
-
-    private View CreateInvoiceDate()
-    {
-        return CreateBorder(CreateExpander(true, "\ue703", "Invoice Date",
-                new Grid
-                {
-                    Padding = new Thickness(18, 8, 0, 18),
-                    Children =
-                    {
-                        new Label
-                        {
-                            Text = "11:03 AM, 15 January 2019",
-                            FontFamily = "Roboto-Regular",
-                            FontSize = 14
-                        }
-                    }
-                }
-            )
-        );
-    }
-
-    private View CreateItems()
-    {
-        var grid = new Grid
-        {
-            Padding = new Thickness(18, 8, 18, 18),
-            ColumnDefinitions = { new ColumnDefinition(), new ColumnDefinition() }
-        };
-
-        string[] items =
-        {
-            "2018 Subaru Outback",
-            "All-Weather Mats",
-            "Door Edge Guard Kit",
-            "Rear Bumper Cover",
-            "Wheel Locks",
-            "Gas Full Tank",
-            "Total Amount"
-        };
-
-        string[] prices =
-        {
-            "$35,705.00",
-            "$101.00",
-            "$162.00",
-            "$107.00",
-            "$81.00",
-            "$64.00",
-            "$36,220.00"
-        };
-
-        for (int i = 0; i < items.Length; i++)
-        {
-            grid.Add(new Label
-            {
-                Text = items[i],
-                FontSize = 14,
-                FontFamily = "Roboto-Regular",
-                TextColor = i == 6 ? Colors.Blue : Colors.Black
-            }, 0, i);
-
-            grid.Add(new Label
-            {
-                Text = prices[i],
-                FontSize = 14,
-                HorizontalOptions = LayoutOptions.End,
-                TextColor = i == 6 ? Colors.Blue : Colors.Black
-            }, 1, i);
-        }
-
-        return CreateBorder(
-            CreateExpander(false, "\ue701", "Item(s)", grid)
-        );
-    }
-
-    private View CreatePaymentDetails()
-    {
-        var grid = new Grid
-        {
-            Padding = new Thickness(18, 8, 18, 18),
-            ColumnDefinitions = { new ColumnDefinition(), new ColumnDefinition() },
-            RowDefinitions =
-            {
-                new RowDefinition(),
-                new RowDefinition(),
-                new RowDefinition()
-            }
-        };
-
-        grid.Add(new Label { Text = "Card Payment" }, 0, 0);
-        grid.Add(new Label { Text = "$31,200.00", HorizontalOptions = LayoutOptions.End }, 1, 0);
-
-        grid.Add(new Label { Text = "Third-Party coupons" }, 0, 1);
-        grid.Add(new Label { Text = "$5,000.00", HorizontalOptions = LayoutOptions.End }, 1, 1);
-
-        grid.Add(new Label
-        {
-            Text = "Total Amount Paid",
-            TextColor = Colors.Blue,
-            FontAttributes = FontAttributes.Bold
-        }, 0, 2);
-
-        grid.Add(new Label
-        {
-            Text = "$36,200.00",
-            TextColor = Colors.Blue,
-            HorizontalOptions = LayoutOptions.End
-        }, 1, 2);
-
-        return CreateBorder(
-            CreateExpander(false, "\ue702", "Payment Details", grid)
-        );
-    }
-
-    private View CreateAddress()
-    {
-        var grid = new Grid
-        {
-            Padding = new Thickness(18, 8, 18, 18),
-            RowDefinitions =
-            {
-                new RowDefinition(),
-                new RowDefinition(),
-                new RowDefinition()
-            }
-        };
-
-        grid.Add(new Label { Text = "Alex", FontAttributes = FontAttributes.Bold }, 0, 0);
-        grid.Add(new Label { Text = "No.8 Blossom St, Washington, DC 20019" }, 0, 1);
-        grid.Add(new Label { Text = "(202) 547-3555" }, 0, 2);
-
-        return CreateBorder(CreateExpander(true, "\ue704", "Address", grid));
-    }
-
-    private View CreateBorder(View content)
-    {
-        return new Border
-        {
-            Stroke = Color.FromArgb("#CAC4D0"),
-            StrokeThickness = DeviceInfo.Platform == DevicePlatform.MacCatalyst ? 2 : 1,
-            StrokeShape = new RoundRectangle { CornerRadius = 8 },
-            WidthRequest =
-                DeviceInfo.Platform == DevicePlatform.MacCatalyst ? 460 :
-                DeviceInfo.Platform == DevicePlatform.WinUI ? 340 : -1,
-            Margin = new Thickness(8, 0, 8, 8),
-            Content = content
-        };
-    }
-}
+{% highlight c# %}
+    expander.AnimationEasing = ExpanderAnimationEasing.SinOut;
 {% endhighlight %}
 {% endtabs %}
 
@@ -1319,340 +491,12 @@ public partial class MainPage : ContentPage
 The [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html) allows you to programmatically expand and collapse by using the [IsExpanded](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_IsExpanded) property of the SfExpander. The user can control the expand and collapse interactions by handling the `Expanding` and `Collapsing` events.
 
 {% tabs %}
-{% highlight xaml hl_lines="7 24 53 79" %}
-<ContentPage.Content>
-    <ScrollView>
-        <StackLayout  HorizontalOptions="{OnPlatform MacCatalyst=Center,WinUI=Center}" >
-            <Label Text="Invoice: #FRU037020142097"  Opacity="1.0" VerticalTextAlignment="Center" Margin="0,0,0,5" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center"/>
-            <Border StrokeShape="RoundRectangle 8,8,8,8" Margin="{OnPlatform Default='8,0,8,8',WinUI='8,0,6,8',MacCatalyst='8,0,6,8'}" Stroke="#CAC4D0"  StrokeThickness="{OnPlatform MacCatalyst=2,Default=1}" WidthRequest="{OnPlatform MacCatalyst=460,WinUI=340}">
-                <syncfusion:SfExpander x:Name="expander"
-                                       IsExpanded="true">
-                    <syncfusion:SfExpander.Header>
-                        <Grid RowDefinitions="48" ColumnDefinitions="35,*">
-                            <Label Text="&#xe703;" FontSize="16" Margin="14,2,2,2" FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}'
-                                       VerticalOptions="Center" VerticalTextAlignment="Center"/>
-                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="Invoice Date" FontSize="14" Grid.Column="1" VerticalOptions="Center"/>
-                        </Grid>
-                    </syncfusion:SfExpander.Header>
-                    <syncfusion:SfExpander.Content>
-                        <Grid Padding="18,8,0,18" >
-                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="11:03 AM, 15 January 2019" FontSize="14" VerticalOptions="Center"/>
-                        </Grid>
-                    </syncfusion:SfExpander.Content>
-                </syncfusion:SfExpander>
-            </Border>
-            <Border StrokeShape="RoundRectangle 8,8,8,8" Margin="{OnPlatform Default='8,0,8,8',WinUI='8,0,6,8',MacCatalyst='8,0,6,8'}" Stroke="#CAC4D0"  StrokeThickness="{OnPlatform MacCatalyst=2,Default=1}" WidthRequest="{OnPlatform MacCatalyst=460,WinUI=340}">
-                <syncfusion:SfExpander  AnimationDuration="200" 
-                                        IsExpanded="False">
-                    <syncfusion:SfExpander.Header>
-                        <Grid RowDefinitions="48" ColumnDefinitions="35,*">
-                            <Label Text="&#xe701;" FontSize="16" Margin="14,2,2,2" FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}' VerticalOptions="Center" VerticalTextAlignment="Center"/>
-                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="Item(s)" FontSize="14" Grid.Column="1" VerticalOptions="Center"/>
-                        </Grid>
-                    </syncfusion:SfExpander.Header>
-                    <syncfusion:SfExpander.Content>
-                        <Grid Padding="18,8,18,18" RowDefinitions="20,20,20,20,20,20,20" ColumnDefinitions="*,*">
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="2018 Subaru Outback"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="All-Weather Mats" Grid.Row="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Door Edge Guard Kit" Grid.Row="2"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Rear Bumper Cover" Grid.Row="3"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Wheel Locks" Grid.Row="4"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Gas Full Tank" Grid.Row="5"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Total Amount" TextColor="{StaticResource Primary}" Grid.Row="6"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$35,705.00" Grid.Row="0" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$101.00" Grid.Row="1" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$162.00" Grid.Row="2" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$107.00" Grid.Row="3" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$81.00" Grid.Row="4" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$64.00" Grid.Row="5" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$36,220.00" TextColor="{StaticResource Primary}" Grid.Row="6" Grid.Column="1"/>
-                        </Grid>
-                    </syncfusion:SfExpander.Content>
-                </syncfusion:SfExpander>
-            </Border>
-            <Border StrokeShape="RoundRectangle 8,8,8,8" Margin="{OnPlatform Default='8,0,8,8',WinUI='8,0,6,8',MacCatalyst='8,0,6,8'}" Stroke="#CAC4D0" StrokeThickness="{OnPlatform MacCatalyst=2,Default=1}" WidthRequest="{OnPlatform MacCatalyst=460,WinUI=340}">
-                <syncfusion:SfExpander AnimationDuration="200" 
-                                       IsExpanded="False">
-                    <syncfusion:SfExpander.Header>
-                        <Grid RowDefinitions="48" ColumnDefinitions="35,*">
-                            <Label Text="&#xe702;" FontSize="16" Margin="14,2,2,2" FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}' VerticalOptions="Center" VerticalTextAlignment="Center"/>
-                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="Payment Details" FontSize="14" Grid.Column="1" VerticalOptions="Center"/>
-                        </Grid>
-                    </syncfusion:SfExpander.Header>
-                    <syncfusion:SfExpander.Content>
-                        <Grid Padding="18,8,18,18"  RowSpacing="6" RowDefinitions="20,20,20" ColumnDefinitions="*,*">
-                            <Grid.Resources>
-                                <Style TargetType="Label">
-                                    <Setter Property="FontFamily" Value="Roboto-Regular"/>
-                                </Style>
-                            </Grid.Resources>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Card Payment"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Third-Party coupons" Grid.Row="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Total Amount Paid" TextColor="{StaticResource Primary}" Grid.Row="2"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$31,200.00" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$5,000.00" Grid.Row="1" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$36,200.00" TextColor="{StaticResource Primary}" Grid.Row="2" Grid.Column="1"/>
-                        </Grid>
-                    </syncfusion:SfExpander.Content>
-                </syncfusion:SfExpander>
-            </Border>
-            <Border StrokeShape="RoundRectangle 8,8,8,8" Margin="{OnPlatform Default='8,0,8,8',WinUI='8,0,6,8',MacCatalyst='8,0,6,8'}" Stroke="#CAC4D0" StrokeThickness="{OnPlatform MacCatalyst=2,Default=1}" WidthRequest="{OnPlatform MacCatalyst=460,WinUI=340}">
-                <syncfusion:SfExpander AnimationDuration="200" 
-                                       IsExpanded="True">
-                    <syncfusion:SfExpander.Header>
-                        <Grid RowDefinitions="48" ColumnDefinitions="35,*">
-                            <Label Text="&#xe704;" FontSize="16" Margin="14,2,2,2" FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}' VerticalOptions="Center" VerticalTextAlignment="Center"/>
-                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular" FontSize="14" Text="Address" Grid.Column="1" VerticalOptions="Center"/>
-                        </Grid>
-                    </syncfusion:SfExpander.Header>
-                    <syncfusion:SfExpander.Content>
-                        <Grid Padding="18,8,18,18" Grid.Row="1" RowSpacing="1" RowDefinitions="Auto,Auto,Auto">
-                            <Grid.Resources>
-                                <Style TargetType="Label">
-                                    <Setter Property="FontFamily" Value="Roboto-Regular"/>
-                                </Style>
-                            </Grid.Resources>
-                            <Label CharacterSpacing="0.25"  FontSize="14" Text="Alex" FontAttributes="Bold"/>
-                            <Label CharacterSpacing="0.25"  FontSize="14" Text="No.8 Blossom St, Washington, DC 20019" Grid.Row="1"/>
-                            <Label CharacterSpacing="0.25"  FontSize="14" Text="(202) 547-3555" Grid.Row="2"/>
-                        </Grid>
-                    </syncfusion:SfExpander.Content>
-                </syncfusion:SfExpander>
-            </Border>
-        </StackLayout>
-    </ScrollView>
-</ContentPage.Content>       
+{% highlight xaml hl_lines="2" %}
+    <syncfusion:SfExpander x:Name="expander" 
+                           IsExpanded="True"/>        
 {% endhighlight %}
-{% highlight c# hl_lines="63" %}
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        Title = "Invoice";
-
-        Content = new ScrollView
-        {
-            Content = new StackLayout
-            {
-                HorizontalOptions = LayoutOptions.Center,
-                Children =
-                {
-                    CreateInvoiceHeader(),
-                    CreateInvoiceDate(),
-                    CreateItems(),
-                    CreatePaymentDetails(),
-                    CreateAddress()
-                }
-            }
-        };
-    }
-
-    private SfExpander CreateExpander(bool expanded, string icon, string title, View content)
-    {
-        var headerGrid = new Grid
-        {
-            ColumnDefinitions =
-        {
-            new ColumnDefinition { Width = 35 },
-            new ColumnDefinition { Width = GridLength.Star }
-        },
-            HeightRequest = 48
-        };
-
-        headerGrid.Add(
-            new Label
-            {
-                Text = icon,
-                FontFamily = "AccordionFontIcons",
-                FontSize = 16,
-                Margin = new Thickness(14, 2),
-                VerticalTextAlignment = TextAlignment.Center
-            },
-            column: 0,
-            row: 0
-        );
-
-        headerGrid.Add(
-            new Label
-            {
-                Text = title,
-                FontFamily = "Roboto-Regular",
-                FontSize = 14,
-                VerticalOptions = LayoutOptions.Center
-            },
-            column: 1,
-            row: 0
-        );
-
-        return new SfExpander
-        {
-            IsExpanded = expanded,
-            Header = headerGrid,
-            Content = content
-        };
-    }
-
-    private View CreateInvoiceHeader()
-    {
-        return new Label
-        {
-            Text = "Invoice: #FRU037020142097",
-            FontAttributes = FontAttributes.Bold,
-            Margin = new Thickness(0, 0, 0, 5),
-            HorizontalOptions = LayoutOptions.Center,
-            VerticalOptions = LayoutOptions.Center
-        };
-    }
-
-    private View CreateInvoiceDate()
-    {
-        return CreateBorder(CreateExpander(true, "\ue703", "Invoice Date",
-                new Grid
-                {
-                    Padding = new Thickness(18, 8, 0, 18),
-                    Children =
-                    {
-                        new Label
-                        {
-                            Text = "11:03 AM, 15 January 2019",
-                            FontFamily = "Roboto-Regular",
-                            FontSize = 14
-                        }
-                    }
-                }
-            )
-        );
-    }
-
-    private View CreateItems()
-    {
-        var grid = new Grid
-        {
-            Padding = new Thickness(18, 8, 18, 18),
-            ColumnDefinitions = { new ColumnDefinition(), new ColumnDefinition() }
-        };
-
-        string[] items =
-        {
-            "2018 Subaru Outback",
-            "All-Weather Mats",
-            "Door Edge Guard Kit",
-            "Rear Bumper Cover",
-            "Wheel Locks",
-            "Gas Full Tank",
-            "Total Amount"
-        };
-
-        string[] prices =
-        {
-            "$35,705.00",
-            "$101.00",
-            "$162.00",
-            "$107.00",
-            "$81.00",
-            "$64.00",
-            "$36,220.00"
-        };
-
-        for (int i = 0; i < items.Length; i++)
-        {
-            grid.Add(new Label
-            {
-                Text = items[i],
-                FontSize = 14,
-                FontFamily = "Roboto-Regular",
-                TextColor = i == 6 ? Colors.Blue : Colors.Black
-            }, 0, i);
-
-            grid.Add(new Label
-            {
-                Text = prices[i],
-                FontSize = 14,
-                HorizontalOptions = LayoutOptions.End,
-                TextColor = i == 6 ? Colors.Blue : Colors.Black
-            }, 1, i);
-        }
-
-        return CreateBorder(
-            CreateExpander(false, "\ue701", "Item(s)", grid)
-        );
-    }
-
-    private View CreatePaymentDetails()
-    {
-        var grid = new Grid
-        {
-            Padding = new Thickness(18, 8, 18, 18),
-            ColumnDefinitions = { new ColumnDefinition(), new ColumnDefinition() },
-            RowDefinitions =
-            {
-                new RowDefinition(),
-                new RowDefinition(),
-                new RowDefinition()
-            }
-        };
-
-        grid.Add(new Label { Text = "Card Payment" }, 0, 0);
-        grid.Add(new Label { Text = "$31,200.00", HorizontalOptions = LayoutOptions.End }, 1, 0);
-
-        grid.Add(new Label { Text = "Third-Party coupons" }, 0, 1);
-        grid.Add(new Label { Text = "$5,000.00", HorizontalOptions = LayoutOptions.End }, 1, 1);
-
-        grid.Add(new Label
-        {
-            Text = "Total Amount Paid",
-            TextColor = Colors.Blue,
-            FontAttributes = FontAttributes.Bold
-        }, 0, 2);
-
-        grid.Add(new Label
-        {
-            Text = "$36,200.00",
-            TextColor = Colors.Blue,
-            HorizontalOptions = LayoutOptions.End
-        }, 1, 2);
-
-        return CreateBorder(
-            CreateExpander(false, "\ue702", "Payment Details", grid)
-        );
-    }
-
-    private View CreateAddress()
-    {
-        var grid = new Grid
-        {
-            Padding = new Thickness(18, 8, 18, 18),
-            RowDefinitions =
-            {
-                new RowDefinition(),
-                new RowDefinition(),
-                new RowDefinition()
-            }
-        };
-
-        grid.Add(new Label { Text = "Alex", FontAttributes = FontAttributes.Bold }, 0, 0);
-        grid.Add(new Label { Text = "No.8 Blossom St, Washington, DC 20019" }, 0, 1);
-        grid.Add(new Label { Text = "(202) 547-3555" }, 0, 2);
-
-        return CreateBorder(CreateExpander(true, "\ue704", "Address", grid));
-    }
-
-    private View CreateBorder(View content)
-    {
-        return new Border
-        {
-            Stroke = Color.FromArgb("#CAC4D0"),
-            StrokeThickness = DeviceInfo.Platform == DevicePlatform.MacCatalyst ? 2 : 1,
-            StrokeShape = new RoundRectangle { CornerRadius = 8 },
-            WidthRequest =
-                DeviceInfo.Platform == DevicePlatform.MacCatalyst ? 460 :
-                DeviceInfo.Platform == DevicePlatform.WinUI ? 340 : -1,
-            Margin = new Thickness(8, 0, 8, 8),
-            Content = content
-        };
-    }
-}
+{% highlight c# %}
+    expander.IsExpanded = true;
 {% endhighlight %}
 {% endtabs %}
 

@@ -35,7 +35,8 @@ The following code snippet demonstrates how to apply the Liquid Glass Effect to 
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="11 12 14 75" %}
 <Grid>
     <Grid.Background>
-        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+        <LinearGradientBrush StartPoint="0,0"
+                             EndPoint="0,1">
             <GradientStop Color="#0F4C75" Offset="0.0"/>
             <GradientStop Color="#3282B8" Offset="0.5"/>
             <GradientStop Color="#1B262C" Offset="1.0"/>
@@ -269,7 +270,9 @@ var phoneIcon = new Label
     Text = "\ue700",
     FontSize = 16,
     Margin = new Thickness(0, 2, 2, 2),
-    FontFamily = DeviceInfo.Platform == DevicePlatform.Android ? "AccordionFontIcons.ttf#" : DeviceInfo.Platform == DevicePlatform.WinUI ? "AccordionFontIcons.ttf#AccordionFontIcons" : "AccordionFontIcons",
+    FontFamily = DeviceInfo.Platform == DevicePlatform.Android ? "AccordionFontIcons.ttf#" :
+                    DeviceInfo.Platform == DevicePlatform.WinUI ? "AccordionFontIcons.ttf#AccordionFontIcons" :
+                    "AccordionFontIcons",
     VerticalOptions = LayoutOptions.Center,
     VerticalTextAlignment = TextAlignment.Center
 };
