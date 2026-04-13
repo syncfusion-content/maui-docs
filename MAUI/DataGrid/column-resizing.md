@@ -16,16 +16,24 @@ N> Resizing considers `DataGridColumn.MinimumWidth` and `DataGridColumn.MaximumW
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid  x:Name="dataGrid"
-                        AllowResizingColumns="True"
-                        ItemsSource="{Binding Orders}" />
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel />
+</ContentPage.BindingContext>
+
+<syncfusion:SfDataGrid  x:Name = "dataGrid"
+                        AllowResizingColumns = "True"
+                        ItemsSource = "{Binding Orders}" />
 {% endhighlight %}
 {% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.AllowResizingColumns = true;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI DataGrid with column resizing.](Images\column-resizing\net-maui-datagrid-column-resizing.gif)
+<img alt="maui-datagrid-column-resizing" src="Images\column-resizing\net-maui-datagrid-column-resizing.gif" width="404" Height = "396"/>
 
 To hide a column interactively, set the `DataGridColumn.MinimumWidth` property to zero. Then, resize the column to a width less than zero.
 
@@ -49,7 +57,12 @@ To cancel resizing a specific column, use the `SfDataGrid.ColumnResizing` event.
 To prevent resizing a column using the `SfDataGrid.ColumnResizing` event and the `Index` value, refer to the following code example:
 
 {% highlight c# %}
-this.dataGrid.ColumnResizing += DataGrid_ColumnResizing;
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.AllowResizingColumns = true;
+dataGrid.ColumnResizing += DataGrid_ColumnResizing;
+this.Content = dataGrid;
 
 private void DataGrid_ColumnResizing(object? sender, Syncfusion.Maui.DataGrid.DataGridColumnResizingEventArgs e)
 {
@@ -62,7 +75,12 @@ private void DataGrid_ColumnResizing(object? sender, Syncfusion.Maui.DataGrid.Da
 To cancel resizing a column using the `SfDataGrid.ColumnResizing` event and the `NewValue` value, refer to the following code example:
 
 {% highlight c# %}
-this.dataGrid.ColumnResizing += DataGrid_ColumnResizing;
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.AllowResizingColumns = true;
+dataGrid.ColumnResizing += DataGrid_ColumnResizing;
+this.Content = dataGrid;
 
 private void DataGrid_ColumnResizing(object? sender, Syncfusion.Maui.DataGrid.DataGridColumnResizingEventArgs e)
 {
@@ -75,7 +93,12 @@ private void DataGrid_ColumnResizing(object? sender, Syncfusion.Maui.DataGrid.Da
 To cancel resizing a column using the `SfDataGrid.ColumnResizing` event and the [DataGridProgressState](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridProgressState.html) value, refer to the code example below:
 
 {% highlight c# %}
-this.dataGrid.ColumnResizing += DataGrid_ColumnResizing;
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.AllowResizingColumns = true;
+dataGrid.ColumnResizing += DataGrid_ColumnResizing;
+this.Content = dataGrid;
 
 private void DataGrid_ColumnResizing(object? sender, Syncfusion.Maui.DataGrid.DataGridColumnResizingEventArgs e)
 {
@@ -92,20 +115,29 @@ The SfDataGrid allows you to change the resizing indicator color using [SfDataGr
 
 {% tabs %}
 {% highlight xaml %}
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel />
+</ContentPage.BindingContext>
 
-<syncfusion:SfDataGrid  x:Name="dataGrid"
-                        AllowResizingColumns="True"
-                        ItemsSource="{Binding Orders}">
+<syncfusion:SfDataGrid  x:Name = "dataGrid"
+                        AllowResizingColumns = "True"
+                        ItemsSource = "{Binding Orders}">
             <syncfusion:SfDataGrid.DefaultStyle>
-                <syncfusion:DataGridStyle ColumnResizingIndicatorColor="Blue"/>
+                <syncfusion:DataGridStyle ColumnResizingIndicatorColor = "Blue"/>
             </syncfusion:SfDataGrid.DefaultStyle>
 </syncfusion:SfDataGrid>
 
 {% endhighlight %}
 {% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.AllowResizingColumns = true;
-dataGrid.DefaultStyle.ColumnResizingIndicatorColor = Colors.Blue;
+DataGridStyle dataGridStyle = new DataGridStyle();
+dataGridStyle.ColumnResizingIndicatorColor = Colors.Blue;
+dataGrid.DefaultStyle = dataGridStyle;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI DataGrid with column resizing indicator color.](Images\column-resizing\net-maui-datagrid-column-resizing-indicator-color.gif)
+<img alt="maui-datagrid-column-resizing-indicator-color" src="Images\column-resizing\net-maui-datagrid-column-resizing-indicator-color.gif" width="404" Height = "396"/>
