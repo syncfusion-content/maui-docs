@@ -240,11 +240,11 @@ N> When the [SortingGestureType](https://help.syncfusion.com/cr/maui/Syncfusion.
 
 ## Selection behavior
 
-You can control selection behavior for mouse actions using the `AllowSelectionOnPress` and `AllowSelectionOnSecondaryTap` properties on `SfDataGrid`.
+You can control selection behavior for mouse actions using the [SfDataGrid.AllowSelectionOnPress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowSelectionOnPress) and [SfDataGrid.AllowSelectionOnSecondaryTap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowSelectionOnSecondaryTap) properties on `SfDataGrid`.
 
 ### Enable selection on mouse-down
 
-Enable selecting rows or cells immediately when the primary mouse button is pressed by setting `AllowSelectionOnPress` to `True`. This gives immediate selection on mouse-down instead of waiting for mouse-up.
+Enable selecting rows or cells immediately when the primary mouse button is pressed by setting [SfDataGrid.AllowSelectionOnPress](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowSelectionOnPress) to `True`. This gives immediate selection on mouse-down instead of waiting for mouse-up.
 
 {% tabs %}
 {% highlight xaml %}
@@ -263,7 +263,7 @@ dataGrid.AllowSelectionOnPress = true;
 
 ### Disable selection on right-click
 
-To disable selection on right-click, set `AllowSelectionOnSecondaryTap` to `False`. This allows you to interact on right-press without changing the current selection.
+To disable selection on right-click, set [SfDataGrid.AllowSelectionOnSecondaryTap](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowSelectionOnSecondaryTap) to `False`. This allows you to interact on right-press without changing the current selection.
 
 {% tabs %}
 {% highlight xaml %}

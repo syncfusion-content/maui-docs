@@ -1133,7 +1133,7 @@ Similar to the parent DataGrid, you can also customize the cells of the DetailsV
 ## Exporting merged cells
 
 The `SfDataGrid` supports exporting merged cells when exporting to an Excel worksheet.
-To enable merged‑cell exporting, set the [ExportMergedCells]() property to true in the `DataGridExcelExportingOption` before calling `ExportToExcel`.
+To enable merged‑cell exporting, set the [ExportMergedCells](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Exporting.DataGridExcelExportingOption.html#Syncfusion_Maui_DataGrid_Exporting_DataGridExcelExportingOption_ExportMergedCells) property to true in the `DataGridExcelExportingOption` before calling `ExportToExcel`.
 
 {% tabs %}
 {% highlight c# %}
