@@ -19,46 +19,38 @@ To indicate that a pull-to-refresh operation is in progress, set the [SfDataGrid
 To enable and perform the pull-to-refresh operation, refer to the following code example:
 
 {% tabs %}
-
 {% highlight Xaml %}
-
-<syncfusion:SfDataGrid x:Name="dataGrid"
+<syncfusion:SfDataGrid x:Name="DataGrid"
+                       ItemsSource="{Binding Orders}"
                        AllowPullToRefresh="True"
-                       PullToRefreshCommand="{Binding RefreshCommand}"
-                       ItemsSource="{Binding OrdersInfo}">
-
+                       PullToRefreshCommand="{Binding RefreshCommand}">
+</syncfusion:SfDataGrid>
 {% endhighlight %}
-
 {% highlight c# %}
-
-dataGrid.AllowPullToRefresh = true;
-
-Command RefreshCommand = new Command(ExecutePullToRefreshCommand);
-dataGrid.PullToRefreshCommand = RefreshCommand;
- 
-private async void ExecutePullToRefreshCommand()
+public partial class MainPage : ContentPage
 {
-    this.dataGrid.IsBusy = true;
-    await Task.Delay(new TimeSpan(0, 0, 5));
-    viewModel.ItemsSourceRefresh();
-    this.dataGrid.IsBusy = false;
-}
+    SfDataGrid dataGrid;
+    OrderInfoViewModel viewModel;
 
-//ViewModel.cs
-public void ItemsSourceRefresh()
-{
-    int count = random.Next (1, 10);
-    for (int i = 1; i <= count; i++) 
+    public MainPage()
     {
-        this.OrdersInfo!.Insert(0, new OrderInfo()
-        {
-            OrderID = i,
-            CustomerID = this.customerID[this.random.Next(15)],
-            EmployeeID = this.random.Next(1700, 1800),
-        });
-    }        
-}
+        InitializeComponent();
+        dataGrid = new SfDataGrid();
+        viewModel = new OrderInfoViewModel();
+        dataGrid.ItemsSource = viewModel.Orders;
+        dataGrid.AllowPullToRefresh = true;
+        dataGrid.PullToRefreshCommand = new Command(ExecutePullToRefreshCommand);
+        this.Content = dataGrid;
+    }
 
+    private async void ExecutePullToRefreshCommand()
+    {
+        dataGrid.IsBusy = true;
+        await Task.Delay(new TimeSpan(0, 0, 5));
+        viewModel.ItemsSourceRefresh();
+        dataGrid.IsBusy = false;
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -71,13 +63,40 @@ To customize the progress view animation, adjust the [SfDataGrid.TransitionType]
 The following code snippet demonstrates how to change the transition type to `Push`. In this mode, only the scrollable view moves, while the header remains fixed:
 
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
-
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                       TransitionType="Push"
+{% highlight Xaml %}
+<syncfusion:SfDataGrid x:Name="DataGrid"
+                       ItemsSource="{Binding Orders}"
                        AllowPullToRefresh="True"
-                       ItemsSource="{Binding OrdersInfo}">
+                       TransitionType="Push"
+                       PullToRefreshCommand="{Binding RefreshCommand}">
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+public partial class MainPage : ContentPage
+{
+    SfDataGrid dataGrid;
+    OrderInfoViewModel viewModel;
 
+    public MainPage()
+    {
+        InitializeComponent();
+        dataGrid = new SfDataGrid();
+        viewModel = new OrderInfoViewModel();
+        dataGrid.ItemsSource = viewModel.Orders;
+        dataGrid.AllowPullToRefresh = true;
+        dataGrid.TransitionType = Syncfusion.Maui.PullToRefresh.PullToRefreshTransitionType.Push;
+        dataGrid.PullToRefreshCommand = new Command(ExecutePullToRefreshCommand);
+        this.Content = dataGrid;
+    }
+
+    private async void ExecutePullToRefreshCommand()
+    {
+        dataGrid.IsBusy = true;
+        await Task.Delay(new TimeSpan(0, 0, 5));
+        viewModel.ItemsSourceRefresh();
+        dataGrid.IsBusy = false;
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -89,27 +108,45 @@ You can customize various properties of [SfPullToRefresh](https://help.syncfusio
 
 {% tabs %}
 {% highlight c# %}
-
-public MainPage()
+public partial class MainPage : ContentPage
 {
-    InitializeComponent();
-    dataGrid.AllowPullToRefresh = true;
-    dataGrid.DataGridLoaded += DataGrid_DataGridLoaded;
-}
+    SfDataGrid dataGrid;
+    OrderInfoViewModel viewModel;
 
-private void DataGrid_DataGridLoaded(object? sender, EventArgs e)
-{
-    SfPullToRefresh refreshView = dataGrid.Children.OfType().First();
-    if (refreshView != null)
+    public MainPage()
     {
-        refreshView.ProgressColor = Color.FromArgb("ffb703");
-        refreshView.ProgressBackground = Color.FromArgb("023047");
-        refreshView.ProgressThickness = 4;
-        refreshView.RefreshViewThreshold = 10;
-        refreshView.PullingThreshold = 120;
+        InitializeComponent();
+        dataGrid = new SfDataGrid();
+        viewModel = new OrderInfoViewModel();
+        dataGrid.ItemsSource = viewModel.Orders;
+        dataGrid.AllowPullToRefresh = true;
+        dataGrid.TransitionType = Syncfusion.Maui.PullToRefresh.PullToRefreshTransitionType.Push;
+        dataGrid.PullToRefreshCommand = new Command(ExecutePullToRefreshCommand);
+        dataGrid.DataGridLoaded += DataGrid_DataGridLoaded;
+        this.Content = dataGrid;
+    }
+
+    private async void ExecutePullToRefreshCommand()
+    {
+        dataGrid.IsBusy = true;
+        await Task.Delay(new TimeSpan(0, 0, 5));
+        viewModel.ItemsSourceRefresh();
+        dataGrid.IsBusy = false;
+    }
+
+    private void DataGrid_DataGridLoaded(object? sender, EventArgs e)
+    {
+        SfPullToRefresh refreshView = DataGrid.Children.OfType<SfPullToRefresh>().First();
+        if (refreshView != null)
+        {
+            refreshView.ProgressColor = Color.FromArgb("#e76f51");       
+            refreshView.ProgressBackground = Color.FromArgb("#219ebc");  
+            refreshView.ProgressThickness = 4;
+            refreshView.RefreshViewThreshold = 10;
+            refreshView.PullingThreshold = 120;
+        }
     }
 }
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -150,26 +187,22 @@ This is how the final output will look like when hosting a DataGrid control as p
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            x:Class="PullToRefreshTemplate.MainPage"
-            xmlns:sfgrid="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
-            xmlns:pulltoRefresh="clr-namespace:Syncfusion.Maui.PullToRefresh;assembly=Syncfusion.Maui.PullToRefresh"
-            xmlns:local="clr-namespace:PullToRefreshTemplate">
-
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DataGridUGDemo"
+             xmlns:sfgrid="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
+             xmlns:pulltoRefresh="clr-namespace:Syncfusion.Maui.PullToRefresh;assembly=Syncfusion.Maui.PullToRefresh"
+             x:Class="DataGridUGDemo.MainPage">
     <ContentPage.Behaviors>
         <local:PullToRefreshTemplateBehavior />
     </ContentPage.Behaviors>
-
     <ContentPage.Content>
         <Grid>
-            <pulltoRefresh:SfPullToRefresh x:Name="pullToRefresh"
-                                        TransitionMode="SlideOnTop">
-
+            <pulltoRefresh:SfPullToRefresh x:Name="PullToRefresh"
+                                           TransitionMode="SlideOnTop">
                 <pulltoRefresh:SfPullToRefresh.PullableContent>
-                    <sfgrid:SfDataGrid x:Name="dataGrid"
-                                    ItemsSource="{Binding OrderInfoCollection}">
+                    <sfgrid:SfDataGrid x:Name="DataGrid"
+                                       ItemsSource="{Binding Orders}">
                     </sfgrid:SfDataGrid>
                 </pulltoRefresh:SfPullToRefresh.PullableContent>
             </pulltoRefresh:SfPullToRefresh>
@@ -179,40 +212,35 @@ This is how the final output will look like when hosting a DataGrid control as p
 
 {% endhighlight %}
 {% highlight c# tabtitle="PullToRefreshTemplateBehavior.cs" %}
-
 using Syncfusion.Maui.PullToRefresh;
 
-namespace PullToRefreshTemplate
+public class PullToRefreshTemplateBehavior : Behavior<ContentPage>
 {
-    public class PullToRefreshTemplateBehavior : Behavior<ContentPage>
+    private OrderInfoViewModel? viewModel;
+    private Syncfusion.Maui.PullToRefresh.SfPullToRefresh? pullToRefresh;
+    protected override void OnAttachedTo(ContentPage bindable)
     {
-        private OrderInfoRepository? viewModel;
-        private Syncfusion.Maui.PullToRefresh.SfPullToRefresh? pullToRefresh;
-        protected override void OnAttachedTo(ContentPage bindable)
-        {
-            this.viewModel = new OrderInfoRepository();
-            bindable.BindingContext = this.viewModel;
-            this.pullToRefresh = bindable.FindByName<Syncfusion.Maui.PullToRefresh.SfPullToRefresh>("pullToRefresh");
-            this.pullToRefresh.Refreshing += this.PullToRefresh_Refreshing;
-            base.OnAttachedTo(bindable);
-        }
+        this.viewModel = new OrderInfoViewModel();
+        bindable.BindingContext = this.viewModel;
+        this.pullToRefresh = bindable.FindByName<Syncfusion.Maui.PullToRefresh.SfPullToRefresh>("PullToRefresh");
+        this.pullToRefresh.Refreshing += this.PullToRefresh_Refreshing;
+        base.OnAttachedTo(bindable);
+    }
 
-        private async void PullToRefresh_Refreshing(object? sender, EventArgs e)
-        {
-            this.pullToRefresh!.IsRefreshing = true;
-            await Task.Delay(new TimeSpan(0, 0, 3));
-            this.viewModel!.ItemsSourceRefresh();
-            this.pullToRefresh.IsRefreshing = false;
-        }
+    private async void PullToRefresh_Refreshing(object? sender, EventArgs e)
+    {
+        this.pullToRefresh!.IsRefreshing = true;
+        await Task.Delay(new TimeSpan(0, 0, 3));
+        this.viewModel!.ItemsSourceRefresh();
+        this.pullToRefresh.IsRefreshing = false;
+    }
 
-        protected override void OnDetachingFrom(ContentPage bindable)
-        {
-            this.pullToRefresh!.Refreshing -= this.PullToRefresh_Refreshing;
-            base.OnDetachingFrom(bindable);
-        }
+    protected override void OnDetachingFrom(ContentPage bindable)
+    {
+        this.pullToRefresh!.Refreshing -= this.PullToRefresh_Refreshing;
+        base.OnDetachingFrom(bindable);
     }
 }
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -227,16 +255,14 @@ The default transition is `SlideOnTop` that draws the RefreshView on top of the 
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
-
-<pulltoRefresh:SfPullToRefresh x:Name="pullToRefresh"
-                            TransitionMode="SlideOnTop">
+<pulltoRefresh:SfPullToRefresh x:Name="PullToRefresh"
+                               TransitionMode="SlideOnTop">
     <pulltoRefresh:SfPullToRefresh.PullableContent>
-        <sfgrid:SfDataGrid x:Name="dataGrid"
-                            ItemsSource="{Binding OrderInfoCollection}">
+        <sfgrid:SfDataGrid x:Name="DataGrid"
+                           ItemsSource="{Binding Orders}">
         </sfgrid:SfDataGrid>
     </pulltoRefresh:SfPullToRefresh.PullableContent>
 </pulltoRefresh:SfPullToRefresh>
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -245,11 +271,11 @@ The following code example shows how to set the `TransitionMode` as `Push` to Sf
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" hl_lines="2" %}
 
-<pulltoRefresh:SfPullToRefresh x:Name="pullToRefresh"
+<pulltoRefresh:SfPullToRefresh x:Name="PullToRefresh"
                             TransitionMode="Push">
     <pulltoRefresh:SfPullToRefresh.PullableContent>
-        <sfgrid:SfDataGrid x:Name="dataGrid"
-                            ItemsSource="{Binding OrderInfoCollection}">
+        <sfgrid:SfDataGrid x:Name="DataGrid"
+                            ItemsSource="{Binding Orders}">
         </sfgrid:SfDataGrid>
     </pulltoRefresh:SfPullToRefresh.PullableContent>
 </pulltoRefresh:SfPullToRefresh>
