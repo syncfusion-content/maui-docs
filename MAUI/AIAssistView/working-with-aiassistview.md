@@ -271,7 +271,8 @@ N> **Interaction**: On desktop (Windows, macOS), hover over a request to reveal 
 
 ![Edit Option in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-editoption.gif)
 
-## EditorView template
+## Editor
+### EditorView template
 
 The `SfAIAssistView` control allows you to fully customize the editor's appearance by using the [EditorViewTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_EditorViewTemplate) property. This property lets you define a custom layout and style for the editor.
 
@@ -335,6 +336,208 @@ public partial class MainPage : ContentPage
 
 ![EditorView Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-editorviewtemplate.png)
 
+### Editor customization
+The `SfAIAssistView` allows users to customize the editor’s visual surface by accessing the [RequestEditor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_RequestEditor) only in the code behind C#.
+
+{% tabs %}
+{% highlight c# hl_lines="9" %}
+
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+            InitializeComponent();
+            sfAIAssistView = new SfAIAssistView();
+            sfAIAssistView.RequestEditor.PlaceholderColor = Colors.Red;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+<img src="Images/working-with-aiassistview/maui-aiassitview-Editor-customization.png" width="444"/>
+
+### Accessing the editor in AssistView
+The `SfAIAssistView` allows you to access the editor by using [RequestEditorView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.RequestEditorView.html), which helps you to customize the editor’s visual elements and overall appearance wherever it is used.
+
+## Attachment Preview in EditorView
+
+The `SfAIAssistView` allows you to add files and images as attachments in the editor using [Attachments](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_Attachments) property. This feature lets you show the preview for attachments added in the editor. `Attachments` are added as [AssistAttachment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistAttachment.html) which has the following members:
+
+* [FileName](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistAttachment.html#Syncfusion_Maui_AIAssistView_AssistAttachment_FileName) : Displays the name of the file.
+* [FileSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistAttachment.html#Syncfusion_Maui_AIAssistView_AssistAttachment_FileSize) : Displays the size of the file.
+* [FilePath](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistAttachment.html#Syncfusion_Maui_AIAssistView_AssistAttachment_FilePath) : Displays the local path of the file.
+* [FileExtension](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistAttachment.html#Syncfusion_Maui_AIAssistView_AssistAttachment_FileExtension) : Displays the type of the file using the extension.
+* [FileContent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistAttachment.html#Syncfusion_Maui_AIAssistView_AssistAttachment_FileContent) : Displays the content of the file.
+* [FilePreviewIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.AssistAttachment.html#Syncfusion_Maui_AIAssistView_AssistAttachment_FilePreviewIcon) : Displays the preview icon for the file.
+
+{% tabs %}
+{% highlight xaml hl_lines="3" %}
+
+<ContentPage.Content>
+      <syncfusion:SfAIAssistView x:Name = "sfAIAssistView"
+                                 Attachments = "{Binding Attachments}">
+      </syncfusion:SfSfAIAssistView>
+</ContentPage.Content>
+
+{% endhighlight %}
+{% highlight c# tabtitle="ViewModel.cs" %}
+
+using Syncfusion.Maui.AIAssistView;
+
+internal class ViewModel : INotifyPropertyChanged
+{
+    private ObservableCollection<IAttachment>? attachments;
+
+    public ViewModel()
+    {
+        Attachments = new ObservableCollection<IAttachment>();
+        UploadCommand = new Command(async () => await UploadFilesAsync());
+    }
+
+    public ObservableCollection<IAttachment>? Attachments
+    {
+        get => attachments;
+        set
+        {
+            if (attachments != value)
+            {
+                attachments = value;
+            }
+        }
+    }
+
+    public ICommand UploadCommand { get; }
+
+    private async Task UploadFilesAsync()
+    {
+        var results = await FilePicker.Default.PickMultipleAsync();
+        if (results == null) return;
+
+        foreach (var file in results)
+        {
+            Stream stream = await file.OpenReadAsync();
+
+            long size;
+            if (stream.CanSeek)
+            {
+                size = stream.Length;
+            }
+            else
+            {
+                using var ms = new MemoryStream();
+                await stream.CopyToAsync(ms);
+                size = ms.Length;
+                stream.Dispose();
+                stream = new MemoryStream(ms.ToArray());
+            }
+
+            Attachments?.Add(new AssistAttachment
+            {
+                FileName = file.FileName,
+                FileSize = size,
+                FilePath = file.FullPath ?? string.Empty,
+                FileExtension = Path.GetExtension(file.FileName) ?? string.Empty,
+                FileContent = stream,
+            });
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Preview support in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-preview.gif)
+
+### Max Attachment Count
+
+The `SfAIAssistView` control allows you to control the number of attachments using the [MaxAttachmentCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_MaxAttachmentCount) property. This feature allows us to restrict the number of attachments that can be added to the `Attachments`. The default value is 10.
+
+{% tabs %}
+{% highlight xaml hl_lines="4" %}
+
+<ContentPage.Content>
+      <syncfusion:SfAIAssistView x:Name = "sfAIAssistView"
+                                 Attachments = "{Binding Attachments}"
+                                 MaxAttachmentCount = 8>                 
+      </syncfusion:SfSfAIAssistView>
+</ContentPage.Content>
+
+{% endhighlight %}
+{% highlight c# hl_lines="11" %}
+
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    SfAIAssistView sfAIAssistView;
+    public MainPage()
+    {
+        InitializeComponent();
+        sfAIAssistView = new SfAIAssistView();
+        sfAIAssistView.Attachment = viewModel.Attachments;
+        sfAIAssistView.MaxAttachmentCount = 8;
+        this.Content = sfAIAssistView;
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Attachment Item Template
+
+The `SfAIAssistView` control allows you to customize the preview for the attachments by using the [AttachmentItemTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_AttachmentItemTemplate) property. This property lets you define a custom layout for the attachment preview UI.
+
+{% tabs %}
+{% highlight xaml hl_lines="13" %}
+
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <DataTemplate x:Key = "attachmentItemTemplate">
+            <Grid>
+                ...
+            </Grid>
+        </DataTemplate>
+    </ResourceDictionary>
+</ContentPage.Resources>
+<ContentPage.Content>
+      <syncfusion:SfAIAssistView x:Name = "sfAIAssistView"
+                                 Attachments = "{Binding Attachments}"
+                                 AttachmentItemTemplate = "{StaticResource attachmentItemTemplate}">
+      </syncfusion:SfSfAIAssistView>
+</ContentPage.Content>
+
+{% endhighlight %}
+{% highlight c# hl_lines="11" %}
+
+using Syncfusion.Maui.AIAssistView;
+
+public partial class MainPage : ContentPage
+{
+    SfAIAssistView sfAIAssistView;
+    public MainPage()
+    {
+        InitializeComponent();
+        sfAIAssistView = new SfAIAssistView();
+        SfAIAssistView.Attachments = viewModel.Attachments;
+        sfAIAssistView.AttachmentItemTemplate = CreateAttachmentItemTemplate();
+        this.Content = sfAIAssistView;
+    }
+
+    private DataTemplate CreateAttachmentItemTemplate()
+    {
+        return new DataTemplate(() =>
+        {
+            ...
+        });
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+ 
 ## Action buttons in the editor
 
 The `SfAIAssistView` can display a quick action icon inside the editor. To enable the action button, set the [ShowActionButtons](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ShowActionButtons) property to `true`.
@@ -409,14 +612,14 @@ public partial class MainPage : ContentPage
         {
             new ActionButton
             {
-                BindingContext = this.viewModel;
+                BindingContext = this.viewModel,
                 Text = "Upload images",
                 Icon = ImageSource.FromFile("image.png"),
                 Command = this.viewModel.UploadCommand
             },
             new ActionButton
             {
-                BindingContext = this.viewModel;
+                BindingContext = this.viewModel,
                 Text = "Search in web",
                 Icon = ImageSource.FromFile("web.png"),
                 Command = this.viewModel.SearchCommand
@@ -431,6 +634,71 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![Action Buttons in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-actionbuttons.gif)
+
+### Action button customization
+
+The editor action button and its popup are customizable beyond the `ActionButtons` collection:
+
+- **[ActionButtonIcon](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ActionButtonIcon)**: Set a custom `ImageSource` for the quick action icon shown inside the editor (the icon that opens the action popup).
+- **[ActionButtonPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_ActionButtonPosition)**: Controls where the action icon appears in the input view. Use [ActionButtonPosition.Start](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ActionButtonPosition.html#Syncfusion_Maui_AIAssistView_ActionButtonPosition_Start) or [ActionButtonPosition.End](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ActionButtonPosition.html#Syncfusion_Maui_AIAssistView_ActionButtonPosition_End) to place the icon at the leading or trailing edge.
+
+{% tabs %} 
+{% highlight xaml %}
+
+<syncfusion:SfAIAssistView
+    ShowActionButtons="True"
+    ActionButtonIcon="dotmenu.png"
+    ActionButtonPosition="Start">
+    <syncfusion:SfAIAssistView.ActionButtons>
+        <syncfusion:ActionButton BindingContext="{x:Reference viewModel}" Text="Attach" Icon="attach.png" Command="{Binding AttachCommand}" />
+        <syncfusion:ActionButton BindingContext="{x:Reference viewModel}" Text="Format" Icon="format.png" Command="{Binding FormatCommand}" />
+    </syncfusion:SfAIAssistView.ActionButtons>
+</syncfusion:SfAIAssistView>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+    public partial class MainPage : ContentPage 
+    { 
+        SfAIAssistView sfAIAssistView;
+        ViewModel viewModel;
+        public MainPage()
+        {
+            InitializeComponent();
+            this.viewModel = new ViewModel();
+            this.BindingContext = this.viewModel;
+            this.sfAIAssistView = new SfAIAssistView();
+            this.sfAIAssistView.ShowActionButtons = true,
+            this.sfAIAssistView.ActionButtonIcon = trueImageSource.FromFile("dotmenu.png"),
+            this.sfAIAssistView.ActionButtonPosition = ActionButtonPosition.Start; // or   ActionButtonPosition.End,
+            this.sfAIAssistView.AssistItems = this.viewModel.AssistItems,
+            this.sfAIAssistView.ActionButtons = new     ObservableCollection<ActionButton>
+            {
+                new ActionButton
+                {
+                    BindingContext = this.viewModel;
+                    Text = "Attach",
+                    Icon = ImageSource.FromFile ("attach.png"),
+                    Command = viewModel.AttachCommand
+                },
+                new ActionButton
+                {
+                    BindingContext = this.viewModel;
+                    Text = "Search in web",
+                    Icon = ImageSource.FromFile ("format.png"),
+                    Command = this.viewModel.FormatCommand
+                },
+            };
+
+            this.Content = sfAIAssistView;
+        }
+    }
+
+{% endhighlight %}
+{% endtabs %}
+
+![Action button customization in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassitview-actionbutton-customization.png)
 
 ## Request button customization
 
@@ -1081,3 +1349,42 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 ![Scroll-To-Buttom Template in .NET MAUI AI AssistView](Images/working-with-aiassistview/maui-aiassistview-scrolltobottomtemplate.png)
+
+## Auto scroll control to bottom when new message is added
+
+By default, the `SfAIAssistView` control automatically scrolls to the bottom of the conversation to display newly added messages. If you want to prevent this behavior and retain the current scroll position, you can disable auto‑scrolling by setting the [CanAutoScrollToBottom](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_CanAutoScrollToBottom) property to `false`.
+
+{% tabs %}
+{% highlight xaml hl_lines="16" %}
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           AssistItems="{Binding AssistItems}"
+                           CanAutoScrollToBottom="False" />
+
+{% endhighlight %}
+{% endtabs %}
+
+## Scrolled Event
+
+The `SfAIAssistView` control comes with a built-in [Scrolled](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.SfAIAssistView.html#Syncfusion_Maui_AIAssistView_SfAIAssistView_Scrolled) event that will be fired whenever the conversation view is scrolled.  This event allows developers to track the current scroll position and determine whether the user has reached the top or bottom of the conversation list through the [ScrolledEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.AIAssistView.ScrolledEventArgs.html). 
+
+You can handle this event to control the auto-scroll behavior of the AssistView. For example, if the user manually scrolls up and is no longer at the bottom of the conversation, auto-scrolling can be disabled to prevent newly added messages from interrupting the user’s reading position.
+
+{% tabs %}
+{% highlight xaml %}
+
+<syncfusion:SfAIAssistView x:Name="sfAIAssistView"
+                           Scrolled="sfAIAssistView_Scrolled" />
+
+{% endhighlight %}
+{% highlight c# %}
+
+ sfAIAssistView.Scrolled += sfAIAssistView_Scrolled;
+
+private void sfAIAssistView_Scrolled(object sender, Syncfusion.Maui.AIAssistView.ScrolledEventArgs e)
+{
+   // Handle the Scrolled event.
+}
+
+{% endhighlight %}
+{% endtabs %}

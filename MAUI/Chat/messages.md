@@ -1224,6 +1224,222 @@ namespace MauiChat
 
 ![DeliveryState Customization in .NET MAUI Chat](Images/messages/maui-chat-delivery-state-customization.gif)
 
+## Pin message
+
+The [`SfChat`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html) control allows you to pin messages using the [`AllowPinning`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_AllowPinning) property.
+To enable pin message support, set the `AllowPinning` property to `true`.
+
+{% tabs %}
+{% highlight xaml hl_lines="4" %}
+
+<sfChat:SfChat x:Name="sfChat"
+               Messages="{Binding Messages}"
+               CurrentUser="{Binding CurrentUser}"
+               AllowPinning="True" />
+
+{% endhighlight %}
+{% highlight c# hl_lines="16" %}
+
+using Syncfusion.Maui.Chat;
+
+namespace MauiChat
+{
+    public partial class MainPage : ContentPage
+    {
+        SfChat sfChat;
+        ViewModel viewModel;
+
+        public MainPage()
+        {
+            InitializeComponent();
+            this.sfChat = new SfChat();
+            this.viewModel = new ViewModel();
+            this.sfChat.Messages = viewModel.Messages;
+            this.sfChat.CurrentUser = viewModel.CurrentUser;
+            this.sfChat.AllowPinning = true;
+            this.Content = sfChat;
+        }
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+![Pin Message in .NET MAUI Chat](Images/messages/maui-chat-pin-message.gif)
+
+N> 
+* The [`IMessage.IsPinned`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IMessage.html#Syncfusion_Maui_Chat_IMessage_IsPinned) property is used to mark a message as pinned during initial load.
+* Pinned messages are stored in the read‑only [`SfChat.PinnedMessages`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_PinnedMessages) collection.
+
+### Restricting pinned message container visibility
+
+You can hide the pinned message container using the [`ShowPinnedMessagesContainer`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_ShowPinnedMessagesContainer) property.
+By default, it is set to `true`.
+
+{% tabs %}
+{% highlight xaml hl_lines="5" %}
+
+<sfChat:SfChat x:Name="sfChat"
+               Messages="{Binding Messages}"
+               CurrentUser="{Binding CurrentUser}"
+               AllowPinning="True"
+               ShowPinnedMessagesContainer="False" />
+
+{% endhighlight %}
+{% highlight c# hl_lines="18" %}
+
+using Syncfusion.Maui.Chat;
+
+namespace MauiChat
+{
+    public partial class MainPage : ContentPage
+    {
+        SfChat sfChat;
+        ViewModel viewModel;
+
+        public MainPage()
+        {
+            InitializeComponent();
+            this.sfChat = new SfChat();
+            this.viewModel = new ViewModel();
+            this.sfChat.Messages = viewModel.Messages;
+            this.sfChat.CurrentUser = viewModel.CurrentUser;
+            this.sfChat.AllowPinning = true;
+            this.sfChat.ShowPinnedMessagesContainer = false;
+            this.Content = sfChat;
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+![Show Pin Message Container in .NET MAUI Chat](Images/messages/maui-chat-pin-message-show-container.png)
+
+### Customizing pinned message view
+
+#### Pinned container height customization
+
+The `SfChat` control allows you to set the height of the pinned message container by using the [`PinnedContainerHeight`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_PinnedContainerHeight) property. The default value is `48d`.
+
+{% tabs %}
+{% highlight xaml hl_lines="5" %}
+
+<sfChat:SfChat x:Name="sfChat"
+               Messages="{Binding Messages}"
+               CurrentUser="{Binding CurrentUser}"
+               AllowPinning="True"
+               PinnedContainerHeight="80" />
+
+{% endhighlight %}
+{% highlight c# hl_lines="14" %}
+
+public partial class MainPage : ContentPage
+{
+    SfChat sfChat;
+    ViewModel viewModel;
+
+    public MainPage()
+    {
+        InitializeComponent();
+        this.sfChat = new SfChat();
+        this.viewModel = new ViewModel();
+        this.sfChat.Messages = viewModel.Messages;
+        this.sfChat.CurrentUser = viewModel.CurrentUser;
+        this.sfChat.AllowPinning = true;
+        this.sfChat.PinnedContainerHeight = 80;
+        this.Content = sfChat;
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+![Pin Message Container Height in .NET MAUI Chat](Images/messages/maui-chat-pin-message-container-height.png)
+
+#### Pinned message template
+
+You can customize pinned message appearance using the 
+[`PinnedMessageTemplate`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_PinnedMessageTemplate) property.
+
+{% tabs %}
+{% highlight xaml hl_lines="12" %}
+
+    <ContentPage.Resources>
+        <DataTemplate x:Key="PinnedTemplate">
+            ...
+        </DataTemplate>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <sfChat:SfChat x:Name="sfChat"
+                Messages="{Binding Messages}"
+                CurrentUser="{Binding CurrentUser}"
+                AllowPinning="True"
+                PinnedMessageTemplate="{StaticResource PinnedTemplate}" />
+    </ContentPage.Content>
+
+{% endhighlight %}
+{% highlight c# hl_lines="13" %}
+public partial class MainPage : ContentPage
+{
+    SfChat sfChat;
+    ViewModel viewModel;
+
+    public MainPage()
+    {
+        InitializeComponent();
+        this.viewModel = new ViewModel();
+        this.sfChat.Messages = viewModel.Messages;
+        this.sfChat.CurrentUser = viewModel.CurrentUser;
+        this.sfChat.AllowPinning = true;
+        this.sfChat.PinnedMessageTemplate = this.CreatePinnedMessageTemplate();
+        this.Content = sfChat;
+    }
+
+    private DataTemplate CreatePinnedMessageTemplate()
+    {
+        return new DataTemplate(() =>
+        {
+            ...
+        });
+    }
+}
+{% endhighlight %}
+{% endtabs %}
+
+![Pin Message Template in .NET MAUI Chat](Images/messages/maui-chat-pin-message-template.png)
+
+
+### Events for pinned messages
+
+The `SfChat` control triggers the [MessagePinned](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessagePinned) and [MessageUnpinned](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageUnpinned) events when messages are pinned and unpinned respectively. The `MessagePinned` event has the  [MessagePinnedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessagePinnedEventArgs.html) and `MessageUnpinned` event has the [MessageUnpinnedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.MessageUnpinnedEventArgs.html). Each event args contains the message that was pinned or unpinned.
+
+{% tabs %}
+{% highlight xaml hl_lines="5, 6" %}
+    
+    <sfChat:SfChat x:Name="sfChat"
+                   Messages="{Binding Messages}"
+                   CurrentUser="{Binding CurrentUser}"
+                   AllowPinning="True"
+                   MessagePinned="OnMessagePinned"
+                   MessageUnpinned="OnMessageUnpinned" />
+
+{% endhighlight %}
+{% highlight c# hl_lines="1, 2" %}
+sfChat.MessagePinned += OnMessagePinned;
+sfChat.MessageUnpinned += OnMessageUnpinned;
+
+private void OnMessagePinned(object sender, MessagePinnedEventArgs e)
+{
+    // Handle message pinned event
+}
+
+private void OnMessageUnpinned(object sender, MessageUnpinnedEventArgs e)
+{
+    // Handle message unpinned event
+}
+{% endhighlight %}
+{% endtabs %}
+
 ## Template for message
 
 `SfChat` allows the loading of custom templates for all incoming and outgoing messages using the [MessageTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.SfChat.html#Syncfusion_Maui_Chat_SfChat_MessageTemplate) property. You can customize the message views as per your liking with the support to load a template for each individual message by using a custom template selector derived from [ChatMessageTemplateSelector](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.ChatMessageTemplateSelector.html) and assigning it to `MessageTemplate` as shown below. Load custom templates based on the message type, text, author, etc. The limits are endless.
@@ -2018,7 +2234,7 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/how-to-assign-c
 
 ## Show drop down menu on tapping a message in .NET MAUI Chat
 
-You can add drop down icon to the incoming messages in `SfChat` by writing custom control template to [IncomingMessageTextView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IncomingMessageTextView.html) using `TargetStyle`. Using [SfPopup](https://help.syncfusion.com/maui/popup/overview), you can display the drop down menu by using platform specific customization.
+You can add drop down icon to the incoming messages in `SfChat` by writing custom control template to [IncomingMessageContentView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Chat.IncomingMessageContentView.html) using `TargetStyle`. Using [SfPopup](https://help.syncfusion.com/maui/popup/overview), you can display the drop down menu by using platform specific customization.
 
 ![Drop down menu in .NET MAUI Chat](images/messages/maui-chat-show-drop-down-menu.gif)
 
