@@ -15,32 +15,29 @@ The data grid allows adding additional columns that are not bound with data obje
 {% tabs %}
 {% highlight xaml %}
 <ContentPage.BindingContext>
-    <local:OrderInfoViewModel x:Name="viewModel"/>
+    <local:OrderInfoViewModel x:Name = "viewModel"/>
 </ContentPage.BindingContext>
 
- <syncfusion:SfDataGrid x:Name="DataGrid"
-                        ItemsSource="{Binding Orders}"
-                        AutoGenerateColumnsMode="None">
-     <syncfusion:SfDataGrid.Columns>
-         <syncfusion:DataGridTextColumn MappingName="OrderID"
-                                 HeaderText="Order ID"/>
-         <syncfusion:DataGridNumericColumn MappingName="Quantity"
-                                             HeaderText="Quantity"
-                                             Format="#"/>
-         <syncfusion:DataGridNumericColumn MappingName="UnitPrice"
-                                             HeaderText="Unit Price"
-                                             Format="C"/>
-         <syncfusion:DataGridUnboundColumn MappingName="TotalPrice"
-                                           HeaderText="Total"
-                                           Expression="UnitPrice*Quantity"
-                                           Format="C" />
-     </syncfusion:SfDataGrid.Columns>
- </syncfusion:SfDataGrid>
-
+<syncfusion:SfDataGrid x:Name = "dataGrid"
+                    ItemsSource = "{Binding Orders}"
+                    AutoGenerateColumnsMode = "None">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridTextColumn MappingName = "Customer"
+                                       HeaderText = "Customer"/>
+        <syncfusion:DataGridNumericColumn MappingName = "Quantity"
+                                          HeaderText = "Quantity"
+                                          Format = "#"/>
+        <syncfusion:DataGridNumericColumn MappingName = "UnitPrice"
+                                          HeaderText = "Unit Price"
+                                          Format = "C"/>
+        <syncfusion:DataGridUnboundColumn MappingName = "TotalPrice"
+                                          HeaderText = "Total"
+                                          Expression = "UnitPrice*Quantity"
+                                          Format = "C" />
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
 {% endhighlight %}
-
 {% highlight c# %}
-
 SfDataGrid dataGrid = new SfDataGrid();
 OrderInfoViewModel viewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = viewModel.Orders;
@@ -48,8 +45,8 @@ dataGrid.AutoGenerateColumnsMode = AutoGenerateColumnsMode.None;
 
 var orderColumn = new DataGridTextColumn()
 {
-    MappingName = "OrderID",
-    HeaderText = "OrderID",
+    MappingName = "Customer",
+    HeaderText = "Customer",
 };
 dataGrid.Columns.Add(orderColumn);
 
@@ -79,12 +76,11 @@ DataGridUnboundColumn totalColumn = new DataGridUnboundColumn()
 dataGrid.Columns.Add(totalColumn);
 
 this.Content = dataGrid;
-  
 {% endhighlight %}
 {% endtabs %}
 
 
-<img alt="Unbound column in MAUI DataGrid" src="Images\unbound-column\maui-datagrid-unbound-column.png" width="404" />
+<img alt="Unbound column in MAUI DataGrid" src="Images\unbound-column\maui-datagrid-unbound-column.png" width="404" Height = "429"/>
 
 N> It is mandatory to specify the `DataGridColumn.MappingName` for `SfDataGrid.DataGridUnboundColumn` with some name to identify the column. It is not necessary to define name of the field in the data object.
 
@@ -183,8 +179,30 @@ Populate the data for the unbound column by handling `QueryUnboundColumnValue` e
 Refer to the following code example in which data for the unbound column is populated by handling the `QueryUnboundColumnValue` event:
 
 {% tabs %}
-{% highlight C# %}
+{% highlight xaml %}
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel x:Name = "viewModel"/>
+</ContentPage.BindingContext>
 
+<syncfusion:SfDataGrid x:Name = "dataGrid"
+                    ItemsSource = "{Binding Orders}"
+                    QueryUnboundColumnValue = "DataGrid_QueryUnboundColumnValue"
+                    AutoGenerateColumnsMode = "None">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridTextColumn MappingName = "Customer"
+                                       HeaderText = "Customer"/>
+        <syncfusion:DataGridNumericColumn MappingName = "Quantity"
+                                          HeaderText = "Quantity"
+                                          Format = "#"/>
+        <syncfusion:DataGridNumericColumn MappingName = "UnitPrice"
+                                          HeaderText = "Unit Price"
+                                          Format = "C"/>
+        <syncfusion:DataGridUnboundColumn MappingName = "TotalPrice"
+                                          HeaderText = "Total"/>
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight C# %}
 SfDataGrid dataGrid = new SfDataGrid();
 OrderInfoViewModel viewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = viewModel.Orders;
@@ -193,8 +211,8 @@ dataGrid.AutoGenerateColumnsMode = AutoGenerateColumnsMode.None;
 
 var orderColumn = new DataGridTextColumn()
 {
-    MappingName = "OrderID",
-    HeaderText = "OrderID",
+    MappingName = "Customer",
+    HeaderText = "Customer",
 };
 dataGrid.Columns.Add(orderColumn);
 
@@ -222,7 +240,11 @@ DataGridUnboundColumn totalColumn = new DataGridUnboundColumn()
 dataGrid.Columns.Add(totalColumn);
 
 this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
 
+{% tabs %}
+{% highlight C# %}
 private void DataGrid_QueryUnboundColumnValue(object? sender, DataGridUnboundColumnEventArgs e)
 {
     if (e.UnboundAction == DataGridUnboundActions.QueryData)
@@ -233,7 +255,6 @@ private void DataGrid_QueryUnboundColumnValue(object? sender, DataGridUnboundCol
         e.Value = total.ToString("C");
 
     }
-}
-  
+} 
 {% endhighlight %}
 {% endtabs %}

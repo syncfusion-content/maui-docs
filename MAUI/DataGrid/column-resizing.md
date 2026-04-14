@@ -56,6 +56,17 @@ To cancel resizing a specific column, use the `SfDataGrid.ColumnResizing` event.
 
 To prevent resizing a column using the `SfDataGrid.ColumnResizing` event and the `Index` value, refer to the following code example:
 
+{% tabs %}
+{% highlight xaml %}
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel />
+</ContentPage.BindingContext>
+
+<syncfusion:SfDataGrid  x:Name = "dataGrid"
+                        AllowResizingColumns = "True"
+                        ColumnResizing = "DataGrid_ColumnResizing"
+                        ItemsSource = "{Binding Orders}" />
+{% endhighlight %}
 {% highlight c# %}
 SfDataGrid dataGrid = new SfDataGrid();
 OrderInfoViewModel viewModel = new OrderInfoViewModel();
@@ -63,7 +74,11 @@ dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.AllowResizingColumns = true;
 dataGrid.ColumnResizing += DataGrid_ColumnResizing;
 this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
 
+{% tabs %}
+{% highlight c# %}
 private void DataGrid_ColumnResizing(object? sender, Syncfusion.Maui.DataGrid.DataGridColumnResizingEventArgs e)
 {
     //Code to end resizing if ColumnIndex is 2
@@ -71,9 +86,21 @@ private void DataGrid_ColumnResizing(object? sender, Syncfusion.Maui.DataGrid.Da
         e.Cancel = true;
 }
 {% endhighlight %}
+{% endtabs %}
 
 To cancel resizing a column using the `SfDataGrid.ColumnResizing` event and the `NewValue` value, refer to the following code example:
 
+{% tabs %}
+{% highlight xaml %}
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel />
+</ContentPage.BindingContext>
+
+<syncfusion:SfDataGrid  x:Name = "dataGrid"
+                        AllowResizingColumns = "True"
+                        ColumnResizing = "DataGrid_ColumnResizing"
+                        ItemsSource = "{Binding Orders}" />
+{% endhighlight %}
 {% highlight c# %}
 SfDataGrid dataGrid = new SfDataGrid();
 OrderInfoViewModel viewModel = new OrderInfoViewModel();
@@ -81,17 +108,33 @@ dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.AllowResizingColumns = true;
 dataGrid.ColumnResizing += DataGrid_ColumnResizing;
 this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
 
+{% tabs %}
+{% highlight c# %}
 private void DataGrid_ColumnResizing(object? sender, Syncfusion.Maui.DataGrid.DataGridColumnResizingEventArgs e)
 {
-    //Code to end resizing if Column's Width is >= 100
-    if (e.NewValue >= 100)
+    //Code to end resizing if Column's Width is > 100
+    if (e.NewValue > 100)
         e.Cancel = true;
 }
 {% endhighlight %}
+{% endtabs %}
 
 To cancel resizing a column using the `SfDataGrid.ColumnResizing` event and the [DataGridProgressState](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridProgressState.html) value, refer to the code example below:
 
+{% tabs %}
+{% highlight xaml %}
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel />
+</ContentPage.BindingContext>
+
+<syncfusion:SfDataGrid  x:Name = "dataGrid"
+                        AllowResizingColumns = "True"
+                        ColumnResizing = "DataGrid_ColumnResizing"
+                        ItemsSource = "{Binding Orders}" />
+{% endhighlight %}
 {% highlight c# %}
 SfDataGrid dataGrid = new SfDataGrid();
 OrderInfoViewModel viewModel = new OrderInfoViewModel();
@@ -99,15 +142,19 @@ dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.AllowResizingColumns = true;
 dataGrid.ColumnResizing += DataGrid_ColumnResizing;
 this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
 
+{% tabs %}
+{% highlight c# %}
 private void DataGrid_ColumnResizing(object? sender, Syncfusion.Maui.DataGrid.DataGridColumnResizingEventArgs e)
 {
     // Code to end resizing if interaction state is Progressing
     if (e.ResizingState == Syncfusion.Maui.DataGrid.DataGridProgressState.Progressing)
         e.Cancel = true;
 }
-
 {% endhighlight %}
+{% endtabs %}
 
 ## Customize the appearance
 

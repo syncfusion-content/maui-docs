@@ -135,24 +135,48 @@ You can retrieve the width of the columns when it is auto-calculated based on th
     <local:OrderInfoViewModel />
 </ContentPage.BindingContext>
 
-<StackLayout>
-    <syncfusion:SfDataGrid x:Name = "dataGrid"
-                       ItemsSource = "{Binding Orders}"
-                       VerticalOptions = "FillAndExpand"
-                       ColumnWidthMode = "Auto" />
-    <Button Clicked = "Button_Clicked"
-            Text = "Get Column Width">
-    </Button>
-</StackLayout>
+<Grid RowDefinitions="*,50">
+        <syncfusion:SfDataGrid x:Name = "dataGrid"
+                               Grid.Row = "0"
+                               ItemsSource = "{Binding Orders}"
+                               ColumnWidthMode = "Auto" />
+        <Button Text = "Get Column Width"
+                Grid.Row = "1"
+                WidthRequest = "300"
+                HorizontalOptions = "Center"
+                Clicked = "Button_Clicked">
+        </Button>
+</Grid>
 {% endhighlight %}
-
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.ColumnWidthMode = ColumnWidthMode.Auto;
 
+Button button = new Button();
+button.Text = "Get Column Width";
+button.WidthRequest = 300;
+button.HorzontalOption = LayoutOptions.Center;
+button.Clicked += Button_Clicked;
+
+Grid grid = new Grid();
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Star });
+grid.RowDefinitions.Add(new RowDefinition() { Height = 50 });
+grid.Children.Add(dataGrid);
+grid.Children.Add(button);
+grid.SetRow(dataGrid, 0);
+grid.SetRow(button, 1);
+this.Content = grid;
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 private void Button_Clicked(object sender, EventArgs e)
 {
     double width = dataGrid.Columns["OrderID"].ActualWidth;
 }
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -209,21 +233,46 @@ Consider that [ColumnWidthMode.Auto](https://help.syncfusion.com/cr/maui/Syncfus
 <ContentPage.BindingContext>
     <local:OrderInfoViewModel />
 </ContentPage.BindingContext>    
-<StackLayout HorizontalOptions = "Center" 
-             Orientation = "Vertical">
+<Grid RowDefinitions = "*,50">
     <syncfusion:SfDataGrid x:Name = "dataGrid"
-                       ColumnWidthMode = "Auto"
-                       ItemsSource = "{Binding Orders}">
+                           Grid.Row = "0"
+                           ColumnWidthMode = "Auto"
+                           ItemsSource = "{Binding Orders}">
     </syncfusion:SfDataGrid>
     <Button x:Name = "button"
+            Grid.Row = "1"
             Text = "Refresh ColumnSizer"
-            HeightRequest = "100"
+            WidthRequest = "200"
             HorizontalOptions = "Center"
             Clicked = "ColumnSizerChanged">
     </Button>
-</StackLayout>
+</Grid>
 {% endhighlight %}
-{% highlight c# %}  
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.ColumnWidthMode = ColumnWidthMode.Auto;
+
+Button button = new Button();
+button.Text = "Refresh ColumnSizer";
+button.WidthRequest = 200;
+button.HorzontalOption = LayoutOptions.Center;
+button.Clicked += ColumnSizerChanged;
+
+Grid grid = new Grid();
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Star });
+grid.RowDefinitions.Add(new RowDefinition() { Height = 50 });
+grid.Children.Add(dataGrid);
+grid.Children.Add(button);
+grid.SetRow(dataGrid, 0);
+grid.SetRow(button, 1);
+this.Content = grid;
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 private void ColumnSizerChanged(object sender, EventArgs e)
 {
     //Refreshes the column sizer of the SfDataGrid
@@ -276,7 +325,12 @@ public class CustomColumnSizer : DataGridColumnSizer
 {% endhighlight %}
 
 {% highlight c# %}
-dataGrid.ColumnSizer  = new CustomColumnSizer();
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.ColumnWidthMode = ColumnWidthMode.Auto;
+dataGrid.ColumnSizer = new CustomColumnSizer();
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 

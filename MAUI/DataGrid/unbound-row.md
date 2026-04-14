@@ -15,14 +15,17 @@ The .NET MAUI DataGrid allows you to add **additional rows** at top and also bot
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="DataGrid"
-                       ItemsSource="{Binding Orders}">
-<syncfusion:SfDataGrid.UnboundRows>
-    <syncfusion:DataGridUnboundRow Position="Top" />
-</syncfusion:SfDataGrid.UnboundRows>
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel x:Name = "viewModel"/>
+</ContentPage.BindingContext>
+
+<syncfusion:SfDataGrid x:Name = "dataGrid"
+                       ItemsSource = "{Binding Orders}">
+    <syncfusion:SfDataGrid.UnboundRows>
+        <syncfusion:DataGridUnboundRow Position = "Top"/>
+    </syncfusion:SfDataGrid.UnboundRows>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
-
 {% highlight c# %}
 SfDataGrid dataGrid = new SfDataGrid();
 OrderInfoViewModel viewModel = new OrderInfoViewModel();
@@ -100,12 +103,35 @@ You can get or set the [DataGridUnboundRowEventArgs.Value](https://help.syncfusi
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="DataGrid"
-                       ItemsSource="{Binding Orders}">
-<syncfusion:SfDataGrid.UnboundRows>
-    <syncfusion:DataGridUnboundRow Position="Top" />
-</syncfusion:SfDataGrid.UnboundRows>
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel x:Name = "viewModel"/>
+</ContentPage.BindingContext>
+
+<syncfusion:SfDataGrid x:Name = "dataGrid"
+                       ItemsSource = "{Binding Orders}"
+                       SelectionMode = "Single"
+                       SelectedIndex = "2"
+                       QueryUnboundRow = "Datagrid_QueryUnboundRow"
+                       SelectionChanged = "Datagrid_SelectionChanged">
+    <syncfusion:SfDataGrid.UnboundRows>
+        <syncfusion:DataGridUnboundRow Position = "Top"/>
+    </syncfusion:SfDataGrid.UnboundRows>
 </syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.SelectionMode = DataGridSelectionMode.Single;
+dataGrid.SelectedIndex = 2;
+dataGrid.QueryUnboundRow += Datagrid_QueryUnboundRow;
+dataGrid.SelectionChanged += Datagrid_SelectionChanged;
+var unboundRow = new DataGridUnboundRow()
+{
+    Position = DataGridUnboundRowPosition.Top,
+};
+dataGrid.UnboundRows.Add(unboundRow);
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -113,13 +139,9 @@ For example, now unbound row populated based on selected items in SfDataGrid.
 
 {% tabs %}
 {% highlight c# %}
-dataGrid.SelectedIndex = 2;
-dataGrid.QueryUnboundRow += Datagrid_QueryUnboundRow;
-dataGrid.SelectionChanged += Datagrid_SelectionChanged;
-
 private void Datagrid_SelectionChanged(object? sender, DataGridSelectionChangedEventArgs e)
 {
-    dataGrid!.InvalidateUnboundRow(DataGrid!.UnboundRows[0]);
+    dataGrid!.InvalidateUnboundRow(dataGrid!.UnboundRows[0]);
 }
 
 private void Datagrid_QueryUnboundRow(object? sender, DataGridUnboundRowEventArgs e)
@@ -162,14 +184,35 @@ Here in the below code example, we have invalidated the unbound rows whenever se
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="DataGrid"
-                       ItemsSource="{Binding Orders}"
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel x:Name = "viewModel"/>
+</ContentPage.BindingContext>
+
+<syncfusion:SfDataGrid x:Name = "dataGrid"
+                       ItemsSource = "{Binding Orders}"
+                       SelectionMode = "Single"
                        SelectionChanged = "Datagrid_SelectionChanged">
-<syncfusion:SfDataGrid.UnboundRows>
-    <syncfusion:DataGridUnboundRow Position="Top" />
-</syncfusion:SfDataGrid.UnboundRows>
+    <syncfusion:SfDataGrid.UnboundRows>
+        <syncfusion:DataGridUnboundRow Position = "Top"/>
+    </syncfusion:SfDataGrid.UnboundRows>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.SelectionMode = DataGridSelectionMode.Single;
+dataGrid.SelectionChanged += Datagrid_SelectionChanged;
+var unboundRow = new DataGridUnboundRow()
+{
+    Position = DataGridUnboundRowPosition.Top,
+};
+dataGrid.UnboundRows.Add(unboundRow);
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
 {% highlight c# %}
 private void Datagrid_SelectionChanged(object? sender, DataGridSelectionChangedEventArgs e)
 {
@@ -187,15 +230,37 @@ You can cancel the editing of unbound row cell in the event handler of  [SfDataG
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="DataGrid"
-                       ItemsSource="{Binding Orders}"
-                       AllowEditing="True"
-                       CurrentCellBeginEdit="DataGrid_CurrentCellBeginEdit">
-<syncfusion:SfDataGrid.UnboundRows>
-    <syncfusion:DataGridUnboundRow Position="Top" />
-</syncfusion:SfDataGrid.UnboundRows>
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel x:Name = "viewModel"/>
+</ContentPage.BindingContext>
+
+<syncfusion:SfDataGrid x:Name = "dataGrid"
+                       ItemsSource = "{Binding Orders}"
+                       AllowEditing = "True"
+                       SelectionMode = "Single"
+                       CurrentCellBeginEdit = "DataGrid_CurrentCellBeginEdit">
+    <syncfusion:SfDataGrid.UnboundRows>
+        <syncfusion:DataGridUnboundRow Position = "Top"/>
+    </syncfusion:SfDataGrid.UnboundRows>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.AllowEditing = true;
+dataGrid.SelectionMode = DataGridSelectionMode.Single;
+dataGrid.CurrentCellBeginEdit += DataGrid_CurrentCellBeginEdit;
+var unboundRow = new DataGridUnboundRow()
+{
+    Position = DataGridUnboundRowPosition.Top,
+};
+dataGrid.UnboundRows.Add(unboundRow);
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
 {% highlight c# %}
 private void DataGrid_CurrentCellBeginEdit(object sender, DataGridCurrentCellBeginEditEventArgs e)
 {
@@ -214,15 +279,37 @@ You can get the edited value of unbound row cell from `DataGridUnboundRowEventAr
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="DataGrid"
-                       ItemsSource="{Binding Orders}"
-                       AllowEditing="True"
-                       QueryUnboundRow="Datagrid_QueryUnboundRow">
-<syncfusion:SfDataGrid.UnboundRows>
-    <syncfusion:DataGridUnboundRow Position="Top" />
-</syncfusion:SfDataGrid.UnboundRows>
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel x:Name = "viewModel"/>
+</ContentPage.BindingContext>
+
+<syncfusion:SfDataGrid x:Name = "dataGrid"
+                       ItemsSource = "{Binding Orders}"
+                       AllowEditing = "True"
+                       SelectionMode = "Single"
+                       QueryUnboundRow = "Datagrid_QueryUnboundRow">
+    <syncfusion:SfDataGrid.UnboundRows>
+        <syncfusion:DataGridUnboundRow Position = "Top" />
+    </syncfusion:SfDataGrid.UnboundRows>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.AllowEditing = true;
+dataGrid.SelectionMode = DataGridSelectionMode.Single;
+dataGrid.QueryUnboundRow += Datagrid_QueryUnboundRow;
+var unboundRow = new DataGridUnboundRow()
+{
+    Position = DataGridUnboundRowPosition.Top,
+};
+dataGrid.UnboundRows.Add(unboundRow);
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
 {% highlight c# %}
 private void Datagrid_QueryUnboundRow(object? sender, DataGridUnboundRowEventArgs e)
 {
@@ -241,14 +328,33 @@ You can change the height of unbound row using [SfDataGrid.QueryRowHeight](https
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="DataGrid"
-                       ItemsSource="{Binding Orders}"
-                       QueryRowHeight="DataGrid_QueryRowHeight">
-<syncfusion:SfDataGrid.UnboundRows>
-    <syncfusion:DataGridUnboundRow Position="Top" />
-</syncfusion:SfDataGrid.UnboundRows>
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel x:Name = "viewModel"/>
+</ContentPage.BindingContext>
+
+<syncfusion:SfDataGrid x:Name = "dataGrid"
+                       ItemsSource = "{Binding Orders}"
+                       QueryRowHeight = "DataGrid_QueryRowHeight">
+    <syncfusion:SfDataGrid.UnboundRows>
+        <syncfusion:DataGridUnboundRow Position = "Top" />
+    </syncfusion:SfDataGrid.UnboundRows>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.QueryRowHeight += DataGrid_QueryRowHeight;
+var unboundRow = new DataGridUnboundRow()
+{
+    Position = DataGridUnboundRowPosition.Top,
+};
+dataGrid.UnboundRows.Add(unboundRow);
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
 {% highlight c# %}
 private void DataGrid_QueryRowHeight(object? sender, DataGridQueryRowHeightEventArgs e)
 {

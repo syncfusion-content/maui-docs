@@ -31,13 +31,12 @@ The following code snippet shows how to freeze columns in the DataGrid:
 
 {% tabs %}
 {% highlight xaml %}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
-    <ContentPage.BindingContext>
-        <local:OrderInfoViewModel />
-    </ContentPage.BindingContext>
-    <syncfusion:SfDataGrid ItemsSource = "{Binding Orders}" 
-                           FrozenColumnCount = "1" />
-</ContentPage>
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel />
+</ContentPage.BindingContext>
+<syncfusion:SfDataGrid x:Name = "dataGrid"
+                       ItemsSource = "{Binding Orders}" 
+                       FrozenColumnCount = "1" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 SfDataGrid dataGrid = new SfDataGrid();
@@ -58,13 +57,12 @@ The following code snippet shows how to freeze footer columns in the DataGrid:
 
 {% tabs %}
 {% highlight xaml %}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
-    <ContentPage.BindingContext>
-        <local:OrderInfoViewModel />
-    </ContentPage.BindingContext>
-    <syncfusion:SfDataGrid ItemsSource = "{Binding Orders}" 
-                           FooterFrozenColumnCount = "1" />
-</ContentPage>
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel />
+</ContentPage.BindingContext>
+<syncfusion:SfDataGrid x:Name = "dataGrid"
+                       ItemsSource = "{Binding Orders}" 
+                       FooterFrozenColumnCount = "1" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 SfDataGrid dataGrid = new SfDataGrid();
@@ -93,7 +91,8 @@ The following code snippet shows how to freeze rows in the DataGrid:
     <ContentPage.BindingContext>
         <local:OrderInfoViewModel />
     </ContentPage.BindingContext>
-    <syncfusion:SfDataGrid ItemsSource = "{Binding Orders}" 
+    <syncfusion:SfDataGrid x:Name = "dataGrid"
+                           ItemsSource = "{Binding Orders}" 
                            FrozenRowCount = "1" />
 </ContentPage>
 {% endhighlight %}
@@ -116,13 +115,12 @@ The following code snippet shows how to freeze footer rows in the DataGrid:
 
 {% tabs %}
 {% highlight xaml %}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
-    <ContentPage.BindingContext>
-        <local:OrderInfoViewModel />
-    </ContentPage.BindingContext>
-    <syncfusion:SfDataGrid ItemsSource = "{Binding Orders}" 
-                           FooterFrozenRowCount = "1" />
-</ContentPage>
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel />
+</ContentPage.BindingContext>
+<syncfusion:SfDataGrid x:Name = "dataGrid"
+                       ItemsSource = "{Binding Orders}" 
+                       FooterFrozenRowCount = "1" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 SfDataGrid dataGrid = new SfDataGrid();
@@ -147,24 +145,24 @@ The DataGrid allows you to customize the color of the freeze pane line using the
 
 {% tabs %}
 {% highlight xaml %}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
-    <ContentPage.BindingContext>
-        <local:OrderInfoViewModel />
-    </ContentPage.BindingContext>
-    <syncfusion:SfDataGrid ItemsSource = "{Binding Orders}" 
-                           FrozenColumnCount = "1" 
-                           FrozenRowCount = "1">
-        <syncfusion:SfDataGrid.DefaultStyle>
-            <syncfusion:DataGridStyle FreezePaneLineColor="Orange" />
-        </syncfusion:SfDataGrid.DefaultStyle>
-    </syncfusion:SfDataGrid>
-</ContentPage> 
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel />
+</ContentPage.BindingContext>
+<syncfusion:SfDataGrid x:Name = "dataGrid"
+                       ItemsSource = "{Binding Orders}" 
+                       FrozenColumnCount = "1" 
+                       FrozenRowCount = "1">
+    <syncfusion:SfDataGrid.DefaultStyle>
+        <syncfusion:DataGridStyle FreezePaneLineColor="Orange" />
+    </syncfusion:SfDataGrid.DefaultStyle>
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 SfDataGrid dataGrid = new SfDataGrid();
 OrderInfoViewModel viewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.FrozenColumnCount = 1;
+dataGrid.FrozenRowCount = 1;
 DataGridStyle dataGridStyle = new DataGridStyle();
 dataGridStyle.FreezePaneLineColor = Colors.Orange;
 dataGrid.DefaultStyle = dataGridStyle;
@@ -182,24 +180,24 @@ N> The default value of `FreezePaneLineStrokeThickness` is 1.
 
 {% tabs %}
 {% highlight xaml %}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
-    <ContentPage.BindingContext>
-        <local:OrderInfoViewModel />
-    </ContentPage.BindingContext>
-    <syncfusion:SfDataGrid ItemsSource = "{Binding Orders}" 
-                           FrozenColumnCount = "1" 
-                           FrozenRowCount = "1">
-        <syncfusion:SfDataGrid.DefaultStyle>
-            <syncfusion:DataGridStyle FreezePaneLineStrokeThickness="5" />
-        </syncfusion:SfDataGrid.DefaultStyle>
-    </syncfusion:SfDataGrid>
-</ContentPage> 
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel />
+</ContentPage.BindingContext>
+<syncfusion:SfDataGrid x:Name = "dataGrid"
+                       ItemsSource = "{Binding Orders}" 
+                       FrozenColumnCount = "1" 
+                       FrozenRowCount = "1">
+    <syncfusion:SfDataGrid.DefaultStyle>
+        <syncfusion:DataGridStyle FreezePaneLineStrokeThickness="5" />
+    </syncfusion:SfDataGrid.DefaultStyle>
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 SfDataGrid dataGrid = new SfDataGrid();
 OrderInfoViewModel viewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.FrozenColumnCount = 1;
+dataGrid.FrozenRowCount = 1;
 DataGridStyle dataGridStyle = new DataGridStyle();
 dataGridStyle.FreezePaneLineStrokeThickness = 5;
 dataGrid.DefaultStyle = dataGridStyle;
