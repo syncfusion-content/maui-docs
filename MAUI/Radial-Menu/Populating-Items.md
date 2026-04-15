@@ -339,6 +339,7 @@ The animation duration in a Radial Menu can be changed using the [`AnimationDura
             this.Content = radialMenu;
 
 {% endhighlight %}
+
 {% endtabs %}
 
 ## IsOpen
@@ -366,6 +367,7 @@ The [`IsOpen`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.Sf
             this.Content = radialMenu;
 
 {% endhighlight %}
+
 {% endtabs %}
 
 ## Separator thickness and color in Radial Menu
@@ -394,6 +396,7 @@ using Syncfusion.Maui.RadialMenu;
 
 
 {% endhighlight %}
+
 {% endtabs %}
 
 ## RimColor and RimRadius in Radial Menu
@@ -437,6 +440,7 @@ The radius of the rim can be changed using the [`RimRadius`](https://help.syncfu
             this.Content = radialMenu;
 
 {% endhighlight %}
+
 {% endtabs %}
 
 ## DisplayMemberPath
@@ -493,6 +497,7 @@ The control is populated with a list of employees, and the employee model contai
     }
 
 {% endhighlight %}
+
 {% endtabs %}
 
 ## SelectionColor
@@ -516,4 +521,5 @@ SfRadialMenu radialMenu = new SfRadialMenu()
 };
 
 {% endhighlight %}
+
 {% endtabs %}

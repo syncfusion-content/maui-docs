@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in .NET MAUI Radial Menu Control | Syncfusion®
-description: Learn about Events in Syncfusion® .NET MAUI Radio Menu control, its elements and more.
+description: Explore the events available in the Syncfusion .NET MAUI Radio Menu control and understand how its elements respond to user interactions.
 platform: MAUI
 control: SfRadialMenu
 documentation: UG

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: CenterButton Customization in .NET MAUI Radial Menu Control | Syncfusion®
+title: CenterButton Customization in .NET MAUI Radial Menu | Syncfusion®
 description: Learn about center button customization support in Syncfusion® .NET MAUI Radial Menu (SfRadialMenu) control and more.
 platform: MAUI
 control: SfRadialMenu

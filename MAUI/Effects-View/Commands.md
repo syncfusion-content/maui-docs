@@ -7,7 +7,7 @@ control: SfEffectsView
 documentation: UG
 ---
 
-# Commands and CommandParameter in .NET MAUI Effects View (SfEffectsView)
+# Commands and CommandParameter in .NET MAUI Effects View(SfEffectsView)
 
 The [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html) control provides the following additional Commands and CommandParameter :
 
