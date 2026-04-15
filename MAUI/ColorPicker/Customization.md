@@ -362,7 +362,7 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 ### PaletteCellCornerRadius
 
-The [PaletteCellCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_PaletteCellCornerRadius) specifies the corner radius of individual palette cells, allowing you to create rounded or custom‑shaped cells.
+You can customize the Corner Radius of individual palette cells by adjusting the [PaletteCellCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_PaletteCellCornerRadius) property.
 
 {% tabs %}
 
@@ -385,7 +385,7 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 ### PaletteCellShape
 
-The [PaletteCellShape](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_PaletteCellShape) specifies the shape of the palette cells. It supports the following shapes.
+You can define the shape of the color palette cells using the [PaletteCellShape](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_PaletteCellShape) property.
 
 - [Circle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.PaletteCellShape.html#Syncfusion_Maui_Inputs_PaletteCellShape_Circle)
 - [Square](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.PaletteCellShape.html#Syncfusion_Maui_Inputs_PaletteCellShape_Square)
@@ -412,7 +412,7 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 ### PaletteCellSize
 
-The [PaletteCellSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_PaletteCellSize) specifies the width and height of each palette cell, allowing you to increase or decrease the overall size of the color palette items.
+You can control the width and height of each color cell in the palette by setting the [PaletteCellSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_PaletteCellSize) property.
 
 {% tabs %}
 
@@ -435,7 +435,7 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 ### PaletteColors
 
-The [PaletteColors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_PaletteColors) allows us to define a custom collection of colors to be displayed in the color picker’s palette view.
+You can define a custom collection of Colors displayed in the palette view by using the [PaletteColors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_PaletteColors) property.
 
 {% tabs %}
 
@@ -480,7 +480,7 @@ colorPicker.PaletteColors.Add(Colors.Pink);
 
 ### SelectionIndicatorRadius
 
-The [SelectionIndicatorRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SelectionIndicatorRadius) specifies the corner radius of the selection indicator displayed over the selected color in the palette and spectrum views.
+You can customize the corner radius of the selection indicator by setting the [SelectionIndicatorRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SelectionIndicatorRadius)  property.
 
 {% tabs %}
 
@@ -503,7 +503,7 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 ### SelectionIndicatorStroke
 
-The [SelectionIndicatorStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SelectionIndicatorStroke) specifies the stroke color of the selection indicator.
+You can specify the stroke color of the selection indicator using the [SelectionIndicatorStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SelectionIndicatorStroke) property.
 
 {% tabs %}
 
@@ -526,7 +526,7 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 ### SelectionIndicatorStrokeThickness
 
-The [SelectionIndicatorStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SelectionIndicatorStrokeThickness) specifies the thickness of the selection indicator stroke, allowing us to modify the selection outline.
+You can modify the thickness of the selection outline by adjusting the [SelectionIndicatorStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SelectionIndicatorStrokeThickness) property.
 
 {% tabs %}
 
@@ -549,11 +549,11 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 ## Slider thumb customization
 
-The slider thumb represents the `Hue` and `Alpha` sliders in the color picker. You can customize its appearance using the following properties.
+The Slider thumb represents the `Hue` and `Alpha` Sliders in the Color Picker. You can customize its appearance using the following properties.
 
 ### SliderThumbFill
 
-The [SliderThumbFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SliderThumbFill) specifies the fill brush for the slider thumb.
+You can customize the fill brush of the Slider thumb by setting the [SliderThumbFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SliderThumbFill) property.
 
 {% tabs %}
 
@@ -576,7 +576,7 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 ### SliderThumbRadius
 
-The [SliderThumbRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SliderThumbRadius) specifies the radius of the slider thumb.
+You can control the size and roundness of the Slider thumb by adjusting the [SliderThumbRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SliderThumbRadius) property.
 
 {% tabs %}
 
@@ -599,7 +599,7 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 ### SliderThumbStroke
 
-The [SliderThumbStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SliderThumbStroke) specifies the stroke color of the slider thumb.
+You can customize the stroke color of the Slider thumb by adjusting the [SliderThumbStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SliderThumbStroke) property.
 
 {% tabs %}
 
@@ -622,7 +622,7 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 ### SliderThumbStrokeThickness
 
-The [SliderThumbStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SliderThumbStrokeThickness) specifies the thickness of the slider thumb stroke.
+You can control the thickness of the Slider thumb’s outline by adjusting the [SliderThumbStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SliderThumbStrokeThickness) property.
 
 {% tabs %}
 

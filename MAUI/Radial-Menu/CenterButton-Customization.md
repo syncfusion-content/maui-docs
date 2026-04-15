@@ -19,6 +19,12 @@ The [`CenterButtonText`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rad
 
 {% highlight xaml %}
 
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RadialSample"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
+             x:Class="RadialSample.MainPage">
     <syncfusion:SfRadialMenu
                     CenterButtonText="Edit"
                     CenterButtonBackText="Back">
@@ -46,11 +52,16 @@ The [`CenterButtonText`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rad
             </syncfusion:SfRadialMenuItem>
         </syncfusion:SfRadialMenu.Items>
     </syncfusion:SfRadialMenu>
+</ContentPage>
     
 {% endhighlight %}
 
 {% highlight C# %}
 
+using Syncfusion.Maui.RadialMenu;
+
+namespace RadialSample
+{
     public partial class MainPage : ContentPage
     {
         public MainPage()
@@ -85,6 +96,7 @@ The [`CenterButtonText`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Rad
             this.Content = radialMenu;
         }
     }
+}
 
 {% endhighlight %}
 
@@ -100,6 +112,12 @@ The [`CenterButtonTextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 
 {% highlight xaml %}
 
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RadialSample"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
+             x:Class="RadialSample.MainPage">
     <syncfusion:SfRadialMenu
                     CenterButtonTextColor="Blue"
                     CenterButtonText="Edit"
@@ -129,11 +147,17 @@ The [`CenterButtonTextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
             </syncfusion:SfRadialMenuItem>
         </syncfusion:SfRadialMenu.Items>
     </syncfusion:SfRadialMenu>
+</ContentPage>
 
+    
 {% endhighlight %}
 
 {% highlight C# %}
 
+using Syncfusion.Maui.RadialMenu;
+
+namespace RadialSample
+{
     public partial class MainPage : ContentPage
     {
         public MainPage()
@@ -170,6 +194,7 @@ The [`CenterButtonTextColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
             this.Content = radialMenu;
         }
     }
+}
 
 {% endhighlight %}
 
@@ -183,6 +208,12 @@ The [`CenterButtonBackgroundColor`](https://help.syncfusion.com/cr/maui/Syncfusi
 
 {% highlight xaml %}
 
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RadialSample"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
+             x:Class="RadialSample.MainPage">
     <syncfusion:SfRadialMenu  CenterButtonBackgroundColor="#000000" 
                               CenterButtonText="Edit"
                               CenterButtonTextColor="White">
@@ -194,11 +225,21 @@ The [`CenterButtonBackgroundColor`](https://help.syncfusion.com/cr/maui/Syncfusi
             <syncfusion:SfRadialMenuItem Text="Color" FontSize="12"/>
         </syncfusion:SfRadialMenu.Items>
     </syncfusion:SfRadialMenu>
+</ContentPage>
     
 {% endhighlight %}
 
 {% highlight C# %}
 
+using Syncfusion.Maui.RadialMenu;
+
+namespace RadialSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
             SfRadialMenu radialMenu = new SfRadialMenu()
             {
                 CenterButtonBackgroundColor = Color.FromArgb("#000000"),
@@ -217,6 +258,9 @@ The [`CenterButtonBackgroundColor`](https://help.syncfusion.com/cr/maui/Syncfusi
            
             radialMenu.Items = itemCollection;
             this.Content = radialMenu;
+        }
+    }
+}
 
 {% endhighlight %}
 
@@ -232,6 +276,12 @@ The [`CenterButtonRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.R
 
 {% highlight xaml %}
 
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RadialSample"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
+             x:Class="RadialSample.MainPage">
     <syncfusion:SfRadialMenu CenterButtonText="Edit" CenterButtonRadius="5">
         <syncfusion:SfRadialMenu.Items>
             <syncfusion:SfRadialMenuItem Text="Bold" FontSize="12"/>
@@ -241,10 +291,21 @@ The [`CenterButtonRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.R
             <syncfusion:SfRadialMenuItem Text="Color" FontSize="12"/>
         </syncfusion:SfRadialMenu.Items>
     </syncfusion:SfRadialMenu>
+</ContentPage>
     
 {% endhighlight %}
 
 {% highlight C# %}
+
+using Syncfusion.Maui.RadialMenu;
+
+namespace RadialSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
             SfRadialMenu radialMenu = new SfRadialMenu()
             {
                 CenterButtonText="Edit",
@@ -259,6 +320,10 @@ The [`CenterButtonRadius`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.R
             new SfRadialMenuItem() { Text = "Color", FontSize = 12 },
             radialMenu.Items = itemCollection;
             this.Content = radialMenu;
+        }
+    }
+}
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -273,6 +338,12 @@ The [`CenterButtonFontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 
 {% highlight xaml %}
 
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RadialSample"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
+             x:Class="RadialSample.MainPage">
     <syncfusion:SfRadialMenu CenterButtonBackFontFamily="Maui Material Assets"
                     CenterButtonBackText="&#xe72d;"
                     CenterButtonFontFamily="Maui Material Assets"
@@ -280,14 +351,44 @@ The [`CenterButtonFontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
         <syncfusion:SfRadialMenu.Items>
             <syncfusion:SfRadialMenuItem Text="Bold" 
                                          FontSize="12"/>
+            <syncfusion:SfRadialMenuItem Text="Copy" 
+                                         FontSize="12"/>
+            <syncfusion:SfRadialMenuItem Text="Undo" 
+                                         FontSize="12"/>
+            <syncfusion:SfRadialMenuItem Text="Paste" 
+                                         FontSize="12"/>
+            <syncfusion:SfRadialMenuItem Text="Color" FontSize="12">
+                <syncfusion:SfRadialMenuItem.Items>
+                    <syncfusion:SfRadialMenuItem Text="Font" 
+                                                 FontSize="12" 
+                                                 ItemWidth="50"/>
+                    <syncfusion:SfRadialMenuItem Text="Gradient" 
+                                                 FontSize="12" 
+                                                 ItemWidth="50"/>
+                    <syncfusion:SfRadialMenuItem Text="Highlight" 
+                                                 FontSize="12" 
+                                                 ItemWidth="50"/>
+                </syncfusion:SfRadialMenuItem.Items>
             </syncfusion:SfRadialMenuItem>
         </syncfusion:SfRadialMenu.Items>
     </syncfusion:SfRadialMenu>
+</ContentPage>
     
 {% endhighlight %}
 
 {% highlight C# %}
 
+using Syncfusion.Maui.RadialMenu;
+
+namespace RadialSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            string[] mainItem = new string[] { "Bold", "Copy", "Paste", "Undo", "Color" };
+            string[] colorItem = new string[] { "Font", "Gradient", "Highlight" };
             SfRadialMenu radialMenu = new SfRadialMenu()
             {
                 CenterButtonBackFontFamily="Maui Material Assets",
@@ -296,9 +397,27 @@ The [`CenterButtonFontFamily`](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
                 CenterButtonText="&#xe710;",
             };
 
+            for (int i = 0; i < 5; i++)
+            {
+                SfRadialMenuItem mainMenuItems = new SfRadialMenuItem();
+                mainMenuItems.Text = mainItem[i];
+                mainMenuItems.FontSize = 12;
+                syncfusion.Items.Add(mainMenuItems);
+            }
+
+            for (int i = 0; i < 3; i++)
+            {
+                SfRadialMenuItem colorSubMenuItem = new SfRadialMenuItem();
+                colorSubMenuItem.Text = colorItem[i];
+                colorSubMenuItem.FontSize = 12;
+                colorSubMenuItem.ItemWidth = 50;
+                radialMenu.Items[4].Items.Add(colorSubMenuItem);
+            }
+
             this.Content = radialMenu;
         }
     }
+}
 
 {% endhighlight %}
 
@@ -312,18 +431,59 @@ The [`CenterButtonFontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 {% highlight xaml %}
 
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RadialSample"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
+             x:Class="RadialSample.MainPage">
     <syncfusion:SfRadialMenu CenterButtonBackFontFamily="Maui Material Assets"
                     CenterButtonBackFontSize="28"
                     CenterButtonBackText="&#xe72d;"
                     CenterButtonFontFamily="Maui Material Assets"
                     CenterButtonFontSize="20"
                     CenterButtonText="&#xe710;">
+        <syncfusion:SfRadialMenu.Items>
+            <syncfusion:SfRadialMenuItem Text="Bold" 
+                                         FontSize="12"/>
+            <syncfusion:SfRadialMenuItem Text="Copy" 
+                                         FontSize="12"/>
+            <syncfusion:SfRadialMenuItem Text="Undo" 
+                                         FontSize="12"/>
+            <syncfusion:SfRadialMenuItem Text="Paste" 
+                                         FontSize="12"/>
+            <syncfusion:SfRadialMenuItem Text="Color" FontSize="12">
+                <syncfusion:SfRadialMenuItem.Items>
+                    <syncfusion:SfRadialMenuItem Text="Font" 
+                                                 FontSize="12" 
+                                                 ItemWidth="50"/>
+                    <syncfusion:SfRadialMenuItem Text="Gradient" 
+                                                 FontSize="12" 
+                                                 ItemWidth="50"/>
+                    <syncfusion:SfRadialMenuItem Text="Highlight" 
+                                                 FontSize="12" 
+                                                 ItemWidth="50"/>
+                </syncfusion:SfRadialMenuItem.Items>
+            </syncfusion:SfRadialMenuItem>
+        </syncfusion:SfRadialMenu.Items>
     </syncfusion:SfRadialMenu>
+</ContentPage>
     
 {% endhighlight %}
 
 {% highlight C# %}
 
+using Syncfusion.Maui.RadialMenu;
+
+namespace RadialSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            string[] mainItem = new string[] { "Bold", "Copy", "Paste", "Undo", "Color" };
+            string[] colorItem = new string[] { "Font", "Gradient", "Highlight" };
             SfRadialMenu radialMenu = new SfRadialMenu()
             {
                 CenterButtonBackFontFamily="Maui Material Assets",
@@ -333,6 +493,28 @@ The [`CenterButtonFontSize`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
                 CenterButtonFontSize=20,
                 CenterButtonText="&#xe710;",
             };
+
+            for (int i = 0; i < 5; i++)
+            {
+                SfRadialMenuItem mainMenuItems = new SfRadialMenuItem();
+                mainMenuItems.Text = mainItem[i];
+                mainMenuItems.FontSize = 12;
+                syncfusion.Items.Add(mainMenuItems);
+            }
+
+            for (int i = 0; i < 3; i++)
+            {
+                SfRadialMenuItem colorSubMenuItem = new SfRadialMenuItem();
+                colorSubMenuItem.Text = colorItem[i];
+                colorSubMenuItem.FontSize = 12;
+                colorSubMenuItem.ItemWidth = 50;
+                radialMenu.Items[4].Items.Add(colorSubMenuItem);
+            }
+
+            this.Content = radialMenu;
+        }
+    }
+}
 
 {% endhighlight %}
 
@@ -346,16 +528,57 @@ The [`CenterButtonFontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusio
 
 {% highlight xaml %}
 
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RadialSample"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
+             x:Class="RadialSample.MainPage">
     <syncfusion:SfRadialMenu CenterButtonText="Edit"
                              CenterButtonBackText="Back
                              CenterButtonFontAttributes="Bold"
                              CenterButtonBackFontAttributes="Bold">
+               <syncfusion:SfRadialMenu.Items>
+                    <syncfusion:SfRadialMenuItem Text="Bold" 
+                                                 FontSize="12"/>
+                    <syncfusion:SfRadialMenuItem Text="Copy" 
+                                                 FontSize="12"/>
+                    <syncfusion:SfRadialMenuItem Text="Undo" 
+                                                 FontSize="12"/>
+                    <syncfusion:SfRadialMenuItem Text="Paste" 
+                                                 FontSize="12"/>
+                    <syncfusion:SfRadialMenuItem Text="Color" FontSize="12">
+                        <syncfusion:SfRadialMenuItem.Items>
+                            <syncfusion:SfRadialMenuItem Text="Font" 
+                                                         FontSize="12" 
+                                                         ItemWidth="50"/>
+                            <syncfusion:SfRadialMenuItem Text="Gradient" 
+                                                         FontSize="12" 
+                                                         ItemWidth="50"/>
+                            <syncfusion:SfRadialMenuItem Text="Highlight" 
+                                                         FontSize="12" 
+                                                         ItemWidth="50"/>
+                        </syncfusion:SfRadialMenuItem.Items>
+                    </syncfusion:SfRadialMenuItem>
+        </syncfusion:SfRadialMenu.Items>
     </syncfusion:SfRadialMenu>
+</ContentPage>
     
 {% endhighlight %}
 
 {% highlight C# %}
 
+using Syncfusion.Maui.RadialMenu;
+
+namespace RadialSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            string[] mainItem = new string[] { "Bold", "Copy", "Paste", "Undo", "Color" };
+            string[] colorItem = new string[] { "Font", "Gradient", "Highlight" };
             SfRadialMenu radialMenu = new SfRadialMenu()
             {
                 CenterButtonText = "Edit",
@@ -363,9 +586,28 @@ The [`CenterButtonFontAttributes`](https://help.syncfusion.com/cr/maui/Syncfusio
                 CenterButtonFontAttributes = FontAttributes.Bold,
                 CenterButtonBackFontAttributes = FontAttributes.Bold,
             };
+
+            for (int i = 0; i < 5; i++)
+            {
+                SfRadialMenuItem mainMenuItems = new SfRadialMenuItem();
+                mainMenuItems.Text = mainItem[i];
+                mainMenuItems.FontSize = 12;
+                syncfusion.Items.Add(mainMenuItems);
+            }
+
+            for (int i = 0; i < 3; i++)
+            {
+                SfRadialMenuItem colorSubMenuItem = new SfRadialMenuItem();
+                colorSubMenuItem.Text = colorItem[i];
+                colorSubMenuItem.FontSize = 12;
+                colorSubMenuItem.ItemWidth = 50;
+                radialMenu.Items[4].Items.Add(colorSubMenuItem);
+            }
+
             this.Content = radialMenu;
         }
     }
+}
 
 {% endhighlight %}
 
@@ -379,18 +621,53 @@ The [`CenterButtonStroke`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.R
 
 {% highlight xaml %}
 
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RadialSample"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
+             x:Class="RadialSample.MainPage">
     <syncfusion:SfRadialMenu CenterButtonText="Edit" CenterButtonStroke="Black">
+        <syncfusion:SfRadialMenu.Items>
+            <syncfusion:SfRadialMenuItem Text="Bold" FontSize="12"/>
+            <syncfusion:SfRadialMenuItem Text="Copy" FontSize="12"/>
+            <syncfusion:SfRadialMenuItem Text="Undo" FontSize="12"/>
+            <syncfusion:SfRadialMenuItem Text="Paste" FontSize="12"/>
+            <syncfusion:SfRadialMenuItem Text="Color" FontSize="12"/>
+        </syncfusion:SfRadialMenu.Items>
     </syncfusion:SfRadialMenu>
+</ContentPage>
     
 {% endhighlight %}
 
 {% highlight C# %}
 
+using Syncfusion.Maui.RadialMenu;
+
+namespace RadialSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
             SfRadialMenu radialMenu = new SfRadialMenu()
             {
                 CenterButtonStroke = Colors.Black,
                 CenterButtonText="Edit",
             };
+
+            RadialMenuItemsCollection itemCollection =  new RadialMenuItemsCollection()
+            new SfRadialMenuItem() { Text = "Bold", FontSize = 12 },
+            new SfRadialMenuItem() { Text = "Copy", FontSize = 12 },
+            new SfRadialMenuItem() { Text = "Paste", FontSize = 12 },
+            new SfRadialMenuItem() { Text = "Undo", FontSize = 12 },
+            new SfRadialMenuItem() { Text = "Color", FontSize = 12 },
+            radialMenu.Items = itemCollection;
+            this.Content = radialMenu;
+        }
+    }
+}
 
 {% endhighlight %}
 
@@ -405,24 +682,57 @@ The [`CenterButtonStrokeThickness`](https://help.syncfusion.com/cr/maui/Syncfusi
 {% tabs %}
 
 {% highlight xaml %}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RadialSample"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
+             x:Class="RadialSample.MainPage">
     <syncfusion:SfRadialMenu CenterButtonText="Edit"
                              CenterButtonStroke="Black"
                              CenterButtonStrokeThickness="5">
+        <syncfusion:SfRadialMenu.Items>
+            <syncfusion:SfRadialMenuItem Text="Bold" FontSize="12"/>
+            <syncfusion:SfRadialMenuItem Text="Copy" FontSize="12"/>
+            <syncfusion:SfRadialMenuItem Text="Undo" FontSize="12"/>
+            <syncfusion:SfRadialMenuItem Text="Paste" FontSize="12"/>
+            <syncfusion:SfRadialMenuItem Text="Color" FontSize="12"/>
+        </syncfusion:SfRadialMenu.Items>
     </syncfusion:SfRadialMenu>
+</ContentPage>
     
 {% endhighlight %}
 
 {% highlight C# %}
 
+using Syncfusion.Maui.RadialMenu;
+
+namespace RadialSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
             SfRadialMenu radialMenu = new SfRadialMenu()
             {
                 CenterButtonText="Edit",
                 CenterButtonStroke = Colors.Black,
                 CenterButtonStrokeThickness = 5,
             };
+
+            RadialMenuItemsCollection itemCollection =  new RadialMenuItemsCollection()
+            new SfRadialMenuItem() { Text = "Bold", FontSize = 12 },
+            new SfRadialMenuItem() { Text = "Copy", FontSize = 12 },
+            new SfRadialMenuItem() { Text = "Paste", FontSize = 12 },
+            new SfRadialMenuItem() { Text = "Undo", FontSize = 12 },
+            new SfRadialMenuItem() { Text = "Color", FontSize = 12 },
+            radialMenu.Items = itemCollection;
             this.Content = radialMenu;
         }
     }
+}
 
 {% endhighlight %}
 
@@ -438,6 +748,12 @@ You can customize the center button using [`CenterButtonView`](https://help.sync
 
 {% highlight xaml %}
 
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RadialSample"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
+             x:Class="RadialSample.MainPage">
     <syncfusion:SfRadialMenu x:Name="radialMenu">
         <syncfusion:SfRadialMenu.CenterButtonView>
             <Grid>
@@ -456,15 +772,44 @@ You can customize the center button using [`CenterButtonView`](https://help.sync
          <syncfusion:SfRadialMenu.Items>
                     <syncfusion:SfRadialMenuItem Text="Bold" 
                                                  FontSize="12"/>
+                    <syncfusion:SfRadialMenuItem Text="Copy" 
+                                                 FontSize="12"/>
+                    <syncfusion:SfRadialMenuItem Text="Undo" 
+                                                 FontSize="12"/>
+                    <syncfusion:SfRadialMenuItem Text="Paste" 
+                                                 FontSize="12"/>
+                    <syncfusion:SfRadialMenuItem Text="Color" FontSize="12">
+                        <syncfusion:SfRadialMenuItem.Items>
+                            <syncfusion:SfRadialMenuItem Text="Font" 
+                                                         FontSize="12" 
+                                                         ItemWidth="50"/>
+                            <syncfusion:SfRadialMenuItem Text="Gradient" 
+                                                         FontSize="12" 
+                                                         ItemWidth="50"/>
+                            <syncfusion:SfRadialMenuItem Text="Highlight" 
+                                                         FontSize="12" 
+                                                         ItemWidth="50"/>
                         </syncfusion:SfRadialMenuItem.Items>
                     </syncfusion:SfRadialMenuItem>
         </syncfusion:SfRadialMenu.Items>
     </syncfusion:SfRadialMenu>
+</ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
+using Syncfusion.Maui.RadialMenu;
+
+namespace RadialSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+            string[] mainItem = new string[] { "Bold", "Copy", "Paste", "Undo", "Color" };
+            string[] colorItem = new string[] { "Font", "Gradient", "Highlight" };
             Grid centerButtonGrid = new Grid();
             Grid centerButtonBackGrid = new Grid();
             StackLayout centerButtonLayout = new StackLayout()
@@ -487,7 +832,28 @@ You can customize the center button using [`CenterButtonView`](https://help.sync
                 CenterButtonBackView = centerButtonBackGrid
             };
 
+            for (int i = 0; i < 5; i++)
+            {
+                SfRadialMenuItem mainMenuItems = new SfRadialMenuItem();
+                mainMenuItems.Text = mainItem[i];
+                mainMenuItems.FontSize = 12;
+                syncfusion.Items.Add(mainMenuItems);
+            }
+
+            for (int i = 0; i < 3; i++)
+            {
+                SfRadialMenuItem colorSubMenuItem = new SfRadialMenuItem();
+                colorSubMenuItem.Text = colorItem[i];
+                colorSubMenuItem.FontSize = 12;
+                colorSubMenuItem.ItemWidth = 50;
+                radialMenu.Items[4].Items.Add(colorSubMenuItem);
+            }
+
             this.Content = radialMenu;
+        }
+    }
+}
+
 {% endhighlight %}
 
 {% endtabs %}
@@ -502,6 +868,12 @@ The [`EnableCenterButtonAnimation`](https://help.syncfusion.com/cr/maui/Syncfusi
 
 {% highlight xaml %}
 
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RadialSample"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
+             x:Class="RadialSample.MainPage">
     <syncfusion:SfRadialMenu  EnableCenterButtonAnimation="True">
         <syncfusion:SfRadialMenu.Items>
             <syncfusion:SfRadialMenuItem Text="Bold" FontSize="12"/>
@@ -511,11 +883,21 @@ The [`EnableCenterButtonAnimation`](https://help.syncfusion.com/cr/maui/Syncfusi
             <syncfusion:SfRadialMenuItem Text="Color" FontSize="12"/>
         </syncfusion:SfRadialMenu.Items>
     </syncfusion:SfRadialMenu>
+</ContentPage>
     
 {% endhighlight %}
 
 {% highlight C# %}
 
+using Syncfusion.Maui.RadialMenu;
+
+namespace RadialSample
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
             SfRadialMenu radialMenu = new SfRadialMenu()
             {
                 EnableCenterButtonAnimation = true
@@ -531,6 +913,7 @@ The [`EnableCenterButtonAnimation`](https://help.syncfusion.com/cr/maui/Syncfusi
             this.Content = radialMenu;
         }
     }
+}
 
 {% endhighlight %}
 
