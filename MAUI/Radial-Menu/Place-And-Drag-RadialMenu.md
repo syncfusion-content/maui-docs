@@ -18,58 +18,52 @@ You can enable or disable dragging by using the [`IsDragEnabled`](https://help.s
 {% tabs %}
 
 {% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:RadialSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
-             x:Class="RadialSample.MainPage">
-    <ContentPage.Content>
         <syncfusion:SfRadialMenu x:Name="radialMenu" 
-                                 IsDragEnabled="true" 
-                                 CenterButtonText="&#xe710;"
-                                 CenterButtonFontFamily="Maui Material Assets" 
-                                 CenterButtonRadius="30"
-                                 CenterButtonFontSize="26"
-                                 CenterButtonBorderThickness="3">
+                                 IsDragEnabled="true" >
         </syncfusion:SfRadialMenu>
-    </ContentPage.Content>
-</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-using Syncfusion.Maui.RadialMenu;
-
-namespace RadialSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-
             SfRadialMenu radialMenu = new SfRadialMenu()
             {
                 IsDragEnabled = true,
-                CenterButtonText="&#xe710;",
-                CenterButtonFontFamily="Maui Material Assets" ,
-                CenterButtonRadius = 30,
-                CenterButtonFontSize = 26,
-                CenterButtonBorderThickness = 3
             };
             this.Content = radialMenu;
-        }
-    }
-}
 
 {% endhighlight %}
 
 {% endtabs %}
 
 ![Dragging Radial Menu](images/placing-dragging/maui-radialmenu-dragging.png)
+
+
+## Rotation
+
+You can enable or disable the rotation behavior of the Radial Menu by using the [`EnableRotation`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_EnableRotation) property.
+
+{% tabs %}
+
+{% highlight xaml %}
+        <syncfusion:SfRadialMenu x:Name="radialMenu" 
+                                  EnableRotation ="False">
+        </syncfusion:SfRadialMenu>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+            SfRadialMenu radialMenu = new SfRadialMenu()
+            {
+                EnableRotation = false
+            };
+            this.Content = radialMenu;
+    
+{% endhighlight %}
+
+{% endtabs %}
+
 
 ## Drag events
 
@@ -89,31 +83,15 @@ To hook the [`DragBegin`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Ra
 
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:RadialSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
-             x:Class="RadialSample.MainPage">
     <radialMenu:SfRadialMenu x:Name="radialMenu"
                              DragBegin="RadialMenu_DragBegin"
-                             IsDragEnabled = "True",
-                             CenterButtonText="&#xe710;",
-                             CenterButtonFontFamily="Maui Material Assets" ,
-                             CenterButtonRadius = "30",
-                             CenterButtonFontSize = "26",
-                             CenterButtonBorderThickness = "3">
+                             IsDragEnabled = "True">
     </radialMenu:SfRadialMenu>
-</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-using Syncfusion.Maui.RadialMenu;
-
-namespace RadialSample
-{
     public partial class MainPage : ContentPage
     {
         public MainPage()
@@ -122,11 +100,6 @@ namespace RadialSample
             SfRadialMenu radialMenu = new SfRadialMenu()
             {
                 IsDragEnabled = true,
-                CenterButtonText="&#xe710;",
-                CenterButtonFontFamily="Maui Material Assets" ,
-                CenterButtonRadius = 30,
-                CenterButtonFontSize = 26,
-                CenterButtonBorderThickness = 3
             };
 
             radialMenu.DragBegin += RadialMenu_DragBegin;
@@ -138,7 +111,6 @@ namespace RadialSample
             e.Handled = true;
         }
     }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -160,32 +132,15 @@ To hook the [`DragEnd`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Radi
 {% highlight xaml %}
 
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:RadialSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
-             x:Class="RadialSample.MainPage">
     <radialMenu:SfRadialMenu x:Name="radialMenu" 
                              IsDragEnabled="true" 
-                             DragEnd="radialMenu_DragEnd"
-                             CenterButtonText="&#xe713;"
-                             CenterButtonFontFamily="{StaticResource customfontfamily}" 
-                             CenterButtonRadius="30"
-                             CenterButtonFontSize="26" 
-                             CenterButtonTextColor="White"
-                             CenterButtonBorderColor="White" 
-                             CenterButtonBorderThickness="3">
+                             DragEnd="radialMenu_DragEnd">
     </radialMenu:SfRadialMenu>
 </ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# %}
-
-using Syncfusion.Maui.RadialMenu;
-
-namespace RadialSample
-{
     public partial class MainPage : ContentPage
     {
         public MainPage()
@@ -194,11 +149,6 @@ namespace RadialSample
             SfRadialMenu radialMenu = new SfRadialMenu()
             {
                 IsDragEnabled = true,
-                CenterButtonText="&#xe710;",
-                CenterButtonFontFamily="Maui Material Assets",
-                CenterButtonRadius = 30,
-                CenterButtonFontSize = 26,
-                CenterButtonBorderThickness = 3
             };
 
             radialMenu.DragEnd += radialMenu_DragEnd;
@@ -210,7 +160,6 @@ namespace RadialSample
             e.Handled = true;
         }
     }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -222,52 +171,20 @@ You can place the Radial Menu anywhere on its parent layout. The position of the
 {% tabs %}
 
 {% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:RadialSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
-             x:Class="RadialSample.MainPage">
     <radialMenu:SfRadialMenu x:Name="radialMenu" 
-                             Point="100, 150"
-                             CenterButtonText="&#xe710;"
-                             CenterButtonFontFamily="Maui Material Assets"
-                             CenterButtonRadius="30"
-                             CenterButtonFontSize="26" 
-                             CenterButtonTextColor="White"
-                             CenterButtonBorderColor="White" 
-                             CenterButtonBorderThickness="3">
+                             Point="100, 150">
     </radialMenu:SfRadialMenu>
-</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-using Syncfusion.Maui.RadialMenu;
-
-namespace RadialSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
             SfRadialMenu radialMenu = new SfRadialMenu()
             {
-                CenterButtonText="&#xe710;",
-                CenterButtonFontFamily="Maui Material Assets",
-                CenterButtonRadius = 30,
-                CenterButtonFontSize = 26,
-                CenterButtonBorderThickness = 3,
                 Point = new Point(100, 150)
             };
 
             this.Content = radialMenu;
-        }
-    }
-}
             
 {% endhighlight %}
 {% endtabs %}

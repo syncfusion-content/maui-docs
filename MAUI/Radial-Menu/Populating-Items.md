@@ -23,12 +23,6 @@ The following code sample demonstrates how to create a Radial Menu control with 
 
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:RadialSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
-             x:Class="RadialSample.MainPage">
     <syncfusion:SfRadialMenu>
         <syncfusion:SfRadialMenu.Items>
             <syncfusion:SfRadialMenuItem Text="Bold" FontSize="12"/>
@@ -38,23 +32,11 @@ The following code sample demonstrates how to create a Radial Menu control with 
             <syncfusion:SfRadialMenuItem Text="Color" FontSize="12"/>
         </syncfusion:SfRadialMenu.Items>
     </syncfusion:SfRadialMenu>
-</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# %}
-
-using Syncfusion.Maui.RadialMenu;
-
-namespace RadialSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-
-            SfRadialMenu radialMenu = new SfRadialMenu();
+           SfRadialMenu radialMenu = new SfRadialMenu();
 
             RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection() 
             {
@@ -66,9 +48,6 @@ namespace RadialSample
             };
             radialMenu.Items = itemCollection;
             this.Content = radialMenu;
-        }
-    }
-}
 
 {% endhighlight %}
 
@@ -85,13 +64,6 @@ The following code sample demonstrates how to display images and text in the Rad
 {% tabs %}
 
 {% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:RadialSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
-             x:Class="RadialSample.MainPage">
     <syncfusion:SfRadialMenu>
         <syncfusion:SfRadialMenu.Items>
             <syncfusion:SfRadialMenuItem Text="John"  Image="johnson.png"/>
@@ -101,22 +73,10 @@ The following code sample demonstrates how to display images and text in the Rad
             <syncfusion:SfRadialMenuItem Text="Joe"  Image="joe.png"/>
         </syncfusion:SfRadialMenu.Items>
     </syncfusion:SfRadialMenu>
-</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# %}
-
-using Syncfusion.Maui.RadialMenu;
-
-namespace RadialSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-
             SfRadialMenu radialMenu = new SfRadialMenu();
             RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()
             {
@@ -129,9 +89,6 @@ namespace RadialSample
 
             radialMenu.Items = itemCollection;
             this.Content = radialMenu;
-        }
-    }
-}
 
 {% endhighlight %}
 
@@ -147,12 +104,6 @@ The following code sample demonstrates how to display custom font with text in t
 
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:RadialSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
-             x:Class="RadialSample.MainPage">
     <syncfusion:SfRadialMenu x:Name="radialMenu"
                     CenterButtonBackFontFamily="Maui Material Assets"
                     CenterButtonBackFontSize="28"
@@ -164,35 +115,12 @@ The following code sample demonstrates how to display custom font with text in t
             <syncfusion:SfRadialMenuItem FontFamily="Maui Material Assets"
                             FontSize="20"
                             Text="&#xe72e;"/>
-            <syncfusion:SfRadialMenuItem  FontFamily="Maui Material Assets"
-                            FontSize="20"
-                            Text="&#xe744;"/>
-            <syncfusion:SfRadialMenuItem FontFamily="Maui Material Assets"
-                            FontSize="20"
-                            Text="&#xe745;"/>
-            <syncfusion:SfRadialMenuItem FontFamily="Maui Material Assets"
-                            FontSize="20"
-                            Text="&#xe73b;"/>
-            <syncfusion:SfRadialMenuItem FontFamily="Maui Material Assets"
-                            FontSize="20"
-                            Text="&#xe762;"/>
         </syncfusion:SfRadialMenu.Items>
     </syncfusion:SfRadialMenu>
-</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# %}
-
-using Syncfusion.Maui.RadialMenu;
-
-namespace RadialSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
 
             SfRadialMenu radialMenu = new SfRadialMenu()
             {
@@ -206,18 +134,10 @@ namespace RadialSample
             RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()
             {
                 new SfRadialMenuItem() { FontFamily="Maui Material Assets" FontSize="20" Text="&#xe72e;" },
-                new SfRadialMenuItem() { FontFamily="Maui Material Assets" FontSize="20" Text="&#xe744;" },
-                new SfRadialMenuItem() { FontFamily="Maui Material Assets" FontSize="20" Text="&#xe745;" },
-                new SfRadialMenuItem() { FontFamily="Maui Material Assets" FontSize="20" Text="&#xe73b;" },
-                new SfRadialMenuItem() { FontFamily="Maui Material Assets" FontSize="20" Text="&#xe762;" },
             };
             
             radialMenu.Items = itemCollection;
             this.Content = radialMenu;
-        }
-    }
-}
-
 {% endhighlight %}
 
 {% endtabs %}
@@ -234,22 +154,12 @@ The following code sample demonstrates how to add the nested items of Radial Men
 
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:RadialSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
-             x:Class="RadialSample.MainPage">
      <syncfusion:SfRadialMenu CenterButtonText="Edit" 
                              CenterButtonFontSize="12">
         <syncfusion:SfRadialMenu.Items>
             <syncfusion:SfRadialMenuItem Text="Bold" 
                                          FontSize="12"/>
             <syncfusion:SfRadialMenuItem Text="Copy" 
-                                         FontSize="12"/>
-            <syncfusion:SfRadialMenuItem Text="Undo" 
-                                         FontSize="12"/>
-            <syncfusion:SfRadialMenuItem Text="Paste" 
                                          FontSize="12"/>
             <syncfusion:SfRadialMenuItem Text="Color" FontSize="12">
                 <syncfusion:SfRadialMenuItem.Items>
@@ -266,21 +176,11 @@ The following code sample demonstrates how to add the nested items of Radial Men
             </syncfusion:SfRadialMenuItem>
         </syncfusion:SfRadialMenu.Items>
     </syncfusion:SfRadialMenu>
-</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# %} 
 
-using Syncfusion.Maui.RadialMenu;
-
-namespace RadialSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
             string[] mainItem = new string[] { "Bold", "Copy", "Paste", "Undo", "Color" };
             string[] colorItem = new string[] { "Font", "Gradient", "Highlight" };
 
@@ -312,10 +212,6 @@ namespace RadialSample
             }
 
             this.Content = radialMenu;
-        }
-    }
-}
-
 {% endhighlight %}
 
 {% endtabs %}
@@ -330,12 +226,6 @@ Using [`ItemsSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Radial
 
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:RadialSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
-             x:Class="RadialSample.MainPage">
     <ContentPage.BindingContext>
         <local:EmployeeViewModel/>
     </ContentPage.BindingContext>
@@ -360,16 +250,11 @@ Using [`ItemsSource`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Radial
             </syncfusion:SfRadialMenu.ItemTemplate>
         </syncfusion:SfRadialMenu>
     </ContentPage.Content>
-</ContentPage>
     
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.RadialMenu;
-
-namespace RadialSample
-{
     public partial class MainPage : ContentPage
     {
         public MainPage()
@@ -409,7 +294,6 @@ namespace RadialSample
             EmployeeCollection.Add(new EmployeeModel() { EmployeeName = "Yang" });
         }
     }
-}
 
 {% endhighlight %}
 
@@ -424,13 +308,6 @@ The animation duration in a Radial Menu can be changed using the [`AnimationDura
 {% tabs %}
 
 {% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:RadialSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
-             x:Class="RadialSample.MainPage">
     <syncfusion:SfRadialMenu AnimationDuration="800">
         <syncfusion:SfRadialMenu.Items>
             <syncfusion:SfRadialMenuItem Text="Bold" FontSize="12"/>
@@ -440,21 +317,11 @@ The animation duration in a Radial Menu can be changed using the [`AnimationDura
             <syncfusion:SfRadialMenuItem Text="Color" FontSize="12"/>
         </syncfusion:SfRadialMenu.Items>
     </syncfusion:SfRadialMenu>
-</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-using Syncfusion.Maui.RadialMenu;
-
-namespace RadialSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
             SfRadialMenu radialMenu = new SfRadialMenu()
             {
                 AnimationDuration = 800
@@ -470,9 +337,6 @@ namespace RadialSample
             };
             radialMenu.Items = itemCollection;
             this.Content = radialMenu;
-        }
-    }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -484,55 +348,22 @@ The [`IsOpen`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.Sf
 {% tabs %}
 
 {% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:RadialSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
-             x:Class="RadialSample.MainPage">
     <syncfusion:SfRadialMenu IsOpen="True">
         <syncfusion:SfRadialMenu.Items>
             <syncfusion:SfRadialMenuItem Text="Bold" FontSize="12"/>
-            <syncfusion:SfRadialMenuItem Text="Copy" FontSize="12"/>
-            <syncfusion:SfRadialMenuItem Text="Undo" FontSize="12"/>
-            <syncfusion:SfRadialMenuItem Text="Paste" FontSize="12"/>
-            <syncfusion:SfRadialMenuItem Text="Color" FontSize="12"/>
         </syncfusion:SfRadialMenu.Items>
     </syncfusion:SfRadialMenu>
-</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-using Syncfusion.Maui.RadialMenu;
-
-namespace RadialSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
             SfRadialMenu radialMenu = new SfRadialMenu()
             {
                 IsOpen = true
             };
-
-            RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()
-            {
-                new SfRadialMenuItem() { Text = "Bold", FontSize = 12 },
-                new SfRadialMenuItem() { Text = "Copy", FontSize = 12 },
-                new SfRadialMenuItem() { Text = "Paste", FontSize = 12 },
-                new SfRadialMenuItem() { Text = "Undo", FontSize = 12 },
-                new SfRadialMenuItem() { Text = "Color", FontSize = 12 },
-            };
-            radialMenu.Items = itemCollection;
+  
             this.Content = radialMenu;
-        }
-    }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -541,27 +372,9 @@ namespace RadialSample
 
 The thickness of the strip between items can be changed using the [`SeparatorThickness`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_SeparatorThickness) property, and the color of the strip can be changed using the [`SeparatorColor`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_SeparatorColor) property.
 
-{% tabs %}
-
-{% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:RadialSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
-             x:Class="RadialSample.MainPage">
     <syncfusion:SfRadialMenu  SeparatorThickness="5" 
                               SeparatorColor="#FF1493">
-        <syncfusion:SfRadialMenu.Items>
-            <syncfusion:SfRadialMenuItem Text="Bold" FontSize="12"/>
-            <syncfusion:SfRadialMenuItem Text="Copy" FontSize="12"/>
-            <syncfusion:SfRadialMenuItem Text="Undo" FontSize="12"/>
-            <syncfusion:SfRadialMenuItem Text="Paste" FontSize="12"/>
-            <syncfusion:SfRadialMenuItem Text="Color" FontSize="12"/>
-        </syncfusion:SfRadialMenu.Items>
     </syncfusion:SfRadialMenu>
-</ContentPage>
 
 {% endhighlight %}
 
@@ -569,13 +382,6 @@ The thickness of the strip between items can be changed using the [`SeparatorThi
 
 using Syncfusion.Maui.RadialMenu;
 
-namespace RadialSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
             SfRadialMenu radialMenu = new SfRadialMenu()
             {
                 SeparatorThickness = 50,
@@ -583,19 +389,9 @@ namespace RadialSample
 
             };
 
-            RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()
-            {
-                new SfRadialMenuItem() { Text = "Bold", FontSize = 12 },
-                new SfRadialMenuItem() { Text = "Copy", FontSize = 12 },
-                new SfRadialMenuItem() { Text = "Paste", FontSize = 12 },
-                new SfRadialMenuItem() { Text = "Undo", FontSize = 12 },
-                new SfRadialMenuItem() { Text = "Color", FontSize = 12 },
-            };
             radialMenu.Items = itemCollection;
             this.Content = radialMenu;
-        }
-    }
-}
+
 
 {% endhighlight %}
 {% endtabs %}
@@ -608,12 +404,6 @@ The radius of the rim can be changed using the [`RimRadius`](https://help.syncfu
 
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:RadialSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
-             x:Class="RadialSample.MainPage">
     <syncfusion:SfRadialMenu  RimRadius="200" 
                               RimColor="#FF1493">
         <syncfusion:SfRadialMenu.Items>
@@ -624,21 +414,10 @@ The radius of the rim can be changed using the [`RimRadius`](https://help.syncfu
             <syncfusion:SfRadialMenuItem Text="Color" FontSize="12"/>
         </syncfusion:SfRadialMenu.Items>
     </syncfusion:SfRadialMenu>
-</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# %}
-
-using Syncfusion.Maui.RadialMenu;
-
-namespace RadialSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
 
             SfRadialMenu radialMenu = new SfRadialMenu()
             {
@@ -656,9 +435,6 @@ namespace RadialSample
             };
             radialMenu.Items = itemCollection;
             this.Content = radialMenu;
-        }
-    }
-}
 
 {% endhighlight %}
 {% endtabs %}
@@ -671,35 +447,16 @@ The control is populated with a list of employees, and the employee model contai
 
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:RadialSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
-             x:Class="RadialSample.MainPage">
     <ContentPage.BindingContext>
         <local:EmployeeViewModel/>
     </ContentPage.BindingContext>
     <syncfusion:SfRadialMenu 
         ItemsSource="{Binding EmployeeCollection}"
         DisplayMemberPath="EmployeeName"/>
-</ContentPage>
 
 {% endhighlight %}
 
 {% highlight c# %}
-
-using Syncfusion.Maui.RadialMenu;
-
-namespace RadialSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-        }
-    }
 
     public class Employee
     {
@@ -734,7 +491,6 @@ namespace RadialSample
             employeeCollection.Add(new Employee() { ID = 4, EmployeeName = "Lucas" });
         }
     }
-}
 
 {% endhighlight %}
 {% endtabs %}

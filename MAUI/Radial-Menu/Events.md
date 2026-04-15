@@ -17,12 +17,6 @@ In the Radial Menu, you can perform an action while navigating between levels. T
 
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:RadialSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
-             x:Class="RadialSample.MainPage">
     <syncfusion:SfRadialMenu Navigating="SfRadialMenu_Navigating" 
                              Navigated="SfRadialMenu_Navigated">
         <syncfusion:SfRadialMenu.Items>
@@ -33,39 +27,15 @@ In the Radial Menu, you can perform an action while navigating between levels. T
             <syncfusion:SfRadialMenuItem Text="Color" FontSize="12"/>
         </syncfusion:SfRadialMenu.Items>
     </syncfusion:SfRadialMenu>
-</ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.RadialMenu;
-
-namespace RadialSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
             SfRadialMenu radialMenu = new SfRadialMenu();
-
-            RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()
-            {
-                new SfRadialMenuItem() { Text = "Bold", FontSize = 12 },
-                new SfRadialMenuItem() { Text = "Copy", FontSize = 12 },
-                new SfRadialMenuItem() { Text = "Paste", FontSize = 12 },
-                new SfRadialMenuItem() { Text = "Undo", FontSize = 12 },
-                new SfRadialMenuItem() { Text = "Color", FontSize = 12 },
-            };
-            
-            radialMenu.Items = itemCollection;
-
             radialMenu.Navigating += SfRadialMenu_Navigating;
             radialMenu.Navigated += SfRadialMenu_Navigated;
-
             this.Content = radialMenu;
-        }
 
         private async void SfRadialMenu_Navigating(object sender, NavigatingEventArgs e)
         {
@@ -76,8 +46,6 @@ namespace RadialSample
         {
            await DisplayAlert("Alert", "ItemNavigated", "Ok");
         }
-    }
-}
 
 {% endhighlight %}
 
@@ -94,22 +62,9 @@ You can perform an action while opening the Radial Menu. The [`Opening`](https:/
 {% highlight xaml %}
 
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:RadialSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
-             x:Class="RadialSample.MainPage">
     <syncfusion:SfRadialMenu Opening ="SfRadialMenu_Opening" 
                              Opened="SfRadialMenu_Opened">
-        <syncfusion:SfRadialMenu.Items>
-            <syncfusion:SfRadialMenuItem Text="Bold" FontSize="12"/>
-            <syncfusion:SfRadialMenuItem Text="Copy" FontSize="12"/>
-            <syncfusion:SfRadialMenuItem Text="Undo" FontSize="12"/>
-            <syncfusion:SfRadialMenuItem Text="Paste" FontSize="12"/>
-            <syncfusion:SfRadialMenuItem Text="Color" FontSize="12"/>
-        </syncfusion:SfRadialMenu.Items>
     </syncfusion:SfRadialMenu>
-</ContentPage>
 
 {% endhighlight %}
 
@@ -124,19 +79,7 @@ namespace RadialSample
         public MainPage()
         {
             InitializeComponent();
-            SfRadialMenu radialMenu = new SfRadialMenu();
-
-            RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()
-            {
-                new SfRadialMenuItem() { Text = "Bold", FontSize = 12 },
-                new SfRadialMenuItem() { Text = "Copy", FontSize = 12 },
-                new SfRadialMenuItem() { Text = "Paste", FontSize = 12 },
-                new SfRadialMenuItem() { Text = "Undo", FontSize = 12 },
-                new SfRadialMenuItem() { Text = "Color", FontSize = 12 },
-            };
-            
-            radialMenu.Items = itemCollection;
-            
+            SfRadialMenu radialMenu = new SfRadialMenu();            
             radialMenu.Opening += SfRadialMenu_Opening;
             radialMenu.Opened += SfRadialMenu_Opened;
 
@@ -167,53 +110,22 @@ You can perform an action when closing the Radial Menu. The [`Closing`](https://
 
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:RadialSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
-             x:Class="RadialSample.MainPage">
     <syncfusion:SfRadialMenu  Closing ="SfRadialMenu_Closing" 
                               Closed="SfRadialMenu_Closed">
-        <syncfusion:SfRadialMenu.Items>
-            <syncfusion:SfRadialMenuItem Text="Bold" FontSize="12"/>
-            <syncfusion:SfRadialMenuItem Text="Copy" FontSize="12"/>
-            <syncfusion:SfRadialMenuItem Text="Undo" FontSize="12"/>
-            <syncfusion:SfRadialMenuItem Text="Paste" FontSize="12"/>
-            <syncfusion:SfRadialMenuItem Text="Color" FontSize="12"/>
-        </syncfusion:SfRadialMenu.Items>
     </syncfusion:SfRadialMenu>
-</ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.RadialMenu;
-
-namespace RadialSample
-{
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
             SfRadialMenu radialMenu = new SfRadialMenu();
-
-            RadialMenuItemsCollection itemCollection = RadialMenuItemsCollection()
-            {
-                new SfRadialMenuItem() { Text = "Bold", FontSize = 12 },
-                new SfRadialMenuItem() { Text = "Copy", FontSize = 12 },
-                new SfRadialMenuItem() { Text = "Paste", FontSize = 12 },
-                new SfRadialMenuItem() { Text = "Undo", FontSize = 12 },
-                new SfRadialMenuItem() { Text = "Color", FontSize = 12 },
-            };
-            
-            radialMenu.Items = itemCollection;
-
             radialMenu.Closing += SfRadialMenu_Closing;
             radialMenu.Closed += SfRadialMenu_Closed;
-
             this.Content = radialMenu;
         }
 
@@ -227,7 +139,6 @@ namespace RadialSample
            await DisplayAlert("Alert", "ItemClosed", "Ok");
         }
     }
-}
 
 {% endhighlight %}
 
@@ -241,12 +152,6 @@ You can perform an action when tapping the center back button of the Radial Menu
 
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:RadialSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
-             x:Class="RadialSample.MainPage">
     <syncfusion:SfRadialMenu CenterButtonBackTapped="SfRadialMenu_CenterButtonBackTapped">
         <syncfusion:SfRadialMenu.Items>
             <syncfusion:SfRadialMenuItem Text="Bold" FontSize="12"/>
@@ -256,34 +161,17 @@ You can perform an action when tapping the center back button of the Radial Menu
             <syncfusion:SfRadialMenuItem Text="Color" FontSize="12"/>
         </syncfusion:SfRadialMenu.Items>
     </syncfusion:SfRadialMenu>
-</ContentPage>
 
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.RadialMenu;
-
-namespace RadialSample
-{
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
-            SfRadialMenu radialMenu = new SfRadialMenu();
-
-            RadialMenuItemsCollection itemCollection = RadialMenuItemsCollection()
-            {
-                new SfRadialMenuItem() { Text = "Bold", FontSize = 12 },
-                new SfRadialMenuItem() { Text = "Copy", FontSize = 12 },
-                new SfRadialMenuItem() { Text = "Paste", FontSize = 12 },
-                new SfRadialMenuItem() { Text = "Undo", FontSize = 12 },
-                new SfRadialMenuItem() { Text = "Color", FontSize = 12 },
-            };
-            
-            radialMenu.Items = itemCollection;
-
+            SfRadialMenu radialMenu = new SfRadialMenu();      
             radialMenu.CenterButtonBackTapped += SfRadialMenu_CenterButtonBackTapped;
             this.Content = radialMenu;
         }
@@ -293,7 +181,6 @@ namespace RadialSample
            await DisplayAlert("Alert", "CenterButtonTapped", "Ok");
         }
     }
-}
 
 {% endhighlight %}
 
@@ -307,22 +194,11 @@ You can perform an action when tapping the Radial Menu item of the Radial Menu. 
 
 {% highlight xaml %}
 
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:RadialSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
-             x:Class="RadialSample.MainPage">
     <syncfusion:SfRadialMenu>
         <syncfusion:SfRadialMenu.Items>
             <syncfusion:SfRadialMenuItem Text="Bold" FontSize="12" ItemTapped="SfRadialMenuItem_ItemTapped"/>
-            <syncfusion:SfRadialMenuItem Text="Copy" FontSize="12"/>
-            <syncfusion:SfRadialMenuItem Text="Undo" FontSize="12"/>
-            <syncfusion:SfRadialMenuItem Text="Paste" FontSize="12"/>
-            <syncfusion:SfRadialMenuItem Text="Color" FontSize="12"/>
         </syncfusion:SfRadialMenu.Items>
     </syncfusion:SfRadialMenu>
-</ContentPage>
  
  {% endhighlight %}
 
@@ -330,8 +206,6 @@ You can perform an action when tapping the Radial Menu item of the Radial Menu. 
 
 using Syncfusion.Maui.RadialMenu;
 
-namespace RadialSample
-{
     public partial class MainPage : ContentPage
     {
         public MainPage()
@@ -342,10 +216,6 @@ namespace RadialSample
             RadialMenuItemsCollection itemCollection = new RadialMenuItemsCollection()
             {
                 new SfRadialMenuItem() { Text = "Bold", FontSize = 12 },
-                new SfRadialMenuItem() { Text = "Copy", FontSize = 12 },
-                new SfRadialMenuItem() { Text = "Paste", FontSize = 12 },
-                new SfRadialMenuItem() { Text = "Undo", FontSize = 12 },
-                new SfRadialMenuItem() { Text = "Color", FontSize = 12 },
             };
             
             radialMenu.Items = itemCollection;
@@ -359,7 +229,6 @@ namespace RadialSample
            await DisplayAlert("Alert", "ItemTapped", "Ok");
         }
     }
-}
 
 {% endhighlight %}
 
@@ -372,33 +241,16 @@ You can perform an action when pressing and releasing the Radial Menu item of th
 {% tabs %}
 
 {% highlight xaml %}
-
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:RadialSample"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.RadialMenu;assembly=Syncfusion.Maui.RadialMenu"
-             x:Class="RadialSample.MainPage">    
     <syncfusion:SfRadialMenu>
         <syncfusion:SfRadialMenu.Items>
             <syncfusion:SfRadialMenuItem Text="Bold" FontSize="12" TouchDown="SfRadialMenuItemTouchDown" TouchUP="SfRadialMenuItemTouchUP" />
             <syncfusion:SfRadialMenuItem Text="Copy" FontSize="12"/>
-            <syncfusion:SfRadialMenuItem Text="Undo" FontSize="12"/>
-            <syncfusion:SfRadialMenuItem Text="Paste" FontSize="12"/>
-            <syncfusion:SfRadialMenuItem Text="Color" FontSize="12"/>
         </syncfusion:SfRadialMenu.Items>
     </syncfusion:SfRadialMenu>
-
-</ContentPage>
-
 {% endhighlight %}
 
 {% highlight C# %}
 
-using Syncfusion.Maui.RadialMenu;
-
-namespace RadialSample
-{
     public partial class MainPage : ContentPage
     {
         public MainPage()
@@ -410,9 +262,6 @@ namespace RadialSample
             {
                 new SfRadialMenuItem() { Text = "Bold", FontSize = 12 },
                 new SfRadialMenuItem() { Text = "Copy", FontSize = 12 },
-                new SfRadialMenuItem() { Text = "Paste", FontSize = 12 },
-                new SfRadialMenuItem() { Text = "Undo", FontSize = 12 },
-                new SfRadialMenuItem() { Text = "Color", FontSize = 12 },
             };
             
             radialMenu.Items = itemCollection;
@@ -431,7 +280,6 @@ namespace RadialSample
             await DisplayAlert("Alert", "The RadialMenuItem is released.", "Ok");
         }
     }
-}
 
 {% endhighlight %}
 

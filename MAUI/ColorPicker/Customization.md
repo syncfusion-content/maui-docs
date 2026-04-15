@@ -60,6 +60,23 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 ![Recent color](Images/Customization/RecentColors.png)
 
+## ClearRecentColors
+
+You can clear all colors shown in the Recent Colors section of the Color Picker by calling the [ClearRecentColors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ClearRecentColors) method. This method removes all previously selected colors and resets the Recent Colors list.
+
+{% tabs %}
+
+{% highlight c# %}
+
+SfColorPicker colorPicker = new SfColorPicker();
+
+// Clear all recent colors
+colorPicker.ClearRecentColors();
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ## Show input area
 
 You can show or hide the input area of the Color Picker by adjusting the [ShowInputArea](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ShowInputArea) property. By default, it is set to `True`.
@@ -163,6 +180,109 @@ SfColorPicker colorPicker = new SfColorPicker()
 
 ![Action buttons customization](Images/Customization/CustomizeActionButtons.png)
 
+Also you can customize the text appearance of the action buttons by defining a suitable label style for the [ApplyButtonLabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ApplyButtonLabelStyle) and [CancelButtonLabelStyle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_CancelButtonLabelStyle) properties.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<inputs:SfColorPicker>
+    <inputs:SfColorPicker.ApplyButtonLabelStyle>
+        <inputs:LabelStyle
+            FontSize="16"
+            TextColor="White"
+            FontAttributes="Bold" />
+    </inputs:SfColorPicker.ApplyButtonLabelStyle>
+    <inputs:SfColorPicker.CancelButtonLabelStyle>
+        <inputs:LabelStyle
+            FontSize="14"
+            TextColor="Gray"
+            FontAttributes="None" />
+    </inputs:SfColorPicker.CancelButtonLabelStyle>
+</inputs:SfColorPicker>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfColorPicker colorPicker = new SfColorPicker();
+
+// Set Apply button label style
+colorPicker.ApplyButtonLabelStyle = new LabelStyle
+{
+    FontSize = 16,
+    TextColor = Colors.White,
+    FontAttributes = FontAttributes.Bold
+};
+
+// Set Cancel button label style
+colorPicker.CancelButtonLabelStyle = new LabelStyle
+{
+    FontSize = 14,
+    TextColor = Colors.Gray,
+    FontAttributes = FontAttributes.None
+};
+    
+{% endhighlight %}
+
+{% endtabs %}
+
+## Customize Recent Colors and Spectrum Input View Label Style
+
+You can customize the text appearance of the recent colors label and the labels displayed in the spectrum input view by defining suitable label styles for the [RecentColorsLabelStyle]
+(https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_RecentColorsLabelStyle) and [SpectrumInputViewLabelStyle]
+(https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SpectrumInputViewLabelStyle) properties.
+
+- `RecentColorsLabelStyle` applies to the “Recent Colors” text displayed above the recent color palette.
+- `SpectrumInputViewLabelStyle` applies to the label texts displayed in the spectrum input view, such as HEX, R, G, B, H, S, V, and A modify labels.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<syncfusion:SfColorPicker>
+    <!-- Recent colors label style -->
+    <syncfusion:SfColorPicker.RecentColorsLabelStyle>
+        <syncfusion:LabelStyle
+            FontSize="14"
+            TextColor="DarkGray"
+            FontAttributes="Italic" />
+    </syncfusion:SfColorPicker.RecentColorsLabelStyle>
+    <!-- Spectrum input view label style (HEX, RGBA labels) -->
+    <syncfusion:SfColorPicker.SpectrumInputViewLabelStyle>
+        <syncfusion:LabelStyle
+            FontSize="14"
+            TextColor="Black"
+            FontFamily="Arial" />
+    </syncfusion:SfColorPicker.SpectrumInputViewLabelStyle>
+</syncfusion:SfColorPicker>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfColorPicker colorPicker = new SfColorPicker();
+
+// Set recent colors label style
+colorPicker.RecentColorsLabelStyle = new LabelStyle
+{
+    FontSize = 14,
+    TextColor = Colors.DarkGray,
+    FontAttributes = FontAttributes.Italic
+};
+
+// Set spectrum input view label style (HEX, RGBA, HSV labels)
+colorPicker.SpectrumInputViewLabelStyle = new LabelStyle
+{
+    FontSize = 14,
+    TextColor = Colors.Black,
+    FontFamily = "Arial"
+};
+    
+{% endhighlight %}
+
+{% endtabs %}
+
 ## No color option
 
 The [ShowNoColor](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ShowNoColor) property determines whether the `No Color` option is displayed in the Color Picker UI. This option allows users to clear their selection from the palette, effectively choosing no color. By default, this property is set to `False`.
@@ -237,6 +357,291 @@ SfColorPicker colorPicker = new SfColorPicker()
 {% endtabs %}
 
 ![Palette row spacing](Images/Customization/PaletteSpacing.png)
+
+## Palette cell customization
+
+### PaletteCellCornerRadius
+
+The [PaletteCellCornerRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_PaletteCellCornerRadius) specifies the corner radius of individual palette cells, allowing you to create rounded or custom‑shaped cells.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<syncfusion:SfColorPicker PaletteCellCornerRadius="15, 12, 15, 7" />  
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfColorPicker colorPicker = new SfColorPicker()
+{
+    PaletteCellCornerRadius = new CornerRadius(15, 12, 15, 7)
+};
+    
+{% endhighlight %}
+
+{% endtabs %}
+
+### PaletteCellShape
+
+The [PaletteCellShape](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_PaletteCellShape) specifies the shape of the palette cells. It supports the following shapes.
+
+- [Circle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.PaletteCellShape.html#Syncfusion_Maui_Inputs_PaletteCellShape_Circle)
+- [Square](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.PaletteCellShape.html#Syncfusion_Maui_Inputs_PaletteCellShape_Square)
+- [Default](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.PaletteCellShape.html#Syncfusion_Maui_Inputs_PaletteCellShape_Default)
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<syncfusion:SfColorPicker PaletteCellShape="Circle" />   
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfColorPicker colorPicker = new SfColorPicker()
+{
+    PaletteCellShape = PaletteCellShape.Circle
+};
+    
+{% endhighlight %}
+
+{% endtabs %}
+
+### PaletteCellSize
+
+The [PaletteCellSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_PaletteCellSize) specifies the width and height of each palette cell, allowing you to increase or decrease the overall size of the color palette items.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<syncfusion:SfColorPicker PaletteCellSize="40" />
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfColorPicker colorPicker = new SfColorPicker()
+{
+    PaletteCellSize = 40
+};
+    
+{% endhighlight %}
+
+{% endtabs %}
+
+### PaletteColors
+
+The [PaletteColors](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_PaletteColors) allows us to define a custom collection of colors to be displayed in the color picker’s palette view.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<syncfusion:SfColorPicker>
+    <syncfusion:SfColorPicker.PaletteColors>
+        <x:Array Type="{x:Type Color}">
+            <x:Static Member="Colors.Red" />
+            <x:Static Member="Colors.Green" />
+            <x:Static Member="Colors.Blue" />
+            <x:Static Member="Colors.Yellow" />
+        </x:Array>
+    </syncfusion:SfColorPicker.PaletteColors>
+</syncfusion:SfColorPicker>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfColorPicker colorPicker = new SfColorPicker();
+
+// Set custom palette colors
+colorPicker.PaletteColors = new List<Color>
+{
+    Colors.Red,
+    Colors.Green,
+    Colors.Blue,
+    Colors.Yellow,
+    Colors.Purple,
+    Colors.Orange
+};
+
+// Add a color to the existing palette
+colorPicker.PaletteColors.Add(Colors.Pink);
+    
+{% endhighlight %}
+
+{% endtabs %}
+
+## Selection indicator customization
+
+### SelectionIndicatorRadius
+
+The [SelectionIndicatorRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SelectionIndicatorRadius) specifies the corner radius of the selection indicator displayed over the selected color in the palette and spectrum views.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<syncfusion:SfColorPicker SelectionIndicatorRadius="6" />
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfColorPicker colorPicker = new SfColorPicker()
+{
+    SelectionIndicatorRadius = 6
+};
+    
+{% endhighlight %}
+
+{% endtabs %}
+
+### SelectionIndicatorStroke
+
+The [SelectionIndicatorStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SelectionIndicatorStroke) specifies the stroke color of the selection indicator.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<syncfusion:SfColorPicker SelectionIndicatorStroke="White" />  
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfColorPicker colorPicker = new SfColorPicker()
+{
+    SelectionIndicatorStroke = Colors.White
+};
+    
+{% endhighlight %}
+
+{% endtabs %}
+
+### SelectionIndicatorStrokeThickness
+
+The [SelectionIndicatorStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SelectionIndicatorStrokeThickness) specifies the thickness of the selection indicator stroke, allowing us to modify the selection outline.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<syncfusion:SfColorPicker SelectionIndicatorStrokeThickness="2" />
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfColorPicker colorPicker = new SfColorPicker()
+{
+    SelectionIndicatorStrokeThickness = 2
+};
+    
+{% endhighlight %}
+
+{% endtabs %}
+
+## Slider thumb customization
+
+The slider thumb represents the `Hue` and `Alpha` sliders in the color picker. You can customize its appearance using the following properties.
+
+### SliderThumbFill
+
+The [SliderThumbFill](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SliderThumbFill) specifies the fill brush for the slider thumb.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<syncfusion:SfColorPicker SliderThumbFill="Blue" />
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfColorPicker colorPicker = new SfColorPicker()
+{
+    SliderThumbFill = new SolidColorBrush(Colors.Blue)
+};
+    
+{% endhighlight %}
+
+{% endtabs %}
+
+### SliderThumbRadius
+
+The [SliderThumbRadius](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SliderThumbRadius) specifies the radius of the slider thumb.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<syncfusion:SfColorPicker SliderThumbRadius="12" />
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfColorPicker colorPicker = new SfColorPicker()
+{
+    SliderThumbRadius = 12
+};
+    
+{% endhighlight %}
+
+{% endtabs %}
+
+### SliderThumbStroke
+
+The [SliderThumbStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SliderThumbStroke) specifies the stroke color of the slider thumb.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<syncfusion:SfColorPicker SliderThumbStroke="Black" />
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfColorPicker colorPicker = new SfColorPicker()
+{
+    SliderThumbStroke = Colors.Black
+};
+    
+{% endhighlight %}
+
+{% endtabs %}
+
+### SliderThumbStrokeThickness
+
+The [SliderThumbStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SliderThumbStrokeThickness) specifies the thickness of the slider thumb stroke.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<syncfusion:SfColorPicker SliderThumbStrokeThickness="3" />
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfColorPicker colorPicker = new SfColorPicker()
+{
+    SliderThumbStrokeThickness = 3
+};
+    
+{% endhighlight %}
+
+{% endtabs %}
 
 ## Popup customization
 
