@@ -69,24 +69,6 @@ N> It is recommended to set the `TabBarHeight` to 72 while displaying both the i
 
 {% endtabs %}
 
-## Customize the TabBarSize
-
-The size of the tab bar can be customized by setting the [TabBarSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_TabBarSize) property. The default size is 48.
-
-{% tabs %}
-
-{% highlight xaml %}
-    <tabView:SfTabView TabBarSize="100" TabBarPlacement="Left" >
-{% endhighlight %}
-
-{% highlight C# %}
-     tabView.TabBarSize = 100;
-     tabView.TabBarPlacement = TabBarPlacement.Left
-{% endhighlight %}
-
-{% endtabs %}
-
-
 ## Customize the tab header text alignment
 
 The horizontal text alignment of the tab header can be customized by setting the [HeaderHorizontalTextAlignment](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TabView.SfTabView.html#Syncfusion_Maui_TabView_SfTabView_HeaderHorizontalTextAlignment) property. The default value is `Center`. This property accepts the following values:

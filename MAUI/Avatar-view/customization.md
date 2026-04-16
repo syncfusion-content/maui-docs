@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customization in Syncfusion® .NET MAUI Avatar View 
-description: Discover how to apply a wide range of customizations to the default view in .NET MAUI Avatar View to match your app’s design needs.
+description: Learn how to achieve various customizations for the default view in .NET MAUI Avatar View.
 platform: MAUI
 control: SfAvatarView
 documentation: UG
@@ -469,58 +469,6 @@ this.Content = mainGrid;
 {% endtabs %}
 
 ![ContentPadding](Customization_Images/ContentPadding_AvatarView.png)
-
-### Font Customization
-
-Customize the font of the Avatar View using the [FontSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_FontSize), [FontAttributes](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_FontAttributes), and [FontFamily](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfAvatarView.html#Syncfusion_Maui_Core_SfAvatarView_FontFamily) properties.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<Grid>
-    <sfavatar:SfAvatarView ContentType="Initials"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"
-                            InitialsType="SingleCharacter"
-                            AvatarName="Alex"
-                            InitialsColor="Black" 
-                            WidthRequest="80"
-                            HeightRequest="80"
-                            CornerRadius="40"          
-                            Background="Bisque"
-                            FontSize="20"
-                            FontAttributes="Bold"
-                            FontFamily="serif">
-    </sfavatar:SfAvatarView>
-</Grid>
-
-{% endhighlight %}
-
-{% highlight c# %}
-
-Grid mainGrid = new Grid();
-SfAvatarView avatarView = new SfAvatarView();
-avatarView.VerticalOptions = LayoutOptions.Center;
-avatarView.HorizontalOptions = LayoutOptions.Center;
-avatarView.WidthRequest = 80;
-avatarView.HeightRequest = 80;
-avatarView.FontAttributes = FontAttributes.Bold;
-avatarView.FontSize = 20;
-avatarView.FontFamily = "serif";
-avatarView.CornerRadius = 40;
-avatarView.Background = Colors.Bisque;
-avatarView.InitialsColor = Colors.Black;
-avatarView.ContentType = ContentType.Initials;
-avatarView.AvatarName = "Alex";
-mainGrid.Children.Add(avatarView);
-this.Content = mainGrid;
-
-{% endhighlight %}
-
-{% endtabs %}
-
-![FontCustomization](Customization_Images/Font_AvatarView.png)
 
 ### FontAutoScalingEnabled
 

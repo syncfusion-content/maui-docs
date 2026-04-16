@@ -117,35 +117,3 @@ this.Content = navigationDrawer;
 {% endtabs %}
 
 ![Reveal](Images/drawer-animation/reveal_animation.png)
-
-
-## AnimationEasing
-
-You can customize the easing behavior of the drawer open and close animations by setting the [AnimationEasing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.NavigationDrawer.DrawerSettings.html#Syncfusion_Maui_NavigationDrawer_DrawerSettings_AnimationEasing) property. The default value is Easing.Linear.
-
-{% tabs %}
-
-{% highlight xaml %}
-
-<navigationdrawer:SfNavigationDrawer x:Name="navigationDrawer">
-    <navigationdrawer:SfNavigationDrawer.DrawerSettings>
-        <navigationdrawer:DrawerSettings AnimationEasing="SpringIn">
-        </navigationdrawer:DrawerSettings>
-    </navigationdrawer:SfNavigationDrawer.DrawerSettings>
-</navigationdrawer:SfNavigationDrawer>
-	
-{% endhighlight %}	
-	
-{% highlight c# %} 
-
-SfNavigationDrawer navigationDrawer = new SfNavigationDrawer();
-DrawerSettings drawerSettings = new DrawerSettings()
-{
-    AnimationEasing = Easing.SpringIn
-};
-navigationDrawer.DrawerSettings = drawerSettings;
-this.Content = navigationDrawer;
-
-{% endhighlight %}
-
-{% endtabs %}
