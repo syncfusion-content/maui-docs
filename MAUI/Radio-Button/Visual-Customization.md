@@ -244,25 +244,3 @@ this.Content = stackLayout;
 {% endtabs %}
 
 ![.NET MAUI Radio Button](Images/VisualCustomization/contentspacing.png)
-
-## ContentSpacing
-
-You can control the spacing between the radio button and its associated text using the [ContentSpacing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Buttons.ToggleButton.html#Syncfusion_Maui_Buttons_ToggleButton_ContentSpacing) property.
-
-{% tabs %}
-{% highlight xaml %}
-
-<syncfusion:SfRadioButton Text="Radio Button" ContentSpacing="25"/>
-
-{% endhighlight %}
-{% highlight c# %}
-
-StackLayout stackLayout = new StackLayout();
-SfRadioButton radioButton = new SfRadioButton();
-radioButton.Text = "Radio Button";
-radioButton.ContentSpacing = 25;
-stackLayout.Children.Add(radioButton);
-this.Content = stackLayout;
-
-{% endhighlight %}
-{% endtabs %}
