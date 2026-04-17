@@ -8,7 +8,7 @@ documentation: UG
 keywords : .net maui color picker, maui color picker, .net maui color picker control, maui color picker control, color palette, spectrum, palette.
 ---
 
-# Events in .NET MAUI Color Picker (SfColorPicker)
+# Events and Commands in .NET MAUI Color Picker (SfColorPicker)
 
 The [SfColorPicker](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html) control provides three built-in events to handle color selection changes:
 
@@ -115,6 +115,35 @@ private void OnColorSelected(object sender, ColorSelectedEventArgs e)
     label.BackgroundColor = e.SelectedColor;
     label.Text = e.SelectedColor.ToHex();
 }
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Commands
+
+The [ColorChangedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_ColorChangedCommand) is executed when the SelectedColor property of the Color Picker changes.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<syncfusion:SfColorPicker ColorChangedCommand="{Binding ColorChangedCommand}" />
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfColorPicker colorPicker = new SfColorPicker();
+
+// Set a command to execute when the color changes
+colorPicker.ColorChangedCommand = new Command<Color>(color =>
+{
+    // Perform functions based on the selected color
+});
+
+// Bind to view model command
+colorPicker.SetBinding(SfColorPicker.ColorChangedCommandProperty, "ColorChangedCommand");
 
 {% endhighlight %}
 
