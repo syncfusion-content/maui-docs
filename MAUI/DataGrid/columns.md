@@ -91,17 +91,21 @@ By default, columns are also auto-generated for custom type properties and paren
 
 {% tabs %}
 {% highlight xaml %}
-  <syncfusion:SfDataGrid x:Name="dataGrid"
-                           ItemsSource="{Binding OrderInfoCollection}"
-                           AutoGenerateColumnsModeForCustomType="Both">
-    </syncfusion:SfDataGrid>
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                        ItemsSource="{Binding Orders}"
+                        AutoGenerateColumnsModeForCustomType="Both"
+                        NavigationMode="Cell"
+                        SelectionMode="Single">
+</syncfusion:SfDataGrid>
 {% endhighlight %}
-
 {% highlight c# %}
-OrderInfoRepository viewModel = new OrderInfoRepository();
 SfDataGrid dataGrid = new SfDataGrid();
-dataGrid.ItemsSource = viewModel.OrderInfoCollection;
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
 dataGrid.AutoGenerateColumnsModeForCustomType = AutoGenerateColumnsModeForCustomType.Both;
+dataGrid.NavigationMode = DataGridNavigationMode.Cell;
+dataGrid.SelectionMode = DataGridSelectionMode.Single;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -118,15 +122,20 @@ The [DataGridAutoGeneratingColumnEventArgs](https://help.syncfusion.com/cr/maui/
 You can skip generating a column by handling the `SfDataGrid.AutoGeneratingColumn` event as follows,
 
 {% tabs %}
-{% highlight c# %}
-this.dataGrid.AutoGeneratingColumn += SfDataGrid_AutoGeneratingColumn;
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                        ItemsSource="{Binding Orders}"
+                        AutoGeneratingColumn="DataGrid_AutoGeneratingColumn">
+</syncfusion:SfDataGrid>
+{% endhighlight %}
 
-private void SfDataGrid_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
+{% highlight c# %}
+private void DataGrid_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
 {
-	if(e.Column.MappingName == "ShipCountry")
-	{
-		e.Cancel = true;
-	}
+    if (e.Column.MappingName == "Country")
+    {
+        e.Cancel = true;
+    }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -135,13 +144,20 @@ Formatting for the auto-generated columns can be applied as follows:
 
 {% tabs %}
 {% highlight c# %}
-private void SfDataGrid_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
+dataGrid.AutoGeneratingColumn += DataGrid_AutoGeneratingColumn;
+this.Content = dataGrid;
+
+// Customizing the column format for UnitPrice and OrderDate columns
+private void DataGrid_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
 {
-    if (e.Column.MappingName == "Freight")
+    if (e.Column.MappingName == "UnitPrice")
     {
         e.Column.Format = "C";
     }
-    else if (e.Column.MappingName == "ShippingDate")
+    else if (e.Column.MappingName == "OrderDate")
     {
         e.Column.Format = "MMMM dd";
     }
@@ -161,11 +177,16 @@ You can skip the column generation using `AutoGenerateField` property.
 
 {% tabs %}
 {% highlight c# %}
-[Display(AutoGenerateField = false, Description = "OrderID field is not generated in UI")]
-public int OrderID
+public class OrderInfo
 {
-    get { return orderID; }
-    set { orderID = value; }
+    [Display(AutoGenerateField = false, Description = "OrderID field is not generated in UI")]
+    public int OrderID { get; set; }
+
+    public string Customer { get; set; }
+    public string City { get; set; }
+    public string Country { get; set; }
+    public string Product { get; set; }
+    public DateTime OrderDate { get; set; }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -176,11 +197,17 @@ You can enable editing of cell values by setting the `Editable` attribute to tru
 
 {% tabs %}
 {% highlight c# %}
-[Editable(true)]
-public string Country
+public class OrderInfo
 {
-    get { return country; }
-    set { country = value; }
+    public int OrderID { get; set; }
+    public string Customer { get; set; }
+    public string City { get; set; }
+
+    [Editable(true)]
+    public string Country { get; set; }
+
+    public string Product { get; set; }
+    public DateTime OrderDate { get; set; }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -191,11 +218,17 @@ You can customize header text of column using `Display.Name` property or `Displa
 
 {% tabs %}
 {% highlight c# %}
-[Display(Name="Name of the Customer",Description="CustomerName is necessary for identification ")]
-public string CustomerName
+public class OrderInfo
 {
-    get { return customerName; }
-    set { customerName = value; }
+    public int OrderID { get; set; }
+
+    [Display(Name = "Name of the Customer", Description = "CustomerName is necessary for identification ")]
+    public string Customer { get; set; }
+
+    public string City { get; set; }
+    public string Country { get; set; }
+    public string Product { get; set; }
+    public DateTime OrderDate { get; set; }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -206,18 +239,18 @@ You can change the order of columns using the `Display.Order` property. Columns 
 
 {% tabs %}
 {% highlight c# %}
-[Display(Order=1)]
-public string Customer
+public class OrderInfo
 {
-    get { return customer; }
-    set { customer = value; }
-}
+    [Display(Order = 1)]
+    public int OrderID { get; set; }
 
-[Display(Order=0)]
-public int OrderID
-{
-    get { return orderID; }
-    set { orderID = value; }
+    [Display(Order = 0)]
+    public string Customer { get; set; }
+
+    public string City { get; set; }
+    public string Country { get; set; }
+    public string Product { get; set; }
+    public DateTime OrderDate { get; set; }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -232,11 +265,18 @@ You can disable the editing for a column using `ReadOnly` attribute.
 
 {% tabs %}
 {% highlight c# %}
-[ReadOnly(true)]
-public string Country
+public class OrderInfo
 {
-    get { return country; }
-    set { country = value; }
+    [ReadOnly(true)]
+    public int OrderID { get; set; }
+
+    public string Customer { get; set; }
+    public string City { get; set; }
+
+    [ReadOnly(true)]
+    public string Country { get; set; }
+
+    public string Product { get; set; }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -247,18 +287,16 @@ You can format auto-generated columns using the [DisplayFormat](https://learn.mi
 
 {% tabs %}
 {% highlight c# %}
-[DisplayFormat(DataFormatString = "yyyy")]
-public DateTime OrderDate
+public class OrderInfo
 {
-    get {  return _orderDate; }
-    set {  orderDate = value; }
-}
+    public int OrderID { get; set; }
+    public string Customer { get; set; }
 
-[DisplayFormat(DataFormatString = "Country is {0}")]
-public string Country
-{
-    get { return country; }
-    set { country = value; }
+    [DisplayFormat(DataFormatString = "yyyy"), Display(Name = "Order Date")]
+    public DateTime OrderDate { get; set; }
+
+    [DisplayFormat(DataFormatString = "Country is {0}")]
+    public string Country { get; set; }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -270,25 +308,19 @@ You can group multiple columns under a shared stacked header using the `Display.
 
 {% tabs %}
 {% highlight c# %}
-[Display(GroupName = "Order Details")]
-public string? OrderID
+public class OrderInfo
 {
-    get { return orderID; }
-    set { this.orderID = value; }
-}
+    [Display(GroupName = "Order Details")]
+    public int OrderID { get; set; }
 
-[Display(GroupName = "Order Details")]
-public DateTime OrderDate
-{
-    get { return _orderDate; }
-    set { _orderDate = value; }
-}
+    [Display(GroupName = "Order Details")]
+    public string Customer { get; set; }
 
-[Display(GroupName = "Order Details")]
-public string? ShipCountry
-{
-    get { return shipCountry; }
-    set { this.shipCountry = value; }
+    [Display(GroupName = "Order Details")]
+    public string City { get; set; }
+
+    [Display(GroupName = "Order Details")]
+    public string Country { get; set; }
 }
 
 [Display(GroupName = "Order Details")]
@@ -311,40 +343,42 @@ There are different types of columns available. Any column can be created based 
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                       AutoGenerateColumnsMode="None"
-                       ItemsSource="{Binding OrderInfoCollection}">
+                        AutoGenerateColumnsMode="None"
+                        ItemsSource="{Binding Orders}">
     <syncfusion:SfDataGrid.Columns>
         <syncfusion:DataGridNumericColumn HeaderText="Order ID"
-                                          MappingName="OrderID" />
-        <syncfusion:DataGridTextColumn  HeaderText="Customer ID"
-                                        MappingName="CustomerID" />
+                                            MappingName="OrderID"/>
         <syncfusion:DataGridTextColumn  HeaderText="Customer"
-                                        MappingName="Customer" />
+                                        MappingName="Customer"/>
         <syncfusion:DataGridTextColumn  HeaderText="Ship City"
-                                        MappingName="ShipCity" />
+                                        MappingName="City"/>
         <syncfusion:DataGridTextColumn  HeaderText="Ship Country"
-                                        MappingName="ShipCountry" />
+                                        MappingName="Country"/>
+        <syncfusion:DataGridTextColumn  HeaderText="Product"
+                                        MappingName="Product"/>
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 
 {% highlight c# %}
-OrderInfoRepository viewModel = new OrderInfoRepository();
 SfDataGrid dataGrid = new SfDataGrid();
-dataGrid.ItemsSource = viewModel.OrderInfoCollection;
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
 dataGrid.AutoGenerateColumnsMode = AutoGenerateColumnsMode.None;
 
 DataGridNumericColumn orderIdColumn = new DataGridNumericColumn { HeaderText = "Order ID", MappingName = "OrderID" };
-DataGridTextColumn customerIdColumn = new DataGridTextColumn { HeaderText = "Customer ID", MappingName = "CustomerID" };
 DataGridTextColumn customerColumn = new DataGridTextColumn { HeaderText = "Customer", MappingName = "Customer" };
-DataGridTextColumn shipCityColumn = new DataGridTextColumn { HeaderText = "Ship City", MappingName = "ShipCity" };
-DataGridTextColumn shipCountryColumn = new DataGridTextColumn { HeaderText = "Ship Country", MappingName = "ShipCountry" };
+DataGridTextColumn shipCityColumn = new DataGridTextColumn { HeaderText = "Ship City", MappingName = "City" };
+DataGridTextColumn shipCountryColumn = new DataGridTextColumn { HeaderText = "Ship Country", MappingName = "Country" };
+DataGridTextColumn productColumn = new DataGridTextColumn { HeaderText = "Product", MappingName = "Product" };
 
 dataGrid.Columns.Add(orderIdColumn);
-dataGrid.Columns.Add(customerIdColumn);
 dataGrid.Columns.Add(customerColumn);
 dataGrid.Columns.Add(shipCityColumn);
 dataGrid.Columns.Add(shipCountryColumn);
+dataGrid.Columns.Add(productColumn);
+
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -401,15 +435,16 @@ SfDataGrid allows you show or hide columns at runtime by selecting or deselectin
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}"
-                       ShowColumnChooser="True">
+                        ItemsSource="{Binding Orders}"
+                        ShowColumnChooser="True">
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-OrderInfoRepository viewModel = new OrderInfoRepository();
 SfDataGrid dataGrid = new SfDataGrid();
-dataGrid.ItemsSource = viewModel.OrderInfoCollection;
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
 dataGrid.ShowColumnChooser = true;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -420,17 +455,18 @@ You can also customize the header text of the Column Chooser using the `SfDataGr
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}"
-                       ColumnChooserHeaderText="Select Visible Columns"
-                       ShowColumnChooser="True">
+                        ItemsSource="{Binding Orders}"
+                        ColumnChooserHeaderText="Select Visible Columns"
+                        ShowColumnChooser="True">
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-OrderInfoRepository viewModel = new OrderInfoRepository();
 SfDataGrid dataGrid = new SfDataGrid();
-dataGrid.ItemsSource = viewModel.OrderInfoCollection;
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
 dataGrid.ShowColumnChooser = true;
 dataGrid.ColumnChooserHeaderText = "Select Visible Columns";
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
