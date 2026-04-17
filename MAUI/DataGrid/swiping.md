@@ -18,98 +18,87 @@ The data grid allows for loading desired content using the [SfDataGrid.LeftSwipe
 
 {% tabs %}
 {% highlight XAML %}
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DataGridMaui.MainPage"
-             xmlns:local="clr-namespace:DataGridMaui"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid">
-    <ContentPage.BindingContext>
-        <local:OrderInfoViewModel/>
-    </ContentPage.BindingContext>
-    <ContentPage.Content>
-        <syncfusion:SfDataGrid x:Name="dataGrid"
-                              ItemsSource="{Binding OrdersInfo}"
-                              AllowSwiping="True">
-            <syncfusion:SfDataGrid.LeftSwipeTemplate>
-                <DataTemplate>
-                    <Grid BackgroundColor="#6750A4"
-                            Padding="0" ColumnDefinitions="*, *">
-                        <Label Grid.Column="0"
-                                   Text="EDIT"
-                                   HorizontalTextAlignment="End"
-                                   TextColor="#FFFFFF"
-                                   VerticalTextAlignment="Center"
-                                   LineBreakMode="NoWrap"
-                                   BackgroundColor="Transparent"/>
-                        <Image Grid.Column="1"
-                                   Source="edit.png"
-                                   HeightRequest="18"
-                                   WidthRequest="18"
-                                   Margin="12,0,0,0"
-                                   HorizontalOptions="Start"
-                                   VerticalOptions="Center"/>
-                    </Grid>
-                </DataTemplate>
-            </syncfusion:SfDataGrid.LeftSwipeTemplate>
-        </syncfusion:SfDataGrid>
-    </ContentPage.Content>
-</ContentPage>
+<syncfusion:SfDataGrid x:Name="DataGrid"
+                       ItemsSource="{Binding Orders}"
+                       AllowSwiping="True">
+    <syncfusion:SfDataGrid.LeftSwipeTemplate>
+        <DataTemplate>
+            <Grid BackgroundColor="#6750A4"
+                  Padding="0" ColumnDefinitions="*, *">
+                <Label Grid.Column="0"
+                       Text="EDIT"
+                       HorizontalTextAlignment="End"
+                       TextColor="#FFFFFF"
+                       VerticalTextAlignment="Center"
+                       LineBreakMode="NoWrap"
+                       BackgroundColor="Transparent" />
+                <Image Grid.Column="1"
+                       Source="edit.png"
+                       HeightRequest="18"
+                       WidthRequest="18"
+                       Margin="12,0,0,0"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center"/>
+            </Grid>
+        </DataTemplate>
+    </syncfusion:SfDataGrid.LeftSwipeTemplate>
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
- public partial class MainPage : ContentPage
- {
-     SfDataGrid dataGrid;
-     OrderInfoViewModel viewModel;
-     public MainPage()
-     {
-         InitializeComponent();
-         dataGrid = new SfDataGrid();
-         viewModel = new OrderInfoViewModel();
-         dataGrid.ItemsSource = viewModel.OrdersInfo;
-         dataGrid.AllowSwiping = true;
-         dataGrid.LeftSwipeTemplate = new DataTemplate(() =>
-         {
-             var grid = new Grid
-             {
-                 BackgroundColor = Color.FromArgb("#6750A4"),
-                 Padding = new Thickness(0)
-             };
+public partial class MainPage : ContentPage
+{
+    SfDataGrid dataGrid;
+    OrderInfoViewModel viewModel;
+    public MainPage()
+    {
+        InitializeComponent();
+        dataGrid = new SfDataGrid();
+        viewModel = new OrderInfoViewModel();
+        dataGrid.ItemsSource = viewModel.Orders;
+        dataGrid.AllowSwiping = true;
+        dataGrid.LeftSwipeTemplate = new DataTemplate(() =>
+        {
+            var grid = new Grid
+            {
+                BackgroundColor = Color.FromArgb("#6750A4"),
+                Padding = new Thickness(0)
+            };
 
-             grid.ColumnDefinitions.Add(new ColumnDefinition());
-             grid.ColumnDefinitions.Add(new ColumnDefinition());
+            grid.ColumnDefinitions.Add(new ColumnDefinition());
+            grid.ColumnDefinitions.Add(new ColumnDefinition());
 
-             var editLabel = new Label
-             {
-                 Text = "EDIT",
-                 HorizontalTextAlignment = TextAlignment.End,
-                 TextColor = Colors.White,
-                 VerticalTextAlignment = TextAlignment.Center,
-                 LineBreakMode = LineBreakMode.NoWrap,
-                 BackgroundColor = Colors.Transparent
-             };
-             Grid.SetColumn(editLabel, 0);
+            var editLabel = new Label
+            {
+                Text = "EDIT",
+                HorizontalTextAlignment = TextAlignment.End,
+                TextColor = Colors.White,
+                VerticalTextAlignment = TextAlignment.Center,
+                LineBreakMode = LineBreakMode.NoWrap,
+                BackgroundColor = Colors.Transparent
+            };
 
-             var image = new Image
-             {
-                 Source="edit.png",
-                 HeightRequest = 18,
-                 WidthRequest = 18,
-                 Margin = new Thickness(12, 0, 0, 0),
-                 HorizontalOptions = LayoutOptions.Start,
-                 VerticalOptions = LayoutOptions.Center
-             };
-             Grid.SetColumn(image, 1);
-             grid.Children.Add(editLabel);
-             grid.Children.Add(image);
+            Grid.SetColumn(editLabel, 0);
 
-             return grid;
-         });
+            var image = new Image
+            {
+                Source="edit.png",
+                HeightRequest = 18,
+                WidthRequest = 18,
+                Margin = new Thickness(12, 0, 0, 0),
+                HorizontalOptions = LayoutOptions.Start,
+                VerticalOptions = LayoutOptions.Center
+            };
 
-         Content = dataGrid;
-     }
- }
+            Grid.SetColumn(image, 1);
+            grid.Children.Add(editLabel);
+            grid.Children.Add(image);
 
+            return grid;
+        });
+
+        Content = dataGrid;
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -145,59 +134,60 @@ The swipe templates can be customized by loading any view into the templates and
 
 {% tabs %}
 {% highlight xaml %}
-    <ContentPage.Content>
-        <syncfusion:SfDataGrid x:Name="dataGrid"
-                             ItemsSource="{Binding OrdersInfo}"
-                             AllowSwiping="True"
-                             AutoGenerateColumnsMode="None"
-                             SwipeEnded="dataGrid_SwipeEnded">           
-            <syncfusion:SfDataGrid.LeftSwipeTemplate>
-                <DataTemplate>
-                    <Grid ColumnDefinitions="*,*">
-                        <Grid.GestureRecognizers>
-                            <TapGestureRecognizer NumberOfTapsRequired="1"
-                          Tapped="TapGestureRecognizer_InsertButtonTapped" />
-                        </Grid.GestureRecognizers>
-                        <Grid BackgroundColor="#009EDA" ColumnDefinitions="4*,6*" Grid.Column="0">
-                            <Image Grid.Column="0"
-                                   HorizontalOptions="End"
-                                   Source="insert.png" 
-                                   HeightRequest="18"
-                                   WidthRequest="18"
-                                   Margin="0,0,8,0"/>
-                            <Label Grid.Column="1"
-                                   BackgroundColor="Transparent"
-                                   LineBreakMode="NoWrap"
-                                   Text="INSERT"
-                                   TextColor="White"
-                                   HorizontalTextAlignment ="Start"
-                                   VerticalTextAlignment="Center" />
-                        </Grid>
-                        <Grid Grid.Column="1" BackgroundColor="#DC595F" ColumnDefinitions="4*,6*">
-                            <Grid.GestureRecognizers>
-                                <TapGestureRecognizer NumberOfTapsRequired="1"
-                          Tapped="TapGestureRecognizer_DeleteButtonTapped" />
-                            </Grid.GestureRecognizers>
-                            <Image Grid.Column="0"
-                                   BackgroundColor="Transparent"
-                                   HorizontalOptions="CenterAndExpand"
-                                   Source="delete.png"
-                                   HeightRequest="18"
-                                   WidthRequest="18"/>
-                            <Label Grid.Column="1"
-                                   BackgroundColor="Transparent"
-                                   LineBreakMode="NoWrap"
-                                   Text="DELETE"
-                                   TextColor="White"
-                                   HorizontalOptions="Start"
-                                   HorizontalTextAlignment ="Start"
-                                   VerticalTextAlignment ="Center" />
-                        </Grid>
-                    </Grid>
-                </DataTemplate>
-            </syncfusion:SfDataGrid.LeftSwipeTemplate>
-        </syncfusion:SfDataGrid>
-    </ContentPage.Content>
+<syncfusion:SfDataGrid x:Name="DataGrid"
+                       ItemsSource="{Binding Orders}"
+                       AllowSwiping="True"
+                       SwipeEnded="DataGrid_SwipeEnded">
+    <syncfusion:SfDataGrid.LeftSwipeTemplate>
+        <DataTemplate>
+            <Grid ColumnDefinitions="*,*">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1"
+                                          Tapped="TapGestureRecognizer_InsertButtonTapped" />
+                </Grid.GestureRecognizers>
+                <Grid BackgroundColor="#009EDA" 
+                      ColumnDefinitions="4*,6*" 
+                      Grid.Column="0">
+                    <Image Grid.Column="0"
+                           HorizontalOptions="End"
+                           Source="insert.png" 
+                           HeightRequest="18"
+                           WidthRequest="18"
+                           Margin="0,0,8,0" />
+                    <Label Grid.Column="1"
+                           BackgroundColor="Transparent"
+                           LineBreakMode="NoWrap"
+                           Text="INSERT"
+                           TextColor="White"
+                           HorizontalTextAlignment ="Start"
+                           VerticalTextAlignment="Center" />
+                </Grid>
+                <Grid Grid.Column="1" 
+                      BackgroundColor="#DC595F" 
+                      ColumnDefinitions="4*,6*">
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1"
+                                              Tapped="TapGestureRecognizer_DeleteButtonTapped" />
+                    </Grid.GestureRecognizers>
+                    <Image Grid.Column="0"
+                           BackgroundColor="Transparent"
+                           HorizontalOptions="Center"
+                           Source="delete.png"
+                           HeightRequest="18"
+                           WidthRequest="18"/>
+                    <Label Grid.Column="1"
+                           BackgroundColor="Transparent"
+                           LineBreakMode="NoWrap"
+                           Text="DELETE"
+                           TextColor="White"
+                           HorizontalOptions="Start"
+                           HorizontalTextAlignment ="Start"
+                           VerticalTextAlignment ="Center" />
+                </Grid>
+            </Grid>
+        </DataTemplate>
+    </syncfusion:SfDataGrid.LeftSwipeTemplate>
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
 public partial class MainPage : ContentPage
@@ -220,29 +210,29 @@ public partial class MainPage : ContentPage
 
     internal void DeleteButtonPressed()
     {
-        viewModel.OrdersInfo.RemoveAt(swipedRowIndex - 1);
+        ViewModel.Orders.RemoveAt(this.swipedRowIndex - 1);
     }
 
     internal void InsertButtonPressed()
     {
-        viewModel.OrdersInfo.Insert(this.swipedRowIndex - 1, InsertItems());
+        ViewModel.Orders.Insert(this.swipedRowIndex - 1, InsertItems());
     }
 
-    private void dataGrid_SwipeEnded(object sender, Syncfusion.Maui.DataGrid.DataGridSwipeEndedEventArgs e)
+    private void DataGrid_SwipeEnded(object sender, Syncfusion.Maui.DataGrid.DataGridSwipeEndedEventArgs e)
     {
         this.swipedRowIndex = e.RowIndex;
     }
 
     internal OrderInfo InsertItems()
     {
-        var ordeshipcity = "Italy";
         var order = new OrderInfo()
         {
             OrderID = 1101,
-            CustomerID = "Frans",
-            ShipCity = "Italy",
-            ShipCountry = "France",          
+            Customer = "Anderson",
+            City = "Italy",
+            Country = "France",
         };
+
         return order;
     }
 }
@@ -261,39 +251,38 @@ Operations such as deleting a row by swiping a data row from one extent to anoth
 
 {% tabs %}
 {% highlight XAML %}
-        <syncfusion:SfDataGrid x:Name="dataGrid"
-                           ItemsSource="{Binding OrdersInfo}"
-                           AllowSwiping="True"
-                           MaxSwipeOffset="404"
-                           SwipeEnded="dataGrid_SwipeEnded">
-            <syncfusion:SfDataGrid.LeftSwipeTemplate>
-                <DataTemplate>
-                    <ContentView x:Name="leftTemplateView"
-                                 BackgroundColor="#1AAA87">
-                        <Label FontSize="15"                     
-                               Text ="Deleted" 
-                               TextColor ="White"
-                               HorizontalTextAlignment ="Center"
-                               VerticalTextAlignment ="Center"/>
-                    </ContentView>
-                </DataTemplate>
-            </syncfusion:SfDataGrid.LeftSwipeTemplate>
-            <syncfusion:SfDataGrid.RightSwipeTemplate>
-                <DataTemplate>
-                    <ContentView x:Name="rightTemplateView"
-                                 BackgroundColor="#1AAA87">
-                        <Label FontSize="15"
-                               HorizontalTextAlignment ="Center" 
-                               Text ="Deleted" 
-                               TextColor ="White"                  
-                               VerticalTextAlignment ="Center"  />
-                    </ContentView>
-                </DataTemplate>
-            </syncfusion:SfDataGrid.RightSwipeTemplate>
-        </syncfusion:SfDataGrid>
+<syncfusion:SfDataGrid x:Name="DataGrid"
+                       ItemsSource="{Binding Orders}"
+                       AllowSwiping="True"
+                       MaxSwipeOffset="404"
+                       SwipeEnded="DataGrid_SwipeEnded">
+    <syncfusion:SfDataGrid.LeftSwipeTemplate>
+        <DataTemplate>
+            <ContentView x:Name="leftTemplateView"
+                         BackgroundColor="#1AAA87">
+                <Label FontSize="15"                     
+                       Text ="Deleted" 
+                       TextColor ="White"
+                       HorizontalTextAlignment ="Center"
+                       VerticalTextAlignment ="Center" />
+            </ContentView>
+        </DataTemplate>
+    </syncfusion:SfDataGrid.LeftSwipeTemplate>
+    <syncfusion:SfDataGrid.RightSwipeTemplate>
+        <DataTemplate>
+            <ContentView x:Name="rightTemplateView"
+                         BackgroundColor="#1AAA87">
+                <Label FontSize="15"
+                       HorizontalTextAlignment ="Center" 
+                       Text ="Deleted" 
+                       TextColor ="White"                  
+                       VerticalTextAlignment ="Center" />
+            </ContentView>
+        </DataTemplate>
+    </syncfusion:SfDataGrid.RightSwipeTemplate>
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-
 public partial class MainPage : ContentPage
 {
     private int swipedRowIndex;
@@ -302,15 +291,15 @@ public partial class MainPage : ContentPage
         InitializeComponent();
     }
 
-    private void dataGrid_SwipeEnded(object sender, Syncfusion.Maui.DataGrid.DataGridSwipeEndedEventArgs e)
+    private void DataGrid_SwipeEnded(object sender, Syncfusion.Maui.DataGrid.DataGridSwipeEndedEventArgs e)
     {
         swipedRowIndex = e.RowIndex;
-        doDeleting();
+        DoDeleting();
     }
 
-    private void doDeleting()
+    private void DoDeleting()
     {
-        viewModel.OrdersInfo.RemoveAt(swipedRowIndex - 1);
+        ViewModel.Orders.RemoveAt(swipedRowIndex - 1);
     }
 }
 {% endhighlight %}
@@ -324,59 +313,77 @@ The datagrid allows you to swipe the data rows, even when we have a complex temp
 
 {% tabs %}
 {% highlight XAML %}
-
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                ItemsSource="{Binding OrdersInfo}"
-                AllowSwiping="True"
-                MaxSwipeOffset="180"
-                RowHeight="60">
+<syncfusion:SfDataGrid x:Name="DataGrid"
+                       ItemsSource="{Binding Orders}"
+                       AllowSwiping="True"
+                       RowHeight="60"
+                       MaxSwipeOffset="150">
     <syncfusion:SfDataGrid.LeftSwipeTemplate>
         <DataTemplate>
-            <Grid BackgroundColor="#6750A4" Padding="0" ColumnDefinitions="*,*">
+            <Grid BackgroundColor="#6750A4" 
+                  Padding="0" 
+                  ColumnDefinitions="*,*">
                 <Label Grid.Column="0"
-                Text="EDIT"
-                HorizontalTextAlignment="End"
-                TextColor="#FFFFFF"
-                VerticalTextAlignment="Center"
-                LineBreakMode="NoWrap"
-                BackgroundColor="Transparent"/>
+                       Text="EDIT"
+                       HorizontalTextAlignment="End"
+                       TextColor="#FFFFFF"
+                       VerticalTextAlignment="Center"
+                       LineBreakMode="NoWrap"
+                       BackgroundColor="Transparent" />
                 <Image Grid.Column="1"
-                Source="edit.png"
-                HeightRequest="18"
-                WidthRequest="18"
-                Margin="12,0,0,0"
-                HorizontalOptions="Start"
-                VerticalOptions="Center"/>
+                       Source="edit.png"
+                       HeightRequest="18"
+                       WidthRequest="18"
+                       Margin="12,0,0,0"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center" />
             </Grid>
         </DataTemplate>
     </syncfusion:SfDataGrid.LeftSwipeTemplate>
     <syncfusion:SfDataGrid.Columns>
-        <syncfusion:DataGridTemplateColumn MappingName="CustomerID" HeaderText="Customer Details" Width="140">
+        <syncfusion:DataGridTemplateColumn MappingName="Customer" 
+                                           HeaderText="Customer Details" 
+                                           Width="160">
             <syncfusion:DataGridTemplateColumn.CellTemplate>
                 <DataTemplate>
                     <Grid InputTransparent="True" 
                           ColumnSpacing="0" 
                           RowSpacing="0" 
-                          HorizontalOptions="FillAndExpand" 
+                          HorizontalOptions="Fill" 
                           Margin="0" 
                           ColumnDefinitions="*,*,*"
                           RowDefinitions="10,*,10">
-                        <StackLayout
-                            Margin="2" 
-                            BackgroundColor="White" 
-                            Orientation="Vertical" 
-                            HorizontalOptions="FillAndExpand"
-                            VerticalOptions="FillAndExpand"
-                            Grid.Column="0"
-                            Grid.ColumnSpan="3"
-                            Grid.Row="1">
-                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
-                                <Label Text="Customer ID: " HorizontalTextAlignment="Start" FontSize="13" Padding="0,0,4,0"/>
-                                <Label Text="{Binding CustomerID}" FontAttributes="Bold" TextColor="Black" FontSize="13" HorizontalTextAlignment="Start"/>
+                        <StackLayout Margin="2" 
+                                     BackgroundColor="White" 
+                                     Orientation="Vertical" 
+                                     HorizontalOptions="Fill"
+                                     VerticalOptions="Fill"
+                                     Grid.Column="0"
+                                     Grid.ColumnSpan="3"
+                                     Grid.Row="1">
+                            <StackLayout Orientation="Horizontal" 
+                                         HorizontalOptions="Fill" >
+                                <Label Text="Customer ID: " 
+                                       HorizontalTextAlignment="Start" 
+                                       FontSize="13" 
+                                       Padding="0,0,4,0" />
+                                <Label Text="{Binding Customer}" 
+                                       FontAttributes="Bold" 
+                                       TextColor="Black" 
+                                       FontSize="13" 
+                                       HorizontalTextAlignment="Start" />
                             </StackLayout>
-                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                                <Label Text="Country:" HorizontalTextAlignment="Start" FontSize="13" Padding="0,0,4,0"/>
-                                <Label Text="{Binding ShipCountry}" FontAttributes="Bold" TextColor="Black" FontSize="13" HorizontalTextAlignment="Start"/>
+                            <StackLayout Orientation="Horizontal" 
+                                         HorizontalOptions="Fill">
+                                <Label Text="Country:" 
+                                       HorizontalTextAlignment="Start" 
+                                       FontSize="13" 
+                                       Padding="0,0,4,0" />
+                                <Label Text="{Binding Country}" 
+                                       FontAttributes="Bold" 
+                                       TextColor="Black" 
+                                       FontSize="13" 
+                                       HorizontalTextAlignment="Start" />
                             </StackLayout>
                         </StackLayout>
                     </Grid>
@@ -396,20 +403,19 @@ The data grid allows you to cancel the swipe programmatically by calling the [Sf
 
 {% tabs %}
 {% highlight XAML %}
-
-<syncfusion:SfDataGrid x:Name="dataGrid"
-              ItemsSource="{Binding OrdersInfo}"
-              AllowSwiping="True"
-              SwipeEnded="dataGrid_SwipeEnded">
+<syncfusion:SfDataGrid x:Name="DataGrid"
+                       ItemsSource="{Binding Orders}"
+                       AllowSwiping="True"
+                       SwipeEnded="DataGrid_SwipeEnded">
     <syncfusion:SfDataGrid.LeftSwipeTemplate>
         <DataTemplate>
             <Grid BackgroundColor="Blue" Padding="9">
                 <Label Text ="Edit"
-                       HorizontalTextAlignment="Center"
-                       VerticalTextAlignment="Center"
-                       LineBreakMode ="NoWrap"
-                       BackgroundColor="Transparent"
-                       TextColor ="White" />
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   LineBreakMode ="NoWrap"
+                   BackgroundColor="Transparent"
+                   TextColor ="White" />
             </Grid>
         </DataTemplate>
     </syncfusion:SfDataGrid.LeftSwipeTemplate>
@@ -417,24 +423,21 @@ The data grid allows you to cancel the swipe programmatically by calling the [Sf
         <DataTemplate>
             <Grid BackgroundColor="Red" Padding="9">
                 <Label FontSize="15"
-                       HorizontalTextAlignment ="Center"
-                       Text ="Delete"
-                       TextColor ="White"
-                       VerticalTextAlignment ="Center"
-                       LineBreakMode ="NoWrap" />
+                   HorizontalTextAlignment ="Center"
+                   Text ="Delete"
+                   TextColor ="White"
+                   VerticalTextAlignment ="Center"
+                   LineBreakMode ="NoWrap" />
             </Grid>
         </DataTemplate>
     </syncfusion:SfDataGrid.RightSwipeTemplate>
 </syncfusion:SfDataGrid>
-
 {% endhighlight %}
 {% highlight c# %}
-
-private void dataGrid_SwipeEnded(object sender, Syncfusion.Maui.DataGrid.DataGridSwipeEndedEventArgs e)
+private void DataGrid_SwipeEnded(object sender, Syncfusion.Maui.DataGrid.DataGridSwipeEndedEventArgs e)
 {
-	dataGrid.ResetSwipeOffset();
+	DataGrid.ResetSwipeOffset();
 }
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -444,15 +447,64 @@ Users can restrict the max swipe offset of a row to the width of the content loa
 
 {% tabs %}
 {% highlight XAML %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
+<syncfusion:SfDataGrid x:Name="DataGrid"
+                       ItemsSource="{Binding Orders}"
                        AllowSwiping="True"
-                       SwipeOffsetMode="Auto"
-                       ItemsSource="{Binding OrdersInfo}"
-
+                       SwipeOffsetMode="Auto">
+    <syncfusion:SfDataGrid.LeftSwipeTemplate>
+        <DataTemplate>
+            <Grid BackgroundColor="#48cae4" 
+                  Padding="9">
+                <Label Text ="Edit"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       LineBreakMode ="NoWrap"
+                       BackgroundColor="Transparent"
+                       TextColor ="White" />
+            </Grid>
+        </DataTemplate>
+    </syncfusion:SfDataGrid.LeftSwipeTemplate>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-dataGrid.SwipeOffsetMode=SwipeOffsetMode.Auto;
+public partial class MainPage : ContentPage
+{
+    SfDataGrid dataGrid;
+    OrderInfoViewModel viewModel;
+
+    public MainPage()
+    {
+        InitializeComponent();
+        dataGrid = new SfDataGrid();
+        viewModel = new OrderInfoViewModel();
+        dataGrid.ItemsSource = viewModel.Orders;
+        dataGrid.AllowSwiping = true;
+        dataGrid.SwipeOffsetMode = DataGridSwipeOffsetMode.Auto;
+        dataGrid.LeftSwipeTemplate = new DataTemplate(() =>
+        {
+            var grid = new Grid
+            {
+                BackgroundColor = Color.FromArgb("#48cae4"),
+                Padding = new Thickness(0)
+            };
+
+            var editLabel = new Label
+            {
+                Text = "EDIT",
+                HorizontalTextAlignment = TextAlignment.Center,
+                TextColor = Colors.White,
+                VerticalTextAlignment = TextAlignment.Center,
+                LineBreakMode = LineBreakMode.NoWrap,
+                BackgroundColor = Colors.Transparent
+            };
+
+            grid.Children.Add(editLabel);
+            return grid;
+        });
+
+        Content = dataGrid;
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -466,60 +518,86 @@ Using a `DataTemplateSelector`, you can load specific views based on row data, s
 
 {% tabs %}
 {% highlight XAML %}
-    <syncfusion:SfDataGrid x:Name="dataGrid"
-                  ItemsSource="{Binding OrdersInfo}"
-                  AllowSwiping="True">
-        <syncfusion:SfDataGrid.LeftSwipeTemplate>
-            <local:LeftTemplateSelector/>
-        </syncfusion:SfDataGrid.LeftSwipeTemplate>
-        <syncfusion:SfDataGrid.RightSwipeTemplate>
-            <local:RightTemplateSelector/>
-        </syncfusion:SfDataGrid.RightSwipeTemplate>
-    </syncfusion:SfDataGrid>
+ <syncfusion:SfDataGrid x:Name="DataGrid"
+                        ItemsSource="{Binding Orders}"
+                        AllowSwiping="True">
+    <syncfusion:SfDataGrid.LeftSwipeTemplate>
+        <local:LeftTemplateSelector />
+    </syncfusion:SfDataGrid.LeftSwipeTemplate>
+    <syncfusion:SfDataGrid.RightSwipeTemplate>
+        <local:RightTemplateSelector />
+    </syncfusion:SfDataGrid.RightSwipeTemplate>
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
 public class LeftTemplateSelector : DataTemplateSelector
 {
     protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
     {
-        var value = (item as OrderInfo).IsClosed;
-        if (value)
+        var value = (item as OrderInfo).Status;
+        if (value == "Delivered")
         {
             var dataTemplate = new DataTemplate(() =>
             {
                 Button button = new Button()
-                {      
+                {
                     TextColor = Colors.Green,
                     VerticalOptions = LayoutOptions.Center,
                     HorizontalOptions = LayoutOptions.Center,
-                    Text = "Online",
-                    BackgroundColor = Colors.LightGray,
+                    Text = "Delivered",
+                    BackgroundColor = Color.FromArgb("#e5e5e5"),
                     WidthRequest = 200,
                     CornerRadius = 0,
                     FontAttributes = FontAttributes.Bold
                 };
+
                 return button;
             });
+
             return dataTemplate;
         }
+        else if(value == "New")
+        {
+            var dataTemplate = new DataTemplate(() =>
+            {
+                Grid grid =  new Grid();
+                Button button = new Button()
+                {
+                    TextColor = Colors.Red,
+                    VerticalOptions = LayoutOptions.Center,
+                    HorizontalOptions = LayoutOptions.Center,
+                    Text = "New",
+                    WidthRequest = 200,
+                    BackgroundColor = Color.FromArgb("#e5e5e5"),
+                    CornerRadius = 0,
+                    FontAttributes = FontAttributes.Bold
+                };
 
+                grid.Add(button);
+                return grid;
+            });
+
+            return dataTemplate;
+        }
         else
         {
             var dataTemplate = new DataTemplate(() =>
             {
                 Button button = new Button()
                 {
-                    TextColor = Colors.Red,
+                    TextColor = Color.FromArgb("#4c1e4f"),
                     VerticalOptions = LayoutOptions.Center,
                     HorizontalOptions = LayoutOptions.Center,
-                    Text = "Offline",
+                    Text = value,
+                    BackgroundColor = Color.FromArgb("#e5e5e5"),
                     WidthRequest = 200,
-                    BackgroundColor = Colors.LightGray,
                     CornerRadius = 0,
                     FontAttributes = FontAttributes.Bold
                 };
+
                 return button;
             });
+
             return dataTemplate;
         }
     }
@@ -529,8 +607,8 @@ public class RightTemplateSelector : DataTemplateSelector
 {
     protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
     {
-        var value = (item as OrderInfo).IsClosed;
-        if (value)
+        var value = (item as OrderInfo).Quantity;
+        if (value <= 3)
         {
             var dataTemplate = new DataTemplate(() =>
             {
@@ -539,17 +617,18 @@ public class RightTemplateSelector : DataTemplateSelector
                     TextColor = Colors.Green,
                     VerticalOptions = LayoutOptions.Center,
                     HorizontalOptions = LayoutOptions.Center,
-                    Text = "Online",
+                    Text = "Shipping Charge",
                     BackgroundColor = Colors.LightGray,
                     WidthRequest = 200,
                     CornerRadius = 0,
                     FontAttributes = FontAttributes.Bold
                 };
+
                 return button;
             });
+
             return dataTemplate;
         }
-
         else
         {
             var dataTemplate = new DataTemplate(() =>
@@ -559,53 +638,52 @@ public class RightTemplateSelector : DataTemplateSelector
                     TextColor = Colors.Red,
                     VerticalOptions = LayoutOptions.Center,
                     HorizontalOptions = LayoutOptions.Center,
-                    Text = "Offline",
+                    Text = "Free Shipping",
                     BackgroundColor = Colors.LightGray,
                     WidthRequest = 200,
                     CornerRadius = 0,
                     FontAttributes = FontAttributes.Bold
                 };
+
                 return button;
             });
+
             return dataTemplate;
         }
     }
 }
-
 {% endhighlight %}
 {% endtabs %}
 
-The following screenshot illustrates the custom swipe buttons that are loaded based on the cell value of the "Is Online" switch column.
+The following screenshot illustrates the custom swipe buttons that are loaded based on the cell value of the "Is Delivered" switch column.
 
-<img alt="Custom Swipe button for Online" src="Images\swiping\maui-datagrid-custom-online-swipe-buttons.png" width="404"/>
+<img alt="Custom Swipe button for delivered" src="Images\swiping\maui-datagrid-custom-delivered-swipe-buttons.png" width="404"/>
 
-<img alt="Custom Swipe button for Offline" src="Images\swiping\maui-datagrid-custom-offline-swipe-buttons.png" width="404"/>
+<img alt="Custom Swipe button for new" src="Images\swiping\maui-datagrid-custom-new-swipe-buttons.png" width="404"/>
 
 ## Enable swiping for summary and unbound rows
 
 To enable swiping of the `UnboundRow`, `CaptionSummaryRow`, `GroupSummaryRow`, and `TableSummaryRow`, set the `Cancel` property of the `SwipeStartedEventArgs` to false in the `SfDataGrid.SwipeStarted` event handler. By default, the `Cancel` property is set to true for all non-data rows.
 
 {% highlight c# %}
-
-    private void dataGrid_SwipeStarting(object sender, Syncfusion.Maui.DataGrid.DataGridSwipeStartingEventArgs e)
+private void dataGrid_SwipeStarting(object sender, Syncfusion.Maui.DataGrid.DataGridSwipeStartingEventArgs e)
+{
+    if(dataGrid.IsUnboundRow(e.RowIndex) || dataGrid.IsCaptionSummaryRow(e.RowIndex) || dataGrid.IsGroupSummaryRow(e.RowIndex))
     {
-        if(dataGrid.IsUnboundRow(e.RowIndex) || dataGrid.IsCaptionSummaryRow(e.RowIndex) || dataGrid.IsGroupSummaryRow(e.RowIndex))
+        e.Cancel = false;
+    }
+    else if (e.RowData.GetType() == typeof(SummaryRecordEntry))
+    {
+        if ((e.RowData as SummaryRecordEntry).Parent?.GetType() == typeof(Group))
         {
+            // Enable swiping for group summary row.
             e.Cancel = false;
         }
-        else if (e.RowData.GetType() == typeof(SummaryRecordEntry))
+        else
         {
-            if ((e.RowData as SummaryRecordEntry).Parent?.GetType() == typeof(Group))
-            {
-                //// Enable swiping for group summary row.
-                e.Cancel = false;
-            }
-            else
-            {
-                //// Enable swiping for table summary row.
-                e.Cancel = false;
-            }
+            // Enable swiping for table summary row.
+            e.Cancel = false;
         }
     }
-
+}
 {% endhighlight %}
