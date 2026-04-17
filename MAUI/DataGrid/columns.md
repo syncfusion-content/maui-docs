@@ -255,7 +255,7 @@ public class OrderInfo
 {% endhighlight %}
 {% endtabs %}
 
-The OrderID and CustomerID column rearranged based on specified order.
+The OrderID and Customer column rearranged based on specified order.
 
 <img alt="Changing Columns Order in Maui DataGrid" src="Images\columns\maui-datagrid-order.png" width="404"/>
 
@@ -321,6 +321,13 @@ public class OrderInfo
 
     [Display(GroupName = "Order Details")]
     public string Country { get; set; }
+}
+
+[Display(GroupName = "Order Details")]
+public double Qty
+{
+    get { return qty; }
+    set { this.qty = value; }
 }
 {% endhighlight %}
 {% endtabs %}
@@ -464,4 +471,3 @@ this.Content = dataGrid;
 {% endtabs %}
 
 <img alt="Maui DataGrid Column Chooser" src="Images\columns/maui-datagrid-columnchooser.png" width="404"/>
-
