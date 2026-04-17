@@ -102,3 +102,135 @@ public partial class MainPage : ContentPage
 {% endtabs %}
 
 N> The [SelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_SelectionChanged) event triggers both on rendering [SfEffects.Selection](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffects.html#Syncfusion_Maui_Core_SfEffects_Selection) by direct interaction and on changing the [IsSelected](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_IsSelected) property of [SfEffectsView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html).
+
+## LongPressed event
+
+The [LongPressed](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_LongPressed)  event occurs when the user presses and holds within the bounds of the SfEffectsView for the configured long‑press duration.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<syncEffectsView:SfEffectsView
+    TouchDownEffects="Ripple"
+    TouchUpEffects="Scale"
+    LongPressed="EffectsView_LongPressed">
+</syncEffectsView:SfEffectsView>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.Core;
+public partial class MainPage : ContentPage
+{
+
+    public MainPage()
+    {
+        InitializeComponent();
+        var effectsView = new SfEffectsView
+        {
+            TouchDownEffects = SfEffects.Ripple,
+            TouchUpEffects   = SfEffects.Scale
+        };
+
+        effectsView.LongPressed += EffectsView_LongPressed;
+        ...
+    }
+
+    private void EffectsView_LongPressed(object sender, EventArgs e)
+    {
+        ...
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## TouchDown event
+
+The [TouchDown](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_TouchDown) event occurs when the user touches and presses down within the bounds of the SfEffectsView. 
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<syncEffectsView:SfEffectsView
+        TouchDownEffects="Ripple"
+        TouchDown="EffectsView_TouchDown">
+</syncEffectsView:SfEffectsView>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.Core;
+public partial class MainPage : ContentPage
+{
+
+    public MainPage()
+    {
+        InitializeComponent();
+        var effectsView = new SfEffectsView
+        {
+            TouchDownEffects = SfEffects.Ripple,
+        };
+
+        effectsView.TouchDown += EffectsView_TouchDown;
+        ...
+    }
+
+    private void EffectsView_TouchDown(object sender, EventArgs e)
+    {
+        ...
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## TouchUp event
+
+The [TouchUp](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfEffectsView.html#Syncfusion_Maui_Core_SfEffectsView_TouchUp)  event occurs when the user releases the touch within the bounds of the SfEffectsView.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<syncEffectsView:SfEffectsView
+        TouchUpEffects="Scale"
+        TouchUp="EffectsView_TouchUp">
+</syncEffectsView:SfEffectsView>
+
+{% endhighlight %}
+
+{% highlight C# %}
+
+using Syncfusion.Maui.Core;
+public partial class MainPage : ContentPage
+{
+    
+    public MainPage()
+    {
+        InitializeComponent();
+        var effectsView = new SfEffectsView
+        {
+            TouchDownEffects = SfEffects.Ripple,
+        };
+
+        effectsView.TouchUp += EffectsView_TouchUp;
+        ...
+    }
+
+   private void EffectsView_TouchUp(object sender, EventArgs e)
+   {
+        ...
+   }
+
+}
+
+{% endhighlight %}
+
+{% endtabs %}

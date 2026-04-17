@@ -50,6 +50,29 @@ colorPicker.ColorChanged += (s, e) =>
 
 ![SelectedColorIcon](Images/DisplayView/Icon.png)
 
+## Selected color icon size
+
+You can customize the size of the selected color icon displayed in the Color Picker using the [SelectedColorIconSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SelectedColorIconSize) property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<syncfusion:SfColorPicker SelectedColorIconSize="32" />
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfColorPicker colorPicker = new SfColorPicker()
+{
+    SelectedColorIconSize = 32
+};
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ### Selected color template
 
 To customize the appearance of the selected color, use the [SelectedColorTemplate](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_SelectedColorTemplate) property to define a custom template.
@@ -160,3 +183,95 @@ Content = colorPicker;
 {% endtabs %}
 
 ![DropDownButtonTemplate](Images/DisplayView/DropDown.png)
+
+## DisplayViewHeight
+
+You can control the height of the display view shown in the Color Picker using the [DisplayViewHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_DisplayViewHeight) property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<syncfusion:SfColorPicker DisplayViewHeight="48" />
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfColorPicker colorPicker = new SfColorPicker()
+{
+    DisplayViewHeight = 48
+};
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## DisplayViewStroke
+
+You can customize the border color of the display view in the Color Picker using the [DisplayViewStroke](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_DisplayViewStroke) property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<syncfusion:SfColorPicker DisplayViewStroke="Red" />
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfColorPicker colorPicker = new SfColorPicker()
+{
+    DisplayViewStroke = Colors.Red
+};
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## DisplayViewStrokeThickness
+
+You can define the thickness of the display view border using the [DisplayViewStrokeThickness](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_DisplayViewStrokeThickness) property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<syncfusion:SfColorPicker DisplayViewStrokeThickness="3" />
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfColorPicker colorPicker = new SfColorPicker()
+{
+    DisplayViewStrokeThickness = 3
+};
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## DropDownWidth
+
+You can set the width of the drop-down button displayed in the Color Picker using the [DropDownWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfColorPicker.html#Syncfusion_Maui_Inputs_SfColorPicker_DropDownWidth) property.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<syncfusion:SfColorPicker DropDownWidth="48" />
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfColorPicker colorPicker = new SfColorPicker()
+{
+    DropDownWidth = 48
+};
+
+{% endhighlight %}
+
+{% endtabs %}
