@@ -942,3 +942,51 @@ SfRadialMenu radialMenu = new SfRadialMenu()
 {% endhighlight %}
 
 {% endtabs %}
+
+## CenterButtonSize
+
+You can customize the size of the Radial Menu’s center button using the [CenterButtonSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_CenterButtonSize) property. The default value of the `CenterButtonSize` property is `56.`
+
+{% tabs %}
+
+{% highlight xaml %}
+
+ <syncfusion:SfRadialMenu  CenterButtonSize="80">
+ </syncfusion:SfRadialMenu>
+    
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfRadialMenu radialMenu = new SfRadialMenu()
+{
+    CenterButtonSize = 80,
+};
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## StartAngle
+
+You can adjust the starting angle at which the radial menu items are arranged by using the [StartAngle](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.RadialMenu.SfRadialMenu.html#Syncfusion_Maui_RadialMenu_SfRadialMenu_StartAngle) property. The default value of the `StartAngle` property is `0.`
+
+{% tabs %}
+
+{% highlight xaml %}
+
+ <syncfusion:SfRadialMenu  StartAngle="50">
+ </syncfusion:SfRadialMenu>
+    
+{% endhighlight %}
+
+{% highlight C# %}
+
+SfRadialMenu radialMenu = new SfRadialMenu()
+{
+    StartAngle = 50,
+};
+
+{% endhighlight %}
+
+{% endtabs %}

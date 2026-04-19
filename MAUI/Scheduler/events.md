@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Events in .NET MAUI Scheduler control | Syncfusion<sup>&reg;</sup>
+title: Events in .NET MAUI Scheduler control | Syncfusion
 description: Learn here all about the Events support in Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler (SfScheduler) control and more details.
 platform: maui
 control: SfScheduler

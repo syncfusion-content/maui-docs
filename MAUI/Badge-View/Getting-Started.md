@@ -21,8 +21,8 @@ To quickly get started with the .NET MAUI Badge View, watch this video.
 ## Prerequisites
 
 Before proceeding, ensure the following are set up:
-1. Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or a later version.
-2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later).
+1. Install [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or later.
+2. Set up a .NET MAUI environment with Visual Studio 2022 (v17.3 or later) or Visual Studio 2026 (v18.0.0 or later).
 
 ## Step 1: Create a new .NET MAUI project
 
@@ -112,7 +112,7 @@ namespace BadgeViewGettingStarted
 ## Prerequisites
 
 Before proceeding, ensure the following are set up:
-1. Install the [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or a later version.
+1. Install the [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or a later version.
 2. Set up a .NET MAUI environment with Visual Studio Code.
 3. Ensure that the .NET MAUI extension is installed and configured as described [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=visual-studio-code).
 
@@ -209,7 +209,7 @@ namespace BadgeViewGettingStarted
 Before proceeding, ensure the following are set up:
 
 1. Ensure you have the latest version of JetBrains Rider.
-2. Install the [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or a later version.
+2. Install the [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) or a later version.
 3. Make sure the MAUI workloads are installed and configured as described [here](https://www.jetbrains.com/help/rider/MAUI.html#before-you-start).
 
 ## Step 1: Create a new .NET MAUI project
@@ -321,6 +321,37 @@ SfBadgeView badgeView = new SfBadgeView();
 badgeView.BadgeText = "20";
 
 this.Content = badgeView;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Adding screen reader text
+
+Use the [ScreenReaderText](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Core.SfBadgeView.html#Syncfusion_Maui_Core_SfBadgeView_ScreenReaderText) property to specify text that screen readers announce for the badge. This is especially helpful for accessibility when the badge only contains an icon or when you want to provide a custom description.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<badgeView:SfBadgeView ScreenReaderText="20">
+    <badgeView:SfBadgeView.Content>
+        <Button Text="Primary" WidthRequest="120" HeightRequest="60"/>
+    </badgeView:SfBadgeView.Content>
+</badgeView:SfBadgeView>
+
+{% endhighlight %}
+
+{% highlight c# %}
+   
+SfBadgeView badgeView = new SfBadgeView();
+badgeView.ScreenReaderText = "20";
+Button button = new Button();
+button.Text = "Primary";
+button.WidthRequest = 120;
+button.HeightRequest = 60;
+badgeView.Content = button;
+Content = badgeView;
 
 {% endhighlight %}
 
