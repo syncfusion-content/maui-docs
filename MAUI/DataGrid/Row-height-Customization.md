@@ -18,18 +18,26 @@ To get start quickly with customize the row height in .NET MAUI DataGrid, you ca
 
 ## Customize the header row height 
 
-The DataGrid allows you to customize the height of the header row by setting the [SfDataGrid.HeaderRowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_HeaderRowHeight) pproperty. The default value of this property is 55. This property responds to runtime changes so that it can be customized. Setting `SfDatagrid.HeaderRowHeight` to zero will collapse the header row in the view.
+The DataGrid allows you to customize the height of the header row by setting the [SfDataGrid.HeaderRowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_HeaderRowHeight) property. The default value of this property is 55. This property responds to runtime changes so that it can be customized. Setting `SfDatagrid.HeaderRowHeight` to zero will collapse the header row in the view.
 
 To customize the header row height, follow the code example:
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfDataGrid x:Name="dataGrid"  ItemsSource="{Binding OrderInfoCollection }" HeaderRowHeight="60" />
-{% endhighlight %}
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel />
+</ContentPage.BindingContext>
 
+<syncfusion:SfDataGrid x:Name = "dataGrid"  
+                       ItemsSource = "{Binding Orders}" 
+                       HeaderRowHeight = "60" />
+{% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-//Customizing row height in SfDataGrid
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.HeaderRowHeight = 60;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -41,14 +49,21 @@ To customize header row height, follow the code example:
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-
-<syncfusion:SfDataGrid x:Name="dataGrid"  ItemsSource="{Binding OrderInfoCollection }" RowHeight="60" />
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel />
+</ContentPage.BindingContext>
+<syncfusion:SfDataGrid x:Name = "dataGrid"  
+                       ItemsSource = "{Binding Orders}" 
+                       RowHeight = "60" />
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-//Customizing row height in SfDataGrid
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.RowHeight = 60;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -64,16 +79,25 @@ The [GetIntrinsicRowHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage   
-    . . .
-    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid" >
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel />
+</ContentPage.BindingContext>
 
-    <syncfusion:SfDataGrid x:Name="dataGrid"  ItemsSource="{Binding OrderInfoCollection }" QueryRowHeight="DataGrid_QueryRowHeight" />
+<syncfusion:SfDataGrid x:Name = "dataGrid"  
+                       ItemsSource = "{Binding Orders}" 
+                       QueryRowHeight = "DataGrid_QueryRowHeight" />
 
-</ContentPage>
 {% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.QueryRowHeight += DataGrid_QueryRowHeight;
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
 
+{% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 private void DataGrid_QueryRowHeight(object sender, DataGridQueryRowHeightEventArgs e)
 {
@@ -87,8 +111,7 @@ private void DataGrid_QueryRowHeight(object sender, DataGridQueryRowHeightEventA
 {% endhighlight %}
 {% endtabs %}
 
-
-![MAUI DataGrid AutoFit based on row content](Images\row-height-customization\maui-datagrid-autofit.png)
+<img alt="maui-datagrid-autofit" src="Images\row-height-customization\maui-datagrid-autofit.png" width="404" Height = "396"/>
 
 ### Calculate height based on certain columns
 
@@ -98,16 +121,26 @@ The following code example illustrates calculating the height of grid rows based
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage   
-    . . .
-    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid" >
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel />
+</ContentPage.BindingContext>
 
-    <syncfusion:SfDataGrid x:Name="dataGrid"  ItemsSource="{Binding OrderInfoCollection }" QueryRowHeight="DataGrid_QueryRowHeight" />
+<syncfusion:SfDataGrid x:Name = "dataGrid"  
+                       ItemsSource = "{Binding Orders}" 
+                       QueryRowHeight = "DataGrid_QueryRowHeight" />
 
-</ContentPage>
 {% endhighlight %}
 
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.QueryRowHeight += DataGrid_QueryRowHeight;
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 private void DataGrid_QueryRowHeight(object sender, DataGridQueryRowHeightEventArgs e)
 {
@@ -127,16 +160,26 @@ The DataGrid allows you to customize the height of the header row based on its c
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage   
-    . . .
-    xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid" >
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel />
+</ContentPage.BindingContext>
 
-    <syncfusion:SfDataGrid x:Name="dataGrid"  ItemsSource="{Binding OrderInfoCollection }" QueryRowHeight="DataGrid_QueryRowHeight" />
+<syncfusion:SfDataGrid x:Name = "dataGrid"  
+                       ItemsSource = "{Binding Orders}" 
+                       QueryRowHeight = "DataGrid_QueryRowHeight" />
 
-</ContentPage>
 {% endhighlight %}
 
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.QueryRowHeight += DataGrid_QueryRowHeight;
+this.Content = dataGrid;
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 private void DataGrid_QueryRowHeight(object sender, DataGridQueryRowHeightEventArgs e)
 {
