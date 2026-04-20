@@ -34,7 +34,8 @@ The codes below codes demonstrate how to bind a data source to the `SfDataGrid`.
 
 {% highlight c# %}
 OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
-this.dataGrid.ItemsSource = orderInfoViewModel.OrderInfoCollection;
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = orderInfoViewModel.OrderInfoCollection;
 {% endhighlight %}
 {% endtabs %}
 
@@ -53,7 +54,8 @@ The `SfDataGrid` control supports binding the [DataTable](https://learn.microsof
 {% tabs %}
 {% highlight c# %}
 DataTable table = this.GetDataTable();
-this.dataGrid.ItemsSource = table;
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = table;
 {% endhighlight %}
 {% endtabs %}
 
@@ -138,15 +140,16 @@ public class EmployeeCollection
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
                        ItemsSource="{Binding OrderInfoCollection}"
-                       AutoGenerateColumnsMode="None" />
-<syncfusion:SfDataGrid.Columns>
-    <syncfusion:DataGridNumericColumn MappingName="[OrderID]"
-                                      HeaderText="Order ID" />
-    <syncfusion:DataGridTextColumn MappingName="[CustomerID]"
-                                   HeaderText="Customer ID" />
-    <syncfusion:DataGridTextColumn MappingName="[ShipCountry]"
-                                   HeaderText="Ship Country" />
-</syncfusion:SfDataGrid.Columns>
+                       AutoGenerateColumnsMode="None">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridNumericColumn MappingName="[OrderID]"
+                                          HeaderText="Order ID" />
+        <syncfusion:DataGridTextColumn MappingName="[CustomerID]"
+                                       HeaderText="Customer ID" />
+        <syncfusion:DataGridTextColumn MappingName="[ShipCountry]"
+                                       HeaderText="Ship Country" />
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% endtabs %}
 
@@ -158,6 +161,12 @@ public class EmployeeCollection
 {% endhighlight %}
 
 {% highlight c# %}
+OrderInfoRepository viewModel = new OrderInfoRepository();
+
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.OrderInfoCollection;
+dataGrid.AutoGeneratingColumn += datagrid_AutoGeneratingColumn;
+
 private void datagrid_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
 {
      e.Column.MappingName = "[" + e.Column.MappingName + "]";
@@ -240,11 +249,12 @@ During data manipulation operations and property changes, the `SfDataGrid` suppo
 
 {% tabs %}
 {% highlight c# %}
-this.dataGrid.Loaded += SfDataGrid_Loaded;
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.Loaded += SfDataGrid_Loaded;
 
 private void SfDataGrid_Loaded(object sender, EventArgs e)
 {
-    this.dataGrid.View.LiveDataUpdateMode = LiveDataUpdateMode.Default;
+    dataGrid.View.LiveDataUpdateMode = LiveDataUpdateMode.Default;
 }
 {% endhighlight %}
 {% endtabs %}
@@ -270,6 +280,7 @@ The [SourceCollectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 To retain the scroll position when [ItemsSource](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ItemsSource) changes, set the [SfDataGrid.CanMaintainScrollPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CanMaintainScrollPosition) to true. If you set `SfDataGrid.CanMaintainScrollPosition` to true then on changing `ItemsSource`, the newly added `ItemsSource` will be loaded with the previous ItemsSource's `ScrollOffset`.
 
 {% highlight C# %}
+SfDataGrid dataGrid = new SfDataGrid();
 dataGrid.CanMaintainScrollPosition = true;
 {% endhighlight %}
 
