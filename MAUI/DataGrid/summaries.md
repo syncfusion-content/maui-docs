@@ -394,21 +394,21 @@ In the code snippet below, [DataGridSummaryRow.TitleColumnCount](https://help.sy
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid" 
-                     ItemsSource="{Binding OrderItems}"
-                     AutoGenerateColumnsMode="None"
-                     SelectionMode="Single"
-                     GridLinesVisibility="Both"
-                     HeaderGridLinesVisibility="Both"
-                     AllowGroupExpandCollapse="True">
+                       ItemsSource="{Binding OrderItems}"
+                       AutoGenerateColumnsMode="None"
+                       SelectionMode="Single"
+                       GridLinesVisibility="Both"
+                       HeaderGridLinesVisibility="Both"
+                       AllowGroupExpandCollapse="True">
 
     <syncfusion:SfDataGrid.Columns>
         <syncfusion:DataGridTextColumn MappingName="OrderId" 
-                                     HeaderText="Order ID" />
+                                       HeaderText="Order ID" />
         <syncfusion:DataGridTextColumn MappingName="Customer" 
-                                     HeaderText="Customer"
-                                     ColumnWidthMode="Auto" />
+                                       HeaderText="Customer"
+                                       ColumnWidthMode="Auto" />
         <syncfusion:DataGridNumericColumn MappingName="UnitPrice"
-                                       eaderText="Unit Price"/>
+                                          HeaderText="Unit Price"/>
     </syncfusion:SfDataGrid.Columns>
 
     <syncfusion:SfDataGrid.GroupColumnDescriptions>
@@ -419,9 +419,9 @@ In the code snippet below, [DataGridSummaryRow.TitleColumnCount](https://help.sy
         <syncfusion:DataGridSummaryRow Title="{}{ColumnName} : {Key} - {ProductCount} Items" TitleColumnCount="2">
             <syncfusion:DataGridSummaryRow.SummaryColumns>
                 <syncfusion:DataGridSummaryColumn Name="ProductCount"
-                                                MappingName="UnitPrice"
-                                                Format="{}{Count}" 
-                                                SummaryType="CountAggregate" />
+                                                  MappingName="UnitPrice"
+                                                  Format="{}{Count}" 
+                                                  SummaryType="CountAggregate" />
             </syncfusion:DataGridSummaryRow.SummaryColumns>
         </syncfusion:DataGridSummaryRow>
     </syncfusion:SfDataGrid.CaptionSummaryRow>
@@ -838,13 +838,13 @@ In the code snippet below, [DataGridSummaryRow.TitleColumnCount](https://help.sy
         <syncfusion:DataGridSummaryRow Title="Total Price: {PriceAmount} for {ProductCount} Products" TitleColumnCount="2">
             <syncfusion:DataGridSummaryRow.SummaryColumns>
                 <syncfusion:DataGridSummaryColumn Name="ProductCount" 
-                                    MappingName="UnitPrice" 
-                                    Format="{}{Count}" 
-                                    SummaryType="CountAggregate" />
+                                                  MappingName="UnitPrice" 
+                                                  Format="{}{Count}" 
+                                                  SummaryType="CountAggregate" />
                 <syncfusion:DataGridSummaryColumn Name="PriceAmount" 
-                                    MappingName="UnitPrice" 
-                                    Format="{}{Sum:C0}"
-                                    SummaryType="DoubleAggregate" />
+                                                  MappingName="UnitPrice" 
+                                                  Format="{}{Sum:C0}"
+                                                  SummaryType="DoubleAggregate" />
             </syncfusion:DataGridSummaryRow.SummaryColumns>
         </syncfusion:DataGridSummaryRow>
     </syncfusion:SfDataGrid.GroupSummaryRows>

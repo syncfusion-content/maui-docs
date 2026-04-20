@@ -315,11 +315,11 @@ To set a custom grouping converter for the group description that is added to gr
     </ContentPage.BindingContext>
 
     <syncfusion:SfDataGrid x:Name="dataGrid"
-                            ItemsSource="{Binding Orders}">
+                           ItemsSource="{Binding Orders}">
 
         <syncfusion:SfDataGrid.GroupColumnDescriptions>
             <syncfusion:GroupColumnDescription ColumnName="Freight"
-                                                Converter="{StaticResource groupConverter}" />
+                                               Converter="{StaticResource groupConverter}" />
         </syncfusion:SfDataGrid.GroupColumnDescriptions>
     </syncfusion:SfDataGrid>
 </ContentPage> 
@@ -700,7 +700,7 @@ The following code snippet shows how to apply a background color to the indent c
 <ContentPage.Resources>
     <ResourceDictionary>
         <local:CellStyleConverter x:Key="cellStyleConverter" />
-        <Style  TargetType="syncfusion:DataGridIndentCell">
+        <Style TargetType="syncfusion:DataGridIndentCell">
             <Setter Property="Background"
                     Value="{Binding Source={RelativeSource Mode=Self}, 
                     Converter={StaticResource 
@@ -826,15 +826,15 @@ When choosing a `GroupExpandCollapseTemplate` as a DataTemplateSelector, you hav
 
 {% highlight xaml %}
 <syncfusion:SfDataGrid VerticalOptions="FillAndExpand"  
-                            HorizontalOptions="FillAndExpand"
-                            ItemsSource="{Binding Orders}"
-                            x:Name="dataGrid"
-                            GroupingMode="Multiple"
-                            AllowGroupExpandCollapse="True"
-                            AutoGenerateColumnsMode="None">
+                       HorizontalOptions="FillAndExpand"
+                       ItemsSource="{Binding Orders}"
+                       x:Name="dataGrid"
+                       GroupingMode="Multiple"
+                       AllowGroupExpandCollapse="True"
+                       AutoGenerateColumnsMode="None">
         <syncfusion:SfDataGrid.GroupExpandCollapseTemplate>
             <local:ExpandCollapseTemplate ExpandTemplate="{StaticResource ExpandIcon }"
-                                            CollapseTemplate="{StaticResource CollapseIcon}" />
+                                          CollapseTemplate="{StaticResource CollapseIcon}" />
         </syncfusion:SfDataGrid.GroupExpandCollapseTemplate>
         
         <syncfusion:SfDataGrid.GroupColumnDescriptions>

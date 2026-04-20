@@ -40,10 +40,10 @@ To get start quickly with perform selection in .NET MAUI DataGrid, you can check
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}"
-                        NavigationMode="Cell"
-                        SelectionUnit="Cell"
-                        SelectionMode="Multiple">
+                       ItemsSource="{Binding Orders}"
+                       NavigationMode="Cell"
+                       SelectionUnit="Cell"
+                       SelectionMode="Multiple">
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 
@@ -229,11 +229,11 @@ N> When the [SortingGestureType](https://help.syncfusion.com/cr/maui/Syncfusion.
                        ItemsSource="{Binding Orders}" >
     <syncfusion:SfDataGrid.Columns>
         <syncfusion:DataGridTextColumn MappingName="OrderID"
-                        HeaderText="Order ID" />
+                                       HeaderText="Order ID" />
         <syncfusion:DataGridTextColumn MappingName="CustomerID"
-                        HeaderText="Customer ID" />
-        <syncfusion:DataGridTextColumn MappingName="ShipCountry "
-                        HeaderText="Ship Country " />
+                                       HeaderText="Customer ID" />
+        <syncfusion:DataGridTextColumn MappingName="ShipCountry"
+                                       HeaderText="Ship Country " />
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
@@ -724,9 +724,9 @@ Change the selection back color and text color by using the  [SelectionBackgroun
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
     <ContentPage.Content>
-        <syncfusion:SfDataGrid x:Name="dataGrid" ItemsSource="{Binding Orders}"       SelectionMode="Single">
+        <syncfusion:SfDataGrid x:Name="dataGrid" ItemsSource="{Binding Orders}" SelectionMode="Single">
             <syncfusion:SfDataGrid.DefaultStyle>
-                <syncfusion:DataGridStyle SelectedRowTextColor="Black"                        SelectionBackground="#E3F2FD"/>
+                <syncfusion:DataGridStyle SelectedRowTextColor="Black" SelectionBackground="#E3F2FD"/>
             </syncfusion:SfDataGrid.DefaultStyle>
         </syncfusion:SfDataGrid>
     </ContentPage.Content>

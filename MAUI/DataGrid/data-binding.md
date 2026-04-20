@@ -140,15 +140,16 @@ public class EmployeeCollection
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
                        ItemsSource="{Binding OrderInfoCollection}"
-                       AutoGenerateColumnsMode="None" />
-<syncfusion:SfDataGrid.Columns>
-    <syncfusion:DataGridNumericColumn MappingName="[OrderID]"
-                                      HeaderText="Order ID" />
-    <syncfusion:DataGridTextColumn MappingName="[CustomerID]"
-                                   HeaderText="Customer ID" />
-    <syncfusion:DataGridTextColumn MappingName="[ShipCountry]"
-                                   HeaderText="Ship Country" />
-</syncfusion:SfDataGrid.Columns>
+                       AutoGenerateColumnsMode="None">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridNumericColumn MappingName="[OrderID]"
+                                          HeaderText="Order ID" />
+        <syncfusion:DataGridTextColumn MappingName="[CustomerID]"
+                                       HeaderText="Customer ID" />
+        <syncfusion:DataGridTextColumn MappingName="[ShipCountry]"
+                                       HeaderText="Ship Country" />
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% endtabs %}
 
