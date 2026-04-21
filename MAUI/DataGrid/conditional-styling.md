@@ -600,7 +600,7 @@ public class ColorConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
-Here, caption summary cells are customized based on `Salary` summary value.
+Here, caption summary cells are customized based on `City` summary value.
 
 ![Conditional style of caption summary cell using converter](Images/conditional-styling/maui-datagrid-conditional-captionsummary.png)
 
@@ -680,7 +680,7 @@ public class ColorConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
-Here, group summary cells are customized based on `Salary` summary value.
+Here, group summary cells are customized based on `OrderID` summary value.
 
 ![Conditional style of group summary cell using converter](Images/conditional-styling/maui-datagrid-conditional-groupsummary.png)
 
@@ -760,7 +760,7 @@ public class ColorConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
-Here, table summary cells are customized based on `Salary` summary value.
+Here, table summary cells are customized based on `OrderID` summary value.
 
 ![Conditional styling of table summary cell using converter](Images/conditional-styling/maui-datagrid-conditional-tablesummary.png)
 
