@@ -22,16 +22,24 @@ To enable tooltip for datagrid, set the [SfDataGrid.ShowToolTip](https://help.sy
 
 {% tabs %}
 {% highlight XAML %}
-
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                              ItemsSource="{Binding OrdersInfo}"
-                              ShowToolTip="True" />
+<syncfusion:SfDataGrid x:Name="DataGrid"
+                       ItemsSource="{Binding Orders}"
+                       ShowToolTip="True" />
 
 {% endhighlight %}
 {% highlight c# %}
-
-this.dataGrid.ShowToolTip = true;
-
+public partial class MainPage : ContentPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        SfDataGrid dataGrid =  new SfDataGrid();
+        OrderInfoViewModel viewModel = new OrderInfoViewModel();
+        dataGrid.ItemsSource = viewModel.Orders;
+        dataGrid.ShowToolTip = true;
+        this.Content = dataGrid;
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -41,29 +49,72 @@ You can enable tooltips for specific columns by setting the `DataGridColumn.Show
 
 {% tabs %}
 {% highlight XAML %}
+<syncfusion:SfDataGrid x:Name="DataGrid"
+                       ItemsSource="{Binding Orders}"
+                       ShowToolTip="True"
+                       AutoGenerateColumnsMode="None">
     <syncfusion:SfDataGrid.Columns>
-        <syncfusion:DataGridTextColumn HeaderText="Order ID" 
-                                       MappingName="OrderID" 
-                                       ShowToolTip="True"/>
-        <syncfusion:DataGridTextColumn HeaderText="Customer ID" 
-                                       MappingName="CustomerID" 
-                                       ShowToolTip="True"/>
+        <syncfusion:DataGridTextColumn MappingName="OrderID"
+                                       HeaderText="Order ID"
+                                       ShowToolTip="True" />
+        <syncfusion:DataGridTextColumn MappingName="Customer"
+                                       HeaderText="Customer"
+                                       ShowToolTip="True" />
+        <syncfusion:DataGridTextColumn MappingName="City"
+                                       HeaderText="Ship City"
+                                       ShowToolTip="False" />
+        <syncfusion:DataGridTextColumn MappingName="Country"
+                                       HeaderText="Ship Country"
+                                       ShowToolTip="False" />
     </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-dataGrid.Columns.Add(new DataGridTextColumn()
+public partial class MainPage : ContentPage
 {
-    HeaderText = "Order ID",
-    MappingName = "OrderID",
-    ShowToolTip = true
-});
+    public MainPage()
+    {
+        InitializeComponent();
+        OrderInfoViewModel viewModel = new OrderInfoViewModel();
+        SfDataGrid dataGrid = new SfDataGrid
+        {
+            ItemsSource = viewModel.Orders, 
+            ShowToolTip = true,
+            AutoGenerateColumnsMode = AutoGenerateColumnsMode.None
+        };
 
-dataGrid.Columns.Add(new DataGridTextColumn()
-{
-    HeaderText = "Customer ID",
-    MappingName = "CustomerID",
-    ShowToolTip = true
-});
+        // Add columns
+        dataGrid.Columns.Add(new DataGridTextColumn
+        {
+            MappingName = "OrderID",
+            HeaderText = "Order ID",
+            ShowToolTip = true
+        });
+
+        dataGrid.Columns.Add(new DataGridTextColumn
+        {
+            MappingName = "Customer",
+            HeaderText = "Customer",
+            ShowToolTip = true
+        });
+
+        dataGrid.Columns.Add(new DataGridTextColumn
+        {
+            MappingName = "City",
+            HeaderText = "Ship City",
+            ShowToolTip = false
+        });
+
+        dataGrid.Columns.Add(new DataGridTextColumn
+        {
+            MappingName = "Country",
+            HeaderText = "Ship Country",
+            ShowToolTip = false
+        });
+
+        this.Content = dataGrid;
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -85,14 +136,17 @@ To change the tooltip's border appearance, use the Stroke and StrokeThickness pr
 
 {% tabs %}
 {% highlight XAML %}
-    <ContentPage.Resources>
-        <Style TargetType="syncfusion:DataGridToolTipView">
-            <Setter Property="Background" Value="AliceBlue" />
-            <Setter Property="Stroke" Value="Red" />
-            <Setter Property="StrokeThickness" Value="2" />
-            <Setter Property="TextColor" Value="Brown" />
-        </Style>
-    </ContentPage.Resources>
+<ContentPage.Resources>
+    <Style TargetType="syncfusion:DataGridToolTipView">
+        <Setter Property="Background" Value="AliceBlue" />
+        <Setter Property="Stroke" Value="Red" />
+        <Setter Property="StrokeThickness" Value="2" />
+        <Setter Property="TextColor" Value="Brown" />
+    </Style>
+</ContentPage.Resources>
+<syncfusion:SfDataGrid x:Name="DataGrid"
+                       ItemsSource="{Binding Orders}"
+                       ShowToolTip="True" />
 {% endhighlight %}
 {% endtabs %}
 <img alt="Customizing ToolTip Style in MAUI DataGrid" src="Images\tooltip\maui-datagrid-tooltip-style.png" width="404" /> 
@@ -103,9 +157,14 @@ You can apply basic tooltip styling using the DefaultStyle property of SfDataGri
 
 {% tabs %}
 {% highlight XAML %}
-            <syncfusion:SfDataGrid.DefaultStyle>
-                <syncfusion:DataGridStyle ToolTipBackground="Red" ToolTipTextColor="White" />
-            </syncfusion:SfDataGrid.DefaultStyle>
+<syncfusion:SfDataGrid x:Name="DataGrid"
+                       ItemsSource="{Binding Orders}"
+                       ShowToolTip="True">
+    <syncfusion:SfDataGrid.DefaultStyle>
+        <syncfusion:DataGridStyle ToolTipBackground="Red" 
+                                  ToolTipTextColor="White" />
+    </syncfusion:SfDataGrid.DefaultStyle>
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% endtabs %}
 
@@ -117,17 +176,15 @@ You can customize the appearance and content of tooltips by setting the [SfDataG
 
 {% tabs %}
 {% highlight XAML %}
-        <syncfusion:SfDataGrid x:Name="dataGrid" 
-                               ItemsSource="{Binding Orders}"
-                               ShowToolTip="True">
-
-            <syncfusion:SfDataGrid.ToolTipTemplate>
-                <DataTemplate>
-                    <Image Height="100" Width="100" Source="{Binding Customer,Converter={StaticResource ImageConverter}}" />
-                </DataTemplate>
-            </syncfusion:SfDataGrid.ToolTipTemplate>
-
-        </syncfusion:SfDataGrid>
+<syncfusion:SfDataGrid x:Name="dataGrid" 
+                       ItemsSource="{Binding Orders}"
+                       ShowToolTip="True">
+    <syncfusion:SfDataGrid.ToolTipTemplate>
+        <DataTemplate>
+            <Image Height="100" Width="100" Source="{Binding Customer,Converter={StaticResource ImageConverter}}" />
+        </DataTemplate>
+    </syncfusion:SfDataGrid.ToolTipTemplate>
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% endtabs %}
 
@@ -139,32 +196,29 @@ You can load different tooltip templates conditionally based on cell data by usi
 
 {% tabs %}
 {% highlight XAML %}
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <DataTemplate x:Key="Default">
-                <Border Stroke="Black" StrokeThickness="2">
-                    <Label Text="{Binding OrderID}" Background="Red" TextColor="White" Padding="2" />
-                </Border>                
-            </DataTemplate>
-            <DataTemplate x:Key="Alternative">
-                <Border Stroke="Black" StrokeThickness="2" >
-                    <Label Text="{Binding OrderID}" Background="ForestGreen" TextColor="Black" Padding="2" />
-                </Border>
-            </DataTemplate>
-        </ResourceDictionary>    
-    </ContentPage.Resources>
-    
-    <ContentPage.Content>
-        <syncfusion:SfDataGrid x:Name="dataGrid" 
-                               ItemsSource="{Binding Orders}"
-                               ShowToolTip="True">
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <DataTemplate x:Key="Default">
+            <Border Stroke="Black" StrokeThickness="2">
+                <Label Text="{Binding OrderID}" Background="Red" TextColor="White" Padding="2" />
+            </Border>
+        </DataTemplate>
+        <DataTemplate x:Key="Alternative">
+            <Border Stroke="Black" StrokeThickness="2">
+                <Label Text="{Binding OrderID}" Background="ForestGreen" TextColor="Black" Padding="2" />
+            </Border>
+        </DataTemplate>
+    </ResourceDictionary>
+</ContentPage.Resources>
 
-            <syncfusion:SfDataGrid.ToolTipTemplate>
-                <local:ToolTipTemplateSelector AlternateTemplate="{StaticResource Alternative}" DefaultTemplate="{StaticResource Default}" />
-            </syncfusion:SfDataGrid.ToolTipTemplate>
-
-        </syncfusion:SfDataGrid>
-    </ContentPage.Content>
+<syncfusion:SfDataGrid x:Name="DataGrid"
+                       ItemsSource="{Binding Orders}"                 
+                       ShowToolTip="True">
+    <syncfusion:SfDataGrid.ToolTipTemplate>
+        <local:ToolTipTemplateSelector AlternateTemplate="{StaticResource Alternative}" 
+                                       DefaultTemplate="{StaticResource Default}" />
+    </syncfusion:SfDataGrid.ToolTipTemplate>
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
 public class ToolTipTemplateSelector : DataTemplateSelector
@@ -214,10 +268,10 @@ The [CellToolTipOpening](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Dat
 
 {% tabs %}
 {% highlight XAML %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                      ItemsSource="{Binding OrdersInfo}"
-                      ShowToolTip="True"
-                      CellToolTipOpening="DataGrid_CellToolTipOpening">
+<syncfusion:SfDataGrid x:Name="DataGrid"
+                       ItemsSource="{Binding Orders}"
+                       ShowToolTip="True"
+                       CellToolTipOpening="DataGrid_CellToolTipOpening">
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
