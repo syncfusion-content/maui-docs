@@ -35,76 +35,72 @@ The following code example illustrates using `SfDataPager` with the data grid co
 
 {% tabs %}
 {% highlight xaml %}
-
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PagerSample.MainPage"
-             Title="MainPage"
+             xmlns:local="clr-namespace:DataGridUGDemo"
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
              xmlns:pager="clr-namespace:Syncfusion.Maui.DataGrid.DataPager;assembly=Syncfusion.Maui.DataGrid"
-             xmlns:local="clr-namespace:PagerSample">
+             x:Class="DataGridUGDemo.MainPage">
 
-<ContentPage.BindingContext>
-    <local:DataPagerViewModel x:Name="viewModel" />
-</ContentPage.BindingContext>
-  
-<ContentPage.Content>
-    <Grid> 
-      <Grid.RowDefinitions>
-        <RowDefinition Height="*" />
-        <RowDefinition Height="Auto" />
-      </Grid.RowDefinitions>
-      <pager:SfDataPager x:Name ="dataPager"
-                           Grid.Row="1"
-                           PageSize="15" 
-                           NumericButtonCount="10"
-                           Source="{Binding OrdersInfo}">
-      </pager:SfDataPager>      
-      <syncfusion:SfDataGrid x:Name="dataGrid"
-                         Grid.Row="0"
-                         SelectionMode="Single"
-                         ItemsSource="{Binding Source={x:Reference dataPager}, Path=PagedSource }"  
-                         >
-      </syncfusion:SfDataGrid>
-    </Grid> 
-      </ContentPage.Content>
+    <ContentPage.BindingContext>
+        <local:OrderInfoViewModel x:Name = "viewModel"/>
+    </ContentPage.BindingContext>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height = "*" />
+            <RowDefinition Height = "Auto" />
+        </Grid.RowDefinitions>
+        <Border Grid.Row = "1" Padding = "5">
+            <pager:SfDataPager x:Name = "dataPager"
+                               PageSize = "15" 
+                               NumericButtonCount = "10"
+                               Source = "{Binding Orders}">
+            </pager:SfDataPager>
+        </Border>
+        <syncfusion:SfDataGrid x:Name = "dataGrid"
+                               Grid.Row = "0"
+                               ItemsSource = "{Binding Source={x:Reference dataPager}, Path=PagedSource}">
+        </syncfusion:SfDataGrid>
+    </Grid>
 </ContentPage>
-
 {% endhighlight %}
 {% highlight c# %}
 
 public partial class MainPage : ContentPage
 {
-    DataPagerViewModel viewModel;
-	SfDataGrid dataGrid;
-	SfDataPager pager;
 	public NormalPage()
 	{
 		InitializeComponent();
-        viewModel = new DataPagerViewModel();
-        pager = new SfDataPager();
-		pager.PageSize = 15;
-		pager.NumericButtonCount = 10;
-		pager.Source = viewModel.OrdersInfo;
-        dataGrid = new SfDataGrid();
-		dataGrid.ItemsSource = pager.PagedSource;
-		Grid grid = new Grid();
-		grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Star });
-		grid.RowDefinitions.Add(new RowDefinition() { Height = 50 });
-		grid.Children.Add(dataGrid);
-		grid.Children.Add(pager);
-		grid.SetRow(dataGrid, 0);
-		grid.SetRow(pager, 1);
-		this.Content = grid;
+        SfDataPager dataPager = new SfDataPager();
+        OrderInfoViewModel viewModel = new OrderInfoViewModel();
+        dataPager.PageSize = 15;
+        dataPager.NumericButtonCount = 10;
+        dataPager.Source = viewModel.Orders;
+
+        SfDataGrid dataGrid = new SfDataGrid();
+        dataGrid.ItemsSource = dataPager.PagedSource;
+
+        Border border = new Border();
+        border.Padding = new Thickness(5);
+        border.Content = dataPager;
+
+        Grid grid = new Grid();
+        grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Star });
+        grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Auto });
+        grid.Children.Add(dataGrid);
+        grid.Children.Add(border);
+        grid.SetRow(dataGrid, 0);
+        grid.SetRow(border, 1);
+        this.Content = grid;
 	}
 }
-
 {% endhighlight %}
 {% endtabs %}
 
 The following screenshot shows the outcome upon execution of the above code:
 
-![Normal paging .NET MAUI DataGrid.](Images\paging\net-maui-datagrid-normal-paging.png)
+<img alt="Normal paging .NET MAUI DataGrid." src="Images\paging\net-maui-datagrid-normal-paging.png" width="404" Height = "429"/>
 
 ## On-Demand Paging	
 
@@ -121,82 +117,65 @@ To load data for the DataPager control dynamically, follow the code example:
 
 {% tabs %}
 {% highlight xaml %}
-
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PagerSample.MainPage"
-             Title="MainPage"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
-             xmlns:pager="clr-namespace:Syncfusion.Maui.DataGrid.DataPager;assembly=Syncfusion.Maui.DataGrid"
-             xmlns:local="clr-namespace:PagerSample">
-
 <ContentPage.BindingContext>
-    <local:DataPagerViewModel x:Name="viewModel" />
+    <local:OrderInfoViewModel x:Name = "viewModel"/>
 </ContentPage.BindingContext>
-  
-<ContentPage.Content>
-    <Grid> 
-      <Grid.RowDefinitions>
-        <RowDefinition Height="*" />
-        <RowDefinition Height="Auto" />
-      </Grid.RowDefinitions>
-      <pager:SfDataPager x:Name ="dataPager"
-                           Grid.Row="1"
-                           PageSize="15" 
-                           NumericButtonCount="10"
-                           PageCount="10"
-                           OnDemandLoading="dataPager_OnDemandLoading"
-                           UseOnDemandPaging="True">
-      </pager:SfDataPager>      
-      <syncfusion:SfDataGrid x:Name="dataGrid"
-                         Grid.Row="0"
-                         SelectionMode="Single"
-                         ItemsSource="{Binding Source={x:Reference dataPager}, Path=PagedSource }"  
-                         >
-      </syncfusion:SfDataGrid>
-    </Grid> 
-      </ContentPage.Content>
-</ContentPage>
 
+<Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height = "*" />
+        <RowDefinition Height = "Auto" />
+    </Grid.RowDefinitions>
+    <Border Grid.Row = "1" Padding = "5">
+        <pager:SfDataPager x:Name = "dataPager"
+                            PageSize = "15" 
+                            NumericButtonCount = "10"
+                            Source = "{Binding Orders}"
+                            OnDemandLoading="dataPager_OnDemandLoading"
+                            UseOnDemandPaging="True">
+        </pager:SfDataPager>
+    </Border>
+    <syncfusion:SfDataGrid x:Name = "dataGrid"
+                            Grid.Row = "0"
+                            ItemsSource = "{Binding Source={x:Reference dataPager}, Path=PagedSource}">
+    </syncfusion:SfDataGrid>
+</Grid>
 {% endhighlight %}
 {% highlight c# %}
+SfDataPager dataPager = new SfDataPager();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataPager.PageSize = 15;
+dataPager.NumericButtonCount = 10;
+dataPager.Source = viewModel.Orders;
+dataPager.UseOnDemandPaging = true;
+dataPager.OnDemandLoading += dataPager_OnDemandLoading;
 
-public partial class MainPage : ContentPage
-{
-    DataPagerViewModel viewModel;
-	SfDataGrid dataGrid;
-	SfDataPager pager;
-	public NormalPage()
-	{
-		InitializeComponent();
-        viewModel = new DataPagerViewModel();
-        pager = new SfDataPager();
-		pager.PageSize = 15;
-		pager.NumericButtonCount = 10;
-		pager.PageCount = 10;
-        pager.UseOnDemandPaging = true
-        pager.OnDemandLoading += dataPager_OnDemandLoading;
-        dataGrid = new SfDataGrid();
-		dataGrid.ItemsSource = pager.PagedSource;
-		Grid grid = new Grid();
-		grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Star });
-		grid.RowDefinitions.Add(new RowDefinition() { Height = 50 });
-		grid.Children.Add(dataGrid);
-		grid.Children.Add(pager);
-		grid.SetRow(dataGrid, 0);
-		grid.SetRow(pager, 1);
-		this.Content = grid;
-	}
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = dataPager.PagedSource;
 
-  private void dataPager_OnDemandLoading(object sender, OnDemandLoadingEventArgs e)
-  {
-     pager.LoadDynamicItems(e.StartIndex, viewModel.OrdersInfo.Skip(e.StartIndex).Take(e.PageSize));
-  }
-}
+Border border = new Border();
+border.Padding = new Thickness(5);
+border.Content = dataPager;
 
+Grid grid = new Grid();
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Star });
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Auto });
+grid.Children.Add(dataGrid);
+grid.Children.Add(border);
+grid.SetRow(dataGrid, 0);
+grid.SetRow(border, 1);
+this.Content = grid;
 {% endhighlight %}
 {% endtabs %}
 
+{% tabs %}
+{% highlight c# %}
+private void dataPager_OnDemandLoading(object sender, OnDemandLoadingEventArgs e)
+{
+    dataPager.LoadDynamicItems(e.StartIndex, viewModel.Orders.Skip(e.StartIndex).Take(e.PageSize));
+}
+{% endhighlight %}
+{% endtabs %}
 
 N>In on-demand paging, you should not assign a value to the `Source` property. Additionally, you have to define an integer value for the `PageCount` property to generate the required numeric buttons in the view.
 
@@ -204,15 +183,15 @@ When using `OnDemandPaging`, `SfDataPager.PagedSource` loads only the current pa
 
 To use ResetCache method, follow the code example:
 
+{% tabs %}
 {% highlight c# %}
-
 private void dataPager_OnDemandLoading(object sender, OnDemandLoadingEventArgs e)
 {
-     pager.LoadDynamicItems(e.StartIndex, viewModel.OrdersInfo.Skip(e.StartIndex).Take(e.PageSize));
-     (pager.PagedSource as PagedCollectionView).ResetCache();
+     dataPager.LoadDynamicItems(e.StartIndex, viewModel.Orders.Skip(e.StartIndex).Take(e.PageSize));
+     (dataPager.PagedSource as PagedCollectionView).ResetCache();
 }
-
 {% endhighlight %}
+{% endtabs %}
 
 ## Numeric button shapes
 
@@ -220,25 +199,54 @@ The `SfDataPager` allows you to change the shape of the buttons using the [SfDat
 
 {% tabs %}
 {% highlight xaml %}
-<pager:SfDataPager x:Name="dataPager"
-                         ButtonShape="Rectangle"
-                         PageSize="15"
-                         Source="{Binding OrdersInfo}">
-</pager:SfDataPager>
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel x:Name = "viewModel"/>
+</ContentPage.BindingContext>
+
+<Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height = "*" />
+        <RowDefinition Height = "Auto" />
+    </Grid.RowDefinitions>
+    <Border Grid.Row = "1" Padding = "5">
+        <pager:SfDataPager x:Name = "dataPager"
+                            PageSize = "15" 
+                            ButtonShape = "Rectangle"
+                            Source = "{Binding Orders}">
+        </pager:SfDataPager>
+    </Border>
+    <syncfusion:SfDataGrid x:Name = "dataGrid"
+                            Grid.Row = "0"
+                            ItemsSource = "{Binding Source={x:Reference dataPager}, Path=PagedSource}">
+    </syncfusion:SfDataGrid>
+</Grid>
 {% endhighlight %}
 {% highlight c# %}
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        dataPager.ButtonShape = DataPagerButtonShape.Rectangle;
-    }
-}
+SfDataPager dataPager = new SfDataPager();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataPager.PageSize = 15;
+dataPager.ButtonShape = DataPagerButtonShape.Rectangle;
+dataPager.Source = viewModel.Orders;
+
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = dataPager.PagedSource;
+
+Border border = new Border();
+border.Padding = new Thickness(5);
+border.Content = dataPager;
+
+Grid grid = new Grid();
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Star });
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Auto });
+grid.Children.Add(dataGrid);
+grid.Children.Add(border);
+grid.SetRow(dataGrid, 0);
+grid.SetRow(border, 1);
+this.Content = grid;
 {% endhighlight %}
 {% endtabs %}
 
-![Numeric button shape .NET MAUI DataGrid.](Images\paging\net-maui-datagrid-button-shape.png)
+<img alt="Numeric button shape .NET MAUI DataGrid." src="Images\paging\net-maui-datagrid-button-shape.png" width="404" Height = "429"/>
 
 ## Generating numeric buttons
 
@@ -246,21 +254,50 @@ The `SfDataPager` allows you to choose the generation mode of numeric buttons us
 
 {% tabs %}
 {% highlight xaml %}
-<pager:SfDataPager x:Name="dataPager"
-                         NumericButtonsGenerateMode="Auto"
-                         PageSize="15"
-                         Source="{Binding OrdersInfo}">
-</pager:SfDataPager>
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel x:Name = "viewModel"/>
+</ContentPage.BindingContext>
+
+<Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height = "*" />
+        <RowDefinition Height = "Auto" />
+    </Grid.RowDefinitions>
+    <Border Grid.Row = "1" Padding = "5">
+        <pager:SfDataPager x:Name = "dataPager"
+                            PageSize = "15" 
+                            NumericButtonsGenerateMode = "Auto"
+                            Source = "{Binding Orders}">
+        </pager:SfDataPager>
+    </Border>
+    <syncfusion:SfDataGrid x:Name = "dataGrid"
+                            Grid.Row = "0"
+                            ItemsSource = "{Binding Source={x:Reference dataPager}, Path=PagedSource}">
+    </syncfusion:SfDataGrid>
+</Grid>
 {% endhighlight %}
 {% highlight c# %}
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        dataPager.NumericButtonsGenerateMode = DataPagerNumericButtonsGenerateMode.Auto;
-    }
-}
+SfDataPager dataPager = new SfDataPager();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataPager.PageSize = 15;
+dataPager.NumericButtonsGenerateMode = DataPagerNumericButtonsGenerateMode.Auto;
+dataPager.Source = viewModel.Orders;
+
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = dataPager.PagedSource;
+
+Border border = new Border();
+border.Padding = new Thickness(5);
+border.Content = dataPager;
+
+Grid grid = new Grid();
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Star });
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Auto });
+grid.Children.Add(dataGrid);
+grid.Children.Add(border);
+grid.SetRow(dataGrid, 0);
+grid.SetRow(border, 1);
+this.Content = grid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -272,27 +309,56 @@ The `SfDataPager` button is loaded with a default width and height of 40. The de
 
 {% tabs %}
 {% highlight xaml %}
-<pager:SfDataPager x:Name="dataPager"
-                   PageSize="15"
-                   ButtonSize="60"
-                   ButtonFontSize="21"
-                   Source="{Binding OrdersInfo}">
-</pager:SfDataPager>
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel x:Name = "viewModel"/>
+</ContentPage.BindingContext>
+
+<Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height = "*" />
+        <RowDefinition Height = "Auto" />
+    </Grid.RowDefinitions>
+    <Border Grid.Row = "1" Padding = "5">
+        <pager:SfDataPager x:Name = "dataPager"
+                            PageSize = "15" 
+                            ButtonSize = "60"
+                            ButtonFontSize = "21"
+                            Source = "{Binding Orders}">
+        </pager:SfDataPager>
+    </Border>
+    <syncfusion:SfDataGrid x:Name = "dataGrid"
+                            Grid.Row = "0"
+                            ItemsSource = "{Binding Source={x:Reference dataPager}, Path=PagedSource}">
+    </syncfusion:SfDataGrid>
+</Grid>
 {% endhighlight %}
 {% highlight c# %}
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        dataPager.ButtonSize = 60;
-        dataPager.ButtonFontSize = 21;
-    }
-}
+SfDataPager dataPager = new SfDataPager();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataPager.PageSize = 15;
+dataPager.ButtonSize = 60;
+dataPager.ButtonFontSize = 21;
+dataPager.Source = viewModel.Orders;
+
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = dataPager.PagedSource;
+
+Border border = new Border();
+border.Padding = new Thickness(5);
+border.Content = dataPager;
+
+Grid grid = new Grid();
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Star });
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Auto });
+grid.Children.Add(dataGrid);
+grid.Children.Add(border);
+grid.SetRow(dataGrid, 0);
+grid.SetRow(border, 1);
+this.Content = grid;
 {% endhighlight %}
 {% endtabs %}
 
-![Button size and font size of .NET MAUI DataGrid.](Images\paging\net-maui-datagrid-buttonsize-and-fontsize.png)
+<img alt="Button size and font size of .NET MAUI DataGrid." src="Images\paging\net-maui-datagrid-buttonsize-and-fontsize.png" width="404" Height = "429"/>
 
 ## Display mode
 
@@ -355,21 +421,50 @@ The visibility of the numeric and navigation buttons can be personalized by usin
 
 {% tabs %}
 {% highlight xaml %}
-<pager:SfDataPager x:Name="dataPager"
-                   PageSize="15"
-                   DisplayMode="FirstLastNumeric"
-                   Source="{Binding OrdersInfo}">
-</pager:SfDataPager>
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel x:Name = "viewModel"/>
+</ContentPage.BindingContext>
+
+<Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height = "*" />
+        <RowDefinition Height = "Auto" />
+    </Grid.RowDefinitions>
+    <Border Grid.Row = "1" Padding = "5">
+        <pager:SfDataPager x:Name = "dataPager"
+                            PageSize = "15" 
+                            DisplayMode = "FirstLastNumeric"
+                            Source = "{Binding Orders}">
+        </pager:SfDataPager>
+    </Border>
+    <syncfusion:SfDataGrid x:Name = "dataGrid"
+                            Grid.Row = "0"
+                            ItemsSource = "{Binding Source={x:Reference dataPager}, Path=PagedSource}">
+    </syncfusion:SfDataGrid>
+</Grid>
 {% endhighlight %}
 {% highlight c# %}
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        dataPager.DisplayMode = DataPagerDisplayMode.FirstLastNumeric;
-    }
-}
+SfDataPager dataPager = new SfDataPager();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataPager.PageSize = 15;
+dataPager.DisplayMode = DataPagerDisplayMode.FirstLastNumeric;
+dataPager.Source = viewModel.Orders;
+
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = dataPager.PagedSource;
+
+Border border = new Border();
+border.Padding = new Thickness(5);
+border.Content = dataPager;
+
+Grid grid = new Grid();
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Star });
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Auto });
+grid.Children.Add(dataGrid);
+grid.Children.Add(border);
+grid.SetRow(dataGrid, 0);
+grid.SetRow(border, 1);
+this.Content = grid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -379,25 +474,54 @@ The `SfDataPager` offers support for displaying an ellipsis button at the beginn
 
 {% tabs %}
 {% highlight xaml %}
-<pager:SfDataPager x:Name="dataPager"
-                   PageSize="15"
-                   AutoEllipsisMode="After"
-                   Source="{Binding OrdersInfo}">
-</pager:SfDataPager>
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel x:Name = "viewModel"/>
+</ContentPage.BindingContext>
+
+<Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height = "*" />
+        <RowDefinition Height = "Auto" />
+    </Grid.RowDefinitions>
+    <Border Grid.Row = "1" Padding = "5">
+        <pager:SfDataPager x:Name = "dataPager"
+                            PageSize = "15" 
+                            AutoEllipsisMode = "After"
+                            Source = "{Binding Orders}">
+        </pager:SfDataPager>
+    </Border>
+    <syncfusion:SfDataGrid x:Name = "dataGrid"
+                            Grid.Row = "0"
+                            ItemsSource = "{Binding Source={x:Reference dataPager}, Path=PagedSource}">
+    </syncfusion:SfDataGrid>
+</Grid>
 {% endhighlight %}
 {% highlight c# %}
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        dataPager.AutoEllipsisMode = DataPagerEllipsisMode.After;
-    }
-}
+SfDataPager dataPager = new SfDataPager();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataPager.PageSize = 15;
+dataPager.AutoEllipsisMode = DataPagerEllipsisMode.After;
+dataPager.Source = viewModel.Orders;
+
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = dataPager.PagedSource;
+
+Border border = new Border();
+border.Padding = new Thickness(5);
+border.Content = dataPager;
+
+Grid grid = new Grid();
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Star });
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Auto });
+grid.Children.Add(dataGrid);
+grid.Children.Add(border);
+grid.SetRow(dataGrid, 0);
+grid.SetRow(border, 1);
+this.Content = grid;
 {% endhighlight %}
 {% endtabs %}
 
-![Auto-ellipsis mode .NET MAUI DataGrid.](Images\paging\net-maui-datagrid-autoelipsismode.png)
+<img alt="Auto-ellipsis mode .NET MAUI DataGrid." src="Images\paging\net-maui-datagrid-autoelipsismode.png" width="404" Height = "429"/>
 
 ## Customize the auto-ellipsis text
 
@@ -405,23 +529,52 @@ The auto-ellipsis text can be customized by using the [SfDataPager.AutoEllipsisT
 
 {% tabs %}
 {% highlight xaml %}
-<pager:SfDataPager x:Name="dataPager"
-                   PageSize="15"
-                   AutoEllipsisMode="After"
-                   AutoEllipsisText="***"
-                   Source="{Binding OrdersInfo}">
-</pager:SfDataPager>
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel x:Name = "viewModel"/>
+</ContentPage.BindingContext>
+
+<Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height = "*" />
+        <RowDefinition Height = "Auto" />
+    </Grid.RowDefinitions>
+    <Border Grid.Row = "1" Padding = "5">
+        <pager:SfDataPager x:Name = "dataPager"
+                            PageSize = "15" 
+                            AutoEllipsisMode="After"
+                            AutoEllipsisText="***"
+                            Source = "{Binding Orders}">
+        </pager:SfDataPager>
+    </Border>
+    <syncfusion:SfDataGrid x:Name = "dataGrid"
+                            Grid.Row = "0"
+                            ItemsSource = "{Binding Source={x:Reference dataPager}, Path=PagedSource}">
+    </syncfusion:SfDataGrid>
+</Grid>
 {% endhighlight %}
 {% highlight c# %}
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        dataPager.AutoEllipsisMode = DataPagerEllipsisMode.After;
-        dataPager.AutoEllipsisText = "***";
-    }
-}
+SfDataPager dataPager = new SfDataPager();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataPager.PageSize = 15;
+dataPager.AutoEllipsisMode = DataPagerEllipsisMode.After;
+dataPager.AutoEllipsisText = "***";
+dataPager.Source = viewModel.Orders;
+
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = dataPager.PagedSource;
+
+Border border = new Border();
+border.Padding = new Thickness(5);
+border.Content = dataPager;
+
+Grid grid = new Grid();
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Star });
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Auto });
+grid.Children.Add(dataGrid);
+grid.Children.Add(border);
+grid.SetRow(dataGrid, 0);
+grid.SetRow(border, 1);
+this.Content = grid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -453,21 +606,50 @@ By default, `SfDataPager` displays the button in the horizontal direction. Howev
 
 {% tabs %}
 {% highlight xaml %}
-<pager:SfDataPager x:Name="dataPager"
-                   PageSize="15"
-                   Orientation="Vertical"
-                   Source="{Binding OrdersInfo}">
-</pager:SfDataPager>
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel x:Name = "viewModel"/>
+</ContentPage.BindingContext>
+
+<Grid>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width = "*" />
+        <ColumnDefinition Width = "Auto" />
+    </Grid.ColumnDefinitions>
+    <Border Grid.Column = "1" Padding = "5">
+        <pager:SfDataPager x:Name = "dataPager"
+                        PageSize = "15" 
+                        Orientation="Vertical"
+                        Source = "{Binding Orders}">
+        </pager:SfDataPager>
+    </Border>
+    <syncfusion:SfDataGrid x:Name = "dataGrid"
+                        Grid.Column = "0"
+                        ItemsSource = "{Binding Source={x:Reference dataPager}, Path=PagedSource}">
+    </syncfusion:SfDataGrid>
+</Grid>
 {% endhighlight %}
 {% highlight c# %}
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        dataPager.Orientation = DataPagerScrollOrientation.Vertical;
-    }
-}
+SfDataPager dataPager = new SfDataPager();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataPager.PageSize = 15;
+dataPager.Orientation = DataPagerScrollOrientation.Vertical;
+dataPager.Source = viewModel.Orders;
+
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = dataPager.PagedSource;
+
+Border border = new Border();
+border.Padding = new Thickness(5);
+border.Content = dataPager;
+
+Grid grid = new Grid();
+grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = GridLength.Star });
+grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = GridLength.Auto });
+grid.Children.Add(dataGrid);
+grid.Children.Add(border);
+grid.SetColumn(dataGrid, 0);
+grid.SetColumn(border, 1);
+this.Content = grid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -482,19 +664,59 @@ The `PageChanging` event is triggered when the user navigation form one page to 
 * **NewPageIndex** - Gets the new page index to which the page is navigating.
 
 {% tabs %}
-{% highlight c# %}
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        dataPager.PageChanging += DataPager_PageChanging;
-    }
+{% highlight xaml %}
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel x:Name = "viewModel"/>
+</ContentPage.BindingContext>
 
-    private void DataPager_PageChanging(object sender, Syncfusion.Maui.DataGrid.DataPager.PageChangingEventArgs e)
-    {
-        // you can get the old page index and new page index here.
-    }
+<Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height = "*" />
+        <RowDefinition Height = "Auto" />
+    </Grid.RowDefinitions>
+    <Border Grid.Row = "1" Padding = "5">
+        <pager:SfDataPager x:Name = "dataPager"
+                           PageSize = "15" 
+                           PageChanging = "DataPager_PageChanging"
+                           Source = "{Binding Orders}">
+        </pager:SfDataPager>
+    </Border>
+    <syncfusion:SfDataGrid x:Name = "dataGrid"
+                           Grid.Row = "0"
+                           ItemsSource = "{Binding Source={x:Reference dataPager}, Path=PagedSource}">
+    </syncfusion:SfDataGrid>
+</Grid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataPager dataPager = new SfDataPager();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataPager.PageSize = 15;
+dataPager.PageChanging += DataPager_PageChanging;
+dataPager.Source = viewModel.Orders;
+
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = dataPager.PagedSource;
+
+Border border = new Border();
+border.Padding = new Thickness(5);
+border.Content = dataPager;
+
+Grid grid = new Grid();
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Star });
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Auto });
+grid.Children.Add(dataGrid);
+grid.Children.Add(border);
+grid.SetRow(dataGrid, 0);
+grid.SetRow(border, 1);
+this.Content = grid;
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# %}
+private void DataPager_PageChanging(object sender, Syncfusion.Maui.DataGrid.DataPager.PageChangingEventArgs e)
+{
+    // you can get the old page index and new page index here.
 }
 {% endhighlight %}
 {% endtabs %}
@@ -507,19 +729,59 @@ The `PageChanged` event is triggered when the user navigates form one page to an
 * **NewPageIndex** - Gets the new page index to which the page is navigated.
 
 {% tabs %}
-{% highlight c# %}
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        dataPager.PageChanged += DataPager_PageChanged;
-    }
+{% highlight xaml %}
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel x:Name = "viewModel"/>
+</ContentPage.BindingContext>
 
-    private void DataPager_PageChanged(object sender, Syncfusion.Maui.DataGrid.DataPager.PageChangedEventArgs e)
-    {
-        // you can get the old page index and new page index here.
-    }
+<Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height = "*" />
+        <RowDefinition Height = "Auto" />
+    </Grid.RowDefinitions>
+    <Border Grid.Row = "1" Padding = "5">
+        <pager:SfDataPager x:Name = "dataPager"
+                           PageSize = "15" 
+                           PageChanged = "DataPager_PageChanged"
+                           Source = "{Binding Orders}">
+        </pager:SfDataPager>
+    </Border>
+    <syncfusion:SfDataGrid x:Name = "dataGrid"
+                           Grid.Row = "0"
+                           ItemsSource = "{Binding Source={x:Reference dataPager}, Path=PagedSource}">
+    </syncfusion:SfDataGrid>
+</Grid>
+{% endhighlight %}
+{% highlight c# %}
+SfDataPager dataPager = new SfDataPager();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataPager.PageSize = 15;
+dataPager.PageChanged += DataPager_PageChanged;
+dataPager.Source = viewModel.Orders;
+
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = dataPager.PagedSource;
+
+Border border = new Border();
+border.Padding = new Thickness(5);
+border.Content = dataPager;
+
+Grid grid = new Grid();
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Star });
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Auto });
+grid.Children.Add(dataGrid);
+grid.Children.Add(border);
+grid.SetRow(dataGrid, 0);
+grid.SetRow(border, 1);
+this.Content = grid;
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight c# %}
+private void DataPager_PageChanged(object sender, Syncfusion.Maui.DataGrid.DataPager.PageChangedEventArgs e)
+{
+    // you can get the old page index and new page index here.
 }
 {% endhighlight %}
 {% endtabs %}
@@ -593,36 +855,73 @@ To apply custom style, follow the code example:
 
 {% tabs %}
 {% highlight xaml %}
-<pager:SfDataPager x:Name="dataPager"
-                         PageSize="15"
-                         Source="{Binding OrdersInfo}">
-                <pager:SfDataPager.DefaultStyle >
-                    <pager:DataPagerStyle NumericButtonSelectionBackgroundColor="Pink"
-                                          NumericButtonBackgroundColor="Purple"
-                                          NavigationButtonBackgroundColor="LightBlue"
-                                          NavigationButtonIconColor="Teal">
-                    </pager:DataPagerStyle>
-                </pager:SfDataPager.DefaultStyle>
-</pager:SfDataPager>
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel x:Name = "viewModel"/>
+</ContentPage.BindingContext>
+
+<Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <Border Grid.Row="1" 
+            Padding="5">
+        <pager:SfDataPager x:Name = "dataPager"
+                           PageSize = "15" 
+                           Source = "{Binding Orders}">
+            <pager:SfDataPager.DefaultStyle >
+                <pager:DataPagerStyle NumericButtonSelectionBackgroundColor = "#cdb4db"
+                                      NumericButtonBackgroundColor = "#ffc8dd"
+                                      NavigationButtonBackgroundColor = "#90e0ef"
+                                      NavigationButtonIconColor = "#0077b6"
+                                      NavigationButtonDisableBackgroundColor = "#caf0f8"
+                                      NavigationButtonDisableIconColor = "#9a8c98">
+                </pager:DataPagerStyle>
+            </pager:SfDataPager.DefaultStyle>
+        </pager:SfDataPager>
+    </Border>
+    <syncfusion:SfDataGrid x:Name = "dataGrid"
+                           Grid.Row = "0"
+                           ItemsSource = "{Binding Source={x:Reference dataPager}, Path=PagedSource}">
+    </syncfusion:SfDataGrid>
+</Grid>
 {% endhighlight %}
 {% highlight c# %}
-public partial class MainPage : ContentPage
-{
-    public MainPage()
-    {
-        InitializeComponent();
-        dataPager.DefaultStyle.NumericButtonSelectionBackgroundColor = Colors.Red;
-        dataPager.DefaultStyle.NumericButtonBackgroundColor = Colors.GreenYellow;
-        dataPager.DefaultStyle.NavigationButtonBackgroundColor = Colors.Black;
-        dataPager.DefaultStyle.NavigationButtonIconColor = Colors.White;
-    }
-}
+SfDataPager dataPager = new SfDataPager();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
+dataPager.PageSize = 15;
+dataPager.Source = viewModel.Orders;
+
+DataPagerStyle dataPagerStyle = new DataPagerStyle();
+dataPagerStyle.NumericButtonSelectionBackgroundColor = Color.FromArgb("#CDB4DB");
+dataPagerStyle.NumericButtonBackgroundColor = Color.FromArgb("#FFC8DD");
+dataPagerStyle.NavigationButtonBackgroundColor = Color.FromArgb("#90E0EF");
+dataPagerStyle.NavigationButtonIconColor = Color.FromArgb("#0077B6");
+dataPagerStyle.NavigationButtonDisableBackgroundColor = Color.FromArgb("#CAF0F8");
+dataPagerStyle.NavigationButtonDisableIconColor = Color.FromArgb("#9A8C98");
+dataPager.DefaultStyle = dataPagerStyle;
+
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = dataPager.PagedSource;
+
+Border border = new Border();
+border.Padding = new Thickness(5);
+border.Content = dataPager;
+
+Grid grid = new Grid();
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Star });
+grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Auto });
+grid.Children.Add(dataGrid);
+grid.Children.Add(border);
+grid.SetRow(dataGrid, 0);
+grid.SetRow(border, 1);
+this.Content = grid;
 {% endhighlight %}
 {% endtabs %}
 
 The following picture shows the customize styles of data pager:
 
-![Data pager style .NET MAUI DataGrid.](Images\paging\net-maui-datagrid-pager-style.png)
+<img alt="Data pager style .NET MAUI DataGrid." src="Images\paging\net-maui-datagrid-pager-style.png" width="404" Height = "429"/>
 
 ### Limitations
 1. UI Filtering is not supported. You can code at the application level to filter the data.

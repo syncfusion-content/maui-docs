@@ -16,17 +16,20 @@ To enable editing, follow the code example:
 
 {% tabs %}
 {% highlight xaml %}
-    <syncfusion:SfDataGrid x:Name="dataGrid"
-                           AllowEditing="True"
-                           SelectionMode="Multiple"    
-                           NavigationMode="Cell" 
-                           ItemsSource="{Binding OrderInfoCollection}" />
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                        AllowEditing="True"
+                        SelectionMode="Multiple"
+                        NavigationMode="Cell"
+                        ItemsSource="{Binding Orders}"/>
 {% endhighlight %}
-
 {% highlight c# %}
-dataGrid.AllowEditing = true;
-dataGrid.SelectionMode = SelectionMode.Multiple;
-dataGrid.NavigationMode = NavigationMode.Cell;
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
+dataGrid.AllowEditing = true;
+dataGrid.SelectionMode = DataGridSelectionMode.Multiple;
+dataGrid.NavigationMode = DataGridNavigationMode.Cell;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -38,22 +41,27 @@ To enable or disable editing for a specific column, you can simply set the [Data
 
 {% tabs %}
 {% highlight xaml %}
-    <syncfusion:SfDataGrid x:Name="dataGrid"
-                           SelectionMode="Multiple"    
-                           NavigationMode="Cell" 
-                           ItemsSource="{Binding OrderInfoCollection}">
-<syncfusion:SfDataGrid.Columns>
-    <syncfusion:DataGridTextColumn AllowEditing="True"
-                               MappingName="OrderID" />
-</syncfusion:SfDataGrid.Columns>
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                        SelectionMode="Multiple"
+                        NavigationMode="Cell"
+                        ItemsSource="{Binding Orders}">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridTextColumn AllowEditing="True"
+                                        MappingName="OrderID"/>
+    </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-dataGrid.SelectionMode = SelectionMode.Multiple;
-dataGrid.NavigationMode = NavigationMode.Cell;
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
+dataGrid.SelectionMode = DataGridSelectionMode.Multiple;
+dataGrid.NavigationMode = DataGridNavigationMode.Cell;
 DataGridTextColumn column = new DataGridTextColumn();
-column.MappingName="OrderID";
-column.AllowEditing = false;
+column.MappingName = "OrderID";
+column.AllowEditing = true;
+dataGrid.Columns.Add(column);
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -65,16 +73,22 @@ To enter the edit mode, you can simply tap or double-tap the grid cell. The beha
 
 {% tabs %}
 {% highlight xaml %}
-    <sfgrid:SfDataGrid x:Name="dataGrid"
-                               AllowEditing="True"
-                               ItemsSource="{Binding OrderInfoCollection}"
-                               EditTapAction="OnTap">
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                        AllowEditing="True"
+                        NavigationMode="Cell"
+                        SelectionMode="Multiple"
+                        ItemsSource="{Binding Orders}"
+                        EditTapAction="OnTap"/>
 {% endhighlight %}
 {% highlight c# %}
-//Enter edit mode in single tap
-this.dataGrid.EditTapAction = TapAction.OnTap;
-//Enter edit mode in double tap
-this.dataGrid.EditTapAction = TapAction.OnDoubleTap;
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
+dataGrid.AllowEditing = true;
+dataGrid.SelectionMode = DataGridSelectionMode.Multiple;
+dataGrid.NavigationMode = DataGridNavigationMode.Cell;
+dataGrid.EditTapAction = DataGridTapAction.OnTap; // For double tap , use DataGridTapAction.OnDoubleTap
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -87,10 +101,20 @@ By default, when focus moves from the data grid to another control, the current 
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid AllowEditing="True"
-                       SelectionMode="Multiple"    
-                       NavigationMode="Cell"
-                       LostFocusBehavior="EndEditCurrentCell"
-                       ItemsSource="{Binding OrderInfoCollection}" />
+                        SelectionMode="Multiple"
+                        NavigationMode="Cell"
+                        LostFocusBehavior="EndEditCurrentCell"
+                        ItemsSource="{Binding Orders}"/>
+{% endhighlight %}
+{% highlight c# %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
+dataGrid.AllowEditing = true;
+dataGrid.SelectionMode = DataGridSelectionMode.Multiple;
+dataGrid.NavigationMode = DataGridNavigationMode.Cell;
+dataGrid.LostFocusBehavior = DataGridLostFocusBehavior.EndEditCurrentCell;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -121,16 +145,10 @@ public class OrderInfo : INotifyPropertyChanged, IEditableObject
     #region private variables
 
     private int _orderID;
-    private int _employeeID;
-    private int _customerID;
-    private bool _isClosed;
-    private string _firstName;
-    private string _lastName;
-    private string _gender;
-    private string _shipCity;
-    private string _shipCountry;
-    private string _freight;
-    private DateTime _shippingDate;
+    private string _customerID;
+    private string _city;
+    private string _country;
+    private string _product;
 
     #endregion
 
@@ -146,103 +164,43 @@ public class OrderInfo : INotifyPropertyChanged, IEditableObject
         }
     }
 
-    public int EmployeeID
-    {
-        get { return _employeeID; }
-        set
-        {
-            this._employeeID = value;
-            RaisePropertyChanged("EmployeeID");
-        }
-    }
-
-    public int CustomerID
+    public string Customer
     {
         get { return _customerID; }
         set
         {
             this._customerID = value;
-            RaisePropertyChanged("CustomerID");
+            RaisePropertyChanged("Customer");
         }
     }
 
-    public bool IsClosed
+    public string City
     {
-        get { return _isClosed; }
+        get { return _city; }
         set
         {
-            this._isClosed = value;
-            RaisePropertyChanged("IsClosed");
+            this._city = value;
+            RaisePropertyChanged("City");
         }
     }
 
-    public string FirstName
+    public string Country
     {
-        get { return _firstName; }
+        get { return _country; }
         set
         {
-            this._firstName = value;
-            RaisePropertyChanged("FirstName");
+            this._country = value;
+            RaisePropertyChanged("Country");
         }
     }
 
-    public string LastName
+    public string Product
     {
-        get { return _lastName; }
+        get { return _product; }
         set
         {
-            this._lastName = value;
-            RaisePropertyChanged("LastName");
-        }
-    }
-
-    public string Gender
-    {
-        get { return _gender; }
-        set
-        {
-            this._gender = value;
-            RaisePropertyChanged("Gender");
-        }
-    }
-
-    public string ShipCity
-    {
-        get { return _shipCity; }
-        set
-        {
-            this._shipCity = value;
-            RaisePropertyChanged("ShipCity");
-        }
-    }
-
-    public string ShipCountry
-    {
-        get { return _shipCountry; }
-        set
-        {
-            this._shipCountry = value;
-            RaisePropertyChanged("ShipCountry");
-        }
-    }
-
-    public string Freight
-    {
-        get { return _freight; }
-        set
-        {
-            this._freight = value;
-            RaisePropertyChanged("Freight");
-        }
-    }
-
-    public DateTime ShippingDate
-    {
-        get { return _shippingDate; }
-        set
-        {
-            this._shippingDate = value;
-            RaisePropertyChanged("ShippingDate");
+            this._product = value;
+            RaisePropertyChanged("Product");
         }
     }
 
@@ -250,13 +208,13 @@ public class OrderInfo : INotifyPropertyChanged, IEditableObject
 
     #region INotifyPropertyChanged implementation
 
-    public event PropertyChangedEventHandler PropertyChanged;
+    public event PropertyChangedEventHandler? PropertyChanged;
 
-	private void RaisePropertyChanged (String Name)
-	{
-		if (PropertyChanged != null)
-			this.PropertyChanged (this, new PropertyChangedEventArgs (Name));
-	}
+    private void RaisePropertyChanged(String Name)
+    {
+        if (PropertyChanged != null)
+            this.PropertyChanged(this, new PropertyChangedEventArgs(Name));
+    }
 
     private Dictionary<string, object> storedValues;
 
@@ -323,13 +281,20 @@ The [SfDataGrid.CurrentCellBeginEdit](https://help.syncfusion.com/cr/maui/Syncfu
 To hook the `SfDataGrid.CurrentCellBeginEdit` event, follow the code example:
 
 {% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                        AllowEditing="True"
+                        SelectionMode="Multiple"
+                        NavigationMode="Cell"
+                        CurrentCellBeginEdit="dataGrid_CurrentCellBeginEdit"
+                        ItemsSource="{Binding Orders}">
+</syncfusion:SfDataGrid>
+{% endhighlight %}
 {% highlight c# %}
-this.dataGrid.CurrentCellBeginEdit += DataGrid_CurrentCellBeginEdit;
-
-private void DataGrid_CurrentCellBeginEdit(object sender, DataGridCurrentCellBeginEditEventArgs e)
+private void dataGrid_CurrentCellBeginEdit(object sender, DataGridCurrentCellBeginEditEventArgs e)
 {
     // Editing prevented for the cell at RowColumnIndex(2,2).
-    if (e.RowColumnIndex == new Syncfusion.Maui.GridCommon.ScrollAxis.RowColumnIndex(2, 2)) 
+    if (e.RowColumnIndex == new Syncfusion.Maui.GridCommon.ScrollAxis.RowColumnIndex(2, 2))
         e.Cancel = true;
 }
 {% endhighlight %}
@@ -345,16 +310,22 @@ The [CurrentCellEndEdit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Dat
 To hook the `SfDataGrid.CurrentCellEndEdit` event, follow the code example:
 
 {% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                        AllowEditing="True"
+                        SelectionMode="Multiple"
+                        NavigationMode="Cell"
+                        CurrentCellEndEdit="dataGrid_CurrentCellEndEdit"
+                        ItemsSource="{Binding Orders}">
+</syncfusion:SfDataGrid>
+{% endhighlight %}
 {% highlight c# %}
-this.dataGrid.CurrentCellEndEdit += DataGrid_CurrentCellEndEdit;
-
-private void DataGrid_CurrentCellEndEdit(object sender, DataGridCurrentCellEndEditEventArgs e)
+private void dataGrid_CurrentCellEndEdit(object sender, DataGridCurrentCellEndEditEventArgs e)
 {
     // Editing prevented for the cell at RowColumnIndex(1,3).
     if (e.RowColumnIndex == new Syncfusion.Maui.GridCommon.ScrollAxis.RowColumnIndex(1, 3))
         e.Cancel = true;
 }
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -365,10 +336,17 @@ private void DataGrid_CurrentCellEndEdit(object sender, DataGridCurrentCellEndEd
 The SfDataGrid allows you to programmatically edit a cell by calling the [SfDataGrid.BeginEdit](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_BeginEdit_System_Int32_System_Int32_) method. This method enters the particular cell into edit mode, enabling the editing of data programmatically. To programmatically edit a cell, refer to the code example below:
 
 {% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                        AllowEditing="True"
+                        SelectionMode="Multiple"
+                        NavigationMode="Cell"
+                        Loaded="dataGrid_Loaded"
+                        ItemsSource="{Binding Orders}">
+</syncfusion:SfDataGrid>
+{% endhighlight %}
 {% highlight c# %}
-this.dataGrid.Loaded += DataGrid_Loaded;
-
-private void DataGrid_Loaded(object sender, EventArgs e)
+private void dataGrid_Loaded(object sender, EventArgs e)
 {
     //Edit the cell at 2nd row,2nd column programmatically
     this.dataGrid.BeginEdit(2, 2);
@@ -401,10 +379,17 @@ this.dataGrid.CancelEdit();
 The `SfDataGrid.CurrentCellBeginEdit` event can be used to cancel the editing operation for the corresponding cell. To cancel the editing operation using the `SfDataGrid.CurrentCellBeginEdit` event, follow the code example:
 
 {% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                        AllowEditing="True"
+                        SelectionMode="Multiple"
+                        NavigationMode="Cell"
+                        CurrentCellBeginEdit="dataGrid_CurrentCellBeginEdit"
+                        ItemsSource="{Binding Orders}">
+</syncfusion:SfDataGrid>
+{% endhighlight %}
 {% highlight c# %}
-this.dataGrid.CurrentCellBeginEdit += DataGrid_CurrentCellBeginEdit;
-
-private void DataGrid_CurrentCellBeginEdit(object sender, DataGridCurrentCellBeginEditEventArgs e)
+private void dataGrid_CurrentCellBeginEdit(object sender, DataGridCurrentCellBeginEditEventArgs e)
 {
     if (e.Column.MappingName == "OrderID" || e.RowColumnIndex.RowIndex == 2)
         e.Cancel = true;
@@ -417,10 +402,17 @@ private void DataGrid_CurrentCellBeginEdit(object sender, DataGridCurrentCellBeg
 To prevent the edited value from being committed, use the `CurrentCellEndEdit` event. This event prevents the edited values from being committed to the underlying collection. Refer to the code example below:
 
 {% tabs %}
+{% highlight xaml %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                        AllowEditing="True"
+                        SelectionMode="Multiple"
+                        NavigationMode="Cell"
+                        CurrentCellEndEdit="dataGrid_CurrentCellEndEdit"
+                        ItemsSource="{Binding Orders}">
+</syncfusion:SfDataGrid>
+{% endhighlight %}
 {% highlight c# %}
-this.dataGrid.CurrentCellEndEdit += DataGrid_CurrentCellEndEdit;
-
-private void DataGrid_CurrentCellEndEdit(object sender, DataGridCurrentCellEndEditEventArgs e)
+private void dataGrid_CurrentCellEndEdit(object sender, DataGridCurrentCellEndEditEventArgs e)
 {
     if (e.RowColumnIndex.RowIndex == 2)
         e.Cancel = true;

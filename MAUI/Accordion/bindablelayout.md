@@ -213,17 +213,12 @@ this.BindingContext = new EmployeeDetails();
 The following code example binds the collection created in the previous step to the `BindableLayout.ItemsSource` property.
 
 {% tabs %}
-{% highlight xaml hl_lines="7"%}
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Accordion;assembly=Syncfusion.Maui.Expander"
-             xmlns:local="clr-namespace:AccordionBindableLayout"
-             x:Class="AccordionBindableLayout.MainPage">
-    <syncfusion:SfAccordion x:Name="Accordion"
-                            BindableLayout.ItemsSource="{Binding Employees}"/>
+{% highlight xaml hl_lines="2" %}
+<syncfusion:SfAccordion x:Name="Accordion"
+                        BindableLayout.ItemsSource="{Binding Employees}"/>
 </ContentPage>      
 {% endhighlight %}
-{% highlight c# hl_lines="2"%}
+{% highlight c# hl_lines="2" %}
 SfAccordion Accordion = new SfAccordion();
 BindableLayout.SetItemsSource(Accordion, viewModel.Employees);
 {% endhighlight %}
@@ -235,57 +230,41 @@ The [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.
 
 {% tabs %}
 {% highlight xaml hl_lines="2 3" %}
-<syncfusion:SfAccordion  x:Name="accordion"
-                         BindableLayout.ItemsSource="{Binding Employees}" >
+<syncfusion:SfAccordion x:Name="accordion"
+                        BindableLayout.ItemsSource="{Binding Employees}">
     <BindableLayout.ItemTemplate>
         <DataTemplate>
             <syncfusion:AccordionItem IsExpanded="{Binding IsExpanded}">
                 <syncfusion:AccordionItem.Header>
                     <Grid  HeightRequest="48">
                         <Label Text="{Binding Name}" Margin="16,14,0,14" CharacterSpacing="0.25" FontFamily="Roboto-Regular"  FontSize="14" />
-                            </Grid>
+                    </Grid>
                 </syncfusion:AccordionItem.Header>
                 <syncfusion:AccordionItem.Content>
-                    <Grid ColumnSpacing="10" RowSpacing="2" BackgroundColor="#f4f4f4"  >
-                        <Grid Margin="16,6,0,0">
+                    <Grid ColumnSpacing="10" RowSpacing="2" BackgroundColor="#f4f4f4">
+                        <Grid Margin="16,6,0,0" RowDefinitions="25,25,25,25,70,Auto" ColumnDefinitions="100,100,*">
                             <Grid.Resources>
                                 <Style TargetType="Label">
-                                            <Setter Property="FontFamily" Value="Roboto-Regular"/>
+                                    <Setter Property="FontFamily" Value="Roboto-Regular" />
                                 </Style>
                             </Grid.Resources>
-                            <Grid.RowDefinitions >
-                                <RowDefinition Height="25"/>
-                                <RowDefinition Height="25"/>
-                                <RowDefinition Height="25"/>
-                                <RowDefinition Height="25"/>
-                                <RowDefinition Height="{OnPlatform Default=90,Android=90,WinUI=70, iOS=100,MacCatalyst=70 }"/>
-                                <RowDefinition Height="Auto"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="100"/>
-                                <ColumnDefinition Width="100"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <Frame  Grid.RowSpan="4" BorderColor="Transparent" Grid.Row="0" Grid.Column="0"  Padding="0" Margin="0,0,0,7">
-                                <Image  Source="{Binding Image}"/>
-                            </Frame>
-                            <Label Text="Position" Grid.Column="1" Grid.Row="0" Margin="6,0,0,0"/>
-                            <Label Text="{Binding Position}" Grid.Row="0" Grid.Column="2"/>
-                            <Label Text="Organization " Grid.Row="1" Grid.Column="1" Margin="6,0,0,0"/>
-                            <Label Text="{Binding OrganizationUnit}" Grid.Row="1" Grid.Column="2"/>
-                            <Label Text="Date Of Birth " Grid.Row="2" Grid.Column="1" Margin="6,0,0,0"/>
-                            <Label Text="{Binding DateOfBirth}" Grid.Row="2" Grid.Column="2"/>
-                            <Label Text="Location " Grid.Row="3" Grid.Column="1" Margin="6,0,0,0"/>
-                            <Label Text="{Binding Location}" Grid.Row="3" Grid.Column="2"/>
-                            <Label Padding="0,10,0,10" Grid.Row="4" Grid.ColumnSpan="3"  LineBreakMode="WordWrap"  
-                                            FontSize="14" CharacterSpacing="0.25" VerticalTextAlignment="Center" 
-                                                Text="{Binding Description}">
+                            <Border Grid.RowSpan="4" Padding="0" Margin="0,0,12,7">
+                                <Image  Source="{Binding Image,Converter={StaticResource imageconverter}}"/>
+                            </Border>
+                            <Label Text="Position" Grid.Column="1" Margin="6,0,0,0" />
+                            <Label Text="{Binding Position}" Grid.Column="2" />
+                            <Label Text="Organization " Grid.Row="1" Grid.Column="1" Margin="6,0,0,0" />
+                            <Label Text="{Binding OrganizationUnit}" Grid.Row="1" Grid.Column="2" />
+                            <Label Text="Date Of Birth " Grid.Row="2" Grid.Column="1" Margin="6,0,0,0" />
+                            <Label Text="{Binding DateOfBirth}" Grid.Row="2" Grid.Column="2" />
+                            <Label Text="Location " Grid.Row="3" Grid.Column="1" Margin="6,0,0,0" />
+                            <Label Text="{Binding Location}" Grid.Row="3" Grid.Column="2" />
+                            <Label Padding="0,10,0,10" Grid.Row="4" Grid.ColumnSpan="3"  LineBreakMode="WordWrap" FontSize="14" CharacterSpacing="0.25" VerticalTextAlignment="Center" 
+                                   Text="{Binding Description}">
                             </Label>
                             <StackLayout Grid.Row="5" Orientation="Horizontal" Margin="0,0,0,12">
-                                <Label Text="&#xe700;" FontSize="16" Margin="0,2,2,2"
-                                           FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}'
-                                                   VerticalOptions="Center" VerticalTextAlignment="Center"/>
-                                <Label Text="{Binding Phone}" Grid.Column="1" VerticalOptions="Center" CharacterSpacing="0.25" FontSize="14"/>
+                                <Label Text="&#xe700;" FontSize="16" Margin="0,2,2,2" FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}' VerticalOptions="Center" VerticalTextAlignment="Center" />
+                                <Label Text="{Binding Phone}" Grid.Column="1" VerticalOptions="Center" CharacterSpacing="0.25" FontSize="14" />
                             </StackLayout>
                         </Grid>
                     </Grid>
@@ -295,7 +274,7 @@ The [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.
     </BindableLayout.ItemTemplate>
 </syncfusion:SfAccordion>    
 {% endhighlight %}
-{% highlight c# hl_lines="26 27"%}
+{% highlight c# hl_lines="27 28" %}
 SfAccordion accordion = new SfAccordion();
 DataTemplate ItemTemplate = new DataTemplate(() =>
 {
@@ -321,12 +300,13 @@ DataTemplate ItemTemplate = new DataTemplate(() =>
     accordion.Items.Add(accordionItem);
     return accordionItem;
 });
+
 BindableLayout.SetItemTemplate(accordion, ItemTemplate);
 BindableLayout.SetItemsSource(accordion, viewModel.Employees);
 {% endhighlight %}
 {% endtabs %}
 
-![.NET MAUI Forms Accordion with Bindable Layout](Images/bindablelayout/maui-accordion-with-bindablelayout.png)
+<img alt="Defining the Accordion items" src="Images\getting-started\maui-accordion-with-defining-accordion-items.png" width="404" /> 
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/binding-items-using-bindable-layout-in-.net-maui-accordion).
 

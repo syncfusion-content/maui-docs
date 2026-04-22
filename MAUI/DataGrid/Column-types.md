@@ -141,9 +141,8 @@ You can customize the display of any column in the `SfDataGrid` by setting the [
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfDataGrid x:Name="dataGrid"    
-                       ColumnWidthMode="Fill"                
-                       ItemsSource="{Binding Orders}">
+<syncfusion:SfDataGrid x:Name="dataGrid"             
+                       ItemsSource="{Binding OrderInfoCollection}">
     <syncfusion:SfDataGrid.Columns>    
         <syncfusion:DataGridNumericColumn HeaderText="Order ID" MappingName="OrderID">
            <syncfusion:DataGridNumericColumn.CellTemplate>
@@ -151,8 +150,8 @@ You can customize the display of any column in the `SfDataGrid` by setting the [
                  <Label Text="{Binding OrderID}" TextColor="Red" HorizontalOptions="Center" VerticalOptions="Center"/>
               </DataTemplate>
            </syncfusion:DataGridNumericColumn.CellTemplate>
-        </syncfusion:DataGridNumericColumn>     
-        <syncfusion:DataGridTextColumn  HeaderText="Customer Name" MappingName="CustomerName" />
+        </syncfusion:DataGridNumericColumn>
+        <syncfusion:DataGridTextColumn  HeaderText="Customer" MappingName="CustomerName" />
         <syncfusion:DataGridNumericColumn HeaderText="Quantity" MappingName="Quantity" Width="150">
             <syncfusion:DataGridNumericColumn.CellTemplate>
                 <DataTemplate>
@@ -166,6 +165,7 @@ You can customize the display of any column in the `SfDataGrid` by setting the [
                 </DataTemplate>
             </syncfusion:DataGridNumericColumn.CellTemplate>
         </syncfusion:DataGridNumericColumn>
+        <syncfusion:DataGridTextColumn MappingName="City" HeaderText="Ship City" />
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
@@ -182,22 +182,22 @@ In the following example, a custom DataTemplateSelector is used to apply differe
 <ContentPage.Resources>
     <ResourceDictionary>
         <DataTemplate x:Key="DefaultTemplate">
-            <StackLayout Background="#FFF3E0" Padding="5">
+            <Grid Background="#FFF3E0" Padding="5">
                 <Label Text="{Binding OrderID}" 
                        TextColor="#E65100"
                        FontAttributes="Bold"
                        HorizontalTextAlignment="Center"  
                        VerticalTextAlignment="Center"/>
-            </StackLayout>
+            </Grid>
         </DataTemplate>
         <DataTemplate x:Key="AlternateTemplate">
-            <StackLayout Background="#E3F2FD" Padding="5">
+            <Grid Background="#E3F2FD" Padding="5">
                 <Label Text="{Binding OrderID}" 
                        TextColor="#0D47A1" 
                        FontAttributes="Bold"
                        HorizontalTextAlignment="Center" 
                        VerticalTextAlignment="Center" />
-            </StackLayout>
+            </Grid>
         </DataTemplate>
         <selector:CustomCellTemplateSelector x:Key="OrderTemplateSelector"
                                              DefaultTemplate="{StaticResource DefaultTemplate}"
@@ -206,14 +206,15 @@ In the following example, a custom DataTemplateSelector is used to apply differe
 </ContentPage.Resources>
 
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding Orders}"
+                       ItemsSource="{Binding OrderInfoCollection}"
                        AutoGenerateColumnsMode="None">
     <syncfusion:SfDataGrid.Columns>
         <syncfusion:DataGridNumericColumn HeaderText="Order ID" 
                                           MappingName="OrderID" 
                                           CellTemplate="{StaticResource OrderTemplateSelector}"/>
-        <syncfusion:DataGridTextColumn HeaderText="Customer ID" MappingName="CustomerID" />
-        <syncfusion:DataGridTextColumn HeaderText="Customer Name" MappingName="CustomerName"/>                                 
+        <syncfusion:DataGridTextColumn HeaderText="Customer" MappingName="CustomerName" />
+        <syncfusion:DataGridTextColumn HeaderText="Ship City" MappingName="City"/>
+        <syncfusion:DataGridTextColumn HeaderText="Ship Country" MappingName="Country" />                          
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
@@ -243,7 +244,7 @@ public class CustomCellTemplateSelector : DataTemplateSelector
 
 #### Reuse DataTemplate for multiple columns 
 
- To reuse a single `DataTemplate` across multiple columns, set the [DataGridColumn.SetCellBoundValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_SetCellBoundValue) property to `true`. This changes the BindingContext to a helper object with `Value` (column's mapped value) and `Record` (original data object) properties.
+To reuse a single `DataTemplate` across multiple columns, set the [DataGridColumn.SetCellBoundValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_SetCellBoundValue) property to `true`. This changes the BindingContext to a helper object with `Value` (column's mapped value) and `Record` (original data object) properties.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -265,11 +266,12 @@ public class CustomCellTemplateSelector : DataTemplateSelector
                                           MappingName="OrderID"
                                           SetCellBoundValue="True" 
                                           CellTemplate="{StaticResource cellTemplate}"/>
-        <syncfusion:DataGridTextColumn HeaderText="Customer ID" MappingName="CustomerID" />                                    
-        <syncfusion:DataGridTextColumn HeaderText="Customer Name" 
-                                       MappingName="CustomerName" 
+        <syncfusion:DataGridTextColumn HeaderText="Customer" MappingName="CustomerName"/>
+        <syncfusion:DataGridTextColumn HeaderText="Ship City"
+                                       MappingName="City"
                                        SetCellBoundValue="True" 
-                                       CellTemplate="{StaticResource cellTemplate}"/>   
+                                       CellTemplate="{StaticResource cellTemplate}" />
+        <syncfusion:DataGridTextColumn HeaderText="Ship Country" MappingName="Country" />
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
@@ -325,7 +327,7 @@ SfDataGrid allows you to customize the width of each DataGridColumn in the [SfDa
                        ItemsSource="{Binding OrderInfoCollection}"
                        AutoGenerateColumnsMode="None"
                        DefaultColumnWidth="120">
-    <syncfusion:SfDataGrid.Columns x:TypeArguments="sfgrid:Columns">
+    <syncfusion:SfDataGrid.Columns >
         <syncfusion:DataGridTextColumn MappingName="OrderID"
                                        HeaderText="Order ID"
                                        Width="100" />
@@ -333,8 +335,11 @@ SfDataGrid allows you to customize the width of each DataGridColumn in the [SfDa
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-// AutoGenerated Column
+OrderInfoRepository viewModel = new OrderInfoRepository();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.OrderInfoCollection;
 
+// AutoGenerated Column
 dataGrid.AutoGeneratingColumn += DataGrid_AutoGeneratingColumn;
 
 private void DataGrid_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
@@ -347,6 +352,7 @@ private void DataGrid_AutoGeneratingColumn(object sender, DataGridAutoGenerating
 
 // Manually generated column
 
+dataGrid.AutoGenerateColumnsMode = AutoGenerateColumnsMode.None;
 dataGrid.Columns.Add(new DataGridTextColumn() { MappingName = "OrderID" ,Width = 100 });
 
 {% endhighlight %}
@@ -371,6 +377,10 @@ N> Set the [Visible](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGri
 </syncfusion:SfDataGrid>     
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+OrderInfoRepository viewModel = new OrderInfoRepository();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.OrderInfoCollection;
+
 // AutoGenerate Column
 
 dataGrid.AutoGeneratingColumn += DataGrid_AutoGeneratingColumn;
@@ -384,6 +394,8 @@ private void DataGrid_AutoGeneratingColumn(object sender, DataGridAutoGenerating
 }
 
 // Manually generated column
+
+dataGrid.AutoGenerateColumnsMode = AutoGenerateColumnsMode.None;
 dataGrid.Columns.Add(new DataGridTextColumn() { MappingName = "OrderID", Visible = false});
 {% endhighlight %}
 {% endtabs %}
@@ -431,7 +443,7 @@ dataGrid.Columns.Add(new DataGridTextColumn()
 
 dataGrid.Columns.Add(new DataGridTextColumn()
 {
-    MappingName = "ShippedDate",
+    MappingName = "ShippingDate",
     Format = "dd/MM/yyyy"
 });
 {% endhighlight %}
@@ -483,14 +495,13 @@ To apply different cultures for the DataGridColumns, follow the code example:
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 dataGrid.Columns.Add(new DataGridTextColumn()
 {
-    MappingName = "EmployeeID",
-    Format = "C",
+    MappingName = "Customer",
     CultureInfo = new CultureInfo("en-US"),
 });
 
 dataGrid.Columns.Add(new DataGridTextColumn()
 {
-    MappingName = "IDNumber",
+    MappingName = "OrderID",
     Format = "C",
     CultureInfo = new CultureInfo("en-GB"),
 });
@@ -502,19 +513,24 @@ For auto-generated columns, this is achievable by handling the `SfDataGrid.AutoG
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding Employees}"                       
+                       ItemsSource="{Binding OrderInfoCollection}"                       
                        AutoGeneratingColumn="dataGrid_AutoGeneratingColumn"/>
 {% endhighlight %}
 
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+OrderInfoRepository viewModel = new OrderInfoRepository();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.OrderInfoCollection;
+dataGrid.AutoGeneratingColumn += dataGrid_AutoGeneratingColumn;
+
 private void dataGrid_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
 {
-    if (e.Column.MappingName == "EmployeeID")
+    if (e.Column.MappingName == "OrderID")
     {
         e.Column.Format = "C";
         e.Column.CultureInfo = new CultureInfo("en-US");
     }
-    else if (e.Column.MappingName == "IDNumber")
+    else if (e.Column.MappingName == "Quantity")
     {
         e.Column.Format = "C";
         e.Column.CultureInfo = new CultureInfo("en-GB");
@@ -529,12 +545,26 @@ The text wrapping and truncation of a column's header text can be customized by 
  
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfDataGrid AutoGenerateColumnsMode="None"
-                       ItemsSource="{Binding OrderInfo}">
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       AutoGenerateColumnsMode="None"
+                       ItemsSource="{Binding OrderInfoCollection}">
     <syncfusion:SfDataGrid.Columns >
-        <syncfusion:DataGridTextColumn MappingName="Name" HeaderLineBreakMode="NoWrap" />
+        <syncfusion:DataGridTextColumn MappingName="CustomerName" HeaderLineBreakMode="NoWrap" />
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+OrderInfoRepository viewModel = new OrderInfoRepository();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.OrderInfoCollection;
+
+dataGrid.Columns.Add(new DataGridTextColumn()
+{
+    MappingName = "CustomerName",
+    HeaderLineBreakMode = LineBreakMode.NoWrap,
+});
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -546,12 +576,26 @@ The text wrapping and truncation of a column's cell values can be customized by 
  
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfDataGrid AutoGenerateColumnsMode="None"
-                       ItemsSource="{Binding OrderInfo}">
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       AutoGenerateColumnsMode="None"
+                       ItemsSource="{Binding OrderInfoCollection}">
     <syncfusion:SfDataGrid.Columns >
-        <syncfusion:DataGridTextColumn MappingName="Name" LineBreakMode="NoWrap" />
+        <syncfusion:DataGridTextColumn MappingName="CustomerName" LineBreakMode="NoWrap" />
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
+{% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+OrderInfoRepository viewModel = new OrderInfoRepository();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.OrderInfoCollection;
+
+dataGrid.Columns.Add(new DataGridTextColumn()
+{
+    MappingName = "CustomerName",
+    LineBreakMode = LineBreakMode.NoWrap,
+});
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -563,12 +607,24 @@ The DataGridTextColumn inherits all the properties of the DataGridColumn. It is 
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:DataGridTextColumn MappingName ="OrderID" /> 
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding OrderInfoCollection}">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridTextColumn MappingName ="OrderID" 
+                                       HeaderText="Order ID" />
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
 {% endhighlight %}
+
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+OrderInfoRepository viewModel = new OrderInfoRepository();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.OrderInfoCollection;
+
 dataGrid.Columns.Add( new DataGridTextColumn()
 { 
-    MappingName = "OrderID"
+    MappingName = "OrderID",
+    HeaderText = "Order ID"
 });
 {% endhighlight %}
 {% endtabs %}
@@ -585,16 +641,29 @@ The `DataGridCheckBoxColumn` inherits all the properties of the `DataGridColumn`
 </ContentPage.BindingContext>
 
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}">
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       AutoGenerateColumnsMode="None">
     <syncfusion:SfDataGrid.Columns>
         <syncfusion:DataGridCheckBoxColumn MappingName="IsOnline"
                                            HeaderText="Is Online" />
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+OrderInfoRepository viewModel = new OrderInfoRepository();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.OrderInfoCollection;
+
+dataGrid.Columns.Add( new DataGridCheckBoxColumn()
+{ 
+    MappingName = "IsOnline",
+    HeaderText = "Is Online"
+});
+{% endhighlight %}
 {% endtabs %}
 
-![DataGrid with CheckBox column](Images\column-types\maui-datagrid-column-checkbox.png)
+<img alt="DataGrid with CheckBox column" src="Images\column-types\maui-datagrid-column-checkbox.png" width="404"/>
 
 N>
 By default, `DataGridCheckBoxColumn` is read-only. To enable editing and allow users to toggle the checkbox, set the AllowEditing property to true either at the column level or the grid level.
@@ -618,17 +687,29 @@ It is possible to load images in any of the following four ways:
 
 <syncfusion:SfDataGrid x:Name="dataGrid"
                        ItemsSource="{Binding OrderInfoCollection}"
-                       ColumnWidthMode="Fill"
                        AutoGenerateColumnsMode="None">
     <syncfusion:SfDataGrid.Columns>
         <syncfusion:DataGridImageColumn  MappingName="DealerImage"
-                                         HeaderText="Dealer Image" />
+                                         HeaderText="Dealer" />
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
+
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+OrderInfoRepository viewModel = new OrderInfoRepository();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.OrderInfoCollection;
+
+dataGrid.Columns.Add( new DataGridImageColumn()
+{ 
+    MappingName = "DealerImge",
+    HeaderText = "Dealer"
+});
+{% endhighlight %}
 {% endtabs %}
 
-![DataGrid with image column](Images\column-types\maui-datagrid-column-imagecolumn.png)
+
+<img alt="DataGrid with image column" src="Images\column-types\maui-datagrid-column-imagecolumn.png" width="404"/>
 
 ### Aspect
 
@@ -743,21 +824,21 @@ You can load any view to the cells through the `CellTemplate` by assigning the `
 <ContentPage.Resources>
     <ResourceDictionary>
         <DataTemplate x:Key="low" >
-            <Label Text="{Binding Freight}"
+            <Label Text="{Binding UnitPrice}"
                    TextColor="White" 
                    BackgroundColor="Red" 
                    HorizontalTextAlignment="Center" 
                    VerticalTextAlignment="Center" />
         </DataTemplate>
         <DataTemplate x:Key="average" >
-            <Label Text="{Binding Freight}"
+            <Label Text="{Binding UnitPrice}"
                    TextColor="Black" 
                    BackgroundColor="Yellow" 
                    HorizontalTextAlignment="Center" 
                    VerticalTextAlignment="Center" />
         </DataTemplate>
         <DataTemplate x:Key="high" >
-            <Label Text="{Binding Freight}" 
+            <Label Text="{Binding UnitPrice}" 
                    TextColor="White" 
                    BackgroundColor="Green" 
                    HorizontalTextAlignment="Center" 
@@ -766,8 +847,8 @@ You can load any view to the cells through the `CellTemplate` by assigning the `
     </ResourceDictionary>
 </ContentPage.Resources>
 
-<syncfusion:DataGridTemplateColumn MappingName="Freight"
-                                   HeaderText="Freight">
+<syncfusion:DataGridTemplateColumn MappingName="UnitPrice"
+                                   HeaderText="Unit Price">
     <syncfusion:DataGridTemplateColumn.CellTemplate>
         <local:FreightTemplateSelector High="{StaticResource high}"
                                        Average="{StaticResource average}"
@@ -790,7 +871,7 @@ public class FreightTemplateSelector : DataTemplateSelector
 
     protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
     {
-        var value = double.Parse((item as OrderInfo).Freight);
+        var value = double.Parse((item as OrderInfo).UnitPrice);
         if (value > 750)
             return High;
         else if (value > 500)
@@ -802,7 +883,7 @@ public class FreightTemplateSelector : DataTemplateSelector
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with Template column contain cell Template selector](Images\column-types\maui-datagrid-templatecolumn-celltemplate-celltemplateselector.png)
+<img alt="DataGrid with Template column contain cell Template selector" src="Images\column-types\maui-datagrid-templatecolumn-celltemplate-celltemplateselector.png" width="404"/>
 
 N>
 * When using data template selector, performance issues occur as the conversion template views take time within the framework.
@@ -848,7 +929,9 @@ The `DataGridDateColumn` inherits all the properties of the `DataGridColumn`.It 
 {% endhighlight %}
 
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-dataGrid = new SfDataGrid();
+OrderInfoRepository viewModel = new OrderInfoRepository();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.OrderInfoCollection;
 DataGridDateColumn dateColumn = new DataGridDateColumn()
 {
     MappingName = "ShippedDate",
@@ -866,7 +949,8 @@ The [DataGridComboBoxColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 * Collection of primitive types
 * Collection of user-defined types (custom objects)
 
-![DataGrid with editing in comboBox column](Images\column-types\maui-datagrid-comboBox-column.png)
+
+<img alt="DataGrid with editing in comboBox column" src="Images\column-types\maui-datagrid-comboBox-column.png" width="404"/>
 
 ### Collection of primitive types
 
@@ -881,24 +965,30 @@ To load the `DataGridComboBoxColumn` with a simple string collection, you can re
     </ContentPage.BindingContext>
 
     <sfGrid:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}">
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       AllowEditing="True"
+                       AutoGenerateColumnsMode="None"
+                       SelectionUnit="Cell"
+                       SelectionMode="Single">
         <sfGrid:SfDataGrid.Columns>
             <sfGrid:DataGridComboBoxColumn BindingContext="{x:Reference viewModel}"
-                                           HeaderText="Name"
+                                           HeaderText="Customer"
                                            ItemsSource="{Binding CustomerNames}"
-                                           MappingName="DealerName" />
+                                           MappingName="Customer" />
         </sfGrid:SfDataGrid.Columns>
     </sfGrid:SfDataGrid>
 {% endhighlight %}
 
 {% highlight c# %}
-dataGrid = new SfDataGrid();
+OrderInfoRepository viewModel = new OrderInfoRepository();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.OrderInfoCollection;
 DataGridComboBoxColumn comboBoxColumn = new DataGridComboBoxColumn()
 {
     BindingContext = viewModel,
-    MappingName = "DealerName",
+    MappingName = "Customer",
     ItemsSource = viewModel.CustomerNames,
-    HeaderText = "Name"
+    HeaderText = "Customer"
 
 };
 dataGrid.Columns.Add(comboBoxColumn);
@@ -957,22 +1047,21 @@ In the provided code, the ItemsSource for the ShipCity column is returned based 
     </ContentPage.Resources>
 
     <sfgrid:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding DealerInformation}"
+                       ItemsSource="{Binding OrderInfoCollection}"
                        AllowEditing="True"
                        AutoGenerateColumnsMode="None"
-                       NavigationMode="Cell"
-                       EditTapAction="OnDoubleTap"
+                       SelectionUnit="Cell"
                        SelectionMode="Single">
         <sfgrid:SfDataGrid.Columns>
-            <sfgrid:DataGridComboBoxColumn BindingContext="{x:Reference viewModel}"
-                                           ItemsSource="{Binding CountryList}"
-                                           MappingName="ShipCountry"
-                                           LoadUIView="True">
-            </sfgrid:DataGridComboBoxColumn>
 
             <sfgrid:DataGridComboBoxColumn ItemsSourceSelector="{StaticResource converter}"
                                            MappingName="ShipCity"
-                                           LoadUIView="True">
+                                           HeaderText="Ship City">
+            <sfgrid:DataGridComboBoxColumn BindingContext="{x:Reference viewModel}"
+                                           ItemsSource="{Binding CountryList}"
+                                           MappingName="ShipCountry"
+                                           HeaderText="Ship Country">
+            </sfgrid:DataGridComboBoxColumn>
             </sfgrid:DataGridComboBoxColumn>
         </sfgrid:SfDataGrid.Columns>
     </sfgrid:SfDataGrid>
@@ -988,9 +1077,9 @@ public class ItemSourceSelector : IItemsSourceSelector
             return null;
         }
 
-        var orderinfo = record as DealerInfo;
+        var orderinfo = record as OrderInfo;
         var countryName = orderinfo.ShipCountry;
-        var viewModel = dataContext as EditingViewModel;
+        var viewModel = dataContext as OrderInfoRepository;
 
         // Returns ShipCity collection based on ShipCountry.
         if (viewModel.ShipCities.ContainsKey(countryName))
@@ -1006,8 +1095,9 @@ public class ItemSourceSelector : IItemsSourceSelector
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with ItemSourceSelector comboBox column](Images\column-types\maui-datagrid-comboBox-column-itemsourceselector.png)
-![DataGrid with ItemSourceSelector comboBox column](Images\column-types\maui-datagrid-comboBox-column-itemsourceselector2.png)
+<img alt="DataGrid with ItemSourceSelector comboBox column" src="Images\column-types\maui-datagrid-comboBox-column-itemsourceselector.png" width="404"/>
+
+<img alt="DataGrid with ItemSourceSelector comboBox column" src="Images\column-types\maui-datagrid-comboBox-column-itemsourceselector2.png" width="404"/>
 
 ### Editing the combo box
 
@@ -1021,32 +1111,37 @@ The [IsEditableMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGri
     </ContentPage.BindingContext>
 
     <sfGrid:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}">
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       >
         <sfGrid:SfDataGrid.Columns>
             <sfGrid:DataGridComboBoxColumn BindingContext="{x:Reference viewModel}"
-                                           HeaderText="Name"
+                                           HeaderText="Customer"
                                            IsEditableMode="True"
                                            ItemsSource="{Binding CustomerNames}"
-                                           MappingName="DealerName" />
+                                           MappingName="Customer" />
         </sfGrid:SfDataGrid.Columns>
     </sfGrid:SfDataGrid>
 {% endhighlight %}
 
 {% highlight c# %}
+OrderInfoRepository viewModel = new OrderInfoRepository();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.OrderInfoCollection;
+
 DataGridComboBoxColumn comboBoxColumn = new DataGridComboBoxColumn()
 {
     BindingContext = viewModel,
-    MappingName = "DealerName",
+    MappingName = "Customer",
     ItemsSource = viewModel.CustomerNames,
-    IsEditableMode = True,
-    HeaderText = "Name"
+    IsEditableMode = true,
+    HeaderText = "Customer"
 
 };
 dataGrid.Columns.Add(comboBoxColumn);
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with Edited comboBox column](Images\column-types\maui-datagrid-combobox-column-editing.png)
+<img alt="DataGrid with Edited comboBox column" src="Images\column-types\maui-datagrid-combobox-column-editing.png" width="404"/>
 
 ### Auto suggesting on edit mode
 
@@ -1062,31 +1157,35 @@ By default, the auto-suggestion in the dropdown will display values based on the
                        ItemsSource="{Binding OrderInfoCollection}">
         <sfGrid:SfDataGrid.Columns>
             <sfGrid:DataGridComboBoxColumn BindingContext="{x:Reference viewModel}"
-                                           HeaderText="Name"
+                                           HeaderText="Customer"
                                            IsEditableMode="True"
                                            SuggestionMode="Contains"
                                            ItemsSource="{Binding CustomerNames}"
-                                           MappingName="DealerName" />
+                                           MappingName="Customer" />
         </sfGrid:SfDataGrid.Columns>
     </sfGrid:SfDataGrid>
 {% endhighlight %}
 
 {% highlight c# %}
+OrderInfoRepository viewModel = new OrderInfoRepository();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.OrderInfoCollection;
+
 DataGridComboBoxColumn comboBoxColumn = new DataGridComboBoxColumn()
 {
     BindingContext = viewModel,
-    MappingName = "DealerName",
+    MappingName = "Customer",
     ItemsSource = viewModel.CustomerNames,
     IsEditableMode = True,
     SuggestionMode = SuggestionMode.Contains,
-    HeaderText = "Name"
+    HeaderText = "Customer"
 
 };
 dataGrid.Columns.Add(comboBoxColumn);
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with Suggesting comboBox column](Images\column-types\maui-datagrid-combobox-column-editing.png)
+<img alt="DataGrid with Suggesting comboBox column" src="Images\column-types\maui-datagrid-combobox-column-suggestion-mode.png" width="404"/>
 
 ### Change clear button visibility
 
@@ -1102,22 +1201,26 @@ The ComboBox control includes a clear button that allows users to easily remove 
                        ItemsSource="{Binding OrderInfoCollection}">
         <sfGrid:SfDataGrid.Columns>
             <sfGrid:DataGridComboBoxColumn BindingContext="{x:Reference viewModel}"
-                                           HeaderText="Name"
+                                           HeaderText="Customer"
                                            IsEditableMode="True"
                                            ShowClearButton="False"
                                            ItemsSource="{Binding CustomerNames}"
-                                           MappingName="DealerName" />
+                                           MappingName="Customer" />
         </sfGrid:SfDataGrid.Columns>
     </sfGrid:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
+OrderInfoRepository viewModel = new OrderInfoRepository();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.OrderInfoCollection;
+
 DataGridComboBoxColumn comboBoxColumn = new DataGridComboBoxColumn()
 {
     BindingContext = viewModel,
-    MappingName = "DealerName",
+    MappingName = "Customer",
     IsEditableMode= true,
     ItemsSource = viewModel.CustomerNames,
-    HeaderText = "Name",
+    HeaderText = "Customer",
     ShowClearButton= false,
 
 };
@@ -1133,7 +1236,8 @@ The combo box drop-down width can be customized by setting the [DataGridComboBox
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid  AllowEditing="True"
+<syncfusion:SfDataGrid  x:Name="dataGrid"
+                        AllowEditing="True"
                         NavigationMode="Cell"
                         SelectionMode="Single"
                         ItemsSource="{Binding OrderInfoCollection}">
@@ -1141,8 +1245,8 @@ The combo box drop-down width can be customized by setting the [DataGridComboBox
         <syncfusion:DataGridComboBoxColumn
                         DropDownWidth="200"
                         HeaderText="Customers"
-                        ItemsSource="{Binding Customers}"
-                        MappingName="OrderID">
+                        ItemsSource="{Binding CustomerNames}"
+                        MappingName="Customer">
         </syncfusion:DataGridComboBoxColumn>
     </syncfusion:SfDataGrid.Columns>
  </syncfusion:SfDataGrid>
@@ -1156,7 +1260,8 @@ The [DataGridComboBoxColumn.CanFilterSuggestions](https://help.syncfusion.com/cr
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid  AllowEditing="True"
+<syncfusion:SfDataGrid  x:Name="dataGrid"
+                        AllowEditing="True"
                         NavigationMode="Cell"
                         SelectionMode="Single"
                         ItemsSource="{Binding OrderInfoCollection}">
@@ -1164,8 +1269,8 @@ The [DataGridComboBoxColumn.CanFilterSuggestions](https://help.syncfusion.com/cr
         <syncfusion:DataGridComboBoxColumn
                         HeaderText="Customers"
                         CanFilterSuggestions="True"
-                        ItemsSource="{Binding Customers}"
-                        MappingName="OrderID">
+                        ItemsSource="{Binding CustomerNames}"
+                        MappingName="Customer">
         </syncfusion:DataGridComboBoxColumn>
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
@@ -1179,7 +1284,8 @@ The [DataGridPickerColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.D
 * Collection of primitive types
 * Collection of user-defined types (custom objects)
 
-![DataGrid with editing in picker column](Images\column-types\maui-datagrid-picker-column.png)
+<img alt="DataGrid with editing in picker column" src="Images\column-types\maui-datagrid-picker-column.png" width="404"/>
+
 
 ### Collection of primitive types
 
@@ -1194,8 +1300,10 @@ To load the [DataGridPickerColumn](https://help.syncfusion.com/cr/maui/Syncfusio
     </ContentPage.BindingContext>
 
     <sfGrid:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding DealerInformation}"
-                       AllowEditing="True">
+                       ItemsSource="{Binding OrderInfoCollection}"
+                       AllowEditing="True"
+                       SelectionMode="Single"
+                       SelectionUnit="Cell">
         <sfGrid:SfDataGrid.Columns>
             <sfgrid:DataGridPickerColumn HeaderText="Ship Country"
                                          MappingName="ShipCountry"
@@ -1205,9 +1313,12 @@ To load the [DataGridPickerColumn](https://help.syncfusion.com/cr/maui/Syncfusio
 {% endhighlight %}
 
 {% highlight c# %}
+OrderInfoRepository viewModel = new OrderInfoRepository();
 SfDataGrid dataGrid = new SfDataGrid();
-dataGrid.ItemsSource = viewModel.DealerInformation;
+dataGrid.ItemsSource = viewModel.OrderInfoCollection;
 dataGrid.AllowEditing = true;
+dataGrid.SelectionMode = DataGridSelectionMode.Single;
+dataGrid.SelectionUnit = DataGridSelectionUnit.Cell;
 DataGridPickerColumn pickerColumn = new DataGridPickerColumn()
 {
     MappingName = "ShipCountry",
@@ -1223,7 +1334,7 @@ dataGrid.Columns.Add(pickerColumn);
 
 public class ViewModel
 {
-    public ObservableCollection<DealerInfo> DealerInformation { get; set; }
+    public ObservableCollection<OrderInfo> OrderInfoRepository { get; set; }
     public ObservableCollection<string> Countries { get; set; }
 
     public ViewModel()
@@ -1291,22 +1402,21 @@ In the provided code, the ItemsSource for the ShipCity column is returned based 
     </ContentPage.Resources>
 
     <sfgrid:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding DealerInformation}"
+                       ItemsSource="{Binding OrderInfoRepository}"
                        AllowEditing="True"
                        AutoGenerateColumnsMode="None"
                        NavigationMode="Cell"
                        EditTapAction="OnDoubleTap"
                        SelectionMode="Single">
         <sfgrid:SfDataGrid.Columns>
+            <sfgrid:DataGridPickerColumn ItemsSourceSelector="{StaticResource converter}"
+                                         MappingName="ShipCity"
+                                         HeaderText="Ship City">
+            </sfgrid:DataGridPickerColumn>
             <sfgrid:DataGridPickerColumn BindingContext="{x:Reference viewModel}"
                                          ItemsSource="{Binding CountryList}"
                                          MappingName="ShipCountry"
-                                         LoadUIView="True">
-            </sfgrid:DataGridPickerColumn>
-
-            <sfgrid:DataGridPickerColumn ItemsSourceSelector="{StaticResource converter}"
-                                         MappingName="ShipCity"
-                                         LoadUIView="True">
+                                         HeaderText="Ship Country">
             </sfgrid:DataGridPickerColumn>
         </sfgrid:SfDataGrid.Columns>
     </sfgrid:SfDataGrid>
@@ -1340,8 +1450,9 @@ public class ItemSourceSelector : IItemsSourceSelector
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with ItemSourceSelector picker column](Images\column-types\maui-datagrid-picker-column-itemsourceselector.png)
-![DataGrid with ItemSourceSelector picker column](Images\column-types\maui-datagrid-picker-column-itemsourceselector2.png)
+<img alt="DataGrid with ItemSourceSelector picker column" src="Images\column-types\maui-datagrid-picker-column-itemsourceselector.png" width="404"/>
+
+<img alt="DataGrid with ItemSourceSelector picker column" src="Images\column-types\maui-datagrid-picker-column-itemsourceselector2.png" width="404"/>
 
 ## DataGridNumericColumn
 
@@ -1357,17 +1468,21 @@ The `DataGridNumericColumn` inherits all the properties of the `DataGridColumn`.
                        ItemsSource="{Binding OrderInfoCollection}">
     <syncfusion:SfDataGrid.Columns>
         <syncfusion:DataGridNumericColumn Format="C"
-                                          HeaderText="ID"
+                                          HeaderText="Order ID"
                                           MappingName="OrderID" />
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+OrderInfoRepository viewModel = new OrderInfoRepository();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.OrderInfoCollection;
 DataGridNumericColumn numericColumn = new DataGridNumericColumn()
 {
     MappingName = "OrderID",
-    HeaderText = "OrderID",
+    HeaderText = "Order ID",
+    Format="C"
 };
 dataGrid.Columns.Add(numericColumn);
 {% endhighlight %}
@@ -1395,6 +1510,9 @@ The [DataGridNumericColumn.AllowNullValue](https://help.syncfusion.com/cr/maui/S
 {% endhighlight %}
 
 {% highlight c# %}
+OrderInfoRepository viewModel = new OrderInfoRepository();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.OrderInfoCollection;
 dataGrid.AllowEditing = true;
 dataGrid.SelectionMode = DataGridSelectionMode.Single;
 dataGrid.NavigationMode = DataGridNavigationMode.Cell;
@@ -1426,27 +1544,27 @@ The `DataGridNumericColumn` allows formatting the numeric data with culture-spec
 
 ## DataGridMultiColumnComboBoxColumn
 
-The `DataGridMultiColumnComboBoxColumn` displays enumeration as cell contents and hosts a (SfMultiColumnComboBox)[] in editing mode. This column type allows you to define the predefined columns in its drop-down, similar to SfDataGrid.
+The `DataGridMultiColumnComboBoxColumn` displays enumeration as cell contents and hosts a [SfMultiColumnComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfMultiColumnComboBox.html) in editing mode. This column type allows you to define the predefined columns in its drop-down, similar to SfDataGrid.
 
-You can change the value by selecting the item from drop down or by editing the entry in `SfMultiColumnComboBox`. To disable text editing, set the (IsTextReadOnly)[] property to `true`.
+You can change the value by selecting the item from drop down or by editing the entry in `SfMultiColumnComboBox`. To disable text editing, set the [IsTextReadOnly](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridMultiColumnComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridMultiColumnComboBoxColumn_IsTextReadOnly) property to `true`.
 
 {% tabs %}
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name = "dataGrid"
-                       ItemsSource = "{Binding Orders}"
+                       ItemsSource = "{Binding OrderInfoCollection}"
                        AllowEditing = "True"
                        SelectionMode = "Single"
                        AutoGenerateColumnsMode = "None"
                        NavigationMode="Row">
     <syncfusion:SfDataGrid.Columns>
         <syncfusion:DataGridMultiColumnComboBoxColumn AutoGenerateColumnsMode = "None"
-                                                      MappingName = "CustomerID"
+                                                      MappingName = "Product"
                                                       ItemsSource = "{Binding OrderDetails}"
-                                                      DisplayMember = "CustomerID"
-                                                      ValueMember = "CustomerID" 
-                                                      HeaderText="Customer ID">
+                                                      DisplayMember = "Product"
+                                                      ValueMember = "Product" 
+                                                      HeaderText="Product">
             <syncfusion:DataGridMultiColumnComboBoxColumn.Columns>
-                <syncfusion:DataGridTextColumn MappingName = "CustomerID" HeaderText = "Customer ID"/>
+                <syncfusion:DataGridTextColumn MappingName = "Product" HeaderText = "Product"/>
                 <syncfusion:DataGridNumericColumn MappingName = "ProductID" HeaderText = "Product ID"/>
             </syncfusion:DataGridMultiColumnComboBoxColumn.Columns>
         </syncfusion:DataGridMultiColumnComboBoxColumn>
@@ -1456,27 +1574,37 @@ You can change the value by selecting the item from drop down or by editing the 
 {% endhighlight %}
 
 {% highlight c# %}
+OrderInfoRepository viewModel = new OrderInfoRepository();
+SfDataGrid dataGrid = new SfDataGrid()
+{
+    ItemsSource = viewModel.OrderInfoCollection,
+    AutoGenerateColumnsMode = AutoGenerateColumnsMode.None,
+    AllowEditing = true,
+    SelectionMode = DataGridSelectionMode.Single,
+    NavigationMode = DataGridNavigationMode.Row,
+};
+
 var column = new DataGridMultiColumnComboBoxColumn()
 {
-    MappingName = "CustomerID",
-    HeaderText = "Customer ID",
-    ValueMember = "CustomerID",
-    DisplayMember = "CustomerID",
+    MappingName = "Product",
+    HeaderText = "Product",
+    ValueMember = "Product",
+    DisplayMember = "Product",
     ItemsSource = viewModel.OrderDetails,
-    AutoGenerateColumns = false,
+    AutoGenerateColumnsMode = AutoGenerateColumnsMode.None,
     Columns = new ColumnCollection()
     {
-        new DataGridTextColumn() { MappingName = "CustomerID" },
+        new DataGridTextColumn() { MappingName = "Product" },
         new DataGridNumericColumn() { MappingName = "ProductID" }
     }
 };
-this.dataGrid.Columns.Add(column);
+dataGrid.Columns.Add(column);
 
 {% endhighlight %}
 
 {% endtabs %}
 
-SfDataGrid triggers, (CurrentCellDropDownSelectionChanged)[] event, when the SelectedValue is changed. (CurrentCellDropDownSelectionChangedEventArgs)[] of `CurrentCellDropDownSelectionChanged` event provides the information about the changed cell value.
+SfDataGrid triggers, [CurrentCellDropDownSelectionChanged](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_CurrentCellDropDownSelectionChanged) event, when the SelectedValue is changed. [CurrentCellDropDownSelectionChangedEventArgs](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.CurrentCellDropDownSelectionChangedEventArgs.html) of `CurrentCellDropDownSelectionChanged` event provides the information about the changed cell value.
 
 `SelectedIndex` property returns the index of selected item.
 `SelectedItem` property returns the selected item from drop down list.
@@ -1489,22 +1617,22 @@ You can enable the `SfMultiColumnComboBox` to automatically complete the entered
 
 ### Filtering
 
-You can enable the `SfMultiColumnComboBox` to dynamically filter the drop-down list items based on the text typed in the entry by setting (AllowIncrementalFiltering)[] property to `true`. Additionally, `DataGridMultiColumnComboBoxColumn` allows filtering based on case sensitivity by setting (AllowCaseSensitiveFiltering)[] to `true`. These features help users to quickly select items from large list.
+You can enable the `SfMultiColumnComboBox` to dynamically filter the drop-down list items based on the text typed in the entry by setting [AllowIncrementalFiltering](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridMultiColumnComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridMultiColumnComboBoxColumn_AllowIncrementalFiltering) property to `true`. Additionally, `DataGridMultiColumnComboBoxColumn` allows filtering based on case sensitivity by setting [AllowCaseSensitiveFiltering](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridMultiColumnComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridMultiColumnComboBoxColumn_AllowCaseSensitiveFiltering) to `true`. These features help users to quickly select items from large list.
 
 <img alt="DataGridMultiColumnComboBox column with Filtering .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-MultiColumn-ComboBox-column-filtering.png" width="404"/>
 
 ### Null value support
 
-You can allow null values in the column by setting the (AllowNullValue)[] property to `true`.
+You can allow null values in the column by setting the [AllowNullValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridMultiColumnComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridMultiColumnComboBoxColumn_AllowNullValue) property to `true`.
 
 N>
 The AllowNullValue will work only when the underlying property type is Nullable.
 
 ### Popup Size Customization
 
-You can change the size of drop-down popup by setting (PopupWidth)[] and (PopupHeight)[] properties. If these values are not set, the popup width defaults to the `PopupMinWidth` property, which is 200.0 by default. Similarly, the popup height defaults to the `PopupMinHeight` property, which is 300.0 by default.
+You can change the size of drop-down popup by setting [PopupWidth](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridMultiColumnComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridMultiColumnComboBoxColumn_PopupWidth) and [PopupHeight](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridMultiColumnComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridMultiColumnComboBoxColumn_PopupHeight) properties. If these values are not set, the popup width defaults to the `PopupMinWidth` property, which is 200.0 by default. Similarly, the popup height defaults to the `PopupMinHeight` property, which is 300.0 by default.
 
-Additionally, `SfMultiColumnComboBox` can automatically adjust the popup width based on the actual size of the SfDataGrid by setting the (IsAutoPopupSize)[] property to `true`.
+Additionally, `SfMultiColumnComboBox` can automatically adjust the popup width based on the actual size of the SfDataGrid by setting the [IsAutoPopupSize](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridMultiColumnComboBoxColumn.html#Syncfusion_Maui_DataGrid_DataGridMultiColumnComboBoxColumn_IsAutoPopupSize) property to `true`.
 
 ### Loading different ItemsSource for each row
 
@@ -1525,7 +1653,7 @@ In the following example, the items source for `ShipCity` column is returned bas
     <local:ItemsSourceSelector x:Key = "itemSourceSelector"/>
 </ContentPage.Resources>
 
-<syncfusion:SfDataGrid ItemsSource = "{Binding Orders}"  
+<syncfusion:SfDataGrid ItemsSource = "{Binding OrderInfoCollection}"  
                        AllowEditing = "True" 
                        SelectionMode = "Single" 
                        AutoGenerateColumnsMode = "None">
@@ -1539,7 +1667,7 @@ In the following example, the items source for `ShipCity` column is returned bas
                                                       ValueMember = "ShipCity">
             <syncfusion:DataGridMultiColumnComboBoxColumn.Columns>
                 <syncfusion:DataGridTextColumn HeaderText = "Ship City" MappingName = "ShipCity" />
-                <syncfusion:DataGridCheckBoxColumn HeaderText = "Is Primary" MappingName = "IsPrimary" />
+                <syncfusion:DataGridCheckBoxColumn HeaderText = "Is Online" MappingName = "IsOnline" />
             </syncfusion:DataGridMultiColumnComboBoxColumn.Columns>
         </syncfusion:DataGridMultiColumnComboBoxColumn>
         <syncfusion:DataGridTextColumn MappingName = "ShipCountry" HeaderText = "Ship Country"/>
@@ -1557,7 +1685,7 @@ internal class ItemsSourceSelector : IItemsSourceSelector
         if (record == null)
             return null;
 
-        var orderinfo = record as Orders;
+        var orderinfo = record as OrderInfoCollection;
         var countryName = orderinfo.ShipCountry;
 
         var viewModel = dataContext as OrdersViewModel;
@@ -1582,7 +1710,7 @@ internal class ItemsSourceSelector : IItemsSourceSelector
 
 <img alt="DataGridMultiColumnComboBox column with ItemsSourceSelector .NET MAUI DataGrid" src="Images\column-types\maui-datagrid-MultiColumn-ComboBox-column-itemsourceselector2.png" width="404"/>
 
-You can download the sample from the following link: (Sample)[https://github.com/SyncfusionExamples/How-to-load-different-items-for-each-row-in-MultiColumn-ComboBox-Column-in-.NET-MAUI-SfDataGrid].
+You can download the sample from the following link: [Sample](https://github.com/SyncfusionExamples/How-to-load-different-items-for-each-row-in-MultiColumn-ComboBox-Column-in-.NET-MAUI-SfDataGrid).
 
 ## DataGridHyperlinkColumn
 
@@ -1602,6 +1730,10 @@ The `DataGridHyperlinkColumn` inherits all the properties of the `DataGridTextCo
 {% endhighlight %}
 
 {% highlight c# %}
+OrderInfoRepository viewModel = new OrderInfoRepository();
+SfDataGrid dataGrid = new SfDataGrid()
+dataGrid.ItemsSource = viewModel.OrderInfoCollection;
+dataGrid.AutoGenerateColumnsMode = AutoGenerateColumnsMode.None;
 DataGridHyperlinkColumn hyperlinkColumn = new DataGridHyperlinkColumn()
 {
     MappingName = "Country",
@@ -1667,6 +1799,10 @@ You can set the hyperlink text color using the `HyperlinkTextColor` property. If
 {% endhighlight %}
 
 {% highlight c# %}
+OrderInfoRepository viewModel = new OrderInfoRepository();
+SfDataGrid dataGrid = new SfDataGrid()
+dataGrid.ItemsSource = viewModel.OrderInfoCollection;
+dataGrid.AutoGenerateColumnsMode = AutoGenerateColumnsMode.None;
 dataGrid.DefaultStyle = new DataGridStyle
 {
     HyperlinkTextColor = Colors.Yellow
@@ -1687,6 +1823,15 @@ The row header is a type of column that is placed as the first cell of each row 
                   GridLinesVisibility="Both"
                   HeaderGridLinesVisibility="Both">
 </syncfusion:SfDataGrid>
+{% endhighlight %}
+
+{% highlight c# tabtitle="C#" %}
+OrderInfoRepository viewModel = new OrderInfoRepository();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.OrderInfoCollection;
+dataGrid.ShowRowHeader = true,
+dataGrid.GridLinesVisibility = GridLinesVisibility.Both;
+dataGrid.HeaderGridLinesVisibility = GridLinesVisibility.Both;
 {% endhighlight %}
 {% endtabs %}
 
@@ -1741,15 +1886,15 @@ The SfDataGrid allows binding the view model property to the `HeaderTemplate` by
         </syncfusion:DataGridTextColumn>
         <syncfusion:DataGridTextColumn  MappingName="CustomerID"
                                         HeaderText="Customer" />
-        <syncfusion:DataGridTextColumn MappingName="ShipCountry"
-                                       HeaderText="Country" />
         <syncfusion:DataGridTextColumn MappingName="ShipCity"
-                                       HeaderText="City" />
+                                       HeaderText="Ship City" />
+        <syncfusion:DataGridTextColumn MappingName="ShipCountry"
+                                       HeaderText="Ship Country" />
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with header template bind to view model](Images\column-types\maui-datagrid-header-template-view-model.png)
+<img alt="DataGrid with header template bind to view model" src="Images\column-types\maui-datagrid-header-template-view-model.png" width="404"/>
                 

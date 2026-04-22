@@ -415,21 +415,28 @@ The following code example binds the collection created in the previous step to 
                                ItemsSource="{Binding OrderInfoCollection}">
         <syncfusion:SfDataGrid.Columns>
             <syncfusion:DataGridNumericColumn HeaderText="Order ID" Format="0"
-                                            MappingName="OrderID" Width="150"/>
-            <syncfusion:DataGridTextColumn  HeaderText="Customer ID"
-                                            MappingName="CustomerID"
-                                            Width="150" />
-            <syncfusion:DataGridTextColumn  HeaderText="Ship Country"
-                                            MappingName="ShipCountry"
-                                            Width="150" />
-        </syncfusion:SfDataGrid.Columns>
+                                                MappingName="OrderID" Width="150"/>
+                <syncfusion:DataGridTextColumn  HeaderText="Customer"
+                                                MappingName="Customer"
+                                                Width="150" />
+                <syncfusion:DataGridTextColumn  HeaderText="Ship City"
+                                                MappingName="ShipCity"
+                                                Width="150" />
+                <syncfusion:DataGridTextColumn  HeaderText="Ship Country"
+                                                MappingName="ShipCountry"
+                                                Width="150" />
+        </syncfusion:SfDataGrid.Columns>        
         </syncfusion:SfDataGrid>
     </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
 {% highlight c# %}
 OrderInfoRepository viewModel = new OrderInfoRepository();
+
+SfDataGrid dataGrid = new SfDataGrid();
 dataGrid.ItemsSource = viewModel.OrderInfoCollection; 
+
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -439,7 +446,7 @@ Press **F5** to build and run the application. Once compiled, the datagrid will 
 
 Here is the result of the previous codes,
 
-![Getting started with .NET MAUI DataGrid.](Images\getting-started\net-maui-datagrid-getting-started.png)
+<img src="Images\getting-started\net-maui-datagrid-getting-started.png" width="404" alt="Getting started with .NET MAUI DataGrid">
 
 You can download the complete project of this demo from [GitHub](https://github.com/SyncfusionExamples/simple-.net-maui-datagrid).
 
@@ -468,6 +475,9 @@ The columns can be manually defined by setting the `SfDataGrid.AutoGenerateColum
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
+OrderInfoRepository viewModel = new OrderInfoRepository();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.OrderInfoCollection;
 dataGrid.AutoGenerateColumnsMode = AutoGenerateColumnsMode.None;
 
 DataGridTextColumn orderIdColumn = new DataGridTextColumn ();
@@ -499,13 +509,16 @@ In the SfDataGrid, sorting can be done on its data by setting the [SfDataGrid.So
                        SortingMode="Single" />
 {% endhighlight %}
 {% highlight c# %}
+OrderInfoRepository viewModel = new OrderInfoRepository();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.OrderInfoCollection;
 dataGrid.SortingMode = DataGridSortingMode.Single;
 {% endhighlight %}
 {% endtabs %}
 
 Run the application and touch the header cell to sort the data and the following output will be displayed:
  
-![Sorting in .NET MAUI DataGrid.](Images\getting-started\net-maui-datagrid-basic-sorting.png)
+<img src="Images\getting-started\net-maui-datagrid-basic-sorting.png" width="404" alt="Sorting in .NET MAUI DataGrid">
 
 Sorting can also be configured by adding the column to the [SfDataGrid.SortColumnDescriptions](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SortColumnDescriptions) collection as follows:
 
@@ -547,8 +560,7 @@ The following code example illustrates how this can be done:
         <syncfusion:SfDataGrid x:Name="dataGrid"
                            ItemsSource="{Binding OrderInfoCollection}"
                            HeightRequest="290"
-                           WidthRequest="200"
-                           HorizontalOptions="Center"/>
+                           WidthRequest="200"/>
     
 </ContentPage>
 {% endhighlight %}
@@ -558,12 +570,10 @@ public MainPage()
 {
     InitializeComponent();
     OrderInfoRepository viewModel = new OrderInfoRepository();
-    dataGrid = new SfDataGrid();
+    SfDataGrid dataGrid = new SfDataGrid();
     dataGrid.ItemsSource = viewModel.OrderInfoCollection;
     dataGrid.HeightRequest = 290;
     dataGrid.WidthRequest = 200;
-    dataGrid.VerticalOptions = LayoutOptions.CenterAndExpand;
-    dataGrid.HorizontalOptions = LayoutOptions.Center;
     this.Content = dataGrid;
 }
 {% endhighlight %}
