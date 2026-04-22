@@ -68,12 +68,12 @@ You can apply the style for a searched text color, background color and search h
 {% highlight Xaml %}
 
 <ContentPage.Content>
-    <syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}">
+    <syncfusion:SfDataGrid ItemsSource="{Binding Orders}">
         <syncfusion:SfDataGrid.DefaultStyle>
             <syncfusion:DataGridStyle SearchTextColor="Black" 
-                                    SearchTextBackground="LightBlue" 
-                                    SearchHighlightTextColor="Black" 
-                                    SearchHighlightTextBackground="LightGreen" />
+                                      SearchTextBackground="LightBlue" 
+                                      SearchHighlightTextColor="Black" 
+                                      SearchHighlightTextBackground="LightGreen" />
         </syncfusion:SfDataGrid.DefaultStyle>
     </syncfusion:SfDataGrid>
 </ContentPage.Content>
@@ -118,7 +118,7 @@ The `SfDataGrid` processes search operations in the [DataGridSearchController](h
 this.dataGrid.SearchController = new CustomDataGridSearchController (this.datagrid);
 public class CustomDataGridSearchController  : DataGridSearchController
 {
-    public CustomDataGridSearchController(SfDataGrid datagrid)
+    public CustomDataGridSearchController(Syncfusion.Maui.DataGrid.SfDataGrid datagrid)
         : base(datagrid)
     {
     }
@@ -138,14 +138,12 @@ In the code below, all columns except the `CustomerID` column are excluded from 
 
 public class CustomDataGridSearchController : DataGridSearchController
 {
-    public CustomDataGridSearchController(SfDataGrid datagrid)
-        : base(datagrid)
+    public CustomDataGridSearchController(Syncfusion.Maui.DataGrid.SfDataGrid datagrid) : base(datagrid)
     {
     }
     protected override bool SearchCell(DataColumnBase column, object record, bool ApplySearchHighlightBrush)
     {
-
-        if (column.DataGridColumn.MappingName == "CustomerID")
+        if (column.DataGridColumn?.MappingName == "Customer")
             return base.SearchCell(column, record, ApplySearchHighlightBrush);
         return false;
     }

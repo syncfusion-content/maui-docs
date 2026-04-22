@@ -18,10 +18,16 @@ The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Sf
                        FilterRowPosition="FixedTop"
                        AllowEditing="True"
                        SelectionMode="Single"
-                       ItemsSource="{Binding OrderInfoCollection}" >
+                       ItemsSource="{Binding Orders}" >
 {% endhighlight %}
 {% highlight c# %}
-this.dataGrid.FilterRowPosition = DataGridFilterRowPosition.FixedTop;
+dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.FilterRowPosition = DataGridFilterRowPosition.FixedTop;
+dataGrid.AllowEditing = true;
+dataGrid.SelectionMode = DataGridSelectionMode.Single;
+
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -50,14 +56,19 @@ The FilterRow automatically initializes editors that correspond to the underlyin
 {% tabs %}
 {% highlight XAML %}
 
-<syncfusion:DataGridTextColumn  HeaderText="Customer ID"
-                                MappingName="CustomerID"
+<syncfusion:DataGridTextColumn  HeaderText="Ship Country"
+                                MappingName="Country"
                                 FilterRowEditorType="MultiSelectComboBox"/>
 
 {% endhighlight %}
 {% highlight c# %}
 
-this.dataGrid.Columns[2].FilterRowEditorType = "MultiSelectComboBox";
+var countryColumn = new DataGridTextColumn();
+customerIdColumn.HeaderText = "Ship Country";
+customerIdColumn.MappingName = "Country";
+customerIdColumn.FilterRowEditorType = "MultiSelectComboBox";
+
+dataGrid.Columns.Add(countryColumn);
 
 {% endhighlight %}
 {% endtabs %}
@@ -118,14 +129,19 @@ The FilterRowCell presents filter conditions in a dropdown menu, categorized by 
 {% tabs %}
 {% highlight XAML %}
 
-<syncfusion:DataGridTextColumn  HeaderText="Customer ID"
-                                MappingName="CustomerID"
+<syncfusion:DataGridTextColumn  HeaderText="Customer"
+                                MappingName="Customer"
                                 FilterRowOptionsVisibility="False" />
 
 {% endhighlight %}
 {% highlight c# %}
 
-this.dataGrid.Columns[0].FilterRowOptionsVisibility = false;
+var customerIdColumn = new DataGridTextColumn();
+customerIdColumn.HeaderText = "Customer";
+customerIdColumn.MappingName = "Customer";
+customerIdColumn.FilterRowOptionsVisibility = false;
+
+dataGrid.Columns.Add(customerIdColumn);
 
 {% endhighlight %}
 {% endtabs %}
@@ -205,7 +221,12 @@ Modify the default FilterRow condition for any specific column using the `DataGr
 {% endhighlight %}
 {% highlight c# %}
 
-this.dataGrid.Columns[0].FilterRowCondition =  FilterRowCondition.LessThan;
+var orderIdColumn = new DataGridNumericColumn();
+orderIdColumn.HeaderText = "Order ID";
+orderIdColumn.MappingName = "OrderID";
+orderIdColumn.FilterRowCondition = FilterRowCondition.LessThan;
+
+dataGrid.Columns.Add(orderIdColumn);
 
 {% endhighlight %}
 {% endtabs %}
@@ -217,13 +238,18 @@ Control the inclusion of null values in filtering by configuring the `DataGridCo
 
 {% tabs %}
 {% highlight XAML %}
-<syncfusion:DataGridTextColumn  HeaderText="Customer ID"
-                                MappingName="CustomerID"
+<syncfusion:DataGridTextColumn  HeaderText="Customer"
+                                MappingName="Customer"
                                 AllowBlankFilters="False"/>
 {% endhighlight %}
 {% highlight c# %}
 
-this.dataGrid.Columns[0].AllowBlankFilters = false;
+var customerColumn = new DataGridTextColumn();
+customerColumn.HeaderText = "Customer";
+customerColumn.MappingName = "Customer";
+customerColumn.AllowBlankFilters = false;
+
+dataGrid.Columns.Add(customerColumn);
 
 {% endhighlight %}
 {% endtabs %}
@@ -232,14 +258,20 @@ this.dataGrid.Columns[0].AllowBlankFilters = false;
 
 {% tabs %}
 {% highlight XAML %}
-<syncfusion:DataGridTextColumn  HeaderText="Customer ID"
-                                MappingName="CustomerID"
+<syncfusion:DataGridTextColumn  HeaderText="Ship Country"
+                                MappingName="Country"
                                 AllowBlankFilters="True"
                                 FilterRowEditorType="MultiSelectComboBox"/>
 {% endhighlight %}
 {% highlight c# %}
 
-this.dataGrid.Columns[0].AllowBlankFilters = true;
+var countryColumn = new DataGridTextColumn();
+customerColumn.HeaderText = "Ship Country";
+customerColumn.MappingName = "Country";
+customerColumn.AllowBlankFilters = true;
+customerColumn.FilterRowEditorType = "MultiSelectComboBox";
+
+dataGrid.Columns.Add(countryColumn);
 
 {% endhighlight %}
 {% endtabs %}
@@ -250,12 +282,17 @@ this.dataGrid.Columns[0].AllowBlankFilters = true;
 Filters are typically applied to columns upon cell navigation or pressing the Enter key. However, by setting [DataGridColumn.ImmediateUpdateColumnFilter](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridColumn.html#Syncfusion_Maui_DataGrid_DataGridColumn_ImmediateUpdateColumnFilter) to `true`, you can enable instant filtering as you type within the editor.
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:GridTextColumn MappingName="CustomerName"
-                           FilterRowEditorType="MultiSelectComboBox"
-                           ImmediateUpdateColumnFilter="True"/>
+<syncfusion:DataGridTextColumn MappingName="Customer"
+                               FilterRowEditorType="MultiSelectComboBox"
+                               ImmediateUpdateColumnFilter="True"/>
 {% endhighlight %}
 {% highlight c# %}
-this.dataGrid.Columns[2].ImmediateUpdateColumnFilter = true;
+var customerColumn = new DataGridTextColumn();
+customerColumn.MappingName = "Customer";
+customerColumn.FilterRowEditorType = "MultiSelectComboBox";
+customerColumn.ImmediateUpdateColumnFilter = true;
+
+dataGrid.Columns.Add(customerColumn);
 {% endhighlight %}
 {% endtabs %}
 
@@ -284,10 +321,10 @@ You can customize the basic styling of the FilterRow in SfDataGrid using the Def
 {% highlight xaml %}
 <syncfusion:SfDataGrid.DefaultStyle>
     <syncfusion:DataGridStyle FilterRowFontAttributes="Bold" 
-                            FilterIconHoverBackground="AliceBlue" 
-                            FilterRowBackground="Yellow" 
-                            FilterRowTextColor="CadetBlue" 
-                            FilterRowFontSize="10" />
+                              FilterIconHoverBackground="AliceBlue" 
+                              FilterRowBackground="Yellow" 
+                              FilterRowTextColor="CadetBlue" 
+                              FilterRowFontSize="10" />
 </syncfusion:SfDataGrid.DefaultStyle>
 {% endhighlight %}
 {% endtabs %}
@@ -298,7 +335,7 @@ Customize the appearance of the filter row by defining a style with TargetType [
 {% highlight xaml %}
 <ContentPage.Resources>
     <Style TargetType="syncfusion:DataGridFilterRowView">
-        <Setter Property="Background" Value="Red"/>
+        <Setter Property="Background" Value="BlanchedAlmond"/>
     </Style>
 </ContentPage.Resources>
 {% endhighlight %}
@@ -312,12 +349,14 @@ Further customize the filter row cell's appearance through the `FilterRowCellSty
 {% tabs %}
 {% highlight xaml %}
 
-<syncfusion:DataGridNumericColumn HeaderText="Order ID" MappingName="OrderID" >
-    <syncfusion:DataGridNumericColumn.FilterRowCellStyle>
-            <Style TargetType="syncfusion:DataGridFilterRowCell">
-                <Setter Property="Background" Value="CornflowerBlue" /> </Style>
-    </syncfusion:DataGridNumericColumn.FilterRowCellStyle>
-</syncfusion:DataGridNumericColumn>
+<syncfusion:DataGridTextColumn MappingName="Customer"
+                               HeaderText="Customer">
+    <syncfusion:DataGridTextColumn.FilterRowCellStyle>
+        <Style TargetType="syncfusion:DataGridFilterRowCell">
+            <Setter Property="Background" Value="LightGreen" />
+        </Style>
+    </syncfusion:DataGridTextColumn.FilterRowCellStyle>
+</syncfusion:DataGridTextColumn>
 
 {% endhighlight %}
 {% endtabs %}
@@ -333,8 +372,8 @@ You can customize the default TextBox editor behavior by overriding `DataGridFil
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:DataGridTextColumn  HeaderText="Customer ID"
-                                MappingName="CustomerID"
+<syncfusion:DataGridTextColumn  HeaderText="Customer"
+                                MappingName="Customer"
                                 FilterRowEditorType="CustomTextBox"/>
 {% endhighlight %}
 {% highlight c# %}
@@ -361,8 +400,8 @@ By default, columns support filtering multiple values using the MultiSelectCombo
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:DataGridTextColumn  HeaderText="Customer ID"
-                                MappingName="CustomerID" 
+<syncfusion:DataGridTextColumn  HeaderText="Customer"
+                                MappingName="Customer" 
                                 FilterRowEditorType="CustomComboBox"/>
 {% endhighlight %}
 {% highlight c# %}
@@ -394,11 +433,11 @@ public class CustomDataGridFilterRowComboBoxRenderer : DataGridFilterRowComboBox
     public void SetNumericComboBoxItemsList()
     {
         numericComboBoxItems = new List<string>();
-        numericComboBoxItems.Add("Between 1 and 5");
-        numericComboBoxItems.Add("Between 5 and 10");
-        numericComboBoxItems.Add("Between 10 and 20");
-        numericComboBoxItems.Add("Between 1000 and 1005");
-        numericComboBoxItems.Add(">40");
+        numericComboBoxItems.Add("Between 10000 and 10005");
+        numericComboBoxItems.Add("Between 10005 and 10010");
+        numericComboBoxItems.Add("Between 10010 and 10015");
+        numericComboBoxItems.Add("Between 10015 and 10020");
+        numericComboBoxItems.Add(">10020");
     }
 
     /// <summary>

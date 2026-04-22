@@ -25,8 +25,8 @@ This event will be triggered while tapping a cell in the DataGrid. This event ha
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                   CellTapped="dataGrid_CellTapped"
-                   ItemsSource="{Binding OrderInfoCollection}" />
+                       CellTapped="dataGrid_CellTapped"
+                       ItemsSource="{Binding Orders}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 private void dataGrid_CellTapped(object sender, DataGridCellTappedEventArgs e)
@@ -45,7 +45,7 @@ The [CellTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfDataGrid CellTappedCommand="{Binding TapCommand}"
-                       ItemsSource="{Binding OrderInfoCollection}" />
+                       ItemsSource="{Binding Orders}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 Command TapCommand = new Command(ListenTapCommand);
@@ -70,8 +70,8 @@ This event will be triggered while double tapping a cell in the DataGrid. This e
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                   CellDoubleTapped="dataGrid_CellDoubleTapped"
-                   ItemsSource="{Binding OrderInfoCollection}" />
+                       CellDoubleTapped="dataGrid_CellDoubleTapped"
+                       ItemsSource="{Binding Orders}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 private void dataGrid_CellDoubleTapped(object sender, DataGridCellDoubleTappedEventArgs e)
@@ -90,7 +90,7 @@ The [CellDoubleTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfDataGrid CellDoubleTappedCommand="{Binding DoubleTapCommand}"
-                       ItemsSource="{Binding OrderInfoCollection}" />
+                       ItemsSource="{Binding Orders}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 Command DoubleTapCommand = new Command(ListenDoubleTapCommand);
@@ -115,8 +115,8 @@ This event will be triggered while long pressing a cell in the DataGrid. This ev
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                   CellLongPress="dataGrid_CellLongPress"
-                   ItemsSource="{Binding OrderInfoCollection}" />
+                       CellLongPress="dataGrid_CellLongPress"
+                       ItemsSource="{Binding Orders}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 private void dataGrid_CellLongPress(object sender, DataGridCellLongPressEventArgs e)
@@ -135,7 +135,7 @@ The [CellLongPressCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.D
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfDataGrid CellLongPressCommand="{Binding LongPressCommand}"
-                       ItemsSource="{Binding OrderInfoCollection}" />
+                       ItemsSource="{Binding Orders}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 Command LongPressCommand = new Command(ListenLongPressCommand);
@@ -160,8 +160,8 @@ This event will be triggered when a right-click mouse gesture is recognized on a
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                   CellRightTapped="SfDataGrid_CellRightTapped"
-                   ItemsSource="{Binding OrderInfoCollection}" />
+                       CellRightTapped="SfDataGrid_CellRightTapped"
+                       ItemsSource="{Binding Orders}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 private void SfDataGrid_CellRightTapped(object sender, DataGridCellRightTappedEventArgs e)
@@ -183,7 +183,7 @@ The [CellRightTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfDataGrid CellRightTappedCommand="{Binding RightTapCommand}"
-                       ItemsSource="{Binding OrderInfoCollection}" />
+                       ItemsSource="{Binding Orders}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 Command RightTapCommand = new Command(ListenRightTapCommand);
@@ -216,8 +216,8 @@ This event will be triggered when the mouse pointer enters a cell in the DataGri
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                   CellEntered="dataGrid_CellEntered"
-                   ItemsSource="{Binding OrderInfoCollection}" />
+                       CellEntered="dataGrid_CellEntered"
+                       ItemsSource="{Binding Orders}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 private void dataGrid_CellEntered(object sender, DataGridCellEnteredEventArgs e)
@@ -236,7 +236,7 @@ The [CellEnteredCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Dat
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfDataGrid CellEnteredCommand="{Binding EnteredCommand}"
-                       ItemsSource="{Binding OrderInfoCollection}" />
+                       ItemsSource="{Binding Orders}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 Command EnteredCommand = new Command(ListenEnteredCommand);
@@ -261,8 +261,8 @@ This event will be triggered when the mouse pointer hovers over a cell in the Da
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                   CellHovered="dataGrid_CellHovered"
-                   ItemsSource="{Binding OrderInfoCollection}" />
+                       CellHovered="dataGrid_CellHovered"
+                       ItemsSource="{Binding Orders}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 private void dataGrid_CellHovered(object sender, DataGridCellHoveredEventArgs e)
@@ -282,7 +282,7 @@ The [CellHoveredCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Dat
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfDataGrid CellHoveredCommand="{Binding HoveredCommand}"
-                       ItemsSource="{Binding OrderInfoCollection}" />
+                       ItemsSource="{Binding Orders}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 Command HoveredCommand = new Command(ListenHoveredCommand);
@@ -307,8 +307,8 @@ This event will be triggered when the mouse pointer exits a cell in the DataGrid
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                   CellExited="dataGrid_CellExited"
-                   ItemsSource="{Binding OrderInfoCollection}" />
+                       CellExited="dataGrid_CellExited"
+                       ItemsSource="{Binding Orders}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 private void dataGrid_CellExited(object sender, DataGridCellExitedEventArgs e)
@@ -327,7 +327,7 @@ The [CellExitedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfDataGrid CellExitedCommand="{Binding ExitedCommand}"
-                       ItemsSource="{Binding OrderInfoCollection}" />
+                       ItemsSource="{Binding Orders}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 Command ExitedCommand = new Command(ListenExitedCommand);
@@ -357,39 +357,37 @@ The [SfDataGrid.CellValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion
 * [CellValue](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCellValueChangedEventArgs.html#Syncfusion_Maui_DataGrid_DataGridCellValueChangedEventArgs_CellValue)       : The initial value when current cell entered edit mode.
 
 {% tabs %}
-
-{% highlight c# %}
-
-dataGrid.CellValueChanged += SfDataGrid_CellValueChanged;
-
-private void SfDataGrid_CellValueChanged(object sender, ValueChangedEventArgs e)
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       CellValueChanged="SfDataGrid_CellValueChanged"
+                       ItemsSource="{Binding Orders}" />
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
+private void SfDataGrid_CellValueChanged(object sender, DataGridCellValueChangedEventArgs e)
 {
     var column = e.Column;
     var newValue = e.NewValue;
-    var rowColIndex = e.RowColIndex;
+    var rowColIndex = e.RowColumnIndex;
     var rowData = e.RowData;
-}
-
+} 
 {% endhighlight %}
-
 {% endtabs %}
 ## DataGridLoaded
 
 This event will be triggered once components in the `SfDataGrid` initialized and rendered.
 
 {% tabs %}
-
-{% highlight c# %}
-
-dataGrid.DataGridLoaded += DataGrid_GridLoaded;
-
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       DataGridLoaded="DataGrid_GridLoaded"
+                       ItemsSource="{Binding Orders}" />
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 private void DataGrid_GridLoaded(object? sender, EventArgs e)
 {
 
-}           
- 
+}   
 {% endhighlight %}
-
 {% endtabs %}
 
 ## ViewCreated
@@ -397,17 +395,17 @@ private void DataGrid_GridLoaded(object? sender, EventArgs e)
 This event will be triggered once the `SfDataGrid.View` is created.
 
 {% tabs %}
-
-{% highlight c# %}
-
-dataGrid.ViewCreated += DataGrid_viewCreated;     
- 
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ViewCreated="DataGrid_viewCreated"
+                       ItemsSource="{Binding Orders}" />
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 private void DataGrid_viewCreated(object? sender, EventArgs e)
 {
            
 }
 {% endhighlight %}
-
 {% endtabs %}
 
 ## ItemsSourceChanged
@@ -415,19 +413,18 @@ private void DataGrid_viewCreated(object? sender, EventArgs e)
 This event will be triggered once the source is changed in SfDataGrid
 
 {% tabs %}
-
-{% highlight c# %}
-
-dataGrid.ItemsSourceChanged += DataGrid_DataGridItemsSourceChanged;
-
+{% highlight xaml tabtitle="MainPage.xaml" %}
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSourceChanged="DataGrid_DataGridItemsSourceChanged"
+                       ItemsSource="{Binding Orders}" />
+{% endhighlight %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 private void DataGrid_DataGridItemsSourceChanged(object? sender, DataGridItemsSourceChangedEventArgs e)
 {
-    var newItemSource = e.NewItemSource;
-    var oldItemSource = e.OldItemSource;
+    var newItemSource = e.NewItems;
+    var oldItemSource = e.OldItems;
     var newView = e.NewView;
     var oldView = e.OldView;
 }
-
 {% endhighlight %}
-
 {% endtabs %}
