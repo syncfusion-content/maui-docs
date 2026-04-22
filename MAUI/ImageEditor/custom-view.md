@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Custom view Annotation in .NET MAUI Image Editor control | Syncfusion<sup>&reg;</sup>
+title: Custom view Annotation in .NET MAUI Image Editor control | Syncfusion
 description: Learn about the custom view annotation feature of Syncfusion<sup>&reg;</sup> .NET MAUI Image Editor(SfImageEditor) control.
 platform: maui
 control: SfImageEditor
