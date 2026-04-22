@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Crop in .NET MAUI Image Editor Control | Syncfusion<sup>&reg;</sup>
+title: Crop in .NET MAUI Image Editor Control | Syncfusion
 description: Learn here all about crop support in the Syncfusion<sup>&reg;</sup> .NET MAUI ImageEditor (SfImageEditor) control and more.
 platform: maui
 control: SfImageEditor
