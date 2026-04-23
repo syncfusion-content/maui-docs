@@ -20,13 +20,17 @@ We can specify the `EmptyView` property to a string that will be shown when the 
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                         ItemsSource="{Binding OrderInfoCollection}"
-                         EmptyView="No records">
-</syncfusion:SfDataGrid>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding Orders}"
+                           EmptyView="No records">
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
 dataGrid.EmptyView = "No records";
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -38,37 +42,50 @@ The `EmptyView` property can be set to a view, which will be displayed when the 
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}">
-    <syncfusion:SfDataGrid.EmptyView>
-        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-            <Label Text="&#xE7A4;" FontSize="20" TextColor="Black" FontFamily="MauiMaterialAssets.ttf"/>
-            <Label Text="No records" FontSize="14"/>
-        </StackLayout>
-    </syncfusion:SfDataGrid.EmptyView>                   
-</syncfusion:SfDataGrid>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding Orders}">
+        <syncfusion:SfDataGrid.EmptyView>
+            <StackLayout HorizontalOptions="Center"
+                         VerticalOptions="Center">
+                <Label Text="&#xE7A4;"
+                       FontSize="20"
+                       TextColor="Black"
+                       FontFamily="MauiMaterialAssets.ttf"
+                       HorizontalOptions="Center"/>
+                <Label Text="No records"
+                       FontSize="14"
+                       TextColor="Black"/>
+            </StackLayout>
+        </syncfusion:SfDataGrid.EmptyView>
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-StackLayout stackLayout = new StackLayout() { HorizontalOptions = LayoutOptions.Center };
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
+
+// Customizing the empty view of the DataGrid
+StackLayout stackLayout = new StackLayout() { HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.Center };
 
 var label1 = new Label()
 {
     Text = "\uE7A4",
     FontSize = 20,
+    TextColor = Colors.Black,
     FontFamily = "MauiMaterialAssets.ttf",
-    HorizontalTextAlignment = TextAlignment.Center,
+    HorizontalOptions = LayoutOptions.Center,
 };
 var label2 = new Label()
 {
     Text = "No records",
-    FontSize = 16,
-    FontFamily = "Roboto-Regular",
-    HorizontalTextAlignment = TextAlignment.Center,
+    FontSize = 14,
+    TextColor = Colors.Black,
 };
 stackLayout.Children.Add(label1);
 stackLayout.Children.Add(label2);
 
 dataGrid.EmptyView = stackLayout;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -85,41 +102,90 @@ We can set the `EmptyView` to a custom type that will displayed when the `ItemsS
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
              xmlns:local="clr-namespace:EmptyViewTemplate">
     <StackLayout>
-      <SearchBar x:Name="filterText" 
-        FontSize="16"
-        Placeholder="Filter Inventory" TextChanged="filterText_TextChanged"/>
-      <syncfusion:SfDataGrid x:Name="dataGrid"
-                    ItemsSource="{Binding OrderInfoCollection}">
-          <syncfusion:SfDataGrid.EmptyView>
-              <local:FilterItem Filter="{Binding Source={x:Reference filterText},Path=Text}" x:Name="filter"/>
-          </syncfusion:SfDataGrid.EmptyView>
-          <syncfusion:SfDataGrid.EmptyViewTemplate>
-              <DataTemplate>
-                  <Label Text="{Binding Source={x:Reference filterText},Path=Text, StringFormat='{0} is not found'}"
-                        HorizontalTextAlignment="Center"     
-                        VerticalOptions="Center"
-                          FontSize="14" FontFamily="Roboto-Regular"/>
-              </DataTemplate>
-          </syncfusion:SfDataGrid.EmptyViewTemplate>
-      </syncfusion:SfDataGrid>
-  </StackLayout>
+        <SearchBar x:Name="filterText"
+                   FontSize="16"
+                   Placeholder="Filter Inventory"
+                   WidthRequest="200"
+                   Margin="0,0,0,10"/>
+        <syncfusion:SfDataGrid x:Name="dataGrid"
+                               ItemsSource="{Binding Orders}">
+            <syncfusion:SfDataGrid.EmptyView>
+                <local:FilterItem Filter="{Binding Source={x:Reference filterText},Path=Text}"
+                                  x:Name="filter"/>
+            </syncfusion:SfDataGrid.EmptyView>
+            <syncfusion:SfDataGrid.EmptyViewTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding Source={x:Reference filterText},Path=Text, StringFormat='{0} is not found'}"
+                           TextColor="Black"
+                           HorizontalTextAlignment="Center"
+                           VerticalOptions="Center"
+                           FontSize="14"
+                           FontFamily="Roboto-Regular"/>
+                </DataTemplate>
+            </syncfusion:SfDataGrid.EmptyViewTemplate>
+        </syncfusion:SfDataGrid>
+    </StackLayout>
 </ContentPage>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-dataGrid.EmptyView = new FilterItem() { Filter = filterText.Text};
+// Create a StackLayout to hold the SearchBar and SfDataGrid
+StackLayout stackLayout = new StackLayout();
 
+// SearchBar (x:Name="filterText")
+var filterText = new SearchBar()
+{
+    FontSize = 16,
+    Placeholder = "Filter Inventory",
+    WidthRequest = 200,
+    Margin = new Thickness(0, 0, 0, 10), // set margin as required
+};
+
+// Initialize SfDataGrid and set its ItemsSource
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
+
+// EmptyView
+var filterItem = new FilterItem();
+// Binding: Filter="{Binding Source={x:Reference filterText}, Path=Text}"
+filterItem.SetBinding(
+    FilterItem.FilterProperty,
+    new Binding(
+        path: nameof(SearchBar.Text),
+        source: filterText
+    )
+);
+
+dataGrid.EmptyView = filterItem;
+
+// EmptyViewTemplate
 dataGrid.EmptyViewTemplate = new DataTemplate(() =>
 {
-  Label label = new Label()
-  {					
-    FontSize = 18,
-    FontFamily = "Roboto-Regular",
-    VerticalOptions = LayoutOptions.CenterAndExpand,
-    HorizontalTextAlignment = TextAlignment.Center
-  };
-  label.SetBinding(Label.TextProperty, new Binding(source:filterText, stringFormat: "{0} is not found", path:"Text"));
-  return label;
+    var label = new Label
+    {
+        TextColor = Colors.Black,
+        HorizontalTextAlignment = TextAlignment.Center,
+        VerticalOptions = LayoutOptions.Center,
+        FontSize = 14,
+        FontFamily = "Roboto-Regular"
+    };
+
+    // Text binding with StringFormat
+    label.SetBinding(
+        Label.TextProperty,
+        new Binding(
+            path: nameof(SearchBar.Text),
+            source: filterText,
+            stringFormat: "{0} is not found"
+        )
+    );
+
+    return label;
 });
+
+stackLayout.Children.Add(filterText);
+stackLayout.Children.Add(dataGrid);
+this.Content = stackLayout;
 {% endhighlight %}
 {% endtabs %}
 
@@ -129,13 +195,13 @@ The `FilterItem` type defines a `Filter` property.
 {% highlight c# tabtitle="FilterItem.cs" %}
 public class FilterItem : BindableObject
 {
-  public static readonly BindableProperty FilterProperty = BindableProperty.Create(nameof(Filter), typeof(string), typeof(FilterItem), null);
+    public static readonly BindableProperty FilterProperty = BindableProperty.Create(nameof(Filter), typeof(string), typeof(FilterItem), null);
 
-  public string Filter
-  {
-      get { return (string)GetValue(FilterProperty); }
-      set { SetValue(FilterProperty, value); }
-  }
+    public string Filter
+    {
+        get { return (string)GetValue(FilterProperty); }
+        set { SetValue(FilterProperty, value); }
+    }
 }
 {% endhighlight %}
 {% endtabs %}
