@@ -77,12 +77,12 @@ Enable built-in validation support by setting [SfDataGrid.ValidationMode](https:
 
 {% tabs %}
 {% highlight XAML %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}"
-                        SelectionMode="Single"
-                        NavigationMode="Cell"
-                        AllowEditing="True"
-                        ValidationMode="InView"/>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding Orders}"
+                           SelectionMode="Single"
+                           NavigationMode="Cell"
+                           AllowEditing="True"
+                           ValidationMode="InView"/>
 
 {% endhighlight %}
 {% highlight C# %}
@@ -151,12 +151,12 @@ Enable built-in validation support by setting [SfDataGrid.ValidationMode](https:
 
 {% tabs %}
 {% highlight XAML %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}"
-                        SelectionMode="Single"
-                        NavigationMode="Cell"
-                        AllowEditing="True"
-                        ValidationMode="InView"/>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding Orders}"
+                           SelectionMode="Single"
+                           NavigationMode="Cell"
+                           AllowEditing="True"
+                           ValidationMode="InView"/>
 {% endhighlight %}
 {% highlight C# %}
 SfDataGrid dataGrid = new SfDataGrid();
@@ -267,13 +267,13 @@ A cell can be validated using [CellValidating](https://help.syncfusion.com/cr/ma
 
 {% tabs %}
 {% highlight XAML %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}"
-                        SelectionMode="Single"
-                        NavigationMode="Cell"
-                        AllowEditing="True"
-                        ValidationMode="InView"
-                        CellValidating="dataGrid_CellValidating"/>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding Orders}"
+                           SelectionMode="Single"
+                           NavigationMode="Cell"
+                           AllowEditing="True"
+                           ValidationMode="InView"
+                           CellValidating="dataGrid_CellValidating"/>
 {% endhighlight %}
 {% highlight C# %}
 private void dataGrid_CellValidating(object sender, DataGridCellValidatingEventArgs e)
@@ -291,13 +291,13 @@ private void dataGrid_CellValidating(object sender, DataGridCellValidatingEventA
 
 {% tabs %}
 {% highlight XAML %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}"
-                        SelectionMode="Single"
-                        NavigationMode="Cell"
-                        AllowEditing="True"
-                        ValidationMode="InView"
-                        CellValidated="dataGrid_CellValidated"/>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding Orders}"
+                           SelectionMode="Single"
+                           NavigationMode="Cell"
+                           AllowEditing="True"
+                           ValidationMode="InView"
+                           CellValidated="dataGrid_CellValidated"/>
 {% endhighlight %}
 {% highlight C# %}
 private void dataGrid_CellValidated(object sender, DataGridCellValidatedEventArgs e)
@@ -317,13 +317,13 @@ A Row can be validated using [RowValidating](https://help.syncfusion.com/cr/maui
 
 {% tabs %}
 {% highlight XAML %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}"
-                        SelectionMode="Single"
-                        NavigationMode="Cell"
-                        AllowEditing="True"
-                        ValidationMode="InView"
-                        RowValidating="dataGrid_RowValidating"/>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding Orders}"
+                           SelectionMode="Single"
+                           NavigationMode="Cell"
+                           AllowEditing="True"
+                           ValidationMode="InView"
+                           RowValidating="dataGrid_RowValidating"/>
 {% endhighlight %}
 {% highlight C# %}
 private void dataGrid_RowValidating(object sender, DataGridRowValidatingEventArgs e)
@@ -343,13 +343,13 @@ private void dataGrid_RowValidating(object sender, DataGridRowValidatingEventArg
 
 {% tabs %}
 {% highlight XAML %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}"
-                        SelectionMode="Single"
-                        NavigationMode="Cell"
-                        AllowEditing="True"
-                        ValidationMode="InView"
-                        RowValidated="dataGrid_RowValidated"/>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding Orders}"
+                           SelectionMode="Single"
+                           NavigationMode="Cell"
+                           AllowEditing="True"
+                           ValidationMode="InView"
+                           RowValidated="dataGrid_RowValidated"/>
 {% endhighlight %}
 {% highlight C# %}
 private void dataGrid_RowValidated(object sender, DataGridRowValidatedEventArgs e)
@@ -367,16 +367,16 @@ The default error icon color can be customized by setting the [DataGridStyle.Err
 
 {% tabs %}
 {% highlight XAML %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}"
-                        SelectionMode="Single"
-                        NavigationMode="Cell"
-                        AllowEditing="True"
-                        ValidationMode="InView">
-    <syncfusion:SfDataGrid.DefaultStyle>
-        <syncfusion:DataGridStyle ErrorIconColor="Orange"/>
-    </syncfusion:SfDataGrid.DefaultStyle>
-</syncfusion:SfDataGrid>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding Orders}"
+                           SelectionMode="Single"
+                           NavigationMode="Cell"
+                           AllowEditing="True"
+                           ValidationMode="InView">
+        <syncfusion:SfDataGrid.DefaultStyle>
+            <syncfusion:DataGridStyle ErrorIconColor="Orange"/>
+        </syncfusion:SfDataGrid.DefaultStyle>
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight C# %}
 SfDataGrid dataGrid = new SfDataGrid();
@@ -399,18 +399,18 @@ The SfDataGrid uses an icon to indicate if a cell has error. You can personalize
 
 {% tabs %}
 {% highlight XAML %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}"
-                        SelectionMode="Single"
-                        NavigationMode="Cell"
-                        AllowEditing="True"
-                        ValidationMode="InView">
-    <syncfusion:SfDataGrid.ErrorIconTemplate>
-        <DataTemplate>
-            <Image Source="error_icon.png"/>
-        </DataTemplate>
-    </syncfusion:SfDataGrid.ErrorIconTemplate>
-</syncfusion:SfDataGrid>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding Orders}"
+                           SelectionMode="Single"
+                           NavigationMode="Cell"
+                           AllowEditing="True"
+                           ValidationMode="InView">
+        <syncfusion:SfDataGrid.ErrorIconTemplate>
+            <DataTemplate>
+                <Image Source="error_icon.png"/>
+            </DataTemplate>
+        </syncfusion:SfDataGrid.ErrorIconTemplate>
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight C# %}
 SfDataGrid dataGrid = new SfDataGrid();
@@ -440,28 +440,28 @@ When choosing a ErrorIconTemplate as a DataTemplateSelector, you have the option
 
 {% tabs %}
 {% highlight XAML %}
-<ContentPage.Resources>
-    <ResourceDictionary>
-        <DataTemplate x:Key="NorwayTemplate">
-            <Image Source="error_icon.png"/>
-        </DataTemplate>
-        <DataTemplate x:Key="FranceTemplate">
-            <Image Source="error_triangle.png"/>
-        </DataTemplate>
-    </ResourceDictionary>
-</ContentPage.Resources>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="NorwayTemplate">
+                <Image Source="error_icon.png"/>
+            </DataTemplate>
+            <DataTemplate x:Key="FranceTemplate">
+                <Image Source="error_triangle.png"/>
+            </DataTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}"
-                        SelectionMode="Single"
-                        NavigationMode="Cell"
-                        AllowEditing="True"
-                        ValidationMode="InView">
-    <syncfusion:SfDataGrid.ErrorIconTemplate>
-        <local:ErrorIconTemplateSelector NorwayTemplate="{StaticResource NorwayTemplate}"
-                                            FranceTemplate="{StaticResource FranceTemplate}"/>
-    </syncfusion:SfDataGrid.ErrorIconTemplate>
-</syncfusion:SfDataGrid>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding Orders}"
+                           SelectionMode="Single"
+                           NavigationMode="Cell"
+                           AllowEditing="True"
+                           ValidationMode="InView">
+        <syncfusion:SfDataGrid.ErrorIconTemplate>
+            <local:ErrorIconTemplateSelector NorwayTemplate="{StaticResource NorwayTemplate}"
+                                             FranceTemplate="{StaticResource FranceTemplate}"/>
+        </syncfusion:SfDataGrid.ErrorIconTemplate>
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight C# %}
 public class ErrorIconTemplateSelector : Microsoft.Maui.Controls.DataTemplateSelector
@@ -497,17 +497,17 @@ The background of the error tip can be changed by setting [DataGridStyle.ErrorTi
 
 {% tabs %}
 {% highlight XAML %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}"
-                        SelectionMode="Single"
-                        NavigationMode="Cell"
-                        AllowEditing="True"
-                        ValidationMode="InView">
-    <syncfusion:SfDataGrid.DefaultStyle>
-        <syncfusion:DataGridStyle ErrorTipBackground="LightBlue"
-                                    ErrorTipTextColor="Black"/>
-    </syncfusion:SfDataGrid.DefaultStyle>
-</syncfusion:SfDataGrid>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding Orders}"
+                           SelectionMode="Single"
+                           NavigationMode="Cell"
+                           AllowEditing="True"
+                           ValidationMode="InView">
+        <syncfusion:SfDataGrid.DefaultStyle>
+            <syncfusion:DataGridStyle ErrorTipBackground="LightBlue"
+                                      ErrorTipTextColor="Black"/>
+        </syncfusion:SfDataGrid.DefaultStyle>
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight C# %}
 SfDataGrid dataGrid = new SfDataGrid();
@@ -531,21 +531,21 @@ The SfDataGrid uses a tool tip to showcase an error message if a cell has error.
 
 {% tabs %}
 {% highlight XAML %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}"
-                        SelectionMode="Single"
-                        NavigationMode="Cell"
-                        AllowEditing="True"
-                        ValidationMode="InView">
-    <syncfusion:SfDataGrid.ErrorTipTemplate>
-        <DataTemplate>
-            <Label Text="Delivery not available"
-                    Background="Orange"
-                    TextColor="Black"
-                    Padding="2"/>
-        </DataTemplate>
-    </syncfusion:SfDataGrid.ErrorTipTemplate>
-</syncfusion:SfDataGrid>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding Orders}"
+                           SelectionMode="Single"
+                           NavigationMode="Cell"
+                           AllowEditing="True"
+                           ValidationMode="InView">
+        <syncfusion:SfDataGrid.ErrorTipTemplate>
+            <DataTemplate>
+                <Label Text="Delivery not available"
+                       Background="Orange"
+                       TextColor="Black"
+                       Padding="2"/>
+            </DataTemplate>
+        </syncfusion:SfDataGrid.ErrorTipTemplate>
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight C# %}
 SfDataGrid dataGrid = new SfDataGrid();
@@ -578,34 +578,34 @@ When choosing a ErrorTipTemplate as a DataTemplateSelector, you have the option 
 
 {% tabs %}
 {% highlight XAML %}
-<ContentPage.Resources>
-    <ResourceDictionary>
-        <DataTemplate x:Key="NorwayTemplate">
-            <Label Text="Delivery not available for Norway"
-                    Background="Orange"
-                    TextColor="Black"
-                    Padding="2"/>
-        </DataTemplate>
-        <DataTemplate x:Key="FranceTemplate">
-            <Label Text="Delivery not available for France"
-                    Background="LightBlue"
-                    TextColor="Black"
-                    Padding="2"/>
-        </DataTemplate>
-    </ResourceDictionary>
-</ContentPage.Resources>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="NorwayTemplate">
+                <Label Text="Delivery not available for Norway"
+                       Background="Orange"
+                       TextColor="Black"
+                       Padding="2"/>
+            </DataTemplate>
+            <DataTemplate x:Key="FranceTemplate">
+                <Label Text="Delivery not available for France"
+                       Background="LightBlue"
+                       TextColor="Black"
+                       Padding="2"/>
+            </DataTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}"
-                        SelectionMode="Single"
-                        NavigationMode="Cell"
-                        AllowEditing="True"
-                        ValidationMode="InView">
-    <syncfusion:SfDataGrid.ErrorTipTemplate>
-        <local:ErrorTipTemplateSelector  NorwayTemplate="{StaticResource NorwayTemplate}"
-                                            FranceTemplate="{StaticResource FranceTemplate}"/>
-    </syncfusion:SfDataGrid.ErrorTipTemplate>
-</syncfusion:SfDataGrid>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding Orders}"
+                           SelectionMode="Single"
+                           NavigationMode="Cell"
+                           AllowEditing="True"
+                           ValidationMode="InView">
+        <syncfusion:SfDataGrid.ErrorTipTemplate>
+            <local:ErrorTipTemplateSelector  NorwayTemplate="{StaticResource NorwayTemplate}"
+                                             FranceTemplate="{StaticResource FranceTemplate}"/>
+        </syncfusion:SfDataGrid.ErrorTipTemplate>
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight C# %}
 public class ErrorTipTemplateSelector : Microsoft.Maui.Controls.DataTemplateSelector
@@ -639,24 +639,24 @@ The data bound based on [IDataErrorInfo](https://learn.microsoft.com/en-us/dotne
 
 {% tabs %}
 {% highlight XAML %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}"
-                        SelectionMode="Single"
-                        NavigationMode="Cell"
-                        GridLinesVisibility="Both"
-                        HeaderGridLinesVisibility="Both">
-    <syncfusion:SfDataGrid.DetailsViewDefinition>
-        <syncfusion:DataGridViewDefinition RelationalColumn="Orders">
-            <syncfusion:DataGridViewDefinition.DataGrid>
-                <syncfusion:SfDataGrid  x:Name="FirstLevelNestedGrid"
-                                        ValidationMode="InView"
-                                        AllowEditing="True"
-                                        GridLinesVisibility="Both"
-                                        HeaderGridLinesVisibility="Both"/>
-            </syncfusion:DataGridViewDefinition.DataGrid>
-        </syncfusion:DataGridViewDefinition>
-    </syncfusion:SfDataGrid.DetailsViewDefinition>
-</syncfusion:SfDataGrid>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding Orders}"
+                           SelectionMode="Single"
+                           NavigationMode="Cell"
+                           GridLinesVisibility="Both"
+                           HeaderGridLinesVisibility="Both">
+        <syncfusion:SfDataGrid.DetailsViewDefinition>
+            <syncfusion:DataGridViewDefinition RelationalColumn="Orders">
+                <syncfusion:DataGridViewDefinition.DataGrid>
+                    <syncfusion:SfDataGrid  x:Name="FirstLevelNestedGrid"
+                                            ValidationMode="InView"
+                                            AllowEditing="True"
+                                            GridLinesVisibility="Both"
+                                            HeaderGridLinesVisibility="Both"/>
+                </syncfusion:DataGridViewDefinition.DataGrid>
+            </syncfusion:DataGridViewDefinition>
+        </syncfusion:SfDataGrid.DetailsViewDefinition>
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight C# %}
 // Parent DataGrid
@@ -717,25 +717,25 @@ The cells can be validated using [CellValidating](https://help.syncfusion.com/cr
 
 {% tabs %}
 {% highlight XAML %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}"
-                        SelectionMode="Single"
-                        NavigationMode="Cell"
-                        GridLinesVisibility="Both"
-                        HeaderGridLinesVisibility="Both">
-    <syncfusion:SfDataGrid.DetailsViewDefinition>
-        <syncfusion:DataGridViewDefinition RelationalColumn="Orders">
-            <syncfusion:DataGridViewDefinition.DataGrid>
-                <syncfusion:SfDataGrid  x:Name="FirstLevelNestedGrid"
-                                        ValidationMode="InView"
-                                        AllowEditing="True"
-                                        GridLinesVisibility="Both"
-                                        HeaderGridLinesVisibility="Both"
-                                        CellValidating="FirstLevelNestedGrid_CellValidating"/>
-            </syncfusion:DataGridViewDefinition.DataGrid>
-        </syncfusion:DataGridViewDefinition>
-    </syncfusion:SfDataGrid.DetailsViewDefinition>
-</syncfusion:SfDataGrid>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding Orders}"
+                           SelectionMode="Single"
+                           NavigationMode="Cell"
+                           GridLinesVisibility="Both"
+                           HeaderGridLinesVisibility="Both">
+        <syncfusion:SfDataGrid.DetailsViewDefinition>
+            <syncfusion:DataGridViewDefinition RelationalColumn="Orders">
+                <syncfusion:DataGridViewDefinition.DataGrid>
+                    <syncfusion:SfDataGrid  x:Name="FirstLevelNestedGrid"
+                                            ValidationMode="InView"
+                                            AllowEditing="True"
+                                            GridLinesVisibility="Both"
+                                            HeaderGridLinesVisibility="Both"
+                                            CellValidating="FirstLevelNestedGrid_CellValidating"/>
+                </syncfusion:DataGridViewDefinition.DataGrid>
+            </syncfusion:DataGridViewDefinition>
+        </syncfusion:SfDataGrid.DetailsViewDefinition>
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight C# %}
 private void FirstLevelNestedGrid_CellValidating(object sender, DataGridCellValidatingEventArgs e)
@@ -795,7 +795,7 @@ private void FirstLevelNestedGrid_CellValidating(object sender, DataGridCellVali
 
 {% tabs %}
 {% highlight XAML %}
-     <syncfusion:SfDataGrid x:Name="dataGrid"
+    <syncfusion:SfDataGrid x:Name="dataGrid"
                            ItemsSource="{Binding Orders}"
                            SelectionMode="Single"
                            NavigationMode="Cell"
@@ -813,7 +813,7 @@ private void FirstLevelNestedGrid_CellValidating(object sender, DataGridCellVali
                 </syncfusion:DataGridViewDefinition.DataGrid>
             </syncfusion:DataGridViewDefinition>
         </syncfusion:SfDataGrid.DetailsViewDefinition>
-    </syncfusion:SfDataGrid> 
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight C# %}
 // CellValidated event handler for the child grid (DetailsView)
@@ -828,16 +828,16 @@ When the relation is auto-generated, you can wire the `CellValidating` and `Cell
 
 {% tabs %}
 {% highlight XAML %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}"
-                        AllowEditing="True"
-                        SelectionMode="Single"
-                        NavigationMode="Cell"
-                        GridLinesVisibility="Both"
-                        HeaderGridLinesVisibility="Both"
-                        AutoGenerateRelations="True"
-                        AutoGeneratingRelations="dataGrid_AutoGeneratingRelations">
-</syncfusion:SfDataGrid>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding Orders}"
+                           AllowEditing="True"
+                           SelectionMode="Single"
+                           NavigationMode="Cell"
+                           GridLinesVisibility="Both"
+                           HeaderGridLinesVisibility="Both"
+                           AutoGenerateRelations="True"
+                           AutoGeneratingRelations="dataGrid_AutoGeneratingRelations">
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight C# %}
 private void dataGrid_AutoGeneratingRelations(object sender, DataGridAutoGeneratingRelationsArgs e)
@@ -876,25 +876,25 @@ The `RowValidating` event occurs when edited cells tries to commit the row data 
 
 {% tabs %}
 {% highlight XAML %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}"
-                        SelectionMode="Single"
-                        NavigationMode="Cell"
-                        GridLinesVisibility="Both"
-                        HeaderGridLinesVisibility="Both">
-    <syncfusion:SfDataGrid.DetailsViewDefinition>
-        <syncfusion:DataGridViewDefinition RelationalColumn="Orders">
-            <syncfusion:DataGridViewDefinition.DataGrid>
-                <syncfusion:SfDataGrid  x:Name="FirstLevelNestedGrid"
-                                        ValidationMode="InView"
-                                        AllowEditing="True"
-                                        GridLinesVisibility="Both"
-                                        HeaderGridLinesVisibility="Both"
-                                        RowValidating="FirstLevelNestedGrid_RowValidating"/>
-            </syncfusion:DataGridViewDefinition.DataGrid>
-        </syncfusion:DataGridViewDefinition>
-    </syncfusion:SfDataGrid.DetailsViewDefinition>
-</syncfusion:SfDataGrid>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding Orders}"
+                           SelectionMode="Single"
+                           NavigationMode="Cell"
+                           GridLinesVisibility="Both"
+                           HeaderGridLinesVisibility="Both">
+        <syncfusion:SfDataGrid.DetailsViewDefinition>
+            <syncfusion:DataGridViewDefinition RelationalColumn="Orders">
+                <syncfusion:DataGridViewDefinition.DataGrid>
+                    <syncfusion:SfDataGrid  x:Name="FirstLevelNestedGrid"
+                                            ValidationMode="InView"
+                                            AllowEditing="True"
+                                            GridLinesVisibility="Both"
+                                            HeaderGridLinesVisibility="Both"
+                                            RowValidating="FirstLevelNestedGrid_RowValidating"/>
+                </syncfusion:DataGridViewDefinition.DataGrid>
+            </syncfusion:DataGridViewDefinition>
+        </syncfusion:SfDataGrid.DetailsViewDefinition>
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight C# %}
 private void FirstLevelNestedGrid_RowValidating(object sender, DataGridRowValidatingEventArgs e)
@@ -959,25 +959,25 @@ private void FirstLevelNestedGrid_RowValidating(object sender, DataGridRowValida
 
 {% tabs %}
 {% highlight XAML %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}"
-                        SelectionMode="Single"
-                        NavigationMode="Cell"
-                        GridLinesVisibility="Both"
-                        HeaderGridLinesVisibility="Both">
-    <syncfusion:SfDataGrid.DetailsViewDefinition>
-        <syncfusion:DataGridViewDefinition RelationalColumn="Orders">
-            <syncfusion:DataGridViewDefinition.DataGrid>
-                <syncfusion:SfDataGrid  x:Name="FirstLevelNestedGrid"
-                                        ValidationMode="InView"
-                                        AllowEditing="True"
-                                        GridLinesVisibility="Both"
-                                        HeaderGridLinesVisibility="Both"
-                                        RowValidated="FirstLevelNestedGrid_RowValidated"/>
-            </syncfusion:DataGridViewDefinition.DataGrid>
-        </syncfusion:DataGridViewDefinition>
-    </syncfusion:SfDataGrid.DetailsViewDefinition>
-</syncfusion:SfDataGrid>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding Orders}"
+                           SelectionMode="Single"
+                           NavigationMode="Cell"
+                           GridLinesVisibility="Both"
+                           HeaderGridLinesVisibility="Both">
+        <syncfusion:SfDataGrid.DetailsViewDefinition>
+            <syncfusion:DataGridViewDefinition RelationalColumn="Orders">
+                <syncfusion:DataGridViewDefinition.DataGrid>
+                    <syncfusion:SfDataGrid  x:Name="FirstLevelNestedGrid"
+                                            ValidationMode="InView"
+                                            AllowEditing="True"
+                                            GridLinesVisibility="Both"
+                                            HeaderGridLinesVisibility="Both"
+                                            RowValidated="FirstLevelNestedGrid_RowValidated"/>
+                </syncfusion:DataGridViewDefinition.DataGrid>
+            </syncfusion:DataGridViewDefinition>
+        </syncfusion:SfDataGrid.DetailsViewDefinition>
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight C# %}
 // RowValidated event handler for the child grid (DetailsView)
@@ -992,16 +992,16 @@ When the relation is auto-generated, you can wire the `RowValidating` and `RowVa
 
 {% tabs %}
 {% highlight XAML %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}"
-                        AllowEditing="True"
-                        SelectionMode="Single"
-                        NavigationMode="Cell"
-                        GridLinesVisibility="Both"
-                        HeaderGridLinesVisibility="Both"
-                        AutoGenerateRelations="True"
-                        AutoGeneratingRelations="dataGrid_AutoGeneratingRelations">
-</syncfusion:SfDataGrid>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding Orders}"
+                           AllowEditing="True"
+                           SelectionMode="Single"
+                           NavigationMode="Cell"
+                           GridLinesVisibility="Both"
+                           HeaderGridLinesVisibility="Both"
+                           AutoGenerateRelations="True"
+                           AutoGeneratingRelations="dataGrid_AutoGeneratingRelations">
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight C# %}
 private void dataGrid_AutoGeneratingRelations(object sender, DataGridAutoGeneratingRelationsArgs e)
