@@ -438,6 +438,38 @@ This page lists the keys associated with each control and the respective UI elem
     <td> SfAIAssistViewSuggestionBackground <br/><br/></td>
     <td> Background color of the suggestion.<br/><br/></td>
 </tr>
+  <tr>
+    <td>SfAIAssistViewErrorIconColor <br/><br/></td>
+    <td>Defines the color of the error icon.<br/><br/></td>
+  </tr>
+  <tr>
+    <td>SfAIAssistViewErrorIconFontSize <br/><br/></td>
+    <td>Defines the font size of the error icon.<br/><br/></td>
+  </tr>
+  <tr>
+    <td>SfAIAssistViewErrorIconFontFamily <br/><br/></td>
+    <td>Defines the font family of the error icon.<br/><br/></td>
+  </tr>
+  <tr>
+    <td>SfAIAssistViewErrorIconFontAttributes <br/><br/></td>
+    <td>Defines the font attributes for the error icon.<br/><br/></td>
+  </tr>
+  <tr>
+    <td>SfAIAssistViewErrorMessageTextColor <br/><br/></td>
+    <td>Defines the text color of the error message.<br/><br/></td>
+  </tr>
+  <tr>
+    <td>SfAIAssistViewErrorMessageFontSize <br/><br/></td>
+    <td>Defines the font size of the error message.<br/><br/></td>
+  </tr>
+  <tr>
+    <td>SfAIAssistViewErrorMessageFontFamily <br/><br/></td>
+    <td>Defines the font family of the error message.<br/><br/></td>
+  </tr>
+  <tr>
+    <td>SfAIAssistViewErrorMessageFontAttributes <br/><br/></td>
+    <td>Defines the font attributes for the error message.<br/><br/></td>
+  </tr>
 <tr>
     <td> SfAIAssistViewSuggestionItemTextColor <br/><br/></td>
     <td> Text color of suggestion list items.<br/><br/></td>
