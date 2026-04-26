@@ -69,22 +69,22 @@ The following code example illustrates using `SfDataPager` with the data grid co
 
 public partial class MainPage : ContentPage
 {
-	public NormalPage()
-	{
-		InitializeComponent();
+    public NormalPage()
+    {
+        InitializeComponent();
         SfDataPager dataPager = new SfDataPager();
         OrderInfoViewModel viewModel = new OrderInfoViewModel();
         dataPager.PageSize = 15;
         dataPager.NumericButtonCount = 10;
         dataPager.Source = viewModel.Orders;
-
+        
         SfDataGrid dataGrid = new SfDataGrid();
         dataGrid.ItemsSource = dataPager.PagedSource;
-
+        
         Border border = new Border();
         border.Padding = new Thickness(5);
         border.Content = dataPager;
-
+        
         Grid grid = new Grid();
         grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Star });
         grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Auto });
@@ -93,7 +93,7 @@ public partial class MainPage : ContentPage
         grid.SetRow(dataGrid, 0);
         grid.SetRow(border, 1);
         this.Content = grid;
-	}
+    }
 }
 {% endhighlight %}
 {% endtabs %}
