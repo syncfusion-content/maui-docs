@@ -16,7 +16,7 @@ The .NET MAUI SfExpander comes with built-in support for customizing the appeara
 The [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html) allows you to customize the position of the header icon by using the [HeaderIconPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_HeaderIconPosition) property. By default, the header icon position is [End](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.ExpanderIconPosition.html#Syncfusion_Maui_Expander_ExpanderIconPosition_End). 
 
 {% tabs %}
-{% highlight xaml hl_lines="7 26 56 83" %}
+{% highlight xaml hl_lines="8 26 56 83" %}
 <ContentPage.Content>
     <ScrollView>
         <StackLayout HorizontalOptions="{OnPlatform MacCatalyst=Center,WinUI=Center}" >
