@@ -169,9 +169,9 @@ The SfDataGrid allows you to change the resizing indicator color using [SfDataGr
 <syncfusion:SfDataGrid  x:Name = "dataGrid"
                         AllowResizingColumns = "True"
                         ItemsSource = "{Binding Orders}">
-            <syncfusion:SfDataGrid.DefaultStyle>
-                <syncfusion:DataGridStyle ColumnResizingIndicatorColor = "Blue"/>
-            </syncfusion:SfDataGrid.DefaultStyle>
+    <syncfusion:SfDataGrid.DefaultStyle>
+        <syncfusion:DataGridStyle ColumnResizingIndicatorColor = "Blue"/>
+    </syncfusion:SfDataGrid.DefaultStyle>
 </syncfusion:SfDataGrid>
 
 {% endhighlight %}
