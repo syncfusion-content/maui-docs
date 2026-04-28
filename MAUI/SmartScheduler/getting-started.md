@@ -114,7 +114,7 @@ namespace GettingStarted
 
 ## Step 5: Add .NET MAUI smart Scheduler
 
-1. To initialize the control, import the [Syncfusion.Maui.SmartComponents](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.html) namespace into your code.
+1. To initialize the control, import the [Syncfusion.Maui.SmartScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.html) namespace into your code.
 2. Initialize [SfSmartScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartScheduler.html)
 
 {% tabs %}
@@ -122,7 +122,7 @@ namespace GettingStarted
 
 <ContentPage   
     . . .
-    xmlns:smartScheduler="clr-namespace:Syncfusion.Maui.SmartComponents;assembly=Syncfusion.Maui.SmartComponents">
+    xmlns:smartScheduler="clr-namespace:Syncfusion.Maui.SmartScheduler;assembly=Syncfusion.Maui.SmartScheduler">
 
     <smartScheduler:SfSmartScheduler />
 </ContentPage>
@@ -130,7 +130,7 @@ namespace GettingStarted
 {% endhighlight %}
 {% highlight C# hl_lines="1 9 10" %}
 
-using Syncfusion.Maui.SmartComponents;
+using Syncfusion.Maui.SmartScheduler;
 . . .
 
 public partial class MainPage : ContentPage
@@ -251,7 +251,7 @@ namespace GettingStarted
 
 ## Step 5: Add .NET MAUI smart Scheduler
 
-1. To initialize the control, import the [Syncfusion.Maui.SmartComponents](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.html) namespace into your code.
+1. To initialize the control, import the [Syncfusion.Maui.SmartScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.html) namespace into your code.
 2. Initialize [SfSmartScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartScheduler.html).
 
 {% tabs %}
@@ -259,7 +259,7 @@ namespace GettingStarted
 
 <ContentPage   
     . . .
-    xmlns:smartScheduler="clr-namespace:Syncfusion.Maui.SmartComponents;assembly=Syncfusion.Maui.SmartComponents">
+    xmlns:smartScheduler="clr-namespace:Syncfusion.Maui.SmartScheduler;assembly=Syncfusion.Maui.SmartScheduler">
 
     <smartScheduler:SfSmartScheduler />
 </ContentPage>
@@ -267,7 +267,7 @@ namespace GettingStarted
 {% endhighlight %}
 {% highlight C# hl_lines="1 9 10" %}
 
-using Syncfusion.Maui.SmartComponents;
+using Syncfusion.Maui.SmartScheduler;
 . . .
 
 public partial class MainPage : ContentPage
@@ -386,7 +386,7 @@ namespace GettingStarted
 
 ## Step 5: Add .NET MAUI smart Scheduler
 
-1. To initialize the control, import the [Syncfusion.Maui.SmartComponents](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.html) namespace into your code.
+1. To initialize the control, import the [Syncfusion.Maui.SmartScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.html) namespace into your code.
 2. Initialize [SfSmartScheduler](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartComponents.SfSmartScheduler.html).
 
 {% tabs %}
@@ -394,7 +394,7 @@ namespace GettingStarted
 
 <ContentPage   
     . . .
-    xmlns:smartScheduler="clr-namespace:Syncfusion.Maui.SmartComponents;assembly=Syncfusion.Maui.SmartComponents">
+    xmlns:smartScheduler="clr-namespace:Syncfusion.Maui.SmartScheduler;assembly=Syncfusion.Maui.SmartScheduler">
 
     <smartScheduler:SfSmartScheduler />
 </ContentPage>
@@ -402,7 +402,7 @@ namespace GettingStarted
 {% endhighlight %}
 {% highlight C# hl_lines="1 9 10" %}
 
-using Syncfusion.Maui.SmartComponents;
+using Syncfusion.Maui.SmartScheduler;
 . . .
 
 public partial class MainPage : ContentPage
