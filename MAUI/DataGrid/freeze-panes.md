@@ -87,14 +87,12 @@ The following code snippet shows how to freeze rows in the DataGrid:
 
 {% tabs %}
 {% highlight xaml %}
-<ContentPage xmlns:syncfusion="http://schemas.syncfusion.com/maui">
-    <ContentPage.BindingContext>
-        <local:OrderInfoViewModel />
-    </ContentPage.BindingContext>
-    <syncfusion:SfDataGrid x:Name = "dataGrid"
-                           ItemsSource = "{Binding Orders}" 
-                           FrozenRowCount = "1" />
-</ContentPage>
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel />
+</ContentPage.BindingContext>
+<syncfusion:SfDataGrid x:Name = "dataGrid"
+                        ItemsSource = "{Binding Orders}" 
+                        FrozenRowCount = "1" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 SfDataGrid dataGrid = new SfDataGrid();

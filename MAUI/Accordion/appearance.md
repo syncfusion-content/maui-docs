@@ -22,7 +22,7 @@ The [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.
     <syncfusion:SfAccordion.Items>
         <syncfusion:AccordionItem>
             <syncfusion:AccordionItem.Header>
-                <Grid  HeightRequest="48">
+                <Grid HeightRequest="48">
                     <Label Text="Robin Rane" Margin="16,14,0,14" CharacterSpacing="0.25" FontFamily="Roboto-Regular" FontSize="14" />
                 </Grid>
             </syncfusion:AccordionItem.Header>
@@ -226,7 +226,7 @@ The [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.
     <syncfusion:SfAccordion.Items>
         <syncfusion:AccordionItem HeaderBackground="#5fa8d3">
             <syncfusion:AccordionItem.Header>
-                <Grid  HeightRequest="48">
+                <Grid HeightRequest="48">
                     <Label Text="Robin Rane" Margin="16,14,0,14" CharacterSpacing="0.25" FontFamily="Roboto-Regular" FontSize="14" />
                 </Grid>
             </syncfusion:AccordionItem.Header>
@@ -415,11 +415,10 @@ public partial class MainPage : ContentPage
         grid.Children.Add(label);
     }
 }
-
-<img alt="Header background color customization" src="Images\appearance\maui-accordion-header-background-color.png" width="404" /> 
-
 {% endhighlight %}
 {% endtabs %}
+
+<img alt="Header background color customization" src="Images\appearance\maui-accordion-header-background-color.png" width="404" /> 
 
 ## Icon color customization
 
@@ -431,7 +430,7 @@ The [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.
     <syncfusion:SfAccordion.Items>
         <syncfusion:AccordionItem HeaderIconColor="Brown">
             <syncfusion:AccordionItem.Header>
-                <Grid  HeightRequest="48">
+                <Grid HeightRequest="48">
                     <Label Text="Robin Rane" Margin="16,14,0,14" CharacterSpacing="0.25" FontFamily="Roboto-Regular" FontSize="14" />
                 </Grid>
             </syncfusion:AccordionItem.Header>
@@ -654,19 +653,19 @@ The appearance of the [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusi
                             <Setter Property="HeaderIconColor" Value="#49454F"/>
                         </VisualState.Setters>
                     </VisualState>
-					<VisualState Name="Focused">
+                    <VisualState Name="Focused">
                         <VisualState.Setters>
                             <Setter Property="HeaderBackground" Value="#f5a2a2"/>
                             <Setter Property="HeaderIconColor" Value="#422626"/>
                         </VisualState.Setters>
                     </VisualState>
-					<VisualState Name="PointerOver">
+                    <VisualState Name="PointerOver">
                         <VisualState.Setters>
                             <Setter Property="HeaderBackground" Value="#ded6d5"/>
                             <Setter Property="HeaderIconColor" Value="#524f4f"/>
                         </VisualState.Setters>
                     </VisualState>
-					<VisualState Name="Normal">
+                    <VisualState Name="Normal">
                         <VisualState.Setters>
                             <Setter Property="HeaderBackground" Value="#faf8f7"/>
                             <Setter Property="HeaderIconColor" Value="#000000"/>
@@ -682,7 +681,7 @@ The appearance of the [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusi
         <syncfusion:SfAccordion.Items>
             <syncfusion:AccordionItem HeaderIconColor="Brown">
                 <syncfusion:AccordionItem.Header>
-                    <Grid  HeightRequest="48">
+                    <Grid HeightRequest="48">
                         <Label Text="Robin Rane" Margin="16,14,0,14" CharacterSpacing="0.25" FontFamily="Roboto-Regular" FontSize="14" />
                     </Grid>
                 </syncfusion:AccordionItem.Header>

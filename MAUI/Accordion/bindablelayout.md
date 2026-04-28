@@ -236,7 +236,7 @@ The [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.
         <DataTemplate>
             <syncfusion:AccordionItem IsExpanded="{Binding IsExpanded}">
                 <syncfusion:AccordionItem.Header>
-                    <Grid  HeightRequest="48">
+                    <Grid HeightRequest="48">
                         <Label Text="{Binding Name}" Margin="16,14,0,14" CharacterSpacing="0.25" FontFamily="Roboto-Regular"  FontSize="14" />
                     </Grid>
                 </syncfusion:AccordionItem.Header>
@@ -249,7 +249,7 @@ The [SfAccordion](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Accordion.
                                 </Style>
                             </Grid.Resources>
                             <Border Grid.RowSpan="4" Padding="0" Margin="0,0,12,7">
-                                <Image  Source="{Binding Image,Converter={StaticResource imageconverter}}"/>
+                                <Image Source="{Binding Image,Converter={StaticResource imageconverter}}"/>
                             </Border>
                             <Label Text="Position" Grid.Column="1" Margin="6,0,0,0" />
                             <Label Text="{Binding Position}" Grid.Column="2" />
