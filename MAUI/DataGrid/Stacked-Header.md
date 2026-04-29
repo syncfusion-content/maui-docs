@@ -25,59 +25,138 @@ The stacked headers can be added using the following steps:
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"         
-                       ItemsSource="{Binding OrderInfoCollection}">
-     <syncfusion:SfDataGrid.StackedHeaderRows>
-            <syncfusion:DataGridStackedHeaderRow>
-                <syncfusion:DataGridStackedHeaderRow.Columns>
-                    <syncfusion:DataGridStackedColumn
-                            ColumnMappingNames="OrderID,OrderDate,CustomerID,ContactName"
-                            Text="Order Shipment Details"
-                            MappingName="SalesDetails"
-                            />
-                </syncfusion:DataGridStackedHeaderRow.Columns>
-            </syncfusion:DataGridStackedHeaderRow>
-            <syncfusion:DataGridStackedHeaderRow>
-                <syncfusion:DataGridStackedHeaderRow.Columns>
-                    <syncfusion:DataGridStackedColumn
-                            ColumnMappingNames="OrderID,OrderDate"
-                            Text="Order Details"
-                            MappingName="OrderDetails"
-                            />
-                    <syncfusion:DataGridStackedColumn
-                            ColumnMappingNames="CustomerID,ContactName"
-                            Text="Customer Details"
-                            MappingName="CustomerDetails"
-                            />
-                </syncfusion:DataGridStackedHeaderRow.Columns>
-            </syncfusion:DataGridStackedHeaderRow>
-        </syncfusion:SfDataGrid.StackedHeaderRows>
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel />
+</ContentPage.BindingContext>
+
+<ContentPage.Resources>
+    <Style TargetType="syncfusion:DataGridHeaderCell">
+        <Setter Property="FontFamily"
+                Value="Roboto-Medium" />
+    </Style>
+    <Style TargetType="syncfusion:DataGridStackedHeaderCell">
+        <Setter Property="FontFamily"
+        Value="Roboto-Medium" />
+    </Style>
+</ContentPage.Resources>
+
+<syncfusion:SfDataGrid x:Name="DataGrid"
+                       HorizontalScrollBarVisibility="Never"
+                       VerticalScrollBarVisibility="Never"
+                       ItemsSource="{Binding Orders}"
+                       AutoGenerateColumnsMode="None">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridTextColumn MappingName="OrderID"
+                                       HeaderText="Order ID"
+                                       LineBreakMode="NoWrap" />
+        <syncfusion:DataGridTextColumn MappingName="Customer"
+                                       HeaderText="Customer"
+                                       LineBreakMode="NoWrap" />
+        <syncfusion:DataGridTextColumn MappingName="City"
+                                       HeaderText="Ship City"
+                                       LineBreakMode="NoWrap" />
+        <syncfusion:DataGridTextColumn MappingName="Country"
+                                       HeaderText="Ship Country"
+                                       Width="133"
+                                       LineBreakMode="NoWrap" />
+    </syncfusion:SfDataGrid.Columns>
+    <syncfusion:SfDataGrid.StackedHeaderRows>
+        <syncfusion:DataGridStackedHeaderRow>
+            <syncfusion:DataGridStackedHeaderRow.Columns>
+                <syncfusion:DataGridStackedColumn
+                        ColumnMappingNames="OrderID,Customer,City,Country"
+                        Text="Order Shipment Details"
+                        MappingName="SalesDetails"
+                        />
+            </syncfusion:DataGridStackedHeaderRow.Columns>
+        </syncfusion:DataGridStackedHeaderRow>
+        <syncfusion:DataGridStackedHeaderRow>
+            <syncfusion:DataGridStackedHeaderRow.Columns>
+                <syncfusion:DataGridStackedColumn
+                        ColumnMappingNames="OrderID,Customer"
+                        Text="Order Details"
+                        MappingName="OrderDetails"
+                        />
+                <syncfusion:DataGridStackedColumn
+                        ColumnMappingNames="City,Country"
+                        Text="Shipping Details"
+                        MappingName="ShippingDetails"
+                    />
+            </syncfusion:DataGridStackedHeaderRow.Columns>
+        </syncfusion:DataGridStackedHeaderRow>
+    </syncfusion:SfDataGrid.StackedHeaderRows>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-var stackedHeaderRow = new DataGridStackedHeaderRow();
-stackedHeaderRow.Columns.Add(new DataGridStackedColumn()
-{
-	ColumnMappingNames = "OrderID" + "," + "OrderDate" + "," + "CustomerID" + "," + "ContactName",
-	Text = "Order Shipment Details",
-	MappingName = "SalesDetails",
-});
-dataGrid.StackedHeaderRows.Add(stackedHeaderRow);
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
 
-var stackedHeaderRow1 = new DataGridStackedHeaderRow();
-stackedHeaderRow1.Columns.Add(new DataGridStackedColumn()
+public MainPage()
 {
-	ColumnMappingNames = "OrderID" + "," + "OrderDate",
-	Text = "Order Details",
-	MappingName = "OrderDetails",
-});
-stackedHeaderRow1.Columns.Add(new DataGridStackedColumn()
-{
-	ColumnMappingNames = "CustomerID" + "," + "ContactName",
-	Text = "Customer Details",
-	MappingName = "CustomerDetails",
-});
-this.dataGrid.StackedHeaderRows.Add(stackedHeaderRow1);
+    InitializeComponent();
+    var DataGrid = new SfDataGrid()
+    {
+        HorizontalScrollBarVisibility = ScrollBarVisibility.Never,
+        VerticalScrollBarVisibility = ScrollBarVisibility.Never,
+        ItemsSource = orderInfoViewModel.Orders,
+        AutoGenerateColumnsMode = AutoGenerateColumnsMode.None,
+    };
+
+    DataGrid.Columns.Add(new DataGridTextColumn
+    {
+        MappingName = "OrderID",
+        HeaderText = "Order ID",
+        LineBreakMode = LineBreakMode.NoWrap
+    });
+
+    DataGrid.Columns.Add(new DataGridTextColumn
+    {
+        MappingName = "Customer",
+        HeaderText = "Customer",
+        LineBreakMode = LineBreakMode.NoWrap
+    });
+
+    DataGrid.Columns.Add(new DataGridTextColumn
+    {
+        MappingName = "City",
+        HeaderText = "Ship City",
+        LineBreakMode = LineBreakMode.NoWrap
+    });
+
+    DataGrid.Columns.Add(new DataGridTextColumn
+    {
+        MappingName = "Country",
+        HeaderText = "Ship Country",
+        Width = 133,
+        LineBreakMode = LineBreakMode.NoWrap
+    });
+
+    var stackedHeaderRow = new DataGridStackedHeaderRow();
+    stackedHeaderRow.Columns.Add(new DataGridStackedColumn()
+    {
+        ColumnMappingNames = "OrderID" + "," + "Customer" + "," + "City" + "," + "Country",
+        Text = "Order Shipment Details",
+        MappingName = "SalesDetails",
+    });
+    DataGrid.StackedHeaderRows.Add(stackedHeaderRow);
+
+    var stackedHeaderRow1 = new DataGridStackedHeaderRow();
+    stackedHeaderRow1.Columns.Add(new DataGridStackedColumn()
+    {
+        ColumnMappingNames = "OrderID" + "," + "Customer",
+        Text = "Order Details",
+        MappingName = "OrderDetails",
+
+    });
+    stackedHeaderRow1.Columns.Add(new DataGridStackedColumn()
+    {
+        ColumnMappingNames = "City" + "," + "Country",
+        Text = "Shipping Details",
+        MappingName = "ShippingDetails",
+        
+    });
+    DataGrid.StackedHeaderRows.Add(stackedHeaderRow1);
+    this.Content = DataGrid;
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -89,8 +168,69 @@ You can add the child columns to a particular stacked header row directly.
 
 {% tabs %}
 {% highlight c# %}
-var childColumn = dataGrid.StackedHeaderRows[0].Columns[0].ColumnMappingNames;
-dataGrid.StackedHeaderRows[0].Columns[0].ColumnMappingNames = childColumn + "," + "OrderDate";
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+
+public MainPage()
+{
+    InitializeComponent();
+
+    var DataGrid = new SfDataGrid()
+    {
+        HorizontalScrollBarVisibility = ScrollBarVisibility.Never,
+        VerticalScrollBarVisibility = ScrollBarVisibility.Never,
+        ItemsSource = orderInfoViewModel.Orders,
+        AutoGenerateColumnsMode = AutoGenerateColumnsMode.None,
+    };
+
+    DataGrid.Columns.Add(new DataGridTextColumn
+    {
+        MappingName = "OrderID",
+        HeaderText = "Order ID",
+        LineBreakMode = LineBreakMode.NoWrap
+    });
+
+    DataGrid.Columns.Add(new DataGridTextColumn
+    {
+        MappingName = "Customer",
+        HeaderText = "Customer",
+        LineBreakMode = LineBreakMode.NoWrap
+    });
+
+    DataGrid.Columns.Add(new DataGridTextColumn
+    {
+        MappingName = "City",
+        HeaderText = "Ship City",
+        LineBreakMode = LineBreakMode.NoWrap
+    });
+
+    DataGrid.Columns.Add(new DataGridTextColumn
+    {
+        MappingName = "Country",
+        HeaderText = "Ship Country",
+        Width = 133,
+        LineBreakMode = LineBreakMode.NoWrap
+    });
+
+    DataGrid.Columns.Add(new DataGridTextColumn
+    {
+        MappingName = "Product",
+        HeaderText = "Product",
+        Width = 133,
+        LineBreakMode = LineBreakMode.NoWrap
+    });
+
+    var stackedHeaderRow = new DataGridStackedHeaderRow();
+    stackedHeaderRow.Columns.Add(new DataGridStackedColumn()
+    {
+        ColumnMappingNames = "OrderID" + "," + "Customer" + "," + "City" + "," + "Country",
+        Text = "Order Shipment Details",
+        MappingName = "SalesDetails",
+    });
+    DataGrid.StackedHeaderRows.Add(stackedHeaderRow);
+    var childColumn = DataGrid.StackedHeaderRows[0].Columns[0].ColumnMappingNames;
+    DataGrid.StackedHeaderRows[0].Columns[0].ColumnMappingNames = childColumn + "," + "Product";
+    this.Content = DataGrid;
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -100,21 +240,74 @@ Similarly, you can remove the child columns from a particular stacked header row
 
 {% tabs %}
 {% highlight c# %}
-var removingColumns = this.dataGrid.StackedHeaderRows[0].Columns[0].ColumnMappingNames.Split(',').ToList<string>();   
-string ColumnMappingNames = string.Empty;
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
 
-foreach(var stackedColumnName in removingColumns.ToList())
+public MainPage()
 {
-    if (stackedColumnName.Equals("OrderID"))
+    InitializeComponent();
+
+    var DataGrid = new SfDataGrid()
     {
-        removingColumns.Remove(stackedColumnName);
-    }
-    else
+        HorizontalScrollBarVisibility = ScrollBarVisibility.Never,
+        VerticalScrollBarVisibility = ScrollBarVisibility.Never,
+        ItemsSource = orderInfoViewModel.Orders,
+        AutoGenerateColumnsMode = AutoGenerateColumnsMode.None,
+    };
+
+    DataGrid.Columns.Add(new DataGridTextColumn
     {
-        ColumnMappingNames = ColumnMappingNames + stackedColumnName + ",";
+        MappingName = "OrderID",
+        HeaderText = "Order ID",
+        LineBreakMode = LineBreakMode.NoWrap
+    });
+
+    DataGrid.Columns.Add(new DataGridTextColumn
+    {
+        MappingName = "Customer",
+        HeaderText = "Customer",
+        LineBreakMode = LineBreakMode.NoWrap
+    });
+
+    DataGrid.Columns.Add(new DataGridTextColumn
+    {
+        MappingName = "City",
+        HeaderText = "Ship City",
+        LineBreakMode = LineBreakMode.NoWrap
+    });
+
+    DataGrid.Columns.Add(new DataGridTextColumn
+    {
+        MappingName = "Country",
+        HeaderText = "Ship Country",
+        Width = 133,
+        LineBreakMode = LineBreakMode.NoWrap
+    });
+
+    var stackedHeaderRow = new DataGridStackedHeaderRow();
+    stackedHeaderRow.Columns.Add(new DataGridStackedColumn()
+    {
+        ColumnMappingNames = "OrderID" + "," + "Customer" + "," + "City" + "," + "Country",
+        Text = "Order Shipment Details",
+        MappingName = "SalesDetails",
+    });
+    DataGrid.StackedHeaderRows.Add(stackedHeaderRow);
+    var removingColumns = DataGrid.StackedHeaderRows[0].Columns[0].ColumnMappingNames.Split(',').ToList<string>();
+    string ColumnMappingNames = string.Empty;
+
+    foreach (var stackedColumnName in removingColumns.ToList())
+    {
+        if (stackedColumnName.Equals("OrderID"))
+        {
+            removingColumns.Remove(stackedColumnName);
+        }
+        else
+        {
+            ColumnMappingNames = ColumnMappingNames + stackedColumnName + ",";
+        }
     }
+    DataGrid.StackedHeaderRows[0].Columns[0].ColumnMappingNames = ColumnMappingNames;
+    this.Content = DataGrid;
 }
-dataGrid.StackedHeaderRows[0].Columns[0].ColumnMappingNames = ColumnMappingNames;
 {% endhighlight %}
 {% endtabs %}
 
@@ -124,7 +317,77 @@ You can change the height of StackedHeaderRows using the [SfDataGrid.HeaderRowHe
 
 {% tabs %}
 {% highlight c# %}
-dataGrid.HeaderRowHeight = 50;
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+
+public MainPage()
+{
+    InitializeComponent();
+
+    var DataGrid = new SfDataGrid()
+    {
+        HorizontalScrollBarVisibility = ScrollBarVisibility.Never,
+        VerticalScrollBarVisibility = ScrollBarVisibility.Never,
+        ItemsSource = orderInfoViewModel.Orders,
+        AutoGenerateColumnsMode = AutoGenerateColumnsMode.None,
+        HeaderRowHeight = 60,
+    };
+
+    DataGrid.Columns.Add(new DataGridTextColumn
+    {
+        MappingName = "OrderID",
+        HeaderText = "Order ID",
+        LineBreakMode = LineBreakMode.NoWrap
+    });
+
+    DataGrid.Columns.Add(new DataGridTextColumn
+    {
+        MappingName = "Customer",
+        HeaderText = "Customer",
+        LineBreakMode = LineBreakMode.NoWrap
+    });
+
+    DataGrid.Columns.Add(new DataGridTextColumn
+    {
+        MappingName = "City",
+        HeaderText = "Ship City",
+        LineBreakMode = LineBreakMode.NoWrap
+    });
+
+    DataGrid.Columns.Add(new DataGridTextColumn
+    {
+        MappingName = "Country",
+        HeaderText = "Ship Country",
+        Width = 133,
+        LineBreakMode = LineBreakMode.NoWrap
+    });
+
+    var stackedHeaderRow = new DataGridStackedHeaderRow();
+    stackedHeaderRow.Columns.Add(new DataGridStackedColumn()
+    {
+        ColumnMappingNames = "OrderID" + "," + "Customer" + "," + "City" + "," + "Country",
+        Text = "Order Shipment Details",
+        MappingName = "SalesDetails",
+    });
+    DataGrid.StackedHeaderRows.Add(stackedHeaderRow);
+
+    var stackedHeaderRow1 = new DataGridStackedHeaderRow();
+    stackedHeaderRow1.Columns.Add(new DataGridStackedColumn()
+    {
+        ColumnMappingNames = "OrderID" + "," + "Customer",
+        Text = "Order Details",
+        MappingName = "OrderDetails",
+
+    });
+    stackedHeaderRow1.Columns.Add(new DataGridStackedColumn()
+    {
+        ColumnMappingNames = "City" + "," + "Country",
+        Text = "Shipping Details",
+        MappingName = "ShippingDetails",
+
+    });
+    DataGrid.StackedHeaderRows.Add(stackedHeaderRow1);
+    this.Content = DataGrid;
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -132,13 +395,13 @@ You can also change the height of stacked header rows using the [SfDataGrid.Quer
 
 {% tabs %}
 {% highlight c# %}
-dataGrid.QueryRowHeight += dataGrid_QueryRowHeight;
-void dataGrid_QueryRowHeight(object sender, QueryRowHeightEventArgs  e)
+DataGrid.QueryRowHeight += DataGrid_QueryRowHeight;
+void DataGrid_QueryRowHeight(object sender, DataGridQueryRowHeightEventArgs e)
 {
-    if(e.RowIndex < this.dataGrid.GetHeaderIndex())
+    if (e.RowIndex <= DataGrid.GetHeaderIndex())
     {
         // Using the following code, you can set a desired height based on the row index. 
-        e.Height = 50;
+        e.Height = 60;
         e.Handled = true;
     }
 }
@@ -152,23 +415,140 @@ Customize the font's size, family and attribute of the text displayed in stacked
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid.DefaultStyle>
-    <syncfusion:DataGridStyle
-            StackedHeaderRowFontSize = 16
-            StackedHeaderRowFontFamily="Helvetica Neue"
-            StackedHeaderRowFontAttributes="Bold"
-            />
-</syncfusion:SfDataGrid.DefaultStyle>
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel />
+</ContentPage.BindingContext>
+
+<syncfusion:SfDataGrid x:Name="DataGrid"
+                        HorizontalScrollBarVisibility="Never"
+                        VerticalScrollBarVisibility="Never"
+                        ItemsSource="{Binding Orders}"
+                        AutoGenerateColumnsMode="None">
+    <syncfusion:SfDataGrid.DefaultStyle>
+        <syncfusion:DataGridStyle
+        StackedHeaderRowFontSize = "20"
+        StackedHeaderRowFontFamily="Helvetica Neue"
+        StackedHeaderRowFontAttributes="Bold"
+        />
+    </syncfusion:SfDataGrid.DefaultStyle>
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridTextColumn MappingName="OrderID"
+                                        HeaderText="Order ID"
+                                        LineBreakMode="NoWrap" />
+        <syncfusion:DataGridTextColumn MappingName="Customer"
+                                        HeaderText="Customer"
+                                        LineBreakMode="NoWrap" />
+        <syncfusion:DataGridTextColumn MappingName="City"
+                                        HeaderText="Ship City"
+                                        LineBreakMode="NoWrap" />
+        <syncfusion:DataGridTextColumn MappingName="Country"
+                                        HeaderText="Ship Country"
+                                        Width="133"
+                                        LineBreakMode="NoWrap" />
+    </syncfusion:SfDataGrid.Columns>
+    <syncfusion:SfDataGrid.StackedHeaderRows>
+        <syncfusion:DataGridStackedHeaderRow>
+            <syncfusion:DataGridStackedHeaderRow.Columns>
+                <syncfusion:DataGridStackedColumn
+                        ColumnMappingNames="OrderID,Customer,City,Country"
+                        Text="Order Shipment Details"
+                        MappingName="SalesDetails"
+                        />
+            </syncfusion:DataGridStackedHeaderRow.Columns>
+        </syncfusion:DataGridStackedHeaderRow>
+        <syncfusion:DataGridStackedHeaderRow>
+            <syncfusion:DataGridStackedHeaderRow.Columns>
+                <syncfusion:DataGridStackedColumn
+                        ColumnMappingNames="OrderID,Customer"
+                        Text="Order Details"
+                        MappingName="OrderDetails"
+                        />
+                <syncfusion:DataGridStackedColumn
+                        ColumnMappingNames="City,Country"
+                        Text="Shipping Details"
+                        MappingName="ShippingDetails"
+                        />
+            </syncfusion:DataGridStackedHeaderRow.Columns>
+        </syncfusion:DataGridStackedHeaderRow>
+    </syncfusion:SfDataGrid.StackedHeaderRows>
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
 public partial class MainPage : ContentPage
 {
+    OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+
     public MainPage()
     {
         InitializeComponent();
-        this.dataGrid.DefaultStyle.StackedHeaderRowFontSize= 20;
-        this.dataGrid.DefaultStyle.StackedHeaderRowFontFamily = "Helvetica Neue";
-        this.dataGrid.DefaultStyle.StackedHeaderRowFontAttributes = FontAttributes.Bold;
+
+        var DataGrid = new SfDataGrid()
+        {
+            HorizontalScrollBarVisibility = ScrollBarVisibility.Never,
+            VerticalScrollBarVisibility = ScrollBarVisibility.Never,
+            ItemsSource = orderInfoViewModel.Orders,
+            AutoGenerateColumnsMode = AutoGenerateColumnsMode.None,
+        };
+
+        DataGrid.DefaultStyle.StackedHeaderRowFontSize = 20;
+        DataGrid.DefaultStyle.StackedHeaderRowFontFamily = "Helvetica Neue";
+        DataGrid.DefaultStyle.StackedHeaderRowFontAttributes = FontAttributes.Bold;
+
+        DataGrid.Columns.Add(new DataGridTextColumn
+        {
+            MappingName = "OrderID",
+            HeaderText = "Order ID",
+            LineBreakMode = LineBreakMode.NoWrap
+        });
+
+        DataGrid.Columns.Add(new DataGridTextColumn
+        {
+            MappingName = "Customer",
+            HeaderText = "Customer",
+            LineBreakMode = LineBreakMode.NoWrap
+        });
+
+        DataGrid.Columns.Add(new DataGridTextColumn
+        {
+            MappingName = "City",
+            HeaderText = "Ship City",
+            LineBreakMode = LineBreakMode.NoWrap
+        });
+
+        DataGrid.Columns.Add(new DataGridTextColumn
+        {
+            MappingName = "Country",
+            HeaderText = "Ship Country",
+            Width = 133,
+            LineBreakMode = LineBreakMode.NoWrap
+        });
+
+        var stackedHeaderRow = new DataGridStackedHeaderRow();
+        stackedHeaderRow.Columns.Add(new DataGridStackedColumn()
+        {
+            ColumnMappingNames = "OrderID" + "," + "Customer" + "," + "City" + "," + "Country",
+            Text = "Order Shipment Details",
+            MappingName = "SalesDetails",
+        });
+        DataGrid.StackedHeaderRows.Add(stackedHeaderRow);
+
+        var stackedHeaderRow1 = new DataGridStackedHeaderRow();
+        stackedHeaderRow1.Columns.Add(new DataGridStackedColumn()
+        {
+            ColumnMappingNames = "OrderID" + "," + "Customer",
+            Text = "Order Details",
+            MappingName = "OrderDetails",
+
+        });
+        stackedHeaderRow1.Columns.Add(new DataGridStackedColumn()
+        {
+            ColumnMappingNames = "City" + "," + "Country",
+            Text = "Shipping Details",
+            MappingName = "ShippingDetails",
+
+        });
+        DataGrid.StackedHeaderRows.Add(stackedHeaderRow1);
+        this.Content = DataGrid;
     }
 }
 {% endhighlight %}
@@ -180,21 +560,149 @@ The appearance of stacked header row can be customized by setting desired values
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid.DefaultStyle>
-    <syncfusion:DataGridStyle
-            StackedHeaderRowBackground = "#0074E3"
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel />
+</ContentPage.BindingContext>
+
+<ContentPage.Resources>
+    <Style TargetType="syncfusion:DataGridHeaderCell">
+        <Setter Property="FontFamily"
+                Value="Roboto-Medium" />
+    </Style>
+    <Style TargetType="syncfusion:DataGridStackedHeaderCell">
+        <Setter Property="FontFamily"
+        Value="Roboto-Medium" />
+    </Style>
+</ContentPage.Resources>
+
+<syncfusion:SfDataGrid x:Name="DataGrid"
+                       HorizontalScrollBarVisibility="Never"
+                       VerticalScrollBarVisibility="Never"
+                       ItemsSource="{Binding Orders}"
+                       AutoGenerateColumnsMode="None">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridTextColumn MappingName="OrderID"
+                                       HeaderText="Order ID"
+                                       LineBreakMode="NoWrap" />
+        <syncfusion:DataGridTextColumn MappingName="Customer"
+                                       HeaderText="Customer"
+                                       LineBreakMode="NoWrap" />
+        <syncfusion:DataGridTextColumn MappingName="City"
+                                       HeaderText="Ship City"
+                                       LineBreakMode="NoWrap" />
+        <syncfusion:DataGridTextColumn MappingName="Country"
+                                       HeaderText="Ship Country"
+                                       Width="133"
+                                       LineBreakMode="NoWrap" />
+    </syncfusion:SfDataGrid.Columns>
+    <syncfusion:SfDataGrid.DefaultStyle>
+        <syncfusion:DataGridStyle
+            StackedHeaderRowBackground = "#778da9"
             StackedHeaderRowTextColor="White"
-            />
-</syncfusion:SfDataGrid.DefaultStyle>
+        />
+    </syncfusion:SfDataGrid.DefaultStyle>
+    <syncfusion:SfDataGrid.StackedHeaderRows>
+        <syncfusion:DataGridStackedHeaderRow>
+            <syncfusion:DataGridStackedHeaderRow.Columns>
+                <syncfusion:DataGridStackedColumn
+                        ColumnMappingNames="OrderID,Customer,City,Country"
+                        Text="Order Shipment Details"
+                        MappingName="SalesDetails"
+                        />
+            </syncfusion:DataGridStackedHeaderRow.Columns>
+        </syncfusion:DataGridStackedHeaderRow>
+        <syncfusion:DataGridStackedHeaderRow>
+            <syncfusion:DataGridStackedHeaderRow.Columns>
+                <syncfusion:DataGridStackedColumn
+                        ColumnMappingNames="OrderID,Customer"
+                        Text="Order Details"
+                        MappingName="OrderDetails"
+                        />
+                <syncfusion:DataGridStackedColumn
+                        ColumnMappingNames="City,Country"
+                        Text="Shipping Details"
+                        MappingName="ShippingDetails"
+                        />
+            </syncfusion:DataGridStackedHeaderRow.Columns>
+        </syncfusion:DataGridStackedHeaderRow>
+    </syncfusion:SfDataGrid.StackedHeaderRows>
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 
 {% highlight c# %}
 public partial class MainPage : ContentPage
 {
+    OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+
     public MainPage()
     {
         InitializeComponent();
-        this.dataGrid.DefaultStyle.StackedHeaderRowBackground = Color.FromArgb("#0074E3");
+        var DataGrid = new SfDataGrid()
+        {
+            HorizontalScrollBarVisibility = ScrollBarVisibility.Never,
+            VerticalScrollBarVisibility = ScrollBarVisibility.Never,
+            ItemsSource = orderInfoViewModel.Orders,
+            AutoGenerateColumnsMode = AutoGenerateColumnsMode.None,
+        };
+
+        DataGrid.DefaultStyle.StackedHeaderRowBackground = Color.FromArgb("#778da9");
+        DataGrid.DefaultStyle.StackedHeaderRowTextColor = Color.FromArgb("#FFFFFF");
+
+        DataGrid.Columns.Add(new DataGridTextColumn
+        {
+            MappingName = "OrderID",
+            HeaderText = "Order ID",
+            LineBreakMode = LineBreakMode.NoWrap
+        });
+
+        DataGrid.Columns.Add(new DataGridTextColumn
+        {
+            MappingName = "Customer",
+            HeaderText = "Customer",
+            LineBreakMode = LineBreakMode.NoWrap
+        });
+
+        DataGrid.Columns.Add(new DataGridTextColumn
+        {
+            MappingName = "City",
+            HeaderText = "Ship City",
+            LineBreakMode = LineBreakMode.NoWrap
+        });
+
+        DataGrid.Columns.Add(new DataGridTextColumn
+        {
+            MappingName = "Country",
+            HeaderText = "Ship Country",
+            Width = 133,
+            LineBreakMode = LineBreakMode.NoWrap
+        });
+
+        var stackedHeaderRow = new DataGridStackedHeaderRow();
+        stackedHeaderRow.Columns.Add(new DataGridStackedColumn()
+        {
+            ColumnMappingNames = "OrderID" + "," + "Customer" + "," + "City" + "," + "Country",
+            Text = "Order Shipment Details",
+            MappingName = "SalesDetails",
+        });
+        DataGrid.StackedHeaderRows.Add(stackedHeaderRow);
+
+        var stackedHeaderRow1 = new DataGridStackedHeaderRow();
+        stackedHeaderRow1.Columns.Add(new DataGridStackedColumn()
+        {
+            ColumnMappingNames = "OrderID" + "," + "Customer",
+            Text = "Order Details",
+            MappingName = "OrderDetails",
+
+        });
+        stackedHeaderRow1.Columns.Add(new DataGridStackedColumn()
+        {
+            ColumnMappingNames = "City" + "," + "Country",
+            Text = "Shipping Details",
+            MappingName = "ShippingDetails",
+            
+        });
+        DataGrid.StackedHeaderRows.Add(stackedHeaderRow1);
+        this.Content = DataGrid;
     }
 }
 {% endhighlight %}
@@ -208,43 +716,97 @@ The SfDataGrid also allows to customize the appearance of stacked header Cells c
 
 {% tabs %}
 {% highlight xaml %}
+<ContentPage.BindingContext>
+    <local:OrderInfoViewModel />
+</ContentPage.BindingContext>
+
 <ContentPage.Resources>
+    <Style TargetType="syncfusion:DataGridHeaderCell">
+        <Setter Property="FontFamily" Value="Roboto-Medium" />
+    </Style>
     <ResourceDictionary>
-            <style:CellStyleConverter x:Key="cellStyleConverter"/>
-                <Style TargetType="syncfusion:DataGridStackedHeaderCell">
-                <Setter Property="Background" Value="{Binding Source={RelativeSource Mode=Self}, Converter={StaticResource Key=cellStyleConverter}}"/>
-            </Style>
+        <style:CellStyleConverter x:Key="cellStyleConverter"/>
+        <Style TargetType="syncfusion:DataGridStackedHeaderCell">
+            <Setter Property="Background" Value="{Binding Source={RelativeSource Mode=Self}, Converter={StaticResource Key=cellStyleConverter}}"/>
+            <Setter Property="FontFamily" Value="Roboto-Medium" />
+        </Style>
     </ResourceDictionary>
 </ContentPage.Resources>
+
+<syncfusion:SfDataGrid x:Name="DataGrid"
+                       HorizontalScrollBarVisibility="Never"
+                       VerticalScrollBarVisibility="Never"
+                       ItemsSource="{Binding Orders}"
+                       AutoGenerateColumnsMode="None">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridTextColumn MappingName="OrderID"
+                                       HeaderText="Order ID"
+                                       LineBreakMode="NoWrap" />
+        <syncfusion:DataGridTextColumn MappingName="Customer"
+                                       HeaderText="Customer"
+                                       LineBreakMode="NoWrap" />
+        <syncfusion:DataGridTextColumn MappingName="City"
+                                       HeaderText="Ship City"
+                                       LineBreakMode="NoWrap" />
+        <syncfusion:DataGridTextColumn MappingName="Country"
+                                       HeaderText="Ship Country"
+                                       Width="133"
+                                       LineBreakMode="NoWrap" />
+    </syncfusion:SfDataGrid.Columns>
+    <syncfusion:SfDataGrid.StackedHeaderRows>
+        <syncfusion:DataGridStackedHeaderRow>
+            <syncfusion:DataGridStackedHeaderRow.Columns>
+                <syncfusion:DataGridStackedColumn
+                        ColumnMappingNames="OrderID,Customer,City,Country"
+                        Text="Order Shipment Details"
+                        MappingName="SalesDetails"
+                        />
+            </syncfusion:DataGridStackedHeaderRow.Columns>
+        </syncfusion:DataGridStackedHeaderRow>
+        <syncfusion:DataGridStackedHeaderRow>
+            <syncfusion:DataGridStackedHeaderRow.Columns>
+                <syncfusion:DataGridStackedColumn
+                        ColumnMappingNames="OrderID,Customer"
+                        Text="Order Details"
+                        MappingName="OrderDetails"
+                        />
+                <syncfusion:DataGridStackedColumn
+                        ColumnMappingNames="City,Country"
+                        Text="Shipping Details"
+                        MappingName="ShippingDetails"
+                        />
+            </syncfusion:DataGridStackedHeaderRow.Columns>
+        </syncfusion:DataGridStackedHeaderRow>
+    </syncfusion:SfDataGrid.StackedHeaderRows>
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% endtabs %}
 
 {% tabs %}
 {% highlight c# %}
 //Custom style class
- public class CellStyleConverter : IValueConverter
+public class CellStyleConverter : IValueConverter
 {
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
         var text = (value as DataGridStackedHeaderCell).CellValue;
 
-    if (text != null)
-    {
-        if (text.ToString() == "Order Shipment Details")
-            return Colors.CadetBlue;
-        else if (text.ToString() == "Order Details")
-            return Colors.LightBlue;
-        else if (text.ToString() == "Customer Details")
-            return Colors.CornflowerBlue;               
-    }
-    return Colors.White;
+        if (text != null)
+        {
+            if (text.ToString() == "Order Shipment Details")
+                return Color.FromArgb("#BEBFC5");
+            else if (text.ToString() == "Order Details")
+                return Color.FromArgb("#91A3B0");
+            else if (text.ToString() == "Shipping Details")
+                return Color.FromArgb("#E6E6FA");
+        }
+        return Color.FromArgb("#FFFFFF");
     }
 
     public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
     {
         throw new NotImplementedException();
     }
-
 }
 {% endhighlight %}
 {% endtabs %}
@@ -257,13 +819,31 @@ The SfDataGrid allows you to load any desired view inside a `DataGridStackedColu
 
 {% tabs %}
 {% highlight xaml %}
-     <syncfusion:SfDataGrid x:Name="dataGrid"         
-                       ItemsSource="{Binding Orders}">
-     <syncfusion:SfDataGrid.StackedHeaderRows>
+    <syncfusion:SfDataGrid x:Name="DataGrid"
+                       HorizontalScrollBarVisibility="Never"
+                       VerticalScrollBarVisibility="Never"
+                       ItemsSource="{Binding Orders}"
+                       AutoGenerateColumnsMode="None">
+        <syncfusion:SfDataGrid.Columns>
+            <syncfusion:DataGridTextColumn MappingName="OrderID"
+                                        HeaderText="Order ID"
+                                        LineBreakMode="NoWrap" />
+            <syncfusion:DataGridTextColumn MappingName="Customer"
+                                        HeaderText="Customer"
+                                        LineBreakMode="NoWrap" />
+            <syncfusion:DataGridTextColumn MappingName="City"
+                                        HeaderText="Ship City"
+                                        LineBreakMode="NoWrap" />
+            <syncfusion:DataGridTextColumn MappingName="Country"
+                                        HeaderText="Ship Country"
+                                        Width="133"
+                                        LineBreakMode="NoWrap" />
+        </syncfusion:SfDataGrid.Columns>
+        <syncfusion:SfDataGrid.StackedHeaderRows>
             <syncfusion:DataGridStackedHeaderRow>
                 <syncfusion:DataGridStackedHeaderRow.Columns>
                     <syncfusion:DataGridStackedColumn
-                            ColumnMappingNames="OrderID,OrderDate,CustomerID,ContactName"
+                            ColumnMappingNames="OrderID,Customer,City,Country"
                             Text="Order Shipment Details"
                             MappingName="SalesDetails"
                             />
@@ -272,80 +852,135 @@ The SfDataGrid allows you to load any desired view inside a `DataGridStackedColu
             <syncfusion:DataGridStackedHeaderRow>
                 <syncfusion:DataGridStackedHeaderRow.Columns>
                     <syncfusion:DataGridStackedColumn
-                            ColumnMappingNames="OrderID,OrderDate">
-                            <syncfusion:DataGridStackedColumn.Template>
-                                         <DataTemplate>
-                                <Grid BackgroundColor="MediumPurple">
-                                    <Label Text="customer Details" TextColor="Orange" 
-                                           HorizontalTextAlignment="Center" 
-                                           VerticalTextAlignment="Center" 
-                                           Grid.Column="0"/>
+                            ColumnMappingNames="OrderID,Customer"
+                            Text="Order Details"
+                            MappingName="OrderDetails"
+                            />
+                    <syncfusion:DataGridStackedColumn
+                            ColumnMappingNames="City,Country">
+                        <syncfusion:DataGridStackedColumn.Template>
+                            <DataTemplate>
+                                <Grid BackgroundColor="#7d8597">
+                                    <Label Text="Shipping Details" TextColor="#FFFFFF" 
+                                        HorizontalTextAlignment="Center" 
+                                        VerticalTextAlignment="Center"
+                                        FontAttributes="Bold"
+                                        Grid.Column="0"/>
                                     <StackLayout Orientation="Horizontal">
                                         <Image Source="image0.png" HeightRequest="37" Margin="10" />
                                     </StackLayout>
                                 </Grid>
                             </DataTemplate>
-                                    </syncfusion:DataGridStackedColumn.Template>
-                            </syncfusion:DataGridStackedColumn>
-                    <syncfusion:DataGridStackedColumn
-                            ColumnMappingNames="CustomerID,ContactName"
-                            Text="Customer Details"
-                            MappingName="CustomerDetails"
-                            />
+                        </syncfusion:DataGridStackedColumn.Template>
+                    </syncfusion:DataGridStackedColumn>
                 </syncfusion:DataGridStackedHeaderRow.Columns>
             </syncfusion:DataGridStackedHeaderRow>
         </syncfusion:SfDataGrid.StackedHeaderRows>
-</syncfusion:SfDataGrid>
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-var stackedHeaderRow = new DataGridStackedHeaderRow();
-        stackedHeaderRow.Columns.Add(new DataGridStackedColumn()
-        {
-            ColumnMappingNames = "OrderID" + "," + "OrderDate" + "," + "CustomerID" + "," + "ContactName",
-            Text = "Order Shipment Details",
-            MappingName = "SalesDetails",
-        });
-        dataGrid.StackedHeaderRows.Add(stackedHeaderRow);
 
-        var stackedHeaderRow1 = new DataGridStackedHeaderRow();
-        stackedHeaderRow1.Columns.Add(new DataGridStackedColumn()
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+
+public MainPage()
+{
+    InitializeComponent();
+    var DataGrid = new SfDataGrid()
+    {
+        HorizontalScrollBarVisibility = ScrollBarVisibility.Never,
+        VerticalScrollBarVisibility = ScrollBarVisibility.Never,
+        ItemsSource = orderInfoViewModel.Orders,
+        AutoGenerateColumnsMode = AutoGenerateColumnsMode.None,
+    };
+
+    DataGrid.Columns.Add(new DataGridTextColumn
+    {
+        MappingName = "OrderID",
+        HeaderText = "Order ID",
+        LineBreakMode = LineBreakMode.NoWrap
+    });
+
+    DataGrid.Columns.Add(new DataGridTextColumn
+    {
+        MappingName = "Customer",
+        HeaderText = "Customer",
+        LineBreakMode = LineBreakMode.NoWrap
+    });
+
+    DataGrid.Columns.Add(new DataGridTextColumn
+    {
+        MappingName = "City",
+        HeaderText = "Ship City",
+        LineBreakMode = LineBreakMode.NoWrap
+    });
+
+    DataGrid.Columns.Add(new DataGridTextColumn
+    {
+        MappingName = "Country",
+        HeaderText = "Ship Country",
+        Width = 133,
+        LineBreakMode = LineBreakMode.NoWrap
+    });
+
+    var stackedHeaderRow = new DataGridStackedHeaderRow();
+    stackedHeaderRow.Columns.Add(new DataGridStackedColumn()
+    {
+        ColumnMappingNames = "OrderID" + "," + "Customer" + "," + "City" + "," + "Country",
+        Text = "Order Shipment Details",
+        MappingName = "SalesDetails",
+    });
+    DataGrid.StackedHeaderRows.Add(stackedHeaderRow);
+
+    var stackedHeaderRow1 = new DataGridStackedHeaderRow();
+    stackedHeaderRow1.Columns.Add(new DataGridStackedColumn()
+    {
+        ColumnMappingNames = "OrderID" + "," + "Customer",
+        Text = "Order Details",
+        MappingName = "OrderDetails",
+
+    });
+    stackedHeaderRow1.Columns.Add(new DataGridStackedColumn()
+    {
+        ColumnMappingNames = "City" + "," + "Country",
+        Text = "Shipping Details",
+        MappingName = "ShippingDetails",
+        Template = new DataTemplate(() =>
         {
-            ColumnMappingNames = "OrderID" + "," + "OrderDate",
-            Text = "Order Details",
-            MappingName = "OrderDetails",
-            
-        });
-        stackedHeaderRow1.Columns.Add(new DataGridStackedColumn()
-        {
-            ColumnMappingNames = "CustomerID" + "," + "ContactName",
-            Text = "Customer Details",
-            MappingName = "CustomerDetails",
-            Template = new DataTemplate(() =>
+            var grid = new Grid
             {
-                var gridView = new Grid()
-                {
-                    BackgroundColor = Colors.CornflowerBlue,
-                };
-                var imageView = new Image()
-                {
-                    Source = ImageSource.FromFile("customer_details.png"),
-                    Aspect = Aspect.AspectFit,
-                    VerticalOptions = LayoutOptions.Center,
-                    HorizontalOptions = LayoutOptions.Start
-                };
-                var label = new Label()
-                {
-                    Text = "Customer Details",
-                    TextColor = Colors.White,
-                    VerticalTextAlignment = TextAlignment.Center,
-                    HorizontalTextAlignment = TextAlignment.Center
-                };
-                gridView.Add(label, 0, 0);
-                gridView.Add(imageView, 1, 0);
-                return gridView;
-            })
-        });
-        this.dataGrid.StackedHeaderRows.Add(stackedHeaderRow1);
+                BackgroundColor = Color.FromArgb("#7d8597"),
+            };
+
+            var label = new Label
+            {
+                Text = "Shipping Details",
+                TextColor = Colors.White,
+                HorizontalTextAlignment = TextAlignment.Center,
+                VerticalTextAlignment = TextAlignment.Center,
+                FontAttributes = FontAttributes.Bold
+            };
+
+            var image = new Image
+            {
+                Source = "image0.png",
+                HeightRequest = 37,
+                Margin = new Thickness(10)
+            };
+
+            var stack = new StackLayout
+            {
+                Orientation = StackOrientation.Horizontal
+            };
+            stack.Children.Add(image);
+
+            grid.Children.Add(label);
+            grid.Children.Add(stack);
+            return grid;
+        })
+    });
+    DataGrid.StackedHeaderRows.Add(stackedHeaderRow1);
+    this.Content = DataGrid;
+}
 {% endhighlight %}
 {% endtabs %}
 
