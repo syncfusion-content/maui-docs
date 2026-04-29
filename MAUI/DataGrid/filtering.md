@@ -199,6 +199,9 @@ The .NET MAUI DataGrid (SfDataGrid) provides excel like filtering UI and also ad
                        AllowFiltering="True"/>
 {% endhighlight %}
 {% highlight c# %}
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = orderInfoViewModel.OrderInfoCollection;
 this.dataGrid.AllowFiltering = true;
 {% endhighlight %}
 {% endtabs %}
@@ -280,9 +283,15 @@ SfDataGrid provide the following events to UI filtering.
 <syncfusion:SfDataGrid x:Name="dataGrid"
                        ItemsSource="{Binding OrderInfoCollection}" 
                        AllowFiltering="True"
-                       FilterChaning="dataGrid_FilterChanging"/>
+                       FilterChanging="dataGrid_FilterChanging"/>
 {% endhighlight %}
 {% highlight c# %}
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = orderInfoViewModel.OrderInfoCollection;
+dataGrid.AllowFiltering = true;
+dataGrid.FilterChanging += dataGrid_FilterChanging;
+
 private void dataGrid_FilterChanging(object sender, DataGridFilterChangingEventArgs e)
 {
 
@@ -301,7 +310,13 @@ private void dataGrid_FilterChanging(object sender, DataGridFilterChangingEventA
                        FilterChanged="dataGrid_FilterChanged"/>
 {% endhighlight %}
 {% highlight c# %}
-private void dataGrid1_FilterChanged(object sender, DataGridFilterChangedEventArgs e)
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = orderInfoViewModel.OrderInfoCollection;
+dataGrid.AllowFiltering = true;
+dataGrid.FilterChanged += dataGrid_FilterChanged;
+
+private void dataGrid_FilterChanged(object sender, DataGridFilterChangedEventArgs e)
 {
 
 }
@@ -319,6 +334,11 @@ When the filter list items in filter view are being populated, the [FilterItemsP
                        FilterItemsPopulating="dataGrid_FilterItemsPopulating"/>
 {% endhighlight %}
 {% highlight c# %}
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = orderInfoViewModel.OrderInfoCollection;
+dataGrid.AllowFiltering = true;
+dataGrid.FilterItemsPopulating += dataGrid_FilterItemsPopulating;
 private void dataGrid_FilterItemsPopulating(object sender, Syncfusion.Maui.DataGrid.DataGridFilterItemsPopulatingEventArgs e)
 {
 
@@ -337,6 +357,11 @@ private void dataGrid_FilterItemsPopulating(object sender, Syncfusion.Maui.DataG
                        FilterItemsPopulated="dataGrid_FilterItemsPopulated"/>
 {% endhighlight %}
 {% highlight c# %}
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = orderInfoViewModel.OrderInfoCollection;
+dataGrid.AllowFiltering = true;
+dataGrid.FilterItemsPopulated += dataGrid_FilterItemsPopulated;
 private void dataGrid_FilterItemsPopulated(object sender, DataGridFilterItemsPopulatedEventArgs e)
 {
 
@@ -370,6 +395,16 @@ We can change the filter UI for all the columns in DataGrid by changing the `Fil
                        AllowFiltering="True"
                        FilterPopupStyle="{StaticResource filterViewStyle}"/>
 {% endhighlight %}
+{% highlight c# %}
+Style styles = new Style(typeof(DataGridFilterView));
+styles.Setters.Add(new Setter() { Property = DataGridFilterView.FilterModeProperty, Value = DataGridFilterMode.AdvancedFilter });
+
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = orderInfoViewModel.OrderInfoCollection;
+dataGrid.AllowFiltering = true;
+dataGrid.FilterPopupStyle = styles;
+{% endhighlight %}
 {% endtabs %}
 
 <img alt="Filter mode as advanced filter" src="Images/filtering/maui-datagrid-filtering-filterMode-advanced.png" width="500"/>
@@ -388,6 +423,12 @@ Filter UI view can be changed for a particular column in DataGrid by changing th
 
 <syncfusion:DataGridTextColumn MappingName="OrderID"
                                 FilterPopupStyle="{StaticResource filterViewStyle}"/>
+{% endhighlight %}
+{% highlight c# %}
+Style styles = new Style(typeof(DataGridFilterView));
+styles.Setters.Add(new Setter() { Property = DataGridFilterView.FilterModeProperty, Value = DataGridFilterMode.CheckboxFilter });
+
+dataGrid.Columns["OrderID"].FilterPopupStyle = styles;
 {% endhighlight %}
 {% endtabs %}
 
@@ -426,6 +467,22 @@ Setting `FilterMode` to AdvancedFilter and [CanGenerateUniqueItems](https://help
                        ItemsSource="{Binding OrderInfoCollection}" 
                        AllowFiltering="True"
                        FilterPopupStyle="{StaticResource filterViewStyle}"/>
+{% endhighlight %}
+{% highlight c# %}
+Style style = new Style(typeof(DataGridFilterView))
+{
+    Setters = 
+    {
+        new Setter() {Property = DataGridFilterView.FilterModeProperty, Value = DataGridFilterMode.AdvancedFilter},
+        new Setter() {Property = DataGridFilterView.CanGenerateUniqueItemsProperty, Value = false}
+    }
+};
+
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = orderInfoViewModel.OrderInfoCollection;
+dataGrid.AllowFiltering = true;
+dataGrid.FilterPopupStyle = style;
 {% endhighlight %}
 {% endtabs %}
 
@@ -483,7 +540,7 @@ The sort options in the filter popup will be enabled only when we set [SortingMo
 {% highlight XAML %}
 <ContentPage.Resources>
     <Style x:Key="filterViewStyle" TargetType="syncfusion:DataGridFilterView">
-        <Setter Property="SortOptionsVisiblity" Value="false"/>
+        <Setter Property="SortOptionsVisibility" Value="false"/>
     </Style>
 </ContentPage.Resources>
 
@@ -491,6 +548,17 @@ The sort options in the filter popup will be enabled only when we set [SortingMo
                        ItemsSource="{Binding OrderInfoCollection}" 
                        AllowFiltering="True"
                        FilterPopupStyle="{StaticResource filterViewStyle}"/>
+{% endhighlight %}
+
+{% highlight c# %}
+Style styles = new Style(typeof(DataGridFilterView));
+styles.Setters.Add(new Setter() { Property = DataGridFilterView.SortOptionVisibilityProperty, Value = true });
+
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = orderInfoViewModel.OrderInfoCollection;
+dataGrid.AllowFiltering = true;
+dataGrid.FilterPopupStyle = styles;
 {% endhighlight %}
 {% endtabs %}
 
@@ -505,7 +573,7 @@ dataGrid.FilterItemsPopulating += dataGrid_FilterItemsPopulating;
 
 private void dataGrid_FilterItemsPopulating(object sender, Syncfusion.Maui.DataGrid.DataGridFilterItemsPopulatingEventArgs e)
 {
-    if (e.Column.MappingName == "Name")
+    if (e.Column.MappingName == "Customer")
     {
         e.FilterControl.AscendingSortString = "Sort ascending";
         e.FilterControl.DescendingSortString = "Sort descending";
@@ -533,6 +601,22 @@ You can customize the FilterPopup size using [FilterPopupHeight](https://help.sy
                        AllowFiltering="True"
                        FilterPopupStyle="{StaticResource filterViewStyle}"/>
 {% endhighlight %}
+{% highlight c# %}
+Style style = new Style(typeof(DataGridFilterView))
+{
+    Setters =
+    {
+        new Setter() {Property = DataGridFilterView.FilterPopupHeightProperty, Value = 500},
+        new Setter() {Property = DataGridFilterView.FilterPopupWidthProperty, Value = 360},
+    }
+};
+
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = orderInfoViewModel.OrderInfoCollection;
+dataGrid.AllowFiltering = true;
+dataGrid.FilterPopupStyle = style;
+{% endhighlight %}
 {% endtabs %}
 
 <img src="Images/filtering/maui-datagrid-filtering-filterPopupSize.png" width="500" alt="Customize filter popup size">
@@ -550,6 +634,13 @@ The default color of the filter icon can be customized by setting the [DataGridS
                 <syncfusion:DataGridStyle FilterIconColor="DarkBlue" />
         </syncfusion:SfDataGrid.DefaultStyle>
 </syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = orderInfoViewModel.OrderInfoCollection;
+dataGrid.AllowFiltering = true;
+dataGrid.DefaultStyle.FilterIconColor = Colors.DarkBlue;
 {% endhighlight %}
 {% endtabs %}
 
@@ -569,6 +660,19 @@ The `SfDataGrid` uses an icon to open the filter popup in UI filtering. You can 
                 </DataTemplate>
         </syncfusion:SfDataGrid.FilterIconTemplate>
 </syncfusion:SfDataGrid>
+{% endhighlight %}
+{% highlight c# %}
+var filterIconTemplate  = new DataTemplate(() =>
+{
+    var icon = new Image { Source="filter.png"}
+	return icon;
+});
+
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = orderInfoViewModel.OrderInfoCollection;
+dataGrid.AllowFiltering = true;
+dataGrid.FilterIconTemplate = filterIconTemplate;
 {% endhighlight %}
 {% endtabs %}
 
@@ -591,7 +695,7 @@ When choosing a `FilterIconTemplate` as a DataTemplateSelector, you have the opt
 </ContentPage.Resources>
 
 <ContentPage.Content>
-<syncfusion:SfDataGrid ItemsSource="{Binding EmployeeDetails}"
+<syncfusion:SfDataGrid ItemsSource="{Binding OrderInfoCollection}"
                             x:Name="dataGrid"
                             AllowFiltering="True"
                             >
@@ -617,7 +721,7 @@ public class FilterIconTemplateSelector : DataTemplateSelector
             return null;
         }
 
-        if (column.MappingName == "EmployeeID")
+        if (column.MappingName == "OrderID")
         {
             return IconTemplate1;
         }
@@ -641,7 +745,7 @@ You can apply these customizations by assigning a DataGridStyle instance to the 
 {% tabs %}
 {% highlight XAML %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding EmployeeDetails}"
+                       ItemsSource="{Binding OrderInfoCollection}"
                        AllowFiltering="True">
     <syncfusion:SfDataGrid.DefaultStyle>
         <syncfusion:DataGridStyle
@@ -653,13 +757,18 @@ You can apply these customizations by assigning a DataGridStyle instance to the 
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-   dataGrid.DefaultStyle = new DataGridStyle
-   {
-        FilterPopupIconColor= Colors.Maroon,
-        FilterPopupBackground= Colors.LightCyan,
-        FilterPopupOkButtonBackgroundColor= Colors.Purple,
-        FilterPopupCheckboxCheckedColor= Colors.ForestGreen,
-    };
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = orderInfoViewModel.OrderInfoCollection;
+dataGrid.AllowFiltering = true;
+
+dataGrid.DefaultStyle = new DataGridStyle
+{
+    FilterPopupIconColor= Colors.Maroon,
+    FilterPopupBackground= Colors.LightCyan,
+    FilterPopupOkButtonBackgroundColor= Colors.Purple,
+    FilterPopupCheckboxCheckedColor= Colors.ForestGreen,
+};
 {% endhighlight %}
 {% endtabs %}
 
