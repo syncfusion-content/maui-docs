@@ -27,7 +27,38 @@ You can scroll programmatically to a particular row and column using the `SfData
 
 {% tabs %}
 {% highlight C# %}
-this.dataGrid.ScrollToRowColumnIndex(15, 4, ScrollToPosition.Start, ScrollToPosition.Start, true);
+public partial class MainPage : ContentPage
+{
+    SfDataGrid dataGrid = new SfDataGrid();
+
+    public MainPage()
+    {
+        InitializeComponent();
+
+        var grid = new Grid();
+        grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Star });
+        grid.RowDefinitions.Add(new RowDefinition() { Height = 50 });
+
+        Button button = new Button();
+        button.Text = "Scroll To RowColumnIndex";
+
+        grid.Children.Add(dataGrid);
+        grid.Children.Add(button);
+        grid.SetRow(dataGrid, 0);
+        grid.SetRow(button, 1);
+
+        OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+        dataGrid.ItemsSource = orderInfoViewModel.Orders;
+
+        button.Clicked += Button_Clicked;
+        this.Content = grid;
+    }
+
+    private void Button_Clicked(object? sender, EventArgs e)
+    {
+        dataGrid.ScrollToRowColumnIndex(15, 4, ScrollToPosition.Start, ScrollToPosition.Start, true);
+    }
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -36,8 +67,27 @@ this.dataGrid.ScrollToRowColumnIndex(15, 4, ScrollToPosition.Start, ScrollToPosi
 You can scroll programmatically to a particular row using the `SfDataGrid.ScrollToRowIndex` method by passing the row index.
 
 {% tabs %}
+{% highlight xaml %}
+<Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+
+    <Button Text="Scroll To RowIndex"
+            Grid.Row="0"
+            Clicked="ScrollToRowIndex_Mothod"/>
+
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                            Grid.Row="1"
+                            ItemsSource="{Binding Orders}"/>
+</Grid>
+{% endhighlight %}
 {% highlight C# %}
-this.dataGrid.ScrollToRowIndex(30, ScrollToPosition.End, true);
+private void ScrollToRowIndex_Mothod(object sender, EventArgs e)
+{
+    dataGrid.ScrollToRowIndex(30, ScrollToPosition.End, true);
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -46,8 +96,27 @@ this.dataGrid.ScrollToRowIndex(30, ScrollToPosition.End, true);
 You can scroll programmatically to a particular column using the `SfDataGrid.ScrollToColumnIndex` method by passing the column index.
 
 {% tabs %}
+{% highlight xaml %}
+<Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+
+    <Button Text="Scroll To ColumnIndex"
+            Grid.Row="0"
+            Clicked="ScrollToColumnIndex_Mothod"/>
+
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                            Grid.Row="1"
+                            ItemsSource="{Binding Orders}"/>
+</Grid>
+{% endhighlight %}
 {% highlight C# %}
-this.dataGrid.ScrollToColumnIndex(4, ScrollToPosition.MakeVisible, true);
+private void ScrollToColumnIndex_Mothod(object sender, EventArgs e)
+{
+    dataGrid.ScrollToColumnIndex(4, ScrollToPosition.MakeVisible, true);
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -64,14 +133,18 @@ In the `DataGridScrollingMode.Pixel` mode, users can scroll through the data bas
 
 {% tabs %}
 {% highlight xaml %}
-    <sfgrid:SfDataGrid x:Name="dataGrid"                                       
-                       ItemsSource="{Binding OrderInfoCollection}"         
-                       ScrollingMode = "Pixel">   
-    </sfgrid:SfDataGrid> 
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding Orders}"
+                           ScrollingMode="Pixel">
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 
 {% highlight C# %}
-this.dataGrid.ScrollingMode = DataGridScrollingMode.Pixel;
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
+dataGrid.ScrollingMode = DataGridScrollingMode.Pixel;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -82,14 +155,18 @@ The `DataGridScrollingMode.Line` mode allows users to scroll the DataGrid's cont
 
 {% tabs %}
 {% highlight xaml %}
-    <sfgrid:SfDataGrid x:Name="dataGrid"                                       
-                       ItemsSource="{Binding OrderInfoCollection}"         
-                       ScrollingMode = "Line">   
-    </sfgrid:SfDataGrid> 
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding Orders}"
+                           ScrollingMode="Line">
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 
 {% highlight C# %}
-this.dataGrid.ScrollingMode = DataGridScrollingMode.Line;
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
+dataGrid.ScrollingMode = DataGridScrollingMode.Line;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -100,14 +177,18 @@ The `DataGridScrollingMode.PixelLine` mode allows users to scroll the contents l
 
 {% tabs %}
 {% highlight xaml %}
-    <sfgrid:SfDataGrid x:Name="dataGrid"                                       
-                       ItemsSource="{Binding OrderInfoCollection}"         
-                       ScrollingMode = "PixelLine">   
-    </sfgrid:SfDataGrid> 
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding Orders}"
+                           ScrollingMode="PixelLine">
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 
 {% highlight C# %}
-this.dataGrid.ScrollingMode = DataGridScrollingMode.PixelLine;
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
+dataGrid.ScrollingMode = DataGridScrollingMode.PixelLine;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -129,14 +210,18 @@ The following code snippets demonstrate how to disable diagonal scrolling:
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                           ItemsSource="{Binding OrderInfoCollection}"
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding Orders}"
                            AllowDiagonalScrolling="False">
-  </syncfusion:SfDataGrid>
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 
 {% highlight C# %}  
-this.dataGrid.AllowDiagonalScrolling = false;
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
+dataGrid.AllowDiagonalScrolling = false;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -148,30 +233,20 @@ The following code snippets demonstrate how to hide the vertical and horizontal 
 
 {% tabs %}
 {% highlight xaml %}
-    <sfgrid:SfDataGrid x:Name="dataGrid"                                       
-                       ItemsSource="{Binding OrderInfoCollection}"         
-                       HorizontalScrollBarVisibility="Never"
-                       VerticalScrollBarVisibility="Never">   
-    </sfgrid:SfDataGrid> 
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding Orders}"
+                           HorizontalScrollBarVisibility="Never"
+                           VerticalScrollBarVisibility="Never">
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 
 {% highlight C# %}  
-namespace DataGridSample
-{
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-            ViewModel viewModel = new ViewModel();
-            SfDataGrid dataGrid = new SfDataGrid();
-            dataGrid.ItemsSource = viewModel.OrdersInfo;   
-            dataGrid.HorizontalScrollBarVisibility = ScrollBarVisibility.Never;
-            dataGrid.VerticalScrollBarVisibility = ScrollBarVisibility.Never;
-            this.Content = dataGrid;
-        }
-    }
-}
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
+dataGrid.HorizontalScrollBarVisibility = ScrollBarVisibility.Never;
+dataGrid.VerticalScrollBarVisibility = ScrollBarVisibility.Never;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -193,14 +268,18 @@ The [VerticalOverScrollMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 To customize the bouncing effect in the data grid, follow the code example:
 {% tabs %}
 {% highlight xaml %}
-    <sfgrid:SfDataGrid x:Name="dataGrid"                                       
-                       ItemsSource="{Binding OrderInfoCollection}"         
-                       VerticalOverScrollMode="Bounce">   
-    </sfgrid:SfDataGrid> 
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding Orders}"
+                           VerticalOverScrollMode="Bounce">
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 
 {% highlight C# %}  
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
 dataGrid.VerticalOverScrollMode = DataGridVerticalOverScrollMode.Bounce;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -218,14 +297,18 @@ The [HorizontalOverScrollMode](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 To customize the bouncing effect in the data grid, follow the code example:
 {% tabs %}
 {% highlight xaml %}
-    <sfgrid:SfDataGrid x:Name="dataGrid"                                       
-                       ItemsSource="{Binding OrderInfoCollection}"         
-                       HorizontalOverScrollMode="Bounce">   
-    </sfgrid:SfDataGrid> 
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding Orders}"
+                           HorizontalOverScrollMode="Bounce">
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 
 {% highlight C# %}  
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
 dataGrid.HorizontalOverScrollMode = DataGridHorizontalOverScrollMode.Bounce;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -243,16 +326,19 @@ The following current states are indicated by the [ScrollState](https://help.syn
 - Programmatic: Indicates that the [ScrollToColumnIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ScrollToColumnIndex_System_Int32_Microsoft_Maui_Controls_ScrollToPosition_System_Boolean_) or [ScrollToRowIndex](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_ScrollToRowIndex_System_Int32_Microsoft_Maui_Controls_ScrollToPosition_System_Boolean_) methods are used for scrolling.
 
 {% tabs %}
+{% highlight xaml %}
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding Orders}"
+                           ScrollStateChanged="dataGrid_ScrollStateChanged">
+    </syncfusion:SfDataGrid>
+{% endhighlight %}
 {% highlight C# %}  
-dataGrid.ScrollStateChanged += DataGrid_ScrollStateChanged;
-
-private void DataGrid_ScrollStateChanged(object? sender, DataGridScrollStateChangedEventArgs e)
+private void dataGrid_ScrollStateChanged(object sender, DataGridScrollStateChangedEventArgs e)
 {
     if (e.ScrollState == DataGridScrollState.Idle)
     {
         DisplayAlert("ScrollState", "Scrolling has stopped", "OK");
     }
 }
-
 {% endhighlight %}
 {% endtabs %}
