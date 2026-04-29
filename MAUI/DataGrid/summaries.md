@@ -16,8 +16,7 @@ The data grid supports to display the concise information about the bound data o
 * **Group Summary** - Used to display summary information of data objects in each group.
 * **Table Summary** - Used to display the summary information at top and/or bottom in SfDataGrid.
 
-
-![DataGrid with summary rows](Images\caption-summary\maui-datagrid-summaries.png) 
+<img alt="DataGrid with summary rows" src="Images/caption-summary/maui-datagrid-summaries.png" width="404"/>
 
 Summary rows are represented by using the [DataGridSummaryRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html) that hold summary information of columns in the [SummaryColumns](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryRow.html#Syncfusion_Maui_DataGrid_DataGridSummaryRow_SummaryColumns) property . The `SummaryColumns` contains the collection of [DataGridSummaryColumn](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridSummaryColumn.html) which carries name, format, and summary aggregate type of the column.
 
@@ -39,7 +38,7 @@ Default group caption format is `{ColumnName}: {Key} - {ItemsCount} Items`.
 * **Key**: Displays the key value of the group.
 * **ItemsCount**: Displays the number of items in a group.
 
-![DataGrid with formatting in caption summary row](Images\caption-summary\maui-datagrid-default.png)
+<img alt="DataGrid with formatting in caption summary row" src="Images/caption-summary/maui-datagrid-default.png" width="404"/>
 
 You can customize the group caption text format by setting the `SfDataGrid.GroupCaptionTextFormat` property. The code example below illustrates how to customize the `group caption text` in the data grid:
 
@@ -75,7 +74,7 @@ this.Content = dataGrid;
 
 The following screenshot shows the outcome of the previous code:
 
-![DataGrid with formatting in caption summary row](Images\caption-summary\maui-datagrid-formatting-show-summary-in-row.png)
+<img alt="DataGrid with formatting in caption summary row" src="Images/caption-summary/maui-datagrid-formatting-show-summary-in-row.png" width="404"/>
 
 ### Customize the column name in the group caption summary
 
@@ -160,8 +159,7 @@ dataGridid.CaptionSummaryRow= summaryRow;
 
 The following screenshot shows the outcome for both values of `ShowSummaryInRow` to `true`:
 
-![DataGrid with customized caption summary row](Images\caption-summary\maui-datagrid-show-summary-in-row.png)
-
+<img alt="DataGrid with customized caption summary row" src="Images/caption-summary/maui-datagrid-show-summary-in-row.png" width="404"/>
 
 ### Displaying summary for column
 
@@ -208,7 +206,7 @@ dataGridid.CaptionSummaryRow= summaryRow;
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with caption summary cells customized](Images\caption-summary\maui-datagrid-show-summary-in-column.png)
+<img alt="DataGrid with caption summary cells customized" src="Images/caption-summary/maui-datagrid-show-summary-in-column.png" width="404"/>
 
 N> The `CaptionSummaryColumn` text will be aligned based on the `DataGridColumn.TextAlignment`.
 
@@ -292,7 +290,7 @@ public class GroupCaptionConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with template loaded for entire caption summary row](Images\caption-summary\maui-datagrid-template-row.png)
+<img alt="DataGrid with template loaded for entire caption summary row" src="Images/caption-summary/maui-datagrid-template-row.png" width="404"/>
 
 N> The `DataTemplateSelector` can also be directly assigned to the `CaptionSummaryTemplate`. When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
@@ -383,7 +381,7 @@ public class GroupCaptionConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with template loaded for individual caption summary column](Images\caption-summary\maui-datagrid-template-column.png)
+<img alt="DataGrid with template loaded for individual caption summary column" src="Images/caption-summary/maui-datagrid-template-column.png" width="404"/>
 
 ### Displaying column summary with title
 
@@ -489,7 +487,7 @@ this.Content = dataGrid;
 
 The following screenshot illustrates displaying summary columns with title at same time for `CaptionSummaryRow`.
 
-![DataGrid with caption summary column and title](Images\caption-summary\maui-datagrid-caption-column-summary-title.png)
+<img alt="DataGrid with caption summary column and title" src="Images/caption-summary/maui-datagrid-caption-column-summary-title.png" width="404"/>
 
 #### Limitations
 
@@ -575,8 +573,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-
-![DataGrid with group summary](Images\group-summary\maui-datagrid-show-summary-in-row.png)
+<img alt="DataGrid with group summary" src="Images/group-summary/maui-datagrid-show-summary-in-row.png" width="404"/>
 
 ### Displaying summary in the column
 
@@ -634,8 +631,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-
-![DataGrid with customized summary for group summary cells](Images\group-summary\maui-datagrid-show-summary-in-column.png)
+<img alt="DataGrid with customized summary for group summary cells" src="Images/group-summary/maui-datagrid-show-summary-in-column.png" width="404"/>
 
 ### Group summary template
 
@@ -716,7 +712,7 @@ public class GroupSummaryConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with template loaded for entire group summary row](Images\group-summary\maui-datagrid-row-template.png)
+<img alt="DataGrid with template loaded for entire group summary row" src="Images/group-summary/maui-datagrid-row-template.png" width="404"/>
 
 N> The `DataTemplateSelector` can also be directly assigned to the `SfDataGrid.GroupSummaryTemplate`. When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
@@ -803,7 +799,7 @@ public class GroupSummaryConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with template loaded for individual group summary cell](Images\group-summary\maui-datagrid-column-template.png)
+<img alt="DataGrid with template loaded for individual group summary cell" src="Images/group-summary/maui-datagrid-column-template.png" width="404"/>
 
 ### Displaying column summary with title
 
@@ -915,7 +911,7 @@ this.Content = dataGrid;
 
 The following screenshot illustrates displaying summary columns with title at same time for `GroupSummaryRows`.
 
-![DataGrid with group summary column and title](Images\group-summary\maui-datagrid-group-column-summary-title.png)
+<img alt="DataGrid with group summary column and title" src="Images/group-summary/maui-datagrid-group-column-summary-title.png" width="404"/>
 
 #### Limitations
 
@@ -931,7 +927,7 @@ You can add table summary row in the data grid by adding the [DataGridTableSumma
 
 The following screenshot illustrates table summary rows in the data grid:
 
-![DataGrid with table summary](Images\table-summary\maui-datagrid-table-summary-position.png)
+<img alt="DataGrid with table summary" src="Images/table-summary/maui-datagrid-table-summary-position.png" width="404"/>
 
 {% tabs %}
 {% highlight xaml %}
@@ -997,8 +993,7 @@ dataGridid.TableSummaryRows.Add(summaryRow2);
 {% endhighlight %}
 {% endtabs %}
 
-
-![DataGrid with table summary](Images\table-summary\maui-datagrid-table-summary.png)
+<img alt="DataGrid with table summary" src="Images/table-summary/maui-datagrid-table-summary.png" width="404"/>
 
 ### Displaying summary in a row
 
@@ -1047,7 +1042,7 @@ dataGridid.TableSummaryRows.Add(summaryRow);
 
 The following screenshot shows the table summary row if `ShowSummaryInRow` is `true`:
 
-![DataGrid with customized table summary for entire row](Images\table-summary\maui-datagrid-show-summary-in-row.png)
+<img alt="DataGrid with customized table summary for entire row" src="Images/table-summary/maui-datagrid-show-summary-in-row.png" width="404"/>
 
 ### Displaying summary in a column
 
@@ -1102,7 +1097,7 @@ dataGridid.TableSummaryRows.Add(summaryRow);
 
 The following screenshot shows the table summary row if `ShowSummaryInRow` is `false`.
 
-![DataGrid with customized table summary for individual cells](Images\table-summary\maui-datagrid-show-summary-in-column.png)
+<img alt="DataGrid with customized table summary for individual cells" src="Images/table-summary/maui-datagrid-show-summary-in-column.png" width="404"/>
 
 ### Positioning TableSummaryRows
 
@@ -1174,7 +1169,7 @@ dataGridid.TableSummaryRows.Add(bottomSummaryRow);
 
 The below screenshot illustrates the positioning of table summary rows in SfDataGrid.
 
-![Customizing table summary row position in a DataGrid](Images\table-summary\maui-datagrid-table-summary-position.png)
+<img alt="Customizing table summary row position in a DataGrid" src="Images/table-summary/maui-datagrid-table-summary-position.png" width="404"/>
 
 ## Table summary template
 
@@ -1271,7 +1266,7 @@ public class TableSummaryConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
-![Table summary template in a row](Images\table-summary\maui-datagrid-template-row.png)
+<img alt="Table summary template in a row" src="Images/table-summary/maui-datagrid-template-row.png" width="404"/>
 
 ### Displaying template for a column
 
@@ -1367,7 +1362,7 @@ public class TableSummaryConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
-![Table summary template in a column](Images\table-summary\maui-datagrid-template-column.png)
+<img alt="Table summary template in a column" src="Images/table-summary/maui-datagrid-template-column.png" width="404"/>
 
 N> The `DataTemplateSelector` can also be directly assigned to the `SfDataGrid.TableSummaryTemplate`. When using data template selector, performance issues occur as the conversion template views take time within the framework.
 
@@ -1472,7 +1467,7 @@ this.Content = dataGrid;
 
 The following screenshot illustrates displaying summary columns with title at same time for `TableSummaryRows`.
 
-![DataGrid with table summary column and title](Images\table-summary\maui-datagrid-table-column-summary-title.png)
+<img alt="DataGrid with table summary column and title" src="Images/table-summary/maui-datagrid-table-column-summary-title.png" width="404"/>
 
 #### Limitations
 
@@ -1518,8 +1513,7 @@ dataGridid.TableSummaryRows.Add(summaryRow);
 {% endhighlight %}
 {% endtabs %}
 
-![Formatting summary value in a DataGrid](Images\table-summary\maui-datagrid-show-summary-in-column.png)
-
+<img alt="Formatting summary value in a DataGrid" src="Images/table-summary/maui-datagrid-show-summary-in-column.png" width="404"/>
 
 ### Displaying additional content in summary
 
@@ -1555,7 +1549,7 @@ dataGrid.TableSummaryRows= summaryRow;
 {% endhighlight %}
 {% endtabs %}
 
-![Displaying additional content in summary in a DataGrid](Images\table-summary\maui-datagrid-additional-content.png)
+<img alt="Displaying additional content in summary in a DataGrid" src="Images/table-summary/maui-datagrid-additional-content.png" width="404"/>
 
 ## Aggregate types
 
@@ -1697,7 +1691,7 @@ dataGrid.TableSummaryRows = summaryRow;
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with custom aggregate](Images\table-summary\maui-datagrid-custom-aggregate.png)
+<img alt="DataGrid with custom aggregate" src="Images/table-summary/maui-datagrid-custom-aggregate.png" width="404"/>
 
 N> The above custom summaries section is explained using `TableSummary`.
 
@@ -1766,4 +1760,4 @@ public class DataGridTableSummaryCellRendererExt : DataGridTableSummaryCellRende
 
 The following screenshot shows the final outcome upon execution of the above code.
 
-![Customize table summary using custom cell renderer](Images\table-summary\maui-datagrid-customizing-table-summary.png)
+<img alt="Customize table summary using custom cell renderer" src="Images/table-summary/maui-datagrid-customizing-table-summary.png" width="404"/>
