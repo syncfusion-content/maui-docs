@@ -206,7 +206,12 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-        dataGrid.SelectAll();
+        DataGrid.DataGridLoaded += DataGrid_DataGridLoaded;
+    }
+
+    private void DataGrid_DataGridLoaded(object? sender, EventArgs e)
+    {
+        DataGrid.SelectAll();
     }
 }
 {% endhighlight %}
