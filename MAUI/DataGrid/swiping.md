@@ -24,7 +24,8 @@ The data grid allows for loading desired content using the [SfDataGrid.LeftSwipe
     <syncfusion:SfDataGrid.LeftSwipeTemplate>
         <DataTemplate>
             <Grid BackgroundColor="#6750A4"
-                  Padding="0" ColumnDefinitions="*, *">
+                  Padding="0" 
+                  ColumnDefinitions="*,*">
                 <Label Grid.Column="0"
                        Text="EDIT"
                        HorizontalTextAlignment="End"
@@ -518,9 +519,9 @@ Using a `DataTemplateSelector`, you can load specific views based on row data, s
 
 {% tabs %}
 {% highlight XAML %}
- <syncfusion:SfDataGrid x:Name="DataGrid"
-                        ItemsSource="{Binding Orders}"
-                        AllowSwiping="True">
+<syncfusion:SfDataGrid x:Name="DataGrid"
+                       ItemsSource="{Binding Orders}"
+                       AllowSwiping="True">
     <syncfusion:SfDataGrid.LeftSwipeTemplate>
         <local:LeftTemplateSelector />
     </syncfusion:SfDataGrid.LeftSwipeTemplate>
