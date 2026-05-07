@@ -124,7 +124,7 @@ The [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.Sf
     </ScrollView>
 </ContentPage.Content>
 {% endhighlight %}
-{% highlight c#  hl_lines="65" %}
+{% highlight c# hl_lines="65" %}
 public partial class MainPage : ContentPage
 {
     public MainPage()
@@ -465,7 +465,7 @@ The [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.Sf
     </ScrollView>
 </ContentPage.Content>
 {% endhighlight %}
-{% highlight c#  hl_lines="65" %}
+{% highlight c# hl_lines="65" %}
 public partial class MainPage : ContentPage
 {
     public MainPage()
