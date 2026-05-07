@@ -30,14 +30,14 @@ The `SortColumnDescription` object holds the following two properties:
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}">
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding Orders}">
 
-    <syncfusion:SfDataGrid.SortColumnDescriptions>
-        <syncfusion:SortColumnDescription ColumnName="OrderID"
-                                            SortDirection="Ascending"/>
-    </syncfusion:SfDataGrid.SortColumnDescriptions>
-</syncfusion:SfDataGrid>
+        <syncfusion:SfDataGrid.SortColumnDescriptions>
+            <syncfusion:SortColumnDescription ColumnName="OrderID"
+                                              SortDirection="Ascending"/>
+        </syncfusion:SfDataGrid.SortColumnDescriptions>
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
 SfDataGrid dataGrid = new SfDataGrid();
@@ -62,10 +62,10 @@ To apply the sort for multiple columns, tap the desired column headers after set
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                        SortingMode="Multiple"
-                        ItemsSource="{Binding Orders}">
-</syncfusion:SfDataGrid>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           SortingMode="Multiple"
+                           ItemsSource="{Binding Orders}">
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
 SfDataGrid dataGrid = new SfDataGrid();
@@ -84,11 +84,11 @@ In addition, to sort the data in ascending or descending order, the SfDataGrid u
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                        SortingMode="Single"
-                        AllowTriStateSorting="True"
-                        ItemsSource="{Binding Orders}">
-</syncfusion:SfDataGrid>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           SortingMode="Single"
+                           AllowTriStateSorting="True"
+                           ItemsSource="{Binding Orders}">
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
 SfDataGrid dataGrid = new SfDataGrid();
@@ -108,11 +108,11 @@ The `SfDataGrid` provides support to display the sequence numbers to denote the 
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                        SortingMode="Multiple"
-                        ShowSortNumbers="True"
-                        ItemsSource="{Binding Orders}">
-</syncfusion:SfDataGrid>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           SortingMode="Multiple"
+                           ShowSortNumbers="True"
+                           ItemsSource="{Binding Orders}">
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
 SfDataGrid dataGrid = new SfDataGrid();
@@ -132,11 +132,11 @@ By default, the column gets sorted when the column header is clicked. This behav
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                        SortingMode="Single"
-                        SortingGestureType="DoubleTap"
-                        ItemsSource="{Binding Orders}">
-</syncfusion:SfDataGrid>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           SortingMode="Single"
+                           SortingGestureType="DoubleTap"
+                           ItemsSource="{Binding Orders}">
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
 SfDataGrid dataGrid = new SfDataGrid();
@@ -163,11 +163,11 @@ The following code sample demonstrates how to cancel sorting for a particular co
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                        SortingMode="Single"
-                        SortColumnsChanging="sfDataGrid_SortColumnsChanging"
-                        ItemsSource="{Binding Orders}">
-</syncfusion:SfDataGrid>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           SortingMode="Single"
+                           SortColumnsChanging="sfDataGrid_SortColumnsChanging"
+                           ItemsSource="{Binding Orders}">
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
 private void sfDataGrid_SortColumnsChanging(object sender, DataGridSortColumnsChangingEventArgs e)
@@ -186,11 +186,11 @@ During auto-generating columns, disable sorting for an individual column by cust
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                        AutoGeneratingColumn="sfDataGrid_AutoGeneratingColumn"
-                        SortingMode="Single"
-                        ItemsSource="{Binding Orders}">
-</syncfusion:SfDataGrid>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           AutoGeneratingColumn="sfDataGrid_AutoGeneratingColumn"
+                           SortingMode="Single"
+                           ItemsSource="{Binding Orders}">
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
 private void sfDataGrid_AutoGeneratingColumn(object sender, DataGridAutoGeneratingColumnEventArgs e)
@@ -209,24 +209,24 @@ The `SfDataGrid` disables sorting for an individual column by setting the [DataG
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                        AutoGenerateColumnsMode="None"
-                        SortingMode="Single"
-                        ItemsSource="{Binding Orders}">
-    <syncfusion:SfDataGrid.Columns>
-        <syncfusion:DataGridTextColumn HeaderText="Order ID"
-                                        AllowSorting="False"
-                                        MappingName="OrderID"/>
-        <syncfusion:DataGridTextColumn HeaderText="Customer"
-                                        MappingName="Customer"/>
-        <syncfusion:DataGridTextColumn HeaderText="Ship City"
-                                        MappingName="City"/>
-        <syncfusion:DataGridTextColumn HeaderText="Ship Country"
-                                        MappingName="Country"/>
-        <syncfusion:DataGridTextColumn HeaderText="Product"
-                                        MappingName="Product"/>
-    </syncfusion:SfDataGrid.Columns>
-</syncfusion:SfDataGrid>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           AutoGenerateColumnsMode="None"
+                           SortingMode="Single"
+                           ItemsSource="{Binding Orders}">
+        <syncfusion:SfDataGrid.Columns>
+            <syncfusion:DataGridTextColumn HeaderText="Order ID"
+                                           AllowSorting="False"
+                                           MappingName="OrderID"/>
+            <syncfusion:DataGridTextColumn HeaderText="Customer"
+                                           MappingName="Customer"/>
+            <syncfusion:DataGridTextColumn HeaderText="Ship City"
+                                           MappingName="City"/>
+            <syncfusion:DataGridTextColumn HeaderText="Ship Country"
+                                           MappingName="Country"/>
+            <syncfusion:DataGridTextColumn HeaderText="Product"
+                                           MappingName="Product"/>
+        </syncfusion:SfDataGrid.Columns>
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
 SfDataGrid dataGrid = new SfDataGrid();
@@ -334,11 +334,11 @@ The default sort icon color can be customized by setting the [DataGridStyle.Sort
 {% tabs %}
 
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}">
-    <syncfusion:SfDataGrid.DefaultStyle>
-        <syncfusion:DataGridStyle SortIconColor="DodgerBlue"/>
-    </syncfusion:SfDataGrid.DefaultStyle>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding Orders}">
+        <syncfusion:SfDataGrid.DefaultStyle>
+            <syncfusion:DataGridStyle SortIconColor="DodgerBlue"/>
+        </syncfusion:SfDataGrid.DefaultStyle>
         <syncfusion:SfDataGrid.Columns>
             <syncfusion:DataGridTextColumn MappingName="OrderID"
                                            AllowSorting="True"
@@ -350,7 +350,7 @@ The default sort icon color can be customized by setting the [DataGridStyle.Sort
             <syncfusion:DataGridTextColumn MappingName="Country "
                                            HeaderText="Ship Country "/>
         </syncfusion:SfDataGrid.Columns>
-</syncfusion:SfDataGrid>
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
 SfDataGrid dataGrid = new SfDataGrid();
@@ -374,15 +374,15 @@ The SfDataGrid uses an icon to indicate the ascending and descending states of s
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid ItemsSource="{Binding Orders}"
-                        x:Name="dataGrid"
-                        SortingMode="Multiple">
-    <syncfusion:SfDataGrid.SortIconTemplate>
-        <DataTemplate>
-            <Image Source="expand_less.png"/>
-        </DataTemplate>
-    </syncfusion:SfDataGrid.SortIconTemplate>
-</syncfusion:SfDataGrid>                         
+    <syncfusion:SfDataGrid ItemsSource="{Binding Orders}"
+                           x:Name="dataGrid"
+                           SortingMode="Multiple">
+        <syncfusion:SfDataGrid.SortIconTemplate>
+            <DataTemplate>
+                <Image Source="expand_less.png"/>
+            </DataTemplate>
+        </syncfusion:SfDataGrid.SortIconTemplate>
+    </syncfusion:SfDataGrid>                        
 {% endhighlight %}
 {% highlight c# %}
 SfDataGrid dataGrid = new SfDataGrid();
@@ -410,45 +410,45 @@ When choosing a [SortIconTemplate](https://help.syncfusion.com/cr/maui/Syncfusio
 
 {% tabs %}
 {% highlight xaml %}
-<ContentPage.BindingContext>
-    <local:OrderInfoViewModel/>
-</ContentPage.BindingContext>
+    <ContentPage.BindingContext>
+        <local:OrderInfoViewModel/>
+    </ContentPage.BindingContext>
 
-<ContentPage.Resources>
-    <ResourceDictionary>
-        <DataTemplate x:Key="Descending">
-            <Image>
-                <Image.Source>
-                    <FontImageSource Color="Red"
-                                        Glyph="&#xe701;"
-                                        FontFamily="{OnPlatform iOS=MauiMaterialAssets, MacCatalyst=MauiMaterialAssets, WinUI=MauiMaterialAssets.ttf#, Android=MauiMaterialAssets.ttf#}"
-                                        Size="44"/>
-                </Image.Source>
-            </Image>
-        </DataTemplate>
-        <DataTemplate x:Key="Ascending">
-            <Image>
-                <Image.Source>
-                    <FontImageSource Color="Green"
-                                        Glyph="&#xe702;"
-                                        FontFamily="{OnPlatform iOS=MauiMaterialAssets, MacCatalyst=MauiMaterialAssets, WinUI=MauiMaterialAssets.ttf#, Android=MauiMaterialAssets.ttf#}"
-                                        Size="44"/>
-                </Image.Source>
-            </Image>
-        </DataTemplate>
-    </ResourceDictionary>
-</ContentPage.Resources>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="Descending">
+                <Image>
+                    <Image.Source>
+                        <FontImageSource Color="Red"
+                                         Glyph="&#xe701;"
+                                         FontFamily="{OnPlatform iOS=MauiMaterialAssets, MacCatalyst=MauiMaterialAssets, WinUI=MauiMaterialAssets.ttf#, Android=MauiMaterialAssets.ttf#}"
+                                         Size="44"/>
+                    </Image.Source>
+                </Image>
+            </DataTemplate>
+            <DataTemplate x:Key="Ascending">
+                <Image>
+                    <Image.Source>
+                        <FontImageSource Color="Green"
+                                         Glyph="&#xe702;"
+                                         FontFamily="{OnPlatform iOS=MauiMaterialAssets, MacCatalyst=MauiMaterialAssets, WinUI=MauiMaterialAssets.ttf#, Android=MauiMaterialAssets.ttf#}"
+                                         Size="44"/>
+                    </Image.Source>
+                </Image>
+            </DataTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
-<ContentPage.Content>
-    <syncfusion:SfDataGrid  ItemsSource="{Binding Orders}"
-                            x:Name="dataGrid"
-                            SortingMode="Multiple">
-        <syncfusion:SfDataGrid.SortIconTemplate>
-            <local:SortIconTemplate AscendingTemplate="{StaticResource Ascending }"
-                                    DescendingTemplate="{StaticResource Descending}"/>
-        </syncfusion:SfDataGrid.SortIconTemplate>
-    </syncfusion:SfDataGrid>
-</ContentPage.Content>                     
+    <ContentPage.Content>
+        <syncfusion:SfDataGrid  ItemsSource="{Binding Orders}"
+                                x:Name="dataGrid"
+                                SortingMode="Multiple">
+            <syncfusion:SfDataGrid.SortIconTemplate>
+                <local:SortIconTemplate AscendingTemplate="{StaticResource Ascending }"
+                                        DescendingTemplate="{StaticResource Descending}"/>
+            </syncfusion:SfDataGrid.SortIconTemplate>
+        </syncfusion:SfDataGrid>
+    </ContentPage.Content>                    
 {% endhighlight %}
 {% highlight c# %}
 public class SortIconTemplate : DataTemplateSelector
@@ -490,17 +490,17 @@ The size of the sort icon can be customized when the icon is loaded through `Sor
 {% tabs %}
 
 {% highlight xaml %}
-<syncfusion:SfDataGrid ItemsSource="{Binding Orders}"
-                        x:Name="dataGrid"
-                        SortingMode="Multiple">
-    <syncfusion:SfDataGrid.SortIconTemplate>
-        <DataTemplate>
-            <Image Source="sort_down.png"
-                    HeightRequest="20"
-                    WidthRequest="20"/>
-        </DataTemplate>
-    </syncfusion:SfDataGrid.SortIconTemplate>
-</syncfusion:SfDataGrid>                         
+    <syncfusion:SfDataGrid ItemsSource="{Binding Orders}"
+                           x:Name="dataGrid"
+                           SortingMode="Multiple">
+        <syncfusion:SfDataGrid.SortIconTemplate>
+            <DataTemplate>
+                <Image Source="sort_down.png"
+                       HeightRequest="20"
+                       WidthRequest="20"/>
+            </DataTemplate>
+        </syncfusion:SfDataGrid.SortIconTemplate>
+    </syncfusion:SfDataGrid>                        
 {% endhighlight %}
 {% highlight c# %}
 SfDataGrid dataGrid = new SfDataGrid();
