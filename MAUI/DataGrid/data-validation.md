@@ -97,7 +97,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="data-validation-with-IDataErrorInfo" src="Images\data-validation\maui-datagrid-datavalidation-idataerrorinfo.png" width="464" height="396"/>
+<img alt="data-validation-with-IDataErrorInfo" src="Images\data-validation\maui-datagrid-datavalidation-idataerrorinfo.png" width="464"/>
 
 ### Using INotifyDataErrorInfo
 
@@ -170,7 +170,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="data-validation-with-INotifyDataErrorInfo" src="Images\data-validation\maui-datagrid-datavalidation-inotifydataerrorinfo.png" width="464" height="396"/>
+<img alt="data-validation-with-INotifyDataErrorInfo" src="Images\data-validation\maui-datagrid-datavalidation-inotifydataerrorinfo.png" width="464"/>
 
 ## Built-in validation using Data Annotation
 
@@ -391,7 +391,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="data-validation-error-icon-customization" src="Images\data-validation\maui-datagrid-datavalidation-erroriconcustomization.png" width="464" height="396"/>
+<img alt="data-validation-error-icon-customization" src="Images\data-validation\maui-datagrid-datavalidation-erroriconcustomization.png" width="464"/>
 
 ### Load Error Icon through Template
 
@@ -432,7 +432,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="data-validation-error-icon-template" src="Images\data-validation\maui-datagrid-datavalidation-erroricontemplate.png" width="464" height="396"/>
+<img alt="data-validation-error-icon-template" src="Images\data-validation\maui-datagrid-datavalidation-erroricontemplate.png" width="464"/>
 
 ### Load Error Icon through Template Selector
 
@@ -487,7 +487,7 @@ public class ErrorIconTemplateSelector : Microsoft.Maui.Controls.DataTemplateSel
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="data-validation-error-icon-template-selector" src="Images\data-validation\maui-datagrid-datavalidation-erroricontemplateselector.png" width="464" height="396"/>
+<img alt="data-validation-error-icon-template-selector" src="Images\data-validation\maui-datagrid-datavalidation-erroricontemplateselector.png" width="464"/>
 
 ## Error Tip Customization
 
@@ -523,7 +523,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="data-validation-error-tip-customization" src="Images\data-validation\maui-datagrid-datavalidation-errortipcustomization.png" width="464" height="396"/>
+<img alt="data-validation-error-tip-customization" src="Images\data-validation\maui-datagrid-datavalidation-errortipcustomization.png" width="464"/>
 
 ### Load Error Tip through Template
 
@@ -570,7 +570,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="data-validation-error-tip-template" src="Images\data-validation\maui-datagrid-datavalidation-errortiptemplate.gif" width="464" height="396"/>
+<img alt="data-validation-error-tip-template" src="Images\data-validation\maui-datagrid-datavalidation-errortiptemplate.gif" width="464"/>
 
 ### Load Error Tip through Template Selector
 
@@ -631,7 +631,7 @@ public class ErrorTipTemplateSelector : Microsoft.Maui.Controls.DataTemplateSele
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="data-validation-error-tip-template-selector" src="Images\data-validation\maui-datagrid-datavalidation-errortiptemplateselector.gif" width="464" height="396"/>
+<img alt="data-validation-error-tip-template-selector" src="Images\data-validation\maui-datagrid-datavalidation-errortiptemplateselector.gif" width="464"/>
 
 ## Data Validation with Master-Details View
 
@@ -705,7 +705,7 @@ void dataGrid_AutoGeneratingRelations(object sender, AutoGeneratingRelationsArgs
 {% endhighlight %}
 {% endtabs %}
 
-<img alt="data-validation-with-master-details-view" src="Images\data-validation\maui-datagrid-datavalidation-with-masterdetailsview.png" width="464" height="396"/>
+<img alt="data-validation-with-master-details-view" src="Images\data-validation\maui-datagrid-datavalidation-with-masterdetailsview.png" width="464"/>
 
 ### Custom validation through events
 

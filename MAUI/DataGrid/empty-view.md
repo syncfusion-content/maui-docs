@@ -34,7 +34,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-<img src="Images/emptyview/emptyview-as-string.png" width="404" height="396" alt="DataGrid with emptyview as string">
+<img src="Images/emptyview/emptyview-as-string.png" width="404" alt="DataGrid with emptyview as string">
 
 ## Display views when DataGrid has no items
 
@@ -91,7 +91,7 @@ this.Content = dataGrid;
 
 N> The view that the `EmptyView` displays may be a single view or a view that has multiple child views.
 
-<img src="Images/emptyview/emptyview-as-View.png" width="404" height="396" alt="DataGrid with emptyview as view">
+<img src="Images/emptyview/emptyview-as-View.png" width="404" alt="DataGrid with emptyview as view">
 
 ## Display a DataTemplate when DataGrid has no items
 
@@ -208,4 +208,4 @@ public class FilterItem : BindableObject
 
 FilterItem object is set to the `EmptyView` property, and the `Filter` property is bound to the `SearchBar.Text` property. When `SearchBar.TextChanged` event is raised, the value of the `SearchBar.Text` property is stored in the `Filter` property.
 
-<img src="Images/emptyview/emptyview-as-template.png" width="404" height="396" alt="DataGrid with EmptyView template">
+<img src="Images/emptyview/emptyview-as-template.png" width="404" alt="DataGrid with EmptyView template">

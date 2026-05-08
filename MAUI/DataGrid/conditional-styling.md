@@ -53,7 +53,7 @@ public class ColorConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
-![Conditional DataGridRow styling in .NET MAUI DataGrid](Images/conditional-styling/maui-datagrid-conditional-datagridrowstyle.png)
+<img alt="Conditional DataGridRow styling in .NET MAUI DataGrid" src="Images/conditional-styling/maui-datagrid-conditional-datagridrowstyle.png" width="404">
 
 ## Style a particular row based on row index
 Styling can be applied to a particular row based on RowIndex property by writing the style for the [DataGridRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRow.html) TargetType.
@@ -92,7 +92,7 @@ public class ColorConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
-![Conditional DataGridRow styling Based on RowIndex in .NET MAUI DataGrid](Images/conditional-styling/maui-datagrid-conditional-datagridrowstyle_basedonrowindex.png)
+<img alt="Conditional DataGridRow styling Based on RowIndex in .NET MAUI DataGrid" src="Images/conditional-styling/maui-datagrid-conditional-datagridrowstyle_basedonrowindex.png" width="404">
 
 ## Style a particular row based on RowData
 Styling can be applied to a particular row based on the RowData property by writing the style for the [DataGridRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRow.html) TargetType.
@@ -131,7 +131,7 @@ public class ColorConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
-![Conditional DataGridRow styling Based on RowData in .NET MAUI DataGrid](Images/conditional-styling/maui-datagrid-conditional-datagridrowstyle_basedonrowdata.png)
+<img alt="Conditional DataGridRow styling Based on RowData in .NET MAUI DataGrid" src="Images/conditional-styling/maui-datagrid-conditional-datagridrowstyle_basedonrowdata.png" width="404">
 
 ## Conditional style for particular column
 
@@ -177,7 +177,7 @@ public class ColorConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
-![Conditional column styling in .NET MAUI DataGrid](Images/conditional-styling/maui-datagrid-columnstyle-conditional.png)
+<img alt="Conditional column styling in .NET MAUI DataGrid" src="Images/conditional-styling/maui-datagrid-columnstyle-conditional.png" width="404">
 
 ## Conditional styling for row header
 
@@ -279,7 +279,7 @@ public class ColorConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
-![Conditional cell styling in .NET MAUI DataGrid](Images/conditional-styling/maui-datagrid-conditional-datagridcellstyle.png)
+<img alt="Conditional cell styling in .NET MAUI DataGrid" src="Images/conditional-styling/maui-datagrid-conditional-datagridcellstyle.png" width="404">
 
 ## Style a cell based on MappingName and RowColumnIndex
 Styling can be applied to a particular cell based on RowIndex, ColumnIndex and MappingName property of the column by writing the style for the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html) TargetType.
@@ -359,7 +359,7 @@ public class ForeColorConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
-![Conditional cell styling based in MappingName RowColumnIndex in .NET MAUI DataGrid](Images/conditional-styling/maui-datagrid-conditional-datagridcelltyle_basedonmappingname_rowcolumnindex.png)
+<img alt="Conditional cell styling based in MappingName RowColumnIndex in .NET MAUI DataGrid" src="Images/conditional-styling/maui-datagrid-conditional-datagridcelltyle_basedonmappingname_rowcolumnindex.png" width="404">
 
 ## Style a cell based on RowIndex and ColumnIndex
 Styling can be applied to a particular cell based on RowIndex and ColumnIndex property by writing the style for the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html) TargetType.
@@ -423,7 +423,7 @@ public class ForeColorConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
-![Conditional cell styling based on RowIndex and ColumnIndex in .NET MAUI DataGrid](Images/conditional-styling/maui-datagrid-conditional-datagridcelltyle_basedon_rowcolumnindex.png)
+<img alt="Conditional cell styling based on RowIndex and ColumnIndex in .NET MAUI DataGrid" src="Images/conditional-styling/maui-datagrid-conditional-datagridcelltyle_basedon_rowcolumnindex.png" width="404">
 
 ### Customizing the BorderColor of a cell
 You can customize the border color of individual cells in the SfDataGrid based on RowIndex and ColumnIndex property, and setting the `BorderColor` property  in DataGridCell by writing the style for the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html)
@@ -470,7 +470,7 @@ public class BorderColorConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
-![Customizing the BorderColor of a cell based on RowIndex and ColumnIndex in .NET MAUI DataGrid](Images/conditional-styling/maui-datagrid-customizing-bordercolor_basedon_rowcolumnindex.png)
+<img alt="Customizing the BorderColor of a cell based on RowIndex and ColumnIndex in .NET MAUI DataGrid" src="Images/conditional-styling/maui-datagrid-customizing-bordercolor_basedon_rowcolumnindex.png" width="404">
 
 ## Style a cell based on cell value
 Styling can be applied to a particular cell based on CellValue property by writing the style for the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html) TargetType.
@@ -537,7 +537,7 @@ public class ForeColorConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
-![Conditional cell styling based on CellValue in .NET MAUI DataGrid](Images/conditional-styling/maui-datagrid-conditional-datagridcellstyle_basedon_cellvalue.png)
+<img alt="Conditional cell styling based on CellValue in .NET MAUI DataGrid" src="Images/conditional-styling/maui-datagrid-conditional-datagridcellstyle_basedon_cellvalue.png" width="404">
 
 ## Caption summary cell style
 
@@ -602,7 +602,7 @@ public class ColorConverter : IValueConverter
 
 Here, caption summary cells are customized based on `City` summary value.
 
-![Conditional style of caption summary cell using converter](Images/conditional-styling/maui-datagrid-conditional-captionsummary.png)
+<img alt="Conditional style of caption summary cell using converter" src="Images/conditional-styling/maui-datagrid-conditional-captionsummary.png" width="404">
 
 ## Group summary cell style
 
@@ -682,7 +682,7 @@ public class ColorConverter : IValueConverter
 
 Here, group summary cells are customized based on `OrderID` summary value.
 
-![Conditional style of group summary cell using converter](Images/conditional-styling/maui-datagrid-conditional-groupsummary.png)
+<img alt="Conditional style of group summary cell using converter" src="Images/conditional-styling/maui-datagrid-conditional-groupsummary.png" width="404">
 
 ## Table summary cell
 
@@ -762,7 +762,7 @@ public class ColorConverter : IValueConverter
 
 Here, table summary cells are customized based on `OrderID` summary value.
 
-![Conditional styling of table summary cell using converter](Images/conditional-styling/maui-datagrid-conditional-tablesummary.png)
+<img alt="Conditional styling of table summary cell using converter" src="Images/conditional-styling/maui-datagrid-conditional-tablesummary.png" width="404">
 
 ## Unbound row cell
 

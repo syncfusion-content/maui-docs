@@ -283,7 +283,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
- <img alt="Vertical-OverScroll-Mode" src="Images\scrolling\maui-datagrid-verticaloverscrollMode.gif" width="404" height="396"/>
+ <img alt="Vertical-OverScroll-Mode" src="Images\scrolling\maui-datagrid-verticaloverscrollMode.gif" width="404"/>
 
 ### Horizontal Over Scroll Mode
 
@@ -312,7 +312,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
- <img alt="Horizontal-OverScroll-Mode" src="Images\scrolling\maui-datagrid-Horizontal-overscroll-Mode.gif" width="404" height="396"/>
+ <img alt="Horizontal-OverScroll-Mode" src="Images\scrolling\maui-datagrid-Horizontal-overscroll-Mode.gif" width="404"/>
 
 ## Identifying scroll state changes
 
