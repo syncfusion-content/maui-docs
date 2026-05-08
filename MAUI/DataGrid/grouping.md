@@ -229,7 +229,7 @@ this.Content = dataGrid;
 
 The following screenshot shows the rendered output when grouping is applied:
 
-![DataGrid with grouping](Images\Grouping\maui-datagrid-single-grouping.png)
+<img alt="DataGrid with grouping" src="Images/Grouping/maui-datagrid-single-grouping.png" width="404"/>
 
 ### Clearing or removing a group
 
@@ -284,7 +284,7 @@ this.Content = dataGrid;
 {% endtabs %}
 
 The following screenshot shows the multi-grouping:
-![DataGrid with multi-column grouping](Images\Grouping\maui-datagrid-multiple-grouping.png)
+<img alt="DataGrid with multi-column grouping" src="Images/Grouping/maui-datagrid-multiple-grouping.png" width="404"/>
 
 ## Custom Grouping
 
@@ -508,7 +508,7 @@ public class PriceConverter : IValueConverter
 
 As you can see in the below screenshot, the records are sorted based on the `OrderNo` column, since `SortGroupRecords` is set as `true` and it is not sorted further based on `Price` column since `SortGroupRecords` is set as `false`.
 
-![SfDataGrid with SortGroupRecords](Images\Grouping\maui-datagrid-sort-mode.png)
+<img alt="SfDataGrid with SortGroupRecords" src="Images/Grouping/maui-datagrid-sort-mode.png" width="404"/>
 
 ## Display based grouping using GroupMode property
 
@@ -531,8 +531,9 @@ orderID.Format = "#";
 {% endtabs %}
 
 The following screenshot shows a comparison between two group modes. `GroupMode.Value` on the Top and `GroupMode.Display` on the Bottom:
-![DataGrid with group mode](Images\Grouping\maui-datagrid-mode-value.png)
-![DataGrid with group mode](Images\Grouping\maui-datagrid-mode-display.png)
+
+<img alt="DataGrid with group mode value" src="Images/Grouping/maui-datagrid-mode-value.png" width="404"/>
+<img alt="DataGrid with group mode display" src="Images/Grouping/maui-datagrid-mode-display.png" width="404"/>
 
 ## Expand and Collapse Groups
 
@@ -598,7 +599,7 @@ this.dataGrid.CollapseGroup(group);
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with group expanding and collapsing](Images\Grouping\maui-datagrid-expand-specific-group.png)
+<img alt="DataGrid with group expanding and collapsing" src="Images/Grouping/maui-datagrid-expand-specific-group.png" width="404"/>
 
 ## Events
 
@@ -738,7 +739,7 @@ public class CellStyleConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
-![SfDataGrid with IndentColumnBackgroundColor](Images\Grouping\maui-datagrid-indent-column-background-color.png)
+<img alt="SfDataGrid with IndentColumnBackgroundColor" src="Images/Grouping/maui-datagrid-indent-column-background-color.png" width="404"/>
 
 ### Customize grouped column visibility
 
@@ -816,7 +817,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with template](Images\Grouping\maui-datagrid-template.gif)
+<img alt="DataGrid with template" src="Images/Grouping/maui-datagrid-template.gif" width="404"/>
 
 #### Load group icon through template selector
 
@@ -867,7 +868,7 @@ public class ExpandCollapseTemplate : DataTemplateSelector
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with template selector](Images\Grouping\maui-datagrid-template-selector.gif)
+<img alt="DataGrid with template selector" src="Images/Grouping/maui-datagrid-template-selector.gif" width="404"/>
 
 N>
 * When using data template selector, performance issues occur as the conversion template views take time within the framework.

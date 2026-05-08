@@ -91,12 +91,12 @@ By default, columns are also auto-generated for custom type properties and paren
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}"
-                        AutoGenerateColumnsModeForCustomType="Both"
-                        NavigationMode="Cell"
-                        SelectionMode="Single">
-</syncfusion:SfDataGrid>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding Orders}"
+                           AutoGenerateColumnsModeForCustomType="Both"
+                           NavigationMode="Cell"
+                           SelectionMode="Single">
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
 SfDataGrid dataGrid = new SfDataGrid();
@@ -123,10 +123,10 @@ You can skip generating a column by handling the `SfDataGrid.AutoGeneratingColum
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}"
-                        AutoGeneratingColumn="DataGrid_AutoGeneratingColumn">
-</syncfusion:SfDataGrid>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding Orders}"
+                           AutoGeneratingColumn="DataGrid_AutoGeneratingColumn">
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 
 {% highlight c# %}
@@ -342,22 +342,22 @@ There are different types of columns available. Any column can be created based 
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                        AutoGenerateColumnsMode="None"
-                        ItemsSource="{Binding Orders}">
-    <syncfusion:SfDataGrid.Columns>
-        <syncfusion:DataGridNumericColumn HeaderText="Order ID"
-                                            MappingName="OrderID"/>
-        <syncfusion:DataGridTextColumn  HeaderText="Customer"
-                                        MappingName="Customer"/>
-        <syncfusion:DataGridTextColumn  HeaderText="Ship City"
-                                        MappingName="City"/>
-        <syncfusion:DataGridTextColumn  HeaderText="Ship Country"
-                                        MappingName="Country"/>
-        <syncfusion:DataGridTextColumn  HeaderText="Product"
-                                        MappingName="Product"/>
-    </syncfusion:SfDataGrid.Columns>
-</syncfusion:SfDataGrid>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           AutoGenerateColumnsMode="None"
+                           ItemsSource="{Binding Orders}">
+        <syncfusion:SfDataGrid.Columns>
+            <syncfusion:DataGridNumericColumn HeaderText="Order ID"
+                                              MappingName="OrderID"/>
+            <syncfusion:DataGridTextColumn  HeaderText="Customer"
+                                            MappingName="Customer"/>
+            <syncfusion:DataGridTextColumn  HeaderText="Ship City"
+                                            MappingName="City"/>
+            <syncfusion:DataGridTextColumn  HeaderText="Ship Country"
+                                            MappingName="Country"/>
+            <syncfusion:DataGridTextColumn  HeaderText="Product"
+                                            MappingName="Product"/>
+        </syncfusion:SfDataGrid.Columns>
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 
 {% highlight c# %}
@@ -434,10 +434,10 @@ SfDataGrid allows you show or hide columns at runtime by selecting or deselectin
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}"
-                        ShowColumnChooser="True">
-</syncfusion:SfDataGrid>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding Orders}"
+                           ShowColumnChooser="True">
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
 SfDataGrid dataGrid = new SfDataGrid();
@@ -454,11 +454,11 @@ You can also customize the header text of the Column Chooser using the `SfDataGr
 
 {% tabs %}
 {% highlight xaml %}
-<syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}"
-                        ColumnChooserHeaderText="Select Visible Columns"
-                        ShowColumnChooser="True">
-</syncfusion:SfDataGrid>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                           ItemsSource="{Binding Orders}"
+                           ColumnChooserHeaderText="Select Visible Columns"
+                           ShowColumnChooser="True">
+    </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
 SfDataGrid dataGrid = new SfDataGrid();
