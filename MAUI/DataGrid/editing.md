@@ -33,7 +33,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with editing](Images\editing\maui-datagrid-editing.png)
+<img alt="DataGrid with editing" src="Images\editing\maui-datagrid-editing.png">
 
 ## Column editing
 

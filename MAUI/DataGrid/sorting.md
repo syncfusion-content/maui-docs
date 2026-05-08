@@ -48,7 +48,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-![Programmatical sorting .NET MAUI DataGrid](Images\sorting\maui-datagrid-programmatic-sorting.png)
+<img alt="Programmatical sorting .NET MAUI DataGrid" src="Images\sorting\maui-datagrid-programmatic-sorting.png" width="404">
 
 ## Different modes of sorting
 
@@ -76,7 +76,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-![Multi sorting .NET MAUI DataGrid](Images\sorting\maui-datagrid-multi-sorting.gif)
+<img alt="Multi sorting .NET MAUI DataGrid" src="Images\sorting\maui-datagrid-multi-sorting.gif" width="404">
 
 ## Tri-state sorting
 
@@ -100,7 +100,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-![Tri-state sorting .NET MAUI DataGrid](Images\sorting\maui-datagrid-tristate-sorting.gif)
+<img alt="Tri-state sorting .NET MAUI DataGrid" src="Images\sorting\maui-datagrid-tristate-sorting.gif" width="404">
 
 ## Show sort number
 
@@ -124,7 +124,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-![Sort with sequence numbers .NET MAUI DataGrid](Images\sorting\maui-datagrid-show-sort-numbers.png)
+<img alt="Sort with sequence numbers .NET MAUI DataGrid" src="Images\sorting\maui-datagrid-show-sort-numbers.png" width="404">
 
 ## Sort column in double tap
 
@@ -402,7 +402,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with sort icon template](Images\sorting\maui-datagrid-sort-icon-template.png)
+<img alt="DataGrid with sort icon template" src="Images\sorting\maui-datagrid-sort-icon-template.png" width="404">
 
 ## Load sort icon through template selector
 
@@ -478,7 +478,7 @@ public class SortIconTemplate : DataTemplateSelector
 {% endhighlight %}
 {% endtabs %}
 
-![DataGrid with sort template selector](Images\sorting\maui-datagrid-sort-template-selector.png)
+<img alt="DataGrid with sort template selector" src="Images\sorting\maui-datagrid-sort-template-selector.png" width="404">
 
 N>
 * When using data template selector, performance issues occur as the conversion template views take time within the framework.

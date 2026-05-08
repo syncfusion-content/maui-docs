@@ -285,7 +285,7 @@ N> When loading Label as direct children of `Header` or `Content` of `AccordionI
     <syncfusion:SfAccordion.Items>
         <syncfusion:AccordionItem>
             <syncfusion:AccordionItem.Header>
-                <Grid  HeightRequest="48">
+                <Grid HeightRequest="48">
                     <Label Text="Robin Rane" Margin="16,14,0,14" CharacterSpacing="0.25" FontFamily="Roboto-Regular" FontSize="14" />
                 </Grid>
             </syncfusion:AccordionItem.Header>
@@ -499,7 +499,7 @@ The `SfAccordion` allows you to customize the expanding and collapsing duration 
     <syncfusion:SfAccordion.Items>
         <syncfusion:AccordionItem>
             <syncfusion:AccordionItem.Header>
-                <Grid  HeightRequest="48">
+                <Grid HeightRequest="48">
                     <Label Text="Robin Rane" Margin="16,14,0,14" CharacterSpacing="0.25" FontFamily="Roboto-Regular" FontSize="14" />
                 </Grid>
             </syncfusion:AccordionItem.Header>
@@ -702,7 +702,7 @@ You can customize the rate of change of a parameter over time or the animation s
     <syncfusion:SfAccordion.Items>
         <syncfusion:AccordionItem>
             <syncfusion:AccordionItem.Header>
-                <Grid  HeightRequest="48">
+                <Grid HeightRequest="48">
                     <Label Text="Robin Rane" Margin="16,14,0,14" CharacterSpacing="0.25" FontFamily="Roboto-Regular" FontSize="14" />
                 </Grid>
             </syncfusion:AccordionItem.Header>
@@ -905,7 +905,7 @@ The `SfAccordion` allows you to customize the scroll position of the expanded ac
     <syncfusion:SfAccordion.Items>
         <syncfusion:AccordionItem>
             <syncfusion:AccordionItem.Header>
-                <Grid  HeightRequest="48">
+                <Grid HeightRequest="48">
                     <Label Text="Robin Rane" Margin="16,14,0,14" CharacterSpacing="0.25" FontFamily="Roboto-Regular" FontSize="14" />
                 </Grid>
             </syncfusion:AccordionItem.Header>
@@ -1107,7 +1107,7 @@ The `BringIntoView` method is used to bring a specific item into view by scrolli
     <syncfusion:SfAccordion.Items>
         <syncfusion:AccordionItem>
             <syncfusion:AccordionItem.Header>
-                <Grid  HeightRequest="48">
+                <Grid HeightRequest="48">
                     <Label Text="Robin Rane" Margin="16,14,0,14" CharacterSpacing="0.25" FontFamily="Roboto-Regular" FontSize="14" />
                 </Grid>
             </syncfusion:AccordionItem.Header>
@@ -1166,7 +1166,7 @@ You can expand single or multiple items using the [ExpandMode](https://help.sync
     <syncfusion:SfAccordion.Items>
         <syncfusion:AccordionItem>
             <syncfusion:AccordionItem.Header>
-                <Grid  HeightRequest="48">
+                <Grid HeightRequest="48">
                     <Label Text="Robin Rane" Margin="16,14,0,14" CharacterSpacing="0.25" FontFamily="Roboto-Regular" FontSize="14" />
                 </Grid>
             </syncfusion:AccordionItem.Header>
@@ -1369,7 +1369,7 @@ The `SfAccordion` allows you to customize the vertical spacing between the accor
     <syncfusion:SfAccordion.Items>
         <syncfusion:AccordionItem>
             <syncfusion:AccordionItem.Header>
-                <Grid  HeightRequest="48">
+                <Grid HeightRequest="48">
                     <Label Text="Robin Rane" Margin="16,14,0,14" CharacterSpacing="0.25" FontFamily="Roboto-Regular" FontSize="14" />
                 </Grid>
             </syncfusion:AccordionItem.Header>

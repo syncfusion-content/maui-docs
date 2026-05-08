@@ -136,16 +136,16 @@ You can retrieve the width of the columns when it is auto-calculated based on th
 </ContentPage.BindingContext>
 
 <Grid RowDefinitions="*,50">
-        <syncfusion:SfDataGrid x:Name = "dataGrid"
-                               Grid.Row = "0"
-                               ItemsSource = "{Binding Orders}"
-                               ColumnWidthMode = "Auto" />
-        <Button Text = "Get Column Width"
-                Grid.Row = "1"
-                WidthRequest = "300"
-                HorizontalOptions = "Center"
-                Clicked = "Button_Clicked">
-        </Button>
+    <syncfusion:SfDataGrid x:Name = "dataGrid"
+                            Grid.Row = "0"
+                            ItemsSource = "{Binding Orders}"
+                            ColumnWidthMode = "Auto" />
+    <Button Text = "Get Column Width"
+            Grid.Row = "1"
+            WidthRequest = "300"
+            HorizontalOptions = "Center"
+            Clicked = "Button_Clicked">
+    </Button>
 </Grid>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
@@ -291,18 +291,18 @@ In case you want to modify the auto calculations of a column's header cell alone
 {% highlight c# %}
 public class CustomColumnSizer : DataGridColumnSizer
 {
-	protected override double OnComputeHeaderCellWidth(string cellValue, DataGridColumn column = null)
-	{
-		if (column.MappingName == "Customer")
-		{
+    protected override double OnComputeHeaderCellWidth(string cellValue, DataGridColumn column = null)
+    {
+        if (column.MappingName == "Customer")
+        {
             // return width based on your logic
             return 150;	
-		}
-		else
-		{
-			return base.OnComputeHeaderCellWidth(cellValue, column);
-		}
-	}
+        }
+        else
+        {
+            return base.OnComputeHeaderCellWidth(cellValue, column);
+        }
+    }
 }
 {% endhighlight %}
 {% endtabs %}

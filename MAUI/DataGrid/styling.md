@@ -49,7 +49,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Default Styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-defaultsyle.png)
+<img alt="Default Styling in .NET MAUI DataGrid" src="Images/styling/maui-datagrid-defaultsyle.png" width="404">
 
 ## Set datagrid style from application resources
 You can write custom style for the properties in the `SfDataGrid.DefaultStyle` class using the application resource and consume the custom style as a static resource to the DefaultStyle property for the required DataGrid used on that page.
@@ -94,7 +94,7 @@ You can write custom style for the properties in the `SfDataGrid.DefaultStyle` c
 {% endhighlight %}
 {% endtabs %}
 
-![App or Page resource Styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-app-page-resource.png)
+<img alt="App or Page resource Styling in .NET MAUI DataGrid" src="Images/styling/maui-datagrid-app-page-resource.png" width="404">
 
 ## Implicit styling
 The appearance of DataGrid (SfDataGrid) and its inner elements can be customized by the writing style of TargetType to those control. If the key is not specified, then the style will be applied to all the SfDataGrid in its scope. You can apply specific to [DataGridRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRow.html) or [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html) using various properties exposed.
@@ -126,7 +126,7 @@ The record cells can be customized by the writing style for [DataGridCell](https
 {% endhighlight %}
 {% endtabs %}
 
-![Record cell styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-recordcell-style.png)
+<img alt="Record cell styling in .NET MAUI DataGrid" src="Images/styling/maui-datagrid-recordcell-style.png" width="404">
 
 ### Styling Record row
 The record row can be customized by the writing style for [DataGridRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridRow.html) TargetType. 
@@ -148,7 +148,7 @@ The record row can be customized by the writing style for [DataGridRow](https://
 {% endhighlight %}
 {% endtabs %}
 
-![Record row styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-recordrow-style.png)
+<img alt="Record row styling in .NET MAUI DataGrid" src="Images/styling/maui-datagrid-recordrow-style.png" width="404">
 
 ### Styling Header cell
 The header cells can be customized by the writing style for [DataGridHeaderCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridHeaderCell.html) TargetType.
@@ -178,7 +178,7 @@ The header cells can be customized by the writing style for [DataGridHeaderCell]
 {% endhighlight %}
 {% endtabs %}
 
-![Header cell styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-headercell-style.png)
+<img alt="Header cell styling in .NET MAUI DataGrid" src="Images/styling/maui-datagrid-headercell-style.png" width="404">
 
 ### Styling Header row
 The header row can be customized by the writing style for [DataGridHeaderRow](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridHeaderRow.html) TargetType.
@@ -198,7 +198,7 @@ The header row can be customized by the writing style for [DataGridHeaderRow](ht
 {% endhighlight %}
 {% endtabs %}
 
-![Header row styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-headerrow-style.png)
+<img alt="Header row styling in .NET MAUI DataGrid" src="Images/styling/maui-datagrid-headerrow-style.png" width="404">
 
 ### Styling Table Summary cell
 The table summary cell can be customized by the writing style for [DataGridTableSummaryCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTableSummaryCell.html) TargetType.
@@ -224,7 +224,7 @@ The table summary cell can be customized by the writing style for [DataGridTable
 {% endhighlight %}
 {% endtabs %}
 
-![Table summary cell styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-table-summary-cell-style.png)
+<img alt="Table summary cell styling in .NET MAUI DataGrid" src="Images/styling/maui-datagrid-table-summary-cell-style.png" width="404">
 
 ### Styling Table Summary row
 The table summary row can be customized by the writing style for [DataGridTableSummaryRowView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridTableSummaryRowView.html) TargetType.
@@ -242,7 +242,7 @@ The table summary row can be customized by the writing style for [DataGridTableS
 {% endhighlight %}
 {% endtabs %}
 
-![Table summary row styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-table-summary-row-style.png)
+<img alt="Table summary row styling in .NET MAUI DataGrid" src="Images/styling/maui-datagrid-table-summary-row-style.png" width="404">
 
 ### Styling Caption Summary cell
 The caption summary cell can be customized by the writing style for [DataGridCaptionSummaryCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCaptionSummaryCell.html) TargetType.
@@ -268,7 +268,7 @@ The caption summary cell can be customized by the writing style for [DataGridCap
 {% endhighlight %}
 {% endtabs %}
 
-![Caption summary cell styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-caption-summary-cell-style.png)
+<img alt="Caption summary cell styling in .NET MAUI DataGrid" src="Images/styling/maui-datagrid-caption-summary-cell-style.png" width="404">
 
 ### Styling Caption Summary row
 The caption summary row can be customized by the writing style for [DataGridCaptionSummaryRowView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCaptionSummaryRowView.html) TargetType.
@@ -286,7 +286,7 @@ The caption summary row can be customized by the writing style for [DataGridCapt
 {% endhighlight %}
 {% endtabs %}
 
-![Caption summary row styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-caption-summary-row-style.png)
+<img alt="Caption summary row styling in .NET MAUI DataGrid" src="Images/styling/maui-datagrid-caption-summary-row-style.png" width="404">
 
 ### Styling Group Summary cell
 The group summary cell can be customized by the writing style for [DataGridGroupSummaryCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridGroupSummaryCell.html) TargetType.
@@ -312,7 +312,7 @@ The group summary cell can be customized by the writing style for [DataGridGroup
 {% endhighlight %}
 {% endtabs %}
 
-![Group summary cell styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-group-summary-cell-style.png)
+<img alt="Group summary cell styling in .NET MAUI DataGrid" src="Images/styling/maui-datagrid-group-summary-cell-style.png" width="404">
 
 ### Styling Group Summary row
 The group summary row can be customized by the writing style for [DataGridGroupSummaryRowView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridGroupSummaryRowView.html) TargetType.
@@ -330,7 +330,7 @@ The group summary row can be customized by the writing style for [DataGridGroupS
 {% endhighlight %}
 {% endtabs %}
 
-![Group summary row styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-group-summary-row-style.png)
+<img alt="Group summary row styling in .NET MAUI DataGrid" src="Images/styling/maui-datagrid-group-summary-row-style.png" width="404">
 
 ### Styling unbound row cell
 The unbound row cell can be customized by the writing style for [DataGridUnboundRowCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridUnboundRowCell.html) TargetType.
@@ -441,7 +441,7 @@ N> The column styling (explicit styling) takes higher priority than implicit sty
 {% endhighlight %}
 {% endtabs %}
 
-![Column Styling in .NET MAUI DataGrid](Images/styling/maui-datagrid-column-style.png)
+<img alt="Column Styling in .NET MAUI DataGrid" src="Images/styling/maui-datagrid-column-style.png" width="404">
 
 ## Applying alternate row style
 You can apply the alternative row color by using [AlternateRowBackground](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridStyle.html#Syncfusion_Maui_DataGrid_DataGridStyle_AlternateRowBackground) in `SfDataGrid.DefaultStyle`.
@@ -468,7 +468,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-![Alternative row style in .NET MAUI DataGrid](Images/styling/maui-datagrid-Alternativerow-style.png)
+<img alt="Alternative row style in .NET MAUI DataGrid" src="Images/styling/maui-datagrid-Alternativerow-style.png" width="404">
 
 ## Changing the alternation row count
 You can change the row count which should be considered to apply the background for alternate rows using the [SfDataGrid.AlternationRowCount](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AlternationRowCountProperty) property.
@@ -497,7 +497,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-![Changing the alternation row count in .NET MAUI DataGrid](Images/styling/maui-datagrid-Alternation-rowcount.png)
+<img alt="Changing the alternation row count in .NET MAUI DataGrid" src="Images/styling/maui-datagrid-Alternation-rowcount.png" width="404">
 
 ## Applying row hover background color
  
@@ -568,7 +568,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-![Changing the font style .NET MAUI DataGrid](Images/styling/maui-datagrid-font-style.png)
+<img alt="Changing the font style .NET MAUI DataGrid" src="Images/styling/maui-datagrid-font-style.png" width="404">
 
 ## Border customization
 The DataGrid provides support to change the visibility of the vertical and horizontal borders. Set desired value to [SfDataGrid.GridLinesVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_GridLinesVisibilityProperty) for data rows or [SfDataGrid.HeaderGridLinesVisibility](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_HeaderGridLinesVisibilityProperty) for header row.
@@ -602,7 +602,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
-![Both GridLinesVisibility in .NET MAUI DataGrid](Images/styling/maui-datagrid-both-gridlinesvisibility.png)
+<img alt="Both GridLinesVisibility in .NET MAUI DataGrid" src="Images/styling/maui-datagrid-both-gridlinesvisibility.png" width="404">
 
 ## Changing the border color
 

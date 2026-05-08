@@ -16,11 +16,11 @@ The .NET MAUI SfExpander comes with built-in support for customizing the appeara
 The [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html) allows you to customize the position of the header icon by using the [HeaderIconPosition](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.SfExpander.html#Syncfusion_Maui_Expander_SfExpander_HeaderIconPosition) property. By default, the header icon position is [End](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.ExpanderIconPosition.html#Syncfusion_Maui_Expander_ExpanderIconPosition_End). 
 
 {% tabs %}
-{% highlight xaml hl_lines="7 26 56 83" %}
+{% highlight xaml hl_lines="8 26 56 83" %}
 <ContentPage.Content>
     <ScrollView>
-        <StackLayout  HorizontalOptions="{OnPlatform MacCatalyst=Center,WinUI=Center}" >
-            <Label Text="Invoice: #FRU037020142097"  Opacity="1.0" VerticalTextAlignment="Center" Margin="0,0,0,5" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center"/>
+        <StackLayout HorizontalOptions="{OnPlatform MacCatalyst=Center,WinUI=Center}" >
+            <Label Text="Invoice: #FRU037020142097" Opacity="1.0" VerticalTextAlignment="Center" Margin="0,0,0,5" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center"/>
             <Border StrokeShape="RoundRectangle 8,8,8,8" Margin="{OnPlatform Default='8,0,8,8',WinUI='8,0,6,8',MacCatalyst='8,0,6,8'}" Stroke="#CAC4D0"  StrokeThickness="{OnPlatform MacCatalyst=2,Default=1}" WidthRequest="{OnPlatform MacCatalyst=460,WinUI=340}">
                 <syncfusion:SfExpander x:Name="expander"
                                        IsExpanded="true"
@@ -28,43 +28,43 @@ The [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.Sf
                     <syncfusion:SfExpander.Header>
                         <Grid RowDefinitions="48" ColumnDefinitions="35,*">
                             <Label Text="&#xe703;" FontSize="16" Margin="14,2,2,2" FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}'
-                                       VerticalOptions="Center" VerticalTextAlignment="Center"/>
+                                   VerticalOptions="Center" VerticalTextAlignment="Center"/>
                             <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="Invoice Date" FontSize="14" Grid.Column="1" VerticalOptions="Center"/>
                         </Grid>
                     </syncfusion:SfExpander.Header>
                     <syncfusion:SfExpander.Content>
                         <Grid Padding="18,8,0,18" >
-                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="11:03 AM, 15 January 2019" FontSize="14" VerticalOptions="Center"/>
+                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular" Text="11:03 AM, 15 January 2019" FontSize="14" VerticalOptions="Center"/>
                         </Grid>
                     </syncfusion:SfExpander.Content>
                 </syncfusion:SfExpander>
             </Border>
             <Border StrokeShape="RoundRectangle 8,8,8,8" Margin="{OnPlatform Default='8,0,8,8',WinUI='8,0,6,8',MacCatalyst='8,0,6,8'}" Stroke="#CAC4D0"  StrokeThickness="{OnPlatform MacCatalyst=2,Default=1}" WidthRequest="{OnPlatform MacCatalyst=460,WinUI=340}">
-                <syncfusion:SfExpander  AnimationDuration="200" 
-                                        IsExpanded="False"
-                                        HeaderIconPosition="Start">
+                <syncfusion:SfExpander AnimationDuration="200" 
+                                       IsExpanded="False"
+                                       HeaderIconPosition="Start">
                     <syncfusion:SfExpander.Header>
                         <Grid RowDefinitions="48" ColumnDefinitions="35,*">
                             <Label Text="&#xe701;" FontSize="16" Margin="14,2,2,2" FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}' VerticalOptions="Center" VerticalTextAlignment="Center"/>
-                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="Item(s)" FontSize="14" Grid.Column="1" VerticalOptions="Center"/>
+                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular" Text="Item(s)" FontSize="14" Grid.Column="1" VerticalOptions="Center"/>
                         </Grid>
                     </syncfusion:SfExpander.Header>
                     <syncfusion:SfExpander.Content>
                         <Grid Padding="18,8,18,18" RowDefinitions="20,20,20,20,20,20,20" ColumnDefinitions="*,*">
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="2018 Subaru Outback"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="All-Weather Mats" Grid.Row="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Door Edge Guard Kit" Grid.Row="2"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Rear Bumper Cover" Grid.Row="3"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Wheel Locks" Grid.Row="4"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Gas Full Tank" Grid.Row="5"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Total Amount" TextColor="{StaticResource Primary}" Grid.Row="6"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$35,705.00" Grid.Row="0" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$101.00" Grid.Row="1" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$162.00" Grid.Row="2" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$107.00" Grid.Row="3" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$81.00" Grid.Row="4" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$64.00" Grid.Row="5" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$36,220.00" TextColor="{StaticResource Primary}" Grid.Row="6" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="2018 Subaru Outback"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="All-Weather Mats" Grid.Row="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="Door Edge Guard Kit" Grid.Row="2"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="Rear Bumper Cover" Grid.Row="3"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="Wheel Locks" Grid.Row="4"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="Gas Full Tank" Grid.Row="5"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="Total Amount" TextColor="{StaticResource Primary}" Grid.Row="6"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$35,705.00" Grid.Row="0" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$101.00" Grid.Row="1" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$162.00" Grid.Row="2" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$107.00" Grid.Row="3" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$81.00" Grid.Row="4" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$64.00" Grid.Row="5" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$36,220.00" TextColor="{StaticResource Primary}" Grid.Row="6" Grid.Column="1"/>
                         </Grid>
                     </syncfusion:SfExpander.Content>
                 </syncfusion:SfExpander>
@@ -76,22 +76,22 @@ The [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.Sf
                     <syncfusion:SfExpander.Header>
                         <Grid RowDefinitions="48" ColumnDefinitions="35,*">
                             <Label Text="&#xe702;" FontSize="16" Margin="14,2,2,2" FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}' VerticalOptions="Center" VerticalTextAlignment="Center"/>
-                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="Payment Details" FontSize="14" Grid.Column="1" VerticalOptions="Center"/>
+                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular" Text="Payment Details" FontSize="14" Grid.Column="1" VerticalOptions="Center"/>
                         </Grid>
                     </syncfusion:SfExpander.Header>
                     <syncfusion:SfExpander.Content>
-                        <Grid Padding="18,8,18,18"  RowSpacing="6" RowDefinitions="20,20,20" ColumnDefinitions="*,*">
+                        <Grid Padding="18,8,18,18" RowSpacing="6" RowDefinitions="20,20,20" ColumnDefinitions="*,*">
                             <Grid.Resources>
                                 <Style TargetType="Label">
                                     <Setter Property="FontFamily" Value="Roboto-Regular"/>
                                 </Style>
                             </Grid.Resources>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Card Payment"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Third-Party coupons" Grid.Row="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Total Amount Paid" TextColor="{StaticResource Primary}" Grid.Row="2"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$31,200.00" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$5,000.00" Grid.Row="1" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$36,200.00" TextColor="{StaticResource Primary}" Grid.Row="2" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="Card Payment"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="Third-Party coupons" Grid.Row="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="Total Amount Paid" TextColor="{StaticResource Primary}" Grid.Row="2"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$31,200.00" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$5,000.00" Grid.Row="1" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$36,200.00" TextColor="{StaticResource Primary}" Grid.Row="2" Grid.Column="1"/>
                         </Grid>
                     </syncfusion:SfExpander.Content>
                 </syncfusion:SfExpander>
@@ -113,9 +113,9 @@ The [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.Sf
                                     <Setter Property="FontFamily" Value="Roboto-Regular"/>
                                 </Style>
                             </Grid.Resources>
-                            <Label CharacterSpacing="0.25"  FontSize="14" Text="Alex" FontAttributes="Bold"/>
-                            <Label CharacterSpacing="0.25"  FontSize="14" Text="No.8 Blossom St, Washington, DC 20019" Grid.Row="1"/>
-                            <Label CharacterSpacing="0.25"  FontSize="14" Text="(202) 547-3555" Grid.Row="2"/>
+                            <Label CharacterSpacing="0.25" FontSize="14" Text="Alex" FontAttributes="Bold"/>
+                            <Label CharacterSpacing="0.25" FontSize="14" Text="No.8 Blossom St, Washington, DC 20019" Grid.Row="1"/>
+                            <Label CharacterSpacing="0.25" FontSize="14" Text="(202) 547-3555" Grid.Row="2"/>
                         </Grid>
                     </syncfusion:SfExpander.Content>
                 </syncfusion:SfExpander>
@@ -276,9 +276,7 @@ public partial class MainPage : ContentPage
             }, 1, i);
         }
 
-        return CreateBorder(
-            CreateExpander(false, "\ue701", "Item(s)", grid)
-        );
+        return CreateBorder(CreateExpander(false, "\ue701", "Item(s)", grid));
     }
 
     private View CreatePaymentDetails()
@@ -315,9 +313,7 @@ public partial class MainPage : ContentPage
             HorizontalOptions = LayoutOptions.End
         }, 1, 2);
 
-        return CreateBorder(
-            CreateExpander(false, "\ue702", "Payment Details", grid)
-        );
+        return CreateBorder(CreateExpander(false, "\ue702", "Payment Details", grid));
     }
 
     private View CreateAddress()
@@ -347,9 +343,7 @@ public partial class MainPage : ContentPage
             Stroke = Color.FromArgb("#CAC4D0"),
             StrokeThickness = DeviceInfo.Platform == DevicePlatform.MacCatalyst ? 2 : 1,
             StrokeShape = new RoundRectangle { CornerRadius = 8 },
-            WidthRequest =
-                DeviceInfo.Platform == DevicePlatform.MacCatalyst ? 460 :
-                DeviceInfo.Platform == DevicePlatform.WinUI ? 340 : -1,
+            WidthRequest = DeviceInfo.Platform == DevicePlatform.MacCatalyst ? 460 : DeviceInfo.Platform == DevicePlatform.WinUI ? 340 : -1,
             Margin = new Thickness(8, 0, 8, 8),
             Content = content
         };
@@ -368,8 +362,8 @@ The [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.Sf
 {% highlight xaml hl_lines="8 81" %}
 <ContentPage.Content>
     <ScrollView>
-        <StackLayout  HorizontalOptions="{OnPlatform MacCatalyst=Center,WinUI=Center}" >
-            <Label Text="Invoice: #FRU037020142097"  Opacity="1.0" VerticalTextAlignment="Center" Margin="0,0,0,5" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center"/>
+        <StackLayout HorizontalOptions="{OnPlatform MacCatalyst=Center,WinUI=Center}" >
+            <Label Text="Invoice: #FRU037020142097" Opacity="1.0" VerticalTextAlignment="Center" Margin="0,0,0,5" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center"/>
             <Border StrokeShape="RoundRectangle 8,8,8,8" Margin="{OnPlatform Default='8,0,8,8',WinUI='8,0,6,8',MacCatalyst='8,0,6,8'}" Stroke="#CAC4D0"  StrokeThickness="{OnPlatform MacCatalyst=2,Default=1}" WidthRequest="{OnPlatform MacCatalyst=460,WinUI=340}">
                 <syncfusion:SfExpander x:Name="expander"
                                        IsExpanded="true"
@@ -377,42 +371,42 @@ The [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.Sf
                     <syncfusion:SfExpander.Header>
                         <Grid RowDefinitions="48" ColumnDefinitions="35,*">
                             <Label Text="&#xe703;" FontSize="16" Margin="14,2,2,2" FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}'
-                                       VerticalOptions="Center" VerticalTextAlignment="Center"/>
-                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="Invoice Date" FontSize="14" Grid.Column="1" VerticalOptions="Center"/>
+                                   VerticalOptions="Center" VerticalTextAlignment="Center"/>
+                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular" Text="Invoice Date" FontSize="14" Grid.Column="1" VerticalOptions="Center"/>
                         </Grid>
                     </syncfusion:SfExpander.Header>
                     <syncfusion:SfExpander.Content>
                         <Grid Padding="18,8,0,18" >
-                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="11:03 AM, 15 January 2019" FontSize="14" VerticalOptions="Center"/>
+                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular" Text="11:03 AM, 15 January 2019" FontSize="14" VerticalOptions="Center"/>
                         </Grid>
                     </syncfusion:SfExpander.Content>
                 </syncfusion:SfExpander>
             </Border>
             <Border StrokeShape="RoundRectangle 8,8,8,8" Margin="{OnPlatform Default='8,0,8,8',WinUI='8,0,6,8',MacCatalyst='8,0,6,8'}" Stroke="#CAC4D0"  StrokeThickness="{OnPlatform MacCatalyst=2,Default=1}" WidthRequest="{OnPlatform MacCatalyst=460,WinUI=340}">
-                <syncfusion:SfExpander  AnimationDuration="200" 
-                                        IsExpanded="False">
+                <syncfusion:SfExpander AnimationDuration="200" 
+                                       IsExpanded="False">
                     <syncfusion:SfExpander.Header>
                         <Grid RowDefinitions="48" ColumnDefinitions="35,*">
                             <Label Text="&#xe701;" FontSize="16" Margin="14,2,2,2" FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}' VerticalOptions="Center" VerticalTextAlignment="Center"/>
-                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="Item(s)" FontSize="14" Grid.Column="1" VerticalOptions="Center"/>
+                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular" Text="Item(s)" FontSize="14" Grid.Column="1" VerticalOptions="Center"/>
                         </Grid>
                     </syncfusion:SfExpander.Header>
                     <syncfusion:SfExpander.Content>
                         <Grid Padding="18,8,18,18" RowDefinitions="20,20,20,20,20,20,20" ColumnDefinitions="*,*">
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="2018 Subaru Outback"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="All-Weather Mats" Grid.Row="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Door Edge Guard Kit" Grid.Row="2"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Rear Bumper Cover" Grid.Row="3"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Wheel Locks" Grid.Row="4"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Gas Full Tank" Grid.Row="5"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Total Amount" TextColor="{StaticResource Primary}" Grid.Row="6"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$35,705.00" Grid.Row="0" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$101.00" Grid.Row="1" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$162.00" Grid.Row="2" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$107.00" Grid.Row="3" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$81.00" Grid.Row="4" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$64.00" Grid.Row="5" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$36,220.00" TextColor="{StaticResource Primary}" Grid.Row="6" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="2018 Subaru Outback"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="All-Weather Mats" Grid.Row="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="Door Edge Guard Kit" Grid.Row="2"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="Rear Bumper Cover" Grid.Row="3"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="Wheel Locks" Grid.Row="4"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="Gas Full Tank" Grid.Row="5"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="Total Amount" TextColor="{StaticResource Primary}" Grid.Row="6"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$35,705.00" Grid.Row="0" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$101.00" Grid.Row="1" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$162.00" Grid.Row="2" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$107.00" Grid.Row="3" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$81.00" Grid.Row="4" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$64.00" Grid.Row="5" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$36,220.00" TextColor="{StaticResource Primary}" Grid.Row="6" Grid.Column="1"/>
                         </Grid>
                     </syncfusion:SfExpander.Content>
                 </syncfusion:SfExpander>
@@ -423,22 +417,22 @@ The [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.Sf
                     <syncfusion:SfExpander.Header>
                         <Grid RowDefinitions="48" ColumnDefinitions="35,*">
                             <Label Text="&#xe702;" FontSize="16" Margin="14,2,2,2" FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}' VerticalOptions="Center" VerticalTextAlignment="Center"/>
-                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="Payment Details" FontSize="14" Grid.Column="1" VerticalOptions="Center"/>
+                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular" Text="Payment Details" FontSize="14" Grid.Column="1" VerticalOptions="Center"/>
                         </Grid>
                     </syncfusion:SfExpander.Header>
                     <syncfusion:SfExpander.Content>
-                        <Grid Padding="18,8,18,18"  RowSpacing="6" RowDefinitions="20,20,20" ColumnDefinitions="*,*">
+                        <Grid Padding="18,8,18,18" RowSpacing="6" RowDefinitions="20,20,20" ColumnDefinitions="*,*">
                             <Grid.Resources>
                                 <Style TargetType="Label">
                                     <Setter Property="FontFamily" Value="Roboto-Regular"/>
                                 </Style>
                             </Grid.Resources>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Card Payment"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Third-Party coupons" Grid.Row="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Total Amount Paid" TextColor="{StaticResource Primary}" Grid.Row="2"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$31,200.00" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$5,000.00" Grid.Row="1" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$36,200.00" TextColor="{StaticResource Primary}" Grid.Row="2" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="Card Payment"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="Third-Party coupons" Grid.Row="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="Total Amount Paid" TextColor="{StaticResource Primary}" Grid.Row="2"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$31,200.00" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$5,000.00" Grid.Row="1" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$36,200.00" TextColor="{StaticResource Primary}" Grid.Row="2" Grid.Column="1"/>
                         </Grid>
                     </syncfusion:SfExpander.Content>
                 </syncfusion:SfExpander>
@@ -460,9 +454,9 @@ The [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.Sf
                                     <Setter Property="FontFamily" Value="Roboto-Regular"/>
                                 </Style>
                             </Grid.Resources>
-                            <Label CharacterSpacing="0.25"  FontSize="14" Text="Alex" FontAttributes="Bold"/>
-                            <Label CharacterSpacing="0.25"  FontSize="14" Text="No.8 Blossom St, Washington, DC 20019" Grid.Row="1"/>
-                            <Label CharacterSpacing="0.25"  FontSize="14" Text="(202) 547-3555" Grid.Row="2"/>
+                            <Label CharacterSpacing="0.25" FontSize="14" Text="Alex" FontAttributes="Bold"/>
+                            <Label CharacterSpacing="0.25" FontSize="14" Text="No.8 Blossom St, Washington, DC 20019" Grid.Row="1"/>
+                            <Label CharacterSpacing="0.25" FontSize="14" Text="(202) 547-3555" Grid.Row="2"/>
                         </Grid>
                     </syncfusion:SfExpander.Content>
                 </syncfusion:SfExpander>
@@ -623,9 +617,7 @@ public partial class MainPage : ContentPage
             }, 1, i);
         }
 
-        return CreateBorder(
-            CreateExpander(false, "\ue701", "Item(s)", grid)
-        );
+        return CreateBorder(CreateExpander(false, "\ue701", "Item(s)", grid));
     }
 
     private View CreatePaymentDetails()
@@ -662,9 +654,7 @@ public partial class MainPage : ContentPage
             HorizontalOptions = LayoutOptions.End
         }, 1, 2);
 
-        return CreateBorder(
-            CreateExpander(false, "\ue702", "Payment Details", grid)
-        );
+        return CreateBorder(CreateExpander(false, "\ue702", "Payment Details", grid));
     }
 
     private View CreateAddress()
@@ -694,9 +684,7 @@ public partial class MainPage : ContentPage
             Stroke = Color.FromArgb("#CAC4D0"),
             StrokeThickness = DeviceInfo.Platform == DevicePlatform.MacCatalyst ? 2 : 1,
             StrokeShape = new RoundRectangle { CornerRadius = 8 },
-            WidthRequest =
-                DeviceInfo.Platform == DevicePlatform.MacCatalyst ? 460 :
-                DeviceInfo.Platform == DevicePlatform.WinUI ? 340 : -1,
+            WidthRequest = DeviceInfo.Platform == DevicePlatform.MacCatalyst ? 460 : DeviceInfo.Platform == DevicePlatform.WinUI ? 340 : -1,
             Margin = new Thickness(8, 0, 8, 8),
             Content = content
         };
@@ -715,8 +703,8 @@ The [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.Sf
 {% highlight xaml hl_lines="8 26 56 83" %}
 <ContentPage.Content>
     <ScrollView>
-        <StackLayout  HorizontalOptions="{OnPlatform MacCatalyst=Center,WinUI=Center}" >
-            <Label Text="Invoice: #FRU037020142097"  Opacity="1.0" VerticalTextAlignment="Center" Margin="0,0,0,5" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center"/>
+        <StackLayout HorizontalOptions="{OnPlatform MacCatalyst=Center,WinUI=Center}" >
+            <Label Text="Invoice: #FRU037020142097" Opacity="1.0" VerticalTextAlignment="Center" Margin="0,0,0,5" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center"/>
             <Border StrokeShape="RoundRectangle 8,8,8,8" Margin="{OnPlatform Default='8,0,8,8',WinUI='8,0,6,8',MacCatalyst='8,0,6,8'}" Stroke="#CAC4D0"  StrokeThickness="{OnPlatform MacCatalyst=2,Default=1}" WidthRequest="{OnPlatform MacCatalyst=460,WinUI=340}">
                 <syncfusion:SfExpander x:Name="expander"
                                        IsExpanded="true"
@@ -724,43 +712,43 @@ The [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.Sf
                     <syncfusion:SfExpander.Header>
                         <Grid RowDefinitions="48" ColumnDefinitions="35,*">
                             <Label Text="&#xe703;" FontSize="16" Margin="14,2,2,2" FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}'
-                                       VerticalOptions="Center" VerticalTextAlignment="Center"/>
-                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="Invoice Date" FontSize="14" Grid.Column="1" VerticalOptions="Center"/>
+                                   VerticalOptions="Center" VerticalTextAlignment="Center"/>
+                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular" Text="Invoice Date" FontSize="14" Grid.Column="1" VerticalOptions="Center"/>
                         </Grid>
                     </syncfusion:SfExpander.Header>
                     <syncfusion:SfExpander.Content>
                         <Grid Padding="18,8,0,18" >
-                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="11:03 AM, 15 January 2019" FontSize="14" VerticalOptions="Center"/>
+                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular" Text="11:03 AM, 15 January 2019" FontSize="14" VerticalOptions="Center"/>
                         </Grid>
                     </syncfusion:SfExpander.Content>
                 </syncfusion:SfExpander>
             </Border>
             <Border StrokeShape="RoundRectangle 8,8,8,8" Margin="{OnPlatform Default='8,0,8,8',WinUI='8,0,6,8',MacCatalyst='8,0,6,8'}" Stroke="#CAC4D0"  StrokeThickness="{OnPlatform MacCatalyst=2,Default=1}" WidthRequest="{OnPlatform MacCatalyst=460,WinUI=340}">
-                <syncfusion:SfExpander  AnimationDuration="200" 
-                                        IsExpanded="False"
-                                        HeaderIconColor="Brown">
+                <syncfusion:SfExpander AnimationDuration="200" 
+                                       IsExpanded="False"
+                                       HeaderIconColor="Brown">
                     <syncfusion:SfExpander.Header>
                         <Grid RowDefinitions="48" ColumnDefinitions="35,*">
                             <Label Text="&#xe701;" FontSize="16" Margin="14,2,2,2" FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}' VerticalOptions="Center" VerticalTextAlignment="Center"/>
-                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="Item(s)" FontSize="14" Grid.Column="1" VerticalOptions="Center"/>
+                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular" Text="Item(s)" FontSize="14" Grid.Column="1" VerticalOptions="Center"/>
                         </Grid>
                     </syncfusion:SfExpander.Header>
                     <syncfusion:SfExpander.Content>
                         <Grid Padding="18,8,18,18" RowDefinitions="20,20,20,20,20,20,20" ColumnDefinitions="*,*">
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="2018 Subaru Outback"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="All-Weather Mats" Grid.Row="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Door Edge Guard Kit" Grid.Row="2"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Rear Bumper Cover" Grid.Row="3"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Wheel Locks" Grid.Row="4"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Gas Full Tank" Grid.Row="5"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Total Amount" TextColor="{StaticResource Primary}" Grid.Row="6"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$35,705.00" Grid.Row="0" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$101.00" Grid.Row="1" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$162.00" Grid.Row="2" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$107.00" Grid.Row="3" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$81.00" Grid.Row="4" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$64.00" Grid.Row="5" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$36,220.00" TextColor="{StaticResource Primary}" Grid.Row="6" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="2018 Subaru Outback"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="All-Weather Mats" Grid.Row="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="Door Edge Guard Kit" Grid.Row="2"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="Rear Bumper Cover" Grid.Row="3"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="Wheel Locks" Grid.Row="4"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="Gas Full Tank" Grid.Row="5"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="Total Amount" TextColor="{StaticResource Primary}" Grid.Row="6"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$35,705.00" Grid.Row="0" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$101.00" Grid.Row="1" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$162.00" Grid.Row="2" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$107.00" Grid.Row="3" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$81.00" Grid.Row="4" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$64.00" Grid.Row="5" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$36,220.00" TextColor="{StaticResource Primary}" Grid.Row="6" Grid.Column="1"/>
                         </Grid>
                     </syncfusion:SfExpander.Content>
                 </syncfusion:SfExpander>
@@ -772,22 +760,22 @@ The [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.Sf
                     <syncfusion:SfExpander.Header>
                         <Grid RowDefinitions="48" ColumnDefinitions="35,*">
                             <Label Text="&#xe702;" FontSize="16" Margin="14,2,2,2" FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}' VerticalOptions="Center" VerticalTextAlignment="Center"/>
-                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="Payment Details" FontSize="14" Grid.Column="1" VerticalOptions="Center"/>
+                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular" Text="Payment Details" FontSize="14" Grid.Column="1" VerticalOptions="Center"/>
                         </Grid>
                     </syncfusion:SfExpander.Header>
                     <syncfusion:SfExpander.Content>
-                        <Grid Padding="18,8,18,18"  RowSpacing="6" RowDefinitions="20,20,20" ColumnDefinitions="*,*">
+                        <Grid Padding="18,8,18,18" RowSpacing="6" RowDefinitions="20,20,20" ColumnDefinitions="*,*">
                             <Grid.Resources>
                                 <Style TargetType="Label">
                                     <Setter Property="FontFamily" Value="Roboto-Regular"/>
                                 </Style>
                             </Grid.Resources>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Card Payment"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Third-Party coupons" Grid.Row="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Total Amount Paid" TextColor="{StaticResource Primary}" Grid.Row="2"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$31,200.00" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$5,000.00" Grid.Row="1" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$36,200.00" TextColor="{StaticResource Primary}" Grid.Row="2" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="Card Payment"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="Third-Party coupons" Grid.Row="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="Total Amount Paid" TextColor="{StaticResource Primary}" Grid.Row="2"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$31,200.00" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$5,000.00" Grid.Row="1" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$36,200.00" TextColor="{StaticResource Primary}" Grid.Row="2" Grid.Column="1"/>
                         </Grid>
                     </syncfusion:SfExpander.Content>
                 </syncfusion:SfExpander>
@@ -809,9 +797,9 @@ The [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Expander.Sf
                                     <Setter Property="FontFamily" Value="Roboto-Regular"/>
                                 </Style>
                             </Grid.Resources>
-                            <Label CharacterSpacing="0.25"  FontSize="14" Text="Alex" FontAttributes="Bold"/>
-                            <Label CharacterSpacing="0.25"  FontSize="14" Text="No.8 Blossom St, Washington, DC 20019" Grid.Row="1"/>
-                            <Label CharacterSpacing="0.25"  FontSize="14" Text="(202) 547-3555" Grid.Row="2"/>
+                            <Label CharacterSpacing="0.25" FontSize="14" Text="Alex" FontAttributes="Bold"/>
+                            <Label CharacterSpacing="0.25" FontSize="14" Text="No.8 Blossom St, Washington, DC 20019" Grid.Row="1"/>
+                            <Label CharacterSpacing="0.25" FontSize="14" Text="(202) 547-3555" Grid.Row="2"/>
                         </Grid>
                     </syncfusion:SfExpander.Content>
                 </syncfusion:SfExpander>
@@ -972,9 +960,7 @@ public partial class MainPage : ContentPage
             }, 1, i);
         }
 
-        return CreateBorder(
-            CreateExpander(false, "\ue701", "Item(s)", grid)
-        );
+        return CreateBorder(CreateExpander(false, "\ue701", "Item(s)", grid));
     }
 
     private View CreatePaymentDetails()
@@ -1011,9 +997,7 @@ public partial class MainPage : ContentPage
             HorizontalOptions = LayoutOptions.End
         }, 1, 2);
 
-        return CreateBorder(
-            CreateExpander(false, "\ue702", "Payment Details", grid)
-        );
+        return CreateBorder(CreateExpander(false, "\ue702", "Payment Details", grid));
     }
 
     private View CreateAddress()
@@ -1043,9 +1027,7 @@ public partial class MainPage : ContentPage
             Stroke = Color.FromArgb("#CAC4D0"),
             StrokeThickness = DeviceInfo.Platform == DevicePlatform.MacCatalyst ? 2 : 1,
             StrokeShape = new RoundRectangle { CornerRadius = 8 },
-            WidthRequest =
-                DeviceInfo.Platform == DevicePlatform.MacCatalyst ? 460 :
-                DeviceInfo.Platform == DevicePlatform.WinUI ? 340 : -1,
+            WidthRequest = DeviceInfo.Platform == DevicePlatform.MacCatalyst ? 460 : DeviceInfo.Platform == DevicePlatform.WinUI ? 340 : -1,
             Margin = new Thickness(8, 0, 8, 8),
             Content = content
         };
@@ -1069,21 +1051,21 @@ The appearance of the [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusio
 {% highlight xaml hl_lines="20 49 131 160" %}
 <ContentPage.Content>
     <ScrollView>
-        <StackLayout  HorizontalOptions="{OnPlatform MacCatalyst=Center,WinUI=Center}" >
-            <Label Text="Invoice: #FRU037020142097"  Opacity="1.0" VerticalTextAlignment="Center" Margin="0,0,0,5" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center"/>
+        <StackLayout HorizontalOptions="{OnPlatform MacCatalyst=Center,WinUI=Center}" >
+            <Label Text="Invoice: #FRU037020142097" Opacity="1.0" VerticalTextAlignment="Center" Margin="0,0,0,5" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center"/>
             <Border StrokeShape="RoundRectangle 8,8,8,8" Margin="{OnPlatform Default='8,0,8,8',WinUI='8,0,6,8',MacCatalyst='8,0,6,8'}" Stroke="#CAC4D0"  StrokeThickness="{OnPlatform MacCatalyst=2,Default=1}" WidthRequest="{OnPlatform MacCatalyst=460,WinUI=340}">
                 <syncfusion:SfExpander x:Name="expander"
                                        IsExpanded="true">
                     <syncfusion:SfExpander.Header>
                         <Grid RowDefinitions="48" ColumnDefinitions="35,*">
                             <Label Text="&#xe703;" FontSize="16" Margin="14,2,2,2" FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}'
-                                       VerticalOptions="Center" VerticalTextAlignment="Center"/>
-                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="Invoice Date" FontSize="14" Grid.Column="1" VerticalOptions="Center"/>
+                                   VerticalOptions="Center" VerticalTextAlignment="Center"/>
+                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular" Text="Invoice Date" FontSize="14" Grid.Column="1" VerticalOptions="Center"/>
                         </Grid>
                     </syncfusion:SfExpander.Header>
                     <syncfusion:SfExpander.Content>
                         <Grid Padding="18,8,0,18" >
-                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="11:03 AM, 15 January 2019" FontSize="14" VerticalOptions="Center"/>
+                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular" Text="11:03 AM, 15 January 2019" FontSize="14" VerticalOptions="Center"/>
                         </Grid>
                     </syncfusion:SfExpander.Content>
                     <VisualStateManager.VisualStateGroups>
@@ -1119,31 +1101,31 @@ The appearance of the [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusio
                 </syncfusion:SfExpander>
             </Border>
             <Border StrokeShape="RoundRectangle 8,8,8,8" Margin="{OnPlatform Default='8,0,8,8',WinUI='8,0,6,8',MacCatalyst='8,0,6,8'}" Stroke="#CAC4D0"  StrokeThickness="{OnPlatform MacCatalyst=2,Default=1}" WidthRequest="{OnPlatform MacCatalyst=460,WinUI=340}">
-                <syncfusion:SfExpander  AnimationDuration="200" 
-                                        IsExpanded="False"
-                                        HeaderIconColor="Brown">
+                <syncfusion:SfExpander AnimationDuration="200" 
+                                       IsExpanded="False"
+                                       HeaderIconColor="Brown">
                     <syncfusion:SfExpander.Header>
                         <Grid RowDefinitions="48" ColumnDefinitions="35,*">
                             <Label Text="&#xe701;" FontSize="16" Margin="14,2,2,2" FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}' VerticalOptions="Center" VerticalTextAlignment="Center"/>
-                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="Item(s)" FontSize="14" Grid.Column="1" VerticalOptions="Center"/>
+                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular" Text="Item(s)" FontSize="14" Grid.Column="1" VerticalOptions="Center"/>
                         </Grid>
                     </syncfusion:SfExpander.Header>
                     <syncfusion:SfExpander.Content>
                         <Grid Padding="18,8,18,18" RowDefinitions="20,20,20,20,20,20,20" ColumnDefinitions="*,*">
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="2018 Subaru Outback"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="All-Weather Mats" Grid.Row="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Door Edge Guard Kit" Grid.Row="2"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Rear Bumper Cover" Grid.Row="3"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Wheel Locks" Grid.Row="4"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Gas Full Tank" Grid.Row="5"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Total Amount" TextColor="{StaticResource Primary}" Grid.Row="6"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$35,705.00" Grid.Row="0" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$101.00" Grid.Row="1" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$162.00" Grid.Row="2" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$107.00" Grid.Row="3" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$81.00" Grid.Row="4" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$64.00" Grid.Row="5" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$36,220.00" TextColor="{StaticResource Primary}" Grid.Row="6" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="2018 Subaru Outback"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="All-Weather Mats" Grid.Row="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="Door Edge Guard Kit" Grid.Row="2"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="Rear Bumper Cover" Grid.Row="3"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="Wheel Locks" Grid.Row="4"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="Gas Full Tank" Grid.Row="5"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="Total Amount" TextColor="{StaticResource Primary}" Grid.Row="6"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$35,705.00" Grid.Row="0" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$101.00" Grid.Row="1" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$162.00" Grid.Row="2" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$107.00" Grid.Row="3" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$81.00" Grid.Row="4" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$64.00" Grid.Row="5" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$36,220.00" TextColor="{StaticResource Primary}" Grid.Row="6" Grid.Column="1"/>
                         </Grid>
                     </syncfusion:SfExpander.Content>
                 </syncfusion:SfExpander>
@@ -1155,22 +1137,22 @@ The appearance of the [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusio
                     <syncfusion:SfExpander.Header>
                         <Grid RowDefinitions="48" ColumnDefinitions="35,*">
                             <Label Text="&#xe702;" FontSize="16" Margin="14,2,2,2" FontFamily='{OnPlatform Android=AccordionFontIcons.ttf#,WinUI=AccordionFontIcons.ttf#AccordionFontIcons,MacCatalyst=AccordionFontIcons,iOS=AccordionFontIcons}' VerticalOptions="Center" VerticalTextAlignment="Center"/>
-                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular"  Text="Payment Details" FontSize="14" Grid.Column="1" VerticalOptions="Center"/>
+                            <Label CharacterSpacing="0.25" FontFamily="Roboto-Regular" Text="Payment Details" FontSize="14" Grid.Column="1" VerticalOptions="Center"/>
                         </Grid>
                     </syncfusion:SfExpander.Header>
                     <syncfusion:SfExpander.Content>
-                        <Grid Padding="18,8,18,18"  RowSpacing="6" RowDefinitions="20,20,20" ColumnDefinitions="*,*">
+                        <Grid Padding="18,8,18,18" RowSpacing="6" RowDefinitions="20,20,20" ColumnDefinitions="*,*">
                             <Grid.Resources>
                                 <Style TargetType="Label">
                                     <Setter Property="FontFamily" Value="Roboto-Regular"/>
                                 </Style>
                             </Grid.Resources>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Card Payment"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Third-Party coupons" Grid.Row="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  Text="Total Amount Paid" TextColor="{StaticResource Primary}" Grid.Row="2"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$31,200.00" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$5,000.00" Grid.Row="1" Grid.Column="1"/>
-                            <Label FontSize="14" CharacterSpacing="0.25"  HorizontalOptions="End" Text="$36,200.00" TextColor="{StaticResource Primary}" Grid.Row="2" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="Card Payment"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="Third-Party coupons" Grid.Row="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" Text="Total Amount Paid" TextColor="{StaticResource Primary}" Grid.Row="2"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$31,200.00" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$5,000.00" Grid.Row="1" Grid.Column="1"/>
+                            <Label FontSize="14" CharacterSpacing="0.25" HorizontalOptions="End" Text="$36,200.00" TextColor="{StaticResource Primary}" Grid.Row="2" Grid.Column="1"/>
                         </Grid>
                     </syncfusion:SfExpander.Content>
                 </syncfusion:SfExpander>
@@ -1192,9 +1174,9 @@ The appearance of the [SfExpander](https://help.syncfusion.com/cr/maui/Syncfusio
                                     <Setter Property="FontFamily" Value="Roboto-Regular"/>
                                 </Style>
                             </Grid.Resources>
-                            <Label CharacterSpacing="0.25"  FontSize="14" Text="Alex" FontAttributes="Bold"/>
-                            <Label CharacterSpacing="0.25"  FontSize="14" Text="No.8 Blossom St, Washington, DC 20019" Grid.Row="1"/>
-                            <Label CharacterSpacing="0.25"  FontSize="14" Text="(202) 547-3555" Grid.Row="2"/>
+                            <Label CharacterSpacing="0.25" FontSize="14" Text="Alex" FontAttributes="Bold"/>
+                            <Label CharacterSpacing="0.25" FontSize="14" Text="No.8 Blossom St, Washington, DC 20019" Grid.Row="1"/>
+                            <Label CharacterSpacing="0.25" FontSize="14" Text="(202) 547-3555" Grid.Row="2"/>
                         </Grid>
                     </syncfusion:SfExpander.Content>
                     <VisualStateManager.VisualStateGroups>
