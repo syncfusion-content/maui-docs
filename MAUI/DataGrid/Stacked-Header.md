@@ -160,7 +160,7 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-![Multilelvel/multiple headers in MAUI DataGrid](Images/stacked-headers/DefaultStackedHeader.png)
+<img alt="DataGrid with Grouping" src="Images/stacked-headers/DefaultStackedHeader.png" width="424"/>
 
 ## Adding child columns
 
@@ -708,7 +708,7 @@ public partial class MainPage : ContentPage
 {% endhighlight %}
 {% endtabs %}
 
-![Customizing the appearance of stacked header row](Images/stacked-headers/StackedHeaderWithStyle.png)
+<img alt="Customizing the appearance of stacked header row" src="Images/stacked-headers/StackedHeaderWithStyle.png" width="424"/>
 
 ### Conditional styling
 
@@ -811,7 +811,7 @@ public class CellStyleConverter : IValueConverter
 {% endhighlight %}
 {% endtabs %}
 
-![Customizing the background of stacked header row based on index](Images/stacked-headers/StackedHeaderConditionalStyle.png)
+<img alt="Customizing the background of stacked header row based on index" src="Images/stacked-headers/StackedHeaderConditionalStyle.png" width="424"/>
 
 ## Loading template in stacked column
 
@@ -819,64 +819,64 @@ The SfDataGrid allows you to load any desired view inside a `DataGridStackedColu
 
 {% tabs %}
 {% highlight xaml %}
-    <syncfusion:SfDataGrid x:Name="DataGrid"
-                       HorizontalScrollBarVisibility="Never"
-                       VerticalScrollBarVisibility="Never"
-                       ItemsSource="{Binding Orders}"
-                       AutoGenerateColumnsMode="None">
-        <syncfusion:SfDataGrid.Columns>
-            <syncfusion:DataGridTextColumn MappingName="OrderID"
-                                        HeaderText="Order ID"
-                                        LineBreakMode="NoWrap" />
-            <syncfusion:DataGridTextColumn MappingName="Customer"
-                                        HeaderText="Customer"
-                                        LineBreakMode="NoWrap" />
-            <syncfusion:DataGridTextColumn MappingName="City"
-                                        HeaderText="Ship City"
-                                        LineBreakMode="NoWrap" />
-            <syncfusion:DataGridTextColumn MappingName="Country"
-                                        HeaderText="Ship Country"
-                                        Width="133"
-                                        LineBreakMode="NoWrap" />
-        </syncfusion:SfDataGrid.Columns>
-        <syncfusion:SfDataGrid.StackedHeaderRows>
-            <syncfusion:DataGridStackedHeaderRow>
-                <syncfusion:DataGridStackedHeaderRow.Columns>
-                    <syncfusion:DataGridStackedColumn
-                            ColumnMappingNames="OrderID,Customer,City,Country"
-                            Text="Order Shipment Details"
-                            MappingName="SalesDetails"
-                            />
-                </syncfusion:DataGridStackedHeaderRow.Columns>
-            </syncfusion:DataGridStackedHeaderRow>
-            <syncfusion:DataGridStackedHeaderRow>
-                <syncfusion:DataGridStackedHeaderRow.Columns>
-                    <syncfusion:DataGridStackedColumn
-                            ColumnMappingNames="OrderID,Customer"
-                            Text="Order Details"
-                            MappingName="OrderDetails"
-                            />
-                    <syncfusion:DataGridStackedColumn
-                            ColumnMappingNames="City,Country">
-                        <syncfusion:DataGridStackedColumn.Template>
-                            <DataTemplate>
-                                <Grid BackgroundColor="#7d8597">
-                                    <Label Text="Shipping Details" TextColor="#FFFFFF" 
-                                        HorizontalTextAlignment="Center" 
-                                        VerticalTextAlignment="Center"
-                                        FontAttributes="Bold"
-                                        Grid.Column="0"/>
-                                    <StackLayout Orientation="Horizontal">
-                                        <Image Source="image0.png" HeightRequest="37" Margin="10" />
-                                    </StackLayout>
-                                </Grid>
-                            </DataTemplate>
-                        </syncfusion:DataGridStackedColumn.Template>
-                    </syncfusion:DataGridStackedColumn>
-                </syncfusion:DataGridStackedHeaderRow.Columns>
-            </syncfusion:DataGridStackedHeaderRow>
-        </syncfusion:SfDataGrid.StackedHeaderRows>
-    </syncfusion:SfDataGrid>
+<syncfusion:SfDataGrid x:Name="DataGrid"
+                    HorizontalScrollBarVisibility="Never"
+                    VerticalScrollBarVisibility="Never"
+                    ItemsSource="{Binding Orders}"
+                    AutoGenerateColumnsMode="None">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridTextColumn MappingName="OrderID"
+                                    HeaderText="Order ID"
+                                    LineBreakMode="NoWrap" />
+        <syncfusion:DataGridTextColumn MappingName="Customer"
+                                    HeaderText="Customer"
+                                    LineBreakMode="NoWrap" />
+        <syncfusion:DataGridTextColumn MappingName="City"
+                                    HeaderText="Ship City"
+                                    LineBreakMode="NoWrap" />
+        <syncfusion:DataGridTextColumn MappingName="Country"
+                                    HeaderText="Ship Country"
+                                    Width="133"
+                                    LineBreakMode="NoWrap" />
+    </syncfusion:SfDataGrid.Columns>
+    <syncfusion:SfDataGrid.StackedHeaderRows>
+        <syncfusion:DataGridStackedHeaderRow>
+            <syncfusion:DataGridStackedHeaderRow.Columns>
+                <syncfusion:DataGridStackedColumn
+                        ColumnMappingNames="OrderID,Customer,City,Country"
+                        Text="Order Shipment Details"
+                        MappingName="SalesDetails"
+                        />
+            </syncfusion:DataGridStackedHeaderRow.Columns>
+        </syncfusion:DataGridStackedHeaderRow>
+        <syncfusion:DataGridStackedHeaderRow>
+            <syncfusion:DataGridStackedHeaderRow.Columns>
+                <syncfusion:DataGridStackedColumn
+                        ColumnMappingNames="OrderID,Customer"
+                        Text="Order Details"
+                        MappingName="OrderDetails"
+                        />
+                <syncfusion:DataGridStackedColumn
+                        ColumnMappingNames="City,Country">
+                    <syncfusion:DataGridStackedColumn.Template>
+                        <DataTemplate>
+                            <Grid BackgroundColor="#7d8597">
+                                <Label Text="Shipping Details" TextColor="#FFFFFF" 
+                                    HorizontalTextAlignment="Center" 
+                                    VerticalTextAlignment="Center"
+                                    FontAttributes="Bold"
+                                    Grid.Column="0"/>
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="image0.png" HeightRequest="37" Margin="10" />
+                                </StackLayout>
+                            </Grid>
+                        </DataTemplate>
+                    </syncfusion:DataGridStackedColumn.Template>
+                </syncfusion:DataGridStackedColumn>
+            </syncfusion:DataGridStackedHeaderRow.Columns>
+        </syncfusion:DataGridStackedHeaderRow>
+    </syncfusion:SfDataGrid.StackedHeaderRows>
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
 
@@ -984,4 +984,4 @@ public MainPage()
 {% endhighlight %}
 {% endtabs %}
 
-![Load template in stacked header rows](Images/stacked-headers/StackedHeaderWithTemplate.png)
+<img alt="Load template in stacked header rows" src="Images/stacked-headers/StackedHeaderWithTemplate.png" width="424"/>
