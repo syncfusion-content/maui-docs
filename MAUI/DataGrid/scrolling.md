@@ -79,8 +79,8 @@ You can scroll programmatically to a particular row using the `SfDataGrid.Scroll
             Clicked="ScrollToRowIndex_Mothod"/>
 
     <syncfusion:SfDataGrid x:Name="dataGrid"
-                            Grid.Row="1"
-                            ItemsSource="{Binding Orders}"/>
+                           Grid.Row="1"
+                           ItemsSource="{Binding Orders}"/>
 </Grid>
 {% endhighlight %}
 {% highlight C# %}
@@ -108,8 +108,8 @@ You can scroll programmatically to a particular column using the `SfDataGrid.Scr
             Clicked="ScrollToColumnIndex_Mothod"/>
 
     <syncfusion:SfDataGrid x:Name="dataGrid"
-                            Grid.Row="1"
-                            ItemsSource="{Binding Orders}"/>
+                           Grid.Row="1"
+                           ItemsSource="{Binding Orders}"/>
 </Grid>
 {% endhighlight %}
 {% highlight C# %}
@@ -133,10 +133,10 @@ In the `DataGridScrollingMode.Pixel` mode, users can scroll through the data bas
 
 {% tabs %}
 {% highlight xaml %}
-    <syncfusion:SfDataGrid x:Name="dataGrid"
-                           ItemsSource="{Binding Orders}"
-                           ScrollingMode="Pixel">
-    </syncfusion:SfDataGrid>
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding Orders}"
+                       ScrollingMode="Pixel">
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 
 {% highlight C# %}
@@ -155,10 +155,10 @@ The `DataGridScrollingMode.Line` mode allows users to scroll the DataGrid's cont
 
 {% tabs %}
 {% highlight xaml %}
-    <syncfusion:SfDataGrid x:Name="dataGrid"
-                           ItemsSource="{Binding Orders}"
-                           ScrollingMode="Line">
-    </syncfusion:SfDataGrid>
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding Orders}"
+                       ScrollingMode="Line">
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 
 {% highlight C# %}
@@ -177,10 +177,10 @@ The `DataGridScrollingMode.PixelLine` mode allows users to scroll the contents l
 
 {% tabs %}
 {% highlight xaml %}
-    <syncfusion:SfDataGrid x:Name="dataGrid"
-                           ItemsSource="{Binding Orders}"
-                           ScrollingMode="PixelLine">
-    </syncfusion:SfDataGrid>
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding Orders}"
+                       ScrollingMode="PixelLine">
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 
 {% highlight C# %}
@@ -210,10 +210,10 @@ The following code snippets demonstrate how to disable diagonal scrolling:
 
 {% tabs %}
 {% highlight xaml %}
-    <syncfusion:SfDataGrid x:Name="dataGrid"
-                           ItemsSource="{Binding Orders}"
-                           AllowDiagonalScrolling="False">
-    </syncfusion:SfDataGrid>
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding Orders}"
+                       AllowDiagonalScrolling="False">
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 
 {% highlight C# %}  
@@ -233,11 +233,11 @@ The following code snippets demonstrate how to hide the vertical and horizontal 
 
 {% tabs %}
 {% highlight xaml %}
-    <syncfusion:SfDataGrid x:Name="dataGrid"
-                           ItemsSource="{Binding Orders}"
-                           HorizontalScrollBarVisibility="Never"
-                           VerticalScrollBarVisibility="Never">
-    </syncfusion:SfDataGrid>
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding Orders}"
+                       HorizontalScrollBarVisibility="Never"
+                       VerticalScrollBarVisibility="Never">
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 
 {% highlight C# %}  
@@ -268,10 +268,10 @@ The [VerticalOverScrollMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 To customize the bouncing effect in the data grid, follow the code example:
 {% tabs %}
 {% highlight xaml %}
-    <syncfusion:SfDataGrid x:Name="dataGrid"
-                           ItemsSource="{Binding Orders}"
-                           VerticalOverScrollMode="Bounce">
-    </syncfusion:SfDataGrid>
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding Orders}"
+                       VerticalOverScrollMode="Bounce">
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 
 {% highlight C# %}  
@@ -283,7 +283,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
- <img alt="Vertical-OverScroll-Mode" src="Images\scrolling\maui-datagrid-verticaloverscrollMode.gif" width="404"/>
+<img alt="Vertical-OverScroll-Mode" src="Images\scrolling\maui-datagrid-verticaloverscrollMode.gif" width="404"/>
 
 ### Horizontal Over Scroll Mode
 
@@ -297,10 +297,10 @@ The [HorizontalOverScrollMode](https://help.syncfusion.com/cr/maui/Syncfusion.Ma
 To customize the bouncing effect in the data grid, follow the code example:
 {% tabs %}
 {% highlight xaml %}
-    <syncfusion:SfDataGrid x:Name="dataGrid"
-                           ItemsSource="{Binding Orders}"
-                           HorizontalOverScrollMode="Bounce">
-    </syncfusion:SfDataGrid>
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding Orders}"
+                       HorizontalOverScrollMode="Bounce">
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 
 {% highlight C# %}  
@@ -312,7 +312,7 @@ this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
- <img alt="Horizontal-OverScroll-Mode" src="Images\scrolling\maui-datagrid-Horizontal-overscroll-Mode.gif" width="404"/>
+<img alt="Horizontal-OverScroll-Mode" src="Images\scrolling\maui-datagrid-Horizontal-overscroll-Mode.gif" width="404"/>
 
 ## Identifying scroll state changes
 
@@ -327,10 +327,10 @@ The following current states are indicated by the [ScrollState](https://help.syn
 
 {% tabs %}
 {% highlight xaml %}
-    <syncfusion:SfDataGrid x:Name="dataGrid"
-                           ItemsSource="{Binding Orders}"
-                           ScrollStateChanged="dataGrid_ScrollStateChanged">
-    </syncfusion:SfDataGrid>
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding Orders}"
+                       ScrollStateChanged="dataGrid_ScrollStateChanged">
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight C# %}  
 private void dataGrid_ScrollStateChanged(object sender, DataGridScrollStateChangedEventArgs e)
