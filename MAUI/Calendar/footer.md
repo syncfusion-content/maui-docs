@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Footer in .NET MAUI Calendar control | Syncfusion<sup>&reg;</sup> | Calendar
+title: Footer in .NET MAUI Calendar control | Syncfusion | Calendar
 description: Learn here all about Footer view feature of Syncfusion<sup>&reg;</sup> .NET MAUI Calendar (SfCalendar) control and more.
 platform: maui
 control: SfCalendar
