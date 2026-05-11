@@ -429,6 +429,7 @@ public class ForeColorConverter : IValueConverter
 You can customize the border color of individual cells in the SfDataGrid based on RowIndex and ColumnIndex property, and setting the `BorderColor` property  in DataGridCell by writing the style for the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html)
 
 {% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage.Resources>
     <ResourceDictionary>
         <local:BorderColorConverter x:Key="converter"/>
@@ -479,12 +480,12 @@ Styling can be applied to a particular cell based on CellValue property by writi
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage.Resources>
     <local:ColorConverter x:Key="converter"/>
-    <local:ForeColorConverter x:Key="foreColorconverter"/>
+    <local:ForeColorConverter x:Key="foreColorConverter"/>
     <Style TargetType="syncfusion:DataGridCell">
         <Setter Property="Background"
                 Value="{Binding Source={RelativeSource Mode=Self}, Converter={StaticResource Key=converter}}"/>
         <Setter Property="TextColor"
-                Value="{Binding Source={RelativeSource Mode=Self}, Converter={StaticResource Key=foreColorconverter}}"/>
+                Value="{Binding Source={RelativeSource Mode=Self}, Converter={StaticResource Key=foreColorConverter}}"/>
     </Style>
 </ContentPage.Resources>
 

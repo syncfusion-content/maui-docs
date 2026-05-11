@@ -137,9 +137,9 @@ You can retrieve the width of the columns when it is auto-calculated based on th
 
 <Grid RowDefinitions="*,50">
     <syncfusion:SfDataGrid x:Name = "dataGrid"
-                            Grid.Row = "0"
-                            ItemsSource = "{Binding Orders}"
-                            ColumnWidthMode = "Auto" />
+                           Grid.Row = "0"
+                           ItemsSource = "{Binding Orders}"
+                           ColumnWidthMode = "Auto" />
     <Button Text = "Get Column Width"
             Grid.Row = "1"
             WidthRequest = "300"
@@ -318,9 +318,9 @@ public class CustomColumnSizer : DataGridColumnSizer
 </ContentPage.BindingContext>
 
 <syncfusion:SfDataGrid x:Name = "dataGrid"
-                        ItemsSource = "{Binding Orders}"
-                        ColumnWidthMode = "Auto"
-                        ColumnSizer = "{x:StaticResource CustomColumnSizer}">
+                       ItemsSource = "{Binding Orders}"
+                       ColumnWidthMode = "Auto"
+                       ColumnSizer = "{x:StaticResource CustomColumnSizer}">
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 

@@ -128,16 +128,16 @@ To load data for the DataPager control dynamically, follow the code example:
     </Grid.RowDefinitions>
     <Border Grid.Row = "1" Padding = "5">
         <pager:SfDataPager x:Name = "dataPager"
-                            PageSize = "15" 
-                            NumericButtonCount = "10"
-                            Source = "{Binding Orders}"
-                            OnDemandLoading="dataPager_OnDemandLoading"
-                            UseOnDemandPaging="True">
+                           PageSize = "15" 
+                           NumericButtonCount = "10"
+                           Source = "{Binding Orders}"
+                           OnDemandLoading="dataPager_OnDemandLoading"
+                           UseOnDemandPaging="True">
         </pager:SfDataPager>
     </Border>
     <syncfusion:SfDataGrid x:Name = "dataGrid"
-                            Grid.Row = "0"
-                            ItemsSource = "{Binding Source={x:Reference dataPager}, Path=PagedSource}">
+                           Grid.Row = "0"
+                           ItemsSource = "{Binding Source={x:Reference dataPager}, Path=PagedSource}">
     </syncfusion:SfDataGrid>
 </Grid>
 {% endhighlight %}
@@ -210,14 +210,14 @@ The `SfDataPager` allows you to change the shape of the buttons using the [SfDat
     </Grid.RowDefinitions>
     <Border Grid.Row = "1" Padding = "5">
         <pager:SfDataPager x:Name = "dataPager"
-                            PageSize = "15" 
-                            ButtonShape = "Rectangle"
-                            Source = "{Binding Orders}">
+                           PageSize = "15" 
+                           ButtonShape = "Rectangle"
+                           Source = "{Binding Orders}">
         </pager:SfDataPager>
     </Border>
     <syncfusion:SfDataGrid x:Name = "dataGrid"
-                            Grid.Row = "0"
-                            ItemsSource = "{Binding Source={x:Reference dataPager}, Path=PagedSource}">
+                           Grid.Row = "0"
+                           ItemsSource = "{Binding Source={x:Reference dataPager}, Path=PagedSource}">
     </syncfusion:SfDataGrid>
 </Grid>
 {% endhighlight %}
@@ -265,14 +265,14 @@ The `SfDataPager` allows you to choose the generation mode of numeric buttons us
     </Grid.RowDefinitions>
     <Border Grid.Row = "1" Padding = "5">
         <pager:SfDataPager x:Name = "dataPager"
-                            PageSize = "15" 
-                            NumericButtonsGenerateMode = "Auto"
-                            Source = "{Binding Orders}">
+                           PageSize = "15" 
+                           NumericButtonsGenerateMode = "Auto"
+                           Source = "{Binding Orders}">
         </pager:SfDataPager>
     </Border>
     <syncfusion:SfDataGrid x:Name = "dataGrid"
-                            Grid.Row = "0"
-                            ItemsSource = "{Binding Source={x:Reference dataPager}, Path=PagedSource}">
+                           Grid.Row = "0"
+                           ItemsSource = "{Binding Source={x:Reference dataPager}, Path=PagedSource}">
     </syncfusion:SfDataGrid>
 </Grid>
 {% endhighlight %}
@@ -320,15 +320,15 @@ The `SfDataPager` button is loaded with a default width and height of 40. The de
     </Grid.RowDefinitions>
     <Border Grid.Row = "1" Padding = "5">
         <pager:SfDataPager x:Name = "dataPager"
-                            PageSize = "15" 
-                            ButtonSize = "60"
-                            ButtonFontSize = "21"
-                            Source = "{Binding Orders}">
+                           PageSize = "15" 
+                           ButtonSize = "60"
+                           ButtonFontSize = "21"
+                           Source = "{Binding Orders}">
         </pager:SfDataPager>
     </Border>
     <syncfusion:SfDataGrid x:Name = "dataGrid"
-                            Grid.Row = "0"
-                            ItemsSource = "{Binding Source={x:Reference dataPager}, Path=PagedSource}">
+                           Grid.Row = "0"
+                           ItemsSource = "{Binding Source={x:Reference dataPager}, Path=PagedSource}">
     </syncfusion:SfDataGrid>
 </Grid>
 {% endhighlight %}
@@ -432,14 +432,14 @@ The visibility of the numeric and navigation buttons can be personalized by usin
     </Grid.RowDefinitions>
     <Border Grid.Row = "1" Padding = "5">
         <pager:SfDataPager x:Name = "dataPager"
-                            PageSize = "15" 
-                            DisplayMode = "FirstLastNumeric"
-                            Source = "{Binding Orders}">
+                           PageSize = "15" 
+                           DisplayMode = "FirstLastNumeric"
+                           Source = "{Binding Orders}">
         </pager:SfDataPager>
     </Border>
     <syncfusion:SfDataGrid x:Name = "dataGrid"
-                            Grid.Row = "0"
-                            ItemsSource = "{Binding Source={x:Reference dataPager}, Path=PagedSource}">
+                           Grid.Row = "0"
+                           ItemsSource = "{Binding Source={x:Reference dataPager}, Path=PagedSource}">
     </syncfusion:SfDataGrid>
 </Grid>
 {% endhighlight %}
@@ -485,14 +485,14 @@ The `SfDataPager` offers support for displaying an ellipsis button at the beginn
     </Grid.RowDefinitions>
     <Border Grid.Row = "1" Padding = "5">
         <pager:SfDataPager x:Name = "dataPager"
-                            PageSize = "15" 
-                            AutoEllipsisMode = "After"
-                            Source = "{Binding Orders}">
+                           PageSize = "15" 
+                           AutoEllipsisMode = "After"
+                           Source = "{Binding Orders}">
         </pager:SfDataPager>
     </Border>
     <syncfusion:SfDataGrid x:Name = "dataGrid"
-                            Grid.Row = "0"
-                            ItemsSource = "{Binding Source={x:Reference dataPager}, Path=PagedSource}">
+                           Grid.Row = "0"
+                           ItemsSource = "{Binding Source={x:Reference dataPager}, Path=PagedSource}">
     </syncfusion:SfDataGrid>
 </Grid>
 {% endhighlight %}
@@ -540,15 +540,15 @@ The auto-ellipsis text can be customized by using the [SfDataPager.AutoEllipsisT
     </Grid.RowDefinitions>
     <Border Grid.Row = "1" Padding = "5">
         <pager:SfDataPager x:Name = "dataPager"
-                            PageSize = "15" 
-                            AutoEllipsisMode="After"
-                            AutoEllipsisText="***"
-                            Source = "{Binding Orders}">
+                           PageSize = "15" 
+                           AutoEllipsisMode="After"
+                           AutoEllipsisText="***"
+                           Source = "{Binding Orders}">
         </pager:SfDataPager>
     </Border>
     <syncfusion:SfDataGrid x:Name = "dataGrid"
-                            Grid.Row = "0"
-                            ItemsSource = "{Binding Source={x:Reference dataPager}, Path=PagedSource}">
+                           Grid.Row = "0"
+                           ItemsSource = "{Binding Source={x:Reference dataPager}, Path=PagedSource}">
     </syncfusion:SfDataGrid>
 </Grid>
 {% endhighlight %}
@@ -617,14 +617,14 @@ By default, `SfDataPager` displays the button in the horizontal direction. Howev
     </Grid.ColumnDefinitions>
     <Border Grid.Column = "1" Padding = "5">
         <pager:SfDataPager x:Name = "dataPager"
-                        PageSize = "15" 
-                        Orientation="Vertical"
-                        Source = "{Binding Orders}">
+                           PageSize = "15" 
+                           Orientation="Vertical"
+                           Source = "{Binding Orders}">
         </pager:SfDataPager>
     </Border>
     <syncfusion:SfDataGrid x:Name = "dataGrid"
-                        Grid.Column = "0"
-                        ItemsSource = "{Binding Source={x:Reference dataPager}, Path=PagedSource}">
+                           Grid.Column = "0"
+                           ItemsSource = "{Binding Source={x:Reference dataPager}, Path=PagedSource}">
     </syncfusion:SfDataGrid>
 </Grid>
 {% endhighlight %}
