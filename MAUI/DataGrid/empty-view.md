@@ -20,10 +20,10 @@ We can specify the `EmptyView` property to a string that will be shown when the 
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-    <syncfusion:SfDataGrid x:Name="dataGrid"
-                           ItemsSource="{Binding Orders}"
-                           EmptyView="No records">
-    </syncfusion:SfDataGrid>
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding Orders}"
+                       EmptyView="No records">
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 SfDataGrid dataGrid = new SfDataGrid();
@@ -42,22 +42,22 @@ The `EmptyView` property can be set to a view, which will be displayed when the 
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
-    <syncfusion:SfDataGrid x:Name="dataGrid"
-                           ItemsSource="{Binding Orders}">
-        <syncfusion:SfDataGrid.EmptyView>
-            <StackLayout HorizontalOptions="Center"
-                         VerticalOptions="Center">
-                <Label Text="&#xE7A4;"
-                       FontSize="20"
-                       TextColor="Black"
-                       FontFamily="MauiMaterialAssets.ttf"
-                       HorizontalOptions="Center"/>
-                <Label Text="No records"
-                       FontSize="14"
-                       TextColor="Black"/>
-            </StackLayout>
-        </syncfusion:SfDataGrid.EmptyView>
-    </syncfusion:SfDataGrid>
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       ItemsSource="{Binding Orders}">
+    <syncfusion:SfDataGrid.EmptyView>
+        <StackLayout HorizontalOptions="Center"
+                     VerticalOptions="Center">
+            <Label Text="&#xE7A4;"
+                   FontSize="20"
+                   TextColor="Black"
+                   FontFamily="MauiMaterialAssets.ttf"
+                   HorizontalOptions="Center"/>
+            <Label Text="No records"
+                   FontSize="14"
+                   TextColor="Black"/>
+        </StackLayout>
+    </syncfusion:SfDataGrid.EmptyView>
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 SfDataGrid dataGrid = new SfDataGrid();
