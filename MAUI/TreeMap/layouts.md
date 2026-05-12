@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Layout types in .NET MAUI TreeMap Control | Syncfusion<sup>&reg;</sup>
+title: Layout types in .NET MAUI TreeMap Control | Syncfusion
 description: Learn here all about adding different layouts of the Syncfusion<sup>&reg;</sup> .NET MAUI TreeMap (STreeMap) control and more.
 platform: maui
 control: TreeMap (SfTreeMap)
