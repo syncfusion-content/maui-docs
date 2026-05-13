@@ -65,7 +65,7 @@ To enable property change notifications, your data model must implement the INot
 
 When your data model implements INotifyPropertyChanged, you need to set the ListenPropertyChange property of the series to `true`, to make the chart listen to the property changes of your data object.
 
-**XAML**
+{% tabs %}
 
 {% highlight xaml %}
 
@@ -83,6 +83,25 @@ When your data model implements INotifyPropertyChanged, you need to set the List
     </chart:SfCartesianChart>
 
 {% endhighlight %}
+
+
+{% highlight C# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+
+LineSeries series = new LineSeries()
+{
+    ItemsSource = new ViewModel().DataSource,
+    XBindingPath = "Category",
+    YBindingPath = "Metric",
+    ListenPropertyChange = true
+};
+
+chart.Series.Add(series);
+
+{% endhighlight %}
+
+{% endtabs %}
 
 By default, ListenPropertyChange is set to `false` to prevent unnecessary event registrations and potential performance overhead. 
 

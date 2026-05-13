@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Performance in .NET MAUI Charts | Syncfusion
+title: Performance in .NET MAUI Cartesian Charts | Syncfusion
 description: Learn about Performance in Syncfusion® .NET MAUI Chart (SfCartesianChart), its elements and more details.
 platform: maui
 control: SfCartesianChart
