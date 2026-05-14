@@ -221,7 +221,7 @@ public class ViewModel
 
 ![PointColorPath in MAUI Chart](Appearance_images/MAUI_polar_chart_pointcolorpath.png)
 
-N> The property is not applicable to PolarAreaSeries and PolarLineSeries types.
+N> The property is applicable to `PolarAreaSeries` and `PolarLineSeries` types.
 
 N> The priority for color assignment is as follows: Fill>PointColorPath>PaletteBrushes.
 
