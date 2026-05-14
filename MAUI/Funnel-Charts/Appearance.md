@@ -129,3 +129,48 @@ public class ViewModel
 {% endtabs %}
 
 ![Gradient support in MAUI Chart](Appearance_images/MAUI_funnel_chart.png)
+
+## Point Color Path
+
+The [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html) supports using the PointColorPath property to assign different colors to each data point. By binding this property to a color field in the data source, each segment can be dynamically styled with its own color.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfFunnelChart ItemsSource="{Binding Data}" 
+                     XBindingPath="Category"
+                     YBindingPath="Value"
+                     ShowDataLabels="True"           
+                     PointColorPath="PointColor">
+. . .
+</chart:SfFunnelChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+public class ViewModel
+{
+    public ObservableCollection<Model> Data { get; set; }
+
+    public ViewModel()
+    {
+        Data = new ObservableCollection<Model>()
+        {
+        new Model() { Category = "Jewelry", Value = 1000, PointColor = Color.FromArgb("#CBB4E0") },
+        new Model() { Category = "Electronics", Value = 1300, PointColor = Color.FromArgb("#A678D6") },
+        new Model() { Category = "Research", Value = 2000, PointColor = Color.FromArgb("#5A189A") },
+        new Model() { Category = "Investment", Value = 1700, PointColor = Color.FromArgb("#7B2CBF") },
+        new Model() { Category = "Purchases", Value = 1100, PointColor = Color.FromArgb("#CBB4E0") }
+        };
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![PointColorPath in MAUI Chart](Appearance_images/MAUI_funnel_chart_pointcolorpath.png)
+
+N> The priority for color assignment is as follows: Fill>PointColorPath>PaletteBrushes.

@@ -175,7 +175,57 @@ public class ViewModel
 
 ![Gradient in MAUI Chart](Appearance_images/MAUI_polar_chart_gradient.png)
 
-## Plotting Area Customization:
+## Point Color Path
+
+The [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html) supports using the PointColorPath property to assign different colors to each data point. By binding this property to a color field in the data source, each segment can be dynamically styled with its own color.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfPolarChart>
+	. . .
+    <chart:PolarLineSeries ItemsSource="{Binding Data}" 
+                           XBindingPath="Direction" 
+                           YBindingPath="Value"
+                           PointColorPath="PointColor"/>
+</chart:SfPolarChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+public class ViewModel
+{
+    public ObservableCollection<Model> Data { get; set; }
+
+    public ViewModel()
+    {
+        Data = new ObservableCollection<Model>()
+        {
+            new Model { Direction="North", Value=80, PointColor=Color.FromArgb("#CBB4E0") },
+            new Model { Direction="NorthEast", Value=85, PointColor=Color.FromArgb("#A678D6") },
+            new Model { Direction="East", Value=78, PointColor=Color.FromArgb("#7B2CBF") },
+            new Model { Direction="SouthEast", Value=90, PointColor=Color.FromArgb("#5A189A") },
+            new Model { Direction="South", Value=77, PointColor=Color.FromArgb("#3C096C") },
+            new Model { Direction="SouthWest", Value=82, PointColor=Color.FromArgb("#9D4EDD") },
+            new Model { Direction="West", Value=79, PointColor=Color.FromArgb("#B185DB") },
+            new Model { Direction="NorthWest", Value=88, PointColor=Color.FromArgb("#E0AAFF") },
+        };
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![PointColorPath in MAUI Chart](Appearance_images/MAUI_polar_chart_pointcolorpath.png)
+
+N> The property is not applicable to PolarAreaSeries and PolarLineSeries types.
+
+N> The priority for color assignment is as follows: Fill>PointColorPath>PaletteBrushes.
+
+## Plotting Area Customization
 
 [SfPolarChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfPolarChart.html) allows you to add any view to the chart plot area, which is useful for adding any relevant data, a watermark, or a color gradient to the background of the chart.
 
