@@ -200,7 +200,7 @@ ColumnSeries series = new ColumnSeries()
 
 N> The property is not applicable to area-based series, fast series, financial series, box plot, error bar, waterfall, and histogram types.
 
-N> The priority for color assignment is as follows: Fill>PointColorPath>PaletteBrushes.
+N> The priority for color assignment is as follows: `Fill`>`PointColorPath`>`PaletteBrushes`.
 
 ## Plotting Area Customization
 

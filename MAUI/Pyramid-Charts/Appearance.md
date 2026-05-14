@@ -173,7 +173,7 @@ public class ViewModel
 
 ![PointColorPath in MAUI Chart](Appearance_images/MAUI_Pyramid_pointcolorpath.png)
 
-N> The priority for color assignment is as follows: Fill>PointColorPath>PaletteBrushes.
+N> The priority for color assignment is as follows: `Fill`>`PointColorPath`>`PaletteBrushes`.
 
 ## Pyramid modes
 

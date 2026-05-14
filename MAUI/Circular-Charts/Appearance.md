@@ -158,7 +158,7 @@ PieSeries series = new PieSeries()
 
 ![PointColorPath in MAUI Chart](Appearance_images/MAUI_pie_chart_pointcolorpath.png)
 
-N> The priority for color assignment is as follows: Fill>PointColorPath>PaletteBrushes.
+N> The priority for color assignment is as follows: `Fill`>`PointColorPath`>`PaletteBrushes`.
 
 ## Plotting Area Customization
 
