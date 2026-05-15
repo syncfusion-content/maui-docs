@@ -38,6 +38,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Forms offers a collection of **9
    padding: 16px;
 }
 .form-title {
+   margin-top: 0px;
    margin: 0 0 10px;
    font-size: 20px;
    font-weight: 600;
@@ -126,7 +127,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Forms offers a collection of **9
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Social Login Screen
@@ -163,7 +164,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Forms offers a collection of **9
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">User Login Screen
@@ -200,7 +201,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Forms offers a collection of **9
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">User Sign Up
@@ -237,7 +238,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Forms offers a collection of **9
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Reset Password
@@ -274,7 +275,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Forms offers a collection of **9
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Forgot Password
@@ -312,7 +313,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Forms offers a collection of **9
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Tabbed Login
@@ -349,7 +350,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Forms offers a collection of **9
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Card Payment Details
@@ -386,7 +387,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Forms offers a collection of **9
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title"> Add Profile Details
@@ -423,7 +424,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Forms offers a collection of **9
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Business Registration

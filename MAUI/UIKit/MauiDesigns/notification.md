@@ -131,11 +131,11 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Notification offers a collection
 <!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/NotificationImages/simpleabout.webp"
+<img src="Images/NotificationImages/task.webp"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Task Notifications Inbox
@@ -172,7 +172,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Notification offers a collection
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Social Notifications Feed
@@ -209,7 +209,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Notification offers a collection
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">E‑commerce Notifications

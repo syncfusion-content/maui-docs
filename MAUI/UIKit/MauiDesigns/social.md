@@ -134,7 +134,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Social offers a collection of **
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Social Profile with Connections
@@ -171,7 +171,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Social offers a collection of **
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Social Profile Card
@@ -208,7 +208,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Social offers a collection of **
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Social Profile with Interests
@@ -244,7 +244,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Social offers a collection of **
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Social Profile with Messaging

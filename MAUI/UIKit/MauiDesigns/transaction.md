@@ -135,7 +135,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Transaction offers a collection 
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Checkout Page
@@ -172,7 +172,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Transaction offers a collection 
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Payment Success Screen
@@ -209,7 +209,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Transaction offers a collection 
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Payment Failure Screen
@@ -245,7 +245,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Transaction offers a collection 
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Saved Payment Cards

@@ -43,6 +43,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Error and Empty offers a collect
    padding: 16px;
 }
 .form-title {
+   margin-top: 0px;
    margin: 0 0 10px;
    font-size: 20px;
    font-weight: 600;
@@ -135,7 +136,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Error and Empty offers a collect
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Empty Cart State
@@ -172,7 +173,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Error and Empty offers a collect
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Location Access Blocked
@@ -209,7 +210,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Error and Empty offers a collect
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">No Credits Available
@@ -245,7 +246,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Error and Empty offers a collect
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">No Internet Connection
@@ -282,7 +283,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Error and Empty offers a collect
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">No Items Selected
@@ -318,7 +319,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Error and Empty offers a collect
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">No Photos Available
@@ -354,7 +355,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Error and Empty offers a collect
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">No Tasks Assigned
@@ -390,7 +391,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Error and Empty offers a collect
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Insufficient Credits
@@ -426,7 +427,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Error and Empty offers a collect
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">No Videos Selected
@@ -462,7 +463,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Error and Empty offers a collect
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Payment Failed
@@ -498,7 +499,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Error and Empty offers a collect
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Something Went Wrong

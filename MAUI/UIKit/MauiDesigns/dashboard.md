@@ -42,6 +42,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Dashboard offers a collection of
    padding: 16px;
 }
 .form-title {
+   margin-top: 0px;
    margin: 0 0 10px;
    font-size: 20px;
    font-weight: 600;
@@ -134,7 +135,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Dashboard offers a collection of
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Stock Market Overview
@@ -171,7 +172,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Dashboard offers a collection of
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Health Care Dashboard
@@ -208,7 +209,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Dashboard offers a collection of
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Daily Calories Report
@@ -244,7 +245,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Dashboard offers a collection of
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Daily Activity Timeline
@@ -281,7 +282,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Dashboard offers a collection of
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Company History Timeline
@@ -317,7 +318,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Dashboard offers a collection of
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">My Wallet Dashboard
@@ -353,7 +354,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Dashboard offers a collection of
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Restaurant Dashboard Overview

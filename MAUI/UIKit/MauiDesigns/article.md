@@ -43,6 +43,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Article offers a collection of *
    padding: 16px;
 }
 .form-title {
+   margin-top: 0px;
    margin: 0 0 10px;
    font-size: 20px;
    font-weight: 600;
@@ -135,7 +136,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Article offers a collection of *
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Article Detail With Comments
@@ -172,7 +173,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Article offers a collection of *
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Article Parallax Header
@@ -209,7 +210,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Article offers a collection of *
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">My Articles Library

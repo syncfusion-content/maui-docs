@@ -134,7 +134,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Review and Rating offers a colle
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Reviews and Ratings
@@ -170,7 +170,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Review and Rating offers a colle
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Write a Product Review

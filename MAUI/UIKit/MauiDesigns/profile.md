@@ -134,7 +134,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Profile offers a collection of *
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Author Profile Page
@@ -171,7 +171,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Profile offers a collection of *
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Contact Profile Details
@@ -208,7 +208,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Profile offers a collection of *
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Chat Profile Settings
@@ -244,7 +244,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Profile offers a collection of *
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Master Menu
@@ -281,7 +281,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Profile offers a collection of *
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Health Profile Dashboard
