@@ -7,7 +7,7 @@ platform: maui
 documentation: ug
 ---
 
-# Syncfusion .NET MAUI Agent Skills for AI Assistants
+# Syncfusion .NET MAUI Agent Skills for AI Assistant
 
 This guide introduces **Syncfusion .NET MAUI Skills**, a knowledge package that enables AI assistants (VS Code, Cursor, CodeStudio, etc.) to understand and generate accurate Syncfusion® .NET MAUI code using official APIs, patterns, and theming guidelines.
 
