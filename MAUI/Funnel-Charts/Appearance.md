@@ -132,40 +132,24 @@ public class ViewModel
 
 ## Point Color Path
 
-The [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html) supports using the PointColorPath property to assign different colors to each data point. By binding this property to a color field in the data source, each segment can be dynamically styled with its own color.
+The [SfFunnelChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfFunnelChart.html) supports using the **PointColorPath** property to assign different colors to each data point. By binding this property to a color field in the data source, each segment can be dynamically styled with its own color.
 
 {% tabs %}
 
 {% highlight xaml %}
 
-<chart:SfFunnelChart ItemsSource="{Binding Data}" 
-                     XBindingPath="Category"
-                     YBindingPath="Value"
-                     ShowDataLabels="True"           
-                     PointColorPath="PointColor">
-. . .
-</chart:SfFunnelChart>
+<chart:SfFunnelChart PointColorPath="PointColor"></chart:SfFunnelChart>
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-public class ViewModel
+SfFunnelChart chart = new SfFunnelChart()
 {
-    public ObservableCollection<Model> Data { get; set; }
-
-    public ViewModel()
-    {
-        Data = new ObservableCollection<Model>()
-        {
-        new Model() { Category = "Jewelry", Value = 1000, PointColor = Color.FromArgb("#CBB4E0") },
-        new Model() { Category = "Electronics", Value = 1300, PointColor = Color.FromArgb("#A678D6") },
-        new Model() { Category = "Research", Value = 2000, PointColor = Color.FromArgb("#5A189A") },
-        new Model() { Category = "Investment", Value = 1700, PointColor = Color.FromArgb("#7B2CBF") },
-        new Model() { Category = "Purchases", Value = 1100, PointColor = Color.FromArgb("#CBB4E0") }
-        };
-    }
+	PointColorPath = PointColor;
 }
+. . .
+this.Content = chart;
 
 {% endhighlight %}
 
