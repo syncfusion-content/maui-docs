@@ -37,13 +37,19 @@ You need to use `IncludeHeaders`, `IncludeFormat`, `IncludeHiddenColumn` options
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
                        SelectionUnit="Row"
-                       SelectionMode="Single"
+                       SelectionMode="Multiple"
                        AllowEditing="True"
                        CopyOption="CopyData,IncludeHeaders" 
                        ItemsSource="{Binding Orders}"/>
 {% endhighlight %}
 {% highlight c# %}
-this.dataGrid.CopyOption = DataGridCopyOption.CopyData | DataGridCopyOption.IncludeHeaders;
+SfDataGrid dataGrid = new SfDataGrid();
+dataGrid.ItemsSource = viewModel.Orders;
+dataGrid.SelectionUnit = DataGridSelectionUnit.Row;
+dataGrid.SelectionMode = DataGridSelectionMode.Multiple;
+dataGrid.AllowEditing = true;
+dataGrid.CopyOption = DataGridCopyOption.CopyData | DataGridCopyOption.IncludeHeaders;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -71,12 +77,20 @@ You need to use `ExcludeFirstLine` and `IncludeHiddenColumn` options along with 
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
                        SelectionUnit="Row"
-                       SelectionMode="Single"
-                       PasteOption="PasteData,ExcludeFirstLine" 
+                       SelectionMode="Multiple"
+                       PasteOption="PasteData" 
                        ItemsSource="{Binding Orders}"/>
 {% endhighlight %}
 {% highlight c# %}
-this.dataGrid.PasteOption = DataGridPasteOption.PasteData | DataGridPasteOption.ExcludeFirstLine;
+
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
+dataGrid.SelectionUnit = DataGridSelectionUnit.Row;
+dataGrid.SelectionMode = DataGridSelectionMode.Multiple;
+dataGrid.PasteOption = DataGridPasteOption.PasteData;
+this.Content = dataGrid;
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -106,13 +120,20 @@ You need to use `IncludeHeaders`, `IncludeFormat` and `IncludeHiddenColumn` opti
 {% highlight xaml %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
                        SelectionUnit="Row"
-                       SelectionMode="Single"
+                       SelectionMode="Multiple"
                        AllowEditing="True"
                        CopyOption="CutData,IncludeHeaders" 
                        ItemsSource="{Binding Orders}"/>
 {% endhighlight %}
 {% highlight c# %}
-this.dataGrid.CopyOption = DataGridCopyOption.CutData | DataGridCopyOption.IncludeHeaders;
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel orderInfoViewModel = new OrderInfoViewModel();
+dataGrid.ItemsSource = orderInfoViewModel.Orders;
+dataGrid.SelectionUnit = DataGridSelectionUnit.Row;
+dataGrid.SelectionMode = DataGridSelectionMode.Multiple;
+dataGrid.AllowEditing = true;
+dataGrid.CopyOption = DataGridCopyOption.CutData | DataGridCopyOption.IncludeHeaders;
+this.Content = dataGrid;
 {% endhighlight %}
 {% endtabs %}
 
@@ -131,9 +152,9 @@ The [CopyContent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.S
 {% highlight c# %}
 this.dataGrid.CopyContent += dataGrid_CopyContent;
 
-void dataGrid_CopyContent(object sender, DataGridCopyPasteEventArgs e)
+void dataGrid_CopyContent(object? sender, DataGridCopyPasteEventArgs e)
 {
-    if (((sender as SfDataGrid).SelectedRow as OrderInfo).OrderID == 1004)
+    if (sender is Syncfusion.Maui.DataGrid.SfDataGrid grid && grid.SelectedRow is OrderInfo row && row.OrderID == 10004)
         e.Handled = true;
 }
 
@@ -148,12 +169,10 @@ The [PasteContent](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.
 {% highlight c# %}
 this.dataGrid.PasteContent += dataGrid_PasteContent;
 
-void dataGrid_PasteContent(object sender, DataGridCopyPasteEventArgs e)
+void dataGrid_PasteContent(object? sender, DataGridCopyPasteEventArgs e)
 {
-    if (((sender as SfDataGrid).SelectedRow as OrderInfo).OrderID == 1010)
-    {
+    if (sender is Syncfusion.Maui.DataGrid.SfDataGrid grid && grid.SelectedRow is OrderInfo row && row.OrderID == 10010)
         e.Handled = true;
-    }
 }
 
 {% endhighlight %}
@@ -175,7 +194,7 @@ You can change the text copied to the clipboard by changing the `ClipBoardValue`
 {% highlight c# %}
 this.dataGrid.CopyCellContent += dataGrid_CopyCellContent;
 
-void dataGrid_CopyCellContent(object sender, DataGridCopyPasteCellEventArgs e)
+void dataGrid_CopyCellContent(object? sender, DataGridCopyPasteCellEventArgs e)
 {
 }
 {% endhighlight %}
@@ -185,10 +204,10 @@ The example below changes the clipboard value to 100 instead of the cell value 1
 
 {% tabs %}
 {% highlight c# %}
-void dataGrid_CopyCellContent(object sender, DataGridCopyPasteCellEventArgs e)
+void dataGrid_CopyCellContent(object? sender, DataGridCopyPasteCellEventArgs e)
 {
-    if (e.Column.MappingName == "OrderID" && (e.RowData as OrderInfo).OrderID == 10003)
-        e.ClipBoardValue = 100;
+    if (e.Column?.MappingName == "OrderID" && e.RowData is OrderInfo row && row.OrderID == 10003)
+        e.ClipboardValue = 100;
 }
 {% endhighlight %}
 {% endtabs %}
@@ -199,9 +218,9 @@ The example below handles the copy operation when the `MappingName` of a Column 
 
 {% tabs %}
 {% highlight c# %}
-void dataGrid_CopyCellContent(object sender, DataGridCopyPasteCellEventArgs e)
+void dataGrid_CopyCellContent(object? sender, DataGridCopyPasteCellEventArgs e)
 {
-    if (e.Column.MappingName == "Country")
+    if (e.Column?.MappingName == "Country")
         e.Handled = true;
 }
 {% endhighlight %}
@@ -225,7 +244,7 @@ You can change the text pasted to SfDataGrid by changing the `ClipBoardValue`.
 {% highlight c# %}
 this.dataGrid.PasteCellContent += dataGrid_PasteCellContent;
 
-void dataGrid_PasteCellContent(object sender, DataGridCopyPasteCellEventArgs e)
+void dataGrid_PasteCellContent(object? sender, DataGridCopyPasteCellEventArgs e)
 {
 }
 {% endhighlight %}
@@ -235,10 +254,10 @@ The example below changes the clipboard value to "Test" instead of the clipboard
 
 {% tabs %}
 {% highlight c# %}
-void dataGrid_PasteCellContent(object sender, DataGridCopyPasteCellEventArgs e)
+void dataGrid_PasteCellContent(object? sender, DataGridCopyPasteCellEventArgs e)
 {
-    if (e.Column.MappingName == "CustomerID" && (e.RowData as OrderInfo).CustomerID == "Lino")
-        e.ClipBoardValue = "Test";
+    if (e.Column?.MappingName == "Customer" && e.RowData is OrderInfo row && row.Customer == "Erik")
+        e.ClipboardValue = "Test";
 }
 {% endhighlight %}
 {% endtabs %}
@@ -249,7 +268,7 @@ The example below handles the paste operation when the MappingName of a Column i
 
 {% tabs %}
 {% highlight c# %}
-void dataGrid_DataGridPasteCellContent(object sender, DataGridCopyPasteCellEventArgs e)
+void dataGrid_DataGridPasteCellContent(object? sender, DataGridCopyPasteCellEventArgs e)
 {
     if (e.Column.MappingName == "OrderID")
         e.Handled = true;

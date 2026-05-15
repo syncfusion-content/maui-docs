@@ -21,7 +21,8 @@ The [SfDataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.Sf
                        ItemsSource="{Binding Orders}" >
 {% endhighlight %}
 {% highlight c# %}
-dataGrid = new SfDataGrid();
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.FilterRowPosition = DataGridFilterRowPosition.FixedTop;
 dataGrid.AllowEditing = true;

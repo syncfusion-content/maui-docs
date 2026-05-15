@@ -56,7 +56,8 @@ You can customize the group caption text format by setting the `SfDataGrid.Group
 {% endhighlight %}
 
 {% highlight c# %}
-dataGrid = new SfDataGrid();
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.ColumnWidthMode = ColumnWidthMode.Fill;
 
@@ -95,7 +96,8 @@ If the `DisplayName` property is set, the specified display name will appear in 
 {% endhighlight %}
 
 {% highlight c# %}
-dataGrid = new SfDataGrid();
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.ColumnWidthMode = ColumnWidthMode.Fill;
 
@@ -430,7 +432,8 @@ In the code snippet below, [DataGridSummaryRow.TitleColumnCount](https://help.sy
 
 {% endhighlight %}
 {% highlight c# %}
-dataGrid = new SfDataGrid();
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.AutoGenerateColumnsMode = AutoGenerateColumnsMode.None;
 dataGrid.SelectionMode = DataGridSelectionMode.Single;
@@ -539,7 +542,8 @@ Please refer to the [Formatting Summary](#formatting-summary)  section to learn 
     </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-dataGrid = new SfDataGrid();
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.AllowGroupExpandCollapse = true;
 dataGrid.ColumnWidthMode = ColumnWidthMode.Fill;
@@ -611,7 +615,8 @@ In the following code snippet, a summary is defined for the `Salary` and `Custom
 {% endhighlight %}
 
 {% highlight c# %}
-dataGrid = new SfDataGrid();
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.ColumnWidthMode = ColumnWidthMode.Fill;
 dataGrid.AllowGroupExpandCollapse = true;
@@ -852,7 +857,8 @@ In the code snippet below, [DataGridSummaryRow.TitleColumnCount](https://help.sy
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-dataGrid = new SfDataGrid();
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.AutoGenerateColumnsMode = AutoGenerateColumnsMode.None;
 dataGrid.SelectionMode = DataGridSelectionMode.Single;
@@ -1410,7 +1416,8 @@ In the code snippet below, [DataGridTableSummaryRow.TitleColumnCount](https://he
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-dataGrid = new SfDataGrid();
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.AutoGenerateColumnsMode = AutoGenerateColumnsMode.None;
 dataGrid.GridLinesVisibility = GridLinesVisibility.Both;

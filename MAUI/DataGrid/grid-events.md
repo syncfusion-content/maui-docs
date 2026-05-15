@@ -29,7 +29,17 @@ This event will be triggered while tapping a cell in the DataGrid. This event ha
                        ItemsSource="{Binding Orders}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-private void dataGrid_CellTapped(object sender, DataGridCellTappedEventArgs e)
+public MainPage()
+{
+    InitializeComponent();
+    SfDataGrid dataGrid = new SfDataGrid();
+    OrderInfoViewModel viewModel = new OrderInfoViewModel();
+    dataGrid.ItemsSource = viewModel.Orders;
+    dataGrid.CellTapped += dataGrid_CellTapped;
+    this.Content = dataGrid;
+}
+
+private void dataGrid_CellTapped(object? sender, DataGridCellTappedEventArgs e)
 {
     var rowIndex = e.RowColumnIndex.RowIndex;
     var rowData = e.RowData;
@@ -49,6 +59,16 @@ The [CellTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 Command TapCommand = new Command(ListenTapCommand);
+
+public MainPage()
+{
+    InitializeComponent();
+    SfDataGrid dataGrid = new SfDataGrid();
+    OrderInfoViewModel viewModel = new OrderInfoViewModel();
+    dataGrid.ItemsSource = viewModel.Orders;
+    dataGrid.CellTappedCommand = TapCommand;
+    this.Content = dataGrid;
+}
 
 private static void ListenTapCommand(object obj)
 {
@@ -74,7 +94,17 @@ This event will be triggered while double tapping a cell in the DataGrid. This e
                        ItemsSource="{Binding Orders}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-private void dataGrid_CellDoubleTapped(object sender, DataGridCellDoubleTappedEventArgs e)
+public MainPage()
+{
+    InitializeComponent();
+    SfDataGrid dataGrid = new SfDataGrid();
+    OrderInfoViewModel viewModel = new OrderInfoViewModel();
+    dataGrid.ItemsSource = viewModel.Orders;
+    dataGrid.CellDoubleTapped += dataGrid_CellDoubleTapped;
+    this.Content = dataGrid;
+}
+
+private void dataGrid_CellDoubleTapped(object? sender, DataGridCellDoubleTappedEventArgs e)
 {
     var rowIndex = e.RowColumnIndex.RowIndex;
     var rowData = e.RowData;
@@ -94,6 +124,16 @@ The [CellDoubleTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Mau
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 Command DoubleTapCommand = new Command(ListenDoubleTapCommand);
+
+public MainPage()
+{
+    InitializeComponent();
+    SfDataGrid dataGrid = new SfDataGrid();
+    OrderInfoViewModel viewModel = new OrderInfoViewModel();
+    dataGrid.ItemsSource = viewModel.Orders;
+    dataGrid.CellDoubleTappedCommand = DoubleTapCommand;
+    this.Content = dataGrid;
+}
 
 private static void ListenDoubleTapCommand(object obj)
 {
@@ -119,13 +159,24 @@ This event will be triggered while long pressing a cell in the DataGrid. This ev
                        ItemsSource="{Binding Orders}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-private void dataGrid_CellLongPress(object sender, DataGridCellLongPressEventArgs e)
+public MainPage()
+{
+    InitializeComponent();
+    SfDataGrid dataGrid = new SfDataGrid();
+    OrderInfoViewModel viewModel = new OrderInfoViewModel();
+    dataGrid.ItemsSource = viewModel.Orders;
+    dataGrid.CellLongPress += dataGrid_CellLongPress;
+    this.Content = dataGrid;
+}
+
+private void dataGrid_CellLongPress(object? sender, DataGridCellLongPressEventArgs e)
 {
     var rowIndex = e.RowColumnIndex.RowIndex;
     var rowData = e.RowData;
     var columnIndex = e.RowColumnIndex.ColumnIndex;
     var column = e.Column;
 }
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -139,6 +190,16 @@ The [CellLongPressCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.D
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 Command LongPressCommand = new Command(ListenLongPressCommand);
+
+public MainPage()
+{
+    InitializeComponent();
+    SfDataGrid dataGrid = new SfDataGrid();
+    OrderInfoViewModel viewModel = new OrderInfoViewModel();
+    dataGrid.ItemsSource = viewModel.Orders;
+    dataGrid.CellLongPressCommand = LongPressCommand;
+    this.Content = dataGrid;
+}
 
 private static void ListenLongPressCommand(object obj)
 {
@@ -160,11 +221,21 @@ This event will be triggered when a right-click mouse gesture is recognized on a
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                       CellRightTapped="SfDataGrid_CellRightTapped"
+                       CellRightTapped="dataGrid_CellRightTapped"
                        ItemsSource="{Binding Orders}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-private void SfDataGrid_CellRightTapped(object sender, DataGridCellRightTappedEventArgs e)
+public MainPage()
+{
+    InitializeComponent();
+    SfDataGrid dataGrid = new SfDataGrid();
+    OrderInfoViewModel viewModel = new OrderInfoViewModel();
+    dataGrid.ItemsSource = viewModel.Orders;
+    dataGrid.CellRightTapped += dataGrid_CellRightTapped;
+    this.Content = dataGrid;
+}
+
+private void dataGrid_CellRightTapped(object sender, DataGridCellRightTappedEventArgs e)
 {
     var rowIndex = e.RowColumnIndex.RowIndex;
     var rowData = e.RowData;
@@ -187,6 +258,16 @@ The [CellRightTappedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 Command RightTapCommand = new Command(ListenRightTapCommand);
+
+public MainPage()
+{
+    InitializeComponent();
+    SfDataGrid dataGrid = new SfDataGrid();
+    OrderInfoViewModel viewModel = new OrderInfoViewModel();
+    dataGrid.ItemsSource = viewModel.Orders;
+    dataGrid.CellRightTappedCommand = RightTapCommand;
+    this.Content = dataGrid;
+}
 
 private static void ListenRightTapCommand(object obj)
 {
@@ -220,6 +301,16 @@ This event will be triggered when the mouse pointer enters a cell in the DataGri
                        ItemsSource="{Binding Orders}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+public MainPage()
+{
+    InitializeComponent();
+    SfDataGrid dataGrid = new SfDataGrid();
+    OrderInfoViewModel viewModel = new OrderInfoViewModel();
+    dataGrid.ItemsSource = viewModel.Orders;
+    dataGrid.CellEntered += dataGrid_CellEntered;
+    this.Content = dataGrid;
+}
+
 private void dataGrid_CellEntered(object sender, DataGridCellEnteredEventArgs e)
 {
     var rowIndex = e.RowColumnIndex.RowIndex;
@@ -240,6 +331,16 @@ The [CellEnteredCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Dat
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 Command EnteredCommand = new Command(ListenEnteredCommand);
+
+public MainPage()
+{
+    InitializeComponent();
+    SfDataGrid dataGrid = new SfDataGrid();
+    OrderInfoViewModel viewModel = new OrderInfoViewModel();
+    dataGrid.ItemsSource = viewModel.Orders;
+    dataGrid.CellEnteredCommand = EnteredCommand;
+    this.Content = dataGrid;
+}
 
 private static void ListenEnteredCommand(object obj)
 {
@@ -265,6 +366,16 @@ This event will be triggered when the mouse pointer hovers over a cell in the Da
                        ItemsSource="{Binding Orders}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+public MainPage()
+{
+    InitializeComponent();
+    SfDataGrid dataGrid = new SfDataGrid();
+    OrderInfoViewModel viewModel = new OrderInfoViewModel();
+    dataGrid.ItemsSource = viewModel.Orders;
+    dataGrid.CellHovered += dataGrid_CellHovered;
+    this.Content = dataGrid;
+}
+
 private void dataGrid_CellHovered(object sender, DataGridCellHoveredEventArgs e)
 {
     var rowIndex = e.RowColumnIndex.RowIndex;
@@ -286,6 +397,16 @@ The [CellHoveredCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Dat
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 Command HoveredCommand = new Command(ListenHoveredCommand);
+
+public MainPage()
+{
+    InitializeComponent();
+    SfDataGrid dataGrid = new SfDataGrid();
+    OrderInfoViewModel viewModel = new OrderInfoViewModel();
+    dataGrid.ItemsSource = viewModel.Orders;
+    dataGrid.CellHoveredCommand = HoveredCommand;
+    this.Content = dataGrid;
+}
 
 private static void ListenHoveredCommand(object obj)
 {
@@ -311,6 +432,16 @@ This event will be triggered when the mouse pointer exits a cell in the DataGrid
                        ItemsSource="{Binding Orders}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
+public MainPage()
+{
+    InitializeComponent();
+    SfDataGrid dataGrid = new SfDataGrid();
+    OrderInfoViewModel viewModel = new OrderInfoViewModel();
+    dataGrid.ItemsSource = viewModel.Orders;
+    dataGrid.CellExited += dataGrid_CellExited;
+    this.Content = dataGrid;
+}
+
 private void dataGrid_CellExited(object sender, DataGridCellExitedEventArgs e)
 {
     var rowIndex = e.RowColumnIndex.RowIndex;
@@ -331,6 +462,16 @@ The [CellExitedCommand](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Data
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 Command ExitedCommand = new Command(ListenExitedCommand);
+
+public MainPage()
+{
+    InitializeComponent();
+    SfDataGrid dataGrid = new SfDataGrid();
+    OrderInfoViewModel viewModel = new OrderInfoViewModel();
+    dataGrid.ItemsSource = viewModel.Orders;
+    dataGrid.CellExitedCommand = ExitedCommand;
+    this.Content = dataGrid;
+}
 
 private static void ListenExitedCommand(object obj)
 {
@@ -359,11 +500,21 @@ The [SfDataGrid.CellValueChanged](https://help.syncfusion.com/cr/maui/Syncfusion
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                       CellValueChanged="SfDataGrid_CellValueChanged"
+                       CellValueChanged="dataGrid_CellValueChanged"
                        ItemsSource="{Binding Orders}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-private void SfDataGrid_CellValueChanged(object sender, DataGridCellValueChangedEventArgs e)
+public MainPage()
+{
+    InitializeComponent();
+    SfDataGrid dataGrid = new SfDataGrid();
+    OrderInfoViewModel viewModel = new OrderInfoViewModel();
+    dataGrid.ItemsSource = viewModel.Orders;
+    dataGrid.CellValueChanged += dataGrid_CellValueChanged;
+    this.Content = dataGrid;
+}
+
+private void dataGrid_CellValueChanged(object sender, DataGridCellValueChangedEventArgs e)
 {
     var column = e.Column;
     var newValue = e.NewValue;
@@ -379,11 +530,21 @@ This event will be triggered once components in the `SfDataGrid` initialized and
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                       DataGridLoaded="DataGrid_GridLoaded"
+                       DataGridLoaded="dataGrid_GridLoaded"
                        ItemsSource="{Binding Orders}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-private void DataGrid_GridLoaded(object? sender, EventArgs e)
+public MainPage()
+{
+    InitializeComponent();
+    SfDataGrid dataGrid = new SfDataGrid();
+    OrderInfoViewModel viewModel = new OrderInfoViewModel();
+    dataGrid.ItemsSource = viewModel.Orders;
+    dataGrid.DataGridLoaded += dataGrid_GridLoaded;
+    this.Content = dataGrid;
+}
+
+private void dataGrid_GridLoaded(object? sender, EventArgs e)
 {
 
 }   
@@ -415,11 +576,21 @@ This event will be triggered once the source is changed in SfDataGrid
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                       ItemsSourceChanged="DataGrid_DataGridItemsSourceChanged"
+                       ItemsSourceChanged="dataGridItemsSourceChanged"
                        ItemsSource="{Binding Orders}" />
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
-private void DataGrid_DataGridItemsSourceChanged(object? sender, DataGridItemsSourceChangedEventArgs e)
+public MainPage()
+{
+    InitializeComponent();
+    SfDataGrid dataGrid = new SfDataGrid();
+    OrderInfoViewModel viewModel = new OrderInfoViewModel();
+    dataGrid.ItemsSource = viewModel.Orders;
+    dataGrid.ItemsSourceChanged += dataGridItemsSourceChanged;
+    this.Content = dataGrid;
+}
+
+private void dataGridItemsSourceChanged(object? sender, DataGridItemsSourceChangedEventArgs e)
 {
     var newItemSource = e.NewItems;
     var oldItemSource = e.OldItems;

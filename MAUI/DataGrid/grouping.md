@@ -30,7 +30,8 @@ You can enable data grouping in the SfDataGrid by setting the [SfDataGrid.AllowG
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-dataGrid = new SfDataGrid();
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.AllowGrouping = true;
 this.Content = dataGrid;
@@ -60,7 +61,8 @@ You can modify the GroupDropArea text by setting the [SfDataGrid.GroupDropAreaTe
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-dataGrid = new SfDataGrid();
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.AllowGrouping = true;
 dataGrid.GroupDropAreaText = "Drag and drop the column here";
@@ -83,7 +85,8 @@ Use the [SfDataGrid.GroupDropAreaHeight](https://help.syncfusion.com/cr/maui/Syn
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-dataGrid = new SfDataGrid();
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.AllowGrouping = true;
 dataGrid.GroupDropAreaHeight = 100;
@@ -122,7 +125,8 @@ You can style the `GroupDropArea` using the following SfDataGrid properties:
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-dataGrid = new SfDataGrid();
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.AllowGrouping = true;
 
@@ -217,7 +221,8 @@ To apply column grouping, please refer to the following code example:
 </syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
-dataGrid = new SfDataGrid();
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.GroupColumnDescriptions.Add (new GroupColumnDescription () 
 {
@@ -267,7 +272,8 @@ The SfDataGrid also allows to group the data against one or more columns using t
 {% endhighlight %}
 
 {% highlight c# %}
-dataGrid = new SfDataGrid();
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.GroupingMode = GroupingMode.Multiple;
 dataGrid.GroupColumnDescriptions.Add (new GroupColumnDescription () 
@@ -326,7 +332,8 @@ To set a custom grouping converter for the group description that is added to gr
 {% endhighlight %}
 
 {% highlight c# %}
-dataGrid = new SfDataGrid();
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.GroupColumnDescriptions.Add (new GroupColumnDescription () 
 {
@@ -547,7 +554,8 @@ To expand and collapse the groups at runtime, you can simply set the [SfDataGrid
                        
 {% endhighlight %}
 {% highlight c# %}
-dataGrid = new SfDataGrid();
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
 dataGrid.AllowGroupExpandCollapse = true;
 dataGrid.ItemsSource = viewModel.Orders;
 this.Content = dataGrid;
@@ -566,7 +574,8 @@ To expand all groups initially, set the [SfDataGrid.AutoExpandGroups](https://he
                         ItemsSource="{Binding Orders}" />
 {% endhighlight %}
 {% highlight c# %}
-dataGrid = new SfDataGrid();
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
 dataGrid.AutoExpandGroups = true;
 dataGrid.AllowGroupExpandCollapse = true;
 dataGrid.ItemsSource = viewModel.Orders;
@@ -681,7 +690,8 @@ The width of indent column can be customized by the [IndentColumnWidth](https://
 
 {% highlight c# %}
 
-dataGrid = new SfDataGrid();
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.IndentColumnWidth = 60;
 this.Content = dataGrid;
@@ -753,7 +763,8 @@ The visibility of the grouped column can be customized by the [SfDataGrid.ShowCo
                         ShowColumnWhenGrouped="False" />
 {% endhighlight %}
 {% highlight c# %}
-dataGrid = new SfDataGrid();
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.ShowColumnWhenGrouped = false;
 this.Content = dataGrid;
@@ -790,7 +801,8 @@ The SfDataGrid uses an icon to indicate the expand and collapse state of groups.
 {% endhighlight %}
 
 {% highlight c# %}
-dataGrid = new SfDataGrid();
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.GroupingMode = GroupingMode.Multiple;
 dataGrid.AllowGroupExpandCollapse = true;
@@ -900,7 +912,8 @@ The size of the group icon can be customized when the icon is loaded through `Gr
 {% endhighlight %}
 
 {% highlight c# %}
-dataGrid = new SfDataGrid();
+SfDataGrid dataGrid = new SfDataGrid();
+OrderInfoViewModel viewModel = new OrderInfoViewModel();
 dataGrid.ItemsSource = viewModel.Orders;
 dataGrid.GroupingMode = GroupingMode.Multiple;
 dataGrid.AllowGroupExpandCollapse = true;
