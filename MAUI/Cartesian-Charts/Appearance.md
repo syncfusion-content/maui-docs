@@ -173,7 +173,36 @@ public class ViewModel
 
 ![Gradient support in MAUI Chart](Appearance_images/MAUI_chart_gradient_color.png)
 
-## Plotting Area Customization:
+## Point Color Path
+
+The [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) supports using the **PointColorPath** property to assign different colors to each data point. By binding this property to a color field in the data source, each segment can be dynamically styled with its own color.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:ColumnSeries PointColorPath="PointColor"></chart:ColumnSeries>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+ColumnSeries series = new ColumnSeries()
+{        
+   PointColorPath = "PointColor"           
+};
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![PointColorPath in MAUI Chart](Appearance_images/MAUI_chart_pointcolorpath.png)
+
+N> The property is not applicable to area-based series, fast series, financial series, box plot, error bar, waterfall, and histogram types.
+
+N> The priority for color assignment is as follows: `Fill`>`PointColorPath`>`PaletteBrushes`.
+
+## Plotting Area Customization
 
 [SfCartesianChart](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.SfCartesianChart.html) allows you to add any view to the chart plot area, which is useful for adding any relevant data, a watermark, or a color gradient to the background of the chart.
 
