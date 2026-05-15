@@ -21,7 +21,7 @@ Before installing MAUI UI Composer, ensure the following:
 
 - Install [APM (Agent Package Manager)](https://microsoft.github.io/apm/getting-started/installation/#quick-install-recommended)
 - Required [Node.js](https://nodejs.org/en) version ≥ 18
-- Required [.NET SDK](https://dotnet.microsoft.com/download) version ≥ 8.0
+- Required [.NET SDK](https://dotnet.microsoft.com/en-us/download) version ≥ 8.0
 - [MAUI](https://learn.microsoft.com/en-us/dotnet/maui) workload installed (`dotnet workload install maui`)
 - MAUI application (existing or new); see [Quick Start](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app)
 - A supported AI agent or IDE that integrates with the Skills (VS Code, Visual Studio, Cursor, Code Studio, etc.)
@@ -33,29 +33,29 @@ Before installing MAUI UI Composer, ensure the following:
 ## Key Benefits
 
 ### **AI-Driven UI Generation**
-- Converts prompts into complete MAUI components—not just snippets
-- Automatically selects appropriate Syncfusion® MAUI components and features
-- Produces structured, maintainable C# code
+- Converts prompts into complete MAUI components—not just snippets.
+- Automatically selects appropriate Syncfusion® MAUI components and features.
+- Produces structured, maintainable C# code.
 
 ### **Component Usage & API Accuracy**
-- Uses correct Syncfusion® MAUI component APIs
-- Injects required attached behaviors and controls
-- Avoids unsupported or deprecated patterns
+- Uses correct Syncfusion® MAUI component APIs.
+- Injects required attached behaviors and controls.
+- Avoids unsupported or deprecated patterns.
 
 ### **Patterns & Best Practices**
-- Recommended MVVM architecture and data binding patterns
-- Command handling aligned with MAUI standards
-- Secure and scalable coding patterns for cross-platform development
+- Recommended MVVM architecture and data binding patterns.
+- Command handling aligned with MAUI standards.
+- Secure and scalable coding patterns for cross-platform development.
 
 ### **Accessibility & Responsiveness**
-- WCAG 2.1 AA–aligned output
-- Semantic UI with accessibility automation support
-- Responsive layouts that adapt across device sizes and orientations
+- WCAG 2.1 AA–aligned output.
+- Semantic UI with accessibility automation support.
+- Responsive layouts that adapt across device sizes and orientations.
 
 ### **Design-System Integration**
-- Supports Material Design 3, Fluent Design, and custom themes
-- Ensures consistent Syncfusion® theming across iOS, Android, macOS, and Windows
-- Platform-specific styling and adaptive layouts
+- Supports Material Design 3, Fluent Design, and custom themes.
+- Ensures consistent Syncfusion® theming across iOS, Android, macOS, and Windows.
+- Platform-specific styling and adaptive layouts.
 
 ## Installation
 
@@ -147,11 +147,6 @@ Key enforcement points:
 > The assistant handles most stages automatically and may request confirmation where required.
 
 ## Using the AI Assistant
-
-After installing MAUI UI Composer with APM, the relevant agent and skill files are added to your project under:
-
-- `.agent/skills/` (skill files)
-- `.github/agents/` (MAUI UI composer agent configuration, based on the selected target)
 
 To start using the skill:
 
