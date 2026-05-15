@@ -1,217 +1,205 @@
 ---
 layout: post
-title: Syncfusion® MAUI UI Composer Skill for AI Assistants | Syncfusion®
-description: Install Syncfusion® MAUI UI Composer to generate production-ready MAUI components from natural-language prompts.
+title: Syncfusion .NET MAUI Agent Skills for AI Assistants | Syncfusion
+description: Learn how to install and use Syncfusion Agent Skills to enhance AI assistants with accurate Syncfusion .NET MAUI component guidance.
 control: Skills
 platform: maui
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
-# Syncfusion® MAUI UI Composer Skill for AI Assistants
+# Syncfusion .NET MAUI Agent Skills for AI Assistants
 
-**Syncfusion® MAUI UI Composer** is an AI-powered skill and companion agent that accelerates cross-platform application development by transforming natural-language UI requirements into production-ready components using Syncfusion® MAUI libraries.
+This guide introduces **Syncfusion .NET MAUI Skills**, a knowledge package that enables AI assistants (VS Code, Cursor, CodeStudio, etc.) to understand and generate accurate Syncfusion® .NET MAUI code using official APIs, patterns, and theming guidelines.
 
-Integrated with your AI-powered IDE, it leverages deep knowledge of **Syncfusion® MAUI components** to deliver accurate and ready-to-use code.
-By combining intelligent code generation with best practices, accessibility standards, and design-system consistency, MAUI UI Composer helps you rapidly build scalable mobile and desktop applications for iOS, Android, macOS, and Windows without leaving your development workflow.
+Syncfusion® Skills eliminate common issues with generic AI suggestions by grounding the assistant in accurate Syncfusion® component usage patterns, API structures, supported features, and project-specific configuration.
 
 ## Prerequisites
 
-Before installing MAUI UI Composer, ensure the following:
+Before installing Syncfusion® .NET MAUI Agent Skills, ensure the following:
 
-- Install [APM (Agent Package Manager)](https://microsoft.github.io/apm/getting-started/installation/#quick-install-recommended)
-- Required [Node.js](https://nodejs.org/en) version ≥ 18
-- Required [.NET SDK](https://dotnet.microsoft.com/download) version ≥ 8.0
-- [MAUI](https://learn.microsoft.com/en-us/dotnet/maui) workload installed (`dotnet workload install maui`)
-- MAUI application (existing or new); see [Quick Start](https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app)
-- A supported AI agent or IDE that integrates with the Skills (VS Code, Visual Studio, Cursor, Code Studio, etc.)
-- Active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):  
-  - [Commercial](https://www.syncfusion.com/sales/unlimitedlicense)  
-  - [Community License](https://www.syncfusion.com/products/communitylicense)  
-  - [Free Trial](https://www.syncfusion.com/account/manage-trials/start-trials)
+- Required [Node.js](https://nodejs.org/en/) version >= 16
+- MAUI application (existing or new); see [Quick Start](https://help.syncfusion.com/maui/introduction/overview)
+- A supported AI agent or IDE that integrates with the Skills CLI (VS Code, Syncfusion® Code Studio, Cursor, etc.)
 
 ## Key Benefits
 
-### **AI-Driven UI Generation**
-- Converts prompts into complete MAUI components—not just snippets
-- Automatically selects appropriate Syncfusion® MAUI components and features
-- Produces structured, maintainable C# code
-
-### **Component Usage & API Accuracy**
-- Uses correct Syncfusion® MAUI component APIs
-- Injects required attached behaviors and controls
-- Avoids unsupported or deprecated patterns
-
-### **Patterns & Best Practices**
-- Recommended MVVM architecture and data binding patterns
-- Command handling aligned with MAUI standards
-- Secure and scalable coding patterns for cross-platform development
-
-### **Accessibility & Responsiveness**
-- WCAG 2.1 AA–aligned output
-- Semantic UI with accessibility automation support
-- Responsive layouts that adapt across device sizes and orientations
-
-### **Design-System Integration**
-- Supports Material Design 3, Fluent Design, and custom themes
-- Ensures consistent Syncfusion® theming across iOS, Android, macOS, and Windows
-- Platform-specific styling and adaptive layouts
+1. **Component Usage & API Knowledge** - Curated, Skill-based guidance that captures how to add, configure, and compose Syncfusion® .NET MAUI components, including key properties, events, required NuGet packages, and common integration patterns.
+2. **Patterns & Best Practices** - Practical recommendations for API structures, MVVM data-binding approaches, and feature configuration workflows (for example, paging, sorting, and filtering for data components). All guidance is authored directly within the Skill file rather than being fetched from documentation.
+3. **Design-System Guidance** - Includes information related to themes, dark/light variants, and icon usage patterns across Syncfusion®.NET MAUI components.
 
 ## Installation
 
-Before installing MAUI UI Composer, ensure that APM (Agent Package Manager) is installed and available in your environment.
+Install [Syncfusion® .NET MAUI components skills](https://github.com/syncfusion/maui-ui-components-skills.git) using the Skills CLI. Users can also explore available skills from the [marketplace](https://skills.sh/syncfusion/).
 
-### Verify APM Installation
+### Install all skills
 
-Run the following command to confirm APM is installed:
-
-```bash
-apm --version
-```
-
-### Install the Syncfusion® MAUI UI Composer package using APM
-
-Use the APM CLI to install the MAUI UI Composer skill for your preferred environment:
+Use the following command to install all component skills at once in the `.agents/skills` directory:
 
 {% tabs %}
-{% highlight bash tabtitle="Copilot" %}
+{% highlight bash tabtitle="NPM" %}
 
-// By default, it installs to the GitHub Copilot target
-
-apm install syncfusion/maui-ui-composer
-
-{% endhighlight %}
-{% highlight bash tabtitle="Cursor" %}
-
-apm install syncfusion/maui-ui-composer -t cursor
-
-{% endhighlight %}
-{% highlight bash tabtitle="Visual Studio" %}
-
-apm install syncfusion/maui-ui-composer -t copilot
-
-{% endhighlight %}
-{% highlight bash tabtitle="Code Studio" %}
-
-// For Code Studio, refer to the note below to configure the agent location explicitly to use it in the chat.
-
-apm install syncfusion/maui-ui-composer
-
-{% endhighlight %}
-{% highlight bash tabtitle="Codex" %}
-
-apm install syncfusion/maui-ui-composer -t codex
-
-{% endhighlight %}
-{% highlight bash tabtitle="Claude" %}
-
-apm install syncfusion/maui-ui-composer -t claude
+npx skills add syncfusion/maui-ui-components-skills -y
 
 {% endhighlight %}
 {% endtabs %}
 
-After installation, the following artifacts are added to your project for the GitHub Copilot target:
+### Install selected skills
 
-- `.agent/skills/` – contains the skill files
-- `.github/agents/` – contains the agent configuration
+Use the following command to install skills interactively:
 
-For details on supported deployment targets, refer to the [documentation](https://microsoft.github.io/apm/reference/cli/targets/#detection-signals).
+{% tabs %}
+{% highlight bash tabtitle="NPM" %}
 
-> For Syncfusion® Code Studio, users must explicitly configure the agent location to use it in the chat. Refer to the [documentation](https://help.syncfusion.com/code-studio/reference/configure-properties/usersettings#agent-file-locations).
+npx skills add syncfusion/maui-ui-components-skills
 
-## How the Syncfusion® MAUI UI Composer Skill Works
+{% endhighlight %}
+{% endtabs %}
 
-1. **Intent Analysis** — Parse the user's prompt to identify control types, layouts, and high-level UI structure intent.
-2. **Project Detection** — Automatically detects project framework, platform targets, package manager, and existing themes.
-3. **Component Mapping** — Map intent to Syncfusion® MAUI controls and required feature modules.
-4. **Theming & Design System**  
-   Load required theming guidelines and confirm key design choices:
-   - Design system (Material Design 3, or Custom theme). If no themes detected in the existing project, Material Design 3 is shown as the default option—proceed with this or change the theme as preferred.
-   - Syncfusion theme (Material3)
-   - Light and Dark Mode support
-   - Platform-specific adaptations (iOS, Android, macOS, Windows)
-   - Core design basics (colors, spacing, typography, responsiveness, accessibility)
-5. **Code Generation** — Produce C# MAUI components, ViewModel classes, and XAML markup with proper data binding.
-6. **Dependency Management** — Recommend or install required Syncfusion® MAUI NuGet packages and peer dependencies.
-7. **Validation** — Run accessibility and basic security checks, request confirmation for changes.
-8. **Code Insertion** — Create files or patch existing files following MAUI project structure and conventions.
+The terminal will display a list of available skills. Use the arrow keys to navigate, the space bar to select the desired skills, and the Enter key to confirm.
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
 
-Key enforcement points:
+ Select skills to install (space to toggle)
+│  ◻ syncfusion-maui-accordion
+│  ◻ syncfusion-maui-ai-assistview
+│  ◻ syncfusion-maui-autocomplete
+│  ◻ syncfusion-maui-avatar-view
+│  ◻ syncfusion-maui-backdrop
+│  ◻ syncfusion-maui-badge-view
+│  ◻ syncfusion-maui-barcode-generator
+│  ◻ syncfusion-maui-busy-indicator
+│  ◻ syncfusion-maui-button
+|  .....
 
-- Adds correct theme and resource imports for chosen Syncfusion® MAUI themes
-- Injects only the required controls and behaviors
-- Generates accessible UI with proper automation properties and keyboard navigation
-- Supports MVVM pattern with proper INotifyPropertyChanged implementation
-- Avoids unsupported or deprecated API usages for Syncfusion® MAUI controls
+{% endhighlight %}
+{% endtabs %}
 
-> The assistant handles most stages automatically and may request confirmation where required.
+Next, select which AI agent you're using and where to store the skills.
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
 
-## Using the AI Assistant
+│  ── Additional agents ─────────────────────────────
+│  Search:  
+│  ↑↓ move, space select, enter confirm
+│
+│ ❯ ○ Augment (.augment/skills)
+│   ○ Claude Code (.claude/skills)
+│   ○ OpenClaw (skills)
+│   ○ CodeBuddy (.codebuddy/skills)
+│   ○ Command Code (.commandcode/skills)
+│   ○ Continue (.continue/skills)
+│   ○ Cortex Code (.cortex/skills)
+│   ○ Crush (.crush/skills)
+|   ....
 
-After installing MAUI UI Composer with APM, the relevant agent and skill files are added to your project under:
+{% endhighlight %}
+{% endtabs %}
 
-- `.agent/skills/` (skill files)
-- `.github/agents/` (MAUI UI composer agent configuration, based on the selected target)
+Choose your installation scope (project-level or global), then confirm to complete the installation.
 
-To start using the skill:
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
 
-1. Open your supported IDE (Visual Studio, VS Code, or Code Studio).
-2. In the chat panel, select the `syncfusion-maui-ui-composer` agent from the **Agent dropdown**.
+◆  Installation scope
+│  ● Project (Install in current directory (committed with your project))
+│  ○ Global
 
-![Set Agent](images/MAUI-Composer-Agent.png)
+◆  Proceed with installation?
+│  ● Yes / ○ No
 
-3. Start prompting the agent with a clear description of your UI requirements.
+{% endhighlight %}
+{% endtabs %}
 
-Examples Prompts:
+This registers the Syncfusion® skill pack so that AI assistants can automatically load it in supported IDEs such as [Code Studio](https://help.syncfusion.com/code-studio/reference/configure-properties/skills), [Visual Studio Code](https://code.visualstudio.com/docs/copilot/customization/agent-skills), and [Cursor](https://cursor.com/docs/skills).
 
-{% promptcards %}
-{% promptcard Login Screen %}
-Create a login screen for a cross-platform MAUI application using Material Design 3 theme with a centered card containing email and password entry fields with input validation. Include a "Remember Me" checkbox, a forgot password link, and a primary login button. Add a secondary "Sign Up" button below. Ensure the layout is responsive and works on iOS, Android, macOS, and Windows devices.
-{% endpromptcard %}
-{% promptcard Dashboard View %}
-Create a dashboard view for a MAUI application featuring a collapsible shell flyout with navigation items for Dashboard, Orders, Customers, Reports, and Settings; a top app bar showing the application title on the left and user profile button on the right; a main content area with four summary cards in a 2x2 grid displaying key metrics (Total Orders, Revenue, New Customers, Pending Tasks) with icons and percentage indicators; a filterable data grid showing recent orders with columns for Order ID, Customer, Amount, Status, and Date; and a chart displaying sales trends using sample data, all styled with Material Design 3 and supporting light/dark modes.
-{% endpromptcard %}
-{% endpromptcards %}
+To learn more about the Skills CLI, refer [here](https://skills.sh/docs).
 
-Generated code follows best practices with accessible UI, responsive mobile-first layouts, strong C# typing, MVVM pattern implementation, and built-in security measures such as input validation and secure data handling.
+## How Syncfusion® Agent Skills Work
 
-## Troubleshooting
+1. **Reads relevant Skill files based on queries**, retrieving component usage patterns, APIs, and best‑practice guidance from installed Syncfusion® Skills. The assistant initially loads only skill names and descriptions, then dynamically loads the required skill and reference files as needed to provide accurate Syncfusion guidance.
+2. **Enforces Syncfusion® best practices**, including:
+   - Referencing the correct NuGet packages for each component.
+   - Applying MVVM data-binding patterns and platform-specific initialization (for example, `MauiProgram.cs` handler registration).
+   - Adding the correct theme resource dictionaries and style imports.
+3. **Generates component-accurate code**, avoiding invalid properties or unsupported patterns.
 
-- **APM installation failure**: Refer to this [documentation](https://microsoft.github.io/apm/getting-started/installation/#troubleshooting)
+### Using the AI Assistant
 
-- **Skills not loading**: Ensure the **.agent/** and **.github/agents/** folders exist in your project and that the skill was installed successfully using APM. Verify that the correct agent is selected from the Agent dropdown in your IDE.
+Once skills are installed, the assistant can be used to generate and update Syncfusion® .NET MAUI code for tasks such as:
 
-- **Control not rendering**: Verify that the Syncfusion® MAUI NuGet packages are correctly installed and that the XAML namespaces are properly declared. Retry generation using the specific control skill to resolve the issue.
+- "Add a DataGrid with paging, sorting, and filtering."
+- "Create a Scheduler with week view and drag-drop."
+- "Apply the Material Dark theme to all Syncfusion components."
 
-- **Platform-specific issues**: Ensure that your project has the correct platform-specific project files (.csproj) and that the MAUI workload is properly installed on your development machine.
+## Skills CLI Commands
 
-- **Syncfusion license banner appears**: Use the licensing skill to correctly register and validate your Syncfusion® license key in the application.
+After installation, manage Syncfusion® Agent Skills using the following commands:
 
-- **XAML IntelliSense issues**: Clear the .vs folder and rebuild the solution to refresh the XAML designer and IntelliSense.
+### List Skills
+
+View all installed skills in your current project or global environment:
+
+{% tabs %}
+{% highlight bash tabtitle="NPM" %}
+
+npx skills list
+
+{% endhighlight %}
+{% endtabs %}
+
+### Remove a Skill
+
+Uninstall a specific skill from your environment:
+
+{% tabs %}
+{% highlight bash tabtitle="NPM" %}
+
+npx skills remove <skill-name>
+
+{% endhighlight %}
+{% endtabs %}
+
+Replace `<skill-name>` with the name of the skill you want to remove (for example, `syncfusion-maui-datagrid`).
+
+### Check for Updates
+
+Check if updates are available for your installed skills:
+
+{% tabs %}
+{% highlight bash tabtitle="NPM" %}
+
+npx skills check
+
+{% endhighlight %}
+{% endtabs %}
+
+### Update All Skills
+
+Update all installed skills to their latest versions:
+
+{% tabs %}
+{% highlight bash tabtitle="NPM" %}
+
+npx skills update
+
+{% endhighlight %}
+{% endtabs %}
 
 ## FAQ
 
-**Which agents/IDEs are supported?**
-Any Skills-compatible agent that reads local skill files (Visual Studio, VS Code, Code Studio, Cursor, etc.).
+**Which agents and IDEs are supported?**
 
-**Are skills loaded automatically?**  
-Yes. Supported agents automatically load relevant skills based on your query.
+Any Skills compatible agent or IDE that loads local skill files (Visual Studio Code, Cursor, CodeStudio, etc.).
 
-**Can I customize the generated styles?**
-Yes — the skill supports choosing Material Design 3, or a custom theme; generated components include clear integration points for style adjustments.
+**Are skills loaded automatically?**
 
-**Does it modify files automatically?**
-The skill proposes changes and requires confirmation for insertion; automatic NuGet package installation may be offered depending on agent permissions.
+Yes. Once installed, supported agents automatically detect and load relevant skills for Syncfusion‑related queries without requiring additional configuration.
 
-**Can I generate components for specific platforms only?**
-Yes — you can specify platform targets (iOS, Android, macOS, Windows) in your prompt, and the skill will generate platform-appropriate code with conditional compilation where needed.
+**Skills are not being loaded**
 
-**Does it support MVVM pattern?**
-Yes — the skill automatically generates ViewModels with proper INotifyPropertyChanged implementation, Command bindings, and data binding patterns aligned with MAUI best practices.
+Verify that skills are installed in the correct agent directory, restart the IDE, and confirm that the agent supports external skill files.
 
 ## See also
 
 - [Agent Skills Standards](https://agentskills.io/home)
-- [Agent Package Manager](https://microsoft.github.io/apm/getting-started/quick-start/)
-- [MAUI Documentation](https://learn.microsoft.com/en-us/dotnet/maui)
-- [Syncfusion MAUI Components](https://www.syncfusion.com/maui-controls)
+- [SKills CLI](https://skills.sh/docs)
