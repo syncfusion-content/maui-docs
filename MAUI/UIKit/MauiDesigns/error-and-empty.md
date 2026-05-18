@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Essential® UI Kit for .NET MAUI Error And Empty Designs | Syncfusion®
-description: Essential® UI Kit for .NET MAUI contains elegantly designed XAML templates for MAUI Error And Empty apps.
+description: Essential® UI Kit for .NET MAUI contains elegantly designed XAML templates for MAUI Error And Empty apps, compatible with Android, iOS, and UWP platforms.
 platform: maui
 control: Essential<sup>®</sup> UI Kit for .NET MAUI
 documentation: ug
 ---
 
-# Syncfusion<sup>®</sup> Essential<sup>®</sup> UI Kit for .NET MAUI Error And Empty Designs
+# Syncfusion<sup>®</sup> UI Kit for .NET MAUI Error And Empty Designs
 
 The Essential<sup>®</sup> UI Kit for .NET MAUI Error and Empty offers a collection of **11 screens**, designed to streamline your development process and elevate your application’s user experience. 
 

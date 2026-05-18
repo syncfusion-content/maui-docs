@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Essential® UI Kit for .NET MAUI Catalog Designs | Syncfusion®
-description: Essential® UI Kit for .NET MAUI contains elegantly designed XAML templates for MAUI Catalog apps.
+description: Essential® UI Kit for .NET MAUI contains elegantly designed XAML templates for MAUI Catalog apps, compatible with Android, iOS, and UWP platforms.
 platform: maui
 control: Essential<sup>®</sup> UI Kit for .NET MAUI Catalog
 documentation: ug
 ---
-# Syncfusion<sup>®</sup> Essential<sup>®</sup> UI Kit for .NET MAUI Catalog Designs
+# Syncfusion<sup>®</sup> UI Kit for .NET MAUI Catalog Designs
 The Essential<sup>®</sup> UI Kit for .NET MAUI Catalog offers a collection of **9 screens**, designed to streamline your development process and elevate your application’s user experience.
 ## Catalog
 <style>

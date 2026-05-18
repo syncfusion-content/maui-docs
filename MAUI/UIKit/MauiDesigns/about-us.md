@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Essential® UI Kit for .NET MAUI About-Us Designs | Syncfusion®
-description: Essential® UI Kit for .NET MAUI contains elegantly designed XAML templates for MAUI About-Us apps.
+description: Essential® UI Kit for .NET MAUI offers elegant XAML templates for About-Us apps, compatible with Android, iOS, and UWP platforms.
 platform: maui
 control: Essential<sup>®</sup> UI Kit for .NET MAUI
 documentation: ug
 ---
 
-# Syncfusion<sup>®</sup> Essential<sup>®</sup> UI Kit for .NET MAUI About-Us Designs
+# Syncfusion<sup>®</sup> UI Kit for .NET MAUI About-Us Designs
 
 The Essential<sup>®</sup> UI Kit for .NET MAUI About Us offers a collection of **3 screens**, designed to streamline your development process and elevate your application’s user experience.
 

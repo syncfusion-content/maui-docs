@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Essential® UI Kit for .NET MAUI Settings Designs | Syncfusion®
-description: Essential® UI Kit for .NET MAUI contains elegantly designed XAML templates for MAUI Settings apps.
+description: Essential® UI Kit for .NET MAUI contains elegantly designed XAML templates for MAUI Settings apps, compatible with Android, iOS, and UWP platforms.
 platform: maui
 control: Essential<sup>®</sup> UI Kit for .NET MAUI
 documentation: ug
 ---
 
-# Syncfusion<sup>®</sup> Essential<sup>®</sup> UI Kit for .NET MAUI Settings Designs
+# Syncfusion<sup>®</sup> UI Kit for .NET MAUI Settings Designs
 
 The Essential<sup>®</sup> UI Kit for .NET MAUI Settings offers a collection of **2 screens**, designed to streamline your development process and elevate your application’s user experience. 
 
