@@ -505,6 +505,6 @@ private void OnSubmitButtonClicked(object? sender, EventArgs e)
 
 {% endtabs %}
 
-![AI powered Smart Paste .NET MAUI Dataform](images/smart-ai-samples/ai-powered-smart-paste-.net-maui-dataform.png)
+![AI powered Smart Paste .NET MAUI Dataform](images/smart-ai-samples/ai-powered-smart-paste-.net-maui-dataform.gif)
 
 You can download the complete sample from this [link](https://github.com/syncfusion/maui-demos/tree/master/MAUI/SmartComponents/SampleBrowser.Maui.SmartComponents/Samples/SmartComponents/SmartPasteDataForm)
