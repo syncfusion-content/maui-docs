@@ -7,7 +7,7 @@ control: Essential<sup>®</sup> UI Kit for .NET MAUI
 documentation: ug
 ---
 
-# Syncfusion<sup>®</sup> UI Kit for Review & Rating Designs
+# Syncfusion<sup>®</sup> UI Kit for Review & Rating
 
 The Essential<sup>®</sup> UI Kit for .NET MAUI Review and Rating offers a collection of **2 screens**, designed to streamline your development process and elevate your application’s user experience.  
 
