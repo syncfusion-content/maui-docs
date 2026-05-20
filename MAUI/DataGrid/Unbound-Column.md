@@ -19,8 +19,8 @@ The data grid allows adding additional columns that are not bound with data obje
 </ContentPage.BindingContext>
 
 <syncfusion:SfDataGrid x:Name = "dataGrid"
-                    ItemsSource = "{Binding Orders}"
-                    AutoGenerateColumnsMode = "None">
+                       ItemsSource = "{Binding Orders}"
+                       AutoGenerateColumnsMode = "None">
     <syncfusion:SfDataGrid.Columns>
         <syncfusion:DataGridTextColumn MappingName = "Customer"
                                        HeaderText = "Customer"/>
@@ -185,9 +185,9 @@ Refer to the following code example in which data for the unbound column is popu
 </ContentPage.BindingContext>
 
 <syncfusion:SfDataGrid x:Name = "dataGrid"
-                    ItemsSource = "{Binding Orders}"
-                    QueryUnboundColumnValue = "DataGrid_QueryUnboundColumnValue"
-                    AutoGenerateColumnsMode = "None">
+                       ItemsSource = "{Binding Orders}"
+                       QueryUnboundColumnValue = "DataGrid_QueryUnboundColumnValue"
+                       AutoGenerateColumnsMode = "None">
     <syncfusion:SfDataGrid.Columns>
         <syncfusion:DataGridTextColumn MappingName = "Customer"
                                        HeaderText = "Customer"/>

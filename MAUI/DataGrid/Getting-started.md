@@ -402,8 +402,8 @@ The following code example binds the collection created in the previous step to 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
-              xmlns:local="clr-namespace:GettingStarted"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
+             xmlns:local="clr-namespace:GettingStarted"
              x:Class="GettingStarted.MainPage">
 
     <ContentPage.BindingContext>
@@ -413,19 +413,19 @@ The following code example binds the collection created in the previous step to 
     <ContentPage.Content>
         <syncfusion:SfDataGrid x:Name="dataGrid"
                                ItemsSource="{Binding OrderInfoCollection}">
-        <syncfusion:SfDataGrid.Columns>
-            <syncfusion:DataGridNumericColumn HeaderText="Order ID" Format="0"
-                                                MappingName="OrderID" Width="150"/>
-                <syncfusion:DataGridTextColumn  HeaderText="Customer"
-                                                MappingName="Customer"
-                                                Width="150" />
-                <syncfusion:DataGridTextColumn  HeaderText="Ship City"
-                                                MappingName="ShipCity"
-                                                Width="150" />
-                <syncfusion:DataGridTextColumn  HeaderText="Ship Country"
-                                                MappingName="ShipCountry"
-                                                Width="150" />
-        </syncfusion:SfDataGrid.Columns>        
+            <syncfusion:SfDataGrid.Columns>
+                <syncfusion:DataGridNumericColumn HeaderText="Order ID" Format="0"
+                                                    MappingName="OrderID" Width="150"/>
+                    <syncfusion:DataGridTextColumn  HeaderText="Customer"
+                                                    MappingName="Customer"
+                                                    Width="150" />
+                    <syncfusion:DataGridTextColumn  HeaderText="Ship City"
+                                                    MappingName="ShipCity"
+                                                    Width="150" />
+                    <syncfusion:DataGridTextColumn  HeaderText="Ship Country"
+                                                    MappingName="ShipCountry"
+                                                    Width="150" />
+            </syncfusion:SfDataGrid.Columns>        
         </syncfusion:SfDataGrid>
     </ContentPage.Content>
 </ContentPage>
@@ -553,15 +553,16 @@ The following code example illustrates how this can be done:
              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
              x:Class="GettingStarted.MainPage">
 
-     <ContentPage.BindingContext>
+    <ContentPage.BindingContext>
         <local:OrderInfoRepository x:Name="viewModel" />
     </ContentPage.BindingContext>
-    
+
+    <ContentPage.Content>
         <syncfusion:SfDataGrid x:Name="dataGrid"
-                           ItemsSource="{Binding OrderInfoCollection}"
-                           HeightRequest="290"
-                           WidthRequest="200"/>
-    
+                            ItemsSource="{Binding OrderInfoCollection}"
+                            HeightRequest="290"
+                            WidthRequest="200"/>
+    </ContentPage.Content>
 </ContentPage>
 {% endhighlight %}
 

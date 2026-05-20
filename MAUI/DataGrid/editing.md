@@ -10,17 +10,17 @@ keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .ne
 
 # Editing in MAUI DataGrid (SfDataGrid)
 
-The [Syncfusion .NET MAUI DataGrid]() (SfDataGrid) control supports editing cell values by setting the [SfDataGrid.AllowEditing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowEditing) property to true, [SfDataGrid.NavigationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_NavigationMode) to Cell, and setting the [SfDataGrid.SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectionMode) to any value other than None.
+The Syncfusion [.NET MAUI DataGrid](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html) (SfDataGrid) control supports editing cell values by setting the [SfDataGrid.AllowEditing](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_AllowEditing) property to `true`, the [SfDataGrid.NavigationMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_NavigationMode) to `Cell`, and the [SfDataGrid.SelectionMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.SfDataGrid.html#Syncfusion_Maui_DataGrid_SfDataGrid_SelectionMode) to any value other than `None`.
 
 To enable editing, follow the code example:
 
 {% tabs %}
 {% highlight xaml %}
-    <syncfusion:SfDataGrid x:Name="dataGrid"
-                           AllowEditing="True"
-                           SelectionMode="Multiple"
-                           NavigationMode="Cell"
-                           ItemsSource="{Binding Orders}"/>
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       AllowEditing="True"
+                       SelectionMode="Multiple"
+                       NavigationMode="Cell"
+                       ItemsSource="{Binding Orders}"/>
 {% endhighlight %}
 {% highlight c# %}
 SfDataGrid dataGrid = new SfDataGrid();
@@ -41,15 +41,15 @@ To enable or disable editing for a specific column, you can simply set the [Data
 
 {% tabs %}
 {% highlight xaml %}
-    <syncfusion:SfDataGrid x:Name="dataGrid"
-                           SelectionMode="Multiple"
-                           NavigationMode="Cell"
-                           ItemsSource="{Binding Orders}">
-        <syncfusion:SfDataGrid.Columns>
-            <syncfusion:DataGridTextColumn AllowEditing="True"
-                                           MappingName="OrderID"/>
-        </syncfusion:SfDataGrid.Columns>
-    </syncfusion:SfDataGrid>
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       SelectionMode="Multiple"
+                       NavigationMode="Cell"
+                       ItemsSource="{Binding Orders}">
+    <syncfusion:SfDataGrid.Columns>
+        <syncfusion:DataGridTextColumn AllowEditing="True"
+                                       MappingName="OrderID"/>
+    </syncfusion:SfDataGrid.Columns>
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
 SfDataGrid dataGrid = new SfDataGrid();
@@ -73,12 +73,12 @@ To enter the edit mode, you can simply tap or double-tap the grid cell. The beha
 
 {% tabs %}
 {% highlight xaml %}
-    <syncfusion:SfDataGrid x:Name="dataGrid"
-                           AllowEditing="True"
-                           NavigationMode="Cell"
-                           SelectionMode="Multiple"
-                           ItemsSource="{Binding Orders}"
-                           EditTapAction="OnTap"/>
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       AllowEditing="True"
+                       NavigationMode="Cell"
+                       SelectionMode="Multiple"
+                       ItemsSource="{Binding Orders}"
+                       EditTapAction="OnTap"/>
 {% endhighlight %}
 {% highlight c# %}
 SfDataGrid dataGrid = new SfDataGrid();
@@ -100,11 +100,11 @@ By default, when focus moves from the data grid to another control, the current 
 
 {% tabs %}
 {% highlight xaml %}
-    <syncfusion:SfDataGrid AllowEditing="True"
-                           SelectionMode="Multiple"
-                           NavigationMode="Cell"
-                           LostFocusBehavior="EndEditCurrentCell"
-                           ItemsSource="{Binding Orders}"/>
+<syncfusion:SfDataGrid AllowEditing="True"
+                       SelectionMode="Multiple"
+                       NavigationMode="Cell"
+                       LostFocusBehavior="EndEditCurrentCell"
+                       ItemsSource="{Binding Orders}"/>
 {% endhighlight %}
 {% highlight c# %}
 SfDataGrid dataGrid = new SfDataGrid();
@@ -282,13 +282,13 @@ To hook the `SfDataGrid.CurrentCellBeginEdit` event, follow the code example:
 
 {% tabs %}
 {% highlight xaml %}
-    <syncfusion:SfDataGrid x:Name="dataGrid"
-                           AllowEditing="True"
-                           SelectionMode="Multiple"
-                           NavigationMode="Cell"
-                           CurrentCellBeginEdit="dataGrid_CurrentCellBeginEdit"
-                           ItemsSource="{Binding Orders}">
-    </syncfusion:SfDataGrid>
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       AllowEditing="True"
+                       SelectionMode="Multiple"
+                       NavigationMode="Cell"
+                       CurrentCellBeginEdit="dataGrid_CurrentCellBeginEdit"
+                       ItemsSource="{Binding Orders}">
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
 private void dataGrid_CurrentCellBeginEdit(object sender, DataGridCurrentCellBeginEditEventArgs e)
@@ -311,13 +311,13 @@ To hook the `SfDataGrid.CurrentCellEndEdit` event, follow the code example:
 
 {% tabs %}
 {% highlight xaml %}
-    <syncfusion:SfDataGrid x:Name="dataGrid"
-                           AllowEditing="True"
-                           SelectionMode="Multiple"
-                           NavigationMode="Cell"
-                           CurrentCellEndEdit="dataGrid_CurrentCellEndEdit"
-                           ItemsSource="{Binding Orders}">
-    </syncfusion:SfDataGrid>
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       AllowEditing="True"
+                       SelectionMode="Multiple"
+                       NavigationMode="Cell"
+                       CurrentCellEndEdit="dataGrid_CurrentCellEndEdit"
+                       ItemsSource="{Binding Orders}">
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
 private void dataGrid_CurrentCellEndEdit(object sender, DataGridCurrentCellEndEditEventArgs e)
@@ -337,13 +337,13 @@ The SfDataGrid allows you to programmatically edit a cell by calling the [SfData
 
 {% tabs %}
 {% highlight xaml %}
-    <syncfusion:SfDataGrid x:Name="dataGrid"
-                           AllowEditing="True"
-                           SelectionMode="Multiple"
-                           NavigationMode="Cell"
-                           Loaded="dataGrid_Loaded"
-                           ItemsSource="{Binding Orders}">
-    </syncfusion:SfDataGrid>
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       AllowEditing="True"
+                       SelectionMode="Multiple"
+                       NavigationMode="Cell"
+                       Loaded="dataGrid_Loaded"
+                       ItemsSource="{Binding Orders}">
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
 private void dataGrid_Loaded(object sender, EventArgs e)
@@ -380,13 +380,13 @@ The `SfDataGrid.CurrentCellBeginEdit` event can be used to cancel the editing op
 
 {% tabs %}
 {% highlight xaml %}
-    <syncfusion:SfDataGrid x:Name="dataGrid"
-                           AllowEditing="True"
-                           SelectionMode="Multiple"
-                           NavigationMode="Cell"
-                           CurrentCellBeginEdit="dataGrid_CurrentCellBeginEdit"
-                           ItemsSource="{Binding Orders}">
-    </syncfusion:SfDataGrid>
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       AllowEditing="True"
+                       SelectionMode="Multiple"
+                       NavigationMode="Cell"
+                       CurrentCellBeginEdit="dataGrid_CurrentCellBeginEdit"
+                       ItemsSource="{Binding Orders}">
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
 private void dataGrid_CurrentCellBeginEdit(object sender, DataGridCurrentCellBeginEditEventArgs e)
@@ -403,13 +403,13 @@ To prevent the edited value from being committed, use the `CurrentCellEndEdit` e
 
 {% tabs %}
 {% highlight xaml %}
-    <syncfusion:SfDataGrid x:Name="dataGrid"
-                           AllowEditing="True"
-                           SelectionMode="Multiple"
-                           NavigationMode="Cell"
-                           CurrentCellEndEdit="dataGrid_CurrentCellEndEdit"
-                           ItemsSource="{Binding Orders}">
-    </syncfusion:SfDataGrid>
+<syncfusion:SfDataGrid x:Name="dataGrid"
+                       AllowEditing="True"
+                       SelectionMode="Multiple"
+                       NavigationMode="Cell"
+                       CurrentCellEndEdit="dataGrid_CurrentCellEndEdit"
+                       ItemsSource="{Binding Orders}">
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
 private void dataGrid_CurrentCellEndEdit(object sender, DataGridCurrentCellEndEditEventArgs e)
