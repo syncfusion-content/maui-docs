@@ -163,7 +163,7 @@ treeView.AutoExpandOnFilter = true;
 The [RefreshFilter()](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_RefreshFilter) method reapplies the current filter settings. This is useful when you have changed the filter criteria programmatically and need to update the filtered view.
 
 {% tabs %}
-{% highlight c#  hl_lines="2" %}
+{% highlight c# hl_lines="2" %}
 treeView.FilterMode = TreeViewFilterMode.Equals;
 treeView.RefreshFilter();
 {% endhighlight %}
@@ -180,7 +180,7 @@ The [FilteredItems](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView
 The [Filtering](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_Filtering) event is raised before filtering is applied. You can use this to validate or modify filter criteria.
 
 {% tabs %}
-{% highlight c#  hl_lines="1" %}
+{% highlight c# hl_lines="1" %}
 treeView.Filtering += (sender, args) =>
 {
     // Handle the filtering event action
@@ -193,7 +193,7 @@ treeView.Filtering += (sender, args) =>
 The [Filtered](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.TreeView.SfTreeView.html#Syncfusion_Maui_TreeView_SfTreeView_Filtered) event is raised after filtering is applied. You can use this to update UI elements, such as displaying the count of filtered results.
 
 {% tabs %}
-{% highlight c#  hl_lines="1" %}
+{% highlight c# hl_lines="1" %}
 treeView.Filtered += (sender, args) =>
 {
    // Handle the filtered event action

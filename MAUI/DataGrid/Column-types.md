@@ -760,58 +760,58 @@ The `SfDataGrid` allows you to load any custom view in edit mode using the [Edit
 
 {% tabs %}
 {% highlight xaml %}
-    <ContentPage.Content>
-        <syncfusion:SfDataGrid x:Name="dataGrid"
-                               ItemsSource="{Binding OrderInfoCollection}"
-                               SelectionMode="Multiple"
-                               NavigationMode="Cell"
-                               AllowEditing="True"
-                               AutoGenerateColumnsMode="None">
-            <syncfusion:SfDataGrid.Columns>
-                <syncfusion:DataGridNumericColumn Format="#"
-                                                  MappingName="OrderID"
-                                                  HeaderText="Order ID" />
-                <syncfusion:DataGridTextColumn ColumnWidthMode="FitByHeader"
-                                               MappingName="Name"
-                                               HeaderText="Customer ID" />
-                <syncfusion:DataGridTextColumn  MappingName="ShipCountry"
-                                                HeaderText="Ship Country" />
-                <syncfusion:DataGridTemplateColumn HeaderText="Is Confirmed"
-                                                   MappingName="IsOnline"
-                                                   Width="100">
-                    <syncfusion:DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
-                                <Label x:Name="changeValue"
-                                       Grid.Column="1"
-                                       HorizontalTextAlignment="Center"
-                                       VerticalTextAlignment="Center"
-                                       Text="{Binding IsOnline}"
-                                       TextColor="Black" />
-                            </Grid>
-                        </DataTemplate>
-                    </syncfusion:DataGridTemplateColumn.CellTemplate>
-                    <syncfusion:DataGridTemplateColumn.EditTemplate>
-                        <DataTemplate>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
-                                <CheckBox Grid.Column="1"
-                                          IsChecked="{Binding IsOnline}">
-                                </CheckBox>
-                            </Grid>
-                        </DataTemplate>
-                    </syncfusion:DataGridTemplateColumn.EditTemplate>
-                </syncfusion:DataGridTemplateColumn>
-            </syncfusion:SfDataGrid.Columns>
-        </syncfusion:SfDataGrid>
-    </ContentPage.Content>
+<ContentPage.Content>
+    <syncfusion:SfDataGrid x:Name="dataGrid"
+                            ItemsSource="{Binding OrderInfoCollection}"
+                            SelectionMode="Multiple"
+                            NavigationMode="Cell"
+                            AllowEditing="True"
+                            AutoGenerateColumnsMode="None">
+        <syncfusion:SfDataGrid.Columns>
+            <syncfusion:DataGridNumericColumn Format="#"
+                                                MappingName="OrderID"
+                                                HeaderText="Order ID" />
+            <syncfusion:DataGridTextColumn ColumnWidthMode="FitByHeader"
+                                            MappingName="Name"
+                                            HeaderText="Customer ID" />
+            <syncfusion:DataGridTextColumn  MappingName="ShipCountry"
+                                            HeaderText="Ship Country" />
+            <syncfusion:DataGridTemplateColumn HeaderText="Is Confirmed"
+                                                MappingName="IsOnline"
+                                                Width="100">
+                <syncfusion:DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label x:Name="changeValue"
+                                    Grid.Column="1"
+                                    HorizontalTextAlignment="Center"
+                                    VerticalTextAlignment="Center"
+                                    Text="{Binding IsOnline}"
+                                    TextColor="Black" />
+                        </Grid>
+                    </DataTemplate>
+                </syncfusion:DataGridTemplateColumn.CellTemplate>
+                <syncfusion:DataGridTemplateColumn.EditTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <CheckBox Grid.Column="1"
+                                        IsChecked="{Binding IsOnline}">
+                            </CheckBox>
+                        </Grid>
+                    </DataTemplate>
+                </syncfusion:DataGridTemplateColumn.EditTemplate>
+            </syncfusion:DataGridTemplateColumn>
+        </syncfusion:SfDataGrid.Columns>
+    </syncfusion:SfDataGrid>
+</ContentPage.Content>
 {% endhighlight %}
 {% endtabs %}
 
@@ -960,23 +960,23 @@ To load the `DataGridComboBoxColumn` with a simple string collection, you can re
 
 {% tabs %}
 {% highlight xaml %}
-    <ContentPage.BindingContext>
-        <local:ViewModel x:Name="viewModel" />
-    </ContentPage.BindingContext>
+<ContentPage.BindingContext>
+    <local:ViewModel x:Name="viewModel" />
+</ContentPage.BindingContext>
 
-    <sfGrid:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}"
-                       AllowEditing="True"
-                       AutoGenerateColumnsMode="None"
-                       SelectionUnit="Cell"
-                       SelectionMode="Single">
-        <sfGrid:SfDataGrid.Columns>
-            <sfGrid:DataGridComboBoxColumn BindingContext="{x:Reference viewModel}"
-                                           HeaderText="Customer"
-                                           ItemsSource="{Binding CustomerNames}"
-                                           MappingName="Customer" />
-        </sfGrid:SfDataGrid.Columns>
-    </sfGrid:SfDataGrid>
+<sfGrid:SfDataGrid x:Name="dataGrid"
+                    ItemsSource="{Binding OrderInfoCollection}"
+                    AllowEditing="True"
+                    AutoGenerateColumnsMode="None"
+                    SelectionUnit="Cell"
+                    SelectionMode="Single">
+    <sfGrid:SfDataGrid.Columns>
+        <sfGrid:DataGridComboBoxColumn BindingContext="{x:Reference viewModel}"
+                                        HeaderText="Customer"
+                                        ItemsSource="{Binding CustomerNames}"
+                                        MappingName="Customer" />
+    </sfGrid:SfDataGrid.Columns>
+</sfGrid:SfDataGrid>
 {% endhighlight %}
 
 {% highlight c# %}
@@ -1040,31 +1040,30 @@ In the provided code, the ItemsSource for the ShipCity column is returned based 
 
 {% tabs %}
 {% highlight xaml %}
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <local:ItemSourceSelector x:Key="converter" />
-        </ResourceDictionary>
-    </ContentPage.Resources>
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <local:ItemSourceSelector x:Key="converter" />
+    </ResourceDictionary>
+</ContentPage.Resources>
 
-    <sfgrid:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}"
-                       AllowEditing="True"
-                       AutoGenerateColumnsMode="None"
-                       SelectionUnit="Cell"
-                       SelectionMode="Single">
-        <sfgrid:SfDataGrid.Columns>
-
-            <sfgrid:DataGridComboBoxColumn ItemsSourceSelector="{StaticResource converter}"
-                                           MappingName="ShipCity"
-                                           HeaderText="Ship City">
-            <sfgrid:DataGridComboBoxColumn BindingContext="{x:Reference viewModel}"
-                                           ItemsSource="{Binding CountryList}"
-                                           MappingName="ShipCountry"
-                                           HeaderText="Ship Country">
-            </sfgrid:DataGridComboBoxColumn>
-            </sfgrid:DataGridComboBoxColumn>
-        </sfgrid:SfDataGrid.Columns>
-    </sfgrid:SfDataGrid>
+<sfgrid:SfDataGrid x:Name="dataGrid"
+                    ItemsSource="{Binding OrderInfoCollection}"
+                    AllowEditing="True"
+                    AutoGenerateColumnsMode="None"
+                    SelectionUnit="Cell"
+                    SelectionMode="Single">
+    <sfgrid:SfDataGrid.Columns>
+        <sfgrid:DataGridComboBoxColumn ItemsSourceSelector="{StaticResource converter}"
+                                        MappingName="ShipCity"
+                                        HeaderText="Ship City">
+        </sfgrid:DataGridComboBoxColumn>
+        <sfgrid:DataGridComboBoxColumn BindingContext="{x:Reference viewModel}"
+                                        ItemsSource="{Binding CountryList}"
+                                        MappingName="ShipCountry"
+                                        HeaderText="Ship Country">
+        </sfgrid:DataGridComboBoxColumn>
+    </sfgrid:SfDataGrid.Columns>
+</sfgrid:SfDataGrid>
 {% endhighlight %}
 
 {% highlight c# %}
@@ -1107,20 +1106,21 @@ The [IsEditableMode](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGri
 
 {% tabs %}
 {% highlight xaml %}
+<ContentPage.BindingContext>
     <local:ViewModel x:Name="viewModel" />
-    </ContentPage.BindingContext>
+</ContentPage.BindingContext>
 
-    <sfGrid:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}"
-                       >
-        <sfGrid:SfDataGrid.Columns>
-            <sfGrid:DataGridComboBoxColumn BindingContext="{x:Reference viewModel}"
-                                           HeaderText="Customer"
-                                           IsEditableMode="True"
-                                           ItemsSource="{Binding CustomerNames}"
-                                           MappingName="Customer" />
-        </sfGrid:SfDataGrid.Columns>
-    </sfGrid:SfDataGrid>
+<sfGrid:SfDataGrid x:Name="dataGrid"
+                    ItemsSource="{Binding OrderInfoCollection}"
+                    >
+    <sfGrid:SfDataGrid.Columns>
+        <sfGrid:DataGridComboBoxColumn BindingContext="{x:Reference viewModel}"
+                                        HeaderText="Customer"
+                                        IsEditableMode="True"
+                                        ItemsSource="{Binding CustomerNames}"
+                                        MappingName="Customer" />
+    </sfGrid:SfDataGrid.Columns>
+</sfGrid:SfDataGrid>
 {% endhighlight %}
 
 {% highlight c# %}
@@ -1149,21 +1149,21 @@ By default, the auto-suggestion in the dropdown will display values based on the
 
 {% tabs %}
 {% highlight xaml %}
-    <ContentPage.BindingContext>
-        <local:ViewModel x:Name="viewModel" />
-    </ContentPage.BindingContext>
+<ContentPage.BindingContext>
+    <local:ViewModel x:Name="viewModel" />
+</ContentPage.BindingContext>
 
-    <sfGrid:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}">
-        <sfGrid:SfDataGrid.Columns>
-            <sfGrid:DataGridComboBoxColumn BindingContext="{x:Reference viewModel}"
-                                           HeaderText="Customer"
-                                           IsEditableMode="True"
-                                           SuggestionMode="Contains"
-                                           ItemsSource="{Binding CustomerNames}"
-                                           MappingName="Customer" />
-        </sfGrid:SfDataGrid.Columns>
-    </sfGrid:SfDataGrid>
+<sfGrid:SfDataGrid x:Name="dataGrid"
+                    ItemsSource="{Binding OrderInfoCollection}">
+    <sfGrid:SfDataGrid.Columns>
+        <sfGrid:DataGridComboBoxColumn BindingContext="{x:Reference viewModel}"
+                                        HeaderText="Customer"
+                                        IsEditableMode="True"
+                                        SuggestionMode="Contains"
+                                        ItemsSource="{Binding CustomerNames}"
+                                        MappingName="Customer" />
+    </sfGrid:SfDataGrid.Columns>
+</sfGrid:SfDataGrid>
 {% endhighlight %}
 
 {% highlight c# %}
@@ -1193,21 +1193,21 @@ The ComboBox control includes a clear button that allows users to easily remove 
 
 {% tabs %}
 {% highlight xaml %}
-    <ContentPage.BindingContext>
-        <local:ViewModel x:Name="viewModel" />
-    </ContentPage.BindingContext>
+<ContentPage.BindingContext>
+    <local:ViewModel x:Name="viewModel" />
+</ContentPage.BindingContext>
 
-    <sfGrid:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}">
-        <sfGrid:SfDataGrid.Columns>
-            <sfGrid:DataGridComboBoxColumn BindingContext="{x:Reference viewModel}"
-                                           HeaderText="Customer"
-                                           IsEditableMode="True"
-                                           ShowClearButton="False"
-                                           ItemsSource="{Binding CustomerNames}"
-                                           MappingName="Customer" />
-        </sfGrid:SfDataGrid.Columns>
-    </sfGrid:SfDataGrid>
+<sfGrid:SfDataGrid x:Name="dataGrid"
+                    ItemsSource="{Binding OrderInfoCollection}">
+    <sfGrid:SfDataGrid.Columns>
+        <sfGrid:DataGridComboBoxColumn BindingContext="{x:Reference viewModel}"
+                                        HeaderText="Customer"
+                                        IsEditableMode="True"
+                                        ShowClearButton="False"
+                                        ItemsSource="{Binding CustomerNames}"
+                                        MappingName="Customer" />
+    </sfGrid:SfDataGrid.Columns>
+</sfGrid:SfDataGrid>
 {% endhighlight %}
 {% highlight c# %}
 OrderInfoRepository viewModel = new OrderInfoRepository();
@@ -1249,7 +1249,7 @@ The combo box drop-down width can be customized by setting the [DataGridComboBox
                         MappingName="Customer">
         </syncfusion:DataGridComboBoxColumn>
     </syncfusion:SfDataGrid.Columns>
- </syncfusion:SfDataGrid>
+</syncfusion:SfDataGrid>
 {% endhighlight %}
 {% endtabs %}
 
@@ -1295,21 +1295,21 @@ To load the [DataGridPickerColumn](https://help.syncfusion.com/cr/maui/Syncfusio
 
 {% tabs %}
 {% highlight xaml %}
-    <ContentPage.BindingContext>
-        <local:ViewModel x:Name="viewModel" />
-    </ContentPage.BindingContext>
+<ContentPage.BindingContext>
+    <local:ViewModel x:Name="viewModel" />
+</ContentPage.BindingContext>
 
-    <sfGrid:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoCollection}"
-                       AllowEditing="True"
-                       SelectionMode="Single"
-                       SelectionUnit="Cell">
-        <sfGrid:SfDataGrid.Columns>
-            <sfgrid:DataGridPickerColumn HeaderText="Ship Country"
-                                         MappingName="ShipCountry"
-                                         ItemsSource="{Binding Countries}"/>
-        </sfGrid:SfDataGrid.Columns>
-    </sfGrid:SfDataGrid>
+<sfGrid:SfDataGrid x:Name="dataGrid"
+                    ItemsSource="{Binding OrderInfoCollection}"
+                    AllowEditing="True"
+                    SelectionMode="Single"
+                    SelectionUnit="Cell">
+    <sfGrid:SfDataGrid.Columns>
+        <sfgrid:DataGridPickerColumn HeaderText="Ship Country"
+                                        MappingName="ShipCountry"
+                                        ItemsSource="{Binding Countries}"/>
+    </sfGrid:SfDataGrid.Columns>
+</sfGrid:SfDataGrid>
 {% endhighlight %}
 
 {% highlight c# %}
@@ -1395,31 +1395,31 @@ In the provided code, the ItemsSource for the ShipCity column is returned based 
 
 {% tabs %}
 {% highlight xaml %}
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <local:ItemSourceSelector x:Key="converter" />
-        </ResourceDictionary>
-    </ContentPage.Resources>
+<ContentPage.Resources>
+    <ResourceDictionary>
+        <local:ItemSourceSelector x:Key="converter" />
+    </ResourceDictionary>
+</ContentPage.Resources>
 
-    <sfgrid:SfDataGrid x:Name="dataGrid"
-                       ItemsSource="{Binding OrderInfoRepository}"
-                       AllowEditing="True"
-                       AutoGenerateColumnsMode="None"
-                       NavigationMode="Cell"
-                       EditTapAction="OnDoubleTap"
-                       SelectionMode="Single">
-        <sfgrid:SfDataGrid.Columns>
-            <sfgrid:DataGridPickerColumn ItemsSourceSelector="{StaticResource converter}"
-                                         MappingName="ShipCity"
-                                         HeaderText="Ship City">
-            </sfgrid:DataGridPickerColumn>
-            <sfgrid:DataGridPickerColumn BindingContext="{x:Reference viewModel}"
-                                         ItemsSource="{Binding CountryList}"
-                                         MappingName="ShipCountry"
-                                         HeaderText="Ship Country">
-            </sfgrid:DataGridPickerColumn>
-        </sfgrid:SfDataGrid.Columns>
-    </sfgrid:SfDataGrid>
+<sfgrid:SfDataGrid x:Name="dataGrid"
+                    ItemsSource="{Binding OrderInfoRepository}"
+                    AllowEditing="True"
+                    AutoGenerateColumnsMode="None"
+                    NavigationMode="Cell"
+                    EditTapAction="OnDoubleTap"
+                    SelectionMode="Single">
+    <sfgrid:SfDataGrid.Columns>
+        <sfgrid:DataGridPickerColumn ItemsSourceSelector="{StaticResource converter}"
+                                        MappingName="ShipCity"
+                                        HeaderText="Ship City">
+        </sfgrid:DataGridPickerColumn>
+        <sfgrid:DataGridPickerColumn BindingContext="{x:Reference viewModel}"
+                                        ItemsSource="{Binding CountryList}"
+                                        MappingName="ShipCountry"
+                                        HeaderText="Ship Country">
+        </sfgrid:DataGridPickerColumn>
+    </sfgrid:SfDataGrid.Columns>
+</sfgrid:SfDataGrid>
 {% endhighlight %}
 
 {% highlight c# %}

@@ -495,7 +495,7 @@ When we set `AllowBlankFilters` as `True`, Combobox options have Null and Not Nu
 
 {% tabs %}
 {% highlight XAML %}
-<syncfusion:DataGridTextColumn MappingName="OrderID" AllowBlankFilters="False">
+<syncfusion:DataGridTextColumn MappingName="OrderID" AllowBlankFilters="False"/>
 {% endhighlight %}
 {% highlight c# %}
 dataGrid.Columns["OrderID"].AllowBlankFilters = false;
@@ -517,7 +517,7 @@ In this, Done button is displayed to close the filter popup instead of OK and Ca
 
 {% tabs %}
 {% highlight XAML %}
-<syncfusion:DataGridTextColumn MappingName="OrderID" ImmediateUpdateColumnFilter="True">
+<syncfusion:DataGridTextColumn MappingName="OrderID" ImmediateUpdateColumnFilter="True"/>
 {% endhighlight %}
 {% highlight c# %}
 dataGrid.Columns["OrderID"].ImmediateUpdateColumnFilter = true;

@@ -29,10 +29,10 @@ The data rows can be customized conditionally by writing the style with a conver
 </ContentPage.Resources>
 
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}">
+                       ItemsSource="{Binding Orders}">
 </syncfusion:SfDataGrid>
 {% endhighlight %}
-{% highlight xaml tabtitle="ColorConverter.cs" %}
+{% highlight c# tabtitle="ColorConverter.cs" %}
 public class ColorConverter : IValueConverter
 {
     object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo info)
@@ -69,10 +69,10 @@ Styling can be applied to a particular row based on RowIndex property by writing
 </ContentPage.Resources>
 
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}">
+                       ItemsSource="{Binding Orders}">
 </syncfusion:SfDataGrid>
 {% endhighlight %}
-{% highlight xaml tabtitle="ColorConverter.cs" %}
+{% highlight c# tabtitle="ColorConverter.cs" %}
 public class ColorConverter : IValueConverter
 {
     object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo info)
@@ -108,10 +108,10 @@ Styling can be applied to a particular row based on the RowData property by writ
 </ContentPage.Resources>
 
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}">
+                       ItemsSource="{Binding Orders}">
 </syncfusion:SfDataGrid>
 {% endhighlight %}
-{% highlight xaml tabtitle="ColorConverter.cs" %}
+{% highlight c# tabtitle="ColorConverter.cs" %}
 public class ColorConverter : IValueConverter
 {
     object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo info)
@@ -144,11 +144,11 @@ The `SfDataGrid` provides the support to apply the conditional style for specifi
 </ContentPage.Resources>
 
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}">
+                       ItemsSource="{Binding Orders}">
     <syncfusion:SfDataGrid.Columns>
         <syncfusion:DataGridNumericColumn MappingName="OrderID"
-                                            HeaderText="Order ID"
-                                            Format="d">
+                                          HeaderText="Order ID"
+                                          Format="d">
             <syncfusion:DataGridNumericColumn.CellStyle>
                 <Style TargetType="syncfusion:DataGridCell">
                     <Setter Property="Background"
@@ -159,7 +159,7 @@ The `SfDataGrid` provides the support to apply the conditional style for specifi
     </syncfusion:SfDataGrid.Columns>
 </syncfusion:SfDataGrid>
 {% endhighlight %}
-{% highlight xaml tabtitle="ColorConverter.cs" %}
+{% highlight c# tabtitle="ColorConverter.cs" %}
 public class ColorConverter : IValueConverter
 {
     object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo info)
@@ -194,16 +194,16 @@ The appearance of row header can be customized conditionally based on properties
 </ContentPage.Resources>
 
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}"
-                        ShowRowHeader="True"
-                        ColumnWidthMode="Auto"
-                        GridLinesVisibility="Both"
-                        HeaderGridLinesVisibility="Both">
+                       ItemsSource="{Binding Orders}"
+                       ShowRowHeader="True"
+                       ColumnWidthMode="Auto"
+                       GridLinesVisibility="Both"
+                       HeaderGridLinesVisibility="Both">
     <syncfusion:SfDataGrid.RowHeaderTemplate>
         <DataTemplate>
             <Label Text="{Binding ID}"
-                    HorizontalTextAlignment="Center"
-                    VerticalTextAlignment="Center"/>
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"/>
         </DataTemplate>
     </syncfusion:SfDataGrid.RowHeaderTemplate>
 </syncfusion:SfDataGrid>
@@ -257,11 +257,11 @@ The grid cell can be customized conditionally by writing the style with a conver
 </ContentPage.Resources>
 
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}"
-                        GridLinesVisibility="Both"
-                        HeaderGridLinesVisibility="Both"/>
+                       ItemsSource="{Binding Orders}"
+                       GridLinesVisibility="Both"
+                       HeaderGridLinesVisibility="Both"/>
 {% endhighlight %}
-{% highlight xaml tabtitle="ColorConverter.cs" %}
+{% highlight c# tabtitle="ColorConverter.cs" %}
 public class ColorConverter : IValueConverter
 {
     object IValueConverter.Convert(object value, Type targetType, object parameter, CultureInfo info)
@@ -298,9 +298,9 @@ Styling can be applied to a particular cell based on RowIndex, ColumnIndex and M
 </ContentPage.Resources>
 
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}"/>
+                       ItemsSource="{Binding Orders}"/>
 {% endhighlight %}
-{% highlight xaml tabtitle="ColorConverter.cs" %}
+{% highlight c# tabtitle="ColorConverter.cs" %}
 public class ColorConverter : IValueConverter
 {
     public object? Convert(object? value, Type targetType, object? parameter, CultureInfo info)
@@ -328,7 +328,7 @@ public class ColorConverter : IValueConverter
     }
 }
 {% endhighlight %}
-{% highlight xaml tabtitle="ForeColorConverter.cs" %}
+{% highlight c# tabtitle="ForeColorConverter.cs" %}
 public class ForeColorConverter : IValueConverter
 {
     public object? Convert(object? value, Type targetType, object? parameter, CultureInfo info)
@@ -379,9 +379,9 @@ Styling can be applied to a particular cell based on RowIndex and ColumnIndex pr
 </ContentPage.Resources>
 
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}"/>
+                       ItemsSource="{Binding Orders}"/>
 {% endhighlight %}
-{% highlight xaml tabtitle="ColorConverter.cs" %}
+{% highlight c# tabtitle="ColorConverter.cs" %}
 public class ColorConverter : IValueConverter
 {
     public object? Convert(object? value, Type targetType, object? parameter, CultureInfo info)
@@ -401,7 +401,7 @@ public class ColorConverter : IValueConverter
     }
 }
 {% endhighlight %}
-{% highlight xaml tabtitle="ForeColorConverter.cs" %}
+{% highlight c# tabtitle="ForeColorConverter.cs" %}
 public class ForeColorConverter : IValueConverter
 {
     public object? Convert(object? value, Type targetType, object? parameter, CultureInfo info)
@@ -429,6 +429,7 @@ public class ForeColorConverter : IValueConverter
 You can customize the border color of individual cells in the SfDataGrid based on RowIndex and ColumnIndex property, and setting the `BorderColor` property  in DataGridCell by writing the style for the [DataGridCell](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.DataGrid.DataGridCell.html)
 
 {% tabs %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage.Resources>
     <ResourceDictionary>
         <local:BorderColorConverter x:Key="converter"/>
@@ -440,11 +441,11 @@ You can customize the border color of individual cells in the SfDataGrid based o
 </ContentPage.Resources>
 
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}"
-                        GridLinesVisibility="Both"
-                        HeaderGridLinesVisibility="Both"/>
+                       ItemsSource="{Binding Orders}"
+                       GridLinesVisibility="Both"
+                       HeaderGridLinesVisibility="Both"/>
 {% endhighlight %}
-{% highlight xaml tabtitle="BorderColorConverter.cs" %}
+{% highlight c# tabtitle="BorderColorConverter.cs" %}
 public class BorderColorConverter : IValueConverter
 {
     public object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
@@ -479,19 +480,19 @@ Styling can be applied to a particular cell based on CellValue property by writi
 {% highlight xaml tabtitle="MainPage.xaml" %}
 <ContentPage.Resources>
     <local:ColorConverter x:Key="converter"/>
-    <local:ForeColorConverter x:Key="foreColorconverter"/>
+    <local:ForeColorConverter x:Key="foreColorConverter"/>
     <Style TargetType="syncfusion:DataGridCell">
         <Setter Property="Background"
                 Value="{Binding Source={RelativeSource Mode=Self}, Converter={StaticResource Key=converter}}"/>
         <Setter Property="TextColor"
-                Value="{Binding Source={RelativeSource Mode=Self}, Converter={StaticResource Key=foreColorconverter}}"/>
+                Value="{Binding Source={RelativeSource Mode=Self}, Converter={StaticResource Key=foreColorConverter}}"/>
     </Style>
 </ContentPage.Resources>
 
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}"/>
+                       ItemsSource="{Binding Orders}"/>
 {% endhighlight %}
-{% highlight xaml tabtitle="ColorConverter.cs" %}
+{% highlight c# tabtitle="ColorConverter.cs" %}
 public class ColorConverter : IValueConverter
 {
     public object? Convert(object? value, Type targetType, object? parameter, CultureInfo info)
@@ -513,7 +514,7 @@ public class ColorConverter : IValueConverter
     }
 }
 {% endhighlight %}
-{% highlight xaml tabtitle="ForeColorConverter.cs" %}
+{% highlight c# tabtitle="ForeColorConverter.cs" %}
 public class ForeColorConverter : IValueConverter
 {
     public object? Convert(object? value, Type targetType, object? parameter, CultureInfo info)
@@ -556,8 +557,8 @@ The appearance of caption summary cell can be customized conditionally based on 
 </ContentPage.Resources>
 
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}"
-                        AllowGroupExpandCollapse="True">
+                       ItemsSource="{Binding Orders}"
+                       AllowGroupExpandCollapse="True">
     // Group the data based on the City column
     <syncfusion:SfDataGrid.GroupColumnDescriptions>
         <syncfusion:GroupColumnDescription ColumnName="City"/>
@@ -565,13 +566,13 @@ The appearance of caption summary cell can be customized conditionally based on 
     // Display the cities of countries in the caption summary row
     <syncfusion:SfDataGrid.CaptionSummaryRow>
         <syncfusion:DataGridSummaryRow Name="CaptionSummary"
-                                        ShowSummaryInRow="True"
-                                        Title="Number of cities : {CaptionSummaryColumn}">
+                                       ShowSummaryInRow="True"
+                                       Title="Number of cities : {CaptionSummaryColumn}">
             <syncfusion:DataGridSummaryRow.SummaryColumns>
                 <syncfusion:DataGridSummaryColumn Name="CaptionSummaryColumn"
-                                                    Format="{}{Count}"
-                                                    MappingName="City"
-                                                    SummaryType="CountAggregate"/>
+                                                  Format="{}{Count}"
+                                                  MappingName="City"
+                                                  SummaryType="CountAggregate"/>
             </syncfusion:DataGridSummaryRow.SummaryColumns>
         </syncfusion:DataGridSummaryRow>
     </syncfusion:SfDataGrid.CaptionSummaryRow>
@@ -623,8 +624,8 @@ The appearance of group summary cell can be customized conditionally based on su
 </ContentPage.Resources>
 
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}"
-                        AllowGroupExpandCollapse="True">
+                       ItemsSource="{Binding Orders}"
+                       AllowGroupExpandCollapse="True">
     // Group the data based on the Country column
     <syncfusion:SfDataGrid.GroupColumnDescriptions>
         <syncfusion:GroupColumnDescription ColumnName="City"/>
@@ -632,25 +633,25 @@ The appearance of group summary cell can be customized conditionally based on su
     // Display the count of records in the caption summary row
     <syncfusion:SfDataGrid.CaptionSummaryRow>
         <syncfusion:DataGridSummaryRow Name="CaptionSummary"
-                                        ShowSummaryInRow="True"
-                                        Title="Number of cities : {CaptionSummaryColumn}">
+                                       ShowSummaryInRow="True"
+                                       Title="Number of cities : {CaptionSummaryColumn}">
             <syncfusion:DataGridSummaryRow.SummaryColumns>
                 <syncfusion:DataGridSummaryColumn Name="CaptionSummaryColumn"
-                                                    Format="{}{Count}"
-                                                    MappingName="City"
-                                                    SummaryType="CountAggregate"/>
+                                                  Format="{}{Count}"
+                                                  MappingName="City"
+                                                  SummaryType="CountAggregate"/>
             </syncfusion:DataGridSummaryRow.SummaryColumns>
         </syncfusion:DataGridSummaryRow>
     </syncfusion:SfDataGrid.CaptionSummaryRow>
     // Display the count of Orders in the group summary row
     <syncfusion:SfDataGrid.GroupSummaryRows>
         <syncfusion:DataGridSummaryRow Title="Number of orders : {Orders}"
-                                        ShowSummaryInRow="True">
+                                       ShowSummaryInRow="True">
             <syncfusion:DataGridSummaryRow.SummaryColumns>
                 <syncfusion:DataGridSummaryColumn Name="Orders"
-                                                    MappingName="OrderID"
-                                                    Format="{}{Count}"
-                                                    SummaryType="CountAggregate">
+                                                  MappingName="OrderID"
+                                                  Format="{}{Count}"
+                                                  SummaryType="CountAggregate">
                 </syncfusion:DataGridSummaryColumn>
             </syncfusion:DataGridSummaryRow.SummaryColumns>
         </syncfusion:DataGridSummaryRow>
@@ -703,7 +704,7 @@ The appearance of table summary cell can be customized conditionally based on su
 </ContentPage.Resources>
 
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}">
+                       ItemsSource="{Binding Orders}">
     // Display the count of Orders in the table summary row
     <syncfusion:SfDataGrid.TableSummaryRows>
         <syncfusion:DataGridTableSummaryRow Title="Total Orders :{TotalOrders}"
@@ -711,9 +712,9 @@ The appearance of table summary cell can be customized conditionally based on su
                                             ShowSummaryInRow="True">
             <syncfusion:DataGridTableSummaryRow.SummaryColumns>
                 <syncfusion:DataGridSummaryColumn Name="TotalOrders"
-                                                    Format="{}{Count}"
-                                                    MappingName="OrderID"
-                                                    SummaryType="CountAggregate"/>
+                                                  Format="{}{Count}"
+                                                  MappingName="OrderID"
+                                                  SummaryType="CountAggregate"/>
             </syncfusion:DataGridTableSummaryRow.SummaryColumns>
         </syncfusion:DataGridTableSummaryRow>
         <syncfusion:DataGridTableSummaryRow Title="Sum of Orders :{SumOfOrders}"
@@ -721,9 +722,9 @@ The appearance of table summary cell can be customized conditionally based on su
                                             ShowSummaryInRow="False">
             <syncfusion:DataGridTableSummaryRow.SummaryColumns>
                 <syncfusion:DataGridSummaryColumn Name="SumOfOrders"
-                                                    Format="{}{Sum:C0}"
-                                                    MappingName="OrderID"
-                                                    SummaryType="DoubleAggregate"/>
+                                                  Format="{}{Sum:C0}"
+                                                  MappingName="OrderID"
+                                                  SummaryType="DoubleAggregate"/>
             </syncfusion:DataGridTableSummaryRow.SummaryColumns>
         </syncfusion:DataGridTableSummaryRow>
     </syncfusion:SfDataGrid.TableSummaryRows>
@@ -783,7 +784,7 @@ The appearance of unbound row cell can be customized conditionally based on prop
 </ContentPage.Resources>
 
 <syncfusion:SfDataGrid x:Name="dataGrid"
-                        ItemsSource="{Binding Orders}">
+                       ItemsSource="{Binding Orders}">
     <syncfusion:SfDataGrid.UnboundRows>
         <syncfusion:DataGridUnboundRow Position="Top"/>
         <syncfusion:DataGridUnboundRow Position="FixedTop"/>
