@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance in .NET MAUI Circular ProgressBar control | Syncfusion<sup>&reg;</sup>
+title: Appearance in .NET MAUI Circular ProgressBar control | Syncfusion
 description: Learn here all about appearance support in Syncfusion<sup>&reg;</sup> .NET MAUI Circular ProgressBar control, its elements and more.
 platform: MAUI
 control: SfCircularProgressBar
