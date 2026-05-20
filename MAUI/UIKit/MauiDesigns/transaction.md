@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Essential® UI Kit for .NET MAUI Transaction Designs | Syncfusion®
-description: Essential® UI Kit for .NET MAUI contains elegantly designed XAML templates for MAUI Transaction apps.
+description: Essential® UI Kit for .NET MAUI contains elegantly designed XAML templates for MAUI Transaction apps, compatible with Android, iOS, and UWP platforms.
 platform: maui
 control: Essential<sup>®</sup> UI Kit for .NET MAUI
 documentation: ug
 ---
 
-# Syncfusion<sup>®</sup> Essential<sup>®</sup> UI Kit for .NET MAUI Transaction Designs
+# Syncfusion<sup>®</sup> UI Kit for .NET MAUI Transaction Designs
 
 The Essential<sup>®</sup> UI Kit for .NET MAUI Transaction offers a collection of **4 screens**, designed to streamline your development process and elevate your application’s user experience. 
 
@@ -135,7 +135,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Transaction offers a collection 
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Checkout Page
@@ -172,7 +172,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Transaction offers a collection 
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Payment Success Screen
@@ -209,7 +209,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Transaction offers a collection 
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Payment Failure Screen
@@ -245,7 +245,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Transaction offers a collection 
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Saved Payment Cards
