@@ -147,6 +147,316 @@ this.Content = chart;
 
 {% endtabs %}
 
+![Multi-level labels on NumericalAxis in .NET MAUI Chart.](axis_images/multi_level_labels_numerical_axis.png)
+
+## Multi-Level Labels on CategoryAxis
+
+The [CategoryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.CategoryAxis.html) is an indexed-based axis that plots values based on the index of the data point collection. Multi-level labels can be used to group categories into higher-level categories.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+    . . .
+    <chart:SfCartesianChart.XAxes>
+        <chart:CategoryAxis>
+            <chart:CategoryAxis.MultiLevelLabels>
+                <chart:ChartMultiLevelLabel Start="0" End="3" Text="Q1" Level="1"/>
+                <chart:ChartMultiLevelLabel Start="4" End="7" Text="Q2" Level="1"/>
+                <chart:ChartMultiLevelLabel Start="8" End="11" Text="Q3" Level="1"/>
+                <chart:ChartMultiLevelLabel Start="0" End="1" Text="Jan-Feb" Level="2"/>
+                <chart:ChartMultiLevelLabel Start="2" End="3" Text="Mar" Level="2"/>
+                <chart:ChartMultiLevelLabel Start="4" End="5" Text="Apr-May" Level="2"/>
+                <chart:ChartMultiLevelLabel Start="6" End="7" Text="Jun" Level="2"/>
+                <chart:ChartMultiLevelLabel Start="8" End="9" Text="Jul-Aug" Level="2"/>
+                <chart:ChartMultiLevelLabel Start="10" End="11" Text="Sep" Level="2"/>
+            </chart:CategoryAxis.MultiLevelLabels>
+        </chart:CategoryAxis>
+    </chart:SfCartesianChart.XAxes>
+    . . .
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+CategoryAxis primaryAxis = new CategoryAxis();
+
+// Create first level multi-level labels
+ChartMultiLevelLabel label1 = new ChartMultiLevelLabel() { Start = 0, End = 3, Text = "Q1", Level = 1 };
+primaryAxis.MultiLevelLabels.Add(label1);
+
+ChartMultiLevelLabel label2 = new ChartMultiLevelLabel() { Start = 4, End = 7, Text = "Q2", Level = 1 };
+primaryAxis.MultiLevelLabels.Add(label2);
+
+ChartMultiLevelLabel label3 = new ChartMultiLevelLabel() { Start = 8, End = 11, Text = "Q3", Level = 1 };
+primaryAxis.MultiLevelLabels.Add(label3);
+
+// Create second level multi-level labels
+ChartMultiLevelLabel label4 = new ChartMultiLevelLabel() { Start = 0, End = 1, Text = "Jan-Feb", Level = 2 };
+primaryAxis.MultiLevelLabels.Add(label4);
+
+ChartMultiLevelLabel label5 = new ChartMultiLevelLabel() { Start = 2, End = 3, Text = "Mar", Level = 2 };
+primaryAxis.MultiLevelLabels.Add(label5);
+
+ChartMultiLevelLabel label6 = new ChartMultiLevelLabel() { Start = 4, End = 5, Text = "Apr-May", Level = 2 };
+primaryAxis.MultiLevelLabels.Add(label6);
+
+ChartMultiLevelLabel label7 = new ChartMultiLevelLabel() { Start = 6, End = 7, Text = "Jun", Level = 2 };
+primaryAxis.MultiLevelLabels.Add(label7);
+
+ChartMultiLevelLabel label8 = new ChartMultiLevelLabel() { Start = 8, End = 9, Text = "Jul-Aug", Level = 2 };
+primaryAxis.MultiLevelLabels.Add(label8);
+
+ChartMultiLevelLabel label9 = new ChartMultiLevelLabel() { Start = 10, End = 11, Text = "Sep", Level = 2 };
+primaryAxis.MultiLevelLabels.Add(label9);
+
+chart.XAxes.Add(primaryAxis);
+. . .
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Multi-level labels on CategoryAxis in .NET MAUI Chart.](axis_images/multi_level_labels_category_axis.png)
+
+## Multi-Level Labels on LogarithmicAxis
+
+The [LogarithmicAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.LogarithmicAxis.html) is used to plot logarithmic values. Multi-level labels can be applied to organize logarithmic ranges.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+    . . .
+    <chart:SfCartesianChart.YAxes>
+        <chart:LogarithmicAxis>
+            <chart:LogarithmicAxis.MultiLevelLabels>
+                <chart:ChartMultiLevelLabel Start="1" End="10" Text="1-10" Level="1"/>
+                <chart:ChartMultiLevelLabel Start="10" End="100" Text="10-100" Level="1"/>
+                <chart:ChartMultiLevelLabel Start="100" End="1000" Text="100-1000" Level="1"/>
+                <chart:ChartMultiLevelLabel Start="1" End="100" Text="Low" Level="2"/>
+                <chart:ChartMultiLevelLabel Start="100" End="1000" Text="High" Level="2"/>
+            </chart:LogarithmicAxis.MultiLevelLabels>
+        </chart:LogarithmicAxis>
+    </chart:SfCartesianChart.YAxes>
+    . . .
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+LogarithmicAxis secondaryAxis = new LogarithmicAxis();
+
+// Create first level multi-level labels
+ChartMultiLevelLabel label1 = new ChartMultiLevelLabel() { Start = 1, End = 10, Text = "1-10", Level = 1 };
+secondaryAxis.MultiLevelLabels.Add(label1);
+
+ChartMultiLevelLabel label2 = new ChartMultiLevelLabel() { Start = 10, End = 100, Text = "10-100", Level = 1 };
+secondaryAxis.MultiLevelLabels.Add(label2);
+
+ChartMultiLevelLabel label3 = new ChartMultiLevelLabel() { Start = 100, End = 1000, Text = "100-1000", Level = 1 };
+secondaryAxis.MultiLevelLabels.Add(label3);
+
+// Create second level multi-level labels
+ChartMultiLevelLabel label4 = new ChartMultiLevelLabel() { Start = 1, End = 100, Text = "Low", Level = 2 };
+secondaryAxis.MultiLevelLabels.Add(label4);
+
+ChartMultiLevelLabel label5 = new ChartMultiLevelLabel() { Start = 100, End = 1000, Text = "High", Level = 2 };
+secondaryAxis.MultiLevelLabels.Add(label5);
+
+chart.YAxes.Add(secondaryAxis);
+. . .
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Multi-level labels on LogarithmicAxis in .NET MAUI Chart.](axis_images/multi_level_labels_logarithmic_axis.png)
+
+## Multi-Level Labels on DateTimeAxis
+
+The [DateTimeAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeAxis.html) is used to plot DateTime values. Multi-level labels can organize time-based data into meaningful hierarchical levels such as years, quarters, months, etc.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+    . . .
+    <chart:SfCartesianChart.XAxes>
+        <chart:DateTimeAxis>
+            <chart:DateTimeAxis.MultiLevelLabels>
+                <chart:ChartMultiLevelLabel Start="2021/01/01" End="2021/03/31" Text="Q1 2021" Level="1"/>
+                <chart:ChartMultiLevelLabel Start="2021/04/01" End="2021/06/30" Text="Q2 2021" Level="1"/>
+                <chart:ChartMultiLevelLabel Start="2021/07/01" End="2021/09/30" Text="Q3 2021" Level="1"/>
+                <chart:ChartMultiLevelLabel Start="2021/10/01" End="2021/12/31" Text="Q4 2021" Level="1"/>
+                <chart:ChartMultiLevelLabel Start="2021/01/01" End="2021/12/31" Text="Year 2021" Level="2"/>
+            </chart:DateTimeAxis.MultiLevelLabels>
+        </chart:DateTimeAxis>
+    </chart:SfCartesianChart.XAxes>
+    . . .
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+DateTimeAxis primaryAxis = new DateTimeAxis();
+
+// Create first level multi-level labels for quarters
+ChartMultiLevelLabel label1 = new ChartMultiLevelLabel() 
+{ 
+    Start = new DateTime(2021, 1, 1), 
+    End = new DateTime(2021, 3, 31), 
+    Text = "Q1 2021", 
+    Level = 1 
+};
+primaryAxis.MultiLevelLabels.Add(label1);
+
+ChartMultiLevelLabel label2 = new ChartMultiLevelLabel() 
+{ 
+    Start = new DateTime(2021, 4, 1), 
+    End = new DateTime(2021, 6, 30), 
+    Text = "Q2 2021", 
+    Level = 1 
+};
+primaryAxis.MultiLevelLabels.Add(label2);
+
+ChartMultiLevelLabel label3 = new ChartMultiLevelLabel() 
+{ 
+    Start = new DateTime(2021, 7, 1), 
+    End = new DateTime(2021, 9, 30), 
+    Text = "Q3 2021", 
+    Level = 1 
+};
+primaryAxis.MultiLevelLabels.Add(label3);
+
+ChartMultiLevelLabel label4 = new ChartMultiLevelLabel() 
+{ 
+    Start = new DateTime(2021, 10, 1), 
+    End = new DateTime(2021, 12, 31), 
+    Text = "Q4 2021", 
+    Level = 1 
+};
+primaryAxis.MultiLevelLabels.Add(label4);
+
+// Create second level multi-level label for year
+ChartMultiLevelLabel label5 = new ChartMultiLevelLabel() 
+{ 
+    Start = new DateTime(2021, 1, 1), 
+    End = new DateTime(2021, 12, 31), 
+    Text = "Year 2021", 
+    Level = 2 
+};
+primaryAxis.MultiLevelLabels.Add(label5);
+
+chart.XAxes.Add(primaryAxis);
+. . .
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Multi-level labels on DateTimeAxis in .NET MAUI Chart.](axis_images/multi_level_labels_date_time_axis.png)
+
+## Multi-Level Labels on DateTimeCategoryAxis
+
+The [DateTimeCategoryAxis](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.DateTimeCategoryAxis.html) combines the features of both DateTimeAxis and CategoryAxis. It treats date-time values as categories and allows you to group them hierarchically.
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<chart:SfCartesianChart>
+    . . .
+    <chart:SfCartesianChart.XAxes>
+        <chart:DateTimeCategoryAxis>
+            <chart:DateTimeCategoryAxis.MultiLevelLabels>
+                <chart:ChartMultiLevelLabel Start="0" End="11" Text="Year 2021" Level="1"/>
+                <chart:ChartMultiLevelLabel Start="0" End="2" Text="Q1" Level="2"/>
+                <chart:ChartMultiLevelLabel Start="3" End="5" Text="Q2" Level="2"/>
+                <chart:ChartMultiLevelLabel Start="6" End="8" Text="Q3" Level="2"/>
+                <chart:ChartMultiLevelLabel Start="9" End="11" Text="Q4" Level="2"/>
+            </chart:DateTimeCategoryAxis.MultiLevelLabels>
+        </chart:DateTimeCategoryAxis>
+    </chart:SfCartesianChart.XAxes>
+    . . .
+</chart:SfCartesianChart>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+SfCartesianChart chart = new SfCartesianChart();
+. . .
+DateTimeCategoryAxis primaryAxis = new DateTimeCategoryAxis();
+
+// Create first level multi-level label for year
+ChartMultiLevelLabel label1 = new ChartMultiLevelLabel() 
+{ 
+    Start = 0, 
+    End = 11, 
+    Text = "Year 2021", 
+    Level = 1 
+};
+primaryAxis.MultiLevelLabels.Add(label1);
+
+// Create second level multi-level labels for quarters
+ChartMultiLevelLabel label2 = new ChartMultiLevelLabel() 
+{ 
+    Start = 0, 
+    End = 2, 
+    Text = "Q1", 
+    Level = 2 
+};
+primaryAxis.MultiLevelLabels.Add(label2);
+
+ChartMultiLevelLabel label3 = new ChartMultiLevelLabel() 
+{ 
+    Start = 3, 
+    End = 5, 
+    Text = "Q2", 
+    Level = 2 
+};
+primaryAxis.MultiLevelLabels.Add(label3);
+
+ChartMultiLevelLabel label4 = new ChartMultiLevelLabel() 
+{ 
+    Start = 6, 
+    End = 8, 
+    Text = "Q3", 
+    Level = 2 
+};
+primaryAxis.MultiLevelLabels.Add(label4);
+
+ChartMultiLevelLabel label5 = new ChartMultiLevelLabel() 
+{ 
+    Start = 9, 
+    End = 11, 
+    Text = "Q4", 
+    Level = 2 
+};
+primaryAxis.MultiLevelLabels.Add(label5);
+
+chart.XAxes.Add(primaryAxis);
+. . .
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Multi-level labels on DateTimeCategoryAxis in .NET MAUI Chart.](axis_images/multi_level_labels_date_time_category_axis.png)
+
 ## Customizing Multi-Level Label Appearance
 
 The appearance of multi-level labels can be customized using the [MultiLevelLabelStyle](#) property. This allows you to control border type, border color, border width, and label text styling.
@@ -161,8 +471,6 @@ The [BorderType](#) property supports the following [ChartMultiLevelBorderType](
 * **CurlyBrace** - Displays the label with a curly brace border style
 
 The default value is [Rectangle](#).
-
-### Styling with Square Brace Border
 
 The following example demonstrates how to apply a square brace border style:
 
@@ -186,9 +494,9 @@ The following example demonstrates how to apply a square brace border style:
                 <chart:ChartMultiLevelLabel Start="185" End="220" Text="185-220" Level="2"/>
             </chart:NumericalAxis.MultiLevelLabels>
             <chart:NumericalAxis.MultiLevelLabelStyle>
-                <chart:MultiLevelLabelStyle BorderColor="Red" BorderType="SquareBrace" BorderWidth="2">
+                <chart:MultiLevelLabelStyle BorderColor="DarkBlue" BorderType="SquareBrace" BorderWidth="2">
                     <chart:MultiLevelLabelStyle.LabelStyle>
-                        <chart:ChartAxisLabelStyle TextColor="Brown" FontAttributes="Bold" FontSize="13" Stroke="DarkGreen" StrokeWidth="2"/>
+                        <chart:ChartAxisLabelStyle TextColor="Green" FontAttributes="Bold" FontSize="13" Stroke="DarkGreen" StrokeWidth="2"/>
                     </chart:MultiLevelLabelStyle.LabelStyle>
                 </chart:MultiLevelLabelStyle>
             </chart:NumericalAxis.MultiLevelLabelStyle>
@@ -291,7 +599,7 @@ secondaryAxis.MultiLevelLabels.Add(label9);
 // Customize the appearance with square brace border
 ChartAxisLabelStyle labelStyle = new ChartAxisLabelStyle()
 {
-    TextColor = Colors.Brown,
+    TextColor = Colors.Green,
     FontAttributes = FontAttributes.Bold,
     FontSize = 13,
     Stroke = Colors.DarkGreen,
@@ -300,7 +608,7 @@ ChartAxisLabelStyle labelStyle = new ChartAxisLabelStyle()
 
 MultiLevelLabelStyle multiLevelLabelStyle = new MultiLevelLabelStyle()
 {
-    BorderColor = Colors.Red,
+    BorderColor = Colors.DarkBlue,
     BorderType = ChartMultiLevelBorderType.SquareBrace,
     BorderWidth = 2,
     LabelStyle = labelStyle
@@ -314,6 +622,8 @@ this.Content = chart;
 {% endhighlight %}
 
 {% endtabs %}
+
+![Multi-level labels with Square Brace border in .NET MAUI Chart.](axis_images/multi_level_label_style.png)
 
 ## Multi-Level Labels Properties
 
