@@ -199,7 +199,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Article offers a collection of *
 </a>
 </h3>
 <div class="form-description">
-               Read articles with an immersive parallax header that highlights the story while scrolling content smoothly.
+               Read articles with an interactive parallax header that highlights the story while scrolling content smoothly.
 </div>
 </div>
 </div>
