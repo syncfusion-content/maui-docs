@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Essential® UI Kit for .NET MAUI Social Designs | Syncfusion®
-description: Essential® UI Kit for .NET MAUI Social contains elegantly designed XAML templates for MAUI apps.
+description: Essential® UI Kit for .NET MAUI Social contains elegantly designed XAML templates for MAUI apps, compatible with Android, iOS, and UWP platforms.
 platform: maui
 control: Essential<sup>®</sup> UI Kit for .NET MAUI
 documentation: ug
 ---
 
-# Syncfusion<sup>®</sup> Essential<sup>®</sup> UI Kit for .NET MAUI Social Designs
+# Syncfusion<sup>®</sup> UI Kit for .NET MAUI Social Designs
 
 The Essential<sup>®</sup> UI Kit for .NET MAUI Social offers a collection of **4 screens**, designed to streamline your development process and elevate your application’s user experience.  
 
@@ -134,7 +134,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Social offers a collection of **
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Social Profile with Connections
@@ -171,7 +171,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Social offers a collection of **
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Social Profile Card
@@ -208,7 +208,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Social offers a collection of **
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Social Profile with Interests
@@ -244,7 +244,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Social offers a collection of **
                 loading="lazy"
                 decoding="async"
                 class="form-image"
-                onclick="openImage(this.src)">
+                onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
 <h3 class="form-title">Social Profile with Messaging
