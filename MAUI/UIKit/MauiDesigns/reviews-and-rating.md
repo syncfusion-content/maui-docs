@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Essential® UI Kit for .NET MAUI Review and Rating Designs | Syncfusion®
+title: Essential® UI Kit for .NET MAUI Review and Rating | Syncfusion®
 description: Essential® UI Kit for .NET MAUI contains elegantly designed XAML templates for MAUI Review and Rating apps, compatible with Android, iOS, and UWP platforms.
 platform: maui
 control: Essential<sup>®</sup> UI Kit for .NET MAUI
 documentation: ug
 ---
 
-# Syncfusion<sup>®</sup> UI Kit for Review & Rating
+# Syncfusion<sup>®</sup> UI Kit for Review and Rating Designs
 
 The Essential<sup>®</sup> UI Kit for .NET MAUI Review and Rating offers a collection of **2 screens**, designed to streamline your development process and elevate your application’s user experience.  
 
