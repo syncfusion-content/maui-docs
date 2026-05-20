@@ -321,10 +321,10 @@ SfDataGrid provides two overloads of SetCellValue:
 
 {% tabs %}
 {% highlight C# %}
-  private void Button_Clicked(object sender, EventArgs e)
-  {
-      dataGrid.SetCellValue(1, dataGrid.Columns[0], "11111");    
-  }
+private void Button_Clicked(object sender, EventArgs e)
+{
+    dataGrid.SetCellValue(1, dataGrid.Columns[0], "11111");    
+}
 {% endhighlight %}
 {% endtabs %}
 
@@ -355,9 +355,9 @@ SfDataGrid provides two overloads of SetCellValue:
 
 {% tabs %}
 {% highlight C# %}
-  private void Button_Clicked(object sender, EventArgs e)
-  {
-      dataGrid.SetCellValue(1, "OrderID", "11111");    
-  }
+private void Button_Clicked(object sender, EventArgs e)
+{
+    dataGrid.SetCellValue(1, "OrderID", "11111");    
+}
 {% endhighlight %}
 {% endtabs %}
