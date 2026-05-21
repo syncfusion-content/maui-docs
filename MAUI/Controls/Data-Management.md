@@ -159,7 +159,7 @@ This category covers grids and data-handling controls for displaying, editing an
 </a>
 </h3>
 <div class="form-description">
-              Displays and manages large sets of data in a tabular format with features like sorting, filtering, and editing.
+              The .NET MAUI DataGrid control is used to display and manipulate data in a tabular view. Its rich feature set includes different column types, sorting, autofitting for columns and rows, and styling for all elements.
 </div>
 </div>
 </div>

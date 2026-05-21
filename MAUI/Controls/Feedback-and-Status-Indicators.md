@@ -159,7 +159,7 @@ Controls that surface system status, feedback and progress to users. Use these c
 </a>
 </h3>
 <div class="form-description">
-              Displays small indicators or counts, such as notifications or status updates.
+              The .NET MAUI Badge View is a notification control that is used to notify users of new or unread messages, notifications, or status information. It can easily be integrated with controls like ListView, Tab View, and other container controls.
 </div>
 </div>
 </div>
@@ -196,7 +196,7 @@ Controls that surface system status, feedback and progress to users. Use these c
 </a>
 </h3>
 <div class="form-description">
-               Shows a loading animation to indicate that a process is in progress.
+               The .NET MAUI Busy Indicator control (activity indicator) lets users know when their application is busy.
 </div>
 </div>
 </div>
@@ -232,7 +232,7 @@ Controls that surface system status, feedback and progress to users. Use these c
 </a>
 </h3>
 <div class="form-description">
-               Visually represents the completion status of a task.
+               The .NET MAUI ProgressBar is a control that shows task progress with customizable visuals. It has features to display progress in rectangular and circular shapes, determinate and indeterminate states, segments, smooth animation, customizable content, and define ranges with different colors.
 </div>
 </div>
 </div>
@@ -269,7 +269,7 @@ Controls that surface system status, feedback and progress to users. Use these c
 </a>
 </h3>
 <div class="form-description">
-              Displays progress across multiple steps in a process.
+              The .NET MAUI Step Progress Bar is a control that displays progress through multiple steps in a process, such as order tracking or a user registration form. It’s customizable, with options for the shape and content of the steps, the progress bar color, and more.
 </div>
 </div>
 </div>
@@ -306,47 +306,10 @@ Controls that surface system status, feedback and progress to users. Use these c
 </a>
 </h3>
 <div class="form-description">
-               Allows users to refresh content by pulling down on the screen.
+               The Syncfusion .NET MAUI Pull to Refresh control allows you to refresh the content displayed within it through a simple pull-to-refresh action. It has the ability to load various UI views in its pulling pane, enabling users to initiate the refresh by pulling down from the top of the view.
 </div>
 </div>
 </div>
-<div class="form-card">
-<div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
-                loading="lazy"
-                decoding="async"
-                class="form-image"
-                onclick="openImage(this.src, event)">
-</div>
-<div class="form-content">
-<h3 class="form-title">Accordion
-<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Profile/HealthProfilePage.xaml"
-              target="_blank"
-              class="source-icon"
-              title="View Source">
-<svg xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    fill="currentColor"
-                    viewBox="0 0 16 16">
-<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
-                   0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
-                   -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07
-                   -1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12
-                   0 0 .67-.21 2.2.82a7.56 7.56 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04
-                   2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15
-                   0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
-                   0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8
-                   c0-4.42-3.58-8-8-8z"/>
-</svg>
-</a>
-</h3>
-<div class="form-description">
-               Organizes content into expandable panels, allowing only one section to be open at a time.
-</div>
-</div>
-</div>
-
 
 </div>
 

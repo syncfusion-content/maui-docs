@@ -9,7 +9,7 @@ documentation: ug
 
 # Controls Catalog
 
-Below is a responsive catalog showing component groups as cards. Each card includes an image, title, short description and a link to the group's detail page. Images are placeholders — replace them with final assets in `Images/ControlsCatalog/`.
+This document provides a comprehensive collection of UI components organized into meaningful categories to help you build modern, interactive, and user-friendly .NET MAUI applications. Each category groups related controls, making it easier to explore, understand, and implement the right components for your app’s design and functionality needs.
 
 <style>
 .form-card {
@@ -159,7 +159,7 @@ Below is a responsive catalog showing component groups as cards. Each card inclu
 </a>
 </h3>
 <div class="form-description">
-              Includes intelligent controls powered by AI to enhance user interactions and productivity.
+              Includes intelligent components powered by AI to enhance automation and user productivity. These controls provide smart suggestions and context-aware interactions. Helps create modern, adaptive application experiences.
 </div>
 </div>
 </div>
@@ -196,7 +196,7 @@ Below is a responsive catalog showing component groups as cards. Each card inclu
 </a>
 </h3>
 <div class="form-description">
-               Helps display, organize, and manage large sets of data efficiently.
+               Provides controls to display, organize, and manage large datasets efficiently.Supports features like sorting, filtering, and editing. Ensures smooth handling of structured data in applications
 </div>
 </div>
 </div>
@@ -232,7 +232,7 @@ Below is a responsive catalog showing component groups as cards. Each card inclu
 </a>
 </h3>
 <div class="form-description">
-               Provides controls for collecting and handling user input in forms.
+               Offers a wide range of controls for collecting and validating user input. Supports text, numbers, dates, and selections in structured forms. Improves data entry experience and usability.
 </div>
 </div>
 </div>
@@ -269,7 +269,7 @@ Below is a responsive catalog showing component groups as cards. Each card inclu
 </a>
 </h3>
 <div class="form-description">
-              Enables smooth navigation and organizes app content effectively.
+              Enables smooth navigation across different sections of an application. Helps organize content and improve overall app structure. Enhances user flow and accessibility.
 </div>
 </div>
 </div>
@@ -306,7 +306,7 @@ Below is a responsive catalog showing component groups as cards. Each card inclu
 </a>
 </h3>
 <div class="form-description">
-               Offers controls that allow users to interact and adjust values easily.
+               Provides controls that allow users to interact and adjust values dynamically. Includes sliders and selectors for better control input. Improves user engagement and usability.
 </div>
 </div>
 </div>
@@ -342,7 +342,7 @@ Below is a responsive catalog showing component groups as cards. Each card inclu
 </a>
 </h3>
 <div class="form-description">
-               Supports chat and messaging features for interactive communication.
+               Supports chat and messaging-based user interactions. Enables real-time communication within applications. Enhances user engagement through conversational UI.
 </div>
 </div>
 </div>
@@ -378,7 +378,7 @@ Below is a responsive catalog showing component groups as cards. Each card inclu
 </a>
 </h3>
 <div class="form-description">
-              Visualizes data using charts, graphs, and analytics tools.
+              Visualizes data using various charts and graphical components. Helps users easily understand trends and patterns. Improves decision-making through clear data representation.
 </div>
 </div>
 </div>
@@ -415,7 +415,7 @@ Below is a responsive catalog showing component groups as cards. Each card inclu
 </a>
 </h3>
 <div class="form-description">
-               Arranges and structures UI elements within the application.
+               Provides containers to arrange and structure UI elements. Helps create flexible and responsive layouts. Ensures consistent and organized UI design.
 </div>
 </div>
 </div>
@@ -451,7 +451,7 @@ Below is a responsive catalog showing component groups as cards. Each card inclu
 </a>
 </h3>
 <div class="form-description">
-              Shows progress, alerts, and system status to users.
+              Displays system status and progress to users in real time. Includes loading indicators, progress bars, and notifications. Improves user awareness and experience.
 </div>
 </div>
 </div>
@@ -487,7 +487,7 @@ Below is a responsive catalog showing component groups as cards. Each card inclu
 </a>
 </h3>
 <div class="form-description">
-              Helps manage tasks and workflows visually.
+              Helps organize and manage tasks visually. Supports tracking progress across different workflow stages. Enhances planning and task management efficiency.
 </div>
 </div>
 </div>
@@ -524,7 +524,7 @@ Below is a responsive catalog showing component groups as cards. Each card inclu
 </a>
 </h3>
 <div class="form-description">
-              Provides quick access to commonly used commands and actions.
+              Provides quick access to commonly used actions and commands. Centralizes functionality for easier user interaction. Improves productivity and usability.
 </div>
 </div>
 </div>
@@ -560,7 +560,7 @@ Below is a responsive catalog showing component groups as cards. Each card inclu
 </a>
 </h3>
 <div class="form-description">
-                Manages dates, events, and scheduling features.
+                Manages date-based data, events, and scheduling features. Supports calendars and appointment management. Helps users plan and track time-based activities.
 </div>
 </div>
 </div>
@@ -596,7 +596,7 @@ Below is a responsive catalog showing component groups as cards. Each card inclu
 </a>
 </h3>
 <div class="form-description">
-              Includes controls for selecting options and performing actions.
+              Includes controls for selecting options and triggering actions. Supports toggling, choosing, and user decision inputs. Enhances interactivity and control handling.
 </div>
 </div>
 </div>
@@ -632,7 +632,7 @@ Below is a responsive catalog showing component groups as cards. Each card inclu
 </a>
 </h3>
 <div class="form-description">
-              Adds visual effects and UI improvements for better experience.
+              Adds visual effects and styling to improve UI appearance. Enhances the look and feel of application components. Creates a more engaging user experience.
 </div>
 </div>
 </div>
@@ -669,7 +669,9 @@ Below is a responsive catalog showing component groups as cards. Each card inclu
 </a>
 </h3>
 <div class="form-description">
-              Displays and renders content such as text or formatted data.
+              Displays and renders different types of content within the app.
+Supports viewing formatted text and structured information.
+Improves content readability and presentation.
 </div>
 </div>
 </div>

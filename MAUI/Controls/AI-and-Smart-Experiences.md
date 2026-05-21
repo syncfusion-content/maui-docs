@@ -162,7 +162,7 @@ This section groups intelligent and AI-augmented controls designed to simplify c
 </a>
 </h3>
 <div class="form-description">
-              Displays and manages data with smart features like sorting and filtering.
+              The AI-powered .NET MAUI Smart DataGrid (.NET MAUI Smart Grid) combines all the essentials-sorting, grouping, filtering, and styling-with intelligent AI features that save time and boost productivity. Users can leverage AI to automatically organize records, apply smart filters, and highlight specific cells or rows for quick insights. 
 </div>
 </div>
 </div>
@@ -199,7 +199,7 @@ This section groups intelligent and AI-augmented controls designed to simplify c
 </a>
 </h3>
 <div class="form-description">
-               Helps organize and manage schedules with easy event planning.
+               This AI-powered Scheduler for .NET MAUI (or .NET MAUI Smart Event Calendar) blends Syncfusion’s robust Scheduler with AI intent-understanding so users can create, update, and explore their calendars using natural language. It turns conversations into scheduling, reducing clicks and removing friction while preserving the power and flexibility of the Scheduler.
 </div>
 </div>
 </div>
@@ -236,7 +236,7 @@ This section groups intelligent and AI-augmented controls designed to simplify c
 </a>
 </h3>
 <div class="form-description">
-                Enables writing and editing content with smart formatting features.
+                The AI-powered .NET MAUI Text Editor is a multiline editor enhanced with AI-assisted sentence autocompletion. It can display suggestions inline over the text or in an unintrusive pop-up, reducing typing effort and improving productivity.
 </div>
 </div>
 </div>

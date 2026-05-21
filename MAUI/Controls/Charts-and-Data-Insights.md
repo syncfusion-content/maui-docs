@@ -342,7 +342,7 @@ Comprehensive charting and visualization controls for turning data into actionab
 </a>
 </h3>
 <div class="form-description">
-               Represents hierarchical data in concentric circles for easy visualization.
+               The .NET MAUI Sunburst Chart, a radial tree map, is a component that visualizes hierarchical data in a concentric circular layout. The innermost circle represents the root level of the hierarchy. The control’s rich feature set includes functionalities like data binding, data labels, legends, tooltips, animations, and a center view.
 </div>
 </div>
 </div>
@@ -378,7 +378,7 @@ Comprehensive charting and visualization controls for turning data into actionab
 </a>
 </h3>
 <div class="form-description">
-              Shows small, compact charts to visualize trends within limited space.
+              The .NET MAUI spark charts are compact charts that help present trends and variations associated with measurements, such as average temperature or stock market activity, in a simple, lightweight, and condensed manner.
 </div>
 </div>
 </div>
@@ -415,7 +415,7 @@ Comprehensive charting and visualization controls for turning data into actionab
 </a>
 </h3>
 <div class="form-description">
-               Displays values using a circular gauge, similar to a speedometer.
+               The Radial Gauge control for .NET MAUI is a multipurpose data visualization control that displays numerical values on a circular scale. It has a rich set of features such as axes, ranges, pointers, and annotations that are fully customizable and extendable
 </div>
 </div>
 </div>
@@ -451,7 +451,7 @@ Comprehensive charting and visualization controls for turning data into actionab
 </a>
 </h3>
 <div class="form-description">
-              Represents values on a linear scale for simple comparisons.
+              The Linear Gauge control for .NET MAUI is a multipurpose data visualization control that displays numerical values on a linear scale either horizontally or vertically. It has a rich set of features, such as axis, ranges and pointers, that are fully customizable and extendable.
 </div>
 </div>
 </div>
@@ -487,7 +487,7 @@ Comprehensive charting and visualization controls for turning data into actionab
 </a>
 </h3>
 <div class="form-description">
-              Shows values in numeric form like a digital display.
+              The .NET MAUI Digital Gauge control is a data visualization component that displays alphanumeric characters in digital (LED display) mode. It can display a range of values that uses characters in combination with numbers.
 </div>
 </div>
 </div>
@@ -524,7 +524,7 @@ Comprehensive charting and visualization controls for turning data into actionab
 </a>
 </h3>
 <div class="form-description">
-               Visualizes geographical data with markers, shapes, and layers.
+               The .NET MAUI Maps control is a powerful data visualization component that displays statistical information for a geographical area. Its rich feature set includes tile rendering from OpenStreetMap, Bing Maps, Google Maps, and other tile providers.
 </div>
 </div>
 </div>
@@ -560,7 +560,7 @@ Comprehensive charting and visualization controls for turning data into actionab
 </a>
 </h3>
 <div class="form-description">
-               Creates machine-readable barcodes for data encoding and scanning.
+               The Barcode Generator control for .NET MAUI is a data visualization control that is used to generate and display data in the machine-readable format using industry-standard one-dimensional and two-dimensional barcodes. It encodes input values using supported symbology.
 </div>
 </div>
 </div>
@@ -596,7 +596,7 @@ Comprehensive charting and visualization controls for turning data into actionab
 </a>
 </h3>
 <div class="form-description">
-              Displays hierarchical data as nested rectangles sized based on values.
+              The .NET MAUI TreeMap control visually represents hierarchical data using nested rectangles, sized and colored based on underlying values. It efficiently displays grouped and nested data structures, offering extensive customization options and supporting item selection.
 </div>
 </div>
 </div>

@@ -11,129 +11,584 @@ documentation: ug
 
 Form controls and editors used for collecting, validating and formatting user input. These controls include pickers, masked inputs and advanced form layouts to simplify data entry patterns.
 
+<style>
+.form-card {
+   flex: 0 0 calc(33.33% - 14px);
+   border: 1px solid #ddd;
+   border-radius: 12px;
+   overflow: hidden;
+   background: white;
+   box-sizing: border-box;
+   transition: 0.3s ease;
+}
+.form-card:hover {
+   transform: translateY(-4px);
+   box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+.form-image {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   display: block;
+   cursor: pointer;
+   transition: 0.3s ease;
+}
+.form-image:hover {
+   transform: scale(1.02);
+}
+.form-content {
+   padding: 16px;
+}
+.form-title {
+   margin-top: 0px;
+   margin: 0 0 10px;
+   font-size: 20px;
+   font-weight: 600;
+   color: #000000;
+}
+.form-link {
+   color: #0078D4;
+   text-decoration: none;
+}
+.form-description {
+   margin-top: 14px;
+   font-size: 13px;
+   color: #000000;
+   line-height: 1.6;
+}
+.source-icon {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   width: 36px;
+   height: 36px;
+   border-radius: 50%;
+   background: #f3f4f6;
+   color: #0078D4;
+   text-decoration: none;
+   transition: 0.3s ease;
+   margin-top: 12px;
+}
+.source-icon:hover {
+   background: #0078D4;
+   color: white;
+}
+/* Popup Modal */
+#imageModal {
+   display: none;
+   position: fixed;
+   z-index: 9999;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0,0,0,0.85);
+   justify-content: center;
+   align-items: center;
+   padding: 20px;
+   box-sizing: border-box;
+}
+#popupImage {
+   max-width: 90%;
+   max-height: 90%;
+   border-radius: 14px;
+   box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+   animation: zoomIn 0.25s ease;
+}
+.close-popup {
+   position: absolute;
+   top: 20px;
+   right: 30px;
+   color: white;
+   font-size: 42px;
+   cursor: pointer;
+   font-weight: bold;
+}
+@keyframes zoomIn {
+   from {
+       transform: scale(0.9);
+       opacity: 0;
+   }
+   to {
+       transform: scale(1);
+       opacity: 1;
+   }
+}
+@media(max-width:900px) {
+   .form-card {
+       flex: 0 0 calc(50% - 10px);
+   }
+}
+@media(max-width:600px) {
+   .form-card {
+       flex: 0 0 100%;
+   }
+}
+</style>
+
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
-
-<!-- Autocomplete -->
-<div style="flex: 0 0 calc(33.33% - 14px); border:1px solid #ddd; border-radius:12px; overflow:hidden; background:white;">
-  <div style="background:#eef2ec; text-align:center;"><img src="Images/Controls/Autocomplete.webp" alt="Autocomplete" style="width:100%;height:160px;object-fit:cover;"/></div>
-  <div style="padding:12px;">
-    <h3 style="margin:0 0 8px;font-size:16px;">Autocomplete
-      <a href="Controls/Autocomplete.md" style="float:right;">→</a>
-    </h3>
-    <p style="margin:6px 0 0;color:#333;font-size:13px;">Type-ahead and suggestion input control. Provides asynchronous lookup and item templating for fast selection experiences.</p>
-  </div>
+<div class="form-card">
+<div style="background:#eef2ec; text-align:center;">
+<img src="Images/DashboardImages/stockoverview.webp"
+                loading="lazy"
+                decoding="async"
+                class="form-image"
+                onclick="openImage(this.src, event)">
 </div>
-
-<!-- ComboBox -->
-<div style="flex: 0 0 calc(33.33% - 14px); border:1px solid #ddd; border-radius:12px; overflow:hidden; background:white;">
-  <div style="background:#eef2ec; text-align:center;"><img src="Images/Controls/ComboBox.webp" alt="ComboBox" style="width:100%;height:160px;object-fit:cover;"/></div>
-  <div style="padding:12px;">
-    <h3 style="margin:0 0 8px;font-size:16px;">ComboBox
-      <a href="Controls/ComboBox.md" style="float:right;">→</a>
-    </h3>
-    <p style="margin:6px 0 0;color:#333;font-size:13px;">Selectable dropdown with input support. Supports typed input, list virtualization and custom templates.</p>
-  </div>
+<div class="form-content">
+<h3 class="form-title">Auto complete
+<a href=""
+              target="_blank"
+              class="source-icon"
+              title="View Source">
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="18" height="18" viewBox="0 0 24 24"
+     fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 6H8"></path>
+  <path d="M21 12H3"></path>
+  <path d="M21 18H8"></path>
+  <circle cx="3.5" cy="6" r="1"></circle>
+  <circle cx="14.5" cy="12" r="1"></circle>
+  <circle cx="3.5" cy="18" r="1"></circle>
+</svg>
+</a>
+</h3>
+<div class="form-description">
+              The .NET MAUI Autocomplete control is highly optimized to load and populate suggestions quickly from large amounts of data depending on the user’s input characters. It allows users to select an item from the suggestion list. It displays the selected item in the input view with the text and clear button.
 </div>
-
-<!-- DataForm -->
-<div style="flex: 0 0 calc(33.33% - 14px); border:1px solid #ddd; border-radius:12px; overflow:hidden; background:white;">
-  <div style="background:#eef2ec; text-align:center;"><img src="Images/Controls/DataForm.webp" alt="DataForm" style="width:100%;height:160px;object-fit:cover;"/></div>
-  <div style="padding:12px;">
-    <h3 style="margin:0 0 8px;font-size:16px;">DataForm
-      <a href="Controls/DataForm.md" style="float:right;">→</a>
-    </h3>
-    <p style="margin:6px 0 0;color:#333;font-size:13px;">Automatic form generation and validation. Maps view models to editable fields and handles common validation scenarios.</p>
-  </div>
 </div>
-
-<!-- Date Picker -->
-<div style="flex: 0 0 calc(33.33% - 14px); border:1px solid #ddd; border-radius:12px; overflow:hidden; background:white;">
-  <div style="background:#eef2ec; text-align:center;"><img src="Images/Controls/Date-Picker.webp" alt="Date Picker" style="width:100%;height:160px;object-fit:cover;"/></div>
-  <div style="padding:12px;">
-    <h3 style="margin:0 0 8px;font-size:16px;">Date Picker
-      <a href="Controls/Date-Picker.md" style="float:right;">→</a>
-    </h3>
-    <p style="margin:6px 0 0;color:#333;font-size:13px;">Select dates using a calendar UI. Supports min/max dates, custom formats and date ranges.</p>
-  </div>
 </div>
-
-<!-- Date Time Picker -->
-<div style="flex: 0 0 calc(33.33% - 14px); border:1px solid #ddd; border-radius:12px; overflow:hidden; background:white;">
-  <div style="background:#eef2ec; text-align:center;"><img src="Images/Controls/Date-Time-Picker.webp" alt="Date Time Picker" style="width:100%;height:160px;object-fit:cover;"/></div>
-  <div style="padding:12px;">
-    <h3 style="margin:0 0 8px;font-size:16px;">Date Time Picker
-      <a href="Controls/Date-Time-Picker.md" style="float:right;">→</a>
-    </h3>
-    <p style="margin:6px 0 0;color:#333;font-size:13px;">Pick date and time together. Combines calendar and clock UIs with culture-aware formatting.</p>
-  </div>
+<!-- Card 2 -->
+<div class="form-card">
+<div style="background:#eef2ec; text-align:center;">
+<img src="Images/DashboardImages/healthcare.webp"
+                loading="lazy"
+                decoding="async"
+                class="form-image"
+                onclick="openImage(this.src, event)">
 </div>
-
-<!-- Masked Entry -->
-<div style="flex: 0 0 calc(33.33% - 14px); border:1px solid #ddd; border-radius:12px; overflow:hidden; background:white;">
-  <div style="background:#eef2ec; text-align:center;"><img src="Images/Controls/Masked-Entry.webp" alt="Masked Entry" style="width:100%;height:160px;object-fit:cover;"/></div>
-  <div style="padding:12px;">
-    <h3 style="margin:0 0 8px;font-size:16px;">Masked Entry
-      <a href="Controls/Masked-Entry.md" style="float:right;">→</a>
-    </h3>
-    <p style="margin:6px 0 0;color:#333;font-size:13px;">Input with mask/formatting support. Ideal for phone numbers, credit cards and structured patterns.</p>
-  </div>
+<div class="form-content">
+<h3 class="form-title">ComboBox
+<a href=""
+              target="_blank"
+              class="source-icon"
+              title="View Source">
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="18" height="18" viewBox="0 0 24 24"
+     fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 6H8"></path>
+  <path d="M21 12H3"></path>
+  <path d="M21 18H8"></path>
+  <circle cx="3.5" cy="6" r="1"></circle>
+  <circle cx="14.5" cy="12" r="1"></circle>
+  <circle cx="3.5" cy="18" r="1"></circle>
+</svg>
+</a>
+</h3>
+<div class="form-description">
+               Represents data as portions of a circle, such as pie or donut charts.The .NET MAUI ComboBox control is a selection component that allows users to type a value or choose an option from a list of predefined options. It has many features, such as data binding, editing, searching, and button customization.
 </div>
-
-<!-- Numeric Entry -->
-<div style="flex: 0 0 calc(33.33% - 14px); border:1px solid #ddd; border-radius:12px; overflow:hidden; background:white;">
-  <div style="background:#eef2ec; text-align:center;"><img src="Images/Controls/Numeric-Entry.webp" alt="Numeric Entry" style="width:100%;height:160px;object-fit:cover;"/></div>
-  <div style="padding:12px;">
-    <h3 style="margin:0 0 8px;font-size:16px;">Numeric Entry
-      <a href="Controls/Numeric-Entry.md" style="float:right;">→</a>
-    </h3>
-    <p style="margin:6px 0 0;color:#333;font-size:13px;">Numeric input with formatting and validation. Handles culture-specific separators and range constraints.</p>
-  </div>
 </div>
-
-<!-- Picker -->
-<div style="flex: 0 0 calc(33.33% - 14px); border:1px solid #ddd; border-radius:12px; overflow:hidden; background:white;">
-  <div style="background:#eef2ec; text-align:center;"><img src="Images/Controls/Picker.webp" alt="Picker" style="width:100%;height:160px;object-fit:cover;"/></div>
-  <div style="padding:12px;">
-    <h3 style="margin:0 0 8px;font-size:16px;">Picker
-      <a href="Controls/Picker.md" style="float:right;">→</a>
-    </h3>
-    <p style="margin:6px 0 0;color:#333;font-size:13px;">Selection picker for single/multi values. Provides wheel and list styles with custom item templates.</p>
-  </div>
 </div>
-
-<!-- Signature Pad -->
-<div style="flex: 0 0 calc(33.33% - 14px); border:1px solid #ddd; border-radius:12px; overflow:hidden; background:white;">
-  <div style="background:#eef2ec; text-align:center;"><img src="Images/Controls/Signature-Pad.webp" alt="Signature Pad" style="width:100%;height:160px;object-fit:cover;"/></div>
-  <div style="padding:12px;">
-    <h3 style="margin:0 0 8px;font-size:16px;">Signature Pad
-      <a href="Controls/Signature-Pad.md" style="float:right;">→</a>
-    </h3>
-    <p style="margin:6px 0 0;color:#333;font-size:13px;">Capture handwritten signatures. Includes stroke smoothing, export and clear functionality.</p>
-  </div>
+<div class="form-card">
+<div style="background:#eef2ec; text-align:center;">
+<img src="Images/DashboardImages/healthcare.webp"
+                loading="lazy"
+                decoding="async"
+                class="form-image"
+                onclick="openImage(this.src, event)">
 </div>
-
-<!-- Time Picker -->
-<div style="flex: 0 0 calc(33.33% - 14px); border:1px solid #ddd; border-radius:12px; overflow:hidden; background:white;">
-  <div style="background:#eef2ec; text-align:center;"><img src="Images/Controls/Time-Picker.webp" alt="Time Picker" style="width:100%;height:160px;object-fit:cover;"/></div>
-  <div style="padding:12px;">
-    <h3 style="margin:0 0 8px;font-size:16px;">Time Picker
-      <a href="Controls/Time-Picker.md" style="float:right;">→</a>
-    </h3>
-    <p style="margin:6px 0 0;color:#333;font-size:13px;">Select times using a clock or list. Supports interval steps and 12/24-hour modes.</p>
-  </div>
+<div class="form-content">
+<h3 class="form-title">DataForm
+<a href=""
+              target="_blank"
+              class="source-icon"
+              title="View Source">
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="18" height="18" viewBox="0 0 24 24"
+     fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 6H8"></path>
+  <path d="M21 12H3"></path>
+  <path d="M21 18H8"></path>
+  <circle cx="3.5" cy="6" r="1"></circle>
+  <circle cx="14.5" cy="12" r="1"></circle>
+  <circle cx="3.5" cy="18" r="1"></circle>
+</svg>
+</a>
+</h3>
+<div class="form-description">
+               The .NET MAUI DataForm control is used to display and edit data using a wide range of built-in and custom editors for any kind of data form, such as login, reservation, employee information forms, contact forms, and more. It supports data validation, data handling, grouping, and linear and grid layouts. Users can easily customize editors, groups, labels, and validation labels’ appearances.
 </div>
-
-<!-- Color Picker -->
-<div style="flex: 0 0 calc(33.33% - 14px); border:1px solid #ddd; border-radius:12px; overflow:hidden; background:white;">
-  <div style="background:#eef2ec; text-align:center;"><img src="Images/Controls/Color-Picker.webp" alt="Color Picker" style="width:100%;height:160px;object-fit:cover;"/></div>
-  <div style="padding:12px;">
-    <h3 style="margin:0 0 8px;font-size:16px;">Color Picker
-      <a href="Controls/Color-Picker.md" style="float:right;">→</a>
-    </h3>
-    <p style="margin:6px 0 0;color:#333;font-size:13px;">Choose colors with swatches and sliders. Exposes hex/RGB values and supports palettes and eyedropper workflows.</p>
-  </div>
+</div>
+</div>
+<!-- Card 1 -->
+<div class="form-card">
+<div style="background:#eef2ec; text-align:center;">
+<img src="Images/DashboardImages/stockoverview.webp"
+                loading="lazy"
+                decoding="async"
+                class="form-image"
+                onclick="openImage(this.src, event)">
+</div>
+<div class="form-content">
+<h3 class="form-title">DatePicker
+<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Dashboard/StockOverviewPage.xaml"
+              target="_blank"
+              class="source-icon"
+              title="View Source">
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="18" height="18" viewBox="0 0 24 24"
+     fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 6H8"></path>
+  <path d="M21 12H3"></path>
+  <path d="M21 18H8"></path>
+  <circle cx="3.5" cy="6" r="1"></circle>
+  <circle cx="14.5" cy="12" r="1"></circle>
+  <circle cx="3.5" cy="18" r="1"></circle>
+</svg>
+</a>
+</h3>
+<div class="form-description">
+              The Syncfusion® .NET MAUI Date Picker (SfDatePicker) is a fully customizable component that lets you easily select a date from a list of dates.
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="form-card">
+<div style="background:#eef2ec; text-align:center;">
+<img src="Images/DashboardImages/healthcare.webp"
+                loading="lazy"
+                decoding="async"
+                class="form-image"
+                onclick="openImage(this.src, event)">
+</div>
+<div class="form-content">
+<h3 class="form-title">Date Time Picker
+<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Profile/HealthProfilePage.xaml"
+              target="_blank"
+              class="source-icon"
+              title="View Source">
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="18" height="18" viewBox="0 0 24 24"
+     fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 6H8"></path>
+  <path d="M21 12H3"></path>
+  <path d="M21 18H8"></path>
+  <circle cx="3.5" cy="6" r="1"></circle>
+  <circle cx="14.5" cy="12" r="1"></circle>
+  <circle cx="3.5" cy="18" r="1"></circle>
+</svg>
+</a>
+</h3>
+<div class="form-description">
+               The AI-powered .NET MAUI Smart DataGrid (.NET MAUI Smart Grid) combines all the essentials-sorting, grouping, filtering, and styling-with intelligent AI features that save time and boost productivity. Users can leverage AI to automatically organize records, apply smart filters, and highlight specific cells or rows for quick insights
+</div>
+</div>
+</div>
+<div class="form-card">
+<div style="background:#eef2ec; text-align:center;">
+<img src="Images/DashboardImages/healthcare.webp"
+                loading="lazy"
+                decoding="async"
+                class="form-image"
+                onclick="openImage(this.src, event)">
+</div>
+<div class="form-content">
+<h3 class="form-title">Masked Entry
+<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Profile/HealthProfilePage.xaml"
+              target="_blank"
+              class="source-icon"
+              title="View Source">
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="18" height="18" viewBox="0 0 24 24"
+     fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 6H8"></path>
+  <path d="M21 12H3"></path>
+  <path d="M21 18H8"></path>
+  <circle cx="3.5" cy="6" r="1"></circle>
+  <circle cx="14.5" cy="12" r="1"></circle>
+  <circle cx="3.5" cy="18" r="1"></circle>
+</svg>
+</a>
+</h3>
+<div class="form-description">
+               The .NET MAUI Masked Entry is an advanced input control that restricts user input to certain characters using a mask pattern. This control is used to create templates for providing information such as telephone numbers, email IDs, IP addresses, and product keys.
+</div>
+</div>
+</div>
+<div class="form-card">
+<div style="background:#eef2ec; text-align:center;">
+<img src="Images/DashboardImages/stockoverview.webp"
+                loading="lazy"
+                decoding="async"
+                class="form-image"
+                onclick="openImage(this.src, event)">
+</div>
+<div class="form-content">
+<h3 class="form-title">Numeric Entry
+<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Dashboard/StockOverviewPage.xaml"
+              target="_blank"
+              class="source-icon"
+              title="View Source">
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="18" height="18" viewBox="0 0 24 24"
+     fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 6H8"></path>
+  <path d="M21 12H3"></path>
+  <path d="M21 18H8"></path>
+  <circle cx="3.5" cy="6" r="1"></circle>
+  <circle cx="14.5" cy="12" r="1"></circle>
+  <circle cx="3.5" cy="18" r="1"></circle>
+</svg>
+</a>
+</h3>
+<div class="form-description">
+              The Numeric Entry control for .NET MAUI offers an intuitive and touch-friendly interface for providing numeric input in various numeric formats. Users can easily restrict input by specifying minimum and maximum values
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="form-card">
+<div style="background:#eef2ec; text-align:center;">
+<img src="Images/DashboardImages/healthcare.webp"
+                loading="lazy"
+                decoding="async"
+                class="form-image"
+                onclick="openImage(this.src, event)">
+</div>
+<div class="form-content">
+<h3 class="form-title">Picker
+<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Profile/HealthProfilePage.xaml"
+              target="_blank"
+              class="source-icon"
+              title="View Source">
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="18" height="18" viewBox="0 0 24 24"
+     fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 6H8"></path>
+  <path d="M21 12H3"></path>
+  <path d="M21 18H8"></path>
+  <circle cx="3.5" cy="6" r="1"></circle>
+  <circle cx="14.5" cy="12" r="1"></circle>
+  <circle cx="3.5" cy="18" r="1"></circle>
+</svg>
+</a>
+</h3>
+<div class="form-description">
+               The Syncfusion .NET MAUI Picker (SfPicker) is a fully customizable component that lets you select an item from a list. It supports multiple-column layout and header, footer, and selection view customizations.
+</div>
+</div>
+</div>
+<div class="form-card">
+<div style="background:#eef2ec; text-align:center;">
+<img src="Images/DashboardImages/healthcare.webp"
+                loading="lazy"
+                decoding="async"
+                class="form-image"
+                onclick="openImage(this.src, event)">
+</div>
+<div class="form-content">
+<h3 class="form-title">Signature Pad
+<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Profile/HealthProfilePage.xaml"
+              target="_blank"
+              class="source-icon"
+              title="View Source">
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="18" height="18" viewBox="0 0 24 24"
+     fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 6H8"></path>
+  <path d="M21 12H3"></path>
+  <path d="M21 18H8"></path>
+  <circle cx="3.5" cy="6" r="1"></circle>
+  <circle cx="14.5" cy="12" r="1"></circle>
+  <circle cx="3.5" cy="18" r="1"></circle>
+</svg>
+</a>
+</h3>
+<div class="form-description">
+              The .NET MAUI Signature Pad is an interactive UI control that allows users to capture smooth and realistic signatures. Users can save their signatures as images and sync them across devices and documents that need signatures. 
+</div>
+</div>
+</div>
+<div class="form-card">
+<div style="background:#eef2ec; text-align:center;">
+<img src="Images/DashboardImages/stockoverview.webp"
+                loading="lazy"
+                decoding="async"
+                class="form-image"
+                onclick="openImage(this.src, event)">
+</div>
+<div class="form-content">
+<h3 class="form-title">Rating
+<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Dashboard/StockOverviewPage.xaml"
+              target="_blank"
+              class="source-icon"
+              title="View Source">
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="18" height="18" viewBox="0 0 24 24"
+     fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 6H8"></path>
+  <path d="M21 12H3"></path>
+  <path d="M21 18H8"></path>
+  <circle cx="3.5" cy="6" r="1"></circle>
+  <circle cx="14.5" cy="12" r="1"></circle>
+  <circle cx="3.5" cy="18" r="1"></circle>
+</svg>
+</a>
+</h3>
+<div class="form-description">
+              The .NET MAUI Rating control allows users to select a rating value from a group of visual symbols like stars, hearts, or custom shapes.
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="form-card">
+<div style="background:#eef2ec; text-align:center;">
+<img src="Images/DashboardImages/healthcare.webp"
+                loading="lazy"
+                decoding="async"
+                class="form-image"
+                onclick="openImage(this.src, event)">
+</div>
+<div class="form-content">
+<h3 class="form-title">Image Editor
+<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Profile/HealthProfilePage.xaml"
+              target="_blank"
+              class="source-icon"
+              title="View Source">
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="18" height="18" viewBox="0 0 24 24"
+     fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 6H8"></path>
+  <path d="M21 12H3"></path>
+  <path d="M21 18H8"></path>
+  <circle cx="3.5" cy="6" r="1"></circle>
+  <circle cx="14.5" cy="12" r="1"></circle>
+  <circle cx="3.5" cy="18" r="1"></circle>
+</svg>
+</a>
+</h3>
+<div class="form-description">
+               The .NET MAUI Image Editor component allows you to edit and enhance images easily. It has built-in support to crop, rotate, flip, zoom, and apply filters to images.
+</div>
+</div>
+</div>
+<div class="form-card">
+<div style="background:#eef2ec; text-align:center;">
+<img src="Images/DashboardImages/healthcare.webp"
+                loading="lazy"
+                decoding="async"
+                class="form-image"
+                onclick="openImage(this.src, event)">
+</div>
+<div class="form-content">
+<h3 class="form-title">Time Picker
+<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Profile/HealthProfilePage.xaml"
+              target="_blank"
+              class="source-icon"
+              title="View Source">
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="18" height="18" viewBox="0 0 24 24"
+     fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 6H8"></path>
+  <path d="M21 12H3"></path>
+  <path d="M21 18H8"></path>
+  <circle cx="3.5" cy="6" r="1"></circle>
+  <circle cx="14.5" cy="12" r="1"></circle>
+  <circle cx="3.5" cy="18" r="1"></circle>
+</svg>
+</a>
+</h3>
+<div class="form-description">
+               The Syncfusion® .NET MAUI Time Picker (SfTimePicker) is a fully customizable control that lets you select a time. It supports the customization of the format, header, footer, and selection view. It can be opened as a dialog.
+</div>
+</div>
+</div>
+<div class="form-card">
+<div style="background:#eef2ec; text-align:center;">
+<img src="Images/DashboardImages/stockoverview.webp"
+                loading="lazy"
+                decoding="async"
+                class="form-image"
+                onclick="openImage(this.src, event)">
+</div>
+<div class="form-content">
+<h3 class="form-title">Color Picker
+<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Dashboard/StockOverviewPage.xaml"
+              target="_blank"
+              class="source-icon"
+              title="View Source">
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="18" height="18" viewBox="0 0 24 24"
+     fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 6H8"></path>
+  <path d="M21 12H3"></path>
+  <path d="M21 18H8"></path>
+  <circle cx="3.5" cy="6" r="1"></circle>
+  <circle cx="14.5" cy="12" r="1"></circle>
+  <circle cx="3.5" cy="18" r="1"></circle>
+</svg>
+</a>
+</h3>
+<div class="form-description">
+              The Syncfusion .NET MAUI Color Picker is a UI component that allows users to select colors from various color palettes or a spectrum, making it a valuable design tool for customization within the .NET MAUI application.
+</div>
+</div>
+</div>
+<div class="form-card">
+<div style="background:#eef2ec; text-align:center;">
+<img src="Images/DashboardImages/stockoverview.webp"
+                loading="lazy"
+                decoding="async"
+                class="form-image"
+                onclick="openImage(this.src, event)">
+</div>
+<div class="form-content">
+<h3 class="form-title">Rich Text Editor
+<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Dashboard/StockOverviewPage.xaml"
+              target="_blank"
+              class="source-icon"
+              title="View Source">
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="18" height="18" viewBox="0 0 24 24"
+     fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 6H8"></path>
+  <path d="M21 12H3"></path>
+  <path d="M21 18H8"></path>
+  <circle cx="3.5" cy="6" r="1"></circle>
+  <circle cx="14.5" cy="12" r="1"></circle>
+  <circle cx="3.5" cy="18" r="1"></circle>
+</svg>
+</a>
+</h3>
+<div class="form-description">
+              The .NET MAUI Rich Text Editor provides a simple yet powerful editor interface for composing richly formatted text with all the common formatting options like bold and italics. 
+</div>
+</div>
 </div>
 
 </div>
 
 [Back to Controls Catalog](ControlsCatalog.md)
+<!-- Popup Modal -->
+<div id="imageModal">
+<span class="close-popup" onclick="closeImage()">
+&times;
+</span>
+<img id="popupImage">
+</div>
+<script>
+function openImage(src) {
+   document.getElementById("imageModal").style.display = "flex";
+   document.getElementById("popupImage").src = src;
+}
+function closeImage() {
+   document.getElementById("imageModal").style.display = "none";
+}
+/* Close when clicking outside image */
+document.getElementById("imageModal").addEventListener("click", function(e) {
+   if (e.target.id === "imageModal") {
+       closeImage();
+   }
+});
+</script>

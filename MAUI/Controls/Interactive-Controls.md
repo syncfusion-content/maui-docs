@@ -160,7 +160,7 @@ Controls for direct user interaction.
 </a>
 </h3>
 <div class="form-description">
-              Allows users to select a single value by sliding a handle along a track.
+              The .NET MAUI Slider is an interactive UI control that enables users to select a value from a specified range. It offers multiple customization features, including numeric and date-time labels, tick marks, dividers, and tooltips.
 </div>
 </div>
 </div>
@@ -197,7 +197,7 @@ Controls for direct user interaction.
 </a>
 </h3>
 <div class="form-description">
-               Enables users to select a range by adjusting two handles for minimum and maximum values.
+               The .NET MAUI Range Slider is an interactive UI control for selecting a range of values. Its rich features include numeric and date-time ranges, labels, ticks, dividers, and tooltips, enhancing both functionality and the user experience.
 </div>
 </div>
 </div>
@@ -234,7 +234,7 @@ Controls for direct user interaction.
 </a>
 </h3>
 <div class="form-description">
-                Helps users select a specific range within data, often used in charts or timelines.
+                The .NET MAUI Range Selector is a highly interactive UI control for selecting a smaller range from a larger data set. It provides a rich set of features such as labels, ticks, dividers, step duration, overlays, and tooltips. It also supports adding any type of control as its content.
 </div>
 </div>
 </div>

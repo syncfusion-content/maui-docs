@@ -158,7 +158,7 @@ Components for chat-based and conversational workflows that support threaded mes
 </a>
 </h3>
 <div class="form-description">
-              Enables real-time messaging between users for interactive communication.
+              The .NET MAUI Chat control, also known as conversational UI, provides a modern chat experience. It is a flexible control that displays conversations between two or more users in a fully customizable layout.
 </div>
 </div>
 </div>
@@ -195,7 +195,7 @@ Components for chat-based and conversational workflows that support threaded mes
 </a>
 </h3>
 <div class="form-description">
-               Provides AI-powered assistance with suggestions, responses, and contextual support within the app.
+               The Syncfusion .NET MAUI AI AssistView control is a component designed to facilitate the integration of AI services into .NET MAUI applications. It provides an intuitive and user-friendly interface that allows developers to create applications that interact seamlessly with AI services.
 </div>
 </div>
 </div>

@@ -159,7 +159,7 @@ Container and layout primitives used to compose responsive and adaptive UI scree
 </a>
 </h3>
 <div class="form-description">
-              Highlights important content by dimming the background and focusing user attention.
+              The .NET MAUI Backdrop is a specialized page with two surfaces, a back layer and a front layer stacked one above the other. The back layer holds options such as navigation, filtration, and more, which updates the front layer content on performing certain actions.
 </div>
 </div>
 </div>
@@ -196,7 +196,7 @@ Container and layout primitives used to compose responsive and adaptive UI scree
 </a>
 </h3>
 <div class="form-description">
-               Displays a collection of items in a vertical or horizontal list format.
+               The .NET MAUI ListView control is used to present lists of data in a vertical or horizontal orientation with different layouts virtually. It supports essential features such as selection, template selectors, horizontal and vertical orientation, load more, autofitting items, and more. 
 </div>
 </div>
 </div>
@@ -232,7 +232,7 @@ Container and layout primitives used to compose responsive and adaptive UI scree
 </a>
 </h3>
 <div class="form-description">
-               Shows content in a temporary overlay for alerts, dialogs, or additional information.
+               The .NET MAUI Popup control displays an alert message with customized buttons or a desired view inside a pop-up. Users can completely customize the pop-up’s appearance and functionality, including its header, body, and footer.
 </div>
 </div>
 </div>
@@ -269,7 +269,7 @@ Container and layout primitives used to compose responsive and adaptive UI scree
 </a>
 </h3>
 <div class="form-description">
-              Wraps input fields with labels and hints for better form structure and usability.
+              The .NET MAUI Text Input Layout or Label Entry is a container control that allows users to add floating labels, password toggle icons to show or hide passwords, leading and trailing icons, and assistive labels such as error messages and help text on top of input controls.
 </div>
 </div>
 </div>
@@ -306,7 +306,7 @@ Container and layout primitives used to compose responsive and adaptive UI scree
 </a>
 </h3>
 <div class="form-description">
-               Expands or collapses content sections to save screen space.
+               The Syncfusion .NET MAUI Expander is a layout control capable of loading any UI view in both header and content sections. By simply tapping the header, users can effortlessly expand or collapse the control.
 </div>
 </div>
 </div>
@@ -342,7 +342,7 @@ Container and layout primitives used to compose responsive and adaptive UI scree
 </a>
 </h3>
 <div class="form-description">
-               Organizes content into expandable panels, allowing only one section to be open at a time.
+               The .NET MAUI Accordion control or Accordion Panels offers a vertically collapsible panel with stacked headers, allowing users to expand or collapse one or multiple items simultaneously to display content. 
 </div>
 </div>
 </div>
@@ -378,7 +378,7 @@ Container and layout primitives used to compose responsive and adaptive UI scree
 </a>
 </h3>
 <div class="form-description">
-              Displays items in a swipeable, scrollable view one at a time.
+              The .NET MAUI Carousel control is an intuitive interface for navigating through a collection of views. This control supports both scaling and rotation transformations for enhanced visual effects, or can be used without them, depending on your design needs.
 </div>
 </div>
 </div>
@@ -415,7 +415,7 @@ Container and layout primitives used to compose responsive and adaptive UI scree
 </a>
 </h3>
 <div class="form-description">
-               Presents content in separate containers with visuals and information in a structured layout.
+               The Syncfusion .NET MAUI Cards control allows you to create dismissible cards or a stack of cards. You can organize a sequence of cards where only one card is visible at a time. You can easily navigate through the stack by swiping to reveal the next card in the sequence.
 </div>
 </div>
 </div>
@@ -451,7 +451,7 @@ Container and layout primitives used to compose responsive and adaptive UI scree
 </a>
 </h3>
 <div class="form-description">
-               Creates a scrolling effect where background and foreground move at different speeds.
+               The .NET MAUI Parallax View is a visual effect that binds the scroll position of a foreground element (e.g., a list) to a background element and moves the background element at a different speed.
 </div>
 </div>
 </div>
@@ -487,7 +487,7 @@ Container and layout primitives used to compose responsive and adaptive UI scree
 </a>
 </h3>
 <div class="form-description">
-              Arranges elements by docking them to different sides of the screen.
+              The .NET MAUI Dock Layout is a flexible layout container that allows UI elements to be docked to the top, bottom, left, or right edges of the container, or fill the remaining space.
 </div>
 </div>
 </div>

@@ -133,7 +133,8 @@ Toolbars and command surfaces for invoking app-level and contextual actions. Use
 </a>
 </h3>
 <div class="form-description">
-              Provides a set of commonly used actions in one place, allowing quick access to commands like add, edit, delete, or share.
+              The .NET MAUI Toolbar (SfToolbar) control is a flexible UI control that provides configurable action items for seamless user interaction, enhancing application usability.
+
 </div>
 </div>
 </div>
