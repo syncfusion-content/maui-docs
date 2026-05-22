@@ -679,7 +679,7 @@ N>
 
 N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps Tooltip example](https://github.com/syncfusion/maui-demos/) that shows how to configure a Maps in .NET MAUI.
 
-# Programmatic tooltip display in .NET MAUI Maps
+## Programmatic tooltip display in .NET MAUI Maps
 
 The SfMaps control in .NET MAUI allows you to display marker tooltips programmatically using the ShowTooltip method. This approach ensures reliable tooltip rendering without requiring manual delays during the initial load, as the control internally waits for the layout to complete.
 You can trigger tooltips either:
@@ -689,7 +689,7 @@ You can trigger tooltips either:
 
 The tooltip display duration is controlled using MarkerTooltipSettings.Duration, ensuring consistent behavior across all markers.
 
-## Show tooltip programmatically
+### Show tooltip programmatically
 
 You can display a tooltip for a specific marker using the `ShowTooltip` method.
 
