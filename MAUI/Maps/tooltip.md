@@ -678,3 +678,104 @@ N>
 * Data Template and Data Template selector are also applicable for bubbles and markers.
 
 N> You can refer to our [.NET MAUI Maps](https://www.syncfusion.com/maui-controls/maui-maps) feature tour page for its groundbreaking feature representations. You can also explore our [.NET MAUI Maps Tooltip example](https://github.com/syncfusion/maui-demos/) that shows how to configure a Maps in .NET MAUI.
+
+# Programmatic tooltip display in .NET MAUI Maps
+
+The SfMaps control in .NET MAUI allows you to display marker tooltips programmatically using the ShowTooltip method. This approach ensures reliable tooltip rendering without requiring manual delays during the initial load, as the control internally waits for the layout to complete.
+You can trigger tooltips either:
+
+* Automatically when the page appears
+* Sequentially using a button click for multiple markers
+
+The tooltip display duration is controlled using MarkerTooltipSettings.Duration, ensuring consistent behavior across all markers.
+
+## Show tooltip programmatically
+
+You can display a tooltip for a specific marker using the `ShowTooltip` method.
+
+### Example
+
+{% tabs %}
+
+{% highlight xaml %}
+
+<VerticalStackLayout Spacing="20">
+
+    <Button Clicked="Button_Clicked" Text="ShowTooltip" VerticalOptions="Start" HorizontalOptions="Center"/>
+
+    <map:SfMaps>
+        <map:SfMaps.Layer>
+            <map:MapShapeLayer x:Name="shapeLayer" ShapesSource="https://cdn.syncfusion.com/maps/map-data/world-map.json"
+                       ShapeStroke="DarkGrey" ShowMarkerTooltip="True" ShowShapeTooltip="True">
+                <map:MapShapeLayer.Markers>
+                    <map:MapMarkerCollection>
+                        <map:MapMarker Latitude="-14.235004" x:Name="marker1"
+                               IconWidth="15"
+                               IconHeight="15"
+                               IconFill="#00ccff"
+                               IconType="Circle" 
+                               Longitude="-51.92528" />
+                        <map:MapMarker Latitude="51.16569" x:Name="marker2"
+                               IconWidth="15"
+                               IconHeight="15"
+                               IconFill="#00ccff"
+                               IconType="Circle" 
+                               Longitude="10.451526" />
+                        <map:MapMarker Latitude="-25.274398" x:Name="marker3"
+                               IconWidth="15"
+                               IconHeight="15"
+                               IconFill="#00ccff"
+                               IconType="Circle" 
+                               Longitude="133.775136" />
+                        <map:MapMarker Latitude="20.593684" x:Name="marker4"
+                               IconWidth="15"
+                               IconHeight="15"
+                               IconFill="#00ccff"
+                               IconType="Circle" 
+                               Longitude="78.96288" />
+                        <map:MapMarker Latitude="61.52401" x:Name="marker5"
+                               IconWidth="15"
+                               IconHeight="15"
+                               IconType="Circle"
+                               IconFill="#00ccff"
+                               Longitude="105.318756" />
+                    </map:MapMarkerCollection>
+                </map:MapShapeLayer.Markers>
+                <map:MapShapeLayer.ShapeTooltipSettings>
+                    <map:MapTooltipSettings Duration="00:00:22">
+                    </map:MapTooltipSettings>
+                </map:MapShapeLayer.ShapeTooltipSettings>
+            </map:MapShapeLayer>
+        </map:SfMaps.Layer>
+    </map:SfMaps>
+</VerticalStackLayout>
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+ private async void Button_Clicked(object sender, EventArgs e)
+ {
+
+     var markers = new List<MapMarker>
+         {
+             marker1,
+             marker2,
+             marker3,
+             marker4,
+             marker5
+         };
+
+     foreach (var marker in markers)
+     {
+         shapeLayer.ShowTooltip(marker);
+         await Task.Delay(4000); // Tooltip visible for 2 seconds
+     }
+
+ }
+
+{% endhighlight %}
+
+{% endtabs %}
+
+
