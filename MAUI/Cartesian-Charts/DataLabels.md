@@ -287,11 +287,11 @@ this.Content = chart;
 
 ![Label template in MAUI Chart](DataLabel_images/maui_chart_data_label_template.png)
 
-# Data label tapped event in .NET MAUI Chart
+## Data label tapped event in .NET MAUI Chart
 
 The `SfCartesianChart` provides support to handle interaction with data labels using the `DataLabelTapped` event. This event is triggered when a user taps on a data label in the chart series, enabling drill-down and interactive data exploration scenarios.
 
-## Define DataLabelTapped event
+### Define DataLabelTapped event
 
 You can handle the `DataLabelTapped` event by assigning a handler to the `SfCartesianChart`.
 
@@ -342,7 +342,7 @@ private void OnDataLabelTapped(object sender, DataLabelTappedEventArgs e)
 
 {% endtabs %}
 
-## Event arguments
+### Event arguments
 
 The `DataLabelTappedEventArgs` provides information about the tapped data label.
 
@@ -352,7 +352,7 @@ The `DataLabelTappedEventArgs` provides information about the tapped data label.
 * `Position` - Gets the screen coordinates (X, Y) of the tap location in device-independent pixels.
 * `Segment` - Gets the chart segment associated with the data point. This value may be null.
 
-## Notes
+### Notes
 
 * The `DataLabelTapped` event will be triggered only when `ShowDataLabels` is set to `True`.
 
