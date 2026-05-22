@@ -7,7 +7,7 @@ control: Essential<sup>®</sup> UI Kit for .NET MAUI
 documentation: ug
 ---
 
-# Page Template Dependencies of Essential<sup>®</sup> UI Kit for .NET MAUI
+# Page Dependencies of Essential<sup>®</sup> UI Kit for .NET MAUI
 
 This page lists the dependencies (NuGet packages) required for each XAML page in the Essential<sup>®</sup> UI Kit for .NET MAUI project  
 
