@@ -137,24 +137,19 @@ Comprehensive charting and visualization controls for turning data into actionab
 </div>
 <div class="form-content">
 <h3 class="form-title">Cartesian Charts
-<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Dashboard/StockOverviewPage.xaml"
+<a href="https://help.syncfusion.com/maui/cartesian-charts/overview"
               target="_blank"
               class="source-icon"
               title="View Source">
 <svg xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    fill="currentColor"
-                    viewBox="0 0 16 16">
-<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
-                   0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
-                   -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07
-                   -1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12
-                   0 0 .67-.21 2.2.82a7.56 7.56 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04
-                   2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15
-                   0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
-                   0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8
-                   c0-4.42-3.58-8-8-8z"/>
+     width="18" height="18" viewBox="0 0 24 24"
+     fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 6H8"></path>
+  <path d="M21 12H3"></path>
+  <path d="M21 18H8"></path>
+  <circle cx="3.5" cy="6" r="1"></circle>
+  <circle cx="14.5" cy="12" r="1"></circle>
+  <circle cx="3.5" cy="18" r="1"></circle>
 </svg>
 </a>
 </h3>
@@ -174,24 +169,19 @@ Comprehensive charting and visualization controls for turning data into actionab
 </div>
 <div class="form-content">
 <h3 class="form-title">Circular Charts
-<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Profile/HealthProfilePage.xaml"
+<a href="https://help.syncfusion.com/maui/circular-charts/overview"
               target="_blank"
               class="source-icon"
               title="View Source">
 <svg xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    fill="currentColor"
-                    viewBox="0 0 16 16">
-<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
-                   0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
-                   -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07
-                   -1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12
-                   0 0 .67-.21 2.2.82a7.56 7.56 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04
-                   2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15
-                   0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
-                   0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8
-                   c0-4.42-3.58-8-8-8z"/>
+     width="18" height="18" viewBox="0 0 24 24"
+     fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 6H8"></path>
+  <path d="M21 12H3"></path>
+  <path d="M21 18H8"></path>
+  <circle cx="3.5" cy="6" r="1"></circle>
+  <circle cx="14.5" cy="12" r="1"></circle>
+  <circle cx="3.5" cy="18" r="1"></circle>
 </svg>
 </a>
 </h3>
@@ -210,24 +200,19 @@ Comprehensive charting and visualization controls for turning data into actionab
 </div>
 <div class="form-content">
 <h3 class="form-title">Funnel Charts
-<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Profile/HealthProfilePage.xaml"
+<a href="https://help.syncfusion.com/maui/funnel-charts/overview"
               target="_blank"
               class="source-icon"
               title="View Source">
 <svg xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    fill="currentColor"
-                    viewBox="0 0 16 16">
-<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
-                   0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
-                   -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07
-                   -1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12
-                   0 0 .67-.21 2.2.82a7.56 7.56 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04
-                   2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15
-                   0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
-                   0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8
-                   c0-4.42-3.58-8-8-8z"/>
+     width="18" height="18" viewBox="0 0 24 24"
+     fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 6H8"></path>
+  <path d="M21 12H3"></path>
+  <path d="M21 18H8"></path>
+  <circle cx="3.5" cy="6" r="1"></circle>
+  <circle cx="14.5" cy="12" r="1"></circle>
+  <circle cx="3.5" cy="18" r="1"></circle>
 </svg>
 </a>
 </h3>
@@ -247,24 +232,19 @@ Comprehensive charting and visualization controls for turning data into actionab
 </div>
 <div class="form-content">
 <h3 class="form-title">Pyramid Charts
-<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Dashboard/StockOverviewPage.xaml"
+<a href="https://help.syncfusion.com/maui/pyramid-charts/overview"
               target="_blank"
               class="source-icon"
               title="View Source">
 <svg xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    fill="currentColor"
-                    viewBox="0 0 16 16">
-<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
-                   0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
-                   -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07
-                   -1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12
-                   0 0 .67-.21 2.2.82a7.56 7.56 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04
-                   2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15
-                   0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
-                   0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8
-                   c0-4.42-3.58-8-8-8z"/>
+     width="18" height="18" viewBox="0 0 24 24"
+     fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 6H8"></path>
+  <path d="M21 12H3"></path>
+  <path d="M21 18H8"></path>
+  <circle cx="3.5" cy="6" r="1"></circle>
+  <circle cx="14.5" cy="12" r="1"></circle>
+  <circle cx="3.5" cy="18" r="1"></circle>
 </svg>
 </a>
 </h3>
@@ -284,24 +264,19 @@ Comprehensive charting and visualization controls for turning data into actionab
 </div>
 <div class="form-content">
 <h3 class="form-title">Polar Charts
-<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Profile/HealthProfilePage.xaml"
+<a href="https://help.syncfusion.com/maui/polar-charts/overview"
               target="_blank"
               class="source-icon"
               title="View Source">
 <svg xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    fill="currentColor"
-                    viewBox="0 0 16 16">
-<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
-                   0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
-                   -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07
-                   -1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12
-                   0 0 .67-.21 2.2.82a7.56 7.56 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04
-                   2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15
-                   0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
-                   0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8
-                   c0-4.42-3.58-8-8-8z"/>
+     width="18" height="18" viewBox="0 0 24 24"
+     fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 6H8"></path>
+  <path d="M21 12H3"></path>
+  <path d="M21 18H8"></path>
+  <circle cx="3.5" cy="6" r="1"></circle>
+  <circle cx="14.5" cy="12" r="1"></circle>
+  <circle cx="3.5" cy="18" r="1"></circle>
 </svg>
 </a>
 </h3>
@@ -320,24 +295,19 @@ Comprehensive charting and visualization controls for turning data into actionab
 </div>
 <div class="form-content">
 <h3 class="form-title">Sunburst Charts
-<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Profile/HealthProfilePage.xaml"
+<a href="https://help.syncfusion.com/maui/sunburstchart/overview"
               target="_blank"
               class="source-icon"
               title="View Source">
 <svg xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    fill="currentColor"
-                    viewBox="0 0 16 16">
-<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
-                   0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
-                   -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07
-                   -1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12
-                   0 0 .67-.21 2.2.82a7.56 7.56 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04
-                   2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15
-                   0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
-                   0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8
-                   c0-4.42-3.58-8-8-8z"/>
+     width="18" height="18" viewBox="0 0 24 24"
+     fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 6H8"></path>
+  <path d="M21 12H3"></path>
+  <path d="M21 18H8"></path>
+  <circle cx="3.5" cy="6" r="1"></circle>
+  <circle cx="14.5" cy="12" r="1"></circle>
+  <circle cx="3.5" cy="18" r="1"></circle>
 </svg>
 </a>
 </h3>
@@ -361,19 +331,14 @@ Comprehensive charting and visualization controls for turning data into actionab
               class="source-icon"
               title="View Source">
 <svg xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    fill="currentColor"
-                    viewBox="0 0 16 16">
-<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
-                   0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
-                   -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07
-                   -1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12
-                   0 0 .67-.21 2.2.82a7.56 7.56 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04
-                   2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15
-                   0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
-                   0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8
-                   c0-4.42-3.58-8-8-8z"/>
+     width="18" height="18" viewBox="0 0 24 24"
+     fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 6H8"></path>
+  <path d="M21 12H3"></path>
+  <path d="M21 18H8"></path>
+  <circle cx="3.5" cy="6" r="1"></circle>
+  <circle cx="14.5" cy="12" r="1"></circle>
+  <circle cx="3.5" cy="18" r="1"></circle>
 </svg>
 </a>
 </h3>
@@ -393,24 +358,19 @@ Comprehensive charting and visualization controls for turning data into actionab
 </div>
 <div class="form-content">
 <h3 class="form-title">Radial Gauge
-<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Profile/HealthProfilePage.xaml"
+<a href="https://help.syncfusion.com/maui/radial-gauge/overview"
               target="_blank"
               class="source-icon"
               title="View Source">
 <svg xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    fill="currentColor"
-                    viewBox="0 0 16 16">
-<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
-                   0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
-                   -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07
-                   -1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12
-                   0 0 .67-.21 2.2.82a7.56 7.56 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04
-                   2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15
-                   0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
-                   0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8
-                   c0-4.42-3.58-8-8-8z"/>
+     width="18" height="18" viewBox="0 0 24 24"
+     fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 6H8"></path>
+  <path d="M21 12H3"></path>
+  <path d="M21 18H8"></path>
+  <circle cx="3.5" cy="6" r="1"></circle>
+  <circle cx="14.5" cy="12" r="1"></circle>
+  <circle cx="3.5" cy="18" r="1"></circle>
 </svg>
 </a>
 </h3>
@@ -429,24 +389,19 @@ Comprehensive charting and visualization controls for turning data into actionab
 </div>
 <div class="form-content">
 <h3 class="form-title">Linear Gauge
-<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Profile/HealthProfilePage.xaml"
+<a href="https://help.syncfusion.com/maui/linear-gauge/overview"
               target="_blank"
               class="source-icon"
               title="View Source">
 <svg xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    fill="currentColor"
-                    viewBox="0 0 16 16">
-<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
-                   0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
-                   -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07
-                   -1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12
-                   0 0 .67-.21 2.2.82a7.56 7.56 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04
-                   2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15
-                   0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
-                   0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8
-                   c0-4.42-3.58-8-8-8z"/>
+     width="18" height="18" viewBox="0 0 24 24"
+     fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 6H8"></path>
+  <path d="M21 12H3"></path>
+  <path d="M21 18H8"></path>
+  <circle cx="3.5" cy="6" r="1"></circle>
+  <circle cx="14.5" cy="12" r="1"></circle>
+  <circle cx="3.5" cy="18" r="1"></circle>
 </svg>
 </a>
 </h3>
@@ -465,24 +420,19 @@ Comprehensive charting and visualization controls for turning data into actionab
 </div>
 <div class="form-content">
 <h3 class="form-title">Digital Gauge
-<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Dashboard/StockOverviewPage.xaml"
+<a href="https://help.syncfusion.com/maui/digitalgauge/overview"
               target="_blank"
               class="source-icon"
               title="View Source">
 <svg xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    fill="currentColor"
-                    viewBox="0 0 16 16">
-<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
-                   0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
-                   -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07
-                   -1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12
-                   0 0 .67-.21 2.2.82a7.56 7.56 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04
-                   2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15
-                   0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
-                   0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8
-                   c0-4.42-3.58-8-8-8z"/>
+     width="18" height="18" viewBox="0 0 24 24"
+     fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 6H8"></path>
+  <path d="M21 12H3"></path>
+  <path d="M21 18H8"></path>
+  <circle cx="3.5" cy="6" r="1"></circle>
+  <circle cx="14.5" cy="12" r="1"></circle>
+  <circle cx="3.5" cy="18" r="1"></circle>
 </svg>
 </a>
 </h3>
@@ -502,24 +452,19 @@ Comprehensive charting and visualization controls for turning data into actionab
 </div>
 <div class="form-content">
 <h3 class="form-title">Maps
-<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Profile/HealthProfilePage.xaml"
+<a href="https://help.syncfusion.com/maui/maps/overview"
               target="_blank"
               class="source-icon"
               title="View Source">
 <svg xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    fill="currentColor"
-                    viewBox="0 0 16 16">
-<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
-                   0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
-                   -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07
-                   -1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12
-                   0 0 .67-.21 2.2.82a7.56 7.56 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04
-                   2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15
-                   0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
-                   0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8
-                   c0-4.42-3.58-8-8-8z"/>
+     width="18" height="18" viewBox="0 0 24 24"
+     fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 6H8"></path>
+  <path d="M21 12H3"></path>
+  <path d="M21 18H8"></path>
+  <circle cx="3.5" cy="6" r="1"></circle>
+  <circle cx="14.5" cy="12" r="1"></circle>
+  <circle cx="3.5" cy="18" r="1"></circle>
 </svg>
 </a>
 </h3>
@@ -538,24 +483,19 @@ Comprehensive charting and visualization controls for turning data into actionab
 </div>
 <div class="form-content">
 <h3 class="form-title">Barcode Generator
-<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Profile/HealthProfilePage.xaml"
+<a href="https://help.syncfusion.com/maui/barcode-generator/overview"
               target="_blank"
               class="source-icon"
               title="View Source">
 <svg xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    fill="currentColor"
-                    viewBox="0 0 16 16">
-<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
-                   0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
-                   -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07
-                   -1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12
-                   0 0 .67-.21 2.2.82a7.56 7.56 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04
-                   2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15
-                   0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
-                   0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8
-                   c0-4.42-3.58-8-8-8z"/>
+     width="18" height="18" viewBox="0 0 24 24"
+     fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 6H8"></path>
+  <path d="M21 12H3"></path>
+  <path d="M21 18H8"></path>
+  <circle cx="3.5" cy="6" r="1"></circle>
+  <circle cx="14.5" cy="12" r="1"></circle>
+  <circle cx="3.5" cy="18" r="1"></circle>
 </svg>
 </a>
 </h3>
@@ -574,24 +514,19 @@ Comprehensive charting and visualization controls for turning data into actionab
 </div>
 <div class="form-content">
 <h3 class="form-title">TreeMap
-<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Dashboard/StockOverviewPage.xaml"
+<a href="https://help.syncfusion.com/maui/treemap/overview"
               target="_blank"
               class="source-icon"
               title="View Source">
 <svg xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    fill="currentColor"
-                    viewBox="0 0 16 16">
-<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
-                   0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
-                   -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07
-                   -1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12
-                   0 0 .67-.21 2.2.82a7.56 7.56 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04
-                   2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15
-                   0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
-                   0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8
-                   c0-4.42-3.58-8-8-8z"/>
+     width="18" height="18" viewBox="0 0 24 24"
+     fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 6H8"></path>
+  <path d="M21 12H3"></path>
+  <path d="M21 18H8"></path>
+  <circle cx="3.5" cy="6" r="1"></circle>
+  <circle cx="14.5" cy="12" r="1"></circle>
+  <circle cx="3.5" cy="18" r="1"></circle>
 </svg>
 </a>
 </h3>

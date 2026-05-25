@@ -136,8 +136,8 @@ Form controls and editors used for collecting, validating and formatting user in
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title">Auto complete
-<a href=""
+<h3 class="form-title">Autocomplete
+<a href="https://help.syncfusion.com/maui/autocomplete/overview"
               target="_blank"
               class="source-icon"
               title="View Source">
@@ -169,7 +169,7 @@ Form controls and editors used for collecting, validating and formatting user in
 </div>
 <div class="form-content">
 <h3 class="form-title">ComboBox
-<a href=""
+<a href="https://help.syncfusion.com/maui/combobox/overview"
               target="_blank"
               class="source-icon"
               title="View Source">
@@ -200,7 +200,7 @@ Form controls and editors used for collecting, validating and formatting user in
 </div>
 <div class="form-content">
 <h3 class="form-title">DataForm
-<a href=""
+<a href="https://help.syncfusion.com/maui/dataform/overview"
               target="_blank"
               class="source-icon"
               title="View Source">
@@ -231,8 +231,8 @@ Form controls and editors used for collecting, validating and formatting user in
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title">DatePicker
-<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Dashboard/StockOverviewPage.xaml"
+<h3 class="form-title">Date Picker
+<a href="https://help.syncfusion.com/maui/datepicker/overview"
               target="_blank"
               class="source-icon"
               title="View Source">
@@ -264,7 +264,7 @@ Form controls and editors used for collecting, validating and formatting user in
 </div>
 <div class="form-content">
 <h3 class="form-title">Date Time Picker
-<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Profile/HealthProfilePage.xaml"
+<a href="https://help.syncfusion.com/maui/datetimepicker/overview"
               target="_blank"
               class="source-icon"
               title="View Source">
@@ -294,8 +294,8 @@ Form controls and editors used for collecting, validating and formatting user in
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title">Masked Entry
-<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Profile/HealthProfilePage.xaml"
+<h3 class="form-title">MaskedEntry
+<a href="https://help.syncfusion.com/maui/masked-entry/overview"
               target="_blank"
               class="source-icon"
               title="View Source">
@@ -325,8 +325,8 @@ Form controls and editors used for collecting, validating and formatting user in
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title">Numeric Entry
-<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Dashboard/StockOverviewPage.xaml"
+<h3 class="form-title">NumericEntry
+<a href="https://help.syncfusion.com/maui/numericentry/overview"
               target="_blank"
               class="source-icon"
               title="View Source">
@@ -358,7 +358,7 @@ Form controls and editors used for collecting, validating and formatting user in
 </div>
 <div class="form-content">
 <h3 class="form-title">Picker
-<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Profile/HealthProfilePage.xaml"
+<a href="https://help.syncfusion.com/maui/picker/overview"
               target="_blank"
               class="source-icon"
               title="View Source">
@@ -388,8 +388,8 @@ Form controls and editors used for collecting, validating and formatting user in
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title">Signature Pad
-<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Profile/HealthProfilePage.xaml"
+<h3 class="form-title">SignaturePad
+<a href="https://help.syncfusion.com/maui/signaturepad/overview"
               target="_blank"
               class="source-icon"
               title="View Source">
@@ -420,7 +420,7 @@ Form controls and editors used for collecting, validating and formatting user in
 </div>
 <div class="form-content">
 <h3 class="form-title">Rating
-<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Dashboard/StockOverviewPage.xaml"
+<a href="https://help.syncfusion.com/maui/rating/overview"
               target="_blank"
               class="source-icon"
               title="View Source">
@@ -452,7 +452,7 @@ Form controls and editors used for collecting, validating and formatting user in
 </div>
 <div class="form-content">
 <h3 class="form-title">Image Editor
-<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Profile/HealthProfilePage.xaml"
+<a href="https://help.syncfusion.com/maui/imageeditor/overview"
               target="_blank"
               class="source-icon"
               title="View Source">
@@ -483,7 +483,7 @@ Form controls and editors used for collecting, validating and formatting user in
 </div>
 <div class="form-content">
 <h3 class="form-title">Time Picker
-<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Profile/HealthProfilePage.xaml"
+<a href="https://help.syncfusion.com/maui/timepicker/overview"
               target="_blank"
               class="source-icon"
               title="View Source">
@@ -514,7 +514,7 @@ Form controls and editors used for collecting, validating and formatting user in
 </div>
 <div class="form-content">
 <h3 class="form-title">Color Picker
-<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Dashboard/StockOverviewPage.xaml"
+<a href="https://help.syncfusion.com/maui/colorpicker/overview"
               target="_blank"
               class="source-icon"
               title="View Source">
@@ -545,7 +545,7 @@ Form controls and editors used for collecting, validating and formatting user in
 </div>
 <div class="form-content">
 <h3 class="form-title">Rich Text Editor
-<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Dashboard/StockOverviewPage.xaml"
+<a href="https://help.syncfusion.com/maui/rich-text-editor/overview"
               target="_blank"
               class="source-icon"
               title="View Source">

@@ -1,15 +1,16 @@
 ---
 layout: post
-title: Conversational Experiences
-description: Chat and conversational UI controls.
+title: Viewer
+description: Components that enhance UI presentation with visual effects.
 platform: maui
-control: Conversational Experiences
+control: Visual Enhancements
 documentation: ug
 ---
 
-# Conversational Experiences
+# Viewer
 
-Components for chat-based and conversational workflows that support threaded messages, attachments and bot interactions. These controls make it easy to build messaging UIs with accessibility and performance in mind.
+Controls that improve the visual appearance of UI elements by adding effects such as avatars, shadows, and blur. These components help create a more engaging and refined user interface by enhancing presentation, clarity, and visual appeal.
+
 <style>
 .form-card {
    flex: 0 0 calc(33.33% - 14px);
@@ -126,6 +127,7 @@ Components for chat-based and conversational workflows that support threaded mes
 </style>
 
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
+<!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
 <img src="Images/DashboardImages/stockoverview.webp"
@@ -135,8 +137,8 @@ Components for chat-based and conversational workflows that support threaded mes
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title">Chat
-<a href="https://help.syncfusion.com/maui/chat/overview"
+<h3 class="form-title">Markdown viewer
+<a href="https://help.syncfusion.com/maui/markdownviewer/overview"
               target="_blank"
               class="source-icon"
               title="View Source">
@@ -153,46 +155,12 @@ Components for chat-based and conversational workflows that support threaded mes
 </a>
 </h3>
 <div class="form-description">
-              The .NET MAUI Chat control, also known as conversational UI, provides a modern chat experience. It is a flexible control that displays conversations between two or more users in a fully customizable layout.
-</div>
-</div>
-</div>
-<!-- Card 2 -->
-<div class="form-card">
-<div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
-                loading="lazy"
-                decoding="async"
-                class="form-image"
-                onclick="openImage(this.src, event)">
-</div>
-<div class="form-content">
-<h3 class="form-title">AI Assist View
-<a href="https://help.syncfusion.com/maui/aiassistview/overview"
-              target="_blank"
-              class="source-icon"
-              title="View Source">
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="18" height="18" viewBox="0 0 24 24"
-     fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M21 6H8"></path>
-  <path d="M21 12H3"></path>
-  <path d="M21 18H8"></path>
-  <circle cx="3.5" cy="6" r="1"></circle>
-  <circle cx="14.5" cy="12" r="1"></circle>
-  <circle cx="3.5" cy="18" r="1"></circle>
-</svg>
-</a>
-</h3>
-<div class="form-description">
-               The Syncfusion .NET MAUI AI AssistView control is a component designed to facilitate the integration of AI services into .NET MAUI applications. It provides an intuitive and user-friendly interface that allows developers to create applications that interact seamlessly with AI services.
+              Displays user profile images or initials in a compact and visually appealing format.
 </div>
 </div>
 </div>
 
 </div>
-
-[Back to Controls Catalog](ControlsCatalog.md)
 <!-- Popup Modal -->
 <div id="imageModal">
 <span class="close-popup" onclick="closeImage()">
