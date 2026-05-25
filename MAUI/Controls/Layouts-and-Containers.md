@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Layouts & Containers
-description: Layout and container components that structure and organize UI elements, enabling responsive design, alignment, and efficient use of screen space across applications.
+title: Layouts & Containers | Syncfusion®
+description: Layout and container components that organize UI elements, enabling responsive design, proper alignment, and efficient screen space usage.
 platform: maui
 control: Layouts & Containers
 documentation: ug

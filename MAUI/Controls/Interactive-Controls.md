@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Interactive Controls
+title: Interactive Controls | Syncfusion®
 description: Controls that support direct user interaction through gestures and actions, enabling manipulation of UI elements such as drag, swipe, and touch-based inputs.
 platform: maui
 control: Interactive Controls

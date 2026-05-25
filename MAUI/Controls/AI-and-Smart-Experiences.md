@@ -1,6 +1,6 @@
 ---
 layout: post
-title: AI & Smart Experiences
+title: AI & Smart Experiences | Syncfusion®
 description: Smart components and preview controls that enable AI-driven experiences, enhancing interactivity, automation, and intelligent UI design.
 platform: maui
 control: AI & Smart Experiences

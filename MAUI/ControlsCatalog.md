@@ -1,7 +1,7 @@
 ---
 layout: post
-title: ControlsCatalog
-description: Controls catalog that presents grouped components as interactive cards with images, descriptions, and navigation links, enabling quick discovery and access to features.
+title: ControlsCatalog | Syncfusion®
+description: Controls catalog that displays grouped components as interactive cards with images, descriptions, and links for quick discovery.
 platform: maui
 control: Controls Catalog
 documentation: ug

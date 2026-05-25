@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Conversational Experiences
-description: Controls that enable chat-based and conversational user interfaces, allowing seamless interaction through messaging, dynamic responses, and AI-driven communication experiences.
+title: Conversational Experiences | Syncfusion®
+description: Controls that enable chat and conversational UIs, supporting messaging, dynamic responses, and AI-driven communication.
 platform: maui
 control: Conversational Experiences
 documentation: ug

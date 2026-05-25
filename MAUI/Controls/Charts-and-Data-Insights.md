@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Charts & Data Insights
+title: Charts & Data Insights | Syncfusion®
 description: Controls designed for data visualization, enabling the creation of interactive charts and graphical representations for better data analysis and insights.
 platform: maui
 control: Charts & Data Insights

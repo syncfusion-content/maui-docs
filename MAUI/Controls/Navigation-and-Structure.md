@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Navigation & Structure
+title: Navigation & Structure | Syncfusion®
 description: Controls that define navigation structure and layout, enabling seamless movement across views and organizing content for a consistent application experience.
 platform: maui
 control: Navigation & Structure

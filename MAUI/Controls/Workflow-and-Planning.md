@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Workflow & Planning
-description: Components that support workflow and planning tasks, enabling users to manage processes, organize activities, and track progress efficiently within applications.
+title: Workflow & Planning Controls | Syncfusion®
+description: Components that support workflow and planning, helping users manage tasks, organize activities, and track progress efficiently in applications.
 platform: maui
 control: Workflow & Planning
 documentation: ug
 ---
 
-# Syncfusion<sup>®</sup> Workflow and Planning for .NET MAUI
+# Syncfusion<sup>®</sup> Workflow and Planning Controls for .NET MAUI
 
 Components to model workflows, tasks and timelines for project and resource planning. These controls help teams visualize work, manage tasks and coordinate schedules within apps.
 
-## Workflow and Planning
+## Workflow and Planning Controls
 
 <style>
 .form-card {

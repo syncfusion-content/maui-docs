@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data Management
+title: Data Management | Syncfusion®
 description: Controls designed for managing and presenting data efficiently, including grids, sorting, filtering, and editing features for structured data handling.
 platform: maui
 control: Data Management

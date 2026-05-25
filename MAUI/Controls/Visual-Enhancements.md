@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Visual Enhancements
+title: Visual Enhancements | Syncfusion®
 description: Components that enhance user interfaces with visual effects and styling, improving appearance, depth, and overall presentation for a polished user experience.
 platform: maui
 control: Visual Enhancements

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Feedback & Status Indicators
+title: Feedback & Status Indicators | Syncfusion®
 description: Controls that display status and provide feedback to users, including indicators, alerts, progress updates, and notifications for better user awareness.
 platform: maui
 control: Feedback & Status Indicators

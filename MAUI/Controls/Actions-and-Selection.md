@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Actions and Selection
+title: Actions and Selection | Syncfusion®
 description: Controls that enable user interactions such as selecting options, toggling settings, and providing input for seamless and responsive UI experiences.
 platform: maui
 control: AI & Smart Experiences
