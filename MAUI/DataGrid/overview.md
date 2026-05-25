@@ -8,76 +8,176 @@ documentation: ug
 keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui
 ---
 
-# .NET MAUI DataGrid (SfDataGrid) Overview
+# .NET MAUI DataGrid Overview (SfDataGrid)
 
 The .NET MAUI DataGrid control is used to display and manipulate data in a tabular view. It was built from the ground up to achieve the best possible performance, even when loading large amounts of data.
 
+# .NET MAUI DataGrid Control (SfDataGrid)
+
+- Create powerful, high-performance **tabular data experiences** in your **.NET MAUI applications** using the **Syncfusion DataGrid control (SfDataGrid)**.
+
+- Designed for **scalability, interactivity, and flexibility**, it enables you to efficiently display, manage, and analyze large datasets across **mobile and desktop platforms**.
+
 <img alt="MAUI DataGrid" src="Images\overview\maui-datagrid.png" width="567"/>
 
-**Key Features**
+## What You Can Do
 
-* **Data Binding** - Bind different types of data sources, including DataTable.
+- Display and manage large volumes of data efficiently  
+- Enable sorting, filtering, and grouping of data  
+- Allow in-place editing with multiple column types  
+- Provide interactive user experiences (drag, swipe, selection)  
+- Customize layouts and visuals based on application needs  
 
-* **Column Types** - Show different data types in different types of columns. The following column types are supported: numeric, text, date, checkbox, image, combobox, picker and template. The template column is used to load any control in a column.
+## Key Capabilities
 
-* **Column Resizing** - Interactive support to adjust the width of columns.
+### Data Binding
 
-* **Column Drag and Drop** - Interactive support to drag and drop columns.
+Connect your data with flexible binding options:
 
-* **Row drag and drop** - Interaction support to drag and drop rows.
+- Bind to collections and structured data sources (including `DataTable`)  
+- Supports dynamic data updates  
+- Works seamlessly with MVVM architecture  
 
-* **Swiping** - Interaction support to swipe the rows.
+### Rich Column Types
 
-* **Editing** - Interactive support to edit with different column types.
+Display different types of data using specialized columns:
 
-* **Sorting** - Interactively sort one or more columns.
+- Text, numeric, and date columns  
+- Checkbox and image columns  
+- ComboBox and picker columns  
+- Template column for custom UI rendering  
 
-* **Grouping** - Use user-interactive grouping to group one or more columns.
+### Data Operations
 
-* **Summaries** - Extensive support to show brief information about the individual data columns or groups of rows.
+Enable powerful data handling features:
 
-* **Filtering** - Programmatically filter data based on the criteria.
+- Sorting (single or multi-column)  
+- Filtering (programmatic and UI-based)  
+- Grouping for hierarchical organization  
+- Summaries for aggregated insights  
+- Search with highlighting and navigation  
 
-* **Data virtualization** – Support for different modes of data virtualization such as paging, incremental loading.
+### Editing & Interaction
 
-* **Selection** - Select one or more rows. Keyboard navigation is supported in Windows platform.
+Enhance user productivity with built-in interactions:
 
-* **Search** - Supports highlighting cell content and provides navigation functionalities.
+- Edit data directly within the grid  
+- Drag and drop rows and columns  
+- Swipe interactions for quick actions  
+- Row selection with keyboard navigation (Windows)  
 
-* **Master-Details View** – Supports displaying relational data using hierarchies.
+### Data Virtualization & Paging
 
-* **Record Template View** - Supports customization of row presentation by defining templates for displaying additional information or complex layouts within the DataGrid.
+Handle large datasets efficiently:
 
-* **Column Sizing** - Set the width of columns with various sizing options. Columns can also be sized based on their content.
+- Paging support for segmented data loading  
+- Incremental data loading  
+- Data virtualization for improved performance  
 
-* **Auto row height** - Set the height for rows based on the content of their cells.
+### Layout & Presentation
 
-* **Freeze Panes** - Freeze the rows and columns, keeping them fixed in place while scrolling the grid.
+Control how data is displayed:
 
-* **Styling** - Customize the appearance of cells and headers. Conditional styling is supported.
+- Column resizing and auto-sizing  
+- Auto row height based on content  
+- Stacked headers for grouped columns  
+- Freeze panes for fixed rows and columns  
 
-* **Paging** - Support for loading data in segments when dealing with large volumes of data.
+### Advanced Data Views
 
-* **Stacked Headers** - Extensive support to show multiple headers called stacked headers.
+Support complex data scenarios:
 
-* **Load More** -  Display an interactive view when the grid reaches its maximum or minimum offset while scrolling down or up. Tapping the interactive view triggers a command to add more data to the item source of the grid at runtime.
+- Master-details view for hierarchical data  
+- Record template view for custom row layouts  
+- Unbound rows and columns for additional context  
 
-* **Pull To Refresh** - Support allows users to load a subset of data when the DataGrid is pulled down.
+### Styling & Customization
 
-* **Serialization and Deserialization** – Supports the transfer of grid properties and settings between different instances, allowing for easy saving and loading of configurations.
+Customize appearance to match your application:
 
-* **Clipboard Operations** – Supports standard clipboard functionalities, enabling the cutting, copying, and pasting of data within the DataGrid and across other applications.
+- Cell and header styling  
+- Conditional formatting  
+- Theme support (light and dark modes)  
 
-* **Exporting** - Support to export the data to Excel and PDF.
+### Data Refresh & Loading
 
-* **Unbound column** - It allows adding additional columns that are not bound with data objects from the underlying data source.
+Improve user experience with dynamic loading:
 
-* **Unbound Row** - It allows adding rows at the top and bottom of the DataGrid which are not bound with data objects from the underlying data source.
+- Pull-to-refresh for quick updates  
+- Load more view for incremental loading  
 
-* **Theme** - Use a dark or light theme.
+### Export & Data Handling
 
-* **Accessibility** - The DataGrid can easily be accessed by screen readers.
+Extend data usage beyond the grid:
 
-* **Right to Left (RTL)** - Right-to-left direction support for users working in RTL languages like Hebrew and Arabic.
+- Export data to **Excel and PDF**  
+- Clipboard operations (cut, copy, paste)  
+- Serialization and deserialization of grid state  
+
+### Accessibility & Globalization
+
+Ensure inclusivity and localization:
+
+- Screen reader support for accessibility  
+- Right-to-left (RTL) layout support  
+
+## Supported Platforms
+
+The SfDataGrid is built for cross-platform .NET MAUI applications and supports:
+
+- Android  
+- iOS  
+- macOS  
+- Windows  
+
+## Performance Highlights
+
+Designed for performance-critical applications:
+
+- Optimized for large data volumes  
+- Efficient rendering with virtualization  
+- Smooth scrolling and interaction handling  
+- Responsive UI across devices  
+
+## Where It Fits (Use Cases)
+
+Use the DataGrid in a wide range of applications:
+
+- Business dashboards and reporting tools  
+- Financial and accounting systems  
+- Inventory and order management systems  
+- Analytics and data monitoring apps  
+- Enterprise data management applications  
+
+## Built for Real Applications
+
+The SfDataGrid is designed for production-ready scenarios:
+
+- Works seamlessly with MVVM architecture  
+- Supports scalable and complex data workflows  
+- Handles hierarchical and relational data  
+- Backed by continuous updates and support  
+
+## Why Developers Use It
+
+- Comprehensive feature set in a single control  
+- Clean and flexible API design  
+- High performance with large datasets  
+- Extensive customization options  
+- Reliable cross-platform behavior   
+
+## Summary
+
+The **Syncfusion .NET MAUI DataGrid control (SfDataGrid)** provides a complete solution for building **interactive, high-performance, and feature-rich data grids** in cross-platform applications. With advanced data operations, rich customization, scalable performance, and enterprise-ready capabilities, it enables developers to deliver **powerful data-driven user experiences efficiently**.
+
+## Next Steps
+
+Explore further:
+
+- [Getting Started](https://help.syncfusion.com/maui/datagrid/getting-started)
+- [Styling Guide](https://help.syncfusion.com/maui/datagrid/styling)  
+- [MAUI DataGrid Feature Tour](https://www.syncfusion.com/maui-controls/maui-datagrid)  
+- [MAUI DataGrid Examples](https://github.com/syncfusion/maui-demos/tree/master/MAUI/DataGrid)  
+
 
 N> You can refer to our [MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [MAUI DataGrid example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/DataGrid) to learn about various features and how to easily configure them, with built-in support for creating stunning visual effects.

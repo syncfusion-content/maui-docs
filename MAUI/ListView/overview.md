@@ -7,34 +7,129 @@ control: ListView
 documentation: ug
 ---
 
-# Overview of .NET MAUI ListView (SfListView)
+# .NET MAUI ListView Overview (SfListView)
 
 The Syncfusion [.NET MAUI ListView](https://www.syncfusion.com/maui-controls/maui-listview) renders set of data items using Maui views or custom templates. Data can easily be grouped, sorted, and filtered.
 
-## Key features
+Designed for flexibility and performance, it enables you to display data using **custom templates, grouping, and advanced layouts**, making it ideal for modern mobile and desktop apps.
 
- * Optimized view reusing strategy for enhanced performance.
+## What You Can Do
 
- * Item templating for a rich UI (User Interface).
+- Render large collections of data efficiently  
+- Create rich, customizable list item layouts  
+- Group, sort, and filter data easily  
+- Switch between list and grid-style layouts  
+- Deliver smooth and responsive scrolling experiences  
 
- * Supports dynamic selection of UI for each item using the `DataTemplateSelector`.
+## Key Capabilities
 
- * AutoFit items based on the content of `ItemTemplate`.
+### Flexible Data Presentation
 
- * Supports both linear and grid layouts.
+Display data using customizable layouts:
 
- * Orientation support.
+- Supports linear and grid layouts  
+- Orientation support for different viewing modes  
+- Auto-fit items based on template content  
 
- * Data operations such as sorting, grouping, and filtering.
+### Item Templating & Custom UI
 
- * Customizable group header with the option to stick in view.
+Build rich and dynamic UI experiences:
 
- * Selection with different selection modes and gestures.
+- Define custom item templates  
+- Use `DataTemplateSelector` for dynamic UI selection  
+- Create visually rich list items  
 
- * Header and footer with sticky options.
+### Data Operations
 
- * Supports loading more data either automatically or manually at the bottom when end of the list is reached, and manually at the top.
+Enable powerful data manipulation:
 
+- Sorting for ordered data display  
+- Grouping with customizable headers  
+- Filtering for refined data views  
 
+### Grouping & Headers
 
+Enhance data organization:
 
+- Customizable group headers  
+- Sticky group headers for better navigation  
+- Header and footer with sticky options  
+
+### Selection & Interaction
+
+Support user interaction with flexible options:
+
+- Multiple selection modes  
+- Gesture-based interactions  
+- Smooth item selection behavior  
+
+### Incremental Loading
+
+Handle large datasets efficiently:
+
+- Load more data automatically at the bottom  
+- Manual load more at top and bottom  
+- Improves performance for large lists  
+
+## Supported Platforms
+
+The SfListView is designed for cross-platform .NET MAUI applications and supports:
+
+- Android  
+- iOS  
+- macOS  
+- Windows  
+
+## Performance Highlights
+
+Optimized for responsive and smooth user experiences:
+
+- Efficient view recycling for performance  
+- Smooth scrolling with large datasets  
+- Optimized layout handling for dynamic content  
+
+## Where It Fits (Use Cases)
+
+Use the ListView in a variety of applications:
+
+- Contact and directory lists  
+- Product listings and catalogs  
+- Messaging and activity feeds  
+- Social media feeds  
+- Data-driven list-based dashboards  
+
+## Built for Real Applications
+
+The SfListView is designed for real-world application scenarios:
+
+- Works seamlessly with MVVM architecture  
+- Supports scalable and dynamic data sources  
+- Enables rich UI customization  
+- Consistent behavior across platforms  
+
+## Why Developers Use It
+
+- Flexible UI customization with templates  
+- Smooth performance with large datasets  
+- Rich data operations (grouping, sorting, filtering)  
+- Clean and extensible API design  
+- Reliable cross-platform rendering  
+
+## Accessibility and Globalization
+
+- **Accessibility** – SfListView ensures usability for all users with built‑in support for screen readers, keyboard navigation, and high‑contrast themes. It also allows customization of item templates, labels, and styles to improve readability and interaction for users with different needs.
+
+- **Globalization** – The control adapts to global applications by supporting localization of text, right‑to‑left (RTL) layouts for languages such as Arabic and Hebrew, and culture‑specific formatting for dates, numbers, and other bound data.
+
+## Summary
+
+The **Syncfusion .NET MAUI ListView control (SfListView)** provides a flexible and high-performance solution for building **rich, data-driven list interfaces**. With powerful templating, data operations, and optimized rendering, it enables developers to deliver **engaging and scalable list-based experiences** across modern cross-platform applications.
+
+## Next Steps
+
+Explore further:
+
+- [Getting Started](https://help.syncfusion.com/maui/listview/getting-started)
+- [MAUI ListView Feature Overview](https://www.syncfusion.com/maui-controls/maui-listview)  
+- [Customization Guide](https://help.syncfusion.com/maui/listview/viewappearance)
+- [API Reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.ListView.SfListView.html)
