@@ -1,15 +1,17 @@
 ---
 layout: post
 title: Layouts & Containers
-description: Layout and container components.
+description: Layout and container components that structure and organize UI elements, enabling responsive design, alignment, and efficient use of screen space across applications.
 platform: maui
 control: Layouts & Containers
 documentation: ug
 ---
 
-# Layouts & Containers
+# Syncfusion<sup>®</sup> Layouts and Containers for .NET MAUI
 
 Container and layout primitives used to compose responsive and adaptive UI screens. These controls let you structure content, present overlays and create polished, componentized layouts for production apps.
+
+## Layouts and Containers
 
 <style>
 .form-card {

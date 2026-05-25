@@ -1,15 +1,18 @@
 ---
 layout: post
 title: Data Management
-description: Grids and data-handling controls.
+description: Controls designed for managing and presenting data efficiently, including grids, sorting, filtering, and editing features for structured data handling.
 platform: maui
 control: Data Management
 documentation: ug
 ---
 
-# Data Management
+# Syncfusion<sup>®</sup> Data Management for .NET MAUI
 
 This category covers grids and data-handling controls for displaying, editing and synchronizing structured data. Use these controls when you need performant tabular views, grouping, sorting and data operations in MAUI apps.
+
+## Data Management
+
 <style>
 .form-card {
    flex: 0 0 calc(33.33% - 14px);

@@ -1,15 +1,17 @@
 ---
 layout: post
 title: Command & Actions
-description: Toolbars and command surfaces.
+description: Controls that provide toolbars and command surfaces for organizing actions, enabling easy access to commands and improving overall user interaction and workflow efficiency.
 platform: maui
 control: Command & Actions
 documentation: ug
 ---
 
-# Command & Actions
+# Syncfusion<sup>®</sup> Commands and Actions for .NET MAUI
 
 Toolbars and command surfaces for invoking app-level and contextual actions. Use these controls to expose primary commands, organize actions and provide keyboard or touch affordances.
+
+## Commands and Actions
 
 <style>
 .container {

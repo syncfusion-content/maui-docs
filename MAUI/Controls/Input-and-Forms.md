@@ -1,15 +1,17 @@
 ---
 layout: post
 title: Input & Forms
-description: Form and input controls for collecting user data.
+description: Controls that collect user input through forms, including text fields, selections, and validation features to ensure accurate and efficient data entry.
 platform: maui
 control: Input & Forms
 documentation: ug
 ---
 
-# Input & Forms
+# Syncfusion<sup>®</sup> Input and Forms for .NET MAUI
 
 Form controls and editors used for collecting, validating and formatting user input. These controls include pickers, masked inputs and advanced form layouts to simplify data entry patterns.
+
+## Input and Forms
 
 <style>
 .form-card {

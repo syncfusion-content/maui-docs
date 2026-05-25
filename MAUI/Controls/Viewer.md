@@ -1,15 +1,17 @@
 ---
 layout: post
 title: Viewer
-description: Components that enhance UI presentation with visual effects.
+description: Components that enhance the visual presentation of UI elements by adding effects such as shadows, blur, and styling to create a more polished and engaging interface.
 platform: maui
 control: Visual Enhancements
 documentation: ug
 ---
 
-# Viewer
+# Syncfusion<sup>®</sup> Viewer for .NET MAUI
 
 Controls that improve the visual appearance of UI elements by adding effects such as avatars, shadows, and blur. These components help create a more engaging and refined user interface by enhancing presentation, clarity, and visual appeal.
+
+## Viewer
 
 <style>
 .form-card {

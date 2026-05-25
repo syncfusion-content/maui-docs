@@ -1,15 +1,17 @@
 ---
 layout: post
 title: Feedback & Status Indicators
-description: Status and feedback components.
+description: Controls that display status and provide feedback to users, including indicators, alerts, progress updates, and notifications for better user awareness.
 platform: maui
 control: Feedback & Status Indicators
 documentation: ug
 ---
 
-# Feedback & Status Indicators
+# Syncfusion<sup>®</sup> Feedbacks and Status Indicators for .NET MAUI
 
 Controls that surface system status, feedback and progress to users. Use these components to communicate loading states, counts and step-based progress clearly and accessibly.
+
+## Feedbacks and Status Indicators
 
 <style>
 .form-card {
@@ -200,7 +202,7 @@ Controls that surface system status, feedback and progress to users. Use these c
 </div>
 <div class="form-content">
 <h3 class="form-title">ProgressBar
-<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Profile/HealthProfilePage.xaml"
+<a href=""
               target="_blank"
               class="source-icon"
               title="View Source">
@@ -288,7 +290,7 @@ Controls that surface system status, feedback and progress to users. Use these c
 
 </div>
 
-[Back to Controls Catalog](ControlsCatalog.md)
+[Back to Controls Catalog](ControlsCatalog.mdd)
 <!-- Popup Modal -->
 <div id="imageModal">
 <span class="close-popup" onclick="closeImage()">

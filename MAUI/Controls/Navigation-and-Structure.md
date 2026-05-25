@@ -1,15 +1,17 @@
 ---
 layout: post
 title: Navigation & Structure
-description: Navigation primitives and structural components.
+description: Controls that define navigation structure and layout, enabling seamless movement across views and organizing content for a consistent application experience.
 platform: maui
 control: Navigation & Structure
 documentation: ug
 ---
 
-# Navigation & Structure
+# Syncfusion<sup>®</sup> Navigation and Structure for .NET MAUI
 
 Navigation and structural layout components.
+
+## Navigation and Structure
 
 <style>
 .form-card {

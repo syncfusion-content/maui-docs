@@ -1,15 +1,17 @@
 ---
 layout: post
 title: ControlsCatalog
-description: Controls catalog showing grouped components as clickable cards with image, description and navigation links.
+description: Controls catalog that presents grouped components as interactive cards with images, descriptions, and navigation links, enabling quick discovery and access to features.
 platform: maui
 control: Controls Catalog
 documentation: ug
 ---
 
-# Controls Catalog
+# Syncfusion<sup>®</sup> Controls Catalog for .NET MAUI
 
 This document provides a comprehensive collection of UI components organized into meaningful categories to help you build modern, interactive, and user-friendly .NET MAUI applications. Each category groups related controls, making it easier to explore, understand, and implement the right components for your app’s design and functionality needs.
+
+## Controls Catalog
 
 <style>
 .form-card {

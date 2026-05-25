@@ -1,15 +1,18 @@
 ---
 layout: post
 title: Conversational Experiences
-description: Chat and conversational UI controls.
+description: Controls that enable chat-based and conversational user interfaces, allowing seamless interaction through messaging, dynamic responses, and AI-driven communication experiences.
 platform: maui
 control: Conversational Experiences
 documentation: ug
 ---
 
-# Conversational Experiences
+# Syncfusion<sup>®</sup> Conversational Experiences for .NET MAUI
 
 Components for chat-based and conversational workflows that support threaded messages, attachments and bot interactions. These controls make it easy to build messaging UIs with accessibility and performance in mind.
+
+## Converstaional Experiences
+
 <style>
 .form-card {
    flex: 0 0 calc(33.33% - 14px);

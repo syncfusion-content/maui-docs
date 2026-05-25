@@ -1,15 +1,17 @@
 ---
 layout: post
 title: Visual Enhancements
-description: Visual effects and enhancement components.
+description: Components that enhance user interfaces with visual effects and styling, improving appearance, depth, and overall presentation for a polished user experience.
 platform: maui
 control: Visual Enhancements
 documentation: ug
 ---
 
-# Visual Enhancements
+# Syncfusion<sup>®</sup> Visual Enhancements for .NET MAUI
 
 Components that add visual polish and subtle enhancements to UI surfaces. Use these controls for avatars, shadows, blurs and other decorative or status-related visuals that improve perceived quality.
+
+## Visual Enhancements
 
 <style>
 .form-card {

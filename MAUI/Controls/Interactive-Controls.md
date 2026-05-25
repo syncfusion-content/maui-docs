@@ -1,15 +1,17 @@
 ---
 layout: post
 title: Interactive Controls
-description: Interactive elements for direct manipulation.
+description: Controls that support direct user interaction through gestures and actions, enabling manipulation of UI elements such as drag, swipe, and touch-based inputs.
 platform: maui
 control: Interactive Controls
 documentation: ug
 ---
 
-# Interactive Controls
+# Syncfusion<sup>®</sup> Interactive Controls for .NET MAUI
 
 Controls for direct user interaction.
+
+## Interactive Controls
 
 <style>
 .form-card {

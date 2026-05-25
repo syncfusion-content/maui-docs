@@ -1,16 +1,17 @@
 ---
 layout: post
 title: Actions and Selection
-description: Controls for user actions like selecting options, toggling, and giving input.
+description: Controls that enable user interactions such as selecting options, toggling settings, and providing input for seamless and responsive UI experiences.
 platform: maui
 control: AI & Smart Experiences
 documentation: ug
 ---
 
-# Actions and Selection
+# Syncfusion<sup>®</sup> Actions and Selections for .NET MAUI
 This section includes controls for user actions and selections, making it easy to choose options, toggle settings, and provide input.
 
-## About Us	
+## Actions and Selection
+
 <style>
 .form-card {
    flex: 0 0 calc(33.33% - 14px);

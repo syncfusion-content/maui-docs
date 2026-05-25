@@ -1,15 +1,17 @@
 ---
 layout: post
 title: Charts & Data Insights
-description: Charting and visualization controls.
+description: Controls designed for data visualization, enabling the creation of interactive charts and graphical representations for better data analysis and insights.
 platform: maui
 control: Charts & Data Insights
 documentation: ug
 ---
 
-# Charts & Data Insights
+# Syncfusion<sup>®</sup> Charts and Data insights for .NET MAUI
 
 Comprehensive charting and visualization controls for turning data into actionable insights. This collection includes charts, gauges and map visualizations designed for performance and customization in analytics scenarios.
+
+## Charts and Data Insights
 
 <style>
 .form-card {
@@ -326,7 +328,7 @@ Comprehensive charting and visualization controls for turning data into actionab
 </div>
 <div class="form-content">
 <h3 class="form-title">Spark Charts
-<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Dashboard/StockOverviewPage.xaml"
+<a href=""
               target="_blank"
               class="source-icon"
               title="View Source">

@@ -1,15 +1,17 @@
 ---
 layout: post
 title: Scheduling & Dates
-description: Calendar and scheduling controls.
+description: Controls that provide calendar and scheduling functionalities, enabling users to view dates, manage events, and organize tasks efficiently within applications.
 platform: maui
 control: Scheduling & Dates
 documentation: ug
 ---
 
-# Scheduling & Dates
+# Syncfusion<sup>®</sup> Scheduling and Dates for .NET MAUI
 
 Calendar and scheduling controls for appointments, availability and timeline coordination. These components provide day/week/month views, resource scheduling and interaction patterns for booking scenarios.
+
+## Scheduling and Dates
 
 <style>
 .form-card {
