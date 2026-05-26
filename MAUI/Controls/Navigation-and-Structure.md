@@ -248,7 +248,8 @@ Navigation and structural layout components.
 </a>
 </h3>
 <div class="form-description">
-              Shows content or images in a swipeable or auto-rotating carousel view.
+              Shows content or images in an interactive or auto-rotating carousel view, enabling smooth transitions between items for an engaging user experience. It supports flexible layouts and is ideal for displaying banners, image galleries, or featured content in applications.
+
 </div>
 </div>
 </div>

@@ -136,7 +136,7 @@ Controls that surface system status, feedback and progress to users. Use these c
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title">Badgeview
+<h3 class="form-title">Badge View
 <a href="https://help.syncfusion.com/maui/badge-view/overview"
               target="_blank"
               class="source-icon"

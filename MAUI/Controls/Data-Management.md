@@ -9,7 +9,7 @@ documentation: ug
 
 # Syncfusion<sup>®</sup> Data Management Controls for .NET MAUI
 
-This category covers grids and data-handling controls for displaying, editing and synchronizing structured data. Use these controls when you need performant tabular views, grouping, sorting and data operations in MAUI apps.
+This category covers grids and data-handling controls for displaying, editing and synchronizing structured data. Use these controls when you need performance tabular views, grouping, sorting and data operations in MAUI apps.
 
 ## Data Management Controls
 

@@ -11,7 +11,7 @@ documentation: ug
 
 Components for chat-based and conversational workflows that support threaded messages, attachments and bot interactions. These controls make it easy to build messaging UIs with accessibility and performance in mind.
 
-## Converstaional Experiences
+## Conversational Experiences
 
 <style>
 .form-card {

@@ -9,7 +9,7 @@ documentation: ug
 
 # Syncfusion<sup>®</sup> Layouts and Containers for .NET MAUI
 
-Container and layout primitives used to compose responsive and adaptive UI screens. These controls let you structure content, present overlays and create polished, componentized layouts for production apps.
+Container and layout primitives used to compose responsive and adaptive UI screens. These controls let you structure content, present overlays, and create polished, modular layouts for production apps.
 
 ## Layouts and Containers
 
@@ -375,7 +375,7 @@ Container and layout primitives used to compose responsive and adaptive UI scree
 </a>
 </h3>
 <div class="form-description">
-               The Syncfusion .NET MAUI Cards control allows you to create dismissible cards or a stack of cards. You can organize a sequence of cards where only one card is visible at a time. You can easily navigate through the stack by swiping to reveal the next card in the sequence.
+               The Syncfusion .NET MAUI Cards control allows you to create removable cards or a stack of cards. You can organize a sequence of cards where only one card is visible at a time. You can easily navigate through the stack by swiping to reveal the next card in the sequence.
 </div>
 </div>
 </div>
