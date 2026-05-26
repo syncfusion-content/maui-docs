@@ -127,6 +127,7 @@ The Essential<sup>®</sup> UI Kit for .NET MAUI Details offers a collection of *
    }
 }
 </style>
+
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
 <div class="form-card">
