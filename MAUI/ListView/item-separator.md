@@ -80,7 +80,7 @@ listView.ShowItemSeparator = true;
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI ListView Separator Example](Images/item-separator/maui-listview-item-separator-example.jpg)
+![MAUI ListView Separator Example](Images/item-separator/maui-listview-item-separator-example.png)
 
 ## Separator Customization
 
@@ -88,7 +88,7 @@ After enabling separators, use the following properties to customize appearance 
 
 - `ItemSeparatorColor`: Sets the color of the separator line between items.
 - `ItemSeparatorThickness`: Sets the separator thickness.
-- `ItemSeparatorMargin`: Applies insets to the separator so it aligns with item content.
+- `ItemSeparatorMargin`: Specifies the insets applied to the separator to align it with the item content. For vertical orientation, the left and right margin values are considered. For horizontal orientation, only the top and bottom margin values are applied to the separator line.
 - `GroupItemSeparatorColor`: Sets the color of the group header separator.
 - `GroupItemSeparatorThickness`: Sets the thickness of the group header separator.
 - `GroupItemSeparatorMargin`: Applies inset for the group header separator.
@@ -98,13 +98,13 @@ After enabling separators, use the following properties to customize appearance 
 <syncfusion:SfListView x:Name="listView"
                        ItemSize="60"
                        ShowItemSeparator="True"
-                       ItemSeparatorColor="Red"
-                       ItemSeparatorThickness="1"
-                       ItemSeparatorMargin="10,0,10,0"
+                       ItemSeparatorColor="#D0BCFF"
+                       ItemSeparatorThickness="2"
+                       ItemSeparatorMargin="10"
                        ShowGroupItemSeparator="True"
-                       GroupItemSeparatorColor="Green"
+                       GroupItemSeparatorColor="#6750A4"
                        GroupItemSeparatorThickness="2"
-                       GroupItemSeparatorMargin="20,0,20,0"
+                       GroupItemSeparatorMargin="40"
                        ItemsSource="{Binding BookInfo}">
     <syncfusion:SfListView.ItemTemplate>
         <DataTemplate>
@@ -128,4 +128,4 @@ listView.GroupItemSeparatorThickness = 2;
 {% endhighlight %}
 {% endtabs %}
 
-![MAUI ListView Separator Example](Images/item-separator/maui-listview-separator-customization.jpg)
+![MAUI ListView Separator Example](Images/item-separator/maui-listview-separator-customization.png)
