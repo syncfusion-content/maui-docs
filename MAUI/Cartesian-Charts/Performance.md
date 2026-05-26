@@ -116,4 +116,3 @@ chart.ResumeNotification();
 
 {% endtabs %}
 
->**NOTE** For bulk operations involving 1000+ data points, using suspend/resume can reduce processing time or more compared to individual updates.
