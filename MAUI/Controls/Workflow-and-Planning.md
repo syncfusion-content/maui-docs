@@ -105,16 +105,6 @@ Components to model workflows, tasks and timelines for project and resource plan
    cursor: pointer;
    font-weight: bold;
 }
-@keyframes zoomIn {
-   from {
-       transform: scale(0.9);
-       opacity: 0;
-   }
-   to {
-       transform: scale(1);
-       opacity: 1;
-   }
-}
 @media(max-width:900px) {
    .form-card {
        flex: 0 0 calc(50% - 10px);
