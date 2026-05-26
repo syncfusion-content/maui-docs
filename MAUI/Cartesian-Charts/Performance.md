@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Performance in .NET MAUI Chart control | Syncfusion
-description: Learn about performance optimization and deferred real-time updates using suspend and resume notifications in Syncfusion .NET MAUI Chart (SfCartesianChart) control.
+description: Learn about performance optimization using suspend and resume notifications in Syncfusion .NET MAUI Chart control.
 platform: maui
 control: SfCartesianChart
 documentation: ug
@@ -42,7 +42,7 @@ Use `SuspendNotification` and `ResumeNotification` methods on a specific series 
     </chart:SfCartesianChart.YAxes>
 
     <chart:SfCartesianChart.Series>
-        <chart:LineSeries x:Name="series"
+        <chart:FastLineSeries x:Name="series"
                           ItemsSource="{Binding Data}"
                           XBindingPath="XValue"
                           YBindingPath="YValue"/>
@@ -94,10 +94,10 @@ Use `SuspendNotification` and `ResumeNotification` methods on the chart instance
     </chart:SfCartesianChart.YAxes>
 
     <chart:SfCartesianChart.Series>
-        <chart:LineSeries ItemsSource="{Binding Data1}"
+        <chart:FastLineSeries ItemsSource="{Binding Data1}"
                           XBindingPath="XValue"
                           YBindingPath="YValue"/>
-        <chart:ColumnSeries ItemsSource="{Binding Data2}"
+        <chart:FastLineSeries ItemsSource="{Binding Data2}"
                             XBindingPath="XValue"
                             YBindingPath="YValue"/>
     </chart:SfCartesianChart.Series>
