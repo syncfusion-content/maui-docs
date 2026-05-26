@@ -7,7 +7,7 @@ control: ListView
 documentation: ug
 ---
 
-# .NET MAUI ListView Overview (SfListView)
+# Overview of .NET MAUI ListView (SfListView)
 
 The Syncfusion [.NET MAUI ListView](https://www.syncfusion.com/maui-controls/maui-listview) renders set of data items using Maui views or custom templates. Data can easily be grouped, sorted, and filtered.
 
@@ -21,7 +21,7 @@ Designed for flexibility and performance, it enables you to display data using *
 - Switch between list and grid-style layouts  
 - Deliver smooth and responsive scrolling experiences  
 
-## Key Capabilities
+## Key features
 
 ### Flexible Data Presentation
 

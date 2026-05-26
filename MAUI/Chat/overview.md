@@ -7,7 +7,7 @@ control: Chat
 documentation: ug
 ---
 
-# .NET MAUI Chat Overview (SfChat)
+# Overview of .NET MAUI Chat (SfChat)
 
 The Syncfusion .NET MAUI Chat control offers a contemporary conversational chatbot experience, allowing for flexible customization of the layout to display conversations between two or more users.
 
@@ -19,7 +19,7 @@ The Syncfusion .NET MAUI Chat control offers a contemporary conversational chatb
 - Enhance user experience with typing indicators and suggestions  
 - Customize chat layout and appearance  
 
-## Key Capabilities
+## Key features
 
 ### Message Types
 

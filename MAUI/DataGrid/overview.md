@@ -8,7 +8,7 @@ documentation: ug
 keywords : maui datagrid, maui grid, grid maui, maui gridview, grid in maui, .net maui datagrid, .net maui grid, .net grid maui
 ---
 
-# .NET MAUI DataGrid Overview (SfDataGrid)
+# .NET MAUI DataGrid (SfDataGrid) Overview
 
 The .NET MAUI DataGrid control is used to display and manipulate data in a tabular view. It was built from the ground up to achieve the best possible performance, even when loading large amounts of data.
 
@@ -22,7 +22,7 @@ The .NET MAUI DataGrid control is used to display and manipulate data in a tabul
 - Provide interactive user experiences (drag, swipe, selection)  
 - Customize layouts and visuals based on application needs  
 
-## Key Capabilities
+## Key features
 
 ### Data Binding
 
@@ -172,6 +172,3 @@ Explore further:
 - [Styling Guide](https://help.syncfusion.com/maui/datagrid/styling)  
 - [MAUI DataGrid Feature Tour](https://www.syncfusion.com/maui-controls/maui-datagrid)  
 - [MAUI DataGrid Examples](https://github.com/syncfusion/maui-demos/tree/master/MAUI/DataGrid)  
-
-
-N> You can refer to our [MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [MAUI DataGrid example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/DataGrid) to learn about various features and how to easily configure them, with built-in support for creating stunning visual effects.

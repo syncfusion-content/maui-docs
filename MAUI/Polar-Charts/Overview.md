@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About .NET MAUI Polar Chart Control | Syncfusion
+title: About .NET MAUI Chart Control | Syncfusion
 description: Learn here all about the introduction of Syncfusion® .NET MAUI Chart (SfPolarChart) control with key features and more.
 platform: maui
 control: SfPolarChart
 documentation: ug
 ---
 
-# .NET MAUI Polar Chart Overview
+# .NET MAUI Chart Overview
 
 The Syncfusion® .NET MAUI Polar Chart allows for the creation of visually stunning polar series for data visualization in high-quality applications. This type of chart, also known as a star chart, spider chart, web chart, spider web chart, cobweb chart, or radar chart, effectively represents data in terms of values and angles.
 
