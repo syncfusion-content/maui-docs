@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# Download and Installation Guide
+# Download and Installation of Code Studio Integration
 
 This section provides step-by-step instructions to download, install, and configure the Syncfusion® Code Studio integration for .NET MAUI development.
 
