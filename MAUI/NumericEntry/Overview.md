@@ -9,9 +9,11 @@ documentation: ug
 
 # .NET MAUI NumericEntry Overview
 
-The [.NET MAUI NumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control is designed to provide a user-friendly and advanced input experience for numeric values. It supports a wide range of numeric formats, including currency, percentages, decimals, and more. With its key features, it enables enhanced user experience and facilitates input validation.
+- Create intuitive and accurate **numeric input experiences** in your **.NET MAUI applications** using the **Syncfusion NumericEntry control (SfNumericEntry)**.
 
-## What You Can Do
+- It provides a flexible way to input, format, and validate numeric values, making it ideal for applications that require **precise numerical data entry**.
+
+## Control Highlights
 
 - Capture numeric input with precision  
 - Display values in custom formats (currency, percentage, decimal)  
@@ -25,107 +27,35 @@ The [.NET MAUI NumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 ## Key features
 
-### Input Validation
+- **Input Validation** : ensures accurate numeric entry by validating values on focus loss or Enter key
+- **Increment & Decrement Controls** : built‑in spin buttons for quick adjustments within ranges
+- **Flexible Number Formatting** : display values as currency, percentage, decimal, or custom formats
+- **Culture & Regional Support** : adapts numeric representation to locale settings and symbols
+- **Placeholder Support** : guides users with placeholder text to indicate expected input 
 
-Ensure accurate data entry:
+## Globalization
 
-- Validates input when focus is lost or when the Enter key is pressed  
-- Helps prevent invalid numeric values  
-- Improves data consistency  
+- Localization for numeric formats, separators, and currency symbols
+- Consistent behavior across platforms with culture‑specific formatting
 
-### Increment & Decrement Controls
+## Real‑World Scenarios
 
-Enable quick value adjustments:
+- Financial apps requiring precise currency input and formatting
+- E‑commerce checkout for quantity and price entry with validation
+- Scientific calculators needing decimal precision and quick adjustments
+- Survey or data entry forms where numeric ranges and placeholders improve usability
 
-- Increase or decrease values using built-in spin buttons  
-- Simplifies user input for numeric ranges  
-- Enhances usability for repetitive adjustments  
+## Related Controls
 
-### Flexible Number Formatting
+- TextInputLayout for styled text and numeric inputs with floating labels
+- ComboBox for selection and entry scenarios
+- DataForm for structured input forms with validation
+- DataGrid for displaying and editing numeric values in tabular format 
 
-Display numbers in various formats:
-
-- Supports currency, percentage, decimal, and custom formats  
-- Controls how values are presented to users  
-- Improves readability and clarity  
-
-### Culture & Regional Support
-
-Adapt numeric representation based on locale:
-
-- Supports different cultural formats (e.g., decimal separators, currency symbols)  
-- Ensures consistency across global applications  
-- Automatically aligns with regional settings  
-
-### Placeholder Support
-
-Guide user input effectively:
-
-- Displays placeholder text when no value is entered  
-- Improves usability and form clarity  
-- Indicates expected input format  
-
-## Supported Platforms
-
-The SfNumericEntry control is built for cross-platform .NET MAUI applications and supports:
-
-- Android  
-- iOS  
-- macOS  
-- Windows  
-
-## Performance Highlights
-
-Designed for smooth and responsive input handling:
-
-- Lightweight and efficient rendering  
-- Fast input processing  
-- Consistent performance across devices  
-
-## Where It Fits (Use Cases)
-
-Use the NumericEntry control in a variety of applications:
-
-- Financial and accounting applications  
-- Data entry forms  
-- E-commerce quantity and pricing inputs  
-- Configuration and settings panels  
-- Mobile applications requiring numeric input  
-
-## Built for Real Applications
-
-The SfNumericEntry is suitable for production-grade applications:
-
-- Works seamlessly with MVVM architecture  
-- Handles validation and formatting scenarios  
-- Adapts to global localization requirements  
-- Consistent behavior across platforms  
-
-## Why Developers Use It
-
-- Accurate and validated numeric input  
-- Flexible formatting options  
-- Simple and intuitive user experience  
-- Clean and extensible API design  
-- Reliable cross-platform behavior  
-
-## Accessibility and Globalization
-
-Support inclusive and global-ready applications:
-
-- Adapts to cultural and regional numeric formats  
-- Ensures consistent behavior across platforms  
-- Supports accessible input patterns  
-
-## Summary
-
-The **Syncfusion .NET MAUI NumericEntry control (SfNumericEntry)** provides a flexible and user-friendly solution for handling **numeric input and formatting**. With built-in validation, customizable formatting, and cultural support, it enables developers to create **accurate, consistent, and globally adaptable input experiences**.
-
-## Next Steps
+## Next Step
 
 Explore further:
 
 - [Getting Started](https://help.syncfusion.com/maui/numericentry/getting-started)  
 - [Formatting Guide](https://help.syncfusion.com/maui/numericentry/formatting)
 - [UpDown Button Options](https://help.syncfusion.com/maui/numericentry/updown-button) 
-- [API Reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html)

@@ -14,7 +14,7 @@ The Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler (SfScheduler) has nine differ
 
 ![overview-in-maui-scheduler](images/overview/overview-in-maui-scheduler.png)
 
-## What You Can Do
+## Control Highlights
 
 - Create and manage appointments efficiently  
 - View schedules in multiple formats (calendar, timeline, agenda)  
@@ -24,172 +24,78 @@ The Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler (SfScheduler) has nine differ
 
 ## Key features
 
-### Built-in Views
-
-- Supports multiple views: Day, Week, WorkWeek, Month, Agenda, and Timeline variants
-- Enables visualization of schedules across different time ranges
-- Helps users switch between detailed and overview perspectives
+- **Built‑in Views** : switch between Day, Week, WorkWeek, Month, Agenda, and Timeline views for flexible scheduling
 
  ![built-in-views-in-maui-scheduler](images/overview/built-in-views-in-maui-scheduler.png)
 
-### Events (Appointments)
-
-- Represents scheduled activities with start time, end time, subject, and notes
-- Supports creation of custom appointment collections
-- Provides flexibility to manage event-based data
+- **Appointments** : create and manage events with start/end time, subject, and notes
 
  ![appointment-events-in-maui-scheduler](images/overview/appointment-events-in-maui-scheduler.png)
 
-### Recurrence Events
-
-- Supports repeating events (daily, weekly, monthly, yearly)
-- Allows modification or skipping specific occurrences
-- Handles recurring schedules efficiently
+- **Recurrence Events** : schedule repeating events daily, weekly, monthly, or yearly with exceptions
 
  ![recurring-events-with-exceptions-dates-in-maui-scheduler](images/overview/recurring-events-with-exceptions-dates-in-maui-scheduler.png)
 
-### Appointment Mapping
+- **Appointment Mapping** : bind custom data objects to appointments for seamless integration
 
-- Binds custom data objects to scheduler appointments
-- Maps fields like start time, end time, subject, and recurrence
-- Enables integration with various data sources
+- **Time Zone Support** : schedule across regions with automatic daylight saving adjustments
 
-### Time Zone Support
-
-- Allows creating appointments across different time zones
-- Automatically adjusts for daylight saving time (DST)
-- Ensures accurate scheduling for global users
-
-### Agenda View
-
-- Displays appointments in a list format grouped by week
-- Supports customizable date/time formatting
-- Improves readability for linear schedule viewing
+- **Agenda View** : view appointments in a simple list format grouped by week
 
  ![agenda-view-events-in-maui-scheduler](images/overview/agenda-view-events-in-maui-scheduler.png)
 
-### Timeline Month View
-
-- Displays appointments horizontally across days
-- Each column represents a day in the month
-- Useful for long-term planning visualization
+- **Timeline Month View** : display appointments horizontally across days for long‑term planning
 
  ![timeline-month-view-in-maui-scheduler](images/overview/timeline-month-view-in-maui-scheduler.png)
 
-### First Day of the Week
-
-- Customizes start day of the week (e.g., Monday/Sunday)
-- Adapts to regional or business preferences
-- Improves usability across locales
+- **First Day of the Week** : customize the start day (e.g., Monday or Sunday) to match regional preferences
 
  ![first-day-of-week-in-maui-scheduler](images/overview/first-day-of-week-in-maui-scheduler.png)
 
-### Flexible Working Days
+- **Flexible Working Days** : define working and non‑working days for realistic business schedules
 
-- Define working and non-working days
-- Hides non-working days in workweek views
-- Supports real-world business schedules
+- **Date Range Limits** : restrict navigation to minimum and maximum dates for controlled scenarios
 
-### Minimum & Maximum Date Range
-
-- Restricts navigation to a specific date range
-- Prevents access beyond defined boundaries
-- Useful for controlled scheduling scenarios
-
-### Special Time Regions
-
-- Blocks user interaction for specific time intervals
-- Highlights unavailable or restricted slots
-- Useful for holidays, breaks, or reserved periods
+- **Special Time Regions** : block or highlight unavailable slots such as holidays or breaks
 
  ![recurring-special-time-region-in-maui-scheduler](images/overview/recurring-special-time-region-in-maui-scheduler.png)
 
-### Blackout Dates
-
-- Disables selection of specific dates
-- Prevents scheduling on restricted days (e.g., holidays)
-- Enhances control over user interaction
+- **Blackout Dates** : disable specific dates to prevent scheduling on restricted days
 
  ![selectable-day-predicate-or-blackout-dates-in-maui-scheduler](images/overview/selectable-day-predicate-or-blackout-dates-in-maui-scheduler.png)
 
-### Hide Leading & Trailing Dates
-
-- Removes previous/next month dates from view
-- Provides a cleaner and focused UI
-- Improves visual clarity in calendar layouts
+- **Hide Leading & Trailing Dates** : remove extra month dates for a cleaner calendar view
 
  ![hide-leading-and-trailing-dates-in-maui-scheduler](images/overview/hide-leading-and-trailing-dates-in-maui-scheduler.png)
 
-### Custom Start & End Hours
+- **Custom Start & End Hours** : show only relevant time ranges by hiding unnecessary hours
 
-- Displays only selected time ranges in timeslot views
-- Hides unnecessary hours
-- Focuses on relevant working periods
+ ![flexible-working-hours-in-maui-scheduler](images/overview/flexible-working-hours-in-maui-scheduler.png) 
 
- ![flexible-working-hours-in-maui-scheduler](images/overview/flexible-working-hours-in-maui-scheduler.png)
 
-## Supported Platforms
+## Globalization
 
-The SfScheduler is built for cross-platform .NET MAUI applications and supports:
+- Localization for text, date formats, and right‑to‑left (RTL) layouts
+- Time zone handling and daylight saving adjustments for global scheduling
 
-- Android  
-- iOS  
-- macOS  
-- Windows  
+## Real‑World Scenarios
 
-## Performance Highlights
+- Corporate calendars for managing meetings and recurring events
+- Healthcare scheduling for appointments and time‑bound slots
+- Education timetables with weekly and monthly views
+- Project planning using timeline and agenda views for task tracking
 
-Designed for responsive scheduling experiences:
+## Related Controls
 
-- Efficient rendering across multiple views  
-- Smooth navigation between dates and views  
-- Optimized handling of recurring and dynamic data  
+- DataGrid for structured tabular data visualization
+- ListView for flexible collection display with templates
+- ComboBox for selection and input scenarios
+- Charts for visualizing schedules and analytics
 
-## Where It Fits (Use Cases)
-
-Use the Scheduler in real-world applications:
-
-- Calendar and event management apps  
-- Appointment scheduling systems (health care, services)  
-- Resource and workforce planning tools  
-- Business scheduling dashboards  
-- Personal productivity and reminder apps  
-
-## Built for Real Applications
-
-The SfScheduler is designed for production-ready scenarios:
-
-- Works seamlessly with MVVM architecture  
-- Handles complex scheduling workflows  
-- Supports scalable and dynamic data  
-- Consistent cross-platform behavior  
-
-## Why Developers Use It
-
-- Rich set of built-in scheduling views  
-- Flexible appointment and recurrence handling  
-- Time zone aware scheduling  
-- Customizable scheduling rules  
-- Clean and extensible API design  
-
-## Accessibility and Globalization
-
-Ensure inclusive and globally adaptable scheduling experiences:
-
-- Supports localization for different regions and date formats  
-- Handles time zones and daylight saving scenarios  
-- Enables consistent scheduling across global users  
-- Supports adaptable UI behavior across locales  
-
-## Summary
-
-The **Syncfusion .NET MAUI Scheduler control (SfScheduler)** provides a complete solution for building **feature-rich scheduling and calendar applications**. With multiple view modes, flexible appointment handling, recurrence support, and time zone awareness, it enables developers to create **efficient and scalable scheduling experiences** across modern cross-platform applications.
-
-## Next Steps
+## Next Step
 
 Explore further:
 
 - [Getting Started](https://help.syncfusion.com/maui/scheduler/getting-started)
 - [Appointments Guide](https://help.syncfusion.com/maui/scheduler/appointments)  
-- [Liquid Glass Effect](https://help.syncfusion.com/maui/scheduler/liquid-glass-effect)  
-- [API Reference](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html)
+- [Reminders Guide](https://help.syncfusion.com/maui/scheduler/reminders)

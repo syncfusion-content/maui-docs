@@ -14,7 +14,7 @@ The .NET MAUI DataGrid control is used to display and manipulate data in a tabul
 
 <img alt="MAUI DataGrid" src="Images\overview\maui-datagrid.png" width="567"/>
 
-## What You Can Do
+## Control Highlights
 
 - Display and manage large volumes of data efficiently  
 - Enable sorting, filtering, and grouping of data  
@@ -24,151 +24,38 @@ The .NET MAUI DataGrid control is used to display and manipulate data in a tabul
 
 ## Key features
 
-### Data Binding
+- **Flexible Data Binding** to collections, tables, and MVVM sources
+- **Rich Column Types** including text, numeric, date, checkbox, image, combobox, picker, and template columns
+- **Data Operations** with sorting, filtering, grouping, summaries, and search
+- **Editing & Interaction** through in‑place editing, drag‑drop, swipe actions, and selection
+- **Performance & Virtualization** with paging, incremental loading, and smooth rendering for large datasets
+- **Advanced Views** such as master‑details, record templates, unbound rows, and unbound columns
+- **Styling & Customization** with conditional formatting, stacked headers, freeze panes, and theme support
+- **Export & Data Handling** including Excel/PDF export, clipboard operations, serialization, and deserialization  
 
-Connect your data with flexible binding options:
+## Globalization
 
-- Bind to collections and structured data sources (including `DataTable`)  
-- Supports dynamic data updates  
-- Works seamlessly with MVVM architecture  
+- Screen reader support and keyboard navigation for accessibility
+- Right‑to‑left (RTL) layout and localization for global applications
 
-### Rich Column Types
+## Real‑World Scenarios
 
-Display different types of data using specialized columns:
+- Business dashboards requiring clear tabular insights
+- Financial systems with grouping, summaries, and export options
+- Inventory management for handling large datasets efficiently
+- Analytics tools with dynamic filtering and real‑time updates
 
-- Text, numeric, and date columns  
-- Checkbox and image columns  
-- ComboBox and picker columns  
-- Template column for custom UI rendering  
+## Related Controls
 
-### Data Operations
+- ListView for flexible collection display
+- Scheduler for calendar and appointment management
+- Charts for advanced data visualization
+- ComboBox for selection and input scenarios
 
-Enable powerful data handling features:
-
-- Sorting (single or multi-column)  
-- Filtering (programmatic and UI-based)  
-- Grouping for hierarchical organization  
-- Summaries for aggregated insights  
-- Search with highlighting and navigation  
-
-### Editing & Interaction
-
-Enhance user productivity with built-in interactions:
-
-- Edit data directly within the grid  
-- Drag and drop rows and columns  
-- Swipe interactions for quick actions  
-- Row selection with keyboard navigation (Windows)  
-
-### Data Virtualization & Paging
-
-Handle large datasets efficiently:
-
-- Paging support for segmented data loading  
-- Incremental data loading  
-- Data virtualization for improved performance  
-
-### Layout & Presentation
-
-Control how data is displayed:
-
-- Column resizing and auto-sizing  
-- Auto row height based on content  
-- Stacked headers for grouped columns  
-- Freeze panes for fixed rows and columns  
-
-### Advanced Data Views
-
-Support complex data scenarios:
-
-- Master-details view for hierarchical data  
-- Record template view for custom row layouts  
-- Unbound rows and columns for additional context  
-
-### Styling & Customization
-
-Customize appearance to match your application:
-
-- Cell and header styling  
-- Conditional formatting  
-- Theme support (light and dark modes)  
-
-### Data Refresh & Loading
-
-Improve user experience with dynamic loading:
-
-- Pull-to-refresh for quick updates  
-- Load more view for incremental loading  
-
-### Export & Data Handling
-
-Extend data usage beyond the grid:
-
-- Export data to **Excel and PDF**  
-- Clipboard operations (cut, copy, paste)  
-- Serialization and deserialization of grid state  
-
-### Accessibility & Globalization
-
-Ensure inclusive and localization:
-
-- Screen reader support for accessibility  
-- Right-to-left (RTL) layout support  
-
-## Supported Platforms
-
-The SfDataGrid is built for cross-platform .NET MAUI applications and supports:
-
-- Android  
-- iOS  
-- macOS  
-- Windows  
-
-## Performance Highlights
-
-Designed for performance-critical applications:
-
-- Optimized for large data volumes  
-- Efficient rendering with virtualization  
-- Smooth scrolling and interaction handling  
-- Responsive UI across devices  
-
-## Where It Fits (Use Cases)
-
-Use the DataGrid in a wide range of applications:
-
-- Business dashboards and reporting tools  
-- Financial and accounting systems  
-- Inventory and order management systems  
-- Analytics and data monitoring apps  
-- Enterprise data management applications  
-
-## Built for Real Applications
-
-The SfDataGrid is designed for production-ready scenarios:
-
-- Works seamlessly with MVVM architecture  
-- Supports scalable and complex data workflows  
-- Handles hierarchical and relational data  
-- Backed by continuous updates and support  
-
-## Why Developers Use It
-
-- Comprehensive feature set in a single control  
-- Clean and flexible API design  
-- High performance with large datasets  
-- Extensive customization options  
-- Reliable cross-platform behavior   
-
-## Summary
-
-The **Syncfusion .NET MAUI DataGrid control (SfDataGrid)** provides a complete solution for building **interactive, high-performance, and feature-rich data grids** in cross-platform applications. With advanced data operations, rich customization, scalable performance, and enterprise-ready capabilities, it enables developers to deliver **powerful data-driven user experiences efficiently**.
-
-## Next Steps
+## Next Step
 
 Explore further:
 
 - [Getting Started](https://help.syncfusion.com/maui/datagrid/getting-started)
-- [Styling Guide](https://help.syncfusion.com/maui/datagrid/styling)  
-- [MAUI DataGrid Feature Tour](https://www.syncfusion.com/maui-controls/maui-datagrid)  
-- [MAUI DataGrid Examples](https://github.com/syncfusion/maui-demos/tree/master/MAUI/DataGrid)  
+- [Styling Guide](https://help.syncfusion.com/maui/datagrid/styling)   
+- [Selection Guide](https://help.syncfusion.com/maui/datagrid/selection)
