@@ -143,7 +143,7 @@ This section groups intelligent and AI-augmented controls designed to simplify c
               title="View Source">
 <svg xmlns="http://www.w3.org/2000/svg"
      width="18" height="18" viewBox="0 0 24 24"
-     fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+     fill="none" stroke="currentColor" stroke-width="1.8">
   <path d="M21 6H8"></path>
   <path d="M21 12H3"></path>
   <path d="M21 18H8"></path>
@@ -174,7 +174,7 @@ This section groups intelligent and AI-augmented controls designed to simplify c
               title="View Source">
 <svg xmlns="http://www.w3.org/2000/svg"
      width="18" height="18" viewBox="0 0 24 24"
-     fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+     fill="none" stroke="currentColor" stroke-width="1.8">
   <path d="M21 6H8"></path>
   <path d="M21 12H3"></path>
   <path d="M21 18H8"></path>
@@ -205,7 +205,7 @@ This section groups intelligent and AI-augmented controls designed to simplify c
               title="View Source">
 <svg xmlns="http://www.w3.org/2000/svg"
      width="18" height="18" viewBox="0 0 24 24"
-     fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+     fill="none" stroke="currentColor" stroke-width="1.8">
   <path d="M21 6H8"></path>
   <path d="M21 12H3"></path>
   <path d="M21 18H8"></path>
@@ -216,7 +216,7 @@ This section groups intelligent and AI-augmented controls designed to simplify c
 </a>
 </h3>
 <div class="form-description">
-                The AI-powered .NET MAUI Text Editor is a multiline editor enhanced with AI-assisted sentence autocompletion. It can display suggestions inline over the text or in an unintrusive pop-up, reducing typing effort and improving productivity.
+                The AI-powered .NET MAUI Text Editor is a multiline editor enhanced with AI-assisted sentence autocompletion. It can display suggestions inline over the text or in a pop-up, reducing typing effort and improving productivity.
 </div>
 </div>
 </div>
