@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Item Separator Customization in .NET MAUI ListView control | Syncfusion
+title: Item Separator in .NET MAUI ListView control | Syncfusion
 description: Learn here all about Item Separator support in Syncfusion .NET MAUI ListView (SfListView) control and more.
 platform: MAUI
 control: SfListView
