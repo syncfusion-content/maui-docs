@@ -112,7 +112,7 @@ The **Syncfusion .NET MAUI AI AssistView control (SfAIAssistView)** provides a f
 
 ## Next Steps
 
-Explore Further:
+Explore further:
 
 - [Getting Started](https://help.syncfusion.com/maui/aiassistview/getting-started)
 - [Auto Complete Suggestions Guide](https://help.syncfusion.com/maui/aiassistview/autocompletesuggestions)

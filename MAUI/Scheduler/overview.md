@@ -150,8 +150,8 @@ Designed for responsive scheduling experiences:
 Use the Scheduler in real-world applications:
 
 - Calendar and event management apps  
-- Appointment scheduling systems (healthcare, services)  
--  Resource and workforce planning tools  
+- Appointment scheduling systems (health care, services)  
+- Resource and workforce planning tools  
 - Business scheduling dashboards  
 - Personal productivity and reminder apps  
 

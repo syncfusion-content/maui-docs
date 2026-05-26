@@ -123,7 +123,7 @@ The **Syncfusion .NET MAUI NumericEntry control (SfNumericEntry)** provides a fl
 
 ## Next Steps
 
-Explore Futher:
+Explore further:
 
 - [Getting Started](https://help.syncfusion.com/maui/numericentry/getting-started)  
 - [Formatting Guide](https://help.syncfusion.com/maui/numericentry/formatting)

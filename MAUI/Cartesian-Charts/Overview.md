@@ -117,7 +117,7 @@ The SfCartesianChart is designed for production-grade apps:
 - Highly flexible customization  
 - Reliable cross-platform performance  
 
-## Accessibility and Globlalization
+## Accessibility and Globalization
 
 - **Accessibility** - SfCartesianChart ensures usability for all users with features like screen reader support, keyboard navigation, and high‑contrast themes for better readability.
 

@@ -116,7 +116,7 @@ Extend data usage beyond the grid:
 
 ### Accessibility & Globalization
 
-Ensure inclusivity and localization:
+Ensure inclusive and localization:
 
 - Screen reader support for accessibility  
 - Right-to-left (RTL) layout support  
