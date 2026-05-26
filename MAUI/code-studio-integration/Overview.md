@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# Overview
+# Overview of .NET MAUI Code Studio Integration
 
 The Syncfusion® .NET MAUI integration for Code Studio simplifies the use of Syncfusion® .NET MAUI components by automatically configuring the required Syncfusion® .NET MAUI NuGet packages. This integration streamlines development by providing developers with easy access to the powerful features and functionalities of Syncfusion® components, saving time and effort.
 
