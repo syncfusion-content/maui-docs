@@ -55,9 +55,6 @@ Use `SuspendNotification` and `ResumeNotification` methods on a specific series 
 
 series.SuspendNotification();
 
-try
-{
-    // Perform bulk data operations
     for (int i = 0; i < 1000; i++)
     {
         viewModel.Data.Add(new DataModel 
@@ -66,11 +63,8 @@ try
             YValue = GetRandomValue() 
         });
     }
-}
-finally
-{
-    series.ResumeNotification();
-}
+
+series.ResumeNotification();
 
 {% endhighlight %}
 
@@ -109,21 +103,17 @@ Use `SuspendNotification` and `ResumeNotification` methods on the chart instance
 
 chart.SuspendNotification();
 
-try
-{
+
     for (int i = 0; i < 1000; i++)
     {
         viewModel.Data1.Add(new DataModel { XValue = i, YValue = GetValue1(i) });
         viewModel.Data2.Add(new DataModel { XValue = i, YValue = GetValue2(i) });
     }
-}
-finally
-{
-    chart.ResumeNotification();
-}
+
+chart.ResumeNotification();
 
 {% endhighlight %}
 
 {% endtabs %}
 
-N> For bulk operations involving 1000+ data points, using suspend/resume can reduce processing time or more compared to individual updates.
+>**NOTE** For bulk operations involving 1000+ data points, using suspend/resume can reduce processing time or more compared to individual updates.
