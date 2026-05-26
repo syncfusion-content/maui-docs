@@ -183,16 +183,7 @@ The following table summarizes the globalization support available across all th
 <td align="center"><img src="Images/no-support.png" alt="no-support" width="16" /></td>
 <td align="center"><img src="Images/no-support.png" alt="no-support" width="16" /></td>
 <td align="center"><img src="Images/no-support.png" alt="no-support" width="16" /></td>
-</tr> 
-
-<tr>
-<td>Circular Gauge</td>
-<td align="center"><img src="Images/no-support.png" alt="no-support" width="16" /></td>
-<td align="center"><img src="Images/full-support.png" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/no-support.png" alt="no-support" width="16" /></td>
-<td align="center"><img src="Images/no-support.png" alt="no-support" width="16" /></td>
-<td align="center"><img src="Images/partial-support.png" alt="partial-support" width="16" /></td>
-</tr> 
+</tr>
 
 <tr>
 <td><a href="/maui/circularprogressbar/overview">Circular Progress Bar</a></td>
@@ -426,16 +417,7 @@ The following table summarizes the globalization support available across all th
 <td align="center"><img src="Images/not-applicable.png" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="Images/no-support.png" alt="no-support" width="16" /></td>
 <td align="center"><img src="Images/no-support.png" alt="no-support" width="16" /></td>
-</tr> 
-
-<tr>
-<td>Progress Bar</td>
-<td align="center"><img src="Images/not-applicable.png" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="Images/not-applicable.png" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="Images/not-applicable.png" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="Images/not-applicable.png" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="Images/not-applicable.png" alt="not-applicable" width="16" /></td>
-</tr> 
+</tr>
 
 <tr>
 <td><a href="/maui/pull-to-refresh/overview">Pull To Refresh</a></td>
@@ -458,10 +440,10 @@ The following table summarizes the globalization support available across all th
 <tr>
 <td><a href="/maui/radial-gauge/overview">Radial Gauge</a></td>
 <td align="center"><img src="Images/no-support.png" alt="no-support" width="16" /></td>
-<td align="center"><img src="Images/not-applicable.png" alt="not-applicable" width="16" /></td>
-<td align="center"><img src="Images/not-applicable.png" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="Images/full-support.png" alt="full-support" width="16" /></td>
 <td align="center"><img src="Images/no-support.png" alt="no-support" width="16" /></td>
-<td align="center"><img src="Images/not-applicable.png" alt="not-applicable" width="16" /></td>
+<td align="center"><img src="Images/no-support.png" alt="no-support" width="16" /></td>
+<td align="center"><img src="Images/partial-support.png" alt="partial-support" width="16" /></td>
 </tr> 
 
 <tr>
@@ -597,15 +579,6 @@ The following table summarizes the globalization support available across all th
 <td align="center"><img src="Images/not-applicable.png" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="Images/not-applicable.png" alt="not-applicable" width="16" /></td>
 <td align="center"><img src="Images/not-applicable.png" alt="not-applicable" width="16" /></td>
-</tr> 
-
-<tr>
-<td>Sparkline Charts</td>
-<td align="center"><img src="Images/no-support.png" alt="no-support" width="16" /></td>
-<td align="center"><img src="Images/no-support.png" alt="no-support" width="16" /></td>
-<td align="center"><img src="Images/full-support.png" alt="full-support" width="16" /></td>
-<td align="center"><img src="Images/no-support.png" alt="no-support" width="16" /></td>
-<td align="center"><img src="Images/no-support.png" alt="no-support" width="16" /></td>
 </tr> 
 
 <tr>
