@@ -12,7 +12,6 @@ documentation: ug
 Navigation and structural layout components.
 
 ## Navigation and Structure
-
 <style>
 .form-card {
    flex: 0 0 calc(33.33% - 14px);
@@ -42,7 +41,6 @@ Navigation and structural layout components.
    padding: 16px;
 }
 .form-title {
-   margin-top: 0px;
    margin: 0 0 10px;
    font-size: 20px;
    font-weight: 600;
@@ -127,7 +125,6 @@ Navigation and structural layout components.
    }
 }
 </style>
-
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">

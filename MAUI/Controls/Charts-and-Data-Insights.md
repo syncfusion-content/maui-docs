@@ -42,7 +42,6 @@ Comprehensive charting and visualization controls for turning data into actionab
    padding: 16px;
 }
 .form-title {
-   margin-top: 0px;
    margin: 0 0 10px;
    font-size: 20px;
    font-weight: 600;
@@ -127,7 +126,6 @@ Comprehensive charting and visualization controls for turning data into actionab
    }
 }
 </style>
-
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
@@ -160,7 +158,6 @@ Comprehensive charting and visualization controls for turning data into actionab
 </div>
 </div>
 </div>
-<!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
 <img src="Images/DashboardImages/healthcare.webp"
@@ -223,7 +220,6 @@ Comprehensive charting and visualization controls for turning data into actionab
 </div>
 </div>
 </div>
-<!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
 <img src="Images/DashboardImages/stockoverview.webp"
@@ -255,7 +251,6 @@ Comprehensive charting and visualization controls for turning data into actionab
 </div>
 </div>
 </div>
-<!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
 <img src="Images/DashboardImages/healthcare.webp"
@@ -349,7 +344,6 @@ Comprehensive charting and visualization controls for turning data into actionab
 </div>
 </div>
 </div>
-<!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
 <img src="Images/DashboardImages/healthcare.webp"
@@ -443,7 +437,6 @@ Comprehensive charting and visualization controls for turning data into actionab
 </div>
 </div>
 </div>
-<!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
 <img src="Images/DashboardImages/healthcare.webp"
@@ -537,7 +530,6 @@ Comprehensive charting and visualization controls for turning data into actionab
 </div>
 </div>
 </div>
-
 </div>
 
 [Back to Controls Catalog](ControlsCatalog.md)

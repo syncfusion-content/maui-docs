@@ -42,7 +42,6 @@ Controls that surface system status, feedback and progress to users. Use these c
    padding: 16px;
 }
 .form-title {
-   margin-top: 0px;
    margin: 0 0 10px;
    font-size: 20px;
    font-weight: 600;
@@ -127,7 +126,6 @@ Controls that surface system status, feedback and progress to users. Use these c
    }
 }
 </style>
-
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">

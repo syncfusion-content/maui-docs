@@ -42,7 +42,6 @@ This section groups intelligent and AI-augmented controls designed to simplify c
    padding: 16px;
 }
 .form-title {
-   margin-top: 0px;
    margin: 0 0 10px;
    font-size: 20px;
    font-weight: 600;
@@ -127,9 +126,7 @@ This section groups intelligent and AI-augmented controls designed to simplify c
    }
 }
 </style>
-
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
-<!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
 <img src="Images/DashboardImages/stockoverview.webp"
@@ -161,7 +158,6 @@ This section groups intelligent and AI-augmented controls designed to simplify c
 </div>
 </div>
 </div>
-<!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
 <img src="Images/DashboardImages/healthcare.webp"
@@ -193,7 +189,6 @@ This section groups intelligent and AI-augmented controls designed to simplify c
 </div>
 </div>
 </div>
-<!-- Card 3 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
 <img src="Images/DashboardImages/dailycalories.webp"
@@ -225,7 +220,6 @@ This section groups intelligent and AI-augmented controls designed to simplify c
 </div>
 </div>
 </div>
-
 </div>
 <!-- Popup Modal -->
 <div id="imageModal">

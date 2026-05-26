@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Command & Actions Controls | Syncfusion®
-description: Controls that provide toolbars and command surfaces for organizing actions, enabling easy access to commands and improving overall user interaction and workflow efficiency.
+description: Controls that provide toolbars and command surfaces for organizing actions, improving command access and enhancing workflow efficiency.
 platform: maui
 control: Commands and Action Controls
 documentation: ug
@@ -9,100 +9,124 @@ documentation: ug
 
 # Syncfusion<sup>®</sup> Commands and Actions Controls for .NET MAUI
 
-Toolbars and command surfaces for invoking app-level and contextual actions. Use these controls to expose primary commands, organize actions and provide keyboard or touch affordances.
+Toolbars and command surfaces for invoking app-level and contextual actions. Use these controls to expose primary commands, organize actions, and provide keyboard or touch interactions.
 
 ## Commands and Actions Controls
 
 <style>
-.container {
-   display: grid;
-   grid-template-columns: repeat(3, minmax(0, 1fr));
-   gap: 16px;
-   align-items: stretch;
-   grid-auto-rows: 1fr;
-}
-.source-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: #f3f4f6;
-  color: #0078D4;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-.source-icon:hover {
-  background: #0078D4;
-  color: white;
-}
 .form-card {
+   flex: 0 0 calc(33.33% - 14px);
    border: 1px solid #ddd;
-   border-radius: 14px;
+   border-radius: 12px;
    overflow: hidden;
-   background: #ffffff;
+   background: white;
    box-sizing: border-box;
-   min-width: 0;
    transition: 0.3s ease;
-   /* IMPORTANT */
-   height: 100%;
-   display: flex;
-   flex-direction: column;
 }
 .form-card:hover {
-   transform: translateY(-2px);
-   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+   transform: translateY(-4px);
+   box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+.form-image {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   display: block;
+   cursor: pointer;
+   transition: 0.3s ease;
+}
+.form-image:hover {
+   transform: scale(1.02);
 }
 .form-content {
-   padding: 18px;
-   /* IMPORTANT */
-   flex: 1;
-   display: flex;
-   flex-direction: column;
+   padding: 16px;
 }
 .form-title {
-   margin: 0;
-   font-size: 22px;
-   font-weight: 700;
-   color: #111827;
-}
-.section-title {
-   font-size: 14px;
-   font-weight: 700;
-   margin-top: 18px;
-   margin-bottom: 8px;
-   color: #374151;
-}
-.chips {
-   display: flex;
-   flex-wrap: wrap;
-   gap: 8px;
-   /* keeps chips aligned nicely */
-   align-content: flex-start;
-}
-.chip {
-   background: #e0ecff;
-   color: #1e3a8a;
-   padding: 6px 12px;
-   border-radius: 8px;
-   font-size: 12px;
+   margin: 0 0 10px;
+   font-size: 20px;
    font-weight: 600;
+   color: #000000;
 }
-@media (max-width: 900px) {
-   .container {
-       grid-template-columns: repeat(2, 1fr);
+.form-link {
+   color: #0078D4;
+   text-decoration: none;
+}
+.form-description {
+   margin-top: 14px;
+   font-size: 13px;
+   color: #000000;
+   line-height: 1.6;
+}
+.source-icon {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   width: 36px;
+   height: 36px;
+   border-radius: 50%;
+   background: #f3f4f6;
+   color: #0078D4;
+   text-decoration: none;
+   transition: 0.3s ease;
+   margin-top: 12px;
+}
+.source-icon:hover {
+   background: #0078D4;
+   color: white;
+}
+/* Popup Modal */
+#imageModal {
+   display: none;
+   position: fixed;
+   z-index: 9999;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0,0,0,0.85);
+   justify-content: center;
+   align-items: center;
+   padding: 20px;
+   box-sizing: border-box;
+}
+#popupImage {
+   max-width: 90%;
+   max-height: 90%;
+   border-radius: 14px;
+   box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+   animation: zoomIn 0.25s ease;
+}
+.close-popup {
+   position: absolute;
+   top: 20px;
+   right: 30px;
+   color: white;
+   font-size: 42px;
+   cursor: pointer;
+   font-weight: bold;
+}
+@keyframes zoomIn {
+   from {
+       transform: scale(0.9);
+       opacity: 0;
+   }
+   to {
+       transform: scale(1);
+       opacity: 1;
    }
 }
-@media (max-width: 600px) {
-   .container {
-       grid-template-columns: 1fr;
+@media(max-width:900px) {
+   .form-card {
+       flex: 0 0 calc(50% - 10px);
+   }
+}
+@media(max-width:600px) {
+   .form-card {
+       flex: 0 0 100%;
    }
 }
 </style>
-
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
-<!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
 <img src="Images/DashboardImages/stockoverview.webp"
@@ -131,15 +155,12 @@ Toolbars and command surfaces for invoking app-level and contextual actions. Use
 </h3>
 <div class="form-description">
               The .NET MAUI Toolbar (SfToolbar) control is a flexible UI control that provides configurable action items for seamless user interaction, enhancing application usability.
-
 </div>
 </div>
 </div>
-
 </div>
 
 [Back to Controls Catalog](ControlsCatalog.md)
-<!-- Popup Modal -->
 <div id="imageModal">
 <span class="close-popup" onclick="closeImage()">
 &times;

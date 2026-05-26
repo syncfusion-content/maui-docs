@@ -42,7 +42,6 @@ Calendar and scheduling controls for appointments, availability and timeline coo
    padding: 16px;
 }
 .form-title {
-   margin-top: 0px;
    margin: 0 0 10px;
    font-size: 20px;
    font-weight: 600;
@@ -127,7 +126,6 @@ Calendar and scheduling controls for appointments, availability and timeline coo
    }
 }
 </style>
-
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
 <div class="form-card">

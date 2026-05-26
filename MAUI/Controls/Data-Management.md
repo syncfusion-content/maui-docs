@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Data Management | Syncfusion®
+title: Data Management Controls | Syncfusion®
 description: Controls designed for managing and presenting data efficiently, including grids, sorting, filtering, and editing features for structured data handling.
 platform: maui
-control: Data Management
+control: Data Management Controls
 documentation: ug
 ---
 
-# Syncfusion<sup>®</sup> Data Management for .NET MAUI
+# Syncfusion<sup>®</sup> Data Management Controls for .NET MAUI
 
 This category covers grids and data-handling controls for displaying, editing and synchronizing structured data. Use these controls when you need performant tabular views, grouping, sorting and data operations in MAUI apps.
 
-## Data Management
+## Data Management Controls
 
 <style>
 .form-card {
@@ -42,7 +42,6 @@ This category covers grids and data-handling controls for displaying, editing an
    padding: 16px;
 }
 .form-title {
-   margin-top: 0px;
    margin: 0 0 10px;
    font-size: 20px;
    font-weight: 600;
@@ -127,7 +126,6 @@ This category covers grids and data-handling controls for displaying, editing an
    }
 }
 </style>
-
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
 <div class="form-card">

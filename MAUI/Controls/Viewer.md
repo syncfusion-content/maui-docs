@@ -42,7 +42,6 @@ Controls that improve the visual appearance of UI elements by adding effects suc
    padding: 16px;
 }
 .form-title {
-   margin-top: 0px;
    margin: 0 0 10px;
    font-size: 20px;
    font-weight: 600;
@@ -127,7 +126,6 @@ Controls that improve the visual appearance of UI elements by adding effects suc
    }
 }
 </style>
-
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
 <div class="form-card">

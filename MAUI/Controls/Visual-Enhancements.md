@@ -42,7 +42,6 @@ Components that add visual polish and subtle enhancements to UI surfaces. Use th
    padding: 16px;
 }
 .form-title {
-   margin-top: 0px;
    margin: 0 0 10px;
    font-size: 20px;
    font-weight: 600;
@@ -127,7 +126,6 @@ Components that add visual polish and subtle enhancements to UI surfaces. Use th
    }
 }
 </style>
-
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <!-- Card 1 -->
 <div class="form-card">
