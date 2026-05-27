@@ -176,8 +176,8 @@ Explore further:
 <!-- Card 1 -->
 <div class="form-card">
 <div class="form-content">
-<h3 class="form-title">Button
-<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Dashboard/StockOverviewPage.xaml"
+<h3 class="form-title">Explore Blogs
+<a href="https://www.syncfusion.com/blogs/category/net-maui"
               target="_blank"
               class="source-icon"
               title="View Source">
@@ -199,15 +199,15 @@ Explore further:
 </a>
 </h3>
 <div class="form-description">
-              Trigger user actions with customizable buttons, supporting different styles, states, and interactions for seamless user experience.
+              Read insights, tutorials, and developer journeys.
 </div>
 </div>
 </div>
 <!-- Card 2 -->
 <div class="form-card">
 <div class="form-content">
-<h3 class="form-title">CheckBox
-<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Profile/HealthProfilePage.xaml"
+<h3 class="form-title">Explore KBs
+<a href="https://support.syncfusion.com/kb/cross-platforms/category/76"
               target="_blank"
               class="source-icon"
               title="View Source">
@@ -229,14 +229,14 @@ Explore further:
 </a>
 </h3>
 <div class="form-description">
-               Allows users to select one or multiple options independently from a list.
+               Find quick solutions and step‑by‑step guidance.
 </div>
 </div>
 </div>
 <div class="form-card">
 <div class="form-content">
-<h3 class="form-title">Chips
-<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Profile/HealthProfilePage.xaml"
+<h3 class="form-title">AI Demos
+<a href=""
               target="_blank"
               class="source-icon"
               title="View Source">
@@ -258,15 +258,15 @@ Explore further:
 </a>
 </h3>
 <div class="form-description">
-               Represents small interactive elements used for selection, filtering, or displaying information in a compact form.
+               Experience interactive intelligence in action.
 </div>
 </div>
 </div>
 <!-- Card 3 -->
 <div class="form-card">
 <div class="form-content">
-<h3 class="form-title">Radio Button
-<a href="https://github.com/syncfusion/essential-ui-kit-for-.net-maui/blob/master/EssentialMAUIUIKit/EssentialMAUIUIKit/Views/Dashboard/DailyCaloriesReportPage.xaml"
+<h3 class="form-title">Showcase Demos
+<a href=""
               target="_blank"
               class="source-icon"
               title="View Source">
@@ -288,7 +288,7 @@ Explore further:
 </a>
 </h3>
 <div class="form-description">
-                Enables users to select only one option from a group of mutually exclusive choices.
+                Discover polished real‑world app scenarios.
 </div>
 </div>
 </div>
