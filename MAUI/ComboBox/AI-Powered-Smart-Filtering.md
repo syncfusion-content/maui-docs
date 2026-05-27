@@ -1,7 +1,7 @@
 ---
 layout: post
-title: AI-Powered Natural language filtering in SfCombobox Control | Syncfusion®
-description: Learn about how to implement AI-powered Natural language filtering using Syncfusion® .NET MAUI Combobox control(SfCombobox). 
+title: AI-Powered Smart filtering in SfCombobox Control | Syncfusion®
+description: Learn about how to implement AI-powered Smart filtering using Syncfusion® .NET MAUI Combobox control(SfCombobox). 
 platform: maui
 control: SfCombobox
 documentation: ug
