@@ -357,8 +357,8 @@ Applying custom filtering to the [ComboBox](https://help.syncfusion.com/cr/maui/
 
 The following image demonstrates the output of the above AI-based filter using a custom filtering sample.
 
-![.NET MAUI Combobox With AI Smart filter.](Images/AISearch/ai-smart-filter.gif)
+![.NET MAUI Combobox With AI Smart filter.](Images/AIFilter/ai-smart-filter.gif)
 
-You can find the complete sample from this [link.]()
+You can find the complete sample from this [link.](https://github.com/SyncfusionExamples/Smart-AI-Filtering-using-.NET-MAUI-ComboBox)
 
 By combining a powerful AI-driven online filter with a robust you can create a truly smart and reliable filter experience in your .NET MAUI applications.
