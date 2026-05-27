@@ -304,7 +304,6 @@ public class ComboBoxCustomFilter : IComboBoxFilterBehavior
 }
 
 {% endhighlight %}
-
 {% endtabs %}
 
 **Step:3** Applying Custom Filtering to ComboBox
@@ -317,31 +316,26 @@ Applying custom filtering to the [ComboBox](https://help.syncfusion.com/cr/maui/
 <ContentPage.BindingContext>
     <local:ComboBoxViewModel x:Name="viewModel"/>
 </ContentPage.BindingContext>
-
 <ContentPage.Content>
     <VerticalStackLayout Spacing="10"
                          Margin="0,50,0,0"
                          WidthRequest="303"
                          HorizontalOptions="Center"
                          VerticalOptions="Start">
-
         <Label Text="AI ComboBox Control"
                FontFamily="Roboto-Medium"  
                FontSize="16"
                TextColor="{AppThemeBinding Light='#1C1B1F' , Dark='#E6E1E5'}"
                HorizontalOptions="Center"/>
-
         <syncfusion:SfTextInputLayout Hint="Choose Food Item"
                                       Margin="0,10,0,0"
                                       ContainerType="Outlined"
                                       WidthRequest="300"
                                       ContainerBackground="Transparent">
             <editors:SfComboBox x:Name="combobox" 
-                                DropDownPlacement="Bottom"                                    
+                                DropDownPlacement="Bottom"
                                 MaxDropDownHeight="200"
                                 IsEditable="True"
-                                DropdownOpening="combobox_DropdownOpened"
-                                DropDownClosing="combobox_DropDownClosed"
                                 TextSearchMode="StartsWith"
                                 IsFilteringEnabled="True"
                                 DisplayMemberPath="Name"
@@ -350,6 +344,7 @@ Applying custom filtering to the [ComboBox](https://help.syncfusion.com/cr/maui/
             </editors:SfComboBox>
         </syncfusion:SfTextInputLayout>
     </VerticalStackLayout>
+</ContentPage.Content>
 
 {% endhighlight %}
 
