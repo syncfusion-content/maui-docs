@@ -10,14 +10,51 @@ keywords: .net maui combobox, .net maui sfcombobox, syncfusion combobox, combobo
 
 # .NET MAUI ComboBox (SfComboBox) Overview
 
-The [.NET MAUI ComboBox](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfComboBox.html) control is a selection component that allows users to type a value or choose an option from a list of predefined options. It has many features, such as data binding, editing, searching, clear button and dropdown button customization, and more.
+- Create flexible and interactive **selection input experiences** in your **.NET MAUI applications** using the **Syncfusion ComboBox control (SfComboBox)**.
+
+- It allows users to either **select from predefined options** or **enter custom values**, making it suitable for scenarios that require both **data selection and user input**.
 
 ![.NET MAUI SfComboBox](Images/Overview/ComboBoxOverview.png)
 
+## Control Highlights
+
+- Select items from a predefined list  
+- Allow users to enter custom input values  
+- Enable intelligent filtering and search  
+- Provide a responsive dropdown experience  
+- Customize input behavior and appearance  
+
 ## Key features
 
-* **Data binding** – Support binding various types of data sources.
-* **Editable mode** – Editable and non-editable text boxes to select items from the given data source.
-* **Filtering** – The ComboBox filters items based on the entered text and auto-fills with the first suggestion.
-* **Searching** – Highlights the matching item in the drop-down list based on the provided input. 
-* **Placeholder** – Display placeholder text inside the control until the user enters text.
+- **Data Binding** to different sources with dynamic item display
+- **Editable & Non‑Editable** Modes for flexible input or strict selection
+- **Filtering & Searching** with auto‑fill suggestions and highlighted matches
+- **Input Experience** including placeholder text, clear button, and dropdown customization
+- **Visual Customization** for styling templates, labels, and dropdown behavior
+
+## Globalization
+
+- Screen reader support, keyboard navigation, and high‑contrast themes for accessibility
+- Localization with right‑to‑left (RTL) layouts and culture‑specific formatting for text, dates, numbers, and currencies
+
+## Real‑World Scenarios
+
+- Form inputs requiring flexible selection or custom entry
+- Searchable dropdowns in mobile and desktop apps
+- Dynamic filtering for large datasets or catalogs
+- Data entry systems where quick selection improves productivity
+
+## Related Controls
+
+- AutoComplete for predictive text input
+- DropDown for simple list selection
+- ListView for displaying collections with flexible templates
+- DataGrid for structured tabular data visualization
+
+## Next Step
+
+Explore further:
+
+- [Getting Started](https://help.syncfusion.com/maui/combobox/getting-started)
+- [Customization Options](https://help.syncfusion.com/maui/combobox/ui-customization)
+- [Searching Guide](https://help.syncfusion.com/maui/combobox/searching)  

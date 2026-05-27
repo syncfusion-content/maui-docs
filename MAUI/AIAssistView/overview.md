@@ -9,11 +9,48 @@ documentation: ug
 
 # Overview of .NET MAUI AI AssistView (SfAIAssistView)
 
-The Syncfusion .NET MAUI AI AssistView control is a component for integrating AI services into .NET MAUI apps. It provides a user-friendly interface, making it easier for developers to create applications that interact with AI. AI AssistView enables developers can customize both appearance and functionality, allowing them to match their app's design and requirements. It simplifies the process of building intelligent, responsive applications by leveraging AI to improve the user experience.
+- Create intelligent and interactive **AI-powered user experiences** in your **.NET MAUI applications** using the **Syncfusion AI AssistView control (SfAIAssistView)**.
+
+- It provides a flexible interface for displaying AI-generated responses and enables developers to build applications that deliver **context-aware, conversational, and dynamic interactions**.
+
+## Control Highlights
+
+- Integrate AI-driven responses into your app interface  
+- Display rich, multi-format AI content  
+- Enable conversational and assistant-style interactions  
+- Customize both behavior and layout  
+- Build responsive, intelligent user experiences  
 
 ## Key features
 
-* `Content types` : Supports displaying various formats, such as text, images, hyperlinks, and cards, enabling a rich and dynamic user experience.
-* `Control template` : Allows you to customize the control's layout by defining your own templates for displaying any type of view or control.
-* `Suggestions` : Provides quick response options to help users speed up conversations or interactions.
-* `Styling` : Allows to customize the appearance of the AI AssistView control, including all types of items, editor, and header, through styling options.
+- **Rich Content Types** : display AI responses as text, images, hyperlinks, or structured cards
+- **Flexible Control Templates** : define custom layouts and render any view or UI element
+- **Suggestions** : provide quick reply options to speed up interactions and improve flow
+- **Styling & Appearance** : customize message styles, editor, and header for consistent UI 
+
+## Globalization
+
+- Localization support for text, layouts, and culture‑specific formatting
+- Consistent UI behavior across platforms and adaptable to regional needs
+
+## Real‑World Scenarios
+
+- AI writing assistants for generating and refining content
+- Customer support bots with guided responses and quick suggestions
+- Educational tutors delivering explanations, quizzes, and structured learning content
+- Business productivity apps integrating AI insights into workflows
+
+## Related Controls
+
+- Chat for conversational interfaces and messaging
+- AutoComplete for predictive text input and suggestions
+- ComboBox for flexible selection and entry scenarios
+- Markdown Viewer for rendering AI‑generated rich text content 
+
+## Next Step
+
+Explore further:
+
+- [Getting Started](https://help.syncfusion.com/maui/aiassistview/getting-started)
+- [Auto Complete Suggestions Guide](https://help.syncfusion.com/maui/aiassistview/autocompletesuggestions)
+- [Toolbar Guide](https://help.syncfusion.com/maui/aiassistview/toolbar)

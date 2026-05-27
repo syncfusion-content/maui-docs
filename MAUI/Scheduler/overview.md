@@ -14,52 +14,88 @@ The Syncfusion<sup>&reg;</sup> .NET MAUI Scheduler (SfScheduler) has nine differ
 
 ![overview-in-maui-scheduler](images/overview/overview-in-maui-scheduler.png)
 
+## Control Highlights
+
+- Create and manage appointments efficiently  
+- View schedules in multiple formats (calendar, timeline, agenda)  
+- Handle recurring events and time-based planning  
+- Customize working hours, days, and time slots  
+- Control scheduling behavior with flexible configurations  
+
 ## Key features
 
- *  **Built-in views**: The .NET MAUI Scheduler provides a wide range of built-in view modes including Day, Week, WorkWeek, Month, Agenda, TimelineDay, TimelineWeek, TimelineWorkWeek, and TimelineMonth. These view modes allows to display appointments across different days and months.
+- **Built‑in Views** : switch between Day, Week, WorkWeek, Month, Agenda, and Timeline views for flexible scheduling
 
  ![built-in-views-in-maui-scheduler](images/overview/built-in-views-in-maui-scheduler.png)
 
- * **Events**: Appointments contain information about events scheduled at specific times. In addition to the default appointments, users can create their own collections that map various fields such as start time, end time, subject, notes, and recurrence to appointments.
+- **Appointments** : create and manage events with start/end time, subject, and notes
 
  ![appointment-events-in-maui-scheduler](images/overview/appointment-events-in-maui-scheduler.png)
 
- * **Recurrence events**: Easily configure the recurring events on a daily, weekly, monthly, or yearly basis with optimized recurrence options. Also skip or change the occurrence of a recurring appointment.
+- **Recurrence Events** : schedule repeating events daily, weekly, monthly, or yearly with exceptions
 
  ![recurring-events-with-exceptions-dates-in-maui-scheduler](images/overview/recurring-events-with-exceptions-dates-in-maui-scheduler.png)
 
- * **Appointment mapping**: The .NET MAUI Scheduler control supports to map any custom object to populate appointments or events.
+- **Appointment Mapping** : bind custom data objects to appointments for seamless integration
 
- * **Timezone**: The display appointments can be created in various time zones in the system time zone. The appointment start and end times are also automatically adjusted and displayed based on the daylight savings time.
+- **Time Zone Support** : schedule across regions with automatic daylight saving adjustments
 
- * **Agenda view**: The agenda view displays a list of scheduled appointments grouped by week, between set minimum and maximum dates. You can customize everything from the date and time formats to the styling of each header.
+- **Agenda View** : view appointments in a simple list format grouped by week
 
  ![agenda-view-events-in-maui-scheduler](images/overview/agenda-view-events-in-maui-scheduler.png)
 
- * **Timeline month view**: The appointments will be displayed on a horizontal axis, with each column representing a day of the month.
+- **Timeline Month View** : display appointments horizontally across days for long‑term planning
 
  ![timeline-month-view-in-maui-scheduler](images/overview/timeline-month-view-in-maui-scheduler.png)
 
- * **First day of the week**: Customize the first day of the week as needed. It defaults to Sunday.
+- **First Day of the Week** : customize the start day (e.g., Monday or Sunday) to match regional preferences
 
  ![first-day-of-week-in-maui-scheduler](images/overview/first-day-of-week-in-maui-scheduler.png)
- 
- * **Flexible working days**: The workdays in a workweek can be customized such that the nonworking days are hidden.
 
- * **Minimum and maximum date time**: By setting [MinimumDateTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_MinimumDateTime) and [MaximumDateTime](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Scheduler.SfScheduler.html#Syncfusion_Maui_Scheduler_SfScheduler_MaximumDateTime) properties, you can limit the date range available in the Scheduler and prevent navigation beyond that range.
+- **Flexible Working Days** : define working and non‑working days for realistic business schedules
 
- * **Special time regions (Blocking time intervals)**: Interactions and selections can be disabled for specific time ranges. This is useful when the user interaction has to be blocked during holidays or another special events, and to highlight those time slots in day, week, workweek, timeline day, timeline week, and timeline workweek.
+- **Date Range Limits** : restrict navigation to minimum and maximum dates for controlled scenarios
+
+- **Special Time Regions** : block or highlight unavailable slots such as holidays or breaks
 
  ![recurring-special-time-region-in-maui-scheduler](images/overview/recurring-special-time-region-in-maui-scheduler.png)
 
- * **Selectable day predicate (Blackout dates)**: Any date can be disabled in a scheduler to make it inactive. The selection of weekends and holidays can be easily prevented by disabling them.
+- **Blackout Dates** : disable specific dates to prevent scheduling on restricted days
 
  ![selectable-day-predicate-or-blackout-dates-in-maui-scheduler](images/overview/selectable-day-predicate-or-blackout-dates-in-maui-scheduler.png)
 
- * **Hide leading and trailing dates**: Hiding the previous and next month's dates will enhance the appearance of the scheduler.
+- **Hide Leading & Trailing Dates** : remove extra month dates for a cleaner calendar view
 
  ![hide-leading-and-trailing-dates-in-maui-scheduler](images/overview/hide-leading-and-trailing-dates-in-maui-scheduler.png)
 
- * **Custom start and end hours**: The event scheduler timeslot view can be displayed with specific time durations by hiding the unwanted hours.
+- **Custom Start & End Hours** : show only relevant time ranges by hiding unnecessary hours
 
- ![flexible-working-hours-in-maui-scheduler](images/overview/flexible-working-hours-in-maui-scheduler.png)
+ ![flexible-working-hours-in-maui-scheduler](images/overview/flexible-working-hours-in-maui-scheduler.png) 
+
+
+## Globalization
+
+- Localization for text, date formats, and right‑to‑left (RTL) layouts
+- Time zone handling and daylight saving adjustments for global scheduling
+
+## Real‑World Scenarios
+
+- Corporate calendars for managing meetings and recurring events
+- Health care scheduling for appointments and time‑bound slots
+- Education timetables with weekly and monthly views
+- Project planning using timeline and agenda views for task tracking
+
+## Related Controls
+
+- DataGrid for structured tabular data visualization
+- ListView for flexible collection display with templates
+- ComboBox for selection and input scenarios
+- Charts for visualizing schedules and analytics
+
+## Next Step
+
+Explore further:
+
+- [Getting Started](https://help.syncfusion.com/maui/scheduler/getting-started)
+- [Appointments Guide](https://help.syncfusion.com/maui/scheduler/appointments)  
+- [Reminders Guide](https://help.syncfusion.com/maui/scheduler/reminders)

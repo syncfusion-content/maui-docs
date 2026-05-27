@@ -9,7 +9,17 @@ documentation: ug
 
 # .NET MAUI NumericEntry Overview
 
-The [.NET MAUI NumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Inputs.SfNumericEntry.html) control is designed to provide a user-friendly and advanced input experience for numeric values. It supports a wide range of numeric formats, including currency, percentages, decimals, and more. With its key features, it enables enhanced user experience and facilitates input validation.
+- Create intuitive and accurate **numeric input experiences** in your **.NET MAUI applications** using the **Syncfusion NumericEntry control (SfNumericEntry)**.
+
+- It provides a flexible way to input, format, and validate numeric values, making it ideal for applications that require **precise numerical data entry**.
+
+## Control Highlights
+
+- Capture numeric input with precision  
+- Display values in custom formats (currency, percentage, decimal)  
+- Validate input seamlessly  
+- Enable quick adjustments using increment/decrement controls  
+- Adapt numeric values based on regional and cultural settings  
 
 ## Control Structure
 
@@ -17,8 +27,35 @@ The [.NET MAUI NumericEntry](https://help.syncfusion.com/cr/maui/Syncfusion.Maui
 
 ## Key features
 
-* Input validation is triggered when the focus is lost, or the enter key is pressed.
-* Convenient value increment and decrement using the up-down button.
-* Flexible display of values in various custom formats.
-* Adapts to different cultural and regional settings for value presentation.
-* Placeholder text displayed when the Numeric Entry control contains an empty or null value.
+- **Input Validation** : ensures accurate numeric entry by validating values on focus loss or Enter key
+- **Increment & Decrement Controls** : built‑in spin buttons for quick adjustments within ranges
+- **Flexible Number Formatting** : display values as currency, percentage, decimal, or custom formats
+- **Culture & Regional Support** : adapts numeric representation to locale settings and symbols
+- **Placeholder Support** : guides users with placeholder text to indicate expected input 
+
+## Globalization
+
+- Localization for numeric formats, separators, and currency symbols
+- Consistent behavior across platforms with culture‑specific formatting
+
+## Real‑World Scenarios
+
+- Financial apps requiring precise currency input and formatting
+- E‑commerce checkout for quantity and price entry with validation
+- Scientific calculators needing decimal precision and quick adjustments
+- Survey or data entry forms where numeric ranges and placeholders improve usability
+
+## Related Controls
+
+- TextInputLayout for styled text and numeric inputs with floating labels
+- ComboBox for selection and entry scenarios
+- DataForm for structured input forms with validation
+- DataGrid for displaying and editing numeric values in tabular format 
+
+## Next Step
+
+Explore further:
+
+- [Getting Started](https://help.syncfusion.com/maui/numericentry/getting-started)  
+- [Formatting Guide](https://help.syncfusion.com/maui/numericentry/formatting)
+- [UpDown Button Options](https://help.syncfusion.com/maui/numericentry/updown-button) 

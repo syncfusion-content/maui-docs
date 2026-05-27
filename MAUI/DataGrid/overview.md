@@ -14,70 +14,48 @@ The .NET MAUI DataGrid control is used to display and manipulate data in a tabul
 
 <img alt="MAUI DataGrid" src="Images\overview\maui-datagrid.png" width="567"/>
 
-**Key Features**
+## Control Highlights
 
-* **Data Binding** - Bind different types of data sources, including DataTable.
+- Display and manage large volumes of data efficiently  
+- Enable sorting, filtering, and grouping of data  
+- Allow in-place editing with multiple column types  
+- Provide interactive user experiences (drag, swipe, selection)  
+- Customize layouts and visuals based on application needs  
 
-* **Column Types** - Show different data types in different types of columns. The following column types are supported: numeric, text, date, checkbox, image, combobox, picker and template. The template column is used to load any control in a column.
+## Key features
 
-* **Column Resizing** - Interactive support to adjust the width of columns.
+- **Flexible Data Binding** to collections, tables, and MVVM sources
+- **Rich Column Types** including text, numeric, date, checkbox, image, combobox, picker, and template columns
+- **Data Operations** with sorting, filtering, grouping, summaries, and search
+- **Editing & Interaction** through in‑place editing, drag‑drop, swipe actions, and selection
+- **Performance & Virtualization** with paging, incremental loading, and smooth rendering for large datasets
+- **Advanced Views** such as master‑details, record templates, unbound rows, and unbound columns
+- **Styling & Customization** with conditional formatting, stacked headers, freeze panes, and theme support
+- **Export & Data Handling** including Excel/PDF export, clipboard operations, serialization, and deserialization  
 
-* **Column Drag and Drop** - Interactive support to drag and drop columns.
+## Globalization
 
-* **Row drag and drop** - Interaction support to drag and drop rows.
+- Screen reader support and keyboard navigation for accessibility
+- Right‑to‑left (RTL) layout and localization for global applications
 
-* **Swiping** - Interaction support to swipe the rows.
+## Real‑World Scenarios
 
-* **Editing** - Interactive support to edit with different column types.
+- Business dashboards requiring clear tabular insights
+- Financial systems with grouping, summaries, and export options
+- Inventory management for handling large datasets efficiently
+- Analytics tools with dynamic filtering and real‑time updates
 
-* **Sorting** - Interactively sort one or more columns.
+## Related Controls
 
-* **Grouping** - Use user-interactive grouping to group one or more columns.
+- ListView for flexible collection display
+- Scheduler for calendar and appointment management
+- Charts for advanced data visualization
+- ComboBox for selection and input scenarios
 
-* **Summaries** - Extensive support to show brief information about the individual data columns or groups of rows.
+## Next Step
 
-* **Filtering** - Programmatically filter data based on the criteria.
+Explore further:
 
-* **Data virtualization** – Support for different modes of data virtualization such as paging, incremental loading.
-
-* **Selection** - Select one or more rows. Keyboard navigation is supported in Windows platform.
-
-* **Search** - Supports highlighting cell content and provides navigation functionalities.
-
-* **Master-Details View** – Supports displaying relational data using hierarchies.
-
-* **Record Template View** - Supports customization of row presentation by defining templates for displaying additional information or complex layouts within the DataGrid.
-
-* **Column Sizing** - Set the width of columns with various sizing options. Columns can also be sized based on their content.
-
-* **Auto row height** - Set the height for rows based on the content of their cells.
-
-* **Freeze Panes** - Freeze the rows and columns, keeping them fixed in place while scrolling the grid.
-
-* **Styling** - Customize the appearance of cells and headers. Conditional styling is supported.
-
-* **Paging** - Support for loading data in segments when dealing with large volumes of data.
-
-* **Stacked Headers** - Extensive support to show multiple headers called stacked headers.
-
-* **Load More** -  Display an interactive view when the grid reaches its maximum or minimum offset while scrolling down or up. Tapping the interactive view triggers a command to add more data to the item source of the grid at runtime.
-
-* **Pull To Refresh** - Support allows users to load a subset of data when the DataGrid is pulled down.
-
-* **Serialization and Deserialization** – Supports the transfer of grid properties and settings between different instances, allowing for easy saving and loading of configurations.
-
-* **Clipboard Operations** – Supports standard clipboard functionalities, enabling the cutting, copying, and pasting of data within the DataGrid and across other applications.
-
-* **Exporting** - Support to export the data to Excel and PDF.
-
-* **Unbound column** - It allows adding additional columns that are not bound with data objects from the underlying data source.
-
-* **Unbound Row** - It allows adding rows at the top and bottom of the DataGrid which are not bound with data objects from the underlying data source.
-
-* **Theme** - Use a dark or light theme.
-
-* **Accessibility** - The DataGrid can easily be accessed by screen readers.
-
-* **Right to Left (RTL)** - Right-to-left direction support for users working in RTL languages like Hebrew and Arabic.
-
-N> You can refer to our [MAUI DataGrid](https://www.syncfusion.com/maui-controls/maui-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [MAUI DataGrid example](https://github.com/syncfusion/maui-demos/tree/master/MAUI/DataGrid) to learn about various features and how to easily configure them, with built-in support for creating stunning visual effects.
+- [Getting Started](https://help.syncfusion.com/maui/datagrid/getting-started)
+- [Styling Guide](https://help.syncfusion.com/maui/datagrid/styling)   
+- [Selection Guide](https://help.syncfusion.com/maui/datagrid/selection)
