@@ -39,7 +39,7 @@ documentation: ug
 
 - **[Tooltip](https://help.syncfusion.com/maui/maps/tooltip)** - Show additional contextual information for shapes, markers, and bubbles
 
-![.NET MAUI Maps layer overview.](images/overview/net-maui-maps-overview.png)
+    ![.NET MAUI Maps layer overview.](images/overview/net-maui-maps-overview.png)
 
 ## Globalization
 
