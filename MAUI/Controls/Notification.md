@@ -126,7 +126,7 @@ Controls that surface system status, feedback and progress to users. Use these c
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Badge View</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/badge-view/overview">Badge View</a></h3>
 <div class="form-description">
               The .NET MAUI Badge View displays small notifications or status indicators on UI elements.
 </div>
@@ -142,7 +142,7 @@ Controls that surface system status, feedback and progress to users. Use these c
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Busy Indicator</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/busy-indicator/overview">Busy Indicator</a></h3>
 <div class="form-description">
                The .NET MAUI Busy Indicator control lets users know when their application is busy.
 </div>
@@ -157,7 +157,7 @@ Controls that surface system status, feedback and progress to users. Use these c
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Progress Bar</a></h3>
+<h3 class="form-title"><a class="form-link" href=" ">Progress Bar</a></h3>
 <div class="form-description">
                The .NET MAUI ProgressBar shows task progress with customizable styles, shapes, and animations.
 </div>
@@ -173,7 +173,7 @@ Controls that surface system status, feedback and progress to users. Use these c
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Step Progress Bar</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/stepprogressbar/overview">Step Progress Bar</a></h3>
 <div class="form-description">
               The .NET MAUI Step Progress Bar shows progress across multiple steps with customizable appearance.
 </div>
@@ -189,7 +189,7 @@ Controls that surface system status, feedback and progress to users. Use these c
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">PullToRefresh</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/pull-to-refresh/overview">PullToRefresh</a></h3>
 <div class="form-description">
                The Syncfusion .NET MAUI Pull to Refresh lets users refresh content by pulling down the screen.
 </div>
@@ -198,7 +198,6 @@ Controls that surface system status, feedback and progress to users. Use these c
 
 </div>
 
-[Back to Controls Catalog](ControlsCatalog.mdd)
 <!-- Popup Modal -->
 <div id="imageModal">
 <span class="close-popup" onclick="closeImage()">

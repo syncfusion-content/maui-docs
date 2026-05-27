@@ -125,7 +125,7 @@ Form controls and editors used for collecting, validating and formatting user in
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Autocomplete</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/autocomplete/overview">Autocomplete</a></h3>
 <div class="form-description">
               The .NET MAUI Autocomplete control is highly optimized to load and populate suggestions quickly.
 </div>
@@ -141,7 +141,7 @@ Form controls and editors used for collecting, validating and formatting user in
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">ComboBox</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/combobox/overview">ComboBox</a></h3>
 <div class="form-description">
                Represents data as portions of a circle, such as pie or donut charts.
 </div>
@@ -156,7 +156,7 @@ Form controls and editors used for collecting, validating and formatting user in
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Data form</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/dataform/overview">Data form</a></h3>
 <div class="form-description">
                The .NET MAUI DataForm displays and edits data using customizable input fields with support for validation and flexible layouts.
 </div>
@@ -172,7 +172,7 @@ Form controls and editors used for collecting, validating and formatting user in
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Date Picker</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datepicker/overview">Date Picker</a></h3>
 <div class="form-description">
               The .NET MAUI Date Picker is a fully customizable component that lets you easily select a date from a list of dates.
 </div>
@@ -188,7 +188,7 @@ Form controls and editors used for collecting, validating and formatting user in
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Date Time Picker</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datetimepicker/overview">Date Time Picker</a></h3>
 <div class="form-description">
                The .NET MAUI Date Time Picker lets users select both date and time with customizable options.
 </div>
@@ -203,7 +203,7 @@ Form controls and editors used for collecting, validating and formatting user in
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Masked Entry</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/masked-entry/overview">Masked Entry</a></h3>
 <div class="form-description">
                The .NET MAUI Masked Entry lets users enter data in a specific format using predefined input patterns.
 </div>
@@ -218,7 +218,7 @@ Form controls and editors used for collecting, validating and formatting user in
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Numeric Entry</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/numeric-entry/overview">Numeric Entry</a></h3>
 <div class="form-description">
               The .NET MAUI Numeric Entry lets users enter numbers with limits like minimum and maximum values.
 </div>
@@ -234,7 +234,7 @@ Form controls and editors used for collecting, validating and formatting user in
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Picker</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/picker/overview">Picker</a></h3>
 <div class="form-description">
                The Syncfusion .NET MAUI Picker lets users choose items from a list with customizable layout and options.
 </div>
@@ -249,7 +249,7 @@ Form controls and editors used for collecting, validating and formatting user in
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Signature Pad</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/signaturepad/overview">Signature Pad</a></h3>
 <div class="form-description">
               The .NET MAUI Signature Pad lets users draw and save smooth digital signatures as images.
 </div>
@@ -264,7 +264,7 @@ Form controls and editors used for collecting, validating and formatting user in
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Rating</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/rating/overview">Rating</a></h3>
 <div class="form-description">
               The .NET MAUI Rating control lets users choose a rating using stars, hearts, or custom symbols.
 </div>
@@ -280,7 +280,7 @@ Form controls and editors used for collecting, validating and formatting user in
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Image Editor</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/imageeditor/overview">Image Editor</a></h3>
 <div class="form-description">
                The .NET MAUI Image Editor lets users easily edit images by cropping, rotating, zooming, and applying filters.
 </div>
@@ -295,7 +295,7 @@ Form controls and editors used for collecting, validating and formatting user in
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Time Picker</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/timepicker/overview">Time Picker</a></h3>
 <div class="form-description">
                The Syncfusion .NET MAUI Time Picker lets users select a time with customizable format and layout.
 </div>
@@ -310,7 +310,7 @@ Form controls and editors used for collecting, validating and formatting user in
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Color Picker</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/colorpicker/overview">Color Picker</a></h3>
 <div class="form-description">
               The Syncfusion .NET MAUI Color Picker lets users choose colors from palettes or a color spectrum.
 </div>
@@ -325,7 +325,7 @@ Form controls and editors used for collecting, validating and formatting user in
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Rich Text Editor</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/rich-text-editor/overview">Rich Text Editor</a></h3>
 <div class="form-description">
               The .NET MAUI Rich Text Editor lets users create and format text with options like bold and italics. 
 </div>

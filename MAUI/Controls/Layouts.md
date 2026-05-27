@@ -126,7 +126,7 @@ Container and layout primitives used to compose responsive and adaptive UI scree
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">BackDrop</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/backdrop/overview">BackDrop</a></h3>
 <div class="form-description">
               The .NET MAUI Backdrop shows a front view with hidden options behind it.
 </div>
@@ -142,7 +142,7 @@ Container and layout primitives used to compose responsive and adaptive UI scree
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">ListView</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/listview/overview">ListView</a></h3>
 <div class="form-description">
                It displays data as a scrollable list with customizable layouts and selection options. 
 </div>
@@ -157,7 +157,7 @@ Container and layout primitives used to compose responsive and adaptive UI scree
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Popup</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/popup/overview">Popup</a></h3>
 <div class="form-description">
                The .NET MAUI Popup displays customizable messages or content in a pop-up window.
 </div>
@@ -173,7 +173,7 @@ Container and layout primitives used to compose responsive and adaptive UI scree
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Text Input Layout</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/textinputlayout/overview">Text Input Layout</a></h3>
 <div class="form-description">
               The .NET MAUI Text Input Layout lets you enhance input fields with labels, icons, and helper messages.
 </div>
@@ -189,7 +189,7 @@ Container and layout primitives used to compose responsive and adaptive UI scree
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Expander</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/expander/overview">Expander</a></h3>
 <div class="form-description">
                The Syncfusion .NET MAUI Expander lets users tap a header to expand or collapse content.
 </div>
@@ -204,7 +204,7 @@ Container and layout primitives used to compose responsive and adaptive UI scree
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Accordion</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/accordion/overview">Accordion</a></h3>
 <div class="form-description">
                The .NET MAUI Accordion lets users expand or collapse sections to show or hide content.
 </div>
@@ -219,7 +219,7 @@ Container and layout primitives used to compose responsive and adaptive UI scree
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Carousel</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/carousel/overview">Carousel</a></h3>
 <div class="form-description">
               The .NET MAUI Carousel lets users swipe through a set of views with optional visual effects.
 </div>
@@ -235,9 +235,9 @@ Container and layout primitives used to compose responsive and adaptive UI scree
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Cards</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/cards/overview">Cards</a></h3>
 <div class="form-description">
-               The Syncfusion .NET MAUI Cards shows swipeable cards one by one.
+               The Syncfusion .NET MAUI Cards shows cards one by one for easy navigation.
 </div>
 </div>
 </div>
@@ -250,7 +250,7 @@ Container and layout primitives used to compose responsive and adaptive UI scree
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Parallax View</a></h3>
+<h3 class="form-title"><a class="form-link" href="">Parallax View</a></h3>
 <div class="form-description">
                The .NET MAUI Parallax View makes the background move differently while scrolling.
 </div>
@@ -265,7 +265,7 @@ Container and layout primitives used to compose responsive and adaptive UI scree
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Doc Layout</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/docklayout/overview">Doc Layout</a></h3>
 <div class="form-description">
               The .NET MAUI Dock Layout places items at the edges or fills the remaining space.
 </div>
@@ -273,7 +273,6 @@ Container and layout primitives used to compose responsive and adaptive UI scree
 </div>
 </div>
 
-[Back to Controls Catalog](ControlsCatalog.md)
 <!-- Popup Modal -->
 <div id="imageModal">
 <span class="close-popup" onclick="closeImage()">

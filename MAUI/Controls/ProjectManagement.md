@@ -127,7 +127,7 @@ Components to model workflows, tasks and timelines for project and resource plan
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Kanban Board</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/kanban-board/overview">Kanban Board</a></h3>
 <div class="form-description">
               Helps manage tasks visually by organizing them into columns representing different stages of a workflow.
 </div>
@@ -136,7 +136,6 @@ Components to model workflows, tasks and timelines for project and resource plan
 
 </div>
 
-[Back to Controls Catalog](ControlsCatalog.md)
 <!-- Popup Modal -->
 <div id="imageModal">
 <span class="close-popup" onclick="closeImage()">

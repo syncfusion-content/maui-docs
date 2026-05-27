@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Charts & Data Insights | Syncfusion®
+title: Data Visualization | Syncfusion®
 description: Controls designed for data visualization, enabling the creation of interactive charts and graphical representations for better data analysis and insights.
 platform: maui
-control: Charts & Data Insights
+control: Data Visualization
 documentation: ug
 ---
 
-# Syncfusion<sup>®</sup> Charts and Data insights for .NET MAUI
+# Syncfusion<sup>®</sup> Data Visualization for .NET MAUI
 
 Comprehensive charting and visualization controls for turning data into actionable insights. This collection includes charts, gauges and map visualizations designed for performance and customization in analytics scenarios.
 
-## Charts and Data Insights
+## Data Visualization
 
 <style>
 .form-card {
@@ -141,7 +141,7 @@ Comprehensive charting and visualization controls for turning data into actionab
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Circular Charts</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/circular-charts/overview">Circular Charts</a></h3>
 <div class="form-description">
                Represents data as portions of a circle, such as pie or donut charts.
 </div>
@@ -156,7 +156,7 @@ Comprehensive charting and visualization controls for turning data into actionab
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Funnel Charts</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/funnel-charts/overview">Funnel Charts</a></h3>
 <div class="form-description">
                Shows data flow across stages, typically used in processes like sales pipelines.
 </div>
@@ -171,7 +171,7 @@ Comprehensive charting and visualization controls for turning data into actionab
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Pyramid Charts</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/pyramid-charts/overview">Pyramid Charts</a></h3>
 <div class="form-description">
               Visualizes hierarchical data in a pyramid shape, often used for comparisons.
 </div>
@@ -186,7 +186,7 @@ Comprehensive charting and visualization controls for turning data into actionab
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Polar Charts</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/polar-charts/overview">Polar Charts</a></h3>
 <div class="form-description">
                Displays data in a circular layout based on angles and radius values.
 </div>
@@ -201,7 +201,7 @@ Comprehensive charting and visualization controls for turning data into actionab
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Sunburst Charts</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/sunburstchart/overview">Sunburst Charts</a></h3>
 <div class="form-description">
                It visualizes hierarchical data in a concentric circular layout.
 </div>
@@ -216,7 +216,7 @@ Comprehensive charting and visualization controls for turning data into actionab
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Spark Charts</a></h3>
+<h3 class="form-title"><a class="form-link" href=" ">Spark Charts</a></h3>
 <div class="form-description">
               .NET MAUI Spark Charts are compact charts that show trends and variations in data.
 </div>
@@ -231,7 +231,7 @@ Comprehensive charting and visualization controls for turning data into actionab
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Radial Gauge</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/radial-gauge/overview">Radial Gauge</a></h3>
 <div class="form-description">
                It is a multipurpose data visualization control that displays numerical values on a circular scale.
 </div>
@@ -246,7 +246,7 @@ Comprehensive charting and visualization controls for turning data into actionab
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Linear Gauge</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/linear-gauge/overview">Linear Gauge</a></h3>
 <div class="form-description">
               The .NET MAUI Linear Gauge displays numerical values on a horizontal or vertical linear scale.
 </div>
@@ -261,7 +261,7 @@ Comprehensive charting and visualization controls for turning data into actionab
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Digital Gauge</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/digital-gauge/overview">Digital Gauge</a></h3>
 <div class="form-description">
               This is data visualization component that displays alphanumeric characters in digital mode.
 </div>
@@ -276,7 +276,7 @@ Comprehensive charting and visualization controls for turning data into actionab
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Maps</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/maps/overview">Maps</a></h3>
 <div class="form-description">
                The .NET MAUI Maps displays statistical information for a geographical area.
 </div>
@@ -291,7 +291,7 @@ Comprehensive charting and visualization controls for turning data into actionab
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Barcode Generator</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/barcode-generator/overview">Barcode Generator</a></h3>
 <div class="form-description">
                The .NET MAUI Barcode Generator creates and displays machine-readable data using standard 1D and 2D barcode formats.
 </div>
@@ -306,7 +306,7 @@ Comprehensive charting and visualization controls for turning data into actionab
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">TreeMap</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/treemap/overview">TreeMap</a></h3>
 <div class="form-description">
               A .NET MAUI TreeMap shows hierarchical data as nested rectangles based on values.
 </div>
@@ -314,7 +314,6 @@ Comprehensive charting and visualization controls for turning data into actionab
 </div>
 </div>
 
-[Back to Controls Catalog](ControlsCatalog.md)
 <!-- Popup Modal -->
 <div id="imageModal">
 <span class="close-popup" onclick="closeImage()">

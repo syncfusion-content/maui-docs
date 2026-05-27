@@ -127,7 +127,7 @@ Components that add visual polish and subtle enhancements to UI surfaces. Use th
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Avatar View</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/avatar-view/overview">Avatar View</a></h3>
 <div class="form-description">
               Displays user profile images or initials in a compact and visually appealing format.
 </div>
@@ -143,7 +143,7 @@ Components that add visual polish and subtle enhancements to UI surfaces. Use th
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Effects View</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/effects-view/overview">Effects View</a></h3>
 <div class="form-description">
                Adds visual effects like shadows, gradients, or animations to enhance UI elements.
 </div>
@@ -158,7 +158,7 @@ Components that add visual polish and subtle enhancements to UI surfaces. Use th
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Shimmer</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/shimmer/overview">Shimmer</a></h3>
 <div class="form-description">
                Shows a loading placeholder animation to indicate content is being loaded.
 </div>

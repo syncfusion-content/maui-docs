@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Navigation & Structure | Syncfusion®
+title: Navigation | Syncfusion®
 description: Controls that define navigation structure and layout, enabling seamless movement across views and organizing content for a consistent application experience.
 platform: maui
-control: Navigation & Structure
+control: Navigation
 documentation: ug
 ---
 
-# Syncfusion<sup>®</sup> Navigation and Structure for .NET MAUI
+# Syncfusion<sup>®</sup> Navigation for .NET MAUI
 
 Navigation and structural layout components.
 
-## Navigation and Structure
+## Navigation
 <style>
 .form-card {
    flex: 0 0 calc(33.33% - 14px);
@@ -118,30 +118,14 @@ Navigation and structural layout components.
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/stockoverview.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title">Navigation Drawer
-<a href="https://help.syncfusion.com/maui/navigationdrawer/overview"
-              target="_blank"
-              class="source-icon"
-              title="View Source">
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="18" height="18" viewBox="0 0 24 24"
-     fill="none" stroke="currentColor" stroke-width="1.8">
-  <path d="M21 6H8"></path>
-  <path d="M21 12H3"></path>
-  <path d="M21 18H8"></path>
-  <circle cx="3.5" cy="6" r="1"></circle>
-  <circle cx="14.5" cy="12" r="1"></circle>
-  <circle cx="3.5" cy="18" r="1"></circle>
-</svg>
-</a>
-</h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/navigationdrawer/overview">Navigation Drawer</a></h3>
 <div class="form-description">
               Provides a side panel for easy navigation between different sections of an app
 </div>
@@ -150,30 +134,14 @@ Navigation and structural layout components.
 <!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title">Tab View
-<a href="https://help.syncfusion.com/maui/tabview/overview"
-              target="_blank"
-              class="source-icon"
-              title="View Source">
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="18" height="18" viewBox="0 0 24 24"
-     fill="none" stroke="currentColor" stroke-width="1.8" >
-  <path d="M21 6H8"></path>
-  <path d="M21 12H3"></path>
-  <path d="M21 18H8"></path>
-  <circle cx="3.5" cy="6" r="1"></circle>
-  <circle cx="14.5" cy="12" r="1"></circle>
-  <circle cx="3.5" cy="18" r="1"></circle>
-</svg>
-</a>
-</h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/tabview/overview">TabView</a></h3>
 <div class="form-description">
                Organizes content into tabs, allowing users to switch between different views quickly.
 </div>
@@ -181,30 +149,14 @@ Navigation and structural layout components.
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title">Treeview
-<a href="https://help.syncfusion.com/maui/treeview/overview"
-              target="_blank"
-              class="source-icon"
-              title="View Source">
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="18" height="18" viewBox="0 0 24 24"
-     fill="none" stroke="currentColor" stroke-width="1.8" >
-  <path d="M21 6H8"></path>
-  <path d="M21 12H3"></path>
-  <path d="M21 18H8"></path>
-  <circle cx="3.5" cy="6" r="1"></circle>
-  <circle cx="14.5" cy="12" r="1"></circle>
-  <circle cx="3.5" cy="18" r="1"></circle>
-</svg>
-</a>
-</h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/treeview/overview">Treeview</a></h3>
 <div class="form-description">
                Displays hierarchical data in a structured, expandable list format.
 </div>
@@ -213,32 +165,16 @@ Navigation and structural layout components.
 <!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/stockoverview.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title">Rotator
-<a href="https://help.syncfusion.com/maui/rotator/overview"
-              target="_blank"
-              class="source-icon"
-              title="View Source">
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="18" height="18" viewBox="0 0 24 24"
-     fill="none" stroke="currentColor" stroke-width="1.8" >
-  <path d="M21 6H8"></path>
-  <path d="M21 12H3"></path>
-  <path d="M21 18H8"></path>
-  <circle cx="3.5" cy="6" r="1"></circle>
-  <circle cx="14.5" cy="12" r="1"></circle>
-  <circle cx="3.5" cy="18" r="1"></circle>
-</svg>
-</a>
-</h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/rotator/overview">Rotator</a></h3>
 <div class="form-description">
-              Shows content or images in an interactive or auto-rotating carousel view, enabling smooth transitions between items for an engaging user experience. It supports flexible layouts and is ideal for displaying banners, image galleries, or featured content in applications.
+              Shows content or images in an interactive or auto-rotating carousel view, enabling smooth transitions.
 
 </div>
 </div>
@@ -246,30 +182,14 @@ Navigation and structural layout components.
 <!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title">Radial Menu
-<a href="https://help.syncfusion.com/maui/radial-menu/overview"
-              target="_blank"
-              class="source-icon"
-              title="View Source">
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="18" height="18" viewBox="0 0 24 24"
-     fill="none" stroke="currentColor" stroke-width="1.8" >
-  <path d="M21 6H8"></path>
-  <path d="M21 12H3"></path>
-  <path d="M21 18H8"></path>
-  <circle cx="3.5" cy="6" r="1"></circle>
-  <circle cx="14.5" cy="12" r="1"></circle>
-  <circle cx="3.5" cy="18" r="1"></circle>
-</svg>
-</a>
-</h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/radial-menu/overview">Radial Menu</a></h3>
 <div class="form-description">
                Displays menu options in a circular layout for quick and intuitive access.
 </div>
@@ -277,7 +197,6 @@ Navigation and structural layout components.
 </div>
 
 </div>
-[Back to Controls Catalog](ControlsCatalog.md)
 <!-- Popup Modal -->
 <div id="imageModal">
 <span class="close-popup" onclick="closeImage()">

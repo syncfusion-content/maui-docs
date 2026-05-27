@@ -120,14 +120,14 @@ This document provides a comprehensive collection of UI components organized int
 <div style="display:flex; flex-wrap:wrap; gap:20px; margin-top:20px;">
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Controls/Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Grids</a></h3>
+<h3 class="form-title"><a class="form-link" href="Controls\Grids">Grids</a></h3>
 <div class="form-description">
                Provides controls to display, organize, and manage large datasets efficiently.
 </div>
@@ -135,14 +135,14 @@ This document provides a comprehensive collection of UI components organized int
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Controls/Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Editors</a></h3>
+<h3 class="form-title"><a class="form-link" href="Controls/Editors">Editors</a></h3>
 <div class="form-description">
                Offers a wide range of controls for collecting and validating user input.
 </div>
@@ -151,14 +151,14 @@ This document provides a comprehensive collection of UI components organized int
 <!-- Card 1 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/stockoverview.webp"
+<img src="Controls/Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Navigation</a></h3>
+<h3 class="form-title"><a class="form-link" href="Controls/Navigation">Navigation</a></h3>
 <div class="form-description">
               Enables smooth navigation across different sections of an application. 
 </div>
@@ -167,14 +167,14 @@ This document provides a comprehensive collection of UI components organized int
 <!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Controls/Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Sliders</a></h3>
+<h3 class="form-title"><a class="form-link" href="Controls/Sliders">Sliders</a></h3>
 <div class="form-description">
                Provides controls that allow users to interact and adjust values dynamically. 
 </div>
@@ -182,14 +182,14 @@ This document provides a comprehensive collection of UI components organized int
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Controls/Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Conversational UI</a></h3>
+<h3 class="form-title"><a class="form-link" href="Controls/ConversationalUI">Conversational UI</a></h3>
 <div class="form-description">
                Supports chat and messaging-based user interactions. 
 </div>
@@ -197,14 +197,14 @@ This document provides a comprehensive collection of UI components organized int
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/stockoverview.webp"
+<img src="Controls/Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Data Visualisations</a></h3>
+<h3 class="form-title"><a class="form-link" href="Controls/DataVisualization">Data Visualizations</a></h3>
 <div class="form-description">
               Visualizes data using various charts and graphical components.
 </div>
@@ -212,14 +212,14 @@ This document provides a comprehensive collection of UI components organized int
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Controls/Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Layouts</a></h3>
+<h3 class="form-title"><a class="form-link" href="Controls/Layouts">Layouts</a></h3>
 <div class="form-description">
                Provides containers to arrange and structure UI elements.
 </div>
@@ -227,14 +227,14 @@ This document provides a comprehensive collection of UI components organized int
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Controls/Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Notification</a></h3>
+<h3 class="form-title"><a class="form-link" href="Controls/Notification">Notification</a></h3>
 <div class="form-description">
               Displays system status and progress to users in real time.
 </div>
@@ -242,14 +242,14 @@ This document provides a comprehensive collection of UI components organized int
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/stockoverview.webp"
+<img src="Controls/Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Project Management</a></h3>
+<h3 class="form-title"><a class="form-link" href="Controls/ProjectManagement">Project Management</a></h3>
 <div class="form-description">
               Helps organize and manage tasks visually.
 </div>
@@ -258,14 +258,14 @@ This document provides a comprehensive collection of UI components organized int
 <!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Controls/Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Toolbar</a></h3>
+<h3 class="form-title"><a class="form-link" href="Controls/Toolbar">Toolbar</a></h3>
 <div class="form-description">
               Provides quick access to commonly used actions and commands. 
 </div>
@@ -273,14 +273,14 @@ This document provides a comprehensive collection of UI components organized int
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Controls/Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Calendars</a></h3>
+<h3 class="form-title"><a class="form-link" href="Controls/Calendars">Calendars</a></h3>
 <div class="form-description">
                 Manages date-based data, events, and scheduling features.
 </div>
@@ -288,14 +288,14 @@ This document provides a comprehensive collection of UI components organized int
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/stockoverview.webp"
+<img src="Controls/Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Buttons</a></h3>
+<h3 class="form-title"><a class="form-link" href="Controls/Buttons">Buttons</a></h3>
 <div class="form-description">
               Includes controls for selecting options and triggering actions.
 </div>
@@ -303,14 +303,14 @@ This document provides a comprehensive collection of UI components organized int
 </div>
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/stockoverview.webp"
+<img src="Controls/Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Visual Enhancements</a></h3>
+<h3 class="form-title"><a class="form-link" href="Controls/Visual-Enhancements">Visual Enhancements</a></h3>
 <div class="form-description">
               Adds visual effects and styling to improve UI appearance.
 </div>
@@ -319,14 +319,14 @@ This document provides a comprehensive collection of UI components organized int
 <!-- Card 2 -->
 <div class="form-card">
 <div style="background:#eef2ec; text-align:center;">
-<img src="Images/DashboardImages/healthcare.webp"
+<img src="Controls/Images/AllControl.png"
                 loading="lazy"
                 decoding="async"
                 class="form-image"
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">Viewer</a></h3>
+<h3 class="form-title"><a class="form-link" href="Controls/Viewer">Viewer</a></h3>
 <div class="form-description">
               Displays and renders different types of content within the app.
 </div>

@@ -127,7 +127,7 @@ This category covers grids and data-handling controls for displaying, editing an
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">DataGrid</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/datagrid/overview">DataGrid</a></h3>
 <div class="form-description">
 <div class="form-description">
               The .NET MAUI DataGrid control is used to display and manipulate data in a tabular view.

@@ -127,7 +127,7 @@ Controls that improve the visual appearance of UI elements by adding effects suc
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Markdown Viewer</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/markdownviewer/overview">Markdown Viewer</a></h3>
 <div class="form-description">
               Displays user profile images or initials in a compact and visually appealing format.
 </div>

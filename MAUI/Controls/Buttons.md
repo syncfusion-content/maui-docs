@@ -125,7 +125,7 @@ These .NET MAUI controls provide customizable, interactive UI elements that help
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Button</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/button/overview">Button</a></h3>
 <div class="form-description">
               A .NET MAUI custom Button allows customizable icons, backgrounds and visual states for flexible UI styling.
 </div>
@@ -140,7 +140,7 @@ These .NET MAUI controls provide customizable, interactive UI elements that help
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Checkbox</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/checkbox/overview">Checkbox</a></h3>
 <div class="form-description">
                A .NET MAUI CheckBox lets users pick options and customize how it looks in different states.
 </div>
@@ -155,7 +155,7 @@ These .NET MAUI controls provide customizable, interactive UI elements that help
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Chips</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/chips/overview">Chips</a></h3>
 <div class="form-description">
                .NET MAUI Chips shows items in small, clickable pieces that are easy to group and select.
 </div>
@@ -170,7 +170,7 @@ These .NET MAUI controls provide customizable, interactive UI elements that help
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Radio Button</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/radio-button/overview">Radio Button</a></h3>
 <div class="form-description">
                 A .NET MAUI Radio Button lets users select one option from a list with customizable appearance and states.
 </div>
@@ -185,7 +185,7 @@ These .NET MAUI controls provide customizable, interactive UI elements that help
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Segmented Control</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/segmented-control/overview">Segmented Control</a></h3>
 <div class="form-description">
                 A .NET MAUI Segmented Control lets users pick options from a row of buttons with text or icons.
 </div>
@@ -200,7 +200,7 @@ These .NET MAUI controls provide customizable, interactive UI elements that help
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Switch</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/switch/overview">Switch</a></h3>
 <div class="form-description">
                 A .NET MAUI Switch lets users turn an option on or off, with support for an optional indeterminate state and visual customization.
 </div>

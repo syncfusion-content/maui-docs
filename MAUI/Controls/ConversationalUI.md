@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Conversational Experiences | Syncfusion®
+title: Conversational UI | Syncfusion®
 description: Controls that enable chat and conversational UIs, supporting messaging, dynamic responses, and AI-driven communication.
 platform: maui
-control: Conversational Experiences
+control: Conversational UI
 documentation: ug
 ---
 
-# Syncfusion<sup>®</sup> Conversational Experiences for .NET MAUI
+# Syncfusion<sup>®</sup> Conversational UI for .NET MAUI
 
 Components for chat-based and conversational workflows that support threaded messages, attachments and bot interactions. These controls make it easy to build messaging UIs with accessibility and performance in mind.
 
-## Conversational Experiences
+## Conversational UI
 
 <style>
 .form-card {
@@ -126,7 +126,7 @@ Components for chat-based and conversational workflows that support threaded mes
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Chat</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/chat/overview">Chat</a></h3>
 <div class="form-description">
               The .NET MAUI Chat, also known as conversational UI, provides a modern chat experience.
 </div>

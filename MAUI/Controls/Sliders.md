@@ -127,7 +127,7 @@ Controls for direct user interaction.
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Slider</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/slider/overview">Slider</a></h3>
 <div class="form-description">
               This is an interactive UI control that enables users to select a value from a specified range. 
 </div>
@@ -143,7 +143,7 @@ Controls for direct user interaction.
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Range Slider</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/range-slider/overview">Range Slider</a></h3>
 <div class="form-description">
                The .NET MAUI Range Slider is an interactive UI control for selecting a range of values.
 </div>
@@ -159,7 +159,7 @@ Controls for direct user interaction.
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Range Selector</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/range-selector/overview">Range Selector</a></h3>
 <div class="form-description">
                 It is a highly interactive UI control for selecting a smaller range from a larger data set.
 </div>

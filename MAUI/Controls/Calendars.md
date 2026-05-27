@@ -127,7 +127,7 @@ Calendar and scheduling controls for appointments, availability and timeline coo
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Calendar</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/calendar/overview">Calendar</a></h3>
 <div class="form-description">
               Displays dates in a calendar view, allowing users to select and view specific days.
 </div>
@@ -143,7 +143,7 @@ Calendar and scheduling controls for appointments, availability and timeline coo
                 onclick="openImage(this.src, event)">
 </div>
 <div class="form-content">
-<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/aiassistview/overview">Scheduler</a></h3>
+<h3 class="form-title"><a class="form-link" href="https://help.syncfusion.com/maui/scheduler/overview">Scheduler</a></h3>
 <div class="form-description">
                Helps manage events and appointments by organizing them across days, weeks, or months.
 </div>
@@ -151,7 +151,6 @@ Calendar and scheduling controls for appointments, availability and timeline coo
 </div>
 
 </div>
-[Back to Controls Catalog](ControlsCatalog.md)
 <!-- Popup Modal -->
 <div id="imageModal">
 <span class="close-popup" onclick="closeImage()">
